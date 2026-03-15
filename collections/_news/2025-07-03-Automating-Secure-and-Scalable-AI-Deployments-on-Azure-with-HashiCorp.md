@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Automating Secure and Scalable AI Deployments on Azure with HashiCorp"
-description: "Explore how organizations can use HashiCorp tools and Azure to automate, secure, and scale AI deployments from prototype to production. This article outlines infrastructure-as-code methods, security practices, and operational guardrails to build reliable platforms for AI workloads."
-author: "cindywang, davidwright"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/automating-secure-and-scalable-ai-deployments-on-azure-with-hashicorp/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/automating-secure-and-scalable-ai-deployments-on-azure-with-hashicorp/
+title: Automating Secure and Scalable AI Deployments on Azure with HashiCorp
+author: cindywang, davidwright
+feed_name: Microsoft DevBlog
 date: 2025-07-03 23:03:35 +00:00
-permalink: "/2025-07-03-Automating-Secure-and-Scalable-AI-Deployments-on-Azure-with-HashiCorp.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic", "Agentic Workloads", "AI", "AI Deployments", "AI Infrastructure", "AI Platform", "All Things Azure", "Azure", "Cloud Automation", "Compliance", "Data Pipelines", "DevOps", "HashiCorp", "HCP Terraform", "IaC", "Machine Learning Operations", "News", "Policy as Code", "Security", "Sentinel", "Terraform", "Vault"]
-tags_normalized: ["agentic", "agentic workloads", "ai", "ai deployments", "ai infrastructure", "ai platform", "all things azure", "azure", "cloud automation", "compliance", "data pipelines", "devops", "hashicorp", "hcp terraform", "iac", "machine learning operations", "news", "policy as code", "security", "sentinel", "terraform", "vault"]
+tags:
+- Agentic
+- Agentic Workloads
+- AI Deployments
+- AI Infrastructure
+- AI Platform
+- All Things Azure
+- Cloud Automation
+- Compliance
+- Data Pipelines
+- HashiCorp
+- HCP Terraform
+- IaC
+- Machine Learning Operations
+- Policy as Code
+- Sentinel
+- Terraform
+- Vault
+- AI
+- Azure
+- DevOps
+- Security
+- News
+section_names:
+- ai
+- azure
+- devops
+- security
+primary_section: ai
 ---
-
 Written by cindywang and davidwright, this article delves into automating secure and scalable AI deployments using HashiCorp and Azure, highlighting infrastructure-as-code, security, and operational best practices.<!--excerpt_end-->
 
 # Automating Secure and Scalable AI Deployments on Azure with HashiCorp

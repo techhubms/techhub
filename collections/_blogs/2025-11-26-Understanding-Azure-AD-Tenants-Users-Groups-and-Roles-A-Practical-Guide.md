@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide"
-description: "This guide offers a practical, down-to-earth overview of managing identity and access in Microsoft Azure AD, now part of Microsoft Entra ID. Readers will learn the foundational concepts of tenants, users (including guest and service accounts), groups (security and collaboration), and roles. The post provides actionable guidance, best practices for governance and least privilege, and scenario-based explanations for administering secure, scalable environments in the Microsoft cloud ecosystem."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/understanding-azure-ad-tenants-users-groups-and-roles-a-practical-guide/
+title: 'Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide'
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2025-11-26 08:25:56 +00:00
-permalink: "/2025-11-26-Understanding-Azure-AD-Tenants-Users-Groups-and-Roles-A-Practical-Guide.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Azure AD", "Blogs", "Cloud Governance", "Conditional Access", "Dynamic Groups", "Group Membership", "Hybrid Identity", "Identity Management", "Least Privilege", "MFA", "Microsoft Entra ID", "RBAC", "Security", "Security Groups", "Tenant Management", "User Lifecycle"]
-tags_normalized: ["access control", "azure", "azure ad", "blogs", "cloud governance", "conditional access", "dynamic groups", "group membership", "hybrid identity", "identity management", "least privilege", "mfa", "microsoft entra id", "rbac", "security", "security groups", "tenant management", "user lifecycle"]
+tags:
+- Access Control
+- Azure AD
+- Cloud Governance
+- Conditional Access
+- Dynamic Groups
+- Group Membership
+- Hybrid Identity
+- Identity Management
+- Least Privilege
+- MFA
+- Microsoft Entra ID
+- RBAC
+- Security Groups
+- Tenant Management
+- User Lifecycle
+- Azure
+- Security
+- Blogs
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 John Edward presents a practical guide to Azure AD and Microsoft Entra ID, explaining tenants, user management, groups, and roles for identity and security in the cloud.<!--excerpt_end-->
 
 # Understanding Azure AD Tenants, Users, Groups, and Roles: A Practical Guide

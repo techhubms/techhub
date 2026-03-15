@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Updates to GitHub Copilot for Students: New Student Plan Announced"
-description: "This announcement details the release of the GitHub Copilot Student plan, which transitions students with GitHub Education benefits to a newly tailored Copilot experience. The update outlines changes to the available Copilot model lineup and reinforces GitHub’s commitment to AI-powered learning tools for students."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-13-updates-to-github-copilot-for-students"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-13-updates-to-github-copilot-for-students
+title: 'Updates to GitHub Copilot for Students: New Student Plan Announced'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-13 13:54:32 +00:00
-permalink: "/2026-03-13-Updates-to-GitHub-Copilot-for-Students-New-Student-Plan-Announced.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Learning Tools", "Copilot", "Copilot Experience", "Education", "GitHub Copilot", "GitHub Education", "Model Lineup", "News", "Software Development", "Student Developers", "Student Plan"]
-tags_normalized: ["ai", "ai learning tools", "copilot", "copilot experience", "education", "github copilot", "github education", "model lineup", "news", "software development", "student developers", "student plan"]
+tags:
+- AI
+- AI Learning Tools
+- Copilot
+- Copilot Experience
+- Education
+- GitHub Copilot
+- GitHub Education
+- Model Lineup
+- News
+- Software Development
+- Student Developers
+- Student Plan
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces a significant update for students as GitHub introduces the Copilot Student plan, offering a dedicated and AI-enhanced coding assistant tailored for educational use.<!--excerpt_end-->
 
 # Updates to GitHub Copilot for Students: New Student Plan Announced

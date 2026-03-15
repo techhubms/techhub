@@ -1,20 +1,26 @@
----
-layout: "post"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mhgbww/apimanagement_create_mcp_server_from_api_error/
 title: "ApiManagement MCP Server Creation Error: 'Error converting value mcp'"
-description: "A user encounters an error while attempting to expose their API as an MCP server using Azure API Management. The error “Error converting value 'mcp' to type 'Microsoft.Azure.ApiManagement.Management.ControlPath'” is discussed, with references to Microsoft documentation and requests for community insights on potential bugs or misconfigurations."
-author: "Competitive-Ad-5081"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhgbww/apimanagement_create_mcp_server_from_api_error/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+author: Competitive-Ad-5081
+feed_name: Reddit Azure
 date: 2025-08-04 15:19:58 +00:00
-permalink: "/2025-08-04-ApiManagement-MCP-Server-Creation-Error-Error-converting-value-mcp.html"
-categories: ["Azure"]
-tags: ["API Exposure", "API Gateway", "Azure", "Azure API Management", "Community", "ControlPath", "Error Handling", "Input Parsing", "MCP Server", "Microsoft Documentation", "Microsoft.Azure.ApiManagement", "REST API"]
-tags_normalized: ["api exposure", "api gateway", "azure", "azure api management", "community", "controlpath", "error handling", "input parsing", "mcp server", "microsoft documentation", "microsoftdotazuredotapimanagement", "rest api"]
+tags:
+- API Exposure
+- API Gateway
+- Azure API Management
+- ControlPath
+- Error Handling
+- Input Parsing
+- MCP Server
+- Microsoft Documentation
+- Microsoft.Azure.ApiManagement
+- REST API
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 Authored by Competitive-Ad-5081, this post details a technical issue faced when exposing an API as an MCP server via Azure API Management and seeks advice from the community.<!--excerpt_end-->
 
 ## Problem Statement

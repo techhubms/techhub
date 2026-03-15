@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Hybrid Caching in ASP.NET Core: Bridging In-Memory and Distributed Caching"
-description: "This article by Bozo Spoljaric introduces hybrid caching in ASP.NET Core. It explores how this approach combines memory and distributed caching, details configuration and usage of the HybridCache package, and demonstrates practical code examples for adding, retrieving, and invalidating cache entries. Benefits and best practices are discussed."
-author: "Bozo Spoljaric"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/dotnet-hybrid-caching/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+external_url: https://code-maze.com/dotnet-hybrid-caching/
+title: 'Hybrid Caching in ASP.NET Core: Bridging In-Memory and Distributed Caching'
+author: Bozo Spoljaric
+feed_name: Code Maze Blog
 date: 2025-02-10 07:02:05 +00:00
-permalink: "/2025-02-10-Hybrid-Caching-in-ASPNET-Core-Bridging-In-Memory-and-Distributed-Caching.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Blogs", "Cache Invalidation", "Caching", "Caching Patterns", "Coding", "Distributed Cache", "Distributed Caching", "Hybrid Caching", "in Memory Cache", "InMemory Caching", "Microsoft.Extensions.Caching.Hybrid", "Service Configuration", "Web Application Performance"]
-tags_normalized: ["dotnet", "aspdotnet core", "blogs", "cache invalidation", "caching", "caching patterns", "coding", "distributed cache", "distributed caching", "hybrid caching", "in memory cache", "inmemory caching", "microsoftdotextensionsdotcachingdothybrid", "service configuration", "web application performance"]
+tags:
+- .NET
+- ASP.NET Core
+- Cache Invalidation
+- Caching
+- Caching Patterns
+- Distributed Cache
+- Distributed Caching
+- Hybrid Caching
+- in Memory Cache
+- InMemory Caching
+- Microsoft.Extensions.Caching.Hybrid
+- Service Configuration
+- Web Application Performance
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Bozo Spoljaric explains hybrid caching in ASP.NET Core, presenting its implementation, configuration, and practical examples. The article targets developers optimizing data access and scalability in .NET applications by combining local and distributed cache strategies.<!--excerpt_end-->
 
 # Hybrid Caching in ASP.NET Core

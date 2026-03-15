@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Building an Enterprise-Ready Azure AI Hub-and-Spoke Landing Zone"
-description: "This article by VimalVerma provides a detailed guide for architects and engineers on designing a scalable, secure, and multi-tenant Azure AI platform using a hub-and-spoke architecture. It covers subscription models, tenant isolation, governance, secure networking, identity and cost management, leveraging AKS and Azure AI services, and deploying with Infrastructure as Code while aligning to Azure Landing Zone best practices."
-author: "VimalVerma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/architecting-an-azure-ai-hub-and-spoke-landing-zone-for-multi/ba-p/4491161"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/architecting-an-azure-ai-hub-and-spoke-landing-zone-for-multi/ba-p/4491161
+title: Building an Enterprise-Ready Azure AI Hub-and-Spoke Landing Zone
+author: VimalVerma
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-03 19:19:09 +00:00
-permalink: "/2026-02-03-Building-an-Enterprise-Ready-Azure-AI-Hub-and-Spoke-Landing-Zone.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AKS", "API Management", "Azure", "Azure AI", "Azure Firewall", "Azure Monitor", "Azure OpenAI", "Azure Policy", "Bicep", "Chargeback", "Community", "Cost Management", "DevOps", "Enterprise Architecture", "FinOps", "Governance", "Hub And Spoke", "IaC", "Log Analytics", "Microsoft Entra ID", "Multi Tenancy", "Private Link", "Security", "Terraform", "Vector Search", "Zero Trust"]
-tags_normalized: ["ai", "aks", "api management", "azure", "azure ai", "azure firewall", "azure monitor", "azure openai", "azure policy", "bicep", "chargeback", "community", "cost management", "devops", "enterprise architecture", "finops", "governance", "hub and spoke", "iac", "log analytics", "microsoft entra id", "multi tenancy", "private link", "security", "terraform", "vector search", "zero trust"]
+tags:
+- AI
+- AKS
+- API Management
+- Azure
+- Azure AI
+- Azure Firewall
+- Azure Monitor
+- Azure OpenAI
+- Azure Policy
+- Bicep
+- Chargeback
+- Community
+- Cost Management
+- DevOps
+- Enterprise Architecture
+- FinOps
+- Governance
+- Hub And Spoke
+- IaC
+- Log Analytics
+- Microsoft Entra ID
+- Multi Tenancy
+- Private Link
+- Security
+- Terraform
+- Vector Search
+- Zero Trust
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 VimalVerma shares a comprehensive blueprint for architects designing multi-tenant AI solutions on Azure. This guide details how to balance isolation, governance, scalability, and automation using a Hub-and-Spoke model, Azure AI services, and modern DevOps practices.<!--excerpt_end-->
 
 # Building an Enterprise-Ready Azure AI Hub-and-Spoke Landing Zone

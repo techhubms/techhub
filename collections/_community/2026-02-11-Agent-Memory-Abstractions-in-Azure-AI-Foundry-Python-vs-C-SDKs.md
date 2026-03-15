@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Agent Memory Abstractions in Azure AI Foundry: Python vs C# SDKs"
-description: "This community question highlights key differences between the Azure AI Foundry Agent Service Python and C# SDKs, focusing on managed long-term memory. The author asks about high-level abstractions like MemorySearchTool or AgentMemorySettings in the C# SDK, roadmap parity, and example implementations for automatic memory extraction."
-author: "goranobradovic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/missing-equivalent-for-python-memorysearchtool-and/m-p/4494284#M22429"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure/missing-equivalent-for-python-memorysearchtool-and/m-p/4494284#M22429
+title: 'Agent Memory Abstractions in Azure AI Foundry: Python vs C# SDKs'
+author: goranobradovic
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-11 08:54:07 +00:00
-permalink: "/2026-02-11-Agent-Memory-Abstractions-in-Azure-AI-Foundry-Python-vs-C-SDKs.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Service", "AgentMemorySettings", "AI", "Automatic Memory", "Azure", "Azure AI Foundry", "Azure.AI.Projects", "C# SDK", "Community", "Long Term Memory", "Managed Memory", "MemorySearchTool", "NuGet", "Preview Features", "Python SDK", "SDK Parity"]
-tags_normalized: ["agent service", "agentmemorysettings", "ai", "automatic memory", "azure", "azure ai foundry", "azuredotaidotprojects", "csharp sdk", "community", "long term memory", "managed memory", "memorysearchtool", "nuget", "preview features", "python sdk", "sdk parity"]
+tags:
+- Agent Service
+- AgentMemorySettings
+- AI
+- Automatic Memory
+- Azure
+- Azure AI Foundry
+- Azure.AI.Projects
+- C# SDK
+- Community
+- Long Term Memory
+- Managed Memory
+- MemorySearchTool
+- NuGet
+- Preview Features
+- Python SDK
+- SDK Parity
+section_names:
+- ai
+- azure
 ---
-
 goranobradovic raises important questions for teams working with Azure AI Foundry Agent Service—specifically regarding the lack of high-level automatic agent memory abstractions in the C# SDK compared to Python.<!--excerpt_end-->
 
 # Agent Memory Abstractions in Azure AI Foundry: Python vs C# SDKs

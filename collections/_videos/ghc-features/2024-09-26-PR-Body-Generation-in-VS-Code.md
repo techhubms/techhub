@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "PR Body Generation in VS Code"
-description: "Generate detailed PR descriptions directly in VS Code"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/_L8MdrswPV0"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/_L8MdrswPV0
+title: PR Body Generation in VS Code
+author: Rob Bos
 date: 2024-09-26 17:42:50 +00:00
-permalink: "/2024-09-26-PR-Body-Generation-in-VS-Code.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "GitHub Copilot", "Pull Request", "Videos", "VS Code"]
-tags_normalized: ["ai", "code", "github copilot", "pull request", "videos", "vs code"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Code
+- Pull Request
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's PR Body Generation in VS Code feature. Generate detailed PR descriptions directly in VS Code.<!--excerpt_end-->
 
 {% youtube _L8MdrswPV0 %}

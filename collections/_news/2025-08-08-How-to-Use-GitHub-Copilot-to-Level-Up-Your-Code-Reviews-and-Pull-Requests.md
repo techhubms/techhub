@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How to Use GitHub Copilot to Level Up Your Code Reviews and Pull Requests"
-description: "Melissa Pastore shares practical strategies for integrating GitHub Copilot throughout the code review and pull request process. Learn how Copilot’s suggestions, code refactoring, automated formatting, and review summaries can streamline workflows, improve feedback quality, and save time for developers."
-author: "Melissa Pastore"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-to-level-up-your-code-reviews-and-pull-requests/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/how-to-use-github-copilot-to-level-up-your-code-reviews-and-pull-requests/
+title: How to Use GitHub Copilot to Level Up Your Code Reviews and Pull Requests
+author: Melissa Pastore
+feed_name: The GitHub Blog
 date: 2025-08-08 16:00:00 +00:00
-permalink: "/2025-08-08-How-to-Use-GitHub-Copilot-to-Level-Up-Your-Code-Reviews-and-Pull-Requests.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Coding Tools", "Best Practices", "Code Review", "Coding", "Developer Productivity", "Development Lifecycle", "DevOps", "GitHub Actions", "GitHub Copilot", "Go", "Markdown Formatting", "News", "Pull Requests", "Refactoring Suggestions", "Ruby", "Software Development", "TypeScript", "VS Code", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai coding tools", "best practices", "code review", "coding", "developer productivity", "development lifecycle", "devops", "github actions", "github copilot", "go", "markdown formatting", "news", "pull requests", "refactoring suggestions", "ruby", "software development", "typescript", "vs code", "workflow automation"]
+tags:
+- Agentic Workflows
+- AI & ML
+- AI Coding Tools
+- Best Practices
+- Code Review
+- Developer Productivity
+- Development Lifecycle
+- GitHub Actions
+- Go
+- Markdown Formatting
+- Pull Requests
+- Refactoring Suggestions
+- Ruby
+- Software Development
+- TypeScript
+- VS Code
+- Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Melissa Pastore walks through hands-on methods for using GitHub Copilot to streamline code reviews and pull requests, offering actionable workflow tips and Copilot prompt examples based on her engineering experience at GitHub.<!--excerpt_end-->
 
 # How to Use GitHub Copilot to Level Up Your Code Reviews and Pull Requests

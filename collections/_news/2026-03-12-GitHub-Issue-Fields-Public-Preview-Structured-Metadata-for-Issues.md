@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Issue Fields Public Preview: Structured Metadata for Issues"
-description: "GitHub has announced that issue fields, providing structured and typed metadata for issues, are now available in public preview for select organizations. This feature allows administrators to configure up to 25 fields, customize their visibility across issue types, enable search and filter functionality, support project integration, and automate workflows via API and webhooks."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-12-issue-fields-structured-issue-metadata-is-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-12-issue-fields-structured-issue-metadata-is-in-public-preview
+title: 'GitHub Issue Fields Public Preview: Structured Metadata for Issues'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-12 08:03:06 +00:00
-permalink: "/2026-03-12-GitHub-Issue-Fields-Public-Preview-Structured-Metadata-for-Issues.html"
-categories: ["DevOps"]
-tags: ["Automation", "Custom Fields", "DevOps", "DevOps Tools", "GitHub", "GraphQL API", "Issue Fields", "Issue Management", "News", "Priority Tracking", "Project Management", "Projects & Issues", "Projects Integration", "Release Management", "REST API", "Structured Metadata", "Workflows"]
-tags_normalized: ["automation", "custom fields", "devops", "devops tools", "github", "graphql api", "issue fields", "issue management", "news", "priority tracking", "project management", "projects and issues", "projects integration", "release management", "rest api", "structured metadata", "workflows"]
+tags:
+- Automation
+- Custom Fields
+- DevOps
+- DevOps Tools
+- GitHub
+- GraphQL API
+- Issue Fields
+- Issue Management
+- News
+- Priority Tracking
+- Project Management
+- Projects & Issues
+- Projects Integration
+- Release Management
+- REST API
+- Structured Metadata
+- Workflows
+section_names:
+- devops
 ---
-
 Allison reports on GitHub's public preview of issue fields, which introduce structured and customizable metadata for issue tracking, offering enhanced project management for development teams.<!--excerpt_end-->
 
 # GitHub Issue Fields: Structured Issue Metadata in Public Preview

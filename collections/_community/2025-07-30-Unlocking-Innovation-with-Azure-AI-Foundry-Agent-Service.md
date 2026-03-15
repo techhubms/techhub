@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Unlocking Innovation with Azure AI Foundry Agent Service"
-description: "JohnNaguib introduces Azure AI Foundry Agent Service, a component of Azure AI Studio, which enables developers and organizations to build, manage, and operationalize advanced multi-agent AI systems at scale with ease. The article highlights its benefits for accelerating innovation in AI-driven projects."
-author: "JohnNaguib"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure/unlocking-innovation-with-azure-ai-foundry-agent-service/m-p/4438322#M22030
+title: Unlocking Innovation with Azure AI Foundry Agent Service
+author: JohnNaguib
+feed_name: Microsoft Tech Community
 date: 2025-07-30 17:41:02 +00:00
-permalink: "/2025-07-30-Unlocking-Innovation-with-Azure-AI-Foundry-Agent-Service.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Orchestration", "AI", "AI Operationalization", "AI Orchestration", "AI Platforms", "AI Studio", "Azure", "Azure AI Foundry", "Community", "Enterprise AI", "Intelligent Agents", "Microsoft", "Multi Agent Systems"]
-tags_normalized: ["agent orchestration", "ai", "ai operationalization", "ai orchestration", "ai platforms", "ai studio", "azure", "azure ai foundry", "community", "enterprise ai", "intelligent agents", "microsoft", "multi agent systems"]
+tags:
+- Agent Orchestration
+- AI Operationalization
+- AI Orchestration
+- AI Platforms
+- AI Studio
+- Azure AI Foundry
+- Enterprise AI
+- Intelligent Agents
+- Microsoft
+- Multi Agent Systems
+- AI
+- Azure
+- Community
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 JohnNaguib explores the Azure AI Foundry Agent Service, detailing how Microsoft's latest Azure AI Studio feature streamlines building and managing multi-agent AI systems.<!--excerpt_end-->
 
 ## Overview

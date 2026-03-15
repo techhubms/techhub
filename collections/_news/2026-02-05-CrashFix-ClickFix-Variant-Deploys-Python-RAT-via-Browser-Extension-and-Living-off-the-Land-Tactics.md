@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "CrashFix ClickFix Variant Deploys Python RAT via Browser Extension and Living-off-the-Land Tactics"
-description: "A detailed technical analysis of the CrashFix ClickFix variant by the Microsoft Defender Security Research Team. This report uncovers a sophisticated browser-based attack campaign that uses a malicious Chrome extension, Windows native utilities like finger.exe, PowerShell obfuscation, and a portable Python payload (ModeloRAT) to compromise and persist on high-value domain-joined systems. Mitigation guidance, detection queries for Microsoft Defender XDR, threat intelligence, and IOC lists are provided for defenders."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/05/clickfix-variant-crashfix-deploying-python-rat-trojan/
+title: CrashFix ClickFix Variant Deploys Python RAT via Browser Extension and Living-off-the-Land Tactics
+author: Microsoft Defender Security Research Team
+primary_section: security
+feed_name: Microsoft Security Blog
 date: 2026-02-05 18:51:39 +00:00
-permalink: "/2026-02-05-CrashFix-ClickFix-Variant-Deploys-Python-RAT-via-Browser-Extension-and-Living-off-the-Land-Tactics.html"
-categories: ["Security"]
-tags: ["Browser Extension Attack", "C2 Beaconing", "ClickFix", "CrashFix", "Detection Queries", "Domain Joined Systems", "Finger.exe", "Indicators Of Compromise", "Living Off The Land Binaries", "Malware Analysis", "Microsoft Defender", "Microsoft Sentinel", "ModeloRAT", "News", "Persistence Mechanisms", "PowerShell Obfuscation", "Python RAT", "Registry Persistence", "Remote Access Trojan", "Scheduled Task", "Security", "WinPython"]
-tags_normalized: ["browser extension attack", "c2 beaconing", "clickfix", "crashfix", "detection queries", "domain joined systems", "fingerdotexe", "indicators of compromise", "living off the land binaries", "malware analysis", "microsoft defender", "microsoft sentinel", "modelorat", "news", "persistence mechanisms", "powershell obfuscation", "python rat", "registry persistence", "remote access trojan", "scheduled task", "security", "winpython"]
+tags:
+- Browser Extension Attack
+- C2 Beaconing
+- ClickFix
+- CrashFix
+- Detection Queries
+- Domain Joined Systems
+- Finger.exe
+- Indicators Of Compromise
+- Living Off The Land Binaries
+- Malware Analysis
+- Microsoft Defender
+- Microsoft Sentinel
+- ModeloRAT
+- News
+- Persistence Mechanisms
+- PowerShell Obfuscation
+- Python RAT
+- Registry Persistence
+- Remote Access Trojan
+- Scheduled Task
+- Security
+- WinPython
+section_names:
+- security
 ---
-
 The Microsoft Defender Security Research Team dissects the CrashFix variant of ClickFix, revealing how it combines malicious browser extensions, PowerShell obfuscation, and a portable Python-based RAT to compromise and persist on high-value Windows systems.<!--excerpt_end-->
 
 # CrashFix ClickFix Variant: Technical Dissection and Defense Guidance

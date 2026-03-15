@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Use Claude, Codex, and GitHub Copilot Together in GitHub and VS Code"
-description: "This video demonstrates how developers can run Claude by Anthropic, OpenAI Codex, and GitHub Copilot agents side by side within GitHub and Visual Studio Code (VS Code). It covers managing sessions, assigning tasks to specific agents, and reviewing artifacts in repositories, issues, and pull requests. The integration works across GitHub, VS Code, and GitHub Mobile, helping users streamline their coding workflow by leveraging multiple intelligent agents within their existing environment."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GuTQDXKwdJQ"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=GuTQDXKwdJQ
+title: How to Use Claude, Codex, and GitHub Copilot Together in GitHub and VS Code
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-04 17:00:23 +00:00
-permalink: "/2026-02-04-How-to-Use-Claude-Codex-and-GitHub-Copilot-Together-in-GitHub-and-VS-Code.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "AI", "AI Agents", "Anthropic", "Claude", "Code Review", "Coding", "Coding Automation", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "GitHub Mobile", "OpenAI Codex", "Pull Requests", "Repository Management", "Task Assignment", "Videos", "VS Code"]
-tags_normalized: ["agent hq", "ai", "ai agents", "anthropic", "claude", "code review", "coding", "coding automation", "developer productivity", "devops", "github", "github copilot", "github mobile", "openai codex", "pull requests", "repository management", "task assignment", "videos", "vs code"]
+tags:
+- Agent HQ
+- AI
+- AI Agents
+- Anthropic
+- Claude
+- Code Review
+- Coding Automation
+- Developer Productivity
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub Mobile
+- OpenAI Codex
+- Pull Requests
+- Repository Management
+- Task Assignment
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 GitHub presents a walkthrough of using Claude, Codex, and GitHub Copilot simultaneously in GitHub and Visual Studio Code. Authored by the official GitHub team, this video covers agent management, task assignment, and integration into the developer workflow.<!--excerpt_end-->
 
 {% youtube GuTQDXKwdJQ %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "GenRec Direct Learning: Moving Ranking from Feature Pipelines to Token-Native Sequence Modeling"
-description: "This article introduces GenRec Direct Learning (DirL), an approach developed within Microsoft that reimagines ranking in recommender systems as a native, token-level sequence modeling problem. It explores how DirL replaces traditional feature-heavy pipelines with generative, sequential models deployed and trained on Azure Machine Learning, highlighting the architectural structure, challenges around operational efficiency, and potential industry-wide impact."
-author: "chunlongyu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/genrec-direct-learning-moving-ranking-from-feature-pipelines-to/ba-p/4494252"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/genrec-direct-learning-moving-ranking-from-feature-pipelines-to/ba-p/4494252
+title: 'GenRec Direct Learning: Moving Ranking from Feature Pipelines to Token-Native Sequence Modeling'
+author: chunlongyu
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-28 07:00:00 +00:00
-permalink: "/2026-02-28-GenRec-Direct-Learning-Moving-Ranking-from-Feature-Pipelines-to-Token-Native-Sequence-Modeling.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure Exp", "Azure Machine Learning", "Community", "Deep Learning", "Direct Learning", "DLIS", "Embedding Tables", "Foundation Model", "GenRec", "HSTU", "Microsoft", "ML", "MMoE", "Model Serving", "Multi Task Learning", "PyTorch", "Ranking", "Recommender Systems", "Sequence To Sequence", "Token Native Sequence Modeling", "User Behavior Modeling"]
-tags_normalized: ["ai", "azure", "azure exp", "azure machine learning", "community", "deep learning", "direct learning", "dlis", "embedding tables", "foundation model", "genrec", "hstu", "microsoft", "ml", "mmoe", "model serving", "multi task learning", "pytorch", "ranking", "recommender systems", "sequence to sequence", "token native sequence modeling", "user behavior modeling"]
+tags:
+- AI
+- Azure
+- Azure Exp
+- Azure Machine Learning
+- Community
+- Deep Learning
+- Direct Learning
+- DLIS
+- Embedding Tables
+- Foundation Model
+- GenRec
+- HSTU
+- Microsoft
+- ML
+- MMoE
+- Model Serving
+- Multi Task Learning
+- PyTorch
+- Ranking
+- Recommender Systems
+- Sequence To Sequence
+- Token Native Sequence Modeling
+- User Behavior Modeling
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Chunlong Yu and co-authors present GenRec Direct Learning (DirL), a Microsoft-driven approach that transforms traditional ranking pipelines by leveraging end-to-end token-native sequence modeling, with experiments and production deployment on Azure Machine Learning.<!--excerpt_end-->
 
 # GenRec Direct Learning: Moving Ranking from Feature Pipelines to Token-Native Sequence Modeling

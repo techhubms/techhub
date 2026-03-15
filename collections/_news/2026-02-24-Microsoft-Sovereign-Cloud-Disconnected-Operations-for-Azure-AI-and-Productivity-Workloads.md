@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Sovereign Cloud: Disconnected Operations for Azure, AI, and Productivity Workloads"
-description: "This article introduces major enhancements to Microsoft Sovereign Cloud, focusing on the launch of Azure Local and Microsoft 365 Local disconnected operations, alongside Foundry Local’s support for large AI models. It details how organizations can maintain operational, security, and productivity requirements in environments fully disconnected from the public cloud, highlighting scenarios for critical infrastructure, governance, and AI delivered within strict sovereign boundaries."
-author: "Douglas Phillips"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "http://aka.ms/MicrosoftSovereignCloudDisconnectedBlog"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: http://aka.ms/MicrosoftSovereignCloudDisconnectedBlog
+title: 'Microsoft Sovereign Cloud: Disconnected Operations for Azure, AI, and Productivity Workloads'
+author: Douglas Phillips
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-24 10:20:00 +00:00
-permalink: "/2026-02-24-Microsoft-Sovereign-Cloud-Disconnected-Operations-for-Azure-AI-and-Productivity-Workloads.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI + Machine Learning", "AI Models", "Azure", "Azure Local", "Cloud Security", "Compliance", "Data Sovereignty", "Disconnected Operations", "Foundry Local", "Governance", "Hybrid + Multicloud", "Hybrid Cloud", "Microsoft 365 Local", "Microsoft Sovereign Cloud", "Multimodal AI", "News", "NVIDIA", "On Premises Infrastructure", "Operational Resilience", "Policy Enforcement", "Sovereign Private Cloud"]
-tags_normalized: ["ai", "ai plus machine learning", "ai models", "azure", "azure local", "cloud security", "compliance", "data sovereignty", "disconnected operations", "foundry local", "governance", "hybrid plus multicloud", "hybrid cloud", "microsoft 365 local", "microsoft sovereign cloud", "multimodal ai", "news", "nvidia", "on premises infrastructure", "operational resilience", "policy enforcement", "sovereign private cloud"]
+tags:
+- AI
+- AI + Machine Learning
+- AI Models
+- Azure
+- Azure Local
+- Cloud Security
+- Compliance
+- Data Sovereignty
+- Disconnected Operations
+- Foundry Local
+- Governance
+- Hybrid + Multicloud
+- Hybrid Cloud
+- Microsoft 365 Local
+- Microsoft Sovereign Cloud
+- Multimodal AI
+- News
+- NVIDIA
+- On Premises Infrastructure
+- Operational Resilience
+- Policy Enforcement
+- Sovereign Private Cloud
+section_names:
+- ai
+- azure
 ---
-
 Douglas Phillips outlines Microsoft’s advancements in Sovereign Cloud, enabling organizations to operate Azure, Microsoft 365, and advanced AI workloads locally—even in environments with no external connectivity.<!--excerpt_end-->
 
 # Microsoft Sovereign Cloud: Secure Disconnected Operations for Azure, Productivity, and AI Workloads

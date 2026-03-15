@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Virtual Network Data Gateway Now Generally Available for Fabric Pipeline, Dataflow Gen2, and Copy Job"
-description: "This announcement introduces the general availability of Virtual Network (VNET) Data Gateway support in Microsoft Fabric, enabling secure, performant, and reliable data movement for enterprises with sensitive or regulated requirements. Key highlights include privacy-preserving data transfer, enhanced connectivity options, and support for high-speed data operations in Fabric Pipeline and Dataflow Gen2, ensuring compliance and streamlined management."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/virtual-network-data-gateway-support-for-fabric-pipeline-dataflow-gen2-fast-copy-and-copy-job-is-now-generally-available/
+title: Virtual Network Data Gateway Now Generally Available for Fabric Pipeline, Dataflow Gen2, and Copy Job
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-29 13:00:00 +00:00
-permalink: "/2025-09-29-Virtual-Network-Data-Gateway-Now-Generally-Available-for-Fabric-Pipeline-Dataflow-Gen2-and-Copy-Job.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Copy Job", "Data Governance", "Data Integration", "Dataflow Gen2", "Enterprise Security", "ExpressRoute", "Fabric Pipeline", "Microsoft Fabric", "ML", "News", "Private Endpoints", "Secure Data Movement", "Security", "Virtual Network Data Gateway", "VNET"]
-tags_normalized: ["azure", "copy job", "data governance", "data integration", "dataflow gen2", "enterprise security", "expressroute", "fabric pipeline", "microsoft fabric", "ml", "news", "private endpoints", "secure data movement", "security", "virtual network data gateway", "vnet"]
+tags:
+- Copy Job
+- Data Governance
+- Data Integration
+- Dataflow Gen2
+- Enterprise Security
+- ExpressRoute
+- Fabric Pipeline
+- Microsoft Fabric
+- Private Endpoints
+- Secure Data Movement
+- Virtual Network Data Gateway
+- VNET
+- Azure
+- ML
+- Security
+- News
+section_names:
+- azure
+- ml
+- security
+primary_section: ml
 ---
-
 Microsoft Fabric Blog announces the general availability of Virtual Network Data Gateway for Fabric Pipeline, Dataflow Gen2 Fast Copy, and Copy Job, detailing secure, high-performance data integration capabilities crucial for data-driven enterprises.<!--excerpt_end-->
 
 # Virtual Network Data Gateway Now Generally Available for Fabric Pipeline, Dataflow Gen2, and Copy Job

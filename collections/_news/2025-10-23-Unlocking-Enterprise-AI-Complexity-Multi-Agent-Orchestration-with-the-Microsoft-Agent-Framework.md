@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Unlocking Enterprise AI Complexity: Multi-Agent Orchestration with the Microsoft Agent Framework"
-description: "This article explores the architectural need for multi-agent orchestration in enterprise AI, focusing on the Microsoft Agent Framework. It covers foundational patterns such as sequential, concurrent, and conditional workflows, along with advanced observability using DevUI and OTLP tracing. Developers learn why modern AI applications benefit from networks of specialized agents and how to implement robust, production-grade orchestration and monitoring in complex enterprise scenarios."
-author: "Kinfey Lo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/unlocking-enterprise-ai-complexity-multi-agent-orchestration-with-the-microsoft-agent-framework/
+title: 'Unlocking Enterprise AI Complexity: Multi-Agent Orchestration with the Microsoft Agent Framework'
+author: Kinfey Lo
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2025-10-23 08:09:07 +00:00
-permalink: "/2025-10-23-Unlocking-Enterprise-AI-Complexity-Multi-Agent-Orchestration-with-the-Microsoft-Agent-Framework.html"
-categories: ["AI"]
-tags: [".NET", "Agent Framework", "Agents", "AI", "AI Agent Architecture", "Azure OpenAI", "Contextual AI", "DevUI", "Enterprise AI", "Human in The Loop", "LLM", "Microsoft Agent Framework", "Multi Agent Orchestration", "News", "Observability", "OpenTelemetry", "Python", "Samples", "Trace Monitoring", "Workflow Orchestration"]
-tags_normalized: ["dotnet", "agent framework", "agents", "ai", "ai agent architecture", "azure openai", "contextual ai", "devui", "enterprise ai", "human in the loop", "llm", "microsoft agent framework", "multi agent orchestration", "news", "observability", "opentelemetry", "python", "samples", "trace monitoring", "workflow orchestration"]
+tags:
+- .NET
+- Agent Framework
+- Agents
+- AI
+- AI Agent Architecture
+- Azure OpenAI
+- Contextual AI
+- DevUI
+- Enterprise AI
+- Human in The Loop
+- LLM
+- Microsoft Agent Framework
+- Multi Agent Orchestration
+- News
+- Observability
+- OpenTelemetry
+- Python
+- Samples
+- Trace Monitoring
+- Workflow Orchestration
+section_names:
+- ai
 ---
-
 Kinfey Lo presents a technical deep dive into multi-agent orchestration using the Microsoft Agent Framework, highlighting practical workflow patterns, observability best practices, and strategies for architecting scalable enterprise AI solutions.<!--excerpt_end-->
 
 # Unlocking Enterprise AI Complexity: Multi-Agent Orchestration with the Microsoft Agent Framework

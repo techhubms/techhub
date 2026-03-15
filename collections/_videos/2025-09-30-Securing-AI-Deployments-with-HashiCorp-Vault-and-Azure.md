@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Securing AI Deployments with HashiCorp Vault & Azure"
-description: "This episode of Sip and Sync focuses on the intersection of automation and security for AI deployments. Featuring HashiCorp's David Wright, it covers how tools like Vault, Packer, and Vault Radar—combined with Microsoft Azure—streamline secure AI production. The discussion includes dynamic credential management, tackling unique security challenges, leveraging Azure Verified Modules with Terraform, and demonstrates a secure multi-agent AI app setup with end-to-end governance."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=l7q6w6eICgw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=l7q6w6eICgw
+title: Securing AI Deployments with HashiCorp Vault & Azure
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-09-30 16:24:14 +00:00
-permalink: "/2025-09-30-Securing-AI-Deployments-with-HashiCorp-Vault-and-Azure.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Deployment", "Auditability", "Automation", "Azure", "Azure Verified Modules", "Cloud Computing", "Confused Deputy", "Dev", "Development", "DevOps", "Dynamic Credential Management", "Governance", "HashiCorp Vault", "IaC", "Kubernetes", "Microsoft", "Multi Agent Systems", "Packer", "Security", "Tech", "Technology", "Terraform", "Traceability", "Vault Radar", "Videos"]
-tags_normalized: ["ai", "ai deployment", "auditability", "automation", "azure", "azure verified modules", "cloud computing", "confused deputy", "dev", "development", "devops", "dynamic credential management", "governance", "hashicorp vault", "iac", "kubernetes", "microsoft", "multi agent systems", "packer", "security", "tech", "technology", "terraform", "traceability", "vault radar", "videos"]
+tags:
+- AI Deployment
+- Auditability
+- Automation
+- Azure Verified Modules
+- Cloud Computing
+- Confused Deputy
+- Dev
+- Development
+- Dynamic Credential Management
+- Governance
+- HashiCorp Vault
+- IaC
+- Kubernetes
+- Microsoft
+- Multi Agent Systems
+- Packer
+- Tech
+- Technology
+- Terraform
+- Traceability
+- Vault Radar
+- AI
+- Azure
+- DevOps
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- security
+primary_section: ai
 ---
-
 In this Sip and Sync episode, Microsoft Developer hosts David Wright from HashiCorp to explore securing enterprise AI deployments using Vault, Terraform, and Azure. The session showcases practical solutions for credential management and secure, scalable AI production.<!--excerpt_end-->
 
 {% youtube l7q6w6eICgw %}
@@ -84,4 +107,4 @@ This episode addresses "last-mile" automation and security challenges for produc
 
 ## Hashtags
 
-# SipAndSync #HashiCorpVault #Azure #AI #DevOps #Terraform #Security #CloudComputing #VaultRadar #Kubernetes #AzureVerifiedModules #AIProduction #ConfusedDeputy
+# SipAndSynC#HashiCorpVault #Azure #AI #DevOps #Terraform #Security #CloudComputing #VaultRadar #Kubernetes #AzureVerifiedModules #AIProduction #ConfusedDeputy

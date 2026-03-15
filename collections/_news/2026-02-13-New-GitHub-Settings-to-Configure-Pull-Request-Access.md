@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "New GitHub Settings to Configure Pull Request Access"
-description: "This news post outlines recent updates to GitHub repository settings, giving maintainers more control over how contributions are managed. The changes include options to disable pull requests entirely or to restrict PR creation to collaborators only, offering flexibility for different project needs in both public and private repositories. The announcement also covers mobile app considerations and provides links to documentation for deeper technical management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-13-new-repository-settings-for-configuring-pull-request-access
+title: New GitHub Settings to Configure Pull Request Access
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-13 18:12:55 +00:00
-permalink: "/2026-02-13-New-GitHub-Settings-to-Configure-Pull-Request-Access.html"
-categories: ["DevOps"]
-tags: ["Access Control", "Code Quality", "Collaboration", "Collaboration Tools", "Contribution Workflow", "DevOps", "GitHub", "News", "Open Source", "Project Management", "Pull Requests", "Repository Settings", "Team Practices"]
-tags_normalized: ["access control", "code quality", "collaboration", "collaboration tools", "contribution workflow", "devops", "github", "news", "open source", "project management", "pull requests", "repository settings", "team practices"]
+tags:
+- Access Control
+- Code Quality
+- Collaboration
+- Collaboration Tools
+- Contribution Workflow
+- DevOps
+- GitHub
+- News
+- Open Source
+- Project Management
+- Pull Requests
+- Repository Settings
+- Team Practices
+section_names:
+- devops
 ---
-
 Allison explains new GitHub repository settings that give maintainers finer control over pull request contributions, detailing how to disable PRs entirely or limit them to collaborators for more managed development.<!--excerpt_end-->
 
 # New GitHub Settings to Configure Pull Request Access

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "From Ingress to Gateway API: Migrating Kubernetes Edge in Azure with Application Gateway for Containers"
-description: "This comprehensive guide discusses the transition from the deprecated Ingress NGINX controller in Kubernetes to the Gateway API, with a focus on Azure Kubernetes Service (AKS) and the Azure Application Gateway for Containers. The article covers the drivers behind this industry shift, key challenges, architecture considerations, practical migration steps, and tools to facilitate the process, enabling teams to establish a robust, Azure-native traffic management platform."
-author: "Jack Stromberg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-ingress-to-gateway-api-a-pragmatic-path-forward-and-why-it/ba-p/4489779"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/from-ingress-to-gateway-api-a-pragmatic-path-forward-and-why-it/ba-p/4489779
+title: 'From Ingress to Gateway API: Migrating Kubernetes Edge in Azure with Application Gateway for Containers'
+author: Jack Stromberg
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-28 23:19:40 +00:00
-permalink: "/2026-01-28-From-Ingress-to-Gateway-API-Migrating-Kubernetes-Edge-in-Azure-with-Application-Gateway-for-Containers.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "ALB Controller", "Application Gateway For Containers", "Automation", "Azure", "Azure Application Gateway", "Azure Monitor", "Cloud Migration", "Cluster Networking", "Community", "DevOps", "Gateway API", "IaC", "Ingress Controller", "Kubernetes", "Kubernetes Networking", "Load Balancer", "NGINX", "Rolling Deployment", "Security", "SLA", "TLS", "Web Application Firewall", "YAML Migration"]
-tags_normalized: ["aks", "alb controller", "application gateway for containers", "automation", "azure", "azure application gateway", "azure monitor", "cloud migration", "cluster networking", "community", "devops", "gateway api", "iac", "ingress controller", "kubernetes", "kubernetes networking", "load balancer", "nginx", "rolling deployment", "security", "sla", "tls", "web application firewall", "yaml migration"]
+tags:
+- AKS
+- ALB Controller
+- Application Gateway For Containers
+- Automation
+- Azure
+- Azure Application Gateway
+- Azure Monitor
+- Cloud Migration
+- Cluster Networking
+- Community
+- DevOps
+- Gateway API
+- IaC
+- Ingress Controller
+- Kubernetes
+- Kubernetes Networking
+- Load Balancer
+- NGINX
+- Rolling Deployment
+- Security
+- SLA
+- TLS
+- Web Application Firewall
+- YAML Migration
+section_names:
+- azure
+- devops
+- security
 ---
-
 Jack Stromberg delivers a hands-on walkthrough for AKS operators transitioning from Ingress NGINX to the Gateway API using Azure Application Gateway for Containers. Practical migration steps, security posture, and tooling are highlighted.<!--excerpt_end-->
 
 # From Ingress to Gateway API: Migrating Kubernetes Edge in Azure with Application Gateway for Containers

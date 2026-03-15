@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Interactive vs Non-Interactive Modes in GitHub Copilot CLI"
-description: "This beginner-friendly video tutorial, presented by GitHub, explains how to quickly prompt GitHub Copilot directly from your terminal using the Copilot CLI. It covers both interactive and non-interactive modes, showcasing practical usage for developers looking to boost productivity and streamline coding workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bdIJkGr2NV0"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=bdIJkGr2NV0
+title: Interactive vs Non-Interactive Modes in GitHub Copilot CLI
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-12 18:50:17 +00:00
-permalink: "/2026-03-12-Interactive-vs-Non-Interactive-Modes-in-GitHub-Copilot-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Coding", "CLI Tools", "Copilot CLI", "Developer Tools", "GitHub Copilot", "Interactive Mode", "Non Interactive Mode", "Programming Workflow", "Prompt Engineering", "Shell", "Terminal Productivity", "Videos"]
-tags_normalized: ["ai", "ai assisted coding", "cli tools", "copilot cli", "developer tools", "github copilot", "interactive mode", "non interactive mode", "programming workflow", "prompt engineering", "shell", "terminal productivity", "videos"]
+tags:
+- AI
+- AI Assisted Coding
+- CLI Tools
+- Copilot CLI
+- Developer Tools
+- GitHub Copilot
+- Interactive Mode
+- Non Interactive Mode
+- Programming Workflow
+- Prompt Engineering
+- Shell
+- Terminal Productivity
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a beginner’s tutorial on using the interactive and non-interactive modes of the Copilot CLI, showing developers how to efficiently prompt Copilot from the terminal.<!--excerpt_end-->
 
 {% youtube bdIJkGr2NV0 %}

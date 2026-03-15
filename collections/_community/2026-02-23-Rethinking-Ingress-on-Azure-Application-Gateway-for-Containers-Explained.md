@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Rethinking Ingress on Azure: Application Gateway for Containers Explained"
-description: "This in-depth article by rgarofalo explores Azure Application Gateway for Containers, a managed Azure service providing ingress, Layer-7 load balancing, web application firewall, and TLS termination for container-based applications on Kubernetes. It covers architecture, operations, security, Kubernetes-native integration, scalability, and includes hands-on configuration examples using Gateway API and Ingress API."
-author: "rgarofalo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-ingress-on-azure-application-gateway-for-containers/ba-p/4492277"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-ingress-on-azure-application-gateway-for-containers/ba-p/4492277
+title: 'Rethinking Ingress on Azure: Application Gateway for Containers Explained'
+author: rgarofalo
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-23 10:49:29 +00:00
-permalink: "/2026-02-23-Rethinking-Ingress-on-Azure-Application-Gateway-for-Containers-Explained.html"
-categories: ["Azure", "Security"]
-tags: ["AKS", "Azure", "Azure Application Gateway For Containers", "Azure Managed Service", "Azure Networking", "Azure Security", "Backend Routing", "Community", "Container Security", "Control Plane", "Data Plane", "Declarative Configuration", "Gateway API", "Ingress", "Kubernetes", "Kubernetes Integration", "Layer 7 Load Balancing", "Network Architecture", "Platform Engineering", "Security", "TLS Termination", "Traffic Management", "Web Application Firewall"]
-tags_normalized: ["aks", "azure", "azure application gateway for containers", "azure managed service", "azure networking", "azure security", "backend routing", "community", "container security", "control plane", "data plane", "declarative configuration", "gateway api", "ingress", "kubernetes", "kubernetes integration", "layer 7 load balancing", "network architecture", "platform engineering", "security", "tls termination", "traffic management", "web application firewall"]
+tags:
+- AKS
+- Azure
+- Azure Application Gateway For Containers
+- Azure Managed Service
+- Azure Networking
+- Azure Security
+- Backend Routing
+- Community
+- Container Security
+- Control Plane
+- Data Plane
+- Declarative Configuration
+- Gateway API
+- Ingress
+- Kubernetes
+- Kubernetes Integration
+- Layer 7 Load Balancing
+- Network Architecture
+- Platform Engineering
+- Security
+- TLS Termination
+- Traffic Management
+- Web Application Firewall
+section_names:
+- azure
+- security
 ---
-
 rgarofalo breaks down how Azure Application Gateway for Containers enables secure, scalable ingress and Layer-7 traffic management for containerized workloads, highlighting managed security, automation, and Kubernetes-native operations.<!--excerpt_end-->
 
 # Rethinking Ingress on Azure: Application Gateway for Containers Explained

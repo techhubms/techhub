@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Avoid These Common Prompts"
-description: "This guide explains why generic Copilot prompts, such as 'write a function' or 'fix this code', often yield poor suggestions and how to craft more effective, specific prompts. It offers practical examples illustrating how to get meaningful results from GitHub Copilot by providing context, examples, and clear intent."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/avoid-these-common-prompts.html
+title: Avoid These Common Prompts
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-07-04 00:00:00 +00:00
-permalink: "/2025-07-04-Avoid-These-Common-Prompts.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Blogs", "Bug Fixing", "Coding Productivity", "Contextual Prompts", "Copilot Prompts", "Developer Experience", "GitHub Copilot", "Programming Best Practices", "Prompt Engineering", "Unit Test Generation"]
-tags_normalized: ["ai", "ai assisted development", "blogs", "bug fixing", "coding productivity", "contextual prompts", "copilot prompts", "developer experience", "github copilot", "programming best practices", "prompt engineering", "unit test generation"]
+tags:
+- AI Assisted Development
+- Bug Fixing
+- Coding Productivity
+- Contextual Prompts
+- Copilot Prompts
+- Developer Experience
+- Programming Best Practices
+- Prompt Engineering
+- Unit Test Generation
+- AI
+- GitHub Copilot
+- Blogs
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels shares actionable advice on how developers can improve their results with GitHub Copilot by avoiding vague prompts and leveraging precise language and clear context.<!--excerpt_end-->
 
 # Avoid These Common Prompts

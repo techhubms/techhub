@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Is AI the Right Solution? Part 1: A Decision Framework for Validating AI Projects"
-description: "This article by Hidde de Smet introduces a structured decision tree framework for evaluating if AI is the best solution for a given project. Inspired by the IASA Global AI Architecture course, it guides readers through strategic alignment, business impact, feasibility, and ROI assessment for AI projects."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/ai-project-validation-framework-part1"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+external_url: https://hiddedesmet.com/ai-project-validation-framework-part1
+title: 'Is AI the Right Solution? Part 1: A Decision Framework for Validating AI Projects'
+author: Hidde de Smet
+feed_name: Hidde de Smet's Blog
 date: 2025-05-26 07:00:00 +00:00
-permalink: "/2025-05-26-Is-AI-the-Right-Solution-Part-1-A-Decision-Framework-for-Validating-AI-Projects.html"
-categories: ["AI"]
-tags: ["AI", "AI Feasibility", "AI Operational Costs", "AI Project Validation", "Blogs", "Business Impact", "Data Readiness", "Decision Tree", "IASA", "Project Management", "Project Validation", "ROI Assessment", "Series", "Strategic Alignment"]
-tags_normalized: ["ai", "ai feasibility", "ai operational costs", "ai project validation", "blogs", "business impact", "data readiness", "decision tree", "iasa", "project management", "project validation", "roi assessment", "series", "strategic alignment"]
+tags:
+- AI Feasibility
+- AI Operational Costs
+- AI Project Validation
+- Business Impact
+- Data Readiness
+- Decision Tree
+- IASA
+- Project Management
+- Project Validation
+- ROI Assessment
+- Series
+- Strategic Alignment
+- AI
+- Blogs
+section_names:
+- ai
+primary_section: ai
 ---
-
 Hidde de Smet shares Part 1 of a 3-part series on validating AI initiatives, focusing on a decision tree framework that helps organizations determine if AI is the best fit for solving their business problems.<!--excerpt_end-->
 
 # Is AI the Right Solution? Part 1: The Decision Framework

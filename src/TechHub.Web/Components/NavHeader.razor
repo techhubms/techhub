@@ -1,0 +1,184 @@
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@inject SectionCache SectionCache
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+@inject BrandingService Branding
+@implements IDisposable
+
+<nav class="main-nav" aria-label="Primary navigation">
+    <div class="main-nav-content">
+        <a href="/" class="site-logo @(IsActivePage("/") ? "home-active" : "")" aria-label="@Branding.SiteName Home">
+            <span class="logo-text">@Branding.SiteName</span>
+            @if (Branding.ShowCopilotLogo)
+            {
+                <svg class="logo-copilot-icon" aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" fill-rule="evenodd" d="M23.922 16.992c-.861 1.495-5.859 5.023-11.922 5.023-6.063 0-11.061-3.528-11.922-5.023A.641.641 0 0 1 0 16.736v-2.869a.841.841 0 0 1 .053-.22c.372-.935 1.347-2.292 2.605-2.656.167-.429.414-1.055.644-1.517a10.195 10.195 0 0 1-.052-1.086c0-1.331.282-2.499 1.132-3.368.397-.406.89-.717 1.474-.952 1.399-1.136 3.392-2.093 6.122-2.093 2.731 0 4.767.957 6.166 2.093.584.235 1.077.546 1.474.952.85.869 1.132 2.037 1.132 3.368 0 .368-.014.733-.052 1.086.23.462.477 1.088.644 1.517 1.258.364 2.233 1.721 2.605 2.656a.832.832 0 0 1 .053.22v2.869a.641.641 0 0 1-.078.256ZM12.172 11h-.344a4.323 4.323 0 0 1-.355.508C10.703 12.455 9.555 13 7.965 13c-1.725 0-2.989-.359-3.782-1.259a2.005 2.005 0 0 1-.085-.104L4 11.741v6.585c1.435.779 4.514 2.179 8 2.179 3.486 0 6.565-1.4 8-2.179v-6.585l-.098-.104s-.033.045-.085.104c-.793.9-2.057 1.259-3.782 1.259-1.59 0-2.738-.545-3.508-1.492a4.323 4.323 0 0 1-.355-.508h-.016.016Zm.641-2.935c.136 1.057.403 1.913.878 2.497.442.544 1.134.938 2.344.938 1.573 0 2.292-.337 2.657-.751.384-.435.558-1.15.558-2.361 0-1.14-.243-1.847-.705-2.319-.477-.488-1.319-.862-2.824-1.025-1.487-.161-2.192.138-2.533.529-.269.307-.437.808-.438 1.578v.021c0 .265.021.562.063.893Zm-1.626 0c.042-.331.063-.628.063-.894v-.02c-.001-.77-.169-1.271-.438-1.578-.341-.391-1.046-.69-2.533-.529-1.505.163-2.347.537-2.824 1.025-.462.472-.705 1.179-.705 2.319 0 1.211.175 1.926.558 2.361.365.414 1.084.751 2.657.751 1.21 0 1.902-.394 2.344-.938.475-.584.742-1.44.878-2.497Z" />
+                    <path fill="currentColor" fill-rule="evenodd" d="M14.5 14.25a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Zm-5 0a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1Z" />
+                </svg>
+            }
+        </a>
+
+        @* Desktop navigation links (hidden on mobile via CSS) *@
+        <div class="nav-links">
+            @foreach (var item in SectionCache.Sections)
+            {
+                <a href="/@item.Name" class="nav-link @(IsActiveSection(item.Name) ? "active" : "")">
+                    @item.Title
+                </a>
+            }
+            <a href="/about" class="nav-link about-link @(IsActivePage("/about") ? "active" : "")">
+                About
+            </a>
+        </div>
+
+        @* Hamburger button (visible on mobile via CSS) *@
+        <button class="hamburger-btn @(menuOpen ? "open" : "")"
+                @onclick="ToggleMenu"
+                aria-label="@(menuOpen ? "Close navigation menu" : "Open navigation menu")"
+                aria-expanded="@(menuOpen ? "true" : "false")"
+                aria-controls="mobile-menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </div>
+</nav>
+
+@* Mobile menu panel (hidden on desktop via CSS) *@
+<div id="mobile-menu" class="mobile-menu @(menuOpen ? "open" : "")" role="navigation" aria-label="Mobile navigation">
+    <a href="/" class="mobile-menu-section-header mobile-menu-home @(IsActivePage("/") ? "active" : "")" @onclick="CloseMenu">Home</a>
+    @foreach (var sectionItem in SectionCache.Sections)
+    {
+        <div class="mobile-menu-section">
+            <button class="mobile-menu-section-header @(IsActiveSection(sectionItem.Name) ? "active" : "")"
+                    @onclick="() => ToggleSection(sectionItem.Name)"
+                    aria-expanded="@(expandedSections.Contains(sectionItem.Name) ? "true" : "false")">
+                <span>@sectionItem.Title</span>
+                <span class="chevron @(expandedSections.Contains(sectionItem.Name) ? "expanded" : "")"></span>
+            </button>
+
+            @if (expandedSections.Contains(sectionItem.Name))
+            {
+                <div class="mobile-menu-sub-items">
+                    <a href="/@sectionItem.Name/all" class="@(IsActivePage($"/{sectionItem.Name}/all") || IsActivePage($"/{sectionItem.Name}") ? "active" : "")" @onclick="CloseMenu">All</a>
+                    @foreach (var collection in sectionItem.Collections.Where(c => !c.IsCustom))
+                    {
+                        <a href="/@sectionItem.Name/@collection.Name" class="@(IsActivePage($"/{sectionItem.Name}/{collection.Name}") ? "active" : "")" @onclick="CloseMenu">@collection.Title</a>
+                    }
+                    @foreach (var customPage in sectionItem.Collections.Where(c => c.IsCustom).OrderBy(c => c.Order).ThenBy(c => c.Title))
+                    {
+                        <a href="@customPage.Url" class="mobile-menu-custom-page @(IsActivePage(customPage.Url) ? "active" : "")" @onclick="CloseMenu">@customPage.Title</a>
+                    }
+                </div>
+            }
+        </div>
+    }
+    <a href="/about" class="mobile-menu-section-header @(IsActivePage("/about") ? "active" : "")" @onclick="CloseMenu">About Us</a>
+</div>
+
+@if (menuOpen)
+{
+    <div class="mobile-menu-overlay" @onclick="CloseMenu"></div>
+}
+
+@code {
+    private bool menuOpen;
+    private readonly HashSet<string> expandedSections = new(StringComparer.OrdinalIgnoreCase);
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    private async void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        // Close menu on navigation
+        if (menuOpen)
+        {
+            menuOpen = false;
+            await UnlockBodyScroll();
+        }
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task ToggleMenu()
+    {
+        menuOpen = !menuOpen;
+        if (menuOpen)
+        {
+            await LockBodyScroll();
+        }
+        else
+        {
+            expandedSections.Clear();
+            await UnlockBodyScroll();
+        }
+    }
+
+    [JSInvokable]
+    public async Task CloseMenuFromJs()
+    {
+        if (menuOpen)
+        {
+            menuOpen = false;
+            expandedSections.Clear();
+            await UnlockBodyScroll();
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+
+    private async Task CloseMenu()
+    {
+        menuOpen = false;
+        expandedSections.Clear();
+        await UnlockBodyScroll();
+    }
+
+    private void ToggleSection(string sectionName)
+    {
+        if (expandedSections.Contains(sectionName))
+        {
+            expandedSections.Remove(sectionName);
+        }
+        else
+        {
+            expandedSections.Clear();
+            expandedSections.Add(sectionName);
+        }
+    }
+
+    private async Task LockBodyScroll()
+    {
+        await JSRuntime.InvokeVoidAsync("mobileNav.lockScroll");
+    }
+
+    private async Task UnlockBodyScroll()
+    {
+        await JSRuntime.InvokeVoidAsync("mobileNav.unlockScroll");
+    }
+
+    private string GetCurrentSection()
+    {
+        var uri = new Uri(Navigation.Uri);
+        var path = uri.AbsolutePath.Trim('/');
+        var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+        return segments.Length > 0 ? segments[0] : "";
+    }
+
+    private bool IsActiveSection(string sectionId)
+    {
+        return string.Equals(GetCurrentSection(), sectionId, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private bool IsActivePage(string path)
+    {
+        var uri = new Uri(Navigation.Uri);
+        return string.Equals(uri.AbsolutePath, path, StringComparison.OrdinalIgnoreCase);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
+}

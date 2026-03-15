@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Build Next-Gen AI Apps with .NET and Azure"
-description: "This session explores how to develop next-generation AI applications using .NET and Azure. Attendees will learn about the latest advancements in AI with .NET, the process of integrating AI workloads into their applications, and how to leverage cloud-based tools and frameworks to scale and deploy intelligent solutions. The talk includes practical samples, templates, and insights into future trends for AI development with Microsoft's ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=WdJd9fnFlGU"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=WdJd9fnFlGU
+title: Build Next-Gen AI Apps with .NET and Azure
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-08-14 14:18:49 +00:00
-permalink: "/2025-08-14-Build-Next-Gen-AI-Apps-with-NET-and-Azure.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Applications", "AI Development", "Azure", "C#", "Cloud Development", "Coding", "End To End Development", "Frameworks", "Microsoft AI", "Production Deployment", "Samples And Templates", "Scalability", "Videos", "VS"]
-tags_normalized: ["dotnet", "ai", "ai applications", "ai development", "azure", "csharp", "cloud development", "coding", "end to end development", "frameworks", "microsoft ai", "production deployment", "samples and templates", "scalability", "videos", "vs"]
+tags:
+- .NET
+- AI Applications
+- AI Development
+- C#
+- Cloud Development
+- End To End Development
+- Frameworks
+- Microsoft AI
+- Production Deployment
+- Samples And Templates
+- Scalability
+- VS
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 In this video session, dotnet demonstrates how to build next-generation AI applications with .NET and Azure, offering practical development guidance and showcasing the latest tools in the Microsoft ecosystem.<!--excerpt_end-->
 
 {% youtube WdJd9fnFlGU %}

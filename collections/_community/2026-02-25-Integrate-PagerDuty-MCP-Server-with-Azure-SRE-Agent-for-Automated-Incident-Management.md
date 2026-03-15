@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Integrate PagerDuty MCP Server with Azure SRE Agent for Automated Incident Management"
-description: "This guide explains how to connect Azure SRE Agent with PagerDuty's incident management platform using the official MCP server. It includes detailed steps for API token generation, configuring connectors in the Azure portal, setting up specialized subagents and skills, and best practices for secure, scalable, and effective incident management with full read/write capabilities across PagerDuty resources."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-in-azure-sre-agent/ba-p/4497124"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-in-azure-sre-agent/ba-p/4497124
+title: Integrate PagerDuty MCP Server with Azure SRE Agent for Automated Incident Management
+author: dbandaru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-25 16:57:08 +00:00
-permalink: "/2026-02-25-Integrate-PagerDuty-MCP-Server-with-Azure-SRE-Agent-for-Automated-Incident-Management.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Authentication", "Audit Logging", "Automation", "Azure", "Azure SRE Agent", "Change Events", "Community", "Connector Configuration", "DevOps", "Escalation Policies", "Event Orchestration", "Incident Management", "Incident Workflows", "Monitoring", "On Call Scheduling", "PagerDuty MCP Server", "Security", "Service Integration", "Streamable HTTP", "User API Token"]
-tags_normalized: ["api authentication", "audit logging", "automation", "azure", "azure sre agent", "change events", "community", "connector configuration", "devops", "escalation policies", "event orchestration", "incident management", "incident workflows", "monitoring", "on call scheduling", "pagerduty mcp server", "security", "service integration", "streamable http", "user api token"]
+tags:
+- API Authentication
+- Audit Logging
+- Automation
+- Azure
+- Azure SRE Agent
+- Change Events
+- Community
+- Connector Configuration
+- DevOps
+- Escalation Policies
+- Event Orchestration
+- Incident Management
+- Incident Workflows
+- Monitoring
+- On Call Scheduling
+- PagerDuty MCP Server
+- Security
+- Service Integration
+- Streamable HTTP
+- User API Token
+section_names:
+- azure
+- devops
+- security
 ---
-
 dbandaru provides a comprehensive guide to integrating PagerDuty MCP server with Azure SRE Agent, outlining secure incident management, configuration steps, and automation best practices for operational teams.<!--excerpt_end-->
 
 # Integrate PagerDuty MCP Server with Azure SRE Agent for Automated Incident Management

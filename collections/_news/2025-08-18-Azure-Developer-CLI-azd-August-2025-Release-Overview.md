@@ -1,20 +1,55 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) August 2025 Release Overview"
-description: "This update covers the August 2025 release for Azure Developer CLI (azd), detailing new bug fixes, documentation improvements, and contributions to the template gallery. Highlights include enhanced PowerShell fallback support, improvements for Azure DevOps CI/CD environments, updated docs on environment management, and new templates for scenarios like Azure Monitor, API Management with OAuth, Microsoft Sentinel integration, AI and PostgreSQL, and Purview for secure AI workflows."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-august-2025/
+title: Azure Developer CLI (azd) August 2025 Release Overview
+author: PuiChee (PC) Chan
+feed_name: Microsoft DevBlog
 date: 2025-08-18 18:44:14 +00:00
-permalink: "/2025-08-18-Azure-Developer-CLI-azd-August-2025-Release-Overview.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: [".NET", "AI", "API Management", "Azd", "Azure", "Azure AI", "Azure Aspire", "Azure Developer CLI", "Azure DevOps", "Azure Monitor", "Azure SDK", "CI/CD", "Codespaces", "Coding", "Container Apps", "DevOps", "Docker", "Environment Variables", "Java", "JavaScript", "Kubernetes", "LangChain.js", "Log Analytics", "Microsoft Entra ID", "Microsoft Sentinel", "ML", "News", "OAuth2", "PostgreSQL", "PowerShell", "Purview", "Python", "Resource Group Deployment", "Security", "Threat Detection", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "api management", "azd", "azure", "azure ai", "azure aspire", "azure developer cli", "azure devops", "azure monitor", "azure sdk", "cislashcd", "codespaces", "coding", "container apps", "devops", "docker", "environment variables", "java", "javascript", "kubernetes", "langchaindotjs", "log analytics", "microsoft entra id", "microsoft sentinel", "ml", "news", "oauth2", "postgresql", "powershell", "purview", "python", "resource group deployment", "security", "threat detection", "typescript", "vs code"]
+tags:
+- .NET
+- API Management
+- Azd
+- Azure AI
+- Azure Aspire
+- Azure Developer CLI
+- Azure DevOps
+- Azure Monitor
+- Azure SDK
+- CI/CD
+- Codespaces
+- Container Apps
+- Docker
+- Environment Variables
+- Java
+- JavaScript
+- Kubernetes
+- LangChain.js
+- Log Analytics
+- Microsoft Entra ID
+- Microsoft Sentinel
+- OAuth2
+- PostgreSQL
+- PowerShell
+- Purview
+- Python
+- Resource Group Deployment
+- Threat Detection
+- Typescript
+- VS Code
+- AI
+- Azure
+- DevOps
+- ML
+- Security
+- News
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- ml
+- security
+primary_section: ai
 ---
-
 PuiChee (PC) Chan shares the August 2025 Azure Developer CLI (azd) release summary, including important bug fixes, new documentation, improved templates for common developer scenarios, and enhanced security and AI integrations.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) August 2025 Release Overview

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Build vs. Buy: What it Really Takes to Harden Your Software Supply Chain"
-description: "This article by Matt Moore dives into the trade-offs engineering teams face when deciding between building custom-hardened container images or purchasing a supply chain security solution. It discusses challenges around automation, continuous maintenance, testing, and secure delivery when protecting modern CI/CD pipelines and cloud-native applications from supply chain attacks."
-author: "Matt Moore"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/build-vs-buy-what-it-really-takes-to-harden-your-software-supply-chain/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+external_url: https://devops.com/build-vs-buy-what-it-really-takes-to-harden-your-software-supply-chain/
+title: 'Build vs. Buy: What it Really Takes to Harden Your Software Supply Chain'
+author: Matt Moore
+feed_name: DevOps Blog
 date: 2025-10-03 06:30:32 +00:00
-permalink: "/2025-10-03-Build-vs-Buy-What-it-Really-Takes-to-Harden-Your-Software-Supply-Chain.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "Automation", "Best Practices", "Blogs", "Build Pipelines", "Business Of DevOps", "CI/CD", "CI/CD Security", "Container Registry", "Container Registry Security", "Container Security", "Container Vulnerabilities", "Contributed Content", "DevOps", "Devsecops", "DockerHub", "Hardened Images", "Integration Testing", "Kubernetes", "Kubernetes Security", "Open Source Vulnerabilities", "Secure Build Pipelines", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Software Distribution", "Software Maintenance", "Software Supply Chain Security", "SolarWinds", "Supply Chain Security", "Threat Mitigation"]
-tags_normalized: ["access control", "automation", "best practices", "blogs", "build pipelines", "business of devops", "cislashcd", "cislashcd security", "container registry", "container registry security", "container security", "container vulnerabilities", "contributed content", "devops", "devsecops", "dockerhub", "hardened images", "integration testing", "kubernetes", "kubernetes security", "open source vulnerabilities", "secure build pipelines", "security", "social facebook", "social linkedin", "social x", "software distribution", "software maintenance", "software supply chain security", "solarwinds", "supply chain security", "threat mitigation"]
+tags:
+- Access Control
+- Automation
+- Best Practices
+- Build Pipelines
+- Business Of DevOps
+- CI/CD
+- CI/CD Security
+- Container Registry
+- Container Registry Security
+- Container Security
+- Container Vulnerabilities
+- Contributed Content
+- Devsecops
+- DockerHub
+- Hardened Images
+- Integration Testing
+- Kubernetes
+- Kubernetes Security
+- Open Source Vulnerabilities
+- Secure Build Pipelines
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Software Distribution
+- Software Maintenance
+- Software Supply Chain Security
+- SolarWinds
+- Supply Chain Security
+- Threat Mitigation
+- DevOps
+- Security
+- Blogs
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 Matt Moore explores what it takes to secure your software supply chain, covering the difficult questions facing engineering teams around building or buying hardened images, maintenance, automation pitfalls, and supply chain attack risks.<!--excerpt_end-->
 
 # Build vs. Buy: What it Really Takes to Harden Your Software Supply Chain

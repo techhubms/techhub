@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Model Context Protocol (MCP) Support for GitHub Copilot Now Available in JetBrains, Eclipse, and Xcode"
-description: "This announcement details the general availability of Model Context Protocol (MCP) support in GitHub Copilot for JetBrains, Eclipse, and Xcode. MCP enables Copilot to connect with external tools and data sources via compliant servers, providing enhanced contextual awareness and extended coding intelligence. The post covers integration requirements, authentication methods, enterprise policy management, and setup links for each supported IDE."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-08-13-model-context-protocol-mcp-support-for-jetbrains-eclipse-and-xcode-is-now-generally-available
+title: Model Context Protocol (MCP) Support for GitHub Copilot Now Available in JetBrains, Eclipse, and Xcode
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-08-14 10:35:58 +00:00
-permalink: "/2025-08-14-Model-Context-Protocol-MCP-Support-for-GitHub-Copilot-Now-Available-in-JetBrains-Eclipse-and-Xcode.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Contextual Coding", "Copilot Plugin", "Developer Tools", "Eclipse", "Enterprise Policy", "External Tool Integration", "GitHub Copilot", "IDE Integration", "JetBrains", "MCP", "News", "OAuth Authentication", "PAT Authentication", "Programming Productivity", "Remote MCP Server", "Xcode"]
-tags_normalized: ["agent mode", "ai", "contextual coding", "copilot plugin", "developer tools", "eclipse", "enterprise policy", "external tool integration", "github copilot", "ide integration", "jetbrains", "mcp", "news", "oauth authentication", "pat authentication", "programming productivity", "remote mcp server", "xcode"]
+tags:
+- Agent Mode
+- Contextual Coding
+- Copilot Plugin
+- Developer Tools
+- Eclipse
+- Enterprise Policy
+- External Tool Integration
+- IDE Integration
+- JetBrains
+- MCP
+- OAuth Authentication
+- PAT Authentication
+- Programming Productivity
+- Remote MCP Server
+- Xcode
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison announces the general availability of Model Context Protocol (MCP) support for GitHub Copilot in JetBrains, Eclipse, and Xcode, highlighting expanded integration options and contextual coding capabilities.<!--excerpt_end-->
 
 # Model Context Protocol (MCP) Support for GitHub Copilot Now Available in JetBrains, Eclipse, and Xcode

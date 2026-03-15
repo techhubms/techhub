@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Unlocking Hidden Acrylic/Mica Style UI in Visual Studio 2022"
-description: "This community post by YouKnowWhyNo explains how to activate a hidden Acrylic/Mica user interface style in Visual Studio 2022 using the Feature Flags extension. The steps list downloading the extension, enabling specific feature flags, and restarting Visual Studio for the new UI, without requiring a preview version."
-author: "YouKnowWhyNo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1mbzcis/visual_studio_2022_has_hidden_acrylicmica_style_ui/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+external_url: https://www.reddit.com/r/VisualStudio/comments/1mbzcis/visual_studio_2022_has_hidden_acrylicmica_style_ui/
+title: Unlocking Hidden Acrylic/Mica Style UI in Visual Studio 2022
+author: YouKnowWhyNo
+feed_name: Reddit Visual Studio
 date: 2025-07-29 02:09:39 +00:00
-permalink: "/2025-07-29-Unlocking-Hidden-AcrylicMica-Style-UI-in-Visual-Studio-2022.html"
-categories: ["Coding"]
-tags: ["Acrylic UI", "Coding", "Community", "Developer Tools", "Extension", "Feature Flags", "IDE", "Mica Style", "Shell.ExperimentalSyles", "Shell.Material.Acrylic", "UI Customization", "VS"]
-tags_normalized: ["acrylic ui", "coding", "community", "developer tools", "extension", "feature flags", "ide", "mica style", "shelldotexperimentalsyles", "shelldotmaterialdotacrylic", "ui customization", "vs"]
+tags:
+- Acrylic UI
+- Developer Tools
+- Extension
+- Feature Flags
+- IDE
+- Mica Style
+- Shell.ExperimentalSyles
+- Shell.Material.Acrylic
+- UI Customization
+- VS
+- Community
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 YouKnowWhyNo guides readers through enabling a hidden Acrylic/Mica UI style in Visual Studio 2022, offering clear steps for customization.<!--excerpt_end-->
 
 ## Introduction

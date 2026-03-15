@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GPT-5 is now generally available in GitHub Models"
-description: "This announcement details the general availability of OpenAI's latest GPT-5 model in GitHub Models. It describes the different GPT-5 variants now accessible, improvements in code generation and reasoning, and user experience enhancements. Developers can explore these models via GitHub's Models tab, playground, or API, and integrate GPT-5 into a variety of applications for advanced and conversational AI-powered coding workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-08-07-gpt-5-is-now-generally-available-in-github-models
+title: GPT-5 is now generally available in GitHub Models
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-08-08 00:00:05 +00:00
-permalink: "/2025-08-08-GPT-5-is-now-generally-available-in-GitHub-Models.html"
-categories: ["AI"]
-tags: ["AI", "AI Collaboration", "AI Models", "APIs", "Code Generation", "Coding Assistant", "Conversational AI", "GitHub Models", "GPT 5", "Gpt 5 Chat", "Gpt 5 Mini", "Gpt 5 Nano", "Model Integration", "Model Playground", "Model Variants", "News", "OpenAI", "Software Development"]
-tags_normalized: ["ai", "ai collaboration", "ai models", "apis", "code generation", "coding assistant", "conversational ai", "github models", "gpt 5", "gpt 5 chat", "gpt 5 mini", "gpt 5 nano", "model integration", "model playground", "model variants", "news", "openai", "software development"]
+tags:
+- AI Collaboration
+- AI Models
+- APIs
+- Code Generation
+- Coding Assistant
+- Conversational AI
+- GitHub Models
+- GPT 5
+- Gpt 5 Chat
+- Gpt 5 Mini
+- Gpt 5 Nano
+- Model Integration
+- Model Playground
+- Model Variants
+- OpenAI
+- Software Development
+- AI
+- News
+section_names:
+- ai
+primary_section: ai
 ---
-
 Allison summarizes the launch of OpenAI's GPT-5 models on GitHub Models, highlighting new features, model variants, and pathways for developers to leverage advanced AI in coding workflows.<!--excerpt_end-->
 
 # GPT-5 is now generally available in GitHub Models

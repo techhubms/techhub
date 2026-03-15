@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "The Aspire Compiler: Bridging Local Development and Production Deployments"
-description: "David Fowler explores Aspire's compiler-like architecture for modern applications, enabling both local orchestration and production deployment. By treating the application model as a first-class artifact, Aspire streamlines the transition from developer intent to real infrastructure across diverse environments."
-author: "David Fowler"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://medium.com/@davidfowl/the-aspire-compiler-f8ccdf4bca0c?source=rss-8163234c98f0------2"
-viewing_mode: "external"
-feed_name: "David Fowler's Blog"
-feed_url: "https://medium.com/feed/@davidfowl"
+﻿---
+external_url: https://medium.com/@davidfowl/the-aspire-compiler-f8ccdf4bca0c?source=rss-8163234c98f0------2
+title: 'The Aspire Compiler: Bridging Local Development and Production Deployments'
+author: David Fowler
+feed_name: David Fowler's Blog
 date: 2025-04-04 14:01:15 +00:00
-permalink: "/2025-04-04-The-Aspire-Compiler-Bridging-Local-Development-and-Production-Deployments.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET Aspire", "Application Model", "ARM Templates", "Aspire", "Azure", "Bicep", "Blogs", "Cloud Computing", "Cloud Native", "Coding", "Developer Inner Loop", "DevOps", "IaC", "Kubernetes", "Publishing Pipeline", "Software Development", "Terraform"]
-tags_normalized: ["dotnet aspire", "application model", "arm templates", "aspire", "azure", "bicep", "blogs", "cloud computing", "cloud native", "coding", "developer inner loop", "devops", "iac", "kubernetes", "publishing pipeline", "software development", "terraform"]
+tags:
+- .NET Aspire
+- Application Model
+- ARM Templates
+- Aspire
+- Bicep
+- Cloud Computing
+- Cloud Native
+- Developer Inner Loop
+- IaC
+- Kubernetes
+- Publishing Pipeline
+- Software Development
+- Terraform
+- Azure
+- DevOps
+- Blogs
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 In this article, David Fowler introduces Aspire's compiler-inspired approach to application topology, highlighting how it bridges the gap between development and deployment using a resource model and extensible publishing pipeline.<!--excerpt_end-->
 
 # The Aspire Compiler
@@ -44,11 +57,11 @@ Aspire manages your application in two primary modes:
 
 - **Artifact Generation:** Compiles the application model into deployable artifacts for handoff to deployment pipelines.
 - **Supported Artifacts:**
-    - Kubernetes manifests
-    - Terraform configuration files
-    - Bicep/ARM templates
-    - Docker Compose files
-    - CDK-based constructs
+  - Kubernetes manifests
+  - Terraform configuration files
+  - Bicep/ARM templates
+  - Docker Compose files
+  - CDK-based constructs
 - **Publishing:** The publishing action is carried out by units called *publishers*. The overall process draws architectural parallels from traditional software compilers.
 
 ---

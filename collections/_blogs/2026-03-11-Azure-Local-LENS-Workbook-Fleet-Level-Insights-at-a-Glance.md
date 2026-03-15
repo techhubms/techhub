@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure Local LENS Workbook: Fleet-Level Insights at a Glance"
-description: "This article introduces the Azure Local LENS Workbook, an open-source, community-driven Azure Monitor workbook designed to provide fleet-level operational visibility across large Azure Local estates. It explains how the workbook aggregates and visualizes health, compliance, and workload data, helping operators and architects make proactive, data-driven decisions at scale in hybrid cloud environments."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2026/03/azure-local-lens-workbook-fleet-level-insights-at-a-glance/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+external_url: https://www.thomasmaurer.ch/2026/03/azure-local-lens-workbook-fleet-level-insights-at-a-glance/
+title: 'Azure Local LENS Workbook: Fleet-Level Insights at a Glance'
+author: Thomas Maurer
+primary_section: azure
+feed_name: Thomas Maurer's Blog
 date: 2026-03-11 15:22:12 +00:00
-permalink: "/2026-03-11-Azure-Local-LENS-Workbook-Fleet-Level-Insights-at-a-Glance.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Arc", "Azure Local", "Azure Local LENS", "Azure Monitor", "Blogs", "Capacity Planning", "Cloud", "Cloud Operations", "Community Projects", "Compliance Tracking", "Distributed Systems", "Fleet Management", "Hybrid Cloud", "LENS", "Microsoft", "Microsoft Azure", "Monitoring", "Open Source", "Operational Insights", "Resource Health", "Virtualization", "Workbooks"]
-tags_normalized: ["azure", "azure arc", "azure local", "azure local lens", "azure monitor", "blogs", "capacity planning", "cloud", "cloud operations", "community projects", "compliance tracking", "distributed systems", "fleet management", "hybrid cloud", "lens", "microsoft", "microsoft azure", "monitoring", "open source", "operational insights", "resource health", "virtualization", "workbooks"]
+tags:
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Local LENS
+- Azure Monitor
+- Blogs
+- Capacity Planning
+- Cloud Operations
+- Community Projects
+- Compliance Tracking
+- Distributed Systems
+- Fleet Management
+- Hybrid Cloud
+- LENS
+- Microsoft
+- Microsoft Azure
+- Monitoring
+- Open Source
+- Operational Insights
+- Resource Health
+- Virtualization
+- Workbooks
+section_names:
+- azure
 ---
-
 Thomas Maurer introduces the Azure Local LENS Workbook, an open-source Azure Monitor solution that delivers fleet-level visibility and operational insights for large Azure Local deployments.<!--excerpt_end-->
 
 # Azure Local LENS Workbook: Fleet-Level Insights at a Glance

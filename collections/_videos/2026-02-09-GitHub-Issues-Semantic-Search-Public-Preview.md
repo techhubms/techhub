@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Issues Semantic Search Public Preview"
-description: "GitHub introduces a new semantic search feature for Issues, now available in public preview. This enhancement uses natural language understanding to deliver more relevant results, reducing the limitations of strict keyword matching and improving search effectiveness for developers."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/CkipZAiH8RE"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/CkipZAiH8RE
+title: GitHub Issues Semantic Search Public Preview
+author: GitHub
+primary_section: ai
+feed_name: GitHub YouTube
 date: 2026-02-09 20:00:14 +00:00
-permalink: "/2026-02-09-GitHub-Issues-Semantic-Search-Public-Preview.html"
-categories: ["AI"]
-tags: ["AI", "Developer Productivity", "Developer Tools", "GitHub", "GitHubIssues", "Issue Tracking", "Machine Learning", "Natural Language Processing", "Public Preview", "Search Improvement", "Semantic Search", "SemanticSearch", "Software Development", "Videos"]
-tags_normalized: ["ai", "developer productivity", "developer tools", "github", "githubissues", "issue tracking", "machine learning", "natural language processing", "public preview", "search improvement", "semantic search", "semanticsearch", "software development", "videos"]
+tags:
+- AI
+- Developer Productivity
+- Developer Tools
+- GitHub
+- GitHubIssues
+- Issue Tracking
+- Natural Language Processing
+- Public Preview
+- Search Improvement
+- Semantic Search
+- SemanticSearch
+- Software Development
+- Videos
+section_names:
+- ai
 ---
-
 GitHub, authored by the GitHub team, announces an upgrade to Issue search. The new semantic search uses AI to improve result relevance, making it easier for developers to find what they need.<!--excerpt_end-->
 
 {% youtube CkipZAiH8RE %}

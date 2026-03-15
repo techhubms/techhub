@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Agent Hooks: Production-Grade Governance for Azure SRE Agent"
-description: "This article by Vineela-Suri provides a comprehensive, down-to-earth walkthrough of configuring Agent Hooks in the Azure SRE Agent platform for production environments. The content explains the role of hooks in enforcing governance, ensuring operational safety, maintaining audit trails, and delivering consistent quality in incident response automation, with a real-world scenario using Azure PostgreSQL Flexible Server."
-author: "Vineela-Suri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agent-hooks-production-grade-governance-for-azure-sre-agent/ba-p/4500292"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/agent-hooks-production-grade-governance-for-azure-sre-agent/ba-p/4500292
+title: 'Agent Hooks: Production-Grade Governance for Azure SRE Agent'
+author: Vineela-Suri
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-03-10 14:08:35 +00:00
-permalink: "/2026-03-10-Agent-Hooks-Production-Grade-Governance-for-Azure-SRE-Agent.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Agent Hooks", "Audit Trail", "Azure", "Azure Monitor", "Azure PostgreSQL Flexible Server", "Azure SRE Agent", "Cloud Governance", "Coding", "Community", "Compliance", "DevOps", "DevOps Workflow", "Governance", "Incident Response Automation", "Kubernetes", "Production Safety", "Python Scripting", "Quality Gate", "Remediation Automation", "Security"]
-tags_normalized: ["agent hooks", "audit trail", "azure", "azure monitor", "azure postgresql flexible server", "azure sre agent", "cloud governance", "coding", "community", "compliance", "devops", "devops workflow", "governance", "incident response automation", "kubernetes", "production safety", "python scripting", "quality gate", "remediation automation", "security"]
+tags:
+- Agent Hooks
+- Audit Trail
+- Azure
+- Azure Monitor
+- Azure PostgreSQL Flexible Server
+- Azure SRE Agent
+- Cloud Governance
+- Community
+- Compliance
+- DevOps
+- DevOps Workflow
+- Governance
+- Incident Response Automation
+- Kubernetes
+- Production Safety
+- Python Scripting
+- Quality Gate
+- Remediation Automation
+- Security
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Vineela-Suri shares a detailed guide on implementing Agent Hooks within Azure SRE Agent, covering governance, safety, and auditing practices for automating incident response—including hands-on configuration to prevent unsafe operations and maintain compliance.<!--excerpt_end-->
 
 # Agent Hooks: Production-Grade Governance for Azure SRE Agent

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Digital Defense 2025: Key Takeaways on AI and Security Threats"
-description: "This session distills major insights from the 2025 Microsoft Digital Defense Report, focusing on how AI is shaping both security operations and cyber threats. It highlights new attack tactics, legal challenges, and practical guidance for building resilience against modern threats. The discussion includes analysis of regional threat trends and strategies for using Microsoft’s scale and intelligence to strengthen defense across teams."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4G2pOwGusGs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=4G2pOwGusGs
+title: 'Digital Defense 2025: Key Takeaways on AI and Security Threats'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 07:56:55 +00:00
-permalink: "/2025-11-20-Digital-Defense-2025-Key-Takeaways-on-AI-and-Security-Threats.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Business Email Compromise", "Cybersecurity Trends", "Incident Response", "Information Stealers", "Legal Challenges", "Microsoft Defender", "Microsoft Digital Defense Report", "Microsoft Ignite", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Regional Threat Analysis", "Regulatory Compliance", "Security", "Security Operations", "Social Engineering", "Threat Actors", "Threat Intelligence", "Videos"]
-tags_normalized: ["ai", "ai security", "business email compromise", "cybersecurity trends", "incident response", "information stealers", "legal challenges", "microsoft defender", "microsoft digital defense report", "microsoft ignite", "modernizesecopswithaunifiedplatform", "msignite", "regional threat analysis", "regulatory compliance", "security", "security operations", "social engineering", "threat actors", "threat intelligence", "videos"]
+tags:
+- AI Security
+- Business Email Compromise
+- Cybersecurity Trends
+- Incident Response
+- Information Stealers
+- Legal Challenges
+- Microsoft Defender
+- Microsoft Digital Defense Report
+- Microsoft Ignite
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Regional Threat Analysis
+- Regulatory Compliance
+- Security Operations
+- Social Engineering
+- Threat Actors
+- Threat Intelligence
+- AI
+- Security
+- Videos
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Microsoft Events shares actionable insights from the 2025 Digital Defense Report, exploring the evolving role of AI in cyber threats and defenses. Speakers include Sherrod DeGrippo, Crane Hassold, and Chloé Messdaghi.<!--excerpt_end-->
 
 {% youtube 4G2pOwGusGs %}

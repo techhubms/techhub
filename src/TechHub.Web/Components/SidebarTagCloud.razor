@@ -1,0 +1,69 @@
+@using TechHub.Core.Models
+@implements IDisposable
+
+@* Tag cloud component for sidebar filtering *@
+<nav class="sidebar-section" aria-label="Filter by tags">
+    <h2 class="sidebar-h2">@Title</h2>
+
+    @if (_isLoading)
+    {
+        @* Skeleton loader - subtle placeholder during initial load *@
+        <div class="tag-cloud" aria-label="Loading tags">
+            @for (int i = 0; i < 20; i++)
+            {
+                <span class="tag-cloud-skeleton"></span>
+            }
+        </div>
+    }
+    else if (_hasError)
+    {
+        <p class="sidebar-text error">Error loading tags</p>
+    }
+    else if (_tags != null && _tags.Count > 0)
+    {
+        <div class="tag-cloud">
+            @foreach (var tagItem in _tags)
+            {
+                var sizeClass = tagItem.Size switch
+                {
+                    TagSize.Large => "tag-size-large",
+                    TagSize.Medium => "tag-size-medium",
+                    TagSize.Small => "tag-size-small",
+                    _ => ""
+                };
+
+                var isSelected = _selectedTagsInternal.Contains(tagItem.Tag.Trim().ToLowerInvariant());
+                // Only disable if count is 0 AND tag is not selected (selected tags should be clickable for deselection)
+                var isDisabled = tagItem.Count == 0 && !isSelected;
+                var cssClass = $"tag-cloud-item {sizeClass} {(isSelected ? "selected" : "")} {(isDisabled ? "disabled" : "")}".Trim();
+                
+                // Determine width class based on count to prevent layout shift
+                var digitCount = tagItem.Count.ToString("N0").Replace(",", "").Length;
+                var countWidthClass = $"tag-count-{digitCount}d";
+
+                @if (isDisabled)
+                {
+                    <button type="button" 
+                            class="@cssClass" 
+                            disabled="true"
+                            aria-disabled="true">
+                        @tagItem.Tag (<span class="@countWidthClass">@tagItem.Count.ToString("N0")</span>)
+                    </button>
+                }
+                else
+                {
+                    <button type="button" 
+                            class="@cssClass" 
+                            @onclick="() => HandleTagClick(tagItem.Tag)"
+                            aria-disabled="false">
+                        @tagItem.Tag (<span class="@countWidthClass">@tagItem.Count.ToString("N0")</span>)
+                    </button>
+                }
+            }
+        </div>
+    }
+    else
+    {
+        <p class="sidebar-text">No tags available</p>
+    }
+</nav>

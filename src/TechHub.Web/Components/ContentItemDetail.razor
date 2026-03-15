@@ -1,0 +1,47 @@
+@using TechHub.Core.Models
+
+@if (!string.IsNullOrWhiteSpace(Item.RenderedHtml))
+{
+    <article id="@Id" class="article-body">
+        <div class="content-detail-header">
+            <h1 id="skiptohere" class="page-h1">@Item.Title</h1>
+
+            <div class="article-metadata">
+                <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>@if (!string.IsNullOrWhiteSpace(Item.Author))
+                {<span class="content-author"> by @Item.Author</span>}
+            </div>
+        </div>
+        <SafeMarkup Html="@Item.RenderedHtml" />
+    </article>
+}
+
+@code {
+    [Parameter, EditorRequired]
+    public TechHub.Core.Models.ContentItemDetail Item { get; set; } = null!;
+
+    [Parameter]
+    public string? Id { get; set; }
+
+    private string FormatDate(long epochSeconds)
+    {
+        if (epochSeconds == 0) return string.Empty;
+
+        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
+        var now = DateTimeOffset.UtcNow;
+        var diff = now - dateTime;
+
+        if (diff.TotalDays < 1)
+            return "Today";
+        if (diff.TotalDays < 2)
+            return "Yesterday";
+        if (diff.TotalDays < 7)
+            return $"{(int)diff.TotalDays} days ago";
+        if (diff.TotalDays < 30)
+            return $"{(int)(diff.TotalDays / 7)} weeks ago";
+
+        return dateTime.ToString("MMM d, yyyy");
+    }
+
+    private static string FormatDateIso(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");
+}

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Systematic Debugging for AI Agents: Introducing the AgentRx Framework"
-description: "An overview of Microsoft's new systematic debugging approach for AI agents, focusing on the AgentRx framework. The news highlights visual debugging techniques, failure pinpointing, and multimodal reinforcement learning research, as well as integrations with an agentic verifier for improved AI development workflows."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/systematic-debugging-for-ai-agents-introducing-the-agentrx-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/research/blog/systematic-debugging-for-ai-agents-introducing-the-agentrx-framework/
+title: 'Systematic Debugging for AI Agents: Introducing the AgentRx Framework'
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-03-13 17:11:31 +00:00
-permalink: "/2026-03-13-Systematic-Debugging-for-AI-Agents-Introducing-the-AgentRx-Framework.html"
-categories: ["AI"]
-tags: ["Agentic Verifier", "AgentRx Framework", "AI", "AI Agents", "AI Development", "AI Reliability", "Company News", "Debugging Tools", "Machine Learning", "Microsoft Research", "Multimodal Reinforcement Learning", "News", "Product Development", "Systematic Debugging"]
-tags_normalized: ["agentic verifier", "agentrx framework", "ai", "ai agents", "ai development", "ai reliability", "company news", "debugging tools", "machine learning", "microsoft research", "multimodal reinforcement learning", "news", "product development", "systematic debugging"]
+tags:
+- Agentic Verifier
+- AgentRx Framework
+- AI
+- AI Agents
+- AI Development
+- AI Reliability
+- Company News
+- Debugging Tools
+- Microsoft Research
+- Multimodal Reinforcement Learning
+- News
+- Product Development
+- Systematic Debugging
+section_names:
+- ai
 ---
-
 stclarke outlines Microsoft's new systematic debugging approach for AI agents, introducing the AgentRx framework to improve AI agent failure analysis and reliability.<!--excerpt_end-->
 
 # Systematic Debugging for AI Agents: Introducing the AgentRx Framework

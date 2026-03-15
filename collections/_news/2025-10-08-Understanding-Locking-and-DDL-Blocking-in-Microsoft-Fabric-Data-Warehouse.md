@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Understanding Locking and DDL Blocking in Microsoft Fabric Data Warehouse"
-description: "This post provides a technical overview of how Microsoft Fabric Data Warehouse manages concurrency, focusing on its locking model and the implications of DDL blocking for developers, data engineers, and architects. It describes lock types, DDL behavior, blocking scenarios, and offers best practices for minimizing negative effects on workloads. Upcoming features like the READPAST hint are discussed for enhancing system responsiveness."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/locking-and-ddl-blocking-behavior-in-microsoft-fabric-data-warehouse-what-you-need-to-know/
+title: Understanding Locking and DDL Blocking in Microsoft Fabric Data Warehouse
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-10-08 07:03:26 +00:00
-permalink: "/2025-10-08-Understanding-Locking-and-DDL-Blocking-in-Microsoft-Fabric-Data-Warehouse.html"
-categories: ["Azure", "ML"]
-tags: ["ACID Transactions", "Azure", "Concurrency", "Data Engineering", "Data Warehouse", "Database Performance", "DDL Blocking", "DML Operations", "Locking", "Microsoft Fabric", "ML", "News", "Schema Modification Lock", "Snapshot Isolation", "Sys.dm Tran Locks", "Sys.tables", "T SQL", "Workload Management"]
-tags_normalized: ["acid transactions", "azure", "concurrency", "data engineering", "data warehouse", "database performance", "ddl blocking", "dml operations", "locking", "microsoft fabric", "ml", "news", "schema modification lock", "snapshot isolation", "sysdotdm tran locks", "sysdottables", "t sql", "workload management"]
+tags:
+- ACID Transactions
+- Concurrency
+- Data Engineering
+- Data Warehouse
+- Database Performance
+- DDL Blocking
+- DML Operations
+- Locking
+- Microsoft Fabric
+- Schema Modification Lock
+- Snapshot Isolation
+- Sys.dm Tran Locks
+- Sys.tables
+- T SQL
+- Workload Management
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog discusses locking behavior and DDL blocking in Microsoft Fabric Data Warehouse, offering practical advice for managing concurrency and minimizing blocking issues. Essential reading for data platform professionals.<!--excerpt_end-->
 
 # Understanding Locking and DDL Blocking in Microsoft Fabric Data Warehouse

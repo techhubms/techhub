@@ -1,0 +1,128 @@
+/* ============================================================================
+   SidebarToc Component - Table of Contents with Scroll-Spy
+   
+   Component-scoped styles for the sidebar table of contents widget.
+   Provides hierarchical navigation with active section highlighting.
+   
+   NOTE: Uses ::deep for elements created via RenderTreeBuilder in @code block.
+   Blazor CSS isolation only scopes markup elements, not programmatic ones.
+   ============================================================================ */
+
+.sidebar-toc {
+    position: sticky;
+    top: 100px;
+    /* Stick below the header (70px) + SubNav (30px) */
+}
+
+.sidebar-toc-inner {
+    /* No max-height - let it grow naturally */
+}
+
+/* toc-list is in markup, so scoping works directly */
+.toc-list {
+    list-style: none;
+    padding: var(--spacing-3);
+    /* Extra padding on right to prevent focus outline clipping */
+    padding-right: calc(var(--spacing-3) + 4px);
+    margin: 0;
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    /* Ensure focus outlines aren't clipped */
+    overflow: visible;
+}
+
+/* All elements below are created via RenderTreeBuilder - use ::deep */
+::deep .toc-sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: var(--spacing-3);
+    /* Use display:none for instant collapse with no layout shift */
+    display: none;
+}
+
+/* If there's only one h2 heading, auto-expand it by default */
+.toc-list:has(.toc-depth-0:only-child) ::deep .toc-depth-0 > .toc-sublist {
+    display: block;
+}
+
+/* Expanded state only when explicitly set by JavaScript */
+::deep .toc-item.expanded > .toc-sublist {
+    display: block;
+}
+
+::deep .toc-item {
+    margin: 0;
+}
+
+::deep .toc-link {
+    display: block;
+    padding: var(--spacing-1) var(--spacing-2);
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-snug);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid transparent;
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    ::deep .toc-link:hover {
+        color: var(--color-text-primary);
+        background: var(--color-bg-emphasis);
+    }
+}
+
+/* Active state for current section (scroll-spy) */
+::deep .toc-link.active {
+    color: var(--color-purple-bright);
+    background: var(--color-bg-emphasis);
+    border-left-color: var(--color-purple-bright);
+}
+
+/* Depth-based styling for visual hierarchy */
+::deep .toc-depth-0 > .toc-link {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+::deep .toc-depth-1 > .toc-link {
+    font-size: var(--font-size-sm);
+}
+
+::deep .toc-depth-2 > .toc-link {
+    font-size: var(--font-size-xs);
+}
+
+/* All links fully visible */
+::deep .toc-link {
+    opacity: 1;
+}
+
+/* Mobile TOC mode: H2 items are tappable to expand/collapse */
+.toc-mobile-mode ::deep .toc-depth-0 > .toc-link {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Chevron indicator for expandable H2 items in mobile mode */
+.toc-mobile-mode ::deep .toc-depth-0:has(.toc-sublist) > .toc-link::after {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(-45deg);
+    transition: transform 0.2s var(--easing-ease);
+    flex-shrink: 0;
+    margin-left: var(--spacing-2);
+}
+
+.toc-mobile-mode ::deep .toc-depth-0.expanded:has(.toc-sublist) > .toc-link::after {
+    transform: rotate(45deg);
+}

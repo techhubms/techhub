@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "The “Golden Triangle” of Agentic Development with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry Deep Dive"
-description: "This article provides a detailed exploration of end-to-end development with the Microsoft Agent Framework, showcasing a modern workflow that leverages AG-UI, DevUI, and OpenTelemetry. Through the GHModel.AI case, it demonstrates how GitHub Models are used for rapid prototyping, DevUI for debugging, AG-UI for presentation, and OpenTelemetry for observability, offering practical code samples in Python and .NET."
-author: "Kinfey Lo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/
+title: 'The “Golden Triangle” of Agentic Development with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry Deep Dive'
+author: Kinfey Lo
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2025-12-01 17:08:48 +00:00
-permalink: "/2025-12-01-The-Golden-Triangle-of-Agentic-Development-with-Microsoft-Agent-Framework-AG-UI-DevUI-and-OpenTelemetry-Deep-Dive.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AG UI", "AG UI Protocol", "Agent Development", "Agent Framework", "Agentic AI", "Agents", "AI", "Coding", "CopilotKit", "Debugging", "DevUI", "Distributed Tracing", "GitHub Models", "Microsoft Agent Framework", "News", "Observability", "OpenTelemetry", "Python", "Telemetry"]
-tags_normalized: ["dotnet", "ag ui", "ag ui protocol", "agent development", "agent framework", "agentic ai", "agents", "ai", "coding", "copilotkit", "debugging", "devui", "distributed tracing", "github models", "microsoft agent framework", "news", "observability", "opentelemetry", "python", "telemetry"]
+tags:
+- .NET
+- AG UI
+- AG UI Protocol
+- Agent Development
+- Agent Framework
+- Agentic AI
+- Agents
+- AI
+- CopilotKit
+- Debugging
+- DevUI
+- Distributed Tracing
+- GitHub Models
+- Microsoft Agent Framework
+- News
+- Observability
+- OpenTelemetry
+- Python
+- Telemetry
+section_names:
+- ai
+- dotnet
 ---
-
 Kinfey Lo walks through modern agentic development practices with the Microsoft Agent Framework, using AG-UI, DevUI, and OpenTelemetry to accelerate and improve agent development workflows.<!--excerpt_end-->
 
 # The “Golden Triangle” of Agentic Development with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry Deep Dive

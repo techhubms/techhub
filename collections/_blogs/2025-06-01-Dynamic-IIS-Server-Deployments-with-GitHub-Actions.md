@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Dynamic IIS Server Deployments with GitHub Actions"
-description: "This blog post by Michiel van Oudheusden discusses strategies for deploying web applications to multiple Windows IIS servers using GitHub Actions, focusing on environments outside of containers and Kubernetes. The post explores leveraging GitHub Actions self-hosted runners and DevOps practices to scale and maintain deployments across cloud-based IIS server infrastructures."
-author: "Michiel van Oudheusden"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html"
-viewing_mode: "external"
-feed_name: "Michiel van Oudheusden's Blog"
-feed_url: "https://mindbyte.nl/feed.xml"
+﻿---
+external_url: https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html
+title: Dynamic IIS Server Deployments with GitHub Actions
+author: Michiel van Oudheusden
+feed_name: Michiel van Oudheusden's Blog
 date: 2025-06-01 22:00:00 +00:00
-permalink: "/2025-06-01-Dynamic-IIS-Server-Deployments-with-GitHub-Actions.html"
-categories: ["DevOps"]
-tags: ["Automation", "AWS", "Blogs", "Cloud Migration", "Deployment", "DevOps", "GitHub Actions", "Iis", "Self Hosted Runners", "Web Application", "Windows", "Windows Server"]
-tags_normalized: ["automation", "aws", "blogs", "cloud migration", "deployment", "devops", "github actions", "iis", "self hosted runners", "web application", "windows", "windows server"]
+tags:
+- Automation
+- AWS
+- Cloud Migration
+- Deployment
+- GitHub Actions
+- Iis
+- Self Hosted Runners
+- Web Application
+- Windows
+- Windows Server
+- DevOps
+- Blogs
+section_names:
+- devops
+primary_section: devops
 ---
-
 Michiel van Oudheusden explores a practical approach to deploying web apps across multiple IIS servers using GitHub Actions, focusing on scalable DevOps strategies for traditional cloud infrastructure.<!--excerpt_end-->
 
 ## Dynamic IIS Server Deployments with GitHub Actions

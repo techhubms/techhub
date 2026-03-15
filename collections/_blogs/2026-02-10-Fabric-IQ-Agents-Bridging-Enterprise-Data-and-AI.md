@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Fabric IQ Agents: Bridging Enterprise Data and AI"
-description: "This article by Lauri Lehman explores Microsoft Fabric IQ, a new offering for building AI agents within Microsoft Fabric. It covers the semantic layer’s Ontology and Graph features, the distinction between Data and Operations Agents, their real-world use cases, agentic architecture design considerations, and how Fabric IQ enables a shift from traditional data platforms to intelligence platforms."
-author: "lauri.lehman@zure.com (Lauri Lehman)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/fabric-iq-agents-operate-hand-to-hand-with-enterprise-data"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+external_url: https://zure.com/blog/fabric-iq-agents-operate-hand-to-hand-with-enterprise-data
+title: 'Fabric IQ Agents: Bridging Enterprise Data and AI'
+author: lauri.lehman@zure.com (Lauri Lehman)
+primary_section: ai
+feed_name: Zure Data & AI Blog
 date: 2026-02-10 10:32:22 +00:00
-permalink: "/2026-02-10-Fabric-IQ-Agents-Bridging-Enterprise-Data-and-AI.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic Architecture", "AI", "AI Agents", "Azure", "Blogs", "Copilot Studio", "Data Agent", "Data Platform", "Enterprise AI", "Enterprise Data", "Eventhouse", "Generative AI", "Human in The Loop", "Intelligence Platform", "KQL", "Microsoft Fabric", "Microsoft Fabric IQ", "Microsoft Foundry", "ML", "Ontology", "Operations Agent", "Power BI Copilot", "Real Time Intelligence", "Semantic Layer"]
-tags_normalized: ["agentic architecture", "ai", "ai agents", "azure", "blogs", "copilot studio", "data agent", "data platform", "enterprise ai", "enterprise data", "eventhouse", "generative ai", "human in the loop", "intelligence platform", "kql", "microsoft fabric", "microsoft fabric iq", "microsoft foundry", "ml", "ontology", "operations agent", "power bi copilot", "real time intelligence", "semantic layer"]
+tags:
+- Agentic Architecture
+- AI
+- AI Agents
+- Azure
+- Blogs
+- Copilot Studio
+- Data Agent
+- Data Platform
+- Enterprise AI
+- Enterprise Data
+- Eventhouse
+- Generative AI
+- Human in The Loop
+- Intelligence Platform
+- KQL
+- Microsoft Fabric
+- Microsoft Fabric IQ
+- Microsoft Foundry
+- ML
+- Ontology
+- Operations Agent
+- Power BI Copilot
+- Real Time Intelligence
+- Semantic Layer
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Lauri Lehman details how Microsoft Fabric IQ empowers enterprises to create intelligent AI agents directly integrated with organizational data, highlighting architectural patterns and practical considerations for developers and AI professionals.<!--excerpt_end-->
 
 # Fabric IQ Agents: Bridging Enterprise Data and AI

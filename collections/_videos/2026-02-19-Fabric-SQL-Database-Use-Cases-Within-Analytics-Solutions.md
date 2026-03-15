@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Fabric SQL Database Use Cases Within Analytics Solutions"
-description: "This session explores practical scenarios for integrating Microsoft Fabric SQL Databases into analytics platforms. It focuses on real-world implementations including metadata management, logging, alerting, reference data management, and powering OLTP backends for Power Apps. The episode includes actionable architectural patterns for both new builds and migrations to Microsoft Fabric, helping practitioners maximize data analytics capabilities."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=b2YSpr4_x44"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=b2YSpr4_x44
+title: Fabric SQL Database Use Cases Within Analytics Solutions
+author: Microsoft Developer
+primary_section: ml
+feed_name: Microsoft Developer YouTube
 date: 2026-02-19 17:00:59 +00:00
-permalink: "/2026-02-19-Fabric-SQL-Database-Use-Cases-Within-Analytics-Solutions.html"
-categories: ["Azure", "ML"]
-tags: ["Alerting", "Analytics Platform", "Azure", "Azure SQL", "Cloud Computing", "Data Analytics", "Data Architecture", "Dev", "Development", "Fabric SQL Database", "Logging", "Master Data Management", "Metadata Management", "Microsoft", "Microsoft Fabric", "ML", "OLTP", "Power Apps", "Reference Data", "Tech", "Technology", "Unified Analytics", "Videos"]
-tags_normalized: ["alerting", "analytics platform", "azure", "azure sql", "cloud computing", "data analytics", "data architecture", "dev", "development", "fabric sql database", "logging", "master data management", "metadata management", "microsoft", "microsoft fabric", "ml", "oltp", "power apps", "reference data", "tech", "technology", "unified analytics", "videos"]
+tags:
+- Alerting
+- Analytics Platform
+- Azure
+- Azure SQL
+- Cloud Computing
+- Data Analytics
+- Data Architecture
+- Dev
+- Development
+- Fabric SQL Database
+- Logging
+- Master Data Management
+- Metadata Management
+- Microsoft
+- Microsoft Fabric
+- ML
+- OLTP
+- Power Apps
+- Reference Data
+- Tech
+- Technology
+- Unified Analytics
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Developer presents an episode on integrating Fabric SQL Databases into analytics solutions, featuring real-world scenarios and actionable tips for technical professionals.<!--excerpt_end-->
 
 {% youtube b2YSpr4_x44 %}

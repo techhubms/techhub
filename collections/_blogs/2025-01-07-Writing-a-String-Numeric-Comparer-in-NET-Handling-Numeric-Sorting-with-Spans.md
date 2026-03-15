@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "Writing a String Numeric Comparer in .NET: Handling Numeric Sorting with Spans"
-description: "Khalid Abuhakmeh discusses the challenges of implementing a string numeric comparer in .NET, especially when sorting lists with embedded numbers (e.g., movie titles or software versions). He provides a sample implementation using C# Span APIs, outlines edge cases, and reflects on practical considerations."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/writing-a-string-numeric-comparer-with-dotnet-9"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+external_url: https://khalidabuhakmeh.com/writing-a-string-numeric-comparer-with-dotnet-9
+title: 'Writing a String Numeric Comparer in .NET: Handling Numeric Sorting with Spans'
+author: Khalid Abuhakmeh
+feed_name: Khalid Abuhakmeh's Blog
 date: 2025-01-07 00:00:00 +00:00
-permalink: "/2025-01-07-Writing-a-String-Numeric-Comparer-in-NET-Handling-Numeric-Sorting-with-Spans.html"
-categories: ["Coding"]
-tags: [".NET", "Alphanumeric Ordering", "Blogs", "C#", "Coding", "Data Structures", "IComparer", "Numeric Comparer", "Software Development", "Sorting", "Span APIs", "String Manipulation"]
-tags_normalized: ["dotnet", "alphanumeric ordering", "blogs", "csharp", "coding", "data structures", "icomparer", "numeric comparer", "software development", "sorting", "span apis", "string manipulation"]
+tags:
+- .NET
+- Alphanumeric Ordering
+- C#
+- Data Structures
+- IComparer
+- Numeric Comparer
+- Software Development
+- Sorting
+- Span APIs
+- String Manipulation
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this post, Khalid Abuhakmeh explores building a numeric string comparer in .NET using modern C# features like Span APIs. He shares practical code, discusses challenges, and offers guidance for developers handling complex sorting scenarios.<!--excerpt_end-->
 
 # Writing a String Numeric Comparer in .NET: Handling Numeric Sorting with Spans

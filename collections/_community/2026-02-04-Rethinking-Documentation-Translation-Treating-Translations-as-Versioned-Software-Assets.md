@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Rethinking Documentation Translation: Treating Translations as Versioned Software Assets"
-description: "This article by MinseokSong examines a new approach to managing multilingual documentation in large open-source repositories within the Microsoft ecosystem. It introduces the practice of treating translations as versioned software assets instead of static outputs, offering insight into improved synchronization, maintainability, and drift detection. The article details how the Co-op Translator tool enables this process through explicit tracking and operational best practices."
-author: "MinseokSong"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-documentation-translation-treating-translations-as/ba-p/4491755"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/rethinking-documentation-translation-treating-translations-as/ba-p/4491755
+title: 'Rethinking Documentation Translation: Treating Translations as Versioned Software Assets'
+author: MinseokSong
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-04 08:00:00 +00:00
-permalink: "/2026-02-04-Rethinking-Documentation-Translation-Treating-Translations-as-Versioned-Software-Assets.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Best Practices", "Co Op Translator", "Coding", "Community", "Dependency Management", "Developer Tools", "DevOps", "Documentation", "GitHub", "JSON Tracking", "Markdown", "Multilingual", "Open Source", "Software Assets", "State Synchronization", "Translation Automation", "Version Control"]
-tags_normalized: ["azure", "best practices", "co op translator", "coding", "community", "dependency management", "developer tools", "devops", "documentation", "github", "json tracking", "markdown", "multilingual", "open source", "software assets", "state synchronization", "translation automation", "version control"]
+tags:
+- Azure
+- Best Practices
+- Co Op Translator
+- Community
+- Dependency Management
+- Developer Tools
+- DevOps
+- Documentation
+- GitHub
+- JSON Tracking
+- Markdown
+- Multilingual
+- Open Source
+- Software Assets
+- State Synchronization
+- Translation Automation
+- Version Control
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 MinseokSong discusses a critical design shift in documentation translation for Microsoft-centric open-source projects, treating translations as versioned software assets for better maintainability and synchronization.<!--excerpt_end-->
 
 # Rethinking Documentation Translation: Treating Translations as Versioned Software Assets

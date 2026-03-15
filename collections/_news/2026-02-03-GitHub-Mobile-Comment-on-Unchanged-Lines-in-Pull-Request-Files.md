@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Mobile: Comment on Unchanged Lines in Pull Request Files"
-description: "This announcement details a new feature in GitHub Mobile: users can now add comments anywhere within a changed file during pull request reviews, not just on the lines directly surrounding code changes. The update enhances code review flexibility by allowing comments and suggested changes on any line, including those that are unchanged, using the Files Changed view. The feature is now available on both iOS and Android."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-03-github-mobile-comment-on-unchanged-lines-in-pull-request-files"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-03-github-mobile-comment-on-unchanged-lines-in-pull-request-files
+title: 'GitHub Mobile: Comment on Unchanged Lines in Pull Request Files'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-03 13:28:49 +00:00
-permalink: "/2026-02-03-GitHub-Mobile-Comment-on-Unchanged-Lines-in-Pull-Request-Files.html"
-categories: ["DevOps"]
-tags: ["Android", "Client Apps", "Code Review", "Continuous Integration", "DevOps", "Files Changed", "GitHub", "GitHub Mobile", "Ios", "News", "Pull Requests", "Software Development", "Version Control"]
-tags_normalized: ["android", "client apps", "code review", "continuous integration", "devops", "files changed", "github", "github mobile", "ios", "news", "pull requests", "software development", "version control"]
+tags:
+- Android
+- Client Apps
+- Code Review
+- Continuous Integration
+- DevOps
+- Files Changed
+- GitHub
+- GitHub Mobile
+- Ios
+- News
+- Pull Requests
+- Software Development
+- Version Control
+section_names:
+- devops
 ---
-
 Allison introduces a new GitHub Mobile feature allowing users to comment on unchanged lines in pull request files, streamlining mobile code reviews.<!--excerpt_end-->
 
 # GitHub Mobile: Comment on Unchanged Lines in Pull Request Files

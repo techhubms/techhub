@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Simplifying Access Governance with Microsoft Entra ID Access Packages"
-description: "This video from Microsoft Developer explores how Microsoft Entra ID’s Access Packages can automate and govern access to applications, groups, and resources. Focusing on practical demonstrations, it addresses how organizations can use these tools to reduce risk, improve productivity, and support Zero Trust security principles in complex environments."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ck0RF8Gz_aQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=ck0RF8Gz_aQ
+title: Simplifying Access Governance with Microsoft Entra ID Access Packages
+author: Microsoft Developer
+primary_section: security
+feed_name: Microsoft Developer YouTube
 date: 2026-02-24 17:01:07 +00:00
-permalink: "/2026-02-24-Simplifying-Access-Governance-with-Microsoft-Entra-ID-Access-Packages.html"
-categories: ["Security"]
-tags: ["Access Automation", "Access Management", "Access Packages", "Azure AD", "Cloud Computing", "Cloud Security", "Compliance", "Dev", "Development", "Hybrid Work", "Identity Governance", "Microsoft", "Microsoft Entra ID", "Security", "Tech", "Technology", "Videos", "Zero Trust"]
-tags_normalized: ["access automation", "access management", "access packages", "azure ad", "cloud computing", "cloud security", "compliance", "dev", "development", "hybrid work", "identity governance", "microsoft", "microsoft entra id", "security", "tech", "technology", "videos", "zero trust"]
+tags:
+- Access Automation
+- Access Management
+- Access Packages
+- Azure AD
+- Cloud Computing
+- Cloud Security
+- Compliance
+- Dev
+- Development
+- Hybrid Work
+- Identity Governance
+- Microsoft
+- Microsoft Entra ID
+- Security
+- Tech
+- Technology
+- Videos
+- Zero Trust
+section_names:
+- security
 ---
-
 In this video, Microsoft Developer explains how to use Microsoft Entra ID Access Packages for automated, scalable access governance, emphasizing risk reduction and Zero Trust security.<!--excerpt_end-->
 
 {% youtube ck0RF8Gz_aQ %}

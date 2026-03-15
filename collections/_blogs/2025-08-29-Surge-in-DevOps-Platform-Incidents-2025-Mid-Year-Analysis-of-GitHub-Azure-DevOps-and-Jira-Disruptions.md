@@ -1,20 +1,51 @@
----
-layout: "post"
-title: "Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis of GitHub, Azure DevOps, and Jira Disruptions"
-description: "This article reviews findings from GitProtect.io’s Mid-Year 2025 DevOps Threats Unwrapped report, highlighting significant increases in disruptions, outages, and security incidents across key DevOps platforms including GitHub, Azure DevOps, GitLab, and Jira. It discusses the operational, security, and resilience challenges faced by engineering teams as platform uptime becomes a critical business and technical risk."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+external_url: https://devops.com/devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure/?utm_source=rss&utm_medium=rss&utm_campaign=devops-platforms-show-cracks-github-incidents-surge-58-azure-gitlab-and-jira-also-under-pressure
+title: 'Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis of GitHub, Azure DevOps, and Jira Disruptions'
+author: Alan Shimel
+feed_name: DevOps Blog
 date: 2025-08-29 07:24:23 +00:00
-permalink: "/2025-08-29-Surge-in-DevOps-Platform-Incidents-2025-Mid-Year-Analysis-of-GitHub-Azure-DevOps-and-Jira-Disruptions.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Artifactory", "Atlassian Outages", "Azure", "Azure DevOps", "Azure DevOps Incidents", "Blogs", "Boards", "Business Of DevOps", "CI/CD", "CI/CD Disruptions", "Cybersecurity", "Developer Productivity", "Developer Productivity Risks", "DevOps", "DevOps Platform Downtime", "DevOps Platforms", "DevOps Resilience", "GitHub", "GitHub Outages", "GitLab", "GitLab Data Breach Europcar", "GitProtect.io DevOps Threats Report", "Incident Management", "Jira", "Jira Ransomware Attacks", "Pipelines", "Platform Downtime", "Ransomware", "Security", "Service Disruption", "Social Facebook", "Social LinkedIn", "Social X", "Source Code Theft", "Test Plans"]
-tags_normalized: ["artifactory", "atlassian outages", "azure", "azure devops", "azure devops incidents", "blogs", "boards", "business of devops", "cislashcd", "cislashcd disruptions", "cybersecurity", "developer productivity", "developer productivity risks", "devops", "devops platform downtime", "devops platforms", "devops resilience", "github", "github outages", "gitlab", "gitlab data breach europcar", "gitprotectdotio devops threats report", "incident management", "jira", "jira ransomware attacks", "pipelines", "platform downtime", "ransomware", "security", "service disruption", "social facebook", "social linkedin", "social x", "source code theft", "test plans"]
+tags:
+- Artifactory
+- Atlassian Outages
+- Azure DevOps
+- Azure DevOps Incidents
+- Boards
+- Business Of DevOps
+- CI/CD
+- CI/CD Disruptions
+- Cybersecurity
+- Developer Productivity
+- Developer Productivity Risks
+- DevOps Platform Downtime
+- DevOps Platforms
+- DevOps Resilience
+- GitHub
+- GitHub Outages
+- GitLab
+- GitLab Data Breach Europcar
+- GitProtect.io DevOps Threats Report
+- Incident Management
+- Jira
+- Jira Ransomware Attacks
+- Pipelines
+- Platform Downtime
+- Ransomware
+- Service Disruption
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Source Code Theft
+- Test Plans
+- Azure
+- DevOps
+- Security
+- Blogs
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Alan Shimel analyzes the 2025 surge in disruptions and security incidents across DevOps platforms such as GitHub and Azure DevOps, summarizing impacts on resilience, uptime, and developer productivity.<!--excerpt_end-->
 
 # Surge in DevOps Platform Incidents: 2025 Mid-Year Analysis
@@ -29,21 +60,21 @@ Authored by Alan Shimel, this article examines data from GitProtect.io’s 'DevO
 ## Azure DevOps: Stability Concerns Deepen
 
 - **74 incidents** recorded (Jan–Jun 2025), more than any other platform analyzed.
-    - **Pipelines:** 31 disruptions (21% of issues)
-    - **Boards:** 28 incidents
-    - **Test Plans:** 28 incidents
-    - **Repos:** 27 incidents
-    - **Artifacts:** 6 incidents
-    - **Core Services:** 16 incidents
+  - **Pipelines:** 31 disruptions (21% of issues)
+  - **Boards:** 28 incidents
+  - **Test Plans:** 28 incidents
+  - **Repos:** 27 incidents
+  - **Artifacts:** 6 incidents
+  - **Core Services:** 16 incidents
 - **Notable Event:** 159-hour global degradation in January, slowing builds and deployments.
 - **Geographic Impact:** 34% of incidents in Europe; lower impact in India and Australia.
 
 ## GitHub: Major Rise in Operational Disruptions
 
 - **109 incidents** (58% increase over H1 2024).
-    - 17 major, 78 minor disruptions
-    - Over **330 hours** of downtime in April
-    - Both open source and enterprise repositories affected
+  - 17 major, 78 minor disruptions
+  - Over **330 hours** of downtime in April
+  - Both open source and enterprise repositories affected
 - Reliability issues are impacting commit velocity and CI/CD reliability.
 
 ## GitLab and Jira: Data Breaches & Ransomware

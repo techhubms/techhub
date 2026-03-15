@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Case Study: Securing AI Application Supply Chains"
-description: "This in-depth analysis by the Microsoft Defender Security Research Team explores the evolving security challenges in the era of AI-powered applications. The post highlights the recently disclosed LangGrinch (CVE-2025-68664) vulnerability in LangChain Core, demonstrating the expanded attack surface that comes with agentic and orchestration systems. It provides actionable mitigation steps leveraging Microsoft Defender tools to detect, remediate, and monitor supply chain risks. Security professionals will learn practical approaches for identifying vulnerable AI workloads, querying asset inventories, integrating with remediation workflows in GitHub, and leveraging advanced hunting capabilities within the Microsoft Defender ecosystem. The article emphasizes the importance of a holistic defense posture that includes not only prompt-level security but also protection of AI frameworks, SDKs, and orchestration layers."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/30/case-study-securing-ai-application-supply-chains/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/30/case-study-securing-ai-application-supply-chains/
+title: 'Case Study: Securing AI Application Supply Chains'
+author: Microsoft Defender Security Research Team
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-01-30 18:49:44 +00:00
-permalink: "/2026-01-30-Case-Study-Securing-AI-Application-Supply-Chains.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Systems", "AI", "AI Framework Exploits", "AI Security", "AI Supply Chain", "Azure", "Cloud Security Posture Management", "CVE 68664", "Defender For Cloud", "LangChain", "LangChain Core", "LangGrinch", "Microsoft Defender", "News", "Python Security", "Remediation Workflows", "SDK Vulnerabilities", "Security", "Serialization Vulnerability"]
-tags_normalized: ["agentic systems", "ai", "ai framework exploits", "ai security", "ai supply chain", "azure", "cloud security posture management", "cve 68664", "defender for cloud", "langchain", "langchain core", "langgrinch", "microsoft defender", "news", "python security", "remediation workflows", "sdk vulnerabilities", "security", "serialization vulnerability"]
+tags:
+- Agentic Systems
+- AI
+- AI Framework Exploits
+- AI Security
+- AI Supply Chain
+- Azure
+- Cloud Security Posture Management
+- CVE 68664
+- Defender For Cloud
+- LangChain
+- LangChain Core
+- LangGrinch
+- Microsoft Defender
+- News
+- Python Security
+- Remediation Workflows
+- SDK Vulnerabilities
+- Security
+- Serialization Vulnerability
+section_names:
+- ai
+- azure
+- security
 ---
-
 The Microsoft Defender Security Research Team details the LangGrinch (CVE-2025-68664) vulnerability affecting AI supply chains, with actionable guidance for enterprise security using Microsoft Defender tools.<!--excerpt_end-->
 
 # Case Study: Securing AI Application Supply Chains

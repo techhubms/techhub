@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Treat Your AI Prompts Like Code"
-description: "This article shares practical advice for developers on managing AI prompt files (.prompt.md, copilot-instructions.md) using standard software development practices. It covers version control with Git, team collaboration via pull requests, iterative improvement, and maintaining clear documentation to ensure prompt quality and alignment across teams."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/treat-your-ai-prompts-like-code.html
+title: Treat Your AI Prompts Like Code
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-10-17 00:00:00 +00:00
-permalink: "/2025-10-17-Treat-Your-AI-Prompts-Like-Code.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".prompt.md", "AI", "AI Prompts", "Blogs", "Coding", "Copilot Chat", "Copilot Instructions.md", "Development Workflow", "DevOps", "Git", "GitHub Copilot", "Prompt Documentation", "Prompt Engineering", "Prompt Review", "Pull Requests", "Team Collaboration", "Version Control"]
-tags_normalized: ["dotpromptdotmd", "ai", "ai prompts", "blogs", "coding", "copilot chat", "copilot instructionsdotmd", "development workflow", "devops", "git", "github copilot", "prompt documentation", "prompt engineering", "prompt review", "pull requests", "team collaboration", "version control"]
+tags:
+- .prompt.md
+- AI Prompts
+- Copilot Chat
+- Copilot Instructions.md
+- Development Workflow
+- Git
+- Prompt Documentation
+- Prompt Engineering
+- Prompt Review
+- Pull Requests
+- Team Collaboration
+- Version Control
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels explains why developers should manage AI prompts like code—using Git, code reviews, and clear documentation for continuous improvement.<!--excerpt_end-->
 
 # Treat Your AI Prompts Like Code

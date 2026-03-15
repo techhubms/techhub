@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Selecting the Right Agentic Solution on Azure – Security Deep Dive"
-description: "This post by pranabpaul provides a detailed examination of security considerations for implementing agentic solutions on Azure. It reviews security best practices for Azure Logic Apps, Azure AI Foundry Agent Service, and agent orchestrators such as the new Agent Framework, Semantic Kernel, and AutoGen. Topics include authentication, encryption, access control, secrets management, and safe agent orchestration, offering practical guidance to help technical teams secure their AI-driven workloads on Azure."
-author: "pranabpaul"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/selecting-the-right-agentic-solution-on-azure-part-2-security/ba-p/4461215
+title: Selecting the Right Agentic Solution on Azure – Security Deep Dive
+author: pranabpaul
+feed_name: Microsoft Tech Community
 date: 2025-10-22 18:10:53 +00:00
-permalink: "/2025-10-22-Selecting-the-Right-Agentic-Solution-on-Azure-Security-Deep-Dive.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Framework", "Agent Orchestration", "AI", "API Management", "AutoGen", "Azure", "Azure AI Foundry Agent Service", "Azure Key Vault", "Azure Logic Apps", "Community", "Data Encryption", "Microsoft Entra ID", "OAuth2", "PII Protection", "Prompt Injection", "RBAC", "Security", "Security Best Practices", "Semantic Kernel", "Web Application Firewall"]
-tags_normalized: ["agent framework", "agent orchestration", "ai", "api management", "autogen", "azure", "azure ai foundry agent service", "azure key vault", "azure logic apps", "community", "data encryption", "microsoft entra id", "oauth2", "pii protection", "prompt injection", "rbac", "security", "security best practices", "semantic kernel", "web application firewall"]
+tags:
+- Agent Framework
+- Agent Orchestration
+- API Management
+- AutoGen
+- Azure AI Foundry Agent Service
+- Azure Key Vault
+- Azure Logic Apps
+- Data Encryption
+- Microsoft Entra ID
+- OAuth2
+- PII Protection
+- Prompt Injection
+- RBAC
+- Security Best Practices
+- Semantic Kernel
+- Web Application Firewall
+- AI
+- Azure
+- Security
+- Community
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 pranabpaul explores the security landscape for agentic solutions on Azure, guiding readers through best practices around authentication, data protection, access control, secrets management, and safe orchestration of AI agents.<!--excerpt_end-->
 
 # Selecting the Right Agentic Solution on Azure – Security Deep Dive

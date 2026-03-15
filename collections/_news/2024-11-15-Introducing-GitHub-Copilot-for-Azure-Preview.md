@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Introducing GitHub Copilot for Azure (Preview)"
-description: "This news article introduces the preview of GitHub Copilot for Azure, a new tool that integrates GitHub Copilot Chat with Azure management directly in VS Code. The content covers features for learning about Azure services, deploying and operating resources, troubleshooting issues, and optimizing costs— all from within the coding environment using natural language and slash commands."
-author: "Chris Harris"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2024/11/15/introducing-github-copilot-for-azure"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2024/11/15/introducing-github-copilot-for-azure
+title: Introducing GitHub Copilot for Azure (Preview)
+author: Chris Harris
+feed_name: Visual Studio Code Releases
 date: 2024-11-15 00:00:00 +00:00
-permalink: "/2024-11-15-Introducing-GitHub-Copilot-for-Azure-Preview.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Application Deployment", "Azure", "Azure AI Search", "Azure Developer CLI", "Azure OpenAI", "Azure Portal", "Azure SQL", "CI/CD", "Coding", "Container Apps", "DevOps", "Diagnostics", "GitHub Copilot", "GitHub Copilot For Azure", "GPT 4o", "Kubernetes", "News", "RAG", "Resource Management", "Slash Commands", "VS Code", "YAML"]
-tags_normalized: ["ai", "application deployment", "azure", "azure ai search", "azure developer cli", "azure openai", "azure portal", "azure sql", "cislashcd", "coding", "container apps", "devops", "diagnostics", "github copilot", "github copilot for azure", "gpt 4o", "kubernetes", "news", "rag", "resource management", "slash commands", "vs code", "yaml"]
+tags:
+- Application Deployment
+- Azure AI Search
+- Azure Developer CLI
+- Azure OpenAI
+- Azure Portal
+- Azure SQL
+- CI/CD
+- Container Apps
+- Diagnostics
+- GitHub Copilot For Azure
+- GPT 4o
+- Kubernetes
+- RAG
+- Resource Management
+- Slash Commands
+- VS Code
+- YAML
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Chris Harris presents the preview of GitHub Copilot for Azure, guiding developers on integrating Azure resource management and troubleshooting into their workflow using GitHub Copilot Chat in VS Code.<!--excerpt_end-->
 
 # Introducing GitHub Copilot for Azure (Preview)

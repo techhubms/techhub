@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Optimising AI Costs with Microsoft Foundry Model Router"
-description: "This detailed post by Lee_Stott explores the Microsoft Foundry Model Router—a tool that intelligently routes prompts to the most cost-effective Azure OpenAI models based on complexity. It includes a hands-on demo app, real benchmark data, technical architecture, usage scenarios, setup instructions, and best practices for deploying model routing in AI-driven applications."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/optimising-ai-costs-with-microsoft-foundry-model-router/ba-p/4494776"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/optimising-ai-costs-with-microsoft-foundry-model-router/ba-p/4494776
+title: Optimising AI Costs with Microsoft Foundry Model Router
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-27 08:00:00 +00:00
-permalink: "/2026-02-27-Optimising-AI-Costs-with-Microsoft-Foundry-Model-Router.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Cost Optimization", "API Integration", "Azure", "Azure OpenAI Service", "Benchmarking", "Community", "Cost Quality Tradeoffs", "LLM", "Managed Identity", "Microsoft Foundry Model Router", "Model Routing", "Operational Flexibility", "Production Deployment", "Prompt Complexity Analysis", "React", "Recharts", "Routing Strategy", "Tailwind CSS", "TypeScript", "Vite"]
-tags_normalized: ["ai", "ai cost optimization", "api integration", "azure", "azure openai service", "benchmarking", "community", "cost quality tradeoffs", "llm", "managed identity", "microsoft foundry model router", "model routing", "operational flexibility", "production deployment", "prompt complexity analysis", "react", "recharts", "routing strategy", "tailwind css", "typescript", "vite"]
+tags:
+- AI
+- AI Cost Optimization
+- API Integration
+- Azure
+- Azure OpenAI Service
+- Benchmarking
+- Community
+- Cost Quality Tradeoffs
+- LLM
+- Managed Identity
+- Microsoft Foundry Model Router
+- Model Routing
+- Operational Flexibility
+- Production Deployment
+- Prompt Complexity Analysis
+- React
+- Recharts
+- Routing Strategy
+- Tailwind CSS
+- TypeScript
+- Vite
+section_names:
+- ai
+- azure
 ---
-
 Lee_Stott demonstrates how the Microsoft Foundry Model Router autonomously selects Azure OpenAI models to optimise costs and performance, sharing a hands-on demo, benchmark results, and practical setup guidance.<!--excerpt_end-->
 
 # Optimising AI Costs with Microsoft Foundry Model Router

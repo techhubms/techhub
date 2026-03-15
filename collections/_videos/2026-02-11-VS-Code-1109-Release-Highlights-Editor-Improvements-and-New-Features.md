@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "VS Code 1.109 Release Highlights: Editor Improvements & New Features"
-description: "This video highlights key improvements in Visual Studio Code version 1.109, including the new Ask Questions feature, enhanced support for MCP apps, parallel subagents, double-click selection enhancements, an integrated browser preview, and third-party coding agents. Watch for a quick overview of these updates and links to detailed release notes."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LGx8YieBjIA"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=LGx8YieBjIA
+title: 'VS Code 1.109 Release Highlights: Editor Improvements & New Features'
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-02-11 20:49:42 +00:00
-permalink: "/2026-02-11-VS-Code-1109-Release-Highlights-Editor-Improvements-and-New-Features.html"
-categories: ["Coding"]
-tags: ["Ask Questions Feature", "Code Editor", "Codeeditor", "Coding", "Demo", "Developer", "Developer Tools", "Editor Improvements", "Integrated Browser", "MCP Apps", "Microsoft", "Release Highlights", "Releasenotes", "Software Developer", "Software Development", "Subagents", "Third Party Coding Agents", "Videos", "VS Code"]
-tags_normalized: ["ask questions feature", "code editor", "codeeditor", "coding", "demo", "developer", "developer tools", "editor improvements", "integrated browser", "mcp apps", "microsoft", "release highlights", "releasenotes", "software developer", "software development", "subagents", "third party coding agents", "videos", "vs code"]
+tags:
+- Ask Questions Feature
+- Code Editor
+- Codeeditor
+- Demo
+- Developer
+- Developer Tools
+- Editor Improvements
+- Integrated Browser
+- MCP Apps
+- Microsoft
+- Release Highlights
+- Releasenotes
+- Software Developer
+- Software Development
+- Subagents
+- Third Party Coding Agents
+- Videos
+- VS Code
+- .NET
+section_names:
+- dotnet
 ---
-
 Visual Studio Code's team, featuring Reynald Adolphe, showcases the latest updates in version 1.109, spotlighting improvements like support for MCP apps, Ask Questions, and parallel subagents.<!--excerpt_end-->
 
 {% youtube LGx8YieBjIA %}

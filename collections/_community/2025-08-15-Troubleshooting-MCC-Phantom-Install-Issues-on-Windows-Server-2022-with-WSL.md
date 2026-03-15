@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Troubleshooting MCC Phantom Install Issues on Windows Server 2022 with WSL"
-description: "This post details the steps and logs encountered while installing Microsoft Connected Cache (MCC) on Windows Server 2022 with WSL and Ubuntu 24.04 as the target Linux distribution. It covers verifying VHDX file access, WSL image import, container setup, symlink configuration for gMSA accounts, and validation steps, aiming to diagnose the case where MCC installation reports success but wsl --list shows no installed distributions."
-author: "jjmehren"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-connected-cache-for/mcc-phantom-install/m-p/4444201#M108
+title: Troubleshooting MCC Phantom Install Issues on Windows Server 2022 with WSL
+author: jjmehren
+feed_name: Microsoft Tech Community
 date: 2025-08-15 13:49:08 +00:00
-permalink: "/2025-08-15-Troubleshooting-MCC-Phantom-Install-Issues-on-Windows-Server-2022-with-WSL.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Container Registry", "Community", "Container Deployment", "DevOps", "Gmsa", "Install Troubleshooting", "Log Diagnostics", "MCC", "Microsoft Connected Cache", "Port Proxy", "PowerShell", "Symlink Configuration", "TLS Infrastructure", "Ubuntu 24.04", "VHDX", "Windows Server", "Windows Subsystem For Linux", "WSL"]
-tags_normalized: ["azure", "azure container registry", "community", "container deployment", "devops", "gmsa", "install troubleshooting", "log diagnostics", "mcc", "microsoft connected cache", "port proxy", "powershell", "symlink configuration", "tls infrastructure", "ubuntu 24dot04", "vhdx", "windows server", "windows subsystem for linux", "wsl"]
+tags:
+- Azure Container Registry
+- Container Deployment
+- Gmsa
+- Install Troubleshooting
+- Log Diagnostics
+- MCC
+- Microsoft Connected Cache
+- Port Proxy
+- PowerShell
+- Symlink Configuration
+- TLS Infrastructure
+- Ubuntu 24.04
+- VHDX
+- Windows Server
+- Windows Subsystem For Linux
+- WSL
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 jjmehren shares a step-by-step installation log and troubleshooting notes for deploying Microsoft Connected Cache on Windows Server 2022 using WSL and Ubuntu, highlighting success indicators and points of confusion.<!--excerpt_end-->
 
 # MCC Phantom Install on Windows Server 2022 with WSL
@@ -52,7 +66,7 @@ This post documents the process and associated logs for installing Microsoft Con
 
 - Install commands run inside Ubuntu WSL Distro
 - MCC container (pulled from Azure Container Registry):
-    - `msconnectedcacheprod1.azurecr.io/mcc/linux/iot/mcc-ubuntu-iot-amd64:2.0.0.2112_e`
+  - `msconnectedcacheprod1.azurecr.io/mcc/linux/iot/mcc-ubuntu-iot-amd64:2.0.0.2112_e`
   - Container startup detected, confirmed with status code 200.
 
 ### 5. Directory, Symlink, and gMSA Account Handling
@@ -61,8 +75,8 @@ This post documents the process and associated logs for installing Microsoft Con
 - Symlinks set inside the WSL instance: `windowsCerts -> /mnt/c/mccwsl02/Certificates`
 - Config file verification successful. All steps reported as OK.
 - WSL distribution checks reference:
-    - `Ubuntu-24.04-Mcc-Base`
-    - `Ubuntu-24.04-Mcc`
+  - `Ubuntu-24.04-Mcc-Base`
+  - `Ubuntu-24.04-Mcc`
 - All properties for TLS and symlink infrastructure report as True/Success.
 
 ### 6. Finalization & Cleanup

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How to Access a Shared OneDrive Folder in Azure Logic Apps"
-description: "This guide addresses a common enterprise scenario where files from a shared OneDrive folder must be ingested and processed within Azure Logic Apps, then connected to services like SharePoint or Azure Blob Storage. It explains the technical challenge with OneDrive's user scope, and offers two detailed, practical solutions: using the Microsoft Graph API, or leveraging Graph Explorer to manually obtain the necessary folder information. Troubleshooting and fallback methods for edge cases are included."
-author: "Arpit_MSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/how-to-access-a-shared-onedrive-folder-in-azure-logic-apps/ba-p/4484962
+title: How to Access a Shared OneDrive Folder in Azure Logic Apps
+author: Arpit_MSFT
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-26 04:31:43 +00:00
-permalink: "/2026-02-26-How-to-Access-a-Shared-OneDrive-Folder-in-Azure-Logic-Apps.html"
-categories: ["Azure"]
-tags: ["Automation", "Azure", "Azure Blob Storage", "Azure Logic Apps", "Community", "Connectors", "Delegated Permissions", "DriveId", "Enterprise Automation", "FolderId", "Graph Explorer", "Integration", "Microsoft Graph", "OneDrive For Business", "SharePoint", "User Context Scoped", "Workflow"]
-tags_normalized: ["automation", "azure", "azure blob storage", "azure logic apps", "community", "connectors", "delegated permissions", "driveid", "enterprise automation", "folderid", "graph explorer", "integration", "microsoft graph", "onedrive for business", "sharepoint", "user context scoped", "workflow"]
+tags:
+- Automation
+- Azure
+- Azure Blob Storage
+- Azure Logic Apps
+- Community
+- Connectors
+- Delegated Permissions
+- DriveId
+- Enterprise Automation
+- FolderId
+- Graph Explorer
+- Integration
+- Microsoft Graph
+- OneDrive For Business
+- SharePoint
+- User Context Scoped
+- Workflow
+section_names:
+- azure
 ---
-
 Arpit_MSFT demonstrates how to reliably access shared OneDrive folders inside Azure Logic Apps, covering technical constraints and practical solutions leveraging both Graph API and Graph Explorer.<!--excerpt_end-->
 
 # How to Access a Shared OneDrive Folder in Azure Logic Apps

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI-powered Defense Strategies for Cloud Workloads with Microsoft Defender"
-description: "This session explores how Microsoft Defender for Cloud uses AI to protect sensitive data in cloud storage and containers. Delivered at Microsoft Ignite 2025 by Parul Seth and Michael Withrow, it features a live cyberattack demo, discusses cloud security challenges, showcases AI-assisted threat detection, and demonstrates automated responses to advanced threats, including XDR and CNAPP integration."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=97BHmGoj0aE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=97BHmGoj0aE
+title: AI-powered Defense Strategies for Cloud Workloads with Microsoft Defender
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:34:52 +00:00
-permalink: "/2025-11-24-AI-powered-Defense-Strategies-for-Cloud-Workloads-with-Microsoft-Defender.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Security", "Attack Response", "Automation", "Azure", "Cloud Security", "Cloud Storage Security", "CNAPP", "Container Security", "Defender Portal", "Lateral Movement", "Microsoft Defender For Cloud", "Microsoft Ignite", "MSIgnite", "ProtectcloudAIplatformandapps", "Security", "Security Monitoring", "Threat Detection", "Threat Hunting", "Videos", "XDR"]
-tags_normalized: ["ai", "ai security", "attack response", "automation", "azure", "cloud security", "cloud storage security", "cnapp", "container security", "defender portal", "lateral movement", "microsoft defender for cloud", "microsoft ignite", "msignite", "protectcloudaiplatformandapps", "security", "security monitoring", "threat detection", "threat hunting", "videos", "xdr"]
+tags:
+- AI Security
+- Attack Response
+- Automation
+- Cloud Security
+- Cloud Storage Security
+- CNAPP
+- Container Security
+- Defender Portal
+- Lateral Movement
+- Microsoft Defender For Cloud
+- Microsoft Ignite
+- MSIgnite
+- ProtectcloudAIplatformandapps
+- Security Monitoring
+- Threat Detection
+- Threat Hunting
+- XDR
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Microsoft Events, with Parul Seth and Michael Withrow, presents an advanced session on using Microsoft Defender for Cloud and AI to detect and mitigate real-world cyberattacks in the cloud.<!--excerpt_end-->
 
 {% youtube 97BHmGoj0aE %}

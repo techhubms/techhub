@@ -1,22 +1,23 @@
----
-layout: "post"
-title: "Code Explanation"
-description: "Get detailed explanations for complex code snippets"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/1gyzoHTfxgQ"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/1gyzoHTfxgQ
+title: Code Explanation
+author: Rob Bos
 date: 2024-08-14 19:59:33 +00:00
-permalink: "/2024-08-14-Code-Explanation.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "Explanation", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "code", "explanation", "github copilot", "videos"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Code
+- Explanation
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's Code Explanation feature. Get detailed explanations for complex code snippets with Copilot.<!--excerpt_end-->
 
 {% youtube 1gyzoHTfxgQ %}

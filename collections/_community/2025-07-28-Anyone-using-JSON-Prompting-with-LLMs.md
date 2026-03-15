@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Anyone using JSON Prompting with LLMs?"
-description: "The article by Abhishekmiz discusses the benefits of JSON-style structured prompts when using LLMs, such as GitHub Copilot, for code generation. Structured prompts improve clarity, accuracy, and consistency in generated outputs, especially for React components and similar coding tasks."
-author: "Abhishekmiz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mb7lpn/anyone_using_json_prompting_with_llms/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mb7lpn/anyone_using_json_prompting_with_llms/
+title: Anyone using JSON Prompting with LLMs?
+author: Abhishekmiz
+feed_name: Reddit Github Copilot
 date: 2025-07-28 05:12:26 +00:00
-permalink: "/2025-07-28-Anyone-using-JSON-Prompting-with-LLMs.html"
-categories: ["AI", "GitHub Copilot", "Coding"]
-tags: ["AI", "API Design", "Code Generation", "Coding", "Community", "GitHub Copilot", "JSON Prompting", "LLMs", "Prompt Engineering", "React", "Structured Prompts", "Tailwind CSS", "TypeScript"]
-tags_normalized: ["ai", "api design", "code generation", "coding", "community", "github copilot", "json prompting", "llms", "prompt engineering", "react", "structured prompts", "tailwind css", "typescript"]
+tags:
+- API Design
+- Code Generation
+- JSON Prompting
+- LLMs
+- Prompt Engineering
+- React
+- Structured Prompts
+- Tailwind CSS
+- TypeScript
+- AI
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- github-copilot
+- dotnet
+primary_section: github-copilot
 ---
-
 In this community article, Abhishekmiz shares their experience using JSON prompting with LLMs like GitHub Copilot, focusing on structured instructions for code generation.<!--excerpt_end-->
 
 ## Structured JSON Prompting with LLMs and GitHub Copilot

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Modernization Made Simple: Building Agentic Solutions in .NET"
-description: "This session demonstrates how to integrate the Agent Framework into .NET projects to unlock advanced capabilities, focusing on multi-agent collaboration, memory persistence, and tool orchestration. It guides developers through actionable modernization steps for enterprise and experimental AI agent scenarios using .NET."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xFi_MtLlYpk"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=xFi_MtLlYpk
+title: 'Modernization Made Simple: Building Agentic Solutions in .NET'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-10 00:00:47 +00:00
-permalink: "/2025-12-10-Modernization-Made-Simple-Building-Agentic-Solutions-in-NET.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agent Framework", "AI", "AI Agents", "Application Development", "Coding", "Enterprise Application Modernization", "Integration", "Memory Persistence", "Microsoft", "Multi Agent Collaboration", "Programming Demo", "Software Modernization", "Tool Orchestration", "Videos"]
-tags_normalized: ["dotnet", "agent framework", "ai", "ai agents", "application development", "coding", "enterprise application modernization", "integration", "memory persistence", "microsoft", "multi agent collaboration", "programming demo", "software modernization", "tool orchestration", "videos"]
+tags:
+- .NET
+- Agent Framework
+- AI Agents
+- Application Development
+- Enterprise Application Modernization
+- Integration
+- Memory Persistence
+- Microsoft
+- Multi Agent Collaboration
+- Programming Demo
+- Software Modernization
+- Tool Orchestration
+- AI
+- Videos
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 dotnet presents a practical session on integrating the Agent Framework with .NET, showing developers how to modernize applications by enabling agentic features such as multi-agent collaboration and memory persistence.<!--excerpt_end-->
 
 {% youtube xFi_MtLlYpk %}

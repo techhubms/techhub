@@ -1,0 +1,71 @@
+/* ============================================================================
+   GitHub Copilot Tool Tips Page Styles
+   ============================================================================ */
+
+.tooltips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-4);
+}
+
+.tooltips-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    padding: var(--spacing-4);
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    transition: border-color 0.2s ease;
+}
+
+@media (hover: hover) {
+    .tooltips-card:hover {
+        border-color: var(--color-purple-medium);
+    }
+}
+
+.tooltips-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+}
+
+.tooltips-card-header h3 {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    color: var(--color-text-emphasis);
+}
+
+.tooltips-category {
+    flex-shrink: 0;
+    padding: 0.25rem 0.75rem;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-purple-bright);
+    background: var(--color-purple-bg-subtle);
+    border: 1px solid var(--color-purple-border-subtle);
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+
+.tooltips-card p {
+    margin: 0;
+    font-size: var(--font-size-sm);
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    flex-grow: 1;
+}
+
+.tooltips-card .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tooltips-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Deploy to Azure App Service Deployment Slots with azd"
-description: "This announcement details the new capability of azd (Azure Developer CLI) to deploy directly to Azure App Service deployment slots as defined in Bicep or AVM modules. The update enables smoother blue/green, staging, and testing flows, removing the need for manual scripts or workarounds. The post provides practical examples for defining slots and using environment variables for slot selection, as well as guidance for CI/CD integration."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azd-app-service-slot/
+title: Deploy to Azure App Service Deployment Slots with azd
+author: PuiChee (PC) Chan
+primary_section: dotnet
+feed_name: Microsoft Azure SDK Blog
 date: 2026-02-11 14:59:15 +00:00
-permalink: "/2026-02-11-Deploy-to-Azure-App-Service-Deployment-Slots-with-azd.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["App Service Slots", "Automation", "AVM", "Azd", "Azure", "Azure App Service", "Azure Developer CLI", "Azure SDK", "Bicep", "Blue/green Deployment", "CI/CD", "Cloud Deployment", "Coding", "Deployment Slots", "DevOps", "Environment Variables", "IaC", "News", "Slot Deployment", "Staging"]
-tags_normalized: ["app service slots", "automation", "avm", "azd", "azure", "azure app service", "azure developer cli", "azure sdk", "bicep", "blueslashgreen deployment", "cislashcd", "cloud deployment", "coding", "deployment slots", "devops", "environment variables", "iac", "news", "slot deployment", "staging"]
+tags:
+- App Service Slots
+- Automation
+- AVM
+- Azd
+- Azure
+- Azure App Service
+- Azure Developer CLI
+- Azure SDK
+- Bicep
+- Blue/green Deployment
+- CI/CD
+- Cloud Deployment
+- Deployment Slots
+- DevOps
+- Environment Variables
+- IaC
+- News
+- Slot Deployment
+- Staging
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 PuiChee (PC) Chan introduces the new azd feature for deploying directly to Azure App Service slots, enabling smoother deployment flows and enhanced automation for developers.<!--excerpt_end-->
 
 # Deploy to Azure App Service Slots with azd

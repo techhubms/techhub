@@ -1,20 +1,40 @@
----
-layout: "post"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299
 title: "What's New in Azure Event Grid: Security, MQTT, and Smart Factory Integration"
-description: "This article details the latest capabilities in Azure Event Grid, including enhanced MQTT features, improved security with OAuth 2.0 and custom webhooks, integration with Microsoft Fabric, and industrial IoT innovations with Sparkplug B support. It highlights real-time telemetry, operational efficiency, and secure event-driven architectures for modern cloud solutions."
-author: "Connected-Seth"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/messaging-on-azure-blog/what-s-new-in-azure-event-grid/ba-p/4458299"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: Connected-Seth
+feed_name: Microsoft Tech Community
 date: 2025-10-01 23:22:50 +00:00
-permalink: "/2025-10-01-Whats-New-in-Azure-Event-Grid-Security-MQTT-and-Smart-Factory-Integration.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Security", "Azure", "Azure Event Grid", "Azure Fabric", "Azure Functions", "Cloud Events", "Community", "Custom Webhook", "Device Authentication", "DevOps", "Edge To Cloud", "Event Driven Architecture", "Industry 4.0", "IoT", "JWT", "Microsoft Entra ID", "MQTT", "OAuth 2.0", "Pub/Sub", "Real Time Analytics", "SCADA", "Security", "Sparkplug B", "Telemetry"]
-tags_normalized: ["api security", "azure", "azure event grid", "azure fabric", "azure functions", "cloud events", "community", "custom webhook", "device authentication", "devops", "edge to cloud", "event driven architecture", "industry 4dot0", "iot", "jwt", "microsoft entra id", "mqtt", "oauth 2dot0", "pubslashsub", "real time analytics", "scada", "security", "sparkplug b", "telemetry"]
+tags:
+- API Security
+- Azure Event Grid
+- Azure Fabric
+- Azure Functions
+- Cloud Events
+- Custom Webhook
+- Device Authentication
+- Edge To Cloud
+- Event Driven Architecture
+- Industry 4.0
+- IoT
+- JWT
+- Microsoft Entra ID
+- MQTT
+- OAuth 2.0
+- Pub/Sub
+- Real Time Analytics
+- SCADA
+- Sparkplug B
+- Telemetry
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Connected-Seth explores Azure Event Grid's latest advancements, such as stronger MQTT security, broad event integration, and Sparkplug B support for smart factories, offering secure and scalable event-driven architectures on Azure.<!--excerpt_end-->
 
 # What's New in Azure Event Grid: Security, MQTT, and Smart Factory Integration

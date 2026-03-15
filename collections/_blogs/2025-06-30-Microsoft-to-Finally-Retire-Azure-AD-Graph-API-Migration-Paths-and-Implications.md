@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft to Finally Retire Azure AD Graph API: Migration Paths and Implications"
-description: "This article details Microsoft's confirmed timeline to retire the legacy Azure AD Graph API in September 2025, explains why the Microsoft Graph API and Microsoft Authentication Library (MSAL) are the supported replacements, and reviews the technical steps and challenges developers must consider for migration, including application identification and handling outages."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2025/06/30/microsoft-to-finally-expunge-the-azure-ad-graph-api/101141"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2025/06/30/microsoft-to-finally-expunge-the-azure-ad-graph-api/101141
+title: 'Microsoft to Finally Retire Azure AD Graph API: Migration Paths and Implications'
+author: DevClass.com
+primary_section: azure
+feed_name: DevClass
 date: 2025-06-30 16:45:40 +00:00
-permalink: "/2025-06-30-Microsoft-to-Finally-Retire-Azure-AD-Graph-API-Migration-Paths-and-Implications.html"
-categories: ["Azure", "Security"]
-tags: [".NET", "ADAL", "Application Modernization", "Authentication", "Authorization", "Azure", "Azure AD Graph API", "Blogs", "Cloud Security", "Entra Admin Center", "Identity Management", "Microsoft Entra ID", "Microsoft Graph API", "Migration", "MSAL", "PowerShell", "SDK Deprecation", "Security"]
-tags_normalized: ["dotnet", "adal", "application modernization", "authentication", "authorization", "azure", "azure ad graph api", "blogs", "cloud security", "entra admin center", "identity management", "microsoft entra id", "microsoft graph api", "migration", "msal", "powershell", "sdk deprecation", "security"]
+tags:
+- .NET
+- ADAL
+- Application Modernization
+- Authentication
+- Authorization
+- Azure
+- Azure AD Graph API
+- Blogs
+- Cloud Security
+- Entra Admin Center
+- Identity Management
+- Microsoft Entra ID
+- Microsoft Graph API
+- Migration
+- MSAL
+- PowerShell
+- SDK Deprecation
+- Security
+section_names:
+- azure
+- security
 ---
-
 DevClass.com reports on Microsoft's September 2025 deadline for retiring the Azure AD Graph API, discussing technical impacts, migration steps, and security considerations for developers and IT administrators.<!--excerpt_end-->
 
 # Microsoft to Finally Retire Azure AD Graph API: Migration Paths and Implications

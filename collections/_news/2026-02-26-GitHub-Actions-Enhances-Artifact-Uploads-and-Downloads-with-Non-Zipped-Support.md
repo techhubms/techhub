@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Actions Enhances Artifact Uploads and Downloads with Non-Zipped Support"
-description: "This news item covers the recent update in GitHub Actions that enables uploading and downloading non-zipped artifacts within workflows. Users previously faced challenges with automatic artifact compression, leading to extra steps and double compression scenarios. The update introduces a configurable parameter to skip zipping, directly benefitting developer workflow efficiency, browser-based preview, and artifact management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-github-actions-now-supports-uploading-and-downloading-non-zipped-artifacts
+title: GitHub Actions Enhances Artifact Uploads and Downloads with Non-Zipped Support
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-26 22:36:48 +00:00
-permalink: "/2026-02-26-GitHub-Actions-Enhances-Artifact-Uploads-and-Downloads-with-Non-Zipped-Support.html"
-categories: ["DevOps"]
-tags: ["Actions", "Actions/download Artifact", "Actions/upload Artifact", "Artifact Management", "CI/CD", "Developer Experience", "DevOps", "GitHub", "GitHub Actions", "Improvement", "News", "Release Management", "V7.0.0", "V8.0.0", "Workflow Automation", "Workflow Improvements"]
-tags_normalized: ["actions", "actionsslashdownload artifact", "actionsslashupload artifact", "artifact management", "cislashcd", "developer experience", "devops", "github", "github actions", "improvement", "news", "release management", "v7dot0dot0", "v8dot0dot0", "workflow automation", "workflow improvements"]
+tags:
+- Actions
+- Actions/download Artifact
+- Actions/upload Artifact
+- Artifact Management
+- CI/CD
+- Developer Experience
+- DevOps
+- GitHub
+- GitHub Actions
+- Improvement
+- News
+- Release Management
+- V7.0.0
+- V8.0.0
+- Workflow Automation
+- Workflow Improvements
+section_names:
+- devops
 ---
-
 Allison details the new support for uploading and downloading non-zipped artifacts in GitHub Actions, explaining how this improvement streamlines developer workflows and resolves multiple friction points.<!--excerpt_end-->
 
 # GitHub Actions: Uploading and Downloading Non-Zipped Artifacts

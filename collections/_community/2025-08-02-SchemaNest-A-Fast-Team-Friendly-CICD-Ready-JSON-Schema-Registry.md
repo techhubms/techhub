@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "SchemaNest: A Fast, Team-Friendly CI/CD-Ready JSON Schema Registry"
-description: "SchemaNest is a performance-focused, lightweight registry for JSON Schemas supporting versioning, search, fine-grained authentication, and built-in database support. It's designed for seamless integration into CI/CD pipelines and team workflows, with web UI, CLI, and extensibility for editors and IDEs. Open source and feedback-friendly."
-author: "R3ym4nn"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mg1fl8/schemanest_where_schemas_grow_thrive_and_scale/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+external_url: https://www.reddit.com/r/devops/comments/1mg1fl8/schemanest_where_schemas_grow_thrive_and_scale/
+title: 'SchemaNest: A Fast, Team-Friendly CI/CD-Ready JSON Schema Registry'
+author: R3ym4nn
+feed_name: Reddit DevOps
 date: 2025-08-02 21:12:15 +00:00
-permalink: "/2025-08-02-SchemaNest-A-Fast-Team-Friendly-CICD-Ready-JSON-Schema-Registry.html"
-categories: ["DevOps", "Security"]
-tags: ["API Keys", "Authentication", "CI/CD", "Community", "DevOps", "Go", "JSON Schema", "Next.js", "PostgreSQL", "Schema Registry", "Security", "SQLite", "Team Collaboration", "Versioning"]
-tags_normalized: ["api keys", "authentication", "cislashcd", "community", "devops", "go", "json schema", "nextdotjs", "postgresql", "schema registry", "security", "sqlite", "team collaboration", "versioning"]
+tags:
+- API Keys
+- Authentication
+- CI/CD
+- Go
+- JSON Schema
+- Next.js
+- PostgreSQL
+- Schema Registry
+- SQLite
+- Team Collaboration
+- Versioning
+- DevOps
+- Security
+- Community
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 Authored by R3ym4nn, this article introduces SchemaNest—a fast, DevOps-ready registry for managing JSON Schemas, highlighting its features, team focus, and open-source availability.<!--excerpt_end-->
 
 ## Overview

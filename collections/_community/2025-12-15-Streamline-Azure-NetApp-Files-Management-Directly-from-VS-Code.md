@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Streamline Azure NetApp Files Management Directly from VS Code"
-description: "This article by GeertVanTeylingen showcases how the Azure NetApp Files VS Code Extension enhances storage provisioning workflows for Azure developers. By leveraging AI-powered automation and innovative IDE-based tools, teams can provision, validate, and optimize enterprise-grade storage resources rapidly. The extension introduces natural language commands, integrates ARM template generation, and provides direct insights for configuration, all within the coding environment. Key efficiency gains and practical metrics demonstrate how developers can minimize errors, reduce manual effort, and focus on building solutions."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/streamline-azure-netapp-files-management-right-from-your-ide/ba-p/4478122"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/streamline-azure-netapp-files-management-right-from-your-ide/ba-p/4478122
+title: Streamline Azure NetApp Files Management Directly from VS Code
+author: GeertVanTeylingen
+feed_name: Microsoft Tech Community
 date: 2025-12-15 20:17:22 +00:00
-permalink: "/2025-12-15-Streamline-Azure-NetApp-Files-Management-Directly-from-VS-Code.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Automation", "ARM Templates", "Azure", "Azure DevOps", "Azure NetApp Files", "Capacity Planning", "Coding", "Community", "Cost Efficiency", "Developer Experience", "DevOps", "IaC", "IDE Tools", "Natural Language Commands", "Performance Optimization", "Resource Validation", "Storage Provisioning", "VS Code Extension"]
-tags_normalized: ["ai", "ai automation", "arm templates", "azure", "azure devops", "azure netapp files", "capacity planning", "coding", "community", "cost efficiency", "developer experience", "devops", "iac", "ide tools", "natural language commands", "performance optimization", "resource validation", "storage provisioning", "vs code extension"]
+tags:
+- AI Automation
+- ARM Templates
+- Azure DevOps
+- Azure NetApp Files
+- Capacity Planning
+- Cost Efficiency
+- Developer Experience
+- IaC
+- IDE Tools
+- Natural Language Commands
+- Performance Optimization
+- Resource Validation
+- Storage Provisioning
+- VS Code Extension
+- AI
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+primary_section: ai
 ---
-
 GeertVanTeylingen outlines how the Azure NetApp Files VS Code Extension empowers Azure developers with AI-assisted storage management, enabling rapid provisioning, validation, and optimization processes within their IDE.<!--excerpt_end-->
 
 # Streamline Azure NetApp Files Management Directly from VS Code

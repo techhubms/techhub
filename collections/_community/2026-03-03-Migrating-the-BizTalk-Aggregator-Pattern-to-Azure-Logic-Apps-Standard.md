@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Migrating the BizTalk Aggregator Pattern to Azure Logic Apps Standard"
-description: "This in-depth guide explains how to migrate or implement the BizTalk Server Aggregator pattern to Azure Logic Apps Standard using an officially supported, production-ready template. It covers the architectural mapping, workflow steps, schema reuse, and correlation mechanics using Azure Service Bus, with deployment instructions and real-world integration advice. Both migrations and new (greenfield) projects are addressed, and all technical requirements around flat file decoding and message correlation are covered."
-author: "reynaldom"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/implementing-migrating-the-biztalk-server-aggregator-pattern-to/ba-p/4495107"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/implementing-migrating-the-biztalk-server-aggregator-pattern-to/ba-p/4495107
+title: Migrating the BizTalk Aggregator Pattern to Azure Logic Apps Standard
+author: reynaldom
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-03-03 16:08:08 +00:00
-permalink: "/2026-03-03-Migrating-the-BizTalk-Aggregator-Pattern-to-Azure-Logic-Apps-Standard.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Aggregator Pattern", "ARM Templates", "Azure", "Azure Logic Apps Standard", "Azure Service Bus", "BizTalk Server", "CI/CD", "Cloud Native PaaS", "Coding", "Community", "CorrelationId", "Decoupled Architecture", "DevOps", "Enterprise Integration Patterns", "Flat File Schema", "GitHub Actions", "Integration", "Message Orchestration", "Migration", "Service Bus Trigger", "Stateful Workflows", "Workflow Automation", "XSD"]
-tags_normalized: ["aggregator pattern", "arm templates", "azure", "azure logic apps standard", "azure service bus", "biztalk server", "cislashcd", "cloud native paas", "coding", "community", "correlationid", "decoupled architecture", "devops", "enterprise integration patterns", "flat file schema", "github actions", "integration", "message orchestration", "migration", "service bus trigger", "stateful workflows", "workflow automation", "xsd"]
+tags:
+- Aggregator Pattern
+- ARM Templates
+- Azure
+- Azure Logic Apps Standard
+- Azure Service Bus
+- BizTalk Server
+- CI/CD
+- Cloud Native PaaS
+- Community
+- CorrelationId
+- Decoupled Architecture
+- DevOps
+- Enterprise Integration Patterns
+- Flat File Schema
+- GitHub Actions
+- Integration
+- Message Orchestration
+- Migration
+- Service Bus Trigger
+- Stateful Workflows
+- Workflow Automation
+- XSD
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 reynaldom details step-by-step how to migrate or deploy the BizTalk Server Aggregator pattern on Azure Logic Apps Standard, covering message correlation, workflow templates, and schema reuse for enterprise integration.<!--excerpt_end-->
 
 # Migrating the BizTalk Server Aggregator Pattern to Azure Logic Apps Standard

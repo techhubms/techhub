@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Fabric February 2026 Feature Summary"
-description: "This detailed update from the Microsoft Fabric Blog covers February 2026's platform-wide enhancements, including improvements to the OneLake Catalog, new features for developers, updates to Data Engineering, Data Factory, Real-Time Intelligence, Data Warehouse, and Data Science. It highlights new security, governance, and performance optimization capabilities for engineers building analytics and data solutions with Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-february-2026-feature-summary/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-february-2026-feature-summary/
+title: Fabric February 2026 Feature Summary
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-25 10:00:45 +00:00
-permalink: "/2026-02-25-Fabric-February-2026-Feature-Summary.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
-tags: ["Adaptive Performance Tuning", "AI", "Azure", "CI/CD", "Coding", "Customer Managed Key", "Data Engineering", "Data Factory", "Data Science", "Data Warehouse", "DevOps", "Entra ID Authentication", "Eventstream Connectors", "Git Integration", "GraphQL API", "Lakehouse", "Microsoft Fabric", "Migration Assistant", "ML", "Modern Evaluator", "News", "ODBC Driver", "OneLake Catalog", "Power BI", "Private Link", "Python Notebooks", "Real Time Intelligence", "Semantic Link", "SQL Pool Insights", "VS Code Extension"]
-tags_normalized: ["adaptive performance tuning", "ai", "azure", "cislashcd", "coding", "customer managed key", "data engineering", "data factory", "data science", "data warehouse", "devops", "entra id authentication", "eventstream connectors", "git integration", "graphql api", "lakehouse", "microsoft fabric", "migration assistant", "ml", "modern evaluator", "news", "odbc driver", "onelake catalog", "power bi", "private link", "python notebooks", "real time intelligence", "semantic link", "sql pool insights", "vs code extension"]
+tags:
+- Adaptive Performance Tuning
+- AI
+- Azure
+- CI/CD
+- Customer Managed Key
+- Data Engineering
+- Data Factory
+- Data Science
+- Data Warehouse
+- DevOps
+- Entra ID Authentication
+- Eventstream Connectors
+- Git Integration
+- GraphQL API
+- Lakehouse
+- Microsoft Fabric
+- Migration Assistant
+- ML
+- Modern Evaluator
+- News
+- ODBC Driver
+- OneLake Catalog
+- Power BI
+- Private Link
+- Python Notebooks
+- Real Time Intelligence
+- Semantic Link
+- SQL Pool Insights
+- VS Code Extension
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog presents the February 2026 feature summary, authored by the Fabric engineering team. This update introduces major developer, data engineering, AI/ML, and platform improvements for the Fabric analytics ecosystem.<!--excerpt_end-->
 
 # Fabric February 2026 Feature Summary

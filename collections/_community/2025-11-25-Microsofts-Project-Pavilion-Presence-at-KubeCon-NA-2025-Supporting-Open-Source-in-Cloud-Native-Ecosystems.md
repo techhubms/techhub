@@ -1,20 +1,43 @@
----
-layout: "post"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904
 title: "Microsoft's Project Pavilion Presence at KubeCon NA 2025: Supporting Open Source in Cloud Native Ecosystems"
-description: "This in-depth report by Lexi Nadolski covers Microsoft's participation in the Project Pavilion at KubeCon + CloudNativeCon North America 2025. The article highlights Microsoft's engagement with several open source projects, showcases technical collaborations, and details direct support for Azure customers, security integrations, and cloud-native infrastructure innovations."
-author: "lexinadolski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: lexinadolski
+feed_name: Microsoft Tech Community
 date: 2025-11-25 16:42:58 +00:00
-permalink: "/2025-11-25-Microsofts-Project-Pavilion-Presence-at-KubeCon-NA-2025-Supporting-Open-Source-in-Cloud-Native-Ecosystems.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AKS", "Artifact Signing", "Azure", "Azure Container Registry", "CloudNativeCon", "CNCF", "Community", "Containerd", "DevOps", "Istio", "KubeCon NA", "Microsoft Azure", "ML", "ML Workloads", "Notary Project", "Observability", "OCI Artifacts", "Open Policy Agent", "Open Source", "ORAS", "Policy Enforcement", "Project Pavilion", "Security", "Service Mesh"]
-tags_normalized: ["ai", "aks", "artifact signing", "azure", "azure container registry", "cloudnativecon", "cncf", "community", "containerd", "devops", "istio", "kubecon na", "microsoft azure", "ml", "ml workloads", "notary project", "observability", "oci artifacts", "open policy agent", "open source", "oras", "policy enforcement", "project pavilion", "security", "service mesh"]
+tags:
+- AKS
+- Artifact Signing
+- Azure Container Registry
+- CloudNativeCon
+- CNCF
+- Containerd
+- Istio
+- KubeCon NA
+- Microsoft Azure
+- ML Workloads
+- Notary Project
+- Observability
+- OCI Artifacts
+- Open Policy Agent
+- Open Source
+- ORAS
+- Policy Enforcement
+- Project Pavilion
+- Service Mesh
+- AI
+- Azure
+- DevOps
+- ML
+- Security
+- Community
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
+primary_section: ai
 ---
-
 Lexi Nadolski reviews Microsoft's technical engagements at KubeCon NA 2025, featuring major open source collaborations and direct support for cloud-native development and Azure customers.<!--excerpt_end-->
 
 # Microsoft's Project Pavilion Presence at KubeCon NA 2025
@@ -94,6 +117,6 @@ The Project Pavilion is a vendor-neutral zone focused on open source collaborati
 
 ## Conclusion
 
-Microsoft’s KubeCon NA 2025 engagement reinforced its active contribution to cloud-native innovation and security, especially for Azure users. Teams exchanged technical insights, gathered feedback, and supported projects essential for modern infrastructure. Anyone interested in contributing to these efforts can contact project communities or reach Lexi Nadolski (lexinadolski@microsoft.com) for details.
+Microsoft’s KubeCon NA 2025 engagement reinforced its active contribution to cloud-native innovation and security, especially for Azure users. Teams exchanged technical insights, gathered feedback, and supported projects essential for modern infrastructure. Anyone interested in contributing to these efforts can contact project communities or reach Lexi Nadolski (<lexinadolski@microsoft.com>) for details.
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/project-pavilion-presence-at-kubecon-na-2025/ba-p/4472904)

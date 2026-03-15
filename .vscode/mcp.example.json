@@ -1,0 +1,25 @@
+{
+  "servers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--vision",
+        "--headless",
+        "--isolated",
+        "--no-sandbox",
+        "--config",
+        "/workspaces/techhub/.vscode/playwright-mcp-config.json"
+      ]
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": ""
+      }
+    }
+  }
+}

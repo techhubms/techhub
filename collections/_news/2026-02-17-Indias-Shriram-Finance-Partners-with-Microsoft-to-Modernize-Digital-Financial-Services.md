@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "India’s Shriram Finance Partners with Microsoft to Modernize Digital Financial Services"
-description: "This news article details how Shriram Finance leverages Microsoft Azure, Microsoft Defender for Cloud, and Microsoft Sentinel to build and secure their cloud-native finance platform, Shriram One. The story explores digital transformation, cloud computing, and embedded AI and analytics in delivering scalable, secure financial services for millions of customers across India."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/with-shriram-one-financial-services-travel-with-the-customer/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/asia/features/with-shriram-one-financial-services-travel-with-the-customer/
+title: India’s Shriram Finance Partners with Microsoft to Modernize Digital Financial Services
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-17 15:20:35 +00:00
-permalink: "/2026-02-17-Indias-Shriram-Finance-Partners-with-Microsoft-to-Modernize-Digital-Financial-Services.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Personalization", "Azure", "Azure Security", "Cloud", "Cloud Architecture", "Cloud Native", "Company News", "Compliance", "Customer Onboarding", "Digital Transformation", "Financial Services", "India", "Machine Learning", "Microsoft Azure", "Microsoft Defender For Cloud", "Microsoft Sentinel", "Mobile App", "News", "Security", "Shriram Finance"]
-tags_normalized: ["ai", "ai personalization", "azure", "azure security", "cloud", "cloud architecture", "cloud native", "company news", "compliance", "customer onboarding", "digital transformation", "financial services", "india", "machine learning", "microsoft azure", "microsoft defender for cloud", "microsoft sentinel", "mobile app", "news", "security", "shriram finance"]
+tags:
+- AI
+- AI Personalization
+- Azure
+- Azure Security
+- Cloud Architecture
+- Cloud Native
+- Company News
+- Compliance
+- Customer Onboarding
+- Digital Transformation
+- Financial Services
+- India
+- Microsoft Azure
+- Microsoft Defender For Cloud
+- Microsoft Sentinel
+- Mobile App
+- News
+- Security
+- Shriram Finance
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke highlights how Shriram Finance, in partnership with Microsoft, uses Azure cloud, Defender for Cloud, Sentinel, and embedded AI to transform digital financial services and deliver scalable, trusted customer experiences across India.<!--excerpt_end-->
 
 # India’s Shriram Finance Partners with Microsoft to Modernize Digital Financial Services

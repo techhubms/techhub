@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Apps Gain Fine-Grained Permissions for Enterprise Teams APIs"
-description: "This update introduces fine-grained 'enterprise teams' permissions for GitHub Apps, enabling secure access to Enterprise Teams API endpoints. Enterprise administrators can use these permissions to manage teams programmatically without relying on classic personal access tokens, allowing for enhanced security and scalable team management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-09-github-apps-can-now-utilize-public-preview-enterprise-teams-apis-via-fine-grained-permissions
+title: GitHub Apps Gain Fine-Grained Permissions for Enterprise Teams APIs
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-09 14:03:31 +00:00
-permalink: "/2026-02-09-GitHub-Apps-Gain-Fine-Grained-Permissions-for-Enterprise-Teams-APIs.html"
-categories: ["DevOps"]
-tags: ["Access Control", "API Permissions", "API Security", "App Integration", "Automation", "DevOps", "Enterprise Management", "Enterprise Management Tools", "Enterprise Teams API", "Fine Grained Permissions", "GitHub Apps", "GitHub Enterprise", "Improvement", "News", "Team Management"]
-tags_normalized: ["access control", "api permissions", "api security", "app integration", "automation", "devops", "enterprise management", "enterprise management tools", "enterprise teams api", "fine grained permissions", "github apps", "github enterprise", "improvement", "news", "team management"]
+tags:
+- Access Control
+- API Permissions
+- API Security
+- App Integration
+- Automation
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- Enterprise Teams API
+- Fine Grained Permissions
+- GitHub Apps
+- GitHub Enterprise
+- Improvement
+- News
+- Team Management
+section_names:
+- devops
 ---
-
 Allison explains GitHub’s introduction of fine-grained permissions for Apps accessing Enterprise Teams APIs, providing enterprise administrators with secure, scalable team management options.<!--excerpt_end-->
 
 # GitHub Apps Gain Fine-Grained Permissions for Enterprise Teams APIs

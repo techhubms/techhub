@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Malicious AI Browser Extensions Expose LLM Chat Histories: Microsoft Defender Analysis"
-description: "This Microsoft Defender Security Research Team report investigates a widespread malware campaign using malicious AI-themed Chromium browser extensions. The extensions, distributed via legitimate marketplaces, harvest large language model (LLM) chat histories and browsing data—posing significant privacy, compliance, and security threats to enterprises by targeting AI usage and exfiltrating sensitive data."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/05/malicious-ai-assistant-extensions-harvest-llm-chat-histories/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/05/malicious-ai-assistant-extensions-harvest-llm-chat-histories/
+title: 'Malicious AI Browser Extensions Expose LLM Chat Histories: Microsoft Defender Analysis'
+author: Microsoft Defender Security Research Team
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-03-05 16:02:12 +00:00
-permalink: "/2026-03-05-Malicious-AI-Browser-Extensions-Expose-LLM-Chat-Histories-Microsoft-Defender-Analysis.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Browser Extension Security", "Browser Telemetry", "ChatGPT", "Chromium", "Data Exfiltration", "DeepSeek", "Defender For Endpoint", "Enterprise Security", "Google Chrome", "LLM Security", "Malware", "Microsoft Defender", "Microsoft Edge", "News", "Purview", "Security", "SmartScreen"]
-tags_normalized: ["ai", "ai security", "browser extension security", "browser telemetry", "chatgpt", "chromium", "data exfiltration", "deepseek", "defender for endpoint", "enterprise security", "google chrome", "llm security", "malware", "microsoft defender", "microsoft edge", "news", "purview", "security", "smartscreen"]
+tags:
+- AI
+- AI Security
+- Browser Extension Security
+- Browser Telemetry
+- ChatGPT
+- Chromium
+- Data Exfiltration
+- DeepSeek
+- Defender For Endpoint
+- Enterprise Security
+- Google Chrome
+- LLM Security
+- Malware
+- Microsoft Defender
+- Microsoft Edge
+- News
+- Purview
+- Security
+- SmartScreen
+section_names:
+- ai
+- security
 ---
-
 The Microsoft Defender Security Research Team analyzes how malicious AI-themed browser extensions harvest LLM chat histories and enterprise data, highlighting significant security risks.<!--excerpt_end-->
 
 # Malicious AI Browser Extensions Expose LLM Chat Histories: Microsoft Defender Analysis

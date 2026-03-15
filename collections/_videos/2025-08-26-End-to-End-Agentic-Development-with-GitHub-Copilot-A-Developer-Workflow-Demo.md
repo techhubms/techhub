@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "End-to-End Agentic Development with GitHub Copilot: A Developer Workflow Demo"
-description: "This video showcases GitHub Copilot's agentic capabilities in a developer's workflow, demonstrating how to set up cloud environments without local installation, triage issues, generate code, resolve tests and dependencies, and manage commits and pull requests—all with Copilot acting as an intelligent coding peer."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=onVn-lnHZ9s"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=onVn-lnHZ9s
+title: 'End-to-End Agentic Development with GitHub Copilot: A Developer Workflow Demo'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-08-26 14:01:29 +00:00
-permalink: "/2025-08-26-End-to-End-Agentic-Development-with-GitHub-Copilot-A-Developer-Workflow-Demo.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Cloud Development Environment", "Code Generation", "Coding", "Coding Tools", "CodingAgent", "Copilot Coding Agent", "CopilotCodingAgent", "Debugging", "Developer Workflow", "GitHub Copilot", "Instruction Files", "Issue Triaging", "Pull Requests", "Software Development", "Test Automation", "Videos"]
-tags_normalized: ["ai", "ai development", "cloud development environment", "code generation", "coding", "coding tools", "codingagent", "copilot coding agent", "copilotcodingagent", "debugging", "developer workflow", "github copilot", "instruction files", "issue triaging", "pull requests", "software development", "test automation", "videos"]
+tags:
+- AI Development
+- Cloud Development Environment
+- Code Generation
+- Coding Tools
+- CodingAgent
+- Copilot Coding Agent
+- CopilotCodingAgent
+- Debugging
+- Developer Workflow
+- Instruction Files
+- Issue Triaging
+- Pull Requests
+- Software Development
+- Test Automation
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 GitHub presents a demo highlighting Copilot's AI-powered agentic features for developers. See how Copilot acts as a coding peer, handling issue triage, code generation, test fixing, and more while keeping developers focused and productive.<!--excerpt_end-->
 
 {% youtube onVn-lnHZ9s %}

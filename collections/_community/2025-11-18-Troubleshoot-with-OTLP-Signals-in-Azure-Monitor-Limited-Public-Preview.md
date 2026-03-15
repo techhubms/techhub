@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Troubleshoot with OTLP Signals in Azure Monitor (Limited Public Preview)"
-description: "This community post explains Azure Monitor's expanded support for OpenTelemetry (OTel) standards, enabling developers and operations teams to channel OTLP logs, metrics, and traces directly from distributed applications to Azure Monitor. It covers how to collect telemetry using Azure Monitor Agent, AKS add-ons, and the OpenTelemetry Collector, storing metrics in Prometheus-compatible workspaces and leveraging Application Insights for distributed tracing and troubleshooting. The preview extends auto-instrumentation for .NET and Python, with unified monitoring across AKS, VMs, and more."
-author: "SoubhagyaDash"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-otlp-signals-in-azure-monitor-limited-public/ba-p/4469668"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/troubleshoot-with-otlp-signals-in-azure-monitor-limited-public/ba-p/4469668
+title: Troubleshoot with OTLP Signals in Azure Monitor (Limited Public Preview)
+author: SoubhagyaDash
+feed_name: Microsoft Tech Community
 date: 2025-11-18 16:09:25 +00:00
-permalink: "/2025-11-18-Troubleshoot-with-OTLP-Signals-in-Azure-Monitor-Limited-Public-Preview.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "AKS", "Application Insights", "Auto Instrumentation", "Azure", "Azure Arc", "Azure Monitor", "Azure Monitor Agent", "Coding", "Community", "Container Insights", "DevOps", "Distributed Tracing", "Grafana", "Java", "Log Analytics", "Node.js", "OpenTelemetry", "OTLP", "Prometheus", "Python", "Telemetry", "VMSS"]
-tags_normalized: ["dotnet", "aks", "application insights", "auto instrumentation", "azure", "azure arc", "azure monitor", "azure monitor agent", "coding", "community", "container insights", "devops", "distributed tracing", "grafana", "java", "log analytics", "nodedotjs", "opentelemetry", "otlp", "prometheus", "python", "telemetry", "vmss"]
+tags:
+- .NET
+- AKS
+- Application Insights
+- Auto Instrumentation
+- Azure Arc
+- Azure Monitor
+- Azure Monitor Agent
+- Container Insights
+- Distributed Tracing
+- Grafana
+- Java
+- Log Analytics
+- Node.js
+- OpenTelemetry
+- OTLP
+- Prometheus
+- Python
+- Telemetry
+- VMSS
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 SoubhagyaDash discusses Azure Monitor's new support for OpenTelemetry standards and OTLP signal ingestion, guiding developers and operations teams on unified observability and troubleshooting techniques.<!--excerpt_end-->
 
 # Troubleshoot with OTLP Signals in Azure Monitor (Limited Public Preview)

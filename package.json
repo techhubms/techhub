@@ -1,15 +1,6 @@
 {
-  "type": "module",
-  "scripts": {
-    "build": "bundle exec jekyll build",
-    "serve": "bundle exec jekyll serve",
-    "clean": "bundle exec jekyll clean",
-    "install": "bundle install"
-  },
-  "dependencies": {
-    "js-yaml": "^4.1.1"
-  },
-  "engines": {
-    "node": ">=22.0.0"
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "markdownlint-cli2": "^0.21.0"
   }
 }

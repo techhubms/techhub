@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Claude Opus 4.6 Now Available in Microsoft Foundry: Advanced Agentic AI for Coding, Security, and Enterprise Workflows"
-description: "This announcement details the integration of Anthropic’s Claude Opus 4.6 model into Microsoft Foundry on Azure. The post covers the new model’s advanced capabilities for coding, knowledge work, agents, security workflows, and enterprise deployment, alongside new API enhancements and integration with Microsoft Copilot Studio."
-author: "Steve Sweetman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/claude-opus-4-6-anthropics-powerful-model-for-coding-agents-and-enterprise-workflows-is-now-available-in-microsoft-foundry-on-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/claude-opus-4-6-anthropics-powerful-model-for-coding-agents-and-enterprise-workflows-is-now-available-in-microsoft-foundry-on-azure/
+title: 'Claude Opus 4.6 Now Available in Microsoft Foundry: Advanced Agentic AI for Coding, Security, and Enterprise Workflows'
+author: Steve Sweetman
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-05 17:46:10 +00:00
-permalink: "/2026-02-05-Claude-Opus-46-Now-Available-in-Microsoft-Foundry-Advanced-Agentic-AI-for-Coding-Security-and-Enterprise-Workflows.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["Agentic Workflows", "AI", "AI + Machine Learning", "AI Agents", "Anthropic", "API Integration", "Autonomous AI", "Azure", "Claude Opus 4.6", "Coding", "Coding Automation", "Context Window", "Copilot Studio Integration", "Enterprise AI", "Governance", "Large Language Models", "Microsoft Foundry", "News", "Operational Controls", "Security", "Security Workflows"]
-tags_normalized: ["agentic workflows", "ai", "ai plus machine learning", "ai agents", "anthropic", "api integration", "autonomous ai", "azure", "claude opus 4dot6", "coding", "coding automation", "context window", "copilot studio integration", "enterprise ai", "governance", "large language models", "microsoft foundry", "news", "operational controls", "security", "security workflows"]
+tags:
+- Agentic Workflows
+- AI
+- AI + Machine Learning
+- AI Agents
+- Anthropic
+- API Integration
+- Autonomous AI
+- Azure
+- Claude Opus 4.6
+- Coding Automation
+- Context Window
+- Copilot Studio Integration
+- Enterprise AI
+- Governance
+- Large Language Models
+- Microsoft Foundry
+- News
+- Operational Controls
+- Security
+- Security Workflows
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- security
 ---
-
 Steve Sweetman announces the availability of Claude Opus 4.6 in Microsoft Foundry on Azure, delivering advanced agentic AI for coding, security, and enterprise automation.<!--excerpt_end-->
 
 # Claude Opus 4.6 Now Available in Microsoft Foundry: Advanced Agentic AI for Coding, Security, and Enterprise Workflows

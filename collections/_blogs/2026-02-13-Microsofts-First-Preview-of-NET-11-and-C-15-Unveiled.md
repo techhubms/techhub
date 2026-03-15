@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft's First Preview of .NET 11 and C# 15 Unveiled"
-description: "This article covers Microsoft's announcement of the .NET 11 and C# 15 preview for the 2026 release, detailing major runtime changes, language feature updates, and the ongoing deprecation of Mono in favor of CoreCLR. The preview illustrates the evolution of the .NET ecosystem and highlights the opportunities and complexities brought by new collection expression argument features in C# 15."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2026/02/13/net-train-keeps-rolling-with-first-showing-of-2026-release/4090277"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2026/02/13/net-train-keeps-rolling-with-first-showing-of-2026-release/4090277
+title: Microsoft's First Preview of .NET 11 and C# 15 Unveiled
+author: DevClass.com
+primary_section: dotnet
+feed_name: DevClass
 date: 2026-02-13 11:58:16 +00:00
-permalink: "/2026-02-13-Microsofts-First-Preview-of-NET-11-and-C-15-Unveiled.html"
-categories: ["Coding"]
-tags: [".NET 11", ".NET WebAssembly SDK", "Android Development", "Backward Compatibility", "Blazor", "Blogs", "C# 15", "Coding", "Collection Expression Arguments", "CoreCLR", "Cross Platform Development", "Language Features", "MAUI", "Microsoft", "Microsoft Developer Tools", "Mono Runtime", "Xamarin", "Zstandard Compression"]
-tags_normalized: ["dotnet 11", "dotnet webassembly sdk", "android development", "backward compatibility", "blazor", "blogs", "csharp 15", "coding", "collection expression arguments", "coreclr", "cross platform development", "language features", "maui", "microsoft", "microsoft developer tools", "mono runtime", "xamarin", "zstandard compression"]
+tags:
+- .NET 11
+- .NET WebAssembly SDK
+- Android Development
+- Backward Compatibility
+- Blazor
+- Blogs
+- C# 15
+- Collection Expression Arguments
+- CoreCLR
+- Cross Platform Development
+- Language Features
+- MAUI
+- Microsoft
+- Microsoft Developer Tools
+- Mono Runtime
+- Xamarin
+- Zstandard Compression
+- .NET
+section_names:
+- dotnet
 ---
-
 DevClass.com reports on Microsoft's first preview of .NET 11 and C# 15, outlining the shift from Mono, CoreCLR enhancements, and the new C# collection expression arguments feature for developers.<!--excerpt_end-->
 
 # Microsoft's First Preview of .NET 11 and C# 15 Unveiled

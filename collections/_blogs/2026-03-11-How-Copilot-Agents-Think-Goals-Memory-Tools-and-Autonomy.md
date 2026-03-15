@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How Copilot Agents Think: Goals, Memory, Tools, and Autonomy"
-description: "This article by John Edward provides a comprehensive overview of the architecture and design principles behind Microsoft Copilot agents, with a focus on enterprise implementations using Copilot Studio. It explains how these AI agents leverage goals, memory, tools, and autonomy to execute complex workflows, and discusses key considerations for architects building secure and scalable agentic systems. Readers will gain insight into the evolution from traditional chatbots to autonomous AI agents and learn best practices for integrating these solutions within enterprise environments."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-copilot-agents-think-goals-memory-tools-and-autonomy/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/how-copilot-agents-think-goals-memory-tools-and-autonomy/
+title: 'How Copilot Agents Think: Goals, Memory, Tools, and Autonomy'
+author: John Edward
+primary_section: ai
+feed_name: Dellenny's Blog
 date: 2026-03-11 15:01:55 +00:00
-permalink: "/2026-03-11-How-Copilot-Agents-Think-Goals-Memory-Tools-and-Autonomy.html"
-categories: ["AI"]
-tags: ["Agent Design", "AI", "AI Architecture", "AI Tools", "Autonomous Agents", "Blogs", "Copilot", "Copilot Agents", "Enterprise AI", "Governance", "Human in The Loop", "Memory Architecture", "Microsoft Copilot Studio", "Observability", "Plan And Execute", "ReAct", "Solution Architecture"]
-tags_normalized: ["agent design", "ai", "ai architecture", "ai tools", "autonomous agents", "blogs", "copilot", "copilot agents", "enterprise ai", "governance", "human in the loop", "memory architecture", "microsoft copilot studio", "observability", "plan and execute", "react", "solution architecture"]
+tags:
+- Agent Design
+- AI
+- AI Architecture
+- AI Tools
+- Autonomous Agents
+- Blogs
+- Copilot
+- Copilot Agents
+- Enterprise AI
+- Governance
+- Human in The Loop
+- Memory Architecture
+- Microsoft Copilot Studio
+- Observability
+- Plan And Execute
+- ReAct
+- Solution Architecture
+section_names:
+- ai
 ---
-
 John Edward explores the foundations of Microsoft Copilot agent design, outlining how goals, memory, tools, and autonomy create robust, autonomous AI systems for enterprise automation.<!--excerpt_end-->
 
 # How Copilot Agents Think: Goals, Memory, Tools, and Autonomy

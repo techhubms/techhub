@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "SQL Server Migration Made Easy with Azure Arc"
-description: "This video episode of Data Exposed showcases the new Azure Arc–enabled SQL Server migration experience, offering an integrated, streamlined approach for migrating databases to Azure SQL Managed Instance. The workflow provides discovery, assessment, provisioning, and cutover steps in a unified interface, with built-in Copilot guidance. The session is designed for professionals modernizing on-premises SQL Server or managing hybrid database environments, aiming to simplify SQL migrations and make them more reliable and scalable."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=u1dJHCkp-mA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=u1dJHCkp-mA
+title: SQL Server Migration Made Easy with Azure Arc
+author: Microsoft Developer
+primary_section: azure
+feed_name: Microsoft Developer YouTube
 date: 2026-02-19 17:01:21 +00:00
-permalink: "/2026-02-19-SQL-Server-Migration-Made-Easy-with-Azure-Arc.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Arc", "Azure Assessment", "Azure Copilot", "Azure SQL Managed Instance", "Cloud Computing", "Cutover Process", "Data Exposed", "Data Migration", "Database Migration", "Dev", "Development", "Hybrid Cloud", "Microsoft", "Microsoft Azure", "Provisioning", "SQL Management", "SQL Modernization", "SQL Server", "Tech", "Technology", "Videos"]
-tags_normalized: ["azure", "azure arc", "azure assessment", "azure copilot", "azure sql managed instance", "cloud computing", "cutover process", "data exposed", "data migration", "database migration", "dev", "development", "hybrid cloud", "microsoft", "microsoft azure", "provisioning", "sql management", "sql modernization", "sql server", "tech", "technology", "videos"]
+tags:
+- Azure
+- Azure Arc
+- Azure Assessment
+- Azure Copilot
+- Azure SQL Managed Instance
+- Cloud Computing
+- Cutover Process
+- Data Exposed
+- Data Migration
+- Database Migration
+- Dev
+- Development
+- Hybrid Cloud
+- Microsoft
+- Microsoft Azure
+- Provisioning
+- SQL Management
+- SQL Modernization
+- SQL Server
+- Tech
+- Technology
+- Videos
+section_names:
+- azure
 ---
-
 In this Data Exposed episode, Microsoft Developer presents a walkthrough of the Azure Arc–enabled SQL Server migration experience, demonstrating streamlined migration workflows and Copilot-guided processes for database professionals.<!--excerpt_end-->
 
 {% youtube u1dJHCkp-mA %}

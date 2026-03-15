@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Oracle Database@Azure Now Live in West Europe: Enterprise Databases in Azure Amsterdam Region"
-description: "This article details the general availability of Oracle Database@Azure services in the West Europe (Amsterdam) Azure region. It covers how organizations can leverage enterprise-grade Oracle databases natively in Azure datacenters, address EU compliance requirements, reduce latency, and accelerate app modernization. The post highlights integrated services, architecture, and benefits for regulated enterprises needing resilient, performant, and compliant solutions."
-author: "SparshAgrawat"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-is-now-generally-available-in-west-europe/ba-p/4497632"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/oracle-database-azure-is-now-generally-available-in-west-europe/ba-p/4497632
+title: 'Oracle Database@Azure Now Live in West Europe: Enterprise Databases in Azure Amsterdam Region'
+author: SparshAgrawat
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-26 21:04:54 +00:00
-permalink: "/2026-02-26-Oracle-DatabaseAzure-Now-Live-in-West-Europe-Enterprise-Databases-in-Azure-Amsterdam-Region.html"
-categories: ["Azure"]
-tags: ["Amsterdam Region", "Autonomous Database", "Azure", "Azure Integration", "BYOL", "Cloud Modernization", "Community", "Compliance", "Data Sovereignty", "Datacenter", "Disaster Recovery", "Enterprise Workloads", "GoldenGate", "Low Latency", "Microsoft", "Oracle Database@Azure", "Oracle Exadata"]
-tags_normalized: ["amsterdam region", "autonomous database", "azure", "azure integration", "byol", "cloud modernization", "community", "compliance", "data sovereignty", "datacenter", "disaster recovery", "enterprise workloads", "goldengate", "low latency", "microsoft", "oracle databaseatazure", "oracle exadata"]
+tags:
+- Amsterdam Region
+- Autonomous Database
+- Azure
+- Azure Integration
+- BYOL
+- Cloud Modernization
+- Community
+- Compliance
+- Data Sovereignty
+- Datacenter
+- Disaster Recovery
+- Enterprise Workloads
+- GoldenGate
+- Low Latency
+- Microsoft
+- Oracle Database@Azure
+- Oracle Exadata
+section_names:
+- azure
 ---
-
 SparshAgrawat announces the general availability of Oracle Database@Azure in the West Europe (Amsterdam) Azure region. The post explains how this enables regulated enterprises to deploy Oracle databases within Azure, meeting performance, compliance, and resiliency needs.<!--excerpt_end-->
 
 # Oracle Database@Azure Now Live in West Europe (Amsterdam)

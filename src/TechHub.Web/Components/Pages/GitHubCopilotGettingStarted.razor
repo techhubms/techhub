@@ -1,0 +1,148 @@
+@page "/github-copilot/getting-started"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotGettingStarted> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@(pageData?.Title ?? "Getting Started with GitHub Copilot") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+                @if (!string.IsNullOrWhiteSpace(pageData.Description))
+                {
+                    <p class="page-description">@pageData.Description</p>
+                }
+            </div>
+
+            <div class="getting-started-container">
+                @foreach (var guideSection in pageData.Sections)
+                {
+                    <section class="getting-started-section">
+                        <h2 id="@GenerateSectionId(guideSection.Title)">@guideSection.Title</h2>
+
+                        <div class="getting-started-content">
+                            <SafeMarkup Html="@guideSection.Content" />
+                        </div>
+
+                        @if (guideSection.MoreInfo != null && guideSection.MoreInfo.Any())
+                        {
+                            <div class="getting-started-more-info">
+                                <div class="getting-started-more-info-header">
+                                    <span class="getting-started-more-info-icon" aria-hidden="true">📚</span>
+                                    <span class="getting-started-more-info-title">More information</span>
+                                </div>
+                                <ul>
+                                    @foreach (var link in guideSection.MoreInfo)
+                                    {
+                                        <li><a href="@link.Url" target="_blank" rel="noopener">@link.Text</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    </section>
+                }
+            </div>
+        </article>
+    </main>
+}
+
+@code {
+    private GettingStartedPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private static string GenerateSectionId(string title)
+    {
+        return title
+            .ToLowerInvariant()
+            .Replace(" ", "-", StringComparison.Ordinal)
+            .Replace(":", "", StringComparison.Ordinal)
+            .Replace("&", "and", StringComparison.Ordinal)
+            .Replace("(", "", StringComparison.Ordinal)
+            .Replace(")", "", StringComparison.Ordinal)
+            .Trim();
+    }
+
+    private string GetRenderedContent()
+    {
+        if (pageData == null)
+            return string.Empty;
+
+        var sb = new System.Text.StringBuilder();
+        foreach (var guideSection in pageData.Sections)
+        {
+            sb.Append($"<h2 id=\"{GenerateSectionId(guideSection.Title)}\">{guideSection.Title}</h2>");
+            sb.Append(guideSection.Content);
+        }
+        return sb.ToString();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initHighlighting");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<GettingStartedPageData>("copilot-getting-started-data", out var restored) && restored != null)
+        {
+            pageData = restored;
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetGettingStartedDataAsync();
+
+            if (pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (pageData != null)
+        {
+            ApplicationState.PersistAsJson("copilot-getting-started-data", pageData);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

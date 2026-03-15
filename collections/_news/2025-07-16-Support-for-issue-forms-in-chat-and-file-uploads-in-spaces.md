@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Support for issue forms in chat and file uploads in spaces"
-description: "GitHub Copilot now enhances issue creation with support for issue forms and improved user experiences on github.com."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-16-support-for-issue-forms-in-chat-and-file-uploads-in-spaces"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-07-16-support-for-issue-forms-in-chat-and-file-uploads-in-spaces
+title: Support for issue forms in chat and file uploads in spaces
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-07-16 16:04:14 +00:00
-permalink: "/2025-07-16-Support-for-issue-forms-in-chat-and-file-uploads-in-spaces.html"
-viewing_mode: "external"
-tags: ["AI", "AI Assistance", "Automation", "Copilot Features", "Developer Tools", "GitHub", "GitHub Copilot", "Github.com", "Issue Creation", "Issue Forms", "News", "Productivity"]
-tags_normalized: ["ai", "ai assistance", "automation", "copilot features", "developer tools", "github", "github copilot", "githubdotcom", "issue creation", "issue forms", "news", "productivity"]
+tags:
+- AI Assistance
+- Automation
+- Copilot Features
+- Developer Tools
+- GitHub
+- Github.com
+- Issue Creation
+- Issue Forms
+- Productivity
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison discusses new improvements to GitHub Copilot, particularly its enhanced capability in creating issues on github.com. The update introduces support for issue forms, further streamlining and augmenting the developer experience with AI-driven assistance during the issue creation process.<!--excerpt_end-->
 
 ## Summary of the Article

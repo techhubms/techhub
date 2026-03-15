@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Beyond Visibility: Microsoft Purview Data Security Posture Management"
-description: "This advanced session from Microsoft Ignite 2025 focuses on how Microsoft Purview Data Security Posture Management (DSPM) enables organizations to efficiently manage and mitigate critical data security risks. The session details its end-to-end approach to data protection, enhanced by AI-powered agents, with a strong focus on actionable security solutions, visibility, and compliance in enterprise environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MqNgGkXJ5bc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=MqNgGkXJ5bc
+title: 'Beyond Visibility: Microsoft Purview Data Security Posture Management'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-25 18:09:25 +00:00
-permalink: "/2025-11-25-Beyond-Visibility-Microsoft-Purview-Data-Security-Posture-Management.html"
-categories: ["AI", "Security"]
-tags: ["Advanced Security", "AI", "AI Agents", "Compliance", "Data Governance", "Data Security", "Data Visibility", "DSPM", "Enterprise Security", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "Nathalia Borges", "Posture Management", "Rudra Mitra", "Secureyourdata", "Security", "Security Risk Mitigation", "Session BRK253", "Talhah Mir", "Threat Protection", "Videos", "Yaki Faitelson"]
-tags_normalized: ["advanced security", "ai", "ai agents", "compliance", "data governance", "data security", "data visibility", "dspm", "enterprise security", "microsoft ignite", "microsoft purview", "msignite", "nathalia borges", "posture management", "rudra mitra", "secureyourdata", "security", "security risk mitigation", "session brk253", "talhah mir", "threat protection", "videos", "yaki faitelson"]
+tags:
+- Advanced Security
+- AI Agents
+- Compliance
+- Data Governance
+- Data Security
+- Data Visibility
+- DSPM
+- Enterprise Security
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- Nathalia Borges
+- Posture Management
+- Rudra Mitra
+- Secureyourdata
+- Security Risk Mitigation
+- Session BRK253
+- Talhah Mir
+- Threat Protection
+- Yaki Faitelson
+- AI
+- Security
+- Videos
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Presented by Rudra Mitra, Nathalia Borges, Yaki Faitelson, and Talhah Mir at Microsoft Ignite, this session dives into Microsoft Purview Data Security Posture Management (DSPM) and its AI-enhanced features for robust enterprise data security.<!--excerpt_end-->
 
 {% youtube MqNgGkXJ5bc %}

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "MCP C# SDK Deep Dive"
-description: "This video, presented by Microsoft Developer, provides an in-depth exploration of the MCP (Model Context Protocol) C# SDK. The session includes demonstrations of all the new features introduced in the 2025-06-18 specification, practical usage tips, and integration scenarios using tools like Visual Studio Code and Azure AI Foundry's Foundry Agent Service. The content also highlights community resources and learning curricula for developers looking to explore MCP further."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kTOXXvgyeUE"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=kTOXXvgyeUE
+title: MCP C# SDK Deep Dive
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:24:59 +00:00
-permalink: "/2025-07-30-MCP-C-SDK-Deep-Dive.html"
-categories: ["AI", "Coding", "Azure"]
-tags: ["06 18 Spec", "Agent Integration", "AI", "AI Development", "Azure", "Azure AI Foundry", "C#", "Cloud Computing", "Coding", "Custom Agents", "Demo", "Dev", "Dev Tools", "Development", "Foundry Agent Service", "MCP", "Microsoft", "Programming", "SDK", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["06 18 spec", "agent integration", "ai", "ai development", "azure", "azure ai foundry", "csharp", "cloud computing", "coding", "custom agents", "demo", "dev", "dev tools", "development", "foundry agent service", "mcp", "microsoft", "programming", "sdk", "tech", "technology", "videos", "vs code"]
+tags:
+- 06 18 Spec
+- Agent Integration
+- AI Development
+- Azure AI Foundry
+- C#
+- Cloud Computing
+- Custom Agents
+- Demo
+- Dev
+- Dev Tools
+- Development
+- Foundry Agent Service
+- MCP
+- Microsoft
+- Programming
+- SDK
+- Tech
+- Technology
+- VS Code
+- AI
+- Azure
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- azure
+primary_section: ai
 ---
-
 Microsoft Developer presents a deep dive into the MCP C# SDK, demonstrating new features from the 2025-06-18 spec and showing developers how to integrate MCP tools with custom agents and AI solutions.<!--excerpt_end-->
 
 {% youtube kTOXXvgyeUE %}

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "February 2026 Insiders (version 1.110): What’s New in Visual Studio Code"
-description: "An in-depth breakdown of the new features, improvements, and fixes introduced in the Visual Studio Code February 2026 Insiders build (version 1.110). This release covers enhancements to accessibility, integrated terminal updates, improved UI behaviors, and performance optimizations. Read on for technical details, links to resolved issues, and how to access the latest build."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_110"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_110
+title: 'February 2026 Insiders (version 1.110): What’s New in Visual Studio Code'
+author: Visual Studio Code Team
+primary_section: dotnet
+feed_name: Visual Studio Code Releases
 date: 2026-03-04 17:00:00 +00:00
-permalink: "/2026-03-04-February-2026-Insiders-version-1110-Whats-New-in-Visual-Studio-Code.html"
-categories: ["Coding"]
-tags: ["Accessibility", "Coding", "Developer Tools", "Insiders Build", "Integrated Terminal", "News", "Performance Optimization", "Release 1.110", "Release Notes", "Settings Editor", "Software Development", "VS Code", "Xterm.js"]
-tags_normalized: ["accessibility", "coding", "developer tools", "insiders build", "integrated terminal", "news", "performance optimization", "release 1dot110", "release notes", "settings editor", "software development", "vs code", "xtermdotjs"]
+tags:
+- Accessibility
+- Developer Tools
+- Insiders Build
+- Integrated Terminal
+- News
+- Performance Optimization
+- Release 1.110
+- Release Notes
+- Settings Editor
+- Software Development
+- VS Code
+- Xterm.js
+- .NET
+section_names:
+- dotnet
 ---
-
 Visual Studio Code Team highlights key updates in the February 2026 Insiders Release (v1.110), including terminal improvements, accessibility enhancements, and UI changes for a better developer workflow.<!--excerpt_end-->
 
 # February 2026 Insiders (version 1.110): Visual Studio Code Release Notes

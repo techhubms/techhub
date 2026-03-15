@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Sovereign Landing Zones for Microsoft Azure: Architecture and Compliance Explained"
-description: "This article by Thomas Maurer presents a deep dive into Sovereign Landing Zones (SLZ) in Microsoft Azure, exploring how they extend Azure Landing Zone concepts to address strict sovereignty and regulatory requirements. Topics include architectural guidance, platform-level enforcement, deployment methods, and when organizations should choose SLZ for their cloud workloads."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2026/02/sovereign-landing-zones-for-microsoft-azure-slz-explained/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+external_url: https://www.thomasmaurer.ch/2026/02/sovereign-landing-zones-for-microsoft-azure-slz-explained/
+title: 'Sovereign Landing Zones for Microsoft Azure: Architecture and Compliance Explained'
+author: Thomas Maurer
+primary_section: azure
+feed_name: Thomas Maurer's Blog
 date: 2026-02-12 15:07:06 +00:00
-permalink: "/2026-02-12-Sovereign-Landing-Zones-for-Microsoft-Azure-Architecture-and-Compliance-Explained.html"
-categories: ["Azure"]
-tags: ["ALZ", "Azure", "Azure Landing Zone", "Azure Landing Zones", "Azure Policy", "Bicep", "Blogs", "Cloud", "Cloud Architecture", "Data Sovereignty", "Hybrid Cloud", "Jack Tracy", "Management Groups", "Microsoft", "Microsoft Azure", "Platform Governance", "Public Sector Cloud", "Regulatory Compliance", "SLZ", "Sovereign Cloud", "Sovereign Landing Zone", "Sovereign Landing Zones", "Subscription Layout", "Terraform", "Thomas Maurer", "Video"]
-tags_normalized: ["alz", "azure", "azure landing zone", "azure landing zones", "azure policy", "bicep", "blogs", "cloud", "cloud architecture", "data sovereignty", "hybrid cloud", "jack tracy", "management groups", "microsoft", "microsoft azure", "platform governance", "public sector cloud", "regulatory compliance", "slz", "sovereign cloud", "sovereign landing zone", "sovereign landing zones", "subscription layout", "terraform", "thomas maurer", "video"]
+tags:
+- ALZ
+- Azure
+- Azure Landing Zone
+- Azure Landing Zones
+- Azure Policy
+- Bicep
+- Blogs
+- Cloud Architecture
+- Data Sovereignty
+- Hybrid Cloud
+- Jack Tracy
+- Management Groups
+- Microsoft
+- Microsoft Azure
+- Platform Governance
+- Public Sector Cloud
+- Regulatory Compliance
+- SLZ
+- Sovereign Cloud
+- Sovereign Landing Zone
+- Sovereign Landing Zones
+- Subscription Layout
+- Terraform
+- Thomas Maurer
+- Video
+section_names:
+- azure
 ---
-
 Thomas Maurer explains the concept and benefits of Sovereign Landing Zones (SLZ) on Microsoft Azure, highlighting their value for organizations facing strict sovereignty or regulatory requirements.<!--excerpt_end-->
 
 # Sovereign Landing Zones for Microsoft Azure (SLZ) – Explained

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Why Bugs Survive Continuous Fuzzing: Lessons from OSS-Fuzz Research"
-description: "Antonio Morales from the GitHub Security Lab examines why critical vulnerabilities persist in open-source projects despite years of continuous fuzzing with initiatives like OSS-Fuzz. By analyzing real-world case studies of GStreamer, Poppler, and Exiv2, the article explores the limits of current fuzzing approaches, demonstrates the necessity of human oversight, and introduces advanced techniques like context-sensitive and value coverage. A practical five-step fuzzing workflow is shared to help practitioners find elusive vulnerabilities."
-author: "Antonio Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/vulnerability-research/bugs-that-survive-the-heat-of-continuous-fuzzing/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/security/vulnerability-research/bugs-that-survive-the-heat-of-continuous-fuzzing/
+title: 'Why Bugs Survive Continuous Fuzzing: Lessons from OSS-Fuzz Research'
+author: Antonio Morales
+feed_name: The GitHub Blog
 date: 2025-12-29 22:01:14 +00:00
-permalink: "/2025-12-29-Why-Bugs-Survive-Continuous-Fuzzing-Lessons-from-OSS-Fuzz-Research.html"
-categories: ["DevOps", "Security"]
-tags: ["AFL++", "CI/CD", "Code Coverage", "Context Sensitive Coverage", "DevOps", "Evince", "Exiv2", "FRFuzz", "Fuzzing", "GitHub Security Lab", "GStreamer", "News", "Open Source", "OSS Fuzz", "Poppler", "Security", "Security Testing", "Value Coverage", "Vulnerability Research"]
-tags_normalized: ["aflplusplus", "cislashcd", "code coverage", "context sensitive coverage", "devops", "evince", "exiv2", "frfuzz", "fuzzing", "github security lab", "gstreamer", "news", "open source", "oss fuzz", "poppler", "security", "security testing", "value coverage", "vulnerability research"]
+tags:
+- AFL++
+- CI/CD
+- Code Coverage
+- Context Sensitive Coverage
+- Evince
+- Exiv2
+- FRFuzz
+- Fuzzing
+- GitHub Security Lab
+- GStreamer
+- Open Source
+- OSS Fuzz
+- Poppler
+- Security Testing
+- Value Coverage
+- Vulnerability Research
+- DevOps
+- Security
+- News
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 Antonio Morales of the GitHub Security Lab delves into why bugs can persist in projects that undergo continuous fuzzing, highlighting case studies and offering a five-step workflow for better vulnerability discovery.<!--excerpt_end-->
 
 # Bugs that Survive the Heat of Continuous Fuzzing

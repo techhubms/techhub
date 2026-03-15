@@ -1,0 +1,103 @@
+@page "/github-copilot/tool-tips"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotToolTips> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Tool Tips") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <main class="page-without-sidebar">
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+            </div>
+
+            <div class="tooltips-container">
+                <section class="tooltips-section">
+                    <p>@pageData.Intro</p>
+                </section>
+
+                <section class="tooltips-section">
+                    <h2 id="tools">Tools &amp; Resources</h2>
+                    <div class="tooltips-grid">
+                        @foreach (var tool in pageData.Tools)
+                        {
+                            <div class="tooltips-card">
+                                <div class="tooltips-card-header">
+                                    <h3>@tool.Name</h3>
+                                    <span class="tooltips-category">@tool.Category</span>
+                                </div>
+                                <p>@tool.Description</p>
+                                <a href="@tool.Url" class="btn" target="_blank" rel="noopener">
+                                    Visit Website
+                                </a>
+                            </div>
+                        }
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+}
+
+@code {
+    private ToolTipsPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<ToolTipsPageData>("copilot-tool-tips-data", out var restored) && restored != null)
+        {
+            pageData = restored;
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetToolTipsDataAsync();
+
+            if (pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (pageData != null)
+        {
+            ApplicationState.PersistAsJson("copilot-tool-tips-data", pageData);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

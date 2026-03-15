@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Giving Your AI Agents Reliable Skills with the Agent Skills SDK"
-description: "This article introduces the Agent Skills SDK, an open-source Python library designed to enhance AI agents with modular, portable, and context-efficient skills using the open Agent Skills format. It covers core concepts like progressive disclosure, storage-agnostic skill management, and integration with frameworks including LangChain and the Microsoft Agent Framework. The SDK helps developers reliably equip AI agents for custom enterprise workflows and DevOps use cases."
-author: "pratikpanda"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/giving-your-ai-agents-reliable-skills-with-the-agent-skills-sdk/ba-p/4497074"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/giving-your-ai-agents-reliable-skills-with-the-agent-skills-sdk/ba-p/4497074
+title: Giving Your AI Agents Reliable Skills with the Agent Skills SDK
+author: pratikpanda
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-03 08:00:00 +00:00
-permalink: "/2026-03-03-Giving-Your-AI-Agents-Reliable-Skills-with-the-Agent-Skills-SDK.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["Agent Skills SDK", "AI", "AI Agents", "Automation Tools", "Azure", "Azure Blob Storage", "Cloud Storage", "Coding", "Community", "DevOps", "GitHub", "Incident Response Automation", "LangChain", "LLM Integration", "MCP Server", "Microsoft Agent Framework", "Open Standard", "Progressive Disclosure", "Python", "SDK", "Skills Registry", "SRE Automation"]
-tags_normalized: ["agent skills sdk", "ai", "ai agents", "automation tools", "azure", "azure blob storage", "cloud storage", "coding", "community", "devops", "github", "incident response automation", "langchain", "llm integration", "mcp server", "microsoft agent framework", "open standard", "progressive disclosure", "python", "sdk", "skills registry", "sre automation"]
+tags:
+- Agent Skills SDK
+- AI
+- AI Agents
+- Automation Tools
+- Azure
+- Azure Blob Storage
+- Cloud Storage
+- Community
+- DevOps
+- GitHub
+- Incident Response Automation
+- LangChain
+- LLM Integration
+- MCP Server
+- Microsoft Agent Framework
+- Open Standard
+- Progressive Disclosure
+- Python
+- SDK
+- Skills Registry
+- SRE Automation
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
 ---
-
 pratikpanda explains how the Agent Skills SDK lets developers give AI agents reliable, context-aware skills using an open format and Python SDK, with integration for Microsoft agent ecosystems.<!--excerpt_end-->
 
 # Giving Your AI Agents Reliable Skills with the Agent Skills SDK

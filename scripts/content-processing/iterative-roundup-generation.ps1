@@ -26,12 +26,9 @@
 .PARAMETER Token
     Azure API Key for AI model access
 
-.PARAMETER Model
-    Required. The deployment name configured in your Azure AI Foundry resource.
-
-.PARAMETER Endpoint
-    Required. Azure AI Foundry endpoint URL.
-    Example: "https://<resource>.services.ai.azure.com/models/chat/completions"
+.PARAMETER Environment
+    Optional. The Azure environment to use ('staging' or 'prod'). Defaults to 'prod'.
+    Uses Get-AzureOpenAIEndpoint and Get-AzureOpenAIModelName functions for configuration.
 
 .PARAMETER ResumeFromBackup
     Path to a backup file to resume from instead of starting from scratch
@@ -43,13 +40,17 @@
     Section name to resume from in Step 3 or 4 (e.g., "AI", "Azure"). Useful if Step 3 or 4 fails partway through processing sections.
 
 .EXAMPLE
-    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Model "gpt-4.1" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions"
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..."
 
 .EXAMPLE
-    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Model "gpt-4.1" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -ResumeFromBackup ".tmp/roundup-debug/2025-07-21-to-2025-07-27-Step4-OngoingNarrative-20250812-1430.txt" -StartFromStep 5
+    # Use staging environment for testing
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Environment "staging"
 
 .EXAMPLE
-    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -Model "gpt-4.1" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -StartFromStep 3 -ResumeFromSection "Azure"
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -ResumeFromBackup ".tmp/roundup-debug/2025-07-21-to-2025-07-27-Step4-OngoingNarrative-20250812-1430.txt" -StartFromStep 5
+
+.EXAMPLE
+    ./iterative-roundup-generation.ps1 -StartDate "2025-07-21" -EndDate "2025-07-27" -Token "api_key..." -StartFromStep 3 -ResumeFromSection "Azure"
 #>
 
 param(
@@ -62,11 +63,9 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$Token,
     
-    [Parameter(Mandatory = $true)]
-    [string]$Model,
-    
-    [Parameter(Mandatory = $true)]
-    [string]$Endpoint,
+    [Parameter(Mandatory = $false)]
+    [ValidateSet('staging', 'prod')]
+    [string]$Environment = 'prod',
 
     [Parameter(Mandatory = $false)]
     [int]$RateLimitPreventionDelay = 15,
@@ -225,6 +224,8 @@ try {
     Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
     Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
     ForEach-Object { . $_.FullName }
+
+    Write-Host "📍 Using $Environment environment" -ForegroundColor Cyan
 
     # Validate date format and convert to DateTime objects
     try {
@@ -453,7 +454,7 @@ For articles to INCLUDE (developer-relevant content):
   "technology_stack": "Specific technology/framework/platform involved",
   "topic_type": "announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison",
   "target_audience": "developers|administrators|business|researchers|data-scientists|devops-engineers",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9", "tag10"],
   "impact_level": "high|medium|low",
   "time_sensitivity": "immediate|this-week|this-month|long-term",
   "reasoning": "Brief explanation of why this content is relevant for developers"
@@ -465,26 +466,26 @@ Choose ONE section that best represents the primary focus of the content. Use th
 1. "GitHub Copilot": Content specifically about GitHub Copilot features, usage, integrations, or announcements
    - GitHub Copilot Chat, code completion, enterprise features
    - GitHub Copilot extensions and integrations
-   - Takes priority over "AI" or "Coding" when Copilot is the main focus
+   - Takes priority over "AI" or ".NET" when Copilot is the main focus
 
-2. "ML": Machine learning engineering, data science workflows, model development, AI research
-   - Azure ML, data science platforms, model training and deployment
-   - Advanced analytics, business intelligence development
-   - Custom ML implementations, algorithm development
-   - Takes priority over "AI" when technical ML development is the main focus
-
-3. "AI": General AI services, tools, and platforms (excluding GitHub Copilot and technical ML)
+2. "AI": General AI services, tools, and platforms (excluding GitHub Copilot and technical ML)
    - Azure AI Foundry, Azure OpenAI, AI services and APIs, Copilot Studio
    - AI integration and usage (not technical ML development)
    - Prompt engineering, AI-powered applications
-   - Only use when content is not primarily about GitHub Copilot or technical ML
+   - Takes priority over "ML" when content is about AI services/platforms, not technical ML development
+
+3. "ML": Machine learning engineering, data science workflows, model development, AI research
+   - Azure ML, data science platforms, model training and deployment
+   - Advanced analytics, business intelligence development
+   - Custom ML implementations, algorithm development
+   - Only use when technical ML development is the main focus, not general AI services
 
 4. "Azure": Microsoft cloud services, infrastructure, and platform services
    - Azure services, cloud architecture, deployment
    - ARM templates, Bicep, Terraform (if Azure) cloud management
    - Use when Azure services are the primary focus, not just mentioned
 
-5. "Coding": .NET ecosystem, programming languages, development frameworks
+5. ".NET": .NET ecosystem, programming languages, development frameworks
    - C#, F#, .NET, ASP.NET Core, development patterns
    - Programming languages, frameworks, development tools, NuGet package manager
    - Only use when development is the main focus and not about GitHub Copilot
@@ -518,6 +519,7 @@ Rate based on DEVELOPER IMPACT and relevance to developer workflows:
 - 7-8: Significant new features affecting developer productivity, important API updates, useful new capabilities
 - 5-6: Incremental improvements, helpful tutorials, minor feature additions, maintenance updates with developer impact
 - 3-4: Niche developer tools, specialized use cases, minor updates with limited developer relevance
+- 1-2: Barely relevant to developers, tangential mentions, primarily non-technical content
 
 🚨 DEVELOPER RELEVANCE ASSESSMENT:
 - HIGH: Direct impact on developer workflows, new coding capabilities, essential tools and features
@@ -601,10 +603,9 @@ $articleContent
             Write-Host "🤖 Calling AI model for filtering and analysis..."
             $response = Invoke-AiApiCall `
                 -Token $Token `
-                -Model $Model `
+                -Environment $Environment `
                 -SystemMessage $step2SystemMessage `
                 -UserMessage $step2UserMessage `
-                -Endpoint $Endpoint `
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
 
             # Check for errors
@@ -639,14 +640,12 @@ $articleContent
                     Write-Host "  📝 Reasoning: $($result.reasoning)"
                     
                     # Extract original title and link from frontmatter using existing function
-                    $canonicalUrl = Get-FrontMatterValue -Content $articleContent -Key "canonical_url"
+                    $externalUrl = Get-FrontMatterValue -Content $articleContent -Key "external_url"
                     $title = Get-FrontMatterValue -Content $articleContent -Key "title"
-                    $viewingMode = Get-FrontMatterValue -Content $articleContent -Key "viewing_mode"
                     $permalink = Get-FrontMatterValue -Content $articleContent -Key "permalink"
                     
-                    $result | Add-Member -NotePropertyName "canonical_url" -NotePropertyValue $canonicalUrl
+                    $result | Add-Member -NotePropertyName "external_url" -NotePropertyValue $externalUrl
                     $result | Add-Member -NotePropertyName "title" -NotePropertyValue $title
-                    $result | Add-Member -NotePropertyName "viewing_mode" -NotePropertyValue $viewingMode
                     $result | Add-Member -NotePropertyName "permalink" -NotePropertyValue $permalink
                     $result | Add-Member -NotePropertyName "filename" -NotePropertyValue $articleFilePath
                     
@@ -887,7 +886,7 @@ $step3SystemMessage
 
         # Process each section individually to avoid token limits
         $step3Responses = @()
-        $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", "Coding", "DevOps", "Security")
+        $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", ".NET", "DevOps", "Security")
         $processedSections = 0
         
         # If resuming from a specific section, load previous section responses
@@ -1045,12 +1044,17 @@ $step3SystemMessage
                         $sectionInput += "TAGS: $($article.tags -join ', ')`n"
                     }
                 
-                    # Use appropriate URL based on viewing_mode
-                    if ($article.viewing_mode -eq "internal") {
+                    # Determine collection from permalink path (e.g., /ai/videos/slug)
+                    $collection = if ($article.permalink -match '/([^/]+)/[^/]+$') { $matches[1] } else { "" }
+                    # Internal collections: videos, roundups, custom
+                    # External collections: news, blogs, community
+                    $isInternal = $collection -in @("videos", "roundups", "custom")
+                    
+                    if ($isInternal) {
                         $sectionInput += "LINK: [$($article.title)]({{ `"$($article.permalink)`" | relative_url }})`n"
                     }
                     else {
-                        $sectionInput += "LINK: [$($article.title)]($($article.canonical_url))`n"
+                        $sectionInput += "LINK: [$($article.title)]($($article.external_url))`n"
                     }
                     $sectionInput += "`n"
                 }
@@ -1066,10 +1070,9 @@ $sectionInput
                 Write-Host "🤖 Calling AI model to create news-style stories for $($sectionName)..."
                 $sectionResponse = Invoke-AiApiCall `
                     -Token $Token `
-                    -Model $Model `
+                    -Environment $Environment `
                     -SystemMessage $step3SystemMessage `
                     -UserMessage $step3UserMessage `
-                    -Endpoint $Endpoint `
                     -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                 # Check for errors with robust error handling
@@ -1225,7 +1228,7 @@ CRITICAL: If no meaningful connections exist between the previous and current ro
 
             # Process each section individually to avoid token limits
             $step4Responses = @()
-            $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", "Coding", "DevOps", "Security")
+            $orderedSections = @("GitHub Copilot", "AI", "ML", "Azure", ".NET", "DevOps", "Security")
             $processedSections = 0
             
             # Extract section content from Step 3 response for individual processing
@@ -1291,10 +1294,33 @@ CRITICAL: If no meaningful connections exist between the previous and current ro
                     Write-Host "🔄 Processing ongoing narrative for section $processedSections of $($sectionContents.Keys.Count): $sectionName"
                     
                     $sectionContent = $sectionContents[$sectionName]
+                    
+                    # Extract only the matching section from the previous roundup to reduce token usage
+                    $previousSectionContent = ""
+                    $inSection = $false
+                    foreach ($prevLine in ($previousRoundupContent -split "`n")) {
+                        if ($prevLine -match '^## (.+)$') {
+                            if ($matches[1].Trim() -eq $sectionName) {
+                                $inSection = $true
+                            }
+                            elseif ($inSection) {
+                                break
+                            }
+                        }
+                        if ($inSection) {
+                            $previousSectionContent += $prevLine + "`n"
+                        }
+                    }
+                    
+                    if (-not $previousSectionContent.Trim()) {
+                        Write-Host "  ℹ️ No matching '$sectionName' section in previous roundup, skipping narrative enhancement" -ForegroundColor Yellow
+                        $step4Responses += $sectionContent
+                        continue
+                    }
 
                     $step4UserMessage = @"
-PREVIOUS WEEK'S ROUNDUP CONTENT:
-$previousRoundupContent
+PREVIOUS WEEK'S $sectionName SECTION:
+$previousSectionContent
 
 ---
 
@@ -1307,10 +1333,9 @@ $sectionContent
                     Write-Host "🤖 Calling AI model to create ongoing narrative connections for $sectionName..."
                     $sectionResponse = Invoke-AiApiCall `
                         -Token $Token `
-                        -Model $Model `
+                        -Environment $Environment `
                         -SystemMessage $step4SystemMessage `
                         -UserMessage $step4UserMessage `
-                        -Endpoint $Endpoint `
                         -RateLimitPreventionDelay $RateLimitPreventionDelay
 
                     # Check for errors with robust error handling  
@@ -1417,11 +1442,7 @@ $sectionContent
         Write-Host "📝 Step 6: Condensing content as much as possible while preserving narrative quality..."
 
         $step6SystemMessage = @"
-🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
-YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
-DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
-YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
-PROVIDE THE COMPLETE, CONDENSED VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
+🚨 CRITICAL: You MUST return ALL content in full. Never truncate, abbreviate, or use phrases like "continues as previously formatted." Write out every section, topic, and link completely.
 
 🎯 YOUR MISSION: SHORTEN EVERY PARAGRAPH WITHOUT REMOVING ANY PARAGRAPHS
 
@@ -1468,11 +1489,8 @@ For each paragraph you encounter:
 CRITICAL WRITING STYLE GUIDELINES:
 $WritingStyleGuidelines
 
-🚨 RESPONSE COMPLETION REQUIREMENT:
-You must provide the complete condensed version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
-
 RESPONSE FORMAT:
-Return the condensed content with the exact same structure as provided, but with every paragraph rewritten to be shorter and more concise. Process every section completely - no exceptions.
+Return the condensed content with the exact same structure as provided, but with every paragraph rewritten to be shorter and more concise.
 "@
 
         $step6UserMessage = @"
@@ -1484,10 +1502,9 @@ $step5Input
         Write-Host "🤖 Calling AI model to condense the organized content..."
         $step6Response = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $step6SystemMessage `
             -UserMessage $step6UserMessage `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         # Check for errors with robust error handling
@@ -1548,6 +1565,9 @@ CRITICAL: These are what the 4 fields should contain:
   * Highlights the week's most significant developments
   * Sets up the narrative flow
 
+CRITICAL WRITING STYLE GUIDELINES:
+$WritingStyleGuidelines
+
 CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete metadata requested.
 "@
 
@@ -1562,10 +1582,9 @@ Return only JSON with fields: title, tags, description, introduction
         Write-Host "🤖 Calling AI model to generate metadata..."
         $step7Response = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $step7SystemMessage `
             -UserMessage $step7UserMessage `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
         Save-StepBackup -StepName "Step7-Metadata" -Content $step7Response -StartDate $StartDate -EndDate $EndDate
@@ -1588,8 +1607,8 @@ Return only JSON with fields: title, tags, description, introduction
             exit 1
         }
 
-        if (-not $testParse.title -or -not $testParse.description -or -not $testParse.tags) {
-            Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags)" -ForegroundColor Red
+        if (-not $testParse.title -or -not $testParse.description -or -not $testParse.tags -or -not $testParse.introduction) {
+            Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags, introduction)" -ForegroundColor Red
             Write-Host "Response: $step7Response" -ForegroundColor Red
             Write-Error "Step 7 metadata generation failed: missing required fields"
             exit 1
@@ -1670,24 +1689,35 @@ Return only JSON with fields: title, tags, description, introduction
             }
             
             $tableOfContents = $tocLines -join "`n"
+
+            # Extract slug from filename (remove date prefix for URL pattern)
+            $slug = $filename -replace '^\d{4}-\d{2}-\d{2}-', ''
             
-            # Create the final markdown content
+            # Create the final markdown content with all required frontmatter fields
+            # Note: layout and permalink are obsolete - removed by ContentFixer
+            # Required fields: title, author, date, tags, section_names, primary_section, feed_name, external_url
             $finalContent = @"
 ---
-layout: "post"
 title: "$($metadata.title)"
-description: "$($metadata.description)"
-author: "Tech Hub Team"
-excerpt_separator: <!--excerpt_end-->
-viewing_mode: "internal"
+author: "TechHub"
 date: $publishDate
-permalink: "/$filename.html"
-categories: ["AI", "GitHub Copilot", "ML", "Azure", "Coding", "DevOps", "Security"]
 tags: $($metadata.tags | ConvertTo-Json -Compress)
-tags_normalized: []
+section_names:
+- ai
+- github-copilot
+- azure
+- devops
+- security
+- dotnet
+- ml
+primary_section: "github-copilot"
+feed_name: "TechHub"
+external_url: "/all/roundups/$slug"
 ---
 
-$($metadata.introduction)<!--excerpt_end-->
+$($metadata.introduction)
+
+<!--excerpt_end-->
 
 ## This Week's Overview
 
@@ -1733,11 +1763,7 @@ $step6Response
         $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
 
         $rewriteSystemMessage = @"
-🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
-YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
-DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
-YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
-PROVIDE THE COMPLETE, REWRITTEN VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
+🚨 CRITICAL: You MUST return ALL content in full. Never truncate, abbreviate, or use phrases like "continues as previously formatted." Write out every section, topic, and link completely.
 
 🎯 YOUR MISSION: REWRITE EVERY PARAGRAPH AND FRONTMATTER FOR STYLE COMPLIANCE WITHOUT REMOVING ANY CONTENT
 
@@ -1800,9 +1826,6 @@ You are a content editor with ONE SIMPLE JOB: Rewrite every paragraph AND the fr
 - Keep all article links in their original positions
 - Maintain frontmatter structure with only title and description content rewritten
 
-🚨 RESPONSE COMPLETION REQUIREMENT:
-You must provide the complete rewritten version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
-
 CRITICAL WRITING STYLE GUIDELINES TO APPLY:
 $guidelines
 
@@ -1810,7 +1833,6 @@ RESPONSE FORMAT:
 Return the rewritten content with the exact same structure as provided, but with:
 1. Frontmatter title and description rewritten for style compliance
 2. Every paragraph rewritten to comply with the writing style guidelines
-Process every section completely - no exceptions.
 "@
 
         $rewriteUserMessage = @"
@@ -1820,31 +1842,26 @@ $finalContent
 "@
 
         Write-Host "🤖 Calling AI model to rewrite content for writing style compliance..."
-        $finalContent = Invoke-AiApiCall `
+        $step9Response = Invoke-AiApiCall `
             -Token $Token `
-            -Model $Model `
+            -Environment $Environment `
             -SystemMessage $rewriteSystemMessage `
             -UserMessage $rewriteUserMessage `
-            -Endpoint $Endpoint `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
-        # Check for errors with robust error handling
-        $rewriteResult = Test-AiResponseFormat -Response $finalContent -StepName "Step 9 (Content Rewriting)"
+        # Check for errors - abort on failure
+        $rewriteResult = Test-AiResponseFormat -Response $step9Response -StepName "Step 9 (Content Rewriting)"
         if (-not $rewriteResult.IsValid) {
-            Write-Host "⚠️ Warning: Step 9 content rewriting failed: $($rewriteResult.ErrorMessage)" -ForegroundColor Yellow
-            Write-Host "Using original content..." -ForegroundColor Yellow
-            # finalContent already contains the original content, so no change needed
+            Save-StepBackup -StepName "Step9-FAILED" -Content $step9Response -StartDate $StartDate -EndDate $EndDate
+            throw "Step 9 content rewriting failed: $($rewriteResult.ErrorMessage)"
         }
-        else {
-            # Save successful rewrite results
-            Save-StepBackup -StepName "Step9-RewriteResult" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
-            Write-Host "✅ Step 9 complete - Content rewritten for writing style compliance"
-        }
-       
+
+        $finalContent = $step9Response
+        Save-StepBackup -StepName "Step9-RewriteResult" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
+        Write-Host "✅ Step 9 complete - Content rewritten for writing style compliance"
     }
     catch {
-        Write-Host "⚠️ Warning: Error during writing style rewriting: $($_.Exception.Message)" -ForegroundColor Yellow
-        Write-Host "Continuing with file creation using original content..." -ForegroundColor Yellow
+        throw
     }
 
     # Generate the OutputFile (filename already set at script start)

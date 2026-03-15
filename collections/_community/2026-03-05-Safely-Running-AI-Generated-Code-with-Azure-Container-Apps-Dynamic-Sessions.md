@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Safely Running AI-Generated Code with Azure Container Apps Dynamic Sessions"
-description: "This in-depth community post by Jan-Kalis explains how Azure Container Apps Dynamic Sessions enable secure execution of AI-generated and agent-provided code. Covering both architecture patterns and real-world implementation, it showcases how Dynamic Sessions integrate with Model Context Protocol (MCP), the Microsoft Agent Framework, and Azure OpenAI. Key topics include setting up isolated code interpreter and custom container sessions, managing authentication, observability with Application Insights, and end-to-end infrastructure as code using Bicep and AZD."
-author: "Jan-Kalis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/even-simpler-to-safely-execute-ai-generated-code-with-azure/ba-p/4499795"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/even-simpler-to-safely-execute-ai-generated-code-with-azure/ba-p/4499795
+title: Safely Running AI-Generated Code with Azure Container Apps Dynamic Sessions
+author: Jan-Kalis
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-05 21:04:59 +00:00
-permalink: "/2026-03-05-Safely-Running-AI-Generated-Code-with-Azure-Container-Apps-Dynamic-Sessions.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "AI Agents", "Application Insights", "Azure", "Azure Container Apps", "Azure OpenAI", "Bicep", "Code Interpreter", "Coding", "Community", "Custom Containers", "DevOps", "DevOps Automation", "Dynamic Sessions", "IaC", "MCP", "Microsoft Agent Framework", "Node.js", "Observability", "Python", "Shell", "Telemetry"]
-tags_normalized: ["ai", "ai agents", "application insights", "azure", "azure container apps", "azure openai", "bicep", "code interpreter", "coding", "community", "custom containers", "devops", "devops automation", "dynamic sessions", "iac", "mcp", "microsoft agent framework", "nodedotjs", "observability", "python", "shell", "telemetry"]
+tags:
+- AI
+- AI Agents
+- Application Insights
+- Azure
+- Azure Container Apps
+- Azure OpenAI
+- Bicep
+- Code Interpreter
+- Community
+- Custom Containers
+- DevOps
+- DevOps Automation
+- Dynamic Sessions
+- IaC
+- MCP
+- Microsoft Agent Framework
+- Node.js
+- Observability
+- Python
+- Shell
+- Telemetry
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
 ---
-
 Jan-Kalis details how Azure Container Apps Dynamic Sessions can securely execute AI-generated and agent-run code using isolated sandboxes, with MCP integration, code interpreters, and custom containers. This practical guide illustrates setup, security, and deployment best practices.<!--excerpt_end-->
 
 # Safely Running AI-Generated Code with Azure Container Apps Dynamic Sessions

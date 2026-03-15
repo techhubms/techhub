@@ -1,0 +1,38 @@
+/* ============================================================================
+   ResponsiveImage Component - Picture element with format fallbacks
+   ============================================================================ */
+
+/* Picture element acting as background container - fills parent */
+picture.background-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 0;
+}
+
+/* Hide source elements - they're metadata only, shouldn't render */
+picture.background-image-container source {
+    display: none;
+}
+
+/* For images used as backgrounds - center and cover the container */
+picture.background-image-container img.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    /* Let browser handle progressive loading naturally - no forced dimensions */
+}
+
+/* For regular responsive images */
+picture img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

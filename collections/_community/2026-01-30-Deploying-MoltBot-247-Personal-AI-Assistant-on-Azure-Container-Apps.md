@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Deploying MoltBot: 24/7 Personal AI Assistant on Azure Container Apps"
-description: "This guide by dbandaru presents a detailed walkthrough for deploying MoltBot, an open-source AI-powered assistant, to Azure Container Apps. It covers setup, security best practices, DevOps automation with Azure CLI and Developer CLI, and the operational benefits of running a persistent AI bot connected to modern messaging platforms, all with secure and scalable Azure features."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-moltbot-to-azure-container-apps-your-24-7-ai-assistant-in/ba-p/4490611"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deploy-moltbot-to-azure-container-apps-your-24-7-ai-assistant-in/ba-p/4490611
+title: 'Deploying MoltBot: 24/7 Personal AI Assistant on Azure Container Apps'
+author: dbandaru
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-01-30 00:06:37 +00:00
-permalink: "/2026-01-30-Deploying-MoltBot-247-Personal-AI-Assistant-on-Azure-Container-Apps.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Assistant", "API Integration", "Azure", "Azure CLI", "Azure Container Apps", "Azure Developer CLI", "Azure Log Analytics", "Community", "Container Security", "Deployment Automation", "DevOps", "Discord Bot", "Managed Identity", "MoltBot", "Node.js", "OpenRouter", "Persistent Memory", "RBAC", "Secrets Management", "TypeScript", "Virtual Network"]
-tags_normalized: ["ai", "ai assistant", "api integration", "azure", "azure cli", "azure container apps", "azure developer cli", "azure log analytics", "community", "container security", "deployment automation", "devops", "discord bot", "managed identity", "moltbot", "nodedotjs", "openrouter", "persistent memory", "rbac", "secrets management", "typescript", "virtual network"]
+tags:
+- AI
+- AI Assistant
+- API Integration
+- Azure
+- Azure CLI
+- Azure Container Apps
+- Azure Developer CLI
+- Azure Log Analytics
+- Community
+- Container Security
+- Deployment Automation
+- DevOps
+- Discord Bot
+- Managed Identity
+- MoltBot
+- Node.js
+- OpenRouter
+- Persistent Memory
+- RBAC
+- Secrets Management
+- TypeScript
+- Virtual Network
+section_names:
+- ai
+- azure
+- devops
 ---
-
 dbandaru provides a comprehensive tutorial on deploying the open-source AI assistant MoltBot to Azure Container Apps, highlighting security, automation with DevOps tools, and multi-platform integrations for persistent, scalable AI workflows.<!--excerpt_end-->
 
 # Deploying MoltBot: 24/7 Personal AI Assistant on Azure Container Apps

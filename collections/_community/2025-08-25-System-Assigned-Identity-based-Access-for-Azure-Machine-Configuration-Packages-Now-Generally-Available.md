@@ -1,23 +1,38 @@
----
-layout: "post"
-title: "System-Assigned Identity-based Access for Azure Machine Configuration Packages Now Generally Available"
-description: "This article introduces the general availability of System Assigned Identity-based access for Azure Machine Configuration packages. It explains how to secure private access to configuration packages in Azure Storage without using SAS tokens, outlines configuration steps for both Azure and Arc-enabled machines, and highlights best practices for secure and compliant server management at scale."
-author: "mutemwamasheke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/system-assigned-identity-based-access-for-machine-configuration/ba-p/4446603
+title: System-Assigned Identity-based Access for Azure Machine Configuration Packages Now Generally Available
+author: mutemwamasheke
+feed_name: Microsoft Tech Community
 date: 2025-08-25 14:30:00 +00:00
-permalink: "/2025-08-25-System-Assigned-Identity-based-Access-for-Azure-Machine-Configuration-Packages-Now-Generally-Available.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automation", "Azure", "Azure Arc", "Azure Machine Configuration", "Azure Policy", "Azure Storage", "Blob Storage", "Community", "Compliance", "DevOps", "Guest Configuration", "Policy Enforcement", "PowerShell", "Role Based Access Control", "Security", "Server Management", "System Assigned Identity", "User Assigned Identity", "Virtual Machines"]
-tags_normalized: ["automation", "azure", "azure arc", "azure machine configuration", "azure policy", "azure storage", "blob storage", "community", "compliance", "devops", "guest configuration", "policy enforcement", "powershell", "role based access control", "security", "server management", "system assigned identity", "user assigned identity", "virtual machines"]
+tags:
+- Automation
+- Azure Arc
+- Azure Machine Configuration
+- Azure Policy
+- Azure Storage
+- Blob Storage
+- Compliance
+- Guest Configuration
+- Policy Enforcement
+- PowerShell
+- Role Based Access Control
+- Server Management
+- System Assigned Identity
+- User Assigned Identity
+- Virtual Machines
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 mutemwamasheke details the new support for System Assigned Identities to enable secure, private access to configuration packages in Azure Machine Configuration, making it easier to manage and secure VMs and Arc-enabled servers.<!--excerpt_end-->
 
-# System-Assigned Identity-based Access for Azure Machine Configuration Packages – GA on both Azure and Arc!
+# System-Assigned Identity-based Access for Azure Machine Configuration Packages – GA on both Azure and Arc
 
 Azure Machine Configuration now supports System Assigned Identities for secure, private access to configuration packages stored in Azure Storage. This simplifies access management and enhances security for both Azure and Arc-enabled servers, superseding the previous reliance on Shared Access Signature (SAS) Tokens.
 

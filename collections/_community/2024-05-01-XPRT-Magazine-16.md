@@ -1,17 +1,41 @@
----
-layout: "post"
-title: "XPRT Magazine 16"
-description: "A forward-looking edition focused on AI, security, cloud innovation, Blazor, prompting, sustainable engineering, and more. Features hands-on guides, real-world stories, and technical deep-dives for modern software professionals."
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
+﻿---
+title: XPRT Magazine 16
 date: 2024-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2024-05-01-XPRT-Magazine-16.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["Agents", "AI", "Art", "Azure", "Blazor", "Carbon Measurement", "Coding", "Community", "Container Apps", "DDoS", "DevOps", "EF", "Environmental Impact", "GitHub Copilot", "LLM", "Magazines", "OAuth", "OpenID Connect", "PKCE", "Prompt Engineering", "Security", "SQL Merge"]
-tags_normalized: ["agents", "ai", "art", "azure", "blazor", "carbon measurement", "coding", "community", "container apps", "ddos", "devops", "ef", "environmental impact", "github copilot", "llm", "magazines", "oauth", "openid connect", "pkce", "prompt engineering", "security", "sql merge"]
+author: Xebia
+external_url: https://xprt.xebia.com/magazine-16
+tags:
+- Agents
+- Art
+- Blazor
+- Carbon Measurement
+- Container Apps
+- DDoS
+- EF
+- Environmental Impact
+- LLM
+- Magazines
+- OAuth
+- OpenID Connect
+- PKCE
+- Prompt Engineering
+- SQL Merge
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 Xpirit Magazine 16 explores the rapid evolution of AI, security, and cloud innovation. This issue features practical guides on prompt engineering, Blazor, OAuth PKCE, sustainable software, DDoS protection, Copilot adoption, and more—offering actionable insights for developers and technology leaders.
 <!--excerpt_end-->
 

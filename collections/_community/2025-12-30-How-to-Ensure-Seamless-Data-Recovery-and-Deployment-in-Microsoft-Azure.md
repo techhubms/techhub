@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How to Ensure Seamless Data Recovery and Deployment in Microsoft Azure"
-description: "This post explores practical strategies to overcome Azure Cosmos DB backup and restore limitations using Azure Databricks. It covers the challenges of current backup systems, proposes an automated workflow with Databricks for efficient backup and restoration, explains the benefits for development and deployment, and provides actionable resources for getting started."
-author: "ravimodi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-ensure-seamless-data-recovery-and-deployment-in-microsoft/ba-p/4478395"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/how-to-ensure-seamless-data-recovery-and-deployment-in-microsoft/ba-p/4478395
+title: How to Ensure Seamless Data Recovery and Deployment in Microsoft Azure
+author: ravimodi
+feed_name: Microsoft Tech Community
 date: 2025-12-30 08:00:00 +00:00
-permalink: "/2025-12-30-How-to-Ensure-Seamless-Data-Recovery-and-Deployment-in-Microsoft-Azure.html"
-categories: ["Azure", "DevOps", "ML"]
-tags: ["Apache Spark", "Azure", "Azure Cosmos DB", "Azure Databricks", "Backup And Restore", "Blob Storage", "CI/CD", "Cloud Databases", "Community", "Continuous Delivery", "Data Lake Storage", "Data Protection", "Data Recovery", "Database Management", "Deployment Automation", "DevOps", "ML", "Production Rollback", "Restoration Workflow"]
-tags_normalized: ["apache spark", "azure", "azure cosmos db", "azure databricks", "backup and restore", "blob storage", "cislashcd", "cloud databases", "community", "continuous delivery", "data lake storage", "data protection", "data recovery", "database management", "deployment automation", "devops", "ml", "production rollback", "restoration workflow"]
+tags:
+- Apache Spark
+- Azure Cosmos DB
+- Azure Databricks
+- Backup And Restore
+- Blob Storage
+- CI/CD
+- Cloud Databases
+- Continuous Delivery
+- Data Lake Storage
+- Data Protection
+- Data Recovery
+- Database Management
+- Deployment Automation
+- Production Rollback
+- Restoration Workflow
+- Azure
+- DevOps
+- ML
+- Community
+section_names:
+- azure
+- devops
+- ml
+primary_section: ml
 ---
-
 ravimodi demonstrates how teams can automate Azure Cosmos DB backups and enable instant data restoration before deployments using Azure Databricks, significantly improving agility and reducing downtime.<!--excerpt_end-->
 
 # How to Ensure Seamless Data Recovery and Deployment in Microsoft Azure

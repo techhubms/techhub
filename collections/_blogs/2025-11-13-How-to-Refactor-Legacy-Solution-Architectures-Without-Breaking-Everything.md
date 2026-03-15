@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How to Refactor Legacy Solution Architectures Without Breaking Everything"
-description: "This guide by Dellenny outlines practical strategies for refactoring and modernizing legacy software architectures. It focuses on understanding current systems, setting clear goals, incrementally introducing modern practices (such as modularization and CI/CD), and managing risk with thorough testing and stakeholder alignment. Technical patterns like the Strangler Fig and effective monitoring approaches are explored, offering insights for minimizing disruption and ensuring business continuity while modernizing legacy architectures."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/how-to-refactor-legacy-solution-architectures-without-breaking-everything/
+title: How to Refactor Legacy Solution Architectures Without Breaking Everything
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-11-13 09:44:47 +00:00
-permalink: "/2025-11-13-How-to-Refactor-Legacy-Solution-Architectures-Without-Breaking-Everything.html"
-categories: ["Coding", "DevOps"]
-tags: ["Architecture", "Blogs", "CI/CD", "Codebase Modernization", "Coding", "Deployment Automation", "DevOps", "DevOps Practices", "Incremental Refactoring", "Legacy Systems", "Microservices", "Modular Monoliths", "Refactoring", "Regression Testing", "Solution Architecture", "Stakeholder Management", "Strangler Fig Pattern", "Testing Strategies"]
-tags_normalized: ["architecture", "blogs", "cislashcd", "codebase modernization", "coding", "deployment automation", "devops", "devops practices", "incremental refactoring", "legacy systems", "microservices", "modular monoliths", "refactoring", "regression testing", "solution architecture", "stakeholder management", "strangler fig pattern", "testing strategies"]
+tags:
+- Architecture
+- CI/CD
+- Codebase Modernization
+- Deployment Automation
+- DevOps Practices
+- Incremental Refactoring
+- Legacy Systems
+- Microservices
+- Modular Monoliths
+- Refactoring
+- Regression Testing
+- Solution Architecture
+- Stakeholder Management
+- Strangler Fig Pattern
+- Testing Strategies
+- DevOps
+- Blogs
+- .NET
+section_names:
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 Dellenny shares actionable advice on refactoring legacy solution architectures without causing system failures. The article offers developers practical steps to modernize, test, and evolve existing codebases with minimal disruption.<!--excerpt_end-->
 
 # How to Refactor Legacy Solution Architectures Without Breaking Everything

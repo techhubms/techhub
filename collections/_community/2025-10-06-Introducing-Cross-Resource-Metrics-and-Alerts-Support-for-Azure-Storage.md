@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Introducing Cross Resource Metrics and Alerts Support for Azure Storage"
-description: "This post introduces the new Cross Resource Metrics and Alerts capability for Azure Storage, enabling users to monitor and visualize aggregated metrics and configure alerting across multiple storage accounts in a single unified chart. The feature supports all Azure Storage services within a subscription and region, streamlining operations and fleet-wide monitoring. The guide provides step-by-step instructions for setting up centralized metrics and alerting using Azure Monitor, targeting operations and development teams managing large-scale cloud storage environments."
-author: "dafalkne"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/introducing-cross-resource-metrics-and-alerts-support-for-azure/ba-p/4459193
+title: Introducing Cross Resource Metrics and Alerts Support for Azure Storage
+author: dafalkne
+feed_name: Microsoft Tech Community
 date: 2025-10-06 12:38:16 +00:00
-permalink: "/2025-10-06-Introducing-Cross-Resource-Metrics-and-Alerts-Support-for-Azure-Storage.html"
-categories: ["Azure", "DevOps"]
-tags: ["Action Groups", "Azure", "Azure Monitor", "Azure Storage", "Blob Storage", "Cloud Operations", "Community", "Cross Resource Metrics", "Dashboard", "DevOps", "File Storage", "Fleet Management", "Operational Monitoring", "Queue Storage", "ResourceId", "Storage Metrics", "Table Storage"]
-tags_normalized: ["action groups", "azure", "azure monitor", "azure storage", "blob storage", "cloud operations", "community", "cross resource metrics", "dashboard", "devops", "file storage", "fleet management", "operational monitoring", "queue storage", "resourceid", "storage metrics", "table storage"]
+tags:
+- Action Groups
+- Azure Monitor
+- Azure Storage
+- Blob Storage
+- Cloud Operations
+- Cross Resource Metrics
+- Dashboard
+- File Storage
+- Fleet Management
+- Operational Monitoring
+- Queue Storage
+- ResourceId
+- Storage Metrics
+- Table Storage
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 dafalkne announces a new Azure Storage feature: Cross Resource Metrics and Alerts. This post guides users through aggregating metrics and configuring alerts across multiple storage accounts for more effective monitoring and fleet management.<!--excerpt_end-->
 
 # Introducing Cross Resource Metrics and Alerts Support for Azure Storage

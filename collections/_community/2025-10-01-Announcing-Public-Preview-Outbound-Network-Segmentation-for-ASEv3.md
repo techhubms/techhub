@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing Public Preview: Outbound Network Segmentation for ASEv3"
-description: "This post introduces the public preview of Outbound Network Segmentation for App Service Environment v3 (ASEv3), a new Azure feature that lets developers and IT teams control and segment outbound app traffic at a granular level. The feature empowers fine-tuned egress management for enhanced security, compliance, and networking precision through subnet assignment, NSGs, NAT Gateway integration, and custom firewall routing."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-public-preview-asev3-outbound-network-segmentation/ba-p/4458398
+title: 'Announcing Public Preview: Outbound Network Segmentation for ASEv3'
+author: jordanselig
+feed_name: Microsoft Tech Community
 date: 2025-10-01 16:12:36 +00:00
-permalink: "/2025-10-01-Announcing-Public-Preview-Outbound-Network-Segmentation-for-ASEv3.html"
-categories: ["Azure", "Security"]
-tags: ["App Service Environment V3", "ARM Template", "ASEv3", "Azure", "Azure App Service", "Azure CLI", "Azure Networking", "Bicep Template", "Community", "Compliance", "Egress Control", "Firewall", "NAT Gateway", "Network Security Groups", "Outbound Network Segmentation", "Security", "Subnet", "Virtual Network Integration"]
-tags_normalized: ["app service environment v3", "arm template", "asev3", "azure", "azure app service", "azure cli", "azure networking", "bicep template", "community", "compliance", "egress control", "firewall", "nat gateway", "network security groups", "outbound network segmentation", "security", "subnet", "virtual network integration"]
+tags:
+- App Service Environment V3
+- ARM Template
+- ASEv3
+- Azure App Service
+- Azure CLI
+- Azure Networking
+- Bicep Template
+- Compliance
+- Egress Control
+- Firewall
+- NAT Gateway
+- Network Security Groups
+- Outbound Network Segmentation
+- Subnet
+- Virtual Network Integration
+- Azure
+- Security
+- Community
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 jordanselig explains how Outbound Network Segmentation for App Service Environment v3 (ASEv3) enables Azure app developers and admins to manage outbound traffic routing, providing improved security and compliance controls.<!--excerpt_end-->
 
 # Announcing Public Preview: Outbound Network Segmentation for ASEv3

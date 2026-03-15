@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "ACP Protocol Support Now Available in GitHub Copilot CLI"
-description: "GitHub Copilot CLI introduces support for the Agent Client Protocol (ACP), enabling standardized integration with third-party tools, IDEs, and automation pipelines. This update empowers developers to orchestrate Copilot’s agentic capabilities across custom workflows, editors, and automated systems using an extensible industry protocol."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-28-acp-support-in-copilot-cli-is-now-in-public-preview
+title: ACP Protocol Support Now Available in GitHub Copilot CLI
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-01-28 15:00:30 +00:00
-permalink: "/2026-01-28-ACP-Protocol-Support-Now-Available-in-GitHub-Copilot-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["ACP", "Agent Client Protocol", "AI", "AI Agent Integration", "API Protocols", "CI/CD Automation", "Command Line", "Copilot", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "IDE Integration", "Improvement", "News", "Permission Handling", "Session Management"]
-tags_normalized: ["acp", "agent client protocol", "ai", "ai agent integration", "api protocols", "cislashcd automation", "command line", "copilot", "developer tools", "github copilot", "github copilot cli", "ide integration", "improvement", "news", "permission handling", "session management"]
+tags:
+- ACP
+- Agent Client Protocol
+- AI
+- AI Agent Integration
+- API Protocols
+- CI/CD Automation
+- Command Line
+- Copilot
+- Developer Tools
+- GitHub Copilot
+- GitHub Copilot CLI
+- IDE Integration
+- Improvement
+- News
+- Permission Handling
+- Session Management
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares details about the public preview of ACP support in GitHub Copilot CLI, showcasing new possibilities for integrating Copilot’s AI agent across development tools and automation workflows.<!--excerpt_end-->
 
 # ACP Protocol Support Now Available in GitHub Copilot CLI

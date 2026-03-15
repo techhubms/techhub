@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI"
-description: "This session showcases a developer-built tool that automates conversion of CI test failures into Visual Studio playlist files, enabling local debugging of only failed tests. The talk demonstrates how AI tools like GitHub Copilot and Microsoft Copilot accelerated development, clarified code, and drove productivity gains across .NET projects."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6RNTltZuaFs"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=6RNTltZuaFs
+title: Transforming CI Failures into Focused Debugging with Visual Studio Playlists and AI
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-14 19:21:14 +00:00
-permalink: "/2025-11-14-Transforming-CI-Failures-into-Focused-Debugging-with-Visual-Studio-Playlists-and-AI.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", ".NET 10", ".NET MAUI 10", "AI", "AI Tools", "ASP.NET Core 10", "Automation", "C# 14", "CI/CD", "Coding", "Continuous Integration", "Debugging", "Developer Productivity", "DevOps", "F# 10", "GitHub Copilot", "Microsoft Copilot", "Pipeline Integration", "Playlists", "Test Automation", "Test Results", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet maui 10", "ai", "ai tools", "aspdotnet core 10", "automation", "csharp 14", "cislashcd", "coding", "continuous integration", "debugging", "developer productivity", "devops", "fsharp 10", "github copilot", "microsoft copilot", "pipeline integration", "playlists", "test automation", "test results", "videos", "vs"]
+tags:
+- .NET
+- .NET 10
+- .NET MAUI 10
+- AI Tools
+- ASP.NET Core 10
+- Automation
+- C# 14
+- CI/CD
+- Continuous Integration
+- Debugging
+- Developer Productivity
+- F# 10
+- Microsoft Copilot
+- Pipeline Integration
+- Playlists
+- Test Automation
+- Test Results
+- VS
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 dotnet presents a session on streamlining CI debugging by generating Visual Studio playlists from failed test results, highlighting the role of AI tools like GitHub Copilot in enhancing developer workflows.<!--excerpt_end-->
 
 {% youtube 6RNTltZuaFs %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Automating Developer Tasks with GitHub Copilot Agent Mode and MCP Servers in VS Code"
-description: "This video, featuring Liam Hampton, demonstrates the use of GitHub Copilot Agent mode along with MCP servers in Visual Studio Code to automate daily developer workflows without writing code. The session showcases how MCP servers retrieve open pull requests, assigned issues, and daily coding challenges, highlighting integration between productivity automation and developer tools. Viewers also gain insights into MCP Dev Days and further resources for developer enablement."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VdYR_Qf-j38"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=VdYR_Qf-j38
+title: Automating Developer Tasks with GitHub Copilot Agent Mode and MCP Servers in VS Code
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-07-18 20:27:10 +00:00
-permalink: "/2025-07-18-Automating-Developer-Tasks-with-GitHub-Copilot-Agent-Mode-and-MCP-Servers-in-VS-Code.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Copilot", "Copilot Agent", "Developer", "Developer Automation", "Developer Tools", "DevOps", "GitHub Copilot", "Issue Assignment", "LeetCode Integration", "Mcp", "MCP Server", "Mcpserver", "Productivity", "Pull Requests", "Videos", "VS Code"]
-tags_normalized: ["agent mode", "ai", "copilot", "copilot agent", "developer", "developer automation", "developer tools", "devops", "github copilot", "issue assignment", "leetcode integration", "mcp", "mcp server", "mcpserver", "productivity", "pull requests", "videos", "vs code"]
+tags:
+- Agent Mode
+- Copilot
+- Copilot Agent
+- Developer
+- Developer Automation
+- Developer Tools
+- Issue Assignment
+- LeetCode Integration
+- MCP
+- MCP Apps
+- MCP Server
+- Productivity
+- Pull Requests
+- VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Liam Hampton, in this Visual Studio Code feature session, demonstrates how developers can automate daily tasks using GitHub Copilot Agent mode in combination with MCP servers—streamlining pull requests, issue tracking, and coding challenges, all without manual coding.<!--excerpt_end-->
 
 {% youtube VdYR_Qf-j38 %}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Visual Studio Code October 2025 Release (v1.106): New AI Agents, Copilot Chat, Terminal IntelliSense & More"
-description: "This article presents the key updates and features introduced in Visual Studio Code v1.106 (October 2025), with a strong focus on enhancements to AI integration, GitHub Copilot Chat, coding agents, editor experience, tool approval, custom agent support, CLI enhancements, and development workflows. Relevant improvements include refined security controls, open source AI features, modernized programming tools, and broad extension authoring options. Developers working with Microsoft tools will find actionable insights regarding code productivity, AI-powered chat, collaboration tools, and DevOps workflows."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_106"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_106
+title: 'Visual Studio Code October 2025 Release (v1.106): New AI Agents, Copilot Chat, Terminal IntelliSense & More'
+author: Visual Studio Code Team
+feed_name: Visual Studio Code Releases
 date: 2025-11-12 17:00:00 +00:00
-permalink: "/2025-11-12-Visual-Studio-Code-October-2025-Release-v1106-New-AI-Agents-Copilot-Chat-Terminal-IntelliSense-and-More.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "AI", "AI Agents", "Code Editing", "Coding", "Copilot Chat", "Copilot CLI", "Custom Agents", "DevOps", "Editor Experience", "Extension Authoring", "GitHub Copilot", "News", "Open Source", "Pylance", "Python", "Source Control", "Terminal IntelliSense", "VS Code", "VS Code 1.106"]
-tags_normalized: ["agent hq", "ai", "ai agents", "code editing", "coding", "copilot chat", "copilot cli", "custom agents", "devops", "editor experience", "extension authoring", "github copilot", "news", "open source", "pylance", "python", "source control", "terminal intellisense", "vs code", "vs code 1dot106"]
+tags:
+- Agent HQ
+- AI Agents
+- Code Editing
+- Copilot Chat
+- Copilot CLI
+- Custom Agents
+- Editor Experience
+- Extension Authoring
+- Open Source
+- Pylance
+- Python
+- Source Control
+- Terminal IntelliSense
+- VS Code
+- VS Code 1.106
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 The Visual Studio Code Team details the October 2025 (v1.106) release, featuring major upgrades to Copilot Chat, the AI agent platform, coding tools, terminal experiences, and extensibility for developers.<!--excerpt_end-->
 
 # Visual Studio Code October 2025 Release (v1.106)

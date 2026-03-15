@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GDC 2026: Windows 11 Platform and Tool Updates for PC Game Developers"
-description: "This news update from Microsoft reveals significant announcements for Windows PC game development unveiled at GDC 2026. Highlights include new DirectX and Windows ML tooling, expanded Advanced Shader Delivery, DirectStorage enhancements, Xbox mode rollout across Windows 11 devices, and advances in ML-powered graphics pipelines. The updates aim to improve developer workflows and enable richer gaming experiences on Windows."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/windowsdeveloper/2026/03/11/gdc-2026-announcing-new-tools-and-platform-updates-for-windows-pc-game-developers/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.windows.com/windowsdeveloper/2026/03/11/gdc-2026-announcing-new-tools-and-platform-updates-for-windows-pc-game-developers/
+title: 'GDC 2026: Windows 11 Platform and Tool Updates for PC Game Developers'
+author: stclarke
+primary_section: ml
+feed_name: Microsoft News
 date: 2026-03-11 18:11:08 +00:00
-permalink: "/2026-03-11-GDC-2026-Windows-11-Platform-and-Tool-Updates-for-PC-Game-Developers.html"
-categories: ["Coding", "ML"]
-tags: ["Advanced Shader Delivery", "Coding", "Company News", "Developer Tools", "DirectStorage", "DirectX", "Game Asset Conditioning", "Game Development", "Gaming", "GDC", "Graphics Debugging", "HLSL", "Machine Learning", "ML", "News", "PIX", "Shader Programming", "Windows 11", "Windows ML", "Xbox Mode"]
-tags_normalized: ["advanced shader delivery", "coding", "company news", "developer tools", "directstorage", "directx", "game asset conditioning", "game development", "gaming", "gdc", "graphics debugging", "hlsl", "machine learning", "ml", "news", "pix", "shader programming", "windows 11", "windows ml", "xbox mode"]
+tags:
+- Advanced Shader Delivery
+- Company News
+- Developer Tools
+- DirectStorage
+- DirectX
+- Game Asset Conditioning
+- Game Development
+- Gaming
+- GDC
+- Graphics Debugging
+- HLSL
+- ML
+- News
+- PIX
+- Shader Programming
+- Windows 11
+- Windows ML
+- Xbox Mode
+- .NET
+section_names:
+- dotnet
+- ml
 ---
-
 stclarke summarizes Microsoft's GDC 2026 announcements, highlighting major updates for Windows PC game development including new DirectX/PIX features, a broader Xbox mode, and advancements in ML-driven graphics pipelines.<!--excerpt_end-->
 
 # GDC 2026: Windows 11 Platform and Tool Updates for PC Game Developers

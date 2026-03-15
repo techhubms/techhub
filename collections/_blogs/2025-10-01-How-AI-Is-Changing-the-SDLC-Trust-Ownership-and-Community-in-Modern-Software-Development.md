@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How AI Is Changing the SDLC: Trust, Ownership, and Community in Modern Software Development"
-description: "This discussion between Matty Stratton, Hannah Foxwell, and Robert Werner delves into the evolving impact of AI on the software development lifecycle (SDLC). It explores the challenges of trust, code ownership, rapid tool evolution, and the need for community and good engineering practices in safely adopting AI-powered development within DevOps and platform engineering contexts."
-author: "Arrested DevOps"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.arresteddevops.com/ai-sdlc/"
-viewing_mode: "external"
-feed_name: "Arrested DevOps"
-feed_url: "https://www.arresteddevops.com/episode/index.xml"
+﻿---
+external_url: https://www.arresteddevops.com/ai-sdlc/
+title: 'How AI Is Changing the SDLC: Trust, Ownership, and Community in Modern Software Development'
+author: Arrested DevOps
+feed_name: Arrested DevOps
 date: 2025-10-01 13:36:13 +00:00
-permalink: "/2025-10-01-How-AI-Is-Changing-the-SDLC-Trust-Ownership-and-Community-in-Modern-Software-Development.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Agents", "AI Fluency", "AI Integration", "AI Validation", "Best Practices", "Blogs", "Blue Green Deployments", "Code Ownership", "Community Learning", "Continuous Delivery", "DevOps", "DevOps Transformation", "Guardrails", "LLM", "Non Deterministic Systems", "Platform Engineering", "Software Development Lifecycle"]
-tags_normalized: ["ai", "ai agents", "ai fluency", "ai integration", "ai validation", "best practices", "blogs", "blue green deployments", "code ownership", "community learning", "continuous delivery", "devops", "devops transformation", "guardrails", "llm", "non deterministic systems", "platform engineering", "software development lifecycle"]
+tags:
+- AI Agents
+- AI Fluency
+- AI Integration
+- AI Validation
+- Best Practices
+- Blue Green Deployments
+- Code Ownership
+- Community Learning
+- Continuous Delivery
+- DevOps Transformation
+- Guardrails
+- LLM
+- Non Deterministic Systems
+- Platform Engineering
+- Software Development Lifecycle
+- AI
+- DevOps
+- Blogs
+section_names:
+- ai
+- devops
+primary_section: ai
 ---
-
 Matty Stratton hosts a discussion with Hannah Foxwell and Robert Werner on how AI is reshaping the software development lifecycle. They examine trust, code ownership, and the importance of community and best practices in adopting AI for DevOps.<!--excerpt_end-->
 
 # How AI Is Changing the SDLC: Trust, Ownership, and Community

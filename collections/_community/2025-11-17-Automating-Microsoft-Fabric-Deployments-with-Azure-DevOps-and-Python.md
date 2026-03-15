@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Automating Microsoft Fabric Deployments with Azure DevOps and Python"
-description: "This guide by Paulams732 presents a robust CI/CD approach for deploying Microsoft Fabric artifacts such as Data Pipelines, Notebooks, Lakehouses, Semantic Models, and Reports. Leveraging Azure DevOps pipelines, Python scripting, and structured configuration management, the solution streamlines multi-environment deployments with best practices for security, reliability, and troubleshooting. Practical examples and configuration samples enable technical teams to adapt the workflow for their own complex Fabric projects."
-author: "Paulams732"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-code-to-cloud-python-driven-microsoft-fabric-deployments/ba-p/4470447"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/from-code-to-cloud-python-driven-microsoft-fabric-deployments/ba-p/4470447
+title: Automating Microsoft Fabric Deployments with Azure DevOps and Python
+author: Paulams732
+feed_name: Microsoft Tech Community
 date: 2025-11-17 06:10:49 +00:00
-permalink: "/2025-11-17-Automating-Microsoft-Fabric-Deployments-with-Azure-DevOps-and-Python.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Authentication", "Azure", "Azure DevOps", "CI/CD Pipeline", "Coding", "Community", "Configuration Files", "Data Pipeline", "DevOps", "Environment Strategy", "Fabric Cicd", "Lakehouse", "Microsoft Fabric", "ML", "Notebook Deployment", "Parameter Management", "Pipeline Orchestration", "Python", "Report Automation", "Semantic Model", "Service Principal", "Workspace Configuration"]
-tags_normalized: ["authentication", "azure", "azure devops", "cislashcd pipeline", "coding", "community", "configuration files", "data pipeline", "devops", "environment strategy", "fabric cicd", "lakehouse", "microsoft fabric", "ml", "notebook deployment", "parameter management", "pipeline orchestration", "python", "report automation", "semantic model", "service principal", "workspace configuration"]
+tags:
+- Authentication
+- Azure DevOps
+- CI/CD Pipeline
+- Configuration Files
+- Data Pipeline
+- Environment Strategy
+- Fabric Cicd
+- Lakehouse
+- Microsoft Fabric
+- Notebook Deployment
+- Parameter Management
+- Pipeline Orchestration
+- Python
+- Report Automation
+- Semantic Model
+- Service Principal
+- Workspace Configuration
+- Azure
+- DevOps
+- ML
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- ml
+primary_section: ml
 ---
-
 Paulams732 outlines a production-ready solution for Microsoft Fabric artifact deployment with Azure DevOps and Python, covering architecture, automation, and troubleshooting.<!--excerpt_end-->
 
 # Automating Microsoft Fabric Deployments with Azure DevOps and Python

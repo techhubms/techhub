@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "How To Pick The Right Constructor When Using ActivatorUtilities In .NET"
-description: "This post by Khalid Abuhakmeh explores how .NET developers can leverage ActivatorUtilities and the ActivatorUtilitiesConstructor attribute for precise control over constructor selection in dependency injection scenarios, complete with code samples and practical explanations."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/how-to-pick-the-right-constructor-when-using-activatorutilities-in-dotnet"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+external_url: https://khalidabuhakmeh.com/how-to-pick-the-right-constructor-when-using-activatorutilities-in-dotnet
+title: How To Pick The Right Constructor When Using ActivatorUtilities In .NET
+author: Khalid Abuhakmeh
+feed_name: Khalid Abuhakmeh's Blog
 date: 2024-08-13 00:00:00 +00:00
-permalink: "/2024-08-13-How-To-Pick-The-Right-Constructor-When-Using-ActivatorUtilities-In-NET.html"
-categories: ["Coding"]
-tags: [".NET", "ActivatorUtilities", "ActivatorUtilitiesConstructorAttribute", "Blogs", "C#", "Coding", "Constructor Selection", "Dependency Injection", "Microsoft.Extensions.DependencyInjection", "Reflection", "Service Provider", "ServiceCollection"]
-tags_normalized: ["dotnet", "activatorutilities", "activatorutilitiesconstructorattribute", "blogs", "csharp", "coding", "constructor selection", "dependency injection", "microsoftdotextensionsdotdependencyinjection", "reflection", "service provider", "servicecollection"]
+tags:
+- .NET
+- ActivatorUtilities
+- ActivatorUtilitiesConstructorAttribute
+- C#
+- Constructor Selection
+- Dependency Injection
+- Microsoft.Extensions.DependencyInjection
+- Reflection
+- Service Provider
+- ServiceCollection
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this detailed guide, Khalid Abuhakmeh demonstrates how to select the appropriate constructor when using ActivatorUtilities for dependency injection in .NET. The author shares practical code examples and explains the impact of using attributes for constructor selection.<!--excerpt_end-->
 
 ![How To Pick The Right Constructor When Using ActivatorUtilities In .NET](https://res.cloudinary.com/abuhakmeh/image/fetch/c_limit,f_auto,q_auto,w_800/https://khalidabuhakmeh.com/assets/images/posts/misc/activatorutilities-dotnet-pick-constructor-attributes.jpg)

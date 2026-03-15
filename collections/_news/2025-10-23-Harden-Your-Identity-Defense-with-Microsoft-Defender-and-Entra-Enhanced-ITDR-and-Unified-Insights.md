@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Harden Your Identity Defense with Microsoft Defender and Entra: Enhanced ITDR and Unified Insights"
-description: "This article explains the latest advancements in Microsoft’s Identity Threat Detection and Response (ITDR) landscape, featuring the new Microsoft Defender for Identity unified sensor, enriched identity signals, integrations with Microsoft Entra ID, and expanded support for multi-cloud and third-party identities. IT professionals and SOC teams will learn about modern identity security practices, enriched visibility, privileged access management, and how to operationalize contextual insights across hybrid environments."
-author: "Sharon Ben Yosef"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/23/harden-your-identity-defense-with-improved-protection-deeper-correlation-and-richer-context/
+title: 'Harden Your Identity Defense with Microsoft Defender and Entra: Enhanced ITDR and Unified Insights'
+author: Sharon Ben Yosef
+feed_name: Microsoft Security Blog
 date: 2025-10-23 16:00:00 +00:00
-permalink: "/2025-10-23-Harden-Your-Identity-Defense-with-Microsoft-Defender-and-Entra-Enhanced-ITDR-and-Unified-Insights.html"
-categories: ["Azure", "Security"]
-tags: ["Active Directory", "Azure", "Cloud Security", "Conditional Access", "Cybersecurity", "Extended Detection And Response", "Hybrid Environments", "Identity Threat Detection And Response", "ITDR", "Microsoft Defender For Identity", "Microsoft Entra ID", "News", "Privileged Access Management", "Security", "Security Operations", "SOC", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["active directory", "azure", "cloud security", "conditional access", "cybersecurity", "extended detection and response", "hybrid environments", "identity threat detection and response", "itdr", "microsoft defender for identity", "microsoft entra id", "news", "privileged access management", "security", "security operations", "soc", "threat intelligence", "zero trust"]
+tags:
+- Active Directory
+- Cloud Security
+- Conditional Access
+- Cybersecurity
+- Extended Detection And Response
+- Hybrid Environments
+- Identity Threat Detection And Response
+- ITDR
+- Microsoft Defender For Identity
+- Microsoft Entra ID
+- Privileged Access Management
+- Security Operations
+- SOC
+- Threat Intelligence
+- Zero Trust
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Sharon Ben Yosef outlines how Microsoft is strengthening enterprise identity defense with improved ITDR, including the new Defender for Identity unified sensor, enriched insights, and seamless integration with Entra ID for security teams.<!--excerpt_end-->
 
 # Harden Your Identity Defense with Microsoft Defender and Entra

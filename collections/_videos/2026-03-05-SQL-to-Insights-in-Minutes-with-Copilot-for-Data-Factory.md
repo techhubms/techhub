@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "SQL to Insights in Minutes with Copilot for Data Factory"
-description: "This video episode demonstrates how AI and Copilot capabilities in Microsoft Fabric Data Factory accelerate the data integration process with Azure SQL. It explains how users can use natural language to transform SQL data, orchestrate workflows, and automate notifications, minimizing the need for complex SQL scripting. The session includes feature overviews and live demos showing end-to-end integration and insight delivery within Microsoft Fabric Data Factory."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VviZ6ViEhGw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=VviZ6ViEhGw
+title: SQL to Insights in Minutes with Copilot for Data Factory
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-03-05 21:54:58 +00:00
-permalink: "/2026-03-05-SQL-to-Insights-in-Minutes-with-Copilot-for-Data-Factory.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Automation", "AI Integration", "Azure", "Azure SQL", "Cloud Data", "Copilot", "Data Factory", "Data Integration", "Data Orchestration", "LearnSQL", "Microsoft Data Platform", "Microsoft Fabric", "Natural Language", "SQL", "SQL Transformation", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai automation", "ai integration", "azure", "azure sql", "cloud data", "copilot", "data factory", "data integration", "data orchestration", "learnsql", "microsoft data platform", "microsoft fabric", "natural language", "sql", "sql transformation", "videos", "workflow automation"]
+tags:
+- AI
+- AI Automation
+- AI Integration
+- Azure
+- Azure SQL
+- Cloud Data
+- Copilot
+- Data Factory
+- Data Integration
+- Data Orchestration
+- LearnSQL
+- Microsoft Data Platform
+- Microsoft Fabric
+- Natural Language
+- SQL
+- SQL Transformation
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer presents how AI-driven Copilot in Microsoft Fabric Data Factory enables rapid insights from Azure SQL data by simplifying data transformation and automation for SQL users.<!--excerpt_end-->
 
 {% youtube VviZ6ViEhGw %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "JMESPath Query Support in Azure Developer CLI JSON Output"
-description: "This article introduces native JMESPath query support in Azure Developer CLI (azd), enabling developers to filter or transform JSON output—including error messages—directly within their terminal. It details practical benefits, usage examples, version requirements, and provides resources for deeper exploration."
-author: "Scott Addie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azd-jmespath-query-support/
+title: JMESPath Query Support in Azure Developer CLI JSON Output
+author: Scott Addie
+primary_section: dotnet
+feed_name: Microsoft Azure SDK Blog
 date: 2026-02-17 18:19:18 +00:00
-permalink: "/2026-02-17-JMESPath-Query-Support-in-Azure-Developer-CLI-JSON-Output.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation", "Azd", "Azure", "Azure Developer CLI", "Azure Development", "Azure SDK", "Coding", "Command Line Tools", "Config Management", "Developer Productivity", "DevOps", "Error Handling", "JMESPath", "JSON Output", "News", "Script Automation", "Scripting", "Terminal Tools"]
-tags_normalized: ["automation", "azd", "azure", "azure developer cli", "azure development", "azure sdk", "coding", "command line tools", "config management", "developer productivity", "devops", "error handling", "jmespath", "json output", "news", "script automation", "scripting", "terminal tools"]
+tags:
+- Automation
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure Development
+- Azure SDK
+- Command Line Tools
+- Config Management
+- Developer Productivity
+- DevOps
+- Error Handling
+- JMESPath
+- JSON Output
+- News
+- Script Automation
+- Scripting
+- Terminal Tools
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 Scott Addie explains how JMESPath queries are now supported in the Azure Developer CLI’s JSON output, showing developers how to extract and filter data efficiently within their terminal workflows.<!--excerpt_end-->
 
 # JMESPath Query Support in Azure Developer CLI JSON Output

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "The Next Chapter of the Microsoft–OpenAI Partnership"
-description: "This official Microsoft news post outlines the renewed strategic agreement with OpenAI, highlighting refined intellectual property arrangements, Azure API exclusivity, and provisions for joint and independent AGI development. It details financial stakes, research and product rights, cloud agreements, and new potential for collaboration and innovation across both organizations."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/blog/2025/10/28/the-next-chapter-of-the-microsoft-openai-partnership/
+title: The Next Chapter of the Microsoft–OpenAI Partnership
+author: stclarke
+feed_name: Microsoft News
 date: 2025-10-28 15:12:03 +00:00
-permalink: "/2025-10-28-The-Next-Chapter-of-the-MicrosoftOpenAI-Partnership.html"
-categories: ["AI", "Azure"]
-tags: ["AGI", "Agreement", "AI", "AI Partnership", "AI Strategy", "API Exclusivity", "Azure", "Azure API", "Cloud Services", "Company News", "Intellectual Property", "Microsoft", "Model Development", "News", "OpenAI", "Public Benefit Corporation", "Research Collaboration"]
-tags_normalized: ["agi", "agreement", "ai", "ai partnership", "ai strategy", "api exclusivity", "azure", "azure api", "cloud services", "company news", "intellectual property", "microsoft", "model development", "news", "openai", "public benefit corporation", "research collaboration"]
+tags:
+- AGI
+- Agreement
+- AI Partnership
+- AI Strategy
+- API Exclusivity
+- Azure API
+- Cloud Services
+- Company News
+- Intellectual Property
+- Microsoft
+- Model Development
+- OpenAI
+- Public Benefit Corporation
+- Research Collaboration
+- AI
+- Azure
+- News
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 stclarke shares official details of the new Microsoft–OpenAI partnership agreement, focusing on revised intellectual property, Azure API exclusivity, and steps for advancing responsible AI innovation.<!--excerpt_end-->
 
 # The Next Chapter of the Microsoft–OpenAI Partnership

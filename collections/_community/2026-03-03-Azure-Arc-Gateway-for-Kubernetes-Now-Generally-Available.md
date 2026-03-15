@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Azure Arc Gateway for Kubernetes Now Generally Available"
-description: "This announcement introduces the general availability of the Azure Arc Gateway for Arc-enabled Kubernetes. The new gateway simplifies network configuration and onboarding processes by reducing the number of required endpoints, benefiting organizations with strong network controls. Key new features, supported scenarios, operational details, and guidance for getting started are included for prospective users and technical implementers."
-author: "jalenmcg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4498561"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-the-general-availability-of-the-azure-arc-gateway-for/ba-p/4498561
+title: Azure Arc Gateway for Kubernetes Now Generally Available
+author: jalenmcg
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-03 23:12:14 +00:00
-permalink: "/2026-03-03-Azure-Arc-Gateway-for-Kubernetes-Now-Generally-Available.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Arc Enabled Kubernetes", "Arc Gateway", "Arc Proxy", "Azure", "Azure Arc", "Azure CLI", "Azure Monitor", "Azure Policy", "Cloud Networking", "Cluster Management", "Community", "Custom Locations", "DevOps", "Enterprise Security", "Firewall Configuration", "Kubernetes", "Microsoft Defender For Containers", "Onboarding Automation", "PowerShell", "Security"]
-tags_normalized: ["arc enabled kubernetes", "arc gateway", "arc proxy", "azure", "azure arc", "azure cli", "azure monitor", "azure policy", "cloud networking", "cluster management", "community", "custom locations", "devops", "enterprise security", "firewall configuration", "kubernetes", "microsoft defender for containers", "onboarding automation", "powershell", "security"]
+tags:
+- Arc Enabled Kubernetes
+- Arc Gateway
+- Arc Proxy
+- Azure
+- Azure Arc
+- Azure CLI
+- Azure Monitor
+- Azure Policy
+- Cloud Networking
+- Cluster Management
+- Community
+- Custom Locations
+- DevOps
+- Enterprise Security
+- Firewall Configuration
+- Kubernetes
+- Microsoft Defender For Containers
+- Onboarding Automation
+- PowerShell
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 jalenmcg announces the general availability of Azure Arc Gateway for Arc-enabled Kubernetes, detailing its simplified network configuration and improved onboarding processes for enterprise customers.<!--excerpt_end-->
 
 # Azure Arc Gateway for Kubernetes Now Generally Available

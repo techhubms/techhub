@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025"
-description: "This summary highlights the most important technical announcements from Microsoft Ignite 2025, focusing on agentic AI, cloud infrastructure, semantic intelligence, and tools for developers and IT professionals. It covers the release of Claude models in Foundry, IQ semantic knowledge platforms, Azure HorizonDB, Azure Copilot agents, and advanced Azure hardware. Readers will discover actionable insights and links to hands-on workshops supporting technical implementation using Azure, AI, ML, and developer tools."
-author: "Natalie Wossene"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/actioning-agentic-ai-5-ways-to-build-with-news-from-microsoft-ignite-2025/
+title: 'Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025'
+author: Natalie Wossene
+feed_name: The Azure Blog
 date: 2025-12-10 17:00:00 +00:00
-permalink: "/2025-12-10-Agentic-AI-and-Cloud-Innovation-Key-Takeaways-from-Microsoft-Ignite-2025.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: ["Agentic AI", "AI", "AI + Machine Learning", "Azure", "Azure Boost DPU", "Azure Copilot", "Azure HorizonDB", "Claude Models", "Cloud Migration", "Cobalt 200", "Coding", "Data Security", "DevOps", "DevOps Automation", "DiskANN", "Fabric IQ", "Foundry IQ", "GPT", "IaC", "Integrated HSM", "Microsoft Foundry", "Microsoft Ignite", "ML", "News", "NVIDIA Blackwell", "PostgreSQL", "RBAC", "Security", "Semantic Intelligence", "Vector Indexing"]
-tags_normalized: ["agentic ai", "ai", "ai plus machine learning", "azure", "azure boost dpu", "azure copilot", "azure horizondb", "claude models", "cloud migration", "cobalt 200", "coding", "data security", "devops", "devops automation", "diskann", "fabric iq", "foundry iq", "gpt", "iac", "integrated hsm", "microsoft foundry", "microsoft ignite", "ml", "news", "nvidia blackwell", "postgresql", "rbac", "security", "semantic intelligence", "vector indexing"]
+tags:
+- Agentic AI
+- AI + Machine Learning
+- Azure Boost DPU
+- Azure Copilot
+- Azure HorizonDB
+- Claude Models
+- Cloud Migration
+- Cobalt 200
+- Data Security
+- DevOps Automation
+- DiskANN
+- Fabric IQ
+- Foundry IQ
+- GPT
+- IaC
+- Integrated HSM
+- Microsoft Foundry
+- Microsoft Ignite
+- NVIDIA Blackwell
+- PostgreSQL
+- RBAC
+- Semantic Intelligence
+- Vector Indexing
+- AI
+- Azure
+- DevOps
+- ML
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- ml
+- security
+primary_section: ai
 ---
-
 Natalie Wossene delivers an in-depth overview of the top technical advances from Microsoft Ignite 2025, including Azure and AI innovations, semantic intelligence platforms, new database tools, Azure Copilot, and next-generation cloud hardware for security and performance.<!--excerpt_end-->
 
 # Agentic AI and Cloud Innovation: Key Takeaways from Microsoft Ignite 2025

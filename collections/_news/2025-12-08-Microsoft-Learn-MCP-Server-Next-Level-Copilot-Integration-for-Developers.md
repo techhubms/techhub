@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Microsoft Learn MCP Server: Next-Level Copilot Integration for Developers"
-description: "This article introduces the Microsoft Learn Model Context Protocol (MCP) server, a tool that improves GitHub Copilot by providing it with updated, scenario-specific Microsoft product documentation, code samples, and learning resources. The post explains the benefits for .NET developers, details integration across Visual Studio, Visual Studio Code, the Copilot CLI, and Coding Agent, and demonstrates how the MCP server delivers timely, authoritative content and guidance within established Microsoft development workflows."
-author: "Wendy Breiding (SHE/HER), Eric Imasogie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/microsoft-learn-mcp-server-elevates-development/
+title: 'Microsoft Learn MCP Server: Next-Level Copilot Integration for Developers'
+author: Wendy Breiding (SHE/HER), Eric Imasogie
+feed_name: Microsoft .NET Blog
 date: 2025-12-08 20:00:00 +00:00
-permalink: "/2025-12-08-Microsoft-Learn-MCP-Server-Next-Level-Copilot-Integration-for-Developers.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "API References", "C#", "Code Suggestions", "Coding", "Copilot", "Copilot CLI", "Copilot Coding Agent", "Developer Experience", "Developer Tools", "Docs", "Documentation Integration", "GitHub Copilot", "Integration Guide", "Learn", "MCP", "MCP Server", "Microsoft Learn", "News", "VS", "VS Code"]
-tags_normalized: ["dotnet", "ai", "api references", "csharp", "code suggestions", "coding", "copilot", "copilot cli", "copilot coding agent", "developer experience", "developer tools", "docs", "documentation integration", "github copilot", "integration guide", "learn", "mcp", "mcp server", "microsoft learn", "news", "vs", "vs code"]
+tags:
+- .NET
+- API References
+- C#
+- Code Suggestions
+- Copilot
+- Copilot CLI
+- Copilot Coding Agent
+- Developer Experience
+- Developer Tools
+- Docs
+- Documentation Integration
+- Integration Guide
+- Learn
+- MCP
+- MCP Server
+- Microsoft Learn
+- VS
+- VS Code
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Wendy Breiding and Eric Imasogie explain how the Microsoft Learn MCP server upgrades the GitHub Copilot experience for developers, with step-by-step integration guides across key Microsoft development tools.<!--excerpt_end-->
 
 # Microsoft Learn MCP Server: Next-Level Copilot Integration for Developers
@@ -60,7 +77,7 @@ Copilot's core models are trained on public datasets and may not have knowledge 
 1. Type `/mcp add` in the Copilot CLI.
 2. Name the server "microsoft-docs".
 3. Choose HTTP as the connection type.
-4. Enter: https://learn.microsoft.com/api/mcp
+4. Enter: <https://learn.microsoft.com/api/mcp>
 5. Save the configuration.
 
 ### Copilot Coding Agent

@@ -1,20 +1,43 @@
----
-layout: "post"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_103
 title: "What's New in Visual Studio Code July 2025 (v1.103): GPT-5, Coding Agents, and DevOps Improvements"
-description: "This official release note details the July 2025 update (version 1.103) of Visual Studio Code from Microsoft, highlighting major new features such as integrated GPT-5 support for all paid GitHub Copilot plans, improvements to agent mode, experimental enhancements for chat-based coding, enhanced Azure DevOps repo indexing, UI/UX upgrades, terminal and notebook features, contributor acknowledgments, and more."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_103"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+author: Visual Studio Code Team
+feed_name: Visual Studio Code Releases
 date: 2025-08-07 17:00:00 +00:00
-permalink: "/2025-08-07-Whats-New-in-Visual-Studio-Code-July-2025-v1103-GPT-5-Coding-Agents-and-DevOps-Improvements.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Mode", "AI", "AI Chat", "Azure", "Azure DevOps", "Chat Checkpoints", "Coding", "Coding Agent", "DevOps", "Editor Updates", "Extension Authoring", "GitHub Copilot", "GPT 5", "MCP Server", "Model Management", "News", "Notebook", "Pull Requests", "Python", "Source Control", "Task Automation", "Terminal Tools", "TypeScript 5.9", "VS Code"]
-tags_normalized: ["accessibility", "agent mode", "ai", "ai chat", "azure", "azure devops", "chat checkpoints", "coding", "coding agent", "devops", "editor updates", "extension authoring", "github copilot", "gpt 5", "mcp server", "model management", "news", "notebook", "pull requests", "python", "source control", "task automation", "terminal tools", "typescript 5dot9", "vs code"]
+tags:
+- Accessibility
+- Agent Mode
+- AI Chat
+- Azure DevOps
+- Chat Checkpoints
+- Coding Agent
+- Editor Updates
+- Extension Authoring
+- GPT 5
+- MCP Server
+- Model Management
+- Notebook
+- Pull Requests
+- Python
+- Source Control
+- Task Automation
+- Terminal Tools
+- TypeScript 5.9
+- VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 The Visual Studio Code Team presents the July 2025 (v1.103) update, packed with new features like GPT-5 for Copilot, coding agent improvements, Azure DevOps repo indexing, and numerous productivity enhancements.<!--excerpt_end-->
 
 # Visual Studio Code July 2025 (v1.103) Release Notes

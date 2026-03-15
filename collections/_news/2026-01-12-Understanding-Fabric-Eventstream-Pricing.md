@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Understanding Fabric Eventstream Pricing"
-description: "This post offers a deep dive into the pricing model of Microsoft Fabric Eventstream. It covers how costs are calculated across various Eventstream components, operation types, and capacity metrics, backed by practical scenario walkthroughs for accurate capacity planning and cost estimation in Fabric environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/understanding-fabric-eventstream-pricing/
+title: Understanding Fabric Eventstream Pricing
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-12 14:00:00 +00:00
-permalink: "/2026-01-12-Understanding-Fabric-Eventstream-Pricing.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Data Services", "Capacity Metrics", "Cost Estimation", "CU Consumption", "Data Ingestion", "Destinations", "Event Processing", "Eventstream", "Fabric Capacity Estimator", "Microsoft Fabric", "ML", "News", "Operators", "Pricing", "Real Time Analytics", "Streams"]
-tags_normalized: ["azure", "azure data services", "capacity metrics", "cost estimation", "cu consumption", "data ingestion", "destinations", "event processing", "eventstream", "fabric capacity estimator", "microsoft fabric", "ml", "news", "operators", "pricing", "real time analytics", "streams"]
+tags:
+- Azure Data Services
+- Capacity Metrics
+- Cost Estimation
+- CU Consumption
+- Data Ingestion
+- Destinations
+- Event Processing
+- Eventstream
+- Fabric Capacity Estimator
+- Microsoft Fabric
+- Operators
+- Pricing
+- Real Time Analytics
+- Streams
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog provides an in-depth guide to understanding Eventstream pricing in Microsoft Fabric, helping technical users estimate costs and optimize architecture.<!--excerpt_end-->
 
 # Understanding Fabric Eventstream Pricing
@@ -70,8 +82,8 @@ See [Microsoft documentation](https://learn.microsoft.com/fabric/real-time-intel
 ### Scenario 3: Aggregation with scaling traffic
 
 - Common setup, data volume varies
-    - 3A: 1 GB/hour → 2.28 CU/hour (F4)
-    - 3B: 10 GB/hour → 10.00 CU/hour (F16)
+  - 3A: 1 GB/hour → 2.28 CU/hour (F4)
+  - 3B: 10 GB/hour → 10.00 CU/hour (F16)
 - Processing and data egress drive consumption/cost
 
 ## Factors Impacting Cost

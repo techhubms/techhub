@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Save on Azure SQL with Azure Hybrid Benefit"
-description: "Thomas Maurer and Debbie Lyons explore how Azure Hybrid Benefit can cut costs for Azure SQL services in this Azure Essentials Show episode. The discussion covers cost savings, security features, and architectural upgrades in Azure SQL, with a focus on migration strategies and infrastructure modernization."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/03/save-on-azure-sql-with-azure-hybrid-benefit/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+external_url: https://www.thomasmaurer.ch/2025/03/save-on-azure-sql-with-azure-hybrid-benefit/
+title: Save on Azure SQL with Azure Hybrid Benefit
+author: Thomas Maurer
+feed_name: Thomas Maurer's Blog
 date: 2025-03-28 10:18:12 +00:00
-permalink: "/2025-03-28-Save-on-Azure-SQL-with-Azure-Hybrid-Benefit.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Essentials Show", "Azure Hybrid Benefit", "Azure SQL", "Azure Virtual Machines", "Blogs", "Cloud", "Cloud Migration", "Cost Optimization", "Data Management", "Infrastructure Modernization", "Microsoft", "Microsoft Azure", "ML", "Security Features", "SQL", "SQL Database", "SQL Managed Instance", "SQL Server"]
-tags_normalized: ["azure", "azure essentials show", "azure hybrid benefit", "azure sql", "azure virtual machines", "blogs", "cloud", "cloud migration", "cost optimization", "data management", "infrastructure modernization", "microsoft", "microsoft azure", "ml", "security features", "sql", "sql database", "sql managed instance", "sql server"]
+tags:
+- Azure Essentials Show
+- Azure Hybrid Benefit
+- Azure SQL
+- Azure Virtual Machines
+- Cloud Migration
+- Cost Optimization
+- Data Management
+- Infrastructure Modernization
+- Microsoft
+- Microsoft Azure
+- Security Features
+- SQL
+- SQL Database
+- SQL Managed Instance
+- SQL Server
+- Azure
+- ML
+- Blogs
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 In this article, Thomas Maurer examines how Azure Hybrid Benefit can help organizations save on Azure SQL costs, focusing on migration strategies and database modernization in the cloud.<!--excerpt_end-->
 
 # Save on Azure SQL with Azure Hybrid Benefit

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "ASP.NET Community Standup - Vibe Coding a C# MCP Server"
-description: "This ASP.NET Community Standup session features Mike Kistler, Leslie Richardson, and Mackinnon Buck as they collaboratively develop an MCP server in C# using ASP.NET Core. The discussion focuses on practical coding techniques, real-world development practices, and insights for building robust server applications within the Microsoft technology ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dje8EMF3Shc"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=dje8EMF3Shc
+title: ASP.NET Community Standup - Vibe Coding a C# MCP Server
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-09-26 17:46:41 +00:00
-permalink: "/2025-09-26-ASPNET-Community-Standup-Vibe-Coding-a-C-MCP-Server.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Aspdotnet", "C#", "Coding", "Community Standup", "Developer Community", "Developer Tools", "Live Coding", "Mcp", "MCP Server", "Mcpserver", "Microsoft", "Server Development", "Vibe Coding", "Vibecoding", "Videos"]
-tags_normalized: ["dotnet", "aspdotnet core", "aspdotnet", "csharp", "coding", "community standup", "developer community", "developer tools", "live coding", "mcp", "mcp server", "mcpserver", "microsoft", "server development", "vibe coding", "vibecoding", "videos"]
+tags:
+- .NET
+- ASP.NET Core
+- Aspdotnet
+- C#
+- Community Standup
+- Developer Community
+- Developer Tools
+- Live Coding
+- MCP
+- MCP Server
+- Microsoft
+- Server Development
+- Vibe Coding
+- Vibecoding
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Mike Kistler, Leslie Richardson, and Mackinnon Buck join the ASP.NET Community Standup to demonstrate hands-on coding of a C# MCP server, providing insights on ASP.NET Core development for the Microsoft developer community.<!--excerpt_end-->
 
 {% youtube dje8EMF3Shc %}

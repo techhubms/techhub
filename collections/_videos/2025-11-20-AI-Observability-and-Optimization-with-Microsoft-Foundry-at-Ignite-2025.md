@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI Observability and Optimization with Microsoft Foundry at Ignite 2025"
-description: "This session from Microsoft Ignite 2025 focuses on advanced AI observability, monitoring, and optimization using Microsoft Foundry. Speakers demonstrate how Foundry's control plane and observability stack provide diagnostics, dashboards, and tools to manage and scale fleets of AI agents. Key topics include safety and risk evaluation platforms, production monitoring workflows, integration with Azure services, deployment gates, human-in-the-loop approval, and storing evaluation scores in GitHub. Real-world demos and partner insights showcase how enterprises can confidently deploy, manage, and optimize AI agents at scale."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LOLI0emzDb0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=LOLI0emzDb0
+title: AI Observability and Optimization with Microsoft Foundry at Ignite 2025
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 16:18:44 +00:00
-permalink: "/2025-11-20-AI-Observability-and-Optimization-with-Microsoft-Foundry-at-Ignite-2025.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Fleet Management", "AI", "AI Observability", "AI Optimization", "Azure", "CarMax", "Continuous Evaluation", "Deployment Gates", "DevOps", "Diagnostics", "GitHub Integration", "Human in The Loop", "InnovatewithAzureAIappsandagents", "Microsoft Foundry", "MS Ignite", "MSIgnite", "Partner Case Study", "Production Monitoring", "Risk Assessment", "Safety Evaluation", "Sky Release", "Videos"]
-tags_normalized: ["agent fleet management", "ai", "ai observability", "ai optimization", "azure", "carmax", "continuous evaluation", "deployment gates", "devops", "diagnostics", "github integration", "human in the loop", "innovatewithazureaiappsandagents", "microsoft foundry", "ms ignite", "msignite", "partner case study", "production monitoring", "risk assessment", "safety evaluation", "sky release", "videos"]
+tags:
+- Agent Fleet Management
+- AI Observability
+- AI Optimization
+- CarMax
+- Continuous Evaluation
+- Deployment Gates
+- Diagnostics
+- GitHub Integration
+- Human in The Loop
+- Microsoft Foundry
+- MS Ignite
+- MSIgnite
+- Partner Case Study
+- Production Monitoring
+- Risk Assessment
+- Safety Evaluation
+- Sky Release
+- AI
+- Azure
+- DevOps
+- Videos
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 This session featuring Abhi Bhatt, Sebastian Kohlmeier, and Sam Naghshineh from Microsoft Events explores how to achieve total visibility and optimization for AI agents using Microsoft Foundry, with practical demos and enterprise best practices.<!--excerpt_end-->
 
 {% youtube LOLI0emzDb0 %}

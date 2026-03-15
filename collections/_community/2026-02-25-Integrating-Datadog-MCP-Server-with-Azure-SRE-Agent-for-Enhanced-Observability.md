@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Integrating Datadog MCP Server with Azure SRE Agent for Enhanced Observability"
-description: "This guide walks through connecting Azure SRE Agent to Datadog’s observability platform using the official Datadog MCP server. It covers capabilities such as log and metric analysis, APM trace correlation, incident management, security, and troubleshooting, all through a native Azure integration."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-datadog-mcp-server-in-azure-sre-agent/ba-p/4497123"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-datadog-mcp-server-in-azure-sre-agent/ba-p/4497123
+title: Integrating Datadog MCP Server with Azure SRE Agent for Enhanced Observability
+author: dbandaru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-25 16:56:04 +00:00
-permalink: "/2026-02-25-Integrating-Datadog-MCP-Server-with-Azure-SRE-Agent-for-Enhanced-Observability.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["APM", "Authentication", "Azure", "Azure SRE Agent", "Cloud Monitoring", "Community", "Connector Setup", "Custom YAML Agent", "Datadog MCP Server", "Datadog Skills", "DevOps", "Incident Management", "Integration", "Log Analysis", "Metric Analysis", "Observability", "RBAC", "Security", "Security Best Practices", "Service Accounts", "Troubleshooting"]
-tags_normalized: ["apm", "authentication", "azure", "azure sre agent", "cloud monitoring", "community", "connector setup", "custom yaml agent", "datadog mcp server", "datadog skills", "devops", "incident management", "integration", "log analysis", "metric analysis", "observability", "rbac", "security", "security best practices", "service accounts", "troubleshooting"]
+tags:
+- APM
+- Authentication
+- Azure
+- Azure SRE Agent
+- Cloud Monitoring
+- Community
+- Connector Setup
+- Custom YAML Agent
+- Datadog MCP Server
+- Datadog Skills
+- DevOps
+- Incident Management
+- Integration
+- Log Analysis
+- Metric Analysis
+- Observability
+- RBAC
+- Security
+- Security Best Practices
+- Service Accounts
+- Troubleshooting
+section_names:
+- azure
+- devops
+- security
 ---
-
 dbandaru provides a practical guide for integrating Datadog’s official MCP server with Azure SRE Agent, enabling full-stack observability—including logs, metrics, traces, incidents, and security—all within the Azure platform.<!--excerpt_end-->
 
 # Integrating Datadog MCP Server with Azure SRE Agent for Enhanced Observability

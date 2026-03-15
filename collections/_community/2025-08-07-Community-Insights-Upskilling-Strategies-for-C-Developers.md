@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Community Insights: Upskilling Strategies for C# Developers"
-description: "This community discussion shares practical upskilling strategies for C# and .NET developers. Members reflect on their learning journeys, reviewing foundational concepts, leveraging books, video content, hands-on side projects, and exploring advanced topics like async/await and event-driven architecture. The conversation highlights the value of teaching, open-source exploration, and not relying solely on online courses."
-author: "Ok_Finish_1661"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mjojrz/how_are_you_guys_upskilling/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1mjojrz/how_are_you_guys_upskilling/
+title: 'Community Insights: Upskilling Strategies for C# Developers'
+author: Ok_Finish_1661
+feed_name: Reddit CSharp
 date: 2025-08-07 02:45:02 +00:00
-permalink: "/2025-08-07-Community-Insights-Upskilling-Strategies-for-C-Developers.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8", "Advanced Concepts", "Async/await", "Books", "C#", "Coding", "Community", "Event Driven Architecture", "Framework Design Guide", "Functional Programming", "GitHub Exploration", "Learning Strategies", "Pluralsight", "Practice", "RavenDB", "Side Projects", "The C# Player's Guide", "Upskilling", "Vanilla C#", "YouTube Teaching"]
-tags_normalized: ["dotnet", "dotnet 8", "advanced concepts", "asyncslashawait", "books", "csharp", "coding", "community", "event driven architecture", "framework design guide", "functional programming", "github exploration", "learning strategies", "pluralsight", "practice", "ravendb", "side projects", "the csharp players guide", "upskilling", "vanilla csharp", "youtube teaching"]
+tags:
+- .NET
+- .NET 8
+- Advanced Concepts
+- Async/await
+- Books
+- C#
+- Event Driven Architecture
+- Framework Design Guide
+- Functional Programming
+- GitHub Exploration
+- Learning Strategies
+- Pluralsight
+- Practice
+- RavenDB
+- Side Projects
+- The C# Player's Guide
+- Upskilling
+- Vanilla C#
+- YouTube Teaching
+- Community
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Ok_Finish_1661 and fellow community members discuss diverse strategies for improving C# and .NET skills, recommending books, side projects, teaching, and advanced topic exploration.<!--excerpt_end-->
 
 # Community Insights: Upskilling Strategies for C# Developers

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "macos-26 Runner Image Now Available for GitHub Actions"
-description: "An announcement on the general availability of the macOS 26 runner image for GitHub-hosted runners. This update enables fully supported macOS and Xcode build environments on both Apple Silicon (arm64) and Intel (x64) architectures, detailing workflow file integration and runner label options."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-macos-26-is-now-generally-available-for-github-hosted-runners"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-macos-26-is-now-generally-available-for-github-hosted-runners
+title: macos-26 Runner Image Now Available for GitHub Actions
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-26 16:00:59 +00:00
-permalink: "/2026-02-26-macos-26-Runner-Image-Now-Available-for-GitHub-Actions.html"
-categories: ["DevOps"]
-tags: ["Actions", "Apple Silicon", "Arm64", "Build Automation", "CI/CD", "DevOps", "GitHub Actions", "GitHub Hosted Runners", "Intel X64", "Macos 26", "Macos Runner", "News", "Software Development", "Workflow Automation", "Xcode"]
-tags_normalized: ["actions", "apple silicon", "arm64", "build automation", "cislashcd", "devops", "github actions", "github hosted runners", "intel x64", "macos 26", "macos runner", "news", "software development", "workflow automation", "xcode"]
+tags:
+- Actions
+- Apple Silicon
+- Arm64
+- Build Automation
+- CI/CD
+- DevOps
+- GitHub Actions
+- GitHub Hosted Runners
+- Intel X64
+- Macos 26
+- Macos Runner
+- News
+- Software Development
+- Workflow Automation
+- Xcode
+section_names:
+- devops
 ---
-
 Allison announces that the macOS 26 runner image is now generally available for GitHub Actions, supporting both arm64 and x64 environments for continuous integration and deployment workflows.<!--excerpt_end-->
 
 # macos-26 Runner Image Now Available for GitHub Actions

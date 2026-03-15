@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "OneLake Security on the SQL Analytics Endpoint"
-description: "This article explains how OneLake Security provides centralized, fine-grained data access control for Fabric data items, focusing on its enforcement via the SQL Analytics Endpoint. It covers role-based access models, Row-Level Security (RLS), Column-Level Security (CLS), access modes (User identity vs Delegated identity), and practical configuration and troubleshooting tips for enterprise governance."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/onelake-security-on-the-sql-analytics-endpoint/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/onelake-security-on-the-sql-analytics-endpoint/
+title: OneLake Security on the SQL Analytics Endpoint
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-10-06 12:00:00 +00:00
-permalink: "/2025-10-06-OneLake-Security-on-the-SQL-Analytics-Endpoint.html"
-categories: ["ML", "Security"]
-tags: ["Access Control", "Column Level Security", "Data Governance", "Data Lakehouse", "Data Protection", "Microsoft Fabric", "ML", "News", "OneLake Security", "Preview Feature", "RBAC", "Row Level Security", "Security", "Security Sync", "Shortcuts", "SQL Analytics Endpoint", "SQL Permissions", "Workspace Roles"]
-tags_normalized: ["access control", "column level security", "data governance", "data lakehouse", "data protection", "microsoft fabric", "ml", "news", "onelake security", "preview feature", "rbac", "row level security", "security", "security sync", "shortcuts", "sql analytics endpoint", "sql permissions", "workspace roles"]
+tags:
+- Access Control
+- Column Level Security
+- Data Governance
+- Data Lakehouse
+- Data Protection
+- Microsoft Fabric
+- OneLake Security
+- Preview Feature
+- RBAC
+- Row Level Security
+- Security Sync
+- Shortcuts
+- SQL Analytics Endpoint
+- SQL Permissions
+- Workspace Roles
+- ML
+- Security
+- News
+section_names:
+- ml
+- security
+primary_section: ml
 ---
-
 Microsoft Fabric Blog outlines how OneLake Security centralizes granular data access policies for Fabric via the SQL Analytics Endpoint, including RLS, CLS, and access mode configuration for secure enterprise analytics.<!--excerpt_end-->
 
 # OneLake Security on the SQL Analytics Endpoint

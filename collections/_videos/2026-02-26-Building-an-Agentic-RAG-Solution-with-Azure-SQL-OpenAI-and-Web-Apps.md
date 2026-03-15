@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building an Agentic RAG Solution with Azure SQL, OpenAI, and Web Apps"
-description: "This video by Microsoft Developer demonstrates how to create an agentic Retrieval-Augmented Generation (RAG) solution using Azure SQL, Azure OpenAI, and Web Apps, all designed to run efficiently on a constrained budget. The walkthrough covers backend and frontend development, API usage, AI integration, and practical code samples."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=X_eiufFu3xY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=X_eiufFu3xY
+title: Building an Agentic RAG Solution with Azure SQL, OpenAI, and Web Apps
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-26 17:00:52 +00:00
-permalink: "/2026-02-26-Building-an-Agentic-RAG-Solution-with-Azure-SQL-OpenAI-and-Web-Apps.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agentic RAG", "AI", "AI Integration", "Azure", "Azure Container Apps", "Azure OpenAI", "Azure SQL", "Backend Development", "Budget Friendly Development", "Coding", "Data API Builder", "Frontend Development", "LangChain", "Microsoft Azure", "Natural Language Search", "RAG Architecture", "Static Web Apps", "Videos", "Web Apps"]
-tags_normalized: ["agentic rag", "ai", "ai integration", "azure", "azure container apps", "azure openai", "azure sql", "backend development", "budget friendly development", "coding", "data api builder", "frontend development", "langchain", "microsoft azure", "natural language search", "rag architecture", "static web apps", "videos", "web apps"]
+tags:
+- Agentic RAG
+- AI
+- AI Integration
+- Azure
+- Azure Container Apps
+- Azure OpenAI
+- Azure SQL
+- Backend Development
+- Budget Friendly Development
+- Data API Builder
+- Frontend Development
+- LangChain
+- Microsoft Azure
+- Natural Language Search
+- RAG Architecture
+- Static Web Apps
+- Videos
+- Web Apps
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Microsoft Developer, featuring Davide, presents a practical guide to building an agentic RAG solution with Azure SQL, OpenAI, and Azure Web Apps, focusing on both cost-efficiency and technical depth.<!--excerpt_end-->
 
 {% youtube X_eiufFu3xY %}

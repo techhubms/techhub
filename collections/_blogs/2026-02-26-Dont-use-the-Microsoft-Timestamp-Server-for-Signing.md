@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Don't use the Microsoft Timestamp Server for Signing"
-description: "This blog post by Rick Strahl discusses reliability issues with the default Microsoft timestamp server used for code signing, as recommended in Microsoft's Trusted Signing documentation. The author shares his personal experience with signing failures and offers a practical solution: switching to more reliable alternative timestamp servers, such as DigiCert, Sectigo, and others. The post includes code examples, troubleshooting tips, and a curated list of alternative servers."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2026/Feb/26/Dont-use-the-Microsoft-Timestamp-Server-for-Signing"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+external_url: https://weblog.west-wind.com/posts/2026/Feb/26/Dont-use-the-Microsoft-Timestamp-Server-for-Signing
+title: Don't use the Microsoft Timestamp Server for Signing
+author: Rick Strahl
+primary_section: security
+feed_name: Rick Strahl's Blog
 date: 2026-02-26 22:41:03 +00:00
-permalink: "/2026-02-26-Dont-use-the-Microsoft-Timestamp-Server-for-Signing.html"
-categories: ["Security"]
-tags: ["Azure.CodeSigning.Dlib.dll", "Blogs", "Certificate Authority", "Certum", "Code Signing", "DigiCert", "Entrust", "GlobalSign", "Microsoft Trusted Signing", "PowerShell", "Sectigo", "Security", "SHA256", "Signing Errors", "Signing Tools", "Signtool", "SSL.com", "Timestamp Server", "Trusted Signing Client Tools", "Windows", "Windows Security"]
-tags_normalized: ["azuredotcodesigningdotdlibdotdll", "blogs", "certificate authority", "certum", "code signing", "digicert", "entrust", "globalsign", "microsoft trusted signing", "powershell", "sectigo", "security", "sha256", "signing errors", "signing tools", "signtool", "ssldotcom", "timestamp server", "trusted signing client tools", "windows", "windows security"]
+tags:
+- Azure.CodeSigning.Dlib.dll
+- Blogs
+- Certificate Authority
+- Certum
+- Code Signing
+- DigiCert
+- Entrust
+- GlobalSign
+- Microsoft Trusted Signing
+- PowerShell
+- Sectigo
+- Security
+- SHA256
+- Signing Errors
+- Signing Tools
+- Signtool
+- SSL.com
+- Timestamp Server
+- Trusted Signing Client Tools
+- Windows
+- Windows Security
+section_names:
+- security
 ---
-
 Rick Strahl shares his experience with failures using the Microsoft timestamp server for code signing and recommends alternative, more reliable servers. The article provides practical advice and example code for secure code signing workflows.<!--excerpt_end-->
 
 # Don't use the Microsoft Timestamp Server for Signing

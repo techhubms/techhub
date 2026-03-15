@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions"
-description: "GitHub Copilot's coding agent now maintains up-to-date pull request titles and bodies as it works on delegated tasks. Users can review changes, provide feedback, and rely on improved tracking of pull request progress through automated updates. This feature is available in public preview."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-07-30-copilot-coding-agent-keeps-pull-request-titles-and-bodies-up-to-date
+title: 'GitHub Copilot Coding Agent: Automatic Updates for Pull Request Titles and Descriptions'
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-07-30 17:16:52 +00:00
-permalink: "/2025-07-30-GitHub-Copilot-Coding-Agent-Automatic-Updates-for-Pull-Request-Titles-and-Descriptions.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Coding Agent", "Copilot Business", "Copilot Enterprise", "Copilot Pro", "DevOps", "DevOps Workflow", "Feature Update", "GitHub Copilot", "News", "Pro Code Review", "Pull Requests"]
-tags_normalized: ["ai", "automation", "coding agent", "copilot business", "copilot enterprise", "copilot pro", "devops", "devops workflow", "feature update", "github copilot", "news", "pro code review", "pull requests"]
+tags:
+- Automation
+- Coding Agent
+- Copilot Business
+- Copilot Enterprise
+- Copilot Pro
+- DevOps Workflow
+- Feature Update
+- Pro Code Review
+- Pull Requests
+- AI
+- DevOps
+- GitHub Copilot
+- News
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison discusses how GitHub Copilot's coding agent now keeps pull request titles and bodies up to date, streamlining code review and collaboration.<!--excerpt_end-->
 
 ## GitHub Copilot Coding Agent: Keeping Pull Request Titles and Bodies Up to Date

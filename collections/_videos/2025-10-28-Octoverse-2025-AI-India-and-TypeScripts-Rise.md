@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+external_url: https://www.youtube.com/watch?v=4-u6dUg6IJk
 title: "Octoverse 2025: AI, India, and TypeScript's Rise"
-description: "A summary of key insights from GitHub's Octoverse 2025 report, including generative AI becoming mainstream in engineering, the ascendance of TypeScript as the top programming language, and the evolving landscape of global developer communities, with a spotlight on India's growth and AI's influence on developer choices."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4-u6dUg6IJk"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-10-28 16:05:04 +00:00
-permalink: "/2025-10-28-Octoverse-2025-AI-India-and-TypeScripts-Rise.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "AI Adoption", "Coding", "Developer", "Developer Community", "Developer Map", "Developer Trends", "DevOps", "Generative AI", "GitHub", "India Developers", "Octoverse", "Open Source", "Programming Languages", "Software Engineering", "TypeScript", "Videos"]
-tags_normalized: ["ai", "ai adoption", "coding", "developer", "developer community", "developer map", "developer trends", "devops", "generative ai", "github", "india developers", "octoverse", "open source", "programming languages", "software engineering", "typescript", "videos"]
+tags:
+- AI Adoption
+- Developer
+- Developer Community
+- Developer Map
+- Developer Trends
+- Generative AI
+- GitHub
+- India Developers
+- Octoverse
+- Open Source
+- Programming Languages
+- Software Engineering
+- TypeScript
+- AI
+- DevOps
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+primary_section: ai
 ---
-
 This video from GitHub summarizes the top trends from the Octoverse 2025 report. The presentation, led by the GitHub team, covers the rapid normalization of generative AI in software engineering, TypeScript's new status as the #1 language, and the shifting global developer landscape.<!--excerpt_end-->
 
 {% youtube 4-u6dUg6IJk %}

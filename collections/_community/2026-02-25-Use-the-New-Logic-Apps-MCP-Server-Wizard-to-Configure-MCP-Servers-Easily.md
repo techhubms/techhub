@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Use the New Logic Apps MCP Server Wizard to Configure MCP Servers Easily"
-description: "This guide by KentWeareMSFT details the new MCP server configuration experience in Azure Logic Apps Standard. It offers step-by-step instructions to create, manage, and secure MCP servers, allowing developers to quickly expose workflows as MCP tools via a guided wizard, manage authentication, and simplify AI agent connectivity."
-author: "KentWeareMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/stop-writing-plumbing-use-the-new-logic-apps-mcp-server-wizard/ba-p/4496702
+title: Use the New Logic Apps MCP Server Wizard to Configure MCP Servers Easily
+author: KentWeareMSFT
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-25 14:19:26 +00:00
-permalink: "/2026-02-25-Use-the-New-Logic-Apps-MCP-Server-Wizard-to-Configure-MCP-Servers-Easily.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "API Center", "API Key Authentication", "API Management", "API Security", "Automation", "Azure", "Azure Logic Apps", "Community", "Connectors", "Copilot Studio", "DevOps", "Logic Apps Standard", "MCP Server", "Microsoft Foundry", "OAuth", "VS Code Integration", "Workflow Automation"]
-tags_normalized: ["ai", "api center", "api key authentication", "api management", "api security", "automation", "azure", "azure logic apps", "community", "connectors", "copilot studio", "devops", "logic apps standard", "mcp server", "microsoft foundry", "oauth", "vs code integration", "workflow automation"]
+tags:
+- AI
+- API Center
+- API Key Authentication
+- API Management
+- API Security
+- Automation
+- Azure
+- Azure Logic Apps
+- Community
+- Connectors
+- Copilot Studio
+- DevOps
+- Logic Apps Standard
+- MCP Server
+- Microsoft Foundry
+- OAuth
+- VS Code Integration
+- Workflow Automation
+section_names:
+- ai
+- azure
+- devops
 ---
-
 KentWeareMSFT demonstrates the streamlined MCP server configuration wizard within Azure Logic Apps Standard, guiding developers through setup, workflow exposure, and secure authentication for agentic integration.<!--excerpt_end-->
 
 # Use the New Logic Apps MCP Server Wizard to Configure MCP Servers Easily

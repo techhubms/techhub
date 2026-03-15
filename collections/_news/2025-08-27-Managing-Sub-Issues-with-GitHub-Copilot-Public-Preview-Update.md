@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Managing Sub-Issues with GitHub Copilot: Public Preview Update"
-description: "This announcement details new capabilities in GitHub Copilot, now allowing users to create sub-issues and manage issue hierarchies directly through chat on github.com/copilot. The update helps streamline issue tracking and project organization for developers, showing how Copilot can assist in structuring and breaking down complex tasks within repositories. Included are practical steps, prompt examples, and helpful tips for maximizing the feature’s utility."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-08-27-create-sub-issues-with-copilot-in-public-preview
+title: 'Managing Sub-Issues with GitHub Copilot: Public Preview Update'
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-08-27 23:37:22 +00:00
-permalink: "/2025-08-27-Managing-Sub-Issues-with-GitHub-Copilot-Public-Preview-Update.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Copilot Chat", "Developer Workflow", "DevOps", "Epic Tracking", "GitHub", "GitHub Copilot", "Issue Management", "News", "Project Organization", "Public Preview", "Software Development", "Sub Issues"]
-tags_normalized: ["ai", "copilot chat", "developer workflow", "devops", "epic tracking", "github", "github copilot", "issue management", "news", "project organization", "public preview", "software development", "sub issues"]
+tags:
+- Copilot Chat
+- Developer Workflow
+- Epic Tracking
+- GitHub
+- Issue Management
+- Project Organization
+- Public Preview
+- Software Development
+- Sub Issues
+- AI
+- DevOps
+- GitHub Copilot
+- News
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison introduces an update to GitHub Copilot in public preview, enabling developers to create and manage sub-issues by chatting directly on github.com/copilot, streamlining project and issue organization.<!--excerpt_end-->
 
 # Managing Sub-Issues with GitHub Copilot: Public Preview Update

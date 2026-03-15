@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "When Protections Outlive Their Purpose: Managing Defense Systems at Scale on GitHub"
-description: "This article examines the challenges of managing large-scale defense mechanisms in platforms like GitHub. It details how temporary protections, put in place to counteract abuse and incidents, can become outdated and inadvertently block legitimate users. The post emphasizes the importance of observability, lifecycle management, and periodic review of security controls to maintain platform health and user trust."
-author: "Thomas Kjær Aabo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/engineering/infrastructure/when-protections-outlive-their-purpose-a-lesson-on-managing-defense-systems-at-scale/
+title: 'When Protections Outlive Their Purpose: Managing Defense Systems at Scale on GitHub'
+author: Thomas Kjær Aabo
+feed_name: GitHub Engineering Blog
 date: 2026-01-15 20:54:32 +00:00
-permalink: "/2026-01-15-When-Protections-Outlive-Their-Purpose-Managing-Defense-Systems-at-Scale-on-GitHub.html"
-categories: ["DevOps", "Security"]
-tags: ["DDoS Protection", "Defense Mechanisms", "Developer Experience", "DevOps", "Engineering", "GitHub", "Incident Response", "Infrastructure", "Lifecycle Management", "Logging", "Mitigation", "News", "Observability", "Platform Security", "Rate Limiting", "Security", "Site Reliability", "Technical Debt", "Traffic Controls"]
-tags_normalized: ["ddos protection", "defense mechanisms", "developer experience", "devops", "engineering", "github", "incident response", "infrastructure", "lifecycle management", "logging", "mitigation", "news", "observability", "platform security", "rate limiting", "security", "site reliability", "technical debt", "traffic controls"]
+tags:
+- DDoS Protection
+- Defense Mechanisms
+- Developer Experience
+- Engineering
+- GitHub
+- Incident Response
+- Infrastructure
+- Lifecycle Management
+- Logging
+- Mitigation
+- Observability
+- Platform Security
+- Rate Limiting
+- Site Reliability
+- Technical Debt
+- Traffic Controls
+- DevOps
+- Security
+- News
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 Thomas Kjær Aabo shares lessons from GitHub’s experience with long-lived emergency defense rules, highlighting the importance of continuous lifecycle management and observability in large-scale platform security.<!--excerpt_end-->
 
 # When Protections Outlive Their Purpose: Managing Defense Systems at Scale on GitHub

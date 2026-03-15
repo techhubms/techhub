@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Copilot User Management API Adds last_authenticated_at Field"
-description: "This news update covers the addition of the last_authenticated_at field to the GitHub Copilot user management API. The new field allows administrators to access the UTC timestamp of a user's most recent authentication directly through the API. This change aligns the API's feature set with the previous CSV activity report export, helping organizations better track and manage Copilot usage."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-13-added-last_authenticated_at-to-the-copilot-user-management-api"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-08-13-added-last_authenticated_at-to-the-copilot-user-management-api
+title: GitHub Copilot User Management API Adds last_authenticated_at Field
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-08-13 21:51:19 +00:00
-permalink: "/2025-08-13-GitHub-Copilot-User-Management-API-Adds-last_authenticated_at-Field.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Tools", "AI", "API Schema", "API Update", "Authentication", "Copilot API", "Feature Parity", "GitHub Copilot", "GitHub REST API", "Last Authenticated At", "News", "User Management"]
-tags_normalized: ["admin tools", "ai", "api schema", "api update", "authentication", "copilot api", "feature parity", "github copilot", "github rest api", "last authenticated at", "news", "user management"]
+tags:
+- Admin Tools
+- API Schema
+- API Update
+- Authentication
+- Copilot API
+- Feature Parity
+- GitHub REST API
+- Last Authenticated At
+- User Management
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison reports on a new enhancement to the GitHub Copilot user management API, introducing a last_authenticated_at timestamp for tracking user authentication directly through the API.<!--excerpt_end-->
 
 # GitHub Copilot User Management API Adds last_authenticated_at Field

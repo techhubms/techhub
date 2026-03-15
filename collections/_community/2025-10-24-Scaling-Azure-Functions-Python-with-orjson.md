@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Scaling Azure Functions Python with orjson"
-description: "This article details how adding orjson, a high-performance JSON library, to Python Azure Functions unlocks significant latency and throughput gains for serverless workloads with no code changes. Performance benchmarks, integration details, and recommended practices are included to help developers optimize function scalability."
-author: "eroman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/scaling-azure-functions-python-with-orjson/ba-p/4445780
+title: Scaling Azure Functions Python with orjson
+author: eroman
+feed_name: Microsoft Tech Community
 date: 2025-10-24 18:26:31 +00:00
-permalink: "/2025-10-24-Scaling-Azure-Functions-Python-with-orjson.html"
-categories: ["Azure", "Coding"]
-tags: ["API", "Azure", "Azure Functions", "Azure Load Testing", "Benchmarks", "Cloud Engineering", "Coding", "Community", "Cosmos DB", "Deserialization", "Event Hubs", "Flex Consumption", "JSON Serialization", "Orjson", "Performance Optimization", "Python", "Requirements.txt", "Rust", "Serverless", "Service Bus", "Virtual Environment"]
-tags_normalized: ["api", "azure", "azure functions", "azure load testing", "benchmarks", "cloud engineering", "coding", "community", "cosmos db", "deserialization", "event hubs", "flex consumption", "json serialization", "orjson", "performance optimization", "python", "requirementsdottxt", "rust", "serverless", "service bus", "virtual environment"]
+tags:
+- API
+- Azure Functions
+- Azure Load Testing
+- Benchmarks
+- Cloud Engineering
+- Cosmos DB
+- Deserialization
+- Event Hubs
+- Flex Consumption
+- JSON Serialization
+- Orjson
+- Performance Optimization
+- Python
+- Requirements.txt
+- Rust
+- Serverless
+- Service Bus
+- Virtual Environment
+- Azure
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+primary_section: dotnet
 ---
-
 eroman examines how Azure Functions for Python apps benefit from native orjson support, showing measurable performance improvements in latency and throughput for serverless solutions.<!--excerpt_end-->
 
 # Scaling Azure Functions Python with orjson

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Grok 4 Now Available in Azure AI Foundry: Advanced Reasoning and Business-Ready AI"
-description: "This article announces the integration of Grok 4, xAI’s most advanced reasoning model, into Azure AI Foundry. It details Grok 4’s architecture, enterprise-grade safety, large context handling, and real-time data integration, while outlining specific developer use cases and model variants within the Azure platform."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/grok-4-is-now-available-in-azure-ai-foundry-unlock-frontier-intelligence-and-business-ready-capabilities/
+title: 'Grok 4 Now Available in Azure AI Foundry: Advanced Reasoning and Business-Ready AI'
+author: stclarke
+feed_name: Microsoft News
 date: 2025-09-30 14:14:35 +00:00
-permalink: "/2025-09-30-Grok-4-Now-Available-in-Azure-AI-Foundry-Advanced-Reasoning-and-Business-Ready-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Benchmarking", "AI Safety", "Azure", "Azure AI Foundry", "Code Generation", "Company News", "Content Safety", "Enterprise AI", "First Principles Reasoning", "Frontier Models", "Grok 4", "Large Context Window", "Model Card", "News", "Pricing", "Real Time Data", "Reinforcement Learning", "Xai"]
-tags_normalized: ["ai", "ai benchmarking", "ai safety", "azure", "azure ai foundry", "code generation", "company news", "content safety", "enterprise ai", "first principles reasoning", "frontier models", "grok 4", "large context window", "model card", "news", "pricing", "real time data", "reinforcement learning", "xai"]
+tags:
+- AI Benchmarking
+- AI Safety
+- Azure AI Foundry
+- Code Generation
+- Company News
+- Content Safety
+- Enterprise AI
+- First Principles Reasoning
+- Frontier Models
+- Grok 4
+- Large Context Window
+- Model Card
+- Pricing
+- Real Time Data
+- Reinforcement Learning
+- Xai
+- AI
+- Azure
+- News
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 stclarke discusses the Azure AI Foundry launch of Grok 4, exploring its advanced first-principles reasoning, large context support, enterprise safeguards, and model variants designed for specialized business and developer applications.<!--excerpt_end-->
 
 # Grok 4 Now Available in Azure AI Foundry: Advanced Reasoning and Business-Ready AI

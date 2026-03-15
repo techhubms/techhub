@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "How to Migrate Legacy Applications Using GitHub Copilot"
-description: "This guide explains how developers can use GitHub Copilot to ease the migration of legacy applications to modern platforms. It details common challenges in upgrading legacy code, how Copilot assists in refactoring, API modernization, and test generation, and outlines best practices for a successful migration process."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/how-to-migrate-legacy-applications-using-github-copilot/
+title: How to Migrate Legacy Applications Using GitHub Copilot
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-09-02 09:26:06 +00:00
-permalink: "/2025-09-02-How-to-Migrate-Legacy-Applications-Using-GitHub-Copilot.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Modernization", "AI", "AI Pair Programming", "Application Modernization", "Architecture", "Blogs", "CI/CD", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "Incremental Migration", "Legacy Migration", "Python Migration", "Refactoring", "Software Development", "Solution Architecture", "Unit Testing", "VS Code"]
-tags_normalized: ["dotnet modernization", "ai", "ai pair programming", "application modernization", "architecture", "blogs", "cislashcd", "coding", "developer productivity", "devops", "github copilot", "incremental migration", "legacy migration", "python migration", "refactoring", "software development", "solution architecture", "unit testing", "vs code"]
+tags:
+- .NET Modernization
+- AI Pair Programming
+- Application Modernization
+- Architecture
+- CI/CD
+- Developer Productivity
+- Incremental Migration
+- Legacy Migration
+- Python Migration
+- Refactoring
+- Software Development
+- Solution Architecture
+- Unit Testing
+- VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Dellenny presents a practical guide to using GitHub Copilot as an AI-powered assistant for migrating legacy software, focusing on efficient code refactoring and modernization workflows.<!--excerpt_end-->
 
 # How to Migrate Legacy Applications Using GitHub Copilot

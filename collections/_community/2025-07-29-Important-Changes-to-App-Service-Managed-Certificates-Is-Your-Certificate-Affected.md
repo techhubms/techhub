@@ -1,20 +1,24 @@
----
-layout: "post"
-title: "Important Changes to App Service Managed Certificates: Is Your Certificate Affected?"
-description: "This post highlights upcoming changes to Azure App Service Managed Certificates, with a focus on potential impacts for users. It prompts certificate owners to review details to ensure their certificates remain valid and compliant, and provides references to official Microsoft communications for further action."
-author: "azredditj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mccg6l/important_changes_to_app_service_managed/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mccg6l/important_changes_to_app_service_managed/
+title: 'Important Changes to App Service Managed Certificates: Is Your Certificate Affected?'
+author: azredditj
+feed_name: Reddit Azure
 date: 2025-07-29 14:09:36 +00:00
-permalink: "/2025-07-29-Important-Changes-to-App-Service-Managed-Certificates-Is-Your-Certificate-Affected.html"
-categories: ["Azure"]
-tags: ["App Service", "Azure", "Certificate Management", "Certificate Update", "Cloud Services", "Community", "Managed Certificates", "Microsoft", "Service Changes", "TLS/SSL"]
-tags_normalized: ["app service", "azure", "certificate management", "certificate update", "cloud services", "community", "managed certificates", "microsoft", "service changes", "tlsslashssl"]
+tags:
+- App Service
+- Certificate Management
+- Certificate Update
+- Cloud Services
+- Managed Certificates
+- Microsoft
+- Service Changes
+- TLS/SSL
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 azredditj discusses important upcoming changes to Azure App Service Managed Certificates, urging users to review and verify their certificate status.<!--excerpt_end-->
 
 ## Important Changes to Azure App Service Managed Certificates

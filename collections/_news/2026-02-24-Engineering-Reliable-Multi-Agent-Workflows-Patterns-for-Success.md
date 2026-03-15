@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Engineering Reliable Multi-Agent Workflows: Patterns for Success"
-description: "This article by Gwen Davis delves into the common pitfalls of multi-agent workflows in AI systems, emphasizing that most failures are due to a lack of explicit structure rather than shortcomings in the underlying models. The content outlines three engineering patterns—typed schemas, action schemas, and the Model Context Protocol (MCP)—which together ensure such workflows are robust, reliable, and easier to debug."
-author: "Gwen Davis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/generative-ai/multi-agent-workflows-often-fail-heres-how-to-engineer-ones-that-dont/
+title: 'Engineering Reliable Multi-Agent Workflows: Patterns for Success'
+author: Gwen Davis
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-24 16:00:00 +00:00
-permalink: "/2026-02-24-Engineering-Reliable-Multi-Agent-Workflows-Patterns-for-Success.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Action Schemas", "Agent Systems", "Agentic AI", "AI", "AI & ML", "AI Agents", "AI Engineering Patterns", "Coding", "Contract Enforcement", "Data Validation", "Engineering Best Practices", "Generative AI", "GitHub Copilot", "MCP", "Multi Agent Workflows", "News", "Reliable Systems", "Structured Interfaces", "System Design", "Typed Schemas"]
-tags_normalized: ["action schemas", "agent systems", "agentic ai", "ai", "ai and ml", "ai agents", "ai engineering patterns", "coding", "contract enforcement", "data validation", "engineering best practices", "generative ai", "github copilot", "mcp", "multi agent workflows", "news", "reliable systems", "structured interfaces", "system design", "typed schemas"]
+tags:
+- Action Schemas
+- Agent Systems
+- Agentic AI
+- AI
+- AI & ML
+- AI Agents
+- AI Engineering Patterns
+- Contract Enforcement
+- Data Validation
+- Engineering Best Practices
+- Generative AI
+- GitHub Copilot
+- MCP
+- Multi Agent Workflows
+- News
+- Reliable Systems
+- Structured Interfaces
+- System Design
+- Typed Schemas
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Gwen Davis explains how to engineer robust multi-agent workflows in AI systems, detailing three core patterns—typed schemas, action schemas, and MCP—to make agentic automation with tools like GitHub Copilot reliable and maintainable.<!--excerpt_end-->
 
 # Multi-agent workflows often fail. Here’s how to engineer ones that don’t.

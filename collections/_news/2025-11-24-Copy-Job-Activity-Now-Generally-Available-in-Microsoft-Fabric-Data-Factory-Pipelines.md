@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines"
-description: "Microsoft Fabric introduces the Copy Job Activity for Data Factory pipelines, providing users with a streamlined way to orchestrate and automate data movement tasks. This new activity integrates Copy jobs directly into pipelines, enabling no-code configuration, chaining with other pipeline steps, and extended support for features like change data capture (CDC) and built-in telemetry monitoring."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-copy-job-activity-now-general-available-in-data-factory-pipeline/
+title: Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-24 11:00:00 +00:00
-permalink: "/2025-11-24-Copy-Job-Activity-Now-Generally-Available-in-Microsoft-Fabric-Data-Factory-Pipelines.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Bulk Data Transfer", "Change Data Capture", "Copy Job Activity", "Data Factory", "Data Integration", "Data Movement", "Data Orchestration", "Data Pipelines", "Email Notification", "ETL", "Incremental Copy", "Microsoft Fabric", "ML", "News", "No Code", "Pipeline Automation", "Pipeline Scheduling", "Telemetry"]
-tags_normalized: ["azure", "bulk data transfer", "change data capture", "copy job activity", "data factory", "data integration", "data movement", "data orchestration", "data pipelines", "email notification", "etl", "incremental copy", "microsoft fabric", "ml", "news", "no code", "pipeline automation", "pipeline scheduling", "telemetry"]
+tags:
+- Bulk Data Transfer
+- Change Data Capture
+- Copy Job Activity
+- Data Factory
+- Data Integration
+- Data Movement
+- Data Orchestration
+- Data Pipelines
+- Email Notification
+- ETL
+- Incremental Copy
+- Microsoft Fabric
+- No Code
+- Pipeline Automation
+- Pipeline Scheduling
+- Telemetry
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog announces the general availability of Copy Job Activity in Data Factory pipelines, highlighting new capabilities for automating and orchestrating data movement workflows.<!--excerpt_end-->
 
 # Copy Job Activity Now Generally Available in Microsoft Fabric Data Factory Pipelines

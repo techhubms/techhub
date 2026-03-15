@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Microsoft and SABC Plus Collaborate to Expand AI Skills Access in South Africa"
-description: "This news article details Microsoft and SABC Plus joining forces to deliver accessible AI fluency and digital skills training to millions of South Africans via the SABC digital platform. The collaboration centers on expanding AI education, closing the skills gap, and democratizing opportunities for learners, educators, and job seekers, especially those from underserved communities. The initiative builds on Microsoft Elevate and past success with the AI Skills Initiative, integrating scalable learning pathways, certifications, and targeted programmes for women, students, and the nonprofit sector."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/emea/2026/01/microsoft-and-sabc-plus-set-to-unlock-ai-and-digital-skills-for-millions-of-south-africans/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/emea/2026/01/microsoft-and-sabc-plus-set-to-unlock-ai-and-digital-skills-for-millions-of-south-africans/
+title: Microsoft and SABC Plus Collaborate to Expand AI Skills Access in South Africa
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-29 14:51:13 +00:00
-permalink: "/2026-01-29-Microsoft-and-SABC-Plus-Collaborate-to-Expand-AI-Skills-Access-in-South-Africa.html"
-categories: ["AI"]
-tags: ["Africa", "AI", "AI Certification", "AI Fluency", "AI Skills Initiative", "Company News", "Digital Literacy", "Digital Skills", "Inclusive Innovation", "Jobs Of The Future", "Microsoft Elevate", "News", "Online Learning", "Public Private Partnership", "SABC Plus", "South Africa", "Workforce Development"]
-tags_normalized: ["africa", "ai", "ai certification", "ai fluency", "ai skills initiative", "company news", "digital literacy", "digital skills", "inclusive innovation", "jobs of the future", "microsoft elevate", "news", "online learning", "public private partnership", "sabc plus", "south africa", "workforce development"]
+tags:
+- Africa
+- AI
+- AI Certification
+- AI Fluency
+- AI Skills Initiative
+- Company News
+- Digital Literacy
+- Digital Skills
+- Inclusive Innovation
+- Jobs Of The Future
+- Microsoft Elevate
+- News
+- Online Learning
+- Public Private Partnership
+- SABC Plus
+- South Africa
+- Workforce Development
+section_names:
+- ai
 ---
-
 stclarke reports on the collaboration between Microsoft and SABC Plus aimed at providing scalable AI fluency and digital skills training to millions of South Africans through a national digital platform.<!--excerpt_end-->
 
 # Microsoft and SABC Plus Collaborate to Expand AI Skills Access in South Africa

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Pinned Comments and Improved Comment Quality in GitHub Issues"
-description: "This post introduces two major updates to GitHub Issues: the ability to pin comments to the top of issues for greater visibility, and a new feature to discourage low-quality comments by prompting users to react or subscribe instead of posting brief support comments. These enhancements aim to help teams and collaborators focus on what matters most within issue threads."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-05-pinned-comments-on-github-issues"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-05-pinned-comments-on-github-issues
+title: Pinned Comments and Improved Comment Quality in GitHub Issues
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-05 17:59:54 +00:00
-permalink: "/2026-02-05-Pinned-Comments-and-Improved-Comment-Quality-in-GitHub-Issues.html"
-categories: ["DevOps"]
-tags: ["Collaboration", "DevOps", "GitHub", "GitHub Issues", "Issue Management", "News", "Pinned Comments", "Productivity Tools", "Project Management", "Projects & Issues", "Release Notes", "Software Development Workflow", "Team Communication"]
-tags_normalized: ["collaboration", "devops", "github", "github issues", "issue management", "news", "pinned comments", "productivity tools", "project management", "projects and issues", "release notes", "software development workflow", "team communication"]
+tags:
+- Collaboration
+- DevOps
+- GitHub
+- GitHub Issues
+- Issue Management
+- News
+- Pinned Comments
+- Productivity Tools
+- Project Management
+- Projects & Issues
+- Release Notes
+- Software Development Workflow
+- Team Communication
+section_names:
+- devops
 ---
-
 Allison discusses recent updates to GitHub Issues that introduce pinned comments and promote higher-quality discussions, helping teams stay focused and reduce unnecessary noise.<!--excerpt_end-->
 
 # Pinned Comments and Improved Comment Quality in GitHub Issues

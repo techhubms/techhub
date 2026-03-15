@@ -1,0 +1,264 @@
+/* ============================================================================
+   Sub-Navigation - Horizontal navigation below page header
+   ============================================================================ */
+
+.sub-nav {
+    position: sticky;
+    top: 76px;
+    /* Sticks below main-nav (76px is main-nav height) */
+    z-index: 999;
+    background: var(--color-bg-default);
+    border-bottom: 1px solid var(--color-border-default);
+    margin-bottom: var(--spacing-4);
+    /* Vertical padding: spacing-1; wrapper adds 4px more for focus outline */
+    padding: var(--spacing-1);
+    /* Allow dropdown menu to overflow on desktop;
+       mobile override below handles the dropdown case */
+    overflow: visible;
+    /* Reserve height to prevent layout shift before buttons render */
+    min-height: var(--sub-nav-height);
+}
+
+.sub-nav-wrapper {
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+    /* Extra vertical padding to prevent focus outline clipping */
+    padding: 4px var(--spacing-4);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-1);
+    flex-wrap: wrap;
+}
+
+/* Mobile dropdown - hidden on desktop */
+.sub-nav-mobile {
+    display: none;
+}
+
+/* Mobile: SubNav becomes a dropdown */
+@media (max-width: 1292px) {
+    .sub-nav {
+        position: sticky;
+        top: var(--mobile-nav-height);
+        padding: 0;
+        margin-bottom: var(--spacing-2);
+        min-height: var(--touch-target-min-size);
+    }
+
+    .sub-nav-wrapper {
+        display: none;
+    }
+
+    .sub-nav-mobile {
+        display: block;
+        position: relative;
+    }
+
+    .sub-nav-dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--spacing-3);
+        width: 100%;
+        padding: var(--spacing-2) var(--spacing-4);
+        background: var(--color-bg-default);
+        border: none;
+        color: var(--color-text-primary);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-semibold);
+        cursor: pointer;
+        min-height: var(--touch-target-min-size);
+    }
+
+    .sub-nav-chevron {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid currentColor;
+        border-bottom: 2px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.2s var(--easing-ease);
+        flex-shrink: 0;
+    }
+
+    .sub-nav-chevron.expanded {
+        transform: rotate(-135deg);
+    }
+
+    .sub-nav-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg-default);
+        border-bottom: 1px solid var(--color-border-default);
+        border-top: 1px solid var(--color-border-default);
+        box-shadow: var(--shadow-md);
+        z-index: 998;
+    }
+
+    .sub-nav-dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: var(--spacing-2) var(--spacing-4);
+        color: var(--color-text-secondary);
+        text-decoration: none;
+        font-size: var(--font-size-lg);
+        min-height: var(--touch-target-min-size);
+        border-bottom: 1px solid var(--color-border-default);
+        transition: all var(--duration-fast) var(--easing-ease);
+    }
+
+    .sub-nav-dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    @media (hover: hover) {
+        .sub-nav-dropdown-item:hover {
+            background: var(--color-bg-hover-subtle);
+            color: var(--color-text-primary);
+            text-decoration: none;
+        }
+    }
+
+    .sub-nav-dropdown-item.active {
+        color: var(--color-purple-bright);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    /* Custom page styling in mobile dropdown — match desktop purple accent */
+    .sub-nav-dropdown-custom {
+        border-left: 3px solid var(--color-purple-bright);
+        padding-left: calc(var(--spacing-4) - 3px);
+    }
+
+    .sub-nav-dropdown-custom::after {
+        font-size: 0.85em;
+        color: var(--color-purple-bright);
+        opacity: 0.5;
+        margin-left: 0.15em;
+        vertical-align: super;
+        position: relative;
+        top: -0.35em;
+    }
+
+    @media (hover: hover) {
+        .sub-nav-dropdown-custom:hover {
+            border-left-color: var(--color-purple-medium);
+        }
+    }
+
+    .sub-nav-dropdown-custom.active {
+        border-left-color: var(--color-purple-bright);
+    }
+
+    .sub-nav-dropdown-custom.active::after {
+        opacity: 0.7;
+    }
+}
+
+/* ============================================================================
+   Sub-Navigation Button Styles
+   ============================================================================ */
+
+.btn-subnav {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--spacing-1) var(--spacing-2);
+    background: transparent;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    .btn-subnav:hover {
+        background: var(--color-bg-hover-subtle);
+        box-shadow: 0 0 0 1px var(--color-purple-bright) inset;
+        color: var(--color-text-emphasis);
+        text-decoration: none;
+    }
+}
+
+.btn-subnav.active {
+    color: var(--color-text-on-emphasis);
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+    .btn-subnav.active:hover {
+        background: var(--color-purple-medium);
+        color: var(--color-text-on-emphasis);
+        text-decoration: none;
+    }
+}
+
+.btn-subnav:focus-visible {
+    outline: 3px solid var(--color-purple-bright) !important;
+    outline-offset: 2px !important;
+    transition: none !important;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+}
+
+/* Custom page sparkle indicator — subtle star after custom page links */
+.btn-subnav-custom {
+    border-color: var(--color-purple-bright);
+}
+
+.btn-subnav-custom::after {
+    font-size: 0.85em;
+    color: var(--color-purple-bright);
+    opacity: 0.5;
+    margin-left: 0.15em;
+    vertical-align: super;
+    position: relative;
+    top: -0.35em;
+}
+
+@media (hover: hover) {
+    .btn-subnav-custom:hover::after {
+        opacity: 0.8;
+    }
+}
+
+.btn-subnav-custom.active::after {
+    color: var(--color-text-on-emphasis);
+    opacity: 0.7;
+}
+
+/* Homepage SubNav: fully hidden on desktop,
+   only show the mobile dropdown on tablet/mobile */
+.sub-nav-homepage {
+    padding: 0;
+    min-height: 0;
+    border-bottom: none;
+    background: transparent;
+}
+
+.sub-nav-homepage .sub-nav-wrapper {
+    display: none;
+}
+
+.sub-nav-homepage .sub-nav-mobile {
+    display: none;
+}
+
+@media (max-width: 1292px) {
+    .sub-nav-homepage {
+        padding: 0;
+        border-bottom: 1px solid var(--color-border-default);
+    }
+
+    .sub-nav-homepage .sub-nav-mobile {
+        display: block;
+    }
+}

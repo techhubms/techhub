@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Security Flaw: GitHub Commit Deletion Mishaps Lead to Istio Repository Breach"
-description: "DevClass.com reports on a major GitHub security incident where a researcher uncovered admin access secrets in deleted commits, impacting Istio repositories. This article explores the risks of improper secret removal, mitigation steps, and best practices for developers facing similar issues."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/security/2025/07/03/security-researcher-exploits-github-gotcha-gets-admin-access-to-all-istio-repositories-and-more/101129"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/security/2025/07/03/security-researcher-exploits-github-gotcha-gets-admin-access-to-all-istio-repositories-and-more/101129
+title: 'Security Flaw: GitHub Commit Deletion Mishaps Lead to Istio Repository Breach'
+author: DevClass.com
+primary_section: devops
+feed_name: DevClass
 date: 2025-07-03 14:48:30 +00:00
-permalink: "/2025-07-03-Security-Flaw-GitHub-Commit-Deletion-Mishaps-Lead-to-Istio-Repository-Breach.html"
-categories: ["DevOps", "Security"]
-tags: ["Best Practices", "Blogs", "DevOps", "Force Push", "GH Archive", "Git Filter Repo", "Git History", "GitHub", "Incident Response", "Istio", "Kubernetes", "Open Source", "Personal Access Tokens", "Secrets Management", "Security", "Truffle Security", "Version Control"]
-tags_normalized: ["best practices", "blogs", "devops", "force push", "gh archive", "git filter repo", "git history", "github", "incident response", "istio", "kubernetes", "open source", "personal access tokens", "secrets management", "security", "truffle security", "version control"]
+tags:
+- Best Practices
+- Blogs
+- DevOps
+- Force Push
+- GH Archive
+- Git Filter Repo
+- Git History
+- GitHub
+- Incident Response
+- Istio
+- Kubernetes
+- Open Source
+- Personal Access Tokens
+- Secrets Management
+- Security
+- Truffle Security
+- Version Control
+section_names:
+- devops
+- security
 ---
-
 DevClass.com investigates how security researcher Sharon Brizinov exploited lingering secrets in GitHub commit histories to gain admin access to all Istio repositories, highlighting key lessons for developers on secure handling of credentials.<!--excerpt_end-->
 
 # Security Flaw: GitHub Commit Deletion Mishaps Lead to Istio Repository Breach

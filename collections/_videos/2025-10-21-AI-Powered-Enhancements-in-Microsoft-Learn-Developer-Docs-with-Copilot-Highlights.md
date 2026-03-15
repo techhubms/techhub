@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights"
-description: "This video episode features Megha Anand from the Microsoft Learn documentation team discussing the integration of AI, specifically GitHub Copilot and Copilot Highlights, into Microsoft's developer documentation process. The conversation covers real-world coding scenarios, including code migration, game development in Python, deploying Azure Functions with Visual Studio Code, and the beneficial impact of AI-powered documentation and context engineering. Viewers are introduced to practical tips for using AI in developer workflows, empowering both content writers and the developer community to embrace and contribute to the future of technical documentation."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4fYXcmyZH3U"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=4fYXcmyZH3U
+title: AI-Powered Enhancements in Microsoft Learn Developer Docs with Copilot Highlights
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-10-21 15:41:25 +00:00
-permalink: "/2025-10-21-AI-Powered-Enhancements-in-Microsoft-Learn-Developer-Docs-with-Copilot-Highlights.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Integration", "AI Powered Docs", "Azure", "Azure Functions", "Cloud Computing", "Code Migration", "Coding", "Coding Best Practices", "Content Engineering", "Context Engineering", "Copilot Highlights", "Dev", "Developer Documentation", "Developer Tools", "Development", "GitHub Copilot", "Machine Learning", "Microsoft", "Microsoft Developer", "Microsoft Learn", "Python", "Tech", "Technical Writing", "Technology", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai integration", "ai powered docs", "azure", "azure functions", "cloud computing", "code migration", "coding", "coding best practices", "content engineering", "context engineering", "copilot highlights", "dev", "developer documentation", "developer tools", "development", "github copilot", "machine learning", "microsoft", "microsoft developer", "microsoft learn", "python", "tech", "technical writing", "technology", "videos", "vs code"]
+tags:
+- .NET
+- AI Integration
+- AI Powered Docs
+- Azure Functions
+- Cloud Computing
+- Code Migration
+- Coding Best Practices
+- Content Engineering
+- Context Engineering
+- Copilot Highlights
+- Dev
+- Developer Documentation
+- Developer Tools
+- Development
+- ML
+- Microsoft
+- Microsoft Developer
+- Microsoft Learn
+- Python
+- Tech
+- Technical Writing
+- Technology
+- VS Code
+- AI
+- Azure
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this Microsoft Developer video, Megha Anand and John Maeda discuss how AI and GitHub Copilot are transforming developer documentation on Microsoft Learn. Megha shares practical insights, real-world examples, and AI tips for both writers and developers.<!--excerpt_end-->
 
 {% youtube 4fYXcmyZH3U %}

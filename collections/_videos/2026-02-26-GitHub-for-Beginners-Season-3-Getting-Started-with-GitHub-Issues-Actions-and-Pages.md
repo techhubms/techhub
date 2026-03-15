@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub for Beginners Season 3: Getting Started with GitHub Issues, Actions, and Pages"
-description: "Season 3 of GitHub for Beginners targets new developers seeking hands-on tutorials in core GitHub workflow topics. The content covers creating and managing GitHub issues, automating workflows using GitHub Actions, building portfolios with GitHub Pages, and collaborative development in Visual Studio Code. The series features practical demonstrations and is aimed at helping users become productive with GitHub as a development platform. Additional resources and community updates are provided through GitHub's various social media channels."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/Dypm17qVYQk"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/Dypm17qVYQk
+title: 'GitHub for Beginners Season 3: Getting Started with GitHub Issues, Actions, and Pages'
+author: GitHub
+primary_section: dotnet
+feed_name: GitHub YouTube
 date: 2026-02-26 18:54:56 +00:00
-permalink: "/2026-02-26-GitHub-for-Beginners-Season-3-Getting-Started-with-GitHub-Issues-Actions-and-Pages.html"
-categories: ["Coding", "DevOps"]
-tags: ["Beginner Tutorial", "CI/CD", "Coding", "Collaboration", "DevOps", "GitHub", "GitHub Actions", "GitHub Issues", "GitHub Pages", "GitHubIssues", "Open Source", "Portfolio Development", "Version Control", "Videos", "VS Code", "Workflow Automation"]
-tags_normalized: ["beginner tutorial", "cislashcd", "coding", "collaboration", "devops", "github", "github actions", "github issues", "github pages", "githubissues", "open source", "portfolio development", "version control", "videos", "vs code", "workflow automation"]
+tags:
+- Beginner Tutorial
+- CI/CD
+- Collaboration
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Issues
+- GitHub Pages
+- GitHubIssues
+- Open Source
+- Portfolio Development
+- Version Control
+- Videos
+- VS Code
+- Workflow Automation
+- .NET
+section_names:
+- dotnet
+- devops
 ---
-
 GitHub presents Season 3 of GitHub for Beginners, with practical tutorials by the GitHub team. The series guides new users on managing issues, building portfolios, and automating workflows with Actions and Pages.<!--excerpt_end-->
 
 {% youtube Dypm17qVYQk %}

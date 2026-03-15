@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Agent Factory: Blueprint for Safe and Secure Enterprise AI Agents Using Azure AI Foundry"
-description: "This article, written by Yina Arenas for the Microsoft Azure Blog, explores how Azure AI Foundry provides a layered approach to building trust in AI agents for enterprises. It covers best practices, design patterns, and technical controls for securing, governing, and monitoring agentic AI, including identity management, data protection, risk evaluation, and regulatory compliance using Microsoft security and governance tools."
-author: "Yina Arenas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/agent-factory-creating-a-blueprint-for-safe-and-secure-ai-agents/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/agent-factory-creating-a-blueprint-for-safe-and-secure-ai-agents/
+title: 'Agent Factory: Blueprint for Safe and Secure Enterprise AI Agents Using Azure AI Foundry'
+author: Yina Arenas
+feed_name: The Azure Blog
 date: 2025-09-17 21:30:00 +00:00
-permalink: "/2025-09-17-Agent-Factory-Blueprint-for-Safe-and-Secure-Enterprise-AI-Agents-Using-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Factory", "AI", "AI + Machine Learning", "AI Agent Blueprint", "Analytics", "Azure", "Azure AI Foundry", "Compliance", "Data Protection", "DLP", "Enterprise AI", "Entra Agent ID", "EU AI Act", "Governance", "Management And Governance", "Microsoft Defender", "Microsoft Purview", "News", "NIST AI RMF", "Observability", "Prompt Injection", "PyRIT", "Red Teaming Agent", "Risk Evaluation", "Security", "Shift Left Security"]
-tags_normalized: ["agent factory", "ai", "ai plus machine learning", "ai agent blueprint", "analytics", "azure", "azure ai foundry", "compliance", "data protection", "dlp", "enterprise ai", "entra agent id", "eu ai act", "governance", "management and governance", "microsoft defender", "microsoft purview", "news", "nist ai rmf", "observability", "prompt injection", "pyrit", "red teaming agent", "risk evaluation", "security", "shift left security"]
+tags:
+- Agent Factory
+- AI + Machine Learning
+- AI Agent Blueprint
+- Analytics
+- Azure AI Foundry
+- Compliance
+- Data Protection
+- DLP
+- Enterprise AI
+- Entra Agent ID
+- EU AI Act
+- Governance
+- Management And Governance
+- Microsoft Defender
+- Microsoft Purview
+- NIST AI RMF
+- Observability
+- Prompt Injection
+- PyRIT
+- Red Teaming Agent
+- Risk Evaluation
+- Shift Left Security
+- AI
+- Azure
+- Security
+- News
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Yina Arenas discusses how enterprises can use Azure AI Foundry to implement a secure and trustworthy AI agent blueprint, addressing identity, governance, and real-time security controls for agentic AI in production environments.<!--excerpt_end-->
 
 # Agent Factory: Blueprint for Safe and Secure Enterprise AI Agents Using Azure AI Foundry

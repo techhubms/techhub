@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Managing AI Features in Visual Studio for High School Computer Science Education"
-description: "This discussion, led by misterebs, explores the challenges of teaching programming to high school students using Visual Studio, particularly in managing AI features like GitHub Copilot and Intellisense. Educators share strategies for restricting AI, discuss licensing and administrative controls, alternatives like Codespaces and VSCodium, and reflect on the impact of AI tools on foundational programming education. The thread offers practical advice and broader commentary on balancing AI assistance with hands-on learning."
-author: "misterebs"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/VisualStudio/comments/1mk0wi2/as_a_hs_computer_science_teacher/"
-viewing_mode: "external"
-feed_name: "Reddit Visual Studio"
-feed_url: "https://www.reddit.com/r/VisualStudio/.rss"
+﻿---
+external_url: https://www.reddit.com/r/VisualStudio/comments/1mk0wi2/as_a_hs_computer_science_teacher/
+title: Managing AI Features in Visual Studio for High School Computer Science Education
+author: misterebs
+feed_name: Reddit Visual Studio
 date: 2025-08-07 14:01:25 +00:00
-permalink: "/2025-08-07-Managing-AI-Features-in-Visual-Studio-for-High-School-Computer-Science-Education.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI in Education", "C#", "C++", "Classroom Management", "Codespaces", "Coding", "Community", "Computer Science Education", "DevOps", "GitHub Copilot", "Group Policy", "IDE Configuration", "Intellisense", "Microsoft", "Software Licensing", "Visual Basic", "VS", "VS Code", "VSCodium"]
-tags_normalized: ["ai", "ai in education", "csharp", "cplusplus", "classroom management", "codespaces", "coding", "community", "computer science education", "devops", "github copilot", "group policy", "ide configuration", "intellisense", "microsoft", "software licensing", "visual basic", "vs", "vs code", "vscodium"]
+tags:
+- AI in Education
+- C#
+- C++
+- Classroom Management
+- Codespaces
+- Computer Science Education
+- Group Policy
+- IDE Configuration
+- Intellisense
+- Microsoft
+- Software Licensing
+- Visual Basic
+- VS
+- VS Code
+- VSCodium
+- AI
+- DevOps
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 misterebs and fellow educators discuss best practices for managing AI-enabled features like GitHub Copilot in Visual Studio while teaching foundational programming skills to students, offering strategies, alternative tools, and reflections on teaching philosophies.<!--excerpt_end-->
 
 # Managing AI Features in Visual Studio for Education

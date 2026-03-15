@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Introducing the RabbitMQ Connector for Azure Logic Apps (Public Preview)"
-description: "This announcement introduces the new RabbitMQ Connector for Azure Logic Apps (Standard and Hybrid). The connector enables developers to create robust messaging workflows by allowing Logic Apps to send and receive messages with RabbitMQ, supporting hybrid, on-premises, and cloud messaging scenarios, including triggers, publishing, and advanced message management."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-rabbitmq-connector-public-preview/ba-p/4462627"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/introducing-the-rabbitmq-connector-public-preview/ba-p/4462627
+title: Introducing the RabbitMQ Connector for Azure Logic Apps (Public Preview)
+author: hcamposu
+feed_name: Microsoft Tech Community
 date: 2025-10-20 13:52:07 +00:00
-permalink: "/2025-10-20-Introducing-the-RabbitMQ-Connector-for-Azure-Logic-Apps-Public-Preview.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Logic Apps", "BizTalk Modernization", "Clustering", "Community", "Connector", "Exchange", "High Availability", "Hybrid Integration", "Messaging", "On Premises Integration", "Peek Lock", "Publish", "Queue", "Queue Management", "RabbitMQ", "Triggers"]
-tags_normalized: ["azure", "azure logic apps", "biztalk modernization", "clustering", "community", "connector", "exchange", "high availability", "hybrid integration", "messaging", "on premises integration", "peek lock", "publish", "queue", "queue management", "rabbitmq", "triggers"]
+tags:
+- Azure Logic Apps
+- BizTalk Modernization
+- Clustering
+- Connector
+- Exchange
+- High Availability
+- Hybrid Integration
+- Messaging
+- On Premises Integration
+- Peek Lock
+- Publish
+- Queue
+- Queue Management
+- RabbitMQ
+- Triggers
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 hcamposu announces the RabbitMQ Connector in Azure Logic Apps, detailing how developers can set up messaging workflows by sending and receiving messages with RabbitMQ in both standard and hybrid scenarios.<!--excerpt_end-->
 
 # Introducing the RabbitMQ Connector for Azure Logic Apps (Public Preview)

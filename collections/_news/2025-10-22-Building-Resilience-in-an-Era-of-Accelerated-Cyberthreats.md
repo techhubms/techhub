@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Resilience in an Era of Accelerated Cyberthreats"
-description: "This news article analyzes key findings from the Microsoft Digital Defense Report 2025, emphasizing the growing speed, scale, and sophistication of cyberattacks—many leveraging AI. It explores how organizations and CISOs must rethink security strategies, prioritize resilience, and adopt automation, intelligence, and cross-functional practices using Microsoft solutions such as Azure, Entra ID, and the Secure Future Initiative."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/22/the-ciso-imperative-building-resilience-in-an-era-of-accelerated-cyberthreats/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/22/the-ciso-imperative-building-resilience-in-an-era-of-accelerated-cyberthreats/
+title: Building Resilience in an Era of Accelerated Cyberthreats
+author: stclarke
+feed_name: Microsoft News
 date: 2025-10-22 17:56:46 +00:00
-permalink: "/2025-10-22-Building-Resilience-in-an-Era-of-Accelerated-Cyberthreats.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Enabled Attacks", "Automation", "Azure", "CISO", "Cloud Security", "Company News", "Cybersecurity", "Governance", "Identity Security", "Incident Response", "Microsoft Digital Defense Report", "Microsoft Entra ID", "News", "Operational Resilience", "Phishing Resistant MFA", "Secure Future Initiative", "Security", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["ai", "ai enabled attacks", "automation", "azure", "ciso", "cloud security", "company news", "cybersecurity", "governance", "identity security", "incident response", "microsoft digital defense report", "microsoft entra id", "news", "operational resilience", "phishing resistant mfa", "secure future initiative", "security", "threat intelligence", "zero trust"]
+tags:
+- AI Enabled Attacks
+- Automation
+- CISO
+- Cloud Security
+- Company News
+- Cybersecurity
+- Governance
+- Identity Security
+- Incident Response
+- Microsoft Digital Defense Report
+- Microsoft Entra ID
+- Operational Resilience
+- Phishing Resistant MFA
+- Secure Future Initiative
+- Threat Intelligence
+- Zero Trust
+- AI
+- Azure
+- Security
+- News
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 stclarke reviews findings from the Microsoft Digital Defense Report 2025, highlighting the accelerated pace of threats and how CISOs can leverage AI, automation, and modern identity controls to build organizational resilience.<!--excerpt_end-->
 
 # Building Resilience in an Era of Accelerated Cyberthreats

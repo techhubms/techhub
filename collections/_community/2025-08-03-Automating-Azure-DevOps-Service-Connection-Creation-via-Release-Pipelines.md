@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Automating Azure DevOps Service Connection Creation via Release Pipelines"
-description: "This community post discusses automating the creation of Azure DevOps service connections using PowerShell scripts and JSON files, focusing on how to authenticate securely in a release pipeline. It explores practical considerations, options for authentication (service connection, PAT, OIDC), and trade-offs when managing service principals and pipeline integration."
-author: "Odd-Good-6514"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1mgg9wy/release_pipeline_for_creating_serviceconnections/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+external_url: https://www.reddit.com/r/azuredevops/comments/1mgg9wy/release_pipeline_for_creating_serviceconnections/
+title: Automating Azure DevOps Service Connection Creation via Release Pipelines
+author: Odd-Good-6514
+feed_name: Reddit Azure DevOps
 date: 2025-08-03 10:49:12 +00:00
-permalink: "/2025-08-03-Automating-Azure-DevOps-Service-Connection-Creation-via-Release-Pipelines.html"
-categories: ["Azure", "DevOps"]
-tags: ["Authentication", "Azure", "Azure DevOps", "Community", "Continuous Deployment", "DevOps", "GitHub", "JSON", "OIDC", "Pipeline Automation", "PowerShell", "Release Pipeline", "Service Connections", "Service Principal"]
-tags_normalized: ["authentication", "azure", "azure devops", "community", "continuous deployment", "devops", "github", "json", "oidc", "pipeline automation", "powershell", "release pipeline", "service connections", "service principal"]
+tags:
+- Authentication
+- Azure DevOps
+- Continuous Deployment
+- GitHub
+- JSON
+- OIDC
+- Pipeline Automation
+- PowerShell
+- Release Pipeline
+- Service Connections
+- Service Principal
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Odd-Good-6514 and several contributors examine approaches for automating Azure DevOps service connection setup across environments, detailing authentication considerations and alternatives to manual setup.<!--excerpt_end-->
 
 # Automating Azure DevOps Service Connection Creation via Release Pipelines

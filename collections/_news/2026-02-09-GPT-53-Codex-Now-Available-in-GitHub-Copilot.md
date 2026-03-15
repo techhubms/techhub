@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GPT-5.3-Codex Now Available in GitHub Copilot"
-description: "This announcement covers the rollout of OpenAI’s GPT-5.3-Codex, the latest agentic coding model, now integrated into GitHub Copilot. It highlights improvements in coding benchmarks, reasoning, and performance, as well as availability, enablement steps for organizations, and links to additional documentation for developers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-09-gpt-5-3-codex-is-now-generally-available-for-github-copilot
+title: GPT-5.3-Codex Now Available in GitHub Copilot
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-09 17:41:21 +00:00
-permalink: "/2026-02-09-GPT-53-Codex-Now-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Coding", "AI", "AI Model", "Coding Tools", "Copilot", "Copilot Business", "Copilot Enterprise", "Developer Productivity", "GitHub CLI", "GitHub Copilot", "GPT 5.3 Codex", "Model Rollout", "News", "OpenAI", "Software Development", "VS Code"]
-tags_normalized: ["agentic coding", "ai", "ai model", "coding tools", "copilot", "copilot business", "copilot enterprise", "developer productivity", "github cli", "github copilot", "gpt 5dot3 codex", "model rollout", "news", "openai", "software development", "vs code"]
+tags:
+- Agentic Coding
+- AI
+- AI Model
+- Coding Tools
+- Copilot
+- Copilot Business
+- Copilot Enterprise
+- Developer Productivity
+- GitHub CLI
+- GitHub Copilot
+- GPT 5.3 Codex
+- Model Rollout
+- News
+- OpenAI
+- Software Development
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the general availability of GPT-5.3-Codex for GitHub Copilot, detailing new model capabilities, rollout plans, and how developers can access and enable it across their environments.<!--excerpt_end-->
 
 # GPT-5.3-Codex Now Available in GitHub Copilot

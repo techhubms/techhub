@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Modernizing for the AI Era: Accelerating Application Transformation with Agentic Tools"
-description: "This article examines how Microsoft’s agentic tools—such as GitHub Copilot, Azure Migrate, and Azure Copilot—are fundamentally changing the landscape of application modernization. It discusses how AI-driven approaches help organizations migrate legacy systems, reduce technical debt, improve DevOps efficiency, and securely adopt modern cloud-native architectures."
-author: "MarcoB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/modernizing-for-the-ai-era-accelerating-application/ba-p/4490596"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/modernizing-for-the-ai-era-accelerating-application/ba-p/4490596
+title: 'Modernizing for the AI Era: Accelerating Application Transformation with Agentic Tools'
+author: MarcoB
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-12 23:41:09 +00:00
-permalink: "/2026-02-12-Modernizing-for-the-AI-Era-Accelerating-Application-Transformation-with-Agentic-Tools.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET 8", "Agentic Tools", "AI", "AI in Software Development", "Application Modernization", "ARM Templates", "Azure", "Azure Copilot", "Azure DevOps", "Azure Migrate", "Bicep", "CI/CD", "Cloud Adoption Framework", "Cloud Operations", "Coding", "Community", "DevOps", "DevOps Automation", "GitHub Copilot", "IaC", "Java 21", "Legacy System Migration", "Refactoring", "Security", "Terraform"]
-tags_normalized: ["dotnet 8", "agentic tools", "ai", "ai in software development", "application modernization", "arm templates", "azure", "azure copilot", "azure devops", "azure migrate", "bicep", "cislashcd", "cloud adoption framework", "cloud operations", "coding", "community", "devops", "devops automation", "github copilot", "iac", "java 21", "legacy system migration", "refactoring", "security", "terraform"]
+tags:
+- .NET 8
+- Agentic Tools
+- AI
+- AI in Software Development
+- Application Modernization
+- ARM Templates
+- Azure
+- Azure Copilot
+- Azure DevOps
+- Azure Migrate
+- Bicep
+- CI/CD
+- Cloud Adoption Framework
+- Cloud Operations
+- Community
+- DevOps
+- DevOps Automation
+- GitHub Copilot
+- IaC
+- Java 21
+- Legacy System Migration
+- Refactoring
+- Security
+- Terraform
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- security
 ---
-
 MarcoB presents a detailed analysis of how AI-powered agentic tools from Microsoft, including GitHub Copilot and Azure Migrate, drive faster and safer application modernization for organizations.<!--excerpt_end-->
 
 # Modernizing for the AI Era: Accelerating Application Transformation with Agentic Tools

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI Security Innovations in Edge for Business: Microsoft Ignite BRK336 Recap"
-description: "This session from Microsoft Ignite 2025 explores Edge for Business as a secure, AI-powered enterprise browser. The talk highlights features like Copilot Mode, agentic AI browsing, workflow streamlining, and robust security measures including Purview DLP. Both productivity gains and uncompromising security are covered, with practical demos and architectural overview. Speakers Lindsay Kubasik and Sean Lyndersay provide actionable insights for IT practitioners interested in leveraging AI in enterprise environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ek-xc4PyCxo"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=ek-xc4PyCxo
+title: 'AI Security Innovations in Edge for Business: Microsoft Ignite BRK336 Recap'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 07:23:25 +00:00
-permalink: "/2025-11-20-AI-Security-Innovations-in-Edge-for-Business-Microsoft-Ignite-BRK336-Recap.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "AI Productivity", "Browser Security", "Copilot Mode", "Data Protection", "Edge For Business", "Enterprise Browser", "Enterprise Security", "Microsoft Edge", "Microsoft Ignite", "MSIgnite", "Purview DLP", "ScalewithcloudandAIendpoints", "Security", "Security Features", "Teams Integration", "Videos", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "ai productivity", "browser security", "copilot mode", "data protection", "edge for business", "enterprise browser", "enterprise security", "microsoft edge", "microsoft ignite", "msignite", "purview dlp", "scalewithcloudandaiendpoints", "security", "security features", "teams integration", "videos", "workflow automation"]
+tags:
+- Agentic AI
+- AI Productivity
+- Browser Security
+- Copilot Mode
+- Data Protection
+- Edge For Business
+- Enterprise Browser
+- Enterprise Security
+- Microsoft Edge
+- Microsoft Ignite
+- MSIgnite
+- Purview DLP
+- ScalewithcloudandAIendpoints
+- Security Features
+- Teams Integration
+- Workflow Automation
+- AI
+- Security
+- Videos
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Microsoft Events features Lindsay Kubasik and Sean Lyndersay as they discuss Edge for Business, focusing on AI-powered productivity and enterprise-grade security innovations from Ignite 2025.<!--excerpt_end-->
 
 {% youtube ek-xc4PyCxo %}

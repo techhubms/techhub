@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Fabric Mirroring for Azure SQL Managed Instance Now Generally Available"
-description: "This article introduces the general availability of Fabric Mirroring for Azure SQL Managed Instance, a feature that allows near real-time data replication from Azure SQL Managed Instance directly to Microsoft Fabric’s OneLake. It highlights the architecture, setup process, advanced analytics capabilities, seamless schema changes, integration with Power BI Direct Lake mode, and details on mirroring pricing and supported scenarios."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-the-general-availability-ga-of-mirroring-for-azure-sql-managed-instance-in-microsoft-fabric/
+title: Fabric Mirroring for Azure SQL Managed Instance Now Generally Available
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-29 11:00:00 +00:00
-permalink: "/2025-09-29-Fabric-Mirroring-for-Azure-SQL-Managed-Instance-Now-Generally-Available.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure SQL Managed Instance", "Data Engineering", "Data Platform", "Data Replication", "Data Science", "Data Warehouse", "ETL Free Data Integration", "Fabric Mirroring Pricing", "KQL Database", "Lakehouse", "Microsoft Fabric", "Mirroring", "ML", "News", "Notebooks", "OneLake", "Power BI Direct Lake", "Real Time Analytics", "Schema Changes"]
-tags_normalized: ["azure", "azure sql managed instance", "data engineering", "data platform", "data replication", "data science", "data warehouse", "etl free data integration", "fabric mirroring pricing", "kql database", "lakehouse", "microsoft fabric", "mirroring", "ml", "news", "notebooks", "onelake", "power bi direct lake", "real time analytics", "schema changes"]
+tags:
+- Azure SQL Managed Instance
+- Data Engineering
+- Data Platform
+- Data Replication
+- Data Science
+- Data Warehouse
+- ETL Free Data Integration
+- Fabric Mirroring Pricing
+- KQL Database
+- Lakehouse
+- Microsoft Fabric
+- Mirroring
+- Notebooks
+- OneLake
+- Power BI Direct Lake
+- Real Time Analytics
+- Schema Changes
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 The Microsoft Fabric Blog team discusses the general availability of Fabric Mirroring for Azure SQL Managed Instance, guiding readers through setup, real-time analytics integration, and cost considerations.<!--excerpt_end-->
 
 # Fabric Mirroring for Azure SQL Managed Instance Now Generally Available
@@ -31,7 +46,7 @@ Mirroring in Fabric is a data integration feature that replicates data from sour
 - Data becomes analytics-ready and can be consumed via Power BI (including the new Direct Lake mode), Data Warehouse, Data Engineering, Lakehouse, KQL Database, and Notebooks.
 - Supports seamless schema changes, drastically reducing administrative effort compared to ETL-based pipelines.
 
-![Mirroring Architecture](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Picture1.png)
+![Mirroring Architecture](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/picture1.png)
 
 ## Setup, Monitoring, and Schema Adaptation
 
@@ -40,7 +55,7 @@ Setting up mirroring involves connecting your Azure SQL Managed Instance to Micr
 - Monitor mirroring status and data freshness from the Fabric UI.
 - Apply changes to schemas – DDL changes like adding or dropping columns can be made to mirrored tables without interruption.
 
-![Setup Visualization](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Picture2-1024x553.png)
+![Setup Visualization](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/picture2-1024x553.png)
 
 ![Animation of Mirroring Setup](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/sqlmisamigif.gif)
 

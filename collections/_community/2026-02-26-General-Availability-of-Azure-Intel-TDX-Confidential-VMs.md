@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "General Availability of Azure Intel® TDX Confidential VMs"
-description: "This announcement details the release of Azure's next generation of confidential virtual machines powered by 5th Gen Intel Xeon processors and Intel Trust Domain Extensions (TDX). It explains key features, supported scenarios (including confidential AI and security), hardware advancements, customer testimonials, and current availability for organizations running sensitive workloads on Azure."
-author: "simranparkhe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-general-availability-of-azure-intel-tdx-confidential/ba-p/4495693"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-confidential-computing/announcing-general-availability-of-azure-intel-tdx-confidential/ba-p/4495693
+title: General Availability of Azure Intel® TDX Confidential VMs
+author: simranparkhe
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-26 17:00:00 +00:00
-permalink: "/2026-02-26-General-Availability-of-Azure-Intel-TDX-Confidential-VMs.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["5th Gen Intel Xeon", "AI", "AI Workloads", "Attestation", "Azure", "Azure Boost", "Azure Confidential VMs", "Cloud Security", "Community", "Compliance", "Confidential AI", "Confidential Computing", "Confidential Data", "Cryptographic Attestation", "Data Protection", "Hardware Security", "Intel TDX", "NVMe SSD", "OpenHCL Paravisor", "Security", "Virtual Machines", "Virtualization Security", "VM Performance"]
-tags_normalized: ["5th gen intel xeon", "ai", "ai workloads", "attestation", "azure", "azure boost", "azure confidential vms", "cloud security", "community", "compliance", "confidential ai", "confidential computing", "confidential data", "cryptographic attestation", "data protection", "hardware security", "intel tdx", "nvme ssd", "openhcl paravisor", "security", "virtual machines", "virtualization security", "vm performance"]
+tags:
+- 5th Gen Intel Xeon
+- AI
+- AI Workloads
+- Attestation
+- Azure
+- Azure Boost
+- Azure Confidential VMs
+- Cloud Security
+- Community
+- Compliance
+- Confidential AI
+- Confidential Computing
+- Confidential Data
+- Cryptographic Attestation
+- Data Protection
+- Hardware Security
+- Intel TDX
+- NVMe SSD
+- OpenHCL Paravisor
+- Security
+- Virtual Machines
+- Virtualization Security
+- VM Performance
+section_names:
+- ai
+- azure
+- security
 ---
-
 Simran Parkhe introduces Azure's next-gen Intel® TDX Confidential Virtual Machines, highlighting security, performance upgrades, hardware-based data protection, and industry use cases.<!--excerpt_end-->
 
 # General Availability of Azure Intel® TDX Confidential VMs

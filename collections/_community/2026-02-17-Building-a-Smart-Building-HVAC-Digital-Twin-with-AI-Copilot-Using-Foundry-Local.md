@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Building a Smart Building HVAC Digital Twin with AI Copilot Using Foundry Local"
-description: "This article, written by Lee Stott, provides a comprehensive, technical walkthrough of implementing a smart building digital twin for HVAC operations using DigitalTwin, React, Three.js, and Microsoft Foundry Local. It covers digital twin modeling, physics-based simulation, AI-powered copilots for natural language interaction, 3D visualization, and fault injection for testing and operator training. The content is geared toward developers and engineers building advanced intelligent building management solutions leveraging Microsoft AI technologies."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-smart-building-hvac-digital-twin-with-ai-copilot/ba-p/4490784"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-smart-building-hvac-digital-twin-with-ai-copilot/ba-p/4490784
+title: Building a Smart Building HVAC Digital Twin with AI Copilot Using Foundry Local
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-17 08:00:00 +00:00
-permalink: "/2026-02-17-Building-a-Smart-Building-HVAC-Digital-Twin-with-AI-Copilot-Using-Foundry-Local.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Copilot", "Building Management", "Coding", "Community", "Digital Twin", "Energy Efficiency", "Express", "Facility Automation", "Fault Injection", "HVAC", "IoT", "JSON State Management", "Microsoft Foundry Local", "Natural Language Processing", "Node.js", "Operations Technology", "Physics Modeling", "React", "REST API", "Simulation", "Three.js", "WebSocket"]
-tags_normalized: ["ai", "ai copilot", "building management", "coding", "community", "digital twin", "energy efficiency", "express", "facility automation", "fault injection", "hvac", "iot", "json state management", "microsoft foundry local", "natural language processing", "nodedotjs", "operations technology", "physics modeling", "react", "rest api", "simulation", "threedotjs", "websocket"]
+tags:
+- AI
+- AI Copilot
+- Building Management
+- Community
+- Digital Twin
+- Energy Efficiency
+- Express
+- Facility Automation
+- Fault Injection
+- HVAC
+- IoT
+- JSON State Management
+- Microsoft Foundry Local
+- Natural Language Processing
+- Node.js
+- Operations Technology
+- Physics Modeling
+- React
+- REST API
+- Simulation
+- Three.js
+- WebSocket
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Lee Stott walks you through building a smart building HVAC digital twin using AI-powered copilots, combining physics-based simulation and 3D visualization with Microsoft Foundry Local for advanced facilities management.<!--excerpt_end-->
 
 # Building a Smart Building HVAC Digital Twin with AI Copilot Using Foundry Local

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Visual Studio 2026: Faster Performance and AI-Driven Developer Tools Now Available"
-description: "Visual Studio 2026 is now generally available, introducing major improvements in performance, a redesigned UI, tightly integrated AI-powered features, and seamless compatibility with extensions and existing projects. This release highlights a new AI-native development environment, deep GitHub Copilot integration, and enhanced productivity tools for C#, C++, and .NET developers."
-author: "Mads Kristensen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-2026-is-here-faster-smarter-and-a-hit-with-early-adopters/
+title: 'Visual Studio 2026: Faster Performance and AI-Driven Developer Tools Now Available'
+author: Mads Kristensen
+feed_name: Microsoft VisualStudio Blog
 date: 2025-11-11 16:08:47 +00:00
-permalink: "/2025-11-11-Visual-Studio-2026-Faster-Performance-and-AI-Driven-Developer-Tools-Now-Available.html"
-categories: ["AI", "Coding"]
-tags: [".NET 10", "AI", "AI Native IDE", "Automatic Updates", "C#", "C++", "Coding", "Developer Productivity", "Extensions", "IDE", "Insiders Channel", "News", "Performance Improvement", "Profiler Agent", "User Experience", "VS"]
-tags_normalized: ["dotnet 10", "ai", "ai native ide", "automatic updates", "csharp", "cplusplus", "coding", "developer productivity", "extensions", "ide", "insiders channel", "news", "performance improvement", "profiler agent", "user experience", "vs"]
+tags:
+- .NET 10
+- AI Native IDE
+- Automatic Updates
+- C#
+- C++
+- Developer Productivity
+- Extensions
+- IDE
+- Insiders Channel
+- Performance Improvement
+- Profiler Agent
+- User Experience
+- VS
+- AI
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Mads Kristensen introduces Visual Studio 2026, highlighting a leap in performance, a fresh UI, and the integration of powerful AI features—like native GitHub Copilot support—for developers.<!--excerpt_end-->
 
 # Visual Studio 2026: Faster Performance and AI-Driven Developer Tools Now Available

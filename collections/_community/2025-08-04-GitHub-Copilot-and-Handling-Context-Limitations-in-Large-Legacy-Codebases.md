@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Copilot and Handling Context Limitations in Large Legacy Codebases"
-description: "The article by LifeguardFar6851 discusses challenges faced when using GitHub Copilot with large legacy codebases. Specifically, it addresses the context limits of Copilot when working with a 200,000-line application. The author inquires about potential workarounds to provide adequate context for effective code reviews and assistance."
-author: "LifeguardFar6851"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mhiqip/github_copilot_and_working_with_legacy_code/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhiqip/github_copilot_and_working_with_legacy_code/
+title: GitHub Copilot and Handling Context Limitations in Large Legacy Codebases
+author: LifeguardFar6851
+feed_name: Reddit Github Copilot
 date: 2025-08-04 16:49:00 +00:00
-permalink: "/2025-08-04-GitHub-Copilot-and-Handling-Context-Limitations-in-Large-Legacy-Codebases.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Code Assistance", "Code Review", "Community", "Context Limit", "Copilot Limitations", "Developer Tools", "GitHub Copilot", "Large Codebase", "Legacy Code", "Project Adaptation", "Software Engineering"]
-tags_normalized: ["ai", "ai code assistance", "code review", "community", "context limit", "copilot limitations", "developer tools", "github copilot", "large codebase", "legacy code", "project adaptation", "software engineering"]
+tags:
+- AI Code Assistance
+- Code Review
+- Context Limit
+- Copilot Limitations
+- Developer Tools
+- Large Codebase
+- Legacy Code
+- Project Adaptation
+- Software Engineering
+- AI
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 LifeguardFar6851 highlights practical concerns with using GitHub Copilot in a large legacy project, focusing on Copilot’s context limitations.<!--excerpt_end-->
 
 ## Overview

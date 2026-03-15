@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Subagents in VS Code: Parallel Execution and Context Isolation Explained"
-description: "This episode from Visual Studio Code dives into how VS Code's subagents and agents revolutionize development workflows. Listeners learn about agent loops, context windows, the task isolation power of subagents, and immediate benefits for daily coding practices. The discussion also covers orchestrating custom agents, strategies for optimizing AI model performance, and ways these innovations improve parallel execution and focus in development using VS Code and GitHub Copilot technology."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GMAoTeD9siU"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=GMAoTeD9siU
+title: 'Subagents in VS Code: Parallel Execution and Context Isolation Explained'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-09 08:00:31 +00:00
-permalink: "/2026-02-09-Subagents-in-VS-Code-Parallel-Execution-and-Context-Isolation-Explained.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agents", "AI", "AI Development", "Code Orchestration", "Coding", "Context Isolation", "Context Windows", "Custom Agents", "GitHub Copilot", "Main Agent", "Model Optimization", "Parallel Execution", "Productivity Tools", "Programming Workflows", "Subagents", "Videos", "VS Code"]
-tags_normalized: ["agents", "ai", "ai development", "code orchestration", "coding", "context isolation", "context windows", "custom agents", "github copilot", "main agent", "model optimization", "parallel execution", "productivity tools", "programming workflows", "subagents", "videos", "vs code"]
+tags:
+- Agents
+- AI
+- AI Development
+- Code Orchestration
+- Context Isolation
+- Context Windows
+- Custom Agents
+- GitHub Copilot
+- Main Agent
+- Model Optimization
+- Parallel Execution
+- Productivity Tools
+- Programming Workflows
+- Subagents
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code details how subagents and agent frameworks enable parallel execution, context isolation, and workflow improvements, with concrete discussion and examples. Hosted by the VS Code team, this episode helps developers get more from their coding sessions.<!--excerpt_end-->
 
 {% youtube GMAoTeD9siU %}

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Rx.NET Status and Roadmap Overview"
-description: "This session presents an update on Rx.NET, including its current adoption across the .NET environment, existing work in progress, and planned changes for coming releases. Viewers gain insight into the direction of reactive programming within the Microsoft ecosystem and understand how future Rx.NET versions will impact .NET application development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=y7Ks_bwSHUg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=y7Ks_bwSHUg
+title: Rx.NET Status and Roadmap Overview
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-13 10:00:06 +00:00
-permalink: "/2025-11-13-RxNET-Status-and-Roadmap-Overview.html"
-categories: ["Coding"]
-tags: [".NET", "Asynchronous Programming", "Coding", "Event Streams", "Framework Updates", "Future Planning", "Library Development", "Microsoft", "Open Source", "Package Versioning", "Reactive Extensions", "Reactive Programming", "Rx.NET", "Software Roadmap", "Videos"]
-tags_normalized: ["dotnet", "asynchronous programming", "coding", "event streams", "framework updates", "future planning", "library development", "microsoft", "open source", "package versioning", "reactive extensions", "reactive programming", "rxdotnet", "software roadmap", "videos"]
+tags:
+- .NET
+- Asynchronous Programming
+- Event Streams
+- Framework Updates
+- Future Planning
+- Library Development
+- Microsoft
+- Open Source
+- Package Versioning
+- Reactive Extensions
+- Reactive Programming
+- Rx.NET
+- Software Roadmap
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 dotnet shares the latest work and future plans for Rx.NET, outlining updates, development priorities, and roadmap insights relevant to .NET developers.<!--excerpt_end-->
 
 {% youtube y7Ks_bwSHUg %}

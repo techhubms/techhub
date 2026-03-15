@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "SQL Pool Insights: Monitoring Microsoft Fabric Data Warehouse Performance"
-description: "Discover SQL Pool Insights, a newly introduced feature in Microsoft Fabric Data Warehouse. This monitoring capability expands Query Insights by providing actionable telemetry at the SQL pool level. Learn to track pool pressure, resource allocation, and performance trends in real time, making capacity planning and troubleshooting more effective for analytics workloads on Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-sql-pool-insights-in-microsoft-fabric-data-warehouse/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-sql-pool-insights-in-microsoft-fabric-data-warehouse/
+title: 'SQL Pool Insights: Monitoring Microsoft Fabric Data Warehouse Performance'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-21 08:45:00 +00:00
-permalink: "/2025-11-21-SQL-Pool-Insights-Monitoring-Microsoft-Fabric-Data-Warehouse-Performance.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics Workloads", "Azure", "Capacity Planning", "Data Engineering", "Data Warehouse", "Event Logging", "Fabric Data Warehousing", "Historical Data", "Microsoft Fabric", "ML", "News", "Performance Monitoring", "Pressure Events", "Query Insights", "Resource Utilization", "SELECT Pool", "SQL Pool Insights", "SQL Pools", "Telemetry"]
-tags_normalized: ["analytics workloads", "azure", "capacity planning", "data engineering", "data warehouse", "event logging", "fabric data warehousing", "historical data", "microsoft fabric", "ml", "news", "performance monitoring", "pressure events", "query insights", "resource utilization", "select pool", "sql pool insights", "sql pools", "telemetry"]
+tags:
+- Analytics Workloads
+- Capacity Planning
+- Data Engineering
+- Data Warehouse
+- Event Logging
+- Fabric Data Warehousing
+- Historical Data
+- Microsoft Fabric
+- Performance Monitoring
+- Pressure Events
+- Query Insights
+- Resource Utilization
+- SELECT Pool
+- SQL Pool Insights
+- SQL Pools
+- Telemetry
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog presents an in-depth look at SQL Pool Insights, offering developers and analytics engineers new tools for monitoring SQL pool performance and optimizing resource usage in Fabric Data Warehouse.<!--excerpt_end-->
 
 # SQL Pool Insights: Monitoring Microsoft Fabric Data Warehouse Performance

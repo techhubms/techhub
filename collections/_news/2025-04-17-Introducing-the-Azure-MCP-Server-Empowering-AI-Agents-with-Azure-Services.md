@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Introducing the Azure MCP Server: Empowering AI Agents with Azure Services"
-description: "This detailed post by Rohit Ganguly introduces the public preview of the open-source Azure MCP Server, designed to bridge AI agents—like GitHub Copilot Agent Mode and custom MCP clients—with Azure cloud resources. It covers supported Azure services, integration scenarios, use with Semantic Kernel, and future roadmap."
-author: "Rohit Ganguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-mcp-server/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/introducing-the-azure-mcp-server/
+title: 'Introducing the Azure MCP Server: Empowering AI Agents with Azure Services'
+author: Rohit Ganguly
+feed_name: Microsoft DevBlog
 date: 2025-04-17 19:59:42 +00:00
-permalink: "/2025-04-17-Introducing-the-Azure-MCP-Server-Empowering-AI-Agents-with-Azure-Services.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agents", "AI", "AI Agents", "App Configuration", "Azure", "Azure CLI", "Azure MCP Server", "Azure SDK", "Azure Services", "Azure Storage", "Coding", "Cosmos DB", "GitHub Copilot", "Log Analytics", "MCP", "MCP SDK", "News", "Open Source", "Public Preview", "Semantic Kernel", "VS Code"]
-tags_normalized: ["agents", "ai", "ai agents", "app configuration", "azure", "azure cli", "azure mcp server", "azure sdk", "azure services", "azure storage", "coding", "cosmos db", "github copilot", "log analytics", "mcp", "mcp sdk", "news", "open source", "public preview", "semantic kernel", "vs code"]
+tags:
+- Agents
+- AI Agents
+- App Configuration
+- Azure CLI
+- Azure MCP Server
+- Azure SDK
+- Azure Services
+- Azure Storage
+- Cosmos DB
+- Log Analytics
+- MCP
+- MCP SDK
+- Open Source
+- Public Preview
+- Semantic Kernel
+- VS Code
+- AI
+- Azure
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Rohit Ganguly introduces the Azure MCP Server, an open-source platform in public preview that connects AI agents like GitHub Copilot Agent Mode to Azure services. This post details supported capabilities, practical integrations, and what developers can expect next.<!--excerpt_end-->
 
 ## Introducing the Azure MCP Server: Empowering AI Agents with Azure Services

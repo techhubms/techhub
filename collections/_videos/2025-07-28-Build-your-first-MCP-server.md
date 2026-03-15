@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Build your first MCP server"
-description: "This video tutorial guides beginners through creating their first Model Context Protocol (MCP) project. It covers setting up the development environment, building server and client components, enabling streaming, deploying to the cloud, and using the AI Toolkit for VS Code with multiple SDKs, including C#."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=sNDZO9N4m9Y"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=sNDZO9N4m9Y
+title: Build your first MCP server
+author: Microsoft Developer
+feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:01:25 +00:00
-permalink: "/2025-07-28-Build-your-first-MCP-server.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Toolkit", "C#", "Client", "Cloud Deployment", "Coding", "Java", "JavaScript", "LLM", "MCP", "MCP Inspector", "Python", "SDK", "Server", "Streaming", "TypeScript", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai toolkit", "csharp", "client", "cloud deployment", "coding", "java", "javascript", "llm", "mcp", "mcp inspector", "python", "sdk", "server", "streaming", "typescript", "videos", "vs code"]
+tags:
+- AI Toolkit
+- C#
+- Client
+- Cloud Deployment
+- Java
+- JavaScript
+- LLM
+- MCP
+- MCP Inspector
+- Python
+- SDK
+- Server
+- Streaming
+- TypeScript
+- VS Code
+- AI
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Microsoft Developer presents a video guide to building your first Model Context Protocol (MCP) server, covering environment setup, core development concepts, and cloud deployment.<!--excerpt_end-->
 
 {% youtube sNDZO9N4m9Y %}

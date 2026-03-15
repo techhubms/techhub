@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building and Deploying MCP Servers with Python and Azure"
-description: "This three-part series by Pamela Fox teaches you how to build Model Context Protocol (MCP) servers using Python and FastMCP, deploy them on Azure using Container Apps and Functions, and add authentication with Microsoft Entra ID. Materials include video recordings, slides, and open-source code samples for hands-on learning and reuse."
-author: "Pamela_Fox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-mcp-servers-with-python-and-azure/ba-p/4479402
+title: Building and Deploying MCP Servers with Python and Azure
+author: Pamela_Fox
+feed_name: Microsoft Tech Community
 date: 2025-12-19 15:13:45 +00:00
-permalink: "/2025-12-19-Building-and-Deploying-MCP-Servers-with-Python-and-Azure.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: ["AI", "API Security", "Application Insights", "Authentication", "Azure", "Azure Container Apps", "Azure Functions", "Cloud Deployment", "Coding", "Community", "Docker", "FastMCP", "Langchain", "MCP Server", "Microsoft Agent Framework", "Microsoft Entra ID", "OAuth", "OpenTelemetry", "Python", "Security"]
-tags_normalized: ["ai", "api security", "application insights", "authentication", "azure", "azure container apps", "azure functions", "cloud deployment", "coding", "community", "docker", "fastmcp", "langchain", "mcp server", "microsoft agent framework", "microsoft entra id", "oauth", "opentelemetry", "python", "security"]
+tags:
+- API Security
+- Application Insights
+- Authentication
+- Azure Container Apps
+- Azure Functions
+- Cloud Deployment
+- Docker
+- FastMCP
+- Langchain
+- MCP Server
+- Microsoft Agent Framework
+- Microsoft Entra ID
+- OAuth
+- OpenTelemetry
+- Python
+- AI
+- Azure
+- Security
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- security
+primary_section: ai
 ---
-
 Pamela Fox presents a detailed series on building, deploying, and securing MCP servers with Python and Azure, covering FastMCP, cloud deployment, and authentication using Microsoft Entra.<!--excerpt_end-->
 
 # Building and Deploying MCP Servers with Python and Azure

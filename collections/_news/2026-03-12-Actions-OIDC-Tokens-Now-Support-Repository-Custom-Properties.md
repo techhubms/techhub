@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Actions OIDC Tokens Now Support Repository Custom Properties"
-description: "This news update introduces support for repository custom properties as claims in GitHub Actions OpenID Connect (OIDC) tokens. A new settings page in public preview streamlines the configuration process, enabling organization and enterprise admins to enrich OIDC tokens with metadata for better cloud governance and attribute-based access control across platforms such as Azure, AWS, and GCP."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-12-actions-oidc-tokens-now-support-repository-custom-properties"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-12-actions-oidc-tokens-now-support-repository-custom-properties
+title: Actions OIDC Tokens Now Support Repository Custom Properties
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-12 14:53:28 +00:00
-permalink: "/2026-03-12-Actions-OIDC-Tokens-Now-Support-Repository-Custom-Properties.html"
-categories: ["DevOps", "Security"]
-tags: ["ABAC", "Actions", "Attribute Based Access Control", "AWS", "Cloud Governance", "DevOps", "DevOps Automation", "GCP", "GitHub Actions", "GitHub Enterprise", "Identity Management", "News", "OIDC", "OpenID Connect", "Repository Custom Properties", "Security", "Security Claims"]
-tags_normalized: ["abac", "actions", "attribute based access control", "aws", "cloud governance", "devops", "devops automation", "gcp", "github actions", "github enterprise", "identity management", "news", "oidc", "openid connect", "repository custom properties", "security", "security claims"]
+tags:
+- ABAC
+- Actions
+- Attribute Based Access Control
+- AWS
+- Cloud Governance
+- DevOps
+- DevOps Automation
+- GCP
+- GitHub Actions
+- GitHub Enterprise
+- Identity Management
+- News
+- OIDC
+- OpenID Connect
+- Repository Custom Properties
+- Security
+- Security Claims
+section_names:
+- devops
+- security
 ---
-
 Allison reports on a significant update to GitHub Actions OIDC token functionality: repository custom properties can now be added as claims, supporting stronger and more flexible policy controls across major cloud providers.<!--excerpt_end-->
 
 # Actions OIDC Tokens Now Support Repository Custom Properties

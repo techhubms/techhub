@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Upcoming Updates for Azure Pipelines Agent Images: Deprecation and Migration Guidance"
-description: "This news post details Azure Pipelines' upcoming changes to hosted agent images for Ubuntu, Windows, and macOS. The announcement covers the introduction of new base OS images, detailed deprecation schedules, migration recommendations, and tooling for finding and updating impacted pipelines. Developers and DevOps engineers running CI/CD on Azure Pipelines will find step-by-step instructions to ensure pipeline continuity and security as older images are phased out in favor of Ubuntu 24.04, Windows 2025, and macOS Sequoia."
-author: "Shubham Agarwal, Eric van Wijk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/upcoming-updates-for-azure-pipelines-agents-images/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/upcoming-updates-for-azure-pipelines-agents-images/
+title: 'Upcoming Updates for Azure Pipelines Agent Images: Deprecation and Migration Guidance'
+author: Shubham Agarwal, Eric van Wijk
+feed_name: Microsoft DevOps Blog
 date: 2025-10-18 18:40:30 +00:00
-permalink: "/2025-10-18-Upcoming-Updates-for-Azure-Pipelines-Agent-Images-Deprecation-and-Migration-Guidance.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agent Pools", "Azure", "Azure DevOps", "Azure Pipelines", "CI/CD", "Container Jobs", "DevOps", "Hosted Agents", "Image Updates", "Macos 13 Ventura Deprecation", "Macos Sequoia", "News", "Pipeline Migration", "Self Hosted Agent", "Ubuntu 20.04 Deprecation", "Ubuntu 24.04", "Windows Server", "Windows Server Deprecation", "YAML Pipeline"]
-tags_normalized: ["agent pools", "azure", "azure devops", "azure pipelines", "cislashcd", "container jobs", "devops", "hosted agents", "image updates", "macos 13 ventura deprecation", "macos sequoia", "news", "pipeline migration", "self hosted agent", "ubuntu 20dot04 deprecation", "ubuntu 24dot04", "windows server", "windows server deprecation", "yaml pipeline"]
+tags:
+- Agent Pools
+- Azure DevOps
+- Azure Pipelines
+- CI/CD
+- Container Jobs
+- Hosted Agents
+- Image Updates
+- Macos 13 Ventura Deprecation
+- Macos Sequoia
+- Pipeline Migration
+- Self Hosted Agent
+- Ubuntu 20.04 Deprecation
+- Ubuntu 24.04
+- Windows Server
+- Windows Server Deprecation
+- YAML Pipeline
+- Azure
+- DevOps
+- News
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Shubham Agarwal and Eric van Wijk outline critical updates for Azure Pipelines users, with step-by-step guidance on transitioning to new agent images to maintain secure and reliable CI/CD workflows.<!--excerpt_end-->
 
 # Upcoming Updates for Azure Pipelines Agent Images

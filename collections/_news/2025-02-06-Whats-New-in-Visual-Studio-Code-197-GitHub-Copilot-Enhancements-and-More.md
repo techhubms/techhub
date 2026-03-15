@@ -1,20 +1,47 @@
----
-layout: "post"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_97
 title: "What's New in Visual Studio Code 1.97: GitHub Copilot Enhancements and More"
-description: "This article from the Visual Studio Code Team details the January 2025 (version 1.97) release, showcasing key productivity features and improvements for developers. Highlights include advanced GitHub Copilot suggestions and editing, new security enhancements, updates for extension management, improved debugging, Python REPL integration, accessible features, and enhanced logs handling. The release also brings updates for remote development, notable engineering fixes, improvements to code search, and previews of experimental agent mode and vision features for Copilot in VS Code."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_97"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+author: Visual Studio Code Team
+feed_name: Visual Studio Code Releases
 date: 2025-02-06 17:00:00 +00:00
-permalink: "/2025-02-06-Whats-New-in-Visual-Studio-Code-197-GitHub-Copilot-Enhancements-and-More.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Mode", "AI", "Code Completion", "Coding", "Command Palette", "Compound Logs", "Copilot Edits", "Copilot Next Edit Suggestions", "Copilot Vision", "Debugging", "DevOps", "Extension Security", "Git Blame", "GitHub Copilot", "Logs Export", "Microsoft Authentication", "MSAL", "News", "Notebooks", "Python", "Remote Development", "REPL", "Settings Search", "Source Control", "Terminal", "TypeScript", "Version 1.97", "VS Code", "Workspace Index"]
-tags_normalized: ["accessibility", "agent mode", "ai", "code completion", "coding", "command palette", "compound logs", "copilot edits", "copilot next edit suggestions", "copilot vision", "debugging", "devops", "extension security", "git blame", "github copilot", "logs export", "microsoft authentication", "msal", "news", "notebooks", "python", "remote development", "repl", "settings search", "source control", "terminal", "typescript", "version 1dot97", "vs code", "workspace index"]
+tags:
+- Accessibility
+- Agent Mode
+- Code Completion
+- Command Palette
+- Compound Logs
+- Copilot Edits
+- Copilot Next Edit Suggestions
+- Copilot Vision
+- Debugging
+- Extension Security
+- Git Blame
+- Logs Export
+- Microsoft Authentication
+- MSAL
+- Notebooks
+- Python
+- Remote Development
+- REPL
+- Settings Search
+- Source Control
+- Terminal
+- TypeScript
+- Version 1.97
+- VS Code
+- Workspace Index
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 The Visual Studio Code Team covers the 1.97 January 2025 release, with in-depth updates on GitHub Copilot features, editing improvements, DevOps tooling, and developer experience enhancements.<!--excerpt_end-->
 
 # Visual Studio Code January 2025 (Version 1.97) Release Notes

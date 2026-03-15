@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins"
-description: "This post by Dellenny explores how system administrators can use GitHub Copilot Chat to automate PowerShell script generation through plain English prompts. It covers typical sysadmin scenarios like user management, tenant maintenance, and environment setup, showing how Copilot Chat helps refine scripts, explain commands, and streamline automation in Microsoft 365 and Azure environments."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/copilot-for-sysadmins-automating-powershell-script-generation-from-plain-english-prompts/
+title: Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-10-16 06:12:17 +00:00
-permalink: "/2025-10-16-Automating-PowerShell-Scripts-with-GitHub-Copilot-Chat-for-SysAdmins.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automation", "Azure", "Azure AD", "Best Practices", "Blogs", "Coding", "Error Handling", "GitHub Copilot", "GitHub Copilot Chat", "IT Administration", "M365 Copilot", "Microsoft 365", "Microsoft Graph PowerShell", "On Prem Active Directory", "PowerShell", "Script Generation", "SharePoint", "SysAdmin", "Tenant Maintenance", "User Provisioning"]
-tags_normalized: ["ai", "automation", "azure", "azure ad", "best practices", "blogs", "coding", "error handling", "github copilot", "github copilot chat", "it administration", "m365 copilot", "microsoft 365", "microsoft graph powershell", "on prem active directory", "powershell", "script generation", "sharepoint", "sysadmin", "tenant maintenance", "user provisioning"]
+tags:
+- Automation
+- Azure AD
+- Best Practices
+- Error Handling
+- GitHub Copilot Chat
+- IT Administration
+- M365 Copilot
+- Microsoft 365
+- Microsoft Graph PowerShell
+- On Prem Active Directory
+- PowerShell
+- Script Generation
+- SharePoint
+- SysAdmin
+- Tenant Maintenance
+- User Provisioning
+- AI
+- Azure
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Dellenny demonstrates how sysadmins can use GitHub Copilot Chat to generate and refine PowerShell scripts from natural language prompts, enhancing automation in Microsoft 365 and Azure tasks.<!--excerpt_end-->
 
 # Automating PowerShell Scripts with GitHub Copilot Chat for SysAdmins

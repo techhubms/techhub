@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How the GitHub CLI Enables Triangular Workflows for Advanced Git Collaboration"
-description: "This post by Tyler McGoffin details recent enhancements in the GitHub CLI, introducing support for triangular Git workflows. It explains the fundamentals of Git refs and workflows, provides practical configuration steps, and showcases how the CLI's `gh pr` commands now align with these advanced collaboration scenarios."
-author: "Tyler McGoffin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/open-source/git/how-the-github-cli-can-now-enable-triangular-workflows/
+title: How the GitHub CLI Enables Triangular Workflows for Advanced Git Collaboration
+author: Tyler McGoffin
+feed_name: GitHub Engineering Blog
 date: 2025-04-25 16:00:37 +00:00
-permalink: "/2025-04-25-How-the-GitHub-CLI-Enables-Triangular-Workflows-for-Advanced-Git-Collaboration.html"
-categories: ["DevOps"]
-tags: ["Branch Management", "CLI Tools", "Configuration", "DevOps", "Engineering", "Git", "Git Remotes", "GitHub CLI", "News", "Open Source", "Open Source Collaboration", "Pull Requests", "Pullref", "Pushref", "Triangular Workflows", "Workflow Automation"]
-tags_normalized: ["branch management", "cli tools", "configuration", "devops", "engineering", "git", "git remotes", "github cli", "news", "open source", "open source collaboration", "pull requests", "pullref", "pushref", "triangular workflows", "workflow automation"]
+tags:
+- Branch Management
+- CLI Tools
+- Configuration
+- Engineering
+- Git
+- Git Remotes
+- GitHub CLI
+- Open Source
+- Open Source Collaboration
+- Pull Requests
+- Pullref
+- Pushref
+- Triangular Workflows
+- Workflow Automation
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Tyler McGoffin discusses the GitHub CLI's new support for triangular workflows, providing advanced collaboration capabilities for developers. Explore Git fundamentals, workflow configuration, and how the updated CLI simplifies pull request and branch management.<!--excerpt_end-->
 
 # How the GitHub CLI Enables Triangular Workflows for Advanced Git Collaboration

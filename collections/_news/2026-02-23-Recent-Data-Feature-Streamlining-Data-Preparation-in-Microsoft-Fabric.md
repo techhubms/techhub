@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Recent Data Feature: Streamlining Data Preparation in Microsoft Fabric"
-description: "This update from the Microsoft Fabric team introduces the Recent Data module for Dataflow Gen2. The feature allows users to quickly access frequently used data sources such as tables, files, or databases directly from the Power Query ribbon or the Modern Get Data interface. Designed to speed up the iterative data preparation process, Recent Data reduces repetitive navigation by remembering precise data items and offering fast loading into the editing canvas. Additional improvements include a Browse Location option for exploring related data within the same folders or databases, enhancing workflow efficiency for data engineers and analysts. Supporting links to documentation and community feedback channels are provided."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/recent-data-get-back-to-your-data-faster-in-fabric-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/recent-data-get-back-to-your-data-faster-in-fabric-preview/
+title: 'Recent Data Feature: Streamlining Data Preparation in Microsoft Fabric'
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-23 09:00:00 +00:00
-permalink: "/2026-02-23-Recent-Data-Feature-Streamlining-Data-Preparation-in-Microsoft-Fabric.html"
-categories: ["ML"]
-tags: ["Analytics", "Browse Location", "Data Access", "Data Engineering", "Data Preparation", "Data Source Management", "Data Transformation", "Data Workflow", "Dataflow Gen2", "Get Data", "Microsoft Fabric", "ML", "News", "Power Query", "Preview Feature", "Productivity", "Recent Data"]
-tags_normalized: ["analytics", "browse location", "data access", "data engineering", "data preparation", "data source management", "data transformation", "data workflow", "dataflow gen2", "get data", "microsoft fabric", "ml", "news", "power query", "preview feature", "productivity", "recent data"]
+tags:
+- Analytics
+- Browse Location
+- Data Access
+- Data Engineering
+- Data Preparation
+- Data Source Management
+- Data Transformation
+- Data Workflow
+- Dataflow Gen2
+- Get Data
+- Microsoft Fabric
+- ML
+- News
+- Power Query
+- Preview Feature
+- Productivity
+- Recent Data
+section_names:
+- ml
 ---
-
 The Microsoft Fabric Blog details how the Recent Data feature in Dataflow Gen2 helps users quickly access and manage their most-used data sources. This post highlights enhanced productivity for data engineers and analysts.<!--excerpt_end-->
 
 # Recent Data: Get Back to Your Data Faster in Fabric (Preview)

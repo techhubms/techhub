@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Email Notifications for GitHub Usage Thresholds"
-description: "This news update details GitHub's new email notification feature for monitoring included usage on metered products such as Actions, Packages, Git LFS, and Codespaces. Admins now receive alerts at 90% and 100% usage, helping organizations avoid unexpected charges and workflow disruptions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-03-email-notifications-for-included-usage-thresholds"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-03-email-notifications-for-included-usage-thresholds
+title: Email Notifications for GitHub Usage Thresholds
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-03 13:29:14 +00:00
-permalink: "/2026-03-03-Email-Notifications-for-GitHub-Usage-Thresholds.html"
-categories: ["DevOps"]
-tags: ["Account Management", "Actions", "Billing", "Budget Alerts", "Cloud Development", "Codespaces", "DevOps", "DevOps Tools", "Enterprise Admins", "Git LFS", "GitHub", "Improvement", "News", "Organization Management", "Packages", "Usage Monitoring", "Workflow Disruption"]
-tags_normalized: ["account management", "actions", "billing", "budget alerts", "cloud development", "codespaces", "devops", "devops tools", "enterprise admins", "git lfs", "github", "improvement", "news", "organization management", "packages", "usage monitoring", "workflow disruption"]
+tags:
+- Account Management
+- Actions
+- Billing
+- Budget Alerts
+- Cloud Development
+- Codespaces
+- DevOps
+- DevOps Tools
+- Enterprise Admins
+- Git LFS
+- GitHub
+- Improvement
+- News
+- Organization Management
+- Packages
+- Usage Monitoring
+- Workflow Disruption
+section_names:
+- devops
 ---
-
 Allison introduces new GitHub email notifications for metered usage thresholds, designed to help admins preempt overages and minimize workflow disruption.<!--excerpt_end-->
 
 # Email Notifications for GitHub Usage Thresholds

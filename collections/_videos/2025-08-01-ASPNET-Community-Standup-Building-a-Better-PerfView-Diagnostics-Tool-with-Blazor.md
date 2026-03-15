@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor"
-description: "A deep dive into the .NET Events Viewer, a Blazor-based diagnostics tool that emerged from real-world thread pool issues. Grégoire Verdier and Noah Falk discuss its development, open-source collaboration, and the impact of community-driven contributions to .NET diagnostics."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=H_gOSliozjM"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=H_gOSliozjM
+title: 'ASP.NET Community Standup: Building a Better PerfView Diagnostics Tool with Blazor'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-08-01 21:55:53 +00:00
-permalink: "/2025-08-01-ASPNET-Community-Standup-Building-a-Better-PerfView-Diagnostics-Tool-with-Blazor.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Events Viewer", "ASP.NET", "ASP.NET Core", "Aspdotnet", "Blazor", "Coding", "Contributing", "Demo", "Developer", "Developer Community", "Developer Tools", "Diagnostics", "Microsoft", "Open Source", "Perfview", "Software Developer", "Thread Pool", "Videos"]
-tags_normalized: ["dotnet", "dotnet events viewer", "aspdotnet", "aspdotnet core", "aspdotnet", "blazor", "coding", "contributing", "demo", "developer", "developer community", "developer tools", "diagnostics", "microsoft", "open source", "perfview", "software developer", "thread pool", "videos"]
+tags:
+- .NET
+- .NET Events Viewer
+- ASP.NET
+- ASP.NET Core
+- Aspdotnet
+- Blazor
+- Contributing
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- Diagnostics
+- Microsoft
+- Open Source
+- Perfview
+- Software Developer
+- Thread Pool
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Presented by dotnet, this session features Grégoire Verdier and Noah Falk demonstrating the .NET Events Viewer, a Blazor-based diagnostics tool. They share insights on solving thread pool issues, building community tools, and fostering open-source contributions in the .NET ecosystem.<!--excerpt_end-->
 
 {% youtube H_gOSliozjM %}

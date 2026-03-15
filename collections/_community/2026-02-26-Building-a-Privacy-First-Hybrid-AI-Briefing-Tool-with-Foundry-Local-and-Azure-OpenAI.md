@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building a Privacy-First Hybrid AI Briefing Tool with Foundry Local and Azure OpenAI"
-description: "This article details the design and implementation of a client briefing tool that balances privacy and performance using Microsoft Foundry Local for on-device inference and Azure OpenAI for optional cloud refinement. Readers will learn to architect, secure, and test privacy-first hybrid AI applications with Next.js, TypeScript, and robust privacy UX controls."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-privacy-first-hybrid-ai-briefing-tool-with-foundry/ba-p/4490535"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-privacy-first-hybrid-ai-briefing-tool-with-foundry/ba-p/4490535
+title: Building a Privacy-First Hybrid AI Briefing Tool with Foundry Local and Azure OpenAI
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-26 08:00:00 +00:00
-permalink: "/2026-02-26-Building-a-Privacy-First-Hybrid-AI-Briefing-Tool-with-Foundry-Local-and-Azure-OpenAI.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Security", "Azure", "Azure OpenAI Service", "Cloud AI Integration", "Coding", "Community", "Confidential Mode", "Executive Briefing Tool", "Hybrid AI Architecture", "JavaScript", "Local Inference", "Managed Identity", "Microsoft Foundry Local", "Next.js 14", "Operational Logging", "Phi 4 Model", "Privacy Engineering", "TypeScript", "Zod Validation"]
-tags_normalized: ["ai", "api security", "azure", "azure openai service", "cloud ai integration", "coding", "community", "confidential mode", "executive briefing tool", "hybrid ai architecture", "javascript", "local inference", "managed identity", "microsoft foundry local", "nextdotjs 14", "operational logging", "phi 4 model", "privacy engineering", "typescript", "zod validation"]
+tags:
+- AI
+- API Security
+- Azure
+- Azure OpenAI Service
+- Cloud AI Integration
+- Community
+- Confidential Mode
+- Executive Briefing Tool
+- Hybrid AI Architecture
+- JavaScript
+- Local Inference
+- Managed Identity
+- Microsoft Foundry Local
+- Next.js 14
+- Operational Logging
+- Phi 4 Model
+- Privacy Engineering
+- TypeScript
+- Zod Validation
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Lee_Stott demonstrates how to build a privacy-centric hybrid AI client briefing assistant using Microsoft Foundry Local and Azure OpenAI, offering step-by-step guidance for developers concerned with sensitive data and performance.<!--excerpt_end-->
 
 # Building a Privacy-First Hybrid AI Briefing Tool with Foundry Local and Azure OpenAI

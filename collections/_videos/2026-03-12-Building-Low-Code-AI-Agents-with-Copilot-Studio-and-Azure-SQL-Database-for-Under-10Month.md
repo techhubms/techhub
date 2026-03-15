@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Low-Code AI Agents with Copilot Studio and Azure SQL Database for Under $10/Month"
-description: "This video demonstrates how to build a practical AI agent using Copilot Studio and Azure SQL Database, guided by Bob Ward, Principal Architect on the Azure Data team. The tutorial showcases a real-world scenario, offering a scalable and low-cost approach to deploying custom AI solutions without requiring advanced coding skills, making it accessible for a range of use cases."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FzoXP4P8OAY"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=FzoXP4P8OAY
+title: Building Low-Code AI Agents with Copilot Studio and Azure SQL Database for Under $10/Month
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-03-12 16:00:21 +00:00
-permalink: "/2026-03-12-Building-Low-Code-AI-Agents-with-Copilot-Studio-and-Azure-SQL-Database-for-Under-10Month.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "AI Integration", "Application Blueprint", "Azure", "Azure Portal", "Azure SQL Database", "Cloud Computing", "Cloud Solutions", "Copilot Studio", "Cost Optimization", "Data Scenario", "Database", "Dev", "Development", "Low Code Development", "Microsoft", "Microsoft Azure", "Practical AI", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "ai agent", "ai integration", "application blueprint", "azure", "azure portal", "azure sql database", "cloud computing", "cloud solutions", "copilot studio", "cost optimization", "data scenario", "database", "dev", "development", "low code development", "microsoft", "microsoft azure", "practical ai", "tech", "technology", "videos"]
+tags:
+- AI
+- AI Agent
+- AI Integration
+- Application Blueprint
+- Azure
+- Azure Portal
+- Azure SQL Database
+- Cloud Computing
+- Cloud Solutions
+- Copilot Studio
+- Cost Optimization
+- Data Scenario
+- Database
+- Dev
+- Development
+- Low Code Development
+- Microsoft
+- Microsoft Azure
+- Practical AI
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 In this presentation, Microsoft Developer, featuring Bob Ward, explains how to set up and scale AI agents using Copilot Studio and Azure SQL Database for only $10 a month, with no coding required.<!--excerpt_end-->
 
 {% youtube FzoXP4P8OAY %}

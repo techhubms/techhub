@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Proactive Health Monitoring and Auto-Communication Now Available for Azure Container Registry"
-description: "This article introduces the new Service Health alert capabilities for Azure Container Registry (ACR), enabling automated notifications when outages or service degradations are detected. It outlines the benefits for platform teams and SREs, describes integration into incident workflows, and shows how this feature fits into ACR's larger observability strategy. Step-by-step setup guidance is included."
-author: "FeynmanZhou"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-health-monitoring-and-auto-communication-now-available/ba-p/4501378"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/proactive-health-monitoring-and-auto-communication-now-available/ba-p/4501378
+title: Proactive Health Monitoring and Auto-Communication Now Available for Azure Container Registry
+author: FeynmanZhou
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-12 22:54:28 +00:00
-permalink: "/2026-03-12-Proactive-Health-Monitoring-and-Auto-Communication-Now-Available-for-Azure-Container-Registry.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automated Alerts", "Azure", "Azure Container Registry", "Azure Monitor", "Azure Service Health", "CI/CD", "Cloud Native", "Community", "Container Registry", "DevOps", "Diagnostic Logs", "IaC", "Incident Management", "Kubernetes", "Observability", "Security", "Service Health", "SLI", "SRE"]
-tags_normalized: ["automated alerts", "azure", "azure container registry", "azure monitor", "azure service health", "cislashcd", "cloud native", "community", "container registry", "devops", "diagnostic logs", "iac", "incident management", "kubernetes", "observability", "security", "service health", "sli", "sre"]
+tags:
+- Automated Alerts
+- Azure
+- Azure Container Registry
+- Azure Monitor
+- Azure Service Health
+- CI/CD
+- Cloud Native
+- Community
+- Container Registry
+- DevOps
+- Diagnostic Logs
+- IaC
+- Incident Management
+- Kubernetes
+- Observability
+- Security
+- Service Health
+- SLI
+- SRE
+section_names:
+- azure
+- devops
+- security
 ---
-
 FeynmanZhou highlights Azure Container Registry's new proactive health monitoring and auto-communication features, empowering teams to integrate ACR outage alerts and diagnostics seamlessly into their DevOps and incident workflows.<!--excerpt_end-->
 
 # Proactive Health Monitoring and Auto-Communication Now Available for Azure Container Registry

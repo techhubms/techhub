@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Introducing a File Share-Centric Management Model for Azure Files"
-description: "This article by wmgries presents the new file share-centric management model in Azure Files, which removes storage account management overhead. It introduces file shares as top-level Azure resources, simplifies provisioning and billing, and enables per-share configuration, security, and scaling. The preview supports NFS file shares and aims to enhance scalability, ease of management, and cost tracking for developers and IT teams."
-author: "wmgries"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/simplifying-file-share-management-and-control-for-azure-files/ba-p/4452634"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/simplifying-file-share-management-and-control-for-azure-files/ba-p/4452634
+title: Introducing a File Share-Centric Management Model for Azure Files
+author: wmgries
+feed_name: Microsoft Tech Community
 date: 2025-09-09 19:03:03 +00:00
-permalink: "/2025-09-09-Introducing-a-File-Share-Centric-Management-Model-for-Azure-Files.html"
-categories: ["Azure"]
-tags: ["Access Control", "Automation", "Azure", "Azure Files", "Billing", "Cloud Storage", "Community", "Cost Management", "File Share Management", "Granular Security", "Microsoft Azure", "NFS", "Resource Provisioning", "Scalability", "Storage Accounts"]
-tags_normalized: ["access control", "automation", "azure", "azure files", "billing", "cloud storage", "community", "cost management", "file share management", "granular security", "microsoft azure", "nfs", "resource provisioning", "scalability", "storage accounts"]
+tags:
+- Access Control
+- Automation
+- Azure Files
+- Billing
+- Cloud Storage
+- Cost Management
+- File Share Management
+- Granular Security
+- Microsoft Azure
+- NFS
+- Resource Provisioning
+- Scalability
+- Storage Accounts
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 wmgries introduces a preview of the new file share-centric management model in Azure Files, where file shares are promoted to top-level Azure resources for easier, more flexible, and scalable management.<!--excerpt_end-->
 
 # Introducing a New File Share-Centric Management Model for Azure Files

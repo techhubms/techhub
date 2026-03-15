@@ -1,0 +1,421 @@
+@using TechHub.Core.Models
+@using TechHub.Core.Configuration
+@using TechHub.Web.Services
+@using Microsoft.JSInterop
+@using Microsoft.AspNetCore.Components.Web
+@inject TechHubApiClient ApiClient
+@inject SectionCache SectionCache
+@inject ILogger<ContentItemsGrid> Logger
+@inject IJSRuntime JSRuntime
+@inject PersistentComponentState ApplicationState
+@implements IAsyncDisposable
+
+<section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionTitle() content">
+    <h1 id="skiptohere" class="page-h1">@GetPageTitle() <span class="content-count">(@totalCount)</span></h1>
+
+    @if (isLoading && !contentItems.Any())
+    {
+        <div class="content-grid" role="feed" aria-busy="true" aria-label="Loading content">
+            @for (int i = 0; i < 6; i++)
+            {
+                <div class="skeleton-card" aria-hidden="true">
+                    <div class="content-header">
+                        <div class="skeleton skeleton-card-title"></div>
+                        <div class="skeleton skeleton-card-meta"></div>
+                    </div>
+                    <div class="skeleton skeleton-card-description"></div>
+                    <div class="skeleton skeleton-card-description" style="width: 80%;"></div>
+                    <div class="content-tags">
+                        <div class="skeleton skeleton-card-tag"></div>
+                        <div class="skeleton skeleton-card-tag"></div>
+                        <div class="skeleton skeleton-card-tag"></div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else if (errorMessage != null)
+    {
+        <div class="error" role="alert">
+            <h2>Error Loading Content</h2>
+            <p>@errorMessage</p>
+            <button @onclick="LoadInitialBatch" aria-label="Retry loading content">Retry</button>
+        </div>
+    }
+    else if (FilteredContentItems.Any())
+    {
+        <div class="content-grid" role="feed" aria-busy="@isLoadingMore">
+            @foreach (var item in FilteredContentItems)
+            {
+                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@SectionName" ActiveFilterTags="@FilterTags" />
+            }
+        </div>
+
+        @if (hasMoreContent)
+        {
+            <div id="scroll-trigger" class="scroll-trigger" style="height: 1px; margin-bottom: 50px;"></div>
+        }
+
+        @if (isLoadingMore)
+        {
+            <div class="loading-more-indicator" role="status" aria-live="polite">
+                <div class="loading-spinner"></div>
+                <p>Loading more content...</p>
+            </div>
+        }
+
+        @if (!hasMoreContent && contentItems.Any())
+        {
+            <div class="end-of-content" role="status">
+                <p>End of content</p>
+            </div>
+        }
+    }
+    else if (FilterTags != null && FilterTags.Count > 0 && contentItems.Any())
+    {
+        <div class="no-content" role="status">
+            <p>No content matches the selected tags. Try selecting different tags or clearing filters.</p>
+        </div>
+    }
+    else
+    {
+        <div class="no-content" role="status">
+            <p>No content available for this collection.</p>
+        </div>
+    }
+</section>
+
+@code {
+    private const int BatchSize = 20;
+
+    [Parameter, EditorRequired]
+    public required string SectionName { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string CollectionName { get; set; }
+
+    [Parameter]
+    public List<string>? FilterTags { get; set; }
+
+    [Parameter]
+    public string? SearchQuery { get; set; }
+
+    [Parameter]
+    public string? FromDate { get; set; }
+
+    [Parameter]
+    public string? ToDate { get; set; }
+
+    // Content state
+    private List<ContentItem> contentItems = [];
+    private long totalCount;
+    private bool isLoading = true;
+    private bool isLoadingMore;
+    private bool hasMoreContent = true;
+    private string? errorMessage;
+    private int currentBatch = 1;
+
+    // Change detection
+    private string previousCollectionName = string.Empty;
+    private List<string>? previousFilterTags;
+    private string? previousSearchQuery;
+    private string? previousFromDate;
+    private string? previousToDate;
+
+    // JS interop
+    private IJSObjectReference? scrollModule;
+    private DotNetObjectReference<ContentItemsGrid>? dotNetRef;
+    private bool needsScrollListenerSetup;
+
+    // State persistence (prevents double-fetch during prerender -> interactive transition)
+    private PersistingComponentStateSubscription _persistSubscription;
+
+    private bool ShowCollectionBadge =>
+        CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
+
+    // No longer needed - API now handles tag filtering
+    // Content items are already filtered by the backend
+    private IEnumerable<ContentItem> FilteredContentItems => contentItems;
+
+    protected override async Task OnInitializedAsync()
+    {
+        previousCollectionName = CollectionName;
+        previousFilterTags = FilterTags?.ToList();
+        previousSearchQuery = SearchQuery;
+        previousFromDate = FromDate;
+        previousToDate = ToDate;
+
+        // Register for state persistence (called during prerender to save state)
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        // Try to restore state from prerender
+        var stateKey = GetStateKey();
+        if (ApplicationState.TryTakeFromJson<PersistedGridState>(stateKey, out var restored) && restored != null)
+        {
+            // Restored from prerender - skip API call
+            contentItems = restored.Items;
+            currentBatch = restored.CurrentBatch;
+            hasMoreContent = restored.HasMoreContent;
+            totalCount = restored.TotalCount;
+            isLoading = false;
+            needsScrollListenerSetup = hasMoreContent;
+            Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
+        }
+        else
+        {
+            // Not restored - fetch from API
+            await LoadInitialBatch();
+        }
+    }
+
+    private string GetStateKey()
+    {
+        var tagsKey = FilterTags != null && FilterTags.Count > 0
+            ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t))
+            : "";
+        var searchKey = !string.IsNullOrWhiteSpace(SearchQuery)
+            ? $"_search_{SearchQuery}"
+            : "";
+        var dateKey = (!string.IsNullOrEmpty(FromDate) || !string.IsNullOrEmpty(ToDate))
+            ? $"_dates_{FromDate}_{ToDate}"
+            : "";
+        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}{searchKey}{dateKey}";
+    }
+
+    private Task PersistState()
+    {
+        var stateKey = GetStateKey();
+        ApplicationState.PersistAsJson(stateKey, new PersistedGridState
+        {
+            Items = contentItems,
+            CurrentBatch = currentBatch,
+            HasMoreContent = hasMoreContent,
+            TotalCount = totalCount
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedGridState
+    {
+        public List<ContentItem> Items { get; set; } = [];
+        public int CurrentBatch { get; set; }
+        public bool HasMoreContent { get; set; }
+        public long TotalCount { get; set; }
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (CollectionName != previousCollectionName)
+        {
+            previousCollectionName = CollectionName;
+            await LoadInitialBatch();
+            return; // Don't check tags if collection changed - LoadInitialBatch handles everything
+        }
+
+        var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
+        var searchChanged = SearchQuery != previousSearchQuery;
+        var datesChanged = FromDate != previousFromDate || ToDate != previousToDate;
+        if (tagsChanged || searchChanged || datesChanged)
+        {
+            previousFilterTags = FilterTags?.ToList();
+            previousSearchQuery = SearchQuery;
+            previousFromDate = FromDate;
+            previousToDate = ToDate;
+            // Filters changed - reload data from API with new filters
+            await LoadInitialBatch();
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        // JS interop is not available during prerendering — only set up scroll listener
+        // after the interactive circuit is established.
+        if (!RendererInfo.IsInteractive)
+        {
+            return;
+        }
+
+        // Setup scroll listener on first render, or re-attach when filters change
+        if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
+        {
+            needsScrollListenerSetup = false;
+            await SetupScrollListener();
+        }
+    }
+
+    private async Task SetupScrollListener()
+    {
+        try
+        {
+            // Only load module once
+            scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
+                "import", "/js/infinite-scroll.js");
+
+            // Only create dotNetRef once (avoid memory leak)
+            dotNetRef ??= DotNetObjectReference.Create(this);
+
+            // (Re-)attach scroll listener to current scroll-trigger element
+            // JS dispose() handles cleanup of previous listener
+            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
+            Logger.LogDebug("Infinite scroll listener attached");
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to setup infinite scroll");
+        }
+    }
+
+    private async Task LoadInitialBatch()
+    {
+        contentItems.Clear();
+        currentBatch = 1;
+        hasMoreContent = true;
+        isLoading = true;
+        errorMessage = null;
+        StateHasChanged();
+
+        try
+        {
+            await LoadBatch(1);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
+            errorMessage = "Unable to load content";
+        }
+        finally
+        {
+            isLoading = false;
+            // Request scroll listener setup in next OnAfterRenderAsync (where JS interop is allowed)
+            needsScrollListenerSetup = hasMoreContent;
+            StateHasChanged();
+        }
+    }
+
+    private async Task LoadBatch(int batch)
+    {
+        var skip = (batch - 1) * BatchSize;
+
+        // Build tags parameter for API (comma-separated list)
+        var tagsParam = FilterTags != null && FilterTags.Count > 0
+            ? string.Join(",", FilterTags)
+            : null;
+
+        var result = await ApiClient.GetCollectionItemsAsync(
+            SectionName,
+            CollectionName,
+            take: BatchSize,
+            skip: skip,
+            query: SearchQuery,
+            tags: tagsParam,
+            fromDate: FromDate,
+            toDate: ToDate);
+
+        var newItems = result?.Items.ToList() ?? [];
+
+        // Update total count from API response (always reflects current filters)
+        totalCount = result?.TotalCount ?? 0;
+
+        if (newItems.Count < BatchSize)
+        {
+            hasMoreContent = false;
+        }
+
+        contentItems.AddRange(newItems);
+        currentBatch = batch;
+    }
+
+    [JSInvokable]
+    public async Task LoadNextBatch()
+    {
+        if (isLoadingMore || !hasMoreContent)
+        {
+            return;
+        }
+
+        isLoadingMore = true;
+        StateHasChanged();
+
+        try
+        {
+            await LoadBatch(currentBatch + 1);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load more content");
+        }
+        finally
+        {
+            isLoadingMore = false;
+            // Re-attach scroll listener after render if there's more content
+            // (Blazor may have replaced the scroll-trigger DOM element)
+            needsScrollListenerSetup = hasMoreContent;
+            StateHasChanged();
+        }
+    }
+
+    private static bool TagsAreEqual(List<string>? a, List<string>? b)
+    {
+        if (a == null && b == null) return true;
+        if (a == null || b == null) return false;
+        if (a.Count != b.Count) return false;
+        return a.OrderBy(x => x).SequenceEqual(b.OrderBy(x => x));
+    }
+
+    private string GetCollectionTitle()
+    {
+        if (CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
+        {
+            return "All";
+        }
+
+        var section = SectionCache.GetSectionByName(SectionName);
+        var collection = section?.Collections.FirstOrDefault(c => c.Name == CollectionName);
+        if (collection != null)
+        {
+            return collection.DisplayName ?? collection.Title ?? CollectionName;
+        }
+
+        // Fallback to title case if not found
+        return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(CollectionName.ToLowerInvariant());
+    }
+
+    private string GetPageTitle()
+    {
+        var collectionDisplay = GetCollectionTitle();
+        var isAllSection = SectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
+        var isAllCollection = CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
+
+        var section = SectionCache.GetSectionByName(SectionName);
+        var sectionDisplayName = section?.Title ?? SectionName;
+
+        return (isAllSection, isAllCollection) switch
+        {
+            (true, true) => "Browse All Posts",
+            (true, false) => $"Browse All {collectionDisplay}",
+            (false, true) => $"Browse All {sectionDisplayName} Content",
+            _ => $"Browse {sectionDisplayName} {collectionDisplay}"
+        };
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        _persistSubscription.Dispose();
+
+        if (scrollModule != null)
+        {
+            try
+            {
+                await scrollModule.InvokeVoidAsync("dispose");
+                await scrollModule.DisposeAsync();
+            }
+            catch
+            {
+                // Ignore disposal errors during navigation or circuit disconnection
+            }
+        }
+
+        dotNetRef?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

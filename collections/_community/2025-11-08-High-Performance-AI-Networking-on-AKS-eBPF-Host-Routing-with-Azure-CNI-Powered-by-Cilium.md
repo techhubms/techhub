@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "High-Performance AI Networking on AKS: eBPF Host Routing with Azure CNI Powered by Cilium"
-description: "This blog demonstrates how eBPF host routing within Azure CNI powered by Cilium enhances networking for containerized workloads on Azure Kubernetes Service (AKS). It details benchmarking results, throughput improvements, latency reductions, the deployment process, and the security safeguards provided by Advanced Container Networking Services. Readers learn how to enable eBPF host routing and optimize infrastructure for modern AI-driven applications."
-author: "Sam_Foo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/introducing-ebpf-host-routing-high-performance-ai-networking/ba-p/4468216
+title: 'High-Performance AI Networking on AKS: eBPF Host Routing with Azure CNI Powered by Cilium'
+author: Sam_Foo
+feed_name: Microsoft Tech Community
 date: 2025-11-08 00:45:49 +00:00
-permalink: "/2025-11-08-High-Performance-AI-Networking-on-AKS-eBPF-Host-Routing-with-Azure-CNI-Powered-by-Cilium.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Advanced Container Networking Services", "AI", "AKS", "Azure", "Azure CNI", "BpfVeth", "Cilium", "Community", "Container Networking", "DevOps", "Ebpf", "Kubernetes 1.33", "Kubernetes Networking", "Latency Reduction", "Network Profile", "Performance Optimization", "Pod Throughput", "Security", "Security Safeguards", "TCP Benchmarking", "Ubuntu 24.04"]
-tags_normalized: ["advanced container networking services", "ai", "aks", "azure", "azure cni", "bpfveth", "cilium", "community", "container networking", "devops", "ebpf", "kubernetes 1dot33", "kubernetes networking", "latency reduction", "network profile", "performance optimization", "pod throughput", "security", "security safeguards", "tcp benchmarking", "ubuntu 24dot04"]
+tags:
+- Advanced Container Networking Services
+- AKS
+- Azure CNI
+- BpfVeth
+- Cilium
+- Container Networking
+- Ebpf
+- Kubernetes 1.33
+- Kubernetes Networking
+- Latency Reduction
+- Network Profile
+- Performance Optimization
+- Pod Throughput
+- Security Safeguards
+- TCP Benchmarking
+- Ubuntu 24.04
+- AI
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- ai
+- azure
+- devops
+- security
+primary_section: ai
 ---
-
 Sam_Foo explores eBPF host routing for Azure CNI powered by Cilium on AKS, providing a technical overview of its performance enhancements and implementation steps.<!--excerpt_end-->
 
 # High-Performance AI Networking on AKS: eBPF Host Routing with Azure CNI Powered by Cilium

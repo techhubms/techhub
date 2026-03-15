@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot Dev Days: Accelerate Coding with AI in the Microsoft Developer Stack"
-description: "This announcement details GitHub Copilot Dev Days, a global series of hands-on events for Microsoft developers to learn about AI-powered coding using GitHub Copilot in Visual Studio, VS Code, .NET, and other Microsoft technologies. Attendees will participate in demos, workshops, and real-world scenarios to enhance productivity and integrate AI into their development workflows."
-author: "Katie Savage"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/github-copilot-dev-days"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/github-copilot-dev-days
+title: 'GitHub Copilot Dev Days: Accelerate Coding with AI in the Microsoft Developer Stack'
+author: Katie Savage
+primary_section: github-copilot
+feed_name: Microsoft Blog
 date: 2026-03-02 18:00:36 +00:00
-permalink: "/2026-03-02-GitHub-Copilot-Dev-Days-Accelerate-Coding-with-AI-in-the-Microsoft-Developer-Stack.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Assisted Development", "Cloud Native Apps", "Coding", "Developer Community", "Developer Events", "GitHub Copilot", "GitHub Copilot CLI", "Hands On Learning", "Java", "Microsoft Developer Events", "News", "Productivity", "Python", "TypeScript", "VS", "VS Code", "Workshops"]
-tags_normalized: ["dotnet", "ai", "ai assisted development", "cloud native apps", "coding", "developer community", "developer events", "github copilot", "github copilot cli", "hands on learning", "java", "microsoft developer events", "news", "productivity", "python", "typescript", "vs", "vs code", "workshops"]
+tags:
+- .NET
+- AI
+- AI Assisted Development
+- Cloud Native Apps
+- Developer Community
+- Developer Events
+- GitHub Copilot
+- GitHub Copilot CLI
+- Hands On Learning
+- Java
+- Microsoft Developer Events
+- News
+- Productivity
+- Python
+- TypeScript
+- VS
+- VS Code
+- Workshops
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Katie Savage introduces GitHub Copilot Dev Days, a series of events empowering developers to harness AI with GitHub Copilot, Visual Studio, and Microsoft developer tools through demos, workshops, and community engagement.<!--excerpt_end-->
 
 # GitHub Copilot Dev Days: Accelerate Coding with AI in the Microsoft Developer Stack

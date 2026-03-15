@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Secure and Smart AI Agents with Azure Redis in .NET"
-description: "This session explores advanced patterns for building secure, intelligent AI agents in .NET using Azure Redis. Topics include evolving data access approaches, integrating Azure Redis with MCP servers, applying the MCP protocol for agentic application development, enhancing AI agents with Redis-powered tools, and implementing the latest Azure-specific Redis security enhancements."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SpEHo-Wwzyg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=SpEHo-Wwzyg
+title: Secure and Smart AI Agents with Azure Redis in .NET
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-10 00:01:01 +00:00
-permalink: "/2025-12-10-Secure-and-Smart-AI-Agents-with-Azure-Redis-in-NET.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: [".NET", "Agentic Applications", "AI", "AI Agents", "Application Security", "Authentication", "Azure", "Azure Redis", "Cloud Development", "Coding", "Data Modernization", "MCP Protocol", "Microsoft Azure", "Redis Integration", "Security", "Security Enhancement", "Videos"]
-tags_normalized: ["dotnet", "agentic applications", "ai", "ai agents", "application security", "authentication", "azure", "azure redis", "cloud development", "coding", "data modernization", "mcp protocol", "microsoft azure", "redis integration", "security", "security enhancement", "videos"]
+tags:
+- .NET
+- Agentic Applications
+- AI Agents
+- Application Security
+- Authentication
+- Azure Redis
+- Cloud Development
+- Data Modernization
+- MCP Protocol
+- Microsoft Azure
+- Redis Integration
+- Security Enhancement
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- dotnet
+- security
+primary_section: ai
 ---
-
 Presented by dotnet, this session details how developers can build secure and intelligent AI agentic applications on Azure using Redis, with focus on security improvements and integration techniques.<!--excerpt_end-->
 
 {% youtube SpEHo-Wwzyg %}

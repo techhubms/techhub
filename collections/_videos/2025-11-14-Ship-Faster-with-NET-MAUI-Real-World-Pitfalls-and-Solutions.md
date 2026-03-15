@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions"
-description: "This session delivers a practical survival guide for developers building production-ready mobile apps with .NET MAUI. It addresses common pain points such as iOS archiving errors, Android signing failures, memory management for images and PDFs, third-party control issues, and resilient offline-first patterns. The presentation offers hands-on demos and actionable techniques for diagnostics, packaging, and telemetry to help your .NET MAUI apps succeed in the real world."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=iaU3lsvB_Ig"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=iaU3lsvB_Ig
+title: 'Ship Faster with .NET MAUI: Real-World Pitfalls and Solutions'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-14 19:21:44 +00:00
-permalink: "/2025-11-14-Ship-Faster-with-NET-MAUI-Real-World-Pitfalls-and-Solutions.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", "Android", "ASP.NET Core", "C#", "Cloud Native", "Coding", "Diagnostics", "F#", "Image Processing", "Ios", "MAUI", "Mobile Development", "Offline First", "Packaging", "PDF Export", "SQLite", "Telemetry", "Third Party Controls", "Troubleshooting", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "android", "aspdotnet core", "csharp", "cloud native", "coding", "diagnostics", "fsharp", "image processing", "ios", "maui", "mobile development", "offline first", "packaging", "pdf export", "sqlite", "telemetry", "third party controls", "troubleshooting", "videos", "vs"]
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- Android
+- ASP.NET Core
+- C#
+- Cloud Native
+- Diagnostics
+- F#
+- Image Processing
+- Ios
+- MAUI
+- Mobile Development
+- Offline First
+- Packaging
+- PDF Export
+- SQLite
+- Telemetry
+- Third Party Controls
+- Troubleshooting
+- VS
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 dotnet presents a no-nonsense guide for .NET MAUI developers, sharing lessons learned and robust fixes for common real-world app challenges in mobile development.<!--excerpt_end-->
 
 {% youtube iaU3lsvB_Ig %}

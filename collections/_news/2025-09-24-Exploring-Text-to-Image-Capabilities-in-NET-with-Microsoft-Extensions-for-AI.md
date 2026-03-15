@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Exploring Text-to-Image Capabilities in .NET with Microsoft Extensions for AI"
-description: "This article, authored by Jeremy Likness, explores the new text-to-image features provided by Microsoft's Extensions for AI (MEAI) in .NET. It covers the motivation for unified AI abstractions, practical usage scenarios, sample implementation, developer APIs, and ongoing efforts in multimodal AI support for .NET developers."
-author: "Jeremy Likness"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/explore-text-to-image-dotnet/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/explore-text-to-image-dotnet/
+title: Exploring Text-to-Image Capabilities in .NET with Microsoft Extensions for AI
+author: Jeremy Likness
+feed_name: Microsoft .NET Blog
 date: 2025-09-24 23:30:00 +00:00
-permalink: "/2025-09-24-Exploring-Text-to-Image-Capabilities-in-NET-with-Microsoft-Extensions-for-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Abstractions", "Agent Framework", "AI", "API", "Azure AI Foundry", "C#", "Coding", "Copilot Studio", "Developer Tools", "Extensions", "IImageGenerator", "Image Editing", "Image Generation", "LLM", "MEAI", "Microsoft.Extensions.AI", "Multimodal AI", "News", "OpenAI", "SDK", "Text To Image"]
-tags_normalized: ["dotnet", "abstractions", "agent framework", "ai", "api", "azure ai foundry", "csharp", "coding", "copilot studio", "developer tools", "extensions", "iimagegenerator", "image editing", "image generation", "llm", "meai", "microsoftdotextensionsdotai", "multimodal ai", "news", "openai", "sdk", "text to image"]
+tags:
+- .NET
+- Abstractions
+- Agent Framework
+- API
+- Azure AI Foundry
+- C#
+- Copilot Studio
+- Developer Tools
+- Extensions
+- IImageGenerator
+- Image Editing
+- Image Generation
+- LLM
+- MEAI
+- Microsoft.Extensions.AI
+- Multimodal AI
+- OpenAI
+- SDK
+- Text To Image
+- AI
+- News
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Jeremy Likness introduces developers to text-to-image features in .NET using Microsoft's AI abstractions, covering practical usage examples and best practices for leveraging MEAI's consistent API approach.<!--excerpt_end-->
 
 # Exploring Text-to-Image Capabilities in .NET with Microsoft Extensions for AI

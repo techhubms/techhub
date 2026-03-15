@@ -1,22 +1,23 @@
----
-layout: "post"
-title: "Commit Message Custom Instructions"
-description: "Customize commit message style with tailored instructions"
-author: "Randy Pagels"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/eAh9qLmBgKg"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/eAh9qLmBgKg
+title: Commit Message Custom Instructions
+author: Randy Pagels
 date: 2025-01-02 11:05:37 +00:00
-permalink: "/2025-01-02-Commit-Message-Custom-Instructions.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Git", "GitHub Copilot", "Instructions", "Videos"]
-tags_normalized: ["ai", "git", "github copilot", "instructions", "videos"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Git
+- Instructions
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's Commit Message Custom Instructions feature. Customize commit messages with tailored instructions for more descriptive and meaningful comments.<!--excerpt_end-->
 
 {% youtube eAh9qLmBgKg %}

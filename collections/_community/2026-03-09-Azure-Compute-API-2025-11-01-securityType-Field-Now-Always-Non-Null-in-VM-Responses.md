@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Compute API 2025-11-01: securityType Field Now Always Non-Null in VM Responses"
-description: "This announcement details a behavioral change in the Azure Compute API as of version 2025-11-01: all responses for Virtual Machines and Virtual Machine Scale Sets will always include a non-null securityType field. It explains the precise API changes, why the update was made, which automation or validation scripts might be affected, and the actions customers should take to adapt their deployments and code. An explicit example and recommendations for handling the updated response structure are provided."
-author: "AjKundnani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/upcoming-compute-api-change-always-return-non-null-securitytype/ba-p/4500387
+title: 'Azure Compute API 2025-11-01: securityType Field Now Always Non-Null in VM Responses'
+author: AjKundnani
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-09 14:16:14 +00:00
-permalink: "/2026-03-09-Azure-Compute-API-2025-11-01-securityType-Field-Now-Always-Non-Null-in-VM-Responses.html"
-categories: ["Azure", "Security"]
-tags: ["API Response", "API Versioning", "Automation", "Azure", "Azure Compute API", "Azure Infrastructure", "Azure Resource Manager", "Community", "Compliance", "Confidential VM", "Deployment Scripts", "Security", "Securitytype", "Standard Security", "Trusted Launch", "Validation", "Virtual Machine Scale Sets", "Virtual Machines"]
-tags_normalized: ["api response", "api versioning", "automation", "azure", "azure compute api", "azure infrastructure", "azure resource manager", "community", "compliance", "confidential vm", "deployment scripts", "security", "securitytype", "standard security", "trusted launch", "validation", "virtual machine scale sets", "virtual machines"]
+tags:
+- API Response
+- API Versioning
+- Automation
+- Azure
+- Azure Compute API
+- Azure Infrastructure
+- Azure Resource Manager
+- Community
+- Compliance
+- Confidential VM
+- Deployment Scripts
+- Security
+- Securitytype
+- Standard Security
+- Trusted Launch
+- Validation
+- Virtual Machine Scale Sets
+- Virtual Machines
+section_names:
+- azure
+- security
 ---
-
 AjKundnani details the upcoming change in Azure Compute API 2025-11-01, where VM and VMSS responses will always return a non-null securityType, impacting automation and validation scripts that rely on null checks.<!--excerpt_end-->
 
 # Upcoming Change: Azure Compute API Will Always Return Non-Null securityType

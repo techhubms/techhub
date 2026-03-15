@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Reimagine Finance with AI and Agents"
-description: "This session, presented at Microsoft Ignite 2025, explores how finance departments can leverage Microsoft technologies—particularly Azure AI Foundry and Copilot Studio—to transform finance processes with AI-driven agents. Attendees learn about integrating Microsoft AI solutions into finance workflows to minimize liability, automate reconciliation, and provide better financial insights, while maintaining human oversight and auditability."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=N3gg-6NYhIs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=N3gg-6NYhIs
+title: Reimagine Finance with AI and Agents
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:08:37 +00:00
-permalink: "/2025-11-21-Reimagine-Finance-with-AI-and-Agents.html"
-categories: ["AI", "Azure"]
-tags: ["Agenticbusinessapplications", "AI", "AI Agents", "Auditability", "Azure", "Azure AI Foundry", "Business Applications", "Copilot Studio", "Custom Financial Agents", "ERP Integration", "Finance Transformation", "Financial Automation", "Human Oversight", "Microsoft Ignite", "MSIgnite", "Variance Analysis", "Videos"]
-tags_normalized: ["agenticbusinessapplications", "ai", "ai agents", "auditability", "azure", "azure ai foundry", "business applications", "copilot studio", "custom financial agents", "erp integration", "finance transformation", "financial automation", "human oversight", "microsoft ignite", "msignite", "variance analysis", "videos"]
+tags:
+- Agenticbusinessapplications
+- AI Agents
+- Auditability
+- Azure AI Foundry
+- Business Applications
+- Copilot Studio
+- Custom Financial Agents
+- ERP Integration
+- Finance Transformation
+- Financial Automation
+- Human Oversight
+- Microsoft Ignite
+- MSIgnite
+- Variance Analysis
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Events presents a session on reimagining finance with AI and agents, featuring Sigita Cepaitiene, Matt Jutila, and April Olson, showing how Azure AI Foundry and Copilot Studio empower finance teams.<!--excerpt_end-->
 
 {% youtube N3gg-6NYhIs %}

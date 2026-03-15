@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Announcing the Azure Skills Plugin: AI Skills and Automation for Azure Deployment"
-description: "The Azure Skills Plugin introduces a new way to empower AI coding agents like GitHub Copilot and Claude Code with practical Azure deployment skills. By bundling curated workflows, MCP tooling, and Foundry AI integration, developers and DevOps teams can automate real Azure operations, optimize infrastructure, and streamline cloud deployments."
-author: "Chris Harris"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/
+title: 'Announcing the Azure Skills Plugin: AI Skills and Automation for Azure Deployment'
+author: Chris Harris
+primary_section: ai
+feed_name: Microsoft All Things Azure Blog
 date: 2026-03-09 20:02:13 +00:00
-permalink: "/2026-03-09-Announcing-the-Azure-Skills-Plugin-AI-Skills-and-Automation-for-Azure-Deployment.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Agents", "All Things Azure", "Azure", "Azure CLI", "Azure Developer CLI", "Azure MCP", "Azure Skills Plugin", "Claude Code", "Cloud Deployment", "Cost Optimization", "DevOps", "DevOps Automation", "Diagnostics", "Foundry", "Foundry MCP", "IaC", "Migration", "Model Deployment", "News", "Plugins", "RBAC", "Resource Provisioning", "Skills", "VS Code"]
-tags_normalized: ["ai", "ai agents", "all things azure", "azure", "azure cli", "azure developer cli", "azure mcp", "azure skills plugin", "claude code", "cloud deployment", "cost optimization", "devops", "devops automation", "diagnostics", "foundry", "foundry mcp", "iac", "migration", "model deployment", "news", "plugins", "rbac", "resource provisioning", "skills", "vs code"]
+tags:
+- AI
+- AI Agents
+- All Things Azure
+- Azure
+- Azure CLI
+- Azure Developer CLI
+- Azure MCP
+- Azure Skills Plugin
+- Claude Code
+- Cloud Deployment
+- Cost Optimization
+- DevOps
+- DevOps Automation
+- Diagnostics
+- Foundry
+- Foundry MCP
+- IaC
+- Migration
+- Model Deployment
+- News
+- Plugins
+- RBAC
+- Resource Provisioning
+- Skills
+- VS Code
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Chris Harris introduces the Azure Skills Plugin, showcasing how agents like GitHub Copilot can automate Azure deployments with curated skills, MCP tooling, and Foundry integration.<!--excerpt_end-->
 
 # Announcing the Azure Skills Plugin: AI Skills and Automation for Azure Deployment

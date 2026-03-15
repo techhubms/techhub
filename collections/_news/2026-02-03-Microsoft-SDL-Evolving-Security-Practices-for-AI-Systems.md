@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft SDL: Evolving Security Practices for AI Systems"
-description: "This article presents Microsoft's evolution of the Secure Development Lifecycle (SDL) to address the unique security challenges posed by AI technologies. It explores the expanded attack surface, novel risks, and holistic multidisciplinary approaches required to secure modern AI-driven applications. The post describes Microsoft's multipronged SDL for AI, emphasizing policy, research, standards, enablement, and continuous improvement."
-author: "Yonatan Zunger"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/03/microsoft-sdl-evolving-security-practices-for-an-ai-powered-world/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/03/microsoft-sdl-evolving-security-practices-for-an-ai-powered-world/
+title: 'Microsoft SDL: Evolving Security Practices for AI Systems'
+author: Yonatan Zunger
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-03 17:00:00 +00:00
-permalink: "/2026-02-03-Microsoft-SDL-Evolving-Security-Practices-for-AI-Systems.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Risk Management", "AI Security", "Continuous Improvement", "Cross Functional Collaboration", "Cybersecurity", "Governance", "Microsoft SDL", "Microsoft Security", "Model Poisoning", "News", "Policy", "Prompt Injection", "RBAC", "Secure Development Lifecycle", "Security", "Threat Modeling"]
-tags_normalized: ["ai", "ai risk management", "ai security", "continuous improvement", "cross functional collaboration", "cybersecurity", "governance", "microsoft sdl", "microsoft security", "model poisoning", "news", "policy", "prompt injection", "rbac", "secure development lifecycle", "security", "threat modeling"]
+tags:
+- AI
+- AI Risk Management
+- AI Security
+- Continuous Improvement
+- Cross Functional Collaboration
+- Cybersecurity
+- Governance
+- Microsoft SDL
+- Microsoft Security
+- Model Poisoning
+- News
+- Policy
+- Prompt Injection
+- RBAC
+- Secure Development Lifecycle
+- Security
+- Threat Modeling
+section_names:
+- ai
+- security
 ---
-
 Yonatan Zunger describes how Microsoft’s Secure Development Lifecycle (SDL) adapts for AI, highlighting new security practices, threats, and a holistic process for protecting AI systems.<!--excerpt_end-->
 
 # Microsoft SDL: Evolving Security Practices for AI Systems

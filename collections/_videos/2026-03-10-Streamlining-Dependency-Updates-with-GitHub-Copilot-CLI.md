@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Streamlining Dependency Updates with GitHub Copilot CLI"
-description: "This content highlights how the GitHub Copilot CLI automates manual dependency updates for repositories, enabling developers to focus on higher-value work. Presented by GitHub, it demonstrates cross-platform automation and time-saving benefits, showcasing the productivity improvements achieved through AI-powered tooling."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/1npISWbvle4"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/1npISWbvle4
+title: Streamlining Dependency Updates with GitHub Copilot CLI
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-10 18:00:05 +00:00
-permalink: "/2026-03-10-Streamlining-Dependency-Updates-with-GitHub-Copilot-CLI.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Automation", "CLI Tools", "Copilot CLI", "Cross Platform", "Dependency Management", "Developer Productivity", "DevOps", "GitHub", "GitHub Copilot", "Repository Maintenance", "Videos"]
-tags_normalized: ["ai", "ai tools", "automation", "cli tools", "copilot cli", "cross platform", "dependency management", "developer productivity", "devops", "github", "github copilot", "repository maintenance", "videos"]
+tags:
+- AI
+- AI Tools
+- Automation
+- CLI Tools
+- Copilot CLI
+- Cross Platform
+- Dependency Management
+- Developer Productivity
+- DevOps
+- GitHub
+- GitHub Copilot
+- Repository Maintenance
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub demonstrates how the Copilot CLI automates dependency updates, reducing manual maintenance and increasing developer productivity with AI-powered tools.<!--excerpt_end-->
 
 {% youtube 1npISWbvle4 %}

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "DevCon Romania 2024: Protecting Against Supply Chain Attacks in DevOps Pipelines"
-description: "Rob Bos shares insights from his DevCon Romania 2024 talk on safeguarding software supply chains against attacks. He discusses the importance of securing every stage of code delivery, understanding pipeline vulnerabilities, and provides resources for improving security posture. Slides are available for further exploration."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/11/07/DevCon-Romania-2024-Protect-yourself-against-supply-chain-attacks"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+external_url: https://devopsjournal.io/blog/2024/11/07/DevCon-Romania-2024-Protect-yourself-against-supply-chain-attacks
+title: 'DevCon Romania 2024: Protecting Against Supply Chain Attacks in DevOps Pipelines'
+author: Rob Bos
+feed_name: Rob Bos' Blog
 date: 2024-11-07 00:00:00 +00:00
-permalink: "/2024-11-07-DevCon-Romania-2024-Protecting-Against-Supply-Chain-Attacks-in-DevOps-Pipelines.html"
-categories: ["DevOps", "Security"]
-tags: ["Attack Vectors", "Blogs", "Conference", "DevCon Romania", "DevOps", "GHAS", "GitHub", "GitHub Advanced Security", "Pipeline Security", "Secure Pipelines", "Security", "Software Delivery", "Software Dependencies", "Supply Chain Security"]
-tags_normalized: ["attack vectors", "blogs", "conference", "devcon romania", "devops", "ghas", "github", "github advanced security", "pipeline security", "secure pipelines", "security", "software delivery", "software dependencies", "supply chain security"]
+tags:
+- Attack Vectors
+- Conference
+- DevCon Romania
+- GHAS
+- GitHub
+- GitHub Advanced Security
+- Pipeline Security
+- Secure Pipelines
+- Software Delivery
+- Software Dependencies
+- Supply Chain Security
+- DevOps
+- Security
+- Blogs
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 Rob Bos, presenting at DevCon Romania 2024, offers a comprehensive overview on protecting software supply chains from attacks, focusing on best practices in DevOps and pipeline security.<!--excerpt_end-->
 
 # DevCon Romania 2024 - Protect yourself against supply chain attacks
@@ -57,7 +66,7 @@ Security posture is never static; it’s an evolving effort that requires vigila
 
 I have made **all my slides** from the session available in PDF format for anyone who wishes to explore the details and access all links discussed during the presentation:
 
-- [Slides: DevCon Romania 2024 - Protect yourself against supply chain attacks (PDF)](/slides/20241107_DevCon.ro-Protect-yourself-against-supply-chain-attacks.pdf)
+- [Slides: DevCon Romania 2024 - Protect yourself against supply chain attacks (PDF)](/slides/20241107_devcon.ro-protect-yourself-against-supply-chain-attacks.pdf)
 
 ## Stay Connected
 

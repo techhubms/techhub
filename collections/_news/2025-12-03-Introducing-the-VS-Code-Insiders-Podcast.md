@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Introducing the VS Code Insiders Podcast"
-description: "This announcement introduces the official VS Code Insiders Podcast, providing deep conversations with the developers and contributors behind Visual Studio Code. Each episode offers an inside look into new features, accessibility development, AI-powered workflows, open source communities, and the direction of modern code tooling, directly from the engineers and product team."
-author: "James Montemagno"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2025/12/03/introducing-vs-code-insiders-podcast
+title: Introducing the VS Code Insiders Podcast
+author: James Montemagno
+feed_name: Visual Studio Code Releases
 date: 2025-12-03 00:00:00 +00:00
-permalink: "/2025-12-03-Introducing-the-VS-Code-Insiders-Podcast.html"
-categories: ["Coding"]
-tags: ["Accessibility", "AI", "AI in Coding", "Code Editor", "Coding", "Community Building", "Developer Tools", "Developer Workflow", "GitHub Universe", "News", "Open Source", "Planning Agent", "Podcast", "Product Management", "Software Engineering", "VS Code", "VS Code Insiders"]
-tags_normalized: ["accessibility", "ai", "ai in coding", "code editor", "coding", "community building", "developer tools", "developer workflow", "github universe", "news", "open source", "planning agent", "podcast", "product management", "software engineering", "vs code", "vs code insiders"]
+tags:
+- Accessibility
+- AI
+- AI in Coding
+- Code Editor
+- Community Building
+- Developer Tools
+- Developer Workflow
+- GitHub Universe
+- Open Source
+- Planning Agent
+- Podcast
+- Product Management
+- Software Engineering
+- VS Code
+- VS Code Insiders
+- News
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 James Montemagno introduces the official VS Code Insiders Podcast, featuring in-depth episodes with the developers and community building Visual Studio Code, and covering topics like AI features, accessibility, and open source development.<!--excerpt_end-->
 
 # Introducing the VS Code Insiders Podcast

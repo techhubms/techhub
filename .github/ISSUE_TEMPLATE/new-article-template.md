@@ -10,15 +10,15 @@ assignees: ''
 
 Please fill out the following information:
 
-**Content Type:** [News / Blog / Video / Community ]
+**Collection:** [News / Blog / Video / Community ]
 **Source URL:** [Paste the URL of the content to process here]
 
-## Explanation for the issuer on the content types
+## Explanation for the issuer on the collection
 
 - **News**: Official announcements and product updates from Microsoft and other technology sources
 - **Blog**: Blogs and technical articles with in-depth analysis or tutorials
 - **Video**: YouTube content and video tutorials (provide YouTube URL)
-- **Community**: Community announcements, discussions, magazines and insights
+- **Community**: Community announcements, discussions and insights
 
 ## Instructions for GitHub Copilot
 

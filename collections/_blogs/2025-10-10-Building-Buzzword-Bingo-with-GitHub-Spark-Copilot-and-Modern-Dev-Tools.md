@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Buzzword Bingo with GitHub Spark, Copilot, and Modern Dev Tools"
-description: "This post by Harald Binkle details the end-to-end process of using GitHub Spark—GitHub’s AI-powered app builder—to create a modern web-based Buzzword Bingo game. It covers rapid prototyping, AI-driven development flows, integration with Copilot’s coding agent for automation, and best practices for moving from an AI-generated scaffold to production deployment using GitHub Actions and Pages. Readers will learn about bidirectional editing, dependency management, and when to leverage AI platforms like Spark."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/github-spark-buzzword-bingo/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+external_url: https://harrybin.de/posts/github-spark-buzzword-bingo/
+title: Building Buzzword Bingo with GitHub Spark, Copilot, and Modern Dev Tools
+author: Harald Binkle
+feed_name: Harald Binkle's blog
 date: 2025-10-10 22:00:00 +00:00
-permalink: "/2025-10-10-Building-Buzzword-Bingo-with-GitHub-Spark-Copilot-and-Modern-Dev-Tools.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Automation", "Bingo Game", "Blogs", "Codespaces", "Coding", "Continuous Deployment", "Copilot Coding Agent", "Dependency Management", "DevOps", "GitHub Actions", "GitHub Copilot", "GitHub Pages", "GitHub Spark", "Rapid Prototyping", "React", "TypeScript", "Web Development"]
-tags_normalized: ["ai", "ai powered development", "automation", "bingo game", "blogs", "codespaces", "coding", "continuous deployment", "copilot coding agent", "dependency management", "devops", "github actions", "github copilot", "github pages", "github spark", "rapid prototyping", "react", "typescript", "web development"]
+tags:
+- AI Powered Development
+- Automation
+- Bingo Game
+- Codespaces
+- Continuous Deployment
+- Copilot Coding Agent
+- Dependency Management
+- GitHub Actions
+- GitHub Pages
+- GitHub Spark
+- Rapid Prototyping
+- React
+- TypeScript
+- Web Development
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Harald Binkle explores building a modern Buzzword Bingo app in 15 minutes using GitHub Spark’s AI-driven development tools, Copilot integration, and automated deployments, outlining real-world lessons for developers.<!--excerpt_end-->
 
 # GitHub Spark: Buzzword Bingo from Zero to Production in 15 Minutes

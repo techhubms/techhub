@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Blazor Community Standup: What’s New in ASP.NET Core & Blazor for .NET 11 Preview 2"
-description: "This community standup video focuses on the latest features and improvements in ASP.NET Core and Blazor introduced in .NET 11 Preview 2. Hosted by Daniel Roth and Javier Calvarro Nelson, it provides insights into updates for web developers using Microsoft’s modern frameworks, emphasizing Blazor’s evolution and what’s coming next for .NET."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=U95m5dEpqLE"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=U95m5dEpqLE
+title: 'Blazor Community Standup: What’s New in ASP.NET Core & Blazor for .NET 11 Preview 2'
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-03-05 01:30:08 +00:00
-permalink: "/2026-03-05-Blazor-Community-Standup-Whats-New-in-ASPNET-Core-and-Blazor-for-NET-11-Preview-2.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "ASP.NET Core", "Blazor", "C#", "Coding", "Community Standup", "Daniel Roth", "Demo", "Developer", "Dotnet11", "Dotnetdeveloper", "Framework Updates", "Javier Calvarro Nelson", "Microsoft", "Modern Web", "Performance", "Preview 2", "Software Developer", "Software Development", "Videos", "Web Development"]
-tags_normalized: ["dotnet", "dotnet 11", "aspdotnet core", "blazor", "csharp", "coding", "community standup", "daniel roth", "demo", "developer", "dotnet11", "dotnetdeveloper", "framework updates", "javier calvarro nelson", "microsoft", "modern web", "performance", "preview 2", "software developer", "software development", "videos", "web development"]
+tags:
+- .NET
+- .NET 11
+- ASP.NET Core
+- Blazor
+- C#
+- Community Standup
+- Daniel Roth
+- Demo
+- Developer
+- Dotnet11
+- Dotnetdeveloper
+- Framework Updates
+- Javier Calvarro Nelson
+- Microsoft
+- Modern Web
+- Performance
+- Preview 2
+- Software Developer
+- Software Development
+- Videos
+- Web Development
+section_names:
+- dotnet
 ---
-
 dotnet presents an overview of the key updates in ASP.NET Core and Blazor for .NET 11 Preview 2, featuring Daniel Roth and Javier Calvarro Nelson, geared toward web developers.<!--excerpt_end-->
 
 {% youtube U95m5dEpqLE %}

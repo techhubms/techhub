@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Build the Future of AI-Driven Apps with SharePoint Embedded"
-description: "Explore how SharePoint Embedded empowers developers to build custom, AI-powered, document-centric applications. This overview covers hands-on demonstrations, live sessions, and practical insights for creating secure, scalable content solutions using Microsoft’s headless, API-only platform. Learn how developers can leverage Copilot integration and Microsoft 365’s robust content services for next-generation apps."
-author: "wbaer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/build-the-future-of-ai-driven-apps-with-sharepoint-embedded/ba-p/4442595"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-sharepoint-blog/build-the-future-of-ai-driven-apps-with-sharepoint-embedded/ba-p/4442595
+title: Build the Future of AI-Driven Apps with SharePoint Embedded
+author: wbaer
+feed_name: Microsoft Tech Community
 date: 2025-08-12 17:02:41 +00:00
-permalink: "/2025-08-12-Build-the-Future-of-AI-Driven-Apps-with-SharePoint-Embedded.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Apps", "API Development", "Coding", "Community", "Compliance", "Content Services", "Copilot Integration", "Custom UX", "Document Centric Apps", "Headless Platform", "ISV Solutions", "Microsoft 365", "Microsoft Mechanics", "Scalable Architecture", "SharePoint Development", "SharePoint Embedded", "TechCon ATL"]
-tags_normalized: ["ai", "ai apps", "api development", "coding", "community", "compliance", "content services", "copilot integration", "custom ux", "document centric apps", "headless platform", "isv solutions", "microsoft 365", "microsoft mechanics", "scalable architecture", "sharepoint development", "sharepoint embedded", "techcon atl"]
+tags:
+- AI Apps
+- API Development
+- Compliance
+- Content Services
+- Copilot Integration
+- Custom UX
+- Document Centric Apps
+- Headless Platform
+- ISV Solutions
+- Microsoft 365
+- Microsoft Mechanics
+- Scalable Architecture
+- SharePoint Development
+- SharePoint Embedded
+- TechCon ATL
+- AI
+- Community
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 wbaer demonstrates how developers can leverage SharePoint Embedded to build AI-powered, document-centric applications using Microsoft’s headless content platform. This resource guides practitioners through upcoming events, live demos, and real-world implementation insights.<!--excerpt_end-->
 
 # Build the Future of AI-Driven Apps with SharePoint Embedded

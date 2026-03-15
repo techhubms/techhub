@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Copilot Code Review Now Available for Organization Members Without a License"
-description: "This GitHub blog post announces that organizations using Copilot Enterprise or Copilot Business plans can now enable Copilot code review on all pull requests, even from contributors without a Copilot license. The feature offers consistent AI-powered code review, seamless billing for unlicensed users, and greater control over code review policies. Administrators can enable this through organizational policy settings and monitor and predict consumption with new analytics and budgeting tools."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-12-17-copilot-code-review-now-available-for-organization-members-without-a-license
+title: Copilot Code Review Now Available for Organization Members Without a License
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-12-17 15:30:47 +00:00
-permalink: "/2025-12-17-Copilot-Code-Review-Now-Available-for-Organization-Members-Without-a-License.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Policy", "AI", "Analytics Dashboard", "Billing", "Business Plans", "Code Review Automation", "Copilot", "Copilot Code Review", "Enterprise Plans", "GitHub Copilot", "License Management", "News", "Open Source", "Organization Repository", "Premium Requests", "Pull Requests"]
-tags_normalized: ["admin policy", "ai", "analytics dashboard", "billing", "business plans", "code review automation", "copilot", "copilot code review", "enterprise plans", "github copilot", "license management", "news", "open source", "organization repository", "premium requests", "pull requests"]
+tags:
+- Admin Policy
+- Analytics Dashboard
+- Billing
+- Business Plans
+- Code Review Automation
+- Copilot
+- Copilot Code Review
+- Enterprise Plans
+- License Management
+- Open Source
+- Organization Repository
+- Premium Requests
+- Pull Requests
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison details how Copilot code review can now be applied to pull requests from organization members without a Copilot license, streamlining AI-powered reviews and billing for enterprises.<!--excerpt_end-->
 
 # Copilot Code Review for Unlicensed Organization Members

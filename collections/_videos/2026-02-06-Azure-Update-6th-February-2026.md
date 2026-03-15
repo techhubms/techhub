@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Update - 6th February 2026"
-description: "A roundup of recent Azure updates from John Savill's Technical Training, highlighting key changes, feature retirements, and new capabilities in the Microsoft Azure cloud ecosystem. The video covers updates on AMD confidential VMs, App Gateway enhancements, Databricks improvements, Event Hub changes, and security upgrades."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=edJujekFU58"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=edJujekFU58
+title: Azure Update - 6th February 2026
+author: John Savill's Technical Training
+primary_section: azure
+feed_name: John Savill's Technical Training
 date: 2026-02-06 16:00:08 +00:00
-permalink: "/2026-02-06-Azure-Update-6th-February-2026.html"
-categories: ["Azure"]
-tags: ["ACS", "ANF", "App Gateway", "Azure", "Azure Cloud", "Azure Databricks", "Azure Security", "Azure Update", "CDN", "Claude Opus", "Cloud", "Cloud Computing", "Confidential VM", "Event Hub", "Fleet Manager", "Microsoft", "Microsoft Azure", "Rate Limiting", "Retirement Notice", "Serverless Workspace", "Videos", "VNet Routing"]
-tags_normalized: ["acs", "anf", "app gateway", "azure", "azure cloud", "azure databricks", "azure security", "azure update", "cdn", "claude opus", "cloud", "cloud computing", "confidential vm", "event hub", "fleet manager", "microsoft", "microsoft azure", "rate limiting", "retirement notice", "serverless workspace", "videos", "vnet routing"]
+tags:
+- ACS
+- ANF
+- App Gateway
+- Azure
+- Azure Cloud
+- Azure Databricks
+- Azure Security
+- Azure Update
+- CDN
+- Claude Opus
+- Cloud Computing
+- Confidential VM
+- Event Hub
+- Fleet Manager
+- Microsoft
+- Microsoft Azure
+- Rate Limiting
+- Retirement Notice
+- Serverless Workspace
+- Videos
+- VNet Routing
+section_names:
+- azure
 ---
-
 John Savill delivers the latest Azure update, summarizing important cloud changes and new features for developers and architects working with Microsoft Azure.<!--excerpt_end-->
 
 {% youtube edJujekFU58 %}

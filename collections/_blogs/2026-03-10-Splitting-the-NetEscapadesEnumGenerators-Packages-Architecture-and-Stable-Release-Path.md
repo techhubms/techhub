@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Splitting the NetEscapades.EnumGenerators Packages: Architecture and Stable Release Path"
-description: "This blog post by Andrew Lock explains the architectural changes and decision-making process behind splitting the NetEscapades.EnumGenerators source generator package into a metapackage and specialized child packages. It details the design considerations, the challenges around transitive runtime dependencies, the solutions chosen for internal and public use, and the path towards a stable 1.0.0 release. Developers will learn why and how to choose among the metapackage, generator-only, or runtime-dependency flavors depending on their project requirements."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/splitting-the-netescapades-enumgenerators-packages-the-road-to-a-stable-release/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/splitting-the-netescapades-enumgenerators-packages-the-road-to-a-stable-release/
+title: 'Splitting the NetEscapades.EnumGenerators Packages: Architecture and Stable Release Path'
+author: Andrew Lock
+primary_section: dotnet
+feed_name: Andrew Lock's Blog
 date: 2026-03-10 09:00:00 +00:00
-permalink: "/2026-03-10-Splitting-the-NetEscapadesEnumGenerators-Packages-Architecture-and-Stable-Release-Path.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 6", ".NET 8", ".NET Core", "Blogs", "C#", "Code Generation", "Coding", "Dependency Management", "Enum Performance", "EnumParseOptions", "Incremental Generators", "Library Design", "NuGet", "Package Architecture", "Roslyn", "SerializationOptions", "Source Generators"]
-tags_normalized: ["dotnet", "dotnet 6", "dotnet 8", "dotnet core", "blogs", "csharp", "code generation", "coding", "dependency management", "enum performance", "enumparseoptions", "incremental generators", "library design", "nuget", "package architecture", "roslyn", "serializationoptions", "source generators"]
+tags:
+- .NET
+- .NET 6
+- .NET 8
+- .NET Core
+- Blogs
+- C#
+- Code Generation
+- Dependency Management
+- Enum Performance
+- EnumParseOptions
+- Incremental Generators
+- Library Design
+- NuGet
+- Package Architecture
+- Roslyn
+- SerializationOptions
+- Source Generators
+section_names:
+- dotnet
 ---
-
 Andrew Lock explains recent architectural changes to the NetEscapades.EnumGenerators package family, guiding .NET developers on choosing the right flavor for their scenario and sharing lessons from evolving the popular source generator library.<!--excerpt_end-->
 
 # Splitting the NetEscapades.EnumGenerators Packages: The Road to a Stable Release

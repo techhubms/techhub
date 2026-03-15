@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "AI-First Mobile Development: Live Coding with Copilot and .NET MAUI"
-description: "This live coding session explores building a complete .NET MAUI app using AI tools, focusing on practical use of GitHub Copilot and other AI agents to scaffold, design, debug, and ship a cross-platform mobile application. Hosted by the .NET MAUI team, it showcases real-world strategies and realities of AI-assisted development."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9uO1rY2aswU"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=9uO1rY2aswU
+title: 'AI-First Mobile Development: Live Coding with Copilot and .NET MAUI'
+author: dotnet
+primary_section: github-copilot
+feed_name: DotNet YouTube
 date: 2026-03-03 21:53:41 +00:00
-permalink: "/2026-03-03-AI-First-Mobile-Development-Live-Coding-with-Copilot-and-NET-MAUI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Agents", "AI Assisted Development", "Bug Fixing", "C#", "Code Review", "Coding", "Copilot", "Cross Platform Apps", "Demo", "Developer Community", "Dotnetdeveloper", "Dotnetmaui", "GitHub Copilot", "Live Coding", "MAUI", "Microsoft", "Mobile Development", "Mobiledevelopment", "Scaffolding", "Software Developer", "UI Generation", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai agents", "ai assisted development", "bug fixing", "csharp", "code review", "coding", "copilot", "cross platform apps", "demo", "developer community", "dotnetdeveloper", "dotnetmaui", "github copilot", "live coding", "maui", "microsoft", "mobile development", "mobiledevelopment", "scaffolding", "software developer", "ui generation", "videos"]
+tags:
+- .NET
+- AI
+- AI Agents
+- AI Assisted Development
+- Bug Fixing
+- C#
+- Code Review
+- Copilot
+- Cross Platform Apps
+- Demo
+- Developer Community
+- Dotnetdeveloper
+- Dotnetmaui
+- GitHub Copilot
+- Live Coding
+- MAUI
+- Microsoft
+- Mobile Development
+- Mobiledevelopment
+- Scaffolding
+- Software Developer
+- UI Generation
+- Videos
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Jakub Florkowski, Shane Neuville, and Gerald Versluis demonstrate building a .NET MAUI app using GitHub Copilot and AI, highlighting the real-world workflow and decision-making behind AI-powered mobile development.<!--excerpt_end-->
 
 {% youtube 9uO1rY2aswU %}

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot CLI General Availability and New Repository Dashboard"
-description: "This episode of The Download, presented by GitHub, highlights the general availability of the GitHub Copilot CLI, new agentic features with multi-model support, the recently launched repository dashboard, GitHub Copilot Dev Days, and the story behind the open source project npmx. Viewers get updates relevant to developer workflows and advances in GitHub's AI-powered tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1iG8kumbRcs"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=1iG8kumbRcs
+title: GitHub Copilot CLI General Availability and New Repository Dashboard
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-06 17:34:31 +00:00
-permalink: "/2026-03-06-GitHub-Copilot-CLI-General-Availability-and-New-Repository-Dashboard.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Features", "AI", "Code Automation", "Continuous Integration", "Copilot CLI", "Copilot Dev Days", "Developer Tools", "Developer Workflow", "DevOps", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Multi Model Support", "Npmx", "Open Source", "OpenSource", "Repository Dashboard", "Videos"]
-tags_normalized: ["agentic features", "ai", "code automation", "continuous integration", "copilot cli", "copilot dev days", "developer tools", "developer workflow", "devops", "github", "github copilot", "github copilot cli", "multi model support", "npmx", "open source", "opensource", "repository dashboard", "videos"]
+tags:
+- Agentic Features
+- AI
+- Code Automation
+- Continuous Integration
+- Copilot CLI
+- Copilot Dev Days
+- Developer Tools
+- Developer Workflow
+- DevOps
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- Multi Model Support
+- Npmx
+- Open Source
+- OpenSource
+- Repository Dashboard
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this episode, GitHub's Cassidy shares updates around the general availability of GitHub Copilot CLI, a new repository dashboard, and developer-focused events like Copilot Dev Days. Learn how these tools enhance coding and DevOps workflows for the GitHub community.<!--excerpt_end-->
 
 {% youtube 1iG8kumbRcs %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Protecting Microsoft Fabric Data with Purview DLP and Sensitivity Labels"
-description: "This post details the general availability of Microsoft Purview Data Loss Prevention (DLP) policies and Information Protection sensitivity labels for Microsoft Fabric. It explains how organizations can implement comprehensive data security strategies, automate governance, and meet compliance requirements by leveraging Purview within their analytics and data environments in Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/protecting-your-fabric-data-using-purview-is-now-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/protecting-your-fabric-data-using-purview-is-now-generally-available/
+title: Protecting Microsoft Fabric Data with Purview DLP and Sensitivity Labels
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-24 13:00:00 +00:00
-permalink: "/2025-09-24-Protecting-Microsoft-Fabric-Data-with-Purview-DLP-and-Sensitivity-Labels.html"
-categories: ["Azure", "Security"]
-tags: ["Access Controls", "Auditing", "Azure", "Azure Data", "Compliance", "Data Classification", "Data Governance", "Data Loss Prevention", "DLP", "Domain Level Security", "Encryption", "Information Protection", "Microsoft Fabric", "Microsoft Purview", "News", "Security", "Security Policies", "Sensitivity Labels"]
-tags_normalized: ["access controls", "auditing", "azure", "azure data", "compliance", "data classification", "data governance", "data loss prevention", "dlp", "domain level security", "encryption", "information protection", "microsoft fabric", "microsoft purview", "news", "security", "security policies", "sensitivity labels"]
+tags:
+- Access Controls
+- Auditing
+- Azure Data
+- Compliance
+- Data Classification
+- Data Governance
+- Data Loss Prevention
+- DLP
+- Domain Level Security
+- Encryption
+- Information Protection
+- Microsoft Fabric
+- Microsoft Purview
+- Security Policies
+- Sensitivity Labels
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Microsoft Fabric Blog explains how to secure your data in Microsoft Fabric using Microsoft Purview's Data Loss Prevention policies and sensitivity labels, outlining benefits, setup steps, and governance improvements for organizations.<!--excerpt_end-->
 
 # Protecting Microsoft Fabric Data with Purview DLP and Sensitivity Labels

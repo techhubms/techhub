@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Safer Internet Day 2026: Empowering Students to Be AI-Aware and Safe Online"
-description: "This article explores how Safer Internet Day 2026 focuses on helping students, educators, and families become AI-aware, safe, and smart in their online lives. It introduces Microsoft Education tools such as the Education Security Toolkit and the Minecraft Education CyberSafe series to promote digital literacy, cybersecurity, and responsible AI use in educational environments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/education/blog/2026/02/safer-internet-day-2026-helping-students-become-ai%e2%80%91aware-safe-and-smart-online/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/education/blog/2026/02/safer-internet-day-2026-helping-students-become-ai%e2%80%91aware-safe-and-smart-online/
+title: 'Safer Internet Day 2026: Empowering Students to Be AI-Aware and Safe Online'
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-10 17:38:03 +00:00
-permalink: "/2026-02-10-Safer-Internet-Day-2026-Empowering-Students-to-Be-AI-Aware-and-Safe-Online.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Literacy", "Company News", "CyberSafe", "Cybersecurity", "Data Governance", "Digital Citizenship", "Digital Literacy", "Digital Skills", "Education Security Toolkit", "K 12 Education", "Microsoft Education", "Minecraft Education", "News", "Online Safety", "Safer Internet Day", "Security", "Student Safety", "Zero Trust"]
-tags_normalized: ["ai", "ai literacy", "company news", "cybersafe", "cybersecurity", "data governance", "digital citizenship", "digital literacy", "digital skills", "education security toolkit", "k 12 education", "microsoft education", "minecraft education", "news", "online safety", "safer internet day", "security", "student safety", "zero trust"]
+tags:
+- AI
+- AI Literacy
+- Company News
+- CyberSafe
+- Cybersecurity
+- Data Governance
+- Digital Citizenship
+- Digital Literacy
+- Digital Skills
+- Education Security Toolkit
+- K 12 Education
+- Microsoft Education
+- Minecraft Education
+- News
+- Online Safety
+- Safer Internet Day
+- Security
+- Student Safety
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 stclarke discusses how Safer Internet Day 2026 advances AI awareness and online safety for students by leveraging Microsoft Education's resources—such as the Security Toolkit and Minecraft Education's CyberSafe series—to foster cybersecurity and digital literacy skills in schools and communities.<!--excerpt_end-->
 
 # Safer Internet Day 2026: Empowering Students to Be AI-Aware and Safe Online

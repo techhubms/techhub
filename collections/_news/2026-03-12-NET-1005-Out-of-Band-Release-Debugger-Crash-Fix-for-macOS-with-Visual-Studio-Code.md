@@ -1,20 +1,33 @@
----
-layout: "post"
-title: ".NET 10.0.5 Out-of-Band Release: Debugger Crash Fix for macOS with Visual Studio Code"
-description: "This article announces the .NET 10.0.5 out-of-band update, which addresses a critical debugger crash affecting macOS developers using Visual Studio Code. The issue, introduced in .NET 10.0.4, caused debug sessions to crash, particularly on ARM64 Macs. Guidance is provided for affected developers, along with relevant links to release notes and downloads."
-author: "Rahul Bhandari (MSFT)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-0-5-oob-release-macos-debugger-fix/
+title: '.NET 10.0.5 Out-of-Band Release: Debugger Crash Fix for macOS with Visual Studio Code'
+author: Rahul Bhandari (MSFT)
+primary_section: dotnet
+feed_name: Microsoft .NET Blog
 date: 2026-03-12 17:00:00 +00:00
-permalink: "/2026-03-12-NET-1005-Out-of-Band-Release-Debugger-Crash-Fix-for-macOS-with-Visual-Studio-Code.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET 10.0.5", ".NET Maintenance", ".NET SDK", "Apple Silicon", "ARM64", "Bug Fix", "Coding", "Cross Platform Development", "Debugger", "Debugging", "Developer Tools", "Macos", "Maintenance & Updates", "News", "OOB", "Out Of Band Update", "Release Notes", "VS Code"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet 10dot0dot5", "dotnet maintenance", "dotnet sdk", "apple silicon", "arm64", "bug fix", "coding", "cross platform development", "debugger", "debugging", "developer tools", "macos", "maintenance and updates", "news", "oob", "out of band update", "release notes", "vs code"]
+tags:
+- .NET
+- .NET 10
+- .NET 10.0.5
+- .NET Maintenance
+- .NET SDK
+- Apple Silicon
+- ARM64
+- Bug Fix
+- Cross Platform Development
+- Debugger
+- Debugging
+- Developer Tools
+- Macos
+- Maintenance & Updates
+- News
+- OOB
+- Out Of Band Update
+- Release Notes
+- VS Code
+section_names:
+- dotnet
 ---
-
 Rahul Bhandari (MSFT) details the .NET 10.0.5 out-of-band update, which fixes a debugger regression for macOS developers using Visual Studio Code.<!--excerpt_end-->
 
 # .NET 10.0.5 Out-of-Band Release – macOS Debugger Fix

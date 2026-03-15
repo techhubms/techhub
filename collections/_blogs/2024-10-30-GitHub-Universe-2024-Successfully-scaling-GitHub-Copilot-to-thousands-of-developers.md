@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "GitHub Universe 2024: Successfully Scaling GitHub Copilot to Thousands of Developers"
-description: "Rob Bos shares insights from his GitHub Universe 2024 talk on effectively scaling GitHub Copilot across large developer organizations. The session covers strategies, real-world experiences, and access to both the recorded talk and session slides."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+external_url: https://devopsjournal.io/blog/2024/10/30/GitHub-Universe-slides
+title: 'GitHub Universe 2024: Successfully Scaling GitHub Copilot to Thousands of Developers'
+author: Rob Bos
+feed_name: Rob Bos' Blog
 date: 2024-10-30 00:00:00 +00:00
-permalink: "/2024-10-30-GitHub-Universe-2024-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Blogs", "Conference", "Copilot Adoption", "Developer Tooling", "DevOps", "GitHub", "GitHub Copilot", "GitHub Universe", "Organizational Implementation", "Scalability", "Slides"]
-tags_normalized: ["ai", "blogs", "conference", "copilot adoption", "developer tooling", "devops", "github", "github copilot", "github universe", "organizational implementation", "scalability", "slides"]
+tags:
+- Conference
+- Copilot Adoption
+- Developer Tooling
+- GitHub
+- GitHub Universe
+- Organizational Implementation
+- Scalability
+- Slides
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this session recap, Rob Bos discusses strategies for scaling GitHub Copilot to thousands of developers, as presented at GitHub Universe 2024. The post includes a recorded session and slides.<!--excerpt_end-->
 
 # GitHub Universe 2024 - Successfully Scaling GitHub Copilot to Thousands of Developers
@@ -36,7 +44,7 @@ At the welcoming and inspiring GitHub Universe conference, Rob detailed:
 
 The session aims to help organizations maximize the value of GitHub Copilot, ensuring seamless onboarding and effective usage for thousands of developers.
 
-![Photo of the Xebia group at the standup on our stand](/images/2024/20241030/20241029_150537380_iOS.jpg)
+![Photo of the Xebia group at the standup on our stand](/images/2024/20241030/20241029_150537380_ios.jpg)
 
 ## Watch the Session
 
@@ -48,7 +56,7 @@ The session recording is available:
 
 You can download or view the slides presented during the session:
 
-[Session Slides (PDF)](/slides/20241030_AI1197B-Successfully-scaling-GitHub-Copilot-to-thousands-of-developers.pdf)
+[Session Slides (PDF)](/slides/20241030_ai1197b-successfully-scaling-github-copilot-to-thousands-of-developers.pdf)
 
 ## More Information
 

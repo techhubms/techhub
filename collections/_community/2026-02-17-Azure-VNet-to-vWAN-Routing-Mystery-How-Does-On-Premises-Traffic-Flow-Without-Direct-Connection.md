@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?"
-description: "A real-world troubleshooting scenario: An Azure function app within a VNet leverages an Azure Firewall to filter outbound traffic to on-premises sites, yet the VNet has no direct vWAN hub attachment or peering. This post seeks clarity around Azure's network routing mechanisms and the unexpected traffic path to a site-to-site VPN."
-author: "YuktiVerma2025"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m-p/4495408#M767"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-networking/help-how-is-vnet-traffic-reaching-vwan-on-prem-when-the-vnet-isn/m-p/4495408#M767
+title: 'Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?'
+author: YuktiVerma2025
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-17 14:14:53 +00:00
-permalink: "/2026-02-17-Azure-VNet-to-vWAN-Routing-Mystery-How-Does-On-Premises-Traffic-Flow-Without-Direct-Connection.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Function Apps", "Azure Networking", "Azure Virtual Network", "Community", "Enterprise Networking", "IP Groups", "Network Routing", "NVA", "On Premises Connectivity", "Outbound Traffic Filtering", "Private DNS Zone", "Security", "Site To Site VPN", "User Defined Routes", "VNet", "Vwan"]
-tags_normalized: ["azure", "azure firewall", "azure function apps", "azure networking", "azure virtual network", "community", "enterprise networking", "ip groups", "network routing", "nva", "on premises connectivity", "outbound traffic filtering", "private dns zone", "security", "site to site vpn", "user defined routes", "vnet", "vwan"]
+tags:
+- Azure
+- Azure Firewall
+- Azure Function Apps
+- Azure Networking
+- Azure Virtual Network
+- Community
+- Enterprise Networking
+- IP Groups
+- Network Routing
+- NVA
+- On Premises Connectivity
+- Outbound Traffic Filtering
+- Private DNS Zone
+- Security
+- Site To Site VPN
+- User Defined Routes
+- VNet
+- Vwan
+section_names:
+- azure
+- security
 ---
-
 In this post, YuktiVerma2025 investigates an unexpected Azure network scenario, raising questions about how traffic from a function app in a VNet—without any visible vWAN hub connection—still reaches on-premises resources via a site-to-site VPN.<!--excerpt_end-->
 
 # Azure VNet-to-vWAN Routing Mystery: How Does On-Premises Traffic Flow Without Direct Connection?

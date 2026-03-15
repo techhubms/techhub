@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Enterprise-Scale Inference on Azure: Architecting for Cost, Latency, and Efficiency"
-description: "This in-depth guide from bobmital explores how enterprises can architect inference systems for AI on Azure Kubernetes Service (AKS), balancing the tradeoffs of cost, latency, and model accuracy. It covers technical challenges, optimization techniques, open-source model selection, platform architecture, and security best practices for operating LLMs at scale in the Microsoft cloud."
-author: "bobmital"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-architecting-for-cost-latency-and/ba-p/4498754"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/inference-at-enterprise-scale-architecting-for-cost-latency-and/ba-p/4498754
+title: 'Enterprise-Scale Inference on Azure: Architecting for Cost, Latency, and Efficiency'
+author: bobmital
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-02 19:36:47 +00:00
-permalink: "/2026-03-02-Enterprise-Scale-Inference-on-Azure-Architecting-for-Cost-Latency-and-Efficiency.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AKS", "Azure", "Azure Key Vault", "Azure NCads H100", "Azure ND H100", "Batch Inference", "Community", "Context Length", "Continuous Batching", "DeepSeek", "Enterprise AI", "GPU Optimization", "Identity Management", "KV Cache", "Meta Llama", "Microsoft Entra ID", "Mistral", "ML", "Model Deployment", "Model Inference", "Multi LoRA", "NVIDIA MIG", "Open Source LLMs", "Private Clusters", "Quantization", "Qwen", "Ray Serve", "Security", "Speculative Decoding", "Vllm"]
-tags_normalized: ["ai", "aks", "azure", "azure key vault", "azure ncads h100", "azure nd h100", "batch inference", "community", "context length", "continuous batching", "deepseek", "enterprise ai", "gpu optimization", "identity management", "kv cache", "meta llama", "microsoft entra id", "mistral", "ml", "model deployment", "model inference", "multi lora", "nvidia mig", "open source llms", "private clusters", "quantization", "qwen", "ray serve", "security", "speculative decoding", "vllm"]
+tags:
+- AI
+- AKS
+- Azure
+- Azure Key Vault
+- Azure NCads H100
+- Azure ND H100
+- Batch Inference
+- Community
+- Context Length
+- Continuous Batching
+- DeepSeek
+- Enterprise AI
+- GPU Optimization
+- Identity Management
+- KV Cache
+- Meta Llama
+- Microsoft Entra ID
+- Mistral
+- ML
+- Model Deployment
+- Model Inference
+- Multi LoRA
+- NVIDIA MIG
+- Open Source LLMs
+- Private Clusters
+- Quantization
+- Qwen
+- Ray Serve
+- Security
+- Speculative Decoding
+- Vllm
+section_names:
+- ai
+- azure
+- ml
+- security
 ---
-
 bobmital presents a comprehensive and practical guide for deploying and optimizing large language model inference on Azure Kubernetes Service, focusing on engineering tradeoffs, GPU efficiency strategies, open-source model evaluation, and robust enterprise security architecture.<!--excerpt_end-->
 
 # Enterprise-Scale Inference on Azure: Architecting for Cost, Latency, and Efficiency

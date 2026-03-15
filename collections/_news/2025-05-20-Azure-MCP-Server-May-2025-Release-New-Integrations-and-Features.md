@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Azure MCP Server – May 2025 Release: New Integrations and Features"
-description: "This post by Rohit Ganguly details the May 2025 updates to the Azure MCP Server, highlighting new integrations with Azure AI Search, PostgreSQL, Key Vault, Data Explorer, and Service Bus. It also introduces fresh documentation, developer tools, and a best practices tool in collaboration with GitHub Copilot for Azure."
-author: "Rohit Ganguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-may-2025-release/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-mcp-server-may-2025-release/
+title: 'Azure MCP Server – May 2025 Release: New Integrations and Features'
+author: Rohit Ganguly
+feed_name: Microsoft DevBlog
 date: 2025-05-20 19:40:20 +00:00
-permalink: "/2025-05-20-Azure-MCP-Server-May-2025-Release-New-Integrations-and-Features.html"
-categories: ["AI", "Azure", "Coding", "ML", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET", "Agents", "AI", "Azure", "Azure AI Search", "Azure Data Explorer", "Azure Key Vault", "Azure MCP Server", "Azure SDK", "Azure Service Bus", "Cloud", "Coding", "Data Analytics", "Developer Best Practices", "DevOps", "Documentation", "GitHub Copilot", "GitHub Copilot For Azure", "Integrations", "Kusto", "MCP", "ML", "News", "PostgreSQL", "Python", "Security", "VS Code"]
-tags_normalized: ["dotnet", "agents", "ai", "azure", "azure ai search", "azure data explorer", "azure key vault", "azure mcp server", "azure sdk", "azure service bus", "cloud", "coding", "data analytics", "developer best practices", "devops", "documentation", "github copilot", "github copilot for azure", "integrations", "kusto", "mcp", "ml", "news", "postgresql", "python", "security", "vs code"]
+tags:
+- .NET
+- Agents
+- Azure AI Search
+- Azure Data Explorer
+- Azure Key Vault
+- Azure MCP Server
+- Azure SDK
+- Azure Service Bus
+- Data Analytics
+- Developer Best Practices
+- Documentation
+- GitHub Copilot For Azure
+- Integrations
+- Kusto
+- MCP
+- PostgreSQL
+- Python
+- VS Code
+- AI
+- Azure
+- ML
+- DevOps
+- GitHub Copilot
+- Security
+- News
+section_names:
+- ai
+- azure
+- dotnet
+- ml
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 Rohit Ganguly presents the May 2025 release of Azure MCP Server, focusing on new service integrations, improved documentation, and tools for developers, including collaboration with GitHub Copilot for Azure.<!--excerpt_end-->
 
 ## Azure MCP Server – May 2025 Release

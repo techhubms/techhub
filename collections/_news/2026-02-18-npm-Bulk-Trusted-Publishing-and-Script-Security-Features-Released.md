@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "npm Bulk Trusted Publishing and Script Security Features Released"
-description: "This news highlights the release of two significant security and configuration features in npm CLI v11.10.0+: bulk configuration for OIDC trusted publishing and new controls for git dependencies using the --allow-git flag. These updates help package maintainers securely publish and manage scripts at scale within the npm ecosystem, addressing supply chain security concerns."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-18-npm-bulk-trusted-publishing-config-and-script-security-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-18-npm-bulk-trusted-publishing-config-and-script-security-now-generally-available
+title: npm Bulk Trusted Publishing and Script Security Features Released
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-18 18:11:24 +00:00
-permalink: "/2026-02-18-npm-Bulk-Trusted-Publishing-and-Script-Security-Features-Released.html"
-categories: ["DevOps", "Security"]
-tags: ["Configuration", "Dependency Management", "DevOps", "Git Dependencies", "GitHub", "News", "Node.js", "npm", "npm CLI", "OIDC", "Package Management", "Script Security", "Security", "Software Supply Chain", "Supply Chain Security", "Trusted Publishing"]
-tags_normalized: ["configuration", "dependency management", "devops", "git dependencies", "github", "news", "nodedotjs", "npm", "npm cli", "oidc", "package management", "script security", "security", "software supply chain", "supply chain security", "trusted publishing"]
+tags:
+- Configuration
+- Dependency Management
+- DevOps
+- Git Dependencies
+- GitHub
+- News
+- Node.js
+- npm
+- npm CLI
+- OIDC
+- Package Management
+- Script Security
+- Security
+- Software Supply Chain
+- Supply Chain Security
+- Trusted Publishing
+section_names:
+- devops
+- security
 ---
-
 Allison presents new npm CLI features for secure trusted publishing and improved script security, with practical steps for maintainers and developers.<!--excerpt_end-->
 
 # npm Bulk Trusted Publishing and Script Security Now Generally Available

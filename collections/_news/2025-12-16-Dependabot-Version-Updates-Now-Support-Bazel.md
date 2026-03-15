@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Dependabot Version Updates Now Support Bazel"
-description: "This announcement details the rollout of Bazel support for Dependabot, enabling automated updates for Bazel dependencies in projects using either the newer Bzlmod or legacy WORKSPACE systems. The post explains the technical collaboration between GitHub and the Bazel community, outlines requirements, and describes how projects can leverage automatic pull requests, lockfile regeneration, and reproducible build maintenance. The guide also highlights real-world developer steps and pointers to further documentation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-bazel"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-12-16-dependabot-version-updates-now-support-bazel
+title: Dependabot Version Updates Now Support Bazel
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-12-16 16:45:50 +00:00
-permalink: "/2025-12-16-Dependabot-Version-Updates-Now-Support-Bazel.html"
-categories: ["DevOps"]
-tags: ["Automation", "Bazel", "Bzlmod", "Continuous Integration", "Dependabot", "Dependency Management", "DevOps", "GitHub", "Lockfile", "News", "Open Source", "Supply Chain Security", "WORKSPACE"]
-tags_normalized: ["automation", "bazel", "bzlmod", "continuous integration", "dependabot", "dependency management", "devops", "github", "lockfile", "news", "open source", "supply chain security", "workspace"]
+tags:
+- Automation
+- Bazel
+- Bzlmod
+- Continuous Integration
+- Dependabot
+- Dependency Management
+- GitHub
+- Lockfile
+- Open Source
+- Supply Chain Security
+- WORKSPACE
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Allison introduces Dependabot’s new capability to manage Bazel dependencies, highlighting collaboration with the Bazel community and outlining technical details for developers.<!--excerpt_end-->
 
 # Dependabot Version Updates Now Support Bazel

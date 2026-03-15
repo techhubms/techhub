@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Powering Secure Private Network Streaming to Microsoft Fabric with Eventstream Connectors (Preview)"
-description: "This guide introduces secure, private network streaming to Microsoft Fabric using Eventstream connectors within Real-Time Intelligence (RTI). It details how organizations can leverage Azure virtual networks, streaming virtual network data gateways, and secure connectivity options to ingest real-time data from private sources—including on-premises systems and third-party clouds—while meeting enterprise security and compliance requirements. The article outlines prerequisites, setup instructions, and integration with Fabric's analytics suite, empowering technical teams to enable end-to-end secure, real-time data streaming and analytics within Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/powering-secure-private-network-streaming-to-fabric-with-eventstream-connectors-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/powering-secure-private-network-streaming-to-fabric-with-eventstream-connectors-preview/
+title: Powering Secure Private Network Streaming to Microsoft Fabric with Eventstream Connectors (Preview)
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-03-05 16:00:00 +00:00
-permalink: "/2026-03-05-Powering-Secure-Private-Network-Streaming-to-Microsoft-Fabric-with-Eventstream-Connectors-Preview.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Azure", "Azure Virtual Network", "Compliance", "Data Gateway", "Data Ingestion", "Eventstream", "ExpressRoute", "Hybrid Cloud", "Microsoft Fabric", "ML", "News", "On Premises Integration", "Private Network", "Real Time Data", "Real Time Intelligence", "Secure Connectivity", "Security", "Streaming Connectors", "VPN"]
-tags_normalized: ["azure", "azure virtual network", "compliance", "data gateway", "data ingestion", "eventstream", "expressroute", "hybrid cloud", "microsoft fabric", "ml", "news", "on premises integration", "private network", "real time data", "real time intelligence", "secure connectivity", "security", "streaming connectors", "vpn"]
+tags:
+- Azure
+- Azure Virtual Network
+- Compliance
+- Data Gateway
+- Data Ingestion
+- Eventstream
+- ExpressRoute
+- Hybrid Cloud
+- Microsoft Fabric
+- ML
+- News
+- On Premises Integration
+- Private Network
+- Real Time Data
+- Real Time Intelligence
+- Secure Connectivity
+- Security
+- Streaming Connectors
+- VPN
+section_names:
+- azure
+- ml
+- security
 ---
-
 Microsoft Fabric Blog presents a step-by-step guide to configuring secure, private network data streaming to Fabric using Eventstream connectors. The article walks through prerequisites, Azure integration, security considerations, and best practices for technical implementation.<!--excerpt_end-->
 
 # Powering Secure Private Network Streaming to Fabric with Eventstream Connectors (Preview)

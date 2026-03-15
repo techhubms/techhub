@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Fabric Extensibility Toolkit: Streamlining Workload Publishing for Partners"
-description: "This announcement introduces significant updates to the Microsoft Fabric Extensibility Toolkit (FET), enabling partners to efficiently build, validate, and publish workloads within the Fabric ecosystem. Highlights include seamless publishing via the Workload Hub, comprehensive validation documentation, and the launch of a dedicated validation tool. These advancements simplify partner integration, uphold quality standards, and foster rapid innovation atop Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-publishing-workloads-announcements/
+title: 'Microsoft Fabric Extensibility Toolkit: Streamlining Workload Publishing for Partners'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-12-09 14:22:51 +00:00
-permalink: "/2025-12-09-Microsoft-Fabric-Extensibility-Toolkit-Streamlining-Workload-Publishing-for-Partners.html"
-categories: ["Azure", "ML"]
-tags: ["Attestation Template", "Azure", "Compliance Guidelines", "Component Standards", "Documentation", "Ecosystem Integration", "Extensibility Toolkit", "Fabric Validation", "Fabric Workload Hub", "FET", "Microsoft Fabric", "ML", "News", "Partner Workloads", "Private Preview", "Publishing Criteria", "Test Cases", "Validation Tool", "Workload Publishing"]
-tags_normalized: ["attestation template", "azure", "compliance guidelines", "component standards", "documentation", "ecosystem integration", "extensibility toolkit", "fabric validation", "fabric workload hub", "fet", "microsoft fabric", "ml", "news", "partner workloads", "private preview", "publishing criteria", "test cases", "validation tool", "workload publishing"]
+tags:
+- Attestation Template
+- Compliance Guidelines
+- Component Standards
+- Documentation
+- Ecosystem Integration
+- Extensibility Toolkit
+- Fabric Validation
+- Fabric Workload Hub
+- FET
+- Microsoft Fabric
+- Partner Workloads
+- Private Preview
+- Publishing Criteria
+- Test Cases
+- Validation Tool
+- Workload Publishing
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog shares new features in the Fabric Extensibility Toolkit, guiding partners through the publishing and validation of workloads for the Fabric platform.<!--excerpt_end-->
 
 # Microsoft Fabric Extensibility Toolkit: Updates for Efficient Workload Publishing
@@ -61,7 +75,7 @@ Partners are encouraged to:
 
 ## Visual Reference
 
-![Fabric Extensibility Toolkit: Hello World Sample](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/11/FET-Blog-HelloWorld-1024x576.gif)
+![Fabric Extensibility Toolkit: Hello World Sample](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/11/fet-blog-helloworld-1024x576.gif)
 
 ---
 

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd): One Command to Swap Azure App Service Slots"
-description: "This news post introduces the new 'azd appservice swap' command, enhancing the Azure Developer CLI with support for fast, interactive, and scriptable App Service deployment slot swaps. The update improves developer productivity by simplifying zero-downtime deployments and streamlining slot swaps directly from the terminal."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azd-appservice-swap/
+title: 'Azure Developer CLI (azd): One Command to Swap Azure App Service Slots'
+author: PuiChee (PC) Chan
+primary_section: azure
+feed_name: Microsoft Azure SDK Blog
 date: 2026-03-03 21:10:01 +00:00
-permalink: "/2026-03-03-Azure-Developer-CLI-azd-One-Command-to-Swap-Azure-App-Service-Slots.html"
-categories: ["Azure", "DevOps"]
-tags: ["App Service", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "Cloud Deployment", "Command Line Interface", "Deployment Slots", "DevOps", "DevOps Automation", "Interactive CLI", "Microsoft Azure", "News", "Production Deployments", "Slot Swap", "Terminal Tools", "Zero Downtime Deployment"]
-tags_normalized: ["app service", "azd", "azure", "azure developer cli", "azure sdk", "cloud deployment", "command line interface", "deployment slots", "devops", "devops automation", "interactive cli", "microsoft azure", "news", "production deployments", "slot swap", "terminal tools", "zero downtime deployment"]
+tags:
+- App Service
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure SDK
+- Cloud Deployment
+- Command Line Interface
+- Deployment Slots
+- DevOps
+- DevOps Automation
+- Interactive CLI
+- Microsoft Azure
+- News
+- Production Deployments
+- Slot Swap
+- Terminal Tools
+- Zero Downtime Deployment
+section_names:
+- azure
+- devops
 ---
-
 PuiChee (PC) Chan presents the addition of the 'azd appservice swap' command in the Azure Developer CLI, enabling developers to perform App Service slot swaps efficiently from the terminal for faster, zero-downtime deployments.<!--excerpt_end-->
 
 # Azure Developer CLI (azd): One Command to Swap Azure App Service Slots

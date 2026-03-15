@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Building Computer Use Agents: Types, Functionality, and Security Risks"
-description: "This video, presented by Microsoft Developer, is an overview of computer use agents (CUA), explaining their core concepts, functionalities, different types, and associated security risks. It also serves as an introduction to AI agents within the Microsoft ecosystem, offering insights for both beginners and experienced practitioners."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zr_DuUzFEd4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=zr_DuUzFEd4
+title: 'Building Computer Use Agents: Types, Functionality, and Security Risks'
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-03-13 11:14:36 +00:00
-permalink: "/2026-03-13-Building-Computer-Use-Agents-Types-Functionality-and-Security-Risks.html"
-categories: ["AI", "Security"]
-tags: ["Agent Types", "AI", "AI Agents", "AI Fundamentals", "Automation", "Cloud Computing", "Computer Use Agents", "Dev", "Development", "Microsoft", "Microsoft Developer", "Risk Management", "Security", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent types", "ai", "ai agents", "ai fundamentals", "automation", "cloud computing", "computer use agents", "dev", "development", "microsoft", "microsoft developer", "risk management", "security", "tech", "technology", "videos"]
+tags:
+- Agent Types
+- AI
+- AI Agents
+- AI Fundamentals
+- Automation
+- Cloud Computing
+- Computer Use Agents
+- Dev
+- Development
+- Microsoft
+- Microsoft Developer
+- Risk Management
+- Security
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Developer introduces computer use agents, outlining what they are, how they function, their types, and related security risks. This video provides foundational knowledge for those interested in AI agents and security.<!--excerpt_end-->
 
 {% youtube zr_DuUzFEd4 %}

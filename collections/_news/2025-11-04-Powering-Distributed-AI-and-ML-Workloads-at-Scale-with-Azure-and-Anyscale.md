@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Powering Distributed AI and ML Workloads at Scale with Azure and Anyscale"
-description: "This news article details Microsoft’s partnership with Anyscale to deliver managed Ray—a distributed computing framework for Python—on Azure. It covers how Anyscale's managed Ray service runs atop Azure Kubernetes Service (AKS), enabling teams to orchestrate large AI/ML workloads with enterprise-grade governance, scaling, and integrated Azure services. The announcement targets developers and data practitioners seeking to leverage distributed computing for powering sophisticated AI and ML pipelines on Azure’s robust cloud infrastructure."
-author: "Brendan Burns"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/powering-distributed-aiml-at-scale-with-azure-and-anyscale/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/powering-distributed-aiml-at-scale-with-azure-and-anyscale/
+title: Powering Distributed AI and ML Workloads at Scale with Azure and Anyscale
+author: Brendan Burns
+feed_name: Microsoft All Things Azure Blog
 date: 2025-11-04 12:30:11 +00:00
-permalink: "/2025-11-04-Powering-Distributed-AI-and-ML-Workloads-at-Scale-with-Azure-and-Anyscale.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Apps", "AI Workloads", "AKS", "All Things Azure", "Anyscale", "App Development", "Appdev", "Azure", "Azure Monitor", "Cloud Scale", "Containers", "Distributed Computing", "Kubernetes", "Machine Learning", "Microsoft Entra ID", "ML", "Model Training", "News", "Python", "Ray", "RayTurbo"]
-tags_normalized: ["ai", "ai apps", "ai workloads", "aks", "all things azure", "anyscale", "app development", "appdev", "azure", "azure monitor", "cloud scale", "containers", "distributed computing", "kubernetes", "machine learning", "microsoft entra id", "ml", "model training", "news", "python", "ray", "rayturbo"]
+tags:
+- AI Apps
+- AI Workloads
+- AKS
+- All Things Azure
+- Anyscale
+- App Development
+- Appdev
+- Azure Monitor
+- Cloud Scale
+- Containers
+- Distributed Computing
+- Kubernetes
+- Microsoft Entra ID
+- Model Training
+- Python
+- Ray
+- RayTurbo
+- AI
+- Azure
+- ML
+- News
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Brendan Burns explains how Microsoft and Anyscale are collaborating to bring managed Ray to Azure, empowering developers to scale distributed AI and ML workloads seamlessly with Python and Kubernetes.<!--excerpt_end-->
 
 # Powering Distributed AI/ML at Scale with Azure and Anyscale
@@ -30,10 +47,10 @@ Ray is an open-source framework designed to make distributed computing accessibl
 - Scale applications from a single laptop to large clusters with minimal code changes
 - Leverage Pythonic APIs that transform functions and classes into distributed tasks and actors
 - Use native libraries for:
-   - **Ray Train** (distributed training)
-   - **Ray Data** (data processing)
-   - **Ray Serve** (model serving)
-   - **Ray Tune** (hyperparameter tuning)
+  - **Ray Train** (distributed training)
+  - **Ray Data** (data processing)
+  - **Ray Serve** (model serving)
+  - **Ray Tune** (hyperparameter tuning)
 - Integrate with PyTorch, TensorFlow, and other ML libraries
 
 Ray abstracts distributed infrastructure concerns, enabling teams to focus on model development and innovation.

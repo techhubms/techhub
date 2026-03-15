@@ -157,8 +157,8 @@ try {
                 $allCurrentItems[$itemFilePath] = $true
 
                 # Check if item is in skipped or processed entries
-                $isSkipped = $skippedEntries | Where-Object { $_.canonical_url -eq $item.Link }
-                $isProcessed = $processedEntries | Where-Object { $_.canonical_url -eq $item.Link }
+                $isSkipped = $skippedEntries | Where-Object { $_.external_url -eq $item.Link }
+                $isProcessed = $processedEntries | Where-Object { $_.external_url -eq $item.Link }
 
                 # Check if file needs processing
                 $needsProcessing = $false
@@ -206,6 +206,14 @@ try {
             }
 
             Write-Host "    📊 Found $newItemsCount new items to process and $skippedItemsCount already processed"
+
+            # Phase 1.5: Enrich YouTube items that need processing with API-fetched tags
+            if ($feed.IsYouTubeFeed() -and $itemsToProcess.Count -gt 0) {
+                Write-Host "    📺 Fetching YouTube tags for $($itemsToProcess.Count) new items..."
+                foreach ($processingItem in $itemsToProcess) {
+                    $feed.EnrichItemWithYouTubeTags($processingItem.Item)
+                }
+            }
 
             # Phase 2: Download content for all new items
             $contentMap = @{}

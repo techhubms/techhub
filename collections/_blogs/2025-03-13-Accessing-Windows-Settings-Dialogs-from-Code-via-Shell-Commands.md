@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Accessing Windows Settings Dialogs from Code via Shell Commands"
-description: "Rick Strahl explains how to use the Windows `ms-settings:` Protocol Handler/URI Scheme to open specific Windows settings directly from shell commands or code, especially in .NET or Windows applications. Practical code samples and activation methods are provided for developers."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Mar/13/Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+external_url: https://weblog.west-wind.com/posts/2025/Mar/13/Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands
+title: Accessing Windows Settings Dialogs from Code via Shell Commands
+author: Rick Strahl
+feed_name: Rick Strahl's Blog
 date: 2025-03-13 22:40:22 +00:00
-permalink: "/2025-03-13-Accessing-Windows-Settings-Dialogs-from-Code-via-Shell-Commands.html"
-categories: ["Coding"]
-tags: [".NET", "Application Permissions", "Blogs", "C#", "Coding", "Ms Settings", "PowerShell", "Process.Start", "Protocol Handler", "Settings Dialogs", "ShellExecute", "URI Scheme", "Windows"]
-tags_normalized: ["dotnet", "application permissions", "blogs", "csharp", "coding", "ms settings", "powershell", "processdotstart", "protocol handler", "settings dialogs", "shellexecute", "uri scheme", "windows"]
+tags:
+- .NET
+- Application Permissions
+- C#
+- Ms Settings
+- PowerShell
+- Process.Start
+- Protocol Handler
+- Settings Dialogs
+- ShellExecute
+- URI Scheme
+- Windows
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Rick Strahl discusses how developers can open Windows Settings dialogs directly from code or shell commands using the `ms-settings:` protocol handler. The article provides practical usage examples for applications built with .NET and Windows technologies.<!--excerpt_end-->
 
 ## Accessing Windows Settings Dialogs from Code via Shell Commands

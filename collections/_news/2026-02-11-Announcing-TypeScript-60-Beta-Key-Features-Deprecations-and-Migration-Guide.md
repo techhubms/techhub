@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Announcing TypeScript 6.0 Beta: Key Features, Deprecations, and Migration Guide"
-description: "This announcement introduces the beta release of TypeScript 6.0, highlighting new features, breaking changes, and deprecations ahead of the upcoming TypeScript 7.0 native port. Developers will learn about important updates, migration strategies, and quality-of-life improvements in TypeScript’s development experience."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-beta/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-beta/
+title: 'Announcing TypeScript 6.0 Beta: Key Features, Deprecations, and Migration Guide'
+author: Daniel Rosenwasser
+primary_section: dotnet
+feed_name: Microsoft TypeScript Blog
 date: 2026-02-11 18:50:26 +00:00
-permalink: "/2026-02-11-Announcing-TypeScript-60-Beta-Key-Features-Deprecations-and-Migration-Guide.html"
-categories: ["Coding"]
-tags: ["Bundler", "Coding", "Compiler", "Deprecation", "ESM", "Go", "JavaScript", "Language Service", "Migration Guide", "Module Resolution", "News", "Node.js", "Strict Mode", "TSConfig", "Type Inference", "TypeScript", "TypeScript 6.0", "TypeScript 7.0"]
-tags_normalized: ["bundler", "coding", "compiler", "deprecation", "esm", "go", "javascript", "language service", "migration guide", "module resolution", "news", "nodedotjs", "strict mode", "tsconfig", "type inference", "typescript", "typescript 6dot0", "typescript 7dot0"]
+tags:
+- Bundler
+- Compiler
+- Deprecation
+- ESM
+- Go
+- JavaScript
+- Language Service
+- Migration Guide
+- Module Resolution
+- News
+- Node.js
+- Strict Mode
+- TSConfig
+- Type Inference
+- TypeScript
+- TypeScript 6.0
+- TypeScript 7.0
+- .NET
+section_names:
+- dotnet
 ---
-
 Daniel Rosenwasser and the TypeScript Team announce the TypeScript 6.0 Beta, detailing key new features, major deprecations, and migration tips to prepare developers for TypeScript 7.0.<!--excerpt_end-->
 
 # Announcing TypeScript 6.0 Beta

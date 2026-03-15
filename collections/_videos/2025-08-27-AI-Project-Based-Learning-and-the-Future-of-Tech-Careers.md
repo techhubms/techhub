@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "AI, Project-Based Learning, and the Future of Tech Careers"
-description: "This video clip from GitHub explores how mastery of AI and hands-on, project-based learning are becoming essential skills for modern developers. It emphasizes that the risk isn’t AI itself taking jobs, but rather the potential of being outpaced by those who fully leverage AI technologies. Discussion centers on how AI lowers entry barriers and highlights ongoing shifts in tech work."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/7_MaC7CabkM"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/7_MaC7CabkM
+title: AI, Project-Based Learning, and the Future of Tech Careers
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-08-27 14:00:09 +00:00
-permalink: "/2025-08-27-AI-Project-Based-Learning-and-the-Future-of-Tech-Careers.html"
-categories: ["AI"]
-tags: ["AI", "Automation", "Developer Skills", "Future Of Work", "GitHub", "Learning Strategies", "Programming", "Project Based Learning", "Software Development", "Technology Careers", "Videos"]
-tags_normalized: ["ai", "automation", "developer skills", "future of work", "github", "learning strategies", "programming", "project based learning", "software development", "technology careers", "videos"]
+tags:
+- Automation
+- Developer Skills
+- Future Of Work
+- GitHub
+- Learning Strategies
+- Programming
+- Project Based Learning
+- Software Development
+- Technology Careers
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 GitHub’s video, featuring insights from their team, discusses the growing importance of project-based learning and how mastery of AI is critical for developers. The author explains how AI lowers entry barriers, reshaping how tech professionals approach their careers.<!--excerpt_end-->
 
 {% youtube 7_MaC7CabkM %}

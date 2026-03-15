@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Deploy SQL Databases in Microsoft Fabric Directly from VS Code"
-description: "This article explores new enhancements to the SQL Database Projects extension for Visual Studio Code, enabling developers to deploy SQL schema changes directly to Microsoft Fabric databases without leaving their code editor. Highlights include a publish dialog for reviewing deployments, item templates for faster object creation, and Git integration for workflow consistency."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/deploy-sql-databases-in-fabric-from-vs-code-no-more-context-switching/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/deploy-sql-databases-in-fabric-from-vs-code-no-more-context-switching/
+title: Deploy SQL Databases in Microsoft Fabric Directly from VS Code
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-03-12 11:00:00 +00:00
-permalink: "/2026-03-12-Deploy-SQL-Databases-in-Microsoft-Fabric-Directly-from-VS-Code.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Application Development", "Azure", "Coding", "Data Engineering", "Database Automation", "DevOps", "DevOps Workflow", "Extension", "Git Integration", "Item Templates", "Microsoft Fabric", "ML", "News", "Publish Dialog", "Schema Deployment", "Source Control", "SQL Database Projects", "T SQL", "Version Control", "VS Code"]
-tags_normalized: ["application development", "azure", "coding", "data engineering", "database automation", "devops", "devops workflow", "extension", "git integration", "item templates", "microsoft fabric", "ml", "news", "publish dialog", "schema deployment", "source control", "sql database projects", "t sql", "version control", "vs code"]
+tags:
+- Application Development
+- Azure
+- Data Engineering
+- Database Automation
+- DevOps
+- DevOps Workflow
+- Extension
+- Git Integration
+- Item Templates
+- Microsoft Fabric
+- ML
+- News
+- Publish Dialog
+- Schema Deployment
+- Source Control
+- SQL Database Projects
+- T SQL
+- Version Control
+- VS Code
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- ml
 ---
-
 Microsoft Fabric Blog details how VS Code users can now deploy SQL database schema changes directly to Fabric, streamlining data engineering workflows. Author Microsoft Fabric Blog explains new publish dialog and item templates, improving productivity for database and application development teams.<!--excerpt_end-->
 
 # Deploy SQL Databases in Microsoft Fabric Directly from VS Code

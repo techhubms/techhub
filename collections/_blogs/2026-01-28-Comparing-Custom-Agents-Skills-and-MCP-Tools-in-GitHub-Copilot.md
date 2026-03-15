@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Comparing Custom Agents, Skills, and MCP Tools in GitHub Copilot"
-description: "This detailed article explores the differences and best use cases for the three advanced GitHub Copilot context extension types: Custom Agents, Skills, and MCP Tools. It explains how each extension works, provides examples, and offers guidance for developers looking to maximize the flexibility and power of GitHub Copilot’s AI coding assistant within VS Code and beyond."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/github-copilot-context-extensions-compared/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+external_url: https://harrybin.de/posts/github-copilot-context-extensions-compared/
+title: Comparing Custom Agents, Skills, and MCP Tools in GitHub Copilot
+author: Harald Binkle
+primary_section: github-copilot
+feed_name: Harald Binkle's blog
 date: 2026-01-28 20:00:00 +00:00
-permalink: "/2026-01-28-Comparing-Custom-Agents-Skills-and-MCP-Tools-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Skills", "AI", "AI Extension", "AI Integration", "AI Workflows", "Blogs", "Copilot Agents", "Copilot Customization", "Copilot Skills", "Custom Agents", "Dev Environments", "Developer Productivity", "GitHub Copilot", "MCP", "MCP Tools", "Open Standard", "VS Code"]
-tags_normalized: ["agent skills", "ai", "ai extension", "ai integration", "ai workflows", "blogs", "copilot agents", "copilot customization", "copilot skills", "custom agents", "dev environments", "developer productivity", "github copilot", "mcp", "mcp tools", "open standard", "vs code"]
+tags:
+- Agent Skills
+- AI
+- AI Extension
+- AI Integration
+- AI Workflows
+- Blogs
+- Copilot Agents
+- Copilot Customization
+- Copilot Skills
+- Custom Agents
+- Dev Environments
+- Developer Productivity
+- GitHub Copilot
+- MCP
+- MCP Tools
+- Open Standard
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Harald Binkle provides a thorough comparison of GitHub Copilot’s extension mechanisms—Custom Agents, Skills, and MCP Tools—guiding developers on selecting the best option for AI-powered coding workflows.<!--excerpt_end-->
 
 # GitHub Copilot Context Extensions Compared

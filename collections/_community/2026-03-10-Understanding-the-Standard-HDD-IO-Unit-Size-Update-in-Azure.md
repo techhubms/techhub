@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Understanding the Standard HDD I/O Unit Size Update in Azure"
-description: "This article explains changes to how Azure measures and bills transactions for Standard HDD managed disks. It covers the new I/O unit size rules, updated cost controls, built-in transaction caps, per-I/O transaction limits for large disks, and guidance for choosing the appropriate disk type for your workloads. The post provides example calculations, highlights potential cost impacts, and links to supporting Azure documentation."
-author: "austin-ma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/understanding-the-standard-hdd-i-o-unit-size-update-and-what-it/ba-p/4499128
+title: Understanding the Standard HDD I/O Unit Size Update in Azure
+author: austin-ma
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-10 18:00:00 +00:00
-permalink: "/2026-03-10-Understanding-the-Standard-HDD-IO-Unit-Size-Update-in-Azure.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Disks", "Azure Pricing", "Azure Storage", "Billing Update", "Capacity Planning", "Community", "Cost Control", "Disk I/O", "Managed Disks", "Performance Optimization", "S4 Disk", "S6 Disk", "S70 Disk", "S80 Disk", "Standard HDD", "Transaction Billing"]
-tags_normalized: ["azure", "azure disks", "azure pricing", "azure storage", "billing update", "capacity planning", "community", "cost control", "disk islasho", "managed disks", "performance optimization", "s4 disk", "s6 disk", "s70 disk", "s80 disk", "standard hdd", "transaction billing"]
+tags:
+- Azure
+- Azure Disks
+- Azure Pricing
+- Azure Storage
+- Billing Update
+- Capacity Planning
+- Community
+- Cost Control
+- Disk I/O
+- Managed Disks
+- Performance Optimization
+- S4 Disk
+- S6 Disk
+- S70 Disk
+- S80 Disk
+- Standard HDD
+- Transaction Billing
+section_names:
+- azure
 ---
-
 austin-ma discusses the new changes to transaction measurement for Azure Standard HDD managed disks, including updated I/O unit sizes, billing methods, and advice for optimizing your disk selection.<!--excerpt_end-->
 
 # Understanding the Standard HDD I/O Unit Size Update in Azure

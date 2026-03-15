@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Progress on TypeScript 7: Native Compiler and Language Service Updates"
-description: "This article provides an in-depth update on the ongoing port of the TypeScript compiler and language service to native code, known as Project Corsa and soon TypeScript 7.0. It covers new features, performance benchmarks, migration strategies, and anticipated changes and limitations compared to previous JavaScript-based versions, highlighting the future direction for TypeScript developers."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/
+title: 'Progress on TypeScript 7: Native Compiler and Language Service Updates'
+author: Daniel Rosenwasser
+feed_name: Microsoft TypeScript Blog
 date: 2025-12-02 17:31:32 +00:00
-permalink: "/2025-12-02-Progress-on-TypeScript-7-Native-Compiler-and-Language-Service-Updates.html"
-categories: ["Coding"]
-tags: ["Coding", "Compiler", "Editor Integration", "JavaScript", "Language Service", "Migration", "Native Port", "News", "Performance", "Project Corsa", "Tooling", "Tsc", "Tsgo", "Type Checking", "TypeScript", "TypeScript 7.0", "VS Code Extension"]
-tags_normalized: ["coding", "compiler", "editor integration", "javascript", "language service", "migration", "native port", "news", "performance", "project corsa", "tooling", "tsc", "tsgo", "type checking", "typescript", "typescript 7dot0", "vs code extension"]
+tags:
+- Compiler
+- Editor Integration
+- JavaScript
+- Language Service
+- Migration
+- Native Port
+- Performance
+- Project Corsa
+- Tooling
+- Tsc
+- Tsgo
+- Type Checking
+- TypeScript
+- TypeScript 7.0
+- VS Code Extension
+- News
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Daniel Rosenwasser presents major progress on TypeScript 7, focusing on the transition to a native compiler and language service. The article explores new features, editor support, and guidance for developers migrating to or evaluating TypeScript 7.<!--excerpt_end-->
 
 # Progress on TypeScript 7: Native Compiler and Language Service Updates
@@ -57,6 +68,7 @@ The TypeScript 7 native compiler is available for preview via npm as [`@typescri
 - Dramatically improved build speeds (up to 10x faster in tests compared to 6.0 JavaScript-based compiler)
 
 Performance benchmarks show major reductions in build times:
+
 | Project   | tsc (6.0) | tsgo (7.0) | Speedup |
 |-----------|-----------|------------|---------|
 | sentry    | 133.08s   | 16.25s     | 8.19x   |

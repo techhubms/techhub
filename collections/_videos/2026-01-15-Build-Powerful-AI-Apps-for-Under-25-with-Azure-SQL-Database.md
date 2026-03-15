@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Build Powerful AI Apps for Under $25 with Azure SQL Database"
-description: "This video launches the 'Budget Bytes' series, offering hands-on guidance for building affordable, AI-powered applications using Azure SQL Database. Topics include grounding AI in your own data with Azure Foundry, building full-stack apps with Copilot and Azure SQL, implementing agentic RAG architectures, leveraging Copilot Studio, and understanding the cost structure to keep AI projects budget-friendly."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=NY_ESU6GKM0"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=NY_ESU6GKM0
+title: Build Powerful AI Apps for Under $25 with Azure SQL Database
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-15 20:00:20 +00:00
-permalink: "/2026-01-15-Build-Powerful-AI-Apps-for-Under-25-with-Azure-SQL-Database.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic RAG", "AI", "AI Apps", "AI Architecture", "Azure", "Azure Container Apps", "Azure Foundry", "Azure SQL Database", "Budget Bytes", "Cloud Computing", "Copilot Studio", "Cost Optimization", "Data Grounding", "Dev", "Development", "Full Stack Development", "Microsoft", "Microsoft Azure", "Static Web Apps", "Tech", "Technology", "Videos", "Web Apps"]
-tags_normalized: ["agentic rag", "ai", "ai apps", "ai architecture", "azure", "azure container apps", "azure foundry", "azure sql database", "budget bytes", "cloud computing", "copilot studio", "cost optimization", "data grounding", "dev", "development", "full stack development", "microsoft", "microsoft azure", "static web apps", "tech", "technology", "videos", "web apps"]
+tags:
+- Agentic RAG
+- AI Apps
+- AI Architecture
+- Azure Container Apps
+- Azure Foundry
+- Azure SQL Database
+- Budget Bytes
+- Cloud Computing
+- Copilot Studio
+- Cost Optimization
+- Data Grounding
+- Dev
+- Development
+- Full Stack Development
+- Microsoft
+- Microsoft Azure
+- Static Web Apps
+- Tech
+- Technology
+- Web Apps
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 'Microsoft Developer' introduces the Budget Bytes series, showing practical ways to build real AI-powered apps with Azure SQL Database while keeping costs under $25.<!--excerpt_end-->
 
 {% youtube NY_ESU6GKM0 %}

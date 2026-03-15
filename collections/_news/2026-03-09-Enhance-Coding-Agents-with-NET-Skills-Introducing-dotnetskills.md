@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Enhance Coding Agents with .NET Skills: Introducing dotnet/skills"
-description: "This news article introduces the dotnet/skills repository, which provides .NET-focused agent skills to boost coding agent workflows. It explains what agent skills are, how they help developers improve productivity with tools like GitHub Copilot CLI and VS Code, and details usage, installation, and the guiding principles of .NET skill development."
-author: "Tim Heuer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/extend-your-coding-agent-with-dotnet-skills/
+title: 'Enhance Coding Agents with .NET Skills: Introducing dotnet/skills'
+author: Tim Heuer
+primary_section: github-copilot
+feed_name: Microsoft .NET Blog
 date: 2026-03-09 20:30:00 +00:00
-permalink: "/2026-03-09-Enhance-Coding-Agents-with-NET-Skills-Introducing-dotnetskills.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agent Skills", "AI", "AI Development", "C#", "Coding", "Coding Agents", "Coding Productivity", "Copilot", "Copilot CLI", "Debugging", "Dotnet/skills", "GitHub Copilot", "News", "Performance", "Performance Optimization", "Plugin Marketplace", "VS Code"]
-tags_normalized: ["dotnet", "agent skills", "ai", "ai development", "csharp", "coding", "coding agents", "coding productivity", "copilot", "copilot cli", "debugging", "dotnetslashskills", "github copilot", "news", "performance", "performance optimization", "plugin marketplace", "vs code"]
+tags:
+- .NET
+- Agent Skills
+- AI
+- AI Development
+- C#
+- Coding Agents
+- Coding Productivity
+- Copilot
+- Copilot CLI
+- Debugging
+- Dotnet/skills
+- GitHub Copilot
+- News
+- Performance
+- Performance Optimization
+- Plugin Marketplace
+- VS Code
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Tim Heuer introduces the dotnet/skills repository, which equips .NET developers with agent skills to extend coding agent workflows. Discover how these skills boost productivity and can be integrated with GitHub Copilot CLI, VS Code, and other tools.<!--excerpt_end-->
 
 # Extend your coding agent with .NET Skills

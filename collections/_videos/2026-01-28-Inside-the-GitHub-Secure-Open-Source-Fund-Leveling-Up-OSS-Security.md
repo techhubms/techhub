@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Inside the GitHub Secure Open Source Fund: Leveling Up OSS Security"
-description: "This episode of The GitHub Podcast, hosted by GitHub and guest host Greg Cochran, gathers four open-source maintainers to discuss the impact of the GitHub Secure Open Source Fund. They delve into how dedicated security sprints, enhanced GitHub Actions pipelines, better incident response, community support, and tools like GitHub Copilot and Secure Code Game are making open source projects more secure, including the use of AI-powered approaches to vulnerability detection."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XmCSHr12CO0"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=XmCSHr12CO0
+title: 'Inside the GitHub Secure Open Source Fund: Leveling Up OSS Security'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-01-28 15:01:06 +00:00
-permalink: "/2026-01-28-Inside-the-GitHub-Secure-Open-Source-Fund-Leveling-Up-OSS-Security.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security", "Community Collaboration", "DevOps", "EVCC", "Fuzzing", "GitHub Actions", "GitHub Copilot", "GitHub Secure Open Source Fund", "GoReleaser", "Incident Response", "Log4j", "Open Source Security", "OSS Governance", "SBOM", "ScanAPI", "Secure Code Game", "Security", "Security Sprint", "Videos"]
-tags_normalized: ["ai", "ai security", "community collaboration", "devops", "evcc", "fuzzing", "github actions", "github copilot", "github secure open source fund", "goreleaser", "incident response", "log4j", "open source security", "oss governance", "sbom", "scanapi", "secure code game", "security", "security sprint", "videos"]
+tags:
+- AI
+- AI Security
+- Community Collaboration
+- DevOps
+- EVCC
+- Fuzzing
+- GitHub Actions
+- GitHub Copilot
+- GitHub Secure Open Source Fund
+- GoReleaser
+- Incident Response
+- Log4j
+- Open Source Security
+- OSS Governance
+- SBOM
+- ScanAPI
+- Secure Code Game
+- Security
+- Security Sprint
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
+- security
 ---
-
 GitHub, with guest host Greg Cochran, spotlights maintainers from major open source projects and explores how the GitHub Secure Open Source Fund and tools like Copilot are advancing open source security.<!--excerpt_end-->
 
 {% youtube XmCSHr12CO0 %}

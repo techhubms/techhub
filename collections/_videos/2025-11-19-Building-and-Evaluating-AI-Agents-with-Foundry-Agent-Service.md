@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building and Evaluating AI Agents with Foundry Agent Service"
-description: "This session, presented at Microsoft Ignite 2025, provides a step-by-step walkthrough for developers to rapidly create, deploy, and evaluate intelligent AI agents using Microsoft Foundry Agent Service. The content covers integrating live data, setting up Azure Functions for APIs, registering tools, connecting data endpoints, leveraging W&B Weave for tracking, and Python-based interaction, all secured and scaled on Azure. Attendees will learn practical agent setup, advanced tool use, and real-world troubleshooting."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=oF5ib8AIVCE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=oF5ib8AIVCE
+title: Building and Evaluating AI Agents with Foundry Agent Service
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-19 08:14:43 +00:00
-permalink: "/2025-11-19-Building-and-Evaluating-AI-Agents-with-Foundry-Agent-Service.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Evaluation", "AI", "AI Agents", "API Integration", "Azure", "Azure Functions", "Cloud Scalability", "Coding", "InnovatewithAzureAIappsandagents", "Live Data", "Microsoft Foundry Agent Service", "Microsoft Ignite", "MSIgnite", "Python", "Secure Deployment", "Session Recording", "Tool Registration", "Videos", "W&B Weave"]
-tags_normalized: ["agent evaluation", "ai", "ai agents", "api integration", "azure", "azure functions", "cloud scalability", "coding", "innovatewithazureaiappsandagents", "live data", "microsoft foundry agent service", "microsoft ignite", "msignite", "python", "secure deployment", "session recording", "tool registration", "videos", "wandb weave"]
+tags:
+- Agent Evaluation
+- AI Agents
+- API Integration
+- Azure Functions
+- Cloud Scalability
+- Live Data
+- Microsoft Foundry Agent Service
+- Microsoft Ignite
+- MSIgnite
+- Python
+- Secure Deployment
+- Session Recording
+- Tool Registration
+- W&B Weave
+- AI
+- Azure
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Presented by Microsoft Events and Katherin Madche at Ignite 2025, this session demonstrates how to build and evaluate robust AI agents using Foundry Agent Service, Azure Functions, and W&B Weave.<!--excerpt_end-->
 
 {% youtube oF5ib8AIVCE %}

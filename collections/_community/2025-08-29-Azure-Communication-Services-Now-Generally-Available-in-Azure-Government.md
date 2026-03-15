@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Azure Communication Services Now Generally Available in Azure Government"
-description: "This announcement highlights the general availability of Azure Communication Services (ACS) in Azure Government, enabling U.S. agencies and partners to integrate secure video and chat experiences into their applications. The post emphasizes ACS's compliance, security features, and how it supports digital transformation and mission-critical government operations within a secure cloud platform."
-author: "hrazi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-communication-services/azure-communication-services-is-now-generally-available-in-azure/ba-p/4448034
+title: Azure Communication Services Now Generally Available in Azure Government
+author: hrazi
+feed_name: Microsoft Tech Community
 date: 2025-08-29 16:43:59 +00:00
-permalink: "/2025-08-29-Azure-Communication-Services-Now-Generally-Available-in-Azure-Government.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Communication Services", "Azure Government", "Chat Integration", "Community", "Compliance", "Digital Transformation", "FedRAMP High", "Government Cloud", "Remote Collaboration", "Secure Applications", "Video Communications"]
-tags_normalized: ["azure", "azure communication services", "azure government", "chat integration", "community", "compliance", "digital transformation", "fedramp high", "government cloud", "remote collaboration", "secure applications", "video communications"]
+tags:
+- Azure Communication Services
+- Azure Government
+- Chat Integration
+- Compliance
+- Digital Transformation
+- FedRAMP High
+- Government Cloud
+- Remote Collaboration
+- Secure Applications
+- Video Communications
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 hrazi announces that Azure Communication Services is now generally available in Azure Government, enabling agencies to embed secure video and chat capabilities in their applications with compliance and scalability.<!--excerpt_end-->
 
 # Azure Communication Services Now Generally Available in Azure Government

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Exploring the New Microsoft Foundry Portal: A Guided Tour"
-description: "This video, led by April from Microsoft Developer, offers an in-depth walkthrough of the new Microsoft Foundry portal. Viewers will learn how to access the revamped experience, create projects, and navigate key portal features, including building, operating, and utilizing AI capabilities for agent development. The session covers major functionalities designed to streamline AI project workflows in Azure, and provides links to try Foundry, access related announcements, and join the community through Discord and forums. Ideal for developers looking to jump-start their work with Microsoft Foundry and Azure AI tools."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BpOAxKzvrPA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=BpOAxKzvrPA
+title: 'Exploring the New Microsoft Foundry Portal: A Guided Tour'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:05:48 +00:00
-permalink: "/2025-11-19-Exploring-the-New-Microsoft-Foundry-Portal-A-Guided-Tour.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Building", "AI", "AI Development", "AI Portal", "AI Tools", "Application Development", "April Edwards", "Azure", "Azure AI Foundry", "Cloud Computing", "Community Links", "Dev", "Development", "Microsoft", "Microsoft Developer", "Microsoft Foundry", "Portal Tour", "Project Creation", "Tech", "Technology", "Videos"]
-tags_normalized: ["agent building", "ai", "ai development", "ai portal", "ai tools", "application development", "april edwards", "azure", "azure ai foundry", "cloud computing", "community links", "dev", "development", "microsoft", "microsoft developer", "microsoft foundry", "portal tour", "project creation", "tech", "technology", "videos"]
+tags:
+- Agent Building
+- AI Development
+- AI Portal
+- AI Tools
+- Application Development
+- April Edwards
+- Azure AI Foundry
+- Cloud Computing
+- Community Links
+- Dev
+- Development
+- Microsoft
+- Microsoft Developer
+- Microsoft Foundry
+- Portal Tour
+- Project Creation
+- Tech
+- Technology
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 April from Microsoft Developer showcases the new Microsoft Foundry portal, guiding viewers through project creation and key features for AI agent building in Azure.<!--excerpt_end-->
 
 {% youtube BpOAxKzvrPA %}
@@ -29,7 +45,7 @@ In this video, April demonstrates the upgraded Microsoft Foundry portal, focusin
 
 ## Key Topics Covered
 
-- **Accessing the New Portal:** Instructions for logging into https://ai.azure.com and an orientation to the welcome screen.
+- **Accessing the New Portal:** Instructions for logging into <https://ai.azure.com> and an orientation to the welcome screen.
 - **Project Creation:** Step-by-step on starting new projects and setting up your workspace.
 - **Navigation Tour:**
   - **Discover:** Explore what’s possible in Foundry, find resources, and get inspiration.

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Top Microsoft Ignite 2025 Sessions for Azure Developers: AI, Copilot, and Fabric"
-description: "This post by GalimahB from the Azure Tech Community outlines the top recommended sessions for developers attending Microsoft Ignite 2025. The focus is on sessions related to Azure, AI, GitHub Copilot, Microsoft Fabric, CI/CD, agent frameworks, and ways to get the most from the event. Readers will learn how to strategically plan their Ignite experience around cutting-edge development topics and cloud innovations."
-author: "GalimahB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-ignite-schedule-top-sessions-for-developers/ba-p/4469064
+title: 'Top Microsoft Ignite 2025 Sessions for Azure Developers: AI, Copilot, and Fabric'
+author: GalimahB
+feed_name: Microsoft Tech Community
 date: 2025-11-11 21:32:57 +00:00
-permalink: "/2025-11-11-Top-Microsoft-Ignite-2025-Sessions-for-Azure-Developers-AI-Copilot-and-Fabric.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot", "ML"]
-tags: ["Agent Framework", "AI", "AI Agents", "AI Integration", "Azure", "Azure AI Foundry", "CI/CD", "Cloud Development", "Community", "Data Agents", "Developers", "DevOps", "GitHub Copilot", "Lakehouse", "MCP Systems", "Microsoft Fabric", "Microsoft Ignite", "ML", "Session Scheduler"]
-tags_normalized: ["agent framework", "ai", "ai agents", "ai integration", "azure", "azure ai foundry", "cislashcd", "cloud development", "community", "data agents", "developers", "devops", "github copilot", "lakehouse", "mcp systems", "microsoft fabric", "microsoft ignite", "ml", "session scheduler"]
+tags:
+- Agent Framework
+- AI Agents
+- AI Integration
+- Azure AI Foundry
+- CI/CD
+- Cloud Development
+- Data Agents
+- Developers
+- Lakehouse
+- MCP Systems
+- Microsoft Fabric
+- Microsoft Ignite
+- Session Scheduler
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- ML
+- Community
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+- ml
+primary_section: github-copilot
 ---
-
 GalimahB shares a curated guide to the best Microsoft Ignite 2025 sessions for Azure-focused developers, highlighting AI, GitHub Copilot, Fabric, and CI/CD innovations.<!--excerpt_end-->
 
 # Plan Your Microsoft Ignite Experience Around the Topics that Matter Most to You

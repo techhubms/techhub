@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How Microsoft Azure and Qumulo Enable Cloud-Native File Systems for Enterprise Data Management"
-description: "This article by dukicn provides an in-depth look at how Microsoft Azure and Qumulo collaborate to offer scalable, high-performance, cloud-native file systems for enterprises. It explains key features of Azure Native Qumulo (ANQ) and Cloud Native Qumulo (CNQ), details solution architectures, migration strategies, cost management, security, and practical use cases for AI, HPC, and large-scale data environments."
-author: "dukicn"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321
+title: How Microsoft Azure and Qumulo Enable Cloud-Native File Systems for Enterprise Data Management
+author: dukicn
+feed_name: Microsoft Tech Community
 date: 2025-08-05 21:25:58 +00:00
-permalink: "/2025-08-05-How-Microsoft-Azure-and-Qumulo-Enable-Cloud-Native-File-Systems-for-Enterprise-Data-Management.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Workloads", "Azure", "Azure Blob Storage", "Azure Native Qumulo", "Azure Virtual Machines", "Cloud Native Architecture", "Cloud Native Qumulo", "Community", "Data Management", "Data Migration", "Elastic Scalability", "Enterprise Storage", "File System", "HPC", "Komprise", "ML", "Multi Protocol Support", "Object Storage", "Qumulo", "Replication", "Snapshots"]
-tags_normalized: ["ai", "ai workloads", "azure", "azure blob storage", "azure native qumulo", "azure virtual machines", "cloud native architecture", "cloud native qumulo", "community", "data management", "data migration", "elastic scalability", "enterprise storage", "file system", "hpc", "komprise", "ml", "multi protocol support", "object storage", "qumulo", "replication", "snapshots"]
+tags:
+- AI Workloads
+- Azure Blob Storage
+- Azure Native Qumulo
+- Azure Virtual Machines
+- Cloud Native Architecture
+- Cloud Native Qumulo
+- Data Management
+- Data Migration
+- Elastic Scalability
+- Enterprise Storage
+- File System
+- HPC
+- Komprise
+- Multi Protocol Support
+- Object Storage
+- Qumulo
+- Replication
+- Snapshots
+- AI
+- Azure
+- ML
+- Community
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 dukicn examines how Azure and Qumulo deliver cloud-native enterprise file storage. The article covers architectural options, migration tools, scalability, security features, and integration for AI and HPC workloads.<!--excerpt_end-->
 
 # How Microsoft Azure and Qumulo Enable Cloud-Native File Systems for Enterprise Data Management
@@ -68,6 +86,6 @@ Microsoft Azure and Qumulo have partnered to address long-standing challenges in
 
 Azure Native Qumulo and Cloud Native Qumulo offer next-generation, cloud-native file storage for enterprises, unlocking new capacity, performance, and flexibility while integrating seamlessly into the Azure ecosystem. With support for next-gen workloads like machine learning and HPC, advanced data management, and global collaboration, these solutions position organizations for future-ready data infrastructure.
 
-For tailored architectural advice and to see how these solutions can fit your enterprise, Qumulo offers free assessments; reach out via Azure@qumulo.com.
+For tailored architectural advice and to see how these solutions can fit your enterprise, Qumulo offers free assessments; reach out via <Azure@qumulo.com>.
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-storage-blog/how-microsoft-azure-and-qumulo-deliver-a-truly-cloud-native-file/ba-p/4426321)

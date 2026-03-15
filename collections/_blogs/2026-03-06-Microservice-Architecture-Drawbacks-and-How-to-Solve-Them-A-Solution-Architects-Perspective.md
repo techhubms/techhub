@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Microservice Architecture Drawbacks and How to Solve Them: A Solution Architect’s Perspective"
-description: "This article by John Edward critically examines the real-world challenges of adopting microservice architecture at scale, discussing the increased complexity, communication overhead, data consistency issues, debugging difficulties, deployment headaches, and security risks. It provides practical solutions, including architectural patterns and DevOps practices, to address these challenges from a solution architect’s standpoint."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/microservice-architecture-drawbacks-and-how-to-solve-them-a-solution-architects-perspective/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/microservice-architecture-drawbacks-and-how-to-solve-them-a-solution-architects-perspective/
+title: 'Microservice Architecture Drawbacks and How to Solve Them: A Solution Architect’s Perspective'
+author: John Edward
+primary_section: dotnet
+feed_name: Dellenny's Blog
 date: 2026-03-06 10:05:06 +00:00
-permalink: "/2026-03-06-Microservice-Architecture-Drawbacks-and-How-to-Solve-Them-A-Solution-Architects-Perspective.html"
-categories: ["Coding", "DevOps", "Security"]
-tags: ["API Gateway", "Architecture", "Asynchronous Messaging", "Blogs", "CI/CD", "Circuit Breaker", "Cloud Architecture", "Coding", "Containerization", "Deployment", "DevOps", "Distributed Tracing", "Microservices", "Orchestration", "Saga Pattern", "Security", "Service Decoupling", "Solution Architecture", "Zero Trust Security"]
-tags_normalized: ["api gateway", "architecture", "asynchronous messaging", "blogs", "cislashcd", "circuit breaker", "cloud architecture", "coding", "containerization", "deployment", "devops", "distributed tracing", "microservices", "orchestration", "saga pattern", "security", "service decoupling", "solution architecture", "zero trust security"]
+tags:
+- API Gateway
+- Architecture
+- Asynchronous Messaging
+- Blogs
+- CI/CD
+- Circuit Breaker
+- Cloud Architecture
+- Containerization
+- Deployment
+- DevOps
+- Distributed Tracing
+- Microservices
+- Orchestration
+- Saga Pattern
+- Security
+- Service Decoupling
+- Solution Architecture
+- Zero Trust Security
+- .NET
+section_names:
+- dotnet
+- devops
+- security
 ---
-
 John Edward outlines the core pitfalls of microservice architecture and offers actionable architectural patterns like API Gateway, Saga, and Circuit Breaker to help architects navigate complexity, deployment, and security concerns in distributed systems.<!--excerpt_end-->
 
 # Microservice Architecture Drawbacks and How to Solve Them: A Solution Architect’s Perspective

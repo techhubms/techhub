@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure ND GB300 v6: Achieving Over 1 Million Tokens/sec on Llama2 70B Inference"
-description: "This technical deep dive explores how Microsoft Azure's ND GB300 v6 virtual machines, powered by NVIDIA Blackwell architecture, set a new AI inference throughput record. It covers performance benchmarks, hardware optimizations, and provides detailed instructions for replicating the results using MLPerf Inference v5.1 and TensorRT-LLM on Azure."
-author: "HugoAffaticati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/breaking-the-million-token-barrier-the-technical-achievement-of/ba-p/4466080"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/breaking-the-million-token-barrier-the-technical-achievement-of/ba-p/4466080
+title: 'Azure ND GB300 v6: Achieving Over 1 Million Tokens/sec on Llama2 70B Inference'
+author: HugoAffaticati
+feed_name: Microsoft Tech Community
 date: 2025-11-03 17:00:00 +00:00
-permalink: "/2025-11-03-Azure-ND-GB300-v6-Achieving-Over-1-Million-Tokenssec-on-Llama2-70B-Inference.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Inference", "AI Infrastructure", "Azure", "Azure ND GB300 V6", "Azure Virtual Machines", "Benchmarking", "Cloud AI", "Community", "Containerization", "FP4 Quantization", "GEMM TFLOPS", "GPU Performance", "High Bandwidth Memory", "Llama2 70B", "ML", "ML Engineering", "ML Pipeline", "MLCommons", "MLPerf Inference", "NCCL Communication", "NVIDIA Blackwell", "NVLink", "Offline Inference", "Python", "TensorRT LLM"]
-tags_normalized: ["ai", "ai inference", "ai infrastructure", "azure", "azure nd gb300 v6", "azure virtual machines", "benchmarking", "cloud ai", "community", "containerization", "fp4 quantization", "gemm tflops", "gpu performance", "high bandwidth memory", "llama2 70b", "ml", "ml engineering", "ml pipeline", "mlcommons", "mlperf inference", "nccl communication", "nvidia blackwell", "nvlink", "offline inference", "python", "tensorrt llm"]
+tags:
+- AI Inference
+- AI Infrastructure
+- Azure ND GB300 V6
+- Azure Virtual Machines
+- Benchmarking
+- Cloud AI
+- Containerization
+- FP4 Quantization
+- GEMM TFLOPS
+- GPU Performance
+- High Bandwidth Memory
+- Llama2 70B
+- ML Engineering
+- ML Pipeline
+- MLCommons
+- MLPerf Inference
+- NCCL Communication
+- NVIDIA Blackwell
+- NVLink
+- Offline Inference
+- Python
+- TensorRT LLM
+- AI
+- Azure
+- ML
+- Community
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Hugo Affaticati and Mark Gitau detail Azure ND GB300 v6 VMs' record-breaking throughput for Llama2 70B inference, sharing technical benchmarks and a step-by-step Azure deployment guide.<!--excerpt_end-->
 
 # Azure ND GB300 v6: Achieving Over 1 Million Tokens/sec on Llama2 70B Inference

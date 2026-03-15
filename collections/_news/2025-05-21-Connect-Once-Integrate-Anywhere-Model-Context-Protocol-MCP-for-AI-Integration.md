@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Connect Once, Integrate Anywhere: Model Context Protocol (MCP) for AI Integration"
-description: "Maria Naggaga explores how the Model Context Protocol (MCP), an open standard, enables seamless integration between AI applications and external tools or data sources. The post details MCP’s support in tools like GitHub Copilot, Visual Studio, and Azure, with a security and developer workflow focus."
-author: "Maria Naggaga"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/connect-once-integrate-anywhere-with-mcps"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/connect-once-integrate-anywhere-with-mcps
+title: 'Connect Once, Integrate Anywhere: Model Context Protocol (MCP) for AI Integration'
+author: Maria Naggaga
+feed_name: Microsoft DevBlog
 date: 2025-05-21 17:00:09 +00:00
-permalink: "/2025-05-21-Connect-Once-Integrate-Anywhere-Model-Context-Protocol-MCP-for-AI-Integration.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agent Mode", "AI", "AI Integration", "APIs", "Azure", "Azure API Management", "C# SDK", "Coding", "Developer Productivity", "DevOps", "GitHub Copilot", "MCP", "News", "OAuth 2.1", "Registry", "Security", "VS", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai integration", "apis", "azure", "azure api management", "csharp sdk", "coding", "developer productivity", "devops", "github copilot", "mcp", "news", "oauth 2dot1", "registry", "security", "vs", "vs code"]
+tags:
+- Agent Mode
+- AI Integration
+- APIs
+- Azure API Management
+- C# SDK
+- Developer Productivity
+- MCP
+- OAuth 2.1
+- Registry
+- VS
+- VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 In this article, Maria Naggaga details the Model Context Protocol (MCP), outlining its impact on AI integration and developer productivity, with insights on leveraging GitHub Copilot, Visual Studio, Azure API Management, and robust security practices.<!--excerpt_end-->
 
 # Connect Once, Integrate Anywhere: Model Context Protocol (MCP) for AI Integration

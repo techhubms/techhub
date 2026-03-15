@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Accelerate Issue Resolution with GitHub Copilot CLI Fleet Command"
-description: "This video explores how developers can use the GitHub Copilot CLI’s /fleet command to delegate multiple issue-fixing tasks to Copilot-powered agents simultaneously. Viewers will learn how to install the Copilot CLI on various operating systems and leverage its features to streamline open source project maintenance, resolving multiple repository issues efficiently with a single prompt."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/lHtQPImRJSc"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/lHtQPImRJSc
+title: Accelerate Issue Resolution with GitHub Copilot CLI Fleet Command
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-11 18:00:55 +00:00
-permalink: "/2026-03-11-Accelerate-Issue-Resolution-with-GitHub-Copilot-CLI-Fleet-Command.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Automation", "Command Line Tools", "Copilot CLI", "GitHub Copilot", "GitHub Copilot CLI", "Issue Management", "Open Source", "Productivity", "Software Maintenance", "Task Automation", "Videos"]
-tags_normalized: ["ai", "automation", "command line tools", "copilot cli", "github copilot", "github copilot cli", "issue management", "open source", "productivity", "software maintenance", "task automation", "videos"]
+tags:
+- AI
+- Automation
+- Command Line Tools
+- Copilot CLI
+- GitHub Copilot
+- GitHub Copilot CLI
+- Issue Management
+- Open Source
+- Productivity
+- Software Maintenance
+- Task Automation
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub demonstrates how developers can speed up open source maintenance using the Copilot CLI’s /fleet command, allowing multiple tasks to be handled by Copilot agents in parallel.<!--excerpt_end-->
 
 {% youtube lHtQPImRJSc %}

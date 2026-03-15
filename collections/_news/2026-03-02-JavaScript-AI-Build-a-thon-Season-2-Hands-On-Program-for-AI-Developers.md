@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "JavaScript AI Build-a-thon Season 2: Hands-On Program for AI Developers"
-description: "JavaScript AI Build-a-thon Season 2 is a free, four-week hands-on program for JavaScript/TypeScript developers, organized by Microsoft. The event focuses on practical AI development with guided projects covering Local AI, Retrieval-Augmented Generation (RAG) pipelines, agent design, and culminates in a global hackathon. Participants will leverage Microsoft AI services, such as Foundry, and community support to build real-world AI solutions and deepen their understanding of modern AI patterns and tooling in the JavaScript ecosystem."
-author: "Julia Muiruri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/the-javascript-ai-build-a-thon-season-2-starts-today"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/the-javascript-ai-build-a-thon-season-2-starts-today
+title: 'JavaScript AI Build-a-thon Season 2: Hands-On Program for AI Developers'
+author: Julia Muiruri
+primary_section: ai
+feed_name: Microsoft Blog
 date: 2026-03-02 20:00:39 +00:00
-permalink: "/2026-03-02-JavaScript-AI-Build-a-thon-Season-2-Hands-On-Program-for-AI-Developers.html"
-categories: ["AI"]
-tags: ["Agent Builder", "AI", "AI Agents", "AI Build A Thon", "Developer Event", "Developer Events", "Guided Projects", "Hackathon", "JavaScript", "Learning", "Local AI", "MCP Tools", "Microsoft Foundry", "Microsoft Reactor", "News", "RAG", "TypeScript", "Uncategorized"]
-tags_normalized: ["agent builder", "ai", "ai agents", "ai build a thon", "developer event", "developer events", "guided projects", "hackathon", "javascript", "learning", "local ai", "mcp tools", "microsoft foundry", "microsoft reactor", "news", "rag", "typescript", "uncategorized"]
+tags:
+- Agent Builder
+- AI
+- AI Agents
+- AI Build A Thon
+- Developer Event
+- Developer Events
+- Guided Projects
+- Hackathon
+- JavaScript
+- Learning
+- Local AI
+- MCP Tools
+- Microsoft Foundry
+- Microsoft Reactor
+- News
+- RAG
+- TypeScript
+- Uncategorized
+section_names:
+- ai
 ---
-
 Julia Muiruri presents the second season of the JavaScript AI Build-a-thon—a four-week, hands-on program by Microsoft for JavaScript/TypeScript developers focused on Local AI, RAG, and agent-based systems, culminating in a collaborative hackathon.<!--excerpt_end-->
 
 # JavaScript AI Build-a-thon Season 2

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Introducing the New Test Run Hub in Azure Test Plans"
-description: "This article presents the all-new Test Run Hub in Azure Test Plans, a feature aimed at helping development teams efficiently manage, track, and analyze their software testing processes. Key benefits include real-time visibility, comprehensive analytics, streamlined test run management, enhanced collaboration, advanced filtering, markdown support for comments, and API programmability. The new hub seamlessly integrates with Azure DevOps workflows and provides actionable insights for continuous improvement in quality assurance. Panagiotis Liaros details how teams can optimize their quality assurance efforts and adapt the solution to fit their unique workflows."
-author: "Panagiotis Liaros"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/new-test-run-hub/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/new-test-run-hub/
+title: Introducing the New Test Run Hub in Azure Test Plans
+author: Panagiotis Liaros
+feed_name: Microsoft DevOps Blog
 date: 2025-09-04 09:58:58 +00:00
-permalink: "/2025-09-04-Introducing-the-New-Test-Run-Hub-in-Azure-Test-Plans.html"
-categories: ["Azure", "DevOps"]
-tags: ["Analytics Dashboard", "Azure", "Azure DevOps", "Azure Test Plans", "Collaboration", "Continuous Improvement", "DevOps", "Markdown Support", "News", "QA", "REST API", "Software Testing", "Test", "Test Attachments", "Test Automation", "Test Management", "Test Reporting", "Test Run Hub", "UX", "Workflow Management"]
-tags_normalized: ["analytics dashboard", "azure", "azure devops", "azure test plans", "collaboration", "continuous improvement", "devops", "markdown support", "news", "qa", "rest api", "software testing", "test", "test attachments", "test automation", "test management", "test reporting", "test run hub", "ux", "workflow management"]
+tags:
+- Analytics Dashboard
+- Azure DevOps
+- Azure Test Plans
+- Collaboration
+- Continuous Improvement
+- Markdown Support
+- QA
+- REST API
+- Software Testing
+- Test
+- Test Attachments
+- Test Automation
+- Test Management
+- Test Reporting
+- Test Run Hub
+- UX
+- Workflow Management
+- Azure
+- DevOps
+- News
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Panagiotis Liaros introduces the new Test Run Hub for Azure Test Plans, outlining features that enhance test tracking, analytics, and collaboration within Azure DevOps.<!--excerpt_end-->
 
 # Introducing the New Test Run Hub in Azure Test Plans

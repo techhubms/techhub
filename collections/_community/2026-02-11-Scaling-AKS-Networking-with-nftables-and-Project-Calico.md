@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Scaling AKS Networking with nftables and Project Calico"
-description: "This in-depth technical guide explores how to enable Kubernetes service networking on Azure Kubernetes Service (AKS) using the new nftables mode in kube-proxy, with Project Calico for network security and visibility. The article covers background on iptables limitations, why Microsoft's preview support for nftables in AKS is relevant, detailed step-by-step setup, and how to leverage Calico and modern observability tools for network troubleshooting and visualization."
-author: "jack4it"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-iptables-scaling-aks-networking-with-nftables-and-project/ba-p/4494467"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/beyond-iptables-scaling-aks-networking-with-nftables-and-project/ba-p/4494467
+title: Scaling AKS Networking with nftables and Project Calico
+author: jack4it
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-11 23:29:23 +00:00
-permalink: "/2026-02-11-Scaling-AKS-Networking-with-nftables-and-Project-Calico.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["AKS", "Azure", "Calico Whisker", "Cloud Native", "Cluster Scaling", "CNI", "Community", "Container Networking", "DevOps", "Iptables", "Kube Proxy", "Kubernetes", "Kubernetes Networking", "Linux Networking", "Load Balancing", "Microsoft Azure", "Microsoft Retina", "Network Policy", "Network Security", "Nftables", "Observability", "Project Calico", "Security"]
-tags_normalized: ["aks", "azure", "calico whisker", "cloud native", "cluster scaling", "cni", "community", "container networking", "devops", "iptables", "kube proxy", "kubernetes", "kubernetes networking", "linux networking", "load balancing", "microsoft azure", "microsoft retina", "network policy", "network security", "nftables", "observability", "project calico", "security"]
+tags:
+- AKS
+- Azure
+- Calico Whisker
+- Cloud Native
+- Cluster Scaling
+- CNI
+- Community
+- Container Networking
+- DevOps
+- Iptables
+- Kube Proxy
+- Kubernetes
+- Kubernetes Networking
+- Linux Networking
+- Load Balancing
+- Microsoft Azure
+- Microsoft Retina
+- Network Policy
+- Network Security
+- Nftables
+- Observability
+- Project Calico
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 jack4it presents a practical guide for enabling nftables mode in kube-proxy on Azure Kubernetes Service, leveraging Project Calico for advanced networking and security. The tutorial covers challenges with iptables at scale, Microsoft's new preview features, and modern observability tools.<!--excerpt_end-->
 
 # Scaling AKS Networking with nftables and Project Calico

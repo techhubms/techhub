@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure Update 6th March 2026"
-description: "A rapid-fire video update by John Savill covering recent Azure announcements as of March 6th, 2026. Key topics include new confidential virtual machines, Azure Firewall enhancements, Databricks network updates, the introduction of new AI models, Foundry integrations, Azure Arc Gateway advances, and updated Azure Policy enforcement mechanisms. Designed for technical practitioners looking to stay informed about the latest features and services in the Azure cloud ecosystem."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VuXRLdt5dIc"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=VuXRLdt5dIc
+title: Azure Update 6th March 2026
+author: John Savill's Technical Training
+primary_section: ai
+feed_name: John Savill's Technical Training
 date: 2026-03-06 16:43:32 +00:00
-permalink: "/2026-03-06-Azure-Update-6th-March-2026.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Model Integration", "Azure", "Azure AI Foundry", "Azure Arc Gateway", "Azure Databricks", "Azure Firewall", "Azure Policy", "Azure Update", "Cloud", "Cloud Governance", "Cloud Security", "Confidential VMs", "GHCP", "Grok 4.0", "Johnsavillstechnicaltraining", "Lakebase", "Microsoft", "Microsoft Cloud", "Onboard to Azure", "OpenAI GPT 5.3", "OpenAI GPT 5.4", "Phi 4 Reasoning Vision", "Qwen3.5", "Technical Training", "Videos"]
-tags_normalized: ["ai", "ai model integration", "azure", "azure ai foundry", "azure arc gateway", "azure databricks", "azure firewall", "azure policy", "azure update", "cloud", "cloud governance", "cloud security", "confidential vms", "ghcp", "grok 4dot0", "johnsavillstechnicaltraining", "lakebase", "microsoft", "microsoft cloud", "onboard to azure", "openai gpt 5dot3", "openai gpt 5dot4", "phi 4 reasoning vision", "qwen3dot5", "technical training", "videos"]
+tags:
+- AI
+- AI Model Integration
+- Azure
+- Azure AI Foundry
+- Azure Arc Gateway
+- Azure Databricks
+- Azure Firewall
+- Azure Policy
+- Azure Update
+- Cloud Governance
+- Cloud Security
+- Confidential VMs
+- GHCP
+- Grok 4.0
+- Johnsavillstechnicaltraining
+- Lakebase
+- Microsoft
+- Microsoft Cloud
+- Onboard to Azure
+- OpenAI GPT 5.3
+- OpenAI GPT 5.4
+- Phi 4 Reasoning Vision
+- Qwen3.5
+- Technical Training
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 John Savill's Technical Training presents a concise Azure Update for March 6th, 2026, exploring the newest features and AI integrations shaping the Microsoft Azure landscape.<!--excerpt_end-->
 
 {% youtube VuXRLdt5dIc %}

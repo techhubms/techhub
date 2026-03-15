@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric"
-description: "This article announces the general availability of Key-Pair authentication for Snowflake connections within Microsoft Fabric. It explains how this enhanced security feature benefits Power BI semantic models, Dataflow Gen2, Data pipelines, Copy jobs, and Mirroring. The article provides step-by-step instructions for configuring Key-Pair authentication via the Microsoft Fabric portal and REST API, emphasizing compliance and secure practices."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/snowflake-key-pair-authentication-generally-available/
+title: 'General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric'
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-02-17 10:00:00 +00:00
-permalink: "/2026-02-17-General-Availability-Snowflake-Key-Pair-Authentication-in-Microsoft-Fabric.html"
-categories: ["Azure", "Security"]
-tags: ["Automated Workloads", "Azure", "Compliance", "Data Integration", "Data Pipelines", "Data Security", "Dataflow Gen2", "ECDSA", "Identity Management", "Key Pair Authentication", "Microsoft Fabric", "News", "Power BI", "REST API", "RSA", "Security", "Snowflake"]
-tags_normalized: ["automated workloads", "azure", "compliance", "data integration", "data pipelines", "data security", "dataflow gen2", "ecdsa", "identity management", "key pair authentication", "microsoft fabric", "news", "power bi", "rest api", "rsa", "security", "snowflake"]
+tags:
+- Automated Workloads
+- Azure
+- Compliance
+- Data Integration
+- Data Pipelines
+- Data Security
+- Dataflow Gen2
+- ECDSA
+- Identity Management
+- Key Pair Authentication
+- Microsoft Fabric
+- News
+- Power BI
+- REST API
+- RSA
+- Security
+- Snowflake
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog, coauthored by Abhishek Narain, details the general availability of Key-Pair authentication for Snowflake connections—outlining secure setup in Fabric, REST API options, and benefits for enterprise compliance.<!--excerpt_end-->
 
 # General Availability: Snowflake Key-Pair Authentication in Microsoft Fabric

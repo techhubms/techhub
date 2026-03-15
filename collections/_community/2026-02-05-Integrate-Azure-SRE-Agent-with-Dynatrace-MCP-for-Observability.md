@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrate Azure SRE Agent with Dynatrace MCP for Observability"
-description: "This guide by dbandaru demonstrates how to connect the Azure SRE Agent to Dynatrace using the official MCP (Microsoft Copilot Platform) server integration. You'll learn how to set up credentials, configure connectors, create subagents, run DQL queries, investigate problems, analyze vulnerabilities, and test full-stack observability solutions on Azure."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-dynatrace-mcp-server-in-azure-sre-agent/ba-p/4492363"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-dynatrace-mcp-server-in-azure-sre-agent/ba-p/4492363
+title: Integrate Azure SRE Agent with Dynatrace MCP for Observability
+author: dbandaru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-05 21:42:26 +00:00
-permalink: "/2026-02-05-Integrate-Azure-SRE-Agent-with-Dynatrace-MCP-for-Observability.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure SRE Agent", "Community", "DevOps", "DQL", "Dynatrace", "Kubernetes Events", "MCP Server", "OAuth", "Observability", "Platform Token", "Problem Investigation", "SaaS Integration", "Security", "Security Analysis", "Server Sent Events", "Timeseries Forecast", "VS Code", "YAML Configuration"]
-tags_normalized: ["azure", "azure sre agent", "community", "devops", "dql", "dynatrace", "kubernetes events", "mcp server", "oauth", "observability", "platform token", "problem investigation", "saas integration", "security", "security analysis", "server sent events", "timeseries forecast", "vs code", "yaml configuration"]
+tags:
+- Azure
+- Azure SRE Agent
+- Community
+- DevOps
+- DQL
+- Dynatrace
+- Kubernetes Events
+- MCP Server
+- OAuth
+- Observability
+- Platform Token
+- Problem Investigation
+- SaaS Integration
+- Security
+- Security Analysis
+- Server Sent Events
+- Timeseries Forecast
+- VS Code
+- YAML Configuration
+section_names:
+- azure
+- devops
+- security
 ---
-
 dbandaru provides a comprehensive step-by-step guide to integrating the Azure SRE Agent with Dynatrace MCP, enabling real-time observability, DQL analytics, and problem/vulnerability investigation directly within Azure environments.<!--excerpt_end-->
 
 # Integrate Azure SRE Agent with Dynatrace MCP for Observability

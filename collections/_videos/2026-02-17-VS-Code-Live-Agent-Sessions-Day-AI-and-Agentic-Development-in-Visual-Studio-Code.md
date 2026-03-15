@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "VS Code Live: Agent Sessions Day – AI and Agentic Development in Visual Studio Code"
-description: "This event showcases how Visual Studio Code is evolving with AI and agentic development. Product team members demonstrate live workflows, customizable AI-powered agents, agent extensions, Copilot CLI integration, and best practices for building with agents in VS Code. The agenda includes deep dives on integrating agents, bringing your own model, and reshaping the editor with AI—all while maintaining openness and extensibility."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Osvu53c0yYg"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=Osvu53c0yYg
+title: 'VS Code Live: Agent Sessions Day – AI and Agentic Development in Visual Studio Code'
+author: GitHub
+primary_section: ai
+feed_name: GitHub YouTube
 date: 2026-02-17 20:05:05 +00:00
-permalink: "/2026-02-17-VS-Code-Live-Agent-Sessions-Day-AI-and-Agentic-Development-in-Visual-Studio-Code.html"
-categories: ["AI", "Coding"]
-tags: ["Agent HQ", "Agentic Development", "AI", "AI Agents", "Code", "Coding", "Coding Best Practices", "Copilot CLI", "Developer", "Developer Workflow", "Git", "Git And GitHub", "GitHub", "GitHub For Beginners", "GitHub Tutorial", "How To Use GitHub", "Live Demo", "Model Integration", "Open Source Tools", "Programming", "Software", "Software Development", "Software Engineering", "Videos", "VS Code", "VS Code Customization", "VS Code Extensions"]
-tags_normalized: ["agent hq", "agentic development", "ai", "ai agents", "code", "coding", "coding best practices", "copilot cli", "developer", "developer workflow", "git", "git and github", "github", "github for beginners", "github tutorial", "how to use github", "live demo", "model integration", "open source tools", "programming", "software", "software development", "software engineering", "videos", "vs code", "vs code customization", "vs code extensions"]
+tags:
+- Agent HQ
+- Agentic Development
+- AI
+- AI Agents
+- Code
+- Coding Best Practices
+- Copilot CLI
+- Developer
+- Developer Workflow
+- Git
+- Git And GitHub
+- GitHub
+- GitHub For Beginners
+- GitHub Tutorial
+- How To Use GitHub
+- Live Demo
+- Model Integration
+- Open Source Tools
+- Programming
+- Software
+- Software Development
+- Software Engineering
+- Videos
+- VS Code
+- VS Code Customization
+- VS Code Extensions
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 GitHub hosts VS Code Live: Agent Sessions Day, with Olivia Guzzardo McVicker and the VS Code team demonstrating how AI and agentic workflows are shaping the future of coding for developers.<!--excerpt_end-->
 
 {% youtube Osvu53c0yYg %}

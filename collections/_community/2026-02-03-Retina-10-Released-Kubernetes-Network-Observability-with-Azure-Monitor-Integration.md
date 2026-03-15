@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Retina 1.0 Released: Kubernetes Network Observability with Azure Monitor Integration"
-description: "This article introduces Retina 1.0, an open-source Kubernetes network observability platform maintained by Microsoft. Retina leverages eBPF for kernel-level telemetry, integrates with tools like Prometheus, Grafana, Azure Monitor and Log Analytics, and simplifies troubleshooting, continuous monitoring, and security auditing across cloud-agnostic environments. The post explains features, architecture, use cases, deployment, and links to documentation and community resources."
-author: "kamilp"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/retina-1-0-is-now-available/ba-p/4489003"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/linux-and-open-source-blog/retina-1-0-is-now-available/ba-p/4489003
+title: 'Retina 1.0 Released: Kubernetes Network Observability with Azure Monitor Integration'
+author: kamilp
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-03 14:36:06 +00:00
-permalink: "/2026-02-03-Retina-10-Released-Kubernetes-Network-Observability-with-Azure-Monitor-Integration.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Log Analytics", "Azure Monitor", "Cloud Native", "Community", "DevOps", "Distributed Systems", "Ebpf", "Grafana", "Helm", "Hubble", "Kubernetes", "Linux", "Microsoft", "Network Observability", "Open Source", "Packet Capture", "Prometheus", "Retina", "Security", "Security Auditing", "SRE", "Telemetry", "Windows"]
-tags_normalized: ["azure", "azure log analytics", "azure monitor", "cloud native", "community", "devops", "distributed systems", "ebpf", "grafana", "helm", "hubble", "kubernetes", "linux", "microsoft", "network observability", "open source", "packet capture", "prometheus", "retina", "security", "security auditing", "sre", "telemetry", "windows"]
+tags:
+- Azure
+- Azure Log Analytics
+- Azure Monitor
+- Cloud Native
+- Community
+- DevOps
+- Distributed Systems
+- Ebpf
+- Grafana
+- Helm
+- Hubble
+- Kubernetes
+- Linux
+- Microsoft
+- Network Observability
+- Open Source
+- Packet Capture
+- Prometheus
+- Retina
+- Security
+- Security Auditing
+- SRE
+- Telemetry
+- Windows
+section_names:
+- azure
+- devops
+- security
 ---
-
 kamilp from Microsoft announces Retina 1.0, introducing a powerful open-source Kubernetes network observability platform that integrates with Azure Monitor and other tools for deep cluster visibility, security, and troubleshooting.<!--excerpt_end-->
 
 # Retina 1.0 Released: Kubernetes Network Observability with Azure Monitor Integration

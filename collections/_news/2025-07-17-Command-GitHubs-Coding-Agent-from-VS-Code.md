@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Command GitHub's Coding Agent from VS Code"
-description: "This article introduces the GitHub Copilot Coding Agent integration within Visual Studio Code. It details how developers can delegate engineering tasks to the Copilot Coding Agent from the editor, track progress, review PRs, and leverage MCP servers. The preview demonstrates how workflows are streamlined and future improvements planned."
-author: "Burke Holland"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/07/17/copilot-coding-agent"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2025/07/17/copilot-coding-agent
+title: Command GitHub's Coding Agent from VS Code
+author: Burke Holland
+feed_name: Visual Studio Code Releases
 date: 2025-07-17 00:00:00 +00:00
-permalink: "/2025-07-17-Command-GitHubs-Coding-Agent-from-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Developer Agent", "Autonomous Development", "Code Review Automation", "Codebase Integration", "Coding", "Coding Agent", "Dev Environment", "GitHub", "GitHub Copilot", "GitHub Pull Requests Extension", "MCP", "MCP Servers", "News", "PR Workflow", "Session Management", "VS Code"]
-tags_normalized: ["ai", "ai developer agent", "autonomous development", "code review automation", "codebase integration", "coding", "coding agent", "dev environment", "github", "github copilot", "github pull requests extension", "mcp", "mcp servers", "news", "pr workflow", "session management", "vs code"]
+tags:
+- AI Developer Agent
+- Autonomous Development
+- Code Review Automation
+- Codebase Integration
+- Coding Agent
+- Dev Environment
+- GitHub
+- GitHub Pull Requests Extension
+- MCP
+- MCP Servers
+- PR Workflow
+- Session Management
+- VS Code
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Burke Holland explains how the GitHub Copilot Coding Agent is now integrated in VS Code, letting developers assign issues, review PRs, and automate code tasks directly from the editor.<!--excerpt_end-->
 
 # Command GitHub's Coding Agent from VS Code

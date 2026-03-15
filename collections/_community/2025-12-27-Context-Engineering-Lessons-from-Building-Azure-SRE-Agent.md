@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Context Engineering Lessons from Building Azure SRE Agent"
-description: "This post shares the technical journey and lessons learned from designing and evolving the Azure SRE Agent—a cloud AI system that autonomously manages Azure resources and production incidents. It dives into architecture evolution, context engineering, agent orchestration, scalable tool design, and context management patterns for reliable, production-grade AI operations."
-author: "sanchitmehta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/context-engineering-lessons-from-building-azure-sre-agent/ba-p/4481200
+title: Context Engineering Lessons from Building Azure SRE Agent
+author: sanchitmehta
+feed_name: Microsoft Tech Community
 date: 2025-12-27 20:07:30 +00:00
-permalink: "/2025-12-27-Context-Engineering-Lessons-from-Building-Azure-SRE-Agent.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Azure", "Azure CLI", "Azure SRE Agent", "Code Interpreter", "Community", "Context Engineering", "DevOps", "DevOps Patterns", "Incident Automation", "Kubernetes", "LLM Orchestration", "Microsoft Azure", "Multi Agent Systems", "Production AI", "Prompt Engineering", "Site Reliability Engineering", "Tool Chaining"]
-tags_normalized: ["ai", "azure", "azure cli", "azure sre agent", "code interpreter", "community", "context engineering", "devops", "devops patterns", "incident automation", "kubernetes", "llm orchestration", "microsoft azure", "multi agent systems", "production ai", "prompt engineering", "site reliability engineering", "tool chaining"]
+tags:
+- Azure CLI
+- Azure SRE Agent
+- Code Interpreter
+- Context Engineering
+- DevOps Patterns
+- Incident Automation
+- Kubernetes
+- LLM Orchestration
+- Microsoft Azure
+- Multi Agent Systems
+- Production AI
+- Prompt Engineering
+- Site Reliability Engineering
+- Tool Chaining
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 Sanchit Mehta, with co-author Vis Agarwal, walks through building the Azure SRE Agent. They discuss the real-world lessons, technical insights, and evolving architecture of an autonomous, AI-powered Site Reliability Engineering agent in Azure.<!--excerpt_end-->
 
 # Context Engineering Lessons from Building Azure SRE Agent

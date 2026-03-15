@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Should I Build for Azure DevOps? Exploring Market Potential for Outlook Add-ins"
-description: "The author discusses their extensive experience building Outlook integrations with Azure DevOps (ADO) and TFS, highlighting the migration to a more modern cross-platform add-in. They seek advice on the current market size and effective advertising strategies for such niche productivity tools serving enterprise customers."
-author: "Floating-pointer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1m4jkch/should_i_build_for_ado/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+external_url: https://www.reddit.com/r/azuredevops/comments/1m4jkch/should_i_build_for_ado/
+title: Should I Build for Azure DevOps? Exploring Market Potential for Outlook Add-ins
+author: Floating-pointer
+feed_name: Reddit Azure DevOps
 date: 2025-07-20 08:10:49 +00:00
-permalink: "/2025-07-20-Should-I-Build-for-Azure-DevOps-Exploring-Market-Potential-for-Outlook-Add-ins.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure DevOps", "COM Technology", "Community", "Cross Platform Development", "DevOps", "Enterprise Productivity", "Fortune 100", "Market Analysis", "Outlook Add Ins", "SaaS Products", "TFS", "Work Item Integration"]
-tags_normalized: ["azure", "azure devops", "com technology", "community", "cross platform development", "devops", "enterprise productivity", "fortune 100", "market analysis", "outlook add ins", "saas products", "tfs", "work item integration"]
+tags:
+- Azure DevOps
+- COM Technology
+- Cross Platform Development
+- Enterprise Productivity
+- Fortune 100
+- Market Analysis
+- Outlook Add Ins
+- SaaS Products
+- TFS
+- Work Item Integration
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Floating-pointer shares their experience building Outlook add-ins integrated with Azure DevOps (ADO) and TFS. The post discusses transitioning legacy COM-based tools to modern platforms and seeks advice regarding market potential and advertising approaches.<!--excerpt_end-->
 
 ## Background and Experience

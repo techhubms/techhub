@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Let it Cook: Latest Updates in VS Code and GitHub Copilot"
-description: "A live stream by Visual Studio Code featuring James Montemagno and Pierce Boggan, exploring the latest developments in Visual Studio Code and GitHub Copilot. The session includes new demos and deep dives into how GitHub Copilot is transforming the developer experience by integrating seamlessly with VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=uquSQY10AGM"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=uquSQY10AGM
+title: 'Let it Cook: Latest Updates in VS Code and GitHub Copilot'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-18 16:35:16 +00:00
-permalink: "/2026-02-18-Let-it-Cook-Latest-Updates-in-VS-Code-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Code", "Code Completion", "Coding", "Copilot", "Demo", "Developer", "Developer Community", "Developer Tools", "GitHub Copilot", "James Montemagno", "Live Demo", "Pierce Boggan", "Programming Productivity", "Software Developer", "Software Development", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai development", "code", "code completion", "coding", "copilot", "demo", "developer", "developer community", "developer tools", "github copilot", "james montemagno", "live demo", "pierce boggan", "programming productivity", "software developer", "software development", "videos", "vs code", "vs code extensions"]
+tags:
+- AI
+- AI Development
+- Code
+- Code Completion
+- Copilot
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- GitHub Copilot
+- James Montemagno
+- Live Demo
+- Pierce Boggan
+- Programming Productivity
+- Software Developer
+- Software Development
+- Videos
+- VS Code
+- VS Code Extensions
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code presents a live stream with James Montemagno and Pierce Boggan, showcasing the newest advances in GitHub Copilot and VS Code and how these tools are changing software development.<!--excerpt_end-->
 
 {% youtube uquSQY10AGM %}

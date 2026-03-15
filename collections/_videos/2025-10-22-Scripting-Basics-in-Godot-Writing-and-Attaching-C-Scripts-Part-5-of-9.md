@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Scripting Basics in Godot: Writing and Attaching C# Scripts (Part 5 of 9)"
-description: "This episode from the Godot C# training series explores how to bring a player character to life through C# scripting in the Godot engine. The lesson covers input handling, smooth player movement, and rotation using physics-based techniques. Viewers learn the essentials of Godot's C# scripting architecture, from input mapping to lifecycle methods, debugging, and structuring logic for reusable code. By the end, viewers will have a working, responsive player controller and a challenge to implement interactive scene objects."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=iEMbetxAwvA"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=iEMbetxAwvA
+title: 'Scripting Basics in Godot: Writing and Attaching C# Scripts (Part 5 of 9)'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-10-22 16:30:16 +00:00
-permalink: "/2025-10-22-Scripting-Basics-in-Godot-Writing-and-Attaching-C-Scripts-Part-5-of-9.html"
-categories: ["Coding"]
-tags: [".NET", "Beginner Tutorial", "C#", "CharacterBody3D", "Coding", "Debugging", "Export Variables", "Game Development", "GameDev Tools", "Godot Engine", "Input Handling", "LerpAngle", "Microsoft", "Physics Process", "Player Movement", "Scripting", "Videos", "VS Code"]
-tags_normalized: ["dotnet", "beginner tutorial", "csharp", "characterbody3d", "coding", "debugging", "export variables", "game development", "gamedev tools", "godot engine", "input handling", "lerpangle", "microsoft", "physics process", "player movement", "scripting", "videos", "vs code"]
+tags:
+- .NET
+- Beginner Tutorial
+- C#
+- CharacterBody3D
+- Debugging
+- Export Variables
+- Game Development
+- GameDev Tools
+- Godot Engine
+- Input Handling
+- LerpAngle
+- Microsoft
+- Physics Process
+- Player Movement
+- Scripting
+- VS Code
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 dotnet demonstrates C# scripting basics in Godot, guiding viewers through input handling, character movement, and smooth rotation—essential skills for building interactive game elements.<!--excerpt_end-->
 
 {% youtube iEMbetxAwvA %}

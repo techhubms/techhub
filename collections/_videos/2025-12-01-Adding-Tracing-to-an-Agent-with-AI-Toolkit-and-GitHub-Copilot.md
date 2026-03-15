@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Adding Tracing to an Agent with AI Toolkit and GitHub Copilot"
-description: "This video, part of the GitHub Copilot + AI Toolkit Pet Planner workshop by Microsoft Developer, demonstrates how to add tracing capabilities to an AI agent using GitHub Copilot in Agent mode. The presentation covers enabling tracing, collecting trace data, and reviewing the traces within the AI Toolkit’s Tracing viewer, allowing developers to observe the detailed steps an AI agent takes to generate output. The walkthrough also includes guidance for setting up the AI Toolkit and connecting with Microsoft Foundry projects, offering a practical foundation for enhancing agent observability and debugging in AI development workflows."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Rcjcf6HkrD8"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=Rcjcf6HkrD8
+title: Adding Tracing to an Agent with AI Toolkit and GitHub Copilot
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-12-01 21:00:31 +00:00
-permalink: "/2025-12-01-Adding-Tracing-to-an-Agent-with-AI-Toolkit-and-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Development", "AI", "AI Development", "AI Toolkit", "Cloud Computing", "Code Tracing", "Copilot Agent Mode", "Dev", "Developer Tools", "Development", "GitHub Copilot", "Microsoft", "Microsoft Foundry", "Pet Planner Workshop", "Tech", "Technology", "Tracing", "Tracing Viewer", "Videos"]
-tags_normalized: ["agent development", "ai", "ai development", "ai toolkit", "cloud computing", "code tracing", "copilot agent mode", "dev", "developer tools", "development", "github copilot", "microsoft", "microsoft foundry", "pet planner workshop", "tech", "technology", "tracing", "tracing viewer", "videos"]
+tags:
+- Agent Development
+- AI Development
+- AI Toolkit
+- Cloud Computing
+- Code Tracing
+- Copilot Agent Mode
+- Dev
+- Developer Tools
+- Development
+- Microsoft
+- Microsoft Foundry
+- Pet Planner Workshop
+- Tech
+- Technology
+- Tracing
+- Tracing Viewer
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Microsoft Developer, with April as presenter, walks through adding tracing to an agent using AI Toolkit and GitHub Copilot, making agent processing steps visible for developers.<!--excerpt_end-->
 
 {% youtube Rcjcf6HkrD8 %}

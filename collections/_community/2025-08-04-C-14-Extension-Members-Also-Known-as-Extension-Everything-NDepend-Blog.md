@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "C# 14 Extension Members: Also Known as Extension Everything - NDepend Blog"
-description: "This article by PatrickSmacchia discusses the upcoming C# 14 feature called Extension Members, often referred to as 'Extension Everything.' It covers how this feature extends C#'s capability to add extension methods, properties, and operators to existing types, offering enhanced flexibility for developers."
-author: "PatrickSmacchia"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mhbukq/c_14_extension_members_also_known_as_extension/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+external_url: https://www.reddit.com/r/dotnet/comments/1mhbukq/c_14_extension_members_also_known_as_extension/
+title: 'C# 14 Extension Members: Also Known as Extension Everything - NDepend Blog'
+author: PatrickSmacchia
+feed_name: Reddit DotNet
 date: 2025-08-04 12:18:27 +00:00
-permalink: "/2025-08-04-C-14-Extension-Members-Also-Known-as-Extension-Everything-NDepend-Blog.html"
-categories: ["Coding"]
-tags: [".NET", "C# 14", "C# Features", "Coding", "Community", "Developer Productivity", "Extension Members", "Extension Methods", "Language Design", "NDepend", "Operators", "Properties"]
-tags_normalized: ["dotnet", "csharp 14", "csharp features", "coding", "community", "developer productivity", "extension members", "extension methods", "language design", "ndepend", "operators", "properties"]
+tags:
+- .NET
+- C# 14
+- C# Features
+- Developer Productivity
+- Extension Members
+- Extension Methods
+- Language Design
+- NDepend
+- Operators
+- Properties
+- Community
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 PatrickSmacchia delves into the upcoming C# 14 feature of Extension Members, offering insights on how it expands the language's extensibility.<!--excerpt_end-->
 
 # Overview

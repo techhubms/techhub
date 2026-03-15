@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Microsoft Accelerates VS Code Releases, Introduces Autopilot AI Mode"
-description: "This article reviews Microsoft’s shift to a weekly release schedule for Visual Studio Code and explores the introduction of the Autopilot feature in Copilot Chat. It discusses how Autopilot enables autonomous AI-powered development within VS Code, the security implications of automatic tool approvals, and the broader movement toward agentic AI workflows seen across industry players like Google."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2026/03/12/microsoft-ships-vs-code-weekly-adds-autopilot-mode-so-ai-can-wreak-havoc-without-bothering-you/5208978"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2026/03/12/microsoft-ships-vs-code-weekly-adds-autopilot-mode-so-ai-can-wreak-havoc-without-bothering-you/5208978
+title: Microsoft Accelerates VS Code Releases, Introduces Autopilot AI Mode
+author: DevClass.com
+primary_section: ai
+feed_name: DevClass
 date: 2026-03-12 22:39:00 +00:00
-permalink: "/2026-03-12-Microsoft-Accelerates-VS-Code-Releases-Introduces-Autopilot-AI-Mode.html"
-categories: ["AI", "Coding"]
-tags: ["Agentic AI", "AI", "AI Development", "Autopilot", "Blogs", "Coding", "Copilot Chat", "MCP", "Microsoft", "Prompt Injection", "Release Management", "Terminal Sandboxing", "VS Code"]
-tags_normalized: ["agentic ai", "ai", "ai development", "autopilot", "blogs", "coding", "copilot chat", "mcp", "microsoft", "prompt injection", "release management", "terminal sandboxing", "vs code"]
+tags:
+- Agentic AI
+- AI
+- AI Development
+- Autopilot
+- Blogs
+- Copilot Chat
+- MCP
+- Microsoft
+- Prompt Injection
+- Release Management
+- Terminal Sandboxing
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 DevClass.com highlights Microsoft's switch to weekly Visual Studio Code releases and the rollout of Autopilot in Copilot Chat, offering developers new AI-driven coding experiences while raising fresh security concerns.<!--excerpt_end-->
 
 # Microsoft Accelerates VS Code Releases, Introduces Autopilot AI Mode

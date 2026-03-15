@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Start and track GitHub Copilot coding agent sessions from Visual Studio Code"
-description: "GitHub Copilot coding agent allows developers to offload coding tasks to Copilot, letting it work in the background while focusing elsewhere."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-14-start-and-track-github-copilot-coding-agent-sessions-from-visual-studio-code"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-07-14-start-and-track-github-copilot-coding-agent-sessions-from-visual-studio-code
+title: Start and track GitHub Copilot coding agent sessions from Visual Studio Code
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-07-14 14:57:20 +00:00
-permalink: "/2025-07-14-Start-and-track-GitHub-Copilot-coding-agent-sessions-from-Visual-Studio-Code.html"
-viewing_mode: "external"
-tags: ["AI", "AI Assistant", "Automation", "Background Tasks", "Coding Agent", "Copilot Features", "Developer Productivity", "GitHub Copilot", "News", "Programming Tools", "Software Development", "Task Delegation"]
-tags_normalized: ["ai", "ai assistant", "automation", "background tasks", "coding agent", "copilot features", "developer productivity", "github copilot", "news", "programming tools", "software development", "task delegation"]
+tags:
+- AI Assistant
+- Automation
+- Background Tasks
+- Coding Agent
+- Copilot Features
+- Developer Productivity
+- Programming Tools
+- Software Development
+- Task Delegation
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this article, Allison introduces the GitHub Copilot coding agent, a feature that enables developers to delegate coding tasks to Copilot. This allows Copilot to handle work in the background, enhancing productivity by letting developers focus on other aspects of their projects.<!--excerpt_end-->
 
 ### Overview of GitHub Copilot Coding Agent

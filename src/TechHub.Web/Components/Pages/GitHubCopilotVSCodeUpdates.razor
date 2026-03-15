@@ -1,0 +1,206 @@
+@page "/github-copilot/vscode-updates"
+@page "/github-copilot/vscode-updates/{VideoSlug}"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotVSCodeUpdates> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
+
+<main class="page-with-sidebar">
+    <aside class="sidebar">
+        <SidebarToggle />
+        <MobileSidebarToolbar>
+        <MobileSidebarPanel Label="Recent Updates" Icon="updates">
+        @if (videoItems.Any())
+        {
+            <div class="sidebar-section">
+                <h2 class="sidebar-h2">Recent Updates</h2>
+                <ul class="sidebar-list">
+                    @foreach (var video in videoItems)
+                    {
+                        var isActive = video.Slug == selectedVideoSlug;
+                        <li>
+                            <a href="/github-copilot/vscode-updates/@video.Slug"
+                                class="sidebar-content-button @(isActive ? "active" : "")">
+                                <span class="sidebar-content-button-title">@video.Title</span>
+                                <span class="sidebar-content-button-meta">
+                                    <time datetime="@FormatDateIso(video.DateEpoch)">@FormatDate(video.DateEpoch)</time>
+                                </span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+        </MobileSidebarPanel>
+
+        @if (selectedVideoDetail != null && !string.IsNullOrWhiteSpace(selectedVideoDetail.RenderedHtml))
+        {
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
+            <SidebarToc HtmlContent="@selectedVideoDetail.RenderedHtml" Title="Table of Contents" />
+            </MobileSidebarPanel>
+        }
+        </MobileSidebarToolbar>
+    </aside>
+
+    @if (selectedVideoDetail != null)
+    {
+        <ContentItemDetail Item="@selectedVideoDetail" Id="skiptohere" />
+    }
+    else
+    {
+        <article class="article-body">
+            <p class="no-content-message">No updates available yet.</p>
+        </article>
+    }
+</main>
+
+@code {
+    private const string VideoCollectionName = "vscode-updates";
+
+    [Parameter]
+    public string? VideoSlug { get; set; }
+
+    private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private TechHub.Core.Models.ContentItemDetail? selectedVideoDetail;
+    private string selectedVideoSlug = "";
+    private PersistingComponentStateSubscription? _persistSubscription;
+    private bool _restoredFromPersistedState;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (selectedVideoDetail != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initHighlighting");
+            await JS.InvokeVoidAsync("initMermaid");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+        await LoadPageData();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        // Skip if data was just restored from persisted state (avoids duplicate API call during hydration)
+        if (_restoredFromPersistedState)
+        {
+            _restoredFromPersistedState = false;
+            return;
+        }
+
+        // When URL parameter changes, reload the selected video
+        if (videoItems.Any())
+        {
+            await LoadSelectedVideo();
+        }
+    }
+
+    private async Task LoadPageData()
+    {
+        var stateKey = $"vscode-updates-{VideoSlug ?? "index"}";
+
+        if (ApplicationState.TryTakeFromJson<PersistedVSCodeUpdatesData>(stateKey, out var restored) && restored != null)
+        {
+            videoItems = restored.VideoItems ?? new();
+            selectedVideoDetail = restored.SelectedVideoDetail;
+            selectedVideoSlug = restored.SelectedVideoSlug ?? "";
+            _restoredFromPersistedState = true;
+            return;
+        }
+
+        try
+        {
+            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName, take: 5, lastDays: 0);
+            videoItems = (result?.Items ?? [])
+                .OrderByDescending(v => v.DateEpoch)
+                .ToList();
+
+            // Note: Don't call LoadSelectedVideo here - OnParametersSetAsync handles it
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private async Task LoadSelectedVideo()
+    {
+        if (!videoItems.Any()) return;
+
+        // Use URL parameter or default to first (latest) video
+        selectedVideoSlug = !string.IsNullOrEmpty(VideoSlug)
+        ? VideoSlug
+        : videoItems.First().Slug;
+
+        // Verify the slug exists in our list
+        var videoExists = videoItems.Any(v => v.Slug == selectedVideoSlug);
+        if (!videoExists)
+        {
+            selectedVideoSlug = videoItems.First().Slug;
+        }
+
+        selectedVideoDetail = await ApiClient.GetContentDetailAsync(
+        "github-copilot",
+        "videos",
+        selectedVideoSlug);
+    }
+
+    private string FormatDate(long epochSeconds)
+    {
+        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
+        return dateTime.ToString("MMMM d, yyyy");
+    }
+
+    private static string FormatDateIso(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");
+
+    private string GetPageTitle()
+    {
+        // If a specific video is selected, use its title
+        if (selectedVideoDetail != null)
+        {
+            return selectedVideoDetail.Title;
+        }
+
+        // Otherwise use the page title
+        return "VS Code Updates";
+    }
+
+    private Task PersistState()
+    {
+        var stateKey = $"vscode-updates-{VideoSlug ?? "index"}";
+        ApplicationState.PersistAsJson(stateKey, new PersistedVSCodeUpdatesData
+        {
+            VideoItems = videoItems,
+            SelectedVideoDetail = selectedVideoDetail,
+            SelectedVideoSlug = selectedVideoSlug
+        });
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private sealed class PersistedVSCodeUpdatesData
+    {
+        public List<TechHub.Core.Models.ContentItem>? VideoItems { get; set; }
+        public TechHub.Core.Models.ContentItemDetail? SelectedVideoDetail { get; set; }
+        public string? SelectedVideoSlug { get; set; }
+    }
+}

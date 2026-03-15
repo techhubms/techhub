@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers"
-description: "This article outlines the integration of Azure MCP Server (Model Context Protocol) tools directly into Visual Studio 2026. It shows how these agentic, AI-native capabilities allow developers to securely and efficiently manage Azure resources, automate workflows, set up CI/CD and streamline development without constant context-switching. Coverage includes the practical impacts, key features, setup steps, and links to documentation."
-author: "Yun Jung Choi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/azure-mcp-server-now-built-in-with-visual-studio-2026-a-new-era-for-agentic-workflows/
+title: 'Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers'
+author: Yun Jung Choi
+feed_name: Microsoft VisualStudio Blog
 date: 2025-11-14 14:00:14 +00:00
-permalink: "/2025-11-14-Azure-MCP-Server-Now-Built-In-with-Visual-Studio-2026-Agentic-Cloud-Automation-for-Developers.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic Automation", "AI", "AI Native IDE", "AKS", "Azure", "Azure CLI", "Azure Container Apps", "Azure Development", "Azure DevOps", "Azure Functions", "Azure MCP Server", "CI/CD Workflows", "Cloud", "Cloud Resource Management", "Coding", "Copilot", "Cosmos DB", "DevOps", "Diagnostics", "GitHub Copilot", "IaC", "MCP", "Natural Language Query", "News", "Security", "Security Best Practices", "Telemetry", "VS"]
-tags_normalized: ["agentic automation", "ai", "ai native ide", "aks", "azure", "azure cli", "azure container apps", "azure development", "azure devops", "azure functions", "azure mcp server", "cislashcd workflows", "cloud", "cloud resource management", "coding", "copilot", "cosmos db", "devops", "diagnostics", "github copilot", "iac", "mcp", "natural language query", "news", "security", "security best practices", "telemetry", "vs"]
+tags:
+- Agentic Automation
+- AI Native IDE
+- AKS
+- Azure CLI
+- Azure Container Apps
+- Azure Development
+- Azure DevOps
+- Azure Functions
+- Azure MCP Server
+- CI/CD Workflows
+- Cloud Resource Management
+- Copilot
+- Cosmos DB
+- Diagnostics
+- IaC
+- MCP
+- Natural Language Query
+- Security Best Practices
+- Telemetry
+- VS
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 Yun Jung Choi introduces the built-in Azure MCP Server integration with Visual Studio 2026, enabling developers to automate Azure resource management and CI/CD workflows via AI-native tools, secure practices, and natural language in their IDE.<!--excerpt_end-->
 
 # Azure MCP Server Now Built-In with Visual Studio 2026: Agentic Cloud Automation for Developers

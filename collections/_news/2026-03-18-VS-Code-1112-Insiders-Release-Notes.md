@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "VS Code 1.112 Insiders Release Notes"
-description: "This news post provides a breakdown of new features, improvements, and fixes in Visual Studio Code 1.112 Insiders. It highlights updates such as Copilot CLI agent enhancements, chat-based image analysis, agent/plugin controls, and UI improvements. Geared toward developers, the article references GitHub Copilot integrations and collaborative coding features."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_112"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_112
+title: VS Code 1.112 Insiders Release Notes
+author: Visual Studio Code Team
+primary_section: github-copilot
+feed_name: Visual Studio Code Releases
 date: 2026-03-18 17:00:00 +00:00
-permalink: "/2026-03-18-VS-Code-1112-Insiders-Release-Notes.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Chat Integration", "CLI Agents", "Coding", "Copilot CLI", "Developer Tools", "Feature Update", "GitHub Copilot", "IDE", "Image Analysis", "News", "Plugin Management", "Release Notes", "VS Code"]
-tags_normalized: ["ai", "chat integration", "cli agents", "coding", "copilot cli", "developer tools", "feature update", "github copilot", "ide", "image analysis", "news", "plugin management", "release notes", "vs code"]
+tags:
+- AI
+- Chat Integration
+- CLI Agents
+- Copilot CLI
+- Developer Tools
+- Feature Update
+- GitHub Copilot
+- IDE
+- Image Analysis
+- News
+- Plugin Management
+- Release Notes
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code Team outlines the significant updates in VS Code 1.112 Insiders, focusing on Copilot CLI improvements, chat-based image analysis, and enhanced developer features.<!--excerpt_end-->
 
 # VS Code 1.112 Insiders Release Notes

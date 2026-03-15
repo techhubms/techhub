@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Azure Arc Server February 2026 Forum: Reporting, VM App Deployment, and ESU Announcements"
-description: "This recap highlights the key topics discussed at the February 2026 Azure Arc Server Forum, including updates on Arc Server Reporting & Dashboard, VM application deployment and patching capabilities for Azure Arc-enabled servers, and Windows Server 2016 ESUs integration via Azure Arc. Learn where to find resources, submit feedback, and join future sessions."
-author: "Aurnov_Chattopadhyay"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-feb-2026-forum-recap/ba-p/4501793"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/azure-arc-server-feb-2026-forum-recap/ba-p/4501793
+title: 'Azure Arc Server February 2026 Forum: Reporting, VM App Deployment, and ESU Announcements'
+author: Aurnov_Chattopadhyay
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-12 23:24:03 +00:00
-permalink: "/2026-03-12-Azure-Arc-Server-February-2026-Forum-Reporting-VM-App-Deployment-and-ESU-Announcements.html"
-categories: ["Azure"]
-tags: ["Application Deployment", "Arc Server Reporting", "Azure", "Azure Arc", "Azure Connected Machine Agent", "Community", "Community Forum", "Dashboard", "ESU", "Hybrid Cloud", "Management", "Patching", "Preview Features", "Server Management", "VM Applications", "Windows Server"]
-tags_normalized: ["application deployment", "arc server reporting", "azure", "azure arc", "azure connected machine agent", "community", "community forum", "dashboard", "esu", "hybrid cloud", "management", "patching", "preview features", "server management", "vm applications", "windows server"]
+tags:
+- Application Deployment
+- Arc Server Reporting
+- Azure
+- Azure Arc
+- Azure Connected Machine Agent
+- Community
+- Community Forum
+- Dashboard
+- ESU
+- Hybrid Cloud
+- Management
+- Patching
+- Preview Features
+- Server Management
+- VM Applications
+- Windows Server
+section_names:
+- azure
 ---
-
 Aurnov Chattopadhyay summarizes the highlights from the February 2026 Azure Arc Server Forum, covering developments in Arc Server Reporting, application deployment on Arc-enabled servers, and Windows Server 2016 ESU support.<!--excerpt_end-->
 
 # Azure Arc Server February 2026 Forum Recap

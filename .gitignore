@@ -1,34 +1,60 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-.ruby-lsp
-.bundle/
-vendor/
-Gemfile.lock
+# Content processing (keep execute-with-token.ps1 private)
 scripts/content-processing/execute-with-token.ps1
-.tmp/
-.logs/
-**/node_modules/
-**/test-results/
-spec/e2e/playwright-report/
-spec/e2e/screenshots/
-spec/e2e/videos/
-spec/e2e/traces/trivy-test.sarif
-coverage.xml
 
-# .NET Core / .NET 5+ ignores
+# Allow content-processing DLL dependencies (needed by PowerShell scripts)
+!scripts/content-processing/lib/*.dll
+
+# Infrastructure compiled templates (Bicep to ARM)
+infra/**/*.json
+
+# Database files
+.databases/
+
+# Temporary files and logs
+*.tmp
+*.log
+**/.tmp/
+**/.logs/
+trivy-test.sarif
+coverage.xml
+.tmp
+
+# .NET Build outputs
 bin/
 obj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+build/
+
+# .NET compiled files
 *.dll
 *.exe
 *.pdb
 *.cache
+
+# Visual Studio / VS Code
+.vs/
+*.code-workspace
+
+# User-specific files
+*.rsuser
 *.suo
-*.user
+*.userz
+z*.userosscache
 *.userprefs
 *.sln.docstates
-*.log
 *.vspscc
 *.vssscc
 .builds/
@@ -36,57 +62,63 @@ obj/
 *.svclog
 *.scc
 
-# Visual Studio / VS Code
-.vs/
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
-*.code-workspace
-
-# MSBuild
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-build/
-bld/
-[Bb]in/
-[Oo]bj/
-
-# NuGet
+# NuGet packages
 packages/
 *.nupkg
 *.snupkg
 **/packages.lock.json
 !packages/build/
 
-# Test Results
+# Test results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 *.trx
 *.coverage
 *.coveragexml
+test-results/
+playwright-report/
 
 # ASP.NET
 project.lock.json
 project.fragment.lock.json
 artifacts/
-**/Properties/launchSettings.json
+ScaffoldingReadMe.txt
 
 # Entity Framework
 *.edmx.diagram
 *.edmx.sql
 
-# Rider
+# IDEs
 .idea/
+*.sln.iml
 
-# Mono Auto Generated Files
-mono_crash.*
+# Publish profiles
+*.pubxml
+*.publishsettings
 
-# Windows/Mac OS
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Playwright
+.playwright/
+.playwright-mcp/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Azure
+*.azurewebsites.net.pubxml
+PublishProfiles/
+
+# .NET Aspire
+.aspire/
+
+# OS files
 Thumbs.db
 ehthumbs.db
 Desktop.ini
@@ -95,4 +127,9 @@ $RECYCLE.BIN/
 *.app
 *.DS_Store
 
-.playwright-mcp/
+# Mono
+mono_crash.*
+
+.vscode/mcp.json
+
+techhub.db*

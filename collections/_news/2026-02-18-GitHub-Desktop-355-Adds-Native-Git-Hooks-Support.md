@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Desktop 3.5.5 Adds Native Git Hooks Support"
-description: "This update introduces native Git hooks support in GitHub Desktop, addressing compatibility issues with shell environments and version managers. Version 3.5.5 also brings several usability enhancements, improved error handling, and Copilot-authored commit attribution. The release aims to streamline developer workflows and resolve persistent problems for Windows users and cross-platform teams."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-18-github-desktop-3-5-5-adds-git-hooks-support"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-18-github-desktop-3-5-5-adds-git-hooks-support
+title: GitHub Desktop 3.5.5 Adds Native Git Hooks Support
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-18 19:32:27 +00:00
-permalink: "/2026-02-18-GitHub-Desktop-355-Adds-Native-Git-Hooks-Support.html"
-categories: ["DevOps"]
-tags: ["Client Apps", "Commit Automation", "Copilot Integration", "Cross Platform Development", "Developer Tools", "DevOps", "Git", "Git Hooks", "GitHub Desktop", "Improvement", "News", "Nvm", "Release 3.5.5", "Repository Management", "Shell Environment", "Terminal Integration", "Version Control", "Windows Development"]
-tags_normalized: ["client apps", "commit automation", "copilot integration", "cross platform development", "developer tools", "devops", "git", "git hooks", "github desktop", "improvement", "news", "nvm", "release 3dot5dot5", "repository management", "shell environment", "terminal integration", "version control", "windows development"]
+tags:
+- Client Apps
+- Commit Automation
+- Copilot Integration
+- Cross Platform Development
+- Developer Tools
+- DevOps
+- Git
+- Git Hooks
+- GitHub Desktop
+- Improvement
+- News
+- Nvm
+- Release 3.5.5
+- Repository Management
+- Shell Environment
+- Terminal Integration
+- Version Control
+- Windows Development
+section_names:
+- devops
 ---
-
 Allison details the major new Git hooks support in GitHub Desktop 3.5.5, along with other development-focused improvements like terminal compatibility, Copilot commit attribution, and crash fixes.<!--excerpt_end-->
 
 # GitHub Desktop 3.5.5 Adds Native Git Hooks Support

@@ -1,0 +1,27 @@
+﻿@page "/not-found"
+@layout MainLayout
+@inject NavigationManager Navigation
+
+<PageTitle>Not Found - Tech Hub</PageTitle>
+
+<main class="page-without-sidebar">
+    <section>
+        <p><a href="/" class="back-link">← Back to Home</a></p>
+    </section>
+</main>
+
+@code {
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    protected override void OnInitialized()
+    {
+        // HttpContext is only available during prerendering (not in interactive mode).
+        // Setting the status code during prerender is sufficient — search engines and
+        // HTTP clients see the 404 status on the initial response.
+        if (HttpContext is { Response.StatusCode: 200 })
+        {
+            HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+        }
+    }
+}

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure SRE Agent Is Now Generally Available: New Features and Capabilities"
-description: "This community post from dchelupati announces the general availability of Azure SRE Agent, an operational agent designed for Site Reliability Engineering on Azure. It highlights new onboarding flows, deep environmental context, automation of investigations, workflow orchestration, and integration with multiple incident platforms. Readers are guided through SRE Agent's capabilities, practical enhancements, and links to resources for getting started."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-is-generally-available-what-s-new/ba-p/4500779"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-is-generally-available-what-s-new/ba-p/4500779
+title: 'Azure SRE Agent Is Now Generally Available: New Features and Capabilities'
+author: dchelupati
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-10 14:09:34 +00:00
-permalink: "/2026-03-10-Azure-SRE-Agent-Is-Now-Generally-Available-New-Features-and-Capabilities.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Automation", "AI", "Azure", "Azure Container Apps", "Azure SRE Agent", "Community", "DevOps", "DevOps Tools", "ICM", "Incident Management", "MCP Connectors", "Monitoring", "Operational Intelligence", "PagerDuty", "Plugin Marketplace", "Python Integration", "Root Cause Analysis", "Serverless", "ServiceNow", "Site Reliability Engineering", "SRE"]
-tags_normalized: ["agent automation", "ai", "azure", "azure container apps", "azure sre agent", "community", "devops", "devops tools", "icm", "incident management", "mcp connectors", "monitoring", "operational intelligence", "pagerduty", "plugin marketplace", "python integration", "root cause analysis", "serverless", "servicenow", "site reliability engineering", "sre"]
+tags:
+- Agent Automation
+- AI
+- Azure
+- Azure Container Apps
+- Azure SRE Agent
+- Community
+- DevOps
+- DevOps Tools
+- ICM
+- Incident Management
+- MCP Connectors
+- Monitoring
+- Operational Intelligence
+- PagerDuty
+- Plugin Marketplace
+- Python Integration
+- Root Cause Analysis
+- Serverless
+- ServiceNow
+- Site Reliability Engineering
+- SRE
+section_names:
+- ai
+- azure
+- devops
 ---
-
 dchelupati introduces the Azure SRE Agent’s general availability, describing its new operational and automation features for Site Reliability Engineering on Azure, including integration, workflow orchestration, and deep diagnostic capabilities.<!--excerpt_end-->
 
 # Azure SRE Agent Is Now Generally Available: New Features and Capabilities

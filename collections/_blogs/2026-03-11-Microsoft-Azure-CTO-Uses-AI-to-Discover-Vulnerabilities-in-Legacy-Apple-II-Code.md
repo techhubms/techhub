@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Azure CTO Uses AI to Discover Vulnerabilities in Legacy Apple II Code"
-description: "This article examines how Microsoft Azure CTO Mark Russinovich leveraged Anthropic's Claude Opus 4.6 AI to analyze and find vulnerabilities in machine code he wrote for the Apple II in 1986. It discusses the technical process, the types of issues identified, and the broader implications of using AI for security auditing of legacy and embedded systems."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/security/2026/03/11/microsoft-azure-cto-set-claude-on-his-1986-apple-ii-code-says-it-found-vulns/5208875"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/security/2026/03/11/microsoft-azure-cto-set-claude-on-his-1986-apple-ii-code-says-it-found-vulns/5208875
+title: Microsoft Azure CTO Uses AI to Discover Vulnerabilities in Legacy Apple II Code
+author: DevClass.com
+primary_section: ai
+feed_name: DevClass
 date: 2026-03-11 09:35:47 +00:00
-permalink: "/2026-03-11-Microsoft-Azure-CTO-Uses-AI-to-Discover-Vulnerabilities-in-Legacy-Apple-II-Code.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI in Cybersecurity", "AI Vulnerability Discovery", "Apple II", "Automated Vulnerability Detection", "Blogs", "Claude Opus 4.6", "Defensive Security", "Embedded Systems", "Firmware Security", "Legacy Code Security", "Machine Code Analysis", "Mark Russinovich", "Microsoft Azure", "Security", "Security Auditing", "Static Analysis", "Vulnerability Scanning"]
-tags_normalized: ["ai", "ai in cybersecurity", "ai vulnerability discovery", "apple ii", "automated vulnerability detection", "blogs", "claude opus 4dot6", "defensive security", "embedded systems", "firmware security", "legacy code security", "machine code analysis", "mark russinovich", "microsoft azure", "security", "security auditing", "static analysis", "vulnerability scanning"]
+tags:
+- AI
+- AI in Cybersecurity
+- AI Vulnerability Discovery
+- Apple II
+- Automated Vulnerability Detection
+- Blogs
+- Claude Opus 4.6
+- Defensive Security
+- Embedded Systems
+- Firmware Security
+- Legacy Code Security
+- Machine Code Analysis
+- Mark Russinovich
+- Microsoft Azure
+- Security
+- Security Auditing
+- Static Analysis
+- Vulnerability Scanning
+section_names:
+- ai
+- security
 ---
-
 DevClass.com reports on how Microsoft Azure CTO Mark Russinovich used Anthropic’s Claude Opus 4.6 AI model to scan 1986 Apple II machine code, finding security vulnerabilities and raising important points about AI’s expanding role in legacy code security.<!--excerpt_end-->
 
 # Microsoft Azure CTO Uses AI to Discover Vulnerabilities in Legacy Apple II Code

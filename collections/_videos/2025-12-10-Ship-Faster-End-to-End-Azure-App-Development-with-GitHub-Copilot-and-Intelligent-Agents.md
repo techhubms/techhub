@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Ship Faster: End-to-End Azure App Development with GitHub Copilot and Intelligent Agents"
-description: "This video explores the integration of GitHub Copilot, intelligent coding agents, and Azure services to streamline application development from planning through operations. It demonstrates how specialized agents like Coding Agent, App Modernization Agent, SRE Agent, and Testing Agent accelerate software lifecycle stages, and covers GitHub Copilot for Azure, MCP Server, and automation for deployment and diagnostics in a DevOps context."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=fPSHFYyN-Do"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=fPSHFYyN-Do
+title: 'Ship Faster: End-to-End Azure App Development with GitHub Copilot and Intelligent Agents'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-12-10 22:07:54 +00:00
-permalink: "/2025-12-10-Ship-Faster-End-to-End-Azure-App-Development-with-GitHub-Copilot-and-Intelligent-Agents.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "App Modernization", "Automation", "Azure", "Cloud Architecture", "Cloud Computing", "Coding", "Deployment", "Dev", "Developer", "Development", "DevOps", "Diagnostics", "GitHub Copilot", "MCP Server", "Microsoft", "Planning", "Quality Assurance", "Software Development", "SRE Agent", "Tech", "Technology", "Testing Agent", "Videos"]
-tags_normalized: ["ai", "ai agents", "app modernization", "automation", "azure", "cloud architecture", "cloud computing", "coding", "deployment", "dev", "developer", "development", "devops", "diagnostics", "github copilot", "mcp server", "microsoft", "planning", "quality assurance", "software development", "sre agent", "tech", "technology", "testing agent", "videos"]
+tags:
+- AI Agents
+- App Modernization
+- Automation
+- Cloud Architecture
+- Cloud Computing
+- Deployment
+- Dev
+- Developer
+- Development
+- Diagnostics
+- MCP Server
+- Microsoft
+- Planning
+- Quality Assurance
+- Software Development
+- SRE Agent
+- Tech
+- Technology
+- Testing Agent
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Microsoft Developer presents a session on leveraging GitHub Copilot and intelligent agents to streamline Azure application development and operations. The talk demonstrates practical integration of AI-powered assistants across the DevOps lifecycle.<!--excerpt_end-->
 
 {% youtube fPSHFYyN-Do %}

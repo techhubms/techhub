@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Get started with GitHub Copilot CLI: A free, hands-on course"
-description: "This guide introduces a comprehensive, free 8-chapter course that helps developers learn to use GitHub Copilot CLI in terminal workflows. It covers reviewing code, generating tests, debugging, building custom agents and skills, and integrating AI into development cycles—all with no prior AI experience required."
-author: "Dan Wahlin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course
+title: 'Get started with GitHub Copilot CLI: A free, hands-on course'
+author: Dan Wahlin
+primary_section: github-copilot
+feed_name: Microsoft Blog
 date: 2026-03-03 20:40:42 +00:00
-permalink: "/2026-03-03-Get-started-with-GitHub-Copilot-CLI-A-free-hands-on-course.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Skills", "Code Review", "Coding", "Custom Agents", "Debugging", "Developer Productivity", "DevOps Tools", "GitHub", "GitHub Copilot", "GitHub Copilot CLI", "Interactive CLI", "MCP", "News", "Open Source Course", "Python", "Terminal Workflows", "Test Generation", "Uncategorized", "Workflow Automation"]
-tags_normalized: ["ai", "ai skills", "code review", "coding", "custom agents", "debugging", "developer productivity", "devops tools", "github", "github copilot", "github copilot cli", "interactive cli", "mcp", "news", "open source course", "python", "terminal workflows", "test generation", "uncategorized", "workflow automation"]
+tags:
+- AI
+- AI Skills
+- Code Review
+- Custom Agents
+- Debugging
+- Developer Productivity
+- DevOps Tools
+- GitHub
+- GitHub Copilot
+- GitHub Copilot CLI
+- Interactive CLI
+- MCP
+- News
+- Open Source Course
+- Python
+- Terminal Workflows
+- Test Generation
+- Uncategorized
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Dan Wahlin presents a practical, beginner-friendly course on GitHub Copilot CLI, guiding developers through hands-on use in the terminal for tasks like code review, debugging, and workflow automation.<!--excerpt_end-->
 
 # Get started with GitHub Copilot CLI: A free, hands-on course

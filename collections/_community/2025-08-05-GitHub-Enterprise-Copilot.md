@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Enterprise + Copilot"
-description: "SalishSeaview shares early experiences using GitHub Enterprise paired with Copilot for a consulting firm. The article discusses subscription costs, initial use of Codespaces with Copilot, and generous CI/CD pipeline minutes. It also mentions plans to automate deployments and offers a cost-value perspective for small team environments."
-author: "SalishSeaview"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mhv5fq/github_enterprise_copilot/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhv5fq/github_enterprise_copilot/
+title: GitHub Enterprise + Copilot
+author: SalishSeaview
+feed_name: Reddit Github Copilot
 date: 2025-08-05 00:50:53 +00:00
-permalink: "/2025-08-05-GitHub-Enterprise-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "CI/CD Pipelines", "Codespaces", "Community", "Consulting Firm", "Deployment", "DevOps", "Digital Ocean", "GitHub Copilot", "GitHub Enterprise", "Pipeline Minutes", "Subscription Cost"]
-tags_normalized: ["ai", "automation", "cislashcd pipelines", "codespaces", "community", "consulting firm", "deployment", "devops", "digital ocean", "github copilot", "github enterprise", "pipeline minutes", "subscription cost"]
+tags:
+- Automation
+- CI/CD Pipelines
+- Codespaces
+- Consulting Firm
+- Deployment
+- Digital Ocean
+- GitHub Enterprise
+- Pipeline Minutes
+- Subscription Cost
+- AI
+- DevOps
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this post, SalishSeaview outlines their experience setting up GitHub Enterprise with Copilot for a consulting firm, touching on pricing, Codespaces, and CI/CD pipelines.<!--excerpt_end-->
 
 ## GitHub Enterprise + Copilot: First-Impressions and Observations

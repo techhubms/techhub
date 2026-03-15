@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Getting Started with Behave: Writing Cucumber Tests in VS Code"
-description: "This guide demonstrates how to set up and use Behave, a behavior-driven development (BDD) test framework for Python, within Visual Studio Code. You'll learn about folder structure, environment setup, configuration, and writing your first feature and step definitions, all while leveraging popular Microsoft tooling."
-author: "sabappal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/getting-started-with-behave-writing-cucumber-tests-in-vs-code/ba-p/4496865"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/getting-started-with-behave-writing-cucumber-tests-in-vs-code/ba-p/4496865
+title: 'Getting Started with Behave: Writing Cucumber Tests in VS Code'
+author: sabappal
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-03-10 07:00:00 +00:00
-permalink: "/2026-03-10-Getting-Started-with-Behave-Writing-Cucumber-Tests-in-VS-Code.html"
-categories: ["Coding"]
-tags: ["Behave", "CI/CD Integration", "Coding", "Community", "Configuration", "Cucumber", "Dev Testing", "Feature Files", "Gherkin", "Microsoft", "Python", "Step Definitions", "Test Automation", "Test Fixtures", "VS Code", "VS Code Extensions"]
-tags_normalized: ["behave", "cislashcd integration", "coding", "community", "configuration", "cucumber", "dev testing", "feature files", "gherkin", "microsoft", "python", "step definitions", "test automation", "test fixtures", "vs code", "vs code extensions"]
+tags:
+- Behave
+- CI/CD Integration
+- Community
+- Configuration
+- Cucumber
+- Dev Testing
+- Feature Files
+- Gherkin
+- Microsoft
+- Python
+- Step Definitions
+- Test Automation
+- Test Fixtures
+- VS Code
+- VS Code Extensions
+- .NET
+section_names:
+- dotnet
 ---
-
 sabappal's tutorial walks you through setting up Behave with Visual Studio Code, illustrating best practices for structuring, configuring, and automating BDD tests with Python.<!--excerpt_end-->
 
 # Getting Started with Behave: Writing Cucumber Tests in VS Code

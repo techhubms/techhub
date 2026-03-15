@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Chatting with Microsoft Foundry AI Models Using Python in VS Code"
-description: "This video demonstrates how to interact with Microsoft Foundry models directly from Python, using Visual Studio Code. Viewers learn how to set up their development environment, deploy Foundry models, and utilize provided sample code to chat with deployed models. Essential links to tutorials, sample code, and community resources are included, making it easy for developers to follow along and start building their own AI-powered applications with Azure AI Foundry services."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ix0kJMVI0tk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=ix0kJMVI0tk
+title: Chatting with Microsoft Foundry AI Models Using Python in VS Code
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-11-19 23:05:59 +00:00
-permalink: "/2025-11-19-Chatting-with-Microsoft-Foundry-AI-Models-Using-Python-in-VS-Code.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Integration", "Azure", "Azure AI", "Azure AI Foundry", "Cloud AI", "Cloud Computing", "Coding", "Dev", "Development", "Development Tutorial", "Machine Learning", "Microsoft", "Microsoft Foundry", "Model Chat", "Model Deployment", "Python", "Sample Code", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai integration", "azure", "azure ai", "azure ai foundry", "cloud ai", "cloud computing", "coding", "dev", "development", "development tutorial", "machine learning", "microsoft", "microsoft foundry", "model chat", "model deployment", "python", "sample code", "tech", "technology", "videos", "vs code"]
+tags:
+- AI Integration
+- Azure AI
+- Azure AI Foundry
+- Cloud AI
+- Cloud Computing
+- Dev
+- Development
+- Development Tutorial
+- ML
+- Microsoft
+- Microsoft Foundry
+- Model Chat
+- Model Deployment
+- Python
+- Sample Code
+- Tech
+- Technology
+- VS Code
+- AI
+- Azure
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Microsoft Developer walks through the process of using Python in Visual Studio Code to chat with Microsoft Foundry models, showing setup, deployment, and code integration in this practical video guide.<!--excerpt_end-->
 
 {% youtube ix0kJMVI0tk %}

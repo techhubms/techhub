@@ -1,0 +1,201 @@
+@page "/"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@inject IJSRuntime JS
+@implements IDisposable
+
+<PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
+
+<main class="page-with-sidebar">
+    @* Sidebar (Left Column) *@
+    <aside class="sidebar">
+        <SidebarToggle />
+        <MobileSidebarToolbar>
+        @* Latest Roundup - always visible, including on mobile *@
+        @if (latestRoundup != null)
+        {
+            <div class="sidebar-section latest-roundup">
+                <h2 class="sidebar-h2">Latest Roundup</h2>
+                <a href="@latestRoundup.GetHref()"
+                   class="sidebar-featured-link"
+                   target="@latestRoundup.GetTarget()"
+                   rel="@latestRoundup.GetRel()"
+                   aria-label="@latestRoundup.GetAriaLabel()">
+                    <span class="sidebar-featured-title">@latestRoundup.Title</span>
+                    <span class="sidebar-featured-date">@FormatDateShort(latestRoundup.DateEpoch)</span>
+                </a>
+            </div>
+        }
+
+        <MobileSidebarPanel Label="Latest" Icon="latest">
+        @* Latest Items *@
+        @if (latestItems != null && latestItems.Any())
+        {
+            <div class="sidebar-section latest-items">
+                <h2 class="sidebar-h2">Latest Content</h2>
+                <ul class="sidebar-list">
+                    @foreach (var item in latestItems)
+                    {
+                        <li>
+                            <a href="@item.GetHref()"
+                                class="sidebar-content-button"
+                                target="@item.GetTarget()"
+                                rel="@item.GetRel()"
+                                aria-label="@item.GetAriaLabel()">
+                                <span class="sidebar-content-button-title">@item.Title</span>
+                                <span class="sidebar-content-button-meta">
+                                    <span class="sidebar-item-section">@GetItemSectionTitle(item.PrimarySectionName)</span>
+                                    <span class="sidebar-content-button-meta-separator">•</span>
+                                    <span
+                                        class="sidebar-item-collection">@GetItemCollectionTitle(item.CollectionName)</span>
+                                    <span class="sidebar-content-button-meta-separator">•</span>
+                                    <span class="sidebar-item-date">@FormatDateShort(item.DateEpoch)</span>
+                                </span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+        </MobileSidebarPanel>
+
+        @* Popular Tags - Navigate to /all with tag filter *@
+        <MobileSidebarPanel Label="Tags" Icon="tags">
+        <SidebarTagCloud Title="Popular Tags"
+            NavigationMode="TagCloudNavigationMode.Navigate" NavigationBaseUrl="/all" />
+        </MobileSidebarPanel>
+        </MobileSidebarToolbar>
+        <div class="sidebar-desktop-only">
+        <SidebarRssLinks Links="@rssLinks" />
+        </div>
+    </aside>
+
+    <section class="home-main-content">
+        @if (sections != null && sections.Any())
+        {
+            <SectionCardsGrid Sections="@sections" />
+        }
+        else
+        {
+            <div class="no-content">
+                <p>No sections available.</p>
+            </div>
+        }
+    </section>
+</main>
+
+@code {
+    [Inject] public required TechHubApiClient ApiClient { get; set; }
+    [Inject] public required NavigationManager Navigation { get; set; }
+    [Inject] public required ErrorService ErrorService { get; set; }
+    [Inject] public required ILogger<Home> Logger { get; set; }
+    [Inject] public required PersistentComponentState ApplicationState { get; set; }
+
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private static readonly SidebarRssLinks.RssLink[] rssLinks = [
+    new("RSS Feed - All Content", "/all/feed.xml"),
+new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
+new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
+    ];
+
+    private IEnumerable<TechHub.Core.Models.Section>? sections;
+    private TechHub.Core.Models.ContentItem? latestRoundup;
+    private IEnumerable<TechHub.Core.Models.ContentItem>? latestItems;
+
+    private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
+            fill="currentColor" aria-hidden="true">
+            <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+    </svg>;
+
+    private string GetItemSectionTitle(string sectionName)
+    {
+        var section = sections?.FirstOrDefault(s => s.Name.Equals(sectionName, StringComparison.OrdinalIgnoreCase));
+        return section?.Title ?? sectionName;
+    }
+
+    private string GetItemCollectionTitle(string collectionName)
+    {
+        // Search all sections for the collection
+        foreach (var section in sections ?? Enumerable.Empty<TechHub.Core.Models.Section>())
+        {
+            var collection = section.Collections.FirstOrDefault(c => 
+                c.Name.Equals(collectionName, StringComparison.OrdinalIgnoreCase));
+            if (collection != null)
+            {
+                return collection.DisplayName ?? collection.Title;
+            }
+        }
+        // Fallback to title case
+        return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (sections != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initCustomPages");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+protected override async Task OnInitializedAsync()
+{
+    _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+    if (ApplicationState.TryTakeFromJson<PersistedHomeData>("home-data", out var restored) && restored != null)
+    {
+        sections = restored.Sections;
+        latestRoundup = restored.LatestRoundup;
+        latestItems = restored.LatestItems;
+        return;
+    }
+
+try
+{
+// Fetch all content in parallel - using database-optimized endpoints
+var sectionsTask = ApiClient.GetAllSectionsAsync();
+var roundupTask = ApiClient.GetLatestRoundupAsync(); // Uses SearchAsync with Take=1
+var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5); // Uses SearchAsync with Take=5
+
+await Task.WhenAll(sectionsTask, roundupTask, latestItemsTask);
+
+sections = await sectionsTask;
+latestRoundup = await roundupTask;
+latestItems = await latestItemsTask;
+}
+catch (Exception ex)
+{
+ErrorService.HandleError(ex, Navigation, Logger);
+}
+}
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("home-data", new PersistedHomeData
+        {
+            Sections = sections?.ToList(),
+            LatestRoundup = latestRoundup,
+            LatestItems = latestItems?.ToList()
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedHomeData
+    {
+        public List<TechHub.Core.Models.Section>? Sections { get; set; }
+        public TechHub.Core.Models.ContentItem? LatestRoundup { get; set; }
+        public List<TechHub.Core.Models.ContentItem>? LatestItems { get; set; }
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private static string FormatDateShort(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("MMM dd, yyyy");
+}

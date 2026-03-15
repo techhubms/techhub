@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future"
-description: "This insightful conversation features David Fowler, architect of .NET Aspire, sharing the framework’s technical vision, design decisions, community feedback, and stories from development. It delves into how .NET Aspire simplifies cloud-native app orchestration, its philosophy, and where the platform is headed, giving actionable context for current and prospective users."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dJdXdRiIfDw"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=dJdXdRiIfDw
+title: 'Aspire Unplugged: David Fowler Discusses .NET Aspire’s Vision and Future'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-13 17:40:50 +00:00
-permalink: "/2025-11-13-Aspire-Unplugged-David-Fowler-Discusses-NET-Aspires-Vision-and-Future.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", ".NET 10", ".NET Aspire", "App Orchestration", "ASP.NET Core", "Azure", "C# 14", "Cloud Native Development", "Coding", "Community Q&A", "David Fowler", "Development Process", "F# 10", "Framework Architecture", "MAUI", "Microsoft Azure", "Modern Web Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "app orchestration", "aspdotnet core", "azure", "csharp 14", "cloud native development", "coding", "community qanda", "david fowler", "development process", "fsharp 10", "framework architecture", "maui", "microsoft azure", "modern web development", "videos", "vs"]
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- App Orchestration
+- ASP.NET Core
+- C# 14
+- Cloud Native Development
+- Community Q&A
+- David Fowler
+- Development Process
+- F# 10
+- Framework Architecture
+- MAUI
+- Microsoft Azure
+- Modern Web Development
+- VS
+- Azure
+- Videos
+section_names:
+- azure
+- dotnet
+primary_section: dotnet
 ---
-
 In this session, David Fowler and Maddy present a deep dive into .NET Aspire. The discussion provides technical and architectural insights, giving developers practical understanding and advice directly from Aspire’s creator.<!--excerpt_end-->
 
 {% youtube dJdXdRiIfDw %}

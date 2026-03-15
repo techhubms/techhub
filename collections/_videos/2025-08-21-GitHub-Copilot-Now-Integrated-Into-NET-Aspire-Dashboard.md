@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "GitHub Copilot Now Integrated Into .NET Aspire Dashboard"
-description: "This video, featuring Maddy Montaquila from Microsoft Developer, highlights the new integration of GitHub Copilot into the .NET Aspire 9.3 dashboard. Developers can now chat with Copilot about their running applications, investigate logs, trace errors, and identify root causes directly within the Aspire environment."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FseIFFXGbvw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=FseIFFXGbvw
+title: GitHub Copilot Now Integrated Into .NET Aspire Dashboard
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-08-21 20:04:57 +00:00
-permalink: "/2025-08-21-GitHub-Copilot-Now-Integrated-Into-NET-Aspire-Dashboard.html"
-categories: ["AI", "GitHub Copilot"]
-tags: [".NET Aspire", "AI", "Application Logs", "Copilot Integration", "Dashboard", "Dev Productivity", "Developer Tools", "Error Tracing", "GitHub Copilot", "Microsoft", "OneDevQuestion", "Root Cause Analysis", "Videos"]
-tags_normalized: ["dotnet aspire", "ai", "application logs", "copilot integration", "dashboard", "dev productivity", "developer tools", "error tracing", "github copilot", "microsoft", "onedevquestion", "root cause analysis", "videos"]
+tags:
+- .NET Aspire
+- Application Logs
+- Copilot Integration
+- Dashboard
+- Dev Productivity
+- Developer Tools
+- Error Tracing
+- Microsoft
+- OneDevQuestion
+- Root Cause Analysis
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this Microsoft Developer video, Maddy Montaquila demonstrates how GitHub Copilot is now built into the .NET Aspire dashboard, enabling developers to troubleshoot and analyze applications more efficiently.<!--excerpt_end-->
 
 {% youtube FseIFFXGbvw %}

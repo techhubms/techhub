@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Drive Innovation with AI, Hybrid Cloud, and Azure Storage Solutions"
-description: "This session from Microsoft Ignite 2025 highlights how Dell Technologies and Microsoft collaborate to harness AI for transforming hybrid cloud environments. Topics include Dell AI Factory, Copilot+ in Dell AI PCs, PowerScale for Azure, and private cloud innovation using Azure Local, focusing on enterprise-grade storage, migration strategies, and future scalability."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bJ7Hsg8hxwM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=bJ7Hsg8hxwM
+title: Drive Innovation with AI, Hybrid Cloud, and Azure Storage Solutions
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 14:33:12 +00:00
-permalink: "/2025-11-24-Drive-Innovation-with-AI-Hybrid-Cloud-and-Azure-Storage-Solutions.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Factory", "Azure", "Azure Local", "Azure Storage", "Cloud Infrastructure", "Copilot+", "Dell Technologies", "Disaggregated Storage", "Enterprise Cloud", "Hybrid Cloud", "Microsoft Ignite", "Migration", "MSIgnite", "PowerScale", "PowerStore", "Reliability", "Scalability", "Videos", "Workflow Automation"]
-tags_normalized: ["ai", "ai factory", "azure", "azure local", "azure storage", "cloud infrastructure", "copilotplus", "dell technologies", "disaggregated storage", "enterprise cloud", "hybrid cloud", "microsoft ignite", "migration", "msignite", "powerscale", "powerstore", "reliability", "scalability", "videos", "workflow automation"]
+tags:
+- AI Factory
+- Azure Local
+- Azure Storage
+- Cloud Infrastructure
+- Copilot+
+- Dell Technologies
+- Disaggregated Storage
+- Enterprise Cloud
+- Hybrid Cloud
+- Microsoft Ignite
+- Migration
+- MSIgnite
+- PowerScale
+- PowerStore
+- Reliability
+- Scalability
+- Workflow Automation
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Events presents innovation in hybrid cloud and AI, featuring Dell Technologies integration with Azure services, migration strategies, and enterprise-grade solutions for IT professionals.<!--excerpt_end-->
 
 {% youtube bJ7Hsg8hxwM %}

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Decision Records: Understanding Why Those Decisions Were Made in .NET"
-description: "This resource explores the practice of using Decision Records in .NET development. It discusses how documenting architectural and design choices—such as authentication with ASP.NET Identity, service discovery in .NET Aspire, and UI strategies in Blazor—can lead to more maintainable, auditable, and comprehensible applications. The content references new features in .NET 10, ASP.NET Core 10, MAUI 10, C# 14, F# 10, and highlights the tools and conferences supporting the contemporary .NET ecosystem."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=eHqBZOrx6ZI"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=eHqBZOrx6ZI
+title: 'Decision Records: Understanding Why Those Decisions Were Made in .NET'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-14 19:20:58 +00:00
-permalink: "/2025-11-14-Decision-Records-Understanding-Why-Those-Decisions-Were-Made-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Aspire", ".NET Conf", "Architecture", "ASP.NET Identity", "Authentication", "Blazor", "C# 14", "Coding", "Decision Records", "Documentation", "Dynamic UI", "F# 10", "Maintainability", "MAUI", "Service Discovery", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet aspire", "dotnet conf", "architecture", "aspdotnet identity", "authentication", "blazor", "csharp 14", "coding", "decision records", "documentation", "dynamic ui", "fsharp 10", "maintainability", "maui", "service discovery", "videos", "vs"]
+tags:
+- .NET
+- .NET Aspire
+- .NET Conf
+- Architecture
+- ASP.NET Identity
+- Authentication
+- Blazor
+- C# 14
+- Decision Records
+- Documentation
+- Dynamic UI
+- F# 10
+- Maintainability
+- MAUI
+- Service Discovery
+- VS
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 This presentation by dotnet introduces the concept of Decision Records in .NET, showing developers how tracking architectural decisions enhances code understanding and maintainability.<!--excerpt_end-->
 
 {% youtube eHqBZOrx6ZI %}
@@ -51,12 +62,12 @@ Developers often face complex .NET systems and wonder why a particular design or
 
 ## Community & Further Learning
 
-- Official Blog: https://aka.ms/dotnet/blog
+- Official Blog: <https://aka.ms/dotnet/blog>
 - Social: [Twitter](https://aka.ms/dotnet/twitter) | [TikTok](https://aka.ms/dotnet/tiktok) | [Mastodon](https://aka.ms/dotnet/mastodon) | [LinkedIn](https://aka.ms/dotnet/linkedin) | [Facebook](https://aka.ms/dotnet/facebook)
-- Documentation: https://learn.microsoft.com/dotnet
-- Q&A: https://aka.ms/dotnet-qa
-- Forums: https://aka.ms/dotnet/forums
-- Microsoft Learn: https://aka.ms/learndotnet
+- Documentation: <https://learn.microsoft.com/dotnet>
+- Q&A: <https://aka.ms/dotnet-qa>
+- Forums: <https://aka.ms/dotnet/forums>
+- Microsoft Learn: <https://aka.ms/learndotnet>
 
 ## Conclusion
 

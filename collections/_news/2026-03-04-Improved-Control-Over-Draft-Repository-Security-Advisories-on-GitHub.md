@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Improved Control Over Draft Repository Security Advisories on GitHub"
-description: "This news update details a new GitHub feature that allows repository administrators to lock or unlock draft security advisories and private vulnerability reports. The enhancement prevents collaborators from editing draft advisory content or metadata and enhances control over the security advisory workflow, supporting secure and reliable vulnerability management."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-04-lock-and-unlock-draft-repository-security-advisories"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-04-lock-and-unlock-draft-repository-security-advisories
+title: Improved Control Over Draft Repository Security Advisories on GitHub
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-04 21:45:08 +00:00
-permalink: "/2026-03-04-Improved-Control-Over-Draft-Repository-Security-Advisories-on-GitHub.html"
-categories: ["DevOps", "Security"]
-tags: ["DevOps", "Draft Advisories", "GitHub", "GitHub Features", "Improvement", "News", "Private Vulnerability Reports", "Repository Administration", "Secure Development", "Security", "Security Advisories", "Supply Chain Security", "Triage", "Vulnerability Management", "Workflow Control"]
-tags_normalized: ["devops", "draft advisories", "github", "github features", "improvement", "news", "private vulnerability reports", "repository administration", "secure development", "security", "security advisories", "supply chain security", "triage", "vulnerability management", "workflow control"]
+tags:
+- DevOps
+- Draft Advisories
+- GitHub
+- GitHub Features
+- Improvement
+- News
+- Private Vulnerability Reports
+- Repository Administration
+- Secure Development
+- Security
+- Security Advisories
+- Supply Chain Security
+- Triage
+- Vulnerability Management
+- Workflow Control
+section_names:
+- devops
+- security
 ---
-
 Allison highlights a GitHub update enabling repository administrators to lock or unlock draft security advisories, restricting editing to admins and strengthening vulnerability management workflows.<!--excerpt_end-->
 
 # Improved Control Over Draft Repository Security Advisories on GitHub

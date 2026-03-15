@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "GitHub Enterprise Importer Incident and IP Range Update: July 2025 Availability Report"
-description: "A detailed incident report outlining the July 2025 service degradation for GitHub Enterprise Importer (GEI), the root cause analysis, recovery steps, infrastructure improvements, and the new required IP ranges for migrations, including Azure DevOps and Azure Storage integration details."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-july-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/company-news/github-availability-report-july-2025/
+title: 'GitHub Enterprise Importer Incident and IP Range Update: July 2025 Availability Report'
+author: Jakub Oleksy
+feed_name: The GitHub Blog
 date: 2025-08-13 21:00:00 +00:00
-permalink: "/2025-08-13-GitHub-Enterprise-Importer-Incident-and-IP-Range-Update-July-2025-Availability-Report.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Availability Report", "AWS S3", "Azure", "Azure Blob Storage", "Azure DevOps", "Bitbucket", "Change Management", "Cloud Storage", "Company News", "DevOps", "GitHub Availability Report", "GitHub Enterprise Importer", "Incident Response", "Infrastructure Recovery", "IP Allow List", "Migration", "Network Security", "News", "News & Insights", "Security", "Service Incident", "Unit Testing", "Validation"]
-tags_normalized: ["availability report", "aws s3", "azure", "azure blob storage", "azure devops", "bitbucket", "change management", "cloud storage", "company news", "devops", "github availability report", "github enterprise importer", "incident response", "infrastructure recovery", "ip allow list", "migration", "network security", "news", "news and insights", "security", "service incident", "unit testing", "validation"]
+tags:
+- Availability Report
+- AWS S3
+- Azure Blob Storage
+- Azure DevOps
+- Bitbucket
+- Change Management
+- Cloud Storage
+- Company News
+- GitHub Availability Report
+- GitHub Enterprise Importer
+- Incident Response
+- Infrastructure Recovery
+- IP Allow List
+- Migration
+- Network Security
+- News & Insights
+- Service Incident
+- Unit Testing
+- Validation
+- Azure
+- DevOps
+- Security
+- News
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Jakub Oleksy reports on the July 2025 service disruption affecting GitHub Enterprise Importer, focusing on incident details, infrastructure changes, updated IP allow list requirements for Azure and other cloud migrations, and security considerations.<!--excerpt_end-->
 
 # GitHub Enterprise Importer Incident and IP Range Update: July 2025 Availability Report

@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "Data-driven Farming and AI Transforming Water Management in Chile"
-description: "This news article highlights the role of AI and data-driven technologies in revolutionizing water management practices within Chile’s farming sector. It showcases examples where artificial intelligence, possibly backed by Microsoft solutions, enables more efficient irrigation and crop management through advanced analytics and automation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile/?lang=en"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/latam/features/ai/data-driven-farming-chile/?lang=en
+title: Data-driven Farming and AI Transforming Water Management in Chile
+author: stclarke
+feed_name: Microsoft News
 date: 2025-12-09 14:10:47 +00:00
-permalink: "/2025-12-09-Data-driven-Farming-and-AI-Transforming-Water-Management-in-Chile.html"
-categories: ["AI"]
-tags: ["Agriculture Technology", "AI", "Analytics", "Automation", "Chile", "Data Driven Farming", "Irrigation", "Microsoft", "News", "Sustainable Agriculture", "Water Management"]
-tags_normalized: ["agriculture technology", "ai", "analytics", "automation", "chile", "data driven farming", "irrigation", "microsoft", "news", "sustainable agriculture", "water management"]
+tags:
+- Agriculture Technology
+- Analytics
+- Automation
+- Chile
+- Data Driven Farming
+- Irrigation
+- Microsoft
+- Sustainable Agriculture
+- Water Management
+- AI
+- News
+section_names:
+- ai
+primary_section: ai
 ---
-
 stclarke covers how Juan Montes reports on the impact of AI and data-driven techniques in improving water management across Chile’s farms, focusing on technological innovations enabling smarter agriculture.<!--excerpt_end-->
 
 # Data-driven Farming and AI Transforming Water Management in Chile

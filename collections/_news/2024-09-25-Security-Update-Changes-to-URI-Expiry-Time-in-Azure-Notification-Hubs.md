@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Security Update: Changes to URI Expiry Time in Azure Notification Hubs"
-description: "Azure Notification Hubs will reduce the expiry time of PnsErrorDetailsUri from 10 days to 5 days starting October 2024, enhancing security. API consumers should update integrations accordingly. Other URI expiry configurations remain unchanged."
-author: "Sreehari R"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-notification-hubs/security-update-changes-to-uri-expiry-time-in-azure-notification-hubs/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-notification-hubs/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-notification-hubs/security-update-changes-to-uri-expiry-time-in-azure-notification-hubs/
+title: 'Security Update: Changes to URI Expiry Time in Azure Notification Hubs'
+author: Sreehari R
+feed_name: Microsoft DevBlog
 date: 2024-09-25 09:35:26 +00:00
-permalink: "/2024-09-25-Security-Update-Changes-to-URI-Expiry-Time-in-Azure-Notification-Hubs.html"
-categories: ["Azure", "Security"]
-tags: ["API Changes", "Azure", "Azure Notification Hubs", "Backward Compatibility", "Get Notification Message Telemetry API", "News", "Notification Hubs", "Platform Notification Services Feedback", "PnsErrorDetailsUri", "Push Notifications", "Security", "Security Update", "URI Expiry"]
-tags_normalized: ["api changes", "azure", "azure notification hubs", "backward compatibility", "get notification message telemetry api", "news", "notification hubs", "platform notification services feedback", "pnserrordetailsuri", "push notifications", "security", "security update", "uri expiry"]
+tags:
+- API Changes
+- Azure Notification Hubs
+- Backward Compatibility
+- Get Notification Message Telemetry API
+- Notification Hubs
+- Platform Notification Services Feedback
+- PnsErrorDetailsUri
+- Push Notifications
+- Security Update
+- URI Expiry
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Authored by Sreehari R, this update details upcoming changes to Azure Notification Hubs' URI expiry policy, focusing on improved security and guidance for users.<!--excerpt_end-->
 
 ## Security Update: Changes to URI Expiry Time in Azure Notification Hubs

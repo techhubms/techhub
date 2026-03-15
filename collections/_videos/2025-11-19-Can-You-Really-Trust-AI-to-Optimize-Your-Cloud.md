@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Can You Really Trust AI to Optimize Your Cloud?"
-description: "This session from Microsoft Ignite 2025, led by Sedai CEO Suresh Mathew, explores the role of AI in cloud operations for enterprise environments. Topics include autonomous systems, causes of inaccuracy in automation, reliability improvements via AI, and the critical benefits and risks of entrusting cloud optimization to intelligent automation. The presentation discusses rightsizing resources, availability management, productivity boosts for engineers, and the concept of fully autonomous execution ('Autopilot') using AI-powered platforms."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=XY4na9h5dEY"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=XY4na9h5dEY
+title: Can You Really Trust AI to Optimize Your Cloud?
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:34:17 +00:00
-permalink: "/2025-11-19-Can-You-Really-Trust-AI-to-Optimize-Your-Cloud.html"
-categories: ["AI"]
-tags: ["Agentic Business Applications", "Agenticbusinessapplications", "AI", "AI Automation", "AI Reliability", "Autonomous Systems", "Autopilot", "Availability Management", "Cloud Operations", "Cloud Optimization", "Engineering Leadership", "Enterprise Cloud", "Intelligent Automation", "Microsoft Ignite", "MSIgnite", "Productivity", "Rightsizing", "Session ODSP1433", "Suresh Mathew", "Videos"]
-tags_normalized: ["agentic business applications", "agenticbusinessapplications", "ai", "ai automation", "ai reliability", "autonomous systems", "autopilot", "availability management", "cloud operations", "cloud optimization", "engineering leadership", "enterprise cloud", "intelligent automation", "microsoft ignite", "msignite", "productivity", "rightsizing", "session odsp1433", "suresh mathew", "videos"]
+tags:
+- Agentic Business Applications
+- Agenticbusinessapplications
+- AI Automation
+- AI Reliability
+- Autonomous Systems
+- Autopilot
+- Availability Management
+- Cloud Operations
+- Cloud Optimization
+- Engineering Leadership
+- Enterprise Cloud
+- Intelligent Automation
+- Microsoft Ignite
+- MSIgnite
+- Productivity
+- Rightsizing
+- Session ODSP1433
+- Suresh Mathew
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 Microsoft Events presents CEO Suresh Mathew discussing the benefits and risks of leveraging AI to automate enterprise cloud operations at Microsoft Ignite 2025.<!--excerpt_end-->
 
 {% youtube XY4na9h5dEY %}
@@ -32,30 +46,30 @@ Operating hundreds of services in an enterprise cloud is costly and labor-intens
 ## Key Topics
 
 - **The Case for AI in Cloud Optimization**
-    - Examines why AI-guided automation is increasingly seen as the safest and most efficient method for optimizing cloud operations.
+  - Examines why AI-guided automation is increasingly seen as the safest and most efficient method for optimizing cloud operations.
 - **Definition of Autonomous Systems**
-    - Clarifies what intelligent automation entails in large-scale environments.
+  - Clarifies what intelligent automation entails in large-scale environments.
 - **Accuracy Challenges**
-    - Highlights common causes of automation errors, including erroneous metrics and missing data spikes.
+  - Highlights common causes of automation errors, including erroneous metrics and missing data spikes.
 - **AI’s Role in Reliability**
-    - Details how AI strengthens automation reliability.
+  - Details how AI strengthens automation reliability.
 - **Protecting Engineers and Improving Productivity**
-    - Discusses how AI can safeguard engineering resources and free up time for critical work.
+  - Discusses how AI can safeguard engineering resources and free up time for critical work.
 - **AI ‘Autopilot’ Capabilities**
-    - Explores fully autonomous execution, removing the need for manual intervention.
+  - Explores fully autonomous execution, removing the need for manual intervention.
 - **Unified Command Center**
-    - Reviews the concept of an AI-driven, consolidated dashboard for cloud optimization and oversight.
+  - Reviews the concept of an AI-driven, consolidated dashboard for cloud optimization and oversight.
 
 ## Benefits and Risks
 
 - **Benefits**
-    - Cost savings through automated rightsizing
-    - Enhanced availability management
-    - Unified control and visibility of services
-    - Reduced manual workload for operations teams
+  - Cost savings through automated rightsizing
+  - Enhanced availability management
+  - Unified control and visibility of services
+  - Reduced manual workload for operations teams
 - **Risks**
-    - Reliability issues stemming from inaccurate data or misconfigured metrics
-    - Potential operational failures if AI automation is not properly managed
+  - Reliability issues stemming from inaccurate data or misconfigured metrics
+  - Potential operational failures if AI automation is not properly managed
 
 ## Conclusion
 

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Building a Website-Aware Chatbot with the .NET AI Chat Web App Template"
-description: "Andrew Lock demonstrates customizing the .NET AI Chat Web App template to ingest website content and create a chatbot that can answer questions with citations. The post outlines implementing a new ingestion source, handling website parsing, and optimizing data ingestion for practical chat applications."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/using-the-new-ai-template-to-create-a-chatbot-about-a-website/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/using-the-new-ai-template-to-create-a-chatbot-about-a-website/
+title: Building a Website-Aware Chatbot with the .NET AI Chat Web App Template
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-05-13 09:00:00 +00:00
-permalink: "/2025-05-13-Building-a-Website-Aware-Chatbot-with-the-NET-AI-Chat-Web-App-Template.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET Core", "AI", "AngleSharp", "ASP.NET Core", "Aspire", "Blogs", "Chatbot", "Cite Answers", "Coding", "IIngestionSource", "LLM", "Microsoft.Extensions.AI.Templates", "OpenAI", "Retrieval Augmented Generation", "Semantic Kernel", "Textify", "Vector Embeddings", "Web Scraping"]
-tags_normalized: ["dotnet", "dotnet core", "ai", "anglesharp", "aspdotnet core", "aspire", "blogs", "chatbot", "cite answers", "coding", "iingestionsource", "llm", "microsoftdotextensionsdotaidottemplates", "openai", "retrieval augmented generation", "semantic kernel", "textify", "vector embeddings", "web scraping"]
+tags:
+- .NET
+- .NET Core
+- AngleSharp
+- ASP.NET Core
+- Aspire
+- Chatbot
+- Cite Answers
+- IIngestionSource
+- LLM
+- Microsoft.Extensions.AI.Templates
+- OpenAI
+- Retrieval Augmented Generation
+- Semantic Kernel
+- Textify
+- Vector Embeddings
+- Web Scraping
+- AI
+- Blogs
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Andrew Lock guides readers through extending the .NET AI Chat Web App template to build a chatbot that understands website content and answers with citations. The post includes code examples, insights, and performance observations.<!--excerpt_end-->
 
 # Building a Website-Aware Chatbot with the .NET AI Chat Web App Template

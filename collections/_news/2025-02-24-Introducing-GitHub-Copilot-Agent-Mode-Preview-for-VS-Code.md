@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing GitHub Copilot Agent Mode (Preview) for VS Code"
-description: "This article by Isidor Nikolic introduces the GitHub Copilot agent mode, now available in Visual Studio Code (VS Code) Insiders and coming soon to Stable. Agent mode transforms Copilot into an autonomous peer programmer that can analyze codebases, propose edits, run terminal commands, and iterate intelligently to complete complex development tasks. The update details agent mode's features, how it works through LLMs and tools, including MCP servers integration, and provides guidance for effective use, transparency, and feedback."
-author: "Isidor Nikolic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2025/02/24/introducing-copilot-agent-mode
+title: Introducing GitHub Copilot Agent Mode (Preview) for VS Code
+author: Isidor Nikolic
+feed_name: Visual Studio Code Releases
 date: 2025-02-24 00:00:00 +00:00
-permalink: "/2025-02-24-Introducing-GitHub-Copilot-Agent-Mode-Preview-for-VS-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Assisted Coding", "Autonomous Programming", "Claude Sonnet", "Code Analysis", "Coding", "Copilot Edits", "Developer Productivity", "GitHub Copilot", "GPT 4o", "LLM", "MCP Servers", "News", "Refactoring", "Terminal Commands", "VS Code", "Workspace Tools"]
-tags_normalized: ["agent mode", "ai", "ai assisted coding", "autonomous programming", "claude sonnet", "code analysis", "coding", "copilot edits", "developer productivity", "github copilot", "gpt 4o", "llm", "mcp servers", "news", "refactoring", "terminal commands", "vs code", "workspace tools"]
+tags:
+- Agent Mode
+- AI Assisted Coding
+- Autonomous Programming
+- Claude Sonnet
+- Code Analysis
+- Copilot Edits
+- Developer Productivity
+- GPT 4o
+- LLM
+- MCP Servers
+- Refactoring
+- Terminal Commands
+- VS Code
+- Workspace Tools
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Isidor Nikolic introduces GitHub Copilot agent mode for VS Code, an autonomous AI-powered peer programmer that assists with multi-step coding tasks, context analysis, and development productivity.<!--excerpt_end-->
 
 # Introducing GitHub Copilot Agent Mode (Preview)

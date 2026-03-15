@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "February Patches for Azure DevOps Server"
-description: "This news update details the availability of the latest patches for Azure DevOps Server, including download links and instructions for verifying installation. All users are encouraged to keep their Azure DevOps Server instances updated for improved security and performance."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/february-patches-for-azure-devops-server-5/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/february-patches-for-azure-devops-server-5/
+title: February Patches for Azure DevOps Server
+author: Gloridel Morales
+primary_section: azure
+feed_name: Microsoft DevOps Blog
 date: 2026-02-10 20:21:41 +00:00
-permalink: "/2026-02-10-February-Patches-for-Azure-DevOps-Server.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure DevOps Server", "DevOps", "DevOps Tools", "Installation Verification", "Microsoft Azure", "News", "Patch Management", "Patches", "Release Notes", "Security", "Security Updates", "Self Hosted DevOps", "Server Administration", "Software Maintenance", "Upgrade Guidance"]
-tags_normalized: ["azure", "azure devops server", "devops", "devops tools", "installation verification", "microsoft azure", "news", "patch management", "patches", "release notes", "security", "security updates", "self hosted devops", "server administration", "software maintenance", "upgrade guidance"]
+tags:
+- Azure
+- Azure DevOps Server
+- DevOps
+- DevOps Tools
+- Installation Verification
+- Microsoft Azure
+- News
+- Patch Management
+- Patches
+- Release Notes
+- Security
+- Security Updates
+- Self Hosted DevOps
+- Server Administration
+- Software Maintenance
+- Upgrade Guidance
+section_names:
+- azure
+- devops
+- security
 ---
-
 Gloridel Morales announces the release of February patches for Azure DevOps Server, providing direct patch downloads and verification guidance to ensure user environments remain secure and up-to-date.<!--excerpt_end-->
 
 # February Patches for Azure DevOps Server

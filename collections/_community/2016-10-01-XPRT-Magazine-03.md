@@ -1,17 +1,33 @@
----
-layout: "post"
-title: "XPRT Magazine 03"
-description: "This issue covers Azure Machine Learning, Microsoft Bot Framework, containers, DevOps, mobile innovation, testing, and more."
-categories: ["AI", "Azure", "DevOps"]
+﻿---
+title: XPRT Magazine 03
 date: 2016-10-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2016-10-01-XPRT-Magazine-03.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["Agile", "AI", "Automation", "Azure", "Azure Machine Learning", "Bot Framework", "Cloud", "Community", "Containers", "Continuous Delivery", "DevOps", "IaC", "Machine Learning", "Magazines", "Microsoft", "Mobile Apps", "Technical Debt", "Testing"]
-tags_normalized: ["agile", "ai", "automation", "azure", "azure machine learning", "bot framework", "cloud", "community", "containers", "continuous delivery", "devops", "iac", "machine learning", "magazines", "microsoft", "mobile apps", "technical debt", "testing"]
+author: Xebia
+external_url: https://xprt.xebia.com/magazine-03
+tags:
+- Agile
+- Automation
+- Azure Machine Learning
+- Bot Framework
+- Containers
+- Continuous Delivery
+- IaC
+- ML
+- Magazines
+- Microsoft
+- Mobile Apps
+- Technical Debt
+- Testing
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
+feed_name: TechHub
 ---
-
 XPRT Magazine 03 explores Azure Machine Learning, the Microsoft Bot Framework, containers on Microsoft platforms, DevOps, mobile innovation, testing, infrastructure as code, and more. This issue provides practical guidance and real-world examples for building intelligent, scalable, and modern solutions.
 <!--excerpt_end-->
 

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enforcing Angular Unit Test Coverage in Azure DevOps Pipelines: A Step-by-Step Guide"
-description: "This guide, authored by Sakshi_Gupta22, presents a practical, actionable walkthrough for integrating and enforcing Angular unit test coverage in Azure DevOps pipelines. Covering dependency installation, test execution, automated reporting, and a 70% coverage enforcement threshold, it helps teams ensure better code quality and reliable delivery."
-author: "Sakshi_Gupta22"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485
+title: 'Enforcing Angular Unit Test Coverage in Azure DevOps Pipelines: A Step-by-Step Guide'
+author: Sakshi_Gupta22
+feed_name: Microsoft Tech Community
 date: 2025-08-21 15:04:06 +00:00
-permalink: "/2025-08-21-Enforcing-Angular-Unit-Test-Coverage-in-Azure-DevOps-Pipelines-A-Step-by-Step-Guide.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET Core", "Angular", "Azure", "Azure DevOps", "ChromeHeadless", "CI/CD Pipeline", "Cobertura", "Code Coverage", "Coding", "Community", "Continuous Integration", "DevOps", "JUnit", "Karma", "npm", "Test Automation", "Test Reporting", "Unit Testing", "YAML Pipeline"]
-tags_normalized: ["dotnet core", "angular", "azure", "azure devops", "chromeheadless", "cislashcd pipeline", "cobertura", "code coverage", "coding", "community", "continuous integration", "devops", "junit", "karma", "npm", "test automation", "test reporting", "unit testing", "yaml pipeline"]
+tags:
+- .NET Core
+- Angular
+- Azure DevOps
+- ChromeHeadless
+- CI/CD Pipeline
+- Cobertura
+- Code Coverage
+- Continuous Integration
+- JUnit
+- Karma
+- npm
+- Test Automation
+- Test Reporting
+- Unit Testing
+- YAML Pipeline
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 Sakshi_Gupta22 provides a step-by-step guide to configuring Azure DevOps pipelines for Angular projects, ensuring 70%+ unit test coverage with automated reporting and quality gates for sustainable delivery.<!--excerpt_end-->
 
 # Enforcing Angular Unit Test Coverage in Azure DevOps Pipelines: A Step-by-Step Guide
@@ -187,8 +202,8 @@ Unit tests aren’t just for show — they give teams confidence in every code c
 
 ---
 
-_Last updated: Aug 21, 2025_
+*Last updated: Aug 21, 2025*
 
-_Version 1.0_
+*Version 1.0*
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/enforcing-angular-unit-test-coverage-in-azure-devops-pipelines-a/ba-p/4446485)

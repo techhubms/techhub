@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "On .NET Live: Using Cake.Sdk for C# DevOps Automation"
-description: "This episode of On .NET Live features Mattias Karlsson, Maira Wenzel, Scott Addie, and Frank Boucher demonstrating how to leverage Cake.Sdk within modern .NET environments. Learn to write DevOps automation and build definitions as maintainable, file-based C# applications with IDE support, Cake APIs, and true cross-platform flexibility for developers working across services and environments."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GGeLgFeKZps"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=GGeLgFeKZps
+title: 'On .NET Live: Using Cake.Sdk for C# DevOps Automation'
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-02-26 21:29:27 +00:00
-permalink: "/2026-02-26-On-NET-Live-Using-CakeSdk-for-C-DevOps-Automation.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET 10", "Build Scripts", "C#", "Cake", "Cake.cs", "Cake.Sdk", "Coding", "Continuous Integration", "Cross Platform Development", "Debugging", "Demo", "Developer", "Developer Community", "Developer Tools", "DevOps", "DevOps Automation", "Dotnet10", "Dotnetdeveloper", "Dotnetten", "Microsoft", "Software Developer", "Software Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "build scripts", "csharp", "cake", "cakedotcs", "cakedotsdk", "coding", "continuous integration", "cross platform development", "debugging", "demo", "developer", "developer community", "developer tools", "devops", "devops automation", "dotnet10", "dotnetdeveloper", "dotnetten", "microsoft", "software developer", "software development", "videos", "vs"]
+tags:
+- .NET
+- .NET 10
+- Build Scripts
+- C#
+- Cake
+- Cake.cs
+- Cake.Sdk
+- Continuous Integration
+- Cross Platform Development
+- Debugging
+- Demo
+- Developer
+- Developer Community
+- Developer Tools
+- DevOps
+- DevOps Automation
+- Dotnet10
+- Dotnetdeveloper
+- Dotnetten
+- Microsoft
+- Software Developer
+- Software Development
+- Videos
+- VS
+section_names:
+- dotnet
+- devops
 ---
-
 Mattias Karlsson and the On .NET Live team demonstrate how developers can use Cake.Sdk and modern .NET to write maintainable DevOps scripts as C# apps, simplifying automation and improving the developer experience.<!--excerpt_end-->
 
 {% youtube GGeLgFeKZps %}

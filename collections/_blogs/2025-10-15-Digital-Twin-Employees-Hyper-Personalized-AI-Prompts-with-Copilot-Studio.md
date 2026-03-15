@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Digital Twin Employees: Hyper-Personalized AI Prompts with Copilot Studio"
-description: "This article by Dellenny explores the concept of the 'Digital Twin Employee'—custom AI agents built using Copilot Studio to mirror specific workforce roles and functions. The content walks through using Copilot Studio for personalized prompt engineering, deep integration with internal business systems (like SQL databases and HR platforms), workflow automation, and real-world deployment scenarios. The article also provides a detailed example of building and connecting a custom HR Copilot, including SQL integration, prompt design, and operational deployment."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/the-digital-twin-employee-creating-hyper-personalized-copilot-prompts-with-copilot-studio/
+title: 'Digital Twin Employees: Hyper-Personalized AI Prompts with Copilot Studio'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-10-15 08:38:47 +00:00
-permalink: "/2025-10-15-Digital-Twin-Employees-Hyper-Personalized-AI-Prompts-with-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "AI Agent", "Blogs", "Business Process Automation", "Copilot", "Copilot Studio", "Custom Copilot", "Data Connector", "Digital Twin Employee", "Enterprise AI", "HR Automation", "Internal Systems Integration", "M365 Copilot", "Microsoft 365", "Microsoft Teams", "Prompt Engineering", "SQL Integration", "Workflow Automation"]
-tags_normalized: ["ai", "ai agent", "blogs", "business process automation", "copilot", "copilot studio", "custom copilot", "data connector", "digital twin employee", "enterprise ai", "hr automation", "internal systems integration", "m365 copilot", "microsoft 365", "microsoft teams", "prompt engineering", "sql integration", "workflow automation"]
+tags:
+- AI Agent
+- Business Process Automation
+- Copilot
+- Copilot Studio
+- Custom Copilot
+- Data Connector
+- Digital Twin Employee
+- Enterprise AI
+- HR Automation
+- Internal Systems Integration
+- M365 Copilot
+- Microsoft 365
+- Microsoft Teams
+- Prompt Engineering
+- SQL Integration
+- Workflow Automation
+- AI
+- Blogs
+section_names:
+- ai
+primary_section: ai
 ---
-
 Dellenny presents a practical guide to building digital twin employees using Copilot Studio, focusing on hyper-personalized AI prompt engineering and integration with enterprise systems.<!--excerpt_end-->
 
 # Digital Twin Employees: Hyper-Personalized AI Prompts with Copilot Studio

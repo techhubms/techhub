@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Building a More Accessible GitHub CLI: Improving Terminal Accessibility for Developers"
-description: "Ryan Hecht details GitHub CLI's efforts to make command-line tools more accessible by adapting screen reader compatibility, color contrast, and customization for diverse developer needs. The journey involves creative solutions where web standards fall short, aiming for a cohesive, inclusive terminal experience."
-author: "Ryan Hecht"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/user-experience/building-a-more-accessible-github-cli/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/engineering/user-experience/building-a-more-accessible-github-cli/
+title: 'Building a More Accessible GitHub CLI: Improving Terminal Accessibility for Developers'
+author: Ryan Hecht
+feed_name: GitHub Engineering Blog
 date: 2025-05-02 14:30:00 +00:00
-permalink: "/2025-05-02-Building-a-More-Accessible-GitHub-CLI-Improving-Terminal-Accessibility-for-Developers.html"
-categories: ["DevOps"]
-tags: ["Accessibility", "CLI", "Color Contrast", "Command Line", "Customization", "DevOps", "Engineering", "GitHub CLI", "High Contrast", "News", "Prompting Library", "Screen Readers", "Terminal", "User Experience"]
-tags_normalized: ["accessibility", "cli", "color contrast", "command line", "customization", "devops", "engineering", "github cli", "high contrast", "news", "prompting library", "screen readers", "terminal", "user experience"]
+tags:
+- Accessibility
+- CLI
+- Color Contrast
+- Command Line
+- Customization
+- Engineering
+- GitHub CLI
+- High Contrast
+- Prompting Library
+- Screen Readers
+- Terminal
+- User Experience
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 In this insightful article, Ryan Hecht shares GitHub’s journey to improve the accessibility of its CLI. The post explores the challenges and solutions in making terminal-based tools more inclusive for all developers.<!--excerpt_end-->
 
 # Building a More Accessible GitHub CLI

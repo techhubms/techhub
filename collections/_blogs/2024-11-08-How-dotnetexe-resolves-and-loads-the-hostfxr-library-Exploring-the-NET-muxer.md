@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "How dotnet.exe Resolves and Loads the hostfxr Library – Exploring the .NET Muxer"
-description: "Steve Gordon provides a deep dive into the .NET muxer (dotnet.exe), focusing on the process by which it resolves and loads the hostfxr library. Detailing internal implementation steps, this post is ideal for those interested in .NET runtime internals and advanced diagnostics."
-author: "Steve Gordon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.stevejgordon.co.uk/how-dotnet-muxer-resolves-and-loads-the-hostfxr-library"
-viewing_mode: "external"
-feed_name: "Steve Gordon's Blog"
-feed_url: "https://www.stevejgordon.co.uk/feed"
+﻿---
+external_url: https://www.stevejgordon.co.uk/how-dotnet-muxer-resolves-and-loads-the-hostfxr-library
+title: How dotnet.exe Resolves and Loads the hostfxr Library – Exploring the .NET Muxer
+author: Steve Gordon
+feed_name: Steve Gordon's Blog
 date: 2024-11-08 10:11:59 +00:00
-permalink: "/2024-11-08-How-dotnetexe-resolves-and-loads-the-hostfxr-library-Exploring-the-NET-muxer.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "CLR", "Coding", "Corehost", "Diagnostics", "Dotnet.exe", "Framework Resolution", "Hostfxr", "Internals", "Linux", "Macos", "Muxer", "Platform Abstraction", "Runtime", "Version Selection", "Windows"]
-tags_normalized: ["dotnet", "blogs", "clr", "coding", "corehost", "diagnostics", "dotnetdotexe", "framework resolution", "hostfxr", "internals", "linux", "macos", "muxer", "platform abstraction", "runtime", "version selection", "windows"]
+tags:
+- .NET
+- CLR
+- Corehost
+- Diagnostics
+- Dotnet.exe
+- Framework Resolution
+- Hostfxr
+- Internals
+- Linux
+- Macos
+- Muxer
+- Platform Abstraction
+- Runtime
+- Version Selection
+- Windows
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this article, Steve Gordon explores how dotnet.exe resolves and loads the hostfxr library, shedding light on the .NET muxer's internal steps. The discussion is a part of his deep dive series into the .NET hosting architecture.<!--excerpt_end-->
 
 # How dotnet.exe Resolves and Loads the hostfxr Library – Exploring the .NET Muxer
@@ -57,9 +67,9 @@ Before `dotnet.exe` can hand over control, it must resolve the correct version o
 ### Platform Library Naming
 
 - The actual file sought depends on the platform:
-    - **Windows:** `hostfxr.dll`
-    - **macOS:** `libhostfxr.dylib`
-    - **Linux:** `libhostfxr.so`
+  - **Windows:** `hostfxr.dll`
+  - **macOS:** `libhostfxr.dylib`
+  - **Linux:** `libhostfxr.so`
 - Macros in the code ensure the correct filename is built for the host OS.
 
 ### Loading the Library

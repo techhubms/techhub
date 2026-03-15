@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Building a Dual Sidecar Pod: Integrating GitHub Copilot SDK and Skill Server on Kubernetes"
-description: "This detailed blog by kinfey guides you through architecting a cloud-native AI blog generation agent on Kubernetes using the Sidecar pattern. Learn how to isolate the GitHub Copilot SDK and a custom skill server as sidecar containers, with practical deployment, resource management, production hardening, and extensibility strategies tailored for Kubernetes environments."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-dual-sidecar-pod-combining-github-copilot-sdk-with/ba-p/4497080"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-dual-sidecar-pod-combining-github-copilot-sdk-with/ba-p/4497080
+title: 'Building a Dual Sidecar Pod: Integrating GitHub Copilot SDK and Skill Server on Kubernetes'
+author: kinfey
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-26 08:00:00 +00:00
-permalink: "/2026-02-26-Building-a-Dual-Sidecar-Pod-Integrating-GitHub-Copilot-SDK-and-Skill-Server-on-Kubernetes.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "CI/CD", "Cloud Native", "Coding", "Community", "ConfigMap", "Containerization", "Cross Platform Containers", "DevOps", "DevOps Best Practices", "FastAPI", "GitHub Copilot", "GitHub Copilot SDK", "Health Probes", "JSON RPC", "Kubernetes", "Nginx", "Node.js", "Pod Architecture", "Production Readiness", "Resource Management", "REST API", "Sidecar Pattern", "Skill Management"]
-tags_normalized: ["ai", "cislashcd", "cloud native", "coding", "community", "configmap", "containerization", "cross platform containers", "devops", "devops best practices", "fastapi", "github copilot", "github copilot sdk", "health probes", "json rpc", "kubernetes", "nginx", "nodedotjs", "pod architecture", "production readiness", "resource management", "rest api", "sidecar pattern", "skill management"]
+tags:
+- AI
+- CI/CD
+- Cloud Native
+- Community
+- ConfigMap
+- Containerization
+- Cross Platform Containers
+- DevOps
+- DevOps Best Practices
+- FastAPI
+- GitHub Copilot
+- GitHub Copilot SDK
+- Health Probes
+- JSON RPC
+- Kubernetes
+- Nginx
+- Node.js
+- Pod Architecture
+- Production Readiness
+- Resource Management
+- REST API
+- Sidecar Pattern
+- Skill Management
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 kinfey explains how to build a Kubernetes architecture for AI blog generation using dual sidecar containers: one for the GitHub Copilot SDK and another for skill management, offering actionable insights on modern DevOps and containerization strategies.<!--excerpt_end-->
 
 # Building a Dual Sidecar Pod: Integrating GitHub Copilot SDK and Skill Server on Kubernetes

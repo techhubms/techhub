@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Announcing Microsoft Azure Network Adapter (MANA) Support for Existing VM SKUs"
-description: "This announcement details Microsoft's plan to deploy the Microsoft Azure Network Adapter (MANA) to existing Azure Virtual Machine (VM) Size Families in February 2026. It outlines how MANA will provide performance improvements, enhanced security, and operational efficiency for Azure IaaS customers. The article explains which workloads benefit most, OS compatibility requirements, and links to additional resources on Azure Boost, MANA features, and migration steps. Readers can also find guidance on identifying affected VMs and any required actions to leverage the new MANA-enabled hardware."
-author: "ali_sheriff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/announcing-microsoft-azure-network-adapter-mana-support-for/ba-p/4493279
+title: Announcing Microsoft Azure Network Adapter (MANA) Support for Existing VM SKUs
+author: ali_sheriff
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-06 23:45:42 +00:00
-permalink: "/2026-02-06-Announcing-Microsoft-Azure-Network-Adapter-MANA-Support-for-Existing-VM-SKUs.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Boost", "Azure Network Adapter", "Cloud Infrastructure", "Community", "Hardware Upgrades", "IaaS", "Latency", "MANA", "Microsoft Azure", "Migration", "NIC Firmware", "OS Compatibility", "Performance", "Throughput", "Virtual Machines", "VM SKUs"]
-tags_normalized: ["azure", "azure boost", "azure network adapter", "cloud infrastructure", "community", "hardware upgrades", "iaas", "latency", "mana", "microsoft azure", "migration", "nic firmware", "os compatibility", "performance", "throughput", "virtual machines", "vm skus"]
+tags:
+- Azure
+- Azure Boost
+- Azure Network Adapter
+- Cloud Infrastructure
+- Community
+- Hardware Upgrades
+- IaaS
+- Latency
+- MANA
+- Microsoft Azure
+- Migration
+- NIC Firmware
+- OS Compatibility
+- Performance
+- Throughput
+- Virtual Machines
+- VM SKUs
+section_names:
+- azure
 ---
-
 ali_sheriff explains Microsoft's upcoming deployment of the Microsoft Azure Network Adapter (MANA) for existing Azure VM SKUs, highlighting what users need to know about new hardware support, improved performance, and next steps for IaaS customers.<!--excerpt_end-->
 
 # Announcing Microsoft Azure Network Adapter (MANA) Support for Existing VM SKUs

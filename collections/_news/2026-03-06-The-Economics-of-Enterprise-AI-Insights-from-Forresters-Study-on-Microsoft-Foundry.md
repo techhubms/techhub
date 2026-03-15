@@ -1,20 +1,34 @@
----
-layout: "post"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/
 title: "The Economics of Enterprise AI: Insights from Forrester's Study on Microsoft Foundry"
-description: "This article examines the Forrester Total Economic Impact™ study results on Microsoft Foundry, highlighting how the platform drives increased developer productivity, cost savings, streamlined AI governance, and higher ROI for organizations deploying AI at scale. Real-world survey data, customer anecdotes, and quantitative insights illustrate the business value of treating AI as a unified platform rather than isolated pilots, supported by technical features like Foundry IQ and Control Plane."
-author: "Don Scott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/the-economics-of-enterprise-ai-what-the-forrester-tei-study-reveals-about-microsoft-foundry/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+author: Don Scott
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-03-06 17:00:00 +00:00
-permalink: "/2026-03-06-The-Economics-of-Enterprise-AI-Insights-from-Forresters-Study-on-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Factory", "AI", "AI + Machine Learning", "AI Agents", "AI Governance", "AI Infrastructure", "AI Platform", "Azure", "Developer Productivity", "Enterprise AI", "Forrester", "Forrester TEI", "Foundry IQ", "Microsoft Azure", "Microsoft Foundry", "Model Grounding", "News", "Platform Thinking", "ROI"]
-tags_normalized: ["agent factory", "ai", "ai plus machine learning", "ai agents", "ai governance", "ai infrastructure", "ai platform", "azure", "developer productivity", "enterprise ai", "forrester", "forrester tei", "foundry iq", "microsoft azure", "microsoft foundry", "model grounding", "news", "platform thinking", "roi"]
+tags:
+- Agent Factory
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Governance
+- AI Infrastructure
+- AI Platform
+- Azure
+- Developer Productivity
+- Enterprise AI
+- Forrester
+- Forrester TEI
+- Foundry IQ
+- Microsoft Azure
+- Microsoft Foundry
+- Model Grounding
+- News
+- Platform Thinking
+- ROI
+section_names:
+- ai
+- azure
 ---
-
 Don Scott summarizes key findings from Forrester's study on Microsoft Foundry, detailing how Microsoft Azure's centralized AI platform boosts developer productivity, streamlines governance, and enables organizations to scale AI outcomes effectively.<!--excerpt_end-->
 
 # The Economics of Enterprise AI: Insights from Forrester's Study on Microsoft Foundry

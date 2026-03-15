@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Optionally Skip Approval for GitHub Copilot Coding Agent Actions Workflows"
-description: "This announcement details a new GitHub repository setting that allows administrators to skip manual approval for GitHub Actions workflows triggered by the Copilot coding agent. The change helps streamline development by removing workflow approval bottlenecks, letting Copilot-driven pull requests and pushes run workflows immediately, while explaining the associated security trade-offs."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-13-optionally-skip-approval-for-copilot-coding-agent-actions-workflows"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-13-optionally-skip-approval-for-copilot-coding-agent-actions-workflows
+title: Optionally Skip Approval for GitHub Copilot Coding Agent Actions Workflows
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-13 18:14:48 +00:00
-permalink: "/2026-03-13-Optionally-Skip-Approval-for-GitHub-Copilot-Coding-Agent-Actions-Workflows.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Approval Process", "Continuous Integration", "Copilot", "Copilot Coding Agent", "DevOps", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Open Source", "Pull Requests", "Repository Settings", "Workflow Automation", "Workflow Permissions"]
-tags_normalized: ["ai", "approval process", "continuous integration", "copilot", "copilot coding agent", "devops", "github actions", "github copilot", "improvement", "news", "open source", "pull requests", "repository settings", "workflow automation", "workflow permissions"]
+tags:
+- AI
+- Approval Process
+- Continuous Integration
+- Copilot
+- Copilot Coding Agent
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- News
+- Open Source
+- Pull Requests
+- Repository Settings
+- Workflow Automation
+- Workflow Permissions
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison announces a new option in GitHub that lets repository administrators skip manual approval for GitHub Actions workflows triggered by Copilot coding agent, balancing workflow speed and security.<!--excerpt_end-->
 
 # Optionally Skip Approval for GitHub Copilot Coding Agent Actions Workflows

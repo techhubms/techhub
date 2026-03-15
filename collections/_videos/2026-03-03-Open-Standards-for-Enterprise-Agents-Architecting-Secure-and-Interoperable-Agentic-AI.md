@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Open Standards for Enterprise Agents: Architecting Secure and Interoperable Agentic AI"
-description: "This Armchair Architects episode brings together Microsoft experts to discuss the foundational open standards driving enterprise adoption of agentic AI. Topics include Model Context Protocol (MCP), agent-to-agent communication, observability using OpenTelemetry, and secure agent identity via OAuth. The conversation emphasizes best practices for architects integrating these protocols, contributing to open-source initiatives, and designing responsible, future-proof AI architectures in rapidly evolving ecosystems."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=wGYd_shz-qU"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=wGYd_shz-qU
+title: 'Open Standards for Enterprise Agents: Architecting Secure and Interoperable Agentic AI'
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-03-03 08:01:07 +00:00
-permalink: "/2026-03-03-Open-Standards-for-Enterprise-Agents-Architecting-Secure-and-Interoperable-Agentic-AI.html"
-categories: ["AI"]
-tags: ["Agent Communication", "Agent2Agent", "Agentic AI", "AI", "AI Architecture", "Application Protocols", "Cloud AI", "Enterprise AI", "Governance", "Identity", "Interoperability", "MCP", "Microsoft Azure", "OAuth", "Observability", "Open Source", "Open Standards", "OpenTelemetry", "RFP", "Videos"]
-tags_normalized: ["agent communication", "agent2agent", "agentic ai", "ai", "ai architecture", "application protocols", "cloud ai", "enterprise ai", "governance", "identity", "interoperability", "mcp", "microsoft azure", "oauth", "observability", "open source", "open standards", "opentelemetry", "rfp", "videos"]
+tags:
+- Agent Communication
+- Agent2Agent
+- Agentic AI
+- AI
+- AI Architecture
+- Application Protocols
+- Cloud AI
+- Enterprise AI
+- Governance
+- Identity
+- Interoperability
+- MCP
+- Microsoft Azure
+- OAuth
+- Observability
+- Open Source
+- Open Standards
+- OpenTelemetry
+- RFP
+- Videos
+section_names:
+- ai
 ---
-
 David Blank-Edelman, Uli Homann, and Eric Charran lead a deep dive into open standards and protocols critical to agentic AI for enterprises, sharing actionable strategies for Microsoft architects.<!--excerpt_end-->
 
 {% youtube wGYd_shz-qU %}

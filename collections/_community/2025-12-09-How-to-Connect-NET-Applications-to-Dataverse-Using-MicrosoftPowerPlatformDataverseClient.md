@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client"
-description: "This post asks for guidance on authenticating a .NET (4.6.2) application with Microsoft Dataverse using the Microsoft.PowerPlatform.Dataverse.Client library. It specifically covers confusion around App Registration in Entra ID (formerly Azure AD), where to obtain required credentials (App ID, Client Secret), and configuring permissions both in Entra ID and Power Platform. The author requests step-by-step instructions for this integration."
-author: "AjayM"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=dotnet"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/web-development/connect-net-4-6-2-to-dataverse-using-the-dataverse-plugin/m-p/4476310#M682
+title: How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client
+author: AjayM
+feed_name: Microsoft Tech Community
 date: 2025-12-09 07:18:58 +00:00
-permalink: "/2025-12-09-How-to-Connect-NET-Applications-to-Dataverse-Using-MicrosoftPowerPlatformDataverseClient.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "App Registration", "Application User", "Authentication", "Azure", "Azure Active Directory", "Client ID", "Client Secret", "Coding", "Community", "Dataverse", "IOrganizationService", "Microsoft Entra ID", "Microsoft.PowerPlatform.Dataverse.Client", "OAuth", "Permissions", "Power Platform"]
-tags_normalized: ["dotnet", "app registration", "application user", "authentication", "azure", "azure active directory", "client id", "client secret", "coding", "community", "dataverse", "iorganizationservice", "microsoft entra id", "microsoftdotpowerplatformdotdataversedotclient", "oauth", "permissions", "power platform"]
+tags:
+- .NET
+- App Registration
+- Application User
+- Authentication
+- Azure Active Directory
+- Client ID
+- Client Secret
+- Dataverse
+- IOrganizationService
+- Microsoft Entra ID
+- Microsoft.PowerPlatform.Dataverse.Client
+- OAuth
+- Permissions
+- Power Platform
+- Azure
+- Community
+section_names:
+- azure
+- dotnet
+primary_section: dotnet
 ---
-
 AjayM asks how to connect a .NET application to Microsoft Dataverse using Microsoft.PowerPlatform.Dataverse.Client, focusing on App Registration, credentials, and necessary configuration in Entra ID and Power Platform.<!--excerpt_end-->
 
 # How to Connect .NET Applications to Dataverse Using Microsoft.PowerPlatform.Dataverse.Client
@@ -44,9 +55,9 @@ To connect your .NET application to Dataverse using OAuth and service principals
 
 - In Azure Portal, go to **Microsoft Entra ID** (formerly Azure AD).
 - Navigate to **App registrations > New registration**.
-    - Name: Choose a descriptive name (e.g., "Dataverse .NET Integration")
-    - Supported account types: Typically, "Accounts in this organizational directory only"
-    - Redirect URI: Use `app://58145B91-0C36-4500-8554-080854F2AC97` if you plan to use the sample code, or leave blank for now.
+  - Name: Choose a descriptive name (e.g., "Dataverse .NET Integration")
+  - Supported account types: Typically, "Accounts in this organizational directory only"
+  - Redirect URI: Use `app://58145B91-0C36-4500-8554-080854F2AC97` if you plan to use the sample code, or leave blank for now.
 - After creation, **note the Application (client) ID** and **Directory (tenant) ID**.
 
 ### 2. Create a Client Secret
@@ -58,12 +69,12 @@ To connect your .NET application to Dataverse using OAuth and service principals
 ### 3. Assign API Permissions to the App Registration
 
 - Go to **API permissions > Add a permission > APIs my organization uses > search for "Dataverse"** (or "Dynamics CRM")
-    - Select the API and add "user_impersonation" (for delegated, if acting as a user), or "Application permissions" for app-only access.
+  - Select the API and add "user_impersonation" (for delegated, if acting as a user), or "Application permissions" for app-only access.
 - You may need to grant admin consent for the tenant.
 
 ### 4. Add the App Registration as an Application User in Dataverse/Power Platform
 
-- Go to **Power Platform admin center** (https://admin.powerplatform.microsoft.com/)
+- Go to **Power Platform admin center** (<https://admin.powerplatform.microsoft.com/>)
 - Select the correct environment > **Settings** > **Users + permissions > Application users**
 - Click **+ New app user**, then search for your app registration
 - Assign an appropriate security role (e.g., System Customizer, or a custom role for least privilege)

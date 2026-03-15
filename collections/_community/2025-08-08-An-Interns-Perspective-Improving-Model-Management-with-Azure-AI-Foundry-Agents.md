@@ -1,20 +1,39 @@
----
-layout: "post"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-an-intern-s-adventure-improving-usability-with/ba-p/4440857
 title: "An Intern's Perspective: Improving Model Management with Azure AI Foundry Agents"
-description: "This blog post by Harry-Cheng explores the challenges of large-scale AI model management in the enterprise using Azure AI Foundry. It introduces the 'model operation agent'—an internal proof-of-concept that leverages conversational AI to streamline model discovery, analysis, quota validation, and upgrade execution. The author also envisions a future where 'Infrastructure as Agents' could transform cloud operations through natural language interaction and agent-driven automation."
-author: "Harry-Cheng"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-ai-platform-blog/the-future-of-ai-an-intern-s-adventure-improving-usability-with/ba-p/4440857"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=AI"
+author: Harry-Cheng
+feed_name: Microsoft Tech Community
 date: 2025-08-08 13:31:56 +00:00
-permalink: "/2025-08-08-An-Interns-Perspective-Improving-Model-Management-with-Azure-AI-Foundry-Agents.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Azure", "Azure AI", "Azure AI Foundry", "Azure OpenAI Service", "Bicep", "Cloud Automation", "Community", "Conversational AI", "Deployment Automation", "Enterprise AI", "IaC", "Infrastructure as Agents", "Microsoft", "Model Inventory", "Model Lifecycle", "Model Management", "Model Operation Agent", "Model Upgrades", "Quota Validation", "SDK", "Terraform", "VS Code"]
-tags_normalized: ["ai", "ai agents", "azure", "azure ai", "azure ai foundry", "azure openai service", "bicep", "cloud automation", "community", "conversational ai", "deployment automation", "enterprise ai", "iac", "infrastructure as agents", "microsoft", "model inventory", "model lifecycle", "model management", "model operation agent", "model upgrades", "quota validation", "sdk", "terraform", "vs code"]
+tags:
+- AI Agents
+- Azure AI
+- Azure AI Foundry
+- Azure OpenAI Service
+- Bicep
+- Cloud Automation
+- Conversational AI
+- Deployment Automation
+- Enterprise AI
+- IaC
+- Infrastructure as Agents
+- Microsoft
+- Model Inventory
+- Model Lifecycle
+- Model Management
+- Model Operation Agent
+- Model Upgrades
+- Quota Validation
+- SDK
+- Terraform
+- VS Code
+- AI
+- Azure
+- Community
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Harry-Cheng shares insights from his internship on the Azure AI Foundry team, presenting a hands-on look at building the 'model operation agent.' This post highlights how conversational AI is used to tackle enterprise model management challenges.<!--excerpt_end-->
 
 # An Intern's Perspective: Improving Model Management with Azure AI Foundry Agents
@@ -42,7 +61,7 @@ Manual management is complex, error-prone, and inefficient at scale.
    - Automatically scans subscriptions for all model deployments
    - Builds a centralized, searchable inventory
    - Example output:
-     
+
      | Account Name     | Resource Group | Location | Deployment   | Model        | Version   | SKU       | Capacity |
      |-----------------|---------------|----------|--------------|--------------|-----------|-----------|----------|
      | foundry-eastus  | rg-prod       | eastus   | gpt4-prod    | gpt-4o       | 2024-05-13| Standard  | 10       |

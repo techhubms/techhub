@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Enhancing VS Code with GitHub Copilot: Agent Mode, Custom Instructions, and More"
-description: "A session with James Montemagno and Kayla Cinnamon diving into the newest GitHub Copilot AI features in Visual Studio Code. The video highlights agent mode, custom instructions, and practical techniques to optimize your development workflow as well as increase productivity using AI within VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kLPihq62dO4"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=kLPihq62dO4
+title: 'Enhancing VS Code with GitHub Copilot: Agent Mode, Custom Instructions, and More'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-03-09 21:41:31 +00:00
-permalink: "/2026-03-09-Enhancing-VS-Code-with-GitHub-Copilot-Agent-Mode-Custom-Instructions-and-More.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentmode", "AI", "AI Features", "Code", "Code Editor", "Coding", "Copilot", "Custom Instructions", "Demo", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Development Workflow", "GitHub Copilot", "Microsoft", "Programming", "Vibecoding", "Videos", "VS Code"]
-tags_normalized: ["agent mode", "agentmode", "ai", "ai features", "code", "code editor", "coding", "copilot", "custom instructions", "demo", "developer", "developer community", "developer productivity", "developer tools", "development workflow", "github copilot", "microsoft", "programming", "vibecoding", "videos", "vs code"]
+tags:
+- Agent Mode
+- Agentmode
+- AI
+- AI Features
+- Code
+- Code Editor
+- Copilot
+- Custom Instructions
+- Demo
+- Developer
+- Developer Community
+- Developer Productivity
+- Developer Tools
+- Development Workflow
+- GitHub Copilot
+- Microsoft
+- Programming
+- Vibecoding
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 James Montemagno and Kayla Cinnamon showcase the latest GitHub Copilot AI advancements for Visual Studio Code, guiding developers through new features and workflow improvements.<!--excerpt_end-->
 
 {% youtube kLPihq62dO4 %}

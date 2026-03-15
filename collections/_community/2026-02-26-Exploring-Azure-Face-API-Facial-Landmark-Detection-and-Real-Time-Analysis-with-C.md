@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Exploring Azure Face API: Facial Landmark Detection and Real-Time Analysis with C#"
-description: "This detailed guide by ravimodi demonstrates how to utilize Azure Face API in C# projects for advanced facial landmark detection, head pose estimation, and real-time video analysis. Developers will learn to process live streams, draw feature overlays with OpenCV, and calculate geometric metrics like Eye Aspect Ratio and more."
-author: "ravimodi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-azure-face-api-facial-landmark-detection-and-real-time/ba-p/4495335"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/exploring-azure-face-api-facial-landmark-detection-and-real-time/ba-p/4495335
+title: 'Exploring Azure Face API: Facial Landmark Detection and Real-Time Analysis with C#'
+author: ravimodi
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-26 11:09:25 +00:00
-permalink: "/2026-02-26-Exploring-Azure-Face-API-Facial-Landmark-Detection-and-Real-Time-Analysis-with-C.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET 8", "AI", "API Integration", "Azure", "Azure Face API", "Bounding Box Visualization", "C#", "Cloud AI Services", "Coding", "Community", "Computer Vision", "Expression Analysis", "Eye Aspect Ratio", "Face Detection", "Facial Landmark Detection", "Head Pose Estimation", "Mouth Aspect Ratio", "NuGet Packages", "OpenCVSharp", "Real Time Video Processing", "VS"]
-tags_normalized: ["dotnet 8", "ai", "api integration", "azure", "azure face api", "bounding box visualization", "csharp", "cloud ai services", "coding", "community", "computer vision", "expression analysis", "eye aspect ratio", "face detection", "facial landmark detection", "head pose estimation", "mouth aspect ratio", "nuget packages", "opencvsharp", "real time video processing", "vs"]
+tags:
+- .NET 8
+- AI
+- API Integration
+- Azure
+- Azure Face API
+- Bounding Box Visualization
+- C#
+- Cloud AI Services
+- Community
+- Computer Vision
+- Expression Analysis
+- Eye Aspect Ratio
+- Face Detection
+- Facial Landmark Detection
+- Head Pose Estimation
+- Mouth Aspect Ratio
+- NuGet Packages
+- OpenCVSharp
+- Real Time Video Processing
+- VS
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 ravimodi presents a hands-on walkthrough for integrating Azure Face API with C# and OpenCV, teaching facial landmark detection, head pose analysis, real-time video stream processing, and the implementation of geometric calculations in modern applications.<!--excerpt_end-->
 
 # Exploring Azure Face API: Facial Landmark Detection and Real-Time Analysis with C#

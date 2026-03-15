@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Resolving Orphaned Azure Subscription Access When No Owner Is Reachable"
-description: "This community post outlines the challenge of recovering access to an orphaned Azure subscription where no user has Owner privileges. The post discusses failed attempts to contact Azure support due to insufficient permissions, reviews documentation, and shares potential escalation strategies, including elevating Global Admin privileges and using alternative Microsoft support channels."
-author: "GelatinousCubeZantar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mk81h8/orphaned_azure_subscription_no_owner_access/
+title: Resolving Orphaned Azure Subscription Access When No Owner Is Reachable
+author: GelatinousCubeZantar
+feed_name: Reddit Azure
 date: 2025-08-07 18:31:50 +00:00
-permalink: "/2025-08-07-Resolving-Orphaned-Azure-Subscription-Access-When-No-Owner-Is-Reachable.html"
-categories: ["Azure", "Security"]
-tags: ["Access Recovery", "Azure", "Azure Portal", "Azure Subscription", "Azure Support", "Community", "Entra ID", "Global Admin", "Identity Management", "Management Groups", "Microsoft Documentation", "Role Based Access Control", "Security", "Subscription Ownership", "Subscription Transfer"]
-tags_normalized: ["access recovery", "azure", "azure portal", "azure subscription", "azure support", "community", "entra id", "global admin", "identity management", "management groups", "microsoft documentation", "role based access control", "security", "subscription ownership", "subscription transfer"]
+tags:
+- Access Recovery
+- Azure Portal
+- Azure Subscription
+- Azure Support
+- Entra ID
+- Global Admin
+- Identity Management
+- Management Groups
+- Microsoft Documentation
+- Role Based Access Control
+- Subscription Ownership
+- Subscription Transfer
+- Azure
+- Security
+- Community
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 GelatinousCubeZantar details the process and obstacles in recovering access to an orphaned Azure subscription, including real-world escalation attempts and technical suggestions based on Microsoft's documentation.<!--excerpt_end-->
 
 # Resolving Orphaned Azure Subscription Access When No Owner Is Reachable
@@ -44,15 +54,15 @@ The author seeks advice for any process or escalation pathway, outside the Azure
 ## Community Suggestions and Solutions
 
 - **Elevate Access for Entra Global Admin**: Use the documented process ([see Microsoft Docs](https://learn.microsoft.com/en-us/azure/role-based-access-control/elevate-access-global-admin?$WT.mc_id=AZ-MVP-5003556)) to temporarily grant a Global Admin the ability to manage all subscriptions and management groups. This can help regain access if there is a Global Admin in the tenant.
-    - Check the Entra ID (formerly Azure AD) tenant's properties for the feature flag indicating which account (potentially a Global Admin) can manage all resources.
+  - Check the Entra ID (formerly Azure AD) tenant's properties for the feature flag indicating which account (potentially a Global Admin) can manage all resources.
 - **Provide Documentation to Azure Support**: If able to reach a human via alternate Microsoft channels, prepare:
-    - Proof of business and/or IP ownership
-    - Ownership contracts
-    - Payment records
+  - Proof of business and/or IP ownership
+  - Ownership contracts
+  - Payment records
 - **Contact Microsoft Through Other Subscriptions or Channels**:
-    - Submit a ticket referencing another active subscription, but explain in the issue that help is needed with the orphaned subscription
-    - Use a Microsoft Gold Partner ([Find a Partner](https://partner.microsoft.com/en-us/partnership/find-a-partner)) for assistance
-    - Contact Microsoft MVPs via [MVP search](https://mvp.microsoft.com/en-US/search?target=Profile&program=MVP) or LinkedIn—they may have direct escalation contacts
+  - Submit a ticket referencing another active subscription, but explain in the issue that help is needed with the orphaned subscription
+  - Use a Microsoft Gold Partner ([Find a Partner](https://partner.microsoft.com/en-us/partnership/find-a-partner)) for assistance
+  - Contact Microsoft MVPs via [MVP search](https://mvp.microsoft.com/en-US/search?target=Profile&program=MVP) or LinkedIn—they may have direct escalation contacts
 - **Payment-Based Escalation**: The individual or company paying the Azure bill should have a contact path with Microsoft for billing that may provide a route for escalation, even without subscription Owner role
 
 ## References

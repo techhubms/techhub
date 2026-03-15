@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Scaling Modernization on Azure with Agentic AI Tools"
-description: "This article announces Microsoft's first agentic end-to-end modernization solution on Azure, showcasing how Azure Copilot and GitHub Copilot agents streamline modernization for IT and developers. It covers key capabilities, integration between tools, and real customer outcomes from agentic workflows."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/many-agents-one-team-scaling-modernization-on-azure/
+title: Scaling Modernization on Azure with Agentic AI Tools
+author: stclarke
+primary_section: github-copilot
+feed_name: Microsoft News
 date: 2026-03-11 16:05:24 +00:00
-permalink: "/2026-03-11-Scaling-Modernization-on-Azure-with-Agentic-AI-Tools.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Modernization", "Agentic AI", "AI", "AI Agents", "Application Modernization", "Azure", "Azure Copilot", "Azure Migration", "Cloud Accelerate Factory", "Cloud Migration", "Coding", "Company News", "Continuous Modernization", "Database Modernization", "Developer Workflow", "DevOps", "DevOps Automation", "GitHub Copilot", "Infrastructure Modernization", "Java Upgrades", "Microsoft Azure", "Migration Planning", "Modernization Agent", "News", "Public Preview", "Telemetry"]
-tags_normalized: ["dotnet modernization", "agentic ai", "ai", "ai agents", "application modernization", "azure", "azure copilot", "azure migration", "cloud accelerate factory", "cloud migration", "coding", "company news", "continuous modernization", "database modernization", "developer workflow", "devops", "devops automation", "github copilot", "infrastructure modernization", "java upgrades", "microsoft azure", "migration planning", "modernization agent", "news", "public preview", "telemetry"]
+tags:
+- .NET Modernization
+- Agentic AI
+- AI
+- AI Agents
+- Application Modernization
+- Azure
+- Azure Copilot
+- Azure Migration
+- Cloud Accelerate Factory
+- Cloud Migration
+- Company News
+- Continuous Modernization
+- Database Modernization
+- Developer Workflow
+- DevOps
+- DevOps Automation
+- GitHub Copilot
+- Infrastructure Modernization
+- Java Upgrades
+- Microsoft Azure
+- Migration Planning
+- Modernization Agent
+- News
+- Public Preview
+- Telemetry
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
 ---
-
 stclarke explores Microsoft’s rollout of agentic AI tools Azure Copilot and GitHub Copilot for unified modernization workflows, highlighting features that streamline cloud migration and application transformation for IT and development teams.<!--excerpt_end-->
 
 # Scaling Modernization on Azure with Agentic AI Tools

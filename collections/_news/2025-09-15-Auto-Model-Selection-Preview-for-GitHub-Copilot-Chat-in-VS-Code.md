@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Auto Model Selection Preview for GitHub Copilot Chat in VS Code"
-description: "This article introduces the new auto model selection feature—now in preview—within GitHub Copilot Chat for VS Code. It outlines how this capability automatically picks the optimal AI model for each chat request, dynamically balancing performance and capacity, and details upcoming improvements. The post explains pricing impacts, such as discounts for paid users, and how the feature manages model choices like Claude Sonnet 4 or GPT-5-mini. The article is written by Isidor Nikolic."
-author: "Isidor Nikolic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2025/09/15/autoModelSelection
+title: Auto Model Selection Preview for GitHub Copilot Chat in VS Code
+author: Isidor Nikolic
+feed_name: Visual Studio Code Releases
 date: 2025-09-15 00:00:00 +00:00
-permalink: "/2025-09-15-Auto-Model-Selection-Preview-for-GitHub-Copilot-Chat-in-VS-Code.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "AI Model Selection", "Auto Selection", "Claude Sonnet 4", "Copilot Chat", "Developer Tools", "GitHub Copilot", "GPT 5", "GPT 5 Mini", "Model Discount", "Model Multiplier", "News", "OpenAI", "Premium Requests", "VS Code", "VS Code Dev Days"]
-tags_normalized: ["ai", "ai integration", "ai model selection", "auto selection", "claude sonnet 4", "copilot chat", "developer tools", "github copilot", "gpt 5", "gpt 5 mini", "model discount", "model multiplier", "news", "openai", "premium requests", "vs code", "vs code dev days"]
+tags:
+- AI Integration
+- AI Model Selection
+- Auto Selection
+- Claude Sonnet 4
+- Copilot Chat
+- Developer Tools
+- GPT 5
+- GPT 5 Mini
+- Model Discount
+- Model Multiplier
+- OpenAI
+- Premium Requests
+- VS Code
+- VS Code Dev Days
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Isidor Nikolic details the auto model selection feature preview for GitHub Copilot in VS Code, explaining how it optimizes model choices for better performance and savings for developers.<!--excerpt_end-->
 
 # Introducing Auto Model Selection (Preview) for GitHub Copilot in VS Code
@@ -24,6 +36,7 @@ Isidor Nikolic details the auto model selection feature preview for GitHub Copil
 The new auto model selection feature, now available in preview for GitHub Copilot users in VS Code, brings faster responses, reduced rate limiting, and cost savings through automatic discounting on select premium requests. With auto model selection, Copilot Chat automatically chooses the best available AI model for each request—such as Claude Sonnet 4, GPT-5, or GPT-5 mini—based on current capacity and performance, instead of requiring users to pick models manually.
 
 > **Key benefits:**
+>
 > - Optimizes performance by dynamically choosing between large and small models
 > - Minimizes your risk of hitting rate limits
 > - Applies a 10% discount on premium requests for paid users

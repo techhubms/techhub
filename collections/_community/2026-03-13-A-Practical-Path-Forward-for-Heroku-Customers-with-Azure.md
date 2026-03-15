@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "A Practical Path Forward for Heroku Customers with Azure"
-description: "This comprehensive guide by NagaSurendran helps teams understand how to migrate and modernize applications from Heroku to Azure, covering cloud-native app platforms, containers, developer frameworks, GitHub Copilot integration, DevOps practices, database migration, AI capabilities, and best practices for observability and operations within the Microsoft ecosystem."
-author: "NagaSurendran"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-practical-path-forward-for-heroku-customers-with-azure/ba-p/4501797"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/a-practical-path-forward-for-heroku-customers-with-azure/ba-p/4501797
+title: A Practical Path Forward for Heroku Customers with Azure
+author: NagaSurendran
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-03-13 15:00:00 +00:00
-permalink: "/2026-03-13-A-Practical-Path-Forward-for-Heroku-Customers-with-Azure.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Platform", "App Modernization", "Application Monitoring", "Azure", "Azure App Service", "Azure Container Apps", "Azure Monitor", "Cloud Native", "Community", "Dapr", "DevOps", "GitHub Copilot", "GitHub Integration", "Heroku Migration", "Java", "KEDA", "Microservices", "Microsoft Foundry", "Node.js", "PostgreSQL", "Python", "Serverless"]
-tags_normalized: ["dotnet", "ai", "ai platform", "app modernization", "application monitoring", "azure", "azure app service", "azure container apps", "azure monitor", "cloud native", "community", "dapr", "devops", "github copilot", "github integration", "heroku migration", "java", "keda", "microservices", "microsoft foundry", "nodedotjs", "postgresql", "python", "serverless"]
+tags:
+- .NET
+- AI
+- AI Platform
+- App Modernization
+- Application Monitoring
+- Azure
+- Azure App Service
+- Azure Container Apps
+- Azure Monitor
+- Cloud Native
+- Community
+- Dapr
+- DevOps
+- GitHub Copilot
+- GitHub Integration
+- Heroku Migration
+- Java
+- KEDA
+- Microservices
+- Microsoft Foundry
+- Node.js
+- PostgreSQL
+- Python
+- Serverless
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 NagaSurendran details practical strategies for organizations migrating from Heroku, focusing on how Azure and its integrated tools—including GitHub Copilot and Microsoft Foundry—enable modern, secure, and intelligent cloud-native applications.<!--excerpt_end-->
 
 # A Practical Path Forward for Heroku Customers with Azure

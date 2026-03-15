@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing Official Support for Microsoft fabric-cicd Tool"
-description: "Microsoft Fabric officially supports fabric-cicd, an open-source Python deployment library designed to automate CI/CD pipelines in Fabric workspaces. This article details its evolution, objectives, integration with Git, and how it enables cross-workspace deployments with parameterization and dependency handling—expanding DevOps capabilities for Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-official-support-for-microsoft-fabric-cicd-tool/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-official-support-for-microsoft-fabric-cicd-tool/
+title: Announcing Official Support for Microsoft fabric-cicd Tool
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-19 12:00:00 +00:00
-permalink: "/2026-02-19-Announcing-Official-Support-for-Microsoft-fabric-cicd-Tool.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Azure", "Build And Release Pipeline", "CI/CD", "Coding", "Continuous Deployment", "Cross Workspace Deployment", "Data Platform", "Deployment Pipelines", "DevOps", "DevOps Automation", "Environment Configuration", "Fabric Cicd", "Git Integration", "Microsoft Fabric", "ML", "News", "Parameterization", "Python", "REST API"]
-tags_normalized: ["azure", "build and release pipeline", "cislashcd", "coding", "continuous deployment", "cross workspace deployment", "data platform", "deployment pipelines", "devops", "devops automation", "environment configuration", "fabric cicd", "git integration", "microsoft fabric", "ml", "news", "parameterization", "python", "rest api"]
+tags:
+- Azure
+- Build And Release Pipeline
+- CI/CD
+- Continuous Deployment
+- Cross Workspace Deployment
+- Data Platform
+- Deployment Pipelines
+- DevOps
+- DevOps Automation
+- Environment Configuration
+- Fabric Cicd
+- Git Integration
+- Microsoft Fabric
+- ML
+- News
+- Parameterization
+- Python
+- REST API
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- ml
 ---
-
 The Microsoft Fabric Blog introduces the officially supported fabric-cicd Python library, providing robust, automated CI/CD capabilities for Fabric workspaces. Learn from Microsoft's announcement how this tool simplifies cross-workspace deployments and modernizes DevOps for Fabric.<!--excerpt_end-->
 
 # Announcing Official Support for Microsoft fabric-cicd Tool

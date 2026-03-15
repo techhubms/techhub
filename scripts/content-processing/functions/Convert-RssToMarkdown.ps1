@@ -6,9 +6,8 @@ function Convert-RssToMarkdown {
         [Parameter(Mandatory = $true)]
         [string]$Token,
         [Parameter(Mandatory = $true)]
-        [string]$Model,
-        [Parameter(Mandatory = $true)]
-        [string]$Endpoint,
+        [ValidateSet('staging', 'prod')]
+        [string]$Environment,
         [Parameter(Mandatory = $false)]
         [int]$RateLimitPreventionDelay = 15,
         [Parameter(Mandatory = $false)]
@@ -44,16 +43,16 @@ function Convert-RssToMarkdown {
     $totalItems = $Items.Count
     $itemsToSkip = @($Items | Where-Object { 
             $currentLink = $_.Link
-            $skippedEntries | Where-Object { $_.canonical_url -eq $currentLink }
+            $skippedEntries | Where-Object { $_.external_url -eq $currentLink }
         })
     $itemsAlreadyProcessed = @($Items | Where-Object { 
             $currentLink = $_.Link
-            $processedEntries | Where-Object { $_.canonical_url -eq $currentLink }
+            $processedEntries | Where-Object { $_.external_url -eq $currentLink }
         })
     $itemsToProcess = @($Items | Where-Object { 
             $currentLink = $_.Link
-            -not ($skippedEntries | Where-Object { $_.canonical_url -eq $currentLink }) -and
-            -not ($processedEntries | Where-Object { $_.canonical_url -eq $currentLink })
+            -not ($skippedEntries | Where-Object { $_.external_url -eq $currentLink }) -and
+            -not ($processedEntries | Where-Object { $_.external_url -eq $currentLink })
         })
     
     # Display processing summary
@@ -77,20 +76,20 @@ function Convert-RssToMarkdown {
                 throw "Collection could not be determined from OutputDir '$($item.OutputDir)'"
             }
 
-            # Remove old file if it already exists based on canonical_url, so we can update markdown files by removing their entries from the processed and/or skipped entries files
+            # Remove old file if it already exists based on external_url, so we can update markdown files by removing their entries from the processed and/or skipped entries files
             $existingFiles = Get-ChildItem -Path $item.OutputDir -Filter "*.md" -ErrorAction SilentlyContinue
             foreach ($existingFile in $existingFiles) {
                 try {
                     $existingContent = Get-Content -Path $existingFile.FullName -Raw -ErrorAction SilentlyContinue
-                    if ($existingContent -and $existingContent -match 'canonical_url:\s*"?([^"\s]+)"?') {
-                        $existingCanonicalUrl = $matches[1].Trim('"')
-                        if ($existingCanonicalUrl -eq $item.Link) {
+                    if ($existingContent -and $existingContent -match 'external_url:\s*"?([^"\s]+)"?') {
+                        $existingExternalUrl = $matches[1].Trim('"')
+                        if ($existingExternalUrl -eq $item.Link) {
                             if ($PSCmdlet.ShouldProcess($existingFile.FullName, "Remove existing markdown file")) {
                                 Remove-Item -Path $existingFile.FullName -Force
-                                Write-Host "Removing existing file with same canonical_url: $($existingFile.FullName)"
+                                Write-Host "Removing existing file with same external_url: $($existingFile.FullName)"
                             }
                             else {
-                                Write-Host "What if: Would remove existing file with same canonical_url: $($existingFile.FullName)"
+                                Write-Host "What if: Would remove existing file with same external_url: $($existingFile.FullName)"
                             }
                             break
                         }
@@ -106,8 +105,8 @@ function Convert-RssToMarkdown {
             if ($item.EnhancedContent -and $item.EnhancedContent.Length -lt $lengthRequirement) {
                 Write-Host "Skipping item due to insufficient content length: $($item.Link)" -ForegroundColor Yellow
                 
-                # Write canonical URL to skipped-entries.json to avoid reprocessing
-                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Insufficient content length" -Collection $collection_value
+                # Write external URL to skipped-entries.json to avoid reprocessing
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Insufficient content length" -Collection $collection_value
                 
                 continue
             }
@@ -130,9 +129,8 @@ function Convert-RssToMarkdown {
 
             $response = Invoke-ProcessWithAiModel `
                 -Token $Token `
-                -Model $Model `
+                -Environment $Environment `
                 -InputData $inputData `
-                -Endpoint $Endpoint `
                 -RateLimitPreventionDelay $RateLimitPreventionDelay
         
             # Check for errors that we can return (rate limit or content filter)
@@ -146,14 +144,14 @@ function Convert-RssToMarkdown {
                 elseif ($response.Type -eq "ContentFilter") {
                     Write-Host "Content filter error from pattern $($response.Pattern)" -ForegroundColor Yellow
                     # Add to skipped entries and continue to next item
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Content blocked by safety filters" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Content blocked by safety filters" -Collection $collection_value
                     
                     continue
                 }
                 elseif ($response.Type -eq "RequestEntityTooLarge") {
                     Write-Host "Too many tokens for GPT 4.1" -ForegroundColor Yellow
                     # Add to skipped entries and continue to next item
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "Too many tokens in the request" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Too many tokens in the request" -Collection $collection_value
                     
                     continue
                 }
@@ -161,10 +159,10 @@ function Convert-RssToMarkdown {
                     Write-Host "AI model response could not be parsed as JSON" -ForegroundColor Yellow
                 
                     # Save the AI result for debugging purposes
-                    Save-AiApiResult -InputData $inputData -Response $response -Url $item.Link -Model $Model -PubDate $item.PubDate -AiResultsPath (Join-Path $scriptsPath "airesults")
+                    Save-AiApiResult -InputData $inputData -Response $response -Url $item.Link -Model (Get-AzureOpenAIModelName) -PubDate $item.PubDate -AiResultsPath (Join-Path $scriptsPath "airesults")
                 
                     # Add to skipped entries and continue to next item
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "AI model response could not be parsed as JSON" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "AI model response could not be parsed as JSON" -Collection $collection_value
                     
                     continue
                 }
@@ -173,7 +171,7 @@ function Convert-RssToMarkdown {
                 
                     # Add to skipped entries and continue to next item
                     $errorMessage = if ($response.PSObject.Properties.Name -contains 'Message') { $response.Message } else { "Response parse error" }
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "AI API response parse error: $errorMessage" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "AI API response parse error: $errorMessage" -Collection $collection_value
                     
                     continue
                 }
@@ -182,7 +180,7 @@ function Convert-RssToMarkdown {
                 
                     # Add to skipped entries and continue to next item
                     $errorMessage = if ($response.PSObject.Properties.Name -contains 'Message') { $response.Message } else { "All retries failed" }
-                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason "API call retries failed: $errorMessage" -Collection $collection_value
+                    Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "API call retries failed: $errorMessage" -Collection $collection_value
                     
                     continue
                 }
@@ -215,7 +213,7 @@ function Convert-RssToMarkdown {
             if (-not $categories -or $categories.Count -eq 0) {
                 Write-Host "No categories found, skipping item" -ForegroundColor Yellow
 
-                # Write canonical URL to skipped-entries.json to avoid reprocessing
+                # Write external URL to skipped-entries.json to avoid reprocessing
                 $explanation = if ($response.PSObject.Properties.Name -contains 'explanation') { $response.explanation } else { "" }
                 $finalReason = if ($explanation -and $explanation.Trim() -ne "") {
                     "No categories found: $explanation"
@@ -224,7 +222,7 @@ function Convert-RssToMarkdown {
                     "No categories found"
                 }
             
-                Add-TrackingEntry -EntriesPath $skippedEntriesPath -CanonicalUrl $item.Link -Reason $finalReason -Collection $collection_value
+                Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason $finalReason -Collection $collection_value
 
                 continue;
             }
@@ -232,27 +230,49 @@ function Convert-RssToMarkdown {
                 Write-Host "Categories found: $($categories -join ', ')" -ForegroundColor Green
             }        
 
+            # Convert categories (display names) to section_names (normalized identifiers)
+            # Mapping: 'AI' → 'ai', 'GitHub Copilot' → 'github-copilot', '.NET' → 'dotnet', etc.
+            $sectionNameMapping = @{
+                'AI'             = 'ai'
+                'Azure'          = 'azure'
+                'GitHub Copilot' = 'github-copilot'
+                '.NET'           = 'dotnet'
+                'DevOps'         = 'devops'
+                'Security'       = 'security'
+                'Coding'         = 'coding'
+                'Cloud'          = 'cloud'
+            }
+            
+            $section_names = @()
+            foreach ($category in $categories) {
+                if ($sectionNameMapping.ContainsKey($category)) {
+                    $section_names += $sectionNameMapping[$category]
+                }
+                else {
+                    # Fallback: convert to lowercase and replace spaces with hyphens
+                    $normalizedName = $category.ToLower() -replace '\s+', '-' -replace '[^a-z0-9-]', ''
+                    $section_names += $normalizedName
+                    Write-Host "Warning: Unknown category '$category', normalized to '$normalizedName'" -ForegroundColor Yellow
+                }
+            }
+            $section_names = @($section_names | Sort-Object -Unique)
+
             $tags = $item.Tags
             if ($response.tags -and $response.tags.Count -gt 0) {
                 $tags += $response.tags
             }
         
-            $tagResult = Get-FilteredTags -Tags $tags -Categories $categories -Collection $collection_value
-            $tags = $tagResult.tags
-            $tags_normalized = $tagResult.tags_normalized
+            $tags = Get-FilteredTags -Tags $tags -Categories $categories -Collection $collection_value
+            # tags_normalized is deprecated - normalization happens in .NET code, not stored in frontmatter
 
             # Select template based on output directory
             $templatePath = $genericTemplatePath
-            $youtubeId = ''
         
             if ($item.OutputDir -eq '_videos') {
                 $templatePath = $videoTemplatePath
-
-                # Extract YouTube video ID using the comprehensive function
-                $youtubeId = Get-YouTubeVideoId -Url $item.Link
             }
 
-            # Format date and fix timezone format from +0000 to +00:00 for Jekyll compatibility
+            # Format date and fix timezone format from +0000 to +00:00
             $dateFormatted = $item.PubDate.ToString("yyyy-MM-dd HH:mm:ss zzz")
             $dateFormatted = $dateFormatted -replace '(\+|-)(\d{2})(\d{2})(?!:)', '$1$2:$3'
         
@@ -260,24 +280,48 @@ function Convert-RssToMarkdown {
             $fileNamePubDate = $item.PubDate.ToString("yyyy-MM-dd")
             $fileNameTitle = (ConvertTo-SafeFilename -Title $response.title -MaxLength 200)
             $filename = "$fileNamePubDate-$fileNameTitle.md"
-            $permalink = "$fileNamePubDate-$fileNameTitle.html"
 
+            # Compute primary_section from section_names using priority order
+            # Priority: github-copilot > ai > ml > dotnet > azure > devops > security
+            # Must match ContentItem.ComputePrimarySectionName() in C#
+            $sectionPriorityOrder = @("github-copilot", "ai", "ml", "dotnet", "azure", "devops", "security")
+            $primary_section = "all"
+            if ($section_names.Count -gt 0) {
+                foreach ($prioritySection in $sectionPriorityOrder) {
+                    if ($section_names -contains $prioritySection) {
+                        $primary_section = $prioritySection
+                        break
+                    }
+                }
+                if ($primary_section -eq "all") {
+                    $primary_section = $section_names[0].ToLowerInvariant()
+                }
+            }
+
+            # Build frontmatter hashtable
+            $frontMatter = @{
+                title           = $response.title
+                author          = $item.Author
+                external_url    = $item.Link
+                feed_name       = $item.FeedName
+                date            = $dateFormatted
+                tags            = @($tags)
+                section_names   = @($section_names)
+                primary_section = $primary_section
+            }
+            
+            # Convert frontmatter to YAML using YamlDotNet (same library as ContentFixer)
+            $yamlFrontMatter = ConvertTo-YamlFrontMatter -FrontMatter $frontMatter
+
+            # Load template and replace placeholders
+            # CRITICAL: Use .Replace() (literal) instead of -replace (regex) because
+            # AI-generated content contains $ characters (PowerShell code) that would be
+            # interpreted as regex substitution patterns ($_ = entire input, $& = match, etc.)
             $markdownContent = Get-Content $templatePath -Raw
-            $markdownContent = $markdownContent -replace '{{TITLE}}', (Format-FrontMatterValue -Value $response.title)
-            $markdownContent = $markdownContent -replace '{{AUTHOR}}', (Format-FrontMatterValue -Value $item.Author)
-            $markdownContent = $markdownContent -replace '{{DESCRIPTION}}', (Format-FrontMatterValue -Value $response.description)
-            $markdownContent = $markdownContent -replace '{{TAGS}}', (Format-FrontMatterValue -Value @($tags))
-            $markdownContent = $markdownContent -replace '{{TAGS_NORMALIZED}}', (Format-FrontMatterValue -Value @($tags_normalized))
-            $markdownContent = $markdownContent -replace '{{FEEDNAME}}', (Format-FrontMatterValue -Value $item.FeedName)
-            $markdownContent = $markdownContent -replace '{{CATEGORIES}}', (Format-FrontMatterValue -Value @($categories))
-            $markdownContent = $markdownContent -replace '{{PERMALINK}}', (Format-FrontMatterValue -Value $permalink)
-            $markdownContent = $markdownContent -replace '{{CANONICAL_URL_FORMATTED}}', (Format-FrontMatterValue -Value $item.Link)
-            $markdownContent = $markdownContent -replace '{{CANONICAL_URL}}', $item.Link
-            $markdownContent = $markdownContent -replace '{{FEEDURL}}', $item.FeedUrl
-            $markdownContent = $markdownContent -replace '{{CONTENT}}', $response.content
-            $markdownContent = $markdownContent -replace '{{EXCERPT}}', $response.excerpt
-            $markdownContent = $markdownContent -replace '{{YOUTUBE_ID}}', $youtubeId
-            $markdownContent = $markdownContent -replace '{{DATE}}', $dateFormatted
+            $markdownContent = $markdownContent.Replace('{{FRONTMATTER}}', $yamlFrontMatter)
+            $markdownContent = $markdownContent.Replace('{{EXTERNAL_URL}}', $item.Link)
+            $markdownContent = $markdownContent.Replace('{{CONTENT}}', $response.content)
+            $markdownContent = $markdownContent.Replace('{{EXCERPT}}', $response.excerpt)
 
             # Create the file
             $filePath = Join-Path $item.OutputDir $filename
@@ -294,9 +338,14 @@ function Convert-RssToMarkdown {
                 Set-Content -Path $filePath -Value $markdownContent -Encoding UTF8 -Force
                 Write-Host "✅ Created file: $filePath" -ForegroundColor Green
 
-                # Fix markdown immediately
-                Repair-MarkdownJekyll -FilePath $filePath
-                Repair-MarkdownFormatting -FilePath $filePath
+                # Fix markdown formatting only - new files already have correct .NET frontmatter
+                $lintResult = npx --yes markdownlint-cli2 --fix $filePath 2>&1
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
+                    Write-Host "   File: $filePath" -ForegroundColor Yellow
+                    Write-Host "   Output: $lintResult" -ForegroundColor Yellow
+                    # Continue processing - linting issues shouldn't block content creation
+                }
                 
                 # Verify file was created successfully before adding to processed entries
                 if (Test-Path $filePath) {
@@ -308,7 +357,7 @@ function Convert-RssToMarkdown {
                     else {
                         "Succesfully added"
                     }
-                    Add-TrackingEntry -EntriesPath $processedEntriesPath -CanonicalUrl $item.Link -Collection $collection_value -Reason $finalReason
+                    Add-TrackingEntry -EntriesPath $processedEntriesPath -ExternalUrl $item.Link -Collection $collection_value -Reason $finalReason
                 }
                 else {
                     Write-Host "⚠️  File creation verification failed, not adding to processed entries" -ForegroundColor Yellow

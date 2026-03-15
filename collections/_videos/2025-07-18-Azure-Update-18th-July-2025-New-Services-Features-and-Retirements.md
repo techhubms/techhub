@@ -1,20 +1,54 @@
----
-layout: "post"
-title: "Azure Update – 18th July 2025: New Services, Features & Retirements"
-description: "This video, hosted by John Savill, summarizes a wide range of new Azure service updates and feature changes announced in mid-July 2025. Key topics covered include PowerShell Durable Functions SDK, Durable Functions orchestration versioning, new AKS (Azure Kubernetes Service) capabilities, Azure Functions Kafka triggers, Event Hub geo-replication, Cosmos DB in Microsoft Fabric, Databricks Unity Catalog to Fabric OneLake, Azure Cloud HSM, backup policy migrations, and Azure AI service retirements. The video also outlines upcoming changes for Azure CDN and other cloud services."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=b65KgVInTNo"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=b65KgVInTNo
+title: 'Azure Update – 18th July 2025: New Services, Features & Retirements'
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2025-07-18 14:55:42 +00:00
-permalink: "/2025-07-18-Azure-Update-18th-July-2025-New-Services-Features-and-Retirements.html"
-categories: ["AI", "Azure", "Coding", "ML", "DevOps", "Security"]
-tags: ["AFD Classic", "AI", "AKS Extension Manager", "AKS Migration Command", "AKS Node Provisioning", "AKS VM Node Pools", "Azure", "Azure AI Speaker Recognition", "Azure Backup", "Azure CDN", "Azure Cloud", "Azure Cloud HSM", "Azure Kubernetes Service (aks)", "Azure Security", "Azure Updates", "BlobNFS", "Cloud", "Cloud Migration", "Coding", "Cosmos DB", "Databricks Unity Catalog", "DevOps", "Durable Functions Orchestration", "Event Hub Geo Replication", "ExpressRoute Gateway", "Fabric OneLake", "HOBO Public IP", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "ML", "PostgreSQL Flexible Server", "PowerShell Durable Functions SDK", "Security", "SSD Ephemeral OS Disk", "Videos"]
-tags_normalized: ["afd classic", "ai", "aks extension manager", "aks migration command", "aks node provisioning", "aks vm node pools", "azure", "azure ai speaker recognition", "azure backup", "azure cdn", "azure cloud", "azure cloud hsm", "azure kubernetes service aks", "azure security", "azure updates", "blobnfs", "cloud", "cloud migration", "coding", "cosmos db", "databricks unity catalog", "devops", "durable functions orchestration", "event hub geo replication", "expressroute gateway", "fabric onelake", "hobo public ip", "microsoft", "microsoft azure", "microsoft fabric", "ml", "postgresql flexible server", "powershell durable functions sdk", "security", "ssd ephemeral os disk", "videos"]
+tags:
+- AFD Classic
+- AKS Extension Manager
+- AKS Migration Command
+- AKS Node Provisioning
+- AKS VM Node Pools
+- Azure AI Speaker Recognition
+- Azure Backup
+- Azure CDN
+- Azure Cloud
+- Azure Cloud HSM
+- Azure Kubernetes Service (aks)
+- Azure Security
+- Azure Updates
+- BlobNFS
+- Cloud Migration
+- Cosmos DB
+- Databricks Unity Catalog
+- Durable Functions Orchestration
+- Event Hub Geo Replication
+- ExpressRoute Gateway
+- Fabric OneLake
+- HOBO Public IP
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- PostgreSQL Flexible Server
+- PowerShell Durable Functions SDK
+- SSD Ephemeral OS Disk
+- AI
+- Azure
+- ML
+- DevOps
+- Security
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- ml
+- devops
+- security
+primary_section: ai
 ---
-
 John Savill delivers a comprehensive roundup of the latest Azure platform updates as of July 18th, 2025. This episode covers new Azure services, feature retirements, and key changes relevant for developers and IT professionals.<!--excerpt_end-->
 
 {% youtube b65KgVInTNo %}
@@ -34,28 +68,28 @@ Stay up to date with all the significant changes and new features rolled out to 
 - **Durable Functions Orchestration Versioning**: Best practices for version handling when orchestrating complex workflows.
 - **Azure Functions Kafka Triggers**: Now support direct event-driven integration for Kafka, broadening event source options for serverless workloads.
 - **AKS (Azure Kubernetes Service) Enhancements**:
-    - Node auto-provisioning
-    - VM node pool options
-    - Simplified migration commands
-    - Maximum blocked nodes configuration
-    - Extension manager now controlled from the AKS control plane
+  - Node auto-provisioning
+  - VM node pool options
+  - Simplified migration commands
+  - Maximum blocked nodes configuration
+  - Extension manager now controlled from the AKS control plane
 - **Networking**:
-    - HOBO public IP for ExpressRoute Gateway
-    - AFD (classic) and Azure CDN (classic) onboarding retirements
+  - HOBO public IP for ExpressRoute Gateway
+  - AFD (classic) and Azure CDN (classic) onboarding retirements
 - **Storage and Data**:
-    - Major update to BlobNFS (NFS support for Azure Blob Storage)
-    - Event Hub geo-replication for higher availability
-    - SSD storage for ephemeral OS disks
-    - Cosmos DB integration with Microsoft Fabric
-    - Databricks Unity Catalog support for Fabric OneLake storage
-    - PostgreSQL Flexible Server availability in new regions
+  - Major update to BlobNFS (NFS support for Azure Blob Storage)
+  - Event Hub geo-replication for higher availability
+  - SSD storage for ephemeral OS disks
+  - Cosmos DB integration with Microsoft Fabric
+  - Databricks Unity Catalog support for Fabric OneLake storage
+  - PostgreSQL Flexible Server availability in new regions
 - **Backup and Security**:
-    - Migrations from standard to enhanced backup policies
-    - Trusted launch support added to standard backup
-    - Premium SSD backup gains GRS and CRR in more regions
-    - Azure Cloud Hardware Security Module (HSM) news
+  - Migrations from standard to enhanced backup policies
+  - Trusted launch support added to standard backup
+  - Premium SSD backup gains GRS and CRR in more regions
+  - Azure Cloud Hardware Security Module (HSM) news
 - **AI and Platform Changes**:
-    - Azure AI Speaker Recognition retirement notice
+  - Azure AI Speaker Recognition retirement notice
 
 ## Further Learning
 

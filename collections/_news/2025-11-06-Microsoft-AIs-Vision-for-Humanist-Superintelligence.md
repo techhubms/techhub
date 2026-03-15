@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft AI’s Vision for Humanist Superintelligence"
-description: "This article by Mustafa Suleyman outlines Microsoft AI’s initiative to develop Humanist Superintelligence (HSI)—a direction for advanced artificial intelligence that centers human values, safety, and practical benefit. It explores the rationale for HSI, challenges in AI containment and alignment, its applications in healthcare, education, and energy, and the need for responsible, transparent development and oversight."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://microsoft.ai/news/towards-humanist-superintelligence/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://microsoft.ai/news/towards-humanist-superintelligence/
+title: Microsoft AI’s Vision for Humanist Superintelligence
+author: stclarke
+feed_name: Microsoft News
 date: 2025-11-06 14:07:20 +00:00
-permalink: "/2025-11-06-Microsoft-AIs-Vision-for-Humanist-Superintelligence.html"
-categories: ["AI"]
-tags: ["AGI", "AI", "AI Alignment", "AI Containment", "AI Ethics", "AI For Healthcare", "AI in Education", "AI Policy", "AI Safety", "Clean Energy", "Company News", "Humanist Superintelligence", "MAI Superintelligence Team", "Medical Superintelligence", "Microsoft AI", "Mustafa Suleyman", "News", "Superintelligence"]
-tags_normalized: ["agi", "ai", "ai alignment", "ai containment", "ai ethics", "ai for healthcare", "ai in education", "ai policy", "ai safety", "clean energy", "company news", "humanist superintelligence", "mai superintelligence team", "medical superintelligence", "microsoft ai", "mustafa suleyman", "news", "superintelligence"]
+tags:
+- AGI
+- AI Alignment
+- AI Containment
+- AI Ethics
+- AI For Healthcare
+- AI in Education
+- AI Policy
+- AI Safety
+- Clean Energy
+- Company News
+- Humanist Superintelligence
+- MAI Superintelligence Team
+- Medical Superintelligence
+- Microsoft AI
+- Mustafa Suleyman
+- Superintelligence
+- AI
+- News
+section_names:
+- ai
+primary_section: ai
 ---
-
 Mustafa Suleyman, leading Microsoft AI’s Superintelligence Team, discusses the concept of Humanist Superintelligence and Microsoft's commitment to building advanced AI that aligns with human values and global challenges.<!--excerpt_end-->
 
 # Microsoft AI’s Vision for Humanist Superintelligence

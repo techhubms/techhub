@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Using and Authoring .NET Tools: Multi-Targeting, CI, and Best Practices"
-description: "Andrew Lock provides a deep dive into the complexities of authoring and using .NET tools, focusing on runtime compatibility, multi-targeting, and testing practices in CI environments. The article covers global and local tool installation, tool manifest management, targeting multiple .NET runtimes, leveraging the RollForward property, and practical tips for robust tool handling and CI integration. Developers will learn strategies for maintaining compatibility across .NET versions, efficiently testing with NuGet, managing pre-release and downgrade scenarios, and optimizing .NET tool packages for diverse environments."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/using-and-authoring-dotnet-tools/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/using-and-authoring-dotnet-tools/
+title: 'Using and Authoring .NET Tools: Multi-Targeting, CI, and Best Practices'
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-09-02 10:00:00 +00:00
-permalink: "/2025-09-02-Using-and-Authoring-NET-Tools-Multi-Targeting-CI-and-Best-Practices.html"
-categories: ["Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET SDK", ".NET Tool", ".NET Tools", "Allow Downgrade", "Blogs", "CI", "Coding", "Continuous Integration", "DevOps", "Global Tools", "Local Tools", "Multi Targeting", "NuGet", "PackAsTool", "Pre Release", "Rollforward", "Testing", "Tool Manifest"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet sdk", "dotnet tool", "dotnet tools", "allow downgrade", "blogs", "ci", "coding", "continuous integration", "devops", "global tools", "local tools", "multi targeting", "nuget", "packastool", "pre release", "rollforward", "testing", "tool manifest"]
+tags:
+- .NET
+- .NET 10
+- .NET SDK
+- .NET Tool
+- .NET Tools
+- Allow Downgrade
+- CI
+- Continuous Integration
+- Global Tools
+- Local Tools
+- Multi Targeting
+- NuGet
+- PackAsTool
+- Pre Release
+- Rollforward
+- Testing
+- Tool Manifest
+- DevOps
+- Blogs
+section_names:
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 Andrew Lock explores the complexities of authoring and managing .NET tools, offering practical advice on runtime targeting, manifest management, and CI testing for developers.<!--excerpt_end-->
 
 # Using and Authoring .NET Tools: Multi-Targeting, CI, and Best Practices

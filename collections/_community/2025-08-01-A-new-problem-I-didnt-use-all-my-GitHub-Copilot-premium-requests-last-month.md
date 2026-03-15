@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "A new problem - I didn't use all my GitHub Copilot premium requests last month"
-description: "The author shares their experience managing GitHub Copilot premium requests, reflecting on unused allocations, the lack of request carryover, and planning usage across various AI models for the next month."
-author: "thehashimwarren"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mev008/a_new_problem_i_didnt_use_all_my_github_copilot/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mev008/a_new_problem_i_didnt_use_all_my_github_copilot/
+title: A new problem - I didn't use all my GitHub Copilot premium requests last month
+author: thehashimwarren
+feed_name: Reddit Github Copilot
 date: 2025-08-01 12:20:43 +00:00
-permalink: "/2025-08-01-A-new-problem-I-didnt-use-all-my-GitHub-Copilot-premium-requests-last-month.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Productivity", "Claude 4", "Community", "Copilot Budgeting", "Developer Tools", "Gemini CLI", "GitHub Copilot", "Model Selection", "Monthly Reset", "Premium Requests", "Usage Planning"]
-tags_normalized: ["ai", "ai productivity", "claude 4", "community", "copilot budgeting", "developer tools", "gemini cli", "github copilot", "model selection", "monthly reset", "premium requests", "usage planning"]
+tags:
+- AI Productivity
+- Claude 4
+- Copilot Budgeting
+- Developer Tools
+- Gemini CLI
+- Model Selection
+- Monthly Reset
+- Premium Requests
+- Usage Planning
+- AI
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this post, thehashimwarren discusses their GitHub Copilot premium request usage, exploring allocation resets and strategies for AI model usage management as a developer.<!--excerpt_end-->
 
 # GitHub Copilot Premium Requests: Managing Monthly Usage

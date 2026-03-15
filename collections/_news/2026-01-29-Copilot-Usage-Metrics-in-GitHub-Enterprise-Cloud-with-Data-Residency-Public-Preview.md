@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Copilot Usage Metrics in GitHub Enterprise Cloud with Data Residency: Public Preview"
-description: "This update announces the public preview of Copilot metrics dashboards and APIs for GitHub Enterprise Cloud customers with data residency requirements. Now, organizations can programmatically monitor and analyze team usage, code generation, and Copilot feature adoption while complying with regional data regulations. API and dashboard access is governed by fine-grained enterprise roles."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-29-copilot-metrics-in-github-enterprise-cloud-with-data-residency-in-public-preview
+title: 'Copilot Usage Metrics in GitHub Enterprise Cloud with Data Residency: Public Preview'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-01-29 17:57:56 +00:00
-permalink: "/2026-01-29-Copilot-Usage-Metrics-in-GitHub-Enterprise-Cloud-with-Data-Residency-Public-Preview.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Advanced Analytics", "AI", "AI Controls", "API Access", "Code Generation Analytics", "Compliance", "Copilot", "Copilot Metrics", "Copilot Usage", "Data Residency", "DevOps", "Enterprise Management", "Enterprise Management Tools", "Feature Adoption", "GitHub Copilot", "GitHub Enterprise Cloud", "Monitoring", "News", "Permissions", "Reporting", "Usage Dashboards"]
-tags_normalized: ["advanced analytics", "ai", "ai controls", "api access", "code generation analytics", "compliance", "copilot", "copilot metrics", "copilot usage", "data residency", "devops", "enterprise management", "enterprise management tools", "feature adoption", "github copilot", "github enterprise cloud", "monitoring", "news", "permissions", "reporting", "usage dashboards"]
+tags:
+- Advanced Analytics
+- AI
+- AI Controls
+- API Access
+- Code Generation Analytics
+- Compliance
+- Copilot
+- Copilot Metrics
+- Copilot Usage
+- Data Residency
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- Feature Adoption
+- GitHub Copilot
+- GitHub Enterprise Cloud
+- Monitoring
+- News
+- Permissions
+- Reporting
+- Usage Dashboards
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison shares news about GitHub Copilot usage and code generation dashboards now available for Enterprise Cloud customers with data residency, along with new APIs and fine-grained access permissions.<!--excerpt_end-->
 
 # Copilot Usage Metrics in GitHub Enterprise Cloud with Data Residency: Public Preview

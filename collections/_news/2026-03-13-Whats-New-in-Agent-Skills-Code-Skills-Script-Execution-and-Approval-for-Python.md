@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "What’s New in Agent Skills: Code Skills, Script Execution, and Approval for Python"
-description: "This article explores recent enhancements to the Microsoft Agent Framework Python SDK, including code-defined skills, executable scripts, and script approval mechanisms for Agent Skills. It explains how these features enable flexible skill authoring, dynamic content sourcing, controlled script execution, and enterprise-grade safety measures such as human-in-the-loop approvals and auditability."
-author: "Sergey Menshykh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/whats-new-in-agent-skills-code-skills-script-execution-and-approval-for-python/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/whats-new-in-agent-skills-code-skills-script-execution-and-approval-for-python/
+title: 'What’s New in Agent Skills: Code Skills, Script Execution, and Approval for Python'
+author: Sergey Menshykh
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-03-13 11:04:33 +00:00
-permalink: "/2026-03-13-Whats-New-in-Agent-Skills-Code-Skills-Script-Execution-and-Approval-for-Python.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Framework", "Agent Skills", "Agents", "AI", "Automation", "Best Practices", "Code Defined Skills", "Coding", "DevOps Runbooks", "Dynamic Resources", "Enterprise AI", "Human in The Loop", "Microsoft Agent Framework", "News", "Python", "Script Execution", "SDK", "Skill Approval", "Skill Authoring"]
-tags_normalized: ["agent framework", "agent skills", "agents", "ai", "automation", "best practices", "code defined skills", "coding", "devops runbooks", "dynamic resources", "enterprise ai", "human in the loop", "microsoft agent framework", "news", "python", "script execution", "sdk", "skill approval", "skill authoring"]
+tags:
+- Agent Framework
+- Agent Skills
+- Agents
+- AI
+- Automation
+- Best Practices
+- Code Defined Skills
+- DevOps Runbooks
+- Dynamic Resources
+- Enterprise AI
+- Human in The Loop
+- Microsoft Agent Framework
+- News
+- Python
+- Script Execution
+- SDK
+- Skill Approval
+- Skill Authoring
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Sergey Menshykh details the latest updates to Microsoft Agent Framework for Python, introducing code-defined Agent Skills, flexible script execution, and approval flows for enterprise safety and control.<!--excerpt_end-->
 
 # What’s New in Agent Skills: Code Skills, Script Execution, and Approval for Python

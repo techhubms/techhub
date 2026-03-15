@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "MCP Development Best Practices"
-description: "This article outlines key development best practices for building reliable, scalable, and secure Model Context Protocol (MCP) servers. It covers project structure, tool design, schema validation, error handling, deployment, performance optimization, workflow patterns, and security measures for MCP development. Useful resources and event links are included."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=W56H9W7x-ao"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=W56H9W7x-ao
+title: MCP Development Best Practices
+author: Microsoft Developer
+feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-28 16:00:52 +00:00
-permalink: "/2025-07-28-MCP-Development-Best-Practices.html"
-categories: ["AI", "Security"]
-tags: ["AI", "Deployment", "Error Handling", "MCP", "Performance Optimization", "Project Structure", "Schema Validation", "Security", "Tool Design", "Videos", "Workflow Patterns"]
-tags_normalized: ["ai", "deployment", "error handling", "mcp", "performance optimization", "project structure", "schema validation", "security", "tool design", "videos", "workflow patterns"]
+tags:
+- Deployment
+- Error Handling
+- MCP
+- Performance Optimization
+- Project Structure
+- Schema Validation
+- Tool Design
+- Workflow Patterns
+- AI
+- Security
+- Videos
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Microsoft Developer shares actionable best practices for developing robust Model Context Protocol (MCP) servers. Explore structural, design, and security considerations.<!--excerpt_end-->
 
 {% youtube W56H9W7x-ao %}
@@ -60,8 +66,8 @@ Developing robust, scalable, and secure servers using the Model Context Protocol
 
 - **Beginner Resources**: [MCP for Beginners](https://aka.ms/MCP-for-Beginners)
 - **Community Events**: Join the conversation and deepen your knowledge at MCP Dev Days:
-    - [Day 1](https://aka.ms/MCPDevDays-Day1)
-    - [Day 2](https://aka.ms/MCPDevDays-Day2)
-    - [Registration](https://aka.ms/mcpdevdays)
+  - [Day 1](https://aka.ms/MCPDevDays-Day1)
+  - [Day 2](https://aka.ms/MCPDevDays-Day2)
+  - [Registration](https://aka.ms/mcpdevdays)
 
 By following these best practices, developers can build maintainable, resilient, and secure MCP solutions, ensuring high performance and reliability in both development and production environments.

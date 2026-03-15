@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Secure-by-Design Transformation: PwC and Microsoft Purview Enhancing Data Security"
-description: "This session from Microsoft Ignite 2025 features a discussion between PwC and Microsoft experts on how Microsoft Purview, an advanced security and governance solution, is enabling organizations to improve data asset visibility, automate alert management with intelligent agents, and accelerate secure innovation. The session covers practical strategies for overcoming enterprise efficiency challenges, implementing secure-by-design practices, and leveraging intelligent automation in data security and cataloging."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=6nwhHh19_L0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=6nwhHh19_L0
+title: 'Secure-by-Design Transformation: PwC and Microsoft Purview Enhancing Data Security'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 14:35:38 +00:00
-permalink: "/2025-11-24-Secure-by-Design-Transformation-PwC-and-Microsoft-Purview-Enhancing-Data-Security.html"
-categories: ["Security"]
-tags: ["Alert Management", "Automation", "Compliance", "Data Asset Visibility", "Data Catalog", "Data Governance", "Data Security", "Enterprise Efficiency", "Innovation", "Intelligent Agents", "Microsoft Ignite", "Microsoft Purview", "MSIgnite", "PwC", "Secure By Design", "Security", "Security Gaps", "Videos"]
-tags_normalized: ["alert management", "automation", "compliance", "data asset visibility", "data catalog", "data governance", "data security", "enterprise efficiency", "innovation", "intelligent agents", "microsoft ignite", "microsoft purview", "msignite", "pwc", "secure by design", "security", "security gaps", "videos"]
+tags:
+- Alert Management
+- Automation
+- Compliance
+- Data Asset Visibility
+- Data Catalog
+- Data Governance
+- Data Security
+- Enterprise Efficiency
+- Innovation
+- Intelligent Agents
+- Microsoft Ignite
+- Microsoft Purview
+- MSIgnite
+- PwC
+- Secure By Design
+- Security Gaps
+- Security
+- Videos
+section_names:
+- security
+primary_section: security
 ---
-
 Microsoft Events hosts this Ignite 2025 discussion with PwC and guest Scott Sikorski, exploring how Microsoft Purview and intelligent agents strengthen data security and governance in enterprise environments.<!--excerpt_end-->
 
 {% youtube 6nwhHh19_L0 %}

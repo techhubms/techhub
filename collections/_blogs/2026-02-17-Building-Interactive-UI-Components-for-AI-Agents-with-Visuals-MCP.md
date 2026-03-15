@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Building Interactive UI Components for AI Agents with Visuals MCP"
-description: "This article by Harald Binkle introduces Visuals MCP, an open-source Model Context Protocol (MCP) server that enables AI agents (like those powered by GitHub Copilot) to deliver rich, interactive UI components such as tables, lists, trees, and images directly inside developer tools like VS Code. The post walks through the architecture, technology stack (TypeScript, Node.js, React, Vite), how each visual is a standalone React app, and how these components are served and rendered in response to agent tool calls. Installation options include both npm and a dedicated VS Code extension. Readers will learn how Visuals MCP bridges the gap between AI assistant capabilities and interactive developer experiences."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/visuals-mcp-server/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+external_url: https://harrybin.de/posts/visuals-mcp-server/
+title: Building Interactive UI Components for AI Agents with Visuals MCP
+author: Harald Binkle
+primary_section: github-copilot
+feed_name: Harald Binkle's blog
 date: 2026-02-17 21:23:00 +00:00
-permalink: "/2026-02-17-Building-Interactive-UI-Components-for-AI-Agents-with-Visuals-MCP.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistants", "Blogs", "Coding", "Data Visualization", "Developer Tools", "GitHub Copilot", "Interactive UI", "LLM Integration", "MCP", "MCP Server", "Node.js", "Open Source", "React", "Tailwind CSS", "TypeScript", "Visuals MCP", "Vite", "VS Code Extension"]
-tags_normalized: ["ai", "ai assistants", "blogs", "coding", "data visualization", "developer tools", "github copilot", "interactive ui", "llm integration", "mcp", "mcp server", "nodedotjs", "open source", "react", "tailwind css", "typescript", "visuals mcp", "vite", "vs code extension"]
+tags:
+- AI
+- AI Assistants
+- Blogs
+- Data Visualization
+- Developer Tools
+- GitHub Copilot
+- Interactive UI
+- LLM Integration
+- MCP
+- MCP Server
+- Node.js
+- Open Source
+- React
+- Tailwind CSS
+- TypeScript
+- Visuals MCP
+- Vite
+- VS Code Extension
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Harald Binkle explores how to extend AI agents with Visuals MCP, letting tools like GitHub Copilot render interactive tables, lists, and images inside VS Code using React, TypeScript, and a flexible MCP server.<!--excerpt_end-->
 
 # Visuals MCP: Giving Your AI Agent a Face

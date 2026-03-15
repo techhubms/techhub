@@ -1,0 +1,411 @@
+/* ============================================================================
+   Card Components - Reusable Card Styles
+   
+   Global styles for card-based layouts used across multiple pages:
+   - Base card styling (background, borders, shadows, hover states)
+   - Card grids and layouts
+   - Card content structure (header, title, meta, description, footer)
+   - Badge and tag styles
+   
+   Used by: Home page (SectionCard), Collection pages (ContentItemCard), 
+            Features page, About page
+   ============================================================================ */
+
+/* =======================================================================
+   BASE CARD STYLES - Foundation for all card types
+   ======================================================================= */
+
+/* Standard card container - block link pattern via stretched title link */
+.card {
+  background: var(--color-bg-default);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--duration-normal) var(--easing-ease-out),
+              border-color var(--duration-normal) var(--easing-ease-out);
+  border: 1px solid var(--color-border-default);
+  height: 100%;
+  min-height: 265px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-purple-medium);
+  }
+}
+
+/* Stretched link - covers entire card, making it fully clickable */
+.card-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.card-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--radius-lg);
+}
+
+.card:focus-within {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-purple-medium);
+}
+
+/* Card without link (static display) */
+.card-static {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-3);
+  transition: box-shadow var(--duration-normal) var(--easing-ease-out),
+              border-color var(--duration-normal) var(--easing-ease-out);
+  box-shadow: var(--shadow-md);
+  height: 100%;
+  min-height: 265px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (hover: hover) {
+  .card-static:hover {
+    border-color: var(--color-purple-medium);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* =======================================================================
+   CARD GRIDS - Responsive grid layouts for cards
+   ======================================================================= */
+
+/* Standard card grid - auto-fill with minimum 300px cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-3);
+}
+
+/* Compact card grid - smaller cards for dense layouts */
+.cards-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-3);
+}
+
+/* =======================================================================
+   CARD STRUCTURE - Header, Body, Footer sections
+   ======================================================================= */
+
+/* Card header section (typically contains title) */
+.card-header {
+  margin-bottom: var(--spacing-1);
+}
+
+/* Card title/heading */
+.card-title {
+  margin: 0 0 var(--spacing-1) 0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-primary);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  /* Light up title when hovering anywhere on card */
+  .card:hover .card-title,
+  .card-static:hover .card-title {
+    color: var(--color-purple-bright);
+  }
+}
+
+/* Card metadata (dates, authors, source, etc.) */
+.card-meta {
+  display: flex;
+  gap: 0.25em;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-style: italic;
+  flex-wrap: wrap;
+}
+
+/* Card description/excerpt text */
+.card-description {
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-2);
+  flex: 1;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  /* Light up description when hovering anywhere on card */
+  .card:hover .card-description,
+  .card-static:hover .card-description {
+    color: var(--color-text-primary);
+  }
+}
+
+/* Card footer section */
+.card-footer {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  margin-top: var(--spacing-2);
+}
+
+/* =======================================================================
+   CARD BADGES & TAGS - Status indicators, collections, tags
+   ======================================================================= */
+
+/* Badge/tag container - for both tags and status badges */
+.card-badges,
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+  margin-top: auto;
+  padding-top: var(--spacing-2);
+}
+
+/* Purple badge (collections, primary tags) - clickable */
+.badge-purple {
+  background: var(--color-purple-bg-badge);
+  color: var(--color-text-primary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .badge-purple:hover {
+    background: var(--color-purple-bg-badge-hover);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+    text-decoration: none;
+  }
+}
+
+/* Purple badge - non-clickable variant (decorative tags on cards) */
+.badge-purple-static {
+  background: var(--color-purple-bg-badge);
+  color: var(--color-text-primary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Tag badge on content item cards - subtle purple, non-clickable */
+.badge-tag {
+  background: var(--color-purple-bg-dark);
+  color: var(--color-text-primary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Tag badge - clickable variant (adds tag to filter) */
+.badge-tag.badge-tag-clickable {
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .badge-tag.badge-tag-clickable:hover {
+    background: var(--color-purple-bg-badge);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+  }
+}
+
+.badge-tag.badge-tag-clickable:active {
+  transform: scale(0.95);
+}
+
+/* Tag badge - active filter state (tag matches currently active URL filter) */
+.badge-tag.badge-tag-active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+}
+
+@media (hover: hover) {
+  .badge-tag.badge-tag-active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
+}
+
+/* Grey badge (overflow indicators, collection names on cards) */
+.badge-grey {
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border-default);
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Expandable badge - clickable variant of grey badge */
+.badge-expandable {
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border-default);
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  transition: all var(--duration-fast) var(--easing-ease);
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .badge-expandable:hover {
+    background: var(--color-bg-elevated);
+    border-color: var(--color-border-emphasis);
+    color: var(--color-text-on-emphasis);
+  }
+}
+
+.badge-expandable:active {
+  transform: scale(0.95);
+}
+
+/* Container for expanded custom pages - use display:contents to make badges flow inline */
+.custom-pages-expanded {
+  display: contents;
+}
+
+.custom-pages-expanded[hidden] {
+  display: none;
+}
+
+/* Custom page badge - darker with purple border */
+.badge-custom {
+  background: var(--color-purple-bg-dark);
+  border-color: var(--color-purple-dark);
+  color: var(--color-text-primary);
+  font-style: italic;
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+@media (hover: hover) {
+  .badge-custom:hover {
+    background: var(--color-purple-bg-dark-hover);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-on-emphasis);
+  }
+}
+
+/* Status badges for feature flags, warnings, etc. */
+.badge-success {
+  background: var(--color-green-light);
+  color: var(--color-bg-default);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-warning {
+  background: var(--color-amber);
+  color: var(--color-bg-default);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-info {
+  background: var(--color-purple-medium);
+  color: var(--color-text-on-emphasis);
+  padding: 0.25rem var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =======================================================================
+   RESPONSIVE BEHAVIOR
+   ======================================================================= */
+
+@media (max-width: 768px) {
+  .cards-grid,
+  .cards-grid-compact {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =======================================================================
+   PRINT STYLES
+   ======================================================================= */
+
+@media print {
+  .card,
+  .card-static {
+    border-color: var(--color-print-border);
+    page-break-inside: avoid;
+  }
+}
+
+.badge-muted {
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-tertiary);
+  border: 1px solid var(--color-border-default);
+}
+
+/* =======================================================================
+   RESPONSIVE BEHAVIOR
+   ======================================================================= */
+
+@media (max-width: 768px) {
+  .cards-grid,
+  .cards-grid-compact {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Upcoming Webinar: Maximize the Cost Efficiency of AI Agents on Azure"
-description: "This webinar provides actionable strategies for developers and technical leaders to build and scale AI agents on Azure while maintaining financial discipline. It emphasizes linking AI design choices to business outcomes, explores ROI considerations, and offers practical frameworks for optimizing cost, architecture, and governance. Sessions are led by Microsoft AI Advocates and designed for practitioners and decision makers."
-author: "carlottacaste"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-webinar-maximize-the-cost-efficiency-of-ai-agents-on/ba-p/4493923"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/upcoming-webinar-maximize-the-cost-efficiency-of-ai-agents-on/ba-p/4493923
+title: 'Upcoming Webinar: Maximize the Cost Efficiency of AI Agents on Azure'
+author: carlottacaste
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-18 08:00:00 +00:00
-permalink: "/2026-02-18-Upcoming-Webinar-Maximize-the-Cost-Efficiency-of-AI-Agents-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Advocate", "AI Agents", "AI Architecture", "AI Best Practices", "AI Decision Makers", "AI For Business", "AI Governance", "AI Scalability", "Azure", "Community", "Cost Optimization", "Developer Webinar", "Enterprise AI", "Financial Sustainability", "Model Selection", "ROI"]
-tags_normalized: ["ai", "ai advocate", "ai agents", "ai architecture", "ai best practices", "ai decision makers", "ai for business", "ai governance", "ai scalability", "azure", "community", "cost optimization", "developer webinar", "enterprise ai", "financial sustainability", "model selection", "roi"]
+tags:
+- AI
+- AI Advocate
+- AI Agents
+- AI Architecture
+- AI Best Practices
+- AI Decision Makers
+- AI For Business
+- AI Governance
+- AI Scalability
+- Azure
+- Community
+- Cost Optimization
+- Developer Webinar
+- Enterprise AI
+- Financial Sustainability
+- Model Selection
+- ROI
+section_names:
+- ai
+- azure
 ---
-
 Carlotta Castelluccio and Nitya Narasimhan from Microsoft host an in-depth webinar on building and scaling AI agents on Azure with cost efficiency in mind, offering developers and technical leaders practical guidance for financial and architectural best practices.<!--excerpt_end-->
 
 # Maximize the Cost Efficiency of AI Agents on Azure: Webinar Overview

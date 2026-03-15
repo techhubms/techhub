@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Announcing the November 2025 Innovation Challenge Hackathon"
-description: "The November 2025 Innovation Challenge Hackathon is a virtual event hosted by Microsoft for developers affiliated with organizations dedicated to supporting underrepresented groups in tech. Participants collaborate on AI use cases leveraging Azure, with the chance to compete for over $27,000 in prizes. The event connects community-driven teams with Microsoft employees, acting as both coaches and judges, and emphasizes the use of cutting-edge Microsoft cloud and AI solutions to address meaningful, real-world problems."
-author: "macalde"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/announcing-the-november-2025-innovation-challenge-hackathon/m-p/4464518#M22287"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure/announcing-the-november-2025-innovation-challenge-hackathon/m-p/4464518#M22287
+title: Announcing the November 2025 Innovation Challenge Hackathon
+author: macalde
+feed_name: Microsoft Tech Community
 date: 2025-10-27 15:22:36 +00:00
-permalink: "/2025-10-27-Announcing-the-November-2025-Innovation-Challenge-Hackathon.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Use Cases", "Azure", "Azure AI", "Cloud Computing", "Community", "Community Event", "Developer Community", "Developer Competition", "Diversity in Tech", "Hackathon", "Innovation Challenge", "Microsoft", "Microsoft Azure", "Technical Challenge", "Underrepresented Groups", "Virtual Event"]
-tags_normalized: ["ai", "ai use cases", "azure", "azure ai", "cloud computing", "community", "community event", "developer community", "developer competition", "diversity in tech", "hackathon", "innovation challenge", "microsoft", "microsoft azure", "technical challenge", "underrepresented groups", "virtual event"]
+tags:
+- AI Use Cases
+- Azure AI
+- Cloud Computing
+- Community Event
+- Developer Community
+- Developer Competition
+- Diversity in Tech
+- Hackathon
+- Innovation Challenge
+- Microsoft
+- Microsoft Azure
+- Technical Challenge
+- Underrepresented Groups
+- Virtual Event
+- AI
+- Azure
+- Community
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 macalde announces the November 2025 Innovation Challenge Hackathon, an event for developers from diverse backgrounds to solve real-world AI challenges using Azure, with guidance and support from Microsoft.<!--excerpt_end-->
 
 # November 2025 Innovation Challenge Hackathon
@@ -64,7 +76,7 @@ This is the sixth iteration of the Innovation Challenge. The program has created
 - [Innovation Challenge YouTube playlist](https://www.youtube.com/playlist?list=PLtvmFy4Ed_DKO2Xj4JimhyfXFLPhcvSeW)
 - Past winners from [June 2025](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-june-innovation-challenge/4427978), [March 2025](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-march-innovation-challenge-hackathon/4398522), [December 2024](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-december-2024-innovation-challenge/4360908), and [October 2024](https://techcommunity.microsoft.com/discussions/azure/announcing-the-winners-of-the-october-innovation-challenge-hackathon/4296922).
 
-## Get Involved!
+## Get Involved
 
 If you meet the eligibility criteria and are passionate about using Azure and AI to solve real-world problems, consider reaching out to join the upcoming Innovation Challenge Hackathon.
 

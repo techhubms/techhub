@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Fabric Data Warehouse vs Azure Synapse: ESG Validation and Migration Guidance"
-description: "This article summarizes independent validation results by ESG comparing Microsoft Fabric Data Warehouse to Azure Synapse Dedicated SQL Pools for performance and cost efficiency across large enterprise analytics workloads. It provides detailed migration resources and guidance for organizations seeking to modernize analytics infrastructure using Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/a-turning-point-for-enterprise-data-warehousing/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/a-turning-point-for-enterprise-data-warehousing/
+title: 'Microsoft Fabric Data Warehouse vs Azure Synapse: ESG Validation and Migration Guidance'
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-03 10:05:00 +00:00
-permalink: "/2026-02-03-Microsoft-Fabric-Data-Warehouse-vs-Azure-Synapse-ESG-Validation-and-Migration-Guidance.html"
-categories: ["Azure", "ML"]
-tags: ["Apache Spark", "Azure", "Azure Synapse Analytics", "Cloud Analytics", "Cost Optimization", "Data Engineering", "Data Factory", "Data Warehouse", "Dedicated SQL Pools", "Enterprise Data Migration", "Fabric Assessment Tool", "Fabric Data Warehouse", "Microsoft Fabric", "Migration Guide", "ML", "News", "OneLake", "Performance Benchmarking", "SQL"]
-tags_normalized: ["apache spark", "azure", "azure synapse analytics", "cloud analytics", "cost optimization", "data engineering", "data factory", "data warehouse", "dedicated sql pools", "enterprise data migration", "fabric assessment tool", "fabric data warehouse", "microsoft fabric", "migration guide", "ml", "news", "onelake", "performance benchmarking", "sql"]
+tags:
+- Apache Spark
+- Azure
+- Azure Synapse Analytics
+- Cloud Analytics
+- Cost Optimization
+- Data Engineering
+- Data Factory
+- Data Warehouse
+- Dedicated SQL Pools
+- Enterprise Data Migration
+- Fabric Assessment Tool
+- Fabric Data Warehouse
+- Microsoft Fabric
+- Migration Guide
+- ML
+- News
+- OneLake
+- Performance Benchmarking
+- SQL
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog delivers a comprehensive overview of recent ESG technical validation, highlighting Microsoft Fabric Data Warehouse's performance over Azure Synapse. The article guides enterprise teams through migration strategies and available tools.<!--excerpt_end-->
 
 # Microsoft Fabric Data Warehouse vs Azure Synapse: ESG Validation and Migration Guidance

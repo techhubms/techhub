@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform"
-description: "This session from Microsoft Ignite 2025 explores how partners can modernize and strengthen their security operations (SecOps) using Microsoft Sentinel's unified platform, new data lake, and graph features. The talk shares insights into predictive SOC technology, attack disruption techniques, and real-world customer success stories. Partners are guided on leveraging incentives and GTM resources to deepen customer relationships and drive practice growth."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DjUkc7jWsQ0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=DjUkc7jWsQ0
+title: Amplifying SecOps Practices with Microsoft Sentinel and Unified Platform
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 13:48:44 +00:00
-permalink: "/2025-11-24-Amplifying-SecOps-Practices-with-Microsoft-Sentinel-and-Unified-Platform.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Attack Disruption", "Azure", "Business Premium", "Cloud Security", "Customer Success", "Defender", "Enterprise Security", "GTMs", "Microsoft Ignite", "Microsoft Sentinel", "MicrosoftAICloudPartnerProgram", "Modern SecOps", "MSIgnite", "Partner Resources", "Predictive SOC", "Role Based AI Agent", "Secure Future Initiative", "Security", "Security Analytics", "Security Copilot", "Security Incentives", "Security Operations", "Sentinel Data Lake", "Sentinel Graph", "Tab", "Threat Detection", "Videos"]
-tags_normalized: ["ai", "attack disruption", "azure", "business premium", "cloud security", "customer success", "defender", "enterprise security", "gtms", "microsoft ignite", "microsoft sentinel", "microsoftaicloudpartnerprogram", "modern secops", "msignite", "partner resources", "predictive soc", "role based ai agent", "secure future initiative", "security", "security analytics", "security copilot", "security incentives", "security operations", "sentinel data lake", "sentinel graph", "tab", "threat detection", "videos"]
+tags:
+- Attack Disruption
+- Business Premium
+- Cloud Security
+- Customer Success
+- Defender
+- Enterprise Security
+- GTMs
+- Microsoft Ignite
+- Microsoft Sentinel
+- MicrosoftAICloudPartnerProgram
+- Modern SecOps
+- MSIgnite
+- Partner Resources
+- Predictive SOC
+- Role Based AI Agent
+- Secure Future Initiative
+- Security Analytics
+- Security Copilot
+- Security Incentives
+- Security Operations
+- Sentinel Data Lake
+- Sentinel Graph
+- Tab
+- Threat Detection
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Presented by Max McWilliams, Anne Stobaugh, and Scott Woodgate at Microsoft Ignite 2025, this session guides partners on strengthening SecOps using the new Microsoft Sentinel features and unified security platforms.<!--excerpt_end-->
 
 {% youtube DjUkc7jWsQ0 %}
@@ -28,23 +52,23 @@ This Microsoft Ignite 2025 session highlights the transformation of security ope
 ### Session Highlights
 
 - **Microsoft’s Secure Future Initiative and Internal Learnings**
-    - Insights into Microsoft's evolving security strategy
+  - Insights into Microsoft's evolving security strategy
 - **Attack Disruption & Predictive Attack Path Prevention**
-    - How Microsoft Defender integrates predictive disruption
+  - How Microsoft Defender integrates predictive disruption
 - **Advanced Threat Hunting**
-    - Interactive experiences and empowering security analysts
+  - Interactive experiences and empowering security analysts
 - **Predictive SOC Technology Investments**
-    - Future-focused predictive models and enterprise graph integrations
+  - Future-focused predictive models and enterprise graph integrations
 - **Microsoft Sentinel Innovations**
-    - Data lake and enterprise graph for scalable cyber risk modeling
-    - Real-world case: Nationwide’s Sentinel implementation
+  - Data lake and enterprise graph for scalable cyber risk modeling
+  - Real-world case: Nationwide’s Sentinel implementation
 - **Role-Based AI Agent Strategy with Security Copilot**
-    - Streamlining security tasks with AI-powered agents
+  - Streamlining security tasks with AI-powered agents
 - **Partner GTM Resources & Incentives**
-    - Practical guidance on leveraging Microsoft incentives, specialization, immersion briefings, and deployment accelerators
-    - Links to official resources for partners ([Specialization](https://partner.microsoft.com/en-us/partnership/specialization/#tab-6), [Immersion Briefings](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Immersion-Briefings/), [Incentives Guide](https://aka.ms/incentivesguide), [Envisioning Workshops](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Envisioning-Workshops/), [Deployment Accelerators](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Deployment-Accelerators/))
+  - Practical guidance on leveraging Microsoft incentives, specialization, immersion briefings, and deployment accelerators
+  - Links to official resources for partners ([Specialization](https://partner.microsoft.com/en-us/partnership/specialization/#tab-6), [Immersion Briefings](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Immersion-Briefings/), [Incentives Guide](https://aka.ms/incentivesguide), [Envisioning Workshops](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Envisioning-Workshops/), [Deployment Accelerators](https://microsoftpartners.microsoft.com/Microsoft-Security-Partners/Deployment-Accelerators/))
 - **Business Premium & SMB Security Offerings**
-    - Strategies for different customer sizes; Second Win Formula for SMB and Business Premium clients
+  - Strategies for different customer sizes; Second Win Formula for SMB and Business Premium clients
 
 ### Real-World Successes
 

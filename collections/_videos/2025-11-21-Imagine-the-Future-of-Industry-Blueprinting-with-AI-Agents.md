@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Imagine the Future of Industry Blueprinting with AI Agents"
-description: "This session from Microsoft Ignite 2025 explores the transformative impact of AI agentification on industry blueprinting. The content provides an overview of advancements in AI agents, demonstrating ways these technologies are reshaping industry practices and driving greater operational efficiency. Targeted at an intermediate audience, the session focuses on both present trends and future directions for AI in professional settings."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=mFgM0CtOtdw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=mFgM0CtOtdw
+title: Imagine the Future of Industry Blueprinting with AI Agents
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:47:00 +00:00
-permalink: "/2025-11-21-Imagine-the-Future-of-Industry-Blueprinting-with-AI-Agents.html"
-categories: ["AI"]
-tags: ["Agentification", "AI", "AI Agents", "AI in Industry", "AI Transformation", "Automation", "Enterprise AI", "Industry Blueprinting", "Industry Practices", "Microsoft Ignite", "MSIgnite", "Operational Efficiency", "Videos"]
-tags_normalized: ["agentification", "ai", "ai agents", "ai in industry", "ai transformation", "automation", "enterprise ai", "industry blueprinting", "industry practices", "microsoft ignite", "msignite", "operational efficiency", "videos"]
+tags:
+- Agentification
+- AI Agents
+- AI in Industry
+- AI Transformation
+- Automation
+- Enterprise AI
+- Industry Blueprinting
+- Industry Practices
+- Microsoft Ignite
+- MSIgnite
+- Operational Efficiency
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 Microsoft Events presents an intermediate-level session from Microsoft Ignite 2025, spotlighting how AI agentification is shaping the future of industry blueprinting and operational efficiency.<!--excerpt_end-->
 
 {% youtube mFgM0CtOtdw %}

@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) November 2025 Release: Container Apps GA, Layered Provisioning, Extension Framework, and Aspire 13"
-description: "The November 2025 release of Azure Developer CLI (azd) introduces major features such as general availability for Azure Container Apps, layered provisioning in beta, expanded extension framework capabilities, and Aspire 13 compatibility. The update adds new prepublish and postpublish hooks, enhanced support for community templates—including Copilot Studio scenarios—plus improvements to pipeline configuration, documentation, and bug fixes. Developers gain increased flexibility and extensibility, especially around workflows, programming language support, and integration with GitHub Copilot, Azure AI, and other cloud-native technologies."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-november-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-november-2025/
+title: 'Azure Developer CLI (azd) November 2025 Release: Container Apps GA, Layered Provisioning, Extension Framework, and Aspire 13'
+author: PuiChee (PC) Chan
+feed_name: Microsoft Azure SDK Blog
 date: 2025-11-19 16:00:44 +00:00
-permalink: "/2025-11-19-Azure-Developer-CLI-azd-November-2025-Release-Container-Apps-GA-Layered-Provisioning-Extension-Framework-and-Aspire-13.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", "AI", "Aspire 13", "Azd", "Azure", "Azure AI Search", "Azure Communication Services", "Azure Container Apps", "Azure Developer CLI", "Azure Functions", "Azure SDK", "CI/CD", "Codespaces", "Coding", "Copilot Studio", "DevOps", "Docker", "Event Grid", "Extension Framework", "gRPC API", "Java", "JavaScript", "Kubernetes", "Layered Provisioning", "News", "Python", "Semantic Kernel", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "dotnet 10", "ai", "aspire 13", "azd", "azure", "azure ai search", "azure communication services", "azure container apps", "azure developer cli", "azure functions", "azure sdk", "cislashcd", "codespaces", "coding", "copilot studio", "devops", "docker", "event grid", "extension framework", "grpc api", "java", "javascript", "kubernetes", "layered provisioning", "news", "python", "semantic kernel", "typescript", "vs code"]
+tags:
+- .NET
+- .NET 10
+- Aspire 13
+- Azd
+- Azure AI Search
+- Azure Communication Services
+- Azure Container Apps
+- Azure Developer CLI
+- Azure Functions
+- Azure SDK
+- CI/CD
+- Codespaces
+- Copilot Studio
+- Docker
+- Event Grid
+- Extension Framework
+- gRPC API
+- Java
+- JavaScript
+- Kubernetes
+- Layered Provisioning
+- Python
+- Semantic Kernel
+- Typescript
+- VS Code
+- AI
+- Azure
+- DevOps
+- News
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+primary_section: ai
 ---
-
 PuiChee (PC) Chan shares insights into the latest Azure Developer CLI (azd) release, covering new features like container apps GA, layered provisioning beta, extension enhancements, template updates, and tighter integration with AI and DevOps workflows.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) November 2025 Release Overview

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing the Public Release of the Sovereign Cloud MicroHack"
-description: "This article by Thomas Maurer introduces the public release of Microsoft's Sovereign Cloud MicroHack, a hands-on workshop designed to help engineers and architects gain practical experience with Microsoft Sovereign Cloud concepts. The MicroHack provides technical challenges related to Azure governance, encryption, confidential compute, and hybrid cloud deployments with Azure Arc and Azure Local."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2026/03/announcing-the-public-release-of-the-sovereign-cloud-microhack/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+external_url: https://www.thomasmaurer.ch/2026/03/announcing-the-public-release-of-the-sovereign-cloud-microhack/
+title: Announcing the Public Release of the Sovereign Cloud MicroHack
+author: Thomas Maurer
+primary_section: azure
+feed_name: Thomas Maurer's Blog
 date: 2026-03-04 05:43:35 +00:00
-permalink: "/2026-03-04-Announcing-the-Public-Release-of-the-Sovereign-Cloud-MicroHack.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Arc", "Azure Local", "Azure Policy", "Blogs", "Cloud", "Cloud Security", "Confidential Compute", "Deployment Models", "Hands On Lab", "Hybrid Cloud", "Key Vault", "MicroHack", "Microsoft", "Microsoft Azure", "RBAC", "Security", "Sovereign Cloud", "TLS", "Workshop"]
-tags_normalized: ["azure", "azure arc", "azure local", "azure policy", "blogs", "cloud", "cloud security", "confidential compute", "deployment models", "hands on lab", "hybrid cloud", "key vault", "microhack", "microsoft", "microsoft azure", "rbac", "security", "sovereign cloud", "tls", "workshop"]
+tags:
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Policy
+- Blogs
+- Cloud Security
+- Confidential Compute
+- Deployment Models
+- Hands On Lab
+- Hybrid Cloud
+- Key Vault
+- MicroHack
+- Microsoft
+- Microsoft Azure
+- RBAC
+- Security
+- Sovereign Cloud
+- TLS
+- Workshop
+section_names:
+- azure
+- security
 ---
-
 Thomas Maurer shares the public release of the Sovereign Cloud MicroHack, a Microsoft-led workshop focused on building practical skills in deploying and securing sovereign workloads on Azure and its hybrid services.<!--excerpt_end-->
 
 # Announcing the Public Release of the Sovereign Cloud MicroHack

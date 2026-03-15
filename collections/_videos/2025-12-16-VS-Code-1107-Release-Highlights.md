@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "VS Code 1.107 Release Highlights"
-description: "This video provides an overview of the new features and improvements in the Visual Studio Code 1.107 release. It covers enhancements in inline chat editing, smarter rename suggestions, persistent local agents, and other editor experience optimizations. Viewers can find more details in the official release notes."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=a7jj0PvvGMk"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=a7jj0PvvGMk
+title: VS Code 1.107 Release Highlights
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-12-16 22:09:59 +00:00
-permalink: "/2025-12-16-VS-Code-1107-Release-Highlights.html"
-categories: ["Coding"]
-tags: ["Code", "Code Editor", "Codeeditor", "Coding", "Demo", "Developer", "Developer Tools", "Editor Improvements", "Inline Chat Editing", "Local Agents", "Microsoft", "Programming", "Release Notes", "Rename Suggestions", "Software Developer", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["code", "code editor", "codeeditor", "coding", "demo", "developer", "developer tools", "editor improvements", "inline chat editing", "local agents", "microsoft", "programming", "release notes", "rename suggestions", "software developer", "software development", "videos", "vs code"]
+tags:
+- Code
+- Code Editor
+- Codeeditor
+- Demo
+- Developer
+- Developer Tools
+- Editor Improvements
+- Inline Chat Editing
+- Local Agents
+- Microsoft
+- Programming
+- Release Notes
+- Rename Suggestions
+- Software Developer
+- Software Development
+- VS Code
+- Videos
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Reynald Adolphe showcases the key highlights from the Visual Studio Code 1.107 release, including editor improvements and new features for developers.<!--excerpt_end-->
 
 {% youtube a7jj0PvvGMk %}

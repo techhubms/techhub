@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Defending Cloud Platforms: Unified Security with Microsoft Defender"
-description: "This intermediate session from Microsoft Ignite 2025 explains how Microsoft Defender for Cloud approaches modern cloud security. Learn how AI-driven threats affect cloud workloads and see how Defender unifies security from development through runtime. The session covers risk prioritization, attack detection, exposure management, and demonstrates defense strategies for hybrid and multi-cloud environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=v3i5v9deZvI"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=v3i5v9deZvI
+title: 'Defending Cloud Platforms: Unified Security with Microsoft Defender'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:36:50 +00:00
-permalink: "/2025-11-20-Defending-Cloud-Platforms-Unified-Security-with-Microsoft-Defender.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Adversary Detection", "AI", "AI Threats", "Attack Prevention", "Azure", "Azure Security Center", "Cloud Security", "Cloud Workload Protection", "Exposure Management", "Hybrid Cloud", "Kubernetes Security", "Microsoft Defender For Cloud", "Microsoft Ignite", "MSIgnite", "Multi Cloud Security", "ProtectcloudAIplatformandapps", "Risk Prioritization", "Security", "Security Automation", "Security Posture Management", "Videos"]
-tags_normalized: ["adversary detection", "ai", "ai threats", "attack prevention", "azure", "azure security center", "cloud security", "cloud workload protection", "exposure management", "hybrid cloud", "kubernetes security", "microsoft defender for cloud", "microsoft ignite", "msignite", "multi cloud security", "protectcloudaiplatformandapps", "risk prioritization", "security", "security automation", "security posture management", "videos"]
+tags:
+- Adversary Detection
+- AI Threats
+- Attack Prevention
+- Azure Security Center
+- Cloud Security
+- Cloud Workload Protection
+- Exposure Management
+- Hybrid Cloud
+- Kubernetes Security
+- Microsoft Defender For Cloud
+- Microsoft Ignite
+- MSIgnite
+- Multi Cloud Security
+- ProtectcloudAIplatformandapps
+- Risk Prioritization
+- Security Automation
+- Security Posture Management
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Microsoft Events presents a session on securing cloud platforms using Microsoft Defender for Cloud, focusing on proactive security strategies for AI-driven threats and cloud workloads.<!--excerpt_end-->
 
 {% youtube v3i5v9deZvI %}

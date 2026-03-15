@@ -8,12 +8,68 @@ function Get-MarkdownFiles {
         [string[]]$IncludeDirectoryPatterns = @(),
         
         [Parameter(Mandatory = $false)]
-        [string[]]$ExcludeDirectoryPatterns = @('node_modules/*', '.git/*', 'spec/*', 'vendor/*', '_site/*'),
+        [string[]]$ExcludeDirectoryPatterns = @(),
         
         [Parameter(Mandatory = $false)]
-        [string[]]$ExcludeFilePatterns = @('*/AGENTS.md', 'AGENTS.md')
+        [string[]]$ExcludeFilePatterns = @()
     )
 
+    # Parse .gitignore file from repository root for default exclusions
+    $gitignorePath = Join-Path $Root '.gitignore'
+    $defaultExclusions = @()
+    
+    if (Test-Path $gitignorePath) {
+        Write-Verbose "📄 Reading .gitignore from: $gitignorePath"
+        $gitignoreContent = Get-Content $gitignorePath -ErrorAction SilentlyContinue
+        
+        foreach ($line in $gitignoreContent) {
+            # Skip comments and empty lines
+            if ($line -match '^\s*#' -or [string]::IsNullOrWhiteSpace($line)) {
+                continue
+            }
+            
+            $pattern = $line.Trim()
+            
+            # Convert gitignore patterns to PowerShell wildcard patterns
+            # Handle directory patterns (ending with /)
+            if ($pattern.EndsWith('/')) {
+                $baseName = $pattern.TrimEnd('/')
+                
+                # Handle ** (any depth) - convert to *
+                $baseName = $baseName -replace '\*\*/', '*'
+                $baseName = $baseName -replace '/\*\*', '/*'
+                
+                # For directory patterns, create TWO patterns:
+                # 1. Root-level: "node_modules/*" matches /node_modules/file.md
+                # 2. Nested: "*/node_modules/*" matches /path/node_modules/file.md
+                # This ensures we catch both root and nested occurrences
+                $defaultExclusions += "$baseName/*"
+                if (-not $baseName.StartsWith('*')) {
+                    $defaultExclusions += "*/$baseName/*"
+                }
+            }
+            else {
+                # Handle file patterns
+                $pattern = $pattern -replace '\*\*/', '*'
+                $pattern = $pattern -replace '/\*\*', '/*'
+                
+                # Ensure pattern works for relative paths
+                if (-not $pattern.StartsWith('*')) {
+                    $pattern = '*/' + $pattern
+                }
+                
+                $defaultExclusions += $pattern
+            }
+        }
+        
+        Write-Verbose "✅ Loaded $($defaultExclusions.Count) patterns from .gitignore"
+    } else {
+        Write-Verbose "⚠️  No .gitignore found at: $gitignorePath"
+    }
+    
+    # Merge default exclusions with user-provided patterns
+    $allExcludeDirectoryPatterns = @($defaultExclusions) + @($ExcludeDirectoryPatterns)
+    
     $allFiles = @(Get-ChildItem -Path $Root -Recurse -File -Filter '*.md')
     
     # Apply include filtering first if patterns are provided
@@ -34,13 +90,13 @@ function Get-MarkdownFiles {
     }
     
     # Apply exclude filtering if patterns are provided
-    if ($ExcludeDirectoryPatterns.Count -gt 0 -or $ExcludeFilePatterns.Count -gt 0) {
+    if ($allExcludeDirectoryPatterns.Count -gt 0 -or $ExcludeFilePatterns.Count -gt 0) {
         $filteredFiles = @($filteredFiles | Where-Object { 
             $shouldExclude = $false
             $relativePath = $_.FullName.Substring($Root.Length).TrimStart('\', '/')
             
-            # Check directory patterns
-            foreach ($pattern in $ExcludeDirectoryPatterns) {
+            # Check directory patterns (from .gitignore and parameters)
+            foreach ($pattern in $allExcludeDirectoryPatterns) {
                 if ($relativePath -like $pattern) {
                     $shouldExclude = $true
                     break
@@ -61,23 +117,25 @@ function Get-MarkdownFiles {
         })
     }
     
-    # Log directory breakdown after filtering
-    Write-Host "📊 Directory breakdown of $($filteredFiles.Count) total markdown files:"
-    $directoryGroups = $filteredFiles | Group-Object { $_.Directory.Name } | Sort-Object Count -Descending
-    foreach ($group in $directoryGroups) {
-        $samplePath = ($group.Group | Select-Object -First 1).FullName
-        Write-Host "  📁 '$($group.Name)': $($group.Count) files (e.g., $samplePath)"
+    # Build and log summary once (minimized verbose output for performance)
+    if ($PSBoundParameters.ContainsKey('Verbose') -and $PSBoundParameters['Verbose']) {
+        Write-Host "📊 Directory breakdown of $($filteredFiles.Count) total markdown files:"
+        $directoryGroups = $filteredFiles | Group-Object { $_.Directory.Name } | Sort-Object Count -Descending
+        foreach ($group in $directoryGroups) {
+            $samplePath = ($group.Group | Select-Object -First 1).FullName
+            Write-Host "  📁 '$($group.Name)': $($group.Count) files (e.g., $samplePath)"
+        }
     }
     
-    # Build status message
+    # Build concise status message
     $statusParts = @()
     if ($IncludeDirectoryPatterns.Count -gt 0) {
         $statusParts += "including directories matching: $($IncludeDirectoryPatterns -join ', ')"
     }
-    if ($ExcludeDirectoryPatterns.Count -gt 0) {
-        $statusParts += "excluding directories matching: $($ExcludeDirectoryPatterns -join ', ')"
+    if ($defaultExclusions.Count -gt 0) {
+        $statusParts += "using $($defaultExclusions.Count) patterns from .gitignore"
     }
-    if ($ExcludeFilePatterns.Count -gt 0) {
+    if ($ExcludeDirectoryPatterns.Count -gt 0 -or $ExcludeFilePatterns.Count -gt 0) {
         $statusParts += "excluding files matching: $($ExcludeFilePatterns -join ', ')"
     }
     

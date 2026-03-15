@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Exploring GitHub Copilot CLI: Features and Live Demonstration"
-description: "A deep dive into the capabilities of GitHub Copilot CLI, now generally available, featuring insights from Ryan Hecht. The session covers specialized agents for codebase exploration, task automation, code planning, and reviews, showcasing how developers can leverage Copilot CLI within their terminal workflow."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bRtK041JFFE"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=bRtK041JFFE
+title: 'Exploring GitHub Copilot CLI: Features and Live Demonstration'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-26 19:53:26 +00:00
-permalink: "/2026-02-26-Exploring-GitHub-Copilot-CLI-Features-and-Live-Demonstration.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Assistant", "Automation", "CLI", "Code Review", "Codebase Exploration", "Command Line Tools", "Copilot CLI", "Development Workflow", "GitHub", "GitHub Copilot", "Live Coding", "LiveCoding", "Shell Commands", "Terminal Productivity", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai assistant", "automation", "cli", "code review", "codebase exploration", "command line tools", "copilot cli", "development workflow", "github", "github copilot", "live coding", "livecoding", "shell commands", "terminal productivity", "videos"]
+tags:
+- Agentic AI
+- AI
+- AI Assistant
+- Automation
+- CLI
+- Code Review
+- Codebase Exploration
+- Command Line Tools
+- Copilot CLI
+- Development Workflow
+- GitHub
+- GitHub Copilot
+- Live Coding
+- LiveCoding
+- Shell Commands
+- Terminal Productivity
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub hosts a session with Ryan Hecht breaking down the new GitHub Copilot CLI, highlighting how this AI-powered agent assists developers with codebase exploration and automation directly from the terminal.<!--excerpt_end-->
 
 {% youtube bRtK041JFFE %}

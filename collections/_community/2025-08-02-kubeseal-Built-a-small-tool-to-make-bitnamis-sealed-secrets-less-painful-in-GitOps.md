@@ -1,20 +1,26 @@
----
-layout: "post"
+﻿---
+external_url: https://www.reddit.com/r/devops/comments/1mfshis/kubeseal_built_a_small_tool_to_make_bitnamis/
 title: "[kubeseal] Built a small tool to make bitnami's sealed-secrets less painful in GitOps"
-description: "The post by MrFr0z01 introduces a small tool developed to streamline the use of Bitnami's sealed-secrets within GitOps workflows, aiming to reduce complexity and improve efficiency for DevOps practitioners using Kubernetes."
-author: "MrFr0z01"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mfshis/kubeseal_built_a_small_tool_to_make_bitnamis/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+author: MrFr0z01
+feed_name: Reddit DevOps
 date: 2025-08-02 14:53:52 +00:00
-permalink: "/2025-08-02-kubeseal-Built-a-small-tool-to-make-bitnamis-sealed-secrets-less-painful-in-GitOps.html"
-categories: ["DevOps"]
-tags: ["Automation", "Bitnami", "Community", "Configuration Management", "DevOps", "DevOps Tools", "GitOps", "Kubernetes", "Kubeseal", "Sealed Secrets", "Secret Management", "Tooling"]
-tags_normalized: ["automation", "bitnami", "community", "configuration management", "devops", "devops tools", "gitops", "kubernetes", "kubeseal", "sealed secrets", "secret management", "tooling"]
+tags:
+- Automation
+- Bitnami
+- Configuration Management
+- DevOps Tools
+- GitOps
+- Kubernetes
+- Kubeseal
+- Sealed Secrets
+- Secret Management
+- Tooling
+- DevOps
+- Community
+section_names:
+- devops
+primary_section: devops
 ---
-
 MrFr0z01 shares a new tool designed to simplify working with Bitnami's sealed-secrets in GitOps scenarios, targeting Kubernetes DevOps practitioners.<!--excerpt_end-->
 
 ## Summary

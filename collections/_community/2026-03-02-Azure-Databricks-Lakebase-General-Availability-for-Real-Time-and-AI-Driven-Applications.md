@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Databricks Lakebase: General Availability for Real-Time and AI-Driven Applications"
-description: "This post announces the general availability of Azure Databricks Lakebase, a serverless, Postgres-compatible database built for real-time and AI-driven workloads on Azure. It explains Lakebase’s architecture, key features like instant branching and unified governance, and its integration with Databricks for modern, intelligent data applications."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-databricks/azure-databricks-lakebase-is-now-generally-available/ba-p/4498779"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-databricks/azure-databricks-lakebase-is-now-generally-available/ba-p/4498779
+title: 'Azure Databricks Lakebase: General Availability for Real-Time and AI-Driven Applications'
+author: AnaviNahar
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-02 21:52:12 +00:00
-permalink: "/2026-03-02-Azure-Databricks-Lakebase-General-Availability-for-Real-Time-and-AI-Driven-Applications.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Applications", "Azure", "Azure Databricks", "Cloud Architecture", "Community", "Data Governance", "Data Intelligence Platform", "Database", "Feature Serving", "Lakebase", "Lakehouse", "Managed Database", "ML", "Operational Data", "Postgres", "Real Time Data", "Serverless", "Unity Catalog"]
-tags_normalized: ["ai", "ai applications", "azure", "azure databricks", "cloud architecture", "community", "data governance", "data intelligence platform", "database", "feature serving", "lakebase", "lakehouse", "managed database", "ml", "operational data", "postgres", "real time data", "serverless", "unity catalog"]
+tags:
+- AI
+- AI Applications
+- Azure
+- Azure Databricks
+- Cloud Architecture
+- Community
+- Data Governance
+- Data Intelligence Platform
+- Database
+- Feature Serving
+- Lakebase
+- Lakehouse
+- Managed Database
+- ML
+- Operational Data
+- Postgres
+- Real Time Data
+- Serverless
+- Unity Catalog
+section_names:
+- ai
+- azure
+- ml
 ---
-
 AnaviNahar introduces Azure Databricks Lakebase, now generally available, highlighting its serverless architecture and AI-native features for building real-time, intelligent applications on Azure.<!--excerpt_end-->
 
 # Azure Databricks Lakebase: Now Generally Available

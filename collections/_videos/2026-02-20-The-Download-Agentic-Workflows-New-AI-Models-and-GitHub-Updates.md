@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The Download: Agentic Workflows, New AI Models, and GitHub Updates"
-description: "This episode of The Download, hosted by Andrea from GitHub, covers a series of major developments in the AI and software development ecosystem. Key topics include the release of several new AI models such as GPT-5.3-Codex, Claude Opus 4.6, and Claude Sonnet 4.6, along with updates on GitHub's new agentic workflows and Agent HQ, which introduce advanced AI automation to development workflows. The episode also highlights improved repository-level pull request controls to combat spam, community updates like OpenClaw’s creator joining OpenAI, and reflects on the 25th anniversary of the Agile Manifesto."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=f6F7yQUd8rs"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=f6F7yQUd8rs
+title: 'The Download: Agentic Workflows, New AI Models, and GitHub Updates'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-20 15:01:10 +00:00
-permalink: "/2026-02-20-The-Download-Agentic-Workflows-New-AI-Models-and-GitHub-Updates.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent HQ", "Agentic Workflows", "Agile Manifesto", "AI", "AI Automation", "Claude Opus 4.6", "Claude Sonnet 4.6", "Continuous Integration", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "GPT 5.3 Codex", "OpenAI", "OpenClaw", "Pull Request Controls", "Repository Security", "Software Development", "Spam Prevention", "Videos"]
-tags_normalized: ["agent hq", "agentic workflows", "agile manifesto", "ai", "ai automation", "claude opus 4dot6", "claude sonnet 4dot6", "continuous integration", "developer tools", "devops", "github", "github copilot", "gpt 5dot3 codex", "openai", "openclaw", "pull request controls", "repository security", "software development", "spam prevention", "videos"]
+tags:
+- Agent HQ
+- Agentic Workflows
+- Agile Manifesto
+- AI
+- AI Automation
+- Claude Opus 4.6
+- Claude Sonnet 4.6
+- Continuous Integration
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Copilot
+- GPT 5.3 Codex
+- OpenAI
+- OpenClaw
+- Pull Request Controls
+- Repository Security
+- Software Development
+- Spam Prevention
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Andrea from GitHub presents the latest episode of The Download, spotlighting new AI models, GitHub's agentic workflows, automation features, and key community news relevant to developers.<!--excerpt_end-->
 
 {% youtube f6F7yQUd8rs %}

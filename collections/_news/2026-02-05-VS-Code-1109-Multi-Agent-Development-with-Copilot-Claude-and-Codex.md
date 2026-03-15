@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "VS Code 1.109: Multi-Agent Development with Copilot, Claude, and Codex"
-description: "The January 2026 release of VS Code marks a major leap for multi-agent development, enabling developers to run Claude and Codex agents alongside GitHub Copilot within a unified workspace. This update introduces enhanced agent session management, parallel subagents, open standards like MCP Apps and Agent Skills, and greater extensibility for AI-driven workflows directly in VS Code."
-author: "VS Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/02/05/multi-agent-development"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2026/02/05/multi-agent-development
+title: 'VS Code 1.109: Multi-Agent Development with Copilot, Claude, and Codex'
+author: VS Code Team
+primary_section: github-copilot
+feed_name: Visual Studio Code Releases
 date: 2026-02-05 00:00:00 +00:00
-permalink: "/2026-02-05-VS-Code-1109-Multi-Agent-Development-with-Copilot-Claude-and-Codex.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Sessions", "Agent Skills", "AI", "AI Agents", "AI Integration", "AI Workflows", "Anthropic Claude", "Blog", "Claude Agent", "Codex Agent", "Coding", "GitHub Copilot", "MCP Apps", "Multi Agent Development", "News", "OpenAI Codex", "Software Extensions", "Subagents", "VS Code"]
-tags_normalized: ["agent sessions", "agent skills", "ai", "ai agents", "ai integration", "ai workflows", "anthropic claude", "blog", "claude agent", "codex agent", "coding", "github copilot", "mcp apps", "multi agent development", "news", "openai codex", "software extensions", "subagents", "vs code"]
+tags:
+- Agent Sessions
+- Agent Skills
+- AI
+- AI Agents
+- AI Integration
+- AI Workflows
+- Anthropic Claude
+- Blog
+- Claude Agent
+- Codex Agent
+- GitHub Copilot
+- MCP Apps
+- Multi Agent Development
+- News
+- OpenAI Codex
+- Software Extensions
+- Subagents
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 VS Code Team introduces a powerful multi-agent development experience in version 1.109, letting developers run GitHub Copilot, Claude, and Codex agents together. Discover new tools and open standards that shape collaborative AI workflows.<!--excerpt_end-->
 
 # VS Code 1.109: Multi-Agent Development with Copilot, Claude, and Codex

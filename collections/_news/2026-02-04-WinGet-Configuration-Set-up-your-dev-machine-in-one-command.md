@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "WinGet Configuration: Set up your dev machine in one command"
-description: "This article by Kayla Cinnamon outlines how WinGet Configuration simplifies Windows development machine setup, making the process fast, repeatable, and customizable. It compares WinGet Configuration to import/export features, demonstrates YAML-based setup, explains idempotency, covers settings management, and details how to use GitHub Copilot CLI for generating and managing these configurations. The post provides example configuration files, practical tips, and highlights for individual and team-based setups."
-author: "Kayla Cinnamon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/winget-configuration-set-up-your-dev-machine-in-one-command"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/winget-configuration-set-up-your-dev-machine-in-one-command
+title: 'WinGet Configuration: Set up your dev machine in one command'
+author: Kayla Cinnamon
+primary_section: github-copilot
+feed_name: Microsoft Blog
 date: 2026-02-04 18:00:13 +00:00
-permalink: "/2026-02-04-WinGet-Configuration-Set-up-your-dev-machine-in-one-command.html"
-categories: ["Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Automation", "Azure Developer CLI", "Coding", "Desired State Configuration", "Developer Environment", "Developer Productivity", "DevOps", "Environment Setup", "Git", "GitHub Copilot", "GitHub Copilot CLI", "Microsoft For Developers", "News", "Node.js", "Package Management", "PowerShell", "VS", "VS Code", "VS Workloads", "Windows Package Manager", "Windows Terminal", "WinGet", "WinGet Configuration", "YAML"]
-tags_normalized: ["dotnet", "automation", "azure developer cli", "coding", "desired state configuration", "developer environment", "developer productivity", "devops", "environment setup", "git", "github copilot", "github copilot cli", "microsoft for developers", "news", "nodedotjs", "package management", "powershell", "vs", "vs code", "vs workloads", "windows package manager", "windows terminal", "winget", "winget configuration", "yaml"]
+tags:
+- .NET
+- Automation
+- Azure Developer CLI
+- Desired State Configuration
+- Developer Environment
+- Developer Productivity
+- DevOps
+- Environment Setup
+- Git
+- GitHub Copilot
+- GitHub Copilot CLI
+- Microsoft For Developers
+- News
+- Node.js
+- Package Management
+- PowerShell
+- VS
+- VS Code
+- VS Workloads
+- Windows Package Manager
+- Windows Terminal
+- WinGet
+- WinGet Configuration
+- YAML
+- AI
+section_names:
+- dotnet
+- devops
+- github-copilot
 ---
-
 Kayla Cinnamon explains how WinGet Configuration and GitHub Copilot CLI can streamline and automate the setup of Windows development environments, providing practical steps for developers to get started quickly and consistently.<!--excerpt_end-->
 
 # WinGet Configuration: Set up your dev machine in one command

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Introducing Maia 200: Microsoft’s Next-Generation AI Inference Accelerator"
-description: "This announcement details Microsoft's introduction of the Maia 200 AI accelerator, a custom silicon designed to advance AI inference workloads and improve efficiency in cloud AI token generation. The post also covers opportunities to learn more at ISSCC 2026, a technical whitepaper release, and a community event for industry professionals."
-author: "Sean_Whalen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/join-microsoft-as-we-share-more-on-maia-200-in-the-bay-area/ba-p/4492370"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/join-microsoft-as-we-share-more-on-maia-200-in-the-bay-area/ba-p/4492370
+title: 'Introducing Maia 200: Microsoft’s Next-Generation AI Inference Accelerator'
+author: Sean_Whalen
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-04 23:43:53 +00:00
-permalink: "/2026-02-04-Introducing-Maia-200-Microsofts-Next-Generation-AI-Inference-Accelerator.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Accelerator", "AI Infrastructure", "Azure", "Azure Datacenter", "Azure Hardware", "Cloud AI", "Community", "High Performance Computing", "Inference", "ISSCC", "Maia 200", "Microsoft Silicon", "Sherry Xu", "System On Chip", "Technical Whitepaper"]
-tags_normalized: ["ai", "ai accelerator", "ai infrastructure", "azure", "azure datacenter", "azure hardware", "cloud ai", "community", "high performance computing", "inference", "isscc", "maia 200", "microsoft silicon", "sherry xu", "system on chip", "technical whitepaper"]
+tags:
+- AI
+- AI Accelerator
+- AI Infrastructure
+- Azure
+- Azure Datacenter
+- Azure Hardware
+- Cloud AI
+- Community
+- High Performance Computing
+- Inference
+- ISSCC
+- Maia 200
+- Microsoft Silicon
+- Sherry Xu
+- System On Chip
+- Technical Whitepaper
+section_names:
+- ai
+- azure
 ---
-
 Sean Whalen announces Microsoft's Maia 200 AI accelerator, highlighting its upcoming technical deep-dives at ISSCC 2026 and inviting the community to learn about Microsoft’s newest AI silicon breakthroughs.<!--excerpt_end-->
 
 # Introducing Maia 200: Microsoft’s Next-Generation AI Inference Accelerator

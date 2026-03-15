@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Accelerating Agentic Solutions for Financial Services with Copilot Studio"
-description: "This Microsoft Ignite breakout session highlights practical approaches for building intelligent agents in the financial services industry using Copilot Studio. It discusses top AI use cases in banking, capital markets, and insurance, covers best practices for model selection and agent optimization, and demonstrates real-world deployment, including employee-specific AI assistants using firm data integrations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=oG2oJP0fpg0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=oG2oJP0fpg0
+title: Accelerating Agentic Solutions for Financial Services with Copilot Studio
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 07:25:32 +00:00
-permalink: "/2025-11-21-Accelerating-Agentic-Solutions-for-Financial-Services-with-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["Agentic Solutions", "AI", "AI Agents", "Banking Technology", "Capital Markets", "Continuous Optimization", "Copilot Studio", "Data Integration", "Edward Jones", "Email Diversification Alerts", "Financial Services", "Innovatewithlow", "Insurance Automation", "MCP", "Microsoft Ignite", "Morningstar", "MSIgnite", "Sub Agents", "Videos"]
-tags_normalized: ["agentic solutions", "ai", "ai agents", "banking technology", "capital markets", "continuous optimization", "copilot studio", "data integration", "edward jones", "email diversification alerts", "financial services", "innovatewithlow", "insurance automation", "mcp", "microsoft ignite", "morningstar", "msignite", "sub agents", "videos"]
+tags:
+- Agentic Solutions
+- AI Agents
+- Banking Technology
+- Capital Markets
+- Continuous Optimization
+- Copilot Studio
+- Data Integration
+- Edward Jones
+- Email Diversification Alerts
+- Financial Services
+- Innovatewithlow
+- Insurance Automation
+- MCP
+- Microsoft Ignite
+- Morningstar
+- MSIgnite
+- Sub Agents
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 Microsoft Events presents a session on agentic journeys in financial services, focusing on building AI-powered solutions using Copilot Studio and practical techniques for real-world deployment.<!--excerpt_end-->
 
 {% youtube oG2oJP0fpg0 %}

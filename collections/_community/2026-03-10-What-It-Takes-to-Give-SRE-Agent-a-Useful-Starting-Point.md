@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "What It Takes to Give SRE Agent a Useful Starting Point"
-description: "This post provides an in-depth walkthrough of onboarding the Azure SRE Agent, covering how to connect code, logs, incidents, and Azure resources for immediate value. It demonstrates the operational impact of giving the agent rich context, including live monitoring, incident response, debugging, and GitHub integration within Azure environments."
-author: "Dalibor_Kovacevic"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-it-takes-to-give-sre-agent-a-useful-starting-point/ba-p/4500343"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-it-takes-to-give-sre-agent-a-useful-starting-point/ba-p/4500343
+title: What It Takes to Give SRE Agent a Useful Starting Point
+author: Dalibor_Kovacevic
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-10 14:15:28 +00:00
-permalink: "/2026-03-10-What-It-Takes-to-Give-SRE-Agent-a-Useful-Starting-Point.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["App Security", "Application Insights", "Authentication", "Azure", "Azure Container Apps", "Azure Monitor", "Azure SRE Agent", "Community", "Deployment", "DevOps", "GitHub Integration", "Incident Management", "Incident Response", "Kusto", "Log Analytics", "Managed Identity", "Monitoring", "Observability", "Onboarding", "Operational Readiness", "RBAC", "Security", "Site Reliability Engineering"]
-tags_normalized: ["app security", "application insights", "authentication", "azure", "azure container apps", "azure monitor", "azure sre agent", "community", "deployment", "devops", "github integration", "incident management", "incident response", "kusto", "log analytics", "managed identity", "monitoring", "observability", "onboarding", "operational readiness", "rbac", "security", "site reliability engineering"]
+tags:
+- App Security
+- Application Insights
+- Authentication
+- Azure
+- Azure Container Apps
+- Azure Monitor
+- Azure SRE Agent
+- Community
+- Deployment
+- DevOps
+- GitHub Integration
+- Incident Management
+- Incident Response
+- Kusto
+- Log Analytics
+- Managed Identity
+- Monitoring
+- Observability
+- Onboarding
+- Operational Readiness
+- RBAC
+- Security
+- Site Reliability Engineering
+section_names:
+- azure
+- devops
+- security
 ---
-
 Dalibor_Kovacevic demonstrates how to effectively onboard the Azure SRE Agent for real-world apps, showing the practical steps needed to deliver actionable insights and better incident response in cloud environments.<!--excerpt_end-->
 
 # What It Takes to Give SRE Agent a Useful Starting Point

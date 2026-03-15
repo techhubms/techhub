@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Build Your Microsoft Ignite Schedule: Top Sessions for IT Pros"
-description: "This guide, by GalimahB for the Azure Tech Community, curates top Microsoft Ignite 2025 sessions tailored for IT professionals. It highlights recommended Azure, AI, infrastructure, automation, and security sessions to help IT Pros maximize learning, streamline operations, and enhance their technical strategies during the event."
-author: "GalimahB"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-events/build-your-microsoft-ignite-schedule-top-sessions-for-it-pros/ba-p/4468165
+title: 'Build Your Microsoft Ignite Schedule: Top Sessions for IT Pros'
+author: GalimahB
+feed_name: Microsoft Tech Community
 date: 2025-11-07 18:46:27 +00:00
-permalink: "/2025-11-07-Build-Your-Microsoft-Ignite-Schedule-Top-Sessions-for-IT-Pros.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agents", "Automation", "Azure", "Azure CLI", "Cloud Infrastructure", "Community", "Compliance", "Enterprise Workloads", "Governance", "Hybrid Management", "IT Pro", "Microsoft Ignite", "Migration", "PowerShell", "Resiliency", "Security"]
-tags_normalized: ["ai", "ai agents", "automation", "azure", "azure cli", "cloud infrastructure", "community", "compliance", "enterprise workloads", "governance", "hybrid management", "it pro", "microsoft ignite", "migration", "powershell", "resiliency", "security"]
+tags:
+- AI Agents
+- Automation
+- Azure CLI
+- Cloud Infrastructure
+- Compliance
+- Enterprise Workloads
+- Governance
+- Hybrid Management
+- IT Pro
+- Microsoft Ignite
+- Migration
+- PowerShell
+- Resiliency
+- AI
+- Azure
+- Security
+- Community
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 GalimahB curates a selection of can't-miss sessions for IT professionals at Microsoft Ignite 2025, with guidance for building your optimal Azure and cloud learning path.<!--excerpt_end-->
 
 # Build Your Microsoft Ignite Schedule: Top Sessions for IT Pros

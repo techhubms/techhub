@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "New Public Preview Features in Azure Monitor Pipeline: Secure Ingestion, Pod Placement, and Data Transformations"
-description: "This article introduces the latest public preview capabilities in Azure Monitor pipeline, focusing on secure data ingestion using TLS and mutual TLS (mTLS), advanced pod placement controls in Kubernetes deployments, and built-in data transformation features. Learn how these features help improve data security, operational efficiency, and schema standardization at scale for complex and security-sensitive environments."
-author: "XemaPathak"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-new-public-preview-capabilities-in-azure-monitor/ba-p/4488904"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-new-public-preview-capabilities-in-azure-monitor/ba-p/4488904
+title: 'New Public Preview Features in Azure Monitor Pipeline: Secure Ingestion, Pod Placement, and Data Transformations'
+author: XemaPathak
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-25 23:40:09 +00:00
-permalink: "/2026-02-25-New-Public-Preview-Features-in-Azure-Monitor-Pipeline-Secure-Ingestion-Pod-Placement-and-Data-Transformations.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Monitor", "Certificate Management", "Certified Authentication", "Cluster Scheduling", "Community", "Data Aggregation", "Data Pipeline", "Data Transformation", "DevOps", "Edge Computing", "ETL", "KQL", "Kubernetes", "Mtls", "Pod Placement", "Public Preview", "Schema Standardization", "Secure Ingestion", "Security", "Telemetry", "TLS"]
-tags_normalized: ["azure", "azure monitor", "certificate management", "certified authentication", "cluster scheduling", "community", "data aggregation", "data pipeline", "data transformation", "devops", "edge computing", "etl", "kql", "kubernetes", "mtls", "pod placement", "public preview", "schema standardization", "secure ingestion", "security", "telemetry", "tls"]
+tags:
+- Azure
+- Azure Monitor
+- Certificate Management
+- Certified Authentication
+- Cluster Scheduling
+- Community
+- Data Aggregation
+- Data Pipeline
+- Data Transformation
+- DevOps
+- Edge Computing
+- ETL
+- KQL
+- Kubernetes
+- Mtls
+- Pod Placement
+- Public Preview
+- Schema Standardization
+- Secure Ingestion
+- Security
+- Telemetry
+- TLS
+section_names:
+- azure
+- devops
+- security
 ---
-
 XemaPathak outlines new public preview features in Azure Monitor pipeline, including secure TLS/mTLS ingestion, Kubernetes pod placement controls, and automated data transformations, aimed at enhancing scalability and security.<!--excerpt_end-->
 
 # New Public Preview Features in Azure Monitor Pipeline: Secure Ingestion, Pod Placement, and Data Transformations

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Policy: Required Actions for Docker Content Trust Deprecation in Azure Container Registry"
-description: "This post provides an in-depth look at Azure’s deprecation of Docker Content Trust (DCT) in Azure Container Registry, particularly focusing on the removal of the trustPolicy property from APIs. It guides Azure Policy administrators through identifying, updating, and validating affected Azure Policy assignments to maintain compliance during the transition, and discusses tracking updates as Microsoft phases in Notary Project as a replacement."
-author: "ShannonHicks"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-governance-and-management/azure-policy-required-actions-for-docker-content-trust/ba-p/4478951
+title: 'Azure Policy: Required Actions for Docker Content Trust Deprecation in Azure Container Registry'
+author: ShannonHicks
+feed_name: Microsoft Tech Community
 date: 2025-12-17 22:36:46 +00:00
-permalink: "/2025-12-17-Azure-Policy-Required-Actions-for-Docker-Content-Trust-Deprecation-in-Azure-Container-Registry.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ACR", "API Deprecation", "ARM API", "Azure", "Azure Container Registry", "Azure Policy", "Cloud Governance", "Community", "Container Security", "DevOps", "Docker Content Trust", "Notary Project", "Policy Compliance", "Policy Definition", "Security", "Security Compliance", "Trustpolicy"]
-tags_normalized: ["acr", "api deprecation", "arm api", "azure", "azure container registry", "azure policy", "cloud governance", "community", "container security", "devops", "docker content trust", "notary project", "policy compliance", "policy definition", "security", "security compliance", "trustpolicy"]
+tags:
+- ACR
+- API Deprecation
+- ARM API
+- Azure Container Registry
+- Azure Policy
+- Cloud Governance
+- Container Security
+- Docker Content Trust
+- Notary Project
+- Policy Compliance
+- Policy Definition
+- Security Compliance
+- Trustpolicy
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 ShannonHicks outlines the ramifications of Azure deprecating Docker Content Trust in Azure Container Registry, detailing steps Azure Policy administrators must take to ensure continued compliance and secure container governance.<!--excerpt_end-->
 
 # Azure Policy: Required Actions for Docker Content Trust Deprecation in Azure Container Registry

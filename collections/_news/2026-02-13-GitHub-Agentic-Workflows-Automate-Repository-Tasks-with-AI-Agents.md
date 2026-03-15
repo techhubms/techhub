@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Agentic Workflows: Automate Repository Tasks with AI Agents"
-description: "This news article introduces GitHub Agentic Workflows—an open source, AI-powered automation feature integrated with GitHub Actions. Developers can write workflow automation in Markdown, using natural language, and leverage GitHub Copilot CLI and other coding agents for repository management, issue triage, pull request reviews, and CI analysis. The article highlights security, flexibility, and native integration with GitHub tools. GitHub Agentic Workflows are now available in technical preview through the 'gh aw' CLI extension."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-13-github-agentic-workflows-are-now-in-technical-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-13-github-agentic-workflows-are-now-in-technical-preview
+title: 'GitHub Agentic Workflows: Automate Repository Tasks with AI Agents'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-13 14:00:26 +00:00
-permalink: "/2026-02-13-GitHub-Agentic-Workflows-Automate-Repository-Tasks-with-AI-Agents.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Actions", "AI", "AI Automation", "CI Failure Analysis", "Collaboration Tools", "Copilot", "Developer Tools", "DevOps", "GitHub Actions", "GitHub Agentic Workflows", "GitHub Copilot", "GitHub Copilot CLI", "Issue Triage", "Markdown Automation", "MCP Server", "Natural Language Workflows", "News", "Open Source", "Projects & Issues", "Pull Request Review", "Repository Automation", "Technical Preview", "VS Code Integration", "Workflow Security"]
-tags_normalized: ["actions", "ai", "ai automation", "ci failure analysis", "collaboration tools", "copilot", "developer tools", "devops", "github actions", "github agentic workflows", "github copilot", "github copilot cli", "issue triage", "markdown automation", "mcp server", "natural language workflows", "news", "open source", "projects and issues", "pull request review", "repository automation", "technical preview", "vs code integration", "workflow security"]
+tags:
+- Actions
+- AI
+- AI Automation
+- CI Failure Analysis
+- Collaboration Tools
+- Copilot
+- Developer Tools
+- DevOps
+- GitHub Actions
+- GitHub Agentic Workflows
+- GitHub Copilot
+- GitHub Copilot CLI
+- Issue Triage
+- Markdown Automation
+- MCP Server
+- Natural Language Workflows
+- News
+- Open Source
+- Projects & Issues
+- Pull Request Review
+- Repository Automation
+- Technical Preview
+- VS Code Integration
+- Workflow Security
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison unveils GitHub Agentic Workflows, an AI-driven automation feature for GitHub repositories. Discover how natural language and Copilot CLI empower developers to automate repo management and CI tasks with security and deep GitHub integration.<!--excerpt_end-->
 
 # GitHub Agentic Workflows: Technical Preview Announcement

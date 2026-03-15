@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Microsoft Ignite 2025: The Dawn of the AI-Agent Era"
-description: "This post explores the major announcements at Microsoft Ignite 2025, including the emergence of AI agents, the new IQ Stack, changes in Microsoft 365 productivity tools, and the launch of Microsoft Foundry and Agent 365. The recap explains how Microsoft's ecosystem is evolving toward an AI-first workplace, with a strong focus on agent-driven automation, data intelligence, governance, and security. Readers will understand the technical advancements in AI integration, enterprise platforms, and security capabilities that are shaping the future of work."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/microsoft-ignite-2025-the-dawn-of-the-ai-agent-era/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/microsoft-ignite-2025-the-dawn-of-the-ai-agent-era/
+title: 'Microsoft Ignite 2025: The Dawn of the AI-Agent Era'
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2025-11-26 08:32:12 +00:00
-permalink: "/2025-11-26-Microsoft-Ignite-2025-The-Dawn-of-the-AI-Agent-Era.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Agent 365", "AI", "AI Agents", "Automation", "Azure", "Blogs", "Compliance", "Copilot", "Cybersecurity", "Data Intelligence", "Enterprise AI", "Entra Agent ID", "Excel", "Fabric IQ", "Governance", "IQ Stack", "Microsoft Foundry", "Microsoft General", "Microsoft Ignite", "ML", "PowerPoint", "Security", "Teams", "Word"]
-tags_normalized: ["agent 365", "ai", "ai agents", "automation", "azure", "blogs", "compliance", "copilot", "cybersecurity", "data intelligence", "enterprise ai", "entra agent id", "excel", "fabric iq", "governance", "iq stack", "microsoft foundry", "microsoft general", "microsoft ignite", "ml", "powerpoint", "security", "teams", "word"]
+tags:
+- Agent 365
+- AI Agents
+- Automation
+- Compliance
+- Copilot
+- Cybersecurity
+- Data Intelligence
+- Enterprise AI
+- Entra Agent ID
+- Excel
+- Fabric IQ
+- Governance
+- IQ Stack
+- Microsoft Foundry
+- Microsoft General
+- Microsoft Ignite
+- PowerPoint
+- Teams
+- Word
+- AI
+- Azure
+- ML
+- Security
+- Blogs
+section_names:
+- ai
+- azure
+- ml
+- security
+primary_section: ai
 ---
-
 John Edward summarizes the technical innovations unveiled at Microsoft Ignite 2025, highlighting AI agents, enterprise governance, and robust security features that are redefining the Microsoft ecosystem.<!--excerpt_end-->
 
 # Microsoft Ignite 2025: The Dawn of the AI-Agent Era

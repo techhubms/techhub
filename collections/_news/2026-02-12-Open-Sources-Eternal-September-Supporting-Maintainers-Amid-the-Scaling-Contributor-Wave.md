@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Open Source’s Eternal September: Supporting Maintainers Amid the Scaling Contributor Wave"
-description: "Ashley Wolf explores how the drop in contribution friction is leading to a new era for open source—the 'Eternal September.' The article discusses challenges faced by maintainers, the rise of AI-generated contributions, and how GitHub is shipping features and exploring community-driven strategies to balance inclusivity and quality of contributions at scale."
-author: "Ashley Wolf"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/open-source/maintainers/welcome-to-the-eternal-september-of-open-source-heres-what-we-plan-to-do-for-maintainers/
+title: 'Open Source’s Eternal September: Supporting Maintainers Amid the Scaling Contributor Wave'
+author: Ashley Wolf
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-12 20:14:11 +00:00
-permalink: "/2026-02-12-Open-Sources-Eternal-September-Supporting-Maintainers-Amid-the-Scaling-Contributor-Wave.html"
-categories: ["DevOps"]
-tags: ["AI", "AI Generated Code", "Automation", "Collaboration", "Community Health", "Community Moderation", "Contribution Management", "Developer Tools", "DevOps", "GitHub", "Issue Triage", "Maintainers", "News", "Open Source", "Pull Requests", "Trust Signals"]
-tags_normalized: ["ai", "ai generated code", "automation", "collaboration", "community health", "community moderation", "contribution management", "developer tools", "devops", "github", "issue triage", "maintainers", "news", "open source", "pull requests", "trust signals"]
+tags:
+- AI
+- AI Generated Code
+- Automation
+- Collaboration
+- Community Health
+- Community Moderation
+- Contribution Management
+- Developer Tools
+- DevOps
+- GitHub
+- Issue Triage
+- Maintainers
+- News
+- Open Source
+- Pull Requests
+- Trust Signals
+section_names:
+- devops
 ---
-
 Ashley Wolf discusses the challenges of open source maintainers coping with a surge in contributions, especially as AI and automation lower entry barriers. The article details both GitHub’s current and upcoming features to help maintainers, and highlights innovative trust and triage models emerging from the community.<!--excerpt_end-->
 
 # Open Source’s Eternal September: Supporting Maintainers Amid the Scaling Contributor Wave

@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+external_url: https://techcommunity.microsoft.com/blog/microsoft-security-blog/collaborative-research-by-microsoft-and-nvidia-on-real-time-immunity/4470164
 title: "AI-Driven Adversarial Defense: Microsoft and NVIDIA's Real-Time Immunity Collaboration"
-description: "This article details the joint research effort between Microsoft and NVIDIA focused on real-time immunity against AI-driven security threats. It covers adversarial learning pipelines, GPU-accelerated model deployment, custom tokenization for high-throughput threat detection, and innovations enabling scalable, low-latency cybersecurity in production environments."
-author: "Tina Romeo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/microsoft-security-blog/collaborative-research-by-microsoft-and-nvidia-on-real-time-immunity/4470164"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+author: Tina Romeo
+feed_name: Microsoft Security Blog
 date: 2025-11-17 17:03:54 +00:00
-permalink: "/2025-11-17-AI-Driven-Adversarial-Defense-Microsoft-and-NVIDIAs-Real-Time-Immunity-Collaboration.html"
-categories: ["AI", "Security"]
-tags: ["Adversarial Learning", "AI", "AI Security", "CUDA Kernels", "Cybersecurity", "GPU Acceleration", "Latency Optimization", "Microsoft Security", "Model Distillation", "News", "NVIDIA H100", "Real Time Detection", "Security", "TensorRT", "Threat Detection", "Tokenization", "Transformer Models", "Triton Inference Server"]
-tags_normalized: ["adversarial learning", "ai", "ai security", "cuda kernels", "cybersecurity", "gpu acceleration", "latency optimization", "microsoft security", "model distillation", "news", "nvidia h100", "real time detection", "security", "tensorrt", "threat detection", "tokenization", "transformer models", "triton inference server"]
+tags:
+- Adversarial Learning
+- AI Security
+- CUDA Kernels
+- Cybersecurity
+- GPU Acceleration
+- Latency Optimization
+- Microsoft Security
+- Model Distillation
+- NVIDIA H100
+- Real Time Detection
+- TensorRT
+- Threat Detection
+- Tokenization
+- Transformer Models
+- Triton Inference Server
+- AI
+- Security
+- News
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Tina Romeo shares insights on how Microsoft and NVIDIA are collaborating to advance adversarial learning and real-time immunity for AI-powered cybersecurity, emphasizing innovations in model optimization and GPU inferencing.<!--excerpt_end-->
 
 # AI-Driven Adversarial Defense: Microsoft and NVIDIA's Real-Time Immunity Collaboration

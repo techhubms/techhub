@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Proactive .NET Reliability with Azure SRE Agent"
-description: "This demo-rich session explores how developers can proactively address reliability in .NET applications by leveraging the Azure SRE Agent. The session covers instrumenting ASP.NET Core apps with Application Insights, detecting and triaging real-time performance regressions, triggering safe rollbacks, building custom sub-agents, scheduling health checks, and integrating Teams alerts for streamlined incident response and faster deployment confidence."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Kx_6SB-mhgg"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=Kx_6SB-mhgg
+title: Proactive .NET Reliability with Azure SRE Agent
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-10 00:00:37 +00:00
-permalink: "/2025-12-10-Proactive-NET-Reliability-with-Azure-SRE-Agent.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "Application Insights", "ASP.NET Core", "Azure", "Azure SRE Agent", "Cloud Development", "Coding", "Custom Sub Agent", "DevOps", "Health Checks", "Incident Response", "Performance Monitoring", "Proactive Monitoring", "Real Time Detection", "Reliability Engineering", "Root Cause Analysis", "Safe Rollback", "Teams Integration", "Videos"]
-tags_normalized: ["dotnet", "application insights", "aspdotnet core", "azure", "azure sre agent", "cloud development", "coding", "custom sub agent", "devops", "health checks", "incident response", "performance monitoring", "proactive monitoring", "real time detection", "reliability engineering", "root cause analysis", "safe rollback", "teams integration", "videos"]
+tags:
+- .NET
+- Application Insights
+- ASP.NET Core
+- Azure SRE Agent
+- Cloud Development
+- Custom Sub Agent
+- Health Checks
+- Incident Response
+- Performance Monitoring
+- Proactive Monitoring
+- Real Time Detection
+- Reliability Engineering
+- Root Cause Analysis
+- Safe Rollback
+- Teams Integration
+- Azure
+- DevOps
+- Videos
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 dotnet demonstrates how developers can leverage the Azure SRE Agent for proactive reliability in .NET apps, covering instrumentation, real-time detection, and automated incident management.<!--excerpt_end-->
 
 {% youtube Kx_6SB-mhgg %}

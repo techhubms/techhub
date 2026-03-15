@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Supercharge Your Test Coverage with GitHub Copilot Testing for .NET"
-description: "This article introduces GitHub Copilot testing for .NET, now available on Visual Studio Insiders. It covers how this AI-powered extension automates the generation, building, and running of unit tests for C# code, speeding up developer workflows and improving coverage. Key features include deterministic type-safe results, support for major testing frameworks, deep IDE integration, and automatic handling of test failures. Developers learn how to enable and use Copilot testing to enhance quality, reduce manual effort, and gain meaningful feedback with actionable insights for .NET projects."
-author: "McKenna Barlow"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet/
+title: Supercharge Your Test Coverage with GitHub Copilot Testing for .NET
+author: McKenna Barlow
+feed_name: Microsoft .NET Blog
 date: 2025-11-19 18:05:00 +00:00
-permalink: "/2025-11-19-Supercharge-Your-Test-Coverage-with-GitHub-Copilot-Testing-for-NET.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Testing", "C#", "Code Coverage", "Coding", "Copilot", "GitHub Copilot", "IDE Integration", "MSBuild", "MSTest", "News", "NUnit", "Roslyn Analyzer", "Software Quality", "Test Automation", "Test Explorer", "Unit Testing", "VS", "xUnit"]
-tags_normalized: ["dotnet", "ai", "ai testing", "csharp", "code coverage", "coding", "copilot", "github copilot", "ide integration", "msbuild", "mstest", "news", "nunit", "roslyn analyzer", "software quality", "test automation", "test explorer", "unit testing", "vs", "xunit"]
+tags:
+- .NET
+- AI Testing
+- C#
+- Code Coverage
+- Copilot
+- IDE Integration
+- MSBuild
+- MSTest
+- NUnit
+- Roslyn Analyzer
+- Software Quality
+- Test Automation
+- Test Explorer
+- Unit Testing
+- VS
+- xUnit
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 McKenna Barlow explains how GitHub Copilot testing for .NET streamlines test creation, automating unit test generation in Visual Studio with AI to boost code reliability and developer productivity.<!--excerpt_end-->
 
 # Supercharge Your Test Coverage with GitHub Copilot Testing for .NET

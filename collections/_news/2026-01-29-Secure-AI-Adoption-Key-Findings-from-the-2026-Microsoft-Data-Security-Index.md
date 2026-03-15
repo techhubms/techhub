@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Secure AI Adoption: Key Findings from the 2026 Microsoft Data Security Index"
-description: "This article analyzes the 2026 Microsoft Data Security Index to highlight how organizations are adopting generative AI while maintaining robust data security. It explores trends in AI-powered productivity, unified security platforms, and Microsoft solutions such as Purview, Defender, and Security Copilot for mitigating emerging risks and enabling responsible AI innovation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/29/new-microsoft-data-security-index-report-explores-secure-ai-adoption-to-protect-sensitive-data/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/29/new-microsoft-data-security-index-report-explores-secure-ai-adoption-to-protect-sensitive-data/
+title: 'Secure AI Adoption: Key Findings from the 2026 Microsoft Data Security Index'
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-29 17:50:40 +00:00
-permalink: "/2026-01-29-Secure-AI-Adoption-Key-Findings-from-the-2026-Microsoft-Data-Security-Index.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Company News", "Data Loss Prevention", "Data Protection", "Data Security Posture Management", "DSPM", "Generative AI", "Governance", "Incident Response", "Microsoft Defender", "Microsoft Purview", "News", "Risk Management", "Security", "Security Automation", "Security Copilot", "Sensitive Data", "Unified Security"]
-tags_normalized: ["ai", "ai security", "company news", "data loss prevention", "data protection", "data security posture management", "dspm", "generative ai", "governance", "incident response", "microsoft defender", "microsoft purview", "news", "risk management", "security", "security automation", "security copilot", "sensitive data", "unified security"]
+tags:
+- AI
+- AI Security
+- Company News
+- Data Loss Prevention
+- Data Protection
+- Data Security Posture Management
+- DSPM
+- Generative AI
+- Governance
+- Incident Response
+- Microsoft Defender
+- Microsoft Purview
+- News
+- Risk Management
+- Security
+- Security Automation
+- Security Copilot
+- Sensitive Data
+- Unified Security
+section_names:
+- ai
+- security
 ---
-
 stclarke reviews the 2026 Microsoft Data Security Index, discussing generative AI’s impact on enterprise security, best practices for secure AI adoption, and how Microsoft’s security solutions address new data protection challenges.<!--excerpt_end-->
 
 # Secure AI Adoption: Key Findings from the 2026 Microsoft Data Security Index

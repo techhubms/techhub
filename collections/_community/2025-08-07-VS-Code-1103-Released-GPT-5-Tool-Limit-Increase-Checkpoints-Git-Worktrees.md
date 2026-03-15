@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "VS Code 1.103 Released: GPT-5, Tool Limit Increase, Checkpoints, Git Worktrees"
-description: "A community discussion on the release of Visual Studio Code 1.103, highlighting new features such as GPT-5 integration, increased tool limits, checkpoints, and Git worktree enhancements. The conversation touches on Copilot availability, rollout logistics for different subscription plans, and users’ first impressions."
-author: "connor4312"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mk7d03/vs_code_1103_released_with_gpt5_tool_limit/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk7d03/vs_code_1103_released_with_gpt5_tool_limit/
+title: 'VS Code 1.103 Released: GPT-5, Tool Limit Increase, Checkpoints, Git Worktrees'
+author: connor4312
+feed_name: Reddit Github Copilot
 date: 2025-08-07 18:06:13 +00:00
-permalink: "/2025-08-07-VS-Code-1103-Released-GPT-5-Tool-Limit-Increase-Checkpoints-Git-Worktrees.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Checkpoints", "Coding", "Coding Agents", "Community", "Copilot Rollout", "Development Tools", "DevOps", "Enterprise Plan", "Git Worktrees", "GitHub Copilot", "GPT 5", "Microsoft", "Pro Subscription", "Tool Limit Increase", "VS Code", "VS Code 1.103"]
-tags_normalized: ["ai", "checkpoints", "coding", "coding agents", "community", "copilot rollout", "development tools", "devops", "enterprise plan", "git worktrees", "github copilot", "gpt 5", "microsoft", "pro subscription", "tool limit increase", "vs code", "vs code 1dot103"]
+tags:
+- Checkpoints
+- Coding Agents
+- Copilot Rollout
+- Development Tools
+- Enterprise Plan
+- Git Worktrees
+- GPT 5
+- Microsoft
+- Pro Subscription
+- Tool Limit Increase
+- VS Code
+- VS Code 1.103
+- AI
+- DevOps
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 connor4312 hosts a discussion about the new features in VS Code 1.103, including GPT-5, increased tool limits, and the Copilot rollout, with input from the developer community.<!--excerpt_end-->
 
 # VS Code 1.103 Released: GPT-5, Tool Limit Increase, Checkpoints, Git Worktrees

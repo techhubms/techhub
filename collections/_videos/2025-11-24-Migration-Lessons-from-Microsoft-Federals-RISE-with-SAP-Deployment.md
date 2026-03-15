@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Migration Lessons from Microsoft Federal's RISE with SAP Deployment"
-description: "This session, part of Microsoft Ignite 2025, explores how the Microsoft Federal team modernized SAP ERP systems using RISE with SAP on Microsoft Cloud. Key topics include deploying SAP on Azure Government, integrating SAP BTP, implementing AI-powered monitoring, and securing workloads with Microsoft Defender and Sentinel. Insights are provided on achieving compliance for regulated industries and practical migration strategies—offering real-world lessons for enterprise architects and IT leaders."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bhN_v449nVM"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=bhN_v449nVM
+title: Migration Lessons from Microsoft Federal's RISE with SAP Deployment
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 07:28:33 +00:00
-permalink: "/2025-11-24-Migration-Lessons-from-Microsoft-Federals-RISE-with-SAP-Deployment.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Powered Monitoring", "Azure", "Azure Government", "Business Continuity", "Compliance", "Cross Tenant Authentication", "High Availability", "Microsoft Cloud", "Microsoft Defender", "Microsoft Sentinel", "Migrateandmodernizeyourestate", "Migration Strategy", "MSIgnite", "Regulated Industries", "RISE With SAP", "SAP", "SAP BTP", "Security", "Sovereignty", "Threat Detection", "Videos"]
-tags_normalized: ["ai", "ai powered monitoring", "azure", "azure government", "business continuity", "compliance", "cross tenant authentication", "high availability", "microsoft cloud", "microsoft defender", "microsoft sentinel", "migrateandmodernizeyourestate", "migration strategy", "msignite", "regulated industries", "rise with sap", "sap", "sap btp", "security", "sovereignty", "threat detection", "videos"]
+tags:
+- AI Powered Monitoring
+- Azure Government
+- Business Continuity
+- Compliance
+- Cross Tenant Authentication
+- High Availability
+- Microsoft Cloud
+- Microsoft Defender
+- Microsoft Sentinel
+- Migrateandmodernizeyourestate
+- Migration Strategy
+- MSIgnite
+- Regulated Industries
+- RISE With SAP
+- SAP
+- SAP BTP
+- Sovereignty
+- Threat Detection
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Presented by Barbara McElnea, Veronika Reger, and Greg Simons, this Microsoft Ignite session details how Microsoft Federal modernized SAP ERP with RISE on Azure, focusing on robust infrastructure, AI-driven monitoring, and enhanced security and compliance in regulated government settings.<!--excerpt_end-->
 
 {% youtube bhN_v449nVM %}
@@ -64,7 +82,7 @@ The session concludes with questions and answers addressing technical details in
 ## Further Resources
 
 - [Migrate SAP Plan - Ignite](https://aka.ms/ignite25-plans-MigrateSAPPlan)
-- More on-demand sessions: https://ignite.microsoft.com
+- More on-demand sessions: <https://ignite.microsoft.com>
 
 ## Session Chapters
 

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Gain Deeper Insights into Spark Jobs with JobInsight in Microsoft Fabric"
-description: "This article introduces JobInsight, a Java-based diagnostic library for Microsoft Fabric, enabling developers and data engineers to deeply analyze Spark jobs. It explains how to interactively access Spark queries, jobs, stages, and logs from Fabric Notebooks, automate post-run diagnostics, and store metrics in a Lakehouse or ADLS Gen2 for advanced troubleshooting and analytics."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-deeper-insights-into-spark-jobs-with-jobinsight-in-microsoft-fabric/
+title: Gain Deeper Insights into Spark Jobs with JobInsight in Microsoft Fabric
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-08-26 12:20:07 +00:00
-permalink: "/2025-08-26-Gain-Deeper-Insights-into-Spark-Jobs-with-JobInsight-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["ADLS Gen2", "Automation", "Azure", "Big Data", "Data Analysis", "Data Engineering", "Event Logs", "Java", "JobInsight", "Lakehouse", "Microsoft Fabric", "ML", "News", "Notebook", "Performance Monitoring", "Resource Tuning", "Spark", "Spark Diagnostics"]
-tags_normalized: ["adls gen2", "automation", "azure", "big data", "data analysis", "data engineering", "event logs", "java", "jobinsight", "lakehouse", "microsoft fabric", "ml", "news", "notebook", "performance monitoring", "resource tuning", "spark", "spark diagnostics"]
+tags:
+- ADLS Gen2
+- Automation
+- Big Data
+- Data Analysis
+- Data Engineering
+- Event Logs
+- Java
+- JobInsight
+- Lakehouse
+- Microsoft Fabric
+- Notebook
+- Performance Monitoring
+- Resource Tuning
+- Spark
+- Spark Diagnostics
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog showcases how JobInsight empowers developers and data engineers to analyze Spark applications in Microsoft Fabric, offering metrics extraction, log diagnostics, and advanced troubleshooting directly within Fabric Notebooks.<!--excerpt_end-->
 
 # Gain Deeper Insights into Spark Jobs with JobInsight in Microsoft Fabric

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Gemini 3 Pro Model Now Available in GitHub Copilot Public Preview"
-description: "GitHub Copilot is rolling out support for Gemini 3 Pro, Google’s newest AI model, to Pro, Pro+ Business, and Enterprise users. Developers can select Gemini 3 Pro from model pickers in VS Code, GitHub.com, GitHub Mobile, and the CLI. Administrators must enable the policy for Enterprise and Business plans. Individuals can activate Gemini 3 Pro in their Copilot settings, with options for custom API keys. Full documentation is available for users interested in supported models and configuration steps."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-11-18-gemini-3-pro-is-in-public-preview-for-github-copilot
+title: Gemini 3 Pro Model Now Available in GitHub Copilot Public Preview
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-11-18 16:15:31 +00:00
-permalink: "/2025-11-18-Gemini-3-Pro-Model-Now-Available-in-GitHub-Copilot-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Development", "AI Model", "API Key", "Copilot", "Copilot Chat", "Copilot Settings", "Edit Mode", "Enterprise Subscription", "Gemini 3 Pro", "GitHub CLI", "GitHub Copilot", "GitHub Mobile", "Model Picker", "News", "Pro+ Business Plan", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai development", "ai model", "api key", "copilot", "copilot chat", "copilot settings", "edit mode", "enterprise subscription", "gemini 3 pro", "github cli", "github copilot", "github mobile", "model picker", "news", "proplus business plan", "vs code"]
+tags:
+- Agent Mode
+- AI Development
+- AI Model
+- API Key
+- Copilot
+- Copilot Chat
+- Copilot Settings
+- Edit Mode
+- Enterprise Subscription
+- Gemini 3 Pro
+- GitHub CLI
+- GitHub Mobile
+- Model Picker
+- Pro+ Business Plan
+- VS Code
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison explains the rollout of Gemini 3 Pro, Google's AI model, for various GitHub Copilot subscriptions, detailing activation steps for administrators and individual users.<!--excerpt_end-->
 
 # Gemini 3 Pro Is in Public Preview for GitHub Copilot

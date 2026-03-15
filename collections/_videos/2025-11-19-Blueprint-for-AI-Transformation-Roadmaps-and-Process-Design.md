@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Blueprint for AI Transformation: Roadmaps and Process Design"
-description: "This session from Microsoft Ignite 2025 explores methods to build successful AI transformation roadmaps by creating living blueprints of processes and architecture. It covers practical steps using tools such as Lucid Suite, Microsoft Teams, and Azure DevOps, and addresses typical 'last-mile' challenges where undocumented workflows impede AI agent implementation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=looF4pizVps"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=looF4pizVps
+title: 'Blueprint for AI Transformation: Roadmaps and Process Design'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:14:30 +00:00
-permalink: "/2025-11-19-Blueprint-for-AI-Transformation-Roadmaps-and-Process-Design.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Transformation", "Architecture Planning", "Azure", "Azure DevOps", "DevOps", "Lucid Suite", "Microsoft Teams", "MSIgnite", "Organizational Clarity", "Process Blueprint", "SharePoint Integration", "Videos", "Workflow Documentation"]
-tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai transformation", "architecture planning", "azure", "azure devops", "devops", "lucid suite", "microsoft teams", "msignite", "organizational clarity", "process blueprint", "sharepoint integration", "videos", "workflow documentation"]
+tags:
+- Agentic AI
+- Agenticbusinessapplications
+- AI Transformation
+- Architecture Planning
+- Azure DevOps
+- Lucid Suite
+- Microsoft Teams
+- MSIgnite
+- Organizational Clarity
+- Process Blueprint
+- SharePoint Integration
+- Workflow Documentation
+- AI
+- Azure
+- DevOps
+- Videos
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 Microsoft Events presents a session at Microsoft Ignite 2025, led by Bear Shelton, demonstrating how to build actionable AI transformation blueprints using Microsoft ecosystem tools.<!--excerpt_end-->
 
 {% youtube looF4pizVps %}

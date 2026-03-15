@@ -262,31 +262,21 @@ class Feed {
                 }
             }
 
-            # YouTube-specific
+            # YouTube-specific: Only extract hashtags from description during feed loading.
+            # YouTube API tag fetching is deferred to EnrichItemWithYouTubeTags() and should
+            # only be called for items that actually need processing.
             if ($this.IsYouTubeFeed()) {
                 $youtubeTags = @()
 
-                if ($link) {
-                    $youtubeVideoId = Get-YouTubeVideoId -Url $link
-                    if ($youtubeVideoId) {
-                        $youtubeTags = $this.GetYouTubeTags($youtubeVideoId)
-                    }
-                }
+                if ($description -and $description.Contains('#')) {
+                    $hashtagPattern = '#(\w+)'
+                    $matches = [regex]::Matches($description, $hashtagPattern)
 
-                # Some Youtube channels appear to provide a HUGE list of the same tags with every video..
-                if (-not $youtubeTags -or $youtubeTags.Count -gt 15) {
-                    $youtubeTags = @()
-                    
-                    if ($description -and $description.Contains('#')) {
-                        $hashtagPattern = '#(\w+)'
-                        $matches = [regex]::Matches($description, $hashtagPattern)
-
-                        foreach ($match in $matches) {
-                            $hashtag = $match.Groups[1].Value
-                            # Skip HTML color codes (6 hex characters) and other short codes
-                            if ($hashtag -and $hashtag.Length -gt 1 -and -not ($hashtag -match '^[A-Fa-f0-9]{6}$') -and -not ($hashtag -match '^[A-Fa-f0-9]{3}$')) {
-                                $youtubeTags += $hashtag
-                            }
+                    foreach ($match in $matches) {
+                        $hashtag = $match.Groups[1].Value
+                        # Skip HTML color codes (6 hex characters) and other short codes
+                        if ($hashtag -and $hashtag.Length -gt 1 -and -not ($hashtag -match '^[A-Fa-f0-9]{6}$') -and -not ($hashtag -match '^[A-Fa-f0-9]{3}$')) {
+                            $youtubeTags += $hashtag
                         }
                     }
                 }
@@ -439,6 +429,36 @@ class Feed {
 
     [bool] IsYouTubeFeed() {
         return $this.URL -match "youtube\.com"
+    }
+
+    [void] EnrichItemWithYouTubeTags([FeedItem]$item) {
+        if (-not $this.IsYouTubeFeed()) { return }
+        if (-not $item.Link) { return }
+
+        $youtubeVideoId = Get-YouTubeVideoId -Url $item.Link
+        if (-not $youtubeVideoId) { return }
+
+        $apiTags = $this.GetYouTubeTags($youtubeVideoId)
+
+        # Skip if no tags or too many (some channels repeat the same huge list for every video)
+        if (-not $apiTags -or $apiTags.Count -gt 15) { return }
+
+        # Merge API tags with existing tags
+        $allTags = @($item.Tags) + @($apiTags)
+
+        # Expand comma/semicolon-separated tags and deduplicate
+        $expandedTags = @()
+        foreach ($tag in $allTags) {
+            if ($tag -match '[;,]') {
+                $splitTags = $tag -split '[;,]' | ForEach-Object { $_.Trim() } | Where-Object { $_ -ne '' }
+                $expandedTags += $splitTags
+            }
+            else {
+                $expandedTags += $tag
+            }
+        }
+
+        $item.Tags = @($expandedTags | Sort-Object -Unique)
     }
 
     [string[]] GetYouTubeTags([string]$videoId) {

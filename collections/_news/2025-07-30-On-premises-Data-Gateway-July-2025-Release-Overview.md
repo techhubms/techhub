@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "On-premises Data Gateway July 2025 Release Overview"
-description: "This news post from the Microsoft Fabric Blog introduces the July 2025 release of the on-premises data gateway (version 3000.278). The update addresses a specific bug relating to custom proxy settings during upgrades from older versions and ensures compatibility with the latest Power BI Desktop release. It provides a download link for the new gateway and highlights the improvements relevant to Fabric Pipelines and Power BI users."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-july-2025-release/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-july-2025-release/
+title: On-premises Data Gateway July 2025 Release Overview
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-07-30 11:00:00 +00:00
-permalink: "/2025-07-30-On-premises-Data-Gateway-July-2025-Release-Overview.html"
-categories: ["ML"]
-tags: ["Bug Fix", "Data Connectivity", "Data Integration", "Enterprise Data", "Fabric Pipelines", "Gateway Update", "Microsoft", "Microsoft Fabric", "ML", "News", "On Premises Data Gateway", "Power BI", "Power BI Desktop", "Proxy Settings", "Release Notes", "Version 3000.278"]
-tags_normalized: ["bug fix", "data connectivity", "data integration", "enterprise data", "fabric pipelines", "gateway update", "microsoft", "microsoft fabric", "ml", "news", "on premises data gateway", "power bi", "power bi desktop", "proxy settings", "release notes", "version 3000dot278"]
+tags:
+- Bug Fix
+- Data Connectivity
+- Data Integration
+- Enterprise Data
+- Fabric Pipelines
+- Gateway Update
+- Microsoft
+- Microsoft Fabric
+- On Premises Data Gateway
+- Power BI
+- Power BI Desktop
+- Proxy Settings
+- Release Notes
+- Version 3000.278
+- ML
+- News
+section_names:
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog details the July 2025 release of the on-premises data gateway, authored by Microsoft, highlighting new bug fixes and Power BI Desktop compatibility.<!--excerpt_end-->
 
 # On-premises Data Gateway July 2025 Release
@@ -24,7 +34,7 @@ The July 2025 release of the on-premises data gateway (version 3000.278) brings 
 ## Bug Fixes
 
 - **Fix for Custom Proxy Settings Loss During Upgrade from Pre-3000.258 Versions:**
-    - Resolved an issue where custom proxy settings for Fabric Pipelines services could be lost during gateway upgrades from versions prior to 3000.258. This fix helps maintain custom configurations for smoother upgrades.
+  - Resolved an issue where custom proxy settings for Fabric Pipelines services could be lost during gateway upgrades from versions prior to 3000.258. This fix helps maintain custom configurations for smoother upgrades.
 
 ## Power BI Desktop Compatibility
 

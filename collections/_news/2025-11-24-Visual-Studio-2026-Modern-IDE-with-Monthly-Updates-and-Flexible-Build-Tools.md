@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Visual Studio 2026: Modern IDE with Monthly Updates and Flexible Build Tools"
-description: "This announcement details Visual Studio 2026’s evolution into a continuously updated IDE tailored for modern development needs. Key features include monthly feature releases, a new annual major version cycle, decoupled build tools for developers’ flexibility, and integrated GitHub Copilot experiences. The update also introduces new servicing channels to support enterprise and individual workflows, all while ensuring reliability, compatibility, and developer control."
-author: "Paul Chapman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-built-for-the-speed-of-modern-development/
+title: 'Visual Studio 2026: Modern IDE with Monthly Updates and Flexible Build Tools'
+author: Paul Chapman
+feed_name: Microsoft VisualStudio Blog
 date: 2025-11-24 15:00:06 +00:00
-permalink: "/2025-11-24-Visual-Studio-2026-Modern-IDE-with-Monthly-Updates-and-Flexible-Build-Tools.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: [".NET", "AI", "Build Tools", "C++", "Coding", "Continuous Delivery", "Developer Tools", "DevOps", "Enterprise Support", "IDE", "Insiders Channel", "Lifecycle", "Long Term Servicing Channel", "Microsoft", "Modern Support Lifecycle", "Monthly Updates", "MSVC", "News", "Project Compatibility", "Release Cadence", "Servicing Channels", "Software Development", "Stable Channel", "Support", "VS"]
-tags_normalized: ["dotnet", "ai", "build tools", "cplusplus", "coding", "continuous delivery", "developer tools", "devops", "enterprise support", "ide", "insiders channel", "lifecycle", "long term servicing channel", "microsoft", "modern support lifecycle", "monthly updates", "msvc", "news", "project compatibility", "release cadence", "servicing channels", "software development", "stable channel", "support", "vs"]
+tags:
+- .NET
+- Build Tools
+- C++
+- Continuous Delivery
+- Developer Tools
+- Enterprise Support
+- IDE
+- Insiders Channel
+- Lifecycle
+- Long Term Servicing Channel
+- Microsoft
+- Modern Support Lifecycle
+- Monthly Updates
+- MSVC
+- Project Compatibility
+- Release Cadence
+- Servicing Channels
+- Software Development
+- Stable Channel
+- Support
+- VS
+- AI
+- DevOps
+- News
+section_names:
+- ai
+- dotnet
+- devops
+primary_section: ai
 ---
-
 Paul Chapman announces Visual Studio 2026, which introduces monthly updates, greater build tool flexibility, Modern Support Lifecycle adoption, and always up-to-date GitHub Copilot integration for developers.<!--excerpt_end-->
 
 # Visual Studio 2026: Modern IDE with Monthly Updates and Flexible Build Tools

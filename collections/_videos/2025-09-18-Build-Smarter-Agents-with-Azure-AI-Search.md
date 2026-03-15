@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Build Smarter Agents with Azure AI Search"
-description: "This episode of the Azure Essentials Show features Aaron Stark, Farzad Sunavala, and Lana Teh as they delve into how Azure AI Search enables organizations to develop impactful AI solutions. The conversation covers the key concepts of Retrieval Augmented Generation (RAG), hybrid retrieval strategies, technical capabilities, and the enterprise-grade features of Azure AI Search, with a special focus on security, compliance, and hands-on skilling resources for users at all levels."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=uU0Fyde1yFo"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=uU0Fyde1yFo
+title: Build Smarter Agents with Azure AI Search
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-09-18 07:00:52 +00:00
-permalink: "/2025-09-18-Build-Smarter-Agents-with-Azure-AI-Search.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "Azure", "Azure AI Foundry", "Azure AI Search", "ChatGPT", "Compliance", "Customer Experience", "Decision Making", "Enterprise AI", "Hybrid Search", "Microsoft Learn", "RAG", "Retrieval Augmented Generation", "Skilling", "Videos"]
-tags_normalized: ["agentic ai", "ai", "azure", "azure ai foundry", "azure ai search", "chatgpt", "compliance", "customer experience", "decision making", "enterprise ai", "hybrid search", "microsoft learn", "rag", "retrieval augmented generation", "skilling", "videos"]
+tags:
+- Agentic AI
+- Azure AI Foundry
+- Azure AI Search
+- ChatGPT
+- Compliance
+- Customer Experience
+- Decision Making
+- Enterprise AI
+- Hybrid Search
+- Microsoft Learn
+- RAG
+- Retrieval Augmented Generation
+- Skilling
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 In this episode, Microsoft Developer's Aaron Stark, with Farzad Sunavala and Lana Teh, discusses the technical fundamentals and business value of Azure AI Search, focusing on Retrieval Augmented Generation and real-world AI app development.<!--excerpt_end-->
 
 {% youtube uU0Fyde1yFo %}

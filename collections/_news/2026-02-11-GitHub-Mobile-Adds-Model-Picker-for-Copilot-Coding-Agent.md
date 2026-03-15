@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Mobile Adds Model Picker for Copilot Coding Agent"
-description: "This news update covers the latest feature in the GitHub Mobile app for Copilot Pro and Pro+ subscribers: a model picker for Copilot coding agent sessions. Users can now select from multiple AI models (including various Anthropic Claude and OpenAI GPT-5 models) directly from their mobile devices, optimizing workflows for speed or capability as needed."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-11-github-mobile-model-picker-for-copilot-coding-agent"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-11-github-mobile-model-picker-for-copilot-coding-agent
+title: GitHub Mobile Adds Model Picker for Copilot Coding Agent
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-11 18:14:50 +00:00
-permalink: "/2026-02-11-GitHub-Mobile-Adds-Model-Picker-for-Copilot-Coding-Agent.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model Selection", "Android", "Anthropic Claude Opus 4.5", "Anthropic Claude Opus 4.6", "Anthropic Claude Sonnet 4.5", "Client Apps", "Copilot", "Copilot Coding Agent", "Copilot Pro", "Copilot Pro+", "GitHub App", "GitHub Copilot", "GitHub Mobile", "Ios", "Mobile Development", "Model Picker", "News", "OpenAI GPT 5.1 Codex Max", "OpenAI GPT 5.2 Codex"]
-tags_normalized: ["ai", "ai model selection", "android", "anthropic claude opus 4dot5", "anthropic claude opus 4dot6", "anthropic claude sonnet 4dot5", "client apps", "copilot", "copilot coding agent", "copilot pro", "copilot proplus", "github app", "github copilot", "github mobile", "ios", "mobile development", "model picker", "news", "openai gpt 5dot1 codex max", "openai gpt 5dot2 codex"]
+tags:
+- AI
+- AI Model Selection
+- Android
+- Anthropic Claude Opus 4.5
+- Anthropic Claude Opus 4.6
+- Anthropic Claude Sonnet 4.5
+- Client Apps
+- Copilot
+- Copilot Coding Agent
+- Copilot Pro
+- Copilot Pro+
+- GitHub App
+- GitHub Copilot
+- GitHub Mobile
+- Ios
+- Mobile Development
+- Model Picker
+- News
+- OpenAI GPT 5.1 Codex Max
+- OpenAI GPT 5.2 Codex
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison presents an update on GitHub Mobile’s new feature for Copilot Pro and Pro+ users: a model picker for Copilot coding agent sessions, supporting multiple advanced AI models directly in the mobile app.<!--excerpt_end-->
 
 # GitHub Mobile: Model Picker for Copilot Coding Agent

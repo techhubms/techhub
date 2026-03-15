@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "VS Code Live: Exploring Hidden Features in VS Code v1.104"
-description: "In this episode, Pierce Boggan and James Montemagno explore what's new in Visual Studio Code version 1.104. They discuss their favorite updates, uncover hidden features, and offer insights for developers looking to boost productivity. The video highlights developer-focused features and provides actionable information relevant to VS Code users."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Vm12PGJtQNs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=Vm12PGJtQNs
+title: 'VS Code Live: Exploring Hidden Features in VS Code v1.104'
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-09-11 21:17:09 +00:00
-permalink: "/2025-09-11-VS-Code-Live-Exploring-Hidden-Features-in-VS-Code-v1104.html"
-categories: ["Coding"]
-tags: ["Agentmode", "Best Practices", "BYOK", "Code", "Code Editing", "Coding", "Copilot", "Developer", "Developer Community", "Developer Productivity", "Developer Tools", "Hidden Features", "Live Stream", "Microsoft", "Release Highlights", "Software Developer", "Software Development", "Videos", "VS Code", "VS Code V1.104", "Vscoderelease"]
-tags_normalized: ["agentmode", "best practices", "byok", "code", "code editing", "coding", "copilot", "developer", "developer community", "developer productivity", "developer tools", "hidden features", "live stream", "microsoft", "release highlights", "software developer", "software development", "videos", "vs code", "vs code v1dot104", "vscoderelease"]
+tags:
+- Agentmode
+- Best Practices
+- BYOK
+- Code
+- Code Editing
+- Copilot
+- Developer
+- Developer Community
+- Developer Productivity
+- Developer Tools
+- Hidden Features
+- Live Stream
+- Microsoft
+- Release Highlights
+- Software Developer
+- Software Development
+- VS Code
+- VS Code V1.104
+- Vscoderelease
+- Videos
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Pierce Boggan and James Montemagno from Visual Studio Code dive into v1.104’s new and hidden features, offering developers practical tips and deeper insights.<!--excerpt_end-->
 
 {% youtube Vm12PGJtQNs %}

@@ -1,20 +1,24 @@
----
-layout: "post"
-title: "WinUI OSS Update: Phased Rollout Toward Open Collaboration"
-description: "The article announces a phased rollout for making the WinUI project more open-source, aiming to encourage open collaboration. The update highlights intentions to engage the community and share progress transparently. Details on rollout stages and intended collaboration models may be discussed in the linked resources."
-author: "nguyenkien"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mfx9wm/winui_oss_update_phased_rollout_toward_open/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+external_url: https://www.reddit.com/r/dotnet/comments/1mfx9wm/winui_oss_update_phased_rollout_toward_open/
+title: 'WinUI OSS Update: Phased Rollout Toward Open Collaboration'
+author: nguyenkien
+feed_name: Reddit DotNet
 date: 2025-08-02 18:13:16 +00:00
-permalink: "/2025-08-02-WinUI-OSS-Update-Phased-Rollout-Toward-Open-Collaboration.html"
-categories: ["Coding"]
-tags: [".NET", "Coding", "Collaboration", "Community", "Microsoft UI", "Open Collaboration", "Open Source", "OSS", "Phased Rollout", "UI Development", "WinUI"]
-tags_normalized: ["dotnet", "coding", "collaboration", "community", "microsoft ui", "open collaboration", "open source", "oss", "phased rollout", "ui development", "winui"]
+tags:
+- .NET
+- Collaboration
+- Microsoft UI
+- Open Collaboration
+- Open Source
+- OSS
+- Phased Rollout
+- UI Development
+- WinUI
+- Community
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Nguyenkien shares news about the WinUI project's phased transition toward open source collaboration, outlining Microsoft’s efforts to involve the community.<!--excerpt_end-->
 
 ### Summary

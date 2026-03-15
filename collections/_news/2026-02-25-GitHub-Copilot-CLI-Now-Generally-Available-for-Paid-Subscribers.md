@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "GitHub Copilot CLI Now Generally Available for Paid Subscribers"
-description: "This news post announces the general availability of GitHub Copilot CLI, the terminal-native coding agent for paid Copilot subscribers. The update highlights new features such as agentic workflow support, multiple operational modes, built-in specialized agents, plugin extensibility, deep terminal integration, support for various AI models, and cross-platform installation. The post details improvements from public preview, the extensibility ecosystem (e.g., MCP, plugins, hooks), code review and diff tools, session and repository memory, enterprise readiness features, and provides comprehensive links and instructions for getting started."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available
+title: GitHub Copilot CLI Now Generally Available for Paid Subscribers
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-25 17:01:29 +00:00
-permalink: "/2026-02-25-GitHub-Copilot-CLI-Now-Generally-Available-for-Paid-Subscribers.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Skills", "AI", "AI Agent", "Autonomous Coding", "Client Apps", "Code Review", "Coding", "Command Line", "Copilot", "Diff Tool", "Enterprise Policies", "GitHub Copilot", "GitHub Copilot CLI", "Improvement", "Linux", "Macos", "MCP", "News", "Plugin Support", "Proxies", "Session Memory", "Terminal Tools", "Windows", "Workflow Automation"]
-tags_normalized: ["agent skills", "ai", "ai agent", "autonomous coding", "client apps", "code review", "coding", "command line", "copilot", "diff tool", "enterprise policies", "github copilot", "github copilot cli", "improvement", "linux", "macos", "mcp", "news", "plugin support", "proxies", "session memory", "terminal tools", "windows", "workflow automation"]
+tags:
+- Agent Skills
+- AI
+- AI Agent
+- Autonomous Coding
+- Client Apps
+- Code Review
+- Command Line
+- Copilot
+- Diff Tool
+- Enterprise Policies
+- GitHub Copilot
+- GitHub Copilot CLI
+- Improvement
+- Linux
+- Macos
+- MCP
+- News
+- Plugin Support
+- Proxies
+- Session Memory
+- Terminal Tools
+- Windows
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison announces that GitHub Copilot CLI is now generally available for all paid Copilot subscribers, offering an advanced, agentic, and extensible coding experience directly from the terminal.<!--excerpt_end-->
 
 # GitHub Copilot CLI Now Generally Available for Paid Subscribers

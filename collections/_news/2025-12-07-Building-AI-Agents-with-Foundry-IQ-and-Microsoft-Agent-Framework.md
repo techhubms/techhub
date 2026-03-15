@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Building AI Agents with Foundry IQ and Microsoft Agent Framework"
-description: "This guide demonstrates how developers and teams can use the Azure AI Search Context Provider and Foundry IQ within the Microsoft Agent Framework to create enterprise-grade RAG agents. It introduces plug-and-play Knowledge Bases that streamline context retrieval, explains agentic versus semantic retrieval modes, and provides Python code samples for rapid implementation."
-author: "Farzad Sunavala, Eduard van Valkenburg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/foundry-iq-agent-framework-integration/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/foundry-iq-agent-framework-integration/
+title: Building AI Agents with Foundry IQ and Microsoft Agent Framework
+author: Farzad Sunavala, Eduard van Valkenburg
+feed_name: Microsoft AI Foundry Blog
 date: 2025-12-07 10:55:00 +00:00
-permalink: "/2025-12-07-Building-AI-Agents-with-Foundry-IQ-and-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Development", "Agent Framework", "Agentic AI", "Agentic Mode", "Agentic Retrieval", "AI", "Answer Synthesis", "Azure", "Azure AI Search", "Azure OpenAI", "Coding", "Context Provider", "Context Providers", "Enterprise AI", "Enterprise Knowledge", "Foundry Iq", "Knowledge Bases", "Managed Identity", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Hop Reasoning", "News", "Open Source AI", "Python", "Query Planning", "Rag", "Semantic Search"]
-tags_normalized: ["agent development", "agent framework", "agentic ai", "agentic mode", "agentic retrieval", "ai", "answer synthesis", "azure", "azure ai search", "azure openai", "coding", "context provider", "context providers", "enterprise ai", "enterprise knowledge", "foundry iq", "knowledge bases", "managed identity", "microsoft agent framework", "microsoft foundry", "multi hop reasoning", "news", "open source ai", "python", "query planning", "rag", "semantic search"]
+tags:
+- Agent Development
+- Agent Framework
+- Agentic AI
+- Agentic Mode
+- Agentic Retrieval
+- Answer Synthesis
+- Azure AI Search
+- Azure OpenAI
+- Context Provider
+- Context Providers
+- Enterprise AI
+- Enterprise Knowledge
+- Foundry Iq
+- Knowledge Bases
+- Managed Identity
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Multi Hop Reasoning
+- Open Source AI
+- Python
+- Query Planning
+- Rag
+- Semantic Search
+- AI
+- Azure
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Farzad Sunavala and Eduard van Valkenburg detail how the Azure AI Search Context Provider and Foundry IQ enable developers to build intelligent, context-aware AI agents using minimal Python code in the Microsoft Agent Framework.<!--excerpt_end-->
 
 # Building AI Agents with Foundry IQ and Microsoft Agent Framework

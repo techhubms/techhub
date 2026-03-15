@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Global Query Filters in Entity Framework Core"
-description: "This article by Gergő Vándor explores global query filters in Entity Framework Core: what they are, when to use them, practical implementation (including soft deletes), and pitfalls related to required navigation properties. It includes code examples and discusses best practices for using query filters in .NET applications."
-author: "Gergő Vándor"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/efcore-global-query-filters/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+external_url: https://code-maze.com/efcore-global-query-filters/
+title: Global Query Filters in Entity Framework Core
+author: Gergő Vándor
+feed_name: Code Maze Blog
 date: 2024-12-23 04:47:32 +00:00
-permalink: "/2024-12-23-Global-Query-Filters-in-Entity-Framework-Core.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Coding", "Database Filtering", "DbContext", "Dependency Injection", "EF Core", "Filtering", "Global Query Filter", "Global Query Filters", "in Memory Database", "LINQ", "Model Configuration", "Multitenancy", "Navigation Properties", "Row Level Security", "Soft Delete"]
-tags_normalized: ["dotnet", "blogs", "csharp", "coding", "database filtering", "dbcontext", "dependency injection", "ef core", "filtering", "global query filter", "global query filters", "in memory database", "linq", "model configuration", "multitenancy", "navigation properties", "row level security", "soft delete"]
+tags:
+- .NET
+- C#
+- Database Filtering
+- DbContext
+- Dependency Injection
+- EF Core
+- Filtering
+- Global Query Filter
+- Global Query Filters
+- in Memory Database
+- LINQ
+- Model Configuration
+- Multitenancy
+- Navigation Properties
+- Row Level Security
+- Soft Delete
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Gergő Vándor presents a comprehensive guide to Entity Framework Core's global query filters, detailing their purpose, implementation, and key considerations for .NET developers.<!--excerpt_end-->
 
 # Global Query Filters in Entity Framework Core

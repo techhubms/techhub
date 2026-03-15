@@ -1,0 +1,21 @@
+{
+    // markdownlint-cli2 configuration
+    "config": {
+        "default": true,
+        // Disable line length
+        "MD013": false,
+        // Disable inline HTML
+        "MD033": false,
+        // Disable first line heading requirement
+        "MD041": false,
+        // Disable table column alignment (causes issues with long content)
+        "MD060": false,
+        // Disable closed atx heading rule (treats C# and F# as malformed closed headings)
+        "MD020": false,
+        // Disable multiple H1 headings (false positive with frontmatter title + markdown heading)
+        "MD025": false,
+        // Disable emphasis as heading (intentional style choice in content)
+        "MD036": false
+    },
+    "gitignore": true
+}

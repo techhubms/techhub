@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Spark: Improvements, Dedicated SKU, and DPA Coverage"
-description: "This news update outlines significant enhancements to GitHub Spark, including dedicated SKU and budget controls for organizations, coverage under the GitHub Data Protection Agreement, improved visual quality in generated apps, enhanced agent behavior, repository creation settings for org admins, and a range of accessibility and UI improvements. Admins gain greater billing clarity and control, and developers benefit from a more robust app-building experience within GitHub Spark."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-12-10-github-spark-improvements-dpa-coverage-dedicated-sku
+title: 'GitHub Spark: Improvements, Dedicated SKU, and DPA Coverage'
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-12-10 17:10:52 +00:00
-permalink: "/2025-12-10-GitHub-Spark-Improvements-Dedicated-SKU-and-DPA-Coverage.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Improvements", "AI", "AI App Generation", "App Preview", "Budget Controls", "Bug Fixes", "Copilot", "DPA Compliance", "GitHub Copilot", "GitHub Spark", "Improvement", "News", "Repository Settings", "Security Improvement", "SKU Billing", "UI Enhancement", "Visual App Quality"]
-tags_normalized: ["accessibility", "agent improvements", "ai", "ai app generation", "app preview", "budget controls", "bug fixes", "copilot", "dpa compliance", "github copilot", "github spark", "improvement", "news", "repository settings", "security improvement", "sku billing", "ui enhancement", "visual app quality"]
+tags:
+- Accessibility
+- Agent Improvements
+- AI App Generation
+- App Preview
+- Budget Controls
+- Bug Fixes
+- Copilot
+- DPA Compliance
+- GitHub Spark
+- Improvement
+- Repository Settings
+- Security Improvement
+- SKU Billing
+- UI Enhancement
+- Visual App Quality
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison shares product updates for GitHub Spark—including DPA coverage, new billing controls, and improvements to agent and UI—giving organizations and developers more flexibility and reliability.<!--excerpt_end-->
 
 # GitHub Spark: Improvements, Dedicated SKU, and DPA Coverage

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Retail at Risk: How a Single Alert Uncovered a Major Cyberthreat"
-description: "This detailed report from Microsoft Incident Response explores real-world cyberattacks targeting retail organizations. It analyzes how unpatched SharePoint vulnerabilities and compromised identities enabled persistent threats, and details the swift actions of the Detection and Response Team (DART). Practitioners will learn about attacker tactics, incident response procedures, forensic investigation, and recommended hardening steps including identity management, MFA enforcement, and the value of behavioral monitoring."
-author: "Microsoft Incident Response"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2025/09/24/retail-at-risk-how-one-alert-uncovered-a-persistent-cyberthreat/
+title: 'Retail at Risk: How a Single Alert Uncovered a Major Cyberthreat'
+author: Microsoft Incident Response
+feed_name: Microsoft Security Blog
 date: 2025-09-24 17:00:00 +00:00
-permalink: "/2025-09-24-Retail-at-Risk-How-a-Single-Alert-Uncovered-a-Major-Cyberthreat.html"
-categories: ["Azure", "Security"]
-tags: ["Attack Detection", "Azure", "Azure Virtual Desktop", "Cloud Security", "Credential Security", "Cybersecurity", "DART", "Forensics", "Identity Management", "Incident Response", "MFA", "Microsoft Defender", "Microsoft Entra ID", "Microsoft Incident Response", "Microsoft Sentinel", "News", "Remote Desktop Protocol", "Retail Security", "Security", "SharePoint Vulnerabilities", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["attack detection", "azure", "azure virtual desktop", "cloud security", "credential security", "cybersecurity", "dart", "forensics", "identity management", "incident response", "mfa", "microsoft defender", "microsoft entra id", "microsoft incident response", "microsoft sentinel", "news", "remote desktop protocol", "retail security", "security", "sharepoint vulnerabilities", "threat intelligence", "zero trust"]
+tags:
+- Attack Detection
+- Azure Virtual Desktop
+- Cloud Security
+- Credential Security
+- Cybersecurity
+- DART
+- Forensics
+- Identity Management
+- Incident Response
+- MFA
+- Microsoft Defender
+- Microsoft Entra ID
+- Microsoft Incident Response
+- Microsoft Sentinel
+- Remote Desktop Protocol
+- Retail Security
+- SharePoint Vulnerabilities
+- Threat Intelligence
+- Zero Trust
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Microsoft Incident Response’s expert team details how a single alert in a retail environment led to the discovery of a persistent threat. This report highlights actionable forensic insights and security guidance for practitioners.<!--excerpt_end-->
 
 # Retail at Risk: How a Single Alert Uncovered a Major Cyberthreat

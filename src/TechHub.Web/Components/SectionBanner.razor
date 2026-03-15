@@ -1,0 +1,64 @@
+@using TechHub.Core.Models
+
+@* 
+    SectionBanner - Decorative banner/hero for section pages
+    
+    Usage:
+    <SectionBanner Section="@sectionData" />
+    <SectionBanner Title="Page Title" Description="Description" BackgroundImage="/images/bg.webp" />
+*@
+
+<div class="section-banner @CssClass @BackgroundClass">
+    <div class="section-banner-content header-text-overlay">
+    <div class="banner-title">
+            <span class="banner-title-desktop">@DisplayTitle</span>
+            <span class="banner-title-mobile">@MobileTitle</span>
+        </div>
+        @if (!string.IsNullOrEmpty(DisplayDescription))
+        {
+            <p class="banner-description">@DisplayDescription</p>
+        }
+        @if (!string.IsNullOrEmpty(RssFeedUrl))
+        {
+            <a href="@RssFeedUrl" target="_blank" rel="noopener noreferrer" class="banner-rss-link" aria-label="RSS Feed">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1" fill="currentColor"/></svg>
+            </a>
+        }
+    </div>
+</div>
+
+@code {
+    /// <summary>
+    /// Optional RSS feed URL. When provided, renders a mobile-only RSS icon link next to the title.
+    /// </summary>
+    [Parameter]
+    public string? RssFeedUrl { get; set; }
+
+    // For static pages - provide Title, Description, BackgroundCssClass
+    [Parameter]
+    public string? Title { get; set; }
+
+    [Parameter]
+    public string? Description { get; set; }
+
+    [Parameter]
+    public string? BackgroundCssClass { get; set; }
+
+    // For section pages - provide Section
+    [Parameter]
+    public Section? Section { get; set; }
+
+    // Computed properties - prefer Section data if available
+    private string DisplayTitle => Section?.Title ?? Title ?? string.Empty;
+    private string? DisplayDescription => Section?.Description ?? Description;
+    private string BackgroundClass => Section != null
+    ? $"section-banner-bg-{Section.Name}"
+    : BackgroundCssClass ?? "section-banner-bg-none";
+
+    private string CssClass => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "home-banner" : "";
+
+    /// <summary>
+    /// Mobile title: shows "Home" for homepage, otherwise same as DisplayTitle.
+    /// </summary>
+    private string MobileTitle => Section == null && string.IsNullOrEmpty(BackgroundCssClass) ? "Home" : DisplayTitle;
+}

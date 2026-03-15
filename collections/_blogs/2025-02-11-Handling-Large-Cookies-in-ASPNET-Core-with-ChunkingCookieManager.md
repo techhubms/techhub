@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Handling Large Cookies in ASP.NET Core with ChunkingCookieManager"
-description: "This article by Khalid Abuhakmeh explores how cookies work in ASP.NET Core, their limitations, and demonstrates effective cookie chunking using the ChunkingCookieManager abstraction to bypass size restrictions while maintaining efficient session management."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/aspnet-core-and-chunking-http-cookies"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+external_url: https://khalidabuhakmeh.com/aspnet-core-and-chunking-http-cookies
+title: Handling Large Cookies in ASP.NET Core with ChunkingCookieManager
+author: Khalid Abuhakmeh
+feed_name: Khalid Abuhakmeh's Blog
 date: 2025-02-11 00:00:00 +00:00
-permalink: "/2025-02-11-Handling-Large-Cookies-in-ASPNET-Core-with-ChunkingCookieManager.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET", "ASP.NET Core", "Blogs", "ChunkingCookieManager", "Coding", "CookieOptions", "Cookies", "Cookies Size Limit", "HTTP", "HttpContext", "ICookieManager", "Minimal APIs", "Session Management", "Web Development"]
-tags_normalized: ["dotnet", "aspdotnet", "aspdotnet core", "blogs", "chunkingcookiemanager", "coding", "cookieoptions", "cookies", "cookies size limit", "http", "httpcontext", "icookiemanager", "minimal apis", "session management", "web development"]
+tags:
+- .NET
+- ASP.NET
+- ASP.NET Core
+- ChunkingCookieManager
+- CookieOptions
+- Cookies
+- Cookies Size Limit
+- HTTP
+- HttpContext
+- ICookieManager
+- Minimal APIs
+- Session Management
+- Web Development
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Khalid Abuhakmeh discusses practical cookie management in ASP.NET Core, focusing on overcoming size limitations using the ChunkingCookieManager. This guide is ideal for developers confronted with storing substantial session data securely and efficiently.<!--excerpt_end-->
 
 # ASP.NET Core and Chunking HTTP Cookies
@@ -110,6 +118,7 @@ Key points for chunking:
 - `CookieOptions` can be used to set options like `Domain`, `Expires`, and `Secure` for each chunk.
 
 **Browser DevTools display:**
+
 | Name                | Value                             |
 |---------------------|-----------------------------------|
 | chunky_monster      | chunks-2                          |

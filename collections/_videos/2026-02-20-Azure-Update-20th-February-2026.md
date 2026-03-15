@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Update 20th February 2026"
-description: "This video from John Savill's Technical Training provides an in-depth roundup of the latest Azure features and updates as of February 20, 2026, covering innovations in AKS, snapshot access for SSDv2 and Ultra instances, Azure Functions improvements, encryption and monitoring changes, and more for cloud professionals."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4EVWtkjKTkI"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=4EVWtkjKTkI
+title: Azure Update 20th February 2026
+author: John Savill's Technical Training
+primary_section: dotnet
+feed_name: John Savill's Technical Training
 date: 2026-02-20 16:05:38 +00:00
-permalink: "/2026-02-20-Azure-Update-20th-February-2026.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET 10", "Agent Monitoring Dashboard", "AKS", "Azure", "Azure Cloud", "Azure Functions", "CLI", "Cloud", "Cloud Monitoring", "Cloud Updates", "Coding", "DevOps", "DevOps Tools", "Encryption At Host", "Flex Consumption", "Infrastructure", "LocalDNS", "Microsoft", "Microsoft Azure", "Node Autoprovision", "Prem SSDv2", "Snapshot Access", "Ultra Disk", "Videos"]
-tags_normalized: ["dotnet 10", "agent monitoring dashboard", "aks", "azure", "azure cloud", "azure functions", "cli", "cloud", "cloud monitoring", "cloud updates", "coding", "devops", "devops tools", "encryption at host", "flex consumption", "infrastructure", "localdns", "microsoft", "microsoft azure", "node autoprovision", "prem ssdv2", "snapshot access", "ultra disk", "videos"]
+tags:
+- .NET 10
+- Agent Monitoring Dashboard
+- AKS
+- Azure
+- Azure Cloud
+- Azure Functions
+- CLI
+- Cloud Monitoring
+- Cloud Updates
+- DevOps
+- DevOps Tools
+- Encryption At Host
+- Flex Consumption
+- Infrastructure
+- LocalDNS
+- Microsoft
+- Microsoft Azure
+- Node Autoprovision
+- Prem SSDv2
+- Snapshot Access
+- Ultra Disk
+- Videos
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 John Savill's Technical Training presents an Azure update video, sharing the newest enhancements for AKS, storage snapshots, Azure Functions, and monitoring, offering valuable insights for Azure professionals.<!--excerpt_end-->
 
 {% youtube 4EVWtkjKTkI %}

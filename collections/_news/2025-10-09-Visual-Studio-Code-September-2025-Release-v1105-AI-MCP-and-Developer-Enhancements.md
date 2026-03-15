@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Visual Studio Code September 2025 Release (v1.105): AI, MCP, and Developer Enhancements"
-description: "This release notes summary covers the major updates introduced in Visual Studio Code version 1.105, released in September 2025. Discover new AI-assisted development features, MCP server marketplace enhancements, productivity improvements, agent tooling for chat and merge conflicts, expanded authentication options, and more. Learn how these changes impact modern development workflows, DevOps, coding, and team collaboration with VS Code."
-author: "Visual Studio Code Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/updates/v1_105"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/updates/v1_105
+title: 'Visual Studio Code September 2025 Release (v1.105): AI, MCP, and Developer Enhancements'
+author: Visual Studio Code Team
+feed_name: Visual Studio Code Releases
 date: 2025-10-09 17:00:00 +00:00
-permalink: "/2025-10-09-Visual-Studio-Code-September-2025-Release-v1105-AI-MCP-and-Developer-Enhancements.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Agent Tools", "AI", "AI Assisted Development", "Authentication", "Chat Sessions", "Code Coverage", "Coding", "Developer Productivity", "DevOps", "DevOps Tools", "Extensions", "GitHub Copilot", "MCP", "MCP Marketplace", "Merge Conflict Resolution", "News", "OS Notifications", "Pull Requests", "Python", "Terminal Commands", "Testing", "VS Code", "VS Code 1.105"]
-tags_normalized: ["accessibility", "agent tools", "ai", "ai assisted development", "authentication", "chat sessions", "code coverage", "coding", "developer productivity", "devops", "devops tools", "extensions", "github copilot", "mcp", "mcp marketplace", "merge conflict resolution", "news", "os notifications", "pull requests", "python", "terminal commands", "testing", "vs code", "vs code 1dot105"]
+tags:
+- Accessibility
+- Agent Tools
+- AI Assisted Development
+- Authentication
+- Chat Sessions
+- Code Coverage
+- Developer Productivity
+- DevOps Tools
+- Extensions
+- MCP
+- MCP Marketplace
+- Merge Conflict Resolution
+- OS Notifications
+- Pull Requests
+- Python
+- Terminal Commands
+- Testing
+- VS Code
+- VS Code 1.105
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Visual Studio Code Team presents the September 2025 release (v1.105), introducing advanced AI integration, GitHub Copilot updates, agent tool improvements, and a new MCP marketplace to boost developer productivity and collaboration.<!--excerpt_end-->
 
 # Visual Studio Code September 2025 Release (v1.105)

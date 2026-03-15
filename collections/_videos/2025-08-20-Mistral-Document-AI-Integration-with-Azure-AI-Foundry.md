@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Mistral Document AI Integration with Azure AI Foundry"
-description: "This video from Microsoft Developer showcases how Mistral Document AI works within Azure AI Foundry to parse complex documents, including PDFs and handwritten notes. The walkthrough demonstrates deploying the AI model, using sample code, and turning unstructured data into structured, actionable outputs for seamless database and workflow integration."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MUu9o8tDwi0"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=MUu9o8tDwi0
+title: Mistral Document AI Integration with Azure AI Foundry
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-08-20 20:45:25 +00:00
-permalink: "/2025-08-20-Mistral-Document-AI-Integration-with-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "AI Model Deployment", "Azure", "Azure AI", "Azure AI Foundry", "Cloud Computing", "Database Integration", "Dev", "Development", "Document Intelligence", "Handwritten Notes", "Microsoft", "Microsoft Azure", "Mistral Document AI", "Optical Character Recognition", "PDF Parsing", "RAG Workflows", "Sample Code", "Structured JSON Output", "Tech", "Technology", "Unstructured Data", "Videos"]
-tags_normalized: ["ai", "ai agents", "ai model deployment", "azure", "azure ai", "azure ai foundry", "cloud computing", "database integration", "dev", "development", "document intelligence", "handwritten notes", "microsoft", "microsoft azure", "mistral document ai", "optical character recognition", "pdf parsing", "rag workflows", "sample code", "structured json output", "tech", "technology", "unstructured data", "videos"]
+tags:
+- AI Agents
+- AI Model Deployment
+- Azure AI
+- Azure AI Foundry
+- Cloud Computing
+- Database Integration
+- Dev
+- Development
+- Document Intelligence
+- Handwritten Notes
+- Microsoft
+- Microsoft Azure
+- Mistral Document AI
+- Optical Character Recognition
+- PDF Parsing
+- RAG Workflows
+- Sample Code
+- Structured JSON Output
+- Tech
+- Technology
+- Unstructured Data
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Hosted by Microsoft Developer, this episode features April demonstrating how to use Mistral Document AI in Azure AI Foundry for parsing and structuring complex document data.<!--excerpt_end-->
 
 {% youtube MUu9o8tDwi0 %}
@@ -54,8 +73,8 @@ In this episode, April demonstrates the capabilities of the Mistral Document AI 
 - Explore Azure AI Foundry: [ai.azure.com](https://ai.azure.com)
 - Learn more about Mistral Document AI: [Documentation](https://aka.ms/insideAIF/mistral-document-AI)
 - Join the community:
-   - Discord: [insideAIF/discord](https://aka.ms/insideAIF/discord)
-   - Forum: [insideAIF/forum](https://aka.ms/insideAIF/forum)
+  - Discord: [insideAIF/discord](https://aka.ms/insideAIF/discord)
+  - Forum: [insideAIF/forum](https://aka.ms/insideAIF/forum)
 
 ---
 

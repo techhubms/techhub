@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Safer, Smarter Cities: Real-Time Geospatial Analytics with Microsoft Vision AI"
-description: "This Microsoft Ignite 2025 session features Andrew Hester from the City of Raleigh, NC, demonstrating how real-time geospatial analytics using Vision AI, Microsoft, NVIDIA, and Esri technologies help reduce pedestrian near-misses, protect crews, and improve emergency response in high-risk intersections. The talk covers automated alerting and unified data approaches to empower city leaders in making data-driven civic safety decisions, alongside demos of collaborative infrastructure involving simulation tools for manufacturing and urban challenges."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ih-2UjQGwZw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=ih-2UjQGwZw
+title: 'Safer, Smarter Cities: Real-Time Geospatial Analytics with Microsoft Vision AI'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-26 20:17:43 +00:00
-permalink: "/2025-11-26-Safer-Smarter-Cities-Real-Time-Geospatial-Analytics-with-Microsoft-Vision-AI.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Andrew Hester", "Automated Alerts", "Azure", "City Of Raleigh", "Data Integration", "Emergency Response", "English (us)", "Esri", "Explore A Case Study in Building Safer Smarter Cities | STUDIOSP65", "F5n1", "Geospatial Analytics", "Ignite", "Microsoft", "Microsoft Ignite", "Ms Ignite", "Msft Ignite", "NVIDIA", "Real Time Analytics", "Simulation", "Smart Cities", "STUDIOSP65", "Technical", "Technical Session", "Urban Safety", "Videos", "Vision AI"]
-tags_normalized: ["ai", "andrew hester", "automated alerts", "azure", "city of raleigh", "data integration", "emergency response", "english us", "esri", "explore a case study in building safer smarter cities pipe studiosp65", "f5n1", "geospatial analytics", "ignite", "microsoft", "microsoft ignite", "ms ignite", "msft ignite", "nvidia", "real time analytics", "simulation", "smart cities", "studiosp65", "technical", "technical session", "urban safety", "videos", "vision ai"]
+tags:
+- Andrew Hester
+- Automated Alerts
+- City Of Raleigh
+- Data Integration
+- Emergency Response
+- English (us)
+- Esri
+- Explore A Case Study in Building Safer Smarter Cities | STUDIOSP65
+- F5n1
+- Geospatial Analytics
+- Ignite
+- Microsoft
+- Microsoft Ignite
+- Ms Ignite
+- Msft Ignite
+- NVIDIA
+- Real Time Analytics
+- Simulation
+- Smart Cities
+- STUDIOSP65
+- Technical
+- Technical Session
+- Urban Safety
+- Vision AI
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Presented by Andrew Hester from the City of Raleigh at Microsoft Ignite 2025, this session illustrates how Microsoft Vision AI and Azure enable smarter city safety through real-time geospatial analytics and simulation technologies.<!--excerpt_end-->
 
 {% youtube ih-2UjQGwZw %}

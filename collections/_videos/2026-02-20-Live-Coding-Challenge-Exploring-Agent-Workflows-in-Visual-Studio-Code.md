@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "Live Coding Challenge: Exploring Agent Workflows in Visual Studio Code"
-description: "In this video, Burke Holland and Pierce Boggan compete in a timed, live-coding challenge using agents within Visual Studio Code. Olivia Guzzardo McVicker joins afterward to review their approaches, discuss what succeeded and what didn’t, and provide tips for implementing agent-based workflows in your projects using VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MVwkFbYa1Xg"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=MVwkFbYa1Xg
+title: 'Live Coding Challenge: Exploring Agent Workflows in Visual Studio Code'
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 14:00:37 +00:00
-permalink: "/2026-02-20-Live-Coding-Challenge-Exploring-Agent-Workflows-in-Visual-Studio-Code.html"
-categories: ["Coding"]
-tags: ["Agent Workflows", "Burke Holland", "Code Collaboration", "Coding", "Developer Tools", "Live Coding", "Olivia Guzzardo McVicker", "Pierce Boggan", "Programming", "Videos", "VS Code"]
-tags_normalized: ["agent workflows", "burke holland", "code collaboration", "coding", "developer tools", "live coding", "olivia guzzardo mcvicker", "pierce boggan", "programming", "videos", "vs code"]
+tags:
+- Agent Workflows
+- Burke Holland
+- Code Collaboration
+- Developer Tools
+- Live Coding
+- Olivia Guzzardo McVicker
+- Pierce Boggan
+- Programming
+- Videos
+- VS Code
+- .NET
+section_names:
+- dotnet
 ---
-
 Join Visual Studio Code team members Burke Holland, Pierce Boggan, and Olivia Guzzardo McVicker as they demonstrate and analyze agent-driven workflows in a live coding session.<!--excerpt_end-->
 
 {% youtube MVwkFbYa1Xg %}

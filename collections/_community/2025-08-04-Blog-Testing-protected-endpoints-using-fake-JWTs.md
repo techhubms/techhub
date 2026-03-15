@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "(Blog) Testing protected endpoints using fake JWTs"
-description: "Kralizek82 shares a blog post on strategies for testing protected API endpoints by employing fake JWT tokens. The article covers approaches to simulate authentication in .NET applications, enabling effective testing of endpoints that require JWT-based authorization."
-author: "Kralizek82"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mhd2xz/blog_testing_protected_endpoints_using_fake_jwts/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1mhd2xz/blog_testing_protected_endpoints_using_fake_jwts/
+title: (Blog) Testing protected endpoints using fake JWTs
+author: Kralizek82
+feed_name: Reddit CSharp
 date: 2025-08-04 13:12:53 +00:00
-permalink: "/2025-08-04-Blog-Testing-protected-endpoints-using-fake-JWTs.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "API Testing", "Authentication", "Authorization", "C#", "Coding", "Community", "Endpoint Security", "Fake JWT", "JWT", "Protected Endpoints", "Security", "Testing"]
-tags_normalized: ["dotnet", "api testing", "authentication", "authorization", "csharp", "coding", "community", "endpoint security", "fake jwt", "jwt", "protected endpoints", "security", "testing"]
+tags:
+- .NET
+- API Testing
+- Authentication
+- Authorization
+- C#
+- Endpoint Security
+- Fake JWT
+- JWT
+- Protected Endpoints
+- Testing
+- Security
+- Community
+section_names:
+- dotnet
+- security
+primary_section: dotnet
 ---
-
 In this post, Kralizek82 explores methods to test protected endpoints in C# applications using fake JWT tokens, providing practical guidance for .NET developers.<!--excerpt_end-->
 
 ## Introduction

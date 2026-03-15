@@ -1,0 +1,385 @@
+@page "/ai/sdlc"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<AISDLC> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@(pageData?.Title ?? "AI SDLC") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+            </div>
+
+            <div class="custom-page-container">
+                <div class="custom-page-intro">
+                    <p>@pageData.Intro</p>
+                </div>
+
+                @* Chapter 1: SDLC Phases *@
+                <h2 id="sdlc-phases">@pageData.PhasesHeading</h2>
+                <section class="sdlc-phases">
+                    @foreach (var phase in pageData.Phases)
+                    {
+                        <div class="sdlc-phase-card sdlc-phase-@phase.Id">
+                            <div class="sdlc-phase-header">
+                                <span class="sdlc-phase-icon">@phase.Icon</span>
+                                <h3 id="phase-@phase.Id">@phase.Name</h3>
+                            </div>
+                            <div class="sdlc-phase-body">
+                                <div class="sdlc-phase-what">
+                                    <h4>What</h4>
+                                    <p>@phase.What</p>
+                                </div>
+
+                                @if (!string.IsNullOrEmpty(phase.How))
+                                {
+                                    <div class="sdlc-phase-how">
+                                        <h4>How</h4>
+                                        <p>@phase.How</p>
+                                    </div>
+                                }
+
+                                <div class="sdlc-phase-tools">
+                                    <h4>AI Tools</h4>
+                                    <div class="sdlc-tool-badges">
+                                        @foreach (var tool in phase.Tools)
+                                        {
+                                            <a href="@tool.Url" target="_blank" rel="noopener" class="sdlc-tool-badge">@tool.Name</a>
+                                        }
+                                    </div>
+                                </div>
+
+                                <div class="sdlc-phase-ai">
+                                    <h4>AI Enhancements</h4>
+                                    <p>@phase.AIEnhancements.Intro</p>
+                                    @foreach (var role in phase.AIEnhancements.Roles)
+                                    {
+                                        <p><strong>For @role.Role</strong>, @role.Content</p>
+                                    }
+                                </div>
+
+                                @if (phase.TestingTypes != null)
+                                {
+                                    <h4>Testing Types</h4>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Type</th>
+                                                <th>Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var testType in phase.TestingTypes)
+                                            {
+                                                <tr>
+                                                    <td>@testType.Name</td>
+                                                    <td>@testType.Description</td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                }
+
+                                @if (!string.IsNullOrEmpty(phase.Handover))
+                                {
+                                    <div class="sdlc-phase-handover">
+                                        <h4>Handover to next phase</h4>
+                                        <p>@phase.Handover</p>
+                                    </div>
+                                }
+
+                                <div class="sdlc-phase-best-practices">
+                                    <h4>Best Practices</h4>
+                                    <p>@phase.BestPractices</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </section>
+
+                @* Chapter 2: Development Methodologies *@
+                <section class="sdlc-methodologies-section">
+                    <h2 id="methodologies">@pageData.AdditionalInfo.MethodologiesHeading</h2>
+                    @foreach (var paragraph in pageData.AdditionalInfo.MethodologiesIntro)
+                    {
+                        <p>@((MarkupString)paragraph)</p>
+                    }
+
+                    @foreach (var methodology in pageData.AdditionalInfo.Methodologies)
+                    {
+                        <h3 id="methodology-@(methodology.Name.ToLowerInvariant().Replace(" ", "-"))">@methodology.Name</h3>
+                        <p>@methodology.Description</p>
+                        <div class="sdlc-methodology-meta">
+                            <span>🎯 <strong>Best for:</strong> @methodology.BestFor</span>
+                            <span>⏱️ <strong>Cycle time:</strong> @methodology.CycleTime</span>
+                            <span>🔄 <strong>Flexibility:</strong> @methodology.Flexibility</span>
+                        </div>
+                        <div class="sdlc-methodology-diagram">
+                            <pre class="mermaid">@GetMethodologyDiagram(methodology.Name)</pre>
+                        </div>
+                    }
+                </section>
+
+                @* Benefits *@
+                <section>
+                    <h2 id="benefits">@pageData.AdditionalInfo.BenefitsHeading</h2>
+                    <div class="sdlc-benefit-list">
+                        @foreach (var benefit in pageData.AdditionalInfo.Benefits)
+                        {
+                            <div class="sdlc-benefit-item">
+                                <span class="sdlc-benefit-icon">@benefit.Icon</span>
+                                <div>
+                                    <strong>@benefit.Title</strong>
+                                    <p>@benefit.Description</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Challenges *@
+                <section>
+                    <h2 id="challenges">@pageData.AdditionalInfo.ChallengesHeading</h2>
+                    <div class="sdlc-challenge-list">
+                        @foreach (var challenge in pageData.AdditionalInfo.Challenges)
+                        {
+                            <div class="sdlc-challenge-item">
+                                <span class="sdlc-challenge-icon">⚠️</span>
+                                <div>
+                                    <strong>@challenge.Title</strong>
+                                    <p>@challenge.Description</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Preconditions *@
+                <section class="sdlc-preconditions-section">
+                    <h2 id="preconditions">@pageData.PreconditionsHeading</h2>
+                    <p>@((MarkupString)pageData.PreconditionsIntro)</p>
+
+                    <div class="sdlc-preconditions-grid">
+                        @foreach (var precondition in pageData.Preconditions)
+                        {
+                            <div class="sdlc-precondition-item" id="precondition-@precondition.Id">
+                                <div class="sdlc-precondition-header">
+                                    <span class="sdlc-precondition-icon">@precondition.Icon</span>
+                                    <h3>@precondition.Title</h3>
+                                </div>
+                                <div class="sdlc-precondition-body">
+                                    <p>@precondition.Description</p>
+                                    <p><strong>What to do:</strong></p>
+                                    <ul>
+                                        @foreach (var action in precondition.Actions)
+                                        {
+                                            <li>@action</li>
+                                        }
+                                    </ul>
+                                    @if (!string.IsNullOrEmpty(precondition.Example))
+                                    {
+                                        <p><strong>Example:</strong> @precondition.Example</p>
+                                    }
+                                    @if (!string.IsNullOrEmpty(precondition.Why))
+                                    {
+                                        <p><strong>Why it matters:</strong> @precondition.Why</p>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Metrics *@
+                <section>
+                    <h2 id="metrics">@pageData.AdditionalInfo.MetricsHeading</h2>
+                    <p>@pageData.AdditionalInfo.Metrics.Intro</p>
+                    <p><strong>See also:</strong> <a href="@pageData.AdditionalInfo.Metrics.SeeAlso.Url">@pageData.AdditionalInfo.Metrics.SeeAlso.Text</a> for definitions and guidance on using these frameworks well.</p>
+                    <div class="sdlc-metrics-grid">
+                        @foreach (var framework in pageData.AdditionalInfo.Metrics.Frameworks)
+                        {
+                            <div class="sdlc-metric-card" id="metric-@(framework.Name.ToLowerInvariant().Replace(" ", "-"))">
+                                <span class="sdlc-metric-icon">@framework.Icon</span>
+                                <div>
+                                    <strong>@framework.Name</strong>
+                                    <p>@framework.Description</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <h4>@pageData.AdditionalInfo.Metrics.PracticeHeading</h4>
+                    <ul>
+                        @foreach (var item in pageData.AdditionalInfo.Metrics.PracticeItems)
+                        {
+                            <li>@item</li>
+                        }
+                    </ul>
+                </section>
+
+            </div>
+        </article>
+    </main>
+}
+
+@code {
+    private SDLCPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    private string GetRenderedContent()
+    {
+        if (pageData == null)
+            return string.Empty;
+
+        var sb = new System.Text.StringBuilder();
+
+        sb.Append($"<h2 id=\"sdlc-phases\">{pageData.PhasesHeading}</h2>");
+        foreach (var phase in pageData.Phases)
+        {
+            sb.Append($"<h3 id=\"phase-{phase.Id}\">{phase.Name}</h3>");
+        }
+
+        sb.Append($"<h2 id=\"methodologies\">{pageData.AdditionalInfo.MethodologiesHeading}</h2>");
+        foreach (var methodology in pageData.AdditionalInfo.Methodologies)
+        {
+            var methodologyId = $"methodology-{methodology.Name.ToLowerInvariant().Replace(" ", "-")}";
+            sb.Append($"<h3 id=\"{methodologyId}\">{methodology.Name}</h3>");
+        }
+        sb.Append($"<h2 id=\"benefits\">{pageData.AdditionalInfo.BenefitsHeading}</h2>");
+        sb.Append($"<h2 id=\"challenges\">{pageData.AdditionalInfo.ChallengesHeading}</h2>");
+        sb.Append($"<h2 id=\"preconditions\">{pageData.PreconditionsHeading}</h2>");
+        sb.Append($"<h2 id=\"metrics\">{pageData.AdditionalInfo.MetricsHeading}</h2>");
+
+        return sb.ToString();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initMermaid");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<SDLCPageData>("ai-sdlc-data", out var restored) && restored != null)
+        {
+            pageData = restored;
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetSDLCDataAsync();
+
+            if (pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (pageData != null)
+        {
+            ApplicationState.PersistAsJson("ai-sdlc-data", pageData);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    private static string GetMethodologyDiagram(string methodologyName) => methodologyName switch
+    {
+        "Waterfall" => @"graph LR
+    P[Planning] --> D[Design] --> I[Implementation] --> T[Testing] --> Dep[Deployment]
+    style P fill:#1a1a2e,stroke:#1976d2,stroke-width:2px,color:#e0e0e0
+    style D fill:#1a1a2e,stroke:#7b1fa2,stroke-width:2px,color:#e0e0e0
+    style I fill:#1a1a2e,stroke:#388e3c,stroke-width:2px,color:#e0e0e0
+    style T fill:#1a1a2e,stroke:#f57c00,stroke-width:2px,color:#e0e0e0
+    style Dep fill:#1a1a2e,stroke:#c2185b,stroke-width:2px,color:#e0e0e0",
+
+        "Agile / Scrum" => @"graph LR
+    subgraph S1[Sprint 1]
+        direction LR
+        P1[Plan] --> D1[Design] --> B1[Build] --> T1[Test] --> Dep1[Deploy]
+    end
+    subgraph S2[Sprint 2]
+        direction LR
+        P2[Plan] --> D2[Design] --> B2[Build] --> T2[Test] --> Dep2[Deploy]
+    end
+    S1 --> S2 --> More[...]
+    style P1 fill:#1a1a2e,stroke:#1976d2,color:#e0e0e0
+    style D1 fill:#1a1a2e,stroke:#7b1fa2,color:#e0e0e0
+    style B1 fill:#1a1a2e,stroke:#388e3c,color:#e0e0e0
+    style T1 fill:#1a1a2e,stroke:#f57c00,color:#e0e0e0
+    style Dep1 fill:#1a1a2e,stroke:#c2185b,color:#e0e0e0
+    style P2 fill:#1a1a2e,stroke:#1976d2,color:#e0e0e0
+    style D2 fill:#1a1a2e,stroke:#7b1fa2,color:#e0e0e0
+    style B2 fill:#1a1a2e,stroke:#388e3c,color:#e0e0e0
+    style T2 fill:#1a1a2e,stroke:#f57c00,color:#e0e0e0
+    style Dep2 fill:#1a1a2e,stroke:#c2185b,color:#e0e0e0
+    style S1 fill:#161b22,stroke:#7c7cff,color:#e0e0e0
+    style S2 fill:#161b22,stroke:#7c7cff,color:#e0e0e0",
+
+        "Kanban" => @"graph LR
+    subgraph Planning[Planning]
+        WI1[■ ■]
+    end
+    subgraph Design[Design]
+        WI2[■]
+    end
+    subgraph Impl[Implementation]
+        WI3[■ ■ ■]
+    end
+    subgraph Testing[Testing]
+        WI4[■ ■]
+    end
+    subgraph Deploy[Deployment]
+        WI5[■]
+    end
+    Planning --> Design --> Impl --> Testing --> Deploy
+    style Planning fill:#1a1a2e,stroke:#1976d2,stroke-width:2px,color:#e0e0e0
+    style Design fill:#1a1a2e,stroke:#7b1fa2,stroke-width:2px,color:#e0e0e0
+    style Impl fill:#1a1a2e,stroke:#388e3c,stroke-width:2px,color:#e0e0e0
+    style Testing fill:#1a1a2e,stroke:#f57c00,stroke-width:2px,color:#e0e0e0
+    style Deploy fill:#1a1a2e,stroke:#c2185b,stroke-width:2px,color:#e0e0e0",
+
+        _ => @"graph LR
+    A[Phase 1] --> B[Phase 2] --> C[Phase 3]"
+    };
+
+}

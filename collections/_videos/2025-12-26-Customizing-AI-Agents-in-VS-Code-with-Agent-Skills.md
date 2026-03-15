@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Customizing AI Agents in VS Code with Agent Skills"
-description: "This video explores Agent Skills, a feature in Visual Studio Code that allows developers to customize AI-powered agents using Markdown files. Presented by Harald Kirschner alongside James Montemagno and Tim Rogers, the walkthrough demonstrates how Agent Skills enhance agent capabilities while managing context size, and explains their implementation and usage within VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Ey1-FuAUgkI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=Ey1-FuAUgkI
+title: Customizing AI Agents in VS Code with Agent Skills
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-12-26 11:00:26 +00:00
-permalink: "/2025-12-26-Customizing-AI-Agents-in-VS-Code-with-Agent-Skills.html"
-categories: ["AI"]
-tags: ["Agent Skills", "AI", "AI Agents", "AI Customization", "Context Window", "Custom Instructions", "Developer Tools", "Markdown", "Skill Management", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent skills", "ai", "ai agents", "ai customization", "context window", "custom instructions", "developer tools", "markdown", "skill management", "videos", "vs code", "vs code extensions"]
+tags:
+- Agent Skills
+- AI Agents
+- AI Customization
+- Context Window
+- Custom Instructions
+- Developer Tools
+- Markdown
+- Skill Management
+- VS Code
+- VS Code Extensions
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 Visual Studio Code's Harald Kirschner explains how to customize AI agents using Agent Skills, detailing their structure, implementation, and benefits for developers.<!--excerpt_end-->
 
 {% youtube Ey1-FuAUgkI %}

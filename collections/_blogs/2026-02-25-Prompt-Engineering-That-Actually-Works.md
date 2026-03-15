@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Prompt Engineering That Actually Works"
-description: "This writeup by Hidde de Smet expands on his talk at the Xebia Azure AI Winter Jam, presenting proven prompt engineering techniques and mental models for LLMs and AI agents. Core frameworks, such as the 5 Principles, Chain of Thought, context engineering, and the shift to agent instructions, are explored in depth for practitioners building with AI—including Microsoft tools like GitHub Copilot."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/prompt-engineering-that-actually-works"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+external_url: https://hiddedesmet.com/prompt-engineering-that-actually-works
+title: Prompt Engineering That Actually Works
+author: Hidde de Smet
+primary_section: github-copilot
+feed_name: Hidde de Smet's Blog
 date: 2026-02-25 00:00:00 +00:00
-permalink: "/2026-02-25-Prompt-Engineering-That-Actually-Works.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Architectures", "Agents", "AI", "AI Agents", "Azure AI", "Best Practices", "Blogs", "Chain Of Thought", "Chatgpt", "Claude", "Context Engineering", "Copilot Instructions", "Development", "GitHub Copilot", "Large Language Models", "Llm", "Meta Prompting", "Prompt Engineering", "RAG", "Self Critique", "System Prompts", "Workflow Automation"]
-tags_normalized: ["agent architectures", "agents", "ai", "ai agents", "azure ai", "best practices", "blogs", "chain of thought", "chatgpt", "claude", "context engineering", "copilot instructions", "development", "github copilot", "large language models", "llm", "meta prompting", "prompt engineering", "rag", "self critique", "system prompts", "workflow automation"]
+tags:
+- Agent Architectures
+- Agents
+- AI
+- AI Agents
+- Azure AI
+- Best Practices
+- Blogs
+- Chain Of Thought
+- Chatgpt
+- Claude
+- Context Engineering
+- Copilot Instructions
+- Development
+- GitHub Copilot
+- Large Language Models
+- Llm
+- Meta Prompting
+- Prompt Engineering
+- RAG
+- Self Critique
+- System Prompts
+- Workflow Automation
+section_names:
+- ai
+- github-copilot
 ---
-
 Hidde de Smet explains practical frameworks and real-world techniques for effective prompt engineering and context engineering with LLMs and agent tools, including GitHub Copilot, helping AI practitioners move from vague queries to reliable, production-grade results.<!--excerpt_end-->
 
 # Prompt Engineering That Actually Works

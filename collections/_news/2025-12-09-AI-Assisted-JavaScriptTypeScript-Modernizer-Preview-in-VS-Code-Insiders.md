@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "AI-Assisted JavaScript/TypeScript Modernizer Preview in VS Code Insiders"
-description: "This article introduces the JavaScript/TypeScript Modernizer, an AI-powered tool available in the GitHub Copilot App Modernization VS Code Extension (preview). The Modernizer uses GitHub Copilot within Visual Studio Code Insiders to upgrade npm packages and adapt code for breaking changes. It walks developers step-by-step through modernization, reducing manual effort and errors with an interactive Copilot Chat experience, while ensuring user control over code updates and approvals."
-author: "Sayed Ibrahim Hashimi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/jsts-modernizer-preview"
-viewing_mode: "external"
-feed_name: "Microsoft Blog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/jsts-modernizer-preview
+title: AI-Assisted JavaScript/TypeScript Modernizer Preview in VS Code Insiders
+author: Sayed Ibrahim Hashimi
+feed_name: Microsoft Blog
 date: 2025-12-09 17:41:29 +00:00
-permalink: "/2025-12-09-AI-Assisted-JavaScriptTypeScript-Modernizer-Preview-in-VS-Code-Insiders.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistance", "App Modernization", "Code Modernization", "Coding", "Copilot Chat", "Dependency Upgrades", "Extension", "GitHub Copilot", "JavaScript", "News", "Node.js", "npm", "Package.json", "TypeScript", "VS Code", "VS Code Insiders"]
-tags_normalized: ["ai", "ai assistance", "app modernization", "code modernization", "coding", "copilot chat", "dependency upgrades", "extension", "github copilot", "javascript", "news", "nodedotjs", "npm", "packagedotjson", "typescript", "vs code", "vs code insiders"]
+tags:
+- AI Assistance
+- App Modernization
+- Code Modernization
+- Copilot Chat
+- Dependency Upgrades
+- Extension
+- JavaScript
+- Node.js
+- npm
+- Package.json
+- TypeScript
+- VS Code
+- VS Code Insiders
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Sayed Ibrahim Hashimi presents a preview of the JavaScript/TypeScript Modernizer for VS Code Insiders, demonstrating how developers can leverage GitHub Copilot to automate dependency upgrades and code modernization tasks.<!--excerpt_end-->
 
 # AI-Assisted JavaScript/TypeScript Modernizer Preview in VS Code Insiders

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Automate Repository Tasks with GitHub Agentic Workflows"
-description: "This article introduces GitHub Agentic Workflows, a technical preview from GitHub Next that enables intent-driven, AI-powered repository automation directly within GitHub Actions. It details how coding agents such as Copilot, Claude, or Codex can automate tasks like triage, documentation updates, issue investigation, and more, all within safe, sandboxed boundaries. Guidance for setup, security guardrails, and practical workflow examples are included, making this a valuable resource for teams looking to scale developer productivity and repository maintenance with AI."
-author: "Don Syme"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/
+title: Automate Repository Tasks with GitHub Agentic Workflows
+author: Don Syme
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-13 14:00:00 +00:00
-permalink: "/2026-02-13-Automate-Repository-Tasks-with-GitHub-Agentic-Workflows.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "Automation", "CI/CD", "Coding Agents", "Continuous Integration", "Copilot CLI", "Developer Productivity", "DevOps", "Enterprise Software", "Generative AI", "GitHub Actions", "GitHub Agentic Workflows", "GitHub Copilot", "GitHub Next", "LLMs", "Machine Learning", "News", "Repository Automation", "Security Architecture", "Software Engineering", "Technical Preview"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "automation", "cislashcd", "coding agents", "continuous integration", "copilot cli", "developer productivity", "devops", "enterprise software", "generative ai", "github actions", "github agentic workflows", "github copilot", "github next", "llms", "machine learning", "news", "repository automation", "security architecture", "software engineering", "technical preview"]
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Agents
+- Automation
+- CI/CD
+- Coding Agents
+- Continuous Integration
+- Copilot CLI
+- Developer Productivity
+- DevOps
+- Enterprise Software
+- Generative AI
+- GitHub Actions
+- GitHub Agentic Workflows
+- GitHub Copilot
+- GitHub Next
+- LLMs
+- News
+- Repository Automation
+- Security Architecture
+- Software Engineering
+- Technical Preview
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Don Syme explores how GitHub Agentic Workflows leverage AI coding agents—including GitHub Copilot—to automate repository tasks within GitHub Actions, offering teams safe and powerful new approaches to automation.<!--excerpt_end-->
 
 # Automate Repository Tasks with GitHub Agentic Workflows

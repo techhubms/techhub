@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Securing Multi-Agent AI with User Context: Entra ID OBO for Databricks Genie"
-description: "This in-depth guide by Charles Chukwudozie details how to preserve user identity and RBAC enforcement across AI agents in enterprise-grade systems using Microsoft Entra ID On-Behalf-Of (OBO) authentication, focusing on a setup that integrates AI agents (LangGraph, Chainlit), Azure Databricks Genie, and Azure Cosmos DB. The solution ensures granular data governance and secure delegation, highlighting architectural decisions, integration challenges, and lessons learned in implementing zero-trust, human-in-the-loop, and unified identity delegation for AI-powered data access scenarios."
-author: "Charles_Chukwudozie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-multi-agent-ai-with-user-context-entra-id-obo-for/ba-p/4493308"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-multi-agent-ai-with-user-context-entra-id-obo-for/ba-p/4493308
+title: 'Securing Multi-Agent AI with User Context: Entra ID OBO for Databricks Genie'
+author: Charles_Chukwudozie
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-12 06:27:56 +00:00
-permalink: "/2026-02-12-Securing-Multi-Agent-AI-with-User-Context-Entra-ID-OBO-for-Databricks-Genie.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Governance", "Azure", "Azure App Service", "Azure Cosmos DB", "Azure Databricks", "Chainlit", "Community", "Human in The Loop", "Identity Delegation", "LangGraph", "Microsoft Entra ID", "MSAL", "OAuth 2.0", "On Behalf Of Flow", "RBAC", "Security", "Unity Catalog", "Zero Trust"]
-tags_normalized: ["ai", "ai governance", "azure", "azure app service", "azure cosmos db", "azure databricks", "chainlit", "community", "human in the loop", "identity delegation", "langgraph", "microsoft entra id", "msal", "oauth 2dot0", "on behalf of flow", "rbac", "security", "unity catalog", "zero trust"]
+tags:
+- AI
+- AI Governance
+- Azure
+- Azure App Service
+- Azure Cosmos DB
+- Azure Databricks
+- Chainlit
+- Community
+- Human in The Loop
+- Identity Delegation
+- LangGraph
+- Microsoft Entra ID
+- MSAL
+- OAuth 2.0
+- On Behalf Of Flow
+- RBAC
+- Security
+- Unity Catalog
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Charles Chukwudozie explains how his team implemented Microsoft Entra ID OBO authentication to maintain secure user identity and RBAC inside an enterprise AI multi-agent system. The post emphasizes Databricks Genie, LangGraph, and lessons learned in managing secure, zero-trust data access.<!--excerpt_end-->
 
 # Securing Multi-Agent AI with User Context: Entra ID OBO for Databricks Genie

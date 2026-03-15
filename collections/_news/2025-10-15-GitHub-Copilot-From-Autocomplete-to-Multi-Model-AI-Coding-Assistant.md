@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Copilot: From Autocomplete to Multi-Model AI Coding Assistant"
-description: "This article explores the evolution of GitHub Copilot from a basic code autocomplete tool to an advanced, multi-model AI agent. It highlights features such as agent mode, Copilot CLI, multi-model support, security integrations, and workflow automation, demonstrating how Copilot now offers collaborative coding, robust security, and seamless integration within developer environments."
-author: "Ashley Willis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/copilot-faster-smarter-and-built-for-how-you-work-now/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/copilot-faster-smarter-and-built-for-how-you-work-now/
+title: 'GitHub Copilot: From Autocomplete to Multi-Model AI Coding Assistant'
+author: Ashley Willis
+feed_name: The GitHub Blog
 date: 2025-10-15 15:00:00 +00:00
-permalink: "/2025-10-15-GitHub-Copilot-From-Autocomplete-to-Multi-Model-AI-Coding-Assistant.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Coding Assistant", "Code Review Automation", "Coding", "Copilot Agent Mode", "Copilot CLI", "Developer Productivity", "GitHub Copilot", "GitHub Copilot CLI", "IDE Integration", "JetBrains", "LLM", "MCP", "MCP Server", "Multi Model AI", "News", "Pull Request Automation", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai coding assistant", "code review automation", "coding", "copilot agent mode", "copilot cli", "developer productivity", "github copilot", "github copilot cli", "ide integration", "jetbrains", "llm", "mcp", "mcp server", "multi model ai", "news", "pull request automation", "vs code"]
+tags:
+- AI & ML
+- AI Coding Assistant
+- Code Review Automation
+- Copilot Agent Mode
+- Copilot CLI
+- Developer Productivity
+- GitHub Copilot CLI
+- IDE Integration
+- JetBrains
+- LLM
+- MCP
+- MCP Server
+- Multi Model AI
+- Pull Request Automation
+- VS Code
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Ashley Willis details the transformation of GitHub Copilot into an advanced multi-model AI coding assistant, emphasizing its collaborative features, security, and seamless developer workflows.<!--excerpt_end-->
 
 # GitHub Copilot: From Autocomplete to Multi-Model AI Coding Assistant

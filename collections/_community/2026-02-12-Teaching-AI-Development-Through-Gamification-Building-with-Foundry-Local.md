@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Teaching AI Development Through Gamification: Building with Foundry Local"
-description: "This article by Lee Stott introduces a gamified approach to teaching AI development by leveraging the Foundry Local Learning Adventure platform. The content covers the motivations for using gamification in technical education and provides a detailed architecture for an interactive, dual-platform learning tool. Both browser-based and CLI experiences are discussed through example code, level design, and key pedagogical principles. Readers will learn how to implement progressive, hands-on AI learning experiences that demystify complex topics like embeddings, prompt engineering, and workflow orchestration using Microsoft Foundry Local. This blueprint is ideal for educators designing technical curricula or developers building tools for AI education."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/teaching-ai-development-through-gamification/ba-p/4490755"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/teaching-ai-development-through-gamification/ba-p/4490755
+title: 'Teaching AI Development Through Gamification: Building with Foundry Local'
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-12 08:00:00 +00:00
-permalink: "/2026-02-12-Teaching-AI-Development-Through-Gamification-Building-with-Foundry-Local.html"
-categories: ["AI"]
-tags: ["AI", "AI Learning", "CLI Applications", "Community", "Dual Platform Architecture", "Educational Platform", "Embeddings", "Foundry Local", "Gamification", "JavaScript", "Local AI", "Microsoft", "Node.js", "Progressive Disclosure", "Prompt Engineering", "Technical Education", "Workflow Orchestration"]
-tags_normalized: ["ai", "ai learning", "cli applications", "community", "dual platform architecture", "educational platform", "embeddings", "foundry local", "gamification", "javascript", "local ai", "microsoft", "nodedotjs", "progressive disclosure", "prompt engineering", "technical education", "workflow orchestration"]
+tags:
+- AI
+- AI Learning
+- CLI Applications
+- Community
+- Dual Platform Architecture
+- Educational Platform
+- Embeddings
+- Foundry Local
+- Gamification
+- JavaScript
+- Local AI
+- Microsoft
+- Node.js
+- Progressive Disclosure
+- Prompt Engineering
+- Technical Education
+- Workflow Orchestration
+section_names:
+- ai
 ---
-
 Lee Stott shares how gamification and Foundry Local can empower developers to learn AI through an interactive, multi-level educational platform. The article demonstrates technical architecture and learning design that make AI concepts tangible.<!--excerpt_end-->
 
 # Teaching AI Development Through Gamification: Building an Interactive Learning Platform with Foundry Local

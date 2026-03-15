@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GPT-5.4 is Generally Available in GitHub Copilot"
-description: "This announcement covers the general availability of GPT-5.4, OpenAI’s latest advanced coding model, within GitHub Copilot. It highlights new capabilities, upgrade paths, supported IDE versions, model selection details, and information for plan administrators. Developers are encouraged to update their tools and begin leveraging the enhanced features in their coding workflows."
-author: "Kate Catlin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot
+title: GPT-5.4 is Generally Available in GitHub Copilot
+author: Kate Catlin
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 23:36:06 +00:00
-permalink: "/2026-03-05-GPT-54-is-Generally-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Coding", "AI", "AI Models", "Copilot", "Copilot CLI", "Copilot Enterprise", "Copilot Pro", "Eclipse", "GitHub Copilot", "GPT 5.4", "JetBrains", "Model Upgrade", "News", "OpenAI", "Software Development", "VS Code", "Xcode"]
-tags_normalized: ["agentic coding", "ai", "ai models", "copilot", "copilot cli", "copilot enterprise", "copilot pro", "eclipse", "github copilot", "gpt 5dot4", "jetbrains", "model upgrade", "news", "openai", "software development", "vs code", "xcode"]
+tags:
+- Agentic Coding
+- AI
+- AI Models
+- Copilot
+- Copilot CLI
+- Copilot Enterprise
+- Copilot Pro
+- Eclipse
+- GitHub Copilot
+- GPT 5.4
+- JetBrains
+- Model Upgrade
+- News
+- OpenAI
+- Software Development
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Kate Catlin introduces GPT-5.4, now available in GitHub Copilot for developers and organizations, detailing the enhanced capabilities and rollout across supported platforms.<!--excerpt_end-->
 
 # GPT-5.4 is Generally Available in GitHub Copilot

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building Omnichannel Voice AI Agents with Azure: Multilingual Multi-Agent Architecture"
-description: "This episode of Sip and Sync with Azure, presented by Pablo Salvador Lopez and Priyanka Vergadia, offers a comprehensive demo of real-world insurance claim scenarios powered by Azure’s Voice AI services. It covers how Azure enables voice-to-voice agents through multilingual support, multi-agent orchestration, and speech pipeline integration. The session dives deep into technical architecture, detailing the AI, application, and telephony layers, all with hands-on best practices for developers building scalable voice AI solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=H_uAA5_h40E"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=H_uAA5_h40E
+title: 'Building Omnichannel Voice AI Agents with Azure: Multilingual Multi-Agent Architecture'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-11-18 19:13:32 +00:00
-permalink: "/2025-11-18-Building-Omnichannel-Voice-AI-Agents-with-Azure-Multilingual-Multi-Agent-Architecture.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI", "Azure Communication Services", "Azure Speech Services", "Cloud Computing", "Customer Service Bots", "Dev", "Development", "Intent Recognition", "Machine Learning", "Microsoft", "ML", "Multi Agent Architecture", "Multilingual", "Real Time Interaction", "Speech To Text", "Tech", "Technology", "Text To Speech", "Videos", "Voice AI Agents", "Voice Live API", "WebRTC", "WebSocket"]
-tags_normalized: ["ai", "azure", "azure ai", "azure communication services", "azure speech services", "cloud computing", "customer service bots", "dev", "development", "intent recognition", "machine learning", "microsoft", "ml", "multi agent architecture", "multilingual", "real time interaction", "speech to text", "tech", "technology", "text to speech", "videos", "voice ai agents", "voice live api", "webrtc", "websocket"]
+tags:
+- Azure AI
+- Azure Communication Services
+- Azure Speech Services
+- Cloud Computing
+- Customer Service Bots
+- Dev
+- Development
+- Intent Recognition
+- Microsoft
+- Multi Agent Architecture
+- Multilingual
+- Real Time Interaction
+- Speech To Text
+- Tech
+- Technology
+- Text To Speech
+- Voice AI Agents
+- Voice Live API
+- WebRTC
+- WebSocket
+- AI
+- Azure
+- ML
+- Videos
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Microsoft Developer hosts Pablo Salvador Lopez and Priyanka Vergadia in this episode, providing hands-on insights into building scalable omnichannel Voice AI agents with Azure’s Speech Services and multi-agent orchestration.<!--excerpt_end-->
 
 {% youtube H_uAA5_h40E %}

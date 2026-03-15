@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Enterprise Team Support Now Available in GitHub Organization APIs"
-description: "This news update highlights the improved integration of enterprise teams and organization teams within GitHub Enterprise API endpoints. Organization and enterprise owners can now retrieve a unified view of teams, reducing complexity by accessing all team information through existing endpoints. The update allows for enhanced filtering and clear distinction between team types, streamlining collaboration and permissions management for large organizations."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-23-enterprise-team-support-in-organization-apis"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-23-enterprise-team-support-in-organization-apis
+title: Enterprise Team Support Now Available in GitHub Organization APIs
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-23 16:25:07 +00:00
-permalink: "/2026-02-23-Enterprise-Team-Support-Now-Available-in-GitHub-Organization-APIs.html"
-categories: ["DevOps"]
-tags: ["Access Control", "API Enhancement", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Teams", "GitHub Enterprise", "Improvement", "News", "Organization API", "Permission Management", "Public Preview", "Repository Rulesets", "REST API", "Team Endpoints", "Team Management"]
-tags_normalized: ["access control", "api enhancement", "devops", "enterprise administration", "enterprise management tools", "enterprise teams", "github enterprise", "improvement", "news", "organization api", "permission management", "public preview", "repository rulesets", "rest api", "team endpoints", "team management"]
+tags:
+- Access Control
+- API Enhancement
+- DevOps
+- Enterprise Administration
+- Enterprise Management Tools
+- Enterprise Teams
+- GitHub Enterprise
+- Improvement
+- News
+- Organization API
+- Permission Management
+- Public Preview
+- Repository Rulesets
+- REST API
+- Team Endpoints
+- Team Management
+section_names:
+- devops
 ---
-
 Allison reports on GitHub Enterprise's new API enhancements, enabling organization and enterprise owners to manage and query both enterprise teams and organization teams efficiently from a unified set of endpoints.<!--excerpt_end-->
 
 # Enterprise Team Support Now Available in GitHub Organization APIs

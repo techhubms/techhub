@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Application Gateway Network Isolation Explained"
-description: "This video provides a concise explanation of the new Application Gateway Network Isolation feature in Azure, highlighting its functions and benefits for securing cloud network architectures. It is intended for Azure practitioners seeking to enhance their understanding of network security capabilities within Microsoft's cloud ecosystem."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/Gm4TZukbu8s"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/shorts/Gm4TZukbu8s
+title: Application Gateway Network Isolation Explained
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2025-09-08 11:41:29 +00:00
-permalink: "/2025-09-08-Application-Gateway-Network-Isolation-Explained.html"
-categories: ["Azure", "Security"]
-tags: ["Application Gateway", "Azure", "Azure Application Gateway", "Azure Cloud", "Azure Networking", "Azure Security", "Azure Virtual Network", "Cloud", "Cloud Networking", "Microsoft", "Microsoft Azure", "Network Architecture", "Network Isolation", "Security", "Security Best Practices", "Videos"]
-tags_normalized: ["application gateway", "azure", "azure application gateway", "azure cloud", "azure networking", "azure security", "azure virtual network", "cloud", "cloud networking", "microsoft", "microsoft azure", "network architecture", "network isolation", "security", "security best practices", "videos"]
+tags:
+- Application Gateway
+- Azure Application Gateway
+- Azure Cloud
+- Azure Networking
+- Azure Security
+- Azure Virtual Network
+- Cloud Networking
+- Microsoft
+- Microsoft Azure
+- Network Architecture
+- Network Isolation
+- Security Best Practices
+- Azure
+- Security
+- Videos
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 John Savill's Technical Training presents a clear overview of the Azure Application Gateway's new Network Isolation capability, outlining its use in strengthening network security.<!--excerpt_end-->
 
 {% youtube Gm4TZukbu8s %}

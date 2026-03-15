@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "How SRE Agent Closes the Developer Loop: Debugging and Fixing Azure Cloud App Failures with AI"
-description: "This post details a real-world workflow for using AI-powered agents to troubleshoot and resolve complex infrastructure issues in Azure-powered apps. It shows how SRE Agent, combined with Copilot in VS Code and a GitHub Coding Agent, can automatically diagnose, document, and fix connectivity problems in .NET 8 web apps using Azure SQL, managed identities, and Bicep. The article focuses on agent-based approaches to both debugging and repairing DevOps and infrastructure-as-code scenarios."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-vibe-coding-to-working-app-how-sre-agent-completes-the/ba-p/4482000"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-vibe-coding-to-working-app-how-sre-agent-completes-the/ba-p/4482000
+title: 'How SRE Agent Closes the Developer Loop: Debugging and Fixing Azure Cloud App Failures with AI'
+author: dchelupati
+feed_name: Microsoft Tech Community
 date: 2025-12-30 16:22:54 +00:00
-permalink: "/2025-12-30-How-SRE-Agent-Closes-the-Developer-Loop-Debugging-and-Fixing-Azure-Cloud-App-Failures-with-AI.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: [".NET 8", "AI", "Application Debugging", "Azure", "Azure Networking", "Azure SQL Database", "Azure SRE Agent", "Bicep", "Claude Opus", "Coding", "Community", "Developer Workflow", "DevOps", "DevOps Automation", "DNS Zone", "Entra ID", "GitHub", "GitHub Coding Agent", "GitHub MCP", "IaC", "Managed Identity", "Private Endpoint", "Resource Mapping", "Security", "Virtual Network", "VS Code Copilot"]
-tags_normalized: ["dotnet 8", "ai", "application debugging", "azure", "azure networking", "azure sql database", "azure sre agent", "bicep", "claude opus", "coding", "community", "developer workflow", "devops", "devops automation", "dns zone", "entra id", "github", "github coding agent", "github mcp", "iac", "managed identity", "private endpoint", "resource mapping", "security", "virtual network", "vs code copilot"]
+tags:
+- .NET 8
+- Application Debugging
+- Azure Networking
+- Azure SQL Database
+- Azure SRE Agent
+- Bicep
+- Claude Opus
+- Developer Workflow
+- DevOps Automation
+- DNS Zone
+- Entra ID
+- GitHub
+- GitHub Coding Agent
+- GitHub MCP
+- IaC
+- Managed Identity
+- Private Endpoint
+- Resource Mapping
+- Virtual Network
+- VS Code Copilot
+- AI
+- Azure
+- DevOps
+- Security
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- security
+primary_section: ai
 ---
-
 dchelupati demonstrates how Azure SRE Agent, in combination with Copilot and GitHub Coding Agent, enables developers to debug, document, and automatically fix complex infrastructure bugs in Azure app deployments using AI-driven workflows.<!--excerpt_end-->
 
 # From Vibe Coding to Working App: How SRE Agent Completes the Developer Loop
@@ -64,7 +88,7 @@ The post presents an integrated workflow utilizing:
 
 - Traces error back via source, Bicep, and resource graph
 - Identifies multi-layer issues through logical elimination
-    - Examples:
+  - Examples:
         1. Missing private DNS zone link to VNet
         2. Managed identity not provisioned as SQL user
 - SRE Agent documents root causes and suggested fixes as a GitHub issue
@@ -73,8 +97,8 @@ The post presents an integrated workflow utilizing:
 
 - Assign the GitHub issue to Coding Agent
 - Coding Agent generates a PR with Bicep and SQL fixes:
-    - Adds `virtualNetworkLinks` resource to connect DNS zone and VNet
-    - Appends SQL script to add managed identity as SQL user with roles
+  - Adds `virtualNetworkLinks` resource to connect DNS zone and VNet
+  - Appends SQL script to add managed identity as SQL user with roles
 - Review and merge PR
 - Deploy the updated code & infra; application health check succeeds
 

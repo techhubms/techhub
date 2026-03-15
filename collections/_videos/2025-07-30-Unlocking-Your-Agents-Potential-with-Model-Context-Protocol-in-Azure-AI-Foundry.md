@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Unlocking Your Agents' Potential with Model Context Protocol in Azure AI Foundry"
-description: "This video session by Microsoft Developer demonstrates how to build an Azure AI Foundry Agent that leverages the Model Context Protocol (MCP) for enhanced sales data analytics. Viewers learn to use the Foundry Agents Service and MCP tools, with insights on integrating these capabilities using Visual Studio Code."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8d2v6OMhkmQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=8d2v6OMhkmQ
+title: Unlocking Your Agents' Potential with Model Context Protocol in Azure AI Foundry
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-07-30 22:35:15 +00:00
-permalink: "/2025-07-30-Unlocking-Your-Agents-Potential-with-Model-Context-Protocol-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agent", "Azure", "Azure AI Foundry", "Cloud Computing", "Data Analytics", "Dev", "Development", "Foundry Agents Service", "MCP", "MCP Tools Integration", "Microsoft", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agent", "azure", "azure ai foundry", "cloud computing", "data analytics", "dev", "development", "foundry agents service", "mcp", "mcp tools integration", "microsoft", "tech", "technology", "videos", "vs code"]
+tags:
+- AI Agent
+- Azure AI Foundry
+- Cloud Computing
+- Data Analytics
+- Dev
+- Development
+- Foundry Agents Service
+- MCP
+- MCP Tools Integration
+- Microsoft
+- Tech
+- Technology
+- VS Code
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Developer walks through the process of creating an Azure AI Foundry Agent using the Model Context Protocol (MCP), highlighting practical integration tips and resources.<!--excerpt_end-->
 
 {% youtube 8d2v6OMhkmQ %}

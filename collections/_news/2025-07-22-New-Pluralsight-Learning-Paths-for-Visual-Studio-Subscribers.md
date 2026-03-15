@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "New Pluralsight Learning Paths for Visual Studio Subscribers"
-description: "This news update from Jim Harrer highlights the latest Pluralsight courses and exclusive learning paths now available to Visual Studio Professional and Enterprise subscribers. Featured courses cover a wide range of Microsoft developer tools and practices, including GitHub Copilot, Azure Functions, prompt engineering for AI, Microsoft Fabric integration, and secure cloud automation."
-author: "Jim Harrer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/vss-pluralsight-2025-2/
+title: New Pluralsight Learning Paths for Visual Studio Subscribers
+author: Jim Harrer
+feed_name: Microsoft VisualStudio Blog
 date: 2025-07-22 14:00:40 +00:00
-permalink: "/2025-07-22-New-Pluralsight-Learning-Paths-for-Visual-Studio-Subscribers.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Azure", "Azure Blob Storage", "Azure Functions", "Cloud Automation", "Coding", "Data Pipelines", "Generative AI", "GitHub Copilot", "IaC", "Learning Benefits", "Microservices", "Microsoft Fabric", "News", "Pluralsight", "Power BI", "Prompt Engineering", "Serverless", "Visual Studio Subscriptions", "VS", "VS Code"]
-tags_normalized: ["ai", "ai powered development", "azure", "azure blob storage", "azure functions", "cloud automation", "coding", "data pipelines", "generative ai", "github copilot", "iac", "learning benefits", "microservices", "microsoft fabric", "news", "pluralsight", "power bi", "prompt engineering", "serverless", "visual studio subscriptions", "vs", "vs code"]
+tags:
+- AI Powered Development
+- Azure Blob Storage
+- Azure Functions
+- Cloud Automation
+- Data Pipelines
+- Generative AI
+- IaC
+- Learning Benefits
+- Microservices
+- Microsoft Fabric
+- Pluralsight
+- Power BI
+- Prompt Engineering
+- Serverless
+- Visual Studio Subscriptions
+- VS
+- VS Code
+- AI
+- Azure
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Jim Harrer introduces new Pluralsight learning paths for Visual Studio subscribers, spotlighting expert-led courses on GitHub Copilot, Azure Functions, AI prompt engineering, Microsoft Fabric, and more advanced Microsoft development topics.<!--excerpt_end-->
 
 # Fresh Learning Paths Now Available on Pluralsight for Visual Studio Subscribers

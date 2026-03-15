@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Semantic Kernel Plugin Integration with MCP Server: Step-by-Step Tutorial"
-description: "This tutorial provides a detailed walkthrough on connecting intelligent plugins to MCP-powered AI agents using Semantic Kernel. Learn how to set up the MCP Server, create and register a Semantic Kernel plugin, and invoke it via MCP. The video is ideal for developers building AI-driven applications and demonstrates each step with a real-time integration demo."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=r2Wg6xIwIvo"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+external_url: https://www.youtube.com/watch?v=r2Wg6xIwIvo
+title: 'Semantic Kernel Plugin Integration with MCP Server: Step-by-Step Tutorial'
+author: Learn Microsoft AI
+feed_name: Learn Microsoft AI Youtube
 date: 2025-05-30 07:07:03 +00:00
-permalink: "/2025-05-30-Semantic-Kernel-Plugin-Integration-with-MCP-Server-Step-by-Step-Tutorial.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Agents", "AI Development", "AI Workflows", "C#", "Coding", "CopilotStudio", "Intelligent Plugins", "MCP", "MCP Server", "Microsoft AI", "Microsoft Copilot Studio", "OpenAI", "Plugin Integration", "Real Time Demo", "Semantic Kernel", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai agents", "ai development", "ai workflows", "csharp", "coding", "copilotstudio", "intelligent plugins", "mcp", "mcp server", "microsoft ai", "microsoft copilot studio", "openai", "plugin integration", "real time demo", "semantic kernel", "videos"]
+tags:
+- .NET
+- AI Agents
+- AI Development
+- AI Workflows
+- C#
+- CopilotStudio
+- Intelligent Plugins
+- MCP
+- MCP Server
+- Microsoft AI
+- Microsoft Copilot Studio
+- OpenAI
+- Plugin Integration
+- Real Time Demo
+- Semantic Kernel
+- AI
+- Videos
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Learn Microsoft AI presents a thorough step-by-step guide on integrating Semantic Kernel plugins with MCP Server, empowering developers to build smart AI-driven applications using Microsoft technologies.<!--excerpt_end-->
 
 {% youtube r2Wg6xIwIvo %}

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Learn to use an AI agent in your terminal | Copilot CLI for beginners"
-description: "This video series introduces developers to the GitHub Copilot CLI, showcasing how to use AI-powered capabilities directly from the terminal. It covers step-by-step instructions for building features, reviewing code, and more, making Copilot CLI accessible to all skill levels. Viewers will learn practical use cases and workflow improvements through hands-on examples."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/yXZVNfnAoCk"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/yXZVNfnAoCk
+title: Learn to use an AI agent in your terminal | Copilot CLI for beginners
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-09 18:22:01 +00:00
-permalink: "/2026-03-09-Learn-to-use-an-AI-agent-in-your-terminal-Copilot-CLI-for-beginners.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Development", "Automation", "Beginner Tutorials", "CLI", "Code Review", "Code Suggestions", "Copilot CLI", "Developer Productivity", "GitHub", "GitHub Copilot", "Programming Workflow", "Software Tools", "Terminal Tools", "Videos"]
-tags_normalized: ["ai", "ai development", "automation", "beginner tutorials", "cli", "code review", "code suggestions", "copilot cli", "developer productivity", "github", "github copilot", "programming workflow", "software tools", "terminal tools", "videos"]
+tags:
+- AI
+- AI Development
+- Automation
+- Beginner Tutorials
+- CLI
+- Code Review
+- Code Suggestions
+- Copilot CLI
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Programming Workflow
+- Software Tools
+- Terminal Tools
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a beginner-friendly series on mastering Copilot CLI, demonstrating how developers can access AI assistance directly in their terminal. The series is aimed at making Copilot CLI approachable for all, with clear explanations and actionable walkthroughs.<!--excerpt_end-->
 
 {% youtube yXZVNfnAoCk %}

@@ -1,0 +1,177 @@
+{
+  "sections": [
+    {
+      "content": "The best way to learn AI development is to build something real:\n\n1. Start with a simple chat interface to understand AI interactions\n2. Try GitHub Copilot or similar tools in your development environment\n3. Experiment with prompt changes and measure output quality\n4. Build a small application using Azure OpenAI or GitHub Models\n5. Join AI communities and forums and learn from examples\n\nHere are concrete projects you can start this week:\n\n### Build an MCP server\n\nConnect AI to your own data. Create a Model Context Protocol server that gives Claude or Copilot access to your company's documentation, your personal notes, or a live database. Start with the [MCP quickstart](https://modelcontextprotocol.io/quickstart) and have something running in an afternoon.\n\n### Create a coding agent\n\nHandle routine tasks automatically. Use GitHub Copilot's agent mode or build your own with Microsoft Agent Framework. Have it review PRs, generate tests, or refactor legacy code. See [Building AI Agents with Ease](https://techcommunity.microsoft.com/blog/educatordeveloperblog/building-ai-agents-with-ease-function-calling-in-vs-code-ai-toolkit/4362419).\n\n### Deploy a RAG chatbot\n\nBuild a knowledge base for your team. Connect Azure OpenAI to your internal docs and let people ask questions in natural language instead of searching. The [Microsoft Foundry quickstart](https://learn.microsoft.com/en-us/azure/ai-foundry/quickstarts/get-started-playground) gets you there fast.\n\n### Automate document processing\n\nUse vision models to extract data from receipts, contracts, or forms. Classify images. Generate alt text. GPT-4o and similar models handle these tasks through simple API calls.\n\n### Build a multi-agent system\n\nLet specialized agents collaborate. One agent retrieves context, another generates code, a third reviews quality. See [Building a multi-agent system with Semantic Kernel](https://www.reddit.com/r/dotnet/comments/1ltr8tf/building_a_multiagent_system_with_semantic_kernel/).\n\nPick one. Ship it. Then iterate.",
+      "title": "What You Can Build Today"
+    },
+    {
+      "moreInfo": [
+        {
+          "text": "GitHub Copilot documentation",
+          "url": "https://docs.github.com/en/copilot"
+        },
+        {
+          "text": "Cook'n with Copilot: Context Engineering Recipes Recap",
+          "url": "https://www.cooknwithcopilot.com/blog/context-engineering-recipes-recap.html"
+        },
+        {
+          "text": "What's new with the GitHub Copilot coding agent: A look at the updates",
+          "url": "https://www.youtube.com/watch?v=vgPl6sK6rQo"
+        },
+        {
+          "text": "Copilot vs Chat: Sidekick Showdown - When to Use Each Coding Sidekick",
+          "url": "https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html"
+        },
+        {
+          "text": "Modernizing Legacy COBOL to Cloud with GitHub Copilot",
+          "url": "https://www.youtube.com/watch?v=xWA0xYttWMo"
+        },
+        {
+          "text": "GitHub Copilot Helps One Acre Fund Scale Farming Impact",
+          "url": "https://www.youtube.com/watch?v=ol_un2Nam2E"
+        },
+        {
+          "text": "Introducing automatic documentation comment generation in Visual Studio",
+          "url": "https://devblogs.microsoft.com/visualstudio/introducing-automatic-documentation-comment-generation-in-visual-studio/"
+        },
+        {
+          "text": "VS Code June 2025 (version 1.102)",
+          "url": "https://code.visualstudio.com/updates/v1_102"
+        },
+        {
+          "text": "GitHub Copilot in 2025: More Intelligent, More Accessible, More Productive",
+          "url": "https://github.blog/news-insights/product-news/github-copilot-in-2025-more-intelligent-more-accessible-more-productive/"
+        }
+      ],
+      "content": "Most practical integrations come down to three layers:\n\n- **Experience**: how users interact (chat, inline suggestions, forms, copilots)\n- **Orchestration**: prompts, tool use, retrieval, evaluations, and guardrails\n- **Data and systems**: your sources of truth (docs, DBs, APIs) and authorization\n\n{{mermaid:diagram-0}}\n\n### Tools and IDEs\n\nModern development environments have integrated AI capabilities to enhance productivity and streamline workflows.\n\n#### Visual Studio Code\n\n- GitHub Copilot integration: code suggestions and chat in the editor\n- AI-powered extensions for specific languages and frameworks\n- Context-aware completions based on your repository\n\n#### Visual Studio\n\n- AI-assisted IntelliSense, suggestions, and review support\n- Debugging help with explanations and next-step suggestions\n\n#### JetBrains Rider\n\n- AI assistant support for code generation and explanation\n- Refactoring suggestions and test generation workflows\n\n#### Benefits of AI-integrated development tools\n\n- Faster coding with contextual suggestions\n- Better code quality through review support\n- Learning support through explanations\n- Reduced context switching\n\n### GitHub Copilot\n\nGitHub Copilot is an AI pair programmer that provides real-time code suggestions, chat capabilities, and agent-based assistance directly in your development environment.\n\n#### Core capabilities\n\n- **Code completion**: Suggests functions, code blocks, and entire implementations based on context\n- **Chat interface**: Conversational help for reasoning about code, architecture, and debugging\n- **Multi-language support**: Works across dozens of programming languages\n- **Context awareness**: Understands your repository structure, open files, and coding patterns\n\n#### Interaction modes\n\nGitHub Copilot offers three distinct modes for different workflows:\n\n**Ask mode** is best for explanations, exploring options, and quick checks. Use it when you want to understand code, get suggestions, or reason through a problem without making changes.\n\n**Edit mode** is best for refining existing code, documentation, and configuration files. Copilot proposes inline changes that you can review and accept.\n\n**Agent mode** is best for multi-step tasks where the AI plans and executes changes autonomously. The agent can create files, run terminal commands, and iterate on its own work. Use it for complex refactoring, implementing features across multiple files, or setting up new projects.\n\n#### Customization\n\nYou can customize Copilot's behavior through instruction files:\n\n- **`.github/copilot-instructions.md`**: Repository-wide instructions that apply to all Copilot interactions\n- **`AGENTS.md`**: Agent-specific instructions for the coding agent (also supports `CLAUDE.md` and `GEMINI.md` for different models)\n- **Custom agents**: Define specialized agents with specific tools, handoffs, and behaviors using YAML frontmatter and Markdown\n\n#### Coding agent\n\nThe GitHub Copilot coding agent can work asynchronously on issues and pull requests. Assign an issue to `copilot-swe-agent` and it will:\n\n1. Analyze the issue and create a plan\n2. Create a new branch and implement changes\n3. Open a pull request for review\n4. Iterate based on feedback\n\nThis enables background work on routine tasks while you focus on higher-value activities.\n\n</div>\n\n\n\n### Azure AI Services\n\nMicrosoft provides a unified platform for building, evaluating, and deploying AI applications, recently rebranded from Azure AI Foundry to Microsoft Foundry.\n\n#### Microsoft Foundry\n\nMicrosoft Foundry (formerly Azure AI Foundry) is a unified platform-as-a-service for enterprise AI operations, model builders, and application development. It unifies agents, models, and tools under a single management grouping with built-in enterprise-readiness capabilities.\n\n**Two portal experiences**:\n\n- **Microsoft Foundry (new)**: Streamlined experience for building multi-agent applications. Choose this when working primarily with Foundry projects.\n- **Microsoft Foundry (classic)**: Full-featured portal for working with multiple resource types including Azure OpenAI, Foundry resources, and hub-based projects.\n\n**Key capabilities in the new portal**:\n\n- **Multi-Agent Orchestration**: Build workflows using SDKs for C# and Python that enable collaborative agent behavior\n- **Foundry Tools**: Access 1,400+ tools through the tool catalog, including remote MCP servers, Azure Logic App connectors, and custom tools\n- **Memory (preview)**: Long-term memory that persists user preferences and conversation history across sessions\n- **Knowledge Integration**: Connect agents to Foundry IQ (powered by Azure AI Search) for grounded, citation-backed answers\n- **Visual Workflow Designer**: Design agent orchestrations visually, then export to YAML for code-based deployment\n\n**Built-in tools include**: Azure AI Search, Browser Automation, Code Interpreter, Computer Use, File Search, Grounding with Bing, Image Generation, Microsoft Fabric integration, SharePoint, and Web Search.\n\n#### Azure OpenAI\n\nEnterprise access to OpenAI models with Azure security and compliance features.\n\n##### Do you need to use low-level services directly?\n\nFor many applications, you can start with Azure OpenAI or Microsoft Foundry, then add specialized services when needed.\n\n\n\n### Languages and SDKs\n\nMost languages have solid SDKs and libraries for integrating AI.\n\n#### Python\n\n- **Azure AI Projects SDK** (`azure-ai-projects`): Unified library for connecting to Microsoft Foundry projects, accessing models, and using Foundry Tools\n- OpenAI SDK\n- LangChain\n- Hugging Face Transformers\n- LlamaIndex\n\n#### JavaScript/TypeScript\n\n- OpenAI Node.js SDK\n- LangChain.js\n- Vercel AI SDK\n- Azure AI Projects SDK (preview)\n\n#### C#/.NET\n\n.NET provides a layered approach to AI development:\n\n- **Microsoft.Extensions.AI**: A namespace that provides unified abstractions for working with AI services. It defines common interfaces like `IChatClient` and `IEmbeddingGenerator` that work across different AI providers (Azure OpenAI, OpenAI, Ollama, etc.). Think of it as the \"plumbing\" that lets you swap providers without rewriting code.\n\n- **Microsoft Agent Framework**: The recommended framework for building AI agents and agentic applications. It builds on top of Microsoft.Extensions.AI and provides pre-built orchestration patterns, multi-agent coordination, and integration with Microsoft Foundry for visual workflow design. If you're building agents, start here.\n\n- **Semantic Kernel**: An SDK for orchestrating prompts, plugins, and AI workflows. Microsoft Agent Framework is its successor for agentic scenarios, but Semantic Kernel remains useful for prompt orchestration and plugin development. Existing Semantic Kernel projects can migrate to Agent Framework when ready.\n\n- **Azure AI SDKs**: Direct access to Azure AI services for specialized needs.\n\n\n\n</div>",
+      "mermaid": [
+        {
+          "id": "diagram-0",
+          "diagram": "graph TB\n    subgraph Experience[\"Experience Layer\"]\n        Chat[\"Chat Interface\"]\n        Inline[\"Inline Suggestions\"]\n        Forms[\"Form Assistance\"]\n        Copilot[\"Copilot Features\"]\n    end\n    \n    subgraph Orchestration[\"Orchestration Layer\"]\n        Prompts[\"Prompt Engineering\"]\n        Tools[\"Tool/Function Calling\"]\n        RAG[\"RAG & Retrieval\"]\n        Guards[\"Guardrails & Eval\"]\n    end\n    \n    subgraph Data[\"Data & Systems Layer\"]\n        Docs[(\"Documentation\")]\n        DB[(\"Databases\")]\n        APIs[\"External APIs\"]\n        Auth[\"Authorization\"]\n    end\n    \n    Chat --> Prompts\n    Inline --> Prompts\n    Forms --> Prompts\n    Copilot --> Prompts\n    \n    Prompts --> Docs\n    Tools --> DB\n    RAG --> Docs\n    Guards --> APIs\n    Tools --> APIs\n    RAG --> DB\n    Prompts --> Auth",
+          "title": "Three-Layer AI Integration Architecture"
+        }
+      ],
+      "faq": [
+        {
+          "question": "When should I refactor using my IDE versus using Copilot?",
+          "answer": "- Use IDE refactoring tools for standard operations like renaming symbols or extracting methods.\n- Use Copilot for refactors that require understanding intent, architecture, and cross-file reasoning.\nLots of examples and detailed information can be found in the [GitHub Copilot Hub](/github-copilot/)."
+        },
+        {
+          "question": "Which mode should I use for a complex feature implementation?",
+          "answer": "- Start with **Ask mode** to discuss the approach and break down the requirements.\n- Switch to **Agent mode** to implement the feature across multiple files.\n- Use **Edit mode** for targeted refinements after the initial implementation."
+        }
+      ],
+      "title": "Integrating AI into Your Applications"
+    },
+    {
+      "content": "Multi-agent systems move beyond single \"do-everything\" assistants to collaborative groups where each agent brings a specific skill. This section covers practical approaches to building these systems.\n\n### When to use multi-agent architectures\n\nConsider multi-agent designs when:\n\n- **Large workloads** can be divided into smaller tasks for parallel processing\n- **Complex tasks** require distinct competencies (retrieval vs. code generation vs. review)\n- **Separation of duties** matters (policy checking, compliance review)\n- **Different expertise** is needed for different aspects of a task\n- **Stronger isolation** is required (running agents under least-privilege identities)\n\n### Three-phase development workflow\n\nMicrosoft Foundry and Agent Framework support a design-develop-deploy workflow:\n\n#### Phase 1: Design (Low-Code)\n\nUse Microsoft Foundry Workflows to visually design agent orchestration. The workflow builder provides:\n\n- **Pre-built templates**: Human-in-the-loop, Sequential, and Group Chat orchestration patterns\n- **Node types**: Agent invocation, logic (if/else, loops), data transformation, and basic chat\n- **Power Fx expressions**: Excel-like formulas for complex logic and data manipulation\n- **YAML export**: Version-controllable workflow definitions that can be edited visually or as code\n\nThis lets you prototype and test multi-agent interactions without writing orchestration code.\n\n#### Phase 2: Develop (Local SDLC)\n\nUse the Microsoft Foundry VS Code Extension to pull workflow definitions locally. This bridges the gap between cloud-based visual design and your local IDE, enabling debugging, testing, and integration with your existing development practices.\n\n#### Phase 3: Deploy (Runtime)\n\nMicrosoft Agent Framework natively ingests the declarative workflow definitions (YAML) from Foundry. This \"configuration as code\" approach lets you promote artifacts from prototyping directly to production without rewriting logic.\n\n### Practical orchestration patterns\n\nChoose patterns based on your coordination needs:\n\n| Pattern | Use when |\n| ------- | -------- |\n| **Sequential** | Tasks have dependencies and must run in order |\n| **Concurrent** | Tasks are independent and can run in parallel |\n| **Group Chat** | Multiple perspectives need to collaborate iteratively |\n| **Handoff** | Context determines which specialist should handle the work |\n\nPatterns can be combined. A sequential pipeline might include a group chat step for review, or a handoff pattern might delegate to concurrent sub-agents.\n\n### Design principles for production systems\n\n- **Make handoffs explicit**: Define schemas that capture goal, inputs, constraints, evidence, and success criteria\n- **Pass artifacts by reference**: Use file IDs or links rather than copying full content to control context growth\n- **Bound execution**: Set token/turn caps and clear exit conditions to prevent runaway loops\n- **Log everything**: Capture every handoff and tool call, including sources, for traceability\n- **Build evaluation harnesses**: Exercise end-to-end scenarios to quantify quality and prevent regressions\n\n### Agent Memory\n\nMicrosoft Foundry provides managed long-term memory that enables agents to retain and recall information across sessions. This is distinct from short-term memory (conversation context within a session).\n\n**Memory types**:\n\n- **User profile memory**: Persistent information about users (name, preferences, dietary restrictions) that remains stable across conversations\n- **Chat summary memory**: Distilled summaries of conversation topics that allow users to continue discussions without repeating context\n\n**How it works**:\n\n1. **Extraction**: The system identifies key information from conversations (preferences, facts, context)\n2. **Consolidation**: Similar memories are merged to avoid redundancy; conflicts are resolved\n3. **Retrieval**: Hybrid search surfaces relevant memories when the agent needs them\n\n**Use cases**: Customer support agents that remember previous issues and preferred contact methods, shopping assistants that recall sizes and past purchases, or any scenario where personalization improves the experience.\n\n**Integration options**:\n\n- **Memory search tool**: Attach to a prompt agent for automatic memory management\n- **Memory store APIs**: Direct API access for advanced control",
+      "moreInfo": [
+        {
+          "text": "Build a workflow in Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/workflow"
+        },
+        {
+          "text": "Memory in Foundry Agent Service",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/what-is-memory"
+        },
+        {
+          "text": "Foundry Tools catalog",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/concepts/tool-catalog"
+        },
+        {
+          "text": "Microsoft Agent Framework Orchestrations",
+          "url": "https://learn.microsoft.com/en-us/agent-framework/user-guide/workflows/orchestrations/overview"
+        },
+        {
+          "text": "From Concept to Code: Building Production-Ready Multi-Agent Systems",
+          "url": "https://techcommunity.microsoft.com/blog/azuredevcommunityblog/from-concept-to-code-building-production-ready-multi-agent-systems-with-microsof/4472752"
+        },
+        {
+          "text": "Learn MCP from our Free Livestream Series in December",
+          "url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-mcp-from-our-free-livestream-series-in-december/ba-p/4474729"
+        },
+        {
+          "text": "Designing Multi-Agent Intelligence",
+          "url": "https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence"
+        },
+        {
+          "text": "Multi-Agent Design Patterns (AI Agents for Beginners)",
+          "url": "https://microsoft.github.io/ai-agents-for-beginners/08-multi-agent/"
+        }
+      ],
+      "title": "Building Multi-Agent Systems"
+    },
+    {
+      "content": "Building AI applications is only half the challenge. You also need to monitor performance, evaluate quality, and ensure safety in production.\n\n### Why monitoring matters\n\nWithout rigorous assessment, AI systems can produce outputs that are fabricated, irrelevant, harmful, or vulnerable to exploits. Observability helps you detect these issues before they impact users.\n\n### Evaluation throughout the lifecycle\n\n#### Before deployment (preproduction)\n\n- **Test with evaluation datasets** that simulate realistic user interactions\n- **Identify edge cases** where output quality might degrade\n- **Measure key metrics** like groundedness, relevance, coherence, and safety\n- **Run AI red teaming** to simulate adversarial attacks and identify vulnerabilities\n- **Generate synthetic data** if you lack real test data to cover your scenarios\n\n#### After deployment (production)\n\n- **Continuous evaluation**: Sample production traffic and assess quality/safety at a configured rate\n- **Scheduled evaluation**: Run periodic tests with fixed datasets to detect drift\n- **Operational metrics**: Track latency, throughput, token consumption, and error rates\n- **Alerting**: Set up notifications when metrics drop below thresholds\n\n### Types of evaluators to consider\n\n| Category | What it measures |\n| -------- | ---------------- |\n| **General quality** | Coherence, fluency, overall response quality |\n| **RAG quality** | Groundedness, relevance, how well responses use retrieved context |\n| **Safety** | Harmful content, bias, protected material, security vulnerabilities |\n| **Agent-specific** | Task adherence, task completion, tool call accuracy |\n\nFor agent applications, evaluators can assess whether the agent followed through on tasks, selected appropriate tools, and used tool outputs correctly.\n\n### Setting up monitoring in Azure\n\nMicrosoft Foundry provides integrated observability through Application Insights:\n\n1. **Connect Application Insights** to your Foundry project\n2. **Instrument tracing** to capture detailed telemetry from your application\n3. **Enable continuous evaluation** to automatically assess production traffic\n4. **Use the dashboard** to visualize token consumption, latency, exceptions, and quality metrics\n5. **Set up alerts** to get notified when issues arise\n\nThe Foundry observability dashboard brings key metrics into a single view that provides transparency for tracking operational health and quality.",
+      "moreInfo": [
+        {
+          "text": "Observability in generative AI (Microsoft Learn)",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/observability"
+        },
+        {
+          "text": "Evaluate generative AI apps using Microsoft Foundry",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/evaluate-generative-ai-app"
+        },
+        {
+          "text": "Evaluate generative AI performance (Training Module)",
+          "url": "https://learn.microsoft.com/en-us/training/modules/evaluate-models-azure-ai-studio/"
+        },
+        {
+          "text": "Trace your AI application",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/develop/trace-application"
+        },
+        {
+          "text": "Real-time observability for agents",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/continuous-evaluation-agents"
+        }
+      ],
+      "title": "Monitoring and Evaluating AI Applications"
+    },
+    {
+      "content": "AI is changing how we navigate websites and data. Instead of clicking through menus and forms, we'll increasingly describe what we want in natural language. Sites and apps will respond by resolving intent, pulling the right data, and assembling answers with sources. Three related ideas are emerging that make this possible:\n\n### Semantic search (and why it matters)\n\nTraditional search matches exact words. Semantic search matches meaning using embeddings (numeric representations of text, images, or other data). This lets users ask questions in their own words and still find the right content. In practice, semantic search powers Retrieval-Augmented Generation (RAG), site search that understands synonyms and context, and cross-type discovery (e.g., \"the video that explains streaming tokens\").\n\n### NLWeb (natural-language web)\n\nNLWeb refers to patterns that make the web conversational by default. Pages expose capabilities (search, lookup, actions) as structured affordances that AI agents can call. Content is organized as artifacts with clear identifiers and metadata. Users ask for outcomes (\"Find the latest pricing and compare to last quarter\"), and the site resolves the request through tools and data rather than forcing step-by-step navigation.\n\n#### What changes\n\n- Interfaces become intent-first rather than page-first\n- Sites describe actions and data in machine-readable ways so agents can help\n- Results include sources, links, and artifacts you can reuse\n\nSome projects describe this as an \"agent-native\" layer for the web, similar to how HTML+HTTP enabled browsers. If you want a concrete example, the NLWeb project itself frames the idea in relation to MCP (and mentions A2A as an emerging direction).\n\n#### Implementation details\n\n[NLWeb](https://github.com/nlweb-ai/NLWeb) is an open-source project that aims to simplify building conversational interfaces for websites. It describes using semi-structured formats (like Schema.org and RSS) as inputs, indexing content into a vector store for semantic retrieval, and exposing capabilities via MCP so AI clients can call tools against the site.\n\n### llms.txt\n\nLike robots.txt for crawlers, `llms.txt` is a proposed convention for publishing an LLM-friendly index of a site. The idea is to put a markdown file at a predictable path (typically `/llms.txt`) that points to the most useful pages and documents, with a short summary and an optional section for \"nice to have\" links.\n\n\n\nThe bottom line: AI turns websites and data stores into conversational surfaces. By adding `llms.txt` and shipping semantic search (or at least clean, machine-readable structure plus stable URLs), you make your content easier for both people and agents to discover, cite, and reuse.",
+      "moreInfo": [
+        {
+          "text": "llms.txt specification and guidance",
+          "url": "https://llmstxt.org/"
+        },
+        {
+          "text": "Example: GoFastMCP llms.txt",
+          "url": "https://gofastmcp.com/llms-full.txt"
+        },
+        {
+          "text": "NLWeb GitHub repository",
+          "url": "https://github.com/nlweb-ai/NLWeb"
+        }
+      ],
+      "title": "The AI-native web: NLWeb, llms.txt, and semantic search"
+    },
+    {
+      "content": "Resources to continue your GenAI learning journey, from structured courses to hands-on experimentation.",
+      "moreInfo": [
+        {
+          "text": "Microsoft Learn: Introduction to AI on Azure",
+          "url": "https://learn.microsoft.com/en-us/training/paths/introduction-to-ai-on-azure/"
+        },
+        {
+          "text": "Hugging Face courses",
+          "url": "https://huggingface.co/learn"
+        },
+        {
+          "text": "LinkedIn Learning: AI development with GitHub Models and Azure",
+          "url": "https://www.linkedin.com/learning/enterprise-ai-development-with-github-models-and-azure"
+        },
+        {
+          "text": "GitHub Skills",
+          "url": "https://skills.github.com/"
+        },
+        {
+          "text": "Let's build GPT: from scratch, in code, spelled out",
+          "url": "https://www.youtube.com/watch?v=kCc8FmEb1nY"
+        }
+      ],
+      "title": "Learning Resources"
+    }
+  ],
+  "description": "Practical ways to apply GenAI, from development workflows to product integration, plus resources to keep learning.",
+  "title": "GenAI Applied"
+}

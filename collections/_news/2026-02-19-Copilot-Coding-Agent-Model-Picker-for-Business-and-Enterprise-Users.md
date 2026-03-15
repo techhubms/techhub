@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Copilot Coding Agent Model Picker for Business and Enterprise Users"
-description: "This news update from GitHub details the rollout of a model selection feature for the Copilot coding agent, now available to Copilot Business and Enterprise users. The update describes how users can select from multiple AI models for delegated coding tasks, enhancing flexibility and control over the Copilot agent's autonomous background work."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-19-model-picker-for-copilot-coding-agent-for-copilot-business-and-enterprise-users"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-19-model-picker-for-copilot-coding-agent-for-copilot-business-and-enterprise-users
+title: Copilot Coding Agent Model Picker for Business and Enterprise Users
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-19 19:55:01 +00:00
-permalink: "/2026-02-19-Copilot-Coding-Agent-Model-Picker-for-Business-and-Enterprise-Users.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model Selection", "Autonomous Agents", "Claude Opus", "Claude Sonnet", "Cloud Development", "Copilot", "Copilot Business", "Copilot Coding Agent", "Copilot Enterprise", "DevOps Automation", "GitHub", "GitHub Copilot", "GPT 5 Codex", "Improvement", "Model Picker", "News"]
-tags_normalized: ["ai", "ai model selection", "autonomous agents", "claude opus", "claude sonnet", "cloud development", "copilot", "copilot business", "copilot coding agent", "copilot enterprise", "devops automation", "github", "github copilot", "gpt 5 codex", "improvement", "model picker", "news"]
+tags:
+- AI
+- AI Model Selection
+- Autonomous Agents
+- Claude Opus
+- Claude Sonnet
+- Cloud Development
+- Copilot
+- Copilot Business
+- Copilot Coding Agent
+- Copilot Enterprise
+- DevOps Automation
+- GitHub
+- GitHub Copilot
+- GPT 5 Codex
+- Improvement
+- Model Picker
+- News
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison presents an update on the Copilot coding agent's model picker feature, now available for Copilot Business and Enterprise users, enabling them to choose specific AI models for delegated coding tasks.<!--excerpt_end-->
 
 # Copilot Coding Agent Model Picker for Business and Enterprise Users

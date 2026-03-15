@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI-assisted Migration: Enhancing Performance on Azure Database for PostgreSQL"
-description: "This Microsoft Ignite 2025 session explores how enterprises can migrate legacy databases like Oracle to Azure Database for PostgreSQL with AI-assisted tools. Expert speakers demonstrate step-by-step migration processes, database validation, automated performance tuning, and highlight key Azure features that boost resilience and scalability for intelligent application workloads."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=LdCExagKS4Y"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=LdCExagKS4Y
+title: 'AI-assisted Migration: Enhancing Performance on Azure Database for PostgreSQL'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 16:23:57 +00:00
-permalink: "/2025-11-21-AI-assisted-Migration-Enhancing-Performance-on-Azure-Database-for-PostgreSQL.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Assisted Migration", "Automated Tuning", "Azure", "Azure Database For PostgreSQL", "Cloud Databases", "Database Migration", "Database Modernization", "Enterprise Readiness", "Migrateandmodernizeyourestate", "ML", "MSIgnite", "Oracle Migration", "Performance Tuning", "PostgreSQL", "Schema Validation", "Videos", "VS Code Demo"]
-tags_normalized: ["ai", "ai assisted migration", "automated tuning", "azure", "azure database for postgresql", "cloud databases", "database migration", "database modernization", "enterprise readiness", "migrateandmodernizeyourestate", "ml", "msignite", "oracle migration", "performance tuning", "postgresql", "schema validation", "videos", "vs code demo"]
+tags:
+- AI Assisted Migration
+- Automated Tuning
+- Azure Database For PostgreSQL
+- Cloud Databases
+- Database Migration
+- Database Modernization
+- Enterprise Readiness
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Oracle Migration
+- Performance Tuning
+- PostgreSQL
+- Schema Validation
+- VS Code Demo
+- AI
+- Azure
+- ML
+- Videos
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Microsoft Events presents a deep dive on AI-assisted migration to Azure Database for PostgreSQL, featuring live demos and expert insights from Guy Bowerman, Jonathon Frost, Luigi Nardi, and Ashokkan Somuveerappan.<!--excerpt_end-->
 
 {% youtube LdCExagKS4Y %}

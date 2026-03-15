@@ -1,14 +1,14 @@
 function Set-FrontMatterValue {
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [AllowEmptyString()]
         [string]$Content,
         
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [AllowEmptyString()]
         [string]$Key,
         
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [array]$Value
     )
     
@@ -22,9 +22,10 @@ function Set-FrontMatterValue {
     $key_updated = $false
     
     # Keys that should not be quoted in frontmatter YAML (but their array values should still be quoted)
-    $frontmatterSkipKeys = @('excerpt_separator', 'date')
+    $frontmatterSkipKeys = @('date')
     # Keys that should always be formatted as arrays, even with single values
-    $frontmatterArrayKeys = @('tags', 'categories', 'tags_normalized', 'category')
+    # All other keys with single values will be formatted inline
+    $frontmatterArrayKeys = @('tags', 'section_names', 'categories', 'category')
     
     while ($i -lt $linesArr.Count) {
         $line = $linesArr[$i]
@@ -43,15 +44,24 @@ function Set-FrontMatterValue {
             if (-not $key_updated) {
                 if ($Key -in $frontmatterSkipKeys) {
                     $formattedValue = "[$($Value -join ', ')]"
-                } elseif ($Key -in $frontmatterArrayKeys -or $Value.Count -gt 1) {
-                    # Always format as array for array keys or multiple values
-                    $quotedValues = $Value | ForEach-Object { "`"$_`"" }
-                    $formattedValue = "[$($quotedValues -join ', ')]"
-                } else {
-                    # Single value for non-array key
-                    $formattedValue = "`"$($Value[0])`""
+                    $new_lines += "$Key`: $formattedValue"
                 }
-                $new_lines += "$Key`: $formattedValue"
+                elseif ($Value.Count -eq 0) {
+                    # Empty array
+                    $new_lines += "$Key`: []"
+                }
+                elseif (($Key -in $frontmatterArrayKeys) -or ($Value.Count -gt 1)) {
+                    # Format as block sequence array
+                    $new_lines += "$Key`:"
+                    foreach ($item in $Value) {
+                        $new_lines += "  - `"$item`""
+                    }
+                }
+                else {
+                    # Single scalar value - inline format
+                    $formattedValue = "`"$($Value[0])`""
+                    $new_lines += "$Key`: $formattedValue"
+                }
                 $key_updated = $true
             }
             $found_front_matter_end = $true
@@ -66,15 +76,30 @@ function Set-FrontMatterValue {
                 # Replace the existing key with new value
                 if ($Key -in $frontmatterSkipKeys) {
                     $formattedValue = "[$($Value -join ', ')]"
-                } elseif ($Key -in $frontmatterArrayKeys -or $Value.Count -gt 1) {
-                    # Always format as array for array keys or multiple values
-                    $quotedValues = $Value | ForEach-Object { "`"$_`"" }
-                    $formattedValue = "[$($quotedValues -join ', ')]"
-                } else {
-                    # Single value for non-array key
-                    $formattedValue = "`"$($Value[0])`""
+                    $new_lines += "$Key`: $formattedValue"
                 }
-                $new_lines += "$Key`: $formattedValue"
+                elseif ($Value.Count -eq 0) {
+                    # Empty array
+                    $new_lines += "$Key`: []"
+                }
+                elseif (($Key -in $frontmatterArrayKeys) -or ($Value.Count -gt 1)) {
+                    # Format as block sequence array
+                    $new_lines += "$Key`:"
+                    foreach ($item in $Value) {
+                        $new_lines += "  - `"$item`""
+                    }
+                    # Skip any subsequent lines that are part of the old array
+                    $i++
+                    while ($i -lt $linesArr.Count -and $linesArr[$i] -match '^\s+-\s') {
+                        $i++
+                    }
+                    continue
+                }
+                else {
+                    # Single scalar value - inline format
+                    $formattedValue = "`"$($Value[0])`""
+                    $new_lines += "$Key`: $formattedValue"
+                }
                 $key_updated = $true
                 $i++
                 continue
@@ -92,15 +117,24 @@ function Set-FrontMatterValue {
         $front_matter_lines += "---"
         if ($Key -in $frontmatterSkipKeys) {
             $formattedValue = "[$($Value -join ', ')]"
-        } elseif ($Key -in $frontmatterArrayKeys -or $Value.Count -gt 1) {
-            # Always format as array for array keys or multiple values
-            $quotedValues = $Value | ForEach-Object { "`"$_`"" }
-            $formattedValue = "[$($quotedValues -join ', ')]"
-        } else {
-            # Single value for non-array key
-            $formattedValue = "`"$($Value[0])`""
+            $front_matter_lines += "$Key`: $formattedValue"
         }
-        $front_matter_lines += "$Key`: $formattedValue"
+        elseif ($Value.Count -eq 0) {
+            # Empty array
+            $front_matter_lines += "$Key`: []"
+        }
+        elseif (($Key -in $frontmatterArrayKeys) -or ($Value.Count -gt 1)) {
+            # Format as block sequence array
+            $front_matter_lines += "$Key`:"
+            foreach ($item in $Value) {
+                $front_matter_lines += "  - `"$item`""
+            }
+        }
+        else {
+            # Single scalar value - inline format
+            $formattedValue = "`"$($Value[0])`""
+            $front_matter_lines += "$Key`: $formattedValue"
+        }
         $front_matter_lines += "---"
         $front_matter_lines += ""
         

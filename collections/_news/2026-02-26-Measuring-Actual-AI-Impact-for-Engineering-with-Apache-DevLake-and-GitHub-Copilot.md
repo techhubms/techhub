@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Measuring Actual AI Impact for Engineering with Apache DevLake and GitHub Copilot"
-description: "This article shows how to use Apache DevLake, enhanced with a GitHub Copilot plugin, to move beyond basic adoption metrics and meaningfully measure the real delivery impact of GitHub Copilot in engineering teams. It covers the observability gap, DevLake’s architecture, DORA metrics, correlation dashboards, and practical setup via the gh-devlake CLI extension."
-author: "Eldrick Wega"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/measuring-actual-ai-impact-for-engineering-with-apache-devlake/
+title: Measuring Actual AI Impact for Engineering with Apache DevLake and GitHub Copilot
+author: Eldrick Wega
+primary_section: github-copilot
+feed_name: Microsoft All Things Azure Blog
 date: 2026-02-26 10:06:19 +00:00
-permalink: "/2026-02-26-Measuring-Actual-AI-Impact-for-Engineering-with-Apache-DevLake-and-GitHub-Copilot.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Adoption Metrics", "AI", "All Things Azure", "Apache DevLake", "Azure DevOps", "CI/CD", "Copilot Metrics API", "Developer Analytics", "Developer Productivity", "DevLake", "DevOps", "DevOps Metrics", "DORA", "Engineering Productivity", "Gh Devlake", "GitHub", "GitHub Copilot", "Grafana", "Impact Measurement", "Microsoft", "News", "ROI", "SQL Dashboards", "Thought Leadership"]
-tags_normalized: ["adoption metrics", "ai", "all things azure", "apache devlake", "azure devops", "cislashcd", "copilot metrics api", "developer analytics", "developer productivity", "devlake", "devops", "devops metrics", "dora", "engineering productivity", "gh devlake", "github", "github copilot", "grafana", "impact measurement", "microsoft", "news", "roi", "sql dashboards", "thought leadership"]
+tags:
+- Adoption Metrics
+- AI
+- All Things Azure
+- Apache DevLake
+- Azure DevOps
+- CI/CD
+- Copilot Metrics API
+- Developer Analytics
+- Developer Productivity
+- DevLake
+- DevOps
+- DevOps Metrics
+- DORA
+- Engineering Productivity
+- Gh Devlake
+- GitHub
+- GitHub Copilot
+- Grafana
+- Impact Measurement
+- Microsoft
+- News
+- ROI
+- SQL Dashboards
+- Thought Leadership
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Eldrick Wega details how engineering teams can measure the true delivery impact of GitHub Copilot by integrating Copilot metrics with DevOps data using Apache DevLake and the gh-devlake CLI extension.<!--excerpt_end-->
 
 # Measuring Actual AI Impact for Engineering with Apache DevLake and GitHub Copilot

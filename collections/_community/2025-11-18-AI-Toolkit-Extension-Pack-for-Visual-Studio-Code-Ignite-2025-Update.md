@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI Toolkit Extension Pack for Visual Studio Code: Ignite 2025 Update"
-description: "This post introduces the Ignite 2025 update for the AI Toolkit extension pack in Visual Studio Code. It highlights new capabilities for AI agent development, including local workflows, seamless VS Code and Foundry integration, GitHub Copilot-powered code generation and debugging, and advanced visualization tools for agentic applications."
-author: "leoyao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/ai-toolkit-extension-pack-for-visual-studio-code-ignite-2025/ba-p/4471050
+title: 'AI Toolkit Extension Pack for Visual Studio Code: Ignite 2025 Update'
+author: leoyao
+feed_name: Microsoft Tech Community
 date: 2025-11-18 17:09:41 +00:00
-permalink: "/2025-11-18-AI-Toolkit-Extension-Pack-for-Visual-Studio-Code-Ignite-2025-Update.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agentic Applications", "AI", "AI Agents", "AI Toolkit", "Azure", "Azure AI Foundry", "Cloud Deployment", "Coding", "Community", "Debugging", "Foundry SDK", "GitHub Copilot", "Graph Visualizer", "Hosted Agents Playground", "Microsoft Agent Framework", "Python", "VS Code", "VS Code Extensions", "YAML Workflows"]
-tags_normalized: ["dotnet", "agentic applications", "ai", "ai agents", "ai toolkit", "azure", "azure ai foundry", "cloud deployment", "coding", "community", "debugging", "foundry sdk", "github copilot", "graph visualizer", "hosted agents playground", "microsoft agent framework", "python", "vs code", "vs code extensions", "yaml workflows"]
+tags:
+- .NET
+- Agentic Applications
+- AI Agents
+- AI Toolkit
+- Azure AI Foundry
+- Cloud Deployment
+- Debugging
+- Foundry SDK
+- Graph Visualizer
+- Hosted Agents Playground
+- Microsoft Agent Framework
+- Python
+- VS Code
+- VS Code Extensions
+- YAML Workflows
+- AI
+- Azure
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 leoyao presents the latest features of the AI Toolkit Extension Pack for Visual Studio Code, showcasing new agentic app workflows, Copilot-driven development, and end-to-end cloud deployment released at Ignite 2025.<!--excerpt_end-->
 
 # AI Toolkit Extension Pack for Visual Studio Code: Ignite 2025 Update

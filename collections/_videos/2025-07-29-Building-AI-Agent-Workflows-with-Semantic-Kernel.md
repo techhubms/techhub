@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Building AI Agent Workflows with Semantic Kernel"
-description: "This episode demonstrates how to construct practical AI agents and workflows using Semantic Kernel's agent and process frameworks. It features a demo of SemantiClip, transforming video content into blog posts via Semantic Kernel and Azure AI Foundry. Orchestration patterns and framework selection are discussed for real-world AI solutions."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3JFKwerYj04"
-viewing_mode: "internal"
-feed_name: "Microsoft Build 2025 YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=3JFKwerYj04
+title: Building AI Agent Workflows with Semantic Kernel
+author: Microsoft Developer
+feed_name: Microsoft Build 2025 YouTube
 date: 2025-07-29 13:38:12 +00:00
-permalink: "/2025-07-29-Building-AI-Agent-Workflows-with-Semantic-Kernel.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Frameworks", "AI", "AI Agents", "Azure", "Azure AI Foundry", "Coding", "Microsoft Developer", "Open Source", "Orchestration Patterns", "Process Frameworks", "Semantic Kernel", "SemantiClip", "Video To Blog", "Videos"]
-tags_normalized: ["agent frameworks", "ai", "ai agents", "azure", "azure ai foundry", "coding", "microsoft developer", "open source", "orchestration patterns", "process frameworks", "semantic kernel", "semanticlip", "video to blog", "videos"]
+tags:
+- Agent Frameworks
+- AI Agents
+- Azure AI Foundry
+- Microsoft Developer
+- Open Source
+- Orchestration Patterns
+- Process Frameworks
+- Semantic Kernel
+- SemantiClip
+- Video To Blog
+- AI
+- Azure
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Authored by Microsoft Developer, this video covers building practical AI agents and workflows with Semantic Kernel and Azure AI Foundry, including a demo of SemantiClip.<!--excerpt_end-->
 
 {% youtube 3JFKwerYj04 %}

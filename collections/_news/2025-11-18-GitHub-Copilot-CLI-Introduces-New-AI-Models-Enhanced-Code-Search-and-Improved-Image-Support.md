@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "GitHub Copilot CLI Introduces New AI Models, Enhanced Code Search, and Improved Image Support"
-description: "This update details major enhancements to GitHub Copilot CLI, including integration with the latest AI models (GPT-5.1 series and Gemini 3.5 Pro), more effective code search tools, better image context handling, and numerous reliability improvements. The announcement highlights new features and bug fixes aimed at making Copilot CLI an even more powerful tool for developers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-11-18-github-copilot-cli-new-models-enhanced-code-search-and-better-image-support
+title: GitHub Copilot CLI Introduces New AI Models, Enhanced Code Search, and Improved Image Support
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-11-18 22:07:34 +00:00
-permalink: "/2025-11-18-GitHub-Copilot-CLI-Introduces-New-AI-Models-Enhanced-Code-Search-and-Improved-Image-Support.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Configuration", "AI", "AI Models", "Automation", "Bugfixes", "CLI", "Client Apps", "Code Search", "Coding", "Copilot", "Developer Tools", "Gemini 3.5 Pro", "GitHub Copilot", "GitHub Copilot CLI", "Google AI", "GPT 5.1", "Image Support", "Improvement", "Markdown", "News", "npm", "OpenAI", "PowerShell", "Ripgrep", "Shell Commands"]
-tags_normalized: ["agent configuration", "ai", "ai models", "automation", "bugfixes", "cli", "client apps", "code search", "coding", "copilot", "developer tools", "gemini 3dot5 pro", "github copilot", "github copilot cli", "google ai", "gpt 5dot1", "image support", "improvement", "markdown", "news", "npm", "openai", "powershell", "ripgrep", "shell commands"]
+tags:
+- Agent Configuration
+- AI Models
+- Automation
+- Bugfixes
+- CLI
+- Client Apps
+- Code Search
+- Copilot
+- Developer Tools
+- Gemini 3.5 Pro
+- GitHub Copilot CLI
+- Google AI
+- GPT 5.1
+- Image Support
+- Improvement
+- Markdown
+- npm
+- OpenAI
+- PowerShell
+- Ripgrep
+- Shell Commands
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison from GitHub presents a comprehensive update on GitHub Copilot CLI, describing key feature enhancements, expanded AI model support, code search improvements, and upgrades to image handling and automation for developers.<!--excerpt_end-->
 
 # GitHub Copilot CLI: New Models, Enhanced Code Search, and Better Image Support

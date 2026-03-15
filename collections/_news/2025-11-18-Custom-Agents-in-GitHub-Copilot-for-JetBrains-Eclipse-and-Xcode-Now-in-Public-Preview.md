@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Custom Agents in GitHub Copilot for JetBrains, Eclipse, and Xcode Now in Public Preview"
-description: "This update introduces custom agents to GitHub Copilot within JetBrains IDEs, Eclipse, and Xcode, allowing developers to package reusable AI expertise and tooling directly into their workflow. The guide details how to define, configure, and use custom agents, as well as channels for sharing feedback."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-11-18-custom-agents-available-in-github-copilot-for-jetbrains-eclipse-and-xcode-now-in-public-preview
+title: Custom Agents in GitHub Copilot for JetBrains, Eclipse, and Xcode Now in Public Preview
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-11-18 17:30:51 +00:00
-permalink: "/2025-11-18-Custom-Agents-in-GitHub-Copilot-for-JetBrains-Eclipse-and-Xcode-Now-in-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "Coding Standards", "Copilot", "Copilot Chat", "Custom Agents", "Developer Tools", "Eclipse", "GitHub Copilot", "IDE Extensions", "JetBrains IDEs", "Markdown Configuration", "News", "Workflow Automation", "Xcode"]
-tags_normalized: ["ai", "ai agents", "coding standards", "copilot", "copilot chat", "custom agents", "developer tools", "eclipse", "github copilot", "ide extensions", "jetbrains ides", "markdown configuration", "news", "workflow automation", "xcode"]
+tags:
+- AI Agents
+- Coding Standards
+- Copilot
+- Copilot Chat
+- Custom Agents
+- Developer Tools
+- Eclipse
+- IDE Extensions
+- JetBrains IDEs
+- Markdown Configuration
+- Workflow Automation
+- Xcode
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison explains how developers can try out the new custom agents feature in GitHub Copilot for JetBrains, Eclipse, and Xcode, providing guidance for configuration and feedback.<!--excerpt_end-->
 
 # Custom Agents Now Available in GitHub Copilot for JetBrains, Eclipse, and Xcode
@@ -40,9 +50,9 @@ Your experience and feedback shape the evolution of Copilot custom agents:
 
 - **In-Product Feedback**: Use the built-in options in your IDE.
 - **GitHub Discussions**: Engage with product teams and share thoughts in dedicated feedback repositories for each IDE:
-    - [JetBrains Copilot Feedback](https://github.com/microsoft/copilot-intellij-feedback/issues)
-    - [Eclipse Copilot Feedback](https://github.com/microsoft/copilot-eclipse-feedback/issues)
-    - [Xcode Copilot Feedback](https://github.com/github/CopilotForXcode/issues)
+  - [JetBrains Copilot Feedback](https://github.com/microsoft/copilot-intellij-feedback/issues)
+  - [Eclipse Copilot Feedback](https://github.com/microsoft/copilot-eclipse-feedback/issues)
+  - [Xcode Copilot Feedback](https://github.com/github/CopilotForXcode/issues)
 
 Deploy, configure, and tailor AI agents to optimize your development workflow and enforce project-specific standards using GitHub Copilot's new custom agents feature.
 

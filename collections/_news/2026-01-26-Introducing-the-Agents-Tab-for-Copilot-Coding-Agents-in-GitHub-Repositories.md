@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing the Agents Tab for Copilot Coding Agents in GitHub Repositories"
-description: "This announcement details the new Agents tab in GitHub repositories, offering an integrated mission control-style interface for managing Copilot coding agent tasks. It covers redesigned session logs, streamlined workflows directly within the codebase, enhanced traceability, and Copilot CLI integration—all aimed at developer efficiency."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository
+title: Introducing the Agents Tab for Copilot Coding Agents in GitHub Repositories
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-01-26 21:40:50 +00:00
-permalink: "/2026-01-26-Introducing-the-Agents-Tab-for-Copilot-Coding-Agents-in-GitHub-Repositories.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agents Tab", "AI", "Automation", "CLI Integration", "Copilot", "Copilot CLI", "Copilot Coding Agent", "Developer Workflow", "DevOps", "DevOps Tools", "GitHub", "GitHub Copilot", "News", "Pull Requests", "Repository Management", "Session History", "Session Logs", "Task Management"]
-tags_normalized: ["agents tab", "ai", "automation", "cli integration", "copilot", "copilot cli", "copilot coding agent", "developer workflow", "devops", "devops tools", "github", "github copilot", "news", "pull requests", "repository management", "session history", "session logs", "task management"]
+tags:
+- Agents Tab
+- AI
+- Automation
+- CLI Integration
+- Copilot
+- Copilot CLI
+- Copilot Coding Agent
+- Developer Workflow
+- DevOps
+- DevOps Tools
+- GitHub
+- GitHub Copilot
+- News
+- Pull Requests
+- Repository Management
+- Session History
+- Session Logs
+- Task Management
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison introduces the new Agents tab in GitHub repositories, providing developers with mission control-style management of Copilot coding agent tasks, improved session logs, and seamless Copilot CLI integration.<!--excerpt_end-->
 
 # Introducing the Agents Tab for Copilot Coding Agents in GitHub Repositories

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Understanding Instruction and Prompt Files for GitHub Copilot in .NET Development"
-description: "This guide provides a deep dive into leveraging GitHub Copilot instruction and prompt files to enhance productivity and code quality for .NET developers. It explains the purpose, usage, structure, and best practices for these files, covering scenarios in Visual Studio, VS Code, and GitHub.com, with a focus on automating standards and boosting collaboration in C# and ASP.NET projects."
-author: "Wendy Breiding (SHE/HER)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/prompt-files-and-instructions-files-explained/
+title: Understanding Instruction and Prompt Files for GitHub Copilot in .NET Development
+author: Wendy Breiding (SHE/HER)
+feed_name: Microsoft .NET Blog
 date: 2025-09-17 17:05:00 +00:00
-permalink: "/2025-09-17-Understanding-Instruction-and-Prompt-Files-for-GitHub-Copilot-in-NET-Development.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Powered Development", "ASP.NET", "Best Practices", "C#", "Code Automation", "Code Review", "Coding", "Copilot", "Copilot Configuration", "Custom Instructions", "GitHub Copilot", "Instruction Files", "News", "Productivity", "Productivity Tips", "Prompt Files", "Repository Standards", "Team Collaboration", "VS", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai powered development", "aspdotnet", "best practices", "csharp", "code automation", "code review", "coding", "copilot", "copilot configuration", "custom instructions", "github copilot", "instruction files", "news", "productivity", "productivity tips", "prompt files", "repository standards", "team collaboration", "vs", "vs code"]
+tags:
+- .NET
+- AI Powered Development
+- ASP.NET
+- Best Practices
+- C#
+- Code Automation
+- Code Review
+- Copilot
+- Copilot Configuration
+- Custom Instructions
+- Instruction Files
+- Productivity
+- Productivity Tips
+- Prompt Files
+- Repository Standards
+- Team Collaboration
+- VS
+- VS Code
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Wendy Breiding details how .NET developers can use instruction and prompt files with GitHub Copilot to automate coding standards, refine code generation, and foster effective team collaboration across Visual Studio, VS Code, and GitHub.com.<!--excerpt_end-->
 
 # Understanding Instruction and Prompt Files for GitHub Copilot in .NET Development

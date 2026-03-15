@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Functions Durable Task Scheduler Dedicated SKU Now GA, Consumption SKU in Public Preview"
-description: "This announcement details the general availability of the Azure Functions Durable Task Scheduler Dedicated SKU, offering predictable infrastructure for complex orchestrations, alongside the new Consumption SKU, which provides flexible, pay-per-use workflow management. The post covers key features, operational guidance, roadmap highlights, and deployment scenarios on Azure."
-author: "greenie-msft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-functions-durable-task-scheduler-dedicated-sku/ba-p/4465328"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-azure-functions-durable-task-scheduler-dedicated-sku/ba-p/4465328
+title: Azure Functions Durable Task Scheduler Dedicated SKU Now GA, Consumption SKU in Public Preview
+author: greenie-msft
+feed_name: Microsoft Tech Community
 date: 2025-11-20 16:00:00 +00:00
-permalink: "/2025-11-20-Azure-Functions-Durable-Task-Scheduler-Dedicated-SKU-Now-GA-Consumption-SKU-in-Public-Preview.html"
-categories: ["Azure", "DevOps"]
-tags: ["Autoscaling", "Azure", "Azure Functions", "Azure Resource Management", "Capacity Units", "Cloud Native", "Community", "Consumption SKU", "Dedicated SKU", "DevOps", "Durable Functions", "Durable Task Scheduler", "Fault Tolerance", "Feature Roadmap", "Orchestration", "Stateful Applications", "Workflow Automation"]
-tags_normalized: ["autoscaling", "azure", "azure functions", "azure resource management", "capacity units", "cloud native", "community", "consumption sku", "dedicated sku", "devops", "durable functions", "durable task scheduler", "fault tolerance", "feature roadmap", "orchestration", "stateful applications", "workflow automation"]
+tags:
+- Autoscaling
+- Azure Functions
+- Azure Resource Management
+- Capacity Units
+- Cloud Native
+- Consumption SKU
+- Dedicated SKU
+- Durable Functions
+- Durable Task Scheduler
+- Fault Tolerance
+- Feature Roadmap
+- Orchestration
+- Stateful Applications
+- Workflow Automation
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Authored by greenie-msft, this post introduces the general availability of Azure Functions Durable Task Scheduler Dedicated SKU and the public preview of the Consumption SKU, offering advanced orchestration for scalable, resilient workloads on Azure.<!--excerpt_end-->
 
 # Azure Functions Durable Task Scheduler Dedicated SKU Now GA, Consumption SKU in Public Preview

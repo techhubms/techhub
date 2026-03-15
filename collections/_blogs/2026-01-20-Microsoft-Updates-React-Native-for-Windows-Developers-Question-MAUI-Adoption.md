@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Updates React Native for Windows: Developers Question MAUI Adoption"
-description: "This article examines Microsoft's release of React Native Windows 0.81, highlighting new features, the use of the Hermes debugger, and the challenges around C# support. It contrasts React Native's adoption within Microsoft (notably in Office and Teams) with the relative lack of internal use of MAUI, raising questions about cross-platform framework strategy."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/4079595"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2026/01/20/microsoft-updates-react-native-for-windows-developers-ask-why-not-use-maui/4079595
+title: 'Microsoft Updates React Native for Windows: Developers Question MAUI Adoption'
+author: DevClass.com
+primary_section: dotnet
+feed_name: DevClass
 date: 2026-01-20 16:38:47 +00:00
-permalink: "/2026-01-20-Microsoft-Updates-React-Native-for-Windows-Developers-Question-MAUI-Adoption.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "C++", "Coding", "Component Architecture", "Cross Platform Development", "Desktop Development", "Hermes", "JavaScript", "MAUI", "Microsoft Office", "Microsoft Teams", "Mobile Development", "Multi Platform App UI", "Native Modules", "Power Apps", "React Native", "React Native For Windows", "TypeScript", "UI Frameworks"]
-tags_normalized: ["dotnet", "blogs", "csharp", "cplusplus", "coding", "component architecture", "cross platform development", "desktop development", "hermes", "javascript", "maui", "microsoft office", "microsoft teams", "mobile development", "multi platform app ui", "native modules", "power apps", "react native", "react native for windows", "typescript", "ui frameworks"]
+tags:
+- .NET
+- Blogs
+- C#
+- C++
+- Component Architecture
+- Cross Platform Development
+- Desktop Development
+- Hermes
+- JavaScript
+- MAUI
+- Microsoft Office
+- Microsoft Teams
+- Mobile Development
+- Multi Platform App UI
+- Native Modules
+- Power Apps
+- React Native
+- React Native For Windows
+- TypeScript
+- UI Frameworks
+section_names:
+- dotnet
 ---
-
 DevClass.com explores Microsoft's update to React Native Windows 0.81, comparing it to MAUI and discussing internal adoption differences for cross-platform app development.<!--excerpt_end-->
 
 # Microsoft Updates React Native for Windows: Developers Question MAUI Adoption

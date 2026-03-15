@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Addressing GitHub's Recent Availability and Reliability Incidents"
-description: "This news post reviews several major outages experienced by GitHub in February and March, analyzing root causes tied to scaling limitations, architectural coupling, and load growth. It details specific incidents affecting user authentication and GitHub Actions, outlines both immediate mitigation steps and strategic infrastructure changes—including migration to Azure—and explains how increased transparency and reliability are being prioritized for developers."
-author: "Vlad Fedorov"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/company-news/addressing-githubs-recent-availability-issues-2/
+title: Addressing GitHub's Recent Availability and Reliability Incidents
+author: Vlad Fedorov
+primary_section: azure
+feed_name: The GitHub Blog
 date: 2026-03-11 21:41:51 +00:00
-permalink: "/2026-03-11-Addressing-GitHubs-Recent-Availability-and-Reliability-Incidents.html"
-categories: ["Azure", "DevOps"]
-tags: ["Availability", "Azure", "Azure Migration", "Cloud Migration", "Company News", "Database Scaling", "DevOps", "Failover", "GitHub", "GitHub Actions", "Incident Analysis", "Incident Response", "Infrastructure Resilience", "Load Shedding", "News", "News & Insights", "Platform Engineering", "Platform Outages", "Service Isolation", "Site Reliability Engineering"]
-tags_normalized: ["availability", "azure", "azure migration", "cloud migration", "company news", "database scaling", "devops", "failover", "github", "github actions", "incident analysis", "incident response", "infrastructure resilience", "load shedding", "news", "news and insights", "platform engineering", "platform outages", "service isolation", "site reliability engineering"]
+tags:
+- Availability
+- Azure
+- Azure Migration
+- Cloud Migration
+- Company News
+- Database Scaling
+- DevOps
+- Failover
+- GitHub
+- GitHub Actions
+- Incident Analysis
+- Incident Response
+- Infrastructure Resilience
+- Load Shedding
+- News
+- News & Insights
+- Platform Engineering
+- Platform Outages
+- Service Isolation
+- Site Reliability Engineering
+section_names:
+- azure
+- devops
 ---
-
 Vlad Fedorov discusses the recent series of GitHub outages, pinpointing their technical causes and highlighting steps—such as a major migration to Azure—that GitHub's engineering team is taking to improve reliability and incident response for developers.<!--excerpt_end-->
 
 # Addressing GitHub’s Recent Availability Incidents

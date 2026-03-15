@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Adaptive Time Series Visualization at Scale with Microsoft Fabric"
-description: "This article illustrates a scalable design pattern for time series data visualization in Microsoft Fabric. It details how to combine KQL databases and Power BI to analyze billions of sensor data points in real time. Core concepts include intelligent time binning, interactive slicing, anomaly detection, and solution accelerators for rapid deployment."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/adaptive-time-series-visualization-at-scale-with-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/adaptive-time-series-visualization-at-scale-with-microsoft-fabric/
+title: Adaptive Time Series Visualization at Scale with Microsoft Fabric
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-10 10:00:00 +00:00
-permalink: "/2026-02-10-Adaptive-Time-Series-Visualization-at-Scale-with-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Aggregation", "Anomaly Detection", "Azure", "Data Engineering", "Data Visualization", "DirectQuery", "Dynamic M Query Parameters", "Industrial Data", "IoT Analytics", "KQL Database", "Microsoft Fabric", "ML", "News", "Operational Analytics", "Power BI", "Real Time Analytics", "Semantic Model", "Solution Accelerator", "Time Series Analysis"]
-tags_normalized: ["aggregation", "anomaly detection", "azure", "data engineering", "data visualization", "directquery", "dynamic m query parameters", "industrial data", "iot analytics", "kql database", "microsoft fabric", "ml", "news", "operational analytics", "power bi", "real time analytics", "semantic model", "solution accelerator", "time series analysis"]
+tags:
+- Aggregation
+- Anomaly Detection
+- Azure
+- Data Engineering
+- Data Visualization
+- DirectQuery
+- Dynamic M Query Parameters
+- Industrial Data
+- IoT Analytics
+- KQL Database
+- Microsoft Fabric
+- ML
+- News
+- Operational Analytics
+- Power BI
+- Real Time Analytics
+- Semantic Model
+- Solution Accelerator
+- Time Series Analysis
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog, with coauthor Slava Trofimov, presents a comprehensive approach to scalable time series visualization by leveraging Microsoft Fabric, KQL databases, and Power BI for interactive, real-time analytics on massive datasets.<!--excerpt_end-->
 
 # Adaptive Time Series Visualization at Scale with Microsoft Fabric

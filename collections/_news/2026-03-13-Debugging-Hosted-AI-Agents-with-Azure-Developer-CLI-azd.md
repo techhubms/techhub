@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Debugging Hosted AI Agents with Azure Developer CLI (azd)"
-description: "This article introduces new Azure Developer CLI (azd) commands for diagnosing failures in hosted AI agents, allowing developers to display container status and stream live logs directly from the terminal. It covers the capabilities of the azure.ai.agents extension and practical usage for troubleshooting AI agent deployments."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-logs-status/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-logs-status/
+title: Debugging Hosted AI Agents with Azure Developer CLI (azd)
+author: PuiChee (PC) Chan
+primary_section: ai
+feed_name: Microsoft Azure SDK Blog
 date: 2026-03-13 19:19:52 +00:00
-permalink: "/2026-03-13-Debugging-Hosted-AI-Agents-with-Azure-Developer-CLI-azd.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Health", "AI", "AI Agents", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "Azure.ai.agents", "CLI Debugging", "Container Monitoring", "Developer Tools", "DevOps", "DevOps Tools", "Error Diagnosis", "Extension Upgrade", "Log Streaming", "News", "Terminal Commands"]
-tags_normalized: ["agent health", "ai", "ai agents", "azd", "azure", "azure developer cli", "azure sdk", "azuredotaidotagents", "cli debugging", "container monitoring", "developer tools", "devops", "devops tools", "error diagnosis", "extension upgrade", "log streaming", "news", "terminal commands"]
+tags:
+- Agent Health
+- AI
+- AI Agents
+- Azd
+- Azure
+- Azure Developer CLI
+- Azure SDK
+- Azure.ai.agents
+- CLI Debugging
+- Container Monitoring
+- Developer Tools
+- DevOps
+- DevOps Tools
+- Error Diagnosis
+- Extension Upgrade
+- Log Streaming
+- News
+- Terminal Commands
+section_names:
+- ai
+- azure
+- devops
 ---
-
 PuiChee (PC) Chan explains how to use new Azure Developer CLI (azd) commands to diagnose and debug hosted AI agent failures, providing developers with direct access to container status and live logs from the terminal.<!--excerpt_end-->
 
 # Debugging Hosted AI Agents with Azure Developer CLI (azd)

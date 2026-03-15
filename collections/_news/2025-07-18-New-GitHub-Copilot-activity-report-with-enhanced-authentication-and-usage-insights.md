@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "New GitHub Copilot activity report with enhanced authentication and usage insights"
-description: "GitHub Copilot now offers an enhanced activity report for enterprise admins, improving visibility into user authentication and feature adoption over previous reports."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-18-new-github-copilot-activity-report-with-enhanced-authentication-and-usage-insights"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-07-18-new-github-copilot-activity-report-with-enhanced-authentication-and-usage-insights
+title: New GitHub Copilot activity report with enhanced authentication and usage insights
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-07-18 19:50:29 +00:00
-permalink: "/2025-07-18-New-GitHub-Copilot-activity-report-with-enhanced-authentication-and-usage-insights.html"
-viewing_mode: "external"
-tags: ["Activity Report", "Administrators", "AI", "Enterprise", "Feature Adoption", "GitHub Copilot", "News", "Organization", "Reporting", "Usage Analytics", "User Authentication", "Visibility"]
-tags_normalized: ["activity report", "administrators", "ai", "enterprise", "feature adoption", "github copilot", "news", "organization", "reporting", "usage analytics", "user authentication", "visibility"]
+tags:
+- Activity Report
+- Administrators
+- Enterprise
+- Feature Adoption
+- Organization
+- Reporting
+- Usage Analytics
+- User Authentication
+- Visibility
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison introduces a new feature for enterprise and organization administrators: an improved GitHub Copilot activity report. This update provides enhanced insight into user authentication and feature adoption, surpassing the capabilities of legacy usage reports. The article explores the benefits of the new report in monitoring and managing Copilot deployment across organizations.<!--excerpt_end-->
 
 ## Enhanced GitHub Copilot Activity Report for Enterprises

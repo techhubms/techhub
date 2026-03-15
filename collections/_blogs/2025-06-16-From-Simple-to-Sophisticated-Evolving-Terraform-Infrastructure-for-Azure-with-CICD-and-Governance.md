@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "From Simple to Sophisticated: Evolving Terraform Infrastructure for Azure with CI/CD and Governance"
-description: "Hidde de Smet details a practical evolution of Terraform infrastructure on Azure, guiding teams from basic scripts to modular, automated, and governed solutions. The blog covers modularization, naming standards, environment strategies, CI/CD pipelines, testing, policy as code, cost management, and monitoring, offering actionable lessons and a phased roadmap."
-author: "Hidde de Smet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://hiddedesmet.com/terraform-evolution"
-viewing_mode: "external"
-feed_name: "Hidde de Smet's Blog"
-feed_url: "https://hiddedesmet.com/feed.xml"
+﻿---
+external_url: https://hiddedesmet.com/terraform-evolution
+title: 'From Simple to Sophisticated: Evolving Terraform Infrastructure for Azure with CI/CD and Governance'
+author: Hidde de Smet
+feed_name: Hidde de Smet's Blog
 date: 2025-06-16 05:00:00 +00:00
-permalink: "/2025-06-16-From-Simple-to-Sophisticated-Evolving-Terraform-Infrastructure-for-Azure-with-CICD-and-Governance.html"
-categories: ["Azure", "DevOps"]
-tags: ["Automation", "Azure", "Blogs", "CI/CD", "Cost Management", "DevOps", "Drift Detection", "Environment Separation", "GitHub", "GitHub Actions", "Governance", "IaC", "Modules", "Naming Conventions", "Policy as Code", "Terraform", "Terratest", "Testing"]
-tags_normalized: ["automation", "azure", "blogs", "cislashcd", "cost management", "devops", "drift detection", "environment separation", "github", "github actions", "governance", "iac", "modules", "naming conventions", "policy as code", "terraform", "terratest", "testing"]
+tags:
+- Automation
+- CI/CD
+- Cost Management
+- Drift Detection
+- Environment Separation
+- GitHub
+- GitHub Actions
+- Governance
+- IaC
+- Modules
+- Naming Conventions
+- Policy as Code
+- Terraform
+- Terratest
+- Testing
+- Azure
+- DevOps
+- Blogs
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 In this comprehensive guide, Hidde de Smet documents the step-by-step evolution of Terraform infrastructure for Azure. The post provides real-world insights and actionable patterns for teams modernizing their infrastructure-as-code, from basic setup to advanced automation and governance.<!--excerpt_end-->
 
 # From Simple to Sophisticated: Terraform Infrastructure Evolution
@@ -52,17 +65,17 @@ This post documents a practical journey in evolving Terraform-based Azure infras
 **Version 0.1.0 - The Basic Foundation**
 
 - Monolithic `main.tf` containing all Azure resources:
-    - Resource Group
-    - Virtual Network and Subnet
-    - Network Security Group
-    - Storage Account and Container
-    - App Service Plan and Linux Web App
-    - Key Vault
+  - Resource Group
+  - Virtual Network and Subnet
+  - Network Security Group
+  - Storage Account and Container
+  - App Service Plan and Linux Web App
+  - Key Vault
 - Pain Points:
-    - One massive file, no modularity or reusability
-    - Manual, error-prone deployment
-    - No standardized naming or documentation
-    - Scaling and collaboration are difficult
+  - One massive file, no modularity or reusability
+  - Manual, error-prone deployment
+  - No standardized naming or documentation
+  - Scaling and collaboration are difficult
 
 ---
 
@@ -71,10 +84,10 @@ This post documents a practical journey in evolving Terraform-based Azure infras
 **Version 0.2.0 – Modular Architecture**
 
 - Split resources into logical, reusable modules:
-    - `modules/network` (VNet, Subnet, NSG)
-    - `modules/storage` (Storage Account, Containers)
-    - `modules/webapp` (App Service Plan & Web App)
-    - `modules/keyvault` (Key Vault)
+  - `modules/network` (VNet, Subnet, NSG)
+  - `modules/storage` (Storage Account, Containers)
+  - `modules/webapp` (App Service Plan & Web App)
+  - `modules/keyvault` (Key Vault)
 
 **Key Improvements:**
 
@@ -118,9 +131,9 @@ locals {
 
 - **Terraform Workspaces:** Shared state, easy setup, but increased risk and limited environment isolation
 - **Separate Directories (Recommended):**
-    - Full state isolation
-    - Siloed configs for CI/CD and security
-    - Slight code duplication, but safer for enterprise
+  - Full state isolation
+  - Siloed configs for CI/CD and security
+  - Slight code duplication, but safer for enterprise
 
 **Lesson:** Start with workspaces for simplicity, migrate to separate directories/backends as needs grow.
 
@@ -132,9 +145,9 @@ locals {
 
 - Implemented CI/CD with environment-specific protection rules
 - Branch-based strategy:
-    - `develop` branch → deploys to development
-    - `main` branch → deploys to production
-    - Feature branches → PR validations only
+  - `develop` branch → deploys to development
+  - `main` branch → deploys to production
+  - Feature branches → PR validations only
 - Integrated GitHub environment protection & Azure Service Principal auth
 - Automated plan & apply, manual dispatch for emergencies
 
@@ -218,8 +231,8 @@ func TestNamingConventions(t *testing.T) {
 
 - **Cost Management Foundation:** Infracost integration for cost estimation, reporting, and optimization tracking
 - **Monitoring Tools:**
-    - Drift detection comparing state vs. actual
-    - Automated notifications & markdown reporting
+  - Drift detection comparing state vs. actual
+  - Automated notifications & markdown reporting
 
 ### Alternative Approaches
 

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Do Epic Shit Chat Mode: Beast Mode for GitHub Copilot"
-description: "This post by Harald Binkle delves into 'Do Epic Shit' chat mode, an enhanced operational configuration for GitHub Copilot Chat that pushes the tool into 'Beast Mode.' The article explains the motivation, conceptual framework, implementation details, and practical differences compared to standard Copilot modes, focusing on rigorous automation, strict TODO enforcement, autonomy, and research depth for developers in VS Code."
-author: "Harald Binkle"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://harrybin.de/posts/do-epic-shit-chat-mode/"
-viewing_mode: "external"
-feed_name: "Harald Binkle's blog"
-feed_url: "https://harrybin.de/rss.xml"
+﻿---
+external_url: https://harrybin.de/posts/do-epic-shit-chat-mode/
+title: 'Do Epic Shit Chat Mode: Beast Mode for GitHub Copilot'
+author: Harald Binkle
+feed_name: Harald Binkle's blog
 date: 2025-08-15 10:30:00 +00:00
-permalink: "/2025-08-15-Do-Epic-Shit-Chat-Mode-Beast-Mode-for-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development Tools", "Automation", "Autonomous Agents", "Beast Mode", "Blogs", "Chat Configuration", "Coding", "Copilot Chat Mode", "Developer Productivity", "Engineering Agents", "GitHub Copilot", "GPT 4.1", "Markdown Checklist", "Refactoring", "Software Testing", "Todo Loop", "VS Code"]
-tags_normalized: ["ai", "ai development tools", "automation", "autonomous agents", "beast mode", "blogs", "chat configuration", "coding", "copilot chat mode", "developer productivity", "engineering agents", "github copilot", "gpt 4dot1", "markdown checklist", "refactoring", "software testing", "todo loop", "vs code"]
+tags:
+- AI Development Tools
+- Automation
+- Autonomous Agents
+- Beast Mode
+- Chat Configuration
+- Copilot Chat Mode
+- Developer Productivity
+- Engineering Agents
+- GPT 4.1
+- Markdown Checklist
+- Refactoring
+- Software Testing
+- Todo Loop
+- VS Code
+- AI
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Harald Binkle introduces the 'Do Epic Shit' chat mode for GitHub Copilot, outlining its strict autonomy and research loops to maximize developer productivity in VS Code.<!--excerpt_end-->
 
 # Do Epic Shit Chat Mode (Beast Mode for GitHub Copilot)
@@ -60,7 +74,6 @@ Inspired by the broader Beast Mode pattern, 'Do Epic Shit Mode' is a hardened re
 
 ```markdown
 ---
-description: "Beast Mode v0.1"
 tools: ["codebase", "search", "runTests", "runTasks", "terminal", "editFiles"]
 model: GPT-4.1
 ---

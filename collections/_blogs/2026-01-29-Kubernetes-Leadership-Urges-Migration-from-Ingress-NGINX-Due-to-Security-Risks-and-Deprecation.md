@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Kubernetes Leadership Urges Migration from Ingress NGINX Due to Security Risks and Deprecation"
-description: "This article reports on the Kubernetes Steering and Security Response Committees' decision to accelerate the deprecation of Ingress NGINX, citing a lack of maintainers, unresolved security issues, and migration complexities. It summarizes official guidance, community reactions, and alternative options for affected users."
-author: "Tim Anderson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devclass.com/2026/01/29/kubernetes-leadership-warns-of-ingress-nginx-risks-but-has-also-hastened-its-deprecation/"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://devclass.com/2026/01/29/kubernetes-leadership-warns-of-ingress-nginx-risks-but-has-also-hastened-its-deprecation/
+title: Kubernetes Leadership Urges Migration from Ingress NGINX Due to Security Risks and Deprecation
+author: Tim Anderson
+primary_section: devops
+feed_name: DevClass
 date: 2026-01-29 17:01:00 +00:00
-permalink: "/2026-01-29-Kubernetes-Leadership-Urges-Migration-from-Ingress-NGINX-Due-to-Security-Risks-and-Deprecation.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Cilium", "Cloud Native", "Deprecation", "Development", "DevOps", "Envoy Gateway", "F5 NGINX Ingress", "Gateway API", "Ingres NGINX", "Ingress NGINX", "Kubecon", "Kubernetes", "Migration", "Open Source", "Remote Code Execution", "Security", "Security Risks", "Traefik", "Vulnerability Management"]
-tags_normalized: ["blogs", "cilium", "cloud native", "deprecation", "development", "devops", "envoy gateway", "f5 nginx ingress", "gateway api", "ingres nginx", "ingress nginx", "kubecon", "kubernetes", "migration", "open source", "remote code execution", "security", "security risks", "traefik", "vulnerability management"]
+tags:
+- Blogs
+- Cilium
+- Cloud Native
+- Deprecation
+- Development
+- DevOps
+- Envoy Gateway
+- F5 NGINX Ingress
+- Gateway API
+- Ingres NGINX
+- Ingress NGINX
+- Kubecon
+- Kubernetes
+- Migration
+- Open Source
+- Remote Code Execution
+- Security
+- Security Risks
+- Traefik
+- Vulnerability Management
+section_names:
+- devops
+- security
 ---
-
 Tim Anderson outlines the Kubernetes committees' warnings and technical reasons for the urgent migration from Ingress NGINX, detailing project deprecation, security issues, and community response.<!--excerpt_end-->
 
 # Kubernetes Leadership Urges Migration from Ingress NGINX Due to Security Risks and Deprecation

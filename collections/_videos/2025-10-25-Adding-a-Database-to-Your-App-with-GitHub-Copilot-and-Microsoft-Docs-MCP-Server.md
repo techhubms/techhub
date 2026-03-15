@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Adding a Database to Your App with GitHub Copilot and Microsoft Docs MCP Server"
-description: "This video demonstrates how to integrate a database into your application using GitHub Copilot alongside Microsoft Learn MCP server. Viewers will learn practical steps and best practices for database addition through VS Code, with resources and explanations suitable for beginners and experienced developers alike."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/mnzErLB8KeE"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/shorts/mnzErLB8KeE
+title: Adding a Database to Your App with GitHub Copilot and Microsoft Docs MCP Server
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-10-25 12:01:39 +00:00
-permalink: "/2025-10-25-Adding-a-Database-to-Your-App-with-GitHub-Copilot-and-Microsoft-Docs-MCP-Server.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Coding", "Copilot", "Database Integration", "Development Workflow", "GitHub", "GitHub Copilot", "Mcp", "MCP Server", "Microsoft Docs", "Microsoft Learn", "Micrsoft", "Shorts", "Tutorial", "Videos", "VS Code"]
-tags_normalized: ["ai", "best practices", "coding", "copilot", "database integration", "development workflow", "github", "github copilot", "mcp", "mcp server", "microsoft docs", "microsoft learn", "micrsoft", "shorts", "tutorial", "videos", "vs code"]
+tags:
+- Best Practices
+- Copilot
+- Database Integration
+- Development Workflow
+- GitHub
+- MCP
+- MCP Server
+- Microsoft Docs
+- Microsoft Learn
+- Micrsoft
+- Shorts
+- Tutorial
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Visual Studio Code introduces a walkthrough of adding a database to your app using GitHub Copilot and Microsoft Learn MCP server, featuring insights from Chris Noring.<!--excerpt_end-->
 
 {% youtube mnzErLB8KeE %}

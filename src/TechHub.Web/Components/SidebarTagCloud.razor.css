@@ -1,0 +1,232 @@
+/* ============================================================================
+   SidebarTagCloud Component - Interactive Tag Cloud for Filtering
+   
+   Component-scoped styles for the tag cloud sidebar widget.
+   Uses the same design language as other sidebar interactive elements.
+   Tag cloud uses size variations to show tag popularity (quantile-based).
+   ============================================================================ */
+
+/* Tag Cloud Container - Tighter spacing for cloud effect */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* Individual Tag Button - Base styling */
+.tag-cloud-item {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all var(--duration-fast) var(--easing-ease);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+@media (hover: hover) {
+    .tag-cloud-item:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-on-emphasis);
+    }
+}
+
+.tag-cloud-item:focus-visible {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+}
+
+.tag-cloud-item:active {}
+
+/* Selected state - tag is currently active filter */
+.tag-cloud-item.selected {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+}
+
+@media (hover: hover) {
+    .tag-cloud-item.selected:hover {
+        background: var(--color-purple-medium);
+        border-color: var(--color-purple-bright);
+    }
+}
+
+/* Disabled state - tag would result in 0 items (dynamic counts feature) */
+.tag-cloud-item.disabled {
+    background: var(--color-bg-default);
+    border-color: var(--color-border-default);
+    color: var(--color-text-tertiary);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+@media (hover: hover) {
+    .tag-cloud-item.disabled:hover {
+        background: var(--color-bg-default);
+        border-color: var(--color-border-default);
+        color: var(--color-text-tertiary);
+        transform: none;
+    }
+}
+
+/* Size variations - Bigger differences for clear visual hierarchy */
+.tag-size-small {
+    font-size: 0.75rem;
+    /* 12px - noticeably smaller */
+    padding: 0.1875rem 0.5rem;
+}
+
+.tag-size-medium {
+    font-size: 0.9375rem;
+    /* 15px - default readable size */
+    padding: 0.25rem 0.75rem;
+}
+
+.tag-size-large {
+    font-size: 1.125rem;
+    /* 18px - clearly prominent */
+    font-weight: var(--font-weight-semibold);
+    padding: 0.3125rem 0.875rem;
+}
+
+/* Tag count width classes - Based on original (unfiltered) digit count
+   This prevents layout shift when count changes from "123" to "5" during filtering
+   Width is determined by the initial count, not the current filtered count */
+.tag-count-1d,
+.tag-count-2d,
+.tag-count-3d,
+.tag-count-4d {
+    display: inline-block;
+    text-align: right;
+}
+
+.tag-count-1d { min-width: 1ch; }  /* Single digit: 1-9 */
+.tag-count-2d { min-width: 2ch; }  /* Two digits: 10-99 */
+.tag-count-3d { min-width: 3ch; }  /* Three digits: 100-999 */
+.tag-count-4d { min-width: 4ch; }  /* Four digits: 1000+ */
+
+/* Text/status messages within the sidebar section */
+.sidebar-text {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-style: italic;
+}
+
+.sidebar-text.error {
+    color: var(--color-red);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .tag-cloud {
+        gap: 0.25rem;
+    }
+
+    .tag-size-small {
+        font-size: 0.6875rem;
+    }
+
+    .tag-size-medium {
+        font-size: 0.8125rem;
+    }
+
+    .tag-size-large {
+        font-size: 0.9375rem;
+    }
+}
+
+/* ============================================================================
+   Tag Button Styles (from sidebar.css)
+   Interactive tags for filtering/navigation within sidebar contexts
+   ============================================================================ */
+
+/* Tag Button - Interactive tags for filtering/navigation */
+.sidebar-tag-button {
+    display: inline-block;
+    padding: var(--spacing-1) var(--spacing-2);
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: all var(--duration-fast) var(--easing-ease);
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .sidebar-tag-button:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-on-emphasis);
+        transform: translateY(-2px);
+    }
+}
+
+.sidebar-tag-button.active {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+}
+
+@media (hover: hover) {
+    .sidebar-tag-button.active:hover {
+        background: var(--color-purple-medium);
+        border-color: var(--color-purple-bright);
+    }
+}
+
+/* Tags cloud container - spacing between tags */
+.sidebar-tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-1);
+}
+
+/* Skeleton loader for tag cloud - subtle loading state */
+.tag-cloud-skeleton {
+    display: inline-block;
+    height: 1.75rem;
+    width: 6rem;
+    background: linear-gradient(90deg,
+            var(--color-bg-default) 0%,
+            var(--color-border-default) 50%,
+            var(--color-bg-default) 100%);
+    background-size: 200% 100%;
+    border-radius: var(--radius-sm);
+    animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+.tag-cloud-skeleton:nth-child(2n) {
+    width: 8rem;
+}
+
+.tag-cloud-skeleton:nth-child(3n) {
+    width: 10rem;
+}
+
+.tag-cloud-skeleton:nth-child(4n) {
+    width: 5rem;
+}
+
+.tag-cloud-skeleton:nth-child(5n) {
+    width: 7rem;
+}
+
+@keyframes skeleton-pulse {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}

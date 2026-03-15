@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Public Preview: Automatic Zone Balance for Azure Virtual Machine Scale Sets"
-description: "This announcement details the public preview of automatic zone balance for Azure Virtual Machine Scale Sets. The new feature introduces automatic VM redistribution across availability zones to enhance resiliency and minimize manual intervention. It explains the value for workload reliability, operational safety measures, and the steps needed by users to enable the feature in their Azure environments."
-author: "HilaryWang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-compute-blog/public-preview-automatic-zone-balance-for-virtual-machine-scale/ba-p/4494476
+title: 'Public Preview: Automatic Zone Balance for Azure Virtual Machine Scale Sets'
+author: HilaryWang
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-17 17:30:00 +00:00
-permalink: "/2026-02-17-Public-Preview-Automatic-Zone-Balance-for-Azure-Virtual-Machine-Scale-Sets.html"
-categories: ["Azure"]
-tags: ["Application Health Extension", "Automatic Zone Balance", "Availability Zones", "Azure", "Azure Compute", "Azure Virtual Machine Scale Sets", "Cloud Infrastructure", "Community", "Fault Tolerance", "Instance Health Monitoring", "Load Balancer Health Probes", "Load Balancing", "Operational Best Practices", "Resiliency", "Scale Set Monitoring", "VM Deployment"]
-tags_normalized: ["application health extension", "automatic zone balance", "availability zones", "azure", "azure compute", "azure virtual machine scale sets", "cloud infrastructure", "community", "fault tolerance", "instance health monitoring", "load balancer health probes", "load balancing", "operational best practices", "resiliency", "scale set monitoring", "vm deployment"]
+tags:
+- Application Health Extension
+- Automatic Zone Balance
+- Availability Zones
+- Azure
+- Azure Compute
+- Azure Virtual Machine Scale Sets
+- Cloud Infrastructure
+- Community
+- Fault Tolerance
+- Instance Health Monitoring
+- Load Balancer Health Probes
+- Load Balancing
+- Operational Best Practices
+- Resiliency
+- Scale Set Monitoring
+- VM Deployment
+section_names:
+- azure
 ---
-
 HilaryWang introduces the public preview of automatic zone balance for Azure Virtual Machine Scale Sets, outlining how this feature enhances workload resiliency by automatically distributing VMs across availability zones.<!--excerpt_end-->
 
 # Public Preview: Automatic Zone Balance for Azure Virtual Machine Scale Sets

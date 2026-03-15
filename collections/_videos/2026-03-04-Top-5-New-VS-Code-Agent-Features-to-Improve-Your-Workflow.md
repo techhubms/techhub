@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Top 5 New VS Code Agent Features to Improve Your Workflow"
-description: "This video highlights five major features in the latest Visual Studio Code release that enhance agents' adaptability and productivity within the editor. Covering agent skills on demand, message steering, integrated browser, conversation forking, and hooks, it provides practical use cases for developers interested in leveraging AI-driven improvements."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=MvwcWWp1NFs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=MvwcWWp1NFs
+title: Top 5 New VS Code Agent Features to Improve Your Workflow
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-03-04 20:15:01 +00:00
-permalink: "/2026-03-04-Top-5-New-VS-Code-Agent-Features-to-Improve-Your-Workflow.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Skills", "AI", "AI Features", "Code Assistants", "Coding", "Conversation Forking", "Developer Productivity", "Hooks", "IDE Enhancements", "Integrated Browser", "Message Steering", "Videos", "VS Code", "VS Code Agents", "VS Code Extensions"]
-tags_normalized: ["agent skills", "ai", "ai features", "code assistants", "coding", "conversation forking", "developer productivity", "hooks", "ide enhancements", "integrated browser", "message steering", "videos", "vs code", "vs code agents", "vs code extensions"]
+tags:
+- Agent Skills
+- AI
+- AI Features
+- Code Assistants
+- Conversation Forking
+- Developer Productivity
+- Hooks
+- IDE Enhancements
+- Integrated Browser
+- Message Steering
+- Videos
+- VS Code
+- VS Code Agents
+- VS Code Extensions
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Visual Studio Code’s team, featuring Olivia Guzzardo McVicker, presents five top features in the latest VS Code release that make code agents more adaptable, with practical demonstrations for developers.<!--excerpt_end-->
 
 {% youtube MvwcWWp1NFs %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Maps in Microsoft Fabric – Geospatial Insights for Real-Time Operations"
-description: "This article introduces the new Maps feature in Microsoft Fabric Real-Time Intelligence, highlighting its capabilities for adding geospatial insights to real-time and historical data. Readers learn how Maps streamlines location-aware analytics, enabling users to visualize, monitor, and share spatial data in business operations with intuitive no-code experiences. The piece includes practical examples, integration steps with Lakehouse and Eventhouse data, and guidance on creating map-based solutions to optimize business insights."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/introducing-maps-in-fabric-geospatial-insights-for-everyone/
+title: Maps in Microsoft Fabric – Geospatial Insights for Real-Time Operations
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-22 13:30:00 +00:00
-permalink: "/2025-09-22-Maps-in-Microsoft-Fabric-Geospatial-Insights-for-Real-Time-Operations.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Business Intelligence", "Data Integration", "Data Visualization", "Eventhouse", "Fleet Tracking", "Footfall Analytics", "Geospatial Analytics", "Lakehouse", "Maps", "Microsoft Fabric", "ML", "News", "No Code Development", "Real Time Intelligence", "Spatial Data", "Streaming Data", "Telemetry"]
-tags_normalized: ["azure", "business intelligence", "data integration", "data visualization", "eventhouse", "fleet tracking", "footfall analytics", "geospatial analytics", "lakehouse", "maps", "microsoft fabric", "ml", "news", "no code development", "real time intelligence", "spatial data", "streaming data", "telemetry"]
+tags:
+- Business Intelligence
+- Data Integration
+- Data Visualization
+- Eventhouse
+- Fleet Tracking
+- Footfall Analytics
+- Geospatial Analytics
+- Lakehouse
+- Maps
+- Microsoft Fabric
+- No Code Development
+- Real Time Intelligence
+- Spatial Data
+- Streaming Data
+- Telemetry
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog showcases how the new Maps feature brings geospatial analytics to Real-Time Intelligence workloads, allowing organizations to visualize, monitor, and share spatial data seamlessly.<!--excerpt_end-->
 
 # Maps in Microsoft Fabric – Geospatial Insights for Real-Time Operations
@@ -54,7 +67,7 @@ At FabCon Europe, Zava leveraged Maps in Fabric to unify business intelligence:
 5. **Monitor in Real Time:** Watch events unfold live on your maps
 6. **Share Solutions:** Distribute map-centric analytics across teams
 
-![Map editor screenshot](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Slide8-1024x576.jpg)
+![Map editor screenshot](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/slide8-1024x576.jpg)
 
 ## Getting Started
 

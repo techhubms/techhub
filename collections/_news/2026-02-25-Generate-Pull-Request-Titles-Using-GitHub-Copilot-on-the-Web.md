@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Generate Pull Request Titles Using GitHub Copilot on the Web"
-description: "This update introduces a feature on github.com that enables developers to use GitHub Copilot to automatically generate titles for pull requests. The feature analyzes commit messages to offer concise and descriptive title suggestions. Tips for improving title generation include writing clear commit messages and grouping related changes. The feature is generally available for all PRs with commits, aiming to streamline the code review and collaboration process."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-25-generate-pull-request-titles-with-copilot-on-the-web"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-25-generate-pull-request-titles-with-copilot-on-the-web
+title: Generate Pull Request Titles Using GitHub Copilot on the Web
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-25 23:51:39 +00:00
-permalink: "/2026-02-25-Generate-Pull-Request-Titles-Using-GitHub-Copilot-on-the-Web.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Assistance", "Automation", "Code Review", "Collaboration", "Commit Messages", "Copilot", "DevOps", "GitHub", "GitHub Copilot", "News", "PR Title Generation", "Pull Request", "Workflow Improvement"]
-tags_normalized: ["ai", "ai assistance", "automation", "code review", "collaboration", "commit messages", "copilot", "devops", "github", "github copilot", "news", "pr title generation", "pull request", "workflow improvement"]
+tags:
+- AI
+- AI Assistance
+- Automation
+- Code Review
+- Collaboration
+- Commit Messages
+- Copilot
+- DevOps
+- GitHub
+- GitHub Copilot
+- News
+- PR Title Generation
+- Pull Request
+- Workflow Improvement
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison shares how developers can leverage GitHub Copilot to generate descriptive pull request titles on github.com, with guidance on optimizing commit messages for best results.<!--excerpt_end-->
 
 # Generate Pull Request Titles Using GitHub Copilot on the Web

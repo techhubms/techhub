@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric"
-description: "This guide provides solution architects and BI developers with a comprehensive, step-by-step approach to migrating business intelligence from Tableau to Power BI and Microsoft Fabric. Emphasizing a semantic layer-first strategy, it covers best practices in data modeling, governance, migration complexity, and leveraging Fabric's AI-driven features for future readiness."
-author: "Rafia_Aqil"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/tableau-to-power-bi-migration-semantic-layer-first-approach-for/ba-p/4481009
+title: 'Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric'
+author: Rafia_Aqil
+feed_name: Microsoft Tech Community
 date: 2025-12-29 20:42:54 +00:00
-permalink: "/2025-12-29-Tableau-to-Power-BI-Migration-A-Semantic-Layer-First-Architecture-for-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure SQL Database", "BI Architecture", "Business Intelligence", "Capacity Planning", "Community", "Copilot", "Data Agents", "Data Migration", "Data Modeling", "Dataflows", "DAX", "Deployment Pipelines", "Direct Lake", "ETL", "Fabric IQ", "Governance", "Microsoft Fabric", "ML", "OneLake", "Power BI", "Semantic Layer", "Tableau Migration"]
-tags_normalized: ["ai", "azure", "azure sql database", "bi architecture", "business intelligence", "capacity planning", "community", "copilot", "data agents", "data migration", "data modeling", "dataflows", "dax", "deployment pipelines", "direct lake", "etl", "fabric iq", "governance", "microsoft fabric", "ml", "onelake", "power bi", "semantic layer", "tableau migration"]
+tags:
+- Azure SQL Database
+- BI Architecture
+- Business Intelligence
+- Capacity Planning
+- Copilot
+- Data Agents
+- Data Migration
+- Data Modeling
+- Dataflows
+- DAX
+- Deployment Pipelines
+- Direct Lake
+- ETL
+- Fabric IQ
+- Governance
+- Microsoft Fabric
+- OneLake
+- Power BI
+- Semantic Layer
+- Tableau Migration
+- AI
+- Azure
+- ML
+- Community
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Rafia Aqil and colleagues deliver an in-depth migration playbook for cloud architects and BI developers, detailing how to approach Tableau to Power BI migration using a semantic layer-first methodology on Microsoft Fabric.<!--excerpt_end-->
 
 # Tableau to Power BI Migration: A Semantic Layer-First Architecture for Microsoft Fabric
@@ -33,54 +53,54 @@ Traditional dashboard-centric migrations slavishly replicate Tableau workbooks a
 
 **1. Audit Tableau Assets:**
 
-  - Inventory workbooks, data sources, dashboards
-  - Prioritize high-value, widely used reports
-  - Retire redundant content
+- Inventory workbooks, data sources, dashboards
+- Prioritize high-value, widely used reports
+- Retire redundant content
 
 **2. Proof-of-Concept:**
 
-  - Select a representative complex dashboard for pilot migration
-  - Validate Power BI connectivity, data refresh modes, and DAX recreation of calculations
+- Select a representative complex dashboard for pilot migration
+- Validate Power BI connectivity, data refresh modes, and DAX recreation of calculations
 
 **3. Phased Migration:**
 
-  - Operate Tableau and Power BI in parallel temporarily
-  - Migrate gradually by business unit/subject
-  - Gather user feedback after each phase
+- Operate Tableau and Power BI in parallel temporarily
+- Migrate gradually by business unit/subject
+- Gather user feedback after each phase
 
 **4. Migrate High-Impact Dashboards First:**
 
-  - Early wins surface technical challenges
-  - Demonstrate Power BI feature value
+- Early wins surface technical challenges
+- Demonstrate Power BI feature value
 
 **5. Reimagine, Don’t Replicate:**
 
-  - Focus on business goals and user experience
-  - Incorporate Power BI-native features (bookmarks, drilldowns, navigation enhancements)
+- Focus on business goals and user experience
+- Incorporate Power BI-native features (bookmarks, drilldowns, navigation enhancements)
 
 **6. Enable Dataset Reusability:**
 
-  - Build central semantic models (datasets/dataflows)
-  - Report creators can construct multiple reports from a single source, reducing duplication
+- Build central semantic models (datasets/dataflows)
+- Report creators can construct multiple reports from a single source, reducing duplication
 
 **7. Training & Support:**
 
-  - Upskill Tableau users
-  - Establish a community or Center of Excellence
+- Upskill Tableau users
+- Establish a community or Center of Excellence
 
 **8. Change Management:**
 
-  - Communicate the rationale, collect feedback, and grow adoption through stakeholder engagement
+- Communicate the rationale, collect feedback, and grow adoption through stakeholder engagement
 
 **9. Governance from Day 1:**
 
-  - Assign roles, plan workspace strategy, enforce naming conventions
-  - Design security (e.g., RLS) and data access strategies
+- Assign roles, plan workspace strategy, enforce naming conventions
+- Design security (e.g., RLS) and data access strategies
 
 **10. Iterative Adjustment:**
 
-  - Plan for co-existence and continuous refinement
-  - Leverage Power BI’s frequent updates to modernize
+- Plan for co-existence and continuous refinement
+- Leverage Power BI’s frequent updates to modernize
 
 ## Semantic Model Architecture Planning
 

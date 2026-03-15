@@ -1,20 +1,35 @@
----
-layout: "post"
-title: ".NET 11 Preview 1: New Features and Improvements Across the Ecosystem"
-description: "This overview summarizes the major enhancements introduced in .NET 11 Preview 1, covering updates to the runtime, SDK, core libraries, ASP.NET Core, Blazor, C#, .NET MAUI, Entity Framework Core, and supporting tools for developers. It highlights key features, performance improvements, and new capabilities for building applications using the latest Microsoft technologies."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-1/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-11-preview-1/
+title: '.NET 11 Preview 1: New Features and Improvements Across the Ecosystem'
+author: .NET Team
+primary_section: dotnet
+feed_name: Microsoft .NET Blog
 date: 2026-02-10 22:38:20 +00:00
-permalink: "/2026-02-10-NET-11-Preview-1-New-Features-and-Improvements-Across-the-Ecosystem.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "ASP.NET Core", "Blazor", "C#", "Coding", "CoreCLR", "EF Core", "F#", "Featured", "Libaries", "MAUI", "MSBuild", "News", "OpenAPI", "Performance Improvements", "Runtime", "SDK", "VS", "Windows Forms", "WPF", "XAML"]
-tags_normalized: ["dotnet", "dotnet 11", "aspdotnet core", "blazor", "csharp", "coding", "coreclr", "ef core", "fsharp", "featured", "libaries", "maui", "msbuild", "news", "openapi", "performance improvements", "runtime", "sdk", "vs", "windows forms", "wpf", "xaml"]
+tags:
+- .NET
+- .NET 11
+- ASP.NET Core
+- Blazor
+- C#
+- CoreCLR
+- EF Core
+- F#
+- Featured
+- Libaries
+- MAUI
+- MSBuild
+- News
+- OpenAPI
+- Performance Improvements
+- Runtime
+- SDK
+- VS
+- Windows Forms
+- WPF
+- XAML
+section_names:
+- dotnet
 ---
-
 This summary by the .NET Team highlights what's new in .NET 11 Preview 1, focusing on updates for developers across runtime, SDK, C#, MAUI, ASP.NET Core, and more.<!--excerpt_end-->
 
 # .NET 11 Preview 1: What's New for Developers

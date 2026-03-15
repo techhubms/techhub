@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Multiple Assignees for Issues and Pull Requests Now Available in All GitHub Repositories"
-description: "This update announces that GitHub now supports multiple assignees (up to 10) for issues and pull requests in all public and private repositories, removing the previous restriction of single assignees in private repos on free plans. The new feature enhances team collaboration and transparency in project management workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-11-multiple-assignees-for-issues-and-pull-requests-now-available-in-all-repositories"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-11-multiple-assignees-for-issues-and-pull-requests-now-available-in-all-repositories
+title: Multiple Assignees for Issues and Pull Requests Now Available in All GitHub Repositories
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-11 20:11:25 +00:00
-permalink: "/2025-09-11-Multiple-Assignees-for-Issues-and-Pull-Requests-Now-Available-in-All-GitHub-Repositories.html"
-categories: ["DevOps"]
-tags: ["Assignees", "Collaboration", "Collaboration Tools", "DevOps", "GitHub", "Improvement", "Issues", "News", "Open Source Tools", "Process Improvement", "Project Management", "Pull Requests", "Repository Management", "Software Development", "Team Workflow"]
-tags_normalized: ["assignees", "collaboration", "collaboration tools", "devops", "github", "improvement", "issues", "news", "open source tools", "process improvement", "project management", "pull requests", "repository management", "software development", "team workflow"]
+tags:
+- Assignees
+- Collaboration
+- Collaboration Tools
+- GitHub
+- Improvement
+- Issues
+- Open Source Tools
+- Process Improvement
+- Project Management
+- Pull Requests
+- Repository Management
+- Software Development
+- Team Workflow
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Allison highlights GitHub's new feature allowing up to 10 users to be assigned to issues and pull requests, improving collaboration and project visibility for all repository types.<!--excerpt_end-->
 
 # Multiple Assignees for Issues and Pull Requests Now Available in All GitHub Repositories

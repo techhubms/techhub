@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Microsoft and OpenAI Affirm Ongoing Strategic AI Partnership"
-description: "This official joint statement from Microsoft and OpenAI provides an update on the status of their partnership, emphasizing continued collaboration, unchanged intellectual property and revenue arrangements, and reaffirming Microsoft's exclusive role as cloud provider for stateless OpenAI APIs. The announcement clarifies that recent OpenAI funding and partnerships do not impact the foundational agreements between the companies, underlining their commitment to advancing AI innovation together."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2026/02/27/microsoft-and-openai-joint-statement-on-continuing-partnership/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/blog/2026/02/27/microsoft-and-openai-joint-statement-on-continuing-partnership/
+title: Microsoft and OpenAI Affirm Ongoing Strategic AI Partnership
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-27 13:53:42 +00:00
-permalink: "/2026-02-27-Microsoft-and-OpenAI-Affirm-Ongoing-Strategic-AI-Partnership.html"
-categories: ["AI", "Azure"]
-tags: ["AGI", "AI", "Azure", "Cloud Provider", "Company News", "Frontier", "Intellectual Property", "Microsoft", "News", "OpenAI", "Partnership", "Revenue Sharing", "Stargate Project", "Stateless API"]
-tags_normalized: ["agi", "ai", "azure", "cloud provider", "company news", "frontier", "intellectual property", "microsoft", "news", "openai", "partnership", "revenue sharing", "stargate project", "stateless api"]
+tags:
+- AGI
+- AI
+- Azure
+- Cloud Provider
+- Company News
+- Frontier
+- Intellectual Property
+- Microsoft
+- News
+- OpenAI
+- Partnership
+- Revenue Sharing
+- Stargate Project
+- Stateless API
+section_names:
+- ai
+- azure
 ---
-
 stclarke shares an official update from Microsoft and OpenAI, reaffirming their ongoing partnership and outlining the current state of collaboration, IP, and cloud infrastructure.<!--excerpt_end-->
 
 # Microsoft and OpenAI Affirm Ongoing Strategic AI Partnership

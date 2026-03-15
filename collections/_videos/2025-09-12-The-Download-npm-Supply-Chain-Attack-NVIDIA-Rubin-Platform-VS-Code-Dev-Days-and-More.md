@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "The Download: npm Supply Chain Attack, NVIDIA Rubin Platform, VS Code Dev Days & More"
-description: "This episode of The Download from GitHub spotlights a major npm supply chain attack, explores the new NVIDIA Rubin AI platform, delves into why language models hallucinate, reviews the general availability of the remote GitHub MCP server, highlights VS Code Dev Days, and previews GitHub Universe 2025. Stay informed about critical security events and the latest AI, coding, and DevOps updates from across the tech landscape."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=GQ0tqZXxaIk"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=GQ0tqZXxaIk
+title: 'The Download: npm Supply Chain Attack, NVIDIA Rubin Platform, VS Code Dev Days & More'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-09-12 14:00:22 +00:00
-permalink: "/2025-09-12-The-Download-npm-Supply-Chain-Attack-NVIDIA-Rubin-Platform-VS-Code-Dev-Days-and-More.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["AI", "Coding", "DevNews", "DevOps", "GitHub", "GitHub MCP", "GitHub Universe", "Language Models", "Machine Learning", "npm", "NVIDIA Rubin", "Remote Servers", "Security", "Software Development", "Supply Chain Attack", "TheDownload", "Videos", "VS Code", "VS Code Dev Days"]
-tags_normalized: ["ai", "coding", "devnews", "devops", "github", "github mcp", "github universe", "language models", "machine learning", "npm", "nvidia rubin", "remote servers", "security", "software development", "supply chain attack", "thedownload", "videos", "vs code", "vs code dev days"]
+tags:
+- DevNews
+- GitHub
+- GitHub MCP
+- GitHub Universe
+- Language Models
+- ML
+- npm
+- NVIDIA Rubin
+- Remote Servers
+- Software Development
+- Supply Chain Attack
+- TheDownload
+- VS Code
+- VS Code Dev Days
+- AI
+- DevOps
+- Security
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- security
+primary_section: ai
 ---
-
 GitHub's The Download, hosted by the GitHub team, covers a high-profile npm supply chain attack, new AI platforms like NVIDIA Rubin, VS Code Dev Days, and major updates in coding, security, and DevOps.<!--excerpt_end-->
 
 {% youtube GQ0tqZXxaIk %}

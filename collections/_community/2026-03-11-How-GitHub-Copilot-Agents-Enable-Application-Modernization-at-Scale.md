@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How GitHub Copilot Agents Enable Application Modernization at Scale"
-description: "This post explores how AI-driven agents, specifically GitHub Copilot and its modernization agent, are transforming large-scale application modernization. It covers reducing operational friction, automating code and infrastructure transformation, integrating with Azure, and enabling governance and consistency across portfolios, empowering developers, architects, and organizations to modernize securely and efficiently."
-author: "mandywhaley"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-single-apps-to-scale-solutions-how-ai-agents-scale/ba-p/4500059"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/from-single-apps-to-scale-solutions-how-ai-agents-scale/ba-p/4500059
+title: How GitHub Copilot Agents Enable Application Modernization at Scale
+author: mandywhaley
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-03-11 15:00:00 +00:00
-permalink: "/2026-03-11-How-GitHub-Copilot-Agents-Enable-Application-Modernization-at-Scale.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "Agent HQ", "AI", "Application Modernization", "Automation", "Azure", "CLI Tools", "Cloud Migration", "Coding", "Community", "Custom Skills", "DevOps", "GitHub Copilot", "IaC", "Integration", "Java", "Modernization Agent", "Software Agents"]
-tags_normalized: ["dotnet", "agent hq", "ai", "application modernization", "automation", "azure", "cli tools", "cloud migration", "coding", "community", "custom skills", "devops", "github copilot", "iac", "integration", "java", "modernization agent", "software agents"]
+tags:
+- .NET
+- Agent HQ
+- AI
+- Application Modernization
+- Automation
+- Azure
+- CLI Tools
+- Cloud Migration
+- Community
+- Custom Skills
+- DevOps
+- GitHub Copilot
+- IaC
+- Integration
+- Java
+- Modernization Agent
+- Software Agents
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
 ---
-
 Mandy Whaley outlines how GitHub Copilot and the new modernization agent are bringing AI-powered automation to every stage of application modernization, with end-to-end workflows integrating deeply into Azure and developer toolchains.<!--excerpt_end-->
 
 # How GitHub Copilot Agents Enable Application Modernization at Scale

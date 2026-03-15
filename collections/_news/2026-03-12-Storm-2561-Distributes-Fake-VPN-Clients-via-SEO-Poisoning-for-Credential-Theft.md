@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Storm-2561 Distributes Fake VPN Clients via SEO Poisoning for Credential Theft"
-description: "This Microsoft Threat Intelligence and Defender Experts report analyzes the Storm-2561 threat actor's credential theft campaign. Attackers use SEO poisoning to push fake VPN installers hosted on GitHub, exploiting trusted brands and abusing code signing to steal VPN credentials. The post covers detailed TTPs, indicators of compromise, technical attack chain analysis, Microsoft Defender mitigation guidance, Security Copilot capabilities, and links to hunting resources for threat response."
-author: "Microsoft Threat Intelligence and Microsoft Defender Experts"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/12/storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/12/storm-2561-uses-seo-poisoning-to-distribute-fake-vpn-clients-for-credential-theft/
+title: Storm-2561 Distributes Fake VPN Clients via SEO Poisoning for Credential Theft
+author: Microsoft Threat Intelligence and Microsoft Defender Experts
+primary_section: security
+feed_name: Microsoft Security Blog
 date: 2026-03-12 17:00:00 +00:00
-permalink: "/2026-03-12-Storm-2561-Distributes-Fake-VPN-Clients-via-SEO-Poisoning-for-Credential-Theft.html"
-categories: ["Security"]
-tags: ["Attack Chain", "Code Signing Abuse", "Credential Theft", "DLL Side Loading", "GitHub", "Hyrax", "Incident Response", "Indicators Of Compromise", "Infostealer", "Malware", "Microsoft Defender", "Microsoft Defender Experts", "Microsoft Security Copilot", "Mitigation", "News", "Persistence Mechanism", "Security", "SEO Poisoning", "Social Engineering", "Storm", "Storm 2561", "Threat Intelligence", "TTPs", "VPN"]
-tags_normalized: ["attack chain", "code signing abuse", "credential theft", "dll side loading", "github", "hyrax", "incident response", "indicators of compromise", "infostealer", "malware", "microsoft defender", "microsoft defender experts", "microsoft security copilot", "mitigation", "news", "persistence mechanism", "security", "seo poisoning", "social engineering", "storm", "storm 2561", "threat intelligence", "ttps", "vpn"]
+tags:
+- Attack Chain
+- Code Signing Abuse
+- Credential Theft
+- DLL Side Loading
+- GitHub
+- Hyrax
+- Incident Response
+- Indicators Of Compromise
+- Infostealer
+- Malware
+- Microsoft Defender
+- Microsoft Defender Experts
+- Microsoft Security Copilot
+- Mitigation
+- News
+- Persistence Mechanism
+- Security
+- SEO Poisoning
+- Social Engineering
+- Storm
+- Storm 2561
+- Threat Intelligence
+- TTPs
+- VPN
+section_names:
+- security
 ---
-
 Microsoft Threat Intelligence and Microsoft Defender Experts detail how Storm-2561 uses SEO poisoning to distribute fake, signed VPN clients, stealing user credentials through technical deception and advanced evasion techniques.<!--excerpt_end-->
 
 # Storm-2561 Distributes Fake VPN Clients via SEO Poisoning for Credential Theft

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "What’s New in Fabric Warehouse – July 2025: AI, Performance, and Modern Data Engineering"
-description: "This July 2025 recap details the latest Microsoft Fabric Warehouse updates, covering data ingestion, security enhancements, SQL innovations, AI and Copilot integrations, and modern developer tooling. The post highlights migration tools, Cosmos DB preview, Databricks integrations, Python notebooks, audit governance, and roadmap features for data professionals."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/
+title: 'What’s New in Fabric Warehouse – July 2025: AI, Performance, and Modern Data Engineering'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-08-05 11:00:00 +00:00
-permalink: "/2025-08-05-Whats-New-in-Fabric-Warehouse-July-2025-AI-Performance-and-Modern-Data-Engineering.html"
-categories: ["AI", "Azure", "ML", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Audit Logging", "Azure", "Azure AI Foundry", "Copilot Studio", "Cosmos DB", "Data Warehouse", "Databricks", "DevOps", "Governance", "Microsoft Fabric", "ML", "MSSQL Extension", "News", "OneLake", "Performance Tuning", "Python Notebooks", "Security", "SQL Analytics", "Synapse Migration", "Terraform", "VS Code"]
-tags_normalized: ["agentic ai", "ai", "audit logging", "azure", "azure ai foundry", "copilot studio", "cosmos db", "data warehouse", "databricks", "devops", "governance", "microsoft fabric", "ml", "mssql extension", "news", "onelake", "performance tuning", "python notebooks", "security", "sql analytics", "synapse migration", "terraform", "vs code"]
+tags:
+- Agentic AI
+- Audit Logging
+- Azure AI Foundry
+- Copilot Studio
+- Cosmos DB
+- Data Warehouse
+- Databricks
+- Governance
+- Microsoft Fabric
+- MSSQL Extension
+- OneLake
+- Performance Tuning
+- Python Notebooks
+- SQL Analytics
+- Synapse Migration
+- Terraform
+- VS Code
+- AI
+- Azure
+- ML
+- DevOps
+- Security
+- News
+section_names:
+- ai
+- azure
+- ml
+- devops
+- security
+primary_section: ai
 ---
-
 This comprehensive recap from the Microsoft Fabric Blog details July 2025’s new features and enhancements for Fabric Warehouse, including AI integration, security, performance improvements, and developer tools, making it relevant for data engineers and architects.<!--excerpt_end-->
 
 ## What’s New in Fabric Warehouse – July 2025 Recap
@@ -100,11 +121,11 @@ The July 2025 Fabric Warehouse update highlights quality improvements, major per
 
 ### Next Steps
 
-- **Try Microsoft Fabric for Free:** https://aka.ms/tryfabric
+- **Try Microsoft Fabric for Free:** <https://aka.ms/tryfabric>
 - **Community & Feedback:** Join the [Fabric Community](https://community.fabric.microsoft.com/) or Reddit ([/r/MicrosoftFabric](https://www.reddit.com/r/MicrosoftFabric)) to share ideas.
 
 ---
 
-#### For full documentation and feature links, refer to the original [Microsoft Fabric Blog post](https://blog.fabric.microsoft.com/en-us/blog/whats-new-in-fabric-warehouse-july-2025/).
+#### For full documentation and feature links, refer to the original [Microsoft Fabric Blog post](https://blog.fabric.microsoft.com/en-us/blog/whats-new-in-fabric-warehouse-july-2025/)
 
 This post appeared first on "Microsoft Fabric Blog". [Read the entire article here](https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-warehouse-july-2025/)

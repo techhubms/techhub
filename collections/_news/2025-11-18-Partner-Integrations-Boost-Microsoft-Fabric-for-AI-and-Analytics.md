@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Partner Integrations Boost Microsoft Fabric for AI and Analytics"
-description: "This update from the Microsoft Fabric Blog highlights major new integrations between Microsoft Fabric, OneLake, and a wide array of ISV partner solutions. Covering released and upcoming technologies, the article describes how partners like SAS, Esri, Tonic Textual, Snowflake, Databricks, SAP, ClickHouse, Dremio, PuppyGraph, VeloDB, EON, Telmai, DevRev, and TiDB are helping users unlock advancements in data analytics, real-time processing, AI, compliance, and business intelligence—all powered by the unified Microsoft Fabric ecosystem. Readers will learn about zero-copy integrations, governance, geospatial analytics, data reliability agents, and tools for blending data science with AI innovation."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/elevating-microsoft-fabric-with-new-isv-solutions/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/elevating-microsoft-fabric-with-new-isv-solutions/
+title: Partner Integrations Boost Microsoft Fabric for AI and Analytics
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Partner-Integrations-Boost-Microsoft-Fabric-for-AI-and-Analytics.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Apache Iceberg", "Azure", "Business Intelligence", "ClickHouse", "Data Analytics", "Data Governance", "Data Lake", "Data Reliability", "Data Unification", "Databricks", "Delta Lake", "DevRev", "Dremio", "Esri ArcGIS", "Geospatial Analytics", "ISV Integration", "Lakehouse", "Microsoft Fabric", "Microsoft OneLake", "ML", "News", "PuppyGraph", "SAP", "SAS Decision Builder", "Snowflake", "Telmai", "TiDB", "Tonic Textual", "VeloDB", "Zero Copy Integration"]
-tags_normalized: ["ai", "ai agents", "apache iceberg", "azure", "business intelligence", "clickhouse", "data analytics", "data governance", "data lake", "data reliability", "data unification", "databricks", "delta lake", "devrev", "dremio", "esri arcgis", "geospatial analytics", "isv integration", "lakehouse", "microsoft fabric", "microsoft onelake", "ml", "news", "puppygraph", "sap", "sas decision builder", "snowflake", "telmai", "tidb", "tonic textual", "velodb", "zero copy integration"]
+tags:
+- AI Agents
+- Apache Iceberg
+- Business Intelligence
+- ClickHouse
+- Data Analytics
+- Data Governance
+- Data Lake
+- Data Reliability
+- Data Unification
+- Databricks
+- Delta Lake
+- DevRev
+- Dremio
+- Esri ArcGIS
+- Geospatial Analytics
+- ISV Integration
+- Lakehouse
+- Microsoft Fabric
+- Microsoft OneLake
+- PuppyGraph
+- SAP
+- SAS Decision Builder
+- Snowflake
+- Telmai
+- TiDB
+- Tonic Textual
+- VeloDB
+- Zero Copy Integration
+- AI
+- Azure
+- ML
+- News
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Microsoft Fabric Blog shares insights on new ISV integrations for Microsoft Fabric and OneLake, led by author Microsoft Fabric Blog. Learn how partners are driving AI, analytics, and unified data management.<!--excerpt_end-->
 
 # Partner Integrations Boost Microsoft Fabric for AI and Analytics

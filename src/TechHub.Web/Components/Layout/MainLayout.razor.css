@@ -1,0 +1,222 @@
+/* ============================================================================
+   MainLayout Component Styles
+
+   Component-specific styling for site footer (part of MainLayout)
+   ============================================================================ */
+
+/* Site Footer - pushed to bottom when content is short */
+.site-footer {
+  margin-top: auto;
+  background: var(--color-bg-default);
+  border-top: 1px solid var(--color-border-default);
+  margin-top: var(--spacing-8);
+  color: var(--color-text-secondary);
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--spacing-2) var(--spacing-3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-3);
+  min-height: var(--touch-target-min-size);
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+.footer-content p a {
+  color: var(--color-text-secondary);
+  transition: color var(--duration-fast) var(--easing-ease);
+  text-decoration: none;
+}
+
+@media (hover: hover) {
+  .footer-content p a:hover {
+    color: var(--color-purple-bright);
+    text-decoration: none;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.footer-nav a {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  .footer-nav a:hover {
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-3);
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+}
+
+/* Blazor Error UI - Global utility */
+#blazor-error-ui {
+  background: linear-gradient(135deg, var(--color-purple-dark) 0%, var(--color-purple-bright) 100%);
+  bottom: 0;
+  box-shadow: var(--shadow-md);
+  box-sizing: border-box;
+  color: var(--color-text-on-emphasis);
+  display: none;
+  left: 0;
+  padding: var(--spacing-4);
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  animation: slideUp 0.3s var(--easing-ease-out);
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#blazor-error-ui .error-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-3);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#blazor-error-ui .error-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--color-text-on-emphasis);
+}
+
+#blazor-error-ui .error-message {
+  min-width: 0;
+}
+
+#blazor-error-ui .error-message span {
+  font-size: var(--font-size-base);
+  color: var(--color-text-on-emphasis);
+  line-height: 1.5;
+  display: block;
+}
+
+#blazor-error-ui .error-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  flex-shrink: 0;
+  margin-top: var(--spacing-2);
+}
+
+#blazor-error-ui .reload-button {
+  background: var(--color-purple-dark);
+  border: 1px solid var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  white-space: nowrap;
+  display: inline-block;
+}
+
+@media (hover: hover) {
+  #blazor-error-ui .reload-button:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+#blazor-error-ui .dismiss-button {
+  background: var(--color-purple-dark);
+  border: 1px solid var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+  cursor: pointer;
+  padding: var(--spacing-2) var(--spacing-4);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5;
+  transition: all var(--duration-fast) var(--easing-ease);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+}
+
+@media (hover: hover) {
+  #blazor-error-ui .dismiss-button:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #blazor-error-ui {
+    padding: var(--spacing-3);
+  }
+
+  #blazor-error-ui .error-content {
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+
+  #blazor-error-ui .error-message {
+    flex-basis: 100%;
+  }
+
+  #blazor-error-ui .error-message span {
+    font-size: var(--font-size-sm);
+  }
+
+  #blazor-error-ui .error-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  #blazor-error-ui .reload-button,
+  #blazor-error-ui .dismiss-button {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: var(--font-size-xs);
+  }
+}

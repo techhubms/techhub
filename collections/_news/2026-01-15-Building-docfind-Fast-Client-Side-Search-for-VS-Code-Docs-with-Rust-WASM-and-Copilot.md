@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building docfind: Fast Client-Side Search for VS Code Docs with Rust, WASM, and Copilot"
-description: "This in-depth article by João Moreno details the development of docfind, a performant, fully client-side search engine for the VS Code website. The post explains the project's problem space, technical architecture using Rust and WebAssembly, keyword extraction and compression strategies, and how GitHub Copilot accelerated engineering efforts. It covers both conceptual and hands-on aspects of building a search solution that requires no backend and is open source for use in static sites."
-author: "João Moreno"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/01/15/docfind"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2026/01/15/docfind
+title: 'Building docfind: Fast Client-Side Search for VS Code Docs with Rust, WASM, and Copilot'
+author: João Moreno
+feed_name: Visual Studio Code Releases
 date: 2026-01-15 00:00:00 +00:00
-permalink: "/2026-01-15-Building-docfind-Fast-Client-Side-Search-for-VS-Code-Docs-with-Rust-WASM-and-Copilot.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "Blog", "CLI Tools", "Client Side Search", "Coding", "DevOps", "Docfind", "Edge Computing", "FSST", "FST", "Levenshtein Automaton", "News", "Open Source", "RAKE", "Rust", "Search Indexing", "Static Site Search", "VS Code", "Wasm Bindgen", "WebAssembly"]
-tags_normalized: ["ai", "blog", "cli tools", "client side search", "coding", "devops", "docfind", "edge computing", "fsst", "fst", "levenshtein automaton", "news", "open source", "rake", "rust", "search indexing", "static site search", "vs code", "wasm bindgen", "webassembly"]
+tags:
+- Blog
+- CLI Tools
+- Client Side Search
+- Docfind
+- Edge Computing
+- FSST
+- FST
+- Levenshtein Automaton
+- Open Source
+- RAKE
+- Rust
+- Search Indexing
+- Static Site Search
+- VS Code
+- Wasm Bindgen
+- WebAssembly
+- AI
+- DevOps
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+primary_section: ai
 ---
-
 João Moreno from the VS Code team recounts building docfind—a Rust and WebAssembly-based client-side search engine—detailing the engineering journey, technical challenges, and the critical role GitHub Copilot played in delivering a blazing fast, serverless search experience.<!--excerpt_end-->
 
 # Building docfind: Fast Client-Side Search with Rust and WebAssembly
@@ -38,11 +54,11 @@ This article explores the journey behind creating **docfind**, the fast client-s
 - **Rust CLI Tool:** Builds the search index from a JSON dump of documentation, extracting keywords and compressing document data.
 - **WebAssembly (WASM) Module:** The index is embedded directly into the WASM module, loaded by end users’ browsers at search time—no extra server calls needed.
 - **Technical Data Flow:**
-    - 1. Gather docs data → extract/score keywords with RAKE
-    - 2. Build FST mapping keywords to docs
-    - 3. Compress strings with FSST
-    - 4. Embed everything into a WASM module
-    - 5. In-browser, WASM exposes search APIs leveraging Levenshtein automata for typo tolerance
+  - 1. Gather docs data → extract/score keywords with RAKE
+  - 1. Build FST mapping keywords to docs
+  - 1. Compress strings with FSST
+  - 1. Embed everything into a WASM module
+  - 1. In-browser, WASM exposes search APIs leveraging Levenshtein automata for typo tolerance
 
 ```rust
 pub struct Index {
@@ -61,11 +77,11 @@ pub struct Index {
 ## Developer Tools and GitHub Copilot
 
 - **Copilot’s Role:** The author, not a daily Rust developer, used GitHub Copilot extensively for:
-    - Learning Rust idioms and unfamiliar libraries
-    - WASM toolchain setup and WASM-specific Rust patterns
-    - Scaffold and documentation creation
-    - Navigating and patching intricate WASM binaries
-    - Copilot’s code suggestions, explanations, and even project structuring saved substantial time
+  - Learning Rust idioms and unfamiliar libraries
+  - WASM toolchain setup and WASM-specific Rust patterns
+  - Scaffold and documentation creation
+  - Navigating and patching intricate WASM binaries
+  - Copilot’s code suggestions, explanations, and even project structuring saved substantial time
 - **Takeaway:** Copilot served as an AI mentor, unlocking productivity and enabling the author to build production-quality solutions outside his main tech stack.
 
 ## Results

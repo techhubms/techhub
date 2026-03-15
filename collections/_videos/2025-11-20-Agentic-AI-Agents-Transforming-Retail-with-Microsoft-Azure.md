@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Agentic AI Agents: Transforming Retail with Microsoft Azure"
-description: "This Microsoft Ignite 2025 foundational session explores how agentic AI is reshaping retail, featuring demos and strategic deployment scenarios for retailers. Covering practical agent workflows, data integrations, multi-agent orchestration, and the path to marketplace deployment, the session offers insights into elevating shopping experiences, improving catalog management, and empowering frontline workers through Microsoft AI tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=08SaJOoqEho"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=08SaJOoqEho
+title: 'Agentic AI Agents: Transforming Retail with Microsoft Azure'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:14:03 +00:00
-permalink: "/2025-11-20-Agentic-AI-Agents-Transforming-Retail-with-Microsoft-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Agents", "Azure", "Azure AI", "Business Strategy", "Catalog Enrichment", "Data Integration", "Frontline Workers", "InnovatewithAzureAIappsandagents", "Marketplace Deployment", "Microsoft Ignite", "MSIgnite", "Multi Agent Orchestration", "Personalized Shopping", "Retail Technology", "Retail Value Chain", "User Experience Integration", "Videos"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "azure", "azure ai", "business strategy", "catalog enrichment", "data integration", "frontline workers", "innovatewithazureaiappsandagents", "marketplace deployment", "microsoft ignite", "msignite", "multi agent orchestration", "personalized shopping", "retail technology", "retail value chain", "user experience integration", "videos"]
+tags:
+- Agentic AI
+- AI Agents
+- Azure AI
+- Business Strategy
+- Catalog Enrichment
+- Data Integration
+- Frontline Workers
+- Marketplace Deployment
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Orchestration
+- Personalized Shopping
+- Retail Technology
+- Retail Value Chain
+- User Experience Integration
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Hosted by Microsoft Events, this Ignite session introduces agentic AI applications in retail, showcasing practical deployment and integration strategies guided by experts Rasmus Hyltegard, Pepijn Richter, and Amit Trivedi.<!--excerpt_end-->
 
 {% youtube 08SaJOoqEho %}

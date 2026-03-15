@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Configuring Model Context Protocol in the GitHub Copilot CLI"
-description: "This video demonstrates how to set up the Model Context Protocol (MCP) server with GitHub Copilot CLI. Scott Hanselman showcases pulling live documentation (such as Next.js) into Copilot using MCP, allowing for more context-aware code generation and architecting workflows with GitHub Copilot."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=O73egpvWcpY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=O73egpvWcpY
+title: Configuring Model Context Protocol in the GitHub Copilot CLI
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-03 15:00:44 +00:00
-permalink: "/2026-02-03-Configuring-Model-Context-Protocol-in-the-GitHub-Copilot-CLI.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Architecture Diagram", "CLI Tools", "Contextual AI", "Copilot CLI", "Documentation Integration", "External Tools", "GitHub Copilot", "GitHub Copilot CLI", "MCP", "Next.js", "Scott Hanselman", "Videos"]
-tags_normalized: ["ai", "ai integration", "architecture diagram", "cli tools", "contextual ai", "copilot cli", "documentation integration", "external tools", "github copilot", "github copilot cli", "mcp", "nextdotjs", "scott hanselman", "videos"]
+tags:
+- AI
+- AI Integration
+- Architecture Diagram
+- CLI Tools
+- Contextual AI
+- Copilot CLI
+- Documentation Integration
+- External Tools
+- GitHub Copilot
+- GitHub Copilot CLI
+- MCP
+- Next.js
+- Scott Hanselman
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a walkthrough by Scott Hanselman on configuring the Model Context Protocol (MCP) in the GitHub Copilot CLI, enabling developers to connect external documentation and boost Copilot's contextual capabilities.<!--excerpt_end-->
 
 {% youtube O73egpvWcpY %}

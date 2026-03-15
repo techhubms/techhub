@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "What’s New in Fabric User Data Functions: Ignite 2025 Edition"
-description: "This news article presents the latest updates to Fabric User Data Functions, detailing new features such as Fabric Activator integration, Variable Library support, Azure Key Vault and Cosmos DB connectivity. Readers will learn how these updates help consolidate and manage business logic in Microsoft Fabric, streamlining complex data architectures with reusable Python functions, secure configuration, and enhanced event-driven processing."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-user-data-functions-ignite-2025-edition/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-user-data-functions-ignite-2025-edition/
+title: 'What’s New in Fabric User Data Functions: Ignite 2025 Edition'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-20 11:00:00 +00:00
-permalink: "/2025-11-20-Whats-New-in-Fabric-User-Data-Functions-Ignite-2025-Edition.html"
-categories: ["Azure", "Coding", "ML"]
-tags: ["API Integration", "Azure", "Azure Key Vault", "Business Logic", "Centralized Logic", "Coding", "Configuration Management", "Cosmos DB", "Data Engineering", "Event Processing", "Fabric Activator", "Managed Functions", "Microsoft Fabric", "ML", "News", "NoSQL", "Python", "User Data Functions", "Variable Library"]
-tags_normalized: ["api integration", "azure", "azure key vault", "business logic", "centralized logic", "coding", "configuration management", "cosmos db", "data engineering", "event processing", "fabric activator", "managed functions", "microsoft fabric", "ml", "news", "nosql", "python", "user data functions", "variable library"]
+tags:
+- API Integration
+- Azure Key Vault
+- Business Logic
+- Centralized Logic
+- Configuration Management
+- Cosmos DB
+- Data Engineering
+- Event Processing
+- Fabric Activator
+- Managed Functions
+- Microsoft Fabric
+- NoSQL
+- Python
+- User Data Functions
+- Variable Library
+- Azure
+- ML
+- News
+- .NET
+section_names:
+- azure
+- dotnet
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog discusses the newest features and integrations available in Fabric User Data Functions, empowering developers to streamline data architectures and enhance business logic within Fabric using Python.<!--excerpt_end-->
 
 # What’s New in Fabric User Data Functions: Ignite 2025 Edition

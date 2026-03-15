@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Auto Model Selection for GitHub Copilot in VS Code Public Preview"
-description: "This announcement details the public preview release of the new Auto model selection feature in GitHub Copilot for Visual Studio Code. The Auto option automatically selects the most suitable model for each request, optimizing for availability while maintaining transparency and allowing user control. It is currently available for Copilot Free, Pro, and Pro+ users, with planned support for Enterprise and Business licenses. Key features include discounted premium requests for Pro tiers, policy respect, and the ability for users to see or override model choices. The roadmap includes further intelligence for task-specific optimization."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-14-auto-model-selection-for-copilot-in-vs-code-in-public-preview
+title: Auto Model Selection for GitHub Copilot in VS Code Public Preview
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-15 12:53:46 +00:00
-permalink: "/2025-09-15-Auto-Model-Selection-for-GitHub-Copilot-in-VS-Code-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Auto Model Selection", "Billing", "Copilot", "Copilot Business", "Copilot Enterprise", "Copilot Free", "Copilot Pro", "Copilot Pro+", "Developer Tools", "GitHub Copilot", "GPT 4.1", "GPT 5", "Model Picker", "News", "Premium Request", "Public Preview", "Sonnet 4", "VS Code", "VS Code Extension"]
-tags_normalized: ["ai", "ai models", "auto model selection", "billing", "copilot", "copilot business", "copilot enterprise", "copilot free", "copilot pro", "copilot proplus", "developer tools", "github copilot", "gpt 4dot1", "gpt 5", "model picker", "news", "premium request", "public preview", "sonnet 4", "vs code", "vs code extension"]
+tags:
+- AI Models
+- Auto Model Selection
+- Billing
+- Copilot
+- Copilot Business
+- Copilot Enterprise
+- Copilot Free
+- Copilot Pro
+- Copilot Pro+
+- Developer Tools
+- GPT 4.1
+- GPT 5
+- Model Picker
+- Premium Request
+- Public Preview
+- Sonnet 4
+- VS Code
+- VS Code Extension
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison outlines the new Auto model selection capability in GitHub Copilot for Visual Studio Code, detailing how it streamlines model choice, offers premium request discounts to Pro users, and gives developers more flexibility and control.<!--excerpt_end-->
 
 # Auto Model Selection for GitHub Copilot in VS Code Public Preview

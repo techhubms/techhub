@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Top 10 Community Projects Built with GitHub Copilot SDK"
-description: "This GitHub video highlights the results of a challenge issued to the Reddit community: build anything imaginable using the GitHub Copilot SDK within a weekend. The submissions showcase creative uses of Copilot SDK, ranging from autonomous gaming agents to AI-powered browsers. The video features the top 10 most impressive projects, each demonstrating innovative approaches to leveraging AI and Copilot technology for creative and technical development. The content is aimed at developers interested in practical GitHub Copilot SDK applications and community-driven AI innovation."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/exlDbnUtSdY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/exlDbnUtSdY
+title: Top 10 Community Projects Built with GitHub Copilot SDK
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-06 17:01:07 +00:00
-permalink: "/2026-02-06-Top-10-Community-Projects-Built-with-GitHub-Copilot-SDK.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Browser", "AI Development", "AI Innovation", "Autonomous Agents", "Coding", "CopilotSDK", "Developer Challenge", "GitHub", "GitHub Copilot", "GitHub Copilot SDK", "Programming Contest", "Project Showcase", "Reddit Community", "Software Development", "Stardew Valley Bot", "Videos"]
-tags_normalized: ["ai", "ai browser", "ai development", "ai innovation", "autonomous agents", "coding", "copilotsdk", "developer challenge", "github", "github copilot", "github copilot sdk", "programming contest", "project showcase", "reddit community", "software development", "stardew valley bot", "videos"]
+tags:
+- AI
+- AI Browser
+- AI Development
+- AI Innovation
+- Autonomous Agents
+- CopilotSDK
+- Developer Challenge
+- GitHub
+- GitHub Copilot
+- GitHub Copilot SDK
+- Programming Contest
+- Project Showcase
+- Reddit Community
+- Software Development
+- Stardew Valley Bot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 GitHub presents a showcase of top 10 projects built by Reddit community members using the GitHub Copilot SDK, demonstrating creative AI development. Curated by GitHub.<!--excerpt_end-->
 
 {% youtube exlDbnUtSdY %}

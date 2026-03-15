@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure SDK Release Notes – February 2026 Highlights"
-description: "This post covers the February 2026 Azure SDK release, detailing new features, updates, and fixes across .NET, Python, JavaScript, and Go SDKs. Key highlights include enhancements to Azure.Core for .NET, OpenTelemetry tracing in Python, and the initial beta of Azure AI Content Understanding in Foundry Tools. Links to detailed release notes and package documentation are provided."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-february-2026/
+title: Azure SDK Release Notes – February 2026 Highlights
+author: Ronnie Geraghty
+primary_section: ai
+feed_name: Microsoft Azure SDK Blog
 date: 2026-02-26 16:00:26 +00:00
-permalink: "/2026-02-26-Azure-SDK-Release-Notes-February-2026-Highlights.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "Azure", "Azure AI Content Understanding", "Azure AI Foundry", "Azure SDK", "Azure.Core", "Beta Release", "Client Libraries", "Coding", "Content Analysis", "Dependency Injection", "Go", "JavaScript", "News", "OpenTelemetry", "Python", "Resource Management", "SDK", "SDK Release", "Stable Release", "Tracing"]
-tags_normalized: ["dotnet", "ai", "azure", "azure ai content understanding", "azure ai foundry", "azure sdk", "azuredotcore", "beta release", "client libraries", "coding", "content analysis", "dependency injection", "go", "javascript", "news", "opentelemetry", "python", "resource management", "sdk", "sdk release", "stable release", "tracing"]
+tags:
+- .NET
+- AI
+- Azure
+- Azure AI Content Understanding
+- Azure AI Foundry
+- Azure SDK
+- Azure.Core
+- Beta Release
+- Client Libraries
+- Content Analysis
+- Dependency Injection
+- Go
+- JavaScript
+- News
+- OpenTelemetry
+- Python
+- Resource Management
+- SDK
+- SDK Release
+- Stable Release
+- Tracing
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Ronnie Geraghty summarizes the February 2026 Azure SDK release, including major library updates, new tracing features, and the launch of Azure AI Content Understanding for developers.<!--excerpt_end-->
 
 # Azure SDK Release (February 2026)

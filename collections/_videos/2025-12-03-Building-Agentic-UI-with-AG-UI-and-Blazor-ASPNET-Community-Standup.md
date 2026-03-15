@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building Agentic UI with AG-UI and Blazor: ASP.NET Community Standup"
-description: "This ASP.NET Community Standup features Daniel Roth, Javier Calvarro Nelson, and special guest Tyler Slaton from CopilotKit, showcasing how to create agentic user interfaces using AG-UI and Blazor. The session includes demonstrations, development tips, and Q&A, focusing on integrating agent-based approaches in .NET web applications with Blazor."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=4CrxcdNbRFY"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=4CrxcdNbRFY
+title: 'Building Agentic UI with AG-UI and Blazor: ASP.NET Community Standup'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-03 00:54:20 +00:00
-permalink: "/2025-12-03-Building-Agentic-UI-with-AG-UI-and-Blazor-ASPNET-Community-Standup.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AG UI", "Agent Based Design", "Agentic UI", "Agentmode", "AI", "ASP.NET Core", "Blazor", "C#", "Coding", "CopilotKit", "Demo", "Developer", "Developer Community", "Dotnetdeveloper", "Microsoft", "Software Developer", "UI Development", "Videos", "Web Development"]
-tags_normalized: ["dotnet", "ag ui", "agent based design", "agentic ui", "agentmode", "ai", "aspdotnet core", "blazor", "csharp", "coding", "copilotkit", "demo", "developer", "developer community", "dotnetdeveloper", "microsoft", "software developer", "ui development", "videos", "web development"]
+tags:
+- .NET
+- AG UI
+- Agent Based Design
+- Agentic UI
+- Agentmode
+- ASP.NET Core
+- Blazor
+- C#
+- CopilotKit
+- Demo
+- Developer
+- Developer Community
+- Dotnetdeveloper
+- Microsoft
+- Software Developer
+- UI Development
+- Web Development
+- AI
+- Videos
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Daniel Roth, Javier Calvarro Nelson, and guest Tyler Slaton lead a session on building agentic UIs with AG-UI and Blazor, offering developers practical guidance on modern web application design.<!--excerpt_end-->
 
 {% youtube 4CrxcdNbRFY %}

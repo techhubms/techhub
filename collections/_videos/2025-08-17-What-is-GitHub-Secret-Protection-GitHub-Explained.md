@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "What is GitHub Secret Protection?"
-description: "This video offers an overview of GitHub Secret Protection, explaining how it safeguards credentials like API keys and tokens. It covers real-time scanning of code pushes, the use of GitHub Copilot for detecting non-standard passwords, and practical steps for developers to keep secrets secure during software development."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=UfOY9RXHFiw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=UfOY9RXHFiw
+title: What is GitHub Secret Protection?
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-08-17 14:00:41 +00:00
-permalink: "/2025-08-17-What-is-GitHub-Secret-Protection-GitHub-Explained.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security", "API Keys", "Continuous Integration", "Copilot", "Credential Protection", "DevOps", "DevOps Security", "GitHub", "GitHub Copilot", "Password Detection", "Secret Protection", "SecretProtection", "Secrets Scanning", "Secure Development", "Security", "Security Automation", "Token Security", "Videos"]
-tags_normalized: ["ai", "ai security", "api keys", "continuous integration", "copilot", "credential protection", "devops", "devops security", "github", "github copilot", "password detection", "secret protection", "secretprotection", "secrets scanning", "secure development", "security", "security automation", "token security", "videos"]
+tags:
+- AI Security
+- API Keys
+- Continuous Integration
+- Copilot
+- Credential Protection
+- DevOps Security
+- GitHub
+- Password Detection
+- Secret Protection
+- SecretProtection
+- Secrets Scanning
+- Secure Development
+- Security Automation
+- Token Security
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 In this GitHub video, developers will learn from the GitHub team about secret protection features, including real-time scanning on every push and Copilot-assisted non-standard password detection.<!--excerpt_end-->
 
 {% youtube UfOY9RXHFiw %}

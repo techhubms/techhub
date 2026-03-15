@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub Repository Dashboard Now Generally Available"
-description: "This announcement details the general availability of the GitHub repository dashboard, expanding on previous public preview features. Key additions include an Admin Access view for easier management, integration with the GitHub command palette, and advanced filtering and search tools to customize repository views. The dashboard streamlines access and organization of all repositories a user can access, from personal to enterprise projects."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-24-repository-dashboard-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-24-repository-dashboard-is-now-generally-available
+title: GitHub Repository Dashboard Now Generally Available
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-24 18:49:44 +00:00
-permalink: "/2026-02-24-GitHub-Repository-Dashboard-Now-Generally-Available.html"
-categories: ["DevOps"]
-tags: ["Admin Access", "Collaboration", "Collaboration Tools", "Command Palette", "DevOps", "Enterprise Codebase", "Filtering", "GitHub", "Navigation", "News", "Productivity", "Repository Dashboard", "Repository Management", "Saved Queries", "Software Development", "Workflow"]
-tags_normalized: ["admin access", "collaboration", "collaboration tools", "command palette", "devops", "enterprise codebase", "filtering", "github", "navigation", "news", "productivity", "repository dashboard", "repository management", "saved queries", "software development", "workflow"]
+tags:
+- Admin Access
+- Collaboration
+- Collaboration Tools
+- Command Palette
+- DevOps
+- Enterprise Codebase
+- Filtering
+- GitHub
+- Navigation
+- News
+- Productivity
+- Repository Dashboard
+- Repository Management
+- Saved Queries
+- Software Development
+- Workflow
+section_names:
+- devops
 ---
-
 Allison introduces the now generally available GitHub repository dashboard, highlighting new features like admin access view and command palette integration that improve repository navigation and management.<!--excerpt_end-->
 
 # GitHub Repository Dashboard Now Generally Available

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Streamlining Enterprise Governance with GitHub Organization Custom Properties"
-description: "This news item introduces organization custom properties in GitHub, now available in public preview. Enterprise administrators can use these properties to efficiently add and manage metadata across organizations, improving ruleset targeting for compliance, security, and operational needs. The post details what custom properties are, how they work, their configuration options, and the potential for better security and governance through automation. Limitations, best practices, and links to further discussion and feedback opportunities are provided."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview
+title: Streamlining Enterprise Governance with GitHub Organization Custom Properties
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-10-23 16:58:12 +00:00
-permalink: "/2025-10-23-Streamlining-Enterprise-Governance-with-GitHub-Organization-Custom-Properties.html"
-categories: ["DevOps"]
-tags: ["Configuration", "Custom Properties", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "GitHub", "Governance", "Improvement", "Metadata", "News", "Organization Management", "Platform Governance", "Platform Management", "Policy Automation", "Public Preview", "Rulesets", "Security Compliance", "Targeting"]
-tags_normalized: ["configuration", "custom properties", "devops", "enterprise administration", "enterprise management tools", "github", "governance", "improvement", "metadata", "news", "organization management", "platform governance", "platform management", "policy automation", "public preview", "rulesets", "security compliance", "targeting"]
+tags:
+- Configuration
+- Custom Properties
+- Enterprise Administration
+- Enterprise Management Tools
+- GitHub
+- Governance
+- Improvement
+- Metadata
+- Organization Management
+- Platform Governance
+- Platform Management
+- Policy Automation
+- Public Preview
+- Rulesets
+- Security Compliance
+- Targeting
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Allison shares news about GitHub's new organization custom properties, helping enterprise administrators manage organizational metadata for better policy targeting and compliance automation.<!--excerpt_end-->
 
 # Streamlining Enterprise Governance with GitHub Organization Custom Properties
@@ -48,14 +60,12 @@ Enterprise administrators define custom properties at the enterprise level. For 
 
 layout: "post"
 title: "Streamlining Enterprise Governance with GitHub Organization Custom Properties"
-description: "This news item introduces organization custom properties in GitHub, now available in public preview. Enterprise administrators can use these properties to efficiently add and manage metadata across organizations, improving ruleset targeting for compliance, security, and operational needs. The post details what custom properties are, how they work, their configuration options, and the potential for better security and governance through automation. Limitations, best practices, and links to further discussion and feedback opportunities are provided."
 author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview"
-viewing_mode: "external"
+excerpt_separator: "<!--excerpt_end-->"
+canonical_url: "<https://github.blog/changelog/2025-10-23-organization-custom-properties-are-now-available-in-public-preview>"
 feed_name: "The GitHub Blog"
-feed_url: https://github.blog/changelog/feed/
-date: 2025-10-23 16:58:12 +00:00
+feed_url: <https://github.blog/changelog/feed/>
+date: "2025-10-23 16:58:12 +00:00"
 permalink: "2025-10-23-Streamlining-Enterprise-Governance-with-GitHub-Organization-Custom-Properties.html"
 categories: ["DevOps"]
 tags: ["Configuration", "Custom Properties", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "GitHub", "Governance", "Improvement", "Metadata", "News", "Organization Management", "Platform Governance", "Platform Management", "Policy Automation", "Public Preview", "Rulesets", "Security Compliance", "Targeting"]

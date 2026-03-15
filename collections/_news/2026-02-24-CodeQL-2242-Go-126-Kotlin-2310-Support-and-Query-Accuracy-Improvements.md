@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "CodeQL 2.24.2: Go 1.26, Kotlin 2.3.10 Support and Query Accuracy Improvements"
-description: "This news update covers the release of CodeQL 2.24.2, the static analysis engine that powers GitHub code scanning. The update brings support for Go 1.26 and Kotlin 2.3.10, with enhancements that improve security issue detection and query accuracy. Changes impact language and framework support across Go, Kotlin, Python, C#, and Java, with particular improvements for request forgery, regular expression sanitizing, and support for Azure SDK in Python."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-24-codeql-adds-go-1-26-and-kotlin-2-3-10-support-and-improves-query-accuracy"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-24-codeql-adds-go-1-26-and-kotlin-2-3-10-support-and-improves-query-accuracy
+title: 'CodeQL 2.24.2: Go 1.26, Kotlin 2.3.10 Support and Query Accuracy Improvements'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-24 22:20:46 +00:00
-permalink: "/2026-02-24-CodeQL-2242-Go-126-Kotlin-2310-Support-and-Query-Accuracy-Improvements.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "Azure SDK", "C#", "CodeQL", "Cross Site Request Forgery", "DevOps", "GHES", "GitHub Code Scanning", "Go 1.26", "Improvement", "Kotlin 2.3.10", "News", "Python", "Query Accuracy", "Regular Expressions", "Sanitizer", "Secure Coding", "Security", "Static Analysis"]
-tags_normalized: ["application security", "azure sdk", "csharp", "codeql", "cross site request forgery", "devops", "ghes", "github code scanning", "go 1dot26", "improvement", "kotlin 2dot3dot10", "news", "python", "query accuracy", "regular expressions", "sanitizer", "secure coding", "security", "static analysis"]
+tags:
+- Application Security
+- Azure SDK
+- C#
+- CodeQL
+- Cross Site Request Forgery
+- DevOps
+- GHES
+- GitHub Code Scanning
+- Go 1.26
+- Improvement
+- Kotlin 2.3.10
+- News
+- Python
+- Query Accuracy
+- Regular Expressions
+- Sanitizer
+- Secure Coding
+- Security
+- Static Analysis
+section_names:
+- devops
+- security
 ---
-
 Allison details the CodeQL 2.24.2 release, highlighting expanded language support, security query updates for Microsoft technologies, and improved detection accuracy for DevOps and security teams.<!--excerpt_end-->
 
 # CodeQL 2.24.2: Go 1.26, Kotlin 2.3.10 Support and Query Accuracy Improvements

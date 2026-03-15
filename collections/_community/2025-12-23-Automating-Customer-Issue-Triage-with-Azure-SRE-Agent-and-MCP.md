@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Automating Customer Issue Triage with Azure SRE Agent and MCP"
-description: "This guide explains how to automate the triage of customer tickets using Azure SRE Agent combined with Model Context Protocol (MCP). It demonstrates integrating GitHub and PagerDuty, configuring agent workflow logic, creating subagents with focused responsibilities, and scheduling automated triage runs. The approach streamlines ticket sorting, reduces manual workload for support engineers and developers, and improves response consistency."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/extend-sre-agent-with-mcp-build-an-agentic-workflow-to-triage/ba-p/4480710"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/extend-sre-agent-with-mcp-build-an-agentic-workflow-to-triage/ba-p/4480710
+title: Automating Customer Issue Triage with Azure SRE Agent and MCP
+author: dchelupati
+feed_name: Microsoft Tech Community
 date: 2025-12-23 22:08:48 +00:00
-permalink: "/2025-12-23-Automating-Customer-Issue-Triage-with-Azure-SRE-Agent-and-MCP.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agent Based Automation", "AI", "Azure", "Azure Portal", "Azure SRE Agent", "Community", "DevOps", "DevOps Workflow", "GitHub", "Incident Management", "Issue Classification", "MCP", "PagerDuty", "Scheduled Tasks", "Subagents", "Support Automation", "Ticket Triage", "Workflow Orchestration"]
-tags_normalized: ["agent based automation", "ai", "azure", "azure portal", "azure sre agent", "community", "devops", "devops workflow", "github", "incident management", "issue classification", "mcp", "pagerduty", "scheduled tasks", "subagents", "support automation", "ticket triage", "workflow orchestration"]
+tags:
+- Agent Based Automation
+- Azure Portal
+- Azure SRE Agent
+- DevOps Workflow
+- GitHub
+- Incident Management
+- Issue Classification
+- MCP
+- PagerDuty
+- Scheduled Tasks
+- Subagents
+- Support Automation
+- Ticket Triage
+- Workflow Orchestration
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 dchelupati details an automated workflow using Azure SRE Agent and MCP to classify and route customer issues, reducing manual triage for engineering teams.<!--excerpt_end-->
 
 # Automating Customer Issue Triage with Azure SRE Agent and MCP

@@ -1,0 +1,11 @@
+/* ============================================================================
+   Header Component Styles
+   
+   Uses display: contents to make nav elements stick relative to body,
+   allowing them to remain sticky for entire page scroll (not just header height)
+   ============================================================================ */
+
+header {
+    display: contents;
+    /* Removes header from box tree - nav/subnav become direct children of body for layout */
+}

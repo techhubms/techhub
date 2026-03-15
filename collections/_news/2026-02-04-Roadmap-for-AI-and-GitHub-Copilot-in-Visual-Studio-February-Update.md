@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Roadmap for AI and GitHub Copilot in Visual Studio: February Update"
-description: "This update outlines the ongoing efforts to enhance AI integration and GitHub Copilot features within Visual Studio. Key improvements target agent reliability, workflow refinement, model context management, Copilot SDK integration, and the overall editing experience. Developers are encouraged to engage with the roadmap through feedback and discussion on specific enhancements."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-february/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/roadmap-for-ai-in-visual-studio-february/
+title: 'Roadmap for AI and GitHub Copilot in Visual Studio: February Update'
+author: Rhea Patel
+primary_section: github-copilot
+feed_name: Microsoft VisualStudio Blog
 date: 2026-02-04 20:42:53 +00:00
-permalink: "/2026-02-04-Roadmap-for-AI-and-GitHub-Copilot-in-Visual-Studio-February-Update.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "Agents", "AI", "AI Agents", "Chat", "CIMD", "Coding", "Context Management", "Copilot", "Copilot CLI", "Copilot SDK", "Developer Productivity", "Diagnostics", "Editor Experience", "GitHub Copilot", "IDE Integration", "Keyboard Shortcuts", "MCP", "News", "Planning Agent", "Planning Mode", "Roadmap", "VS"]
-tags_normalized: ["agent mode", "agents", "ai", "ai agents", "chat", "cimd", "coding", "context management", "copilot", "copilot cli", "copilot sdk", "developer productivity", "diagnostics", "editor experience", "github copilot", "ide integration", "keyboard shortcuts", "mcp", "news", "planning agent", "planning mode", "roadmap", "vs"]
+tags:
+- Agent Mode
+- Agents
+- AI
+- AI Agents
+- Chat
+- CIMD
+- Context Management
+- Copilot
+- Copilot CLI
+- Copilot SDK
+- Developer Productivity
+- Diagnostics
+- Editor Experience
+- GitHub Copilot
+- IDE Integration
+- Keyboard Shortcuts
+- MCP
+- News
+- Planning Agent
+- Planning Mode
+- Roadmap
+- VS
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Rhea Patel presents the February roadmap update for Visual Studio's AI and GitHub Copilot features, highlighting new efforts to improve agent reliability, planning capabilities, context management, and editor integration for developers.<!--excerpt_end-->
 
 # Roadmap for AI and GitHub Copilot in Visual Studio: February Update

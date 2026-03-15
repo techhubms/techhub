@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Supercharge Your Workflow: New Multitasking Features Coming to Microsoft Fabric"
-description: "This news post introduces significant multitasking and UI enhancements to Microsoft Fabric, specifically targeting developers and technical users. Key improvements include horizontal tab support for open items (notebooks, pipelines, reports), multiple open workspaces with color coding, an Object Explorer for streamlined navigation, and an increased limit for open items. The changes aim to provide a smoother, more IDE-like workflow for developers managing complex projects in Fabric, addressing usability issues highlighted by both user feedback and usability studies. These updates focus exclusively on the Fabric platform and do not affect Power BI."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/supercharge-your-workflow-new-multitasking-features-coming-to-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/supercharge-your-workflow-new-multitasking-features-coming-to-fabric/
+title: 'Supercharge Your Workflow: New Multitasking Features Coming to Microsoft Fabric'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-29 15:00:00 +00:00
-permalink: "/2025-09-29-Supercharge-Your-Workflow-New-Multitasking-Features-Coming-to-Microsoft-Fabric.html"
-categories: ["ML"]
-tags: ["Analytics Development", "Data Engineering", "Developer Tools", "Horizontal Tabs", "IDE Experience", "Microsoft Fabric", "ML", "Multitasking", "News", "Notebooks", "Object Explorer", "Open Workspaces", "Pipelines", "Tab Management", "UI Enhancements", "Usability", "Workflow Optimization"]
-tags_normalized: ["analytics development", "data engineering", "developer tools", "horizontal tabs", "ide experience", "microsoft fabric", "ml", "multitasking", "news", "notebooks", "object explorer", "open workspaces", "pipelines", "tab management", "ui enhancements", "usability", "workflow optimization"]
+tags:
+- Analytics Development
+- Data Engineering
+- Developer Tools
+- Horizontal Tabs
+- IDE Experience
+- Microsoft Fabric
+- Multitasking
+- Notebooks
+- Object Explorer
+- Open Workspaces
+- Pipelines
+- Tab Management
+- UI Enhancements
+- Usability
+- Workflow Optimization
+- ML
+- News
+section_names:
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog highlights new developer-focused multitasking features and UI improvements to the Fabric experience. The post discusses workflow optimizations designed for technical users managing analytics and data engineering projects.<!--excerpt_end-->
 
 # Supercharge Your Workflow: New Multitasking Features Coming to Microsoft Fabric
@@ -28,7 +39,7 @@ Microsoft Fabric is rolling out a slate of multitasking upgrades aimed at improv
 - **Object Explorer**: This new feature lets you browse and manage all open items across your workspaces from a single structured view. No need to move between pages—stay organized and efficient as you handle multiple tasks.
 - **Raised Item Limit**: The previous cap of 10 open items has been lifted, granting greater flexibility for developers and data engineers working on large, multi-resource projects.
 
-![Fabric UI Enhancements](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/Screenshot-2025-07-10-165509-1024x92.png)
+![Fabric UI Enhancements](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/07/screenshot-2025-07-10-165509-1024x92.png)
 
 ## Addressing Developer Needs
 

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol"
-description: "Kinfey Lo explores how Microsoft's Semantic Kernel and the A2A protocol enable the orchestration and interoperability of intelligent agents across frameworks. The article explains protocol details, architectural patterns, setup steps, and real-world examples for scalable, secure multi-agent AI systems."
-author: "Kinfey Lo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/guest-blog-building-multi-agent-solutions-with-semantic-kernel-and-a2a-protocol/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/guest-blog-building-multi-agent-solutions-with-semantic-kernel-and-a2a-protocol/
+title: Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol
+author: Kinfey Lo
+feed_name: Microsoft DevBlog
 date: 2025-07-21 08:10:23 +00:00
-permalink: "/2025-07-21-Building-Multi-Agent-AI-Solutions-Using-Semantic-Kernel-and-the-A2A-Protocol.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["A2A", "A2A Protocol", "Agent Orchestration", "AI", "Azure", "Azure AI Foundry", "Azure Functions", "Coding", "DevTools", "Distributed AI", "Enterprise AI", "Gradio", "MCP", "Microservices", "Microsoft AI", "Multi Agent Systems", "News", "Playwright", "Python", "SDK", "Semantic Kernel"]
-tags_normalized: ["a2a", "a2a protocol", "agent orchestration", "ai", "azure", "azure ai foundry", "azure functions", "coding", "devtools", "distributed ai", "enterprise ai", "gradio", "mcp", "microservices", "microsoft ai", "multi agent systems", "news", "playwright", "python", "sdk", "semantic kernel"]
+tags:
+- A2A
+- A2A Protocol
+- Agent Orchestration
+- Azure AI Foundry
+- Azure Functions
+- DevTools
+- Distributed AI
+- Enterprise AI
+- Gradio
+- MCP
+- Microservices
+- Microsoft AI
+- Multi Agent Systems
+- Playwright
+- Python
+- SDK
+- Semantic Kernel
+- AI
+- Azure
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Authored by Kinfey Lo, this article details building interoperable multi-agent AI systems using Microsoft’s Semantic Kernel and the A2A protocol, offering real-world architectural guidance and implementation insights for enterprise solutions.<!--excerpt_end-->
 
 # Building Multi-Agent AI Solutions Using Semantic Kernel and the A2A Protocol
@@ -184,10 +201,12 @@ async def get_response_from_agent(message, history):
 
 **Web Automation:**
 > User: “Navigate to github.com/microsoft and take a screenshot”
+>
 > - Routed to Playwright Agent via A2A, which automates browser and returns results
 
 **Development Workflow:**
-> User: “Clone https://github.com/microsoft/semantic-kernel and open it in VS Code”
+> User: “Clone <https://github.com/microsoft/semantic-kernel> and open it in VS Code”
+>
 > - Routed to Tool Agent, which coordinates git clone and IDE operations
 
 See the [sample on GitHub](https://github.com/a2aproject/a2a-samples/blob/main/samples/python/agents/azureaifoundry_sdk/multi_agent/README.md)

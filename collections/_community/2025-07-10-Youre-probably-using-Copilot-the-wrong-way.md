@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "You're probably using Copilot the wrong way"
-description: "Thershort shares a practical approach to using GitHub Copilot and AI tools for efficient software development, stressing the importance of strong planning and oversight."
-author: "Thershort"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1lwg11b/youre_probably_using_copilot_the_wrong_way/"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1lwg11b/youre_probably_using_copilot_the_wrong_way/
+title: You're probably using Copilot the wrong way
+author: Thershort
+feed_name: Reddit Github Copilot
 date: 2025-07-10 15:43:52 +00:00
-permalink: "/2025-07-10-Youre-probably-using-Copilot-the-wrong-way.html"
-viewing_mode: "external"
-tags: ["AI", "AI Tools", "Code Generation", "Coding", "Coding Productivity", "Community", "Comparing", "Developer Workflows", "Development Planning", "DevOps", "File Level Planning", "GitHub Copilot", "Software Development", "Sonnet 4", "Traycer"]
-tags_normalized: ["ai", "ai tools", "code generation", "coding", "coding productivity", "community", "comparing", "developer workflows", "development planning", "devops", "file level planning", "github copilot", "software development", "sonnet 4", "traycer"]
+tags:
+- AI Tools
+- Code Generation
+- Coding Productivity
+- Comparing
+- Developer Workflows
+- Development Planning
+- File Level Planning
+- Software Development
+- Sonnet 4
+- Traycer
+- AI
+- DevOps
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this article, Thershort draws on years of coding experience to offer actionable insights into operating efficiently with AI coding tools, like GitHub Copilot and Sonnet 4. Emphasizing the irreplaceable value of human oversight, Thershort provides a personal workflow for integrating AI into the development process, offering tips, tools, and warnings for developers eager to leverage AI without losing control over code quality or project direction.<!--excerpt_end-->
 
 ## Leveraging GitHub Copilot and AI Tools for Effective Software Development

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Azure DevOps Server Now Generally Available for Self-Hosted Enterprises"
-description: "This announcement highlights Azure DevOps Server reaching general availability, moving beyond its Release Candidate stage. The release offers enterprise-grade DevOps capabilities for organizations preferring self-hosted solutions. Readers are guided on upgrading from Team Foundation Server and provided essential links for downloads, release notes, installation, and support recommendations."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/announcing-azure-devops-server-general-availability/
+title: Azure DevOps Server Now Generally Available for Self-Hosted Enterprises
+author: Gloridel Morales
+feed_name: Microsoft DevOps Blog
 date: 2025-12-09 20:39:17 +00:00
-permalink: "/2025-12-09-Azure-DevOps-Server-Now-Generally-Available-for-Self-Hosted-Enterprises.html"
-categories: ["DevOps"]
-tags: ["Azure DevOps Server", "DevOps", "Enterprise Software", "General Availability", "Installation Guide", "Microsoft Server Products", "News", "Production Readiness", "Release Notes", "Security Compliance", "Self Hosted Solutions", "Team Foundation Server", "TFS Upgrade"]
-tags_normalized: ["azure devops server", "devops", "enterprise software", "general availability", "installation guide", "microsoft server products", "news", "production readiness", "release notes", "security compliance", "self hosted solutions", "team foundation server", "tfs upgrade"]
+tags:
+- Azure DevOps Server
+- Enterprise Software
+- General Availability
+- Installation Guide
+- Microsoft Server Products
+- Production Readiness
+- Release Notes
+- Security Compliance
+- Self Hosted Solutions
+- Team Foundation Server
+- TFS Upgrade
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Gloridel Morales announces the general availability of Azure DevOps Server, detailing its upgrade paths, key features, and essential resources for enterprise DevOps practitioners.<!--excerpt_end-->
 
 # Azure DevOps Server Now Generally Available for Self-Hosted Enterprises

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GPT-5.2-Codex Now Available in GitHub Copilot"
-description: "This announcement details the general availability of GPT-5.2-Codex in GitHub Copilot for Copilot Enterprise, Business, Pro, and Pro+ users. It outlines supported platforms, activation steps for organizational administrators and individuals, and provides links to official model documentation and community feedback channels."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-14-gpt-5-2-codex-is-now-generally-available-in-github-copilot
+title: GPT-5.2-Codex Now Available in GitHub Copilot
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-14 17:04:31 +00:00
-permalink: "/2026-01-14-GPT-52-Codex-Now-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Admin Settings", "AI", "AI Model", "API Key", "Copilot", "Copilot Business", "Copilot Chat", "Copilot CLI", "Copilot Enterprise", "Copilot Pro", "GitHub Copilot", "GPT 5.2 Codex", "Model Picker", "Model Release", "News", "OpenAI", "VS Code"]
-tags_normalized: ["admin settings", "ai", "ai model", "api key", "copilot", "copilot business", "copilot chat", "copilot cli", "copilot enterprise", "copilot pro", "github copilot", "gpt 5dot2 codex", "model picker", "model release", "news", "openai", "vs code"]
+tags:
+- Admin Settings
+- AI Model
+- API Key
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot CLI
+- Copilot Enterprise
+- Copilot Pro
+- GPT 5.2 Codex
+- Model Picker
+- Model Release
+- OpenAI
+- VS Code
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison reports on the general availability of GPT-5.2-Codex in GitHub Copilot, explaining supported plans, model selection steps, and access instructions for developers and organizations.<!--excerpt_end-->
 
 # GPT-5.2-Codex Now Available in GitHub Copilot

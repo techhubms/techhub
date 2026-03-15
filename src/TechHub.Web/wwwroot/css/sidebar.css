@@ -1,0 +1,483 @@
+/* ============================================================================
+   Shared Sidebar Styles
+   
+   Truly shared sidebar styles used across multiple pages.
+   Component-specific sidebar styles belong in component .razor.css files.
+   
+   - Sidebar container (sticky positioning)
+   - Sidebar sections (headings, lists, links)
+   - Display-only tags (content detail pages) - NON-INTERACTIVE
+   - Interactive button styles (link-button, content-button, tag-button, highlight-button)
+   
+   All interactive button styles are scoped to .sidebar to ensure they only apply
+   within sidebar contexts, preventing style conflicts with main content.
+   
+   Used across: Home, Section, Collection, ContentItem pages
+   ============================================================================ */
+
+/* ============================================================================
+   Sidebar Container - Simple block container for viewport-sticky children
+   ============================================================================ */
+
+.sidebar {
+  /* Plain block container - no flex/grid, just natural height from children
+     align-self: stretch allows sidebar to match main content height for sticky to work */
+  align-self: stretch;
+  position: relative;
+}
+
+/* Spacing between sidebar sections */
+.sidebar > * + * {
+  margin-top: var(--spacing-2);
+}
+
+/* Spacing within a panel (between consecutive sidebar sections).
+   Works for both desktop (display:contents passes through to children)
+   and mobile (display:block when active). */
+.sidebar-panel > * + * {
+  margin-top: var(--spacing-2);
+}
+
+/* Spacing between consecutive panels on desktop.
+   Since panels use display:contents, margin goes on the first child of non-first panels. */
+.sidebar-panel + .sidebar-panel > :first-child {
+  margin-top: var(--spacing-2);
+}
+
+/* Spacing between latest roundup and the first panel on desktop */
+.latest-roundup + .sidebar-panel > :first-child {
+  margin-top: var(--spacing-2);
+}
+
+/* ============================================================================
+   Sidebar Collapsed State (Desktop only)
+   When .sidebar-collapsed is on the parent <main>, hide all sidebar content
+   except the toggle button. The sidebar column shrinks to 48px via page-container.css.
+   ============================================================================ */
+
+html.sidebar-collapsed .sidebar {
+  overflow: hidden;
+}
+
+/* Hide all sidebar children except the toggle button when collapsed */
+html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
+  display: none;
+}
+
+/* ============================================================================
+   Sidebar Sections - Headings and content structure
+   ============================================================================ */
+
+/* Font-size, font-weight, color, line-height for sidebar-h2 are defined in base.css.
+   Here we only set sidebar-specific margins. */
+.sidebar-h2,
+.sidebar-section h2 {
+  margin: 0 0 var(--spacing-3) 0;
+}
+
+.sidebar-section h3 {
+  color: var(--color-text-primary);
+  margin: 0 0 var(--spacing-3) 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+.sidebar-section p,
+.sidebar-section time {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.sidebar-section time {
+  display: block;
+}
+
+/* ============================================================================
+   Sidebar Lists - Content items, links
+   ============================================================================ */
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list li {
+  margin-bottom: var(--spacing-1);
+}
+
+.sidebar-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Text labels within buttons (for backwards compatibility) */
+.sidebar-item-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.sidebar-item-section,
+.sidebar-item-contenttype {
+  color: var(--color-text-secondary);
+}
+
+/* ============================================================================
+   Sidebar Tags - Display-only (Content Detail) - NON-INTERACTIVE
+   These are for metadata display, not filtering/navigation
+   ============================================================================ */
+
+/* Display-only tags (content detail metadata) */
+.sidebar-section-tag,
+.sidebar-content-tag {
+  display: inline-block;
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  .sidebar-section-tag:hover,
+  .sidebar-content-tag:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+    color: var(--color-text-primary);
+  }
+}
+
+.section-tags,
+.content-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+/* ============================================================================
+   Responsive - Sidebar toolbar for mobile panel toggles
+   ============================================================================ */
+
+/* Desktop: Make toolbar and panel wrappers invisible to layout, hide buttons.
+   display:contents removes the element from the box tree so children (e.g. SidebarToc
+   with position:sticky) participate directly in the sidebar's layout context. */
+@media (min-width: 1293px) {
+  .sidebar-toolbar {
+    display: contents;
+  }
+
+  .sidebar-toolbar-buttons {
+    display: none;
+  }
+
+  .sidebar-panel {
+    display: contents;
+  }
+
+  /* Extra spacing between sidebar sections on desktop */
+  .sidebar > * + * {
+    margin-top: var(--spacing-4);
+  }
+
+  .sidebar-panel > * + * {
+    margin-top: var(--spacing-4);
+  }
+
+  .sidebar-panel + .sidebar-panel > :first-child {
+    margin-top: var(--spacing-4);
+  }
+
+  .latest-roundup + .sidebar-panel > :first-child {
+    margin-top: var(--spacing-4);
+  }
+}
+
+/* Mobile: Show toolbar buttons, panels hidden by default */
+@media (max-width: 1292px) {
+  .sidebar {
+    position: static;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .sidebar-h2,
+  .sidebar-section h2 {
+    font-size: var(--font-size-3xl);
+    margin: 0 0 var(--spacing-3) 0;
+  }
+
+  /* Toolbar uses flex + order so buttons appear before always-visible content.
+     Gap provides consistent spacing between toolbar buttons, always-visible content
+     (like latest-roundup), and any active panel. Hidden panels (display:none) don't
+     participate in flex layout, so gap only applies between visible elements. */
+  .sidebar-toolbar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+  }
+
+  .sidebar-toolbar-buttons {
+    order: -1;
+  }
+
+  /* Push latest-roundup below toolbar panels on mobile/tablet so opened panels
+     appear directly under their toggle buttons, not after the roundup */
+  .sidebar-toolbar > .latest-roundup {
+    order: 1;
+  }
+
+  /* Toolbar button bar */
+  .sidebar-toolbar-buttons {
+    display: flex;
+    gap: var(--spacing-1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .sidebar-toolbar-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-toolbar-btn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: var(--spacing-1) var(--spacing-2);
+    background: var(--color-bg-emphasis);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--easing-ease);
+    min-height: var(--touch-target-min-size);
+  }
+
+  .sidebar-toolbar-btn svg {
+    flex-shrink: 0;
+  }
+
+  @media (hover: hover) {
+    .sidebar-toolbar-btn:hover {
+      background: var(--color-bg-default);
+      border-color: var(--color-purple-medium);
+      color: var(--color-text-primary);
+    }
+  }
+
+  .sidebar-toolbar-btn:focus-visible {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+  }
+
+  .sidebar-toolbar-btn.active {
+    background: var(--color-purple-dark);
+    color: var(--color-text-on-emphasis);
+    border-color: var(--color-purple-bright);
+  }
+
+  /* Active filter indicator - subtle highlight when panel has active filters */
+  .sidebar-toolbar-btn.has-active-filter {
+    border-color: var(--color-purple-medium);
+  }
+
+  .sidebar-toolbar-btn.has-active-filter.active {
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+  }
+
+  /* Small dot indicator for active filters */
+  .sidebar-toolbar-filter-dot {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-purple-bright);
+    flex-shrink: 0;
+  }
+
+  .sidebar-toolbar-btn.active .sidebar-toolbar-filter-dot {
+    background: var(--color-text-on-emphasis);
+  }
+
+  /* Panels hidden by default on mobile */
+  .sidebar-panel {
+    display: none;
+  }
+
+  .sidebar-panel-active {
+    display: block;
+  }
+
+  /* Reset inter-panel and roundup spacing on mobile (only one visible at a time,
+     spacing is handled by margin-bottom on toolbar buttons and always-visible content) */
+  .sidebar-panel + .sidebar-panel > :first-child,
+  .latest-roundup + .sidebar-panel > :first-child {
+    margin-top: 0;
+  }
+
+  /* Hide desktop-only sidebar content on mobile */
+  .sidebar-desktop-only {
+    display: none;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-toolbar-btn {
+    transition: none;
+  }
+}
+
+/* ============================================================================
+   Sidebar Interactive Button Styles
+   
+   Button styles used across sidebar components. These have sidebar- prefix
+   to avoid conflicts with main content buttons.
+   ============================================================================ */
+
+/* Link Button - Navigation links (RSS, collections, pages) */
+.sidebar-link-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--duration-fast) var(--easing-ease);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  min-height: var(--touch-target-min-size);
+  width: 100%;
+  text-align: left;
+}
+
+@media (hover: hover) {
+  .sidebar-link-button:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
+}
+
+.sidebar-link-button.active {
+  background: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis);
+  border-color: var(--color-purple-bright);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (hover: hover) {
+  .sidebar-link-button.active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
+}
+
+.sidebar-link-button svg {
+  flex-shrink: 0;
+}
+
+/* Content Button - Latest content items with metadata */
+.sidebar-content-button {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all var(--duration-fast) var(--easing-ease);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+@media (hover: hover) {
+  .sidebar-content-button:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
+}
+
+.sidebar-content-button.active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+}
+
+@media (hover: hover) {
+  .sidebar-content-button.active:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
+}
+
+.sidebar-content-button.active .sidebar-content-button-title {
+  color: var(--color-text-on-emphasis);
+  font-weight: var(--font-weight-semibold);
+}
+
+.sidebar-content-button.active .sidebar-content-button-meta,
+.sidebar-content-button.active .sidebar-content-button-meta time {
+  color: var(--color-text-emphasis);
+}
+
+.sidebar-content-button-title {
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-snug);
+  font-size: var(--font-size-sm);
+}
+
+.sidebar-content-button-meta {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.sidebar-content-button-meta-separator {
+  color: var(--color-text-tertiary);
+}
+
+/* Featured Link - Featured/highlighted content with accent */
+.sidebar-featured-link {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  text-decoration: none;
+  padding: var(--spacing-3);
+  background: var(--color-bg-default);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  border-left: 4px solid var(--color-purple-bright);
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  .sidebar-featured-link:hover {
+    background: var(--color-bg-emphasis);
+    border-color: var(--color-purple-medium);
+  }
+}
+
+.sidebar-featured-title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-snug);
+}
+
+.sidebar-featured-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}

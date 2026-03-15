@@ -1,0 +1,134 @@
+/* ============================================================================
+   About Page Component Styles
+   
+   Component-specific styling for About.razor page
+   Only About-specific styles (team grid layout)
+   Page layout uses global .page-without-sidebar from page-container.css
+   ============================================================================ */
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-4);
+    margin: 0px;
+    grid-auto-rows: 1fr;
+}
+
+.team-member {
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-4);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--spacing-3);
+    display: block;
+    border: 3px solid var(--color-purple-medium);
+}
+
+.team-member h3 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.team-role {
+    text-align: center;
+    color: var(--color-purple-bright);
+    font-weight: var(--font-weight-medium);
+    margin: 0 0 var(--spacing-3) 0;
+    font-size: var(--font-size-sm);
+}
+
+.team-bio {
+    line-height: var(--line-height-relaxed);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--spacing-4) 0;
+    font-size: var(--font-size-sm);
+    flex: 1;
+}
+
+.team-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    margin-top: auto;
+}
+
+.team-links a {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-1) var(--spacing-2);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-emphasis);
+    border: 1px solid var(--color-border-emphasis);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    .team-links a:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-on-emphasis);
+    }
+}
+
+.team-links .icon {
+    font-size: var(--font-size-lg);
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+}
+
+.discord-section {
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-4);
+}
+
+.discord-section p {
+    color: var(--color-text-secondary);
+    line-height: var(--line-height-relaxed);
+    margin: 0 0 var(--spacing-4) 0;
+}
+
+.discord-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+    background: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-bright);
+    border-radius: var(--radius-md);
+    color: var(--color-text-on-emphasis);
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-sm);
+    text-decoration: none;
+    transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+    .discord-link:hover {
+        background: var(--color-purple-medium);
+        border-color: var(--color-purple-bright);
+    }
+}

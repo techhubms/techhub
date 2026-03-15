@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Continuous AI for Accessibility: How GitHub Automates and Accelerates Inclusive Feedback"
-description: "This article provides a detailed, practitioner-focused look at how GitHub uses GitHub Copilot, GitHub Actions, and custom AI-driven workflows to transform accessibility feedback into resolved issues, improving both developer experience and inclusive product quality. The post explores the technical architecture, automation patterns, impact metrics, and community-driven continuous improvement methods supporting accessibility at scale within GitHub's development processes."
-author: "Carie Fisher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/continuous-ai-for-accessibility-how-github-transforms-feedback-into-inclusion/
+title: 'Continuous AI for Accessibility: How GitHub Automates and Accelerates Inclusive Feedback'
+author: Carie Fisher
+primary_section: github-copilot
+feed_name: GitHub Engineering Blog
 date: 2026-03-12 16:00:00 +00:00
-permalink: "/2026-03-12-Continuous-AI-for-Accessibility-How-GitHub-Automates-and-Accelerates-Inclusive-Feedback.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "Accessibility Engineering", "AI", "AI & ML", "AI in Accessibility", "Architecture & Optimization", "Coding", "Continuous Improvement", "Custom Instructions", "Developer Experience", "DevOps", "Engineering", "Event Driven Architecture", "GitHub Actions", "GitHub Copilot", "Issue Triage", "Metadata Automation", "News", "Open Source Development", "Prompt Engineering", "Social Impact", "User Experience", "User Feedback Systems", "WCAG", "Workflow Automation"]
-tags_normalized: ["accessibility", "accessibility engineering", "ai", "ai and ml", "ai in accessibility", "architecture and optimization", "coding", "continuous improvement", "custom instructions", "developer experience", "devops", "engineering", "event driven architecture", "github actions", "github copilot", "issue triage", "metadata automation", "news", "open source development", "prompt engineering", "social impact", "user experience", "user feedback systems", "wcag", "workflow automation"]
+tags:
+- Accessibility
+- Accessibility Engineering
+- AI
+- AI & ML
+- AI in Accessibility
+- Architecture & Optimization
+- Continuous Improvement
+- Custom Instructions
+- Developer Experience
+- DevOps
+- Engineering
+- Event Driven Architecture
+- GitHub Actions
+- GitHub Copilot
+- Issue Triage
+- Metadata Automation
+- News
+- Open Source Development
+- Prompt Engineering
+- Social Impact
+- User Experience
+- User Feedback Systems
+- WCAG
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Carie Fisher explains how GitHub leverages GitHub Copilot, AI automation, and developer-centric workflows to turn accessibility feedback into actionable, continuously resolved issues. The piece details technical approaches, architecture, and human-in-the-loop best practices for delivering more inclusive code.<!--excerpt_end-->
 
 # Continuous AI for Accessibility: How GitHub Automates and Accelerates Inclusive Feedback

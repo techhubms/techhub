@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Unlocking the Power of VS Code's Simple Browser Feature"
-description: "This video guides developers through the Simple Browser feature in Visual Studio Code, explaining how to leverage it for local development workflows, element inspection, AI integrations, and analyzing browser logs for errors. Presented by engineer Justin Chen, it highlights practical tips and upcoming enhancements to this built-in tool."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OqzC9b3ueX0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=OqzC9b3ueX0
+title: Unlocking the Power of VS Code's Simple Browser Feature
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-12-22 16:13:08 +00:00
-permalink: "/2025-12-22-Unlocking-the-Power-of-VS-Codes-Simple-Browser-Feature.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Integration", "Browser Logs", "Coding", "Developer Tools", "Element Inspection", "Error Debugging", "Local Development", "Productivity Tips", "Simple Browser", "Videos", "VS Code", "Web Development"]
-tags_normalized: ["ai", "ai integration", "browser logs", "coding", "developer tools", "element inspection", "error debugging", "local development", "productivity tips", "simple browser", "videos", "vs code", "web development"]
+tags:
+- AI Integration
+- Browser Logs
+- Developer Tools
+- Element Inspection
+- Error Debugging
+- Local Development
+- Productivity Tips
+- Simple Browser
+- VS Code
+- Web Development
+- AI
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Visual Studio Code’s Justin Chen introduces the Simple Browser feature, detailing its uses for web development, AI workflows, and error analysis, helping developers enhance productivity.<!--excerpt_end-->
 
 {% youtube OqzC9b3ueX0 %}

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Using the Plan Agent in VS Code for Step-by-Step Task Planning"
-description: "This video covers how developers can use the Plan agent in Visual Studio Code to break down and organize complex coding tasks step-by-step before starting any implementation. It demonstrates features to refine requirements and execute multi-step plans, helping developers clarify what needs to be done. The tutorial features James Montemagno and provides practical insights for leveraging this AI-powered tool in everyday development workflows."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xR3fuKtWGN0"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=xR3fuKtWGN0
+title: Using the Plan Agent in VS Code for Step-by-Step Task Planning
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-11-19 19:14:53 +00:00
-permalink: "/2025-11-19-Using-the-Plan-Agent-in-VS-Code-for-Step-by-Step-Task-Planning.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Tools", "Coding", "Copilot Chat", "Developer Productivity", "Implementation Strategy", "James Montemagno", "Microsoft", "Plan Agent", "Requirement Refinement", "Step By Step Planning", "Task Planning", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai tools", "coding", "copilot chat", "developer productivity", "implementation strategy", "james montemagno", "microsoft", "plan agent", "requirement refinement", "step by step planning", "task planning", "videos", "vs code"]
+tags:
+- AI Tools
+- Copilot Chat
+- Developer Productivity
+- Implementation Strategy
+- James Montemagno
+- Microsoft
+- Plan Agent
+- Requirement Refinement
+- Step By Step Planning
+- Task Planning
+- VS Code
+- AI
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 James Montemagno demonstrates the Plan agent in Visual Studio Code, showing developers how to break down complex tasks and refine requirements with AI assistance in this instructive video.<!--excerpt_end-->
 
 {% youtube xR3fuKtWGN0 %}
@@ -63,11 +72,11 @@ Explore detailed documentation:
 
 ## Connect
 
-- X: https://x.com/code
-- Bluesky: https://bsky.app/profile/vscode.dev
-- YouTube: https://youtube.com/code
-- LinkedIn: https://www.linkedin.com/showcase/104107263
-- GitHub: https://github.com/microsoft/vscode
+- X: <https://x.com/code>
+- Bluesky: <https://bsky.app/profile/vscode.dev>
+- YouTube: <https://youtube.com/code>
+- LinkedIn: <https://www.linkedin.com/showcase/104107263>
+- GitHub: <https://github.com/microsoft/vscode>
 
 ---
 

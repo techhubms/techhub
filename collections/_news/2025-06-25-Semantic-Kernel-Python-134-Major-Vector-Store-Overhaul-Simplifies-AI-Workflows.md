@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Semantic Kernel Python 1.34: Major Vector Store Overhaul Simplifies AI Workflows"
-description: "Semantic Kernel Python 1.34 introduces a redesigned vector store API, unifying field models, enabling automatic embeddings, improving filtering, and streamlining coding for AI applications. The release enhances developer experience, offers future-proof architecture, and improves maintainability while aligning with the .NET SDK. Deprecated components are also announced."
-author: "Eduard van Valkenburg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-gets-a-major-vector-store-upgrade/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-python-gets-a-major-vector-store-upgrade/
+title: 'Semantic Kernel Python 1.34: Major Vector Store Overhaul Simplifies AI Workflows'
+author: Eduard van Valkenburg
+feed_name: Microsoft DevBlog
 date: 2025-06-25 00:40:21 +00:00
-permalink: "/2025-06-25-Semantic-Kernel-Python-134-Major-Vector-Store-Overhaul-Simplifies-AI-Workflows.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "API", "Automatic Embedding", "Coding", "Dataclass", "Developer Experience", "Embedding", "Filtering", "Hybrid Search", "Memory Collection", "Migration", "News", "OpenAITextEmbedding", "Python", "Semantic Kernel", "Vector Store"]
-tags_normalized: ["ai", "api", "automatic embedding", "coding", "dataclass", "developer experience", "embedding", "filtering", "hybrid search", "memory collection", "migration", "news", "openaitextembedding", "python", "semantic kernel", "vector store"]
+tags:
+- API
+- Automatic Embedding
+- Dataclass
+- Developer Experience
+- Embedding
+- Filtering
+- Hybrid Search
+- Memory Collection
+- Migration
+- OpenAITextEmbedding
+- Python
+- Semantic Kernel
+- Vector Store
+- AI
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Authored by Eduard van Valkenburg, this detailed news highlights the major enhancements in Semantic Kernel Python’s vector store with version 1.34, focusing on improved developer experience, unified APIs, and streamlined vector data workflows for AI projects.<!--excerpt_end-->
 
 # Semantic Kernel Python Gets a Major Vector Store Upgrade (v1.34)

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Differences Between GitHub Copilot GPT-5 Premium and Free Copilot Microsoft GPT-5"
-description: "This discussion explores why GitHub Copilot requires Premium Requests for GPT-5 usage while the GPT-5 model at copilot.microsoft.com is offered for free. Community members compare product capabilities, limitations, model performance, rate limits, and speculate about technical and contractual differences between the two services. The conversation includes practical experiences using both interfaces, especially for coding tasks, and highlights integration nuances and business considerations."
-author: "Worth_Word_1314"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mkdvmj/gpt5_github_premium_requests_vs_free_gpt5_at/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkdvmj/gpt5_github_premium_requests_vs_free_gpt5_at/
+title: Differences Between GitHub Copilot GPT-5 Premium and Free Copilot Microsoft GPT-5
+author: Worth_Word_1314
+feed_name: Reddit Github Copilot
 date: 2025-08-07 22:18:20 +00:00
-permalink: "/2025-08-07-Differences-Between-GitHub-Copilot-GPT-5-Premium-and-Free-Copilot-Microsoft-GPT-5.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Code Generation", "Coding Productivity", "Community", "Copilot.microsoft.com", "GitHub Copilot", "GPT 5", "IDE Integration", "Microsoft", "Model Comparison", "OpenAI", "Premium Requests", "Rate Limits", "Repo Awareness", "VS Code Integration"]
-tags_normalized: ["ai", "code generation", "coding productivity", "community", "copilotdotmicrosoftdotcom", "github copilot", "gpt 5", "ide integration", "microsoft", "model comparison", "openai", "premium requests", "rate limits", "repo awareness", "vs code integration"]
+tags:
+- Code Generation
+- Coding Productivity
+- Copilot.microsoft.com
+- GPT 5
+- IDE Integration
+- Microsoft
+- Model Comparison
+- OpenAI
+- Premium Requests
+- Rate Limits
+- Repo Awareness
+- VS Code Integration
+- AI
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Worth_Word_1314 and fellow community members discuss why GitHub Copilot GPT-5 charges for premium requests, while GPT-5 at copilot.microsoft.com is free, examining feature differences, product strategy, and user experience.<!--excerpt_end-->
 
 # Differences Between GitHub Copilot GPT-5 Premium and Free Copilot Microsoft GPT-5

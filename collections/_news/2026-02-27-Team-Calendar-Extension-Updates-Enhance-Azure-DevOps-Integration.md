@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Team Calendar Extension Updates Enhance Azure DevOps Integration"
-description: "This news post announces significant updates to the Team Calendar extension for Azure DevOps. The update brings improved visual consistency, better UI/UX elements, new search features, customizable event categories, and enhanced navigation. Teams using Azure DevOps for project management will find the updated extension easier to use, more flexible, and closely aligned with the Azure DevOps design language."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/updates-to-team-calendar-extension/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/updates-to-team-calendar-extension/
+title: Team Calendar Extension Updates Enhance Azure DevOps Integration
+author: Dan Hellem
+primary_section: azure
+feed_name: Microsoft DevOps Blog
 date: 2026-02-27 18:30:30 +00:00
-permalink: "/2026-02-27-Team-Calendar-Extension-Updates-Enhance-Azure-DevOps-Integration.html"
-categories: ["Azure", "DevOps"]
-tags: ["#devops", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Calendar Integration", "Customizable Events", "DevOps", "Event Categories", "Extension Updates", "Extensions", "Marketplace", "Microsoft Extensions", "News", "Productivity Tools", "Project Management", "Side Panel", "Team Calendar Extension", "Team Navigation", "UI Improvements"]
-tags_normalized: ["sharpdevops", "azure", "azure and cloud", "azure boards", "azure devops", "calendar integration", "customizable events", "devops", "event categories", "extension updates", "extensions", "marketplace", "microsoft extensions", "news", "productivity tools", "project management", "side panel", "team calendar extension", "team navigation", "ui improvements"]
+tags:
+- '#devops'
+- Azure
+- Azure & Cloud
+- Azure Boards
+- Azure DevOps
+- Calendar Integration
+- Customizable Events
+- DevOps
+- Event Categories
+- Extension Updates
+- Extensions
+- Marketplace
+- Microsoft Extensions
+- News
+- Productivity Tools
+- Project Management
+- Side Panel
+- Team Calendar Extension
+- Team Navigation
+- UI Improvements
+section_names:
+- azure
+- devops
 ---
-
 Dan Hellem details major usability and design improvements in the Team Calendar extension for Azure DevOps, focusing on a better user experience and enhanced team management.<!--excerpt_end-->
 
 # Team Calendar Extension Updates Enhance Azure DevOps Integration

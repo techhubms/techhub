@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Computer-Using Agents Deliver Enhanced Secure UI Automation at Scale in Microsoft Copilot Studio"
-description: "This news post highlights significant updates to computer-using agents (CUAs) in Microsoft Copilot Studio, enabling more secure, scalable UI automation across web and desktop apps. It covers multi-model flexibility, integration with Azure Key Vault for credential management, improved session monitoring and observability, managed Cloud PC infrastructure, and best practices for combining CUAs with existing RPA workflows. The article guides users on getting started with these new capabilities and emphasizes ongoing development shaped by user feedback."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-using-agents-now-deliver-more-secure-ui-automation-at-scale/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/microsoft-copilot/blog/copilot-studio/computer-using-agents-now-deliver-more-secure-ui-automation-at-scale/
+title: Computer-Using Agents Deliver Enhanced Secure UI Automation at Scale in Microsoft Copilot Studio
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-25 21:37:10 +00:00
-permalink: "/2026-02-25-Computer-Using-Agents-Deliver-Enhanced-Secure-UI-Automation-at-Scale-in-Microsoft-Copilot-Studio.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Audit Logs", "Authentication", "Azure", "Azure Key Vault", "Cloud PC", "Company News", "Computer Using Agents", "Copilot Studio", "Governance", "Intune", "Microsoft Entra ID", "Microsoft Power Platform", "News", "Power Automate", "RPA", "Security", "Session Replay", "UI Automation", "Windows 365 For Agents"]
-tags_normalized: ["ai", "audit logs", "authentication", "azure", "azure key vault", "cloud pc", "company news", "computer using agents", "copilot studio", "governance", "intune", "microsoft entra id", "microsoft power platform", "news", "power automate", "rpa", "security", "session replay", "ui automation", "windows 365 for agents"]
+tags:
+- AI
+- Audit Logs
+- Authentication
+- Azure
+- Azure Key Vault
+- Cloud PC
+- Company News
+- Computer Using Agents
+- Copilot Studio
+- Governance
+- Intune
+- Microsoft Entra ID
+- Microsoft Power Platform
+- News
+- Power Automate
+- RPA
+- Security
+- Session Replay
+- UI Automation
+- Windows 365 For Agents
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke explores recent advancements in Microsoft Copilot Studio’s computer-using agents, focusing on secure, scalable UI automation through AI, Azure integration, and enterprise-grade security features.<!--excerpt_end-->
 
 # Computer-Using Agents Deliver Enhanced Secure UI Automation at Scale in Microsoft Copilot Studio

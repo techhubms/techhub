@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Is async file I/O on Linux a lie?"
-description: "FergoTheGreat raises concerns about the true behavior of async file I/O on Linux with .NET. Despite using async options like FileOptions.Asyncronous or useAsync = true, and seeing file handles report .IsAsync == true, Linux handles do not appear to have O_ASYNC or O_NONBLOCK flags when inspected. This suggests underlying system behavior may differ from expectations."
-author: "FergoTheGreat"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mh1hmv/is_async_file_io_on_linux_a_lie/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+external_url: https://www.reddit.com/r/dotnet/comments/1mh1hmv/is_async_file_io_on_linux_a_lie/
+title: Is async file I/O on Linux a lie?
+author: FergoTheGreat
+feed_name: Reddit DotNet
 date: 2025-08-04 02:19:06 +00:00
-permalink: "/2025-08-04-Is-async-file-IO-on-Linux-a-lie.html"
-categories: ["Coding"]
-tags: [".NET", "Async IO", "Coding", "Community", "F GETFL", "Fcntl", "File.OpenHandle", "FileOptions.Asynchronous", "FileStream", "Linux", "O ASYNC", "O NONBLOCK", "SafeFileHandle", "Useasync"]
-tags_normalized: ["dotnet", "async io", "coding", "community", "f getfl", "fcntl", "filedotopenhandle", "fileoptionsdotasynchronous", "filestream", "linux", "o async", "o nonblock", "safefilehandle", "useasync"]
+tags:
+- .NET
+- Async IO
+- F GETFL
+- Fcntl
+- File.OpenHandle
+- FileOptions.Asynchronous
+- FileStream
+- Linux
+- O ASYNC
+- O NONBLOCK
+- SafeFileHandle
+- Useasync
+- Community
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this Reddit post, FergoTheGreat examines the behavior of asynchronous file I/O in .NET on Linux, noting possible discrepancies between .NET's async indicators and actual Linux kernel flags.<!--excerpt_end-->
 
 ## Exploring Async File I/O Behavior in .NET on Linux

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Vector Data in .NET – Building Blocks for AI Part 2"
-description: "This article by Jeremy Likness presents Microsoft.Extensions.VectorData, a library that unifies access to vector databases for .NET developers. It demonstrates semantic search, embeddings, and Retrieval-Augmented Generation (RAG) using a provider-agnostic interface, supporting databases such as Qdrant, Azure AI Search, Cosmos DB, and more. Key concepts include vector storage abstraction, automatic embedding generation, and consistent coding patterns, illustrated with C# examples."
-author: "Jeremy Likness"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/vector-data-in-dotnet-building-blocks-for-ai-part-2/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/vector-data-in-dotnet-building-blocks-for-ai-part-2/
+title: Vector Data in .NET – Building Blocks for AI Part 2
+author: Jeremy Likness
+primary_section: ai
+feed_name: Microsoft .NET Blog
 date: 2026-02-26 18:00:00 +00:00
-permalink: "/2026-02-26-Vector-Data-in-NET-Building-Blocks-for-AI-Part-2.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Abstraction Layer", "AI", "AI Development", "Azure AI Search", "C#", "Coding", "Cosmos DB", "Data Model", "Document Store", "Embeddings", "LINQ", "Microsoft.Extensions.VectorData", "News", "OpenAI", "PostgreSQL", "Qdrant", "Rag", "Redis", "Retrieval Augmented Generation", "Semantic Search", "SQL Server", "Vector Database", "Vector Search", "VectorStore"]
-tags_normalized: ["dotnet", "abstraction layer", "ai", "ai development", "azure ai search", "csharp", "coding", "cosmos db", "data model", "document store", "embeddings", "linq", "microsoftdotextensionsdotvectordata", "news", "openai", "postgresql", "qdrant", "rag", "redis", "retrieval augmented generation", "semantic search", "sql server", "vector database", "vector search", "vectorstore"]
+tags:
+- .NET
+- Abstraction Layer
+- AI
+- AI Development
+- Azure AI Search
+- C#
+- Cosmos DB
+- Data Model
+- Document Store
+- Embeddings
+- LINQ
+- Microsoft.Extensions.VectorData
+- News
+- OpenAI
+- PostgreSQL
+- Qdrant
+- Rag
+- Redis
+- Retrieval Augmented Generation
+- Semantic Search
+- SQL Server
+- Vector Database
+- Vector Search
+- VectorStore
+section_names:
+- ai
+- dotnet
 ---
-
 Jeremy Likness explores unified vector database access in .NET using Microsoft.Extensions.VectorData, showing how to implement semantic search and RAG with embeddings in C# applications.<!--excerpt_end-->
 
 # Vector Data in .NET – Building Blocks for AI Part 2

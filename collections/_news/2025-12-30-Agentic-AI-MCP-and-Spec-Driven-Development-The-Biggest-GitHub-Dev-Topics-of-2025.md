@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Agentic AI, MCP, and Spec-Driven Development: The Biggest GitHub Dev Topics of 2025"
-description: "This roundup from The GitHub Blog’s editor, Natalie Guevara, highlights 2025’s most impactful technical trends for developers: the rise of agentic AI tools, deep dives into GitHub Copilot’s agent mode and coding agent, the Model Context Protocol (MCP) for AI tool interoperability, and the adoption of spec-driven development with open source toolkits. The post features product announcements, guidance on leveraging new AI-powered workflows, and tools that center specifications in the dev process, as well as links to relevant interviews and security discussions."
-author: "Natalie Guevara"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/developer-skills/agentic-ai-mcp-and-spec-driven-development-top-blog-posts-of-2025/
+title: 'Agentic AI, MCP, and Spec-Driven Development: The Biggest GitHub Dev Topics of 2025'
+author: Natalie Guevara
+feed_name: The GitHub Blog
 date: 2025-12-30 17:20:10 +00:00
-permalink: "/2025-12-30-Agentic-AI-MCP-and-Spec-Driven-Development-The-Biggest-GitHub-Dev-Topics-of-2025.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentic AI", "AI", "AI & ML", "AI Agents", "AI Workflows", "Automated Coding", "Coding", "Coding Agent", "Developer Productivity", "Developer Skills", "DevOps", "GitHub", "GitHub Copilot", "MCP", "News", "Open Source", "Spec Driven Development", "Spec Kit", "VS Code"]
-tags_normalized: ["agent mode", "agentic ai", "ai", "ai and ml", "ai agents", "ai workflows", "automated coding", "coding", "coding agent", "developer productivity", "developer skills", "devops", "github", "github copilot", "mcp", "news", "open source", "spec driven development", "spec kit", "vs code"]
+tags:
+- Agent Mode
+- Agentic AI
+- AI & ML
+- AI Agents
+- AI Workflows
+- Automated Coding
+- Coding Agent
+- Developer Productivity
+- Developer Skills
+- GitHub
+- MCP
+- Open Source
+- Spec Driven Development
+- Spec Kit
+- VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Natalie Guevara spotlights the most significant GitHub Blog posts of 2025, covering agentic AI, GitHub Copilot enhancements, the Model Context Protocol, and spec-driven development for software engineers.<!--excerpt_end-->
 
 # Agentic AI, MCP, and Spec-Driven Development: The Biggest GitHub Dev Topics of 2025

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "AI-Powered Agent Platform Helps Munich Fire Department Speed Up Patient Transfers"
-description: "This announcement highlights how the Munich Fire Department in Germany has implemented Microsoft's AI-based agent platform to accelerate patient transfers and improve non-emergency dispatch operations. The post discusses real-world digital transformation in public safety, the benefits of AI in operational workflows, and governance considerations for mission-critical deployments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_how-the-munich-fire-departments-ai-operator-activity-7432465483335106560-x8Vj"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_how-the-munich-fire-departments-ai-operator-activity-7432465483335106560-x8Vj
+title: AI-Powered Agent Platform Helps Munich Fire Department Speed Up Patient Transfers
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-25 17:09:54 +00:00
-permalink: "/2026-02-25-AI-Powered-Agent-Platform-Helps-Munich-Fire-Department-Speed-Up-Patient-Transfers.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Applications", "AI Governance", "AI in Public Safety", "Company News", "Digital Transformation", "Emergency Response Technology", "LinkedIn Post", "Microsoft", "Microsoft Agent Platform", "Munich Fire Department", "News", "Non Emergency Dispatch", "Operational Workflows", "Patient Transfer Optimization", "Public Sector Innovation"]
-tags_normalized: ["ai", "ai adoption", "ai applications", "ai governance", "ai in public safety", "company news", "digital transformation", "emergency response technology", "linkedin post", "microsoft", "microsoft agent platform", "munich fire department", "news", "non emergency dispatch", "operational workflows", "patient transfer optimization", "public sector innovation"]
+tags:
+- AI
+- AI Adoption
+- AI Applications
+- AI Governance
+- AI in Public Safety
+- Company News
+- Digital Transformation
+- Emergency Response Technology
+- LinkedIn Post
+- Microsoft
+- Microsoft Agent Platform
+- Munich Fire Department
+- News
+- Non Emergency Dispatch
+- Operational Workflows
+- Patient Transfer Optimization
+- Public Sector Innovation
+section_names:
+- ai
 ---
-
 stclarke curates insights on the Munich Fire Department's use of Microsoft's AI agent platform, showcasing how artificial intelligence accelerates patient transfers and enhances emergency dispatch operations.<!--excerpt_end-->
 
 # AI-Powered Agent Platform Helps Munich Fire Department Speed Up Patient Transfers

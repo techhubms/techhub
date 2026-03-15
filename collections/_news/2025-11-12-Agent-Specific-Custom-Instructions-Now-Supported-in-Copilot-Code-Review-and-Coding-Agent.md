@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent"
-description: "This update explains how developers can leverage the new excludeAgent property in Copilot code review and Copilot coding agent to create agent-specific instructions within .instructions.md files. Detailed usage guides for customizing Copilot behavior at the repository level are provided, enabling precise control over agent interactions. Additional improvements for custom instructions are also described."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-11-12-copilot-code-review-and-coding-agent-now-support-agent-specific-instructions
+title: Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-11-12 21:27:42 +00:00
-permalink: "/2025-11-12-Agent-Specific-Custom-Instructions-Now-Supported-in-Copilot-Code-Review-and-Coding-Agent.html"
-categories: ["AI", "GitHub Copilot"]
-tags: [".instructions.md", "Agent Specific Configuration", "AI", "Applyto Property", "Bug Fixes", "Code Automation", "Copilot", "Copilot Agents", "Copilot Code Review", "Copilot Coding Agent", "Custom Instructions", "Developer Workflow", "Documentation", "Excludeagent Property", "GitHub Copilot", "GitHub Repository", "Improvement", "News", "Path Globs"]
-tags_normalized: ["dotinstructionsdotmd", "agent specific configuration", "ai", "applyto property", "bug fixes", "code automation", "copilot", "copilot agents", "copilot code review", "copilot coding agent", "custom instructions", "developer workflow", "documentation", "excludeagent property", "github copilot", "github repository", "improvement", "news", "path globs"]
+tags:
+- .instructions.md
+- Agent Specific Configuration
+- Applyto Property
+- Bug Fixes
+- Code Automation
+- Copilot
+- Copilot Agents
+- Copilot Code Review
+- Copilot Coding Agent
+- Custom Instructions
+- Developer Workflow
+- Documentation
+- Excludeagent Property
+- GitHub Repository
+- Improvement
+- Path Globs
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison describes new features for GitHub Copilot, focusing on agent-specific instructions via the excludeAgent property, which enhances control over code review and coding agent behavior for developers.<!--excerpt_end-->
 
 # Agent-Specific Custom Instructions Now Supported in Copilot Code Review and Coding Agent
@@ -28,8 +42,8 @@ Developers have already been using custom instruction files located in the `.git
 ## Introducing Agent-Specific Instructions with `excludeAgent`
 
 - The new `excludeAgent` property in the frontmatter of `.instructions.md` files allows instructions to be omitted for designated agents.
-    - `excludeAgent: "code-review"` prevents a file from being used in Copilot code review.
-    - `excludeAgent: "coding-agent"` restricts usage from Copilot coding agent.
+  - `excludeAgent: "code-review"` prevents a file from being used in Copilot code review.
+  - `excludeAgent: "coding-agent"` restricts usage from Copilot coding agent.
 - If `excludeAgent` is not specified, the instructions file applies to all Copilot agents by default.
 - This feature empowers developers to offer focused guidance for each agent, minimizing unwanted overlap and clarifying instructions context.
 

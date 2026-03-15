@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Deploying Hybrid Logic Apps with Azure Arc on AKS Using Jumpstart Templates"
-description: "This guide introduces a streamlined approach to deploying Azure Logic Apps (Standard) in a hybrid environment using Azure Arc-enabled Azure Kubernetes Service (AKS) clusters. Leveraging the Azure Arc Jumpstart template, practitioners can automate the setup of a complete integration environment with a single command. The solution enables enterprise-ready, mission-critical integration scenarios that span on-premises, private cloud, or third-party cloud infrastructure. Core components include AKS, Azure Arc, ACA extension, custom locations, Azure SQL Server, Azure Storage, and the hybrid Logic Apps resource. Community feedback is actively sought for ongoing enhancements."
-author: "Shree_Divya_M_V"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-arc-jumpstart-template-for-hybrid-logic-apps-deployment/ba-p/4493996"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/azure-arc-jumpstart-template-for-hybrid-logic-apps-deployment/ba-p/4493996
+title: Deploying Hybrid Logic Apps with Azure Arc on AKS Using Jumpstart Templates
+author: Shree_Divya_M_V
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-10 03:43:20 +00:00
-permalink: "/2026-02-10-Deploying-Hybrid-Logic-Apps-with-Azure-Arc-on-AKS-Using-Jumpstart-Templates.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Automation", "Azure", "Azure Arc", "Azure Logic Apps Standard", "Azure SQL Server", "Azure Storage Account", "Community", "Community Feedback", "Custom Location", "Deployment Script", "DevOps", "Enterprise Integration", "Hybrid Deployment", "Integration", "Jumpstart Template", "Kubernetes"]
-tags_normalized: ["aks", "automation", "azure", "azure arc", "azure logic apps standard", "azure sql server", "azure storage account", "community", "community feedback", "custom location", "deployment script", "devops", "enterprise integration", "hybrid deployment", "integration", "jumpstart template", "kubernetes"]
+tags:
+- AKS
+- Automation
+- Azure
+- Azure Arc
+- Azure Logic Apps Standard
+- Azure SQL Server
+- Azure Storage Account
+- Community
+- Community Feedback
+- Custom Location
+- Deployment Script
+- DevOps
+- Enterprise Integration
+- Hybrid Deployment
+- Integration
+- Jumpstart Template
+- Kubernetes
+section_names:
+- azure
+- devops
 ---
-
 Shree_Divya_M_V shares an actionable overview for deploying Azure Logic Apps (Standard) in a hybrid AKS environment using Azure Arc Jumpstart templates, focusing on automation and enterprise integration.<!--excerpt_end-->
 
 # Deploying Hybrid Logic Apps with Azure Arc on AKS Using Jumpstart Templates

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: ".NET 11 Preview 2: New Features and Improvements Across Runtime, SDK, and Libraries"
-description: ".NET 11 Preview 2 introduces significant updates and performance enhancements across the entire .NET ecosystem. This release covers improvements in the runtime, SDK, libraries, ASP.NET Core, Blazor, .NET MAUI, Entity Framework Core, and more. Developers can expect better performance, new APIs, expanded support, and updates to popular tools and frameworks, enabling faster and more efficient application development for web, desktop, mobile, and cloud scenarios."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-11-preview-2/
+title: '.NET 11 Preview 2: New Features and Improvements Across Runtime, SDK, and Libraries'
+author: .NET Team
+primary_section: dotnet
+feed_name: Microsoft .NET Blog
 date: 2026-03-10 20:35:00 +00:00
-permalink: "/2026-03-10-NET-11-Preview-2-New-Features-and-Improvements-Across-Runtime-SDK-and-Libraries.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 11", "ASP.NET Core", "Blazor", "C#", "Coding", "Container Images", "EF Core", "F#", "Featured", "JIT", "LINQ", "MAUI", "News", "OpenTelemetry", "Runtime", "SDK", "Visual Basic", "VS", "Windows Forms", "WPF"]
-tags_normalized: ["dotnet", "dotnet 11", "aspdotnet core", "blazor", "csharp", "coding", "container images", "ef core", "fsharp", "featured", "jit", "linq", "maui", "news", "opentelemetry", "runtime", "sdk", "visual basic", "vs", "windows forms", "wpf"]
+tags:
+- .NET
+- .NET 11
+- ASP.NET Core
+- Blazor
+- C#
+- Container Images
+- EF Core
+- F#
+- Featured
+- JIT
+- LINQ
+- MAUI
+- News
+- OpenTelemetry
+- Runtime
+- SDK
+- Visual Basic
+- VS
+- Windows Forms
+- WPF
+section_names:
+- dotnet
 ---
-
 The .NET Team announces the availability of .NET 11 Preview 2, highlighting new features, performance improvements, and expanded support across libraries, runtime, SDK, ASP.NET Core, Blazor, .NET MAUI, and more for developers.<!--excerpt_end-->
 
 # .NET 11 Preview 2: New Features and Improvements Across Runtime, SDK, and Libraries

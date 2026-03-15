@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "OpenAI Codex Now Available in VS Code with GitHub Copilot Pro+"
-description: "This video introduces the integration of OpenAI Codex within Visual Studio Code, accessible to users with a GitHub Copilot Pro+ subscription. It demonstrates how to leverage Codex alongside other AI coding agents inside VS Code, enabling advanced code completions directly from the editor."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=I51wun3OnmQ"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=I51wun3OnmQ
+title: OpenAI Codex Now Available in VS Code with GitHub Copilot Pro+
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-10-28 17:02:52 +00:00
-permalink: "/2025-10-28-OpenAI-Codex-Now-Available-in-VS-Code-with-GitHub-Copilot-Pro.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Code Completion", "AI Coding Tools", "Code Agents", "Code Suggestions", "Coding", "Developer Tools", "GitHub Copilot", "GitHub Copilot Pro+", "OpenAI Codex", "Productivity Tools", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai code completion", "ai coding tools", "code agents", "code suggestions", "coding", "developer tools", "github copilot", "github copilot proplus", "openai codex", "productivity tools", "videos", "vs code"]
+tags:
+- AI Code Completion
+- AI Coding Tools
+- Code Agents
+- Code Suggestions
+- Developer Tools
+- GitHub Copilot Pro+
+- OpenAI Codex
+- Productivity Tools
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Visual Studio Code highlights OpenAI Codex integration with GitHub Copilot Pro+ in this video, showcasing advanced AI coding capabilities for developers.<!--excerpt_end-->
 
 {% youtube I51wun3OnmQ %}

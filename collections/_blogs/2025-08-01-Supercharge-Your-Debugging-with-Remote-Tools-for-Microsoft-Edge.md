@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Supercharge Your Debugging with Remote Tools for Microsoft Edge"
-description: "An in-depth guide to Remote Tools for Microsoft Edge, demonstrating how developers can leverage these utilities for remote debugging across devices, including IoT, virtual machines, Xbox, and HoloLens. The post covers setup instructions, features such as WebView2 debugging, security considerations, and practical scenarios developers face when debugging web apps on diverse platforms."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/supercharge-your-debugging-with-remote-tools-for-microsoft-edge/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/supercharge-your-debugging-with-remote-tools-for-microsoft-edge/
+title: Supercharge Your Debugging with Remote Tools for Microsoft Edge
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-08-01 18:10:17 +00:00
-permalink: "/2025-08-01-Supercharge-Your-Debugging-with-Remote-Tools-for-Microsoft-Edge.html"
-categories: ["Coding"]
-tags: ["Blogs", "Chromium", "Coding", "Cross Device Debugging", "DevTools", "Edge", "Edge DevTools Protocol", "HoloLens", "IoT Development", "Microsoft Edge", "Microsoft General", "Remote Debugging", "Remote Tools", "Security Best Practices", "Virtual Machines", "Web Development", "WebView2", "Windows 10", "Windows 11", "Xbox Development"]
-tags_normalized: ["blogs", "chromium", "coding", "cross device debugging", "devtools", "edge", "edge devtools protocol", "hololens", "iot development", "microsoft edge", "microsoft general", "remote debugging", "remote tools", "security best practices", "virtual machines", "web development", "webview2", "windows 10", "windows 11", "xbox development"]
+tags:
+- Chromium
+- Cross Device Debugging
+- DevTools
+- Edge
+- Edge DevTools Protocol
+- HoloLens
+- IoT Development
+- Microsoft Edge
+- Microsoft General
+- Remote Debugging
+- Remote Tools
+- Security Best Practices
+- Virtual Machines
+- Web Development
+- WebView2
+- Windows 10
+- Windows 11
+- Xbox Development
+- Blogs
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Dellenny introduces Remote Tools for Microsoft Edge, showing developers how to set up and use remote debugging across devices like IoT, Xbox, and virtual machines.<!--excerpt_end-->
 
 # Supercharge Your Debugging with Remote Tools for Microsoft Edge
@@ -63,7 +77,7 @@ Remote Tools support Edge on Xbox and HoloLens, so you can debug web experiences
 
 1. **Enable Remote Debugging**
    - Start Edge on the remote device with the `--remote-debugging-port=<PORT>` flag. Example:
-   
+
      ```bash
      msedge --remote-debugging-port=9222
      ```

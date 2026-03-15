@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Beyond Prompts: Agentic AI Workflows with GitHub Copilot SDK"
-description: "This article by Gwen Davis explores the paradigm shift in AI application design—from simple prompt-based interactions to advanced, programmable execution using the GitHub Copilot SDK. It details how developers can embed agentic workflows directly into applications, leveraging structured context and runtime integration well beyond the traditional IDE environment."
-author: "Gwen Davis"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/the-era-of-ai-as-text-is-over-execution-is-the-new-interface/
+title: 'Beyond Prompts: Agentic AI Workflows with GitHub Copilot SDK'
+author: Gwen Davis
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-10 20:16:01 +00:00
-permalink: "/2026-03-10-Beyond-Prompts-Agentic-AI-Workflows-with-GitHub-Copilot-SDK.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Workflow", "AI", "AI & ML", "AI Execution", "Application Integration", "Automation", "Branching Out", "Coding", "Copilot CLI", "Developer Tools", "Error Recovery", "Event Driven Systems", "Generative AI", "GitHub Copilot", "GitHub Copilot SDK", "MCP", "News", "Planning Engine", "Runtime Context", "Software Architecture", "Tool Integration"]
-tags_normalized: ["agentic workflow", "ai", "ai and ml", "ai execution", "application integration", "automation", "branching out", "coding", "copilot cli", "developer tools", "error recovery", "event driven systems", "generative ai", "github copilot", "github copilot sdk", "mcp", "news", "planning engine", "runtime context", "software architecture", "tool integration"]
+tags:
+- Agentic Workflow
+- AI
+- AI & ML
+- AI Execution
+- Application Integration
+- Automation
+- Branching Out
+- Copilot CLI
+- Developer Tools
+- Error Recovery
+- Event Driven Systems
+- Generative AI
+- GitHub Copilot
+- GitHub Copilot SDK
+- MCP
+- News
+- Planning Engine
+- Runtime Context
+- Software Architecture
+- Tool Integration
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Gwen Davis explains how the GitHub Copilot SDK brings agentic execution directly into applications, allowing developers to move beyond text-based prompts and orchestrate complex AI-driven workflows.<!--excerpt_end-->
 
 # Beyond Prompts: Agentic AI Workflows with GitHub Copilot SDK

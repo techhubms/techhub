@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites"
-description: "This post provides an in-depth explanation of the latest changes to Azure App Service Managed Certificates (ASMC) as of October and November 2025. It outlines how HTTP token validation works, the updated support for sites not publicly accessible, exceptions, unsupported scenarios, and steps for testing eligibility. Key considerations for Azure App Service administrators and practitioners are discussed, focusing on maintaining secure, validated configurations without needing broad public access."
-author: "YutangLin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/follow-up-to-important-changes-to-app-service-managed/ba-p/4466120
+title: 'October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites'
+author: YutangLin
+feed_name: Microsoft Tech Community
 date: 2025-11-03 15:30:00 +00:00
-permalink: "/2025-11-03-October-2025-Update-App-Service-Managed-Certificates-Support-for-Non-Publicly-Accessible-Sites.html"
-categories: ["Azure", "Security"]
-tags: ["App Service Managed Certificates", "ASMC", "Azure", "Azure App Service", "Azure Front Ends", "Azure Security", "Certificate Issuance", "Certificate Renewal", "Community", "DigiCert", "DNS", "Domain Validation", "HTTP Token Validation", "Platform Updates", "Private Endpoints", "Security", "Traffic Manager", "Web Apps"]
-tags_normalized: ["app service managed certificates", "asmc", "azure", "azure app service", "azure front ends", "azure security", "certificate issuance", "certificate renewal", "community", "digicert", "dns", "domain validation", "http token validation", "platform updates", "private endpoints", "security", "traffic manager", "web apps"]
+tags:
+- App Service Managed Certificates
+- ASMC
+- Azure App Service
+- Azure Front Ends
+- Azure Security
+- Certificate Issuance
+- Certificate Renewal
+- DigiCert
+- DNS
+- Domain Validation
+- HTTP Token Validation
+- Platform Updates
+- Private Endpoints
+- Traffic Manager
+- Web Apps
+- Azure
+- Security
+- Community
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 YutangLin summarizes the latest Azure App Service Managed Certificates (ASMC) changes as of October 2025, emphasizing new support for non-publicly accessible sites and key requirements for successful certificate issuance.<!--excerpt_end-->
 
 # October 2025 Update: App Service Managed Certificates Support for Non-Publicly Accessible Sites

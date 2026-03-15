@@ -1,20 +1,49 @@
----
-layout: "post"
-title: "Azure Functions Ignite 2025: Flex Consumption, MCP Servers, Agents, OpenTelemetry, and More"
-description: "This comprehensive update by paulyuk highlights the latest innovations in Azure Functions for 2025, including Flex Consumption plan upgrades, AI agent scenarios with MCP servers, integration with Microsoft Agent Framework and Durable Functions, enhanced security and networking, support for .NET 10, Java 25, Node.js 24, and native OpenTelemetry observability. The content provides actionable guidance for building resilient, secure, and scalable serverless applications using Microsoft technologies."
-author: "paulyuk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2025-update/ba-p/4469815"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-functions-ignite-2025-update/ba-p/4469815
+title: 'Azure Functions Ignite 2025: Flex Consumption, MCP Servers, Agents, OpenTelemetry, and More'
+author: paulyuk
+feed_name: Microsoft Tech Community
 date: 2025-11-18 17:01:52 +00:00
-permalink: "/2025-11-18-Azure-Functions-Ignite-2025-Flex-Consumption-MCP-Servers-Agents-OpenTelemetry-and-More.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: [".NET 10", "Agentic Workloads", "AI", "Aspire", "Azure", "Azure Functions", "Azure Monitor", "C#", "Cloud Security", "Coding", "Community", "Custom Handlers", "DevOps", "Durable Functions", "Elastic Premium", "Flex Consumption", "Identity Management", "Java 25", "MCP", "MCP Server", "Microsoft Agent Framework", "ML", "Node.js 24", "OpenTelemetry", "Python", "Rolling Updates", "Security", "Serverless", "TypeScript", "VNET Networking"]
-tags_normalized: ["dotnet 10", "agentic workloads", "ai", "aspire", "azure", "azure functions", "azure monitor", "csharp", "cloud security", "coding", "community", "custom handlers", "devops", "durable functions", "elastic premium", "flex consumption", "identity management", "java 25", "mcp", "mcp server", "microsoft agent framework", "ml", "nodedotjs 24", "opentelemetry", "python", "rolling updates", "security", "serverless", "typescript", "vnet networking"]
+tags:
+- .NET 10
+- Agentic Workloads
+- Aspire
+- Azure Functions
+- Azure Monitor
+- C#
+- Cloud Security
+- Custom Handlers
+- Durable Functions
+- Elastic Premium
+- Flex Consumption
+- Identity Management
+- Java 25
+- MCP
+- MCP Server
+- Microsoft Agent Framework
+- Node.js 24
+- OpenTelemetry
+- Python
+- Rolling Updates
+- Serverless
+- TypeScript
+- VNET Networking
+- AI
+- Azure
+- DevOps
+- ML
+- Security
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- ml
+- security
+primary_section: ai
 ---
-
 paulyuk presents a rich technical overview of Azure Functions advancements for 2025, focusing on scalable serverless architecture, AI agent enablement, and deep integration of security, monitoring, and developer experience.<!--excerpt_end-->
 
 # Azure Functions Ignite 2025 Update

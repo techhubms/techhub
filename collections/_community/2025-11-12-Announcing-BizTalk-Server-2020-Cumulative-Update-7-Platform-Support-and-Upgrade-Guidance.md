@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance"
-description: "This post covers the release of Cumulative Update 7 (CU7) for BizTalk Server 2020, detailing new platform support including Visual Studio 2022, Windows Server 2022, and SQL Server 2022. It also addresses upgrade paths for older BizTalk versions and migration recommendations for Azure Logic Apps."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-the-biztalk-server-2020-cumulative-update-7/ba-p/4469100
+title: 'Announcing BizTalk Server 2020 Cumulative Update 7: Platform Support and Upgrade Guidance'
+author: hcamposu
+feed_name: Microsoft Tech Community
 date: 2025-11-12 16:42:12 +00:00
-permalink: "/2025-11-12-Announcing-BizTalk-Server-2020-Cumulative-Update-7-Platform-Support-and-Upgrade-Guidance.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure Logic Apps", "BizTalk Migration", "BizTalk Modernization", "BizTalk Server", "Coding", "Community", "Cumulative Update 7", "DevOps", "Infrastructure", "Integration", "Microsoft Knowledgebase", "Software Update", "SQL Server", "Upgrade Guidance", "VS", "Windows 11", "Windows Server"]
-tags_normalized: ["azure", "azure logic apps", "biztalk migration", "biztalk modernization", "biztalk server", "coding", "community", "cumulative update 7", "devops", "infrastructure", "integration", "microsoft knowledgebase", "software update", "sql server", "upgrade guidance", "vs", "windows 11", "windows server"]
+tags:
+- Azure Logic Apps
+- BizTalk Migration
+- BizTalk Modernization
+- BizTalk Server
+- Cumulative Update 7
+- Infrastructure
+- Integration
+- Microsoft Knowledgebase
+- Software Update
+- SQL Server
+- Upgrade Guidance
+- VS
+- Windows 11
+- Windows Server
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 hcamposu announces the release of BizTalk Server 2020 CU7, focusing on new platform compatibility, upgrade advice, and migration paths to Azure Logic Apps for integration workloads.<!--excerpt_end-->
 
 # BizTalk Server 2020 Cumulative Update 7 Released

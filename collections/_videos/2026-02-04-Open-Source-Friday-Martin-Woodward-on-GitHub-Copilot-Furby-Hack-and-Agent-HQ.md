@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Open Source Friday: Martin Woodward on GitHub Copilot, Furby Hack, and Agent HQ"
-description: "A live conversation with Martin Woodward, GitHub's VP of Developer Relations, at GitHub Universe. The discussion covers creative AI applications using GitHub Copilot (including the famous Furby hack), the Agent HQ platform announcement, and GitHub’s vision for empowering developers. The episode explores practical AI integrations, open source projects, and platform evolution."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zVWT8ZQZYhI"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=zVWT8ZQZYhI
+title: 'Open Source Friday: Martin Woodward on GitHub Copilot, Furby Hack, and Agent HQ'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-04 00:15:03 +00:00
-permalink: "/2026-02-04-Open-Source-Friday-Martin-Woodward-on-GitHub-Copilot-Furby-Hack-and-Agent-HQ.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent HQ", "AgentHQ", "AI", "AI Agents", "AI Coding", "Copilot", "Copilot Integration", "Developer Relations", "DeveloperRelations", "Furby Hack", "GitHub Copilot", "GitHub Platform", "GitHub Universe", "GitHubUniverse", "Martin Woodward", "Open Source", "OpenSource", "Platform Improvements", "Software Development", "Videos"]
-tags_normalized: ["agent hq", "agenthq", "ai", "ai agents", "ai coding", "copilot", "copilot integration", "developer relations", "developerrelations", "furby hack", "github copilot", "github platform", "github universe", "githubuniverse", "martin woodward", "open source", "opensource", "platform improvements", "software development", "videos"]
+tags:
+- Agent HQ
+- AgentHQ
+- AI
+- AI Agents
+- AI Coding
+- Copilot
+- Copilot Integration
+- Developer Relations
+- DeveloperRelations
+- Furby Hack
+- GitHub Copilot
+- GitHub Platform
+- GitHub Universe
+- GitHubUniverse
+- Martin Woodward
+- Open Source
+- OpenSource
+- Platform Improvements
+- Software Development
+- Videos
+section_names:
+- ai
+- github-copilot
 ---
-
 In this episode, GitHub's Martin Woodward talks about using GitHub Copilot for creative projects like hacking a Furby, launching Agent HQ, and how AI tools support developer creativity. Hosted live at GitHub Universe by the GitHub team.<!--excerpt_end-->
 
 {% youtube zVWT8ZQZYhI %}

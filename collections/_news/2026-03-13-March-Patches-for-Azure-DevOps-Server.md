@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "March Patches for Azure DevOps Server"
-description: "This announcement outlines the availability of new security patches for Azure DevOps Server, addressing a specific issue with group membership deactivation. The update includes guidance on who should install the patch, download instructions, verification steps, and clarifies scenarios for existing and new customers."
-author: "Gloridel Morales"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/march-patches-for-azure-devops-server-4/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/march-patches-for-azure-devops-server-4/
+title: March Patches for Azure DevOps Server
+author: Gloridel Morales
+primary_section: azure
+feed_name: Microsoft DevOps Blog
 date: 2026-03-13 21:41:24 +00:00
-permalink: "/2026-03-13-March-Patches-for-Azure-DevOps-Server.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure DevOps Server", "DevOps", "DevOps Tools", "Download Instructions", "Group Membership", "Installation Verification", "Microsoft Azure", "News", "On Premises DevOps", "Patch 2", "Patches", "Release Notes", "Security Patch"]
-tags_normalized: ["azure", "azure devops server", "devops", "devops tools", "download instructions", "group membership", "installation verification", "microsoft azure", "news", "on premises devops", "patch 2", "patches", "release notes", "security patch"]
+tags:
+- Azure
+- Azure DevOps Server
+- DevOps
+- DevOps Tools
+- Download Instructions
+- Group Membership
+- Installation Verification
+- Microsoft Azure
+- News
+- On Premises DevOps
+- Patch 2
+- Patches
+- Release Notes
+- Security Patch
+section_names:
+- azure
+- devops
 ---
-
 Gloridel Morales details the March patch release for Azure DevOps Server, providing guidance on installation, verification, and who needs the update for secure DevOps operations.<!--excerpt_end-->
 
 # March Patches for Azure DevOps Server

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Mandatory Explicit Azure Authentication in Semantic Kernel Python 1.36.0"
-description: "This news update by Dmytro Struk covers a critical change in the Semantic Kernel Python SDK: removal of the DefaultAzureCredential fallback starting with version 1.36.0. Developers must now explicitly specify authentication credentials for Azure-related services, aligning with security best practices and Azure guidelines. The update details reasons for the change, outlines common errors, and provides code examples for correct implementation."
-author: "Dmytro Struk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/azure-authentication-changes-in-semantic-kernel-python/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/azure-authentication-changes-in-semantic-kernel-python/
+title: Mandatory Explicit Azure Authentication in Semantic Kernel Python 1.36.0
+author: Dmytro Struk
+feed_name: Microsoft Semantic Kernel Blog
 date: 2025-08-27 05:16:27 +00:00
-permalink: "/2025-08-27-Mandatory-Explicit-Azure-Authentication-in-Semantic-Kernel-Python-1360.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "API Key", "Authentication", "Azure", "Azure Identity", "Azure SDK", "AzureChatCompletion", "AzureCliCredential", "Coding", "Credential Management", "DefaultAzureCredential", "ManagedIdentityCredential", "News", "Python", "Security Best Practices", "Semantic Kernel", "Service Principal"]
-tags_normalized: ["ai", "api key", "authentication", "azure", "azure identity", "azure sdk", "azurechatcompletion", "azureclicredential", "coding", "credential management", "defaultazurecredential", "managedidentitycredential", "news", "python", "security best practices", "semantic kernel", "service principal"]
+tags:
+- API Key
+- Authentication
+- Azure Identity
+- Azure SDK
+- AzureChatCompletion
+- AzureCliCredential
+- Credential Management
+- DefaultAzureCredential
+- ManagedIdentityCredential
+- Python
+- Security Best Practices
+- Semantic Kernel
+- Service Principal
+- AI
+- Azure
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Dmytro Struk explains how Semantic Kernel Python 1.36.0 now requires explicit Azure authentication, replacing the former DefaultAzureCredential fallback. Learn the impact of this change and how to update your code.<!--excerpt_end-->
 
 # Azure Authentication Changes in Semantic Kernel Python

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions"
-description: "This announcement outlines Microsoft's participation as a Gold Sponsor in the Oracle AI World Tour, highlighting the integration of Oracle Database@Azure for AI-driven modernization. It details how organizations can leverage Azure's infrastructure, integrated security tools, and AI-focused services (including Copilot Studio and Foundry) to streamline Oracle workload migrations and enable secure, scalable, and compliant innovation."
-author: "NadineSalem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-hits-the-road-with-oracle-ai-world-tour-2026/ba-p/4477598
+title: Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions
+author: NadineSalem
+feed_name: Microsoft Tech Community
 date: 2025-12-15 19:23:38 +00:00
-permalink: "/2025-12-15-Modernizing-Oracle-Workloads-with-Oracle-DatabaseAzure-and-AI-Solutions.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Integration", "Azure", "Azure Defender", "Azure Sentinel", "Cloud Migration", "Community", "Compliance", "Copilot Studio", "Data Sovereignty", "Enterprise Workloads", "Integrated Security", "Microsoft Azure", "Microsoft Foundry", "Modernization", "OCI", "Oracle Database@Azure", "Public Cloud", "Security"]
-tags_normalized: ["ai", "ai integration", "azure", "azure defender", "azure sentinel", "cloud migration", "community", "compliance", "copilot studio", "data sovereignty", "enterprise workloads", "integrated security", "microsoft azure", "microsoft foundry", "modernization", "oci", "oracle databaseatazure", "public cloud", "security"]
+tags:
+- AI Integration
+- Azure Defender
+- Azure Sentinel
+- Cloud Migration
+- Compliance
+- Copilot Studio
+- Data Sovereignty
+- Enterprise Workloads
+- Integrated Security
+- Microsoft Azure
+- Microsoft Foundry
+- Modernization
+- OCI
+- Oracle Database@Azure
+- Public Cloud
+- AI
+- Azure
+- Security
+- Community
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 NadineSalem presents Microsoft's involvement in the Oracle AI World Tour, detailing how Oracle Database@Azure, Copilot Studio, Microsoft Foundry, and integrated security solutions empower enterprises to modernize and secure Oracle workloads with AI on Azure.<!--excerpt_end-->
 
 # Modernizing Oracle Workloads with Oracle Database@Azure and AI Solutions

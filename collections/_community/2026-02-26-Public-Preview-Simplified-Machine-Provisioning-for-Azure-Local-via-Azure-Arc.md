@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Public Preview: Simplified Machine Provisioning for Azure Local via Azure Arc"
-description: "This article introduces the public preview of simplified machine provisioning for Azure Local, designed to reduce on-site setup complexities for edge deployments. Leveraging Azure Arc, FIDO Device Onboarding, and centralized configuration, organizations can streamline provisioning, maintain security, and scale deployments across multiple sites with minimal IT staff intervention."
-author: "PragyaDwivedi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-simplified-machine-provisioning-for/ba-p/4496811"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-arc-blog/announcing-public-preview-simplified-machine-provisioning-for/ba-p/4496811
+title: 'Public Preview: Simplified Machine Provisioning for Azure Local via Azure Arc'
+author: PragyaDwivedi
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-26 18:02:37 +00:00
-permalink: "/2026-02-26-Public-Preview-Simplified-Machine-Provisioning-for-Azure-Local-via-Azure-Arc.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ARM Templates", "Azure", "Azure Arc", "Azure Local", "Azure Portal", "Centralized Configuration", "Cluster Creation", "Community", "Configurator App", "DevOps", "Edge Deployment", "FIDO Device Onboarding", "Hybrid Cloud", "Machine Provisioning", "Provisioning Automation", "Security", "Supply Chain Security", "USB Preparation Tool", "Zero Trust"]
-tags_normalized: ["arm templates", "azure", "azure arc", "azure local", "azure portal", "centralized configuration", "cluster creation", "community", "configurator app", "devops", "edge deployment", "fido device onboarding", "hybrid cloud", "machine provisioning", "provisioning automation", "security", "supply chain security", "usb preparation tool", "zero trust"]
+tags:
+- ARM Templates
+- Azure
+- Azure Arc
+- Azure Local
+- Azure Portal
+- Centralized Configuration
+- Cluster Creation
+- Community
+- Configurator App
+- DevOps
+- Edge Deployment
+- FIDO Device Onboarding
+- Hybrid Cloud
+- Machine Provisioning
+- Provisioning Automation
+- Security
+- Supply Chain Security
+- USB Preparation Tool
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 PragyaDwivedi presents an overview of the public preview for simplified machine provisioning on Azure Local, emphasizing streamlined, secure, and scalable infrastructure deployment with minimal on-site requirements.<!--excerpt_end-->
 
 # Public Preview: Simplified Machine Provisioning for Azure Local via Azure Arc

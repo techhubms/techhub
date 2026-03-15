@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Semantic Kernel and Microsoft.Extensions.AI: Better Together, Part 2"
-description: "This post, authored by Roger Barreto, provides hands-on examples demonstrating how to use the Microsoft.Extensions.AI abstractions with Semantic Kernel in non-agent .NET scenarios, including chat completion, embedding generation, function invocation, and advanced service selection patterns."
-author: "Roger Barreto"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-extensions-ai-better-together-part-2/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/semantic-kernel-and-microsoft-extensions-ai-better-together-part-2/
+title: 'Semantic Kernel and Microsoft.Extensions.AI: Better Together, Part 2'
+author: Roger Barreto
+feed_name: Microsoft DevBlog
 date: 2025-05-28 13:18:24 +00:00
-permalink: "/2025-05-28-Semantic-Kernel-and-MicrosoftExtensionsAI-Better-Together-Part-2.html"
-categories: ["AI", "Coding"]
-tags: [".NET", ".NET AI Extensions", "Agents", "AI", "AIFunction", "Azure OpenAI", "C#", "Chat Completion", "Coding", "Dependency Injection", "Embeddings", "Extensions AI", "Function Calling", "IChatClient", "IEmbeddingGenerator", "KernelFunction", "MCP", "Microsoft.Extensions.AI", "News", "Plugins", "Prompt Templates", "Samples", "Semantic Kernel", "Tools"]
-tags_normalized: ["dotnet", "dotnet ai extensions", "agents", "ai", "aifunction", "azure openai", "csharp", "chat completion", "coding", "dependency injection", "embeddings", "extensions ai", "function calling", "ichatclient", "iembeddinggenerator", "kernelfunction", "mcp", "microsoftdotextensionsdotai", "news", "plugins", "prompt templates", "samples", "semantic kernel", "tools"]
+tags:
+- .NET
+- .NET AI Extensions
+- Agents
+- AIFunction
+- Azure OpenAI
+- C#
+- Chat Completion
+- Dependency Injection
+- Embeddings
+- Extensions AI
+- Function Calling
+- IChatClient
+- IEmbeddingGenerator
+- KernelFunction
+- MCP
+- Microsoft.Extensions.AI
+- Plugins
+- Prompt Templates
+- Samples
+- Semantic Kernel
+- Tools
+- AI
+- News
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Authored by Roger Barreto, this article explores practical non-agent integration patterns for Microsoft.Extensions.AI and Semantic Kernel within the .NET AI ecosystem. It guides developers through real code samples for chat completion, embeddings, function calls, dependency injection, and service selection.<!--excerpt_end-->
 
 # Semantic Kernel and Microsoft.Extensions.AI: Better Together, Part 2

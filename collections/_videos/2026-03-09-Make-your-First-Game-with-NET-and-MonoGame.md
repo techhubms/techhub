@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Make your First Game with .NET and MonoGame"
-description: "This video introduces developers to using the .NET platform and MonoGame framework for cross-platform game development. It demonstrates how to start building simple 2D games on both Windows and Linux, making it an accessible way to learn foundational coding skills while exploring game creation with open-source tools."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=y631qBfWk_I"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=y631qBfWk_I
+title: Make your First Game with .NET and MonoGame
+author: dotnet
+primary_section: dotnet
+feed_name: DotNet YouTube
 date: 2026-03-09 21:09:10 +00:00
-permalink: "/2026-03-09-Make-your-First-Game-with-NET-and-MonoGame.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "2D Game Development", "Coding", "Cross Platform", "Dotnet10", "Game Development", "Game Programming", "Linux", "MonoGame", "Open Source", "Videos", "Windows"]
-tags_normalized: ["dotnet", "dotnet 10", "2d game development", "coding", "cross platform", "dotnet10", "game development", "game programming", "linux", "monogame", "open source", "videos", "windows"]
+tags:
+- .NET
+- .NET 10
+- 2D Game Development
+- Cross Platform
+- Dotnet10
+- Game Development
+- Game Programming
+- Linux
+- MonoGame
+- Open Source
+- Videos
+- Windows
+section_names:
+- dotnet
 ---
-
 Chris Gomez presents a hands-on introduction to building games with .NET and MonoGame, showing how beginners can start developing 2D games on Windows and Linux.<!--excerpt_end-->
 
 {% youtube y631qBfWk_I %}

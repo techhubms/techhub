@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity"
-description: "Rob Bos presents a comprehensive guide to creating and deploying custom GitHub Copilot Extensions. This post covers extension types, step-by-step extension development, integrating with APIs and knowledge bases, leveraging the Copilot Extension SDK, working within Codespaces, and handling user interactions securely."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+external_url: https://devopsjournal.io/blog/2024/09/14/GitHub-Copilot-Extensions
+title: 'GitHub Copilot Extensions: Building Custom Tools to Enhance Developer Productivity'
+author: Rob Bos
+feed_name: Rob Bos' Blog
 date: 2024-09-14 00:00:00 +00:00
-permalink: "/2024-09-14-GitHub-Copilot-Extensions-Building-Custom-Tools-to-Enhance-Developer-Productivity.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "APIs", "Blogs", "Codespaces", "Copilot Extension SDK", "Copilot Extensions", "Custom Extensions", "Developer Productivity", "DevOps", "GitHub Apps", "GitHub Copilot", "LLM", "OpenAI", "Retrieval Augmented Generation", "User Confirmation", "VS Code"]
-tags_normalized: ["ai", "apis", "blogs", "codespaces", "copilot extension sdk", "copilot extensions", "custom extensions", "developer productivity", "devops", "github apps", "github copilot", "llm", "openai", "retrieval augmented generation", "user confirmation", "vs code"]
+tags:
+- APIs
+- Codespaces
+- Copilot Extension SDK
+- Copilot Extensions
+- Custom Extensions
+- Developer Productivity
+- GitHub Apps
+- LLM
+- OpenAI
+- Retrieval Augmented Generation
+- User Confirmation
+- VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this detailed article, Rob Bos explores how developers can create custom GitHub Copilot Extensions. He describes extension types, provides a development walkthrough, and offers practical tips for integrating APIs and managing user interactions within Copilot Chat.<!--excerpt_end-->
 
 Date posted: **14 Sep 2024**, 6 minutes to read
@@ -23,7 +35,7 @@ Date posted: **14 Sep 2024**, 6 minutes to read
 
 GitHub Copilot is evolving beyond code completion, now empowering developers to write their own extensions to meet tailored needs. In his in-depth guide, Rob Bos discusses how Copilot Extensions work, their types, practical examples, and step-by-step instructions for building and deploying them.
 
-![Announcement image](/images/2024/20240914/Announcement.png)
+![Announcement image](/images/2024/20240914/announcement.png)
 
 ## What are Copilot Extensions?
 
@@ -101,7 +113,7 @@ console.log('Response sent');
 
 Developing inside a GitHub Codespace lets you easily receive traffic and debug your extension. Use a separate GitHub App for development vs production, as all app traffic is routed to your endpoint during testing.
 
-![Running in Codespace](/images/2024/20240914/Running-the-extension.png)
+![Running in Codespace](/images/2024/20240914/running-the-extension.png)
 
 Remember to:
 
@@ -109,19 +121,19 @@ Remember to:
 - Set the URL in both GitHub App settings and the Copilot section
 - Ensure your App is flagged for Copilot extensions in its settings
 
-![Codespace settings](/images/2024/20240914/AppSettings.png)
+![Codespace settings](/images/2024/20240914/appsettings.png)
 
 ## Invoking and Working with Extensions
 
 Once the GitHub App is installed in an org with Copilot enabled, users can invoke the extension by starting prompts with `@your-app-name`. Only one extension can interact per thread for security reasons and receives the full conversation context.
 
-![Prompt invocation example](/images/2024/20240914/01-Invoking-the-extension.png)
+![Prompt invocation example](/images/2024/20240914/01-invoking-the-extension.png)
 
 Extensions currently work in VS Code, VS Code Insiders, and github.com web interface. GitHub Copilot's content filter ensures only suitable prompts and safe responses are sent to and from the extension.
 
 When first used, an extension prompts users for consent to access conversation content and basic user info (GitHub handle, approximate location). This enables personalized responses and can be revoked via [GitHub settings](https://github.com/settings/installations).
 
-![Consent dialog screenshot](/images/2024/20240914/Allow-prompt.png)
+![Consent dialog screenshot](/images/2024/20240914/allow-prompt.png)
 
 ## Advanced Use Cases: System Prompts and Confirmation Dialogs
 
@@ -148,7 +160,7 @@ response.write(
 );
 ```
 
-![User confirm dialog](/images/2024/20240914/PromptAccept.png)
+![User confirm dialog](/images/2024/20240914/promptaccept.png)
 
 ## Conclusion & Outlook
 

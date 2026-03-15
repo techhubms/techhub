@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Org-level Metrics API Adds Pull Request Throughput and Copilot Activity Metrics"
-description: "This update to the GitHub Copilot Usage Metrics API expands organization-level endpoints to include detailed pull request activity, such as creation volume, median time to merge, and Copilot participation in both coding and code reviews. It brings org-level metrics into parity with existing enterprise-level analytics, providing greater visibility into non-IDE Copilot impact on development workflows. The change empowers teams to standardize reporting and better understand Copilot's influence on pull request lifecycle efficiency and review quality."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-25-org-level-metrics-api-now-includes-pull-request-throughput-metric-parity"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-25-org-level-metrics-api-now-includes-pull-request-throughput-metric-parity
+title: Org-level Metrics API Adds Pull Request Throughput and Copilot Activity Metrics
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-26 00:11:37 +00:00
-permalink: "/2026-02-26-Org-level-Metrics-API-Adds-Pull-Request-Throughput-and-Copilot-Activity-Metrics.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Account Management", "AI", "API Update", "Applied Suggestions", "Code Review", "Copilot", "Copilot Participation", "Cycle Time", "Development Analytics", "DevOps", "Enterprise Management", "Enterprise Management Tools", "GitHub Copilot", "Metrics API", "News", "Org Level Reporting", "Pull Requests", "Release Notes", "Review Activity", "Team Productivity", "Throughput"]
-tags_normalized: ["account management", "ai", "api update", "applied suggestions", "code review", "copilot", "copilot participation", "cycle time", "development analytics", "devops", "enterprise management", "enterprise management tools", "github copilot", "metrics api", "news", "org level reporting", "pull requests", "release notes", "review activity", "team productivity", "throughput"]
+tags:
+- Account Management
+- AI
+- API Update
+- Applied Suggestions
+- Code Review
+- Copilot
+- Copilot Participation
+- Cycle Time
+- Development Analytics
+- DevOps
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Copilot
+- Metrics API
+- News
+- Org Level Reporting
+- Pull Requests
+- Release Notes
+- Review Activity
+- Team Productivity
+- Throughput
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details important enhancements to the Copilot Usage Metrics API, now offering organization-level pull request and Copilot participation analytics for development teams.<!--excerpt_end-->
 
 # Org-level Metrics API Adds Pull Request Throughput and Copilot Activity Metrics

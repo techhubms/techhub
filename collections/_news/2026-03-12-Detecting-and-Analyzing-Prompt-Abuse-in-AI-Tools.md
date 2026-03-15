@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Detecting and Analyzing Prompt Abuse in AI Tools"
-description: "This article guides security professionals through understanding, detecting, and responding to prompt abuse threats in AI applications. It focuses on real-world examples of prompt injection attacks, outlines incident response playbooks, and demonstrates how Microsoft security tools—such as Defender for Cloud Apps, Purview DLP, Entra ID, and Microsoft Sentinel—can be used to defend against these risks in enterprise environments."
-author: "Microsoft Incident Response"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/12/detecting-analyzing-prompt-abuse-in-ai-tools/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/12/detecting-analyzing-prompt-abuse-in-ai-tools/
+title: Detecting and Analyzing Prompt Abuse in AI Tools
+author: Microsoft Incident Response
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-03-12 14:00:00 +00:00
-permalink: "/2026-03-12-Detecting-and-Analyzing-Prompt-Abuse-in-AI-Tools.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Governance", "AI Output Monitoring", "AI Security", "Copilot Studio Agent Builder", "Data Loss Prevention", "Enterprise AI", "Entra ID", "Hidden Instruction Attacks", "Incident Response", "Indirect Prompt Injection", "Microsoft Defender For Cloud Apps", "Microsoft Purview", "Microsoft Sentinel", "News", "Operational Defenses", "OWASP", "Prompt Abuse", "Prompt Injection", "Security", "Security Playbook", "Threat Modeling", "Zero Trust"]
-tags_normalized: ["ai", "ai governance", "ai output monitoring", "ai security", "copilot studio agent builder", "data loss prevention", "enterprise ai", "entra id", "hidden instruction attacks", "incident response", "indirect prompt injection", "microsoft defender for cloud apps", "microsoft purview", "microsoft sentinel", "news", "operational defenses", "owasp", "prompt abuse", "prompt injection", "security", "security playbook", "threat modeling", "zero trust"]
+tags:
+- AI
+- AI Governance
+- AI Output Monitoring
+- AI Security
+- Copilot Studio Agent Builder
+- Data Loss Prevention
+- Enterprise AI
+- Entra ID
+- Hidden Instruction Attacks
+- Incident Response
+- Indirect Prompt Injection
+- Microsoft Defender For Cloud Apps
+- Microsoft Purview
+- Microsoft Sentinel
+- News
+- Operational Defenses
+- OWASP
+- Prompt Abuse
+- Prompt Injection
+- Security
+- Security Playbook
+- Threat Modeling
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Microsoft Incident Response presents a comprehensive analysis of prompt abuse in AI tools, offering practical mitigation strategies and demonstrating how to leverage Microsoft’s security stack to detect, investigate, and respond to such incidents.<!--excerpt_end-->
 
 # Detecting and Analyzing Prompt Abuse in AI Tools

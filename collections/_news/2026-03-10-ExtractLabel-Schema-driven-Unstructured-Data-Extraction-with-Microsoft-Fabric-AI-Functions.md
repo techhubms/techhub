@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "ExtractLabel: Schema-driven Unstructured Data Extraction with Microsoft Fabric AI Functions"
-description: "This article provides a technical walkthrough of how Microsoft Fabric AI Functions, particularly the ExtractLabel class, enable schema-driven extraction and structuring of unstructured free-text enterprise data. It explains the challenges of transforming free text into structured formats, how ExtractLabel allows for reliable output by leveraging JSON Schema (or Pydantic models) to specify desired data shapes, and how these capabilities scale across pandas and PySpark in Microsoft Fabric. Practical examples, schema validation strategies, and best practices for production-ready architectures are discussed."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/extractlabel-schema-driven-unstructured-data-extraction-with-fabric-ai-functions/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/extractlabel-schema-driven-unstructured-data-extraction-with-fabric-ai-functions/
+title: 'ExtractLabel: Schema-driven Unstructured Data Extraction with Microsoft Fabric AI Functions'
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-03-10 10:30:00 +00:00
-permalink: "/2026-03-10-ExtractLabel-Schema-driven-Unstructured-Data-Extraction-with-Microsoft-Fabric-AI-Functions.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Functions", "Azure", "Data Engineering", "Data Enrichment", "Data Pipeline", "Data Validation", "ExtractLabel", "JSON Schema", "LLM", "Microsoft Fabric", "ML", "News", "Pandas", "Pydantic", "PySpark", "Schema Extraction", "Structured Data", "Text Analytics", "Unstructured Data"]
-tags_normalized: ["ai", "ai functions", "azure", "data engineering", "data enrichment", "data pipeline", "data validation", "extractlabel", "json schema", "llm", "microsoft fabric", "ml", "news", "pandas", "pydantic", "pyspark", "schema extraction", "structured data", "text analytics", "unstructured data"]
+tags:
+- AI
+- AI Functions
+- Azure
+- Data Engineering
+- Data Enrichment
+- Data Pipeline
+- Data Validation
+- ExtractLabel
+- JSON Schema
+- LLM
+- Microsoft Fabric
+- ML
+- News
+- Pandas
+- Pydantic
+- PySpark
+- Schema Extraction
+- Structured Data
+- Text Analytics
+- Unstructured Data
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details how ExtractLabel in Fabric AI Functions lets data engineers and scientists extract structured information from unstructured text using AI, JSON schema contracts, and scalable data platforms.<!--excerpt_end-->
 
 # ExtractLabel: Schema-driven Unstructured Data Extraction with Microsoft Fabric AI Functions

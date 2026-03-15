@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "How Microsoft Research is enhancing the ability of LLMs to handle more complex reasoning tasks"
-description: "Microsoft Research explores methods to strengthen large language models (LLMs) for advanced reasoning tasks. The article discusses new approaches, experimental results, and their potential to improve AI's capacity for complex, multi-step problem solving, advancing the state-of-the-art in LLM capabilities."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/articles/a-ladder-of-reasoning-testing-the-power-of-imagination-in-llms/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/research/articles/a-ladder-of-reasoning-testing-the-power-of-imagination-in-llms/
+title: How Microsoft Research is enhancing the ability of LLMs to handle more complex reasoning tasks
+author: stclarke
+feed_name: Microsoft News
 date: 2025-07-28 14:22:54 +00:00
-permalink: "/2025-07-28-How-Microsoft-Research-is-enhancing-the-ability-of-LLMs-to-handle-more-complex-reasoning-tasks.html"
-categories: ["AI"]
-tags: ["AI", "AI Research", "Cognitive Abilities", "Company News", "Complex Reasoning", "Deep Learning", "Large Language Models", "LLM", "Machine Learning", "Microsoft Research", "Natural Language Processing", "News", "Problem Solving"]
-tags_normalized: ["ai", "ai research", "cognitive abilities", "company news", "complex reasoning", "deep learning", "large language models", "llm", "machine learning", "microsoft research", "natural language processing", "news", "problem solving"]
+tags:
+- AI Research
+- Cognitive Abilities
+- Company News
+- Complex Reasoning
+- Deep Learning
+- Large Language Models
+- LLM
+- ML
+- Microsoft Research
+- Natural Language Processing
+- Problem Solving
+- AI
+- News
+section_names:
+- ai
+primary_section: ai
 ---
-
 Authored by stclarke, this article delves into how Microsoft Research is pushing the boundaries of large language models to tackle more intricate reasoning challenges.<!--excerpt_end-->
 
 ## Summary

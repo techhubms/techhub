@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Azure Managed Grafana 12: New Authentication, Faster Log Analysis, Enhanced Monitoring"
-description: "Azure Managed Grafana 12 introduces current-user Entra authentication, improved query building for Azure Monitor logs, seamless Prometheus metrics exploration, and enhanced database dashboards for Azure PostgreSQL and SQL. This update empowers teams with finer-grained access control, faster insights from monitoring data, and streamlined database observability in Azure deployments."
-author: "aayodeji"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-12/ba-p/4500673"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-12/ba-p/4500673
+title: 'Azure Managed Grafana 12: New Authentication, Faster Log Analysis, Enhanced Monitoring'
+author: aayodeji
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-13 16:54:19 +00:00
-permalink: "/2026-03-13-Azure-Managed-Grafana-12-New-Authentication-Faster-Log-Analysis-Enhanced-Monitoring.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Data Explorer", "Azure DevOps", "Azure Managed Grafana", "Azure Monitor", "Azure SQL", "Community", "Database Monitoring", "DevOps", "Entra ID Authentication", "Grafana 12", "Kusto Query Language", "Log Analytics", "Logging", "Managed Identities", "Metrics", "Monitoring Dashboards", "Observability", "OpenTelemetry", "PostgreSQL", "Prometheus", "Security", "SQL Managed Instance"]
-tags_normalized: ["azure", "azure data explorer", "azure devops", "azure managed grafana", "azure monitor", "azure sql", "community", "database monitoring", "devops", "entra id authentication", "grafana 12", "kusto query language", "log analytics", "logging", "managed identities", "metrics", "monitoring dashboards", "observability", "opentelemetry", "postgresql", "prometheus", "security", "sql managed instance"]
+tags:
+- Azure
+- Azure Data Explorer
+- Azure DevOps
+- Azure Managed Grafana
+- Azure Monitor
+- Azure SQL
+- Community
+- Database Monitoring
+- DevOps
+- Entra ID Authentication
+- Grafana 12
+- Kusto Query Language
+- Log Analytics
+- Logging
+- Managed Identities
+- Metrics
+- Monitoring Dashboards
+- Observability
+- OpenTelemetry
+- PostgreSQL
+- Prometheus
+- Security
+- SQL Managed Instance
+section_names:
+- azure
+- devops
+- security
 ---
-
 aayodeji covers the major upgrades in Azure Managed Grafana 12, highlighting new Entra authentication, faster Azure Monitor log query workflows, Prometheus metric improvements, and streamlined database monitoring for Azure environments.<!--excerpt_end-->
 
 # Azure Managed Grafana 12: What's New

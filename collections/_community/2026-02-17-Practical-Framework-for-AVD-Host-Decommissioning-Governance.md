@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Practical Framework for AVD Host Decommissioning Governance"
-description: "This article by Menahem addresses the often-overlooked challenge of decommissioning Azure Virtual Desktop (AVD) session hosts. Drawing from firsthand production experience, it introduces a structured approach to safely and reliably handle host lifecycle management, emphasizing governance, automation, and identity cleanup with references to Entra ID, Intune, FSLogix, and Microsoft Defender tools."
-author: "Menahem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/improper-avd-host-decommissioning-a-practical-governance/m-p/4495437#M14006"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/improper-avd-host-decommissioning-a-practical-governance/m-p/4495437#M14006
+title: Practical Framework for AVD Host Decommissioning Governance
+author: Menahem
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-17 16:11:12 +00:00
-permalink: "/2026-02-17-Practical-Framework-for-AVD-Host-Decommissioning-Governance.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Automation", "AVD", "Azure", "Azure Virtual Desktop", "Community", "DevOps", "Entra ID", "FSLogix", "Governance", "Host Decommissioning", "Host Pools", "Identity Cleanup", "Intune", "Lifecycle Management", "Microsoft Defender", "Security", "Session Hosts", "Token Rotation", "VM Management"]
-tags_normalized: ["automation", "avd", "azure", "azure virtual desktop", "community", "devops", "entra id", "fslogix", "governance", "host decommissioning", "host pools", "identity cleanup", "intune", "lifecycle management", "microsoft defender", "security", "session hosts", "token rotation", "vm management"]
+tags:
+- Automation
+- AVD
+- Azure
+- Azure Virtual Desktop
+- Community
+- DevOps
+- Entra ID
+- FSLogix
+- Governance
+- Host Decommissioning
+- Host Pools
+- Identity Cleanup
+- Intune
+- Lifecycle Management
+- Microsoft Defender
+- Security
+- Session Hosts
+- Token Rotation
+- VM Management
+section_names:
+- azure
+- devops
+- security
 ---
-
 Menahem shares a comprehensive governance framework for decommissioning hosts in Azure Virtual Desktop environments, covering active session validation, VM deletion sequencing, and identity cleanup. Insights draw on field experience, with practical resources for maintaining AVD integrity.<!--excerpt_end-->
 
 # Practical Framework for AVD Host Decommissioning Governance

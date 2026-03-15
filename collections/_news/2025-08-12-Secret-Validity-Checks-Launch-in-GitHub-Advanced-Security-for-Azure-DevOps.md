@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Secret Validity Checks Launch in GitHub Advanced Security for Azure DevOps"
-description: "This article details the new secret validity checks feature in GitHub Advanced Security for Azure DevOps, explaining how it helps teams efficiently prioritize and remediate exposed secrets in codebases. With 'Active' or 'Unknown' statuses, security and DevOps professionals can focus on truly risky credentials and streamline alerts management."
-author: "Michael Omokoh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/hunting-living-secrets-secret-validity-checks-arrive-in-github-advanced-security-for-azure-devops/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/hunting-living-secrets-secret-validity-checks-arrive-in-github-advanced-security-for-azure-devops/
+title: Secret Validity Checks Launch in GitHub Advanced Security for Azure DevOps
+author: Michael Omokoh
+feed_name: Microsoft DevBlog
 date: 2025-08-12 16:08:45 +00:00
-permalink: "/2025-08-12-Secret-Validity-Checks-Launch-in-GitHub-Advanced-Security-for-Azure-DevOps.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Active Secrets", "Alert Prioritization", "Azure", "Azure & Cloud", "Azure DevOps", "Cloud Security", "Credential Management", "DevOps", "DevOps Security", "GitHub Advanced Security", "Microsoft Azure", "News", "Open Source", "Provider Patterns", "Remediation", "Secret Protection", "Secret Scanning", "Security", "Security Alerts", "Unknown Secrets", "YAML"]
-tags_normalized: ["active secrets", "alert prioritization", "azure", "azure and cloud", "azure devops", "cloud security", "credential management", "devops", "devops security", "github advanced security", "microsoft azure", "news", "open source", "provider patterns", "remediation", "secret protection", "secret scanning", "security", "security alerts", "unknown secrets", "yaml"]
+tags:
+- Active Secrets
+- Alert Prioritization
+- Azure & Cloud
+- Azure DevOps
+- Cloud Security
+- Credential Management
+- DevOps Security
+- GitHub Advanced Security
+- Microsoft Azure
+- Open Source
+- Provider Patterns
+- Remediation
+- Secret Protection
+- Secret Scanning
+- Security Alerts
+- Unknown Secrets
+- YAML
+- Azure
+- DevOps
+- Security
+- News
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Michael Omokoh introduces the secret validity checks feature in GitHub Advanced Security for Azure DevOps, showing how developers and security teams can now prioritize remediation of live secrets and stay ahead of credential exposures.<!--excerpt_end-->
 
 # Secret Validity Checks Launch in GitHub Advanced Security for Azure DevOps

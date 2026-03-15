@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Designing a Future-Proof SharePoint Information Architecture"
-description: "This blog by John Edward delivers a comprehensive, practical guide to designing a scalable and adaptable SharePoint Information Architecture (IA). It covers the technical and strategic principles needed to build structures that accommodate organizational growth, new business requirements, and the broader Microsoft 365 platform evolution. The article includes step-by-step technical activities, recommended tools, and governance best practices for long-term success."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/how-to-design-a-future-proof-sharepoint-information-architecture/
+title: Designing a Future-Proof SharePoint Information Architecture
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2026-01-09 09:19:21 +00:00
-permalink: "/2026-01-09-Designing-a-Future-Proof-SharePoint-Information-Architecture.html"
-categories: ["Coding"]
-tags: ["Azure AD", "Blogs", "Coding", "Content Types", "Governance", "Information Architecture", "Metadata", "Microsoft 365", "Microsoft Purview", "Modern SharePoint", "Permissions", "Power Automate", "SharePoint", "Site Collections", "Site Templates", "Solution Architecture"]
-tags_normalized: ["azure ad", "blogs", "coding", "content types", "governance", "information architecture", "metadata", "microsoft 365", "microsoft purview", "modern sharepoint", "permissions", "power automate", "sharepoint", "site collections", "site templates", "solution architecture"]
+tags:
+- Azure AD
+- Content Types
+- Governance
+- Information Architecture
+- Metadata
+- Microsoft 365
+- Microsoft Purview
+- Modern SharePoint
+- Permissions
+- Power Automate
+- SharePoint
+- Site Collections
+- Site Templates
+- Solution Architecture
+- Blogs
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this in-depth article, John Edward outlines the process and principles for designing a scalable, future-ready SharePoint Information Architecture, providing actionable steps and best practices for developers and architects.<!--excerpt_end-->
 
 # Designing a Future-Proof SharePoint Information Architecture

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Automate Databricks Compliance and Incident Response with Azure SRE Agent and Model Context Protocol"
-description: "This guide explains how to integrate Azure SRE Agent with Azure Databricks using the Model Context Protocol (MCP) to achieve automated compliance, incident response, and operational excellence. It covers proactive best practice validation, automated root cause analysis, and deployment instructions, providing real-world examples and essential benefits for teams managing Databricks workloads on Azure."
-author: "varghesejoji"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-driven-azure-sre-for-databricks/ba-p/4494630"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/mcp-driven-azure-sre-for-databricks/ba-p/4494630
+title: Automate Databricks Compliance and Incident Response with Azure SRE Agent and Model Context Protocol
+author: varghesejoji
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-12 16:56:21 +00:00
-permalink: "/2026-02-12-Automate-Databricks-Compliance-and-Incident-Response-with-Azure-SRE-Agent-and-Model-Context-Protocol.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Operations", "Alert Integration", "Azure", "Azure Databricks", "Azure SRE Agent", "Best Practices", "Community", "Compliance Automation", "Container Apps", "DevOps", "FastMCP", "Governance", "Incident Response", "MCP", "Operations Automation", "REST API", "Root Cause Analysis", "Security", "Self Healing"]
-tags_normalized: ["ai", "ai operations", "alert integration", "azure", "azure databricks", "azure sre agent", "best practices", "community", "compliance automation", "container apps", "devops", "fastmcp", "governance", "incident response", "mcp", "operations automation", "rest api", "root cause analysis", "security", "self healing"]
+tags:
+- AI
+- AI Operations
+- Alert Integration
+- Azure
+- Azure Databricks
+- Azure SRE Agent
+- Best Practices
+- Community
+- Compliance Automation
+- Container Apps
+- DevOps
+- FastMCP
+- Governance
+- Incident Response
+- MCP
+- Operations Automation
+- REST API
+- Root Cause Analysis
+- Security
+- Self Healing
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 varghesejoji demonstrates how Azure SRE Agent and the Model Context Protocol can automate compliance and incident response for Azure Databricks, providing step-by-step deployment guidance and real-world operational scenarios.<!--excerpt_end-->
 
 # Automate Databricks Compliance and Incident Response with Azure SRE Agent and MCP

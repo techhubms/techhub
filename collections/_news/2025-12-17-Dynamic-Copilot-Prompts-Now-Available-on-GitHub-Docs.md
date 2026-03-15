@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Dynamic Copilot Prompts Now Available on GitHub Docs"
-description: "This announcement describes the introduction of dynamic GitHub Copilot prompts on select GitHub Docs pages. The feature streamlines developer workflows by allowing direct access to prefilled Copilot prompts from documentation. Three types of prompts are supported: inline prompts, prompt blocks, and prompt blocks with context. The update improves efficiency by removing the need to manually copy/paste, and provides integration between developer documentation and Copilot's coding assistance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-12-17-dynamic-copilot-prompts-on-github-docs
+title: Dynamic Copilot Prompts Now Available on GitHub Docs
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-12-17 15:19:18 +00:00
-permalink: "/2025-12-17-Dynamic-Copilot-Prompts-Now-Available-on-GitHub-Docs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Integration", "Code Readability", "Coding Assistant", "Copilot", "Copilot Chat", "Copilot Prompts", "Developer Productivity", "Documentation Tools", "GitHub Copilot", "GitHub Docs", "Improvement", "Inline Prompts", "News", "Prompt Blocks"]
-tags_normalized: ["ai", "ai integration", "code readability", "coding assistant", "copilot", "copilot chat", "copilot prompts", "developer productivity", "documentation tools", "github copilot", "github docs", "improvement", "inline prompts", "news", "prompt blocks"]
+tags:
+- AI Integration
+- Code Readability
+- Coding Assistant
+- Copilot
+- Copilot Chat
+- Copilot Prompts
+- Developer Productivity
+- Documentation Tools
+- GitHub Docs
+- Improvement
+- Inline Prompts
+- Prompt Blocks
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison shares news about dynamic GitHub Copilot prompts on GitHub Docs, highlighting new workflow integrations that let developers launch prefilled Copilot prompts directly from documentation pages.<!--excerpt_end-->
 
 # Dynamic Copilot Prompts Now Available on GitHub Docs

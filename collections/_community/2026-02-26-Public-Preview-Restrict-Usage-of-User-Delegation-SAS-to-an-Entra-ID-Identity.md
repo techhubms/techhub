@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Public Preview: Restrict Usage of User Delegation SAS to an Entra ID Identity"
-description: "This announcement introduces the public preview of user-bound user delegation SAS in Azure Storage, allowing SAS tokens to be restricted to specific Microsoft Entra ID identities for increased security. It covers how user-bound SAS enhances the existing user delegation SAS mechanism, setup steps, RBAC roles, tenant considerations, and available tooling for implementation."
-author: "ellievail"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-restrict-usage-of-user-delegation-sas-to-an-entra/ba-p/4497196"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/public-preview-restrict-usage-of-user-delegation-sas-to-an-entra/ba-p/4497196
+title: 'Public Preview: Restrict Usage of User Delegation SAS to an Entra ID Identity'
+author: ellievail
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-26 15:15:30 +00:00
-permalink: "/2026-02-26-Public-Preview-Restrict-Usage-of-User-Delegation-SAS-to-an-Entra-ID-Identity.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Azure", "Azure Blob Storage", "Azure CLI", "Azure Security", "Azure Storage", "Community", "Identity And Access Management", "Microsoft Entra ID", "PowerShell", "RBAC", "REST API", "SAS", "SDK", "Security", "Shared Access Signature", "Storage Accounts", "User Delegation SAS"]
-tags_normalized: ["access control", "azure", "azure blob storage", "azure cli", "azure security", "azure storage", "community", "identity and access management", "microsoft entra id", "powershell", "rbac", "rest api", "sas", "sdk", "security", "shared access signature", "storage accounts", "user delegation sas"]
+tags:
+- Access Control
+- Azure
+- Azure Blob Storage
+- Azure CLI
+- Azure Security
+- Azure Storage
+- Community
+- Identity And Access Management
+- Microsoft Entra ID
+- PowerShell
+- RBAC
+- REST API
+- SAS
+- SDK
+- Security
+- Shared Access Signature
+- Storage Accounts
+- User Delegation SAS
+section_names:
+- azure
+- security
 ---
-
 ellievail details the public preview of user-bound user delegation SAS for Azure Storage, showing how to tightly control access by tying SAS tokens to individual Entra ID identities.<!--excerpt_end-->
 
 # Public Preview: Restrict Usage of User Delegation SAS to an Entra ID Identity

@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Multi-Model Reasoning App Demoed at Bengaluru Dev Event: Decision Frameworks, Azure, and Copilot Vision"
-description: "Satya Nadella shares a behind-the-scenes look at an app built for deep research, leveraging Azure infrastructure, Windows 365, and GitHub Codespaces. The app orchestrates multiple AI models (GPT, Claude, Gemini) through custom decision frameworks, exploring agentic reasoning, model selection, and future Copilot integration. Practical use cases span healthcare, finance, and team selection, with an emphasis on chain-of-debate architecture for metacognitive AI."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_was-fun-to-be-at-a-dev-event-in-bengaluru-activity-7404820776195043329-A5vB"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_was-fun-to-be-at-a-dev-event-in-bengaluru-activity-7404820776195043329-A5vB
+title: 'Multi-Model Reasoning App Demoed at Bengaluru Dev Event: Decision Frameworks, Azure, and Copilot Vision'
+author: stclarke
+feed_name: Microsoft News
 date: 2025-12-11 14:12:06 +00:00
-permalink: "/2025-12-11-Multi-Model-Reasoning-App-Demoed-at-Bengaluru-Dev-Event-Decision-Frameworks-Azure-and-Copilot-Vision.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agentic Architecture", "AI", "AI Decision Frameworks", "Azure", "Branch Automation", "Chain Of Debate", "Claude", "Coding", "Company News", "Consensus Algorithms", "Copilot Integration", "Critical Review Automation", "Ensemble Methods", "Finance AI", "Gemini", "GitHub Codespaces", "GPT 4", "Healthcare AI", "LinkedIn Post", "Metacognition", "Model Selection", "Multi Model Reasoning", "News", "Streaming Synthesis", "Windows 365"]
-tags_normalized: ["agentic architecture", "ai", "ai decision frameworks", "azure", "branch automation", "chain of debate", "claude", "coding", "company news", "consensus algorithms", "copilot integration", "critical review automation", "ensemble methods", "finance ai", "gemini", "github codespaces", "gpt 4", "healthcare ai", "linkedin post", "metacognition", "model selection", "multi model reasoning", "news", "streaming synthesis", "windows 365"]
+tags:
+- Agentic Architecture
+- AI Decision Frameworks
+- Branch Automation
+- Chain Of Debate
+- Claude
+- Company News
+- Consensus Algorithms
+- Copilot Integration
+- Critical Review Automation
+- Ensemble Methods
+- Finance AI
+- Gemini
+- GitHub Codespaces
+- GPT 4
+- Healthcare AI
+- LinkedIn Post
+- Metacognition
+- Model Selection
+- Multi Model Reasoning
+- Streaming Synthesis
+- Windows 365
+- AI
+- Azure
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Satya Nadella demonstrates a custom app for deep research and model orchestration, built and deployed using Azure, GitHub Codespaces, and Windows 365—exploring decision frameworks and future Copilot integration.<!--excerpt_end-->
 
 # Multi-Model Reasoning App Demoed by Satya Nadella: Decision Frameworks, Azure, and Copilot Vision

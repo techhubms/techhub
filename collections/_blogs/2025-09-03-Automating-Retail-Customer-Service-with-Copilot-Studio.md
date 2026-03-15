@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Automating Retail Customer Service with Copilot Studio"
-description: "This article explains how Copilot Studio enables retail businesses to automate customer service workflows. It covers technical integrations such as order tracking, inventory checks, returns processing, and omnichannel support. Real-world case studies demonstrate improved efficiency, cost reduction, and customer satisfaction, highlighting AI's role as a strategic asset in modern retail service operations."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/how-retail-businesses-are-automating-customer-service-with-copilot-studio/
+title: Automating Retail Customer Service with Copilot Studio
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-09-03 07:44:29 +00:00
-permalink: "/2025-09-03-Automating-Retail-Customer-Service-with-Copilot-Studio.html"
-categories: ["AI"]
-tags: ["AI", "API Workflows", "Blogs", "Bot Framework", "Chatbot Solutions", "Copilot", "Copilot Studio", "CRM Integration", "Customer Service", "ERP Integration", "Inventory Integration", "Microsoft AI", "Omnichannel Support", "Order Management", "Personalized Recommendations", "Retail Automation", "Returns Automation"]
-tags_normalized: ["ai", "api workflows", "blogs", "bot framework", "chatbot solutions", "copilot", "copilot studio", "crm integration", "customer service", "erp integration", "inventory integration", "microsoft ai", "omnichannel support", "order management", "personalized recommendations", "retail automation", "returns automation"]
+tags:
+- API Workflows
+- Bot Framework
+- Chatbot Solutions
+- Copilot
+- Copilot Studio
+- CRM Integration
+- Customer Service
+- ERP Integration
+- Inventory Integration
+- Microsoft AI
+- Omnichannel Support
+- Order Management
+- Personalized Recommendations
+- Retail Automation
+- Returns Automation
+- AI
+- Blogs
+section_names:
+- ai
+primary_section: ai
 ---
-
 Dellenny examines how Copilot Studio streamlines customer service in retail, providing detailed technical workflows and reviewing real business outcomes from automated order support to inventory checks.<!--excerpt_end-->
 
 # Automating Retail Customer Service with Copilot Studio

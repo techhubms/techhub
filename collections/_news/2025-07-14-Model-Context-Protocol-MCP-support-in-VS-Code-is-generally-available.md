@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Model Context Protocol (MCP) support in VS Code is generally available"
-description: "GitHub Copilot in VS Code now supports Model Context Protocol (MCP), allowing integration with external tools and data for enhanced productivity in production environments."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-14-model-context-protocol-mcp-support-in-vs-code-is-generally-available"
-categories: ["AI", "GitHub Copilot"]
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-07-14-model-context-protocol-mcp-support-in-vs-code-is-generally-available
+title: Model Context Protocol (MCP) support in VS Code is generally available
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-07-14 16:32:15 +00:00
-permalink: "/2025-07-14-Model-Context-Protocol-MCP-support-in-VS-Code-is-generally-available.html"
-viewing_mode: "external"
-tags: ["AI", "AI Assistant", "Data Sources", "External Tools", "GitHub Copilot", "Integration", "MCP", "News", "Production Environments", "Software Development", "VS Code"]
-tags_normalized: ["ai", "ai assistant", "data sources", "external tools", "github copilot", "integration", "mcp", "news", "production environments", "software development", "vs code"]
+tags:
+- AI Assistant
+- Data Sources
+- External Tools
+- Integration
+- MCP
+- Production Environments
+- Software Development
+- VS Code
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Authored by Allison, this article highlights the availability of Model Context Protocol (MCP) for GitHub Copilot in VS Code production environments. The piece discusses how MCP empowers GitHub Copilot to integrate with external tools and data sources, enhancing developer workflows and productivity.<!--excerpt_end-->
 
 With the release of Model Context Protocol (MCP) for GitHub Copilot in Visual Studio Code, developers now have expanded capabilities in production environments. MCP is designed to allow GitHub Copilot to access and interact with a variety of external tools and data sources directly from the development environment.

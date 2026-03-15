@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Copilot-SWE Model Launches in Visual Studio Code Insiders"
-description: "This news post announces the rollout of GitHub Copilot-SWE, an experimental task-focused model in GitHub Copilot, now available for Visual Studio Code Insiders users as part of a technical preview. The content describes its optimization for code editing, refactoring, and small code transformations, and outlines how users can access and provide feedback on this new AI-powered tool. Helpful links to documentation and usage best practices are included."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-22-copilot-swe-model-rolling-out-to-visual-studio-code-insiders
+title: GitHub Copilot-SWE Model Launches in Visual Studio Code Insiders
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-22 23:12:41 +00:00
-permalink: "/2025-09-22-GitHub-Copilot-SWE-Model-Launches-in-Visual-Studio-Code-Insiders.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistants", "AI Models", "Code Editing", "Code Refactoring", "Copilot", "Copilot SWE", "Developer Productivity", "GitHub", "GitHub Copilot", "IDE Tools", "News", "Prompt Engineering", "Technical Preview", "VS Code", "VS Code Insiders"]
-tags_normalized: ["ai", "ai assistants", "ai models", "code editing", "code refactoring", "copilot", "copilot swe", "developer productivity", "github", "github copilot", "ide tools", "news", "prompt engineering", "technical preview", "vs code", "vs code insiders"]
+tags:
+- AI Assistants
+- AI Models
+- Code Editing
+- Code Refactoring
+- Copilot
+- Copilot SWE
+- Developer Productivity
+- GitHub
+- IDE Tools
+- Prompt Engineering
+- Technical Preview
+- VS Code
+- VS Code Insiders
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison reports the rollout of GitHub Copilot-SWE, an experimental model in GitHub Copilot, now available to Visual Studio Code Insiders users, detailing its capabilities and access instructions.<!--excerpt_end-->
 
 # GitHub Copilot-SWE Model Launches in Visual Studio Code Insiders

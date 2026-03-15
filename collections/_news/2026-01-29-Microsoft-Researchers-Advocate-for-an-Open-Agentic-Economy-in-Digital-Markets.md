@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Microsoft Researchers Advocate for an Open Agentic Economy in Digital Markets"
-description: "This news article discusses Microsoft researchers' forward-looking perspective on developing 'open agentic economies,' where AI agents can act as digital representatives for users, negotiate purchases, and interact freely in decentralized, open markets. The piece highlights benefits, challenges, necessary protocols, and Microsoft's research initiatives in this evolving space."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/signal/articles/open-digital-markets-agentic-economy/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/signal/articles/open-digital-markets-agentic-economy/
+title: Microsoft Researchers Advocate for an Open Agentic Economy in Digital Markets
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-29 18:56:18 +00:00
-permalink: "/2026-01-29-Microsoft-Researchers-Advocate-for-an-Open-Agentic-Economy-in-Digital-Markets.html"
-categories: ["AI"]
-tags: ["Agentic Economy", "AI", "AI Agents", "AI Negotiation", "AI Standards", "Decentralization", "Digital Assistants", "Digital Marketplace", "Inter Agent Communication", "Microsoft Research", "News", "Open Markets", "Open Source", "Preference Economy", "Technology Governance"]
-tags_normalized: ["agentic economy", "ai", "ai agents", "ai negotiation", "ai standards", "decentralization", "digital assistants", "digital marketplace", "inter agent communication", "microsoft research", "news", "open markets", "open source", "preference economy", "technology governance"]
+tags:
+- Agentic Economy
+- AI
+- AI Agents
+- AI Negotiation
+- AI Standards
+- Decentralization
+- Digital Assistants
+- Digital Marketplace
+- Inter Agent Communication
+- Microsoft Research
+- News
+- Open Markets
+- Open Source
+- Preference Economy
+- Technology Governance
+section_names:
+- ai
 ---
-
 stclarke summarizes Microsoft researchers' vision for a future where AI agents can freely shop and negotiate for users in open digital marketplaces, highlighting both the opportunities and structural requirements of such an economy.<!--excerpt_end-->
 
 # Microsoft Researchers Advocate for an Open Agentic Economy in Digital Markets

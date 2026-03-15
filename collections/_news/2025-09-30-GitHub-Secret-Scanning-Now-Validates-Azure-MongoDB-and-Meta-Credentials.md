@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "GitHub Secret Scanning Now Validates Azure, MongoDB, and Meta Credentials"
-description: "This news update announces GitHub's expansion of its secret scanning feature, now supporting validity checks for secrets from MongoDB, Meta, and Microsoft Azure. The article details new supported credential types, explains what validity checks are, and provides links to documentation for further guidance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-30-secret-scanning-adds-validators-for-mongodb-meta-and-microsoft-azure"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-30-secret-scanning-adds-validators-for-mongodb-meta-and-microsoft-azure
+title: GitHub Secret Scanning Now Validates Azure, MongoDB, and Meta Credentials
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-30 17:31:57 +00:00
-permalink: "/2025-09-30-GitHub-Secret-Scanning-Now-Validates-Azure-MongoDB-and-Meta-Credentials.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Security", "Azure", "Azure APIM", "Azure Entra ID", "Code Security", "Continuous Integration", "Credential Security", "DevOps", "DevOps Security", "GitHub", "Improvement", "Meta", "Microsoft Azure", "MongoDB", "News", "Personal Access Token", "Product Update", "Secret Scanning", "Security", "Token Validation"]
-tags_normalized: ["application security", "azure", "azure apim", "azure entra id", "code security", "continuous integration", "credential security", "devops", "devops security", "github", "improvement", "meta", "microsoft azure", "mongodb", "news", "personal access token", "product update", "secret scanning", "security", "token validation"]
+tags:
+- Application Security
+- Azure APIM
+- Azure Entra ID
+- Code Security
+- Continuous Integration
+- Credential Security
+- DevOps Security
+- GitHub
+- Improvement
+- Meta
+- Microsoft Azure
+- MongoDB
+- Personal Access Token
+- Product Update
+- Secret Scanning
+- Token Validation
+- Azure
+- DevOps
+- Security
+- News
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Allison details GitHub's latest improvements to secret scanning, including new validators for Microsoft Azure, MongoDB, and Meta, helping DevOps teams better secure their credentials.<!--excerpt_end-->
 
 # GitHub Secret Scanning Adds Validity Checks for Azure, MongoDB, and Meta Credentials

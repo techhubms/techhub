@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Introducing GPT-4o Audio Models in Microsoft Foundry: A Practical Guide for Developers"
-description: "This comprehensive guide introduces developers to the new GPT-4o audio models—GPT-4o-Transcribe, GPT-4o-Mini-Transcribe, and GPT-4o-Mini-TTS—now available in Microsoft Azure OpenAI via Foundry. It details technical innovations, explains targeted audio pretraining and advanced distillation, and provides step-by-step instructions for integrating speech-to-text and text-to-speech functions in real-world applications using Azure. Developers will learn best practices for environment setup, authentication, configuration, and hands-on deployment with Gradio, enabling the creation of advanced, voice-driven applications."
-author: "Allan Carranza"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/azure-openai-gpt4o-audio-models-developer-guide/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/azure-openai-gpt4o-audio-models-developer-guide/
+title: 'Introducing GPT-4o Audio Models in Microsoft Foundry: A Practical Guide for Developers'
+author: Allan Carranza
+feed_name: Microsoft AI Foundry Blog
 date: 2025-11-20 16:00:21 +00:00
-permalink: "/2025-11-20-Introducing-GPT-4o-Audio-Models-in-Microsoft-Foundry-A-Practical-Guide-for-Developers.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "API Integration", "Audio Models", "Authentication", "Azure", "Azure AI", "Azure AI Foundry", "Azure CLI", "Azure OpenAI", "Azure OpenAI Service", "Developer Guide", "GPT 4o", "Gradio", "Microsoft Foundry", "News", "OpenAI", "Speech To Text", "Text To Speech", "Transcription", "TTS"]
-tags_normalized: ["ai", "api integration", "audio models", "authentication", "azure", "azure ai", "azure ai foundry", "azure cli", "azure openai", "azure openai service", "developer guide", "gpt 4o", "gradio", "microsoft foundry", "news", "openai", "speech to text", "text to speech", "transcription", "tts"]
+tags:
+- API Integration
+- Audio Models
+- Authentication
+- Azure AI
+- Azure AI Foundry
+- Azure CLI
+- Azure OpenAI
+- Azure OpenAI Service
+- Developer Guide
+- GPT 4o
+- Gradio
+- Microsoft Foundry
+- OpenAI
+- Speech To Text
+- Text To Speech
+- Transcription
+- TTS
+- AI
+- Azure
+- News
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Allan Carranza presents a step-by-step developer guide to using the latest GPT-4o audio models on Azure OpenAI via Microsoft Foundry, with practical examples for speech-to-text and TTS integration.<!--excerpt_end-->
 
 # Introducing GPT-4o Audio Models in Microsoft Foundry: A Practical Guide for Developers

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Test-Driven Development Remains Essential in the Age of AI Coding"
-description: "A detailed report on a technology workshop led by Agile Manifesto signatory Martin Fowler, examining the ongoing relevance of test-driven development (TDD) in the context of AI-assisted software development. The workshop explores changes in engineering discipline, team roles, security priorities, and the evolving professional identity of developers in AI-native environments."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2026/02/21/should-there-be-a-new-manifesto-for-ai-development/4091612"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2026/02/21/should-there-be-a-new-manifesto-for-ai-development/4091612
+title: Test-Driven Development Remains Essential in the Age of AI Coding
+author: DevClass.com
+primary_section: ai
+feed_name: DevClass
 date: 2026-02-21 13:00:00 +00:00
-permalink: "/2026-02-21-Test-Driven-Development-Remains-Essential-in-the-Age-of-AI-Coding.html"
-categories: ["AI", "Coding", "DevOps", "Security"]
-tags: ["Agile Manifesto", "AI", "AI Coding Agents", "AI Development", "Automated Testing", "Blogs", "Coding", "Developer Roles", "DevOps", "Engineering Discipline", "Iterative Development", "Martin Fowler", "Security", "Security Practices", "Software Architecture", "Software Engineering", "TDD", "Team Collaboration", "Test Driven Development", "Thoughtworks"]
-tags_normalized: ["agile manifesto", "ai", "ai coding agents", "ai development", "automated testing", "blogs", "coding", "developer roles", "devops", "engineering discipline", "iterative development", "martin fowler", "security", "security practices", "software architecture", "software engineering", "tdd", "team collaboration", "test driven development", "thoughtworks"]
+tags:
+- Agile Manifesto
+- AI
+- AI Coding Agents
+- AI Development
+- Automated Testing
+- Blogs
+- Developer Roles
+- DevOps
+- Engineering Discipline
+- Iterative Development
+- Martin Fowler
+- Security
+- Security Practices
+- Software Architecture
+- Software Engineering
+- TDD
+- Team Collaboration
+- Test Driven Development
+- Thoughtworks
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- security
 ---
-
 In this workshop summary, DevClass.com reviews Martin Fowler’s event marking 25 years since the Agile Manifesto, highlighting the growing impact of AI on coding, the renewed importance of TDD, and security risks in software development.<!--excerpt_end-->
 
 # Test-Driven Development Remains Essential in the Age of AI Coding

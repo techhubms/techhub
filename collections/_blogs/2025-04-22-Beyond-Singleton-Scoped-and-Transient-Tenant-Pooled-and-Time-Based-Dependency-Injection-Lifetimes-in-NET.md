@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Beyond Singleton, Scoped, and Transient: Tenant, Pooled, and Time-Based Dependency Injection Lifetimes in .NET"
-description: "Andrew Lock explores experimental dependency injection lifetimes in .NET, discussing standard and hypothetical scopes like tenant-scoped, pooled, and time-based services. The post details standard Microsoft.Extensions.DependencyInjection scopes, explains potential new patterns, and demonstrates an implementation of a time-based DI lifetime with practical code samples and discussion of tradeoffs."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/going-beyond-singleton-scoped-and-transient-lifetimes/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/going-beyond-singleton-scoped-and-transient-lifetimes/
+title: 'Beyond Singleton, Scoped, and Transient: Tenant, Pooled, and Time-Based Dependency Injection Lifetimes in .NET'
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-04-22 09:00:00 +00:00
-permalink: "/2025-04-22-Beyond-Singleton-Scoped-and-Transient-Tenant-Pooled-and-Time-Based-Dependency-Injection-Lifetimes-in-NET.html"
-categories: ["Coding"]
-tags: [".NET", "ASP.NET Core", "Blogs", "Coding", "Dependency Injection", "Factory Pattern", "Multi Tenancy", "Pooled Services", "Scoped", "Service Container", "Service Lifetimes", "Singleton", "Tenant Scoped", "Time Based Services", "Transient"]
-tags_normalized: ["dotnet", "aspdotnet core", "blogs", "coding", "dependency injection", "factory pattern", "multi tenancy", "pooled services", "scoped", "service container", "service lifetimes", "singleton", "tenant scoped", "time based services", "transient"]
+tags:
+- .NET
+- ASP.NET Core
+- Dependency Injection
+- Factory Pattern
+- Multi Tenancy
+- Pooled Services
+- Scoped
+- Service Container
+- Service Lifetimes
+- Singleton
+- Tenant Scoped
+- Time Based Services
+- Transient
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this post, Andrew Lock investigates experimental dependency injection lifetimes in .NET beyond the standard singleton, scoped, and transient, providing practical implementations and discussing their tradeoffs.<!--excerpt_end-->
 
 # Beyond Singleton, Scoped, and Transient: Tenant, Pooled, and Time-Based Dependency Injection Lifetimes in .NET

@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Faster time-to-value for app modernization using NeuVantage AI | ODSP1432"
-description: "This Microsoft Ignite session explores how Simform NeuVantage leverages advanced AI capabilities to accelerate enterprise application modernization on Azure. The presentation demonstrates AI-powered portfolio analysis for identifying candidates, techniques for choosing modernization paths (rehost, replatform, refactor), and workflow automation with Azure resources and Terraform. The session is targeted at intermediate-level audiences interested in practical approaches for reducing assessment time, clarifying dependencies, and improving ROI when modernizing applications with Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dTJD9krRln8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=dTJD9krRln8
+title: Faster time-to-value for app modernization using NeuVantage AI | ODSP1432
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-19 12:53:00 +00:00
-permalink: "/2025-11-19-Faster-time-to-value-for-app-modernization-using-NeuVantage-AI-ODSP1432.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agenticbusinessapplications", "AI", "AI Driven Assessment", "App Modernization", "Artifact Packages", "Azure", "Azure Resource Breakdown", "Azure Services Recommendation", "Cost Savings", "Deployment Scripts", "DevOps", "Infrastructure Assessment", "Microsoft Ignite", "Modernization Candidates", "MSIgnite", "NeuVantage", "Portfolio Analysis", "Refactor", "Rehost", "Replatform", "Terraform", "Videos", "Workflow Automation"]
-tags_normalized: ["agenticbusinessapplications", "ai", "ai driven assessment", "app modernization", "artifact packages", "azure", "azure resource breakdown", "azure services recommendation", "cost savings", "deployment scripts", "devops", "infrastructure assessment", "microsoft ignite", "modernization candidates", "msignite", "neuvantage", "portfolio analysis", "refactor", "rehost", "replatform", "terraform", "videos", "workflow automation"]
+tags:
+- Agenticbusinessapplications
+- AI Driven Assessment
+- App Modernization
+- Artifact Packages
+- Azure Resource Breakdown
+- Azure Services Recommendation
+- Cost Savings
+- Deployment Scripts
+- Infrastructure Assessment
+- Microsoft Ignite
+- Modernization Candidates
+- MSIgnite
+- NeuVantage
+- Portfolio Analysis
+- Refactor
+- Rehost
+- Replatform
+- Terraform
+- Workflow Automation
+- AI
+- Azure
+- DevOps
+- Videos
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 Microsoft Events presents an in-depth session on Simform NeuVantage's AI-powered approach to accelerating application modernization on Azure, featuring insights from Hiren Dhaduk and Matthew Wendel.<!--excerpt_end-->
 
 {% youtube dTJD9krRln8 %}

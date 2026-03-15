@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Accelerating Threat Detection Engineering with AI-Assisted TTP Extraction"
-description: "This post from the Microsoft Defender Security Research Team details an AI-assisted workflow for transforming unstructured threat reports into actionable detection insights. The approach uses large language models to extract, map, and validate tactics, techniques, and procedures (TTPs), align findings with the MITRE ATT&CK framework, and surface detection coverage gaps, all with human expert oversight to ensure quality."
-author: "Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/29/turning-threat-reports-detection-insights-ai/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/29/turning-threat-reports-detection-insights-ai/
+title: Accelerating Threat Detection Engineering with AI-Assisted TTP Extraction
+author: Microsoft Defender Security Research Team
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-01-29 21:20:18 +00:00
-permalink: "/2026-01-29-Accelerating-Threat-Detection-Engineering-with-AI-Assisted-TTP-Extraction.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Assisted Security", "Attack Mapping", "Automation", "Coverage Analysis", "Detection Engineering", "Gap Analysis", "Human in The Loop", "Incident Response", "Large Language Models", "LLM", "Microsoft Defender", "MITRE ATT&CK", "News", "Red Team Reports", "Security", "Security Best Practices", "Threat Intelligence", "Threat Reports", "TTP Extraction"]
-tags_normalized: ["ai", "ai assisted security", "attack mapping", "automation", "coverage analysis", "detection engineering", "gap analysis", "human in the loop", "incident response", "large language models", "llm", "microsoft defender", "mitre attandck", "news", "red team reports", "security", "security best practices", "threat intelligence", "threat reports", "ttp extraction"]
+tags:
+- AI
+- AI Assisted Security
+- Attack Mapping
+- Automation
+- Coverage Analysis
+- Detection Engineering
+- Gap Analysis
+- Human in The Loop
+- Incident Response
+- Large Language Models
+- LLM
+- Microsoft Defender
+- MITRE ATT&CK
+- News
+- Red Team Reports
+- Security
+- Security Best Practices
+- Threat Intelligence
+- Threat Reports
+- TTP Extraction
+section_names:
+- ai
+- security
 ---
-
 The Microsoft Defender Security Research Team explains how security analysts can use AI to extract and validate TTPs from threat reports. Authored by the Defender Research Team, this workflow streamlines detection analysis while keeping experts in the loop.<!--excerpt_end-->
 
 # Accelerating Threat Detection Engineering with AI-Assisted TTP Extraction

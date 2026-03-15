@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Improved Web Search Capability in GitHub Copilot Chat"
-description: "This announcement covers the introduction of model-native web search in GitHub Copilot chat on github.com. The update allows certain Copilot chat models to directly access web search for current events and time-sensitive queries, available in public preview for paid Copilot subscribers. It details models included, opt-in/opt-out procedures, and future plans."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-25-improved-web-search-in-copilot-on-github-com"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-25-improved-web-search-in-copilot-on-github-com
+title: Improved Web Search Capability in GitHub Copilot Chat
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-25 22:52:05 +00:00
-permalink: "/2026-02-25-Improved-Web-Search-Capability-in-GitHub-Copilot-Chat.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Features", "Bing Search", "Copilot", "Copilot Chat", "Current Events", "Enterprise Settings", "GitHub Copilot", "GitHub.com", "GPT 5.1", "GPT 5.1 Codex", "GPT 5.1 Codex Max", "GPT 5.1 Codex Mini", "GPT 5.2 Codex", "Model Native Search", "News", "Opt in Features", "Public Preview", "Web Search"]
-tags_normalized: ["ai", "ai features", "bing search", "copilot", "copilot chat", "current events", "enterprise settings", "github copilot", "githubdotcom", "gpt 5dot1", "gpt 5dot1 codex", "gpt 5dot1 codex max", "gpt 5dot1 codex mini", "gpt 5dot2 codex", "model native search", "news", "opt in features", "public preview", "web search"]
+tags:
+- AI
+- AI Features
+- Bing Search
+- Copilot
+- Copilot Chat
+- Current Events
+- Enterprise Settings
+- GitHub Copilot
+- GitHub.com
+- GPT 5.1
+- GPT 5.1 Codex
+- GPT 5.1 Codex Max
+- GPT 5.1 Codex Mini
+- GPT 5.2 Codex
+- Model Native Search
+- News
+- Opt in Features
+- Public Preview
+- Web Search
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison reports on new enhancements to GitHub Copilot chat, where paid subscribers can now benefit from model-native web search for more accurate and up-to-date responses.<!--excerpt_end-->
 
 # Improved Web Search Capability in GitHub Copilot Chat

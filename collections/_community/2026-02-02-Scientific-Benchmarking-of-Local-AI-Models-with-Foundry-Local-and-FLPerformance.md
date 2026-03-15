@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Scientific Benchmarking of Local AI Models with Foundry Local and FLPerformance"
-description: "This in-depth guide explores how to build and operate a robust AI model benchmarking platform using Microsoft Foundry Local, FLPerformance, Node.js, and React. It covers the rationale for scientific benchmarking, detailed architecture, measurement instrumentation, custom benchmark suite design, real-world performance visualization, and actionable best practices for model selection and production deployment."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/benchmarking-local-ai-models/ba-p/4490780"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/benchmarking-local-ai-models/ba-p/4490780
+title: Scientific Benchmarking of Local AI Models with Foundry Local and FLPerformance
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-02 08:00:00 +00:00
-permalink: "/2026-02-02-Scientific-Benchmarking-of-Local-AI-Models-with-Foundry-Local-and-FLPerformance.html"
-categories: ["AI"]
-tags: ["AI", "Benchmarking", "Community", "Concurrency", "FLPerformance", "Latency", "Microsoft Foundry Local", "Model Evaluation", "Node.js", "OpenAI", "Performance Testing", "Prompt Engineering", "React", "SDK Integration", "Statistical Analysis", "Tokens Per Second", "TTFT", "Visualization"]
-tags_normalized: ["ai", "benchmarking", "community", "concurrency", "flperformance", "latency", "microsoft foundry local", "model evaluation", "nodedotjs", "openai", "performance testing", "prompt engineering", "react", "sdk integration", "statistical analysis", "tokens per second", "ttft", "visualization"]
+tags:
+- AI
+- Benchmarking
+- Community
+- Concurrency
+- FLPerformance
+- Latency
+- Microsoft Foundry Local
+- Model Evaluation
+- Node.js
+- OpenAI
+- Performance Testing
+- Prompt Engineering
+- React
+- SDK Integration
+- Statistical Analysis
+- Tokens Per Second
+- TTFT
+- Visualization
+section_names:
+- ai
 ---
-
 Lee Stott presents a practical walkthrough for developers on scientifically benchmarking local AI models using Microsoft Foundry Local, FLPerformance, and modern JavaScript frameworks. The article guides you from architecture to results interpretation.<!--excerpt_end-->
 
 # Scientific Performance Measurement with Foundry Local

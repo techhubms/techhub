@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How to Create a Harness Pipeline and Integrate with Azure"
-description: "This comprehensive community post by gjayadev walks through using Harness to build robust CI/CD pipelines, tightly integrated with Microsoft Azure. The guide covers Harness pipeline fundamentals, secure credential management with Azure Connector and Secrets Manager, and offers step-by-step instructions for setting up and running a CI pipeline targeting Azure services or infrastructure."
-author: "gjayadev"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-create-a-harness-pipeline-and-integrate-with-azure/ba-p/4499862"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/how-to-create-a-harness-pipeline-and-integrate-with-azure/ba-p/4499862
+title: How to Create a Harness Pipeline and Integrate with Azure
+author: gjayadev
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-10 09:06:01 +00:00
-permalink: "/2026-03-10-How-to-Create-a-Harness-Pipeline-and-Integrate-with-Azure.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Automation", "Azure", "Azure Connector", "Azure Key Vault", "Azure Pipeline", "CI/CD", "Cloud Deployment", "Community", "Continuous Delivery", "Continuous Integration", "Delegate", "DevOps", "Harness", "IaC", "Kubernetes", "Pipeline Orchestration", "Secrets Manager"]
-tags_normalized: ["aks", "automation", "azure", "azure connector", "azure key vault", "azure pipeline", "cislashcd", "cloud deployment", "community", "continuous delivery", "continuous integration", "delegate", "devops", "harness", "iac", "kubernetes", "pipeline orchestration", "secrets manager"]
+tags:
+- AKS
+- Automation
+- Azure
+- Azure Connector
+- Azure Key Vault
+- Azure Pipeline
+- CI/CD
+- Cloud Deployment
+- Community
+- Continuous Delivery
+- Continuous Integration
+- Delegate
+- DevOps
+- Harness
+- IaC
+- Kubernetes
+- Pipeline Orchestration
+- Secrets Manager
+section_names:
+- azure
+- devops
 ---
-
 gjayadev provides a hands-on tutorial for building CI/CD pipelines in Harness and integrating them with Microsoft Azure, highlighting pipeline setup, security, and automation best practices.<!--excerpt_end-->
 
 # How to Create a Harness Pipeline and Integrate with Azure

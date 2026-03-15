@@ -1,20 +1,37 @@
----
-layout: "post"
-title: ".NET MAUI Community Standup: Expanding to New Platforms and Accelerating with AI"
-description: "This community standup highlights the progress in extending .NET MAUI to additional platforms such as Linux and macOS. Jon Dick and Allan Ritchie explain their strategies, including leveraging AI to streamline and accelerate cross-platform application development for .NET developers. The session also features insights and demos from key members of the .NET community."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=nY74XPjLw0U"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=nY74XPjLw0U
+title: '.NET MAUI Community Standup: Expanding to New Platforms and Accelerating with AI'
+author: dotnet
+primary_section: ai
+feed_name: DotNet YouTube
 date: 2026-03-03 21:34:42 +00:00
-permalink: "/2026-03-03-NET-MAUI-Community-Standup-Expanding-to-New-Platforms-and-Accelerating-with-AI.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AI Acceleration", "AI in Development", "Application Development", "Blazor", "Coding", "Community Standup", "Cross Platform", "Demo", "DemoFest", "Developer", "Developer Community", "Developer Tools", "Dotnet10", "Dotnetdeveloper", "Dotnetmaui", "Linux", "Macos", "MAUI", "Microsoft", "Open Source", "Videos"]
-tags_normalized: ["dotnet", "ai", "ai acceleration", "ai in development", "application development", "blazor", "coding", "community standup", "cross platform", "demo", "demofest", "developer", "developer community", "developer tools", "dotnet10", "dotnetdeveloper", "dotnetmaui", "linux", "macos", "maui", "microsoft", "open source", "videos"]
+tags:
+- .NET
+- AI
+- AI Acceleration
+- AI in Development
+- Application Development
+- Blazor
+- Community Standup
+- Cross Platform
+- Demo
+- DemoFest
+- Developer
+- Developer Community
+- Developer Tools
+- Dotnet10
+- Dotnetdeveloper
+- Dotnetmaui
+- Linux
+- Macos
+- MAUI
+- Microsoft
+- Open Source
+- Videos
+section_names:
+- ai
+- dotnet
 ---
-
 The dotnet team, with Jon Dick and Allan Ritchie, showcases how .NET MAUI now supports more platforms and details their use of AI for improved development productivity.<!--excerpt_end-->
 
 {% youtube nY74XPjLw0U %}

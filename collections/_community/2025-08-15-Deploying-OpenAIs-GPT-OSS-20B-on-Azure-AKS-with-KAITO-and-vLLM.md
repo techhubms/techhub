@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Deploying OpenAI’s GPT-OSS-20B on Azure AKS with KAITO and vLLM"
-description: "This technical tutorial details the end-to-end process of deploying OpenAI’s first open-source large language model, GPT-OSS-20B, on Azure Kubernetes Service (AKS) using KAITO and vLLM. The guide covers Azure resource setup, Kubernetes cluster provisioning, GPU quota management, YAML configuration for KAITO, public endpoint exposure, API testing, and benchmarking. Readers will learn how to build a scalable, high-performance AI inference endpoint on Azure with real-world load testing and optimization advice."
-author: "maljazaery"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/deploying-openai-s-first-open-source-model-on-azure-aks-with/ba-p/4444234"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/ai-machine-learning-blog/deploying-openai-s-first-open-source-model-on-azure-aks-with/ba-p/4444234
+title: Deploying OpenAI’s GPT-OSS-20B on Azure AKS with KAITO and vLLM
+author: maljazaery
+feed_name: Microsoft Tech Community
 date: 2025-08-15 17:08:39 +00:00
-permalink: "/2025-08-15-Deploying-OpenAIs-GPT-OSS-20B-on-Azure-AKS-with-KAITO-and-vLLM.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Endpoint", "AKS", "API Deployment", "Azure", "Azure CLI", "Chat Completions API", "Community", "GPT OSS 20B", "GPU Inference", "KAITO", "Kubectl", "Kubernetes", "LLM", "Load Testing", "ML", "NVIDIA A10", "OpenAI", "Performance Benchmarking", "Token Throughput", "Vllm", "Workspace Configuration", "YAML"]
-tags_normalized: ["ai", "ai endpoint", "aks", "api deployment", "azure", "azure cli", "chat completions api", "community", "gpt oss 20b", "gpu inference", "kaito", "kubectl", "kubernetes", "llm", "load testing", "ml", "nvidia a10", "openai", "performance benchmarking", "token throughput", "vllm", "workspace configuration", "yaml"]
+tags:
+- AI Endpoint
+- AKS
+- API Deployment
+- Azure CLI
+- Chat Completions API
+- GPT OSS 20B
+- GPU Inference
+- KAITO
+- Kubectl
+- Kubernetes
+- LLM
+- Load Testing
+- NVIDIA A10
+- OpenAI
+- Performance Benchmarking
+- Token Throughput
+- Vllm
+- Workspace Configuration
+- YAML
+- AI
+- Azure
+- ML
+- Community
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 maljazaery presents a practical step-by-step tutorial on deploying OpenAI’s GPT-OSS-20B model on Azure’s AKS using KAITO and vLLM. The guide covers the full technical workflow, including cluster creation, GPU setup, inference optimization, public exposure, endpoint testing, and load benchmarking.<!--excerpt_end-->
 
 # Deploying OpenAI’s GPT-OSS-20B on Azure AKS with KAITO and vLLM
@@ -204,6 +223,7 @@ The [llm-load-test-azure](https://github.com/maljazaery/llm-load-test-azure) too
 - Concurrency: 10
 
 **Key Metrics:**
+
 | Metric                  | Value     | Description                                |
 |-------------------------|-----------|--------------------------------------------|
 | TT_ACK                  | 0.60 s    | Time to acknowledge the request            |

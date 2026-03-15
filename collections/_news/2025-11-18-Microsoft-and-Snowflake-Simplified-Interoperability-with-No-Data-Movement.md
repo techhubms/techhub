@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft and Snowflake: Simplified Interoperability with No Data Movement"
-description: "This official news update from Microsoft Fabric Blog details the latest advancements in Microsoft and Snowflake interoperability, focusing on seamless analytics and AI workloads via Microsoft OneLake. The collaboration prioritizes data access, integration, and management through open standards like Apache Iceberg and Parquet, eliminating the need for data duplication and complex setup. New intuitive UI features in both platforms further streamline bidirectional data sharing, enabling unified, cross-platform experiences for enterprise data projects."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-snowflake-simplified-interoperability-with-no-data-movement/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-and-snowflake-simplified-interoperability-with-no-data-movement/
+title: 'Microsoft and Snowflake: Simplified Interoperability with No Data Movement'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-18 08:00:00 +00:00
-permalink: "/2025-11-18-Microsoft-and-Snowflake-Simplified-Interoperability-with-No-Data-Movement.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Workloads", "Analytics", "Apache Iceberg", "Azure", "Cross Platform Integration", "Data Architecture", "Data Interoperability", "Data Lake", "Data Sharing", "Delta Lake", "Enterprise Data Management", "Fabric Shortcut", "General Availability", "Machine Learning", "Microsoft Fabric", "ML", "News", "OneLake", "Parquet", "Preview Features", "Snowflake", "Unified Data Access"]
-tags_normalized: ["ai", "ai workloads", "analytics", "apache iceberg", "azure", "cross platform integration", "data architecture", "data interoperability", "data lake", "data sharing", "delta lake", "enterprise data management", "fabric shortcut", "general availability", "machine learning", "microsoft fabric", "ml", "news", "onelake", "parquet", "preview features", "snowflake", "unified data access"]
+tags:
+- AI Workloads
+- Analytics
+- Apache Iceberg
+- Cross Platform Integration
+- Data Architecture
+- Data Interoperability
+- Data Lake
+- Data Sharing
+- Delta Lake
+- Enterprise Data Management
+- Fabric Shortcut
+- General Availability
+- Microsoft Fabric
+- OneLake
+- Parquet
+- Preview Features
+- Snowflake
+- Unified Data Access
+- AI
+- Azure
+- ML
+- News
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Microsoft Fabric Blog announces major enhancements in Microsoft and Snowflake interoperability, authored by Microsoft Fabric Blog, with a focus on seamless data analytics, AI, and unified data management.<!--excerpt_end-->
 
 # Microsoft and Snowflake: Simplified Interoperability with No Data Movement
@@ -31,11 +49,11 @@ Data is spread across apps, services, and clouds, creating a complex web of syst
 
 ## Interoperability Features Already Delivered
 
-- **General Availability**   
+- **General Availability**
   - Bidirectional data sharing between Snowflake and OneLake (no duplication)
   - Automatic translation of Iceberg metadata to Delta Lake metadata for all Fabric engines
   - Shortcut Snowflake Iceberg data (Azure, Amazon S3, GCS) into OneLake
-- **Preview Features**   
+- **Preview Features**
   - Native storage of Snowflake Iceberg data in OneLake
   - Automatic conversion of Fabric data into Iceberg format for use in Snowflake
   - New OneLake table APIs supporting Snowflake catalog-linked databases

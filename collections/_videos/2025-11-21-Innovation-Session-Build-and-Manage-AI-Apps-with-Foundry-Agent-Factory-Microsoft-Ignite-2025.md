@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Innovation Session: Build and Manage AI Apps with Foundry Agent Factory – Microsoft Ignite 2025"
-description: "This session, led by Microsoft engineering leaders at Microsoft Ignite 2025, explores how to use Microsoft Foundry to build, orchestrate, and manage intelligent AI agents. It demonstrates modular workflows, unifying models and data, enterprise-grade security, and observability. Key topics include runtime guardrails, scaling agent management, integrating agent frameworks, and enhancing evaluation with GitHub Copilot and CI/CD pipelines."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QoZRWC8irLs"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=QoZRWC8irLs
+title: 'Innovation Session: Build and Manage AI Apps with Foundry Agent Factory – Microsoft Ignite 2025'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 12:56:13 +00:00
-permalink: "/2025-11-21-Innovation-Session-Build-and-Manage-AI-Apps-with-Foundry-Agent-Factory-Microsoft-Ignite-2025.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agent Evaluation", "Agent Factory", "Agent Orchestration", "AI", "AI Agents", "Azure", "CI/CD", "Developer Tools", "DevOps", "Enterprise Security", "GitHub Copilot", "Human in The Loop", "InnovatewithAzureAIappsandagents", "Intelligent Agents", "LangGraph", "Microsoft Foundry", "Model Integration", "MS Ignite", "MSIgnite", "Observability", "Videos", "Workflow Automation"]
-tags_normalized: ["agent evaluation", "agent factory", "agent orchestration", "ai", "ai agents", "azure", "cislashcd", "developer tools", "devops", "enterprise security", "github copilot", "human in the loop", "innovatewithazureaiappsandagents", "intelligent agents", "langgraph", "microsoft foundry", "model integration", "ms ignite", "msignite", "observability", "videos", "workflow automation"]
+tags:
+- Agent Evaluation
+- Agent Factory
+- Agent Orchestration
+- AI Agents
+- CI/CD
+- Developer Tools
+- Enterprise Security
+- Human in The Loop
+- Intelligent Agents
+- LangGraph
+- Microsoft Foundry
+- Model Integration
+- MS Ignite
+- MSIgnite
+- Observability
+- Workflow Automation
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Microsoft Events presents a session featuring Yina Arenas, Sarah Bird, Amanda Silver, and Marco Casalaina on building modular AI agent solutions with Microsoft Foundry, showcasing secure orchestration, scaling, GitHub Copilot integration, and best practices for developers.<!--excerpt_end-->
 
 {% youtube QoZRWC8irLs %}
@@ -35,12 +53,12 @@ Join engineering leaders as they introduce Microsoft Foundry’s approach to mod
 - **Model and Tool Unification:** Strategies for leveraging diverse models and integrating different data sources for flexible solutions.
 - **Scalability and Agent Management:** Techniques for managing hundreds of agents at scale using the Foundry Hub.
 - **Demonstrations:**
-    - Workflow and agent integration using LangGraph.
-    - Inventory analysis agent set up with a human-in-the-loop workflow.
-    - Showcasing Lufthansa’s use of the Microsoft Agent Framework for scalable operations.
+  - Workflow and agent integration using LangGraph.
+  - Inventory analysis agent set up with a human-in-the-loop workflow.
+  - Showcasing Lufthansa’s use of the Microsoft Agent Framework for scalable operations.
 - **Developer Enablement:**
-    - How GitHub Copilot is integrated for agent evaluations.
-    - CI/CD integration to streamline agent testing and deployment.
+  - How GitHub Copilot is integrated for agent evaluations.
+  - CI/CD integration to streamline agent testing and deployment.
 
 ## Detailed Agenda Highlights
 

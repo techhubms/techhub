@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How Microsoft Is Advancing AI-Driven Clean Energy in Asia"
-description: "This news post explores Microsoft's initiatives to drive the energy transition in Asia-Pacific by integrating AI and cloud technologies into clean energy solutions. It highlights the company's efforts in expanding carbon-free electricity supply, modernizing grid infrastructure, supporting water resilience, and advancing circular practices, all while partnering with governments, utilities, and innovators to promote sustainable economic growth."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/2025/09/02/powering-progress-in-asia-ai-and-energy/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/asia/2025/09/02/powering-progress-in-asia-ai-and-energy/
+title: How Microsoft Is Advancing AI-Driven Clean Energy in Asia
+author: stclarke
+feed_name: Microsoft News
 date: 2025-09-02 14:43:12 +00:00
-permalink: "/2025-09-02-How-Microsoft-Is-Advancing-AI-Driven-Clean-Energy-in-Asia.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Asia Pacific", "Azure", "Circular Economy", "Clean Energy", "Climate Innovation Fund", "Cloud Computing", "Company News", "Datacenters", "Geothermal", "Grid Forecasting", "Microsoft", "News", "Renewable Energy", "Solar Power", "Sustainability", "Virtual PPA", "Water Resilience"]
-tags_normalized: ["ai", "asia pacific", "azure", "circular economy", "clean energy", "climate innovation fund", "cloud computing", "company news", "datacenters", "geothermal", "grid forecasting", "microsoft", "news", "renewable energy", "solar power", "sustainability", "virtual ppa", "water resilience"]
+tags:
+- Asia Pacific
+- Circular Economy
+- Clean Energy
+- Climate Innovation Fund
+- Cloud Computing
+- Company News
+- Datacenters
+- Geothermal
+- Grid Forecasting
+- Microsoft
+- Renewable Energy
+- Solar Power
+- Sustainability
+- Virtual PPA
+- Water Resilience
+- AI
+- Azure
+- News
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 stclarke reports on how Microsoft is leveraging AI and cloud infrastructure in Asia to promote clean energy adoption and sustainability, with initiatives spanning from carbon-free electricity procurement to water conservation and datacenter circularity.<!--excerpt_end-->
 
 # How Microsoft Is Advancing AI-Driven Clean Energy in Asia

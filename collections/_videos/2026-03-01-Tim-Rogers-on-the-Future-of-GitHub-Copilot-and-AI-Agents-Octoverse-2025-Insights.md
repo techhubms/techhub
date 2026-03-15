@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Tim Rogers on the Future of GitHub Copilot and AI Agents: Octoverse 2025 Insights"
-description: "This session features Tim Rogers, Principal Product Manager at GitHub, providing detailed commentary on the findings from the 2025 Octoverse report. The discussion focuses on the swift adoption of AI agents in development, their evolving impact on developer workflows, security considerations surrounding AI, and the trajectory of agent-driven tools within the software engineering ecosystem."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=THyiJxOpbJY"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=THyiJxOpbJY
+title: 'Tim Rogers on the Future of GitHub Copilot and AI Agents: Octoverse 2025 Insights'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-01 15:00:44 +00:00
-permalink: "/2026-03-01-Tim-Rogers-on-the-Future-of-GitHub-Copilot-and-AI-Agents-Octoverse-2025-Insights.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Adoption", "AI Agents", "AI in Software Development", "Copilot Adoption", "Developer Workflows", "DevOps", "Enterprise VS Startup", "GitHub", "GitHub Copilot", "Octoverse", "Videos"]
-tags_normalized: ["ai", "ai adoption", "ai agents", "ai in software development", "copilot adoption", "developer workflows", "devops", "enterprise vs startup", "github", "github copilot", "octoverse", "videos"]
+tags:
+- AI
+- AI Adoption
+- AI Agents
+- AI in Software Development
+- Copilot Adoption
+- Developer Workflows
+- DevOps
+- Enterprise VS Startup
+- GitHub
+- GitHub Copilot
+- Octoverse
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 In this video, Tim Rogers of GitHub reacts to the latest Octoverse 2025 report, examining the growing influence of GitHub Copilot and AI agents on development teams. The discussion includes security implications and the evolving landscape of developer tools.<!--excerpt_end-->
 
 {% youtube THyiJxOpbJY %}

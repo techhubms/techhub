@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Agent Harness Patterns with Microsoft Agent Framework: Shell Execution and Context Compaction in Python and .NET"
-description: "This article offers a practical guide to building robust agent systems using Microsoft Agent Framework. It covers local and hosted shell execution harnesses, approval workflows, and advanced context management strategies across Python and .NET, enabling developers to create agents that bridge model reasoning with real-world execution scenarios securely and efficiently."
-author: "Dmytro Struk, Chris Rickman, Eduard van Valkenburg"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/agent-harness-in-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/agent-harness-in-agent-framework/
+title: 'Agent Harness Patterns with Microsoft Agent Framework: Shell Execution and Context Compaction in Python and .NET'
+author: Dmytro Struk, Chris Rickman, Eduard van Valkenburg
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-03-12 19:30:26 +00:00
-permalink: "/2026-03-12-Agent-Harness-Patterns-with-Microsoft-Agent-Framework-Shell-Execution-and-Context-Compaction-in-Python-and-NET.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "Agent Framework", "AI", "AI Agent", "Approval Flow", "Code Samples", "Coding", "Context Compaction", "Filesystem Access", "in Memory History", "Microsoft Agents", "News", "OpenAI", "Python", "Session Management", "Shell Execution", "Tool Integration", "Workflow Automation"]
-tags_normalized: ["dotnet", "agent framework", "ai", "ai agent", "approval flow", "code samples", "coding", "context compaction", "filesystem access", "in memory history", "microsoft agents", "news", "openai", "python", "session management", "shell execution", "tool integration", "workflow automation"]
+tags:
+- .NET
+- Agent Framework
+- AI
+- AI Agent
+- Approval Flow
+- Code Samples
+- Context Compaction
+- Filesystem Access
+- in Memory History
+- Microsoft Agents
+- News
+- OpenAI
+- Python
+- Session Management
+- Shell Execution
+- Tool Integration
+- Workflow Automation
+section_names:
+- ai
+- dotnet
 ---
-
 Dmytro Struk, Chris Rickman, and Eduard van Valkenburg present hands-on techniques for building production-ready AI agents using the Microsoft Agent Framework, highlighting secure shell execution and conversational context management.<!--excerpt_end-->
 
 # Agent Harness Patterns with Microsoft Agent Framework: Shell Execution and Context Compaction in Python and .NET

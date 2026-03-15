@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Operationalizing Agentic Applications with Microsoft Fabric"
-description: "This article explores how to move agentic AI applications from prototypes to production workloads using Microsoft Fabric. It demonstrates capturing agent behavior as governed data, monitoring safety and performance in real time, and connecting operational data to business insight, using an open-source banking app as a reference implementation that leverages Microsoft Fabric, OneLake, Power BI, and Azure AI Evaluation SDK."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/operationalizing-agentic-applications-with-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/operationalizing-agentic-applications-with-microsoft-fabric/
+title: Operationalizing Agentic Applications with Microsoft Fabric
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-03-12 10:00:00 +00:00
-permalink: "/2026-03-12-Operationalizing-Agentic-Applications-with-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic Applications", "AI", "AI Observability", "Azure", "Azure AI Evaluation SDK", "Azure Cosmos DB", "Banking App", "Data Governance", "Eventhouse", "Eventstream", "KQL", "Lakehouse", "Microsoft Fabric", "ML", "News", "OneLake", "Operational Analytics", "Power BI", "Reference Architecture", "Semantic Model", "SQL Database", "Traceability"]
-tags_normalized: ["agentic applications", "ai", "ai observability", "azure", "azure ai evaluation sdk", "azure cosmos db", "banking app", "data governance", "eventhouse", "eventstream", "kql", "lakehouse", "microsoft fabric", "ml", "news", "onelake", "operational analytics", "power bi", "reference architecture", "semantic model", "sql database", "traceability"]
+tags:
+- Agentic Applications
+- AI
+- AI Observability
+- Azure
+- Azure AI Evaluation SDK
+- Azure Cosmos DB
+- Banking App
+- Data Governance
+- Eventhouse
+- Eventstream
+- KQL
+- Lakehouse
+- Microsoft Fabric
+- ML
+- News
+- OneLake
+- Operational Analytics
+- Power BI
+- Reference Architecture
+- Semantic Model
+- SQL Database
+- Traceability
+section_names:
+- ai
+- azure
+- ml
 ---
-
 The Microsoft Fabric Blog team showcases how agentic AI apps can be operationalized for production with Microsoft Fabric, highlighting real-time monitoring, data governance, and analytics.<!--excerpt_end-->
 
 # Operationalizing Agentic Applications with Microsoft Fabric

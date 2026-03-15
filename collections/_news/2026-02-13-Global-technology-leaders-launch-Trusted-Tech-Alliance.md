@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Global technology leaders launch Trusted Tech Alliance"
-description: "This news announcement covers the launch of the Trusted Tech Alliance (TTA), a consortium of global technology companies—including Microsoft—dedicated to establishing shared principles for trusted technology stacks. The Alliance focuses on key tenets like transparency, security, data protection, and resilient, open ecosystems, highlighting new industry standards and cooperation in areas such as cloud, AI, and supply chain security."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/2026/02/13/global-technology-leaders-launch-trusted-tech-alliance/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/2026/02/13/global-technology-leaders-launch-trusted-tech-alliance/
+title: Global technology leaders launch Trusted Tech Alliance
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-13 17:01:09 +00:00
-permalink: "/2026-02-13-Global-technology-leaders-launch-Trusted-Tech-Alliance.html"
-categories: ["AI", "Security"]
-tags: ["AI", "Cloud Infrastructure", "Company News", "Corporate Governance", "Data Protection", "Digital Ecosystem", "International Cooperation", "Microsoft", "News", "Resilience", "Security", "Supply Chain", "Technology Standards", "Transparency", "Trusted Tech Alliance"]
-tags_normalized: ["ai", "cloud infrastructure", "company news", "corporate governance", "data protection", "digital ecosystem", "international cooperation", "microsoft", "news", "resilience", "security", "supply chain", "technology standards", "transparency", "trusted tech alliance"]
+tags:
+- AI
+- Cloud Infrastructure
+- Company News
+- Corporate Governance
+- Data Protection
+- Digital Ecosystem
+- International Cooperation
+- Microsoft
+- News
+- Resilience
+- Security
+- Supply Chain
+- Technology Standards
+- Transparency
+- Trusted Tech Alliance
+section_names:
+- ai
+- security
 ---
-
 stclarke summarizes the Trusted Tech Alliance launch, showcasing Microsoft's and other tech leaders' commitments to principles like transparency, security, and trustworthy global technology solutions.<!--excerpt_end-->
 
 # Global technology leaders launch Trusted Tech Alliance

@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Reactive Incident Response with Azure SRE Agent: From Alert to Resolution in Minutes"
-description: "This community post by Sabyasachi-Samaddar delivers a detailed guide and case study on using Azure SRE Agent to automate and accelerate incident response in cloud operations. It demonstrates how AI-driven investigation, Azure Monitor, and custom incident response plans streamline resolution of real-world incidents such as SQL connectivity failures and VM CPU spikes, reducing time to recovery and operational toil. Users learn how SRE Agent autonomously triages, remediates, and documents incidents with structured best practices and actionable technical insights."
-author: "Sabyasachi-Samaddar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/reactive-incident-response-with-azure-sre-agent-from-alert-to/ba-p/4492938"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/reactive-incident-response-with-azure-sre-agent-from-alert-to/ba-p/4492938
+title: 'Reactive Incident Response with Azure SRE Agent: From Alert to Resolution in Minutes'
+author: Sabyasachi-Samaddar
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-19 06:44:39 +00:00
-permalink: "/2026-02-19-Reactive-Incident-Response-with-Azure-SRE-Agent-From-Alert-to-Resolution-in-Minutes.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AI", "AI Operations", "Alerting", "Application Insights", "ARM API", "Azure", "Azure Monitor", "Azure SRE Agent", "Cloud Automation", "Community", "Custom Runbooks", "DevOps", "Incident Response", "Incident Response Plan", "Log Analytics", "Metrics", "MTTR", "PowerShell", "RBAC", "Run Command", "Security", "Security Best Practices", "Session Insights", "SQL Database", "Virtual Machines"]
-tags_normalized: ["ai", "ai operations", "alerting", "application insights", "arm api", "azure", "azure monitor", "azure sre agent", "cloud automation", "community", "custom runbooks", "devops", "incident response", "incident response plan", "log analytics", "metrics", "mttr", "powershell", "rbac", "run command", "security", "security best practices", "session insights", "sql database", "virtual machines"]
+tags:
+- AI
+- AI Operations
+- Alerting
+- Application Insights
+- ARM API
+- Azure
+- Azure Monitor
+- Azure SRE Agent
+- Cloud Automation
+- Community
+- Custom Runbooks
+- DevOps
+- Incident Response
+- Incident Response Plan
+- Log Analytics
+- Metrics
+- MTTR
+- PowerShell
+- RBAC
+- Run Command
+- Security
+- Security Best Practices
+- Session Insights
+- SQL Database
+- Virtual Machines
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 Sabyasachi-Samaddar showcases how Azure SRE Agent leverages AI and automation to enable faster, more consistent incident response and recovery for Azure environments, using practical scenarios and technical walkthroughs.<!--excerpt_end-->
 
 # Reactive Incident Response with Azure SRE Agent: From Alert to Resolution in Minutes

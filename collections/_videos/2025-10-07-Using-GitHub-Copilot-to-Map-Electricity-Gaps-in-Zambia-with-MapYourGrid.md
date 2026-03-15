@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid"
-description: "This video highlights how a developer in Zambia leverages MapYourGrid's open data and GitHub Copilot to visualize energy access gaps. It demonstrates practical application of AI-assisted tools in VS Code and GitHub issues for social impact, providing insights into how developers can support sustainable development objectives through technology."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/AWvpFKOdGMg"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/AWvpFKOdGMg
+title: Using GitHub Copilot to Map Electricity Gaps in Zambia with MapYourGrid
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-10-07 14:00:15 +00:00
-permalink: "/2025-10-07-Using-GitHub-Copilot-to-Map-Electricity-Gaps-in-Zambia-with-MapYourGrid.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI For Good", "Climate Action", "Data Visualization", "Developer Tools", "GitHub", "GitHub Copilot", "Issue Management", "MapYourGrid", "Open Data", "Open Source", "OpenSource", "Sustainable Development", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai for good", "climate action", "data visualization", "developer tools", "github", "github copilot", "issue management", "mapyourgrid", "open data", "open source", "opensource", "sustainable development", "videos", "vs code"]
+tags:
+- AI For Good
+- Climate Action
+- Data Visualization
+- Developer Tools
+- GitHub
+- Issue Management
+- MapYourGrid
+- Open Data
+- Open Source
+- OpenSource
+- Sustainable Development
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 GitHub showcases how a developer in Zambia uses MapYourGrid's open data and GitHub Copilot to map local electricity gaps, illustrating how AI and open source tools can drive sustainable development.<!--excerpt_end-->
 
 {% youtube AWvpFKOdGMg %}

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GPT-5 Comes to GitHub Copilot in Visual Studio"
-description: "This article announces the rollout of GPT-5, OpenAI’s latest model, within GitHub Copilot for Visual Studio. The update brings faster code suggestions, improved code quality, and smarter AI explanations, enhancing developer productivity. Details include how to access GPT-5, key advancements, phased model deprecations, and configuration steps for enterprise users."
-author: "Rhea Patel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/gpt-5-now-available-in-visual-studio/
+title: GPT-5 Comes to GitHub Copilot in Visual Studio
+author: Rhea Patel
+feed_name: Microsoft VisualStudio Blog
 date: 2025-08-12 17:10:52 +00:00
-permalink: "/2025-08-12-GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Code Completion", "AI Development Tools", "Copilot Business", "Copilot Chat", "Copilot Enterprise", "GitHub Copilot", "GPT 5", "IDE Integration", "Model Deprecation", "Model Picker", "News", "OpenAI", "Software Engineering Productivity", "VS"]
-tags_normalized: ["agent mode", "ai", "ai code completion", "ai development tools", "copilot business", "copilot chat", "copilot enterprise", "github copilot", "gpt 5", "ide integration", "model deprecation", "model picker", "news", "openai", "software engineering productivity", "vs"]
+tags:
+- Agent Mode
+- AI Code Completion
+- AI Development Tools
+- Copilot Business
+- Copilot Chat
+- Copilot Enterprise
+- GPT 5
+- IDE Integration
+- Model Deprecation
+- Model Picker
+- OpenAI
+- Software Engineering Productivity
+- VS
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Rhea Patel announces that GPT-5 is now available in GitHub Copilot for Visual Studio, offering improved AI-powered code assistance and insights for developers.<!--excerpt_end-->
 
 # GPT-5 Now Available in Visual Studio

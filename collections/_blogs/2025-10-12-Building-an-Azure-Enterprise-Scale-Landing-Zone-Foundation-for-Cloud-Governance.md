@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building an Azure Enterprise-Scale Landing Zone: Foundation for Cloud Governance"
-description: "This post explores Microsoft's Enterprise-Scale Landing Zone (ESLZ) architecture—a Microsoft Cloud Adoption Framework blueprint for building secure, scalable, and governed Azure environments. Learn about the core components, deployment options (Terraform, Bicep, Portal Accelerator), and best practices for implementing robust governance, operational excellence, and cost optimization in enterprise-scale cloud adoption."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/azure-enterprise-scale-landing-zone-building-a-future-ready-cloud-foundation/
+title: 'Building an Azure Enterprise-Scale Landing Zone: Foundation for Cloud Governance'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-10-12 08:10:44 +00:00
-permalink: "/2025-10-12-Building-an-Azure-Enterprise-Scale-Landing-Zone-Foundation-for-Cloud-Governance.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Active Directory", "Azure DevOps", "Azure Landing Zone", "Azure Monitor", "Azure Policy", "Azure Security Center", "Bicep", "Blogs", "CI/CD", "Cloud Adoption Framework", "Cloud Security", "Cost Optimization", "Defender For Cloud", "DevOps", "Enterprise Architecture", "Governance", "IaC", "Management Groups", "Networking", "Role Based Access Control", "Security", "Terraform"]
-tags_normalized: ["azure", "azure active directory", "azure devops", "azure landing zone", "azure monitor", "azure policy", "azure security center", "bicep", "blogs", "cislashcd", "cloud adoption framework", "cloud security", "cost optimization", "defender for cloud", "devops", "enterprise architecture", "governance", "iac", "management groups", "networking", "role based access control", "security", "terraform"]
+tags:
+- Azure Active Directory
+- Azure DevOps
+- Azure Landing Zone
+- Azure Monitor
+- Azure Policy
+- Azure Security Center
+- Bicep
+- CI/CD
+- Cloud Adoption Framework
+- Cloud Security
+- Cost Optimization
+- Defender For Cloud
+- Enterprise Architecture
+- Governance
+- IaC
+- Management Groups
+- Networking
+- Role Based Access Control
+- Terraform
+- Azure
+- DevOps
+- Security
+- Blogs
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Dellenny explains how to establish a robust, future-ready Azure foundation with Enterprise-Scale Landing Zones, highlighting essential practices and tools for security, governance, and scalable cloud operations.<!--excerpt_end-->
 
 # Building an Azure Enterprise-Scale Landing Zone: Foundation for Cloud Governance

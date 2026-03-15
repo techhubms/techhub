@@ -1,20 +1,26 @@
----
-layout: "post"
-title: ".NET 8.0 MAUI: How to Set Minimum Window Size for Your Application"
-description: "The author seeks advice on enforcing a minimum window size in a .NET MAUI app for Windows. Despite searching online and asking ChatGPT, the author could not find a straightforward solution. They share code snippets for customizing MainWindow.xaml.cs and implementing a helper file, hoping for clearer answers or guidance from the community."
-author: "Vor__texx"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/dotnet/comments/1mfnu3z/net80_maui_size_of_my_applications_window/"
-viewing_mode: "external"
-feed_name: "Reddit DotNet"
-feed_url: "https://www.reddit.com/r/dotnet/.rss"
+﻿---
+external_url: https://www.reddit.com/r/dotnet/comments/1mfnu3z/net80_maui_size_of_my_applications_window/
+title: '.NET 8.0 MAUI: How to Set Minimum Window Size for Your Application'
+author: Vor__texx
+feed_name: Reddit DotNet
 date: 2025-08-02 11:04:25 +00:00
-permalink: "/2025-08-02-NET-80-MAUI-How-to-Set-Minimum-Window-Size-for-Your-Application.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8", "App Development", "Coding", "Community", "Cross Platform", "MainWindow.xaml.cs", "MAUI", "Minimum Window Size", "UI Constraints", "Windows", "WindowSubClassHelper.cs", "XAML"]
-tags_normalized: ["dotnet", "dotnet 8", "app development", "coding", "community", "cross platform", "mainwindowdotxamldotcs", "maui", "minimum window size", "ui constraints", "windows", "windowsubclasshelperdotcs", "xaml"]
+tags:
+- .NET
+- .NET 8
+- App Development
+- Cross Platform
+- MainWindow.xaml.cs
+- MAUI
+- Minimum Window Size
+- UI Constraints
+- Windows
+- WindowSubClassHelper.cs
+- XAML
+- Community
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Vor__texx shares their struggle to set a minimum window size in a .NET 8.0 MAUI application, detailing the approaches tried and asking the community for help.<!--excerpt_end-->
 
 ## Summary

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub’s Year in Review: Accessibility, Model Context Protocol, and Developer Wins"
-description: "This episode of The GitHub Podcast explores key updates and improvements from GitHub over the past year, with a spotlight on accessibility, the introduction of the Model Context Protocol (MCP), and 'Maintainer Tiny Wins'—small, time-saving enhancements for developers. Hosts Cassidy and Abby are joined by Helen Hou-Sandí to discuss how these initiatives impact the open source community and developer productivity."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=DW_vw8BkcBU"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=DW_vw8BkcBU
+title: 'GitHub’s Year in Review: Accessibility, Model Context Protocol, and Developer Wins'
+author: GitHub
+primary_section: devops
+feed_name: GitHub YouTube
 date: 2026-01-31 15:00:23 +00:00
-permalink: "/2026-01-31-GitHubs-Year-in-Review-Accessibility-Model-Context-Protocol-and-Developer-Wins.html"
-categories: ["DevOps"]
-tags: ["Accessibility", "Accessibility Scanner", "CI/CD", "Community Contribution", "Developer Productivity", "DevOps", "Git History Cleaner", "GitHub", "MCP", "Merge Conflict Resolution", "Open Source", "Open Standards", "Project Bluefin", "Pull Request Review", "Videos", "WebP Support", "Workflow Automation"]
-tags_normalized: ["accessibility", "accessibility scanner", "cislashcd", "community contribution", "developer productivity", "devops", "git history cleaner", "github", "mcp", "merge conflict resolution", "open source", "open standards", "project bluefin", "pull request review", "videos", "webp support", "workflow automation"]
+tags:
+- Accessibility
+- Accessibility Scanner
+- CI/CD
+- Community Contribution
+- Developer Productivity
+- DevOps
+- Git History Cleaner
+- GitHub
+- MCP
+- Merge Conflict Resolution
+- Open Source
+- Open Standards
+- Project Bluefin
+- Pull Request Review
+- Videos
+- WebP Support
+- Workflow Automation
+section_names:
+- devops
 ---
-
 In this episode, Cassidy and Abby are joined by Helen Hou-Sandí to discuss accessibility, the Model Context Protocol (MCP), and 'Maintainer Tiny Wins' at GitHub. The discussion features engineering improvements, open standards, and community-driven enhancements for developers.<!--excerpt_end-->
 
 {% youtube DW_vw8BkcBU %}

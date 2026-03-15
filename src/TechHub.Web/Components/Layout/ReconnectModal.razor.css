@@ -1,0 +1,160 @@
+.components-reconnect-first-attempt-visible,
+.components-reconnect-repeated-attempt-visible,
+.components-reconnect-failed-visible,
+.components-pause-visible,
+.components-resume-failed-visible,
+.components-rejoining-animation {
+    display: none;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-reconnect-first-attempt-visible,
+#components-reconnect-modal.components-reconnect-show .components-rejoining-animation,
+#components-reconnect-modal.components-reconnect-paused .components-pause-visible,
+#components-reconnect-modal.components-reconnect-resume-failed .components-resume-failed-visible,
+#components-reconnect-modal.components-reconnect-retrying,
+#components-reconnect-modal.components-reconnect-retrying .components-reconnect-repeated-attempt-visible,
+#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation,
+#components-reconnect-modal.components-reconnect-failed,
+#components-reconnect-modal.components-reconnect-failed .components-reconnect-failed-visible {
+    display: block;
+}
+
+
+#components-reconnect-modal {
+    background-color: var(--color-bg-default);
+    color: var(--color-text-primary);
+    width: 20rem;
+    margin: 20vh auto;
+    padding: 2rem;
+    border: 2px solid var(--color-purple-dark);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    transition: display 0.5s allow-discrete, overlay 0.5s allow-discrete;
+    animation: components-reconnect-modal-fadeOutOpacity 0.5s both;
+
+    &[open] {
+        animation: components-reconnect-modal-slideUp 1.5s cubic-bezier(.05, .89, .25, 1.02) 0.3s, components-reconnect-modal-fadeInOpacity 0.5s ease-in-out 0.3s;
+        animation-fill-mode: both;
+    }
+
+}
+
+#components-reconnect-modal::backdrop {
+    background-color: var(--color-black-backdrop);
+    animation: components-reconnect-modal-fadeInOpacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+@keyframes components-reconnect-modal-slideUp {
+    0% {
+        transform: translateY(30px) scale(0.95);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes components-reconnect-modal-fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes components-reconnect-modal-fadeOutOpacity {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.components-reconnect-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    /* Prevent visible resize when Blazor hides content before close animation */
+    min-height: 140px;
+}
+
+#components-reconnect-modal p {
+    margin: 0;
+    text-align: center;
+    color: var(--color-text-primary);
+}
+
+#components-reconnect-modal button {
+    border: 0;
+    background-color: var(--color-purple-bright);
+    color: var(--color-bg-default);
+    padding: 4px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+@media (hover: hover) {
+    #components-reconnect-modal button:hover {
+        background-color: var(--color-purple-medium);
+    }
+}
+
+#components-reconnect-modal button:active {
+    background-color: var(--color-purple-dark);
+}
+
+.components-rejoining-animation {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.components-rejoining-animation div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid var(--color-purple-dark);
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* Only animate when the reconnect dialog is actively showing — avoids
+   mobile browsers treating the animation as already-completed when the
+   element was still display:none at page load. */
+#components-reconnect-modal.components-reconnect-show .components-rejoining-animation div,
+#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation div {
+    animation: components-rejoining-animation 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite backwards;
+}
+
+#components-reconnect-modal.components-reconnect-show .components-rejoining-animation div:nth-child(2),
+#components-reconnect-modal.components-reconnect-retrying .components-rejoining-animation div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+
+@keyframes components-rejoining-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    5% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}

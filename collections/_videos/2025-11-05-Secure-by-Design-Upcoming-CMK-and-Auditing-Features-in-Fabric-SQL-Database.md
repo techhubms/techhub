@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database"
-description: "This episode explores new security features in Fabric SQL Database, highlighting Customer-Managed Keys (CMK) for enhanced encryption control and auditing functionality for improved visibility into database operations. Through demonstrations and in-depth discussion, it covers compliance, data protection, and the technical implementation of these security enhancements for organizations building on Microsoft Fabric."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dxUsmfYqBAI"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=dxUsmfYqBAI
+title: 'Secure by Design: Upcoming CMK and Auditing Features in Fabric SQL Database'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-11-05 17:01:13 +00:00
-permalink: "/2025-11-05-Secure-by-Design-Upcoming-CMK-and-Auditing-Features-in-Fabric-SQL-Database.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Auditing", "Azure", "Cloud Computing", "CMK", "Compliance", "Customer Managed Keys", "Data Security", "Data Sovereignty", "Database Auditing", "Dev", "Development", "Encryption", "Fabric SQL Database", "Microsoft", "Microsoft Azure", "Microsoft Fabric", "Regulatory Compliance", "Security", "SQL Security", "TDE", "Tech", "Technology", "Transparent Data Encryption", "Videos"]
-tags_normalized: ["access control", "auditing", "azure", "cloud computing", "cmk", "compliance", "customer managed keys", "data security", "data sovereignty", "database auditing", "dev", "development", "encryption", "fabric sql database", "microsoft", "microsoft azure", "microsoft fabric", "regulatory compliance", "security", "sql security", "tde", "tech", "technology", "transparent data encryption", "videos"]
+tags:
+- Access Control
+- Auditing
+- Cloud Computing
+- CMK
+- Compliance
+- Customer Managed Keys
+- Data Security
+- Data Sovereignty
+- Database Auditing
+- Dev
+- Development
+- Encryption
+- Fabric SQL Database
+- Microsoft
+- Microsoft Azure
+- Microsoft Fabric
+- Regulatory Compliance
+- SQL Security
+- TDE
+- Tech
+- Technology
+- Transparent Data Encryption
+- Azure
+- Security
+- Videos
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Microsoft Developer introduces upcoming security features for Fabric SQL Database, focusing on Customer-Managed Keys and auditing to empower organizations with encryption control and robust operational visibility.<!--excerpt_end-->
 
 {% youtube dxUsmfYqBAI %}

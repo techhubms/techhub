@@ -1,20 +1,26 @@
----
-layout: "post"
-title: ".NET and .NET Framework August 2025 Servicing Releases: Updates and Changelogs"
-description: "This post by Tara Overfield and Victor Israel-Bolarinwa covers the servicing updates for .NET 8.0, .NET 9.0, and .NET Framework released in August 2025. It summarizes key non-security fixes, provides release notes, installation resources, and changelogs, and offers guidance for staying updated."
-author: "Tara Overfield, Victor Israel-Bolarinwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2025-servicing-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-august-2025-servicing-updates/
+title: '.NET and .NET Framework August 2025 Servicing Releases: Updates and Changelogs'
+author: Tara Overfield, Victor Israel-Bolarinwa
+feed_name: Microsoft .NET Blog
 date: 2025-08-05 22:54:56 +00:00
-permalink: "/2025-08-05-NET-and-NET-Framework-August-2025-Servicing-Releases-Updates-and-Changelogs.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 8.0", ".NET 9.0", ".NET Framework", "Coding", "Installers", "Linux Packages", "Maintenance", "Maintenance & Updates", "News", "Release Notes", "Runtime", "Servicing Updates"]
-tags_normalized: ["dotnet", "dotnet 8dot0", "dotnet 9dot0", "dotnet framework", "coding", "installers", "linux packages", "maintenance", "maintenance and updates", "news", "release notes", "runtime", "servicing updates"]
+tags:
+- .NET
+- .NET 8.0
+- .NET 9.0
+- .NET Framework
+- Installers
+- Linux Packages
+- Maintenance
+- Maintenance & Updates
+- Release Notes
+- Runtime
+- Servicing Updates
+- News
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Tara Overfield and Victor Israel-Bolarinwa provide a detailed recap of the August 2025 servicing updates for .NET 8.0, .NET 9.0, and the .NET Framework, focusing on new non-security fixes and resources.<!--excerpt_end-->
 
 # .NET and .NET Framework August 2025 Servicing Releases: Updates and Changelogs

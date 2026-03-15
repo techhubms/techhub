@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Vibe Coding vs. Spec-Driven Development: Finding Balance in the AI Era"
-description: "This article, authored by Alan Shimel and featuring insights from AWS Sr. Principal Engineer David Yanacek, discusses the emergence of vibe coding in the era of generative AI compared to traditional spec-driven practices. The piece explores how AI copilots and automation tools are reshaping developer workflows, the risks and opportunities of rapid experimentation, and the continued importance of DevOps principles in maintaining software quality and security."
-author: "Alan Shimel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+external_url: https://devops.com/vibe-coding-vs-spec-driven-development-finding-balance-in-the-ai-era/
+title: 'Vibe Coding vs. Spec-Driven Development: Finding Balance in the AI Era'
+author: Alan Shimel
+feed_name: DevOps Blog
 date: 2025-11-12 19:24:36 +00:00
-permalink: "/2025-11-12-Vibe-Coding-vs-Spec-Driven-Development-Finding-Balance-in-the-AI-Era.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AI Copilots", "Automation", "AWS", "Blogs", "Code Review", "Development Workflow", "DevOps", "Feedback Loops", "Generative AI", "Observability", "Quality Assurance", "Software Engineering", "Spec Driven Development", "Technical Debt", "Vibe Coding", "Video Interviews"]
-tags_normalized: ["ai", "ai copilots", "automation", "aws", "blogs", "code review", "development workflow", "devops", "feedback loops", "generative ai", "observability", "quality assurance", "software engineering", "spec driven development", "technical debt", "vibe coding", "video interviews"]
+tags:
+- AI Copilots
+- Automation
+- AWS
+- Code Review
+- Development Workflow
+- Feedback Loops
+- Generative AI
+- Observability
+- Quality Assurance
+- Software Engineering
+- Spec Driven Development
+- Technical Debt
+- Vibe Coding
+- Video Interviews
+- AI
+- DevOps
+- Blogs
+section_names:
+- ai
+- devops
+primary_section: ai
 ---
-
 Alan Shimel presents an overview of David Yanacek’s perspective on vibe coding versus spec-driven development, examining how generative AI, DevOps automation, and structured engineering can be balanced in modern software projects.<!--excerpt_end-->
 
 # Vibe Coding vs. Spec-Driven Development: Finding Balance in the AI Era

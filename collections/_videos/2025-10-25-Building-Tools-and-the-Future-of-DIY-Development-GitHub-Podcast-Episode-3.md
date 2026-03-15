@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Building Tools and the Future of DIY Development: GitHub Podcast Episode 3"
-description: "This GitHub Podcast episode features Cassidy Williams and Kedasha Kerr discussing the growing trend of developers creating their own software tools, sharing them via open source, and the role of AI in empowering accessible development. The hosts reflect on their own projects, the influence of open source collaboration, and highlight standout repositories from the community."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=08Guz739IZI"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=08Guz739IZI
+title: 'Building Tools and the Future of DIY Development: GitHub Podcast Episode 3'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-10-25 14:00:00 +00:00
-permalink: "/2025-10-25-Building-Tools-and-the-Future-of-DIY-Development-GitHub-Podcast-Episode-3.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["AI", "Browser Extensions", "Coding", "Command Line", "Community Projects", "Creative Coding", "Developer Tools", "DevOps", "GitHub", "Open Source", "Productivity", "Software Development", "Videos"]
-tags_normalized: ["ai", "browser extensions", "coding", "command line", "community projects", "creative coding", "developer tools", "devops", "github", "open source", "productivity", "software development", "videos"]
+tags:
+- Browser Extensions
+- Command Line
+- Community Projects
+- Creative Coding
+- Developer Tools
+- GitHub
+- Open Source
+- Productivity
+- Software Development
+- AI
+- DevOps
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+primary_section: ai
 ---
-
 Hosts Cassidy Williams and Kedasha Kerr join the GitHub Podcast to discuss DIY software tools, creative coding in the open source world, and how AI is enabling new ways for developers to build and share their projects.<!--excerpt_end-->
 
 {% youtube 08Guz739IZI %}

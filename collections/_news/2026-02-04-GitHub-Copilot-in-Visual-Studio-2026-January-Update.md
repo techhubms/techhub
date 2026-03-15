@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Copilot in Visual Studio 2026 — January Update"
-description: "This news update highlights the latest GitHub Copilot features available in Visual Studio 2026, including colorized code completions, partial acceptance of code suggestions, productivity enhancements, and improved markdown editing experiences. The update introduces streamlined editing workflows and new customization options for developers using Copilot in the Visual Studio environment."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-january-update
+title: GitHub Copilot in Visual Studio 2026 — January Update
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-04 17:41:21 +00:00
-permalink: "/2026-02-04-GitHub-Copilot-in-Visual-Studio-2026-January-Update.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Completions", "Coding", "Copilot", "Copilot Chat", "Developer Tools", "Editor Improvements", "GitHub Copilot", "Markdown Preview", "News", "Partial Suggestions", "Productivity", "Release Notes", "Syntax Highlighting", "VS"]
-tags_normalized: ["ai", "code completions", "coding", "copilot", "copilot chat", "developer tools", "editor improvements", "github copilot", "markdown preview", "news", "partial suggestions", "productivity", "release notes", "syntax highlighting", "vs"]
+tags:
+- AI
+- Code Completions
+- Copilot
+- Copilot Chat
+- Developer Tools
+- Editor Improvements
+- GitHub Copilot
+- Markdown Preview
+- News
+- Partial Suggestions
+- Productivity
+- Release Notes
+- Syntax Highlighting
+- VS
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison shares the latest GitHub Copilot enhancements in Visual Studio 2026, including colorized completions, partial suggestion acceptance, and a richer markdown editing workflow for developers.<!--excerpt_end-->
 
 # GitHub Copilot in Visual Studio 2026 — January Update

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Authoring Enhancements in Microsoft Desired State Configuration v3.0.0"
-description: "Jason Helmick details the new authoring features in Microsoft Desired State Configuration (DSC) v3.0.0, including shell completion, schema-based validation, and upcoming support for Bicep, aiming to improve the authoring and configuration experience for developers using PowerShell and Azure tools."
-author: "Jason Helmick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/powershell/enhanced-authoring-with-dsc-v3/"
-viewing_mode: "external"
-feed_name: "Microsoft PowerShell Blog"
-feed_url: "https://devblogs.microsoft.com/powershell/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/powershell/enhanced-authoring-with-dsc-v3/
+title: Authoring Enhancements in Microsoft Desired State Configuration v3.0.0
+author: Jason Helmick
+feed_name: Microsoft PowerShell Blog
 date: 2025-03-12 18:00:43 +00:00
-permalink: "/2025-03-12-Authoring-Enhancements-in-Microsoft-Desired-State-Configuration-v300.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Authoring", "Azure", "Azure Resource Manager", "Bicep", "Coding", "Configuration as Code", "Desired State Configuration", "DevOps", "DSC V3.0.0", "IaC", "News", "PowerShell", "PowerShell DSC", "Schema Validation", "Shell Completion", "VS Code"]
-tags_normalized: ["authoring", "azure", "azure resource manager", "bicep", "coding", "configuration as code", "desired state configuration", "devops", "dsc v3dot0dot0", "iac", "news", "powershell", "powershell dsc", "schema validation", "shell completion", "vs code"]
+tags:
+- Authoring
+- Azure Resource Manager
+- Bicep
+- Configuration as Code
+- Desired State Configuration
+- DSC V3.0.0
+- IaC
+- PowerShell
+- PowerShell DSC
+- Schema Validation
+- Shell Completion
+- VS Code
+- Azure
+- DevOps
+- News
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 Authored by Jason Helmick, this post introduces key authoring enhancements in Microsoft Desired State Configuration v3.0.0, designed to streamline the configuration and deployment processes for PowerShell and Azure environments.<!--excerpt_end-->
 
 # Authoring Enhancements in Microsoft Desired State Configuration v3.0.0

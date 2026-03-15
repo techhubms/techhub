@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Code Quality: Organization-Level Dashboard Public Preview"
-description: "This news update introduces a new organization-level dashboard for GitHub Code Quality, now in public preview. The dashboard offers organization owners, administrators, and developers a comprehensive overview of code health, maintainability, and reliability across eligible repositories, while respecting permissions and repository access rights."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-24-github-code-quality-organization-level-dashboard-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-24-github-code-quality-organization-level-dashboard-in-public-preview
+title: 'GitHub Code Quality: Organization-Level Dashboard Public Preview'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-24 19:49:29 +00:00
-permalink: "/2026-02-24-GitHub-Code-Quality-Organization-Level-Dashboard-Public-Preview.html"
-categories: ["DevOps"]
-tags: ["Application Security", "Code Health", "Code Quality", "Developer Tools", "DevOps", "GitHub", "Improvement", "Maintainability", "Metrics", "News", "Organization Dashboard", "Platform Governance", "Public Preview", "Reliability", "Repository Management"]
-tags_normalized: ["application security", "code health", "code quality", "developer tools", "devops", "github", "improvement", "maintainability", "metrics", "news", "organization dashboard", "platform governance", "public preview", "reliability", "repository management"]
+tags:
+- Application Security
+- Code Health
+- Code Quality
+- Developer Tools
+- DevOps
+- GitHub
+- Improvement
+- Maintainability
+- Metrics
+- News
+- Organization Dashboard
+- Platform Governance
+- Public Preview
+- Reliability
+- Repository Management
+section_names:
+- devops
 ---
-
 Allison details the public preview of GitHub Code Quality's organization-level dashboard, providing a new way for organizations to assess code health and quality metrics across their repositories.<!--excerpt_end-->
 
 # GitHub Code Quality: Organization-Level Dashboard in Public Preview

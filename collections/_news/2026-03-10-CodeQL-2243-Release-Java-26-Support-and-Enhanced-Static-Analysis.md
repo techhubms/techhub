@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "CodeQL 2.24.3 Release: Java 26 Support and Enhanced Static Analysis"
-description: "This update details the new features in CodeQL 2.24.3, the static analysis engine behind GitHub code scanning. Highlights include support for Java 26, improvements across several languages and frameworks, expanded security query coverage, and guidance on integrating the latest enhancements in security analysis workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-10-codeql-2-24-3-adds-java-26-support-and-other-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-10-codeql-2-24-3-adds-java-26-support-and-other-improvements
+title: 'CodeQL 2.24.3 Release: Java 26 Support and Enhanced Static Analysis'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-10 19:51:23 +00:00
-permalink: "/2026-03-10-CodeQL-2243-Release-Java-26-Support-and-Enhanced-Static-Analysis.html"
-categories: ["DevOps", "Security"]
-tags: ["Application Security", "C#", "Code Scanning", "CodeQL", "DevOps", "DevSecOps", "GitHub", "GitHub Enterprise Server", "Improvement", "Java 26", "JavaScript", "Kotlin", "Maven", "MobX", "News", "Python", "React", "Ruby", "Rust", "Sanitization", "Security", "Security Query", "SSRF", "Static Analysis", "TypeScript"]
-tags_normalized: ["application security", "csharp", "code scanning", "codeql", "devops", "devsecops", "github", "github enterprise server", "improvement", "java 26", "javascript", "kotlin", "maven", "mobx", "news", "python", "react", "ruby", "rust", "sanitization", "security", "security query", "ssrf", "static analysis", "typescript"]
+tags:
+- Application Security
+- C#
+- Code Scanning
+- CodeQL
+- DevOps
+- DevSecOps
+- GitHub
+- GitHub Enterprise Server
+- Improvement
+- Java 26
+- JavaScript
+- Kotlin
+- Maven
+- MobX
+- News
+- Python
+- React
+- Ruby
+- Rust
+- Sanitization
+- Security
+- Security Query
+- SSRF
+- Static Analysis
+- TypeScript
+section_names:
+- devops
+- security
 ---
-
 Allison provides an overview of CodeQL 2.24.3's new features, with an emphasis on Java 26 support, improved multi-language coverage, and static security enhancements for GitHub code scanning users.<!--excerpt_end-->
 
 # CodeQL 2.24.3 Release: Java 26 Support and Enhanced Static Analysis

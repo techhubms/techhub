@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Observability in Generative AI: Building Trust with Systematic Evaluation in Microsoft Foundry"
-description: "This article by ravimodi explores the crucial role of observability in ensuring the reliability, safety, and quality of generative AI systems, specifically within the Microsoft Foundry platform. It outlines evaluation methods, operational considerations, and best practices for integrating continuous monitoring and assessment throughout the GenAIOps lifecycle."
-author: "ravimodi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/observability-in-generative-ai-building-trust-with-systematic/ba-p/4492231"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/observability-in-generative-ai-building-trust-with-systematic/ba-p/4492231
+title: 'Observability in Generative AI: Building Trust with Systematic Evaluation in Microsoft Foundry'
+author: ravimodi
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-05 15:43:20 +00:00
-permalink: "/2026-02-05-Observability-in-Generative-AI-Building-Trust-with-Systematic-Evaluation-in-Microsoft-Foundry.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Behavior", "AI", "AI Evaluation", "AI Operations", "AI Safety", "Application Insights", "Azure", "Azure Monitor", "Community", "GenAIOps", "Generative AI", "Microsoft Foundry", "Model Evaluation", "Observability", "Quality Metrics", "RAG Evaluation", "Red Teaming", "Responsible AI"]
-tags_normalized: ["agent behavior", "ai", "ai evaluation", "ai operations", "ai safety", "application insights", "azure", "azure monitor", "community", "genaiops", "generative ai", "microsoft foundry", "model evaluation", "observability", "quality metrics", "rag evaluation", "red teaming", "responsible ai"]
+tags:
+- Agent Behavior
+- AI
+- AI Evaluation
+- AI Operations
+- AI Safety
+- Application Insights
+- Azure
+- Azure Monitor
+- Community
+- GenAIOps
+- Generative AI
+- Microsoft Foundry
+- Model Evaluation
+- Observability
+- Quality Metrics
+- RAG Evaluation
+- Red Teaming
+- Responsible AI
+section_names:
+- ai
+- azure
 ---
-
 ravimodi discusses how observability and systematic evaluation in Microsoft Foundry help teams manage generative AI system quality, safety, and reliability, from model selection through post-production monitoring.<!--excerpt_end-->
 
 # Observability in Generative AI: Building Trust with Systematic Evaluation in Microsoft Foundry

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "WebView2: Simplifying Document Load Handling and Async Workflows in .NET Applications"
-description: "Rick Strahl explores effective methods for managing document load events in the WebView2 control for .NET applications. The article introduces the Westwind.WebView library and its WebViewHandler, offering an async helper method to streamline content loading, simplify interactivity, and avoid common pitfalls with event-driven state management."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/May/06/WebView2-Waiting-for-Document-Loaded"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+external_url: https://weblog.west-wind.com/posts/2025/May/06/WebView2-Waiting-for-Document-Loaded
+title: 'WebView2: Simplifying Document Load Handling and Async Workflows in .NET Applications'
+author: Rick Strahl
+feed_name: Rick Strahl's Blog
 date: 2025-05-06 21:50:16 +00:00
-permalink: "/2025-05-06-WebView2-Simplifying-Document-Load-Handling-and-Async-Workflows-in-NET-Applications.html"
-categories: ["Coding"]
-tags: [".NET", "Async Programming", "Blogs", "C#", "Coding", "Document Loaded", "Event Handling", "JavaScript Interop", "Open Source", "Package Management", "Software Architecture", "UI Automation", "WebView", "WebView2", "Westwind.WebView", "Windows", "Windows Development", "WPF"]
-tags_normalized: ["dotnet", "async programming", "blogs", "csharp", "coding", "document loaded", "event handling", "javascript interop", "open source", "package management", "software architecture", "ui automation", "webview", "webview2", "westwinddotwebview", "windows", "windows development", "wpf"]
+tags:
+- .NET
+- Async Programming
+- C#
+- Document Loaded
+- Event Handling
+- JavaScript Interop
+- Open Source
+- Package Management
+- Software Architecture
+- UI Automation
+- WebView
+- WebView2
+- Westwind.WebView
+- Windows
+- Windows Development
+- WPF
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this detailed post, Rick Strahl discusses common challenges and streamlined solutions for handling document load events in WebView2 controls within .NET and WPF applications. He introduces the Westwind.WebView library, focusing on its WaitForDocumentLoaded() helper for more linear, maintainable workflows.<!--excerpt_end-->
 
 # WebView2: Waiting for Document Loaded
@@ -157,10 +168,10 @@ This pattern supports repeated navigations and tight coordination between UI act
 ## Real-World Scenarios
 
 - **User Interactivity:**
-    - In applications like Markdown Monster, dialogs using WebView might encounter user input before the window is fully initialized. Wrapping event handlers with `await WebViewHandler.WaitForDocumentLoaded(1000)` avoids referencing uninitialized objects, preventing crashes and null reference faults.
+  - In applications like Markdown Monster, dialogs using WebView might encounter user input before the window is fully initialized. Wrapping event handlers with `await WebViewHandler.WaitForDocumentLoaded(1000)` avoids referencing uninitialized objects, preventing crashes and null reference faults.
 
 - **Multiple Coordinated Loads:**
-    - When loading editors and previews simultaneously—such as in markdown authoring tools—it's critical to ensure each WebView is loaded in sequence before querying or updating their content, improving correctness and reliability.
+  - When loading editors and previews simultaneously—such as in markdown authoring tools—it's critical to ensure each WebView is loaded in sequence before querying or updating their content, improving correctness and reliability.
 
 Example:
 

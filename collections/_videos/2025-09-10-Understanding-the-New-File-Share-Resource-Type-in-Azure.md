@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Understanding the New File Share Resource Type in Azure"
-description: "This video from John Savill's Technical Training introduces the new File Share resource type in Azure. It explores the current landscape of file shares, details the new resource type, demonstrates the creation process, explains its benefits, scalability, and billing, and provides a summary for Azure administrators and cloud professionals."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=T5eKHDwZe3M"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=T5eKHDwZe3M
+title: Understanding the New File Share Resource Type in Azure
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2025-09-10 16:04:17 +00:00
-permalink: "/2025-09-10-Understanding-the-New-File-Share-Resource-Type-in-Azure.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Cloud", "Azure File Share", "Azure Storage", "Billing", "Cloud", "Cloud Infrastructure", "Cloud Storage", "File Share", "File Share Resource Type", "Microsoft", "Microsoft Azure", "Nfs", "Scalability", "Storage", "Storage Management", "Videos"]
-tags_normalized: ["azure", "azure cloud", "azure file share", "azure storage", "billing", "cloud", "cloud infrastructure", "cloud storage", "file share", "file share resource type", "microsoft", "microsoft azure", "nfs", "scalability", "storage", "storage management", "videos"]
+tags:
+- Azure Cloud
+- Azure File Share
+- Azure Storage
+- Billing
+- Cloud Infrastructure
+- Cloud Storage
+- File Share
+- File Share Resource Type
+- Microsoft
+- Microsoft Azure
+- Nfs
+- Scalability
+- Storage
+- Storage Management
+- Azure
+- Videos
+section_names:
+- azure
+primary_section: azure
 ---
-
 John Savill explains the features and advantages of Azure's new File Share resource type, offering insights on creation, benefits, scalability, and billing for cloud professionals.<!--excerpt_end-->
 
 {% youtube T5eKHDwZe3M %}

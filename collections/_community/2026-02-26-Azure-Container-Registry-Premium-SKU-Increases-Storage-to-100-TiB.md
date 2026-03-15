@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Azure Container Registry Premium SKU Increases Storage to 100 TiB"
-description: "This announcement details the expansion of Azure Container Registry's Premium SKU storage limit from 40 TiB to 100 TiB. The update addresses enterprise-scale needs for container storage, speeds up geo-replication, improves portal monitoring, and supports large-scale AI and machine learning workloads. No migration is required for existing users; all Premium SKUs benefit automatically."
-author: "johshmsft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-premium-sku-now-supports-100-tib/ba-p/4497651"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-container-registry-premium-sku-now-supports-100-tib/ba-p/4497651
+title: Azure Container Registry Premium SKU Increases Storage to 100 TiB
+author: johshmsft
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-26 20:46:56 +00:00
-permalink: "/2026-02-26-Azure-Container-Registry-Premium-SKU-Increases-Storage-to-100-TiB.html"
-categories: ["Azure"]
-tags: ["ACR", "Azure", "Azure CLI", "Azure Container Registry", "Azure Portal", "Cloud Containers", "Community", "Container Management", "Containerization", "DevOps Tools", "Enterprise DevOps", "Geo Replication", "Monitoring", "Premium SKU", "Registry Capacity", "Registry Storage", "REST API", "Storage Limits", "VM Migration"]
-tags_normalized: ["acr", "azure", "azure cli", "azure container registry", "azure portal", "cloud containers", "community", "container management", "containerization", "devops tools", "enterprise devops", "geo replication", "monitoring", "premium sku", "registry capacity", "registry storage", "rest api", "storage limits", "vm migration"]
+tags:
+- ACR
+- Azure
+- Azure CLI
+- Azure Container Registry
+- Azure Portal
+- Cloud Containers
+- Community
+- Container Management
+- Containerization
+- DevOps Tools
+- Enterprise DevOps
+- Geo Replication
+- Monitoring
+- Premium SKU
+- Registry Capacity
+- Registry Storage
+- REST API
+- Storage Limits
+- VM Migration
+section_names:
+- azure
 ---
-
 johshmsft announces that Azure Container Registry Premium SKU now supports up to 100 TiB storage, addressing needs of large enterprise, AI/ML, and global DevOps teams with increased capacity and faster geo-replication.<!--excerpt_end-->
 
 # Azure Container Registry Premium SKU Now Supports 100 TiB Storage

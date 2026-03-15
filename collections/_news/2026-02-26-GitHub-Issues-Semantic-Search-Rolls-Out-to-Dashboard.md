@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Issues Semantic Search Rolls Out to Dashboard"
-description: "GitHub is introducing semantic search in public preview on the issues dashboard, enabling users to find issues across repositories using natural language queries. Building on previous improvements, this release adds advanced searching, updates to permissions for labels and milestones, improved sub-issue feedback, and enhancements in GitHub Projects including bug fixes and faster navigation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-improved-search-on-the-issues-dashboard"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-improved-search-on-the-issues-dashboard
+title: GitHub Issues Semantic Search Rolls Out to Dashboard
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-26 09:29:08 +00:00
-permalink: "/2026-02-26-GitHub-Issues-Semantic-Search-Rolls-Out-to-Dashboard.html"
-categories: ["DevOps"]
-tags: ["Bug Fixes", "Dashboard", "Developer Tools", "DevOps", "GitHub Issues", "GitHub Projects", "Improvement", "Issue Management", "Label Picker", "Milestones", "Natural Language Processing", "News", "Project Management", "Projects & Issues", "Public Preview", "Repository Management", "Search Enhancement", "Semantic Search"]
-tags_normalized: ["bug fixes", "dashboard", "developer tools", "devops", "github issues", "github projects", "improvement", "issue management", "label picker", "milestones", "natural language processing", "news", "project management", "projects and issues", "public preview", "repository management", "search enhancement", "semantic search"]
+tags:
+- Bug Fixes
+- Dashboard
+- Developer Tools
+- DevOps
+- GitHub Issues
+- GitHub Projects
+- Improvement
+- Issue Management
+- Label Picker
+- Milestones
+- Natural Language Processing
+- News
+- Project Management
+- Projects & Issues
+- Public Preview
+- Repository Management
+- Search Enhancement
+- Semantic Search
+section_names:
+- devops
 ---
-
 Allison highlights major updates to GitHub Issues, including a new semantic search feature now available in public preview on the issues dashboard, along with several usability and performance improvements.<!--excerpt_end-->
 
 # GitHub Issues Semantic Search Rolls Out to Dashboard

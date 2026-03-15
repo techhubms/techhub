@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Running Code Generation in the Background with GitHub Copilot Coding Agents"
-description: "This video demonstrates the latest capabilities of GitHub Copilot Coding Agents for developers, focusing on how advanced code generation and automation tasks can be delegated to cloud-based agents. Tim Rogers from GitHub presents a practical walkthrough of key features, including offloading tasks like writing comprehensive tests in the background, integrating with GitHub.com, VS Code, and the CLI, and customizing agent behavior by selecting AI models such as Claude 3.5 Sonnet or Opus. The session covers automated code review, security scanning, cloud-to-local task handoff, privacy considerations, and performance optimization, providing actionable tips for developer workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=S1ch_6fjp5M"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=S1ch_6fjp5M
+title: Running Code Generation in the Background with GitHub Copilot Coding Agents
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-18 15:00:47 +00:00
-permalink: "/2026-02-18-Running-Code-Generation-in-the-Background-with-GitHub-Copilot-Coding-Agents.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assistants", "Automated Code Review", "Background Tasks", "Claude 3.5 Opus", "Claude 3.5 Sonnet", "CLI Tools", "Cloud Computing", "Code Automation", "Coding", "CodingAgent", "Copilot Coding Agent", "Developer Productivity", "GitHub", "GitHub Copilot", "Model Picker", "Security Scanning", "Videos", "VS Code Integration"]
-tags_normalized: ["ai", "ai assistants", "automated code review", "background tasks", "claude 3dot5 opus", "claude 3dot5 sonnet", "cli tools", "cloud computing", "code automation", "coding", "codingagent", "copilot coding agent", "developer productivity", "github", "github copilot", "model picker", "security scanning", "videos", "vs code integration"]
+tags:
+- AI
+- AI Assistants
+- Automated Code Review
+- Background Tasks
+- Claude 3.5 Opus
+- Claude 3.5 Sonnet
+- CLI Tools
+- Cloud Computing
+- Code Automation
+- CodingAgent
+- Copilot Coding Agent
+- Developer Productivity
+- GitHub
+- GitHub Copilot
+- Model Picker
+- Security Scanning
+- Videos
+- VS Code Integration
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 GitHub's Tim Rogers showcases how developers can leverage Copilot Coding Agents to run complex code generation tasks in the cloud, highlighting new integrations and automation workflows.<!--excerpt_end-->
 
 {% youtube S1ch_6fjp5M %}

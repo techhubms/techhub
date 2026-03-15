@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "From Local Models to Agent Workflows: Building a Deep Research Solution with Microsoft Agent Framework on Foundry Local"
-description: "This comprehensive guide demonstrates how to build a production-grade enterprise AI workflow using Microsoft Foundry Local and Agent Framework. It covers model safety evaluation, agent orchestration, interactive debugging with DevUI, performance monitoring with .NET Aspire, and practical deployment approaches, offering a complete blueprint for privacy-preserving, high-performance local AI agent solutions."
-author: "Kinfey Lo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/from-local-models-to-agent-workflows-building-a-deep-research-solution-with-microsoft-agent-framework-on-microsoft-foundry-local/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/from-local-models-to-agent-workflows-building-a-deep-research-solution-with-microsoft-agent-framework-on-microsoft-foundry-local/
+title: 'From Local Models to Agent Workflows: Building a Deep Research Solution with Microsoft Agent Framework on Foundry Local'
+author: Kinfey Lo
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-02-10 11:12:33 +00:00
-permalink: "/2026-02-10-From-Local-Models-to-Agent-Workflows-Building-a-Deep-Research-Solution-with-Microsoft-Agent-Framework-on-Foundry-Local.html"
-categories: ["AI"]
-tags: [".NET Aspire", "Agent Framework", "Agents", "AI", "AI Security", "Deep Research Agents", "DevUI", "Edge AI", "MAF", "Microsoft Foundry Local", "Model Evaluation", "News", "Observability", "OpenTelemetry", "Privacy", "Python", "Red Team Evaluation", "Workflow Orchestration"]
-tags_normalized: ["dotnet aspire", "agent framework", "agents", "ai", "ai security", "deep research agents", "devui", "edge ai", "maf", "microsoft foundry local", "model evaluation", "news", "observability", "opentelemetry", "privacy", "python", "red team evaluation", "workflow orchestration"]
+tags:
+- .NET Aspire
+- Agent Framework
+- Agents
+- AI
+- AI Security
+- Deep Research Agents
+- DevUI
+- Edge AI
+- MAF
+- Microsoft Foundry Local
+- Model Evaluation
+- News
+- Observability
+- OpenTelemetry
+- Privacy
+- Python
+- Red Team Evaluation
+- Workflow Orchestration
+section_names:
+- ai
 ---
-
 Kinfey Lo provides a step-by-step tutorial on developing enterprise-grade agent workflows using Microsoft Foundry Local and Agent Framework, highlighting privacy-preserving AI, safety evaluation, orchestration, and performance tuning.<!--excerpt_end-->
 
 # From Local Models to Agent Workflows: Building a Deep Research Solution with Microsoft Agent Framework on Foundry Local

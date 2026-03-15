@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Deploying Local AI Models in Enterprise with Windows ML"
-description: "This advanced session from Microsoft Ignite 2025 focuses on Windows ML, an AI framework integrated into Windows for secure, high-performance, on-device inference. It details how to deploy AI models locally without cloud dependencies, register ONNX Runtime execution providers, and leverage CPU, GPU, and NPU for scalable enterprise applications."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FxwkjmKJdC0"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=FxwkjmKJdC0
+title: Deploying Local AI Models in Enterprise with Windows ML
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 11:43:02 +00:00
-permalink: "/2025-11-21-Deploying-Local-AI-Models-in-Enterprise-with-Windows-ML.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Framework", "App Development", "Coding", "CPU Inference", "Edge Computing", "Enterprise AI", "GPU Inference", "Local AI Deployment", "Microsoft Ignite", "Model Deployment", "MSIgnite", "NPU", "ONNX Runtime", "Privacy", "QNN Execution Provider", "ScalewithcloudandAIendpoints", "Videos", "Windows ML"]
-tags_normalized: ["ai", "ai framework", "app development", "coding", "cpu inference", "edge computing", "enterprise ai", "gpu inference", "local ai deployment", "microsoft ignite", "model deployment", "msignite", "npu", "onnx runtime", "privacy", "qnn execution provider", "scalewithcloudandaiendpoints", "videos", "windows ml"]
+tags:
+- AI Framework
+- App Development
+- CPU Inference
+- Edge Computing
+- Enterprise AI
+- GPU Inference
+- Local AI Deployment
+- Microsoft Ignite
+- Model Deployment
+- MSIgnite
+- NPU
+- ONNX Runtime
+- Privacy
+- QNN Execution Provider
+- ScalewithcloudandAIendpoints
+- Windows ML
+- AI
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Microsoft Events present a technical deep-dive into deploying local AI models using Windows ML, led by Andrew Leader and Anastasiya Tarnouskaya. Discover best practices and engineering details for high-performance, on-device inferencing.<!--excerpt_end-->
 
 {% youtube FxwkjmKJdC0 %}

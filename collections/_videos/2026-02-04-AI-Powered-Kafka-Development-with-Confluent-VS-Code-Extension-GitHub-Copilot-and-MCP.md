@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Powered Kafka Development with Confluent VS Code Extension, GitHub Copilot, and MCP"
-description: "This session demonstrates how developers can streamline Apache Kafka development using the Confluent VS Code Extension, GitHub Copilot, and Model Context Protocol (MCP). It covers the integration of AI-powered tooling in VS Code to simplify working with distributed systems, automate code bootstrapping, and manage Kafka schemas, aiming to make the development process more interactive and efficient."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KRBqLjRjX70"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=KRBqLjRjX70
+title: AI-Powered Kafka Development with Confluent VS Code Extension, GitHub Copilot, and MCP
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-04 01:09:24 +00:00
-permalink: "/2026-02-04-AI-Powered-Kafka-Development-with-Confluent-VS-Code-Extension-GitHub-Copilot-and-MCP.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Apache Kafka", "Code", "Code Generation", "Coding", "Confluent", "Confluent Extension", "Copilot", "Developer Productivity", "Distributed Systems", "GitHub Copilot", "Kafka", "Kafka Topics", "Mcp", "Schema Evolution", "Schema Registry", "Streaming Applications", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai assisted development", "apache kafka", "code", "code generation", "coding", "confluent", "confluent extension", "copilot", "developer productivity", "distributed systems", "github copilot", "kafka", "kafka topics", "mcp", "schema evolution", "schema registry", "streaming applications", "videos", "vs code"]
+tags:
+- AI
+- AI Assisted Development
+- Apache Kafka
+- Code
+- Code Generation
+- Confluent
+- Confluent Extension
+- Copilot
+- Developer Productivity
+- Distributed Systems
+- GitHub Copilot
+- Kafka
+- Kafka Topics
+- Mcp
+- Schema Evolution
+- Schema Registry
+- Streaming Applications
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code, featuring Reynald Adolphe and Viktor Gamov, demonstrates an AI-assisted developer workflow for Kafka using the Confluent VS Code Extension, GitHub Copilot, and Model Context Protocol.<!--excerpt_end-->
 
 {% youtube KRBqLjRjX70 %}

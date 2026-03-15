@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Hosting Declarative Markdown-Based Agents on Azure Functions with GitHub Copilot SDK"
-description: "This post showcases a new experimental feature enabling developers to host markdown-based conversational agents—defined using AGENTS.md, skills, and configuration files—directly on Azure Functions. Leveraging the GitHub Copilot SDK, the solution bridges the gap between local agent development in VS Code or Copilot CLI and scalable cloud deployment with Azure. The guide details deployment workflows, code structure, endpoint exposure, Python tooling, event-driven operation, and state management, providing a seamless experience from development to production-ready, cloud-hosted agents."
-author: "AnthonyChu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-declarative-markdown-based-agents-on-azure-functions/ba-p/4496038"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/host-declarative-markdown-based-agents-on-azure-functions/ba-p/4496038
+title: Hosting Declarative Markdown-Based Agents on Azure Functions with GitHub Copilot SDK
+author: AnthonyChu
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-20 00:42:26 +00:00
-permalink: "/2026-02-20-Hosting-Declarative-Markdown-Based-Agents-on-Azure-Functions-with-GitHub-Copilot-SDK.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["AGENTS.md", "AI", "Autonomous Agents", "Azure", "Azure Developer CLI", "Azure Functions", "Cloud Agents", "Coding", "Community", "Copilot CLI", "Event Triggers", "Function App", "GitHub Copilot", "GitHub Copilot SDK", "HTTP API", "MCP", "Python Tools", "REST Endpoints", "Serverless", "VS Code"]
-tags_normalized: ["agentsdotmd", "ai", "autonomous agents", "azure", "azure developer cli", "azure functions", "cloud agents", "coding", "community", "copilot cli", "event triggers", "function app", "github copilot", "github copilot sdk", "http api", "mcp", "python tools", "rest endpoints", "serverless", "vs code"]
+tags:
+- AGENTS.md
+- AI
+- Autonomous Agents
+- Azure
+- Azure Developer CLI
+- Azure Functions
+- Cloud Agents
+- Community
+- Copilot CLI
+- Event Triggers
+- Function App
+- GitHub Copilot
+- GitHub Copilot SDK
+- HTTP API
+- MCP
+- Python Tools
+- REST Endpoints
+- Serverless
+- VS Code
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
 ---
-
 AnthonyChu introduces an experimental method for developers to deploy markdown-based Copilot agents on Azure Functions using the GitHub Copilot SDK, offering end-to-end cloud workflow and seamless agent collaboration.<!--excerpt_end-->
 
 # Hosting Declarative Markdown-Based Agents on Azure Functions with GitHub Copilot SDK

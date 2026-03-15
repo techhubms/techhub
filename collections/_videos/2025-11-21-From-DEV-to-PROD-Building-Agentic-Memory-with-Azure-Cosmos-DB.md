@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "From DEV to PROD: Building Agentic Memory with Azure Cosmos DB"
-description: "This advanced session from Microsoft Ignite 2025 explores how to build agentic memory for generative AI applications using Azure Cosmos DB. It addresses new AI and search features, techniques for managing short-term and long-term memory, retrieval strategies, data security, and compliance practices—all in the context of modern, enterprise-grade AI development."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8HTsYLNX7Sk"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=8HTsYLNX7Sk
+title: 'From DEV to PROD: Building Agentic Memory with Azure Cosmos DB'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 17:16:03 +00:00
-permalink: "/2025-11-21-From-DEV-to-PROD-Building-Agentic-Memory-with-Azure-Cosmos-DB.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["Agentic Memory", "AI", "AI Applications", "AI Security", "Azure", "Azure Cosmos DB", "Cosmos DB Search", "Data Compliance", "Data Governance", "Data Platform", "Digital Workers", "Generative AI", "Hybrid Queries", "Microsoft Ignite", "ML", "MSIgnite", "Prompt Engineering", "Security", "Semantic Search", "SQL", "Threat Defense", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["agentic memory", "ai", "ai applications", "ai security", "azure", "azure cosmos db", "cosmos db search", "data compliance", "data governance", "data platform", "digital workers", "generative ai", "hybrid queries", "microsoft ignite", "ml", "msignite", "prompt engineering", "security", "semantic search", "sql", "threat defense", "unifyyourdataplatform", "videos"]
+tags:
+- Agentic Memory
+- AI Applications
+- AI Security
+- Azure Cosmos DB
+- Cosmos DB Search
+- Data Compliance
+- Data Governance
+- Data Platform
+- Digital Workers
+- Generative AI
+- Hybrid Queries
+- Microsoft Ignite
+- MSIgnite
+- Prompt Engineering
+- Semantic Search
+- SQL
+- Threat Defense
+- Unifyyourdataplatform
+- AI
+- Azure
+- ML
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
+primary_section: ai
 ---
-
 In this Microsoft Ignite 2025 session, Microsoft Events speakers explain how to architect agentic memory in generative AI apps with Azure Cosmos DB, highlighting security, governance, and advanced AI retrieval techniques.<!--excerpt_end-->
 
 {% youtube 8HTsYLNX7Sk %}
@@ -31,9 +51,9 @@ This Microsoft Ignite 2025 breakout (BRK135) delivers an advanced look at archit
 - **Agentic Memory Architecture**: Explanation of both short-term and long-term memory paradigms in agentic applications, including design requirements and strategies for each.
 - **Efficient Retrieval with Summarization and Semantic Search**: Techniques to utilize summarization for storing long-term memory, and leveraging semantic hybrid queries within Cosmos DB for efficient AI data retrieval.
 - **Query Patterns**:
-    - SQL-like queries
-    - Semantic queries
-    - Hybrid approaches for flexible data access
+  - SQL-like queries
+  - Semantic queries
+  - Hybrid approaches for flexible data access
 - **Latency and Architectural Considerations**: Discussion of potential latency pitfalls, especially in on-premise environments, and functional requirements to address them.
 - **Compliance, Security, and Governance**: Best practices to prevent data oversharing, manage sprawl, safeguard AI workloads from threats, and ensure regulatory compliance and responsible data governance throughout the application lifecycle.
 - **Real-World Implementation**: Case study featuring Walmart Chile on customer-centric AI strategies leveraging these capabilities.

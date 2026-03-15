@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Modernizing Automation with Copilot Studio and Power Automate: Agents and Flows"
-description: "This session from Microsoft Ignite 2025 demonstrates how Copilot Studio (a developer/maker AI tool) and Power Automate can work together to transform enterprise automation. It covers agent flows, desktop flows (RPA), integration frameworks, and shows practical demos leveraging LLM-based reasoning agents for resilient and scalable automation solutions. Attendees will learn about orchestration options, converting existing flows, and real-world agentic automation scenarios."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aMPfb6TVfA4"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=aMPfb6TVfA4
+title: 'Modernizing Automation with Copilot Studio and Power Automate: Agents and Flows'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 15:03:04 +00:00
-permalink: "/2025-11-21-Modernizing-Automation-with-Copilot-Studio-and-Power-Automate-Agents-and-Flows.html"
-categories: ["AI"]
-tags: ["Agent Flows", "Agentic Automation", "AI", "Automation", "Cloud Flows", "Copilot Studio", "Desktop Flows", "Enterprise Automation", "Innovatewithlow", "Integration Frameworks", "LLMs", "Low Code", "Microsoft Ignite", "MSIgnite", "Power Automate", "Process Analytics", "Process Insights", "RPA", "Videos"]
-tags_normalized: ["agent flows", "agentic automation", "ai", "automation", "cloud flows", "copilot studio", "desktop flows", "enterprise automation", "innovatewithlow", "integration frameworks", "llms", "low code", "microsoft ignite", "msignite", "power automate", "process analytics", "process insights", "rpa", "videos"]
+tags:
+- Agent Flows
+- Agentic Automation
+- Automation
+- Cloud Flows
+- Copilot Studio
+- Desktop Flows
+- Enterprise Automation
+- Innovatewithlow
+- Integration Frameworks
+- LLMs
+- Low Code
+- Microsoft Ignite
+- MSIgnite
+- Power Automate
+- Process Analytics
+- Process Insights
+- RPA
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 Microsoft Events presents a session on combining Copilot Studio and Power Automate to build modern automation using agents and RPA, with demos and integration strategies.<!--excerpt_end-->
 
 {% youtube aMPfb6TVfA4 %}

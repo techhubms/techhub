@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Preparing Your Data Platform for the AI Revolution: Microsoft SQL and Fabric"
-description: "This article addresses the impact of recent AI advancements on data platform readiness. It explores how modern AI agents demand real-time, secure, and scalable data access and explains how Microsoft SQL Server, Azure SQL Database, and SQL Database in Microsoft Fabric natively support AI-driven workloads. Practical guidance is provided for data professionals on adapting to the evolving landscape, with a focus on security, governance, operational excellence, and leveraging Copilot-powered development capabilities."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/something-big-is-happening-is-your-data-platform-ready/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/something-big-is-happening-is-your-data-platform-ready/
+title: 'Preparing Your Data Platform for the AI Revolution: Microsoft SQL and Fabric'
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-02-23 13:00:00 +00:00
-permalink: "/2026-02-23-Preparing-Your-Data-Platform-for-the-AI-Revolution-Microsoft-SQL-and-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Agents", "Azure", "Azure SQL Database", "Copilot", "Data Governance", "Data Platform Readiness", "Database Architecture", "Enterprise Security", "Fabric", "Machine Learning", "Microsoft SQL Server", "ML", "News", "OneLake", "Operational Analytics", "RAG", "Real Time Data", "Semantic Search", "SQL Database in Fabric", "SQL Development", "T SQL", "Vector Search"]
-tags_normalized: ["ai", "ai agents", "azure", "azure sql database", "copilot", "data governance", "data platform readiness", "database architecture", "enterprise security", "fabric", "machine learning", "microsoft sql server", "ml", "news", "onelake", "operational analytics", "rag", "real time data", "semantic search", "sql database in fabric", "sql development", "t sql", "vector search"]
+tags:
+- AI
+- AI Agents
+- Azure
+- Azure SQL Database
+- Copilot
+- Data Governance
+- Data Platform Readiness
+- Database Architecture
+- Enterprise Security
+- Fabric
+- Microsoft SQL Server
+- ML
+- News
+- OneLake
+- Operational Analytics
+- RAG
+- Real Time Data
+- Semantic Search
+- SQL Database in Fabric
+- SQL Development
+- T SQL
+- Vector Search
+section_names:
+- ai
+- azure
+- ml
 ---
-
 This Microsoft Fabric Blog post examines the pressures that AI advancements put on enterprise data platforms. It highlights how Microsoft SQL and Fabric equip data professionals—according to the author—with new capabilities for real-time, secure, and AI-ready data services.<!--excerpt_end-->
 
 # Preparing Your Data Platform for the AI Revolution: Microsoft SQL and Fabric

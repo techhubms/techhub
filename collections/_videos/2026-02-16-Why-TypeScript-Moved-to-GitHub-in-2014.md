@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Why TypeScript Moved to GitHub in 2014"
-description: "This video features Anders Hejlsberg explaining the history and community transformation of TypeScript as it moved from CodePlex to GitHub in 2014. He discusses the challenges of open source engagement, the significance of 'where the action is,' and how treating all contributors equally changed TypeScript's growth trajectory."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/HezS7yguU30"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/HezS7yguU30
+title: Why TypeScript Moved to GitHub in 2014
+author: GitHub
+primary_section: dotnet
+feed_name: GitHub YouTube
 date: 2026-02-16 17:00:24 +00:00
-permalink: "/2026-02-16-Why-TypeScript-Moved-to-GitHub-in-2014.html"
-categories: ["Coding"]
-tags: ["Anders Hejlsberg", "AndersHejlsberg", "CodePlex", "Coding", "Community Engagement", "Developer Tools", "GitHub", "Microsoft", "Open Source", "Programming Languages", "Software Collaboration", "TypeScript", "Videos"]
-tags_normalized: ["anders hejlsberg", "andershejlsberg", "codeplex", "coding", "community engagement", "developer tools", "github", "microsoft", "open source", "programming languages", "software collaboration", "typescript", "videos"]
+tags:
+- Anders Hejlsberg
+- AndersHejlsberg
+- CodePlex
+- Community Engagement
+- Developer Tools
+- GitHub
+- Microsoft
+- Open Source
+- Programming Languages
+- Software Collaboration
+- TypeScript
+- Videos
+- .NET
+section_names:
+- dotnet
 ---
-
 In this video, GitHub showcases Anders Hejlsberg as he explains why TypeScript moved from CodePlex to GitHub and how this transition catalyzed the language's growth by embracing open source best practices.<!--excerpt_end-->
 
 {% youtube HezS7yguU30 %}

@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "Microsoft Azure at KubeCon Europe 2026: Sessions, Demos, and AI Innovations"
-description: "This comprehensive event preview details Microsoft's activities at KubeCon + CloudNativeCon Europe 2026 in Amsterdam. It highlights technical keynotes, hands-on sessions, open-source demos, and announcements focused on Azure Kubernetes Service (AKS), AI/ML workloads, security, cloud-native development, and DevOps practices, with direct insights from Microsoft engineers."
-author: "coryskimming"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-europe-2026-amsterdam-nl-march-23-26/ba-p/4500716"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/microsoft-azure-at-kubecon-europe-2026-amsterdam-nl-march-23-26/ba-p/4500716
+title: 'Microsoft Azure at KubeCon Europe 2026: Sessions, Demos, and AI Innovations'
+author: coryskimming
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-10 09:15:00 +00:00
-permalink: "/2026-03-10-Microsoft-Azure-at-KubeCon-Europe-2026-Sessions-Demos-and-AI-Innovations.html"
-categories: ["AI", "Azure", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Agents", "AKS", "Azure", "Cloud Native", "CloudNativeCon", "Community", "Confidential Containers", "Data Protection", "DevOps", "Elastic SAN", "Fleet Manager", "GPU Scheduling", "Istio", "Karpenter", "KubeCon", "Kubernetes", "Microsoft Azure", "ML", "Multi Cluster Networking", "Observability", "Open Source", "Radius", "Root Cause Analysis", "Secure Workloads", "Security", "Supply Chain Security", "Terraform", "Zero Trust"]
-tags_normalized: ["ai", "ai agents", "aks", "azure", "cloud native", "cloudnativecon", "community", "confidential containers", "data protection", "devops", "elastic san", "fleet manager", "gpu scheduling", "istio", "karpenter", "kubecon", "kubernetes", "microsoft azure", "ml", "multi cluster networking", "observability", "open source", "radius", "root cause analysis", "secure workloads", "security", "supply chain security", "terraform", "zero trust"]
+tags:
+- AI
+- AI Agents
+- AKS
+- Azure
+- Cloud Native
+- CloudNativeCon
+- Community
+- Confidential Containers
+- Data Protection
+- DevOps
+- Elastic SAN
+- Fleet Manager
+- GPU Scheduling
+- Istio
+- Karpenter
+- KubeCon
+- Kubernetes
+- Microsoft Azure
+- ML
+- Multi Cluster Networking
+- Observability
+- Open Source
+- Radius
+- Root Cause Analysis
+- Secure Workloads
+- Security
+- Supply Chain Security
+- Terraform
+- Zero Trust
+section_names:
+- ai
+- azure
+- devops
+- ml
+- security
 ---
-
 Coryskimming from Microsoft introduces the packed line-up for Azure at KubeCon Europe 2026, spotlighting hands-on AKS labs, AI/ML workload sessions, security, cloud-native DevOps practices, and open-source solutions from Microsoft's top engineers.<!--excerpt_end-->
 
 # Microsoft Azure at KubeCon Europe 2026: Sessions, Demos, and AI Innovations

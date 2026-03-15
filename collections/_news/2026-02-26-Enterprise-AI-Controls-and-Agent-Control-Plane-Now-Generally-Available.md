@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Enterprise AI Controls and Agent Control Plane Now Generally Available"
-description: "This announcement details the general availability of GitHub’s Enterprise AI Controls and agent control plane, providing enterprise administrators with enhanced governance, oversight, and management capabilities for Copilot and AI agents. Key features include granular audit logging, policy configuration, custom agent support, and programmatic management APIs—empowering organizations to safely scale AI adoption while maintaining control and compliance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-enterprise-ai-controls-agent-control-plane-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-enterprise-ai-controls-agent-control-plane-now-generally-available
+title: Enterprise AI Controls and Agent Control Plane Now Generally Available
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-26 20:10:23 +00:00
-permalink: "/2026-02-26-Enterprise-AI-Controls-and-Agent-Control-Plane-Now-Generally-Available.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Control Plane", "AI", "AI Controls", "AI Governance", "API Integration", "Audit Logging", "Compliance", "Copilot", "Copilot Policies", "Custom Agents", "Enterprise Administration", "Enterprise AI Controls", "Enterprise Management Tools", "GitHub Copilot", "MCP Registry", "Microsoft GitHub", "News", "Role Based Access", "Session Activity"]
-tags_normalized: ["agent control plane", "ai", "ai controls", "ai governance", "api integration", "audit logging", "compliance", "copilot", "copilot policies", "custom agents", "enterprise administration", "enterprise ai controls", "enterprise management tools", "github copilot", "mcp registry", "microsoft github", "news", "role based access", "session activity"]
+tags:
+- Agent Control Plane
+- AI
+- AI Controls
+- AI Governance
+- API Integration
+- Audit Logging
+- Compliance
+- Copilot
+- Copilot Policies
+- Custom Agents
+- Enterprise Administration
+- Enterprise AI Controls
+- Enterprise Management Tools
+- GitHub Copilot
+- MCP Registry
+- Microsoft GitHub
+- News
+- Role Based Access
+- Session Activity
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the general availability of GitHub’s Enterprise AI Controls and agent control plane. The update gives enterprise administrators enhanced governance, visibility, and policy management for Copilot and AI agents.<!--excerpt_end-->
 
 # Enterprise AI Controls and Agent Control Plane Now Generally Available

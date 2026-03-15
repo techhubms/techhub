@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Debugging Dockerfiles in Visual Studio Code Using the Debug Adapter Protocol"
-description: "This video showcases how to use Visual Studio Code to step through Dockerfile builds using the Debug Adapter Protocol, making Dockerfile debugging more transparent. Presenters demonstrate practical debugging techniques within Docker builds through VS Code’s integrated tools. The session features insights from Reynald Adolphe, Remy Suen, and Jonathan Sternberg."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=G6Nmc4XoZSI"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=G6Nmc4XoZSI
+title: Debugging Dockerfiles in Visual Studio Code Using the Debug Adapter Protocol
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-02-27 22:40:42 +00:00
-permalink: "/2026-02-27-Debugging-Dockerfiles-in-Visual-Studio-Code-Using-the-Debug-Adapter-Protocol.html"
-categories: ["Coding"]
-tags: ["Coding", "Containers", "Debug Adapter Protocol", "Debugging", "Dev Environment", "Developer Tools", "Docker", "Dockerfile", "Software Development", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["coding", "containers", "debug adapter protocol", "debugging", "dev environment", "developer tools", "docker", "dockerfile", "software development", "videos", "vs code", "vs code extensions"]
+tags:
+- Containers
+- Debug Adapter Protocol
+- Debugging
+- Dev Environment
+- Developer Tools
+- Docker
+- Dockerfile
+- Software Development
+- Videos
+- VS Code
+- VS Code Extensions
+- .NET
+section_names:
+- dotnet
 ---
-
 Visual Studio Code's team, including Reynald Adolphe, Remy Suen, and Jonathan Sternberg, demonstrates how to step through Dockerfile builds in VS Code using the Debug Adapter Protocol.<!--excerpt_end-->
 
 {% youtube G6Nmc4XoZSI %}

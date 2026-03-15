@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft Adds Telemetry to its Go Build for FIPS Compliance and Azure Linux"
-description: "This article discusses Microsoft's decision to add telemetry to its custom build of the Go language toolchain, primarily used for FIPS compliance and internally on Azure Linux. It covers technical details, compliance motivations, architecture differences from the official Go distribution, privacy considerations, and Microsoft's continued support for its build over new official options."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2025/07/08/things-go-better-with-telemetry-microsoft-adds-phone-home-to-its-go-build/101140"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2025/07/08/things-go-better-with-telemetry-microsoft-adds-phone-home-to-its-go-build/101140
+title: Microsoft Adds Telemetry to its Go Build for FIPS Compliance and Azure Linux
+author: DevClass.com
+primary_section: azure
+feed_name: DevClass
 date: 2025-07-08 15:55:00 +00:00
-permalink: "/2025-07-08-Microsoft-Adds-Telemetry-to-its-Go-Build-for-FIPS-Compliance-and-Azure-Linux.html"
-categories: ["Azure", "Security"]
-tags: ["Artifact Registry", "Azure", "Azure Linux", "Blogs", "BoringCrypto", "Cryptography", "Docker", "FIPS 140 3", "Go Language", "Go Toolchain", "Macos Support", "Microsoft Azure", "Microsoft Go Build", "NIST", "Security", "Security Compliance", "Telemetry"]
-tags_normalized: ["artifact registry", "azure", "azure linux", "blogs", "boringcrypto", "cryptography", "docker", "fips 140 3", "go language", "go toolchain", "macos support", "microsoft azure", "microsoft go build", "nist", "security", "security compliance", "telemetry"]
+tags:
+- Artifact Registry
+- Azure
+- Azure Linux
+- Blogs
+- BoringCrypto
+- Cryptography
+- Docker
+- FIPS 140 3
+- Go Language
+- Go Toolchain
+- Macos Support
+- Microsoft Azure
+- Microsoft Go Build
+- NIST
+- Security
+- Security Compliance
+- Telemetry
+section_names:
+- azure
+- security
 ---
-
 DevClass.com explains how Microsoft is integrating telemetry into its Go toolchain build to enhance FIPS compliance features, especially for use in Azure Linux and regulated environments.<!--excerpt_end-->
 
 # Microsoft Adds Telemetry to its Go Build for FIPS Compliance and Azure Linux

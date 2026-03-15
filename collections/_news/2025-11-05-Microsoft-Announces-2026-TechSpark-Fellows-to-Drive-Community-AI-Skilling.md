@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Announces 2026 TechSpark Fellows to Drive Community AI Skilling"
-description: "This announcement introduces the 2026 cohort of Microsoft TechSpark Fellows, highlighting their community projects focused on advancing AI and cloud technology adoption across the U.S. The article showcases how nonprofit and community organizations use Microsoft-backed grants to develop digital literacy, data skills, and AI readiness, with a goal of narrowing the nation’s digital divide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/on-the-issues/2025/11/05/announcing-the-2026-microsoft-techspark-fellows/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/on-the-issues/2025/11/05/announcing-the-2026-microsoft-techspark-fellows/
+title: Microsoft Announces 2026 TechSpark Fellows to Drive Community AI Skilling
+author: stclarke
+feed_name: Microsoft News
 date: 2025-11-05 18:14:19 +00:00
-permalink: "/2025-11-05-Microsoft-Announces-2026-TechSpark-Fellows-to-Drive-Community-AI-Skilling.html"
-categories: ["AI"]
-tags: ["AI", "AI Adoption", "AI Skilling", "AI Training", "Cloud Technology", "Community Programs", "Company News", "Digital Divide", "Digital Literacy", "Digital Skills", "Infrastructure", "Learning Initiatives", "Microsoft TechSpark", "News", "Nonprofit", "On The Issues", "STEM Education", "Tech For Good", "Workforce Development"]
-tags_normalized: ["ai", "ai adoption", "ai skilling", "ai training", "cloud technology", "community programs", "company news", "digital divide", "digital literacy", "digital skills", "infrastructure", "learning initiatives", "microsoft techspark", "news", "nonprofit", "on the issues", "stem education", "tech for good", "workforce development"]
+tags:
+- AI Adoption
+- AI Skilling
+- AI Training
+- Cloud Technology
+- Community Programs
+- Company News
+- Digital Divide
+- Digital Literacy
+- Digital Skills
+- Infrastructure
+- Learning Initiatives
+- Microsoft TechSpark
+- Nonprofit
+- On The Issues
+- STEM Education
+- Tech For Good
+- Workforce Development
+- AI
+- News
+section_names:
+- ai
+primary_section: ai
 ---
-
 stclarke outlines how the 2026 Microsoft TechSpark Fellows program is advancing AI and digital skills in communities nationwide through grants, training, and partnerships that address the digital divide.<!--excerpt_end-->
 
 # Microsoft Announces 2026 TechSpark Fellows to Drive Community AI Skilling

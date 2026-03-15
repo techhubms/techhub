@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Debugging UI with AI: GitHub Copilot Agent Mode Meets MCP Servers"
-description: "Chris Reddington explores using GitHub Copilot agent mode in combination with the Playwright MCP server to debug and troubleshoot UI issues in a Next.js project. The article highlights best practices for providing clear requirements to AI tools and offers practical tips for real-world agentic workflows."
-author: "Chris Reddington"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/debugging-ui-with-ai-github-copilot-agent-mode-meets-mcp-servers/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/debugging-ui-with-ai-github-copilot-agent-mode-meets-mcp-servers/
+title: 'Debugging UI with AI: GitHub Copilot Agent Mode Meets MCP Servers'
+author: Chris Reddington
+feed_name: The GitHub Blog
 date: 2025-07-22 21:58:35 +00:00
-permalink: "/2025-07-22-Debugging-UI-with-AI-GitHub-Copilot-agent-mode-meets-MCP-servers.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "Agentic AI", "AI", "AI & ML", "AI Workflows", "Automation", "Coding", "Custom Instructions", "Developer Productivity", "DevOps", "End To End Testing", "GitHub Copilot", "MCP", "MCP Server", "News", "Next.js", "Playwright", "Rubber Duck Thursdays", "TypeScript", "UI Debugging", "VS Code"]
-tags_normalized: ["agent mode", "agentic ai", "ai", "ai and ml", "ai workflows", "automation", "coding", "custom instructions", "developer productivity", "devops", "end to end testing", "github copilot", "mcp", "mcp server", "news", "nextdotjs", "playwright", "rubber duck thursdays", "typescript", "ui debugging", "vs code"]
+tags:
+- Agent Mode
+- Agentic AI
+- AI & ML
+- AI Workflows
+- Automation
+- Custom Instructions
+- Developer Productivity
+- End To End Testing
+- MCP
+- MCP Server
+- Next.js
+- Playwright
+- Rubber Duck Thursdays
+- TypeScript
+- UI Debugging
+- VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this article, Chris Reddington details his experience using GitHub Copilot agent mode alongside the Playwright MCP server for efficient UI debugging in a Next.js application, and shares practical tips for leveraging agentic tools with clear requirements.<!--excerpt_end-->
 
 # Debugging UI with AI: GitHub Copilot Agent Mode Meets MCP Servers

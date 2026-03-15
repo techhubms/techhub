@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) – February 2026 Release: JMESPath, Deployment Slots & More"
-description: "Detailed overview of the February 2026 Azure Developer CLI (azd) release, highlighting support for JMESPath queries, direct deployment to Azure App Service slots, enhancements to dev containers, new provisioning features, bug fixes, and expanded documentation, templates, and automation capabilities for Microsoft Azure development workflows."
-author: "PuiChee (PC) Chan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2026/
+title: 'Azure Developer CLI (azd) – February 2026 Release: JMESPath, Deployment Slots & More'
+author: PuiChee (PC) Chan
+primary_section: ai
+feed_name: Microsoft Azure SDK Blog
 date: 2026-02-25 16:00:38 +00:00
-permalink: "/2026-02-25-Azure-Developer-CLI-azd-February-2026-Release-JMESPath-Deployment-Slots-and-More.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI Coding Agent", "Automation", "Azd", "Azure", "Azure App Service", "Azure Developer CLI", "Azure Functions", "Azure SDK", "CI/CD", "Codespaces", "Coding", "Deployment Slots", "Dev Containers", "DevOps", "Docker", "Extensions", "Java", "JavaScript", "JMESPath", "Kubernetes", "News", "Provisioning", "Python", "Remote Build", "Templates", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai coding agent", "automation", "azd", "azure", "azure app service", "azure developer cli", "azure functions", "azure sdk", "cislashcd", "codespaces", "coding", "deployment slots", "dev containers", "devops", "docker", "extensions", "java", "javascript", "jmespath", "kubernetes", "news", "provisioning", "python", "remote build", "templates", "typescript", "vs code"]
+tags:
+- .NET
+- AI
+- AI Coding Agent
+- Automation
+- Azd
+- Azure
+- Azure App Service
+- Azure Developer CLI
+- Azure Functions
+- Azure SDK
+- CI/CD
+- Codespaces
+- Deployment Slots
+- Dev Containers
+- DevOps
+- Docker
+- Extensions
+- Java
+- JavaScript
+- JMESPath
+- Kubernetes
+- News
+- Provisioning
+- Python
+- Remote Build
+- Templates
+- Typescript
+- VS Code
+section_names:
+- ai
+- azure
+- dotnet
+- devops
 ---
-
 PuiChee (PC) Chan details the February 2026 Azure Developer CLI release, featuring JMESPath queries, App Service slot deployments, dev container extensions, new AI automation and scripting improvements, plus templates and guides for Azure developers.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) – February 2026 Release: JMESPath Queries & Deployment Slots

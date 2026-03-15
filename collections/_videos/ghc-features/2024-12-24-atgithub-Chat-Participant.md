@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "@github Chat Participant"
-description: "Use Copilot as a participant in GitHub discussions"
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/M_BNfo01YsQ"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/M_BNfo01YsQ
+title: '@github Chat Participant'
+author: Fokko Veegens
 date: 2024-12-24 07:38:40 +00:00
-permalink: "/2024-12-24-atgithub-Chat-Participant.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "false"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Chat", "Chat Participant", "GitHub", "GitHub Copilot", "Videos"]
-tags_normalized: ["ai", "chat", "chat participant", "github", "github copilot", "videos"]
+ghes_support: false
+plans:
+- Free
+tags:
+- Chat
+- Chat Participant
+- GitHub
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's @github Chat Participant feature. Use Copilot as a chat participant in GitHub discussions.<!--excerpt_end-->
 
 {% youtube M_BNfo01YsQ %}

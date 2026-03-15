@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub MCP Server: New Tools for Project Management, OAuth Filtering, and Copilot Integration"
-description: "This article presents an in-depth look at the latest GitHub MCP Server improvements, including the consolidated Projects toolset for improved project management, automatic OAuth-based tool filtering, Insiders mode for experimental features, HTTP server deployment with OAuth support, and new Copilot coding agent capabilities. Developers and enterprise teams will learn how these updates streamline GitHub Projects workflows and enhance Copilot automation."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-28-github-mcp-server-new-projects-tools-oauth-scope-filtering-and-new-features"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-28-github-mcp-server-new-projects-tools-oauth-scope-filtering-and-new-features
+title: 'GitHub MCP Server: New Tools for Project Management, OAuth Filtering, and Copilot Integration'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-01-28 10:23:45 +00:00
-permalink: "/2026-01-28-GitHub-MCP-Server-New-Tools-for-Project-Management-OAuth-Filtering-and-Copilot-Integration.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "API Security", "Automation", "Copilot", "Copilot Coding Agent", "Copilot Integration", "DevOps", "Enterprise Server", "GitHub Copilot", "GitHub MCP Server", "GitHub Projects", "HTTP Server Mode", "Insiders Mode", "News", "OAuth", "Personal Access Token", "Project Management", "Token Scopes", "Toolset Consolidation"]
-tags_normalized: ["ai", "api security", "automation", "copilot", "copilot coding agent", "copilot integration", "devops", "enterprise server", "github copilot", "github mcp server", "github projects", "http server mode", "insiders mode", "news", "oauth", "personal access token", "project management", "token scopes", "toolset consolidation"]
+tags:
+- AI
+- API Security
+- Automation
+- Copilot
+- Copilot Coding Agent
+- Copilot Integration
+- DevOps
+- Enterprise Server
+- GitHub Copilot
+- GitHub MCP Server
+- GitHub Projects
+- HTTP Server Mode
+- Insiders Mode
+- News
+- OAuth
+- Personal Access Token
+- Project Management
+- Token Scopes
+- Toolset Consolidation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison explains the newest features of the GitHub MCP Server, highlighting updated project management tools, OAuth-based filtering, HTTP server support for enterprise, and advanced Copilot coding agent integration.<!--excerpt_end-->
 
 # GitHub MCP Server: New Projects Tools, OAuth Scope Filtering, and New Features

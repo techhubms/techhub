@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions"
-description: "This post by PatWidjaja announces the Migrate and Modernize Summit, highlighting new Azure and AI-assisted modernization tools, keynotes from Microsoft leaders, advances in agentic AI, GitHub Copilot capabilities, and hands-on opportunities for IT professionals and developers to learn about cloud migration, AI-powered transformation, and Azure-centric modernization strategies."
-author: "PatWidjaja"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-and-simplify-cloud-transformation-with-new-agentic-ai/ba-p/4454873
+title: Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions
+author: PatWidjaja
+feed_name: Microsoft Tech Community
 date: 2025-09-17 21:32:31 +00:00
-permalink: "/2025-09-17-Accelerate-and-Simplify-Cloud-Transformation-with-New-Agentic-AI-Solutions.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Assisted Tooling", "Azure", "Azure Accelerate", "Azure VMware Solution", "Cloud Migration", "Cloud Modernization", "Community", "Developer Experience", "DevOps", "Intelligent Automation", "IT Transformation", "Java Modernization", "Linux Migration", "Migrate And Modernize Summit", "Modernization Strategy", "Windows Server Migration"]
-tags_normalized: ["agentic ai", "ai", "ai assisted tooling", "azure", "azure accelerate", "azure vmware solution", "cloud migration", "cloud modernization", "community", "developer experience", "devops", "intelligent automation", "it transformation", "java modernization", "linux migration", "migrate and modernize summit", "modernization strategy", "windows server migration"]
+tags:
+- Agentic AI
+- AI Assisted Tooling
+- Azure Accelerate
+- Azure VMware Solution
+- Cloud Migration
+- Cloud Modernization
+- Developer Experience
+- Intelligent Automation
+- IT Transformation
+- Java Modernization
+- Linux Migration
+- Migrate And Modernize Summit
+- Modernization Strategy
+- Windows Server Migration
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 PatWidjaja invites readers to the Migrate and Modernize Summit, outlining new Azure and AI capabilities, expert-led sessions, and skilling opportunities designed to accelerate enterprise cloud transformation.<!--excerpt_end-->
 
 # Accelerate and Simplify Cloud Transformation with New Agentic AI Solutions

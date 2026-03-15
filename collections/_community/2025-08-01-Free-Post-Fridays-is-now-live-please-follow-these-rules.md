@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Free Post Fridays is now live, please follow these rules!"
-description: "The post introduces 'Free Post Fridays,' outlining community rules for posting, with a requirement that all posts be related to Azure in some form. It reminds users to avoid inappropriate, promotional, or exam-dump content and allows memes, provided the content remains workplace safe."
-author: "AutoModerator"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mehnkp/free_post_fridays_is_now_live_please_follow_these/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mehnkp/free_post_fridays_is_now_live_please_follow_these/
+title: Free Post Fridays is now live, please follow these rules!
+author: AutoModerator
+feed_name: Reddit Azure
 date: 2025-08-01 00:01:37 +00:00
-permalink: "/2025-08-01-Free-Post-Fridays-is-now-live-please-follow-these-rules.html"
-categories: ["Azure"]
-tags: ["Ads", "AutoModerator", "Azure", "Community", "Community Guidelines", "Exam Dumps", "Free Post Fridays", "Meme Policy", "Moderation", "Paid Services", "Posting Rules", "Workplace Safety"]
-tags_normalized: ["ads", "automoderator", "azure", "community", "community guidelines", "exam dumps", "free post fridays", "meme policy", "moderation", "paid services", "posting rules", "workplace safety"]
+tags:
+- Ads
+- AutoModerator
+- Community Guidelines
+- Exam Dumps
+- Free Post Fridays
+- Meme Policy
+- Moderation
+- Paid Services
+- Posting Rules
+- Workplace Safety
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 Authored by AutoModerator, this post announces the launch of Free Post Fridays and provides clear rules for community participation, emphasizing Azure relevance.<!--excerpt_end-->
 
 ## Free Post Fridays Community Rules

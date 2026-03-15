@@ -1,20 +1,50 @@
----
-layout: "post"
-title: "What’s New in Microsoft Foundry: Models, SDKs, and Platform Updates (Dec 2025 – Jan 2026)"
-description: "This comprehensive update covers all major changes in Microsoft Foundry for December 2025 and January 2026, including new AI models (GPT-5.2, Codex Max), audio and image generation improvements, expanded fine-tuning options, SDK unification, platform enhancements, and deprecation notices. The post is designed for developers building advanced AI and agentic solutions with Foundry on Azure."
-author: "Nick Brady"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-dec-2025-jan-2026/
+title: 'What’s New in Microsoft Foundry: Models, SDKs, and Platform Updates (Dec 2025 – Jan 2026)'
+author: Nick Brady
+primary_section: ai
+feed_name: Microsoft AI Foundry Blog
 date: 2026-02-19 01:01:09 +00:00
-permalink: "/2026-02-19-Whats-New-in-Microsoft-Foundry-Models-SDKs-and-Platform-Updates-Dec-2025-Jan-2026.html"
-categories: ["AI", "Azure", "Coding", "ML"]
-tags: [".NET SDK", "A2A Tool", "Agents", "AI", "ASR", "Audio", "Azure", "Azure AI Projects", "Azure Machine Learning", "CI/CD", "Codex Max", "Coding", "DeepSeek V3.2", "Fine Tuning", "FLUX.2", "Foundry Agent Service", "GPT 5.2", "Image Generation", "JavaScript SDK", "Mcp", "MCP Server", "Memory Store", "Microsoft Foundry", "Mistral Large 3", "ML", "Models", "News", "OpenAI Responses", "Python SDK", "RAG", "SDK", "TTS", "VS Code Extension"]
-tags_normalized: ["dotnet sdk", "a2a tool", "agents", "ai", "asr", "audio", "azure", "azure ai projects", "azure machine learning", "cislashcd", "codex max", "coding", "deepseek v3dot2", "fine tuning", "fluxdot2", "foundry agent service", "gpt 5dot2", "image generation", "javascript sdk", "mcp", "mcp server", "memory store", "microsoft foundry", "mistral large 3", "ml", "models", "news", "openai responses", "python sdk", "rag", "sdk", "tts", "vs code extension"]
+tags:
+- .NET SDK
+- A2A Tool
+- Agents
+- AI
+- ASR
+- Audio
+- Azure
+- Azure AI Projects
+- Azure Machine Learning
+- CI/CD
+- Codex Max
+- DeepSeek V3.2
+- Fine Tuning
+- FLUX.2
+- Foundry Agent Service
+- GPT 5.2
+- Image Generation
+- JavaScript SDK
+- Mcp
+- MCP Server
+- Memory Store
+- Microsoft Foundry
+- Mistral Large 3
+- ML
+- Models
+- News
+- OpenAI Responses
+- Python SDK
+- RAG
+- SDK
+- TTS
+- VS Code Extension
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- ml
 ---
-
 Nick Brady offers an in-depth roundup of Microsoft Foundry updates for Dec 2025 and Jan 2026. Developers gain insights into newly released AI models, agentic tools, SDK consolidation, and workflow enhancements across Azure Foundry.<!--excerpt_end-->
 
 # What’s New in Microsoft Foundry: Dec 2025 & Jan 2026

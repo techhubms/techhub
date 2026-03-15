@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Managing Azure AD Identity Protection: Detecting and Mitigating Risky Sign-ins"
-description: "This article, authored by John Edward, explores how organizations can leverage Azure AD Identity Protection to detect and mitigate risky sign-ins. It covers threat detection via risk reports, real-time alerts, and conditional access policies, along with best practices such as automation, user education, and integration with Microsoft Defender and SIEM systems, to strengthen identity security."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/managing-azure-ad-identity-protection-detecting-and-mitigating-risky-sign-ins/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/managing-azure-ad-identity-protection-detecting-and-mitigating-risky-sign-ins/
+title: 'Managing Azure AD Identity Protection: Detecting and Mitigating Risky Sign-ins'
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2025-11-26 11:26:47 +00:00
-permalink: "/2025-11-26-Managing-Azure-AD-Identity-Protection-Detecting-and-Mitigating-Risky-Sign-ins.html"
-categories: ["Azure", "Security"]
-tags: ["Automation", "Azure", "Azure AD Identity Protection", "Blogs", "Cloud Security", "Conditional Access", "Identity Protection", "Incident Response", "Microsoft Defender", "Microsoft Entra ID", "Multi Factor Authentication", "Risky Sign Ins", "Security", "SIEM Integration", "Threat Detection", "User Education"]
-tags_normalized: ["automation", "azure", "azure ad identity protection", "blogs", "cloud security", "conditional access", "identity protection", "incident response", "microsoft defender", "microsoft entra id", "multi factor authentication", "risky sign ins", "security", "siem integration", "threat detection", "user education"]
+tags:
+- Automation
+- Azure AD Identity Protection
+- Cloud Security
+- Conditional Access
+- Identity Protection
+- Incident Response
+- Microsoft Defender
+- Microsoft Entra ID
+- Multi Factor Authentication
+- Risky Sign Ins
+- SIEM Integration
+- Threat Detection
+- User Education
+- Azure
+- Security
+- Blogs
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 John Edward explains how Azure AD Identity Protection helps organizations detect and remediate risky sign-ins, focusing on security strategies and actionable workflows.<!--excerpt_end-->
 
 # Managing Azure AD Identity Protection: Detecting and Mitigating Risky Sign-ins

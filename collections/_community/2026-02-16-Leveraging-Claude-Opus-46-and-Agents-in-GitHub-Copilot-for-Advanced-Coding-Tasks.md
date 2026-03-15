@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Leveraging Claude Opus 4.6 and Agents in GitHub Copilot for Advanced Coding Tasks"
-description: "This post explores how integrating the Claude Opus 4.6 model into GitHub Copilot enhances the model selection and agent capabilities within Visual Studio Code. The author details hands-on experiences building a document analyzer application using Claude Opus 4.6 with Copilot Agents, discusses model deployment, agentic execution, and real-world benefits for code review and software development workflows."
-author: "ArunaChakkirala"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure/using-claude-opus-4-6-in-github-copilot/m-p/4495127#M1393"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure/using-claude-opus-4-6-in-github-copilot/m-p/4495127#M1393
+title: Leveraging Claude Opus 4.6 and Agents in GitHub Copilot for Advanced Coding Tasks
+author: ArunaChakkirala
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-16 03:41:52 +00:00
-permalink: "/2026-02-16-Leveraging-Claude-Opus-46-and-Agents-in-GitHub-Copilot-for-Advanced-Coding-Tasks.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic Mode", "AI", "AI Coding", "Anthropic", "Azure GPT 4.1", "Claude Opus 4.6", "Code Review", "Coding", "Community", "Copilot Agents", "Document Analysis", "GitHub Copilot", "JavaScript", "Mermaid Diagrams", "Model Selection", "Pro/Pro+", "Python", "Unit Testing", "VS Code"]
-tags_normalized: ["agentic mode", "ai", "ai coding", "anthropic", "azure gpt 4dot1", "claude opus 4dot6", "code review", "coding", "community", "copilot agents", "document analysis", "github copilot", "javascript", "mermaid diagrams", "model selection", "proslashproplus", "python", "unit testing", "vs code"]
+tags:
+- Agentic Mode
+- AI
+- AI Coding
+- Anthropic
+- Azure GPT 4.1
+- Claude Opus 4.6
+- Code Review
+- Community
+- Copilot Agents
+- Document Analysis
+- GitHub Copilot
+- JavaScript
+- Mermaid Diagrams
+- Model Selection
+- Pro/Pro+
+- Python
+- Unit Testing
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 ArunaChakkirala demonstrates the use of Claude Opus 4.6 with GitHub Copilot and Agents within Visual Studio Code, highlighting how these advancements streamline complex coding projects and enhance code review with AI.<!--excerpt_end-->
 
 # Leveraging Claude Opus 4.6 and Agents in GitHub Copilot for Advanced Coding Tasks

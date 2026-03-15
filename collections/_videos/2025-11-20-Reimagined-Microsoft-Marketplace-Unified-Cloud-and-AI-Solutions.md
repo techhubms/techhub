@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Reimagined Microsoft Marketplace: Unified Cloud and AI Solutions"
-description: "This session from Microsoft Ignite 2025 introduces the reimagined Microsoft Marketplace, merging Azure Marketplace and Microsoft AppSource. It explores how the new unified platform streamlines the discovery, purchasing, and deployment of thousands of cloud, AI, and agentic solutions. Key topics include the partner ecosystem, cloud spend optimization, Azure Consumption Commitment, and the integration of advanced AI technologies. The session highlights practical aspects for organizations seeking to leverage Microsoft’s cloud and AI innovations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=v6GKH_JoGDw"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=v6GKH_JoGDw
+title: 'Reimagined Microsoft Marketplace: Unified Cloud and AI Solutions'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 17:05:21 +00:00
-permalink: "/2025-11-20-Reimagined-Microsoft-Marketplace-Unified-Cloud-and-AI-Solutions.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI Solutions", "Azure", "Azure Consumption Commitment", "Azure Marketplace", "Channel Partners", "Cloud Applications", "Cloud Portfolio Management", "Fine Tuned Models", "InnovatewithAzureAIappsandagents", "Microsoft AppSource", "Microsoft Ignite", "Microsoft Marketplace", "MSIgnite", "Partner Ecosystem", "Spend Optimization", "Tech Procurement", "Videos", "Voice Infrastructure"]
-tags_normalized: ["agentic ai", "ai", "ai solutions", "azure", "azure consumption commitment", "azure marketplace", "channel partners", "cloud applications", "cloud portfolio management", "fine tuned models", "innovatewithazureaiappsandagents", "microsoft appsource", "microsoft ignite", "microsoft marketplace", "msignite", "partner ecosystem", "spend optimization", "tech procurement", "videos", "voice infrastructure"]
+tags:
+- Agentic AI
+- AI Solutions
+- Azure Consumption Commitment
+- Azure Marketplace
+- Channel Partners
+- Cloud Applications
+- Cloud Portfolio Management
+- Fine Tuned Models
+- Microsoft AppSource
+- Microsoft Ignite
+- Microsoft Marketplace
+- MSIgnite
+- Partner Ecosystem
+- Spend Optimization
+- Tech Procurement
+- Voice Infrastructure
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Events presents an Ignite 2025 session covering the evolution of Microsoft Marketplace, now a unified destination for discovering, purchasing, and deploying cloud and AI solutions.<!--excerpt_end-->
 
 {% youtube v6GKH_JoGDw %}

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Speed Up API Integration with GitHub Copilot"
-description: "This guide explores how developers can leverage GitHub Copilot to streamline the process of integrating APIs into their applications. It focuses on reducing boilerplate, enhancing productivity, and maintaining control and accuracy by combining Copilot suggestions with API documentation knowledge."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/speed-up-api-integration.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/speed-up-api-integration.html
+title: Speed Up API Integration with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-08-15 00:00:00 +00:00
-permalink: "/2025-08-15-Speed-Up-API-Integration-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Development", "API Documentation", "API Integration", "Async/Await", "Blogs", "Code Automation", "Coding", "Developer Productivity", "Error Handling", "GitHub Copilot", "JavaScript", "OpenWeatherMap API"]
-tags_normalized: ["ai", "ai development", "api documentation", "api integration", "asyncslashawait", "blogs", "code automation", "coding", "developer productivity", "error handling", "github copilot", "javascript", "openweathermap api"]
+tags:
+- AI Development
+- API Documentation
+- API Integration
+- Async/Await
+- Code Automation
+- Developer Productivity
+- Error Handling
+- JavaScript
+- OpenWeatherMap API
+- AI
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels demonstrates how GitHub Copilot helps developers speed up API integration, offering practical tips for combining AI code suggestions with their API knowledge.<!--excerpt_end-->
 
 # Speed Up API Integration with GitHub Copilot

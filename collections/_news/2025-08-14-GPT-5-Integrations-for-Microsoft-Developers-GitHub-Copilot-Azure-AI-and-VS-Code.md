@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "GPT-5 Integrations for Microsoft Developers: GitHub Copilot, Azure AI, and VS Code"
-description: "This news post provides a developer-oriented overview of how OpenAI's GPT-5 model is integrated across Microsoft’s developer tools and platforms, including GitHub Copilot, Visual Studio Code, Azure AI Foundry, and Copilot Studio. It covers new GPT-5 capabilities, quick-start integration steps, model access details, and real-world usage examples for coding, DevOps, and building AI-powered applications."
-author: "Jon Galloway, Pamela Fox, Dan Wahlin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/gpt-5-for-microsoft-developers"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/gpt-5-for-microsoft-developers
+title: 'GPT-5 Integrations for Microsoft Developers: GitHub Copilot, Azure AI, and VS Code'
+author: Jon Galloway, Pamela Fox, Dan Wahlin
+feed_name: Microsoft DevBlog
 date: 2025-08-14 17:00:24 +00:00
-permalink: "/2025-08-14-GPT-5-Integrations-for-Microsoft-Developers-GitHub-Copilot-Azure-AI-and-VS-Code.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Toolkit", "API Integration", "Azure", "Azure AI Foundry", "Azure OpenAI Service", "C#", "Coding", "Copilot Studio", "DevOps", "GitHub Copilot", "GitHub Models", "GPT 5", "JavaScript", "LLM", "Model Evaluation", "News", "OpenAI .NET SDK", "Python", "RAG", "Reasoning Models", "VS", "VS Code"]
-tags_normalized: ["ai", "ai toolkit", "api integration", "azure", "azure ai foundry", "azure openai service", "csharp", "coding", "copilot studio", "devops", "github copilot", "github models", "gpt 5", "javascript", "llm", "model evaluation", "news", "openai dotnet sdk", "python", "rag", "reasoning models", "vs", "vs code"]
+tags:
+- AI Toolkit
+- API Integration
+- Azure AI Foundry
+- Azure OpenAI Service
+- C#
+- Copilot Studio
+- GitHub Models
+- GPT 5
+- JavaScript
+- LLM
+- Model Evaluation
+- OpenAI .NET SDK
+- Python
+- RAG
+- Reasoning Models
+- VS
+- VS Code
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Jon Galloway, Pamela Fox, and Dan Wahlin deliver a deep dive into the integration of GPT-5 across GitHub Copilot, Azure AI, and core Microsoft developer tools, offering practical code samples and guidance for immediate adoption.<!--excerpt_end-->
 
 # GPT-5 Integrations for Microsoft Developers: GitHub Copilot, Azure AI, and VS Code

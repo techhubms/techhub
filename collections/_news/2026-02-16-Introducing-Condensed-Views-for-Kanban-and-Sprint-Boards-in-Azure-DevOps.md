@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing Condensed Views for Kanban and Sprint Boards in Azure DevOps"
-description: "This announcement explains a new feature in Azure DevOps Boards: a condensed view toggle for Kanban and Sprint boards. It describes how teams managing large boards can now use a compact layout to minimize screen space usage, improving visibility and workflow management. The post covers reasons for the change, user benefits, and rollout details."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/condensed-views-on-kanban-and-sprint-boards/
+title: Introducing Condensed Views for Kanban and Sprint Boards in Azure DevOps
+author: Dan Hellem
+primary_section: azure
+feed_name: Microsoft DevOps Blog
 date: 2026-02-16 20:53:30 +00:00
-permalink: "/2026-02-16-Introducing-Condensed-Views-for-Kanban-and-Sprint-Boards-in-Azure-DevOps.html"
-categories: ["Azure", "DevOps"]
-tags: ["#devops", "Agile Planning", "Azure", "Azure & Cloud", "Azure Boards", "Azure DevOps", "Azure DevOps Boards", "Backlog Management", "Board Customization", "Condensed View", "Delivery Plans", "DevOps", "Kanban", "News", "Sprint Boards", "Team Collaboration", "User Interface", "Work Item Cards", "Workflow Optimization"]
-tags_normalized: ["sharpdevops", "agile planning", "azure", "azure and cloud", "azure boards", "azure devops", "azure devops boards", "backlog management", "board customization", "condensed view", "delivery plans", "devops", "kanban", "news", "sprint boards", "team collaboration", "user interface", "work item cards", "workflow optimization"]
+tags:
+- '#devops'
+- Agile Planning
+- Azure
+- Azure & Cloud
+- Azure Boards
+- Azure DevOps
+- Azure DevOps Boards
+- Backlog Management
+- Board Customization
+- Condensed View
+- Delivery Plans
+- DevOps
+- Kanban
+- News
+- Sprint Boards
+- Team Collaboration
+- User Interface
+- Work Item Cards
+- Workflow Optimization
+section_names:
+- azure
+- devops
 ---
-
 Dan Hellem presents a practical update for Azure DevOps users: the introduction of condensed views on Kanban and Sprint boards. This feature enhances board usability for teams working with large backlogs.<!--excerpt_end-->
 
 # Introducing Condensed Views for Kanban and Sprint Boards in Azure DevOps

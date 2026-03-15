@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Integrating Atlassian Rovo MCP Server with Azure SRE Agent"
-description: "This guide shows how to connect Azure SRE Agent to Atlassian Cloud products (Jira, Confluence, Compass, Jira Service Management) via the official Rovo MCP server. You'll learn how to configure secure authentication, set up connectors in the Azure portal, create custom subagents, and enable best practices through skills. The article covers permissions, available tools, troubleshooting, and security considerations for SRE and DevOps scenarios."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-atlassian-rovo-mcp-server-in-azure-sre-agent/ba-p/4497122"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-atlassian-rovo-mcp-server-in-azure-sre-agent/ba-p/4497122
+title: Integrating Atlassian Rovo MCP Server with Azure SRE Agent
+author: dbandaru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-25 16:54:52 +00:00
-permalink: "/2026-02-25-Integrating-Atlassian-Rovo-MCP-Server-with-Azure-SRE-Agent.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Token Authentication", "Atlassian Rovo MCP", "Audit Logging", "Automation", "Azure", "Azure SRE Agent", "Cloud Security", "Community", "Compass Integration", "Confluence Integration", "Connector Configuration", "CQL", "DevOps", "Incident Management", "Jira Integration", "Jira Service Management", "JQL", "OAuth 2.1", "Role Based Access Control", "Security", "Service Component Management", "Streamable HTTP"]
-tags_normalized: ["api token authentication", "atlassian rovo mcp", "audit logging", "automation", "azure", "azure sre agent", "cloud security", "community", "compass integration", "confluence integration", "connector configuration", "cql", "devops", "incident management", "jira integration", "jira service management", "jql", "oauth 2dot1", "role based access control", "security", "service component management", "streamable http"]
+tags:
+- API Token Authentication
+- Atlassian Rovo MCP
+- Audit Logging
+- Automation
+- Azure
+- Azure SRE Agent
+- Cloud Security
+- Community
+- Compass Integration
+- Confluence Integration
+- Connector Configuration
+- CQL
+- DevOps
+- Incident Management
+- Jira Integration
+- Jira Service Management
+- JQL
+- OAuth 2.1
+- Role Based Access Control
+- Security
+- Service Component Management
+- Streamable HTTP
+section_names:
+- azure
+- devops
+- security
 ---
-
 dbandaru details how to integrate Atlassian Rovo MCP server with Azure SRE Agent for seamless, secure, and automated DevOps workflows across Jira, Confluence, Compass, and Jira Service Management.<!--excerpt_end-->
 
 # Integrating Atlassian Rovo MCP Server with Azure SRE Agent

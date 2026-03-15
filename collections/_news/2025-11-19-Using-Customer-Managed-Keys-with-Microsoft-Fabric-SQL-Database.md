@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Using Customer-Managed Keys with Microsoft Fabric SQL Database"
-description: "This news post introduces customer-managed keys (CMK) for Microsoft Fabric SQL Database, explaining how organizations can leverage Azure Key Vault to control data encryption, enhance compliance, and manage access within Fabric workspaces. The article covers CMK setup, integration with Transparent Data Encryption, and verification queries for successful encryption. User testimonials highlight real-world benefits and ease of implementation, emphasizing both security improvements and architectural advances."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-customer-managed-keys-in-fabric-sql-database/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-public-preview-customer-managed-keys-in-fabric-sql-database/
+title: Using Customer-Managed Keys with Microsoft Fabric SQL Database
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-19 08:00:00 +00:00
-permalink: "/2025-11-19-Using-Customer-Managed-Keys-with-Microsoft-Fabric-SQL-Database.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Management", "AI", "AI Projects", "Asymmetric Key", "Auditability", "Azure", "Azure Key Vault", "Compliance", "Customer Managed Keys", "Data Governance", "Data Security", "DEK", "Encryption", "Encryption Query", "Fabric Integration", "Microsoft Fabric", "ML", "News", "Regulatory Standards", "Secure Development", "Security", "SQL Database", "Transparent Data Encryption", "Workspaces"]
-tags_normalized: ["access management", "ai", "ai projects", "asymmetric key", "auditability", "azure", "azure key vault", "compliance", "customer managed keys", "data governance", "data security", "dek", "encryption", "encryption query", "fabric integration", "microsoft fabric", "ml", "news", "regulatory standards", "secure development", "security", "sql database", "transparent data encryption", "workspaces"]
+tags:
+- Access Management
+- AI
+- AI Projects
+- Asymmetric Key
+- Auditability
+- Azure Key Vault
+- Compliance
+- Customer Managed Keys
+- Data Governance
+- Data Security
+- DEK
+- Encryption
+- Encryption Query
+- Fabric Integration
+- Microsoft Fabric
+- Regulatory Standards
+- Secure Development
+- SQL Database
+- Transparent Data Encryption
+- Workspaces
+- Azure
+- ML
+- Security
+- News
+section_names:
+- azure
+- ml
+- security
+primary_section: ml
 ---
-
 The Microsoft Fabric Blog highlights how customer-managed keys in Fabric SQL Database empower organizations to enhance data security and compliance, with insights from Data and AI Practice Leads.<!--excerpt_end-->
 
 # Using Customer-Managed Keys with Microsoft Fabric SQL Database
@@ -26,9 +46,9 @@ Microsoft Fabric has rolled out Customer-Managed Keys (CMK) in SQL Database, giv
 - **Key Ownership and Rotation**: Organizations can manage their own keys, rotate them as needed, and customize access policies.
 - **Granular Access Management & Auditability**: Full control over who accesses encryption keys and detailed tracking of key usage.
 - **Transparent Data Encryption (TDE)**: Automatically enabled when CMK is configured in a Fabric workspace. This covers:
-   - Real-time encryption of databases, backups, and transaction logs.
-   - Page-level encryption using a symmetric DEK.
-   - DEK protected by customer-managed asymmetric key from Azure Key Vault.
+  - Real-time encryption of databases, backups, and transaction logs.
+  - Page-level encryption using a symmetric DEK.
+  - DEK protected by customer-managed asymmetric key from Azure Key Vault.
 - **Automatic Activation**: No manual steps required—encryption applies to existing/new databases in the Fabric workspace.
 
 ## What Customers Are Saying

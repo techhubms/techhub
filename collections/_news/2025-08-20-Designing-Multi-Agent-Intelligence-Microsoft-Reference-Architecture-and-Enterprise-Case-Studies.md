@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Designing Multi-Agent Intelligence: Microsoft Reference Architecture and Enterprise Case Studies"
-description: "This article, authored by members of Microsoft AI Co-Innovation Labs, details the evolution from single-agent to multi-agent architectures for generative AI in enterprise settings. It reviews reference architectures leveraging Microsoft Azure AI services, explores core components like orchestrators and agent registries, discusses operational resilience and security, and provides in-depth customer use cases including ContraForce, Stemtology, and SolidCommerce."
-author: "Vinicius Souza, Maggie Liu, Thiago Rotta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/feed"
+﻿---
+external_url: https://devblogs.microsoft.com/blog/designing-multi-agent-intelligence
+title: 'Designing Multi-Agent Intelligence: Microsoft Reference Architecture and Enterprise Case Studies'
+author: Vinicius Souza, Maggie Liu, Thiago Rotta
+feed_name: Microsoft DevBlog
 date: 2025-08-20 19:00:13 +00:00
-permalink: "/2025-08-20-Designing-Multi-Agent-Intelligence-Microsoft-Reference-Architecture-and-Enterprise-Case-Studies.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Orchestration", "Agent Registry", "AI", "AI Co Innovation Labs", "AI Governance", "AI Security", "Azure", "Azure AI", "Azure OpenAI Service", "Enterprise AI", "Generative AI", "LLM", "Microservices Architecture", "Microsoft AI Agent Service", "Microsoft Defender XDR", "Microsoft Sentinel", "MSSP", "Multi Agent", "Multi Agent Systems", "News", "Operational Resilience", "RAG (retrieval Augmented Generation)", "Reference Architecture", "Security", "Semantic Kernel", "SLM"]
-tags_normalized: ["agent orchestration", "agent registry", "ai", "ai co innovation labs", "ai governance", "ai security", "azure", "azure ai", "azure openai service", "enterprise ai", "generative ai", "llm", "microservices architecture", "microsoft ai agent service", "microsoft defender xdr", "microsoft sentinel", "mssp", "multi agent", "multi agent systems", "news", "operational resilience", "rag retrieval augmented generation", "reference architecture", "security", "semantic kernel", "slm"]
+tags:
+- Agent Orchestration
+- Agent Registry
+- AI Co Innovation Labs
+- AI Governance
+- AI Security
+- Azure AI
+- Azure OpenAI Service
+- Enterprise AI
+- Generative AI
+- LLM
+- Microservices Architecture
+- Microsoft AI Agent Service
+- Microsoft Defender XDR
+- Microsoft Sentinel
+- MSSP
+- Multi Agent
+- Multi Agent Systems
+- Operational Resilience
+- RAG (retrieval Augmented Generation)
+- Reference Architecture
+- Semantic Kernel
+- SLM
+- AI
+- Azure
+- Security
+- News
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Vinicius Souza, Maggie Liu, Thiago Rotta, and others from Microsoft AI Co-Innovation Labs present a detailed blueprint for enterprise-ready, multi-agent AI systems running on Azure. The article includes reference architectures, engineering guidelines, and real-world case studies.<!--excerpt_end-->
 
 # Designing Multi-Agent Intelligence

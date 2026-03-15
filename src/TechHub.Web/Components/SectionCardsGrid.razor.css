@@ -1,0 +1,85 @@
+/* ============================================================================
+   Section Cards Grid Component
+   
+   - Section grid layout
+   - Responsive grid system
+   ============================================================================ */
+
+.sections-grid {
+  margin-bottom: var(--spacing-6);
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--section-grid-columns, 2), 1fr);
+  gap: var(--spacing-4);
+}
+
+/* Desktop - uses inherited --section-grid-columns from .page-with-sidebar */
+@media (min-width: 1293px) {
+  .grid {
+    grid-template-columns: repeat(var(--section-grid-columns, 3), 1fr);
+  }
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3);
+  }
+}
+
+/* ============================================================================
+   Section Card Skeleton Loading States
+   ============================================================================ */
+
+.skeleton-card-link {
+  display: block;
+  pointer-events: none;
+}
+
+.skeleton-section-card {
+  background: var(--color-bg-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-lg);
+}
+
+.skeleton-section-card .section-card-header {
+  height: 140px;
+  width: 100%;
+  margin-bottom: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.skeleton-section-card .section-overlay {
+  width: 100%;
+  padding: var(--spacing-3);
+  display: flex;
+  align-items: flex-end;
+}
+
+.skeleton-section-card .section-body {
+  padding: var(--spacing-3);
+}
+
+.skeleton-section-card .skeleton-description {
+  height: 16px;
+  width: 100%;
+  margin-bottom: var(--spacing-2);
+}
+
+.skeleton-section-card .skeleton-collections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.skeleton-section-card .skeleton-badge {
+  height: 24px;
+  width: 60px;
+  border-radius: var(--radius-full);
+}

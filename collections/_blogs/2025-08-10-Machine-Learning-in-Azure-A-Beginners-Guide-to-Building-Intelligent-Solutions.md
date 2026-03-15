@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Machine Learning in Azure: A Beginner’s Guide to Building Intelligent Solutions"
-description: "This guide explores how to get started with machine learning on Microsoft Azure, outlining key features of Azure Machine Learning services, the development environment options, and best practices. It walks through practical steps from data preparation to deployment, making it accessible for newcomers and professionals aiming to build intelligent cloud solutions using Microsoft's ML platform."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/machine-learning-in-azure-a-beginners-guide-to-building-intelligent-solutions/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/machine-learning-in-azure-a-beginners-guide-to-building-intelligent-solutions/
+title: 'Machine Learning in Azure: A Beginner’s Guide to Building Intelligent Solutions'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-08-10 09:57:35 +00:00
-permalink: "/2025-08-10-Machine-Learning-in-Azure-A-Beginners-Guide-to-Building-Intelligent-Solutions.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Development", "AKS", "Automated ML", "Azure", "Azure Blob Storage", "Azure Functions", "Azure Machine Learning", "Azure ML Studio", "Azure Monitor", "Blogs", "Cloud AI", "Data Integration", "Data Preparation", "Jupyter Notebooks", "Key Vault", "Machine Learning", "Microsoft Azure", "ML", "ML Best Practices", "ML Pipelines", "Model Deployment", "Python SDK", "Regression"]
-tags_normalized: ["ai", "ai development", "aks", "automated ml", "azure", "azure blob storage", "azure functions", "azure machine learning", "azure ml studio", "azure monitor", "blogs", "cloud ai", "data integration", "data preparation", "jupyter notebooks", "key vault", "machine learning", "microsoft azure", "ml", "ml best practices", "ml pipelines", "model deployment", "python sdk", "regression"]
+tags:
+- AI Development
+- AKS
+- Automated ML
+- Azure Blob Storage
+- Azure Functions
+- Azure Machine Learning
+- Azure ML Studio
+- Azure Monitor
+- Cloud AI
+- Data Integration
+- Data Preparation
+- Jupyter Notebooks
+- Key Vault
+- Microsoft Azure
+- ML Best Practices
+- ML Pipelines
+- Model Deployment
+- Python SDK
+- Regression
+- AI
+- Azure
+- ML
+- Blogs
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Dellenny presents a step-by-step beginner's guide to building intelligent solutions with machine learning in Azure, offering a practical introduction to ML tools and workflows for aspiring professionals.<!--excerpt_end-->
 
 # Machine Learning in Azure: A Beginner’s Guide to Building Intelligent Solutions

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Terraform Module for Azure Service Principal with Flexible Authentication"
-description: "The author introduces a Terraform module that provisions an Azure service principal with multiple authentication methods, including OIDC, client secret, and certificate. The module also deploys a Key Vault, supports optional Storage Account creation, and automates role assignments across the Azure tenant."
-author: "Unlikely-Ad4624"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhsqun/service_principal/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mhsqun/service_principal/
+title: Terraform Module for Azure Service Principal with Flexible Authentication
+author: Unlikely-Ad4624
+feed_name: Reddit Azure
 date: 2025-08-04 23:04:18 +00:00
-permalink: "/2025-08-04-Terraform-Module-for-Azure-Service-Principal-with-Flexible-Authentication.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: ["Authentication", "Azure", "Certificate", "Client Secret", "Coding", "Community", "DevOps", "IaC", "Key Vault", "OIDC", "Role Assignment", "Security", "Service Principal", "Storage Account", "Terraform"]
-tags_normalized: ["authentication", "azure", "certificate", "client secret", "coding", "community", "devops", "iac", "key vault", "oidc", "role assignment", "security", "service principal", "storage account", "terraform"]
+tags:
+- Authentication
+- Certificate
+- Client Secret
+- IaC
+- Key Vault
+- OIDC
+- Role Assignment
+- Service Principal
+- Storage Account
+- Terraform
+- Azure
+- DevOps
+- Security
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- security
+primary_section: dotnet
 ---
-
 In this community post, Unlikely-Ad4624 shares a Terraform module for provisioning Azure service principals with versatile authentication options and secure secret storage.<!--excerpt_end-->
 
 ## Introduction

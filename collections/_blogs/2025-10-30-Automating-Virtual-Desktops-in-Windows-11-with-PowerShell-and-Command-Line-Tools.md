@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools"
-description: "This in-depth guide by Dellenny explores how developers and power users can automate the creation, management, and movement of virtual desktops in Windows 11 using scripting and command-line tools. The tutorial focuses on leveraging the VirtualDesktop PowerShell module, third-party utilities like VirtualDesktopCmd, and AutoHotkey to streamline workspace organization and productivity."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/automating-windows-11-virtual-desktop-management-via-scripting-command-line/
+title: Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-10-30 06:56:21 +00:00
-permalink: "/2025-10-30-Automating-Virtual-Desktops-in-Windows-11-with-PowerShell-and-Command-Line-Tools.html"
-categories: ["Coding"]
-tags: ["AutoHotkey", "Automation", "Batch Scripts", "Blogs", "Coding", "Command Line Automation", "Desktop Management", "PowerShell", "Productivity Tools", "Scripting", "VirtualDesktop Module", "VirtualDesktopCmd", "Windows 11", "Workspace Customization"]
-tags_normalized: ["autohotkey", "automation", "batch scripts", "blogs", "coding", "command line automation", "desktop management", "powershell", "productivity tools", "scripting", "virtualdesktop module", "virtualdesktopcmd", "windows 11", "workspace customization"]
+tags:
+- AutoHotkey
+- Automation
+- Batch Scripts
+- Command Line Automation
+- Desktop Management
+- PowerShell
+- Productivity Tools
+- Scripting
+- VirtualDesktop Module
+- VirtualDesktopCmd
+- Windows 11
+- Workspace Customization
+- Blogs
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Dellenny presents a practical guide to automating virtual desktop management in Windows 11, illustrating use of PowerShell, third-party tools, and scripting for improved efficiency.<!--excerpt_end-->
 
 # Automating Virtual Desktops in Windows 11 with PowerShell and Command-Line Tools
@@ -53,38 +61,38 @@ Windows 11 lacks native command-line tools for virtual desktop management, but c
   ```
 
 - Core commands:
-    - **Create new desktop:**
+  - **Create new desktop:**
 
       ```powershell
       New-Desktop
       ```
 
-    - **List desktops:**
+  - **List desktops:**
 
       ```powershell
       Get-Desktop
       ```
 
-    - **Switch desktops:**
+  - **Switch desktops:**
 
       ```powershell
       (Get-Desktop | Select-Object -First 1).Switch()
       ```
 
-    - **Move window between desktops:**
+  - **Move window between desktops:**
 
       ```powershell
       Move-WindowToDesktop -Desktop (Get-Desktop | Select-Object -Last 1)
       ```
 
-    - **Rename desktops:**
+  - **Rename desktops:**
 
       ```powershell
       (Get-Desktop)[0].Name = "Work"
       (Get-Desktop)[1].Name = "Research"
       ```
 
-    - **Remove a desktop:**
+  - **Remove a desktop:**
 
       ```powershell
       (Get-Desktop | Select-Object -Last 1).Remove()

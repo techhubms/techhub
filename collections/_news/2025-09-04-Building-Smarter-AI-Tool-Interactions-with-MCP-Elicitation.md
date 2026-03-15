@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Smarter AI Tool Interactions with MCP Elicitation"
-description: "This article by Chris Reddington explores the implementation of elicitation in the Model Context Protocol (MCP) server for turn-based games, focusing on enhancing AI agent interactions using GitHub Copilot. It covers the challenges of designing user-friendly, schema-driven interactions in AI tool development, tool naming best practices, handling partial information, and iterative improvement of the developer experience in Visual Studio Code."
-author: "Chris Reddington"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/building-smarter-interactions-with-mcp-elicitation-from-clunky-tool-calls-to-seamless-user-experiences/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/building-smarter-interactions-with-mcp-elicitation-from-clunky-tool-calls-to-seamless-user-experiences/
+title: Building Smarter AI Tool Interactions with MCP Elicitation
+author: Chris Reddington
+feed_name: The GitHub Blog
 date: 2025-09-04 16:00:00 +00:00
-permalink: "/2025-09-04-Building-Smarter-AI-Tool-Interactions-with-MCP-Elicitation.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Tool Integration", "Code Refactoring", "Coding", "Developer Experience", "Elicitation", "Game Development", "Generative AI", "GitHub Copilot", "MCP", "MCP Server", "News", "Rubber Duck Thursdays", "Schema Driven Prompts", "Tool Naming", "Turn Based Games", "TypeScript", "User Experience", "VS Code"]
-tags_normalized: ["ai", "ai and ml", "ai tool integration", "code refactoring", "coding", "developer experience", "elicitation", "game development", "generative ai", "github copilot", "mcp", "mcp server", "news", "rubber duck thursdays", "schema driven prompts", "tool naming", "turn based games", "typescript", "user experience", "vs code"]
+tags:
+- AI & ML
+- AI Tool Integration
+- Code Refactoring
+- Developer Experience
+- Elicitation
+- Game Development
+- Generative AI
+- MCP
+- MCP Server
+- Rubber Duck Thursdays
+- Schema Driven Prompts
+- Tool Naming
+- Turn Based Games
+- TypeScript
+- User Experience
+- VS Code
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Chris Reddington details how to build smarter AI tool interactions using elicitation in MCP servers, focusing on GitHub Copilot and developer experience improvements.<!--excerpt_end-->
 
 # Building Smarter AI Tool Interactions with MCP Elicitation

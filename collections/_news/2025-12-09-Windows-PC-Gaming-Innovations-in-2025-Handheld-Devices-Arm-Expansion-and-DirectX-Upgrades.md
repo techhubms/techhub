@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Windows PC Gaming Innovations in 2025: Handheld Devices, Arm Expansion, and DirectX Upgrades"
-description: "This news update reviews major developments in Windows PC gaming for 2025, focusing on handheld device improvements, expanded game support for Arm-based PCs, DirectX advances, AI-powered graphics features like Auto SR, and new system-level optimizations. Key topics include the ROG Xbox Ally series, Advanced Shader Delivery for faster game launches, enhanced security and anti-cheat support, and the integration of neural rendering and audio innovations to improve the player experience on Windows 11."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.windows.com/windowsexperience/2025/12/09/windows-pc-gaming-in-2025-handheld-innovation-arm-progress-and-directx-advances/
+title: 'Windows PC Gaming Innovations in 2025: Handheld Devices, Arm Expansion, and DirectX Upgrades'
+author: stclarke
+feed_name: Microsoft News
 date: 2025-12-09 19:17:58 +00:00
-permalink: "/2025-12-09-Windows-PC-Gaming-Innovations-in-2025-Handheld-Devices-Arm-Expansion-and-DirectX-Upgrades.html"
-categories: ["AI", "Azure", "Coding", "ML", "Security"]
-tags: ["Advanced Shader Delivery", "Agility SDK", "AI", "AI Upscaling", "AMD Ryzen Z2", "Anti Cheat", "ARM", "Auto Super Resolution", "Azure", "Bluetooth LE Audio", "Coding", "Company News", "DirectX", "DirectX Raytracing 1.2", "Game Development", "Game Performance", "Gaming", "ML", "Neural Rendering", "News", "PC Gaming", "Prism Emulator", "ROG Xbox Ally", "Security", "TPM 2.0", "Virtualization Based Security", "Windows 11", "Xbox PC App"]
-tags_normalized: ["advanced shader delivery", "agility sdk", "ai", "ai upscaling", "amd ryzen z2", "anti cheat", "arm", "auto super resolution", "azure", "bluetooth le audio", "coding", "company news", "directx", "directx raytracing 1dot2", "game development", "game performance", "gaming", "ml", "neural rendering", "news", "pc gaming", "prism emulator", "rog xbox ally", "security", "tpm 2dot0", "virtualization based security", "windows 11", "xbox pc app"]
+tags:
+- Advanced Shader Delivery
+- Agility SDK
+- AI Upscaling
+- AMD Ryzen Z2
+- Anti Cheat
+- ARM
+- Auto Super Resolution
+- Bluetooth LE Audio
+- Company News
+- DirectX
+- DirectX Raytracing 1.2
+- Game Development
+- Game Performance
+- Gaming
+- Neural Rendering
+- PC Gaming
+- Prism Emulator
+- ROG Xbox Ally
+- TPM 2.0
+- Virtualization Based Security
+- Windows 11
+- Xbox PC App
+- AI
+- Azure
+- ML
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- ml
+- security
+primary_section: ai
 ---
-
 stclarke summarizes the 2025 Windows PC gaming landscape, covering innovations in handheld experiences, Arm compatibility, DirectX 12 upgrades, security improvements, and AI-powered graphics for gamers and developers.<!--excerpt_end-->
 
 # Windows PC Gaming Innovations in 2025: Handheld Devices, Arm Expansion, and DirectX Upgrades

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Finding Leaked Passwords with AI: Building GitHub Copilot Secret Scanning"
-description: "This article by Ashwin Mohan details the technical challenges and innovations behind GitHub Copilot secret scanning, which uses AI to detect leaked passwords. It explores prompt engineering, model selection, evaluation strategies, resource management, and lessons learned in delivering actionable security alerts to developers."
-author: "Ashwin Mohan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/engineering/platform-security/finding-leaked-passwords-with-ai-how-we-built-copilot-secret-scanning/"
-viewing_mode: "external"
-feed_name: "GitHub Engineering Blog"
-feed_url: "https://github.blog/engineering/feed/"
+﻿---
+external_url: https://github.blog/engineering/platform-security/finding-leaked-passwords-with-ai-how-we-built-copilot-secret-scanning/
+title: 'Finding Leaked Passwords with AI: Building GitHub Copilot Secret Scanning'
+author: Ashwin Mohan
+feed_name: GitHub Engineering Blog
 date: 2025-03-04 17:00:24 +00:00
-permalink: "/2025-03-04-Finding-Leaked-Passwords-with-AI-Building-GitHub-Copilot-Secret-Scanning.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "Copilot Autofix", "DevOps", "Engineering", "False Positives", "GitHub Advanced Security", "GitHub Copilot", "GitHub Secret Protection", "LLM", "Model Evaluation", "News", "Password Detection", "Platform Security", "Prompt Engineering", "Resource Management", "Secret Scanning", "Security", "Security Alerts"]
-tags_normalized: ["ai", "copilot autofix", "devops", "engineering", "false positives", "github advanced security", "github copilot", "github secret protection", "llm", "model evaluation", "news", "password detection", "platform security", "prompt engineering", "resource management", "secret scanning", "security", "security alerts"]
+tags:
+- Copilot Autofix
+- Engineering
+- False Positives
+- GitHub Advanced Security
+- GitHub Secret Protection
+- LLM
+- Model Evaluation
+- Password Detection
+- Platform Security
+- Prompt Engineering
+- Resource Management
+- Secret Scanning
+- Security Alerts
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
+section_names:
+- ai
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 Authored by Ashwin Mohan, this post delves into the creation and refinement of GitHub Copilot secret scanning, highlighting the AI-powered approach to detecting passwords and managing security alerts for developers and security teams.<!--excerpt_end-->
 
 # Finding Leaked Passwords with AI: Building GitHub Copilot Secret Scanning

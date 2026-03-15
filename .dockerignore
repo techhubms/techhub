@@ -1,0 +1,49 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# CI/CD
+.github
+
+# Documentation
+*.md
+docs/
+specs/
+
+# Tests
+tests/
+**/*Tests/
+**/*.Tests/
+
+# Build artifacts
+**/bin/
+**/obj/
+**/.vs/
+**/.vscode/
+
+# Node
+node_modules/
+package-lock.json
+
+# Temporary files
+.tmp/
+*.tmp
+*.log
+
+# Databases
+.databases/
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS
+.DS_Store
+Thumbs.db

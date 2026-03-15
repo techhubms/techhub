@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX"
-description: "This session from Microsoft Ignite 2025, presented by Microsoft Events, explores the integration of Intel TDX technology with Microsoft Azure to advance confidential computing. The discussion includes cryptographic isolation with confidential VMs, secure enablement for AI and data collaboration, and trusted digital ecosystems for multi-party analytics. It features practical demonstrations and emphasizes secure digital cooperation enabled by Kubernetes and cloud-native architectures on Azure."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=z0R6JFHbyPc"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=z0R6JFHbyPc
+title: 'Advancing Confidential Computing: Bosch, Microsoft Azure, & Intel TDX'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-25 12:05:54 +00:00
-permalink: "/2025-11-25-Advancing-Confidential-Computing-Bosch-Microsoft-Azure-and-Intel-TDX.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Azure", "Cloud Security", "Confidential Computing", "Confidential VMs", "Cryptographic Isolation", "Data Protection", "Digital Sovereignty", "Enterprise Collaboration", "Intel TDX", "Kubernetes", "Microsoft Azure", "Microsoft Ignite", "MSIgnite", "Multi Party Analytics", "Secure AI", "Secure Enablement", "Secureyourdata", "Security", "Trusted Digital Ecosystems", "Videos"]
-tags_normalized: ["ai", "azure", "cloud security", "confidential computing", "confidential vms", "cryptographic isolation", "data protection", "digital sovereignty", "enterprise collaboration", "intel tdx", "kubernetes", "microsoft azure", "microsoft ignite", "msignite", "multi party analytics", "secure ai", "secure enablement", "secureyourdata", "security", "trusted digital ecosystems", "videos"]
+tags:
+- Cloud Security
+- Confidential Computing
+- Confidential VMs
+- Cryptographic Isolation
+- Data Protection
+- Digital Sovereignty
+- Enterprise Collaboration
+- Intel TDX
+- Kubernetes
+- Microsoft Azure
+- Microsoft Ignite
+- MSIgnite
+- Multi Party Analytics
+- Secure AI
+- Secure Enablement
+- Secureyourdata
+- Trusted Digital Ecosystems
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Microsoft Events hosts a detailed exploration of Intel TDX and confidential computing on Azure, featuring Bosch, Intel, and demonstrations on secure AI and trusted collaboration.<!--excerpt_end-->
 
 {% youtube z0R6JFHbyPc %}

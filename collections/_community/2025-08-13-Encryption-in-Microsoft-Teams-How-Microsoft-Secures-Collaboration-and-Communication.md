@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Encryption in Microsoft Teams: How Microsoft Secures Collaboration and Communication"
-description: "This comprehensive overview explores how Microsoft Teams employs multiple layers of encryption to protect sensitive business communications. It covers standard and end-to-end encryption (E2EE), compliance requirements (GDPR, HIPAA, PCI DSS, etc.), technical architecture, and trade-offs between security levels. The guide helps organizations choose between standard encryption versus E2EE based on specific operational, compliance, and collaboration needs."
-author: "WillDixon"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-teams-blog/encryption-in-microsoft-teams-june-2025/ba-p/4442913"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-teams-blog/encryption-in-microsoft-teams-june-2025/ba-p/4442913
+title: 'Encryption in Microsoft Teams: How Microsoft Secures Collaboration and Communication'
+author: WillDixon
+feed_name: Microsoft Tech Community
 date: 2025-08-13 15:00:00 +00:00
-permalink: "/2025-08-13-Encryption-in-Microsoft-Teams-How-Microsoft-Secures-Collaboration-and-Communication.html"
-categories: ["Security"]
-tags: ["BYOK", "Community", "Compliance", "Customer Key", "Data At REST Encryption", "E2EE", "Encryption", "End To End Encryption", "Entra ID", "GDPR", "HIPAA", "Microsoft Purview", "Microsoft Teams", "OneDrive", "PCI DSS", "Security", "Security Architecture", "Service Encryption", "SharePoint", "TLS", "Zero Trust"]
-tags_normalized: ["byok", "community", "compliance", "customer key", "data at rest encryption", "e2ee", "encryption", "end to end encryption", "entra id", "gdpr", "hipaa", "microsoft purview", "microsoft teams", "onedrive", "pci dss", "security", "security architecture", "service encryption", "sharepoint", "tls", "zero trust"]
+tags:
+- BYOK
+- Compliance
+- Customer Key
+- Data At REST Encryption
+- E2EE
+- Encryption
+- End To End Encryption
+- Entra ID
+- GDPR
+- HIPAA
+- Microsoft Purview
+- Microsoft Teams
+- OneDrive
+- PCI DSS
+- Security Architecture
+- Service Encryption
+- SharePoint
+- TLS
+- Zero Trust
+- Security
+- Community
+section_names:
+- security
+primary_section: security
 ---
-
 WillDixon presents an in-depth guide on how Microsoft Teams uses encryption—including standard and end-to-end options—to secure sensitive data and support compliance for business communication.<!--excerpt_end-->
 
 # Encryption in Microsoft Teams: How Microsoft Secures Collaboration and Communication

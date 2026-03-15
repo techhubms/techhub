@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft at Oracle AI World 2025: AI, Multicloud, and Data Transformation with Azure"
-description: "This event overview highlights Microsoft's participation in Oracle AI World 2025, focusing on technical sessions featuring Oracle Database@Azure, Microsoft Fabric, Copilot Studio, and Azure AI Foundry. Topics include integrating Oracle data with Azure services, driving AI-powered innovation, real-time analytics, migration strategy, multicloud architectures, and actionable insights for developers and architects."
-author: "AlexStairs"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba-p/4457390"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/oracle-on-azure-blog/microsoft-is-headed-to-oracle-ai-world-2025-in-las-vegas/ba-p/4457390
+title: 'Microsoft at Oracle AI World 2025: AI, Multicloud, and Data Transformation with Azure'
+author: AlexStairs
+feed_name: Microsoft Tech Community
 date: 2025-09-30 16:33:49 +00:00
-permalink: "/2025-09-30-Microsoft-at-Oracle-AI-World-2025-AI-Multicloud-and-Data-Transformation-with-Azure.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Integration", "Azure", "Azure AI Foundry", "Azure Migration", "Cloud Native", "Community", "Copilot Studio", "Data Transformation", "Enterprise Security", "Intelligent Applications", "Microsoft Fabric", "ML", "Multicloud", "Oracle Database@Azure", "Power BI", "Real Time Analytics"]
-tags_normalized: ["ai", "ai integration", "azure", "azure ai foundry", "azure migration", "cloud native", "community", "copilot studio", "data transformation", "enterprise security", "intelligent applications", "microsoft fabric", "ml", "multicloud", "oracle databaseatazure", "power bi", "real time analytics"]
+tags:
+- AI Integration
+- Azure AI Foundry
+- Azure Migration
+- Cloud Native
+- Copilot Studio
+- Data Transformation
+- Enterprise Security
+- Intelligent Applications
+- Microsoft Fabric
+- Multicloud
+- Oracle Database@Azure
+- Power BI
+- Real Time Analytics
+- AI
+- Azure
+- ML
+- Community
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 AlexStairs presents a detailed preview of Microsoft’s technical sessions at Oracle AI World 2025, showing how Oracle Database@Azure, Fabric, Copilot Studio, and AI services power real-time analytics, AI integration, and data modernization for developers.<!--excerpt_end-->
 
 # Microsoft at Oracle AI World 2025: Shaping the Future of AI and Data with Azure

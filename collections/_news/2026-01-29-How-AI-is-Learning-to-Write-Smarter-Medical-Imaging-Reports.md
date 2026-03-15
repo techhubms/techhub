@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "How AI is Learning to Write Smarter Medical Imaging Reports"
-description: "This post introduces advancements in AI research from Microsoft focused on enhancing medical imaging report generation. It highlights novel approaches using multimodal reinforcement learning to produce clearer and more insightful medical documents, particularly within tumor microenvironment modeling. The content points to active projects, such as GigaTIME, demonstrating AI's growing role in healthcare and medical data interpretation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/research/blog/unirg-scaling-medical-imaging-report-generation-with-multimodal-reinforcement-learning/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/research/blog/unirg-scaling-medical-imaging-report-generation-with-multimodal-reinforcement-learning/
+title: How AI is Learning to Write Smarter Medical Imaging Reports
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-29 17:04:47 +00:00
-permalink: "/2026-01-29-How-AI-is-Learning-to-Write-Smarter-Medical-Imaging-Reports.html"
-categories: ["AI"]
-tags: ["AI", "AI in Healthcare", "Clinical Applications", "Company News", "Health", "Health Data", "Medical AI", "Medical Imaging", "Microsoft Research", "Multimodal AI", "Natural Language Generation", "News", "Reinforcement Learning", "Tumor Microenvironment"]
-tags_normalized: ["ai", "ai in healthcare", "clinical applications", "company news", "health", "health data", "medical ai", "medical imaging", "microsoft research", "multimodal ai", "natural language generation", "news", "reinforcement learning", "tumor microenvironment"]
+tags:
+- AI
+- AI in Healthcare
+- Clinical Applications
+- Company News
+- Health
+- Health Data
+- Medical AI
+- Medical Imaging
+- Microsoft Research
+- Multimodal AI
+- Natural Language Generation
+- News
+- Reinforcement Learning
+- Tumor Microenvironment
+section_names:
+- ai
 ---
-
 stclarke from Microsoft shares how AI and multimodal reinforcement learning are being leveraged to produce clearer and more effective medical imaging reports, with a focus on tumor microenvironment modeling.<!--excerpt_end-->
 
 # How AI is Learning to Write Smarter Medical Imaging Reports

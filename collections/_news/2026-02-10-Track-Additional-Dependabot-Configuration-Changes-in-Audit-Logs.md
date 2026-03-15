@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Track Additional Dependabot Configuration Changes in Audit Logs"
-description: "This update details two new audit log event types for tracking changes to Dependabot settings in GitHub organizations and enterprises. These events log toggling of vulnerability updates and changes to self-hosted runner configurations, enhancing compliance and security monitoring for development teams."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-10-track-additional-dependabot-configuration-changes-in-audit-logs"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-10-track-additional-dependabot-configuration-changes-in-audit-logs
+title: Track Additional Dependabot Configuration Changes in Audit Logs
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-10 14:13:08 +00:00
-permalink: "/2026-02-10-Track-Additional-Dependabot-Configuration-Changes-in-Audit-Logs.html"
-categories: ["DevOps", "Security"]
-tags: ["Audit Logs", "Compliance", "Configuration Management", "Dependabot", "DevOps", "Enterprise Security", "Forensic Investigation", "GitHub", "Improvement", "News", "Organization Security", "Security", "Security Monitoring", "Self Hosted Runners", "Supply Chain Security", "Vulnerability Updates"]
-tags_normalized: ["audit logs", "compliance", "configuration management", "dependabot", "devops", "enterprise security", "forensic investigation", "github", "improvement", "news", "organization security", "security", "security monitoring", "self hosted runners", "supply chain security", "vulnerability updates"]
+tags:
+- Audit Logs
+- Compliance
+- Configuration Management
+- Dependabot
+- DevOps
+- Enterprise Security
+- Forensic Investigation
+- GitHub
+- Improvement
+- News
+- Organization Security
+- Security
+- Security Monitoring
+- Self Hosted Runners
+- Supply Chain Security
+- Vulnerability Updates
+section_names:
+- devops
+- security
 ---
-
 Allison outlines new GitHub audit log events that enhance visibility into Dependabot configuration changes, boosting compliance and supply chain security for organizations.<!--excerpt_end-->
 
 # Track Additional Dependabot Configuration Changes in Audit Logs

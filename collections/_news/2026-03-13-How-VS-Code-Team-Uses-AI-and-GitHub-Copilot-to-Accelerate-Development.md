@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How VS Code Team Uses AI and GitHub Copilot to Accelerate Development"
-description: "This article provides a deep dive into how the Visual Studio Code team leverages AI, particularly GitHub Copilot and agents, to automate and enhance every facet of their development workflow. Readers learn about parallelizing development work, automating key processes with Copilot CLI and SDK, optimizing code reviews, and maintaining high product quality even as shipping velocity increases."
-author: "Pierce Boggan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/03/13/how-VS-Code-Builds-with-AI"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2026/03/13/how-VS-Code-Builds-with-AI
+title: How VS Code Team Uses AI and GitHub Copilot to Accelerate Development
+author: Pierce Boggan
+primary_section: github-copilot
+feed_name: Visual Studio Code Releases
 date: 2026-03-13 00:00:00 +00:00
-permalink: "/2026-03-13-How-VS-Code-Team-Uses-AI-and-GitHub-Copilot-to-Accelerate-Development.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agents", "Automated Testing", "Blog", "CI/CD", "Code Review", "Coding", "Copilot CLI", "Copilot SDK", "DevOps", "GitHub Actions", "GitHub Copilot", "Issue Triage", "News", "Parallel Development", "Playwright MCP", "PR Validation", "Release Automation", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "ai agents", "automated testing", "blog", "cislashcd", "code review", "coding", "copilot cli", "copilot sdk", "devops", "github actions", "github copilot", "issue triage", "news", "parallel development", "playwright mcp", "pr validation", "release automation", "vs code", "workflow automation"]
+tags:
+- AI
+- AI Agents
+- Automated Testing
+- Blog
+- CI/CD
+- Code Review
+- Copilot CLI
+- Copilot SDK
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Issue Triage
+- News
+- Parallel Development
+- Playwright MCP
+- PR Validation
+- Release Automation
+- VS Code
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Pierce Boggan details how the VS Code team integrates AI and GitHub Copilot to streamline their development pipeline, covering automated code review, release cadence acceleration, and quality management strategies.<!--excerpt_end-->
 
 # How VS Code Team Uses AI and GitHub Copilot to Accelerate Development

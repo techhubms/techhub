@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Setting Up Security Alerts for Unusual GitHub Copilot Activity"
-description: "This guide explores how organizations can set up monitoring and security alerts specifically for GitHub Copilot activity. It addresses Copilot's unique risks as an AI-powered developer tool and provides actionable steps for baselining normal usage, auditing logs, and protecting sensitive data through automated alerts and code scanning practices."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/setting-up-alerts-for-unusual-github-copilot-activity/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/setting-up-alerts-for-unusual-github-copilot-activity/
+title: Setting Up Security Alerts for Unusual GitHub Copilot Activity
+author: John Edward
+feed_name: Dellenny's Blog
 date: 2025-11-18 15:28:44 +00:00
-permalink: "/2025-11-18-Setting-Up-Security-Alerts-for-Unusual-GitHub-Copilot-Activity.html"
-categories: ["AI", "GitHub Copilot", "Security"]
-tags: ["AI", "AI Security", "Audit Logging", "Automation Bias", "Azure Sentinel", "Blogs", "Code Scanning", "CodeQL", "Copilot Metrics", "Data Exfiltration", "Developer Productivity", "Enterprise Security", "GitHub Copilot", "Prompt Injection", "Secret Scanning", "Security", "Security Alerts", "SIEM", "Unusual Activity Detection"]
-tags_normalized: ["ai", "ai security", "audit logging", "automation bias", "azure sentinel", "blogs", "code scanning", "codeql", "copilot metrics", "data exfiltration", "developer productivity", "enterprise security", "github copilot", "prompt injection", "secret scanning", "security", "security alerts", "siem", "unusual activity detection"]
+tags:
+- AI Security
+- Audit Logging
+- Automation Bias
+- Azure Sentinel
+- Code Scanning
+- CodeQL
+- Copilot Metrics
+- Data Exfiltration
+- Developer Productivity
+- Enterprise Security
+- Prompt Injection
+- Secret Scanning
+- Security Alerts
+- SIEM
+- Unusual Activity Detection
+- AI
+- GitHub Copilot
+- Security
+- Blogs
+section_names:
+- ai
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 John Edward presents a practical guide for enabling security alerts on unusual GitHub Copilot activity, detailing the risks, monitoring strategies, and key technical steps to help organizations secure their AI-powered developer workflows.<!--excerpt_end-->
 
 # Setting Up Security Alerts for Unusual GitHub Copilot Activity

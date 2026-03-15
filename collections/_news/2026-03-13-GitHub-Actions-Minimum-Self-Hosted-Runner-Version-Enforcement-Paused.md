@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Actions: Minimum Self-Hosted Runner Version Enforcement Paused"
-description: "GitHub has announced a temporary pause on enforcing the minimum version requirement for GitHub Actions self-hosted runners (v2.329.0), initially set for March 16, 2026. Administrators can still register and configure older runner versions during this period, but are encouraged to upgrade for long-term support and compliance."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-13-self-hosted-runner-minimum-version-enforcement-paused"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-13-self-hosted-runner-minimum-version-enforcement-paused
+title: 'GitHub Actions: Minimum Self-Hosted Runner Version Enforcement Paused'
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-13 16:45:37 +00:00
-permalink: "/2026-03-13-GitHub-Actions-Minimum-Self-Hosted-Runner-Version-Enforcement-Paused.html"
-categories: ["DevOps"]
-tags: ["Actions", "Automation", "CI/CD", "Continuous Deployment", "Continuous Integration", "DevOps", "Enforcement Policy", "GitHub Actions", "News", "Retired", "Runner Management", "Runner Version", "Self Hosted Runners", "Software Lifecycle", "Upgrade Documentation", "Version Upgrade", "Workflow Automation"]
-tags_normalized: ["actions", "automation", "cislashcd", "continuous deployment", "continuous integration", "devops", "enforcement policy", "github actions", "news", "retired", "runner management", "runner version", "self hosted runners", "software lifecycle", "upgrade documentation", "version upgrade", "workflow automation"]
+tags:
+- Actions
+- Automation
+- CI/CD
+- Continuous Deployment
+- Continuous Integration
+- DevOps
+- Enforcement Policy
+- GitHub Actions
+- News
+- Retired
+- Runner Management
+- Runner Version
+- Self Hosted Runners
+- Software Lifecycle
+- Upgrade Documentation
+- Version Upgrade
+- Workflow Automation
+section_names:
+- devops
 ---
-
 Allison from GitHub announces a temporary pause in enforcing the minimum version requirement for GitHub Actions self-hosted runners, urging users to continue upgrading for future compliance.<!--excerpt_end-->
 
 # GitHub Actions: Minimum Self-Hosted Runner Version Enforcement Paused

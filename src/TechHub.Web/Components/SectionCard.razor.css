@@ -1,0 +1,167 @@
+/* ============================================================================
+   SectionCard Component Styles
+   
+   Component-specific styling for SectionCard.razor
+   Displays section overview with background image, title, description, and collections
+   ============================================================================ */
+
+/* Section Card Container - Allows collections to be outside the clickable card */
+.section-card-container {
+  background: var(--color-bg-default);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-default);
+  transition: all var(--duration-normal) var(--easing-ease-out);
+  box-shadow: var(--shadow-md);
+  position: relative;
+  cursor: pointer;
+  /* Note: No overflow:hidden - allows focus outlines to be visible */
+}
+
+@media (hover: hover) {
+  .section-card-container:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-purple-medium);
+  }
+}
+
+/* Section Card - Clickable link area stretched over full container */
+.section-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.section-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: var(--radius-lg);
+}
+
+.section-card-container:focus-within {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-purple-medium);
+}
+
+.section-card-header {
+  height: 140px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: clip;
+  /* Rounded top corners to match container */
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  /* Background images are set via CSS classes (e.g., .section-bg-ai) */
+  /* Thumbnails used for cards (400x140px) for performance */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Section background image classes for cards (using thumbnails) */
+/* Using image-set for progressive enhancement - JXL → WebP → JPG fallback */
+.section-bg-ai {
+  background-image: image-set(url('/images/section-thumbnails/ai.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/ai.webp') type('image/webp'),
+      url('/images/section-thumbnails/ai.jpg') type('image/jpeg'));
+}
+
+.section-bg-github-copilot {
+  background-image: image-set(url('/images/section-thumbnails/github-copilot.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/github-copilot.webp') type('image/webp'),
+      url('/images/section-thumbnails/github-copilot.jpg') type('image/jpeg'));
+}
+
+.section-bg-azure {
+  background-image: image-set(url('/images/section-thumbnails/azure.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/azure.webp') type('image/webp'),
+      url('/images/section-thumbnails/azure.jpg') type('image/jpeg'));
+}
+
+.section-bg-ml {
+  background-image: image-set(url('/images/section-thumbnails/ml.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/ml.webp') type('image/webp'),
+      url('/images/section-thumbnails/ml.jpg') type('image/jpeg'));
+}
+
+.section-bg-devops {
+  background-image: image-set(url('/images/section-thumbnails/devops.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/devops.webp') type('image/webp'),
+      url('/images/section-thumbnails/devops.jpg') type('image/jpeg'));
+}
+
+.section-bg-dotnet {
+  background-image: image-set(url('/images/section-thumbnails/dotnet.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/dotnet.webp') type('image/webp'),
+      url('/images/section-thumbnails/dotnet.jpg') type('image/jpeg'));
+}
+
+.section-bg-security {
+  background-image: image-set(url('/images/section-thumbnails/security.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/security.webp') type('image/webp'),
+      url('/images/section-thumbnails/security.jpg') type('image/jpeg'));
+}
+
+.section-bg-all {
+  background-image: image-set(url('/images/section-thumbnails/all.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/all.webp') type('image/webp'),
+      url('/images/section-thumbnails/all.jpg') type('image/jpeg'));
+}
+
+.section-bg-none {
+  background-image: image-set(url('/images/section-thumbnails/none.jxl') type('image/jxl'),
+      url('/images/section-thumbnails/none.webp') type('image/webp'),
+      url('/images/section-thumbnails/none.jpg') type('image/jpeg'));
+}
+
+.section-overlay {
+  background: var(--gradient-overlay-dark);
+  width: 100%;
+  padding: var(--spacing-3);
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.section-card h2 {
+  color: var(--color-text-on-emphasis);
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  text-shadow: var(--text-shadow-md);
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+/* Light up heading when hovering anywhere on container */
+@media (hover: hover) {
+  .section-card-container:hover .section-card h2 {
+    color: var(--color-purple-bright);
+  }
+}
+
+.section-body {
+  padding: var(--spacing-3);
+}
+
+.section-description {
+  color: var(--color-text-secondary);
+  margin: 0;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+/* Light up description when hovering anywhere on container */
+@media (hover: hover) {
+  .section-card-container:hover .section-description {
+    color: var(--color-text-primary);
+  }
+}
+
+.section-collections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+  padding: 0 var(--spacing-3) var(--spacing-3) var(--spacing-3);
+}

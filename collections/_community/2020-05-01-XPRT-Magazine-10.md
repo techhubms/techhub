@@ -1,17 +1,45 @@
----
-layout: "post"
-title: "XPRT Magazine 10"
-description: "A milestone edition featuring practical insights on cloud migration, microservices, DevOps, digital transformation, and data modeling in the Microsoft ecosystem. Includes real-world experiences, technical deep-dives, and strategies for adapting to rapid change."
-categories: ["AI", "Azure", "Coding", "DevOps", "ML"]
+﻿---
+title: XPRT Magazine 10
 date: 2020-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2020-05-01-XPRT-Magazine-10.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "Automation", "Azure", "Azure Cosmos DB", "Cloud Migration", "Cloud Native", "Coding", "Community", "Dapr", "Data Modeling", "DevOps", "Digital Transformation", "Docker", "Feature Toggles", "Inner Source", "Knowledge Sharing", "Kubernetes", "Legacy Modernization", "Magazines", "Microservices", "ML", "Platform Engineering", "Remote Work", "SaaS", "Team Learning", "Virtual Machines", "Xpirit Belgium"]
-tags_normalized: ["ai", "automation", "azure", "azure cosmos db", "cloud migration", "cloud native", "coding", "community", "dapr", "data modeling", "devops", "digital transformation", "docker", "feature toggles", "inner source", "knowledge sharing", "kubernetes", "legacy modernization", "magazines", "microservices", "ml", "platform engineering", "remote work", "saas", "team learning", "virtual machines", "xpirit belgium"]
+author: Xebia
+external_url: https://xprt.xebia.com/magazine-10
+tags:
+- Automation
+- Azure Cosmos DB
+- Cloud Migration
+- Cloud Native
+- Dapr
+- Data Modeling
+- Digital Transformation
+- Docker
+- Feature Toggles
+- Inner Source
+- Knowledge Sharing
+- Kubernetes
+- Legacy Modernization
+- Magazines
+- Microservices
+- Platform Engineering
+- Remote Work
+- SaaS
+- Team Learning
+- Virtual Machines
+- Xpirit Belgium
+- AI
+- Azure
+- DevOps
+- ML
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- ml
+primary_section: ai
+feed_name: TechHub
 ---
-
 This tenth edition of XPRT Magazine delivers a blend of technical depth and practical experience, covering cloud migration, microservices, DevOps, digital transformation, and data modeling. The issue features real-world stories, hands-on guides, and strategies for thriving in rapidly changing environments, with a focus on the Microsoft ecosystem and modern software practices.
 <!--excerpt_end-->
 

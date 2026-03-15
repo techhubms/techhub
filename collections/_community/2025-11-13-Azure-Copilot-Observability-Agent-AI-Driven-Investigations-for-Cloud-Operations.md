@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Copilot Observability Agent: AI-Driven Investigations for Cloud Operations"
-description: "This post introduces the Azure Copilot observability agent, an AI-powered tool designed to enhance troubleshooting and root cause analysis across your Azure environments. Learn how it leverages AI, machine learning, and large language models to automatically correlate data, suggest actionable steps, and integrate seamlessly with alerts and the Azure portal for faster, deeper visibility and resolution capabilities."
-author: "EfratNauerman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/azure-copilot-observability-agent-intelligent-investigations/ba-p/4467360
+title: 'Azure Copilot Observability Agent: AI-Driven Investigations for Cloud Operations'
+author: EfratNauerman
+feed_name: Microsoft Tech Community
 date: 2025-11-13 19:02:49 +00:00
-permalink: "/2025-11-13-Azure-Copilot-Observability-Agent-AI-Driven-Investigations-for-Cloud-Operations.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic Investigations", "AI", "AI Operations", "AKS", "Anomaly Detection", "Azure", "Azure Alerts", "Azure Copilot", "Azure Monitor", "Azure Portal Integration", "Cloud Automation", "Community", "DevOps", "Infrastructure Monitoring", "Log Analytics", "Machine Learning", "Observability", "Root Cause Analysis", "Virtual Machines"]
-tags_normalized: ["agentic investigations", "ai", "ai operations", "aks", "anomaly detection", "azure", "azure alerts", "azure copilot", "azure monitor", "azure portal integration", "cloud automation", "community", "devops", "infrastructure monitoring", "log analytics", "machine learning", "observability", "root cause analysis", "virtual machines"]
+tags:
+- Agentic Investigations
+- AI Operations
+- AKS
+- Anomaly Detection
+- Azure Alerts
+- Azure Copilot
+- Azure Monitor
+- Azure Portal Integration
+- Cloud Automation
+- Infrastructure Monitoring
+- Log Analytics
+- ML
+- Observability
+- Root Cause Analysis
+- Virtual Machines
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 EfratNauerman introduces the Azure Copilot observability agent, highlighting its AI-driven approach to troubleshooting and observability across Azure environments, with advanced features for automatic issue investigation and actionable remediation.<!--excerpt_end-->
 
 # Azure Copilot Observability Agent: AI-Driven Investigations for Cloud Operations
@@ -61,7 +76,7 @@ Cloud environments demand intelligent, scalable observability solutions. The Azu
 
 ## Feedback
 
-Microsoft encourages user feedback via azmoninvestigation@microsoft.com and the product feedback form.
+Microsoft encourages user feedback via <azmoninvestigation@microsoft.com> and the product feedback form.
 
 ---
 **Author:** EfratNauerman

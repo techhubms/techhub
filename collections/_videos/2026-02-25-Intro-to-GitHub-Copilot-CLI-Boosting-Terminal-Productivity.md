@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Intro to GitHub Copilot CLI: Boosting Terminal Productivity"
-description: "This video introduces developers to GitHub Copilot CLI, showcasing how it extends Copilot’s AI-powered assistance beyond the editor to the terminal. The session covers setup, generating commands from natural language, understanding complex scripts, and streamlining everyday tasks for developers who work extensively with command-line tools."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vkMLCIaoADI"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=vkMLCIaoADI
+title: 'Intro to GitHub Copilot CLI: Boosting Terminal Productivity'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-25 13:55:14 +00:00
-permalink: "/2026-02-25-Intro-to-GitHub-Copilot-CLI-Boosting-Terminal-Productivity.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Automation", "CLI Integration", "Command Line Tools", "Copilot CLI", "Developer Tools", "GitHub Copilot", "Natural Language Commands", "Script Understanding", "Software Development", "Terminal Productivity", "Videos", "Workflow Optimization"]
-tags_normalized: ["ai", "ai assistant", "automation", "cli integration", "command line tools", "copilot cli", "developer tools", "github copilot", "natural language commands", "script understanding", "software development", "terminal productivity", "videos", "workflow optimization"]
+tags:
+- AI
+- AI Assistant
+- Automation
+- CLI Integration
+- Command Line Tools
+- Copilot CLI
+- Developer Tools
+- GitHub Copilot
+- Natural Language Commands
+- Script Understanding
+- Software Development
+- Terminal Productivity
+- Videos
+- Workflow Optimization
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a live introduction to the GitHub Copilot CLI, showing developers how to use AI assistance for command-line tasks and accelerate their terminal workflows.<!--excerpt_end-->
 
 {% youtube vkMLCIaoADI %}

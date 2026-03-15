@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Public Preview: Azure Monitor Pipeline Transformations"
-description: "This in-depth post introduces the public preview of Azure Monitor pipeline transformations, a feature that empowers users to control, transform, and optimize telemetry data before ingestion in Azure Monitor. Covering data routing, advanced schema validation, KQL transformation templates, and cost-saving techniques, the article provides technical insights into configuring and leveraging the new pipeline for powerful analytics and lower ingestion costs in edge and multi-cloud environments."
-author: "susaraswat4"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-azure-monitor-pipeline-transformations/ba-p/4491980"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/public-preview-azure-monitor-pipeline-transformations/ba-p/4491980
+title: 'Public Preview: Azure Monitor Pipeline Transformations'
+author: susaraswat4
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-12 00:16:01 +00:00
-permalink: "/2026-02-12-Public-Preview-Azure-Monitor-Pipeline-Transformations.html"
-categories: ["Azure"]
-tags: ["Aggregation", "Azure", "Azure Monitor", "Cloud Monitoring", "Community", "Cost Optimization", "Data Collection", "Data Routing", "Edge Computing", "Filtering", "KQL", "Log Analytics", "Multi Cloud", "Pipeline Transformations", "Schema Validation", "Syslog", "Telemetry"]
-tags_normalized: ["aggregation", "azure", "azure monitor", "cloud monitoring", "community", "cost optimization", "data collection", "data routing", "edge computing", "filtering", "kql", "log analytics", "multi cloud", "pipeline transformations", "schema validation", "syslog", "telemetry"]
+tags:
+- Aggregation
+- Azure
+- Azure Monitor
+- Cloud Monitoring
+- Community
+- Cost Optimization
+- Data Collection
+- Data Routing
+- Edge Computing
+- Filtering
+- KQL
+- Log Analytics
+- Multi Cloud
+- Pipeline Transformations
+- Schema Validation
+- Syslog
+- Telemetry
+section_names:
+- azure
 ---
-
 susaraswat4 outlines the capabilities and features of Azure Monitor pipeline transformations, explaining how this new Azure feature enables granular data shaping, schema validation, KQL templates, and significant telemetry ingestion cost savings for cloud and edge scenarios.<!--excerpt_end-->
 
 # Public Preview: Azure Monitor Pipeline Transformations

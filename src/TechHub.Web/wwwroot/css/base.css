@@ -1,0 +1,437 @@
+/* ============================================================================
+   Base Styles
+   
+   - Reset
+   - Typography
+   - Links & Focus States
+   - Lists, Code, Images
+   - Accessibility (Reduced Motion, High Contrast)
+   ============================================================================ */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Scrollbar styling:
+   - scrollbar-color: inherited, applies to all browsers
+   - scrollbar-width: NOT inherited, set per-element where needed
+   - Desktop: auto width so ::-webkit-scrollbar rules apply in Chrome/Edge/Safari
+   - Mobile: thin width (Chrome 121+ ignores ::-webkit-scrollbar when thin is set)
+   - Firefox: uses scrollbar-color + scrollbar-width natively */
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+  background-color: var(--color-bg-gradient-end);
+  background-image: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-mid) 35%, var(--color-bg-gradient-end) 100%);
+  background-attachment: fixed;
+  overscroll-behavior-y: none;
+  scrollbar-width: auto;
+  scrollbar-color: var(--color-border-default) var(--color-bg-default);
+}
+
+/* Mobile/tablet: jump to just below sticky nav bars */
+@media (max-width: 1292px) {
+  :root {
+    --scroll-margin-top: calc(var(--mobile-nav-height) + var(--spacing-1) + 44px + var(--spacing-2));
+  }
+
+  html {
+    scrollbar-width: thin;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Body border-right - only on desktop viewports */
+@media (min-width: 1293px) {
+  body {
+    border-right: 1px solid var(--color-border-default);
+  }
+}
+
+/* Chrome/Edge/Safari: full control with hover state */
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-default);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-default);
+    border: 4px solid var(--color-bg-default);
+    border-radius: 8px;
+  }
+
+  @media (hover: hover) {
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--color-border-hover);
+    }
+  }
+
+  /* Tablet and below: thinner scrollbar to save screen space */
+  @media (max-width: 1292px) {
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border: 2px solid var(--color-bg-default);
+      border-radius: 4px;
+    }
+  }
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: var(--line-height-heading);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-emphasis);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-4);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
+  scroll-margin-top: var(--scroll-margin-top);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
+  scroll-margin-top: var(--scroll-margin-top);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+  margin-top: var(--spacing-4);
+  margin-bottom: var(--spacing-2);
+  scroll-margin-top: var(--scroll-margin-top);
+}
+
+h5 {
+  font-size: var(--font-size-h5);
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+  scroll-margin-top: var(--scroll-margin-top);
+}
+
+h6 {
+  font-size: var(--font-size-h6);
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-2);
+  scroll-margin-top: var(--scroll-margin-top);
+}
+
+/* Mobile: Tighter heading sizes for smaller screens.
+   Each heading steps down one token so the hierarchy stays clear. */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-3xl);   /* 40→32px */
+  }
+
+  h2 {
+    font-size: var(--font-size-2xl);   /* 32→24px */
+  }
+
+  h3 {
+    font-size: var(--font-size-xl);    /* 24→20px */
+  }
+
+  h4 {
+    font-size: var(--font-size-lg);    /* 20→18px */
+  }
+
+  h5 {
+    font-size: var(--font-size-base);  /* 18→16px */
+  }
+}
+
+p {
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+/* Links */
+a {
+  color: var(--color-purple-medium);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--color-purple-bright);
+  }
+}
+
+/* Focus States (WCAG 2.1 AA) - Accessibility Requirement */
+/* Ensure focused elements scroll above sticky headers */
+/* This applies to all focusable elements (links, buttons, inputs, etc.) */
+a, button, input, select, textarea, [tabindex]:not([tabindex="-1"]) {
+  scroll-margin-top: var(--sticky-header-height);
+}
+
+/* ============================================================================
+   Focus Outline Strategy
+   
+   Outlines are ONLY shown during keyboard navigation (Tab key).
+   nav-helpers.js adds 'keyboard-nav' class to <html> when Tab is pressed,
+   removes it on pointer/touch interaction (pointerdown).
+   
+   This prevents lingering focus rings on mobile devices after tapping
+   while maintaining full WCAG 2.1 AA keyboard accessibility.
+   ============================================================================ */
+
+/* Suppress all focus outlines by default (pointer/touch mode) */
+:focus,
+:focus-visible {
+  outline: none !important;
+}
+
+/* Show focus outlines ONLY when user is navigating with keyboard */
+/* Using !important to ensure these critical accessibility styles override
+   component-scoped CSS which may have higher specificity */
+/* Note: We explicitly set transition: none to prevent outline "grow" effect */
+html.keyboard-nav :focus-visible {
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  /* Ensure focus outline is always rounded */
+  border-radius: var(--radius-sm);
+}
+
+/* Links use visible purple focus in keyboard mode */
+html.keyboard-nav a:focus-visible {
+  outline: 3px solid var(--color-purple-bright) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-sm);
+}
+
+/* Skip to Main Content Link */
+.skip-link {
+  /* Position off-screen by default */
+  position: absolute;
+  top: -100px;
+  left: var(--spacing-3);
+  z-index: 10000;
+
+  /* Button-like styling - uses purple brand color */
+  display: inline-block;
+  background-color: var(--color-purple-dark);
+  color: var(--color-text-on-emphasis);
+  padding: var(--spacing-3) var(--spacing-4);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-tight);
+  border-radius: var(--radius-md);
+
+  /* Button depth and interaction */
+  box-shadow: var(--shadow-md);
+  border: 2px solid var(--color-purple-dark);
+
+  /* Smooth transitions */
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+html.keyboard-nav .skip-link:focus-visible {
+  /* Move into view when focused */
+  top: var(--spacing-3);
+
+  /* Enhanced focus state */
+  outline: 3px solid var(--color-purple-bright);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-lg);
+
+  /* Slight scale for emphasis */
+  transform: scale(1.02);
+}
+
+/* Lists */
+ul,
+ol {
+  margin: 0 0 var(--spacing-2) 0;
+  padding-left: var(--spacing-4);
+}
+
+li {
+  margin-bottom: var(--spacing-1);
+}
+
+/* Code */
+code {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  background: var(--color-purple-bg-subtle);
+  border: 1px solid var(--color-purple-border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.125rem 0.375rem;
+}
+
+pre {
+  background: var(--color-bg-emphasis);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-2);
+  overflow-x: auto;
+  margin: var(--spacing-3) 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  max-height: 500px;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Active Heading Highlight (TOC Scroll Spy) */
+.toc-active-heading {
+  background: linear-gradient(to right, var(--color-purple-dark), transparent 40%);
+  background-size: 100% 1px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* Reduced Motion Support (Accessibility) */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border-default: var(--color-text-on-emphasis);
+    --focus-outline-width: 3px;
+  }
+}
+
+/* ============================================================================
+   Utility Classes
+   
+   - Accessibility Utilities
+   - Spacing Utilities
+   - Text Utilities
+   ============================================================================ */
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Sidebar Headings - Standardized across all sidebars */
+.sidebar-h2 {
+  font-size: var(--font-size-3xl);
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-emphasis);
+  line-height: var(--line-height-heading);
+}
+
+/* Page H1 - Standardized across all pages */
+.page-h1 {
+  font-size: var(--font-size-3xl);
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-emphasis);
+  text-align: left;
+}
+
+@media (max-width: 1292px) {
+  .page-h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-3);
+  }
+
+  .sidebar-h2 {
+    margin-bottom: var(--spacing-3);
+  }
+}
+
+/* Text Alignment */
+.u-text-center {
+  text-align: center;
+}
+
+/* Spacing Utilities */
+.u-mb-2 {
+  margin-bottom: var(--spacing-2);
+}
+
+.u-mb-4 {
+  margin-bottom: var(--spacing-4);
+}
+
+.u-mt-4 {
+  margin-top: var(--spacing-4);
+}
+
+/* Form Floating Labels */
+.form-floating > .form-control-plaintext::placeholder,
+.form-floating > .form-control::placeholder {
+  color: var(--color-text-secondary);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}

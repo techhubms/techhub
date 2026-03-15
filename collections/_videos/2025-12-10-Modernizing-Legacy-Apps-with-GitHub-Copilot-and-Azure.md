@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Modernizing Legacy Apps with GitHub Copilot and Azure"
-description: "This video demonstrates how developers can use GitHub Copilot's app modernization features alongside the Visual Studio family of tools to upgrade legacy applications. It covers automated code modernization, dependency updates, and extending apps into Azure using best practices. The session highlights how outdated libraries are identified and replaced, and how the tools accelerate moving to secure, cloud-ready solutions with practical demos."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=SXo5EaXNJl0"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=SXo5EaXNJl0
+title: Modernizing Legacy Apps with GitHub Copilot and Azure
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-10 00:00:27 +00:00
-permalink: "/2025-12-10-Modernizing-Legacy-Apps-with-GitHub-Copilot-and-Azure.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Development", "App Modernization", "Azure", "Best Practices", "Cloud Infrastructure", "Cloud Migration", "Code Upgrade", "Coding", "Dependency Management", "Developer Tools", "DevOps", "GitHub Copilot", "Legacy Application", "Outdated Libraries", "Secure Development", "Videos", "VS"]
-tags_normalized: ["dotnet", "ai", "ai development", "app modernization", "azure", "best practices", "cloud infrastructure", "cloud migration", "code upgrade", "coding", "dependency management", "developer tools", "devops", "github copilot", "legacy application", "outdated libraries", "secure development", "videos", "vs"]
+tags:
+- .NET
+- AI Development
+- App Modernization
+- Best Practices
+- Cloud Infrastructure
+- Cloud Migration
+- Code Upgrade
+- Dependency Management
+- Developer Tools
+- Legacy Application
+- Outdated Libraries
+- Secure Development
+- VS
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 dotnet presents a fast-paced demonstration of GitHub Copilot’s modernization tools in Visual Studio, showing how developers can upgrade legacy code and migrate applications confidently to Azure.<!--excerpt_end-->
 
 {% youtube SXo5EaXNJl0 %}

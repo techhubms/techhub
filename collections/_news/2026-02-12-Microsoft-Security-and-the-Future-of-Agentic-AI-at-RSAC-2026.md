@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Security and the Future of Agentic AI at RSAC™ 2026"
-description: "This guide provides a comprehensive overview of Microsoft’s presence at RSAC 2026, exploring how the rise of agentic AI is redefining security operations. It covers sessions, executive events, and hands-on experiences designed to help organizations secure every layer of the AI stack and navigate the evolving threat landscape."
-author: "Microsoft Security Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/12/your-complete-guide-to-microsoft-experiences-at-rsac-2026-conference/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/12/your-complete-guide-to-microsoft-experiences-at-rsac-2026-conference/
+title: Microsoft Security and the Future of Agentic AI at RSAC™ 2026
+author: Microsoft Security Team
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-12 17:00:00 +00:00
-permalink: "/2026-02-12-Microsoft-Security-and-the-Future-of-Agentic-AI-at-RSAC-2026.html"
-categories: ["AI", "Security"]
-tags: ["Agent 365", "Agentic AI", "AI", "AI Agents", "AI Governance", "AI Security", "Autonomous Security", "CISO", "Cloud Security", "Cybersecurity", "Governance", "Microsoft Security", "News", "Observability", "RSAC", "Security", "Threat Intelligence", "Zero Trust"]
-tags_normalized: ["agent 365", "agentic ai", "ai", "ai agents", "ai governance", "ai security", "autonomous security", "ciso", "cloud security", "cybersecurity", "governance", "microsoft security", "news", "observability", "rsac", "security", "threat intelligence", "zero trust"]
+tags:
+- Agent 365
+- Agentic AI
+- AI
+- AI Agents
+- AI Governance
+- AI Security
+- Autonomous Security
+- CISO
+- Cloud Security
+- Cybersecurity
+- Governance
+- Microsoft Security
+- News
+- Observability
+- RSAC
+- Security
+- Threat Intelligence
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 The Microsoft Security Team provides an in-depth guide to their participation at RSAC 2026, focusing on how agentic AI is transforming the cybersecurity landscape and what security leaders can expect from Microsoft’s sessions and innovations.<!--excerpt_end-->
 
 # Microsoft Security and the Future of Agentic AI at RSAC™ 2026

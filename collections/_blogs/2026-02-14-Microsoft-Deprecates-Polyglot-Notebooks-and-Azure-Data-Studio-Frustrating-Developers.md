@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Microsoft Deprecates Polyglot Notebooks and Azure Data Studio, Frustrating Developers"
-description: "This article discusses Microsoft's unexpected deprecation of the Polyglot Notebooks extension for Visual Studio Code and the retirement of Azure Data Studio. It explores the impact on developers and data analysts, community reactions, and Microsoft's suggested (but incomplete) alternatives for mixed-language and SQL notebook workflows in the Microsoft ecosystem."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/databases/2026/02/14/microsoft-deprecates-polyglot-notebooks-developers-react/4091167"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/databases/2026/02/14/microsoft-deprecates-polyglot-notebooks-developers-react/4091167
+title: Microsoft Deprecates Polyglot Notebooks and Azure Data Studio, Frustrating Developers
+author: DevClass.com
+primary_section: dotnet
+feed_name: DevClass
 date: 2026-02-14 08:01:00 +00:00
-permalink: "/2026-02-14-Microsoft-Deprecates-Polyglot-Notebooks-and-Azure-Data-Studio-Frustrating-Developers.html"
-categories: ["Coding"]
-tags: [".NET Interactive", "Azure Data Studio", "Blogs", "C#", "C# Dev Kit", "Coding", "Data Science", "Developer Tools", "Extension Deprecation", "Jupyter Notebooks", "Markdown Notebooks", "Microsoft Ecosystem", "Notebook Workflows", "Polyglot Notebooks", "SQL Server", "VS Code"]
-tags_normalized: ["dotnet interactive", "azure data studio", "blogs", "csharp", "csharp dev kit", "coding", "data science", "developer tools", "extension deprecation", "jupyter notebooks", "markdown notebooks", "microsoft ecosystem", "notebook workflows", "polyglot notebooks", "sql server", "vs code"]
+tags:
+- .NET Interactive
+- Azure Data Studio
+- Blogs
+- C#
+- C# Dev Kit
+- Data Science
+- Developer Tools
+- Extension Deprecation
+- Jupyter Notebooks
+- Markdown Notebooks
+- Microsoft Ecosystem
+- Notebook Workflows
+- Polyglot Notebooks
+- SQL Server
+- VS Code
+- .NET
+section_names:
+- dotnet
 ---
-
 DevClass.com reports on Microsoft's abrupt decision to deprecate Polyglot Notebooks for VS Code and retire Azure Data Studio, highlighting community frustration and lack of clear replacements.<!--excerpt_end-->
 
 # Microsoft Deprecates Polyglot Notebooks and Azure Data Studio, Frustrating Developers

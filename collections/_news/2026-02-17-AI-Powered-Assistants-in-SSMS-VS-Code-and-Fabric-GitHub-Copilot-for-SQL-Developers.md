@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI-Powered Assistants in SSMS, VS Code, and Fabric: GitHub Copilot for SQL Developers"
-description: "This article explores the integration of GitHub Copilot’s AI-powered assistance in SQL Server Management Studio (SSMS), Visual Studio Code (VS Code), and Microsoft Fabric portals for T-SQL development. Readers learn about chat-based coding help, inline query completion, agent workflows, security details, and how these features accelerate SQL coding, debugging, and optimization across SQL Server, Azure SQL, and Fabric SQL databases."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/no-more-excuses-ai-powered-assistants-are-in-ssms-vs-code-and-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/no-more-excuses-ai-powered-assistants-are-in-ssms-vs-code-and-fabric/
+title: 'AI-Powered Assistants in SSMS, VS Code, and Fabric: GitHub Copilot for SQL Developers'
+author: Microsoft Fabric Blog
+primary_section: github-copilot
+feed_name: Microsoft Fabric Blog
 date: 2026-02-17 12:00:00 +00:00
-permalink: "/2026-02-17-AI-Powered-Assistants-in-SSMS-VS-Code-and-Fabric-GitHub-Copilot-for-SQL-Developers.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Powered Coding", "Azure", "Azure SQL", "Coding", "Database Chat Assistant", "Database Tools", "Fabric SQL", "GitHub Copilot", "Microsoft Fabric", "MSSQL Extension", "News", "Query Optimization", "SQL Development", "SQL Server Management Studio", "SSMS", "T SQL", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai powered coding", "azure", "azure sql", "coding", "database chat assistant", "database tools", "fabric sql", "github copilot", "microsoft fabric", "mssql extension", "news", "query optimization", "sql development", "sql server management studio", "ssms", "t sql", "vs code"]
+tags:
+- Agent Mode
+- AI
+- AI Powered Coding
+- Azure
+- Azure SQL
+- Database Chat Assistant
+- Database Tools
+- Fabric SQL
+- GitHub Copilot
+- Microsoft Fabric
+- MSSQL Extension
+- News
+- Query Optimization
+- SQL Development
+- SQL Server Management Studio
+- SSMS
+- T SQL
+- VS Code
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
 ---
-
 Microsoft Fabric Blog details how GitHub Copilot brings AI-powered coding and query optimization to SQL developers directly in SSMS, VS Code, and Fabric, offering chat-driven help, inline completions, and security-focused workflows.<!--excerpt_end-->
 
 # AI-Powered Assistants in SSMS, VS Code, and Fabric: GitHub Copilot for SQL Developers

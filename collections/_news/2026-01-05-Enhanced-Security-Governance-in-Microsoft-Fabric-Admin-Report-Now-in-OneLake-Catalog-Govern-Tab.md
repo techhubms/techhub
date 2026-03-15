@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Enhanced Security Governance in Microsoft Fabric: Admin Report Now in OneLake Catalog Govern Tab"
-description: "This news update details Microsoft Fabric's strategic shift of its security insights and governance reports from the Purview Hub to an integrated Admin Report within the Govern tab of the OneLake Catalog. Key improvements include unified security oversight, actionable insights on sensitivity labeling and DLP coverage, and interactive exploration via Copilot, empowering Fabric admins with more effective data governance and protection."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/explore-your-fabric-security-insights-in-the-onelake-catalog-govern-tab/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/explore-your-fabric-security-insights-in-the-onelake-catalog-govern-tab/
+title: 'Enhanced Security Governance in Microsoft Fabric: Admin Report Now in OneLake Catalog Govern Tab'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-05 11:00:00 +00:00
-permalink: "/2026-01-05-Enhanced-Security-Governance-in-Microsoft-Fabric-Admin-Report-Now-in-OneLake-Catalog-Govern-Tab.html"
-categories: ["Azure", "Security"]
-tags: ["Admin Report", "Azure", "Compliance", "Copilot", "Data Loss Prevention", "Data Stewardship", "DLP Policies", "Fabric Administration", "Govern Tab", "Governance", "Information Protection", "Microsoft Fabric", "Microsoft Purview", "News", "OneLake Catalog", "Security", "Security Insights", "Sensitivity Labels"]
-tags_normalized: ["admin report", "azure", "compliance", "copilot", "data loss prevention", "data stewardship", "dlp policies", "fabric administration", "govern tab", "governance", "information protection", "microsoft fabric", "microsoft purview", "news", "onelake catalog", "security", "security insights", "sensitivity labels"]
+tags:
+- Admin Report
+- Compliance
+- Copilot
+- Data Loss Prevention
+- Data Stewardship
+- DLP Policies
+- Fabric Administration
+- Govern Tab
+- Governance
+- Information Protection
+- Microsoft Fabric
+- Microsoft Purview
+- OneLake Catalog
+- Security Insights
+- Sensitivity Labels
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 The Microsoft Fabric Blog explains how Fabric admins can now access enhanced security and compliance insights directly in the OneLake Catalog’s Govern tab. This update, authored by the Microsoft Fabric Blog team, guides users through unified governance and actionable protection measures.<!--excerpt_end-->
 
 # Enhanced Security Governance in Microsoft Fabric: Admin Report Now in OneLake Catalog Govern Tab

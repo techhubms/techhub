@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Building a Multi-Agent On-Call Copilot with Microsoft Agent Framework"
-description: "This article demonstrates the creation of On-Call Copilot, an AI-powered incident response system built using Microsoft Agent Framework and deployed as a Foundry Hosted Agent. It covers the design and architecture of multi-agent orchestration for automating incident triage, communication, and reporting, highlighting key engineering decisions and architectural patterns that enable scalable, low-latency, production-grade solutions for SRE teams on Azure infrastructure."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-multi-agent-on-call-copilot-with-microsoft-agent/ba-p/4499962"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-a-multi-agent-on-call-copilot-with-microsoft-agent/ba-p/4499962
+title: Building a Multi-Agent On-Call Copilot with Microsoft Agent Framework
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-12 07:00:00 +00:00
-permalink: "/2026-03-12-Building-a-Multi-Agent-On-Call-Copilot-with-Microsoft-Agent-Framework.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: ["AI", "Asyncio", "Azure", "Azure Container Registry", "Azure OpenAI", "Cloud Infrastructure", "Coding", "Community", "ConcurrentBuilder", "DefaultAzureCredential", "DevOps", "DevOps Automation", "Foundry Hosted Agents", "Incident Response", "JSON Automation", "Microsoft Agent Framework", "Model Router", "Multi Agent Systems", "Post Incident Reporting", "Prompt Engineering", "Python", "Site Reliability Engineering", "Zero Dependency UI"]
-tags_normalized: ["ai", "asyncio", "azure", "azure container registry", "azure openai", "cloud infrastructure", "coding", "community", "concurrentbuilder", "defaultazurecredential", "devops", "devops automation", "foundry hosted agents", "incident response", "json automation", "microsoft agent framework", "model router", "multi agent systems", "post incident reporting", "prompt engineering", "python", "site reliability engineering", "zero dependency ui"]
+tags:
+- AI
+- Asyncio
+- Azure
+- Azure Container Registry
+- Azure OpenAI
+- Cloud Infrastructure
+- Community
+- ConcurrentBuilder
+- DefaultAzureCredential
+- DevOps
+- DevOps Automation
+- Foundry Hosted Agents
+- Incident Response
+- JSON Automation
+- Microsoft Agent Framework
+- Model Router
+- Multi Agent Systems
+- Post Incident Reporting
+- Prompt Engineering
+- Python
+- Site Reliability Engineering
+- Zero Dependency UI
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
 ---
-
 Lee_Stott explores how to build On-Call Copilot, an AI-driven, multi-agent incident triage and reporting solution using Microsoft Agent Framework, Foundry Hosted Agents, Model Router, and Azure OpenAI—detailing the technical patterns, code, and deployment steps for practical DevOps engineers.<!--excerpt_end-->
 
 # Building a Multi-Agent On-Call Copilot with Microsoft Agent Framework

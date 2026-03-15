@@ -1,0 +1,51 @@
+@inject NavigationManager Navigation
+
+@* 
+   SafeMarkup Component
+   
+   Renders HTML content with hash-only links fixed to include the current page path.
+   This works around the <base href="/"> issue where browsers resolve #hash relative
+   to "/" instead of the current page.
+   
+   Usage:
+     <SafeMarkup Html="@renderedHtml" />
+   
+   Instead of:
+     @((MarkupString)renderedHtml)
+*@
+
+@((MarkupString)FixedHtml)
+
+@code {
+    /// <summary>
+    /// The HTML content to render with fixed hash links.
+    /// </summary>
+    [Parameter, EditorRequired]
+    public string? Html { get; set; }
+
+    private string FixedHtml => FixHashLinks(Html);
+
+    /// <summary>
+    /// Fix hash-only links to work around &lt;base href="/"&gt; issue.
+    /// Replaces href="#section" with href="/current/path#section".
+    /// </summary>
+    private string FixHashLinks(string? html)
+    {
+        if (string.IsNullOrEmpty(html))
+        {
+            return string.Empty;
+        }
+
+        // Get the current path with query string (to preserve filters etc.)
+        var uri = new Uri(Navigation.Uri);
+        var currentPathWithQuery = uri.AbsolutePath + uri.Query;
+
+        // Replace href="#..." with href="/current/path?query#..."
+        // Only match hash-only links, not full URLs with hashes
+        return System.Text.RegularExpressions.Regex.Replace(
+            html,
+            @"href=""(#[^""]+)""",
+            match => $@"href=""{currentPathWithQuery}{match.Groups[1].Value}"""
+        );
+    }
+}

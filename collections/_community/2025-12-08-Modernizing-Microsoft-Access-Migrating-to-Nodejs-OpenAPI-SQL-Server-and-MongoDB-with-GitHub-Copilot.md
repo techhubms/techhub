@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Modernizing Microsoft Access: Migrating to Node.js, OpenAPI, SQL Server, and MongoDB with GitHub Copilot"
-description: "This extensive case study by anthkernan demonstrates a practical, step-by-step modernization of a Microsoft Access application. The migration spans transitioning Access forms and VBA to a Node.js API-first stack with SQL Server and OpenAPI, later introducing MongoDB for demonstration purposes. The process leverages tools like GitHub Copilot for code conversion, Liquibase for change management, and Microsoft SSMA for database migration, illustrating best practices in database automation, refactoring, and testable business logic. The post also showcases how Copilot accelerates multi-tier modernization, accessibility-focused UI redevelopment, and synthetic data generation, while outlining concrete prompts and techniques for every migration stage."
-author: "anthkernan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-modernise-a-microsoft-access-database-forms-vba-to-node/ba-p/4473504"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-to-modernise-a-microsoft-access-database-forms-vba-to-node/ba-p/4473504
+title: 'Modernizing Microsoft Access: Migrating to Node.js, OpenAPI, SQL Server, and MongoDB with GitHub Copilot'
+author: anthkernan
+feed_name: Microsoft Tech Community
 date: 2025-12-08 19:59:25 +00:00
-permalink: "/2025-12-08-Modernizing-Microsoft-Access-Migrating-to-Nodejs-OpenAPI-SQL-Server-and-MongoDB-with-GitHub-Copilot.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "API First", "Azure", "Business Logic Migration", "Coding", "Community", "Constraint Refactoring", "Database Modernization", "DevOps", "GitHub Copilot", "Liquibase", "Microsoft Access", "MongoDB", "N Tier Architecture", "Node.js", "OpenAPI", "Repository Pattern", "REST API", "SQL Server", "SQL Server Migration Assistant", "Synthetic Data", "Test Automation", "VBA", "VS Code", "WCAG"]
-tags_normalized: ["accessibility", "ai", "api first", "azure", "business logic migration", "coding", "community", "constraint refactoring", "database modernization", "devops", "github copilot", "liquibase", "microsoft access", "mongodb", "n tier architecture", "nodedotjs", "openapi", "repository pattern", "rest api", "sql server", "sql server migration assistant", "synthetic data", "test automation", "vba", "vs code", "wcag"]
+tags:
+- Accessibility
+- API First
+- Business Logic Migration
+- Constraint Refactoring
+- Database Modernization
+- Liquibase
+- Microsoft Access
+- MongoDB
+- N Tier Architecture
+- Node.js
+- OpenAPI
+- Repository Pattern
+- REST API
+- SQL Server
+- SQL Server Migration Assistant
+- Synthetic Data
+- Test Automation
+- VBA
+- VS Code
+- WCAG
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 anthkernan presents a detailed guide on modernizing a Microsoft Access solution using Node.js, OpenAPI, SQL Server, and GitHub Copilot, with a focus on code migration, automation, and architectural best practices.<!--excerpt_end-->
 
 # Modernizing Microsoft Access: Migrating to Node.js, OpenAPI, SQL Server, and MongoDB with GitHub Copilot

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Switching Models in GitHub Copilot CLI: Demo by @shanselman"
-description: "This video demo features @shanselman showcasing GitHub Copilot CLI’s flexibility in switching between 14 different AI models, such as Claude Opus 4.5 and GPT 5.2 Codex. The presentation covers using the CLI for a Next.js app upgrade, adjusting reasoning effort, and leveraging voice dictation for faster prompting, all within developer workflows."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=dpxODnbIQgg"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=dpxODnbIQgg
+title: 'Switching Models in GitHub Copilot CLI: Demo by @shanselman'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-01 15:01:15 +00:00
-permalink: "/2026-02-01-Switching-Models-in-GitHub-Copilot-CLI-Demo-by-shanselman.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Claude Opus 4.5", "CLI Tools", "Code Upgrade", "Copilot CLI", "Developer Tools", "GitHub", "GitHub Copilot", "GPT 5.2 Codex", "Model Switching", "Next.js", "Prompt Engineering", "Videos", "Voice Dictation"]
-tags_normalized: ["ai", "ai models", "claude opus 4dot5", "cli tools", "code upgrade", "copilot cli", "developer tools", "github", "github copilot", "gpt 5dot2 codex", "model switching", "nextdotjs", "prompt engineering", "videos", "voice dictation"]
+tags:
+- AI
+- AI Models
+- Claude Opus 4.5
+- CLI Tools
+- Code Upgrade
+- Copilot CLI
+- Developer Tools
+- GitHub
+- GitHub Copilot
+- GPT 5.2 Codex
+- Model Switching
+- Next.js
+- Prompt Engineering
+- Videos
+- Voice Dictation
+section_names:
+- ai
+- github-copilot
 ---
-
 GitHub presents a demo by @shanselman illustrating how developers can switch between multiple AI models using the Copilot CLI, highlighting features such as model choice, reasoning effort, and voice dictation.<!--excerpt_end-->
 
 {% youtube dpxODnbIQgg %}

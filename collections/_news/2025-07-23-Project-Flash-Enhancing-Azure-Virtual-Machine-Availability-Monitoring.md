@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Project Flash: Enhancing Azure Virtual Machine Availability Monitoring"
-description: "Project Flash introduces advanced monitoring features for Azure Virtual Machines, enabling rapid detection, real-time alerts, and precise root cause analysis for platform and user-driven disruptions. This update details new Azure Monitor integration, scalable event notifications, and improved reliability to ensure high VM availability."
-author: "Mark Russinovich"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/project-flash-update-advancing-azure-virtual-machine-availability-monitoring-2/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/project-flash-update-advancing-azure-virtual-machine-availability-monitoring-2/
+title: 'Project Flash: Enhancing Azure Virtual Machine Availability Monitoring'
+author: Mark Russinovich
+feed_name: The Azure Blog
 date: 2025-07-23 16:00:00 +00:00
-permalink: "/2025-07-23-Project-Flash-Enhancing-Azure-Virtual-Machine-Availability-Monitoring.html"
-categories: ["Azure", "DevOps"]
-tags: ["Advancing Reliability", "Availability Monitoring", "Azure", "Azure Monitor", "Azure Resource Graph", "Azure Virtual Machines", "Cloud Observability", "Compute", "DevOps", "Event Grid", "Infrastructure Monitoring", "Infrastructure Reliability", "Internet Of Things", "Management And Governance", "News", "Project Flash", "Real Time Alerts", "Resource Health", "Root Cause Analysis", "Service Health"]
-tags_normalized: ["advancing reliability", "availability monitoring", "azure", "azure monitor", "azure resource graph", "azure virtual machines", "cloud observability", "compute", "devops", "event grid", "infrastructure monitoring", "infrastructure reliability", "internet of things", "management and governance", "news", "project flash", "real time alerts", "resource health", "root cause analysis", "service health"]
+tags:
+- Advancing Reliability
+- Availability Monitoring
+- Azure Monitor
+- Azure Resource Graph
+- Azure Virtual Machines
+- Cloud Observability
+- Compute
+- Event Grid
+- Infrastructure Monitoring
+- Infrastructure Reliability
+- Internet Of Things
+- Management And Governance
+- Project Flash
+- Real Time Alerts
+- Resource Health
+- Root Cause Analysis
+- Service Health
+- Azure
+- DevOps
+- News
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Written by Mark Russinovich, this blog offers an in-depth look at Project Flash—a cross-division Azure initiative—outlining its latest advancements in virtual machine availability monitoring, new integrations, and real-world benefits for teams managing Azure infrastructure.<!--excerpt_end-->
 
 # Project Flash: Enhancing Azure Virtual Machine Availability Monitoring
@@ -104,8 +119,8 @@ Future enhancements planned for Project Flash include:
 **Recommended Approach:**
 
 - Use both Flash Health events (real-time insights and historical disruption logging) and [Scheduled Events](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/scheduled-event-service) (for proactive, prioritized responses to planned maintenance and migrations).
-    - Flash Health: Real-time and historical VM disruption analysis, root cause, and downtime management
-    - Scheduled Events: Advance notice (up to 15 minutes) for upcoming maintenance or actions
+  - Flash Health: Real-time and historical VM disruption analysis, root cause, and downtime management
+  - Scheduled Events: Advance notice (up to 15 minutes) for upcoming maintenance or actions
 
 ## Learn More
 

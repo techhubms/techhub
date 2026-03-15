@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Dependabot Now Supports Automatic Updates for pre-commit Hooks"
-description: "This announcement details the native integration of pre-commit hook updating within GitHub Dependabot. Developers can now add pre-commit as a package ecosystem in their dependabot.yml to enable automated pull requests for hook updates, complete with changelogs, grouped updates, and multi-host support."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-10-dependabot-now-supports-pre-commit-hooks"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-10-dependabot-now-supports-pre-commit-hooks
+title: Dependabot Now Supports Automatic Updates for pre-commit Hooks
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-10 18:04:32 +00:00
-permalink: "/2026-03-10-Dependabot-Now-Supports-Automatic-Updates-for-pre-commit-Hooks.html"
-categories: ["DevOps"]
-tags: ["Automation", "Continuous Integration", "Dependency Management", "Developer Tools", "DevOps", "GitHub Dependabot", "Grouped Updates", "Improvement", "Multi Host Support", "News", "Pre Commit", "Pre Commit Config.yaml", "Release Notes", "Secure CI/CD", "Supply Chain Security", "Version Updates", "YAML Configuration"]
-tags_normalized: ["automation", "continuous integration", "dependency management", "developer tools", "devops", "github dependabot", "grouped updates", "improvement", "multi host support", "news", "pre commit", "pre commit configdotyaml", "release notes", "secure cislashcd", "supply chain security", "version updates", "yaml configuration"]
+tags:
+- Automation
+- Continuous Integration
+- Dependency Management
+- Developer Tools
+- DevOps
+- GitHub Dependabot
+- Grouped Updates
+- Improvement
+- Multi Host Support
+- News
+- Pre Commit
+- Pre Commit Config.yaml
+- Release Notes
+- Secure CI/CD
+- Supply Chain Security
+- Version Updates
+- YAML Configuration
+section_names:
+- devops
 ---
-
 Allison summarizes GitHub Dependabot's new support for automatic updates of pre-commit hooks, explaining how teams can keep hook dependencies secure and up to date through simple configuration.<!--excerpt_end-->
 
 # Dependabot Now Supports Automatic Updates for pre-commit Hooks

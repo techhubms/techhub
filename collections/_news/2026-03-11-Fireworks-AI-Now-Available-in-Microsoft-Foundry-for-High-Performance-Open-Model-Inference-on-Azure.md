@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Fireworks AI Now Available in Microsoft Foundry for High-Performance Open Model Inference on Azure"
-description: "This announcement introduces the public preview of Fireworks AI on Microsoft Foundry, offering developers high-performance, low-latency inference for open models natively in Azure. The integration aims to streamline the enterprise AI lifecycle by enabling model evaluation, deployment, customization, and operational management from a single control plane. Foundry supports key operational needs, from experimenting with serverless options to production-grade governance, while Fireworks AI delivers market-leading inference performance and flexibility for custom weight models. Developers now have unified access to open models, simplified integration workflows, and scalable deployments for building intelligent applications in enterprise environments."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/introducing-fireworks-ai-on-microsoft-foundry-bringing-high-performance-low-latency-open-model-inference-to-azure/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/introducing-fireworks-ai-on-microsoft-foundry-bringing-high-performance-low-latency-open-model-inference-to-azure/
+title: Fireworks AI Now Available in Microsoft Foundry for High-Performance Open Model Inference on Azure
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-03-11 18:20:39 +00:00
-permalink: "/2026-03-11-Fireworks-AI-Now-Available-in-Microsoft-Foundry-for-High-Performance-Open-Model-Inference-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "AI Governance", "AI Inference", "Azure", "Bring Your Own Weights", "Company News", "Custom Model Weights", "Enterprise AI", "Fireworks AI", "Microsoft Foundry", "Model Deployment", "Model Lifecycle", "News", "Open Models", "Performance Optimization", "Production Ready AI", "Serverless AI"]
-tags_normalized: ["ai", "ai agents", "ai governance", "ai inference", "azure", "bring your own weights", "company news", "custom model weights", "enterprise ai", "fireworks ai", "microsoft foundry", "model deployment", "model lifecycle", "news", "open models", "performance optimization", "production ready ai", "serverless ai"]
+tags:
+- AI
+- AI Agents
+- AI Governance
+- AI Inference
+- Azure
+- Bring Your Own Weights
+- Company News
+- Custom Model Weights
+- Enterprise AI
+- Fireworks AI
+- Microsoft Foundry
+- Model Deployment
+- Model Lifecycle
+- News
+- Open Models
+- Performance Optimization
+- Production Ready AI
+- Serverless AI
+section_names:
+- ai
+- azure
 ---
-
 stclarke highlights the launch of Fireworks AI on Microsoft Foundry, enabling developers to deploy and customize high-performance open models within Azure, tackling both experimentation and enterprise production needs.<!--excerpt_end-->
 
 # Fireworks AI Arrives on Microsoft Foundry: High-Performance, Low-Latency Open Model Inference in Azure

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Fabric Spark Run Series Analysis: Enterprise-Scale Observability for Microsoft Fabric Spark Jobs"
-description: "This post introduces Fabric Spark Run Series Analysis, now generally available in Microsoft Fabric. The feature provides enterprise-scale observability for recurring Spark job executions, offering outlier detection, performance analysis, and optimization with integrations like Autotune. Readers will learn about key capabilities, access points, and how Run Series Analysis supports more proactive, data-driven tuning of Spark workloads."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-spark-run-series-analysis-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-spark-run-series-analysis-generally-available/
+title: 'Fabric Spark Run Series Analysis: Enterprise-Scale Observability for Microsoft Fabric Spark Jobs'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-23 09:00:00 +00:00
-permalink: "/2025-09-23-Fabric-Spark-Run-Series-Analysis-Enterprise-Scale-Observability-for-Microsoft-Fabric-Spark-Jobs.html"
-categories: ["Azure", "ML"]
-tags: ["Anomaly Detection", "Autotune", "Azure", "Data Engineering", "Enterprise Data", "Microsoft Fabric", "ML", "Monitoring", "News", "Notebook Executions", "Observability", "Performance Tuning", "Pipeline Monitoring", "Run Series Analysis", "Spark", "Spark Job Definitions", "Spark SQL"]
-tags_normalized: ["anomaly detection", "autotune", "azure", "data engineering", "enterprise data", "microsoft fabric", "ml", "monitoring", "news", "notebook executions", "observability", "performance tuning", "pipeline monitoring", "run series analysis", "spark", "spark job definitions", "spark sql"]
+tags:
+- Anomaly Detection
+- Autotune
+- Data Engineering
+- Enterprise Data
+- Microsoft Fabric
+- Monitoring
+- Notebook Executions
+- Observability
+- Performance Tuning
+- Pipeline Monitoring
+- Run Series Analysis
+- Spark
+- Spark Job Definitions
+- Spark SQL
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog presents Fabric Spark Run Series Analysis, a feature designed to enhance recurring Spark job observability and performance optimization within Microsoft Fabric's data engineering platform.<!--excerpt_end-->
 
 # Fabric Spark Run Series Analysis: Enterprise-Scale Observability for Microsoft Fabric Spark Jobs

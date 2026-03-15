@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Copilot Usage Metrics Now Track Plan Mode Telemetry"
-description: "This update from GitHub introduces plan mode telemetry into Copilot usage metrics. Enterprises can now monitor adoption and engagement specifically for plan mode, gaining deeper insights alongside existing Copilot metrics. The new telemetry is available across various IDEs and is reflected in API responses and dashboard visualizations, providing organizations with a more granular understanding of Copilot usage patterns."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-02-copilot-metrics-now-includes-plan-mode"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-02-copilot-metrics-now-includes-plan-mode
+title: GitHub Copilot Usage Metrics Now Track Plan Mode Telemetry
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-02 16:50:58 +00:00
-permalink: "/2026-03-02-GitHub-Copilot-Usage-Metrics-Now-Track-Plan-Mode-Telemetry.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Account Management", "AI", "API Response", "Copilot", "Copilot Metrics", "Dashboard Insights", "Eclipse", "Enterprise Management", "Enterprise Management Tools", "GitHub Copilot", "IDE Integration", "JetBrains", "News", "Plan Mode", "Telemetry", "Usage Analytics", "VS Code", "Xcode"]
-tags_normalized: ["account management", "ai", "api response", "copilot", "copilot metrics", "dashboard insights", "eclipse", "enterprise management", "enterprise management tools", "github copilot", "ide integration", "jetbrains", "news", "plan mode", "telemetry", "usage analytics", "vs code", "xcode"]
+tags:
+- Account Management
+- AI
+- API Response
+- Copilot
+- Copilot Metrics
+- Dashboard Insights
+- Eclipse
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Copilot
+- IDE Integration
+- JetBrains
+- News
+- Plan Mode
+- Telemetry
+- Usage Analytics
+- VS Code
+- Xcode
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison shares news on GitHub Copilot's usage metrics update, now including plan mode telemetry to give enterprises finer-grained visibility into team adoption and engagement.<!--excerpt_end-->
 
 # GitHub Copilot Usage Metrics Now Track Plan Mode Telemetry

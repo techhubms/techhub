@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Copilot & Productivity: Rethinking Metrics and Value in Modern Development"
-description: "Rob Bos challenges the traditional focus on lines of code as a measure of developer productivity in the era of GitHub Copilot and generative AI, advocating instead for metrics around engagement, SDLC impact, and business value. He shares actionable advice for organizations adopting Copilot."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+external_url: https://devopsjournal.io/blog/2025/06/07/Copilot-and-productivity
+title: 'GitHub Copilot & Productivity: Rethinking Metrics and Value in Modern Development'
+author: Rob Bos
+feed_name: Rob Bos' Blog
 date: 2025-06-07 00:00:00 +00:00
-permalink: "/2025-06-07-GitHub-Copilot-and-Productivity-Rethinking-Metrics-and-Value-in-Modern-Development.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "Automation", "Blogs", "Business Value", "Code Engagement", "Continuous Integration", "Developer Productivity", "DevOps", "Engineering Culture", "Generative AI", "GitHub Copilot", "Metrics", "ROI in Software Tools", "SDLC", "Software Development Lifecycle"]
-tags_normalized: ["agent mode", "ai", "automation", "blogs", "business value", "code engagement", "continuous integration", "developer productivity", "devops", "engineering culture", "generative ai", "github copilot", "metrics", "roi in software tools", "sdlc", "software development lifecycle"]
+tags:
+- Agent Mode
+- Automation
+- Business Value
+- Code Engagement
+- Continuous Integration
+- Developer Productivity
+- Engineering Culture
+- Generative AI
+- Metrics
+- ROI in Software Tools
+- SDLC
+- Software Development Lifecycle
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this insightful post, Rob Bos critiques current productivity metrics in engineering teams—especially with GitHub Copilot in the mix—and offers practical strategies for embracing AI tools for real business value.<!--excerpt_end-->
 
 # GitHub Copilot & Productivity
@@ -35,7 +47,7 @@ The challenges are evident with AI tools such as GitHub Copilot. The Copilot met
 
 More positive, recent API updates now reflect both the number of suggestions shown and those (even partially) accepted, shifting the focus toward *engagement* rather than crude productivity measures.
 
-![Picture of a confused engineer scratching their head surrounded with question marks](/images/2025/20250401/20250607-Confusion.png)
+![Picture of a confused engineer scratching their head surrounded with question marks](/images/2025/20250401/20250607-confusion.png)
 
 ## What to Focus on Instead
 
@@ -63,11 +75,11 @@ Such practical applications allow organizations to convert time savings directly
 
 Rob calls for a mindset change: stop equating productivity to lines of code. Instead, understand how GitHub Copilot and generative AI fundamentally alter the way software is built and value is delivered. There’s also potential in enabling non-engineering colleagues to benefit from these workflows, leveling up the entire organization’s efficiency.
 
-He refers readers to his related blog post, [GitHub Copilot - Change the Narrative](/blog/2025/04/01/GitHub-Copilot-Change-the-Narrative), for deeper discussion on shifting engineering culture and orchestrating AI agent collaboration.
+He refers readers to his related blog post, [GitHub Copilot - Change the Narrative](/blog/github-copilot-change-the-narrative), for deeper discussion on shifting engineering culture and orchestrating AI agent collaboration.
 
 > Lets work in the right direction and embrace the future state of working by leveraging Generative AI more and more, and leave the past behind us. I think we will become more of an orchestrator of AI agents, and the agents can only go faster if we understand how to build a solid foundation to trust on.  
 
-![Image of adding value to the end user](/images/2025/20250401/20250401-Value.png)
+![Image of adding value to the end user](/images/2025/20250401/20250401-value.png)
 
 ---
 

@@ -1,24 +1,31 @@
----
-layout: "post"
-title: "Visual Studio Code and GitHub Copilot - What's new in 1.106"
-description: "VS Code 1.106 brings major improvements to GitHub Copilot workflows with plan-mode for safer code changes, unified agent sessions across local and cloud environments, and open-sourced inline completions. Fokko Veegens walks through the new features including enhanced trust controls, better terminal integration, and MCP server governance."
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zsCBEVCQ98I"
-viewing_mode: "internal"
-youtube_id: "8za-H1fWjaM"
+﻿---
+external_url: https://www.youtube.com/watch?v=8za-H1fWjaM
+title: Visual Studio Code and GitHub Copilot - What's new in 1.106
+author: Fokko Veegens
+feed_name: Fokko at Work
 date: 2025-11-15 23:00:00 +00:00
-permalink: "/2025-11-15-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1106.html"
-categories: ["AI", "GitHub Copilot"]
-section: "github-copilot"
-alt-collection: "vscode-updates"
-tags: ["AI", "Chain Of Thought", "Chat Terminal", "Code Coverage", "Developer Tools", "GitHub Copilot", "MCP Marketplace", "Merge Conflicts", "Productivity", "Terminal Profiles", "Videos", "VS Code", "VS Code 1.106"]
-tags_normalized: ["ai", "chain of thought", "chat terminal", "code coverage", "developer tools", "github copilot", "mcp marketplace", "merge conflicts", "productivity", "terminal profiles", "videos", "vs code", "vs code 1dot106"]
+tags:
+- Chain Of Thought
+- Chat Terminal
+- Code Coverage
+- Developer Tools
+- MCP Marketplace
+- Merge Conflicts
+- Productivity
+- Terminal Profiles
+- VS Code
+- VS Code 1.106
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
+VS Code 1.106 brings major improvements to GitHub Copilot workflows with plan-mode for safer code changes, unified agent sessions across local and cloud environments, and open-sourced inline completions. Fokko Veegens walks through the new features including enhanced trust controls, better terminal integration, and MCP server governance.<!--excerpt_end-->
 
-{{ page.description }}<!--excerpt_end-->
-
-{% youtube page.youtube_id %}
+{% youtube 8za-H1fWjaM %}
 
 ## Full summary based on transcript
 
@@ -72,4 +79,4 @@ Overall, this release emphasizes plan-first development, smooth handoffs between
 
 Fokko demonstrates each feature with practical examples throughout the video, making it easy to understand how these enhancements integrate into daily development workflows.
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v={{ page.youtube_id }})
+[Watch the video on YouTube](https://www.youtube.com/watch?v=8za-H1fWjaM)

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Unlock Outbound Traffic Insights with Azure StandardV2 NAT Gateway Flow Logs"
-description: "This blog post details the advantages of using the Azure StandardV2 NAT Gateway, particularly its new flow logging feature. Readers will learn how to enable flow logs, use them for security, compliance, and troubleshooting, and gain practical tips for maximizing their visibility into outbound VM connectivity in Azure environments."
-author: "cozhang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-outbound-traffic-insights-with-azure-standardv2-nat/ba-p/4493138"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/unlock-outbound-traffic-insights-with-azure-standardv2-nat/ba-p/4493138
+title: Unlock Outbound Traffic Insights with Azure StandardV2 NAT Gateway Flow Logs
+author: cozhang
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-06 16:07:33 +00:00
-permalink: "/2026-02-06-Unlock-Outbound-Traffic-Insights-with-Azure-StandardV2-NAT-Gateway-Flow-Logs.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure NAT Gateway", "Azure Networking", "Community", "Compliance", "Connection Troubleshooting", "Diagnostic Settings", "Flow Logs", "IPv6 Support", "Log Analytics", "Outbound Connectivity", "Packet Capture", "Public IP", "Security", "SNAT", "StandardV2 NAT Gateway", "Virtual Machines", "Zone Redundancy"]
-tags_normalized: ["azure", "azure nat gateway", "azure networking", "community", "compliance", "connection troubleshooting", "diagnostic settings", "flow logs", "ipv6 support", "log analytics", "outbound connectivity", "packet capture", "public ip", "security", "snat", "standardv2 nat gateway", "virtual machines", "zone redundancy"]
+tags:
+- Azure
+- Azure NAT Gateway
+- Azure Networking
+- Community
+- Compliance
+- Connection Troubleshooting
+- Diagnostic Settings
+- Flow Logs
+- IPv6 Support
+- Log Analytics
+- Outbound Connectivity
+- Packet Capture
+- Public IP
+- Security
+- SNAT
+- StandardV2 NAT Gateway
+- Virtual Machines
+- Zone Redundancy
+section_names:
+- azure
+- security
 ---
-
 cozhang demonstrates how to leverage flow logs in Azure's StandardV2 NAT Gateway to audit, secure, and troubleshoot outbound internet connectivity at scale.<!--excerpt_end-->
 
 # Unlock Outbound Traffic Insights with Azure StandardV2 NAT Gateway Flow Logs

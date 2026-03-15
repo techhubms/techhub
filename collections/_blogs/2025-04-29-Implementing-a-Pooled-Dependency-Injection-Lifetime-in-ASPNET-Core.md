@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core"
-description: "Andrew Lock examines how to implement a 'pooled' dependency injection scope in ASP.NET Core, inspired by EF Core's DbContext pooling. The post details requirements, design decisions, implementation, testing, limitations, and considerations for pooling within the .NET dependency injection system."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/creating-a-pooled-dependency-injection-lifetime/
+title: Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-04-29 09:00:00 +00:00
-permalink: "/2025-04-29-Implementing-a-Pooled-Dependency-Injection-Lifetime-in-ASPNET-Core.html"
-categories: ["Coding"]
-tags: [".NET Core", "ASP.NET Core", "Blogs", "Coding", "DbContext Pooling", "Dependency Injection", "IResettableService", "Performance", "Pooled Services", "Scoped Services", "Service Lifetimes", "Singleton Services"]
-tags_normalized: ["dotnet core", "aspdotnet core", "blogs", "coding", "dbcontext pooling", "dependency injection", "iresettableservice", "performance", "pooled services", "scoped services", "service lifetimes", "singleton services"]
+tags:
+- .NET Core
+- ASP.NET Core
+- DbContext Pooling
+- Dependency Injection
+- IResettableService
+- Performance
+- Pooled Services
+- Scoped Services
+- Service Lifetimes
+- Singleton Services
+- Blogs
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this in-depth post, Andrew Lock explores how to create a pooled dependency injection lifetime in ASP.NET Core, discussing design choices, implementation details, and broader implications.<!--excerpt_end-->
 
 # Implementing a Pooled Dependency Injection Lifetime in ASP.NET Core
@@ -49,7 +55,7 @@ Andrew outlines the requirements for pooled lifetimes as follows:
 - Pooled services should have scoped semantics: used for the entirety of a request but not shared between parallel requests.
 - The pool is preferred when servicing requests: if no instance is available, a new one is created.
 - When a scope is disposed, pooled services are returned to the pool.
-- The DI container should maintain at most _N_ instances for each service. If the pool is full, returned instances are discarded (disposed if necessary).
+- The DI container should maintain at most *N* instances for each service. If the pool is full, returned instances are discarded (disposed if necessary).
 - Pooled services must implement `IResettableService` with a `Reset()` method, ensuring they're safe to re-use.
 - Aside from `IResettableService`, no additional requirements for pooled services.
 - `IDisposable` is honored: non-pooled instances are disposed when appropriate.

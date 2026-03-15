@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "OTEL Sidecar Extension Cheat-Sheet on Azure App Service for Linux: PHP, Python, Node.js, .NET"
-description: "This guide provides a concise matrix for implementing OpenTelemetry (OTEL) sidecar extensions on Azure App Service for Linux. It covers setup steps, key app settings, and troubleshooting for PHP, Python, Node.js, and .NET applications. Practical commands, libraries, and sample repositories are included, with notes on Azure Monitor and Elastic APM integrations."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-iii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469589
+title: 'OTEL Sidecar Extension Cheat-Sheet on Azure App Service for Linux: PHP, Python, Node.js, .NET'
+author: TulikaC
+feed_name: Microsoft Tech Community
 date: 2025-11-13 10:17:50 +00:00
-permalink: "/2025-11-13-OTEL-Sidecar-Extension-Cheat-Sheet-on-Azure-App-Service-for-Linux-PHP-Python-Nodejs-NET.html"
-categories: ["Azure", "Coding", "DevOps", "Security"]
-tags: [".NET", "Application Insights", "Azure", "Azure App Service", "Azure Monitor", "Coding", "Community", "DevOps", "Elastic APM", "Environment Variables", "Linux", "Logging", "Metrics", "Node.js", "Observability", "OpenTelemetry", "OTEL EXPORTER", "OTEL Sidecar", "OTLP", "PHP", "Python", "Sample Repositories", "SCM DO BUILD DURING DEPLOYMENT", "Security", "Startup Commands", "Tracing"]
-tags_normalized: ["dotnet", "application insights", "azure", "azure app service", "azure monitor", "coding", "community", "devops", "elastic apm", "environment variables", "linux", "logging", "metrics", "nodedotjs", "observability", "opentelemetry", "otel exporter", "otel sidecar", "otlp", "php", "python", "sample repositories", "scm do build during deployment", "security", "startup commands", "tracing"]
+tags:
+- .NET
+- Application Insights
+- Azure App Service
+- Azure Monitor
+- Elastic APM
+- Environment Variables
+- Linux
+- Logging
+- Metrics
+- Node.js
+- Observability
+- OpenTelemetry
+- OTEL EXPORTER
+- OTEL Sidecar
+- OTLP
+- PHP
+- Python
+- Sample Repositories
+- SCM DO BUILD DURING DEPLOYMENT
+- Startup Commands
+- Tracing
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- azure
+- dotnet
+- devops
+- security
+primary_section: dotnet
 ---
-
 TulikaC shares a practical cheat-sheet for adding OpenTelemetry sidecar extensions to PHP, Python, Node.js, and .NET apps running on Azure App Service for Linux, including setup steps, default settings, debugging tips, and sample repos.<!--excerpt_end-->
 
 # OTEL Sidecar Extension Cheat-Sheet on Azure App Service for Linux

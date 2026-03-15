@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "Forking Chat Sessions in Visual Studio Code"
-description: "This video explains how to fork chat sessions within Visual Studio Code, allowing users to create new, independent chat threads that retain the full conversation history. The feature is designed to let developers explore alternative solutions while maintaining their original discussion context. The demonstration highlights practical scenarios for using chat session forking to improve development workflows and experimentation within VS Code."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/mpqrdghoj_Y"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/shorts/mpqrdghoj_Y
+title: Forking Chat Sessions in Visual Studio Code
+author: Visual Studio Code
+primary_section: dotnet
+feed_name: Visual Studio Code YouTube
 date: 2026-03-10 21:40:00 +00:00
-permalink: "/2026-03-10-Forking-Chat-Sessions-in-Visual-Studio-Code.html"
-categories: ["Coding"]
-tags: ["Alternative Approaches", "Chat Forking", "Code Review", "Coding", "Developer Tools", "Productivity", "Programming Workflows", "Session Management", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["alternative approaches", "chat forking", "code review", "coding", "developer tools", "productivity", "programming workflows", "session management", "software development", "videos", "vs code"]
+tags:
+- Alternative Approaches
+- Chat Forking
+- Code Review
+- Developer Tools
+- Productivity
+- Programming Workflows
+- Session Management
+- Software Development
+- Videos
+- VS Code
+- .NET
+section_names:
+- dotnet
 ---
-
 Visual Studio Code presents a video on how to fork chat sessions, demonstrating for developers how to create separate conversation branches while preserving original context.<!--excerpt_end-->
 
 {% youtube mpqrdghoj_Y %}

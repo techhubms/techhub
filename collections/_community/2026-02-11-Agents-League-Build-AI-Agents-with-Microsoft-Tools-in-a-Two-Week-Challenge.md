@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Agents League: Build AI Agents with Microsoft Tools in a Two-Week Challenge"
-description: "Agents League is a Microsoft-backed, two-week developer challenge where participants build AI agents using GitHub Copilot, Microsoft Foundry, and Copilot Studio. The event features live coding battles, guided starter kits, AMA sessions, and prizes. It is aimed at developers interested in hands-on experience with Microsoft's AI ecosystem."
-author: "aycabas"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-two-weeks-three-tracks-one-challenge/ba-p/4492102"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/agents-league-two-weeks-three-tracks-one-challenge/ba-p/4492102
+title: 'Agents League: Build AI Agents with Microsoft Tools in a Two-Week Challenge'
+author: aycabas
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-11 08:00:00 +00:00
-permalink: "/2026-02-11-Agents-League-Build-AI-Agents-with-Microsoft-Tools-in-a-Two-Week-Challenge.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agents League", "AI", "AI Agents", "AI Development", "Architecture Patterns", "Community", "Copilot SDK", "Copilot Studio", "Creative Apps", "Developer Challenge", "Discord Community", "Enterprise Agents", "GitHub Copilot", "Live Coding", "MCP Server", "Microsoft 365 Agents Toolkit", "Microsoft Foundry", "Microsoft Reactor", "Multi Agent Systems"]
-tags_normalized: ["agents league", "ai", "ai agents", "ai development", "architecture patterns", "community", "copilot sdk", "copilot studio", "creative apps", "developer challenge", "discord community", "enterprise agents", "github copilot", "live coding", "mcp server", "microsoft 365 agents toolkit", "microsoft foundry", "microsoft reactor", "multi agent systems"]
+tags:
+- Agents League
+- AI
+- AI Agents
+- AI Development
+- Architecture Patterns
+- Community
+- Copilot SDK
+- Copilot Studio
+- Creative Apps
+- Developer Challenge
+- Discord Community
+- Enterprise Agents
+- GitHub Copilot
+- Live Coding
+- MCP Server
+- Microsoft 365 Agents Toolkit
+- Microsoft Foundry
+- Microsoft Reactor
+- Multi Agent Systems
+section_names:
+- ai
+- github-copilot
 ---
-
 aycabas presents the Agents League, a two-week AI agent challenge where developers use Microsoft tools like GitHub Copilot, Foundry, and Copilot Studio to create innovative solutions and compete for prizes.<!--excerpt_end-->
 
 # Agents League: Two Weeks, Three Tracks, One Challenge

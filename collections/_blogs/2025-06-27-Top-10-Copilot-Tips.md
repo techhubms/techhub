@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Top 10 Copilot Tips"
-description: "A practical guide offering actionable tips for developers to maximize their efficiency and code quality with GitHub Copilot. Covers best practices for prompting, code review, refactoring, leveraging workspace context, and ensuring responsible usage. Ideal for anyone looking to get more out of Copilot in real-world development workflows."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/top-10-copilot-tips.html
+title: Top 10 Copilot Tips
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-06-27 00:00:00 +00:00
-permalink: "/2025-06-27-Top-10-Copilot-Tips.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Coding Assistant", "Best Practices", "Blogs", "Code Refactoring", "Code Review", "Coding", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "Pro Tips", "Prompt Engineering", "Testing Automation", "Type Hints", "VS Code", "Workspace Context"]
-tags_normalized: ["ai", "ai coding assistant", "best practices", "blogs", "code refactoring", "code review", "coding", "copilot chat", "developer productivity", "github copilot", "pro tips", "prompt engineering", "testing automation", "type hints", "vs code", "workspace context"]
+tags:
+- AI Coding Assistant
+- Best Practices
+- Code Refactoring
+- Code Review
+- Copilot Chat
+- Developer Productivity
+- Pro Tips
+- Prompt Engineering
+- Testing Automation
+- Type Hints
+- VS Code
+- Workspace Context
+- AI
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels shares practical and insightful tips on harnessing the full potential of GitHub Copilot, enabling developers to write better code, streamline reviews, and integrate Copilot into everyday workflows.<!--excerpt_end-->
 
 # Top 10 Copilot Tips

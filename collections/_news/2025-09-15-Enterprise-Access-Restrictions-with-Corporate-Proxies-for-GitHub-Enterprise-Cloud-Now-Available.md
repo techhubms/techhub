@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Enterprise Access Restrictions with Corporate Proxies for GitHub Enterprise Cloud Now Available"
-description: "This update introduces enterprise access restrictions for GitHub Enterprise Cloud accounts with Enterprise Managed Users (EMU). Enterprise owners can now enforce exclusive traffic to github.com using corporate proxies, enhancing security and providing regulatory compliance. The release details setup steps, proxy/header configurations, integration with Copilot policies, and support for multiple enterprise IDs."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-15-enterprise-access-restrictions-with-corporate-proxies-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-15-enterprise-access-restrictions-with-corporate-proxies-is-now-generally-available
+title: Enterprise Access Restrictions with Corporate Proxies for GitHub Enterprise Cloud Now Available
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-15 20:49:25 +00:00
-permalink: "/2025-09-15-Enterprise-Access-Restrictions-with-Corporate-Proxies-for-GitHub-Enterprise-Cloud-Now-Available.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "Authentication Security", "Copilot Network Policy", "Corporate Proxy", "Data Residency", "DevOps", "Enterprise Managed Users", "Enterprise Management Tools", "Firewall", "GitHub Enterprise Cloud", "Improvement", "Network Restrictions", "News", "Platform Governance", "Proxy Configuration", "Security"]
-tags_normalized: ["access control", "authentication security", "copilot network policy", "corporate proxy", "data residency", "devops", "enterprise managed users", "enterprise management tools", "firewall", "github enterprise cloud", "improvement", "network restrictions", "news", "platform governance", "proxy configuration", "security"]
+tags:
+- Access Control
+- Authentication Security
+- Copilot Network Policy
+- Corporate Proxy
+- Data Residency
+- Enterprise Managed Users
+- Enterprise Management Tools
+- Firewall
+- GitHub Enterprise Cloud
+- Improvement
+- Network Restrictions
+- Platform Governance
+- Proxy Configuration
+- DevOps
+- Security
+- News
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 Allison details how GitHub Enterprise Cloud accounts with Enterprise Managed Users can now restrict access to github.com traffic via corporate proxy configuration, strengthening compliance and security for organizational workflows.<!--excerpt_end-->
 
 # Enterprise Access Restrictions with Corporate Proxies for GitHub Enterprise Cloud
@@ -32,11 +43,11 @@ GitHub has introduced enterprise access restrictions for GitHub Enterprise Cloud
 1. In GitHub Enterprise Cloud, navigate to your enterprise account's **Settings → Authentication security → 'Enterprise access restrictions'**.
 2. Enable the feature by selecting the corresponding option.
 3. Configure your network proxy or firewall to inject a custom header into all relevant web and API requests:
-   
+
    ```http
    sec-GitHub-allowed-enterprise: ENTERPRISE-ID
    ```
-   
+
    This header must carry your valid EMU enterprise ID. GitHub uses the presence and value of this header to determine if a request should be permitted.
 
 ## Scope and Integration

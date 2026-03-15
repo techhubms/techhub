@@ -1,10 +1,10 @@
 function Get-FrontMatterValue {
     param(
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [AllowEmptyString()]
         [string]$Content,
         
-        [Parameter(Mandatory=$true)]
+        [Parameter(Mandatory = $true)]
         [AllowEmptyString()]
         [string]$Key
     )
@@ -42,17 +42,20 @@ function Get-FrontMatterValue {
                             $_.Trim() -replace '^"(.*)"$', '$1'
                         } | Where-Object { $_ -ne '' }
                         return @($items)
-                    } else {
+                    }
+                    else {
                         return @()
                     }
-                } else {
+                }
+                else {
                     # Handle single values
                     $cleanValue = $value -replace '^["\s]*|["\s]*$', ''
                     
                     # For array-type keys, always return as array even for single values
-                    if ($Key -in @('tags', 'tags_normalized', 'categories')) {
+                    if ($Key -in @('tags', 'section_names')) {
                         return @($cleanValue)
-                    } else {
+                    }
+                    else {
                         return $cleanValue
                     }
                 }

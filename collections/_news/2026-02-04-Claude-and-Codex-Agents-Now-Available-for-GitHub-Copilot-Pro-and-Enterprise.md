@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Claude and Codex Agents Now Available for GitHub Copilot Pro+ and Enterprise"
-description: "This announcement covers the public preview release of Claude (Anthropic) and OpenAI Codex agents for GitHub Copilot Pro+ and Copilot Enterprise. It details how to enable, configure, and use these coding agents from GitHub.com, GitHub Mobile, and VS Code, as well as management for users and admins."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-04-claude-and-codex-are-now-available-in-public-preview-on-github
+title: Claude and Codex Agents Now Available for GitHub Copilot Pro+ and Enterprise
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-04 17:00:26 +00:00
-permalink: "/2026-02-04-Claude-and-Codex-Agents-Now-Available-for-GitHub-Copilot-Pro-and-Enterprise.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Coding Agents", "Automation", "Claude", "Copilot", "Copilot Enterprise", "Copilot Pro+", "Developer Workflow", "DevOps", "Enterprise AI Controls", "GitHub Agents", "GitHub Copilot", "GitHub Mobile", "Issue Assignment", "News", "OpenAI Codex", "Pull Requests", "VS Code"]
-tags_normalized: ["ai", "ai coding agents", "automation", "claude", "copilot", "copilot enterprise", "copilot proplus", "developer workflow", "devops", "enterprise ai controls", "github agents", "github copilot", "github mobile", "issue assignment", "news", "openai codex", "pull requests", "vs code"]
+tags:
+- AI
+- AI Coding Agents
+- Automation
+- Claude
+- Copilot
+- Copilot Enterprise
+- Copilot Pro+
+- Developer Workflow
+- DevOps
+- Enterprise AI Controls
+- GitHub Agents
+- GitHub Copilot
+- GitHub Mobile
+- Issue Assignment
+- News
+- OpenAI Codex
+- Pull Requests
+- VS Code
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison introduces the public preview of Claude and Codex as coding agents for GitHub Copilot Pro+ and Enterprise users, showing how to leverage these AI tools directly from GitHub, mobile, and VS Code for streamlined coding and automation.<!--excerpt_end-->
 
 # Claude and Codex Agents Now Available for GitHub Copilot Pro+ and Enterprise

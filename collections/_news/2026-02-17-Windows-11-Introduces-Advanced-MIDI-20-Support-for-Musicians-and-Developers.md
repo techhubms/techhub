@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Windows 11 Introduces Advanced MIDI 2.0 Support for Musicians and Developers"
-description: "This article announces and details the rollout of Windows MIDI Services in Windows 11, adding robust support for both MIDI 1.0 and MIDI 2.0. It explains new capabilities such as multi-client MIDI ports, improved device naming, loopback endpoints, and SDKs for developers. It highlights the developer tools, open-source approach, and contributions from the music technology community, aiming to enhance electronic music production and developer experience on Windows."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.windows.com/windowsexperience/2026/02/17/making-music-with-midi-just-got-a-real-boost-in-windows-11/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.windows.com/windowsexperience/2026/02/17/making-music-with-midi-just-got-a-real-boost-in-windows-11/
+title: Windows 11 Introduces Advanced MIDI 2.0 Support for Musicians and Developers
+author: stclarke
+primary_section: dotnet
+feed_name: Microsoft News
 date: 2026-02-17 17:53:53 +00:00
-permalink: "/2026-02-17-Windows-11-Introduces-Advanced-MIDI-20-Support-for-Musicians-and-Developers.html"
-categories: ["Coding"]
-tags: ["App Integration", "Coding", "Company News", "Developer Tools", "Device Discovery", "High Resolution MIDI", "MIDI 1.0", "MIDI 2.0", "MIDI App SDK", "Multi Client MIDI", "Music Technology", "News", "Open Source", "PowerShell Scripting", "Technology", "USB MIDI Driver", "Windows 11", "Windows MIDI Services"]
-tags_normalized: ["app integration", "coding", "company news", "developer tools", "device discovery", "high resolution midi", "midi 1dot0", "midi 2dot0", "midi app sdk", "multi client midi", "music technology", "news", "open source", "powershell scripting", "technology", "usb midi driver", "windows 11", "windows midi services"]
+tags:
+- App Integration
+- Company News
+- Developer Tools
+- Device Discovery
+- High Resolution MIDI
+- MIDI 1.0
+- MIDI 2.0
+- MIDI App SDK
+- Multi Client MIDI
+- Music Technology
+- News
+- Open Source
+- PowerShell Scripting
+- Technology
+- USB MIDI Driver
+- Windows 11
+- Windows MIDI Services
+- .NET
+section_names:
+- dotnet
 ---
-
 Written by Pete Brown and Gary Daniels, this post explores the new Windows MIDI Services in Windows 11, highlighting enhanced support for both MIDI 1.0 and 2.0, new developer SDKs, and tools for integrating advanced MIDI features into applications.<!--excerpt_end-->
 
 # Windows 11 Introduces Advanced MIDI 2.0 Support for Musicians and Developers

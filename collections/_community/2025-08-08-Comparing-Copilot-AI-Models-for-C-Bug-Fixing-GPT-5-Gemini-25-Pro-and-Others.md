@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Comparing Copilot AI Models for C# Bug Fixing: GPT-5, Gemini 2.5 Pro, and Others"
-description: "This post from Sea-Key3106 shares a real-world experience comparing multiple AI models—GPT-5, Gemini 2.5 Pro, Claude Sonnet 4, O3, and O3 High—used via GitHub Copilot for debugging a C# application. The focus is on how each model handles a specific bug involving dynamic delegate calls and inheritance checking, offering insights into model-specific strengths, quirks, and code quality when integrated with Copilot."
-author: "Sea-Key3106"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mkqvpn/vibe_debugging_gpt5_is_worse_than_o3gemini25_pro/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mkqvpn/vibe_debugging_gpt5_is_worse_than_o3gemini25_pro/
+title: 'Comparing Copilot AI Models for C# Bug Fixing: GPT-5, Gemini 2.5 Pro, and Others'
+author: Sea-Key3106
+feed_name: Reddit Github Copilot
 date: 2025-08-08 09:45:28 +00:00
-permalink: "/2025-08-08-Comparing-Copilot-AI-Models-for-C-Bug-Fixing-GPT-5-Gemini-25-Pro-and-Others.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET Bug Fixing", "AI", "AI Assisted Development", "AI Code Completion", "C#", "Claude Sonnet 4", "Coding", "Community", "Copilot Model Comparison", "Debugger", "Dynamic Delegate", "Gemini 2.5 Pro", "GitHub Copilot", "GPT 5", "Inheritance Hierarchy", "IsAssignableFrom", "O3", "O3 High"]
-tags_normalized: ["dotnet bug fixing", "ai", "ai assisted development", "ai code completion", "csharp", "claude sonnet 4", "coding", "community", "copilot model comparison", "debugger", "dynamic delegate", "gemini 2dot5 pro", "github copilot", "gpt 5", "inheritance hierarchy", "isassignablefrom", "o3", "o3 high"]
+tags:
+- .NET Bug Fixing
+- AI Assisted Development
+- AI Code Completion
+- C#
+- Claude Sonnet 4
+- Copilot Model Comparison
+- Debugger
+- Dynamic Delegate
+- Gemini 2.5 Pro
+- GPT 5
+- Inheritance Hierarchy
+- IsAssignableFrom
+- O3
+- O3 High
+- AI
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Sea-Key3106 discusses a direct comparison between GPT-5, Gemini 2.5 Pro, Claude Sonnet 4, O3, and O3 High models within GitHub Copilot for a challenging C# bug, highlighting each model's effectiveness.<!--excerpt_end-->
 
 # Comparing Copilot AI Models for C# Bug Fixing: GPT-5, Gemini 2.5 Pro, and Others

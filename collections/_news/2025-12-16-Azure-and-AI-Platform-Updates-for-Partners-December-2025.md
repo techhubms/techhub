@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Azure and AI Platform Updates for Partners: December 2025"
-description: "This article summarizes key Azure updates and AI advancements announced at Microsoft Ignite 2025 for Microsoft partners. It highlights new capabilities like Azure Copilot, Foundry Control Plane and IQ, Fabric IQ, Agent Factory, HorizonDB, and Agent 365. The update explores opportunities for partners to integrate advanced AI, streamline governance, and build intelligent cloud solutions while leveraging enterprise security and unified data management. The coverage caters to consultants and developers seeking to modernize workloads and create new value using cutting-edge Microsoft technologies."
-author: "Cyril Belikoff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://partner.microsoft.com/en-us/blog/article/azure-updates-december-2025"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://partner.microsoft.com/en-us/blog/article/azure-updates-december-2025
+title: 'Azure and AI Platform Updates for Partners: December 2025'
+author: Cyril Belikoff
+feed_name: The Azure Blog
 date: 2025-12-16 18:23:05 +00:00
-permalink: "/2025-12-16-Azure-and-AI-Platform-Updates-for-Partners-December-2025.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Agent", "Azure", "Azure Copilot", "Azure PostgreSQL", "Azure Security", "Cloud Governance", "Cloud Migration", "Copilot", "Data Platform", "Enterprise AI", "Fabric IQ", "Foundry Control Plane", "Foundry IQ", "HorizonDB", "Hybrid Cloud", "Management And Governance", "Microsoft Agent 365", "Microsoft Foundry", "Microsoft Ignite", "ML", "News", "Operational Efficiency", "Retrieval Augmented Generation", "Security"]
-tags_normalized: ["ai", "ai plus machine learning", "ai agent", "azure", "azure copilot", "azure postgresql", "azure security", "cloud governance", "cloud migration", "copilot", "data platform", "enterprise ai", "fabric iq", "foundry control plane", "foundry iq", "horizondb", "hybrid cloud", "management and governance", "microsoft agent 365", "microsoft foundry", "microsoft ignite", "ml", "news", "operational efficiency", "retrieval augmented generation", "security"]
+tags:
+- AI + Machine Learning
+- AI Agent
+- Azure Copilot
+- Azure PostgreSQL
+- Azure Security
+- Cloud Governance
+- Cloud Migration
+- Copilot
+- Data Platform
+- Enterprise AI
+- Fabric IQ
+- Foundry Control Plane
+- Foundry IQ
+- HorizonDB
+- Hybrid Cloud
+- Management And Governance
+- Microsoft Agent 365
+- Microsoft Foundry
+- Microsoft Ignite
+- Operational Efficiency
+- Retrieval Augmented Generation
+- AI
+- Azure
+- ML
+- Security
+- News
+section_names:
+- ai
+- azure
+- ml
+- security
+primary_section: ai
 ---
-
 Cyril Belikoff shares the December 2025 Azure and AI platform updates for partners, covering Ignite announcements such as Azure Copilot, Foundry services, Fabric IQ, HorizonDB, and new tools for AI-driven modernization and governance.<!--excerpt_end-->
 
 # Azure and AI Platform Updates for Partners: December 2025

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Accelerate Cloud Migration with Wave Planning in Azure Migrate"
-description: "This article introduces the public preview of wave planning in Azure Migrate, a feature designed to streamline and organize large-scale cloud migrations into logical, iterative waves. Learn how enterprises can use structured migration waves for greater predictability, reduced risk, and improved alignment with business priorities, leveraging Azure Migrate tools and best practices."
-author: "ShubhamJain92"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/accelerate-cloud-migration-with-wave-planning-in-azure-migrate/ba-p/4467959
+title: Accelerate Cloud Migration with Wave Planning in Azure Migrate
+author: ShubhamJain92
+feed_name: Microsoft Tech Community
 date: 2025-11-11 16:46:02 +00:00
-permalink: "/2025-11-11-Accelerate-Cloud-Migration-with-Wave-Planning-in-Azure-Migrate.html"
-categories: ["Azure"]
-tags: ["Application Grouping", "Application Modernization", "Azure", "Azure Database Migration Service", "Azure Migrate", "Azure Migration Tools", "Azure Virtual Machines", "Cloud Adoption Framework", "Cloud Migration", "Community", "Dependency Analysis", "Enterprise Migration", "Infrastructure Migration", "Migration Planning", "Migration Tracking", "Server Migration", "Wave Planning"]
-tags_normalized: ["application grouping", "application modernization", "azure", "azure database migration service", "azure migrate", "azure migration tools", "azure virtual machines", "cloud adoption framework", "cloud migration", "community", "dependency analysis", "enterprise migration", "infrastructure migration", "migration planning", "migration tracking", "server migration", "wave planning"]
+tags:
+- Application Grouping
+- Application Modernization
+- Azure Database Migration Service
+- Azure Migrate
+- Azure Migration Tools
+- Azure Virtual Machines
+- Cloud Adoption Framework
+- Cloud Migration
+- Dependency Analysis
+- Enterprise Migration
+- Infrastructure Migration
+- Migration Planning
+- Migration Tracking
+- Server Migration
+- Wave Planning
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 ShubhamJain92 walks through the new wave planning capability in Azure Migrate, highlighting how this feature organizes and accelerates enterprise cloud migrations for improved predictability and reduced risk.<!--excerpt_end-->
 
 # Accelerate Cloud Migration with Wave Planning in Azure Migrate

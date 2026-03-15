@@ -1,20 +1,46 @@
----
-layout: "post"
-title: "Transforming SAP for the Intelligent Enterprise with Azure, Microsoft Fabric, and AI"
-description: "This article by srhulsus provides a comprehensive, hands-on guide to modernizing SAP systems using Microsoft Azure, Microsoft Fabric, and AI services. Covering core infrastructure, integration, security, high-availability, analytics, and ML scenarios, it explains technical implementation patterns and best practices for running SAP workloads in the cloud. The article targets architects, consultants, and developers tasked with building secure, resilient, and data-driven SAP environments, integrating Azure services, and leveraging modern analytics and AI solutions."
-author: "srhulsus"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/transforming-sap-for-the-intelligent-enterprise-with-azure/ba-p/4473309"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/transforming-sap-for-the-intelligent-enterprise-with-azure/ba-p/4473309
+title: Transforming SAP for the Intelligent Enterprise with Azure, Microsoft Fabric, and AI
+author: srhulsus
+feed_name: Microsoft Tech Community
 date: 2025-11-27 15:51:55 +00:00
-permalink: "/2025-11-27-Transforming-SAP-for-the-Intelligent-Enterprise-with-Azure-Microsoft-Fabric-and-AI.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "Azure", "Azure AD", "Azure API Management", "Azure Backup", "Azure Logic Apps", "Azure Machine Learning", "Azure Monitor", "Azure NetApp Files", "Azure OpenAI", "Cloud Adoption Framework", "Community", "Defender For Cloud", "Entra ID", "Event Grid", "ExpressRoute", "HA/DR", "Landing Zone", "Microsoft Fabric", "Microsoft Sentinel", "ML", "OneLake", "Premium SSD", "SAP On Azure", "Security", "Service Bus", "Ultra Disk", "Virtual Machines", "Zero Trust"]
-tags_normalized: ["ai", "azure", "azure ad", "azure api management", "azure backup", "azure logic apps", "azure machine learning", "azure monitor", "azure netapp files", "azure openai", "cloud adoption framework", "community", "defender for cloud", "entra id", "event grid", "expressroute", "haslashdr", "landing zone", "microsoft fabric", "microsoft sentinel", "ml", "onelake", "premium ssd", "sap on azure", "security", "service bus", "ultra disk", "virtual machines", "zero trust"]
+tags:
+- Azure AD
+- Azure API Management
+- Azure Backup
+- Azure Logic Apps
+- Azure Machine Learning
+- Azure Monitor
+- Azure NetApp Files
+- Azure OpenAI
+- Cloud Adoption Framework
+- Defender For Cloud
+- Entra ID
+- Event Grid
+- ExpressRoute
+- HA/DR
+- Landing Zone
+- Microsoft Fabric
+- Microsoft Sentinel
+- OneLake
+- Premium SSD
+- SAP On Azure
+- Service Bus
+- Ultra Disk
+- Virtual Machines
+- Zero Trust
+- AI
+- Azure
+- ML
+- Security
+- Community
+section_names:
+- ai
+- azure
+- ml
+- security
+primary_section: ai
 ---
-
 srhulsus explores how to modernize SAP with Azure, Fabric, and AI, covering technical strategies for secure, resilient, and intelligent SAP environments using cloud-native Microsoft solutions.<!--excerpt_end-->
 
 # Transforming SAP for the Intelligent Enterprise with Azure, Microsoft Fabric, and AI

@@ -15,7 +15,7 @@ Follow these steps and rules for best results:
 
 ## Step 1: Gather Required Inputs
 
-- Ask the user for the content type and URL if it is not provided. Valid types and their target directories:
+- Ask the user for the collection and URL if it is not provided. Valid collections and their target directories:
   - News: `_news`
   - Blog: `_blogs`
   - Video: `_videos`
@@ -25,7 +25,7 @@ Follow these steps and rules for best results:
 
 If you get a YouTube link, extract the Video ID. Then use the Fetch MCP tool called `fetch` to fetch this URL for more information on the YouTube video: `https://ytapi.apps.mattw.io/v3/videos?part=snippet&id=[YOUR EXTRACTED VIDEO ID]`. If that tool is not available, use whatever other means you have to fetch the video details.
 
-Also use the `fetch` MCP tool to fetch what you need for other content types, but then use the URL provided.
+Also use the `fetch` MCP tool to fetch what you need for other collections, but then use the URL provided.
 
 When processing a YouTube video, also look at the video description to figure out who is doing the presenting and should be named as the author of the article.
 

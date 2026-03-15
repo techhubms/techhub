@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Converting a docker-compose File to .NET Aspire: A Practical Implementation"
-description: "Andrew Lock explores converting a docker-compose.yml setup for the open-source mailing list manager listmonk into a .NET Aspire app host project. The post details the step-by-step process, highlights Aspire's modeling capabilities, and compares generated artifacts, demonstrating Aspire's potential for local and production deployments."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/converting-a-docker-compose-file-to-aspire/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/converting-a-docker-compose-file-to-aspire/
+title: 'Converting a docker-compose File to .NET Aspire: A Practical Implementation'
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-05-27 09:00:00 +00:00
-permalink: "/2025-05-27-Converting-a-docker-compose-File-to-NET-Aspire-A-Practical-Implementation.html"
-categories: ["Coding"]
-tags: [".NET Aspire", ".NET Core", "App Modeling", "Aspire", "Aspire App Host", "Blogs", "CI/CD", "Coding", "Containerization", "Distributed Application", "Docker", "Docker Compose", "IaC", "JetBrains Rider", "Listmonk", "NuGet Packages", "PostgreSQL"]
-tags_normalized: ["dotnet aspire", "dotnet core", "app modeling", "aspire", "aspire app host", "blogs", "cislashcd", "coding", "containerization", "distributed application", "docker", "docker compose", "iac", "jetbrains rider", "listmonk", "nuget packages", "postgresql"]
+tags:
+- .NET Aspire
+- .NET Core
+- App Modeling
+- Aspire
+- Aspire App Host
+- CI/CD
+- Containerization
+- Distributed Application
+- Docker
+- Docker Compose
+- IaC
+- JetBrains Rider
+- Listmonk
+- NuGet Packages
+- PostgreSQL
+- Blogs
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this post, Andrew Lock demonstrates how to convert a docker-compose-based deployment for the mailing list manager listmonk into a .NET Aspire app host, leveraging Aspire's modeling tools for improved local development and publish workflows.<!--excerpt_end-->
 
 # Converting a docker-compose File to .NET Aspire: A Practical Implementation

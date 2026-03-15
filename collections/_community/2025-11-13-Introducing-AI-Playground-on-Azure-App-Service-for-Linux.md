@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Introducing AI Playground on Azure App Service for Linux"
-description: "This post details the new AI Playground feature in Azure App Service for Linux, designed to help developers interact with Small Language Models (SLMs) via a user-friendly UI. It provides live prompt testing, latency measurement, code integration examples, and troubleshooting tips—all accessible through the Kudu endpoint. The walkthrough includes setup steps, supported models, and planned roadmap enhancements."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497
+title: Introducing AI Playground on Azure App Service for Linux
+author: TulikaC
+feed_name: Microsoft Tech Community
 date: 2025-11-13 04:36:41 +00:00
-permalink: "/2025-11-13-Introducing-AI-Playground-on-Azure-App-Service-for-Linux.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "AI Playground", "App Performance", "App Service Extensions", "Azure", "Azure App Service", "Azure Portal", "BitNet", "C#", "Code Integration", "Coding", "Community", "Kudu", "Linux App Service", "Model Latency", "Node.js", "Performance Metrics", "Phi", "Prompt Engineering", "Python", "SLM Sidecar", "Small Language Model", "Web App Deployment"]
-tags_normalized: ["ai", "ai playground", "app performance", "app service extensions", "azure", "azure app service", "azure portal", "bitnet", "csharp", "code integration", "coding", "community", "kudu", "linux app service", "model latency", "nodedotjs", "performance metrics", "phi", "prompt engineering", "python", "slm sidecar", "small language model", "web app deployment"]
+tags:
+- AI Playground
+- App Performance
+- App Service Extensions
+- Azure App Service
+- Azure Portal
+- BitNet
+- C#
+- Code Integration
+- Kudu
+- Linux App Service
+- Model Latency
+- Node.js
+- Performance Metrics
+- Phi
+- Prompt Engineering
+- Python
+- SLM Sidecar
+- Small Language Model
+- Web App Deployment
+- AI
+- Azure
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 TulikaC introduces AI Playground for Azure App Service on Linux, a built-in tool that lets developers test prompt interactions with Small Language Models, measure performance, and easily grab code samples for integration.<!--excerpt_end-->
 
 # Introducing AI Playground on Azure App Service for Linux
@@ -85,6 +104,6 @@ AI Playground helps you deliver and test AI-powered features quickly on Azure Ap
 
 For detailed configuration and ongoing updates, check the official [Azure App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/tutorial-ai-slm-dotnet).
 
-*Author: TulikaC*
+_Author: TulikaC_
 
 This post appeared first on "Microsoft Tech Community". [Read the entire article here](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/introducing-ai-playground-on-azure-app-service-for-linux/ba-p/4469497)

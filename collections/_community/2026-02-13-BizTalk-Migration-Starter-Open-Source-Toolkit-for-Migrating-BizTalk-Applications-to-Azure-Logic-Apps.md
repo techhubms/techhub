@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "BizTalk Migration Starter: Open Source Toolkit for Migrating BizTalk Applications to Azure Logic Apps"
-description: "This article by hcamposu introduces the BizTalk Migration Starter, an open-source toolkit designed to speed up the migration of BizTalk Server applications to Azure Logic Apps. Covering architecture, tooling, and migration workflow, it provides practical command-line usage for converting maps, orchestrations, and pipelines, while highlighting recommendations and troubleshooting tips for technical teams modernizing BizTalk solutions to cloud-native Azure architectures."
-author: "hcamposu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/a-biztalk-migration-tool-from-orchestrations-to-logic-apps/ba-p/4494876"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/a-biztalk-migration-tool-from-orchestrations-to-logic-apps/ba-p/4494876
+title: 'BizTalk Migration Starter: Open Source Toolkit for Migrating BizTalk Applications to Azure Logic Apps'
+author: hcamposu
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-13 19:03:08 +00:00
-permalink: "/2026-02-13-BizTalk-Migration-Starter-Open-Source-Toolkit-for-Migrating-BizTalk-Applications-to-Azure-Logic-Apps.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure Logic Apps", "BizTalk Migration", "BizTalk Server", "Cloud Migration", "Coding", "Command Line Tools", "Community", "DevOps", "Enterprise Integration", "Integration Patterns", "Mapping Language", "Migration Toolkit", "Modernization", "Open Source Tools", "Orchestration Conversion", "Pipeline Conversion", "Solution Architecture", "Workflow Automation"]
-tags_normalized: ["azure", "azure logic apps", "biztalk migration", "biztalk server", "cloud migration", "coding", "command line tools", "community", "devops", "enterprise integration", "integration patterns", "mapping language", "migration toolkit", "modernization", "open source tools", "orchestration conversion", "pipeline conversion", "solution architecture", "workflow automation"]
+tags:
+- Azure
+- Azure Logic Apps
+- BizTalk Migration
+- BizTalk Server
+- Cloud Migration
+- Command Line Tools
+- Community
+- DevOps
+- Enterprise Integration
+- Integration Patterns
+- Mapping Language
+- Migration Toolkit
+- Modernization
+- Open Source Tools
+- Orchestration Conversion
+- Pipeline Conversion
+- Solution Architecture
+- Workflow Automation
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 hcamposu details the BizTalk Migration Starter toolkit—an open-source resource to convert BizTalk artifacts into Azure Logic Apps. The content clearly outlines migration components, practical command usage, and architecture for integration professionals.<!--excerpt_end-->
 
 # BizTalk Migration Starter: From Orchestrations to Logic Apps Workflows

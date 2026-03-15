@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Best Practices for Coding with GitHub Copilot in .NET"
-description: "This session from .NET Conf Student Zone 2025 features Simona Liao and Sharda Kaur sharing practical tips and techniques for using GitHub Copilot effectively in .NET development environments. The focus is on improving developer workflows and adopting best practices for leveraging Copilot’s coding assistance."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=umRy69br51E"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=umRy69br51E
+title: Best Practices for Coding with GitHub Copilot in .NET
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-17 20:39:34 +00:00
-permalink: "/2025-11-17-Best-Practices-for-Coding-with-GitHub-Copilot-in-NET.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", ".NET Conf", "AI", "AI Coding Assistant", "Best Practices", "Code Generation", "Coding", "Coding Tips", "Copilot Integration", "Developer Workflow", "GitHub Copilot", "Microsoft", "Sharda Kaur", "Simona Liao", "Student Zone", "Videos"]
-tags_normalized: ["dotnet", "dotnet conf", "ai", "ai coding assistant", "best practices", "code generation", "coding", "coding tips", "copilot integration", "developer workflow", "github copilot", "microsoft", "sharda kaur", "simona liao", "student zone", "videos"]
+tags:
+- .NET
+- .NET Conf
+- AI Coding Assistant
+- Best Practices
+- Code Generation
+- Coding Tips
+- Copilot Integration
+- Developer Workflow
+- Microsoft
+- Sharda Kaur
+- Simona Liao
+- Student Zone
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 dotnet presents a video session from Simona Liao and Sharda Kaur at .NET Conf Student Zone 2025, offering actionable best practices for coding with GitHub Copilot in .NET projects.<!--excerpt_end-->
 
 {% youtube umRy69br51E %}

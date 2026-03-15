@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Integrating Model Context Protocol (MCP) in VS Code Agent Mode"
-description: "This article, authored by Harald Kirschner, details the addition of Model Context Protocol (MCP) support in Visual Studio Code's agent mode. It explores how MCP enables VS Code to connect AI agents to external tools and services securely, improving extensibility, user control, and ecosystem collaboration."
-author: "Harald Kirschner"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2025/05/12/agent-mode-meets-mcp
+title: Integrating Model Context Protocol (MCP) in VS Code Agent Mode
+author: Harald Kirschner
+feed_name: Visual Studio Code Releases
 date: 2025-05-14 00:00:00 +00:00
-permalink: "/2025-05-14-Integrating-Model-Context-Protocol-MCP-in-VS-Code-Agent-Mode.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "Coding", "Developer Tools", "Dynamic Tool Discovery", "Extension Development", "GitHub MCP Server", "MCP", "News", "Playwright MCP Server", "Secrets Management", "Tool Server", "User Control", "VS Code", "Workspace Integration"]
-tags_normalized: ["ai", "ai agents", "coding", "developer tools", "dynamic tool discovery", "extension development", "github mcp server", "mcp", "news", "playwright mcp server", "secrets management", "tool server", "user control", "vs code", "workspace integration"]
+tags:
+- AI Agents
+- Developer Tools
+- Dynamic Tool Discovery
+- Extension Development
+- GitHub MCP Server
+- MCP
+- Playwright MCP Server
+- Secrets Management
+- Tool Server
+- User Control
+- VS Code
+- Workspace Integration
+- AI
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Harald Kirschner explains how integrating Model Context Protocol (MCP) in VS Code empowers AI agents to use external tools, enhancing flexibility and control for developers.<!--excerpt_end-->
 
 # Integrating Model Context Protocol (MCP) in VS Code Agent Mode
@@ -39,7 +49,7 @@ The MCP [server list](https://github.com/modelcontextprotocol/servers) is rapidl
 
 VS Code's design around user empowerment shaped its MCP integration:
 
-- **Setup is easy**: Add servers straight from NPM, PyPI, or Docker using the `MCP: Add Server` command, or onboard via _Install in VS Code_ shortcuts.
+- **Setup is easy**: Add servers straight from NPM, PyPI, or Docker using the `MCP: Add Server` command, or onboard via *Install in VS Code* shortcuts.
 - **Security first**: Store secrets securely using input variables and reference trusted `.env` files, minimizing risk.
 - **User control**: With the tool picker, users decide what tools the agent can access in each session. Server logs and controls simplify development and debugging.
 

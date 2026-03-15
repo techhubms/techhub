@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Enabling UDP RDP Shortpath Over Private Link for Azure Virtual Desktop"
-description: "This guide explains the general availability of UDP support over Private Link in Azure Virtual Desktop (AVD). It details how administrators can enable high-performance, secure UDP-based RDP connections with RDP Shortpath for managed networks, outlines practical steps for configuration in the Azure portal, and discusses use cases for regulated network environments."
-author: "Rinku_Dalwani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/rdp-shortpath-udp-over-private-link-is-now-generally-available/ba-p/4494644"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/rdp-shortpath-udp-over-private-link-is-now-generally-available/ba-p/4494644
+title: Enabling UDP RDP Shortpath Over Private Link for Azure Virtual Desktop
+author: Rinku_Dalwani
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-17 17:00:00 +00:00
-permalink: "/2026-02-17-Enabling-UDP-RDP-Shortpath-Over-Private-Link-for-Azure-Virtual-Desktop.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Configuration", "Azure Networking", "Azure Portal", "Azure Virtual Desktop", "Community", "Direct Network Path", "Endpoint Security", "Managed Networks", "Network Security", "Private Link", "RDP Shortpath", "Remote Desktop Protocol", "Secure Connectivity", "Security", "Session Hosts", "TCP", "UDP"]
-tags_normalized: ["azure", "azure configuration", "azure networking", "azure portal", "azure virtual desktop", "community", "direct network path", "endpoint security", "managed networks", "network security", "private link", "rdp shortpath", "remote desktop protocol", "secure connectivity", "security", "session hosts", "tcp", "udp"]
+tags:
+- Azure
+- Azure Configuration
+- Azure Networking
+- Azure Portal
+- Azure Virtual Desktop
+- Community
+- Direct Network Path
+- Endpoint Security
+- Managed Networks
+- Network Security
+- Private Link
+- RDP Shortpath
+- Remote Desktop Protocol
+- Secure Connectivity
+- Security
+- Session Hosts
+- TCP
+- UDP
+section_names:
+- azure
+- security
 ---
-
 Rinku_Dalwani details the availability and setup process for UDP-based RDP Shortpath over Private Link in Azure Virtual Desktop, empowering administrators to optimize secure and efficient connectivity in managed Azure environments.<!--excerpt_end-->
 
 # Enabling UDP RDP Shortpath Over Private Link for Azure Virtual Desktop

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft’s Vision: AI-RAN and Intelligent Edge Transforming Telecom Networks"
-description: "This article outlines Microsoft’s strategic approach to integrating artificial intelligence with telecom infrastructure, focusing on AI-powered radio access networks (RAN) and intelligent edge computing. It explores architectural models, edge/cloud convergence, AI platform tools (Azure, Foundry, Copilot, Semantic Kernel), and real-world research for next-generation 5G/6G networks."
-author: "Yongguang Zhang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/ai-powered-ran-and-the-intelligent-edge-microsoft-s-vision-for/ba-p/4495554"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/ai-powered-ran-and-the-intelligent-edge-microsoft-s-vision-for/ba-p/4495554
+title: 'Microsoft’s Vision: AI-RAN and Intelligent Edge Transforming Telecom Networks'
+author: Yongguang Zhang
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-18 16:15:41 +00:00
-permalink: "/2026-02-18-Microsofts-Vision-AI-RAN-and-Intelligent-Edge-Transforming-Telecom-Networks.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["5G", "6G", "AI", "AI Platform", "AI RAN", "Azure", "Azure Machine Learning", "Cloud Infrastructure", "Community", "Copilot", "Edge AI", "Edge Computing", "Microsoft Foundry", "ML", "Network Automation", "Network Optimization", "Open RAN", "Radio Access Network", "RAN Orchestration", "Semantic Kernel", "Telecom Innovation", "Telecommunications"]
-tags_normalized: ["5g", "6g", "ai", "ai platform", "ai ran", "azure", "azure machine learning", "cloud infrastructure", "community", "copilot", "edge ai", "edge computing", "microsoft foundry", "ml", "network automation", "network optimization", "open ran", "radio access network", "ran orchestration", "semantic kernel", "telecom innovation", "telecommunications"]
+tags:
+- 5G
+- 6G
+- AI
+- AI Platform
+- AI RAN
+- Azure
+- Azure Machine Learning
+- Cloud Infrastructure
+- Community
+- Copilot
+- Edge AI
+- Edge Computing
+- Microsoft Foundry
+- ML
+- Network Automation
+- Network Optimization
+- Open RAN
+- Radio Access Network
+- RAN Orchestration
+- Semantic Kernel
+- Telecom Innovation
+- Telecommunications
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Yongguang Zhang presents an in-depth view of Microsoft’s AI-powered RAN and intelligent edge strategy, showing how AI, Azure, and advanced platforms are set to revolutionize the future of telecom networks through automation, edge intelligence, and innovative new services.<!--excerpt_end-->
 
 # Microsoft’s Vision: AI-RAN and Intelligent Edge Transforming Telecom Networks

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Claude Sonnet 4.6 Now Available in GitHub Copilot"
-description: "This announcement details the rollout of Claude Sonnet 4.6—Anthropic’s advanced agentic coding model—within GitHub Copilot. It highlights availability across various Copilot plans, integration with development tools like Visual Studio and VS Code, administrator enablement steps, and resources for exploring supported models and providing feedback."
-author: "Kate Catlin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-claude-sonnet-4-6-is-now-generally-available-in-github-copilot"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-claude-sonnet-4-6-is-now-generally-available-in-github-copilot
+title: Claude Sonnet 4.6 Now Available in GitHub Copilot
+author: Kate Catlin
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-17 18:35:17 +00:00
-permalink: "/2026-02-17-Claude-Sonnet-46-Now-Available-in-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agentic Coding", "AI", "AI Model", "Anthropic", "Claude Sonnet 4.6", "Copilot", "Copilot Business", "Copilot CLI", "Copilot Coding Agent", "Copilot Enterprise", "Developer Tools", "GitHub Copilot", "Model Selection", "News", "VS", "VS Code"]
-tags_normalized: ["agentic coding", "ai", "ai model", "anthropic", "claude sonnet 4dot6", "copilot", "copilot business", "copilot cli", "copilot coding agent", "copilot enterprise", "developer tools", "github copilot", "model selection", "news", "vs", "vs code"]
+tags:
+- Agentic Coding
+- AI
+- AI Model
+- Anthropic
+- Claude Sonnet 4.6
+- Copilot
+- Copilot Business
+- Copilot CLI
+- Copilot Coding Agent
+- Copilot Enterprise
+- Developer Tools
+- GitHub Copilot
+- Model Selection
+- News
+- VS
+- VS Code
+section_names:
+- ai
+- github-copilot
 ---
-
 Kate Catlin announces that Claude Sonnet 4.6, Anthropic’s latest agentic coding model, is now available in GitHub Copilot with broad integration and new model selection features.<!--excerpt_end-->
 
 # Claude Sonnet 4.6 Now Available in GitHub Copilot

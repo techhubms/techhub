@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Securing Multi-Agent AI Solutions with Microsoft Entra ID On-Behalf-Of Flow"
-description: "This post explores technical strategies for maintaining user identity and access controls in enterprise-grade AI multi-agent systems using Microsoft Entra ID's On-Behalf-Of (OBO) flow. It covers integrating secure user delegation into AI agents, Databricks, Python frameworks, and Azure, emphasizing zero-trust architecture, OAuth 2.0, and AI governance through per-user RBAC enforcement."
-author: "Charles_Chukwudozie"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-a-multi-agent-ai-solution-focused-on-user-context-the/ba-p/4493308"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/securing-a-multi-agent-ai-solution-focused-on-user-context-the/ba-p/4493308
+title: Securing Multi-Agent AI Solutions with Microsoft Entra ID On-Behalf-Of Flow
+author: Charles_Chukwudozie
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-12 07:47:13 +00:00
-permalink: "/2026-02-12-Securing-Multi-Agent-AI-Solutions-with-Microsoft-Entra-ID-On-Behalf-Of-Flow.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Governance", "Azure", "Azure App Service", "Azure Databricks", "Chainlit", "Community", "Enterprise Security", "Human in The Loop", "Identity Provider", "LangGraph", "Microsoft Entra ID", "OAuth 2.0", "On Behalf Of Flow", "Python", "RBAC", "Security", "Unity Catalog", "Zero Trust"]
-tags_normalized: ["ai", "ai governance", "azure", "azure app service", "azure databricks", "chainlit", "community", "enterprise security", "human in the loop", "identity provider", "langgraph", "microsoft entra id", "oauth 2dot0", "on behalf of flow", "python", "rbac", "security", "unity catalog", "zero trust"]
+tags:
+- AI
+- AI Governance
+- Azure
+- Azure App Service
+- Azure Databricks
+- Chainlit
+- Community
+- Enterprise Security
+- Human in The Loop
+- Identity Provider
+- LangGraph
+- Microsoft Entra ID
+- OAuth 2.0
+- On Behalf Of Flow
+- Python
+- RBAC
+- Security
+- Unity Catalog
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Charles_Chukwudozie explains how to implement secure user identity and access controls in enterprise AI multi-agent architectures using Microsoft Entra ID OBO flow, Databricks, and Azure services.<!--excerpt_end-->
 
 # Securing a Multi-Agent AI Solution Focused on User Context & the Complexities of On-Behalf-Of

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Security Copilot in Action: From Alert to Remediation in 25 Minutes"
-description: "This demo-driven session showcases Microsoft Security Copilot handling a live security incident from initial alert to full remediation. It highlights key SecOps workflows such as alert triage, investigation, KQL query generation, and threat response, demonstrating how AI-driven assistance accelerates response for security teams."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Cn7p5i_4vjk"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=Cn7p5i_4vjk
+title: 'Security Copilot in Action: From Alert to Remediation in 25 Minutes'
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-24 17:00:22 +00:00
-permalink: "/2026-02-24-Security-Copilot-in-Action-From-Alert-to-Remediation-in-25-Minutes.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Assistance", "Alert Triage", "Cloud Computing", "Cybersecurity", "Demo", "Dev", "Development", "Incident Response", "KQL", "Microsoft", "Microsoft Security", "Microsoft Security Copilot", "SecOps", "Security", "Security Automation", "Security Operations", "Tech", "Technology", "Threat Remediation", "Videos"]
-tags_normalized: ["ai", "ai assistance", "alert triage", "cloud computing", "cybersecurity", "demo", "dev", "development", "incident response", "kql", "microsoft", "microsoft security", "microsoft security copilot", "secops", "security", "security automation", "security operations", "tech", "technology", "threat remediation", "videos"]
+tags:
+- AI
+- AI Assistance
+- Alert Triage
+- Cloud Computing
+- Cybersecurity
+- Demo
+- Dev
+- Development
+- Incident Response
+- KQL
+- Microsoft
+- Microsoft Security
+- Microsoft Security Copilot
+- SecOps
+- Security
+- Security Automation
+- Security Operations
+- Tech
+- Technology
+- Threat Remediation
+- Videos
+section_names:
+- ai
+- security
 ---
-
 Microsoft Developer demonstrates how Microsoft Security Copilot leverages AI to help security teams triage and remediate real-world incidents, improving the speed and effectiveness of SecOps workflows.<!--excerpt_end-->
 
 {% youtube Cn7p5i_4vjk %}

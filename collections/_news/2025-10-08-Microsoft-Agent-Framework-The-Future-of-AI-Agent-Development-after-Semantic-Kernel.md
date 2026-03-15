@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Microsoft Agent Framework: The Future of AI Agent Development after Semantic Kernel"
-description: "This announcement presents Microsoft Agent Framework, the open-source engine built as the successor to Semantic Kernel and AutoGen for creating agentic AI applications. It details its integration with the Microsoft and Azure ecosystems, the transition path for Semantic Kernel users, continued support plans, language parity, and migration resources."
-author: "Shawn Henry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/semantic-kernel-and-microsoft-agent-framework/
+title: 'Microsoft Agent Framework: The Future of AI Agent Development after Semantic Kernel'
+author: Shawn Henry
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2025-10-08 06:51:06 +00:00
-permalink: "/2025-10-08-Microsoft-Agent-Framework-The-Future-of-AI-Agent-Development-after-Semantic-Kernel.html"
-categories: ["AI"]
-tags: [".NET", "Agentic AI", "AI", "AI Agents", "AutoGen", "Azure AI", "C#", "Enterprise AI", "Microsoft Agent Framework", "Microsoft Learn", "Migration Guide", "News", "Open Source", "Preview Release", "Python", "Semantic Kernel"]
-tags_normalized: ["dotnet", "agentic ai", "ai", "ai agents", "autogen", "azure ai", "csharp", "enterprise ai", "microsoft agent framework", "microsoft learn", "migration guide", "news", "open source", "preview release", "python", "semantic kernel"]
+tags:
+- .NET
+- Agentic AI
+- AI
+- AI Agents
+- AutoGen
+- Azure AI
+- C#
+- Enterprise AI
+- Microsoft Agent Framework
+- Microsoft Learn
+- Migration Guide
+- News
+- Open Source
+- Preview Release
+- Python
+- Semantic Kernel
+section_names:
+- ai
 ---
-
 Shawn Henry unveils Microsoft Agent Framework as the next step in Microsoft's AI agent development journey, sharing its relationship to Semantic Kernel and guidance for developers navigating the transition.<!--excerpt_end-->
 
 # Microsoft Agent Framework: The Future of AI Agent Development after Semantic Kernel

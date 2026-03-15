@@ -1,22 +1,28 @@
----
-layout: "post"
-title: "Model selection"
-description: "Want to know which model to use? Here is an explainer for it!"
-author: "Liuba Gonta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/xf6i-eOnQE4"
-categories: ["AI", "GitHub Copilot", "Coding"]
+﻿---
+external_url: https://youtu.be/xf6i-eOnQE4
+title: Model selection
+author: Liuba Gonta
 date: 2025-07-16 12:45:13 +00:00
-permalink: "/2025-07-16-Model-selection.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Chat Interface", "Coding", "GitHub Copilot", "Model Selection", "Programming", "Software Development", "Videos", "VS Code"]
-tags_normalized: ["ai", "chat interface", "coding", "github copilot", "model selection", "programming", "software development", "videos", "vs code"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Chat Interface
+- Model Selection
+- Programming
+- Software Development
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- github-copilot
+- dotnet
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 In this comprehensive guide, Liuba explores the strategic use of different models in GitHub Copilot's chat interface through expert demonstrations. The video covers when and how to select the most appropriate model for various coding scenarios, providing practical insights that can improve your development workflow and code quality. Whether you're new to GitHub Copilot or looking to optimize your current usage, this tutorial offers valuable guidance on leveraging model selection effectively.<!--excerpt_end-->
 
 {% youtube xf6i-eOnQE4 %}

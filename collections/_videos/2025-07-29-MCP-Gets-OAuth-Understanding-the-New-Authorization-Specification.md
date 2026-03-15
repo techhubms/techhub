@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "MCP Gets OAuth: Understanding the New Authorization Specification"
-description: "This article details how the Model Context Protocol (MCP) now utilizes OAuth 2.1 conventions, enhancing authorization and integration for AI agent ecosystems. It covers the adoption of established OAuth flows, dynamic client registration, and Protected Resource Metadata, simplifying the developer experience and improving compatibility with existing authorization servers."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=EXxIeOfJsqA"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=EXxIeOfJsqA
+title: 'MCP Gets OAuth: Understanding the New Authorization Specification'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-07-29 22:42:02 +00:00
-permalink: "/2025-07-29-MCP-Gets-OAuth-Understanding-the-New-Authorization-Specification.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agent", "Authorization", "Azure", "Azure AI Foundry", "Cloud Computing", "Dev", "Development", "Dynamic Client Registration", "Integration", "MCP", "Microsoft", "OAuth 2.1", "Protected Resource Metadata", "Security", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agent", "authorization", "azure", "azure ai foundry", "cloud computing", "dev", "development", "dynamic client registration", "integration", "mcp", "microsoft", "oauth 2dot1", "protected resource metadata", "security", "tech", "technology", "videos", "vs code"]
+tags:
+- AI Agent
+- Authorization
+- Azure AI Foundry
+- Cloud Computing
+- Dev
+- Development
+- Dynamic Client Registration
+- Integration
+- MCP
+- Microsoft
+- OAuth 2.1
+- Protected Resource Metadata
+- Tech
+- Technology
+- VS Code
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 In this session, Microsoft Developer examines MCP’s transition to OAuth 2.1, highlighting improved authorization and integration for AI agents.<!--excerpt_end-->
 
 {% youtube EXxIeOfJsqA %}

@@ -1,0 +1,105 @@
+﻿@page "/Error"
+@using System.Diagnostics
+@using TechHub.Web.Services
+@inject IWebHostEnvironment Environment
+@inject ErrorService ErrorService
+
+<PageTitle>Error</PageTitle>
+
+<main class="page-without-sidebar">
+    <section>
+        @if (IsDevelopment)
+        {
+            @* Development/Test Mode: Show detailed exception information *@
+            @if (LastException != null)
+            {
+                <div class="error-details">
+                    <h2>Exception Details</h2>
+                    <p><strong>Type:</strong> @LastException.GetType().FullName</p>
+                    <p><strong>Message:</strong> @LastException.Message</p>
+
+                    @if (!string.IsNullOrEmpty(LastException.StackTrace))
+                    {
+                        <h3>Stack Trace</h3>
+                        <pre class="stack-trace">@LastException.StackTrace</pre>
+                    }
+
+                    @if (LastException.InnerException != null)
+                    {
+                        <h3>Inner Exception</h3>
+                        <p><strong>Type:</strong> @LastException.InnerException.GetType().FullName</p>
+                        <p><strong>Message:</strong> @LastException.InnerException.Message</p>
+                        @if (!string.IsNullOrEmpty(LastException.InnerException.StackTrace))
+                        {
+                            <pre class="stack-trace">@LastException.InnerException.StackTrace</pre>
+                        }
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="error-message">
+                    <p>No exception details available.</p>
+                </div>
+            }
+
+            @if (ShowRequestId)
+            {
+                <p class="request-id">
+                    <strong>Request ID:</strong> <code>@RequestId</code>
+                </p>
+            }
+
+            <div class="dev-mode-notice">
+                <h3>⚠️ Development/Test Mode</h3>
+                <p>
+                    You're seeing detailed exception information because the application is running in
+                    <strong>@Environment.EnvironmentName</strong> environment.
+                </p>
+                <p>
+                    <strong>Note:</strong> This information should never be displayed to users in production as it may
+                    contain sensitive details about your application's internals.
+                </p>
+            </div>
+        }
+        else
+        {
+            @* Production Mode: Show friendly error message only *@
+            <div class="error-message">
+                <h2>Something went wrong</h2>
+                <p>
+                    We're sorry, but an unexpected error occurred while processing your request.
+                    The error has been logged and our team will investigate.
+                </p>
+                <p>
+                    Please try again later or <a href="/">return to the homepage</a>.
+                </p>
+
+                @if (ShowRequestId)
+                {
+                    <p class="request-id request-id-muted">
+                        If you need to contact support, please reference this Request ID: <code>@RequestId</code>
+                    </p>
+                }
+            </div>
+        }
+    </section>
+</main>
+
+@code {
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    private string? RequestId { get; set; }
+    private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    private Exception? LastException { get; set; }
+    private bool IsDevelopment => Environment.IsDevelopment();
+
+    protected override void OnInitialized()
+    {
+        // HttpContext is only available during prerendering.
+        // Capture TraceIdentifier during prerender; fall back to Activity.Current in interactive mode.
+        RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
+        LastException = ErrorService.GetLastException();
+    }
+}

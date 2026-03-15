@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "ServerDiscoveryService.exe Crash Bug in Azure Migrate Physical Server Discovery"
-description: "An in-depth technical report outlining a critical crash bug found in the ServerDiscoveryService.exe process of the Azure Migrate appliance when performing physical server discovery. The post includes detailed environment info, symptoms, root cause analysis, troubleshooting efforts, and a request to escalate the bug to the Azure Migrate engineering team for a fix."
-author: "cbrnit"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-physical-server-discovery-serverdiscoveryservice/m-p/4490238#M733"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-physical-server-discovery-serverdiscoveryservice/m-p/4490238#M733
+title: ServerDiscoveryService.exe Crash Bug in Azure Migrate Physical Server Discovery
+author: cbrnit
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-01-29 02:24:12 +00:00
-permalink: "/2026-01-29-ServerDiscoveryServiceexe-Crash-Bug-in-Azure-Migrate-Physical-Server-Discovery.html"
-categories: ["Azure"]
-tags: [".NET 8", "Appliance Crash", "Azure", "Azure Migrate", "Azure Migration", "Bug Report", "CIM", "Community", "Discovery Agent", "Microsoft.Management.Infrastructure", "NullReferenceException", "Physical Server Discovery", "PowerShell Remoting", "ServerDiscoveryService.exe", "Windows Server", "WinRM", "WSMan"]
-tags_normalized: ["dotnet 8", "appliance crash", "azure", "azure migrate", "azure migration", "bug report", "cim", "community", "discovery agent", "microsoftdotmanagementdotinfrastructure", "nullreferenceexception", "physical server discovery", "powershell remoting", "serverdiscoveryservicedotexe", "windows server", "winrm", "wsman"]
+tags:
+- .NET 8
+- Appliance Crash
+- Azure
+- Azure Migrate
+- Azure Migration
+- Bug Report
+- CIM
+- Community
+- Discovery Agent
+- Microsoft.Management.Infrastructure
+- NullReferenceException
+- Physical Server Discovery
+- PowerShell Remoting
+- ServerDiscoveryService.exe
+- Windows Server
+- WinRM
+- WSMan
+section_names:
+- azure
 ---
-
 Community member cbrnit delivers a thorough technical breakdown of a reproducible crash issue affecting Azure Migrate’s ServerDiscoveryService.exe in physical server discovery workflows.<!--excerpt_end-->
 
 # Azure Migrate Physical Server Discovery - ServerDiscoveryService.exe Crash Bug

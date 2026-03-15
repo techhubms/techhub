@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Automation: User Requests, Feature Suggestions, and Bug Reports"
-description: "This community post by mynster presents practical feedback and feature requests for Microsoft Azure Automation Accounts. It details bugs and improvements concerning source control integration, logging, runbook management, scheduling, hybrid workers, and UI enhancements. The post includes actionable insights for both Azure engineering teams and end users who manage workflows and automation in Azure, emphasizing reliability and usability updates."
-author: "mynster"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure/azure-automation-feature-improvements-and-bugs/m-p/4456195#M22242
+title: 'Azure Automation: User Requests, Feature Suggestions, and Bug Reports'
+author: mynster
+feed_name: Microsoft Tech Community
 date: 2025-09-23 10:12:56 +00:00
-permalink: "/2025-09-23-Azure-Automation-User-Requests-Feature-Suggestions-and-Bug-Reports.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Automation Account", "Azure", "Azure Automation", "Bug Reports", "Coding", "Community", "Community Feedback", "DevOps", "Feature Requests", "GitHub Integration", "Hybrid Workers", "Job Scheduling", "Logging", "PowerShell", "RBAC", "Runbooks", "Source Control", "UI Improvements", "Webhooks"]
-tags_normalized: ["automation account", "azure", "azure automation", "bug reports", "coding", "community", "community feedback", "devops", "feature requests", "github integration", "hybrid workers", "job scheduling", "logging", "powershell", "rbac", "runbooks", "source control", "ui improvements", "webhooks"]
+tags:
+- Automation Account
+- Azure Automation
+- Bug Reports
+- Community Feedback
+- Feature Requests
+- GitHub Integration
+- Hybrid Workers
+- Job Scheduling
+- Logging
+- PowerShell
+- RBAC
+- Runbooks
+- Source Control
+- UI Improvements
+- Webhooks
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 In this comprehensive community post, mynster outlines several bugs and feature suggestions for Azure Automation Accounts, aiming to improve reliability, developer experience, and usability for automation engineers.<!--excerpt_end-->
 
 # Azure Automation: User Requests, Feature Suggestions, and Bug Reports

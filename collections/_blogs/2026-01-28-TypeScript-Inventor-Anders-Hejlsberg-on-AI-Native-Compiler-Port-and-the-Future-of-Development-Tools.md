@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "TypeScript Inventor Anders Hejlsberg on AI, Native Compiler Port, and the Future of Development Tools"
-description: "This article summarizes an interview with Microsoft Technical Fellow Anders Hejlsberg, focusing on his views about AI’s role in programming, TypeScript’s performance evolution, and challenges in language and tooling choices. Hejlsberg discusses difficulties using AI in critical code migrations, the impact of large language models on development workflows, and future directions for TypeScript and development environments."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/ai-ml/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/4079582"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/ai-ml/2026/01/28/typescript-inventor-anders-hejlsberg-ai-is-a-big-regurgitator-of-stuff-someone-has-done/4079582
+title: TypeScript Inventor Anders Hejlsberg on AI, Native Compiler Port, and the Future of Development Tools
+author: DevClass.com
+primary_section: ai
+feed_name: DevClass
 date: 2026-01-28 17:44:39 +00:00
-permalink: "/2026-01-28-TypeScript-Inventor-Anders-Hejlsberg-on-AI-Native-Compiler-Port-and-the-Future-of-Development-Tools.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "Anders Hejlsberg", "Blogs", "C#", "Code Migration", "Coding", "Development Tools", "Go", "IDE", "Language Services", "Large Language Models", "Microsoft", "Native Compilation", "Programming Languages", "Semantic Analysis", "TypeScript", "TypeScript Compiler"]
-tags_normalized: ["ai", "anders hejlsberg", "blogs", "csharp", "code migration", "coding", "development tools", "go", "ide", "language services", "large language models", "microsoft", "native compilation", "programming languages", "semantic analysis", "typescript", "typescript compiler"]
+tags:
+- AI
+- Anders Hejlsberg
+- Blogs
+- C#
+- Code Migration
+- Development Tools
+- Go
+- IDE
+- Language Services
+- Large Language Models
+- Microsoft
+- Native Compilation
+- Programming Languages
+- Semantic Analysis
+- TypeScript
+- TypeScript Compiler
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 DevClass.com presents insights from their interview with Anders Hejlsberg, focusing on the intersection of AI, programming languages, and the evolution of TypeScript tooling.<!--excerpt_end-->
 
 # TypeScript Inventor Anders Hejlsberg on AI, Native Compiler Port, and the Future of Development Tools

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Accelerating Cloud Modernization with Azure Copilot Migration Agent and GitHub Copilot Integration"
-description: "This article introduces the Azure Copilot Migration Agent, a new tool designed to streamline migration and modernization processes to Azure. It details the agent's capabilities in enabling agentless VMware discovery, automating landing zone creation, and facilitating developer-centric modernization by integrating with GitHub Copilot for code upgrades and automation."
-author: "shashban"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent/ba-p/4501292"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-migration-and/azure-copilot-migration-agent/ba-p/4501292
+title: Accelerating Cloud Modernization with Azure Copilot Migration Agent and GitHub Copilot Integration
+author: shashban
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-03-11 17:13:06 +00:00
-permalink: "/2026-03-11-Accelerating-Cloud-Modernization-with-Azure-Copilot-Migration-Agent-and-GitHub-Copilot-Integration.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: [".NET Modernization", "Agentless Discovery", "AI", "Application Modernization", "Azure", "Azure Copilot Migration Agent", "Azure Migrate", "CAST Highlight", "Cloud Modernization", "Community", "Continuous Modernization", "DevOps", "GitHub Copilot", "Infrastructure Migration", "Java Modernization", "Landing Zone Automation", "Microsoft Cloud Adoption Framework", "Migration Planning", "VMware"]
-tags_normalized: ["dotnet modernization", "agentless discovery", "ai", "application modernization", "azure", "azure copilot migration agent", "azure migrate", "cast highlight", "cloud modernization", "community", "continuous modernization", "devops", "github copilot", "infrastructure migration", "java modernization", "landing zone automation", "microsoft cloud adoption framework", "migration planning", "vmware"]
+tags:
+- .NET Modernization
+- Agentless Discovery
+- AI
+- Application Modernization
+- Azure
+- Azure Copilot Migration Agent
+- Azure Migrate
+- CAST Highlight
+- Cloud Modernization
+- Community
+- Continuous Modernization
+- DevOps
+- GitHub Copilot
+- Infrastructure Migration
+- Java Modernization
+- Landing Zone Automation
+- Microsoft Cloud Adoption Framework
+- Migration Planning
+- VMware
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 shashban presents an overview of the Azure Copilot Migration Agent, highlighting its integration with GitHub Copilot to simplify, accelerate, and govern large-scale Azure migrations for developers and IT teams.<!--excerpt_end-->
 
 # Accelerating Cloud Modernization with Azure Copilot Migration Agent and GitHub Copilot Integration

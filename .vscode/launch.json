@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Tech Hub (Development)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/TechHub.AppHost/bin/Debug/net10.0/TechHub.AppHost.dll",
+      "args": [
+        "--launch-profile",
+        "Development"
+      ],
+      "cwd": "${workspaceFolder}/src/TechHub.AppHost",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    {
+      "name": "Tech Hub (Production)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/TechHub.AppHost/bin/Release/net10.0/TechHub.AppHost.dll",
+      "args": [
+        "--launch-profile",
+        "Production"
+      ],
+      "cwd": "${workspaceFolder}/src/TechHub.AppHost",
+      "stopAtEntry": false,
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "DOTNET_ENVIRONMENT": "Production"
+      }
+    }
+  ]
+}

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Welcome to the Azure SRE Agent Community Hub"
-description: "This post introduces the new Azure SRE Agent Community Hub, a gathering place for developers and reliability engineers to discuss, share ideas, ask questions, and support one another as they work with Azure SRE Agent. The hub encourages open conversation and community involvement, inviting both newcomers and experienced users to participate in discussions, contribute knowledge, and help shape the future of the Azure SRE Agent ecosystem."
-author: "Mayunk_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-sre-agent/welcome-to-azure-sre-agent-community-hub/m-p/4481822#M1
+title: Welcome to the Azure SRE Agent Community Hub
+author: Mayunk_Jain
+feed_name: Microsoft Tech Community
 date: 2025-12-29 21:05:14 +00:00
-permalink: "/2025-12-29-Welcome-to-the-Azure-SRE-Agent-Community-Hub.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure SRE Agent", "Community", "DevOps", "Engineering Best Practices", "Incident Response", "Microsoft", "Observability", "Operations", "Reliability Engineering", "Site Reliability Engineering", "SRE"]
-tags_normalized: ["azure", "azure sre agent", "community", "devops", "engineering best practices", "incident response", "microsoft", "observability", "operations", "reliability engineering", "site reliability engineering", "sre"]
+tags:
+- Azure SRE Agent
+- Engineering Best Practices
+- Incident Response
+- Microsoft
+- Observability
+- Operations
+- Reliability Engineering
+- Site Reliability Engineering
+- SRE
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Mayunk_Jain announces the launch of the Azure SRE Agent Community Hub—a space where engineers and developers can collaborate, discuss, and learn about Azure SRE Agent.<!--excerpt_end-->
 
 # Welcome to the Azure SRE Agent Community Hub

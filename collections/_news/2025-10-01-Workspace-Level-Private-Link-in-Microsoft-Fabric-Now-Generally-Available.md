@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Workspace-Level Private Link in Microsoft Fabric Now Generally Available"
-description: "This announcement covers the general availability of Fabric workspace-level Private Link in Microsoft Fabric. It explains how users can now set up and manage private connectivity for Fabric workspaces directly from the Fabric Portal, ensuring secure, efficient data collaboration and management. The update integrates secure network architecture for data artifacts."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-workspace-level-private-link-in-microsoft-fabric/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/announcing-general-availability-of-workspace-level-private-link-in-microsoft-fabric/
+title: Workspace-Level Private Link in Microsoft Fabric Now Generally Available
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-10-01 12:00:00 +00:00
-permalink: "/2025-10-01-Workspace-Level-Private-Link-in-Microsoft-Fabric-Now-Generally-Available.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Access Control", "API Management", "Azure", "Azure Networking", "Collaboration", "Data Governance", "Data Security", "Fabric Portal", "Microsoft Fabric", "ML", "Network Isolation", "News", "Private Link", "Security", "Workspace Security"]
-tags_normalized: ["access control", "api management", "azure", "azure networking", "collaboration", "data governance", "data security", "fabric portal", "microsoft fabric", "ml", "network isolation", "news", "private link", "security", "workspace security"]
+tags:
+- Access Control
+- API Management
+- Azure Networking
+- Collaboration
+- Data Governance
+- Data Security
+- Fabric Portal
+- Microsoft Fabric
+- Network Isolation
+- Private Link
+- Workspace Security
+- Azure
+- ML
+- Security
+- News
+section_names:
+- azure
+- ml
+- security
+primary_section: ml
 ---
-
 The Microsoft Fabric Blog details the general availability of workspace-level Private Link, highlighting how users can manage secure, private connectivity for Fabric workspaces—authored by the Microsoft Fabric Blog team.<!--excerpt_end-->
 
 # Workspace-Level Private Link in Microsoft Fabric: General Availability

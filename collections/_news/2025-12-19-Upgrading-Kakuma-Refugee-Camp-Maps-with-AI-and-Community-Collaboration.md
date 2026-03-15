@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Upgrading Kakuma Refugee Camp Maps with AI and Community Collaboration"
-description: "This article explores how a partnership between Microsoft AI for Good Lab, UNHCR’s Hive, and the Humanitarian OpenStreetMap Team empowered Kakuma refugee camp residents to upgrade their mapping system. Utilizing AI, open-source tools, and community-driven data collection, the project improved infrastructure planning, service delivery, and local empowerment."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://unlocked.microsoft.com/kakuma/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://unlocked.microsoft.com/kakuma/
+title: Upgrading Kakuma Refugee Camp Maps with AI and Community Collaboration
+author: stclarke
+feed_name: Microsoft News
 date: 2025-12-19 20:04:02 +00:00
-permalink: "/2025-12-19-Upgrading-Kakuma-Refugee-Camp-Maps-with-AI-and-Community-Collaboration.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Azure", "Community Engagement", "Company News", "Data Collection", "Drone Mapping", "GitHub", "Humanitarian Tech", "Machine Learning", "Mapping", "Microsoft AI For Good Lab", "News", "Open Source", "OpenStreetMap", "Pattern Recognition", "Refugee Camp", "Satellite Imagery", "UNHCR"]
-tags_normalized: ["ai", "azure", "community engagement", "company news", "data collection", "drone mapping", "github", "humanitarian tech", "machine learning", "mapping", "microsoft ai for good lab", "news", "open source", "openstreetmap", "pattern recognition", "refugee camp", "satellite imagery", "unhcr"]
+tags:
+- Community Engagement
+- Company News
+- Data Collection
+- Drone Mapping
+- GitHub
+- Humanitarian Tech
+- ML
+- Mapping
+- Microsoft AI For Good Lab
+- Open Source
+- OpenStreetMap
+- Pattern Recognition
+- Refugee Camp
+- Satellite Imagery
+- UNHCR
+- AI
+- Azure
+- News
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 stclarke details how residents of the Kakuma refugee camp worked with Microsoft AI for Good Lab and partners to overhaul their map system using AI, satellite imagery, and hands-on community data collection.<!--excerpt_end-->
 
 # Upgrading Kakuma Refugee Camp Maps with AI and Community Collaboration

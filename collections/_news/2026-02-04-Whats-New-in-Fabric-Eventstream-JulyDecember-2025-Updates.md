@@ -1,20 +1,34 @@
----
-layout: "post"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-july-december-2025-updates/
 title: "What's New in Fabric Eventstream: July–December 2025 Updates"
-description: "This news post from the Microsoft Fabric Blog highlights the latest advancements in Fabric Real-Time Intelligence and Eventstream between July and December 2025. Key updates include new data connectors, improved real-time stream processing, enhanced schema management, and robust security features. The article showcases both technical features and practical application scenarios for real-time operations analytics in Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/whats-new-in-fabric-eventstream-july-december-2025-updates/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-04 10:00:00 +00:00
-permalink: "/2026-02-04-Whats-New-in-Fabric-Eventstream-JulyDecember-2025-Updates.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Azure Monitor", "Cribl Integration", "Data Activator", "Data Engineering", "Data Pipelines", "Eventhouse", "Eventstream", "Microsoft Fabric", "ML", "MongoDB CDC", "News", "Operational Analytics", "Private Link", "Real Time Analytics", "Real Time Intelligence", "Schema Registry", "SQL Operator", "Streaming Data"]
-tags_normalized: ["azure", "azure monitor", "cribl integration", "data activator", "data engineering", "data pipelines", "eventhouse", "eventstream", "microsoft fabric", "ml", "mongodb cdc", "news", "operational analytics", "private link", "real time analytics", "real time intelligence", "schema registry", "sql operator", "streaming data"]
+tags:
+- Azure
+- Azure Monitor
+- Cribl Integration
+- Data Activator
+- Data Engineering
+- Data Pipelines
+- Eventhouse
+- Eventstream
+- Microsoft Fabric
+- ML
+- MongoDB CDC
+- News
+- Operational Analytics
+- Private Link
+- Real Time Analytics
+- Real Time Intelligence
+- Schema Registry
+- SQL Operator
+- Streaming Data
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog details the newest advancements in Fabric Eventstream for July–December 2025, covering technical innovations in real-time analytics, robust stream data ingestion, processing, and schema management.<!--excerpt_end-->
 
 # What's New in Fabric Eventstream: July–December 2025 Updates

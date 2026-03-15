@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Deployment and Build Strategies for Azure Linux Web Apps"
-description: "This tutorial walks through four deployment and build approaches for Azure Linux Web Apps using a sample Python application. It covers deploying from a laptop and from CI/CD tools, using Oryx and runtime builds, and explores advantages, limitations, and troubleshooting. Whether you are working with Python, Node.js, or PHP, you'll learn practical insights into environment configuration and process automation."
-author: "theringe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba-p/4461950"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/deployment-and-build-from-azure-linux-based-web-app/ba-p/4461950
+title: Deployment and Build Strategies for Azure Linux Web Apps
+author: theringe
+feed_name: Microsoft Tech Community
 date: 2025-10-16 12:39:45 +00:00
-permalink: "/2025-10-16-Deployment-and-Build-Strategies-for-Azure-Linux-Web-Apps.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure App Service", "Azure DevOps", "Azure Web Apps", "Build Pipeline", "CI/CD", "Coding", "Community", "Deployment Automation", "DevOps", "Environment Variables", "Flask", "Linux Web Apps", "Oryx Build", "PaaS", "Python", "Startup Script", "VS Code", "YAML Pipelines"]
-tags_normalized: ["azure", "azure app service", "azure devops", "azure web apps", "build pipeline", "cislashcd", "coding", "community", "deployment automation", "devops", "environment variables", "flask", "linux web apps", "oryx build", "paas", "python", "startup script", "vs code", "yaml pipelines"]
+tags:
+- Azure App Service
+- Azure DevOps
+- Azure Web Apps
+- Build Pipeline
+- CI/CD
+- Deployment Automation
+- Environment Variables
+- Flask
+- Linux Web Apps
+- Oryx Build
+- PaaS
+- Python
+- Startup Script
+- VS Code
+- YAML Pipelines
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 theringe explains practical deployment and build strategies for Azure Linux Web Apps, showing how to use Oryx, runtime scripting, and CI/CD to streamline Python app delivery and troubleshooting.<!--excerpt_end-->
 
 # Deployment and Build Strategies for Azure Linux Web Apps
@@ -50,20 +65,20 @@ Azure Linux Web Apps support multiple deployment and build methods, each with sp
 
 - **Best for**: Proof of concept, fast local development.
 - **Advantages**:
-    - Rapid iteration
-    - Minimal setup
+  - Rapid iteration
+  - Minimal setup
 - **Limitations**:
-    - Difficult for local environments to interact with cloud resources
-    - OS and dependency mismatches between local and cloud
+  - Difficult for local environments to interact with cloud resources
+  - OS and dependency mismatches between local and cloud
 
 ### From CI/CD Tools
 
 - **Best for**: Version-controlled projects requiring automation.
 - **Advantages**:
-    - Focus on code, not deployment details
-    - Automation on branch commits
+  - Focus on code, not deployment details
+  - Automation on branch commits
 - **Limitations**:
-    - Build and runtime environments may diverge in subtle OS/package ways
+  - Build and runtime environments may diverge in subtle OS/package ways
 
 ## 3. Build Source
 
@@ -71,27 +86,27 @@ Azure Linux Web Apps support multiple deployment and build methods, each with sp
 
 - **Scenario**: Offload builds from local or CI/CD to Azure platform
 - **Advantages**:
-    - Simple configuration
-    - Multi-language support
+  - Simple configuration
+  - Multi-language support
 - **Limitations**:
-    - Build performance limited by App Service SKU
-    - Potential mismatches between build and runtime environments for sensitive packages
+  - Build performance limited by App Service SKU
+  - Potential mismatches between build and runtime environments for sensitive packages
 
 ### Runtime Build
 
 - **Scenario**: Run build during app startup in its own environment
 - **Advantages**:
-    - High control over system-level operations
+  - High control over system-level operations
 - **Limitations**:
-    - Some settings, like system time sync, are inaccessible
+  - Some settings, like system time sync, are inaccessible
 
 ### Deployment Source Build
 
 - **Scenario**: Pre-package dependencies before deployment
 - **Advantages**:
-    - Can include proprietary packages
+  - Can include proprietary packages
 - **Limitations**:
-    - Risks if dev/runtime OS or package support diverges
+  - Risks if dev/runtime OS or package support diverges
 
 #### Comparison Table
 
@@ -125,6 +140,7 @@ bash /home/site/wwwroot/run.sh
 
     ```
     Flask==3.0.3
+
 gunicorn==23.0.0
     ```
 

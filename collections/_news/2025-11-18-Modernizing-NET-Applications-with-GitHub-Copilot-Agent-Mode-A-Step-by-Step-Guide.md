@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Modernizing .NET Applications with GitHub Copilot Agent Mode: A Step-by-Step Guide"
-description: "This guide details how developers can utilize Visual Studio 2026 and GitHub Copilot app modernization features to efficiently upgrade legacy .NET applications. It demonstrates strategies for automated framework upgrades, resolving build issues, migrating applications to Azure, improving cloud readiness, and integrating security and monitoring enhancements, minimizing manual effort during modernization."
-author: "Mika Dumont"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/modernizing-dotnet-with-github-copilot-agent-mode/
+title: 'Modernizing .NET Applications with GitHub Copilot Agent Mode: A Step-by-Step Guide'
+author: Mika Dumont
+feed_name: Microsoft .NET Blog
 date: 2025-11-18 18:05:00 +00:00
-permalink: "/2025-11-18-Modernizing-NET-Applications-with-GitHub-Copilot-Agent-Mode-A-Step-by-Step-Guide.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "Security"]
-tags: [".NET", "AI", "App Modernization", "Authentication", "Automated Testing", "Azure", "Azure Migration", "CI/CD", "Cloud", "Cloud Readiness", "Code Assessment", "Coding", "Dependency Management", "DevOps", "Framework Upgrade", "Git Integration", "GitHub Copilot", "Identity Management", "Monitoring", "News", "Security", "Security Scanning", "VS"]
-tags_normalized: ["dotnet", "ai", "app modernization", "authentication", "automated testing", "azure", "azure migration", "cislashcd", "cloud", "cloud readiness", "code assessment", "coding", "dependency management", "devops", "framework upgrade", "git integration", "github copilot", "identity management", "monitoring", "news", "security", "security scanning", "vs"]
+tags:
+- .NET
+- App Modernization
+- Authentication
+- Automated Testing
+- Azure Migration
+- CI/CD
+- Cloud Readiness
+- Code Assessment
+- Dependency Management
+- Framework Upgrade
+- Git Integration
+- Identity Management
+- Monitoring
+- Security Scanning
+- VS
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Security
+- News
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 Mika Dumont presents a practical guide for developers to modernize legacy .NET applications using GitHub Copilot agent mode in Visual Studio. The article covers automated upgrades, cloud migration to Azure, and integration of security and DevOps practices.<!--excerpt_end-->
 
 # Modernizing .NET Applications with GitHub Copilot Agent Mode: A Step-by-Step Guide

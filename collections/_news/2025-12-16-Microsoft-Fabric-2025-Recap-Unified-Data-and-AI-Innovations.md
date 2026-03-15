@@ -1,20 +1,48 @@
----
-layout: "post"
-title: "Microsoft Fabric 2025 Recap: Unified Data and AI Innovations"
-description: "This year-end recap highlights the major advancements in Microsoft Fabric throughout 2025, including unified data and AI innovation, improved platform security, modernization tooling, professional developer enhancements, and expanded AI integration like Copilot. Key updates include hands-on community events, security posture improvements, seamless data estate migration, richer developer experiences, and deeper alignment with the Microsoft data ecosystem. Looking ahead to 2026, Fabric’s rapid evolution continues to drive adoption and engagement among data professionals."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-2025-holiday-recap-unified-data-an-ai-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-2025-holiday-recap-unified-data-an-ai-innovation/
+title: 'Microsoft Fabric 2025 Recap: Unified Data and AI Innovations'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-12-16 09:00:00 +00:00
-permalink: "/2025-12-16-Microsoft-Fabric-2025-Recap-Unified-Data-and-AI-Innovations.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "ML", "Security"]
-tags: ["AI", "AI Functions", "Azure", "Azure Data Factory", "Azure SQL", "Coding", "Copilot", "Data Engineering", "Data Governance", "Data Science", "DevOps", "Fabric Cicd", "Fabric CLI", "Fabric Data Days", "Microsoft Fabric", "Migration Assistant", "ML", "Modernization", "News", "OneLake", "Outbound Access Protection", "Private Links", "Professional Developer Tools", "Real Time Intelligence", "Role Based Data Access", "Security", "SQL Server", "Terraform", "VS Code"]
-tags_normalized: ["ai", "ai functions", "azure", "azure data factory", "azure sql", "coding", "copilot", "data engineering", "data governance", "data science", "devops", "fabric cicd", "fabric cli", "fabric data days", "microsoft fabric", "migration assistant", "ml", "modernization", "news", "onelake", "outbound access protection", "private links", "professional developer tools", "real time intelligence", "role based data access", "security", "sql server", "terraform", "vs code"]
+tags:
+- AI Functions
+- Azure Data Factory
+- Azure SQL
+- Copilot
+- Data Engineering
+- Data Governance
+- Data Science
+- Fabric Cicd
+- Fabric CLI
+- Fabric Data Days
+- Microsoft Fabric
+- Migration Assistant
+- Modernization
+- OneLake
+- Outbound Access Protection
+- Private Links
+- Professional Developer Tools
+- Real Time Intelligence
+- Role Based Data Access
+- SQL Server
+- Terraform
+- VS Code
+- AI
+- Azure
+- DevOps
+- ML
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- ml
+- security
+primary_section: ai
 ---
-
 Microsoft Fabric Blog summarizes the platform's achievements in 2025, focusing on unified data and AI innovation, security upgrades, modernization, developer tooling, expanded Copilot access, and community involvement.<!--excerpt_end-->
 
 # Microsoft Fabric 2025 Recap: Unified Data and AI Innovations
@@ -32,21 +60,21 @@ As 2025 ends, Microsoft Fabric celebrates its second year with notable growth an
 ## Breakthrough Platform Advancements in 2025
 
 - **Security**:
-    - Outbound Access Protection: Organizations can now govern outbound connections for compliance.
-    - Private Links: Workspaces accessible exclusively through private Azure endpoints enhance network security.
-    - OneLake Security (preview): Role-based access control for granular data governance in Fabric compute engines.
+  - Outbound Access Protection: Organizations can now govern outbound connections for compliance.
+  - Private Links: Workspaces accessible exclusively through private Azure endpoints enhance network security.
+  - OneLake Security (preview): Role-based access control for granular data governance in Fabric compute engines.
 - **Modernization**:
-    - Migration Assistant: Streamlines workload transfer from Azure Synapse SQL pools to Fabric's lake-native environment.
-    - Azure Data Factory Pipeline Assessment (Preview): Evaluates readiness for migration to Fabric Data Factory, guiding modernization choices.
-    - Continued support for transforming and landing data into Fabric lakehouses and warehouses.
+  - Migration Assistant: Streamlines workload transfer from Azure Synapse SQL pools to Fabric's lake-native environment.
+  - Azure Data Factory Pipeline Assessment (Preview): Evaluates readiness for migration to Fabric Data Factory, guiding modernization choices.
+  - Continued support for transforming and landing data into Fabric lakehouses and warehouses.
 - **AI and Copilot Integration**:
-    - Copilot available across all paid SKUs: Generative AI for coding, SQL completions, KQL queries, orchestration troubleshooting, and conversational data exploration.
-    - General availability of AI functions: Developers (pro-code and no-code) can apply summarization, extraction, and classification directly in workflows.
+  - Copilot available across all paid SKUs: Generative AI for coding, SQL completions, KQL queries, orchestration troubleshooting, and conversational data exploration.
+  - General availability of AI functions: Developers (pro-code and no-code) can apply summarization, extraction, and classification directly in workflows.
 - **Developer Tooling and Productivity**:
-    - Browser-based advancements: IDE-like multitasking tabs, object explorer, focus mode for streamlined development.
-    - Fabric CLI: Programmatic resource management and CI/CD pipeline integration.
-    - VS Code & SSMS extensions: Familiar environment integrations for developers.
-    - DevOps enhancements: Terraform support and the fabric-cicd tool for declarative deployments and workflow automation.
+  - Browser-based advancements: IDE-like multitasking tabs, object explorer, focus mode for streamlined development.
+  - Fabric CLI: Programmatic resource management and CI/CD pipeline integration.
+  - VS Code & SSMS extensions: Familiar environment integrations for developers.
+  - DevOps enhancements: Terraform support and the fabric-cicd tool for declarative deployments and workflow automation.
 
 ## Upcoming Conferences
 

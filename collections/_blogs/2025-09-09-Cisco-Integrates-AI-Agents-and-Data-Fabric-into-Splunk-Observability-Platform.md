@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Cisco Integrates AI Agents and Data Fabric into Splunk Observability Platform"
-description: "This article by Mike Vizard covers Cisco’s recent announcements at Splunk .Conf25, detailing the addition of agentic AI to Splunk Observability, the launch of Cisco Data Fabric for large-scale machine data analytics, and enhanced integrations with AppDynamics and ThousandEyes. It explores how AI-driven automation and new analytics tools improve IT monitoring and operational efficiency, and highlights the broader industry trend toward converged observability, AI agents, and scalable data analysis in complex IT environments."
-author: "Mike Vizard"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/cisco-to-add-ai-agents-to-splunk-observability-platforms/?utm_source=rss&utm_medium=rss&utm_campaign=cisco-to-add-ai-agents-to-splunk-observability-platforms"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+external_url: https://devops.com/cisco-to-add-ai-agents-to-splunk-observability-platforms/?utm_source=rss&utm_medium=rss&utm_campaign=cisco-to-add-ai-agents-to-splunk-observability-platforms
+title: Cisco Integrates AI Agents and Data Fabric into Splunk Observability Platform
+author: Mike Vizard
+feed_name: DevOps Blog
 date: 2025-09-09 18:32:20 +00:00
-permalink: "/2025-09-09-Cisco-Integrates-AI-Agents-and-Data-Fabric-into-Splunk-Observability-Platform.html"
-categories: ["AI", "DevOps"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Automation", "APM", "Blogs", "Business Insights", "Cisco", "Cisco Data Fabric", "DevOps", "Digital Experience Analytics", "IT Monitoring", "Large Language Models", "LLMs", "Observability", "OpenTelemetry", "Social Facebook", "Social LinkedIn", "Social X", "Splunk", "Splunk Observability", "ThousandEyes"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai automation", "apm", "blogs", "business insights", "cisco", "cisco data fabric", "devops", "digital experience analytics", "it monitoring", "large language models", "llms", "observability", "opentelemetry", "social facebook", "social linkedin", "social x", "splunk", "splunk observability", "thousandeyes"]
+tags:
+- Agentic AI
+- AI Agents
+- AI Automation
+- APM
+- Business Insights
+- Cisco
+- Cisco Data Fabric
+- Digital Experience Analytics
+- IT Monitoring
+- Large Language Models
+- LLMs
+- Observability
+- OpenTelemetry
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Splunk
+- Splunk Observability
+- ThousandEyes
+- AI
+- DevOps
+- Blogs
+section_names:
+- ai
+- devops
+primary_section: ai
 ---
-
 Mike Vizard examines Cisco’s integration of agentic AI features and Data Fabric into its Splunk Observability platform, presenting a deeper look at how these capabilities automate IT monitoring and analysis.<!--excerpt_end-->
 
 # Cisco Integrates AI Agents and Data Fabric into Splunk Observability Platform
@@ -26,25 +43,25 @@ Cisco announced at Splunk .Conf25 a suite of artificial intelligence (AI) agents
 ## Key Highlights
 
 - **AI Agents for Observability:**
-    - Automate collection of telemetry data
-    - Detect IT issues and root causes
-    - Apply fixes, reducing manual intervention
-    - Leverage open source OpenTelemetry
+  - Automate collection of telemetry data
+  - Detect IT issues and root causes
+  - Apply fixes, reducing manual intervention
+  - Leverage open source OpenTelemetry
 
 - **Cisco Data Fabric:**
-    - Launched as a scalable platform to aggregate and analyze machine data
-    - Enables analytics without pre-ingestion into a single platform
-    - Will add support for time-series data analysis via multiple AI toolkits
+  - Launched as a scalable platform to aggregate and analyze machine data
+  - Enables analytics without pre-ingestion into a single platform
+  - Will add support for time-series data analysis via multiple AI toolkits
 
 - **Enhanced Splunk Platform Features:**
-    - Application Performance Management (APM) added
-    - New Digital Experience Analytics (DEA) module
-    - Business transaction monitoring (from AppDynamics origins)
-    - Tightened integration between Splunk Real User Monitoring (RUM) and Cisco ThousandEyes
+  - Application Performance Management (APM) added
+  - New Digital Experience Analytics (DEA) module
+  - Business transaction monitoring (from AppDynamics origins)
+  - Tightened integration between Splunk Real User Monitoring (RUM) and Cisco ThousandEyes
 
 - **Agentic Collaboration and AI Canvas:**
-    - Demonstration of Cisco AI Canvas, an agentic AI framework promoting collaboration across network, security, and DevOps teams
-    - Unified interface for real-time telemetry and AI insights
+  - Demonstration of Cisco AI Canvas, an agentic AI framework promoting collaboration across network, security, and DevOps teams
+  - Unified interface for real-time telemetry and AI insights
 
 ## Industry Perspective
 

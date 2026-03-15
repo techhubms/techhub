@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Introducing the Microsoft ODBC Driver for Fabric Data Engineering (Preview)"
-description: "This news article introduces the Microsoft ODBC Driver for Microsoft Fabric Data Engineering (Preview), an enterprise-grade connector that provides secure, reliable Spark SQL connectivity within Microsoft Fabric. It highlights key features, integration with lakehouse and OneLake, authentication options, and support for .NET, Python, and other ODBC-compatible applications."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/microsoft-odbc-driver-for-microsoft-fabric-data-engineering-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/microsoft-odbc-driver-for-microsoft-fabric-data-engineering-preview/
+title: Introducing the Microsoft ODBC Driver for Fabric Data Engineering (Preview)
+author: Microsoft Fabric Blog
+primary_section: ml
+feed_name: Microsoft Fabric Blog
 date: 2026-02-19 17:00:00 +00:00
-permalink: "/2026-02-19-Introducing-the-Microsoft-ODBC-Driver-for-Fabric-Data-Engineering-Preview.html"
-categories: ["Azure", "ML"]
-tags: [".NET", "Authentication", "Azure", "BI Tools", "Data Connectivity", "Data Engineering", "Data Integration", "Enterprise Security", "Lakehouse", "Microsoft Entra ID", "Microsoft Fabric", "ML", "News", "ODBC Driver", "OneLake", "Python", "Session Management", "Spark SQL"]
-tags_normalized: ["dotnet", "authentication", "azure", "bi tools", "data connectivity", "data engineering", "data integration", "enterprise security", "lakehouse", "microsoft entra id", "microsoft fabric", "ml", "news", "odbc driver", "onelake", "python", "session management", "spark sql"]
+tags:
+- .NET
+- Authentication
+- Azure
+- BI Tools
+- Data Connectivity
+- Data Engineering
+- Data Integration
+- Enterprise Security
+- Lakehouse
+- Microsoft Entra ID
+- Microsoft Fabric
+- ML
+- News
+- ODBC Driver
+- OneLake
+- Python
+- Session Management
+- Spark SQL
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Fabric Blog announces the Microsoft ODBC Driver for Fabric Data Engineering (Preview), detailing its secure Spark SQL connectivity for developers, data engineers, and administrators.<!--excerpt_end-->
 
 # Microsoft ODBC Driver for Microsoft Fabric Data Engineering (Preview)
@@ -25,7 +38,7 @@ ODBC (Open Database Connectivity) is a standardized protocol enabling client app
 
 As organizations increasingly depend on Apache Spark for large-scale data engineering and analytics, seamless integration with enterprise platforms like Microsoft Fabric becomes even more vital. The ODBC driver empowers developers, data engineers, and administrators to connect, query, and manage Spark workloads in Microsoft Fabric using a familiar ODBC interface, boosting productivity and enabling reliability.
 
-![Animated GIF demonstrating ODBC Data Source Administrator with a Fabric Spark data source.](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/02/Microsoft-ODBC-Driver.gif)
+![Animated GIF demonstrating ODBC Data Source Administrator with a Fabric Spark data source.](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/02/microsoft-odbc-driver.gif)
 
 *Figure 1: Getting started using the ODBC driver.*
 

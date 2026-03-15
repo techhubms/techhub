@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How to Debug a Web App Using Playwright MCP and GitHub Copilot"
-description: "This news post explains how developers can use GitHub Copilot alongside the Playwright MCP server to automate bug reproduction and debugging for web applications. It details how to configure the Playwright MCP server in VS Code, leverage Copilot's agent mode, and streamline the process of identifying and fixing issues, such as broken UI filters, with AI-assisted tooling. Real-world examples and practical configuration tips are included."
-author: "Christopher Harrison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/how-to-debug-a-web-app-with-playwright-mcp-and-github-copilot/
+title: How to Debug a Web App Using Playwright MCP and GitHub Copilot
+author: Christopher Harrison
+feed_name: The GitHub Blog
 date: 2025-09-05 16:00:00 +00:00
-permalink: "/2025-09-05-How-to-Debug-a-Web-App-Using-Playwright-MCP-and-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI & ML", "AI Assisted Testing", "AI Debugging", "Automation", "Bug Reproduction", "Coding", "Configuration", "End To End Testing", "GitHub Copilot", "JavaScript", "MCP", "News", "Playwright MCP", "Testing Frameworks", "VS Code", "VS Code Extensions", "Web App Debugging"]
-tags_normalized: ["agent mode", "ai", "ai and ml", "ai assisted testing", "ai debugging", "automation", "bug reproduction", "coding", "configuration", "end to end testing", "github copilot", "javascript", "mcp", "news", "playwright mcp", "testing frameworks", "vs code", "vs code extensions", "web app debugging"]
+tags:
+- Agent Mode
+- AI & ML
+- AI Assisted Testing
+- AI Debugging
+- Automation
+- Bug Reproduction
+- Configuration
+- End To End Testing
+- JavaScript
+- MCP
+- Playwright MCP
+- Testing Frameworks
+- VS Code
+- VS Code Extensions
+- Web App Debugging
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Christopher Harrison explains how to leverage GitHub Copilot and the Playwright MCP server to reproduce and debug web app issues, sharing practical setup steps and real debugging workflows.<!--excerpt_end-->
 
 # How to Debug a Web App Using Playwright MCP and GitHub Copilot
@@ -58,9 +73,9 @@ By integrating the Playwright MCP server with GitHub Copilot, you allow Copilot�
 
 Suppose you’re working on a crowdfunding platform for DevOps-themed board games, and a user reports that the "publisher filter" isn’t working. The issue provides full reproduction steps. Instead of manually testing, you prompt Copilot’s agent mode to:
 
-* Use Playwright MCP to walk through the repro steps
-* Confirm whether the bug exists
-* Inspect the relevant frontend and backend code
+- Use Playwright MCP to walk through the repro steps
+- Confirm whether the bug exists
+- Inspect the relevant frontend and backend code
 
 Copilot, aided by Playwright MCP, follows those steps in an isolated test, confirms the bug, and even suggests a fix (such as correcting a typo in the backend code). It then re-tests after applying the fix, verifying that the issue is resolved.
 

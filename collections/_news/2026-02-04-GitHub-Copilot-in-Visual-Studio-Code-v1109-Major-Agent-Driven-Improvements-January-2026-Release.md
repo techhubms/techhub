@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "GitHub Copilot in Visual Studio Code v1.109: Major Agent-Driven Improvements (January 2026 Release)"
-description: "A comprehensive overview of the January 2026 GitHub Copilot update for Visual Studio Code, detailing new agent-driven workflows, multiagent development features, session management improvements, Claude agent support, enhanced chat experience, security optimizations, and productivity updates for developers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-code-v1-109-january-release"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-04-github-copilot-in-visual-studio-code-v1-109-january-release
+title: 'GitHub Copilot in Visual Studio Code v1.109: Major Agent-Driven Improvements (January 2026 Release)'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-04 18:00:01 +00:00
-permalink: "/2026-02-04-GitHub-Copilot-in-Visual-Studio-Code-v1109-Major-Agent-Driven-Improvements-January-2026-Release.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Customization", "Agent Integration", "Agent Orchestration", "AI", "AI Coding Assistant", "Claude Agent", "Code Search", "Coding", "Copilot", "Copilot Chat", "Developer Productivity", "GitHub Copilot", "MCP Apps", "News", "Session Management", "Terminal Security", "VS Code", "VS Code Extensions"]
-tags_normalized: ["agent customization", "agent integration", "agent orchestration", "ai", "ai coding assistant", "claude agent", "code search", "coding", "copilot", "copilot chat", "developer productivity", "github copilot", "mcp apps", "news", "session management", "terminal security", "vs code", "vs code extensions"]
+tags:
+- Agent Customization
+- Agent Integration
+- Agent Orchestration
+- AI
+- AI Coding Assistant
+- Claude Agent
+- Code Search
+- Copilot
+- Copilot Chat
+- Developer Productivity
+- GitHub Copilot
+- MCP Apps
+- News
+- Session Management
+- Terminal Security
+- VS Code
+- VS Code Extensions
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison presents a detailed breakdown of GitHub Copilot’s January 2026 release for Visual Studio Code, highlighting enhanced agent-driven workflows, session management, Claude agent support, and improved developer experiences.<!--excerpt_end-->
 
 # GitHub Copilot in Visual Studio Code v1.109 – January 2026 Release

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Agent Orchestration: Strongly-Typed Inputs and Results in Semantic Kernel"
-description: "This video explores how developers can enhance AI agent workflows in Microsoft's Semantic Kernel by implementing strongly-typed input and output models. It covers defining structured input classes, applying custom transformations, and building modular, scalable, and maintainable AI systems."
-author: "Learn Microsoft AI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=-TsOdhaO7m4"
-viewing_mode: "internal"
-feed_name: "Learn Microsoft AI Youtube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCQf_yRJpsfyEiWWpt1MZ6vA"
+﻿---
+external_url: https://www.youtube.com/watch?v=-TsOdhaO7m4
+title: 'Agent Orchestration: Strongly-Typed Inputs and Results in Semantic Kernel'
+author: Learn Microsoft AI
+feed_name: Learn Microsoft AI Youtube
 date: 2025-06-06 08:34:23 +00:00
-permalink: "/2025-06-06-Agent-Orchestration-Strongly-Typed-Inputs-and-Results-in-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: ["Agent Orchestration", "AI", "AI Agent Workflow", "AI Development", "AI Orchestration", "C#", "Code Robustness", "Coding", "Custom Classes", "InputTransform", "Microsoft AI", "Modular Architecture", "ResultTransform", "Semantic Kernel", "Strongly Typed Models", "Structured Data", "Type Safe AI", "Videos"]
-tags_normalized: ["agent orchestration", "ai", "ai agent workflow", "ai development", "ai orchestration", "csharp", "code robustness", "coding", "custom classes", "inputtransform", "microsoft ai", "modular architecture", "resulttransform", "semantic kernel", "strongly typed models", "structured data", "type safe ai", "videos"]
+tags:
+- Agent Orchestration
+- AI Agent Workflow
+- AI Development
+- AI Orchestration
+- C#
+- Code Robustness
+- Custom Classes
+- InputTransform
+- Microsoft AI
+- Modular Architecture
+- ResultTransform
+- Semantic Kernel
+- Strongly Typed Models
+- Structured Data
+- Type Safe AI
+- AI
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Learn Microsoft AI presents a guide on leveraging strongly-typed input and output models within Semantic Kernel agent workflows, demonstrating techniques for building scalable, robust AI applications.<!--excerpt_end-->
 
 {% youtube -TsOdhaO7m4 %}

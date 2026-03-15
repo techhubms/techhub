@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Implementing the Backend-for-Frontend (BFF) Pattern with Azure API Management"
-description: "This article by SajalMukherjee details how to implement the Backend-for-Frontend (BFF) or Curated API pattern using Azure API Management (APIM). It explains the architectural advantages of BFF, how APIM's policy engine enables aggregation and transformation of backend services, scenarios where this pattern is recommended, policy examples, limitations, and technical considerations when shaping APIs for various client needs."
-author: "SajalMukherjee"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-the-backend-for-frontend-bff-curated-api-pattern/ba-p/4499880"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/implementing-the-backend-for-frontend-bff-curated-api-pattern/ba-p/4499880
+title: Implementing the Backend-for-Frontend (BFF) Pattern with Azure API Management
+author: SajalMukherjee
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-03-11 07:00:00 +00:00
-permalink: "/2026-03-11-Implementing-the-Backend-for-Frontend-BFF-Pattern-with-Azure-API-Management.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Aggregation", "API Design", "API Gateway", "API Policy", "APIM", "Authentication", "Azure", "Azure API Management", "Azure Container Apps", "Azure Functions", "Backend For Frontend", "BFF Pattern", "Caching", "Coding", "Community", "Cross Cutting Concerns", "Curated API", "DevOps", "Distributed Systems", "Frontend Optimization", "Payload Transformation", "Rate Limiting", "Response Aggregation"]
-tags_normalized: ["aggregation", "api design", "api gateway", "api policy", "apim", "authentication", "azure", "azure api management", "azure container apps", "azure functions", "backend for frontend", "bff pattern", "caching", "coding", "community", "cross cutting concerns", "curated api", "devops", "distributed systems", "frontend optimization", "payload transformation", "rate limiting", "response aggregation"]
+tags:
+- Aggregation
+- API Design
+- API Gateway
+- API Policy
+- APIM
+- Authentication
+- Azure
+- Azure API Management
+- Azure Container Apps
+- Azure Functions
+- Backend For Frontend
+- BFF Pattern
+- Caching
+- Community
+- Cross Cutting Concerns
+- Curated API
+- DevOps
+- Distributed Systems
+- Frontend Optimization
+- Payload Transformation
+- Rate Limiting
+- Response Aggregation
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 SajalMukherjee explores how Azure API Management enables the Backend-for-Frontend pattern, offering practical API orchestration and aggregation strategies to tailor APIs for diverse frontend needs.<!--excerpt_end-->
 
 # Implementing the Backend-for-Frontend (BFF) / Curated API Pattern Using Azure API Management

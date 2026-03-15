@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Smart Pipelines Orchestration: Designing Predictable Data Platforms on Shared Spark"
-description: "This article by Sally Dabbah outlines an orchestration pattern for Azure Synapse Analytics that enables developers to enforce business-driven workload priority on shared Spark pools. It details a strategy for classifying and orchestrating pipelines, improving deterministic execution without modifying Spark code or cluster configuration. Techniques for static and adaptive classification, as well as automation via Copilot-style agents, are discussed, making it highly relevant for teams building robust, efficient Microsoft analytics platforms."
-author: "Sally_Dabbah"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/smart-pipelines-orchestration-designing-predictable-data/ba-p/4491766"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/smart-pipelines-orchestration-designing-predictable-data/ba-p/4491766
+title: 'Smart Pipelines Orchestration: Designing Predictable Data Platforms on Shared Spark'
+author: Sally_Dabbah
+primary_section: ml
+feed_name: Microsoft Tech Community
 date: 2026-02-08 09:21:51 +00:00
-permalink: "/2026-02-08-Smart-Pipelines-Orchestration-Designing-Predictable-Data-Platforms-on-Shared-Spark.html"
-categories: ["Azure", "ML"]
-tags: ["Adaptive Prioritization", "Analytics", "Automation", "Azure", "Azure Data Factory", "Azure Synapse Analytics", "Business Intelligence", "Community", "Copilot Agent", "Data Engineering", "Data Platform", "Microsoft Fabric", "ML", "Pipeline Orchestration", "Priority Scheduling", "Shared Compute", "Spark", "Workload Classification"]
-tags_normalized: ["adaptive prioritization", "analytics", "automation", "azure", "azure data factory", "azure synapse analytics", "business intelligence", "community", "copilot agent", "data engineering", "data platform", "microsoft fabric", "ml", "pipeline orchestration", "priority scheduling", "shared compute", "spark", "workload classification"]
+tags:
+- Adaptive Prioritization
+- Analytics
+- Automation
+- Azure
+- Azure Data Factory
+- Azure Synapse Analytics
+- Business Intelligence
+- Community
+- Copilot Agent
+- Data Engineering
+- Data Platform
+- Microsoft Fabric
+- ML
+- Pipeline Orchestration
+- Priority Scheduling
+- Shared Compute
+- Spark
+- Workload Classification
+section_names:
+- azure
+- ml
 ---
-
 Sally Dabbah explains how to orchestrate Azure Synapse Analytics pipelines for predictable execution on shared Spark pools. Key techniques include workload prioritization and adaptive orchestration strategies.<!--excerpt_end-->
 
 # Smart Pipelines Orchestration: Designing Predictable Data Platforms on Shared Spark

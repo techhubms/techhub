@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "MCP vs mcp-cli: Dynamic Tool Discovery for Token-Efficient AI Agents"
-description: "This in-depth guide by anbonagi explores the Model Context Protocol (MCP) and mcp-cli, comparing traditional static tool loading with dynamic discovery for AI agents. It details how mcp-cli enables token-efficient integrations, demystifies key differences, use cases, and architectural benefits for developers building modern AI agent systems."
-author: "anbonagi"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-vs-mcp-cli-dynamic-tool-discovery-for-token-efficient-ai/ba-p/4494272"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/mcp-vs-mcp-cli-dynamic-tool-discovery-for-token-efficient-ai/ba-p/4494272
+title: 'MCP vs mcp-cli: Dynamic Tool Discovery for Token-Efficient AI Agents'
+author: anbonagi
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-06 08:00:00 +00:00
-permalink: "/2026-03-06-MCP-vs-mcp-cli-Dynamic-Tool-Discovery-for-Token-Efficient-AI-Agents.html"
-categories: ["AI"]
-tags: ["Agent Skills", "AI", "AI Agents", "Automation", "Bun", "CLI Tools", "Community", "Context Window", "Dev Tools", "Dynamic Context Discovery", "GitHub", "Integration", "MCP", "Mcp CLI", "Protocol", "Schema", "Server Integration", "Token Efficiency", "Tool Discovery"]
-tags_normalized: ["agent skills", "ai", "ai agents", "automation", "bun", "cli tools", "community", "context window", "dev tools", "dynamic context discovery", "github", "integration", "mcp", "mcp cli", "protocol", "schema", "server integration", "token efficiency", "tool discovery"]
+tags:
+- Agent Skills
+- AI
+- AI Agents
+- Automation
+- Bun
+- CLI Tools
+- Community
+- Context Window
+- Dev Tools
+- Dynamic Context Discovery
+- GitHub
+- Integration
+- MCP
+- Mcp CLI
+- Protocol
+- Schema
+- Server Integration
+- Token Efficiency
+- Tool Discovery
+section_names:
+- ai
 ---
-
 anbonagi presents a comprehensive analysis of the Model Context Protocol (MCP) and mcp-cli tool, highlighting dynamic tool discovery approaches for AI agents and strategies to optimize token usage in real-world integrations.<!--excerpt_end-->
 
 # MCP vs mcp-cli: Dynamic Tool Discovery for Token-Efficient AI Agents

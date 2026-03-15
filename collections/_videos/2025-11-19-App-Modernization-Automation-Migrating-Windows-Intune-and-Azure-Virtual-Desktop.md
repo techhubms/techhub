@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "App Modernization Automation: Migrating Windows, Intune, and Azure Virtual Desktop"
-description: "This live demo session from Microsoft Ignite 2025 focuses on using Rimo3 automation to accelerate modernization projects. Key topics include migrating from SCCM to Intune, upgrading to Windows 11, and transitioning to Azure Virtual Desktop (AVD) and Windows 365. The video details reducing manual testing, resolving app conflicts, tracking migration progress, and maintaining a resilient IT environment using Microsoft technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=8Z0dCQWApg8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=8Z0dCQWApg8
+title: 'App Modernization Automation: Migrating Windows, Intune, and Azure Virtual Desktop'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-19 14:44:36 +00:00
-permalink: "/2025-11-19-App-Modernization-Automation-Migrating-Windows-Intune-and-Azure-Virtual-Desktop.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["App Testing", "Application Readiness", "Automation", "Azure", "Azure Virtual Desktop", "Cloud Desktop", "Dashboard", "DevOps", "Intune", "IT Operations", "Microsoft Ignite", "Migrateandmodernizeyourestate", "Migration", "Modernization", "MSIgnite", "OS Upgrade", "Rimo3", "SCCM", "Security", "Videos", "Windows 11", "Windows 365"]
-tags_normalized: ["app testing", "application readiness", "automation", "azure", "azure virtual desktop", "cloud desktop", "dashboard", "devops", "intune", "it operations", "microsoft ignite", "migrateandmodernizeyourestate", "migration", "modernization", "msignite", "os upgrade", "rimo3", "sccm", "security", "videos", "windows 11", "windows 365"]
+tags:
+- App Testing
+- Application Readiness
+- Automation
+- Azure Virtual Desktop
+- Cloud Desktop
+- Dashboard
+- Intune
+- IT Operations
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- Migration
+- Modernization
+- MSIgnite
+- OS Upgrade
+- Rimo3
+- SCCM
+- Windows 11
+- Windows 365
+- Azure
+- DevOps
+- Security
+- Videos
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Presented by James Graham and Samit Halvadia at Microsoft Ignite, this video demonstrates how Rimo3 automation helps IT teams quickly migrate and test applications across Windows 11, Intune, and Azure Virtual Desktop.<!--excerpt_end-->
 
 {% youtube 8Z0dCQWApg8 %}

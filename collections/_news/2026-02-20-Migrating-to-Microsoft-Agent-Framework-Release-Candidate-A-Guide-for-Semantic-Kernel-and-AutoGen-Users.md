@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Migrating to Microsoft Agent Framework Release Candidate: A Guide for Semantic Kernel and AutoGen Users"
-description: "This announcement introduces the Microsoft Agent Framework Release Candidate for both .NET and Python, offering guidance for developers migrating from Semantic Kernel and AutoGen. It explores framework features, agent creation, multi-agent workflows, and hands-on code examples, targeting AI and orchestration developers working within Microsoft’s ecosystem."
-author: "Dmytro Struk, Shawn Henry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/migrate-your-semantic-kernel-and-autogen-projects-to-microsoft-agent-framework-release-candidate/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/migrate-your-semantic-kernel-and-autogen-projects-to-microsoft-agent-framework-release-candidate/
+title: 'Migrating to Microsoft Agent Framework Release Candidate: A Guide for Semantic Kernel and AutoGen Users'
+author: Dmytro Struk, Shawn Henry
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-02-20 05:52:57 +00:00
-permalink: "/2026-02-20-Migrating-to-Microsoft-Agent-Framework-Release-Candidate-A-Guide-for-Semantic-Kernel-and-AutoGen-Users.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "Agent Framework", "Agent Migration", "Agent Orchestration", "AI", "AI Agents", "AutoGen", "Azure", "Azure OpenAI", "Code Example", "Coding", "Graph Based Workflows", "MCP", "Microsoft Agent Framework", "Microsoft Foundry", "Multi Agent Systems", "News", "NuGet", "OpenAI", "PyPI", "Python", "Semantic Kernel"]
-tags_normalized: ["dotnet", "agent framework", "agent migration", "agent orchestration", "ai", "ai agents", "autogen", "azure", "azure openai", "code example", "coding", "graph based workflows", "mcp", "microsoft agent framework", "microsoft foundry", "multi agent systems", "news", "nuget", "openai", "pypi", "python", "semantic kernel"]
+tags:
+- .NET
+- Agent Framework
+- Agent Migration
+- Agent Orchestration
+- AI
+- AI Agents
+- AutoGen
+- Azure
+- Azure OpenAI
+- Code Example
+- Graph Based Workflows
+- MCP
+- Microsoft Agent Framework
+- Microsoft Foundry
+- Multi Agent Systems
+- News
+- NuGet
+- OpenAI
+- PyPI
+- Python
+- Semantic Kernel
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Dmytro Struk and Shawn Henry introduce the Microsoft Agent Framework Release Candidate for .NET and Python, explaining how developers can migrate from Semantic Kernel and AutoGen to this unified agent orchestration platform.<!--excerpt_end-->
 
 # Migrating to Microsoft Agent Framework Release Candidate: A Guide for Semantic Kernel and AutoGen Users

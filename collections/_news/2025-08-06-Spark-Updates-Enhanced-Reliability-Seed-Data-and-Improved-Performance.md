@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Spark Updates: Enhanced Reliability, Seed Data, and Improved Performance"
-description: "This news post outlines a series of improvements to Spark, a GitHub-hosted app building platform, with a focus on improved reliability, prepopulated seed data on new app creation, performance, and user experience. New features include fixes to agent iteration errors, faster app build iterations, improved model failover, video asset previews, and streamlined repository creation. Builders using Spark will benefit from a smoother workflow and enhanced app previews to expedite development cycles."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-08-06-spark-improvements-enhanced-reliability-seed-data-and-performance-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-08-06-spark-improvements-enhanced-reliability-seed-data-and-performance-updates
+title: 'Spark Updates: Enhanced Reliability, Seed Data, and Improved Performance'
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-08-06 15:15:39 +00:00
-permalink: "/2025-08-06-Spark-Updates-Enhanced-Reliability-Seed-Data-and-Improved-Performance.html"
-categories: ["DevOps"]
-tags: ["Agent Iterations", "App Development", "Development Tools", "DevOps", "GitHub", "Model Failover", "News", "Performance Updates", "Repository Creation", "Seed Data", "Spark", "User Notifications", "Workflow Reliability"]
-tags_normalized: ["agent iterations", "app development", "development tools", "devops", "github", "model failover", "news", "performance updates", "repository creation", "seed data", "spark", "user notifications", "workflow reliability"]
+tags:
+- Agent Iterations
+- App Development
+- Development Tools
+- GitHub
+- Model Failover
+- Performance Updates
+- Repository Creation
+- Seed Data
+- Spark
+- User Notifications
+- Workflow Reliability
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Allison discusses recent Spark updates delivered by GitHub, focusing on reliability, seed data prepopulation, performance enhancements, and user experience improvements for app developers.<!--excerpt_end-->
 
 # Spark Updates: Enhanced Reliability, Seed Data, and Improved Performance

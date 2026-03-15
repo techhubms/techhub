@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Announcing the General Availability of the Azure Maps Geocode Autocomplete API"
-description: "This post introduces the general availability of the Azure Maps Geocode Autocomplete API, a REST service that provides predictive and structured location suggestions for applications. It covers new features in the GA release, technical capabilities for developers, usage workflows, sample API requests, and resources to help migrate from Bing Maps Autosuggest."
-author: "sinnypan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-maps-blog/announcing-the-general-availability-of-the-azure-maps-geocode/ba-p/4499242
+title: Announcing the General Availability of the Azure Maps Geocode Autocomplete API
+author: sinnypan
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-03-04 17:22:55 +00:00
-permalink: "/2026-03-04-Announcing-the-General-Availability-of-the-Azure-Maps-Geocode-Autocomplete-API.html"
-categories: ["Azure", "Coding"]
-tags: ["Address Search", "API", "Autocomplete", "Azure", "Azure Maps", "Bing Maps Migration", "Coding", "Community", "Developer Workflow", "Entity Suggestions", "GA Release", "Geocoding", "Location Services", "Multilingual", "REST", "Result Ranking", "Typeahead", "Web Application Integration"]
-tags_normalized: ["address search", "api", "autocomplete", "azure", "azure maps", "bing maps migration", "coding", "community", "developer workflow", "entity suggestions", "ga release", "geocoding", "location services", "multilingual", "rest", "result ranking", "typeahead", "web application integration"]
+tags:
+- Address Search
+- API
+- Autocomplete
+- Azure
+- Azure Maps
+- Bing Maps Migration
+- Community
+- Developer Workflow
+- Entity Suggestions
+- GA Release
+- Geocoding
+- Location Services
+- Multilingual
+- REST
+- Result Ranking
+- Typeahead
+- Web Application Integration
+- .NET
+section_names:
+- azure
+- dotnet
 ---
-
 sinnypan announces the GA release of Azure Maps Geocode Autocomplete API, detailing its new capabilities, API usage, and how developers can create fast, structured location search in their applications.<!--excerpt_end-->
 
 # Announcing the General Availability of the Azure Maps Geocode Autocomplete API

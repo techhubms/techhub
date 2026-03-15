@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Decoding On-Premises ADC Rules: Migration to Azure Application Gateway"
-description: "This guide, authored by vnamani, provides a practical blueprint for migrating on-premises Application Delivery Controller (ADC) rules—such as iRules from F5 and Citrix policies—to Azure Application Gateway. It covers key feature mappings, supported and unsupported scenarios, best practices, and Azure-native tools for ensuring secure and scalable cloud deployments."
-author: "vnamani"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/decoding-on-premises-adc-rules-migration-to-azure-application/ba-p/4439156"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/decoding-on-premises-adc-rules-migration-to-azure-application/ba-p/4439156
+title: 'Decoding On-Premises ADC Rules: Migration to Azure Application Gateway'
+author: vnamani
+feed_name: Microsoft Tech Community
 date: 2025-08-06 18:41:57 +00:00
-permalink: "/2025-08-06-Decoding-On-Premises-ADC-Rules-Migration-to-Azure-Application-Gateway.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["ADC Migration", "Application Security", "ARM Templates", "Azure", "Azure Application Gateway", "Azure Front Door", "Azure Monitor", "Citrix Policy Expressions", "Cloud Networking", "Community", "DevOps", "Geo Blocking", "Header Rewrite", "IaC", "Irules", "Load Balancing", "Security", "Terraform", "Traffic Management", "WAF", "Web Application Firewall", "Zone Redundancy"]
-tags_normalized: ["adc migration", "application security", "arm templates", "azure", "azure application gateway", "azure front door", "azure monitor", "citrix policy expressions", "cloud networking", "community", "devops", "geo blocking", "header rewrite", "iac", "irules", "load balancing", "security", "terraform", "traffic management", "waf", "web application firewall", "zone redundancy"]
+tags:
+- ADC Migration
+- Application Security
+- ARM Templates
+- Azure Application Gateway
+- Azure Front Door
+- Azure Monitor
+- Citrix Policy Expressions
+- Cloud Networking
+- Geo Blocking
+- Header Rewrite
+- IaC
+- Irules
+- Load Balancing
+- Terraform
+- Traffic Management
+- WAF
+- Web Application Firewall
+- Zone Redundancy
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 vnamani delivers a comprehensive walkthrough on migrating on-premises ADC rules to Azure Application Gateway, breaking down feature mapping, Azure-native alternatives, and how to leverage infrastructure-as-code and cloud security best practices.<!--excerpt_end-->
 
 # Decoding On-Premises ADC Rules: Migration to Azure Application Gateway

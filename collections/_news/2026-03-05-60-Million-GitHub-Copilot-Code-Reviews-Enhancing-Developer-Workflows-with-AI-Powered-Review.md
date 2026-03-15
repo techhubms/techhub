@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "60 Million GitHub Copilot Code Reviews: Enhancing Developer Workflows with AI-Powered Review"
-description: "Ria Gopu details the rapid growth and key improvements in GitHub Copilot code review, an AI-powered code review tool now handling one in five code reviews on GitHub. The article covers the evolution of Copilot's agentic architecture, new strategies for raising signal-to-noise, continuous feedback loops, and how organizations are integrating AI review into their workflows."
-author: "Ria Gopu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/60-million-copilot-code-reviews-and-counting/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/60-million-copilot-code-reviews-and-counting/
+title: '60 Million GitHub Copilot Code Reviews: Enhancing Developer Workflows with AI-Powered Review'
+author: Ria Gopu
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 20:10:43 +00:00
-permalink: "/2026-03-05-60-Million-GitHub-Copilot-Code-Reviews-Enhancing-Developer-Workflows-with-AI-Powered-Review.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Architecture", "AI", "AI & ML", "AI in Code Review", "Automation", "Batch Autofixes", "Code Quality", "Coding", "Coding Agent", "Continuous Feedback", "Copilot Code Review", "Developer Productivity", "Developer Tools", "DevOps", "DevOps Workflow", "Generative AI", "GitHub Actions", "GitHub Copilot", "GitHub Copilot Code Review", "News", "Pull Request Review", "Review Automation", "Software Development"]
-tags_normalized: ["agentic architecture", "ai", "ai and ml", "ai in code review", "automation", "batch autofixes", "code quality", "coding", "coding agent", "continuous feedback", "copilot code review", "developer productivity", "developer tools", "devops", "devops workflow", "generative ai", "github actions", "github copilot", "github copilot code review", "news", "pull request review", "review automation", "software development"]
+tags:
+- Agentic Architecture
+- AI
+- AI & ML
+- AI in Code Review
+- Automation
+- Batch Autofixes
+- Code Quality
+- Coding Agent
+- Continuous Feedback
+- Copilot Code Review
+- Developer Productivity
+- Developer Tools
+- DevOps
+- DevOps Workflow
+- Generative AI
+- GitHub Actions
+- GitHub Copilot
+- GitHub Copilot Code Review
+- News
+- Pull Request Review
+- Review Automation
+- Software Development
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Ria Gopu explores how GitHub Copilot code review—now with 60 million reviews—uses AI, continuous feedback, and an agentic approach to transform code review for developers and teams.<!--excerpt_end-->
 
 # 60 Million GitHub Copilot Code Reviews: Enhancing Developer Workflows with AI-Powered Review

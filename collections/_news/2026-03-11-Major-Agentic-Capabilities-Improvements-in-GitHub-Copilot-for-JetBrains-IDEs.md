@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Major Agentic Capabilities Improvements in GitHub Copilot for JetBrains IDEs"
-description: "This update covers significant feature enhancements for GitHub Copilot in JetBrains IDEs. It introduces generally available agentic capabilities like custom agents, sub-agents, agent hooks, improved model selection, better user experience, and workflow optimizations. Customization options and stability improvements help developers tailor Copilot to their workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-11-major-agentic-capabilities-improvements-in-github-copilot-for-jetbrains-ides
+title: Major Agentic Capabilities Improvements in GitHub Copilot for JetBrains IDEs
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-11 16:40:03 +00:00
-permalink: "/2026-03-11-Major-Agentic-Capabilities-Improvements-in-GitHub-Copilot-for-JetBrains-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Hooks", "Agentic Capabilities", "AI", "Auto Model Selection", "Chat Panel", "Copilot", "Custom Agents", "Developer Tools", "GitHub Copilot", "IDE Extensions", "Improvement", "Instruction Files", "JetBrains IDEs", "MCP", "Model Reasoning", "News", "Plan Agent", "Sub Agents", "User Experience"]
-tags_normalized: ["agent hooks", "agentic capabilities", "ai", "auto model selection", "chat panel", "copilot", "custom agents", "developer tools", "github copilot", "ide extensions", "improvement", "instruction files", "jetbrains ides", "mcp", "model reasoning", "news", "plan agent", "sub agents", "user experience"]
+tags:
+- Agent Hooks
+- Agentic Capabilities
+- AI
+- Auto Model Selection
+- Chat Panel
+- Copilot
+- Custom Agents
+- Developer Tools
+- GitHub Copilot
+- IDE Extensions
+- Improvement
+- Instruction Files
+- JetBrains IDEs
+- MCP
+- Model Reasoning
+- News
+- Plan Agent
+- Sub Agents
+- User Experience
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details major improvements in GitHub Copilot for JetBrains IDEs, focusing on new agentic capabilities, user experience enhancements, and advanced customization for developers.<!--excerpt_end-->
 
 # Major Agentic Capabilities Improvements in GitHub Copilot for JetBrains IDEs

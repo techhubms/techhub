@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Keycloak Authentication with ASP.NET Core Web API and Blazor WebAssembly"
-description: "This article by Marinko Spasojević provides a comprehensive guide on integrating Keycloak authentication with a Blazor WebAssembly frontend and ASP.NET Core Web API backend, covering setup, configuration, secure user authentication, and role-based authorization using .NET technologies."
-author: "Marinko Spasojević"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+external_url: https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/
+title: Keycloak Authentication with ASP.NET Core Web API and Blazor WebAssembly
+author: Marinko Spasojević
+feed_name: Code Maze Blog
 date: 2025-02-17 07:59:06 +00:00
-permalink: "/2025-02-17-Keycloak-Authentication-With-ASPNET-Core-Web-API-and-Blazor-WebAssembly.html"
-categories: ["Coding", "Security"]
-tags: [".NET", "ASP.NET Core", "Asp.net Core Web API", "Authentication", "Authorization", "Blazor WebAssembly", "Blogs", "Coding", "Docker", "HttpClientFactory", "Identity And Access Management", "JWT", "Keycloak", "Microsoft.AspNetCore.Authentication.JwtBearer", "Microsoft.AspNetCore.Components.WebAssembly.Authentication", "OAuth2", "OpenID Connect", "Security", "Web API"]
-tags_normalized: ["dotnet", "aspdotnet core", "aspdotnet core web api", "authentication", "authorization", "blazor webassembly", "blogs", "coding", "docker", "httpclientfactory", "identity and access management", "jwt", "keycloak", "microsoftdotaspnetcoredotauthenticationdotjwtbearer", "microsoftdotaspnetcoredotcomponentsdotwebassemblydotauthentication", "oauth2", "openid connect", "security", "web api"]
+tags:
+- .NET
+- ASP.NET Core
+- Asp.net Core Web API
+- Authentication
+- Authorization
+- Blazor WebAssembly
+- Docker
+- HttpClientFactory
+- Identity And Access Management
+- JWT
+- Keycloak
+- Microsoft.AspNetCore.Authentication.JwtBearer
+- Microsoft.AspNetCore.Components.WebAssembly.Authentication
+- OAuth2
+- OpenID Connect
+- Web API
+- Security
+- Blogs
+section_names:
+- dotnet
+- security
+primary_section: dotnet
 ---
-
 In this article, Marinko Spasojević details how to integrate Keycloak authentication with both a Blazor WebAssembly client application and an ASP.NET Core Web API backend, providing step-by-step guidance and sample configurations.<!--excerpt_end-->
 
 # Keycloak Authentication with ASP.NET Core Web API and Blazor WebAssembly
@@ -254,6 +267,6 @@ For extensions such as role-based authorization, refer to [how to use roles with
 
 ---
 
-*This article is adapted for technical reference and is authored by Marinko Spasojević on Code Maze.*
+_This article is adapted for technical reference and is authored by Marinko Spasojević on Code Maze._
 
 This post appeared first on "Code Maze Blog". [Read the entire article here](https://code-maze.com/keycloak-authentication-with-asp-net-core-web-api-and-blazor-webassembly/)

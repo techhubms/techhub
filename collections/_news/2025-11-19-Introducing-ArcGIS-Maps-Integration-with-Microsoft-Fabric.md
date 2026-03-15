@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Introducing ArcGIS Maps Integration with Microsoft Fabric"
-description: "This article presents ArcGIS Maps for Microsoft Fabric, detailing how Esri’s advanced geospatial analytics are integrated with Fabric’s data engineering capabilities. You’ll learn about interactive mapping, OneLake and Power BI integration, AI-powered analysis with Arcade Assistant, and security features for scalable organizational use."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/unlocking-geospatial-intelligence-in-microsoft-fabric-with-esris-arcgis-maps-workload-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/unlocking-geospatial-intelligence-in-microsoft-fabric-with-esris-arcgis-maps-workload-preview/
+title: Introducing ArcGIS Maps Integration with Microsoft Fabric
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-19 12:00:00 +00:00
-permalink: "/2025-11-19-Introducing-ArcGIS-Maps-Integration-with-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Powered Mapping", "Arcade Assistant", "ArcGIS Maps", "Attribute Table", "Azure", "Clustering", "Data Engineering", "Data Visualization", "GeoAnalytics", "Geospatial Analytics", "Heat Maps", "Interactive Maps", "Living Atlas", "Microsoft Fabric", "ML", "News", "OneLake", "Power BI", "Spark Notebooks"]
-tags_normalized: ["ai", "ai powered mapping", "arcade assistant", "arcgis maps", "attribute table", "azure", "clustering", "data engineering", "data visualization", "geoanalytics", "geospatial analytics", "heat maps", "interactive maps", "living atlas", "microsoft fabric", "ml", "news", "onelake", "power bi", "spark notebooks"]
+tags:
+- AI Powered Mapping
+- Arcade Assistant
+- ArcGIS Maps
+- Attribute Table
+- Clustering
+- Data Engineering
+- Data Visualization
+- GeoAnalytics
+- Geospatial Analytics
+- Heat Maps
+- Interactive Maps
+- Living Atlas
+- Microsoft Fabric
+- OneLake
+- Power BI
+- Spark Notebooks
+- AI
+- Azure
+- ML
+- News
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Microsoft Fabric Blog introduces ArcGIS Maps for Microsoft Fabric, an integration that brings Esri’s geospatial analytics and AI-assisted mapping to Fabric, empowering data professionals with advanced visualization and analysis tools.<!--excerpt_end-->
 
 # Introducing ArcGIS Maps Integration with Microsoft Fabric

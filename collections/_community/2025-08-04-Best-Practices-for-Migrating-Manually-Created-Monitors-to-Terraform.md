@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Best Practices for Migrating Manually Created Monitors to Terraform"
-description: "The author seeks community advice on transitioning Datadog monitors created manually to Terraform management. The focus is on tools for export, migration steps, avoiding pitfalls like drift and duplication, and enforcing configuration management via Infrastructure as Code. Experiences and lessons are requested."
-author: "JayDee2306"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/devops/comments/1mhho6n/best_practices_for_migrating_manually_created/"
-viewing_mode: "external"
-feed_name: "Reddit DevOps"
-feed_url: "https://www.reddit.com/r/devops/.rss"
+﻿---
+external_url: https://www.reddit.com/r/devops/comments/1mhho6n/best_practices_for_migrating_manually_created/
+title: Best Practices for Migrating Manually Created Monitors to Terraform
+author: JayDee2306
+feed_name: Reddit DevOps
 date: 2025-08-04 16:09:23 +00:00
-permalink: "/2025-08-04-Best-Practices-for-Migrating-Manually-Created-Monitors-to-Terraform.html"
-categories: ["DevOps"]
-tags: ["Automation", "Best Practices", "Community", "Configuration Management", "Datadog", "DevOps", "IaC", "Migration", "Monitoring", "Resource Drift", "Terraform", "Version Control"]
-tags_normalized: ["automation", "best practices", "community", "configuration management", "datadog", "devops", "iac", "migration", "monitoring", "resource drift", "terraform", "version control"]
+tags:
+- Automation
+- Best Practices
+- Configuration Management
+- Datadog
+- IaC
+- Migration
+- Monitoring
+- Resource Drift
+- Terraform
+- Version Control
+- DevOps
+- Community
+section_names:
+- devops
+primary_section: devops
 ---
-
 Authored by JayDee2306, this article explores community-driven strategies for migrating Datadog monitors into Terraform, highlighting best practices and lessons learned.<!--excerpt_end-->
 
 ## Migrating Manually Created Monitors to Terraform: Community Best Practices

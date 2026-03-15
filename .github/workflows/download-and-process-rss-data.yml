@@ -21,13 +21,13 @@ jobs:
       RSS_BRANCH: "rss-updates"
     steps:
       - name: Harden the runner (Audit all outbound calls)
-        uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+        uses: step-security/harden-runner@58077d3c7e43986b6b15fba718e8ea69e387dfcc # v2.15.1
         with:
           egress-policy: audit
 
       - name: Generate App Token
         id: app-token
-        uses: actions/create-github-app-token@d72941d797fd3113feb6b93fd0dec494b13a2547 # v1.12.0
+        uses: actions/create-github-app-token@f8d387b68d61c58ab83c6c016672934102569859 # v3.0.0
         with:
           app-id: ${{ secrets.RSS_APP_APPID }}
           private-key: ${{ secrets.RSS_APP_PRIVATEKEY }}
@@ -40,7 +40,7 @@ jobs:
           echo "Repository: ${{ github.repository }}"
           
       - name: Checkout RSS branch
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: ${{ env.RSS_BRANCH }}
           fetch-depth: 0
@@ -221,8 +221,7 @@ jobs:
               "${{ github.repository }}" `
               "$env:TOKEN" `
               -WorkspaceDirectory "${{ github.workspace }}" `
-              -Endpoint "https://oai-techhub.openai.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2025-01-01-preview" `
-              -Model "gpt-4.1" `
+              -Environment "prod" `
               -RateLimitPreventionDelay 10
             Write-Host "✅ RSS data processing completed"
           } catch {
@@ -382,7 +381,7 @@ jobs:
 
       - name: Checkout main branch
         if: env.SHOULD_COPY == 'true' && always() && !cancelled()
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           ref: main
           path: main-workspace

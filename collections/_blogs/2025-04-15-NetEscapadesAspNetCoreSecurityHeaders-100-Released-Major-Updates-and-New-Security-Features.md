@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "NetEscapades.AspNetCore.SecurityHeaders 1.0.0 Released: Major Updates and New Security Features"
-description: "Andrew Lock announces the release of NetEscapades.AspNetCore.SecurityHeaders 1.0.0, detailing key new features, changes to supported frameworks, default header adjustments, enhanced API support, obsoleted headers, and improved customization for ASP.NET Core security headers."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
+title: 'NetEscapades.AspNetCore.SecurityHeaders 1.0.0 Released: Major Updates and New Security Features'
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-04-15 09:00:00 +00:00
-permalink: "/2025-04-15-NetEscapadesAspNetCoreSecurityHeaders-100-Released-Major-Updates-and-New-Security-Features.html"
-categories: ["Coding", "Security"]
-tags: [".NET Core", "API Security", "ASP.NET Core", "Blogs", "Coding", "Content Security Policy", "HTTP Headers", "Middleware", "NetEscapades.AspNetCore.SecurityHeaders", "Nonce Generation", "OWASP", "Permissions Policy", "Security", "Security Headers", "Trusted Types"]
-tags_normalized: ["dotnet core", "api security", "aspdotnet core", "blogs", "coding", "content security policy", "http headers", "middleware", "netescapadesdotaspnetcoredotsecurityheaders", "nonce generation", "owasp", "permissions policy", "security", "security headers", "trusted types"]
+tags:
+- .NET Core
+- API Security
+- ASP.NET Core
+- Content Security Policy
+- HTTP Headers
+- Middleware
+- NetEscapades.AspNetCore.SecurityHeaders
+- Nonce Generation
+- OWASP
+- Permissions Policy
+- Security Headers
+- Trusted Types
+- Security
+- Blogs
+- .NET
+section_names:
+- dotnet
+- security
+primary_section: dotnet
 ---
-
 Andrew Lock introduces NetEscapades.AspNetCore.SecurityHeaders 1.0.0, outlining extensive new features, updates, and best practices for integrating enhanced security headers in ASP.NET Core applications.<!--excerpt_end-->
 
 ## NetEscapades.AspNetCore.SecurityHeaders 1.0.0 Released: Major Updates and New Security Features

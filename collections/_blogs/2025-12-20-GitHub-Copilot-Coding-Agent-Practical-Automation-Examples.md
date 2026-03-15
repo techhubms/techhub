@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent: Practical Automation Examples"
-description: "This post by Rob Bos provides an in-depth walkthrough of how to use the GitHub Copilot Coding Agent to automate development workflows. It covers where and how to launch the agent (VS Code, GitHub UI, repo context, chat), architecture and security details, and real-world prompts for tasks such as fixing GitHub Actions workflows, adding repository functionality, and bootstrapping projects. The guide offers practical screenshots and hands-on insights for developers aiming to use GitHub Copilot’s automation features effectively."
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example"
-viewing_mode: "external"
-feed_name: "Rob Bos' Blog"
-feed_url: "https://devopsjournal.io/blog/atom.xml"
+﻿---
+external_url: https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example
+title: 'GitHub Copilot Coding Agent: Practical Automation Examples'
+author: Rob Bos
+feed_name: Rob Bos' Blog
 date: 2025-12-20 00:00:00 +00:00
-permalink: "/2025-12-20-GitHub-Copilot-Coding-Agent-Practical-Automation-Examples.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Blogs", "Cloud Agents", "Coding", "Continuous Integration", "Copilot Chat", "Developer Tools", "DevOps", "DevOps Automation", "GitHub Actions", "GitHub Copilot", "GitHub Copilot Coding Agent", "GitHub UI", "Private MCP Registry", "Prompt Engineering", "Repository Management", "Security Model", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "blogs", "cloud agents", "coding", "continuous integration", "copilot chat", "developer tools", "devops", "devops automation", "github actions", "github copilot", "github copilot coding agent", "github ui", "private mcp registry", "prompt engineering", "repository management", "security model", "vs code", "workflow automation"]
+tags:
+- Automation
+- Cloud Agents
+- Continuous Integration
+- Copilot Chat
+- Developer Tools
+- DevOps Automation
+- GitHub Actions
+- GitHub Copilot Coding Agent
+- GitHub UI
+- Private MCP Registry
+- Prompt Engineering
+- Repository Management
+- Security Model
+- VS Code
+- Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Rob Bos demonstrates hands-on techniques for using the GitHub Copilot Coding Agent to automate real development tasks, highlighting workflow automation, practical prompts, and DevOps best practices.<!--excerpt_end-->
 
 # GitHub Copilot Coding Agent: Practical Automation Examples
@@ -108,6 +125,6 @@ Please create a new branch and add a GitHub Actions workflow that does X, Y, and
 
 ---
 
-*This guide by Rob Bos offers hands-on examples and lessons learned for developers seeking to automate everyday coding and DevOps tasks using the GitHub Copilot Coding Agent.*
+_This guide by Rob Bos offers hands-on examples and lessons learned for developers seeking to automate everyday coding and DevOps tasks using the GitHub Copilot Coding Agent._
 
 This post appeared first on "Rob Bos' Blog". [Read the entire article here](https://devopsjournal.io/blog/2025/12/20/Copilot-Agent-example)

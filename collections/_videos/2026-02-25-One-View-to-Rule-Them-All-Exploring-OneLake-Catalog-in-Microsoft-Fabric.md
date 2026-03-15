@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "One View to Rule Them All: Exploring OneLake Catalog in Microsoft Fabric"
-description: "This session from Microsoft Developer demonstrates how OneLake Catalog Explorer brings together all your Microsoft Fabric data resources into a single, unified interface. The walkthrough covers navigating the data estate, applying filters, evaluating trust signals for data quality, and performing direct actions like refreshing datasets or managing permissions—all without leaving the explorer. Key concepts such as data governance, discoverability, and efficient workflow management within Microsoft Fabric are addressed."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Hn-hKuFGpqs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=Hn-hKuFGpqs
+title: 'One View to Rule Them All: Exploring OneLake Catalog in Microsoft Fabric'
+author: Microsoft Developer
+primary_section: ml
+feed_name: Microsoft Developer YouTube
 date: 2026-02-25 17:00:23 +00:00
-permalink: "/2026-02-25-One-View-to-Rule-Them-All-Exploring-OneLake-Catalog-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Cloud Computing", "Data Discovery", "Data Estate", "Data Explorer", "Data Exposed", "Data Governance", "Data Management", "Dataset Refresh", "Dev", "Development", "Microsoft", "Microsoft Fabric", "ML", "OneLake Catalog Explorer", "Permissions", "SQL", "Tech", "Technology", "Trust Signals", "Unified Data Platform", "Videos"]
-tags_normalized: ["azure", "cloud computing", "data discovery", "data estate", "data explorer", "data exposed", "data governance", "data management", "dataset refresh", "dev", "development", "microsoft", "microsoft fabric", "ml", "onelake catalog explorer", "permissions", "sql", "tech", "technology", "trust signals", "unified data platform", "videos"]
+tags:
+- Azure
+- Cloud Computing
+- Data Discovery
+- Data Estate
+- Data Explorer
+- Data Exposed
+- Data Governance
+- Data Management
+- Dataset Refresh
+- Dev
+- Development
+- Microsoft
+- Microsoft Fabric
+- ML
+- OneLake Catalog Explorer
+- Permissions
+- SQL
+- Tech
+- Technology
+- Trust Signals
+- Unified Data Platform
+- Videos
+section_names:
+- azure
+- ml
 ---
-
 Microsoft Developer presents a practical session on how to use OneLake Catalog Explorer in Microsoft Fabric, focusing on unified data discovery, filtering, and governance capabilities.<!--excerpt_end-->
 
 {% youtube Hn-hKuFGpqs %}

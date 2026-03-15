@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Delegate Tasks to GitHub Copilot Coding Agent from Visual Studio"
-description: "This article introduces the GitHub Copilot coding agent's integration with Visual Studio, which allows developers to delegate coding tasks asynchronously. Users can now initiate background tasks via Copilot Chat, leading to automated pull request creation and cloud-based progress. The feature is available for Copilot Pro, Copilot Business, and Enterprise subscribers and requires Visual Studio 2026 or newer."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-delegate-tasks-to-copilot-coding-agent-from-visual-studio
+title: Delegate Tasks to GitHub Copilot Coding Agent from Visual Studio
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-17 17:00:11 +00:00
-permalink: "/2026-02-17-Delegate-Tasks-to-GitHub-Copilot-Coding-Agent-from-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Asynchronous Tasks", "Automation", "Cloud Development", "Coding", "Copilot", "Copilot Business", "Copilot Chat", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "GitHub Copilot", "Integrated Development Environment", "News", "Pull Requests", "VS"]
-tags_normalized: ["ai", "asynchronous tasks", "automation", "cloud development", "coding", "copilot", "copilot business", "copilot chat", "copilot coding agent", "copilot enterprise", "copilot pro", "developer tools", "github copilot", "integrated development environment", "news", "pull requests", "vs"]
+tags:
+- AI
+- Asynchronous Tasks
+- Automation
+- Cloud Development
+- Copilot
+- Copilot Business
+- Copilot Chat
+- Copilot Coding Agent
+- Copilot Enterprise
+- Copilot Pro
+- Developer Tools
+- GitHub Copilot
+- Integrated Development Environment
+- News
+- Pull Requests
+- VS
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Allison details how developers can use the Copilot coding agent in Visual Studio to delegate tasks, automate pull requests, and leverage asynchronous background processing within the GitHub Copilot ecosystem.<!--excerpt_end-->
 
 # Delegate Tasks to GitHub Copilot Coding Agent from Visual Studio

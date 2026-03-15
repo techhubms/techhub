@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "MCP Registry and New GitHub Copilot Features in Eclipse"
-description: "This news update outlines recent enhancements to GitHub Copilot in Eclipse. The release adds a centralized MCP Registry for server management, a new Todo List tool, a more refined chat UX, automatic editor selection context, and expanded customization through new preferences. These improvements are designed to streamline AI-assisted development for Eclipse users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-mcp-registry-and-more-improvements-in-copilot-in-eclipse"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-mcp-registry-and-more-improvements-in-copilot-in-eclipse
+title: MCP Registry and New GitHub Copilot Features in Eclipse
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-17 18:22:24 +00:00
-permalink: "/2026-02-17-MCP-Registry-and-New-GitHub-Copilot-Features-in-Eclipse.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Preferences", "AI", "AI Coding Assistant", "Chat UX", "Commit Instructions", "Copilot", "Customization", "Development Tools", "Eclipse", "Editor Selection", "GitHub Copilot", "IDE Integration", "Improvement", "MCP Registry", "Microsoft", "News", "Productivity", "Software Development", "Todo List"]
-tags_normalized: ["agent preferences", "ai", "ai coding assistant", "chat ux", "commit instructions", "copilot", "customization", "development tools", "eclipse", "editor selection", "github copilot", "ide integration", "improvement", "mcp registry", "microsoft", "news", "productivity", "software development", "todo list"]
+tags:
+- Agent Preferences
+- AI
+- AI Coding Assistant
+- Chat UX
+- Commit Instructions
+- Copilot
+- Customization
+- Development Tools
+- Eclipse
+- Editor Selection
+- GitHub Copilot
+- IDE Integration
+- Improvement
+- MCP Registry
+- Microsoft
+- News
+- Productivity
+- Software Development
+- Todo List
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces a series of upgrades for GitHub Copilot in Eclipse, including MCP Registry, enhanced chat UX, and new customization features to improve the AI-powered development experience.<!--excerpt_end-->
 
 # MCP Registry and New GitHub Copilot Features in Eclipse

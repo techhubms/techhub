@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Azure Migrate Adds Support for Premium SSD v2, Ultra, and ZRS Disks"
-description: "This announcement details new capabilities in Azure Migrate, including support for assessment and migration of workloads to Premium SSD v2, Ultra, and ZRS Disks. Developers, architects, and IT pros can now use these disk options to optimize performance, resiliency, and total cost for database and application migrations to Azure, with guided recommendations in the migration workflow."
-author: "Lakshya_Jalan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/azure-migrate-now-supporting-premium-ssd-v2-ultra-and-zrs-disks/ba-p/4495332
+title: Azure Migrate Adds Support for Premium SSD v2, Ultra, and ZRS Disks
+author: Lakshya_Jalan
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-18 17:22:53 +00:00
-permalink: "/2026-02-18-Azure-Migrate-Adds-Support-for-Premium-SSD-v2-Ultra-and-ZRS-Disks.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Managed Disks", "Azure Migrate", "Cloud Migration", "Community", "Cost Optimization", "Data Resiliency", "Disk Recommendations", "Infrastructure Migration", "IOPS", "Performance Optimization", "Premium SSD V2", "Throughput", "Ultra Disk", "Workload Assessment", "Zone Redundant Storage", "ZRS Disks"]
-tags_normalized: ["azure", "azure managed disks", "azure migrate", "cloud migration", "community", "cost optimization", "data resiliency", "disk recommendations", "infrastructure migration", "iops", "performance optimization", "premium ssd v2", "throughput", "ultra disk", "workload assessment", "zone redundant storage", "zrs disks"]
+tags:
+- Azure
+- Azure Managed Disks
+- Azure Migrate
+- Cloud Migration
+- Community
+- Cost Optimization
+- Data Resiliency
+- Disk Recommendations
+- Infrastructure Migration
+- IOPS
+- Performance Optimization
+- Premium SSD V2
+- Throughput
+- Ultra Disk
+- Workload Assessment
+- Zone Redundant Storage
+- ZRS Disks
+section_names:
+- azure
 ---
-
 Lakshya_Jalan announces enhanced Azure Migrate capabilities, allowing seamless assessment and migration to Premium SSD v2, Ultra, and ZRS Disks for improved workload performance and resiliency.<!--excerpt_end-->
 
 # Azure Migrate Adds Support for Premium SSD v2, Ultra, and ZRS Disks

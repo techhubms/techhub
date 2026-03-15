@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Visualizing GitHub Enterprise Cloud Metered Usage by Organization"
-description: "This news update details upcoming enhancements to GitHub Enterprise Cloud (GHEC) metered usage reports effective October 1, 2025. Enterprise owners and billing managers will now be able to attribute license-based usage to specific organizations for improved billing transparency. The article explains interface changes, new reporting capabilities, and relevant considerations for enterprise users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-22-visualize-metered-usage-by-organization-in-github-enterprise-cloud
+title: Visualizing GitHub Enterprise Cloud Metered Usage by Organization
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-22 14:22:35 +00:00
-permalink: "/2025-09-22-Visualizing-GitHub-Enterprise-Cloud-Metered-Usage-by-Organization.html"
-categories: ["DevOps"]
-tags: ["Account Management", "Billing", "Cost Centers", "DevOps", "Enterprise Administration", "Enterprise Management Tools", "Enterprise Reporting", "GitHub Enterprise Cloud", "Improvement", "License Management", "Metered Usage", "News", "Organization Management", "Reporting Tools", "Usage API", "Usage Visualization"]
-tags_normalized: ["account management", "billing", "cost centers", "devops", "enterprise administration", "enterprise management tools", "enterprise reporting", "github enterprise cloud", "improvement", "license management", "metered usage", "news", "organization management", "reporting tools", "usage api", "usage visualization"]
+tags:
+- Account Management
+- Billing
+- Cost Centers
+- Enterprise Administration
+- Enterprise Management Tools
+- Enterprise Reporting
+- GitHub Enterprise Cloud
+- Improvement
+- License Management
+- Metered Usage
+- Organization Management
+- Reporting Tools
+- Usage API
+- Usage Visualization
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Allison reports on GitHub Enterprise Cloud updates enabling billing managers and enterprise owners to visualize metered license usage by organization, providing more accurate reporting and cost attribution.<!--excerpt_end-->
 
 # Visualizing GitHub Enterprise Cloud Metered Usage by Organization

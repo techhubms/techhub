@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Transforming IT at AT&T with Agentic AI: Microsoft & IBM Partnership"
-description: "Learn how AT&T, with support from Microsoft and IBM, leverages agentic AI and multi-agent systems to drive IT innovation, resilience, and productivity at massive scale. This session from Microsoft Ignite details strategies for optimizing AI performance, democratizing technology adoption, and accelerating the migration of IT workloads to the cloud. Key insights include business value realization, cost trade-offs, best practices for scaling, and technical collaboration between industry leaders."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ejAZOppy2os"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=ejAZOppy2os
+title: 'Transforming IT at AT&T with Agentic AI: Microsoft & IBM Partnership'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:35:17 +00:00
-permalink: "/2025-11-24-Transforming-IT-at-ATandT-with-Agentic-AI-Microsoft-and-IBM-Partnership.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "Agenticbusinessapplications", "AI", "AI Performance Optimization", "AT&T", "Automation", "Azure", "Cloud Migration", "Collaboration", "Enterprise AI", "IBM Consulting", "IT Transformation", "Microsoft Ignite", "MSIgnite", "Multi Agent Systems", "No Code Development", "Productivity Improvement", "Resilient Infrastructure", "Videos"]
-tags_normalized: ["agentic ai", "agenticbusinessapplications", "ai", "ai performance optimization", "atandt", "automation", "azure", "cloud migration", "collaboration", "enterprise ai", "ibm consulting", "it transformation", "microsoft ignite", "msignite", "multi agent systems", "no code development", "productivity improvement", "resilient infrastructure", "videos"]
+tags:
+- Agentic AI
+- Agenticbusinessapplications
+- AI Performance Optimization
+- AT&T
+- Automation
+- Cloud Migration
+- Collaboration
+- Enterprise AI
+- IBM Consulting
+- IT Transformation
+- Microsoft Ignite
+- MSIgnite
+- Multi Agent Systems
+- No Code Development
+- Productivity Improvement
+- Resilient Infrastructure
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Events hosts a session with AT&T and IBM, highlighting agentic AI strategies and collaborations to revolutionize IT systems and drive significant productivity for global enterprises.<!--excerpt_end-->
 
 {% youtube ejAZOppy2os %}

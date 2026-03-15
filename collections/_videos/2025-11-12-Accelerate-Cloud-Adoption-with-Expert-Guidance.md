@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Accelerate Cloud Adoption with Expert Guidance"
-description: "This episode of the Azure Essentials Show features Thomas Maurer and Ravi Mangipudi discussing how organizations can speed up their cloud adoption journey with the Cloud Accelerate Factory program. The discussion centers on hands-on expert guidance, proven frameworks, and zero-cost migration and modernization services to help businesses efficiently and securely move to Azure."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=OZYgy2XTuR4"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=OZYgy2XTuR4
+title: Accelerate Cloud Adoption with Expert Guidance
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-11-12 08:00:36 +00:00
-permalink: "/2025-11-12-Accelerate-Cloud-Adoption-with-Expert-Guidance.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Adoption", "Azure Essentials", "Azure Partners", "Azure Services", "Best Practices", "Cloud Accelerate Factory", "Cloud Migration", "Deployment Assistance", "DevOps", "Expert Support", "Microsoft Azure", "Migration Frameworks", "Modernization", "Project Management", "Ravi Mangipudi", "Sprint Deployment", "Thomas Maurer", "Videos"]
-tags_normalized: ["azure", "azure adoption", "azure essentials", "azure partners", "azure services", "best practices", "cloud accelerate factory", "cloud migration", "deployment assistance", "devops", "expert support", "microsoft azure", "migration frameworks", "modernization", "project management", "ravi mangipudi", "sprint deployment", "thomas maurer", "videos"]
+tags:
+- Azure Adoption
+- Azure Essentials
+- Azure Partners
+- Azure Services
+- Best Practices
+- Cloud Accelerate Factory
+- Cloud Migration
+- Deployment Assistance
+- Expert Support
+- Microsoft Azure
+- Migration Frameworks
+- Modernization
+- Project Management
+- Ravi Mangipudi
+- Sprint Deployment
+- Thomas Maurer
+- Azure
+- DevOps
+- Videos
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Microsoft Developer presents Thomas Maurer and Ravi Mangipudi exploring Cloud Accelerate Factory, a zero-cost initiative for expert-led Azure migrations and project acceleration.<!--excerpt_end-->
 
 {% youtube OZYgy2XTuR4 %}

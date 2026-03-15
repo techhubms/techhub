@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "The Agent that Investigates Itself: How Azure SRE Agent Enables Autonomous Incident Resolution"
-description: "This in-depth exploration by Sanchit Mehta outlines the architectural evolution of the Azure SRE Agent—an autonomous agent managing and troubleshooting incidents for Microsoft Azure services. The post details practical strategies like workspace design, context layering, and frugal resource management that enable the agent to investigate, reason, and even fix its own issues, transforming incident response from reactive dashboards to agent-driven workflows."
-author: "sanchitmehta"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-agent-that-investigates-itself/ba-p/4500073"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-agent-that-investigates-itself/ba-p/4500073
+title: 'The Agent that Investigates Itself: How Azure SRE Agent Enables Autonomous Incident Resolution'
+author: sanchitmehta
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-10 15:12:09 +00:00
-permalink: "/2026-03-10-The-Agent-that-Investigates-Itself-How-Azure-SRE-Agent-Enables-Autonomous-Incident-Resolution.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agent Design", "AI", "AI Agents", "Autonomous Systems", "Azure", "Azure SRE Agent", "Codebase Investigation", "Coding", "Community", "Context Engineering", "DevOps", "DevOps Automation", "Error Monitoring", "Filesystem Architecture", "Incident Management", "Log Analysis", "Microsoft Azure", "Prompt Engineering", "Root Cause Analysis", "Security", "Security Analysis", "Self Healing Systems", "Site Reliability Engineering", "Telemetry"]
-tags_normalized: ["agent design", "ai", "ai agents", "autonomous systems", "azure", "azure sre agent", "codebase investigation", "coding", "community", "context engineering", "devops", "devops automation", "error monitoring", "filesystem architecture", "incident management", "log analysis", "microsoft azure", "prompt engineering", "root cause analysis", "security", "security analysis", "self healing systems", "site reliability engineering", "telemetry"]
+tags:
+- Agent Design
+- AI
+- AI Agents
+- Autonomous Systems
+- Azure
+- Azure SRE Agent
+- Codebase Investigation
+- Community
+- Context Engineering
+- DevOps
+- DevOps Automation
+- Error Monitoring
+- Filesystem Architecture
+- Incident Management
+- Log Analysis
+- Microsoft Azure
+- Prompt Engineering
+- Root Cause Analysis
+- Security
+- Security Analysis
+- Self Healing Systems
+- Site Reliability Engineering
+- Telemetry
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- security
 ---
-
 Sanchit Mehta presents a detailed look at how the Azure SRE Agent autonomously investigates and resolves incidents, often identifying and fixing its own issues. The post explains how architectural choices—like filesystem workspaces and context layering—make these advanced AI-driven capabilities possible.<!--excerpt_end-->
 
 # The Agent that Investigates Itself

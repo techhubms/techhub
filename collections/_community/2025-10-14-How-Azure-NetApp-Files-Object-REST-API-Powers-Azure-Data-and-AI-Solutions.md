@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How Azure NetApp Files Object REST API Powers Azure Data and AI Solutions"
-description: "This detailed article explores the Azure NetApp Files Object REST API, a newly released capability enabling direct, secure, and real-time integration between enterprise data and Azure’s analytics, AI, and machine learning services. Learn how S3-compatible access unlocks new use cases in Azure Databricks, Microsoft Fabric, OneLake, Power BI, and more, all while maintaining compliance and boosting operational efficiency. The piece covers architecture, implementation, and numerous practical scenarios across industries for streamlining data workflows and accelerating business insights."
-author: "GeertVanTeylingen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-architecture-blog/how-azure-netapp-files-object-rest-api-powers-azure-and-isv-data/ba-p/4459545
+title: How Azure NetApp Files Object REST API Powers Azure Data and AI Solutions
+author: GeertVanTeylingen
+feed_name: Microsoft Tech Community
 date: 2025-10-14 15:00:00 +00:00
-permalink: "/2025-10-14-How-Azure-NetApp-Files-Object-REST-API-Powers-Azure-Data-and-AI-Solutions.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure AI", "Azure Databricks", "Azure NetApp Files", "Azure OpenAI", "Community", "Compliance", "Data Lake", "Data Science", "Data Security", "Enterprise Analytics", "Microsoft Fabric", "ML", "Object REST API", "OneLake", "Power BI", "Real Time Data Integration", "S3 Compatibility"]
-tags_normalized: ["ai", "azure", "azure ai", "azure databricks", "azure netapp files", "azure openai", "community", "compliance", "data lake", "data science", "data security", "enterprise analytics", "microsoft fabric", "ml", "object rest api", "onelake", "power bi", "real time data integration", "s3 compatibility"]
+tags:
+- Azure AI
+- Azure Databricks
+- Azure NetApp Files
+- Azure OpenAI
+- Compliance
+- Data Lake
+- Data Science
+- Data Security
+- Enterprise Analytics
+- Microsoft Fabric
+- Object REST API
+- OneLake
+- Power BI
+- Real Time Data Integration
+- S3 Compatibility
+- AI
+- Azure
+- ML
+- Community
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 GeertVanTeylingen, along with co-authors Sean Luce, Asutosh Panda, and Thomas Willingham, introduces the Azure NetApp Files Object REST API—a robust way to unlock direct data access for advanced analytics, AI, and machine learning in Azure environments.<!--excerpt_end-->
 
 # How Azure NetApp Files Object REST API Powers Azure Data and AI Solutions

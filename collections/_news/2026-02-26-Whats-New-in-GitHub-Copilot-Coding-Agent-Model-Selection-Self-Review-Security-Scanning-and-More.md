@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "What’s New in GitHub Copilot Coding Agent: Model Selection, Self-Review, Security Scanning, and More"
-description: "This news post from Andrea Griffiths details major updates to GitHub Copilot coding agent, including the introduction of a model picker, self-review fueled by Copilot code review, integrated security scanning, custom agent support, and seamless cloud/local CLI handoff. Learn how these features improve developer workflow, code quality, and security in real-world use."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/github-copilot/whats-new-with-github-copilot-coding-agent/
+title: 'What’s New in GitHub Copilot Coding Agent: Model Selection, Self-Review, Security Scanning, and More'
+author: Andrea Griffiths
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-26 20:47:02 +00:00
-permalink: "/2026-02-26-Whats-New-in-GitHub-Copilot-Coding-Agent-Model-Selection-Self-Review-Security-Scanning-and-More.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Development", "Automation", "Branch Management", "CLI Handoff", "Code Generation", "Code Review", "Coding", "Copilot Coding Agent", "Copilot Pro", "Copilot Pro+", "Custom Agents", "Dev Tools", "Developer Productivity", "GitHub", "GitHub Checkout", "GitHub Copilot", "GitHub Copilot Coding Agent", "Model Picker", "News", "Pull Requests", "Security Scanning", "Self Review"]
-tags_normalized: ["ai", "ai and ml", "ai development", "automation", "branch management", "cli handoff", "code generation", "code review", "coding", "copilot coding agent", "copilot pro", "copilot proplus", "custom agents", "dev tools", "developer productivity", "github", "github checkout", "github copilot", "github copilot coding agent", "model picker", "news", "pull requests", "security scanning", "self review"]
+tags:
+- AI
+- AI & ML
+- AI Development
+- Automation
+- Branch Management
+- CLI Handoff
+- Code Generation
+- Code Review
+- Copilot Coding Agent
+- Copilot Pro
+- Copilot Pro+
+- Custom Agents
+- Dev Tools
+- Developer Productivity
+- GitHub
+- GitHub Checkout
+- GitHub Copilot
+- GitHub Copilot Coding Agent
+- Model Picker
+- News
+- Pull Requests
+- Security Scanning
+- Self Review
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Andrea Griffiths presents the latest features of GitHub Copilot coding agent, explaining how model selection, self-review, security scanning, and custom agents streamline coding and enhance developer experience.<!--excerpt_end-->
 
 # What’s New in GitHub Copilot Coding Agent: Model Selection, Self-Review, Security Scanning, and More

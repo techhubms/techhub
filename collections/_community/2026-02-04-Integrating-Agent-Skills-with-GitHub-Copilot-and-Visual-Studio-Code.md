@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Integrating Agent Skills with GitHub Copilot and Visual Studio Code"
-description: "This guide by ArunaChakkirala examines how Agent Skills, as described in recent research, can be leveraged with GitHub Copilot within Visual Studio Code environments. It explores experimental support, workflow configuration, skill structuring, and security considerations for developers adopting these advanced Copilot features."
-author: "ArunaChakkirala"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure/integrate-agents-with-skills-in-github-copilot/m-p/4492020#M1391"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure/integrate-agents-with-skills-in-github-copilot/m-p/4492020#M1391
+title: Integrating Agent Skills with GitHub Copilot and Visual Studio Code
+author: ArunaChakkirala
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-04 03:36:38 +00:00
-permalink: "/2026-02-04-Integrating-Agent-Skills-with-GitHub-Copilot-and-Visual-Studio-Code.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Skills", "AI", "AI Assistant", "Automation", "Coding", "Community", "Context Management", "Copilot Agent Mode", "Copilot Business", "Copilot CLI", "Copilot Coding Agent", "Copilot Enterprise", "Copilot Pro", "Developer Tools", "GitHub Copilot", "GitHub Integration", "Security Best Practices", "SKILL.md", "VS Code"]
-tags_normalized: ["agent skills", "ai", "ai assistant", "automation", "coding", "community", "context management", "copilot agent mode", "copilot business", "copilot cli", "copilot coding agent", "copilot enterprise", "copilot pro", "developer tools", "github copilot", "github integration", "security best practices", "skilldotmd", "vs code"]
+tags:
+- Agent Skills
+- AI
+- AI Assistant
+- Automation
+- Community
+- Context Management
+- Copilot Agent Mode
+- Copilot Business
+- Copilot CLI
+- Copilot Coding Agent
+- Copilot Enterprise
+- Copilot Pro
+- Developer Tools
+- GitHub Copilot
+- GitHub Integration
+- Security Best Practices
+- SKILL.md
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 ArunaChakkirala provides an in-depth look at integrating Agent Skills with GitHub Copilot in Visual Studio Code, explaining the workflow, configuration, and considerations for developers looking to enhance their AI-assisted coding experience.<!--excerpt_end-->
 
 # Integrating Agent Skills with GitHub Copilot and Visual Studio Code

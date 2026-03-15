@@ -28,7 +28,7 @@ See the Content Collections section in `AGENTS.md` for details on available coll
 When adding new RSS feeds:
 
 1. **Verify the RSS feed URL**: Test that the URL returns valid RSS/Atom content
-2. **Choose appropriate output directory**: Based on the content type and source
+2. **Choose appropriate output directory**: Based on the collection and source
 3. **Use consistent naming**: Follow existing patterns for the "name" field
 4. **Add to the JSON array**: Insert the new feed object into the existing array
 
@@ -55,9 +55,9 @@ After adding feeds to the configuration:
 
 When a user asks to add RSS feeds:
 
-1. **Ask for feed details**: URL, content type, and source name
+1. **Ask for feed details**: URL, collection, and source name
 2. **Validate the feed**: Check if the URL is accessible and returns RSS/Atom content
-3. **Choose output directory**: Based on content type and existing patterns
+3. **Choose output directory**: Based on collection and existing patterns
 4. **Update the configuration**: Add the new feed(s) to `scripts/data/rss-feeds.json`
 5. **Confirm the addition**: Show the user what was added and explain the next steps
 

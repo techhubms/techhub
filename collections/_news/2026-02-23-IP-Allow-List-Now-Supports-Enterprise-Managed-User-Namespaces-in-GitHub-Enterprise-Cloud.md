@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "IP Allow List Now Supports Enterprise Managed User Namespaces in GitHub Enterprise Cloud"
-description: "This announcement details how GitHub Enterprise Cloud now enables its IP allow list configuration to apply to Enterprise Managed User (EMU) namespaces. Enterprise administrators can enforce consistent network access policies, ensuring all repositories under EMUs comply with enterprise-level IP restrictions. This feature enhances security for organizations managing large numbers of users and repositories."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-23-ip-allow-list-coverage-extended-to-emu-namespaces-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-23-ip-allow-list-coverage-extended-to-emu-namespaces-in-public-preview
+title: IP Allow List Now Supports Enterprise Managed User Namespaces in GitHub Enterprise Cloud
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-23 17:44:32 +00:00
-permalink: "/2026-02-23-IP-Allow-List-Now-Supports-Enterprise-Managed-User-Namespaces-in-GitHub-Enterprise-Cloud.html"
-categories: ["DevOps", "Security"]
-tags: ["Access Control", "API Security", "DevOps", "Enterprise Administration", "Enterprise Managed Users", "Enterprise Management Tools", "Git Protocol", "GitHub Enterprise Cloud", "Improvement", "IP Allow List", "Network Access", "News", "Security", "Security Policies", "User Namespace Management"]
-tags_normalized: ["access control", "api security", "devops", "enterprise administration", "enterprise managed users", "enterprise management tools", "git protocol", "github enterprise cloud", "improvement", "ip allow list", "network access", "news", "security", "security policies", "user namespace management"]
+tags:
+- Access Control
+- API Security
+- DevOps
+- Enterprise Administration
+- Enterprise Managed Users
+- Enterprise Management Tools
+- Git Protocol
+- GitHub Enterprise Cloud
+- Improvement
+- IP Allow List
+- Network Access
+- News
+- Security
+- Security Policies
+- User Namespace Management
+section_names:
+- devops
+- security
 ---
-
 Allison highlights how GitHub Enterprise Cloud's IP allow list now extends to Enterprise Managed User namespaces, providing unified network access control for organizations.<!--excerpt_end-->
 
 # IP Allow List Coverage Extended to EMU Namespaces in GitHub Enterprise Cloud

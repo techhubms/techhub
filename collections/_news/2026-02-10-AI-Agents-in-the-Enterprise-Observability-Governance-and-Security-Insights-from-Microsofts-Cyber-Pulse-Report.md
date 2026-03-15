@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/10/80-of-fortune-500-use-active-ai-agents-observability-governance-and-security-shape-the-new-frontier/
 title: "AI Agents in the Enterprise: Observability, Governance, and Security Insights from Microsoft's Cyber Pulse Report"
-description: "This article summarizes Microsoft's latest Cyber Pulse report, highlighting the rapid adoption of AI agents—including those built with Copilot Studio—and offers actionable guidance on observability, governance, and security using Zero Trust principles. The report explores industry metrics, risks, and best practices needed to secure AI-driven enterprise transformation."
-author: "Vasu Jakkal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/10/80-of-fortune-500-use-active-ai-agents-observability-governance-and-security-shape-the-new-frontier/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+author: Vasu Jakkal
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-10 16:00:00 +00:00
-permalink: "/2026-02-10-AI-Agents-in-the-Enterprise-Observability-Governance-and-Security-Insights-from-Microsofts-Cyber-Pulse-Report.html"
-categories: ["AI", "Security"]
-tags: ["Agent Builder", "AI", "AI Agents", "AI Governance", "Autonomous Agents", "Compliance", "Cyber Pulse Report", "Cybersecurity", "Data Security", "Enterprise IT", "Enterprise Security", "Identity And Access Management", "Microsoft Copilot Studio", "News", "Observability", "Risk Management", "Security", "Zero Trust"]
-tags_normalized: ["agent builder", "ai", "ai agents", "ai governance", "autonomous agents", "compliance", "cyber pulse report", "cybersecurity", "data security", "enterprise it", "enterprise security", "identity and access management", "microsoft copilot studio", "news", "observability", "risk management", "security", "zero trust"]
+tags:
+- Agent Builder
+- AI
+- AI Agents
+- AI Governance
+- Autonomous Agents
+- Compliance
+- Cyber Pulse Report
+- Cybersecurity
+- Data Security
+- Enterprise IT
+- Enterprise Security
+- Identity And Access Management
+- Microsoft Copilot Studio
+- News
+- Observability
+- Risk Management
+- Security
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Vasu Jakkal presents key findings from Microsoft's Cyber Pulse report, examining the growing impact of AI agents in Fortune 500 companies alongside practical steps for securing observability, governance, and enterprise protection.<!--excerpt_end-->
 
 # AI Agents in the Enterprise: Observability, Governance, and Security Insights from Microsoft's Cyber Pulse Report

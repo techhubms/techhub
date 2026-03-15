@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Detecting Backdoors in Open-Weight Language Models: Microsoft Research Insights"
-description: "This article summarizes Microsoft's latest research on detecting backdoors in open-weight language models. It outlines three observable signatures of poisoned models, describes a scalable scanner for trigger reconstruction, highlights limitations of the current approach, and emphasizes the importance of model integrity in the AI security landscape. Key takeaways include new detection methodologies, practical deployment considerations, and ongoing challenges in safeguarding large language models."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/04/detecting-backdoored-language-models-at-scale/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/04/detecting-backdoored-language-models-at-scale/
+title: 'Detecting Backdoors in Open-Weight Language Models: Microsoft Research Insights'
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-04 17:50:34 +00:00
-permalink: "/2026-02-04-Detecting-Backdoors-in-Open-Weight-Language-Models-Microsoft-Research-Insights.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Attention Patterns", "Backdoor Detection", "Causal Language Models", "Company News", "Entropy Collapse", "Fine Tuning", "Fuzzy Triggers", "Language Models", "LLM Security", "Machine Learning", "Malware Scanning", "Memorization", "Microsoft Foundry", "Model Poisoning", "News", "Open Weight Models", "Scanner Pipeline", "Security", "Trigger Reconstruction"]
-tags_normalized: ["ai", "ai security", "attention patterns", "backdoor detection", "causal language models", "company news", "entropy collapse", "fine tuning", "fuzzy triggers", "language models", "llm security", "machine learning", "malware scanning", "memorization", "microsoft foundry", "model poisoning", "news", "open weight models", "scanner pipeline", "security", "trigger reconstruction"]
+tags:
+- AI
+- AI Security
+- Attention Patterns
+- Backdoor Detection
+- Causal Language Models
+- Company News
+- Entropy Collapse
+- Fine Tuning
+- Fuzzy Triggers
+- Language Models
+- LLM Security
+- Malware Scanning
+- Memorization
+- Microsoft Foundry
+- Model Poisoning
+- News
+- Open Weight Models
+- Scanner Pipeline
+- Security
+- Trigger Reconstruction
+section_names:
+- ai
+- security
 ---
-
 stclarke summarizes Microsoft's new research on scalable methods for detecting backdoors in open-weight language models, including observable signatures, scanner design, operational advice, and key limitations for practitioners.<!--excerpt_end-->
 
 # Detecting Backdoors in Open-Weight Language Models: Microsoft Research Insights

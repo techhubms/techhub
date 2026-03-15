@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "GitHub Secret Scanning Adds Base64-Encoded and Extended Metadata Support"
-description: "This update details GitHub's October 2025 improvements to secret scanning, including the detection of Base64-encoded secrets from providers like Azure and AWS, expanded metadata checks, and new validity checks. These changes enhance application security and developer workflows by proactively identifying and protecting sensitive information in code repositories."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-04-secret-scanning-now-detects-base64-encoded-secrets"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-11-04-secret-scanning-now-detects-base64-encoded-secrets
+title: GitHub Secret Scanning Adds Base64-Encoded and Extended Metadata Support
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-11-04 19:21:06 +00:00
-permalink: "/2025-11-04-GitHub-Secret-Scanning-Adds-Base64-Encoded-and-Extended-Metadata-Support.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["API Keys", "Application Security", "AWS", "Azure", "Azure Key Detection", "Base64 Encoded Secrets", "Cloud Security", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Grafana", "Identity Protection", "Metadata Validation", "News", "Notion", "Provider Integration", "Secret Scanning", "Security"]
-tags_normalized: ["api keys", "application security", "aws", "azure", "azure key detection", "base64 encoded secrets", "cloud security", "continuous integration", "devops", "github", "github actions", "grafana", "identity protection", "metadata validation", "news", "notion", "provider integration", "secret scanning", "security"]
+tags:
+- API Keys
+- Application Security
+- AWS
+- Azure Key Detection
+- Base64 Encoded Secrets
+- Cloud Security
+- Continuous Integration
+- GitHub
+- GitHub Actions
+- Grafana
+- Identity Protection
+- Metadata Validation
+- Notion
+- Provider Integration
+- Secret Scanning
+- Azure
+- DevOps
+- Security
+- News
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 Allison summarizes significant October 2025 improvements to GitHub secret scanning, focusing on extended detection and security measures that benefit developers and organizations using Azure, AWS, and other platforms.<!--excerpt_end-->
 
 # GitHub Secret Scanning: New Features for October 2025

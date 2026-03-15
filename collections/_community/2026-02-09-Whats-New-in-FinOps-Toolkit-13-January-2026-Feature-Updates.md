@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "What’s New in FinOps Toolkit 13: January 2026 Feature Updates"
-description: "This release article by Michael Flanakin details the stability, usability, and security enhancements introduced in FinOps Toolkit version 13. Key updates include optimized Power BI reports, improved Azure Optimization Engine, support for advanced export formats via PowerShell, and architectural changes for compliance and extensibility in FinOps hubs. The article highlights improved documentation for troubleshooting, enhanced role-based access controls, expanded community collaboration via office hours, and a forward-looking roadmap featuring AI automation and ongoing integration with Azure services."
-author: "Michael_Flanakin"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-13-january-2026/ba-p/4493090"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/finops-blog/what-s-new-in-finops-toolkit-13-january-2026/ba-p/4493090
+title: 'What’s New in FinOps Toolkit 13: January 2026 Feature Updates'
+author: Michael_Flanakin
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-09 09:21:43 +00:00
-permalink: "/2026-02-09-Whats-New-in-FinOps-Toolkit-13-January-2026-Feature-Updates.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Azure", "Azure Optimization Engine", "Bicep", "Community", "Community Engagement", "Compression", "Cost Management", "Data Lake Storage", "DevOps", "Enterprise Compliance", "Export Automation", "FinOps Toolkit", "Key Vault", "Parquet", "Power BI", "PowerShell", "RBAC", "Security"]
-tags_normalized: ["azure", "azure optimization engine", "bicep", "community", "community engagement", "compression", "cost management", "data lake storage", "devops", "enterprise compliance", "export automation", "finops toolkit", "key vault", "parquet", "power bi", "powershell", "rbac", "security"]
+tags:
+- Azure
+- Azure Optimization Engine
+- Bicep
+- Community
+- Community Engagement
+- Compression
+- Cost Management
+- Data Lake Storage
+- DevOps
+- Enterprise Compliance
+- Export Automation
+- FinOps Toolkit
+- Key Vault
+- Parquet
+- Power BI
+- PowerShell
+- RBAC
+- Security
+section_names:
+- azure
+- devops
+- security
 ---
-
 Michael Flanakin summarizes the latest enhancements in FinOps Toolkit 13, covering Azure-focused improvements in cost management, security, export automation, and extensibility for cloud practitioners and DevOps professionals.<!--excerpt_end-->
 
 # What’s New in FinOps Toolkit 13: January 2026 Feature Updates

@@ -1,17 +1,46 @@
----
-layout: "post"
-title: "XPRT Magazine 12"
-description: "A diverse edition exploring cloud-native microservices, IoT, engineering culture, security, and developer productivity. Features hands-on guides, real-world case studies, and stories of innovation in the Microsoft ecosystem."
-categories: ["AI", "Azure", "Coding", "DevOps", "Security", "GitHub Copilot"]
+﻿---
+title: XPRT Magazine 12
 date: 2022-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2022-05-01-XPRT-Magazine-12.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "ARM Templates", "Automation", "Azure", "Azure Container Apps", "Beacons", "Bicep", "Blinky", "Chaos Engineering", "Cloud Native", "Codespaces", "Coding", "Community", "Compliance", "Developer Productivity", "DevOps", "Engineering Culture", "GitHub Copilot", "IoT", "Knowledge Sharing", "Magazines", "Microservices", "Security", "Team Learning", "Value Chain", "WebAssembly", "Xpirit Germany"]
-tags_normalized: ["ai", "arm templates", "automation", "azure", "azure container apps", "beacons", "bicep", "blinky", "chaos engineering", "cloud native", "codespaces", "coding", "community", "compliance", "developer productivity", "devops", "engineering culture", "github copilot", "iot", "knowledge sharing", "magazines", "microservices", "security", "team learning", "value chain", "webassembly", "xpirit germany"]
+author: Xebia
+external_url: https://xprt.xebia.com/magazine-12
+tags:
+- ARM Templates
+- Automation
+- Azure Container Apps
+- Beacons
+- Bicep
+- Blinky
+- Chaos Engineering
+- Cloud Native
+- Codespaces
+- Compliance
+- Developer Productivity
+- Engineering Culture
+- IoT
+- Knowledge Sharing
+- Magazines
+- Microservices
+- Team Learning
+- Value Chain
+- WebAssembly
+- Xpirit Germany
+- AI
+- Azure
+- DevOps
+- Security
+- GitHub Copilot
+- Community
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- security
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This edition of XPRT Magazine explores cloud-native microservices, IoT, engineering culture, and developer productivity. Discover hands-on guides, real-world case studies, and stories of innovation, resilience, and knowledge sharing in the Microsoft ecosystem.
 <!--excerpt_end-->
 

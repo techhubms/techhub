@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Best Practices for Modernizing Apps and Databases at Scale with Azure"
-description: "This session explores how enterprises successfully migrate and modernize legacy applications and databases using Azure’s latest app, data, and AI solutions. Featuring real customer stories from Microsoft Ignite 2025, it outlines proven modernization strategies, Azure innovations, and actionable guidance for cloud- and AI-readiness. Speakers discuss SecOps, accessibility, and collaborative approaches to large-scale modernization."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=ZpRsjGkwWbA"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=ZpRsjGkwWbA
+title: Best Practices for Modernizing Apps and Databases at Scale with Azure
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 15:42:31 +00:00
-permalink: "/2025-11-20-Best-Practices-for-Modernizing-Apps-and-Databases-at-Scale-with-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["Accessibility", "AI", "AI Readiness", "App Development", "App Modernization", "Azure", "Azure SQL", "Best Practices", "Cloud Migration", "Data Modernization", "Enterprise Transformation", "Microsoft Ignite", "Migrateandmodernizeyourestate", "MSIgnite", "Real World Case Studies", "SecOps", "Videos"]
-tags_normalized: ["accessibility", "ai", "ai readiness", "app development", "app modernization", "azure", "azure sql", "best practices", "cloud migration", "data modernization", "enterprise transformation", "microsoft ignite", "migrateandmodernizeyourestate", "msignite", "real world case studies", "secops", "videos"]
+tags:
+- Accessibility
+- AI Readiness
+- App Development
+- App Modernization
+- Azure SQL
+- Best Practices
+- Cloud Migration
+- Data Modernization
+- Enterprise Transformation
+- Microsoft Ignite
+- Migrateandmodernizeyourestate
+- MSIgnite
+- Real World Case Studies
+- SecOps
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Events presents a session at Ignite 2025 detailing how organizations modernize apps and databases at scale using Azure, with expert insights from Marc Gunter, Mike Hulme, Amit Shah, and John Yokim.<!--excerpt_end-->
 
 {% youtube ZpRsjGkwWbA %}

@@ -12,11 +12,11 @@ Please fill out the following information:
 
 **Feed Source Name:** [e.g., "Microsoft DevBlog"]
 **RSS Feed URL:** [e.g., "https://example.com/feed.xml"]
-**Content Type/Output Directory:** [News / Blog / Video / Community / Events]
+**Collection:** [News / Blog / Video / Community / Events]
 
 ## Explanation for RSS feed automation
 
-RSS feeds are automatically processed by GitHub Actions to create new content on the site. The system downloads RSS content, converts it to markdown articles, and places them in the appropriate collection directory based on the content type.
+RSS feeds are automatically processed by GitHub Actions to create new content on the site. The system downloads RSS content, converts it to markdown articles, and places them in the appropriate collection directory based on the specified collection.
 
 ## Instructions for GitHub Copilot
 

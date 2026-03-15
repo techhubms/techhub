@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How to Troubleshoot Azure Functions Not Visible in Azure Portal"
-description: "This guide by vikasgupta5 details practical troubleshooting steps for resolving the common problem of Azure Functions not appearing in the Azure Portal. It breaks down the visibility process, categorizes potential causes, and offers targeted solutions for deployment, configuration, storage, networking, and runtime scenarios. Technical tips, verification steps, and links to Azure documentation empower developers to systematically diagnose and fix issues."
-author: "vikasgupta5"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-not-visible-in-azure-portal/ba-p/4495873"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-to-troubleshoot-azure-functions-not-visible-in-azure-portal/ba-p/4495873
+title: How to Troubleshoot Azure Functions Not Visible in Azure Portal
+author: vikasgupta5
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-23 04:33:16 +00:00
-permalink: "/2026-02-23-How-to-Troubleshoot-Azure-Functions-Not-Visible-in-Azure-Portal.html"
-categories: ["Azure"]
-tags: ["Application Insights", "Azure", "Azure CLI", "Azure Functions", "Azure Portal", "AzureWebJobsStorage", "Community", "Deployment", "Diagnose And Solve", "Extension Bundles", "Function App", "Function.json", "GitHub Actions", "Host.json", "Kudu", "Networking", "Serverless", "Storage Account", "Troubleshooting", "V2 Programming Model", "WEBSITE RUN FROM PACKAGE"]
-tags_normalized: ["application insights", "azure", "azure cli", "azure functions", "azure portal", "azurewebjobsstorage", "community", "deployment", "diagnose and solve", "extension bundles", "function app", "functiondotjson", "github actions", "hostdotjson", "kudu", "networking", "serverless", "storage account", "troubleshooting", "v2 programming model", "website run from package"]
+tags:
+- Application Insights
+- Azure
+- Azure CLI
+- Azure Functions
+- Azure Portal
+- AzureWebJobsStorage
+- Community
+- Deployment
+- Diagnose And Solve
+- Extension Bundles
+- Function App
+- Function.json
+- GitHub Actions
+- Host.json
+- Kudu
+- Networking
+- Serverless
+- Storage Account
+- Troubleshooting
+- V2 Programming Model
+- WEBSITE RUN FROM PACKAGE
+section_names:
+- azure
 ---
-
 vikasgupta5 provides a thorough troubleshooting checklist and detailed solutions for when Azure Functions are not showing in the Azure Portal, helping developers resolve deployment, configuration, and infrastructure issues.<!--excerpt_end-->
 
 # How to Troubleshoot Azure Functions Not Visible in Azure Portal

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Azure SDK November 2025 Release: Storage, Identity, Cosmos DB, and New Libraries"
-description: "This overview details the Azure SDK's November 2025 releases, highlighting major updates for Azure Storage libraries, new features for AKS identity binding, and performance improvements in Cosmos DB SDKs. It also covers new client and management libraries across multiple languages, with links to release notes for .NET, Java, Python, Go, and more."
-author: "Ronnie Geraghty"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-november-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Azure SDK Blog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-sdk-release-november-2025/
+title: 'Azure SDK November 2025 Release: Storage, Identity, Cosmos DB, and New Libraries'
+author: Ronnie Geraghty
+feed_name: Microsoft Azure SDK Blog
 date: 2025-11-25 22:56:34 +00:00
-permalink: "/2025-11-25-Azure-SDK-November-2025-Release-Storage-Identity-Cosmos-DB-and-New-Libraries.html"
-categories: ["Azure", "Coding"]
-tags: [".NET", "Agent Server", "AI", "AI Agents", "AKS", "Azure", "Azure Cosmos DB", "Azure Identity", "Azure SDK", "Azure Storage", "C#", "C++", "Certificate Management", "Coding", "Confidential Ledger", "DNS", "Front Door", "Go", "Java", "JavaScript", "Managed Identity", "News", "Python", "Resource Management", "SDK", "WebPubSub"]
-tags_normalized: ["dotnet", "agent server", "ai", "ai agents", "aks", "azure", "azure cosmos db", "azure identity", "azure sdk", "azure storage", "csharp", "cplusplus", "certificate management", "coding", "confidential ledger", "dns", "front door", "go", "java", "javascript", "managed identity", "news", "python", "resource management", "sdk", "webpubsub"]
+tags:
+- .NET
+- Agent Server
+- AI
+- AI Agents
+- AKS
+- Azure Cosmos DB
+- Azure Identity
+- Azure SDK
+- Azure Storage
+- C#
+- C++
+- Certificate Management
+- Confidential Ledger
+- DNS
+- Front Door
+- Go
+- Java
+- JavaScript
+- Managed Identity
+- Python
+- Resource Management
+- SDK
+- WebPubSub
+- Azure
+- News
+section_names:
+- azure
+- dotnet
+primary_section: dotnet
 ---
-
 Ronnie Geraghty summarizes the new features and improvements in the Azure SDK November 2025 release, including updates for Storage, Identity, Cosmos DB, and a range of new and beta libraries for .NET, Java, Python, and more.<!--excerpt_end-->
 
 # Azure SDK November 2025 Release Overview

@@ -2,8 +2,9 @@
 .SYNOPSIS
     Fix markdown formatting issues in Tech Hub content files
 .DESCRIPTION
-    This script processes markdown files to fix Jekyll-specific and generic formatting issues.
-    It can process all files in the repository or a single specific file.
+    This script processes markdown files to fix AI-generated markdown formatting issues.
+    It fixes common problems like missing blank lines, heading spacing, list formatting, etc.
+    It does NOT modify frontmatter - templates already generate correct .NET format.
 .PARAMETER FilePath
     Optional. Path to a specific markdown file to process (relative to repository root).
     When specified, only this file will be processed instead of all markdown files.
@@ -38,7 +39,8 @@ $ErrorActionPreference = "Stop"
 $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
     # Running from the script's directory
     Join-Path $PSScriptRoot "functions"
-} else {
+}
+else {
     # Running from workspace root
     Join-Path $WorkspaceDirectory "scripts/content-processing/functions"
 }
@@ -47,8 +49,8 @@ $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
 
 try {
     Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
-        Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
-        ForEach-Object { . $_.FullName }
+    Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
+    ForEach-Object { . $_.FullName }
 
     $sourceRoot = Get-SourceRoot
 
@@ -62,27 +64,35 @@ try {
         }
         
         Write-Host "🔍 Processing single file: $FilePath"
+        Write-Host "🔧 Fixing markdown formatting with markdownlint-cli2..."
         
-        # Process Jekyll-specific markdown issues first
-        Write-Host "🔧 Processing Jekyll-specific markdown issues..."
-        Repair-MarkdownJekyll -FilePath $absoluteFilePath
-
-        # Then apply generic markdown formatting fixes
-        Write-Host "� Applying generic markdown formatting fixes..."
-        Repair-MarkdownFormatting -FilePath $absoluteFilePath
+        $result = npx --yes markdownlint-cli2 --fix $absoluteFilePath --config "$sourceRoot/.markdownlint-cli2.jsonc" 2>&1
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
+            Write-Host $result
+        }
         
-        Write-Host "Fixed: $FilePath"
+        Write-Host "✅ Fixed: $FilePath"
     }
     else {
-        Write-Host "�🔍 Source root detected: $sourceRoot"
-
-        # Process Jekyll-specific markdown issues first
-        Write-Host "🔧 Processing Jekyll-specific markdown issues..."
-        Repair-MarkdownJekyll -Path $sourceRoot
-
-        # Then apply generic markdown formatting fixes
-        Write-Host "🔧 Applying generic markdown formatting fixes..."
-        Repair-MarkdownFormatting -Path $sourceRoot
+        Write-Host "🔍 Source root detected: $sourceRoot"
+        Write-Host "🔧 Fixing markdown formatting in collections directory with markdownlint-cli2..."
+        
+        # Fix markdown files in collections directory only (content pipeline scope)
+        $collectionsPath = Join-Path $sourceRoot "collections"
+        Push-Location $sourceRoot
+        try {
+            $result = npx --yes markdownlint-cli2 --fix "collections/**/*.md" 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "⚠️  Markdownlint reported issues (exit code: $LASTEXITCODE)" -ForegroundColor Yellow
+                Write-Host $result
+            }
+        }
+        finally {
+            Pop-Location
+        }
+        
+        Write-Host "✅ Markdown formatting complete"
     }
 }
 catch {

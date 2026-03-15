@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Getting Started with Agents in VS Code"
-description: "This episode of Cozy AI Kitchen features Elijah King from the VS Code team demonstrating how AI agents and VS Code's new multi-agent workflows let users build iOS chatbot apps with only natural language prompts. The video showcases no-code development, model switching, and the role of AI in making app creation accessible to both designers and developers."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/7rFLL2kjr0A"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/shorts/7rFLL2kjr0A
+title: Getting Started with Agents in VS Code
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-17 16:31:20 +00:00
-permalink: "/2026-02-17-Getting-Started-with-Agents-in-VS-Code.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Agents", "Automation", "Chatbot", "Cloud Computing", "Coding", "Dev", "Developer Tools", "Development", "Ios App", "Microsoft", "Model Switching", "Multi Agent Workflow", "Natural Language Programming", "No Code Development", "Prompt Engineering", "Software Accessibility", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai agents", "automation", "chatbot", "cloud computing", "coding", "dev", "developer tools", "development", "ios app", "microsoft", "model switching", "multi agent workflow", "natural language programming", "no code development", "prompt engineering", "software accessibility", "tech", "technology", "videos", "vs code"]
+tags:
+- AI
+- AI Agents
+- Automation
+- Chatbot
+- Cloud Computing
+- Dev
+- Developer Tools
+- Development
+- Ios App
+- Microsoft
+- Model Switching
+- Multi Agent Workflow
+- Natural Language Programming
+- No Code Development
+- Prompt Engineering
+- Software Accessibility
+- Tech
+- Technology
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
 ---
-
 Microsoft Developer hosts Elijah King as he explores building iOS chatbot apps in VS Code using AI agents and natural language prompts, showcasing how accessible app creation has become for both designers and developers.<!--excerpt_end-->
 
 {% youtube 7rFLL2kjr0A %}

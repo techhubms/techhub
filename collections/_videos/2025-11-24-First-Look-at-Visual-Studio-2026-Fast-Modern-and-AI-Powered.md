@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "First Look at Visual Studio 2026: Fast, Modern, and AI-Powered"
-description: "This session from Microsoft Ignite 2025 introduces Visual Studio 2026, highlighting its new AI-powered features, enhanced speed, modern interface, and developer productivity enhancements. Key topics include GitHub Copilot and Profiler Agent integrations for smarter code reviews and diagnostics, personalization settings, project insights via NuGet and Microsoft Learn, automated performance improvements, and team collaboration tools."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=xSioblHhYL8"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=xSioblHhYL8
+title: 'First Look at Visual Studio 2026: Fast, Modern, and AI-Powered'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 08:17:17 +00:00
-permalink: "/2025-11-24-First-Look-at-Visual-Studio-2026-Fast-Modern-and-AI-Powered.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Development", "Code Review", "Coding", "Collaboration Tools", "Diagnostics", "Enterprise Development", "GitHub Copilot", "IDE", "InnovatewithAzureAIappsandagents", "Microsoft Learn", "Modernization", "Monthly Update Cycle", "MSIgnite", "NuGet", "Performance Optimization", "Profiler Agent", "Project Upgrades", "Videos", "VS"]
-tags_normalized: ["ai", "ai powered development", "code review", "coding", "collaboration tools", "diagnostics", "enterprise development", "github copilot", "ide", "innovatewithazureaiappsandagents", "microsoft learn", "modernization", "monthly update cycle", "msignite", "nuget", "performance optimization", "profiler agent", "project upgrades", "videos", "vs"]
+tags:
+- AI Powered Development
+- Code Review
+- Collaboration Tools
+- Diagnostics
+- Enterprise Development
+- IDE
+- Microsoft Learn
+- Modernization
+- Monthly Update Cycle
+- MSIgnite
+- NuGet
+- Performance Optimization
+- Profiler Agent
+- Project Upgrades
+- VS
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Microsoft Events presents an in-depth overview of Visual Studio 2026, detailing AI-powered innovations including GitHub Copilot and Profiler Agent integration, and developer-centric features for high-impact coding.<!--excerpt_end-->
 
 {% youtube xSioblHhYL8 %}

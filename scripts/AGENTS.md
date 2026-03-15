@@ -1,13 +1,44 @@
 # PowerShell Development Agent
 
 > **AI CONTEXT**: This is a **LEAF** context file for the `scripts/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
-> **RULE**: Global rules (Timezone, Performance) in Root AGENTS.md apply **IN ADDITION** to local rules. Follow **BOTH**.
+> **RULE**: Follow the 8-step workflow in Root [AGENTS.md](../AGENTS.md).
 
-> ⚠️ **CRITICAL TESTING RULE**: After making ANY changes to files in `scripts/`, you MUST run the PowerShell test suite by executing `./scripts/run-powershell-tests.ps1` to validate your changes.
+## Critical PowerShell Rules
+
+### ✅ Always Do
+
+- **Always use backticks for escaping** (`` ` ``), NEVER backslashes
+- **Always use subexpressions `$(...)` for complex interpolations** (dotted notation, array access, type casting)
+- **Always test ALL script changes** - Run `Run -TestProject powershell` after modifications
+- **Always set error handling** - `$ErrorActionPreference = "Stop"` at script start
+- **Always use strict mode** - `Set-StrictMode -Version Latest`
+- **Always handle two execution contexts** - Script directory vs workspace root
+- **Always import error handling first** - Before other functions
+- **Always document parameters** with `[Parameter()]` attributes
+
+### ⚠️ Ask First
+
+- **Ask first before adding new PowerShell modules** or dependencies
+- **Ask first before changing RSS feed structure** or processing logic
+- **Ask first before modifying AI integration** patterns
+
+### 🚫 Never Do
+
+- **Never use backslashes for escaping** - Use backticks (`` ` ``)
+- **Never escape dollar signs** - Use subexpressions `$(...)` instead
+- **Never use dotted notation without subexpression** - `"$object.property"` is WRONG, use `"$($object.property)"`
+- **Never replicate production logic in tests** - Test real functions
+- **Never install dependencies in scripts** - Use `.devcontainer/post-create.sh`
+- **Never add functions only for tests** - Test real implementation
+- **Never leave scripts without error handling** - Always use try/catch
+- **Never assume execution context** - Support both script dir and workspace root
+- **Never skip testing after changes** - Run `Run -TestProject powershell`
 
 ## Overview
 
 You are a PowerShell development specialist working with the Tech Hub's automation scripts. These scripts handle RSS feed processing, content transformation, AI integration, infrastructure deployment, and testing automation.
+
+⚠️ **CRITICAL TESTING RULE**: After making ANY changes to PowerShell scripts with tests, run `Run -TestProject powershell` to validate your changes.
 
 ## When to Use This Guide
 
@@ -21,30 +52,14 @@ You are a PowerShell development specialist working with the Tech Hub's automati
 
 **Related Documentation**:
 
-- Testing PowerShell scripts → [spec/AGENTS.md](../spec/AGENTS.md)
-- Jekyll integration → [.github/agents/fullstack.md](../.github/agents/fullstack.md)
+- Testing PowerShell scripts → [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md)
 - Content management → [collections/AGENTS.md](../collections/AGENTS.md)
-
-## Tech Stack
-
-- **PowerShell**: 7+ (cross-platform)
-- **Testing Framework**: Pester v5
-- **Key Modules**: HtmlToMarkdown, Az (Azure), Playwright
-- **AI Integration**: Azure AI Foundry
-- **Ruby**: 3.2+ (Jekyll dependencies)
-- **Node.js**: 22+ (development tooling)
+- Azure infrastructure → [infra/main.bicep](../infra/main.bicep)
 
 ## Directory Structure
 
 ```text
 scripts/
-├── jekyll-start.ps1         # Start Jekyll development server
-├── jekyll-stop.ps1          # Stop Jekyll development server
-├── run-all-tests.ps1        # Run all test suites
-├── run-e2e-tests.ps1        # Playwright end-to-end tests
-├── run-javascript-tests.ps1 # Jest JavaScript tests
-├── run-plugin-tests.ps1     # RSpec Ruby plugin tests
-├── run-powershell-tests.ps1 # Pester PowerShell tests
 ├── data/                    # Script data files
 │   ├── rss-feeds.json       # RSS feed configuration
 │   ├── processed-entries.json
@@ -75,18 +90,23 @@ scripts/
 
 ```powershell
 # ✅ String interpolation
+
 Write-Host "Value is $variable"
 
 # ✅ Quotes in strings
+
 Write-Host "Value is `"$variable`""
 
 # ✅ Dotted notation in strings
+
 $variable = "a $($object.with.dottednotation) value"
 
 # ✅ Array access in strings
+
 $variable = "a $($object['key']) value"
 
 # ✅ Type casting in strings
+
 $variable = "value:type = $($type):string"
 ```
 
@@ -94,92 +114,16 @@ $variable = "value:type = $($type):string"
 
 ```powershell
 # ❌ Escaping dollar sign
+
 Write-Host "Value is `$variable"  # Wrong! Shows literal $variable
 
 # ❌ Backslash escaping
+
 Write-Host "Value is \"\$variable\""  # Wrong! Backslashes don't work
 
 # ❌ Dotted notation without subexpression
+
 $variable = "a $object.with.dottednotation value"  # Wrong! Only gets $object
-```
-
-## Jekyll Management Scripts
-
-### jekyll-start.ps1
-
-Starts Jekyll development server in the background with intelligent process detection.
-
-**Parameters:**
-
-- **`-ForceStop`** (switch): Force restart even if Jekyll is already running (default: false)
-- **`-ForceClean`** (switch): Clean Jekyll cache (_site/) before starting
-- **`-BuildInsteadOfServe`** (switch): Build site without starting server (for debugging)
-- **`-VerboseOutput`** (switch): Show detailed build output
-
-**Behavior:**
-
-- **Default** (no flags): Checks if Jekyll is running, exits with success if already running
-- **With -ForceStop**: Stops and restarts Jekyll even if already running
-- **Background Process**: Uses bash/nohup to run Jekyll as background process
-- **PID Tracking**: Saves process ID to `.tmp/jekyll-pid.txt`
-- **Logging**: Captures output to `.tmp/jekyll-log.txt`
-
-**Examples:**
-
-```powershell
-# Start Jekyll (exits if already running)
-pwsh ./scripts/jekyll-start.ps1
-
-# Force restart even if running
-pwsh ./scripts/jekyll-start.ps1 -ForceStop
-
-# Clean rebuild
-pwsh ./scripts/jekyll-start.ps1 -ForceClean
-
-# Build only (no server)
-pwsh ./scripts/jekyll-start.ps1 -BuildInsteadOfServe
-```
-
-### jekyll-stop.ps1
-
-Gracefully stops Jekyll server using multiple detection methods.
-
-**Detection Methods** (in order):
-
-1. PID file (`.tmp/jekyll-pid.txt`)
-2. Process search by command line pattern
-3. Port 4000 netstat scanning
-
-**Examples:**
-
-```powershell
-# Stop Jekyll server
-pwsh ./scripts/jekyll-stop.ps1
-```
-
-### jekyll-helpers.ps1
-
-Shared helper functions used by Jekyll scripts.
-
-**Functions:**
-
-- **`Get-JekyllPaths`**: Returns hashtable with .tmp dir, log file, and PID file paths
-- **`Test-JekyllRunning`**: Multi-method detection (PID → HTTP → netstat), with optional cleanup
-- **`Get-JekyllPidFromPort`**: Finds PID using netstat (fallback method)
-- **`Clear-JekyllFiles`**: Removes log and/or PID files
-- **`Stop-Jekyll -ProcessId`**: Stops Jekyll process by PID
-
-**Usage:**
-
-```powershell
-# Dot-source the helpers
-. (Join-Path $PSScriptRoot "jekyll-helpers.ps1")
-
-# Check if Jekyll is running
-$status = Test-JekyllRunning -Cleanup
-if ($status.IsRunning) {
-    Write-Host "Jekyll is running (Method: $($status.Method), PID: $($status.Pid))"
-}
 ```
 
 ## Script Standards
@@ -205,6 +149,7 @@ Content processing scripts must handle two execution contexts:
 
 ```powershell
 # Determine the correct functions path
+
 $functionsPath = if ($WorkspaceDirectory -eq $PSScriptRoot) {
     # Running from the script's directory
     Join-Path $PSScriptRoot "functions"
@@ -223,7 +168,7 @@ try {
     . (Join-Path $functionsPath "Write-ErrorDetails.ps1")
     
     # Load other functions
-    Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
+    Get-ChildItem -Path $functionsPath -Filter "*.ps1" |
         Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
         ForEach-Object { . $_.FullName }
     
@@ -239,32 +184,41 @@ catch {
 
 ### Content Processing (in `content-processing/`)
 
-**download-rss-feeds.ps1**
+#### download-rss-feeds.ps1
 
 - Downloads RSS feeds from configured sources
 - Saves structured data to `scripts/data/rss-cache/`
 - Tracks processed entries to avoid duplicates
 
-**process-rss-to-markdown.ps1**
+#### process-rss-to-markdown.ps1
 
 - Converts RSS data to markdown content files
 - AI-powered content transformation and summarization
 - Collection-aware prioritization
 - Rate limit handling for AI APIs
+- **Generates .NET frontmatter** - Uses `section_names` (normalized identifiers) instead of `categories` (display names)
+- **Template-based output** - Uses [templates/template-generic.md](content-processing/templates/template-generic.md) and [templates/template-videos.md](content-processing/templates/template-videos.md)
+- **Field mapping**: AI returns categories (display names) → converted to section_names (lowercase identifiers)
+  - Example: `"GitHub Copilot"` → `"github-copilot"`, `"AI"` → `"ai"`, `".NET"` → `"dotnet"`
 
-**fix-markdown-files.ps1**
+For complete frontmatter schema, see [collections/AGENTS.md - Frontmatter Schema](../collections/AGENTS.md#frontmatter-schema).
 
-- Repairs markdown formatting issues
-- Fixes frontmatter structure
-- Validates Jekyll compatibility
+#### fix-markdown-files.ps1
 
-**iterative-roundup-generation.ps1**
+- **Purpose**: Fixes markdown formatting issues in collections directory using markdownlint-cli2
+- **What it does**: Runs `npx markdownlint-cli2 --fix` on markdown files in `collections/` directory
+- **What it does NOT do**: Modify frontmatter (templates already generate correct .NET format)
+- **When to use**: After AI processes content that has markdown formatting issues
+- **Note**: New content from RSS pipeline already has correct frontmatter structure (section_names)
+- **Manual usage**: Run `npx markdownlint-cli2 --fix <file-path> --config /workspaces/techhub/.markdownlint-cli2.jsonc` on any markdown file
+
+#### iterative-roundup-generation.ps1
 
 - AI-powered weekly roundup generation
 - Multi-step iteration with validation
 - Combines content from multiple sources
 
-**detect-repository-content-issues.ps1**
+#### detect-repository-content-issues.ps1
 
 - Validates markdown content across collections
 - Checks for duplicates and similarity
@@ -272,56 +226,75 @@ catch {
 
 ### Infrastructure
 
-**infra/Deploy-Infrastructure.ps1**
+#### Deploy-Infrastructure.ps1
 
-- Azure infrastructure deployment via Bicep
+- Deploys Azure infrastructure via Bicep templates
+- Supports three environments: shared, staging, production
 - Three modes: validate, whatif, deploy
-- Environment-specific parameters
-- GitHub Actions compatible
+- Pre-flight checks: purges soft-deleted AI Services resources
+- Post-deployment: assigns ACR pull roles to container app identities
+- Runs locally or from GitHub Actions
+
+```powershell
+# Preview staging changes
+./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode whatif
+
+# Deploy shared resources (ACR)
+./scripts/Deploy-Infrastructure.ps1 -Environment shared -Mode deploy
+
+# Deploy staging
+$env:POSTGRES_ADMIN_PASSWORD = "<password>"
+./scripts/Deploy-Infrastructure.ps1 -Environment staging -Mode deploy
+```
+
+#### Deploy-Application.ps1
+
+- Builds Docker images, pushes to ACR, deploys to Container Apps
+- Default tag: `dev` locally, git commit SHA in CI
+- Supports `-SkipBuild`, `-SkipPush`, `-SkipDeploy`, `-SkipSmokeTests`
+- Production deployments validate staging health first and auto-rollback on failure
+
+```powershell
+# Full local deployment to staging (build + push + deploy, tagged 'dev')
+./scripts/Deploy-Application.ps1 -Environment staging
+
+# Build and push only
+./scripts/Deploy-Application.ps1 -Environment staging -SkipDeploy
+
+# Deploy existing images without rebuilding
+./scripts/Deploy-Application.ps1 -Environment staging -SkipBuild -SkipPush
+```
 
 ### Testing
 
-**Script-Specific Testing**:
+**PowerShell Script Testing**:
 
-**run-powershell-tests.ps1**
+For PowerShell script testing (Pester v5), see:
 
-- Pester v5 test execution
-- Code coverage analysis
-- Detailed or minimal output modes
-- Test filtering capabilities
+- Content processing scripts → [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md)
+- .NET testing → [tests/](../tests/) directory
 
-**run-javascript-tests.ps1**
+**Running Tests**:
 
-- Jest test execution for client-side code
-- Coverage reporting
-- Watch mode support
+```powershell
+# All PowerShell tests for content processing scripts
+Run -TestProject powershell
 
-**run-plugin-tests.ps1**
+# Specific tests by name pattern
+Run -TestProject powershell -TestName "RssToMarkdown"
 
-- RSpec tests for Jekyll plugins
-- Integration test support
-
-**run-e2e-tests.ps1**
-
-- Playwright end-to-end tests
-- Multi-browser support
-- Screenshot and trace capture
-
-**run-all-tests.ps1**
-
-- Orchestrates all test suites
-- Comprehensive validation
-
-**For complete testing strategy, patterns, and best practices, see [spec/AGENTS.md](../spec/AGENTS.md).**
+# All tests (PowerShell + .NET), then start servers
+Run
+```
 
 ## PowerShell Testing Standards
 
-Use **Pester v5** for all PowerShell testing. For complete testing patterns, test organization, and critical testing rules, see [spec/AGENTS.md](../spec/AGENTS.md).
+Use **Pester v5** for all PowerShell testing. For complete testing patterns, test organization, and critical testing rules, see [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md).
 
 ### Test File Location
 
 ```text
-spec/powershell/
+tests/powershell/
 ├── [ScriptName].Tests.ps1
 ├── Initialize-BeforeAll.ps1    # Standard setup for all tests
 ├── Initialize-BeforeEach.ps1   # Standard cleanup between tests
@@ -330,15 +303,30 @@ spec/powershell/
 
 ### Running Pester Tests
 
-```bash
-# All PowerShell tests
-./scripts/run-powershell-tests.ps1
+**Recommended** (via Run function - see [docs/running-and-testing.md](../docs/running-and-testing.md)):
 
-# Specific test file
-./scripts/run-powershell-tests.ps1 -TestPath "spec/powershell/Convert-RssToMarkdown.Tests.ps1"
+```powershell
+# All PowerShell tests only (fast - no .NET build)
+Run -TestProject powershell
 
-# With coverage
-./scripts/run-powershell-tests.ps1 -Coverage
+# All tests (PowerShell + .NET) then start servers
+Run
+
+# Skip tests, start servers directly
+Run -WithoutTests
+```
+
+**Test Filtering Options**:
+
+```powershell
+# Run all tests with "FrontMatter" in name
+Run -TestProject powershell -TestName "FrontMatter"
+
+# Run all tests with "RSS" in name
+Run -TestProject powershell -TestName "RSS"
+
+# Run PowerShell tests only
+Run -TestProject powershell
 ```
 
 ## Common Functions
@@ -353,7 +341,41 @@ Makes AI API calls with retry logic, rate limit handling, and error recovery. Su
 
 ### Convert-RssToMarkdown.ps1
 
-Transforms RSS feed items into Jekyll-compatible markdown with proper frontmatter.
+Transforms RSS feed items into markdown files with .NET Tech Hub frontmatter structure.
+
+**Key Features**:
+
+- Generates `section_names` from AI-provided categories (normalized to lowercase identifiers)
+- Uses .NET frontmatter schema (never includes legacy `categories`, `tags_normalized`, `description`, `excerpt_separator` fields)
+- Follows frontmatter schema in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema)
+- Applies markdown formatting repairs as needed
+- Tracks processed/skipped entries to avoid reprocessing
+
+**Section Name Normalization**:
+
+```powershell
+# AI returns display names, we convert to identifiers:
+"AI" → "ai"
+"GitHub Copilot" → "github-copilot"
+".NET" → "dotnet"
+"Azure" → "azure"
+"DevOps" → "devops"
+"Security" → "security"
+"Cloud" → "cloud"
+```
+
+**Template Variables** (both template-generic.md and template-videos.md):
+
+- `{{TITLE}}` - Content title
+- `{{AUTHOR}}` - Author name
+- `{{EXTERNAL_URL}}` - Original source URL
+- `{{COLLECTION}}` - Collection name (news, videos, blogs, community, roundups)
+- `{{DATE}}` - Publication date with timezone
+- `{{TAGS}}` - Topic tags array
+- `{{SECTION_NAMES}}` - Normalized section identifiers array
+- `{{CONTENT}}` - Main content
+- `{{EXCERPT}}` - Summary excerpt
+- `{{FEEDNAME}}` - Feed metadata not stored in frontmatter
 
 ### Feed.ps1
 
@@ -397,15 +419,13 @@ param(
 
 ```powershell
 # Content processing
+
 ./scripts/content-processing/download-rss-feeds.ps1 -WorkspaceDirectory .
 ./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "token" -WorkspaceDirectory .
 
-# Testing
-./scripts/run-powershell-tests.ps1
-./scripts/run-all-tests.ps1
-
 # Infrastructure
-./infra/Deploy-Infrastructure.ps1 -Mode validate
+
+az deployment sub validate --location westeurope --template-file ./infra/main.bicep --parameters ./infra/parameters/staging.bicepparam
 ```
 
 ### From GitHub Actions
@@ -419,7 +439,15 @@ param(
 - name: Run Tests
   shell: pwsh
   run: |
-    ./scripts/run-powershell-tests.ps1
+    Import-Module ./scripts/TechHubRunner.psm1 -Force
+    try
+    {
+        Run
+    }
+    finally
+    {
+        Stop-Servers
+    }
 ```
 
 ## Data File Locations
@@ -429,10 +457,16 @@ param(
 - **Skipped Entries**: `scripts/data/skipped-entries.json`
 - **RSS Cache**: `scripts/data/rss-cache/`
 
-## Never Do
+## Related Documentation
 
-- Never use backslashes for escaping
-- Never replicate production logic in tests
-- Never install dependencies in scripts (use `.devcontainer/post-create.sh`)
-- Never add functions only for tests
-- Never leave PowerShell scripts without proper error handling
+### Functional Documentation (docs/)
+
+- **[Content Processing](../docs/content-processing.md)** - RSS processing workflow and content creation
+- **[Frontmatter](../docs/frontmatter.md)** - Frontmatter schema for generated content
+- **[RSS Feeds](../docs/rss-feeds.md)** - RSS feed system overview
+
+### Implementation Guides (AGENTS.md)
+
+- **[Root AGENTS.md](../AGENTS.md)** - AI workflow, starting/stopping website, principles
+- **[tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md)** - Pester testing patterns for PowerShell
+- **[collections/AGENTS.md](../collections/AGENTS.md)** - Content management and file organization

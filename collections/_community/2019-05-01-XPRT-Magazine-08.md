@@ -1,17 +1,37 @@
----
-layout: "post"
-title: "XPRT Magazine 08"
-description: "This issue covers chaos engineering, DevOps for data science, Azure DevOps, serverless, event sourcing, Xamarin, and more."
-categories: ["DevOps", "Azure", "ML", "AI", "Coding"]
+﻿---
+title: XPRT Magazine 08
 date: 2019-05-01 00:00:00 +00:00
-author: "Xebia"
-viewing_mode: "external"
-permalink: "/2019-05-01-XPRT-Magazine-08.html"
-excerpt_separator: <!--excerpt_end-->
-tags: ["AI", "APIs", "Automation", "Azure", "Azure Service Bus", "Chaos Engineering", "Cloud", "Coding", "Community", "Data Science", "DevOps", "Event Sourcing", "Kubernetes", "Magazines", "ML", "Productivity", "Serverless", "Symbol Management", "Unit Testing", "Xamarin"]
-tags_normalized: ["ai", "apis", "automation", "azure", "azure service bus", "chaos engineering", "cloud", "coding", "community", "data science", "devops", "event sourcing", "kubernetes", "magazines", "ml", "productivity", "serverless", "symbol management", "unit testing", "xamarin"]
+author: Xebia
+external_url: https://xprt.xebia.com/magazine-08
+tags:
+- APIs
+- Automation
+- Azure Service Bus
+- Chaos Engineering
+- Data Science
+- Event Sourcing
+- Kubernetes
+- Magazines
+- Productivity
+- Serverless
+- Symbol Management
+- Unit Testing
+- Xamarin
+- DevOps
+- Azure
+- ML
+- AI
+- Community
+- .NET
+section_names:
+- devops
+- azure
+- ml
+- ai
+- dotnet
+primary_section: ai
+feed_name: TechHub
 ---
-
 XPRT Magazine 08 explores chaos engineering, DevOps for data science, enabling DevOps teams for Azure, serverless and Kubernetes, event sourcing, Xamarin Forms, resilient Azure Service Bus, and more. This issue provides practical strategies and technical insights for building robust, scalable, and innovative solutions.
 <!--excerpt_end-->
 

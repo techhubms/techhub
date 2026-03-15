@@ -1,20 +1,43 @@
----
-layout: "post"
-title: "Securely Turbo‑Charge Software Delivery with Codex Coding Agent on Azure OpenAI"
-description: "This post by Govind Kamtamneni details the integration of Codex with Azure OpenAI, enabling a secure, enterprise-grade coding agent environment on Azure. Learn the step-by-step process to deploy, configure, and automate Codex workflows, including CI/CD integration with GitHub Actions and troubleshooting guidance."
-author: "Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/securely-turbo%e2%80%91charge-your-software-delivery-with-the-codex-coding-agent-on-azure-openai/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/securely-turbo%e2%80%91charge-your-software-delivery-with-the-codex-coding-agent-on-azure-openai/
+title: Securely Turbo‑Charge Software Delivery with Codex Coding Agent on Azure OpenAI
+author: Govind Kamtamneni
+feed_name: Microsoft DevBlog
 date: 2025-06-17 22:54:11 +00:00
-permalink: "/2025-06-17-Securely-TurboCharge-Software-Delivery-with-Codex-Coding-Agent-on-Azure-OpenAI.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agents", "AI", "All Things Azure", "App Development", "Automation", "Azure", "Azure AI Foundry", "Azure OpenAI", "CI/CD", "CLI", "Codex", "Codex Mini", "Coding", "Coding Agent", "Config.json", "Developer Productivity", "DevOps", "Entra ID", "GitHub Actions", "News", "Node.js", "OpenAI", "Private Networking", "Refactoring", "Security"]
-tags_normalized: ["agents", "ai", "all things azure", "app development", "automation", "azure", "azure ai foundry", "azure openai", "cislashcd", "cli", "codex", "codex mini", "coding", "coding agent", "configdotjson", "developer productivity", "devops", "entra id", "github actions", "news", "nodedotjs", "openai", "private networking", "refactoring", "security"]
+tags:
+- Agents
+- All Things Azure
+- App Development
+- Automation
+- Azure AI Foundry
+- Azure OpenAI
+- CI/CD
+- CLI
+- Codex
+- Codex Mini
+- Coding Agent
+- Config.json
+- Developer Productivity
+- Entra ID
+- GitHub Actions
+- Node.js
+- OpenAI
+- Private Networking
+- Refactoring
+- AI
+- Azure
+- DevOps
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- security
+primary_section: ai
 ---
-
 In this detailed guide, Govind Kamtamneni explains how to run the Codex Coding Agent securely on Azure OpenAI. He covers setup, enterprise security benefits, automation via GitHub Actions, and troubleshooting tips.<!--excerpt_end-->
 
 # Securely Turbo‑Charge Software Delivery with Codex Coding Agent on Azure OpenAI
@@ -131,8 +154,8 @@ jobs:
       - name: Run Codex agent
         run: |
           npm install -g @openai/codex
-          export AZURE_OPENAI_API_KEY={% raw %}${{ secrets.AZURE_OPENAI_API_KEY }}{% endraw %}
-          export OPENAI_API_KEY={% raw %}${{ secrets.AZURE_OPENAI_API_KEY }}{% endraw %}
+          export AZURE_OPENAI_API_KEY=${{ secrets.AZURE_OPENAI_API_KEY }}
+          export OPENAI_API_KEY=${{ secrets.AZURE_OPENAI_API_KEY }}
           codex -p azure "# refactor the authentication module for clarity"
 ```
 

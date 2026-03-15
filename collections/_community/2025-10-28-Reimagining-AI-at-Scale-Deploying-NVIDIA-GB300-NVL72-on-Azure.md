@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Reimagining AI at Scale: Deploying NVIDIA GB300 NVL72 on Azure"
-description: "This technical overview details Microsoft's deployment of the NVIDIA GB300 NVL72 system on Azure. It focuses on hardware integration, advanced cooling, infrastructure innovation, security features, and management automation to empower complex AI workloads. The article addresses design choices that enable robust, efficient, and scalable AI supercomputing for demanding model training and inference."
-author: "gwaqar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/reimagining-ai-at-scale-nvidia-gb300-nvl72-on-azure/ba-p/4464556
+title: 'Reimagining AI at Scale: Deploying NVIDIA GB300 NVL72 on Azure'
+author: gwaqar
+feed_name: Microsoft Tech Community
 date: 2025-10-28 18:30:02 +00:00
-permalink: "/2025-10-28-Reimagining-AI-at-Scale-Deploying-NVIDIA-GB300-NVL72-on-Azure.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Cluster", "AI Infrastructure", "Azure", "Azure Boost", "Blackwell Ultra GPU", "Community", "Datacenter", "Fleet Health", "Grace CPU", "Hardware Security Module", "High Performance Computing", "Infrastructure Innovation", "Liquid Cooling", "NVIDIA GB300", "NVL72", "Rack Management", "Supercomputing"]
-tags_normalized: ["ai", "ai cluster", "ai infrastructure", "azure", "azure boost", "blackwell ultra gpu", "community", "datacenter", "fleet health", "grace cpu", "hardware security module", "high performance computing", "infrastructure innovation", "liquid cooling", "nvidia gb300", "nvl72", "rack management", "supercomputing"]
+tags:
+- AI Cluster
+- AI Infrastructure
+- Azure Boost
+- Blackwell Ultra GPU
+- Datacenter
+- Fleet Health
+- Grace CPU
+- Hardware Security Module
+- High Performance Computing
+- Infrastructure Innovation
+- Liquid Cooling
+- NVIDIA GB300
+- NVL72
+- Rack Management
+- Supercomputing
+- AI
+- Azure
+- Community
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Gohar Waqar examines how Microsoft engineered the Azure platform to support NVIDIA GB300 NVL72 racks, focusing on AI infrastructure, advanced cooling, hardware integration, and secure, scalable deployment.<!--excerpt_end-->
 
 # Reimagining AI at Scale: Deploying NVIDIA GB300 NVL72 on Azure

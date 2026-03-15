@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How to use the GitHub and JFrog integration for secure, traceable builds from commit to production"
-description: "This article provides a comprehensive walkthrough of the new GitHub and JFrog integration, focusing on how developers can create a secure, traceable, and automated build and deployment workflow. Topics include connecting commits to artifacts, unified security scans, attestation management, and best practices for continuous delivery using GitHub Actions and JFrog Artifactory."
-author: "April Yoho"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/enterprise-software/devsecops/how-to-use-the-github-and-jfrog-integration-for-secure-traceable-builds-from-commit-to-production/
+title: How to use the GitHub and JFrog integration for secure, traceable builds from commit to production
+author: April Yoho
+feed_name: The GitHub Blog
 date: 2025-09-09 22:00:00 +00:00
-permalink: "/2025-09-09-How-to-use-the-GitHub-and-JFrog-integration-for-secure-traceable-builds-from-commit-to-production.html"
-categories: ["DevOps", "Security"]
-tags: ["Artifact Promotion", "Artifactory", "Attestation", "Compliance", "Continuous Delivery", "Continuous Integration", "Dependabot", "DevOps", "DevSecOps", "Enterprise Software", "GitHub", "GitHub Actions", "JFrog", "News", "OIDC", "Provenance", "Security", "Security Scanning", "Supply Chain Security", "Workflow Automation"]
-tags_normalized: ["artifact promotion", "artifactory", "attestation", "compliance", "continuous delivery", "continuous integration", "dependabot", "devops", "devsecops", "enterprise software", "github", "github actions", "jfrog", "news", "oidc", "provenance", "security", "security scanning", "supply chain security", "workflow automation"]
+tags:
+- Artifact Promotion
+- Artifactory
+- Attestation
+- Compliance
+- Continuous Delivery
+- Continuous Integration
+- Dependabot
+- DevSecOps
+- Enterprise Software
+- GitHub
+- GitHub Actions
+- JFrog
+- OIDC
+- Provenance
+- Security Scanning
+- Supply Chain Security
+- Workflow Automation
+- DevOps
+- Security
+- News
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 April Yoho explains how developers can leverage the new GitHub and JFrog integration to create a secure, traceable build process, with unified security scanning and centralized artifact management from commit to production.<!--excerpt_end-->
 
 # How to use the GitHub and JFrog integration for secure, traceable builds from commit to production

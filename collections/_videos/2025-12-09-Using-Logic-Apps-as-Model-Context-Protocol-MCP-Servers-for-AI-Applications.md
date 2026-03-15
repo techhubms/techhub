@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications"
-description: "This video, hosted by John Savill, explains how to leverage Azure Logic App connectors and custom workflows as servers implementing the Model Context Protocol (MCP) for AI applications and agents. The walkthrough covers Logic App setup, authentication, creating MCP-capable workflows, and integrating with agents and Azure cloud tools. Key implementation details, usage scenarios, and references to official Microsoft documentation are provided to help practitioners build robust AI-connected workflows on Azure."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=9z7x0u99J9s"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=9z7x0u99J9s
+title: Using Logic Apps as Model Context Protocol (MCP) Servers for AI Applications
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2025-12-09 16:58:26 +00:00
-permalink: "/2025-12-09-Using-Logic-Apps-as-Model-Context-Protocol-MCP-Servers-for-AI-Applications.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Integration", "Agents", "AI", "AI Application", "Authentication", "Azure", "Azure Cloud", "Azure Tools", "Cloud", "Connectors", "Integration", "Logic Apps", "MCP", "MCP Server", "Microsoft", "Microsoft Azure", "Microsoft Docs", "Technical Training", "Tools", "Videos", "Workflow Automation", "Workflow Design"]
-tags_normalized: ["agent integration", "agents", "ai", "ai application", "authentication", "azure", "azure cloud", "azure tools", "cloud", "connectors", "integration", "logic apps", "mcp", "mcp server", "microsoft", "microsoft azure", "microsoft docs", "technical training", "tools", "videos", "workflow automation", "workflow design"]
+tags:
+- Agent Integration
+- Agents
+- AI Application
+- Authentication
+- Azure Cloud
+- Azure Tools
+- Connectors
+- Integration
+- Logic Apps
+- MCP
+- MCP Server
+- Microsoft
+- Microsoft Azure
+- Microsoft Docs
+- Technical Training
+- Tools
+- Workflow Automation
+- Workflow Design
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 John Savill's Technical Training presents a step-by-step guide on using Azure Logic Apps as Model Context Protocol (MCP) servers for AI applications, highlighting actionable setup and integration strategies.<!--excerpt_end-->
 
 {% youtube 9z7x0u99J9s %}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Adding Metadata to Fallback Endpoints in ASP.NET Core"
-description: "This post by Andrew Lock explores the use of metadata with fallback endpoints in ASP.NET Core. It explains the routing infrastructure, why fallback endpoints exist, and highlights key differences in how metadata like authorization is handled for minimal APIs versus MVC and Razor Pages. Readers will learn common mistakes and best practices for ensuring proper authorization behavior."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/adding-metadata-to-fallback-endpoints-in-aspnetcore/
+title: Adding Metadata to Fallback Endpoints in ASP.NET Core
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-10-22 10:00:00 +00:00
-permalink: "/2025-10-22-Adding-Metadata-to-Fallback-Endpoints-in-ASPNET-Core.html"
-categories: ["Coding"]
-tags: [".NET 6", ".NET Core", "AllowAnonymous", "ASP.NET Core", "Authorization", "Blogs", "Coding", "Endpoint Metadata", "Fallback Endpoints", "MapFallback", "MapFallbackToController", "MapFallbackToPage", "Middleware", "Minimal APIs", "MVC", "Razor Pages", "RequireAuthorization", "Routing"]
-tags_normalized: ["dotnet 6", "dotnet core", "allowanonymous", "aspdotnet core", "authorization", "blogs", "coding", "endpoint metadata", "fallback endpoints", "mapfallback", "mapfallbacktocontroller", "mapfallbacktopage", "middleware", "minimal apis", "mvc", "razor pages", "requireauthorization", "routing"]
+tags:
+- .NET 6
+- .NET Core
+- AllowAnonymous
+- ASP.NET Core
+- Authorization
+- Endpoint Metadata
+- Fallback Endpoints
+- MapFallback
+- MapFallbackToController
+- MapFallbackToPage
+- Middleware
+- Minimal APIs
+- MVC
+- Razor Pages
+- RequireAuthorization
+- Routing
+- Blogs
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Andrew Lock delves into the quirks of applying metadata to fallback endpoints in ASP.NET Core, providing guidance on best practices for minimal APIs, MVC, and Razor Pages.<!--excerpt_end-->
 
 # Adding Metadata to Fallback Endpoints in ASP.NET Core

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Write Unit Tests Without the Guesswork"
-description: "This guide explains how developers can leverage GitHub Copilot to generate effective unit tests across multiple languages like Python, JavaScript, and Java. It covers the use of descriptive comments to prompt Copilot for useful test cases, tips for handling edge cases, and practical workflow steps for fast, efficient testing."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/write-unit-tests-without-the-guesswork.html
+title: Write Unit Tests Without the Guesswork
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-04-18 00:00:00 +00:00
-permalink: "/2025-04-18-Write-Unit-Tests-Without-the-Guesswork.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Tools", "Automated Testing", "Blogs", "Code Quality", "Coding", "Developer Productivity", "Edge Cases", "GitHub Copilot", "Java", "JavaScript", "Jest", "JUnit", "Pytest", "Python", "Test Automation", "Test Coverage", "Unit Testing"]
-tags_normalized: ["ai", "ai tools", "automated testing", "blogs", "code quality", "coding", "developer productivity", "edge cases", "github copilot", "java", "javascript", "jest", "junit", "pytest", "python", "test automation", "test coverage", "unit testing"]
+tags:
+- AI Tools
+- Automated Testing
+- Code Quality
+- Developer Productivity
+- Edge Cases
+- Java
+- JavaScript
+- Jest
+- JUnit
+- Pytest
+- Python
+- Test Automation
+- Test Coverage
+- Unit Testing
+- AI
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels demonstrates how to use GitHub Copilot to quickly generate meaningful unit tests, helping developers in Python, JavaScript, and Java improve test coverage with AI-powered suggestions.<!--excerpt_end-->
 
 # Write Unit Tests Without the Guesswork

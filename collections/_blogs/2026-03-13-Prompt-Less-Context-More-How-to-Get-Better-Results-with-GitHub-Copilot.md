@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Prompt Less, Context More: How to Get Better Results with GitHub Copilot"
-description: "This article explains how developers can improve their GitHub Copilot experience by focusing on providing better context rather than crafting longer prompts. It covers practical ways to guide Copilot through code selection, intent comments, and leveraging the surrounding codebase for stronger AI suggestions."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/prompt-less-context-more.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/prompt-less-context-more.html
+title: 'Prompt Less, Context More: How to Get Better Results with GitHub Copilot'
+author: randy.pagels@xebia.com (Randy Pagels)
+primary_section: github-copilot
+feed_name: Randy Pagels's Blog
 date: 2026-03-13 00:00:00 +00:00
-permalink: "/2026-03-13-Prompt-Less-Context-More-How-to-Get-Better-Results-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Blogs", "Code Review", "Code Suggestions", "Coding", "Context Aware Coding", "Copilot Best Practices", "Developer Productivity", "Function Selection", "GitHub Copilot", "Prompt Engineering", "Software Development"]
-tags_normalized: ["ai", "ai assisted development", "blogs", "code review", "code suggestions", "coding", "context aware coding", "copilot best practices", "developer productivity", "function selection", "github copilot", "prompt engineering", "software development"]
+tags:
+- AI
+- AI Assisted Development
+- Blogs
+- Code Review
+- Code Suggestions
+- Context Aware Coding
+- Copilot Best Practices
+- Developer Productivity
+- Function Selection
+- GitHub Copilot
+- Prompt Engineering
+- Software Development
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Randy Pagels shares practical tips for developers to maximize GitHub Copilot's effectiveness by providing better context and intent, rather than relying on longer prompts.<!--excerpt_end-->
 
 # Prompt Less, Context More

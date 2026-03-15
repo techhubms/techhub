@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Comprehensive VM Monitoring with OpenTelemetry in Azure Monitor"
-description: "This article explains how Azure Monitor is expanding virtual machine observability with OpenTelemetry-based Guest OS metrics. It covers onboarding, benefits of the OpenTelemetry pipeline, use of Azure Monitor Workspace, and how these tools enable improved monitoring, dashboarding with Grafana, alerting, and operational visibility for both Windows and Linux VMs and Arc servers in Azure. It outlines scenarios for both traditional Log Analytics and the new OpenTelemetry-based approach, highlighting onboarding simplicity and deep process-level metrics."
-author: "viviandiec"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/comprehensive-vm-monitoring-with-opentelemetry-performance/ba-p/4470122
+title: Comprehensive VM Monitoring with OpenTelemetry in Azure Monitor
+author: viviandiec
+feed_name: Microsoft Tech Community
 date: 2025-11-17 23:17:57 +00:00
-permalink: "/2025-11-17-Comprehensive-VM-Monitoring-with-OpenTelemetry-in-Azure-Monitor.html"
-categories: ["Azure", "DevOps"]
-tags: ["Arc Servers", "Azure", "Azure Monitor", "Azure Monitor Workspace", "Community", "Data Collection Rules", "DevOps", "Grafana", "Guest OS", "Linux", "Log Analytics", "Metrics", "Monitoring", "Observability", "OpenTelemetry", "Performance Counters", "Process Metrics", "PromQL", "Virtual Machines", "Windows"]
-tags_normalized: ["arc servers", "azure", "azure monitor", "azure monitor workspace", "community", "data collection rules", "devops", "grafana", "guest os", "linux", "log analytics", "metrics", "monitoring", "observability", "opentelemetry", "performance counters", "process metrics", "promql", "virtual machines", "windows"]
+tags:
+- Arc Servers
+- Azure Monitor
+- Azure Monitor Workspace
+- Data Collection Rules
+- Grafana
+- Guest OS
+- Linux
+- Log Analytics
+- Metrics
+- Monitoring
+- Observability
+- OpenTelemetry
+- Performance Counters
+- Process Metrics
+- PromQL
+- Virtual Machines
+- Windows
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 viviandiec details how Azure Monitor integrates OpenTelemetry for VM and Arc server monitoring. The post covers onboarding, advanced metrics, enhanced dashboards, and new alerting capabilities.<!--excerpt_end-->
 
 # Comprehensive VM Monitoring with OpenTelemetry in Azure Monitor

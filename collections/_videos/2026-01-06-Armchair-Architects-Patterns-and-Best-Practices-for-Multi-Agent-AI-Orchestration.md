@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration"
-description: "This Azure Essentials Show episode features the Armchair Architects (Uli, Eric, and David) as they discuss practical strategies for orchestrating multiple AI agents in enterprise settings. The discussion focuses on secure design patterns, agent communication, data leak prevention, cost management, and recommended frameworks and tools—such as Autogen, Semantic Kernel, and Microsoft Purview—to help architects and developers build robust, scalable, and compliant AI agent systems."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Dwyx8GomVvQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=Dwyx8GomVvQ
+title: 'Armchair Architects: Patterns and Best Practices for Multi-Agent AI Orchestration'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2026-01-06 08:00:14 +00:00
-permalink: "/2026-01-06-Armchair-Architects-Patterns-and-Best-Practices-for-Multi-Agent-AI-Orchestration.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Frameworks", "AI", "AI Orchestration", "AutoGen", "Azure", "Azure Architecture", "Cost Management", "Data Governance", "Design Patterns", "Enterprise AI", "Message Based Architecture", "Microsoft Purview", "Multi Agent Systems", "Pattern Selection", "Scalability", "Security", "Semantic Kernel", "Videos"]
-tags_normalized: ["agent frameworks", "ai", "ai orchestration", "autogen", "azure", "azure architecture", "cost management", "data governance", "design patterns", "enterprise ai", "message based architecture", "microsoft purview", "multi agent systems", "pattern selection", "scalability", "security", "semantic kernel", "videos"]
+tags:
+- Agent Frameworks
+- AI Orchestration
+- AutoGen
+- Azure Architecture
+- Cost Management
+- Data Governance
+- Design Patterns
+- Enterprise AI
+- Message Based Architecture
+- Microsoft Purview
+- Multi Agent Systems
+- Pattern Selection
+- Scalability
+- Semantic Kernel
+- AI
+- Azure
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 Microsoft Developer brings together Uli, Eric, and David—Armchair Architects—to explore multi-agent orchestration in enterprise environments, covering patterns, frameworks, and security practices for building secure and scalable AI agent solutions.<!--excerpt_end-->
 
 {% youtube Dwyx8GomVvQ %}

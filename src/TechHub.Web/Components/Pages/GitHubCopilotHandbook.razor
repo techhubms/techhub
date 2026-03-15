@@ -1,0 +1,218 @@
+@page "/github-copilot/handbook"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotHandbook> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Handbook") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Table of Contents" />
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+            </div>
+
+            <div class="handbook-container">
+                @* Book Hero - Featured book presentation *@
+                <div class="handbook-hero">
+                    <div class="handbook-hero-cover">
+                        <img src="/images/ghc-handbook.jpg" alt="GitHub Copilot Handbook Book Cover" width="559" height="690" />
+                        <div class="handbook-cover-glow"></div>
+                    </div>
+
+                    <div class="handbook-hero-content">
+                        <p class="handbook-tagline">Your Complete Guide to AI-Powered Development</p>
+
+                        <p class="handbook-description">@pageData.Intro</p>
+
+                        <div class="handbook-meta">
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Authors</span>
+                                <span class="handbook-meta-value">@string.Join(", ", pageData.Authors)</span>
+                            </div>
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Publisher</span>
+                                <span class="handbook-meta-value">@pageData.BookDetails.Publisher</span>
+                            </div>
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Released</span>
+                                <span class="handbook-meta-value">@pageData.BookDetails.Released</span>
+                            </div>
+                            <div class="handbook-meta-item">
+                                <span class="handbook-meta-label">Pages</span>
+                                <span class="handbook-meta-value">@pageData.BookDetails.Pages</span>
+                            </div>
+                        </div>
+
+                        @if (pageData.PurchaseLink != null)
+                        {
+                            <a href="@pageData.PurchaseLink.Url" class="btn" target="_blank" rel="noopener">
+                                @pageData.PurchaseLink.Text
+                            </a>
+                        }
+                    </div>
+                </div>
+
+                @* About the Book *@
+                <section class="handbook-section">
+                    <h2 id="about-book">About the Book</h2>
+                    @foreach (var paragraph in pageData.AboutBook)
+                    {
+                        <p>@paragraph</p>
+                    }
+                </section>
+
+                @* What You'll Learn *@
+                <section class="handbook-section">
+                    <h2 id="learnings">What You'll Learn</h2>
+                    <ul class="handbook-learnings">
+                        @foreach (var learning in pageData.Learnings)
+                        {
+                            <li>@learning</li>
+                        }
+                    </ul>
+                </section>
+
+                @* Audience *@
+                <section class="handbook-section">
+                    <h2 id="audience">Who Is This Book For</h2>
+                    <p>@pageData.Audience.Intro</p>
+                    <p>@pageData.Audience.Details</p>
+                </section>
+
+                @* Key Features *@
+                <section class="handbook-section">
+                    <h2 id="key-features">Key Features</h2>
+                    <div class="handbook-features-grid">
+                        @foreach (var feature in pageData.KeyFeatures)
+                        {
+                            <div class="handbook-feature-card">
+                                <h3>@feature.Title</h3>
+                                <p>@feature.Description</p>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Table of Contents *@
+                <section class="handbook-section">
+                    <h2 id="toc">Table of Contents</h2>
+                    <ol class="handbook-toc">
+                        @foreach (var chapter in pageData.TableOfContents)
+                        {
+                            <li>@chapter</li>
+                        }
+                    </ol>
+                </section>
+
+                @* Authors *@
+                <section class="handbook-section">
+                    <h2 id="authors">About the Authors</h2>
+                    <div class="handbook-authors">
+                        @foreach (var author in pageData.AuthorBios)
+                        {
+                            <div class="handbook-author-card">
+                                <h3>@author.Name</h3>
+                                <p>@author.Bio</p>
+                            </div>
+                        }
+                    </div>
+                </section>
+
+                @* Conclusion *@
+                <section class="handbook-section handbook-conclusion">
+                    <p>@pageData.Conclusion</p>
+                </section>
+            </div>
+        </article>
+    </main>
+}
+
+@code {
+    private HandbookPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private static string GetRenderedContent()
+    {
+        var sb = new System.Text.StringBuilder();
+        sb.Append("<h2 id=\"about-book\">About the Book</h2>");
+        sb.Append("<h2 id=\"learnings\">What You'll Learn</h2>");
+        sb.Append("<h2 id=\"audience\">Who Is This Book For</h2>");
+        sb.Append("<h2 id=\"key-features\">Key Features</h2>");
+        sb.Append("<h2 id=\"toc\">Table of Contents</h2>");
+        sb.Append("<h2 id=\"authors\">About the Authors</h2>");
+        return sb.ToString();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initCustomPages");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<HandbookPageData>("copilot-handbook-data", out var restored) && restored != null)
+        {
+            pageData = restored;
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetHandbookDataAsync();
+
+            if (pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (pageData != null)
+        {
+            ApplicationState.PersistAsJson("copilot-handbook-data", pageData);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "The Strategic SIEM Buyer’s Guide: Selecting an AI-Ready Security Platform"
-description: "This guide reviews how unified, AI-ready SIEM platforms like Microsoft Sentinel enable security operations centers (SOC) to adapt quickly, consolidate their security architecture, accelerate threat detection and response, and maximize return on investment. It includes strategic evaluation criteria and actionable insights for security leaders looking to modernize their SOC using Microsoft technologies."
-author: "Scott Woodgate"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/11/the-strategic-siem-buyers-guide-choosing-an-ai-ready-platform-for-the-agentic-era/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/11/the-strategic-siem-buyers-guide-choosing-an-ai-ready-platform-for-the-agentic-era/
+title: 'The Strategic SIEM Buyer’s Guide: Selecting an AI-Ready Security Platform'
+author: Scott Woodgate
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-11 17:00:00 +00:00
-permalink: "/2026-02-11-The-Strategic-SIEM-Buyers-Guide-Selecting-an-AI-Ready-Security-Platform.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agentic Era", "AI", "AI Security", "Automation", "Azure", "Cloud Security", "Cybersecurity", "Microsoft Security", "Microsoft Sentinel", "News", "Security", "Security Analytics", "Security Architecture", "Security Copilot", "Security Data", "Security Leadership", "Security Operations", "Security Operations Center", "SIEM", "SOAR", "SOC", "Threat Detection", "Unified Security Platform", "XDR"]
-tags_normalized: ["agentic era", "ai", "ai security", "automation", "azure", "cloud security", "cybersecurity", "microsoft security", "microsoft sentinel", "news", "security", "security analytics", "security architecture", "security copilot", "security data", "security leadership", "security operations", "security operations center", "siem", "soar", "soc", "threat detection", "unified security platform", "xdr"]
+tags:
+- Agentic Era
+- AI
+- AI Security
+- Automation
+- Azure
+- Cloud Security
+- Cybersecurity
+- Microsoft Security
+- Microsoft Sentinel
+- News
+- Security
+- Security Analytics
+- Security Architecture
+- Security Copilot
+- Security Data
+- Security Leadership
+- Security Operations
+- Security Operations Center
+- SIEM
+- SOAR
+- SOC
+- Threat Detection
+- Unified Security Platform
+- XDR
+section_names:
+- ai
+- azure
+- security
 ---
-
 Scott Woodgate presents a detailed overview of how AI-ready SIEM platforms, such as Microsoft Sentinel, transform security operations by unifying data and analytics, accelerating detection and response, and enabling security leaders to achieve rapid, measurable outcomes.<!--excerpt_end-->
 
 # The Strategic SIEM Buyer’s Guide: Choosing an AI-Ready Platform for the Agentic Era

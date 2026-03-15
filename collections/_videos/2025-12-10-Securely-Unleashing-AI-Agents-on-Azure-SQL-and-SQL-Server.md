@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Securely Unleashing AI Agents on Azure SQL and SQL Server"
-description: "This session dives deep into the security challenges and solutions when enabling AI agents to interact with enterprise data through Azure SQL Database and SQL Server. Learn how to implement robust access controls, prevent data leaks, apply least-privilege strategies, and enhance schema understanding to minimize agent errors. Whether integrating with frameworks, tools, or custom code, these best practices guide developers to build trustworthy, secure AI-powered solutions for enterprise environments."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=t3Y3Kg4BU3w"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=t3Y3Kg4BU3w
+title: Securely Unleashing AI Agents on Azure SQL and SQL Server
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-10 00:00:56 +00:00
-permalink: "/2025-12-10-Securely-Unleashing-AI-Agents-on-Azure-SQL-and-SQL-Server.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: [".NET", "Agent Errors", "AI", "AI Agents", "Autonomous Systems", "Azure", "Azure SQL Database", "Compliance", "Custom Code", "Data Protection", "Database Access", "Enterprise Data", "Least Privilege", "ML", "Query Optimization", "Schema Understanding", "Security", "Security Boundaries", "SQL Server", "Videos"]
-tags_normalized: ["dotnet", "agent errors", "ai", "ai agents", "autonomous systems", "azure", "azure sql database", "compliance", "custom code", "data protection", "database access", "enterprise data", "least privilege", "ml", "query optimization", "schema understanding", "security", "security boundaries", "sql server", "videos"]
+tags:
+- .NET
+- Agent Errors
+- AI Agents
+- Autonomous Systems
+- Azure SQL Database
+- Compliance
+- Custom Code
+- Data Protection
+- Database Access
+- Enterprise Data
+- Least Privilege
+- Query Optimization
+- Schema Understanding
+- Security Boundaries
+- SQL Server
+- AI
+- Azure
+- ML
+- Security
+- Videos
+section_names:
+- ai
+- azure
+- ml
+- security
+primary_section: ai
 ---
-
 dotnet presents a practical session focused on securely enabling AI agents to access Azure SQL Database and SQL Server. The talk covers risk management, least-privilege access, and strategies to reduce query mistakes.<!--excerpt_end-->
 
 {% youtube t3Y3Kg4BU3w %}

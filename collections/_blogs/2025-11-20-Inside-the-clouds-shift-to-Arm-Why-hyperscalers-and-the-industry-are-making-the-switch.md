@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Inside the cloud’s shift to Arm: Why hyperscalers and the industry are making the switch"
-description: "This article analyzes the accelerating move by major cloud providers, including Microsoft Azure, Google Cloud, and AWS, to Arm-based processor architectures in their infrastructure. It details the performance, efficiency, and cost benefits of Arm Neoverse CPUs, including Azure’s Cobalt series, and explores how developers and organizations can approach migration and optimization. Strategies for migration, ecosystem maturity, and cloud-native tooling are discussed with real benchmark results from leading industry platforms."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/vms/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/1731935"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/vms/2025/11/20/inside-the-clouds-shift-to-arm-why-hyperscalers-and-the-industry-are-making-the-switch/1731935
+title: 'Inside the cloud’s shift to Arm: Why hyperscalers and the industry are making the switch'
+author: DevClass.com
+primary_section: azure
+feed_name: DevClass
 date: 2025-11-20 09:00:00 +00:00
-permalink: "/2025-11-20-Inside-the-clouds-shift-to-Arm-Why-hyperscalers-and-the-industry-are-making-the-switch.html"
-categories: ["Azure"]
-tags: ["ARM Neoverse", "Arm64", "Azure", "Azure Cobalt 100", "Azure Cobalt 200", "Blogs", "Cloud Infrastructure", "Cloud Migration", "Developer Onboarding", "Energy Efficiency", "GitHub Integration", "Hyperscalers", "Kubernetes", "Microsoft Azure", "Price Performance", "Virtual Machines"]
-tags_normalized: ["arm neoverse", "arm64", "azure", "azure cobalt 100", "azure cobalt 200", "blogs", "cloud infrastructure", "cloud migration", "developer onboarding", "energy efficiency", "github integration", "hyperscalers", "kubernetes", "microsoft azure", "price performance", "virtual machines"]
+tags:
+- ARM Neoverse
+- Arm64
+- Azure
+- Azure Cobalt 100
+- Azure Cobalt 200
+- Blogs
+- Cloud Infrastructure
+- Cloud Migration
+- Developer Onboarding
+- Energy Efficiency
+- GitHub Integration
+- Hyperscalers
+- Kubernetes
+- Microsoft Azure
+- Price Performance
+- Virtual Machines
+section_names:
+- azure
 ---
-
 DevClass.com examines the rapid adoption of Arm architecture among leading hyperscalers, highlighting Microsoft Azure’s transition to Arm-based Cobalt processors. The article covers ecosystem maturity and practical migration steps for developers.<!--excerpt_end-->
 
 # Inside the cloud’s shift to Arm: Why hyperscalers and the industry are making the switch

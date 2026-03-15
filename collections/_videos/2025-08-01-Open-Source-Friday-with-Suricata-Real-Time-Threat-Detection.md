@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Open Source Friday with Suricata - Real-Time Threat Detection"
-description: "This live session explores Suricata, an open-source IDS/IPS, and its real-time network threat detection features. The stream demonstrates Suricata’s traffic inspection capabilities, rule management, ELK stack integration, and log output configuration. Viewers learn practical tips for tuning performance, handling rule sets, and working with EVE JSON logs, making it valuable for both newcomers and seasoned network security professionals."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=zTlJqnAns3E"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=zTlJqnAns3E
+title: Open Source Friday with Suricata - Real-Time Threat Detection
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-08-01 20:29:23 +00:00
-permalink: "/2025-08-01-Open-Source-Friday-with-Suricata-Real-Time-Threat-Detection.html"
-categories: ["DevOps", "Security"]
-tags: ["Config Tuning", "DevOps", "ELK Stack", "EVE JSON", "IDS", "Intrusion Detection System", "IPS", "Log Analysis", "Network Security", "Open Source", "Packet Inspection", "Real Time Monitoring", "Rule Management", "Security", "Security Tools", "Suricata", "Suricata Update", "Threat Detection", "Videos"]
-tags_normalized: ["config tuning", "devops", "elk stack", "eve json", "ids", "intrusion detection system", "ips", "log analysis", "network security", "open source", "packet inspection", "real time monitoring", "rule management", "security", "security tools", "suricata", "suricata update", "threat detection", "videos"]
+tags:
+- Config Tuning
+- ELK Stack
+- EVE JSON
+- IDS
+- Intrusion Detection System
+- IPS
+- Log Analysis
+- Network Security
+- Open Source
+- Packet Inspection
+- Real Time Monitoring
+- Rule Management
+- Security Tools
+- Suricata
+- Suricata Update
+- Threat Detection
+- DevOps
+- Security
+- Videos
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 GitHub hosts a live stream detailing Suricata’s features for real-time threat detection, offering practical demos on configuration, rule management, and integration with ELK - ideal for both novice and advanced security practitioners.<!--excerpt_end-->
 
 {% youtube zTlJqnAns3E %}

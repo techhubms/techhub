@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Scalable ExpressRoute Gateway: New SKU Deep Dive"
-description: "This video by John Savill's Technical Training explores the new scalable ExpressRoute Gateway SKU in Microsoft Azure. It covers key concepts like gateway basics, available SKUs, throughput limitations, scaling mechanisms, pricing, and migration considerations, offering a technical look at ExpressRoute networking advancements and their implications for Azure-based architectures."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2OVNx2quVP0"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=2OVNx2quVP0
+title: 'Scalable ExpressRoute Gateway: New SKU Deep Dive'
+author: John Savill's Technical Training
+primary_section: azure
+feed_name: John Savill's Technical Training
 date: 2026-02-25 12:00:43 +00:00
-permalink: "/2026-02-25-Scalable-ExpressRoute-Gateway-New-SKU-Deep-Dive.html"
-categories: ["Azure"]
-tags: ["Auto Scaling", "Azure", "Azure Cloud", "Azure Networking", "Cloud", "Cloud Networking", "Enterprise Networking", "Expressroute", "Gateway", "Gateway SKU", "Microsoft", "Microsoft Azure", "Migration", "Networking", "Pricing", "Scalable Gateway", "Subnet", "Throughput", "Videos", "Virtual Network Gateway"]
-tags_normalized: ["auto scaling", "azure", "azure cloud", "azure networking", "cloud", "cloud networking", "enterprise networking", "expressroute", "gateway", "gateway sku", "microsoft", "microsoft azure", "migration", "networking", "pricing", "scalable gateway", "subnet", "throughput", "videos", "virtual network gateway"]
+tags:
+- Auto Scaling
+- Azure
+- Azure Cloud
+- Azure Networking
+- Cloud Networking
+- Enterprise Networking
+- Expressroute
+- Gateway
+- Gateway SKU
+- Microsoft
+- Microsoft Azure
+- Migration
+- Networking
+- Pricing
+- Scalable Gateway
+- Subnet
+- Throughput
+- Videos
+- Virtual Network Gateway
+section_names:
+- azure
 ---
-
 John Savill's Technical Training presents a detailed overview of the new scalable ExpressRoute Gateway SKU for Microsoft Azure, examining networking fundamentals, scaling behavior, and considerations for enterprise cloud deployments.<!--excerpt_end-->
 
 {% youtube 2OVNx2quVP0 %}

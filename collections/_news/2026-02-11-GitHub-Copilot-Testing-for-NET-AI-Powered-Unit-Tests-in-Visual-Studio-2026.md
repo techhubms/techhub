@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub Copilot Testing for .NET: AI-Powered Unit Tests in Visual Studio 2026"
-description: "This announcement introduces the general availability of GitHub Copilot testing for .NET in Visual Studio 2026 (v18.3). Developers can now generate, run, and fix unit tests using AI-powered workflows directly inside the IDE, leveraging natural language prompts, deep IDE integration, and flexible test scoping. The release emphasizes practical features shaped by real developer feedback, making test generation faster and more intuitive in C# projects."
-author: "McKenna Barlow"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet-available-in-visual-studio/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/github-copilot-testing-for-dotnet-available-in-visual-studio/
+title: 'GitHub Copilot Testing for .NET: AI-Powered Unit Tests in Visual Studio 2026'
+author: McKenna Barlow
+primary_section: github-copilot
+feed_name: Microsoft .NET Blog
 date: 2026-02-11 18:05:00 +00:00
-permalink: "/2026-02-11-GitHub-Copilot-Testing-for-NET-AI-Powered-Unit-Tests-in-Visual-Studio-2026.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "Agent", "AI", "AI Powered Testing", "C#", "Coding", "Copilot", "Copilot Chat", "Developer Workflow", "FluentAssertions", "GitHub Copilot", "IDE Integration", "News", "Software Quality", "Test", "Test Agent", "Test Automation", "Test Generation", "Testing", "Unit Testing", "VS", "xUnit"]
-tags_normalized: ["dotnet", "agent", "ai", "ai powered testing", "csharp", "coding", "copilot", "copilot chat", "developer workflow", "fluentassertions", "github copilot", "ide integration", "news", "software quality", "test", "test agent", "test automation", "test generation", "testing", "unit testing", "vs", "xunit"]
+tags:
+- .NET
+- Agent
+- AI
+- AI Powered Testing
+- C#
+- Copilot
+- Copilot Chat
+- Developer Workflow
+- FluentAssertions
+- GitHub Copilot
+- IDE Integration
+- News
+- Software Quality
+- Test
+- Test Agent
+- Test Automation
+- Test Generation
+- Testing
+- Unit Testing
+- VS
+- xUnit
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 McKenna Barlow announces the general availability of GitHub Copilot testing for .NET in Visual Studio 2026, highlighting how developers can streamline and automate unit test generation with AI integration.<!--excerpt_end-->
 
 # GitHub Copilot Testing for .NET: AI-Powered Unit Tests in Visual Studio 2026

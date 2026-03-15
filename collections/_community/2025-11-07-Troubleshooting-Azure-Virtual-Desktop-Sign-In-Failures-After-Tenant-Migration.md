@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration"
-description: "This community post by psundars investigates a real-world authentication issue with Azure Virtual Desktop (AVD) following an Azure subscription tenant migration. It explains how token persistence in macOS devices causes user lockouts, details troubleshooting steps, root cause analysis, mitigation using Microsoft Graph PowerShell, and outlines best practices for tenant migrations and identity management with Microsoft Entra ID."
-author: "psundars"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/troubleshooting-azure-virtual-desktop-sign-in-failures-after/ba-p/4467953
+title: Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration
+author: psundars
+feed_name: Microsoft Tech Community
 date: 2025-11-07 05:32:56 +00:00
-permalink: "/2025-11-07-Troubleshooting-Azure-Virtual-Desktop-Sign-In-Failures-After-Tenant-Migration.html"
-categories: ["Azure", "Security"]
-tags: ["Access Control", "Application Group", "Authentication", "Azure", "Azure AD", "Azure Virtual Desktop", "Community", "Conditional Access", "Host Pool", "Identity Management", "Keychain Access", "Macos", "Microsoft Entra ID", "Microsoft Graph PowerShell", "MSAL Tokens", "Security", "Tenant Migration", "Token Persistence"]
-tags_normalized: ["access control", "application group", "authentication", "azure", "azure ad", "azure virtual desktop", "community", "conditional access", "host pool", "identity management", "keychain access", "macos", "microsoft entra id", "microsoft graph powershell", "msal tokens", "security", "tenant migration", "token persistence"]
+tags:
+- Access Control
+- Application Group
+- Authentication
+- Azure AD
+- Azure Virtual Desktop
+- Conditional Access
+- Host Pool
+- Identity Management
+- Keychain Access
+- Macos
+- Microsoft Entra ID
+- Microsoft Graph PowerShell
+- MSAL Tokens
+- Tenant Migration
+- Token Persistence
+- Azure
+- Security
+- Community
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 psundars explores troubleshooting steps for Azure Virtual Desktop sign-in failures after tenant migration, focusing on token issues with Microsoft Entra ID and providing actionable remediation and best practices.<!--excerpt_end-->
 
 # Troubleshooting Azure Virtual Desktop Sign-In Failures After Tenant Migration
@@ -79,8 +92,8 @@ Conditional Access (CA) policies or Sign-In Frequency policies can shorten token
     ```
 
 - **Option 2 – Manual Token Cleanup:**
-    - Have users delete cached credentials/MSAL tokens from Keychain.
-    - Users must re-sign in to establish an updated authentication context.
+  - Have users delete cached credentials/MSAL tokens from Keychain.
+  - Users must re-sign in to establish an updated authentication context.
 
 ## Key Learnings
 

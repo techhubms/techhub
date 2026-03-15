@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "The Strong ARM of .NET: Building Desktop Apps for x64 and Arm64 Deployment"
-description: "Rick Strahl discusses the challenges of distributing .NET Windows Desktop applications for both x64 and Arm64 platforms, explaining cross-compilation, launcher issues, and detailed steps for providing native executables for each architecture. Solutions and performance observations are shared for seamless out-of-the-box deployment."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2025/Apr/18/The-Strong-ARM-of-NET-Wrestling-with-x64-and-Arm64-Desktop-App-Deployment"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+external_url: https://weblog.west-wind.com/posts/2025/Apr/18/The-Strong-ARM-of-NET-Wrestling-with-x64-and-Arm64-Desktop-App-Deployment
+title: 'The Strong ARM of .NET: Building Desktop Apps for x64 and Arm64 Deployment'
+author: Rick Strahl
+feed_name: Rick Strahl's Blog
 date: 2025-04-19 08:35:43 +00:00
-permalink: "/2025-04-19-The-Strong-ARM-of-NET-Building-Desktop-Apps-for-x64-and-Arm64-Deployment.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Launcher", "AnyCPU", "Application Deployment", "Application Installer", "Arm64", "Blogs", "Build Configuration", "Coding", "Cross Platform", "Markdown Monster", "Native Binaries", "Windows", "Windows Desktop", "WPF", "X64"]
-tags_normalized: ["dotnet", "dotnet launcher", "anycpu", "application deployment", "application installer", "arm64", "blogs", "build configuration", "coding", "cross platform", "markdown monster", "native binaries", "windows", "windows desktop", "wpf", "x64"]
+tags:
+- .NET
+- .NET Launcher
+- AnyCPU
+- Application Deployment
+- Application Installer
+- Arm64
+- Build Configuration
+- Cross Platform
+- Markdown Monster
+- Native Binaries
+- Windows
+- Windows Desktop
+- WPF
+- X64
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this detailed post, Rick Strahl outlines the key challenges and solutions for deploying .NET Windows Desktop apps that run natively on both x64 and Arm64 platforms, with specific insights from developments on Markdown Monster.<!--excerpt_end-->
 
 # The Strong ARM of .NET: Building Desktop Apps for x64 and Arm64 Deployment
@@ -130,6 +139,6 @@ While the process of supporting both x64 and Arm64 in .NET is more complicated t
 
 ---
 
-_Is this content useful to you? Consider making a small donation to support future articles._
+*Is this content useful to you? Consider making a small donation to support future articles.*
 
 This post appeared first on "Rick Strahl's Blog". [Read the entire article here](https://weblog.west-wind.com/posts/2025/Apr/18/The-Strong-ARM-of-NET-Wrestling-with-x64-and-Arm64-Desktop-App-Deployment)

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Microsoft Agent Framework Release Candidate: Cross-Language AI Agent Orchestration for .NET and Python"
-description: "This update announces the Release Candidate of Microsoft Agent Framework for both .NET and Python, signaling a stable API and feature completeness ahead of version 1.0. The framework unifies agent-based AI app development, offering multi-agent workflows, migration from Semantic Kernel/AutoGen, and broad provider compatibility—including Azure OpenAI, GitHub Copilot, and third-party AI services."
-author: "Shawn Henry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/
+title: 'Microsoft Agent Framework Release Candidate: Cross-Language AI Agent Orchestration for .NET and Python'
+author: Shawn Henry
+primary_section: ai
+feed_name: Microsoft AI Foundry Blog
 date: 2026-02-20 05:51:29 +00:00
-permalink: "/2026-02-20-Microsoft-Agent-Framework-Release-Candidate-Cross-Language-AI-Agent-Orchestration-for-NET-and-Python.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "A2A", "AG UI", "Agent Framework", "Agent Orchestration", "AI", "AI Agents", "AutoGen Migration", "Azure", "Azure OpenAI", "Coding", "GitHub Copilot", "GitHub Copilot Integration", "Graph Based Workflows", "MCP", "Microsoft Agent Framework", "Microsoft Foundry", "News", "NuGet", "PyPI", "Python", "Semantic Kernel", "Workflow Engine"]
-tags_normalized: ["dotnet", "a2a", "ag ui", "agent framework", "agent orchestration", "ai", "ai agents", "autogen migration", "azure", "azure openai", "coding", "github copilot", "github copilot integration", "graph based workflows", "mcp", "microsoft agent framework", "microsoft foundry", "news", "nuget", "pypi", "python", "semantic kernel", "workflow engine"]
+tags:
+- .NET
+- A2A
+- AG UI
+- Agent Framework
+- Agent Orchestration
+- AI
+- AI Agents
+- AutoGen Migration
+- Azure
+- Azure OpenAI
+- GitHub Copilot
+- GitHub Copilot Integration
+- Graph Based Workflows
+- MCP
+- Microsoft Agent Framework
+- Microsoft Foundry
+- News
+- NuGet
+- PyPI
+- Python
+- Semantic Kernel
+- Workflow Engine
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Shawn Henry details the Release Candidate of the Microsoft Agent Framework, sharing technical insights for developers orchestrating AI agents in both .NET and Python environments, with extensive code samples and migration guidance.<!--excerpt_end-->
 
 # Microsoft Agent Framework Reaches Release Candidate

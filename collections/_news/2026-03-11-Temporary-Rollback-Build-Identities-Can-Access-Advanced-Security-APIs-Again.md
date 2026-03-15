@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Temporary Rollback: Build Identities Can Access Advanced Security APIs Again"
-description: "This update from Laura Jiang covers the temporary rollback of API access restrictions for build identities in Azure DevOps Advanced Security. It explains the changes introduced in Sprint 269, why the decision was made, and what steps customers should take before the restrictions are re-enforced in April 2026, including migrating to service principals."
-author: "Laura Jiang"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/temporary-rollback-build-identities-can-access-advanced-security-read-alerts-again/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/temporary-rollback-build-identities-can-access-advanced-security-read-alerts-again/
+title: 'Temporary Rollback: Build Identities Can Access Advanced Security APIs Again'
+author: Laura Jiang
+primary_section: devops
+feed_name: Microsoft DevOps Blog
 date: 2026-03-11 23:46:28 +00:00
-permalink: "/2026-03-11-Temporary-Rollback-Build-Identities-Can-Access-Advanced-Security-APIs-Again.html"
-categories: ["DevOps", "Security"]
-tags: ["Advanced Security", "API Access", "Automation", "Azure DevOps", "Build Service Identities", "CI/CD", "DevOps", "License Management", "News", "Pipeline Identities", "Security", "Security Alerts", "Security Permission", "Service Principal", "Sprint 269", "Status Checks"]
-tags_normalized: ["advanced security", "api access", "automation", "azure devops", "build service identities", "cislashcd", "devops", "license management", "news", "pipeline identities", "security", "security alerts", "security permission", "service principal", "sprint 269", "status checks"]
+tags:
+- Advanced Security
+- API Access
+- Automation
+- Azure DevOps
+- Build Service Identities
+- CI/CD
+- DevOps
+- License Management
+- News
+- Pipeline Identities
+- Security
+- Security Alerts
+- Security Permission
+- Service Principal
+- Sprint 269
+- Status Checks
+section_names:
+- devops
+- security
 ---
-
 Laura Jiang details a temporary rollback in Azure DevOps allowing build identities to access Advanced Security APIs again. The post outlines the required actions for teams before the restrictions return in April 2026.<!--excerpt_end-->
 
 # Temporary Rollback: Build Identities Can Access Advanced Security APIs Again

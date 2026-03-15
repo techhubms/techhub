@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Integrating Copilot CLI with Visual Studio Code"
-description: "This video overview demonstrates how the Copilot CLI integrates with Visual Studio Code, bringing AI-powered coding assistance directly to the terminal environment. Users learn how to connect VS Code to the Copilot CLI, track copilot sessions, view progress, and move smoothly between the terminal and editor for a more seamless developer experience."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=_l3UO1oUoec"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=_l3UO1oUoec
+title: Integrating Copilot CLI with Visual Studio Code
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-20 14:01:01 +00:00
-permalink: "/2026-02-20-Integrating-Copilot-CLI-with-Visual-Studio-Code.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistance", "Copilot CLI", "Developer Tools", "GitHub Copilot", "Productivity", "Session Tracking", "Terminal Integration", "Videos", "VS Code", "VS Code Extensions"]
-tags_normalized: ["ai", "ai assistance", "copilot cli", "developer tools", "github copilot", "productivity", "session tracking", "terminal integration", "videos", "vs code", "vs code extensions"]
+tags:
+- AI
+- AI Assistance
+- Copilot CLI
+- Developer Tools
+- GitHub Copilot
+- Productivity
+- Session Tracking
+- Terminal Integration
+- Videos
+- VS Code
+- VS Code Extensions
+section_names:
+- ai
+- github-copilot
 ---
-
 This Visual Studio Code video, presented by the VS Code team, highlights the seamless integration between Copilot CLI and the editor, showing how developers can use AI-powered coding assistance directly in their terminal workflows.<!--excerpt_end-->
 
 {% youtube _l3UO1oUoec %}

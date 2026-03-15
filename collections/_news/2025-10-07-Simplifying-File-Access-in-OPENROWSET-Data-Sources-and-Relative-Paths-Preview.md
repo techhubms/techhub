@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Simplifying File Access in OPENROWSET: Data Sources and Relative Paths (Preview)"
-description: "This guide explains new enhancements to the OPENROWSET function that enable data engineers and analysts to use data sources and relative paths for easier querying of files within Microsoft Fabric Lakehouse environments and Azure Data Lake Storage. It demonstrates how to leverage external data sources for cleaner SQL, improved maintainability, and simplified cross-environment data access."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-file-access-in-openrowset-using-data-sources-and-relative-paths-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-file-access-in-openrowset-using-data-sources-and-relative-paths-preview/
+title: 'Simplifying File Access in OPENROWSET: Data Sources and Relative Paths (Preview)'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-10-07 10:00:00 +00:00
-permalink: "/2025-10-07-Simplifying-File-Access-in-OPENROWSET-Data-Sources-and-Relative-Paths-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["ADLS", "Azure", "Azure Data Lake Storage", "Data Analytics", "Data Engineering", "Data Integration", "Data Platform", "External Data Source", "GUID Based URI", "Lakehouse", "Microsoft Fabric", "ML", "News", "OPENROWSET", "Relative Paths", "SQL", "SQL Endpoint", "T SQL"]
-tags_normalized: ["adls", "azure", "azure data lake storage", "data analytics", "data engineering", "data integration", "data platform", "external data source", "guid based uri", "lakehouse", "microsoft fabric", "ml", "news", "openrowset", "relative paths", "sql", "sql endpoint", "t sql"]
+tags:
+- ADLS
+- Azure Data Lake Storage
+- Data Analytics
+- Data Engineering
+- Data Integration
+- Data Platform
+- External Data Source
+- GUID Based URI
+- Lakehouse
+- Microsoft Fabric
+- OPENROWSET
+- Relative Paths
+- SQL
+- SQL Endpoint
+- T SQL
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog details how new data source and relative path features in OPENROWSET simplify file queries in Lakehouse and ADLS, making data engineering and analytics tasks cleaner and more flexible.<!--excerpt_end-->
 
 # Simplifying File Access in OPENROWSET: Data Sources and Relative Paths (Preview)

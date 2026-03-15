@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Reviewing AI-Generated Code in .NET: Best Practices for Developers"
-description: "This article provides developers with practical strategies for reviewing AI-generated code, particularly in .NET projects using tools like GitHub Copilot. It covers quality assurance, enforcing standards, common pitfalls, and actionable tips to improve team productivity and maintain high code quality when integrating AI-generated contributions."
-author: "Wendy Breiding (SHE/HER)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/developer-and-ai-code-reviewer-reviewing-ai-generated-code-in-dotnet/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/developer-and-ai-code-reviewer-reviewing-ai-generated-code-in-dotnet/
+title: 'Reviewing AI-Generated Code in .NET: Best Practices for Developers'
+author: Wendy Breiding (SHE/HER)
+feed_name: Microsoft .NET Blog
 date: 2025-10-07 17:05:00 +00:00
-permalink: "/2025-10-07-Reviewing-AI-Generated-Code-in-NET-Best-Practices-for-Developers.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Generated Code", "API Design", "Best Practices", "C#", "Code Quality", "Code Review", "Code Standards", "Coding", "Copilot", "Documentation", "Error Handling", "GitHub Copilot", "News", "Pull Requests", "Software Architecture", "Test Coverage", "Unit Testing"]
-tags_normalized: ["dotnet", "ai", "ai generated code", "api design", "best practices", "csharp", "code quality", "code review", "code standards", "coding", "copilot", "documentation", "error handling", "github copilot", "news", "pull requests", "software architecture", "test coverage", "unit testing"]
+tags:
+- .NET
+- AI Generated Code
+- API Design
+- Best Practices
+- C#
+- Code Quality
+- Code Review
+- Code Standards
+- Copilot
+- Documentation
+- Error Handling
+- Pull Requests
+- Software Architecture
+- Test Coverage
+- Unit Testing
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Wendy Breiding offers a practical guide to reviewing AI-generated .NET code, discussing how developers can maintain quality and enforce standards in projects that leverage GitHub Copilot and AI code assistants.<!--excerpt_end-->
 
 # Reviewing AI-Generated Code in .NET: Best Practices for Developers

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Operational Excellence in AI Infrastructure: Standardized Node Lifecycle Management"
-description: "This article, co-authored by Choudary Maddukuri and Bhushan Mehendale, details Microsoft’s collaborative work with the Open Compute Project to standardize and streamline the lifecycle management of AI infrastructure fleets at hyperscale. The blog discusses the technical challenges of onboarding diverse accelerators and CPUs, and describes tools, APIs, and compliance strategies for improving reliability, interoperability, and operational efficiency in AI datacenters through open standards and cross-industry partnerships."
-author: "Rama_Bhimanadhuni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/operational-excellence-in-ai-infrastructure-fleets-standardized/ba-p/4460754
+title: 'Operational Excellence in AI Infrastructure: Standardized Node Lifecycle Management'
+author: Rama_Bhimanadhuni
+feed_name: Microsoft Tech Community
 date: 2025-10-14 00:03:37 +00:00
-permalink: "/2025-10-14-Operational-Excellence-in-AI-Infrastructure-Standardized-Node-Lifecycle-Management.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Community", "Compliance Tools", "CPACT", "CPU Architecture", "CTAM", "Data Center Operations", "Diagnostics", "Firmware Updates", "GPU Management", "Microsoft Azure", "Node Lifecycle Management", "Open Compute Project", "PLDM", "Redfish API", "Reliability"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "community", "compliance tools", "cpact", "cpu architecture", "ctam", "data center operations", "diagnostics", "firmware updates", "gpu management", "microsoft azure", "node lifecycle management", "open compute project", "pldm", "redfish api", "reliability"]
+tags:
+- AI Infrastructure
+- Compliance Tools
+- CPACT
+- CPU Architecture
+- CTAM
+- Data Center Operations
+- Diagnostics
+- Firmware Updates
+- GPU Management
+- Microsoft Azure
+- Node Lifecycle Management
+- Open Compute Project
+- PLDM
+- Redfish API
+- Reliability
+- AI
+- Azure
+- Community
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Rama_Bhimanadhuni, together with Choudary Maddukuri and Bhushan Mehendale, explores how Microsoft and partners are using open standards to create reliable, scalable, and vendor-neutral AI infrastructure management for cloud datacenters.<!--excerpt_end-->
 
 # Operational Excellence in AI Infrastructure: Standardized Node Lifecycle Management

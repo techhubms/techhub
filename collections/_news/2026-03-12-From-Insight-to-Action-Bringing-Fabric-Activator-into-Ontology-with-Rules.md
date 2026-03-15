@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "From Insight to Action: Bringing Fabric Activator into Ontology with Rules"
-description: "This post introduces how Fabric IQ's new Ontology Rules feature—integrated with Fabric Activator—enables organizations to define actionable business logic on their data models, moving beyond technical triggers to business-focused automation. It explains the operational benefits of expressing rules in business terms and illustrates real-world scenarios using Fabric IQ in Microsoft Fabric."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/from-insight-to-action-bringing-fabric-activator-into-ontology-with-rules/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/from-insight-to-action-bringing-fabric-activator-into-ontology-with-rules/
+title: 'From Insight to Action: Bringing Fabric Activator into Ontology with Rules'
+author: Microsoft Fabric Blog
+primary_section: ai
+feed_name: Microsoft Fabric Blog
 date: 2026-03-12 14:00:00 +00:00
-permalink: "/2026-03-12-From-Insight-to-Action-Bringing-Fabric-Activator-into-Ontology-with-Rules.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Agents", "Analytics", "Azure", "Business Entities", "Business Logic", "Data Modeling", "Enterprise Data", "Entity Modeling", "Fabric Activator", "Fabric IQ", "Microsoft Fabric", "News", "Ontology", "Ontology Rules", "Operationalization", "Real Time Automation"]
-tags_normalized: ["ai", "ai agents", "analytics", "azure", "business entities", "business logic", "data modeling", "enterprise data", "entity modeling", "fabric activator", "fabric iq", "microsoft fabric", "news", "ontology", "ontology rules", "operationalization", "real time automation"]
+tags:
+- AI
+- AI Agents
+- Analytics
+- Azure
+- Business Entities
+- Business Logic
+- Data Modeling
+- Enterprise Data
+- Entity Modeling
+- Fabric Activator
+- Fabric IQ
+- Microsoft Fabric
+- News
+- Ontology
+- Ontology Rules
+- Operationalization
+- Real Time Automation
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Fabric Blog introduces Ontology Rules and Fabric Activator integration in Fabric IQ, showing how business logic can now drive real-time actions using enterprise data models.<!--excerpt_end-->
 
 # From Insight to Action: Bringing Fabric Activator into Ontology with Rules

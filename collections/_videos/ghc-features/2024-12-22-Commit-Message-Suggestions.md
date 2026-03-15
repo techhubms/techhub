@@ -1,22 +1,24 @@
----
-layout: "post"
-title: "Commit Message Suggestions"
-description: "AI-generated commit messages based on your changes"
-author: "Rob Bos"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/fO31a_OS2EA"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/fO31a_OS2EA
+title: Commit Message Suggestions
+author: Rob Bos
 date: 2024-12-22 23:00:22 +00:00
-permalink: "/2024-12-22-Commit-Message-Suggestions.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "Git", "GitHub Copilot", "Suggestions", "Videos"]
-tags_normalized: ["ai", "code", "git", "github copilot", "suggestions", "videos"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Code
+- Git
+- Suggestions
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's Commit Message Suggestions feature. Copilot proposes commit messages based on the code changes in the current changeset.<!--excerpt_end-->
 
 {% youtube fO31a_OS2EA %}

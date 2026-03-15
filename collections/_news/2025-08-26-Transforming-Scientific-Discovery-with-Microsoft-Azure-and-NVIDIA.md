@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Transforming Scientific Discovery with Microsoft Azure and NVIDIA"
-description: "This article explores how organizations and startups are leveraging Microsoft Azure’s AI infrastructure and NVIDIA’s GPU technologies to accelerate innovation in healthcare, biotechnology, and digital content creation. Real-world case studies illustrate how AI on Azure enables breakthroughs in patient care, biological research, and digital twin creation through scalable, secure, and high-performance cloud computing."
-author: "Omar Khan"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/transforming-scientific-discovery-with-microsoft-azure-and-nvidia/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/transforming-scientific-discovery-with-microsoft-azure-and-nvidia/
+title: Transforming Scientific Discovery with Microsoft Azure and NVIDIA
+author: Omar Khan
+feed_name: The Azure Blog
 date: 2025-08-26 15:00:00 +00:00
-permalink: "/2025-08-26-Transforming-Scientific-Discovery-with-Microsoft-Azure-and-NVIDIA.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["3D Scanning", "AI", "AI + Machine Learning", "AI Infrastructure", "AI Models", "AKS", "Azure", "Basecamp Research", "Bioinformatics", "BioNeMo Framework", "Biotechnology", "Clinical Data", "Cloud Computing", "Compute", "Containers", "Data Science", "Digital Content Creation", "Digital Twins", "Global Objects", "GPU Computing", "Healthcare AI", "Kubernetes", "Microsoft Azure", "ML", "News", "NVIDIA", "Pangaea Data", "Research Innovation"]
-tags_normalized: ["3d scanning", "ai", "ai plus machine learning", "ai infrastructure", "ai models", "aks", "azure", "basecamp research", "bioinformatics", "bionemo framework", "biotechnology", "clinical data", "cloud computing", "compute", "containers", "data science", "digital content creation", "digital twins", "global objects", "gpu computing", "healthcare ai", "kubernetes", "microsoft azure", "ml", "news", "nvidia", "pangaea data", "research innovation"]
+tags:
+- 3D Scanning
+- AI + Machine Learning
+- AI Infrastructure
+- AI Models
+- AKS
+- Basecamp Research
+- Bioinformatics
+- BioNeMo Framework
+- Biotechnology
+- Clinical Data
+- Cloud Computing
+- Compute
+- Containers
+- Data Science
+- Digital Content Creation
+- Digital Twins
+- Global Objects
+- GPU Computing
+- Healthcare AI
+- Kubernetes
+- Microsoft Azure
+- NVIDIA
+- Pangaea Data
+- Research Innovation
+- AI
+- Azure
+- ML
+- News
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Omar Khan details how leading innovators leverage Microsoft Azure and NVIDIA GPU technologies to advance scientific research, healthcare, and digital twin solutions, showing real-world benefits of scalable AI and ML infrastructure.<!--excerpt_end-->
 
 # Transforming Scientific Discovery with Microsoft Azure and NVIDIA

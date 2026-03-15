@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Regional Endpoints for Geo-Replicated Azure Container Registries (Private Preview)"
-description: "This article introduces the private preview of regional endpoints for Azure Container Registry (ACR) geo-replication. It explains the limitations of Azure-managed routing, how regional endpoints give explicit control over container image pulls and pushes in multi-region deployments, how to enable the feature, and details for Kubernetes and secure network integration."
-author: "johshmsft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/regional-endpoints-for-geo-replicated-azure-container-registries/ba-p/4496186"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/regional-endpoints-for-geo-replicated-azure-container-registries/ba-p/4496186
+title: Regional Endpoints for Geo-Replicated Azure Container Registries (Private Preview)
+author: johshmsft
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-21 00:06:49 +00:00
-permalink: "/2026-02-21-Regional-Endpoints-for-Geo-Replicated-Azure-Container-Registries-Private-Preview.html"
-categories: ["Azure", "DevOps"]
-tags: ["ACR", "AKS", "Azure", "Azure CLI", "Azure Container Registry", "Cloud Native", "Community", "Container Images", "Dedicated Data Endpoints", "DevOps", "Firewall Rules", "Geo Replication", "Kubernetes", "Network Configuration", "Premium SKU", "Private Endpoint", "Regional Endpoints", "Resource Provider"]
-tags_normalized: ["acr", "aks", "azure", "azure cli", "azure container registry", "cloud native", "community", "container images", "dedicated data endpoints", "devops", "firewall rules", "geo replication", "kubernetes", "network configuration", "premium sku", "private endpoint", "regional endpoints", "resource provider"]
+tags:
+- ACR
+- AKS
+- Azure
+- Azure CLI
+- Azure Container Registry
+- Cloud Native
+- Community
+- Container Images
+- Dedicated Data Endpoints
+- DevOps
+- Firewall Rules
+- Geo Replication
+- Kubernetes
+- Network Configuration
+- Premium SKU
+- Private Endpoint
+- Regional Endpoints
+- Resource Provider
+section_names:
+- azure
+- devops
 ---
-
 johshmsft announces and explains the private preview of regional endpoints for Azure Container Registry. The article covers real-world scenarios, detailed setup, usage in Kubernetes, and secure networking tips to improve reliability and performance across multiple regions.<!--excerpt_end-->
 
 # Regional Endpoints for Geo-Replicated Azure Container Registries (Private Preview)

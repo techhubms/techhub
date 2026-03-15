@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Unlock Cloud Savings for Linux VMs with the Azure Hybrid Benefit"
-description: "This guide by Thomas Maurer explains how organizations can modernize their IT infrastructure and manage cloud costs using Azure Hybrid Benefit for Linux. It covers how to leverage existing Linux subscriptions (Red Hat and SUSE) with Azure, outlines flexible payment options, discusses cost-saving opportunities, and highlights the seamless migration process for mission-critical workloads using Microsoft Azure."
-author: "Thomas Maurer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.thomasmaurer.ch/2025/09/unlock-cloud-savings-for-linux-vms-with-the-azure-hybrid-benefit/"
-viewing_mode: "external"
-feed_name: "Thomas Maurer's Blog"
-feed_url: "https://www.thomasmaurer.ch/feed/"
+﻿---
+external_url: https://www.thomasmaurer.ch/2025/09/unlock-cloud-savings-for-linux-vms-with-the-azure-hybrid-benefit/
+title: Unlock Cloud Savings for Linux VMs with the Azure Hybrid Benefit
+author: Thomas Maurer
+feed_name: Thomas Maurer's Blog
 date: 2025-09-22 08:08:48 +00:00
-permalink: "/2025-09-22-Unlock-Cloud-Savings-for-Linux-VMs-with-the-Azure-Hybrid-Benefit.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Essentials Show", "Azure Hybrid Benefit", "Azure Pricing Calculator", "Azure Reserved Instances", "Blogs", "BYOS", "Cloud", "Cloud Cost Optimization", "Cloud Migration", "Enterprise IT", "Infrastructure Modernization", "Linux", "Linux VMs", "Microsoft", "Microsoft Azure", "Red Hat", "Subscription Management", "SUSE", "Thomas Maurer", "Video"]
-tags_normalized: ["azure", "azure essentials show", "azure hybrid benefit", "azure pricing calculator", "azure reserved instances", "blogs", "byos", "cloud", "cloud cost optimization", "cloud migration", "enterprise it", "infrastructure modernization", "linux", "linux vms", "microsoft", "microsoft azure", "red hat", "subscription management", "suse", "thomas maurer", "video"]
+tags:
+- Azure Essentials Show
+- Azure Hybrid Benefit
+- Azure Pricing Calculator
+- Azure Reserved Instances
+- BYOS
+- Cloud Cost Optimization
+- Cloud Migration
+- Enterprise IT
+- Infrastructure Modernization
+- Linux
+- Linux VMs
+- Microsoft
+- Microsoft Azure
+- Red Hat
+- Subscription Management
+- SUSE
+- Thomas Maurer
+- Video
+- Azure
+- Blogs
+section_names:
+- azure
+primary_section: azure
 ---
-
 Thomas Maurer provides clear guidance on using Azure Hybrid Benefit for Linux VMs, helping IT professionals modernize infrastructure and save costs in the cloud.<!--excerpt_end-->
 
 # Unlock Cloud Savings for Linux VMs with the Azure Hybrid Benefit

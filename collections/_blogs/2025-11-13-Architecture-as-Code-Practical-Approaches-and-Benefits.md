@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Architecture as Code: Practical Approaches and Benefits"
-description: "This article explores the evolving concept of Architecture as Code (AaC), highlighting its impact on modern software development. Readers will learn how defining architecture in machine-readable, version-controlled files transforms collaboration, governance, and continuous system alignment. The piece covers real-world steps for adopting AaC and addresses common challenges in implementation."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/architecture-as-code-what-it-means-and-how-to-apply-it/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/architecture-as-code-what-it-means-and-how-to-apply-it/
+title: 'Architecture as Code: Practical Approaches and Benefits'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-11-13 08:34:16 +00:00
-permalink: "/2025-11-13-Architecture-as-Code-Practical-Approaches-and-Benefits.html"
-categories: ["Coding", "DevOps"]
-tags: ["Architecture", "Architecture as Code", "Automation", "Blogs", "C4 Model", "CI/CD", "Coding", "Collaboration", "DevOps", "Documentation", "Governance", "IaC", "JSON", "Microservices", "Software Architecture", "Solution Architecture", "Version Control", "YAML"]
-tags_normalized: ["architecture", "architecture as code", "automation", "blogs", "c4 model", "cislashcd", "coding", "collaboration", "devops", "documentation", "governance", "iac", "json", "microservices", "software architecture", "solution architecture", "version control", "yaml"]
+tags:
+- Architecture
+- Architecture as Code
+- Automation
+- C4 Model
+- CI/CD
+- Collaboration
+- Documentation
+- Governance
+- IaC
+- JSON
+- Microservices
+- Software Architecture
+- Solution Architecture
+- Version Control
+- YAML
+- DevOps
+- Blogs
+- .NET
+section_names:
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 Dellenny explains the benefits and practical steps for implementing Architecture as Code, showing developers and DevOps engineers how to keep system architecture aligned and versioned.<!--excerpt_end-->
 
 # Architecture as Code: Practical Approaches and Benefits

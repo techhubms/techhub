@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Mobile: Real-Time Notifications for Copilot Coding Agents"
-description: "This news post introduces Live Coding Agent Notifications for GitHub Mobile, allowing developers to receive real-time updates about Copilot coding agent and supported third-party agent sessions directly on their mobile devices. The update explains how notifications work, supported agent types and operating systems, and how users can manage notification preferences within the app."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-github-mobile-track-coding-agent-progress-in-real-time-with-live-notifications"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-github-mobile-track-coding-agent-progress-in-real-time-with-live-notifications
+title: 'GitHub Mobile: Real-Time Notifications for Copilot Coding Agents'
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-26 10:58:22 +00:00
-permalink: "/2026-02-26-GitHub-Mobile-Real-Time-Notifications-for-Copilot-Coding-Agents.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["Agent Sessions", "AI", "Android", "Client Apps", "Cloud Automation", "Copilot", "Copilot Coding Agent", "GitHub Copilot", "GitHub Mobile", "Ios", "Live Activities", "Live Notifications", "Mobile Development", "News", "Product Release", "Pull Request", "Real Time Updates", "Third Party Agents"]
-tags_normalized: ["agent sessions", "ai", "android", "client apps", "cloud automation", "copilot", "copilot coding agent", "github copilot", "github mobile", "ios", "live activities", "live notifications", "mobile development", "news", "product release", "pull request", "real time updates", "third party agents"]
+tags:
+- Agent Sessions
+- AI
+- Android
+- Client Apps
+- Cloud Automation
+- Copilot
+- Copilot Coding Agent
+- GitHub Copilot
+- GitHub Mobile
+- Ios
+- Live Activities
+- Live Notifications
+- Mobile Development
+- News
+- Product Release
+- Pull Request
+- Real Time Updates
+- Third Party Agents
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison details the release of Live Coding Agent Notifications on GitHub Mobile, enabling developers to track Copilot coding agent and third-party agent sessions in real time from their mobile devices.<!--excerpt_end-->
 
 # GitHub Mobile: Real-Time Notifications for Copilot Coding Agents

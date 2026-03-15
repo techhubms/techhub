@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "How Azure SRE Agent Can Investigate Resources in a Private Network"
-description: "This technical guide explains how to securely enable Azure SRE Agent to query Log Analytics Workspaces that are protected by Azure Monitor Private Link Scope (AMPLS) using an Azure Function proxy within a VNet, secured with Microsoft Entra ID (Easy Auth). The solution covers the necessary Azure networking components, authentication with Managed Identity, and step-by-step deployment to maintain data privacy while allowing troubleshooting by the SRE Agent."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-azure-sre-agent-can-investigate-resources-in-a-private/ba-p/4494911"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/how-azure-sre-agent-can-investigate-resources-in-a-private/ba-p/4494911
+title: How Azure SRE Agent Can Investigate Resources in a Private Network
+author: dbandaru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-17 23:01:58 +00:00
-permalink: "/2026-02-17-How-Azure-SRE-Agent-Can-Investigate-Resources-in-a-Private-Network.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Application Insights", "Authentication", "Azure", "Azure CLI", "Azure Function", "Azure Monitor", "Azure SRE Agent", "Community", "DevOps", "Easy Auth", "Log Analytics Workspace", "Managed Identity", "Microsoft Entra ID", "Network Security", "Private Endpoint", "Private Link", "Python", "RBAC", "Resource Group", "Security", "Serverless", "Virtual Network", "VNet Integration"]
-tags_normalized: ["application insights", "authentication", "azure", "azure cli", "azure function", "azure monitor", "azure sre agent", "community", "devops", "easy auth", "log analytics workspace", "managed identity", "microsoft entra id", "network security", "private endpoint", "private link", "python", "rbac", "resource group", "security", "serverless", "virtual network", "vnet integration"]
+tags:
+- Application Insights
+- Authentication
+- Azure
+- Azure CLI
+- Azure Function
+- Azure Monitor
+- Azure SRE Agent
+- Community
+- DevOps
+- Easy Auth
+- Log Analytics Workspace
+- Managed Identity
+- Microsoft Entra ID
+- Network Security
+- Private Endpoint
+- Private Link
+- Python
+- RBAC
+- Resource Group
+- Security
+- Serverless
+- Virtual Network
+- VNet Integration
+section_names:
+- azure
+- devops
+- security
 ---
-
 dbandaru from Microsoft details a secure architecture for enabling Azure SRE Agent to query Log Analytics Workspaces in private networks, utilizing Azure Functions, Private Link, and Entra ID authentication.<!--excerpt_end-->
 
 # How Azure SRE Agent Can Investigate Resources in a Private Network

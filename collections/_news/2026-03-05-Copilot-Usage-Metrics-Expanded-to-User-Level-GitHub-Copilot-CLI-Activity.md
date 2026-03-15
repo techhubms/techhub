@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Copilot Usage Metrics Expanded to User-Level GitHub Copilot CLI Activity"
-description: "This news update outlines the latest enhancement to GitHub Copilot usage metrics, which now provides user-level telemetry for Copilot CLI activity. The update enables enterprises and administrators to monitor individual usage, spot adoption trends, and analyze token consumption for better support and rollout planning."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-copilot-usage-metrics-now-includes-user-level-github-copilot-cli-activity
+title: Copilot Usage Metrics Expanded to User-Level GitHub Copilot CLI Activity
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 15:14:18 +00:00
-permalink: "/2026-03-05-Copilot-Usage-Metrics-Expanded-to-User-Level-GitHub-Copilot-CLI-Activity.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Account Management", "Activity Monitoring", "AI", "API", "CLI Telemetry", "Copilot", "Copilot CLI", "Developer Tooling", "DevOps", "DevOps Metrics", "Enterprise Management", "Enterprise Management Tools", "GitHub Copilot", "GitHub Enterprise", "News", "Productivity Tracking", "Token Usage", "Usage Metrics", "User Analytics"]
-tags_normalized: ["account management", "activity monitoring", "ai", "api", "cli telemetry", "copilot", "copilot cli", "developer tooling", "devops", "devops metrics", "enterprise management", "enterprise management tools", "github copilot", "github enterprise", "news", "productivity tracking", "token usage", "usage metrics", "user analytics"]
+tags:
+- Account Management
+- Activity Monitoring
+- AI
+- API
+- CLI Telemetry
+- Copilot
+- Copilot CLI
+- Developer Tooling
+- DevOps
+- DevOps Metrics
+- Enterprise Management
+- Enterprise Management Tools
+- GitHub Copilot
+- GitHub Enterprise
+- News
+- Productivity Tracking
+- Token Usage
+- Usage Metrics
+- User Analytics
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison details how GitHub Copilot usage metrics now support user-level CLI activity, letting organizations track individual engagement and usage trends to support developer enablement.<!--excerpt_end-->
 
 # Copilot Usage Metrics Now Includes User-Level GitHub Copilot CLI Activity

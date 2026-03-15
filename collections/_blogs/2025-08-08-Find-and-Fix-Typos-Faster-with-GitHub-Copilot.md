@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Find and Fix Typos Faster with GitHub Copilot"
-description: "This article explains how developers can leverage GitHub Copilot to detect and correct typos in code, whether in variable names, function calls, or comments. It provides actionable tips for using Copilot's chat, edit, and agent modes to improve code quality and naming consistency, highlighting practical routines for cleaner commits."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://www.cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://www.cooknwithcopilot.com/blog/find-and-fix-typos-faster-with-github-copilot.html
+title: Find and Fix Typos Faster with GitHub Copilot
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-08-08 00:00:00 +00:00
-permalink: "/2025-08-08-Find-and-Fix-Typos-Faster-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Automated Refactoring", "Best Practices", "Blogs", "Code Quality", "Code Review", "Coding", "Copilot Agent Mode", "Copilot Chat", "Copilot Edit Mode", "Debugging", "Developer Productivity", "Function Naming", "GitHub Copilot", "Naming Conventions", "Typo Detection", "Variable Names"]
-tags_normalized: ["ai", "automated refactoring", "best practices", "blogs", "code quality", "code review", "coding", "copilot agent mode", "copilot chat", "copilot edit mode", "debugging", "developer productivity", "function naming", "github copilot", "naming conventions", "typo detection", "variable names"]
+tags:
+- Automated Refactoring
+- Best Practices
+- Code Quality
+- Code Review
+- Copilot Agent Mode
+- Copilot Chat
+- Copilot Edit Mode
+- Debugging
+- Developer Productivity
+- Function Naming
+- Naming Conventions
+- Typo Detection
+- Variable Names
+- AI
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels demonstrates how GitHub Copilot can accelerate typo detection and correction in code, offering practical guidance on proofing, editing, and standardizing naming before you commit.<!--excerpt_end-->
 
 # Find and Fix Typos Faster with GitHub Copilot

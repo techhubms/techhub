@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Terraform Provider for Microsoft Fabric: Using MCP Servers and Fabric CLI"
-description: "This article explores recent developments in Microsoft Fabric tooling, focusing on the general availability of the Fabric CLI and Terraform Provider. It outlines how these tools simplify and automate Microsoft Fabric administration and provides practical guidance for defining Fabric resources programmatically."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-2-using-the-terraform-mcp-server-and-fabric-cli-to-help-define-your-fabric-resources/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/terraform-provider-for-microsoft-fabric-2-using-the-terraform-mcp-server-and-fabric-cli-to-help-define-your-fabric-resources/
+title: 'Terraform Provider for Microsoft Fabric: Using MCP Servers and Fabric CLI'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-07-23 07:00:00 +00:00
-permalink: "/2025-07-23-Terraform-Provider-for-Microsoft-Fabric-Using-MCP-Servers-and-Fabric-CLI.html"
-categories: ["Azure", "DevOps"]
-tags: ["Automation", "Azure", "Cloud Infrastructure", "Declarative Deployment", "DevOps", "DevOps Practices", "Fabric CLI", "IaC", "MCP Server", "Microsoft Fabric", "News", "Resource Management", "Terraform"]
-tags_normalized: ["automation", "azure", "cloud infrastructure", "declarative deployment", "devops", "devops practices", "fabric cli", "iac", "mcp server", "microsoft fabric", "news", "resource management", "terraform"]
+tags:
+- Automation
+- Cloud Infrastructure
+- Declarative Deployment
+- DevOps Practices
+- Fabric CLI
+- IaC
+- MCP Server
+- Microsoft Fabric
+- Resource Management
+- Terraform
+- Azure
+- DevOps
+- News
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Authored by the Microsoft Fabric Blog, this article presents practical advice for leveraging the Terraform Provider and Fabric CLI for automating Microsoft Fabric resource administration.<!--excerpt_end-->
 
 ### Overview

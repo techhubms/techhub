@@ -83,11 +83,11 @@ function Test-DateSignificantlyDifferent {
     }
 }
 
-# Helper function to extract canonical URL from frontmatter
-function Get-CanonicalUrl {
+# Helper function to extract external URL from frontmatter
+function Get-ExternalUrl {
     param([string]$content)
     
-    if ($content -match 'canonical_url:\s*"([^"]+)"') {
+    if ($content -match 'external_url:\s*"([^"]+)"') {
         return $matches[1]
     }
     return $null
@@ -868,12 +868,12 @@ $filesWithUrls = @()
 foreach ($file in $allFiles) {
     try {
         $content = Get-Content $file.Path -Raw -ErrorAction Stop
-        $canonicalUrl = Get-CanonicalUrl $content
+        $externalUrl = Get-ExternalUrl $content
         
-        if ($canonicalUrl) {
+        if ($externalUrl) {
             $filesWithUrls += @{
                 File    = $file
-                Url     = $canonicalUrl
+                Url     = $externalUrl
                 Content = $content
             }
         }
@@ -1027,8 +1027,8 @@ foreach ($file in $allFiles) {
     try {
         $content = Get-Content $file.Path -Raw -ErrorAction Stop
         
-        # Extract canonical URL from frontmatter
-        if ($content -match 'canonical_url:\s*["\s]*([^"\s\r\n]+)') {
+        # Extract external URL from frontmatter
+        if ($content -match 'external_url:\s*["\s]*([^"\s\r\n]+)') {
             $canonicalUrl = $matches[1].Trim()
             
             if (-not $canonicalUrlGroups.ContainsKey($canonicalUrl)) {

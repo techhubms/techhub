@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Introducing GPT-5.4 in Microsoft Foundry for Enterprise AI Production"
-description: "This announcement details the general availability of OpenAI’s GPT-5.4 and GPT-5.4 Pro models in Microsoft Foundry. It highlights new features focused on reliable AI for production environments, including reasoning improvements, agentic workflows, and enhanced enterprise controls for secure deployment. The update covers pricing, capabilities for both standard and Pro offerings, and guidance for enterprise integration."
-author: "Naomi Moneypenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-gpt-5-4-in-microsoft-foundry/4499785"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://techcommunity.microsoft.com/blog/azure-ai-foundry-blog/introducing-gpt-5-4-in-microsoft-foundry/4499785
+title: Introducing GPT-5.4 in Microsoft Foundry for Enterprise AI Production
+author: Naomi Moneypenny
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-03-05 23:03:01 +00:00
-permalink: "/2026-03-05-Introducing-GPT-54-in-Microsoft-Foundry-for-Enterprise-AI-Production.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Workflows", "AI", "AI + Machine Learning", "AI Agents", "AI Orchestration", "Azure", "Business Process Automation", "Compliance", "Deployment", "Enterprise AI", "Enterprise Integration", "GPT 5.4", "Microsoft Foundry", "Model Catalog", "Model Inference", "News", "OpenAI", "Production AI", "Reasoning"]
-tags_normalized: ["agentic workflows", "ai", "ai plus machine learning", "ai agents", "ai orchestration", "azure", "business process automation", "compliance", "deployment", "enterprise ai", "enterprise integration", "gpt 5dot4", "microsoft foundry", "model catalog", "model inference", "news", "openai", "production ai", "reasoning"]
+tags:
+- Agentic Workflows
+- AI
+- AI + Machine Learning
+- AI Agents
+- AI Orchestration
+- Azure
+- Business Process Automation
+- Compliance
+- Deployment
+- Enterprise AI
+- Enterprise Integration
+- GPT 5.4
+- Microsoft Foundry
+- Model Catalog
+- Model Inference
+- News
+- OpenAI
+- Production AI
+- Reasoning
+section_names:
+- ai
+- azure
 ---
-
 Naomi Moneypenny introduces GPT-5.4 and GPT-5.4 Pro in Microsoft Foundry, outlining their enhanced capabilities for enterprise AI production environments and providing guidance on deployment and pricing.<!--excerpt_end-->
 
 # Introducing GPT-5.4 in Microsoft Foundry for Enterprise AI Production

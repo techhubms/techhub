@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Silicon to Systems: How Microsoft Engineers AI Infrastructure from the Ground Up"
-description: "This article provides an in-depth look at the end-to-end engineering behind Microsoft's AI infrastructure, with a focus on custom silicon (such as Cobalt 200), AI accelerators (Maia platform), and integration into Azure datacenters. It explores the architectural, hardware, and system-level innovations developed to deliver power, thermal, and performance efficiency for large-scale AI and cloud workloads. The discussion covers the multi-year silicon development lifecycle, co-engineering of hardware and cooling, and the strategic investments behind Microsoft’s AI platforms powering services like Copilot."
-author: "Alistair_Speirs"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/silicon-to-systems-how-microsoft-engineers-ai-infrastructure/ba-p/4489525"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/silicon-to-systems-how-microsoft-engineers-ai-infrastructure/ba-p/4489525
+title: 'Silicon to Systems: How Microsoft Engineers AI Infrastructure from the Ground Up'
+author: Alistair_Speirs
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-01-27 17:03:17 +00:00
-permalink: "/2026-01-27-Silicon-to-Systems-How-Microsoft-Engineers-AI-Infrastructure-from-the-Ground-Up.html"
-categories: ["AI", "Azure"]
-tags: ["Accelerators", "AI", "AI Infrastructure", "AI Workloads", "Azure", "Azure Infrastructure", "Cloud Computing", "Cobalt 200", "Community", "Custom Silicon", "Datacenter Engineering", "Liquid Cooling", "Maia AI Accelerator", "Microsoft Azure", "Power Efficiency", "Server Hardware", "System On Chip", "Thermal Management"]
-tags_normalized: ["accelerators", "ai", "ai infrastructure", "ai workloads", "azure", "azure infrastructure", "cloud computing", "cobalt 200", "community", "custom silicon", "datacenter engineering", "liquid cooling", "maia ai accelerator", "microsoft azure", "power efficiency", "server hardware", "system on chip", "thermal management"]
+tags:
+- Accelerators
+- AI
+- AI Infrastructure
+- AI Workloads
+- Azure
+- Azure Infrastructure
+- Cloud Computing
+- Cobalt 200
+- Community
+- Custom Silicon
+- Datacenter Engineering
+- Liquid Cooling
+- Maia AI Accelerator
+- Microsoft Azure
+- Power Efficiency
+- Server Hardware
+- System On Chip
+- Thermal Management
+section_names:
+- ai
+- azure
 ---
-
 Alistair_Speirs details how Microsoft engineers custom silicon, server platforms, and data centers to create high-efficiency AI infrastructure powering Azure and services like Copilot.<!--excerpt_end-->
 
 # Silicon to Systems: How Microsoft Engineers AI Infrastructure from the Ground Up

@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Figma MCP for VS Code: AI-Driven Design-to-Code Collaboration"
-description: "This video explores how the Model Context Protocol (MCP) bridges Figma and Visual Studio Code, enabling real-time collaboration and AI-assisted UI development. Joanna Oikawa (VS Code Product Design Lead) demonstrates how designers and engineers can use MCP to iterate faster, turn Figma wireframes into working UIs, and codify design knowledge into reusable team skills. The session also showcases integrations with GitHub Copilot, AI-driven dashboard creation, and actionable tips for leveraging AI in the designer-engineer workflow."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KCu3g2_xqzM"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=KCu3g2_xqzM
+title: 'Figma MCP for VS Code: AI-Driven Design-to-Code Collaboration'
+author: Microsoft Developer
+primary_section: github-copilot
+feed_name: Microsoft Developer YouTube
 date: 2026-03-10 16:00:33 +00:00
-permalink: "/2026-03-10-Figma-MCP-for-VS-Code-AI-Driven-Design-to-Code-Collaboration.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agentic AI", "AI", "AI Assisted Coding", "AI Workflow", "Cloud Computing", "Coding", "Collaboration Tools", "Demo", "Design Systems", "Design To Code", "Dev", "Developer Experience", "Development", "Figma", "Figma Dev Mode", "GitHub Copilot", "MCP", "Microsoft", "Reusable Skills", "Tech", "Technology", "UI Development", "Videos", "VS Code"]
-tags_normalized: ["agentic ai", "ai", "ai assisted coding", "ai workflow", "cloud computing", "coding", "collaboration tools", "demo", "design systems", "design to code", "dev", "developer experience", "development", "figma", "figma dev mode", "github copilot", "mcp", "microsoft", "reusable skills", "tech", "technology", "ui development", "videos", "vs code"]
+tags:
+- Agentic AI
+- AI
+- AI Assisted Coding
+- AI Workflow
+- Cloud Computing
+- Collaboration Tools
+- Demo
+- Design Systems
+- Design To Code
+- Dev
+- Developer Experience
+- Development
+- Figma
+- Figma Dev Mode
+- GitHub Copilot
+- MCP
+- Microsoft
+- Reusable Skills
+- Tech
+- Technology
+- UI Development
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Microsoft Developer presents Joanna Oikawa's practical guide to connecting Figma and VS Code using MCP, demonstrating AI-powered design-to-code workflows and best practices for designer-engineer collaboration.<!--excerpt_end-->
 
 {% youtube KCu3g2_xqzM %}

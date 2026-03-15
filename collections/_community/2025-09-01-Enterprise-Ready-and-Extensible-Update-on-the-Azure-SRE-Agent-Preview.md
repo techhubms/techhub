@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Enterprise-Ready and Extensible: Update on the Azure SRE Agent Preview"
-description: "This update from Mayunk Jain covers the maturation and new features of the Azure SRE Agent, an AI-driven automation solution for incident response and diagnostics on Azure. It details enhancements like granular permissioning, deeper integrations with DevOps and monitoring tools, source code-aware root cause analysis, and customizable incident handling. The post also includes billing updates and real-world operational benefits for enterprises managing cloud workloads."
-author: "Mayunk_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/enterprise-ready-and-extensible-update-on-the-azure-sre-agent/ba-p/4444299"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/enterprise-ready-and-extensible-update-on-the-azure-sre-agent/ba-p/4444299
+title: 'Enterprise-Ready and Extensible: Update on the Azure SRE Agent Preview'
+author: Mayunk_Jain
+feed_name: Microsoft Tech Community
 date: 2025-09-01 19:17:04 +00:00
-permalink: "/2025-09-01-Enterprise-Ready-and-Extensible-Update-on-the-Azure-SRE-Agent-Preview.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["AAU", "AI", "AI Automation", "App Service", "Azure", "Azure CLI", "Azure DevOps", "Azure Functions", "Azure Monitor", "Azure SRE Agent", "Cloud Governance", "Community", "DevOps", "Enterprise Integration", "GitHub Integration", "Incident Management", "Incident Response", "Kubernetes", "Operational Excellence", "PagerDuty", "Root Cause Analysis", "Security", "ServiceNow", "Source Code Analysis"]
-tags_normalized: ["aau", "ai", "ai automation", "app service", "azure", "azure cli", "azure devops", "azure functions", "azure monitor", "azure sre agent", "cloud governance", "community", "devops", "enterprise integration", "github integration", "incident management", "incident response", "kubernetes", "operational excellence", "pagerduty", "root cause analysis", "security", "servicenow", "source code analysis"]
+tags:
+- AAU
+- AI Automation
+- App Service
+- Azure CLI
+- Azure DevOps
+- Azure Functions
+- Azure Monitor
+- Azure SRE Agent
+- Cloud Governance
+- Enterprise Integration
+- GitHub Integration
+- Incident Management
+- Incident Response
+- Kubernetes
+- Operational Excellence
+- PagerDuty
+- Root Cause Analysis
+- ServiceNow
+- Source Code Analysis
+- AI
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- ai
+- azure
+- devops
+- security
+primary_section: ai
 ---
-
 Mayunk Jain introduces updates to the Azure SRE Agent, an enterprise-grade AI assistant for automated incident response on Azure, highlighting new integrations and enhanced operational features.<!--excerpt_end-->
 
 # Enterprise-Ready and Extensible: Update on the Azure SRE Agent Preview

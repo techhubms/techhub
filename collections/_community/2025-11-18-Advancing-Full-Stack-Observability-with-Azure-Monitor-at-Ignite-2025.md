@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Advancing Full-Stack Observability with Azure Monitor at Ignite 2025"
-description: "This article details new AI-powered innovations in Azure Monitor, presented at Ignite 2025, aimed at transforming observability for cloud operations. It covers the Azure Copilot observability agent, centralized dashboards, expanded OpenTelemetry support, improvements in log and metric management, and the impact on monitoring AI applications. The content is targeted at developers, ITOps, and DevOps professionals looking to optimize the visibility, troubleshooting, and operational resilience of Azure environments using the latest tools and technologies."
-author: "Shiva_Sivakumar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/advancing-full-stack-observability-with-azure-monitor-at-ignite/ba-p/4469041"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/advancing-full-stack-observability-with-azure-monitor-at-ignite/ba-p/4469041
+title: Advancing Full-Stack Observability with Azure Monitor at Ignite 2025
+author: Shiva_Sivakumar
+feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:52 +00:00
-permalink: "/2025-11-18-Advancing-Full-Stack-Observability-with-Azure-Monitor-at-Ignite-2025.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic Workflows", "AI", "AI Observability", "AKS", "Azure", "Azure Copilot", "Azure Data Explorer", "Azure Monitor", "Azure Red Hat OpenShift", "Cloud Operations", "Community", "Container Insights", "DevOps", "Dynamic Thresholding", "Foundry Control Plane", "Full Stack Troubleshooting", "Grafana", "ITOps", "Log Analytics", "Microsoft Ignite", "Monitoring Coverage", "OpenTelemetry", "Prometheus", "RBAC", "VM Insights"]
-tags_normalized: ["agentic workflows", "ai", "ai observability", "aks", "azure", "azure copilot", "azure data explorer", "azure monitor", "azure red hat openshift", "cloud operations", "community", "container insights", "devops", "dynamic thresholding", "foundry control plane", "full stack troubleshooting", "grafana", "itops", "log analytics", "microsoft ignite", "monitoring coverage", "opentelemetry", "prometheus", "rbac", "vm insights"]
+tags:
+- Agentic Workflows
+- AI Observability
+- AKS
+- Azure Copilot
+- Azure Data Explorer
+- Azure Monitor
+- Azure Red Hat OpenShift
+- Cloud Operations
+- Container Insights
+- Dynamic Thresholding
+- Foundry Control Plane
+- Full Stack Troubleshooting
+- Grafana
+- ITOps
+- Log Analytics
+- Microsoft Ignite
+- Monitoring Coverage
+- OpenTelemetry
+- Prometheus
+- RBAC
+- VM Insights
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 Shiva_Sivakumar shares updates from Ignite 2025 on how Azure Monitor and new AI-powered agents elevate observability and operational analytics for cloud and AI workloads.<!--excerpt_end-->
 
 # Advancing Full-Stack Observability with Azure Monitor at Ignite 2025

@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery"
-description: "This comprehensive guide details the step-by-step process for creating and managing custom images tailored for Azure Confidential Virtual Machines (CVMs) within enterprise environments. Learn how to build hardened golden images, enable both Platform Managed Keys (PMK) and Customer Managed Keys (CMK), leverage Azure Compute Gallery for lifecycle management, and ensure robust security baselines. The walkthrough includes critical architecture insights, troubleshooting tips, and automation examples using PowerShell and the Azure Portal."
-author: "PramodPalukuru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-reusable-custom-images-for-azure-confidential-vms-using/ba-p/4500880"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/building-reusable-custom-images-for-azure-confidential-vms-using/ba-p/4500880
+title: Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery
+author: PramodPalukuru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-10 12:09:24 +00:00
-permalink: "/2026-03-10-Building-Reusable-Custom-Images-for-Azure-Confidential-VMs-Using-Azure-Compute-Gallery.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Compute Gallery", "Azure Confidential VM", "BitLocker", "Community", "Custom Images", "Customer Managed Keys", "Defender For Endpoint", "Disk Encryption Set", "Enterprise Deployment", "Golden Image", "Image Generalization", "Platform Managed Keys", "Policy Compliance", "PowerShell", "Secure Boot", "Security", "Security Baseline", "Sysprep", "Trusted Launch", "Vtpm", "Windows Server"]
-tags_normalized: ["azure", "azure compute gallery", "azure confidential vm", "bitlocker", "community", "custom images", "customer managed keys", "defender for endpoint", "disk encryption set", "enterprise deployment", "golden image", "image generalization", "platform managed keys", "policy compliance", "powershell", "secure boot", "security", "security baseline", "sysprep", "trusted launch", "vtpm", "windows server"]
+tags:
+- Azure
+- Azure Compute Gallery
+- Azure Confidential VM
+- BitLocker
+- Community
+- Custom Images
+- Customer Managed Keys
+- Defender For Endpoint
+- Disk Encryption Set
+- Enterprise Deployment
+- Golden Image
+- Image Generalization
+- Platform Managed Keys
+- Policy Compliance
+- PowerShell
+- Secure Boot
+- Security
+- Security Baseline
+- Sysprep
+- Trusted Launch
+- Vtpm
+- Windows Server
+section_names:
+- azure
+- security
 ---
-
 PramodPalukuru demonstrates how to create hardened, reusable custom images for Azure Confidential Virtual Machines, guiding you through secure image creation, compliance with PMK and CMK, and enterprise deployment using Azure Compute Gallery.<!--excerpt_end-->
 
 # Building Reusable Custom Images for Azure Confidential VMs Using Azure Compute Gallery

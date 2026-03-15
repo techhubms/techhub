@@ -17,23 +17,22 @@ Azure API Key for AI model access
 Optional. Path to the workspace directory. Defaults to the script's directory.
 When running in GitHub Actions, this should be set to the GitHub workspace path.
 
-.PARAMETER Endpoint
-Required. Azure AI Foundry endpoint URL.
-Example: "https://<resource>.services.ai.azure.com/models/chat/completions"
-
-.PARAMETER Model
-Required. The deployment name configured in your Azure AI Foundry resource.
-
-.PARAMETER RateLimitPreventionDelay
+.PARAMETER Environment
+Optional. The Azure environment to use ('staging' or 'prod'). Defaults to 'prod'.
+    Uses Get-AzureOpenAIEndpoint and Get-AzureOpenAIModelName functions for configuration.
 Optional. Delay in seconds between AI API calls to prevent rate limiting. Defaults to 15.
 
 .EXAMPLE
-# Use Azure AI Foundry with specific deployment
-./process-rss-to-markdown.ps1 "owner/repo" "api_key123" -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -Model "gpt-4.1"
+# Use production OpenAI (default)
+./process-rss-to-markdown.ps1 "owner/repo" "api_key123"
+
+.EXAMPLE
+# Use staging OpenAI for testing
+./process-rss-to-markdown.ps1 "owner/repo" "api_key123" -Environment "staging"
 
 .EXAMPLE
 # Run from GitHub Actions with workspace directory
-./process-rss-to-markdown.ps1 "owner/repo" "api_key123" -WorkspaceDirectory ${{ github.workspace }} -Endpoint "https://myresource.services.ai.azure.com/models/chat/completions" -Model "gpt-4.1"
+./process-rss-to-markdown.ps1 "owner/repo" "api_key123" -WorkspaceDirectory ${{ github.workspace }}
 #>
 
 param(
@@ -46,11 +45,9 @@ param(
     [Parameter(Mandatory = $false)]
     [string]$WorkspaceDirectory = $PSScriptRoot,
     
-    [Parameter(Mandatory = $true)]
-    [string]$Endpoint,
-    
-    [Parameter(Mandatory = $true)]
-    [string]$Model,
+    [Parameter(Mandatory = $false)]
+    [ValidateSet('staging', 'prod')]
+    [string]$Environment = 'prod',
     
     [Parameter(Mandatory = $false)]
     [int]$RateLimitPreventionDelay = 15
@@ -76,8 +73,9 @@ try {
     Get-ChildItem -Path $functionsPath -Filter "*.ps1" | 
     Where-Object { $_.Name -ne "Write-ErrorDetails.ps1" } |
     ForEach-Object { . $_.FullName }
-
-    Write-Host "🔄 Starting RSS data processing..."
+    
+    Write-Host "🔄 Starting RSS data processing..." -ForegroundColor Cyan
+    Write-Host "📍 Using $Environment environment" -ForegroundColor Cyan
     
     $sourceRoot = Get-SourceRoot
     $dataDir = Join-Path $sourceRoot "scripts/data/rss-cache"
@@ -168,8 +166,7 @@ try {
                 $newFilesCount = Convert-RssToMarkdown `
                     -Items $items `
                     -Token $Token `
-                    -Model $Model `
-                    -Endpoint $Endpoint `
+                    -Environment $Environment `
                     -RateLimitPreventionDelay $RateLimitPreventionDelay `
                     -FailedArticleCount $failedArticleCount
                 

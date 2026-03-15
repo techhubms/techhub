@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Troubleshooting Persistent Routing from Azure VM to On-Premises via Site-to-Site VPN"
-description: "This community post by nitrox2000 seeks advice on configuring persistent routes and troubleshooting connectivity from an Azure VM to an on-premises network through a Cisco ASA firewall and an existing site-to-site VPN. The user outlines their current successful on-premises deployment, the migration to Azure, and details their route configurations and issues encountered when trying to reach third-party resources from the Azure side."
-author: "nitrox2000"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking/azure-vm-persistent-route-setup/m-p/4502007#M773"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-networking/azure-vm-persistent-route-setup/m-p/4502007#M773
+title: Troubleshooting Persistent Routing from Azure VM to On-Premises via Site-to-Site VPN
+author: nitrox2000
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-13 14:33:07 +00:00
-permalink: "/2026-03-13-Troubleshooting-Persistent-Routing-from-Azure-VM-to-On-Premises-via-Site-to-Site-VPN.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Networking", "Azure VM", "Cisco ASA", "Community", "Firewall Rules", "Hub And Spoke Topology", "IPsec VPN", "Local Network Gateway", "Network Connectivity", "On Premises Integration", "Persistent Routing", "Routing Troubleshooting", "Site To Site VPN", "Static Routes", "Subnets", "Virtual Machines"]
-tags_normalized: ["azure", "azure networking", "azure vm", "cisco asa", "community", "firewall rules", "hub and spoke topology", "ipsec vpn", "local network gateway", "network connectivity", "on premises integration", "persistent routing", "routing troubleshooting", "site to site vpn", "static routes", "subnets", "virtual machines"]
+tags:
+- Azure
+- Azure Networking
+- Azure VM
+- Cisco ASA
+- Community
+- Firewall Rules
+- Hub And Spoke Topology
+- IPsec VPN
+- Local Network Gateway
+- Network Connectivity
+- On Premises Integration
+- Persistent Routing
+- Routing Troubleshooting
+- Site To Site VPN
+- Static Routes
+- Subnets
+- Virtual Machines
+section_names:
+- azure
 ---
-
 nitrox2000 requests troubleshooting assistance for persistent routing from an Azure VM to a third-party network via their on-premises Cisco ASA firewall, after successfully migrating from an on-prem VM setup.<!--excerpt_end-->
 
 # Troubleshooting Persistent Routing from Azure VM to On-Premises via Site-to-Site VPN

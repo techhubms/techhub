@@ -1,20 +1,27 @@
----
-layout: "post"
+﻿---
+external_url: https://www.youtube.com/watch?v=qQZFvz4BTCY
 title: "Let's Learn MCP: Python"
-description: "This video workshop introduces the Model Context Protocol (MCP), illustrating how it standardizes AI model and client application interactions. It features demos on building an MCP server in Python and covers practical use cases, with insights from Gwyneth Peña-Siguenza and Marlene Mhangami."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=qQZFvz4BTCY"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-07-16 17:44:49 +00:00
-permalink: "/2025-07-16-Lets-Learn-MCP-Python.html"
-categories: ["AI", "Coding"]
-tags: ["AI", "AI Models", "Client Applications", "Coding", "Demo", "Mcp", "MCP Server", "Python", "Standardization", "Videos", "VS Code", "Workshop"]
-tags_normalized: ["ai", "ai models", "client applications", "coding", "demo", "mcp", "mcp server", "python", "standardization", "videos", "vs code", "workshop"]
+tags:
+- AI Models
+- Client Applications
+- Demo
+- MCP
+- MCP Server
+- Python
+- Standardization
+- VS Code
+- Workshop
+- AI
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Visual Studio Code presents a workshop on the Model Context Protocol (MCP), hosted by Gwyneth Peña-Siguenza and Marlene Mhangami, introducing MCP fundamentals and practical Python demos.<!--excerpt_end-->
 
 {% youtube qQZFvz4BTCY %}
@@ -44,9 +51,9 @@ This workshop video, presented under the "Let's Learn MCP: Python" series, focus
 
 ### Additional Resources
 
-- **Demo code is available at**: http://aka.ms/lets-learn-mcp-python
-- **Sessions are accessible in different programming and spoken languages at**: https://aka.ms/letslearnmcp
-- **Information on registering for MCP Dev Days (July 29 & 30):** https://aka.ms/mcpdevdays
+- **Demo code is available at**: <http://aka.ms/lets-learn-mcp-python>
+- **Sessions are accessible in different programming and spoken languages at**: <https://aka.ms/letslearnmcp>
+- **Information on registering for MCP Dev Days (July 29 & 30):** <https://aka.ms/mcpdevdays>
 
 ### Featured Presenters
 

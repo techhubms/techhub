@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft Agent Framework Release Candidate: Migrating from Semantic Kernel and AutoGen"
-description: "This announcement covers the Release Candidate milestone for Microsoft Agent Framework, the successor to Semantic Kernel and AutoGen. It details the new features, migration pathway, cross-language support for .NET and Python, agent orchestration capabilities, and multi-provider integration including Azure OpenAI and GitHub Copilot."
-author: "Dmytro Struk, Shawn Henry"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/migrate-your-semantic-kernel-and-autogen-projects-to-microsoft-agent-framework-release-candidate/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/migrate-your-semantic-kernel-and-autogen-projects-to-microsoft-agent-framework-release-candidate/
+title: 'Microsoft Agent Framework Release Candidate: Migrating from Semantic Kernel and AutoGen'
+author: Dmytro Struk, Shawn Henry
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-02-20 05:52:57 +00:00
-permalink: "/2026-02-20-Microsoft-Agent-Framework-Release-Candidate-Migrating-from-Semantic-Kernel-and-AutoGen.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "A2A", "Agent Framework", "AI", "AI Agents", "AutoGen", "Azure", "Azure OpenAI", "Coding", "Function Tools", "MCP", "Microsoft Agent Framework", "Migration Guide", "Multi Agent Orchestration", "News", "Open Source AI", "Python", "Semantic Kernel", "Streaming"]
-tags_normalized: ["dotnet", "a2a", "agent framework", "ai", "ai agents", "autogen", "azure", "azure openai", "coding", "function tools", "mcp", "microsoft agent framework", "migration guide", "multi agent orchestration", "news", "open source ai", "python", "semantic kernel", "streaming"]
+tags:
+- .NET
+- A2A
+- Agent Framework
+- AI
+- AI Agents
+- AutoGen
+- Azure
+- Azure OpenAI
+- Function Tools
+- MCP
+- Microsoft Agent Framework
+- Migration Guide
+- Multi Agent Orchestration
+- News
+- Open Source AI
+- Python
+- Semantic Kernel
+- Streaming
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Dmytro Struk and Shawn Henry introduce the Release Candidate of Microsoft Agent Framework, the open-source successor to Semantic Kernel and AutoGen. This update highlights migration tips, new agent orchestration features, and multi-language support.<!--excerpt_end-->
 
 # Microsoft Agent Framework Release Candidate: Migrating from Semantic Kernel and AutoGen

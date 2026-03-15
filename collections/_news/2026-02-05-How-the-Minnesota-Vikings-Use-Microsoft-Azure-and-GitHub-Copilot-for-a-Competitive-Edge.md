@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "How the Minnesota Vikings Use Microsoft Azure and GitHub Copilot for a Competitive Edge"
-description: "This article explores how the Minnesota Vikings leverage a proprietary, Azure-based video review system called Viper, developed in partnership with Microsoft. It highlights the technical aspects—including cloud architecture, AI-powered tools, developer workflow using GitHub Copilot, and secure access via Microsoft Entra ID—that enable faster, data-driven, and secure player evaluations for NFL success."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/signal/articles/how-technology-could-help-the-vikings-build-next-years-winning-edge/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/signal/articles/how-technology-could-help-the-vikings-build-next-years-winning-edge/
+title: How the Minnesota Vikings Use Microsoft Azure and GitHub Copilot for a Competitive Edge
+author: stclarke
+primary_section: github-copilot
+feed_name: Microsoft News
 date: 2026-02-05 16:03:03 +00:00
-permalink: "/2026-02-05-How-the-Minnesota-Vikings-Use-Microsoft-Azure-and-GitHub-Copilot-for-a-Competitive-Edge.html"
-categories: ["AI", "Azure", "GitHub Copilot", "Security"]
-tags: ["AI", "Authentication", "Azure", "Azure AI Foundry", "Cloud", "Cloud Computing", "Coaching Technology", "Company News", "Conditional Access", "DevOps Workflow", "Football Data", "GitHub Copilot", "Microsoft Azure", "Microsoft Entra ID", "News", "NFL Technology", "Player Evaluation", "Security", "Sports Analytics", "Video Review System", "Viper Platform"]
-tags_normalized: ["ai", "authentication", "azure", "azure ai foundry", "cloud", "cloud computing", "coaching technology", "company news", "conditional access", "devops workflow", "football data", "github copilot", "microsoft azure", "microsoft entra id", "news", "nfl technology", "player evaluation", "security", "sports analytics", "video review system", "viper platform"]
+tags:
+- AI
+- Authentication
+- Azure
+- Azure AI Foundry
+- Cloud Computing
+- Coaching Technology
+- Company News
+- Conditional Access
+- DevOps Workflow
+- Football Data
+- GitHub Copilot
+- Microsoft Azure
+- Microsoft Entra ID
+- News
+- NFL Technology
+- Player Evaluation
+- Security
+- Sports Analytics
+- Video Review System
+- Viper Platform
+section_names:
+- ai
+- azure
+- github-copilot
+- security
 ---
-
 stclarke covers how the Minnesota Vikings use their Azure-powered Viper platform and GitHub Copilot to streamline player evaluation, improve coaching workflow, and ensure secure access with Entra ID.<!--excerpt_end-->
 
 # How the Minnesota Vikings Use Microsoft Azure and GitHub Copilot for a Competitive Edge

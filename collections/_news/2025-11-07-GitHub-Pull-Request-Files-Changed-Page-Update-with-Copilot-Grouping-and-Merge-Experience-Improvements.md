@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "GitHub Pull Request Files Changed Page Update with Copilot Grouping and Merge Experience Improvements"
-description: "This update outlines new features in the GitHub pull request 'Files changed' public preview, including batch application of suggested changes, grouping changes with Copilot for enterprise users, collapsible annotations for better navigation, and enhancements to the merge experience such as improved draft conversion and visibility of status checks in merge queues."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates
+title: GitHub Pull Request Files Changed Page Update with Copilot Grouping and Merge Experience Improvements
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-11-07 01:12:34 +00:00
-permalink: "/2025-11-07-GitHub-Pull-Request-Files-Changed-Page-Update-with-Copilot-Grouping-and-Merge-Experience-Improvements.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "Annotations", "Batch Suggested Changes", "CI Tools", "Code Review", "Collaboration", "Collaboration Tools", "Copilot", "Copilot Enterprise", "Copilot Pro+", "DevOps", "Draft Conversion", "GitHub", "GitHub Copilot", "Improvement", "Merge Experience", "News", "Public Preview", "Pull Request", "Status Checks"]
-tags_normalized: ["accessibility", "ai", "annotations", "batch suggested changes", "ci tools", "code review", "collaboration", "collaboration tools", "copilot", "copilot enterprise", "copilot proplus", "devops", "draft conversion", "github", "github copilot", "improvement", "merge experience", "news", "public preview", "pull request", "status checks"]
+tags:
+- Accessibility
+- Annotations
+- Batch Suggested Changes
+- CI Tools
+- Code Review
+- Collaboration
+- Collaboration Tools
+- Copilot
+- Copilot Enterprise
+- Copilot Pro+
+- Draft Conversion
+- GitHub
+- Improvement
+- Merge Experience
+- Public Preview
+- Pull Request
+- Status Checks
+- AI
+- DevOps
+- GitHub Copilot
+- News
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison summarizes fresh updates to the GitHub pull request workflow, with batch changes, Copilot-powered grouping, collapsible annotations, and improved merge queue experience for developers.<!--excerpt_end-->
 
 # GitHub Pull Request Files Changed Page Update – November 6
@@ -52,8 +69,8 @@ Users are encouraged to share feedback through the dedicated [discussion channel
 
 **References:**
 
-- [Pull request 'Files changed' public preview](https://github.blog/changelog/2025-06-26-improved-pull-request-files-changed-experience-now-in-public-preview/)
-- [Grouping changes with Copilot](https://github.blog/changelog/2025-10-28-grouping-changes-in-a-pull-request-with-copilot-in-public-preview/)
-- [Merge queue documentation](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
++ [Pull request 'Files changed' public preview](https://github.blog/changelog/2025-06-26-improved-pull-request-files-changed-experience-now-in-public-preview/)
++ [Grouping changes with Copilot](https://github.blog/changelog/2025-10-28-grouping-changes-in-a-pull-request-with-copilot-in-public-preview/)
++ [Merge queue documentation](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-a-merge-queue)
 
 This post appeared first on "The GitHub Blog". [Read the entire article here](https://github.blog/changelog/2025-11-06-pull-request-files-changed-public-preview-and-merge-experience-november-6-updates)

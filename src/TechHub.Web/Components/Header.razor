@@ -1,0 +1,77 @@
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@inject SectionCache SectionCache
+
+@* 
+   Header Component - Complete site header structure
+   Rendered by MainLayout.razor (not by individual pages).
+   
+   Usage (via MainLayout):
+     With section name (section/collection/content pages):
+       <Header SectionName="ai" RssFeedUrl="/ai/feed.xml" />
+     
+     With custom banner (home, about, not-found, error pages):
+       <Header CustomBannerTitle="Tech Hub" CustomBannerDescription="..." RssFeedUrl="/all/feed.xml" />
+     
+     Without section/banner (fallback):
+       <Header />
+*@
+
+<header>
+    <NavHeader />
+
+    @if (!string.IsNullOrEmpty(SectionName))
+    {
+        var sectionData = SectionCache.GetSectionByName(SectionName);
+        if (sectionData != null)
+        {
+            <SectionBanner Section="@sectionData" RssFeedUrl="@RssFeedUrl" />
+            <SubNav Section="@sectionData" />
+        }
+        else
+        {
+            <SubNav />
+        }
+    }
+    else if (!string.IsNullOrEmpty(CustomBannerTitle))
+    {
+        <SectionBanner Title="@CustomBannerTitle" Description="@CustomBannerDescription" RssFeedUrl="@RssFeedUrl" />
+        <SubNav Sections="@SectionCache.Sections" />
+    }
+    else if (ChildContent != null)
+    {
+        @ChildContent
+        <SubNav Sections="@SectionCache.Sections" />
+    }
+    else
+    {
+        <SubNav Sections="@SectionCache.Sections" />
+    }
+</header>
+
+@code {
+    [Parameter]
+    public string? SectionName { get; set; }
+
+    /// <summary>
+    /// Optional RSS feed URL. Passed through to SectionBanner for mobile RSS icon.
+    /// </summary>
+    [Parameter]
+    public string? RssFeedUrl { get; set; }
+
+    /// <summary>
+    /// Optional custom banner title (used by MainLayout for special pages like Home, About, etc.).
+    /// When set without SectionName, renders a SectionBanner with this title.
+    /// </summary>
+    [Parameter]
+    public string? CustomBannerTitle { get; set; }
+
+    /// <summary>
+    /// Optional custom banner description (used with CustomBannerTitle).
+    /// </summary>
+    [Parameter]
+    public string? CustomBannerDescription { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

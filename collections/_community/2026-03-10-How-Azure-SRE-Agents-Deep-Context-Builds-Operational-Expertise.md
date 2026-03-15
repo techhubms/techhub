@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "How Azure SRE Agent’s Deep Context Builds Operational Expertise"
-description: "This article introduces the Deep Context enhancement to Azure SRE Agent, showing how it leverages continuous code access, persistent memory, and background intelligence to deliver expert-level incident response and automation for Azure-based infrastructure. Readers will learn how Deep Context improves root cause analysis, remediation, and institutional knowledge building across SRE and DevOps teams."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-now-builds-expertise-like-your-best-engineer/ba-p/4500754"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/azure-sre-agent-now-builds-expertise-like-your-best-engineer/ba-p/4500754
+title: How Azure SRE Agent’s Deep Context Builds Operational Expertise
+author: dchelupati
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-10 14:08:23 +00:00
-permalink: "/2026-03-10-How-Azure-SRE-Agents-Deep-Context-Builds-Operational-Expertise.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Automation", "Azure", "Azure Monitor", "Azure SRE Agent", "CI/CD", "Cloud Operations", "Community", "Container Apps", "Deep Context", "DevOps", "GitHub", "IaC", "Incident Response", "Kusto Logs", "Operational Intelligence", "PagerDuty", "Persistent Memory", "Root Cause Analysis", "Runbooks", "ServiceNow", "SRE"]
-tags_normalized: ["ai", "automation", "azure", "azure monitor", "azure sre agent", "cislashcd", "cloud operations", "community", "container apps", "deep context", "devops", "github", "iac", "incident response", "kusto logs", "operational intelligence", "pagerduty", "persistent memory", "root cause analysis", "runbooks", "servicenow", "sre"]
+tags:
+- AI
+- Automation
+- Azure
+- Azure Monitor
+- Azure SRE Agent
+- CI/CD
+- Cloud Operations
+- Community
+- Container Apps
+- Deep Context
+- DevOps
+- GitHub
+- IaC
+- Incident Response
+- Kusto Logs
+- Operational Intelligence
+- PagerDuty
+- Persistent Memory
+- Root Cause Analysis
+- Runbooks
+- ServiceNow
+- SRE
+section_names:
+- ai
+- azure
+- devops
 ---
-
 dchelupati explores how Deep Context transforms the Azure SRE Agent, enabling it to learn and act like your best SRE by leveraging continuous code access, persistent memory, and automation for incident response.<!--excerpt_end-->
 
 # How Azure SRE Agent’s Deep Context Builds Operational Expertise

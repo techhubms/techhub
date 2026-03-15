@@ -1,0 +1,231 @@
+@page "/github-copilot/features"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotFeatures> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Features") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+                <MobileSidebarPanel Label="Subscriptions" Icon="filter">
+                    <nav class="sidebar-section features-tiers-sidebar" aria-label="Subscriptions">
+                        <h2 class="sidebar-h2">Subscriptions</h2>
+                        <div class="features-tiers-scroll">
+                            @foreach (var tier in pageData.SubscriptionTiers)
+                            {
+                                <a href="/github-copilot/features#@tier.VideoAnchor" id="tier-@tier.Id" class="features-tier-card">
+                                    <h3>@tier.Name</h3>
+                                    <p class="features-tier-tagline">@tier.Tagline</p>
+                                    <ul class="features-tier-features">
+                                        @foreach (var feature in tier.Features)
+                                        {
+                                            <li>@feature</li>
+                                        }
+                                    </ul>
+                                    <span class="features-tier-link">View Features →</span>
+                                </a>
+                            }
+                        </div>
+                    </nav>
+                </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+            </div>
+
+            <div class="custom-page-container">
+                <div class="custom-page-intro">
+                    <p>@pageData.Intro For the most current pricing, visit <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">GitHub's official pricing page</a>. For the most recent plan details, view the <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">official documentation</a>.</p>
+                    <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
+                </div>
+
+                @foreach (var featureSection in pageData.FeatureSections)
+                {
+                    // Get videos that belong to this tier's plans
+                    var sectionVideos = videoItems.Where(v =>
+                        featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
+                        .OrderBy(v => v.Title)
+                        .ToList();
+
+                    <div class="features-video-section">
+                        <h2 id="@featureSection.Id">@featureSection.Title</h2>
+                        <div class="features-section-filters">
+                            <button type="button" class="features-filter-btn" data-filter="ghes">GHES Support</button>
+                            <button type="button" class="features-filter-btn" data-filter="videos">With videos</button>
+                        </div>
+                        @if (sectionVideos.Any())
+                        {
+                            <div class="features-cards-grid">
+                                @foreach (var feature in sectionVideos)
+                                {
+                                    var featureId = $"feature-{feature.Slug}";
+                                    var videoId = GetYouTubeVideoId(feature.ExternalUrl);
+
+                                    @if (!string.IsNullOrEmpty(videoId))
+                                    {
+                                        <a href="@feature.GetHref(SectionName)" class="card feature-card" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="true">
+                                            <div class="feature-card-thumbnail">
+                                                <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
+                                                <div class="feature-card-play-icon">
+                                                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
+                                            </div>
+                                            <p class="card-description" title="@feature.Excerpt">@TruncateText(feature.Excerpt, 135)</p>
+                                            <div class="card-badges">
+                                                @if (feature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES</span>
+                                                }
+                                                <span class="badge-info">▶ Video</span>
+                                            </div>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <div class="card feature-card feature-card-static" data-ghes="@feature.GhesSupport.ToString().ToLower()" data-has-video="false">
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@feature.Title</h3>
+                                            </div>
+                                            <p class="card-description" title="@feature.Excerpt">@feature.Excerpt</p>
+                                            <div class="card-badges">
+                                                @if (feature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </article>
+    </main>
+}
+
+@code {
+    private const string SectionName = "github-copilot";
+    private FeaturesPageData? pageData;
+    private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    /// <summary>
+    /// Extract YouTube video ID from a URL (supports youtu.be and youtube.com formats).
+    /// </summary>
+    private static string? GetYouTubeVideoId(string? url)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+            return null;
+
+        // youtu.be/VIDEO_ID
+        if (url.Contains("youtu.be/", StringComparison.OrdinalIgnoreCase))
+        {
+            var uri = new Uri(url);
+            return uri.AbsolutePath.TrimStart('/').Split('?')[0];
+        }
+
+        // youtube.com/watch?v=VIDEO_ID
+        if (url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase))
+        {
+            var uri = new Uri(url);
+            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+            return query["v"];
+        }
+
+        return null;
+    }
+
+    private static string TruncateText(string? text, int maxLength)
+    {
+        if (string.IsNullOrEmpty(text) || text.Length <= maxLength)
+            return text ?? string.Empty;
+
+        return text[..maxLength] + "...";
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initCustomPages");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<PersistedFeaturesData>("copilot-features-data", out var restored) && restored != null)
+        {
+            pageData = restored.PageData;
+            videoItems = restored.VideoItems ?? new();
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetFeaturesDataAsync();
+
+            if (pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+                return;
+            }
+
+            if (!string.IsNullOrEmpty(pageData.VideoCollection))
+            {
+                var allVideos = await ApiClient.GetGhcFeaturesAsync();
+                videoItems = (allVideos ?? Enumerable.Empty<TechHub.Core.Models.ContentItem>())
+                    .OrderByDescending(v => v.DateEpoch)
+                    .ToList();
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("copilot-features-data", new PersistedFeaturesData
+        {
+            PageData = pageData,
+            VideoItems = videoItems
+        });
+        return Task.CompletedTask;
+    }
+
+    private sealed class PersistedFeaturesData
+    {
+        public FeaturesPageData? PageData { get; set; }
+        public List<TechHub.Core.Models.ContentItem>? VideoItems { get; set; }
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

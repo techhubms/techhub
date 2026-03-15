@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Zero-Trust Security for Autonomous AI Agents in Azure AI Foundry"
-description: "This demo explores security best practices for autonomous AI agents built using Azure AI Foundry. The presentation covers implementation of zero trust principles with Microsoft Entra ID for secure tool access, Key Vault for protecting secrets and context, and real-time content filtering. Attendees will learn actionable strategies to prevent prompt injection, data leaks, and agent hijacking, and will gain access to an auditable workflow checklist for agent hardening utilizing Azure’s native security controls."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=bEP3upJcurQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=bEP3upJcurQ
+title: Zero-Trust Security for Autonomous AI Agents in Azure AI Foundry
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-24 17:01:05 +00:00
-permalink: "/2026-02-24-Zero-Trust-Security-for-Autonomous-AI-Agents-in-Azure-AI-Foundry.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["Agent Hardening", "Agent Security", "AI", "AI Agents", "Audit Trail", "Azure", "Azure AI Foundry", "Azure Key Vault", "Azure Security", "Cloud Computing", "Cloud Security", "Content Filtering", "Data Protection", "Dev", "Development", "Microsoft", "Microsoft Entra ID", "Prompt Injection Prevention", "Secrets Management", "Security", "Security Controls", "Tech", "Technology", "Videos", "Zero Trust"]
-tags_normalized: ["agent hardening", "agent security", "ai", "ai agents", "audit trail", "azure", "azure ai foundry", "azure key vault", "azure security", "cloud computing", "cloud security", "content filtering", "data protection", "dev", "development", "microsoft", "microsoft entra id", "prompt injection prevention", "secrets management", "security", "security controls", "tech", "technology", "videos", "zero trust"]
+tags:
+- Agent Hardening
+- Agent Security
+- AI
+- AI Agents
+- Audit Trail
+- Azure
+- Azure AI Foundry
+- Azure Key Vault
+- Azure Security
+- Cloud Computing
+- Cloud Security
+- Content Filtering
+- Data Protection
+- Dev
+- Development
+- Microsoft
+- Microsoft Entra ID
+- Prompt Injection Prevention
+- Secrets Management
+- Security
+- Security Controls
+- Tech
+- Technology
+- Videos
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 Microsoft Developer presents a comprehensive demo on securing AI agents built with Azure AI Foundry, demonstrating practical zero trust strategies and Azure-native security controls.<!--excerpt_end-->
 
 {% youtube bEP3upJcurQ %}

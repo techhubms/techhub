@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Fabric Update: Workspace Admins Gain Direct Workload Assignment"
-description: "This news update details a significant enhancement for Microsoft Fabric users: workspace admins can now assign additional data workloads directly to their workspaces without relying on tenant or capacity-level approval. The update streamlines governance, enables faster onboarding, and supports tailored solutions by giving admins and teams more control over their data and analytics environments. Features like the integration of Osmos for data ingestion and Profisee for data cleaning and enrichment are highlighted. The post also describes the new governance controls and how Entra ID consent requirements remain unchanged for added security."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/new-in-microsoft-fabric-empowering-workspace-admins-with-direct-workload-assignment/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/new-in-microsoft-fabric-empowering-workspace-admins-with-direct-workload-assignment/
+title: 'Microsoft Fabric Update: Workspace Admins Gain Direct Workload Assignment'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-09-25 13:00:00 +00:00
-permalink: "/2025-09-25-Microsoft-Fabric-Update-Workspace-Admins-Gain-Direct-Workload-Assignment.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Azure", "Data Governance", "Data Ingestion", "Data Management", "Data Quality", "Entra ID", "Microsoft Fabric", "ML", "News", "No Code Data Integration", "Osmos", "Power BI", "Profisee", "Tenant Settings", "Workloads Hub", "Workspace Admin", "Workspace Level Assignment"]
-tags_normalized: ["analytics", "azure", "data governance", "data ingestion", "data management", "data quality", "entra id", "microsoft fabric", "ml", "news", "no code data integration", "osmos", "power bi", "profisee", "tenant settings", "workloads hub", "workspace admin", "workspace level assignment"]
+tags:
+- Analytics
+- Data Governance
+- Data Ingestion
+- Data Management
+- Data Quality
+- Entra ID
+- Microsoft Fabric
+- No Code Data Integration
+- Osmos
+- Power BI
+- Profisee
+- Tenant Settings
+- Workloads Hub
+- Workspace Admin
+- Workspace Level Assignment
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog announces a major update empowering workspace admins to directly assign additional workloads like Osmos and Profisee, improving agility and governance in data and analytics operations.<!--excerpt_end-->
 
 # Microsoft Fabric: Direct Workload Assignment for Workspace Admins
@@ -33,7 +46,7 @@ Microsoft Fabric users now benefit from more flexible and efficient management o
 
 Admins can now access the [Workloads Hub](https://app.powerbi.com/workloadhub/) and assign additional workloads directly to the workspace, where their data and teams operate. This flexibility allows specific teams to innovate and build custom solutions without impacting the configuration of the entire tenant.
 
-![Assigning workloads in Fabric](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/Recording-2025-09-11-aadasdasdas.gif)
+![Assigning workloads in Fabric](//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2025/09/recording-2025-09-11-aadasdasdas.gif)
 
 ## Available Additional Workloads
 

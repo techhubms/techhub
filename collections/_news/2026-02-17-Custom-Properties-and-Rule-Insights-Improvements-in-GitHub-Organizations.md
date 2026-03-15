@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Custom Properties and Rule Insights Improvements in GitHub Organizations"
-description: "This update details two new features enhancing policy enforcement and visibility for GitHub organization and enterprise administrators: custom properties can now require explicit values when creating repositories, and rule insights pages now include an enhanced dynamic filter bar supporting filtering by commit SHA. These changes aim to improve governance, repository compliance, and rule tracking in the GitHub platform."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-17-custom-properties-and-rule-insights-improvements"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-17-custom-properties-and-rule-insights-improvements
+title: Custom Properties and Rule Insights Improvements in GitHub Organizations
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-17 15:35:22 +00:00
-permalink: "/2026-02-17-Custom-Properties-and-Rule-Insights-Improvements-in-GitHub-Organizations.html"
-categories: ["DevOps"]
-tags: ["Branch Protection", "Commit SHA", "Custom Properties", "DevOps", "Enterprise Management", "Filtering", "GitHub", "Governance", "Improvement", "News", "Organization Administration", "Platform Governance", "Platform Improvements", "Repository Management", "Repository Policy", "Rule Insights", "Rulesets"]
-tags_normalized: ["branch protection", "commit sha", "custom properties", "devops", "enterprise management", "filtering", "github", "governance", "improvement", "news", "organization administration", "platform governance", "platform improvements", "repository management", "repository policy", "rule insights", "rulesets"]
+tags:
+- Branch Protection
+- Commit SHA
+- Custom Properties
+- DevOps
+- Enterprise Management
+- Filtering
+- GitHub
+- Governance
+- Improvement
+- News
+- Organization Administration
+- Platform Governance
+- Platform Improvements
+- Repository Management
+- Repository Policy
+- Rule Insights
+- Rulesets
+section_names:
+- devops
 ---
-
 Allison explains recent GitHub improvements for organization administrators, allowing required explicit values for custom repository properties and enhanced rule insights filtering.<!--excerpt_end-->
 
 # Custom Properties and Rule Insights Improvements in GitHub Organizations

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Beyond the Firewall - Achieving True Observability in Hybrid Infrastructure"
-description: "Gerardo Dada explores the need for comprehensive observability in hybrid infrastructures. The article highlights the challenges of monitoring across complex, internet-dependent environments and emphasizes the importance of advanced observability tools, such as Internet Performance Monitoring (IPM), RUM, and synthetic monitoring, in modern DevOps practices."
-author: "Gerardo Dada"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure/?utm_source=rss&utm_medium=rss&utm_campaign=beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+external_url: https://devops.com/beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure/?utm_source=rss&utm_medium=rss&utm_campaign=beyond-the-firewall-achieving-true-observability-in-the-era-of-hybrid-infrastructure
+title: Beyond the Firewall - Achieving True Observability in Hybrid Infrastructure
+author: Gerardo Dada
+feed_name: DevOps Blog
 date: 2025-07-31 05:00:01 +00:00
-permalink: "/2025-07-31-Beyond-the-Firewall-Achieving-True-Observability-in-Hybrid-Infrastructure.html"
-categories: ["DevOps", "Security"]
-tags: ["Blogs", "Business Of DevOps", "Contributed Content", "Data Collection", "DevOps", "DevSecOps", "Hybrid Infrastructure", "Internet Performance Monitoring", "Internet Performance Monitoring (ipm)", "IPM", "Monitoring Tools", "Observability", "RUM", "Security", "Social Facebook", "Social LinkedIn", "Social X", "Synthetic Monitoring"]
-tags_normalized: ["blogs", "business of devops", "contributed content", "data collection", "devops", "devsecops", "hybrid infrastructure", "internet performance monitoring", "internet performance monitoring ipm", "ipm", "monitoring tools", "observability", "rum", "security", "social facebook", "social linkedin", "social x", "synthetic monitoring"]
+tags:
+- Business Of DevOps
+- Contributed Content
+- Data Collection
+- DevSecOps
+- Hybrid Infrastructure
+- Internet Performance Monitoring
+- Internet Performance Monitoring (ipm)
+- IPM
+- Monitoring Tools
+- Observability
+- RUM
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Synthetic Monitoring
+- DevOps
+- Security
+- Blogs
+section_names:
+- devops
+- security
+primary_section: devops
 ---
-
 In this article, Gerardo Dada outlines why true observability is vital in today's hybrid infrastructures. He examines tools and practices enabling DevOps teams to monitor complex environments.<!--excerpt_end-->
 
 ## Summary
@@ -28,9 +41,9 @@ With hybrid infrastructure and internet-based dependencies now standard parts of
 - **Shift to Hybrid Infrastructure:** Most organizations today use a mix of on-premises and cloud resources, making conventional monitoring insufficient.
 - **Internet Dependencies:** The growing reliance on SaaS, cloud platforms, and external APIs means that performance bottlenecks or failures might occur outside organizational firewalls, requiring visibility across network boundaries.
 - **Observability Tools:** Dada highlights the importance of leveraging modern observability solutions:
-    - **Internet Performance Monitoring (IPM):** Tracks the performance and reliability of internet connections and dependencies.
-    - **Real User Monitoring (RUM):** Captures actual user experiences from browsers or apps.
-    - **Synthetic Monitoring:** Uses automated scripts to simulate user interactions and proactively detect issues.
+  - **Internet Performance Monitoring (IPM):** Tracks the performance and reliability of internet connections and dependencies.
+  - **Real User Monitoring (RUM):** Captures actual user experiences from browsers or apps.
+  - **Synthetic Monitoring:** Uses automated scripts to simulate user interactions and proactively detect issues.
 - **DevSecOps Integration:** Advanced observability is crucial not just for reliability, but also for security and compliance across distributed infrastructures.
 - **Vendor Ecosystem:** The article references leading observability vendors and platforms such as Cisco, Chronosphere, Observe, Google, Splunk, ServiceNow, Logz.io, and CodeSee, reflecting the diverse tool landscape available to modern DevOps teams.
 

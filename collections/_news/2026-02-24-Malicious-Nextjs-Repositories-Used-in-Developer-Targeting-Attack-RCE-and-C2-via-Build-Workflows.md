@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Malicious Next.js Repositories Used in Developer-Targeting Attack: RCE and C2 via Build Workflows"
-description: "This detailed analysis by Microsoft Defender Experts reveals how attackers leveraged malicious Next.js repositories to infect developer workstations through familiar workflows in Visual Studio Code and Node.js. The campaign featured staged command-and-control, RCE, exfiltration, and advanced evasion techniques. Key mitigation and detection strategies are provided, highlighting Microsoft security tools such as Defender for Endpoint, Microsoft Entra ID Protection, and Microsoft Sentinel for comprehensive response."
-author: "Microsoft Defender Experts and Microsoft Defender Security Research Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/24/c2-developer-targeting-campaign/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/24/c2-developer-targeting-campaign/
+title: 'Malicious Next.js Repositories Used in Developer-Targeting Attack: RCE and C2 via Build Workflows'
+author: Microsoft Defender Experts and Microsoft Defender Security Research Team
+primary_section: azure
+feed_name: Microsoft Security Blog
 date: 2026-02-24 17:28:24 +00:00
-permalink: "/2026-02-24-Malicious-Nextjs-Repositories-Used-in-Developer-Targeting-Attack-RCE-and-C2-via-Build-Workflows.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Advanced Hunting", "Attack Surface Reduction", "Azure", "Build Security", "C2 Infrastructure", "Cloud Apps Security", "Command And Control", "Conditional Access", "DevOps", "Incident Response", "JavaScript Loader", "Malicious Repositories", "Microsoft Defender", "Microsoft Defender For Endpoint", "Microsoft Defender XDR", "Microsoft Entra ID Protection", "Microsoft Sentinel", "News", "Next.js", "Node.js", "RCE", "Security", "Threat Hunting", "Vercel", "VS Code"]
-tags_normalized: ["advanced hunting", "attack surface reduction", "azure", "build security", "c2 infrastructure", "cloud apps security", "command and control", "conditional access", "devops", "incident response", "javascript loader", "malicious repositories", "microsoft defender", "microsoft defender for endpoint", "microsoft defender xdr", "microsoft entra id protection", "microsoft sentinel", "news", "nextdotjs", "nodedotjs", "rce", "security", "threat hunting", "vercel", "vs code"]
+tags:
+- Advanced Hunting
+- Attack Surface Reduction
+- Azure
+- Build Security
+- C2 Infrastructure
+- Cloud Apps Security
+- Command And Control
+- Conditional Access
+- DevOps
+- Incident Response
+- JavaScript Loader
+- Malicious Repositories
+- Microsoft Defender
+- Microsoft Defender For Endpoint
+- Microsoft Defender XDR
+- Microsoft Entra ID Protection
+- Microsoft Sentinel
+- News
+- Next.js
+- Node.js
+- RCE
+- Security
+- Threat Hunting
+- Vercel
+- VS Code
+section_names:
+- azure
+- devops
+- security
 ---
-
 Microsoft Defender Experts and the Security Research Team provide an in-depth report on a developer-targeted campaign using malicious Next.js repositories that exploit common coding workflows. The analysis details how attackers achieve remote code execution and persistent C2, with actionable security guidance.<!--excerpt_end-->
 
 # Malicious Next.js Repositories Used in Developer-Targeting Attack: RCE and C2 via Build Workflows

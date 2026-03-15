@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Managing Multiple Deployment Stacks in Azure Bicep: Patterns and Best Practices"
-description: "This article provides a clear explanation of Azure Deployment Stacks using Bicep templates, focusing on patterns, governance, lifecycle management, and repeatable infrastructure practices for multi-environment cloud scenarios. It describes how deployment stacks group resources, enable strong governance (via deny assignments), and help enforce consistency across Dev, QA, and Prod environments. Readers will learn actionable strategies for defining and managing these stacks to avoid drift, reduce cloud costs, and ensure modular architectures."
-author: "Roslin_Nivetha"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-multiple-deployment-stacks-in-azure-bicep-patterns-and/ba-p/4471392"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/managing-multiple-deployment-stacks-in-azure-bicep-patterns-and/ba-p/4471392
+title: 'Managing Multiple Deployment Stacks in Azure Bicep: Patterns and Best Practices'
+author: Roslin_Nivetha
+feed_name: Microsoft Tech Community
 date: 2025-11-19 15:56:34 +00:00
-permalink: "/2025-11-19-Managing-Multiple-Deployment-Stacks-in-Azure-Bicep-Patterns-and-Best-Practices.html"
-categories: ["Azure", "DevOps"]
-tags: ["Actiononunmanage", "ARM Templates", "Azure", "Azure Deployment Stacks", "Azure Resource Management", "Bicep", "Cloud Operations", "Community", "Deny Assignments", "DevOps", "Enterprise Infrastructure", "Environment Consistency", "Governance", "IaC", "Lifecycle Management", "Modular Architecture", "Resource Grouping"]
-tags_normalized: ["actiononunmanage", "arm templates", "azure", "azure deployment stacks", "azure resource management", "bicep", "cloud operations", "community", "deny assignments", "devops", "enterprise infrastructure", "environment consistency", "governance", "iac", "lifecycle management", "modular architecture", "resource grouping"]
+tags:
+- Actiononunmanage
+- ARM Templates
+- Azure Deployment Stacks
+- Azure Resource Management
+- Bicep
+- Cloud Operations
+- Deny Assignments
+- Enterprise Infrastructure
+- Environment Consistency
+- Governance
+- IaC
+- Lifecycle Management
+- Modular Architecture
+- Resource Grouping
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 Roslin_Nivetha explores best practices for managing multiple Azure deployment stacks with Bicep, highlighting strategies for modular architecture, lifecycle control, and strong governance.<!--excerpt_end-->
 
 # Managing Multiple Deployment Stacks in Azure Bicep: Patterns and Best Practices

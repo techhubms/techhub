@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Powering Azure Fabric and AI with Eon’s Data Lake"
-description: "Explore how Eon on Azure transforms cloud backups into actionable Iceberg tables in Blob Storage, enabling instant queries through Microsoft Fabric and OneLake. This session covers data flows into Fabric engines (SQL, Spark, KQL), practical use cases for AI innovation with Azure OpenAI, and techniques for integrating protection, analytics, and collaboration on Eon’s unified data lake architecture. Includes a live demo and insights on security, usability, indexing, and restore operations."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=7KXUlnq1tQg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=7KXUlnq1tQg
+title: Powering Azure Fabric and AI with Eon’s Data Lake
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-19 15:01:51 +00:00
-permalink: "/2025-11-19-Powering-Azure-Fabric-and-AI-with-Eons-Data-Lake.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "Azure", "Azure OpenAI", "Backup Restoration", "Blob Storage", "Cloud Backups", "Cloud Security", "Data Classification", "Data Indexing", "Data Platform", "Eon Data Lake", "Iceberg Tables", "KQL", "Microsoft Fabric", "ML", "MSIgnite", "OneLake", "Spark", "SQL Analytics", "Unifyyourdataplatform", "Videos"]
-tags_normalized: ["ai", "azure", "azure openai", "backup restoration", "blob storage", "cloud backups", "cloud security", "data classification", "data indexing", "data platform", "eon data lake", "iceberg tables", "kql", "microsoft fabric", "ml", "msignite", "onelake", "spark", "sql analytics", "unifyyourdataplatform", "videos"]
+tags:
+- Azure OpenAI
+- Backup Restoration
+- Blob Storage
+- Cloud Backups
+- Cloud Security
+- Data Classification
+- Data Indexing
+- Data Platform
+- Eon Data Lake
+- Iceberg Tables
+- KQL
+- Microsoft Fabric
+- MSIgnite
+- OneLake
+- Spark
+- SQL Analytics
+- Unifyyourdataplatform
+- AI
+- Azure
+- ML
+- Videos
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Microsoft Events presents an in-depth session on leveraging Eon’s Data Lake within Azure, detailing integration with Microsoft Fabric engines and AI workflows, with practical demos and architecture insights.<!--excerpt_end-->
 
 {% youtube 7KXUlnq1tQg %}

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Microsoft's Quarterly Results Highlight AI and Cloud Growth"
-description: "This post summarizes Microsoft's quarterly financial and technology results, emphasizing the explosive growth of their AI business, cloud revenue, and Copilot adoption in coding and productivity spaces. It discusses technical priorities like optimization of tokens per watt, agent app platforms, Foundry, Fabric, Copilot family performance, and forward-looking innovation for governance, security, and management in AI-centric computing."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.linkedin.com/posts/satyanadella_justreported-our-quarterly-results-we-activity-7422427227226742784-tAgT"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.linkedin.com/posts/satyanadella_justreported-our-quarterly-results-we-activity-7422427227226742784-tAgT
+title: Microsoft's Quarterly Results Highlight AI and Cloud Growth
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-29 02:29:00 +00:00
-permalink: "/2026-01-29-Microsofts-Quarterly-Results-Highlight-AI-and-Cloud-Growth.html"
-categories: ["AI", "Azure"]
-tags: ["Agent 365", "AI", "AI Platform", "Azure", "Azure OpenAI", "Cloud Computing", "Company News", "Copilot", "Foundry", "Governance", "LinkedIn Post", "Microsoft", "Microsoft Fabric", "News", "Quarterly Results", "Satya Nadella", "Token Optimization"]
-tags_normalized: ["agent 365", "ai", "ai platform", "azure", "azure openai", "cloud computing", "company news", "copilot", "foundry", "governance", "linkedin post", "microsoft", "microsoft fabric", "news", "quarterly results", "satya nadella", "token optimization"]
+tags:
+- Agent 365
+- AI
+- AI Platform
+- Azure
+- Azure OpenAI
+- Cloud Computing
+- Company News
+- Copilot
+- Foundry
+- Governance
+- LinkedIn Post
+- Microsoft
+- Microsoft Fabric
+- News
+- Quarterly Results
+- Satya Nadella
+- Token Optimization
+section_names:
+- ai
+- azure
 ---
-
 Satya Nadella shares Microsoft's latest quarterly results, detailing rapid AI adoption, surging Azure cloud revenues, advances in agent platforms, and record usage of Copilot for developers and enterprises.<!--excerpt_end-->
 
 # Microsoft's Quarterly Results: Cloud and AI Milestones

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure API Management: 2026 Service Limit Updates for All Tiers"
-description: "This content outlines important upcoming changes to Azure API Management service limits, effective from March 2026. It details new resource caps across Consumption, Developer, Basic, Standard, and Premium tiers, includes the grandfathering policy for existing workloads, and provides guidance for requesting limit increases, especially for large-scale production environments."
-author: "Sreekanth_Thirthala"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/new-azure-api-management-service-limits/ba-p/4497574"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/new-azure-api-management-service-limits/ba-p/4497574
+title: 'Azure API Management: 2026 Service Limit Updates for All Tiers'
+author: Sreekanth_Thirthala
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-26 16:52:30 +00:00
-permalink: "/2026-02-26-Azure-API-Management-2026-Service-Limit-Updates-for-All-Tiers.html"
-categories: ["Azure"]
-tags: ["API Limits", "API Management", "API Operations", "Azure", "Azure API Management", "Azure Support", "Basic Tier", "Cloud Operations", "Community", "Consumption Tier", "Developer Tier", "Enterprise Integration", "Grandfathering Policy", "Premium Tier", "Resource Limits", "Self Hosted Gateway", "Service Tiers", "Standard Tier"]
-tags_normalized: ["api limits", "api management", "api operations", "azure", "azure api management", "azure support", "basic tier", "cloud operations", "community", "consumption tier", "developer tier", "enterprise integration", "grandfathering policy", "premium tier", "resource limits", "self hosted gateway", "service tiers", "standard tier"]
+tags:
+- API Limits
+- API Management
+- API Operations
+- Azure
+- Azure API Management
+- Azure Support
+- Basic Tier
+- Cloud Operations
+- Community
+- Consumption Tier
+- Developer Tier
+- Enterprise Integration
+- Grandfathering Policy
+- Premium Tier
+- Resource Limits
+- Self Hosted Gateway
+- Service Tiers
+- Standard Tier
+section_names:
+- azure
 ---
-
 Sreekanth Thirthala outlines the 2026 changes to Azure API Management service limits, detailing resource caps per tier and strategies for managing or increasing those limits.<!--excerpt_end-->
 
 # Azure API Management: 2026 Service Limit Updates for All Tiers

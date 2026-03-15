@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Can Vibe Coding Work on an Enterprise Level?"
-description: "This article by Armelle Dawson explores the concept of vibe coding—AI-generated code on demand—and examines its suitability for enterprise use. It discusses potential productivity gains, key risks such as security and slopsquatting, and the crucial need for strong governance and centralized operations to make AI-powered development viable for critical business environments."
-author: "Armelle Dawson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level"
-viewing_mode: "external"
-feed_name: "DevOps Blog"
-feed_url: "https://devops.com/feed/"
+﻿---
+external_url: https://devops.com/can-vibe-codingwork-on-an-enterprise-level/?utm_source=rss&utm_medium=rss&utm_campaign=can-vibe-codingwork-on-an-enterprise-level
+title: Can Vibe Coding Work on an Enterprise Level?
+author: Armelle Dawson
+feed_name: DevOps Blog
 date: 2025-09-03 10:12:37 +00:00
-permalink: "/2025-09-03-Can-Vibe-Coding-Work-on-an-Enterprise-Level.html"
-categories: ["AI"]
-tags: ["AI", "AI Coding Tools", "AI Generated Code", "AI Governance", "AI in Business", "AI Productivity Tools", "AI Risks", "Blogs", "Business Of DevOps", "Compliance", "Compliance as Code", "Contributed Content", "Enterprise AI", "Enterprise AI Coding", "Enterprise AI Governance", "Gray Work", "Low Code AI Apps", "Low Code Apps", "Productivity", "Slopsquatting", "Slopsquatting Risks", "Social Facebook", "Social LinkedIn", "Social X", "Vibe Coding", "Vibe Coding Risks", "Vibe Coding Security"]
-tags_normalized: ["ai", "ai coding tools", "ai generated code", "ai governance", "ai in business", "ai productivity tools", "ai risks", "blogs", "business of devops", "compliance", "compliance as code", "contributed content", "enterprise ai", "enterprise ai coding", "enterprise ai governance", "gray work", "low code ai apps", "low code apps", "productivity", "slopsquatting", "slopsquatting risks", "social facebook", "social linkedin", "social x", "vibe coding", "vibe coding risks", "vibe coding security"]
+tags:
+- AI Coding Tools
+- AI Generated Code
+- AI Governance
+- AI in Business
+- AI Productivity Tools
+- AI Risks
+- Business Of DevOps
+- Compliance
+- Compliance as Code
+- Contributed Content
+- Enterprise AI
+- Enterprise AI Coding
+- Enterprise AI Governance
+- Gray Work
+- Low Code AI Apps
+- Low Code Apps
+- Productivity
+- Slopsquatting
+- Slopsquatting Risks
+- Social Facebook
+- Social LinkedIn
+- Social X
+- Vibe Coding
+- Vibe Coding Risks
+- Vibe Coding Security
+- AI
+- Blogs
+section_names:
+- ai
+primary_section: ai
 ---
-
 Armelle Dawson investigates the promise and challenges of vibe coding for enterprises, detailing productivity potential, risks including slopsquatting, and the governance needs for responsible AI-driven development.<!--excerpt_end-->
 
 # Can Vibe Coding Work on an Enterprise Level?

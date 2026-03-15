@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Implementing dependsOn Chain Inside Looped Resources in ARM Templates for Azure Backup"
-description: "The author details challenges in using ARM templates to create a sequential dependsOn chain between loop-generated resources, specifically for backing up Azure file shares. Despite attempts at various workarounds, ARM templates' limitations cause validation errors. The author seeks community advice or best practices for achieving this dependency chain."
-author: "AdPsychological9128"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1m6d7gm/implementing_dependson_chain_inside_looped/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+external_url: https://www.reddit.com/r/azuredevops/comments/1m6d7gm/implementing_dependson_chain_inside_looped/
+title: Implementing dependsOn Chain Inside Looped Resources in ARM Templates for Azure Backup
+author: AdPsychological9128
+feed_name: Reddit Azure DevOps
 date: 2025-07-22 12:49:16 +00:00
-permalink: "/2025-07-22-Implementing-dependsOn-Chain-Inside-Looped-Resources-in-ARM-Templates-for-Azure-Backup.html"
-categories: ["Azure", "DevOps"]
-tags: ["ARM Templates", "Azure", "Azure Backup", "Azure DevOps", "Azure Recovery Services", "Community", "Dependson", "DevOps", "IaC", "Protected Items", "Resource Deployment", "Resource Loops", "Sequential Deployment", "Validation Errors"]
-tags_normalized: ["arm templates", "azure", "azure backup", "azure devops", "azure recovery services", "community", "dependson", "devops", "iac", "protected items", "resource deployment", "resource loops", "sequential deployment", "validation errors"]
+tags:
+- ARM Templates
+- Azure Backup
+- Azure DevOps
+- Azure Recovery Services
+- Dependson
+- IaC
+- Protected Items
+- Resource Deployment
+- Resource Loops
+- Sequential Deployment
+- Validation Errors
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 AdPsychological9128 discusses their struggle with enforcing a dependsOn chain within a loop of ARM template resources for Azure file share backup, and seeks community solutions.<!--excerpt_end-->
 
 ## Implementing dependsOn Chain Inside Looped Resources in ARM Templates (Azure Backup for File Shares)
@@ -47,7 +56,7 @@ It appears that ARM templates do not natively support establishing a `dependsOn`
    ```json
    "[if(greater(copyIndex(), 0), concat('Microsoft.RecoveryServices/vaults/backupFabrics/protectionContainers/protectedItems/', parameters('protectedItemsArray')[sub(copyIndex(), 1)].vaultName, '/Azure/', variables('containerSuffix'), ';', parameters('protectedItemsArray')[sub(copyIndex(), 1)].storageAccountResourceGroup, ';', parameters('protectedItemsArray')[sub(copyIndex(), 1)].storageAccountName, '/AzureFileShare;', parameters('protectedItemsArray')[sub(copyIndex(), 1)].fileShareName), json('[]'))]"
    ```
-   
+
    **Failure:** This approach fails because `json('[]')` returns an array whereas a resource ID string is expected.
 
 2. **Using `json(null())` or Empty String:**
@@ -55,11 +64,11 @@ It appears that ARM templates do not natively support establishing a `dependsOn`
    ```json
    "[if(greater(copyIndex(), 0), concat(...), json(null()))]"
    ```
-   
+
    **Failure:** `json(null())` is invalid for this context.
 
 3. **Returning `json('[]')`, `json('')`, or `string('')`:**
-   
+
    All these variants result in validation errors because ARM requires a valid string for a resource ID in `dependsOn`, not an array or an empty value.
 
 #### Questions for the Community

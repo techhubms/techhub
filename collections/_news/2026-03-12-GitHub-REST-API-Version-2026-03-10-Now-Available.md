@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub REST API Version 2026-03-10 Now Available"
-description: "This announcement details the release of GitHub REST API version 2026-03-10, introducing calendar-based versioning with breaking changes and providing developers guidance for upgrading their integrations. Key resources, upgrade paths, and continued support timelines for previous API versions are highlighted."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available
+title: GitHub REST API Version 2026-03-10 Now Available
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-12 16:00:07 +00:00
-permalink: "/2026-03-12-GitHub-REST-API-Version-2026-03-10-Now-Available.html"
-categories: ["DevOps"]
-tags: ["API Documentation", "API Upgrade", "API Versioning", "Breaking Changes", "Calendar Versioning", "Developer Integration", "Developer Tools", "DevOps", "Ecosystem & Accessibility", "GitHub", "News", "Release Notes", "REST API", "Software Maintenance", "X GitHub API Version"]
-tags_normalized: ["api documentation", "api upgrade", "api versioning", "breaking changes", "calendar versioning", "developer integration", "developer tools", "devops", "ecosystem and accessibility", "github", "news", "release notes", "rest api", "software maintenance", "x github api version"]
+tags:
+- API Documentation
+- API Upgrade
+- API Versioning
+- Breaking Changes
+- Calendar Versioning
+- Developer Integration
+- Developer Tools
+- DevOps
+- Ecosystem & Accessibility
+- GitHub
+- News
+- Release Notes
+- REST API
+- Software Maintenance
+- X GitHub API Version
+section_names:
+- devops
 ---
-
 Allison shares the release of GitHub REST API version 2026-03-10, highlighting breaking changes, upgrade guidance, and future support timelines for integrators.<!--excerpt_end-->
 
 # GitHub REST API Version 2026-03-10 Is Now Available

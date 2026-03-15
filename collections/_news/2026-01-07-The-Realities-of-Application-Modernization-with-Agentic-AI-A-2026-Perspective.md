@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The Realities of Application Modernization with Agentic AI: A 2026 Perspective"
-description: "This article offers a hands-on, practical reflection for engineers and technical leaders approaching application modernization, emphasizing the critical role of agentic AI. It addresses organizational and technical constraints, clarifies what modernization entails, and explains where agentic AI accelerates—not replaces—complex modernization processes."
-author: "jkordick"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/the-realities-of-application-modernization-with-agentic-ai-early-2026/
+title: 'The Realities of Application Modernization with Agentic AI: A 2026 Perspective'
+author: jkordick
+feed_name: Microsoft All Things Azure Blog
 date: 2026-01-07 16:06:35 +00:00
-permalink: "/2026-01-07-The-Realities-of-Application-Modernization-with-Agentic-AI-A-2026-Perspective.html"
-categories: ["AI"]
-tags: ["Agentic AI", "Agents", "AI", "AI Agents", "App Development", "Application Modernization", "Automated Refactoring", "Business Logic", "Code Refactoring", "Generative AI", "Human in The Loop", "Integration", "Legacy Systems", "Migration", "Modernization", "News", "Opinion", "Organizational Change", "Software Architecture", "Technical Debt", "Thought Leadership"]
-tags_normalized: ["agentic ai", "agents", "ai", "ai agents", "app development", "application modernization", "automated refactoring", "business logic", "code refactoring", "generative ai", "human in the loop", "integration", "legacy systems", "migration", "modernization", "news", "opinion", "organizational change", "software architecture", "technical debt", "thought leadership"]
+tags:
+- Agentic AI
+- Agents
+- AI Agents
+- App Development
+- Application Modernization
+- Automated Refactoring
+- Business Logic
+- Code Refactoring
+- Generative AI
+- Human in The Loop
+- Integration
+- Legacy Systems
+- Migration
+- Modernization
+- Opinion
+- Organizational Change
+- Software Architecture
+- Technical Debt
+- Thought Leadership
+- AI
+- News
+section_names:
+- ai
+primary_section: ai
 ---
-
 jkordick reflects on hands-on experiences with application modernization, highlighting the realistic challenges, the transformative role of agentic AI, and the necessity of human judgment for making deliberate modernization decisions.<!--excerpt_end-->
 
 # The Realities of Application Modernization with Agentic AI (Early 2026)
@@ -67,8 +82,8 @@ Agentic AI cannot resolve these, but reduces the cost of understanding, making i
 
 **In practice:**
 
-- Generative AI supports *tasks*
-- Agentic AI supports *processes*
+- Generative AI supports _tasks_
+- Agentic AI supports _processes_
 
 ## Where Agentic AI Helps (and Where It Doesn't)
 
@@ -92,7 +107,7 @@ Agentic AI is most effective as a multiplier for skilled teams. It accelerates e
 ## Key Takeaways
 
 - Code is rarely the real blocker—knowledge and organizational factors matter more
-- Migration and modernization are *different* efforts
+- Migration and modernization are _different_ efforts
 - Foundational analysis is essential—AI can't replace it
 - Agentic AI accelerates discovery and safe, incremental modernization
 - Human judgment is essential for success

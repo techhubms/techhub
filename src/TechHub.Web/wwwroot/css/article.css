@@ -1,0 +1,629 @@
+/**
+ * Article Content Styles
+ * 
+ * Comprehensive styling for article content including:
+ * - Headings with proper hierarchy
+ * - Code blocks with syntax highlighting
+ * - Blockquotes and callouts
+ * - Tables with responsive design
+ * - Lists (ordered, unordered, task lists)
+ * - Images and figures
+ * - Horizontal rules
+ * - Custom containers/alerts
+ */
+
+/* =================================================================
+   Article Body Container
+   ================================================================= */
+
+.article-body {
+    font-size: var(--font-size-base);
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    word-wrap: break-word;
+}
+
+.article-body ul {
+    line-height: 1.5;
+}
+
+/* Add scrollable space so last content can reach the detection line (40% from top)
+   Spacer should be approximately the reading position offset, not full viewport */
+.article-body::after {
+    content: '';
+    display: block;
+    height: 50vh;
+    /* Just enough to scroll last content to reading position */
+}
+
+/* =================================================================
+   Headings
+   ================================================================= */
+
+.article-body h1:not(.page-h1),
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+    margin-top: var(--spacing-4);
+    margin-bottom: var(--spacing-2);
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--color-text-emphasis);
+}
+
+.article-body h1:first-child {
+    margin-top: 0;
+}
+
+.article-body h1:not(.page-h1) {
+    padding-bottom: var(--spacing-2);
+}
+
+.article-body h2 {
+    border-bottom: none;
+    padding-bottom: var(--spacing-1);
+    background: linear-gradient(to right, var(--color-purple-dark), transparent);
+    background-size: 100% 1px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+.article-body h3 {
+    padding-bottom: var(--spacing-1);
+}
+
+.article-body h4 {
+    padding-bottom: var(--spacing-1);
+}
+
+.article-body h5 {
+    padding-bottom: var(--spacing-1);
+}
+
+.article-body h6 {
+    color: var(--color-text-muted);
+    padding-bottom: var(--spacing-1);
+}
+
+/* =================================================================
+   Paragraphs and Text
+   ================================================================= */
+
+.article-body p {
+    margin-top: 0;
+    margin-bottom: var(--spacing-2);
+}
+
+.article-body strong {
+    font-weight: 600;
+}
+
+.article-body em {
+    font-style: italic;
+}
+
+/* =================================================================
+   Links
+   ================================================================= */
+
+.article-body a {
+    color: var(--color-purple-bright);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+  .article-body a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-purple-bright);
+    text-underline-offset: 2px;
+  }
+
+  .article-body a[class*="badge"]:hover,
+  .article-body a[class*="btn"]:hover,
+  .article-body a.button:hover {
+    text-decoration: none;
+  }
+}
+
+.article-body a:focus-visible {
+    outline: 2px solid var(--color-purple-bright);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* =================================================================
+   Code Blocks and Inline Code
+   ================================================================= */
+
+.article-body code {
+    font-family: var(--font-family-mono);
+    font-size: 0.875em;
+    background: var(--color-purple-bg-subtle);
+    border: 1px solid var(--color-purple-border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 0.125rem 0.375rem;
+}
+
+.article-body pre {
+    background: var(--color-bg-default);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3);
+    overflow-x: auto;
+    margin: var(--spacing-3) 0;
+    line-height: 1.5;
+}
+
+.article-body pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+}
+
+/* Syntax highlighting adjustments */
+.article-body pre code.hljs {
+    display: block;
+    padding: 0;
+    background: transparent;
+}
+
+/* =================================================================
+   Blockquotes
+   ================================================================= */
+
+.article-body blockquote {
+    margin: var(--spacing-3) 0;
+    padding: 0 var(--spacing-2);
+    border-left: 4px solid var(--color-purple-bright);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.article-body blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.article-body blockquote cite {
+    display: block;
+    margin-top: var(--spacing-1);
+    font-size: var(--font-size-sm);
+    font-style: normal;
+    color: var(--color-text-muted);
+}
+
+/* =================================================================
+   Lists
+   ================================================================= */
+
+.article-body ul,
+.article-body ol {
+    margin: var(--spacing-2) 0;
+    padding-left: var(--spacing-4);
+}
+
+.article-body li {
+    margin-bottom: var(--spacing-1);
+}
+
+.article-body li > p {
+    margin-bottom: var(--spacing-1);
+}
+
+.article-body ul ul,
+.article-body ul ol,
+.article-body ol ul,
+.article-body ol ol {
+    margin-top: var(--spacing-1);
+    margin-bottom: var(--spacing-1);
+}
+
+/* Task Lists (GitHub-style checkboxes) */
+.article-body .task-list-item {
+    list-style-type: none;
+    margin-left: calc(-1 * var(--spacing-3));
+}
+
+.article-body .task-list-item input[type="checkbox"] {
+    margin-right: var(--spacing-1);
+}
+
+/* =================================================================
+   Tables
+   ================================================================= */
+
+.article-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-3) 0;
+    overflow-x: auto;
+    display: block;
+}
+
+.article-body thead {
+    border-bottom: 2px solid var(--color-border-emphasis);
+}
+
+.article-body thead tr {
+    background: var(--color-bg-emphasis);
+}
+
+.article-body th,
+.article-body td {
+    padding: var(--spacing-2);
+    border: 1px solid var(--color-border-default);
+    text-align: left;
+}
+
+.article-body th {
+    font-weight: 600;
+    color: var(--color-text-emphasis);
+}
+
+.article-body tbody tr:nth-child(odd) {
+    background: var(--color-bg-default);
+}
+
+.article-body tbody tr:nth-child(even) {
+    background: var(--color-bg-emphasis);
+}
+
+@media (hover: hover) {
+  .article-body tr:hover {
+    background: var(--color-purple-bg-subtle) !important;
+  }
+}
+
+/* =================================================================
+   Horizontal Rules
+   ================================================================= */
+
+.article-body hr {
+    height: 0;
+    margin: var(--spacing-4) 0;
+    border: 0;
+    border-top: 1px solid var(--color-border-default);
+}
+
+/* =================================================================
+   Images and Figures
+   ================================================================= */
+
+.article-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    margin: var(--spacing-2) 0;
+}
+
+.article-body figure {
+    margin: var(--spacing-3) 0;
+    text-align: center;
+}
+
+.article-body figcaption {
+    margin-top: var(--spacing-1);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+/* =================================================================
+   Custom Containers / Alerts (Markdig)
+   ================================================================= */
+
+.article-body .alert {
+    padding: var(--spacing-2) var(--spacing-3);
+    margin: var(--spacing-3) 0;
+    border-left: 4px solid;
+    border-radius: var(--radius-md);
+    background: var(--color-bg-emphasis);
+}
+
+.article-body .alert-note {
+    border-color: var(--color-blue-light);
+    background: var(--color-blue-light-bg);
+}
+
+.article-body .alert-tip {
+    border-color: var(--color-green-dark);
+    background: var(--color-green-dark-bg);
+}
+
+.article-body .alert-important {
+    border-color: var(--color-purple-dark);
+    background: var(--color-purple-bg-subtle);
+}
+
+.article-body .alert-warning {
+    border-color: var(--color-ochre);
+    background: var(--color-ochre-bg);
+}
+
+.article-body .alert-caution {
+    border-color: var(--color-red);
+    background: var(--color-red-bg);
+}
+
+/* =================================================================
+   Abbreviations and Definitions
+   ================================================================= */
+
+.article-body abbr {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+.article-body dl {
+    margin: var(--spacing-2) 0;
+}
+
+.article-body dt {
+    font-weight: 600;
+    margin-top: var(--spacing-2);
+}
+
+.article-body dd {
+    margin-left: var(--spacing-4);
+    margin-bottom: var(--spacing-1);
+}
+
+/* =================================================================
+   Footnotes
+   ================================================================= */
+
+.article-body .footnotes {
+    margin-top: var(--spacing-5);
+    padding-top: var(--spacing-3);
+    border-top: 1px solid var(--color-border-default);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.article-body .footnote-ref {
+    font-size: 0.75em;
+    vertical-align: super;
+}
+
+/* =================================================================
+   Mermaid Diagrams
+   ================================================================= */
+
+/* Neutralize ALL global or article "pre" styling for mermaid blocks 
+   so the diagram behaves like the raw HTML test page */
+pre.mermaid, .article-body pre.mermaid {
+    all: unset !important;
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+    text-align: center !important;
+    margin: var(--spacing-2) 0 0 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.article-body .mermaid-caption,
+.article-body p.mermaid-caption,
+.article-body em.mermaid-caption {
+    display: block;
+    text-align: right;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-style: italic;
+    margin: 0.25rem 0 var(--spacing-3) 0;
+    padding-right: var(--spacing-1);
+}
+
+.mermaid-expand-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--color-bg-emphasis);
+    border: 1px solid var(--color-text-secondary);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    transition: all 0.2s;
+    z-index: 10;
+    box-shadow: var(--shadow-sm);
+}
+
+/* Hide expand button on mobile/tablet - diagrams are already full-width */
+@media (max-width: 768px) {
+    .mermaid-expand-btn {
+        display: none;
+    }
+}
+
+.mermaid-expand-btn svg {
+    flex-shrink: 0;
+}
+
+@media (hover: hover) {
+  .mermaid-expand-btn:hover {
+    background: var(--color-purple-dark);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-on-emphasis);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+.mermaid-expand-btn:active {
+    background: var(--color-purple-medium);
+}
+
+/* Mermaid fullscreen modal */
+.mermaid-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.mermaid-modal.active {
+    display: flex;
+}
+
+.mermaid-modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-black-backdrop-strong);
+    cursor: pointer;
+}
+
+.mermaid-modal-content {
+    position: relative;
+    max-width: 95vw;
+    max-height: 95vh;
+    overflow: auto;
+    z-index: 10000;
+    padding: 2rem;
+}
+
+.mermaid-modal-close {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10001;
+    background: var(--color-purple-dark);
+    border: 1px solid var(--color-purple-bright);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2) var(--spacing-4);
+    cursor: pointer;
+    color: var(--color-text-on-emphasis);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    transition: all var(--duration-fast) var(--easing-ease);
+    text-decoration: none;
+}
+
+@media (hover: hover) {
+  .mermaid-modal-close:hover {
+    background: var(--color-purple-medium);
+    border-color: var(--color-purple-bright);
+  }
+}
+
+.mermaid-modal-close:active {
+    background: var(--color-purple-medium);
+}
+
+.mermaid-modal-close svg {
+    flex-shrink: 0;
+}
+
+.mermaid-modal-diagram {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.mermaid-modal-diagram .mermaid {
+    position: relative;
+    padding: var(--spacing-3);
+    margin: 0;
+}
+
+.mermaid-modal-diagram .mermaid svg {
+    max-width: none !important;
+    max-height: 85vh;
+    width: 85vw;
+    height: auto !important;
+}
+
+/* =================================================================
+   Math Blocks
+   ================================================================= */
+
+.article-body .math {
+    overflow-x: auto;
+    margin: var(--spacing-2) 0;
+}
+
+/* =================================================================
+   Responsive Adjustments
+   ================================================================= */
+
+@media (max-width: 768px) {
+
+    .article-body table {
+        font-size: var(--font-size-sm);
+    }
+
+    .article-body pre {
+        padding: var(--spacing-2);
+    }
+
+}
+
+/* =================================================================
+   Video Embeds (YouTube)
+   ================================================================= */
+
+.article-body .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    aspect-ratio: 16 / 9;
+    margin: var(--spacing-6) 0;
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-default);
+    overflow: clip;
+}
+
+.article-body .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: var(--radius-lg);
+}
+
+/* =================================================================
+   Print Styles
+   ================================================================= */
+
+@media print {
+
+    .article-body {
+        color: var(--color-print-text);
+    }
+
+    .article-body a {
+        color: var(--color-print-text);
+        text-decoration: underline;
+    }
+
+    .article-body pre {
+        border: 1px solid var(--color-print-border);
+        page-break-inside: avoid;
+    }
+}

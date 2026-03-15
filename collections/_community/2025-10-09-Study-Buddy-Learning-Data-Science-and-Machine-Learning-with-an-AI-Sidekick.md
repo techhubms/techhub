@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Study Buddy: Learning Data Science and Machine Learning with an AI Sidekick"
-description: "This article by bethanyjep introduces the Study Buddy Agent, an AI-powered assistant integrated into the 'Data Science For Beginners' curriculum. The agent leverages GitHub Copilot’s chatmode to create an interactive, conversational learning experience. It is designed to reinforce key data science and machine learning concepts, encourage curiosity, and provide guidance for new learners. The article explains the rationale, technical underpinnings, usage instructions, and the educational vision behind Study Buddy, with future plans to expand the tool’s capabilities."
-author: "bethanyjep"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/study-buddy-learning-data-science-and-machine-learning-with-an/ba-p/4460144"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/study-buddy-learning-data-science-and-machine-learning-with-an/ba-p/4460144
+title: 'Study Buddy: Learning Data Science and Machine Learning with an AI Sidekick'
+author: bethanyjep
+feed_name: Microsoft Tech Community
 date: 2025-10-09 07:00:00 +00:00
-permalink: "/2025-10-09-Study-Buddy-Learning-Data-Science-and-Machine-Learning-with-an-AI-Sidekick.html"
-categories: ["AI", "GitHub Copilot", "ML"]
-tags: ["AI", "AI Assistant", "Beginner", "Chatmode", "Community", "Curriculum", "Data Science", "Data Science For Beginners", "Education Technology", "GitHub", "GitHub Copilot", "Interactive Learning", "Machine Learning", "Microsoft", "ML", "Python", "Study Buddy Agent", "VS Code"]
-tags_normalized: ["ai", "ai assistant", "beginner", "chatmode", "community", "curriculum", "data science", "data science for beginners", "education technology", "github", "github copilot", "interactive learning", "machine learning", "microsoft", "ml", "python", "study buddy agent", "vs code"]
+tags:
+- AI Assistant
+- Beginner
+- Chatmode
+- Curriculum
+- Data Science
+- Data Science For Beginners
+- Education Technology
+- GitHub
+- Interactive Learning
+- Microsoft
+- Python
+- Study Buddy Agent
+- VS Code
+- AI
+- GitHub Copilot
+- ML
+- Community
+section_names:
+- ai
+- github-copilot
+- ml
+primary_section: github-copilot
 ---
-
 Bethanyjep presents the Study Buddy Agent, an AI-powered companion for the Data Science For Beginners curriculum. Utilizing GitHub Copilot’s chatmode, the assistant helps learners navigate data science and machine learning concepts interactively and intuitively.<!--excerpt_end-->
 
 # Study Buddy: Learning Data Science and Machine Learning with an AI Sidekick

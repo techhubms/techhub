@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "General Availability of Azure Monitor Dashboards with Grafana"
-description: "This article announces the general availability of Azure Monitor dashboards with Grafana, detailing how users can create and manage cloud-native monitoring dashboards within the Azure portal. The content covers pre-built and community dashboards, integration best practices, automation using ARM/Bicep, and open-source compatibility for monitoring a wide range of Azure resources."
-author: "KayodePrince"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-general-availability-azure-monitor-dashboards-with/ba-p/4468972"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-observability-blog/announcing-general-availability-azure-monitor-dashboards-with/ba-p/4468972
+title: General Availability of Azure Monitor Dashboards with Grafana
+author: KayodePrince
+feed_name: Microsoft Tech Community
 date: 2025-11-18 16:56:24 +00:00
-permalink: "/2025-11-18-General-Availability-of-Azure-Monitor-Dashboards-with-Grafana.html"
-categories: ["Azure", "DevOps"]
-tags: ["AKS", "Application Insights", "ARM Templates", "Azure", "Azure Container Apps", "Azure Data Explorer", "Azure Managed Grafana", "Azure Monitor", "Azure Portal", "Azure PostgreSQL", "Bicep", "Cloud Native Monitoring", "Community", "Cosmos DB", "Dashboard Automation", "DevOps", "Grafana", "Microsoft Foundry", "Monitoring Solutions", "OpenTelemetry", "RBAC"]
-tags_normalized: ["aks", "application insights", "arm templates", "azure", "azure container apps", "azure data explorer", "azure managed grafana", "azure monitor", "azure portal", "azure postgresql", "bicep", "cloud native monitoring", "community", "cosmos db", "dashboard automation", "devops", "grafana", "microsoft foundry", "monitoring solutions", "opentelemetry", "rbac"]
+tags:
+- AKS
+- Application Insights
+- ARM Templates
+- Azure Container Apps
+- Azure Data Explorer
+- Azure Managed Grafana
+- Azure Monitor
+- Azure Portal
+- Azure PostgreSQL
+- Bicep
+- Cloud Native Monitoring
+- Cosmos DB
+- Dashboard Automation
+- Grafana
+- Microsoft Foundry
+- Monitoring Solutions
+- OpenTelemetry
+- RBAC
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 KayodePrince introduces the general availability of Azure Monitor dashboards with Grafana, a new solution for building and managing cloud-native monitoring dashboards directly in the Azure portal.<!--excerpt_end-->
 
 # General Availability of Azure Monitor Dashboards with Grafana

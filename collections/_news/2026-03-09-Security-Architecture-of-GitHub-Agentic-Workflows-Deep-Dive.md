@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Security Architecture of GitHub Agentic Workflows: Deep Dive"
-description: "This article, authored by Landon Cox, explores the security architecture behind GitHub Agentic Workflows. It details the layered security model, threat mitigation techniques, and operational safeguards designed to ensure safe, auditable automation with GitHub Actions and agentic AI tools, such as GitHub Copilot."
-author: "Landon Cox"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/generative-ai/under-the-hood-security-architecture-of-github-agentic-workflows/
+title: 'Security Architecture of GitHub Agentic Workflows: Deep Dive'
+author: Landon Cox
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-09 16:00:00 +00:00
-permalink: "/2026-03-09-Security-Architecture-of-GitHub-Agentic-Workflows-Deep-Dive.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "Automation", "CI/CD", "Container Isolation", "Continuous Integration", "Developer Productivity", "DevOps", "DevOps Security", "Generative AI", "GitHub Actions", "GitHub Agentic Workflows", "GitHub Copilot", "LLMs", "Logging", "Machine Learning", "MCP Server", "News", "Prompt Injection Defense", "Safe Outputs", "Security", "Security Architecture", "Threat Modeling"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "automation", "cislashcd", "container isolation", "continuous integration", "developer productivity", "devops", "devops security", "generative ai", "github actions", "github agentic workflows", "github copilot", "llms", "logging", "machine learning", "mcp server", "news", "prompt injection defense", "safe outputs", "security", "security architecture", "threat modeling"]
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Agents
+- Automation
+- CI/CD
+- Container Isolation
+- Continuous Integration
+- Developer Productivity
+- DevOps
+- DevOps Security
+- Generative AI
+- GitHub Actions
+- GitHub Agentic Workflows
+- GitHub Copilot
+- LLMs
+- Logging
+- MCP Server
+- News
+- Prompt Injection Defense
+- Safe Outputs
+- Security
+- Security Architecture
+- Threat Modeling
+section_names:
+- ai
+- devops
+- github-copilot
+- security
 ---
-
 Landon Cox provides an in-depth look at the security model of GitHub Agentic Workflows, highlighting isolation strategies, secret management, and auditable execution of AI-driven automation using GitHub Copilot and Actions.<!--excerpt_end-->
 
 # Security Architecture of GitHub Agentic Workflows: Deep Dive

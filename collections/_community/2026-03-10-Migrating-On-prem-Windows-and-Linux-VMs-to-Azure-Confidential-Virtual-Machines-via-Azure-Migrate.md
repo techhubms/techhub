@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Migrating On-prem Windows & Linux VMs to Azure Confidential Virtual Machines via Azure Migrate"
-description: "This in-depth whitepaper by SamhithaGurumurthy offers a hands-on framework for securely migrating on-premises Windows and Linux virtual machines to Azure Confidential Virtual Machines (CVMs) using Azure Migrate. It covers the end-to-end architecture, detailed migration phases, key Azure components, hardware prerequisites, disk encryption, operational governance, and critical security considerations. Readers will gain practical implementation knowledge focused on encryption, attestation, and secure workload lift-and-shift for regulated or mission-critical environments."
-author: "SamhithaGurumurthy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-on-prem-windows-linux-vms-to-azure-confidential/ba-p/4500898"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/migrating-on-prem-windows-linux-vms-to-azure-confidential/ba-p/4500898
+title: Migrating On-prem Windows & Linux VMs to Azure Confidential Virtual Machines via Azure Migrate
+author: SamhithaGurumurthy
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-10 14:12:02 +00:00
-permalink: "/2026-03-10-Migrating-On-prem-Windows-and-Linux-VMs-to-Azure-Confidential-Virtual-Machines-via-Azure-Migrate.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Attestation", "Azure", "Azure Confidential Computing", "Azure Governance", "Azure Managed HSM", "Azure Migrate", "Cloud Security", "Community", "Confidential Virtual Machines", "DevOps", "Disk Encryption Sets", "ExpressRoute", "Intel TDX", "Linux Migration", "Private Endpoints", "RBAC", "Security", "SEV SNP", "Site To Site VPN", "Trusted Execution Environments", "Windows Migration", "Zero Trust"]
-tags_normalized: ["attestation", "azure", "azure confidential computing", "azure governance", "azure managed hsm", "azure migrate", "cloud security", "community", "confidential virtual machines", "devops", "disk encryption sets", "expressroute", "intel tdx", "linux migration", "private endpoints", "rbac", "security", "sev snp", "site to site vpn", "trusted execution environments", "windows migration", "zero trust"]
+tags:
+- Attestation
+- Azure
+- Azure Confidential Computing
+- Azure Governance
+- Azure Managed HSM
+- Azure Migrate
+- Cloud Security
+- Community
+- Confidential Virtual Machines
+- DevOps
+- Disk Encryption Sets
+- ExpressRoute
+- Intel TDX
+- Linux Migration
+- Private Endpoints
+- RBAC
+- Security
+- SEV SNP
+- Site To Site VPN
+- Trusted Execution Environments
+- Windows Migration
+- Zero Trust
+section_names:
+- azure
+- devops
+- security
 ---
-
 SamhithaGurumurthy delivers a thorough step-by-step guide for migrating on-premises Windows and Linux VMs to Azure Confidential Virtual Machines with Azure Migrate, emphasizing secure architecture, disk encryption, attestation, and enterprise governance.<!--excerpt_end-->
 
 # Migrating On-prem Windows & Linux VMs to Azure Confidential Virtual Machines via Azure Migrate

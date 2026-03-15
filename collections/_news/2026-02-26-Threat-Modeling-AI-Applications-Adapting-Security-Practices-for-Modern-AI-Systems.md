@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Threat Modeling AI Applications: Adapting Security Practices for Modern AI Systems"
-description: "This article provides an in-depth exploration of threat modeling for AI systems, examining how risk assessment and mitigation approaches must evolve for generative and agentic AI architectures. It highlights the unique risks posed by AI, such as nondeterminism, instruction-following bias, and expanded attack surfaces, and offers practical strategies for identifying, prioritizing, and addressing these risks within Microsoft’s security framework."
-author: "Scott Christiansen, Alyssa Ofstein and Neil Coles"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/26/threat-modeling-ai-applications/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/26/threat-modeling-ai-applications/
+title: 'Threat Modeling AI Applications: Adapting Security Practices for Modern AI Systems'
+author: Scott Christiansen, Alyssa Ofstein and Neil Coles
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-26 17:04:08 +00:00
-permalink: "/2026-02-26-Threat-Modeling-AI-Applications-Adapting-Security-Practices-for-Modern-AI-Systems.html"
-categories: ["AI", "Security"]
-tags: ["Adversarial AI", "Agentic Systems", "AI", "AI Security", "Architecture", "Attack Surfaces", "Explainability", "Generative AI", "Human in The Loop", "Microsoft Security", "Mitigation Strategies", "Model Bias", "News", "Prompt Engineering", "Prompt Injection", "Risk Assessment", "Security", "Threat Modeling"]
-tags_normalized: ["adversarial ai", "agentic systems", "ai", "ai security", "architecture", "attack surfaces", "explainability", "generative ai", "human in the loop", "microsoft security", "mitigation strategies", "model bias", "news", "prompt engineering", "prompt injection", "risk assessment", "security", "threat modeling"]
+tags:
+- Adversarial AI
+- Agentic Systems
+- AI
+- AI Security
+- Architecture
+- Attack Surfaces
+- Explainability
+- Generative AI
+- Human in The Loop
+- Microsoft Security
+- Mitigation Strategies
+- Model Bias
+- News
+- Prompt Engineering
+- Prompt Injection
+- Risk Assessment
+- Security
+- Threat Modeling
+section_names:
+- ai
+- security
 ---
-
 Scott Christiansen, Alyssa Ofstein, and Neil Coles discuss how AI threat modeling requires new approaches and priorities, outlining actionable steps for Microsoft practitioners to manage emergent risks in advanced AI systems.<!--excerpt_end-->
 
 # Threat Modeling AI Applications: Adapting Security Practices for Modern AI Systems

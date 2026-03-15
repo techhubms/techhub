@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How AI is Reshaping Developer Choice: Insights from Octoverse 2025"
-description: "This article by Andrea Griffiths explores how AI, especially tools like GitHub Copilot, is fundamentally redefining developer preferences and technology adoption. Drawing from the Octoverse 2025 report, it discusses statistical shifts in programming language popularity, the role of AI-driven workflows, and actionable strategies for developers and engineering leaders to adapt and thrive in an AI-first software ecosystem."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/generative-ai/how-ai-is-reshaping-developer-choice-and-octoverse-data-proves-it/
+title: 'How AI is Reshaping Developer Choice: Insights from Octoverse 2025'
+author: Andrea Griffiths
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-19 17:00:00 +00:00
-permalink: "/2026-02-19-How-AI-is-Reshaping-Developer-Choice-Insights-from-Octoverse-2025.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "AI Adoption", "Architectural Patterns", "Coding", "Copilot Usage", "Developer Productivity", "Developer Workflow", "DevOps", "Engineering Leadership", "Enterprise", "Generative AI", "GitHub Copilot", "Language Popularity", "LLM SDKs", "Metrics Dashboard", "News", "Octoverse", "Open Source", "Programming Trends", "Software Ecosystem", "Testing AI Code", "TypeScript"]
-tags_normalized: ["ai", "ai and ml", "ai adoption", "architectural patterns", "coding", "copilot usage", "developer productivity", "developer workflow", "devops", "engineering leadership", "enterprise", "generative ai", "github copilot", "language popularity", "llm sdks", "metrics dashboard", "news", "octoverse", "open source", "programming trends", "software ecosystem", "testing ai code", "typescript"]
+tags:
+- AI
+- AI & ML
+- AI Adoption
+- Architectural Patterns
+- Copilot Usage
+- Developer Productivity
+- Developer Workflow
+- DevOps
+- Engineering Leadership
+- Enterprise
+- Generative AI
+- GitHub Copilot
+- Language Popularity
+- LLM SDKs
+- Metrics Dashboard
+- News
+- Octoverse
+- Open Source
+- Programming Trends
+- Software Ecosystem
+- Testing AI Code
+- TypeScript
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Andrea Griffiths delves into how AI is transforming developer technology choices, using real-world Octoverse 2025 data to highlight GitHub Copilot's influence and provide practical advice for developers and leaders.<!--excerpt_end-->
 
 # How AI is Reshaping Developer Choice: Insights from Octoverse 2025

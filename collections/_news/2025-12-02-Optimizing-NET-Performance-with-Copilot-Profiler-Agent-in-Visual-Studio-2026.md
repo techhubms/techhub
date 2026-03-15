@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Optimizing .NET Performance with Copilot Profiler Agent in Visual Studio 2026"
-description: "This article details how Visual Studio 2026's Copilot Profiler Agent combines GitHub Copilot's AI capabilities with the Visual Studio Profiler to help developers identify, analyze, and optimize performance bottlenecks in .NET code. Through hands-on benchmarking with the CsvHelper library, it demonstrates how natural language queries, profiler insights, and automated code generation can lead to meaningful improvements and measurable gains in application performance."
-author: "Nik Karpinsky"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/delegate-the-analysis-not-the-performance/
+title: Optimizing .NET Performance with Copilot Profiler Agent in Visual Studio 2026
+author: Nik Karpinsky
+feed_name: Microsoft VisualStudio Blog
 date: 2025-12-02 15:00:16 +00:00
-permalink: "/2025-12-02-Optimizing-NET-Performance-with-Copilot-Profiler-Agent-in-Visual-Studio-2026.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET Performance", "Agent", "AI", "BenchmarkDotNet", "Code Benchmarking", "Code Optimization", "Coding", "Copilot", "Copilot Profiler Agent", "CsvHelper", "Delegate Invocation", "Delegate Optimization", "Expression Trees", "GitHub Copilot", "Natural Language Queries", "News", "NuGet Packages", "Performance", "Performance Profiling", "Profiler Integration", "Profiling", "VS"]
-tags_normalized: ["dotnet performance", "agent", "ai", "benchmarkdotnet", "code benchmarking", "code optimization", "coding", "copilot", "copilot profiler agent", "csvhelper", "delegate invocation", "delegate optimization", "expression trees", "github copilot", "natural language queries", "news", "nuget packages", "performance", "performance profiling", "profiler integration", "profiling", "vs"]
+tags:
+- .NET Performance
+- Agent
+- BenchmarkDotNet
+- Code Benchmarking
+- Code Optimization
+- Copilot
+- Copilot Profiler Agent
+- CsvHelper
+- Delegate Invocation
+- Delegate Optimization
+- Expression Trees
+- Natural Language Queries
+- NuGet Packages
+- Performance
+- Performance Profiling
+- Profiler Integration
+- Profiling
+- VS
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Nik Karpinsky showcases the new Copilot Profiler Agent in Visual Studio 2026, guiding developers on leveraging AI-powered profiling to analyze and optimize performance bottlenecks in .NET applications.<!--excerpt_end-->
 
 # Optimizing .NET Performance with Copilot Profiler Agent in Visual Studio 2026
@@ -80,8 +98,8 @@ public class BenchmarkWriteCsv {
 - Agent runs the benchmark, applies `BenchmarkSwitcher` for flexible test selection
 - Presents diagnostic session results and identifies performance bottlenecks (e.g., delegate compilation and invocation overhead)
 - Profiler Agent explains issues and suggests optimizations via chat:
-    - Recognizes frequent delegate invocation as a hot path due to high frequency (40,000 invocations over 10,000 records and 4 fields)
-    - Recommends combining field writes into a single delegate using `Expression.Block` to reduce multicast delegate overhead
+  - Recognizes frequent delegate invocation as a hot path due to high frequency (40,000 invocations over 10,000 records and 4 fields)
+  - Recommends combining field writes into a single delegate using `Expression.Block` to reduce multicast delegate overhead
 
 ```csharp
 var expressions = new List<Expression>(members.Count);

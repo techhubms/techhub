@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Azure Network Changes: Default Outbound Access Removal and Implications for Azure Virtual Desktop"
-description: "This post by Kathryn_Jakubek covers the upcoming removal of default outbound internet access (DOA) for new Azure Virtual Networks after March 31, 2026. It details how Azure Virtual Desktop deployments will need explicit outbound connectivity configurations, outlines recommended practices, supported methods such as NAT Gateway and Azure Standard Load Balancer, possible limitations, and provides technical resources for network and security practitioners."
-author: "Kathryn_Jakubek"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-s-default-outbound-access-changes-guidance-for-azure/m-p/4494462#M14000"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop/azure-s-default-outbound-access-changes-guidance-for-azure/m-p/4494462#M14000
+title: 'Azure Network Changes: Default Outbound Access Removal and Implications for Azure Virtual Desktop'
+author: Kathryn_Jakubek
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-11 22:31:27 +00:00
-permalink: "/2026-02-11-Azure-Network-Changes-Default-Outbound-Access-Removal-and-Implications-for-Azure-Virtual-Desktop.html"
-categories: ["Azure", "Security"]
-tags: ["Azure", "Azure Firewall", "Azure Load Balancer", "Azure Virtual Desktop", "Azure Virtual Network", "Community", "Default Outbound Access", "Egress Control", "Explicit Outbound Connectivity", "Microsoft Azure", "NAT Gateway", "Network Security", "Networking", "Outbound Internet Access", "Private Subnet", "Public IP", "Security", "Session Hosts", "VNet"]
-tags_normalized: ["azure", "azure firewall", "azure load balancer", "azure virtual desktop", "azure virtual network", "community", "default outbound access", "egress control", "explicit outbound connectivity", "microsoft azure", "nat gateway", "network security", "networking", "outbound internet access", "private subnet", "public ip", "security", "session hosts", "vnet"]
+tags:
+- Azure
+- Azure Firewall
+- Azure Load Balancer
+- Azure Virtual Desktop
+- Azure Virtual Network
+- Community
+- Default Outbound Access
+- Egress Control
+- Explicit Outbound Connectivity
+- Microsoft Azure
+- NAT Gateway
+- Network Security
+- Networking
+- Outbound Internet Access
+- Private Subnet
+- Public IP
+- Security
+- Session Hosts
+- VNet
+section_names:
+- azure
+- security
 ---
-
 Kathryn_Jakubek discusses critical Azure networking changes affecting Azure Virtual Desktop customers, focusing on explicit outbound connectivity requirements and security considerations for new VNets.<!--excerpt_end-->
 
 # Azure’s Default Outbound Access Changes: Guidance for Azure Virtual Desktop Customers

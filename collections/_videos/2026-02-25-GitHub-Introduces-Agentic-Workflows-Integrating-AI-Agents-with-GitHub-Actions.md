@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "GitHub Introduces Agentic Workflows: Integrating AI Agents with GitHub Actions"
-description: "This announcement from GitHub details the introduction of 'agentic workflows', a new feature allowing users to describe tasks in a markdown file that can then be compiled into a GitHub Actions workflow. These workflows are designed to be executed by various AI agents, including GitHub Copilot, Claude Code, and OpenAI Codex, thereby bridging modern AI automation with established CI/CD and automation processes on the GitHub platform."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/eHN3w3fRb_M"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/eHN3w3fRb_M
+title: 'GitHub Introduces Agentic Workflows: Integrating AI Agents with GitHub Actions'
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-02-25 17:01:06 +00:00
-permalink: "/2026-02-25-GitHub-Introduces-Agentic-Workflows-Integrating-AI-Agents-with-GitHub-Actions.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Workflows", "AI", "AI Agents", "CI/CD", "Claude Code", "Developer Tools", "DevOps", "GitHub", "GitHub Actions", "GitHub Copilot", "GitHub Platform", "Intelligent Automation", "Markdown Automation", "OpenAI Codex", "Task Automation", "Videos", "Workflow Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai agents", "cislashcd", "claude code", "developer tools", "devops", "github", "github actions", "github copilot", "github platform", "intelligent automation", "markdown automation", "openai codex", "task automation", "videos", "workflow automation"]
+tags:
+- Agentic Workflows
+- AI
+- AI Agents
+- CI/CD
+- Claude Code
+- Developer Tools
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Copilot
+- GitHub Platform
+- Intelligent Automation
+- Markdown Automation
+- OpenAI Codex
+- Task Automation
+- Videos
+- Workflow Automation
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub's video, presented by the GitHub team, unveils the new 'agentic workflows' feature, empowering users to automate tasks via markdown descriptions that AI agents—like GitHub Copilot—can execute as GitHub Actions workflows.<!--excerpt_end-->
 
 {% youtube eHN3w3fRb_M %}

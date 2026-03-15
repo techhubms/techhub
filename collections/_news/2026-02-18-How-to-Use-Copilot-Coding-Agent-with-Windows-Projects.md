@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How to Use Copilot Coding Agent with Windows Projects"
-description: "This news article from Allison outlines how developers can configure GitHub Copilot's coding agent to operate in a Windows environment, instead of the default Linux setup. The guide covers background operation details, GitHub Actions integration, configuration steps, and security considerations for Windows project support."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects
+title: How to Use Copilot Coding Agent with Windows Projects
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-18 22:04:40 +00:00
-permalink: "/2026-02-18-How-to-Use-Copilot-Coding-Agent-with-Windows-Projects.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "CI/CD", "Coding", "Copilot", "Copilot Coding Agent", "Copilot Setup Steps.yml", "Development Environment", "DevOps", "GitHub Actions", "GitHub Copilot", "Improvement", "Network Security", "News", "Pull Requests", "Self Hosted Runners", "Windows Development", "Workflow Automation"]
-tags_normalized: ["ai", "cislashcd", "coding", "copilot", "copilot coding agent", "copilot setup stepsdotyml", "development environment", "devops", "github actions", "github copilot", "improvement", "network security", "news", "pull requests", "self hosted runners", "windows development", "workflow automation"]
+tags:
+- AI
+- CI/CD
+- Copilot
+- Copilot Coding Agent
+- Copilot Setup Steps.yml
+- Development Environment
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- Improvement
+- Network Security
+- News
+- Pull Requests
+- Self Hosted Runners
+- Windows Development
+- Workflow Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Allison explains how to set up the Copilot coding agent for Windows-based projects—helpful for developers who want Copilot to build and test code autonomously with GitHub Actions integration.<!--excerpt_end-->
 
 # Use Copilot Coding Agent with Windows Projects

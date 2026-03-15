@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How Microsoft Defender Experts Uses AI to Cut Through the Noise"
-description: "This post explains how Microsoft Defender Experts leverages AI-based incident classification to reduce security event noise, optimize analyst focus, and accelerate response times for large organizations. The system combines AI algorithms with expert review and feedback loops to ensure accuracy, transparency, and ongoing improvement in Microsoft’s managed XDR (extended detection and response) services."
-author: "ShailyGoel"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-security-experts-blog/how-microsoft-defender-experts-uses-ai-to-cut-through-the-noise/ba-p/4443601
+title: How Microsoft Defender Experts Uses AI to Cut Through the Noise
+author: ShailyGoel
+feed_name: Microsoft Tech Community
 date: 2025-08-14 17:33:20 +00:00
-permalink: "/2025-08-14-How-Microsoft-Defender-Experts-Uses-AI-to-Cut-Through-the-Noise.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Based Incident Classification", "Community", "Expert Guided AI", "False Positive Filtering", "Feedback Loops", "Incident Response", "Managed XDR", "Microsoft Defender Experts", "Microsoft Security", "Noise Reduction", "Risk Scoring", "Security", "Security Operations", "Similarity Algorithm", "SOC Automation", "Threat Detection", "Tiered Decisioning"]
-tags_normalized: ["ai", "ai based incident classification", "community", "expert guided ai", "false positive filtering", "feedback loops", "incident response", "managed xdr", "microsoft defender experts", "microsoft security", "noise reduction", "risk scoring", "security", "security operations", "similarity algorithm", "soc automation", "threat detection", "tiered decisioning"]
+tags:
+- AI Based Incident Classification
+- Expert Guided AI
+- False Positive Filtering
+- Feedback Loops
+- Incident Response
+- Managed XDR
+- Microsoft Defender Experts
+- Microsoft Security
+- Noise Reduction
+- Risk Scoring
+- Security Operations
+- Similarity Algorithm
+- SOC Automation
+- Threat Detection
+- Tiered Decisioning
+- AI
+- Security
+- Community
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 ShailyGoel explains how Microsoft Defender Experts integrates AI to filter security noise and focus incident response, using expert-trained classification models within Microsoft’s managed XDR services.<!--excerpt_end-->
 
 # How Microsoft Defender Experts Uses AI to Cut Through the Noise

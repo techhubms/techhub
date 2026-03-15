@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Building Applications Locally with gpt-oss-20b and the AI Toolkit for VS Code"
-description: "This article offers a detailed walkthrough for developers and enterprises on deploying and building applications with OpenAI's open-source models gpt-oss-20b and gpt-oss-120b using the AI Toolkit for Visual Studio Code. It emphasizes local deployment, model testing, intelligent agent creation, and integration with frameworks like Ollama. Azure AI Foundry integration and best practices for effective development and experimentation are highlighted throughout."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/educator-developer-blog/building-application-with-gpt-oss-20b-with-ai-toolkit/ba-p/4441486"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Community"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/educator-developer-blog/building-application-with-gpt-oss-20b-with-ai-toolkit/ba-p/4441486
+title: Building Applications Locally with gpt-oss-20b and the AI Toolkit for VS Code
+author: kinfey
+feed_name: Microsoft Tech Community
 date: 2025-08-11 18:12:15 +00:00
-permalink: "/2025-08-11-Building-Applications-Locally-with-gpt-oss-20b-and-the-AI-Toolkit-for-VS-Code.html"
-categories: ["AI"]
-tags: ["Agent Builder", "AI", "AI Agents", "AI Toolkit", "Azure AI Foundry", "Community", "Edge AI", "Gpt Oss 120b", "Gpt Oss 20b", "Hugging Face", "Inference Frameworks", "Local AI Deployment", "MCP (model Control Protocol)", "Mixture Of Experts", "Model Testing", "MXFP4 Quantization", "Ollama", "OpenAI", "Transformers", "Vllm", "VS Code", "VS Code Extension"]
-tags_normalized: ["agent builder", "ai", "ai agents", "ai toolkit", "azure ai foundry", "community", "edge ai", "gpt oss 120b", "gpt oss 20b", "hugging face", "inference frameworks", "local ai deployment", "mcp model control protocol", "mixture of experts", "model testing", "mxfp4 quantization", "ollama", "openai", "transformers", "vllm", "vs code", "vs code extension"]
+tags:
+- Agent Builder
+- AI Agents
+- AI Toolkit
+- Azure AI Foundry
+- Edge AI
+- Gpt Oss 120b
+- Gpt Oss 20b
+- Hugging Face
+- Inference Frameworks
+- Local AI Deployment
+- MCP (model Control Protocol)
+- Mixture Of Experts
+- Model Testing
+- MXFP4 Quantization
+- Ollama
+- OpenAI
+- Transformers
+- Vllm
+- VS Code
+- VS Code Extension
+- AI
+- Community
+section_names:
+- ai
+primary_section: ai
 ---
-
 kinfey provides a hands-on guide to deploying OpenAI’s gpt-oss-20b and building intelligent agent applications locally using the AI Toolkit for Visual Studio Code, highlighting practical integration strategies for developers.<!--excerpt_end-->
 
 # Building Applications Locally with gpt-oss-20b and the AI Toolkit for VS Code
@@ -40,6 +56,7 @@ OpenAI has introduced the open-source gpt-oss-20b and gpt-oss-120b models, givin
 2. **Add Model**: Find gpt-oss-20b and select 'Add Model'.
 3. **Deployment**: Toolkit downloads and sets up the model locally. Time: ~15-30 minutes (network dependent).
 4. **Verify**: Use the model management interface to confirm operational status.
+
 - Note: Current release requires GPU; CPU support slated for future updates.
 
 ### B. Deployment with Ollama Integration

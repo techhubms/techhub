@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "How to Use the /fleet Command in GitHub Copilot CLI"
-description: "This tutorial demonstrates how developers can leverage the newly introduced /fleet command in GitHub Copilot CLI to automate routine updates in open source repositories. Cassidy from GitHub walks through instructing multiple AI agents to solve existing issues and upgrade dependencies, using real-world examples with Astro and TinaCMS."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=BviR6Me36gI"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=BviR6Me36gI
+title: How to Use the /fleet Command in GitHub Copilot CLI
+author: GitHub
+primary_section: github-copilot
+feed_name: GitHub YouTube
 date: 2026-03-10 18:08:27 +00:00
-permalink: "/2026-03-10-How-to-Use-the-fleet-Command-in-GitHub-Copilot-CLI.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["/fleet Command", "AI", "AI Agents", "Astro", "CLI Tools", "Copilot CLI", "Dependency Upgrades", "Developer Productivity", "DevOps", "GitHub Copilot", "GitHub Copilot CLI", "Issue Resolution", "Open Source Automation", "OpenSource", "Parallel Task Execution", "Repository Maintenance", "TinaCMS", "Videos"]
-tags_normalized: ["slashfleet command", "ai", "ai agents", "astro", "cli tools", "copilot cli", "dependency upgrades", "developer productivity", "devops", "github copilot", "github copilot cli", "issue resolution", "open source automation", "opensource", "parallel task execution", "repository maintenance", "tinacms", "videos"]
+tags:
+- /fleet Command
+- AI
+- AI Agents
+- Astro
+- CLI Tools
+- Copilot CLI
+- Dependency Upgrades
+- Developer Productivity
+- DevOps
+- GitHub Copilot
+- GitHub Copilot CLI
+- Issue Resolution
+- Open Source Automation
+- OpenSource
+- Parallel Task Execution
+- Repository Maintenance
+- TinaCMS
+- Videos
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 GitHub demonstrates, with Cassidy as host, how developers can use the Copilot CLI /fleet command to automate and parallelize common open source maintenance tasks using multiple AI agents.<!--excerpt_end-->
 
 {% youtube BviR6Me36gI %}

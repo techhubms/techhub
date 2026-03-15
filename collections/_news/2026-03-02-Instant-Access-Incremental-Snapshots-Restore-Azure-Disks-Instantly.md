@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Instant Access Incremental Snapshots: Restore Azure Disks Instantly"
-description: "Aung Oo describes Azure's introduction of instant access support for incremental snapshots with Premium SSD v2 and Ultra Disk. This update enables instant creation, restore, and production-ready performance for mission-critical workloads, streamlining disk recovery and scaling in Azure environments."
-author: "Aung Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/instant-access-incremental-snapshots-restore-without-waiting/
+title: 'Instant Access Incremental Snapshots: Restore Azure Disks Instantly'
+author: Aung Oo
+primary_section: azure
+feed_name: The Azure Blog
 date: 2026-03-02 17:00:00 +00:00
-permalink: "/2026-03-02-Instant-Access-Incremental-Snapshots-Restore-Azure-Disks-Instantly.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure CLI", "Azure Managed Disks", "Azure Storage", "Cloud Scalability", "Data Protection", "Disk Restore", "High Availability", "Incremental Snapshots", "Instant Access", "Managed Disks", "Mission Critical Workloads", "News", "Performance Optimization", "Premium SSD V2", "Snapshot API", "Storage", "Ultra Disk", "Zone Redundant Storage"]
-tags_normalized: ["azure", "azure cli", "azure managed disks", "azure storage", "cloud scalability", "data protection", "disk restore", "high availability", "incremental snapshots", "instant access", "managed disks", "mission critical workloads", "news", "performance optimization", "premium ssd v2", "snapshot api", "storage", "ultra disk", "zone redundant storage"]
+tags:
+- Azure
+- Azure CLI
+- Azure Managed Disks
+- Azure Storage
+- Cloud Scalability
+- Data Protection
+- Disk Restore
+- High Availability
+- Incremental Snapshots
+- Instant Access
+- Managed Disks
+- Mission Critical Workloads
+- News
+- Performance Optimization
+- Premium SSD V2
+- Snapshot API
+- Storage
+- Ultra Disk
+- Zone Redundant Storage
+section_names:
+- azure
 ---
-
 Aung Oo covers how instant access incremental snapshots transform disk restore and scaling in Azure, allowing developers and IT professionals to restore production-ready disks instantly with Premium SSD v2 and Ultra Disk.<!--excerpt_end-->
 
 # Instant Access Incremental Snapshots: Restore Azure Disks Instantly

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing TypeScript 6.0 Release Candidate: Features and Deprecations"
-description: "This official announcement introduces the TypeScript 6.0 Release Candidate, outlining new features, key language improvements, changes to module resolution, added and updated APIs, breaking changes, and deprecations. It also provides guidance for developers to migrate codebases in preparation for TypeScript 7.0's native port and stricter defaults."
-author: "Daniel Rosenwasser"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-rc/"
-viewing_mode: "external"
-feed_name: "Microsoft TypeScript Blog"
-feed_url: "https://devblogs.microsoft.com/typescript/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/typescript/announcing-typescript-6-0-rc/
+title: 'Announcing TypeScript 6.0 Release Candidate: Features and Deprecations'
+author: Daniel Rosenwasser
+primary_section: dotnet
+feed_name: Microsoft TypeScript Blog
 date: 2026-03-06 19:13:14 +00:00
-permalink: "/2026-03-06-Announcing-TypeScript-60-Release-Candidate-Features-and-Deprecations.html"
-categories: ["Coding"]
-tags: ["Coding", "CommonJS", "Compiler Options", "Deprecations", "DOM Types", "ES2025", "ESM", "Getorinsert", "JavaScript", "Map", "Moduleresolution", "News", "Node", "npm", "RC", "RegExp.escape", "Strict Mode", "Temporal API", "Tsconfig.json", "TypeScript", "TypeScript 6.0", "TypeScript 7.0"]
-tags_normalized: ["coding", "commonjs", "compiler options", "deprecations", "dom types", "es2025", "esm", "getorinsert", "javascript", "map", "moduleresolution", "news", "node", "npm", "rc", "regexpdotescape", "strict mode", "temporal api", "tsconfigdotjson", "typescript", "typescript 6dot0", "typescript 7dot0"]
+tags:
+- CommonJS
+- Compiler Options
+- Deprecations
+- DOM Types
+- ES2025
+- ESM
+- Getorinsert
+- JavaScript
+- Map
+- Moduleresolution
+- News
+- Node
+- npm
+- RC
+- RegExp.escape
+- Strict Mode
+- Temporal API
+- Tsconfig.json
+- TypeScript
+- TypeScript 6.0
+- TypeScript 7.0
+- .NET
+section_names:
+- dotnet
 ---
-
 Daniel Rosenwasser announces the Release Candidate of TypeScript 6.0, detailing major updates, feature highlights, and migration guidance for developers as the platform transitions to its next major version.<!--excerpt_end-->
 
 # Announcing TypeScript 6.0 Release Candidate

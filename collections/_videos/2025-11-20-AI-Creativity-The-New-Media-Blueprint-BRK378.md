@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "AI + Creativity: The New Media Blueprint | BRK378"
-description: "This video session from Microsoft Ignite 2025 explores how organizations in media and entertainment are leveraging agentic AI systems to drive innovation throughout the content lifecycle. Featuring case studies from media leaders, it covers the use of autonomous AI agents, workflow streamlining, data collaboration with Microsoft, and the importance of security, ethics, and human creativity in adopting AI technologies."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Cszz3XsAMAg"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=Cszz3XsAMAg
+title: 'AI + Creativity: The New Media Blueprint | BRK378'
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-20 14:55:21 +00:00
-permalink: "/2025-11-20-AI-Creativity-The-New-Media-Blueprint-BRK378.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Agents", "AI Transformation", "Automated Workflows", "Brand Building", "Copilotandagentsatwork", "Creative Agencies", "Data Collaboration", "Ethics", "Hypercinema", "Industry", "Kantar", "Le Monde", "Media And Entertainment", "Microsoft Ignite", "Monetization", "MSIgnite", "Premier League", "Session BRK378", "Videos", "Workflow Automation"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "ai transformation", "automated workflows", "brand building", "copilotandagentsatwork", "creative agencies", "data collaboration", "ethics", "hypercinema", "industry", "kantar", "le monde", "media and entertainment", "microsoft ignite", "monetization", "msignite", "premier league", "session brk378", "videos", "workflow automation"]
+tags:
+- Agentic AI
+- AI Agents
+- AI Transformation
+- Automated Workflows
+- Brand Building
+- Copilotandagentsatwork
+- Creative Agencies
+- Data Collaboration
+- Ethics
+- Hypercinema
+- Industry
+- Kantar
+- Le Monde
+- Media And Entertainment
+- Microsoft Ignite
+- Monetization
+- MSIgnite
+- Premier League
+- Session BRK378
+- Workflow Automation
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 Presented by Silvia Candiani, Simon Crownshaw, and Chris Petranto at Microsoft Ignite 2025, this session investigates how agentic AI empowers media organizations and creators by automating workflows and tackling industry challenges.<!--excerpt_end-->
 
 {% youtube Cszz3XsAMAg %}

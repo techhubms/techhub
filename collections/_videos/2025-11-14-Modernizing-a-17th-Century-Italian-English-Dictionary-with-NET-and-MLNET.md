@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET"
-description: "This session explores how a centuries-old Italian-English dictionary can be brought into the modern era using .NET technologies. The presentation covers building a custom vector embeddings model with ML.NET, utilizing CosmosDb for storage, and orchestrating the solution with Aspire. The speaker showcases the migration, machine learning, and cloud storage components tailored for technical audiences."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=kNPTDlxEA-Y"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=kNPTDlxEA-Y
+title: Modernizing a 17th Century Italian-English Dictionary with .NET and ML.NET
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-14 05:30:06 +00:00
-permalink: "/2025-11-14-Modernizing-a-17th-Century-Italian-English-Dictionary-with-NET-and-MLNET.html"
-categories: ["Azure", "Coding", "ML"]
-tags: [".NET", "Application Architecture", "Aspire", "Azure", "Cloud Storage", "Coding", "CosmosDb", "Custom Model Training", "Data Engineering", "Data Migration", "Dictionary Modernization", "Machine Learning", "Microsoft", "ML", "ML.NET", "Renaissance Texts", "Vector Embeddings", "Videos"]
-tags_normalized: ["dotnet", "application architecture", "aspire", "azure", "cloud storage", "coding", "cosmosdb", "custom model training", "data engineering", "data migration", "dictionary modernization", "machine learning", "microsoft", "ml", "mldotnet", "renaissance texts", "vector embeddings", "videos"]
+tags:
+- .NET
+- Application Architecture
+- Aspire
+- Cloud Storage
+- CosmosDb
+- Custom Model Training
+- Data Engineering
+- Data Migration
+- Dictionary Modernization
+- Microsoft
+- ML.NET
+- Renaissance Texts
+- Vector Embeddings
+- Azure
+- ML
+- Videos
+section_names:
+- azure
+- dotnet
+- ml
+primary_section: ml
 ---
-
 dotnet demonstrates how to modernize a 17th century Italian-English dictionary using .NET, ML.NET for custom embeddings, CosmosDb for storage, and Aspire as the orchestration layer.<!--excerpt_end-->
 
 {% youtube kNPTDlxEA-Y %}
@@ -45,4 +57,4 @@ In this session, dotnet presents a technical walkthrough of bringing John Florio
 
 ---
 
-For more technical talks like this, visit the .NET Conf 2025 playlist: https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt
+For more technical talks like this, visit the .NET Conf 2025 playlist: <https://www.youtube.com/playlist?list=PLdo4fOcmZ0oXtIlvq1tuORUtZqVG-HdCt>

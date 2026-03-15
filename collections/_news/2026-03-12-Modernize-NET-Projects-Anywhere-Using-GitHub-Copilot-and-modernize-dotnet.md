@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Modernize .NET Projects Anywhere Using GitHub Copilot and modernize-dotnet"
-description: "This article introduces the modernize-dotnet agent, a tool that enables .NET developers to assess, plan, and upgrade their applications across multiple environments. Learn how GitHub Copilot, Visual Studio, VS Code, and GitHub integrations streamline and standardize modernization workflows, produce transparent upgrade artifacts, and support custom organizational skills."
-author: "Mika Dumont"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/modernize-dotnet-anywhere-with-ghcp/
+title: Modernize .NET Projects Anywhere Using GitHub Copilot and modernize-dotnet
+author: Mika Dumont
+primary_section: github-copilot
+feed_name: Microsoft .NET Blog
 date: 2026-03-12 17:05:00 +00:00
-permalink: "/2026-03-12-Modernize-NET-Projects-Anywhere-Using-GitHub-Copilot-and-modernize-dotnet.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET", ".NET Modernization", "AI", "ASP.NET Core", "Azure Functions", "Blazor", "C#", "Class Libraries", "Code Transformation", "Coding", "Copilot CLI", "Cross Platform", "Custom Agents", "Developer Tools", "DevOps", "GitHub Copilot", "Migration", "Modernization", "Modernize .NET", "News", "Razor Pages", "Repository Management", "Skills", "Upgrade Planning", "VS", "VS Code", "Web API", "Workflow Automation", "WPF"]
-tags_normalized: ["dotnet", "dotnet modernization", "ai", "aspdotnet core", "azure functions", "blazor", "csharp", "class libraries", "code transformation", "coding", "copilot cli", "cross platform", "custom agents", "developer tools", "devops", "github copilot", "migration", "modernization", "modernize dotnet", "news", "razor pages", "repository management", "skills", "upgrade planning", "vs", "vs code", "web api", "workflow automation", "wpf"]
+tags:
+- .NET
+- .NET Modernization
+- AI
+- ASP.NET Core
+- Azure Functions
+- Blazor
+- C#
+- Class Libraries
+- Code Transformation
+- Copilot CLI
+- Cross Platform
+- Custom Agents
+- Developer Tools
+- DevOps
+- GitHub Copilot
+- Migration
+- Modernization
+- Modernize .NET
+- News
+- Razor Pages
+- Repository Management
+- Skills
+- Upgrade Planning
+- VS
+- VS Code
+- Web API
+- Workflow Automation
+- WPF
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
 ---
-
 Mika Dumont explores how the modernize-dotnet agent empowers developers to modernize .NET projects from Visual Studio, VS Code, the Copilot CLI, or even directly on GitHub, generating structured upgrade plans and supporting custom workflows.<!--excerpt_end-->
 
 # Modernize .NET Projects Anywhere Using GitHub Copilot and modernize-dotnet

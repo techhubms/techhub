@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Enhancing Plugin Metadata Management with SemanticPluginForge"
-description: "This article introduces SemanticPluginForge, an open-source tool that streamlines dynamic management of plugin metadata in Semantic Kernel plugins. It highlights the challenges of static metadata, how SemanticPluginForge addresses them, practical integration steps in .NET environments, and offers ways to contribute to the project."
-author: "Likhan Siddiquee"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/enhancing-plugin-metadata-management-with-semanticpluginforge/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/enhancing-plugin-metadata-management-with-semanticpluginforge/
+title: Enhancing Plugin Metadata Management with SemanticPluginForge
+author: Likhan Siddiquee
+feed_name: Microsoft DevBlog
 date: 2025-06-05 09:44:38 +00:00
-permalink: "/2025-06-05-Enhancing-Plugin-Metadata-Management-with-SemanticPluginForge.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "Coding", "Dynamic Metadata", "Function Calling", "IPluginMetadataProvider", "LLM", "News", "NuGet", "Open Source Tools", "Plugin Metadata", "Semantic Kernel", "SemanticPluginForge", "Tools"]
-tags_normalized: ["dotnet", "ai", "coding", "dynamic metadata", "function calling", "ipluginmetadataprovider", "llm", "news", "nuget", "open source tools", "plugin metadata", "semantic kernel", "semanticpluginforge", "tools"]
+tags:
+- .NET
+- Dynamic Metadata
+- Function Calling
+- IPluginMetadataProvider
+- LLM
+- NuGet
+- Open Source Tools
+- Plugin Metadata
+- Semantic Kernel
+- SemanticPluginForge
+- Tools
+- AI
+- News
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Author Likhan Siddiquee details how SemanticPluginForge offers developers dynamic and flexible metadata management for plugins in the Semantic Kernel ecosystem. The post explains traditional metadata challenges and provides practical steps for integrating the tool into modern .NET development workflows.<!--excerpt_end-->
 
 # Enhancing Plugin Metadata Management with SemanticPluginForge
@@ -72,13 +80,13 @@ SemanticPluginForge solves these challenges through a dynamic, extensible approa
 ### 2. Extensible Architecture
 
 - Provides an `IPluginMetadataProvider` interface, allowing custom metadata provider implementations.
-    - Fetch metadata from a database or external source.
-    - Tailor metadata based on business logic.
+  - Fetch metadata from a database or external source.
+  - Tailor metadata based on business logic.
 
 ### 3. Suppressing Functions and Parameters
 
 - Option to conditionally suppress (hide) specific functions or parameters in the plugin metadata.
-    - Useful for hiding sensitive or irrelevant details while maintaining functionality.
+  - Useful for hiding sensitive or irrelevant details while maintaining functionality.
 
 ### 4. Improved User Experience
 

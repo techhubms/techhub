@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Keep Your GitHub Action Examples in Sync with Actions Example Checker"
-description: "Jesse Houwing presents a practical solution for keeping GitHub Actions documentation up to date with implementation changes. The blog introduces the Actions Example Checker—a tool and corresponding GitHub Action—to automatically validate usage examples in markdown files against action.yaml schemas, reducing drift between documentation and code."
-author: "Jesse Houwing"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://jessehouwing.net/keep-your-examples-in-sync-with-your-action/"
-viewing_mode: "external"
-feed_name: "Jesse Houwing's Blog"
-feed_url: "https://jessehouwing.net/rss/"
+﻿---
+external_url: https://jessehouwing.net/keep-your-examples-in-sync-with-your-action/
+title: Keep Your GitHub Action Examples in Sync with Actions Example Checker
+author: Jesse Houwing
+primary_section: devops
+feed_name: Jesse Houwing's Blog
 date: 2026-03-02 09:53:49 +00:00
-permalink: "/2026-03-02-Keep-Your-GitHub-Action-Examples-in-Sync-with-Actions-Example-Checker.html"
-categories: ["DevOps"]
-tags: ["Action.yaml", "Actions Example Checker", "Blogs", "CI/CD", "Continuous Integration", "DevOps", "Documentation Automation", "Example Checker", "GitHub", "GitHub Actions", "GitHub Marketplace", "Open Source Tooling", "Pull Request Validation", "Schema Validation", "Workflow Automation", "YAML"]
-tags_normalized: ["actiondotyaml", "actions example checker", "blogs", "cislashcd", "continuous integration", "devops", "documentation automation", "example checker", "github", "github actions", "github marketplace", "open source tooling", "pull request validation", "schema validation", "workflow automation", "yaml"]
+tags:
+- Action.yaml
+- Actions Example Checker
+- Blogs
+- CI/CD
+- Continuous Integration
+- DevOps
+- Documentation Automation
+- Example Checker
+- GitHub
+- GitHub Actions
+- GitHub Marketplace
+- Open Source Tooling
+- Pull Request Validation
+- Schema Validation
+- Workflow Automation
+- YAML
+section_names:
+- devops
 ---
-
 Jesse Houwing introduces the Actions Example Checker, a GitHub Action that validates documentation examples against action.yaml schemas to help developers keep their documentation in sync with actual implementations.<!--excerpt_end-->
 
 # Keep Your GitHub Action Examples in Sync with Actions Example Checker

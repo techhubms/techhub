@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Phi-4-Reasoning-Vision-15B: In-Depth Overview and Use Cases"
-description: "An in-depth look at Phi-4-Reasoning-Vision-15B, Microsoft's latest vision reasoning small language model (SLM) on Microsoft Foundry. Learn about its design, code patterns, three dynamic thinking modes, and how it empowers developers to build intelligent apps for GUI automation, chart analysis, and more uniquely Microsoft scenarios."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/phi-4-reasoning-vision-15b-use-cases-in-depth/ba-p/4499210"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/phi-4-reasoning-vision-15b-use-cases-in-depth/ba-p/4499210
+title: 'Phi-4-Reasoning-Vision-15B: In-Depth Overview and Use Cases'
+author: kinfey
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-04 18:00:00 +00:00
-permalink: "/2026-03-04-Phi-4-Reasoning-Vision-15B-In-Depth-Overview-and-Use-Cases.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["AI", "Azure", "Azure AI Foundry", "Bounding Box Extraction", "Chart Analysis", "Code Sample", "Coding", "Community", "Deep Learning", "Dynamic Inference", "GUI Automation", "Hybrid Reasoning", "Mathematical Reasoning", "Microsoft Foundry", "Multimodal AI", "Phi 4 Reasoning Vision 15B", "Python", "Scientific Visual Reasoning", "SLM", "Vision Models"]
-tags_normalized: ["ai", "azure", "azure ai foundry", "bounding box extraction", "chart analysis", "code sample", "coding", "community", "deep learning", "dynamic inference", "gui automation", "hybrid reasoning", "mathematical reasoning", "microsoft foundry", "multimodal ai", "phi 4 reasoning vision 15b", "python", "scientific visual reasoning", "slm", "vision models"]
+tags:
+- AI
+- Azure
+- Azure AI Foundry
+- Bounding Box Extraction
+- Chart Analysis
+- Code Sample
+- Community
+- Deep Learning
+- Dynamic Inference
+- GUI Automation
+- Hybrid Reasoning
+- Mathematical Reasoning
+- Microsoft Foundry
+- Multimodal AI
+- Phi 4 Reasoning Vision 15B
+- Python
+- Scientific Visual Reasoning
+- SLM
+- Vision Models
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 kinfey explores Phi-4-Reasoning-Vision-15B, Microsoft's new vision reasoning SLM. The article provides developers with detailed design analysis, example code, and real-world applications for visual understanding and actionable decision-making.<!--excerpt_end-->
 
 # Phi-4-Reasoning-Vision-15B: In-Depth Overview and Use Cases

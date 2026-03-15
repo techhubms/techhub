@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Microsoft IQ Overview: Exploring Work IQ, Foundry IQ, and Fabric IQ"
-description: "This video by John Savill introduces Microsoft IQ and its role in enterprise AI. It explains key concepts such as Work IQ, Foundry IQ, and Fabric IQ, discusses the importance of enterprise information and context, and demonstrates how organizations can leverage Microsoft IQ and associated agents within enterprise environments."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=1ri8HSbN4q4"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=1ri8HSbN4q4
+title: 'Microsoft IQ Overview: Exploring Work IQ, Foundry IQ, and Fabric IQ'
+author: John Savill's Technical Training
+primary_section: ai
+feed_name: John Savill's Technical Training
 date: 2026-02-09 11:33:25 +00:00
-permalink: "/2026-02-09-Microsoft-IQ-Overview-Exploring-Work-IQ-Foundry-IQ-and-Fabric-IQ.html"
-categories: ["AI", "Azure"]
-tags: ["Agent 365", "Agents", "AI", "AI Models", "Azure", "Azure AI", "Azure Cloud", "Cloud", "Contextual AI", "Enterprise Knowledge", "Fabric Iq", "Foundry IQ", "Generative AI", "LLM", "Microsoft", "Microsoft Azure", "Microsoft Iq", "SLM", "Videos", "Work Iq"]
-tags_normalized: ["agent 365", "agents", "ai", "ai models", "azure", "azure ai", "azure cloud", "cloud", "contextual ai", "enterprise knowledge", "fabric iq", "foundry iq", "generative ai", "llm", "microsoft", "microsoft azure", "microsoft iq", "slm", "videos", "work iq"]
+tags:
+- Agent 365
+- Agents
+- AI
+- AI Models
+- Azure
+- Azure AI
+- Azure Cloud
+- Contextual AI
+- Enterprise Knowledge
+- Fabric Iq
+- Foundry IQ
+- Generative AI
+- LLM
+- Microsoft
+- Microsoft Azure
+- Microsoft Iq
+- SLM
+- Videos
+- Work Iq
+section_names:
+- ai
+- azure
 ---
-
 John Savill presents an overview of Microsoft IQ, including Work IQ, Foundry IQ, and Fabric IQ, highlighting their impact on enterprise AI and knowledge management.<!--excerpt_end-->
 
 {% youtube 1ri8HSbN4q4 %}

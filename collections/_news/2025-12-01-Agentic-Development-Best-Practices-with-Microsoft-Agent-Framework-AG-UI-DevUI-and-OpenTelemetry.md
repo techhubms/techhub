@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Agentic Development Best Practices with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry"
-description: "This deep dive explores the full agentic development lifecycle with the Microsoft Agent Framework, demonstrating how the combination of DevUI (developer console), AG-UI (user interaction protocol), and integrated OpenTelemetry enables rapid prototyping, visual debugging, seamless demoing, and production-grade monitoring when building AI Agents using GitHub Models in both Python and .NET environments."
-author: "Kinfey Lo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/the-golden-triangle-of-agentic-development-with-microsoft-agent-framework-ag-ui-devui-opentelemetry-deep-dive/
+title: 'Agentic Development Best Practices with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry'
+author: Kinfey Lo
+feed_name: Microsoft Semantic Kernel Blog
 date: 2025-12-01 17:08:48 +00:00
-permalink: "/2025-12-01-Agentic-Development-Best-Practices-with-Microsoft-Agent-Framework-AG-UI-DevUI-and-OpenTelemetry.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AG UI", "Agent Framework", "Agent Workflow", "Agentic Development", "Agents", "AI", "Coding", "CopilotKit Integration", "Developer Tools", "DevUI", "Distributed Tracing", "GitHub Models", "LLM Debugging", "Microsoft Agent Framework", "Multi Agent Systems", "News", "Observability", "OpenTelemetry", "Python"]
-tags_normalized: ["dotnet", "ag ui", "agent framework", "agent workflow", "agentic development", "agents", "ai", "coding", "copilotkit integration", "developer tools", "devui", "distributed tracing", "github models", "llm debugging", "microsoft agent framework", "multi agent systems", "news", "observability", "opentelemetry", "python"]
+tags:
+- .NET
+- AG UI
+- Agent Framework
+- Agent Workflow
+- Agentic Development
+- Agents
+- CopilotKit Integration
+- Developer Tools
+- DevUI
+- Distributed Tracing
+- GitHub Models
+- LLM Debugging
+- Microsoft Agent Framework
+- Multi Agent Systems
+- Observability
+- OpenTelemetry
+- Python
+- AI
+- News
+section_names:
+- ai
+- dotnet
+primary_section: ai
 ---
-
 Kinfey Lo presents a comprehensive overview of agentic development with Microsoft Agent Framework, detailing how DevUI, AG-UI, and OpenTelemetry accelerate building, debugging, and deploying advanced AI agents in Python and .NET.<!--excerpt_end-->
 
 # Agentic Development with Microsoft Agent Framework: AG-UI, DevUI & OpenTelemetry Deep Dive
@@ -38,7 +52,7 @@ Kinfey Lo explores best practices for building intelligent, multi-agent applicat
 - **DevUI** provides:
   - Chain-of-thought visualization, making each step of agent reasoning and action transparent.
   - Real-time memory and state inspection, diagnosing context overflow and hallucinations.
-- Available for Python and .NET agents, instantly accessible at local endpoints (http://localhost:8090 / https://localhost:50516/devui).
+- Available for Python and .NET agents, instantly accessible at local endpoints (<http://localhost:8090> / <https://localhost:50516/devui>).
 
 ## Phase 3: Demoing and User Interaction via AG-UI
 

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Modernizing Regulated Industries with Cloud and Agentic AI"
-description: "This news article explores how agentic AI and cloud modernization are driving migration and digital transformation in regulated industries such as healthcare, financial services, and manufacturing. It highlights industry trends and showcases innovative approaches using Microsoft's cloud and AI solutions."
-author: "Maria Bledsoe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/industry/blog/general/2026/03/11/modernizing-regulated-industries-with-cloud-and-agentic-ai/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/industry/blog/general/2026/03/11/modernizing-regulated-industries-with-cloud-and-agentic-ai/
+title: Modernizing Regulated Industries with Cloud and Agentic AI
+author: Maria Bledsoe
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-03-11 16:00:00 +00:00
-permalink: "/2026-03-11-Modernizing-Regulated-Industries-with-Cloud-and-Agentic-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic AI", "AI", "AI + Machine Learning", "AI Strategy", "Azure", "Azure Blog", "Cloud Modernization", "Digital Transformation", "Financial Services", "Healthcare", "Industry Solutions", "Manufacturing", "Microsoft Azure", "News", "Regulated Industries"]
-tags_normalized: ["agentic ai", "ai", "ai plus machine learning", "ai strategy", "azure", "azure blog", "cloud modernization", "digital transformation", "financial services", "healthcare", "industry solutions", "manufacturing", "microsoft azure", "news", "regulated industries"]
+tags:
+- Agentic AI
+- AI
+- AI + Machine Learning
+- AI Strategy
+- Azure
+- Azure Blog
+- Cloud Modernization
+- Digital Transformation
+- Financial Services
+- Healthcare
+- Industry Solutions
+- Manufacturing
+- Microsoft Azure
+- News
+- Regulated Industries
+section_names:
+- ai
+- azure
 ---
-
 Maria Bledsoe examines how agentic AI and cloud technologies are accelerating modernization in regulated sectors, focusing on healthcare, finance, and manufacturing.<!--excerpt_end-->
 
 # Modernizing Regulated Industries with Cloud and Agentic AI

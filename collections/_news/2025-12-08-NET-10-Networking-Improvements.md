@@ -1,20 +1,38 @@
----
-layout: "post"
-title: ".NET 10 Networking Improvements"
-description: "This article provides a detailed breakdown of the latest networking enhancements in .NET 10, including updates to HTTP handling, new WebSocket APIs, security improvements such as TLS 1.3 on OSX, and refinements to core networking primitives. Readers will find code samples and explanations for each major change, targeting developers interested in leveraging new features within the .NET networking space."
-author: "Máňa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-networking-improvements/
+title: .NET 10 Networking Improvements
+author: Máňa
+feed_name: Microsoft .NET Blog
 date: 2025-12-08 18:05:00 +00:00
-permalink: "/2025-12-08-NET-10-Networking-Improvements.html"
-categories: ["Coding", "Security"]
-tags: [".NET", ".NET 10", "Coding", "Cookies", "HTTP", "IP Address", "MediaTypeNames.Yaml", "NegotiatedCipherSuite", "Net Security", "Networking", "News", "Performance Optimization", "Query Verb", "QuicConnection", "Security", "Server Sent Events", "ServerCertificateValidationCallback", "SslStream", "TLS 1.3", "URI", "Web Sockets", "WebSockets", "WebSocketStream", "WinHttpHandler"]
-tags_normalized: ["dotnet", "dotnet 10", "coding", "cookies", "http", "ip address", "mediatypenamesdotyaml", "negotiatedciphersuite", "net security", "networking", "news", "performance optimization", "query verb", "quicconnection", "security", "server sent events", "servercertificatevalidationcallback", "sslstream", "tls 1dot3", "uri", "web sockets", "websockets", "websocketstream", "winhttphandler"]
+tags:
+- .NET
+- .NET 10
+- Cookies
+- HTTP
+- IP Address
+- MediaTypeNames.Yaml
+- NegotiatedCipherSuite
+- Net Security
+- Networking
+- Performance Optimization
+- Query Verb
+- QuicConnection
+- Server Sent Events
+- ServerCertificateValidationCallback
+- SslStream
+- TLS 1.3
+- URI
+- Web Sockets
+- WebSockets
+- WebSocketStream
+- WinHttpHandler
+- Security
+- News
+section_names:
+- dotnet
+- security
+primary_section: dotnet
 ---
-
 Máňa outlines the significant networking improvements in .NET 10, including HTTP, WebSocket API upgrades, and security features relevant to developer scenarios.<!--excerpt_end-->
 
 # .NET 10 Networking Improvements
@@ -65,9 +83,9 @@ throw new CookieException("🍪");
 
 - **Benefit:** Simplifies data reads/writes via Streams, removing manual buffering and message boundary logic.
 - **Common Patterns:**
-    - Read JSON messages: `CreateReadableMessageStream` with `JsonSerializer.DeserializeAsync`
-    - Stream text protocols: `Create`, layer with `StreamReader`
-    - Write binary messages: `CreateWritableMessageStream`, chunk writes, automatic EOM signaling
+  - Read JSON messages: `CreateReadableMessageStream` with `JsonSerializer.DeserializeAsync`
+  - Stream text protocols: `Create`, layer with `StreamReader`
+  - Write binary messages: `CreateWritableMessageStream`, chunk writes, automatic EOM signaling
 - **Before vs After Example:**
   - **Previously:** Manual buffering and EOM checks
   - **Now:** Stream-based read with clear API boundaries

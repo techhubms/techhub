@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Sovereign Cloud Enables Disconnected Operations for Secure AI and Cloud Workloads"
-description: "This news article explores how Microsoft Sovereign Cloud offers new capabilities for running AI models, cloud infrastructure, and productivity workloads in highly regulated, sovereign, and fully disconnected environments. It covers key updates including Azure Local, Microsoft 365 Local, and Foundry Local, empowering organizations to maintain security, governance, and operational continuity even without internet connectivity."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/blog/2026/02/24/microsoft-sovereign-cloud-adds-governance-productivity-and-support-for-large-ai-models-securely-running-even-when-completely-disconnected/
+title: Microsoft Sovereign Cloud Enables Disconnected Operations for Secure AI and Cloud Workloads
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-24 15:35:32 +00:00
-permalink: "/2026-02-24-Microsoft-Sovereign-Cloud-Enables-Disconnected-Operations-for-Secure-AI-and-Cloud-Workloads.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "Azure", "Azure Governance", "Azure Local", "Cloud Security", "Company News", "Compliance", "Data Sovereignty", "Disconnected Operations", "Foundry Local", "Governance", "Hybrid Cloud", "Microsoft 365 Local", "Microsoft Sovereign Cloud", "Multimodal AI Models", "News", "NVIDIA", "On Premises AI", "Policy Enforcement", "Security"]
-tags_normalized: ["ai", "azure", "azure governance", "azure local", "cloud security", "company news", "compliance", "data sovereignty", "disconnected operations", "foundry local", "governance", "hybrid cloud", "microsoft 365 local", "microsoft sovereign cloud", "multimodal ai models", "news", "nvidia", "on premises ai", "policy enforcement", "security"]
+tags:
+- AI
+- Azure
+- Azure Governance
+- Azure Local
+- Cloud Security
+- Company News
+- Compliance
+- Data Sovereignty
+- Disconnected Operations
+- Foundry Local
+- Governance
+- Hybrid Cloud
+- Microsoft 365 Local
+- Microsoft Sovereign Cloud
+- Multimodal AI Models
+- News
+- NVIDIA
+- On Premises AI
+- Policy Enforcement
+- Security
+section_names:
+- ai
+- azure
+- security
 ---
-
 stclarke details Microsoft's new Sovereign Cloud capabilities, highlighting how Azure Local, Foundry Local, and Microsoft 365 Local enable secure, governed, and AI-powered operations in fully disconnected, sovereign environments.<!--excerpt_end-->
 
 # Microsoft Sovereign Cloud Enables Disconnected Operations for Secure AI and Cloud Workloads

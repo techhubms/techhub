@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Manual Update Feature for On-Premises Data Gateway (Public Preview)"
-description: "This article introduces the public preview of the manual update feature for the On-premises Data Gateway, allowing administrators to control update timing via UI or scripts. It details requirements, update steps, and the future road map toward automated updates for improved flexibility, security, and compliance in Microsoft Fabric environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/manual-update-for-on-premises-data-gateway-public-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/manual-update-for-on-premises-data-gateway-public-preview/
+title: Manual Update Feature for On-Premises Data Gateway (Public Preview)
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-02-09 10:00:00 +00:00
-permalink: "/2026-02-09-Manual-Update-Feature-for-On-Premises-Data-Gateway-Public-Preview.html"
-categories: ["Azure"]
-tags: ["Automation", "Azure", "Cluster Updates", "Data Integration", "Gateway API", "Gateway Management", "IT Administration", "Manual Updates", "Microsoft Fabric", "News", "On Premises Data Gateway", "PowerShell", "Security Patching", "Version Control"]
-tags_normalized: ["automation", "azure", "cluster updates", "data integration", "gateway api", "gateway management", "it administration", "manual updates", "microsoft fabric", "news", "on premises data gateway", "powershell", "security patching", "version control"]
+tags:
+- Automation
+- Azure
+- Cluster Updates
+- Data Integration
+- Gateway API
+- Gateway Management
+- IT Administration
+- Manual Updates
+- Microsoft Fabric
+- News
+- On Premises Data Gateway
+- PowerShell
+- Security Patching
+- Version Control
+section_names:
+- azure
 ---
-
 Microsoft Fabric Blog outlines the new manual update capability for On-premises Data Gateway, giving administrators enhanced control over updates. Authored by the Microsoft Fabric Blog team, this feature preview guides secure and flexible gateway maintenance.<!--excerpt_end-->
 
 # Manual Update Feature for On-Premises Data Gateway (Public Preview)

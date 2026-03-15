@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Enhancements to Microsoft Fabric Copy Job: Reset Incremental Copy, Auto Table Creation, and JSON Support"
-description: "This update from the Microsoft Fabric Blog highlights new features in the Copy Job component of Fabric Data Factory. The improvements focus on greater flexibility and automation in data ingestion, including the ability to reset incremental copy, automatic creation of destination tables, expanded JSON file support, and enhanced connection detail visibility. These updates aim to streamline data movement across platforms and simplify troubleshooting for technical users handling cloud, on-premises, or hybrid data workflows."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-reset-incremental-copy-auto-table-creation-and-json-format-support/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/simplifying-data-ingestion-with-copy-job-reset-incremental-copy-auto-table-creation-and-json-format-support/
+title: 'Enhancements to Microsoft Fabric Copy Job: Reset Incremental Copy, Auto Table Creation, and JSON Support'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-08-13 09:00:00 +00:00
-permalink: "/2025-08-13-Enhancements-to-Microsoft-Fabric-Copy-Job-Reset-Incremental-Copy-Auto-Table-Creation-and-JSON-Support.html"
-categories: ["Azure", "ML"]
-tags: ["Auto Table Creation", "Azure", "Azure SQL Database", "Change Data Capture", "Cloud Data Integration", "Copy Job", "Data Automation", "Data Engineering", "Data Ingestion", "Data Movement", "Data Pipeline", "Fabric Data Factory", "Fabric Lakehouse", "Incremental Copy", "JSON Format", "Microsoft Fabric", "ML", "News", "SQL Server"]
-tags_normalized: ["auto table creation", "azure", "azure sql database", "change data capture", "cloud data integration", "copy job", "data automation", "data engineering", "data ingestion", "data movement", "data pipeline", "fabric data factory", "fabric lakehouse", "incremental copy", "json format", "microsoft fabric", "ml", "news", "sql server"]
+tags:
+- Auto Table Creation
+- Azure SQL Database
+- Change Data Capture
+- Cloud Data Integration
+- Copy Job
+- Data Automation
+- Data Engineering
+- Data Ingestion
+- Data Movement
+- Data Pipeline
+- Fabric Data Factory
+- Fabric Lakehouse
+- Incremental Copy
+- JSON Format
+- Microsoft Fabric
+- SQL Server
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 The Microsoft Fabric Blog team introduces new Copy Job features—resettable incremental copy, auto table creation, and JSON support—to improve data ingestion workflows for technical users.<!--excerpt_end-->
 
 # Enhancements to Microsoft Fabric Copy Job: Reset Incremental Copy, Auto Table Creation, and JSON Support

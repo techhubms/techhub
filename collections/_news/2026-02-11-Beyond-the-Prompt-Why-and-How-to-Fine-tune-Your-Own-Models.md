@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Beyond the Prompt – Why and How to Fine-tune Your Own Models"
-description: "This article explores the need for fine-tuning large language models (LLMs) within enterprise AI systems for consistent, reliable, and policy-compliant outputs. Covering Microsoft Foundry's fine-tuning capabilities, it explains different methods such as Supervised Fine-Tuning (SFT), provides detailed step-by-step guidance, code snippets, best practices, and highlights measurable benefits of customizing pre-trained AI models on Azure."
-author: "Radhika Bollineni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/beyond-the-prompt-why-and-how-to-fine-tune-your-own-models/"
-viewing_mode: "external"
-feed_name: "Microsoft AI Foundry Blog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/beyond-the-prompt-why-and-how-to-fine-tune-your-own-models/
+title: Beyond the Prompt – Why and How to Fine-tune Your Own Models
+author: Radhika Bollineni
+primary_section: ai
+feed_name: Microsoft AI Foundry Blog
 date: 2026-02-11 17:29:15 +00:00
-permalink: "/2026-02-11-Beyond-the-Prompt-Why-and-How-to-Fine-tune-Your-Own-Models.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Compliance", "AI Deployment", "Azure", "Azure AI", "Azure AI Projects", "Domain Adaptation", "Fine Tuning", "GPT 4", "LLM", "Microsoft Foundry", "ML", "Model Training", "News", "OpenAI", "Prompt Engineering", "PubMed Dataset", "Python SDK", "Reinforcement Learning", "Retrieval Augmented Generation", "SFT", "Supervised Learning"]
-tags_normalized: ["ai", "ai compliance", "ai deployment", "azure", "azure ai", "azure ai projects", "domain adaptation", "fine tuning", "gpt 4", "llm", "microsoft foundry", "ml", "model training", "news", "openai", "prompt engineering", "pubmed dataset", "python sdk", "reinforcement learning", "retrieval augmented generation", "sft", "supervised learning"]
+tags:
+- AI
+- AI Compliance
+- AI Deployment
+- Azure
+- Azure AI
+- Azure AI Projects
+- Domain Adaptation
+- Fine Tuning
+- GPT 4
+- LLM
+- Microsoft Foundry
+- ML
+- Model Training
+- News
+- OpenAI
+- Prompt Engineering
+- PubMed Dataset
+- Python SDK
+- Reinforcement Learning
+- Retrieval Augmented Generation
+- SFT
+- Supervised Learning
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Radhika Bollineni discusses fine-tuning large language models using Microsoft Foundry. The article covers methods, code examples, and practical tips for training enterprise-ready, reliable AI using Azure's tools and infrastructure.<!--excerpt_end-->
 
 # Beyond the Prompt – Why and How to Fine-tune Your Own Models

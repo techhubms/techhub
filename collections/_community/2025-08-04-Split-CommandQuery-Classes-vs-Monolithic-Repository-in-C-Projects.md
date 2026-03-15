@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Split Command/Query Classes vs Monolithic Repository in C# Projects"
-description: "The author debates the merits of applying CQRS patterns (with split command/query classes) vs a monolithic repository class in C# backend projects. They reflect on team preferences, project maintainability, and evolving best practices, sharing experiences from multiple projects and inviting discussion on current standards."
-author: "Square_Potato6312"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mhdqbc/split_commandquery_classes_vs_monolithic/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1mhdqbc/split_commandquery_classes_vs_monolithic/
+title: Split Command/Query Classes vs Monolithic Repository in C# Projects
+author: Square_Potato6312
+feed_name: Reddit CSharp
 date: 2025-08-04 13:39:41 +00:00
-permalink: "/2025-08-04-Split-CommandQuery-Classes-vs-Monolithic-Repository-in-C-Projects.html"
-categories: ["Coding"]
-tags: ["Backend Development", "C#", "Coding", "Command Query Segregation", "Community", "CQRS", "Design Patterns", "File Organization", "Maintainability", "Project Structure", "Repository Pattern", "Software Practices"]
-tags_normalized: ["backend development", "csharp", "coding", "command query segregation", "community", "cqrs", "design patterns", "file organization", "maintainability", "project structure", "repository pattern", "software practices"]
+tags:
+- Backend Development
+- C#
+- Command Query Segregation
+- CQRS
+- Design Patterns
+- File Organization
+- Maintainability
+- Project Structure
+- Repository Pattern
+- Software Practices
+- Community
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this community post, Square_Potato6312 discusses their recent experiences with CQRS and monolithic repository patterns in C# backend development, exploring team perspectives and best practices.<!--excerpt_end-->
 
 ## Split Command/Query Classes vs Monolithic Repository in C# Projects

@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Add EF Core Migrations to .NET Aspire Solutions"
-description: "This post by Khalid Abuhakmeh demonstrates how to manage Entity Framework Core (EF Core) migrations in .NET Aspire distributed solutions. It covers solution structure, necessary dependencies, implementing a design time DbContext factory, and running migration commands, enabling seamless database schema evolution during development."
-author: "Khalid Abuhakmeh"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://khalidabuhakmeh.com/add-ef-core-migrations-to-dotnet-aspire-solutions"
-viewing_mode: "external"
-feed_name: "Khalid Abuhakmeh's Blog"
-feed_url: "https://khalidabuhakmeh.com/feed.xml"
+﻿---
+external_url: https://khalidabuhakmeh.com/add-ef-core-migrations-to-dotnet-aspire-solutions
+title: Add EF Core Migrations to .NET Aspire Solutions
+author: Khalid Abuhakmeh
+feed_name: Khalid Abuhakmeh's Blog
 date: 2024-10-08 00:00:00 +00:00
-permalink: "/2024-10-08-Add-EF-Core-Migrations-to-NET-Aspire-Solutions.html"
-categories: ["Coding"]
-tags: [".NET", ".NET Aspire", ".NET CLI", "Aspire", "AspireSandbox", "Blogs", "Coding", "Database Schema", "DbContext", "Distributed Applications", "EF Core", "EF Core Migrations", "IDesignTimeDbContextFactory", "PostgreSQL", "VS"]
-tags_normalized: ["dotnet", "dotnet aspire", "dotnet cli", "aspire", "aspiresandbox", "blogs", "coding", "database schema", "dbcontext", "distributed applications", "ef core", "ef core migrations", "idesigntimedbcontextfactory", "postgresql", "vs"]
+tags:
+- .NET
+- .NET Aspire
+- .NET CLI
+- Aspire
+- AspireSandbox
+- Database Schema
+- DbContext
+- Distributed Applications
+- EF Core
+- EF Core Migrations
+- IDesignTimeDbContextFactory
+- PostgreSQL
+- VS
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this detailed guide, Khalid Abuhakmeh walks through bridging the development/runtime gap for managing EF Core migrations within .NET Aspire distributed solutions. The post explores solution structure, code snippets, and essential CLI commands.<!--excerpt_end-->
 
 # Add EF Core Migrations to .NET Aspire Solutions

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Smarter Queries Start Here: Vector Search in SQL Server & Azure SQL DB"
-description: "This session, led by Microsoft Developer, introduces the new capabilities for vector search and embeddings in SQL Server 2025 and Azure SQL Database. Viewers will learn how to store, index, and query vector embeddings through T-SQL, enabling the creation of semantic queries, recommendation engines, and natural language search—all within familiar database environments. Real-world scenarios and practical demonstrations will highlight how these features empower smarter, more relevant searches."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=iu1Cp84lGCw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=iu1Cp84lGCw
+title: 'Smarter Queries Start Here: Vector Search in SQL Server & Azure SQL DB'
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-02-24 17:01:13 +00:00
-permalink: "/2026-02-24-Smarter-Queries-Start-Here-Vector-Search-in-SQL-Server-and-Azure-SQL-DB.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Integration", "Azure", "Azure SQL Database", "Cloud Computing", "Cloud Data Platform", "Database Indexing", "Dev", "Development", "Embeddings", "Machine Learning", "Microsoft", "Microsoft Azure", "Natural Language Search", "Recommendation Engine", "Semantic Queries", "SQL Server", "T SQL", "Tech", "Technology", "Vector Search", "Videos"]
-tags_normalized: ["ai", "ai integration", "azure", "azure sql database", "cloud computing", "cloud data platform", "database indexing", "dev", "development", "embeddings", "machine learning", "microsoft", "microsoft azure", "natural language search", "recommendation engine", "semantic queries", "sql server", "t sql", "tech", "technology", "vector search", "videos"]
+tags:
+- AI
+- AI Integration
+- Azure
+- Azure SQL Database
+- Cloud Computing
+- Cloud Data Platform
+- Database Indexing
+- Dev
+- Development
+- Embeddings
+- Microsoft
+- Microsoft Azure
+- Natural Language Search
+- Recommendation Engine
+- Semantic Queries
+- SQL Server
+- T SQL
+- Tech
+- Technology
+- Vector Search
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer showcases the new vector search and embedding features in SQL Server 2025 and Azure SQL Database, revealing how database developers can enable semantic and natural language search within their data systems.<!--excerpt_end-->
 
 {% youtube iu1Cp84lGCw %}

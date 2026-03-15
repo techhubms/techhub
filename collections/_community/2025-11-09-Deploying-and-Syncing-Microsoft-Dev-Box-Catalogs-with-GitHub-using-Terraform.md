@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform"
-description: "This article by singhshub explains how to deploy Microsoft Dev Box Catalogs with Terraform and synchronize them with GitHub for version-controlled, consistent developer environments. Learn about Azure prerequisite setup, Dev Box Catalog creation, securing secrets using Key Vault, and automation strategies for managing development workstations in a cloud environment."
-author: "singhshub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/deploying-dev-box-catalogs-and-synchronizing-with-github-using/ba-p/4467739
+title: Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform
+author: singhshub
+feed_name: Microsoft Tech Community
 date: 2025-11-09 16:42:48 +00:00
-permalink: "/2025-11-09-Deploying-and-Syncing-Microsoft-Dev-Box-Catalogs-with-GitHub-using-Terraform.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Azure", "Azure CLI", "Azure Dev Center", "Azure Key Vault", "CI/CD", "Cloud Workstation", "Coding", "Community", "Dev Box Catalog", "Development Environment Automation", "DevOps", "GitHub", "GitHub Integration", "IaC", "Microsoft Dev Box", "Resource Group", "Terraform", "Version Control", "Virtual Network"]
-tags_normalized: ["azure", "azure cli", "azure dev center", "azure key vault", "cislashcd", "cloud workstation", "coding", "community", "dev box catalog", "development environment automation", "devops", "github", "github integration", "iac", "microsoft dev box", "resource group", "terraform", "version control", "virtual network"]
+tags:
+- Azure CLI
+- Azure Dev Center
+- Azure Key Vault
+- CI/CD
+- Cloud Workstation
+- Dev Box Catalog
+- Development Environment Automation
+- GitHub
+- GitHub Integration
+- IaC
+- Microsoft Dev Box
+- Resource Group
+- Terraform
+- Version Control
+- Virtual Network
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 singhshub outlines how to automate the deployment of Microsoft Dev Box Catalogs with Terraform and keep them synchronized with GitHub, providing a repeatable, secure, and version-controlled cloud development environment for teams.<!--excerpt_end-->
 
 # Deploying and Syncing Microsoft Dev Box Catalogs with GitHub using Terraform

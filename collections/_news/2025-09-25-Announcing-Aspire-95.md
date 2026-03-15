@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Announcing Aspire 9.5"
-description: "This official announcement details the release of Aspire 9.5—a significant update for the .NET Aspire ecosystem. It introduces the preview 'aspire update' command, streamlined single-file AppHost, improved CLI and dashboard UX, built-in AI and DevTunnel integrations, enhanced YARP support for static files, and wider tooling compatibility. Developers will find actionable examples for upgrading, integrating resources, taking advantage of dashboard insights, and leveraging cloud and distributed app features."
-author: "Jeffrey Fritz"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/announcing-dotnet-aspire-95/
+title: Announcing Aspire 9.5
+author: Jeffrey Fritz
+feed_name: Microsoft .NET Blog
 date: 2025-09-25 17:25:00 +00:00
-permalink: "/2025-09-25-Announcing-Aspire-95.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: [".NET", ".NET 10", ".NET Aspire", "AI", "AI Integrations", "AppHost", "Aspire", "Aspire CLI", "Azure AI Foundry", "CLI", "Cloud Native", "Coding", "Containers", "Dashboards", "DevOps", "DevTunnels", "Distributed Applications", "GitHub Models", "News", "OpenAI", "VS", "YARP"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet aspire", "ai", "ai integrations", "apphost", "aspire", "aspire cli", "azure ai foundry", "cli", "cloud native", "coding", "containers", "dashboards", "devops", "devtunnels", "distributed applications", "github models", "news", "openai", "vs", "yarp"]
+tags:
+- .NET
+- .NET 10
+- .NET Aspire
+- AI Integrations
+- AppHost
+- Aspire
+- Aspire CLI
+- Azure AI Foundry
+- CLI
+- Cloud Native
+- Containers
+- Dashboards
+- DevTunnels
+- Distributed Applications
+- GitHub Models
+- OpenAI
+- VS
+- YARP
+- AI
+- DevOps
+- News
+section_names:
+- ai
+- dotnet
+- devops
+primary_section: ai
 ---
-
 Jeffrey Fritz announces Aspire 9.5, highlighting rich new features for .NET distributed application developers, including enhanced AI integrations, streamlined DevOps workflows, and powerful CLI and dashboard improvements.<!--excerpt_end-->
 
 # Announcing Aspire 9.5
@@ -36,9 +53,9 @@ Aspire 9.5 introduces major enhancements for developers building distributed app
 
 - Improved Aspire CLI for a better developer workflow
 - **Single-File AppHost (Preview):**
-    - Supports defining distributed applications in a single `apphost.cs` file
-    - Reduces startup complexity—no project file needed
-    - Requires .NET SDK 10.0.100 RC1 or later and enabling feature flags
+  - Supports defining distributed applications in a single `apphost.cs` file
+  - Reduces startup complexity—no project file needed
+  - Requires .NET SDK 10.0.100 RC1 or later and enabling feature flags
 - Example:
 
     ```bash

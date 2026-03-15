@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Use Copilot in VS Code to Summarize Pull Requests Efficiently"
-description: "This guide by Randy Pagels explains how to utilize GitHub Copilot Chat in Visual Studio Code to quickly generate clear summaries of pull requests, streamlining code reviews and helping teams understand code changes efficiently. It covers practical steps for leveraging Copilot for PR descriptions, inline comments, and large code changes."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html
+title: Use Copilot in VS Code to Summarize Pull Requests Efficiently
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-05-23 00:00:00 +00:00
-permalink: "/2025-05-23-Use-Copilot-in-VS-Code-to-Summarize-Pull-Requests-Efficiently.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Best Practices", "Blogs", "Code Review", "Coding", "Copilot Chat", "Developer Workflow", "DevOps", "GitHub Copilot", "PR Description", "Productivity", "Pull Requests", "Summarization", "VS Code"]
-tags_normalized: ["ai", "best practices", "blogs", "code review", "coding", "copilot chat", "developer workflow", "devops", "github copilot", "pr description", "productivity", "pull requests", "summarization", "vs code"]
+tags:
+- Best Practices
+- Code Review
+- Copilot Chat
+- Developer Workflow
+- PR Description
+- Productivity
+- Pull Requests
+- Summarization
+- VS Code
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels outlines actionable techniques for using GitHub Copilot Chat in Visual Studio Code to create effective pull request summaries, accelerating and clarifying the code review process for developers.<!--excerpt_end-->
 
 ## Use Copilot in VS Code to Summarize PRs
@@ -40,8 +51,8 @@ Code reviews can be time-consuming, especially when manually parsing through eve
 
 - **Open the pull request** in VS Code.
 - **Access Copilot Chat:**
-    - Press `Ctrl + I` (Windows/Linux)
-    - Press `Cmd + I` (Mac)
+  - Press `Ctrl + I` (Windows/Linux)
+  - Press `Cmd + I` (Mac)
 - **Ask Copilot:**
 
     ```

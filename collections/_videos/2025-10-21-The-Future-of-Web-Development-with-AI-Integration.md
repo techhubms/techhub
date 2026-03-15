@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "The Future of Web Development with AI Integration"
-description: "This video clip from The GitHub Podcast features Jason Lengstorf discussing how AI will reshape web development. It explores the evolution of user experiences, anticipates a new era of AI-powered design patterns similar to the influence jQuery had, and highlights the potential for rapid innovation through AI agents well beyond just chatbots."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/shorts/-LJYU75wwrw"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/shorts/-LJYU75wwrw
+title: The Future of Web Development with AI Integration
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-10-21 16:00:01 +00:00
-permalink: "/2025-10-21-The-Future-of-Web-Development-with-AI-Integration.html"
-categories: ["AI"]
-tags: ["AI", "AI Agents", "AI Integration", "Future Of Web", "GitHub Podcast", "Jquery", "Software Innovation", "User Experience", "Videos", "Web Design", "Web Development", "WebDevelopment"]
-tags_normalized: ["ai", "ai agents", "ai integration", "future of web", "github podcast", "jquery", "software innovation", "user experience", "videos", "web design", "web development", "webdevelopment"]
+tags:
+- AI Agents
+- AI Integration
+- Future Of Web
+- GitHub Podcast
+- Jquery
+- Software Innovation
+- User Experience
+- Web Design
+- Web Development
+- WebDevelopment
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 GitHub's Jason Lengstorf explores how AI is set to transform web development, predicting a new wave of innovation and integrated user experiences beyond traditional chatbots.<!--excerpt_end-->
 
 {% youtube -LJYU75wwrw %}

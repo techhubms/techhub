@@ -1,24 +1,34 @@
----
-layout: "post"
-title: "Visual Studio Code and GitHub Copilot - What's new in 1.107"
-description: "In VS Code 1.107 features like the new agent sessions integration with chat, better integration with background agents and the introduction of Claude skills were introduced. This video explains the new features by demoing them. Keep in mind that some features might not be available to you due to enterprise policies or a different pricing plan."
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=Pi57sH7iuKY"
-viewing_mode: "internal"
-youtube_id: "Pi57sH7iuKY"
+﻿---
+external_url: https://www.youtube.com/watch?v=Pi57sH7iuKY
+title: Visual Studio Code and GitHub Copilot - What's new in 1.107
+author: Fokko Veegens
+feed_name: Fokko at Work
 date: 2025-12-22 18:00:00 +00:00
-permalink: "/2025-12-22-Visual-Studio-Code-and-GitHub-Copilot-Whats-new-in-1107.html"
-categories: ["AI", "GitHub Copilot"]
-section: "github-copilot"
-alt-collection: "vscode-updates"
-tags: ["AI", "Background Agent", "Chain Of Thought", "Chat Terminal", "Claude Skills", "Code Coverage", "Custom Agent", "Developer Tools", "GitHub Copilot", "MCP Marketplace", "Merge Conflicts", "Productivity", "Terminal Profiles", "Videos", "VS Code", "VS Code 1.107"]
-tags_normalized: ["ai", "background agent", "chain of thought", "chat terminal", "claude skills", "code coverage", "custom agent", "developer tools", "github copilot", "mcp marketplace", "merge conflicts", "productivity", "terminal profiles", "videos", "vs code", "vs code 1dot107"]
+tags:
+- Background Agent
+- Chain Of Thought
+- Chat Terminal
+- Claude Skills
+- Code Coverage
+- Custom Agent
+- Developer Tools
+- MCP Marketplace
+- Merge Conflicts
+- Productivity
+- Terminal Profiles
+- VS Code
+- VS Code 1.107
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
+In VS Code 1.107 features like the new agent sessions integration with chat, better integration with background agents and the introduction of Claude skills were introduced. This video explains the new features by demoing them. Keep in mind that some features might not be available to you due to enterprise policies or a different pricing plan.<!--excerpt_end-->
 
-{{ page.description }}<!--excerpt_end-->
-
-{% youtube page.youtube_id %}
+{% youtube Pi57sH7iuKY %}
 
 ## Full summary based on transcript
 
@@ -68,4 +78,4 @@ The presenter briefly mentions additional individual-license features such as br
 
 Fokko demonstrates each feature with practical examples throughout the video, making it easy to understand how these enhancements integrate into daily development workflows.
 
-[Watch the video on YouTube](https://www.youtube.com/watch?v={{ page.youtube_id }})
+[Watch the video on YouTube](https://www.youtube.com/watch?v=Pi57sH7iuKY)

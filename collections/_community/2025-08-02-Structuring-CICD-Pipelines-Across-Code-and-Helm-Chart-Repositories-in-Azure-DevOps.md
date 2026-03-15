@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Structuring CI/CD Pipelines Across Code and Helm Chart Repositories in Azure DevOps"
-description: "This community discussion explores best practices for implementing CI/CD pipelines in an Azure DevOps environment, where application code and Helm charts are stored in separate repositories. It covers key tools like Azure DevOps Pipelines, ACR, AKS, and Helm, shares real-world pipeline example snippets, workflow design strategies, and tackles challenges with artifact handoffs and automation between repos. The conversation includes community tips and warns about common anti-patterns."
-author: "machosalade"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/azuredevops/comments/1mfmw05/how_to_structure_cicd_pipelines_across_two_repos/"
-viewing_mode: "external"
-feed_name: "Reddit Azure DevOps"
-feed_url: "https://www.reddit.com/r/azuredevops/.rss"
+﻿---
+external_url: https://www.reddit.com/r/azuredevops/comments/1mfmw05/how_to_structure_cicd_pipelines_across_two_repos/
+title: Structuring CI/CD Pipelines Across Code and Helm Chart Repositories in Azure DevOps
+author: machosalade
+feed_name: Reddit Azure DevOps
 date: 2025-08-02 10:03:38 +00:00
-permalink: "/2025-08-02-Structuring-CICD-Pipelines-Across-Code-and-Helm-Chart-Repositories-in-Azure-DevOps.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["AKS", "Artifact Handoff", "Azure", "Azure Container Registry", "Azure DevOps", "Build Automation", "CI/CD", "Coding", "Community", "DevOps", "Docker", "Helm", "IaC", "Mono Repo", "Multi Repo CI/CD", "Pipelines", "Repository Structure", "YAML Pipelines"]
-tags_normalized: ["aks", "artifact handoff", "azure", "azure container registry", "azure devops", "build automation", "cislashcd", "coding", "community", "devops", "docker", "helm", "iac", "mono repo", "multi repo cislashcd", "pipelines", "repository structure", "yaml pipelines"]
+tags:
+- AKS
+- Artifact Handoff
+- Azure Container Registry
+- Azure DevOps
+- Build Automation
+- CI/CD
+- Docker
+- Helm
+- IaC
+- Mono Repo
+- Multi Repo CI/CD
+- Pipelines
+- Repository Structure
+- YAML Pipelines
+- Azure
+- DevOps
+- Community
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 machosalade and others discuss best practices for wiring up CI/CD pipelines using Azure DevOps, ACR, AKS, and Helm, including sample pipeline YAML and repo structure recommendations.<!--excerpt_end-->
 
 # Structuring CI/CD Pipelines Across Two Repositories in Azure DevOps
@@ -47,7 +61,7 @@ Implement clean, automated CI/CD flow for deployment to AKS, given the separate 
 
 ## Solutions and Community Insights
 
-- **Azure DevOps does not provide out-of-the-box triggers across repos. Workarounds involve: **
+- **Azure DevOps does not provide out-of-the-box triggers across repos. Workarounds involve:**
   - Use pipeline resources to trigger repoB's pipeline after repoA's completes, passing artifact information via variables or files
   - Checking out repoB in repoA's pipeline, programmatically updating the relevant Helm values file with the new image tag
   - Example includes installing tools like yq for YAML manipulation, and committing changes to trigger a downstream pipeline in repoB (though this is controversial)

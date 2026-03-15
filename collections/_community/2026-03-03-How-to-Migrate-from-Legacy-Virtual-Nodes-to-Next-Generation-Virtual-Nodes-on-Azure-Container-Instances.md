@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "How to Migrate from Legacy Virtual Nodes to Next-Generation Virtual Nodes on Azure Container Instances"
-description: "This comprehensive guide by adamsharif-msft explains the process of migrating an Azure Kubernetes Service (AKS) cluster from the legacy Virtual Nodes managed add-on to the new generation of Virtual Nodes on Azure Container Instances (ACI) managed with Helm. The article discusses new feature additions, limitations, and provides step-by-step migration instructions, including required Azure CLI commands, Helm chart installation, and key troubleshooting steps for successful deployment and validation of the new Virtual Nodes architecture."
-author: "adamsharif-msft"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/migrating-to-the-next-generation-of-virtual-nodes-on-azure/ba-p/4496565
+title: How to Migrate from Legacy Virtual Nodes to Next-Generation Virtual Nodes on Azure Container Instances
+author: adamsharif-msft
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-03-03 09:13:14 +00:00
-permalink: "/2026-03-03-How-to-Migrate-from-Legacy-Virtual-Nodes-to-Next-Generation-Virtual-Nodes-on-Azure-Container-Instances.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["ACI", "AKS", "Application Modernization", "Azure", "Azure CLI", "Azure Container Instances", "Bash", "Cloud Native", "Cluster Migration", "Coding", "Community", "Container Deployment", "Container Networking", "DevOps", "Helm", "Kubernetes", "Managed Identity", "Microservices", "Network Security Groups", "NodeSelector", "Persistent Volumes", "Pod Scheduling", "Troubleshooting", "Virtual Nodes", "VNet Peering"]
-tags_normalized: ["aci", "aks", "application modernization", "azure", "azure cli", "azure container instances", "bash", "cloud native", "cluster migration", "coding", "community", "container deployment", "container networking", "devops", "helm", "kubernetes", "managed identity", "microservices", "network security groups", "nodeselector", "persistent volumes", "pod scheduling", "troubleshooting", "virtual nodes", "vnet peering"]
+tags:
+- ACI
+- AKS
+- Application Modernization
+- Azure
+- Azure CLI
+- Azure Container Instances
+- Bash
+- Cloud Native
+- Cluster Migration
+- Community
+- Container Deployment
+- Container Networking
+- DevOps
+- Helm
+- Kubernetes
+- Managed Identity
+- Microservices
+- Network Security Groups
+- NodeSelector
+- Persistent Volumes
+- Pod Scheduling
+- Troubleshooting
+- Virtual Nodes
+- VNet Peering
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 adamsharif-msft provides an in-depth walkthrough on migrating from the legacy AKS Virtual Nodes add-on to the next-generation Virtual Nodes on Azure Container Instances, highlighting new features, requirements, and stepwise implementation tips.<!--excerpt_end-->
 
 # Migrating to the Next Generation of Virtual Nodes on Azure Container Instances (ACI)

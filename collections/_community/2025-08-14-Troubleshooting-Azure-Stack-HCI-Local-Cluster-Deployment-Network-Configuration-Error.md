@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Troubleshooting Azure Stack HCI Local Cluster Deployment: Network Configuration Error"
-description: "This post describes a deployment challenge encountered while setting up an Azure local cluster on Stack HCI. The user receives a network configuration error during the cluster creation phase, despite earlier networking steps passing successfully. The error message references configuration file paths and PowerShell module lines, making diagnosis difficult."
-author: "JensI"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-stack/error-no-file/m-p/4443115#M277
+title: 'Troubleshooting Azure Stack HCI Local Cluster Deployment: Network Configuration Error'
+author: JensI
+feed_name: Microsoft Tech Community
 date: 2025-08-14 07:04:16 +00:00
-permalink: "/2025-08-14-Troubleshooting-Azure-Stack-HCI-Local-Cluster-Deployment-Network-Configuration-Error.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Stack HCI", "CloudDeployment", "Cluster Deployment", "Cluster.psm1", "Community", "Deployment Error", "Hybrid Cloud", "Microsoft Azure", "Network Configuration", "PowerShell", "SCPSModule"]
-tags_normalized: ["azure", "azure stack hci", "clouddeployment", "cluster deployment", "clusterdotpsm1", "community", "deployment error", "hybrid cloud", "microsoft azure", "network configuration", "powershell", "scpsmodule"]
+tags:
+- Azure Stack HCI
+- CloudDeployment
+- Cluster Deployment
+- Cluster.psm1
+- Deployment Error
+- Hybrid Cloud
+- Microsoft Azure
+- Network Configuration
+- PowerShell
+- SCPSModule
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 JensI shares a problem encountered while deploying an Azure Stack HCI local cluster, highlighting a vague network configuration error and seeking troubleshooting steps.<!--excerpt_end-->
 
 # Troubleshooting Azure Stack HCI Local Cluster Deployment: Network Configuration Error

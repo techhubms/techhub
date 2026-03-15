@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "VS Code v1.110 Release: Highlights and GitHub Copilot Updates"
-description: "This video session features the Visual Studio Code team highlighting major updates introduced in the v1.110 release. The presentation also covers notable improvements and demos related to GitHub Copilot. Viewers can expect a discussion of the new development features and a chance to interact live with the team."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=3bj8Gs-CHWU"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=3bj8Gs-CHWU
+title: 'VS Code v1.110 Release: Highlights and GitHub Copilot Updates'
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-23 19:51:49 +00:00
-permalink: "/2026-02-23-VS-Code-v1110-Release-Highlights-and-GitHub-Copilot-Updates.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Editor", "Coding", "Developer Tools", "GitHub Copilot", "Live Q&A", "Product Demo", "Programming", "Release Highlights", "V1.110", "Videos", "VS Code", "Vscoderelease"]
-tags_normalized: ["ai", "code editor", "coding", "developer tools", "github copilot", "live qanda", "product demo", "programming", "release highlights", "v1dot110", "videos", "vs code", "vscoderelease"]
+tags:
+- AI
+- Code Editor
+- Developer Tools
+- GitHub Copilot
+- Live Q&A
+- Product Demo
+- Programming
+- Release Highlights
+- V1.110
+- Videos
+- VS Code
+- Vscoderelease
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Visual Studio Code team, including Olivia McVicker, presents the v1.110 release highlights with a special focus on GitHub Copilot improvements and new developer features.<!--excerpt_end-->
 
 {% youtube 3bj8Gs-CHWU %}

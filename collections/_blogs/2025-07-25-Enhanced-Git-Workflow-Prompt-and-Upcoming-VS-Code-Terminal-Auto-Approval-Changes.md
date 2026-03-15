@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes"
-description: "Reinier van Maanen discusses updates to his custom Git workflow prompt, major terminal automation improvements using GitHub Copilot Chat, and important upcoming changes to the terminal auto-approval feature in Visual Studio Code, requiring configuration updates for seamless developer workflows."
-author: "Reinier van Maanen"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html"
-viewing_mode: "external"
-feed_name: "Reinier van Maanen's blog"
-feed_url: "https://r-vm.com/feed.xml"
+﻿---
+external_url: https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html
+title: Enhanced Git Workflow Prompt and Upcoming VS Code Terminal Auto-Approval Changes
+author: Reinier van Maanen
+feed_name: Reinier van Maanen's blog
 date: 2025-07-25 00:00:00 +00:00
-permalink: "/2025-07-25-Enhanced-Git-Workflow-Prompt-and-Upcoming-VS-Code-Terminal-Auto-Approval-Changes.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "Blogs", "Branch Protection", "Coding", "Configuration", "Configuration Changes", "Custom Prompts", "Developer Tools", "DevOps", "Git", "Git Workflow", "GitHub Copilot", "GitHub Copilot Chat", "MCP Server", "PowerShell Scripts", "Progress Bars", "Prompt Engineering", "Pull Requests", "Regex Support", "Terminal", "Terminal Auto Approval", "Version Control", "Visual Studio Code Extensions", "VS Code", "Workflow", "Workflow Automation"]
-tags_normalized: ["ai", "automation", "blogs", "branch protection", "coding", "configuration", "configuration changes", "custom prompts", "developer tools", "devops", "git", "git workflow", "github copilot", "github copilot chat", "mcp server", "powershell scripts", "progress bars", "prompt engineering", "pull requests", "regex support", "terminal", "terminal auto approval", "version control", "visual studio code extensions", "vs code", "workflow", "workflow automation"]
+tags:
+- Automation
+- Branch Protection
+- Configuration
+- Configuration Changes
+- Custom Prompts
+- Developer Tools
+- Git
+- Git Workflow
+- GitHub Copilot Chat
+- MCP Server
+- PowerShell Scripts
+- Progress Bars
+- Prompt Engineering
+- Pull Requests
+- Regex Support
+- Terminal
+- Terminal Auto Approval
+- Version Control
+- Visual Studio Code Extensions
+- VS Code
+- Workflow
+- Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this post, Reinier van Maanen details his improved Git workflow prompt, VS Code and GitHub Copilot Chat integration, and provides a warning about breaking changes to the terminal auto-approval configuration coming to VS Code.<!--excerpt_end-->
 
 # Enhanced Git Workflow Custom Prompt & Upcoming VS Code Change Warning
@@ -184,7 +208,7 @@ These extensions mean configurations can precisely control which terminal comman
 
 ## References
 
-- [Previous post: Automating my Git workflow in VS Code](/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html)
+- [Previous post: Automating my Git workflow in VS Code](/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval)
 - [VS Code Issue #252650](https://github.com/microsoft/vscode/issues/252650)
 - [VS Code Issue #253314](https://github.com/microsoft/vscode/issues/253314)
 - [VS Code Issue #253472](https://github.com/microsoft/vscode/issues/253472)
@@ -195,6 +219,6 @@ These extensions mean configurations can precisely control which terminal comman
 - [VS Code July 2025 Milestone](https://github.com/microsoft/vscode/milestone/319)
 - [Customize Copilot with Instructions and Prompts](https://code.visualstudio.com/docs/copilot/copilot-customization)
 
-*This article was co-written with GitHub Copilot Chat.*
+_This article was co-written with GitHub Copilot Chat._
 
 This post appeared first on "Reinier van Maanen's blog". [Read the entire article here](https://r-vm.com/improved-git-workflow-custom-prompt-upcoming-vscode-change-warning.html)

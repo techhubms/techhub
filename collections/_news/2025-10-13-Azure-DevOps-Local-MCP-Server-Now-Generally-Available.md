@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure DevOps Local MCP Server Now Generally Available"
-description: "This article announces the general availability of the local Model Context Provider (MCP) Server for Azure DevOps. It outlines new features, such as improved login and authorization, enhanced tooling, and support for private data within local environments. The post details setup instructions and ongoing community-driven development."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/azure-devops-local-mcp-server-generally-available/
+title: Azure DevOps Local MCP Server Now Generally Available
+author: Dan Hellem
+feed_name: Microsoft DevOps Blog
 date: 2025-10-13 11:00:46 +00:00
-permalink: "/2025-10-13-Azure-DevOps-Local-MCP-Server-Now-Generally-Available.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agile", "AI", "Authorization", "Azure", "Azure DevOps", "Community Feedback", "Developer Tools", "DevOps", "GitHub Copilot", "GitHub Copilot Integration", "LLM Integration", "Local Deployment", "MCP Server", "Model Context Provider", "News", "Open Source", "Prompt Engineering", "Tooling", "VS Code"]
-tags_normalized: ["agile", "ai", "authorization", "azure", "azure devops", "community feedback", "developer tools", "devops", "github copilot", "github copilot integration", "llm integration", "local deployment", "mcp server", "model context provider", "news", "open source", "prompt engineering", "tooling", "vs code"]
+tags:
+- Agile
+- Authorization
+- Azure DevOps
+- Community Feedback
+- Developer Tools
+- GitHub Copilot
+- GitHub Copilot Integration
+- LLM Integration
+- Local Deployment
+- MCP Server
+- Model Context Provider
+- Open Source
+- Prompt Engineering
+- Tooling
+- VS Code
+- AI
+- Azure
+- DevOps
+- News
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 Dan Hellem introduces the general availability of the Azure DevOps local MCP Server, highlighting its features, local privacy benefits, and integration steps for developers.<!--excerpt_end-->
 
 # Azure DevOps Local MCP Server Now Generally Available

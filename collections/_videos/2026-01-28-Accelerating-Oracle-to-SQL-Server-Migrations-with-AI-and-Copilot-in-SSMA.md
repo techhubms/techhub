@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Accelerating Oracle to SQL Server Migrations with AI and Copilot in SSMA"
-description: "This episode delves into the integration of Copilot within SQL Server Migration Assistant (SSMA) for Oracle, illustrating how AI enhancements streamline code conversion, minimize manual intervention, and help resolve intricate migration challenges. It covers supported authentication methods and previews upcoming features aimed at further optimizing migration workflows."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=a0c1-24atRQ"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=a0c1-24atRQ
+title: Accelerating Oracle to SQL Server Migrations with AI and Copilot in SSMA
+author: Microsoft Developer
+primary_section: ai
+feed_name: Microsoft Developer YouTube
 date: 2026-01-28 17:00:01 +00:00
-permalink: "/2026-01-28-Accelerating-Oracle-to-SQL-Server-Migrations-with-AI-and-Copilot-in-SSMA.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "Authentication Methods", "Azure", "Azure SQL", "Cloud Computing", "Cloud Database", "Code Conversion", "Copilot", "Data Migration", "Dev", "Development", "Microsoft", "Microsoft Copilot", "Microsoft SQL Server", "Migration Blockers", "Oracle", "SQL Server Migration", "SSMA", "Tech", "Technology", "Videos"]
-tags_normalized: ["ai", "authentication methods", "azure", "azure sql", "cloud computing", "cloud database", "code conversion", "copilot", "data migration", "dev", "development", "microsoft", "microsoft copilot", "microsoft sql server", "migration blockers", "oracle", "sql server migration", "ssma", "tech", "technology", "videos"]
+tags:
+- AI
+- Authentication Methods
+- Azure
+- Azure SQL
+- Cloud Computing
+- Cloud Database
+- Code Conversion
+- Copilot
+- Data Migration
+- Dev
+- Development
+- Microsoft
+- Microsoft Copilot
+- Microsoft SQL Server
+- Migration Blockers
+- Oracle
+- SQL Server Migration
+- SSMA
+- Tech
+- Technology
+- Videos
+section_names:
+- ai
+- azure
 ---
-
 Microsoft Developer highlights how Copilot and AI integrated into SSMA for Oracle modernize SQL Server migration processes, improving code conversion and easing complex migration blockers.<!--excerpt_end-->
 
 {% youtube a0c1-24atRQ %}

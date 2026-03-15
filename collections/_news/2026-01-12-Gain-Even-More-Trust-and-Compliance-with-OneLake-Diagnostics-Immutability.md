@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Gain Even More Trust and Compliance with OneLake Diagnostics Immutability"
-description: "This announcement from the Microsoft Fabric Blog details the general availability of immutable diagnostic logs in OneLake diagnostics for Fabric Lakehouse environments. It explains how organizations can use this feature to enforce tamper-proof log retention, enhance regulatory compliance, and adopt best practices for secure, auditable deployments across Microsoft Fabric and Azure storage."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/gain-even-more-trust-and-compliance-with-onelake-diagnostics-immutability-generally-available/
+title: Gain Even More Trust and Compliance with OneLake Diagnostics Immutability
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2026-01-12 12:00:00 +00:00
-permalink: "/2026-01-12-Gain-Even-More-Trust-and-Compliance-with-OneLake-Diagnostics-Immutability.html"
-categories: ["Azure", "Security"]
-tags: ["Audit Trails", "Azure", "Azure Blob Storage", "Compliance", "Data Governance", "Forensic Investigations", "Immutable Logs", "Lakehouse", "Log Retention", "Microsoft Fabric", "News", "OneLake Diagnostics", "Operational Security", "Security", "Security Best Practices", "Tamper Proof Logs", "Workspace Administration", "Write Once Read Many"]
-tags_normalized: ["audit trails", "azure", "azure blob storage", "compliance", "data governance", "forensic investigations", "immutable logs", "lakehouse", "log retention", "microsoft fabric", "news", "onelake diagnostics", "operational security", "security", "security best practices", "tamper proof logs", "workspace administration", "write once read many"]
+tags:
+- Audit Trails
+- Azure Blob Storage
+- Compliance
+- Data Governance
+- Forensic Investigations
+- Immutable Logs
+- Lakehouse
+- Log Retention
+- Microsoft Fabric
+- OneLake Diagnostics
+- Operational Security
+- Security Best Practices
+- Tamper Proof Logs
+- Workspace Administration
+- Write Once Read Many
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Microsoft Fabric Blog highlights new immutable diagnostic logs for OneLake diagnostics, enabling organizations to achieve stronger compliance and security. Authored by the Microsoft Fabric team, this post outlines technical implementation and key best practices.<!--excerpt_end-->
 
 # Gain Even More Trust and Compliance with OneLake Diagnostics Immutability

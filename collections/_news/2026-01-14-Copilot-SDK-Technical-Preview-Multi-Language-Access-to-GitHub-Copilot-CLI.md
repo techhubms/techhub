@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Copilot SDK Technical Preview: Multi-Language Access to GitHub Copilot CLI"
-description: "This announcement introduces the Copilot SDK in technical preview, offering language-specific SDKs for Node.js/TypeScript, Python, Go, and .NET. Developers can programmatically access the GitHub Copilot CLI and leverage key features such as multi-turn conversations, tool execution, and session lifecycle management, with consistent APIs provided across all supported languages."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview
+title: 'Copilot SDK Technical Preview: Multi-Language Access to GitHub Copilot CLI'
+author: Allison
+feed_name: The GitHub Blog
 date: 2026-01-14 23:00:28 +00:00
-permalink: "/2026-01-14-Copilot-SDK-Technical-Preview-Multi-Language-Access-to-GitHub-Copilot-CLI.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "API", "CLI", "Coding", "Copilot", "Copilot SDK", "Developer Tools", "GitHub Copilot", "Go", "News", "Node.js", "Programming Languages", "Python", "SDK", "Session Management", "Technical Preview", "Tool Execution", "TypeScript"]
-tags_normalized: ["dotnet", "ai", "api", "cli", "coding", "copilot", "copilot sdk", "developer tools", "github copilot", "go", "news", "nodedotjs", "programming languages", "python", "sdk", "session management", "technical preview", "tool execution", "typescript"]
+tags:
+- .NET
+- API
+- CLI
+- Copilot
+- Copilot SDK
+- Developer Tools
+- Go
+- Node.js
+- Programming Languages
+- Python
+- SDK
+- Session Management
+- Technical Preview
+- Tool Execution
+- TypeScript
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison announces the technical preview of the Copilot SDK, providing developers with multi-language SDKs to integrate and extend GitHub Copilot CLI in Node.js, Python, Go, and .NET environments.<!--excerpt_end-->
 
 # Copilot SDK Technical Preview: Multi-Language Access to GitHub Copilot CLI

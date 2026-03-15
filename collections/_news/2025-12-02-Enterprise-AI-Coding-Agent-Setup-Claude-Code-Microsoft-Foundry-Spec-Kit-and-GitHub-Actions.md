@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Enterprise AI Coding Agent Setup: Claude Code, Microsoft Foundry, Spec Kit, and GitHub Actions"
-description: "This detailed guide by Govind Kamtamneni walks through the setup of Claude Code CLI and VS Code extension with Microsoft Foundry, configuring project context via CLAUDE.md, integrating Spec Kit for requirements and planning, and enabling agent workflows in GitHub Actions. Learn to authenticate with Entra ID, manage agents through Agent HQ, and monitor usage in Foundry, ensuring scalable, secure, and structured enterprise AI development leveraging Microsoft's cloud-based AI ecosystem and Anthropic models."
-author: "Govind Kamtamneni"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/claude-code-microsoft-foundry-enterprise-ai-coding-agent-setup/
+title: 'Enterprise AI Coding Agent Setup: Claude Code, Microsoft Foundry, Spec Kit, and GitHub Actions'
+author: Govind Kamtamneni
+feed_name: Microsoft All Things Azure Blog
 date: 2025-12-02 01:37:40 +00:00
-permalink: "/2025-12-02-Enterprise-AI-Coding-Agent-Setup-Claude-Code-Microsoft-Foundry-Spec-Kit-and-GitHub-Actions.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "Security"]
-tags: ["Agent Framework", "AI", "All Things Azure", "Azure", "Azure AI Foundry", "Azure CLI", "Claude Code", "Coding", "DevOps", "Enterprise AI", "Entra ID", "Fabric Connector", "GitHub Actions", "MCP Tools", "Microsoft Foundry", "Multi Agent System", "News", "Node.js", "Project Context", "Python", "RAG Grounding", "Security", "Security Authentication", "Spec Kit", "Structured Development", "Unit Testing", "VS Code Extension"]
-tags_normalized: ["agent framework", "ai", "all things azure", "azure", "azure ai foundry", "azure cli", "claude code", "coding", "devops", "enterprise ai", "entra id", "fabric connector", "github actions", "mcp tools", "microsoft foundry", "multi agent system", "news", "nodedotjs", "project context", "python", "rag grounding", "security", "security authentication", "spec kit", "structured development", "unit testing", "vs code extension"]
+tags:
+- Agent Framework
+- All Things Azure
+- Azure AI Foundry
+- Azure CLI
+- Claude Code
+- Enterprise AI
+- Entra ID
+- Fabric Connector
+- GitHub Actions
+- MCP Tools
+- Microsoft Foundry
+- Multi Agent System
+- Node.js
+- Project Context
+- Python
+- RAG Grounding
+- Security Authentication
+- Spec Kit
+- Structured Development
+- Unit Testing
+- VS Code Extension
+- AI
+- Azure
+- DevOps
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- security
+primary_section: ai
 ---
-
 Govind Kamtamneni provides an in-depth walkthrough on configuring Claude Code with Microsoft Foundry, integrating Spec Kit for requirements, securing with Entra ID, and automating agent workflows in enterprise-scale AI development.<!--excerpt_end-->
 
 # Enterprise AI Coding Agent Setup: Claude Code, Microsoft Foundry, Spec Kit, and GitHub Actions

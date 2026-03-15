@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "AIOps: Bringing Intelligence to IT Operations"
-description: "This article introduces the core concepts and practical implementation steps for AIOps (Artificial Intelligence for IT Operations). It explains how IT teams can leverage machine learning and automation to improve incident detection, reduce manual effort, and enhance system resilience, featuring actionable guidance from choosing a platform to automating remediation."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/aiops-bringing-intelligence-to-it-operations/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/aiops-bringing-intelligence-to-it-operations/
+title: 'AIOps: Bringing Intelligence to IT Operations'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-09-30 08:30:48 +00:00
-permalink: "/2025-09-30-AIOps-Bringing-Intelligence-to-IT-Operations.html"
-categories: ["AI", "DevOps"]
-tags: ["AI", "AIOps", "Anomaly Detection", "Automation", "Blogs", "Continuous Delivery", "Data Pipeline", "DevOps", "ELK Stack", "Incident Response", "IT Operations", "Kubernetes", "Machine Learning", "Monitoring", "Observability", "Predictive Analytics", "Root Cause Analysis"]
-tags_normalized: ["ai", "aiops", "anomaly detection", "automation", "blogs", "continuous delivery", "data pipeline", "devops", "elk stack", "incident response", "it operations", "kubernetes", "machine learning", "monitoring", "observability", "predictive analytics", "root cause analysis"]
+tags:
+- AIOps
+- Anomaly Detection
+- Automation
+- Continuous Delivery
+- Data Pipeline
+- ELK Stack
+- Incident Response
+- IT Operations
+- Kubernetes
+- ML
+- Monitoring
+- Observability
+- Predictive Analytics
+- Root Cause Analysis
+- AI
+- DevOps
+- Blogs
+section_names:
+- ai
+- devops
+primary_section: ai
 ---
-
 Dellenny explores how AIOps leverages AI and automation to transform IT operations, focusing on actionable strategies for implementing intelligent, proactive systems management.<!--excerpt_end-->
 
 # AIOps: Bringing Intelligence to IT Operations
@@ -51,10 +63,10 @@ Modern digital systems have become increasingly complex, stretching traditional 
 
 - **Scenario:** An e-commerce company struggles with high alert volume and lengthy incident resolution.
 - **AIOps Approach:**
-   - Aggregate logs and metrics from Kubernetes clusters to an ELK pipeline.
-   - Use anomaly detection to identify latency spikes in the checkout service.
-   - Correlate incidents to uncover a database connection leak.
-   - Automate a Kubernetes-based service restart upon detection.
+  - Aggregate logs and metrics from Kubernetes clusters to an ELK pipeline.
+  - Use anomaly detection to identify latency spikes in the checkout service.
+  - Correlate incidents to uncover a database connection leak.
+  - Automate a Kubernetes-based service restart upon detection.
 - **Outcome:** Achieved a 40% reduction in MTTR and delivered an improved customer experience.
 
 ## Practical Advice

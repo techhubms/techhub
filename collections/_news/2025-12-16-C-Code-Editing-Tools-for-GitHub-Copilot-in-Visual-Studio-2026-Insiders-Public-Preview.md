@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "C++ Code Editing Tools for GitHub Copilot in Visual Studio 2026 Insiders Public Preview"
-description: "This article introduces the public preview of advanced C++ code editing tools for GitHub Copilot in Visual Studio 2026 Insiders. These tools enhance Copilot's capabilities by adding deep symbol awareness and multi-file editing features, allowing developers to refactor and explore C++ projects with greater accuracy and context."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-12-16-c-code-editing-tools-for-github-copilot-in-public-preview
+title: C++ Code Editing Tools for GitHub Copilot in Visual Studio 2026 Insiders Public Preview
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-12-16 18:28:30 +00:00
-permalink: "/2025-12-16-C-Code-Editing-Tools-for-GitHub-Copilot-in-Visual-Studio-2026-Insiders-Public-Preview.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "C++", "Class Hierarchies", "Code Editing", "Code Refactoring", "Coding", "Copilot", "Copilot Chat", "Developer Tools", "Function Call Tracing", "GitHub Copilot", "Multi File Support", "News", "Public Preview", "Semantic Analysis", "Symbol Awareness", "Tool Integration", "VS"]
-tags_normalized: ["agent mode", "ai", "cplusplus", "class hierarchies", "code editing", "code refactoring", "coding", "copilot", "copilot chat", "developer tools", "function call tracing", "github copilot", "multi file support", "news", "public preview", "semantic analysis", "symbol awareness", "tool integration", "vs"]
+tags:
+- Agent Mode
+- C++
+- Class Hierarchies
+- Code Editing
+- Code Refactoring
+- Copilot
+- Copilot Chat
+- Developer Tools
+- Function Call Tracing
+- Multi File Support
+- Public Preview
+- Semantic Analysis
+- Symbol Awareness
+- Tool Integration
+- VS
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison details new C++ code editing tools for GitHub Copilot in Visual Studio 2026 Insiders, enabling deep code analysis and multi-file editing to improve developer workflows.<!--excerpt_end-->
 
 # C++ Code Editing Tools for GitHub Copilot in Visual Studio 2026 Insiders

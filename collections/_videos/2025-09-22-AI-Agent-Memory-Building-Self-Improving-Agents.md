@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "AI Agent Memory: Building Self-Improving Agents"
-description: "This lesson by Microsoft Developer explores how memory management empowers AI agents to self-improve and personalize user experiences. It covers types of memory, planning, tools, and applications for managing agent memory, highlighted by code samples using Mem0, Semantic Kernel, and Azure AI Search. The session provides practical insight for developers working with Microsoft's AI development stack."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QrYbHesIxpw"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=QrYbHesIxpw
+title: 'AI Agent Memory: Building Self-Improving Agents'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-09-22 18:59:37 +00:00
-permalink: "/2025-09-22-AI-Agent-Memory-Building-Self-Improving-Agents.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Design", "AI", "AI Agents", "AI Development", "Azure", "Azure AI Search", "Cloud Computing", "Cloud Development", "Coding", "Dev", "Development", "Mem0", "Memory Management", "Microsoft", "Microsoft Azure", "Personalization", "Self Improvement", "Semantic Kernel", "Tech", "Technical Tutorial", "Technology", "Videos"]
-tags_normalized: ["agent design", "ai", "ai agents", "ai development", "azure", "azure ai search", "cloud computing", "cloud development", "coding", "dev", "development", "mem0", "memory management", "microsoft", "microsoft azure", "personalization", "self improvement", "semantic kernel", "tech", "technical tutorial", "technology", "videos"]
+tags:
+- Agent Design
+- AI Agents
+- AI Development
+- Azure AI Search
+- Cloud Computing
+- Cloud Development
+- Dev
+- Development
+- Mem0
+- Memory Management
+- Microsoft
+- Microsoft Azure
+- Personalization
+- Self Improvement
+- Semantic Kernel
+- Tech
+- Technical Tutorial
+- Technology
+- AI
+- Azure
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+primary_section: ai
 ---
-
 Microsoft Developer presents a deep dive into AI agent memory systems, featuring memory management strategies, self-improvement, and code samples using Mem0, Semantic Kernel, and Azure AI Search.<!--excerpt_end-->
 
 {% youtube QrYbHesIxpw %}

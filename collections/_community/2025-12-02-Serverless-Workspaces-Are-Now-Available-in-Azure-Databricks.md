@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Serverless Workspaces Are Now Available in Azure Databricks"
-description: "This announcement from AnaviNahar introduces the public preview of Serverless workspaces in Azure Databricks. The article explains how serverless workspaces simplify the deployment and management of infrastructure for large-scale data, analytics, and AI projects. It details the new features available—including automatic storage management, managed compute, network security configurations, consistent data governance through Unity Catalog, bring-your-own-data options, and cost management features. Guidance is provided on choosing between Serverless and Classic workspaces, along with considerations around region availability and compute/service limitations."
-author: "AnaviNahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-live-in-azure-databricks/ba-p/4474712"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/serverless-workspaces-are-live-in-azure-databricks/ba-p/4474712
+title: Serverless Workspaces Are Now Available in Azure Databricks
+author: AnaviNahar
+feed_name: Microsoft Tech Community
 date: 2025-12-02 23:08:45 +00:00
-permalink: "/2025-12-02-Serverless-Workspaces-Are-Now-Available-in-Azure-Databricks.html"
-categories: ["AI", "Azure", "ML", "Security"]
-tags: ["AI", "AI Projects", "Azure", "Azure Databricks", "Cloud Security", "Community", "Cost Management", "Data Analytics", "Data Governance", "Managed Compute", "ML", "Network Security", "Object Storage", "Preview Features", "Python", "Region Availability", "Security", "Serverless Workspaces", "SQL", "Unity Catalog", "Workspace Configuration"]
-tags_normalized: ["ai", "ai projects", "azure", "azure databricks", "cloud security", "community", "cost management", "data analytics", "data governance", "managed compute", "ml", "network security", "object storage", "preview features", "python", "region availability", "security", "serverless workspaces", "sql", "unity catalog", "workspace configuration"]
+tags:
+- AI Projects
+- Azure Databricks
+- Cloud Security
+- Cost Management
+- Data Analytics
+- Data Governance
+- Managed Compute
+- Network Security
+- Object Storage
+- Preview Features
+- Python
+- Region Availability
+- Serverless Workspaces
+- SQL
+- Unity Catalog
+- Workspace Configuration
+- AI
+- Azure
+- ML
+- Security
+- Community
+section_names:
+- ai
+- azure
+- ml
+- security
+primary_section: ai
 ---
-
 AnaviNahar announces the public preview of Serverless workspaces in Azure Databricks, describing how this feature streamlines setup for analytics and AI projects by automating infrastructure management and governance.<!--excerpt_end-->
 
 # Serverless Workspaces Are Now Available in Azure Databricks

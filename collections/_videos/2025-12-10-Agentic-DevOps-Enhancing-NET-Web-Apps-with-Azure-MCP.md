@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Agentic DevOps: Enhancing .NET Web Apps with Azure MCP"
-description: "This session explores how .NET developers can leverage AI-driven workflows and the Azure MCP server in Visual Studio to modernize and streamline web app development and deployment. Key topics include integrating Azure Storage and SQL Database, using infrastructure-as-code principles, and optimizing DevOps practices for faster, more efficient delivery. Practical insights are provided for building robust, scalable solutions with Microsoft technologies."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=V5ATFFuxYUo"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=V5ATFFuxYUo
+title: 'Agentic DevOps: Enhancing .NET Web Apps with Azure MCP'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-12-10 00:00:33 +00:00
-permalink: "/2025-12-10-Agentic-DevOps-Enhancing-NET-Web-Apps-with-Azure-MCP.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "Agentic DevOps", "AI", "AI Driven Development", "Azure", "Azure MCP", "Azure SQL Database", "Azure Storage", "CI/CD", "Cloud Automation", "Coding", "DevOps", "IaC", "Microsoft Cloud Platform", "Modernization", "Videos", "VS", "Web App Development", "Workflow Optimization"]
-tags_normalized: ["dotnet", "agentic devops", "ai", "ai driven development", "azure", "azure mcp", "azure sql database", "azure storage", "cislashcd", "cloud automation", "coding", "devops", "iac", "microsoft cloud platform", "modernization", "videos", "vs", "web app development", "workflow optimization"]
+tags:
+- .NET
+- Agentic DevOps
+- AI Driven Development
+- Azure MCP
+- Azure SQL Database
+- Azure Storage
+- CI/CD
+- Cloud Automation
+- IaC
+- Microsoft Cloud Platform
+- Modernization
+- VS
+- Web App Development
+- Workflow Optimization
+- AI
+- Azure
+- DevOps
+- Videos
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+primary_section: ai
 ---
-
 dotnet shares insights on how .NET developers can use the Azure MCP server and AI-powered DevOps practices to build and modernize web applications on Azure more efficiently.<!--excerpt_end-->
 
 {% youtube V5ATFFuxYUo %}

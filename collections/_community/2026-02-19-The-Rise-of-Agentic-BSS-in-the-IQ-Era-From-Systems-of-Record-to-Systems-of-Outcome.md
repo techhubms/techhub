@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "The Rise of Agentic BSS in the IQ Era: From Systems of Record to Systems of Outcome"
-description: "This article by Rode Kirk and Rick Lievano explores how agentic AI, powered by Microsoft Copilot Studio and the Model Context Protocol (MCP), is transforming Telecom Business Support Systems (BSS). It examines practical AI agent use cases, Open APIs for interoperability, and hands-on applications for developers in telecommunications."
-author: "rodekirk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/the-rise-of-agentic-bss-in-the-iq-era-from-systems-of-record-to/ba-p/4495499"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/telecommunications-industry-blog/the-rise-of-agentic-bss-in-the-iq-era-from-systems-of-record-to/ba-p/4495499
+title: 'The Rise of Agentic BSS in the IQ Era: From Systems of Record to Systems of Outcome'
+author: rodekirk
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-19 14:26:17 +00:00
-permalink: "/2026-02-19-The-Rise-of-Agentic-BSS-in-the-IQ-Era-From-Systems-of-Record-to-Systems-of-Outcome.html"
-categories: ["AI"]
-tags: ["Agentic AI", "AI", "AI Agents", "Automation", "Billing Analysis Agent", "BSS Transformation", "Business Support Systems", "Cloud Computing", "Community", "Digital Platforms", "Enterprise Integration", "Interoperability", "MCP", "Microsoft Copilot Studio", "No Code AI", "Telecom BSS", "Telecommunications", "TM Forum Open API"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "automation", "billing analysis agent", "bss transformation", "business support systems", "cloud computing", "community", "digital platforms", "enterprise integration", "interoperability", "mcp", "microsoft copilot studio", "no code ai", "telecom bss", "telecommunications", "tm forum open api"]
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- Automation
+- Billing Analysis Agent
+- BSS Transformation
+- Business Support Systems
+- Cloud Computing
+- Community
+- Digital Platforms
+- Enterprise Integration
+- Interoperability
+- MCP
+- Microsoft Copilot Studio
+- No Code AI
+- Telecom BSS
+- Telecommunications
+- TM Forum Open API
+section_names:
+- ai
 ---
-
 Rode Kirk and Rick Lievano discuss the transformation of telecom BSS using agentic AI with Microsoft Copilot Studio, highlighting real-world use cases, integrations, and hands-on opportunities for developers in the telecommunications sector.<!--excerpt_end-->
 
 # The Rise of Agentic BSS in the IQ Era: From Systems of Record to Systems of Outcome

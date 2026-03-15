@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Trying out the Zed editor on Windows for .NET and Markdown"
-description: "Andrew Lock evaluates the Zed editor on Windows as a potential alternative to VS Code for editing .NET projects and Markdown documents. The post details the installation, configuration, extension management, C# and Markdown support, performance impressions, missing features, and how Zed compares with VS Code for these specific developer workflows."
-author: "Andrew Lock"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/"
-viewing_mode: "external"
-feed_name: "Andrew Lock's Blog"
-feed_url: "https://andrewlock.net/rss.xml"
+﻿---
+external_url: https://andrewlock.net/trying-out-the-zed-editor-on-windows-for-dotnet-and-markdown/
+title: Trying out the Zed editor on Windows for .NET and Markdown
+author: Andrew Lock
+feed_name: Andrew Lock's Blog
 date: 2025-12-09 10:00:00 +00:00
-permalink: "/2025-12-09-Trying-out-the-Zed-editor-on-Windows-for-NET-and-Markdown.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Coding", "Customization", "Developer Tools", "Editor Comparison", "Extensions", "IDE", "IDEs", "Keyboard Shortcuts", "Markdown", "OmniSharp", "Syntax Highlighting", "VS Code", "Windows", "Zed Editor"]
-tags_normalized: ["dotnet", "blogs", "csharp", "coding", "customization", "developer tools", "editor comparison", "extensions", "ide", "ides", "keyboard shortcuts", "markdown", "omnisharp", "syntax highlighting", "vs code", "windows", "zed editor"]
+tags:
+- .NET
+- C#
+- Customization
+- Developer Tools
+- Editor Comparison
+- Extensions
+- IDE
+- IDEs
+- Keyboard Shortcuts
+- Markdown
+- OmniSharp
+- Syntax Highlighting
+- VS Code
+- Windows
+- Zed Editor
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Andrew Lock explores whether the Zed editor on Windows can replace VS Code for .NET and Markdown editing, sharing his installation experience, setup tips, feature comparisons, and impressions.<!--excerpt_end-->
 
 # Trying out the Zed editor on Windows for .NET and Markdown

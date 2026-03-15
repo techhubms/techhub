@@ -1,20 +1,25 @@
----
-layout: "post"
-title: "More type union proposals adopted by the language design team!"
-description: "The language design team for C# has adopted additional proposals for type unions. This article links to meeting notes and community discussions highlighting this latest step toward incorporating type unions into the C# language, reflecting ongoing evolution in its type system."
-author: "DayYam"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mf2xll/more_type_union_proposals_adopted_by_the_language/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1mf2xll/more_type_union_proposals_adopted_by_the_language/
+title: More type union proposals adopted by the language design team!
+author: DayYam
+feed_name: Reddit CSharp
 date: 2025-08-01 17:38:03 +00:00
-permalink: "/2025-08-01-More-type-union-proposals-adopted-by-the-language-design-team.html"
-categories: ["Coding"]
-tags: [".NET", "C#", "C# Language", "C# Proposals", "Coding", "Community", "Csharplang", "Feature Adoption", "Language Design", "Language Features", "Type System", "Type Unions"]
-tags_normalized: ["dotnet", "csharp", "csharp language", "csharp proposals", "coding", "community", "csharplang", "feature adoption", "language design", "language features", "type system", "type unions"]
+tags:
+- .NET
+- C#
+- C# Language
+- C# Proposals
+- Csharplang
+- Feature Adoption
+- Language Design
+- Language Features
+- Type System
+- Type Unions
+- Community
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 DayYam reports on recent developments in the C# language as the design team adopts more proposals for type unions. The article includes links to official meeting notes and community discussions.<!--excerpt_end-->
 
 ## More Type Union Proposals Adopted by the C# Language Design Team

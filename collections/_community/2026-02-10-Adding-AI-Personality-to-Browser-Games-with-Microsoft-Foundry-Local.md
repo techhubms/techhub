@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Adding AI Personality to Browser Games with Microsoft Foundry Local"
-description: "Lee Stott demonstrates how to integrate local AI-powered dynamic commentary into browser-based games using Microsoft Foundry Local and vanilla JavaScript. The post covers a complete architectural approach that leverages small language models (SLMs) for real-time, context-aware, and personality-driven feedback, enhancing player engagement without relying on cloud services."
-author: "Lee_Stott"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/adding-ai-personality-to-browser-games/ba-p/4490892"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/adding-ai-personality-to-browser-games/ba-p/4490892
+title: Adding AI Personality to Browser Games with Microsoft Foundry Local
+author: Lee_Stott
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-10 08:00:00 +00:00
-permalink: "/2026-02-10-Adding-AI-Personality-to-Browser-Games-with-Microsoft-Foundry-Local.html"
-categories: ["AI"]
-tags: ["AI", "AI Integration", "Asynchronous Design", "Browser Games", "Community", "Context Aware AI", "Event Driven Architecture", "Game Development", "JavaScript", "Microsoft Foundry Local", "Node.js", "Open Source", "Progressive Enhancement", "Real Time Commentary", "SLM", "Small Language Models", "Space Invaders"]
-tags_normalized: ["ai", "ai integration", "asynchronous design", "browser games", "community", "context aware ai", "event driven architecture", "game development", "javascript", "microsoft foundry local", "nodedotjs", "open source", "progressive enhancement", "real time commentary", "slm", "small language models", "space invaders"]
+tags:
+- AI
+- AI Integration
+- Asynchronous Design
+- Browser Games
+- Community
+- Context Aware AI
+- Event Driven Architecture
+- Game Development
+- JavaScript
+- Microsoft Foundry Local
+- Node.js
+- Open Source
+- Progressive Enhancement
+- Real Time Commentary
+- SLM
+- Small Language Models
+- Space Invaders
+section_names:
+- ai
 ---
-
 Lee Stott explains how to enhance browser games with AI-powered dynamic commentary using Microsoft Foundry Local. The post details a JavaScript-based architecture for adding real-time, context-aware feedback to games.<!--excerpt_end-->
 
 # Adding AI Personality to Browser Games with Microsoft Foundry Local

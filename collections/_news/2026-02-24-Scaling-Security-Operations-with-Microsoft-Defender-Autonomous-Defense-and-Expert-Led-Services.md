@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Scaling Security Operations with Microsoft Defender Autonomous Defense and Expert-Led Services"
-description: "This article explores the challenges facing modern security operations centers (SOCs) as AI-powered cyberattacks outpace traditional defense tools, and provides a deep dive into how Microsoft's Defender platform combines autonomous, AI-driven security with expert-led services to achieve resilient, scalable SOC transformation."
-author: "Andrew Conway"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/02/24/scaling-security-operations-with-microsoft-defender-autonomous-defense-and-expert-led-services/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/02/24/scaling-security-operations-with-microsoft-defender-autonomous-defense-and-expert-led-services/
+title: Scaling Security Operations with Microsoft Defender Autonomous Defense and Expert-Led Services
+author: Andrew Conway
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-02-24 13:00:00 +00:00
-permalink: "/2026-02-24-Scaling-Security-Operations-with-Microsoft-Defender-Autonomous-Defense-and-Expert-Led-Services.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI in Security", "Autonomous Defense", "Cyber Resilience", "Cyberthreats", "Expert Led Security", "Incident Response", "Managed Detection And Response", "Microsoft Defender", "Microsoft Defender XDR", "Microsoft Security Experts", "News", "Security", "Security Automation", "Security Operations Center", "Security Orchestration", "SOC Modernization", "SOC Transformation"]
-tags_normalized: ["ai", "ai in security", "autonomous defense", "cyber resilience", "cyberthreats", "expert led security", "incident response", "managed detection and response", "microsoft defender", "microsoft defender xdr", "microsoft security experts", "news", "security", "security automation", "security operations center", "security orchestration", "soc modernization", "soc transformation"]
+tags:
+- AI
+- AI in Security
+- Autonomous Defense
+- Cyber Resilience
+- Cyberthreats
+- Expert Led Security
+- Incident Response
+- Managed Detection And Response
+- Microsoft Defender
+- Microsoft Defender XDR
+- Microsoft Security Experts
+- News
+- Security
+- Security Automation
+- Security Operations Center
+- Security Orchestration
+- SOC Modernization
+- SOC Transformation
+section_names:
+- ai
+- security
 ---
-
 Andrew Conway examines how security teams can leverage Microsoft Defender’s autonomous defenses and expert-led services to modernize SOCs, leveraging AI and expert input for improved cyber resilience.<!--excerpt_end-->
 
 # Scaling Security Operations with Microsoft Defender Autonomous Defense and Expert-Led Services

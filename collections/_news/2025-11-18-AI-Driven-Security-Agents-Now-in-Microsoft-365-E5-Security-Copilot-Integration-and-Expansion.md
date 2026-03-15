@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "AI-Driven Security Agents Now in Microsoft 365 E5: Security Copilot Integration and Expansion"
-description: "This update from Microsoft Ignite 2025 details the inclusion of Microsoft Security Copilot with Microsoft 365 E5 subscriptions. It explores a new suite of AI-powered security agents integrated directly with core Microsoft security and compliance solutions such as Defender, Entra, Intune, and Purview. The article explains how these adaptive agents empower security professionals, streamline investigations, enhance threat intelligence, and drive proactive cybersecurity strategies to meet evolving challenges at scale."
-author: "Dorothy Li"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/11/18/agents-built-into-your-workflow-get-security-copilot-with-microsoft-365-e5/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2025/11/18/agents-built-into-your-workflow-get-security-copilot-with-microsoft-365-e5/
+title: 'AI-Driven Security Agents Now in Microsoft 365 E5: Security Copilot Integration and Expansion'
+author: Dorothy Li
+feed_name: Microsoft Security Blog
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-AI-Driven-Security-Agents-Now-in-Microsoft-365-E5-Security-Copilot-Integration-and-Expansion.html"
-categories: ["AI", "Security"]
-tags: ["Adaptive Agents", "AI", "AI Security Agents", "Conditional Access", "Data Security", "Identity And Access Management", "Microsoft 365 E5", "Microsoft Defender", "Microsoft Entra", "Microsoft Intune", "Microsoft Purview", "Microsoft Security Copilot", "News", "Partner Built Agents", "Security", "Security Automation", "Security Operations", "Threat Intelligence"]
-tags_normalized: ["adaptive agents", "ai", "ai security agents", "conditional access", "data security", "identity and access management", "microsoft 365 e5", "microsoft defender", "microsoft entra", "microsoft intune", "microsoft purview", "microsoft security copilot", "news", "partner built agents", "security", "security automation", "security operations", "threat intelligence"]
+tags:
+- Adaptive Agents
+- AI Security Agents
+- Conditional Access
+- Data Security
+- Identity And Access Management
+- Microsoft 365 E5
+- Microsoft Defender
+- Microsoft Entra
+- Microsoft Intune
+- Microsoft Purview
+- Microsoft Security Copilot
+- Partner Built Agents
+- Security Automation
+- Security Operations
+- Threat Intelligence
+- AI
+- Security
+- News
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Dorothy Li introduces the expanded integration of Microsoft Security Copilot with Microsoft 365 E5. This announcement highlights the rollout of AI-based security agents, providing security teams with advanced cyber defense, automation, and proactive threat management features within the familiar Microsoft security ecosystem.<!--excerpt_end-->
 
 # AI-Driven Security Agents Now in Microsoft 365 E5

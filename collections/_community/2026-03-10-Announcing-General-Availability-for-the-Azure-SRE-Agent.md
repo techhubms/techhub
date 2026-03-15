@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Announcing General Availability for the Azure SRE Agent"
-description: "This article introduces the General Availability (GA) of Azure SRE Agent, an AI-powered automation service for Azure operations. It details the new features, architecture improvements, and real-world benefits, including customer usage metrics and event links. It provides technical guidance and resources for adopting AI-driven DevOps reliability tooling."
-author: "Mayunk_Jain"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-for-the-azure-sre-agent/ba-p/4500682"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/announcing-general-availability-for-the-azure-sre-agent/ba-p/4500682
+title: Announcing General Availability for the Azure SRE Agent
+author: Mayunk_Jain
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-03-10 14:00:00 +00:00
-permalink: "/2026-03-10-Announcing-General-Availability-for-the-Azure-SRE-Agent.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["Agentic Automation", "AI", "AI Operations", "Automated Mitigation", "Azure", "Azure DevOps", "Azure SRE Agent", "Cloud Monitoring", "Community", "DevOps", "DevOps Automation", "Incident Resolution", "Incident Response", "MCP Connectors", "Microsoft Azure", "Operational Reliability", "Python Automation", "Root Cause Analysis", "Runbooks"]
-tags_normalized: ["agentic automation", "ai", "ai operations", "automated mitigation", "azure", "azure devops", "azure sre agent", "cloud monitoring", "community", "devops", "devops automation", "incident resolution", "incident response", "mcp connectors", "microsoft azure", "operational reliability", "python automation", "root cause analysis", "runbooks"]
+tags:
+- Agentic Automation
+- AI
+- AI Operations
+- Automated Mitigation
+- Azure
+- Azure DevOps
+- Azure SRE Agent
+- Cloud Monitoring
+- Community
+- DevOps
+- DevOps Automation
+- Incident Resolution
+- Incident Response
+- MCP Connectors
+- Microsoft Azure
+- Operational Reliability
+- Python Automation
+- Root Cause Analysis
+- Runbooks
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Mayunk_Jain announces the GA release of Azure SRE Agent, highlighting its AI-powered DevOps automation for Azure. The piece covers technical architecture, operational outcomes, integration resources, and learning opportunities for reliability-focused teams.<!--excerpt_end-->
 
 # Announcing General Availability for the Azure SRE Agent

@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Craft Prompts That Get Copilot to Deliver What You Need"
-description: "Randy Pagels outlines actionable strategies for crafting effective prompts when working with GitHub Copilot. Tips include using structured guidance, adding context, specifying constraints or styles, employing persona-based prompts, framing with context, and iteratively refining prompts to get more accurate coding results."
-author: "randy.pagels@xebia.com (Randy Pagels)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html"
-viewing_mode: "external"
-feed_name: "Randy Pagels's Blog"
-feed_url: "https://cooknwithcopilot.com/rss.xml"
+﻿---
+external_url: https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html
+title: Craft Prompts That Get Copilot to Deliver What You Need
+author: randy.pagels@xebia.com (Randy Pagels)
+feed_name: Randy Pagels's Blog
 date: 2025-05-02 00:00:00 +00:00
-permalink: "/2025-05-02-Craft-Prompts-That-Get-Copilot-to-Deliver-What-You-Need.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "Blogs", "Code Generation", "Contextual Prompting", "Debugging Copilot", "Developer Productivity", "GitHub Copilot", "Large Language Models", "Persona Based Prompts", "Prompt Engineering", "Structured Prompt", "Workflow Automation"]
-tags_normalized: ["ai", "blogs", "code generation", "contextual prompting", "debugging copilot", "developer productivity", "github copilot", "large language models", "persona based prompts", "prompt engineering", "structured prompt", "workflow automation"]
+tags:
+- Code Generation
+- Contextual Prompting
+- Debugging Copilot
+- Developer Productivity
+- Large Language Models
+- Persona Based Prompts
+- Prompt Engineering
+- Structured Prompt
+- Workflow Automation
+- AI
+- GitHub Copilot
+- Blogs
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Randy Pagels shares techniques for writing prompts that help GitHub Copilot generate more accurate and relevant code. This guide covers structured prompting, providing context, and iterative refinement for best results.<!--excerpt_end-->
 
 ## Craft Prompts That Get Better Results

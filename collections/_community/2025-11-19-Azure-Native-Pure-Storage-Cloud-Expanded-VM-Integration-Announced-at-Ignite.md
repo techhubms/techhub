@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite"
-description: "This post details the Azure Storage team's investment in partner solutions, highlighting the joint development with Pure Storage to deliver enterprise-grade storage on Azure. It covers new capabilities allowing Pure Storage Cloud volumes to be provisioned directly to Azure Virtual Machines, simplifying deployment and management. Customer stories illustrate cost savings, improved performance, and migration scenarios for business-critical workloads. The post provides links to documentation, technical deep dives, and step-by-step demos."
-author: "Aung_Oo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/pure-storage-cloud-azure-native-evolves-at-microsoft-ignite/ba-p/4470118"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/pure-storage-cloud-azure-native-evolves-at-microsoft-ignite/ba-p/4470118
+title: 'Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite'
+author: Aung_Oo
+feed_name: Microsoft Tech Community
 date: 2025-11-19 17:45:00 +00:00
-permalink: "/2025-11-19-Azure-Native-Pure-Storage-Cloud-Expanded-VM-Integration-Announced-at-Ignite.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Boost", "Azure Resource Manager", "Azure Storage", "Azure VMware Solution", "Cloud Integration", "Community", "Cost Optimization", "Data Migration", "Enterprise Storage", "Linux", "Performance", "Portal Management", "Premium Managed Disks V2", "Pure Storage Cloud", "Storage Management", "Virtual Machines", "Windows"]
-tags_normalized: ["azure", "azure boost", "azure resource manager", "azure storage", "azure vmware solution", "cloud integration", "community", "cost optimization", "data migration", "enterprise storage", "linux", "performance", "portal management", "premium managed disks v2", "pure storage cloud", "storage management", "virtual machines", "windows"]
+tags:
+- Azure Boost
+- Azure Resource Manager
+- Azure Storage
+- Azure VMware Solution
+- Cloud Integration
+- Cost Optimization
+- Data Migration
+- Enterprise Storage
+- Linux
+- Performance
+- Portal Management
+- Premium Managed Disks V2
+- Pure Storage Cloud
+- Storage Management
+- Virtual Machines
+- Windows
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 Aung_Oo introduces the expanded Azure Native Pure Storage Cloud integration, detailing how customers can provision volumes to Azure VMs and benefit from enterprise-class storage features, management improvements, and extensive partner support.<!--excerpt_end-->
 
 # Azure Native Pure Storage Cloud: Expanded VM Integration Announced at Ignite
@@ -43,10 +55,10 @@ Microsoft continues to grow its validated partner catalog, now surfacing solutio
 - Purity OS features are accessible natively in Azure.
 - Management via Portal, CLI, ARM for simplified deployment and scaling.
 - Reference links:
-   - [Pure Storage Cloud Documentation](https://aka.ms/ani/purestorage)
-   - [Azure Marketplace Offer](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/purestoragemarketplaceadmin.krypton_3_plan?tab=Overview)
-   - [Technical Details](https://techcommunity.microsoft.com/blog/azurestorageblog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and-azure-to-our-custome/4456246)
-   - [Step-by-Step Demos](https://www.youtube.com/playlist?list=PLVr149Yb_wxGpN_Y6fEMkh_D_SYzWtl13)
+  - [Pure Storage Cloud Documentation](https://aka.ms/ani/purestorage)
+  - [Azure Marketplace Offer](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/purestoragemarketplaceadmin.krypton_3_plan?tab=Overview)
+  - [Technical Details](https://techcommunity.microsoft.com/blog/azurestorageblog/azure-native-pure-storage-cloud-brings-the-best-of-pure-and-azure-to-our-custome/4456246)
+  - [Step-by-Step Demos](https://www.youtube.com/playlist?list=PLVr149Yb_wxGpN_Y6fEMkh_D_SYzWtl13)
 
 ## Customer Stories
 

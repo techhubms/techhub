@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "TFVC Remove Existing Obsolete Policies ASAP"
-description: "This article outlines the deprecation of legacy TFVC check-in policies in Azure DevOps, explaining the phased retirement process, potential impact on repositories, and step-by-step instructions for replacing or removing obsolete policies via Visual Studio or C# code. It provides guidance to ensure ongoing compliance and uninterrupted development workflows."
-author: "Dan Hellem"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/devops/tfvc-remove-existing-obsolete-policies-asap/"
-viewing_mode: "external"
-feed_name: "Microsoft DevOps Blog"
-feed_url: "https://devblogs.microsoft.com/devops/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/devops/tfvc-remove-existing-obsolete-policies-asap/
+title: TFVC Remove Existing Obsolete Policies ASAP
+author: Dan Hellem
+primary_section: dotnet
+feed_name: Microsoft DevOps Blog
 date: 2026-02-18 16:35:23 +00:00
-permalink: "/2026-02-18-TFVC-Remove-Existing-Obsolete-Policies-ASAP.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET Framework", "#devops", "Automation", "Azure", "Azure & Cloud", "Azure DevOps", "Azure Repos", "C#", "Check in Policies", "Coding", "DevOps", "Legacy Systems", "Microsoft.TeamFoundationServer.ExtendedClient", "News", "Policy Migration", "Project Administration", "Repository Management", "Source Control", "Team Explorer", "TFVC", "Version Control", "VS"]
-tags_normalized: ["dotnet framework", "sharpdevops", "automation", "azure", "azure and cloud", "azure devops", "azure repos", "csharp", "check in policies", "coding", "devops", "legacy systems", "microsoftdotteamfoundationserverdotextendedclient", "news", "policy migration", "project administration", "repository management", "source control", "team explorer", "tfvc", "version control", "vs"]
+tags:
+- .NET Framework
+- '#devops'
+- Automation
+- Azure
+- Azure & Cloud
+- Azure DevOps
+- Azure Repos
+- C#
+- Check in Policies
+- DevOps
+- Legacy Systems
+- Microsoft.TeamFoundationServer.ExtendedClient
+- News
+- Policy Migration
+- Project Administration
+- Repository Management
+- Source Control
+- Team Explorer
+- TFVC
+- Version Control
+- VS
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 Dan Hellem explains the deprecation of legacy TFVC check-in policies in Azure DevOps, detailing how to update or remove policies using Visual Studio or a C# app to maintain repository compliance.<!--excerpt_end-->
 
 # TFVC Remove Existing Obsolete Policies ASAP

@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Announcing Hybrid Deployment Options for Azure Virtual Desktop"
-description: "This announcement covers Azure Virtual Desktop’s new hybrid deployment capabilities, enabling organizations to run cloud-native desktop virtualization on both Azure and existing on-premises infrastructure. It details how Azure Arc and partner integrations (like ControlUp, LoginVSI, Nerdio, and Nutanix) enable unified management, optimized VDI, and smooth migration paths, offering flexibility for diverse enterprise environments."
-author: "SteveDMSFT"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-virtual-desktop-blog/announcing-new-hybrid-deployment-options-for-azure-virtual/ba-p/4468781
+title: Announcing Hybrid Deployment Options for Azure Virtual Desktop
+author: SteveDMSFT
+feed_name: Microsoft Tech Community
 date: 2025-11-18 16:00:00 +00:00
-permalink: "/2025-11-18-Announcing-Hybrid-Deployment-Options-for-Azure-Virtual-Desktop.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure Arc", "Azure Virtual Desktop", "Cloud Desktop", "Cloud Migration", "Community", "ControlUp", "Datacenter", "DevOps", "Hybrid Cloud", "Identity Management", "LoginVSI", "Nerdio", "Nutanix", "On Premises", "Partner Integrations", "Remote Work", "VDI", "Virtualization", "VM Management", "Windows Virtual Desktop"]
-tags_normalized: ["azure", "azure arc", "azure virtual desktop", "cloud desktop", "cloud migration", "community", "controlup", "datacenter", "devops", "hybrid cloud", "identity management", "loginvsi", "nerdio", "nutanix", "on premises", "partner integrations", "remote work", "vdi", "virtualization", "vm management", "windows virtual desktop"]
+tags:
+- Azure Arc
+- Azure Virtual Desktop
+- Cloud Desktop
+- Cloud Migration
+- ControlUp
+- Datacenter
+- Hybrid Cloud
+- Identity Management
+- LoginVSI
+- Nerdio
+- Nutanix
+- On Premises
+- Partner Integrations
+- Remote Work
+- VDI
+- Virtualization
+- VM Management
+- Windows Virtual Desktop
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- devops
+primary_section: azure
 ---
-
 SteveDMSFT announces the limited preview of Azure Virtual Desktop for hybrid environments, explaining how organizations can leverage unified cloud and on-premises desktop virtualization through Azure Arc and partner tools.<!--excerpt_end-->
 
 # Announcing Hybrid Deployment Options for Azure Virtual Desktop

@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Challenges with Application Insights Diagnostic Settings and Stream Analytics File Updates"
-description: "This community post discusses issues with exporting Application Insights pageview data to a database via Azure Stream Analytics. The main challenge is that diagnostic settings write logs for an entire hour to a single file in Azure Storage, but Stream Analytics processes the file as soon as it's created, missing subsequent appended data. The author seeks solutions for file write timing and improved integration approaches."
-author: "GarseBo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mjx1ga/application_insights_diagnostic_setting_to/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mjx1ga/application_insights_diagnostic_setting_to/
+title: Challenges with Application Insights Diagnostic Settings and Stream Analytics File Updates
+author: GarseBo
+feed_name: Reddit Azure
 date: 2025-08-07 11:02:14 +00:00
-permalink: "/2025-08-07-Challenges-with-Application-Insights-Diagnostic-Settings-and-Stream-Analytics-File-Updates.html"
-categories: ["Azure", "ML"]
-tags: ["Application Insights", "Azure", "Azure Storage", "Azure Stream Analytics", "Community", "Data Export", "Data Pipeline", "Diagnostic Settings", "Log Export", "Log File Appending", "ML", "Monitoring", "Pageviews", "ResourceID Path", "Storage Account", "Streaming", "Telemetry"]
-tags_normalized: ["application insights", "azure", "azure storage", "azure stream analytics", "community", "data export", "data pipeline", "diagnostic settings", "log export", "log file appending", "ml", "monitoring", "pageviews", "resourceid path", "storage account", "streaming", "telemetry"]
+tags:
+- Application Insights
+- Azure Storage
+- Azure Stream Analytics
+- Data Export
+- Data Pipeline
+- Diagnostic Settings
+- Log Export
+- Log File Appending
+- Monitoring
+- Pageviews
+- ResourceID Path
+- Storage Account
+- Streaming
+- Telemetry
+- Azure
+- ML
+- Community
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 GarseBo describes challenges with Azure Application Insights diagnostic settings writing logs to a single file per hour, causing Stream Analytics to process incomplete data. The post focuses on possible workarounds and improvements.<!--excerpt_end-->
 
 # Challenges with Application Insights Diagnostic Settings and Stream Analytics File Updates

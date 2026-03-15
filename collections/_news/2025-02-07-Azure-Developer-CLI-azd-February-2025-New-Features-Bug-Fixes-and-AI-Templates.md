@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates"
-description: "This post announces the February 2025 release (v1.12.0) of the Azure Developer CLI (azd), detailing new features, bug fixes, updated templates—many focused on AI and Azure integration—and community resources. It highlights key CLI enhancements, improved Bicep support, expanded secret management, and new tools for deploying AI solutions."
-author: "Kristen Womack"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-developer-cli-azd-february-2025/
+title: 'Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates'
+author: Kristen Womack
+feed_name: Microsoft DevBlog
 date: 2025-02-07 20:43:29 +00:00
-permalink: "/2025-02-07-Azure-Developer-CLI-azd-February-2025-New-Features-Bug-Fixes-and-AI-Templates.html"
-categories: ["AI", "Azure", "Coding", "DevOps"]
-tags: [".NET", "AI", "AI App Deployment", "AI Templates", "Azd", "Azure", "Azure Developer CLI", "Azure SDK", "Bicep", "CLI Tools", "Cloud Development", "Codespaces", "Coding", "DevOps", "Docker", "GitHub Codespaces", "Java", "JavaScript", "Key Vault", "Kubernetes", "News", "OpenAI", "Python", "Semantic Kernel", "Typescript", "VS Code"]
-tags_normalized: ["dotnet", "ai", "ai app deployment", "ai templates", "azd", "azure", "azure developer cli", "azure sdk", "bicep", "cli tools", "cloud development", "codespaces", "coding", "devops", "docker", "github codespaces", "java", "javascript", "key vault", "kubernetes", "news", "openai", "python", "semantic kernel", "typescript", "vs code"]
+tags:
+- .NET
+- AI App Deployment
+- AI Templates
+- Azd
+- Azure Developer CLI
+- Azure SDK
+- Bicep
+- CLI Tools
+- Cloud Development
+- Codespaces
+- Docker
+- GitHub Codespaces
+- Java
+- JavaScript
+- Key Vault
+- Kubernetes
+- OpenAI
+- Python
+- Semantic Kernel
+- Typescript
+- VS Code
+- AI
+- Azure
+- DevOps
+- News
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+primary_section: ai
 ---
-
 Authored by Kristen Womack, this post summarizes the Azure Developer CLI (azd) February 2025 update, featuring new CLI capabilities, bug fixes, expanded Bicep and secret management, and an array of new AI-integrated application templates to accelerate cloud app development on Azure.<!--excerpt_end-->
 
 # Azure Developer CLI (azd) – February 2025: New Features, Bug Fixes, and AI Templates
@@ -36,11 +58,11 @@ This post announces the February 2025 release (version 1.12.0) of the Azure Deve
 - **PowerShell Custom Command Format:** Enhanced support for `pwsh` in hook scripts, now including `-NoProfile` and additional arguments ([details](https://github.com/Azure/azure-dev/pull/4595), by [YTiancheng Zhang](https://github.com/Yionse)).
 - **Database Addition:** Fixed issues with `azd add` for databases lacking a host ([#4692](https://github.com/Azure/azure-dev/pull/4692)).
 - **Bicep Improvements:**
-    - Full support for Bicep `@sealed()` decorator on user-defined types ([#4684](https://github.com/Azure/azure-dev/pull/4684)).
-    - Reliable deployment using provision with `sealed()` decorators.
-    - Support for nullable Bicep parameters ([#4722](https://github.com/Azure/azure-dev/pull/4722)).
-    - Key Vault references in parameter files for Bicep ([#4744](https://github.com/Azure/azure-dev/pull/4744)).
-    - Respect for location picker options using `@allowed` and `@metadata` decorators ([#4752](https://github.com/Azure/azure-dev/pull/4752)).
+  - Full support for Bicep `@sealed()` decorator on user-defined types ([#4684](https://github.com/Azure/azure-dev/pull/4684)).
+  - Reliable deployment using provision with `sealed()` decorators.
+  - Support for nullable Bicep parameters ([#4722](https://github.com/Azure/azure-dev/pull/4722)).
+  - Key Vault references in parameter files for Bicep ([#4744](https://github.com/Azure/azure-dev/pull/4744)).
+  - Respect for location picker options using `@allowed` and `@metadata` decorators ([#4752](https://github.com/Azure/azure-dev/pull/4752)).
 
 ### Other Updates
 

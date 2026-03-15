@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Copilot is great, but do you ever wish it actually coded like you?"
-description: "The author discusses the limitations of GitHub Copilot, specifically its inability to match an individual's coding style and problem-solving approach. They introduce a side project of building an agent that learns and adapts to a user's personal coding habits. The post seeks feedback from developers about Copilot's shortcomings and the desire for more personalized code assistants."
-author: "Comfortable-Fish690"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mhgwae/github_copilot_is_great_but_do_you_ever_wish_it/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mhgwae/github_copilot_is_great_but_do_you_ever_wish_it/
+title: GitHub Copilot is great, but do you ever wish it actually coded like you?
+author: Comfortable-Fish690
+feed_name: Reddit Github Copilot
 date: 2025-08-04 15:40:53 +00:00
-permalink: "/2025-08-04-GitHub-Copilot-is-great-but-do-you-ever-wish-it-actually-coded-like-you.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Assistant", "Automation", "Code Completion", "Coding Style", "Community", "Developer Experience", "GitHub Copilot", "Machine Learning", "Personalized AI", "Software Tools", "User Habits"]
-tags_normalized: ["ai", "ai assistant", "automation", "code completion", "coding style", "community", "developer experience", "github copilot", "machine learning", "personalized ai", "software tools", "user habits"]
+tags:
+- AI Assistant
+- Automation
+- Code Completion
+- Coding Style
+- Developer Experience
+- ML
+- Personalized AI
+- Software Tools
+- User Habits
+- AI
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Written by Comfortable-Fish690, this article explores the shortcomings of GitHub Copilot regarding personalized coding styles and introduces the concept of an AI agent tailored to individual habits.<!--excerpt_end-->
 
 ## Exploring the Limits of GitHub Copilot and Personalized Code Assistants

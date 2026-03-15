@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Streamlining Data Management: New Collation Settings in Microsoft Fabric Warehouse and SQL Endpoint"
-description: "Microsoft Fabric introduces support for both Case Sensitive (CS) and Case Insensitive (CI) collations in Warehouses and SQL Endpoints. This update enables workspace-level and item-level collation configuration, enhancing data consistency and flexibility, with upcoming features aimed at further personalization and control of collation settings."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/streamlining-data-management-with-collation-settings-in-microsoft-fabric-warehouse-sql-analytics-endpoint/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/streamlining-data-management-with-collation-settings-in-microsoft-fabric-warehouse-sql-analytics-endpoint/
+title: 'Streamlining Data Management: New Collation Settings in Microsoft Fabric Warehouse and SQL Endpoint'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-08-05 10:30:00 +00:00
-permalink: "/2025-08-05-Streamlining-Data-Management-New-Collation-Settings-in-Microsoft-Fabric-Warehouse-and-SQL-Endpoint.html"
-categories: ["Azure", "ML"]
-tags: ["Azure", "Case Insensitive", "Case Sensitive", "Collation", "Data Management", "Data Workflows", "Item Level Configuration", "Lakehouse", "Microsoft Fabric", "Mirrored Database", "ML", "News", "SQL Endpoint", "Warehouse", "Workspace Level Settings"]
-tags_normalized: ["azure", "case insensitive", "case sensitive", "collation", "data management", "data workflows", "item level configuration", "lakehouse", "microsoft fabric", "mirrored database", "ml", "news", "sql endpoint", "warehouse", "workspace level settings"]
+tags:
+- Case Insensitive
+- Case Sensitive
+- Collation
+- Data Management
+- Data Workflows
+- Item Level Configuration
+- Lakehouse
+- Microsoft Fabric
+- Mirrored Database
+- SQL Endpoint
+- Warehouse
+- Workspace Level Settings
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Authored by the Microsoft Fabric Blog, this article explores the upcoming enhancements to collation settings in Microsoft Fabric Warehouse and SQL Endpoint, offering practical insights into new configuration options and future capabilities.<!--excerpt_end-->
 
 ## Streamlining Data Management with Collation Settings in Microsoft Fabric Warehouse and SQL Endpoint

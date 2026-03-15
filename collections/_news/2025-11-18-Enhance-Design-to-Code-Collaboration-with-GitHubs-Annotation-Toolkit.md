@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enhance Design-to-Code Collaboration with GitHub's Annotation Toolkit"
-description: "This article introduces GitHub’s open source Annotation Toolkit—a Figma library designed to strengthen the connection between designers and developers by embedding accessibility and intent directly into design files. Readers will learn how the toolkit helps prevent frontend accessibility issues through structured annotations, offers a practical guide to getting started, details its real-world impact in code handoffs, and explores its open contribution model for improving design workflows."
-author: "Andrea Griffiths"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/enterprise-software/collaboration/level-up-design-to-code-collaboration-with-githubs-open-source-annotation-toolkit/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/enterprise-software/collaboration/level-up-design-to-code-collaboration-with-githubs-open-source-annotation-toolkit/
+title: Enhance Design-to-Code Collaboration with GitHub's Annotation Toolkit
+author: Andrea Griffiths
+feed_name: The GitHub Blog
 date: 2025-11-18 18:05:17 +00:00
-permalink: "/2025-11-18-Enhance-Design-to-Code-Collaboration-with-GitHubs-Annotation-Toolkit.html"
-categories: ["Coding", "DevOps"]
-tags: ["Accessibility", "Annotation Toolkit", "Coding", "Collaboration", "Design Collaboration", "Design Handoff", "Design Intent", "Developer Workflow", "DevOps", "Documentation", "Enterprise Software", "Figma", "Frontend Development", "GitHub", "News", "Open Source", "Productivity", "Quality Assurance", "UI Engineering", "WCAG"]
-tags_normalized: ["accessibility", "annotation toolkit", "coding", "collaboration", "design collaboration", "design handoff", "design intent", "developer workflow", "devops", "documentation", "enterprise software", "figma", "frontend development", "github", "news", "open source", "productivity", "quality assurance", "ui engineering", "wcag"]
+tags:
+- Accessibility
+- Annotation Toolkit
+- Collaboration
+- Design Collaboration
+- Design Handoff
+- Design Intent
+- Developer Workflow
+- Documentation
+- Enterprise Software
+- Figma
+- Frontend Development
+- GitHub
+- Open Source
+- Productivity
+- Quality Assurance
+- UI Engineering
+- WCAG
+- DevOps
+- News
+- .NET
+section_names:
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 Andrea Griffiths presents how GitHub’s Annotation Toolkit enables seamless design-to-code collaboration in Figma, helping developers and designers address accessibility and documentation challenges.<!--excerpt_end-->
 
 # Enhance Design-to-Code Collaboration with GitHub's Annotation Toolkit

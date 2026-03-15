@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "General Availability of Code Scanning Alert Assignees in GitHub"
-description: "GitHub has announced the general availability of code scanning alert assignees. This feature enables teams to assign and manage ownership of security vulnerabilities directly within their standard developer workflows. New additions include Copilot assignment, REST API integration for bulk operations, notifications, and webhooks for automation. The feature is available on github.com for Code Security and Advanced Security customers, and is coming to GitHub Enterprise Server version 3.20."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-12-16-code-scanning-alert-assignees-are-now-generally-available
+title: General Availability of Code Scanning Alert Assignees in GitHub
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-12-16 09:40:33 +00:00
-permalink: "/2025-12-16-General-Availability-of-Code-Scanning-Alert-Assignees-in-GitHub.html"
-categories: ["AI", "DevOps", "GitHub Copilot", "Security"]
-tags: ["AI", "Alert Assignment", "Alert Notifications", "Application Security", "Code Scanning", "Copilot Autofix", "DevOps", "DevOps Workflows", "GitHub Advanced Security", "GitHub Code Security", "GitHub Copilot", "GitHub Enterprise Server", "News", "Repository Management", "REST API", "Security", "Security Automation", "Security Workflows", "Vulnerability Remediation", "Webhooks"]
-tags_normalized: ["ai", "alert assignment", "alert notifications", "application security", "code scanning", "copilot autofix", "devops", "devops workflows", "github advanced security", "github code security", "github copilot", "github enterprise server", "news", "repository management", "rest api", "security", "security automation", "security workflows", "vulnerability remediation", "webhooks"]
+tags:
+- Alert Assignment
+- Alert Notifications
+- Application Security
+- Code Scanning
+- Copilot Autofix
+- DevOps Workflows
+- GitHub Advanced Security
+- GitHub Code Security
+- GitHub Enterprise Server
+- Repository Management
+- REST API
+- Security Automation
+- Security Workflows
+- Vulnerability Remediation
+- Webhooks
+- AI
+- DevOps
+- GitHub Copilot
+- Security
+- News
+section_names:
+- ai
+- devops
+- github-copilot
+- security
+primary_section: github-copilot
 ---
-
 Allison introduces the general availability of code scanning alert assignee features in GitHub, including assignment to Copilot, automated notifications, and REST API integration for enhanced security vulnerability management.<!--excerpt_end-->
 
 # General Availability of Code Scanning Alert Assignees in GitHub

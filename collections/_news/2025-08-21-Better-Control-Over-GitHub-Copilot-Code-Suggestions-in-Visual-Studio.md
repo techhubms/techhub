@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Better Control Over GitHub Copilot Code Suggestions in Visual Studio"
-description: "This news update by Simona Liao introduces new features for managing GitHub Copilot code completions in Visual Studio 2022. Developers can now minimize distractions, choose when completions appear, and partially accept suggestions, enhancing workflow control and productivity during coding."
-author: "Simona Liao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/tag/github-copilot/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/better-control-over-your-copilot-code-suggestions/
+title: Better Control Over GitHub Copilot Code Suggestions in Visual Studio
+author: Simona Liao
+feed_name: Microsoft DevBlog
 date: 2025-08-21 16:00:37 +00:00
-permalink: "/2025-08-21-Better-Control-Over-GitHub-Copilot-Code-Suggestions-in-Visual-Studio.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "Code Completions", "Code Suggestions", "Coding", "Developer Productivity", "Editor Shortcuts", "GitHub Copilot", "IDE", "IntelliCode", "News", "Next Edit Suggestions", "Partial Accept", "Programming Tools", "VS"]
-tags_normalized: ["ai", "code completions", "code suggestions", "coding", "developer productivity", "editor shortcuts", "github copilot", "ide", "intellicode", "news", "next edit suggestions", "partial accept", "programming tools", "vs"]
+tags:
+- Code Completions
+- Code Suggestions
+- Developer Productivity
+- Editor Shortcuts
+- IDE
+- IntelliCode
+- Next Edit Suggestions
+- Partial Accept
+- Programming Tools
+- VS
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Simona Liao presents updates that give developers more nuanced control over GitHub Copilot suggestions in Visual Studio. The article covers new options, shortcuts, and configurations improving focus and customization.<!--excerpt_end-->
 
 # Better Control Over GitHub Copilot Code Suggestions in Visual Studio

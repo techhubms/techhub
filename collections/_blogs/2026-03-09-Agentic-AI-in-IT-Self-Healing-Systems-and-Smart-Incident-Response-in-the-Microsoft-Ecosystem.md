@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Agentic AI in IT: Self-Healing Systems and Smart Incident Response in the Microsoft Ecosystem"
-description: "This in-depth guide by John Edward explores how agentic AI—autonomous, decision-making artificial intelligence—transforms IT operations within the Microsoft cloud ecosystem. It details the architecture and services (Azure Monitor, Azure AI, Copilot, Automation, Sentinel) enabling self-healing systems and intelligent incident response, with practical examples and best practices for resilient, adaptive IT."
-author: "John Edward"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/agentic-ai-in-it-self-healing-systems-and-smart-incident-response-microsoft-ecosystem-perspective/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/agentic-ai-in-it-self-healing-systems-and-smart-incident-response-microsoft-ecosystem-perspective/
+title: 'Agentic AI in IT: Self-Healing Systems and Smart Incident Response in the Microsoft Ecosystem'
+author: John Edward
+primary_section: ai
+feed_name: Dellenny's Blog
 date: 2026-03-09 09:26:07 +00:00
-permalink: "/2026-03-09-Agentic-AI-in-IT-Self-Healing-Systems-and-Smart-Incident-Response-in-the-Microsoft-Ecosystem.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "Automation", "Azure", "Azure AI", "Azure Arc", "Azure Automation", "Azure DevOps", "Azure Monitor", "Blogs", "Cloud Observability", "Cybersecurity", "DevOps", "Incident Remediation", "IT Operations", "Kubernetes", "Machine Learning", "Microsoft Copilot", "Microsoft Sentinel", "Operational Resilience", "Security", "Self Healing Systems", "Smart Incident Response", "Solution Architecture", "Telemetry"]
-tags_normalized: ["agentic ai", "ai", "automation", "azure", "azure ai", "azure arc", "azure automation", "azure devops", "azure monitor", "blogs", "cloud observability", "cybersecurity", "devops", "incident remediation", "it operations", "kubernetes", "machine learning", "microsoft copilot", "microsoft sentinel", "operational resilience", "security", "self healing systems", "smart incident response", "solution architecture", "telemetry"]
+tags:
+- Agentic AI
+- AI
+- Automation
+- Azure
+- Azure AI
+- Azure Arc
+- Azure Automation
+- Azure DevOps
+- Azure Monitor
+- Blogs
+- Cloud Observability
+- Cybersecurity
+- DevOps
+- Incident Remediation
+- IT Operations
+- Kubernetes
+- Microsoft Copilot
+- Microsoft Sentinel
+- Operational Resilience
+- Security
+- Self Healing Systems
+- Smart Incident Response
+- Solution Architecture
+- Telemetry
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 John Edward provides a comprehensive look at agentic AI in IT, showing how Microsoft Azure and related services create self-healing and intelligent operations through automation, monitoring, and AI-driven incident response.<!--excerpt_end-->
 
 # Agentic AI in IT: Self-Healing Systems and Smart Incident Response (Microsoft Ecosystem Perspective)

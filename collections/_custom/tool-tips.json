@@ -1,0 +1,48 @@
+{
+    "title": "GitHub Copilot Tool Tips",
+    "intro": "Unlock the full potential of GitHub Copilot with these community-built tools, VS Code extensions, and curated resource collections. Whether you want to track your token usage, gain deeper AI insights inside your editor, or discover new ways to integrate Copilot into your workflow, these tool tips will help you get more out of your AI pair programmer.",
+    "tools": [
+        {
+            "name": "Copilot Token Tracker",
+            "description": "A VS Code extension that shows your daily and monthly GitHub Copilot estimated token usage in the status bar. Track consumption patterns, view usage analysis dashboards, measure your Copilot Fluency Score, and optionally sync data across devices with an Azure Storage backend for team-wide reporting.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=RobBos.copilot-token-tracker",
+            "category": "VS Code Extension"
+        },
+        {
+            "name": "VS Code Copilot Insights",
+            "description": "A Visual Studio Code extension that provides detailed insights into your GitHub Copilot interactions directly within your editor. Track acceptance rates, view suggestion statistics, and understand how effectively you are using Copilot in your daily development workflow.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=emanuelebartolesi.vscode-copilot-insights",
+            "category": "VS Code Extension"
+        },
+        {
+            "name": "Awesome Copilot",
+            "description": "A community-maintained collection of awesome resources, tools, and tips for GitHub Copilot. Curated by GitHub, this repository brings together the best extensions, guides, integrations, and learning materials to help you master AI-assisted development.",
+            "url": "https://github.com/github/awesome-copilot",
+            "category": "Resources"
+        },
+        {
+            "name": "Context7",
+            "description": "An MCP server that provides up-to-date library documentation directly to AI coding assistants. Context7 resolves the problem of outdated training data by fetching the latest documentation for any library, ensuring your AI pair programmer gives accurate and current suggestions.",
+            "url": "https://github.com/upstash/context7",
+            "category": "MCP Server"
+        },
+        {
+            "name": "Playwright MCP",
+            "description": "The official Microsoft Playwright MCP (Model Context Protocol) server that enables AI agents to interact with web browsers. Automate browser testing, perform web scraping, and build AI-powered end-to-end test workflows with structured browser control.",
+            "url": "https://github.com/microsoft/playwright-mcp",
+            "category": "MCP Server"
+        },
+        {
+            "name": "Spec Kit",
+            "description": "An open-source toolkit by GitHub for Spec-Driven Development. Instead of vibe coding from scratch, Spec Kit lets you focus on product scenarios and predictable outcomes by turning specifications into executable implementations through a structured multi-step workflow with your AI coding agent.",
+            "url": "https://github.com/github/spec-kit",
+            "category": "AI Workflow"
+        },
+        {
+            "name": "Napkin",
+            "description": "A Copilot CLI plugin that opens a visual whiteboard in your browser, letting you draw, sketch, and add sticky notes, then share everything back with Copilot for analysis and suggestions. Built for anyone who thinks better visually, including PMs, designers, and developers. Works offline with no extra software or accounts required.",
+            "url": "https://github.com/github/awesome-copilot/tree/main/plugins/napkin",
+            "category": "Copilot CLI Plugin"
+        }
+    ]
+}

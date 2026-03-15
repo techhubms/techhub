@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Securing Email and Collaboration with Microsoft Defender for Office 365 and Agentic AI"
-description: "Explore how Microsoft Defender for Office 365 employs agentic AI and advanced automation to detect, investigate, and remediate threats targeting email and collaboration tools. This session, part of Microsoft Ignite 2025, demonstrates AI-powered SoC automation, continuous feedback loops for enhanced protection, and practical strategies for handling phishing, social engineering, and malicious user activity. Dive into unified security operations, posture management, and custom detection scenarios designed for modern, cloud-first environments."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=VZiUn_Nwd5Q"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=VZiUn_Nwd5Q
+title: Securing Email and Collaboration with Microsoft Defender for Office 365 and Agentic AI
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-21 15:18:42 +00:00
-permalink: "/2025-11-21-Securing-Email-and-Collaboration-with-Microsoft-Defender-for-Office-365-and-Agentic-AI.html"
-categories: ["AI", "Security"]
-tags: ["Agentic AI", "AI", "Collaboration Security", "Continuous Learning", "Detection Rules", "Email Protection", "Malicious User Response", "Microsoft Defender For Office 365", "Microsoft Ignite", "Microsoft Security", "ModernizeSecOpswithaunifiedplatform", "MSIgnite", "Phishing Detection", "Posture Management", "Security", "Security Automation", "SoC Automation", "Social Engineering", "Threat Remediation", "Videos"]
-tags_normalized: ["agentic ai", "ai", "collaboration security", "continuous learning", "detection rules", "email protection", "malicious user response", "microsoft defender for office 365", "microsoft ignite", "microsoft security", "modernizesecopswithaunifiedplatform", "msignite", "phishing detection", "posture management", "security", "security automation", "soc automation", "social engineering", "threat remediation", "videos"]
+tags:
+- Agentic AI
+- Collaboration Security
+- Continuous Learning
+- Detection Rules
+- Email Protection
+- Malicious User Response
+- Microsoft Defender For Office 365
+- Microsoft Ignite
+- Microsoft Security
+- ModernizeSecOpswithaunifiedplatform
+- MSIgnite
+- Phishing Detection
+- Posture Management
+- Security Automation
+- SoC Automation
+- Social Engineering
+- Threat Remediation
+- AI
+- Security
+- Videos
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Microsoft Events presents an advanced session on leveraging Defender for Office 365 and agentic AI to enhance organizational security for email and collaboration, focusing on automation and real-world defense techniques.<!--excerpt_end-->
 
 {% youtube VZiUn_Nwd5Q %}

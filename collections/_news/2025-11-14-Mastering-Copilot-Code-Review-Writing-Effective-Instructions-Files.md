@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Mastering Copilot Code Review: Writing Effective Instructions Files"
-description: "This guide explores how to write and structure instructions files for GitHub Copilot code review, including practical tips, recommended patterns, common pitfalls, and concrete examples for both repo-wide and language/path-specific customization. Learn how to maximize Copilot's code review automation for your team's standards through actionable advice and real-world prompts."
-author: "Ria Gopu"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/unlocking-the-full-power-of-copilot-code-review-master-your-instructions-files/
+title: 'Mastering Copilot Code Review: Writing Effective Instructions Files'
+author: Ria Gopu
+feed_name: The GitHub Blog
 date: 2025-11-14 17:00:00 +00:00
-permalink: "/2025-11-14-Mastering-Copilot-Code-Review-Writing-Effective-Instructions-Files.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI & ML", "Applyto Frontmatter", "Automation", "Best Practices", "Code Review Automation", "Code Review Tips", "Coding Guidelines", "Copilot Code Review", "Copilot Instructions.md", "Custom Instructions", "Developer Productivity", "GitHub Copilot", "GitHub Copilot Code Review", "Instructions Files", "News", "Path Specific Instructions", "Style Conventions", "Team Standards"]
-tags_normalized: ["ai", "ai and ml", "applyto frontmatter", "automation", "best practices", "code review automation", "code review tips", "coding guidelines", "copilot code review", "copilot instructionsdotmd", "custom instructions", "developer productivity", "github copilot", "github copilot code review", "instructions files", "news", "path specific instructions", "style conventions", "team standards"]
+tags:
+- AI & ML
+- Applyto Frontmatter
+- Automation
+- Best Practices
+- Code Review Automation
+- Code Review Tips
+- Coding Guidelines
+- Copilot Code Review
+- Copilot Instructions.md
+- Custom Instructions
+- Developer Productivity
+- GitHub Copilot Code Review
+- Instructions Files
+- Path Specific Instructions
+- Style Conventions
+- Team Standards
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Ria Gopu delivers a detailed guide to creating and optimizing instructions files for GitHub Copilot code review, complete with structure templates, practical tips, and prompts for developers.<!--excerpt_end-->
 
 # Mastering Copilot Code Review: Writing Effective Instructions Files
@@ -108,6 +122,7 @@ function myFunction() { ... }
 function My_function() { ... }
 
 ```
+
 ## [Optional] Advanced Sections
 
 ### Framework-Specific Rules
@@ -117,11 +132,13 @@ function My_function() { ... }
 ### Advanced Tips & Edge Cases
 
 - [Document important exceptions/caveats.]
+
 ```
 
 ## Example: `typescript.instructions.md`
 
 ```
+
 --- applyTo: "**/*.ts" ---
 
 # TypeScript Coding Standards
@@ -149,6 +166,7 @@ function My_function() { ... }
 - Write unit tests for exported functions.
 - Use Jest for testing.
 - Name test files as <filename>.test.ts.
+
 ```
 
 ## Getting Started and Editing Instructions

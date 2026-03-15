@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "How GitHub Actions Evolved: Architecture, Key Upgrades & What’s Next"
-description: "This article reviews the major re-architecture of GitHub Actions, highlights newly released features like YAML anchors, larger caches, reusable workflows, and improved workflow dispatch inputs. It also outlines upcoming enhancements for 2026 and invites the developer community to provide feedback for shaping GitHub Actions’ future. The focus is on real-world challenges and solutions for scaling CI/CD, reliability, and workflow flexibility."
-author: "Ben De St Paer-Gotch"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/product-news/lets-talk-about-github-actions/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/product-news/lets-talk-about-github-actions/
+title: 'How GitHub Actions Evolved: Architecture, Key Upgrades & What’s Next'
+author: Ben De St Paer-Gotch
+feed_name: The GitHub Blog
 date: 2025-12-11 17:40:52 +00:00
-permalink: "/2025-12-11-How-GitHub-Actions-Evolved-Architecture-Key-Upgrades-and-Whats-Next.html"
-categories: ["DevOps"]
-tags: ["Architecture", "Arm64 Hosted Runners", "Automation", "Caching", "CI/CD", "Community Feedback", "Custom Images", "Developer Experience", "DevOps", "GitHub Actions", "Macos 15", "News", "News & Insights", "Performance Metrics", "Pipeline Scalability", "Product", "Product Feedback", "Reusable Workflows", "Windows", "Workflow Templates", "YAML Anchors"]
-tags_normalized: ["architecture", "arm64 hosted runners", "automation", "caching", "cislashcd", "community feedback", "custom images", "developer experience", "devops", "github actions", "macos 15", "news", "news and insights", "performance metrics", "pipeline scalability", "product", "product feedback", "reusable workflows", "windows", "workflow templates", "yaml anchors"]
+tags:
+- Architecture
+- Arm64 Hosted Runners
+- Automation
+- Caching
+- CI/CD
+- Community Feedback
+- Custom Images
+- Developer Experience
+- GitHub Actions
+- Macos 15
+- News & Insights
+- Performance Metrics
+- Pipeline Scalability
+- Product
+- Product Feedback
+- Reusable Workflows
+- Windows
+- Workflow Templates
+- YAML Anchors
+- DevOps
+- News
+section_names:
+- devops
+primary_section: devops
 ---
-
 Ben De St Paer-Gotch details how GitHub Actions was re-engineered to boost reliability and scalability, introduces several highly requested upgrades, and previews features planned for 2026—inviting community feedback throughout.<!--excerpt_end-->
 
 # How GitHub Actions Evolved: Architecture, Key Upgrades & What’s Next

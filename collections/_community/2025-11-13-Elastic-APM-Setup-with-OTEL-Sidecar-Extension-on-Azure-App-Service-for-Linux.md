@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "Elastic APM Setup with OTEL Sidecar Extension on Azure App Service for Linux"
-description: "This guide details how to instrument applications on Azure App Service for Linux using the OpenTelemetry (OTEL) sidecar extension with Elastic APM. It walks through retrieving the Elastic APM Server URL and secret token from Kibana, configuring sidecar extension deployment, setting required application environment variables, and validating telemetry data through Kibana’s observability tools. The content focuses on Azure deployment scenarios, code integration for PHP, Node.js, Python, and .NET, and includes links to sample repositories for practical reference."
-author: "TulikaC"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/part-ii-otel-sidecar-extension-on-azure-app-service-for-linux/ba-p/4469576
+title: Elastic APM Setup with OTEL Sidecar Extension on Azure App Service for Linux
+author: TulikaC
+feed_name: Microsoft Tech Community
 date: 2025-11-13 08:44:41 +00:00
-permalink: "/2025-11-13-Elastic-APM-Setup-with-OTEL-Sidecar-Extension-on-Azure-App-Service-for-Linux.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: [".NET", "APM Server", "Application Monitoring", "Azure", "Azure App Service", "Azure Monitor", "Coding", "Community", "Container Deployment", "DevOps", "Elastic APM", "Environment Variables", "Kibana", "Linux", "Node.js", "Observability", "OpenTelemetry", "OTEL Sidecar", "PHP", "Python", "Sample Repository", "Secret Token", "Telemetry"]
-tags_normalized: ["dotnet", "apm server", "application monitoring", "azure", "azure app service", "azure monitor", "coding", "community", "container deployment", "devops", "elastic apm", "environment variables", "kibana", "linux", "nodedotjs", "observability", "opentelemetry", "otel sidecar", "php", "python", "sample repository", "secret token", "telemetry"]
+tags:
+- .NET
+- APM Server
+- Application Monitoring
+- Azure App Service
+- Azure Monitor
+- Container Deployment
+- Elastic APM
+- Environment Variables
+- Kibana
+- Linux
+- Node.js
+- Observability
+- OpenTelemetry
+- OTEL Sidecar
+- PHP
+- Python
+- Sample Repository
+- Secret Token
+- Telemetry
+- Azure
+- DevOps
+- Community
+section_names:
+- azure
+- dotnet
+- devops
+primary_section: dotnet
 ---
-
 TulikaC explains how to connect Azure App Service for Linux to Elastic APM using an OpenTelemetry sidecar extension—covering setup steps, app settings, and validation in Kibana.<!--excerpt_end-->
 
 # Elastic APM Setup with OTEL Sidecar Extension on Azure App Service for Linux

@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Live Coding AI Workflows with VS Code, GitHub Copilot CLI, and Custom Tools"
-description: "This live coding session, hosted by Burke Holland, Pierce Boggan, and James Montemagno, demonstrates how to leverage the latest updates in Visual Studio Code, GitHub Copilot CLI, and experimental toolsets for streamlining AI-driven development workflows. The episode highlights practical approaches and technical integrations for developers enhancing their productivity with AI."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=QZxZgHtl5Qw"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=QZxZgHtl5Qw
+title: Live Coding AI Workflows with VS Code, GitHub Copilot CLI, and Custom Tools
+author: Visual Studio Code
+primary_section: github-copilot
+feed_name: Visual Studio Code YouTube
 date: 2026-02-27 22:46:45 +00:00
-permalink: "/2026-02-27-Live-Coding-AI-Workflows-with-VS-Code-GitHub-Copilot-CLI-and-Custom-Tools.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI in Development", "AI Integration", "AI Workflows", "CLI Tools", "Code Automation", "Coding", "Developer Tools", "GitHub Copilot", "GitHub Copilot CLI", "Live Coding", "Productivity Tools", "Videos", "VS Code"]
-tags_normalized: ["ai", "ai in development", "ai integration", "ai workflows", "cli tools", "code automation", "coding", "developer tools", "github copilot", "github copilot cli", "live coding", "productivity tools", "videos", "vs code"]
+tags:
+- AI
+- AI in Development
+- AI Integration
+- AI Workflows
+- CLI Tools
+- Code Automation
+- Developer Tools
+- GitHub Copilot
+- GitHub Copilot CLI
+- Live Coding
+- Productivity Tools
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 In this session, Visual Studio Code's Burke Holland, Pierce Boggan, and James Montemagno demonstrate live how AI workflows can be improved with GitHub Copilot CLI and custom automation tools.<!--excerpt_end-->
 
 {% youtube QZxZgHtl5Qw %}

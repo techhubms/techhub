@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Five Reasons to Attend SQLCon: A Deep Dive Into SQL Server, Azure SQL, and Microsoft Fabric"
-description: "An overview of the inaugural SQLCon, co-located with FabCon, held in Atlanta, providing access to in-depth SQL Server, Azure SQL, Microsoft Fabric, Power BI, and AI sessions. Anna Hoffman details the conference experience, sessions, workshops, networking, and the latest advancements in Microsoft data technologies."
-author: "Anna Hoffman"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-us/blog/32624"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-us/blog/32624
+title: 'Five Reasons to Attend SQLCon: A Deep Dive Into SQL Server, Azure SQL, and Microsoft Fabric'
+author: Anna Hoffman
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-09 15:12:12 +00:00
-permalink: "/2026-02-09-Five-Reasons-to-Attend-SQLCon-A-Deep-Dive-Into-SQL-Server-Azure-SQL-and-Microsoft-Fabric.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["AI", "AI Integration", "Atlanta Conference", "Azure", "Azure SQL", "Community Networking", "Compute", "Copilot", "Data Engineering", "Databases", "FabCon", "Hybrid + Multicloud", "Microsoft Fabric", "Migration", "ML", "Modernization", "News", "Performance Tuning", "Power BI", "Security And Governance", "SQL Database", "SQL Server", "SQLCon"]
-tags_normalized: ["ai", "ai integration", "atlanta conference", "azure", "azure sql", "community networking", "compute", "copilot", "data engineering", "databases", "fabcon", "hybrid plus multicloud", "microsoft fabric", "migration", "ml", "modernization", "news", "performance tuning", "power bi", "security and governance", "sql database", "sql server", "sqlcon"]
+tags:
+- AI
+- AI Integration
+- Atlanta Conference
+- Azure
+- Azure SQL
+- Community Networking
+- Compute
+- Copilot
+- Data Engineering
+- Databases
+- FabCon
+- Hybrid + Multicloud
+- Microsoft Fabric
+- Migration
+- ML
+- Modernization
+- News
+- Performance Tuning
+- Power BI
+- Security And Governance
+- SQL Database
+- SQL Server
+- SQLCon
+section_names:
+- ai
+- azure
+- ml
 ---
-
 Anna Hoffman introduces SQLCon, co-located with FabCon, a premier event in Atlanta tailored for SQL Server, Azure SQL, Microsoft Fabric, and Power BI professionals. This guide spotlights sessions, hands-on workshops, and the latest Microsoft data advancements.<!--excerpt_end-->
 
 # Five Reasons to Attend SQLCon: A Deep Dive Into SQL Server, Azure SQL, and Microsoft Fabric

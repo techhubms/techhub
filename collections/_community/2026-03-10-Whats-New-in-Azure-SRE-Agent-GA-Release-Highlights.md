@@ -1,20 +1,33 @@
----
-layout: "post"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-sre-agent-in-the-ga-release/ba-p/4500779
 title: "What's New in Azure SRE Agent: GA Release Highlights"
-description: "This update details the general availability of Azure SRE Agent, focusing on new onboarding, deep environment integration, and automated investigation capabilities for Microsoft Azure operations teams. Learn about key features like workflow automation, extensibility, and integration with incident management platforms."
-author: "dchelupati"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/what-s-new-in-azure-sre-agent-in-the-ga-release/ba-p/4500779"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+author: dchelupati
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-10 15:03:50 +00:00
-permalink: "/2026-03-10-Whats-New-in-Azure-SRE-Agent-GA-Release-Highlights.html"
-categories: ["Azure", "DevOps"]
-tags: ["Azure", "Azure DevOps", "Azure Monitoring", "Azure SRE Agent", "Community", "Continuous Learning", "DevOps", "ICM Integration", "Incident Management", "MCP Connectors", "MTTR Reduction", "Operational Automation", "PagerDuty", "Plugin Marketplace", "Python Integration", "Root Cause Analysis", "ServiceNow", "Site Reliability Engineering"]
-tags_normalized: ["azure", "azure devops", "azure monitoring", "azure sre agent", "community", "continuous learning", "devops", "icm integration", "incident management", "mcp connectors", "mttr reduction", "operational automation", "pagerduty", "plugin marketplace", "python integration", "root cause analysis", "servicenow", "site reliability engineering"]
+tags:
+- Azure
+- Azure DevOps
+- Azure Monitoring
+- Azure SRE Agent
+- Community
+- Continuous Learning
+- DevOps
+- ICM Integration
+- Incident Management
+- MCP Connectors
+- MTTR Reduction
+- Operational Automation
+- PagerDuty
+- Plugin Marketplace
+- Python Integration
+- Root Cause Analysis
+- ServiceNow
+- Site Reliability Engineering
+section_names:
+- azure
+- devops
 ---
-
 dchelupati shares an in-depth overview of Azure SRE Agent's general availability, covering new operational, onboarding, and automation features for SRE and DevOps practitioners using Microsoft Azure.<!--excerpt_end-->
 
 # What's New in Azure SRE Agent: GA Release Highlights

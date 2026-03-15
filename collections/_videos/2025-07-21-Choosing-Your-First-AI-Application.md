@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Choosing Your First AI Application"
-description: "This video from John Savill's Technical Training covers essential considerations for selecting your organization's first AI workload. The presentation guides viewers through example use cases, technical and business factors, the value of data, feasibility, ethical concerns, ROI, risk minimization, and the intersection between business needs and AI solutions. The resource also points to whiteboard diagrams and recommended learning paths related to Azure and DevOps. Effective AI strategy and risk-aware, value-driven project selection are emphasized."
-author: "John Savill's Technical Training"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0Ly34nFESQk"
-viewing_mode: "internal"
-feed_name: "John Savill's Technical Training"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=0Ly34nFESQk
+title: Choosing Your First AI Application
+author: John Savill's Technical Training
+feed_name: John Savill's Technical Training
 date: 2025-07-21 08:20:00 +00:00
-permalink: "/2025-07-21-Choosing-Your-First-AI-Application.html"
-categories: ["AI"]
-tags: ["Agent", "Agents", "AI", "AI Deployment", "AI Strategy", "AI Use Cases", "AI Workloads", "Azure Learning", "Business Value", "Data Readiness", "Ethical AI", "Generative AI", "John Savill", "LLM", "Machine Learning", "Project Selection", "Risk Management", "ROI", "Technical Feasibility", "Videos"]
-tags_normalized: ["agent", "agents", "ai", "ai deployment", "ai strategy", "ai use cases", "ai workloads", "azure learning", "business value", "data readiness", "ethical ai", "generative ai", "john savill", "llm", "machine learning", "project selection", "risk management", "roi", "technical feasibility", "videos"]
+tags:
+- Agent
+- Agents
+- AI Deployment
+- AI Strategy
+- AI Use Cases
+- AI Workloads
+- Azure Learning
+- Business Value
+- Data Readiness
+- Ethical AI
+- Generative AI
+- John Savill
+- LLM
+- ML
+- Project Selection
+- Risk Management
+- ROI
+- Technical Feasibility
+- AI
+- Videos
+section_names:
+- ai
+primary_section: ai
 ---
-
 John Savill's Technical Training discusses how organizations can select their first AI application, covering business value, technical requirements, feasibility, and best practices for minimizing risk.<!--excerpt_end-->
 
 {% youtube 0Ly34nFESQk %}

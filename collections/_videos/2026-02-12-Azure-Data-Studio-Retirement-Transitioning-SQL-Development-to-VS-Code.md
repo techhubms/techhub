@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Data Studio Retirement: Transitioning SQL Development to VS Code"
-description: "This episode discusses the retirement of Azure Data Studio and provides guidance for SQL developers on adopting the MSSQL Extension for Visual Studio Code. The content walks through migration steps, demonstrates new features including backup support and the SQL Profiler experience, and highlights the VS Code roadmap for upcoming SQL tooling enhancements."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=rlqrhAsm7F8"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=rlqrhAsm7F8
+title: 'Azure Data Studio Retirement: Transitioning SQL Development to VS Code'
+author: Microsoft Developer
+primary_section: dotnet
+feed_name: Microsoft Developer YouTube
 date: 2026-02-12 17:01:24 +00:00
-permalink: "/2026-02-12-Azure-Data-Studio-Retirement-Transitioning-SQL-Development-to-VS-Code.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure Data Studio", "Cloud Computing", "Coding", "Database Backup", "Database Connections", "Database Migration", "Dev", "Developer Productivity", "Development", "Microsoft", "Microsoft Azure", "MSSQL Extension", "SQL Development", "SQL Profiler", "SQL Server", "SQL Tooling", "Tech", "Technology", "Videos", "VS Code", "VS Code Roadmap"]
-tags_normalized: ["azure", "azure data studio", "cloud computing", "coding", "database backup", "database connections", "database migration", "dev", "developer productivity", "development", "microsoft", "microsoft azure", "mssql extension", "sql development", "sql profiler", "sql server", "sql tooling", "tech", "technology", "videos", "vs code", "vs code roadmap"]
+tags:
+- Azure
+- Azure Data Studio
+- Cloud Computing
+- Database Backup
+- Database Connections
+- Database Migration
+- Dev
+- Developer Productivity
+- Development
+- Microsoft
+- Microsoft Azure
+- MSSQL Extension
+- SQL Development
+- SQL Profiler
+- SQL Server
+- SQL Tooling
+- Tech
+- Technology
+- Videos
+- VS Code
+- VS Code Roadmap
+- .NET
+section_names:
+- azure
+- dotnet
 ---
-
 Microsoft Developer outlines the migration from Azure Data Studio to the MSSQL Extension in VS Code, showcasing new features, migration steps, and future enhancements for SQL developers.<!--excerpt_end-->
 
 {% youtube rlqrhAsm7F8 %}

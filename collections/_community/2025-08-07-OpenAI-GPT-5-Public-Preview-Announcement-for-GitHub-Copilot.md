@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "OpenAI GPT-5 Public Preview Announcement for GitHub Copilot"
-description: "A short Reddit community discussion announcing the public preview of OpenAI GPT-5 within GitHub Copilot, with user reactions on access, pricing, and first impressions. Community members note premium request costs, expected performance, and compare the upgrade to previous models, offering a glimpse at initial developer sentiment."
-author: "fishchar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mk66by/openai_gpt5_is_now_in_public_preview_for_github/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mk66by/openai_gpt5_is_now_in_public_preview_for_github/
+title: OpenAI GPT-5 Public Preview Announcement for GitHub Copilot
+author: fishchar
+feed_name: Reddit Github Copilot
 date: 2025-08-07 17:22:08 +00:00
-permalink: "/2025-08-07-OpenAI-GPT-5-Public-Preview-Announcement-for-GitHub-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Models", "Community", "Community Discussion", "Copilot Settings", "Developer Feedback", "GitHub", "GitHub Copilot", "Model Upgrade", "OpenAI GPT 5", "Premium Pricing", "Public Preview"]
-tags_normalized: ["ai", "ai models", "community", "community discussion", "copilot settings", "developer feedback", "github", "github copilot", "model upgrade", "openai gpt 5", "premium pricing", "public preview"]
+tags:
+- AI Models
+- Community Discussion
+- Copilot Settings
+- Developer Feedback
+- GitHub
+- Model Upgrade
+- OpenAI GPT 5
+- Premium Pricing
+- Public Preview
+- AI
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Reddit user fishchar shares the news of OpenAI GPT-5 being in public preview for GitHub Copilot. The post gathers developer reactions on access, pricing, and their initial experiences.<!--excerpt_end-->
 
 # OpenAI GPT-5 Public Preview Announcement for GitHub Copilot

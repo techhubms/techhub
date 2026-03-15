@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "C# 15 Wishlist: What Features Do Developers Hope For?"
-description: "OnionDeluxe invites the C# community to share their top feature wishes for C# 15, highlighting the recent addition of extension properties in C# 14 and asking what improvements or features are still desired."
-author: "OnionDeluxe"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1meqqrk/c_15_wishlist/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1meqqrk/c_15_wishlist/
+title: 'C# 15 Wishlist: What Features Do Developers Hope For?'
+author: OnionDeluxe
+feed_name: Reddit CSharp
 date: 2025-08-01 08:13:28 +00:00
-permalink: "/2025-08-01-C-15-Wishlist-What-Features-Do-Developers-Hope-For.html"
-categories: ["Coding"]
-tags: ["C#", "C# 15", "Coding", "Community", "Community Discussion", "Developer Feedback", "Extension Properties", "Future Development", "Language Evolution", "Language Features", "Programming", "Wishlist"]
-tags_normalized: ["csharp", "csharp 15", "coding", "community", "community discussion", "developer feedback", "extension properties", "future development", "language evolution", "language features", "programming", "wishlist"]
+tags:
+- C#
+- C# 15
+- Community Discussion
+- Developer Feedback
+- Extension Properties
+- Future Development
+- Language Evolution
+- Language Features
+- Programming
+- Wishlist
+- Community
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 OnionDeluxe encourages C# enthusiasts to share their most-wanted features for C# 15, following the recent arrival of extension properties.<!--excerpt_end-->
 
 ### Overview

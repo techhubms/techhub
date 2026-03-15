@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Automatic Copilot Code Review: Standalone Repository Rule Now Available"
-description: "This news update details the general availability of a standalone repository rule to enable automatic GitHub Copilot code reviews. The feature allows Copilot users to automate code reviews independently from merge gating policies, offering new settings for when and how Copilot reviews are triggered across pull requests, including on creation, push, and draft status."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-10-copilot-code-review-independent-repository-rule-for-automatic-reviews"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-10-copilot-code-review-independent-repository-rule-for-automatic-reviews
+title: 'Automatic Copilot Code Review: Standalone Repository Rule Now Available'
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-10 20:08:07 +00:00
-permalink: "/2025-09-10-Automatic-Copilot-Code-Review-Standalone-Repository-Rule-Now-Available.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automatic Code Review", "Automation", "Code Quality", "Continuous Review", "Copilot", "Developer Tools", "DevOps", "GitHub", "GitHub Copilot", "Improvement", "News", "Pull Requests", "Repository Rules", "Rule Configuration"]
-tags_normalized: ["ai", "automatic code review", "automation", "code quality", "continuous review", "copilot", "developer tools", "devops", "github", "github copilot", "improvement", "news", "pull requests", "repository rules", "rule configuration"]
+tags:
+- Automatic Code Review
+- Automation
+- Code Quality
+- Continuous Review
+- Copilot
+- Developer Tools
+- GitHub
+- Improvement
+- Pull Requests
+- Repository Rules
+- Rule Configuration
+- AI
+- DevOps
+- GitHub Copilot
+- News
+section_names:
+- ai
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison reports on GitHub Copilot's new standalone repository rule for automatic code reviews, providing teams with granular control over review triggers and workflow integration.<!--excerpt_end-->
 
 # Automatic Copilot Code Review: Standalone Repository Rule Now Available

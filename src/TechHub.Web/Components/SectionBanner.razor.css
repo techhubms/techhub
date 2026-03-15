@@ -1,0 +1,246 @@
+/* ============================================================================
+   Section Banner - Decorative hero banner for section pages
+   (Restored from original PageHeader.razor.css)
+   ============================================================================ */
+
+/* Universal Section Banner - Same height on all pages */
+.section-banner {
+    height: 220px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-border-default);
+    /* Background images are set via CSS classes (e.g., .section-banner-bg-ai) */
+    /* Full-size images used for banners for quality */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Section background image classes for banners (using full-size images) */
+/* Using image-set for progressive enhancement - JXL → WebP → JPG fallback */
+.section-banner-bg-ai {
+    background-image: image-set(url('/images/section-backgrounds/ai.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/ai.webp') type('image/webp'),
+            url('/images/section-backgrounds/ai.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-github-copilot {
+    background-image: image-set(url('/images/section-backgrounds/github-copilot.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/github-copilot.webp') type('image/webp'),
+            url('/images/section-backgrounds/github-copilot.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-azure {
+    background-image: image-set(url('/images/section-backgrounds/azure.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/azure.webp') type('image/webp'),
+            url('/images/section-backgrounds/azure.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-ml {
+    background-image: image-set(url('/images/section-backgrounds/ml.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/ml.webp') type('image/webp'),
+            url('/images/section-backgrounds/ml.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-devops {
+    background-image: image-set(url('/images/section-backgrounds/devops.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/devops.webp') type('image/webp'),
+            url('/images/section-backgrounds/devops.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-dotnet {
+    background-image: image-set(url('/images/section-backgrounds/dotnet.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/dotnet.webp') type('image/webp'),
+            url('/images/section-backgrounds/dotnet.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-security {
+    background-image: image-set(url('/images/section-backgrounds/security.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/security.webp') type('image/webp'),
+            url('/images/section-backgrounds/security.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-all {
+    background-image: image-set(url('/images/section-backgrounds/all.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/all.webp') type('image/webp'),
+            url('/images/section-backgrounds/all.jpg') type('image/jpeg'));
+}
+
+.section-banner-bg-none {
+    background-image: image-set(url('/images/section-backgrounds/none.jxl') type('image/jxl'),
+            url('/images/section-backgrounds/none.webp') type('image/webp'),
+            url('/images/section-backgrounds/none.jpg') type('image/jpeg'));
+}
+
+/* Collapsed state when scrolled */
+.section-banner.collapsed {
+    height: 0;
+    overflow: hidden;
+}
+
+.section-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-overlay-banner);
+}
+
+.section-banner::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(to bottom, var(--color-overlay-banner-edge), transparent);
+    pointer-events: none;
+}
+
+/* Homepage banner - background image set via .section-banner-bg-* classes */
+/* Overlay gradient applied via .section-banner::before pseudo-element */
+.home-banner {
+    /* No additional background needed - uses section background classes */
+}
+
+.section-banner-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--color-text-on-emphasis);
+    padding: var(--spacing-2);
+    max-width: 1000px;
+    width: 100%;
+}
+
+.header-text-overlay {
+    position: relative;
+    background: var(--color-black-backdrop);
+    backdrop-filter: blur(3px);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-purple-border-very-subtle);
+    width: 850px;
+    max-width: 90%;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-banner-content .banner-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0;
+    font-weight: var(--font-weight-bold);
+    text-shadow: var(--text-shadow-lg);
+    line-height: var(--line-height-heading);
+}
+
+/* RSS icon link next to banner title - mobile only.
+   Positioned absolutely so the title stays visually centered. */
+.banner-rss-link {
+    display: none;
+    position: absolute;
+    right: var(--spacing-1);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-text-on-emphasis);
+    opacity: 0.85;
+    transition: opacity var(--duration-fast) var(--easing-ease);
+    line-height: 1;
+    border-radius: var(--radius-md);
+    min-width: var(--touch-target-min-size);
+    min-height: var(--touch-target-min-size);
+    align-items: center;
+    justify-content: center;
+}
+
+@media (hover: hover) {
+    .banner-rss-link:hover {
+        opacity: 1;
+    }
+}
+
+.banner-rss-link svg {
+    display: block;
+}
+
+.section-banner-content .banner-description {
+    font-size: var(--font-size-lg);
+    margin: 0;
+    opacity: 0.95;
+    text-shadow: var(--text-shadow-sm);
+    color: var(--color-text-on-emphasis);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+/* Mobile/desktop title toggle - shows "Home" on mobile for homepage */
+.banner-title-mobile {
+    display: none;
+}
+
+@media (max-width: 1292px) {
+    .banner-title-desktop {
+        display: none;
+    }
+
+    .banner-title-mobile {
+        display: inline;
+    }
+
+    .section-banner {
+        height: 170px;
+    }
+
+    .header-text-overlay {
+        padding: var(--spacing-2);
+        min-height: 80px;
+    }
+
+    .section-banner-content .banner-title {
+        margin-bottom: 0;
+    }
+
+    .section-banner-content .banner-description {
+        font-size: var(--font-size-sm);
+        max-width: 70%;
+    }
+
+    .banner-rss-link {
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 640px) {
+    .section-banner {
+        height: 120px;
+    }
+
+    .header-text-overlay {
+        padding: var(--spacing-1);
+    }
+
+    .section-banner-content .header-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .section-banner:not(.home-banner) .banner-title {
+        word-spacing: 100vw;
+    }
+
+    .section-banner-content .banner-description {
+        display: none;
+    }
+}

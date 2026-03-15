@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Architecture Decision Records (ADRs): A Lightweight Governance Model for Modern Teams"
-description: "This post introduces Architecture Decision Records (ADRs) as an efficient governance tool for software teams, enabling structured, transparent, and agile architectural decision-making. It covers what ADRs are, how they fit agile and DevOps cultures, implementation steps, and their benefits for knowledge sharing and organizational alignment."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/architecture-decision-records-adrs-a-lightweight-governance-model-for-software-architecture/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/architecture-decision-records-adrs-a-lightweight-governance-model-for-software-architecture/
+title: 'Architecture Decision Records (ADRs): A Lightweight Governance Model for Modern Teams'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-11-13 09:38:40 +00:00
-permalink: "/2025-11-13-Architecture-Decision-Records-ADRs-A-Lightweight-Governance-Model-for-Modern-Teams.html"
-categories: ["DevOps"]
-tags: ["ADR", "Agile Teams", "Architecture", "Architecture Decision Records", "Best Practices", "Blogs", "Change Management", "Decision Making", "DevOps", "Documentation", "GitHub Actions", "Governance", "Microservices", "Software Architecture", "Software Teams", "Solution Architecture", "Team Autonomy", "Version Control"]
-tags_normalized: ["adr", "agile teams", "architecture", "architecture decision records", "best practices", "blogs", "change management", "decision making", "devops", "documentation", "github actions", "governance", "microservices", "software architecture", "software teams", "solution architecture", "team autonomy", "version control"]
+tags:
+- ADR
+- Agile Teams
+- Architecture
+- Architecture Decision Records
+- Best Practices
+- Change Management
+- Decision Making
+- Documentation
+- GitHub Actions
+- Governance
+- Microservices
+- Software Architecture
+- Software Teams
+- Solution Architecture
+- Team Autonomy
+- Version Control
+- DevOps
+- Blogs
+section_names:
+- devops
+primary_section: devops
 ---
-
 Dellenny presents a practical overview of Architectural Decision Records (ADRs) as a lightweight governance model, guiding modern software teams in documenting architectural choices without sacrificing agility.<!--excerpt_end-->
 
 # Architecture Decision Records (ADRs): A Lightweight Governance Model for Modern Teams

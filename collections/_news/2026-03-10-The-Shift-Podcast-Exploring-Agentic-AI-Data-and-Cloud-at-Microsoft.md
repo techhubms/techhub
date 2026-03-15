@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "The Shift Podcast: Exploring Agentic AI, Data, and Cloud at Microsoft"
-description: "This announcement introduces 'The Shift' podcast, a new Microsoft series focused on hands-on engineering discussions about agentic AI, cloud, and data platforms. Each episode explores topics such as agent orchestration, data strategy, cloud infrastructure, observability, and applications of AI across Microsoft Azure, Fabric, and Foundry. The series offers in-depth dialogue with technical teams and product engineers."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/unpacking-your-top-questions-on-agentic-ai-the-shift-podcast/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/unpacking-your-top-questions-on-agentic-ai-the-shift-podcast/
+title: 'The Shift Podcast: Exploring Agentic AI, Data, and Cloud at Microsoft'
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-03-10 15:36:34 +00:00
-permalink: "/2026-03-10-The-Shift-Podcast-Exploring-Agentic-AI-Data-and-Cloud-at-Microsoft.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agentic AI", "AI", "AI Agents", "Azure", "Cloud Infrastructure", "Company News", "Context Engineering", "Data Preparation", "Data Strategy", "Governance", "Microsoft Azure", "Microsoft Fabric", "Microsoft Foundry", "ML", "News", "Observability", "OneLake", "Podcast", "RAG"]
-tags_normalized: ["agentic ai", "ai", "ai agents", "azure", "cloud infrastructure", "company news", "context engineering", "data preparation", "data strategy", "governance", "microsoft azure", "microsoft fabric", "microsoft foundry", "ml", "news", "observability", "onelake", "podcast", "rag"]
+tags:
+- Agentic AI
+- AI
+- AI Agents
+- Azure
+- Cloud Infrastructure
+- Company News
+- Context Engineering
+- Data Preparation
+- Data Strategy
+- Governance
+- Microsoft Azure
+- Microsoft Fabric
+- Microsoft Foundry
+- ML
+- News
+- Observability
+- OneLake
+- Podcast
+- RAG
+section_names:
+- ai
+- azure
+- ml
 ---
-
 stclarke announces 'The Shift' podcast, a new Microsoft series delving into agentic AI, cloud engineering, and data strategy with insights from product teams and technical leaders.<!--excerpt_end-->
 
 # The Shift Podcast: Your Top Questions on Agentic AI

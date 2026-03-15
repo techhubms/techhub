@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "Ansys Minerva Simulation & Process Data Management Architecture on Azure"
-description: "This article provides an in-depth overview of Ansys Minerva’s four-tier cloud architecture on Azure, covering deployment topology, workflow, backup strategies, high availability, security measures, and recommended VM SKUs for scaling and reliable operation of simulation product data management solutions."
-author: "Sunita_AZ0708"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ansys-minerva-simulation-process-data-management-architecture-on/ba-p/4432098"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/ansys-minerva-simulation-process-data-management-architecture-on/ba-p/4432098
+title: Ansys Minerva Simulation & Process Data Management Architecture on Azure
+author: Sunita_AZ0708
+feed_name: Microsoft Tech Community
 date: 2025-07-30 21:17:02 +00:00
-permalink: "/2025-07-30-Ansys-Minerva-Simulation-Process-Data-Management-Architecture-on-Azure.html"
-categories: ["Azure", "Security"]
-tags: ["Ansys Minerva", "Azure", "Backup Strategy", "Cloud Architecture", "Community", "Ddv5", "High Availability", "Infrastructure", "Security", "Simulation Data Management", "SQL Server", "Virtual Machines"]
-tags_normalized: ["ansys minerva", "azure", "backup strategy", "cloud architecture", "community", "ddv5", "high availability", "infrastructure", "security", "simulation data management", "sql server", "virtual machines"]
+tags:
+- Ansys Minerva
+- Backup Strategy
+- Cloud Architecture
+- Ddv5
+- High Availability
+- Infrastructure
+- Simulation Data Management
+- SQL Server
+- Virtual Machines
+- Azure
+- Security
+- Community
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Sunita_AZ0708 examines the technical architecture and deployment strategies of Ansys Minerva’s Simulation and Process Data Management platform on Azure, addressing reliability, security, backup, and VM recommendations.<!--excerpt_end-->
 
 ## In-Depth Overview: Ansys Minerva on Azure

@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "GitHub Secret Scanning Pattern Updates — March 2026"
-description: "This news update details the latest enhancements to GitHub secret scanning as of March 2026, including 28 new secret detectors, expanded push protection coverage, and validators for a broader range of tokens. The post highlights improvements affecting Azure credentials, API tokens, and integrations with numerous third-party providers."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-10-secret-scanning-pattern-updates-march-2026"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-10-secret-scanning-pattern-updates-march-2026
+title: GitHub Secret Scanning Pattern Updates — March 2026
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-03-10 21:03:15 +00:00
-permalink: "/2026-03-10-GitHub-Secret-Scanning-Pattern-Updates-March-2026.html"
-categories: ["DevOps", "Security"]
-tags: ["API Keys", "Application Security", "Azure Active Directory", "Compliance", "Continuous Integration", "Credential Detection", "DevOps", "GitHub", "Improvement", "News", "Push Protection", "Repository Security", "Secret Scanning", "Security", "Token Validation", "Validators"]
-tags_normalized: ["api keys", "application security", "azure active directory", "compliance", "continuous integration", "credential detection", "devops", "github", "improvement", "news", "push protection", "repository security", "secret scanning", "security", "token validation", "validators"]
+tags:
+- API Keys
+- Application Security
+- Azure Active Directory
+- Compliance
+- Continuous Integration
+- Credential Detection
+- DevOps
+- GitHub
+- Improvement
+- News
+- Push Protection
+- Repository Security
+- Secret Scanning
+- Security
+- Token Validation
+- Validators
+section_names:
+- devops
+- security
 ---
-
 Allison summarizes the March 2026 updates to GitHub's secret scanning, focusing on new detectors—including Azure and major third-party tokens—expanded push protection, and added validation for various providers.<!--excerpt_end-->
 
 # GitHub Secret Scanning Pattern Updates — March 2026

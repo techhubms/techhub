@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate"
-description: "This Azure Essentials Show episode explores how Azure Migrate streamlines cloud migration by automating Azure Landing Zone deployments, reducing errors, and enhancing compliance. Hosts Thomas Maurer and Shiva Shastri explain common migration pitfalls, introduce Azure Migrate’s agentic, guided approach, and demonstrate how these tools help ensure a secure, best-practices-aligned cloud foundation for every workload."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=aor0BCCEkks"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=aor0BCCEkks
+title: 'Reimagine Migration: Agentic Platform Landing Zone with Azure Migrate'
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-12-01 08:00:07 +00:00
-permalink: "/2025-12-01-Reimagine-Migration-Agentic-Platform-Landing-Zone-with-Azure-Migrate.html"
-categories: ["Azure", "DevOps", "Security"]
-tags: ["Agentic Approach", "Automation", "Azure", "Azure Essentials", "Azure Landing Zone", "Azure Migrate", "Best Practices", "Cloud Migration", "Cloud Modernization", "Compliance", "DevOps", "Microsoft Azure", "Secure Deployment", "Security", "Shiva Shastri", "Thomas Maurer", "Videos", "Workload Migration"]
-tags_normalized: ["agentic approach", "automation", "azure", "azure essentials", "azure landing zone", "azure migrate", "best practices", "cloud migration", "cloud modernization", "compliance", "devops", "microsoft azure", "secure deployment", "security", "shiva shastri", "thomas maurer", "videos", "workload migration"]
+tags:
+- Agentic Approach
+- Automation
+- Azure Essentials
+- Azure Landing Zone
+- Azure Migrate
+- Best Practices
+- Cloud Migration
+- Cloud Modernization
+- Compliance
+- Microsoft Azure
+- Secure Deployment
+- Shiva Shastri
+- Thomas Maurer
+- Workload Migration
+- Azure
+- DevOps
+- Security
+- Videos
+section_names:
+- azure
+- devops
+- security
+primary_section: azure
 ---
-
 In this Azure Essentials Show episode, Thomas Maurer and Shiva Shastri explain how Azure Migrate automates secure, compliant deployment of Azure Landing Zones, reducing manual errors and supporting confident cloud migration.<!--excerpt_end-->
 
 {% youtube aor0BCCEkks %}

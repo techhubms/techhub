@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "How AI Power Users in Malaysia Achieve More with Microsoft 365 Copilot"
-description: "This article explores how professionals in Malaysia’s financial services sector are leveraging Microsoft 365 Copilot to reduce digital overload, reclaim time from repetitive work, and build confidence in everyday AI use. It also highlights recent updates and features available in Microsoft 365 Copilot."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://news.microsoft.com/source/asia/features/ai-power-users-in-malaysia-are-working-smarter-and-achieving-more-with-microsoft-365-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://news.microsoft.com/source/asia/features/ai-power-users-in-malaysia-are-working-smarter-and-achieving-more-with-microsoft-365-copilot/
+title: How AI Power Users in Malaysia Achieve More with Microsoft 365 Copilot
+author: stclarke
+feed_name: Microsoft News
 date: 2025-08-01 16:45:01 +00:00
-permalink: "/2025-08-01-How-AI-Power-Users-in-Malaysia-Achieve-More-with-Microsoft-365-Copilot.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Adoption", "AI Integration", "Automation", "Company News", "Copilot Features", "Copilot Language Support", "Digital Productivity", "Employee Experience", "Excel", "Financial Services", "GitHub Copilot", "Malaysia", "Microsoft 365 Copilot", "News", "PowerPoint", "Word", "Workplace Efficiency"]
-tags_normalized: ["ai", "ai adoption", "ai integration", "automation", "company news", "copilot features", "copilot language support", "digital productivity", "employee experience", "excel", "financial services", "github copilot", "malaysia", "microsoft 365 copilot", "news", "powerpoint", "word", "workplace efficiency"]
+tags:
+- AI Adoption
+- AI Integration
+- Automation
+- Company News
+- Copilot Features
+- Copilot Language Support
+- Digital Productivity
+- Employee Experience
+- Excel
+- Financial Services
+- Malaysia
+- Microsoft 365 Copilot
+- PowerPoint
+- Word
+- Workplace Efficiency
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Written by stclarke, this article discusses how Malaysian professionals in various sectors use Microsoft 365 Copilot to streamline tasks, reduce digital overload, and enhance productivity through AI-powered solutions.<!--excerpt_end-->
 
 # How AI Power Users in Malaysia Achieve More with Microsoft 365 Copilot
@@ -80,7 +93,7 @@ As demands grow and hours remain limited, Malaysian workers are finding their ad
 - **New Capabilities:** [Upcoming features in Microsoft 365 Copilot](https://www.microsoft.com/en-us/microsoft-365/blog/2025/04/23/microsoft-365-copilot-built-for-the-era-of-human-agent-collaboration/) include Copilot Search, Agent Store, Create and Notebook, and the introduction of frontier agents such as Researcher and Analyst, supporting human-agent collaboration.
 - **Monthly Recap:** Users can [view the latest Copilot updates](https://aka.ms/M365CopilotWhatsNew) each month.
 
-To start your Copilot journey, visit: https://www.microsoft.com/en-us/microsoft-365/copilot
+To start your Copilot journey, visit: <https://www.microsoft.com/en-us/microsoft-365/copilot>
 
 *Note: Bahasa Malaysia support has been available in Copilot Chat since launch. Microsoft 365 Copilot is also accessible in English and Chinese languages.*
 

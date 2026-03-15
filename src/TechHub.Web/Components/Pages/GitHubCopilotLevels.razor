@@ -1,0 +1,163 @@
+@page "/github-copilot/levels-of-enlightenment"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject IJSRuntime JS
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject ErrorService ErrorService
+@inject ILogger<GitHubCopilotLevels> Logger
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@(pageData?.Title ?? "GitHub Copilot Levels") - Tech Hub</PageTitle>
+
+@if (pageData != null)
+{
+    <main class="page-with-sidebar">
+        <aside class="sidebar">
+            <SidebarToggle />
+            <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Table of Contents" Icon="toc">
+            <SidebarToc HtmlContent="@GetRenderedContent()" Title="Levels" />
+            </MobileSidebarPanel>
+            </MobileSidebarToolbar>
+        </aside>
+
+        <article class="article-body">
+            <div class="content-detail-header">
+                <h1 id="skiptohere" class="page-h1">@pageData.Title</h1>
+            </div>
+
+            <div class="levels-container">
+                @* Introduction *@
+                <div class="levels-intro">
+                    <p>@pageData.Intro</p>
+                </div>
+
+                @* Overview Section *@
+                <section class="levels-section">
+                    <h2 id="overview">Overview</h2>
+                    <p>@pageData.Overview.Content</p>
+                    @if (!string.IsNullOrEmpty(pageData.Overview.ImageUrl))
+                    {
+                        <img src="@pageData.Overview.ImageUrl" alt="@pageData.Overview.ImageAlt"
+                            class="levels-overview-image" />
+                    }
+                </section>
+
+                @* Each Level *@
+                @foreach (var level in pageData.Levels)
+                {
+                    <section class="levels-section levels-level">
+                        <h2 id="level-@level.Number">Level @level.Number: @level.Title</h2>
+                        <p>@level.Description</p>
+                        @if (!string.IsNullOrEmpty(level.YoutubeId))
+                        {
+                            <div class="levels-video">
+                                <iframe src="https://www.youtube-nocookie.com/embed/@level.YoutubeId"
+                                    title="Level @level.Number: @level.Title" frameborder="0"
+                                    allow="encrypted-media; picture-in-picture; web-share" allowfullscreen>
+                                </iframe>
+                            </div>
+                        }
+                    </section>
+                }
+
+                @* Conclusion *@
+                <section class="levels-section levels-conclusion">
+                    <h2 id="conclusion">Conclusion</h2>
+                    <p>@pageData.Conclusion</p>
+                    @if (!string.IsNullOrEmpty(pageData.PlaylistUrl))
+                    {
+                        <a href="@pageData.PlaylistUrl" class="levels-playlist-link" target="_blank" rel="noopener">
+                            Watch the full playlist on YouTube
+                        </a>
+                    }
+                </section>
+            </div>
+        </article>
+    </main>
+}
+
+@code {
+    private LevelsPageData? pageData;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    /// <summary>
+    /// Generate HTML content for TOC extraction.
+    /// SidebarToc will extract headings from this HTML automatically.
+    /// </summary>
+    private string GetRenderedContent()
+    {
+        if (pageData == null)
+            return string.Empty;
+
+        var sb = new System.Text.StringBuilder();
+
+        // Overview heading
+        sb.Append($"<h2 id=\"overview\">Overview</h2>");
+
+        // All level headings
+        foreach (var level in pageData.Levels)
+        {
+            sb.Append($"<h2 id=\"level-{level.Number}\">Level {level.Number}: {level.Title}</h2>");
+        }
+
+        // Conclusion heading
+        sb.Append($"<h2 id=\"conclusion\">Conclusion</h2>");
+
+        return sb.ToString();
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (pageData != null)
+        {
+            await JS.InvokeVoidAsync("markScriptsLoading");
+            await JS.InvokeVoidAsync("initCustomPages");
+            await JS.InvokeVoidAsync("initTocScrollSpy");
+            await JS.InvokeVoidAsync("markScriptsReady");
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<LevelsPageData>("copilot-levels-data", out var restored) && restored != null)
+        {
+            pageData = restored;
+            return;
+        }
+
+        try
+        {
+            pageData = await ApiClient.GetLevelsDataAsync();
+
+            if (pageData == null)
+            {
+                Navigation.NavigateTo("/not-found");
+            }
+        }
+        catch (Exception ex)
+        {
+            ErrorService.HandleError(ex, Navigation, Logger);
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (pageData != null)
+        {
+            ApplicationState.PersistAsJson("copilot-levels-data", pageData);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+}

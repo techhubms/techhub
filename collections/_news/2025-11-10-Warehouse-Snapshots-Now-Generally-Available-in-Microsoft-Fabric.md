@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Warehouse Snapshots Now Generally Available in Microsoft Fabric"
-description: "This article introduces Warehouse Snapshots, a new feature in Microsoft Fabric that enables consistent, reproducible analytics by providing read-only, point-in-time snapshots of your data warehouse. It details how snapshots ensure data consistency for reporting and auditing, support ETL processes, facilitate ML model training, and ease compliance and incident recovery."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/warehouse-snapshots-in-microsoft-fabric-freeze-data-unlock-reliable-reporting/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/warehouse-snapshots-in-microsoft-fabric-freeze-data-unlock-reliable-reporting/
+title: Warehouse Snapshots Now Generally Available in Microsoft Fabric
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-10 08:00:00 +00:00
-permalink: "/2025-11-10-Warehouse-Snapshots-Now-Generally-Available-in-Microsoft-Fabric.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Audit", "Azure", "Compliance", "Data Consistency", "Data Science", "Data Warehousing", "ETL", "Financial Close", "General Availability", "Incident Recovery", "Machine Learning", "Microsoft Fabric", "ML", "News", "Reporting", "Reproducible Datasets", "Snapshot Management", "SSMS", "T SQL", "Warehouse Snapshots"]
-tags_normalized: ["analytics", "audit", "azure", "compliance", "data consistency", "data science", "data warehousing", "etl", "financial close", "general availability", "incident recovery", "machine learning", "microsoft fabric", "ml", "news", "reporting", "reproducible datasets", "snapshot management", "ssms", "t sql", "warehouse snapshots"]
+tags:
+- Analytics
+- Audit
+- Compliance
+- Data Consistency
+- Data Science
+- Data Warehousing
+- ETL
+- Financial Close
+- General Availability
+- Incident Recovery
+- Microsoft Fabric
+- Reporting
+- Reproducible Datasets
+- Snapshot Management
+- SSMS
+- T SQL
+- Warehouse Snapshots
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog explains the new Warehouse Snapshots functionality, emphasizing how this generally available feature improves data consistency for analytics, auditing, and machine learning workflows.<!--excerpt_end-->
 
 # Warehouse Snapshots Now Generally Available in Microsoft Fabric

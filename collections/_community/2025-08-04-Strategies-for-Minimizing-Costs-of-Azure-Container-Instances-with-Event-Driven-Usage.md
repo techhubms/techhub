@@ -1,20 +1,26 @@
----
-layout: "post"
-title: "Strategies for Minimizing Costs of Azure Container Instances with Event-Driven Usage"
-description: "The author seeks advice on cost-effective deployment of a Spring Boot app on Azure, used infrequently for short periods. Options considered include serverless functions and using Azure CLI scripts for instance management. The post requests best practices and guides for minimizing monthly costs in such scenarios."
-author: "smallstar3377"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/AZURE/comments/1mhdius/lowest_costing_for_a_container_instance/"
-viewing_mode: "external"
-feed_name: "Reddit Azure"
-feed_url: "https://www.reddit.com/r/azure/.rss"
+﻿---
+external_url: https://www.reddit.com/r/AZURE/comments/1mhdius/lowest_costing_for_a_container_instance/
+title: Strategies for Minimizing Costs of Azure Container Instances with Event-Driven Usage
+author: smallstar3377
+feed_name: Reddit Azure
 date: 2025-08-04 13:31:23 +00:00
-permalink: "/2025-08-04-Strategies-for-Minimizing-Costs-of-Azure-Container-Instances-with-Event-Driven-Usage.html"
-categories: ["Azure"]
-tags: ["AZ CLI", "Azure", "Azure Container Instances", "Azure Functions", "Cloud Deployment", "Community", "Cost Optimization", "On Demand Compute", "Resource Management", "Scaling Strategies", "Serverless Computing", "Spring Boot"]
-tags_normalized: ["az cli", "azure", "azure container instances", "azure functions", "cloud deployment", "community", "cost optimization", "on demand compute", "resource management", "scaling strategies", "serverless computing", "spring boot"]
+tags:
+- AZ CLI
+- Azure Container Instances
+- Azure Functions
+- Cloud Deployment
+- Cost Optimization
+- On Demand Compute
+- Resource Management
+- Scaling Strategies
+- Serverless Computing
+- Spring Boot
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 Authored by smallstar3377, this post explores approaches for minimizing Azure costs when deploying a rarely used Spring Boot app. It discusses potential solutions and requests guidance on best practices.<!--excerpt_end-->
 
 ## Overview

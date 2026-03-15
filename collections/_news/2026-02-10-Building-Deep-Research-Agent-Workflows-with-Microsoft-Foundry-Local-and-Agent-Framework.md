@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Building Deep Research Agent Workflows with Microsoft Foundry Local and Agent Framework"
-description: "This in-depth guide demonstrates how to use Microsoft Foundry Local and the Agent Framework (MAF) to build privacy-preserving, production-grade AI agent applications. It covers the entire pipeline, including security evaluation (red teaming), workflow orchestration, interactive debugging, and observability with .NET Aspire. The practical steps detail implementation, performance optimization, and extensibility for enterprise scenarios where data privacy, cost control, and low latency are critical."
-author: "Kinfey Lo"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/semantic-kernel/from-local-models-to-agent-workflows-building-a-deep-research-solution-with-microsoft-agent-framework-on-microsoft-foundry-local/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/semantic-kernel/from-local-models-to-agent-workflows-building-a-deep-research-solution-with-microsoft-agent-framework-on-microsoft-foundry-local/
+title: Building Deep Research Agent Workflows with Microsoft Foundry Local and Agent Framework
+author: Kinfey Lo
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2026-02-10 11:12:33 +00:00
-permalink: "/2026-02-10-Building-Deep-Research-Agent-Workflows-with-Microsoft-Foundry-Local-and-Agent-Framework.html"
-categories: ["AI", "Azure"]
-tags: [".NET Aspire", "Agent Framework", "Agent Workflows", "Agents", "AI", "AI Security", "Azure", "Cloud Edge Collaboration", "DevUI", "Edge AI", "Enterprise AI", "Local AI Models", "MAF", "Microsoft Agent Framework", "Microsoft Foundry Local", "Model Evaluation", "News", "Observability", "OpenTelemetry", "Privacy", "Python", "Qwen2.5 1.5B", "Red Teaming", "Workflow Orchestration"]
-tags_normalized: ["dotnet aspire", "agent framework", "agent workflows", "agents", "ai", "ai security", "azure", "cloud edge collaboration", "devui", "edge ai", "enterprise ai", "local ai models", "maf", "microsoft agent framework", "microsoft foundry local", "model evaluation", "news", "observability", "opentelemetry", "privacy", "python", "qwen2dot5 1dot5b", "red teaming", "workflow orchestration"]
+tags:
+- .NET Aspire
+- Agent Framework
+- Agent Workflows
+- Agents
+- AI
+- AI Security
+- Azure
+- Cloud Edge Collaboration
+- DevUI
+- Edge AI
+- Enterprise AI
+- Local AI Models
+- MAF
+- Microsoft Agent Framework
+- Microsoft Foundry Local
+- Model Evaluation
+- News
+- Observability
+- OpenTelemetry
+- Privacy
+- Python
+- Qwen2.5 1.5B
+- Red Teaming
+- Workflow Orchestration
+section_names:
+- ai
+- azure
 ---
-
 Kinfey Lo explains how to build enterprise-ready agent workflows using Microsoft Foundry Local and Agent Framework, with a focus on local AI, privacy, security evaluation, and orchestration.<!--excerpt_end-->
 
 # Building Deep Research Agent Workflows with Microsoft Foundry Local and Agent Framework

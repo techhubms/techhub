@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Enforcing and Auditing Policy Inheritance in Azure API Management"
-description: "This guide introduces a new Azure Policy definition designed to help platform and governance teams enforce or audit the use of policy inheritance in Azure API Management. Learn how the policy ensures that important controls, such as security and operational requirements, are consistently inherited across operations, APIs, products, and workspaces, and discover step-by-step instructions for enabling and configuring the new policy."
-author: "budzynski"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/enforce-or-audit-policy-inheritance-in-api-management/ba-p/4452204
+title: Enforcing and Auditing Policy Inheritance in Azure API Management
+author: budzynski
+feed_name: Microsoft Tech Community
 date: 2025-09-09 14:47:14 +00:00
-permalink: "/2025-09-09-Enforcing-and-Auditing-Policy-Inheritance-in-Azure-API-Management.html"
-categories: ["Azure", "Security"]
-tags: ["API Management", "API Security", "Audit", "Azure", "Azure Policy", "Azure Portal", "Community", "Compliance", "Governance", "Operational Requirements", "Policy Enforcement", "Policy Inheritance", "Security", "Security Controls"]
-tags_normalized: ["api management", "api security", "audit", "azure", "azure policy", "azure portal", "community", "compliance", "governance", "operational requirements", "policy enforcement", "policy inheritance", "security", "security controls"]
+tags:
+- API Management
+- API Security
+- Audit
+- Azure Policy
+- Azure Portal
+- Compliance
+- Governance
+- Operational Requirements
+- Policy Enforcement
+- Policy Inheritance
+- Security Controls
+- Azure
+- Security
+- Community
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 budzynski explains how Azure Policy now enables enforcement and auditing of policy inheritance within Azure API Management, offering practical steps to enhance consistency, compliance, and security across APIs.<!--excerpt_end-->
 
 # Enforcing and Auditing Policy Inheritance in Azure API Management

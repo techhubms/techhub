@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Budget Bytes: Building Real AI Apps on Azure for Under $25"
-description: "Budget Bytes is a new video and blog series designed to empower developers to build production-quality AI applications on Azure for $25 or less. Each episode demonstrates end-to-end scenarios with real costs, practical patterns, live code demos, and open-source samples, making modern AI accessible and affordable for everyone."
-author: "Jasmine Greenaway and Pablo Lopes"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sql/introducing-budget-bytes/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sql/introducing-budget-bytes/
+title: 'Budget Bytes: Building Real AI Apps on Azure for Under $25'
+author: Jasmine Greenaway and Pablo Lopes
+primary_section: ai
+feed_name: The Azure Blog
 date: 2026-02-19 17:02:52 +00:00
-permalink: "/2026-02-19-Budget-Bytes-Building-Real-AI-Apps-on-Azure-for-Under-25.html"
-categories: ["AI", "Azure", "Coding"]
-tags: [".NET", "AI", "AI Applications", "Azure", "Azure SQL Database", "Budget Bytes", "Cloud Development", "Coding", "Copilot Studio", "Cost Optimization", "Databases", "GitHub Samples", "Hybrid + Multicloud", "MCP", "Microsoft Foundry", "Microsoft Learn", "News", "RAG Patterns"]
-tags_normalized: ["dotnet", "ai", "ai applications", "azure", "azure sql database", "budget bytes", "cloud development", "coding", "copilot studio", "cost optimization", "databases", "github samples", "hybrid plus multicloud", "mcp", "microsoft foundry", "microsoft learn", "news", "rag patterns"]
+tags:
+- .NET
+- AI
+- AI Applications
+- Azure
+- Azure SQL Database
+- Budget Bytes
+- Cloud Development
+- Copilot Studio
+- Cost Optimization
+- Databases
+- GitHub Samples
+- Hybrid + Multicloud
+- MCP
+- Microsoft Foundry
+- Microsoft Learn
+- News
+- RAG Patterns
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Jasmine Greenaway and Pablo Lopes introduce Budget Bytes, a practical series for developers focused on building affordable, production-ready AI applications on Azure, with actionable guidance and real-world demos.<!--excerpt_end-->
 
 # Budget Bytes: Building Real AI Apps on Azure for Under $25

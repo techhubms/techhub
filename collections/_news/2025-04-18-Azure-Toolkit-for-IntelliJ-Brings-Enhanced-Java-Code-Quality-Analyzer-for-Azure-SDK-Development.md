@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Azure Toolkit for IntelliJ Brings Enhanced Java Code Quality Analyzer for Azure SDK Development"
-description: "This article introduces a major update to the Azure Toolkit for IntelliJ, focusing on the enhanced Java Code Quality Analyzer. It details new rule sets, improved integration with Azure SDK for Java, and actionable suggestions for authentication, performance, security, and modern programming practices."
-author: "Sameeksha Vaity"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/azure-sdk/azure-toolkit-for-intellij-introducing-the-enhanced-java-code-quality-analyzer/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/azure-sdk/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/azure-sdk/azure-toolkit-for-intellij-introducing-the-enhanced-java-code-quality-analyzer/
+title: Azure Toolkit for IntelliJ Brings Enhanced Java Code Quality Analyzer for Azure SDK Development
+author: Sameeksha Vaity
+feed_name: Microsoft DevBlog
 date: 2025-04-18 17:49:56 +00:00
-permalink: "/2025-04-18-Azure-Toolkit-for-IntelliJ-Brings-Enhanced-Java-Code-Quality-Analyzer-for-Azure-SDK-Development.html"
-categories: ["Azure", "Coding", "Security"]
-tags: ["Asynchronous Programming", "Authentication", "Azure", "Azure SDK", "Azure Toolkit", "Best Practices", "Code Quality", "Coding", "Event Hub", "IntelliJ", "Java", "Microsoft Entra ID", "News", "OpenAI", "Performance", "Reactive Streams", "Security", "Service Bus", "Storage"]
-tags_normalized: ["asynchronous programming", "authentication", "azure", "azure sdk", "azure toolkit", "best practices", "code quality", "coding", "event hub", "intellij", "java", "microsoft entra id", "news", "openai", "performance", "reactive streams", "security", "service bus", "storage"]
+tags:
+- Asynchronous Programming
+- Authentication
+- Azure SDK
+- Azure Toolkit
+- Best Practices
+- Code Quality
+- Event Hub
+- IntelliJ
+- Java
+- Microsoft Entra ID
+- OpenAI
+- Performance
+- Reactive Streams
+- Service Bus
+- Storage
+- Azure
+- Security
+- News
+- .NET
+section_names:
+- azure
+- dotnet
+- security
+primary_section: dotnet
 ---
-
 Sameeksha Vaity details the latest enhancements to the Azure Toolkit for IntelliJ, highlighting a powerful Java Code Quality Analyzer aimed at improving code quality, security, and performance for developers working with the Azure SDK.<!--excerpt_end-->
 
 # Azure Toolkit for IntelliJ: Enhanced Java Code Quality Analyzer

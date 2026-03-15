@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "ExpressRoute Gateway Backend Migration: Basic to Standard Public IP SKU"
-description: "This technical guide explains the process for migrating Azure ExpressRoute gateways from Basic SKU public IPs to Microsoft managed Standard SKU public IPs. It details the purpose of the migration, each step in the automated backend workflow, customer controls, and how Azure maintains connectivity and minimizes disruption throughout the transition."
-author: "MekaylaMoore"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-networking-blog/expressroute-gateway-microsoft-initiated-migration/ba-p/4497689
+title: 'ExpressRoute Gateway Backend Migration: Basic to Standard Public IP SKU'
+author: MekaylaMoore
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-03 00:58:14 +00:00
-permalink: "/2026-03-03-ExpressRoute-Gateway-Backend-Migration-Basic-to-Standard-Public-IP-SKU.html"
-categories: ["Azure"]
-tags: ["Automation", "Availability", "Azure", "Azure Networking", "Azure Portal", "Basic SKU", "Community", "ExpressRoute", "Gateway Migration", "Infrastructure Upgrade", "Migration Tool", "Public IP SKU", "Resource Group", "Service Continuity", "Standard SKU", "Virtual Network Gateway"]
-tags_normalized: ["automation", "availability", "azure", "azure networking", "azure portal", "basic sku", "community", "expressroute", "gateway migration", "infrastructure upgrade", "migration tool", "public ip sku", "resource group", "service continuity", "standard sku", "virtual network gateway"]
+tags:
+- Automation
+- Availability
+- Azure
+- Azure Networking
+- Azure Portal
+- Basic SKU
+- Community
+- ExpressRoute
+- Gateway Migration
+- Infrastructure Upgrade
+- Migration Tool
+- Public IP SKU
+- Resource Group
+- Service Continuity
+- Standard SKU
+- Virtual Network Gateway
+section_names:
+- azure
 ---
-
 MekaylaMoore outlines the end-to-end process of migrating Azure ExpressRoute gateways from Basic to Standard SKU public IPs, highlighting best practices, stages involved, and how Azure minimizes downtime and maintains service quality for customers.<!--excerpt_end-->
 
 # ExpressRoute Gateway Backend Migration: Basic to Standard Public IP SKU

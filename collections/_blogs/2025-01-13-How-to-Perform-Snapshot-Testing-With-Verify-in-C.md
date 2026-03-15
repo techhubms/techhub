@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "How to Perform Snapshot Testing With Verify in C#"
-description: "Januarius Njoku explores snapshot testing in C# using the Verify library, detailing its benefits, setup, and integration with xUnit. The article covers how to implement, manage, and validate snapshots, ensuring more robust object state testing throughout application development."
-author: "Januarius Njoku"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code-maze.com/csharp-snapshot-testing-with-verify/"
-viewing_mode: "external"
-feed_name: "Code Maze Blog"
-feed_url: "https://code-maze.com/feed/"
+﻿---
+external_url: https://code-maze.com/csharp-snapshot-testing-with-verify/
+title: How to Perform Snapshot Testing With Verify in C#
+author: Januarius Njoku
+feed_name: Code Maze Blog
 date: 2025-01-13 07:47:49 +00:00
-permalink: "/2025-01-13-How-to-Perform-Snapshot-Testing-With-Verify-in-C.html"
-categories: ["Coding"]
-tags: [".NET", "Blogs", "C#", "Coding", "Integration Testing", "Object State Verification", "Snapshot Testing", "Test Automation", "Test Best Practices", "Test Driven Development", "Testing", "Testing Frameworks", "Unit Testing", "Verify Library", "xUnit"]
-tags_normalized: ["dotnet", "blogs", "csharp", "coding", "integration testing", "object state verification", "snapshot testing", "test automation", "test best practices", "test driven development", "testing", "testing frameworks", "unit testing", "verify library", "xunit"]
+tags:
+- .NET
+- C#
+- Integration Testing
+- Object State Verification
+- Snapshot Testing
+- Test Automation
+- Test Best Practices
+- Test Driven Development
+- Testing
+- Testing Frameworks
+- Unit Testing
+- Verify Library
+- xUnit
+- Blogs
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this guide, Januarius Njoku demonstrates how to leverage the Verify library for snapshot testing in C#. The article offers practical steps for setup and execution, providing sample code and clear explanations for developers looking to ensure robust object state validation.<!--excerpt_end-->
 
 # How to Perform Snapshot Testing With Verify in C#

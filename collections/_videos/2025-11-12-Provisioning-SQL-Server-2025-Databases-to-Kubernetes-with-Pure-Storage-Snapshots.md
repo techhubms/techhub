@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots"
-description: "This episode of Data Exposed demonstrates how to use Pure Storage snapshot technology to quickly clone SQL Server 2025 databases on Linux into Kubernetes clusters. The session covers practical strategies for streamlining developer and test workflows, rapidly refreshing data, and leveraging advanced storage features in containerized SQL Server environments. The demo highlights integration between SQL Server, Kubernetes, and enterprise storage, including lifecycle management techniques and actionable resources for getting started."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=FkPyaJo5X08"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=FkPyaJo5X08
+title: Provisioning SQL Server 2025 Databases to Kubernetes with Pure Storage Snapshots
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-11-12 17:00:34 +00:00
-permalink: "/2025-11-12-Provisioning-SQL-Server-2025-Databases-to-Kubernetes-with-Pure-Storage-Snapshots.html"
-categories: ["Azure"]
-tags: ["Azure", "Cloud Computing", "Cloud Databases", "Containerized SQL", "Cross Platform Databases", "Data Lifecycle Management", "Database Cloning", "Database Deployment", "Dev", "Dev/Test Workflows", "Development", "Enterprise Storage", "Kubernetes", "Linux Containers", "Microsoft", "Microsoft Azure", "Pure Storage Snapshots", "SQL Server", "Tech", "Technology", "Videos"]
-tags_normalized: ["azure", "cloud computing", "cloud databases", "containerized sql", "cross platform databases", "data lifecycle management", "database cloning", "database deployment", "dev", "devslashtest workflows", "development", "enterprise storage", "kubernetes", "linux containers", "microsoft", "microsoft azure", "pure storage snapshots", "sql server", "tech", "technology", "videos"]
+tags:
+- Cloud Computing
+- Cloud Databases
+- Containerized SQL
+- Cross Platform Databases
+- Data Lifecycle Management
+- Database Cloning
+- Database Deployment
+- Dev
+- Dev/Test Workflows
+- Development
+- Enterprise Storage
+- Kubernetes
+- Linux Containers
+- Microsoft
+- Microsoft Azure
+- Pure Storage Snapshots
+- SQL Server
+- Tech
+- Technology
+- Azure
+- Videos
+section_names:
+- azure
+primary_section: azure
 ---
-
 In this Data Exposed episode, Microsoft Developer presents how Pure Storage snapshot technology enables rapid cloning of SQL Server 2025 databases into Kubernetes environments for streamlined development and testing.<!--excerpt_end-->
 
 {% youtube FkPyaJo5X08 %}

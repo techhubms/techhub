@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "GitHub Availability Report: Service Outages and Performance Incidents in February 2026"
-description: "Jakub Oleksy provides a transparent overview of six major service incidents on GitHub in February 2026. The report details root causes, mitigations, affected developer tools such as GitHub Actions and Copilot, platform improvements, and lessons learned, emphasizing ongoing efforts to enhance system resilience and reliability for developer workflows."
-author: "Jakub Oleksy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/news-insights/company-news/github-availability-report-february-2026/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/news-insights/company-news/github-availability-report-february-2026/
+title: 'GitHub Availability Report: Service Outages and Performance Incidents in February 2026'
+author: Jakub Oleksy
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-12 03:23:54 +00:00
-permalink: "/2026-03-12-GitHub-Availability-Report-Service-Outages-and-Performance-Incidents-in-February-2026.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["AI", "Automation", "CI/CD", "CodeQL", "Company", "Company News", "Dependabot", "Developer Workflows", "DevOps", "GitHub", "GitHub Actions", "GitHub Availability Report", "GitHub Codespaces", "GitHub Copilot", "Incident Report", "Infrastructure", "Monitoring", "News", "News & Insights", "Platform Reliability", "Root Cause Analysis", "Service Outage"]
-tags_normalized: ["ai", "automation", "cislashcd", "codeql", "company", "company news", "dependabot", "developer workflows", "devops", "github", "github actions", "github availability report", "github codespaces", "github copilot", "incident report", "infrastructure", "monitoring", "news", "news and insights", "platform reliability", "root cause analysis", "service outage"]
+tags:
+- AI
+- Automation
+- CI/CD
+- CodeQL
+- Company
+- Company News
+- Dependabot
+- Developer Workflows
+- DevOps
+- GitHub
+- GitHub Actions
+- GitHub Availability Report
+- GitHub Codespaces
+- GitHub Copilot
+- Incident Report
+- Infrastructure
+- Monitoring
+- News
+- News & Insights
+- Platform Reliability
+- Root Cause Analysis
+- Service Outage
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Jakub Oleksy presents a thorough incident report detailing GitHub's six major outages in February 2026, with insights on DevOps impact, Copilot disruptions, and ongoing platform reliability improvements.<!--excerpt_end-->
 
 # GitHub Availability Report: Service Outages and Performance Incidents in February 2026

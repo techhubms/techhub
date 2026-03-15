@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions"
-description: "This post examines a critical Azure CLI issue that caused crashes for Windows users upgrading via MSI installer from version 2.76.0 or earlier to 2.77.0 or later, due to missing native Python extension files. It covers why the problem occurred, how to fully recover, and details about performance improvements to the MSI upgrade process. For affected users, the post provides practical guidance to restore functionality and ensures future upgrades are faster and more reliable."
-author: "Alex-wdy"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/azure-cli-windows-msi-upgrade-issue-root-cause-mitigation-and/ba-p/4491691
+title: 'Azure CLI Windows MSI Upgrade Failures and Performance Fixes: Root Causes and Solutions'
+author: Alex-wdy
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-04 07:41:52 +00:00
-permalink: "/2026-02-04-Azure-CLI-Windows-MSI-Upgrade-Failures-and-Performance-Fixes-Root-Causes-and-Solutions.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure CLI", "CLI Tools", "Community", "Error Recovery", "File Versioning", "Installation Troubleshooting", "MSI Installer", "Performance Optimization", "Python", "Pywin32", "Release Notes", "Upgrade Issue", "Windows"]
-tags_normalized: ["azure", "azure cli", "cli tools", "community", "error recovery", "file versioning", "installation troubleshooting", "msi installer", "performance optimization", "python", "pywin32", "release notes", "upgrade issue", "windows"]
+tags:
+- Azure
+- Azure CLI
+- CLI Tools
+- Community
+- Error Recovery
+- File Versioning
+- Installation Troubleshooting
+- MSI Installer
+- Performance Optimization
+- Python
+- Pywin32
+- Release Notes
+- Upgrade Issue
+- Windows
+section_names:
+- azure
 ---
-
 Alex-wdy details the root cause and resolution steps for an Azure CLI crash that occurred when upgrading via MSI on Windows, and highlights recent performance improvements in the installer.<!--excerpt_end-->
 
 # Azure CLI Windows MSI Upgrade Issue: Root Cause, Mitigation, and Performance Improvements

@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Rethinking Background Workloads with Azure Functions on Azure Container Apps"
-description: "This blog by DeepGanguly provides a detailed look at how Azure Functions deployed on Azure Container Apps can simplify and modernize background workloads. It compares traditional Container App Jobs with the event-driven model of Functions, illustrating advantages like triggers, scaling, orchestration, and developer experience, and presents practical use cases for batch processing, order workflows, scheduled reporting, and data migration."
-author: "DeepGanguly"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-background-workloads-with-azure-functions-on-azure/ba-p/4496861"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/rethinking-background-workloads-with-azure-functions-on-azure/ba-p/4496861
+title: Rethinking Background Workloads with Azure Functions on Azure Container Apps
+author: DeepGanguly
+primary_section: dotnet
+feed_name: Microsoft Tech Community
 date: 2026-02-25 06:41:56 +00:00
-permalink: "/2026-02-25-Rethinking-Background-Workloads-with-Azure-Functions-on-Azure-Container-Apps.html"
-categories: ["Azure", "Coding", "DevOps"]
-tags: ["Application Insights", "Azure", "Azure Container Apps", "Azure Functions", "Background Jobs", "Batch Processing", "Blob Storage", "Cloud Development", "Coding", "Community", "DevOps", "Durable Functions", "Event Driven Architecture", "KEDA Scaling", "Python", "Serverless", "State Management", "Workflow Orchestration"]
-tags_normalized: ["application insights", "azure", "azure container apps", "azure functions", "background jobs", "batch processing", "blob storage", "cloud development", "coding", "community", "devops", "durable functions", "event driven architecture", "keda scaling", "python", "serverless", "state management", "workflow orchestration"]
+tags:
+- Application Insights
+- Azure
+- Azure Container Apps
+- Azure Functions
+- Background Jobs
+- Batch Processing
+- Blob Storage
+- Cloud Development
+- Community
+- DevOps
+- Durable Functions
+- Event Driven Architecture
+- KEDA Scaling
+- Python
+- Serverless
+- State Management
+- Workflow Orchestration
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
 ---
-
 DeepGanguly explores how Azure Functions on Azure Container Apps offer a modern approach to building and running background workloads. The article demonstrates with real-world scenarios why event-driven Functions simplify development, reduce boilerplate, and boost operational efficiency.<!--excerpt_end-->
 
 # Rethinking Background Workloads with Azure Functions on Azure Container Apps

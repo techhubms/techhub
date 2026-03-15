@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Building Agent-Based Workflows in VS Code: Insights from Kai Maetzel"
-description: "This behind-the-scenes video features James Montemagno and VS Code engineering lead Kai Maetzel discussing how the Visual Studio Code team integrates AI and agent-based workflows into real development processes. They detail the shift from traditional pipelines to actor-based workflows, leveraging different AI models for varied tasks, and Kai’s hands-on rapid prototyping approach. This practical session offers real-world insights for developers interested in modern DevOps, automation, and AI-driven engineering within Microsoft-centric environments."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=0JPODfK8t5o"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=0JPODfK8t5o
+title: 'Building Agent-Based Workflows in VS Code: Insights from Kai Maetzel'
+author: Visual Studio Code
+primary_section: ai
+feed_name: Visual Studio Code YouTube
 date: 2026-02-23 18:03:25 +00:00
-permalink: "/2026-02-23-Building-Agent-Based-Workflows-in-VS-Code-Insights-from-Kai-Maetzel.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Actor Based Architecture", "Agent Workflow", "AI", "Automation", "Coding", "DevOps", "Kai Maetzel", "Microsoft", "Model Integration", "Pipeline Evolution", "Rapid Prototyping", "Software Engineering", "Videos", "VS Code"]
-tags_normalized: ["actor based architecture", "agent workflow", "ai", "automation", "coding", "devops", "kai maetzel", "microsoft", "model integration", "pipeline evolution", "rapid prototyping", "software engineering", "videos", "vs code"]
+tags:
+- Actor Based Architecture
+- Agent Workflow
+- AI
+- Automation
+- DevOps
+- Kai Maetzel
+- Microsoft
+- Model Integration
+- Pipeline Evolution
+- Rapid Prototyping
+- Software Engineering
+- Videos
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
 ---
-
 James Montemagno and Kai Maetzel provide a close look at how the VS Code engineering team uses AI and agent-based workflows in their DevOps processes, sharing practical lessons for Microsoft developers.<!--excerpt_end-->
 
 {% youtube 0JPODfK8t5o %}

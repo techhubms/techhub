@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "GitHub to Charge for Self-Hosted Runners from March 2026"
-description: "This article outlines GitHub’s announcement that it will begin charging {{DESCRIPTION}}.002 per minute for self-hosted runners used in GitHub Actions starting March 2026, a significant policy shift for development teams. The post details the reasons behind GitHub’s new price model, community responses, effects on CI/CD pipeline costs, affected and unaffected users, performance motivations for self-hosting, and upcoming infrastructure enhancements promised by GitHub."
-author: "DevClass.com"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.devclass.com/development/2025/12/17/github-to-charge-for-self-hosted-runners-from-march-2026/1734518"
-viewing_mode: "external"
-feed_name: "DevClass"
-feed_url: "https://devclass.com/feed/"
+﻿---
+external_url: https://www.devclass.com/development/2025/12/17/github-to-charge-for-self-hosted-runners-from-march-2026/1734518
+title: GitHub to Charge for Self-Hosted Runners from March 2026
+author: DevClass.com
+primary_section: devops
+feed_name: DevClass
 date: 2025-12-17 11:55:59 +00:00
-permalink: "/2025-12-17-GitHub-to-Charge-for-Self-Hosted-Runners-from-March-2026.html"
-categories: ["DevOps"]
-tags: ["Actions Runner Controller", "Automation", "Blogs", "CI/CD", "Cloud Development", "Continuous Deployment", "Continuous Integration", "DevOps", "GitHub", "GitHub Actions", "Infrastructure", "Observability", "Open Source", "Pricing Model", "Self Hosted Runners", "Workflow Automation"]
-tags_normalized: ["actions runner controller", "automation", "blogs", "cislashcd", "cloud development", "continuous deployment", "continuous integration", "devops", "github", "github actions", "infrastructure", "observability", "open source", "pricing model", "self hosted runners", "workflow automation"]
+tags:
+- Actions Runner Controller
+- Automation
+- Blogs
+- CI/CD
+- Cloud Development
+- Continuous Deployment
+- Continuous Integration
+- DevOps
+- GitHub
+- GitHub Actions
+- Infrastructure
+- Observability
+- Open Source
+- Pricing Model
+- Self Hosted Runners
+- Workflow Automation
+section_names:
+- devops
 ---
-
 DevClass.com reports on GitHub’s plan to introduce per-minute pricing for self-hosted GitHub Actions runners in March 2026. The article, authored by Tim Anderson, reviews developer reactions, rationale behind the move, and new infrastructure features in response.<!--excerpt_end-->
 
 # GitHub to Charge for Self-Hosted Runners from March 2026

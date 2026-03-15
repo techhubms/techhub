@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Building Long-Distance Next Edit Suggestions in GitHub Copilot"
-description: "A technical deep dive into how GitHub Copilot's Next Edit Suggestions (NES) were expanded to work throughout the entire file in VS Code. The authors explain new machine learning models, evaluation frameworks, a multi-stage training process, and UX design considerations for surfacing distant code suggestions without disrupting developer workflow."
-author: "Vikram Duvvur, Gaurav Mittal, Benjamin Simmonds"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://code.visualstudio.com/blogs/2026/02/26/long-distance-nes"
-viewing_mode: "external"
-feed_name: "Visual Studio Code Releases"
-feed_url: "https://code.visualstudio.com/feed.xml"
+﻿---
+external_url: https://code.visualstudio.com/blogs/2026/02/26/long-distance-nes
+title: Building Long-Distance Next Edit Suggestions in GitHub Copilot
+author: Vikram Duvvur, Gaurav Mittal, Benjamin Simmonds
+primary_section: github-copilot
+feed_name: Visual Studio Code Releases
 date: 2026-02-26 00:00:00 +00:00
-permalink: "/2026-02-26-Building-Long-Distance-Next-Edit-Suggestions-in-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Powered Suggestions", "Blog", "Code Refactoring", "Coding", "Developer Tools", "Editor Extensions", "Evaluation Framework", "Extended Range", "GitHub Copilot", "Machine Learning", "Model Training", "News", "Next Edit Suggestions", "Reinforcement Learning", "Software Engineering", "Supervised Finetuning", "User Experience", "VS Code"]
-tags_normalized: ["ai", "ai powered suggestions", "blog", "code refactoring", "coding", "developer tools", "editor extensions", "evaluation framework", "extended range", "github copilot", "machine learning", "model training", "news", "next edit suggestions", "reinforcement learning", "software engineering", "supervised finetuning", "user experience", "vs code"]
+tags:
+- AI
+- AI Powered Suggestions
+- Blog
+- Code Refactoring
+- Developer Tools
+- Editor Extensions
+- Evaluation Framework
+- Extended Range
+- GitHub Copilot
+- Model Training
+- News
+- Next Edit Suggestions
+- Reinforcement Learning
+- Software Engineering
+- Supervised Finetuning
+- User Experience
+- VS Code
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
 ---
-
 Vikram Duvvur, Gaurav Mittal, and Benjamin Simmonds detail the engineering behind long-distance Next Edit Suggestions for GitHub Copilot, highlighting advances in ML modeling, evaluation, and UX for VS Code users.<!--excerpt_end-->
 
 # Building Long-Distance Next Edit Suggestions in GitHub Copilot

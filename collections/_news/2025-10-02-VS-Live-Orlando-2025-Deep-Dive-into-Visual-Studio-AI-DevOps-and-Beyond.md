@@ -1,20 +1,47 @@
----
-layout: "post"
-title: "VS Live! Orlando 2025: Deep Dive into Visual Studio, AI, DevOps, and Beyond"
-description: "An in-depth preview of VS Live! Orlando 2025, detailing its extensive tracks and hands-on sessions for developers. The event features learning on Visual Studio, .NET, AI, DevOps, debugging with GitHub Copilot, distributed app building, cloud, security, and more—guided by Microsoft engineers and industry experts."
-author: "Jim Harrer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/visual-studio-live-orlando-2025/
+title: 'VS Live! Orlando 2025: Deep Dive into Visual Studio, AI, DevOps, and Beyond'
+author: Jim Harrer
+feed_name: Microsoft VisualStudio Blog
 date: 2025-10-02 16:00:38 +00:00
-permalink: "/2025-10-02-VS-Live-Orlando-2025-Deep-Dive-into-Visual-Studio-AI-DevOps-and-Beyond.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot", "ML", "Security"]
-tags: [".NET Aspire", "Agentic DevOps", "AI", "AI Integration", "ASP.NET Core", "Azure", "Cloud Engineering", "Coding", "Cybersecurity", "Data Platform", "Debugging", "DevOps", "DevOps Automation", "Distributed Applications", "GitHub Copilot", "IDE Productivity", "Kubernetes", "Live 360", "Machine Learning", "Microsoft Azure", "ML", "News", "Performance Engineering", "Security", "VS", "VS Live!", "Vslive", "Workshops"]
-tags_normalized: ["dotnet aspire", "agentic devops", "ai", "ai integration", "aspdotnet core", "azure", "cloud engineering", "coding", "cybersecurity", "data platform", "debugging", "devops", "devops automation", "distributed applications", "github copilot", "ide productivity", "kubernetes", "live 360", "machine learning", "microsoft azure", "ml", "news", "performance engineering", "security", "vs", "vs livebang", "vslive", "workshops"]
+tags:
+- .NET Aspire
+- Agentic DevOps
+- AI Integration
+- ASP.NET Core
+- Cloud Engineering
+- Cybersecurity
+- Data Platform
+- Debugging
+- DevOps Automation
+- Distributed Applications
+- IDE Productivity
+- Kubernetes
+- Live 360
+- Microsoft Azure
+- Performance Engineering
+- VS
+- VS Live!
+- Vslive
+- Workshops
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- ML
+- Security
+- News
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+- ml
+- security
+primary_section: github-copilot
 ---
-
 Jim Harrer details the learning opportunities at VS Live! Orlando 2025, an event brimming with sessions on Visual Studio, AI, GitHub Copilot, DevOps, and modern software engineering for Microsoft platform professionals.<!--excerpt_end-->
 
 # VS Live! Orlando 2025: Deep Dive into Visual Studio, AI, DevOps, and Beyond

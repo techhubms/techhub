@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples"
-description: "This article by Dellenny explores how GitHub Copilot enhances developer productivity in the .NET ecosystem. It covers practical examples of using Copilot to generate ASP.NET Core controllers, Entity Framework models, unit tests with xUnit, LINQ queries, and XML documentation, along with best practices for integrating Copilot effectively into your .NET workflow."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/boosting-productivity-with-github-copilot-real-world-net-coding-examples/
+title: 'Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples'
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-08-20 07:58:07 +00:00
-permalink: "/2025-08-20-Boosting-Productivity-with-GitHub-Copilot-Real-World-NET-Coding-Examples.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: [".NET", "AI", "AI Pair Programmer", "ASP.NET Core", "Blogs", "Boilerplate Reduction", "C#", "Code Automation", "Coding", "Controller Scaffolding", "Copilot Best Practices", "EF", "GitHub Copilot", "LINQ", "Microsoft", "Productivity Tools", "Software Development", "Unit Testing", "VS", "VS Code", "XML Documentation", "xUnit"]
-tags_normalized: ["dotnet", "ai", "ai pair programmer", "aspdotnet core", "blogs", "boilerplate reduction", "csharp", "code automation", "coding", "controller scaffolding", "copilot best practices", "ef", "github copilot", "linq", "microsoft", "productivity tools", "software development", "unit testing", "vs", "vs code", "xml documentation", "xunit"]
+tags:
+- .NET
+- AI Pair Programmer
+- ASP.NET Core
+- Boilerplate Reduction
+- C#
+- Code Automation
+- Controller Scaffolding
+- Copilot Best Practices
+- EF
+- LINQ
+- Microsoft
+- Productivity Tools
+- Software Development
+- Unit Testing
+- VS
+- VS Code
+- XML Documentation
+- xUnit
+- AI
+- GitHub Copilot
+- Blogs
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Dellenny demonstrates how developers can leverage GitHub Copilot as an AI coding assistant in the .NET ecosystem, showcasing real-world examples to boost productivity and reduce repetitive tasks.<!--excerpt_end-->
 
 # Boosting Productivity with GitHub Copilot: Real-World .NET Coding Examples

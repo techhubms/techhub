@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "GitHub Spark in Public Preview for Copilot Pro+ Subscribers"
-description: "GitHub Spark enters public preview, enabling Copilot Pro+ subscribers to quickly transform ideas into deployed full-stack applications. The tool streamlines the process, reducing the time spent on mockups and documentation, and enhances productivity for developers by leveraging automation and AI-driven workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/label/copilot/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-07-23-github-spark-in-public-preview-for-copilot-pro-subscribers
+title: GitHub Spark in Public Preview for Copilot Pro+ Subscribers
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-07-23 16:00:49 +00:00
-permalink: "/2025-07-23-GitHub-Spark-in-Public-Preview-for-Copilot-Pro-Subscribers.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Driven Workflows", "Application Deployment", "Automation", "Copilot Pro+", "Developer Productivity", "Full Stack Development", "GitHub", "GitHub Copilot", "GitHub Spark", "News", "Prototyping", "Public Preview", "Software Engineering"]
-tags_normalized: ["ai", "ai driven workflows", "application deployment", "automation", "copilot proplus", "developer productivity", "full stack development", "github", "github copilot", "github spark", "news", "prototyping", "public preview", "software engineering"]
+tags:
+- AI Driven Workflows
+- Application Deployment
+- Automation
+- Copilot Pro+
+- Developer Productivity
+- Full Stack Development
+- GitHub
+- GitHub Spark
+- Prototyping
+- Public Preview
+- Software Engineering
+- AI
+- GitHub Copilot
+- News
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison introduces GitHub Spark, now in public preview for Copilot Pro+ subscribers, highlighting how it accelerates development from idea to deployed app by harnessing automation and AI capabilities.<!--excerpt_end-->
 
 ## Overview

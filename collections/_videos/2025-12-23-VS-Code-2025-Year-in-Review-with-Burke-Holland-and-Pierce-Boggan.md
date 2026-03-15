@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "VS Code 2025: Year in Review with Burke Holland & Pierce Boggan"
-description: "Burke Holland and Pierce Boggan reflect on the highlights of Visual Studio Code's 2025 journey, including major releases, AI innovations, and the evolution of GitHub Copilot integration. This video covers strategic advancements such as Agent Mode, Copilot Universe, extensibility features like MCP and BYOK, prompt engineering tools, PR automation, security improvements, and community contributions. Users gain insight into how VS Code and Copilot have accelerated coding workflows, promoted open-source development, and deepened AI-assisted programming experiences."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JilqJR1aZLs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=JilqJR1aZLs
+title: 'VS Code 2025: Year in Review with Burke Holland & Pierce Boggan'
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-12-23 08:00:28 +00:00
-permalink: "/2025-12-23-VS-Code-2025-Year-in-Review-with-Burke-Holland-and-Pierce-Boggan.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Mode", "AI", "AI Integration", "Auto Mode", "Background Agents", "BYOK", "Codex Integration", "Coding", "Copilot Chat", "GitHub Copilot", "MCP", "Open Source", "Plan Mode", "PR Workflow", "Prompt Files", "Smart Routing", "Subagents", "Terminal Safety", "Videos", "VS Code"]
-tags_normalized: ["agent mode", "ai", "ai integration", "auto mode", "background agents", "byok", "codex integration", "coding", "copilot chat", "github copilot", "mcp", "open source", "plan mode", "pr workflow", "prompt files", "smart routing", "subagents", "terminal safety", "videos", "vs code"]
+tags:
+- Agent Mode
+- AI Integration
+- Auto Mode
+- Background Agents
+- BYOK
+- Codex Integration
+- Copilot Chat
+- MCP
+- Open Source
+- Plan Mode
+- PR Workflow
+- Prompt Files
+- Smart Routing
+- Subagents
+- Terminal Safety
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Visual Studio Code’s own Burke Holland and Pierce Boggan recap 2025’s advancements including Copilot Universe, Agent Modes, extensibility models, and AI-powered workflows for developers.<!--excerpt_end-->
 
 {% youtube JilqJR1aZLs %}

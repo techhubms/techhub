@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "Chat with Your App Service Logs Using GitHub Copilot"
-description: "This post introduces an open-source Model Context Protocol (MCP) server that integrates Azure App Service observability tools with AI assistants like GitHub Copilot. The server allows developers to query logs, analyze errors, and debug issues directly within their IDE or CLI using natural language, streamlining troubleshooting and diagnosis in Azure environments."
-author: "jordanselig"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/chat-with-your-app-service-logs-using-github-copilot/ba-p/4491573"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/chat-with-your-app-service-logs-using-github-copilot/ba-p/4491573
+title: Chat with Your App Service Logs Using GitHub Copilot
+author: jordanselig
+primary_section: github-copilot
+feed_name: Microsoft Tech Community
 date: 2026-02-06 16:51:33 +00:00
-permalink: "/2026-02-06-Chat-with-Your-App-Service-Logs-Using-GitHub-Copilot.html"
-categories: ["AI", "Azure", "DevOps", "GitHub Copilot"]
-tags: ["Agent Skill", "AI", "App Debugging", "App Monitoring", "Application Logs", "Azure", "Azure App Service", "Azure CLI", "Community", "Container Logs", "DefaultAzureCredential", "Deployment Diagnostics", "DevOps", "Error Analysis", "GitHub Copilot", "KQL", "Kudu", "Log Analytics", "MCP", "Node.js", "Observability", "RBAC", "VS Code"]
-tags_normalized: ["agent skill", "ai", "app debugging", "app monitoring", "application logs", "azure", "azure app service", "azure cli", "community", "container logs", "defaultazurecredential", "deployment diagnostics", "devops", "error analysis", "github copilot", "kql", "kudu", "log analytics", "mcp", "nodedotjs", "observability", "rbac", "vs code"]
+tags:
+- Agent Skill
+- AI
+- App Debugging
+- App Monitoring
+- Application Logs
+- Azure
+- Azure App Service
+- Azure CLI
+- Community
+- Container Logs
+- DefaultAzureCredential
+- Deployment Diagnostics
+- DevOps
+- Error Analysis
+- GitHub Copilot
+- KQL
+- Kudu
+- Log Analytics
+- MCP
+- Node.js
+- Observability
+- RBAC
+- VS Code
+section_names:
+- ai
+- azure
+- devops
+- github-copilot
 ---
-
 Jordan Selig demonstrates how developers can leverage an MCP server to connect GitHub Copilot with Azure App Service logs, enabling AI-driven diagnostics and troubleshooting directly in the IDE or CLI.<!--excerpt_end-->
 
 # Chat with Your App Service Logs Using GitHub Copilot

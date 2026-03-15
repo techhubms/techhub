@@ -1,22 +1,23 @@
----
-layout: "post"
-title: "Next Edit Suggestions"
-description: "AI predicts and suggests your next code edits"
-author: "Fokko Veegens"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/OZKC2c9wD1Q"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/OZKC2c9wD1Q
+title: Next Edit Suggestions
+author: Fokko Veegens
 date: 2025-04-09 09:37:02 +00:00
-permalink: "/2025-04-09-Next-Edit-Suggestions.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Editing", "GitHub Copilot", "Suggestions", "Videos"]
-tags_normalized: ["ai", "editing", "github copilot", "suggestions", "videos"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Editing
+- Suggestions
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's Next Edit Suggestions feature. NES Looks ahead for you while editing and comes up with related changes.<!--excerpt_end-->
 
 {% youtube OZKC2c9wD1Q %}

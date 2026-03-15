@@ -1,0 +1,83 @@
+@*
+    ResponsiveImage - Renders a <picture> element with multiple format fallbacks
+    
+    Automatically generates sources for JXL, WebP, and JPG formats from a base image path.
+    The base path should point to the .webp file (e.g., "/images/section-backgrounds/ai.webp")
+    and the component will generate paths for all formats.
+    
+    Usage for standard img:
+    <ResponsiveImage ImagePath="/images/section-backgrounds/ai.webp" Alt="AI section" CssClass="section-image" />
+    
+    Usage for background (uses object-fit):
+    <ResponsiveImage ImagePath="/images/section-backgrounds/ai.webp" Alt="AI section" AsBackground="true" CssClass="section-banner" />
+    
+    Note: For section banners and cards, prefer native CSS background-image for better browser caching.
+    This component is best for inline images where you need format fallbacks (JXL/WebP/JPG).
+*@
+
+@if (AsBackground)
+{
+    <picture class="@CssClass" style="@StyleAttribute" data-permanent="@PermanentId">
+        <source srcset="@JxlPath" type="image/jxl" />
+        <source srcset="@WebpPath" type="image/webp" />
+        <img src="@JpgPath" alt="@Alt" class="background-image" loading="@Loading" />
+    </picture>
+}
+else
+{
+    <picture class="@CssClass" style="@StyleAttribute" data-permanent="@PermanentId">
+        <source srcset="@JxlPath" type="image/jxl" />
+        <source srcset="@WebpPath" type="image/webp" />
+        <img src="@JpgPath" alt="@Alt" loading="@Loading" />
+    </picture>
+}
+
+@code {
+    /// <summary>
+    /// Path to the image (should be the .webp path for consistency)
+    /// </summary>
+    [Parameter, EditorRequired]
+    public string ImagePath { get; set; } = string.Empty;
+
+    /// <summary>
+    /// Alt text for the image
+    /// </summary>
+    [Parameter, EditorRequired]
+    public string Alt { get; set; } = string.Empty;
+
+    /// <summary>
+    /// CSS class to apply to the picture element
+    /// </summary>
+    [Parameter]
+    public string? CssClass { get; set; }
+
+    /// <summary>
+    /// Additional inline styles to apply
+    /// </summary>
+    [Parameter]
+    public string? StyleAttribute { get; set; }
+
+    /// <summary>
+    /// If true, renders as a background image using object-fit CSS
+    /// </summary>
+    [Parameter]
+    public bool AsBackground { get; set; }
+
+    /// <summary>
+    /// Image loading strategy: "lazy" (default, defer until near viewport) or "eager" (load immediately)
+    /// Use "eager" for above-the-fold images like hero banners, "lazy" for below-the-fold content
+    /// </summary>
+    [Parameter]
+    public string Loading { get; set; } = "lazy";
+
+    private string BasePath => ImagePath.Replace(".webp", "").Replace(".jpg", "").Replace(".jxl", "");
+    private string JxlPath => $"{BasePath}.jxl";
+    private string WebpPath => $"{BasePath}.webp";
+    private string JpgPath => $"{BasePath}.jpg";
+
+    /// <summary>
+    /// Permanent ID for data-permanent attribute, based on image path.
+    /// This allows Blazor enhanced navigation to preserve identical images across pages.
+    /// </summary>
+    private string PermanentId => $"img-{BasePath.GetHashCode():X}";
+}

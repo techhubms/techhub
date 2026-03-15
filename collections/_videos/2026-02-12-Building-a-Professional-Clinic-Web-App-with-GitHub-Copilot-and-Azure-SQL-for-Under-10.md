@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "Building a Professional Clinic Web App with GitHub Copilot and Azure SQL for Under $10"
-description: "This video by Microsoft Developer showcases how to build a cost-effective, production-ready web app for a university dental clinic. Using a Copilot-first development workflow in VS Code with GitHub Copilot Pro, the solution is rapidly scaffolded, deployed to Azure App Service (F1), and leverages Azure SQL Database (free offer) for secure, role-based data management. Additional smart features, such as AI-driven medical history summarization via Azure OpenAI and secure authentication with Microsoft Entra ID, are implemented to maintain performance and compliance on a minimal budget."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=PamhXD0m4fs"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=PamhXD0m4fs
+title: Building a Professional Clinic Web App with GitHub Copilot and Azure SQL for Under $10
+author: Microsoft Developer
+primary_section: github-copilot
+feed_name: Microsoft Developer YouTube
 date: 2026-02-12 17:00:39 +00:00
-permalink: "/2026-02-12-Building-a-Professional-Clinic-Web-App-with-GitHub-Copilot-and-Azure-SQL-for-Under-10.html"
-categories: ["AI", "Azure", "Coding", "GitHub Copilot", "Security"]
-tags: [".NET", "AI", "AI Summarization", "Azure", "Azure App Service", "Azure OpenAI", "Azure SQL Database", "Clinic App", "Cloud Computing", "Coding", "Cost Optimization", "Deployment Scripts", "Dev", "Development", "F1 Tier", "GitHub Copilot", "GitHub Copilot Pro", "Managed Identity", "Microsoft", "Microsoft Entra ID", "Role Based Access Control", "Secure Authentication", "Security", "Tech", "Technology", "Videos", "VS Code", "Web App Development"]
-tags_normalized: ["dotnet", "ai", "ai summarization", "azure", "azure app service", "azure openai", "azure sql database", "clinic app", "cloud computing", "coding", "cost optimization", "deployment scripts", "dev", "development", "f1 tier", "github copilot", "github copilot pro", "managed identity", "microsoft", "microsoft entra id", "role based access control", "secure authentication", "security", "tech", "technology", "videos", "vs code", "web app development"]
+tags:
+- .NET
+- AI
+- AI Summarization
+- Azure
+- Azure App Service
+- Azure OpenAI
+- Azure SQL Database
+- Clinic App
+- Cloud Computing
+- Cost Optimization
+- Deployment Scripts
+- Dev
+- Development
+- F1 Tier
+- GitHub Copilot
+- GitHub Copilot Pro
+- Managed Identity
+- Microsoft
+- Microsoft Entra ID
+- Role Based Access Control
+- Secure Authentication
+- Security
+- Tech
+- Technology
+- Videos
+- VS Code
+- Web App Development
+section_names:
+- ai
+- azure
+- dotnet
+- github-copilot
+- security
 ---
-
 Microsoft Developer presents how Amar and Arvind built a dental clinic app using GitHub Copilot Pro, Azure SQL, and Azure OpenAI for under $10, integrating AI, secure authentication, and robust deployment patterns.<!--excerpt_end-->
 
 {% youtube PamhXD0m4fs %}

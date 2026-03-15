@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Copilot Content Exclusion REST API in Public Preview"
-description: "This announcement details the new GitHub Copilot Content Exclusion REST API, allowing organization and enterprise admins to programmatically manage Copilot content exclusion rules. The JSON API supports operations to automate exclusion rule configuration at scale, facilitating improved governance and automation in developer workflows."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-copilot-content-exclusion-rest-api-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-copilot-content-exclusion-rest-api-in-public-preview
+title: Copilot Content Exclusion REST API in Public Preview
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-26 15:37:48 +00:00
-permalink: "/2026-02-26-Copilot-Content-Exclusion-REST-API-in-Public-Preview.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "API Documentation", "Automation", "Content Exclusion", "Copilot", "Developer Tools", "Enterprise Administration", "GitHub", "GitHub Copilot", "Governance", "News", "Organization Management", "REST API"]
-tags_normalized: ["ai", "api documentation", "automation", "content exclusion", "copilot", "developer tools", "enterprise administration", "github", "github copilot", "governance", "news", "organization management", "rest api"]
+tags:
+- AI
+- API Documentation
+- Automation
+- Content Exclusion
+- Copilot
+- Developer Tools
+- Enterprise Administration
+- GitHub
+- GitHub Copilot
+- Governance
+- News
+- Organization Management
+- REST API
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison announces the public preview of the GitHub Copilot Content Exclusion REST API, providing a programmable interface for managing Copilot exclusion rules at scale for organizations and enterprises.<!--excerpt_end-->
 
 # Copilot Content Exclusion REST API in Public Preview

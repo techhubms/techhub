@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "The Human Scale Problem in Platform Engineering"
-description: "This article examines the escalating complexity in platform engineering as organizations shift from manual tasks to automated, large-scale infrastructure. It discusses how specialization, tool sprawl, and the rise of AI assistance impact team collaboration and knowledge management, offering insights into designing adaptable, human-centric systems."
-author: "Diego Casati, Ray Kao"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/all-things-azure/the-human-scale-problem-in-platform-engineering/"
-viewing_mode: "external"
-feed_name: "Microsoft All Things Azure Blog"
-feed_url: "https://devblogs.microsoft.com/all-things-azure/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/all-things-azure/the-human-scale-problem-in-platform-engineering/
+title: The Human Scale Problem in Platform Engineering
+author: Diego Casati, Ray Kao
+primary_section: ai
+feed_name: Microsoft All Things Azure Blog
 date: 2026-03-13 20:22:49 +00:00
-permalink: "/2026-03-13-The-Human-Scale-Problem-in-Platform-Engineering.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Assistance", "All Things Azure", "Automation", "Azure", "Azure Monitor", "Cloud Computing", "Collaboration Patterns", "Containers", "DevOps", "Enterprise Scale", "GitHub Actions", "Human Centric Systems", "IaC", "Kubernetes", "Microservices", "Modernization", "Modernize", "News", "Observability", "Platform Engineering", "Service Mesh", "SRE", "Terraform", "Tool Sprawl"]
-tags_normalized: ["ai", "ai assistance", "all things azure", "automation", "azure", "azure monitor", "cloud computing", "collaboration patterns", "containers", "devops", "enterprise scale", "github actions", "human centric systems", "iac", "kubernetes", "microservices", "modernization", "modernize", "news", "observability", "platform engineering", "service mesh", "sre", "terraform", "tool sprawl"]
+tags:
+- AI
+- AI Assistance
+- All Things Azure
+- Automation
+- Azure
+- Azure Monitor
+- Cloud Computing
+- Collaboration Patterns
+- Containers
+- DevOps
+- Enterprise Scale
+- GitHub Actions
+- Human Centric Systems
+- IaC
+- Kubernetes
+- Microservices
+- Modernization
+- Modernize
+- News
+- Observability
+- Platform Engineering
+- Service Mesh
+- SRE
+- Terraform
+- Tool Sprawl
+section_names:
+- ai
+- azure
+- devops
 ---
-
 Diego Casati and Ray Kao explore the challenges of scaling platform engineering processes, focusing on specialization, tool complexity, and the growing role of AI-powered collaboration in the Azure ecosystem.<!--excerpt_end-->
 
 # The Human Scale Problem in Platform Engineering

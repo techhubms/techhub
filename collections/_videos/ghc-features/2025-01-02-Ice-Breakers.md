@@ -1,22 +1,23 @@
----
-layout: "post"
-title: "Ice Breakers"
-description: "Jump-start development with starter templates"
-author: "Randy Pagels"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://youtu.be/ri8EG4-rM9A"
-categories: ["AI", "GitHub Copilot"]
+﻿---
+external_url: https://youtu.be/ri8EG4-rM9A
+title: Ice Breakers
+author: Randy Pagels
 date: 2025-01-02 11:21:13 +00:00
-permalink: "/2025-01-02-Ice-Breakers.html"
-viewing_mode: "internal"
-section: "github-copilot"
-ghes_support: "true"
-plans: ["Free"]
-alt-collection: "features"
-tags: ["AI", "Code", "GitHub Copilot", "Templates", "Videos"]
-tags_normalized: ["ai", "code", "github copilot", "templates", "videos"]
+ghes_support: true
+plans:
+- Free
+tags:
+- Code
+- Templates
+- AI
+- GitHub Copilot
+- Videos
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
+feed_name: TechHub
 ---
-
 This video demonstrates GitHub Copilot's Ice Breakers feature. Generate starter templates or boilerplate code to jump-start development.<!--excerpt_end-->
 
 {% youtube ri8EG4-rM9A %}

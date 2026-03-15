@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Enhancing C++ Development in Visual Studio 2026 with GitHub Copilot"
-description: "This post highlights the new GitHub Copilot features introduced in Visual Studio 2026, aimed at C++ developers. It details Copilot's abilities to assist with large-scale refactoring, boost build performance via Build Insights, and streamline upgrades of Microsoft C++ (MSVC) Build Tools. The content covers the private preview availability and offers practical links for hands-on access."
-author: "Erika Sweet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/"
-viewing_mode: "external"
-feed_name: "Microsoft VisualStudio Blog"
-feed_url: "https://devblogs.microsoft.com/visualstudio/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/visualstudio/upgrade-msvc-improve-c-build-performance-and-refactor-c-code-with-github-copilot/
+title: Enhancing C++ Development in Visual Studio 2026 with GitHub Copilot
+author: Erika Sweet
+feed_name: Microsoft VisualStudio Blog
 date: 2025-12-01 16:24:40 +00:00
-permalink: "/2025-12-01-Enhancing-C-Development-in-Visual-Studio-2026-with-GitHub-Copilot.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "App Modernization", "Build Insights", "Build Performance", "C++", "Code Editing", "Code Refactoring", "Coding", "Copilot", "Developer Tools", "GitHub Copilot", "IntelliSense", "Microsoft", "MSVC Build Tools", "News", "Private Preview", "VS", "Windows Development"]
-tags_normalized: ["ai", "app modernization", "build insights", "build performance", "cplusplus", "code editing", "code refactoring", "coding", "copilot", "developer tools", "github copilot", "intellisense", "microsoft", "msvc build tools", "news", "private preview", "vs", "windows development"]
+tags:
+- App Modernization
+- Build Insights
+- Build Performance
+- C++
+- Code Editing
+- Code Refactoring
+- Copilot
+- Developer Tools
+- IntelliSense
+- Microsoft
+- MSVC Build Tools
+- Private Preview
+- VS
+- Windows Development
+- AI
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Erika Sweet details how Visual Studio 2026 brings new GitHub Copilot capabilities to C++ developers, supporting code refactoring, build performance improvements, and MSVC Build Tools upgrades.<!--excerpt_end-->
 
 # Enhancing C++ Development in Visual Studio 2026 with GitHub Copilot

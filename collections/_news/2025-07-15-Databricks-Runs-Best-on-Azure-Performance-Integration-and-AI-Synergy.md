@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Databricks Runs Best on Azure: Performance, Integration, and AI Synergy"
-description: "This article explores why Azure Databricks is ideal for organizations seeking unified analytics, AI, and data operations. It highlights unique integrations, performance benchmarks, Azure-native features, and the platform’s deep alignment with Microsoft tools, making it a compelling choice for data-driven enterprises."
-author: "Jason Pereira and Anavi Nahar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/"
-viewing_mode: "external"
-feed_name: "The Azure Blog"
-feed_url: "https://azure.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/
+title: 'Databricks Runs Best on Azure: Performance, Integration, and AI Synergy'
+author: Jason Pereira and Anavi Nahar
+feed_name: The Azure Blog
 date: 2025-07-15 15:00:00 +00:00
-permalink: "/2025-07-15-Databricks-Runs-Best-on-Azure-Performance-Integration-and-AI-Synergy.html"
-categories: ["AI", "Azure", "ML", "DevOps", "Security"]
-tags: ["AI", "AI + Machine Learning", "AI Integration", "Analytics", "Autoscaling", "Azure", "Azure AI Foundry", "Azure Databricks", "Azure DevOps", "Azure Key Vault", "Azure Monitor", "Cloud Performance", "Copilot", "Cross Cloud Governance", "Data Engineering", "Data Lifecycle", "DevOps", "Governance", "Machine Learning", "Microsoft Entra ID", "Microsoft Fabric", "Microsoft Purview", "ML", "News", "Power BI", "Security", "Unity Catalog"]
-tags_normalized: ["ai", "ai plus machine learning", "ai integration", "analytics", "autoscaling", "azure", "azure ai foundry", "azure databricks", "azure devops", "azure key vault", "azure monitor", "cloud performance", "copilot", "cross cloud governance", "data engineering", "data lifecycle", "devops", "governance", "machine learning", "microsoft entra id", "microsoft fabric", "microsoft purview", "ml", "news", "power bi", "security", "unity catalog"]
+tags:
+- AI + Machine Learning
+- AI Integration
+- Analytics
+- Autoscaling
+- Azure AI Foundry
+- Azure Databricks
+- Azure DevOps
+- Azure Key Vault
+- Azure Monitor
+- Cloud Performance
+- Copilot
+- Cross Cloud Governance
+- Data Engineering
+- Data Lifecycle
+- Governance
+- Microsoft Entra ID
+- Microsoft Fabric
+- Microsoft Purview
+- Power BI
+- Unity Catalog
+- AI
+- Azure
+- ML
+- DevOps
+- Security
+- News
+section_names:
+- ai
+- azure
+- ml
+- devops
+- security
+primary_section: ai
 ---
-
 In this post, Jason Pereira and Anavi Nahar outline how Azure Databricks delivers a streamlined, high-performance environment for analytics and AI, leveraging tight integration with the Microsoft ecosystem.<!--excerpt_end-->
 
 # Databricks Runs Best on Azure: Performance, Integration, and AI Synergy
@@ -105,6 +129,6 @@ Azure Databricks now enables **cross-cloud data governance**:
 
 ---
 
-_This article is a supplement to the [Azure Databricks: Differentiated Synergy](https://azure.microsoft.com/en-us/blog/azure-databricks-differentiated-synergy/) post, providing a deeper look at Azure Databricks’ technical and business advantages._
+*This article is a supplement to the [Azure Databricks: Differentiated Synergy](https://azure.microsoft.com/en-us/blog/azure-databricks-differentiated-synergy/) post, providing a deeper look at Azure Databricks’ technical and business advantages.*
 
 This post appeared first on "The Azure Blog". [Read the entire article here](https://azure.microsoft.com/en-us/blog/databricks-runs-best-on-azure/)

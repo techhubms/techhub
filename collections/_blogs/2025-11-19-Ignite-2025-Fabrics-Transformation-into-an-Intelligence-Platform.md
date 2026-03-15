@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Ignite 2025: Fabric’s Transformation into an Intelligence Platform"
-description: "This article by Markus Lehtola summarizes Microsoft Ignite 2025 announcements, focusing on how Microsoft Fabric is evolving from a traditional data warehouse to an enterprise intelligence platform. Key highlights include new features for data engineers, the strategic expansion to AI agent infrastructure, and enhanced data operations and monitoring capabilities."
-author: "markus.lehtola@zure.com (Markus Lehtola)"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://zure.com/blog/ignite-2025-fabrics-evolution-from-data-platform-to-intelligence-platform"
-viewing_mode: "external"
-feed_name: "Zure Data & AI Blog"
-feed_url: "https://zure.com/blog/rss.xml"
+﻿---
+external_url: https://zure.com/blog/ignite-2025-fabrics-evolution-from-data-platform-to-intelligence-platform
+title: 'Ignite 2025: Fabric’s Transformation into an Intelligence Platform'
+author: markus.lehtola@zure.com (Markus Lehtola)
+feed_name: Zure Data & AI Blog
 date: 2025-11-19 08:32:01 +00:00
-permalink: "/2025-11-19-Ignite-2025-Fabrics-Transformation-into-an-Intelligence-Platform.html"
-categories: ["AI", "Azure", "ML"]
-tags: ["Agent 365", "AI", "AI Agents", "Analytics Engineering", "Azure", "Blogs", "Capacity Planning", "Data", "Data Architecture", "Data Clustering", "Data Warehouse", "Dbt", "Eventhouse", "Fabric IQ", "KQL Database", "Microsoft", "Microsoft Fabric", "Microsoft Foundry", "ML", "Operations Agent", "Power BI", "Real Time Intelligence", "SAP Mirroring"]
-tags_normalized: ["agent 365", "ai", "ai agents", "analytics engineering", "azure", "blogs", "capacity planning", "data", "data architecture", "data clustering", "data warehouse", "dbt", "eventhouse", "fabric iq", "kql database", "microsoft", "microsoft fabric", "microsoft foundry", "ml", "operations agent", "power bi", "real time intelligence", "sap mirroring"]
+tags:
+- Agent 365
+- AI Agents
+- Analytics Engineering
+- Capacity Planning
+- Data
+- Data Architecture
+- Data Clustering
+- Data Warehouse
+- Dbt
+- Eventhouse
+- Fabric IQ
+- KQL Database
+- Microsoft
+- Microsoft Fabric
+- Microsoft Foundry
+- Operations Agent
+- Power BI
+- Real Time Intelligence
+- SAP Mirroring
+- AI
+- Azure
+- ML
+- Blogs
+section_names:
+- ai
+- azure
+- ml
+primary_section: ai
 ---
-
 Markus Lehtola reviews key Microsoft Ignite 2025 updates, detailing Fabric’s shift to an intelligence platform and what it means for data and AI teams leveraging Microsoft’s cloud ecosystem.<!--excerpt_end-->
 
 # Ignite 2025: Fabric’s Evolution from Data Platform to Intelligence Platform

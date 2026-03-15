@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Enterprise Identity Meets Secure File Transfer: Entra ID Public Preview for Azure Blob Storage SFTP"
-description: "This announcement introduces the public preview of Microsoft Entra ID-based access for Azure Blob Storage SFTP. It explains how organizations can eliminate the need for local SFTP user management by leveraging enterprise identity strategies. The post details security, compliance, onboarding, and collaboration improvements, with examples from real-world sectors like finance and healthcare, and provides steps to get started."
-author: "JeevanManoj"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-storage-blog/enterprise-identity-meets-secure-file-transfer-entra-id-public/ba-p/4501937"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-storage-blog/enterprise-identity-meets-secure-file-transfer-entra-id-public/ba-p/4501937
+title: 'Enterprise Identity Meets Secure File Transfer: Entra ID Public Preview for Azure Blob Storage SFTP'
+author: JeevanManoj
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-03-13 10:37:25 +00:00
-permalink: "/2026-03-13-Enterprise-Identity-Meets-Secure-File-Transfer-Entra-ID-Public-Preview-for-Azure-Blob-Storage-SFTP.html"
-categories: ["Azure", "Security"]
-tags: ["ABAC", "Access Control", "ACL", "Authentication", "Azure", "Azure Active Directory", "Azure Blob Storage", "Cloud Storage", "Community", "Conditional Access", "Data Protection", "Enterprise Security", "External Identities", "Identity Management", "Microsoft Entra ID", "Onboarding", "Privilege Management", "RBAC", "Security", "SFTP"]
-tags_normalized: ["abac", "access control", "acl", "authentication", "azure", "azure active directory", "azure blob storage", "cloud storage", "community", "conditional access", "data protection", "enterprise security", "external identities", "identity management", "microsoft entra id", "onboarding", "privilege management", "rbac", "security", "sftp"]
+tags:
+- ABAC
+- Access Control
+- ACL
+- Authentication
+- Azure
+- Azure Active Directory
+- Azure Blob Storage
+- Cloud Storage
+- Community
+- Conditional Access
+- Data Protection
+- Enterprise Security
+- External Identities
+- Identity Management
+- Microsoft Entra ID
+- Onboarding
+- Privilege Management
+- RBAC
+- Security
+- SFTP
+section_names:
+- azure
+- security
 ---
-
 JeevanManoj presents an in-depth guide to the public preview of Entra ID-based access for Azure Blob Storage SFTP, highlighting enhanced enterprise identity management and security.<!--excerpt_end-->
 
 # Enterprise Identity Meets Secure File Transfer: Entra ID Public Preview for Azure Blob Storage SFTP

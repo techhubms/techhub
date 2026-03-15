@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "AI in Action: Meet the 2026 Imagine Cup Semifinalists"
-description: "An overview of the 2026 Imagine Cup semifinalists, highlighting student-led innovation and real-world application of AI across diverse fields. The news details team projects that leverage Microsoft and Azure AI platforms to address accessibility, healthcare, safety, and more, demonstrating the transformative potential of AI in education and entrepreneurship."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/blog/studentdeveloperblog/ai-in-action-meet-the-2026-imagine-cup-semifinalists/4495567"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://techcommunity.microsoft.com/blog/studentdeveloperblog/ai-in-action-meet-the-2026-imagine-cup-semifinalists/4495567
+title: 'AI in Action: Meet the 2026 Imagine Cup Semifinalists'
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-02-18 18:33:10 +00:00
-permalink: "/2026-02-18-AI-in-Action-Meet-the-2026-Imagine-Cup-Semifinalists.html"
-categories: ["AI", "Azure"]
-tags: ["Accessibility", "AI", "AI Applications", "Azure", "Azure AI", "Cloud Platform", "Company News", "Competition", "Edge AI", "Education", "Education Technology", "Generative AI", "Health Tech", "Imagine Cup", "Inclusive Technology", "Microsoft AI", "News", "Startups", "Student Innovation"]
-tags_normalized: ["accessibility", "ai", "ai applications", "azure", "azure ai", "cloud platform", "company news", "competition", "edge ai", "education", "education technology", "generative ai", "health tech", "imagine cup", "inclusive technology", "microsoft ai", "news", "startups", "student innovation"]
+tags:
+- Accessibility
+- AI
+- AI Applications
+- Azure
+- Azure AI
+- Cloud Platform
+- Company News
+- Competition
+- Edge AI
+- Education
+- Education Technology
+- Generative AI
+- Health Tech
+- Imagine Cup
+- Inclusive Technology
+- Microsoft AI
+- News
+- Startups
+- Student Innovation
+section_names:
+- ai
+- azure
 ---
-
 stclarke shares the achievements of the 2026 Imagine Cup semifinalists, spotlighting global student teams using AI—often with Microsoft Azure—to solve real-world challenges in education, health, accessibility, and more.<!--excerpt_end-->
 
 # AI in Action: Meet the 2026 Imagine Cup Semifinalists

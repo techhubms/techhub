@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Accelerating Infrastructure as Code: New Terraform Enhancements for Azure"
-description: "This article introduces significant updates to the Terraform on Azure experience, including integrated AI-powered code generation, an all-in-one VS Code extension, and a new MS Graph provider. These features streamline the creation, validation, and management of Azure and wider Microsoft infrastructure using Terraform."
-author: "stevenjma"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/accelerating-infrastructure-as-code-introducing-game-changing/ba-p/4457341
+title: 'Accelerating Infrastructure as Code: New Terraform Enhancements for Azure'
+author: stevenjma
+feed_name: Microsoft Tech Community
 date: 2025-09-26 15:53:50 +00:00
-permalink: "/2025-09-26-Accelerating-Infrastructure-as-Code-New-Terraform-Enhancements-for-Azure.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "Azure", "Azure Portal", "CI/CD", "Cloud Automation", "Community", "Compliance", "Copilot in Azure", "DevOps", "Export Infrastructure", "HCL", "IaC", "Microsoft 365 Integration", "Microsoft Graph Provider", "Policy Validation", "Production Templates", "Terraform", "VS Code Extension"]
-tags_normalized: ["ai", "azure", "azure portal", "cislashcd", "cloud automation", "community", "compliance", "copilot in azure", "devops", "export infrastructure", "hcl", "iac", "microsoft 365 integration", "microsoft graph provider", "policy validation", "production templates", "terraform", "vs code extension"]
+tags:
+- Azure Portal
+- CI/CD
+- Cloud Automation
+- Compliance
+- Copilot in Azure
+- Export Infrastructure
+- HCL
+- IaC
+- Microsoft 365 Integration
+- Microsoft Graph Provider
+- Policy Validation
+- Production Templates
+- Terraform
+- VS Code Extension
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 stevenjma from the Terraform on Azure Product Group explains new features for Terraform users on Azure, including AI-powered code generation, streamlined VS Code tooling, and expanded support for Microsoft services.<!--excerpt_end-->
 
 # Accelerating Infrastructure as Code: New Terraform Enhancements for Azure

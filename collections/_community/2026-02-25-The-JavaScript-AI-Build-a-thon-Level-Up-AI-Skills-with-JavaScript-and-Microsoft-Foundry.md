@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "The JavaScript AI Build-a-thon: Level Up AI Skills with JavaScript and Microsoft Foundry"
-description: "The JavaScript AI Build-a-thon is a free, four-week, hands-on program by Microsoft and GitHub, designed to help JavaScript and TypeScript developers learn practical AI development. Participants will build local AI apps, explore multi-agent systems, and join a global hackathon, with a strong focus on Microsoft's Foundry, RAG patterns, and agent-based AI. The event includes livestreams, expert guidance, and community support, bridging the gap between front-end web skills and the AI ecosystem using familiar developer tools."
-author: "Julia_Muiruri"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-javascript-ai-build-a-thon-season-2-starts-march-2/ba-p/4496855"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/the-javascript-ai-build-a-thon-season-2-starts-march-2/ba-p/4496855
+title: 'The JavaScript AI Build-a-thon: Level Up AI Skills with JavaScript and Microsoft Foundry'
+author: Julia_Muiruri
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-25 14:32:13 +00:00
-permalink: "/2026-02-25-The-JavaScript-AI-Build-a-thon-Level-Up-AI-Skills-with-JavaScript-and-Microsoft-Foundry.html"
-categories: ["AI", "Azure", "Coding"]
-tags: ["Agent Builder", "AI", "AI Agents", "AI Development", "API Design", "Azure", "Coding", "Community", "Community Learning", "GitHub", "Guided Projects", "Hackathon", "JavaScript AI Buildathon", "LangChain.js", "Local AI", "MCP", "Microsoft", "Microsoft Foundry", "RAG", "Reactor", "Retrieval Augmented Generation", "Serverless", "TypeScript"]
-tags_normalized: ["agent builder", "ai", "ai agents", "ai development", "api design", "azure", "coding", "community", "community learning", "github", "guided projects", "hackathon", "javascript ai buildathon", "langchaindotjs", "local ai", "mcp", "microsoft", "microsoft foundry", "rag", "reactor", "retrieval augmented generation", "serverless", "typescript"]
+tags:
+- Agent Builder
+- AI
+- AI Agents
+- AI Development
+- API Design
+- Azure
+- Community
+- Community Learning
+- GitHub
+- Guided Projects
+- Hackathon
+- JavaScript AI Buildathon
+- LangChain.js
+- Local AI
+- MCP
+- Microsoft
+- Microsoft Foundry
+- RAG
+- Reactor
+- Retrieval Augmented Generation
+- Serverless
+- TypeScript
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
 ---
-
 Julia Muiruri from Microsoft introduces the JavaScript AI Build-a-thon, a hands-on program for developers to gain practical experience building AI-powered apps using JavaScript, TypeScript, and Microsoft Foundry tools with expert support.<!--excerpt_end-->
 
 # The JavaScript AI Build-a-thon: Season 2

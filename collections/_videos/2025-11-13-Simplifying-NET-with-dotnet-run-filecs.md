@@ -1,20 +1,31 @@
----
-layout: "post"
-title: "Simplifying .NET with 'dotnet run file.cs'"
-description: "This session explores the new 'dotnet run file.cs' command in .NET, making it possible to execute C# code files directly without a project file. Key topics include rapid prototyping, automation scripting, educational use cases, and how the command improves developer workflows for both beginners and experienced engineers."
-author: "dotnet"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=KjqePh3naKQ"
-viewing_mode: "internal"
-feed_name: "DotNet YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw"
+﻿---
+external_url: https://www.youtube.com/watch?v=KjqePh3naKQ
+title: Simplifying .NET with 'dotnet run file.cs'
+author: dotnet
+feed_name: DotNet YouTube
 date: 2025-11-13 17:40:46 +00:00
-permalink: "/2025-11-13-Simplifying-NET-with-dotnet-run-filecs.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", ".NET Run", "ASP.NET Core", "Automation", "C#", "Coding", "Developer Productivity", "Educational Scenarios", "F#", "MAUI", "Programming Language Features", "Rapid Prototyping", "Scripting", "Unified Development", "Utility Programs", "Videos", "VS"]
-tags_normalized: ["dotnet", "dotnet 10", "dotnet run", "aspdotnet core", "automation", "csharp", "coding", "developer productivity", "educational scenarios", "fsharp", "maui", "programming language features", "rapid prototyping", "scripting", "unified development", "utility programs", "videos", "vs"]
+tags:
+- .NET
+- .NET 10
+- .NET Run
+- ASP.NET Core
+- Automation
+- C#
+- Developer Productivity
+- Educational Scenarios
+- F#
+- MAUI
+- Programming Language Features
+- Rapid Prototyping
+- Scripting
+- Unified Development
+- Utility Programs
+- VS
+- Videos
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 dotnet introduces developers to the powerful 'dotnet run file.cs' command, which streamlines C# scripting and direct code execution, focusing on practical use cases for rapid prototyping and automation.<!--excerpt_end-->
 
 {% youtube KjqePh3naKQ %}

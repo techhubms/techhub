@@ -1,20 +1,44 @@
----
-layout: "post"
-title: "Microsoft Fabric Influencers Spotlight: December 2025 Highlights"
-description: "This post spotlights the December 2025 contributions from Microsoft MVPs and Fabric Super Users, featuring technical blogs, videos, and tutorials across Microsoft Fabric. It includes deep dives into data warehousing, Power BI, data engineering, data science, administration, DevOps, and real-time intelligence—showcasing applied best practices and new features in the Fabric ecosystem."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-december-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/fabric-influencers-spotlight-december-2025/
+title: 'Microsoft Fabric Influencers Spotlight: December 2025 Highlights'
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-12-19 09:00:00 +00:00
-permalink: "/2025-12-19-Microsoft-Fabric-Influencers-Spotlight-December-2025-Highlights.html"
-categories: ["Azure", "Coding", "DevOps", "ML"]
-tags: ["Administration", "Autoencoder", "Azure", "Azure DevOps", "CI/CD", "Coding", "Data Engineering", "Data Science", "Data Warehouse", "DAX", "Delta Tables", "DevOps", "Eventhouse", "Eventstream", "Fabric Platform", "Fabric Super Users", "Governance", "Lakehouse", "Microsoft Fabric", "ML", "MVP", "News", "Power BI", "Real Time Analytics", "Semantic Models", "SQL Database", "Warehouse"]
-tags_normalized: ["administration", "autoencoder", "azure", "azure devops", "cislashcd", "coding", "data engineering", "data science", "data warehouse", "dax", "delta tables", "devops", "eventhouse", "eventstream", "fabric platform", "fabric super users", "governance", "lakehouse", "microsoft fabric", "ml", "mvp", "news", "power bi", "real time analytics", "semantic models", "sql database", "warehouse"]
+tags:
+- Administration
+- Autoencoder
+- Azure DevOps
+- CI/CD
+- Data Engineering
+- Data Science
+- Data Warehouse
+- DAX
+- Delta Tables
+- Eventhouse
+- Eventstream
+- Fabric Platform
+- Fabric Super Users
+- Governance
+- Lakehouse
+- Microsoft Fabric
+- MVP
+- Power BI
+- Real Time Analytics
+- Semantic Models
+- SQL Database
+- Warehouse
+- Azure
+- DevOps
+- ML
+- News
+- .NET
+section_names:
+- azure
+- dotnet
+- devops
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog curates this comprehensive December 2025 edition, highlighting technical insight and walkthroughs by MVPs and Super Users covering advanced development, deployment, and analytics in Microsoft Fabric.<!--excerpt_end-->
 
 # Microsoft Fabric Influencers Spotlight: December 2025 Highlights

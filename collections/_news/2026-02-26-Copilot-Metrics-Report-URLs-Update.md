@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Copilot Metrics Report URLs Update"
-description: "This update announces a change in the endpoint for download URLs returned by the GitHub Copilot usage metrics API. While the API contract, response schema, and report data remain unchanged, organizations with specific firewall allowlist configurations must update them to include a new CDN domain. No action is required for users downloading reports via the dashboard UI."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-26-copilot-metrics-report-urls-update"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-26-copilot-metrics-report-urls-update
+title: Copilot Metrics Report URLs Update
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-02-26 20:11:34 +00:00
-permalink: "/2026-02-26-Copilot-Metrics-Report-URLs-Update.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Account Management", "AI", "Allowlist", "API Contract", "API Update", "Azure CDN", "CDN Domains", "Copilot", "DevOps", "DevOps Tools", "Endpoint Change", "Enterprise Management", "Enterprise Management Tools", "Firewall Configuration", "GitHub Copilot", "Improvement", "News", "Usage Metrics"]
-tags_normalized: ["account management", "ai", "allowlist", "api contract", "api update", "azure cdn", "cdn domains", "copilot", "devops", "devops tools", "endpoint change", "enterprise management", "enterprise management tools", "firewall configuration", "github copilot", "improvement", "news", "usage metrics"]
+tags:
+- Account Management
+- AI
+- Allowlist
+- API Contract
+- API Update
+- Azure CDN
+- CDN Domains
+- Copilot
+- DevOps
+- DevOps Tools
+- Endpoint Change
+- Enterprise Management
+- Enterprise Management Tools
+- Firewall Configuration
+- GitHub Copilot
+- Improvement
+- News
+- Usage Metrics
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison explains the required action on firewall allowlist configurations due to a new endpoint for GitHub Copilot usage metrics API report downloads. Report data and schemas are unaffected.<!--excerpt_end-->
 
 # Copilot Metrics Report URLs Update

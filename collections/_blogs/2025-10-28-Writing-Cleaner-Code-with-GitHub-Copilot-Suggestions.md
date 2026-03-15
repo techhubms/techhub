@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Writing Cleaner Code with GitHub Copilot Suggestions"
-description: "This article explores how developers can use GitHub Copilot not just to speed up coding, but to improve code quality and maintainability. It covers best practices for using Copilot-generated suggestions, refactoring, testing, and avoiding security pitfalls, ensuring developers maintain control and produce clean, reliable code."
-author: "Dellenny"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/"
-viewing_mode: "external"
-feed_name: "Dellenny's Blog"
-feed_url: "https://dellenny.com/feed/"
+﻿---
+external_url: https://dellenny.com/writing-cleaner-code-with-github-copilot-suggestions/
+title: Writing Cleaner Code with GitHub Copilot Suggestions
+author: Dellenny
+feed_name: Dellenny's Blog
 date: 2025-10-28 08:42:12 +00:00
-permalink: "/2025-10-28-Writing-Cleaner-Code-with-GitHub-Copilot-Suggestions.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Assisted Development", "Best Practices", "Blogs", "Clean Code", "Code Quality", "Code Review", "Code Suggestions", "Coding", "Developer Productivity", "GitHib Copilot", "GitHub Copilot", "Maintainability", "Refactoring", "Software Development", "Test Generation"]
-tags_normalized: ["ai", "ai assisted development", "best practices", "blogs", "clean code", "code quality", "code review", "code suggestions", "coding", "developer productivity", "githib copilot", "github copilot", "maintainability", "refactoring", "software development", "test generation"]
+tags:
+- AI Assisted Development
+- Best Practices
+- Clean Code
+- Code Quality
+- Code Review
+- Code Suggestions
+- Developer Productivity
+- GitHib Copilot
+- Maintainability
+- Refactoring
+- Software Development
+- Test Generation
+- AI
+- GitHub Copilot
+- Blogs
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 Dellenny shares actionable strategies for using GitHub Copilot to write cleaner, more maintainable code, highlighting best practices, pitfalls, and how AI-powered suggestions can enhance your software development workflow.<!--excerpt_end-->
 
 # Writing Cleaner Code with GitHub Copilot Suggestions

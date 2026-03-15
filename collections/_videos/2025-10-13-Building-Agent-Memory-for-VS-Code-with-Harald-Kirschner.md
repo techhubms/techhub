@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Building Agent Memory for VS Code with Harald Kirschner"
-description: "In this episode, Harald Kirschner discusses with James how to customize chat interactions and agents in Visual Studio Code. The conversation delves into the use of GitHub Copilot with custom instructions, prompts, and chat agent modes. Harald introduces new proposed APIs that unify these features for agent creation and demonstrates how agent memory was implemented and shipped as a VS Code extension. Listeners will learn practical steps to enhance their development workflow using Copilot customization and can explore related documentation and extensions."
-author: "Visual Studio Code"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=vFFXY6YRkNs"
-viewing_mode: "internal"
-feed_name: "Visual Studio Code YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w"
+﻿---
+external_url: https://www.youtube.com/watch?v=vFFXY6YRkNs
+title: Building Agent Memory for VS Code with Harald Kirschner
+author: Visual Studio Code
+feed_name: Visual Studio Code YouTube
 date: 2025-10-13 07:00:57 +00:00
-permalink: "/2025-10-13-Building-Agent-Memory-for-VS-Code-with-Harald-Kirschner.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["Agent Memory", "AI", "API", "Chat Agents", "Chat Modes", "Coding", "Copilot Customization", "Custom Instructions", "Developer Tools", "Extension Development", "GitHub Copilot", "Harald Kirschner", "Microsoft", "Prompt Engineering", "Videos", "VS Code"]
-tags_normalized: ["agent memory", "ai", "api", "chat agents", "chat modes", "coding", "copilot customization", "custom instructions", "developer tools", "extension development", "github copilot", "harald kirschner", "microsoft", "prompt engineering", "videos", "vs code"]
+tags:
+- Agent Memory
+- API
+- Chat Agents
+- Chat Modes
+- Copilot Customization
+- Custom Instructions
+- Developer Tools
+- Extension Development
+- Harald Kirschner
+- Microsoft
+- Prompt Engineering
+- VS Code
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this podcast episode, Harald Kirschner joins James to discuss customizing chat and agent behavior in VS Code—including GitHub Copilot—highlighting practical tips and his implementation of agent memory as an extension.<!--excerpt_end-->
 
 {% youtube vFFXY6YRkNs %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Sourcing Schema-Driven Events from EventHub into Fabric Eventstreams (Preview)"
-description: "This news article from the Microsoft Fabric Blog details how Azure EventHub now integrates with Schema Registry in Fabric Real-Time Intelligence. The piece explains the benefits of schema-driven, type-safe event processing, showing how schema validation at ingestion strengthens data quality, analytics reliability, and operational governance. It highlights scenarios, design motivations, example event payloads, and links to documentation for getting started."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/sourcing-schema-driven-events-from-eventhub-into-fabric-eventstreams-preview/
+title: Sourcing Schema-Driven Events from EventHub into Fabric Eventstreams (Preview)
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-10-14 10:00:00 +00:00
-permalink: "/2025-10-14-Sourcing-Schema-Driven-Events-from-EventHub-into-Fabric-Eventstreams-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Analytics", "Avro Schema", "Azure", "Azure EventHub", "Data Governance", "Data Quality", "Event Processing", "Eventhouse", "Eventstream", "KQL", "Microsoft Fabric", "ML", "News", "Payload Modeling", "Pipeline Validation", "Real Time Intelligence", "Schema Registry", "Type Safety"]
-tags_normalized: ["analytics", "avro schema", "azure", "azure eventhub", "data governance", "data quality", "event processing", "eventhouse", "eventstream", "kql", "microsoft fabric", "ml", "news", "payload modeling", "pipeline validation", "real time intelligence", "schema registry", "type safety"]
+tags:
+- Analytics
+- Avro Schema
+- Azure EventHub
+- Data Governance
+- Data Quality
+- Event Processing
+- Eventhouse
+- Eventstream
+- KQL
+- Microsoft Fabric
+- Payload Modeling
+- Pipeline Validation
+- Real Time Intelligence
+- Schema Registry
+- Type Safety
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog demonstrates how schema-driven pipelines, using Azure EventHub's integration with Schema Registry, boost event data reliability and analytics quality. Learn from practical examples and guidance provided by the Fabric platform team.<!--excerpt_end-->
 
 # Sourcing Schema-Driven Events from EventHub into Fabric Eventstreams (Preview)

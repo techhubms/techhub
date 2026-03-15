@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Azure Trusted Signing Revisited with Dotnet Sign"
-description: "Rick Strahl offers an in-depth look at the improvements in Azure Trusted Signing workflows for Windows developers, focusing on using the new dotnet sign tool. The guide walks through prerequisites, setup, detailed command samples, and automation scripting for secure binary code signing with Azure Trusted Signing. Practical tips for faster, more reliable artifact signing and recommendations for handling credentials and build integrations are included, making this a valuable technical resource for .NET developers interested in secure software deployment."
-author: "Rick Strahl"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign"
-viewing_mode: "external"
-feed_name: "Rick Strahl's Blog"
-feed_url: "https://feeds.feedburner.com/rickstrahl"
+﻿---
+external_url: https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign
+title: Azure Trusted Signing Revisited with Dotnet Sign
+author: Rick Strahl
+primary_section: dotnet
+feed_name: Rick Strahl's Blog
 date: 2026-03-02 20:10:23 +00:00
-permalink: "/2026-03-02-Azure-Trusted-Signing-Revisited-with-Dotnet-Sign.html"
-categories: ["Azure", "Coding", "Security"]
-tags: [".NET SDK", ".NET Sign", "Artifact Signing", "Authenticode", "Azure", "Azure CLI", "Azure Trusted Signing", "Binary Signing", "Blogs", "Certificate Management", "CI/CD", "Code Signing", "Coding", "PowerShell Script", "Secure Build", "Security", "SignTool", "Timestamp Server", "Windows", "Windows Development", "WPF"]
-tags_normalized: ["dotnet sdk", "dotnet sign", "artifact signing", "authenticode", "azure", "azure cli", "azure trusted signing", "binary signing", "blogs", "certificate management", "cislashcd", "code signing", "coding", "powershell script", "secure build", "security", "signtool", "timestamp server", "windows", "windows development", "wpf"]
+tags:
+- .NET SDK
+- .NET Sign
+- Artifact Signing
+- Authenticode
+- Azure
+- Azure CLI
+- Azure Trusted Signing
+- Binary Signing
+- Blogs
+- Certificate Management
+- CI/CD
+- Code Signing
+- PowerShell Script
+- Secure Build
+- Security
+- SignTool
+- Timestamp Server
+- Windows
+- Windows Development
+- WPF
+- .NET
+section_names:
+- azure
+- dotnet
+- security
 ---
-
 Rick Strahl explains how to simplify and automate code signing for Windows binaries using Azure Trusted Signing and the dotnet sign tool, sharing technical setup and scripting tips for secure development workflows.<!--excerpt_end-->
 
 # Azure Trusted Signing Revisited with Dotnet Sign

@@ -1,20 +1,45 @@
----
-layout: "post"
-title: "What’s New in Azure AI Foundry: July 2025 Releases and Updates"
-description: "This update from Nick Brady details July 2025 enhancements to Azure AI Foundry, featuring the public preview of Deep Research Agent, GPT-image-1 model improvements, new developer tools and SDKs, security integrations, and significant documentation updates. It targets AI developers working on Azure with advanced agentic and generative AI."
-author: "Nick Brady"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-july-2025/"
-viewing_mode: "external"
-feed_name: "Microsoft DevBlog"
-feed_url: "https://devblogs.microsoft.com/foundry/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/foundry/whats-new-in-azure-ai-foundry-july-2025/
+title: 'What’s New in Azure AI Foundry: July 2025 Releases and Updates'
+author: Nick Brady
+feed_name: Microsoft DevBlog
 date: 2025-08-04 15:00:27 +00:00
-permalink: "/2025-08-04-Whats-New-in-Azure-AI-Foundry-July-2025-Releases-and-Updates.html"
-categories: ["AI", "Azure", "Coding", "Security"]
-tags: [".NET", "Agent Monitoring", "AgentOps", "AI", "AI Development", "AI Red Teaming", "Azure", "Azure AI Foundry", "Azure OpenAI", "Azure SDK", "Coding", "Deep Research", "Deep Research Agent", "Entra Agent ID", "Fine Tuning", "Generative AI", "GPT Image 1", "Java", "JavaScript", "MCP", "Model Evaluation", "News", "OpenAI", "Prompt Shields", "Purview", "Python", "Reinforcement Learning", "Security", "TypeScript"]
-tags_normalized: ["dotnet", "agent monitoring", "agentops", "ai", "ai development", "ai red teaming", "azure", "azure ai foundry", "azure openai", "azure sdk", "coding", "deep research", "deep research agent", "entra agent id", "fine tuning", "generative ai", "gpt image 1", "java", "javascript", "mcp", "model evaluation", "news", "openai", "prompt shields", "purview", "python", "reinforcement learning", "security", "typescript"]
+tags:
+- .NET
+- Agent Monitoring
+- AgentOps
+- AI Development
+- AI Red Teaming
+- Azure AI Foundry
+- Azure OpenAI
+- Azure SDK
+- Deep Research
+- Deep Research Agent
+- Entra Agent ID
+- Fine Tuning
+- Generative AI
+- GPT Image 1
+- Java
+- JavaScript
+- MCP
+- Model Evaluation
+- OpenAI
+- Prompt Shields
+- Purview
+- Python
+- Reinforcement Learning
+- TypeScript
+- AI
+- Azure
+- Security
+- News
+section_names:
+- ai
+- azure
+- dotnet
+- security
+primary_section: ai
 ---
-
 Authored by Nick Brady, this post highlights the July 2025 updates to Azure AI Foundry, including Deep Research Agent, GPT-image-1 model improvements, agent tools, and platform and security features for advanced AI development.<!--excerpt_end-->
 
 ## What’s New in Azure AI Foundry — July 2025

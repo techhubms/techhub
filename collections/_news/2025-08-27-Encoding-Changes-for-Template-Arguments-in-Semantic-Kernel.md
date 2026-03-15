@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Encoding Changes for Template Arguments in Semantic Kernel"
-description: "This article details recent updates to Microsoft Semantic Kernel's template argument encoding, explaining stricter rules that now require developers to manually encode complex argument types. It covers the security rationale, provides .NET and Python code examples showing before-and-after handling, and guides developers on updating code for compliance with the new SDK behaviors."
-author: "Dmytro Struk"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/agent-framework/encoding-changes-for-template-arguments-in-semantic-kernel/"
-viewing_mode: "external"
-feed_name: "Microsoft Semantic Kernel Blog"
-feed_url: "https://devblogs.microsoft.com/semantic-kernel/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/agent-framework/encoding-changes-for-template-arguments-in-semantic-kernel/
+title: Encoding Changes for Template Arguments in Semantic Kernel
+author: Dmytro Struk
+primary_section: ai
+feed_name: Microsoft Semantic Kernel Blog
 date: 2025-08-27 05:17:18 +00:00
-permalink: "/2025-08-27-Encoding-Changes-for-Template-Arguments-in-Semantic-Kernel.html"
-categories: ["AI", "Coding"]
-tags: [".NET", "AI", "AllowDangerouslySetContent", "Argument Encoding", "Coding", "Escaping", "Handlebars", "Liquid", "Manual Encoding", "Microsoft", "News", "PromptTemplateConfig", "Python", "SDK Update", "Security Best Practices", "Semantic Kernel", "Template Engine", "Template Injection Prevention", "Template Rendering"]
-tags_normalized: ["dotnet", "ai", "allowdangerouslysetcontent", "argument encoding", "coding", "escaping", "handlebars", "liquid", "manual encoding", "microsoft", "news", "prompttemplateconfig", "python", "sdk update", "security best practices", "semantic kernel", "template engine", "template injection prevention", "template rendering"]
+tags:
+- .NET
+- AI
+- AllowDangerouslySetContent
+- Argument Encoding
+- Escaping
+- Handlebars
+- Liquid
+- Manual Encoding
+- Microsoft
+- News
+- PromptTemplateConfig
+- Python
+- SDK Update
+- Security Best Practices
+- Semantic Kernel
+- Template Engine
+- Template Injection Prevention
+- Template Rendering
+section_names:
+- ai
+- dotnet
 ---
-
 Dmytro Struk explains recent changes to Semantic Kernel’s template argument encoding, illustrating with .NET and Python updates. Learn why manual encoding of complex types is now enforced for security.<!--excerpt_end-->
 
 # Encoding Changes for Template Arguments in Semantic Kernel

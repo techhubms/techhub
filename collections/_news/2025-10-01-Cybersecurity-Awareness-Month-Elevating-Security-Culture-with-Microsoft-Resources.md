@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Cybersecurity Awareness Month: Elevating Security Culture with Microsoft Resources"
-description: "This article by Vasu Jakkal highlights Microsoft's commitment to cybersecurity awareness through educational resources, actionable guidance, and the Secure Future Initiative. It covers strategies for fostering a security-first mindset, examples of organizational security education, new training kits, and the integration of security into AI-era operations and best practices."
-author: "Vasu Jakkal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2025/10/01/cybersecurity-awareness-month-security-starts-with-you/
+title: 'Cybersecurity Awareness Month: Elevating Security Culture with Microsoft Resources'
+author: Vasu Jakkal
+feed_name: Microsoft Security Blog
 date: 2025-10-01 16:00:00 +00:00
-permalink: "/2025-10-01-Cybersecurity-Awareness-Month-Elevating-Security-Culture-with-Microsoft-Resources.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Governance", "Be Cybersmart Kit", "Cybersecurity Awareness Month", "Employee Education", "Identity And Access Management", "Microsoft Security", "Multifactor Authentication", "News", "Phishing Simulations", "Risk Management", "Secure Future Initiative", "Security", "Security Best Practices", "Security Culture", "Security Resources", "Security Training", "SFI"]
-tags_normalized: ["ai", "ai governance", "be cybersmart kit", "cybersecurity awareness month", "employee education", "identity and access management", "microsoft security", "multifactor authentication", "news", "phishing simulations", "risk management", "secure future initiative", "security", "security best practices", "security culture", "security resources", "security training", "sfi"]
+tags:
+- AI Governance
+- Be Cybersmart Kit
+- Cybersecurity Awareness Month
+- Employee Education
+- Identity And Access Management
+- Microsoft Security
+- Multifactor Authentication
+- Phishing Simulations
+- Risk Management
+- Secure Future Initiative
+- Security Best Practices
+- Security Culture
+- Security Resources
+- Security Training
+- SFI
+- AI
+- Security
+- News
+section_names:
+- ai
+- security
+primary_section: ai
 ---
-
 Vasu Jakkal discusses ways organizations can foster a security-first culture during Cybersecurity Awareness Month. This article covers Microsoft's Secure Future Initiative, security education tools, and the growing importance of security in the era of AI.<!--excerpt_end-->
 
 # Cybersecurity Awareness Month: Elevating Security Culture with Microsoft Resources

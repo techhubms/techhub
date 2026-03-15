@@ -1,20 +1,27 @@
----
-layout: "post"
-title: "GitHub Codespaces Public Preview for Enterprise Cloud with Data Residency"
-description: "This announcement details the public preview release of GitHub Codespaces for GitHub Enterprise Cloud accounts with data residency. It highlights feature parity with the general Codespaces offering, new data residency compliance features for enterprise customers, supported regions, and important policy considerations related to organization and enterprise ownership requirements."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-29-codespaces-is-now-in-public-preview-for-github-enterprise-with-data-residency"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-29-codespaces-is-now-in-public-preview-for-github-enterprise-with-data-residency
+title: GitHub Codespaces Public Preview for Enterprise Cloud with Data Residency
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-01-29 23:25:07 +00:00
-permalink: "/2026-01-29-GitHub-Codespaces-Public-Preview-for-Enterprise-Cloud-with-Data-Residency.html"
-categories: ["DevOps"]
-tags: ["Cloud Development Environments", "Cloud IDE", "Collaboration Tools", "Compliance", "Data Residency", "DevOps", "Enterprise Cloud", "Feature Parity", "GitHub Codespaces", "News", "Organization Policies", "Preview Release", "Regional Availability"]
-tags_normalized: ["cloud development environments", "cloud ide", "collaboration tools", "compliance", "data residency", "devops", "enterprise cloud", "feature parity", "github codespaces", "news", "organization policies", "preview release", "regional availability"]
+tags:
+- Cloud Development Environments
+- Cloud IDE
+- Collaboration Tools
+- Compliance
+- Data Residency
+- DevOps
+- Enterprise Cloud
+- Feature Parity
+- GitHub Codespaces
+- News
+- Organization Policies
+- Preview Release
+- Regional Availability
+section_names:
+- devops
 ---
-
 Allison announces that GitHub Codespaces is now in public preview for GitHub Enterprise Cloud with data residency, enabling organizations to use secure, cloud-based development environments with regional compliance assurances.<!--excerpt_end-->
 
 # GitHub Codespaces Public Preview for Enterprise Cloud with Data Residency

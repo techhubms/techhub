@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "The Future of Data Security is Interoperability: A Technical Look at OneLake Security"
-description: "This article discusses the challenges and solutions related to modern data security in enterprise environments, with a focus on Microsoft Fabric's OneLake. It explores the need for interoperable security, centralized policy definition, distributed enforcement, and fine-grained access controls across diverse analytics engines and cloud platforms."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/the-future-of-data-security-is-interoperability-a-technical-look-at-onelake-security/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/the-future-of-data-security-is-interoperability-a-technical-look-at-onelake-security/
+title: 'The Future of Data Security is Interoperability: A Technical Look at OneLake Security'
+author: Microsoft Fabric Blog
+primary_section: azure
+feed_name: Microsoft Fabric Blog
 date: 2026-02-05 09:00:00 +00:00
-permalink: "/2026-02-05-The-Future-of-Data-Security-is-Interoperability-A-Technical-Look-at-OneLake-Security.html"
-categories: ["Azure", "Security"]
-tags: ["Access Controls", "Azure", "Centralized Policy", "Cloud Security", "Data Security", "Distributed Enforcement", "Enterprise Governance", "Fabric", "Fine Grained Access", "Interoperability", "Microsoft Fabric", "News", "OneLake", "Security", "Security Architecture"]
-tags_normalized: ["access controls", "azure", "centralized policy", "cloud security", "data security", "distributed enforcement", "enterprise governance", "fabric", "fine grained access", "interoperability", "microsoft fabric", "news", "onelake", "security", "security architecture"]
+tags:
+- Access Controls
+- Azure
+- Centralized Policy
+- Cloud Security
+- Data Security
+- Distributed Enforcement
+- Enterprise Governance
+- Fabric
+- Fine Grained Access
+- Interoperability
+- Microsoft Fabric
+- News
+- OneLake
+- Security
+- Security Architecture
+section_names:
+- azure
+- security
 ---
-
 Microsoft Fabric Blog provides a technical examination of interoperable data security using OneLake, detailing centralized policy management, distributed enforcement, and fine-grained access controls for enterprises.<!--excerpt_end-->
 
 # The Future of Data Security is Interoperability: A Technical Look at OneLake Security

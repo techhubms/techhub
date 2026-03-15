@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Microsoft Partners with Checkout.com to Enhance Enterprise Payments Using Azure AI"
-description: "This post details the strategic partnership between Microsoft and Checkout.com, highlighting how Checkout.com is adopting Microsoft Azure’s cloud and AI capabilities to deliver faster and more secure digital payments for enterprises. The collaboration emphasizes innovation in payment technologies, security, and leveraging AI-powered platforms to improve payment acceptance and scalability for enterprise merchants worldwide."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://ukstories.microsoft.com/features/microsoft-and-checkout-com-unite-to-elevate-enterprise-payments-performance/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://ukstories.microsoft.com/features/microsoft-and-checkout-com-unite-to-elevate-enterprise-payments-performance/
+title: Microsoft Partners with Checkout.com to Enhance Enterprise Payments Using Azure AI
+author: stclarke
+feed_name: Microsoft News
 date: 2025-10-09 17:15:42 +00:00
-permalink: "/2025-10-09-Microsoft-Partners-with-Checkoutcom-to-Enhance-Enterprise-Payments-Using-Azure-AI.html"
-categories: ["AI", "Azure"]
-tags: ["Agentic Commerce", "AI", "AI Powered Payments", "Azure", "Checkout.com", "Cloud", "Cloud Infrastructure", "Collaborative Innovation", "Company News", "Digital Payments", "Enterprise Payments", "Financial Technology", "Intelligent Acceptance", "Machine Learning", "Microsoft Azure", "News", "Payment Optimization", "Payment Platform", "Trust And Security"]
-tags_normalized: ["agentic commerce", "ai", "ai powered payments", "azure", "checkoutdotcom", "cloud", "cloud infrastructure", "collaborative innovation", "company news", "digital payments", "enterprise payments", "financial technology", "intelligent acceptance", "machine learning", "microsoft azure", "news", "payment optimization", "payment platform", "trust and security"]
+tags:
+- Agentic Commerce
+- AI Powered Payments
+- Checkout.com
+- Cloud Infrastructure
+- Collaborative Innovation
+- Company News
+- Digital Payments
+- Enterprise Payments
+- Financial Technology
+- Intelligent Acceptance
+- ML
+- Microsoft Azure
+- Payment Optimization
+- Payment Platform
+- Trust And Security
+- AI
+- Azure
+- News
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 stclarke reports on the new partnership between Microsoft and Checkout.com, where Azure’s AI and cloud capabilities will power faster and more secure digital payments for global enterprises.<!--excerpt_end-->
 
 # Microsoft Partners with Checkout.com to Enhance Enterprise Payments Using Azure AI

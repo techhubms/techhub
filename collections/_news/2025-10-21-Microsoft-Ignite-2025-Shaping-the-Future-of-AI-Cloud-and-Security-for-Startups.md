@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Microsoft Ignite 2025: Shaping the Future of AI, Cloud, and Security for Startups"
-description: "This news post provides a detailed overview of the upcoming Microsoft Ignite 2025 conference, highlighting its focus on AI, cloud technologies, and security. It outlines key opportunities for startups, including access to product roadmaps, deep-dive sessions on Microsoft Copilot and Azure AI Foundry, ecosystem benefits via Azure Marketplace, and real-world customer insights. The post offers actionable guidance for founders and developers looking to align with Microsoft’s innovation and distribution network, making it a must-attend event for those building AI-driven, cloud-native solutions."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/startups/blog/why-startups-shouldnt-miss-microsoft-ignite-2025-a-front-row-seat-to-the-future-of-ai-innovation/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/startups/blog/why-startups-shouldnt-miss-microsoft-ignite-2025-a-front-row-seat-to-the-future-of-ai-innovation/
+title: 'Microsoft Ignite 2025: Shaping the Future of AI, Cloud, and Security for Startups'
+author: stclarke
+feed_name: Microsoft News
 date: 2025-10-21 14:32:59 +00:00
-permalink: "/2025-10-21-Microsoft-Ignite-2025-Shaping-the-Future-of-AI-Cloud-and-Security-for-Startups.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Agents", "AI Startups", "Azure", "Azure AI Foundry", "Azure Build", "Azure Marketplace", "Cloud Security", "Co Sell Readiness", "Company News", "Compliance Automation", "Copilot Studio", "Enterprise AI", "GTM Strategy", "Microsoft Copilot", "Microsoft For Startups", "Microsoft Ignite", "News", "Robotic AI", "Security"]
-tags_normalized: ["ai", "ai agents", "ai startups", "azure", "azure ai foundry", "azure build", "azure marketplace", "cloud security", "co sell readiness", "company news", "compliance automation", "copilot studio", "enterprise ai", "gtm strategy", "microsoft copilot", "microsoft for startups", "microsoft ignite", "news", "robotic ai", "security"]
+tags:
+- AI Agents
+- AI Startups
+- Azure AI Foundry
+- Azure Build
+- Azure Marketplace
+- Cloud Security
+- Co Sell Readiness
+- Company News
+- Compliance Automation
+- Copilot Studio
+- Enterprise AI
+- GTM Strategy
+- Microsoft Copilot
+- Microsoft For Startups
+- Microsoft Ignite
+- Robotic AI
+- AI
+- Azure
+- Security
+- News
+section_names:
+- ai
+- azure
+- security
+primary_section: ai
 ---
-
 stclarke introduces Microsoft Ignite 2025, a major conference in San Francisco and online focused on AI, cloud, and security. Discover how startups and tech professionals can leverage Microsoft’s latest advancements, engage with enterprise customers, and tap into powerful distribution opportunities.<!--excerpt_end-->
 
 # Microsoft Ignite 2025: Shaping the Future of AI, Cloud, and Security for Startups

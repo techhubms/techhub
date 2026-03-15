@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Zurich and Toyota’s Playbook for Enterprise AI Innovation"
-description: "This session features tech leaders from Zurich and Toyota discussing their approach to enterprise AI at Microsoft Ignite 2025. The panel dives into real-world AI deployments, including document ingestion pipelines, standardized AI review processes, and rapid implementation strategies. Learn how these organizations tackle technical challenges such as data retrieval, context modeling, API reliability, and the balancing act between experimentation and cost management—offering honest insights for practitioners navigating enterprise AI transformation."
-author: "Microsoft Events"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=iRQcoiEJyKE"
-viewing_mode: "internal"
-feed_name: "Microsoft Events YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCrhJmfAGQ5K81XQ8_od1iTg"
+﻿---
+external_url: https://www.youtube.com/watch?v=iRQcoiEJyKE
+title: Zurich and Toyota’s Playbook for Enterprise AI Innovation
+author: Microsoft Events
+feed_name: Microsoft Events YouTube
 date: 2025-11-24 10:32:04 +00:00
-permalink: "/2025-11-24-Zurich-and-Toyotas-Playbook-for-Enterprise-AI-Innovation.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Deployment", "AI Document Processing", "AI Review Board", "API Reliability", "Azure", "Azure AI", "Business Alignment", "Context Modeling", "Cost Control", "Data Retrieval", "Enterprise AI", "Ingestion Pipeline", "InnovatewithAzureAIappsandagents", "Metadata", "Microsoft Ignite", "MSIgnite", "Ontology", "Technical Challenges", "Toyota", "Unstructured Data", "Videos", "Zurich"]
-tags_normalized: ["ai", "ai deployment", "ai document processing", "ai review board", "api reliability", "azure", "azure ai", "business alignment", "context modeling", "cost control", "data retrieval", "enterprise ai", "ingestion pipeline", "innovatewithazureaiappsandagents", "metadata", "microsoft ignite", "msignite", "ontology", "technical challenges", "toyota", "unstructured data", "videos", "zurich"]
+tags:
+- AI Deployment
+- AI Document Processing
+- AI Review Board
+- API Reliability
+- Azure AI
+- Business Alignment
+- Context Modeling
+- Cost Control
+- Data Retrieval
+- Enterprise AI
+- Ingestion Pipeline
+- Metadata
+- Microsoft Ignite
+- MSIgnite
+- Ontology
+- Technical Challenges
+- Toyota
+- Unstructured Data
+- Zurich
+- AI
+- Azure
+- Videos
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Microsoft Events hosts Zurich and Toyota tech leaders as they share practical strategies and lessons learned in enterprise AI deployment, focusing on overcoming real technical and business challenges.<!--excerpt_end-->
 
 {% youtube iRQcoiEJyKE %}

@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Get started with Elasticsearch MCP server in Azure SRE Agent"
-description: "This community post provides a practical, detailed walkthrough for integrating the Elasticsearch MCP server with Azure SRE Agent. It covers step-by-step instructions on connecting Azure SRE Agent to Elastic Cloud or self-hosted Elasticsearch (version 9.2.0+), including authentication setup, connector configuration, subagent creation, tool assignment, and testing. The post emphasizes safe practices for querying observability data, troubleshooting steps, and highlights the operational capabilities available to Azure SREs through this integration."
-author: "dbandaru"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-elasticsearch-mcp-server-in-azure-sre-agent/ba-p/4492896"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-elasticsearch-mcp-server-in-azure-sre-agent/ba-p/4492896
+title: Get started with Elasticsearch MCP server in Azure SRE Agent
+author: dbandaru
+primary_section: azure
+feed_name: Microsoft Tech Community
 date: 2026-02-18 16:41:52 +00:00
-permalink: "/2026-02-18-Get-started-with-Elasticsearch-MCP-server-in-Azure-SRE-Agent.html"
-categories: ["Azure", "DevOps"]
-tags: ["Agent Builder MCP", "API Key Authentication", "Azure", "Azure SRE Agent", "Community", "DevOps", "DevOps Integration", "Elastic Cloud", "Elasticsearch", "ESQL", "Incident Diagnosis", "Index Management", "Kibana", "Metrics Monitoring", "Observability", "Query DSL", "Streaming HTTP", "Subagent Configuration"]
-tags_normalized: ["agent builder mcp", "api key authentication", "azure", "azure sre agent", "community", "devops", "devops integration", "elastic cloud", "elasticsearch", "esql", "incident diagnosis", "index management", "kibana", "metrics monitoring", "observability", "query dsl", "streaming http", "subagent configuration"]
+tags:
+- Agent Builder MCP
+- API Key Authentication
+- Azure
+- Azure SRE Agent
+- Community
+- DevOps
+- DevOps Integration
+- Elastic Cloud
+- Elasticsearch
+- ESQL
+- Incident Diagnosis
+- Index Management
+- Kibana
+- Metrics Monitoring
+- Observability
+- Query DSL
+- Streaming HTTP
+- Subagent Configuration
+section_names:
+- azure
+- devops
 ---
-
 dbandaru explains how to integrate Elasticsearch MCP server with Azure SRE Agent, providing detailed steps for secure authentication, connector setup, tool assignment, and best practices for querying and monitoring Elasticsearch clusters.<!--excerpt_end-->
 
 # Get Started with Elasticsearch MCP Server in Azure SRE Agent

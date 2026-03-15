@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Request Copilot Code Review Directly from GitHub CLI"
-description: "This announcement details a new feature that lets developers request code reviews from GitHub Copilot using the GitHub CLI, both non-interactively and through interactive prompts. The update also introduces improved search functionality when selecting reviewers or assignees, enhancing accessibility and performance for large projects."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-11-request-copilot-code-review-from-github-cli
+title: Request Copilot Code Review Directly from GitHub CLI
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-11 18:11:51 +00:00
-permalink: "/2026-03-11-Request-Copilot-Code-Review-Directly-from-GitHub-CLI.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Accessibility", "AI", "Automation", "CLI Tools", "Client Apps", "Code Collaboration", "Code Review", "Continuous Integration", "Copilot", "Copilot Code Review", "Developer Workflow", "DevOps", "GitHub CLI", "GitHub Copilot", "Improvement", "News", "Productivity", "Pull Requests", "Reviewer Selection", "V2.88.0"]
-tags_normalized: ["accessibility", "ai", "automation", "cli tools", "client apps", "code collaboration", "code review", "continuous integration", "copilot", "copilot code review", "developer workflow", "devops", "github cli", "github copilot", "improvement", "news", "productivity", "pull requests", "reviewer selection", "v2dot88dot0"]
+tags:
+- Accessibility
+- AI
+- Automation
+- CLI Tools
+- Client Apps
+- Code Collaboration
+- Code Review
+- Continuous Integration
+- Copilot
+- Copilot Code Review
+- Developer Workflow
+- DevOps
+- GitHub CLI
+- GitHub Copilot
+- Improvement
+- News
+- Productivity
+- Pull Requests
+- Reviewer Selection
+- V2.88.0
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison introduces a GitHub CLI update that enables developers to request Copilot code reviews directly from the terminal, improving code workflow and reviewer selection performance.<!--excerpt_end-->
 
 # Request Copilot Code Review Directly from GitHub CLI

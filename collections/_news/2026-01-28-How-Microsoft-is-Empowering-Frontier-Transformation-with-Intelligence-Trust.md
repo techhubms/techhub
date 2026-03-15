@@ -1,20 +1,40 @@
----
-layout: "post"
-title: "How Microsoft is Empowering Frontier Transformation with Intelligence + Trust"
-description: "This article explores Microsoft’s vision of ‘Frontier Transformation’—a strategy that centers AI not just on productivity, but on democratizing intelligence and creativity across industries. It highlights real-world customer stories deploying Microsoft AI, agentic solutions, and observability tools like Agent 365, Foundry IQ, and Microsoft Fabric to drive reliable, governed digital innovation."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blogs.microsoft.com/blog/2026/01/27/how-microsoft-is-empowering-frontier-transformation-with-intelligence-trust/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://blogs.microsoft.com/blog/2026/01/27/how-microsoft-is-empowering-frontier-transformation-with-intelligence-trust/
+title: How Microsoft is Empowering Frontier Transformation with Intelligence + Trust
+author: stclarke
+primary_section: ai
+feed_name: Microsoft News
 date: 2026-01-28 00:53:40 +00:00
-permalink: "/2026-01-28-How-Microsoft-is-Empowering-Frontier-Transformation-with-Intelligence-Trust.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agent 365", "Agentic Systems", "AI", "AI Governance", "Azure", "Azure AI", "Company News", "Copilot+ PCs", "Data Security", "DevOps", "Digital Transformation", "Enterprise AI", "Foundry IQ", "Frontier Transformation", "Governance", "Intelligence + Trust", "Microsoft Copilot Studio", "Microsoft Fabric", "Microsoft Foundry", "News", "Observability", "Security", "Work IQ"]
-tags_normalized: ["agent 365", "agentic systems", "ai", "ai governance", "azure", "azure ai", "company news", "copilotplus pcs", "data security", "devops", "digital transformation", "enterprise ai", "foundry iq", "frontier transformation", "governance", "intelligence plus trust", "microsoft copilot studio", "microsoft fabric", "microsoft foundry", "news", "observability", "security", "work iq"]
+tags:
+- Agent 365
+- Agentic Systems
+- AI
+- AI Governance
+- Azure
+- Azure AI
+- Company News
+- Copilot+ PCs
+- Data Security
+- DevOps
+- Digital Transformation
+- Enterprise AI
+- Foundry IQ
+- Frontier Transformation
+- Governance
+- Intelligence + Trust
+- Microsoft Copilot Studio
+- Microsoft Fabric
+- Microsoft Foundry
+- News
+- Observability
+- Security
+- Work IQ
+section_names:
+- ai
+- azure
+- devops
+- security
 ---
-
 stclarke shares how Microsoft’s evolving cloud and AI platforms such as Agent 365, Fabric, and Foundry IQ are empowering customers to build governed, scalable agent-based solutions—blending innovation with observability, security, and trust.<!--excerpt_end-->
 
 # How Microsoft is Empowering Frontier Transformation with Intelligence + Trust

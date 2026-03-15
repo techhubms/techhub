@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Copilot Code Review Now Runs on Agentic Architecture"
-description: "This news update explains the general availability of Copilot Code Review's agentic tool-calling architecture for Copilot Pro, Business, and Enterprise users. It details how this new architecture gathers broader repository context to provide higher-quality, more actionable review comments, and outlines the setup required when using self-hosted or GitHub-hosted runners with GitHub Actions."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-05-copilot-code-review-now-runs-on-an-agentic-architecture
+title: Copilot Code Review Now Runs on Agentic Architecture
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-05 19:36:13 +00:00
-permalink: "/2026-03-05-Copilot-Code-Review-Now-Runs-on-Agentic-Architecture.html"
-categories: ["AI", "DevOps", "GitHub Copilot"]
-tags: ["Agentic Architecture", "AI", "Code Review Automation", "Copilot", "Copilot Code Review", "Developer Productivity", "DevOps", "GitHub Actions", "GitHub Copilot", "News", "Pro Code Review", "Pull Request Automation", "Self Hosted Runners", "Tool Calling Architecture"]
-tags_normalized: ["agentic architecture", "ai", "code review automation", "copilot", "copilot code review", "developer productivity", "devops", "github actions", "github copilot", "news", "pro code review", "pull request automation", "self hosted runners", "tool calling architecture"]
+tags:
+- Agentic Architecture
+- AI
+- Code Review Automation
+- Copilot
+- Copilot Code Review
+- Developer Productivity
+- DevOps
+- GitHub Actions
+- GitHub Copilot
+- News
+- Pro Code Review
+- Pull Request Automation
+- Self Hosted Runners
+- Tool Calling Architecture
+section_names:
+- ai
+- devops
+- github-copilot
 ---
-
 Allison highlights the launch of Copilot Code Review's agentic architecture, now available across Copilot Pro, Business, and Enterprise. This update brings actionable, context-aware code review feedback through GitHub Actions and supports both GitHub-hosted and self-hosted runners.<!--excerpt_end-->
 
 # Copilot Code Review Now Runs on Agentic Architecture

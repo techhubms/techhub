@@ -1,20 +1,34 @@
----
-layout: "post"
-title: "Integrating dbt Jobs with Microsoft Fabric for Scalable SQL Transformations (Preview)"
-description: "This announcement details the preview release of dbt Job integration within Microsoft Fabric. Learn how Fabric enables dbt users to natively author, orchestrate, and manage SQL-based data transformations with enterprise-grade governance, CI/CD, and security. The guide covers main features, configuration steps, and the roadmap for future enhancements, including dbt Fusion integration."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/dbt-job-in-microsoft-fabric-ship-trustworthy-sql-models-faster-preview/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/dbt-job-in-microsoft-fabric-ship-trustworthy-sql-models-faster-preview/
+title: Integrating dbt Jobs with Microsoft Fabric for Scalable SQL Transformations (Preview)
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-11-20 12:30:00 +00:00
-permalink: "/2025-11-20-Integrating-dbt-Jobs-with-Microsoft-Fabric-for-Scalable-SQL-Transformations-Preview.html"
-categories: ["Azure", "ML"]
-tags: ["Admin Portal", "Authentication", "Azure", "CI/CD", "Data Engineering", "Data Factory", "Data Transformation", "Dbt", "Distributed Architecture", "Enterprise Security", "Entra ID", "Governance", "Microsoft Fabric", "ML", "Monitoring", "News", "Operationalization", "Scheduling", "SQL Models"]
-tags_normalized: ["admin portal", "authentication", "azure", "cislashcd", "data engineering", "data factory", "data transformation", "dbt", "distributed architecture", "enterprise security", "entra id", "governance", "microsoft fabric", "ml", "monitoring", "news", "operationalization", "scheduling", "sql models"]
+tags:
+- Admin Portal
+- Authentication
+- CI/CD
+- Data Engineering
+- Data Factory
+- Data Transformation
+- Dbt
+- Distributed Architecture
+- Enterprise Security
+- Entra ID
+- Governance
+- Microsoft Fabric
+- Monitoring
+- Operationalization
+- Scheduling
+- SQL Models
+- Azure
+- ML
+- News
+section_names:
+- azure
+- ml
+primary_section: ml
 ---
-
 Microsoft Fabric Blog introduces the preview of dbt Job integration, enabling data engineers to create, orchestrate, and secure SQL-based transformations directly within Fabric's Data Factory.<!--excerpt_end-->
 
 # Integrating dbt Jobs with Microsoft Fabric for Scalable SQL Transformations (Preview)

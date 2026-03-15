@@ -1,20 +1,42 @@
----
-layout: "post"
-title: "Automating Legacy WinForms Apps in RDP: UI Automation vs. Computer Vision (C# Solutions)"
-description: "This community discussion explores strategies for automating a legacy Windows Forms application running within a Remote Desktop (RDP) session, where standard UI automation tools fail. The thread delves into the trade-offs between computer vision approaches (like OpenCV, ML.NET, and OCR APIs) and classic automation techniques in C#, along with practical advice on database access, reverse engineering, and platform limitations. Alternative ideas such as leveraging PowerShell remoting and file synchronization are considered, alongside hands-on technical tools for Windows automation and reverse engineering."
-author: "Grifone87"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mjszox/need_help_automating_windows_forms_inside_remote/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1mjszox/need_help_automating_windows_forms_inside_remote/
+title: 'Automating Legacy WinForms Apps in RDP: UI Automation vs. Computer Vision (C# Solutions)'
+author: Grifone87
+feed_name: Reddit CSharp
 date: 2025-08-07 06:50:03 +00:00
-permalink: "/2025-08-07-Automating-Legacy-WinForms-Apps-in-RDP-UI-Automation-vs-Computer-Vision-C-Solutions.html"
-categories: ["Coding"]
-tags: [".NET 6", ".NET 7", "API Monitor", "AutoHotkey", "C#", "Coding", "Community", "Computer Vision", "Database Access", "FlaUI", "Microsoft Access", "ML.NET", "OCR", "OpenCV", "PE Explorer", "PInvoke", "PowerShell Remoting", "Process Monitor", "RDP Automation", "Remote Desktop", "Reverse Engineering", "SendKeys", "Template Matching", "UI Automation API", "WinAutomation", "Windows Forms", "Windows Server", "YOLO"]
-tags_normalized: ["dotnet 6", "dotnet 7", "api monitor", "autohotkey", "csharp", "coding", "community", "computer vision", "database access", "flaui", "microsoft access", "mldotnet", "ocr", "opencv", "pe explorer", "pinvoke", "powershell remoting", "process monitor", "rdp automation", "remote desktop", "reverse engineering", "sendkeys", "template matching", "ui automation api", "winautomation", "windows forms", "windows server", "yolo"]
+tags:
+- .NET 6
+- .NET 7
+- API Monitor
+- AutoHotkey
+- C#
+- Computer Vision
+- Database Access
+- FlaUI
+- Microsoft Access
+- ML.NET
+- OCR
+- OpenCV
+- PE Explorer
+- PInvoke
+- PowerShell Remoting
+- Process Monitor
+- RDP Automation
+- Remote Desktop
+- Reverse Engineering
+- SendKeys
+- Template Matching
+- UI Automation API
+- WinAutomation
+- Windows Forms
+- Windows Server
+- YOLO
+- Community
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Grifone87 and the r/csharp community discuss complexities of automating a WinForms insurance system inside an RDP session with C#, weighing UI automation versus computer vision approaches with useful insights and reverse engineering tips.<!--excerpt_end-->
 
 # Automating Windows Forms Apps in Remote Desktop: UI Automation vs. Computer Vision
@@ -42,8 +64,8 @@ A legacy Windows Forms insurance management system, running inside a Remote Desk
 ### 1. Computer Vision Techniques
 
 - **OpenCV/ML.NET:** Use template matching or ML models (like YOLO) for control detection.
-   - Extract controls or buttons visually within the RDP bitmap.
-   - OCR (including non-English support; the app is in Italian) for reading UI text.
+  - Extract controls or buttons visually within the RDP bitmap.
+  - OCR (including non-English support; the app is in Italian) for reading UI text.
 - **Windows OCR API:** For extracting on-screen text.
 - **Tools like WinAutomation:** Can click based on image matching.
 - **Limitations:** CPU intensive, can be less reliable due to UI changes, requires model/template maintenance.
@@ -52,7 +74,7 @@ A legacy Windows Forms insurance management system, running inside a Remote Desk
 
 - **DLL Hunting:** Investigate application directory for DLLs doing the real work—possible to PInvoke/export to interface directly, *if* allowed.
 - **Database Access:** Old WinForms apps may use local databases (e.g., MS Access MDB/ACCDB or SQLite). If accessible, you may automate at the data layer (read/write directly to DB).
-   - Use Process Monitor to identify file access patterns.
+  - Use Process Monitor to identify file access patterns.
 - **API Monitor/PE Explorer/IDA Pro/Ghidra:** For static/dynamic analysis to discover hidden integration points.
 - **Limitation:** Most options off-limits because you can't install/run extra tools remotely.
 

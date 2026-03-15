@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "Improved Pull Request “Files Changed” – February 5 GitHub Updates"
-description: "This update introduces CODEOWNERS validation in the new 'Files changed' pull request UI on GitHub, along with performance improvements for navigating and reviewing large pull requests. Key fixes enhance reviewer workflows, especially around responsiveness, stability, and notification accuracy."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-02-05-improved-pull-request-files-changed-february-5-updates"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-02-05-improved-pull-request-files-changed-february-5-updates
+title: Improved Pull Request “Files Changed” – February 5 GitHub Updates
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-02-05 23:05:59 +00:00
-permalink: "/2026-02-05-Improved-Pull-Request-Files-Changed-February-5-GitHub-Updates.html"
-categories: ["DevOps"]
-tags: ["Code Review", "CODEOWNERS", "Collaboration", "Collaboration Tools", "Developer Experience", "DevOps", "GitHub", "Improvement", "News", "Notification Handling", "Performance Optimization", "Pull Requests", "UI Update", "Workflow Improvement"]
-tags_normalized: ["code review", "codeowners", "collaboration", "collaboration tools", "developer experience", "devops", "github", "improvement", "news", "notification handling", "performance optimization", "pull requests", "ui update", "workflow improvement"]
+tags:
+- Code Review
+- CODEOWNERS
+- Collaboration
+- Collaboration Tools
+- Developer Experience
+- DevOps
+- GitHub
+- Improvement
+- News
+- Notification Handling
+- Performance Optimization
+- Pull Requests
+- UI Update
+- Workflow Improvement
+section_names:
+- devops
 ---
-
 Allison summarizes GitHub’s February 5th update, including CODEOWNERS validation in the new ‘Files changed’ tab and performance improvements for large pull requests, improving efficiency for development teams.<!--excerpt_end-->
 
 # Improved Pull Request “Files Changed” – February 5 GitHub Updates

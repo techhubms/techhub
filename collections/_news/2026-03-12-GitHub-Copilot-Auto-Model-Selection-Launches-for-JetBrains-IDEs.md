@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "GitHub Copilot Auto Model Selection Launches for JetBrains IDEs"
-description: "This update explains the general availability of auto model selection in GitHub Copilot for JetBrains IDEs. It highlights how Copilot now dynamically chooses the best available AI model, provides transparency features, adapts to admin policies, and introduces billing improvements for premium requests."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-03-12-copilot-auto-model-selection-is-generally-available-in-jetbrains-ides"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-03-12-copilot-auto-model-selection-is-generally-available-in-jetbrains-ides
+title: GitHub Copilot Auto Model Selection Launches for JetBrains IDEs
+author: Allison
+primary_section: github-copilot
+feed_name: The GitHub Blog
 date: 2026-03-12 15:54:33 +00:00
-permalink: "/2026-03-12-GitHub-Copilot-Auto-Model-Selection-Launches-for-JetBrains-IDEs.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Model Selection", "Billing", "Copilot", "Copilot Enterprise", "Developer Tools", "GitHub Copilot", "GPT 5.3 Codex", "GPT 5.4", "Haiku 4.5", "IDEs", "JetBrains", "Model Multiplier", "News", "Premium Requests", "Software Release", "Sonnet 4.6"]
-tags_normalized: ["ai", "ai model selection", "billing", "copilot", "copilot enterprise", "developer tools", "github copilot", "gpt 5dot3 codex", "gpt 5dot4", "haiku 4dot5", "ides", "jetbrains", "model multiplier", "news", "premium requests", "software release", "sonnet 4dot6"]
+tags:
+- AI
+- AI Model Selection
+- Billing
+- Copilot
+- Copilot Enterprise
+- Developer Tools
+- GitHub Copilot
+- GPT 5.3 Codex
+- GPT 5.4
+- Haiku 4.5
+- IDEs
+- JetBrains
+- Model Multiplier
+- News
+- Premium Requests
+- Software Release
+- Sonnet 4.6
+section_names:
+- ai
+- github-copilot
 ---
-
 Allison presents the general availability of GitHub Copilot’s auto model selection in JetBrains IDEs, highlighting new flexibility and billing improvements for developers.<!--excerpt_end-->
 
 # GitHub Copilot Auto Model Selection for JetBrains IDEs

@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Semantic Search Enhancement for GitHub Issues Now in Public Preview"
-description: "This announcement introduces GitHub's new semantic search feature for Issues, enabling users to find issues based on the natural language meaning of their queries. The update delivers conceptually relevant results, performance improvements, and additional bug fixes for managing GitHub projects and issues."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2026-01-29-improved-search-for-github-issues-in-public-preview"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2026-01-29-improved-search-for-github-issues-in-public-preview
+title: Semantic Search Enhancement for GitHub Issues Now in Public Preview
+author: Allison
+primary_section: devops
+feed_name: The GitHub Blog
 date: 2026-01-29 11:07:03 +00:00
-permalink: "/2026-01-29-Semantic-Search-Enhancement-for-GitHub-Issues-Now-in-Public-Preview.html"
-categories: ["DevOps"]
-tags: ["Bug Fixes", "Developer Tools", "DevOps", "Edge Browser", "Feature Preview", "GitHub", "Issues Management", "Natural Language Processing", "News", "Project Management", "Projects & Issues", "Public Preview", "Safari Browser", "Search Improvement", "Semantic Search"]
-tags_normalized: ["bug fixes", "developer tools", "devops", "edge browser", "feature preview", "github", "issues management", "natural language processing", "news", "project management", "projects and issues", "public preview", "safari browser", "search improvement", "semantic search"]
+tags:
+- Bug Fixes
+- Developer Tools
+- DevOps
+- Edge Browser
+- Feature Preview
+- GitHub
+- Issues Management
+- Natural Language Processing
+- News
+- Project Management
+- Projects & Issues
+- Public Preview
+- Safari Browser
+- Search Improvement
+- Semantic Search
+section_names:
+- devops
 ---
-
 Allison details GitHub’s new semantic search capabilities for Issues, showing how natural language queries now yield more relevant results, and describing associated improvements for projects and issue tracking.<!--excerpt_end-->
 
 # Semantic Search Enhancement for GitHub Issues Now in Public Preview

@@ -1,20 +1,38 @@
----
-layout: "post"
-title: "GitHub Copilot Coding Agent Now Generally Available"
-description: "This announcement introduces the general availability of the Copilot coding agent, an asynchronous, autonomous developer assistant for GitHub Copilot subscribers. The agent can handle tasks like creating pull requests, implementing new features, and fixing bugs autonomously using GitHub Actions. The post explains how to delegate work to the Copilot coding agent, integration points with GitHub and Visual Studio Code, and administrative setup for business and enterprise users."
-author: "Allison"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/changelog/feed/"
+﻿---
+external_url: https://github.blog/changelog/2025-09-25-copilot-coding-agent-is-now-generally-available
+title: GitHub Copilot Coding Agent Now Generally Available
+author: Allison
+feed_name: The GitHub Blog
 date: 2025-09-25 16:49:31 +00:00
-permalink: "/2025-09-25-GitHub-Copilot-Coding-Agent-Now-Generally-Available.html"
-categories: ["AI", "Coding", "DevOps", "GitHub Copilot"]
-tags: ["AI", "AI Agent", "Automation", "Autonomous Agents", "Bug Fixing", "Coding", "Copilot", "Copilot Coding Agent", "Developer Tools", "DevOps", "Feature Implementation", "GitHub Actions", "GitHub Copilot", "Improvement", "News", "Pull Requests", "Software Development", "Technical Debt", "Test Coverage", "VS Code", "Workflow Automation"]
-tags_normalized: ["ai", "ai agent", "automation", "autonomous agents", "bug fixing", "coding", "copilot", "copilot coding agent", "developer tools", "devops", "feature implementation", "github actions", "github copilot", "improvement", "news", "pull requests", "software development", "technical debt", "test coverage", "vs code", "workflow automation"]
+tags:
+- AI Agent
+- Automation
+- Autonomous Agents
+- Bug Fixing
+- Copilot
+- Copilot Coding Agent
+- Developer Tools
+- Feature Implementation
+- GitHub Actions
+- Improvement
+- Pull Requests
+- Software Development
+- Technical Debt
+- Test Coverage
+- VS Code
+- Workflow Automation
+- AI
+- DevOps
+- GitHub Copilot
+- News
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Allison announces the general availability of the GitHub Copilot coding agent, which empowers developers to delegate asynchronous coding tasks—such as feature implementation and bug fixes—directly from GitHub or VS Code.<!--excerpt_end-->
 
 # GitHub Copilot Coding Agent Now Generally Available

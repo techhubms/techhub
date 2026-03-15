@@ -1,20 +1,29 @@
----
-layout: "post"
-title: "Calculating Expiry and Retention Days for Azure Blob Storage Using Inventory and Synapse"
-description: "This guide walks through querying and calculating the expiry time and remaining retention days for blobs in Azure Blob Storage and Azure Data Lake Gen2 accounts. It leverages blob inventory reports and Azure Synapse Analytics to automate reporting, aiding in compliance and efficient data lifecycle management."
-author: "Harshi_mrinal"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-paas-blog/deriving-expiry-days-and-remaining-retention-days-for-blobs/ba-p/4466586
+title: Calculating Expiry and Retention Days for Azure Blob Storage Using Inventory and Synapse
+author: Harshi_mrinal
+feed_name: Microsoft Tech Community
 date: 2025-11-11 05:35:25 +00:00
-permalink: "/2025-11-11-Calculating-Expiry-and-Retention-Days-for-Azure-Blob-Storage-Using-Inventory-and-Synapse.html"
-categories: ["Azure"]
-tags: ["Azure", "Azure Blob Storage", "Azure Data Lake Gen2", "Azure Storage Actions", "Azure Synapse Analytics", "Blob Expiry", "Blob Inventory", "Community", "Data Compliance", "Data Management", "Data Retention", "REST API", "Soft Delete", "SQL Query", "Storage Lifecycle"]
-tags_normalized: ["azure", "azure blob storage", "azure data lake gen2", "azure storage actions", "azure synapse analytics", "blob expiry", "blob inventory", "community", "data compliance", "data management", "data retention", "rest api", "soft delete", "sql query", "storage lifecycle"]
+tags:
+- Azure Blob Storage
+- Azure Data Lake Gen2
+- Azure Storage Actions
+- Azure Synapse Analytics
+- Blob Expiry
+- Blob Inventory
+- Data Compliance
+- Data Management
+- Data Retention
+- REST API
+- Soft Delete
+- SQL Query
+- Storage Lifecycle
+- Azure
+- Community
+section_names:
+- azure
+primary_section: azure
 ---
-
 Harshi_mrinal provides a detailed walkthrough for monitoring and calculating blob expiry and retention periods in Azure Blob Storage, using inventory reports and Azure Synapse to ensure compliance with storage policies.<!--excerpt_end-->
 
 # Calculating Expiry and Retention Days for Azure Blob Storage Using Inventory and Synapse
@@ -37,9 +46,9 @@ This guide outlines a step-by-step solution:
 - Configure a **Blob Inventory rule** in your storage account.
 - Inventory jobs output a CSV file listing metadata for each blob, such as name, deletion status, expiry time, etc.
 - To download the report:
-    - Go to the dedicated inventory container.
-    - Navigate to the latest date folder.
-    - Obtain the CSV file URL.
+  - Go to the dedicated inventory container.
+  - Navigate to the latest date folder.
+  - Obtain the CSV file URL.
 
 ## 4. Querying Blob Inventory with Azure Synapse Analytics
 

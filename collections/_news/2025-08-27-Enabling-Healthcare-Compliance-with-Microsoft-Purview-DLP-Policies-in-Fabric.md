@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "Enabling Healthcare Compliance with Microsoft Purview DLP Policies in Fabric"
-description: "This article explains how healthcare organizations can leverage Microsoft Purview Data Loss Prevention (DLP) policies to meet compliance standards like HIPAA. Focusing on Microsoft Fabric cloud analytics, it covers the automated protection of sensitive data, real-time user guidance, audit trails, and best practices for secure collaboration in healthcare environments."
-author: "Microsoft Fabric Blog"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://blog.fabric.microsoft.com/en-US/blog/meet-your-healthcare-regulation-and-compliance-requirements-with-purview-data-loss-prevention-dlp-policies/"
-viewing_mode: "external"
-feed_name: "Microsoft Fabric Blog"
-feed_url: "https://blog.fabric.microsoft.com/en-us/blog/feed/"
+﻿---
+external_url: https://blog.fabric.microsoft.com/en-US/blog/meet-your-healthcare-regulation-and-compliance-requirements-with-purview-data-loss-prevention-dlp-policies/
+title: Enabling Healthcare Compliance with Microsoft Purview DLP Policies in Fabric
+author: Microsoft Fabric Blog
+feed_name: Microsoft Fabric Blog
 date: 2025-08-27 10:30:00 +00:00
-permalink: "/2025-08-27-Enabling-Healthcare-Compliance-with-Microsoft-Purview-DLP-Policies-in-Fabric.html"
-categories: ["Azure", "Security"]
-tags: ["Access Monitoring", "Audit Trails", "Azure", "Cloud Data Security", "Data Classification", "Data Loss Prevention", "DLP Policies", "Healthcare Compliance", "HIPAA", "Microsoft Fabric", "Microsoft Purview", "News", "PHI Protection", "Power BI", "Privacy", "Regulatory Compliance", "Security", "Security Administration"]
-tags_normalized: ["access monitoring", "audit trails", "azure", "cloud data security", "data classification", "data loss prevention", "dlp policies", "healthcare compliance", "hipaa", "microsoft fabric", "microsoft purview", "news", "phi protection", "power bi", "privacy", "regulatory compliance", "security", "security administration"]
+tags:
+- Access Monitoring
+- Audit Trails
+- Cloud Data Security
+- Data Classification
+- Data Loss Prevention
+- DLP Policies
+- Healthcare Compliance
+- HIPAA
+- Microsoft Fabric
+- Microsoft Purview
+- PHI Protection
+- Power BI
+- Privacy
+- Regulatory Compliance
+- Security Administration
+- Azure
+- Security
+- News
+section_names:
+- azure
+- security
+primary_section: azure
 ---
-
 Microsoft Fabric Blog presents a thorough overview of using Purview DLP policies to safeguard healthcare data, outlining compliance strategies and actionable steps for security administrators.<!--excerpt_end-->
 
 # Enabling Healthcare Compliance with Microsoft Purview DLP Policies in Fabric

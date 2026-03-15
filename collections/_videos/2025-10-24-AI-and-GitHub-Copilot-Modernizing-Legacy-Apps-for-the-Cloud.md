@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud"
-description: "This session, led by Ayan Gupta and the GitHub team, delves into how GitHub Copilot and AI-powered agents accelerate the modernization of legacy applications. Covering upgrades of codebases, framework migration, security fixes, and automation of deployments to Azure, the video demonstrates streamlining complex modernization workflows for technologies like Java and .NET."
-author: "GitHub"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=a9glyQs6cbE"
-viewing_mode: "internal"
-feed_name: "GitHub YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ"
+﻿---
+external_url: https://www.youtube.com/watch?v=a9glyQs6cbE
+title: 'AI & GitHub Copilot: Modernizing Legacy Apps for the Cloud'
+author: GitHub
+feed_name: GitHub YouTube
 date: 2025-10-24 23:58:52 +00:00
-permalink: "/2025-10-24-AI-and-GitHub-Copilot-Modernizing-Legacy-Apps-for-the-Cloud.html"
-categories: ["AI", "Azure", "Coding", "DevOps", "GitHub Copilot"]
-tags: [".NET Modernization", "AI", "AI Powered Modernization", "Application Modernization", "Azure", "Azure Deployment", "CI/CD Automation", "Cloud Migration", "Code Assessment", "Coding", "DevOps", "DevOps Workflow", "GitHub Copilot", "IaC", "Java Modernization", "Legacy Codebase", "Security Fixes", "Upgrade Automation", "Videos"]
-tags_normalized: ["dotnet modernization", "ai", "ai powered modernization", "application modernization", "azure", "azure deployment", "cislashcd automation", "cloud migration", "code assessment", "coding", "devops", "devops workflow", "github copilot", "iac", "java modernization", "legacy codebase", "security fixes", "upgrade automation", "videos"]
+tags:
+- .NET Modernization
+- AI Powered Modernization
+- Application Modernization
+- Azure Deployment
+- CI/CD Automation
+- Cloud Migration
+- Code Assessment
+- DevOps Workflow
+- IaC
+- Java Modernization
+- Legacy Codebase
+- Security Fixes
+- Upgrade Automation
+- AI
+- Azure
+- DevOps
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- azure
+- dotnet
+- devops
+- github-copilot
+primary_section: github-copilot
 ---
-
 Ayan Gupta from GitHub leads a practical session on leveraging GitHub Copilot and AI-powered agents to modernize and migrate legacy applications, targeting .NET and Java deployments on Azure.<!--excerpt_end-->
 
 {% youtube a9glyQs6cbE %}

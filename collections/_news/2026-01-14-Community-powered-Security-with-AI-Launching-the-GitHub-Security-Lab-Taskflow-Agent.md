@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Community-powered Security with AI: Launching the GitHub Security Lab Taskflow Agent"
-description: "This article introduces the GitHub Security Lab Taskflow Agent, an open source and community-driven framework designed to empower security research using AI and automation. It details the architecture, agentic workflows, and practical steps to leverage AI for collaborative software vulnerability analysis on GitHub."
-author: "Kevin Backhouse"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/security/community-powered-security-with-ai-an-open-source-framework-for-security-research/
+title: 'Community-powered Security with AI: Launching the GitHub Security Lab Taskflow Agent'
+author: Kevin Backhouse
+feed_name: The GitHub Blog
 date: 2026-01-14 18:45:09 +00:00
-permalink: "/2026-01-14-Community-powered-Security-with-AI-Launching-the-GitHub-Security-Lab-Taskflow-Agent.html"
-categories: ["AI", "DevOps", "Security"]
-tags: ["Agentic AI", "AI", "AI & ML", "AI Research", "CodeQL", "Codespaces", "Community Collaboration", "Containerization", "DevOps", "GitHub Security Lab", "MCP", "News", "Open Source", "Open Source Security", "PyPI", "Python", "Security", "Security Analysis", "Security Automation", "Taskflow Agent", "Vulnerability Detection"]
-tags_normalized: ["agentic ai", "ai", "ai and ml", "ai research", "codeql", "codespaces", "community collaboration", "containerization", "devops", "github security lab", "mcp", "news", "open source", "open source security", "pypi", "python", "security", "security analysis", "security automation", "taskflow agent", "vulnerability detection"]
+tags:
+- Agentic AI
+- AI & ML
+- AI Research
+- CodeQL
+- Codespaces
+- Community Collaboration
+- Containerization
+- GitHub Security Lab
+- MCP
+- Open Source
+- Open Source Security
+- PyPI
+- Python
+- Security Analysis
+- Security Automation
+- Taskflow Agent
+- Vulnerability Detection
+- AI
+- DevOps
+- Security
+- News
+section_names:
+- ai
+- devops
+- security
+primary_section: ai
 ---
-
 Kevin Backhouse presents the GitHub Security Lab Taskflow Agent—an open source AI-powered framework enabling collaborative, automated security research on GitHub.<!--excerpt_end-->
 
 # Community-powered Security with AI: An Open Source Framework for Security Research

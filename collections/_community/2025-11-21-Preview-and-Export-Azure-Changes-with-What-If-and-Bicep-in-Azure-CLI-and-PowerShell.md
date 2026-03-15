@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Preview and Export Azure Changes with 'What If' and Bicep in Azure CLI & PowerShell"
-description: "This article introduces two new Azure features: 'What if' and 'Export Bicep' in Azure CLI and PowerShell. These tools allow users to preview the effects of their commands and export those commands as Bicep templates, enabling safer, more efficient infrastructure management and adoption of Infrastructure as Code practices, all currently available in private preview."
-author: "stevenbucher"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-tools-blog/gaining-confidence-with-az-cli-and-az-powershell-introducing/ba-p/4472147"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-tools-blog/gaining-confidence-with-az-cli-and-az-powershell-introducing/ba-p/4472147
+title: Preview and Export Azure Changes with 'What If' and Bicep in Azure CLI & PowerShell
+author: stevenbucher
+feed_name: Microsoft Tech Community
 date: 2025-11-21 18:39:06 +00:00
-permalink: "/2025-11-21-Preview-and-Export-Azure-Changes-with-What-If-and-Bicep-in-Azure-CLI-and-PowerShell.html"
-categories: ["AI", "Azure", "DevOps"]
-tags: ["AI", "AI Translation", "Azure", "Azure CLI", "Azure Networking", "Azure PowerShell", "Azure Storage Account", "Azure VM", "Bicep Templates", "Change Preview", "Cloud Automation", "Community", "DevOps", "DryRun", "Export Bicep", "IaC", "Private Preview", "Resource Deployment", "What If"]
-tags_normalized: ["ai", "ai translation", "azure", "azure cli", "azure networking", "azure powershell", "azure storage account", "azure vm", "bicep templates", "change preview", "cloud automation", "community", "devops", "dryrun", "export bicep", "iac", "private preview", "resource deployment", "what if"]
+tags:
+- AI Translation
+- Azure CLI
+- Azure Networking
+- Azure PowerShell
+- Azure Storage Account
+- Azure VM
+- Bicep Templates
+- Change Preview
+- Cloud Automation
+- DryRun
+- Export Bicep
+- IaC
+- Private Preview
+- Resource Deployment
+- What If
+- AI
+- Azure
+- DevOps
+- Community
+section_names:
+- ai
+- azure
+- devops
+primary_section: ai
 ---
-
 Steven Bucher discusses Azure CLI and PowerShell's new 'What if' and 'Export Bicep' features, helping practitioners safely preview command impacts and generate reusable Bicep templates.<!--excerpt_end-->
 
 # Preview and Export Azure Changes with 'What If' and Bicep in Azure CLI & PowerShell

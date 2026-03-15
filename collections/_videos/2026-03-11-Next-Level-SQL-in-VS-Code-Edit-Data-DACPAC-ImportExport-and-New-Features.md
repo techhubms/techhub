@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Next-Level SQL in VS Code: Edit Data, DACPAC Import/Export, and New Features"
-description: "This video from the Data Exposed series presents recent enhancements to the MSSQL Extension for Visual Studio Code (v1.40). It showcases new capabilities for SQL developers such as an Edit Data grid interface, Database Object Search, DACPAC export/import, and flat file imports. The episode features hands-on demos of these updates and provides links to additional resources, demos, and roadmap details."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=JhyBSthgFys"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=JhyBSthgFys
+title: 'Next-Level SQL in VS Code: Edit Data, DACPAC Import/Export, and New Features'
+author: Microsoft Developer
+primary_section: dotnet
+feed_name: Microsoft Developer YouTube
 date: 2026-03-11 16:47:52 +00:00
-permalink: "/2026-03-11-Next-Level-SQL-in-VS-Code-Edit-Data-DACPAC-ImportExport-and-New-Features.html"
-categories: ["Azure", "Coding"]
-tags: ["Azure", "Azure SQL", "Cloud Computing", "Coding", "DACPAC", "Data Exposed", "Database Development", "Database Object Search", "Dev", "Developer Tools", "Development", "Edit Data Grid", "Flat File Import", "Microsoft", "MSSQL Extension", "SQL", "SQL Server", "Tech", "Technology", "Videos", "VS Code"]
-tags_normalized: ["azure", "azure sql", "cloud computing", "coding", "dacpac", "data exposed", "database development", "database object search", "dev", "developer tools", "development", "edit data grid", "flat file import", "microsoft", "mssql extension", "sql", "sql server", "tech", "technology", "videos", "vs code"]
+tags:
+- Azure
+- Azure SQL
+- Cloud Computing
+- DACPAC
+- Data Exposed
+- Database Development
+- Database Object Search
+- Dev
+- Developer Tools
+- Development
+- Edit Data Grid
+- Flat File Import
+- Microsoft
+- MSSQL Extension
+- SQL
+- SQL Server
+- Tech
+- Technology
+- Videos
+- VS Code
+- .NET
+section_names:
+- azure
+- dotnet
 ---
-
 Microsoft Developer presents an episode of Data Exposed, demonstrating the latest features in the MSSQL Extension for Visual Studio Code, including Edit Data, DACPAC import/export, and hands-on demos.<!--excerpt_end-->
 
 {% youtube JhyBSthgFys %}

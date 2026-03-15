@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Generating Reliable Tests with AI and Copilot in Playwright"
-description: "Debbie O’Brien demonstrates how developers can use AI, specifically GitHub Copilot with the help of Microsoft Copilot Professional (MCP), to automatically generate Playwright tests. The video showcases how AI can perform actions such as browsing, clicking, and typing to create actionable and reliable test scripts, streamlining the testing process for developers."
-author: "Microsoft Developer"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.youtube.com/watch?v=2p9kRRcrv80"
-viewing_mode: "internal"
-feed_name: "Microsoft Developer YouTube"
-feed_url: "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g"
+﻿---
+external_url: https://www.youtube.com/watch?v=2p9kRRcrv80
+title: Generating Reliable Tests with AI and Copilot in Playwright
+author: Microsoft Developer
+feed_name: Microsoft Developer YouTube
 date: 2025-10-08 14:05:44 +00:00
-permalink: "/2025-10-08-Generating-Reliable-Tests-with-AI-and-Copilot-in-Playwright.html"
-categories: ["AI", "Coding", "GitHub Copilot"]
-tags: ["AI", "AI Testing", "Automated Testing", "Coding", "Developer Tools", "Developers", "GitHub Copilot", "JavaScript", "Microsoft Copilot Professional", "OneDevQuestion", "Playwright", "Test Automation", "Test Generation", "Testing", "Videos", "Web Automation"]
-tags_normalized: ["ai", "ai testing", "automated testing", "coding", "developer tools", "developers", "github copilot", "javascript", "microsoft copilot professional", "onedevquestion", "playwright", "test automation", "test generation", "testing", "videos", "web automation"]
+tags:
+- AI Testing
+- Automated Testing
+- Developer Tools
+- Developers
+- JavaScript
+- Microsoft Copilot Professional
+- OneDevQuestion
+- Playwright
+- Test Automation
+- Test Generation
+- Testing
+- Web Automation
+- AI
+- GitHub Copilot
+- Videos
+- .NET
+section_names:
+- ai
+- dotnet
+- github-copilot
+primary_section: github-copilot
 ---
-
 In this video, Microsoft Developer and Debbie O’Brien show how to leverage GitHub Copilot and MCP to generate Playwright tests, making automated testing more accessible to developers.<!--excerpt_end-->
 
 {% youtube 2p9kRRcrv80 %}

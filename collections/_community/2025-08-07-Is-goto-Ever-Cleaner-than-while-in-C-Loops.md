@@ -1,20 +1,30 @@
----
-layout: "post"
-title: "Is `goto` Ever Cleaner than `while` in C# Loops?"
-description: "A technical discussion debating the readability and maintainability of using `goto` versus `while` loops for repeated actions in C#. Includes opinions from experienced developers, multiple loop implementations, and considerations for code clarity, review, and control flow best practices."
-author: "Foreign-Radish1641"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/csharp/comments/1mkbkrw/can_goto_be_cleaner_than_while/"
-viewing_mode: "external"
-feed_name: "Reddit CSharp"
-feed_url: "https://www.reddit.com/r/csharp/.rss"
+﻿---
+external_url: https://www.reddit.com/r/csharp/comments/1mkbkrw/can_goto_be_cleaner_than_while/
+title: Is `goto` Ever Cleaner than `while` in C# Loops?
+author: Foreign-Radish1641
+feed_name: Reddit CSharp
 date: 2025-08-07 20:46:56 +00:00
-permalink: "/2025-08-07-Is-goto-Ever-Cleaner-than-while-in-C-Loops.html"
-categories: ["Coding"]
-tags: ["Best Practices", "C#", "Code Clarity", "Code Maintainability", "Code Review", "Coding", "Community", "Console Application", "Control Flow", "Function Extraction", "Goto Statement", "Language Features", "Looping", "Nested Statements", "Readability", "While Loop"]
-tags_normalized: ["best practices", "csharp", "code clarity", "code maintainability", "code review", "coding", "community", "console application", "control flow", "function extraction", "goto statement", "language features", "looping", "nested statements", "readability", "while loop"]
+tags:
+- Best Practices
+- C#
+- Code Clarity
+- Code Maintainability
+- Code Review
+- Console Application
+- Control Flow
+- Function Extraction
+- Goto Statement
+- Language Features
+- Looping
+- Nested Statements
+- Readability
+- While Loop
+- Community
+- .NET
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 Foreign-Radish1641 and other community members analyze whether using `goto` in loops can be clearer than traditional `while` constructs in C#, sharing practical scenarios, examples, and advice.<!--excerpt_end-->
 
 # Is `goto` Ever Cleaner than `while` in C# Loops?
@@ -85,7 +95,7 @@ The argument is that `goto` can sometimes make loops "explicit" and potentially 
 
 - **`goto` has rare use cases:** Only use `goto` to break out of complex, deeply nested logic where restructuring would otherwise greatly complicate the code. Even then, alternatives like extracting code into a function (and using `return`) are preferred.
 
-    - _Example: "Even then, I think I've only had to do that once in 22 years of using C#."_
+  - _Example: "Even then, I think I've only had to do that once in 22 years of using C#."_
 
 - **Readability beats "cleanness":** The term "cleaner" is vague—what matters more is readability and maintainability. Indentation and structured blocks let you quickly see scope and control flow.
 

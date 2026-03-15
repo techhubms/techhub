@@ -1,20 +1,32 @@
----
-layout: "post"
-title: ".NET 10 Preview 6: New Features Across Runtime, SDK, Libraries, ASP.NET Core, Blazor, and More"
-description: "The .NET Team has released .NET 10 Preview 6, introducing enhancements in the runtime, SDK, libraries, ASP.NET Core, Blazor, .NET MAUI, and more. Key updates include Post-Quantum Cryptography, improved code generation, Blazor diagnostics, MAUI enhancements, and early support for Android API 35/36. Full release notes are available."
-author: ".NET Team"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/"
-viewing_mode: "external"
-feed_name: "Microsoft .NET Blog"
-feed_url: "https://devblogs.microsoft.com/dotnet/feed/"
+﻿---
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-10-preview-6/
+title: '.NET 10 Preview 6: New Features Across Runtime, SDK, Libraries, ASP.NET Core, Blazor, and More'
+author: .NET Team
+feed_name: Microsoft .NET Blog
 date: 2025-07-15 17:22:00 +00:00
-permalink: "/2025-07-15-NET-10-Preview-6-New-Features-Across-Runtime-SDK-Libraries-ASPNET-Core-Blazor-and-More.html"
-categories: ["Coding"]
-tags: [".NET", ".NET 10", "Android", "ASP.NET Core", "Blazor", "C#", "Coding", "Containers", "EF Core", "Featured", "Ios", "JSON Serialization", "Mac Catalyst", "MAUI", "News", "Post Quantum Cryptography", "VS", "WinForms", "WPF"]
-tags_normalized: ["dotnet", "dotnet 10", "android", "aspdotnet core", "blazor", "csharp", "coding", "containers", "ef core", "featured", "ios", "json serialization", "mac catalyst", "maui", "news", "post quantum cryptography", "vs", "winforms", "wpf"]
+tags:
+- .NET
+- .NET 10
+- Android
+- ASP.NET Core
+- Blazor
+- C#
+- Containers
+- EF Core
+- Featured
+- Ios
+- JSON Serialization
+- Mac Catalyst
+- MAUI
+- Post Quantum Cryptography
+- VS
+- WinForms
+- WPF
+- News
+section_names:
+- dotnet
+primary_section: dotnet
 ---
-
 In this announcement, the .NET Team details the latest features and improvements in .NET 10 Preview 6, covering updates to the core runtime, SDK, ASP.NET Core, Blazor, .NET MAUI, and more.<!--excerpt_end-->
 
 # .NET 10 Preview 6 is Now Available
@@ -49,12 +61,12 @@ This blog provides an overview of what's new in this preview. For comprehensive 
 - **File-based apps improvements**: Expands platform and deployment support for file-based apps.
 - [Full SDK Release Notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview6/sdk.md)
 
-## C#
+## C #
 
 - No new language features were added in this preview.
 - [Full C# Release Notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview6/csharp.md)
 
-## F#
+## F #
 
 - No new features in this preview.
 - [F# Release Notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/preview/preview6/fsharp.md)

@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Insights from the Latest Microsoft Email Security Benchmark"
-description: "This news article presents updated benchmarking data from Microsoft regarding email security effectiveness. It analyzes Microsoft Defender's capabilities, the benefits of layering with ICES and SEG partners, and highlights the value of integrated, transparent protection for security teams. The report includes quantitative results, ecosystem updates, and ongoing commitments to multi-vendor security strategies."
-author: "stclarke"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/03/12/from-transparency-to-action-what-the-latest-microsoft-email-security-benchmark-reveals/"
-viewing_mode: "external"
-feed_name: "Microsoft News"
-feed_url: "https://news.microsoft.com/source/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/03/12/from-transparency-to-action-what-the-latest-microsoft-email-security-benchmark-reveals/
+title: Insights from the Latest Microsoft Email Security Benchmark
+author: stclarke
+primary_section: security
+feed_name: Microsoft News
 date: 2026-03-12 18:06:11 +00:00
-permalink: "/2026-03-12-Insights-from-the-Latest-Microsoft-Email-Security-Benchmark.html"
-categories: ["Security"]
-tags: ["Benchmarking", "Company News", "Cybersecurity", "Email Security", "Email Threat Remediation", "Email Threats", "ICES Vendor Ecosystem", "Incident Remediation", "Incident Response", "Integrated Cloud Email Security", "Layered Defense", "Microsoft Defender For Office 365", "Microsoft Security", "News", "Partner Integrations", "Secure Email Gateway", "Security", "SIEM", "Threat Detection", "Transparency", "XDR"]
-tags_normalized: ["benchmarking", "company news", "cybersecurity", "email security", "email threat remediation", "email threats", "ices vendor ecosystem", "incident remediation", "incident response", "integrated cloud email security", "layered defense", "microsoft defender for office 365", "microsoft security", "news", "partner integrations", "secure email gateway", "security", "siem", "threat detection", "transparency", "xdr"]
+tags:
+- Benchmarking
+- Company News
+- Cybersecurity
+- Email Security
+- Email Threat Remediation
+- Email Threats
+- ICES Vendor Ecosystem
+- Incident Remediation
+- Incident Response
+- Integrated Cloud Email Security
+- Layered Defense
+- Microsoft Defender For Office 365
+- Microsoft Security
+- News
+- Partner Integrations
+- Secure Email Gateway
+- Security
+- SIEM
+- Threat Detection
+- Transparency
+- XDR
+section_names:
+- security
 ---
-
 stclarke summarizes Microsoft's latest email security benchmark, revealing detailed statistics on threat detection and the benefits of integrating Defender with partner solutions for layered protection.<!--excerpt_end-->
 
 # Insights from the Latest Microsoft Email Security Benchmark

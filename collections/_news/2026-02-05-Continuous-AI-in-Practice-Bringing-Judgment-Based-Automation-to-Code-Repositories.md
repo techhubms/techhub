@@ -1,20 +1,37 @@
----
-layout: "post"
-title: "Continuous AI in Practice: Bringing Judgment-Based Automation to Code Repositories"
-description: "This article explores the concept of Continuous AI, where background agents operate within code repositories to automate tasks that traditionally require human judgment. The piece details how Continuous AI complements traditional CI pipelines by enabling automation of context-sensitive chores like documentation upkeep, bug trend analysis, and more. It draws on real-world examples from GitHub Next's research and provides actionable guidance for developers looking to implement agentic workflows in their development process."
-author: "GitHub Staff"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/"
-viewing_mode: "external"
-feed_name: "The GitHub Blog"
-feed_url: "https://github.blog/feed/"
+﻿---
+external_url: https://github.blog/ai-and-ml/generative-ai/continuous-ai-in-practice-what-developers-can-automate-today-with-agentic-ci/
+title: 'Continuous AI in Practice: Bringing Judgment-Based Automation to Code Repositories'
+author: GitHub Staff
+primary_section: ai
+feed_name: The GitHub Blog
 date: 2026-02-05 17:00:00 +00:00
-permalink: "/2026-02-05-Continuous-AI-in-Practice-Bringing-Judgment-Based-Automation-to-Code-Repositories.html"
-categories: ["AI", "Coding", "DevOps"]
-tags: ["Agentic Workflows", "AI", "AI & ML", "AI Agents", "Automation", "CI/CD", "Code Review", "Coding", "Continuous AI", "Continuous Integration", "Developer Productivity", "DevOps", "Documentation Automation", "Generative AI", "GitHub Actions", "GitHub Next", "Natural Language Automation", "News", "Performance Optimization", "Software Engineering", "Test Automation"]
-tags_normalized: ["agentic workflows", "ai", "ai and ml", "ai agents", "automation", "cislashcd", "code review", "coding", "continuous ai", "continuous integration", "developer productivity", "devops", "documentation automation", "generative ai", "github actions", "github next", "natural language automation", "news", "performance optimization", "software engineering", "test automation"]
+tags:
+- Agentic Workflows
+- AI
+- AI & ML
+- AI Agents
+- Automation
+- CI/CD
+- Code Review
+- Continuous AI
+- Continuous Integration
+- Developer Productivity
+- DevOps
+- Documentation Automation
+- Generative AI
+- GitHub Actions
+- GitHub Next
+- Natural Language Automation
+- News
+- Performance Optimization
+- Software Engineering
+- Test Automation
+- .NET
+section_names:
+- ai
+- dotnet
+- devops
 ---
-
 Authored by the GitHub Staff, this feature introduces Continuous AI—a paradigm for automating context-heavy engineering chores using AI-powered agents within code repositories.<!--excerpt_end-->
 
 # Continuous AI in Practice: Bringing Judgment-Based Automation to Code Repositories

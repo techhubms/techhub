@@ -1,0 +1,300 @@
+@* ============================================================================
+   Sub-Navigation Component
+   
+   Horizontal navigation below page header showing collections and custom pages.
+   Used across section pages to provide secondary navigation.
+   On the homepage, shows sections as navigation items.
+   
+   Usage:
+     Section page:  <SubNav Section="@sectionData" />
+     Homepage:      <SubNav Sections="@allSections" />
+   ============================================================================ *@
+
+@using TechHub.Core.Models
+@inject NavigationManager Navigation
+@inject IJSRuntime JS
+@implements IDisposable
+
+@if (Section != null)
+{
+    <nav class="sub-nav" aria-label="@Section.Title navigation">
+        @* Desktop: horizontal button bar *@
+        <div class="sub-nav-wrapper">
+<a href="/@Section.Name/all" class="btn-subnav @(IsActive($"/{Section.Name}/all") ? "active" : "")"
+               @onclick="@(() => OnSubNavClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
+                All
+            </a>
+
+            @foreach (var collection in RegularCollections)
+            {
+                var url = $"/{Section.Name}/{collection.Name}";
+                <a href="@url" class="btn-subnav @(IsActive(url) ? "active" : "")"
+                   @onclick="@(() => OnSubNavClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
+                    @collection.Title
+                </a>
+            }
+
+            @foreach (var customPage in CustomPages)
+            {
+                <a href="@customPage.Url" class="btn-subnav btn-subnav-custom @(IsActive(customPage.Url) ? "active" : "")"
+                   @onclick="@(() => OnSubNavClick(customPage.Url))" @onclick:preventDefault="@IsCurrentPage(customPage.Url)">
+                    @customPage.Title
+                </a>
+            }
+        </div>
+
+        @* Mobile: dropdown showing active page *@
+        <div class="sub-nav-mobile">
+            <button class="sub-nav-dropdown-toggle" @onclick="ToggleDropdown" aria-expanded="@(dropdownOpen ? "true" : "false")">
+                <span>@ActiveLabel</span>
+                <span class="sub-nav-chevron @(dropdownOpen ? "expanded" : "")"></span>
+            </button>
+            @if (dropdownOpen)
+            {
+                <div class="sub-nav-dropdown-menu">
+                    <a href="/@Section.Name/all" class="sub-nav-dropdown-item @(IsActive($"/{Section.Name}/all") ? "active" : "")"
+                       @onclick="@(() => OnSubNavDropdownClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
+                        All
+                    </a>
+                    @foreach (var collection in RegularCollections)
+                    {
+                        var url = $"/{Section.Name}/{collection.Name}";
+                        <a href="@url" class="sub-nav-dropdown-item @(IsActive(url) ? "active" : "")"
+                           @onclick="@(() => OnSubNavDropdownClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
+                            @collection.Title
+                        </a>
+                    }
+                    @foreach (var customPage in CustomPages)
+                    {
+                        <a href="@customPage.Url" class="sub-nav-dropdown-item sub-nav-dropdown-custom @(IsActive(customPage.Url) ? "active" : "")"
+                           @onclick="@(() => OnSubNavDropdownClick(customPage.Url))" @onclick:preventDefault="@IsCurrentPage(customPage.Url)">
+                            @customPage.Title
+                        </a>
+                    }
+                </div>
+            }
+        </div>
+    </nav>
+}
+else if (Sections != null && Sections.Any())
+{
+    @* Homepage/About SubNav: collapsed on desktop, dropdown on tablet/mobile *@
+    <nav class="sub-nav sub-nav-homepage" aria-label="Site navigation">
+        @* Desktop: horizontal button bar (hidden on homepage/about via CSS) *@
+        <div class="sub-nav-wrapper">
+            @foreach (var sectionItem in Sections)
+            {
+                var url = $"/{sectionItem.Name}";
+                <a href="@url" class="btn-subnav">
+                    @sectionItem.Title
+                </a>
+            }
+        </div>
+
+        @* Tablet/Mobile: dropdown showing current page + all navigation *@
+        <div class="sub-nav-mobile">
+            <button class="sub-nav-dropdown-toggle" @onclick="ToggleDropdown" aria-expanded="@(dropdownOpen ? "true" : "false")">
+                <span>@HomepageActiveLabel</span>
+                <span class="sub-nav-chevron @(dropdownOpen ? "expanded" : "")"></span>
+            </button>
+            @if (dropdownOpen)
+            {
+                <div class="sub-nav-dropdown-menu">
+                    <a href="/" class="sub-nav-dropdown-item @(IsActivePage("/") ? "active" : "")" @onclick="CloseDropdown">
+                        Home
+                    </a>
+                    @foreach (var sectionItem in Sections)
+                    {
+                        var url = $"/{sectionItem.Name}";
+                        <a href="@url" class="sub-nav-dropdown-item" @onclick="CloseDropdown">
+                            @sectionItem.Title
+                        </a>
+                    }
+                    <a href="/about" class="sub-nav-dropdown-item @(IsActivePage("/about") ? "active" : "")" @onclick="CloseDropdown">
+                        About Us
+                    </a>
+                </div>
+            }
+        </div>
+    </nav>
+}
+@* Empty SubNav: render nothing so it collapses *@
+
+@code {
+    [Parameter]
+    public Section? Section { get; set; }
+
+    /// <summary>
+    /// List of all sections. Used on the homepage to show section links in the subnav.
+    /// </summary>
+    [Parameter]
+    public IEnumerable<Section>? Sections { get; set; }
+
+    private bool dropdownOpen;
+
+    private IEnumerable<Collection> RegularCollections =>
+    Section?.Collections?.Where(c => !c.IsCustom) ?? Enumerable.Empty<Collection>();
+
+    private IEnumerable<Collection> CustomPages =>
+    Section?.Collections?
+        .Where(c => c.IsCustom)
+        .OrderBy(c => c.Order)
+        .ThenBy(c => c.Title) ?? Enumerable.Empty<Collection>();
+
+    private string ActiveLabel
+    {
+        get
+        {
+            if (Section == null) return "";
+
+            foreach (var collection in RegularCollections)
+            {
+                var url = $"/{Section.Name}/{collection.Name}";
+                if (IsActive(url)) return collection.Title;
+            }
+
+            foreach (var customPage in CustomPages)
+            {
+                if (IsActive(customPage.Url)) return customPage.Title;
+            }
+
+            return "All";
+        }
+    }
+
+    private string HomepageActiveLabel
+    {
+        get
+        {
+            var currentUri = new Uri(Navigation.Uri);
+            var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+
+            if (string.Equals(currentPath, "/about", StringComparison.OrdinalIgnoreCase))
+                return "About Us";
+
+            return "Home";
+        }
+    }
+
+    private bool IsActivePage(string path)
+    {
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+        var targetPath = path.TrimEnd('/');
+
+        // Home page: match empty path
+        if (string.IsNullOrEmpty(targetPath))
+            return string.IsNullOrEmpty(currentPath);
+
+        return string.Equals(currentPath, targetPath, StringComparison.OrdinalIgnoreCase);
+    }
+
+    private void ToggleDropdown() => dropdownOpen = !dropdownOpen;
+
+    private void CloseDropdown() => dropdownOpen = false;
+
+    /// <summary>
+    /// When clicking the already-active subnav item, scroll to top instead of staying in place.
+    /// Also clears any URL hash so F5 doesn't jump back down.
+    /// </summary>
+    private async Task OnSubNavClick(string url)
+    {
+        if (IsCurrentPage(url))
+        {
+            await ScrollToTopAndClearHash();
+        }
+    }
+
+    /// <summary>
+    /// Same as OnSubNavClick but also closes the mobile dropdown.
+    /// </summary>
+    private async Task OnSubNavDropdownClick(string url)
+    {
+        CloseDropdown();
+        if (IsCurrentPage(url))
+        {
+            await ScrollToTopAndClearHash();
+        }
+    }
+
+    private async Task ScrollToTopAndClearHash()
+    {
+        // Scroll to top and remove hash from URL so refreshing doesn't jump back down.
+        // Uses a single JS call to handle both operations atomically.
+        // Must check window.location.hash in JS because Blazor's NavigationManager.Uri
+        // may not include the fragment (hash fragments are client-side only in Blazor Server).
+        await JS.InvokeVoidAsync("TechHub.scrollToTopAndClearHash");
+    }
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += OnLocationChanged;
+    }
+
+    private void OnLocationChanged(object? sender, Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs e)
+    {
+        dropdownOpen = false;
+        // Re-render to update active state when the URL changes
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= OnLocationChanged;
+    }
+
+    /// <summary>
+    /// Determines if the given URL should be visually highlighted in the subnav.
+    /// Matches both exact pages and content detail pages under a collection.
+    /// Used for CSS active class only.
+    /// </summary>
+    private bool IsActive(string url)
+    {
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+        var targetPath = url.TrimEnd('/');
+
+        // For section root (e.g., /ai), also match /{sectionName}/all
+        if (targetPath.EndsWith("/all", StringComparison.OrdinalIgnoreCase))
+        {
+            var sectionPath = targetPath[..^4]; // Remove "/all"
+                                                // Match /ai/all or just /ai
+            if (currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase) ||
+            currentPath.Equals(sectionPath, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+        }
+
+        // For collections and custom pages - exact match or content detail pages under them
+        if (currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase) ||
+        currentPath.StartsWith(targetPath + "/", StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    /// <summary>
+    /// Determines if the user is on the exact page matching the URL.
+    /// Used for preventDefault and scroll-to-top behavior — only triggers
+    /// when already on the target page, not on child/detail pages.
+    /// </summary>
+    private bool IsCurrentPage(string url)
+    {
+        var currentUri = new Uri(Navigation.Uri);
+        var currentPath = currentUri.AbsolutePath.TrimEnd('/');
+        var targetPath = url.TrimEnd('/');
+
+        // For section root (e.g., /ai), also match /{sectionName}/all
+        if (targetPath.EndsWith("/all", StringComparison.OrdinalIgnoreCase))
+        {
+            var sectionPath = targetPath[..^4]; // Remove "/all"
+            return currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase) ||
+                   currentPath.Equals(sectionPath, StringComparison.OrdinalIgnoreCase);
+        }
+
+        return currentPath.Equals(targetPath, StringComparison.OrdinalIgnoreCase);
+    }
+}

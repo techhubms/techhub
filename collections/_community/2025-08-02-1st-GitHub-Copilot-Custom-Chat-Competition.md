@@ -1,20 +1,28 @@
----
-layout: "post"
-title: "1st GitHub Copilot Custom Chat Competition"
-description: "Outrageous_Permit154 proposes a friendly competition centered on creating the best GitHub Copilot Custom Chat Mode using only official VS Code MCP tools and included models like gpt-4o. The event aims to foster community-driven innovation, focusing on performance and consistency, with an open, research-oriented spirit."
-author: "Outrageous_Permit154"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/"
-viewing_mode: "external"
-feed_name: "Reddit Github Copilot"
-feed_url: "https://www.reddit.com/r/GithubCopilot.rss"
+﻿---
+external_url: https://www.reddit.com/r/GithubCopilot/comments/1mfjlie/1st_github_copilot_custom_chat_competition/
+title: 1st GitHub Copilot Custom Chat Competition
+author: Outrageous_Permit154
+feed_name: Reddit Github Copilot
 date: 2025-08-02 06:29:17 +00:00
-permalink: "/2025-08-02-1st-GitHub-Copilot-Custom-Chat-Competition.html"
-categories: ["AI", "GitHub Copilot"]
-tags: ["AI", "AI Competition", "Coding Productivity", "Community", "Community Initiative", "Custom Chat Mode", "GitHub Copilot", "Gpt 4.1", "Gpt 4o", "MCP Tools", "Open Source", "Performance", "VS Code"]
-tags_normalized: ["ai", "ai competition", "coding productivity", "community", "community initiative", "custom chat mode", "github copilot", "gpt 4dot1", "gpt 4o", "mcp tools", "open source", "performance", "vs code"]
+tags:
+- AI Competition
+- Coding Productivity
+- Community Initiative
+- Custom Chat Mode
+- Gpt 4.1
+- Gpt 4o
+- MCP Tools
+- Open Source
+- Performance
+- VS Code
+- AI
+- GitHub Copilot
+- Community
+section_names:
+- ai
+- github-copilot
+primary_section: github-copilot
 ---
-
 Outrageous_Permit154 introduces a GitHub Copilot Custom Chat Mode competition. This initiative invites the community to craft creative Custom Chat Modes using only official tools and included models.<!--excerpt_end-->
 
 ## Summary

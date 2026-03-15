@@ -1,20 +1,35 @@
----
-layout: "post"
-title: "Agent Loop Public Preview Now Available in Azure Logic Apps Consumption"
-description: "This update introduces Agent Loop—a feature enabling AI-powered agentic automation—to Azure Logic Apps Consumption. Developers and businesses can now use autonomous and conversational agents, leveraging Microsoft's hosted LLM infrastructure, without needing dedicated AI resources. With seamless access to 1,400+ connectors, pay-as-you-go billing, and enterprise-grade upgrade options, anyone can build intelligent workflows rapidly. The release preserves security, simplifies authentication, and details current limitations (regional support, VNET, local dev)."
-author: "Shree_Divya_M_V"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-public-preview-of-agent-loop-in-azure-logic-apps/ba-p/4471056"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/announcing-public-preview-of-agent-loop-in-azure-logic-apps/ba-p/4471056
+title: Agent Loop Public Preview Now Available in Azure Logic Apps Consumption
+author: Shree_Divya_M_V
+feed_name: Microsoft Tech Community
 date: 2025-11-18 18:36:23 +00:00
-permalink: "/2025-11-18-Agent-Loop-Public-Preview-Now-Available-in-Azure-Logic-Apps-Consumption.html"
-categories: ["AI", "Azure"]
-tags: ["Agent Loop", "AI", "AI Agents", "Autonomous Agents", "Azure", "Azure Logic Apps", "Business Process Automation", "Community", "Connectors", "Consumption Plan", "Conversational Agents", "Enterprise Upgrade Path", "Foundry Models", "Integration", "LLM Infrastructure", "Microsoft", "OAuth Authentication", "Pay as You Go", "Serverless Workflows", "Workflow Automation"]
-tags_normalized: ["agent loop", "ai", "ai agents", "autonomous agents", "azure", "azure logic apps", "business process automation", "community", "connectors", "consumption plan", "conversational agents", "enterprise upgrade path", "foundry models", "integration", "llm infrastructure", "microsoft", "oauth authentication", "pay as you go", "serverless workflows", "workflow automation"]
+tags:
+- Agent Loop
+- AI Agents
+- Autonomous Agents
+- Azure Logic Apps
+- Business Process Automation
+- Connectors
+- Consumption Plan
+- Conversational Agents
+- Enterprise Upgrade Path
+- Foundry Models
+- Integration
+- LLM Infrastructure
+- Microsoft
+- OAuth Authentication
+- Pay as You Go
+- Serverless Workflows
+- Workflow Automation
+- AI
+- Azure
+- Community
+section_names:
+- ai
+- azure
+primary_section: ai
 ---
-
 Shree_Divya_M_V announces that Agent Loop is now available in Azure Logic Apps Consumption, providing developers with frictionless, scalable AI agent automation and extensive integration capabilities.<!--excerpt_end-->
 
 # Agent Loop Public Preview Now Available in Azure Logic Apps Consumption

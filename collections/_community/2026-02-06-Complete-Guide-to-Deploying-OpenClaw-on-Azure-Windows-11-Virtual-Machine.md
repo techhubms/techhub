@@ -1,20 +1,36 @@
----
-layout: "post"
-title: "Complete Guide to Deploying OpenClaw on Azure Windows 11 Virtual Machine"
-description: "This comprehensive guide walks through deploying the open-source AI assistant platform OpenClaw on an Azure Windows 11 virtual machine. It details security benefits, automated deployment with Azure CLI, configuration best practices, and cost/security optimizations. Readers will learn how to automate setup, integrate enterprise authentication, and harden these cloud-hosted AI environments."
-author: "kinfey"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/microsoft-developer-community/complete-guide-to-deploying-openclaw-on-azure-windows-11-virtual/ba-p/4492001"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/microsoft-developer-community/complete-guide-to-deploying-openclaw-on-azure-windows-11-virtual/ba-p/4492001
+title: Complete Guide to Deploying OpenClaw on Azure Windows 11 Virtual Machine
+author: kinfey
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-06 08:00:00 +00:00
-permalink: "/2026-02-06-Complete-Guide-to-Deploying-OpenClaw-on-Azure-Windows-11-Virtual-Machine.html"
-categories: ["AI", "Azure", "Security"]
-tags: ["AI", "AI Assistant", "Automation", "Azure", "Azure Active Directory", "Azure CLI", "Azure Key Vault", "Azure Virtual Machine", "Chocolatey", "Community", "Cost Optimization", "Entra ID", "Network Security", "Node.js", "OpenClaw", "RDP", "Security", "Security Best Practices", "Windows 11", "Zero Trust"]
-tags_normalized: ["ai", "ai assistant", "automation", "azure", "azure active directory", "azure cli", "azure key vault", "azure virtual machine", "chocolatey", "community", "cost optimization", "entra id", "network security", "nodedotjs", "openclaw", "rdp", "security", "security best practices", "windows 11", "zero trust"]
+tags:
+- AI
+- AI Assistant
+- Automation
+- Azure
+- Azure Active Directory
+- Azure CLI
+- Azure Key Vault
+- Azure Virtual Machine
+- Chocolatey
+- Community
+- Cost Optimization
+- Entra ID
+- Network Security
+- Node.js
+- OpenClaw
+- RDP
+- Security
+- Security Best Practices
+- Windows 11
+- Zero Trust
+section_names:
+- ai
+- azure
+- security
 ---
-
 kinfey presents a detailed walkthrough for deploying OpenClaw—an open-source AI assistant—on Azure Windows 11 VMs, focusing on automation, security, and best practices for technical professionals.<!--excerpt_end-->
 
 # Complete Guide to Deploying OpenClaw on Azure Windows 11 Virtual Machine

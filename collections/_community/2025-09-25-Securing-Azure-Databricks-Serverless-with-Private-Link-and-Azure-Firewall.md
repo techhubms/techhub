@@ -1,20 +1,41 @@
----
-layout: "post"
-title: "Securing Azure Databricks Serverless with Private Link and Azure Firewall"
-description: "This guide walks through securing Azure Databricks Serverless by integrating Azure Private Link and Azure Firewall. It details how to enforce a deny-by-default network posture, route outbound Databricks traffic through customer-managed infrastructure, and establish private connectivity to critical cloud resources. The post offers practical, step-by-step instructions relevant for technical professionals in regulated sectors seeking compliance and strong security for their analytics workloads."
-author: "alescardoso"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/securing-azure-databricks-serverless-practical-guide-to-private/ba-p/4457083"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/securing-azure-databricks-serverless-practical-guide-to-private/ba-p/4457083
+title: Securing Azure Databricks Serverless with Private Link and Azure Firewall
+author: alescardoso
+feed_name: Microsoft Tech Community
 date: 2025-09-25 23:42:50 +00:00
-permalink: "/2025-09-25-Securing-Azure-Databricks-Serverless-with-Private-Link-and-Azure-Firewall.html"
-categories: ["Azure", "ML", "Security"]
-tags: ["Application Rules", "Azure", "Azure Databricks", "Azure Firewall", "Cloud Security", "Community", "Compliance", "Data Analytics", "FQDN Filtering", "Health Probe", "Load Balancer", "Microsoft Azure", "ML", "NAT", "Network Connectivity Configuration", "Network Security Group", "NGINX", "Outbound Control", "Private Link", "Route Tables", "Router VM", "Security", "Serverless", "Virtual Network", "VNET Peering"]
-tags_normalized: ["application rules", "azure", "azure databricks", "azure firewall", "cloud security", "community", "compliance", "data analytics", "fqdn filtering", "health probe", "load balancer", "microsoft azure", "ml", "nat", "network connectivity configuration", "network security group", "nginx", "outbound control", "private link", "route tables", "router vm", "security", "serverless", "virtual network", "vnet peering"]
+tags:
+- Application Rules
+- Azure Databricks
+- Azure Firewall
+- Cloud Security
+- Compliance
+- Data Analytics
+- FQDN Filtering
+- Health Probe
+- Load Balancer
+- Microsoft Azure
+- NAT
+- Network Connectivity Configuration
+- Network Security Group
+- NGINX
+- Outbound Control
+- Private Link
+- Route Tables
+- Router VM
+- Serverless
+- Virtual Network
+- VNET Peering
+- Azure
+- ML
+- Security
+- Community
+section_names:
+- azure
+- ml
+- security
+primary_section: ml
 ---
-
 alescardoso offers a hands-on walkthrough for securing Azure Databricks Serverless by integrating Private Link and Azure Firewall, enabling a compliant and tightly controlled analytics environment.<!--excerpt_end-->
 
 # Securing Azure Databricks Serverless: Practical Guide to Private Link Integration

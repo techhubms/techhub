@@ -1,20 +1,39 @@
----
-layout: "post"
-title: "Agent Loop: New AI Features in Logic Apps Standard and Public Preview Announced at Ignite"
-description: "This announcement details the general availability and major AI-focused enhancements of Agent Loop in Azure Logic Apps Standard, as well as new public preview features expanding model integration, MCP tool extensibility, Teams/M365 deployment, security, and a redesigned workflow designer. Developers gain new options for building secure, scalable, agentic workflows with AI and automation on Azure."
-author: "DivSwa"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-ignite-update-new-set-of-ai-features-arrive-in-public/ba-p/4470764"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-integration-services-blog/agent-loop-ignite-update-new-set-of-ai-features-arrive-in-public/ba-p/4470764
+title: 'Agent Loop: New AI Features in Logic Apps Standard and Public Preview Announced at Ignite'
+author: DivSwa
+feed_name: Microsoft Tech Community
 date: 2025-11-18 23:47:06 +00:00
-permalink: "/2025-11-18-Agent-Loop-New-AI-Features-in-Logic-Apps-Standard-and-Public-Preview-Announced-at-Ignite.html"
-categories: ["AI", "Azure", "DevOps", "Security"]
-tags: ["Agent Loop", "AI", "AI Automation", "AI Gateway", "Azure", "Azure AI Search", "Azure API Management", "Azure Logic Apps", "BYOM", "Community", "Connector Ecosystem", "DevOps", "Document Level Security", "Identity And Access Management", "MCP", "Microsoft Entra ID", "Microsoft Teams Integration", "Okta Integration", "RAG", "Security", "Serverless", "Workflow Designer"]
-tags_normalized: ["agent loop", "ai", "ai automation", "ai gateway", "azure", "azure ai search", "azure api management", "azure logic apps", "byom", "community", "connector ecosystem", "devops", "document level security", "identity and access management", "mcp", "microsoft entra id", "microsoft teams integration", "okta integration", "rag", "security", "serverless", "workflow designer"]
+tags:
+- Agent Loop
+- AI Automation
+- AI Gateway
+- Azure AI Search
+- Azure API Management
+- Azure Logic Apps
+- BYOM
+- Connector Ecosystem
+- Document Level Security
+- Identity And Access Management
+- MCP
+- Microsoft Entra ID
+- Microsoft Teams Integration
+- Okta Integration
+- RAG
+- Serverless
+- Workflow Designer
+- AI
+- Azure
+- DevOps
+- Security
+- Community
+section_names:
+- ai
+- azure
+- devops
+- security
+primary_section: ai
 ---
-
 DivSwa announces the release of Agent Loop General Availability in Logic Apps Standard, alongside a suite of new AI capabilities in public preview, offering developers advanced options for secure, scalable agent-based workflows.<!--excerpt_end-->
 
 # Agent Loop Ignite Update: AI Features Now in Public Preview
@@ -48,18 +67,18 @@ At Microsoft Ignite, the General Availability (GA) of Agent Loop in Azure Logic 
 
 - Use any AI model within Agent Loop—Foundry, on-prem, or private cloud supported.
 - **Deep integration with Azure API Management (APIM) AI Gateway:**
-    - Central control plane for agent-model connections.
-    - Unified, governed API endpoint for authentication, rate limits, monitoring, and observability.
-    - Allows model upgrades or config updates without changing app workflows.
+  - Central control plane for agent-model connections.
+  - Unified, governed API endpoint for authentication, rate limits, monitoring, and observability.
+  - Allows model upgrades or config updates without changing app workflows.
 - Direct external and local/VNET model integration supported, enabling high flexibility and data residency compliance.
 
 ### 4. Model Context Protocol (MCP) Tool Integration
 
 - New support for **MCP** in Logic Apps Standard lets agents discover and invoke external tools through standardized interfaces.
 - _Three integration modes:_
-    - Bring Your Own MCP connector (custom external server)
-    - Managed MCP connector (Azure-hosted, managed experience)
-    - Custom MCP connector (OpenAPI-based, tenant/private use)
+  - Bring Your Own MCP connector (custom external server)
+  - Managed MCP connector (Azure-hosted, managed experience)
+  - Custom MCP connector (OpenAPI-based, tenant/private use)
 - Managed and custom MCP connectors support on-behalf-of (OBO) authentication for user-context-aware tool use across workflows.
 
 ### 5. Deploy Conversational Agents to Teams and Microsoft 365
@@ -86,11 +105,11 @@ At Microsoft Ignite, the General Availability (GA) of Agent Loop in Azure Logic 
 
 - Major UI and UX update for the Logic Apps designer is now available.
 - Enhancements include:
-    - Unified interface for visual canvas, code view, settings, and run history
-    - Draft Mode with auto-save and safe testing
-    - Sticky notes and markdown support for inline documentation
-    - Improved search (backend indexed)
-    - Monitoring and debugging features, including hierarchical timeline view
+  - Unified interface for visual canvas, code view, settings, and run history
+  - Draft Mode with auto-save and safe testing
+  - Sticky notes and markdown support for inline documentation
+  - Improved search (backend indexed)
+  - Monitoring and debugging features, including hierarchical timeline view
 
 ---
 

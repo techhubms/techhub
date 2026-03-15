@@ -1,20 +1,32 @@
----
-layout: "post"
-title: "Azure Achieves NVIDIA Exemplar Cloud Status for Next-Generation AI Performance"
-description: "This article explains Azure's recognition as an NVIDIA Exemplar Cloud, marking it as the first provider validated for Exemplar-class AI performance on both H100 and GB300-class (Blackwell generation) NVIDIA systems. It details the rigorous benchmarking by NVIDIA, the infrastructure and system optimizations Azure applies, and how these achievements benefit organizations scaling advanced AI workloads in the cloud."
-author: "Fernando_Aznar"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747"
-viewing_mode: "external"
-feed_name: "Microsoft Tech Community"
-feed_url: "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure"
+﻿---
+external_url: https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-recognized-as-an-nvidia-cloud-exemplar-setting-the-bar-for/ba-p/4495747
+title: Azure Achieves NVIDIA Exemplar Cloud Status for Next-Generation AI Performance
+author: Fernando_Aznar
+primary_section: ai
+feed_name: Microsoft Tech Community
 date: 2026-02-18 22:31:25 +00:00
-permalink: "/2026-02-18-Azure-Achieves-NVIDIA-Exemplar-Cloud-Status-for-Next-Generation-AI-Performance.html"
-categories: ["AI", "Azure"]
-tags: ["AI", "AI Infrastructure", "Azure", "Azure ND Series", "Blackwell", "Community", "Enterprise AI", "Exemplar Cloud", "GB300", "GPU Clusters", "H100", "High Performance Computing", "InfiniBand", "LLM Training", "NCCL", "NVIDIA", "Performance Benchmarking"]
-tags_normalized: ["ai", "ai infrastructure", "azure", "azure nd series", "blackwell", "community", "enterprise ai", "exemplar cloud", "gb300", "gpu clusters", "h100", "high performance computing", "infiniband", "llm training", "nccl", "nvidia", "performance benchmarking"]
+tags:
+- AI
+- AI Infrastructure
+- Azure
+- Azure ND Series
+- Blackwell
+- Community
+- Enterprise AI
+- Exemplar Cloud
+- GB300
+- GPU Clusters
+- H100
+- High Performance Computing
+- InfiniBand
+- LLM Training
+- NCCL
+- NVIDIA
+- Performance Benchmarking
+section_names:
+- ai
+- azure
 ---
-
 Fernando_Aznar outlines how Microsoft Azure became the first cloud validated as an NVIDIA Exemplar Cloud, demonstrating end-to-end world-class AI performance for advanced workloads on H100 and Blackwell-class systems.<!--excerpt_end-->
 
 # Azure Achieves NVIDIA Exemplar Cloud Status for Next-Generation AI Performance

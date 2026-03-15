@@ -1,20 +1,33 @@
----
-layout: "post"
-title: "2026 Microsoft Security Excellence Awards: Honoring Leaders in AI-Powered Cybersecurity"
-description: "This article highlights the winners of the 2026 Microsoft Security Excellence Awards, recognizing top partners and individuals who have driven innovation using Microsoft Security products such as Microsoft Purview, Entra ID, Intune, and AI-powered solutions. The awards celebrate advancements in secure access, data security, software development, and security services, reflecting collaborative efforts across the Microsoft security ecosystem."
-author: "Maria Thomson"
-excerpt_separator: <!--excerpt_end-->
-canonical_url: "https://www.microsoft.com/en-us/security/blog/2026/01/27/microsoft-announces-the-2026-security-excellence-awards-winners/"
-viewing_mode: "external"
-feed_name: "Microsoft Security Blog"
-feed_url: "https://www.microsoft.com/en-us/security/blog/feed/"
+﻿---
+external_url: https://www.microsoft.com/en-us/security/blog/2026/01/27/microsoft-announces-the-2026-security-excellence-awards-winners/
+title: '2026 Microsoft Security Excellence Awards: Honoring Leaders in AI-Powered Cybersecurity'
+author: Maria Thomson
+primary_section: ai
+feed_name: Microsoft Security Blog
 date: 2026-01-27 17:00:00 +00:00
-permalink: "/2026-01-27-2026-Microsoft-Security-Excellence-Awards-Honoring-Leaders-in-AI-Powered-Cybersecurity.html"
-categories: ["AI", "Security"]
-tags: ["AI", "AI Security", "Cybersecurity", "Data Protection", "Identity Management", "Microsoft Entra", "Microsoft Intune", "Microsoft Purview", "Microsoft Security", "Microsoft Security Excellence Awards", "News", "Security", "Security Blog", "Security Innovation", "Security Partners", "Security Services", "Security Software", "Zero Trust"]
-tags_normalized: ["ai", "ai security", "cybersecurity", "data protection", "identity management", "microsoft entra", "microsoft intune", "microsoft purview", "microsoft security", "microsoft security excellence awards", "news", "security", "security blog", "security innovation", "security partners", "security services", "security software", "zero trust"]
+tags:
+- AI
+- AI Security
+- Cybersecurity
+- Data Protection
+- Identity Management
+- Microsoft Entra
+- Microsoft Intune
+- Microsoft Purview
+- Microsoft Security
+- Microsoft Security Excellence Awards
+- News
+- Security
+- Security Blog
+- Security Innovation
+- Security Partners
+- Security Services
+- Security Software
+- Zero Trust
+section_names:
+- ai
+- security
 ---
-
 Maria Thomson reports on the winners of the 2026 Microsoft Security Excellence Awards, celebrating leading partners and individuals elevating innovation in AI-powered cybersecurity with Microsoft technologies.<!--excerpt_end-->
 
 # 2026 Microsoft Security Excellence Awards: Honoring Leaders in AI-Powered Cybersecurity
