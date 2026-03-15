@@ -165,6 +165,9 @@ if (!app.Environment.IsDevelopment())
 // Security headers (XSS, clickjacking, MIME sniffing protection)
 app.UseSecurityHeaders();
 
+// Redirect subdomain shortcuts (e.g., ghc.xebia.ms -> /github-copilot) before routing
+app.UseSubdomainRedirects();
+
 // Reject old date-prefixed URLs (YYYY-MM-DD-slug) before routing
 app.UseRejectDatePrefixedSlugs();
 
