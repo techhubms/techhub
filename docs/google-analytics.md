@@ -1,6 +1,6 @@
 # Google Analytics
 
-Google Analytics 4 (GA4) provides user behavior tracking and traffic analytics for Tech Hub in staging and production environments.
+Google Analytics 4 (GA4) provides user behavior tracking and traffic analytics for Tech Hub in production only.
 
 ## Configuration
 
@@ -18,13 +18,13 @@ The measurement ID is read from `IConfiguration` in [App.razor](../src/TechHub.W
 
 ## Environment Behavior
 
-GA4 follows the same conditional pattern as Application Insights:
+Each environment runs with its own `ASPNETCORE_ENVIRONMENT` and loads the matching `appsettings.{Environment}.json`:
 
-| Environment | GA4 Active | Reason |
-|-------------|-----------|--------|
-| Development | No | `ASPNETCORE_ENVIRONMENT` is `Development` (first condition fails) |
-| Staging | Yes | `appsettings.Production.json` is loaded (both staging and production run with `ASPNETCORE_ENVIRONMENT=Production`) |
-| Production | Yes | Same as staging |
+| Environment | GA4 Active | `ASPNETCORE_ENVIRONMENT` | Reason |
+|-------------|-----------|--------------------------|--------|
+| Development | No | `Development` | First condition fails (`!= "Development"` is false) |
+| Staging | No | `Staging` | `appsettings.Staging.json` has no `GoogleAnalytics:MeasurementId` |
+| Production | Yes | `Production` | `appsettings.Production.json` provides the measurement ID |
 
 Both conditions must be true for GA to load:
 

@@ -241,9 +241,21 @@ $deploymentName = "techhub-$($config.EnvSuffix)-$(Get-Date -Format 'yyyyMMdd-HHm
 
 # Build image tag overrides (passed as additional --parameters to az deployment sub)
 $imageTagParams = @()
-if ($ImageTag -and $Environment -ne 'shared') {
+if ($Environment -ne 'shared') {
+    if (-not $ImageTag) {
+        if ($Mode -eq 'deploy') {
+            Write-Fail "ImageTag is required for $Environment deployments."
+            Write-Detail "Provide -ImageTag with a yyyyMMddHHmmss datetime tag."
+            exit 1
+        }
+        else {
+            # For validate/whatif, use a placeholder — the actual value doesn't matter
+            $ImageTag = "00000000000000"
+            Write-Warn "ImageTag not set — using placeholder (acceptable for $Mode mode)"
+        }
+    }
     $imageTagParams = @("apiImageTag=$ImageTag", "webImageTag=$ImageTag")
-    Write-Step "Image tag override: $ImageTag"
+    Write-Step "Image tag: $ImageTag"
 }
 
 # Step 1: Validate

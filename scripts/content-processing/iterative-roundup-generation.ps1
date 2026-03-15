@@ -454,7 +454,7 @@ For articles to INCLUDE (developer-relevant content):
   "technology_stack": "Specific technology/framework/platform involved",
   "topic_type": "announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison",
   "target_audience": "developers|administrators|business|researchers|data-scientists|devops-engineers",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9", "tag10"],
   "impact_level": "high|medium|low",
   "time_sensitivity": "immediate|this-week|this-month|long-term",
   "reasoning": "Brief explanation of why this content is relevant for developers"
@@ -468,17 +468,17 @@ Choose ONE section that best represents the primary focus of the content. Use th
    - GitHub Copilot extensions and integrations
    - Takes priority over "AI" or ".NET" when Copilot is the main focus
 
-2. "ML": Machine learning engineering, data science workflows, model development, AI research
-   - Azure ML, data science platforms, model training and deployment
-   - Advanced analytics, business intelligence development
-   - Custom ML implementations, algorithm development
-   - Takes priority over "AI" when technical ML development is the main focus
-
-3. "AI": General AI services, tools, and platforms (excluding GitHub Copilot and technical ML)
+2. "AI": General AI services, tools, and platforms (excluding GitHub Copilot and technical ML)
    - Azure AI Foundry, Azure OpenAI, AI services and APIs, Copilot Studio
    - AI integration and usage (not technical ML development)
    - Prompt engineering, AI-powered applications
-   - Only use when content is not primarily about GitHub Copilot or technical ML
+   - Takes priority over "ML" when content is about AI services/platforms, not technical ML development
+
+3. "ML": Machine learning engineering, data science workflows, model development, AI research
+   - Azure ML, data science platforms, model training and deployment
+   - Advanced analytics, business intelligence development
+   - Custom ML implementations, algorithm development
+   - Only use when technical ML development is the main focus, not general AI services
 
 4. "Azure": Microsoft cloud services, infrastructure, and platform services
    - Azure services, cloud architecture, deployment
@@ -519,6 +519,7 @@ Rate based on DEVELOPER IMPACT and relevance to developer workflows:
 - 7-8: Significant new features affecting developer productivity, important API updates, useful new capabilities
 - 5-6: Incremental improvements, helpful tutorials, minor feature additions, maintenance updates with developer impact
 - 3-4: Niche developer tools, specialized use cases, minor updates with limited developer relevance
+- 1-2: Barely relevant to developers, tangential mentions, primarily non-technical content
 
 🚨 DEVELOPER RELEVANCE ASSESSMENT:
 - HIGH: Direct impact on developer workflows, new coding capabilities, essential tools and features
@@ -1293,10 +1294,33 @@ CRITICAL: If no meaningful connections exist between the previous and current ro
                     Write-Host "🔄 Processing ongoing narrative for section $processedSections of $($sectionContents.Keys.Count): $sectionName"
                     
                     $sectionContent = $sectionContents[$sectionName]
+                    
+                    # Extract only the matching section from the previous roundup to reduce token usage
+                    $previousSectionContent = ""
+                    $inSection = $false
+                    foreach ($prevLine in ($previousRoundupContent -split "`n")) {
+                        if ($prevLine -match '^## (.+)$') {
+                            if ($matches[1].Trim() -eq $sectionName) {
+                                $inSection = $true
+                            }
+                            elseif ($inSection) {
+                                break
+                            }
+                        }
+                        if ($inSection) {
+                            $previousSectionContent += $prevLine + "`n"
+                        }
+                    }
+                    
+                    if (-not $previousSectionContent.Trim()) {
+                        Write-Host "  ℹ️ No matching '$sectionName' section in previous roundup, skipping narrative enhancement" -ForegroundColor Yellow
+                        $step4Responses += $sectionContent
+                        continue
+                    }
 
                     $step4UserMessage = @"
-PREVIOUS WEEK'S ROUNDUP CONTENT:
-$previousRoundupContent
+PREVIOUS WEEK'S $sectionName SECTION:
+$previousSectionContent
 
 ---
 
@@ -1418,11 +1442,7 @@ $sectionContent
         Write-Host "📝 Step 6: Condensing content as much as possible while preserving narrative quality..."
 
         $step6SystemMessage = @"
-🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
-YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
-DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
-YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
-PROVIDE THE COMPLETE, CONDENSED VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
+🚨 CRITICAL: You MUST return ALL content in full. Never truncate, abbreviate, or use phrases like "continues as previously formatted." Write out every section, topic, and link completely.
 
 🎯 YOUR MISSION: SHORTEN EVERY PARAGRAPH WITHOUT REMOVING ANY PARAGRAPHS
 
@@ -1469,11 +1489,8 @@ For each paragraph you encounter:
 CRITICAL WRITING STYLE GUIDELINES:
 $WritingStyleGuidelines
 
-🚨 RESPONSE COMPLETION REQUIREMENT:
-You must provide the complete condensed version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
-
 RESPONSE FORMAT:
-Return the condensed content with the exact same structure as provided, but with every paragraph rewritten to be shorter and more concise. Process every section completely - no exceptions.
+Return the condensed content with the exact same structure as provided, but with every paragraph rewritten to be shorter and more concise.
 "@
 
         $step6UserMessage = @"
@@ -1548,6 +1565,9 @@ CRITICAL: These are what the 4 fields should contain:
   * Highlights the week's most significant developments
   * Sets up the narrative flow
 
+CRITICAL WRITING STYLE GUIDELINES:
+$WritingStyleGuidelines
+
 CRITICAL: You must provide a complete, comprehensive response. Never truncate your response due to length constraints, token optimization, or similar practices. Always provide the complete metadata requested.
 "@
 
@@ -1587,8 +1607,8 @@ Return only JSON with fields: title, tags, description, introduction
             exit 1
         }
 
-        if (-not $testParse.title -or -not $testParse.description -or -not $testParse.tags) {
-            Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags)" -ForegroundColor Red
+        if (-not $testParse.title -or -not $testParse.description -or -not $testParse.tags -or -not $testParse.introduction) {
+            Write-Host "❌ Step 7 response missing required metadata fields (title, description, tags, introduction)" -ForegroundColor Red
             Write-Host "Response: $step7Response" -ForegroundColor Red
             Write-Error "Step 7 metadata generation failed: missing required fields"
             exit 1
@@ -1743,11 +1763,7 @@ $step6Response
         $guidelines = Get-Content $guidelinesPath -Raw -Encoding UTF8
 
         $rewriteSystemMessage = @"
-🚨🚨🚨 CRITICAL ANTI-TRUNCATION REQUIREMENT 🚨🚨🚨
-YOU MUST COMPLETE YOUR ENTIRE RESPONSE. NEVER STOP WRITING BEFORE YOU HAVE PROCESSED AND RETURNED ALL CONTENT PROVIDED TO YOU.
-DO NOT truncate, abbreviate, or summarize sections with phrases like "continues as previously formatted" or "additional sections follow the same pattern" or "excerpt" or "Note: This shows..." or similar.
-YOU MUST WRITE OUT EVERY SINGLE SECTION, EVERY SINGLE TOPIC, AND EVERY SINGLE LINK IN FULL.
-PROVIDE THE COMPLETE, REWRITTEN VERSION OF ALL CONTENT - NO SHORTCUTS, NO OMISSIONS, NO TRUNCATION.
+🚨 CRITICAL: You MUST return ALL content in full. Never truncate, abbreviate, or use phrases like "continues as previously formatted." Write out every section, topic, and link completely.
 
 🎯 YOUR MISSION: REWRITE EVERY PARAGRAPH AND FRONTMATTER FOR STYLE COMPLIANCE WITHOUT REMOVING ANY CONTENT
 
@@ -1810,9 +1826,6 @@ You are a content editor with ONE SIMPLE JOB: Rewrite every paragraph AND the fr
 - Keep all article links in their original positions
 - Maintain frontmatter structure with only title and description content rewritten
 
-🚨 RESPONSE COMPLETION REQUIREMENT:
-You must provide the complete rewritten version of ALL content provided. Your response should end with the last article link from the last section, not with any summary statements or notes about continuation.
-
 CRITICAL WRITING STYLE GUIDELINES TO APPLY:
 $guidelines
 
@@ -1820,7 +1833,6 @@ RESPONSE FORMAT:
 Return the rewritten content with the exact same structure as provided, but with:
 1. Frontmatter title and description rewritten for style compliance
 2. Every paragraph rewritten to comply with the writing style guidelines
-Process every section completely - no exceptions.
 "@
 
         $rewriteUserMessage = @"
@@ -1830,30 +1842,26 @@ $finalContent
 "@
 
         Write-Host "🤖 Calling AI model to rewrite content for writing style compliance..."
-        $finalContent = Invoke-AiApiCall `
+        $step9Response = Invoke-AiApiCall `
             -Token $Token `
             -Environment $Environment `
             -SystemMessage $rewriteSystemMessage `
             -UserMessage $rewriteUserMessage `
             -RateLimitPreventionDelay $RateLimitPreventionDelay
 
-        # Check for errors with robust error handling
-        $rewriteResult = Test-AiResponseFormat -Response $finalContent -StepName "Step 9 (Content Rewriting)"
+        # Check for errors - abort on failure
+        $rewriteResult = Test-AiResponseFormat -Response $step9Response -StepName "Step 9 (Content Rewriting)"
         if (-not $rewriteResult.IsValid) {
-            Write-Host "⚠️ Warning: Step 9 content rewriting failed: $($rewriteResult.ErrorMessage)" -ForegroundColor Yellow
-            Write-Host "Using original content..." -ForegroundColor Yellow
-            # finalContent already contains the original content, so no change needed
+            Save-StepBackup -StepName "Step9-FAILED" -Content $step9Response -StartDate $StartDate -EndDate $EndDate
+            throw "Step 9 content rewriting failed: $($rewriteResult.ErrorMessage)"
         }
-        else {
-            # Save successful rewrite results
-            Save-StepBackup -StepName "Step9-RewriteResult" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
-            Write-Host "✅ Step 9 complete - Content rewritten for writing style compliance"
-        }
-       
+
+        $finalContent = $step9Response
+        Save-StepBackup -StepName "Step9-RewriteResult" -Content $finalContent -StartDate $StartDate -EndDate $EndDate
+        Write-Host "✅ Step 9 complete - Content rewritten for writing style compliance"
     }
     catch {
-        Write-Host "⚠️ Warning: Error during writing style rewriting: $($_.Exception.Message)" -ForegroundColor Yellow
-        Write-Host "Continuing with file creation using original content..." -ForegroundColor Yellow
+        throw
     }
 
     # Generate the OutputFile (filename already set at script start)

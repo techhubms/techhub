@@ -7,14 +7,14 @@
     Builds Docker images for the API and Web applications, pushes them to Azure Container Registry,
     and deploys them to Azure Container Apps. Supports staging and production environments.
 
-    When run locally, images are tagged with 'dev' by default to distinguish them from CI-built images.
-    In GitHub Actions, the git commit SHA is used as the tag.
+    When run locally, images are tagged with a UTC datetime (yyyyMMddHHmmss) by default for
+    human-readable versioning. The same format is used in GitHub Actions CI.
 
 .PARAMETER Environment
     Target environment: staging or production.
 
 .PARAMETER Tag
-    Docker image tag. Defaults to 'dev' when running locally, or the git SHA in CI.
+    Docker image tag. Defaults to UTC datetime (yyyyMMddHHmmss) for human-readable versioning.
 
 .PARAMETER RegistryName
     Azure Container Registry name (without .azurecr.io). Defaults to 'crtechhubms'.
@@ -86,13 +86,9 @@ $workspaceRoot = if (Test-Path (Join-Path $PSScriptRoot "../src")) {
 # Detect CI vs local
 $isCI = $null -ne $env:GITHUB_ACTIONS
 
-# Resolve default tag: 'dev' locally, git SHA in CI
+# Resolve default tag: datetime-based for human-readable versioning
 if (-not $Tag) {
-    if ($isCI -and $env:GITHUB_SHA) {
-        $Tag = $env:GITHUB_SHA
-    } else {
-        $Tag = "dev"
-    }
+    $Tag = Get-Date -Format 'yyyyMMddHHmmss'
 }
 
 # Environment suffix mapping (staging -> staging, production -> prod)
@@ -189,7 +185,6 @@ if (-not $SkipBuild) {
         Write-Detail "Building API image..."
         docker build -f src/TechHub.Api/Dockerfile `
             -t "$($apiImage):$Tag" `
-            -t "$($apiImage):latest" `
             .
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to build API image"
@@ -201,7 +196,6 @@ if (-not $SkipBuild) {
         Write-Detail "Building Web image..."
         docker build -f src/TechHub.Web/Dockerfile `
             -t "$($webImage):$Tag" `
-            -t "$($webImage):latest" `
             .
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to build Web image"
@@ -231,10 +225,6 @@ if (-not $SkipPush) {
         Write-Fail "Failed to push API image (tag: $Tag)"
         exit 1
     }
-    docker push "$($apiImage):latest"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Warn "Failed to push API 'latest' tag (non-fatal)"
-    }
     Write-Ok "API image pushed"
 
     # Push Web
@@ -243,10 +233,6 @@ if (-not $SkipPush) {
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to push Web image (tag: $Tag)"
         exit 1
-    }
-    docker push "$($webImage):latest"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Warn "Failed to push Web 'latest' tag (non-fatal)"
     }
     Write-Ok "Web image pushed"
 }
@@ -307,16 +293,13 @@ if (-not $SkipDeploy) {
 
     Write-Step "Deploying to $Environment (tag: $Tag)"
 
-    # Generate unique revision suffix to force new revision (ensures fresh image pull even with same tag)
-    $revisionSuffix = "deploy-$(Get-Date -Format 'yyyyMMddHHmmss')"
-
-    # Update API container app
+    # Update API container app (revision suffix matches Bicep convention: api-{tag})
     Write-Detail "Deploying API..."
     az containerapp update `
         --name $apiAppName `
         --resource-group $resourceGroup `
         --image "$($apiImage):$Tag" `
-        --revision-suffix "api-$revisionSuffix"
+        --revision-suffix "api-$Tag"
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to deploy API"
         exit 1
@@ -365,7 +348,7 @@ if (-not $SkipDeploy) {
         --name $webAppName `
         --resource-group $resourceGroup `
         --image "$($webImage):$Tag" `
-        --revision-suffix "web-$revisionSuffix"
+        --revision-suffix "web-$Tag"
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to deploy Web"
         exit 1

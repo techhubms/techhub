@@ -96,8 +96,25 @@ public static class ServiceDefaultsExtensions
         ArgumentNullException.ThrowIfNull(builder);
 
         builder.Services.AddHealthChecks()
-            // Add a default liveness check to ensure app is responsive
-            .AddCheck("self", () => HealthCheckResult.Healthy(), _liveHealthCheckTags);
+            // Liveness check: verifies the app runtime is responsive and not resource-starved.
+            // Intentionally does NOT check external dependencies (DB, APIs) — a DB outage
+            // should not trigger container restarts (restart storm).
+            .AddCheck("self", () =>
+            {
+                // Check GC isn't in a catastrophic state (e.g., out of memory pressure)
+                var gcInfo = GC.GetGCMemoryInfo();
+                var memoryUsagePercent = gcInfo.HighMemoryLoadThresholdBytes > 0
+                    ? (double)gcInfo.MemoryLoadBytes / gcInfo.HighMemoryLoadThresholdBytes * 100
+                    : 0;
+
+                if (memoryUsagePercent > 95)
+                {
+                    return HealthCheckResult.Unhealthy(
+                        $"Memory pressure critical: {memoryUsagePercent:F0}% of threshold");
+                }
+
+                return HealthCheckResult.Healthy();
+            }, _liveHealthCheckTags);
 
         return builder;
     }

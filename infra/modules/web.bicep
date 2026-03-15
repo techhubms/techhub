@@ -8,10 +8,17 @@ param imageTag string
 param apiBaseUrl string
 param appInsightsConnectionString string
 
+@description('Environment name (staging, prod) - maps to ASPNETCORE_ENVIRONMENT')
+@allowed(['staging', 'prod'])
+param environmentName string
+
+var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
+
 @description('Optional custom domains (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
 param customDomains array = []
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
+var revisionSuffix = 'web-${imageTag}'
 
 // Reference the managed environment (needed for managed certificate)
 resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-07-01' existing = {
@@ -52,6 +59,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
       ]
     }
     template: {
+      revisionSuffix: revisionSuffix
       containers: [
         {
           name: 'web'
@@ -63,7 +71,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
           env: [
             {
               name: 'ASPNETCORE_ENVIRONMENT'
-              value: 'Production'
+              value: aspnetEnvironment
             }
             {
               name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
@@ -84,6 +92,42 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
             {
               name: 'TECHHUB_TMP'
               value: '/tmp/techhub'
+            }
+          ]
+          probes: [
+            {
+              type: 'startup'
+              httpGet: {
+                path: '/alive'
+                port: 8080
+                scheme: 'HTTP'
+              }
+              initialDelaySeconds: 3
+              periodSeconds: 5
+              failureThreshold: 12  // 3s + 12×5s = 63s max startup
+              timeoutSeconds: 5
+            }
+            {
+              type: 'liveness'
+              httpGet: {
+                path: '/alive'
+                port: 8080
+                scheme: 'HTTP'
+              }
+              periodSeconds: 30
+              failureThreshold: 3
+              timeoutSeconds: 5
+            }
+            {
+              type: 'readiness'
+              httpGet: {
+                path: '/health'
+                port: 8080
+                scheme: 'HTTP'
+              }
+              periodSeconds: 10
+              failureThreshold: 3
+              timeoutSeconds: 5
             }
           ]
         }

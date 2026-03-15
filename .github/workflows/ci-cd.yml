@@ -633,10 +633,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: deploy-shared-infra
     outputs:
-      image-tag: ${{ github.sha }}
+      image-tag: ${{ steps.tag.outputs.image-tag }}
     steps:
       - name: Checkout code
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Generate image tag
+        id: tag
+        run: echo "image-tag=$(date -u +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Azure Login
         uses: azure/login@a457da9ea143d694b1b9c7c869ebb04ebe844ef5 # v2.3.0
@@ -648,7 +652,7 @@ jobs:
         run: |
           ./scripts/Deploy-Application.ps1 `
             -Environment staging `
-            -Tag "${{ github.sha }}" `
+            -Tag "${{ steps.tag.outputs.image-tag }}" `
             -SkipDeploy
 
   # ──────────────────────────────────────────────

@@ -32,11 +32,11 @@ param apiAppName string = 'ca-techhub-api-${environmentName}'
 @description('Web Container App name')
 param webAppName string = 'ca-techhub-web-${environmentName}'
 
-@description('API Docker image tag')
-param apiImageTag string = 'latest'
+@description('API Docker image tag (yyyyMMddHHmmss format)')
+param apiImageTag string
 
-@description('Web Docker image tag')
-param webImageTag string = 'latest'
+@description('Web Docker image tag (yyyyMMddHHmmss format)')
+param webImageTag string
 
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
@@ -152,6 +152,7 @@ module apiApp './modules/api.bicep' = {
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require;Trust Server Certificate=true'
     webFqdns: !empty(webCustomDomains) ? webCustomDomains : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
+    environmentName: environmentName
   }
 }
 
@@ -171,6 +172,7 @@ module webApp './modules/web.bicep' = {
     apiBaseUrl: apiApp.outputs.fqdn
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     customDomains: webCustomDomains
+    environmentName: environmentName
   }
 }
 
