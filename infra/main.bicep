@@ -41,8 +41,18 @@ param webImageTag string
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
-@description('Optional custom domains for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
-param webCustomDomains array = []
+@description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to use default Container Apps FQDN.')
+param primaryHosts array = []
+
+@description('Subdomain shortcut mapping (e.g. { ai: "ai", ghc: "github-copilot" }). Each subdomain gets a custom domain for every base domain derived from primaryHosts.')
+param subdomainShortcuts object = {}
+
+// Derive base domains from primary hosts (e.g., 'tech.hub.ms' -> 'hub.ms')
+// and compute the full list of custom domains (primary hosts + subdomain entries)
+var baseDomains = [for host in primaryHosts: substring(host, indexOf(host, '.') + 1)]
+var subdomainKeys = objectKeys(subdomainShortcuts)
+var subdomainDomains = flatten(map(baseDomains, baseDomain => map(subdomainKeys, key => '${key}.${baseDomain}')))
+var allCustomDomains = concat(primaryHosts, subdomainDomains)
 
 @description('PostgreSQL server name')
 param postgresServerName string = 'psql-techhub-${environmentName}'
@@ -151,7 +161,7 @@ module apiApp './modules/api.bicep' = {
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require;Trust Server Certificate=true'
-    webFqdns: !empty(webCustomDomains) ? webCustomDomains : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
+    webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     environmentName: environmentName
   }
 }
@@ -171,7 +181,9 @@ module webApp './modules/web.bicep' = {
     imageTag: webImageTag
     apiBaseUrl: apiApp.outputs.fqdn
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    customDomains: webCustomDomains
+    customDomains: allCustomDomains
+    subdomainShortcuts: subdomainShortcuts
+    primaryHosts: primaryHosts
     environmentName: environmentName
   }
 }
