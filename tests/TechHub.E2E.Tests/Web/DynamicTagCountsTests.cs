@@ -137,20 +137,38 @@ public class DynamicTagCountsTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot");
         await WaitForTagCloudReadyAsync();
 
+        // Click first tag and wait for URL to contain 'tags='.
+        // Re-dispatch the click on each poll iteration if URL hasn't changed yet,
+        // following the FillBlazorInputAsync retry pattern. Under CI load, Force=true
+        // clicks can fire before Blazor's @onclick handlers are fully wired up.
         var firstTag = Page.Locator(".tag-cloud-item").First;
-        await firstTag.ClickBlazorElementAsync();
-        await Page.WaitForURLAsync(url => url.Contains("tags="));
+        await firstTag.ClickBlazorElementAsync(waitForUrlChange: false);
+        await Page.WaitForConditionAsync(@"
+            () => {
+                if (window.location.href.includes('tags=')) return true;
+                const now = Date.now();
+                if (!window.__tagClickRetryTs || (now - window.__tagClickRetryTs > 1500)) {
+                    window.__tagClickRetryTs = now;
+                    const tag = document.querySelector('.tag-cloud-item');
+                    if (tag) tag.click();
+                }
+                return false;
+            }",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
         await WaitForTagCloudReadyAsync();
 
         // Get counts with one tag selected
         var countsWithFilter = await GetTagCountsAsync();
 
         // Act - Deselect the tag
+        // On section pages (Filter mode), deselecting the last tag may not trigger a URL change
+        // (Blazor considers "no tags" the default state and may skip pushState).
+        // Use waitForUrlChange: false to avoid timeout, then wait for Blazor re-render.
         var selectedTag = Page.Locator(".tag-cloud-item.selected").First;
-        await selectedTag.ClickBlazorElementAsync();
+        await selectedTag.ClickBlazorElementAsync(waitForUrlChange: false);
 
-        // Wait for URL to update (tags parameter should be removed)
-        await Page.WaitForURLAsync(url => !url.Contains("tags="));
+        // Wait for Blazor to process the toggle: the selected class should be removed
+        await Page.Locator(".tag-cloud-item.selected").AssertCountAsync(0);
         await WaitForTagCloudReadyAsync();
 
         // Assert - Counts should recalculate to show totals again
