@@ -14,3 +14,5 @@ param vnetName = 'vnet-techhub-prod'
 param postgresServerName = 'psql-techhub-prod'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
+// Custom domains (requires CNAME + TXT records in GoDaddy DNS first)
+param webCustomDomains = ['tech.hub.ms', 'tech.xebia.ms']

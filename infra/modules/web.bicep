@@ -8,8 +8,8 @@ param imageTag string
 param apiBaseUrl string
 param appInsightsConnectionString string
 
-@description('Optional custom domain (e.g. staging-tech.hub.ms). Leave empty to skip.')
-param customDomain string = ''
+@description('Optional custom domains (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
+param customDomains array = []
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 
@@ -39,12 +39,10 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         stickySessions: {
           affinity: 'sticky'
         }
-        customDomains: customDomain != '' ? [
-          {
-            name: customDomain
+        customDomains: [for domain in customDomains: {
+            name: domain
             bindingType: 'Auto'
-          }
-        ] : []
+          }]
       }
       registries: [
         {
@@ -113,17 +111,17 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
 output fqdn string = web.properties.configuration.ingress.fqdn
 output id string = web.id
 
-// Managed certificate for custom domain (issued by Azure, auto-renewed).
+// Managed certificates for custom domains (issued by Azure, auto-renewed).
 // Uses 2025-07-01 API with bindingType 'Auto' on the container app to solve
 // the chicken-and-egg problem (see github.com/microsoft/azure-container-apps/issues/796).
-// The cert must be created AFTER the container app has the hostname registered.
-resource managedCert 'Microsoft.App/managedEnvironments/managedCertificates@2025-07-01' = if (customDomain != '') {
+// The certs must be created AFTER the container app has the hostnames registered.
+resource managedCerts 'Microsoft.App/managedEnvironments/managedCertificates@2025-07-01' = [for domain in customDomains: {
   parent: containerAppsEnv
-  name: 'cert-${replace(customDomain, '.', '-')}'
+  name: 'cert-${replace(domain, '.', '-')}'
   location: location
   properties: {
-    subjectName: customDomain
+    subjectName: domain
     domainControlValidation: 'CNAME'
   }
   dependsOn: [web]
-}
+}]

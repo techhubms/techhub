@@ -15,7 +15,7 @@ namespace TechHub.ServiceDefaults;
 /// </summary>
 public static class ServiceDefaultsExtensions
 {
-    private static readonly string[] LiveHealthCheckTags = ["live"];
+    private static readonly string[] _liveHealthCheckTags = ["live"];
     /// <summary>
     /// Adds service defaults for Aspire orchestration including:
     /// - OpenTelemetry (logging, metrics, tracing)
@@ -97,7 +97,7 @@ public static class ServiceDefaultsExtensions
 
         builder.Services.AddHealthChecks()
             // Add a default liveness check to ensure app is responsive
-            .AddCheck("self", () => HealthCheckResult.Healthy(), LiveHealthCheckTags);
+            .AddCheck("self", () => HealthCheckResult.Healthy(), _liveHealthCheckTags);
 
         return builder;
     }

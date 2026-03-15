@@ -41,8 +41,8 @@ param webImageTag string = 'latest'
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
-@description('Optional custom domain for the web app (e.g. staging-tech.hub.ms). Leave empty to skip.')
-param webCustomDomain string = ''
+@description('Optional custom domains for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
+param webCustomDomains array = []
 
 @description('PostgreSQL server name')
 param postgresServerName string = 'psql-techhub-${environmentName}'
@@ -151,7 +151,7 @@ module apiApp './modules/api.bicep' = {
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require;Trust Server Certificate=true'
-    webFqdn: webCustomDomain != '' ? webCustomDomain : '${webAppName}.${containerAppsEnv.outputs.defaultDomain}'
+    webFqdns: !empty(webCustomDomains) ? webCustomDomains : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
   }
 }
 
@@ -170,7 +170,7 @@ module webApp './modules/web.bicep' = {
     imageTag: webImageTag
     apiBaseUrl: apiApp.outputs.fqdn
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    customDomain: webCustomDomain
+    customDomains: webCustomDomains
   }
 }
 

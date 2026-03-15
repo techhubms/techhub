@@ -21,7 +21,7 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public class ContentRepository : IContentRepository
 {
-    private static readonly string[] SearchFacetFields = ["tags", "collections", "sections"];
+    private static readonly string[] _searchFacetFields = ["tags", "collections", "sections"];
     /// <summary>
     /// Column selection for list views - excludes content column for performance.
     /// Maps to ContentItem record which doesn't have a Content property.
@@ -1174,7 +1174,7 @@ public class ContentRepository : IContentRepository
         if (request.IncludeFacets)
         {
             facets = await GetFacetsAsync(new FacetRequest(
-                facetFields: SearchFacetFields,
+                facetFields: _searchFacetFields,
                 tags: request.Tags!,
                 sections: request.Sections!,
                 collections: request.Collections!,
