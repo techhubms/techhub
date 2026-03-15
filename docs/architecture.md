@@ -67,3 +67,16 @@ app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
 ## Running with Aspire
 
 See [running-and-testing.md](running-and-testing.md) for details on running the Aspire AppHost and accessing the dashboard.
+
+## Domain-Based Branding
+
+The website is served on two custom domains with different branding:
+
+| Domain | Site Name | Logo | About Page |
+|--------|-----------|------|------------|
+| `tech.hub.ms` | Tech Hub | Text only | Team info, Discord, why we built this |
+| `tech.xebia.ms` | Xebia | GitHub Copilot logo + text | Adds Xebia company section with link to [xebia.com](https://xebia.com/) |
+
+The `BrandingService` (scoped, per-request) reads the HTTP `Host` header to determine branding. It is injected into `NavHeader`, `MainLayout`, and the About page.
+
+**Implementation**: [Services/BrandingService.cs](../src/TechHub.Web/Services/BrandingService.cs)

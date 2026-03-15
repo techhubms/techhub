@@ -66,6 +66,9 @@ builder.Services.AddSingleton<FaviconService>();
 // Error handling service for centralized exception management
 builder.Services.AddScoped<ErrorService>();
 
+// Domain-based branding (tech.xebia.ms vs tech.hub.ms)
+builder.Services.AddScoped<BrandingService>();
+
 // Configure SignalR for Blazor Server with increased timeouts for reliability
 builder.Services.AddSignalR(options =>
 {

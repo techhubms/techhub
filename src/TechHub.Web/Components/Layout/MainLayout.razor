@@ -2,6 +2,7 @@
 @using TechHub.Web.Services
 @inject NavigationManager Navigation
 @inject SectionCache SectionCache
+@inject BrandingService Branding
 @implements IDisposable
 
 <SkipLink />
@@ -91,7 +92,7 @@
             {
                 _currentSectionName = sectionData.Name;
                 _currentRssFeedUrl = $"/{sectionData.Name}/feed.xml";
-                _rssFeedTitle = $"Tech Hub - {sectionData.Title} - RSS Feed";
+                _rssFeedTitle = $"{Branding.SiteName} - {sectionData.Title} - RSS Feed";
                 return;
             }
         }
@@ -100,10 +101,10 @@
         switch (firstSegment.ToLowerInvariant())
         {
             case "":
-                _customBannerTitle = "Tech Hub";
+                _customBannerTitle = Branding.SiteName;
                 _customBannerDescription = "Your source for Microsoft technology news, tutorials, and community content";
                 _currentRssFeedUrl = "/all/feed.xml";
-                _rssFeedTitle = "Tech Hub - All Content - RSS Feed";
+                _rssFeedTitle = $"{Branding.SiteName} - All Content - RSS Feed";
                 break;
             case "about":
                 _customBannerTitle = "About Us";

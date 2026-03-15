@@ -329,6 +329,7 @@ jobs:
 
           $config = New-PesterConfiguration
           $config.Run.Path = "tests/powershell"
+          $config.Run.Throw = $true
           $config.Output.Verbosity = "Detailed"
           $config.TestResult.Enabled = $true
           $config.TestResult.OutputPath = "TestResults/pester-results.xml"
@@ -687,6 +688,7 @@ jobs:
             -Environment staging `
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
           $customDomains = az containerapp show `
             --name ca-techhub-web-staging `
@@ -767,6 +769,7 @@ jobs:
             -Environment production `
             -Mode deploy `
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
           $customDomains = az containerapp show `
             --name ca-techhub-web-prod `

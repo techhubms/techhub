@@ -2,6 +2,9 @@ using '../main.bicep'
 
 param location = 'swedencentral'
 param environmentName = 'prod'
+// Image tags — injected via environment variables by Deploy-Infrastructure.ps1
+param apiImageTag = readEnvironmentVariable('API_IMAGE_TAG')
+param webImageTag = readEnvironmentVariable('WEB_IMAGE_TAG')
 param resourceGroupName = 'rg-techhub-prod'
 param appInsightsName = 'appi-techhub-prod'
 param containerRegistryName = 'crtechhubms'

@@ -37,6 +37,10 @@
   text-decoration: none;
   color: var(--color-text-primary);
   transition: color var(--duration-fast) var(--easing-ease);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-top: 4px;
 }
 
 @media (hover: hover) {
@@ -44,6 +48,13 @@
     color: var(--color-purple-bright);
     text-decoration: none;
   }
+}
+
+.logo-copilot-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  margin-bottom: 4px;
 }
 
 .site-logo .logo-text {
@@ -60,7 +71,7 @@
 
 /* Subtle purple underline on homepage logo (desktop only) */
 @media (min-width: 1293px) {
-  .site-logo.home-active .logo-text {
+  .site-logo.home-active {
     background-image: linear-gradient(var(--color-purple-dark), var(--color-purple-dark));
     background-size: 100% 2px;
     background-position: 0 100%;

@@ -1,5 +1,7 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
@@ -49,6 +51,16 @@ public class NavHeaderTests : BunitContext
         ]);
 
         Services.AddSingleton(_sectionCache);
+        RegisterDefaultBranding();
+    }
+
+    private void RegisterDefaultBranding(string host = "tech.hub.ms")
+    {
+        var httpContext = new DefaultHttpContext();
+        httpContext.Request.Host = new HostString(host);
+        var accessor = new HttpContextAccessor { HttpContext = httpContext };
+        var config = new ConfigurationBuilder().Build();
+        Services.AddScoped<BrandingService>(_ => new BrandingService(accessor, config));
     }
 
     [Fact]
@@ -260,5 +272,65 @@ public class NavHeaderTests : BunitContext
 
         // Assert
         cut.Find(".hamburger-btn").ClassList.Should().Contain("open");
+    }
+
+    [Fact]
+    public void NavHeader_DefaultDomain_ShowsTechHubLogoText()
+    {
+        // Act
+        var cut = Render<NavHeader>();
+
+        // Assert
+        var logoText = cut.Find(".logo-text");
+        logoText.TextContent.Trim().Should().Be("Tech Hub");
+    }
+
+    [Fact]
+    public void NavHeader_DefaultDomain_DoesNotShowCopilotLogo()
+    {
+        // Act
+        var cut = Render<NavHeader>();
+
+        // Assert
+        cut.FindAll(".logo-copilot-icon").Count.Should().Be(0);
+    }
+
+    [Fact]
+    public void NavHeader_XebiaDomain_ShowsXebiaLogoText()
+    {
+        // Arrange - re-register with Xebia domain
+        Services.AddScoped<BrandingService>(_ =>
+        {
+            var ctx = new DefaultHttpContext();
+            ctx.Request.Host = new HostString("tech.xebia.ms");
+            var config = new ConfigurationBuilder().Build();
+            return new BrandingService(new HttpContextAccessor { HttpContext = ctx }, config);
+        });
+
+        // Act
+        var cut = Render<NavHeader>();
+
+        // Assert
+        var logoText = cut.Find(".logo-text");
+        logoText.TextContent.Trim().Should().Be("Xebia");
+    }
+
+    [Fact]
+    public void NavHeader_XebiaDomain_ShowsCopilotLogo()
+    {
+        // Arrange - re-register with Xebia domain
+        Services.AddScoped<BrandingService>(_ =>
+        {
+            var ctx = new DefaultHttpContext();
+            ctx.Request.Host = new HostString("tech.xebia.ms");
+            var config = new ConfigurationBuilder().Build();
+            return new BrandingService(new HttpContextAccessor { HttpContext = ctx }, config);
+        });
+
+        // Act
+        var cut = Render<NavHeader>();
+
+        // Assert
+        cut.FindAll(".logo-copilot-icon").Count.Should().Be(1);
     }
 }

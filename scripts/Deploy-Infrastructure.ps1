@@ -239,8 +239,7 @@ if ($Environment -ne 'shared' -and $Mode -eq 'deploy' -and $config.OpenAi) {
 
 $deploymentName = "techhub-$($config.EnvSuffix)-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 
-# Build image tag overrides (passed as additional --parameters to az deployment sub)
-$imageTagParams = @()
+# Set image tag environment variables (read by .bicepparam files via readEnvironmentVariable)
 if ($Environment -ne 'shared') {
     if (-not $ImageTag) {
         if ($Mode -eq 'deploy') {
@@ -254,7 +253,8 @@ if ($Environment -ne 'shared') {
             Write-Warn "ImageTag not set — using placeholder (acceptable for $Mode mode)"
         }
     }
-    $imageTagParams = @("apiImageTag=$ImageTag", "webImageTag=$ImageTag")
+    $env:API_IMAGE_TAG = $ImageTag
+    $env:WEB_IMAGE_TAG = $ImageTag
     Write-Step "Image tag: $ImageTag"
 }
 
@@ -265,7 +265,7 @@ if ($Mode -in @('validate', 'whatif', 'deploy')) {
     az deployment sub validate `
         --location $deployLocation `
         --template-file $templateFile `
-        --parameters $paramsFile @imageTagParams
+        --parameters $paramsFile
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Template validation failed"
@@ -306,7 +306,7 @@ if ($Mode -eq 'whatif') {
     az deployment sub what-if `
         --location $deployLocation `
         --template-file $templateFile `
-        --parameters $paramsFile @imageTagParams
+        --parameters $paramsFile
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "What-If analysis failed"
@@ -348,7 +348,7 @@ if ($Mode -eq 'deploy') {
         --name $deploymentName `
         --location $deployLocation `
         --template-file $templateFile `
-        --parameters $paramsFile @imageTagParams
+        --parameters $paramsFile
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Deployment failed"

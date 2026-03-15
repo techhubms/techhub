@@ -308,7 +308,11 @@ The `NavHeader` component includes a hamburger button (three-line icon) that ope
 ```html
 <nav class="main-nav">              <!-- Sticky nav bar, z-index 1002 on mobile -->
     <div class="main-nav-content">
-        <a class="site-logo">...</a>
+        <a class="site-logo">
+            <!-- Copilot logo (only on tech.xebia.ms) -->
+            <img class="logo-copilot-icon" />
+            <span class="logo-text">...</span>  <!-- "Xebia" or "Tech Hub" based on domain -->
+        </a>
         <div class="nav-links">...</div>    <!-- Hidden on mobile -->
         <button class="hamburger-btn">...</button>  <!-- Visible on mobile -->
     </div>
