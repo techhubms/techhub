@@ -61,12 +61,9 @@ public partial class CssFingerprintingTests : PlaywrightTestBase
         foreach (var link in cssLinks)
         {
             var href = await link.GetAttributeAsync("href");
-            if (href != null)
-            {
-                href.Should().NotContain("?v=",
+            href?.Should().NotContain("?v=",
                     $"CSS link '{href}' should not use query string cache busting. " +
                     "Use filename-based fingerprinting instead (more reliable).");
-            }
         }
     }
 
@@ -83,12 +80,9 @@ public partial class CssFingerprintingTests : PlaywrightTestBase
         foreach (var link in cssLinks)
         {
             var href = await link.GetAttributeAsync("href");
-            if (href != null)
-            {
-                href.Should().NotContain("bundle.css",
+            href?.Should().NotContain("bundle.css",
                     "Should not use a CSS bundle. Individual fingerprinted files provide " +
                     "reliable cache busting and HTTP/2 makes bundling unnecessary.");
-            }
         }
     }
 

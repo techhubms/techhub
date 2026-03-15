@@ -219,7 +219,7 @@
 .features-filter-btn.active {
   border-color: var(--color-purple-bright);
   color: var(--color-purple-bright);
-  background: var(--color-purple-bg);
+  background: var(--color-purple-bg-subtle);
 }
 
 /* Feature Cards Grid - 3 per row */

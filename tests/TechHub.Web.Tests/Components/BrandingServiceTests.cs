@@ -61,6 +61,26 @@ public class BrandingServiceTests
     }
 
     [Fact]
+    public void BrandingService_XebiaDomain_BannerTitleIsXebiaTechHub()
+    {
+        // Arrange
+        var service = CreateBrandingService("tech.xebia.ms");
+
+        // Assert
+        service.BannerTitle.Should().Be("Xebia Tech Hub");
+    }
+
+    [Fact]
+    public void BrandingService_TechHubDomain_BannerTitleIsTechHub()
+    {
+        // Arrange
+        var service = CreateBrandingService("tech.hub.ms");
+
+        // Assert
+        service.BannerTitle.Should().Be("Tech Hub");
+    }
+
+    [Fact]
     public void BrandingService_XebiaDomain_ShowsCopilotLogo()
     {
         // Arrange
@@ -99,6 +119,7 @@ public class BrandingServiceTests
         // Assert
         service.IsXebiaBranding.Should().BeTrue();
         service.SiteName.Should().Be("Xebia");
+        service.BannerTitle.Should().Be("Xebia Tech Hub");
         service.ShowCopilotLogo.Should().BeTrue();
     }
 
@@ -111,6 +132,7 @@ public class BrandingServiceTests
         // Assert
         service.IsXebiaBranding.Should().BeFalse();
         service.SiteName.Should().Be("Tech Hub");
+        service.BannerTitle.Should().Be("Tech Hub");
     }
 
     [Fact]
@@ -134,6 +156,7 @@ public class BrandingServiceTests
         {
             configData["Branding:Force"] = forceBranding;
         }
+
         var configuration = new ConfigurationBuilder()
             .AddInMemoryCollection(configData)
             .Build();

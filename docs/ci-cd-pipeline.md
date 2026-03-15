@@ -14,7 +14,7 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 **Triggers**:
 
-- Push to `dotnet-migration` branch (CI + deploy to staging)
+- Push to `main` branch (CI + deploy to staging)
 - Pull requests to `main` branch (CI only, no deployment)
 - Manual dispatch (CI + deploy)
 
@@ -240,7 +240,7 @@ When deploying to a completely new Azure subscription for the first time:
 
 ### Automatic Staging Deployment
 
-1. Push to `dotnet-migration` branch (or merge PR)
+1. Push to `main` branch (or merge PR)
 2. Unified CI/CD workflow triggers automatically
 3. All CI checks run (build, tests, lint, security)
 4. Quality gate validates all checks passed

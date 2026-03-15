@@ -38,6 +38,11 @@ public sealed class BrandingService
     public string SiteName => IsXebiaBranding ? "Xebia" : "Tech Hub";
 
     /// <summary>
+    /// The title to display in the homepage banner.
+    /// </summary>
+    public string BannerTitle => IsXebiaBranding ? "Xebia Tech Hub" : "Tech Hub";
+
+    /// <summary>
     /// Whether to show the GitHub Copilot logo next to the site name.
     /// </summary>
     public bool ShowCopilotLogo => IsXebiaBranding;

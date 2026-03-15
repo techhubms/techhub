@@ -37,7 +37,6 @@
   /* Overlay backgrounds (for special effects) */
   --color-overlay-banner: rgba(0, 0, 0, 0.2); /* Light darkening overlay for banners */
   --color-overlay-banner-edge: rgba(0, 0, 0, 0.3); /* Banner bottom edge gradient */
-  --color-overlay-strong: rgba(45, 45, 74, 0.95); /* Strong overlay for buttons */
   
   /* Modal/backdrop colors */
   --color-black-backdrop: rgba(0, 0, 0, 0.4); /* Semi-transparent modal backdrop */
@@ -107,7 +106,6 @@
   /* Green (standard) */
   --color-green: #388e3c;
   --color-green-bg: rgba(56, 142, 60, 0.1);
-  --color-green-border: rgba(56, 142, 60, 0.3);
 
   /* Green Dark (success indicators) */
   --color-green-dark: #1a7f37;

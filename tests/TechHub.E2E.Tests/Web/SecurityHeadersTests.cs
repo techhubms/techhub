@@ -1,5 +1,4 @@
 using FluentAssertions;
-using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
