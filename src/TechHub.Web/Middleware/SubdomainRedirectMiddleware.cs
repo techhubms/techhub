@@ -77,17 +77,26 @@ public class SubdomainRedirectMiddleware
 
             if (_shortcuts.TryGetValue(subdomain, out var sectionPath))
             {
-                // Known shortcut: redirect to the section path
-                var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
-                var redirectUrl = $"/{sectionPath}{originalPath}{context.Request.QueryString}";
+                // Known shortcut: redirect to the section path on the primary host.
+                // Must use an absolute URL to change the hostname, otherwise the browser
+                // stays on the subdomain and the middleware loops (e.g., ai.hub.ms -> /ai -> /ai/ai -> ...).
+                if (_domainToPrimaryHost.TryGetValue(baseDomain, out var targetHost))
+                {
+                    var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
+                    var redirectUrl = $"https://{targetHost}/{sectionPath}{originalPath}{context.Request.QueryString}";
 
-                _logger.LogInformation(
-                    "Subdomain shortcut redirect: {Host} -> {RedirectUrl}",
-                    host,
-                    redirectUrl);
+                    _logger.LogInformation(
+                        "Subdomain shortcut redirect: {Host} -> {RedirectUrl}",
+                        host,
+                        redirectUrl);
 
-                context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
-                context.Response.Headers.Location = redirectUrl;
+                    context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
+                    context.Response.Headers.Location = redirectUrl;
+                    return;
+                }
+
+                // Shortcut matched but base domain has no primary host — pass through
+                await _next(context);
                 return;
             }
 

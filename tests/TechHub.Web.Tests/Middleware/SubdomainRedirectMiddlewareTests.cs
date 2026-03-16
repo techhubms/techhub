@@ -14,23 +14,23 @@ namespace TechHub.Web.Tests.Middleware;
 public class SubdomainRedirectMiddlewareTests
 {
     [Theory]
-    [InlineData("ghc.xebia.ms", "/github-copilot")]
-    [InlineData("ai.xebia.ms", "/ai")]
-    [InlineData("github-copilot.xebia.ms", "/github-copilot")]
-    [InlineData("copilot.xebia.ms", "/github-copilot")]
-    [InlineData("dotnet.xebia.ms", "/dotnet")]
-    [InlineData("coding.xebia.ms", "/dotnet")]
-    [InlineData("csharp.xebia.ms", "/dotnet")]
-    [InlineData("sharp.xebia.ms", "/dotnet")]
-    [InlineData("ml.xebia.ms", "/ml")]
-    [InlineData("data.xebia.ms", "/ml")]
-    [InlineData("machine-learning.xebia.ms", "/ml")]
-    [InlineData("devops.xebia.ms", "/devops")]
-    [InlineData("dx.xebia.ms", "/devops")]
-    [InlineData("azure.xebia.ms", "/azure")]
-    [InlineData("cloud.xebia.ms", "/azure")]
-    [InlineData("security.xebia.ms", "/security")]
-    [InlineData("sec.xebia.ms", "/security")]
+    [InlineData("ghc.xebia.ms", "https://tech.xebia.ms/github-copilot")]
+    [InlineData("ai.xebia.ms", "https://tech.xebia.ms/ai")]
+    [InlineData("github-copilot.xebia.ms", "https://tech.xebia.ms/github-copilot")]
+    [InlineData("copilot.xebia.ms", "https://tech.xebia.ms/github-copilot")]
+    [InlineData("dotnet.xebia.ms", "https://tech.xebia.ms/dotnet")]
+    [InlineData("coding.xebia.ms", "https://tech.xebia.ms/dotnet")]
+    [InlineData("csharp.xebia.ms", "https://tech.xebia.ms/dotnet")]
+    [InlineData("sharp.xebia.ms", "https://tech.xebia.ms/dotnet")]
+    [InlineData("ml.xebia.ms", "https://tech.xebia.ms/ml")]
+    [InlineData("data.xebia.ms", "https://tech.xebia.ms/ml")]
+    [InlineData("machine-learning.xebia.ms", "https://tech.xebia.ms/ml")]
+    [InlineData("devops.xebia.ms", "https://tech.xebia.ms/devops")]
+    [InlineData("dx.xebia.ms", "https://tech.xebia.ms/devops")]
+    [InlineData("azure.xebia.ms", "https://tech.xebia.ms/azure")]
+    [InlineData("cloud.xebia.ms", "https://tech.xebia.ms/azure")]
+    [InlineData("security.xebia.ms", "https://tech.xebia.ms/security")]
+    [InlineData("sec.xebia.ms", "https://tech.xebia.ms/security")]
     public async Task SubdomainShortcut_RedirectsToConfiguredSection(string host, string expectedPath)
     {
         // Arrange
@@ -45,9 +45,9 @@ public class SubdomainRedirectMiddlewareTests
     }
 
     [Theory]
-    [InlineData("ghc.hub.ms", "/github-copilot")]
-    [InlineData("ai.hub.ms", "/ai")]
-    [InlineData("coding.hub.ms", "/dotnet")]
+    [InlineData("ghc.hub.ms", "https://tech.hub.ms/github-copilot")]
+    [InlineData("ai.hub.ms", "https://tech.hub.ms/ai")]
+    [InlineData("coding.hub.ms", "https://tech.hub.ms/dotnet")]
     public async Task SubdomainShortcut_WorksForAnyDomain(string host, string expectedPath)
     {
         // Arrange
@@ -62,8 +62,8 @@ public class SubdomainRedirectMiddlewareTests
     }
 
     [Theory]
-    [InlineData("GHC.XEBIA.MS", "/github-copilot")]
-    [InlineData("AI.Hub.MS", "/ai")]
+    [InlineData("GHC.XEBIA.MS", "https://tech.xebia.ms/github-copilot")]
+    [InlineData("AI.Hub.MS", "https://tech.hub.ms/ai")]
     public async Task SubdomainShortcut_CaseInsensitive(string host, string expectedPath)
     {
         // Arrange
@@ -151,7 +151,7 @@ public class SubdomainRedirectMiddlewareTests
 
         // Assert
         context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/ai?tag=copilot");
+        context.Response.Headers.Location.ToString().Should().Be("https://tech.xebia.ms/ai?tag=copilot");
     }
 
     [Fact]
@@ -165,7 +165,7 @@ public class SubdomainRedirectMiddlewareTests
 
         // Assert
         context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/ai/news");
+        context.Response.Headers.Location.ToString().Should().Be("https://tech.xebia.ms/ai/news");
     }
 
     [Fact]
@@ -179,7 +179,7 @@ public class SubdomainRedirectMiddlewareTests
 
         // Assert
         context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/github-copilot/blogs?tag=vscode");
+        context.Response.Headers.Location.ToString().Should().Be("https://tech.xebia.ms/github-copilot/blogs?tag=vscode");
     }
 
     [Fact]
