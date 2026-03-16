@@ -188,4 +188,117 @@ Describe "Get-WebResponseDetailsFromException" {
             $result.ResponseContent | Should -BeNullOrEmpty
         }
     }
+
+    Context "ErrorRecord Fallback for Response Content" {
+        It "Should extract response content from ErrorRecord.ErrorDetails.Message when content extraction fails" {
+            # Arrange - Simulates PowerShell 7 Invoke-WebRequest failure where
+            # the response body is available via ErrorRecord.ErrorDetails.Message
+            # but NOT via the exception's Response.Content (stream already consumed)
+            $mockResponse = [PSCustomObject]@{
+                StatusCode = 400
+                StatusDescription = "Bad Request"
+                Headers = @{}
+                Content = "System.Net.Http.HttpConnectionResponseContent"
+                PSTypeName = "System.Net.Http.HttpResponseMessage"
+            }
+
+            $mockException = [PSCustomObject]@{
+                Response = $mockResponse
+                Message = "Response status code does not indicate success: 400 (Bad Request)."
+                PSTypeName = "Microsoft.PowerShell.Commands.HttpResponseException"
+            }
+
+            $mockErrorDetails = [PSCustomObject]@{
+                Message = '{"error":{"message":"The request was invalid.","type":"invalid_request_error","code":"invalid_request"}}'
+            }
+
+            $mockErrorRecord = [PSCustomObject]@{
+                Exception = $mockException
+                ErrorDetails = $mockErrorDetails
+            }
+
+            # Act
+            $result = Get-WebResponseDetailsFromException -Exception $mockException -ErrorRecord $mockErrorRecord
+
+            # Assert
+            $result.StatusCode | Should -Be 400
+            $result.ResponseContent | Should -Be '{"error":{"message":"The request was invalid.","type":"invalid_request_error","code":"invalid_request"}}'
+        }
+
+        It "Should not override valid response content with ErrorRecord fallback" {
+            # Arrange - Response.Content has real content, ErrorRecord also has content
+            $mockResponse = [PSCustomObject]@{
+                StatusCode = 400
+                StatusDescription = "Bad Request"
+                Headers = @{}
+                Content = '{"error":"from response content"}'
+                PSTypeName = "System.Net.Http.HttpResponseMessage"
+            }
+
+            $mockException = [PSCustomObject]@{
+                Response = $mockResponse
+                Message = "Response status code does not indicate success: 400 (Bad Request)."
+                PSTypeName = "Microsoft.PowerShell.Commands.HttpResponseException"
+            }
+
+            $mockErrorDetails = [PSCustomObject]@{
+                Message = '{"error":"from error details"}'
+            }
+
+            $mockErrorRecord = [PSCustomObject]@{
+                Exception = $mockException
+                ErrorDetails = $mockErrorDetails
+            }
+
+            # Act
+            $result = Get-WebResponseDetailsFromException -Exception $mockException -ErrorRecord $mockErrorRecord
+
+            # Assert - Should use the content from the response, not the ErrorRecord fallback
+            $result.ResponseContent | Should -Be '{"error":"from response content"}'
+        }
+
+        It "Should work without ErrorRecord parameter (backward compatible)" {
+            # Arrange
+            $mockException = [PSCustomObject]@{
+                Message = "Response status code does not indicate success: 400 (Bad Request)."
+                PSTypeName = "Microsoft.PowerShell.Commands.HttpResponseException"
+            }
+
+            # Act - No ErrorRecord parameter passed
+            $result = Get-WebResponseDetailsFromException -Exception $mockException
+
+            # Assert
+            $result.StatusCode | Should -Be 400
+            $result.StatusDescription | Should -Be "Bad Request"
+            $result.ResponseContent | Should -BeNullOrEmpty
+        }
+
+        It "Should use ErrorRecord fallback when content is a .NET type name string" {
+            # Arrange - This is the exact bug scenario: Content.ToString() returns the type name
+            $mockResponse = [PSCustomObject]@{
+                StatusCode = 400
+                StatusDescription = "Bad Request"
+                Headers = @{}
+                Content = "System.Net.Http.HttpConnectionResponseContent"
+                PSTypeName = "System.Net.Http.HttpResponseMessage"
+            }
+
+            $mockException = [PSCustomObject]@{
+                Response = $mockResponse
+                Message = "Response status code does not indicate success: 400 (Bad Request)."
+                PSTypeName = "Microsoft.PowerShell.Commands.HttpResponseException"
+            }
+
+            $mockErrorRecord = [PSCustomObject]@{
+                Exception = $mockException
+                ErrorDetails = $null
+            }
+
+            # Act - ErrorRecord has no ErrorDetails
+            $result = Get-WebResponseDetailsFromException -Exception $mockException -ErrorRecord $mockErrorRecord
+
+            # Assert - Should detect the type name string is not useful content
+            $result.ResponseContent | Should -BeNullOrEmpty
+        }
+    }
 }

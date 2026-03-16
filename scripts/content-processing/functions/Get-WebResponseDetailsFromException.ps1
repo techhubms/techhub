@@ -2,7 +2,10 @@ function Get-WebResponseDetailsFromException {
     param(
         [Parameter(Mandatory = $true)]
         [ValidateNotNull()]
-        $Exception
+        $Exception,
+
+        [Parameter(Mandatory = $false)]
+        $ErrorRecord
     )
 
     $statusCode = $null
@@ -90,6 +93,22 @@ function Get-WebResponseDetailsFromException {
         }
         catch {
             Write-ErrorDetails -ErrorRecord $_ -Context "Failed to get response content from web response"
+        }
+
+        # Fallback: In PowerShell 7, Invoke-WebRequest stores the HTTP response body in
+        # ErrorRecord.ErrorDetails.Message. Use it when no useful content was extracted
+        # (e.g. when Content.ToString() returns just the .NET type name).
+        if ($ErrorRecord -and $ErrorRecord.PSObject.Properties.Name -contains "ErrorDetails" -and
+            $ErrorRecord.ErrorDetails -and $ErrorRecord.ErrorDetails.PSObject.Properties.Name -contains "Message" -and
+            $ErrorRecord.ErrorDetails.Message) {
+            if (-not $responseContent -or $responseContent -match '^System\.') {
+                $responseContent = $ErrorRecord.ErrorDetails.Message
+            }
+        }
+
+        # Clear responseContent if it's just a .NET type name (not useful)
+        if ($responseContent -match '^System\.') {
+            $responseContent = $null
         }
     }
     catch {
