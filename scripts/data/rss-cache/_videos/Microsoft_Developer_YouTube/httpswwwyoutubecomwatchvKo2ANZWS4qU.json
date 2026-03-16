@@ -1,0 +1,22 @@
+{
+  "Title": "Build, Debug, and Deploy a Blender Hosted Agent in Microsoft 365 Copilot",
+  "ProcessedDate": "2026-03-16 17:41:00",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2026-03-16T17:15:50+00:00",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "EnhancedContent": null,
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Description": "In this end-to-end developer walkthrough, David Rousset shows how to build a Foundry Hosted Agent running inside Microsoft 365 Copilot using a fun Blender 3D scenario.\n\nYou’ll see the full workflow:\n- using the VS Code Foundry extension and the Hotel Python template\n- testing the agent in the local Playground\n- debugging the experience locally\n- switching to the local Blender agent to validate the scenario\n- deploying the agent\n- testing it in the remote Playground in VS Code\n- checking service logs and telemetry\n- validating everything in the Foundry portal\n- exploring observability with Application Insights\n\nThis video is a full build → test → deploy → monitor journey, aimed at developers who want a practical example of how Hosted Agents work in Microsoft 365 Copilot. Sample code: https://github.com/davrous/blenderagent\n\nHosted Agents: https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents VS Code Foundry Extension: https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/get-started-projects-vs-code Publish agents to Microsoft 365 Copilot and Microsoft Teams: https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/publish-copilot",
+  "Link": "https://www.youtube.com/watch?v=Ko2ANZWS4qU"
+}
