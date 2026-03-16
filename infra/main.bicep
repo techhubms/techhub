@@ -59,14 +59,10 @@ param containerAppsSubnetPrefix string = '10.0.0.0/23'
 @description('Private endpoints subnet prefix')
 param privateEndpointsSubnetPrefix string = '10.0.2.0/24'
 
-@description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to use default Container Apps FQDN.')
+@description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Used for app configuration (CORS, canonical URLs). Leave empty to use default Container Apps FQDN.')
 param primaryHosts string[] = []
 
-// Custom domains are just the primary hosts — wildcard DNS + wildcard certificates
-// handle all subdomains automatically. Subdomain shortcuts are configured in appsettings.json.
-var allCustomDomains = primaryHosts
-
-@description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). When primaryHosts is non-empty, this object must provide entries for each base domain; otherwise it may be left empty.')
+@description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). Wildcard custom domain bindings (*.hub.ms) are derived from these keys.')
 param wildcardCertNames object = {}
 
 @description('PostgreSQL server name')
@@ -226,6 +222,10 @@ var _certDomains = !empty(wildcardCertNames) ? wildcardCerts.outputs.certDomains
 #disable-next-line BCP318
 var _certIds = !empty(wildcardCertNames) ? wildcardCerts.outputs.certIds : []
 var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certIds[indexOf(_certDomains, domain)])
+
+// Wildcard custom domain bindings (*.hub.ms, *.xebia.ms) derived from wildcardCertNames keys.
+// A single wildcard binding per domain covers all subdomains — no per-subdomain registration needed.
+var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 
 // PostgreSQL Flexible Server (private endpoint only — no public access)
 module postgres './modules/postgres.bicep' = {
