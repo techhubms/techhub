@@ -11,24 +11,24 @@ param containerRegistryName = 'crtechhubms'
 param containerAppsEnvName = 'cae-techhub-prod'
 param apiAppName = 'ca-techhub-api-prod'
 param webAppName = 'ca-techhub-web-prod'
-// Networking
+// Networking (10.2.x range — must not overlap with hub 10.100.x or staging 10.1.x)
 param vnetName = 'vnet-techhub-prod'
+param addressSpacePrefix = '10.2.0.0/16'
+param containerAppsSubnetPrefix = '10.2.0.0/23'
+param privateEndpointsSubnetPrefix = '10.2.2.0/24'
 // PostgreSQL configuration
 param postgresServerName = 'psql-techhub-prod'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
-// Custom domains — primary hosts + subdomain shortcuts (requires CNAME records in GoDaddy DNS)
-// Wildcard CNAME in GoDaddy routes all *.hub.ms / *.xebia.ms traffic to the Container App.
-// Each shortcut subdomain is registered explicitly so Azure can issue managed certificates.
+// Hub VNet (for peering — VPN access to spoke resources)
+param hubVnetId = '/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-shared/providers/Microsoft.Network/virtualNetworks/vnet-techhub-hub'
+param hubVnetName = 'vnet-techhub-hub'
+// Custom domains — wildcard CNAME in GoDaddy routes all *.hub.ms / *.xebia.ms to the Container App.
+// Wildcard certificates from Key Vault cover all subdomains — no per-domain managed certs needed.
+// Subdomain shortcuts (e.g. ai.hub.ms → /ai section) are configured in appsettings.json, not here.
 param primaryHosts = ['tech.hub.ms', 'tech.xebia.ms']
-param subdomainShortcuts = {
-  all: 'all'
-  'github-copilot': 'github-copilot'
-  ghc: 'github-copilot'
-  ai: 'ai'
-  ml: 'ml'
-  devops: 'devops'
-  azure: 'azure'
-  dotnet: 'dotnet'
-  security: 'security'
+param wildcardCertNames = {
+  'hub.ms': 'wildcard-hub-ms'
+  'xebia.ms': 'wildcard-xebia-ms'
 }
+

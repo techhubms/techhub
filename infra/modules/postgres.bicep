@@ -19,20 +19,14 @@ param databaseName string = 'techhub'
 param postgresVersion string = '17'
 
 @description('SKU name for the server')
-param skuName string = 'Standard_B1ms'
+param skuName string = 'Standard_D2ads_v5'
 
 @description('SKU tier')
 @allowed(['Burstable', 'GeneralPurpose', 'MemoryOptimized'])
-param skuTier string = 'Burstable'
+param skuTier string = 'GeneralPurpose'
 
 @description('Storage size in GB')
 param storageSizeGB int = 32
-
-@description('Delegated subnet resource ID for private access')
-param delegatedSubnetId string
-
-@description('Private DNS zone resource ID')
-param privateDnsZoneId string
 
 // PostgreSQL Flexible Server
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
@@ -72,10 +66,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      delegatedSubnetResourceId: delegatedSubnetId
-      privateDnsZoneArmResourceId: privateDnsZoneId
-      // VNet integration requires public network access to be disabled
-      // Firewall rules are not supported with delegated subnets
+      // All access via private endpoint only — no public network access
       publicNetworkAccess: 'Disabled'
     }
   }
@@ -94,4 +85,5 @@ resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-0
 // Outputs
 output serverFqdn string = postgresServer.properties.fullyQualifiedDomainName
 output serverName string = postgresServer.name
+output serverId string = postgresServer.id
 output databaseName string = database.name

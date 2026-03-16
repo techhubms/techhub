@@ -1,7 +1,6 @@
 ---
-agent: 'agent'
-description: "Step-by-step workflow for safely and precisely executing code and GitHub operations according to strict instructions."
-model: "Claude Sonnet 4.5"
+name: pushall
+description: "Step-by-step workflow for safely and precisely executing code and GitHub operations according to strict instructions. Use this whenever asked to push code changes, create pull requests, or perform related operations to ensure a consistent and reliable process."
 ---
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 1**: NEVER EVER use pattern recognition or "I know what this step should do" thinking. Each step has EXACT instructions - follow them literally, not what you think they should accomplish.
@@ -27,7 +26,7 @@ model: "Claude Sonnet 4.5"
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 8**: If something fails, goes wrong, something unexpected happens or you need to make a choice and the current workflow steps do not provide a clear answer or instruction, ALWAYS ask the user what to do instead of making assumptions or guessing.
 
-**🚨 ABSOLUTE CRITICAL REQUIREMENT 9**: Exclusivly use the GitHub MCP tools for GitHub related actions, such as listing and creating pull and updating pull requests requests. Or listing and requesting code reviews. **Never** use `gh`
+**🚨 ABSOLUTE CRITICAL REQUIREMENT 9**: Exclusively use the GitHub MCP tools for GitHub related actions, such as listing, creating, and updating pull requests, or listing and requesting code reviews. **Never** use `gh`
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 10**: Throughout this workflow, maintain these variables:
 
@@ -54,7 +53,7 @@ model: "Claude Sonnet 4.5"
 
     **CHECKPOINT**: State either:
     - "✅ Step 3 completed successfully. On main branch. Moving to Step 4 to handle main branch protection steps."
-    - "✅ Step 3 completed successfully. On feature branch [BRANCHNAME]. Moving to Step 8 to confirm the current branch."
+    - "✅ Step 3 completed successfully. On feature branch [BRANCHNAME]. Moving to Step 7 to confirm the current branch."
 
 4. **Handle main branch protection:** You are on the main branch and need to handle branch protection.
 
@@ -68,7 +67,7 @@ model: "Claude Sonnet 4.5"
     Then use the delay script to ask if the user wants to move changes to a new branch:
 
     ```pwsh
-    pwsh ./.github/prompts/pushall-delay.ps1 -Warning "You are on the main branch. If you do nothing, a branch will be created for you with the name:" -Message "[BRANCHNAME]" -Delay 10
+    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "You are on the main branch. If you do nothing, a branch will be created for you with the name:" -Message "[BRANCHNAME]" -Delay 10
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
@@ -83,13 +82,13 @@ model: "Claude Sonnet 4.5"
     git reset --soft HEAD~$(git rev-list --count HEAD ^origin/main)
     ```
 
+    **CRITICAL**: If the new branch already exists, delete it first! We should ALWAYS have a clean branch to work from.
+
     Then create and switch to a new branch:
 
     ```pwsh
     git checkout -b [BRANCHNAME]
     ```
-
-    **CRITICAL**: If the new branch already exists, delete it first! We should ALWAYS have a clean branch to work from.
 
     **CHECKPOINT**: "✅ Step 5 completed successfully. Created and switched to branch. Moving to Step 7."
 
@@ -102,7 +101,7 @@ model: "Claude Sonnet 4.5"
 7. **Confirm branch:** You are not on the main branch. Confirm the user wants to continue on the current branch.
 
     ```pwsh
-    pwsh ./.github/prompts/pushall-delay.ps1 -Warning "If you do nothing, your changes will be pushed on branch:" -Message "[BRANCHNAME]" -Delay 10
+    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be pushed on branch:" -Message "[BRANCHNAME]" -Delay 10
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
@@ -118,7 +117,7 @@ model: "Claude Sonnet 4.5"
     **Call the get-git-changes script to perform the first comprehensive analysis of all workspace changes:**
 
     ```pwsh
-    pwsh ./.github/prompts/get-git-changes.ps1
+    pwsh ./.github/skills/pushall/get-git-changes.ps1
     ```
 
     This script captures comprehensive git changes analysis, including git status, individual diff files, and branch information, saving it to `.tmp/git-changes-analysis/` directory. The main analysis data is in `git-changes-analysis.json` and individual `.diff` files are created for each changed file.
@@ -161,7 +160,7 @@ model: "Claude Sonnet 4.5"
 
     **Commit Message Structure:**
     - For the summary, focus on the PURPOSE and INTENT behind the changes, not just what was changed. The implementation can be more technical.
-    - Use bullet points that explains WHY you're making these changes.
+    - Use bullet points that explain WHY you're making these changes.
 
     ```
     [Brief descriptive title - max 50 characters]
@@ -182,7 +181,7 @@ model: "Claude Sonnet 4.5"
     Summary: Enhanced git workflow automation with better change analysis and structured commit generation to reduce developer friction and improve process reliability.
 
     Implementation:
-    • Enhanced pushall.prompt.md with comprehensive change analysis and branch protection
+    • Enhanced pushall SKILL.md with comprehensive change analysis and branch protection
     • Improved get-git-changes.ps1 with unified diff generation and file categorization
     • Added structured commit message templates and PowerShell command standardization
     ```
@@ -203,7 +202,7 @@ model: "Claude Sonnet 4.5"
 10. **Get user confirmation:** Use the delay script to confirm the commit message you prepared:
 
     ```pwsh
-    pwsh ./.github/prompts/pushall-delay.ps1 -Warning "If you do nothing, your changes will be committed and pushed on branch '[BRANCHNAME]' with message:" -Message "" -MessageFile ".tmp/git-changes-analysis/commit-message.txt" -Delay 20
+    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be committed and pushed on branch '[BRANCHNAME]' with message:" -Message "" -MessageFile ".tmp/git-changes-analysis/commit-message.txt" -Delay 20
     ```
     
     **CHECKPOINT**: Based on exit code, state either:
@@ -280,6 +279,14 @@ model: "Claude Sonnet 4.5"
     
     **If `branch.remote.exists` is true (existing branch):**
 
+    If you rebased in step 13 or step 14, the branch history has been rewritten. Use `--force-with-lease` to push safely:
+
+    ```pwsh
+    git push --force-with-lease
+    ```
+
+    If no rebase occurred, use a normal push:
+
     ```pwsh
     git push
     ```
@@ -291,7 +298,7 @@ model: "Claude Sonnet 4.5"
     Use the delay script to ask the user if they want to proceed with pull request operations:
 
     ```pwsh
-    pwsh ./.github/prompts/pushall-delay.ps1 -Warning "If you do nothing, the system will start with PR operations." -Delay 30
+    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, the system will start with PR operations." -Delay 30
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
@@ -302,11 +309,11 @@ model: "Claude Sonnet 4.5"
 
     **CRITICAL**: This step is about data PREPARATION only. Do NOT analyze or create PR content yet.
     **CRITICAL**: This step is DIFFERENT than what you did earlier in steps 8 to 15, so do NOT confuse them and DO NOT skip any of the following steps.
-    **CRITICAL**: Do NOT reu-use anything from step 8 to 15.
+    **CRITICAL**: Do NOT reuse anything from step 8 to 15.
     **CRITICAL**: Execute the following command EXACTLY AS IS including the `-CompareWithMain` flag:
     
     ```pwsh
-    pwsh ./.github/prompts/get-git-changes.ps1 -CompareWithMain
+    pwsh ./.github/skills/pushall/get-git-changes.ps1 -CompareWithMain
     ```
     
     **CHECKPOINT**: "✅ Step 17 completed successfully. Moving to Step 18."
@@ -354,7 +361,7 @@ model: "Claude Sonnet 4.5"
 
     **CRITICAL**: Synthesize your analysis into the following and store it INTERNALLY for later use:
     - A clear, descriptive PR title (focused on the primary functional change)
-    - A PR description that tells the story at a high level: problem → solution → impact, do not make it very extensive. Then follow with the technical changes. You do not need to include the answers to all the qusetions listed above.
+    - A PR description that tells the story at a high level: problem → solution → impact, do not make it very extensive. Then follow with the technical changes. You do not need to include the answers to all the questions listed above.
 
     **CHECKPOINT**: "✅ Step 18 completed successfully. Pull request PREPARATION complete. Moving to Step 19."
 
@@ -398,13 +405,13 @@ model: "Claude Sonnet 4.5"
     **If no Copilot review exists:**
 
     ```pwsh
-    pwsh ./.github/prompts/pushall-delay.ps1 -Warning "If you do nothing, a Copilot code review will be requested for this pull request" -Delay 5
+    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, a Copilot code review will be requested for this pull request" -Delay 5
     ```
     
     **If Copilot has already reviewed:**
 
     ```pwsh
-    pwsh ./.github/prompts/pushall-delay.ps1 -Warning "Copilot already reviewed this pull request. If you do nothing, a new review will be requested." -Delay 10
+    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "Copilot already reviewed this pull request. If you do nothing, a new review will be requested." -Delay 10
     ```
 
     **CHECKPOINT**: Based on exit code, state either:

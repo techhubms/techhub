@@ -17,11 +17,20 @@ param resourceGroupName string = 'rg-techhub-${environmentName}'
 @description('Application Insights name')
 param appInsightsName string = 'appi-techhub-${environmentName}'
 
-@description('Shared resource group name (where ACR lives)')
+@description('Shared resource group name (where ACR and Key Vault live)')
 param sharedResourceGroupName string = 'rg-techhub-shared'
+
+@description('Shared Key Vault name (stores wildcard certificates)')
+param keyVaultName string = 'kv-techhub-shared'
 
 @description('Shared Container Registry name (must already exist)')
 param containerRegistryName string = 'crtechhubms'
+
+@description('Hub VNet resource ID (for VNet peering and DNS zone links)')
+param hubVnetId string = ''
+
+@description('Hub VNet name (in shared resource group)')
+param hubVnetName string = 'vnet-techhub-hub'
 
 @description('Container Apps Environment name')
 param containerAppsEnvName string = 'cae-techhub-${environmentName}'
@@ -41,18 +50,24 @@ param webImageTag string
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
+@description('VNet address space (must be unique per environment)')
+param addressSpacePrefix string = '10.0.0.0/16'
+
+@description('Container Apps subnet prefix')
+param containerAppsSubnetPrefix string = '10.0.0.0/23'
+
+@description('Private endpoints subnet prefix')
+param privateEndpointsSubnetPrefix string = '10.0.2.0/24'
+
 @description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to use default Container Apps FQDN.')
 param primaryHosts array = []
 
-@description('Subdomain shortcut mapping (e.g. { ai: "ai", ghc: "github-copilot" }). Each subdomain gets a custom domain for every base domain derived from primaryHosts.')
-param subdomainShortcuts object = {}
+// Custom domains are just the primary hosts — wildcard DNS + wildcard certificates
+// handle all subdomains automatically. Subdomain shortcuts are configured in appsettings.json.
+var allCustomDomains = primaryHosts
 
-// Derive base domains from primary hosts (e.g., 'tech.hub.ms' -> 'hub.ms')
-// and compute the full list of custom domains (primary hosts + subdomain entries)
-var baseDomains = [for host in primaryHosts: substring(host, indexOf(host, '.') + 1)]
-var subdomainKeys = objectKeys(subdomainShortcuts)
-var subdomainDomains = flatten(map(baseDomains, baseDomain => map(subdomainKeys, key => '${key}.${baseDomain}')))
-var allCustomDomains = concat(primaryHosts, subdomainDomains)
+@description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). Leave empty to use Azure managed certificates.')
+param wildcardCertNames object = {}
 
 @description('PostgreSQL server name')
 param postgresServerName string = 'psql-techhub-${environmentName}'
@@ -102,6 +117,9 @@ module network './modules/network.bicep' = {
   params: {
     location: location
     vnetName: vnetName
+    addressSpacePrefix: addressSpacePrefix
+    containerAppsSubnetPrefix: containerAppsSubnetPrefix
+    privateEndpointsSubnetPrefix: privateEndpointsSubnetPrefix
   }
 }
 
@@ -113,6 +131,45 @@ module monitoring './modules/monitoring.bicep' = {
     location: location
     appInsightsName: appInsightsName
     logAnalyticsWorkspaceName: 'law-techhub-${environmentName}'
+  }
+}
+
+// VNet Peering: spoke → hub (use hub's VPN gateway for P2S access)
+module peeringSpokeToHub './modules/vnetPeering.bicep' = if (!empty(hubVnetId)) {
+  scope: resourceGroup
+  name: 'peering-spoke-to-hub'
+  params: {
+    localVnetName: vnetName
+    remoteVnetId: hubVnetId
+    peeringName: 'peer-${vnetName}-to-hub'
+    allowForwardedTraffic: true
+    useRemoteGateways: true
+  }
+  dependsOn: [network, peeringHubToSpoke]
+}
+
+// VNet Peering: hub → spoke (allow gateway transit so VPN clients can reach spoke resources)
+module peeringHubToSpoke './modules/vnetPeering.bicep' = if (!empty(hubVnetId)) {
+  scope: sharedResourceGroup
+  name: 'peering-hub-to-${environmentName}'
+  params: {
+    localVnetName: hubVnetName
+    remoteVnetId: network.outputs.vnetId
+    peeringName: 'peer-hub-to-${vnetName}'
+    allowForwardedTraffic: true
+    allowGatewayTransit: true
+  }
+}
+
+// Link Key Vault private DNS zone (in shared RG) to this spoke VNet
+// so Container Apps and services in this environment can resolve the KV private endpoint
+module kvDnsLink './modules/privateDnsZoneLink.bicep' = if (!empty(hubVnetId)) {
+  scope: sharedResourceGroup
+  name: 'kvDnsLink-${environmentName}'
+  params: {
+    dnsZoneName: 'privatelink.vaultcore.azure.net'
+    linkName: 'link-${vnetName}'
+    vnetId: network.outputs.vnetId
   }
 }
 
@@ -133,7 +190,31 @@ module containerAppsEnv './modules/containerApps.bicep' = {
   }
 }
 
-// PostgreSQL Flexible Server (private access via VNet)
+// Wildcard certificates from Key Vault → Container Apps Environment
+// The managed identity needs Key Vault Secrets User on the shared KV.
+module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames)) {
+  scope: resourceGroup
+  params: {
+    location: location
+    containerAppsEnvironmentName: containerAppsEnvName
+    keyVaultName: keyVaultName
+    sharedResourceGroupName: sharedResourceGroupName
+    wildcardCertNames: wildcardCertNames
+    identityId: identity.outputs.identityId
+    identityPrincipalId: identity.outputs.identityPrincipalId
+  }
+  dependsOn: [containerAppsEnv]
+}
+
+// Build a map of base domain → certificate resource ID for the web module.
+// BCP318 warnings are safe: the !empty() guard ensures outputs are only accessed when the module deployed.
+#disable-next-line BCP318
+var _certDomains = !empty(wildcardCertNames) ? wildcardCerts.outputs.certDomains : []
+#disable-next-line BCP318
+var _certIds = !empty(wildcardCertNames) ? wildcardCerts.outputs.certIds : []
+var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certIds[indexOf(_certDomains, domain)])
+
+// PostgreSQL Flexible Server (private endpoint only — no public access)
 module postgres './modules/postgres.bicep' = {
   scope: resourceGroup
   name: 'postgres-deployment'
@@ -142,8 +223,20 @@ module postgres './modules/postgres.bicep' = {
     serverName: postgresServerName
     administratorLogin: postgresAdminLogin
     administratorLoginPassword: postgresAdminPassword
-    delegatedSubnetId: network.outputs.postgresSubnetId
-    privateDnsZoneId: network.outputs.privateDnsZoneId
+  }
+}
+
+// PostgreSQL Private Endpoint (connects environment VNet to PostgreSQL)
+module postgresPrivateEndpoint './modules/postgresPrivateEndpoint.bicep' = {
+  scope: resourceGroup
+  name: 'postgresPe-deployment'
+  params: {
+    location: location
+    privateEndpointName: 'pe-psql-techhub-${environmentName}'
+    subnetId: network.outputs.privateEndpointsSubnetId
+    postgresServerId: postgres.outputs.serverId
+    vnetId: network.outputs.vnetId
+    hubVnetId: hubVnetId
   }
 }
 
@@ -175,16 +268,15 @@ module webApp './modules/web.bicep' = {
     location: location
     containerAppName: webAppName
     containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
-    containerAppsEnvironmentName: containerAppsEnvName
     containerRegistryName: containerRegistryName
     acrPullIdentityId: identity.outputs.identityId
     imageTag: webImageTag
     apiBaseUrl: apiApp.outputs.fqdn
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     customDomains: allCustomDomains
-    subdomainShortcuts: subdomainShortcuts
     primaryHosts: primaryHosts
     environmentName: environmentName
+    wildcardCertificateIds: wildcardCertIds
   }
 }
 

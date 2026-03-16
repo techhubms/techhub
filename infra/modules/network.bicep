@@ -4,11 +4,20 @@ param location string
 @description('VNet name')
 param vnetName string
 
+@description('VNet address space prefix (must be unique per environment when peered)')
+param addressSpacePrefix string = '10.0.0.0/16'
+
 @description('Container Apps subnet name')
 param containerAppsSubnetName string = 'snet-container-apps'
 
-@description('PostgreSQL subnet name')
-param postgresSubnetName string = 'snet-postgres'
+@description('Container Apps subnet prefix')
+param containerAppsSubnetPrefix string = '10.0.0.0/23'
+
+@description('Private endpoints subnet name')
+param privateEndpointsSubnetName string = 'snet-private-endpoints'
+
+@description('Private endpoints subnet prefix')
+param privateEndpointsSubnetPrefix string = '10.0.2.0/24'
 
 // Virtual Network
 resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
@@ -17,7 +26,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
   properties: {
     addressSpace: {
       addressPrefixes: [
-        '10.0.0.0/16'
+        addressSpacePrefix
       ]
     }
     enableDdosProtection: false
@@ -25,7 +34,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
       {
         name: containerAppsSubnetName
         properties: {
-          addressPrefix: '10.0.0.0/23'
+          addressPrefix: containerAppsSubnetPrefix
           delegations: [
             {
               name: 'Microsoft.App.environments'
@@ -37,44 +46,17 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
         }
       }
       {
-        name: postgresSubnetName
+        name: privateEndpointsSubnetName
         properties: {
-          addressPrefix: '10.0.2.0/24'
-          delegations: [
-            {
-              name: 'Microsoft.DBforPostgreSQL.flexibleServers'
-              properties: {
-                serviceName: 'Microsoft.DBforPostgreSQL/flexibleServers'
-              }
-            }
-          ]
+          addressPrefix: privateEndpointsSubnetPrefix
         }
       }
     ]
   }
 }
 
-// Private DNS Zone for PostgreSQL
-resource privateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
-  name: '${vnetName}.private.postgres.database.azure.com'
-  location: 'global'
-}
-
-// Link DNS Zone to VNet
-resource privateDnsZoneLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
-  parent: privateDnsZone
-  name: '${vnetName}-link'
-  location: 'global'
-  properties: {
-    registrationEnabled: false
-    virtualNetwork: {
-      id: resourceId('Microsoft.Network/virtualNetworks', vnetName)
-    }
-  }
-}
-
 // Outputs
 output vnetId string = vnet.id
+output vnetName string = vnet.name
 output containerAppsSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, containerAppsSubnetName)
-output postgresSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, postgresSubnetName)
-output privateDnsZoneId string = resourceId('Microsoft.Network/privateDnsZones', '${vnetName}.private.postgres.database.azure.com')
+output privateEndpointsSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, privateEndpointsSubnetName)
