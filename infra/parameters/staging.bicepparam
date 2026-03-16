@@ -11,12 +11,25 @@ param containerRegistryName = 'crtechhubms'
 param containerAppsEnvName = 'cae-techhub-staging'
 param apiAppName = 'ca-techhub-api-staging'
 param webAppName = 'ca-techhub-web-staging'
-// Networking
+// Networking (10.1.x range — must not overlap with hub 10.100.x or prod 10.2.x)
 param vnetName = 'vnet-techhub-staging'
+param addressSpacePrefix = '10.1.0.0/16'
+param containerAppsSubnetPrefix = '10.1.0.0/23'
+param privateEndpointsSubnetPrefix = '10.1.2.0/24'
 // PostgreSQL configuration
 param postgresServerName = 'psql-techhub-staging'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
-// Custom domains (requires CNAME + TXT record in GoDaddy DNS first)
+// Hub VNet (for peering — VPN access to spoke resources)
+param hubVnetId = '/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-shared/providers/Microsoft.Network/virtualNetworks/vnet-techhub-hub'
+param hubVnetName = 'vnet-techhub-hub'
+// Custom domains — wildcard CNAME in GoDaddy routes all *.hub.ms to the Container App.
+// Wildcard certificate from Key Vault — no per-domain managed certs needed.
 param primaryHosts = ['staging-tech.hub.ms']
-param subdomainShortcuts = {}
+param wildcardCertNames = {
+  'hub.ms': 'wildcard-hub-ms'
+}
+// Azure AI Foundry (OpenAI)
+param openAiName = 'oai-techhub-staging'
+param openAiModelCapacity = 50
+

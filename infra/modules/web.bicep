@@ -1,7 +1,6 @@
 param location string
 param containerAppName string
 param containerAppsEnvironmentId string
-param containerAppsEnvironmentName string
 param containerRegistryName string
 param acrPullIdentityId string
 param imageTag string
@@ -15,13 +14,13 @@ param environmentName string
 var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
 
 @description('Optional custom domains (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
-param customDomains array = []
-
-@description('Subdomain shortcut mapping for the SubdomainRedirectMiddleware configuration')
-param subdomainShortcuts object = {}
+param customDomains string[] = []
 
 @description('Primary host names for the SubdomainRedirectMiddleware configuration')
-param primaryHosts array = []
+param primaryHosts string[] = []
+
+@description('Key Vault certificate resource IDs for wildcard TLS (mapped by base domain, e.g. { "hub.ms": "cert-resource-id" }). When provided, domains use SniEnabled binding with these certs instead of managed certificates.')
+param wildcardCertificateIds object = {}
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
@@ -37,14 +36,6 @@ var staticEnvVars = [
     value: appInsightsConnectionString
   }
   {
-    name: 'OTEL_EXPORTER_OTLP_ENDPOINT'
-    value: 'https://otlp.applicationinsights.azure.com/'
-  }
-  {
-    name: 'OTEL_EXPORTER_OTLP_HEADERS'
-    value: 'Authorization=Bearer ${appInsightsConnectionString}'
-  }
-  {
     name: 'ApiBaseUrl'
     value: 'https://${apiBaseUrl}'
   }
@@ -53,20 +44,11 @@ var staticEnvVars = [
     value: '/tmp/techhub'
   }
 ]
-var shortcutEnvVars = [for item in items(subdomainShortcuts): {
-  name: 'SubdomainShortcuts__${item.key}'
-  value: item.value
-}]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'
   value: host
 }]
-var allEnvVars = concat(staticEnvVars, shortcutEnvVars, primaryHostEnvVars)
-
-// Reference the managed environment (needed for managed certificate)
-resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-07-01' existing = {
-  name: containerAppsEnvironmentName
-}
+var allEnvVars = concat(staticEnvVars, primaryHostEnvVars)
 
 resource web 'Microsoft.App/containerApps@2025-07-01' = {
   name: containerAppName
@@ -91,7 +73,8 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         }
         customDomains: [for domain in customDomains: {
             name: domain
-            bindingType: 'Auto'
+            bindingType: 'SniEnabled'
+            certificateId: wildcardCertificateIds[substring(domain, indexOf(domain, '.') + 1)]
           }]
       }
       registries: [
@@ -172,18 +155,3 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
 
 output fqdn string = web.properties.configuration.ingress.fqdn
 output id string = web.id
-
-// Managed certificates for custom domains (issued by Azure, auto-renewed).
-// Uses 2025-07-01 API with bindingType 'Auto' on the container app to solve
-// the chicken-and-egg problem (see github.com/microsoft/azure-container-apps/issues/796).
-// The certs must be created AFTER the container app has the hostnames registered.
-resource managedCerts 'Microsoft.App/managedEnvironments/managedCertificates@2025-07-01' = [for domain in customDomains: {
-  parent: containerAppsEnv
-  name: 'cert-${replace(domain, '.', '-')}'
-  location: location
-  properties: {
-    subjectName: domain
-    domainControlValidation: 'CNAME'
-  }
-  dependsOn: [web]
-}]

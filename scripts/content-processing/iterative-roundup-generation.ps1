@@ -566,8 +566,8 @@ $WritingStyleGuidelines
         # Save Step 2 input for debugging
         $step2Input = @"
 STEP 2 INPUT: Combined Filter and Analysis Configuration
-AI Model: $Model
-Endpoint: $Endpoint
+AI Model: $(Get-AzureOpenAIModelName)
+Endpoint: $(Get-AzureOpenAIEndpoint -Environment $Environment)
 Date Range: $StartDate to $EndDate
 Total Articles to Process: $($articles.Count)
 
@@ -873,8 +873,8 @@ $WritingStyleGuidelines
         # Save Step 3 input for debugging
         $step3Input = @"
 STEP 3 INPUT: News Story Creation Configuration
-AI Model: $Model
-Endpoint: $Endpoint
+AI Model: $(Get-AzureOpenAIModelName)
+Endpoint: $(Get-AzureOpenAIEndpoint -Environment $Environment)
 Date Range: $StartDate to $EndDate
 Sections to Process: $($articleSummaries.Keys.Count)
 Section Names: $($articleSummaries.Keys -join ', ')

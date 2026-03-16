@@ -14,7 +14,7 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 # certbot for requesting Let's Encrypt wildcard TLS certificates
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 postgresql-client certbot certbot-dns-azure
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 postgresql-client certbot dnsutils
 
 # ==================== .NET Dev Certificates ====================
 sudo dotnet workload update
