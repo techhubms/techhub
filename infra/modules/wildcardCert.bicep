@@ -7,7 +7,7 @@ param containerAppsEnvironmentName string
 @description('Certificate resource name in the managed environment')
 param certResourceName string
 
-@description('Key Vault certificate URL')
+@description('Key Vault secret URL for the certificate')
 param keyVaultUrl string
 
 @description('User-assigned managed identity resource ID')

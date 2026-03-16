@@ -39,7 +39,7 @@ module certDeployments 'wildcardCert.bicep' = [for entry in certEntries: {
     location: location
     containerAppsEnvironmentName: containerAppsEnvironmentName
     certResourceName: 'wildcard-${replace(entry.key, '.', '-')}'
-    keyVaultUrl: 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/certificates/${entry.value}'
+    keyVaultUrl: 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/secrets/${entry.value}'
     identityId: identityId
   }
   dependsOn: [kvSecretsRole]
