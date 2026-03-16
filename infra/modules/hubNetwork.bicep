@@ -22,6 +22,9 @@ param aadAudienceAppId string = 'c632b3df-fb67-4d84-bdcf-b95ad541b5c8'
 @description('Private endpoints subnet name')
 param privateEndpointsSubnetName string = 'snet-private-endpoints'
 
+@description('Private endpoints subnet prefix (must match the subnet definition)')
+param privateEndpointsSubnetPrefix string = '10.100.1.0/24'
+
 var aadIssuer = 'https://sts.windows.net/${aadTenantId}/'
 
 // NSG for private endpoints subnet — only allows traffic from within the hub VNet (VPN clients)
@@ -39,7 +42,7 @@ resource privateEndpointsNsg 'Microsoft.Network/networkSecurityGroups@2025-01-01
           protocol: 'Tcp'
           sourceAddressPrefix: 'VirtualNetwork'
           sourcePortRange: '*'
-          destinationAddressPrefix: '10.100.1.0/24'
+          destinationAddressPrefix: privateEndpointsSubnetPrefix
           destinationPortRanges: [
             '443'  // Key Vault
           ]
@@ -83,7 +86,7 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
       {
         name: privateEndpointsSubnetName
         properties: {
-          addressPrefix: '10.100.1.0/24'
+          addressPrefix: privateEndpointsSubnetPrefix
           networkSecurityGroup: {
             id: privateEndpointsNsg.id
           }

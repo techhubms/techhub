@@ -66,7 +66,7 @@ param primaryHosts string[] = []
 // handle all subdomains automatically. Subdomain shortcuts are configured in appsettings.json.
 var allCustomDomains = primaryHosts
 
-@description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). Leave empty to use Azure managed certificates.')
+@description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" }). Required when primaryHosts is set.')
 param wildcardCertNames object = {}
 
 @description('PostgreSQL server name')

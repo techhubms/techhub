@@ -19,7 +19,7 @@ Azure DNS zone:      hub-ms.acme.hub.ms TXT → <certbot-generated-token>
 This means:
 
 - **GoDaddy stays under shared control** — other teams manage their own `xebia.ms` subdomains freely
-- **Only two static CNAME records** are needed at GoDaddy (never change)
+- **Only two static CNAME records + NS delegation** are needed at GoDaddy (see [prerequisites](#prerequisites))
 - **certbot-dns-azure** creates/deletes TXT records in Azure DNS automatically during renewal
 
 ## Prerequisites

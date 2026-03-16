@@ -119,7 +119,7 @@ Write-Host "===============================================================" -Fo
 Write-Step "Validating prerequisites"
 
 # Check Azure CLI login
-$account = az account show -o json 2>&1
+$account = az account show -o json --only-show-errors
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "Not logged in to Azure CLI. Run 'az login' first."
     exit 1

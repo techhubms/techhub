@@ -26,7 +26,7 @@ resource acmeRecords 'Microsoft.Network/dnsZones/TXT@2023-07-01-preview' = [for 
   properties: {
     TTL: 60
     TXTRecords: [
-      { value: ['placeholder — replaced by certbot during renewal'] }
+      { value: ['placeholder - replaced by certbot during renewal'] }
     ]
   }
 }]
