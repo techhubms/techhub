@@ -400,7 +400,8 @@ jobs:
             echo "Deleting files that were removed from RSS branch..."
             
             while IFS= read -r file; do
-              if [ -n "$file" ] && [ -f "$file" ]; then
+              [ -z "$file" ] && continue
+              if [ -f "$file" ]; then
                 echo "  Deleting: $file (removed from RSS branch)"
                 rm "$file"
                 
@@ -428,7 +429,8 @@ jobs:
             echo "Copying files from RSS branch to main branch..."
             
             while IFS= read -r file; do
-              if [ -n "$file" ] && [ -f "../$file" ]; then
+              [ -z "$file" ] && continue
+              if [ -f "../$file" ]; then
                 echo "  Copying: $file"
                 mkdir -p "$(dirname "$file")"
                 cp "../$file" "$file"
