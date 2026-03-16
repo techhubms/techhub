@@ -692,18 +692,8 @@ jobs:
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-          $customDomains = az containerapp show `
-            --name ca-techhub-web-staging `
-            --resource-group rg-techhub-staging `
-            --query properties.configuration.ingress.customDomains[].name `
-            -o tsv
-          $fqdn = az containerapp show `
-            --name ca-techhub-web-staging `
-            --resource-group rg-techhub-staging `
-            --query properties.configuration.ingress.fqdn `
-            -o tsv
-          $webUrl = if ($customDomains) { $customDomains.Split()[0] } else { $fqdn }
-          "web-url=$webUrl" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+          # Use the known primary hostname (wildcard custom domains like *.hub.ms are not valid URLs)
+          "web-url=staging-tech.hub.ms" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
 
       - name: Smoke tests
         shell: pwsh
@@ -773,42 +763,34 @@ jobs:
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-          $customDomains = az containerapp show `
-            --name ca-techhub-web-prod `
-            --resource-group rg-techhub-prod `
-            --query properties.configuration.ingress.customDomains[].name `
-            -o tsv
-          $fqdn = az containerapp show `
-            --name ca-techhub-web-prod `
-            --resource-group rg-techhub-prod `
-            --query properties.configuration.ingress.fqdn `
-            -o tsv
-          $webUrl = if ($customDomains) { $customDomains.Split()[0] } else { $fqdn }
-          "web-url=$webUrl" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+          # Use the known primary hostname (wildcard custom domains like *.hub.ms are not valid URLs)
+          "web-url=tech.hub.ms" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
 
       - name: Smoke tests
         shell: pwsh
         run: |
-          $webUrl = "https://${{ steps.deploy.outputs.web-url }}"
+          $primaryUrls = @('https://tech.hub.ms', 'https://tech.xebia.ms')
           Write-Host "Waiting 60 seconds for deployment to stabilize..."
           Start-Sleep -Seconds 60
 
-          # Health check
-          $health = try { Invoke-WebRequest -Uri "$webUrl/health" -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($health -and $health.StatusCode -eq 200) {
-            Write-Host "[OK] Health check passed ($webUrl/health)"
-          } else {
-            Write-Host "::error::Health check failed ($webUrl/health)"
-            exit 1
-          }
+          foreach ($webUrl in $primaryUrls) {
+            # Health check
+            $health = try { Invoke-WebRequest -Uri "$webUrl/health" -TimeoutSec 30 -UseBasicParsing } catch { $null }
+            if ($health -and $health.StatusCode -eq 200) {
+              Write-Host "[OK] Health check passed ($webUrl/health)"
+            } else {
+              Write-Host "::error::Health check failed ($webUrl/health)"
+              exit 1
+            }
 
-          # Homepage check
-          $homepage = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($homepage -and $homepage.StatusCode -eq 200) {
-            Write-Host "[OK] Homepage accessible ($webUrl)"
-          } else {
-            Write-Host "::error::Homepage not accessible ($webUrl)"
-            exit 1
+            # Homepage check
+            $homepage = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+            if ($homepage -and $homepage.StatusCode -eq 200) {
+              Write-Host "[OK] Homepage accessible ($webUrl)"
+            } else {
+              Write-Host "::error::Homepage not accessible ($webUrl)"
+              exit 1
+            }
           }
 
       - name: Deployment summary
