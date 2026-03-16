@@ -91,7 +91,7 @@ function Invoke-AiApiCall {
                 Write-ErrorDetails -ErrorRecord $_ -Context "AI API call, waiting $RateLimitPreventionDelay seconds before processing failure..."
                 Start-Sleep -Seconds $RateLimitPreventionDelay
 
-                $webResponseDetails = Get-WebResponseDetailsFromException -Exception $_.Exception
+                $webResponseDetails = Get-WebResponseDetailsFromException -Exception $_.Exception -ErrorRecord $_
                 $statusCode = $webResponseDetails.StatusCode
                 $statusDescription = $webResponseDetails.StatusDescription
                 $responseHeaders = $webResponseDetails.Headers
