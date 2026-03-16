@@ -13,7 +13,7 @@ param environmentName string
 var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
 
 @description('FQDNs for the web frontend (used for CORS and BaseUrl configuration)')
-param webFqdns array = []
+param webFqdns string[] = []
 
 @secure()
 @description('PostgreSQL connection string')
@@ -43,14 +43,6 @@ var staticEnvVars = [
   {
     name: 'Database__ConnectionString'
     secretRef: 'db-connection-string'
-  }
-  {
-    name: 'OTEL_EXPORTER_OTLP_ENDPOINT'
-    value: 'https://otlp.applicationinsights.azure.com/'
-  }
-  {
-    name: 'OTEL_EXPORTER_OTLP_HEADERS'
-    value: 'Authorization=Bearer ${appInsightsConnectionString}'
   }
   {
     name: 'AppSettings__Content__CollectionsPath'

@@ -24,6 +24,44 @@ param privateEndpointsSubnetName string = 'snet-private-endpoints'
 
 var aadIssuer = 'https://sts.windows.net/${aadTenantId}/'
 
+// NSG for private endpoints subnet — only allows traffic from within the hub VNet (VPN clients)
+resource privateEndpointsNsg 'Microsoft.Network/networkSecurityGroups@2025-01-01' = {
+  name: 'nsg-${privateEndpointsSubnetName}'
+  location: location
+  properties: {
+    securityRules: [
+      {
+        name: 'AllowVNetInbound'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: 'Tcp'
+          sourceAddressPrefix: 'VirtualNetwork'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '10.100.1.0/24'
+          destinationPortRanges: [
+            '443'  // Key Vault
+          ]
+        }
+      }
+      {
+        name: 'DenyAllOtherInbound'
+        properties: {
+          priority: 4096
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+    ]
+  }
+}
+
 // Hub Virtual Network
 resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
   name: vnetName
@@ -46,6 +84,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
         name: privateEndpointsSubnetName
         properties: {
           addressPrefix: '10.100.1.0/24'
+          networkSecurityGroup: {
+            id: privateEndpointsNsg.id
+          }
         }
       }
     ]
@@ -78,7 +119,7 @@ resource vpnGateway 'Microsoft.Network/virtualNetworkGateways@2025-01-01' = {
             id: vpnPublicIp.id
           }
           subnet: {
-            id: resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, 'GatewaySubnet')
+            id: vnet.properties.subnets[0].id
           }
         }
       }
@@ -86,10 +127,10 @@ resource vpnGateway 'Microsoft.Network/virtualNetworkGateways@2025-01-01' = {
     gatewayType: 'Vpn'
     vpnType: 'RouteBased'
     sku: {
-      name: 'VpnGw1'
-      tier: 'VpnGw1'
+      name: 'VpnGw2'
+      tier: 'VpnGw2'
     }
-    vpnGatewayGeneration: 'Generation1'
+    vpnGatewayGeneration: 'Generation2'
     vpnClientConfiguration: {
       vpnClientAddressPool: {
         addressPrefixes: [
@@ -107,12 +148,11 @@ resource vpnGateway 'Microsoft.Network/virtualNetworkGateways@2025-01-01' = {
       aadIssuer: aadIssuer
     }
   }
-  dependsOn: [vnet]
 }
 
 // Outputs
 output vnetId string = vnet.id
 output vnetName string = vnet.name
-output privateEndpointsSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, privateEndpointsSubnetName)
+output privateEndpointsSubnetId string = vnet.properties.subnets[1].id
 output vpnGatewayId string = vpnGateway.id
 output vpnPublicIpAddress string = vpnPublicIp.properties.ipAddress

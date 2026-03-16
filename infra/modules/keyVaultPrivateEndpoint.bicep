@@ -14,7 +14,7 @@ param keyVaultId string
 param vnetId string
 
 @description('Additional VNet IDs to link the private DNS zone to (e.g. spoke VNets)')
-param additionalVnetIds array = []
+param additionalVnetIds string[] = []
 
 // Private DNS Zone for Key Vault
 resource privateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {

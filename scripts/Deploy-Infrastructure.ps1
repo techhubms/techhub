@@ -79,7 +79,6 @@ $envConfig = @{
         DefaultLocation = "westeurope"
         ResourceGroup   = "rg-techhub-shared"
         EnvSuffix       = "shared"
-        OpenAi          = $null
     }
     staging    = @{
         TemplatePath    = "infra/main.bicep"
@@ -87,13 +86,6 @@ $envConfig = @{
         DefaultLocation = "swedencentral"
         ResourceGroup   = "rg-techhub-staging"
         EnvSuffix       = "staging"
-        # OpenAI deployed separately at resource-group level (Azure bug 715-123420)
-        OpenAi          = @{
-            TemplatePath = "infra/modules/openai.bicep"
-            Location     = "swedencentral"
-            Name         = "oai-techhub-staging"
-            Capacity     = 50
-        }
     }
     production = @{
         TemplatePath    = "infra/main.bicep"
@@ -101,13 +93,6 @@ $envConfig = @{
         DefaultLocation = "swedencentral"
         ResourceGroup   = "rg-techhub-prod"
         EnvSuffix       = "prod"
-        # OpenAI deployed separately at resource-group level (Azure bug 715-123420)
-        OpenAi          = @{
-            TemplatePath = "infra/modules/openai.bicep"
-            Location     = "swedencentral"
-            Name         = "oai-techhub-prod"
-            Capacity     = 100
-        }
     }
 }
 
@@ -208,31 +193,6 @@ if ($Environment -ne 'shared') {
     }
 }
 
-# Pre-flight: Check for soft-deleted AI resources (staging/production only)
-if ($Environment -ne 'shared' -and $Mode -eq 'deploy' -and $config.OpenAi) {
-    Write-Step "Checking for soft-deleted AI Services resources"
-
-    $openAiName = $config.OpenAi.Name
-    $openAiLocation = $config.OpenAi.Location
-    $deletedJson = az cognitiveservices account list-deleted `
-        --query "[?name=='$openAiName']" -o json 2>$null
-    $deleted = if ($deletedJson) { $deletedJson | ConvertFrom-Json } else { @() }
-
-    if ($deleted -and $deleted.Count -gt 0) {
-        Write-Warn "Found soft-deleted AI resource '$openAiName'. Purging..."
-        az cognitiveservices account purge `
-            --name $openAiName `
-            --resource-group $config.ResourceGroup `
-            --location $openAiLocation
-        Write-Detail "Waiting 60 seconds for purge to propagate..."
-        Start-Sleep -Seconds 60
-        Write-Ok "Soft-deleted resource purged"
-    }
-    else {
-        Write-Ok "No soft-deleted AI resources found"
-    }
-}
-
 # ============================================================================
 # DEPLOYMENT
 # ============================================================================
@@ -272,31 +232,6 @@ if ($Mode -in @('validate', 'whatif', 'deploy')) {
         exit 1
     }
     Write-Ok "Template validation passed"
-
-    if ($config.OpenAi) {
-        $openAiTemplate = Join-Path $workspaceRoot $config.OpenAi.TemplatePath
-        $rgExists = az group exists --name $config.ResourceGroup 2>$null
-        if ($rgExists -eq 'true') {
-            Write-Step "Validating OpenAI template"
-
-            az deployment group validate `
-                --resource-group $config.ResourceGroup `
-                --template-file $openAiTemplate `
-                --parameters location=$($config.OpenAi.Location) `
-                             openAiName=$($config.OpenAi.Name) `
-                             modelCapacity=$($config.OpenAi.Capacity)
-
-            if ($LASTEXITCODE -ne 0) {
-                # Azure bug 715-123420: CognitiveServices validation can intermittently fail.
-                # This is non-blocking — the actual deployment is not affected.
-                Write-Warn "OpenAI template validation failed (Azure bug 715-123420, non-blocking)"
-            } else {
-                Write-Ok "OpenAI template validation passed"
-            }
-        } else {
-            Write-Warning "Skipping OpenAI validation (resource group does not exist yet)"
-        }
-    }
 }
 
 # Step 2: What-If (skipped in deploy mode — adds ~1-2 min overhead with no benefit in CI)
@@ -313,31 +248,6 @@ if ($Mode -eq 'whatif') {
         exit 1
     }
     Write-Ok "What-If analysis completed"
-
-    if ($config.OpenAi) {
-        $openAiTemplate = Join-Path $workspaceRoot $config.OpenAi.TemplatePath
-        $rgExists = az group exists --name $config.ResourceGroup 2>$null
-        if ($rgExists -eq 'true') {
-            Write-Step "Running OpenAI What-If analysis"
-
-            az deployment group what-if `
-                --resource-group $config.ResourceGroup `
-                --template-file $openAiTemplate `
-                --parameters location=$($config.OpenAi.Location) `
-                             openAiName=$($config.OpenAi.Name) `
-                             modelCapacity=$($config.OpenAi.Capacity)
-
-            if ($LASTEXITCODE -ne 0) {
-                # Azure bug 715-123420: CognitiveServices what-if can intermittently fail.
-                # This is non-blocking — the actual deployment is not affected.
-                Write-Warn "OpenAI What-If analysis failed (Azure bug 715-123420, non-blocking)"
-            } else {
-                Write-Ok "OpenAI What-If analysis completed"
-            }
-        } else {
-            Write-Warning "Skipping OpenAI What-If (resource group does not exist yet)"
-        }
-    }
 }
 
 # Step 3: Deploy
@@ -355,30 +265,6 @@ if ($Mode -eq 'deploy') {
         exit 1
     }
     Write-Ok "Infrastructure deployed successfully"
-
-    # Post-deployment: Deploy OpenAI separately (Azure bug 715-123420 prevents
-    # CognitiveServices from being deployed in nested subscription-level deployments)
-    if ($config.OpenAi) {
-        $openAiConfig = $config.OpenAi
-        $openAiTemplate = Join-Path $workspaceRoot $openAiConfig.TemplatePath
-        $openAiDeployName = "openai-$($config.EnvSuffix)-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
-
-        Write-Step "Deploying Azure AI Foundry ($($openAiConfig.Name))"
-
-        az deployment group create `
-            --name $openAiDeployName `
-            --resource-group $config.ResourceGroup `
-            --template-file $openAiTemplate `
-            --parameters location=$($openAiConfig.Location) `
-                         openAiName=$($openAiConfig.Name) `
-                         modelCapacity=$($openAiConfig.Capacity)
-
-        if ($LASTEXITCODE -ne 0) {
-            Write-Fail "OpenAI deployment failed"
-            exit 1
-        }
-        Write-Ok "Azure AI Foundry deployed successfully"
-    }
 }
 
 # ============================================================================

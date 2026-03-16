@@ -60,7 +60,7 @@ param containerAppsSubnetPrefix string = '10.0.0.0/23'
 param privateEndpointsSubnetPrefix string = '10.0.2.0/24'
 
 @description('Primary host names for the web app (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to use default Container Apps FQDN.')
-param primaryHosts array = []
+param primaryHosts string[] = []
 
 // Custom domains are just the primary hosts — wildcard DNS + wildcard certificates
 // handle all subdomains automatically. Subdomain shortcuts are configured in appsettings.json.
@@ -78,6 +78,12 @@ param postgresAdminLogin string = 'techhubadmin'
 @secure()
 @description('PostgreSQL administrator password')
 param postgresAdminPassword string
+
+@description('Azure AI Foundry (OpenAI) resource name')
+param openAiName string = 'oai-techhub-${environmentName}'
+
+@description('Azure AI Foundry model capacity (TPM in thousands)')
+param openAiModelCapacity int = 100
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
@@ -173,10 +179,15 @@ module kvDnsLink './modules/privateDnsZoneLink.bicep' = if (!empty(hubVnetId)) {
   }
 }
 
-// Note: Azure AI Foundry (OpenAI) is deployed separately at resource-group level
-// rather than as a nested deployment from subscription scope.
-// This works around Azure bug 715-123420 where CognitiveServices validation
-// fails in nested subscription-level deployments.
+// Azure AI Foundry (OpenAI)
+module openai './modules/openai.bicep' = {
+  scope: resourceGroup
+  params: {
+    location: location
+    openAiName: openAiName
+    modelCapacity: openAiModelCapacity
+  }
+}
 
 // Container Apps Environment (VNet-integrated)
 module containerAppsEnv './modules/containerApps.bicep' = {
@@ -265,7 +276,7 @@ module apiApp './modules/api.bicep' = {
     acrPullIdentityId: identity.outputs.identityId
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require;Trust Server Certificate=true'
+    databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require'
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     environmentName: environmentName
   }
@@ -298,6 +309,8 @@ output apiUrl string = 'https://${apiApp.outputs.fqdn}'
 output webUrl string = 'https://${webApp.outputs.fqdn}'
 output appInsightsName string = monitoring.outputs.appInsightsName
 output containerRegistryName string = containerRegistryName
+output openAiEndpoint string = openai.outputs.openAiEndpoint
+output openAiDeploymentName string = openai.outputs.deploymentName
 output vnetName string = vnetName
 output postgresServerFqdn string = postgres.outputs.serverFqdn
 output postgresDatabaseName string = postgres.outputs.databaseName

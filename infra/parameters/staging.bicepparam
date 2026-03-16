@@ -29,4 +29,7 @@ param primaryHosts = ['staging-tech.hub.ms']
 param wildcardCertNames = {
   'hub.ms': 'wildcard-hub-ms'
 }
+// Azure AI Foundry (OpenAI)
+param openAiName = 'oai-techhub-staging'
+param openAiModelCapacity = 50
 

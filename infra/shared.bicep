@@ -48,6 +48,16 @@ module registry './modules/registry.bicep' = {
   }
 }
 
+// Shared Log Analytics workspace (for Key Vault audit logs)
+module sharedMonitoring './modules/monitoring.bicep' = {
+  scope: resourceGroup
+  params: {
+    location: location
+    appInsightsName: 'appi-techhub-shared'
+    logAnalyticsWorkspaceName: 'law-techhub-shared'
+  }
+}
+
 // Shared Key Vault (stores wildcard certificates used by staging + production)
 module keyVault './modules/keyVault.bicep' = {
   scope: resourceGroup
@@ -56,6 +66,7 @@ module keyVault './modules/keyVault.bicep' = {
     location: location
     vaultName: keyVaultName
     adminObjectIds: keyVaultAdminObjectIds
+    logAnalyticsWorkspaceId: sharedMonitoring.outputs.logAnalyticsWorkspaceId
   }
 }
 

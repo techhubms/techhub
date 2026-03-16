@@ -19,6 +19,45 @@ param privateEndpointsSubnetName string = 'snet-private-endpoints'
 @description('Private endpoints subnet prefix')
 param privateEndpointsSubnetPrefix string = '10.0.2.0/24'
 
+// NSG for private endpoints subnet — only allows traffic from the Container Apps subnet
+resource privateEndpointsNsg 'Microsoft.Network/networkSecurityGroups@2025-01-01' = {
+  name: 'nsg-${privateEndpointsSubnetName}'
+  location: location
+  properties: {
+    securityRules: [
+      {
+        name: 'AllowContainerAppsSubnetInbound'
+        properties: {
+          priority: 100
+          direction: 'Inbound'
+          access: 'Allow'
+          protocol: 'Tcp'
+          sourceAddressPrefix: containerAppsSubnetPrefix
+          sourcePortRange: '*'
+          destinationAddressPrefix: privateEndpointsSubnetPrefix
+          destinationPortRanges: [
+            '443'   // Key Vault
+            '5432'  // PostgreSQL
+          ]
+        }
+      }
+      {
+        name: 'DenyAllOtherInbound'
+        properties: {
+          priority: 4096
+          direction: 'Inbound'
+          access: 'Deny'
+          protocol: '*'
+          sourceAddressPrefix: '*'
+          sourcePortRange: '*'
+          destinationAddressPrefix: '*'
+          destinationPortRange: '*'
+        }
+      }
+    ]
+  }
+}
+
 // Virtual Network
 resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
   name: vnetName
@@ -49,6 +88,9 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
         name: privateEndpointsSubnetName
         properties: {
           addressPrefix: privateEndpointsSubnetPrefix
+          networkSecurityGroup: {
+            id: privateEndpointsNsg.id
+          }
         }
       }
     ]
@@ -58,5 +100,5 @@ resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
 // Outputs
 output vnetId string = vnet.id
 output vnetName string = vnet.name
-output containerAppsSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, containerAppsSubnetName)
-output privateEndpointsSubnetId string = resourceId('Microsoft.Network/virtualNetworks/subnets', vnetName, privateEndpointsSubnetName)
+output containerAppsSubnetId string = vnet.properties.subnets[0].id
+output privateEndpointsSubnetId string = vnet.properties.subnets[1].id

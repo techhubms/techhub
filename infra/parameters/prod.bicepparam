@@ -31,4 +31,7 @@ param wildcardCertNames = {
   'hub.ms': 'wildcard-hub-ms'
   'xebia.ms': 'wildcard-xebia-ms'
 }
+// Azure AI Foundry (OpenAI)
+param openAiName = 'oai-techhub-prod'
+param openAiModelCapacity = 100
 

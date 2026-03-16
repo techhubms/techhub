@@ -1,5 +1,10 @@
+@description('Azure region for resources')
 param location string
+
+@description('Application Insights resource name')
 param appInsightsName string
+
+@description('Log Analytics Workspace name')
 param logAnalyticsWorkspaceName string
 
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
@@ -34,7 +39,4 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
 
 output appInsightsName string = appInsights.name
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
-output appInsightsInstrumentationKey string = appInsights.properties.InstrumentationKey
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
-// Note: appInsightsConnectionString uses reference() — unavoidable since it's a runtime property.
-// This may cause what-if false positives on resources that consume it.

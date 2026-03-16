@@ -14,10 +14,10 @@ param environmentName string
 var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
 
 @description('Optional custom domains (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
-param customDomains array = []
+param customDomains string[] = []
 
 @description('Primary host names for the SubdomainRedirectMiddleware configuration')
-param primaryHosts array = []
+param primaryHosts string[] = []
 
 @description('Key Vault certificate resource IDs for wildcard TLS (mapped by base domain, e.g. { "hub.ms": "cert-resource-id" }). When provided, domains use SniEnabled binding with these certs instead of managed certificates.')
 param wildcardCertificateIds object = {}
@@ -34,14 +34,6 @@ var staticEnvVars = [
   {
     name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
     value: appInsightsConnectionString
-  }
-  {
-    name: 'OTEL_EXPORTER_OTLP_ENDPOINT'
-    value: 'https://otlp.applicationinsights.azure.com/'
-  }
-  {
-    name: 'OTEL_EXPORTER_OTLP_HEADERS'
-    value: 'Authorization=Bearer ${appInsightsConnectionString}'
   }
   {
     name: 'ApiBaseUrl'

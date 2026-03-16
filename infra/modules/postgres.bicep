@@ -28,6 +28,17 @@ param skuTier string = 'GeneralPurpose'
 @description('Storage size in GB')
 param storageSizeGB int = 32
 
+@description('Enable storage auto-grow (recommended for production)')
+param storageAutoGrow bool = true
+
+@description('Backup retention in days (7-35)')
+@minValue(7)
+@maxValue(35)
+param backupRetentionDays int = 14
+
+@description('Enable geo-redundant backup for disaster recovery')
+param geoRedundantBackup bool = false
+
 // PostgreSQL Flexible Server
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: serverName
@@ -49,12 +60,12 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
     }
     storage: {
       storageSizeGB: storageSizeGB
-      autoGrow: 'Disabled'
+      autoGrow: storageAutoGrow ? 'Enabled' : 'Disabled'
       tier: 'P4'
     }
     backup: {
-      backupRetentionDays: 7
-      geoRedundantBackup: 'Disabled'
+      backupRetentionDays: backupRetentionDays
+      geoRedundantBackup: geoRedundantBackup ? 'Enabled' : 'Disabled'
     }
     highAvailability: {
       mode: 'Disabled'
