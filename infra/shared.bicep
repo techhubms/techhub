@@ -87,9 +87,19 @@ module keyVaultPrivateEndpoint './modules/keyVaultPrivateEndpoint.bicep' = {
 // Public DNS zone for ACME challenge delegation (certbot-dns-azure writes TXT records here)
 module acmeDnsZone './modules/acmeDnsZone.bicep' = {
   scope: resourceGroup
+  name: 'acmeDnsZone-deployment'
   params: {
     zoneName: acmeDnsZoneName
     delegatedDomains: acmeDelegatedDomains
+  }
+}
+
+// Shared PostgreSQL private DNS zone (linked by each spoke environment)
+module postgresDnsZone './modules/postgresDnsZone.bicep' = {
+  scope: resourceGroup
+  name: 'postgresDnsZone-deployment'
+  params: {
+    hubVnetId: hubNetwork.outputs.vnetId
   }
 }
 
@@ -105,3 +115,4 @@ output hubVnetName string = hubNetwork.outputs.vnetName
 output vpnGatewayId string = hubNetwork.outputs.vpnGatewayId
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
+output postgresDnsZoneName string = postgresDnsZone.outputs.dnsZoneName

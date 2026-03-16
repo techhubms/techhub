@@ -10,42 +10,13 @@ param subnetId string
 @description('Resource ID of the PostgreSQL Flexible Server to connect to')
 param postgresServerId string
 
-@description('VNet ID to link the private DNS zone to')
-param vnetId string
+@description('Shared resource group name where the PostgreSQL private DNS zone lives')
+param sharedResourceGroupName string
 
-@description('Hub VNet ID to also link the private DNS zone to (for VPN access)')
-param hubVnetId string = ''
-
-// Private DNS Zone for PostgreSQL Flexible Server private endpoints
-resource privateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' = {
+// Reference the shared PostgreSQL private DNS zone (created in shared.bicep)
+resource privateDnsZone 'Microsoft.Network/privateDnsZones@2024-06-01' existing = {
   name: 'privatelink.postgres.database.azure.com'
-  location: 'global'
-}
-
-// Link DNS Zone to spoke VNet so containers can resolve the PostgreSQL private IP
-resource privateDnsZoneLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = {
-  parent: privateDnsZone
-  name: '${privateEndpointName}-link'
-  location: 'global'
-  properties: {
-    registrationEnabled: false
-    virtualNetwork: {
-      id: vnetId
-    }
-  }
-}
-
-// Link DNS Zone to hub VNet so VPN clients can resolve the PostgreSQL private IP
-resource privateDnsZoneHubLink 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = if (!empty(hubVnetId)) {
-  parent: privateDnsZone
-  name: '${privateEndpointName}-hub-link'
-  location: 'global'
-  properties: {
-    registrationEnabled: false
-    virtualNetwork: {
-      id: hubVnetId
-    }
-  }
+  scope: resourceGroup(sharedResourceGroupName)
 }
 
 // Private Endpoint connecting to the PostgreSQL Flexible Server

@@ -180,7 +180,11 @@ for ($i = 0; $i -lt $domains.Count; $i++) {
 $iniContent = $iniLines -join "`n"
 Set-Content -Path $azureIniPath -Value $iniContent -NoNewline
 # Restrict permissions (certbot warns about world-readable credentials)
-chmod 600 $azureIniPath
+if (Get-Command -Name chmod -ErrorAction SilentlyContinue) {
+    chmod 600 $azureIniPath
+} else {
+    Write-Detail "Skipping chmod on $azureIniPath (not available on this platform)"
+}
 Write-Ok "Config written to $azureIniPath"
 Write-Detail "Contents:"
 Get-Content $azureIniPath | ForEach-Object { Write-Detail "  $_" }
@@ -234,8 +238,25 @@ if ($DryRun) {
 } else {
     Write-Step "Converting to PFX and importing to Key Vault"
 
+    # Validate environment for PFX conversion
+    if (-not $IsLinux) {
+        Write-Fail "PFX conversion requires a Linux environment (certbot stores certificates under /etc/letsencrypt/live)."
+        exit 1
+    }
+
+    if (-not (Get-Command openssl -ErrorAction SilentlyContinue)) {
+        Write-Fail "OpenSSL not found in PATH. Install OpenSSL before running this script."
+        exit 1
+    }
+
+    $letsencryptLiveDir = '/etc/letsencrypt/live'
+    if (-not (Test-Path $letsencryptLiveDir)) {
+        Write-Fail "Let's Encrypt live directory '$letsencryptLiveDir' not found. Ensure certbot has issued certificates."
+        exit 1
+    }
+
     foreach ($domain in $domains) {
-        $certDir = "/etc/letsencrypt/live/$($domain.CertName)"
+        $certDir = Join-Path $letsencryptLiveDir $domain.CertName
         $pfxPath = Join-Path ([System.IO.Path]::GetTempPath()) "$($domain.CertName).pfx"
 
         if (-not (Test-Path "$certDir/fullchain.pem")) {

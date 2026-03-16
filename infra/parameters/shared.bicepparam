@@ -4,9 +4,10 @@ param location = 'westeurope'
 param resourceGroupName = 'rg-techhub-shared'
 param containerRegistryName = 'crtechhubms'
 param keyVaultName = 'kv-techhub-shared'
-// Add your Azure AD object ID(s) here for Key Vault admin access
+// Add your Azure AD object ID(s) here for Key Vault admin access.
 // Find yours with: az ad signed-in-user show --query id -o tsv
-param keyVaultAdminObjectIds = ['1d5edea4-78d4-4db8-bce1-a0a6519f9323']
+// Override in environment-specific parameter files or local overrides.
+param keyVaultAdminObjectIds = []
 param hubVnetName = 'vnet-techhub-hub'
 param vpnGatewayName = 'vpng-techhub'
 // Uses the Microsoft-registered App ID for VPN auth — no manual app registration needed.

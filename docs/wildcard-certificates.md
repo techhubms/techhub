@@ -72,7 +72,7 @@ Wildcard certificates from Key Vault are loaded into each Container Apps Environ
 
 - **Certificate loading**: `infra/modules/wildcardCertificates.bicep` + `wildcardCert.bicep`
 - **Key Vault access**: `infra/modules/kvSecretsUserRole.bicep` grants the environment's managed identity Key Vault Secrets User role
-- **Domain binding**: `infra/modules/web.bicep` uses `bindingType: 'SniEnabled'` with the wildcard cert for matching base domains, or falls back to `bindingType: 'Auto'` (managed certs) for domains without wildcard coverage
+- **Domain binding**: `infra/modules/web.bicep` uses `bindingType: 'SniEnabled'` with the wildcard cert for all custom domains. Every domain must have a matching wildcard certificate configured — there is no automatic fallback. If a certificate is missing for a domain, deployment will fail, ensuring misconfigurations are caught immediately
 - **Configuration**: Set `wildcardCertNames` in environment parameter files (e.g., `{ "hub.ms": "wildcard-hub-ms" }`)
 
 ## Certificate Renewal

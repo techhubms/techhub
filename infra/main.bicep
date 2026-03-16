@@ -194,6 +194,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
 // The managed identity needs Key Vault Secrets User on the shared KV.
 module wildcardCerts './modules/wildcardCertificates.bicep' = if (!empty(wildcardCertNames)) {
   scope: resourceGroup
+  name: 'wildcardCerts-${environmentName}'
   params: {
     location: location
     containerAppsEnvironmentName: containerAppsEnvName
@@ -235,8 +236,19 @@ module postgresPrivateEndpoint './modules/postgresPrivateEndpoint.bicep' = {
     privateEndpointName: 'pe-psql-techhub-${environmentName}'
     subnetId: network.outputs.privateEndpointsSubnetId
     postgresServerId: postgres.outputs.serverId
+    sharedResourceGroupName: sharedResourceGroupName
+  }
+}
+
+// Link shared PostgreSQL private DNS zone to this spoke VNet
+// so Container Apps can resolve the PostgreSQL private endpoint
+module postgresDnsLink './modules/privateDnsZoneLink.bicep' = {
+  scope: sharedResourceGroup
+  name: 'postgresDnsLink-${environmentName}'
+  params: {
+    dnsZoneName: 'privatelink.postgres.database.azure.com'
+    linkName: 'link-psql-${vnetName}'
     vnetId: network.outputs.vnetId
-    hubVnetId: hubVnetId
   }
 }
 

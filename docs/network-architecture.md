@@ -94,14 +94,14 @@ Private DNS zones ensure all consumers can resolve private endpoint IPs:
 | Zone | Created By | Linked To |
 |------|-----------|-----------|
 | `privatelink.vaultcore.azure.net` | KV PE module (shared RG) | Hub VNet + each spoke VNet |
-| `privatelink.postgres.database.azure.com` | PG PE module (env RG) | Spoke VNet + Hub VNet |
+| `privatelink.postgres.database.azure.com` | Postgres DNS zone module (shared RG) | Hub VNet + each spoke VNet |
 
 This means both Container Apps (in spokes) and VPN clients (via hub) resolve the correct private IPs.
 
 ## Deploy Order
 
-1. **Shared** (`rg-techhub-shared`): ACR, Key Vault, Hub VNet, VPN Gateway, KV Private Endpoint, ACME DNS Zone
-2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, Container Apps, PostgreSQL, PostgreSQL PE, KV DNS zone link
+1. **Shared** (`rg-techhub-shared`): ACR, Key Vault, Hub VNet, VPN Gateway, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone
+2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, Container Apps, PostgreSQL, PostgreSQL PE, KV DNS zone link, PostgreSQL DNS zone link
 
 Shared must be deployed first — spoke deployments reference the hub VNet ID for peering.
 
@@ -114,6 +114,7 @@ Shared must be deployed first — spoke deployments reference the hub VNet ID fo
 - Key Vault PE: [infra/modules/keyVaultPrivateEndpoint.bicep](../infra/modules/keyVaultPrivateEndpoint.bicep)
 - PostgreSQL: [infra/modules/postgres.bicep](../infra/modules/postgres.bicep)
 - PostgreSQL PE: [infra/modules/postgresPrivateEndpoint.bicep](../infra/modules/postgresPrivateEndpoint.bicep)
+- PostgreSQL DNS Zone: [infra/modules/postgresDnsZone.bicep](../infra/modules/postgresDnsZone.bicep)
 - DNS Zone Link: [infra/modules/privateDnsZoneLink.bicep](../infra/modules/privateDnsZoneLink.bicep)
 - Shared orchestration: [infra/shared.bicep](../infra/shared.bicep)
 - Environment orchestration: [infra/main.bicep](../infra/main.bicep)
