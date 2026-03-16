@@ -18,4 +18,5 @@ param postgresServerName = 'psql-techhub-staging'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
 // Custom domains (requires CNAME + TXT record in GoDaddy DNS first)
-param webCustomDomains = ['staging-tech.hub.ms']
+param primaryHosts = ['staging-tech.hub.ms']
+param subdomainShortcuts = {}

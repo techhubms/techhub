@@ -17,6 +17,18 @@ param vnetName = 'vnet-techhub-prod'
 param postgresServerName = 'psql-techhub-prod'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
-// Custom domains (requires CNAME + TXT records in GoDaddy DNS first)
-// Wildcard domains handle subdomain shortcuts (ghc.xebia.ms -> /github-copilot, etc.)
-param webCustomDomains = ['tech.hub.ms', 'tech.xebia.ms', '*.hub.ms', '*.xebia.ms']
+// Custom domains — primary hosts + subdomain shortcuts (requires CNAME records in GoDaddy DNS)
+// Wildcard CNAME in GoDaddy routes all *.hub.ms / *.xebia.ms traffic to the Container App.
+// Each shortcut subdomain is registered explicitly so Azure can issue managed certificates.
+param primaryHosts = ['tech.hub.ms', 'tech.xebia.ms']
+param subdomainShortcuts = {
+  all: 'all'
+  'github-copilot': 'github-copilot'
+  ghc: 'github-copilot'
+  ai: 'ai'
+  ml: 'ml'
+  devops: 'devops'
+  azure: 'azure'
+  dotnet: 'dotnet'
+  security: 'security'
+}
