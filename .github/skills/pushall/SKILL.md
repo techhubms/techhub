@@ -378,7 +378,15 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     gh pr list --head [BRANCHNAME] --state open --json number,title,url
     ```
 
-    If the command returns a PR, note its number for step 20.
+    If the command returns a PR:
+    - Note its number for step 20
+    - Fetch the existing PR title and body so you can build on them in step 20:
+
+      ```pwsh
+      gh pr view [PR_NUMBER] --json title,body
+      ```
+
+    - Read and understand the existing PR title and body content. Store them INTERNALLY for use in step 20.
 
     **If `branch.remote.exists` is false (no remote branch):**
 
@@ -388,20 +396,30 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
 20. **UPDATE existing PR or CREATE new PR:**
 
-    Use the exact PR title and description you prepared in step 18 based on your comprehensive analysis to update or create a pull request, based on the outcome of step 19.
+    Based on the outcome of step 19, either update an existing PR or create a new one.
 
     **CRITICAL**: After this step you are NOT done yet, keep following the steps!
-    **CRITICAL**: First, write the PR description to `.tmp/git-changes-analysis/pr-description.txt` so it can be passed cleanly to the CLI:
-
-    ```pwsh
-    @"
-    [Your actual PR description here]
-    "@ | Out-File -FilePath ".tmp/git-changes-analysis/pr-description.txt" -Encoding utf8
-    ```
 
     **If there is an existing PR:**
 
-    Update the pull request title and description:
+    **CRITICAL**: Do NOT replace the existing PR description wholesale. Instead, MERGE the new analysis (from step 18) with the existing PR content (fetched in step 19) to produce an updated description. Follow these rules:
+
+    - **Preserve** existing information that is still accurate and relevant
+    - **Add** new information about the latest changes that is missing from the existing description
+    - **Update** sections where the content has changed (e.g., revised behavior, updated file lists)
+    - **Remove** information that is no longer accurate (e.g., references to files or behavior that no longer exist in the branch)
+    - **Keep** the same structural format and section headings as the existing description when possible
+    - For the **title**: keep the existing title if it still accurately describes the overall PR scope; only update it if the scope has meaningfully changed
+
+    Write the merged PR description to `.tmp/git-changes-analysis/pr-description.txt`:
+
+    ```pwsh
+    @"
+    [Your merged PR description here]
+    "@ | Out-File -FilePath ".tmp/git-changes-analysis/pr-description.txt" -Encoding utf8
+    ```
+
+    Then update the pull request:
 
     ```pwsh
     gh pr edit [PR_NUMBER] --title "[PR_TITLE]" --body-file ".tmp/git-changes-analysis/pr-description.txt"
@@ -410,6 +428,16 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     - Do NOT display the updated PR information. This will happen later.
 
     **If there is no existing PR:**
+
+    Use the exact PR title and description you prepared in step 18.
+
+    Write the PR description to `.tmp/git-changes-analysis/pr-description.txt`:
+
+    ```pwsh
+    @"
+    [Your actual PR description here]
+    "@ | Out-File -FilePath ".tmp/git-changes-analysis/pr-description.txt" -Encoding utf8
+    ```
 
     Create a pull request with the head branch set to your current branch and base branch to main:
 
