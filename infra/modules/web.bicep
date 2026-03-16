@@ -17,8 +17,51 @@ var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
 @description('Optional custom domains (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
 param customDomains array = []
 
+@description('Subdomain shortcut mapping for the SubdomainRedirectMiddleware configuration')
+param subdomainShortcuts object = {}
+
+@description('Primary host names for the SubdomainRedirectMiddleware configuration')
+param primaryHosts array = []
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
+
+// Environment variables: static config + dynamic shortcuts/primary hosts from Bicep params
+var staticEnvVars = [
+  {
+    name: 'ASPNETCORE_ENVIRONMENT'
+    value: aspnetEnvironment
+  }
+  {
+    name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
+    value: appInsightsConnectionString
+  }
+  {
+    name: 'OTEL_EXPORTER_OTLP_ENDPOINT'
+    value: 'https://otlp.applicationinsights.azure.com/'
+  }
+  {
+    name: 'OTEL_EXPORTER_OTLP_HEADERS'
+    value: 'Authorization=Bearer ${appInsightsConnectionString}'
+  }
+  {
+    name: 'ApiBaseUrl'
+    value: 'https://${apiBaseUrl}'
+  }
+  {
+    name: 'TECHHUB_TMP'
+    value: '/tmp/techhub'
+  }
+]
+var shortcutEnvVars = [for item in items(subdomainShortcuts): {
+  name: 'SubdomainShortcuts__${item.key}'
+  value: item.value
+}]
+var primaryHostEnvVars = [for (host, i) in primaryHosts: {
+  name: 'PrimaryHosts__${i}'
+  value: host
+}]
+var allEnvVars = concat(staticEnvVars, shortcutEnvVars, primaryHostEnvVars)
 
 // Reference the managed environment (needed for managed certificate)
 resource containerAppsEnv 'Microsoft.App/managedEnvironments@2025-07-01' existing = {
@@ -68,32 +111,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
             cpu: json('0.5')
             memory: '1Gi'
           }
-          env: [
-            {
-              name: 'ASPNETCORE_ENVIRONMENT'
-              value: aspnetEnvironment
-            }
-            {
-              name: 'APPLICATIONINSIGHTS_CONNECTION_STRING'
-              value: appInsightsConnectionString
-            }
-            {
-              name: 'OTEL_EXPORTER_OTLP_ENDPOINT'
-              value: 'https://otlp.applicationinsights.azure.com/'
-            }
-            {
-              name: 'OTEL_EXPORTER_OTLP_HEADERS'
-              value: 'Authorization=Bearer ${appInsightsConnectionString}'
-            }
-            {
-              name: 'ApiBaseUrl'
-              value: 'https://${apiBaseUrl}'
-            }
-            {
-              name: 'TECHHUB_TMP'
-              value: '/tmp/techhub'
-            }
-          ]
+          env: allEnvVars
           probes: [
             {
               type: 'startup'

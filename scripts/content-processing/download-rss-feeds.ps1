@@ -78,6 +78,7 @@ try {
 
     # Sort feeds by collection order, fallback to name for unknown collections
     $feedConfigs = $feedConfigs | Sort-Object {
+        if ($null -eq $_) { return 60 }
         $order = $collectionOrder[$_.outputDir]
         if ($order) { $order } else { 60 }
     }

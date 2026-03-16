@@ -98,7 +98,7 @@ try {
     # Get all collection directories and sort by priority
     $collectionDirs = @(Get-ChildItem -Path $dataDir -Directory) | Where-Object { 
         $collectionOrder.ContainsKey($_.Name) 
-    } | Sort-Object { $collectionOrder[$_.Name] }
+    } | Sort-Object { if ($null -eq $_) { return 999 }; $collectionOrder[$_.Name] }
     
     if (-not $collectionDirs -or $collectionDirs.Count -eq 0) {
         Write-Host "⚠️ No collection directories found to process"
