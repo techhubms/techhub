@@ -86,51 +86,6 @@ param(
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-# Function to validate AI response format
-function Test-AiResponseFormat {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$Response,
-        [Parameter(Mandatory = $true)]
-        [string]$StepName
-    )
-    
-    # Check if response indicates an error
-    if ($Response -like "*I cannot*" -or $Response -like "*I'm unable*" -or $Response -like "*I don't have*") {
-        return @{
-            IsValid      = $false
-            ErrorMessage = "AI indicated it cannot complete the request: $($Response.Substring(0, [Math]::Min(200, $Response.Length)))"
-        }
-    }
-    
-    # Check if response contains error JSON
-    if ($Response -like "*`"Error`": true*") {
-        try {
-            $errorObj = $Response | ConvertFrom-Json
-            Write-Host "❌ $StepName failed with error type: $($errorObj.Type)" -ForegroundColor Red
-            if ($errorObj.ResponseContent) {
-                Write-Host "Response content: $($errorObj.ResponseContent)" -ForegroundColor Red
-            }
-            return @{ IsValid = $false; ErrorType = $errorObj.Type; ErrorMessage = "$StepName failed: $($errorObj.Type)" }
-        }
-        catch {
-            Write-Host "❌ $StepName failed but could not parse error response" -ForegroundColor Red
-            Write-Host "Raw response: $Response" -ForegroundColor Red
-            return @{ IsValid = $false; ErrorType = "UnparseableError"; ErrorMessage = "$StepName failed with unparseable error response" }
-        }
-    }
-    
-    # Check if response is empty or too short to be useful
-    if ([string]::IsNullOrWhiteSpace($Response) -or $Response.Length -lt 10) {
-        Write-Host "❌ $StepName returned empty or too short response" -ForegroundColor Red
-        Write-Host "Response length: $($Response.Length)" -ForegroundColor Red
-        return @{ IsValid = $false; ErrorType = "EmptyResponse"; ErrorMessage = "$StepName returned empty or too short response" }
-    }
-    
-    # Response appears to be successful
-    return @{ IsValid = $true; ErrorType = $null; ErrorMessage = $null }
-}
-
 # Function to analyze grouping quality in generated content
 function Test-GroupingQuality {
     param(
@@ -611,6 +566,14 @@ $articleContent
             # Check for errors
             $analysisResult = Test-AiResponseFormat -Response $response -StepName "Step 2 (Filter and analysis for $articleName)"
             if (-not $analysisResult.IsValid) {
+                # Content filter errors are recoverable - skip the article and continue
+                if ($analysisResult.ErrorType -eq "ContentFilter") {
+                    $excludedCount++
+                    Write-Host "  ⚠️ SKIPPED - Content filter triggered for $articleName" -ForegroundColor Yellow
+                    Write-Host "  📝 This is likely a false positive. The article will be excluded from this roundup." -ForegroundColor Yellow
+                    Write-Host "✅ Article $articleNum processing completed (skipped due to content filter)"
+                    continue
+                }
                 throw $analysisResult.ErrorMessage
             }
 
