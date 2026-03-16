@@ -203,7 +203,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be committed and pushed on branch '[BRANCHNAME]' with message:" -Message "" -MessageFile ".tmp/git-changes-analysis/commit-message.txt" -Delay 20
     ```
-
+    
     **CHECKPOINT**: Based on exit code, state either:
     - **Exit code 0 (user did not abort):** "✅ Step 10 completed successfully. User confirmed commit message. Moving to Step 11."
     - **Exit code 1 (user aborted):** "❌ Step 10 aborted by user. Asking what's wrong and stopping workflow."
@@ -227,27 +227,27 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 13. **Synchronize with remote branch:** After committing, ensure your branch is synchronized with the remote branch to get the latest changes.
 
     Read the `branch.remote.exists` and `branch.remote.hasUpdates` fields from the git-changes-analysis.json file in the `.tmp/git-changes-analysis/` directory.
-
+    
     **If `branch.remote.exists` is false OR `branch.remote.hasUpdates` is false:**
     Skip the remote pull operation.
-
+    
     **If `branch.remote.exists` is true and `branch.remote.hasUpdates` is true:**
 
     ```pwsh
     git pull --rebase
     ```
-
+    
     **CRITICAL**: If the rebase stops for any reason, use the [Branch Rebase Instructions](#branch-rebase-instructions) section below. When you are done rebasing, you must continue with the main workflow steps, starting from the checkpoint in this step.
 
     **CHECKPOINT**: "✅ Step 13 completed successfully. Remote branch synchronization complete. Moving to Step 14."
-
+    
 14. **Synchronize with main branch:** Ensure your branch maintains a clean history by rebasing onto the remote main branch.
 
     Read the `branch.main.hasUpdates` field from the git-changes-analysis.json file in the `.tmp/git-changes-analysis/` directory.
-
+    
     **If `branch.main.hasUpdates` is false:**
     Your branch is already up-to-date with main.
-
+    
     **If `branch.main.hasUpdates` is true:**
 
     First, fetch the latest changes from the remote main branch:
@@ -261,7 +261,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     git rebase origin/main
     ```
-
+    
     **CRITICAL**: If the rebase stops for any reason, use the [Branch Rebase Instructions](#branch-rebase-instructions) section below. When you are done rebasing, you must continue with the main workflow steps, starting from the checkpoint in this step.
 
     **CHECKPOINT**: "✅ Step 14 completed successfully. Main branch synchronization complete. Moving to Step 15."
@@ -275,7 +275,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     git push --set-upstream origin [BRANCHNAME]
     ```
-
+    
     **If `branch.remote.exists` is true (existing branch):**
 
     If you rebased in step 13 or step 14, the branch history has been rewritten. Use `--force-with-lease` to push safely:
@@ -289,9 +289,9 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     git push
     ```
-
+    
     **CHECKPOINT**: "✅ Step 15 completed successfully. Changes pushed to remote branch [BRANCHNAME]. Moving to Step 16."
-
+    
 16. **Ask user about pull request creation/updating:**
 
     Use the delay script to ask the user if they want to proceed with pull request operations:
@@ -310,11 +310,11 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     **CRITICAL**: This step is DIFFERENT than what you did earlier in steps 8 to 15, so do NOT confuse them and DO NOT skip any of the following steps.
     **CRITICAL**: Do NOT reuse anything from step 8 to 15.
     **CRITICAL**: Execute the following command EXACTLY AS IS including the `-CompareWithMain` flag:
-
+    
     ```pwsh
     ./.github/skills/pushall/get-git-changes.ps1 -CompareWithMain
     ```
-
+    
     **CHECKPOINT**: "✅ Step 17 completed successfully. Moving to Step 18."
 
 18. **ANALYZE data from step 17 and PREPARE pull request TITLE and MESSAGE:**
@@ -328,19 +328,19 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     - What specific functionality was added, modified, or removed?
     - What user-facing or developer-facing capabilities changed?
     - What systems, components, or processes were affected?
-
+    
     **Questions on WHY it was necessary (Problem & Context):**
     - What problem or need drove these changes?
     - What pain points were addressed?
     - How do these changes align with recent repository activity?
     - What value do they provide to the project and its users?
-
+    
     **Questions on HOW functionality changed (Old vs New):**
     - What was the previous behavior or state?
     - What is the new behavior or state?
     - What workflows or experiences are different now?
     - What are the key technical improvements or architectural changes?
-
+    
     **Questions on Change Type:**
     Depending on the primary change type, answer the correct question:
     - New Feature: What new capability was added?
@@ -349,13 +349,13 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     - Refactoring: What structure was improved and why?
     - Documentation: What knowledge was added or updated?
     - Configuration: What setup or deployment changes were made?
-
+    
     **Questions on Impact:**
     - User Impact: How will end users experience these changes?
     - Developer Impact: How will developers work differently?
     - System Impact: What internal processes or behaviors changed?
     - Quality Impact: How do these changes improve code quality, performance, or maintainability?
-
+    
     As the FINAL thing in step 18, do the following:
 
     **CRITICAL**: Synthesize your analysis into the following and store it INTERNALLY for later use:
@@ -369,7 +369,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     Read the `branch.remote.exists` field from `.tmp/git-changes-analysis/git-changes-analysis.json` to determine if there can be existing pull requests.
 
     **CRITICAL**: Do NOT create or update a PR yet, we will do that in the next step.
-
+    
     **If `branch.remote.exists` is true (remote branch exists):**
 
     Check if there is already an open pull request for the current branch:
@@ -379,11 +379,11 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```
 
     If the command returns a PR, note its number for step 20.
-
+    
     **If `branch.remote.exists` is false (no remote branch):**
 
     - Do nothing, because there is no remote branch and there can be no pull request.
-
+   
     **CHECKPOINT**: "✅ Step 19 completed successfully. Existing PR check complete. Moving to Step 20."
 
 20. **UPDATE existing PR or CREATE new PR:**
@@ -395,7 +395,6 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
     ```pwsh
     @"
-
     [Your actual PR description here]
     "@ | Out-File -FilePath ".tmp/git-changes-analysis/pr-description.txt" -Encoding utf8
     ```
@@ -430,13 +429,13 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     gh pr view [PR_NUMBER] --json reviews --jq '.reviews[] | select(.author.login == "copilot-pull-request-reviewer") | .state'
     ```
-
+    
     **If no Copilot review exists:**
 
     ```pwsh
     pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, a Copilot code review will be requested for this pull request" -Delay 5
     ```
-
+    
     **If Copilot has already reviewed:**
 
     ```pwsh
