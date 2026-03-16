@@ -198,6 +198,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
     environmentName: containerAppsEnvName
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     infrastructureSubnetId: network.outputs.containerAppsSubnetId
+    identityId: identity.outputs.identityId
   }
 }
 

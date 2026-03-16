@@ -5,9 +5,20 @@ param logAnalyticsWorkspaceId string
 @description('Subnet resource ID for VNet integration')
 param infrastructureSubnetId string
 
+@description('Optional user-assigned managed identity resource ID (needed for Key Vault certificate access)')
+param identityId string = ''
+
 resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-07-01' = {
   name: environmentName
   location: location
+  identity: !empty(identityId) ? {
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${identityId}': {}
+    }
+  } : {
+    type: 'None'
+  }
   properties: {
     appLogsConfiguration: {
       destination: 'azure-monitor'
