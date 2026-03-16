@@ -26,7 +26,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 8**: If something fails, goes wrong, something unexpected happens or you need to make a choice and the current workflow steps do not provide a clear answer or instruction, ALWAYS ask the user what to do instead of making assumptions or guessing.
 
-**🚨 ABSOLUTE CRITICAL REQUIREMENT 9**: Exclusively use the GitHub MCP tools for GitHub related actions, such as listing, creating, and updating pull requests, or listing and requesting code reviews. **Never** use `gh`
+**🚨 ABSOLUTE CRITICAL REQUIREMENT 9**: Exclusively use the `gh` CLI for GitHub related actions, such as listing, creating, and updating pull requests, or listing and requesting code reviews. **Never** use GitHub MCP tools
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 10**: Throughout this workflow, maintain these variables:
 
@@ -67,7 +67,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     Then use the delay script to ask if the user wants to move changes to a new branch:
 
     ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "You are on the main branch. If you do nothing, a branch will be created for you with the name:" -Message "[BRANCHNAME]" -Delay 10
+    ./.github/skills/pushall/pushall-delay.ps1 -Warning "You are on the main branch. If you do nothing, a branch will be created for you with the name:" -Message "[BRANCHNAME]" -Delay 10
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
@@ -101,7 +101,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 7. **Confirm branch:** You are not on the main branch. Confirm the user wants to continue on the current branch.
 
     ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be pushed on branch:" -Message "[BRANCHNAME]" -Delay 10
+    ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be pushed on branch:" -Message "[BRANCHNAME]" -Delay 10
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
@@ -117,7 +117,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     **Call the get-git-changes script to perform the first comprehensive analysis of all workspace changes:**
 
     ```pwsh
-    pwsh ./.github/skills/pushall/get-git-changes.ps1
+    ./.github/skills/pushall/get-git-changes.ps1
     ```
 
     This script captures comprehensive git changes analysis, including git status, individual diff files, and branch information, saving it to `.tmp/git-changes-analysis/` directory. The main analysis data is in `git-changes-analysis.json` and individual `.diff` files are created for each changed file.
@@ -125,7 +125,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     After the script completes, check if the file exists:
 
     ```pwsh
-    pwsh -Command 'if (-not (Test-Path ".tmp/git-changes-analysis/git-changes-analysis.json")) { throw "Analysis file was not created. Script may have failed." }'
+    if (-not (Test-Path ".tmp/git-changes-analysis/git-changes-analysis.json")) { throw "Analysis file was not created. Script may have failed." }
     ```
 
     **CRITICAL**: After successful verification, perform a really thorough analysis of ALL changes:**
@@ -162,7 +162,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     - For the summary, focus on the PURPOSE and INTENT behind the changes, not just what was changed. The implementation can be more technical.
     - Use bullet points that explain WHY you're making these changes.
 
-    ```
+    ```text
     [Brief descriptive title - max 50 characters]
 
     Summary: [Brief explanation of what this commit does and why - max 50 words, prefer less]
@@ -175,7 +175,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
     **Example STRUCTURED commit message:**
 
-    ```
+    ```text
     Improve developer workflow automation reliability
 
     Summary: Enhanced git workflow automation with better change analysis and structured commit generation to reduce developer friction and improve process reliability.
@@ -189,10 +189,9 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     **CRITICAL**: After creating the structured commit message, write it directly to `.tmp/git-changes-analysis/commit-message.txt` file using this exact command format:
 
     ```pwsh
-    pwsh -Command '@"
-
-[Your actual commit message content here]
-"@ | Out-File -FilePath ".tmp/git-changes-analysis/commit-message.txt" -Encoding utf8'
+    @"
+    [Your actual commit message content here]
+    "@ | Out-File -FilePath ".tmp/git-changes-analysis/commit-message.txt" -Encoding utf8
     ```
 
     Replace `[Your actual commit message content here]` with the commit message you prepared.
@@ -202,9 +201,9 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 10. **Get user confirmation:** Use the delay script to confirm the commit message you prepared:
 
     ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be committed and pushed on branch '[BRANCHNAME]' with message:" -Message "" -MessageFile ".tmp/git-changes-analysis/commit-message.txt" -Delay 20
+    ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, your changes will be committed and pushed on branch '[BRANCHNAME]' with message:" -Message "" -MessageFile ".tmp/git-changes-analysis/commit-message.txt" -Delay 20
     ```
-    
+
     **CHECKPOINT**: Based on exit code, state either:
     - **Exit code 0 (user did not abort):** "✅ Step 10 completed successfully. User confirmed commit message. Moving to Step 11."
     - **Exit code 1 (user aborted):** "❌ Step 10 aborted by user. Asking what's wrong and stopping workflow."
@@ -228,27 +227,27 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 13. **Synchronize with remote branch:** After committing, ensure your branch is synchronized with the remote branch to get the latest changes.
 
     Read the `branch.remote.exists` and `branch.remote.hasUpdates` fields from the git-changes-analysis.json file in the `.tmp/git-changes-analysis/` directory.
-    
+
     **If `branch.remote.exists` is false OR `branch.remote.hasUpdates` is false:**
     Skip the remote pull operation.
-    
+
     **If `branch.remote.exists` is true and `branch.remote.hasUpdates` is true:**
 
     ```pwsh
     git pull --rebase
     ```
-    
+
     **CRITICAL**: If the rebase stops for any reason, use the [Branch Rebase Instructions](#branch-rebase-instructions) section below. When you are done rebasing, you must continue with the main workflow steps, starting from the checkpoint in this step.
 
     **CHECKPOINT**: "✅ Step 13 completed successfully. Remote branch synchronization complete. Moving to Step 14."
-    
+
 14. **Synchronize with main branch:** Ensure your branch maintains a clean history by rebasing onto the remote main branch.
 
     Read the `branch.main.hasUpdates` field from the git-changes-analysis.json file in the `.tmp/git-changes-analysis/` directory.
-    
+
     **If `branch.main.hasUpdates` is false:**
     Your branch is already up-to-date with main.
-    
+
     **If `branch.main.hasUpdates` is true:**
 
     First, fetch the latest changes from the remote main branch:
@@ -262,7 +261,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     git rebase origin/main
     ```
-    
+
     **CRITICAL**: If the rebase stops for any reason, use the [Branch Rebase Instructions](#branch-rebase-instructions) section below. When you are done rebasing, you must continue with the main workflow steps, starting from the checkpoint in this step.
 
     **CHECKPOINT**: "✅ Step 14 completed successfully. Main branch synchronization complete. Moving to Step 15."
@@ -276,7 +275,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     git push --set-upstream origin [BRANCHNAME]
     ```
-    
+
     **If `branch.remote.exists` is true (existing branch):**
 
     If you rebased in step 13 or step 14, the branch history has been rewritten. Use `--force-with-lease` to push safely:
@@ -290,15 +289,15 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```pwsh
     git push
     ```
-    
+
     **CHECKPOINT**: "✅ Step 15 completed successfully. Changes pushed to remote branch [BRANCHNAME]. Moving to Step 16."
-    
+
 16. **Ask user about pull request creation/updating:**
 
     Use the delay script to ask the user if they want to proceed with pull request operations:
 
     ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, the system will start with PR operations." -Delay 30
+    ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, the system will start with PR operations." -Delay 30
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
@@ -311,11 +310,11 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     **CRITICAL**: This step is DIFFERENT than what you did earlier in steps 8 to 15, so do NOT confuse them and DO NOT skip any of the following steps.
     **CRITICAL**: Do NOT reuse anything from step 8 to 15.
     **CRITICAL**: Execute the following command EXACTLY AS IS including the `-CompareWithMain` flag:
-    
+
     ```pwsh
-    pwsh ./.github/skills/pushall/get-git-changes.ps1 -CompareWithMain
+    ./.github/skills/pushall/get-git-changes.ps1 -CompareWithMain
     ```
-    
+
     **CHECKPOINT**: "✅ Step 17 completed successfully. Moving to Step 18."
 
 18. **ANALYZE data from step 17 and PREPARE pull request TITLE and MESSAGE:**
@@ -329,19 +328,19 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     - What specific functionality was added, modified, or removed?
     - What user-facing or developer-facing capabilities changed?
     - What systems, components, or processes were affected?
-    
+
     **Questions on WHY it was necessary (Problem & Context):**
     - What problem or need drove these changes?
     - What pain points were addressed?
     - How do these changes align with recent repository activity?
     - What value do they provide to the project and its users?
-    
+
     **Questions on HOW functionality changed (Old vs New):**
     - What was the previous behavior or state?
     - What is the new behavior or state?
     - What workflows or experiences are different now?
     - What are the key technical improvements or architectural changes?
-    
+
     **Questions on Change Type:**
     Depending on the primary change type, answer the correct question:
     - New Feature: What new capability was added?
@@ -350,13 +349,13 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     - Refactoring: What structure was improved and why?
     - Documentation: What knowledge was added or updated?
     - Configuration: What setup or deployment changes were made?
-    
+
     **Questions on Impact:**
     - User Impact: How will end users experience these changes?
     - Developer Impact: How will developers work differently?
     - System Impact: What internal processes or behaviors changed?
     - Quality Impact: How do these changes improve code quality, performance, or maintainability?
-    
+
     As the FINAL thing in step 18, do the following:
 
     **CRITICAL**: Synthesize your analysis into the following and store it INTERNALLY for later use:
@@ -370,15 +369,21 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     Read the `branch.remote.exists` field from `.tmp/git-changes-analysis/git-changes-analysis.json` to determine if there can be existing pull requests.
 
     **CRITICAL**: Do NOT create or update a PR yet, we will do that in the next step.
-    
+
     **If `branch.remote.exists` is true (remote branch exists):**
-    
-    - Use the GitHub MCP tools to CHECK if there is already an open pull request for the current branch. 
-    
+
+    Check if there is already an open pull request for the current branch:
+
+    ```pwsh
+    gh pr list --head [BRANCHNAME] --state open --json number,title,url
+    ```
+
+    If the command returns a PR, note its number for step 20.
+
     **If `branch.remote.exists` is false (no remote branch):**
 
     - Do nothing, because there is no remote branch and there can be no pull request.
-   
+
     **CHECKPOINT**: "✅ Step 19 completed successfully. Existing PR check complete. Moving to Step 20."
 
 20. **UPDATE existing PR or CREATE new PR:**
@@ -386,28 +391,52 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     Use the exact PR title and description you prepared in step 18 based on your comprehensive analysis to update or create a pull request, based on the outcome of step 19.
 
     **CRITICAL**: After this step you are NOT done yet, keep following the steps!
+    **CRITICAL**: First, write the PR description to `.tmp/git-changes-analysis/pr-description.txt` so it can be passed cleanly to the CLI:
+
+    ```pwsh
+    @"
+
+    [Your actual PR description here]
+    "@ | Out-File -FilePath ".tmp/git-changes-analysis/pr-description.txt" -Encoding utf8
+    ```
 
     **If there is an existing PR:**
-    - Update the pull request title and description.
+
+    Update the pull request title and description:
+
+    ```pwsh
+    gh pr edit [PR_NUMBER] --title "[PR_TITLE]" --body-file ".tmp/git-changes-analysis/pr-description.txt"
+    ```
+
     - Do NOT display the updated PR information. This will happen later.
 
     **If there is no existing PR:**
-    - Create a pull request using the GitHub MCP tools.
-    - Set head branch to your current branch and base branch to main
-    - Do NOT display the updated PR information. This will happen later.
+
+    Create a pull request with the head branch set to your current branch and base branch to main:
+
+    ```pwsh
+    gh pr create --base main --head [BRANCHNAME] --title "[PR_TITLE]" --body-file ".tmp/git-changes-analysis/pr-description.txt"
+    ```
+
+    - Note the PR number from the output for subsequent steps.
+    - Do NOT display the created PR information. This will happen later.
 
     **CHECKPOINT**: "✅ Step 20 completed successfully. PR created/updated with prepared title and description. Moving to Step 21."
 
 21. **Request Copilot review:**
 
-    **CRITICAL**: Use the GitHub MCP tools to check if Copilot has already reviewed the PR. Then do the following:
-    
+    First, check if Copilot has already reviewed the PR:
+
+    ```pwsh
+    gh pr view [PR_NUMBER] --json reviews --jq '.reviews[] | select(.author.login == "copilot-pull-request-reviewer") | .state'
+    ```
+
     **If no Copilot review exists:**
 
     ```pwsh
     pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, a Copilot code review will be requested for this pull request" -Delay 5
     ```
-    
+
     **If Copilot has already reviewed:**
 
     ```pwsh
@@ -415,7 +444,12 @@ description: "Step-by-step workflow for safely and precisely executing code and 
     ```
 
     **CHECKPOINT**: Based on exit code, state either:
-    - **Exit code 0 (user did not abort):** Use the GitHub MCP tools to request automated feedback from Copilot, then state: "✅ Step 21 completed successfully. Copilot review requested. Moving to Step 22."
+    - **Exit code 0 (user did not abort):** Request a Copilot review using the following command, then state: "✅ Step 21 completed successfully. Copilot review requested. Moving to Step 22."
+
+      ```pwsh
+      gh pr edit [PR_NUMBER] --add-reviewer "copilot-pull-request-reviewer"
+      ```
+
     - **Exit code 1 (user aborted):** "✅ Step 21 completed successfully. User skipped Copilot review. Moving to Step 22."
 
 22. **Workflow completion and final summary**
@@ -426,7 +460,7 @@ This step provides the final workflow summary and completion status.
 
 a. **Display completion header:**
 
-   ```
+   ```text
    ✅ **PUSHALL WORKFLOW COMPLETED SUCCESSFULLY** ✅
    ```
 
