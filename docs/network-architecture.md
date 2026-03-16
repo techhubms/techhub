@@ -59,7 +59,7 @@ A Point-to-Site VPN gateway in the hub VNet provides admin access to all private
 
 - **Authentication**: Microsoft Entra ID using the Microsoft-registered App ID (no manual app registration needed)
 - **Protocol**: OpenVPN
-- **SKU**: VpnGw1
+- **SKU**: VpnGw2 (Generation2)
 - **Client platforms**: Windows, macOS, Linux (all supported via Azure VPN Client)
 
 From the VPN, traffic reaches spoke resources via hub-spoke peering.
