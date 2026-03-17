@@ -7,13 +7,8 @@
 
 <SkipLink />
 
-<HeadContent>
-    <link rel="canonical" href="@_canonicalUrl" />
-    @if (!string.IsNullOrEmpty(_currentRssFeedUrl))
-    {
-        <link rel="alternate" type="application/rss+xml" title="@_rssFeedTitle" href="@_currentRssFeedUrl" />
-    }
-</HeadContent>
+@* Canonical URL and RSS autodiscovery are rendered by SeoMetaTags (in each page component),
+   because HeadContent from layouts does not render during Blazor SSR prerendering. *@
 
 <Header SectionName="@_currentSectionName"
         RssFeedUrl="@_currentRssFeedUrl"
@@ -57,7 +52,6 @@
     private string? _currentRssFeedUrl;
     private string? _customBannerTitle;
     private string? _customBannerDescription;
-    private string? _rssFeedTitle;
     private bool _isInvalid;
 
     // Pages that are valid destinations but are NOT section names.
@@ -67,8 +61,6 @@
         "not-found", // NotFound.razor
         "error",     // Error.razor (lowercased by LowercaseUrls)
     };
-
-    private string _canonicalUrl => GetCanonicalUrl();
 
     protected override void OnInitialized()
     {
@@ -94,7 +86,6 @@
         // Reset all header state
         _currentSectionName = null;
         _currentRssFeedUrl = null;
-        _rssFeedTitle = null;
         _customBannerTitle = null;
         _customBannerDescription = null;
 
@@ -124,7 +115,6 @@
 
                 _currentSectionName = sectionData.Name;
                 _currentRssFeedUrl = $"/{sectionData.Name}/feed.xml";
-                _rssFeedTitle = $"{Branding.SiteName} - {sectionData.Title} - RSS Feed";
                 return;
             }
 
@@ -145,7 +135,6 @@
                 _customBannerTitle = Branding.BannerTitle;
                 _customBannerDescription = "Your source for Microsoft technology news, tutorials, and community content";
                 _currentRssFeedUrl = "/all/feed.xml";
-                _rssFeedTitle = $"{Branding.SiteName} - All Content - RSS Feed";
                 break;
             case "about":
                 _customBannerTitle = "About Us";
@@ -160,17 +149,6 @@
                 _customBannerDescription = "An error occurred while processing your request";
                 break;
         }
-    }
-
-    /// <summary>
-    /// Computes the canonical URL from the current URI.
-    /// Strips query parameters and lowercases the path for consistent SEO.
-    /// </summary>
-    private string GetCanonicalUrl()
-    {
-        var uri = new Uri(Navigation.Uri);
-        var normalizedPath = uri.AbsolutePath.ToLowerInvariant();
-        return $"{Navigation.BaseUri.TrimEnd('/')}{normalizedPath}";
     }
 
     public void Dispose()

@@ -52,6 +52,15 @@
     {
         <script type="application/ld+json">@((MarkupString)_breadcrumbJson)</script>
     }
+
+    @* Canonical URL *@
+    <link rel="canonical" href="@_canonicalUrl" />
+
+    @* RSS Autodiscovery *@
+    @if (!string.IsNullOrEmpty(RssFeedUrl))
+    {
+        <link rel="alternate" type="application/rss+xml" title="@(Branding.SiteName) RSS Feed" href="@RssFeedUrl" />
+    }
 </HeadContent>
 
 @code {
@@ -115,6 +124,12 @@
     /// </summary>
     [Parameter]
     public IReadOnlyList<BreadcrumbItem> Breadcrumbs { get; set; } = [];
+
+    /// <summary>
+    /// Optional RSS feed URL. When provided, renders a &lt;link rel="alternate"&gt; autodiscovery tag in the head.
+    /// </summary>
+    [Parameter]
+    public string? RssFeedUrl { get; set; }
 
     private string _truncatedDescription = string.Empty;
     private string _isoDate = string.Empty;

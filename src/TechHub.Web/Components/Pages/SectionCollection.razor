@@ -13,7 +13,8 @@
     Description="@SeoDescription"
     ContentType="SeoMetaTags.SeoContentType.Collection"
     ArticleSection="@(section?.Title)"
-    Breadcrumbs="@GetBreadcrumbs()" />
+    Breadcrumbs="@GetBreadcrumbs()"
+    RssFeedUrl="@($"/{SectionName}/feed.xml")" />
 
 <main class="page-with-sidebar">
     <aside class="sidebar">

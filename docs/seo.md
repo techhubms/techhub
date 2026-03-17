@@ -25,6 +25,10 @@ The component emits:
 - Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:site`)
 - JSON-LD structured data (schema type depends on `ContentType` parameter)
 - A second `BreadcrumbList` JSON-LD block when the `Breadcrumbs` parameter contains at least two items
+- `<link rel="canonical">` — normalized (lowercased, query-stripped) canonical URL
+- `<link rel="alternate" type="application/rss+xml">` — RSS autodiscovery (when `RssFeedUrl` parameter is set)
+
+**Important**: All SEO `<HeadContent>` MUST be rendered from page components, not from the layout. Blazor's `HeadOutlet @rendermode="InteractiveServer"` does not render layout `HeadContent` during SSR prerendering. Only `HeadContent` from page-level components (inside `@Body`) is included in the prerendered HTML that search engines see.
 
 ### Content Types
 
@@ -64,7 +68,7 @@ The `SeoMetaTags` component generates the meta description from the `Description
 
 ## Canonical URLs
 
-Every page automatically receives a canonical URL via `MainLayout.razor`. The layout computes the canonical URL by normalizing the current path (lowercased, query parameters stripped) and combining it with the base URI. Individual pages do not need to add their own canonical tags.
+Every page that uses `SeoMetaTags` automatically receives a canonical URL. The component computes the canonical URL by normalizing the current path (lowercased, query parameters stripped) and combining it with the base URI. Individual pages do not need to add their own canonical tags.
 
 ## Open Graph Tags
 
@@ -119,7 +123,7 @@ The dynamic items are cached in memory under the key `"sitemap:items"` with `Cac
 
 ## RSS Feeds
 
-RSS feeds enable content syndication and feed readers. RSS `<link>` tags are automatically rendered by `MainLayout.razor` for pages that have an associated feed (section pages and the homepage). The layout determines the correct feed URL from the current URL and SectionCache.
+RSS feeds enable content syndication and feed readers. RSS autodiscovery `<link>` tags are rendered by `SeoMetaTags` when the `RssFeedUrl` parameter is provided. The homepage uses `/all/feed.xml` and section pages use `/{sectionName}/feed.xml`. Content detail pages do not have an RSS feed link.
 
 See [rss-feeds.md](rss-feeds.md) for RSS endpoint documentation.
 
