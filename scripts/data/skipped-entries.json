@@ -13602,42 +13602,6 @@
     "collection": "blogs"
   },
   {
-    "canonical_url": "https://dev.to/playfulprogramming/a-practical-gitflow-setup-that-works-on-github-46lb",
-    "timestamp": "2026-03-17 14:30:43 +00:00",
-    "reason": "No categories found: Excluded due to generic exclusion rule: Sales Pitches. While most of the article is an educational GitFlow/GitHub workflow guide (branches, PR rules, GitHub Actions, security defaults), it ends with a promotional section for the author’s own VS Code extension (“Copilot Insights”) with a direct call-to-action and Marketplace link. Per the workflow, if any generic exclusion applies, stop and assign no categories.",
-    "collection": "blogs"
-  },
-  {
-    "canonical_url": "https://dev.to/playfulprogramming/git-mirroring-during-migrations-all-vs-mirror-2i4h",
-    "timestamp": "2026-03-17 14:32:58 +00:00",
-    "reason": "No categories found: Excluded due to generic exclusion rule: Sales Pitches. While most of the post explains Git mirroring during migrations (`git push --all` + `--tags` vs `--mirror`), it ends with a promotional section for a VS Code extension the author built (“Copilot Insights”) including marketing claims and a Marketplace link, which makes the content partially a tool advertisement rather than purely educational.",
-    "collection": "blogs"
-  },
-  {
-    "canonical_url": "https://dev.to/playfulprogramming/github-copilot-to-generate-conventional-commit-messages-in-vscode-and-jetbrains-rider-1n3b",
-    "timestamp": "2026-03-17 14:33:24 +00:00",
-    "reason": "No categories found: Excluded due to the Generic Exclusion Rule: Sales Pitches. While most of the post is educational (how to configure GitHub Copilot to generate Conventional Commit messages in VS Code and JetBrains Rider), it ends with a promotion for the author’s own VS Code extension (“I built a small VS Code extension called Copilot Insights” plus a Marketplace link), which is an announcement of a tool the author created. Per the rules, promotional tool announcements without being purely educational should be excluded and return no categories.",
-    "collection": "blogs"
-  },
-  {
-    "canonical_url": "https://dev.to/playfulprogramming/how-i-created-a-cozy-workspace-in-vs-code-4bf0",
-    "timestamp": "2026-03-17 14:33:45 +00:00",
-    "reason": "No categories found: Excluded due to a generic exclusion rule: the content includes a direct sales pitch/advertisement at the end (\"Get the Book with 50% Off\" with a Gumroad purchase link and discount code). This fits the \"Sales Pitches\" exclusion (promotional content). Because a generic exclusion applies, no categories can be assigned even though the post discusses VS Code layout settings and mentions Copilot Chat.",
-    "collection": "blogs"
-  },
-  {
-    "canonical_url": "https://dev.to/playfulprogramming/introducing-green-software-indicator-a-browser-extension-for-a-greener-web-5692",
-    "timestamp": "2026-03-17 14:34:04 +00:00",
-    "reason": "No categories found: Excluded by generic exclusion rule: Sales Pitches. The post is primarily an announcement/promotion for the author’s own product (“That’s why I built Green Software Indicator…”, install links to Chrome Web Store/Edge Add-ons, and a call for contributors), plus an additional promotional section for a paid Gumroad RSS bundle. While it lists high-level evaluation checks (image optimization, minification, compression, etc.), it does not provide substantial Microsoft technical implementation details, and the core intent is promotional rather than educational depth.",
-    "collection": "blogs"
-  },
-  {
-    "canonical_url": "https://dev.to/playfulprogramming/why-i-built-taskdeck-and-how-it-improves-your-vs-code-workflow-4fk9",
-    "timestamp": "2026-03-17 14:34:21 +00:00",
-    "reason": "No categories found: Excluded due to the Generic Exclusion Rule: Sales Pitches. The post is primarily an introduction and promotion of the author’s own VS Code extension (\"I built TaskDeck…\", \"Introducing TaskDeck\", repeated Marketplace/Repository links, roadmap, and a call to \"Try it… and share your feedback\"). While it contains some technical implementation notes (TreeDataProvider, vscode.tasks.executeTask), the main thrust is marketing the tool rather than providing a standalone educational tutorial with sufficient depth for the knowledge base.",
-    "collection": "blogs"
-  },
-  {
     "canonical_url": "https://blogs.microsoft.com/blog/2026/03/17/announcing-copilot-leadership-update/",
     "timestamp": "2026-03-17 15:25:43 +00:00",
     "reason": "No categories found: Excluded due to Generic Exclusion Rules: this is primarily executive/company org news (an internal-style memo) about leadership changes and organizational restructuring for Copilot/Microsoft AI, with no technical implementation details for practitioners. It also centers on non-development Copilot experiences (Microsoft 365/consumer Copilot) rather than developer tools like GitHub Copilot or Copilot Studio. Therefore, no categories are assigned.",

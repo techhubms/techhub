@@ -131,9 +131,18 @@ Handle Microsoft's evolving product names consistently:
 
 ❌ **Sales Pitches**
 
-- Content announcing new tools or frameworks the author created
+- Content whose **primary purpose** is announcing or advertising a tool/framework the author created
 - Promotional content without educational value
 - Tool advertisements without technical depth
+
+**CRITICAL: Minor self-promotion does NOT trigger this rule.**
+If the post is substantively educational (tutorials, how-to guides, configuration walkthroughs, etc.) and only *briefly* mentions a related tool or extension the author built (e.g., a short paragraph or closing mention with a link), the post should still be **included and categorized normally**. Apply this exclusion only when promotion is the dominant intent of the content.
+
+**Sales Pitch Examples:**
+
+- ❌ **Exclude**: "Introducing MyTool — the best way to manage Azure resources" → Entire post is an announcement/advertisement
+- ❌ **Exclude**: "I built an extension, here's what it does [mostly marketing copy]" → Promotional without educational depth
+- ✅ **Include**: "How to configure GitHub Copilot for Conventional Commits in VS Code and Rider [detailed tutorial] … I also built a small VS Code extension that helps with this" → Educational tutorial with a brief closing mention of a related tool
 
 ❌ **Negative/Unconstructive Content**
 

@@ -408,7 +408,7 @@ jobs:
           output: 'trivy-results.sarif'
           severity: 'CRITICAL,HIGH'
           exit-code: '1'
-          skip-dirs: 'node_modules,.tmp'
+          skip-dirs: 'node_modules,.tmp,scripts/data/rss-cache'
 
       - name: Upload Trivy results to GitHub Security
         uses: github/codeql-action/upload-sarif@0d579ffd059c29b07949a3cce3983f0780820c98 # v4.32.6
@@ -596,7 +596,6 @@ jobs:
               echo "**Next Steps:**" >> $GITHUB_STEP_SUMMARY
               echo "- 🎉 This PR is ready for review and merge!" >> $GITHUB_STEP_SUMMARY
               echo "- 📊 Code coverage reports available in artifacts" >> $GITHUB_STEP_SUMMARY
-            fi
             fi
 
             exit 0
