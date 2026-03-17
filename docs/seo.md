@@ -13,85 +13,45 @@ All content is server-side rendered via Blazor's global InteractiveServer mode w
 
 See [render-modes.md](render-modes.md) for the render mode architecture and PersistentComponentState pattern.
 
-## Schema.org Structured Data
+## SeoMetaTags Component
 
-Content pages include JSON-LD structured data for rich search results.
+All SEO head tags are rendered by the `SeoMetaTags` shared component (`src/TechHub.Web/Components/SeoMetaTags.razor`). Pages use this component instead of writing `<HeadContent>` blocks directly.
 
-### Article Schema
+The component emits:
 
-```html
-<script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Article Title",
-    "description": "Article description from excerpt",
-    "author": {
-        "@type": "Person",
-        "name": "Author Name"
-    },
-    "datePublished": "2025-01-15T10:00:00+01:00",
-    "publisher": {
-        "@type": "Organization",
-        "name": "Microsoft Tech Hub",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://tech.hub.ms/images/logo.png"
-        }
-    },
-    "keywords": ["tag1", "tag2", "tag3"]
-}
-</script>
-```
+- `<meta name="description">` — truncated to 160 characters, HTML stripped
+- Open Graph tags (`og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`)
+- Article-specific Open Graph properties (`article:published_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types
+- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:site`)
+- JSON-LD structured data (schema type depends on `ContentType` parameter)
+- A second `BreadcrumbList` JSON-LD block when the `Breadcrumbs` parameter contains at least two items
 
-### Implementation Pattern
+### Content Types
 
-```razor
-@page "/{sectionName}/{collectionName}/{slug}"
+The `SeoContentType` enum controls which JSON-LD schema is generated and the Open Graph `og:type` value:
 
-<HeadContent>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "@Item.Title",
-        "description": "@Item.Excerpt",
-        "author": {
-            "@type": "Person",
-            "name": "@Item.Author"
-        },
-        "datePublished": "@GetIsoDate(Item.DateEpoch)",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Microsoft Tech Hub",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://tech.hub.ms/images/logo.png"
-            }
-        },
-        "keywords": [@string.Join(", ", Item.Tags.Select(t => $"\"{t}\""))]
-    }
-    </script>
-</HeadContent>
+| Content type | JSON-LD schema | `og:type` | Used by |
+|---|---|---|---|
+| `Website` | `WebSite` | `website` | Homepage |
+| `Article` | `Article` | `article` | Content detail pages (non-video) |
+| `Video` | `VideoObject` | `article` | Video content items |
+| `Collection` | `CollectionPage` | `website` | Section and collection listing pages |
 
-@code {
-    private string GetIsoDate(long epochSeconds)
-    {
-        return DateTimeOffset.FromUnixTimeSeconds(epochSeconds)
-            .ToString("yyyy-MM-ddTHH:mm:sszzz");
-    }
-}
-```
+### JSON-LD Schemas
+
+**Article**: includes `headline`, `description`, `url`, `publisher`, `author` (when present), `datePublished`, `dateModified`, `keywords` (up to 20), and `articleSection` (when present).
+
+**VideoObject**: includes `name`, `description`, `publisher`, `uploadDate`, `contentUrl` (external video URL), and `embedUrl` (YouTube embed URL derived automatically from watch/youtu.be URLs).
+
+**CollectionPage**: includes `name`, `description`, `url`, and `publisher`.
+
+**WebSite**: includes `name`, `description`, and `url`.
+
+**BreadcrumbList**: generated alongside the main schema when at least two `BreadcrumbItem` values are passed. Each item carries `position`, `name`, and an absolute `item` URL.
 
 ## Page Titles
 
-Each page should have a descriptive title using `<PageTitle>`:
-
-```razor
-<PageTitle>@Item.Title - Tech Hub</PageTitle>
-```
-
-Title patterns:
+Each page has a descriptive title using `<PageTitle>`. Title patterns:
 
 - **Homepage**: `Tech Hub - Microsoft Developer Resources`
 - **Section**: `AI - Tech Hub`
@@ -100,13 +60,7 @@ Title patterns:
 
 ## Meta Description
 
-Use the excerpt as the meta description:
-
-```razor
-<HeadContent>
-    <meta name="description" content="@Item.Excerpt" />
-</HeadContent>
-```
+The `SeoMetaTags` component generates the meta description from the `Description` parameter. Descriptions are automatically stripped of HTML tags, whitespace-normalized, and truncated to 160 characters at a word boundary with an ellipsis appended when truncated.
 
 ## Canonical URLs
 
@@ -114,30 +68,15 @@ Every page automatically receives a canonical URL via `MainLayout.razor`. The la
 
 ## Open Graph Tags
 
-For social media sharing (Facebook, LinkedIn):
+Open Graph tags are emitted by the `SeoMetaTags` component for every page. Always present: `og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`. Content items and videos additionally receive `article:published_time`, `article:author`, `article:section`, and per-tag `article:tag` properties.
 
-```razor
-<HeadContent>
-    <meta property="og:title" content="@Item.Title" />
-    <meta property="og:description" content="@Item.Excerpt" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://tech.hub.ms@Item.GetPrimarySectionUrl()" />
-    <meta property="og:image" content="https://tech.hub.ms/images/og-image.png" />
-</HeadContent>
-```
+Note: `og:image` is not currently set. See the image SEO spec for the planned approach.
 
 ## Twitter Cards
 
-For Twitter/X sharing:
+Twitter Card tags are emitted by the `SeoMetaTags` component. All pages use `summary` card type. Always present: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:site` (`@Microsoft`).
 
-```razor
-<HeadContent>
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="@Item.Title" />
-    <meta name="twitter:description" content="@Item.Excerpt" />
-    <meta name="twitter:image" content="https://tech.hub.ms/images/twitter-card.png" />
-</HeadContent>
-```
+Note: `twitter:image` is not currently set. See the image SEO spec for the planned approach.
 
 ## robots.txt
 
@@ -214,6 +153,9 @@ This structure:
 
 ## Implementation Reference
 
-- Structured data: Content detail page components
-- Meta tags: [src/TechHub.Web/Components/App.razor](../src/TechHub.Web/Components/App.razor)
+- SEO meta tags: [src/TechHub.Web/Components/SeoMetaTags.razor](../src/TechHub.Web/Components/SeoMetaTags.razor)
+- Homepage: [src/TechHub.Web/Components/Pages/Home.razor](../src/TechHub.Web/Components/Pages/Home.razor)
+- Content detail pages: [src/TechHub.Web/Components/Pages/ContentItem.razor](../src/TechHub.Web/Components/Pages/ContentItem.razor)
+- Section and collection listing pages: [src/TechHub.Web/Components/Pages/SectionCollection.razor](../src/TechHub.Web/Components/Pages/SectionCollection.razor)
+- Canonical URL: [src/TechHub.Web/Components/Layout/MainLayout.razor](../src/TechHub.Web/Components/Layout/MainLayout.razor)
 - RSS feeds: [rss-feeds.md](rss-feeds.md)

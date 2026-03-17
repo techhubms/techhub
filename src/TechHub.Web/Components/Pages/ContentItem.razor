@@ -10,6 +10,20 @@
 
 <PageTitle>@(item?.Title ?? (isLoading ? "" : "Not Found")) - Tech Hub</PageTitle>
 
+@if (item != null)
+{
+    <SeoMetaTags
+        Title="@item.Title"
+        Description="@item.Excerpt"
+        ContentType="@GetSeoContentType()"
+        Author="@item.Author"
+        DateEpoch="@item.DateEpoch"
+        Keywords="@item.Tags"
+        ArticleSection="@GetSectionTitle()"
+        VideoUrl="@GetVideoUrl()"
+        Breadcrumbs="@GetBreadcrumbs()" />
+}
+
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarToggle />
@@ -188,5 +202,42 @@
     {
         _persistSubscription?.Dispose();
         GC.SuppressFinalize(this);
+    }
+
+    private SeoMetaTags.SeoContentType GetSeoContentType() =>
+        item?.CollectionName == "videos" ? SeoMetaTags.SeoContentType.Video : SeoMetaTags.SeoContentType.Article;
+
+    private string? GetSectionTitle() => section?.Title;
+
+    private string? GetVideoUrl() => item?.CollectionName == "videos" ? item?.ExternalUrl : null;
+
+    private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs()
+    {
+        if (item == null)
+        {
+            return [];
+        }
+
+        var items = new List<SeoMetaTags.BreadcrumbItem>
+        {
+            new("Home", "/")
+        };
+
+        if (section != null)
+        {
+            items.Add(new(section.Title, section.Url));
+
+            var collection = section.Collections.FirstOrDefault(c =>
+                c.Name.Equals(CollectionName, StringComparison.OrdinalIgnoreCase));
+
+            if (collection != null)
+            {
+                items.Add(new(collection.Title, $"{section.Url}/{collection.Name}"));
+            }
+        }
+
+        items.Add(new(item.Title, item.GetHref(SectionName)));
+
+        return items;
     }
 }

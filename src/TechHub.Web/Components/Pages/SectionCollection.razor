@@ -8,6 +8,13 @@
 
 <PageTitle>@PageTitleText</PageTitle>
 
+<SeoMetaTags
+    Title="@PageTitleText"
+    Description="@SeoDescription"
+    ContentType="SeoMetaTags.SeoContentType.Collection"
+    ArticleSection="@(section?.Title)"
+    Breadcrumbs="@GetBreadcrumbs()" />
+
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarToggle />
@@ -240,5 +247,29 @@
         fromDateString = fromDate?.ToString("yyyy-MM-dd");
         toDateString = toDate?.ToString("yyyy-MM-dd");
         UpdateUrl();
+    }
+
+    private string SeoDescription => IsAll
+        ? section?.Description ?? $"Browse the latest content in {section?.Title ?? SectionName}"
+        : collection?.Description ?? $"Browse {collection?.Title ?? CollectionName} in {section?.Title ?? SectionName}";
+
+    private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs()
+    {
+        var items = new List<SeoMetaTags.BreadcrumbItem>
+        {
+            new("Home", "/")
+        };
+
+        if (section != null)
+        {
+            items.Add(new(section.Title, section.Url));
+        }
+
+        if (!IsAll && collection != null)
+        {
+            items.Add(new(collection.Title, $"{section?.Url}/{collection.Name}"));
+        }
+
+        return items;
     }
 }

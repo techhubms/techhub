@@ -1,0 +1,361 @@
+@using System.Text.Json
+@using TechHub.Web.Services
+
+@inject NavigationManager Navigation
+@inject BrandingService Branding
+
+<HeadContent>
+    @* Meta description *@
+    <meta name="description" content="@_truncatedDescription" />
+
+    @* Open Graph - always present *@
+    <meta property="og:type" content="@_ogType" />
+    <meta property="og:title" content="@Title" />
+    <meta property="og:description" content="@_truncatedDescription" />
+    <meta property="og:url" content="@_canonicalUrl" />
+    <meta property="og:site_name" content="@Branding.SiteName" />
+    <meta property="og:locale" content="en_US" />
+
+    @* Article-specific Open Graph (for Article + Video types) *@
+    @if (ContentType is SeoContentType.Article or SeoContentType.Video)
+    {
+        @if (DateEpoch > 0)
+        {
+            <meta property="article:published_time" content="@_isoDate" />
+            <meta property="article:modified_time" content="@_isoDate" />
+        }
+        @if (!string.IsNullOrEmpty(Author))
+        {
+            <meta property="article:author" content="@Author" />
+        }
+        @if (!string.IsNullOrEmpty(ArticleSection))
+        {
+            <meta property="article:section" content="@ArticleSection" />
+        }
+        @foreach (var keyword in Keywords.Take(10))
+        {
+            <meta property="article:tag" content="@keyword" />
+        }
+    }
+
+    @* Twitter Card *@
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@Title" />
+    <meta name="twitter:description" content="@_truncatedDescription" />
+    <meta name="twitter:site" content="@@Microsoft" />
+
+    @* JSON-LD - Main schema *@
+    <script type="application/ld+json">@((MarkupString)_mainSchemaJson)</script>
+
+    @* JSON-LD - BreadcrumbList (only when there are multiple breadcrumb items) *@
+    @if (!string.IsNullOrEmpty(_breadcrumbJson))
+    {
+        <script type="application/ld+json">@((MarkupString)_breadcrumbJson)</script>
+    }
+</HeadContent>
+
+@code {
+    /// <summary>
+    /// The type of content being described by these SEO tags.
+    /// </summary>
+    public enum SeoContentType
+    {
+        /// <summary>General website page (home, about).</summary>
+        Website,
+        /// <summary>Article or blog post (news, blogs, community content).</summary>
+        Article,
+        /// <summary>Video content item; generates VideoObject JSON-LD schema.</summary>
+        Video,
+        /// <summary>A listing/collection page (section or collection index).</summary>
+        Collection
+    }
+
+    /// <summary>
+    /// Represents a single item in the breadcrumb trail.
+    /// </summary>
+    public record BreadcrumbItem(string Name, string Url);
+
+    private static readonly JsonSerializerOptions _jsonOptions = new()
+    {
+        WriteIndented = false
+    };
+
+    [Parameter, EditorRequired]
+    public required string Title { get; set; }
+
+    [Parameter, EditorRequired]
+    public required string Description { get; set; }
+
+    [Parameter]
+    public SeoContentType ContentType { get; set; } = SeoContentType.Website;
+
+    [Parameter]
+    public string? Author { get; set; }
+
+    [Parameter]
+    public long DateEpoch { get; set; }
+
+    [Parameter]
+    public IReadOnlyList<string> Keywords { get; set; } = [];
+
+    /// <summary>
+    /// Section title used for the article:section Open Graph property (e.g., "GitHub Copilot").
+    /// </summary>
+    [Parameter]
+    public string? ArticleSection { get; set; }
+
+    /// <summary>
+    /// External URL of the video (e.g., YouTube watch URL). Used to generate VideoObject JSON-LD.
+    /// </summary>
+    [Parameter]
+    public string? VideoUrl { get; set; }
+
+    /// <summary>
+    /// Breadcrumb trail for BreadcrumbList JSON-LD. Pass at least 2 items to include the schema.
+    /// </summary>
+    [Parameter]
+    public IReadOnlyList<BreadcrumbItem> Breadcrumbs { get; set; } = [];
+
+    private string _truncatedDescription = string.Empty;
+    private string _isoDate = string.Empty;
+    private string _mainSchemaJson = string.Empty;
+    private string _breadcrumbJson = string.Empty;
+
+    private string _ogType => ContentType is SeoContentType.Article or SeoContentType.Video
+        ? "article"
+        : "website";
+
+    private string _canonicalUrl
+    {
+        get
+        {
+            var uri = new Uri(Navigation.Uri);
+            var normalizedPath = uri.AbsolutePath.ToLowerInvariant();
+            return $"{Navigation.BaseUri.TrimEnd('/')}{normalizedPath}";
+        }
+    }
+
+    protected override void OnParametersSet()
+    {
+        _truncatedDescription = TruncateDescription(Description, 160);
+
+        _isoDate = DateEpoch > 0
+            ? DateTimeOffset.FromUnixTimeSeconds(DateEpoch).ToString("yyyy-MM-ddTHH:mm:sszzz")
+            : string.Empty;
+
+        _mainSchemaJson = ContentType switch
+        {
+            SeoContentType.Article => BuildArticleSchema(),
+            SeoContentType.Video => BuildVideoSchema(),
+            SeoContentType.Collection => BuildCollectionSchema(),
+            _ => BuildWebSiteSchema()
+        };
+
+        _breadcrumbJson = Breadcrumbs.Count > 1
+            ? BuildBreadcrumbSchema()
+            : string.Empty;
+    }
+
+    private string BuildArticleSchema()
+    {
+        var schema = new Dictionary<string, object>
+        {
+            ["@context"] = "https://schema.org",
+            ["@type"] = "Article",
+            ["headline"] = Title,
+            ["description"] = _truncatedDescription,
+            ["url"] = _canonicalUrl,
+            ["publisher"] = new Dictionary<string, string>
+            {
+                ["@type"] = "Organization",
+                ["name"] = Branding.SiteName
+            }
+        };
+
+        if (!string.IsNullOrEmpty(Author))
+        {
+            schema["author"] = new Dictionary<string, string>
+            {
+                ["@type"] = "Person",
+                ["name"] = Author
+            };
+        }
+
+        if (!string.IsNullOrEmpty(_isoDate))
+        {
+            schema["datePublished"] = _isoDate;
+            schema["dateModified"] = _isoDate;
+        }
+
+        if (Keywords.Count > 0)
+        {
+            schema["keywords"] = Keywords.Take(20).ToArray();
+        }
+
+        if (!string.IsNullOrEmpty(ArticleSection))
+        {
+            schema["articleSection"] = ArticleSection;
+        }
+
+        return JsonSerializer.Serialize(schema, _jsonOptions);
+    }
+
+    private string BuildVideoSchema()
+    {
+        var schema = new Dictionary<string, object>
+        {
+            ["@context"] = "https://schema.org",
+            ["@type"] = "VideoObject",
+            ["name"] = Title,
+            ["description"] = _truncatedDescription,
+            ["publisher"] = new Dictionary<string, string>
+            {
+                ["@type"] = "Organization",
+                ["name"] = Branding.SiteName
+            }
+        };
+
+        if (!string.IsNullOrEmpty(_isoDate))
+        {
+            schema["uploadDate"] = _isoDate;
+        }
+
+        if (!string.IsNullOrEmpty(VideoUrl))
+        {
+            schema["contentUrl"] = VideoUrl;
+
+            var embedUrl = TryGetYouTubeEmbedUrl(VideoUrl);
+            if (!string.IsNullOrEmpty(embedUrl))
+            {
+                schema["embedUrl"] = embedUrl;
+            }
+        }
+
+        return JsonSerializer.Serialize(schema, _jsonOptions);
+    }
+
+    private string BuildCollectionSchema()
+    {
+        var schema = new Dictionary<string, object>
+        {
+            ["@context"] = "https://schema.org",
+            ["@type"] = "CollectionPage",
+            ["name"] = Title,
+            ["description"] = _truncatedDescription,
+            ["url"] = _canonicalUrl,
+            ["publisher"] = new Dictionary<string, string>
+            {
+                ["@type"] = "Organization",
+                ["name"] = Branding.SiteName
+            }
+        };
+
+        return JsonSerializer.Serialize(schema, _jsonOptions);
+    }
+
+    private string BuildWebSiteSchema()
+    {
+        var schema = new Dictionary<string, object>
+        {
+            ["@context"] = "https://schema.org",
+            ["@type"] = "WebSite",
+            ["name"] = Branding.SiteName,
+            ["description"] = _truncatedDescription,
+            ["url"] = _canonicalUrl
+        };
+
+        return JsonSerializer.Serialize(schema, _jsonOptions);
+    }
+
+    private string BuildBreadcrumbSchema()
+    {
+        var baseUri = Navigation.BaseUri.TrimEnd('/');
+        var items = Breadcrumbs.Select((b, i) => (object)new Dictionary<string, object>
+        {
+            ["@type"] = "ListItem",
+            ["position"] = i + 1,
+            ["name"] = b.Name,
+            ["item"] = b.Url.StartsWith("http", StringComparison.OrdinalIgnoreCase)
+                ? b.Url
+                : $"{baseUri}{b.Url}"
+        }).ToArray();
+
+        var schema = new Dictionary<string, object>
+        {
+            ["@context"] = "https://schema.org",
+            ["@type"] = "BreadcrumbList",
+            ["itemListElement"] = items
+        };
+
+        return JsonSerializer.Serialize(schema, _jsonOptions);
+    }
+
+    /// <summary>
+    /// Strips HTML tags and truncates to the specified maximum length.
+    /// </summary>
+    public static string TruncateDescription(string description, int maxLength)
+    {
+        if (string.IsNullOrEmpty(description))
+        {
+            return description;
+        }
+
+        // Strip HTML tags
+        var plain = System.Text.RegularExpressions.Regex.Replace(description, "<[^>]+>", string.Empty);
+
+        // Normalize whitespace
+        plain = System.Text.RegularExpressions.Regex.Replace(plain, @"\s+", " ").Trim();
+
+        if (plain.Length <= maxLength)
+        {
+            return plain;
+        }
+
+        // Truncate at last word boundary before limit
+        var truncated = plain[..(maxLength - 3)];
+        var lastSpace = truncated.LastIndexOf(' ');
+        return (lastSpace > 0 ? truncated[..lastSpace] : truncated) + "...";
+    }
+
+    /// <summary>
+    /// Converts a YouTube watch URL to an embed URL.
+    /// Returns null if the URL is not a recognizable YouTube watch URL.
+    /// </summary>
+    public static string? TryGetYouTubeEmbedUrl(string url)
+    {
+        if (string.IsNullOrEmpty(url))
+        {
+            return null;
+        }
+
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        {
+            return null;
+        }
+
+        // Handle https://www.youtube.com/watch?v=VIDEO_ID
+        if ((uri.Host.Equals("www.youtube.com", StringComparison.OrdinalIgnoreCase) ||
+             uri.Host.Equals("youtube.com", StringComparison.OrdinalIgnoreCase)) &&
+            uri.AbsolutePath.Equals("/watch", StringComparison.OrdinalIgnoreCase))
+        {
+            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+            var videoId = query["v"];
+            if (!string.IsNullOrEmpty(videoId))
+            {
+                return $"https://www.youtube.com/embed/{videoId}";
+            }
+        }
+
+        // Handle https://youtu.be/VIDEO_ID
+        if (uri.Host.Equals("youtu.be", StringComparison.OrdinalIgnoreCase))
+        {
+            var videoId = uri.AbsolutePath.TrimStart('/');
+            if (!string.IsNullOrEmpty(videoId))
+            {
+                return $"https://www.youtube.com/embed/{videoId}";
+            }
+        }
+
+        return null;
+    }
+}

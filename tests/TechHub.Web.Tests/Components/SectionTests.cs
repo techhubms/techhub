@@ -2,6 +2,7 @@ using Bunit;
 using FluentAssertions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -25,7 +26,12 @@ public class SectionTests : BunitContext
         JSInterop.Mode = JSRuntimeMode.Loose;
 
         // SidebarToggle requires IHttpContextAccessor to read cookie during SSR
-        Services.AddSingleton<IHttpContextAccessor>(new HttpContextAccessor { HttpContext = new DefaultHttpContext() });
+        var httpContextAccessor = new HttpContextAccessor { HttpContext = new DefaultHttpContext() };
+        Services.AddSingleton<IHttpContextAccessor>(httpContextAccessor);
+
+        // SeoMetaTags requires BrandingService
+        var config = new ConfigurationBuilder().Build();
+        Services.AddScoped<BrandingService>(_ => new BrandingService(httpContextAccessor, config));
     }
     [Fact]
     public void Section_RendersWithPageStructure()
