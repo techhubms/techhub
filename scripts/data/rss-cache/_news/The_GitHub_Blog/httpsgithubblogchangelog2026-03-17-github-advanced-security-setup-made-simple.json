@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-03-17-github-advanced-security-setup-made-simple",
+  "Description": "GitHub Advanced Security is now easier to manage in organizations. A new guided experience helps you set up and configure Advanced Security, so you can now edit configurations and repository…\n\nThe post [GitHub Advanced Security setup made simple](https://github.blog/changelog/2026-03-17-github-advanced-security-setup-made-simple) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "GitHub Advanced Security setup made simple",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ],
+  "EnhancedContent": "GitHub Advanced Security is now easier to manage in organizations. A new guided experience helps you set up and configure Advanced Security, so you can now edit configurations and repository targeting faster than before.\n\nTo view detailed settings, select **Custom configuration** or open a configuration by name.\n\nThis is now available on GitHub Enterprise Cloud and will release to GitHub Enterprise Server 3.22.\n\nRead the documentation to learn more about [enabling GitHub Advanced Security at scale](https://docs.github.com/enterprise-cloud@latest/code-security/concepts/security-at-scale/about-enabling-security-features-at-scale).",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-17T15:25:13+00:00",
+  "ProcessedDate": "2026-03-17 16:19:13"
+}

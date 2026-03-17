@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-03-17-push-protection-exemptions-for-apps-teams-and-roles",
+  "Description": "Organizations with secret scanning push protection can now designate specific roles, teams, and apps as exempt from push protection enforcement. Exemption status is evaluated at the time of each push.…\n\nThe post [Push protection exemptions for roles, teams, and apps](https://github.blog/changelog/2026-03-17-push-protection-exemptions-for-apps-teams-and-roles) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Push protection exemptions for roles, teams, and apps",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ],
+  "EnhancedContent": "Organizations with secret scanning push protection can now designate specific roles, teams, and apps as exempt from push protection enforcement.\n\nExemption status is evaluated at the time of each push. When an exempt actor pushes content containing secrets, push protection is skipped and no bypass requests are created.\n\nExemptions can be configured at the organization and enterprise levels with security configurations.\n\nLearn more about [secret scanning](https://docs.github.com/code-security/concepts/secret-security/about-secret-scanning) and [push protection exemptions](https://docs.github.com/code-security/secret-scanning/using-advanced-secret-scanning-and-push-protection-features/push-protection-for-repositories-and-organizations).",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-17T16:00:33+00:00",
+  "ProcessedDate": "2026-03-17 16:19:13"
+}
