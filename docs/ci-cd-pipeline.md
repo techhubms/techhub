@@ -39,7 +39,7 @@ This is a single unified pipeline that runs all quality checks first, and only d
 - No linting errors
 - Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
 - Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
-- CodeQL analysis passes (no high-severity code scanning alerts)
+- CodeQL analysis completes successfully (code scanning runs on every push/PR)
 
 **PR-Specific Features**:
 
