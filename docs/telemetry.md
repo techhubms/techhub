@@ -62,9 +62,38 @@ With both services reporting via `OTEL_SERVICE_NAME`, the Application Map shows:
 
 The Web-to-API dependency is automatically captured through HTTP client tracing with distributed trace context propagation.
 
-## Google Analytics
+## Availability Tests
 
-Google Analytics 4 (GA4) provides user behavior analytics separately from Application Insights. See [google-analytics.md](google-analytics.md) for full configuration and privacy details.
+Application Insights availability tests actively probe the web frontend from five global locations every 5 minutes and alert when an outage is detected.
+
+### What Is Tested
+
+Each hostname in the `primaryHosts` Bicep parameter (e.g. `tech.hub.ms`, `tech.xebia.ms`) gets its own standard availability test that sends an HTTP GET to `https://<host>/` and validates:
+
+- HTTP 200 response
+- SSL certificate validity (alerts when fewer than 7 days remain)
+
+### Probe Locations
+
+| Location ID | Region |
+|-------------|--------|
+| `emea-nl-ams-azr` | West Europe (Amsterdam) |
+| `us-ca-sjc-azr` | West US (San Jose) |
+| `us-tx-sn1-azr` | South Central US |
+| `apac-sg-sin-azr` | Southeast Asia (Singapore) |
+| `emea-gb-db3-azr` | North Europe (Dublin) |
+
+### Alert Behavior
+
+A metric alert (severity 1) is created alongside each test. It fires when **2 or more** probe locations fail simultaneously within a 5-minute window, evaluated every minute. The threshold of 2 avoids false positives from transient single-location probe failures.
+
+Alerts are created with an empty actions list — add an action group in the Azure Portal to receive email or webhook notifications.
+
+### When No Tests Are Created
+
+Tests are only created when `primaryHosts` is non-empty in the Bicep deployment. If no custom hostnames are provided, no availability tests or alerts are created.
+
+## Google Analytics
 
 GA4 is active in Production only (controlled by `GoogleAnalytics:MeasurementId` in `appsettings.Production.json`).
 
@@ -94,7 +123,7 @@ When running via docker-compose (`Run -Docker`), the same setup applies - an Asp
 
 | File | What It Does |
 |------|-------------|
-| [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep) | Creates Application Insights + Log Analytics Workspace |
+| [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep) | Creates Application Insights + Log Analytics Workspace + availability tests |
 | [infra/modules/api.bicep](../infra/modules/api.bicep) | Passes connection string and service name to API container |
 | [infra/modules/web.bicep](../infra/modules/web.bicep) | Passes connection string and service name to Web container |
 

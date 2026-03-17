@@ -115,8 +115,12 @@ public class MobileNavigationTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/");
         await Page.Locator(".hamburger-btn").ClickAsync();
 
-        // Act - Click on a section header to expand
+        // Act - Click on a section header to expand.
+        // The mobile menu can be taller than the viewport; scroll the target
+        // section header into view before clicking so Playwright's actionability
+        // check (element must be within the viewport) does not time out.
         var sectionHeader = Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" });
+        await sectionHeader.ScrollIntoViewIfNeededAsync();
         await sectionHeader.ClickAsync();
 
         // Assert - Wait for sub-items to appear after Blazor re-render

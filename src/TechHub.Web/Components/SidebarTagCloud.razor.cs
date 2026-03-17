@@ -272,9 +272,6 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
                     .ToList();
 
                 // If SectionName is available, fetch real counts from API
-                // so users see accurate counts matching what they'd get when clicking through.
-                // The API returns these tags with real counts PLUS fills remaining slots
-                // (up to MaxTags) with popular tags from the section.
                 if (!string.IsNullOrWhiteSpace(SectionName))
                 {
                     var sectionForTags = SectionName;
@@ -315,6 +312,8 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
             var effectiveSectionName = string.IsNullOrWhiteSpace(SectionName) ? "all" : SectionName;
             var effectiveCollectionName = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
 
+            // Bail out not needed here — MainLayout guarantees section/collection names
+            // are valid before any page body (and thus this component) renders.
             Logger.LogDebug("Loading tag cloud for section: {SectionName}, collection: {CollectionName}, with {FilterCount} filter tags",
                 effectiveSectionName, effectiveCollectionName, _selectedTagsInternal.Count);
 

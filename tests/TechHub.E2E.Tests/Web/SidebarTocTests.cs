@@ -62,6 +62,14 @@ public class SidebarTocTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(url);
 
+        // Wait for TOC scroll spy JS to finish initialization before clicking.
+        // Without this, the scroll-spy active-class update may not fire on CI
+        // where JS initialization lags behind Blazor's ready signal. The same
+        // wait is used in SidebarToc_Scrolling_ShouldUpdateActiveLink.
+        await Page.WaitForConditionAsync(
+            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
+            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+
         // Get all TOC links
         var tocLinks = Page.Locator(".sidebar-toc a");
         var linkCount = await tocLinks.CountAsync();

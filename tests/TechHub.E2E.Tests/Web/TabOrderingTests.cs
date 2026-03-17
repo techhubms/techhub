@@ -204,11 +204,12 @@ public class TabOrderingTests : PlaywrightTestBase
         // ensures re-rendering is complete before we check/set focus.
         await Page.WaitForBlazorReadyAsync();
 
-        // Focus the heading directly via JS after Blazor has settled.
-        // The skip link's click handler usually handles this, but when Blazor
-        // re-renders, the focused element gets replaced and focus moves to body.
-        // This JS mirrors the skip link handler's logic: add tabindex, focus.
-        await Page.EvaluateAsync(@"() => {
+        // Focus the heading and immediately check active element in ONE atomic JS call.
+        // CI race: two separate EvaluateAsync calls (focus then check) allowed a Blazor
+        // re-render between them, which replaced the DOM element and moved focus to body.
+        // Combining both into a single synchronous JS function prevents that race because
+        // .focus() and reading document.activeElement happen in the same JS microtask.
+        var elementInfo = await Page.EvaluateAsync<string>(@"() => {
             const heading = document.getElementById('skiptohere');
             if (heading) {
                 heading.setAttribute('tabindex', '-1');
@@ -218,12 +219,10 @@ public class TabOrderingTests : PlaywrightTestBase
                     heading.removeEventListener('blur', removeTabIndex);
                 }, { once: true });
             }
+            // Read active element immediately — no async gap between focus and check
+            const active = document.activeElement;
+            return active ? (active.id || active.tagName.toLowerCase()) : 'none';
         }");
-
-        // Assert - confirm focus is on the heading, not body
-        var elementInfo = await Page.EvaluateAsync<string>(
-            "() => document.activeElement ? (document.activeElement.id || document.activeElement.tagName.toLowerCase()) : 'none'"
-        );
 
         var validFocusTargets = new[] { "skiptohere", "h1" };
         validFocusTargets.Should().Contain(elementInfo,

@@ -125,7 +125,7 @@ module network './modules/network.bicep' = {
   }
 }
 
-// Monitoring (Application Insights + Log Analytics)
+// Monitoring (Application Insights + Log Analytics + availability tests)
 module monitoring './modules/monitoring.bicep' = {
   scope: resourceGroup
   name: 'monitoring-deployment'
@@ -135,6 +135,7 @@ module monitoring './modules/monitoring.bicep' = {
     logAnalyticsWorkspaceName: 'law-techhub-${environmentName}'
     dailyQuotaGb: environmentName == 'staging' ? 1 : -1
     appInsightsRetentionInDays: environmentName == 'staging' ? 30 : 90
+    availabilityTestHosts: primaryHosts
   }
 }
 

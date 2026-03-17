@@ -92,4 +92,11 @@ public interface IContentRepository
     /// Returns null if section doesn't exist.
     /// </summary>
     Task<Section?> GetSectionByNameAsync(string name, CancellationToken ct = default);
+
+    /// <summary>
+    /// Get all published content items that have a real detail page on the site.
+    /// Excludes items from collections that link externally (news, blogs, community).
+    /// Used for XML sitemap generation.
+    /// </summary>
+    Task<IReadOnlyList<SitemapItem>> GetSitemapItemsAsync(CancellationToken ct = default);
 }

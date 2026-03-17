@@ -37,4 +37,10 @@ internal interface ITechHubApiClient
         string? toDate = null,
         string? searchQuery = null,
         CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get XML sitemap from the API.
+    /// GET /api/sitemap
+    /// </summary>
+    Task<string> GetSitemapAsync(CancellationToken cancellationToken = default);
 }

@@ -139,6 +139,45 @@ For Twitter/X sharing:
 </HeadContent>
 ```
 
+## robots.txt
+
+The `robots.txt` file is served as a static file from `src/TechHub.Web/wwwroot/robots.txt`. It allows all crawlers while blocking internal framework paths, the API, and health endpoints:
+
+- `/_blazor` — Blazor SignalR negotiation traffic
+- `/_framework` — .NET framework assets
+- `/api/` — Internal API (not meant for crawlers)
+- `/swagger/` — API documentation UI
+- `/health` and `/alive` — Health check endpoints
+
+The file also points crawlers to `https://tech.hub.ms/sitemap.xml`.
+
+## XML Sitemap
+
+The sitemap is available at `GET /sitemap.xml` on the web domain (proxied from `GET /api/sitemap`). It returns `application/xml` and includes:
+
+**Static entries:**
+
+| URL | Priority |
+|-----|----------|
+| Homepage | 1.0 |
+| Section pages (e.g. `/ai`, `/devops`) — "all" section excluded | 0.9 |
+| Collection pages (e.g. `/ai/videos`) | 0.8 |
+
+**Dynamic entries (priority 0.6):**
+
+Content items from the database where `collection NOT IN ('news', 'blogs', 'community')`. These collections link externally and have no detail page on the site. Only collections with real detail pages (`videos`, `roundups`, custom collections) are included. Each entry includes a `<lastmod>` date derived from the item's `DateEpoch`.
+
+URL routing for dynamic entries follows the same rules as the site navigation: `roundups` items always route to `/all/roundups/{slug}`; all other items use `/{primarySection}/{collection}/{slug}`.
+
+The dynamic items are cached in memory under the key `"sitemap:items"` with `CacheItemPriority.NeverRemove`.
+
+**Implementation files:**
+
+- `src/TechHub.Api/Endpoints/SitemapEndpoints.cs` — XML generation
+- `src/TechHub.Infrastructure/Repositories/ContentRepository.cs` — `GetSitemapItemsAsync()`
+- `src/TechHub.Core/Models/Core/SitemapItem.cs` — Lightweight record
+- `src/TechHub.Web/Program.cs` — `/sitemap.xml` proxy route
+
 ## RSS Feeds
 
 RSS feeds enable content syndication and feed readers. RSS `<link>` tags are automatically rendered by `MainLayout.razor` for pages that have an associated feed (section pages and the homepage). The layout determines the correct feed URL from the current URL and SectionCache.

@@ -613,6 +613,34 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
+    // Sitemap endpoint
+    // ================================================================
+
+    /// <summary>
+    /// Get XML sitemap
+    /// GET /api/sitemap
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
+    public virtual async Task<string> GetSitemapAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogDebug("Fetching sitemap from API");
+            var response = await _httpClient.GetAsync(new Uri("/api/sitemap", UriKind.Relative), cancellationToken);
+            response.EnsureSuccessStatusCode();
+
+            var xml = await response.Content.ReadAsStringAsync(cancellationToken);
+            _logger.LogDebug("Successfully fetched sitemap");
+            return xml;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch sitemap");
+            throw;
+        }
+    }
+
+    // ================================================================
     // Helper methods
     // ================================================================
 

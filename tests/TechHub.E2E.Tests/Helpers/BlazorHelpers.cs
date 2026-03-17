@@ -201,14 +201,17 @@ public static class BlazorHelpers
     {
         // Wait for the scroll listener to be attached before scrolling.
         // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
+        // Uses IncreasedTimeout: after a tag filter the page re-renders before the listener
+        // is re-attached, which takes longer than a bare first load.
         await page.WaitForConditionAsync(
             $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
-            new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // Headless Chrome does not fire scroll events from programmatic scrollTo,
         // so the explicit dispatchEvent is required for the infinite-scroll.js handler
         // to detect the trigger element's position via getBoundingClientRect().
+        // Uses IncreasedTimeout: loading the next batch requires an API round-trip.
         await page.WaitForFunctionAsync(
             @"(expectedCount) => {
                 window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
@@ -216,7 +219,7 @@ public static class BlazorHelpers
                 return document.querySelectorAll('" + itemSelector + @"').length >= expectedCount;
             }",
             expectedItemCount,
-            new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
     }
 
     /// <summary>
@@ -670,6 +673,17 @@ public static class BlazorHelpers
         // Step 3: Wait for URL query parameter, re-dispatching input event if needed.
         // The __fillRetryTs variable is scoped per page lifetime; the retry interval
         // of 1 s ensures the 300 ms debounce timer fires between dispatches.
+        //
+        // CI RACE: Blazor may re-render SidebarSearch between steps 2 and 3, running
+        // OnParametersSet which resets _searchQueryInternal (and therefore input.value)
+        // to the current URL-bound parameter (empty). When that happens, the original
+        // fill's debounce fires with "" and the URL never updates.
+        //
+        // The retry uses the native HTMLInputElement value setter (bypasses Blazor's
+        // virtual-DOM diffing) to restore the value before re-dispatching, so that
+        // Blazor's @oninput handler receives the correct value even after a reset.
+        // The JS value escaping is safe because `value` is a test-supplied literal.
+        var escapedValue = value.Replace("\\", "\\\\").Replace("'", "\\'");
         var inputSelector = await locator.EvaluateAsync<string>("el => el.tagName.toLowerCase() + (el.type ? '[type=' + el.type + ']' : '')");
         await locator.Page.WaitForConditionAsync($@"
             () => {{
@@ -678,7 +692,14 @@ public static class BlazorHelpers
                 if (!window.__fillRetryTs || (now - window.__fillRetryTs > 1000)) {{
                     window.__fillRetryTs = now;
                     const input = document.querySelector('{inputSelector}');
-                    if (input && input.value) {{
+                    if (input) {{
+                        // Re-fill via native setter if Blazor re-render reset the value.
+                        // This bypasses Blazor's virtual DOM so the DOM value is correct
+                        // when the @oninput handler reads e.target.value.
+                        if (input.value !== '{escapedValue}') {{
+                            const setter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value')?.set;
+                            if (setter) setter.call(input, '{escapedValue}');
+                        }}
                         input.dispatchEvent(new Event('input', {{ bubbles: true }}));
                     }}
                 }}

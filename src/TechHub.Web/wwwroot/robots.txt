@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Crawler traps and internal infrastructure — no useful content here
+Disallow: /_blazor
+Disallow: /_framework
+Disallow: /api/
+Disallow: /swagger/
+Disallow: /health
+Disallow: /alive
+
+Sitemap: https://tech.hub.ms/sitemap.xml

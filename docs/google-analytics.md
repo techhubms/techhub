@@ -53,6 +53,14 @@ The GA4 script loads asynchronously (`<script async>`) and does not block page r
 1. **Head**: GA4 library + configuration (in `<head>`)
 2. **Body**: Blazor enhanced navigation tracker (in `<body>`, after Blazor framework script)
 
+## Ad Blocker Noise Suppression
+
+Ad blockers — both browser extensions (uBlock Origin, etc.) and DNS-level blockers (Pi-hole, NextDNS) — block requests to `google-analytics.com` and `googletagmanager.com`. The Application Insights Browser SDK auto-instruments `fetch()` and records every blocked request as a failed dependency, which pollutes the Application Insights dependency failure view and masks real failures.
+
+To prevent this, the Application Insights snippet is configured with an `onInit` callback that registers a telemetry initializer. The initializer drops any `RemoteDependencyData` envelope whose target contains `google-analytics.com` or `googletagmanager.com` before it is sent to Application Insights.
+
+This suppression is client-side only and has no effect on actual GA4 data collection — it only prevents the noise from appearing in Application Insights.
+
 ## Implementation Reference
 
 - [App.razor](../src/TechHub.Web/Components/App.razor) — Script injection and conditional rendering

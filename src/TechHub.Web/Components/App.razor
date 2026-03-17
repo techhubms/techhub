@@ -67,6 +67,22 @@
         cfg: {
             connectionString: "@appInsightsConnectionString",
             enableAutoRouteTracking: false  // We'll handle Blazor navigation manually
+        },
+        onInit: function(sdk) {
+            // Suppress dependency failure noise from ad-blocker-blocked Google Analytics requests.
+            // Ad blockers (browser extensions, DNS-level) block these requests, causing them to appear
+            // as failed dependencies in Application Insights — masking real failures in the dashboard.
+            sdk.addTelemetryInitializer(function(envelope) {
+                if (envelope.baseType === 'RemoteDependencyData') {
+                    var target = envelope.baseData && envelope.baseData.target;
+                    if (target && (
+                        target.indexOf('google-analytics.com') !== -1 ||
+                        target.indexOf('googletagmanager.com') !== -1
+                    )) {
+                        return false;
+                    }
+                }
+            });
         }
         });
         </script>

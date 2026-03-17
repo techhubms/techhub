@@ -235,6 +235,39 @@ public class ContentRepository : IContentRepository
         return sections.FirstOrDefault(s => s.Name == name);
     }
 
+    // ==================== Sitemap Methods ====================
+
+    /// <summary>
+    /// Gets all published content items that have a real detail page on the site.
+    /// Excludes news/blogs/community items (they link externally to the original source).
+    /// Results are cached — sitemap generation can call this freely.
+    /// </summary>
+    public async Task<IReadOnlyList<SitemapItem>> GetSitemapItemsAsync(CancellationToken ct = default)
+    {
+        return await Cache.GetOrCreateAsync("sitemap:items", async entry =>
+        {
+            entry.SetPriority(CacheItemPriority.NeverRemove);
+            return await GetSitemapItemsInternalAsync(ct);
+        }) ?? [];
+    }
+
+    private async Task<IReadOnlyList<SitemapItem>> GetSitemapItemsInternalAsync(CancellationToken ct)
+    {
+        var sql = $@"
+            SELECT
+                c.slug               AS Slug,
+                c.primary_section_name AS PrimarySectionName,
+                c.collection_name    AS CollectionName,
+                c.date_epoch         AS DateEpoch
+            FROM content_items c
+            WHERE c.draft = {Dialect.GetBooleanLiteral(false)}
+              AND c.collection_name NOT IN ('news', 'blogs', 'community')
+            ORDER BY c.date_epoch DESC";
+
+        var results = await Connection.QueryAsync<SitemapItem>(new CommandDefinition(sql, cancellationToken: ct));
+        return results.ToArray();
+    }
+
     // ==================== Markdown Rendering ====================
 
     /// <summary>

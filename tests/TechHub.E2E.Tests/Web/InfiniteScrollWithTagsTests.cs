@@ -81,9 +81,13 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         var firstBatchCount = await Page.Locator(".card").CountAsync();
         firstBatchCount.Should().BeGreaterThan(0, "should have items after filtering");
 
-        // Only test infinite scroll if there's more content available
+        // Only test infinite scroll if there's more content available.
+        // Wait for the scroll listener to be fully re-attached after the tag filter
+        // re-render before checking, to avoid a false positive from the stale listener.
+        var scrollListenerReady = await Page.EvaluateAsync<bool>(
+            "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
         var scrollTrigger = Page.Locator("#scroll-trigger");
-        var initialScrollTriggerExists = await scrollTrigger.CountAsync() > 0;
+        var initialScrollTriggerExists = scrollListenerReady && await scrollTrigger.CountAsync() > 0;
 
         if (initialScrollTriggerExists)
         {

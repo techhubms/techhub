@@ -166,27 +166,40 @@ if (!app.Environment.IsDevelopment())
 // Security headers (XSS, clickjacking, MIME sniffing protection)
 app.UseSecurityHeaders();
 
-// Redirect subdomain shortcuts (e.g., ghc.xebia.ms -> /github-copilot) before routing
+// ── Step 1: Fix URLs (301 redirects) ─────────────────────────────────────────
+// Redirect subdomain shortcuts (e.g., ghc.xebia.ms -> /github-copilot)
 app.UseSubdomainRedirects();
-
-// Reject old date-prefixed URLs (YYYY-MM-DD-slug) before routing
-app.UseRejectDatePrefixedSlugs();
-
-// Status code pages middleware: converts 404 status codes to /not-found page
-app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
+// Strip .html extensions (e.g., /github-copilot/features.html -> /github-copilot/features)
+app.UseStripHtmlExtension();
+// Redirect date-prefixed slugs (e.g., /ai/videos/2026-01-01-slug -> /ai/videos/slug)
+app.UseRedirectDatePrefixedSlugs();
+// Redirect HTTP → HTTPS
 app.UseHttpsRedirection();
 
-app.UseAntiforgery();
-
-// Static file caching: Our middleware sets proper cache headers for all static files
-// Place BEFORE MapStaticAssets so our OnStarting callback runs AFTER theirs (LIFO order)
+// ── Step 2: Serve static files before validators ──────────────────────────────
+// Static files (CSS, JS, images, favicon.ico) short-circuit here so they never
+// reach the route validators below. Must be before StatusCodePages so that a
+// missing static file falls through to validation normally.
 app.UseStaticFilesCaching();
-
-// UseStaticFiles for custom content types (e.g., .jxl)
-// MapStaticAssets handles the serving with fingerprinting, compression, ETags
 var contentTypeProvider = new FileExtensionContentTypeProvider();
 contentTypeProvider.Mappings[".jxl"] = "image/jxl";
 app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProvider });
+
+// ── Step 3: Nice 404 page for everything below ────────────────────────────────
+// Must wrap the validators so their 404 responses are replaced with /not-found.
+app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
+
+app.UseAntiforgery();
+
+// ── Step 4: Validate URL structure ───────────────────────────────────────────
+// Reject segments that contain dots, digits at start, or other characters that
+// can never match a Blazor route (e.g. /config.json, /2024-probe, /ADMIN).
+// Paths starting with _ (Blazor internals: /_blazor, /_framework) are allowed.
+app.UseInvalidRouteSegmentFilter();
+
+// ── Step 5: Validate section/collection existence ────────────────────────────
+// Done in MainLayout.razor (runs before @Body renders, covers both HTTP requests
+// and Blazor soft-navigation). No middleware needed here.
 
 // MapStaticAssets for optimized static assets (fingerprinting, compression, ETags)
 app.MapStaticAssets();
@@ -230,5 +243,15 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
+
+// Sitemap proxy — fetches from API and serves from the canonical web domain
+app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
+{
+    var xml = await apiClient.GetSitemapAsync(ct);
+    return Results.Content(xml, "application/xml; charset=utf-8");
+})
+.WithName("GetSitemap")
+.WithSummary("XML sitemap")
+.ExcludeFromDescription();
 
 await app.RunAsync();
