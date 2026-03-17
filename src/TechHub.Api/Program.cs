@@ -121,9 +121,6 @@ var app = builder.Build();
 // Global exception handler (must be first)
 app.UseMiddleware<ExceptionHandlerMiddleware>();
 
-// Request logging (after exception handler to capture all requests)
-app.UseMiddleware<RequestLoggingMiddleware>();
-
 // Enable Swagger in Development environment
 if (app.Environment.IsDevelopment())
 {

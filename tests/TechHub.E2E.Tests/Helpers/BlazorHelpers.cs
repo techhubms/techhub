@@ -44,26 +44,49 @@ public static class BlazorHelpers
 {
     // ============================================================================
     // CONFIGURATION - Centralized timeout management
+    //
+    // CI AWARENESS: When the CI environment variable is set (GitHub Actions sets
+    // this automatically), all timeouts are multiplied by CiMultiplier (3x) to
+    // account for slower shared runners. Local dev uses the base values for fast
+    // feedback. Override via E2E_TIMEOUT_MULTIPLIER env var if needed.
     // ============================================================================
 
     /// <summary>
-    /// Default timeout for all operations (element waits, clicks, assertions, navigation).
-    /// Set to 10s to handle concurrent test load during full Run and CI runners
-    /// (unit + integration tests run before E2E, creating sustained CPU/IO pressure
-    /// that slows Playwright-Chromium IPC). Most operations complete in &lt;500ms;
-    /// the timeout only matters under peak load.
+    /// Whether we're running in a CI environment (GitHub Actions, Azure DevOps, etc.).
+    /// GitHub Actions sets CI=true automatically.
+    /// Only "true" or "1" (case-insensitive) are treated as CI to avoid surprises
+    /// when developers set CI=false locally.
     /// </summary>
-    internal const int DefaultTimeout = 10_000;
+    internal static readonly bool IsCI =
+        Environment.GetEnvironmentVariable("CI") is { } ciVal
+        && (ciVal.Equals("true", StringComparison.OrdinalIgnoreCase) || ciVal == "1");
+
+    /// <summary>
+    /// Timeout multiplier for CI environments where shared runners are significantly
+    /// slower than local dev machines. Defaults to 3x in CI, 1x locally.
+    /// Override with E2E_TIMEOUT_MULTIPLIER environment variable.
+    /// Clamped to a minimum of 1 to prevent zero or negative timeouts.
+    /// </summary>
+    internal static readonly int CiMultiplier =
+        int.TryParse(Environment.GetEnvironmentVariable("E2E_TIMEOUT_MULTIPLIER"), out var m)
+        ? Math.Max(1, m)
+        : IsCI ? 3 : 1;
+
+    /// <summary>
+    /// Default timeout for all operations (element waits, clicks, assertions, navigation).
+    /// Base: 5s locally, 15s in CI (×3). Most operations complete in &lt;500ms;
+    /// the timeout only matters under peak load or slow CI.
+    /// </summary>
+    internal static readonly int DefaultTimeout = 5_000 * CiMultiplier;
 
     /// <summary>
     /// Increased timeout for slow operations: initial page loads (SSR + database queries),
     /// heavy collection pages, and operations that chain multiple async steps
     /// (debounce + SignalR round-trip + Blazor re-render).
-    /// Under full E2E suite load (~200 parallel tests), PostgreSQL can respond slowly
-    /// for complex URLs with search/tag/date filters.
-    /// Typical response: &lt;2s idle, 3-10s under CI load.
+    /// Base: 10s locally, 30s in CI (×3).
+    /// Typical response: &lt;2s idle, 3-10s under load, up to 20s on slow CI runners.
     /// </summary>
-    internal const int IncreasedTimeout = 15_000;
+    internal static readonly int IncreasedTimeout = 10_000 * CiMultiplier;
 
     /// <summary>
     /// Default polling interval for WaitForFunctionAsync operations.
@@ -75,6 +98,7 @@ public static class BlazorHelpers
     /// <summary>
     /// Timeout for browser launch operations.
     /// Separate from test timeouts as this is infrastructure initialization.
+    /// Base: 30s — not multiplied (infrastructure timeout, not test interaction).
     /// </summary>
     internal const int BrowserLaunchTimeout = 30_000;
 
@@ -168,12 +192,10 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="expectedItemCount">Minimum number of items expected after scroll</param>
-    /// <param name="timeoutMs">Total timeout for the operation</param>
     /// <param name="itemSelector">CSS selector for items to count (default: ".card")</param>
     public static async Task ScrollToLoadMoreAsync(
         this IPage page,
         int expectedItemCount,
-        int timeoutMs = DefaultTimeout,
         string itemSelector = ".card",
         string triggerId = "scroll-trigger")
     {
@@ -181,7 +203,7 @@ public static class BlazorHelpers
         // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
         await page.WaitForConditionAsync(
             $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // Headless Chrome does not fire scroll events from programmatic scrollTo,
@@ -194,7 +216,7 @@ public static class BlazorHelpers
                 return document.querySelectorAll('" + itemSelector + @"').length >= expectedCount;
             }",
             expectedItemCount,
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
     }
 
     /// <summary>
@@ -216,12 +238,10 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="endSelector">CSS selector for the end-of-content marker (default: ".end-of-content")</param>
-    /// <param name="timeoutMs">Total timeout for the operation</param>
     /// <param name="triggerId">The id of the scroll-trigger element used by infinite-scroll.js</param>
     public static async Task ScrollToEndOfContentAsync(
         this IPage page,
         string endSelector = ".end-of-content",
-        int timeoutMs = DefaultTimeout,
         string triggerId = "scroll-trigger")
     {
         // Wait for EITHER:
@@ -230,7 +250,7 @@ public static class BlazorHelpers
         // 2. The scroll listener to be attached (large collection, multiple batches needed).
         await page.WaitForConditionAsync(
             $"() => document.querySelector('{endSelector}') !== null || window.__scrollListenerReady?.['{triggerId}'] === true",
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
 
         // If end-of-content is already present, no scrolling needed — return immediately.
         var alreadyAtEnd = await page.EvaluateAsync<bool>(
@@ -250,7 +270,7 @@ public static class BlazorHelpers
                 return false;
             }",
             null, // no JS arg — must be explicit so options parameter is bound correctly
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
     }
 
     // ============================================================================
@@ -304,7 +324,6 @@ public static class BlazorHelpers
     /// <param name="expectedUrlSegment">Optional: URL segment to wait for after click</param>
     /// <param name="waitForActiveState">Optional: Text that should appear in .active button after navigation</param>
     /// <param name="customWait">Optional: Custom wait function to call after navigation</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task ClickAndNavigateAsync(
         this IPage page,
         string selector,
@@ -313,8 +332,7 @@ public static class BlazorHelpers
         int nth = 0,
         string? expectedUrlSegment = null,
         string? waitForActiveState = null,
-        Func<IPage, Task>? customWait = null,
-        int timeoutMs = IncreasedTimeout)
+        Func<IPage, Task>? customWait = null)
     {
         // Step 1: Find the element
         var locator = page.Locator(selector);
@@ -338,12 +356,12 @@ public static class BlazorHelpers
         }
 
         // Step 2: Click the element
-        await locator.ClickBlazorElementAsync(timeoutMs);
+        await locator.ClickBlazorElementAsync();
 
         // Step 3: Wait for URL to change (if specified)
         if (!string.IsNullOrEmpty(expectedUrlSegment))
         {
-            await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment, timeoutMs);
+            await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment);
         }
 
         // Step 4: Wait for state sync (if specified)
@@ -368,13 +386,11 @@ public static class BlazorHelpers
     /// Generic helper for any element visibility check.
     /// </summary>
     /// <param name="locator">The element to check</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementVisibleAsync(
-        this ILocator locator,
-        int timeoutMs = DefaultTimeout)
+        this ILocator locator)
     {
         await Assertions.Expect(locator)
-            .ToBeVisibleAsync(new() { Timeout = timeoutMs });
+            .ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -383,14 +399,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="locator">The element to check</param>
     /// <param name="className">The exact class name to check for</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertHasClassAsync(
         this ILocator locator,
-        string className,
-        int timeoutMs = DefaultTimeout)
+        string className)
     {
         await Assertions.Expect(locator)
-            .ToHaveClassAsync(className, new() { Timeout = timeoutMs });
+            .ToHaveClassAsync(className, new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -399,14 +413,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="locator">The element to check</param>
     /// <param name="pattern">The regex pattern to match against the class attribute</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertHasClassAsync(
         this ILocator locator,
-        System.Text.RegularExpressions.Regex pattern,
-        int timeoutMs = DefaultTimeout)
+        System.Text.RegularExpressions.Regex pattern)
     {
         await Assertions.Expect(locator)
-            .ToHaveClassAsync(pattern, new() { Timeout = timeoutMs });
+            .ToHaveClassAsync(pattern, new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -415,14 +427,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="locator">The locator to count</param>
     /// <param name="expectedCount">The expected number of matching elements</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertCountAsync(
         this ILocator locator,
-        int expectedCount,
-        int timeoutMs = DefaultTimeout)
+        int expectedCount)
     {
         await Assertions.Expect(locator)
-            .ToHaveCountAsync(expectedCount, new() { Timeout = timeoutMs });
+            .ToHaveCountAsync(expectedCount, new() { Timeout = DefaultTimeout });
     }
 
     // ============================================================================
@@ -487,7 +497,7 @@ public static class BlazorHelpers
     /// @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
     /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync and ClickBlazorElementAsync.
     /// </summary>
-    public static async Task WaitForBlazorReadyAsync(this IPage page, int timeoutMs = IncreasedTimeout)
+    public static async Task WaitForBlazorReadyAsync(this IPage page)
     {
         try
         {
@@ -533,7 +543,7 @@ public static class BlazorHelpers
 
                     return true;
                 }
-            ", new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+            ", new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
         }
         catch (TimeoutException)
         {
@@ -568,29 +578,27 @@ public static class BlazorHelpers
     /// continuous DOM updates.
     /// </summary>
     /// <param name="locator">The element to click</param>
-    /// <param name="timeoutMs">Maximum time to wait for interactivity and URL change</param>
     /// <param name="waitForUrlChange">Whether to wait for URL to change after click (default: true)</param>
     public static async Task ClickBlazorElementAsync(
         this ILocator locator,
-        int timeoutMs = IncreasedTimeout,
         bool waitForUrlChange = true)
     {
         var page = locator.Page;
         var urlBeforeClick = page.Url;
 
         // Step 1: Wait for element to be visible using our centralized helper
-        await locator.AssertElementVisibleAsync(timeoutMs);
+        await locator.AssertElementVisibleAsync();
 
         // Step 2: Ensure Blazor interactivity is ready (SignalR circuit established, event handlers attached)
         // This uses the official Blazor JS initializer callback - no arbitrary delays needed
-        await page.WaitForBlazorReadyAsync(timeoutMs);
+        await page.WaitForBlazorReadyAsync();
 
         // Step 3: Click with Force=true to bypass stability checks
         // This is necessary because Blazor's continuous DOM updates prevent
         // elements from being considered "stable" by Playwright's criteria.
         // We've already verified the element is visible and Blazor is ready,
         // so the click will work correctly.
-        await locator.ClickAsync(new() { Force = true, Timeout = timeoutMs });
+        await locator.ClickAsync(new() { Force = true, Timeout = IncreasedTimeout });
 
         // Step 4: Wait for URL to change (Blazor Server updates URL via SignalR/WebSocket)
         // This is the default because most interactive Blazor elements change the URL
@@ -604,7 +612,7 @@ public static class BlazorHelpers
             await page.WaitForConditionAsync(
                 "expectedUrl => window.location.href !== expectedUrl",
                 urlBeforeClick,
-                new() { Timeout = timeoutMs });
+                new() { Timeout = IncreasedTimeout });
         }
 
         // Mermaid diagram check is now integrated into WaitForBlazorReadyAsync above (Step 2)
@@ -615,11 +623,10 @@ public static class BlazorHelpers
     /// Use this before custom interactions that don't use ClickBlazorElementAsync.
     /// </summary>
     public static async Task WaitForBlazorInteractivityAsync(
-        this ILocator locator,
-        int timeoutMs = DefaultTimeout)
+        this ILocator locator)
     {
         // Wait for element to be visible using our centralized helper
-        await locator.AssertElementVisibleAsync(timeoutMs);
+        await locator.AssertElementVisibleAsync();
 
         // Ensure Blazor is ready - uses its own default navigation timeout (2000ms)
         await locator.Page.WaitForBlazorReadyAsync();
@@ -649,15 +656,13 @@ public static class BlazorHelpers
     /// <param name="locator">The search input element locator</param>
     /// <param name="value">The text to fill into the input</param>
     /// <param name="urlQueryParam">The URL query parameter name to wait for (default: "search")</param>
-    /// <param name="timeoutMs">Maximum time to wait for the URL to update</param>
     public static async Task FillBlazorInputAsync(
         this ILocator locator,
         string value,
-        string urlQueryParam = "search",
-        int timeoutMs = IncreasedTimeout)
+        string urlQueryParam = "search")
     {
         // Step 1: Ensure element is visible and Blazor circuit is ready
-        await locator.WaitForBlazorInteractivityAsync(timeoutMs);
+        await locator.WaitForBlazorInteractivityAsync();
 
         // Step 2: Fill the input value
         await locator.FillAsync(value);
@@ -679,7 +684,7 @@ public static class BlazorHelpers
                 }}
                 return false;
             }}",
-            new PageWaitForFunctionOptions { Timeout = timeoutMs, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
     }
 
     // ============================================================================
@@ -697,16 +702,14 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="urlSegment">The URL path segment to wait for (e.g., "news", "videos")</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task WaitForBlazorUrlContainsAsync(
         this IPage page,
-        string urlSegment,
-        int timeoutMs = IncreasedTimeout)
+        string urlSegment)
     {
         // Use Playwright's auto-retrying Expect assertion with regex - much cleaner!
         await Assertions.Expect(page).ToHaveURLAsync(
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}.*"),
-            new() { Timeout = timeoutMs }
+            new() { Timeout = IncreasedTimeout }
         );
     }
 
@@ -720,10 +723,9 @@ public static class BlazorHelpers
     /// </summary>
     public static async Task WaitForBlazorRenderAsync(
         this IPage page,
-        string selector,
-        int timeoutMs = DefaultTimeout)
+        string selector)
     {
-        await page.Locator(selector).AssertElementVisibleAsync(timeoutMs);
+        await page.Locator(selector).AssertElementVisibleAsync();
     }
 
     // ============================================================================
@@ -779,13 +781,11 @@ public static class BlazorHelpers
     /// Common pattern: Extract href from links for validation or navigation.
     /// </summary>
     /// <param name="locator">The element to get href from</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     /// <returns>The href attribute value, or null if not found</returns>
     public static async Task<string?> GetHrefAsync(
-        this ILocator locator,
-        int timeoutMs = DefaultTimeout)
+        this ILocator locator)
     {
-        return await locator.GetAttributeAsync("href", new() { Timeout = timeoutMs });
+        return await locator.GetAttributeAsync("href", new() { Timeout = DefaultTimeout });
     }
 
     // ============================================================================
@@ -807,13 +807,11 @@ public static class BlazorHelpers
     /// <param name="role">The ARIA role to find</param>
     /// <param name="name">The exact accessible name (case-sensitive)</param>
     /// <param name="level">Optional: Heading level (1-6) when role is Heading</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementVisibleByRoleAsync(
         this IPage page,
         AriaRole role,
         string name,
-        int? level = null,
-        int timeoutMs = DefaultTimeout)
+        int? level = null)
     {
         var options = new PageGetByRoleOptions
         {
@@ -827,7 +825,7 @@ public static class BlazorHelpers
         }
 
         var element = page.GetByRole(role, options);
-        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -844,13 +842,11 @@ public static class BlazorHelpers
     /// <param name="role">The ARIA role to find</param>
     /// <param name="name">The exact accessible name (case-sensitive)</param>
     /// <param name="level">Optional: Heading level (1-6) when role is Heading</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementVisibleByRoleAsync(
         this ILocator locator,
         AriaRole role,
         string name,
-        int? level = null,
-        int timeoutMs = DefaultTimeout)
+        int? level = null)
     {
         var options = new LocatorGetByRoleOptions
         {
@@ -864,7 +860,7 @@ public static class BlazorHelpers
         }
 
         var element = locator.GetByRole(role, options);
-        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -877,14 +873,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="altText">The exact alt text (case-sensitive)</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementVisibleByAltTextAsync(
         this IPage page,
-        string altText,
-        int timeoutMs = DefaultTimeout)
+        string altText)
     {
         var element = page.GetByAltText(altText, new PageGetByAltTextOptions { Exact = true });
-        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = timeoutMs });
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -898,14 +892,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementVisibleBySelectorAsync(
         this IPage page,
-        string selector,
-        int timeoutMs = DefaultTimeout)
+        string selector)
     {
         await Assertions.Expect(page.Locator(selector))
-            .ToBeVisibleAsync(new() { Timeout = timeoutMs });
+            .ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -918,15 +910,13 @@ public static class BlazorHelpers
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
     /// <param name="expectedText">Expected text content</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementContainsTextBySelectorAsync(
         this IPage page,
         string selector,
-        string expectedText,
-        int timeoutMs = DefaultTimeout)
+        string expectedText)
     {
         await Assertions.Expect(page.Locator(selector))
-            .ToContainTextAsync(expectedText, new() { Timeout = timeoutMs });
+            .ToContainTextAsync(expectedText, new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -939,15 +929,13 @@ public static class BlazorHelpers
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
     /// <param name="expectedCount">Expected number of elements</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertElementCountBySelectorAsync(
         this IPage page,
         string selector,
-        int expectedCount,
-        int timeoutMs = DefaultTimeout)
+        int expectedCount)
     {
         await Assertions.Expect(page.Locator(selector))
-            .ToHaveCountAsync(expectedCount, new() { Timeout = timeoutMs });
+            .ToHaveCountAsync(expectedCount, new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -959,15 +947,13 @@ public static class BlazorHelpers
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
     /// <param name="attributeName">Attribute name (e.g., "href", "class", "style")</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     /// <returns>Attribute value or null</returns>
     public static async Task<string?> GetElementAttributeBySelectorAsync(
         this IPage page,
         string selector,
-        string attributeName,
-        int timeoutMs = DefaultTimeout)
+        string attributeName)
     {
-        return await page.Locator(selector).GetAttributeAsync(attributeName, new() { Timeout = timeoutMs });
+        return await page.Locator(selector).GetAttributeAsync(attributeName, new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -978,14 +964,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     /// <returns>Text content or null</returns>
     public static async Task<string?> GetElementTextBySelectorAsync(
         this IPage page,
-        string selector,
-        int timeoutMs = DefaultTimeout)
+        string selector)
     {
-        return await page.Locator(selector).TextContentAsync(new() { Timeout = timeoutMs });
+        return await page.Locator(selector).TextContentAsync(new() { Timeout = DefaultTimeout });
     }
 
     /// <summary>
@@ -1034,15 +1018,13 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="urlSegment">The URL segment to check for at the end</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertUrlEndsWithAsync(
         this IPage page,
-        string urlSegment,
-        int timeoutMs = IncreasedTimeout)
+        string urlSegment)
     {
         await Assertions.Expect(page).ToHaveURLAsync(
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}$"),
-            new() { Timeout = timeoutMs }
+            new() { Timeout = IncreasedTimeout }
         );
     }
 
@@ -1054,13 +1036,11 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The Playwright page</param>
     /// <param name="selector">CSS selector</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task ClickElementBySelectorAsync(
         this IPage page,
-        string selector,
-        int timeoutMs = DefaultTimeout)
+        string selector)
     {
-        await page.Locator(selector).ClickBlazorElementAsync(timeoutMs);
+        await page.Locator(selector).ClickBlazorElementAsync();
     }
 
     /// <summary>
@@ -1072,19 +1052,17 @@ public static class BlazorHelpers
     /// <param name="page">The Playwright page</param>
     /// <param name="role">ARIA role</param>
     /// <param name="name">Accessible name (case-sensitive)</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task ClickElementByRoleAsync(
         this IPage page,
         AriaRole role,
-        string name,
-        int timeoutMs = DefaultTimeout)
+        string name)
     {
         var options = new PageGetByRoleOptions
         {
             Name = name,
             Exact = true
         };
-        await page.GetByRole(role, options).ClickBlazorElementAsync(timeoutMs);
+        await page.GetByRole(role, options).ClickBlazorElementAsync();
     }
 
     /// <summary>
@@ -1096,14 +1074,12 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="locator">The element to check</param>
     /// <param name="expectedHref">Expected href value (case-sensitive exact match)</param>
-    /// <param name="timeoutMs">Maximum time to wait</param>
     public static async Task AssertHrefEqualsAsync(
         this ILocator locator,
-        string expectedHref,
-        int timeoutMs = DefaultTimeout)
+        string expectedHref)
     {
         await Assertions.Expect(locator)
-            .ToHaveAttributeAsync("href", expectedHref, new() { Timeout = timeoutMs });
+            .ToHaveAttributeAsync("href", expectedHref, new() { Timeout = DefaultTimeout });
     }
 
     // ============================================================================
@@ -1127,14 +1103,12 @@ public static class BlazorHelpers
     ///   await tocLink.ClickAndWaitForScrollAsync();
     ///
     ///   // Click with custom timeout
-    ///   await anchorLink.ClickAndWaitForScrollAsync(maxTimeoutMs: 500);
+    ///   await anchorLink.ClickAndWaitForScrollAsync();
     /// </summary>
     /// <param name="locator">The element to click</param>
-    /// <param name="maxTimeoutMs">Maximum time in ms to wait for scroll to complete (default: DefaultTimeout)</param>
     /// <returns>Task that completes when scrolling finishes and TOC updates, or timeout is reached</returns>
     public static async Task ClickAndWaitForScrollAsync(
-        this ILocator locator,
-        int maxTimeoutMs = DefaultTimeout)
+        this ILocator locator)
     {
         // Use scrollend event (same as TOC scroll-spy) + RAF for TOC update
         // NOTE: When using EvaluateAsync on a locator, the element is passed as the first parameter,
@@ -1189,7 +1163,7 @@ public static class BlazorHelpers
                     }}, 50);
                 }});
             }}
-        ", new { maxTimeout = maxTimeoutMs });
+        ", new { maxTimeout = DefaultTimeout });
     }
 
     /// <summary>

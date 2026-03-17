@@ -1,5 +1,6 @@
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Core.Validation;
 
 namespace TechHub.Api.Endpoints;
 
@@ -15,7 +16,8 @@ public static class RssEndpoints
     {
         var group = endpoints.MapGroup("/api/rss")
             .WithTags("RSS")
-            .WithDescription("RSS 2.0 feed endpoints for content syndication");
+            .WithDescription("RSS 2.0 feed endpoints for content syndication")
+            .AddEndpointFilter(ValidateRouteParameters);
 
         // Everything feed (all content)
         group.MapGet("/all", GetAllContentFeed)
@@ -41,6 +43,29 @@ public static class RssEndpoints
             .Produces(StatusCodes.Status404NotFound);
 
         return endpoints;
+    }
+
+    private static ValueTask<object?> ValidateRouteParameters(
+        EndpointFilterInvocationContext context,
+        EndpointFilterDelegate next)
+    {
+        var routeValues = context.HttpContext.Request.RouteValues;
+
+        if (routeValues.TryGetValue("sectionName", out var sectionObj)
+            && sectionObj is string sectionName
+            && !RouteParameterValidator.IsValidNameSegment(sectionName))
+        {
+            return ValueTask.FromResult<object?>(Results.BadRequest("Invalid section name format."));
+        }
+
+        if (routeValues.TryGetValue("collectionName", out var collectionObj)
+            && collectionObj is string collectionName
+            && !RouteParameterValidator.IsValidNameSegment(collectionName))
+        {
+            return ValueTask.FromResult<object?>(Results.BadRequest("Invalid collection name format."));
+        }
+
+        return next(context);
     }
 
     /// <summary>

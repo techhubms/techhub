@@ -1,6 +1,7 @@
 @page "/github-copilot/vscode-updates"
 @page "/github-copilot/vscode-updates/{VideoSlug}"
 @using TechHub.Core.Models
+@using TechHub.Core.Validation
 @using TechHub.Web.Services
 @implements IDisposable
 
@@ -88,6 +89,13 @@
 
     protected override async Task OnInitializedAsync()
     {
+        // Validate optional slug parameter
+        if (VideoSlug != null && !RouteParameterValidator.IsValidSlug(VideoSlug))
+        {
+            Navigation.NavigateTo("/not-found");
+            return;
+        }
+
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
         await LoadPageData();
     }

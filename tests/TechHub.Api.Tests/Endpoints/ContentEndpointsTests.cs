@@ -1636,4 +1636,89 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     #endregion
+
+    #region Input Validation Tests
+
+    [Theory]
+    [InlineData("/api/sections/%23skiptohere/collections/all/tags")]
+    [InlineData("/api/sections/pp.php/collections/all/tags")]
+    [InlineData("/api/sections/admin%2Fpasswd/collections/all/tags")]
+    [InlineData("/api/sections/ai/collections/pp.php/tags")]
+    [InlineData("/api/sections/ai/collections/%23anchor/tags")]
+    public async Task GetCollectionTags_WithMaliciousPathParameters_ReturnsBadRequest(string url)
+    {
+        // Act
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        // Assert - Should be rejected before hitting the repository
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/%23skiptohere")]
+    [InlineData("/api/sections/pp.php")]
+    [InlineData("/api/sections/UPPER")]
+    [InlineData("/api/sections/has space")]
+    [InlineData("/api/sections/has_underscore")]
+    public async Task GetSectionByName_WithInvalidFormat_ReturnsBadRequest(string url)
+    {
+        // Act
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/ai/collections/pp.php")]
+    [InlineData("/api/sections/ai/collections/HAS-UPPER")]
+    [InlineData("/api/sections/ai/collections/has space")]
+    public async Task GetSectionCollection_WithInvalidCollectionFormat_ReturnsBadRequest(string url)
+    {
+        // Act
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/ai/collections/news/items")]
+    [InlineData("/api/sections/github-copilot/collections/all/tags")]
+    [InlineData("/api/sections/all/collections/all/items")]
+    public async Task Endpoints_WithValidPathParameters_AcceptsRequest(string url)
+    {
+        // Act
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        // Assert - Should NOT be rejected by validation (may be 200 or 404 depending on data)
+        response.StatusCode.Should().NotBe(HttpStatusCode.BadRequest);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/ai/collections/news/script%3Calert%3E")]
+    [InlineData("/api/sections/ai/collections/news/file.php")]
+    public async Task GetContentDetail_WithMaliciousSlug_ReturnsBadRequest(string url)
+    {
+        // Act
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/../etc/collections/all/tags")]
+    [InlineData("/api/sections/ai/collections/../evil")]
+    [InlineData("/api/sections/ai/collections/news/../../etc/passwd")]
+    public async Task Endpoints_WithPathTraversal_DoNotSucceed(string url)
+    {
+        // Act
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        // Assert - Path traversal resolved by HTTP framework before routing; 400 or 404 both acceptable
+        response.StatusCode.Should().BeOneOf(HttpStatusCode.BadRequest, HttpStatusCode.NotFound);
+    }
+
+    #endregion
 }

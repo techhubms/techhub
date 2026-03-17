@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.StaticFiles;
 using TechHub.Core.Logging;
+using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
 using TechHub.Web.Middleware;
@@ -215,6 +216,11 @@ app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, Cancella
 
 app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
 {
+    if (!RouteParameterValidator.IsValidNameSegment(sectionName))
+    {
+        return Results.BadRequest("Invalid section name format.");
+    }
+
     var xml = await apiClient.GetSectionRssFeedAsync(sectionName, ct);
     return Results.Content(xml, "application/rss+xml; charset=utf-8");
 })

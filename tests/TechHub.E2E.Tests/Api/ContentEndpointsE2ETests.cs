@@ -86,9 +86,10 @@ public class ContentEndpointsE2ETests
         var upperResponse = await _client.GetAsync("/api/sections/AI", TestContext.Current.CancellationToken);
         var mixedResponse = await _client.GetAsync("/api/sections/GitHub-Copilot", TestContext.Current.CancellationToken);
 
-        // Assert - Section names are case-sensitive in URLs
-        upperResponse.StatusCode.Should().Be(HttpStatusCode.NotFound);
-        mixedResponse.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        // Assert - Section names are case-sensitive and must be lowercase;
+        // validation rejects non-lowercase names with 400, which is also acceptable
+        upperResponse.StatusCode.Should().BeOneOf(HttpStatusCode.NotFound, HttpStatusCode.BadRequest);
+        mixedResponse.StatusCode.Should().BeOneOf(HttpStatusCode.NotFound, HttpStatusCode.BadRequest);
     }
 
     [Fact]
