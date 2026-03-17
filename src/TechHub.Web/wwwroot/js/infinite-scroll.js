@@ -51,7 +51,8 @@ export function observeScrollTrigger(helper, triggerElementId) {
     // runs. The version counter lets tests wait for "version > previousVersion" which
     // is immune to this race because the counter only increases on fresh attachments.
     window.__scrollListenerVersion ??= {};
-    window.__scrollListenerVersion[triggerElementId] = (window.__scrollListenerVersion[triggerElementId] || 0) + 1;
+    const currentVersion = window.__scrollListenerVersion[triggerElementId] || 0;
+    window.__scrollListenerVersion[triggerElementId] = currentVersion + 1;
 
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 

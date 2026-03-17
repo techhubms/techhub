@@ -52,6 +52,13 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
     }
 
     /// <summary>
+    /// Default number of retry attempts for <see cref="WithRetryAsync"/> on CI.
+    /// CI runners experience resource pressure that causes transient timeouts
+    /// which don't reproduce locally. Total attempts = 1 + DefaultCIMaxRetries.
+    /// </summary>
+    private const int DefaultCIMaxRetries = 2;
+
+    /// <summary>
     /// Retries the test body with a fresh browser context on each attempt.
     /// Use this for tests that are flaky due to transient CI conditions (resource pressure,
     /// slow SignalR connections, etc.) rather than deterministic bugs.
@@ -71,7 +78,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
     /// Total attempts = 1 + maxRetries.</param>
     protected async Task WithRetryAsync(Func<Task> testBody, int? maxRetries = null)
     {
-        var retries = maxRetries ?? (BlazorHelpers.IsCI ? 2 : 0);
+        var retries = maxRetries ?? (BlazorHelpers.IsCI ? DefaultCIMaxRetries : 0);
         Exception? lastException = null;
 
         for (var attempt = 0; attempt <= retries; attempt++)
