@@ -268,6 +268,25 @@
 
     private async Task LoadInitialBatch()
     {
+        // CRITICAL: Immediately dispose the scroll listener so E2E tests don't see a stale
+        // __scrollListenerReady = true from the previous load cycle. Without this, a test
+        // that polls for readiness between the filter change and OnAfterRenderAsync would
+        // see the OLD true value, proceed to scroll, and fail because the new listener
+        // isn't attached yet. dispose() sets __scrollListenerReady[triggerId] = false,
+        // so ScrollToLoadMoreAsync's WaitForConditionAsync correctly waits for the fresh
+        // true that arrives when SetupScrollListener runs in the next OnAfterRenderAsync.
+        if (scrollModule != null)
+        {
+            try
+            {
+                await scrollModule.InvokeVoidAsync("dispose");
+            }
+            catch (JSDisconnectedException)
+            {
+                // Circuit disconnected — ignore, no listener to clean up
+            }
+        }
+
         contentItems.Clear();
         currentBatch = 1;
         hasMoreContent = true;

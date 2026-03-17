@@ -44,6 +44,15 @@ export function observeScrollTrigger(helper, triggerElementId) {
     // E2E tests wait for this before scrolling to ensure timing is correct.
     window.__scrollListenerReady ??= {};
     window.__scrollListenerReady[triggerElementId] = true;
+
+    // Increment a version counter so E2E tests can detect a FRESH listener attachment
+    // vs a stale one. After a tag filter re-render, dispose() resets the readiness flag
+    // to false, but a point-in-time check might see the previous true before dispose()
+    // runs. The version counter lets tests wait for "version > previousVersion" which
+    // is immune to this race because the counter only increases on fresh attachments.
+    window.__scrollListenerVersion ??= {};
+    window.__scrollListenerVersion[triggerElementId] = (window.__scrollListenerVersion[triggerElementId] || 0) + 1;
+
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 
     // Check immediately in case trigger is already visible (e.g. short content)
@@ -56,8 +65,11 @@ export function dispose() {
         boundHandleScroll = null;
     }
     if (activeTriggerId) {
+        // Set to false instead of deleting — this ensures E2E tests that poll for
+        // __scrollListenerReady[triggerId] === true will correctly see the transition
+        // from true → false → true when the listener is re-attached after a filter change.
         window.__scrollListenerReady ??= {};
-        delete window.__scrollListenerReady[activeTriggerId];
+        window.__scrollListenerReady[activeTriggerId] = false;
         activeTriggerId = null;
     }
 }

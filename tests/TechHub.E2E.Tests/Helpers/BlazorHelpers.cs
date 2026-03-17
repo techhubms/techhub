@@ -199,12 +199,17 @@ public static class BlazorHelpers
         string itemSelector = ".card",
         string triggerId = "scroll-trigger")
     {
-        // Wait for the scroll listener to be attached before scrolling.
-        // Readiness is scoped by triggerId so multiple concurrent listeners don't interfere.
+        // Wait for the scroll listener to be attached AND the trigger element to exist.
+        // Both conditions must be true simultaneously to guard against stale readiness:
+        // - After a tag filter change, ContentItemsGrid.LoadInitialBatch() calls dispose()
+        //   which sets __scrollListenerReady[triggerId] = false.
+        // - The new listener is attached in OnAfterRenderAsync → SetupScrollListener().
+        // - Checking BOTH the flag AND the DOM element prevents acting on a stale readiness
+        //   flag if the component is mid-render and the trigger element hasn't been re-created yet.
         // Uses IncreasedTimeout: after a tag filter the page re-renders before the listener
         // is re-attached, which takes longer than a bare first load.
         await page.WaitForConditionAsync(
-            $"() => window.__scrollListenerReady?.['{triggerId}'] === true",
+            $"() => window.__scrollListenerReady?.['{triggerId}'] === true && document.getElementById('{triggerId}') !== null",
             new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
@@ -250,9 +255,11 @@ public static class BlazorHelpers
         // Wait for EITHER:
         // 1. The end-of-content marker already present (small collection, all items in first batch,
         //    no scroll trigger was ever rendered, so no scroll listener exists), OR
-        // 2. The scroll listener to be attached (large collection, multiple batches needed).
+        // 2. The scroll listener to be attached AND trigger element to exist in the DOM
+        //    (large collection, multiple batches needed). Checking both the readiness flag
+        //    AND the DOM element guards against stale readiness — see ScrollToLoadMoreAsync.
         await page.WaitForConditionAsync(
-            $"() => document.querySelector('{endSelector}') !== null || window.__scrollListenerReady?.['{triggerId}'] === true",
+            $"() => document.querySelector('{endSelector}') !== null || (window.__scrollListenerReady?.['{triggerId}'] === true && document.getElementById('{triggerId}') !== null)",
             new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
 
         // If end-of-content is already present, no scrolling needed — return immediately.
@@ -273,6 +280,55 @@ public static class BlazorHelpers
                 return false;
             }",
             null, // no JS arg — must be explicit so options parameter is bound correctly
+            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+    }
+
+    /// <summary>
+    /// Gets the current scroll listener version for a trigger element.
+    /// Use this before performing an action that will re-attach the scroll listener
+    /// (e.g., applying a tag filter), then pass the returned version to
+    /// <see cref="WaitForScrollListenerReattachAsync"/> to wait for a fresh attachment.
+    ///
+    /// The version counter is incremented each time <c>observeScrollTrigger()</c> runs
+    /// in infinite-scroll.js. It is never reset, so comparing before/after values
+    /// reliably detects whether a new listener was attached.
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="triggerId">The scroll trigger element ID (default: "scroll-trigger")</param>
+    /// <returns>Current version number (0 if no listener has ever been attached)</returns>
+    public static async Task<int> GetScrollListenerVersionAsync(
+        this IPage page,
+        string triggerId = "scroll-trigger")
+    {
+        return await page.EvaluateAsync<int>(
+            $"() => window.__scrollListenerVersion?.['{triggerId}'] || 0");
+    }
+
+    /// <summary>
+    /// Waits for the scroll listener to be freshly re-attached after an action
+    /// (tag filter, collection switch, etc.) by detecting that the version counter
+    /// has incremented beyond the <paramref name="previousVersion"/>.
+    ///
+    /// This is immune to the stale-readiness race condition because the version
+    /// counter only increases — it can never be stale from a previous load cycle.
+    ///
+    /// Example:
+    ///   var version = await page.GetScrollListenerVersionAsync();
+    ///   await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
+    ///   await page.WaitForScrollListenerReattachAsync(version);
+    ///   await page.ScrollToLoadMoreAsync(expectedItemCount: 21);
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="previousVersion">Version from <see cref="GetScrollListenerVersionAsync"/> before the action</param>
+    /// <param name="triggerId">The scroll trigger element ID (default: "scroll-trigger")</param>
+    public static async Task WaitForScrollListenerReattachAsync(
+        this IPage page,
+        int previousVersion,
+        string triggerId = "scroll-trigger")
+    {
+        await page.WaitForConditionAsync(
+            $"(prevVer) => (window.__scrollListenerVersion?.['{triggerId}'] || 0) > prevVer",
+            previousVersion,
             new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
     }
 

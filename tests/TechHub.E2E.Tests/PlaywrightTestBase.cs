@@ -48,12 +48,72 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         // belonging to the context, ensuring page close events fire properly.
         // This must happen before Browser.CloseAsync() in the fixture.
         // DisposeAsync() releases underlying resources after graceful close.
+        await CleanupBrowserResourcesAsync();
+    }
+
+    /// <summary>
+    /// Retries the test body with a fresh browser context on each attempt.
+    /// Use this for tests that are flaky due to transient CI conditions (resource pressure,
+    /// slow SignalR connections, etc.) rather than deterministic bugs.
+    ///
+    /// On each retry, the previous browser context and page are disposed and new ones are
+    /// created, ensuring a completely clean slate (fresh cookies, storage, DOM, and SignalR circuit).
+    ///
+    /// Example:
+    ///   await WithRetryAsync(async () =>
+    ///   {
+    ///       await Page.GotoRelativeAsync("/github-copilot/news");
+    ///       await Page.ScrollToLoadMoreAsync(expectedItemCount: 21);
+    ///   });
+    /// </summary>
+    /// <param name="testBody">The test logic to execute (and potentially retry)</param>
+    /// <param name="maxRetries">Maximum number of retry attempts (default: 2 on CI, 0 locally).
+    /// Total attempts = 1 + maxRetries.</param>
+    protected async Task WithRetryAsync(Func<Task> testBody, int? maxRetries = null)
+    {
+        var retries = maxRetries ?? (BlazorHelpers.IsCI ? 2 : 0);
+        Exception? lastException = null;
+
+        for (var attempt = 0; attempt <= retries; attempt++)
+        {
+            try
+            {
+                if (attempt > 0)
+                {
+                    // Dispose old context and create a fresh one for the retry
+                    await CleanupBrowserResourcesAsync();
+                    _context = await _fixture.CreateContextAsync();
+                    _page = await _context.NewPageWithDefaultsAsync();
+                    _cdpSession = await NetworkThrottling.ApplyIfConfiguredAsync(_page);
+                }
+
+                await testBody();
+                return; // Success — exit immediately
+            }
+            catch (TimeoutException ex) when (attempt < retries)
+            {
+                lastException = ex;
+                // Only retry on TimeoutException — other failures are likely deterministic bugs
+            }
+            catch (PlaywrightException ex) when (attempt < retries && ex.Message.Contains("Timeout"))
+            {
+                lastException = ex;
+                // Playwright wraps timeouts in PlaywrightException
+            }
+        }
+
+        throw lastException!;
+    }
+
+    private async Task CleanupBrowserResourcesAsync()
+    {
         using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
         try
         {
             if (_cdpSession != null)
             {
                 await _cdpSession.DetachAsync().WaitAsync(cts.Token);
+                _cdpSession = null;
             }
         }
         catch (Exception)
@@ -66,6 +126,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
             if (_page != null)
             {
                 await _page.CloseAsync().WaitAsync(cts.Token);
+                _page = null;
             }
         }
         catch (Exception)
@@ -79,6 +140,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
             {
                 await _context.CloseAsync().WaitAsync(cts.Token);
                 await _context.DisposeAsync().AsTask().WaitAsync(cts.Token);
+                _context = null;
             }
         }
         catch (Exception)
