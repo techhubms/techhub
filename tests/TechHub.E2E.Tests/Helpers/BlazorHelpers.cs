@@ -54,17 +54,22 @@ public static class BlazorHelpers
     /// <summary>
     /// Whether we're running in a CI environment (GitHub Actions, Azure DevOps, etc.).
     /// GitHub Actions sets CI=true automatically.
+    /// Only "true" or "1" (case-insensitive) are treated as CI to avoid surprises
+    /// when developers set CI=false locally.
     /// </summary>
     internal static readonly bool IsCI =
-        !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("CI"));
+        Environment.GetEnvironmentVariable("CI") is { } ciVal
+        && (ciVal.Equals("true", StringComparison.OrdinalIgnoreCase) || ciVal == "1");
 
     /// <summary>
     /// Timeout multiplier for CI environments where shared runners are significantly
     /// slower than local dev machines. Defaults to 3x in CI, 1x locally.
     /// Override with E2E_TIMEOUT_MULTIPLIER environment variable.
+    /// Clamped to a minimum of 1 to prevent zero or negative timeouts.
     /// </summary>
     internal static readonly int CiMultiplier =
-        int.TryParse(Environment.GetEnvironmentVariable("E2E_TIMEOUT_MULTIPLIER"), out var m) ? m
+        int.TryParse(Environment.GetEnvironmentVariable("E2E_TIMEOUT_MULTIPLIER"), out var m)
+        ? Math.Max(1, m)
         : IsCI ? 3 : 1;
 
     /// <summary>

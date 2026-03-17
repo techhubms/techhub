@@ -16,7 +16,9 @@ public static partial class RouteParameterValidator
 
     /// <summary>
     /// Validates a section or collection name.
-    /// Must be lowercase letters and hyphens only (matching Section/Collection constructors).
+    /// Must start with a lowercase letter, followed by lowercase letters and hyphens only.
+    /// This is intentionally stricter than the Section/Collection constructors (which allow
+    /// leading hyphens) to reject obviously malformed route parameters early.
     /// </summary>
     public static bool IsValidNameSegment(string? value)
     {
@@ -44,7 +46,7 @@ public static partial class RouteParameterValidator
 
     /// <summary>
     /// Lowercase letters and hyphens only, must start with a letter.
-    /// Matches the Section and Collection constructor validation.
+    /// Stricter than Section/Collection constructors: leading hyphens (e.g. "-foo") are rejected.
     /// </summary>
     [GeneratedRegex(@"^[a-z][a-z-]*$", RegexOptions.Compiled)]
     private static partial Regex NameSegmentRegex();

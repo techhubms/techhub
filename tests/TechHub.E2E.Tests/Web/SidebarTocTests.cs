@@ -126,8 +126,8 @@ public class SidebarTocTests : PlaywrightTestBase
         // Assert - Active TOC link should update via the scroll spy's own
         // scroll event → rAF → updateActiveHeading chain. No manual nudge:
         // we're testing that the mechanism works end-to-end.
-        // Uses IncreasedTimeout (15s) to accommodate rAF throttling + scrollend
-        // delays under CI load.
+        // Uses centralized DefaultTimeout (5s locally, 15s in CI via CiMultiplier)
+        // to accommodate rAF throttling + scrollend delays under CI load.
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
         await activeTocLink.AssertElementVisibleAsync();
 
@@ -177,8 +177,9 @@ public class SidebarTocTests : PlaywrightTestBase
         // No manual nudge: we're testing that the mechanism works end-to-end.
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
-        // Use Playwright's auto-retrying assertion with IncreasedTimeout (15s)
-        // to accommodate rAF throttling + scrollend delays under CI load.
+        // Use Playwright's auto-retrying assertion with centralized DefaultTimeout
+        // (5s locally, 15s in CI via CiMultiplier) to accommodate rAF throttling
+        // + scrollend delays under CI load.
         await lastTocLink.AssertHasClassAsync(
             new System.Text.RegularExpressions.Regex(".*active.*"));
     }

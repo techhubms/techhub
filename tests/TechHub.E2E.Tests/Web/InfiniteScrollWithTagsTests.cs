@@ -63,8 +63,8 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
 
         // Apply tag filter — wait for the tag button to be visible before clicking.
         // The tag cloud loads asynchronously from the API and may still be showing
-        // skeleton placeholders when cards have already rendered. Use IncreasedTimeout
-        // (15s) to account for the separate tag cloud API call under CI load.
+        // skeleton placeholders when cards have already rendered. Uses centralized
+        // DefaultTimeout (5s locally, 15s in CI via CiMultiplier) for the tag cloud API call.
         var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{TagDisplay}')").First;
         await tagButton.AssertElementVisibleAsync();
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
