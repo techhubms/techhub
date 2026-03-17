@@ -102,9 +102,17 @@ export async function initMermaid() {
     if (mermaidElements.length === 0) return;
 
     try {
-        // Load library only once
+        // Load library only once (retry up to 3 times with 1s delay on transient CDN failure)
         if (!loaded.mermaid) {
-            await loadScript(CDN.mermaid.cdnUrl);
+            for (let attempt = 1; attempt <= 3; attempt++) {
+                try {
+                    await loadScript(CDN.mermaid.cdnUrl);
+                    break;
+                } catch (err) {
+                    if (attempt === 3) throw err;
+                    await new Promise(r => setTimeout(r, 1000));
+                }
+            }
             loaded.mermaid = true;
 
             const config = {

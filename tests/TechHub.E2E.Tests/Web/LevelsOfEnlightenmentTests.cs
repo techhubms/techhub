@@ -78,8 +78,9 @@ public class LevelsOfEnlightenmentTests : PlaywrightTestBase
         var overviewHeading = Page.Locator("h2#overview");
         await overviewHeading.AssertElementVisibleAsync();
 
-        // Assert - Overview image exists
+        // Assert - Overview image exists (scroll into view first — image is below the fold)
         var overviewImage = Page.Locator(".levels-overview-image");
+        await overviewImage.ScrollIntoViewAsync();
         await overviewImage.AssertElementVisibleAsync();
 
         // Verify image has alt text
