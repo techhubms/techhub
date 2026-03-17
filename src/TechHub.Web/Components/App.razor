@@ -51,7 +51,8 @@
             gtag('config', '@gaMeasurementId', {
                 'anonymize_ip': true,
                 'allow_google_signals': false,
-                'allow_ad_personalization_signals': false
+                'allow_ad_personalization_signals': false,
+                'send_page_view': false
             });
         </script>
     }
@@ -82,6 +83,10 @@
         <!-- Google Analytics - Track Blazor enhanced navigation -->
         <script>
         (function() {
+            // Guard against duplicate listener registration if this script ever re-runs
+            if (window._gaEnhancedLoadRegistered) return;
+            window._gaEnhancedLoadRegistered = true;
+
             function trackGAPageView() {
                 if (typeof gtag === 'function') {
                     gtag('event', 'page_view', {
@@ -113,6 +118,10 @@
         <script>
         // Track Blazor enhanced navigation page views
         (function() {
+            // Guard against duplicate listener registration if this script ever re-runs
+            if (window._aiEnhancedLoadRegistered) return;
+            window._aiEnhancedLoadRegistered = true;
+
             function trackPageView() {
                 if (window.appInsights) {
                     appInsights.trackPageView({ uri: window.location.pathname });

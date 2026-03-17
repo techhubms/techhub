@@ -35,8 +35,8 @@ Both conditions must be true for GA to load:
 
 ### Page Views
 
-- **Initial load**: GA4 script handles automatically via `gtag('config', ...)`
-- **Blazor enhanced navigation**: Tracked manually via `Blazor.addEventListener('enhancedload', ...)` which sends a `page_view` event with path, location, and title
+- **Initial load**: Tracked manually via the `enhancedload` handler (see below). The GA4 config uses `send_page_view: false` to suppress the automatic initial page view, avoiding double-counting.
+- **Blazor enhanced navigation**: Tracked manually via `Blazor.addEventListener('enhancedload', ...)` which sends a `page_view` event with path, location, and title. A `window._gaEnhancedLoadRegistered` guard flag prevents that listener from being registered more than once in case the script tag is ever re-executed.
 
 ### Privacy Settings
 
