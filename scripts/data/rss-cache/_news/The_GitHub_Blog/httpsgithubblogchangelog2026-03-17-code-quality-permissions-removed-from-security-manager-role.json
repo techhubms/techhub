@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-03-17T12:44:48+00:00",
+  "EnhancedContent": "The security manager role can no longer enable or disable GitHub Code Quality for a repository unless they are also an administrator for that repository. Only repository administrators can enable or disable GitHub Code Quality in a repository.\n\nThis change keeps the permissions of the security manager role focused on security-related products, following the principle of least privilege.\n\nTo learn more about enabling or disabling GitHub Code Quality, see the documentation for [managing GitHub Code Quality settings](https://docs.github.com/enterprise-cloud@latest/code-security/how-tos/maintain-quality-code/enable-code-quality).\n\n![social](https://github.com/user-attachments/assets/648752f4-ce5e-4526-83f0-c7cb9a422bd7)",
+  "Author": "Allison",
+  "Tags": [
+    "application security",
+    "Retired"
+  ],
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-03-17-code-quality-permissions-removed-from-security-manager-role",
+  "Description": "The security manager role can no longer enable or disable GitHub Code Quality for a repository unless they are also an administrator for that repository. Only repository administrators can enable…\n\nThe post [Code Quality permissions removed from security manager role](https://github.blog/changelog/2026-03-17-code-quality-permissions-removed-from-security-manager-role) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Title": "Code Quality permissions removed from security manager role",
+  "ProcessedDate": "2026-03-17 13:29:09",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog"
+}
