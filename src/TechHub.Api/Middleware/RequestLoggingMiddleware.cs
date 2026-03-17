@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using TechHub.Core.Logging;
 
 namespace TechHub.Api.Middleware;
 
@@ -25,7 +26,7 @@ public sealed class RequestLoggingMiddleware
 
         var stopwatch = Stopwatch.StartNew();
         var method = context.Request.Method;
-        var path = context.Request.Path + context.Request.QueryString;
+        var path = LogSanitizer.Sanitize(context.Request.Path + context.Request.QueryString);
 
         try
         {

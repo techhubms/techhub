@@ -1,3 +1,4 @@
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 
 namespace TechHub.Web.Services;
@@ -211,16 +212,16 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{sectionName}/collections/{collectionName}/items{queryString}";
 
-            _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName));
             var result = await _httpClient.GetFromJsonAsync<CollectionItemsResponse>(url, cancellationToken);
 
             _logger.LogDebug("Successfully fetched {Count} items (total: {TotalCount}) for collection {SectionName}/{CollectionName}",
-                result?.Items.Count ?? 0, result?.TotalCount ?? 0, sectionName, collectionName);
+                result?.Items.Count ?? 0, result?.TotalCount ?? 0, LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName));
             return result;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName));
             throw;
         }
     }
@@ -325,7 +326,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
-                sectionName, collectionName, slug);
+                LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName), LogSanitizer.Sanitize(slug));
 
             var response = await _httpClient.GetAsync(
                 $"/api/sections/{sectionName}/collections/{collectionName}/{slug}",
@@ -334,7 +335,7 @@ public class TechHubApiClient : ITechHubApiClient
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
                 _logger.LogWarning("Content not found: {SectionName}/{CollectionName}/{Slug}",
-                    sectionName, collectionName, slug);
+                    LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName), LogSanitizer.Sanitize(slug));
                 return null;
             }
 
@@ -345,7 +346,7 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch content detail for {SectionName}/{CollectionName}/{Slug}",
-                sectionName, collectionName, slug);
+                LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName), LogSanitizer.Sanitize(slug));
             throw;
         }
     }
