@@ -1,5 +1,6 @@
 @using TechHub.Core.Models
 @using TechHub.Core.Configuration
+@using TechHub.Core.Logging
 @using TechHub.Web.Services
 @using Microsoft.JSInterop
 @using Microsoft.AspNetCore.Components.Web
@@ -159,7 +160,7 @@
             totalCount = restored.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
-            Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
+            Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, LogSanitizer.Sanitize(stateKey));
         }
         else
         {
@@ -280,7 +281,7 @@
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
+            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", LogSanitizer.Sanitize(SectionName), LogSanitizer.Sanitize(CollectionName));
             errorMessage = "Unable to load content";
         }
         finally

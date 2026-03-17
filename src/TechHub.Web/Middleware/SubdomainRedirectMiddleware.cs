@@ -1,3 +1,5 @@
+using TechHub.Core.Logging;
+
 namespace TechHub.Web.Middleware;
 
 /// <summary>
@@ -104,8 +106,8 @@ public class SubdomainRedirectMiddleware
 
                     _logger.LogInformation(
                         "Subdomain shortcut redirect: {Host} -> {RedirectUrl}",
-                        host,
-                        redirectUrl);
+                        LogSanitizer.Sanitize(host),
+                        LogSanitizer.Sanitize(redirectUrl));
 
                     context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
                     context.Response.Headers.Location = redirectUrl;
@@ -125,8 +127,8 @@ public class SubdomainRedirectMiddleware
 
                 _logger.LogInformation(
                     "Unknown subdomain redirect: {Host} -> {RedirectUrl}",
-                    host,
-                    redirectUrl);
+                    LogSanitizer.Sanitize(host),
+                    LogSanitizer.Sanitize(redirectUrl));
 
                 context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
                 context.Response.Headers.Location = redirectUrl;

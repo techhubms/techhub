@@ -1,5 +1,6 @@
 using System.Net;
 using System.Text.Json;
+using TechHub.Core.Logging;
 
 namespace TechHub.Api.Middleware;
 
@@ -45,7 +46,7 @@ internal sealed class ExceptionHandlerMiddleware
         catch (Exception ex)
 #pragma warning restore CA1031
         {
-            _logger.LogError(ex, "Unhandled exception occurred. Path: {Path}", context.Request.Path);
+            _logger.LogError(ex, "Unhandled exception occurred. Path: {Path}", LogSanitizer.Sanitize(context.Request.Path));
             await HandleExceptionAsync(context, ex);
         }
     }

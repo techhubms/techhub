@@ -416,6 +416,23 @@ jobs:
         with:
           sarif_file: 'trivy-results.sarif'
 
+  codeql:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@0d579ffd059c29b07949a3cce3983f0780820c98 # v4.32.6
+        with:
+          languages: csharp, javascript-typescript, actions
+          build-mode: none
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@0d579ffd059c29b07949a3cce3983f0780820c98 # v4.32.6
+
   code-coverage:
     name: Code Coverage Report
     runs-on: ubuntu-latest
@@ -482,7 +499,7 @@ jobs:
   quality-gate:
     name: Quality Gate
     runs-on: ubuntu-latest
-    needs: [build, test-unit, test-integration, test-e2e, test-powershell, lint, security]
+    needs: [build, test-unit, test-integration, test-e2e, test-powershell, lint, security, codeql]
     if: always()
 
     steps:
@@ -499,6 +516,7 @@ jobs:
           POWERSHELL_STATUS="${{ needs.test-powershell.result }}"
           LINT_STATUS="${{ needs.lint.result }}"
           SECURITY_STATUS="${{ needs.security.result }}"
+          CODEQL_STATUS="${{ needs.codeql.result }}"
 
           echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
           echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
@@ -549,7 +567,14 @@ jobs:
           if [ "$SECURITY_STATUS" = "success" ]; then
             echo "| 🔒 Security Scan | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
           else
-            echo "| 🔒 Security Scan | ⚠️ Issues Found |" >> $GITHUB_STEP_SUMMARY
+            echo "| 🔒 Security Scan | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # CodeQL
+          if [ "$CODEQL_STATUS" = "success" ]; then
+            echo "| 🛡️ CodeQL Analysis | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "| 🛡️ CodeQL Analysis | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
           fi
 
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -560,7 +585,9 @@ jobs:
              [ "$INTEGRATION_STATUS" = "success" ] && \
              [ "$E2E_STATUS" = "success" ] && \
              [ "$POWERSHELL_STATUS" = "success" ] && \
-             [ "$LINT_STATUS" = "success" ]; then
+             [ "$LINT_STATUS" = "success" ] && \
+             [ "$SECURITY_STATUS" = "success" ] && \
+             [ "$CODEQL_STATUS" = "success" ]; then
             echo "### ✅ All quality gates passed! 🎉" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
 
@@ -569,9 +596,7 @@ jobs:
               echo "**Next Steps:**" >> $GITHUB_STEP_SUMMARY
               echo "- 🎉 This PR is ready for review and merge!" >> $GITHUB_STEP_SUMMARY
               echo "- 📊 Code coverage reports available in artifacts" >> $GITHUB_STEP_SUMMARY
-              if [ "$SECURITY_STATUS" != "success" ]; then
-                echo "- ⚠️ Note: Security scan found issues - review Security tab" >> $GITHUB_STEP_SUMMARY
-              fi
+            fi
             fi
 
             exit 0
@@ -588,6 +613,12 @@ jobs:
             fi
             if [ "$LINT_STATUS" != "success" ]; then
               echo "- 📝 Code formatting issues - run \`dotnet format\` and \`markdownlint-cli2 --fix\`" >> $GITHUB_STEP_SUMMARY
+            fi
+            if [ "$SECURITY_STATUS" != "success" ]; then
+              echo "- 🔒 Security scan found vulnerabilities - review Security tab" >> $GITHUB_STEP_SUMMARY
+            fi
+            if [ "$CODEQL_STATUS" != "success" ]; then
+              echo "- 🛡️ CodeQL analysis found issues - review Security tab" >> $GITHUB_STEP_SUMMARY
             fi
 
             echo "" >> $GITHUB_STEP_SUMMARY

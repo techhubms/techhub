@@ -29,8 +29,9 @@ This is a single unified pipeline that runs all quality checks first, and only d
 5. **PowerShell Tests** - Runs Pester tests for automation scripts
 6. **Lint** - Checks code formatting and markdown linting
 7. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
-8. **Code Coverage** - Generates coverage reports
-9. **Quality Gate** - Validates all checks passed and provides clear summary
+8. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
+9. **Code Coverage** - Generates coverage reports
+10. **Quality Gate** - Validates all checks passed and provides clear summary
 
 **Quality Gates**:
 
@@ -38,6 +39,7 @@ This is a single unified pipeline that runs all quality checks first, and only d
 - No linting errors
 - Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
 - Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
+- CodeQL analysis completes successfully (code scanning runs on every push/PR)
 
 **PR-Specific Features**:
 
