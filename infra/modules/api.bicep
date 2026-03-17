@@ -37,6 +37,10 @@ var staticEnvVars = [
     value: appInsightsConnectionString
   }
   {
+    name: 'OTEL_SERVICE_NAME'
+    value: 'techhub-api'
+  }
+  {
     name: 'Database__Provider'
     value: 'PostgreSQL'
   }

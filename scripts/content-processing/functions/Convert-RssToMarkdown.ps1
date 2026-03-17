@@ -272,12 +272,20 @@ function Convert-RssToMarkdown {
                 $templatePath = $videoTemplatePath
             }
 
+            # Override future dates with current datetime
+            # RSS feeds sometimes publish items with dates in the future (e.g., scheduled release dates)
+            $effectiveDate = $item.PubDate
+            if ($effectiveDate -gt (Get-Date)) {
+                Write-Host "⚠️ PubDate $($effectiveDate.ToString('yyyy-MM-dd')) is in the future, using current datetime instead" -ForegroundColor Yellow
+                $effectiveDate = Get-Date
+            }
+
             # Format date and fix timezone format from +0000 to +00:00
-            $dateFormatted = $item.PubDate.ToString("yyyy-MM-dd HH:mm:ss zzz")
+            $dateFormatted = $effectiveDate.ToString("yyyy-MM-dd HH:mm:ss zzz")
             $dateFormatted = $dateFormatted -replace '(\+|-)(\d{2})(\d{2})(?!:)', '$1$2:$3'
         
             # Generate proper filename with date and .md extension
-            $fileNamePubDate = $item.PubDate.ToString("yyyy-MM-dd")
+            $fileNamePubDate = $effectiveDate.ToString("yyyy-MM-dd")
             $fileNameTitle = (ConvertTo-SafeFilename -Title $response.title -MaxLength 200)
             $filename = "$fileNamePubDate-$fileNameTitle.md"
 

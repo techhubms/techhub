@@ -7,7 +7,7 @@
             <h1 id="skiptohere" class="page-h1">@Item.Title</h1>
 
             <div class="article-metadata">
-                <time datetime="@FormatDateIso(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>@if (!string.IsNullOrWhiteSpace(Item.Author))
+                <time datetime="@FormatDateIso(Item.DateEpoch)" title="@FormatDateFull(Item.DateEpoch)">@FormatDate(Item.DateEpoch)</time>@if (!string.IsNullOrWhiteSpace(Item.Author))
                 {<span class="content-author"> by @Item.Author</span>}
             </div>
         </div>
@@ -22,25 +22,31 @@
     [Parameter]
     public string? Id { get; set; }
 
+    private static readonly TimeZoneInfo BrusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+
     private string FormatDate(long epochSeconds)
     {
         if (epochSeconds == 0) return string.Empty;
 
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
-        var now = DateTimeOffset.UtcNow;
-        var diff = now - dateTime;
+        var brusselsDate = TimeZoneInfo.ConvertTime(dateTime, BrusselsTimeZone).Date;
+        var todayBrussels = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTimeZone).Date;
+        var daysDiff = (todayBrussels - brusselsDate).Days;
 
-        if (diff.TotalDays < 1)
+        if (daysDiff == 0)
             return "Today";
-        if (diff.TotalDays < 2)
+        if (daysDiff == 1)
             return "Yesterday";
-        if (diff.TotalDays < 7)
-            return $"{(int)diff.TotalDays} days ago";
-        if (diff.TotalDays < 30)
-            return $"{(int)(diff.TotalDays / 7)} weeks ago";
+        if (daysDiff < 7)
+            return $"{daysDiff} days ago";
+        if (daysDiff < 30)
+            return $"{daysDiff / 7} weeks ago";
 
         return dateTime.ToString("MMM d, yyyy");
     }
+
+    private static string FormatDateFull(long epochSeconds) =>
+        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("MMMM d, yyyy");
 
     private static string FormatDateIso(long epochSeconds) =>
         DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");

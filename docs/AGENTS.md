@@ -76,6 +76,7 @@
 | Category | Files |
 |----------|-------|
 | **Architecture** | [architecture.md](architecture.md), [database.md](database.md), [technology-stack.md](technology-stack.md) |
+| **Observability** | [telemetry.md](telemetry.md), [google-analytics.md](google-analytics.md), [query-logging.md](query-logging.md) |
 | **Content** | [content-api.md](content-api.md), [content-processing.md](content-processing.md), [frontmatter.md](frontmatter.md), [rss-feeds.md](rss-feeds.md) |
 | **UI/UX** | [design-system.md](design-system.md), [page-structure.md](page-structure.md), [toc-component.md](toc-component.md), [render-modes.md](render-modes.md) |
 | **Features** | [filtering.md](filtering.md), [custom-pages.md](custom-pages.md), [health-checks.md](health-checks.md) |

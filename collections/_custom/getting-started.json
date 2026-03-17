@@ -151,6 +151,32 @@
         {
             "title": "Step 10: Build a Game!",
             "content": "A surprisingly fun way to experience the power of GitHub Copilot is to build a game from your childhood. Just open a new chat, describe the game you want to create, and see how far you can get.\n\nOur experience is that people are often surprised by what they can achieve in just a few hours of prompting - even without deep game development experience. GitHub Copilot handles a lot of the heavy lifting, from setting up the game loop to rendering graphics and handling user input.\n\n### Ideas to Get You Started\n\n- **Start simple** - Build a classic like Tic-Tac-Toe or Snake. These are straightforward enough to get a working version quickly, and you can iteratively add features like score tracking, AI opponents, or animations.\n- **Go retro** - Try recreating Super Mario, Pac-Man, or Tetris. You will be amazed at how much Copilot can generate for platformer physics, collision detection, and level design.\n- **Go big** - Feeling ambitious? Try a 3D game like a Doom-style first-person shooter or a Minecraft-like voxel world. Modern web technologies like WebGL and Three.js make this surprisingly accessible, and Copilot can help you navigate the complexity.\n\nThe goal is not to ship a polished product - it is to experience firsthand how AI-assisted development changes what is possible. Set the bar wherever feels right for you and just start prompting. You might surprise yourself."
+        },
+        {
+            "title": "Step 11: Next Steps",
+            "content": "Now that you have the fundamentals down, there is a whole world of advanced GitHub Copilot capabilities waiting to be explored. Here are some powerful features worth looking into as you continue your journey.\n\n### Reusable Prompts\n\nReusable prompts (`.prompt.md` files) let you save commonly used instructions as templates that you can invoke by name in Copilot Chat. Instead of typing the same detailed prompt every time, you create it once and reuse it across your team. Great for standardizing code reviews, commit messages, or scaffolding patterns.\n\n### GitHub Copilot CLI\n\nGitHub Copilot extends beyond the editor into your terminal. The GitHub Copilot CLI helps you compose complex shell commands, explains what a command does before you run it, and can suggest the right flags and options for tools you rarely use. If you ever find yourself searching for \"how to do X in git\" or \"tar syntax\", Copilot CLI has you covered.\n\n### GitHub Copilot Coding Agent\n\nThe Copilot Coding Agent takes things a step further by autonomously working on GitHub Issues. Assign an issue to Copilot and it will create a branch, write the code, run tests, and open a pull request - all without you having to open an IDE. It is ideal for well-defined tasks like bug fixes, small features, and routine changes.\n\n### GitHub Copilot Review Agent\n\nThe Copilot Review Agent automatically reviews pull requests on GitHub, providing feedback on code quality, potential bugs, and adherence to best practices. It acts as an always-available first reviewer, catching issues early before human reviewers look at the code.\n\n### Custom Agents\n\nCustom agents (`.agent.md` files) let you define specialized AI personas tailored to your project or domain. Each agent can have its own set of instructions, tools, and constraints. For example, you could create a \"security reviewer\" agent that focuses exclusively on finding vulnerabilities, or a \"docs writer\" agent that follows your documentation style guide.\n\n### Sub Agents\n\nSub agents allow a primary agent to delegate specific subtasks to other agents during a conversation. This enables complex, multi-step workflows where each step can be handled by a specialist. Think of it as building a team of AI collaborators that work together on your behalf.\n\n### Agent Types\n\nVS Code supports different agent types depending on the level of control you need. Prompt-based agents use a markdown file to define behavior, while code-based agents (VS Code extensions) offer full programmatic control with custom tool implementations and UI integration. Choose the type that matches the complexity of what you want to build.\n\n### We are Here to Help\n\nThese topics can feel overwhelming at first, but you do not have to figure them all out at once. Pick what interests you, experiment, and reach out if you get stuck. Drop by our [Discord community](https://discord.gg/cURHV9TvFS) or check out [The GitHub Copilot Handbook](/github-copilot/handbook) for deeper guidance. We are happy to help!",
+            "moreInfo": [
+                {
+                    "text": "Reusable prompts in VS Code",
+                    "url": "https://code.visualstudio.com/docs/copilot/copilot-customization#_reusable-prompt-files-experimental"
+                },
+                {
+                    "text": "GitHub Copilot in the CLI",
+                    "url": "https://docs.github.com/en/copilot/using-github-copilot/using-github-copilot-in-the-command-line"
+                },
+                {
+                    "text": "GitHub Copilot Coding Agent",
+                    "url": "https://docs.github.com/en/copilot/using-github-copilot/using-copilot-coding-agent"
+                },
+                {
+                    "text": "GitHub Copilot Code Review",
+                    "url": "https://docs.github.com/en/copilot/using-github-copilot/code-review/using-copilot-code-review"
+                },
+                {
+                    "text": "Custom chat agents in VS Code",
+                    "url": "https://code.visualstudio.com/docs/copilot/copilot-customization#_chat-agents"
+                }
+            ]
         }
     ]
 }

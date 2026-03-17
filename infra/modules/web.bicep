@@ -36,6 +36,10 @@ var staticEnvVars = [
     value: appInsightsConnectionString
   }
   {
+    name: 'OTEL_SERVICE_NAME'
+    value: 'techhub-web'
+  }
+  {
     name: 'ApiBaseUrl'
     value: 'https://${apiBaseUrl}'
   }

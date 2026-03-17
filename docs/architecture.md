@@ -64,6 +64,8 @@ builder.AddServiceDefaults();  // Adds OpenTelemetry, health checks, resilience
 app.MapDefaultEndpoints();     // Maps /health and /alive endpoints
 ```
 
+See [telemetry.md](telemetry.md) for details on how telemetry flows to Application Insights (production) and the Aspire Dashboard (local development).
+
 ## Running with Aspire
 
 See [running-and-testing.md](running-and-testing.md) for details on running the Aspire AppHost and accessing the dashboard.

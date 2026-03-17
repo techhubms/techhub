@@ -221,6 +221,51 @@ public class SubdomainRedirectMiddlewareTests
         nextCalled().Should().BeFalse("middleware should NOT call next when redirecting");
     }
 
+    [Theory]
+    [InlineData("staging-tech.hub.ms")]
+    [InlineData("STAGING-TECH.HUB.MS")]
+    [InlineData("staging-tech.xebia.ms")]
+    public async Task PassthroughSubdomain_PassesThrough(string host)
+    {
+        // Arrange
+        var (middleware, context, nextCalled) = CreateMiddleware(host);
+
+        // Act
+        await middleware.InvokeAsync(context);
+
+        // Assert
+        nextCalled().Should().BeTrue("middleware should pass through for passthrough subdomains");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+    }
+
+    [Fact]
+    public async Task PassthroughSubdomain_PreservesPathAndQueryString()
+    {
+        // Arrange
+        var (middleware, context, nextCalled) = CreateMiddleware("staging-tech.hub.ms", path: "/some/page", queryString: "?q=test");
+
+        // Act
+        await middleware.InvokeAsync(context);
+
+        // Assert
+        nextCalled().Should().BeTrue("middleware should pass through for passthrough subdomains");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+    }
+
+    [Fact]
+    public async Task PassthroughSubdomain_TakesPriorityOverUnknownRedirect()
+    {
+        // Arrange — staging-tech is not a shortcut, but IS a passthrough; should NOT redirect
+        var (middleware, context, nextCalled) = CreateMiddleware("staging-tech.hub.ms");
+
+        // Act
+        await middleware.InvokeAsync(context);
+
+        // Assert
+        nextCalled().Should().BeTrue("passthrough subdomains should not redirect even though they're not shortcuts");
+        context.Response.Headers.Location.ToString().Should().BeEmpty();
+    }
+
     private static (SubdomainRedirectMiddleware middleware, HttpContext context, Func<bool> nextCalled) CreateMiddleware(
         string host,
         string path = "/",
@@ -246,7 +291,8 @@ public class SubdomainRedirectMiddlewareTests
             ["SubdomainShortcuts:security"] = "security",
             ["SubdomainShortcuts:sec"] = "security",
             ["PrimaryHosts:0"] = "tech.xebia.ms",
-            ["PrimaryHosts:1"] = "tech.hub.ms"
+            ["PrimaryHosts:1"] = "tech.hub.ms",
+            ["PassthroughSubdomains:0"] = "staging-tech"
         };
 
         var configuration = new ConfigurationBuilder()

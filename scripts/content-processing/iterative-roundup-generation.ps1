@@ -147,7 +147,7 @@ function Get-RoundupFileInfo {
     )
     
     $publishDateFormatted = $EndDateTime.AddDays(1).ToString("yyyy-MM-dd")
-    $filename = "$publishDateFormatted-Weekly-AI-and-Tech-News-Roundup"
+    $filename = "$publishDateFormatted-Weekly-AI-and-Tech-News-Roundup-$publishDateFormatted"
     $publishDate = $EndDateTime.AddDays(1).ToString("yyyy-MM-dd 09:00:00 +00:00")
     
     return @{

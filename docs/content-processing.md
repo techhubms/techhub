@@ -208,6 +208,7 @@ Each RSS item creates a markdown file with:
 - AI-generated excerpt and summary
 - Proper categorization and tagging
 - External URL to original source (stored in frontmatter `external_url` field)
+- **Future date protection**: If the RSS feed's publication date is in the future (e.g., scheduled release dates), the current datetime is used instead for both the filename and frontmatter date
 - Viewing mode varies by collection:
   - Videos and roundups: `"internal"` (content opens on site)
   - All other collections: `"external"` (links open in new tab)

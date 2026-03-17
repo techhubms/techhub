@@ -6,12 +6,14 @@ namespace TechHub.Web.Middleware;
 /// Unknown subdomains are redirected to the primary host for that domain.
 /// Shortcuts are configured in appsettings.json under "SubdomainShortcuts".
 /// Primary hosts are configured under "PrimaryHosts" (e.g., ["tech.xebia.ms", "tech.hub.ms"]).
+/// Passthrough subdomains (configured under "PassthroughSubdomains") are never redirected.
 /// </summary>
 public class SubdomainRedirectMiddleware
 {
     private readonly RequestDelegate _next;
     private readonly Dictionary<string, string> _shortcuts;
     private readonly HashSet<string> _primaryHosts;
+    private readonly HashSet<string> _passthroughSubdomains;
     private readonly Dictionary<string, string> _domainToPrimaryHost;
     private readonly ILogger<SubdomainRedirectMiddleware> _logger;
 
@@ -36,6 +38,14 @@ public class SubdomainRedirectMiddleware
             {
                 _shortcuts[child.Key] = child.Value;
             }
+        }
+
+        // Load passthrough subdomains (e.g., "staging-tech" — never redirected)
+        _passthroughSubdomains = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var passthroughSubdomains = configuration.GetSection("PassthroughSubdomains").Get<string[]>() ?? [];
+        foreach (var sub in passthroughSubdomains)
+        {
+            _passthroughSubdomains.Add(sub);
         }
 
         // Load primary hosts and build domain-to-primary-host mapping
@@ -74,6 +84,13 @@ public class SubdomainRedirectMiddleware
         {
             var subdomain = host[..dotIndex];
             var baseDomain = host[(dotIndex + 1)..];
+
+            // Passthrough subdomains are never redirected (e.g., staging-tech)
+            if (_passthroughSubdomains.Contains(subdomain))
+            {
+                await _next(context);
+                return;
+            }
 
             if (_shortcuts.TryGetValue(subdomain, out var sectionPath))
             {

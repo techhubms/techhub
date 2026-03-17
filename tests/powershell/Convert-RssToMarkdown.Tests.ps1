@@ -1541,5 +1541,96 @@ $result = gh api graphql -H "GraphQL-Features: sub_issues"
             $fileContent | Should -Match 'primary_section: coding'
         }
     }
+
+    Context "Future Date Override" {
+        It "Should use current datetime when PubDate is in the future" {
+            $futureDate = (Get-Date).AddDays(7)
+            $script:testItems = @(
+                [PSCustomObject]@{
+                    Title           = "Future Article"
+                    Link            = "https://example.com/future-article"
+                    PubDate         = $futureDate
+                    Description     = "Article with future pub date. " + ("Lorem ipsum dolor sit amet. " * 20)
+                    Author          = "Test Author"
+                    Tags            = @("AI", "Testing")
+                    OutputDir       = $script:TestOutputDir
+                    FeedName        = "Test Feed"
+                    FeedUrl         = "https://example.com/feed"
+                    EnhancedContent = "Test enhanced content for processing"
+                }
+            )
+
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Future Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("AI")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $beforeTest = Get-Date
+            $result = Convert-RssToMarkdown -Items $script:testItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            
+            # Filename should NOT contain the future date
+            $futureDateString = $futureDate.ToString("yyyy-MM-dd")
+            $createdFile.Name | Should -Not -Match "^$futureDateString"
+            
+            # Filename should contain today's date
+            $todayDateString = $beforeTest.ToString("yyyy-MM-dd")
+            $createdFile.Name | Should -Match "^$todayDateString"
+
+            # Frontmatter date should also not contain the future date
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Not -Match "date: $futureDateString"
+            $fileContent | Should -Match "date: $todayDateString"
+        }
+
+        It "Should keep PubDate when it is not in the future" {
+            $pastDate = [DateTime]::Parse("2025-06-15T10:00:00Z")
+            $script:testItems = @(
+                [PSCustomObject]@{
+                    Title           = "Past Article"
+                    Link            = "https://example.com/past-article"
+                    PubDate         = $pastDate
+                    Description     = "Article with past pub date. " + ("Lorem ipsum dolor sit amet. " * 20)
+                    Author          = "Test Author"
+                    Tags            = @("AI", "Testing")
+                    OutputDir       = $script:TestOutputDir
+                    FeedName        = "Test Feed"
+                    FeedUrl         = "https://example.com/feed"
+                    EnhancedContent = "Test enhanced content for processing"
+                }
+            )
+
+            Mock Invoke-ProcessWithAiModel {
+                return [PSCustomObject]@{
+                    title       = "Past Article"
+                    description = "Test description"
+                    content     = "# Test\n\nContent."
+                    excerpt     = "Test excerpt"
+                    categories  = @("AI")
+                    tags        = @("Tag1")
+                }
+            }
+
+            $result = Convert-RssToMarkdown -Items $script:testItems -Token "test-token" -Environment "staging"
+            $result | Should -Be 1
+
+            $createdFile = Get-ChildItem -Path $script:TestOutputDir -Filter "*.md" | Select-Object -First 1
+            
+            # Filename should contain the original past date
+            $createdFile.Name | Should -Match "^2025-06-15"
+
+            # Frontmatter date should also contain the original date
+            $fileContent = Get-Content -Path $createdFile.FullName -Raw
+            $fileContent | Should -Match "date: 2025-06-15"
+        }
+    }
 }
 

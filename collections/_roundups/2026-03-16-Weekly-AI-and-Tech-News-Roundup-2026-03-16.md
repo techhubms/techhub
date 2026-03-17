@@ -13,7 +13,7 @@ section_names:
 - ml
 primary_section: "github-copilot"
 feed_name: "TechHub"
-external_url: "/all/roundups/Weekly-AI-and-Tech-News-Roundup"
+external_url: "/all/roundups/Weekly-AI-and-Tech-News-Roundup-2026-03-16"
 ---
 
 Welcome to this week’s roundup. The common thread is agents moving beyond “helpful chat” into real execution across IDEs, terminals, CI, and cloud operations. Copilot’s latest changes focus on autonomy and repeatable behavior through repo-visible instruction files, lifecycle hooks, clearer model routing, and faster PR review workflows, while modernization tooling ties assessments and plans directly to issues and pull requests. In parallel, the rest of the stack is catching up to the day-to-day requirements of running agents like software: traces and debugging loops, structured outputs and schema enforcement, and clearer guardrails around approvals, secrets, and identity-based access.

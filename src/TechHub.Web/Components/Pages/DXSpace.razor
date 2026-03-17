@@ -57,23 +57,23 @@
                         @foreach (var metric in pageData.Dora.Metrics)
                         {
                             <div class="dx-metric-card">
-                                <span class="dx-metric-icon">@metric.Icon</span>
-                                <div>
+                                <div class="dx-metric-header">
+                                    <span class="dx-metric-icon">@metric.Icon</span>
                                     <strong>@metric.Name</strong>
-                                    <p class="dx-metric-question">@metric.Question</p>
-                                    <div class="dx-metric-detail">
-                                        <h4>Why it matters:</h4>
-                                        <p>@metric.WhyItMatters</p>
-                                        <h4>Elite performance:</h4>
-                                        <p>@metric.ElitePerformance</p>
-                                        <h4>How to improve:</h4>
-                                        <ul>
-                                            @foreach (var improvement in metric.Improvements)
-                                            {
-                                                <li>@improvement</li>
-                                            }
-                                        </ul>
-                                    </div>
+                                </div>
+                                <p class="dx-metric-question">@metric.Question</p>
+                                <div class="dx-metric-detail">
+                                    <h4>Why it matters:</h4>
+                                    <p>@metric.WhyItMatters</p>
+                                    <h4>Elite performance:</h4>
+                                    <p>@metric.ElitePerformance</p>
+                                    <h4>How to improve:</h4>
+                                    <ul>
+                                        @foreach (var improvement in metric.Improvements)
+                                        {
+                                            <li>@improvement</li>
+                                        }
+                                    </ul>
                                 </div>
                             </div>
                         }
@@ -99,23 +99,23 @@
                         @foreach (var dimension in pageData.Space.Dimensions)
                         {
                             <div class="dx-space-card" data-letter="@dimension.Letter">
-                                <div class="dx-space-letter">@dimension.Letter</div>
-                                <div class="dx-space-content">
+                                <div class="dx-space-header">
+                                    <div class="dx-space-letter">@dimension.Letter</div>
                                     <strong>@dimension.Name</strong>
-                                    <p>@dimension.Description</p>
-                                    <div class="dx-space-detail">
-                                        <h4>Why it matters:</h4>
-                                        <p>@dimension.WhyItMatters</p>
-                                        <h4>Example metrics:</h4>
-                                        <ul>
-                                            @foreach (var metric in dimension.ExampleMetrics)
-                                            {
-                                                <li>@metric</li>
-                                            }
-                                        </ul>
-                                        <h4>How to measure:</h4>
-                                        <p>@dimension.AdditionalInfo</p>
-                                    </div>
+                                </div>
+                                <p class="dx-space-description">@dimension.Description</p>
+                                <div class="dx-space-detail">
+                                    <h4>Why it matters:</h4>
+                                    <p>@dimension.WhyItMatters</p>
+                                    <h4>Example metrics:</h4>
+                                    <ul>
+                                        @foreach (var metric in dimension.ExampleMetrics)
+                                        {
+                                            <li>@metric</li>
+                                        }
+                                    </ul>
+                                    <h4>How to measure:</h4>
+                                    <p>@dimension.AdditionalInfo</p>
                                 </div>
                             </div>
                         }
@@ -151,25 +151,25 @@
                         @foreach (var dimension in pageData.DevEx.Dimensions)
                         {
                             <div class="dx-devex-card">
-                                <span class="dx-devex-icon">@dimension.Icon</span>
-                                <div>
+                                <div class="dx-devex-header">
+                                    <span class="dx-devex-icon">@dimension.Icon</span>
                                     <strong>@dimension.Name</strong>
-                                    <p>@dimension.Description</p>
-                                    <h4>@dimension.FactorsHeading</h4>
-                                    <ul>
-                                        @foreach (var factor in dimension.Factors)
-                                        {
-                                            <li>@factor</li>
-                                        }
-                                    </ul>
-                                    <h4>@dimension.ImprovementHeading</h4>
-                                    <ul>
-                                        @foreach (var improvement in dimension.Improvements)
-                                        {
-                                            <li>@improvement</li>
-                                        }
-                                    </ul>
                                 </div>
+                                <p>@dimension.Description</p>
+                                <h4>@dimension.FactorsHeading</h4>
+                                <ul>
+                                    @foreach (var factor in dimension.Factors)
+                                    {
+                                        <li>@factor</li>
+                                    }
+                                </ul>
+                                <h4>@dimension.ImprovementHeading</h4>
+                                <ul>
+                                    @foreach (var improvement in dimension.Improvements)
+                                    {
+                                        <li>@improvement</li>
+                                    }
+                                </ul>
                             </div>
                         }
                     </div>
@@ -239,9 +239,11 @@
                         @foreach (var step in pageData.GettingStarted.Steps)
                         {
                             <div class="dx-step">
-                                <span class="dx-step-number">@step.Number</span>
-                                <div class="dx-step-content">
+                                <div class="dx-step-header">
+                                    <span class="dx-step-number">@step.Number</span>
                                     <strong>@step.Title</strong>
+                                </div>
+                                <div class="dx-step-content">
                                     <p>@step.Description</p>
                                     <div class="dx-step-tips">
                                         <h4>@step.TipsHeading</h4>

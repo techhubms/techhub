@@ -205,10 +205,12 @@ public class ContentItemCardTests : BunitContext
     [Fact]
     public void ContentItemCard_FormatsDate_AsRelativeTime()
     {
-        // Arrange
-        var twoDaysAgo = DateTimeOffset.UtcNow.AddDays(-2).ToUnixTimeSeconds();
+        // Arrange - use Brussels time to ensure "2 days ago" is correct in Brussels timezone
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+        var nowBrussels = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone);
+        var twoDaysAgoBrussels = new DateTimeOffset(nowBrussels.AddDays(-2), brusselsZone.GetUtcOffset(nowBrussels.AddDays(-2)));
         var item = A.ContentItem
-            .WithDateEpoch(twoDaysAgo)
+            .WithDateEpoch(twoDaysAgoBrussels.ToUnixTimeSeconds())
             .WithCollectionName("blogs")
             .WithPrimarySectionName("ai")
             .WithExternalUrl("https://example.com/post")
@@ -226,10 +228,12 @@ public class ContentItemCardTests : BunitContext
     [Fact]
     public void ContentItemCard_FormatsToday_AsToday()
     {
-        // Arrange
-        var today = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        // Arrange - use Brussels time to ensure "Today" is correct in Brussels timezone
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+        var nowBrussels = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone);
+        var todayBrussels = new DateTimeOffset(nowBrussels.Date.AddHours(12), brusselsZone.GetUtcOffset(nowBrussels.Date.AddHours(12)));
         var item = A.ContentItem
-            .WithDateEpoch(today)
+            .WithDateEpoch(todayBrussels.ToUnixTimeSeconds())
             .WithCollectionName("blogs")
             .WithPrimarySectionName("ai")
             .WithExternalUrl("https://example.com/post")
@@ -242,6 +246,22 @@ public class ContentItemCardTests : BunitContext
         // Assert
         var time = cut.Find("time");
         time.TextContent.Should().Be("Today");
+    }
+
+    [Fact]
+    public void ContentItemCard_TimeElement_HasTitleWithFullDate()
+    {
+        // Arrange
+        var item = CreateTestContentItem("Example Post", "2024-06-15");
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item));
+
+        // Assert - time element should have a title attribute for hover tooltip
+        var time = cut.Find("time");
+        time.HasAttribute("title").Should().BeTrue("time element should have a title for hover tooltip");
+        time.GetAttribute("title").Should().Contain("June 15, 2024");
     }
 
     [Fact]
