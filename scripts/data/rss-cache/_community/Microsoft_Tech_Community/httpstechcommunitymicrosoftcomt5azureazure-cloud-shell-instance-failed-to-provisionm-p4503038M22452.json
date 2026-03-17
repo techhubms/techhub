@@ -1,0 +1,14 @@
+{
+  "Link": "https://techcommunity.microsoft.com/t5/azure/azure-cloud-shell-instance-failed-to-provision/m-p/4503038#M22452",
+  "ProcessedDate": "2026-03-17 19:29:52",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "EnhancedContent": "Hi everyone,\n\nI have an annoying error when I'm starting from the Azure portal a Cloud shell session, telling me this error :\n\n{\"code\":\"InvalidSubscription\",\"message\":\"Invalid subscription identifier provided.\"}\n\nI've found no clue to fix it, and received no guidance from the error itself..\n\nDoes someone has a solution please ?",
+  "Description": "Hi everyone,\n\nI have an annoying error when I'm starting from the Azure portal a Cloud shell session, telling me this error :\n\n{\"code\":\"InvalidSubscription\",\"message\":\"Invalid subscription identifier provided.\"}\n\nI've found no clue to fix it, and received no guidance from the error itself..\n\nDoes someone has a solution please ?",
+  "Tags": [],
+  "PubDate": "2026-03-17T16:19:57+00:00",
+  "Author": "etienne-143",
+  "Title": "Azure Cloud Shell Instance Failed to provision",
+  "OutputDir": "_community",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}
