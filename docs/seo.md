@@ -36,10 +36,10 @@ The `SeoContentType` enum controls which JSON-LD schema is generated and the Ope
 
 | Content type | JSON-LD schema | `og:type` | Used by |
 |---|---|---|---|
-| `Website` | `WebSite` | `website` | Homepage |
+| `Website` | `WebSite` | `website` | Homepage, custom pages (Features, Handbook, Levels, etc.), About |
 | `Article` | `Article` | `article` | Content detail pages (non-video) |
-| `Video` | `VideoObject` | `article` | Video content items |
-| `Collection` | `CollectionPage` | `website` | Section and collection listing pages |
+| `Video` | `VideoObject` | `article` | Video content items, VS Code Updates (selected video detail) |
+| `Collection` | `CollectionPage` | `website` | Section/collection listing pages, VS Code Updates (index view) |
 
 ### JSON-LD Schemas
 
@@ -155,11 +155,31 @@ This structure:
 - Includes keywords relevant to content
 - Enables breadcrumb navigation
 
+## SEO Coverage
+
+All page types have full `SeoMetaTags` coverage:
+
+| Page type | Content type | Description source |
+|---|---|---|
+| Homepage | `Website` | Static (configured in component) |
+| Section/collection listing | `Collection` | Section/collection metadata from API |
+| Content detail (article) | `Article` | Content item summary from API |
+| Content detail (video) | `Video` | Content item summary from API |
+| Custom pages | `Website` | `description` field in `collections/_custom/*.json` |
+| VS Code Updates (index) | `Collection` | Static description |
+| VS Code Updates (selected video) | `Video` | Video title and summary from page data |
+| About | `Website` | Static description |
+
+Custom page data files (`collections/_custom/*.json`) each contain a top-level `description` field used for the meta description and Open Graph tags. This field is required in the corresponding `PageData` C# model.
+
 ## Implementation Reference
 
 - SEO meta tags: [src/TechHub.Web/Components/SeoMetaTags.razor](../src/TechHub.Web/Components/SeoMetaTags.razor)
 - Homepage: [src/TechHub.Web/Components/Pages/Home.razor](../src/TechHub.Web/Components/Pages/Home.razor)
 - Content detail pages: [src/TechHub.Web/Components/Pages/ContentItem.razor](../src/TechHub.Web/Components/Pages/ContentItem.razor)
 - Section and collection listing pages: [src/TechHub.Web/Components/Pages/SectionCollection.razor](../src/TechHub.Web/Components/Pages/SectionCollection.razor)
-- Canonical URL: [src/TechHub.Web/Components/Layout/MainLayout.razor](../src/TechHub.Web/Components/Layout/MainLayout.razor)
+- Custom pages: [src/TechHub.Web/Components/Pages/Custom/](../src/TechHub.Web/Components/Pages/Custom/) (Features, Handbook, Levels, ToolTips, GettingStarted, GenAI, SDLC, DXSpace)
+- VS Code Updates: [src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor](../src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor)
+- About page: [src/TechHub.Web/Components/Pages/About.razor](../src/TechHub.Web/Components/Pages/About.razor)
+- Custom page data (JSON): [collections/_custom/](../collections/_custom/)
 - RSS feeds: [rss-feeds.md](rss-feeds.md)

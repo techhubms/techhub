@@ -21,6 +21,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -33,6 +34,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -50,6 +52,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
@@ -64,6 +67,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("WebSite");
@@ -79,6 +83,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -91,6 +96,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -102,6 +108,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("CollectionPage");
@@ -113,6 +120,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync();
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("BreadcrumbList");
@@ -208,6 +216,14 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     // Helpers
     // ────────────────────────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Waits for SeoMetaTags HeadContent to be fully rendered in the document head (including JSON-LD).
+    /// After Blazor rehydration, HeadContent may briefly be absent; polling avoids flaky failures on slow CI runners.
+    /// </summary>
+    private Task WaitForSeoMetaTagsAsync() =>
+        Page.WaitForConditionAsync(
+            "() => document.head.querySelector(\"meta[name='description']\") !== null && document.head.querySelector(\"script[type='application/ld+json']\") !== null");
+
     private async Task<string?> GetMetaContentAsync(string attributeName, string attributeValue)
     {
         var content = await Page.EvaluateAsync<string?>(
@@ -265,6 +281,15 @@ public class SeoMetaTagsTests : PlaywrightTestBase
 
         // Wait for the article content to be visible before asserting head content
         await Page.AssertElementVisibleBySelectorAsync("main article");
+
+        // Wait for SeoMetaTags HeadContent to fully render (including JSON-LD scripts at the end).
+        // After Blazor rehydration the HeadContent may briefly be absent; polling avoids flaky failures on slow CI.
+        await Page.WaitForConditionAsync(
+            "() => document.head.querySelector(\"meta[name='description']\") !== null && document.head.querySelector(\"script[type='application/ld+json']\") !== null");
+
+        // Wait for PageTitle to render (separate from HeadContent, may update at different times)
+        await Page.WaitForConditionAsync(
+            "() => document.title !== ''");
 
         return firstCardHref!;
     }
