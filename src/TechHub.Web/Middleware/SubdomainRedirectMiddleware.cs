@@ -104,10 +104,10 @@ public class SubdomainRedirectMiddleware
                     var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
                     var redirectUrl = $"https://{targetHost}/{sectionPath}{originalPath}{context.Request.QueryString}";
 
-                    _logger.LogInformation(
+                    _logger.LogInformationSanitized(
                         "Subdomain shortcut redirect: {Host} -> {RedirectUrl}",
-                        LogSanitizer.Sanitize(host),
-                        LogSanitizer.Sanitize(redirectUrl));
+                        host,
+                        redirectUrl);
 
                     context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
                     context.Response.Headers.Location = redirectUrl;
@@ -125,10 +125,10 @@ public class SubdomainRedirectMiddleware
                 var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
                 var redirectUrl = $"https://{primaryHost}{originalPath}{context.Request.QueryString}";
 
-                _logger.LogInformation(
+                _logger.LogInformationSanitized(
                     "Unknown subdomain redirect: {Host} -> {RedirectUrl}",
-                    LogSanitizer.Sanitize(host),
-                    LogSanitizer.Sanitize(redirectUrl));
+                    host,
+                    redirectUrl);
 
                 context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
                 context.Response.Headers.Location = redirectUrl;

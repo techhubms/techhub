@@ -160,7 +160,7 @@
             totalCount = restored.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
-            Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, LogSanitizer.Sanitize(stateKey));
+            Logger.LogDebugSanitized("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
         else
         {
@@ -281,7 +281,7 @@
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", LogSanitizer.Sanitize(SectionName), LogSanitizer.Sanitize(CollectionName));
+            Logger.LogErrorSanitized(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
             errorMessage = "Unable to load content";
         }
         finally
