@@ -64,9 +64,8 @@ public class InfiniteScrollTests : PlaywrightTestBase
             "() => document.querySelectorAll('.card').length > 0");
 
         // Act - Keep scrolling until we see the end message or all content is loaded.
-        // Use a generous timeout: the page must complete Blazor hydration + potentially
-        // load multiple batches via SignalR round-trips under concurrent test load.
-        await Page.ScrollToEndOfContentAsync(timeoutMs: BlazorHelpers.IncreasedTimeout);
+        // ScrollToEndOfContentAsync uses IncreasedTimeout internally (CI-aware via CiMultiplier).
+        await Page.ScrollToEndOfContentAsync();
 
         // Assert - End message should be visible
         var endMessage = Page.Locator(".end-of-content");

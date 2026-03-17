@@ -58,7 +58,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching section: {SectionName}", sectionName);
-            var response = await _httpClient.GetAsync($"/api/sections/{sectionName}", cancellationToken);
+            var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -87,7 +87,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
-            var response = await _httpClient.GetAsync($"/api/sections/{sectionName}/collections", cancellationToken);
+            var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}/collections", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
@@ -123,7 +123,7 @@ public class TechHubApiClient : ITechHubApiClient
         {
             _logger.LogDebug("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var response = await _httpClient.GetAsync(
-                $"/api/sections/{sectionName}/collections/{collectionName}",
+                $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}",
                 cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -210,7 +210,7 @@ public class TechHubApiClient : ITechHubApiClient
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
-            var url = $"/api/sections/{sectionName}/collections/{collectionName}/items{queryString}";
+            var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/items{queryString}";
 
             _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName));
             var result = await _httpClient.GetFromJsonAsync<CollectionItemsResponse>(url, cancellationToken);
@@ -293,7 +293,7 @@ public class TechHubApiClient : ITechHubApiClient
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
-            var url = $"/api/sections/{sectionName}/collections/{collectionName}/tags{queryString}";
+            var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/tags{queryString}";
 
             _logger.LogDebug("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
@@ -329,7 +329,7 @@ public class TechHubApiClient : ITechHubApiClient
                 LogSanitizer.Sanitize(sectionName), LogSanitizer.Sanitize(collectionName), LogSanitizer.Sanitize(slug));
 
             var response = await _httpClient.GetAsync(
-                $"/api/sections/{sectionName}/collections/{collectionName}/{slug}",
+                $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/{Uri.EscapeDataString(slug)}",
                 cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -492,7 +492,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching RSS feed for section: {SectionName}", sectionName);
-            var response = await _httpClient.GetAsync(new Uri($"/api/rss/{sectionName}", UriKind.Relative), cancellationToken);
+            var response = await _httpClient.GetAsync(new Uri($"/api/rss/{Uri.EscapeDataString(sectionName)}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
 
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);
@@ -514,7 +514,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching RSS feed for collection: {CollectionName} in section: {SectionName}", collectionName, sectionName);
-            var response = await _httpClient.GetAsync(new Uri($"/api/rss/{sectionName}/{collectionName}", UriKind.Relative), cancellationToken);
+            var response = await _httpClient.GetAsync(new Uri($"/api/rss/{Uri.EscapeDataString(sectionName)}/{Uri.EscapeDataString(collectionName)}", UriKind.Relative), cancellationToken);
             response.EnsureSuccessStatusCode();
 
             var xml = await response.Content.ReadAsStringAsync(cancellationToken);

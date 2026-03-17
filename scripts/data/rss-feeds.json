@@ -288,5 +288,10 @@
     "name": "Alireza Chegini's YouTube",
     "outputDir": "_videos",
     "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA"
+  },
+  {
+    "name": "Emanuele Bartolesi's Blog",
+    "outputDir": "_blogs",
+    "url": "https://dev.to/feed/kasuken"
   }
 ]

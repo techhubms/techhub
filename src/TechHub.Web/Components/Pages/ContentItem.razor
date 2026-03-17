@@ -1,5 +1,6 @@
 @page "/{sectionName}/{collectionName}/{slug}"
 @using TechHub.Core.Models
+@using TechHub.Core.Validation
 @using TechHub.Web.Services
 @implements IDisposable
 
@@ -82,6 +83,15 @@
 
     protected override async Task OnInitializedAsync()
     {
+        // Validate route parameters before any API calls
+        if (!RouteParameterValidator.IsValidNameSegment(SectionName)
+            || !RouteParameterValidator.IsValidNameSegment(CollectionName)
+            || !RouteParameterValidator.IsValidSlug(Slug))
+        {
+            Navigation.NavigateTo("/not-found");
+            return;
+        }
+
         // Verify section exists
         section = SectionCache.GetSectionByName(SectionName);
         if (section == null)
@@ -111,6 +121,15 @@
             _previousSectionName = SectionName;
             _previousCollectionName = CollectionName;
             _previousSlug = Slug;
+
+            // Validate route parameters on every parameter change
+            if (!RouteParameterValidator.IsValidNameSegment(SectionName)
+                || !RouteParameterValidator.IsValidNameSegment(CollectionName)
+                || !RouteParameterValidator.IsValidSlug(Slug))
+            {
+                Navigation.NavigateTo("/not-found");
+                return;
+            }
 
             section = SectionCache.GetSectionByName(SectionName);
             if (section == null)

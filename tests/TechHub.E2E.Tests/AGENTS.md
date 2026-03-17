@@ -345,12 +345,15 @@ $env:E2E_NETWORK_THROTTLE = ""
   - CI (`dotnet test`) uses the default `testconfig.json` with no extra flags
 - Each collection gets isolated resources (browser contexts, HTTP clients)
 
-**3. Optimized Timeouts** (fail fast):
+**3. CI-Aware Timeouts** (fast locally, generous in CI):
 
-- Element operations: 5s (vs Playwright default 30s)
-- Page loads: 10s (vs Playwright default 30s)
-- Assertions: 5s (vs Playwright default 30s)
-- Managed centrally via constants in `BlazorHelpers.cs`
+- Base element operations: 5s locally, 15s in CI (×3 multiplier)
+- Base page loads: 10s locally, 30s in CI (×3 multiplier)
+- CI detection: automatic via `CI` environment variable (GitHub Actions sets this)
+- Override multiplier: set `E2E_TIMEOUT_MULTIPLIER` environment variable
+- Managed centrally via `static readonly` fields in `BlazorHelpers.cs`
+- **No `timeoutMs` parameters on helper methods** — timeouts are fully centralized
+- Most operations complete in &lt;500ms; timeouts only matter under peak load
 
 ### Blazor JavaScript Initializers (Ready Detection)
 

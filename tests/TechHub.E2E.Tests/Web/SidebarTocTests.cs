@@ -129,7 +129,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Uses IncreasedTimeout (15s) to accommodate rAF throttling + scrollend
         // delays under CI load.
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
-        await activeTocLink.AssertElementVisibleAsync(BlazorHelpers.IncreasedTimeout);
+        await activeTocLink.AssertElementVisibleAsync();
 
         var activeLinkText = await activeTocLink.TextContentAsync();
         activeLinkText.Should().NotBeNullOrEmpty($"Active TOC link should have text on {url}");
@@ -180,8 +180,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Use Playwright's auto-retrying assertion with IncreasedTimeout (15s)
         // to accommodate rAF throttling + scrollend delays under CI load.
         await lastTocLink.AssertHasClassAsync(
-            new System.Text.RegularExpressions.Regex(".*active.*"),
-            BlazorHelpers.IncreasedTimeout);
+            new System.Text.RegularExpressions.Regex(".*active.*"));
     }
 
     #endregion
@@ -336,7 +335,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Uses IncreasedTimeout (15s) because the scroll spy uses rAF throttling
         // and scrollend events, which under load can be delayed.
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
-        await BlazorHelpers.AssertElementVisibleAsync(activeTocLinks.First, BlazorHelpers.IncreasedTimeout);
+        await BlazorHelpers.AssertElementVisibleAsync(activeTocLinks.First);
 
         // Verify at least one TOC link has active class (overview section should be active)
         var activeCount = await activeTocLinks.CountAsync();

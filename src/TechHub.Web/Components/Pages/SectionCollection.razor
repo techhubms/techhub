@@ -1,6 +1,7 @@
 @page "/{sectionName}"
 @page "/{sectionName}/{collectionName}"
 @using TechHub.Core.Models
+@using TechHub.Core.Validation
 @using TechHub.Web.Services
 
 @inject SectionCache SectionCache
@@ -100,6 +101,14 @@
         // Default to "all" when accessed via /{sectionName} route
         CollectionName ??= "all";
 
+        // Validate route parameters before any API calls
+        if (!RouteParameterValidator.IsValidNameSegment(SectionName)
+            || !RouteParameterValidator.IsValidNameSegment(CollectionName))
+        {
+            Navigation.NavigateTo("/not-found");
+            return;
+        }
+
         // Verify section exists, redirect to 404 if not
         section = SectionCache.GetSectionByName(SectionName);
         if (section == null)
@@ -131,6 +140,14 @@
         // Must be here (not just OnInitialized) because Blazor reuses the component
         // instance when navigating between /{sectionName} and /{sectionName}/{collectionName}
         CollectionName ??= "all";
+
+        // Validate route parameters on every parameter change
+        if (!RouteParameterValidator.IsValidNameSegment(SectionName)
+            || !RouteParameterValidator.IsValidNameSegment(CollectionName))
+        {
+            Navigation.NavigateTo("/not-found");
+            return;
+        }
 
         // Detect section/collection changes and reset filters
         var scopeChanged = !string.Equals(_previousSectionName, SectionName, StringComparison.OrdinalIgnoreCase)

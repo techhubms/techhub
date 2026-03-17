@@ -4,6 +4,7 @@ using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Core.Validation;
 
 namespace TechHub.Api.Endpoints;
 
@@ -30,7 +31,8 @@ public static class ContentEndpoints
     {
         var group = endpoints.MapGroup("/api/sections")
             .WithTags("Sections")
-            .WithDescription("Unified API for browsing sections, collections, content items, and tags");
+            .WithDescription("Unified API for browsing sections, collections, content items, and tags")
+            .AddEndpointFilter(ValidateRouteParameters);
 
         // ============================================================
         // Section-level endpoints
@@ -95,6 +97,40 @@ public static class ContentEndpoints
             .Produces(StatusCodes.Status404NotFound);
 
         return endpoints;
+    }
+
+    // ================================================================
+    // Route parameter validation filter
+    // ================================================================
+
+    private static ValueTask<object?> ValidateRouteParameters(
+        EndpointFilterInvocationContext context,
+        EndpointFilterDelegate next)
+    {
+        var routeValues = context.HttpContext.Request.RouteValues;
+
+        if (routeValues.TryGetValue("sectionName", out var sectionObj)
+            && sectionObj is string sectionName
+            && !RouteParameterValidator.IsValidNameSegment(sectionName))
+        {
+            return ValueTask.FromResult<object?>(Results.BadRequest("Invalid section name format."));
+        }
+
+        if (routeValues.TryGetValue("collectionName", out var collectionObj)
+            && collectionObj is string collectionName
+            && !RouteParameterValidator.IsValidNameSegment(collectionName))
+        {
+            return ValueTask.FromResult<object?>(Results.BadRequest("Invalid collection name format."));
+        }
+
+        if (routeValues.TryGetValue("slug", out var slugObj)
+            && slugObj is string slug
+            && !RouteParameterValidator.IsValidSlug(slug))
+        {
+            return ValueTask.FromResult<object?>(Results.BadRequest("Invalid content slug format."));
+        }
+
+        return next(context);
     }
 
     // ================================================================

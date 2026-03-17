@@ -269,6 +269,15 @@ curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30
 
 ### Error Responses
 
+### 400 Bad Request
+
+Returned when route parameters have invalid format. All path parameters are validated:
+
+- **sectionName / collectionName**: Must be lowercase letters and hyphens only (e.g., `ai`, `github-copilot`). Rejects dots, slashes, encoded characters, uppercase.
+- **slug**: Must be lowercase letters, digits, and hyphens only. Rejects file extensions (`.php`), encoded HTML, path traversal.
+
+Validation is enforced via an endpoint filter on the `/api/sections` group and the `/api/rss` group. See `RouteParameterValidator` in `TechHub.Core/Validation/`.
+
 ### 404 Not Found
 
 Returned when a section, collection, or item does not exist.

@@ -7,6 +7,12 @@ param appInsightsName string
 @description('Log Analytics Workspace name')
 param logAnalyticsWorkspaceName string
 
+@description('Log Analytics daily ingestion cap in GB (-1 = unlimited)')
+param dailyQuotaGb int = -1
+
+@description('Application Insights retention in days')
+param appInsightsRetentionInDays int = 90
+
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: logAnalyticsWorkspaceName
   location: location
@@ -18,7 +24,7 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
     publicNetworkAccessForIngestion: 'Enabled'
     publicNetworkAccessForQuery: 'Enabled'
     workspaceCapping: {
-      dailyQuotaGb: -1
+      dailyQuotaGb: dailyQuotaGb
     }
   }
 }
@@ -31,7 +37,7 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     Application_Type: 'web'
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
-    RetentionInDays: 90
+    RetentionInDays: appInsightsRetentionInDays
     publicNetworkAccessForIngestion: 'Enabled'
     publicNetworkAccessForQuery: 'Enabled'
   }

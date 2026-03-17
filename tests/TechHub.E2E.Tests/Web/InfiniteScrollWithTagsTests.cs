@@ -66,7 +66,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // skeleton placeholders when cards have already rendered. Use IncreasedTimeout
         // (15s) to account for the separate tag cloud API call under CI load.
         var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{TagDisplay}')").First;
-        await tagButton.AssertElementVisibleAsync(BlazorHelpers.IncreasedTimeout);
+        await tagButton.AssertElementVisibleAsync();
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for filter to apply and content to load.
