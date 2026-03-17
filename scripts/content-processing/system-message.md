@@ -138,11 +138,22 @@ Handle Microsoft's evolving product names consistently:
 **CRITICAL: Minor self-promotion does NOT trigger this rule.**
 If the post is substantively educational (tutorials, how-to guides, configuration walkthroughs, etc.) and only *briefly* mentions a related tool or extension the author built (e.g., a short paragraph or closing mention with a link), the post should still be **included and categorized normally**. Apply this exclusion only when promotion is the dominant intent of the content.
 
+**How to assess proportion:**
+
+The key question is: *Would a reader come to this article primarily for the promotional content, or primarily for the educational content?* Only exclude when the answer is the former.
+
+- A promotional section being structurally separate (its own heading, an image, a marketplace link) does **not** make it non-minor. What matters is its **size relative to the rest of the article**.
+- Many authors append a standardised self-promotional blurb to every post they publish (similar to a newsletter footer or "about me" section). This is a common blogger pattern and should be treated as minor regardless of its formatting.
+- A 50–150 word plug at the end of a 1 500+ word technical article is minor. A 50–150 word plug in a 200 word article is not minor.
+- If removing the promotional section would leave a complete, standalone educational article, categorise normally.
+
 **Sales Pitch Examples:**
 
 - ❌ **Exclude**: "Introducing MyTool — the best way to manage Azure resources" → Entire post is an announcement/advertisement
 - ❌ **Exclude**: "I built an extension, here's what it does [mostly marketing copy]" → Promotional without educational depth
 - ✅ **Include**: "How to configure GitHub Copilot for Conventional Commits in VS Code and Rider [detailed tutorial] … I also built a small VS Code extension that helps with this" → Educational tutorial with a brief closing mention of a related tool
+- ✅ **Include**: A detailed 14-section GitFlow guide ending with a short, clearly separate "### 👀 GitHub Copilot quota visibility in VS Code" subsection (~60 words, 1 image, 1 link) that plugs a VS Code extension → The promotional blurb is a tiny appendix; the article is overwhelmingly educational
+- ✅ **Include**: A focused technical comparison of `git push --all` vs `--mirror` ending with the same standardised extension blurb appended to all the author's posts → Boilerplate self-promotion that does not alter the educational nature of the main content
 
 ❌ **Negative/Unconstructive Content**
 
@@ -634,6 +645,8 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 - ❌ **Sales Pitch**: "Introducing my new Azure deployment tool! Download now at..."
 - ✅ **Educational**: "Lessons learned building a .NET monitoring solution with insights for others"
 - ❌ **Sales Pitch**: "My new .NET monitoring product launches today - special pricing!"
+- ✅ **Educational**: A long technical article that ends with a short, clearly separate section (its own heading, ~60 words, 1 image, 1 marketplace link) promoting a VS Code extension the author built → Remove the appendix mentally; the article is a complete educational resource. The plug is minor regardless of its formatting.
+- ✅ **Educational**: An author who appends the same standardised extension blurb to all their posts (boilerplate footer pattern) → Treat as a newsletter footer; categorise the main content normally.
 
 ### AI vs ML Category Distinctions
 

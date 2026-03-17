@@ -13624,29 +13624,5 @@
     "timestamp": "2026-03-17 16:21:50 +00:00",
     "canonical_url": "https://github.blog/security/supply-chain-security/investing-in-the-people-shaping-open-source-and-securing-the-future-together/",
     "collection": "news"
-  },
-  {
-    "reason": "No categories found: Content excluded due to the generic exclusion rule for sales pitches: the article ends with a promotional section for a VS Code extension the author built (“Copilot Insights”), including a call-to-action and a marketplace link. This appears as an announcement/advertisement segment rather than technical Microsoft-focused instructional content, so no categories are assigned.",
-    "timestamp": "2026-03-17 16:22:32 +00:00",
-    "canonical_url": "https://dev.to/playfulprogramming/a-practical-gitflow-setup-that-works-on-github-46lb",
-    "collection": "blogs"
-  },
-  {
-    "reason": "No categories found: Excluded by Generic Exclusion Rules → Sales Pitches. While most of the post is an educational explanation of Git mirroring (`git push --all` + `--tags` vs `--mirror`) during GitLab→GitHub migrations, it includes a prominent promotional section for the author’s VS Code extension (“I built a small VS Code extension called Copilot Insights…”, plus VS Code Marketplace link and images). That section’s primary purpose is advertising the author’s tool, so per the sales pitch exclusion rule, no categories are assigned.",
-    "timestamp": "2026-03-17 16:22:48 +00:00",
-    "canonical_url": "https://dev.to/playfulprogramming/git-mirroring-during-migrations-all-vs-mirror-2i4h",
-    "collection": "blogs"
-  },
-  {
-    "reason": "No categories found: Excluded by generic exclusion rule: Sales Pitches. The post’s primary purpose is to introduce and promote the author’s own product (“That’s why I built Green Software Indicator”), drive installs via store links (Chrome Web Store, Microsoft Edge Add-ons), and recruit contributors, with only high-level feature bullets and no substantive implementation details or technical walkthrough. It also includes additional promotion for a Gumroad RSS feed bundle. Since a generic exclusion applies, no categories are assigned.",
-    "timestamp": "2026-03-17 16:25:51 +00:00",
-    "canonical_url": "https://dev.to/playfulprogramming/introducing-green-software-indicator-a-browser-extension-for-a-greener-web-5692",
-    "collection": "blogs"
-  },
-  {
-    "reason": "No categories found: Excluded because a Generic Exclusion Rule applies: this is primarily a promotional announcement for the author’s own VS Code extension (TaskDeck), including repeated positioning statements (“Introducing TaskDeck”), demo GIFs, and direct calls to install it with Marketplace/Repository links. While it contains some implementation notes (TreeDataProvider, vscode.tasks.executeTask), the dominant intent is advertising the tool rather than providing a broadly applicable Microsoft technology tutorial, so it falls under the Sales Pitches exclusion (Chapter 3).",
-    "timestamp": "2026-03-17 16:26:09 +00:00",
-    "canonical_url": "https://dev.to/playfulprogramming/why-i-built-taskdeck-and-how-it-improves-your-vs-code-workflow-4fk9",
-    "collection": "blogs"
   }
 ]
