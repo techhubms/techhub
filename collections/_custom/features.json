@@ -1,5 +1,6 @@
 {
     "title": "GitHub Copilot Features",
+    "description": "A comprehensive overview of GitHub Copilot plans, subscription tiers, and AI-powered features for developers and teams.",
     "intro": "This page provides a comprehensive overview of GitHub Copilot plans, combining official features with example videos.",
     "note": "GitHub Copilot features like the Coding Agent are not currently available in GitHub Enterprise Server.",
     "links": {

@@ -14,6 +14,11 @@
 
 @if (pageData != null)
 {
+    <SeoMetaTags
+        Title="@pageData.Title"
+        Description="@pageData.Description"
+        ContentType="SeoMetaTags.SeoContentType.Website" />
+
     <main class="page-without-sidebar">
         <article class="article-body">
             <div class="content-detail-header">

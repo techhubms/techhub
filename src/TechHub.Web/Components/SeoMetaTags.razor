@@ -5,6 +5,11 @@
 @inject BrandingService Branding
 
 <HeadContent>
+    @* Page path marker — identifies which page's HeadContent is currently rendered.
+       Used by E2E tests to detect when enhanced navigation has completed and all
+       SEO tags in this HeadContent block belong to the new page. *@
+    <meta name="page-path" content="@_normalizedPath" />
+
     @* Meta description *@
     <meta name="description" content="@_truncatedDescription" />
 
@@ -140,15 +145,11 @@
         ? "article"
         : "website";
 
-    private string _canonicalUrl
-    {
-        get
-        {
-            var uri = new Uri(Navigation.Uri);
-            var normalizedPath = uri.AbsolutePath.ToLowerInvariant();
-            return $"{Navigation.BaseUri.TrimEnd('/')}{normalizedPath}";
-        }
-    }
+    private string _normalizedPath =>
+        new Uri(Navigation.Uri).AbsolutePath.ToLowerInvariant();
+
+    private string _canonicalUrl =>
+        $"{Navigation.BaseUri.TrimEnd('/')}{_normalizedPath}";
 
     protected override void OnParametersSet()
     {
