@@ -71,7 +71,7 @@ public class SubdomainRedirectMiddleware
     {
         ArgumentNullException.ThrowIfNull(context);
 
-        var host = context.Request.Host.Host;
+        var host = InputSanitizer.Sanitize(context.Request.Host.Host);
 
         // Skip processing for primary hosts (tech.xebia.ms, tech.hub.ms, localhost, etc.)
         if (_primaryHosts.Contains(host) || !host.Contains('.', StringComparison.Ordinal))
@@ -104,7 +104,7 @@ public class SubdomainRedirectMiddleware
                     var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
                     var redirectUrl = $"https://{targetHost}/{sectionPath}{originalPath}{context.Request.QueryString}";
 
-                    _logger.LogInformationSanitized(
+                    _logger.LogInformation(
                         "Subdomain shortcut redirect: {Host} -> {RedirectUrl}",
                         host,
                         redirectUrl);
@@ -125,7 +125,7 @@ public class SubdomainRedirectMiddleware
                 var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
                 var redirectUrl = $"https://{primaryHost}{originalPath}{context.Request.QueryString}";
 
-                _logger.LogInformationSanitized(
+                _logger.LogInformation(
                     "Unknown subdomain redirect: {Host} -> {RedirectUrl}",
                     host,
                     redirectUrl);

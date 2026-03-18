@@ -140,6 +140,8 @@
 
     protected override async Task OnInitializedAsync()
     {
+        SectionName = InputSanitizer.Sanitize(SectionName);
+        CollectionName = InputSanitizer.Sanitize(CollectionName);
         previousCollectionName = CollectionName;
         previousFilterTags = FilterTags?.ToList();
         previousSearchQuery = SearchQuery;
@@ -160,7 +162,7 @@
             totalCount = restored.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
-            Logger.LogDebugSanitized("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
+            Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
         else
         {
@@ -206,6 +208,8 @@
 
     protected override async Task OnParametersSetAsync()
     {
+        SectionName = InputSanitizer.Sanitize(SectionName);
+        CollectionName = InputSanitizer.Sanitize(CollectionName);
         if (CollectionName != previousCollectionName)
         {
             previousCollectionName = CollectionName;
@@ -300,7 +304,7 @@
         }
         catch (Exception ex)
         {
-            Logger.LogErrorSanitized(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
+            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
             errorMessage = "Unable to load content";
         }
         finally

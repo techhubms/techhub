@@ -27,6 +27,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Always use context7 MCP tool** for latest .NET/Blazor documentation
 - **Always check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
 - **Always add the latest stable version when adding NuGet packages**
+- **Always sanitize user-controlled string parameters at the function entry point**: Overwrite the parameter immediately using `param = InputSanitizer.Sanitize(param);` (from `TechHub.Core.Logging`) so no code path can ever use the unsanitized value. Apply to all route params, query params, and request body strings that originated from user input. Use the sanitized variable everywhere after that point.
 
 ### ⚠️ Ask First
 

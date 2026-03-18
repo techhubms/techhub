@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Validation;
 
@@ -156,6 +157,7 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
@@ -174,6 +176,7 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
@@ -197,6 +200,8 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
@@ -236,6 +241,8 @@ public static class ContentEndpoints
         [FromQuery] bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
         // Verify section exists
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
@@ -337,6 +344,8 @@ public static class ContentEndpoints
         IOptions<TagCloudOptions> tagCloudOptions = default!,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
         // Verify section exists
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
@@ -553,6 +562,9 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
+        slug = InputSanitizer.Sanitize(slug);
         // Verify section exists
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)

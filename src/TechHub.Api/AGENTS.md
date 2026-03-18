@@ -36,6 +36,26 @@ TechHub.Api/
 └── TechHub.Api.csproj           # Project file
 ```
 
+## Input Sanitization at Entry Points
+
+**RULE**: Sanitize every user-controlled string parameter at the very first line of the endpoint handler — before any logging, DB access, or processing.
+
+```csharp
+private static async Task<Results<Ok<Section>, NotFound>> GetSectionByName(
+    string sectionName,
+    IContentRepository contentRepository,
+    CancellationToken cancellationToken)
+{
+    // First thing: sanitize user input, overwrite parameter so it is safe everywhere
+    sectionName = InputSanitizer.Sanitize(sectionName);
+    ...
+}
+```
+
+- Use `InputSanitizer.Sanitize(value)` from `TechHub.Core.Logging`
+- Overwrite the parameter (not a new variable) so there is zero risk of using the unsanitized value
+- Do NOT use `Log*Sanitized` wrapper methods — sanitize at entry instead
+
 ## RESTful Design Principles
 
 The API follows RESTful conventions:

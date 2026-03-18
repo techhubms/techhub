@@ -1,10 +1,10 @@
 namespace TechHub.Core.Logging;
 
 /// <summary>
-/// Sanitizes values for safe use in log messages to prevent log forging attacks.
+/// Sanitizes user-controlled input to prevent log forging attacks and ensure safe use throughout the application.
 /// Removes control characters (newlines, carriage returns) that could inject fake log entries.
 /// </summary>
-public static class LogSanitizer
+public static class InputSanitizer
 {
     /// <summary>
     /// Removes newline and carriage return characters from a value to prevent log forging.

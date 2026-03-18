@@ -55,14 +55,15 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<Section?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
         try
         {
-            _logger.LogDebugSanitized("Fetching section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Section not found: {SectionName}", sectionName);
+                _logger.LogWarning("Section not found: {SectionName}", sectionName);
                 return null;
             }
 
@@ -72,7 +73,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch section {SectionName}", sectionName);
+            _logger.LogError(ex, "Failed to fetch section {SectionName}", sectionName);
             throw;
         }
     }
@@ -84,14 +85,15 @@ public class TechHubApiClient : ITechHubApiClient
         string sectionName,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
         try
         {
-            _logger.LogDebugSanitized("Fetching collections for section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}/collections", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Section not found: {SectionName}", sectionName);
+                _logger.LogWarning("Section not found: {SectionName}", sectionName);
                 return null;
             }
 
@@ -101,7 +103,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch collections for section {SectionName}", sectionName);
+            _logger.LogError(ex, "Failed to fetch collections for section {SectionName}", sectionName);
             throw;
         }
     }
@@ -119,16 +121,18 @@ public class TechHubApiClient : ITechHubApiClient
         string collectionName,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
         try
         {
-            _logger.LogDebugSanitized("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var response = await _httpClient.GetAsync(
                 $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}",
                 cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
+                _logger.LogWarning("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
                 return null;
             }
 
@@ -138,7 +142,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
@@ -161,6 +165,8 @@ public class TechHubApiClient : ITechHubApiClient
         bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
         try
         {
             var queryParams = new List<string>();
@@ -212,16 +218,16 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/items{queryString}";
 
-            _logger.LogDebugSanitized("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var result = await _httpClient.GetFromJsonAsync<CollectionItemsResponse>(url, cancellationToken);
 
-            _logger.LogDebugSanitized("Successfully fetched {Count} items (total: {TotalCount}) for collection {SectionName}/{CollectionName}",
+            _logger.LogDebug("Successfully fetched {Count} items (total: {TotalCount}) for collection {SectionName}/{CollectionName}",
                 result?.Items.Count ?? 0, result?.TotalCount ?? 0, sectionName, collectionName);
             return result;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
@@ -243,6 +249,8 @@ public class TechHubApiClient : ITechHubApiClient
         string? searchQuery = null,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
         try
         {
             var queryParams = new List<string>();
@@ -295,16 +303,16 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/tags{queryString}";
 
-            _logger.LogDebugSanitized("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
 
-            _logger.LogDebugSanitized("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
+            _logger.LogDebug("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
                 tagCloud?.Count ?? 0, sectionName, collectionName);
             return tagCloud;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch tag cloud for collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch tag cloud for collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
@@ -323,9 +331,12 @@ public class TechHubApiClient : ITechHubApiClient
         string slug,
         CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = InputSanitizer.Sanitize(collectionName);
+        slug = InputSanitizer.Sanitize(slug);
         try
         {
-            _logger.LogDebugSanitized("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
+            _logger.LogDebug("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
                 sectionName, collectionName, slug);
 
             var response = await _httpClient.GetAsync(
@@ -334,7 +345,7 @@ public class TechHubApiClient : ITechHubApiClient
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Content not found: {SectionName}/{CollectionName}/{Slug}",
+                _logger.LogWarning("Content not found: {SectionName}/{CollectionName}/{Slug}",
                     sectionName, collectionName, slug);
                 return null;
             }
@@ -345,7 +356,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch content detail for {SectionName}/{CollectionName}/{Slug}",
+            _logger.LogError(ex, "Failed to fetch content detail for {SectionName}/{CollectionName}/{Slug}",
                 sectionName, collectionName, slug);
             throw;
         }
@@ -489,6 +500,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<string> GetSectionRssFeedAsync(string sectionName, CancellationToken cancellationToken = default)
     {
+        sectionName = InputSanitizer.Sanitize(sectionName);
         try
         {
             _logger.LogDebug("Fetching RSS feed for section: {SectionName}", sectionName);
@@ -511,6 +523,8 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<string> GetCollectionRssFeedAsync(string collectionName, string sectionName = "all", CancellationToken cancellationToken = default)
     {
+        collectionName = InputSanitizer.Sanitize(collectionName);
+        sectionName = InputSanitizer.Sanitize(sectionName);
         try
         {
             _logger.LogDebug("Fetching RSS feed for collection: {CollectionName} in section: {SectionName}", collectionName, sectionName);
@@ -679,6 +693,7 @@ public class TechHubApiClient : ITechHubApiClient
         int? skip = null,
         CancellationToken cancellationToken = default)
     {
+        authorName = InputSanitizer.Sanitize(authorName);
         try
         {
             var queryParams = new List<string>();
@@ -695,25 +710,25 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/authors/{Uri.EscapeDataString(authorName)}/items{queryString}";
 
-            _logger.LogDebugSanitized("Fetching items for author: {AuthorName}", authorName);
+            _logger.LogDebug("Fetching items for author: {AuthorName}", authorName);
             var response = await _httpClient.GetAsync(url, cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Author not found: {AuthorName}", authorName);
+                _logger.LogWarning("Author not found: {AuthorName}", authorName);
                 return null;
             }
 
             response.EnsureSuccessStatusCode();
             var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(cancellationToken: cancellationToken);
 
-            _logger.LogDebugSanitized("Successfully fetched {Count} items (total: {TotalCount}) for author {AuthorName}",
+            _logger.LogDebug("Successfully fetched {Count} items (total: {TotalCount}) for author {AuthorName}",
                 result?.Items.Count ?? 0, result?.TotalCount ?? 0, authorName);
             return result;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch items for author {AuthorName}", authorName);
+            _logger.LogError(ex, "Failed to fetch items for author {AuthorName}", authorName);
             throw;
         }
     }

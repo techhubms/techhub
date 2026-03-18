@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 
 namespace TechHub.Api.Endpoints;
@@ -93,7 +94,7 @@ public static class AuthorEndpoints
             return TypedResults.BadRequest("Invalid author name format.");
         }
 
-        var decodedAuthorName = Uri.UnescapeDataString(authorName);
+        var decodedAuthorName = InputSanitizer.Sanitize(Uri.UnescapeDataString(authorName));
 
         // Enforce pagination limits
         var options = apiOptions.Value;
