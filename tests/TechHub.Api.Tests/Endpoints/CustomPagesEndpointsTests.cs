@@ -49,6 +49,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         var data = await response.Content.ReadFromJsonAsync<SDLCPageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("AI SDLC");
+        data.Description.Should().NotBeNullOrWhiteSpace();
         data.PhasesHeading.Should().NotBeNullOrWhiteSpace();
         data.PreconditionsHeading.Should().NotBeNullOrWhiteSpace();
         data.PreconditionsIntro.Should().NotBeNullOrWhiteSpace();
@@ -79,6 +80,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         var data = await response.Content.ReadFromJsonAsync<DXSpacePageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("Developer Experience Space");
+        data.Description.Should().NotBeNullOrWhiteSpace();
         data.Dora.Should().NotBeNull();
         data.Dora.Metrics.Should().HaveCount(4);
         data.Space.Should().NotBeNull();
@@ -99,6 +101,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         var data = await response.Content.ReadFromJsonAsync<ToolTipsPageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("GitHub Copilot Tool Tips");
+        data.Description.Should().NotBeNullOrWhiteSpace();
         data.Tools.Should().NotBeEmpty();
         data.Tools[0].Name.Should().NotBeNullOrWhiteSpace();
         data.Tools[0].Url.Should().NotBeNullOrWhiteSpace();
@@ -117,6 +120,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         var data = await response.Content.ReadFromJsonAsync<GettingStartedPageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("Getting Started with GitHub Copilot");
+        data.Description.Should().NotBeNullOrWhiteSpace();
         data.Sections.Should().NotBeEmpty();
         data.Sections[0].Title.Should().NotBeNullOrWhiteSpace();
         data.Sections[0].Content.Should().Contain("<", "Content should be rendered as HTML");
@@ -134,6 +138,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         var data = await response.Content.ReadFromJsonAsync<FeaturesPageData>(TestContext.Current.CancellationToken);
         data.Should().NotBeNull();
         data!.Title.Should().Be("GitHub Copilot Features");
+        data.Description.Should().NotBeNullOrWhiteSpace();
         data.SubscriptionTiers.Should().HaveCount(6);
         data.SubscriptionTiers[0].Name.Should().Be("Free");
         data.SubscriptionTiers[0].Price.Should().BeNull();
@@ -143,6 +148,36 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         data.FeatureSections[0].Plans.Should().Contain("Free");
         data.FeatureSections[1].Plans.Should().Contain("Student");
         data.VideoCollection.Should().Be("ghc-features");
+    }
+
+    [Fact]
+    public async Task GetHandbookData_ReturnsDescription()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/handbook", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<HandbookPageData>(TestContext.Current.CancellationToken);
+        data.Should().NotBeNull();
+        data!.Title.Should().Be("The GitHub Copilot Handbook");
+        data.Description.Should().NotBeNullOrWhiteSpace();
+    }
+
+    [Fact]
+    public async Task GetLevelsData_ReturnsDescription()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/levels", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<LevelsPageData>(TestContext.Current.CancellationToken);
+        data.Should().NotBeNull();
+        data!.Title.Should().Be("GitHub Copilot: Levels of Enlightenment");
+        data.Description.Should().NotBeNullOrWhiteSpace();
     }
 
     [Fact]
