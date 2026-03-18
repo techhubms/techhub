@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot",
+  "Title": "GPT-5.3-Codex long-term support in GitHub Copilot",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-03-18 18:24:01",
+  "Author": "Allison",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "To give enterprises the stability they need for internal security and safety reviews, GitHub has established a new commitment with long-term support (LTS) models available for Copilot Business and Copilot Enterprise. Designated LTS models will be made available for a full 12 months from the model’s launch date.\n\nGPT-5.3-Codex is our first LTS model, in partnership with OpenAI. The model launched on February 5, 2026, and will remain available through February 4, 2027 for Copilot Business and Copilot Enterprise users.\n\nGitHub Copilot data has shown that GPT-5.3-Codex has a significantly high code survival rate among enterprise customers.\n\n### GPT-5.3-Codex as the newest base model\n\nGPT-5.3-Codex will also be available as the newest base model for Copilot, replacing GPT-4.1. The base model is used when your organization hasn’t yet approved other models through its internal review process. We’ll automatically enable GPT-5.3-Codex for all Copilot Business and Copilot Enterprise organizations within 60 days of this announcement.\n\nGPT-5.3-Codex carries a 1x premium request unit multiplier. GPT-4.1 will remain force-enabled at a 0x multiplier for the time being, though we encourage organizations to begin using the latest models.\n\nIf your team has questions or needs more time, contact your account team.\n\n### Key dates\n\n- **March 18, 2026:** LTS and base model changes announced.\n- **May 17, 2026:** GPT-5.3-Codex becomes the base model for all Copilot Business and Copilot Enterprise organizations.\n- **February 4, 2027:** End of the LTS availability window for GPT-5.3-Codex.\n\n### Who this applies to\n\nThese changes apply to Copilot Business and Copilot Enterprise plans only. They don’t apply to Copilot Pro, Copilot Pro+, or Copilot Free. On individual plans, model deprecation will follow the standard timeline.\n\nLearn more in [our docs about supported models](https://docs.github.com/en/copilot/reference/ai-models/supported-models) and [model management](https://docs.github.com/copilot/concepts/policies), or [join the discussion](https://github.com/orgs/community/discussions/190008).",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-18T16:55:41+00:00",
+  "Description": "To give enterprises the stability they need for internal security and safety reviews, GitHub has established a new commitment with long-term support (LTS) models available for Copilot Business and Copilot…\n\nThe post [GPT-5.3-Codex long-term support in GitHub Copilot](https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog)."
+}
