@@ -67,8 +67,11 @@ public class SearchTests : PlaywrightTestBase
 
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
 
-        // Act - Type in search box
-        await searchInput.FillAsync("test query");
+        // Act - Use FillBlazorInputAsync to ensure Blazor @oninput handler is attached before
+        // filling, then wait for the search URL parameter to confirm Blazor processed the input.
+        // Plain FillAsync fires the input event before Blazor attaches its handler on slow CI,
+        // so _searchQueryInternal is never updated and the clear button never renders.
+        await searchInput.FillBlazorInputAsync("test query");
 
         // Assert - Clear button should appear (auto-retries via Expect)
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
