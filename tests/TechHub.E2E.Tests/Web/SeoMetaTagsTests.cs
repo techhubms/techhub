@@ -217,15 +217,29 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     // ────────────────────────────────────────────────────────────────────────
 
     /// <summary>
-    /// Waits for SeoMetaTags HeadContent to be fully rendered for a specific page path.
-    /// The page-path meta tag is the FIRST element in the HeadContent block — when it
-    /// contains the expected path, all other SEO tags in that same block are guaranteed
-    /// to be present and belong to the correct page. This eliminates races with stale
-    /// head content from a previous page during Blazor enhanced navigation.
+    /// Waits until ALL essential SEO tags are simultaneously present for the given page path.
+    ///
+    /// Checks page-path, description, og:title, and a JSON-LD script together in a single
+    /// JavaScript evaluation. This prevents the method from returning during a transient
+    /// state caused by Blazor HeadContent rehydration: after the Blazor circuit connects,
+    /// HeadContent is briefly cleared and then re-rendered. Checking only page-path could
+    /// succeed during the initial SSR phase, allowing subsequent reads to catch the
+    /// rehydration gap. Requiring all essential tags to be simultaneously present ensures
+    /// the method only returns once HeadContent is fully and stably rendered.
     /// </summary>
     private Task WaitForSeoMetaTagsAsync(string expectedPath) =>
         Page.WaitForConditionAsync(
-            "(path) => document.head.querySelector(\"meta[name='page-path']\")?.content === path",
+            @"(path) => {
+                const h = document.head;
+                const pagePath = h.querySelector(""meta[name='page-path']"");
+                const description = h.querySelector(""meta[name='description']"");
+                const ogTitle = h.querySelector(""meta[property='og:title']"");
+                const jsonLd = h.querySelector(""script[type='application/ld+json']"");
+                return pagePath?.content === path &&
+                       description?.content?.length > 0 &&
+                       ogTitle?.content?.length > 0 &&
+                       jsonLd !== null;
+            }",
             expectedPath);
 
     private async Task<string?> GetMetaContentAsync(string attributeName, string attributeValue)
