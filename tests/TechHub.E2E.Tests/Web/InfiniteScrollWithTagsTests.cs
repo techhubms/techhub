@@ -67,6 +67,14 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // DefaultTimeout (5s locally, 15s in CI via CiMultiplier) for the tag cloud API call.
         var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{TagDisplay}')").First;
         await tagButton.AssertElementVisibleAsync();
+
+        // Capture scroll listener version BEFORE clicking the tag, so we can reliably detect
+        // when a fresh listener is attached after the tag-filter re-render.
+        // Using the version counter (incremented on each observeScrollTrigger() call) is more
+        // reliable than the __scrollListenerReady flag, which can be stale if the component
+        // disposes the old listener and hasn't yet attached the new one.
+        var versionBeforeClick = await Page.GetScrollListenerVersionAsync();
+
         await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
 
         // Wait for filter to apply and content to load.
@@ -82,16 +90,27 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         firstBatchCount.Should().BeGreaterThan(0, "should have items after filtering");
 
         // Only test infinite scroll if there's more content available.
-        // Wait for the scroll listener to be fully re-attached after the tag filter
-        // re-render before checking, to avoid a false positive from the stale listener.
-        var scrollListenerReady = await Page.EvaluateAsync<bool>(
-            "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
-        var scrollTrigger = Page.Locator("#scroll-trigger");
-        var initialScrollTriggerExists = scrollListenerReady && await scrollTrigger.CountAsync() > 0;
+        // Wait for the scroll trigger element to either appear (more pages) or end-of-content
+        // to confirm the initial batch has fully rendered.
+        await Page.WaitForConditionAsync(
+            "() => document.getElementById('scroll-trigger') !== null || document.querySelector('.end-of-content') !== null",
+            new PageWaitForFunctionOptions
+            {
+                Timeout = BlazorHelpers.IncreasedTimeout,
+                PollingInterval = BlazorHelpers.DefaultPollingInterval
+            });
 
-        if (initialScrollTriggerExists)
+        var scrollTriggerExists = await Page.EvaluateAsync<bool>(
+            "() => document.getElementById('scroll-trigger') !== null");
+
+        if (scrollTriggerExists)
         {
-            // Scroll to load more items using JS scrollIntoView + scrollBy approach
+            // Wait for the scroll listener to be freshly re-attached after the tag-filter
+            // re-render. This uses the version counter (immune to stale-readiness) to detect
+            // the new attachment, which fires when LoadInitialBatch → SetupScrollListener runs.
+            await Page.WaitForScrollListenerReattachAsync(versionBeforeClick);
+
+            // Scroll to load more items
             await Page.ScrollToLoadMoreAsync(expectedItemCount: firstBatchCount + 1);
 
             // Capture count after scroll
