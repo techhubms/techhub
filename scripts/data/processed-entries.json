@@ -28942,5 +28942,17 @@
     "reason": "Succesfully added: No generic exclusion rules apply (this is a short video description, but the 200-word minimum only applies to Community content). Categorized as GitHub Copilot because the content is explicitly about building a GitHub Copilot SDK project (GitHub Copilot inclusion rules 1 and 3). Categorized as AI because GitHub Copilot content requires also assigning AI (AI inclusion rule 2: always include both AI and GitHub Copilot together). No other categories are supported by the provided text (no Azure, .NET, DevOps, ML, or Security specifics mentioned).",
     "canonical_url": "https://www.youtube.com/watch?v=uzmnpGmR2tg",
     "collection": "videos"
+  },
+  {
+    "timestamp": "2026-03-18 16:29:59 +00:00",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, substantive technical/security guidance (not job/career, not question-only, not a sales pitch, not negative). Assigned AI because the content is specifically about GenAI and agentic AI systems observability and mentions AI-native telemetry, evaluation, and governance (AI inclusion rules 5 and 6). Assigned Azure because it explicitly references Azure services used to operationalize observability—Azure Monitor and Application Insights—and Microsoft Foundry observability features in Azure Foundry (Azure inclusion rules 1 and 4). Assigned Security because the core focus is secure development practices (SDL), risk detection, policy adherence, prompt injection/data exfiltration scenarios, and governance/controls (Security inclusion rules 2, 6, and 9). Not assigned GitHub Copilot because the post discusses copilots generically and focuses on agentic systems and observability rather than GitHub Copilot tooling/features.",
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/18/observability-ai-systems-strengthening-visibility-proactive-risk-detection/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-18 16:32:18 +00:00",
+    "reason": "Succesfully added: No generic exclusion rules triggered: content is English, >200 words (community), and is a technical how-to (not biographical, not question-only, not job/business-exec focused, not unconstructively negative). Assigned Azure because Azure Databricks is the central platform and it explicitly uses Azure connectivity (Azure Databricks, Azure ExpressRoute) and Azure-hosted workspace endpoints (Azure category rules 1, 4, 5). Assigned ML because the post is primarily data engineering/analytics pipeline work (CDC ingestion, Bronze/Silver/Gold modeling, ETL/ELT, BI dashboards) which fits ML inclusion rules around analytics engineering and BI development on Microsoft platforms (ML rules 2 and 4). Did not assign AI: 'AI/BI Dashboards' and 'Genie' are mentioned for NL-to-SQL usage, but there is no Microsoft AI service (e.g., Azure OpenAI) or Microsoft AI framework/tooling described, so AI category rules are not met.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-databricks/near-real-time-cdc-to-delta-lake-for-bi-and-ml-with-lakeflow-on/ba-p/4502750",
+    "collection": "community"
   }
 ]

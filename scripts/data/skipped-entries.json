@@ -13708,5 +13708,23 @@
     "reason": "No categories found: Excluded from categorization because the article is entirely about Oracle/Java ecosystem topics (Java 26 release, OpenJDK, FFM API, Project Detroit embedding V8 and CPython in the JVM, Helidon, JavaFX, Java in VS Code/Jupyter). Microsoft technologies are not central to the content and do not make up ≥40% of the substantive text (only a brief mention of the Java platform extension for Visual Studio Code and Java support in VS Code/Jupyter notebooks). Under the multi-platform threshold rules, this is insufficient to assign any of the predefined Microsoft categories.",
     "canonical_url": "https://www.devclass.com/development/2026/03/18/oracle-introduces-project-detroit-for-fast-java-interop-with-javascript-and-python/5209478",
     "collection": "blogs"
+  },
+  {
+    "timestamp": "2026-03-18 16:28:38 +00:00",
+    "reason": "No categories found: Excluded due to the Generic Exclusion Rule: Business Strategy and Executive Content / Workplace and Business Focus. The piece is a high-level discussion about platform engineering challenges (cognitive overload, tool sprawl, productivity fragmentation) and a conceptual vision for AI-assisted “conversation layers” and “golden/paved paths,” but it does not provide technical implementation details tied to Microsoft technologies (no Azure/GitHub configuration steps, architectures, code, or concrete how-to guidance). While Azure Monitor, GitHub, and Slack are mentioned, they are illustrative examples rather than central, detailed technical content, so the content doesn’t meet the inclusion threshold for any category.",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/when-infrastructure-scales-but-understanding-doesnt/",
+    "collection": "news"
+  },
+  {
+    "timestamp": "2026-03-18 16:31:30 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rule: Short Community Content (<200 words). Although the post announces “Lakeflow Connect Free Tier … on Azure Databricks” and lists benefits and links, the substantive explanatory text is brief and largely promotional/announcement-style, with most of the remainder being resource links, footer/profile/navigation elements, and metadata (which should be ignored). Therefore, no categories are assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-databricks/introducing-lakeflow-connect-free-tier-now-available-on-azure/ba-p/4502755",
+    "collection": "community"
+  },
+  {
+    "timestamp": "2026-03-18 16:32:19 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-handle-dynamic-ip-addresses-of-clients/m-p/4503377#M22455",
+    "collection": "community"
   }
 ]
