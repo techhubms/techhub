@@ -6,6 +6,7 @@ namespace TechHub.Core.Models;
 public record HandbookPageData
 {
     public required string Title { get; init; }
+    public required string Description { get; init; }
     public required List<string> Authors { get; init; }
     public required BookDetails BookDetails { get; init; }
     public required string Intro { get; init; }
