@@ -21,6 +21,7 @@
         Keywords="@item.Tags"
         ArticleSection="@GetSectionTitle()"
         VideoUrl="@GetVideoUrl()"
+        ImageUrl="@GetOgImageUrl()"
         Breadcrumbs="@GetBreadcrumbs()" />
 }
 
@@ -206,6 +207,26 @@
 
     private SeoMetaTags.SeoContentType GetSeoContentType() =>
         item?.CollectionName == "videos" ? SeoMetaTags.SeoContentType.Video : SeoMetaTags.SeoContentType.Article;
+
+    private string? GetOgImageUrl()
+    {
+        if (item?.CollectionName == "videos")
+        {
+            var videoUrl = item.ExternalUrl;
+            if (!string.IsNullOrEmpty(videoUrl))
+            {
+                return SeoMetaTags.TryGetYouTubeThumbnailUrl(videoUrl)
+                    ?? "/images/section-backgrounds/none-og.jpg";
+            }
+        }
+
+        if (item?.CollectionName == "roundups")
+        {
+            return "/images/section-backgrounds/none-og.jpg";
+        }
+
+        return null;
+    }
 
     private string? GetSectionTitle() => section?.Title;
 

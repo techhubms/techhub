@@ -23,7 +23,7 @@ The component emits:
 - `<meta name="description">` — truncated to 160 characters, HTML stripped
 - Open Graph tags (`og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`)
 - Article-specific Open Graph properties (`article:published_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types
-- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:site`)
+- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`)
 - JSON-LD structured data (schema type depends on `ContentType` parameter)
 - A second `BreadcrumbList` JSON-LD block when the `Breadcrumbs` parameter contains at least two items
 - `<link rel="canonical">` — normalized (lowercased, query-stripped) canonical URL
@@ -79,7 +79,7 @@ Note: `og:image` is not currently set. See the image SEO spec for the planned ap
 
 ## Twitter Cards
 
-Twitter Card tags are emitted by the `SeoMetaTags` component. All pages use `summary` card type. Always present: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:site` (`@Microsoft`).
+Twitter Card tags are emitted by the `SeoMetaTags` component. All pages use `summary` card type. Always present: `twitter:card`, `twitter:title`, `twitter:description`.
 
 Note: `twitter:image` is not currently set. See the image SEO spec for the planned approach.
 

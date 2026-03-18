@@ -43,11 +43,22 @@
         }
     }
 
+    @* Open Graph - image (when provided) *@
+    @if (!string.IsNullOrEmpty(ImageUrl))
+    {
+        <meta property="og:image" content="@_absoluteImageUrl" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="417" />
+    }
+
     @* Twitter Card *@
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="@(string.IsNullOrEmpty(ImageUrl) ? "summary" : "summary_large_image")" />
     <meta name="twitter:title" content="@Title" />
     <meta name="twitter:description" content="@_truncatedDescription" />
-    <meta name="twitter:site" content="@@Microsoft" />
+    @if (!string.IsNullOrEmpty(ImageUrl))
+    {
+        <meta name="twitter:image" content="@_absoluteImageUrl" />
+    }
 
     @* JSON-LD - Main schema *@
     <script type="application/ld+json">@((MarkupString)_mainSchemaJson)</script>
@@ -131,6 +142,14 @@
     public IReadOnlyList<BreadcrumbItem> Breadcrumbs { get; set; } = [];
 
     /// <summary>
+    /// URL of the social sharing image (og:image / twitter:image).
+    /// Defaults to the Tech Hub section background. Use an absolute URL or a root-relative path to override.
+    /// Set to null to suppress the image tags entirely.
+    /// </summary>
+    [Parameter]
+    public string? ImageUrl { get; set; } = "/images/section-backgrounds/none-og.jpg";
+
+    /// <summary>
     /// Optional RSS feed URL. When provided, renders a &lt;link rel="alternate"&gt; autodiscovery tag in the head.
     /// </summary>
     [Parameter]
@@ -150,6 +169,11 @@
 
     private string _canonicalUrl =>
         $"{Navigation.BaseUri.TrimEnd('/')}{_normalizedPath}";
+
+    private string _absoluteImageUrl =>
+        ImageUrl is not null && ImageUrl.StartsWith('/')
+            ? $"{Navigation.BaseUri.TrimEnd('/')}{ImageUrl}"
+            : ImageUrl ?? string.Empty;
 
     protected override void OnParametersSet()
     {
@@ -244,6 +268,12 @@
             if (!string.IsNullOrEmpty(embedUrl))
             {
                 schema["embedUrl"] = embedUrl;
+            }
+
+            var thumbnailUrl = TryGetYouTubeThumbnailUrl(VideoUrl);
+            if (!string.IsNullOrEmpty(thumbnailUrl))
+            {
+                schema["thumbnailUrl"] = thumbnailUrl;
             }
         }
 
@@ -373,5 +403,41 @@
         }
 
         return null;
+    }
+
+    /// <summary>
+    /// Returns the maxresdefault YouTube thumbnail URL for a given YouTube watch URL.
+    /// Returns null if the URL is not a recognizable YouTube URL.
+    /// Note: maxresdefault.jpg may not exist for very old/low-quality videos; callers should provide a fallback.
+    /// </summary>
+    public static string? TryGetYouTubeThumbnailUrl(string url)
+    {
+        if (string.IsNullOrEmpty(url))
+        {
+            return null;
+        }
+
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        {
+            return null;
+        }
+
+        string? videoId = null;
+
+        if ((uri.Host.Equals("www.youtube.com", StringComparison.OrdinalIgnoreCase) ||
+             uri.Host.Equals("youtube.com", StringComparison.OrdinalIgnoreCase)) &&
+            uri.AbsolutePath.Equals("/watch", StringComparison.OrdinalIgnoreCase))
+        {
+            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+            videoId = query["v"];
+        }
+        else if (uri.Host.Equals("youtu.be", StringComparison.OrdinalIgnoreCase))
+        {
+            videoId = uri.AbsolutePath.TrimStart('/');
+        }
+
+        return !string.IsNullOrEmpty(videoId)
+            ? $"https://img.youtube.com/vi/{videoId}/maxresdefault.jpg"
+            : null;
     }
 }
