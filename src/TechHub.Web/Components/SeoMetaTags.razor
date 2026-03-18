@@ -47,10 +47,10 @@
     @if (!string.IsNullOrEmpty(ImageUrl))
     {
         <meta property="og:image" content="@_absoluteImageUrl" />
-        @if (ImageWidth.HasValue && ImageHeight.HasValue)
+        @if (_effectiveImageWidth.HasValue && _effectiveImageHeight.HasValue)
         {
-            <meta property="og:image:width" content="@ImageWidth" />
-            <meta property="og:image:height" content="@ImageHeight" />
+            <meta property="og:image:width" content="@_effectiveImageWidth" />
+            <meta property="og:image:height" content="@_effectiveImageHeight" />
         }
     }
 
@@ -153,18 +153,20 @@
     public string? ImageUrl { get; set; } = "/images/section-backgrounds/none-og.jpg";
 
     /// <summary>
-    /// Optional width of the og:image in pixels. Defaults to 1200 when using the default image.
+    /// Optional width of the og:image in pixels.
     /// Set to null to omit the width tag (e.g. for YouTube thumbnails where dimensions may vary).
+    /// Must be provided alongside ImageHeight; neither tag is emitted when either value is null.
     /// </summary>
     [Parameter]
-    public int? ImageWidth { get; set; } = 1200;
+    public int? ImageWidth { get; set; }
 
     /// <summary>
-    /// Optional height of the og:image in pixels. Defaults to 417 when using the default image.
+    /// Optional height of the og:image in pixels.
     /// Set to null to omit the height tag (e.g. for YouTube thumbnails where dimensions may vary).
+    /// Must be provided alongside ImageWidth; neither tag is emitted when either value is null.
     /// </summary>
     [Parameter]
-    public int? ImageHeight { get; set; } = 417;
+    public int? ImageHeight { get; set; }
 
     /// <summary>
     /// Optional RSS feed URL. When provided, renders a &lt;link rel="alternate"&gt; autodiscovery tag in the head.
@@ -176,6 +178,12 @@
     private string _isoDate = string.Empty;
     private string _mainSchemaJson = string.Empty;
     private string _breadcrumbJson = string.Empty;
+
+    private const string DefaultImagePath = "/images/section-backgrounds/none-og.jpg";
+
+    // Auto-apply known dimensions for the default image; callers can pass explicit values or null to omit
+    private int? _effectiveImageWidth => ImageWidth ?? (ImageUrl == DefaultImagePath ? 1200 : (int?)null);
+    private int? _effectiveImageHeight => ImageHeight ?? (ImageUrl == DefaultImagePath ? 417 : (int?)null);
 
     private string _ogType => ContentType is SeoContentType.Article or SeoContentType.Video
         ? "article"
@@ -427,7 +435,7 @@
     /// Returns null if the URL is not a recognizable YouTube URL.
     /// Note: maxresdefault.jpg may not exist for very old/low-quality videos; callers should provide a fallback.
     /// </summary>
-    public static string? TryGetYouTubeThumbnailUrl(string url)
+    public static string? TryGetYouTubeThumbnailUrl(string? url)
     {
         if (string.IsNullOrEmpty(url))
         {

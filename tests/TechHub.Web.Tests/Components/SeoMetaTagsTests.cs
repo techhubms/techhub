@@ -254,7 +254,7 @@ public class SeoMetaTagsTests
     public void TryGetYouTubeThumbnailUrl_NullUrl_ReturnsNull()
     {
         // Act
-        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(null!);
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(null);
 
         // Assert
         result.Should().BeNull();

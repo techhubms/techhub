@@ -22,8 +22,6 @@
         ArticleSection="@GetSectionTitle()"
         VideoUrl="@GetVideoUrl()"
         ImageUrl="@GetOgImageUrl()"
-        ImageWidth="@GetOgImageWidth()"
-        ImageHeight="@GetOgImageHeight()"
         Breadcrumbs="@GetBreadcrumbs()" />
 }
 
@@ -210,32 +208,31 @@
     private SeoMetaTags.SeoContentType GetSeoContentType() =>
         item?.CollectionName == "videos" ? SeoMetaTags.SeoContentType.Video : SeoMetaTags.SeoContentType.Article;
 
+    private string? _ogImageUrl;
+
     private string? GetOgImageUrl()
     {
+        if (_ogImageUrl is not null)
+            return _ogImageUrl == string.Empty ? null : _ogImageUrl;
+
+        string? url = null;
+
         if (item?.CollectionName == "videos")
         {
             var videoUrl = item.ExternalUrl;
             if (!string.IsNullOrEmpty(videoUrl))
-            {
-                return SeoMetaTags.TryGetYouTubeThumbnailUrl(videoUrl)
+                url = SeoMetaTags.TryGetYouTubeThumbnailUrl(videoUrl)
                     ?? "/images/section-backgrounds/none-og.jpg";
-            }
         }
-
-        if (item?.CollectionName == "roundups")
+        else if (item?.CollectionName == "roundups")
         {
-            return "/images/section-backgrounds/none-og.jpg";
+            url = "/images/section-backgrounds/none-og.jpg";
         }
 
-        return null;
+        // Cache: use empty string to sentinel-encode a null result
+        _ogImageUrl = url ?? string.Empty;
+        return url;
     }
-
-    // YouTube thumbnails have variable dimensions — suppress width/height so crawlers don't receive incorrect values
-    private int? GetOgImageWidth() =>
-        GetOgImageUrl() is string url && url.StartsWith("https://img.youtube.com") ? null : (int?)1200;
-
-    private int? GetOgImageHeight() =>
-        GetOgImageUrl() is string url && url.StartsWith("https://img.youtube.com") ? null : (int?)417;
 
     private string? GetSectionTitle() => section?.Title;
 
