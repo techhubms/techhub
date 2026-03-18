@@ -1,0 +1,113 @@
+@page "/authors"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>Authors - Tech Hub</PageTitle>
+
+<SeoMetaTags
+    Title="Authors - Tech Hub"
+    Description="Browse all authors on Tech Hub. Find content from your favourite authors across all sections and collections."
+    ContentType="SeoMetaTags.SeoContentType.Website"
+    Breadcrumbs="@(new[] { new SeoMetaTags.BreadcrumbItem("Home", "/"), new SeoMetaTags.BreadcrumbItem("Authors", "/authors") })" />
+
+<main class="page-without-sidebar">
+    <section>
+        <h1 id="skiptohere" class="page-h1">
+            Authors
+            @if (authors != null)
+            {
+                <span class="content-count">(@authors.Count)</span>
+            }
+        </h1>
+
+        @if (isLoading)
+        {
+            <div class="authors-grid" role="status" aria-busy="true" aria-label="Loading authors">
+                @for (int i = 0; i < 6; i++)
+                {
+                    <div class="author-card skeleton-card" aria-hidden="true">
+                        <div class="author-avatar skeleton"></div>
+                        <div class="author-info">
+                            <div class="skeleton skeleton-text skeleton-name"></div>
+                            <div class="skeleton skeleton-text skeleton-count"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else if (authors != null && authors.Count > 0)
+        {
+            <div class="authors-grid" role="list">
+                @foreach (var author in authors)
+                {
+                    <a href="/authors/@Uri.EscapeDataString(author.Name)" class="author-card" role="listitem"
+                       aria-label="@author.Name - @author.ItemCount item@(author.ItemCount == 1 ? "" : "s")">
+                        <div class="author-avatar" aria-hidden="true">
+                            @GetInitials(author.Name)
+                        </div>
+                        <div class="author-info">
+                            <span class="author-name">@author.Name</span>
+                            <span class="author-count">@author.ItemCount item@(author.ItemCount == 1 ? "" : "s")</span>
+                        </div>
+                    </a>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="no-content">No authors found.</p>
+        }
+    </section>
+</main>
+
+@code {
+    private IReadOnlyList<AuthorSummary>? authors;
+    private bool isLoading = true;
+
+    private PersistingComponentStateSubscription _persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (!ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restored))
+        {
+            authors = await ApiClient.GetAuthorsAsync();
+        }
+        else
+        {
+            authors = restored;
+        }
+
+        isLoading = false;
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("authors", authors);
+        return Task.CompletedTask;
+    }
+
+    private static string GetInitials(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            return "?";
+        }
+
+        var parts = name.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        return parts.Length >= 2
+            ? $"{char.ToUpperInvariant(parts[0][0])}{char.ToUpperInvariant(parts[^1][0])}"
+            : char.ToUpperInvariant(parts[0][0]).ToString();
+    }
+
+    public void Dispose()
+    {
+        _persistingSubscription.Dispose();
+    }
+}

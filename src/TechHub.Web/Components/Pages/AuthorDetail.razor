@@ -1,0 +1,235 @@
+@page "/authors/{authorName}"
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject TechHubApiClient ApiClient
+@inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@AuthorName - Authors - Tech Hub</PageTitle>
+
+<SeoMetaTags
+    Title="@($"{AuthorName} - Authors - Tech Hub")"
+    Description="@($"Browse all content by {AuthorName} on Tech Hub.")"
+    ContentType="SeoMetaTags.SeoContentType.Website"
+    Breadcrumbs="@GetBreadcrumbs()" />
+
+<main class="page-without-sidebar">
+    <section>
+        <div class="author-header">
+            <div class="author-avatar-large" aria-hidden="true">
+                @GetInitials(AuthorName)
+            </div>
+            <div class="author-header-info">
+                <h1 id="skiptohere" class="page-h1">
+                    @AuthorName
+                </h1>
+                @if (!isLoading)
+                {
+                    <p class="author-item-count">@totalCount item@(totalCount == 1 ? "" : "s")</p>
+                }
+            </div>
+        </div>
+
+        @if (isLoading && !contentItems.Any())
+        {
+            <div class="content-grid" role="status" aria-busy="true" aria-label="Loading content">
+                @for (int i = 0; i < 6; i++)
+                {
+                    <div class="skeleton-card" aria-hidden="true">
+                        <div class="content-header">
+                            <div class="skeleton skeleton-card-title"></div>
+                            <div class="skeleton skeleton-card-meta"></div>
+                        </div>
+                        <div class="skeleton skeleton-card-description"></div>
+                        <div class="skeleton skeleton-card-description" style="width: 80%;"></div>
+                        <div class="content-tags">
+                            <div class="skeleton skeleton-card-tag"></div>
+                            <div class="skeleton skeleton-card-tag"></div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else if (notFound)
+        {
+            <div class="no-content" role="status">
+                <p>Author not found.</p>
+                <a href="/authors">← Back to all authors</a>
+            </div>
+        }
+        else if (contentItems.Any())
+        {
+            <div class="content-grid" role="feed">
+                @foreach (var item in contentItems)
+                {
+                    <ContentItemCard Item="@item" ShowCollectionBadge="true" />
+                }
+            </div>
+
+            @if (hasMoreContent)
+            {
+                <div class="load-more-container">
+                    @if (isLoadingMore)
+                    {
+                        <div class="loading-more-indicator" role="status" aria-live="polite">
+                            <div class="loading-spinner"></div>
+                            <p>Loading more content...</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <button class="load-more-button" @onclick="LoadMoreAsync" aria-label="Load more content by @AuthorName">
+                            Load more
+                        </button>
+                    }
+                </div>
+            }
+            else
+            {
+                <div class="end-of-content" role="status">
+                    <p>End of content</p>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="no-content" role="status">
+                <p>No content found for this author.</p>
+                <a href="/authors">← Back to all authors</a>
+            </div>
+        }
+    </section>
+</main>
+
+@code {
+    private const int BatchSize = 20;
+
+    [Parameter]
+    public string AuthorName { get; set; } = null!;
+
+    private List<TechHub.Core.Models.ContentItem> contentItems = [];
+    private long totalCount;
+    private bool isLoading = true;
+    private bool isLoadingMore;
+    private bool hasMoreContent;
+    private bool notFound;
+
+    private PersistingComponentStateSubscription _persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        var stateKey = GetStateKey();
+        if (ApplicationState.TryTakeFromJson<PersistedAuthorState>(stateKey, out var restored) && restored != null)
+        {
+            contentItems = restored.Items;
+            totalCount = restored.TotalCount;
+            hasMoreContent = restored.HasMoreContent;
+            notFound = restored.NotFound;
+            isLoading = false;
+        }
+        else
+        {
+            await LoadInitialBatchAsync();
+        }
+    }
+
+    private string GetStateKey() => $"AuthorDetail_{AuthorName}";
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson(GetStateKey(), new PersistedAuthorState
+        {
+            Items = contentItems,
+            TotalCount = totalCount,
+            HasMoreContent = hasMoreContent,
+            NotFound = notFound
+        });
+        return Task.CompletedTask;
+    }
+
+    private async Task LoadInitialBatchAsync()
+    {
+        isLoading = true;
+
+        var decodedAuthorName = Uri.UnescapeDataString(AuthorName);
+        var result = await ApiClient.GetAuthorItemsAsync(decodedAuthorName, take: BatchSize, skip: 0);
+
+        if (result == null)
+        {
+            notFound = true;
+        }
+        else
+        {
+        contentItems = result.Items.ToList();
+            totalCount = result.TotalCount;
+            hasMoreContent = contentItems.Count < result.TotalCount;
+        }
+
+        isLoading = false;
+    }
+
+    private async Task LoadMoreAsync()
+    {
+        if (isLoadingMore || !hasMoreContent)
+        {
+            return;
+        }
+
+        isLoadingMore = true;
+
+        var decodedAuthorName = Uri.UnescapeDataString(AuthorName);
+        var result = await ApiClient.GetAuthorItemsAsync(
+            decodedAuthorName,
+            take: BatchSize,
+            skip: contentItems.Count);
+
+        if (result != null && result.Items.Count > 0)
+        {
+            contentItems.AddRange(result.Items);
+            hasMoreContent = contentItems.Count < result.TotalCount;
+        }
+        else
+        {
+            hasMoreContent = false;
+        }
+
+        isLoadingMore = false;
+    }
+
+    private static string GetInitials(string name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            return "?";
+        }
+
+        var parts = name.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        return parts.Length >= 2
+            ? $"{char.ToUpperInvariant(parts[0][0])}{char.ToUpperInvariant(parts[^1][0])}"
+            : char.ToUpperInvariant(parts[0][0]).ToString();
+    }
+
+    private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs() =>
+    [
+        new("Home", "/"),
+        new("Authors", "/authors"),
+        new(AuthorName, $"/authors/{Uri.EscapeDataString(AuthorName)}")
+    ];
+
+    public void Dispose()
+    {
+        _persistingSubscription.Dispose();
+    }
+
+    private sealed class PersistedAuthorState
+    {
+        public required List<TechHub.Core.Models.ContentItem> Items { get; init; }
+        public required long TotalCount { get; init; }
+        public required bool HasMoreContent { get; init; }
+        public required bool NotFound { get; init; }
+    }
+}

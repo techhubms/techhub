@@ -641,6 +641,84 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
+    // Author endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all authors with content item counts.
+    /// GET /api/authors
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
+    public virtual async Task<IReadOnlyList<AuthorSummary>?> GetAuthorsAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogDebug("Fetching all authors from API");
+            var authors = await _httpClient.GetFromJsonAsync<IReadOnlyList<AuthorSummary>>(
+                "/api/authors",
+                cancellationToken);
+
+            _logger.LogDebug("Successfully fetched {Count} authors", authors?.Count ?? 0);
+            return authors;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch authors from API");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get content items for a specific author.
+    /// GET /api/authors/{authorName}/items
+    /// </summary>
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
+    public virtual async Task<CollectionItemsResponse?> GetAuthorItemsAsync(
+        string authorName,
+        int? take = null,
+        int? skip = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var queryParams = new List<string>();
+            if (take.HasValue)
+            {
+                queryParams.Add($"take={take.Value}");
+            }
+
+            if (skip.HasValue)
+            {
+                queryParams.Add($"skip={skip.Value}");
+            }
+
+            var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
+            var url = $"/api/authors/{Uri.EscapeDataString(authorName)}/items{queryString}";
+
+            _logger.LogDebugSanitized("Fetching items for author: {AuthorName}", authorName);
+            var response = await _httpClient.GetAsync(url, cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarningSanitized("Author not found: {AuthorName}", authorName);
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(cancellationToken: cancellationToken);
+
+            _logger.LogDebugSanitized("Successfully fetched {Count} items (total: {TotalCount}) for author {AuthorName}",
+                result?.Items.Count ?? 0, result?.TotalCount ?? 0, authorName);
+            return result;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogErrorSanitized(ex, "Failed to fetch items for author {AuthorName}", authorName);
+            throw;
+        }
+    }
+
+    // ================================================================
     // Helper methods
     // ================================================================
 

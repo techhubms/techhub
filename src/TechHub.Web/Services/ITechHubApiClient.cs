@@ -43,4 +43,20 @@ internal interface ITechHubApiClient
     /// GET /api/sitemap
     /// </summary>
     Task<string> GetSitemapAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get all authors with their content item counts.
+    /// GET /api/authors
+    /// </summary>
+    Task<IReadOnlyList<AuthorSummary>?> GetAuthorsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get content items for a specific author.
+    /// GET /api/authors/{authorName}/items
+    /// </summary>
+    Task<CollectionItemsResponse?> GetAuthorItemsAsync(
+        string authorName,
+        int? take = null,
+        int? skip = null,
+        CancellationToken cancellationToken = default);
 }

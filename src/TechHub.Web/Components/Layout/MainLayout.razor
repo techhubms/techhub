@@ -58,6 +58,7 @@
     private static readonly HashSet<string> KnownNonSectionPages = new(StringComparer.OrdinalIgnoreCase)
     {
         "about",     // About.razor
+        "authors",   // Authors.razor + AuthorDetail.razor
         "not-found", // NotFound.razor
         "error",     // Error.razor (lowercased by LowercaseUrls)
     };
@@ -139,6 +140,10 @@
             case "about":
                 _customBannerTitle = "About Us";
                 _customBannerDescription = "Meet the team behind your source for Microsoft technology content";
+                break;
+            case "authors":
+                _customBannerTitle = "Authors";
+                _customBannerDescription = "Browse content by author";
                 break;
             case "not-found":
                 _customBannerTitle = "Not Found";
