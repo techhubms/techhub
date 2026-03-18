@@ -47,8 +47,11 @@
     @if (!string.IsNullOrEmpty(ImageUrl))
     {
         <meta property="og:image" content="@_absoluteImageUrl" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="417" />
+        @if (ImageWidth.HasValue && ImageHeight.HasValue)
+        {
+            <meta property="og:image:width" content="@ImageWidth" />
+            <meta property="og:image:height" content="@ImageHeight" />
+        }
     }
 
     @* Twitter Card *@
@@ -148,6 +151,20 @@
     /// </summary>
     [Parameter]
     public string? ImageUrl { get; set; } = "/images/section-backgrounds/none-og.jpg";
+
+    /// <summary>
+    /// Optional width of the og:image in pixels. Defaults to 1200 when using the default image.
+    /// Set to null to omit the width tag (e.g. for YouTube thumbnails where dimensions may vary).
+    /// </summary>
+    [Parameter]
+    public int? ImageWidth { get; set; } = 1200;
+
+    /// <summary>
+    /// Optional height of the og:image in pixels. Defaults to 417 when using the default image.
+    /// Set to null to omit the height tag (e.g. for YouTube thumbnails where dimensions may vary).
+    /// </summary>
+    [Parameter]
+    public int? ImageHeight { get; set; } = 417;
 
     /// <summary>
     /// Optional RSS feed URL. When provided, renders a &lt;link rel="alternate"&gt; autodiscovery tag in the head.

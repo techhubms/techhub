@@ -22,6 +22,8 @@
         ArticleSection="@GetSectionTitle()"
         VideoUrl="@GetVideoUrl()"
         ImageUrl="@GetOgImageUrl()"
+        ImageWidth="@GetOgImageWidth()"
+        ImageHeight="@GetOgImageHeight()"
         Breadcrumbs="@GetBreadcrumbs()" />
 }
 
@@ -227,6 +229,13 @@
 
         return null;
     }
+
+    // YouTube thumbnails have variable dimensions — suppress width/height so crawlers don't receive incorrect values
+    private int? GetOgImageWidth() =>
+        GetOgImageUrl() is string url && url.StartsWith("https://img.youtube.com") ? null : (int?)1200;
+
+    private int? GetOgImageHeight() =>
+        GetOgImageUrl() is string url && url.StartsWith("https://img.youtube.com") ? null : (int?)417;
 
     private string? GetSectionTitle() => section?.Title;
 

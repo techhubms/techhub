@@ -206,4 +206,80 @@ public class SeoMetaTagsTests
         // Assert
         result.Should().Be("https://www.youtube.com/embed/abc123");
     }
+
+    // ────────────────────────────────────────────────────────────────────────
+    // TryGetYouTubeThumbnailUrl
+    // ────────────────────────────────────────────────────────────────────────
+
+    [Fact]
+    public void TryGetYouTubeThumbnailUrl_StandardWatchUrl_ReturnsThumbnailUrl()
+    {
+        // Arrange
+        var url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+        // Act
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(url);
+
+        // Assert
+        result.Should().Be("https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg");
+    }
+
+    [Fact]
+    public void TryGetYouTubeThumbnailUrl_YoutubeBeUrl_ReturnsThumbnailUrl()
+    {
+        // Arrange
+        var url = "https://youtu.be/dQw4w9WgXcQ";
+
+        // Act
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(url);
+
+        // Assert
+        result.Should().Be("https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg");
+    }
+
+    [Fact]
+    public void TryGetYouTubeThumbnailUrl_NonYouTubeUrl_ReturnsNull()
+    {
+        // Arrange
+        var url = "https://vimeo.com/123456789";
+
+        // Act
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(url);
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void TryGetYouTubeThumbnailUrl_NullUrl_ReturnsNull()
+    {
+        // Act
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(null!);
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void TryGetYouTubeThumbnailUrl_EmptyUrl_ReturnsNull()
+    {
+        // Act
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(string.Empty);
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void TryGetYouTubeThumbnailUrl_YouTubeWithoutVideoId_ReturnsNull()
+    {
+        // Arrange
+        var url = "https://www.youtube.com/watch";
+
+        // Act
+        var result = SeoMetaTags.TryGetYouTubeThumbnailUrl(url);
+
+        // Assert
+        result.Should().BeNull();
+    }
 }
