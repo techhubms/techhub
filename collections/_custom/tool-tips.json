@@ -17,8 +17,8 @@
         },
         {
             "name": "Awesome Copilot",
-            "description": "A community-maintained collection of awesome resources, tools, and tips for GitHub Copilot. Curated by GitHub, this repository brings together the best extensions, guides, integrations, and learning materials to help you master AI-assisted development.",
-            "url": "https://github.com/github/awesome-copilot",
+            "description": "A community-maintained website of awesome resources, tools, and tips for GitHub Copilot. Curated by GitHub, this website brings together the best extensions, guides, integrations, and learning materials to help you master AI-assisted development. Features full-text search, category pages, modal previews, and one-click install into VS Code.",
+            "url": "https://awesome-copilot.github.com/",
             "category": "Resources"
         },
         {
