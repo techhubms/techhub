@@ -1,0 +1,18 @@
+{
+  "Link": "https://www.youtube.com/shorts/7fzCsefkgKk",
+  "ProcessedDate": "2026-03-18 00:29:29",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Author": "Visual Studio Code",
+  "PubDate": "2026-03-17T23:15:01+00:00",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedName": "Visual Studio Code YouTube",
+  "EnhancedContent": null,
+  "Title": "🧠 Want to give your coding agent new capabilities? Use Agent Skills in #VSCode",
+  "OutputDir": "_videos",
+  "Description": "Agent skills let you package instructions and resources into reusable capabilities for your agent. Skills can be loaded on demand and called directly from chat using slash commands like /skill-name.\n\n📌 Learn more: https://aka.ms/VSCode/AgentSkills 📌 Awesome GitHub Copilot: http://aka.ma/AwesomeGC"
+}

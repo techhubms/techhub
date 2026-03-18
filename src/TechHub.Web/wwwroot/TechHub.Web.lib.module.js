@@ -53,6 +53,18 @@ export function afterWebStarted(blazor) {
         history.scrollRestoration = 'auto';
     }
 
+    // Reset script loading state on enhanced navigation.
+    // Blazor enhanced navigation patches the DOM without a full page reload, so
+    // __scriptsLoading from the previous page can remain stale (stuck at true)
+    // if the navigation interrupted a script load. This would cause
+    // WaitForBlazorReadyAsync in E2E tests to block indefinitely on the new page.
+    // Resetting here ensures each navigation starts with a clean slate.
+    blazor.addEventListener('enhancedload', () => {
+        window.__scriptsLoading = false;
+        window.__scriptsReady = undefined;
+        console.debug('[TechHub] Enhanced navigation complete - script flags reset');
+    });
+
     // Set up focus scroll compensation for sticky headers
     // When a focusable element receives focus and is behind a sticky header,
     // scroll it into view with proper offset

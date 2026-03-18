@@ -1,0 +1,17 @@
+{
+  "Author": "Allison",
+  "EnhancedContent": "[Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) now has access to a semantic code search tool, allowing it to find relevant code based on meaning rather than relying on exact text matches with tools like `grep` .\n\nWhen the agent doesn’t know the precise names or patterns to search for, semantic search helps it locate the right code faster.\n\nFrom testing, we’ve found that this new tool allows Copilot to complete tasks in 2% less time without any change in quality.\n\nNo configuration is required – the agent automatically uses semantic search when appropriate.",
+  "Title": "Copilot coding agent works faster with semantic code search",
+  "PubDate": "2026-03-17T22:56:46+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-03-18 00:29:03",
+  "Link": "https://github.blog/changelog/2026-03-17-copilot-coding-agent-works-faster-with-semantic-code-search",
+  "Description": "Copilot coding agent now has access to a semantic code search tool, allowing it to find relevant code based on meaning rather than relying on exact text matches with tools…\n\nThe post [Copilot coding agent works faster with semantic code search](https://github.blog/changelog/2026-03-17-copilot-coding-agent-works-faster-with-semantic-code-search) appeared first on [The GitHub Blog](https://github.blog)."
+}
