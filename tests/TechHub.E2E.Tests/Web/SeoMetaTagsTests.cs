@@ -246,6 +246,9 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     /// succeed during the initial SSR phase, allowing subsequent reads to catch the
     /// rehydration gap. Requiring all essential tags to be simultaneously present ensures
     /// the method only returns once HeadContent is fully and stably rendered.
+    ///
+    /// Uses IncreasedTimeout because this wait must survive SSR + database query + Blazor
+    /// hydration on slow CI runners, which can take up to 20s per the BlazorHelpers docs.
     /// </summary>
     private Task WaitForSeoMetaTagsAsync(string expectedPath) =>
         Page.WaitForConditionAsync(
@@ -260,7 +263,12 @@ public class SeoMetaTagsTests : PlaywrightTestBase
                        ogTitle?.content?.length > 0 &&
                        jsonLd !== null;
             }",
-            expectedPath);
+            expectedPath,
+            new Microsoft.Playwright.PageWaitForFunctionOptions
+            {
+                Timeout = BlazorHelpers.IncreasedTimeout,
+                PollingInterval = BlazorHelpers.DefaultPollingInterval
+            });
 
     /// <summary>
     /// Reads a meta tag's content attribute, retrying through Blazor HeadContent rehydration gaps.
