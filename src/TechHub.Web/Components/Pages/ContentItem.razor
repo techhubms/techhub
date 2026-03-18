@@ -21,6 +21,7 @@
         Keywords="@item.Tags"
         ArticleSection="@GetSectionTitle()"
         VideoUrl="@GetVideoUrl()"
+        ImageUrl="@GetOgImageUrl()"
         Breadcrumbs="@GetBreadcrumbs()" />
 }
 
@@ -206,6 +207,32 @@
 
     private SeoMetaTags.SeoContentType GetSeoContentType() =>
         item?.CollectionName == "videos" ? SeoMetaTags.SeoContentType.Video : SeoMetaTags.SeoContentType.Article;
+
+    private string? _ogImageUrl;
+
+    private string? GetOgImageUrl()
+    {
+        if (_ogImageUrl is not null)
+            return _ogImageUrl == string.Empty ? null : _ogImageUrl;
+
+        string? url = null;
+
+        if (item?.CollectionName == "videos")
+        {
+            var videoUrl = item.ExternalUrl;
+            if (!string.IsNullOrEmpty(videoUrl))
+                url = SeoMetaTags.TryGetYouTubeThumbnailUrl(videoUrl)
+                    ?? "/images/section-backgrounds/none-og.jpg";
+        }
+        else if (item?.CollectionName == "roundups")
+        {
+            url = "/images/section-backgrounds/none-og.jpg";
+        }
+
+        // Cache: use empty string to sentinel-encode a null result
+        _ogImageUrl = url ?? string.Empty;
+        return url;
+    }
 
     private string? GetSectionTitle() => section?.Title;
 

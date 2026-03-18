@@ -23,7 +23,7 @@ The component emits:
 - `<meta name="description">` — truncated to 160 characters, HTML stripped
 - Open Graph tags (`og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`)
 - Article-specific Open Graph properties (`article:published_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types
-- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:site`)
+- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`)
 - JSON-LD structured data (schema type depends on `ContentType` parameter)
 - A second `BreadcrumbList` JSON-LD block when the `Breadcrumbs` parameter contains at least two items
 - `<link rel="canonical">` — normalized (lowercased, query-stripped) canonical URL
@@ -75,13 +75,11 @@ Every page that uses `SeoMetaTags` automatically receives a canonical URL. The c
 
 Open Graph tags are emitted by the `SeoMetaTags` component for every page. Always present: `og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`. Content items and videos additionally receive `article:published_time`, `article:author`, `article:section`, and per-tag `article:tag` properties.
 
-Note: `og:image` is not currently set. See the image SEO spec for the planned approach.
+`og:image` is emitted when the `ImageUrl` parameter is set. All non-content pages default to `/images/section-backgrounds/none-og.jpg` (1200×417). `og:image:width` and `og:image:height` are emitted alongside when known dimensions are provided via `ImageWidth`/`ImageHeight` parameters. Video detail pages use the YouTube `maxresdefault.jpg` thumbnail as `og:image` without width/height (dimensions vary); roundup pages use the default image. News, blog, and community content items suppress `og:image` entirely (externally-owned content).
 
 ## Twitter Cards
 
-Twitter Card tags are emitted by the `SeoMetaTags` component. All pages use `summary` card type. Always present: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:site` (`@Microsoft`).
-
-Note: `twitter:image` is not currently set. See the image SEO spec for the planned approach.
+Twitter Card tags are emitted by the `SeoMetaTags` component. When an `og:image` is present, `twitter:card` is set to `summary_large_image` and `twitter:image` is also emitted; otherwise `twitter:card` is `summary`. Always present: `twitter:card`, `twitter:title`, `twitter:description`.
 
 ## robots.txt
 

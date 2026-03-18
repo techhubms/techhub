@@ -57,7 +57,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
-        twitterCard.Should().Be("summary");
+        twitterCard.Should().Be("summary_large_image");
 
         var twitterTitle = await GetMetaContentAsync("name", "twitter:title");
         twitterTitle.Should().NotBeNullOrEmpty();
@@ -218,7 +218,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
-        twitterCard.Should().Be("summary");
+        twitterCard.Should().Be("summary_large_image");
     }
 
     [Fact]
