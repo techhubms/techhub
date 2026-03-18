@@ -14,6 +14,9 @@
 
 @if (pageData != null)
 {
+    <SeoMetaTags
+        Title="@pageData.Title"
+        Description="@pageData.Description" />
     <main class="page-with-sidebar">
         <aside class="sidebar">
             <SidebarToggle />
