@@ -100,21 +100,23 @@ public static class AuthorEndpoints
         var limit = Math.Clamp(take ?? options.DefaultPageSize, 1, options.MaxPageSize);
         var offset = Math.Max(skip, 0);
 
-        // Check that the author exists
+        // Check that the author exists; use the stored name for case-exact SQL matching
         var authors = await contentRepository.GetAuthorsAsync(cancellationToken);
-        var authorExists = authors.Any(a => string.Equals(a.Name, decodedAuthorName, StringComparison.OrdinalIgnoreCase));
-        if (!authorExists)
+        var matchedAuthor = authors.FirstOrDefault(a =>
+            string.Equals(a.Name, decodedAuthorName, StringComparison.OrdinalIgnoreCase));
+        if (matchedAuthor == null)
         {
             return TypedResults.NotFound();
         }
 
+        // Use the stored author name (exact case) so the SQL filter matches precisely
         var request = new SearchRequest(
             take: limit,
             skip: offset,
             sections: ["all"],
             collections: ["all"],
             tags: [],
-            author: decodedAuthorName);
+            author: matchedAuthor.Name);
 
         var content = await contentRepository.SearchAsync(request, cancellationToken);
         return TypedResults.Ok(new CollectionItemsResponse(content.Items, content.TotalCount));

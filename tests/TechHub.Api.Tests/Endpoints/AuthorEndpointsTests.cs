@@ -67,10 +67,10 @@ public class AuthorEndpointsTests : IClassFixture<TechHubIntegrationTestApiFacto
         var response = await _client.GetAsync("/api/authors", TestContext.Current.CancellationToken);
         var authors = await response.Content.ReadFromJsonAsync<List<AuthorSummary>>(TestContext.Current.CancellationToken);
 
-        // Assert - authors should be sorted alphabetically
+        // Assert - authors should be sorted alphabetically (case-insensitive)
         authors.Should().NotBeNull();
-        var names = authors!.Select(a => a.Name).ToList();
-        names.Should().BeInAscendingOrder("authors should be sorted alphabetically");
+        var names = authors!.Select(a => a.Name.ToLowerInvariant()).ToList();
+        names.Should().BeInAscendingOrder(StringComparer.Ordinal, "authors should be sorted alphabetically");
     }
 
     [Fact]
@@ -149,16 +149,15 @@ public class AuthorEndpointsTests : IClassFixture<TechHubIntegrationTestApiFacto
     [Fact]
     public async Task GetAuthorItems_WithInvalidAuthorNameFormat_ReturnsBadRequest()
     {
-        // Act - path traversal attempt
+        // Act - path traversal attempt (URL encoded slashes)
         var response = await _client.GetAsync(
             "/api/authors/..%2F..%2Fetc%2Fpasswd/items",
             TestContext.Current.CancellationToken);
 
-        // Assert - should be bad request or not found (ASP.NET may decode and reject)
+        // Assert - should reject path traversal with bad request or not found
         response.StatusCode.Should().BeOneOf(
             HttpStatusCode.BadRequest,
-            HttpStatusCode.NotFound,
-            HttpStatusCode.OK);
+            HttpStatusCode.NotFound);
     }
 
     [Fact]

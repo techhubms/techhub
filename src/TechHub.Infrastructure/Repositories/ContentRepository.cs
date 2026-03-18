@@ -293,7 +293,7 @@ public class ContentRepository : IContentRepository
             FROM content_items c
             WHERE c.draft = {Dialect.GetBooleanLiteral(false)}
             GROUP BY c.author
-            ORDER BY c.author";
+            ORDER BY LOWER(c.author), c.author";
 
         var results = await Connection.QueryWithLoggingAsync<AuthorSummary>(
             new CommandDefinition(sql, cancellationToken: ct),
