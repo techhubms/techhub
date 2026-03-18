@@ -29014,5 +29014,11 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/my-first-techcommunity-post-azure-vpn-gateway-bgp-timer/m-p/4503580#M776",
     "collection": "community",
     "timestamp": "2026-03-18 20:21:51 +00:00"
+  },
+  {
+    "reason": "Succesfully added: Included .NET because the announcement explicitly states PowerShell 7.6 is built on .NET 10 (LTS), and the post discusses engine/module updates and runtime-aligned dependency updates—directly tied to the .NET platform (.NET inclusion rules 1 and 4). Excluded Azure, DevOps, AI, ML, Security, and GitHub Copilot because the content does not substantively cover Azure services, CI/CD tooling, AI/ML services, security services/implementation guidance, or GitHub Copilot; it is primarily a release announcement focused on PowerShell runtime/features.",
+    "canonical_url": "https://devblogs.microsoft.com/powershell/announcing-powershell-7-6/",
+    "collection": "news",
+    "timestamp": "2026-03-18 22:12:44 +00:00"
   }
 ]
