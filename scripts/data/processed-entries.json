@@ -28858,5 +28858,17 @@
     "collection": "community",
     "reason": "Succesfully added: No generic exclusion rules triggered: the post is English, substantially technical, and far above the 200-word minimum for community content; it is not job/career focused, not a question-only post, and not promotional. Assigned Azure because the content is primarily about Azure Front Door architecture and recovery improvements at edge scale (Azure inclusion rule 1: any Azure service). Assigned ML because it explicitly describes an ML-driven traffic analysis pipeline used to generate a per-edge-site “warm tenants” list and calls the approach “Machine Learning (ML)-optimized lazy loading” (ML inclusion rule 2/8/9: analytics/ML pipeline used to drive system behavior). Did not assign DevOps/.NET/Security/AI/GitHub Copilot because the post does not cover CI/CD tooling, .NET development, Microsoft security services, or Microsoft AI products/frameworks; ML is mentioned in the context of traffic analysis rather than Azure AI services.",
     "timestamp": "2026-03-18 01:40:46 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/learn-how-to-build-agents-and-workflows-in-python/ba-p/4502144",
+    "collection": "community",
+    "reason": "Succesfully added: Generic exclusion rules: none apply (English, not job-related, not biographical, not question-only, not sales-pitch dominant; community post is >200 words of substantive text). Assigned AI because the content is centrally about building AI agents/workflows using the Microsoft Agent Framework and related agent concepts (AI inclusion rules 3 and 4). Assigned Azure because it explicitly uses the Azure AI Evaluation SDK (an Azure AI capability) within the agent development workflow (Azure inclusion rule 3 and AI inclusion rule 1). Did not assign DevOps because OpenTelemetry/Aspire dashboard are discussed as observability tools but there is no CI/CD, GitHub Actions/Azure DevOps, or deployment pipeline focus. Did not assign ML because it focuses on using frameworks/services for agents (RAG, evaluation, workflows) rather than training/custom ML engineering. Did not assign .NET because the series is Python-focused and does not cover C#/ASP.NET/.NET tooling. Did not assign GitHub Copilot because the post references GitHub Models, not GitHub Copilot features or usage. Did not assign Security because there is no security/IAM/Defender/Key Vault content.",
+    "timestamp": "2026-03-18 07:29:47 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=tQlNq8bH674",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English, technical how-to video description (not job-related, not biographical, not question-only, not primarily a sales pitch, and not short community content). Assigned \"GitHub Copilot\" because the content is explicitly a step-by-step guide to installing and using GitHub Copilot CLI and a Copilot plugin. Per rules, assigning \"GitHub Copilot\" also requires assigning \"AI\". Assigned \"DevOps\" because the video is centered on developer tooling and CLI workflows (GitHub tooling, terminal usage, automation/non-interactive use), which fits DevOps inclusion rules around developer experience and GitHub tooling. Did not assign \"Azure\" because Azure is only present in tags/learning links, while the substantive steps are about GitHub Copilot CLI and Work IQ; Azure is not central in the provided description.",
+    "timestamp": "2026-03-18 10:25:23 +00:00"
   }
 ]
