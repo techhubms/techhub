@@ -160,13 +160,32 @@ public class SeoMetaTagsTests : PlaywrightTestBase
         // Act
         await NavigateToFirstInternalContentAsync("/all/roundups");
 
-        // Assert
-        var pageTitle = await Page.TitleAsync();
-        var ogTitle = await GetMetaContentAsync("property", "og:title");
+        // Assert - Read og:title and document.title atomically in a single JS evaluation.
+        // Reading them in two separate calls (GetMetaContentAsync then TitleAsync) creates a
+        // window where Blazor HeadContent rehydration can temporarily clear og:title between
+        // the two reads, making the second read return null even though the first succeeded.
+        // WaitForFunctionAsync retries until og:title is non-null, then returns both values
+        // atomically from the same JS execution context — guaranteed consistent.
+        var handle = await Page.WaitForFunctionAsync(
+            @"() => {
+                const ogTitleEl = document.head.querySelector(""meta[property='og:title']"");
+                const ogTitle = ogTitleEl?.content ?? null;
+                if (!ogTitle) return null;
+                return { OgTitle: ogTitle, PageTitle: document.title };
+            }",
+            null,
+            new Microsoft.Playwright.PageWaitForFunctionOptions
+            {
+                Timeout = BlazorHelpers.DefaultTimeout,
+                PollingInterval = BlazorHelpers.DefaultPollingInterval
+            });
+        var result = await handle.JsonValueAsync<OgAndPageTitleResult>();
 
-        ogTitle.Should().NotBeNullOrEmpty();
-        pageTitle.Should().Contain(ogTitle!, "og:title should match the page title");
+        result!.OgTitle.Should().NotBeNullOrEmpty();
+        result.PageTitle.Should().Contain(result.OgTitle!, "og:title should match the page title");
     }
+
+    private sealed record OgAndPageTitleResult(string OgTitle, string PageTitle);
 
     [Fact]
     public async Task ContentDetailPage_HasArticleJsonLd()
