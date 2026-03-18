@@ -206,16 +206,26 @@ public class NavigationTests : PlaywrightTestBase
         classAttr.Should().MatchRegex("section-bg-(ai|github-copilot|azure|ml|devops|dotnet|security|all)");
 
         // Check that there's no grey bar (overlay should cover full height)
-        var overlay = headerElement.Locator(".section-overlay");
-        var overlayBox = await overlay.BoundingBoxAsync();
-        var headerBox = await headerElement.BoundingBoxAsync();
+        // Use a single JS evaluation to get both bounding boxes atomically,
+        // avoiding timing issues from scroll-triggered Blazor re-renders.
+        var boxes = await Page.EvaluateAsync<double[]>(@"() => {
+            const header = document.querySelector('.section-card .section-card-header');
+            header.scrollIntoView({ block: 'center' });
+            const overlay = header.querySelector('.section-overlay');
+            const oBox = overlay.getBoundingClientRect();
+            const hBox = header.getBoundingClientRect();
+            return [oBox.height, hBox.height];
+        }");
 
-        overlayBox.Should().NotBeNull();
-        headerBox.Should().NotBeNull();
+        boxes.Should().NotBeNull();
+        boxes.Should().HaveCount(2);
+
+        var overlayHeight = boxes[0];
+        var headerHeight = boxes[1];
 
         // Overlay should have reasonable height (not zero/collapsed)
-        (overlayBox.Height > 50).Should().BeTrue("overlay should have substantial height");
-        (headerBox.Height > 50).Should().BeTrue("header should have substantial height");
+        (overlayHeight > 50).Should().BeTrue("overlay should have substantial height");
+        (headerHeight > 50).Should().BeTrue("header should have substantial height");
     }
 
     [Fact]

@@ -1,3 +1,4 @@
+using System.Text.Json;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -179,13 +180,13 @@ public class SeoMetaTagsTests : PlaywrightTestBase
                 Timeout = BlazorHelpers.DefaultTimeout,
                 PollingInterval = BlazorHelpers.DefaultPollingInterval
             });
-        var result = await handle.JsonValueAsync<OgAndPageTitleResult>();
+        var result = await handle.JsonValueAsync<JsonElement>();
 
-        result!.OgTitle.Should().NotBeNullOrEmpty();
-        result.PageTitle.Should().Contain(result.OgTitle!, "og:title should match the page title");
+        var ogTitle = result.GetProperty("OgTitle").GetString();
+        var pageTitle = result.GetProperty("PageTitle").GetString();
+        ogTitle.Should().NotBeNullOrEmpty();
+        pageTitle.Should().Contain(ogTitle!, "og:title should match the page title");
     }
-
-    private sealed record OgAndPageTitleResult(string OgTitle, string PageTitle);
 
     [Fact]
     public async Task ContentDetailPage_HasArticleJsonLd()
@@ -261,30 +262,54 @@ public class SeoMetaTagsTests : PlaywrightTestBase
             }",
             expectedPath);
 
+    /// <summary>
+    /// Reads a meta tag's content attribute, retrying through Blazor HeadContent rehydration gaps.
+    /// Returns null only if the tag is genuinely absent after the full timeout period.
+    /// </summary>
     private async Task<string?> GetMetaContentAsync(string attributeName, string attributeValue)
     {
-        var content = await Page.EvaluateAsync<string?>(
-            @"([attrName, attrValue]) => {
-                const el = document.head.querySelector(`meta[${attrName}='${attrValue}']`);
-                return el ? el.getAttribute('content') : null;
-            }",
-            new[] { attributeName, attributeValue });
-        return content;
+        try
+        {
+            var handle = await Page.WaitForFunctionAsync(
+                @"([attrName, attrValue]) => {
+                    const el = document.head.querySelector(`meta[${attrName}='${attrValue}']`);
+                    return el ? el.getAttribute('content') : null;
+                }",
+                new[] { attributeName, attributeValue },
+                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            return await handle.JsonValueAsync<string?>();
+        }
+        catch (TimeoutException)
+        {
+            return null;
+        }
     }
 
+    /// <summary>
+    /// Reads a JSON-LD script's content by @type, retrying through Blazor HeadContent rehydration gaps.
+    /// Returns null only if the schema type is genuinely absent after the full timeout period.
+    /// </summary>
     private async Task<string?> GetJsonLdContentAsync(string schemaType)
     {
-        var content = await Page.EvaluateAsync<string?>(
-            @"(type) => {
-                const scripts = Array.from(document.head.querySelectorAll('script[type=""application/ld+json""]'));
-                const match = scripts.find(s => {
-                    try { return JSON.parse(s.textContent)['@type'] === type; }
-                    catch { return false; }
-                });
-                return match ? match.textContent : null;
-            }",
-            schemaType);
-        return content;
+        try
+        {
+            var handle = await Page.WaitForFunctionAsync(
+                @"(type) => {
+                    const scripts = Array.from(document.head.querySelectorAll('script[type=""application/ld+json""]'));
+                    const match = scripts.find(s => {
+                        try { return JSON.parse(s.textContent)['@type'] === type; }
+                        catch { return false; }
+                    });
+                    return match ? match.textContent : null;
+                }",
+                schemaType,
+                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            return await handle.JsonValueAsync<string?>();
+        }
+        catch (TimeoutException)
+        {
+            return null;
+        }
     }
 
     /// <summary>
