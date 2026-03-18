@@ -1,4 +1,5 @@
 @page "/authors/{authorName}"
+@using TechHub.Core.Logging
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 @implements IDisposable
@@ -109,6 +110,13 @@
     [Parameter]
     public string AuthorName { get; set; } = null!;
 
+    // Sanitized copy of the user-controlled route parameter for state keys and logging.
+    // Never overwrite [Parameter] properties — they are owned by the parent/router.
+    private string _sanitizedAuthorName = string.Empty;
+
+    // Change tracking so OnParametersSetAsync can detect navigation between authors
+    private string _previousAuthorName = string.Empty;
+
     private List<TechHub.Core.Models.ContentItem> contentItems = [];
     private long totalCount;
     private bool isLoading = true;
@@ -120,6 +128,8 @@
 
     protected override async Task OnInitializedAsync()
     {
+        _sanitizedAuthorName = InputSanitizer.Sanitize(Uri.UnescapeDataString(AuthorName));
+        _previousAuthorName = AuthorName;
         _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
         var stateKey = GetStateKey();
@@ -137,7 +147,26 @@
         }
     }
 
-    private string GetStateKey() => $"AuthorDetail_{AuthorName}";
+    protected override async Task OnParametersSetAsync()
+    {
+        // Blazor reuses the same component instance when navigating between
+        // /authors/{authorName} routes — detect the change and reload.
+        if (AuthorName != _previousAuthorName)
+        {
+            _previousAuthorName = AuthorName;
+            _sanitizedAuthorName = InputSanitizer.Sanitize(Uri.UnescapeDataString(AuthorName));
+
+            // Reset state for the new author
+            contentItems = [];
+            totalCount = 0;
+            hasMoreContent = false;
+            notFound = false;
+
+            await LoadInitialBatchAsync();
+        }
+    }
+
+    private string GetStateKey() => $"AuthorDetail_{_sanitizedAuthorName}";
 
     private Task PersistState()
     {
@@ -155,8 +184,7 @@
     {
         isLoading = true;
 
-        var decodedAuthorName = Uri.UnescapeDataString(AuthorName);
-        var result = await ApiClient.GetAuthorItemsAsync(decodedAuthorName, take: BatchSize, skip: 0);
+        var result = await ApiClient.GetAuthorItemsAsync(_sanitizedAuthorName, take: BatchSize, skip: 0);
 
         if (result == null)
         {
@@ -164,7 +192,7 @@
         }
         else
         {
-        contentItems = result.Items.ToList();
+            contentItems = result.Items.ToList();
             totalCount = result.TotalCount;
             hasMoreContent = contentItems.Count < result.TotalCount;
         }
@@ -181,9 +209,8 @@
 
         isLoadingMore = true;
 
-        var decodedAuthorName = Uri.UnescapeDataString(AuthorName);
         var result = await ApiClient.GetAuthorItemsAsync(
-            decodedAuthorName,
+            _sanitizedAuthorName,
             take: BatchSize,
             skip: contentItems.Count);
 

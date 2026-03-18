@@ -1,5 +1,6 @@
 @using TechHub.Core.Models
 @using TechHub.Core.Configuration
+@using TechHub.Core.Logging
 @using TechHub.Web.Services
 @using Microsoft.JSInterop
 @using Microsoft.AspNetCore.Components.Web
@@ -115,6 +116,12 @@
     private string? errorMessage;
     private int currentBatch = 1;
 
+    // Sanitized copies of user-controlled parameters for logging and state keys.
+    // Never overwrite [Parameter] properties — they are owned by the parent component.
+    // Instead, compute sanitized copies here and use them for all non-display purposes.
+    private string _sanitizedSectionName = string.Empty;
+    private string _sanitizedCollectionName = string.Empty;
+
     // Change detection
     private string previousCollectionName = string.Empty;
     private List<string>? previousFilterTags;
@@ -139,6 +146,8 @@
 
     protected override async Task OnInitializedAsync()
     {
+        _sanitizedSectionName = InputSanitizer.Sanitize(SectionName);
+        _sanitizedCollectionName = InputSanitizer.Sanitize(CollectionName);
         previousCollectionName = CollectionName;
         previousFilterTags = FilterTags?.ToList();
         previousSearchQuery = SearchQuery;
@@ -179,7 +188,7 @@
         var dateKey = (!string.IsNullOrEmpty(FromDate) || !string.IsNullOrEmpty(ToDate))
             ? $"_dates_{FromDate}_{ToDate}"
             : "";
-        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}{searchKey}{dateKey}";
+        return $"ContentItemsGrid_{_sanitizedSectionName}_{_sanitizedCollectionName}{tagsKey}{searchKey}{dateKey}";
     }
 
     private Task PersistState()
@@ -205,6 +214,8 @@
 
     protected override async Task OnParametersSetAsync()
     {
+        _sanitizedSectionName = InputSanitizer.Sanitize(SectionName);
+        _sanitizedCollectionName = InputSanitizer.Sanitize(CollectionName);
         if (CollectionName != previousCollectionName)
         {
             previousCollectionName = CollectionName;
@@ -299,7 +310,7 @@
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
+            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", _sanitizedSectionName, _sanitizedCollectionName);
             errorMessage = "Unable to load content";
         }
         finally

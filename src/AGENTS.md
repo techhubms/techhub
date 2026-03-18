@@ -27,7 +27,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Always use context7 MCP tool** for latest .NET/Blazor documentation
 - **Always check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
 - **Always add the latest stable version when adding NuGet packages**
-- **Always sanitize user-controlled string parameters at the function entry point**: Overwrite the parameter immediately using `param = InputSanitizer.Sanitize(param);` (from `TechHub.Core.Logging`) so no code path can ever use the unsanitized value. Apply to all route params, query params, and request body strings that originated from user input. Use the sanitized variable everywhere after that point.
+- **Always sanitize user-controlled string parameters at the function entry point**: Overwrite the parameter immediately using `param = InputSanitizer.Sanitize(param);` (from `TechHub.Core.Logging`) so no code path can ever use the unsanitized value. Apply to all route params, query params, and request body strings that originated from user input. Use the sanitized variable everywhere after that point. **Exception — Blazor `[Parameter]` properties**: these are owned by the parent/router and must not be overwritten. Instead, assign a private backing field (e.g. `_sanitizedAuthorName`) in `OnInitializedAsync` and `OnParametersSetAsync`, and use that field for logging, state-persistence keys, and API arguments. See `src/TechHub.Web/AGENTS.md` for details.
 
 ### ⚠️ Ask First
 
