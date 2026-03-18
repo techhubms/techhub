@@ -19,6 +19,7 @@ All SEO head tags are rendered by the `SeoMetaTags` shared component (`src/TechH
 
 The component emits:
 
+- `<meta name="page-path">` — normalized current URL path (lowercased); used by E2E tests to detect when HeadContent has been updated after navigation
 - `<meta name="description">` — truncated to 160 characters, HTML stripped
 - Open Graph tags (`og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`)
 - Article-specific Open Graph properties (`article:published_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types

@@ -21,7 +21,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -34,7 +34,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -52,7 +52,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
@@ -67,7 +67,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("WebSite");
@@ -83,7 +83,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -96,7 +96,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -108,7 +108,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("CollectionPage");
@@ -120,7 +120,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
-        await WaitForSeoMetaTagsAsync();
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("BreadcrumbList");
@@ -217,12 +217,16 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     // ────────────────────────────────────────────────────────────────────────
 
     /// <summary>
-    /// Waits for SeoMetaTags HeadContent to be fully rendered in the document head (including JSON-LD).
-    /// After Blazor rehydration, HeadContent may briefly be absent; polling avoids flaky failures on slow CI runners.
+    /// Waits for SeoMetaTags HeadContent to be fully rendered for a specific page path.
+    /// The page-path meta tag is the FIRST element in the HeadContent block — when it
+    /// contains the expected path, all other SEO tags in that same block are guaranteed
+    /// to be present and belong to the correct page. This eliminates races with stale
+    /// head content from a previous page during Blazor enhanced navigation.
     /// </summary>
-    private Task WaitForSeoMetaTagsAsync() =>
+    private Task WaitForSeoMetaTagsAsync(string expectedPath) =>
         Page.WaitForConditionAsync(
-            "() => document.head.querySelector(\"meta[name='description']\") !== null && document.head.querySelector(\"script[type='application/ld+json']\") !== null");
+            "(path) => document.head.querySelector(\"meta[name='page-path']\")?.content === path",
+            expectedPath);
 
     private async Task<string?> GetMetaContentAsync(string attributeName, string attributeValue)
     {
@@ -279,17 +283,10 @@ public class SeoMetaTagsTests : PlaywrightTestBase
 
         await Page.GotoAndWaitForBlazorAsync($"{BlazorHelpers.BaseUrl}{firstCardHref}");
 
-        // Wait for the article content to be visible before asserting head content
-        await Page.AssertElementVisibleBySelectorAsync("main article");
-
-        // Wait for SeoMetaTags HeadContent to fully render (including JSON-LD scripts at the end).
-        // After Blazor rehydration the HeadContent may briefly be absent; polling avoids flaky failures on slow CI.
-        await Page.WaitForConditionAsync(
-            "() => document.head.querySelector(\"meta[name='description']\") !== null && document.head.querySelector(\"script[type='application/ld+json']\") !== null");
-
-        // Wait for PageTitle to render (separate from HeadContent, may update at different times)
-        await Page.WaitForConditionAsync(
-            "() => document.title !== ''");
+        // Wait for the DETAIL page's SeoMetaTags to render by checking page-path.
+        // The page-path meta is the first element in the HeadContent block — when it
+        // matches the detail page's path, all other SEO tags are guaranteed present.
+        await WaitForSeoMetaTagsAsync(firstCardHref!);
 
         return firstCardHref!;
     }
