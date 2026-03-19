@@ -107,7 +107,7 @@ public class SubdomainRedirectMiddleware
                     _logger.LogInformation(
                         "Subdomain shortcut redirect: {Host} -> {RedirectUrl}",
                         host,
-                        redirectUrl);
+                        redirectUrl.Sanitize());
 
                     context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
                     context.Response.Headers.Location = redirectUrl;
@@ -128,7 +128,7 @@ public class SubdomainRedirectMiddleware
                 _logger.LogInformation(
                     "Unknown subdomain redirect: {Host} -> {RedirectUrl}",
                     host,
-                    redirectUrl);
+                    redirectUrl.Sanitize());
 
                 context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
                 context.Response.Headers.Location = redirectUrl;

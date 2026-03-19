@@ -292,6 +292,8 @@ public class ContentRepository : IContentRepository
                 COUNT(*)   AS ItemCount
             FROM content_items c
             WHERE c.draft = {Dialect.GetBooleanLiteral(false)}
+              AND c.author IS NOT NULL
+              AND c.author <> ''
             GROUP BY c.author
             ORDER BY LOWER(c.author), c.author";
 

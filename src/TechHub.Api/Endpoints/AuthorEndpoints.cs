@@ -31,7 +31,7 @@ public static class AuthorEndpoints
             .WithTags("Authors")
             .WithDescription("Endpoints for browsing content by author");
 
-        group.MapGet("/", GetAllAuthors)
+        group.MapGet("", GetAllAuthors)
             .WithName("GetAllAuthors")
             .WithSummary("Get all authors")
             .WithDescription("Returns all authors with their published content item counts, sorted alphabetically")
@@ -88,13 +88,13 @@ public static class AuthorEndpoints
         [FromQuery] int skip = 0,
         CancellationToken cancellationToken = default)
     {
-        // Validate author name
-        if (!IsValidAuthorName(authorName))
+        // Decode first so encoded path separators (%2F) can't bypass validation
+        var decodedAuthorName = Uri.UnescapeDataString(authorName).Sanitize();
+
+        if (!IsValidAuthorName(decodedAuthorName))
         {
             return TypedResults.BadRequest("Invalid author name format.");
         }
-
-        var decodedAuthorName = Uri.UnescapeDataString(authorName).Sanitize();
 
         // Enforce pagination limits
         var options = apiOptions.Value;

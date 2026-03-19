@@ -75,21 +75,17 @@
     {
         _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        if (!ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restored))
-        {
-            authors = await ApiClient.GetAuthorsAsync();
-        }
-        else
-        {
-            authors = restored;
-        }
+        var hasState = ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restored);
+        authors = hasState && restored != null
+            ? restored
+            : await ApiClient.GetAuthorsAsync() ?? [];
 
         isLoading = false;
     }
 
     private Task PersistState()
     {
-        ApplicationState.PersistAsJson("authors", authors);
+        ApplicationState.PersistAsJson("authors", authors ?? Array.Empty<AuthorSummary>());
         return Task.CompletedTask;
     }
 

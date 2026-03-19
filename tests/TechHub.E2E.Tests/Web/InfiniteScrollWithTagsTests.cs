@@ -56,7 +56,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         const string TagUrlPrefix = "tags=copilot";
 
         // Act - Navigate directly with the tag filter pre-applied
-        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Tag}");
+        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Uri.EscapeDataString(Tag)}");
 
         // Wait for filtered content to render (cards should appear)
         await Page.WaitForConditionAsync(
@@ -128,9 +128,10 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         currentUrl.Should().Contain(TagUrlPrefix,
             "tag filter should be preserved in URL during infinite scroll");
 
-        // Verify tag button has 'selected' class (component uses CSS class, not aria-pressed)
-        var tagButton = Page.Locator("button.tag-cloud-item.selected").First;
+        // Verify tag button has 'selected' class and matches the expected tag
+        var tagButton = Page.Locator("button.tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = new System.Text.RegularExpressions.Regex("copilot chat", System.Text.RegularExpressions.RegexOptions.IgnoreCase) });
         var hasSelectedClass = await tagButton.CountAsync() > 0;
-        hasSelectedClass.Should().BeTrue("a tag button should be selected after navigating with tag filter");
+        hasSelectedClass.Should().BeTrue("the 'copilot chat' tag button should be selected after navigating with tag filter");
     }
 }

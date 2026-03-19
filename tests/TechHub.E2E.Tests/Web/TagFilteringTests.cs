@@ -116,14 +116,14 @@ public class TagFilteringTests : PlaywrightTestBase
 
         await Assertions.Expect(selectedTagButton).ToBeVisibleAsync();
 
-        // Verify visual styling using ToHaveCSSAsync (retries until CSS is applied, immune
-        // to DOM detachment race conditions that can cause EvaluateAsync to return "").
-        // The .selected CSS rule sets background: var(--color-purple-dark) which resolves
-        // to an rgb() color value. We verify it's a non-empty color (not the default "").
-        await Assertions.Expect(selectedTagButton).ToHaveCSSAsync(
-            "background-color",
-            new Regex(@"rgb"),
-            new LocatorAssertionsToHaveCSSOptions { Timeout = BlazorHelpers.DefaultTimeout });
+        // Verify selected tag has a different background-color than unselected tags,
+        // confirming the visual distinction. The .selected class applies
+        // var(--color-purple-dark) vs var(--color-bg-default) for unselected.
+        var unselectedTag = Page.Locator(".tag-cloud-item:not(.selected)").First;
+        var selectedBg = await selectedTagButton.EvaluateAsync<string>("el => getComputedStyle(el).backgroundColor");
+        var unselectedBg = await unselectedTag.EvaluateAsync<string>("el => getComputedStyle(el).backgroundColor");
+        selectedBg.Should().NotBeNullOrEmpty("selected tag should have a computed background-color");
+        selectedBg.Should().NotBe(unselectedBg, "selected tag should be visually distinct from unselected tags");
     }
 
     [Fact]

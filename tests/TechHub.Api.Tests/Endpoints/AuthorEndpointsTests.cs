@@ -161,17 +161,14 @@ public class AuthorEndpointsTests : IClassFixture<TechHubIntegrationTestApiFacto
     }
 
     [Fact]
-    public async Task GetAllAuthors_ExcludesDraftAuthors()
+    public async Task GetAllAuthors_ReturnsOnlyAuthorsWithPublishedContent()
     {
         // Act
         var response = await _client.GetAsync("/api/authors", TestContext.Current.CancellationToken);
         var authors = await response.Content.ReadFromJsonAsync<List<AuthorSummary>>(TestContext.Current.CancellationToken);
 
-        // Assert - "Draft Author" from test data should not appear
-        // (draft articles should not be counted)
+        // Assert - all returned authors must have at least one published item
         authors.Should().NotBeNull();
-        // Note: Draft Author may still appear if they have non-draft content
-        // This just verifies the endpoint doesn't crash on draft data
         authors!.Should().AllSatisfy(a => a.ItemCount.Should().BeGreaterThan(0));
     }
 }

@@ -172,13 +172,13 @@
     private string GetStateKey()
     {
         var tagsKey = FilterTags != null && FilterTags.Count > 0
-            ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t))
+            ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t)).Sanitize()
             : "";
         var searchKey = !string.IsNullOrWhiteSpace(SearchQuery)
-            ? $"_search_{SearchQuery}"
+            ? $"_search_{SearchQuery.Sanitize()}"
             : "";
         var dateKey = (!string.IsNullOrEmpty(FromDate) || !string.IsNullOrEmpty(ToDate))
-            ? $"_dates_{FromDate}_{ToDate}"
+            ? $"_dates_{FromDate.Sanitize()}_{ToDate.Sanitize()}"
             : "";
         return $"ContentItemsGrid_{SectionName.Sanitize()}_{CollectionName.Sanitize()}{tagsKey}{searchKey}{dateKey}";
     }

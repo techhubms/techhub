@@ -180,17 +180,25 @@
     {
         isLoading = true;
 
-        var result = await ApiClient.GetAuthorItemsAsync(DecodedAuthorName, take: BatchSize, skip: 0);
+        try
+        {
+            var result = await ApiClient.GetAuthorItemsAsync(DecodedAuthorName, take: BatchSize, skip: 0);
 
-        if (result == null)
-        {
-            notFound = true;
+            if (result == null)
+            {
+                notFound = true;
+            }
+            else
+            {
+                contentItems = result.Items.ToList();
+                totalCount = result.TotalCount;
+                hasMoreContent = contentItems.Count < result.TotalCount;
+            }
         }
-        else
+        catch (HttpRequestException)
         {
-            contentItems = result.Items.ToList();
-            totalCount = result.TotalCount;
-            hasMoreContent = contentItems.Count < result.TotalCount;
+            // API returns 400 for malformed author names — treat as not found
+            notFound = true;
         }
 
         isLoading = false;
