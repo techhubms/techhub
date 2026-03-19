@@ -36,9 +36,9 @@ TechHub.Api/
 └── TechHub.Api.csproj           # Project file
 ```
 
-## Input Sanitization at Entry Points
+## Input Sanitization and Validation
 
-**RULE**: Sanitize every user-controlled string parameter at the very first line of the endpoint handler — before any logging, DB access, or processing.
+**RULE**: Sanitize user-controlled string parameters at the entry of each endpoint handler using the `.Sanitize()` extension method (from `TechHub.Core.Logging`). This strips CR/LF characters to prevent log forging.
 
 ```csharp
 private static async Task<Results<Ok<Section>, NotFound>> GetSectionByName(
@@ -46,15 +46,15 @@ private static async Task<Results<Ok<Section>, NotFound>> GetSectionByName(
     IContentRepository contentRepository,
     CancellationToken cancellationToken)
 {
-    // First thing: sanitize user input, overwrite parameter so it is safe everywhere
-    sectionName = InputSanitizer.Sanitize(sectionName);
+    sectionName = sectionName.Sanitize();
     ...
 }
 ```
 
-- Use `InputSanitizer.Sanitize(value)` from `TechHub.Core.Logging`
+- Use `.Sanitize()` extension method from `TechHub.Core.Logging`
 - Overwrite the parameter (not a new variable) so there is zero risk of using the unsanitized value
-- Do NOT use `Log*Sanitized` wrapper methods — sanitize at entry instead
+- Validate query parameters (search length, tag count/length, lastDays range) before processing — return `400 Bad Request` for invalid input
+- See [docs/input-validation-and-sanitization.md](../../docs/input-validation-and-sanitization.md) for the full 6-layer strategy
 
 ## RESTful Design Principles
 

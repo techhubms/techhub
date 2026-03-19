@@ -71,7 +71,7 @@ public class SubdomainRedirectMiddleware
     {
         ArgumentNullException.ThrowIfNull(context);
 
-        var host = InputSanitizer.Sanitize(context.Request.Host.Host);
+        var host = context.Request.Host.Host.Sanitize();
 
         // Skip processing for primary hosts (tech.xebia.ms, tech.hub.ms, localhost, etc.)
         if (_primaryHosts.Contains(host) || !host.Contains('.', StringComparison.Ordinal))

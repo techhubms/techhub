@@ -114,7 +114,7 @@ public static class RssEndpoints
         IContentRepository contentRepository,
         IRssService rssService)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
+        sectionName = sectionName.Sanitize();
         var section = await contentRepository.GetSectionByNameAsync(sectionName);
         if (section is null)
         {
@@ -145,8 +145,8 @@ public static class RssEndpoints
         IContentRepository contentRepository,
         IRssService rssService)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
-        collectionName = InputSanitizer.Sanitize(collectionName);
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         // Validate section exists (unless "all")
         if (!sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {

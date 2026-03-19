@@ -1,0 +1,7 @@
+extensions:
+  - addsTo:
+      pack: codeql/csharp-all
+      extensible: sanitizerModel
+    data:
+      - ["TechHub.Core.Logging", "InputSanitizer", false, "Sanitize",
+         "(System.String)", "", "Argument[0]", "log-injection", "manual"]

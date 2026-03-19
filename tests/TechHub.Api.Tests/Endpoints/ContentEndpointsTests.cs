@@ -1170,6 +1170,23 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         resultFull.TotalCount.Should().BeGreaterThan(0);
     }
 
+    [Fact]
+    public async Task GetCollectionItems_WithSearch_OrderedByDateDescending()
+    {
+        // Arrange - Search for a common term that matches multiple items
+
+        // Act
+        var response = await _client.GetAsync("/api/sections/all/collections/all/items?q=copilot", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().HaveCountGreaterThan(1, "Need multiple results to verify ordering");
+        result.Items.Should().BeInDescendingOrder(item => item.DateEpoch, "Search results should be ordered by date descending");
+    }
+
     #endregion
 
     #endregion
@@ -1718,6 +1735,161 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert - Path traversal resolved by HTTP framework before routing; 400 or 404 both acceptable
         response.StatusCode.Should().BeOneOf(HttpStatusCode.BadRequest, HttpStatusCode.NotFound);
+    }
+
+    #endregion
+
+    #region Query Parameter Validation Tests
+
+    [Fact]
+    public async Task GetCollectionItems_WithExcessiveSearchQuery_ReturnsBadRequest()
+    {
+        // Arrange - Search query exceeding 200 characters
+        var longQuery = new string('a', 201);
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/items?q={longQuery}", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithMaxLengthSearchQuery_Succeeds()
+    {
+        // Arrange - Search query at exactly 200 characters (the limit)
+        var maxQuery = new string('a', 200);
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/items?q={maxQuery}", TestContext.Current.CancellationToken);
+
+        // Assert - Should not be rejected by validation
+        response.StatusCode.Should().NotBe(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithExcessiveSearchQuery_ReturnsBadRequest()
+    {
+        // Arrange - Search query exceeding 200 characters on the tags endpoint
+        var longQuery = new string('a', 201);
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/tags?q={longQuery}", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithTooManyTags_ReturnsBadRequest()
+    {
+        // Arrange - More than 20 tags
+        var tags = string.Join(",", Enumerable.Range(1, 21).Select(i => $"tag{i}"));
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/items?tags={tags}", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithExactly20Tags_DoesNotReturnBadRequest()
+    {
+        // Arrange - Exactly 20 tags (the limit)
+        var tags = string.Join(",", Enumerable.Range(1, 20).Select(i => $"tag{i}"));
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/items?tags={tags}", TestContext.Current.CancellationToken);
+
+        // Assert - Should not be rejected by validation
+        response.StatusCode.Should().NotBe(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithTagExceeding100Chars_ReturnsBadRequest()
+    {
+        // Arrange - A single tag exceeding 100 characters
+        var longTag = new string('a', 101);
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/items?tags={longTag}", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithTooManyTags_ReturnsBadRequest()
+    {
+        // Arrange - More than 20 tags on the tags endpoint
+        var tags = string.Join(",", Enumerable.Range(1, 21).Select(i => $"tag{i}"));
+
+        // Act
+        var response = await _client.GetAsync($"/api/sections/ai/collections/all/tags?tags={tags}", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithNegativeLastDays_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items?lastDays=-1", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithZeroLastDays_DisablesDateFiltering()
+    {
+        // Act - lastDays=0 is valid: it disables date filtering
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items?lastDays=0", TestContext.Current.CancellationToken);
+
+        // Assert - Should NOT be rejected
+        response.StatusCode.Should().NotBe(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithExcessiveLastDays_ReturnsBadRequest()
+    {
+        // Act - lastDays > 3650 (10 years)
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items?lastDays=3651", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionItems_WithValidLastDays_DoesNotReturnBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/items?lastDays=30", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().NotBe(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithNegativeLastDays_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?lastDays=-1", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetCollectionTags_WithExcessiveLastDays_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/sections/ai/collections/all/tags?lastDays=3651", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
 
     #endregion

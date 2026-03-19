@@ -27,7 +27,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Always use context7 MCP tool** for latest .NET/Blazor documentation
 - **Always check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
 - **Always add the latest stable version when adding NuGet packages**
-- **Always sanitize user-controlled string parameters at the function entry point**: Overwrite the parameter immediately using `param = InputSanitizer.Sanitize(param);` (from `TechHub.Core.Logging`) so no code path can ever use the unsanitized value. Apply to all route params, query params, and request body strings that originated from user input. Use the sanitized variable everywhere after that point. **Exception — Blazor `[Parameter]` properties**: these are owned by the parent/router and must not be overwritten. Instead, assign a private backing field (e.g. `_sanitizedAuthorName`) in `OnInitializedAsync` and `OnParametersSetAsync`, and use that field for logging, state-persistence keys, and API arguments. See `src/TechHub.Web/AGENTS.md` for details.
+- **Always sanitize user-controlled strings for logging**: Use the `.Sanitize()` extension method (from `TechHub.Core.Logging`) on any user-controlled value passed to logging calls — e.g. `Logger.LogError("Bad input for {Name}", name.Sanitize())`. For methods with many log calls using the same parameter (like `TechHubApiClient` service methods), assign at entry: `param = param.Sanitize();`. In Blazor components, call `.Sanitize()` inline at each log site. See [docs/input-validation-and-sanitization.md](../docs/input-validation-and-sanitization.md) for the full strategy.
 
 ### ⚠️ Ask First
 

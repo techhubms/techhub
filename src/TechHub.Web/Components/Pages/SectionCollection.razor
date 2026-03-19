@@ -170,9 +170,11 @@
     {
         if (!string.IsNullOrEmpty(TagsParam))
         {
-            // Parse tags from URL
+            // Parse tags from URL, enforce limits matching API validation
             var rawTags = TagsParam.Split(',', StringSplitOptions.RemoveEmptyEntries)
             .Select(t => Uri.UnescapeDataString(t.Trim()).ToLowerInvariant())
+            .Where(t => t.Length <= 100)
+            .Take(20)
             .ToList();
 
             // Deduplicate and normalize tags
@@ -180,7 +182,7 @@
             .Distinct(StringComparer.OrdinalIgnoreCase)
             .ToList();
 
-            // If duplicates were removed, clean up the URL
+            // If duplicates were removed or tags were truncated, clean up the URL
             if (rawTags.Count != selectedTags.Count)
             {
                 UpdateUrl();
@@ -194,7 +196,8 @@
 
     private void ParseSearchFromUrl()
     {
-        searchQuery = SearchParam ?? string.Empty;
+        var raw = SearchParam ?? string.Empty;
+        searchQuery = raw.Length > 200 ? raw[..200] : raw;
     }
 
     private void ParseDatesFromUrl()

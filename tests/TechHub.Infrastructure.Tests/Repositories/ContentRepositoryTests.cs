@@ -1005,6 +1005,24 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             "Should find the fts-test article by its unique content");
     }
 
+    /// <summary>
+    /// Test: Full-text search results are ordered by date descending (newest first)
+    /// Why: Content hub users expect search results sorted by most recent, not relevance
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_FullTextSearch_OrderedByDateDescending()
+    {
+        // Arrange - search for a common term that matches multiple items
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "copilot");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert
+        results.Items.Should().HaveCountGreaterThan(1, "Need multiple results to verify ordering");
+        results.Items.Should().BeInDescendingOrder(item => item.DateEpoch, "Search results should be ordered by date descending");
+    }
+
     #endregion
 
     #region Denormalized Tags Tests

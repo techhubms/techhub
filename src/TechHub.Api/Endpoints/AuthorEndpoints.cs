@@ -94,7 +94,7 @@ public static class AuthorEndpoints
             return TypedResults.BadRequest("Invalid author name format.");
         }
 
-        var decodedAuthorName = InputSanitizer.Sanitize(Uri.UnescapeDataString(authorName));
+        var decodedAuthorName = Uri.UnescapeDataString(authorName).Sanitize();
 
         // Enforce pagination limits
         var options = apiOptions.Value;

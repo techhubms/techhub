@@ -110,10 +110,6 @@
     [Parameter]
     public string AuthorName { get; set; } = null!;
 
-    // Sanitized copy of the user-controlled route parameter for state keys and logging.
-    // Never overwrite [Parameter] properties — they are owned by the parent/router.
-    private string _sanitizedAuthorName = string.Empty;
-
     // Change tracking so OnParametersSetAsync can detect navigation between authors
     private string _previousAuthorName = string.Empty;
 
@@ -128,7 +124,6 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _sanitizedAuthorName = InputSanitizer.Sanitize(Uri.UnescapeDataString(AuthorName));
         _previousAuthorName = AuthorName;
         _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
@@ -154,7 +149,6 @@
         if (AuthorName != _previousAuthorName)
         {
             _previousAuthorName = AuthorName;
-            _sanitizedAuthorName = InputSanitizer.Sanitize(Uri.UnescapeDataString(AuthorName));
 
             // Reset state for the new author
             contentItems = [];
@@ -166,7 +160,9 @@
         }
     }
 
-    private string GetStateKey() => $"AuthorDetail_{_sanitizedAuthorName}";
+    private string DecodedAuthorName => Uri.UnescapeDataString(AuthorName);
+
+    private string GetStateKey() => $"AuthorDetail_{DecodedAuthorName.Sanitize()}";
 
     private Task PersistState()
     {
@@ -184,7 +180,7 @@
     {
         isLoading = true;
 
-        var result = await ApiClient.GetAuthorItemsAsync(_sanitizedAuthorName, take: BatchSize, skip: 0);
+        var result = await ApiClient.GetAuthorItemsAsync(DecodedAuthorName, take: BatchSize, skip: 0);
 
         if (result == null)
         {
@@ -210,7 +206,7 @@
         isLoadingMore = true;
 
         var result = await ApiClient.GetAuthorItemsAsync(
-            _sanitizedAuthorName,
+            DecodedAuthorName,
             take: BatchSize,
             skip: contentItems.Count);
 

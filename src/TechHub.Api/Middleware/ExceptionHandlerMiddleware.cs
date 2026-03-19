@@ -46,7 +46,7 @@ internal sealed class ExceptionHandlerMiddleware
         catch (Exception ex)
 #pragma warning restore CA1031
         {
-            var path = InputSanitizer.Sanitize(context.Request.Path.Value);
+            var path = context.Request.Path.Value.Sanitize();
             _logger.LogError(ex, "Unhandled exception occurred. Path: {Path}", path);
             await HandleExceptionAsync(context, ex);
         }

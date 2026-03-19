@@ -55,7 +55,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<Section?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
+        sectionName = sectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching section: {SectionName}", sectionName);
@@ -85,7 +85,7 @@ public class TechHubApiClient : ITechHubApiClient
         string sectionName,
         CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
+        sectionName = sectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
@@ -121,8 +121,8 @@ public class TechHubApiClient : ITechHubApiClient
         string collectionName,
         CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
-        collectionName = InputSanitizer.Sanitize(collectionName);
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
@@ -165,8 +165,8 @@ public class TechHubApiClient : ITechHubApiClient
         bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
-        collectionName = InputSanitizer.Sanitize(collectionName);
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         try
         {
             var queryParams = new List<string>();
@@ -249,8 +249,8 @@ public class TechHubApiClient : ITechHubApiClient
         string? searchQuery = null,
         CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
-        collectionName = InputSanitizer.Sanitize(collectionName);
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         try
         {
             var queryParams = new List<string>();
@@ -331,9 +331,9 @@ public class TechHubApiClient : ITechHubApiClient
         string slug,
         CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
-        collectionName = InputSanitizer.Sanitize(collectionName);
-        slug = InputSanitizer.Sanitize(slug);
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
+        slug = slug.Sanitize();
         try
         {
             _logger.LogDebug("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
@@ -500,7 +500,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<string> GetSectionRssFeedAsync(string sectionName, CancellationToken cancellationToken = default)
     {
-        sectionName = InputSanitizer.Sanitize(sectionName);
+        sectionName = sectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching RSS feed for section: {SectionName}", sectionName);
@@ -523,8 +523,8 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<string> GetCollectionRssFeedAsync(string collectionName, string sectionName = "all", CancellationToken cancellationToken = default)
     {
-        collectionName = InputSanitizer.Sanitize(collectionName);
-        sectionName = InputSanitizer.Sanitize(sectionName);
+        collectionName = collectionName.Sanitize();
+        sectionName = sectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching RSS feed for collection: {CollectionName} in section: {SectionName}", collectionName, sectionName);
@@ -693,7 +693,7 @@ public class TechHubApiClient : ITechHubApiClient
         int? skip = null,
         CancellationToken cancellationToken = default)
     {
-        authorName = InputSanitizer.Sanitize(authorName);
+        authorName = authorName.Sanitize();
         try
         {
             var queryParams = new List<string>();
