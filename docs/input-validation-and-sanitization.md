@@ -129,17 +129,11 @@ Apply `.Sanitize()` consistently everywhere: API endpoints, `TechHubApiClient`, 
 
 **What `InputSanitizer` is NOT for**: Input validation. It does not reject bad input — it only makes values safe to log.
 
-### Layer 6: CodeQL Model Pack (Static Analysis)
+### Layer 6: CodeQL (Static Analysis)
 
-**Purpose**: Automatically detect missing `.Sanitize()` calls via CodeQL's data flow analysis. If a user-controlled value reaches a log statement without passing through `.Sanitize()`, CodeQL flags it as a log-injection vulnerability.
+**Purpose**: CodeQL's built-in `cs/log-forging` query detects user-controlled values that reach log statements without sanitization. This catches missing `.Sanitize()` calls in CI.
 
-**How it works**: A custom model extension (`.github/codeql/extensions/input-sanitizer.model.yml`) declares `InputSanitizer.Sanitize` as a recognized sanitizer for the `log-injection` threat model. CodeQL then treats any value that flows through `.Sanitize()` as safe.
-
-**Benefits**:
-
-- Catches missing `.Sanitize()` calls in CI — developers cannot forget
-- Eliminates false positives for values that ARE sanitized
-- No runtime cost — purely static analysis
+**Note**: The C# CodeQL pack (`codeql/csharp-all`) does not support custom `sanitizerModel` extensions, so CodeQL may still flag values that pass through `.Sanitize()`. These alerts should be reviewed and dismissed when the sanitization is confirmed present.
 
 ### Framework-Provided Protections
 
@@ -170,7 +164,7 @@ HTTP Request
 │
 ├─ Log Statements ─────── .Sanitize() on arguments strips CR/LF (log forging impossible)
 │
-└─ CodeQL ─────────────── Flags missing .Sanitize() in CI (catches human error)
+└─ CodeQL ─────────────── Flags missing sanitization in CI (may have false positives)
 ```
 
 ## Implementation Reference
@@ -180,7 +174,6 @@ HTTP Request
 - API endpoint filter: `src/TechHub.Api/Endpoints/ContentEndpoints.cs` → `ValidateRouteParameters`
 - Author validation: `src/TechHub.Api/Endpoints/AuthorEndpoints.cs` → `IsValidAuthorName`
 - Log sanitization: `src/TechHub.Core/Logging/InputSanitizer.cs` (static method + `.Sanitize()` extension)
-- CodeQL model pack: `.github/codeql/extensions/input-sanitizer.model.yml`
 - Search input: `src/TechHub.Web/Components/SidebarSearch.razor`
 - Date input: `src/TechHub.Web/Components/DateRangeSlider.razor`
 - Tests: `tests/TechHub.Core.Tests/Validation/RouteParameterValidatorTests.cs`, `tests/TechHub.Core.Tests/Logging/InputSanitizerTests.cs`
