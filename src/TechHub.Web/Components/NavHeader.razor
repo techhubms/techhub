@@ -61,10 +61,13 @@
             @if (expandedSections.Contains(sectionItem.Name))
             {
                 <div class="mobile-menu-sub-items">
-                    <a href="/@sectionItem.Name/all" class="@(IsActivePage($"/{sectionItem.Name}/all") || IsActivePage($"/{sectionItem.Name}") ? "active" : "")" @onclick="CloseMenu">All</a>
-                    @foreach (var collection in sectionItem.Collections.Where(c => !c.IsCustom))
+                    <a href="/@sectionItem.Name/all" class="@(IsActivePage($"/{sectionItem.Name}/all") || IsActivePage($"/{sectionItem.Name}") ? "active" : "")" @onclick="CloseMenu">Browse</a>
+                    @if (!sectionItem.HideCollectionPages)
                     {
-                        <a href="/@sectionItem.Name/@collection.Name" class="@(IsActivePage($"/{sectionItem.Name}/{collection.Name}") ? "active" : "")" @onclick="CloseMenu">@collection.Title</a>
+                        @foreach (var collection in sectionItem.Collections.Where(c => !c.IsCustom))
+                        {
+                            <a href="/@sectionItem.Name/@collection.Name" class="@(IsActivePage($"/{sectionItem.Name}/{collection.Name}") ? "active" : "")" @onclick="CloseMenu">@collection.Title</a>
+                        }
                     }
                     @foreach (var customPage in sectionItem.Collections.Where(c => c.IsCustom).OrderBy(c => c.Order).ThenBy(c => c.Title))
                     {

@@ -243,6 +243,7 @@ public static class ContentEndpoints
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
         [FromQuery] bool includeDraft = false,
+        [FromQuery] string? types = null,
         CancellationToken cancellationToken = default)
     {
         sectionName = sectionName.Sanitize();
@@ -335,13 +336,28 @@ public static class ContentEndpoints
             (dateFrom, dateTo) = (dateTo, dateFrom);
         }
 
+        // Build collections array - when "all" and types specified, filter to specific collection types
+        string[] collectionsArray;
+        if (isAllCollection && !string.IsNullOrWhiteSpace(types))
+        {
+            collectionsArray = types.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            if (collectionsArray.Length == 0)
+            {
+                collectionsArray = new[] { collectionName };
+            }
+        }
+        else
+        {
+            collectionsArray = new[] { collectionName };
+        }
+
         // Build search request - repository will handle "all" as no filter
         var request = new SearchRequest(
             take: limit,
             skip: offset,
             query: q,
             sections: new[] { section.Name },
-            collections: new[] { collectionName },  // Pass "all" through, repo handles it
+            collections: collectionsArray,
             tags: parsedTags ?? Array.Empty<string>(),
             subcollection: subcollection,
             dateFrom: dateFrom,

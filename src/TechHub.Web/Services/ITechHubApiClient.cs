@@ -61,6 +61,7 @@ internal interface ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         bool includeDraft = false,
+        string? types = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>

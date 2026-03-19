@@ -12,13 +12,20 @@ public record Section
     public string Tag { get; }
     public IReadOnlyList<Collection> Collections { get; }
 
+    /// <summary>
+    /// When true, hides individual collection pages from the sub-navigation
+    /// and shows a unified Browse page with content-type filtering instead.
+    /// </summary>
+    public bool HideCollectionPages { get; }
+
     public Section(
         string name,
         string title,
         string description,
         string url,
         string tag,
-        IReadOnlyList<Collection> collections)
+        IReadOnlyList<Collection> collections,
+        bool hideCollectionPages = false)
     {
         // Validate all required properties
         if (string.IsNullOrWhiteSpace(name))
@@ -68,5 +75,6 @@ public record Section
         Url = url;
         Tag = tag;
         Collections = collections;
+        HideCollectionPages = hideCollectionPages;
     }
 }

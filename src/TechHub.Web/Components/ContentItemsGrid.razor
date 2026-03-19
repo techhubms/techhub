@@ -108,6 +108,13 @@
     public string? ToDate { get; set; }
 
     /// <summary>
+    /// When set, filters content by specific collection types (e.g., "news,blogs,videos").
+    /// Used with HideCollectionPages Browse page content-type filter.
+    /// </summary>
+    [Parameter]
+    public string? ContentTypes { get; set; }
+
+    /// <summary>
     /// When set, fetches content by author instead of by section/collection.
     /// </summary>
     [Parameter]
@@ -135,6 +142,7 @@
     private string? previousFromDate;
     private string? previousToDate;
     private string? previousAuthorName;
+    private string? previousContentTypes;
 
     // JS interop
     private IJSObjectReference? scrollModule;
@@ -161,6 +169,7 @@
         previousFromDate = FromDate;
         previousToDate = ToDate;
         previousAuthorName = AuthorName;
+        previousContentTypes = ContentTypes;
 
         // Register for state persistence (called during prerender to save state)
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
@@ -199,7 +208,10 @@
         var authorKey = !string.IsNullOrEmpty(AuthorName)
             ? $"_author_{AuthorName.Sanitize()}"
             : "";
-        return $"ContentItemsGrid_{SectionName.Sanitize()}_{CollectionName.Sanitize()}{tagsKey}{searchKey}{dateKey}{authorKey}";
+        var typesKey = !string.IsNullOrEmpty(ContentTypes)
+            ? $"_types_{ContentTypes.Sanitize()}"
+            : "";
+        return $"ContentItemsGrid_{SectionName.Sanitize()}_{CollectionName.Sanitize()}{tagsKey}{searchKey}{dateKey}{authorKey}{typesKey}";
     }
 
     private Task PersistState()
@@ -229,6 +241,7 @@
         {
             previousCollectionName = CollectionName;
             previousAuthorName = AuthorName;
+            previousContentTypes = ContentTypes;
             await LoadInitialBatch();
             return;
         }
@@ -236,12 +249,14 @@
         var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
         var searchChanged = SearchQuery != previousSearchQuery;
         var datesChanged = FromDate != previousFromDate || ToDate != previousToDate;
-        if (tagsChanged || searchChanged || datesChanged)
+        var typesChanged = ContentTypes != previousContentTypes;
+        if (tagsChanged || searchChanged || datesChanged || typesChanged)
         {
             previousFilterTags = FilterTags?.ToList();
             previousSearchQuery = SearchQuery;
             previousFromDate = FromDate;
             previousToDate = ToDate;
+            previousContentTypes = ContentTypes;
             // Filters changed - reload data from API with new filters
             await LoadInitialBatch();
         }
@@ -355,7 +370,8 @@
                 query: SearchQuery,
                 tags: tagsParam,
                 fromDate: FromDate,
-                toDate: ToDate);
+                toDate: ToDate,
+                types: ContentTypes);
 
         var newItems = result?.Items.ToList() ?? [];
 
