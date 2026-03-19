@@ -261,9 +261,10 @@
 
         if (activeContentTypes.Count == 0)
         {
-            // Currently all active - deactivate the clicked type
-            activeContentTypes = new HashSet<string>(allTypes, StringComparer.OrdinalIgnoreCase);
-            activeContentTypes.Remove(collectionName);
+            // Currently all active (empty set = all) — switch to all EXCEPT the clicked type
+            activeContentTypes = new HashSet<string>(
+                allTypes.Where(t => !string.Equals(t, collectionName, StringComparison.OrdinalIgnoreCase)),
+                StringComparer.OrdinalIgnoreCase);
         }
         else if (activeContentTypes.Contains(collectionName))
         {

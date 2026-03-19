@@ -340,7 +340,16 @@ public static class ContentEndpoints
         string[] collectionsArray;
         if (isAllCollection && !string.IsNullOrWhiteSpace(types))
         {
-            collectionsArray = types.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            // Validate types against section's actual non-custom collections
+            var validCollectionNames = section.Collections
+                .Where(c => !c.IsCustom)
+                .Select(c => c.Name)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            collectionsArray = types.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Where(t => validCollectionNames.Contains(t))
+                .ToArray();
+
             if (collectionsArray.Length == 0)
             {
                 collectionsArray = new[] { collectionName };
