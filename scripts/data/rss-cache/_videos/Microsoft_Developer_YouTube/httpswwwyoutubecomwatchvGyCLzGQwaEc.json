@@ -1,0 +1,22 @@
+{
+  "Description": "Dive into the fundamentals of model optimization with Microsoft Foundry. In this session, we break down what finetuning is, explore the scenarios of why and when you should use it, and discuss the various fine-tuning options available in Foundry. We wrap up by walking through a simple tone fine-tuning demo directly in Foundry, alongside a comprehensive showcase of checkpoints, logs, and essential evaluation metrics to check you finetuning job performance.\n\n00:03 Welcome and scenario 01:23 What is fine-tuning and when to use it 01:57 Fine-Tuning options in Microsoft Foundry 02:15 Demo: Supervised finetuning 05:23 Showcase: Checkpoints, logs, and metrics\n\nMicrosoft Foundry - https://aka.ms/foundry-ft Foundry Finetuning Demos on GitHub - https://aka.ms/ft-demos\n\nBethany Jepchumba, Twitter/X - https://twitter.com/bethanyjep Bethany Jepchumba, LinkedIn - https://www.linkedin.com/in/bethany-jep/ Bethany Jepchumba, GitHub - https://github.com/bethanyjep",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Title": "Model Optimization in Microsoft Foundry: Supervised Fine-Tuning",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2026-03-19 18:21:05",
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=GyCLzGQwaEc",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "PubDate": "2026-03-19T17:43:15+00:00",
+  "Author": "Microsoft Developer"
+}
