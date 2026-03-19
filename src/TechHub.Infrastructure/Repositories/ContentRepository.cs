@@ -268,6 +268,43 @@ public class ContentRepository : IContentRepository
         return results.ToArray();
     }
 
+    // ==================== Author Methods ====================
+
+    /// <summary>
+    /// Get all known authors with their published content item counts.
+    /// Returns authors sorted alphabetically by name.
+    /// Results are cached for the lifetime of the application.
+    /// </summary>
+    public async Task<IReadOnlyList<AuthorSummary>> GetAuthorsAsync(CancellationToken ct = default)
+    {
+        return await Cache.GetOrCreateAsync("authors:all", async entry =>
+        {
+            entry.SetPriority(CacheItemPriority.NeverRemove);
+            return await GetAuthorsInternalAsync(ct);
+        }) ?? [];
+    }
+
+    private async Task<IReadOnlyList<AuthorSummary>> GetAuthorsInternalAsync(CancellationToken ct)
+    {
+        var sql = $@"
+            SELECT
+                c.author   AS Name,
+                COUNT(*)   AS ItemCount
+            FROM content_items c
+            WHERE c.draft = {Dialect.GetBooleanLiteral(false)}
+              AND c.author IS NOT NULL
+              AND c.author <> ''
+            GROUP BY c.author
+            ORDER BY LOWER(c.author), c.author";
+
+        var results = await Connection.QueryWithLoggingAsync<AuthorSummary>(
+            new CommandDefinition(sql, cancellationToken: ct),
+            _logger,
+            _enableQueryLogging);
+
+        return results.ToArray();
+    }
+
     // ==================== Markdown Rendering ====================
 
     /// <summary>
@@ -1053,6 +1090,7 @@ public class ContentRepository : IContentRepository
                           !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
         var hasCollections = request.Collections != null && request.Collections.Count > 0 &&
                              !request.Collections.Any(c => c.Equals("all", StringComparison.OrdinalIgnoreCase));
+        var hasAuthor = !string.IsNullOrWhiteSpace(request.Author);
 
         // OPTIMIZATION: When filtering by tags, pre-filter using tags table
         // This reduces FTS search from 4000+ items to potentially just 10-20
@@ -1092,12 +1130,18 @@ public class ContentRepository : IContentRepository
                 parameters.Add("subcollection", request.Subcollection);
             }
 
+            if (hasAuthor)
+            {
+                sql.Append(" AND c.author = @author");
+                parameters.Add("author", request.Author);
+            }
+
             if (hasQuery)
             {
                 sql.Append(CultureInfo.InvariantCulture, $@"
             AND {Dialect.GetFullTextWhereClause("query")}");
                 parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
-                sql.Append(CultureInfo.InvariantCulture, $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}");
+                sql.Append(" ORDER BY c.date_epoch DESC");
                 // LIMIT is applied here because the tag subquery skips it when search is present
                 // (to avoid pruning items before FTS filter runs)
                 sql.Append(" LIMIT @take OFFSET @skip");
@@ -1172,6 +1216,12 @@ public class ContentRepository : IContentRepository
                 parameters.Add("subcollection", request.Subcollection);
             }
 
+            if (hasAuthor)
+            {
+                whereClauses.Add("c.author = @author");
+                parameters.Add("author", request.Author);
+            }
+
             if (request.DateFrom.HasValue)
             {
                 whereClauses.Add("c.date_epoch >= @fromDate");
@@ -1185,7 +1235,7 @@ public class ContentRepository : IContentRepository
             }
 
             sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
-            sql.Append(hasQuery ? $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}" : " ORDER BY c.date_epoch DESC");
+            sql.Append(" ORDER BY c.date_epoch DESC");
             sql.Append(" LIMIT @take OFFSET @skip");
             parameters.Add("take", request.Take);
             parameters.Add("skip", request.Skip);
@@ -1335,6 +1385,11 @@ public class ContentRepository : IContentRepository
             whereClauses.Add("c.subcollection_name = @subcollection");
         }
 
+        if (!string.IsNullOrWhiteSpace(request.Author))
+        {
+            whereClauses.Add("c.author = @author");
+        }
+
         if (request.DateFrom.HasValue)
         {
             whereClauses.Add("c.date_epoch >= @fromDate");
@@ -1384,6 +1439,11 @@ public class ContentRepository : IContentRepository
             !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             sql.Append(" AND c.subcollection_name = @subcollection");
+        }
+
+        if (!string.IsNullOrWhiteSpace(request.Author))
+        {
+            sql.Append(" AND c.author = @author");
         }
 
         if (request.DateFrom.HasValue)

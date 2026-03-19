@@ -4,15 +4,15 @@
 @using TechHub.Web.Services
 @using Microsoft.JSInterop
 @using Microsoft.AspNetCore.Components.Web
-@inject TechHubApiClient ApiClient
+@inject ITechHubApiClient ApiClient
 @inject SectionCache SectionCache
 @inject ILogger<ContentItemsGrid> Logger
 @inject IJSRuntime JSRuntime
 @inject PersistentComponentState ApplicationState
 @implements IAsyncDisposable
 
-<section class="collection-content @(isLoading ? "loading" : "")" aria-label="@GetCollectionTitle() content">
-    <h1 id="skiptohere" class="page-h1">@GetPageTitle() <span class="content-count">(@totalCount)</span></h1>
+<section class="collection-content @(isLoading ? "loading" : "")" aria-label="@(Title ?? GetCollectionTitle()) content">
+    <h1 id="skiptohere" class="page-h1">@(Title ?? GetPageTitle()) <span class="content-count">(@totalCount)</span></h1>
 
     @if (isLoading && !contentItems.Any())
     {
@@ -48,7 +48,7 @@
         <div class="content-grid" role="feed" aria-busy="@isLoadingMore">
             @foreach (var item in FilteredContentItems)
             {
-                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@SectionName" ActiveFilterTags="@FilterTags" />
+                <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@(IsAuthorMode ? null : SectionName)" ActiveFilterTags="@FilterTags" />
             }
         </div>
 
@@ -107,6 +107,18 @@
     [Parameter]
     public string? ToDate { get; set; }
 
+    /// <summary>
+    /// When set, fetches content by author instead of by section/collection.
+    /// </summary>
+    [Parameter]
+    public string? AuthorName { get; set; }
+
+    /// <summary>
+    /// When set, overrides the default page heading.
+    /// </summary>
+    [Parameter]
+    public string? Title { get; set; }
+
     // Content state
     private List<ContentItem> contentItems = [];
     private long totalCount;
@@ -122,6 +134,7 @@
     private string? previousSearchQuery;
     private string? previousFromDate;
     private string? previousToDate;
+    private string? previousAuthorName;
 
     // JS interop
     private IJSObjectReference? scrollModule;
@@ -131,8 +144,10 @@
     // State persistence (prevents double-fetch during prerender -> interactive transition)
     private PersistingComponentStateSubscription _persistSubscription;
 
+    private bool IsAuthorMode => !string.IsNullOrEmpty(AuthorName);
+
     private bool ShowCollectionBadge =>
-        CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
+        IsAuthorMode || CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase);
 
     // No longer needed - API now handles tag filtering
     // Content items are already filtered by the backend
@@ -145,6 +160,7 @@
         previousSearchQuery = SearchQuery;
         previousFromDate = FromDate;
         previousToDate = ToDate;
+        previousAuthorName = AuthorName;
 
         // Register for state persistence (called during prerender to save state)
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
@@ -160,7 +176,7 @@
             totalCount = restored.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
-            Logger.LogDebugSanitized("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
+            Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
         else
         {
@@ -172,15 +188,18 @@
     private string GetStateKey()
     {
         var tagsKey = FilterTags != null && FilterTags.Count > 0
-            ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t))
+            ? "_tags_" + string.Join(",", FilterTags.OrderBy(t => t)).Sanitize()
             : "";
         var searchKey = !string.IsNullOrWhiteSpace(SearchQuery)
-            ? $"_search_{SearchQuery}"
+            ? $"_search_{SearchQuery.Sanitize()}"
             : "";
         var dateKey = (!string.IsNullOrEmpty(FromDate) || !string.IsNullOrEmpty(ToDate))
-            ? $"_dates_{FromDate}_{ToDate}"
+            ? $"_dates_{FromDate.Sanitize()}_{ToDate.Sanitize()}"
             : "";
-        return $"ContentItemsGrid_{SectionName}_{CollectionName}{tagsKey}{searchKey}{dateKey}";
+        var authorKey = !string.IsNullOrEmpty(AuthorName)
+            ? $"_author_{AuthorName.Sanitize()}"
+            : "";
+        return $"ContentItemsGrid_{SectionName.Sanitize()}_{CollectionName.Sanitize()}{tagsKey}{searchKey}{dateKey}{authorKey}";
     }
 
     private Task PersistState()
@@ -206,11 +225,12 @@
 
     protected override async Task OnParametersSetAsync()
     {
-        if (CollectionName != previousCollectionName)
+        if (CollectionName != previousCollectionName || AuthorName != previousAuthorName)
         {
             previousCollectionName = CollectionName;
+            previousAuthorName = AuthorName;
             await LoadInitialBatch();
-            return; // Don't check tags if collection changed - LoadInitialBatch handles everything
+            return;
         }
 
         var tagsChanged = !TagsAreEqual(FilterTags, previousFilterTags);
@@ -300,7 +320,7 @@
         }
         catch (Exception ex)
         {
-            Logger.LogErrorSanitized(ex, "Failed to load content for {Section}/{Collection}", SectionName, CollectionName);
+            Logger.LogError(ex, "Failed to load content for {Section}/{Collection}", SectionName.Sanitize(), CollectionName.Sanitize());
             errorMessage = "Unable to load content";
         }
         finally
@@ -321,15 +341,21 @@
             ? string.Join(",", FilterTags)
             : null;
 
-        var result = await ApiClient.GetCollectionItemsAsync(
-            SectionName,
-            CollectionName,
-            take: BatchSize,
-            skip: skip,
-            query: SearchQuery,
-            tags: tagsParam,
-            fromDate: FromDate,
-            toDate: ToDate);
+        CollectionItemsResponse? result;
+        result = IsAuthorMode
+            ? await ApiClient.GetAuthorItemsAsync(
+                AuthorName!,
+                take: BatchSize,
+                skip: skip)
+            : await ApiClient.GetCollectionItemsAsync(
+                SectionName,
+                CollectionName,
+                take: BatchSize,
+                skip: skip,
+                query: SearchQuery,
+                tags: tagsParam,
+                fromDate: FromDate,
+                toDate: ToDate);
 
         var newItems = result?.Items.ToList() ?? [];
 

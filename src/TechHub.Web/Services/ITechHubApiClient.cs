@@ -3,28 +3,128 @@ using TechHub.Core.Models;
 namespace TechHub.Web.Services;
 
 /// <summary>
-/// Interface for Tech Hub API client
-/// Enables mocking in unit tests
+/// Interface for Tech Hub API client.
+/// Enables mocking in unit tests — always inject this interface, never the concrete class.
 /// </summary>
 internal interface ITechHubApiClient
 {
+    // ================================================================
+    // Section endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all sections.
+    /// GET /api/sections
+    /// </summary>
+    Task<IEnumerable<Section>?> GetAllSectionsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a specific section by name.
+    /// GET /api/sections/{sectionName}
+    /// </summary>
+    Task<Section?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get all collections in a section.
+    /// GET /api/sections/{sectionName}/collections
+    /// </summary>
+    Task<IEnumerable<Collection>?> GetSectionCollectionsAsync(
+        string sectionName,
+        CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Collection endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get a specific collection in a section.
+    /// GET /api/sections/{sectionName}/collections/{collectionName}
+    /// </summary>
+    Task<Collection?> GetCollectionAsync(
+        string sectionName,
+        string collectionName,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get content items for a section/collection with optional filtering.
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/items
+    /// </summary>
+    Task<CollectionItemsResponse?> GetCollectionItemsAsync(
+        string sectionName,
+        string collectionName,
+        int? take = null,
+        int? skip = null,
+        string? query = null,
+        string? tags = null,
+        string? subcollection = null,
+        int? lastDays = null,
+        string? fromDate = null,
+        string? toDate = null,
+        bool includeDraft = false,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get tag cloud for a collection.
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/tags
+    /// </summary>
+    Task<IReadOnlyList<TagCloudItem>?> GetCollectionTagsAsync(
+        string sectionName,
+        string collectionName,
+        int? maxTags = null,
+        int? minUses = null,
+        int? lastDays = null,
+        List<string>? selectedTags = null,
+        List<string>? tagsToCount = null,
+        string? fromDate = null,
+        string? toDate = null,
+        string? searchQuery = null,
+        CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Content item endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get content item detail by section, collection, and slug.
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/{slug}
+    /// </summary>
+    Task<ContentItemDetail?> GetContentDetailAsync(
+        string sectionName,
+        string collectionName,
+        string slug,
+        CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Convenience methods
+    // ================================================================
+
+    /// <summary>
+    /// Get the latest items across all sections (for homepage sidebar).
+    /// </summary>
+    Task<IEnumerable<ContentItem>?> GetLatestItemsAsync(
+        int count = 10,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get the latest roundup item (for homepage sidebar).
+    /// </summary>
+    Task<ContentItem?> GetLatestRoundupAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GitHub Copilot feature videos (subcollection=ghc-features), including drafts.
+    /// </summary>
+    Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Tag cloud endpoint (unified scope)
+    // ================================================================
+
     /// <summary>
     /// Get tag cloud for specified scope.
     /// Uses /api/sections/{sectionName}/collections/{collectionName}/tags endpoint.
     /// Pass "all" as collectionName for section-level tag cloud.
     /// Supports dynamic counts via selectedTags and date range parameters.
     /// </summary>
-    /// <param name="sectionName">Section name</param>
-    /// <param name="collectionName">Collection name (or "all")</param>
-    /// <param name="maxTags">Maximum tags to return</param>
-    /// <param name="minUses">Minimum usage count</param>
-    /// <param name="lastDays">Only include tags from content in last N days</param>
-    /// <param name="selectedTags">Currently selected tags for intersection counting</param>
-    /// <param name="tagsToCount">Specific tags to get counts for (baseline tags)</param>
-    /// <param name="fromDate">Start date filter</param>
-    /// <param name="toDate">End date filter</param>
-    /// <param name="searchQuery">Text search query to filter tag counts by matching content</param>
-    /// <param name="cancellationToken">Cancellation token</param>
     Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
         string sectionName,
         string collectionName,
@@ -38,9 +138,119 @@ internal interface ITechHubApiClient
         string? searchQuery = null,
         CancellationToken cancellationToken = default);
 
+    // ================================================================
+    // RSS feed endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get RSS feed for all content.
+    /// </summary>
+    Task<string> GetAllContentRssFeedAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get RSS feed for a section.
+    /// </summary>
+    Task<string> GetSectionRssFeedAsync(string sectionName, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get RSS feed for a collection.
+    /// </summary>
+    Task<string> GetCollectionRssFeedAsync(
+        string collectionName,
+        string sectionName = "all",
+        CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Custom page data endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get DX Space page data.
+    /// GET /api/custom-pages/dx-space
+    /// </summary>
+    Task<DXSpacePageData?> GetDXSpaceDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GitHub Copilot Handbook page data.
+    /// GET /api/custom-pages/github-copilot-handbook
+    /// </summary>
+    Task<HandbookPageData?> GetHandbookDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GitHub Copilot Levels page data.
+    /// GET /api/custom-pages/github-copilot-levels
+    /// </summary>
+    Task<LevelsPageData?> GetLevelsDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GitHub Copilot Features page data.
+    /// GET /api/custom-pages/github-copilot-features
+    /// </summary>
+    Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GenAI Basics page data.
+    /// GET /api/custom-pages/gen-ai-basics
+    /// </summary>
+    Task<GenAIPageData?> GetGenAIBasicsDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GenAI Advanced page data.
+    /// GET /api/custom-pages/gen-ai-advanced
+    /// </summary>
+    Task<GenAIPageData?> GetGenAIAdvancedDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GenAI Applied page data.
+    /// GET /api/custom-pages/gen-ai-applied
+    /// </summary>
+    Task<GenAIPageData?> GetGenAIAppliedDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get AI SDLC page data.
+    /// GET /api/custom-pages/ai-sdlc
+    /// </summary>
+    Task<SDLCPageData?> GetSDLCDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GitHub Copilot ToolTips page data.
+    /// GET /api/custom-pages/github-copilot-tooltips
+    /// </summary>
+    Task<ToolTipsPageData?> GetToolTipsDataAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get GitHub Copilot Getting Started page data.
+    /// GET /api/custom-pages/github-copilot-getting-started
+    /// </summary>
+    Task<GettingStartedPageData?> GetGettingStartedDataAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Sitemap endpoint
+    // ================================================================
+
     /// <summary>
     /// Get XML sitemap from the API.
     /// GET /api/sitemap
     /// </summary>
     Task<string> GetSitemapAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Author endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all authors with their content item counts.
+    /// GET /api/authors
+    /// </summary>
+    Task<IReadOnlyList<AuthorSummary>?> GetAuthorsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get content items for a specific author.
+    /// GET /api/authors/{authorName}/items
+    /// </summary>
+    Task<CollectionItemsResponse?> GetAuthorItemsAsync(
+        string authorName,
+        int? take = null,
+        int? skip = null,
+        CancellationToken cancellationToken = default);
 }

@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.Web.Components.Pages;
@@ -33,30 +32,12 @@ public class SectionTests : BunitContext
         var config = new ConfigurationBuilder().Build();
         Services.AddScoped<BrandingService>(_ => new BrandingService(httpContextAccessor, config));
     }
+
     [Fact]
     public void Section_RendersWithPageStructure()
     {
         // Arrange
-        var mockApiClient = new Mock<TechHubApiClient>(
-            MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("https://localhost") },
-            Mock.Of<ILogger<TechHubApiClient>>()
-        );
-
-        var sectionCache = new SectionCache();
-        sectionCache.Initialize(
-        [
-            new TechHub.Core.Models.Section(
-                "ai",
-                "Artificial Intelligence",
-                "AI and machine learning content",
-                "/ai",
-                "AI",
-                [
-                    new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
-                ]
-            )
-        ]);
+        var mockApiClient = new Mock<ITechHubApiClient>();
 
         mockApiClient
             .Setup(x => x.GetCollectionItemsAsync(
@@ -74,9 +55,7 @@ public class SectionTests : BunitContext
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse([], 0));
 
-        // Mock ITechHubApiClient for SidebarTagCloud component
-        var mockApiInterface = new Mock<ITechHubApiClient>();
-        mockApiInterface
+        mockApiClient
             .Setup(x => x.GetTagCloudAsync(
                 It.IsAny<string>(),
                 It.IsAny<string>(),
@@ -91,8 +70,22 @@ public class SectionTests : BunitContext
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
+        var sectionCache = new SectionCache();
+        sectionCache.Initialize(
+        [
+            new TechHub.Core.Models.Section(
+                "ai",
+                "Artificial Intelligence",
+                "AI and machine learning content",
+                "/ai",
+                "AI",
+                [
+                    new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
+                ]
+            )
+        ]);
+
         Services.AddSingleton(mockApiClient.Object);
-        Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
         AddBunitPersistentComponentState();
@@ -126,26 +119,7 @@ public class SectionTests : BunitContext
     public void Section_DisplaysContent_WhenLoaded()
     {
         // Arrange
-        var mockApiClient = new Mock<TechHubApiClient>(
-            MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("https://localhost") },
-            Mock.Of<ILogger<TechHubApiClient>>()
-        );
-
-        var sectionCache = new SectionCache();
-        sectionCache.Initialize(
-        [
-            new TechHub.Core.Models.Section(
-                "ai",
-                "Artificial Intelligence",
-                "AI and machine learning content",
-                "/ai",
-                "AI",
-                [
-                    new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
-                ]
-            )
-        ]);
+        var mockApiClient = new Mock<ITechHubApiClient>();
 
         mockApiClient
             .Setup(x => x.GetCollectionItemsAsync(
@@ -163,9 +137,7 @@ public class SectionTests : BunitContext
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse([], 0));
 
-        // Mock ITechHubApiClient for SidebarTagCloud component
-        var mockApiInterface = new Mock<ITechHubApiClient>();
-        mockApiInterface
+        mockApiClient
             .Setup(x => x.GetTagCloudAsync(
                 It.IsAny<string>(),
                 It.IsAny<string>(),
@@ -180,8 +152,22 @@ public class SectionTests : BunitContext
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync([]);
 
+        var sectionCache = new SectionCache();
+        sectionCache.Initialize(
+        [
+            new TechHub.Core.Models.Section(
+                "ai",
+                "Artificial Intelligence",
+                "AI and machine learning content",
+                "/ai",
+                "AI",
+                [
+                    new CollectionModel("news", "News", "/ai/news", "Latest AI news", "News", false)
+                ]
+            )
+        ]);
+
         Services.AddSingleton(mockApiClient.Object);
-        Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
         AddBunitPersistentComponentState();

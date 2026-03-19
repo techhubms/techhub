@@ -8,6 +8,7 @@ namespace TechHub.Web.Services;
 /// Uses the unified /api/sections hierarchy for all content access.
 /// Public to allow mocking in unit tests (virtual methods require public class for Moq proxies).
 /// </summary>
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support via the ITechHubApiClient interface")]
 public class TechHubApiClient : ITechHubApiClient
 {
     private readonly HttpClient _httpClient;
@@ -55,14 +56,15 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<Section?> GetSectionAsync(string sectionName, CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
         try
         {
-            _logger.LogDebugSanitized("Fetching section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Section not found: {SectionName}", sectionName);
+                _logger.LogWarning("Section not found: {SectionName}", sectionName);
                 return null;
             }
 
@@ -72,7 +74,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch section {SectionName}", sectionName);
+            _logger.LogError(ex, "Failed to fetch section {SectionName}", sectionName);
             throw;
         }
     }
@@ -84,14 +86,15 @@ public class TechHubApiClient : ITechHubApiClient
         string sectionName,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
         try
         {
-            _logger.LogDebugSanitized("Fetching collections for section: {SectionName}", sectionName);
+            _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}/collections", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Section not found: {SectionName}", sectionName);
+                _logger.LogWarning("Section not found: {SectionName}", sectionName);
                 return null;
             }
 
@@ -101,7 +104,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch collections for section {SectionName}", sectionName);
+            _logger.LogError(ex, "Failed to fetch collections for section {SectionName}", sectionName);
             throw;
         }
     }
@@ -119,16 +122,18 @@ public class TechHubApiClient : ITechHubApiClient
         string collectionName,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         try
         {
-            _logger.LogDebugSanitized("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var response = await _httpClient.GetAsync(
                 $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}",
                 cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
+                _logger.LogWarning("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
                 return null;
             }
 
@@ -138,7 +143,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
@@ -161,6 +166,8 @@ public class TechHubApiClient : ITechHubApiClient
         bool includeDraft = false,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         try
         {
             var queryParams = new List<string>();
@@ -212,16 +219,16 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/items{queryString}";
 
-            _logger.LogDebugSanitized("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching items for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var result = await _httpClient.GetFromJsonAsync<CollectionItemsResponse>(url, cancellationToken);
 
-            _logger.LogDebugSanitized("Successfully fetched {Count} items (total: {TotalCount}) for collection {SectionName}/{CollectionName}",
+            _logger.LogDebug("Successfully fetched {Count} items (total: {TotalCount}) for collection {SectionName}/{CollectionName}",
                 result?.Items.Count ?? 0, result?.TotalCount ?? 0, sectionName, collectionName);
             return result;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch items for collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
@@ -243,6 +250,8 @@ public class TechHubApiClient : ITechHubApiClient
         string? searchQuery = null,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         try
         {
             var queryParams = new List<string>();
@@ -295,16 +304,16 @@ public class TechHubApiClient : ITechHubApiClient
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
             var url = $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/tags{queryString}";
 
-            _logger.LogDebugSanitized("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogDebug("Fetching tag cloud for collection: {SectionName}/{CollectionName}", sectionName, collectionName);
             var tagCloud = await _httpClient.GetFromJsonAsync<IReadOnlyList<TagCloudItem>>(url, cancellationToken);
 
-            _logger.LogDebugSanitized("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
+            _logger.LogDebug("Successfully fetched {Count} tags for collection {SectionName}/{CollectionName}",
                 tagCloud?.Count ?? 0, sectionName, collectionName);
             return tagCloud;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch tag cloud for collection {SectionName}/{CollectionName}", sectionName, collectionName);
+            _logger.LogError(ex, "Failed to fetch tag cloud for collection {SectionName}/{CollectionName}", sectionName, collectionName);
             throw;
         }
     }
@@ -323,9 +332,12 @@ public class TechHubApiClient : ITechHubApiClient
         string slug,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
+        slug = slug.Sanitize();
         try
         {
-            _logger.LogDebugSanitized("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
+            _logger.LogDebug("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
                 sectionName, collectionName, slug);
 
             var response = await _httpClient.GetAsync(
@@ -334,7 +346,7 @@ public class TechHubApiClient : ITechHubApiClient
 
             if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
             {
-                _logger.LogWarningSanitized("Content not found: {SectionName}/{CollectionName}/{Slug}",
+                _logger.LogWarning("Content not found: {SectionName}/{CollectionName}/{Slug}",
                     sectionName, collectionName, slug);
                 return null;
             }
@@ -345,7 +357,7 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogErrorSanitized(ex, "Failed to fetch content detail for {SectionName}/{CollectionName}/{Slug}",
+            _logger.LogError(ex, "Failed to fetch content detail for {SectionName}/{CollectionName}/{Slug}",
                 sectionName, collectionName, slug);
             throw;
         }
@@ -438,7 +450,6 @@ public class TechHubApiClient : ITechHubApiClient
     /// Pass "all" as collectionName for section-level tag cloud.
     /// Supports dynamic counts via selectedTags and date range parameters.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
         string sectionName,
         string collectionName,
@@ -489,6 +500,7 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<string> GetSectionRssFeedAsync(string sectionName, CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching RSS feed for section: {SectionName}", sectionName);
@@ -511,6 +523,8 @@ public class TechHubApiClient : ITechHubApiClient
     /// </summary>
     public virtual async Task<string> GetCollectionRssFeedAsync(string collectionName, string sectionName = "all", CancellationToken cancellationToken = default)
     {
+        collectionName = collectionName.Sanitize();
+        sectionName = sectionName.Sanitize();
         try
         {
             _logger.LogDebug("Fetching RSS feed for collection: {CollectionName} in section: {SectionName}", collectionName, sectionName);
@@ -620,7 +634,6 @@ public class TechHubApiClient : ITechHubApiClient
     /// Get XML sitemap
     /// GET /api/sitemap
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<string> GetSitemapAsync(CancellationToken cancellationToken = default)
     {
         try
@@ -636,6 +649,83 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch sitemap");
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Author endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all authors with content item counts.
+    /// GET /api/authors
+    /// </summary>
+    public virtual async Task<IReadOnlyList<AuthorSummary>?> GetAuthorsAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogDebug("Fetching all authors from API");
+            var authors = await _httpClient.GetFromJsonAsync<IReadOnlyList<AuthorSummary>>(
+                "/api/authors",
+                cancellationToken);
+
+            _logger.LogDebug("Successfully fetched {Count} authors", authors?.Count ?? 0);
+            return authors;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch authors from API");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get content items for a specific author.
+    /// GET /api/authors/{authorName}/items
+    /// </summary>
+    public virtual async Task<CollectionItemsResponse?> GetAuthorItemsAsync(
+        string authorName,
+        int? take = null,
+        int? skip = null,
+        CancellationToken cancellationToken = default)
+    {
+        authorName = authorName.Sanitize();
+        try
+        {
+            var queryParams = new List<string>();
+            if (take.HasValue)
+            {
+                queryParams.Add($"take={take.Value}");
+            }
+
+            if (skip.HasValue)
+            {
+                queryParams.Add($"skip={skip.Value}");
+            }
+
+            var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";
+            var url = $"/api/authors/{Uri.EscapeDataString(authorName)}/items{queryString}";
+
+            _logger.LogDebug("Fetching items for author: {AuthorName}", authorName);
+            var response = await _httpClient.GetAsync(url, cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                _logger.LogWarning("Author not found: {AuthorName}", authorName);
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(cancellationToken: cancellationToken);
+
+            _logger.LogDebug("Successfully fetched {Count} items (total: {TotalCount}) for author {AuthorName}",
+                result?.Items.Count ?? 0, result?.TotalCount ?? 0, authorName);
+            return result;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch items for author {AuthorName}", authorName);
             throw;
         }
     }

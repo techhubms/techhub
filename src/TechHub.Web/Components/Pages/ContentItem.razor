@@ -5,7 +5,7 @@
 @implements IDisposable
 
 @inject IJSRuntime JS
-@inject TechHubApiClient ApiClient
+@inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
 <PageTitle>@(item?.Title ?? (isLoading ? "" : "Not Found")) - Tech Hub</PageTitle>
