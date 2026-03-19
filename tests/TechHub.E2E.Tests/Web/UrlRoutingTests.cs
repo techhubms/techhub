@@ -31,8 +31,8 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Verify "All" collection is displayed - check the page heading
         await Page.AssertElementContainsTextBySelectorAsync("h1.page-h1", "All");
 
-        // "All" button should be active
-        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "All");
+        // "Browse" button should be active
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Browse");
     }
 
     [Fact]
@@ -72,24 +72,24 @@ public class UrlRoutingTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task ClickAllButton_UpdatesURLToSectionSlashAll()
+    public async Task ClickBrowseButton_UpdatesURLToSectionSlashAll()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Arrange - Navigate to a section with news collection via a section that doesn't hide collections
+        await Page.GotoRelativeAsync("/ai/news");
 
-        // Act - Click "All" button
-        var allButton = Page.Locator(".sub-nav a", new() { HasTextString = "All" });
-        await allButton.ClickBlazorElementAsync();
+        // Act - Click "Browse" button
+        var browseButton = Page.Locator(".sub-nav a", new() { HasTextString = "Browse" });
+        await browseButton.ClickBlazorElementAsync();
 
-        // Assert - URL should update to /github-copilot/all
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/all");
+        // Assert - URL should update to /ai/all
+        await Page.WaitForBlazorUrlContainsAsync("/ai/all");
     }
 
     [Fact]
     public async Task BrowserBackButton_NavigatesToPreviousCollection()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai/news");
 
         // Verify News button is active initially
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
@@ -97,7 +97,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Navigate to videos
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
+        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
 
         // Wait for Blazor to sync state (update .active class)
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
@@ -105,8 +105,8 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Act - Press browser back button
         await Page.GoBackAsync();
 
-        // Assert - Should return to /github-copilot/news
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
+        // Assert - Should return to /ai/news
+        await Page.WaitForBlazorUrlContainsAsync("/ai/news");
 
         // Wait for Blazor to sync state with URL (OnParametersSetAsync should fire)
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
@@ -160,8 +160,8 @@ public class UrlRoutingTests : PlaywrightTestBase
         displayedItems.Should().Be(totalItemCount,
             "the 'all' collection should show all content items from the section across all collection types");
 
-        // Page heading should indicate "All" - verify active button shows "All"
-        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "All");
+        // Page heading should indicate "All" - verify active button shows "Browse"
+        await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Browse");
     }
 
     [Fact]
@@ -224,16 +224,16 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Act - Navigate to any section
         await Page.GotoRelativeAsync("/github-copilot");
 
-        // Assert - Sub-nav should have "All" link plus collection links
-        // Sub-nav contains: All + regular collections (News, Videos, Community, Blogs) + custom pages
+        // Assert - Sub-nav should have "Browse" link plus collection links/custom pages
+        // Sub-nav contains: Browse + custom pages (when HideCollectionPages is true, regular collections hidden)
         var subNav = Page.Locator("nav.sub-nav");
         var subNavLinks = subNav.Locator("a");
 
-        // Should have at least All link (exact count depends on configured collections and custom pages)
+        // Should have at least Browse link (exact count depends on configured collections and custom pages)
         await Assertions.Expect(subNavLinks).Not.ToHaveCountAsync(0);
 
-        // First link should be "All"
-        await Assertions.Expect(subNavLinks.First).ToHaveTextAsync("All");
+        // First link should be "Browse"
+        await Assertions.Expect(subNavLinks.First).ToHaveTextAsync("Browse");
         await Assertions.Expect(subNavLinks.First).ToBeVisibleAsync();
     }
 
