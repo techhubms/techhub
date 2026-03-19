@@ -1,4 +1,6 @@
-@page "/authors"
+@page "/all/authors"
+@page "/all/authors/{authorName}"
+@using TechHub.Core.Logging
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 @implements IDisposable
@@ -7,103 +9,372 @@
 @inject NavigationManager Navigation
 @inject PersistentComponentState ApplicationState
 
-<PageTitle>Authors - Tech Hub</PageTitle>
+<PageTitle>@PageTitleText</PageTitle>
 
 <SeoMetaTags
-    Title="Authors - Tech Hub"
-    Description="Browse all authors on Tech Hub. Find content from your favourite authors across all sections and collections."
+    Title="@PageTitleText"
+    Description="@SeoDescription"
     ContentType="SeoMetaTags.SeoContentType.Website"
-    Breadcrumbs="@(new[] { new SeoMetaTags.BreadcrumbItem("Home", "/"), new SeoMetaTags.BreadcrumbItem("Authors", "/authors") })" />
+    Breadcrumbs="@GetBreadcrumbs()" />
 
-<main class="page-without-sidebar">
+<main class="page-with-sidebar">
+    <aside class="sidebar">
+        <SidebarToggle />
+        <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Authors" Icon="filter" HasActiveFilter="@(!string.IsNullOrWhiteSpace(authorFilter))">
+                <nav class="sidebar-section" aria-label="Authors">
+                    <h2 class="sidebar-h2">Authors</h2>
+                    @if (authors != null && authors.Count > 0)
+                    {
+                        <div class="author-filter-box">
+                            <input type="search"
+                                   class="author-filter-input"
+                                   placeholder="Filter authors..."
+                                   aria-label="Filter authors by name"
+                                   value="@authorFilter"
+                                   maxlength="100"
+                                   @oninput="HandleAuthorFilterInput" />
+                            @if (!string.IsNullOrWhiteSpace(authorFilter))
+                            {
+                                <button type="button"
+                                        class="author-filter-clear"
+                                        aria-label="Clear filter"
+                                        @onclick="ClearAuthorFilter">
+                                    <span aria-hidden="true">✕</span>
+                                </button>
+                            }
+                        </div>
+                        <ul class="sidebar-list author-sidebar-list">
+                            @foreach (var author in FilteredAuthors)
+                            {
+                                var isActive = HasAuthorSelected &&
+                                    string.Equals(DecodedAuthorName, author.Name, StringComparison.OrdinalIgnoreCase);
+                                <li>
+                                    <a href="/all/authors/@Uri.EscapeDataString(author.Name)"
+                                       class="author-sidebar-link sidebar-link-button @(isActive ? "active" : "")"
+                                       aria-label="@author.Name - @author.ItemCount item@(author.ItemCount == 1 ? "" : "s")"
+                                       aria-current="@(isActive ? "page" : null)">
+                                        @author.Name (@author.ItemCount)
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                        @if (FilteredAuthors.Count == 0 && !string.IsNullOrWhiteSpace(authorFilter))
+                        {
+                            <p class="author-filter-no-results">No authors match "@authorFilter"</p>
+                        }
+                    }
+                </nav>
+            </MobileSidebarPanel>
+        </MobileSidebarToolbar>
+    </aside>
+
     <section>
-        <h1 id="skiptohere" class="page-h1">
-            Authors
-            @if (authors != null)
-            {
-                <span class="content-count">(@authors.Count)</span>
-            }
-        </h1>
+        @if (!HasAuthorSelected)
+        {
+            <h1 id="skiptohere" class="page-h1">
+                Content by Author
+            </h1>
 
-        @if (isLoading)
-        {
-            <div class="authors-grid" role="status" aria-busy="true" aria-label="Loading authors">
-                @for (int i = 0; i < 6; i++)
-                {
-                    <div class="author-card skeleton-card" aria-hidden="true">
-                        <div class="author-avatar skeleton"></div>
-                        <div class="author-info">
-                            <div class="skeleton skeleton-text skeleton-name"></div>
-                            <div class="skeleton skeleton-text skeleton-count"></div>
-                        </div>
-                    </div>
-                }
-            </div>
-        }
-        else if (authors != null && authors.Count > 0)
-        {
-            <div class="authors-grid" role="list">
-                @foreach (var author in authors)
-                {
-                    <a href="/authors/@Uri.EscapeDataString(author.Name)" class="author-card" role="listitem"
-                       aria-label="@author.Name - @author.ItemCount item@(author.ItemCount == 1 ? "" : "s")">
-                        <div class="author-avatar" aria-hidden="true">
-                            @GetInitials(author.Name)
-                        </div>
-                        <div class="author-info">
-                            <span class="author-name">@author.Name</span>
-                            <span class="author-count">@author.ItemCount item@(author.ItemCount == 1 ? "" : "s")</span>
-                        </div>
-                    </a>
-                }
-            </div>
+            @if (isLoadingAuthors)
+            {
+                <div role="status" aria-busy="true" aria-label="Loading authors">
+                    <p>Loading authors...</p>
+                </div>
+            }
+            else if (authors != null && authors.Count > 0)
+            {
+                <div class="authors-select-prompt">
+                    <p>Select an author from the sidebar to browse their content.</p>
+                </div>
+            }
+            else
+            {
+                <p class="no-content">No authors found.</p>
+            }
         }
         else
         {
-            <p class="no-content">No authors found.</p>
+            <h1 id="skiptohere" class="page-h1">
+                Content by @DecodedAuthorName
+                @if (!isLoadingItems)
+                {
+                    <span class="content-count"> (@totalCount)</span>
+                }
+            </h1>
+
+            @if (isLoadingItems && !contentItems.Any())
+            {
+                <div class="content-grid" role="status" aria-busy="true" aria-label="Loading content">
+                    @for (int i = 0; i < 6; i++)
+                    {
+                        <div class="skeleton-card" aria-hidden="true">
+                            <div class="content-header">
+                                <div class="skeleton skeleton-card-title"></div>
+                                <div class="skeleton skeleton-card-meta"></div>
+                            </div>
+                            <div class="skeleton skeleton-card-description"></div>
+                            <div class="skeleton skeleton-card-description" style="width: 80%;"></div>
+                            <div class="content-tags">
+                                <div class="skeleton skeleton-card-tag"></div>
+                                <div class="skeleton skeleton-card-tag"></div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+            else if (notFound)
+            {
+                <div class="no-content" role="status">
+                    <p>Author not found.</p>
+                    <a href="/all/authors">← Back to all authors</a>
+                </div>
+            }
+            else if (contentItems.Any())
+            {
+                <div class="content-grid" role="feed">
+                    @foreach (var item in contentItems)
+                    {
+                        <ContentItemCard Item="@item" ShowCollectionBadge="true" />
+                    }
+                </div>
+
+                @if (hasMoreContent)
+                {
+                    <div class="load-more-container">
+                        @if (isLoadingMore)
+                        {
+                            <div class="loading-more-indicator" role="status" aria-live="polite">
+                                <div class="loading-spinner"></div>
+                                <p>Loading more content...</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <button class="load-more-button" @onclick="LoadMoreAsync"
+                                    aria-label="Load more content by @DecodedAuthorName">
+                                Load more
+                            </button>
+                        }
+                    </div>
+                }
+                else
+                {
+                    <div class="end-of-content" role="status">
+                        <p>End of content</p>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="no-content" role="status">
+                    <p>No content found for this author.</p>
+                    <a href="/all/authors">← Back to all authors</a>
+                </div>
+            }
         }
     </section>
 </main>
 
 @code {
+    private const int BatchSize = 20;
+
+    [Parameter]
+    public string? AuthorName { get; set; }
+
     private IReadOnlyList<AuthorSummary>? authors;
-    private bool isLoading = true;
+    private List<TechHub.Core.Models.ContentItem> contentItems = [];
+    private long totalCount;
+    private bool isLoadingAuthors = true;
+    private bool isLoadingItems;
+    private bool isLoadingMore;
+    private bool hasMoreContent;
+    private bool notFound;
+    private string? _previousAuthorName;
 
     private PersistingComponentStateSubscription _persistingSubscription;
 
+    private string authorFilter = string.Empty;
+
+    private bool HasAuthorSelected => !string.IsNullOrEmpty(AuthorName);
+    private string DecodedAuthorName => HasAuthorSelected ? Uri.UnescapeDataString(AuthorName!) : string.Empty;
+
+    private IReadOnlyList<AuthorSummary> FilteredAuthors =>
+        string.IsNullOrWhiteSpace(authorFilter)
+            ? authors ?? []
+            : (authors ?? []).Where(a => a.Name.Contains(authorFilter, StringComparison.OrdinalIgnoreCase)).ToList();
+
+    private string PageTitleText => HasAuthorSelected
+        ? $"Content by {DecodedAuthorName} - Tech Hub"
+        : "Content by Author - Tech Hub";
+
+    private string SeoDescription => HasAuthorSelected
+        ? $"Browse all content by {DecodedAuthorName} on Tech Hub."
+        : "Browse all authors on Tech Hub. Find content from your favourite authors across all sections and collections.";
+
+    private void HandleAuthorFilterInput(ChangeEventArgs e)
+    {
+        authorFilter = e.Value?.ToString() ?? string.Empty;
+    }
+
+    private void ClearAuthorFilter()
+    {
+        authorFilter = string.Empty;
+    }
+
     protected override async Task OnInitializedAsync()
     {
+        _previousAuthorName = AuthorName;
         _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        var hasState = ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restored);
-        authors = hasState && restored != null
-            ? restored
-            : await ApiClient.GetAuthorsAsync() ?? [];
+        // Restore or fetch authors list
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restoredAuthors) && restoredAuthors != null)
+        {
+            authors = restoredAuthors;
+            isLoadingAuthors = false;
+        }
+        else
+        {
+            authors = await ApiClient.GetAuthorsAsync() ?? [];
+            isLoadingAuthors = false;
+        }
 
-        isLoading = false;
+        // If author selected, restore or fetch their content
+        if (HasAuthorSelected)
+        {
+            var stateKey = GetAuthorStateKey();
+            if (ApplicationState.TryTakeFromJson<PersistedAuthorState>(stateKey, out var restored) && restored != null)
+            {
+                contentItems = restored.Items;
+                totalCount = restored.TotalCount;
+                hasMoreContent = restored.HasMoreContent;
+                notFound = restored.NotFound;
+            }
+            else
+            {
+                await LoadAuthorItemsAsync();
+            }
+        }
     }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (AuthorName != _previousAuthorName)
+        {
+            _previousAuthorName = AuthorName;
+            contentItems = [];
+            totalCount = 0;
+            hasMoreContent = false;
+            notFound = false;
+            isLoadingItems = false;
+
+            if (HasAuthorSelected)
+            {
+                await LoadAuthorItemsAsync();
+            }
+        }
+    }
+
+    private string GetAuthorStateKey() => $"Authors_{DecodedAuthorName.Sanitize()}";
 
     private Task PersistState()
     {
         ApplicationState.PersistAsJson("authors", authors ?? Array.Empty<AuthorSummary>());
+
+        if (HasAuthorSelected)
+        {
+            ApplicationState.PersistAsJson(GetAuthorStateKey(), new PersistedAuthorState
+            {
+                Items = contentItems,
+                TotalCount = totalCount,
+                HasMoreContent = hasMoreContent,
+                NotFound = notFound
+            });
+        }
+
         return Task.CompletedTask;
     }
 
-    private static string GetInitials(string name)
+    private async Task LoadAuthorItemsAsync()
     {
-        if (string.IsNullOrWhiteSpace(name))
+        isLoadingItems = true;
+
+        try
         {
-            return "?";
+            var result = await ApiClient.GetAuthorItemsAsync(DecodedAuthorName, take: BatchSize, skip: 0);
+
+            if (result == null)
+            {
+                notFound = true;
+            }
+            else
+            {
+                contentItems = result.Items.ToList();
+                totalCount = result.TotalCount;
+                hasMoreContent = contentItems.Count < result.TotalCount;
+            }
+        }
+        catch (HttpRequestException)
+        {
+            notFound = true;
         }
 
-        var parts = name.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        return parts.Length >= 2
-            ? $"{char.ToUpperInvariant(parts[0][0])}{char.ToUpperInvariant(parts[^1][0])}"
-            : char.ToUpperInvariant(parts[0][0]).ToString();
+        isLoadingItems = false;
+    }
+
+    private async Task LoadMoreAsync()
+    {
+        if (isLoadingMore || !hasMoreContent)
+        {
+            return;
+        }
+
+        isLoadingMore = true;
+
+        var result = await ApiClient.GetAuthorItemsAsync(
+            DecodedAuthorName,
+            take: BatchSize,
+            skip: contentItems.Count);
+
+        if (result != null && result.Items.Count > 0)
+        {
+            contentItems.AddRange(result.Items);
+            hasMoreContent = contentItems.Count < result.TotalCount;
+        }
+        else
+        {
+            hasMoreContent = false;
+        }
+
+        isLoadingMore = false;
+    }
+
+    private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs()
+    {
+        var breadcrumbs = new List<SeoMetaTags.BreadcrumbItem>
+        {
+            new("Home", "/"),
+            new("Content by Author", "/all/authors")
+        };
+
+        if (HasAuthorSelected)
+        {
+            breadcrumbs.Add(new(DecodedAuthorName, $"/all/authors/{Uri.EscapeDataString(AuthorName!)}"));
+        }
+
+        return breadcrumbs;
     }
 
     public void Dispose()
     {
         _persistingSubscription.Dispose();
+    }
+
+    private sealed class PersistedAuthorState
+    {
+        public required List<TechHub.Core.Models.ContentItem> Items { get; init; }
+        public required long TotalCount { get; init; }
+        public required bool HasMoreContent { get; init; }
+        public required bool NotFound { get; init; }
     }
 }

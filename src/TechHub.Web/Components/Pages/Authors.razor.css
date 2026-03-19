@@ -2,117 +2,148 @@
    Authors Page Component Styles
 
    Component-specific styling for Authors.razor page
-   Only Authors-specific styles (author grid layout)
-   Page layout uses global .page-without-sidebar from page-container.css
+   Page uses global .page-with-sidebar layout from page-container.css
+   Sidebar uses global .sidebar-list, .sidebar-link-button from sidebar.css
    ============================================================================ */
 
-.authors-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: var(--spacing-4);
-    margin-top: var(--spacing-4);
+/* Author filter input in sidebar */
+.author-filter-box {
+    position: relative;
+    margin-bottom: var(--spacing-2);
 }
 
-.author-card {
+.author-filter-input {
+    width: 100%;
+    padding: var(--spacing-2) var(--spacing-3);
+    padding-right: var(--spacing-8);
     background: var(--color-bg-default);
     border: 1px solid var(--color-border-default);
     border-radius: var(--radius-md);
-    padding: var(--spacing-4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color var(--duration-fast) var(--easing-ease),
-                box-shadow var(--duration-fast) var(--easing-ease);
-    gap: var(--spacing-3);
-}
-
-@media (hover: hover) {
-    .author-card:hover {
-        border-color: var(--color-purple-bright);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
-    }
-}
-
-.author-avatar {
-    width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    background: var(--color-purple-dark);
-    border: 2px solid var(--color-purple-medium);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: var(--font-size-xl);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-on-emphasis);
-    flex-shrink: 0;
-}
-
-.author-info {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-1);
-    width: 100%;
-}
-
-.author-name {
-    font-size: var(--font-size-base);
-    font-weight: var(--font-weight-semibold);
     color: var(--color-text-primary);
-    word-break: break-word;
+    font-size: var(--font-size-sm);
+    outline: none;
+    transition: border-color var(--duration-fast) var(--easing-ease);
+    box-sizing: border-box;
 }
 
-.author-count {
-    font-size: var(--font-size-sm);
+.author-filter-input:focus {
+    border-color: var(--color-purple-bright);
+}
+
+.author-filter-input::placeholder {
     color: var(--color-text-secondary);
 }
 
-/* Skeleton loading states */
-.author-card.skeleton-card {
-    cursor: default;
-    pointer-events: none;
+/* Remove browser native search cancel button */
+.author-filter-input::-webkit-search-decoration,
+.author-filter-input::-webkit-search-cancel-button,
+.author-filter-input::-webkit-search-results-button,
+.author-filter-input::-webkit-search-results-decoration {
+    -webkit-appearance: none;
 }
 
-.author-avatar.skeleton {
+.author-filter-clear {
+    position: absolute;
+    right: var(--spacing-2);
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-1);
+    line-height: 1;
+}
+
+.author-filter-clear:hover {
+    color: var(--color-text-primary);
+}
+
+.author-filter-no-results {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-2) var(--spacing-3);
+    font-style: italic;
+}
+
+/* Scrollable author list */
+.author-sidebar-list {
+    max-height: calc(100vh - 280px);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-emphasis) transparent;
+}
+
+/* Content grid for author items (scoped copy since ContentItemsGrid component owns the global one) */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Content count badge in heading */
+.content-count {
+    font-weight: 400;
+    color: var(--color-text-secondary);
+    font-size: 0.7em;
+    margin-left: var(--spacing-2);
+}
+
+/* Select prompt shown when no author is selected */
+.authors-select-prompt {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-base);
+    padding: var(--spacing-4) 0;
+}
+
+/* Load more button */
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-6);
+}
+
+.load-more-button {
+    padding: var(--spacing-2) var(--spacing-6);
     background: var(--color-bg-emphasis);
-    animation: skeleton-pulse 1.5s ease-in-out infinite;
+    border: 1px solid var(--color-border-emphasis);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--easing-ease);
 }
 
-.skeleton-text {
-    border-radius: var(--radius-sm);
-    background: var(--color-bg-emphasis);
-    animation: skeleton-pulse 1.5s ease-in-out infinite;
-}
-
-.skeleton-name {
-    height: 16px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.skeleton-count {
-    height: 12px;
-    width: 50%;
-    margin: 0 auto;
-}
-
-@keyframes skeleton-pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.4; }
+@media (hover: hover) {
+    .load-more-button:hover {
+        background: var(--color-purple-dark);
+        border-color: var(--color-purple-bright);
+        color: var(--color-text-on-emphasis);
+    }
 }
 
 .no-content {
     color: var(--color-text-secondary);
     font-size: var(--font-size-base);
     padding: var(--spacing-4) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
 }
 
-@media (max-width: 480px) {
-    .authors-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
+.no-content a {
+    color: var(--color-purple-bright);
+    text-decoration: none;
+}
+
+.no-content a:hover {
+    text-decoration: underline;
 }
