@@ -342,16 +342,12 @@
             : null;
 
         CollectionItemsResponse? result;
-        if (IsAuthorMode)
-        {
-            result = await ApiClient.GetAuthorItemsAsync(
+        result = IsAuthorMode
+            ? await ApiClient.GetAuthorItemsAsync(
                 AuthorName!,
                 take: BatchSize,
-                skip: skip);
-        }
-        else
-        {
-            result = await ApiClient.GetCollectionItemsAsync(
+                skip: skip)
+            : await ApiClient.GetCollectionItemsAsync(
                 SectionName,
                 CollectionName,
                 take: BatchSize,
@@ -360,7 +356,6 @@
                 tags: tagsParam,
                 fromDate: FromDate,
                 toDate: ToDate);
-        }
 
         var newItems = result?.Items.ToList() ?? [];
 
