@@ -2,7 +2,6 @@ using Bunit;
 using FluentAssertions;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.Web.Components;
@@ -15,16 +14,12 @@ namespace TechHub.Web.Tests.Components;
 /// </summary>
 public class ContentItemsGridTests : BunitContext
 {
-    private readonly Mock<TechHubApiClient> _mockApiClient;
+    private readonly Mock<ITechHubApiClient> _mockApiClient;
     private readonly SectionCache _sectionCache;
 
     public ContentItemsGridTests()
     {
-        _mockApiClient = new Mock<TechHubApiClient>(
-            MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("https://localhost") },
-            Mock.Of<ILogger<TechHubApiClient>>()
-        );
+        _mockApiClient = new Mock<ITechHubApiClient>();
 
         // Default setup - return empty list
         _mockApiClient

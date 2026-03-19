@@ -8,6 +8,7 @@ namespace TechHub.Web.Services;
 /// Uses the unified /api/sections hierarchy for all content access.
 /// Public to allow mocking in unit tests (virtual methods require public class for Moq proxies).
 /// </summary>
+[System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support via the ITechHubApiClient interface")]
 public class TechHubApiClient : ITechHubApiClient
 {
     private readonly HttpClient _httpClient;
@@ -449,7 +450,6 @@ public class TechHubApiClient : ITechHubApiClient
     /// Pass "all" as collectionName for section-level tag cloud.
     /// Supports dynamic counts via selectedTags and date range parameters.
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<IReadOnlyList<TagCloudItem>?> GetTagCloudAsync(
         string sectionName,
         string collectionName,
@@ -634,7 +634,6 @@ public class TechHubApiClient : ITechHubApiClient
     /// Get XML sitemap
     /// GET /api/sitemap
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<string> GetSitemapAsync(CancellationToken cancellationToken = default)
     {
         try
@@ -662,7 +661,6 @@ public class TechHubApiClient : ITechHubApiClient
     /// Get all authors with content item counts.
     /// GET /api/authors
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<IReadOnlyList<AuthorSummary>?> GetAuthorsAsync(CancellationToken cancellationToken = default)
     {
         try
@@ -686,7 +684,6 @@ public class TechHubApiClient : ITechHubApiClient
     /// Get content items for a specific author.
     /// GET /api/authors/{authorName}/items
     /// </summary>
-    [System.Diagnostics.CodeAnalysis.SuppressMessage("Security", "CA2119:Seal methods that satisfy private interfaces", Justification = "Virtual methods are intentional for testing/mocking support")]
     public virtual async Task<CollectionItemsResponse?> GetAuthorItemsAsync(
         string authorName,
         int? take = null,

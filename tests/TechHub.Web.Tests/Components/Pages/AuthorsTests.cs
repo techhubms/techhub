@@ -20,7 +20,7 @@ namespace TechHub.Web.Tests.Components.Pages;
 /// </summary>
 public class AuthorsTests : BunitContext
 {
-    private readonly Mock<TechHubApiClient> _mockApiClient;
+    private readonly Mock<ITechHubApiClient> _mockApiClient;
 
     public AuthorsTests()
     {
@@ -32,11 +32,7 @@ public class AuthorsTests : BunitContext
         var config = new ConfigurationBuilder().Build();
         Services.AddScoped<BrandingService>(_ => new BrandingService(httpContextAccessor, config));
 
-        _mockApiClient = new Mock<TechHubApiClient>(
-            MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("https://localhost") },
-            Mock.Of<ILogger<TechHubApiClient>>()
-        );
+        _mockApiClient = new Mock<ITechHubApiClient>();
 
         // Default: return authors list
         _mockApiClient
