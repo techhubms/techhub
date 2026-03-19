@@ -6,7 +6,6 @@
 @implements IDisposable
 
 @inject TechHubApiClient ApiClient
-@inject NavigationManager Navigation
 @inject PersistentComponentState ApplicationState
 
 <PageTitle>@PageTitleText</PageTitle>
@@ -95,102 +94,19 @@
         }
         else
         {
-            <h1 id="skiptohere" class="page-h1">
-                Content by @DecodedAuthorName
-                @if (!isLoadingItems)
-                {
-                    <span class="content-count"> (@totalCount)</span>
-                }
-            </h1>
-
-            @if (isLoadingItems && !contentItems.Any())
-            {
-                <div class="content-grid" role="status" aria-busy="true" aria-label="Loading content">
-                    @for (int i = 0; i < 6; i++)
-                    {
-                        <div class="skeleton-card" aria-hidden="true">
-                            <div class="content-header">
-                                <div class="skeleton skeleton-card-title"></div>
-                                <div class="skeleton skeleton-card-meta"></div>
-                            </div>
-                            <div class="skeleton skeleton-card-description"></div>
-                            <div class="skeleton skeleton-card-description" style="width: 80%;"></div>
-                            <div class="content-tags">
-                                <div class="skeleton skeleton-card-tag"></div>
-                                <div class="skeleton skeleton-card-tag"></div>
-                            </div>
-                        </div>
-                    }
-                </div>
-            }
-            else if (notFound)
-            {
-                <div class="no-content" role="status">
-                    <p>Author not found.</p>
-                    <a href="/all/authors">← Back to all authors</a>
-                </div>
-            }
-            else if (contentItems.Any())
-            {
-                <div class="content-grid" role="feed">
-                    @foreach (var item in contentItems)
-                    {
-                        <ContentItemCard Item="@item" ShowCollectionBadge="true" />
-                    }
-                </div>
-
-                @if (hasMoreContent)
-                {
-                    <div class="load-more-container">
-                        @if (isLoadingMore)
-                        {
-                            <div class="loading-more-indicator" role="status" aria-live="polite">
-                                <div class="loading-spinner"></div>
-                                <p>Loading more content...</p>
-                            </div>
-                        }
-                        else
-                        {
-                            <button class="load-more-button" @onclick="LoadMoreAsync"
-                                    aria-label="Load more content by @DecodedAuthorName">
-                                Load more
-                            </button>
-                        }
-                    </div>
-                }
-                else
-                {
-                    <div class="end-of-content" role="status">
-                        <p>End of content</p>
-                    </div>
-                }
-            }
-            else
-            {
-                <div class="no-content" role="status">
-                    <p>No content found for this author.</p>
-                    <a href="/all/authors">← Back to all authors</a>
-                </div>
-            }
+            <ContentItemsGrid SectionName="all" CollectionName="authors"
+                AuthorName="@DecodedAuthorName" Title="@($"Content by {DecodedAuthorName}")"
+                @key="@AuthorName" />
         }
     </section>
 </main>
 
 @code {
-    private const int BatchSize = 20;
-
     [Parameter]
     public string? AuthorName { get; set; }
 
     private IReadOnlyList<AuthorSummary>? authors;
-    private List<TechHub.Core.Models.ContentItem> contentItems = [];
-    private long totalCount;
     private bool isLoadingAuthors = true;
-    private bool isLoadingItems;
-    private bool isLoadingMore;
-    private bool hasMoreContent;
-    private bool notFound;
-    private string? _previousAuthorName;
 
     private PersistingComponentStateSubscription _persistingSubscription;
 
@@ -224,10 +140,8 @@
 
     protected override async Task OnInitializedAsync()
     {
-        _previousAuthorName = AuthorName;
         _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        // Restore or fetch authors list
         if (ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restoredAuthors) && restoredAuthors != null)
         {
             authors = restoredAuthors;
@@ -238,115 +152,12 @@
             authors = await ApiClient.GetAuthorsAsync() ?? [];
             isLoadingAuthors = false;
         }
-
-        // If author selected, restore or fetch their content
-        if (HasAuthorSelected)
-        {
-            var stateKey = GetAuthorStateKey();
-            if (ApplicationState.TryTakeFromJson<PersistedAuthorState>(stateKey, out var restored) && restored != null)
-            {
-                contentItems = restored.Items;
-                totalCount = restored.TotalCount;
-                hasMoreContent = restored.HasMoreContent;
-                notFound = restored.NotFound;
-            }
-            else
-            {
-                await LoadAuthorItemsAsync();
-            }
-        }
     }
-
-    protected override async Task OnParametersSetAsync()
-    {
-        if (AuthorName != _previousAuthorName)
-        {
-            _previousAuthorName = AuthorName;
-            contentItems = [];
-            totalCount = 0;
-            hasMoreContent = false;
-            notFound = false;
-            isLoadingItems = false;
-
-            if (HasAuthorSelected)
-            {
-                await LoadAuthorItemsAsync();
-            }
-        }
-    }
-
-    private string GetAuthorStateKey() => $"Authors_{DecodedAuthorName.Sanitize()}";
 
     private Task PersistState()
     {
         ApplicationState.PersistAsJson("authors", authors ?? Array.Empty<AuthorSummary>());
-
-        if (HasAuthorSelected)
-        {
-            ApplicationState.PersistAsJson(GetAuthorStateKey(), new PersistedAuthorState
-            {
-                Items = contentItems,
-                TotalCount = totalCount,
-                HasMoreContent = hasMoreContent,
-                NotFound = notFound
-            });
-        }
-
         return Task.CompletedTask;
-    }
-
-    private async Task LoadAuthorItemsAsync()
-    {
-        isLoadingItems = true;
-
-        try
-        {
-            var result = await ApiClient.GetAuthorItemsAsync(DecodedAuthorName, take: BatchSize, skip: 0);
-
-            if (result == null)
-            {
-                notFound = true;
-            }
-            else
-            {
-                contentItems = result.Items.ToList();
-                totalCount = result.TotalCount;
-                hasMoreContent = contentItems.Count < result.TotalCount;
-            }
-        }
-        catch (HttpRequestException)
-        {
-            notFound = true;
-        }
-
-        isLoadingItems = false;
-    }
-
-    private async Task LoadMoreAsync()
-    {
-        if (isLoadingMore || !hasMoreContent)
-        {
-            return;
-        }
-
-        isLoadingMore = true;
-
-        var result = await ApiClient.GetAuthorItemsAsync(
-            DecodedAuthorName,
-            take: BatchSize,
-            skip: contentItems.Count);
-
-        if (result != null && result.Items.Count > 0)
-        {
-            contentItems.AddRange(result.Items);
-            hasMoreContent = contentItems.Count < result.TotalCount;
-        }
-        else
-        {
-            hasMoreContent = false;
-        }
-
-        isLoadingMore = false;
     }
 
     private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs()
@@ -368,13 +179,5 @@
     public void Dispose()
     {
         _persistingSubscription.Dispose();
-    }
-
-    private sealed class PersistedAuthorState
-    {
-        public required List<TechHub.Core.Models.ContentItem> Items { get; init; }
-        public required long TotalCount { get; init; }
-        public required bool HasMoreContent { get; init; }
-        public required bool NotFound { get; init; }
     }
 }

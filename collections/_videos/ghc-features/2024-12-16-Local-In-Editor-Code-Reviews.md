@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://youtu.be/t74rlukNevM
 title: Local In-Editor Code Reviews
 author: randy.pagels@xebia.com (Randy Pagels)

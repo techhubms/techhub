@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://youtu.be/chD-UE4DmJk
 title: PR Body Generation in WebUI
 author: randy.pagels@xebia.com (Randy Pagels)

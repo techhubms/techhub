@@ -1,5 +1,6 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -7,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.TestUtilities.Builders;
+using TechHub.Web.Components;
 using TechHub.Web.Components.Pages;
 using TechHub.Web.Services;
 using ContentItemModel = TechHub.Core.Models.ContentItem;
@@ -56,7 +58,15 @@ public class AuthorsTests : BunitContext
             .ReturnsAsync(new CollectionItemsResponse([], 0));
 
         Services.AddSingleton(_mockApiClient.Object);
+
+        // ContentItemsGrid (child component) requires SectionCache and logger
+        var sectionCache = new SectionCache();
+        sectionCache.Initialize([]);
+        Services.AddSingleton(sectionCache);
+        Services.AddSingleton<ILogger<ContentItemsGrid>>(Mock.Of<ILogger<ContentItemsGrid>>());
+
         this.AddBunitPersistentComponentState();
+        SetRendererInfo(new RendererInfo("Server", true));
     }
 
     [Fact]

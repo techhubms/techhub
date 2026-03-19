@@ -1627,66 +1627,6 @@
   },
   {
     "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html",
-    "timestamp": "2025-08-07 20:43:54 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/avoid-these-common-prompts.html",
-    "timestamp": "2025-08-07 20:45:03 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html",
-    "timestamp": "2025-08-07 20:45:31 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html",
-    "timestamp": "2025-08-07 20:45:58 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html",
-    "timestamp": "2025-08-07 20:48:00 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html",
-    "timestamp": "2025-08-07 20:48:27 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html",
-    "timestamp": "2025-08-07 20:48:58 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/top-10-copilot-tips.html",
-    "timestamp": "2025-08-07 20:49:56 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html",
-    "timestamp": "2025-08-07 20:50:22 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
-    "canonical_url": "https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html",
-    "timestamp": "2025-08-07 20:50:51 +00:00",
-    "collection": "blogs"
-  },
-  {
-    "reason": "unknown",
     "canonical_url": "https://r-vm.com/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html",
     "timestamp": "2025-08-07 20:53:46 +00:00",
     "collection": "blogs"
@@ -8112,12 +8052,6 @@
     "collection": "blogs"
   },
   {
-    "reason": "Succesfully added: Assigned the AI category because the article details the use of GitHub Copilot, which is an AI-powered code assistant (AI inclusion rule 2 and 5). 'GitHub Copilot' category is included as the content focuses specifically on Copilot functionality (GitHub Copilot rules 1, 2, and 4). 'Coding' is included since it discusses code style, logic, and error handling improvements through developer practices (Coding rules 1 and 4). Azure, DevOps, ML, and Security are not included since there is no mention of relevant Azure technologies, development operations, machine learning development, or security implementation. Exclusion rules do not apply, as the content is technical, English, meets length requirements, and is focused on developer productivity rather than business or biographical aspects.",
-    "canonical_url": "https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html",
-    "timestamp": "2025-08-29 21:11:49 +00:00",
-    "collection": "blogs"
-  },
-  {
     "reason": "Succesfully added: Included the Security category because the content centrally focuses on configuring ransomware protection using Microsoft Defender Antivirus inside Windows 11. This matches the Security inclusion rules for application security within the Microsoft ecosystem and usage of specific Microsoft security technologies. Did not include Azure, AI, ML, or Coding, as there is no mention of these technologies, development workflows, or data science focus. Did not include DevOps, as this is an end-user security feature guide, not a workflow or engineering pattern. Tags are focused on security and Microsoft Defender, aligning with the guide's practical, technical emphasis.",
     "canonical_url": "https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/",
     "timestamp": "2025-08-30 11:09:49 +00:00",
@@ -8626,12 +8560,6 @@
     "canonical_url": "https://www.youtube.com/watch?v=jNl3CQPZ-QA",
     "timestamp": "2025-09-06 08:14:45 +00:00",
     "collection": "videos"
-  },
-  {
-    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the article centers on using GitHub Copilot Chat, a developer-focused AI tool (AI rule 2 and GitHub Copilot category first rule). 'Coding' is included because the content revolves around regular expression (regex) authoring, explanation, and testing within the developer workflow (Coding rule 4). Azure, DevOps, ML, and Security categories are not assigned since the content does not cover those areas. None of the generic exclusion rules apply.",
-    "canonical_url": "https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html",
-    "timestamp": "2025-09-06 12:20:12 +00:00",
-    "collection": "blogs"
   },
   {
     "reason": "Succesfully added: Assigned 'AI' and 'GitHub Copilot' because the content focuses on advanced use of GitHub Copilot prompt files in VS Code (AI rule 2, GitHub Copilot rules 1 and 2). 'Coding' was added as guidance specifically targets developer workflow and productivity with coding tools (Coding rules 4 and 5). All rules for non-development Copilot products are not triggered since GitHub Copilot is a developer tool.",
@@ -9862,12 +9790,6 @@
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-migration-and/azure-migrate-connected-experiences/ba-p/4454927",
     "timestamp": "2025-09-20 23:13:50 +00:00",
     "collection": "community"
-  },
-  {
-    "reason": "Succesfully added: Assigned 'AI' because the article focuses on selecting and understanding different AI models within GitHub Copilot (AI inclusion rules 1 and 2). Assigned 'GitHub Copilot' because the entire article is about usage and best practices for GitHub Copilot's coding assistant features (GitHub Copilot rules 1, 2, and 4). Did not assign 'Coding' because the article does not cover code-level implementation, only model selection. Did not assign 'DevOps', 'Azure', 'ML', or 'Security' as none of those themes or platforms are discussed.",
-    "canonical_url": "https://cooknwithcopilot.com/blog/picking-the-right-ai-model-for-your-task.html",
-    "timestamp": "2025-09-21 15:12:53 +00:00",
-    "collection": "blogs"
   },
   {
     "reason": "Succesfully added: Assigned Azure category because the content centers on Azure Maps, a Microsoft Azure service (Azure rule 1). Assigned Coding category because the article discusses implementing and integrating the REST API into applications (Coding rules 2 and 4). Exclusion rules did not apply—post is technical, developer-focused, in English, and meets the length requirement. No other categories apply since there is no AI, ML, DevOps, Security, or GitHub Copilot focus.",

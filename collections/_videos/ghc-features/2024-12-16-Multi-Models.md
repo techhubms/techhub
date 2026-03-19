@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://youtu.be/EzEH3wg6GaI
 title: Multi-Models
 author: randy.pagels@xebia.com (Randy Pagels)

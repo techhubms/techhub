@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://youtu.be/RDpAJAjXkqo
 title: Unit Tests
 author: randy.pagels@xebia.com (Randy Pagels)

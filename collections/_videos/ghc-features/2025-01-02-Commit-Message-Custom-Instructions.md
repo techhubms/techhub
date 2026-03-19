@@ -1,4 +1,4 @@
-﻿---
+---
 external_url: https://youtu.be/eAh9qLmBgKg
 title: Commit Message Custom Instructions
 author: randy.pagels@xebia.com (Randy Pagels)

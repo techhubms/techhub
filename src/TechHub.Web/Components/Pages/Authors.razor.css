@@ -4,6 +4,8 @@
    Component-specific styling for Authors.razor page
    Page uses global .page-with-sidebar layout from page-container.css
    Sidebar uses global .sidebar-list, .sidebar-link-button from sidebar.css
+   Content grid, infinite scroll, and end-of-content are handled by
+   ContentItemsGrid component (reused via AuthorName parameter).
    ============================================================================ */
 
 /* Author filter input in sidebar */
@@ -75,75 +77,13 @@
     scrollbar-color: var(--color-border-emphasis) transparent;
 }
 
-/* Content grid for author items (scoped copy since ContentItemsGrid component owns the global one) */
-.content-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: var(--spacing-4);
-}
-
-@media (max-width: 768px) {
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Content count badge in heading */
-.content-count {
-    font-weight: 400;
-    color: var(--color-text-secondary);
-    font-size: 0.7em;
-    margin-left: var(--spacing-2);
-}
-
 /* Select prompt shown when no author is selected */
 .authors-select-prompt {
     color: var(--color-text-secondary);
     font-size: var(--font-size-base);
-    padding: var(--spacing-4) 0;
-}
-
-/* Load more button */
-.load-more-container {
-    display: flex;
-    justify-content: center;
-    margin-top: var(--spacing-6);
-}
-
-.load-more-button {
-    padding: var(--spacing-2) var(--spacing-6);
-    background: var(--color-bg-emphasis);
-    border: 1px solid var(--color-border-emphasis);
-    border-radius: var(--radius-md);
-    color: var(--color-text-primary);
-    font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    cursor: pointer;
-    transition: all var(--duration-fast) var(--easing-ease);
-}
-
-@media (hover: hover) {
-    .load-more-button:hover {
-        background: var(--color-purple-dark);
-        border-color: var(--color-purple-bright);
-        color: var(--color-text-on-emphasis);
-    }
 }
 
 .no-content {
     color: var(--color-text-secondary);
     font-size: var(--font-size-base);
-    padding: var(--spacing-4) 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-2);
-}
-
-.no-content a {
-    color: var(--color-purple-bright);
-    text-decoration: none;
-}
-
-.no-content a:hover {
-    text-decoration: underline;
 }
