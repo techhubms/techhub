@@ -1,0 +1,17 @@
+{
+  "Description": "GitHub Codespaces with data residency now supports Japan as an available region, in addition to the existing EU and Australia regions. In January, we announced that Codespaces is now in…\n\nThe post [Codespaces with data residency now available in Japan](https://github.blog/changelog/2026-03-19-codespaces-with-data-residency-now-available-in-japan) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-03-19T17:32:44+00:00",
+  "Tags": [
+    "collaboration tools",
+    "Improvement"
+  ],
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-03-19 18:20:34",
+  "Link": "https://github.blog/changelog/2026-03-19-codespaces-with-data-residency-now-available-in-japan",
+  "Author": "Allison",
+  "Title": "Codespaces with data residency now available in Japan",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "GitHub Codespaces with data residency now supports Japan as an available region, in addition to the existing EU and Australia regions.\n\nIn January, we announced that [Codespaces is now in public preview for GitHub Enterprise with data residency](https://github.blog/changelog/2026-01-29-codespaces-is-now-in-public-preview-for-github-enterprise-with-data-residency/). At that time, Japan was listed as coming soon during the preview period. Japan is now part of public preview as a supported region.\n\nIf your enterprise is hosted in the Japan region, you can now create and manage codespaces with data residency. To get started, see the [GitHub Codespaces documentation](https://docs.github.com/codespaces).\n\n![social](https://github.com/user-attachments/assets/f09dffe3-0b34-4ac6-931d-509565cd07df)",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog"
+}
