@@ -29218,5 +29218,23 @@
     "timestamp": "2026-03-20 16:21:00 +00:00",
     "reason": "Succesfully added: Generic exclusion rules: none apply (English video description, not job/career-focused, not question-only, not primarily sales/promo, not unconstructive negativity).\n\nIncluded Azure because the chapter list is dominated by Azure services and platform updates (AKS, Azure Batch, AVS node retirements, VM SKU retirements, Standard HDD retirement, Azure SQL DB updates), which clearly meets Azure inclusion rules (any Azure service/technology and Azure architecture/operations).\n\nIncluded Security because the content explicitly includes identity and protection topics such as Microsoft Entra ID (blob SFTP access) and “Entra Backup and Recovery”, which match Security inclusion rules (IAM and Microsoft security/identity services).\n\nIncluded AI because it covers Azure AI Foundry items (Agent Service, Observability, Foundry Local updates) and references OpenAI model updates, which fits AI inclusion rules for Microsoft AI products/services and model/platform updates.\n\nIncluded ML because it includes data/analytics platform topics tied to Microsoft Fabric and Azure Databricks (Lakeflow Connect, Databricks to Fabric federation, Fabric mirroring/shortcuts, Fabric IQ), which fits ML inclusion rules around Microsoft Fabric/Databricks analytics engineering and BI/analytics development content.",
     "canonical_url": "https://www.youtube.com/watch?v=jkpcFAYJjvM"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-20 17:18:48 +00:00",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product news, not job/career, not question-only, and not a sales pitch for a third-party tool. Categorized as ML because the content is specifically about Microsoft Fabric (ML rule 1: Microsoft Fabric for analytics platform). Azure/.NET/DevOps/Security/AI/GitHub Copilot are not assigned because the announcement does not discuss Azure services directly, .NET languages/frameworks, CI/CD tooling, identity/security implementations beyond a brief mention of validation against security requirements, or any AI/Copilot functionality.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-self-service-workload-publishing-generally-available/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-20 17:19:40 +00:00",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: this is English, technical product documentation-style news, not a job post, not biographical, not question-only, and not primarily promotional. Included the ML category because the content is about Microsoft Fabric (Power BI/Fabric ecosystem) operational monitoring and dashboards for semantic models and Eventhouse telemetry, which fits the ML category’s scope for Fabric and advanced analytics/BI development/operations. Excluded Azure, .NET, DevOps, AI, GitHub Copilot, and Security because the article does not cover Azure services directly, code/.NET frameworks, CI/CD or GitHub/Azure DevOps, Microsoft AI services, Copilot, or security/identity tooling.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/workspace-monitoring-dashboard-templates-in-microsoft-fabric-eventhouse/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-20 17:21:29 +00:00",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is an English video description with substantive technical workflow detail (not job/career, not question-only, not sales pitch, not Microsoft 365 Copilot/consumer Copilot content). Assigned \"GitHub Copilot\" because the description explicitly discusses GitHub Copilot usage (CLI, chat, models, plan mode) and related workflows; per rules, \"AI\" must also be included whenever \"GitHub Copilot\" is included. Assigned \"AI\" additionally because the content is about practical AI-assisted workflows. Assigned \"DevOps\" because it discusses repo-based workflows and version-control practices like parallel sessions and Git worktrees (version control/developer workflow). Did not assign \".NET\", \"Azure\", \"ML\", or \"Security\" because the description does not mention those technologies or topics.",
+    "canonical_url": "https://www.youtube.com/watch?v=CMvnRYgB5Ac"
   }
 ]
