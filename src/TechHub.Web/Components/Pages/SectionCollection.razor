@@ -116,9 +116,9 @@
 
     /// <summary>
     /// Whether to show the content-type filter in the sidebar.
-    /// Shown on Browse page and collection routes when HideCollectionPages is enabled.
+    /// Shown on Browse page for ALL sections, and on collection routes when HideCollectionPages is enabled.
     /// </summary>
-    private bool ShowContentTypeFilter => HideCollectionPages && (IsAll || IsCollectionRoute);
+    private bool ShowContentTypeFilter => IsAll || IsCollectionRoute;
 
     /// <summary>
     /// Whether any content type filter is active (not all types selected).
@@ -148,8 +148,6 @@
     {
         get
         {
-            if (!HideCollectionPages) return null;
-
             if (IsCollectionRoute)
             {
                 // On a collection route, filter to that specific collection
@@ -331,7 +329,7 @@
 
     private void ParseTypesFromUrl()
     {
-        if (!string.IsNullOrEmpty(TypesParam) && HideCollectionPages && IsAll)
+        if (!string.IsNullOrEmpty(TypesParam) && IsAll)
         {
             var parsed = TypesParam.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             activeContentTypes = new HashSet<string>(parsed, StringComparer.OrdinalIgnoreCase);

@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-5);
 }
 
 .discord-logo {
@@ -23,6 +23,12 @@
   font-size: var(--font-size-2xl);
   font-weight: var(--font-weight-bold);
   margin: 0;
+}
+
+.discord-tagline {
+  margin: var(--spacing-1) 0 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
 }
 
 .discord-content {
@@ -38,33 +44,8 @@
   font-size: var(--font-size-xl);
 }
 
-.discord-members {
-  margin: var(--spacing-4) 0;
-  padding: var(--spacing-3);
-  background: var(--color-bg-emphasis);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-border-default);
-}
-
-.discord-members h2 {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  margin: 0 0 var(--spacing-2) 0;
-}
-
-.discord-members ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--spacing-2) 0;
-}
-
-.discord-members li {
-  padding: var(--spacing-1) 0;
-  color: var(--color-text-secondary);
-}
-
 .discord-cta {
-  margin-top: var(--spacing-4);
+  margin: var(--spacing-5) 0;
   text-align: center;
 }
 
@@ -72,14 +53,15 @@
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-2);
-  padding: var(--spacing-2) var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-6);
   background: #5865F2;
   color: #fff;
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   border-radius: var(--radius-md);
   text-decoration: none;
-  transition: background var(--duration-fast) var(--easing-ease);
+  transition: all var(--duration-fast) var(--easing-ease);
+  box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);
 }
 
 @media (hover: hover) {
@@ -87,7 +69,26 @@
     background: #4752C4;
     color: #fff;
     text-decoration: none;
+    box-shadow: 0 4px 16px rgba(88, 101, 242, 0.4);
+    transform: translateY(-1px);
   }
+}
+
+/* Members as subtle inline text */
+.discord-members {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+}
+
+.discord-members strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.discord-member-title {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
 }
 
 @media (max-width: 768px) {

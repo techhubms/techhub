@@ -20,7 +20,7 @@
     <nav class="sub-nav" aria-label="@Section.Title navigation">
         @* Desktop: horizontal button bar *@
         <div class="sub-nav-wrapper">
-<a href="/@Section.Name/all" class="btn-subnav @(IsBrowseActive ? "active" : "")"
+<a href="/@Section.Name/all" class="btn-subnav btn-subnav-custom @(IsBrowseActive ? "active" : "")"
                @onclick="@(() => OnSubNavClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
                 Browse
             </a>
@@ -55,7 +55,7 @@
             @if (dropdownOpen)
             {
                 <div class="sub-nav-dropdown-menu">
-                    <a href="/@Section.Name/all" class="sub-nav-dropdown-item @(IsBrowseActive ? "active" : "")"
+                    <a href="/@Section.Name/all" class="sub-nav-dropdown-item sub-nav-dropdown-custom @(IsBrowseActive ? "active" : "")"
                        @onclick="@(() => OnSubNavDropdownClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
                         Browse
                     </a>

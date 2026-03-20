@@ -40,12 +40,12 @@ public class UrlRoutingTests : PlaywrightTestBase
     {
         // Arrange
 
-        // Act - Navigate directly to /github-copilot/news
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Act - Navigate directly to /ai/news (AI section doesn't hide collection pages)
+        await Page.GotoRelativeAsync("/ai/news");
         await Page.Locator(".card").First.AssertElementVisibleAsync();
 
-        // Assert - URL should remain /github-copilot/news
-        await Page.AssertUrlEndsWithAsync("/github-copilot/news");
+        // Assert - URL should remain /ai/news
+        await Page.AssertUrlEndsWithAsync("/ai/news");
 
         // News button should be active
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
@@ -54,21 +54,19 @@ public class UrlRoutingTests : PlaywrightTestBase
     [Fact]
     public async Task ClickCollectionButton_UpdatesURL()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai");
 
         // Act - Click "Blogs" collection button
         var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickBlazorElementAsync();
 
-        // Assert - URL should update to /github-copilot/blogs
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/blogs");
+        // Assert - URL should update to /ai/blogs
+        await Page.WaitForBlazorUrlContainsAsync("/ai/blogs");
 
         // Wait for page heading to actually update to show "Blog" (from "Blog Posts")
         var pageH1 = Page.Locator("h1.page-h1");
         await Assertions.Expect(pageH1).ToContainTextAsync("Blog");
-
-        // Verify the page heading was already asserted with ToContainTextAsync above
     }
 
     [Fact]
@@ -115,8 +113,8 @@ public class UrlRoutingTests : PlaywrightTestBase
     [Fact]
     public async Task BrowserForwardButton_NavigatesToNextCollection()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai/news");
 
         // Wait for sub-nav to be fully rendered before interacting
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "News");
@@ -124,17 +122,17 @@ public class UrlRoutingTests : PlaywrightTestBase
         // Navigate to videos
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
+        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
 
         // Go back to news
         await Page.GoBackAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
+        await Page.WaitForBlazorUrlContainsAsync("/ai/news");
 
         // Act - Press browser forward button
         await Page.GoForwardAsync();
 
-        // Assert - Should return to /github-copilot/videos
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
+        // Assert - Should return to /ai/videos
+        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
     }
 
     #endregion
@@ -288,8 +286,8 @@ public class UrlRoutingTests : PlaywrightTestBase
     [Fact]
     public async Task CollectionButtons_AreInteractive()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai");
 
         // Act - Click each collection button and verify navigation
         // NOTE: Blazor Server uses enhanced navigation (SPA-style), so we poll for URL changes
@@ -343,8 +341,8 @@ public class UrlRoutingTests : PlaywrightTestBase
     [Fact]
     public async Task ActiveCollectionButton_HasActiveClass()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai/news");
 
         // Assert - News button should have "active" class (verified by .active selector)
         await Page.AssertElementVisibleBySelectorAsync(".sub-nav a.active");
