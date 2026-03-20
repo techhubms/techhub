@@ -11382,12 +11382,6 @@
     "collection": "videos"
   },
   {
-    "timestamp": "2026-01-01 15:36:53 +00:00",
-    "reason": "API call retries failed: All API call retries failed - no response received",
-    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/visualizing-github-audit-log-in-microsoft-defender/",
-    "collection": "news"
-  },
-  {
     "timestamp": "2026-01-01 15:43:31 +00:00",
     "reason": "No categories found: No categories assigned. The content, based on the title and description, is a news/discussion video analysing recent language popularity trends in GitHub's Octoverse report. It discusses TypeScript overtaking Python and JavaScript, mentions the language's strengths and future industry directions, and contains general commentary. There is no substantive coverage of Microsoft technologies, developer tools, or coding practices within the Microsoft ecosystem as required by AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot categories. Although TypeScript is a Microsoft-created language, the content here focuses on popularity and ecosystem trends, not technical implementation, development with Microsoft frameworks/tools, or detailed instructions relevant to Microsoft developer consulting. This falls outside the inclusion rules for all categories.",
     "canonical_url": "https://www.youtube.com/shorts/mLxAtz98h_4",
@@ -13056,12 +13050,6 @@
     "collection": "videos"
   },
   {
-    "timestamp": "2026-02-27 00:13:54 +00:00",
-    "reason": "API call retries failed: All API call retries failed - no response received",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-and-pagerduty-sre-agent-in/ba-p/4497124",
-    "collection": "community"
-  },
-  {
     "timestamp": "2026-02-27 10:12:03 +00:00",
     "reason": "No categories found: No categories assigned. The content is a brief event announcement and highlights for a community competition ('Agents League - Reasoning Agents Battle') hosted by Microsoft. There is no substantive technical explanation, tutorial, or implementation detail present. The description is promotional and focuses on an on-demand video and project registration, without discussion of Microsoft technology features, development techniques, or technical architecture. Per generic exclusion rules, content lacking substantive technical depth or hands-on guidance does not qualify.",
     "canonical_url": "https://www.youtube.com/shorts/0f5qBZpy9No",
@@ -13204,12 +13192,6 @@
     "reason": "No categories found: Content excluded due to generic exclusion rule – this video is primarily biographical in nature, focusing on John Leider's personal journey as an open source maintainer, as indicated by the phrase 'his incredible journey as an open source maintainer.' The primary topic centers on Vuetify, a UI library that is not Microsoft-related. There's no substantive technical discussion of Microsoft technologies or products present in the title, description, or linked project. Therefore, no categories apply.",
     "canonical_url": "https://www.youtube.com/watch?v=Q_Ef-JMdAG0",
     "collection": "videos"
-  },
-  {
-    "timestamp": "2026-03-06 07:21:36 +00:00",
-    "reason": "API call retries failed: All API call retries failed - no response received",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/decision-matrix-api-vs-mcp-tools-the-great-integration-showdown/ba-p/4499385",
-    "collection": "community"
   },
   {
     "timestamp": "2026-03-06 17:12:26 +00:00",

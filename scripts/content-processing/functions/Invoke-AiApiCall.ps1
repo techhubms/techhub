@@ -113,6 +113,12 @@ function Invoke-AiApiCall {
                     } else {
                         Write-Host "No response content available" -ForegroundColor Yellow
                     }
+
+                    # Check for context length exceeded (Azure OpenAI returns 400 for token limit errors)
+                    if ($responseContent -and $responseContent -match 'context_length_exceeded|maximum context length|too many tokens') {
+                        Write-Host "❌ Context length exceeded - request has too many tokens" -ForegroundColor Red
+                        return ([PSCustomObject]@{ Error = $true; Type = "RequestEntityTooLarge"; Message = "Context length exceeded" } | ConvertTo-Json -Compress)
+                    }
                 }
 
                 if ($statusCode -eq 413 -or $statusDescription -eq 'Request Entity Too Large') {

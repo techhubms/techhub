@@ -33,5 +33,5 @@ param wildcardCertNames = {
 }
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
-param openAiModelCapacity = 100
+param openAiModelCapacity = 200
 
