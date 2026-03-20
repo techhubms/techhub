@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Validation;
 
@@ -14,6 +15,10 @@ namespace TechHub.Api.Endpoints;
 /// </summary>
 public static class ContentEndpoints
 {
+    private const int MaxSearchQueryLength = 200;
+    private const int MaxTagCount = 20;
+    private const int MaxTagLength = 100;
+    private const int MaxLastDays = 3650;
 
     /// <summary>
     /// Maps all section-related endpoints to the application.
@@ -156,6 +161,7 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = sectionName.Sanitize();
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
@@ -174,6 +180,7 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = sectionName.Sanitize();
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
@@ -197,6 +204,8 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
 
         if (section == null)
@@ -234,8 +243,38 @@ public static class ContentEndpoints
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
         [FromQuery] bool includeDraft = false,
+        [FromQuery] string? types = null,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
+
+        // Validate query parameters
+        if (q != null && q.Length > MaxSearchQueryLength)
+        {
+            return TypedResults.BadRequest($"Search query exceeds maximum length of {MaxSearchQueryLength} characters.");
+        }
+
+        if (lastDays.HasValue && (lastDays.Value < 0 || lastDays.Value > MaxLastDays))
+        {
+            return TypedResults.BadRequest($"lastDays must be between 0 and {MaxLastDays}.");
+        }
+
+        string[]? parsedTags = null;
+        if (!string.IsNullOrWhiteSpace(tags))
+        {
+            parsedTags = tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            if (parsedTags.Length > MaxTagCount)
+            {
+                return TypedResults.BadRequest($"Too many tags. Maximum is {MaxTagCount}.");
+            }
+
+            if (parsedTags.Any(t => t.Length > MaxTagLength))
+            {
+                return TypedResults.BadRequest($"Individual tag exceeds maximum length of {MaxTagLength} characters.");
+            }
+        }
+
         // Verify section exists
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
@@ -297,16 +336,38 @@ public static class ContentEndpoints
             (dateFrom, dateTo) = (dateTo, dateFrom);
         }
 
+        // Build collections array - when "all" and types specified, filter to specific collection types
+        string[] collectionsArray;
+        if (isAllCollection && !string.IsNullOrWhiteSpace(types))
+        {
+            // Validate types against section's actual non-custom collections
+            var validCollectionNames = section.Collections
+                .Where(c => !c.IsCustom)
+                .Select(c => c.Name)
+                .ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+            collectionsArray = types.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+                .Where(t => validCollectionNames.Contains(t))
+                .ToArray();
+
+            if (collectionsArray.Length == 0)
+            {
+                collectionsArray = new[] { collectionName };
+            }
+        }
+        else
+        {
+            collectionsArray = new[] { collectionName };
+        }
+
         // Build search request - repository will handle "all" as no filter
         var request = new SearchRequest(
             take: limit,
             skip: offset,
             query: q,
             sections: new[] { section.Name },
-            collections: new[] { collectionName },  // Pass "all" through, repo handles it
-            tags: string.IsNullOrWhiteSpace(tags)
-                ? Array.Empty<string>()
-                : tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries),
+            collections: collectionsArray,
+            tags: parsedTags ?? Array.Empty<string>(),
             subcollection: subcollection,
             dateFrom: dateFrom,
             dateTo: dateTo,
@@ -337,6 +398,34 @@ public static class ContentEndpoints
         IOptions<TagCloudOptions> tagCloudOptions = default!,
         CancellationToken cancellationToken = default)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
+
+        // Validate query parameters
+        if (q != null && q.Length > MaxSearchQueryLength)
+        {
+            return TypedResults.BadRequest($"Search query exceeds maximum length of {MaxSearchQueryLength} characters.");
+        }
+
+        if (lastDays.HasValue && (lastDays.Value < 0 || lastDays.Value > MaxLastDays))
+        {
+            return TypedResults.BadRequest($"lastDays must be between 0 and {MaxLastDays}.");
+        }
+
+        if (!string.IsNullOrWhiteSpace(tags))
+        {
+            var tagArray = tags.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            if (tagArray.Length > MaxTagCount)
+            {
+                return TypedResults.BadRequest($"Too many tags. Maximum is {MaxTagCount}.");
+            }
+
+            if (tagArray.Any(t => t.Length > MaxTagLength))
+            {
+                return TypedResults.BadRequest($"Individual tag exceeds maximum length of {MaxTagLength} characters.");
+            }
+        }
+
         // Verify section exists
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
@@ -553,6 +642,9 @@ public static class ContentEndpoints
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
+        slug = slug.Sanitize();
         // Verify section exists
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)

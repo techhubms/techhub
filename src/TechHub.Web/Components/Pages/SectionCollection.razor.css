@@ -6,6 +6,50 @@
    ============================================================================ */
 
 /* ============================================================================
+   Content Type Filter Buttons
+   ============================================================================ */
+
+.content-type-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+.content-type-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-1) var(--spacing-2);
+  background: transparent;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+}
+
+@media (hover: hover) {
+  .content-type-btn:hover {
+    background: var(--color-bg-hover-subtle);
+    border-color: var(--color-purple-bright);
+    color: var(--color-text-emphasis);
+  }
+}
+
+.content-type-btn.active {
+  background: var(--color-purple-dark);
+  border-color: var(--color-purple-bright);
+  color: var(--color-text-on-emphasis);
+}
+
+@media (hover: hover) {
+  .content-type-btn.active:hover {
+    background: var(--color-purple-medium);
+  }
+}
+
+/* ============================================================================
    Section Collection Page Skeleton Loading States
    ============================================================================ */
 

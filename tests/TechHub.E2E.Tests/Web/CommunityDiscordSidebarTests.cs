@@ -5,32 +5,31 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
-/// E2E tests for the Discord sidebar section on the GitHub Copilot Community page.
+/// E2E tests for the Discord custom page at /github-copilot/discord.
+/// Discord was moved from the Community sidebar to its own dedicated page.
 /// </summary>
 public class CommunityDiscordSidebarTests : PlaywrightTestBase
 {
     public CommunityDiscordSidebarTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
-    public async Task CommunityPage_Sidebar_ShouldDisplay_DiscordSection()
+    public async Task DiscordPage_ShouldDisplay_DiscordContent()
     {
         // Act
-        await Page.GotoRelativeAsync("/github-copilot/community");
+        await Page.GotoRelativeAsync("/github-copilot/discord");
 
-        // Assert - Discord section should appear in the sidebar
-        var sidebar = Page.Locator("aside.sidebar");
-        await Assertions.Expect(sidebar.GetByRole(AriaRole.Heading, new() { Name = "Discord" })).ToBeVisibleAsync();
+        // Assert - Discord page should show heading and invite link
+        await Assertions.Expect(Page.GetByRole(AriaRole.Heading, new() { Name = "GitHub Copilot Community Discord" })).ToBeVisibleAsync();
     }
 
     [Fact]
-    public async Task CommunityPage_Sidebar_DiscordSection_ShouldHave_InviteLink()
+    public async Task DiscordPage_ShouldHave_InviteLink()
     {
         // Act
-        await Page.GotoRelativeAsync("/github-copilot/community");
+        await Page.GotoRelativeAsync("/github-copilot/discord");
 
-        // Assert - Discord invite link should be present in sidebar
-        var sidebar = Page.Locator("aside.sidebar");
-        var discordLink = sidebar.GetByRole(AriaRole.Link).Filter(new() { HasText = "Join our Discord server" });
+        // Assert - Discord invite link should be present
+        var discordLink = Page.GetByRole(AriaRole.Link).Filter(new() { HasText = "Join our Discord server" });
         await Assertions.Expect(discordLink.First).ToBeVisibleAsync();
 
         var href = await discordLink.First.GetAttributeAsync("href");
@@ -38,10 +37,10 @@ public class CommunityDiscordSidebarTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task OtherSectionPage_Sidebar_ShouldNot_Display_DiscordSection()
+    public async Task CommunityPage_Sidebar_ShouldNot_Display_DiscordSection()
     {
-        // Act - navigate to a non-github-copilot section
-        await Page.GotoRelativeAsync("/ai/community");
+        // Act - navigate to the community page (Discord was removed from sidebar)
+        await Page.GotoRelativeAsync("/github-copilot/community");
 
         // Assert - Discord section should NOT appear in the sidebar
         var sidebar = Page.Locator("aside.sidebar");

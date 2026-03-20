@@ -19,10 +19,11 @@ All SEO head tags are rendered by the `SeoMetaTags` shared component (`src/TechH
 
 The component emits:
 
+- `<meta name="page-path">` — normalized current URL path (lowercased); used by E2E tests to detect when HeadContent has been updated after navigation
 - `<meta name="description">` — truncated to 160 characters, HTML stripped
 - Open Graph tags (`og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`)
 - Article-specific Open Graph properties (`article:published_time`, `article:author`, `article:section`, `article:tag`) for Article and Video content types
-- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`, `twitter:site`)
+- Twitter Card tags (`twitter:card`, `twitter:title`, `twitter:description`)
 - JSON-LD structured data (schema type depends on `ContentType` parameter)
 - A second `BreadcrumbList` JSON-LD block when the `Breadcrumbs` parameter contains at least two items
 - `<link rel="canonical">` — normalized (lowercased, query-stripped) canonical URL
@@ -36,10 +37,10 @@ The `SeoContentType` enum controls which JSON-LD schema is generated and the Ope
 
 | Content type | JSON-LD schema | `og:type` | Used by |
 |---|---|---|---|
-| `Website` | `WebSite` | `website` | Homepage |
+| `Website` | `WebSite` | `website` | Homepage, custom pages (Features, Handbook, Levels, etc.), About |
 | `Article` | `Article` | `article` | Content detail pages (non-video) |
-| `Video` | `VideoObject` | `article` | Video content items |
-| `Collection` | `CollectionPage` | `website` | Section and collection listing pages |
+| `Video` | `VideoObject` | `article` | Video content items, VS Code Updates (selected video detail) |
+| `Collection` | `CollectionPage` | `website` | Section/collection listing pages, VS Code Updates (index view) |
 
 ### JSON-LD Schemas
 
@@ -74,13 +75,11 @@ Every page that uses `SeoMetaTags` automatically receives a canonical URL. The c
 
 Open Graph tags are emitted by the `SeoMetaTags` component for every page. Always present: `og:type`, `og:title`, `og:description`, `og:url`, `og:site_name`, `og:locale`. Content items and videos additionally receive `article:published_time`, `article:author`, `article:section`, and per-tag `article:tag` properties.
 
-Note: `og:image` is not currently set. See the image SEO spec for the planned approach.
+`og:image` is emitted when the `ImageUrl` parameter is set. All non-content pages default to `/images/section-backgrounds/none-og.jpg` (1200×417). `og:image:width` and `og:image:height` are emitted alongside when known dimensions are provided via `ImageWidth`/`ImageHeight` parameters. Video detail pages use the YouTube `maxresdefault.jpg` thumbnail as `og:image` without width/height (dimensions vary); roundup pages use the default image. News, blog, and community content items suppress `og:image` entirely (externally-owned content).
 
 ## Twitter Cards
 
-Twitter Card tags are emitted by the `SeoMetaTags` component. All pages use `summary` card type. Always present: `twitter:card`, `twitter:title`, `twitter:description`, `twitter:site` (`@Microsoft`).
-
-Note: `twitter:image` is not currently set. See the image SEO spec for the planned approach.
+Twitter Card tags are emitted by the `SeoMetaTags` component. When an `og:image` is present, `twitter:card` is set to `summary_large_image` and `twitter:image` is also emitted; otherwise `twitter:card` is `summary`. Always present: `twitter:card`, `twitter:title`, `twitter:description`.
 
 ## robots.txt
 
@@ -155,11 +154,31 @@ This structure:
 - Includes keywords relevant to content
 - Enables breadcrumb navigation
 
+## SEO Coverage
+
+All page types have full `SeoMetaTags` coverage:
+
+| Page type | Content type | Description source |
+|---|---|---|
+| Homepage | `Website` | Static (configured in component) |
+| Section/collection listing | `Collection` | Section/collection metadata from API |
+| Content detail (article) | `Article` | Content item summary from API |
+| Content detail (video) | `Video` | Content item summary from API |
+| Custom pages | `Website` | `description` field in `collections/_custom/*.json` |
+| VS Code Updates (index) | `Collection` | Static description |
+| VS Code Updates (selected video) | `Video` | Video title and summary from page data |
+| About | `Website` | Static description |
+
+Custom page data files (`collections/_custom/*.json`) each contain a top-level `description` field used for the meta description and Open Graph tags. This field is required in the corresponding `PageData` C# model.
+
 ## Implementation Reference
 
 - SEO meta tags: [src/TechHub.Web/Components/SeoMetaTags.razor](../src/TechHub.Web/Components/SeoMetaTags.razor)
 - Homepage: [src/TechHub.Web/Components/Pages/Home.razor](../src/TechHub.Web/Components/Pages/Home.razor)
 - Content detail pages: [src/TechHub.Web/Components/Pages/ContentItem.razor](../src/TechHub.Web/Components/Pages/ContentItem.razor)
 - Section and collection listing pages: [src/TechHub.Web/Components/Pages/SectionCollection.razor](../src/TechHub.Web/Components/Pages/SectionCollection.razor)
-- Canonical URL: [src/TechHub.Web/Components/Layout/MainLayout.razor](../src/TechHub.Web/Components/Layout/MainLayout.razor)
+- Custom pages: [src/TechHub.Web/Components/Pages/Custom/](../src/TechHub.Web/Components/Pages/Custom/) (Features, Handbook, Levels, ToolTips, GettingStarted, GenAI, SDLC, DXSpace)
+- VS Code Updates: [src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor](../src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor)
+- About page: [src/TechHub.Web/Components/Pages/About.razor](../src/TechHub.Web/Components/Pages/About.razor)
+- Custom page data (JSON): [collections/_custom/](../collections/_custom/)
 - RSS feeds: [rss-feeds.md](rss-feeds.md)

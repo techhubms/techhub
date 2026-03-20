@@ -45,6 +45,7 @@ export function beforeWebStarted(options) {
 export function afterWebStarted(blazor) {
     // Mark that Blazor Web is ready (initial SSR rendering complete)
     window.__blazorWebReady = true;
+    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-web-ready');
     console.debug('[TechHub] Blazor Web started');
 
     // Enable browser's native scroll restoration for back/forward navigation
@@ -62,6 +63,7 @@ export function afterWebStarted(blazor) {
     blazor.addEventListener('enhancedload', () => {
         window.__scriptsLoading = false;
         window.__scriptsReady = undefined;
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('enhanced-nav');
         console.debug('[TechHub] Enhanced navigation complete - script flags reset');
     });
 
@@ -87,6 +89,7 @@ export function afterServerStarted(blazor) {
     // Mark that Blazor Server circuit is fully established
     // This is the signal that @onclick handlers are attached and ready
     window.__blazorServerReady = true;
+    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-server-ready');
     console.debug('[TechHub] Blazor Server circuit ready - event handlers attached');
 
     // Page scripts (mermaid, highlight.js, custom pages, etc.) are loaded by
@@ -103,6 +106,7 @@ export function afterServerStarted(blazor) {
 export function afterWebAssemblyStarted(blazor) {
     // Mark that Blazor WebAssembly is ready
     window.__blazorWasmReady = true;
+    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-wasm-ready');
     console.debug('[TechHub] Blazor WebAssembly started');
 }
 

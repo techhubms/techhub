@@ -26,6 +26,7 @@ This project implements the Blazor frontend with global InteractiveServer render
 - **Always follow semantic HTML structure** - Use `<main>`, `<section>`, `<article>`, `<aside>` instead of `<div>` (see [docs/page-structure.md](../../docs/page-structure.md))
 - **Always fix all linting errors** - Check with `get_errors` tool after editing files
 - **Always add tests for components** - Use bUnit for component testing (see [tests/TechHub.Web.Tests/AGENTS.md](../../tests/TechHub.Web.Tests/AGENTS.md))
+- **Always sanitize user-controlled strings for logging** - Use `.Sanitize()` extension method (from `TechHub.Core.Logging`) on log arguments. In `TechHubApiClient`, overwrite parameters at entry: `param = param.Sanitize();` since each method has many log calls. In Blazor components, call `.Sanitize()` inline at each log site. See [docs/input-validation-and-sanitization.md](../../docs/input-validation-and-sanitization.md) for the complete strategy.
 
 ### ⚠️ Ask First
 

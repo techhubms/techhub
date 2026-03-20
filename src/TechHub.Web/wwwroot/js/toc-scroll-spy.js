@@ -134,6 +134,7 @@ export class TocScrollSpy {
         }
 
         this.initialized = true;
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-initialized');
     }
 
     /**
@@ -292,6 +293,8 @@ export class TocScrollSpy {
 
             // Add active class to current heading
             newHeading.classList.add('toc-active-heading');
+
+            if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-active-updated');
 
             // Update collapse/expand state based on which h2 section we're in (unless skipped)
             if (!skipCollapseUpdate) {

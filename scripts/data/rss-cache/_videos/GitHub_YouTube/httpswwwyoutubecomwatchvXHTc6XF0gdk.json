@@ -1,0 +1,18 @@
+{
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2026-03-18 15:31:26",
+  "PubDate": "2026-03-18T15:01:02+00:00",
+  "Tags": [
+    "CopilotCLI",
+    "GitHub",
+    "GitHubCopilot"
+  ],
+  "OutputDir": "_videos",
+  "Author": "GitHub",
+  "Description": "Evan Boyle from the GitHub Copilot CLI team shares advanced tips to level up your terminal workflow. Learn how to query your local SQLite database to pull up session history and recover context from past bug fixes. You can even ask Copilot to analyze your prompting habits to help you write better commands.\n\n#CopilotCLI #GitHubCopilot #GitHub\n\nWork with Copilot CLI: https://github.com/features/copilot/cli?utm\\_source=social-youtube-memory&utm\\_medium=social&utm\\_campaign=copilot-cli-ga-phase-two-2026\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Title": "How to query your Copilot CLI session history | Advanced tips & tricks",
+  "FeedLevelAuthor": "GitHub",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Link": "https://www.youtube.com/watch?v=XHTc6XF0gdk"
+}

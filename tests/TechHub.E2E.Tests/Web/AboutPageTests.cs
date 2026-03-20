@@ -100,4 +100,18 @@ public class AboutPageTests : PlaywrightTestBase
         var href = await discordLink.First.GetAttributeAsync("href");
         href.Should().Be("https://discord.gg/cURHV9TvFS");
     }
+
+    [Fact]
+    public async Task AboutPage_ShouldDisplay_VersionInfo()
+    {
+        // Act
+        await Page.GotoRelativeAsync("/about");
+
+        // Assert - Version info section should be visible at the bottom with .NET version
+        var versionInfo = Page.Locator(".version-info");
+        await Assertions.Expect(versionInfo).ToBeVisibleAsync();
+        var text = await versionInfo.TextContentAsync();
+        text.Should().Contain(".NET");
+        text.Should().Contain("Tech Hub");
+    }
 }

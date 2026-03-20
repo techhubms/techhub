@@ -1,0 +1,17 @@
+{
+  "Author": "Allison",
+  "Description": "Raycast is a powerful free launcher for macOS and Windows. It can launch apps, search files, control your system, and leverage community-built extensions. With the GitHub Copilot extension for Raycast,…\n\nThe post [Monitor Copilot coding agent logs live in Raycast](https://github.blog/changelog/2026-03-20-monitor-copilot-coding-agent-logs-live-in-raycast) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-03-20T12:21:30+00:00",
+  "ProcessedDate": "2026-03-20 14:19:55",
+  "Title": "Monitor Copilot coding agent logs live in Raycast",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "EnhancedContent": "[Raycast](https://raycast.com/) is a powerful free launcher for macOS and Windows. It can launch apps, search files, control your system, and leverage community-built extensions.\n\nWith the [GitHub Copilot extension for Raycast](https://www.raycast.com/github/github-copilot), you can hand tasks to [Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent), our cloud-based background agent, and track progress from anywhere.\n\nNow, you can watch Copilot’s logs live from Raycast without jumping to GitHub, so you can keep an eye on what Copilot is doing and track progress with just a few keyboard strokes.\n\nTo watch Copilot’s logs live, install the extension, open Raycast, select the **View Tasks** command, then pick your session from the list.\n\n![Screen recording of live agent logs in Raycast](https://github.com/user-attachments/assets/6eaedf15-11c7-4392-8edc-8fee0b4c06ac)\n\nCopilot coding agent is available to Copilot Pro, Copilot Pro+, Copilot Business, and Copilot Enterprise subscribers. If you’re a Copilot Business or Copilot Enterprise subscriber, an administrator will have to [enable Copilot coding agent](https://docs.github.com/enterprise-cloud@latest/copilot/how-tos/agents/copilot-coding-agent/enabling-copilot-coding-agent) from the “Policies” page before you can use it.",
+  "Link": "https://github.blog/changelog/2026-03-20-monitor-copilot-coding-agent-logs-live-in-raycast"
+}

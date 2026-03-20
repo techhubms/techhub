@@ -69,6 +69,7 @@ html.sidebar-collapsed .page-with-sidebar {
     grid-template-columns: 1fr;
     gap: var(--spacing-3);
     transition: none;
+    align-content: start;
   }
 
   /* Disable collapsed state on mobile */

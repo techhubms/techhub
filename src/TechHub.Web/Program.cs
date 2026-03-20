@@ -58,6 +58,9 @@ builder.Services.AddRazorComponents()
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
 
+// Background service to periodically refresh the SectionCache from the API
+builder.Services.AddHostedService<SectionCacheRefreshService>();
+
 // HTTP context accessor for reading cookies during SSR (e.g. sidebar collapsed state)
 builder.Services.AddHttpContextAccessor();
 

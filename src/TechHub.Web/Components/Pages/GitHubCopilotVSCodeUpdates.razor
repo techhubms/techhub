@@ -6,13 +6,33 @@
 @implements IDisposable
 
 @inject IJSRuntime JS
-@inject TechHubApiClient ApiClient
+@inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotVSCodeUpdates> Logger
 @inject PersistentComponentState ApplicationState
 
 <PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
+
+@if (selectedVideoDetail != null)
+{
+    <SeoMetaTags
+        Title="@selectedVideoDetail.Title"
+        Description="@selectedVideoDetail.Excerpt"
+        ContentType="SeoMetaTags.SeoContentType.Video"
+        Author="@selectedVideoDetail.Author"
+        DateEpoch="@selectedVideoDetail.DateEpoch"
+        Keywords="@selectedVideoDetail.Tags"
+        ArticleSection="GitHub Copilot"
+        VideoUrl="@selectedVideoDetail.ExternalUrl" />
+}
+else
+{
+    <SeoMetaTags
+        Title="VS Code Updates - GitHub Copilot"
+        Description="Track the latest Visual Studio Code updates and what they mean for your GitHub Copilot experience."
+        ContentType="SeoMetaTags.SeoContentType.Collection" />
+}
 
 <main class="page-with-sidebar">
     <aside class="sidebar">
