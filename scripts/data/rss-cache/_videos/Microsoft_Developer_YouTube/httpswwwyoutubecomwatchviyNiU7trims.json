@@ -1,0 +1,22 @@
+{
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=iyNiU7trims",
+  "Description": "Migration Assistant for SQL Database in Fabric simplifies the journey from SQL Server to Fabric by providing an end‑to‑end, guided migration experience. It helps customers assess schema compatibility, proactively resolve issues with Copilot assistance, and move data using built‑in Fabric copy workflows—all within the Fabric portal. The result is faster time to value, fewer migration surprises, and a smoother path to modernizing SQL workloads in Fabric. This experience will be rolling out soon and is expected to be available over the next few weeks.\n\n✅ Resource: https://blog.fabric.microsoft.com/blog/whats-new-and-improved-for-sql-database-in-fabric-generally-…",
+  "Author": "Microsoft Developer",
+  "PubDate": "2026-03-20T19:36:46+00:00",
+  "OutputDir": "_videos",
+  "Title": "Introducing Migration Assistant for SQL database in Fabric (Preview)",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2026-03-20 20:10:18"
+}
