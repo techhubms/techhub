@@ -70,12 +70,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         // Wait for the scroll trigger element to either appear (more pages) or end-of-content
         // to confirm the initial batch has fully rendered.
         await Page.WaitForConditionAsync(
-            "() => document.getElementById('scroll-trigger') !== null || document.querySelector('.end-of-content') !== null",
-            new PageWaitForFunctionOptions
-            {
-                Timeout = BlazorHelpers.IncreasedTimeout,
-                PollingInterval = BlazorHelpers.DefaultPollingInterval
-            });
+            "() => document.getElementById('scroll-trigger') !== null || document.querySelector('.end-of-content') !== null");
 
         var scrollTriggerExists = await Page.EvaluateAsync<bool>(
             "() => document.getElementById('scroll-trigger') !== null");
@@ -87,14 +82,9 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
             // (e.g., when total items exactly equals the batch size), which replaces the scroll
             // trigger with end-of-content. Accept either outcome: more items OR end-of-content.
             await Page.WaitForConditionAsync(
-                $"() => window.__scrollListenerReady?.['scroll-trigger'] === true && document.getElementById('scroll-trigger') !== null",
-                new PageWaitForFunctionOptions
-                {
-                    Timeout = BlazorHelpers.IncreasedTimeout,
-                    PollingInterval = BlazorHelpers.DefaultPollingInterval
-                });
+                $"() => window.__scrollListenerReady?.['scroll-trigger'] === true && document.getElementById('scroll-trigger') !== null");
 
-            await Page.WaitForFunctionAsync(
+            await Page.WaitForConditionAsync(
                 @"(firstBatch) => {
                     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
                     window.dispatchEvent(new Event('scroll'));
@@ -102,12 +92,7 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
                     const endOfContent = document.querySelector('.end-of-content') !== null;
                     return cardCount > firstBatch || endOfContent;
                 }",
-                firstBatchCount,
-                new PageWaitForFunctionOptions
-                {
-                    Timeout = BlazorHelpers.IncreasedTimeout,
-                    PollingInterval = BlazorHelpers.DefaultPollingInterval
-                });
+                firstBatchCount);
 
             // Verify that something happened (more items loaded or end reached)
             var afterScrollCount = await Page.Locator(".card").CountAsync();

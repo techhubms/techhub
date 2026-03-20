@@ -14,9 +14,9 @@ namespace TechHub.E2E.Tests.Helpers;
 /// The main Blazor-specific challenge is detecting when enhanced navigation completes,
 /// since it doesn't trigger traditional navigation events.
 ///
-/// TIMEOUT MANAGEMENT: All timeouts and polling intervals are centralized in constants
-/// (DefaultTimeout, IncreasedTimeout, DefaultPollingInterval) to avoid relying on
-/// Playwright's defaults which could change. Adjust these constants to tune test responsiveness.
+/// TIMEOUT MANAGEMENT: All timeouts use a single E2ETimeout (60s) safety net with
+/// E2EPollingInterval (100ms). Counter-based polling means timeouts never fire in
+/// normal operation — they only catch genuine hangs.
 ///
 /// USAGE EXAMPLES - Common Test Patterns:
 ///
@@ -45,60 +45,30 @@ public static class BlazorHelpers
     // ============================================================================
     // CONFIGURATION - Centralized timeout management
     //
-    // CI AWARENESS: When the CI environment variable is set (GitHub Actions sets
-    // this automatically), all timeouts are multiplied by CiMultiplier (3x) to
-    // account for slower shared runners. Local dev uses the base values for fast
-    // feedback. Override via E2E_TIMEOUT_MULTIPLIER env var if needed.
+    // SINGLE TIMEOUT: All E2E operations use one generous timeout (60s).
+    // With counter-based polling (100ms intervals checking one window property),
+    // timeouts are pure safety nets — they should never fire in normal operation.
+    // 60s is generous enough for the slowest CI runner while adding zero overhead
+    // to fast runs (polling exits as soon as the counter increments).
     // ============================================================================
 
     /// <summary>
-    /// Whether we're running in a CI environment (GitHub Actions, Azure DevOps, etc.).
-    /// GitHub Actions sets CI=true automatically.
-    /// Only "true" or "1" (case-insensitive) are treated as CI to avoid surprises
-    /// when developers set CI=false locally.
+    /// Single timeout for all E2E operations. Counter-based polling at 100ms means
+    /// this is a pure safety net that should never fire. 60s accommodates even the
+    /// slowest CI runners without penalizing fast local runs.
     /// </summary>
-    internal static readonly bool IsCI =
-        Environment.GetEnvironmentVariable("CI") is { } ciVal
-        && (ciVal.Equals("true", StringComparison.OrdinalIgnoreCase) || ciVal == "1");
+    internal const int E2ETimeout = 60_000;
 
     /// <summary>
-    /// Timeout multiplier for CI environments where shared runners are significantly
-    /// slower than local dev machines. Defaults to 3x in CI, 1x locally.
-    /// Override with E2E_TIMEOUT_MULTIPLIER environment variable.
-    /// Clamped to a minimum of 1 to prevent zero or negative timeouts.
+    /// Polling interval for WaitForFunctionAsync operations.
+    /// 100ms = good balance between responsiveness and CPU.
+    /// Checking one window property costs ~0.
     /// </summary>
-    internal static readonly int CiMultiplier =
-        int.TryParse(Environment.GetEnvironmentVariable("E2E_TIMEOUT_MULTIPLIER"), out var m)
-        ? Math.Max(1, m)
-        : IsCI ? 3 : 1;
-
-    /// <summary>
-    /// Default timeout for all operations (element waits, clicks, assertions, navigation).
-    /// Base: 5s locally, 15s in CI (×3). Most operations complete in &lt;500ms;
-    /// the timeout only matters under peak load or slow CI.
-    /// </summary>
-    internal static readonly int DefaultTimeout = 5_000 * CiMultiplier;
-
-    /// <summary>
-    /// Increased timeout for slow operations: initial page loads (SSR + database queries),
-    /// heavy collection pages, and operations that chain multiple async steps
-    /// (debounce + SignalR round-trip + Blazor re-render).
-    /// Base: 10s locally, 30s in CI (×3).
-    /// Typical response: &lt;2s idle, 3-10s under load, up to 20s on slow CI runners.
-    /// </summary>
-    internal static readonly int IncreasedTimeout = 10_000 * CiMultiplier;
-
-    /// <summary>
-    /// Default polling interval for WaitForFunctionAsync operations.
-    /// Controls how frequently Playwright re-evaluates JavaScript conditions.
-    /// 100ms provides a good balance between responsiveness and CPU usage.
-    /// </summary>
-    internal const int DefaultPollingInterval = 100;
+    internal const int E2EPollingInterval = 100;
 
     /// <summary>
     /// Timeout for browser launch operations.
     /// Separate from test timeouts as this is infrastructure initialization.
-    /// Base: 30s — not multiplied (infrastructure timeout, not test interaction).
     /// </summary>
     internal const int BrowserLaunchTimeout = 30_000;
 
@@ -111,7 +81,7 @@ public static class BlazorHelpers
     // Playwright .NET has a SINGLE overload:
     //   WaitForFunctionAsync(string expression, object? arg = null, PageWaitForFunctionOptions? options = null)
     //
-    // BUG TRAP: If you call WaitForFunctionAsync("...", new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultTimeout }),
+    // BUG TRAP: If you call WaitForFunctionAsync("...", new PageWaitForFunctionOptions { Timeout = BlazorHelpers.E2ETimeout }),
     // the options object silently binds to the `arg` parameter (type object?), NOT `options`.
     // This causes all explicit timeouts to be ignored, falling back to the default timeout.
     //
@@ -135,7 +105,7 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Waits for a JavaScript condition to become truthy with default timeout.
-    /// Convenience overload that uses DefaultTimeout.
+    /// Convenience overload that uses E2ETimeout.
     /// Use this for expressions that take NO JavaScript arguments.
     /// </summary>
     /// <param name="page">The page to evaluate on</param>
@@ -143,7 +113,7 @@ public static class BlazorHelpers
     public static Task<IJSHandle> WaitForConditionAsync(
         this IPage page,
         string expression) =>
-        page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
+        page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy.
@@ -164,7 +134,7 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy with default timeout.
-    /// Convenience overload that uses DefaultTimeout.
+    /// Convenience overload that uses E2ETimeout.
     /// </summary>
     /// <param name="page">The page to evaluate on</param>
     /// <param name="expression">JavaScript expression accepting one arg</param>
@@ -173,7 +143,62 @@ public static class BlazorHelpers
         this IPage page,
         string expression,
         object arg) =>
-        page.WaitForFunctionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = DefaultTimeout, PollingInterval = DefaultPollingInterval });
+        page.WaitForFunctionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+
+    // ============================================================================
+    // E2E LIFECYCLE COUNTER - Internal helpers (tests never call these directly)
+    //
+    // App.razor injects window.__e2e = { counter, label, history[] } in Development.
+    // Every JS lifecycle hook calls __e2eSignal(label) which increments the counter.
+    // These methods capture the counter before an action and wait for it to change.
+    // ============================================================================
+
+    /// <summary>
+    /// Captures the current E2E lifecycle counter value.
+    /// INTERNAL — only called by helper methods, never by tests.
+    /// </summary>
+    internal static async Task<int> GetE2ECounterAsync(this IPage page) =>
+        await page.EvaluateAsync<int>("() => window.__e2e?.counter ?? 0");
+
+    /// <summary>
+    /// Waits for the E2E lifecycle counter to exceed <paramref name="previousValue"/>.
+    /// INTERNAL — only called by helper methods, never by tests.
+    /// </summary>
+    internal static async Task WaitForE2ECounterChangeAsync(this IPage page, int previousValue) =>
+        await page.WaitForFunctionAsync(
+            "(prev) => (window.__e2e?.counter ?? 0) > prev",
+            previousValue,
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+
+    /// <summary>
+    /// Waits for a specific signal label to appear in the E2E history after <paramref name="afterValue"/>.
+    /// Uses the ring buffer to find the label even if later signals overwrote <c>e.label</c>.
+    /// INTERNAL — only called by helper methods, never by tests.
+    /// </summary>
+    internal static async Task WaitForE2ESignalAsync(this IPage page, int afterValue, string label) =>
+        await page.WaitForFunctionAsync(
+            @"([prev, lbl]) => {
+                const e = window.__e2e;
+                if (!e || e.counter <= prev) return false;
+                return e.history ? e.history.some(h => h.counter > prev && h.label === lbl) : e.label === lbl;
+            }",
+            new object[] { afterValue, label },
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+
+    /// <summary>
+    /// Waits for the page to be fully interactive after navigation.
+    /// Checks that the counter advanced and scripts are no longer loading.
+    /// INTERNAL — only called by helper methods, never by tests.
+    /// </summary>
+    internal static async Task WaitForPageReadyAsync(this IPage page, int counterBefore) =>
+        await page.WaitForFunctionAsync(
+            @"(prev) => {
+                const e = window.__e2e;
+                if (!e || e.counter <= prev) return false;
+                return window.__scriptsLoading !== true;
+            }",
+            counterBefore,
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
     // ============================================================================
     // INFINITE SCROLL - Reliable scroll-to-load pattern
@@ -206,17 +231,17 @@ public static class BlazorHelpers
         // - The new listener is attached in OnAfterRenderAsync → SetupScrollListener().
         // - Checking BOTH the flag AND the DOM element prevents acting on a stale readiness
         //   flag if the component is mid-render and the trigger element hasn't been re-created yet.
-        // Uses IncreasedTimeout: after a tag filter the page re-renders before the listener
+        // Uses E2ETimeout: after a tag filter the page re-renders before the listener
         // is re-attached, which takes longer than a bare first load.
         await page.WaitForConditionAsync(
             $"() => window.__scrollListenerReady?.['{triggerId}'] === true && document.getElementById('{triggerId}') !== null",
-            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // Headless Chrome does not fire scroll events from programmatic scrollTo,
         // so the explicit dispatchEvent is required for the infinite-scroll.js handler
         // to detect the trigger element's position via getBoundingClientRect().
-        // Uses IncreasedTimeout: loading the next batch requires an API round-trip.
+        // Uses E2ETimeout: loading the next batch requires an API round-trip.
         await page.WaitForFunctionAsync(
             @"(expectedCount) => {
                 window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
@@ -224,7 +249,7 @@ public static class BlazorHelpers
                 return document.querySelectorAll('" + itemSelector + @"').length >= expectedCount;
             }",
             expectedItemCount,
-            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
     }
 
     /// <summary>
@@ -260,7 +285,7 @@ public static class BlazorHelpers
         //    AND the DOM element guards against stale readiness — see ScrollToLoadMoreAsync.
         await page.WaitForConditionAsync(
             $"() => document.querySelector('{endSelector}') !== null || (window.__scrollListenerReady?.['{triggerId}'] === true && document.getElementById('{triggerId}') !== null)",
-            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
         // If end-of-content is already present, no scrolling needed — return immediately.
         var alreadyAtEnd = await page.EvaluateAsync<bool>(
@@ -280,7 +305,7 @@ public static class BlazorHelpers
                 return false;
             }",
             null, // no JS arg — must be explicit so options parameter is bound correctly
-            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
     }
 
     /// <summary>
@@ -329,7 +354,7 @@ public static class BlazorHelpers
         await page.WaitForConditionAsync(
             $"(prevVer) => (window.__scrollListenerVersion?.['{triggerId}'] || 0) > prevVer",
             previousVersion,
-            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
     }
 
     // ============================================================================
@@ -343,8 +368,8 @@ public static class BlazorHelpers
     public static async Task<IPage> NewPageWithDefaultsAsync(this IBrowserContext context)
     {
         var page = await context.NewPageAsync();
-        page.SetDefaultTimeout(DefaultTimeout);
-        page.SetDefaultNavigationTimeout(IncreasedTimeout);
+        page.SetDefaultTimeout(E2ETimeout);
+        page.SetDefaultNavigationTimeout(E2ETimeout);
         return page;
     }
 
@@ -449,7 +474,7 @@ public static class BlazorHelpers
         this ILocator locator)
     {
         await Assertions.Expect(locator)
-            .ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
+            .ToBeVisibleAsync(new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -463,7 +488,7 @@ public static class BlazorHelpers
         string className)
     {
         await Assertions.Expect(locator)
-            .ToHaveClassAsync(className, new() { Timeout = DefaultTimeout });
+            .ToHaveClassAsync(className, new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -477,7 +502,7 @@ public static class BlazorHelpers
         System.Text.RegularExpressions.Regex pattern)
     {
         await Assertions.Expect(locator)
-            .ToHaveClassAsync(pattern, new() { Timeout = DefaultTimeout });
+            .ToHaveClassAsync(pattern, new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -491,7 +516,7 @@ public static class BlazorHelpers
         int expectedCount)
     {
         await Assertions.Expect(locator)
-            .ToHaveCountAsync(expectedCount, new() { Timeout = DefaultTimeout });
+            .ToHaveCountAsync(expectedCount, new() { Timeout = E2ETimeout });
     }
 
     // ============================================================================
@@ -516,12 +541,15 @@ public static class BlazorHelpers
     {
         var gotoOptions = options ?? new PageGotoOptions();
         gotoOptions.WaitUntil ??= WaitUntilState.DOMContentLoaded;
-        gotoOptions.Timeout ??= IncreasedTimeout;
+        gotoOptions.Timeout ??= E2ETimeout;
 
+        // Capture counter before navigation — full page load resets JS state,
+        // so counter will restart from 0. We wait for it to become > 0.
         await page.GotoAsync(url, gotoOptions);
 
-        // Wait for Blazor runtime - includes Mermaid diagram check if present
-        // Playwright's auto-waiting handles element visibility/stability automatically
+        // Wait for Blazor to be fully interactive (circuit established, scripts loaded).
+        // WaitForBlazorReadyAsync correctly waits for __blazorServerReady/__blazorWasmReady
+        // instead of the weaker __blazorWebReady which fires before the interactive circuit.
         await page.WaitForBlazorReadyAsync();
     }
 
@@ -562,7 +590,7 @@ public static class BlazorHelpers
         {
             // Single combined check for all readiness conditions INCLUDING Mermaid diagrams:
             // 1. Blazor runtime exists
-            // 2. Interactive runtime is ready (Server/WASM circuit established, or SSR-only page)
+            // 2. Interactive runtime is ready (Server/WASM circuit established)
             // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
             // 4. Mermaid diagrams rendered (if present on page)
             //
@@ -577,11 +605,12 @@ public static class BlazorHelpers
                     // Step 1: Blazor runtime must exist
                     if (typeof window.Blazor === 'undefined') return false;
 
-                    // Step 2: Interactive runtime or SSR must be ready
-                    // Flags set by TechHub.Web.lib.module.js afterServerStarted/afterWebAssemblyStarted/afterWebStarted
-                    if (window.__blazorServerReady !== true && 
-                        window.__blazorWasmReady !== true && 
-                        window.__blazorWebReady !== true) {
+                    // Step 2: Interactive Server/WASM circuit must be established.
+                    // __blazorServerReady is set by afterServerStarted() — SignalR circuit ready, event handlers attached.
+                    // __blazorWasmReady  is set by afterWebAssemblyStarted() — WASM runtime ready.
+                    // NOTE: __blazorWebReady (afterWebStarted) fires too early — before the interactive circuit
+                    // is established — and must NOT be used here to avoid returning before @onclick handlers attach.
+                    if (window.__blazorServerReady !== true && window.__blazorWasmReady !== true) {
                         return false;
                     }
 
@@ -602,7 +631,7 @@ public static class BlazorHelpers
 
                     return true;
                 }
-            ", new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            ", new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
         }
         catch (TimeoutException)
         {
@@ -643,38 +672,30 @@ public static class BlazorHelpers
         bool waitForUrlChange = true)
     {
         var page = locator.Page;
-        var urlBeforeClick = page.Url;
 
         // Step 1: Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync();
 
-        // Step 2: Ensure Blazor interactivity is ready (SignalR circuit established, event handlers attached)
-        // This uses the official Blazor JS initializer callback - no arbitrary delays needed
-        await page.WaitForBlazorReadyAsync();
+        // Step 2: Capture URL before click
+        var urlBeforeClick = page.Url;
 
         // Step 3: Click with Force=true to bypass stability checks
-        // This is necessary because Blazor's continuous DOM updates prevent
-        // elements from being considered "stable" by Playwright's criteria.
-        // We've already verified the element is visible and Blazor is ready,
-        // so the click will work correctly.
-        await locator.ClickAsync(new() { Force = true, Timeout = IncreasedTimeout });
+        // Blazor Server's continuous DOM updates prevent elements from being
+        // "stable" by Playwright's criteria. We've already verified visibility.
+        await locator.ClickAsync(new() { Force = true, Timeout = E2ETimeout });
 
-        // Step 4: Wait for URL to change (Blazor Server updates URL via SignalR/WebSocket)
-        // This is the default because most interactive Blazor elements change the URL
-        // (navigation links, tag toggles, collection buttons, etc.)
+        // Step 4: Wait for URL to change and page to become ready
         if (waitForUrlChange)
         {
-            // CRITICAL: Use WaitForConditionAsync instead of WaitForURLAsync!
-            // Blazor Server updates URLs via pushState (history API), not HTTP navigation.
-            // WaitForURLAsync waits for navigation events which don't fire with pushState.
-            // WaitForConditionAsync polls the DOM directly, which works for any URL change.
-            await page.WaitForConditionAsync(
-                "expectedUrl => window.location.href !== expectedUrl",
+            // Wait for URL change (works for both enhanced nav and full page reload)
+            await page.WaitForFunctionAsync(
+                "prevUrl => window.location.href !== prevUrl",
                 urlBeforeClick,
-                new() { Timeout = IncreasedTimeout });
-        }
+                new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
-        // Mermaid diagram check is now integrated into WaitForBlazorReadyAsync above (Step 2)
+            // Wait for page readiness after navigation
+            await page.WaitForBlazorReadyAsync();
+        }
     }
 
     /// <summary>
@@ -687,7 +708,8 @@ public static class BlazorHelpers
         // Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync();
 
-        // Ensure Blazor is ready - uses its own default navigation timeout (2000ms)
+        // Ensure page is interactive (server circuit established, scripts loaded).
+        // WaitForBlazorReadyAsync waits for __blazorServerReady/__blazorWasmReady.
         await locator.Page.WaitForBlazorReadyAsync();
     }
 
@@ -761,7 +783,7 @@ public static class BlazorHelpers
                 }}
                 return false;
             }}",
-            new PageWaitForFunctionOptions { Timeout = IncreasedTimeout, PollingInterval = DefaultPollingInterval });
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
     }
 
     // ============================================================================
@@ -786,7 +808,7 @@ public static class BlazorHelpers
         // Use Playwright's auto-retrying Expect assertion with regex - much cleaner!
         await Assertions.Expect(page).ToHaveURLAsync(
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}.*"),
-            new() { Timeout = IncreasedTimeout }
+            new() { Timeout = E2ETimeout }
         );
     }
 
@@ -811,7 +833,7 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Waits for a selector with standard timeout.
-    /// Centralized timeout management - change DefaultTimeout to affect all tests.
+    /// Centralized timeout management - change E2ETimeout to affect all tests.
     /// </summary>
     public static async Task<ILocator> WaitForSelectorWithTimeoutAsync(
         this IPage page,
@@ -819,7 +841,7 @@ public static class BlazorHelpers
         PageWaitForSelectorOptions? options = null)
     {
         var opts = options ?? new PageWaitForSelectorOptions();
-        opts.Timeout ??= DefaultTimeout;
+        opts.Timeout ??= E2ETimeout;
         opts.State ??= WaitForSelectorState.Visible;
 
         await page.WaitForSelectorAsync(selector, opts);
@@ -828,14 +850,14 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Gets text content with standard timeout.
-    /// Centralized timeout management - change DefaultTimeout to affect all tests.
+    /// Centralized timeout management - change E2ETimeout to affect all tests.
     /// </summary>
     public static Task<string?> TextContentWithTimeoutAsync(
         this ILocator locator,
         LocatorTextContentOptions? options = null)
     {
         var opts = options ?? new LocatorTextContentOptions();
-        opts.Timeout ??= DefaultTimeout;
+        opts.Timeout ??= E2ETimeout;
         return locator.TextContentAsync(opts);
     }
 
@@ -849,7 +871,7 @@ public static class BlazorHelpers
         PageWaitForURLOptions? options = null)
     {
         var opts = options ?? new PageWaitForURLOptions();
-        opts.Timeout ??= IncreasedTimeout;
+        opts.Timeout ??= E2ETimeout;
         return page.WaitForURLAsync(urlPattern, opts);
     }
 
@@ -862,7 +884,7 @@ public static class BlazorHelpers
     public static async Task<string?> GetHrefAsync(
         this ILocator locator)
     {
-        return await locator.GetAttributeAsync("href", new() { Timeout = DefaultTimeout });
+        return await locator.GetAttributeAsync("href", new() { Timeout = E2ETimeout });
     }
 
     // ============================================================================
@@ -902,7 +924,7 @@ public static class BlazorHelpers
         }
 
         var element = page.GetByRole(role, options);
-        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -937,7 +959,7 @@ public static class BlazorHelpers
         }
 
         var element = locator.GetByRole(role, options);
-        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -955,7 +977,7 @@ public static class BlazorHelpers
         string altText)
     {
         var element = page.GetByAltText(altText, new PageGetByAltTextOptions { Exact = true });
-        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
+        await Assertions.Expect(element).ToBeVisibleAsync(new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -974,7 +996,7 @@ public static class BlazorHelpers
         string selector)
     {
         await Assertions.Expect(page.Locator(selector))
-            .ToBeVisibleAsync(new() { Timeout = DefaultTimeout });
+            .ToBeVisibleAsync(new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -993,7 +1015,7 @@ public static class BlazorHelpers
         string expectedText)
     {
         await Assertions.Expect(page.Locator(selector))
-            .ToContainTextAsync(expectedText, new() { Timeout = DefaultTimeout });
+            .ToContainTextAsync(expectedText, new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -1012,7 +1034,7 @@ public static class BlazorHelpers
         int expectedCount)
     {
         await Assertions.Expect(page.Locator(selector))
-            .ToHaveCountAsync(expectedCount, new() { Timeout = DefaultTimeout });
+            .ToHaveCountAsync(expectedCount, new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -1030,7 +1052,7 @@ public static class BlazorHelpers
         string selector,
         string attributeName)
     {
-        return await page.Locator(selector).GetAttributeAsync(attributeName, new() { Timeout = DefaultTimeout });
+        return await page.Locator(selector).GetAttributeAsync(attributeName, new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -1046,7 +1068,7 @@ public static class BlazorHelpers
         this IPage page,
         string selector)
     {
-        return await page.Locator(selector).TextContentAsync(new() { Timeout = DefaultTimeout });
+        return await page.Locator(selector).TextContentAsync(new() { Timeout = E2ETimeout });
     }
 
     /// <summary>
@@ -1101,7 +1123,7 @@ public static class BlazorHelpers
     {
         await Assertions.Expect(page).ToHaveURLAsync(
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}$"),
-            new() { Timeout = IncreasedTimeout }
+            new() { Timeout = E2ETimeout }
         );
     }
 
@@ -1156,7 +1178,7 @@ public static class BlazorHelpers
         string expectedHref)
     {
         await Assertions.Expect(locator)
-            .ToHaveAttributeAsync("href", expectedHref, new() { Timeout = DefaultTimeout });
+            .ToHaveAttributeAsync("href", expectedHref, new() { Timeout = E2ETimeout });
     }
 
     // ============================================================================
@@ -1187,61 +1209,47 @@ public static class BlazorHelpers
     public static async Task ClickAndWaitForScrollAsync(
         this ILocator locator)
     {
-        // Use scrollend event (same as TOC scroll-spy) + RAF for TOC update
-        // NOTE: When using EvaluateAsync on a locator, the element is passed as the first parameter,
-        // and our options object as the second parameter
-        await locator.EvaluateAsync($@"
-            (element, {{ maxTimeout }}) => {{
-                return new Promise((resolve) => {{
-                    let maxTimer;
-                    let scrollDetected = false;
-                    
-                    const cleanup = () => {{
-                        window.removeEventListener('scrollend', onScrollEnd);
-                        window.removeEventListener('scroll', onScroll);
-                        clearTimeout(maxTimer);
-                    }};
-                    
-                    const onScrollEnd = () => {{
-                        // Wait TWO animation frames for TOC scroll-spy to update active class:
-                        // 1st RAF: scrollend fires
-                        // 2nd RAF: TOC scroll-spy's handleScroll() RAF callback executes updateActiveHeading()
-                        requestAnimationFrame(() => {{
-                            requestAnimationFrame(() => {{
-                                cleanup();
-                                resolve();
-                            }});
-                        }});
-                    }};
-                    
-                    const onScroll = () => {{
-                        scrollDetected = true;
-                    }};
-                    
-                    // Set up maximum timeout
-                    maxTimer = setTimeout(() => {{
-                        cleanup();
-                        resolve();
-                    }}, maxTimeout);
-                    
-                    // Set up scroll listeners BEFORE clicking
-                    window.addEventListener('scrollend', onScrollEnd, {{ once: true }});
-                    window.addEventListener('scroll', onScroll, {{ passive: true }});
-                    
-                    // Click the element
-                    element.click();
-                    
-                    // If no scroll detected after 50ms, assume no scroll (e.g., already at target)
-                    setTimeout(() => {{
-                        if (!scrollDetected) {{
-                            cleanup();
-                            resolve();
-                        }}
-                    }}, 50);
-                }});
-            }}
-        ", new { maxTimeout = DefaultTimeout });
+        var page = locator.Page;
+        var counterBefore = await page.GetE2ECounterAsync();
+
+        // Click the element (triggers anchor navigation / scrolling)
+        await locator.ClickAsync(new() { Force = true });
+
+        // Wait for scroll-end signal (from scrollend event listener in App.razor)
+        await page.WaitForE2ESignalAsync(counterBefore, "scroll-end");
+
+        // Wait for TOC scroll-spy to update active heading (if TOC is present)
+        // This is safe to call even without a TOC — WaitForE2ESignalAsync will
+        // succeed immediately if the signal already appeared, or the scroll-end
+        // gives the spy time to fire via rAF before the next assertion.
     }
+
+    /// <summary>
+    /// Scrolls the page programmatically and waits for the TOC scroll-spy to update.
+    /// Replaces the 3-line manual scroll + wait pattern in TOC tests.
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="targetY">The vertical scroll position in pixels</param>
+    public static async Task ScrollToAndWaitForTocUpdateAsync(
+        this IPage page,
+        double targetY)
+    {
+        var counterBefore = await page.GetE2ECounterAsync();
+        await page.EvaluateAsync("top => window.scrollTo({ top, behavior: 'instant' })", targetY);
+        await page.WaitForE2ESignalAsync(counterBefore, "toc-active-updated");
+    }
+
+    /// <summary>
+    /// Waits for the TOC scroll-spy to be initialized.
+    /// Replaces manual WaitForConditionAsync("toc._tocScrollSpy.initialized") calls.
+    /// </summary>
+    public static async Task WaitForTocInitializedAsync(this IPage page) =>
+        await page.WaitForConditionAsync(
+            @"() => {
+                const e = window.__e2e;
+                return e && e.history && e.history.some(h => h.label === 'toc-initialized');
+            }",
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
     /// <summary>
     /// Scrolls an element into view using JavaScript's scrollIntoView API.

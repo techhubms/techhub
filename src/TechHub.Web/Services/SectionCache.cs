@@ -37,7 +37,7 @@ public class SectionCache
 /// </summary>
 public class SectionCacheRefreshService : BackgroundService
 {
-    private static readonly TimeSpan RefreshInterval = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan _refreshInterval = TimeSpan.FromMinutes(5);
 
     private readonly IServiceScopeFactory _scopeFactory;
     private readonly SectionCache _sectionCache;
@@ -57,7 +57,7 @@ public class SectionCacheRefreshService : BackgroundService
     {
         while (!stoppingToken.IsCancellationRequested)
         {
-            await Task.Delay(RefreshInterval, stoppingToken);
+            await Task.Delay(_refreshInterval, stoppingToken);
 
             try
             {
@@ -81,11 +81,11 @@ public class SectionCacheRefreshService : BackgroundService
             }
             catch (HttpRequestException ex)
             {
-                _logger.LogWarning(ex, "Failed to refresh SectionCache, will retry in {Interval}", RefreshInterval);
+                _logger.LogWarning(ex, "Failed to refresh SectionCache, will retry in {Interval}", _refreshInterval);
             }
             catch (TaskCanceledException ex) when (!stoppingToken.IsCancellationRequested)
             {
-                _logger.LogWarning(ex, "SectionCache refresh timed out, will retry in {Interval}", RefreshInterval);
+                _logger.LogWarning(ex, "SectionCache refresh timed out, will retry in {Interval}", _refreshInterval);
             }
         }
     }

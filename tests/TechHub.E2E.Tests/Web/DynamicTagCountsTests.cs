@@ -153,8 +153,7 @@ public class DynamicTagCountsTests : PlaywrightTestBase
                     if (tag) tag.click();
                 }
                 return false;
-            }",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            }");
         await WaitForTagCloudReadyAsync();
 
         // Get counts with one tag selected

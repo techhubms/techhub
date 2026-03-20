@@ -149,6 +149,7 @@ export async function initMermaid() {
         // Render diagrams every time (for Blazor navigation)
         try {
             await mermaid.run({ nodes: mermaidElements });
+            if (typeof window.__e2eSignal === 'function') window.__e2eSignal('mermaid-rendered');
 
             // Add expand buttons to each diagram
             mermaidElements.forEach(element => {
@@ -332,9 +333,11 @@ window.initCustomPages = initCustomPages;
 window.markScriptsLoading = function() {
     window.__scriptsReady = false;
     window.__scriptsLoading = true;
+    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-loading');
 };
 
 window.markScriptsReady = function() {
     window.__scriptsReady = true;
     window.__scriptsLoading = false;
+    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-ready');
 };
