@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-03-18 20:13:58",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "PubDate": "2026-03-18T19:46:44+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "Description": "When Copilot coding agent writes code, it automatically runs your project’s tests and linter. It also runs GitHub’s security and quality validation tools, including CodeQL, the GitHub Advisory Database, secret…\n\nThe post [Configure Copilot coding agent’s validation tools](https://github.blog/changelog/2026-03-18-configure-copilot-coding-agents-validation-tools) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-03-18-configure-copilot-coding-agents-validation-tools",
+  "Author": "Allison",
+  "EnhancedContent": "When [Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) writes code, it automatically runs your project’s tests and linter. It also runs GitHub’s security and quality validation tools, including [CodeQL](https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql), the [GitHub Advisory Database](https://docs.github.com/code-security/security-advisories/working-with-global-security-advisories-from-the-github-advisory-database/about-the-github-advisory-database), [secret scanning](https://docs.github.com/code-security/secret-scanning/introduction/about-secret-scanning), and [Copilot code review](https://docs.github.com/copilot/using-github-copilot/code-review/using-copilot-code-review). If any problems are found, Copilot attempts to resolve them before stopping work and requesting review.\n\nThese validation tools are free of charge, enabled by default, and don’t require a GitHub Advanced Security license. However, in some cases, teams may want to disable specific checks (e.g., if CodeQL analysis takes a long time for a particular project).\n\nRepository admins can now configure which validation tools the coding agent runs from the **Copilot -&gt; Coding agent** section in repository settings.",
+  "FeedName": "The GitHub Blog",
+  "Title": "Configure Copilot coding agent’s validation tools"
+}

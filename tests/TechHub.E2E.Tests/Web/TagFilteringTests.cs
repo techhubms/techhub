@@ -116,9 +116,14 @@ public class TagFilteringTests : PlaywrightTestBase
 
         await Assertions.Expect(selectedTagButton).ToBeVisibleAsync();
 
-        // Verify visual styling (should have different background/border color)
-        var backgroundColor = await selectedTagButton.EvaluateAsync<string>("el => window.getComputedStyle(el).backgroundColor");
-        backgroundColor.Should().NotBeNullOrEmpty("Selected tag should have a background color");
+        // Verify selected tag has a different background-color than unselected tags,
+        // confirming the visual distinction. The .selected class applies
+        // var(--color-purple-dark) vs var(--color-bg-default) for unselected.
+        var unselectedTag = Page.Locator(".tag-cloud-item:not(.selected)").First;
+        var selectedBg = await selectedTagButton.EvaluateAsync<string>("el => getComputedStyle(el).backgroundColor");
+        var unselectedBg = await unselectedTag.EvaluateAsync<string>("el => getComputedStyle(el).backgroundColor");
+        selectedBg.Should().NotBeNullOrEmpty("selected tag should have a computed background-color");
+        selectedBg.Should().NotBe(unselectedBg, "selected tag should be visually distinct from unselected tags");
     }
 
     [Fact]

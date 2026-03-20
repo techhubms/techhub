@@ -143,9 +143,9 @@ public class NavHeaderTests : BunitContext
         var subItems = cut.FindAll(".mobile-menu-sub-items a");
         subItems.Count.Should().BeGreaterThan(0);
 
-        // Should contain "All" + regular collections + custom pages
+        // Should contain "Browse" + regular collections + custom pages
         var subItemTexts = subItems.Select(s => s.TextContent.Trim()).ToList();
-        subItemTexts.Should().Contain("All");
+        subItemTexts.Should().Contain("Browse");
         subItemTexts.Should().Contain("News");
         subItemTexts.Should().Contain("Blogs");
         subItemTexts.Should().Contain("Features");

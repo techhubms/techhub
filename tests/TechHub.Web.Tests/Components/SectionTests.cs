@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using Moq;
 using TechHub.Core.Models;
 using TechHub.Web.Components.Pages;
@@ -33,15 +32,44 @@ public class SectionTests : BunitContext
         var config = new ConfigurationBuilder().Build();
         Services.AddScoped<BrandingService>(_ => new BrandingService(httpContextAccessor, config));
     }
+
     [Fact]
     public void Section_RendersWithPageStructure()
     {
         // Arrange
-        var mockApiClient = new Mock<TechHubApiClient>(
-            MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("https://localhost") },
-            Mock.Of<ILogger<TechHubApiClient>>()
-        );
+        var mockApiClient = new Mock<ITechHubApiClient>();
+
+        mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<bool>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CollectionItemsResponse([], 0));
+
+        mockApiClient
+            .Setup(x => x.GetTagCloudAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync([]);
 
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
@@ -58,41 +86,7 @@ public class SectionTests : BunitContext
             )
         ]);
 
-        mockApiClient
-            .Setup(x => x.GetCollectionItemsAsync(
-                It.IsAny<string>(),
-                It.IsAny<string>(),
-                It.IsAny<int?>(),
-                It.IsAny<int?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<int?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<bool>(),
-                It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new CollectionItemsResponse([], 0));
-
-        // Mock ITechHubApiClient for SidebarTagCloud component
-        var mockApiInterface = new Mock<ITechHubApiClient>();
-        mockApiInterface
-            .Setup(x => x.GetTagCloudAsync(
-                It.IsAny<string>(),
-                It.IsAny<string>(),
-                It.IsAny<int?>(),
-                It.IsAny<int?>(),
-                It.IsAny<int?>(),
-                It.IsAny<List<string>?>(),
-                It.IsAny<List<string>?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<CancellationToken>()))
-            .ReturnsAsync([]);
-
         Services.AddSingleton(mockApiClient.Object);
-        Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
         AddBunitPersistentComponentState();
@@ -126,11 +120,39 @@ public class SectionTests : BunitContext
     public void Section_DisplaysContent_WhenLoaded()
     {
         // Arrange
-        var mockApiClient = new Mock<TechHubApiClient>(
-            MockBehavior.Loose,
-            new HttpClient { BaseAddress = new Uri("https://localhost") },
-            Mock.Of<ILogger<TechHubApiClient>>()
-        );
+        var mockApiClient = new Mock<ITechHubApiClient>();
+
+        mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<int?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<bool>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CollectionItemsResponse([], 0));
+
+        mockApiClient
+            .Setup(x => x.GetTagCloudAsync(
+                It.IsAny<string>(),
+                It.IsAny<string>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<int?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<List<string>?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync([]);
 
         var sectionCache = new SectionCache();
         sectionCache.Initialize(
@@ -147,41 +169,7 @@ public class SectionTests : BunitContext
             )
         ]);
 
-        mockApiClient
-            .Setup(x => x.GetCollectionItemsAsync(
-                It.IsAny<string>(),
-                It.IsAny<string>(),
-                It.IsAny<int?>(),
-                It.IsAny<int?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<int?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<bool>(),
-                It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new CollectionItemsResponse([], 0));
-
-        // Mock ITechHubApiClient for SidebarTagCloud component
-        var mockApiInterface = new Mock<ITechHubApiClient>();
-        mockApiInterface
-            .Setup(x => x.GetTagCloudAsync(
-                It.IsAny<string>(),
-                It.IsAny<string>(),
-                It.IsAny<int?>(),
-                It.IsAny<int?>(),
-                It.IsAny<int?>(),
-                It.IsAny<List<string>?>(),
-                It.IsAny<List<string>?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<string?>(),
-                It.IsAny<CancellationToken>()))
-            .ReturnsAsync([]);
-
         Services.AddSingleton(mockApiClient.Object);
-        Services.AddSingleton(mockApiInterface.Object);
         Services.AddSingleton(Mock.Of<Microsoft.JSInterop.IJSRuntime>());
         Services.AddSingleton(sectionCache);
         AddBunitPersistentComponentState();

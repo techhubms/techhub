@@ -1,0 +1,103 @@
+/* ============================================================================
+   GitHub Copilot Discord Page Styles
+   ============================================================================ */
+
+.discord-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.discord-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
+}
+
+.discord-logo {
+  color: #5865F2;
+  flex-shrink: 0;
+}
+
+.discord-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+
+.discord-tagline {
+  margin: var(--spacing-1) 0 0 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.discord-content {
+  font-size: var(--font-size-lg);
+  line-height: 1.7;
+}
+
+.discord-content p {
+  margin-bottom: var(--spacing-3);
+}
+
+.discord-intro {
+  font-size: var(--font-size-xl);
+}
+
+.discord-cta {
+  margin: var(--spacing-5) 0;
+  text-align: center;
+}
+
+.discord-join-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-6);
+  background: #5865F2;
+  color: #fff;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--duration-fast) var(--easing-ease);
+  box-shadow: 0 2px 8px rgba(88, 101, 242, 0.3);
+}
+
+@media (hover: hover) {
+  .discord-join-btn:hover {
+    background: #4752C4;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(88, 101, 242, 0.4);
+    transform: translateY(-1px);
+  }
+}
+
+/* Members as subtle inline text */
+.discord-members {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  line-height: 1.8;
+}
+
+.discord-members strong {
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.discord-member-title {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+@media (max-width: 768px) {
+  .discord-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .discord-header h1 {
+    font-size: var(--font-size-xl);
+  }
+}

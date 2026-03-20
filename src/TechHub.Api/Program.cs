@@ -141,6 +141,7 @@ app.MapContentEndpoints();
 app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
 app.MapSitemapEndpoints();
+app.MapAuthorEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();

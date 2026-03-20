@@ -198,6 +198,44 @@ Describe "Invoke-AiApiCall" {
             $errorObject.Type | Should -Be "ResponseParseError"
             $errorObject.ResponseContent | Should -Be 'invalid json response'
         }
+        
+        It "Should return RequestEntityTooLarge error for 400 with context_length_exceeded" {
+            Mock Get-WebResponseDetailsFromException { 
+                return [PSCustomObject]@{
+                    StatusCode = 400
+                    StatusDescription = 'Bad Request'
+                    Headers = @{}
+                    ResponseContent = '{"error": {"message": "This model''s maximum context length is 1048576 tokens. However, your messages resulted in 1200000 tokens.", "type": "invalid_request_error", "code": "context_length_exceeded"}}'
+                }
+            }
+            
+            Mock Invoke-WebRequest { throw "Context length exceeded" }
+            
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
+            
+            $errorObject = $result | ConvertFrom-Json
+            $errorObject.Error | Should -Be $true
+            $errorObject.Type | Should -Be "RequestEntityTooLarge"
+        }
+        
+        It "Should return RequestEntityTooLarge error for 400 with maximum context length message" {
+            Mock Get-WebResponseDetailsFromException { 
+                return [PSCustomObject]@{
+                    StatusCode = 400
+                    StatusDescription = 'Bad Request'
+                    Headers = @{}
+                    ResponseContent = '{"error": {"message": "Request exceeds maximum context length for this model"}}'
+                }
+            }
+            
+            Mock Invoke-WebRequest { throw "Too long" }
+            
+            $result = Invoke-AiApiCall -Token $TestToken -Environment $TestEnvironment -SystemMessage $TestSystemMessage -UserMessage $TestUserMessage
+            
+            $errorObject = $result | ConvertFrom-Json
+            $errorObject.Error | Should -Be $true
+            $errorObject.Type | Should -Be "RequestEntityTooLarge"
+        }
     }
     
     Context "Retry Logic" {

@@ -8,6 +8,51 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 ## Workflows
 
+### PR Preview Environments
+
+**File**: [.github/workflows/pr-preview.yml](../.github/workflows/pr-preview.yml)
+
+**Triggers**:
+
+- Pull requests to `main` branch (opened, synchronized, reopened, or closed)
+
+When a pull request is opened or updated, a dedicated preview environment is automatically
+deployed to the **staging Azure Container Apps Environment**. Each PR gets its own Container Apps
+(`ca-techhub-api-pr-{number}` and `ca-techhub-web-pr-{number}`) without touching the permanent
+staging application.
+
+**On PR opened / new commit pushed**:
+
+1. Docker images are built and pushed to ACR, tagged `pr-{number}-{timestamp}`
+2. PR-specific Container Apps are created or updated in the staging environment
+3. A comment is posted (or updated) on the PR with the direct Container Apps URL
+
+**On PR closed**:
+
+1. The PR-specific Container Apps are deleted
+2. The PR comment is updated to confirm the environment has been removed
+
+**Key properties of PR preview environments**:
+
+- Reuse staging infrastructure (Container Apps Environment, VNet, PostgreSQL, monitoring)
+- Accessible via the default Azure Container Apps URL (no custom domain)
+- Multiple PRs run in parallel, each with a unique URL
+- Concurrency per PR: new pushes cancel in-progress deploys for the same PR
+- Images tagged with `pr-{number}-{timestamp}` for easy identification
+
+**Script**: `scripts/Deploy-PrPreview.ps1` — can also be run locally:
+
+```powershell
+# Deploy PR #42 preview environment (Azure login required)
+$env:POSTGRES_ADMIN_PASSWORD = "<staging-password>"
+./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-dev"
+
+# Remove the PR #42 preview environment
+./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action teardown
+```
+
+---
+
 ### Unified CI/CD Pipeline
 
 **File**: [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml)

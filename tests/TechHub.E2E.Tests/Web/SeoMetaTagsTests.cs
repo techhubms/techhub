@@ -1,3 +1,4 @@
+using System.Text.Json;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -21,6 +22,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -33,6 +35,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -50,10 +53,11 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
-        twitterCard.Should().Be("summary");
+        twitterCard.Should().Be("summary_large_image");
 
         var twitterTitle = await GetMetaContentAsync("name", "twitter:title");
         twitterTitle.Should().NotBeNullOrEmpty();
@@ -64,6 +68,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/");
+        await WaitForSeoMetaTagsAsync("/");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("WebSite");
@@ -79,6 +84,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var description = await GetMetaContentAsync("name", "description");
@@ -91,6 +97,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var ogType = await GetMetaContentAsync("property", "og:type");
@@ -102,6 +109,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("CollectionPage");
@@ -113,6 +121,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         // Act
         await Page.GotoRelativeAsync("/github-copilot");
+        await WaitForSeoMetaTagsAsync("/github-copilot");
 
         // Assert
         var jsonLd = await GetJsonLdContentAsync("BreadcrumbList");
@@ -152,10 +161,23 @@ public class SeoMetaTagsTests : PlaywrightTestBase
         // Act
         await NavigateToFirstInternalContentAsync("/all/roundups");
 
-        // Assert
-        var pageTitle = await Page.TitleAsync();
-        var ogTitle = await GetMetaContentAsync("property", "og:title");
+        // Assert - Read og:title and document.title atomically in a single JS evaluation.
+        // Reading them in two separate calls (GetMetaContentAsync then TitleAsync) creates a
+        // window where Blazor HeadContent rehydration can temporarily clear og:title between
+        // the two reads, making the second read return null even though the first succeeded.
+        // WaitForFunctionAsync retries until og:title is non-null, then returns both values
+        // atomically from the same JS execution context — guaranteed consistent.
+        var handle = await Page.WaitForConditionAsync(
+            @"() => {
+                const ogTitleEl = document.head.querySelector(""meta[property='og:title']"");
+                const ogTitle = ogTitleEl?.content ?? null;
+                if (!ogTitle) return null;
+                return { OgTitle: ogTitle, PageTitle: document.title };
+            }");
+        var result = await handle.JsonValueAsync<JsonElement>();
 
+        var ogTitle = result.GetProperty("OgTitle").GetString();
+        var pageTitle = result.GetProperty("PageTitle").GetString();
         ogTitle.Should().NotBeNullOrEmpty();
         pageTitle.Should().Contain(ogTitle!, "og:title should match the page title");
     }
@@ -190,7 +212,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
 
         // Assert
         var twitterCard = await GetMetaContentAsync("name", "twitter:card");
-        twitterCard.Should().Be("summary");
+        twitterCard.Should().Be("summary_large_image");
     }
 
     [Fact]
@@ -208,30 +230,81 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     // Helpers
     // ────────────────────────────────────────────────────────────────────────
 
+    /// <summary>
+    /// Waits until ALL essential SEO tags are simultaneously present for the given page path.
+    ///
+    /// Checks page-path, description, og:title, and a JSON-LD script together in a single
+    /// JavaScript evaluation. This prevents the method from returning during a transient
+    /// state caused by Blazor HeadContent rehydration: after the Blazor circuit connects,
+    /// HeadContent is briefly cleared and then re-rendered. Checking only page-path could
+    /// succeed during the initial SSR phase, allowing subsequent reads to catch the
+    /// rehydration gap. Requiring all essential tags to be simultaneously present ensures
+    /// the method only returns once HeadContent is fully and stably rendered.
+    ///
+    /// Uses E2ETimeout because this wait must survive SSR + database query + Blazor
+    /// hydration on slow CI runners, which can take up to 20s per the BlazorHelpers docs.
+    /// </summary>
+    private Task WaitForSeoMetaTagsAsync(string expectedPath) =>
+        Page.WaitForConditionAsync(
+            @"(path) => {
+                const h = document.head;
+                const pagePath = h.querySelector(""meta[name='page-path']"");
+                const description = h.querySelector(""meta[name='description']"");
+                const ogTitle = h.querySelector(""meta[property='og:title']"");
+                const jsonLd = h.querySelector(""script[type='application/ld+json']"");
+                return pagePath?.content === path &&
+                       description?.content?.length > 0 &&
+                       ogTitle?.content?.length > 0 &&
+                       jsonLd !== null;
+            }",
+            expectedPath);
+
+    /// <summary>
+    /// Reads a meta tag's content attribute, retrying through Blazor HeadContent rehydration gaps.
+    /// Returns null only if the tag is genuinely absent after the full timeout period.
+    /// </summary>
     private async Task<string?> GetMetaContentAsync(string attributeName, string attributeValue)
     {
-        var content = await Page.EvaluateAsync<string?>(
-            @"([attrName, attrValue]) => {
-                const el = document.head.querySelector(`meta[${attrName}='${attrValue}']`);
-                return el ? el.getAttribute('content') : null;
-            }",
-            new[] { attributeName, attributeValue });
-        return content;
+        try
+        {
+            var handle = await Page.WaitForConditionAsync(
+                @"([attrName, attrValue]) => {
+                    const el = document.head.querySelector(`meta[${attrName}='${attrValue}']`);
+                    return el ? el.getAttribute('content') : null;
+                }",
+                new[] { attributeName, attributeValue });
+            return await handle.JsonValueAsync<string?>();
+        }
+        catch (TimeoutException)
+        {
+            return null;
+        }
     }
 
+    /// <summary>
+    /// Reads a JSON-LD script's content by @type, retrying through Blazor HeadContent rehydration gaps.
+    /// Returns null only if the schema type is genuinely absent after the full timeout period.
+    /// </summary>
     private async Task<string?> GetJsonLdContentAsync(string schemaType)
     {
-        var content = await Page.EvaluateAsync<string?>(
-            @"(type) => {
-                const scripts = Array.from(document.head.querySelectorAll('script[type=""application/ld+json""]'));
-                const match = scripts.find(s => {
-                    try { return JSON.parse(s.textContent)['@type'] === type; }
-                    catch { return false; }
-                });
-                return match ? match.textContent : null;
-            }",
-            schemaType);
-        return content;
+        try
+        {
+            var handle = await Page.WaitForConditionAsync(
+                @"(type) => {
+                    const scripts = Array.from(document.head.querySelectorAll('script[type=""application/ld+json""]'));
+                    const match = scripts.find(s => {
+                        try { return JSON.parse(s.textContent)['@type'] === type; }
+                        catch { return false; }
+                    });
+                    return match ? match.textContent : null;
+                }",
+                schemaType);
+            return await handle.JsonValueAsync<string?>();
+        }
+        catch (TimeoutException)
+        {
+            return null;
+        }
     }
 
     /// <summary>
@@ -263,8 +336,10 @@ public class SeoMetaTagsTests : PlaywrightTestBase
 
         await Page.GotoAndWaitForBlazorAsync($"{BlazorHelpers.BaseUrl}{firstCardHref}");
 
-        // Wait for the article content to be visible before asserting head content
-        await Page.AssertElementVisibleBySelectorAsync("main article");
+        // Wait for the DETAIL page's SeoMetaTags to render by checking page-path.
+        // The page-path meta is the first element in the HeadContent block — when it
+        // matches the detail page's path, all other SEO tags are guaranteed present.
+        await WaitForSeoMetaTagsAsync(firstCardHref!);
 
         return firstCardHref!;
     }

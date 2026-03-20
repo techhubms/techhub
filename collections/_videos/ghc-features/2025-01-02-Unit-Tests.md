@@ -1,7 +1,7 @@
-﻿---
+---
 external_url: https://youtu.be/RDpAJAjXkqo
 title: Unit Tests
-author: Randy Pagels
+author: randy.pagels@xebia.com (Randy Pagels)
 date: 2025-01-02 11:05:46 +00:00
 ghes_support: true
 plans:

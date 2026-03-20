@@ -48,30 +48,15 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
     [Fact]
     public async Task InfiniteScroll_WithTagFilter_MaintainsFilterThroughPagination()
     {
-        // Arrange - tag filter uses lowercase in URL
-        const string TagDisplay = "Copilot Chat"; // Display text on button
-        // URL may encode spaces as %20 or + depending on browser/framework behavior.
-        // Use only the prefix "copilot" for resilient matching; full value is verified later.
+        // Arrange - Navigate directly with tag filter applied in the URL.
+        // This tests that infinite scroll pagination preserves the tag filter,
+        // which works identically regardless of how the filter was applied.
+        // Tag click interaction is covered by TagFilteringTests.
+        const string Tag = "copilot chat";
         const string TagUrlPrefix = "tags=copilot";
 
-        // Act - Navigate and apply tag filter
-        await Page.GotoRelativeAsync("/github-copilot/news");
-
-        // Wait for initial load (both cards AND tag cloud must be ready)
-        await Page.WaitForConditionAsync(
-            "() => document.querySelectorAll('.card').length > 0");
-
-        // Apply tag filter — wait for the tag button to be visible before clicking.
-        // The tag cloud loads asynchronously from the API and may still be showing
-        // skeleton placeholders when cards have already rendered. Uses centralized
-        // DefaultTimeout (5s locally, 15s in CI via CiMultiplier) for the tag cloud API call.
-        var tagButton = Page.Locator($"button.tag-cloud-item:has-text('{TagDisplay}')").First;
-        await tagButton.AssertElementVisibleAsync();
-        await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for filter to apply and content to load.
-        // Use the prefix "tags=copilot" to be resilient to space encoding (%20 vs +).
-        await Page.WaitForBlazorUrlContainsAsync(TagUrlPrefix);
+        // Act - Navigate directly with the tag filter pre-applied
+        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Uri.EscapeDataString(Tag)}");
 
         // Wait for filtered content to render (cards should appear)
         await Page.WaitForConditionAsync(
@@ -82,22 +67,39 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         firstBatchCount.Should().BeGreaterThan(0, "should have items after filtering");
 
         // Only test infinite scroll if there's more content available.
-        // Wait for the scroll listener to be fully re-attached after the tag filter
-        // re-render before checking, to avoid a false positive from the stale listener.
-        var scrollListenerReady = await Page.EvaluateAsync<bool>(
-            "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
-        var scrollTrigger = Page.Locator("#scroll-trigger");
-        var initialScrollTriggerExists = scrollListenerReady && await scrollTrigger.CountAsync() > 0;
+        // Wait for the scroll trigger element to either appear (more pages) or end-of-content
+        // to confirm the initial batch has fully rendered.
+        await Page.WaitForConditionAsync(
+            "() => document.getElementById('scroll-trigger') !== null || document.querySelector('.end-of-content') !== null");
 
-        if (initialScrollTriggerExists)
+        var scrollTriggerExists = await Page.EvaluateAsync<bool>(
+            "() => document.getElementById('scroll-trigger') !== null");
+
+        if (scrollTriggerExists)
         {
-            // Scroll to load more items using JS scrollIntoView + scrollBy approach
-            await Page.ScrollToLoadMoreAsync(expectedItemCount: firstBatchCount + 1);
+            // Scroll to trigger the next batch load. The scroll trigger is present, meaning the
+            // component believes more items may exist. However, the next batch may return 0 items
+            // (e.g., when total items exactly equals the batch size), which replaces the scroll
+            // trigger with end-of-content. Accept either outcome: more items OR end-of-content.
+            await Page.WaitForConditionAsync(
+                $"() => window.__scrollListenerReady?.['scroll-trigger'] === true && document.getElementById('scroll-trigger') !== null");
 
-            // Capture count after scroll
+            await Page.WaitForConditionAsync(
+                @"(firstBatch) => {
+                    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+                    window.dispatchEvent(new Event('scroll'));
+                    const cardCount = document.querySelectorAll('.card').length;
+                    const endOfContent = document.querySelector('.end-of-content') !== null;
+                    return cardCount > firstBatch || endOfContent;
+                }",
+                firstBatchCount);
+
+            // Verify that something happened (more items loaded or end reached)
             var afterScrollCount = await Page.Locator(".card").CountAsync();
-            afterScrollCount.Should().BeGreaterThan(firstBatchCount,
-                "scrolling should load additional items when more are available");
+            var endOfContentVisible = await Page.Locator(".end-of-content").CountAsync() > 0;
+
+            (afterScrollCount > firstBatchCount || endOfContentVisible).Should().BeTrue(
+                "scrolling should either load additional items or reach end-of-content");
         }
         else
         {
@@ -111,8 +113,10 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
         currentUrl.Should().Contain(TagUrlPrefix,
             "tag filter should be preserved in URL during infinite scroll");
 
-        // Verify tag button still has 'selected' class (component uses CSS class, not aria-pressed)
-        var hasSelectedClass = await tagButton.EvaluateAsync<bool>("el => el.classList.contains('selected')");
-        hasSelectedClass.Should().BeTrue("tag button should remain selected after scrolling");
+        // Verify tag button has 'selected' class and matches the expected tag
+        var tagButton = Page.Locator("button.tag-cloud-item.selected")
+            .Filter(new() { HasTextRegex = new System.Text.RegularExpressions.Regex("copilot chat", System.Text.RegularExpressions.RegexOptions.IgnoreCase) });
+        var hasSelectedClass = await tagButton.CountAsync() > 0;
+        hasSelectedClass.Should().BeTrue("the 'copilot chat' tag button should be selected after navigating with tag filter");
     }
 }

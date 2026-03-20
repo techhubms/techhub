@@ -10,6 +10,7 @@ public class SearchRequest
     public IReadOnlyList<string> Sections { get; }
     public IReadOnlyList<string> Collections { get; }
     public string? Subcollection { get; }
+    public string? Author { get; }
     public DateTimeOffset? DateFrom { get; }
     public DateTimeOffset? DateTo { get; }
     public bool IncludeDraft { get; }
@@ -28,6 +29,7 @@ public class SearchRequest
         int skip = 0,
         string? query = null,
         string? subcollection = null,
+        string? author = null,
         DateTimeOffset? dateFrom = null,
         DateTimeOffset? dateTo = null,
         bool includeDraft = false,
@@ -88,6 +90,7 @@ public class SearchRequest
         Sections = sections;
         Collections = collections;
         Subcollection = subcollection;
+        Author = author;
         DateFrom = dateFrom;
         DateTo = dateTo;
         IncludeDraft = includeDraft;
@@ -134,6 +137,11 @@ public class SearchRequest
         if (!string.IsNullOrWhiteSpace(Subcollection))
         {
             sb.Append("|sc:").Append(Subcollection);
+        }
+
+        if (!string.IsNullOrWhiteSpace(Author))
+        {
+            sb.Append("|a:").Append(Author);
         }
 
         if (DateFrom.HasValue)
