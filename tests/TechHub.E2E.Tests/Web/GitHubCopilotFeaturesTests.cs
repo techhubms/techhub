@@ -372,9 +372,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Act - Click the GHES filter
         await ghesButton.ClickAsync();
 
-        // Small wait to let any smooth scroll start
-        await Page.WaitForConditionAsync("() => true");
-
         // Assert - The heading should still be in roughly the same viewport position
         // scrollIntoView would snap it to the top of the viewport
         var rectAfter = await heading.BoundingBoxAsync();

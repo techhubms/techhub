@@ -167,19 +167,13 @@ public class SeoMetaTagsTests : PlaywrightTestBase
         // the two reads, making the second read return null even though the first succeeded.
         // WaitForFunctionAsync retries until og:title is non-null, then returns both values
         // atomically from the same JS execution context — guaranteed consistent.
-        var handle = await Page.WaitForFunctionAsync(
+        var handle = await Page.WaitForConditionAsync(
             @"() => {
                 const ogTitleEl = document.head.querySelector(""meta[property='og:title']"");
                 const ogTitle = ogTitleEl?.content ?? null;
                 if (!ogTitle) return null;
                 return { OgTitle: ogTitle, PageTitle: document.title };
-            }",
-            null,
-            new Microsoft.Playwright.PageWaitForFunctionOptions
-            {
-                Timeout = BlazorHelpers.DefaultTimeout,
-                PollingInterval = BlazorHelpers.DefaultPollingInterval
-            });
+            }");
         var result = await handle.JsonValueAsync<JsonElement>();
 
         var ogTitle = result.GetProperty("OgTitle").GetString();
@@ -247,7 +241,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     /// rehydration gap. Requiring all essential tags to be simultaneously present ensures
     /// the method only returns once HeadContent is fully and stably rendered.
     ///
-    /// Uses IncreasedTimeout because this wait must survive SSR + database query + Blazor
+    /// Uses E2ETimeout because this wait must survive SSR + database query + Blazor
     /// hydration on slow CI runners, which can take up to 20s per the BlazorHelpers docs.
     /// </summary>
     private Task WaitForSeoMetaTagsAsync(string expectedPath) =>
@@ -263,12 +257,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
                        ogTitle?.content?.length > 0 &&
                        jsonLd !== null;
             }",
-            expectedPath,
-            new Microsoft.Playwright.PageWaitForFunctionOptions
-            {
-                Timeout = BlazorHelpers.IncreasedTimeout,
-                PollingInterval = BlazorHelpers.DefaultPollingInterval
-            });
+            expectedPath);
 
     /// <summary>
     /// Reads a meta tag's content attribute, retrying through Blazor HeadContent rehydration gaps.
@@ -278,13 +267,12 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         try
         {
-            var handle = await Page.WaitForFunctionAsync(
+            var handle = await Page.WaitForConditionAsync(
                 @"([attrName, attrValue]) => {
                     const el = document.head.querySelector(`meta[${attrName}='${attrValue}']`);
                     return el ? el.getAttribute('content') : null;
                 }",
-                new[] { attributeName, attributeValue },
-                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+                new[] { attributeName, attributeValue });
             return await handle.JsonValueAsync<string?>();
         }
         catch (TimeoutException)
@@ -301,7 +289,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
     {
         try
         {
-            var handle = await Page.WaitForFunctionAsync(
+            var handle = await Page.WaitForConditionAsync(
                 @"(type) => {
                     const scripts = Array.from(document.head.querySelectorAll('script[type=""application/ld+json""]'));
                     const match = scripts.find(s => {
@@ -310,8 +298,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
                     });
                     return match ? match.textContent : null;
                 }",
-                schemaType,
-                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+                schemaType);
             return await handle.JsonValueAsync<string?>();
         }
         catch (TimeoutException)

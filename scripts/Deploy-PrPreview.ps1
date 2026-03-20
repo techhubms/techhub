@@ -198,6 +198,41 @@ if ($Action -eq 'teardown') {
         Write-Warn "$apiAppName not found — already removed or never deployed"
     }
 
+    # Clean up Docker images tagged for this PR from ACR
+    Write-Step "Cleaning up Docker images for PR #$PrNumber from ACR"
+
+    $prTagFilter = "pr-$PrNumber-"
+    foreach ($repo in @('techhub-api', 'techhub-web')) {
+        Write-Detail "Checking $repo for tags matching '$prTagFilter*'..."
+
+        $tags = az acr repository show-tags `
+            --name $RegistryName `
+            --repository $repo `
+            --query "[?starts_with(@, '$prTagFilter')]" `
+            -o tsv 2>$null
+
+        if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($tags)) {
+            Write-Warn "No matching tags found for $repo — skipping"
+            continue
+        }
+
+        foreach ($tag in $tags -split "`n") {
+            $tag = $tag.Trim()
+            if ([string]::IsNullOrWhiteSpace($tag)) { continue }
+            Write-Detail "Deleting ${repo}:$tag..."
+            az acr repository delete `
+                --name $RegistryName `
+                --image "${repo}:$tag" `
+                --yes 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                Write-Ok "Deleted ${repo}:$tag"
+            }
+            else {
+                Write-Warn "Failed to delete ${repo}:$tag — continuing"
+            }
+        }
+    }
+
     if ($deletedAny) {
         Write-Ok "PR preview environment for PR #$PrNumber removed successfully"
     }

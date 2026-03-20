@@ -172,8 +172,7 @@ public class TabOrderingTests : PlaywrightTestBase
         // The handler sets window.__skipLinkInitialized = true after attaching the
         // document-level click listener. Under CI load, script execution can be delayed.
         await Page.WaitForConditionAsync(
-            "() => window.__skipLinkInitialized === true",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+            "() => window.__skipLinkInitialized === true");
 
         // Act - Tab to skip link and press Enter.
         // In headless Chromium, Tab may intermittently fail to focus the off-screen
@@ -183,16 +182,14 @@ public class TabOrderingTests : PlaywrightTestBase
         try
         {
             await Page.WaitForConditionAsync(
-                "() => { const el = document.activeElement; return el && el.classList.contains('skip-link'); }",
-                new PageWaitForFunctionOptions { Timeout = 5_000, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+                "() => { const el = document.activeElement; return el && el.classList.contains('skip-link'); }");
         }
         catch (TimeoutException)
         {
             // Tab didn't reach the skip link. Focus it directly via JS.
             await Page.EvaluateAsync("() => { const sl = document.getElementById('skip-link'); if (sl) sl.focus(); }");
             await Page.WaitForConditionAsync(
-                "() => { const el = document.activeElement; return el && el.classList.contains('skip-link'); }",
-                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+                "() => { const el = document.activeElement; return el && el.classList.contains('skip-link'); }");
         }
 
         await Page.Keyboard.PressAsync("Enter"); // Activate skip link

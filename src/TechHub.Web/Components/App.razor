@@ -40,6 +40,28 @@
         var gaMeasurementId = Configuration["GoogleAnalytics:MeasurementId"];
     }
 
+    @if (!isProduction)
+    {
+        <!-- E2E test lifecycle counter — provides a single monotonic counter that
+             all JS lifecycle hooks increment via __e2eSignal(label). Tests capture
+             the counter before an action and wait for it to change, replacing 8+
+             independent window.__* flags with one universal wait pattern.
+             Gated to Development only — zero production overhead. -->
+        <script>
+            if (!window.__e2e) {
+                window.__e2e = { counter: 0, label: 'init', history: [] };
+                window.__e2eSignal = function(label) {
+                    if (!window.__e2e) return;
+                    window.__e2e.counter++;
+                    window.__e2e.label = label;
+                    window.__e2e.history.push({ counter: window.__e2e.counter, label: label });
+                    if (window.__e2e.history.length > 20) window.__e2e.history.shift();
+                };
+                window.addEventListener('scrollend', function() { window.__e2eSignal('scroll-end'); });
+            }
+        </script>
+    }
+
     @if (isProduction && !string.IsNullOrEmpty(gaMeasurementId))
     {
         <!-- Google Analytics 4 - async loading, no render blocking -->
