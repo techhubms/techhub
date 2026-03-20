@@ -1,0 +1,16 @@
+{
+  "ProcessedDate": "2026-03-18 20:13:53",
+  "FeedLevelAuthor": "Visual Studio Code - Code Editing. Redefined.",
+  "OutputDir": "_news",
+  "PubDate": "2026-03-25T17:00:00+00:00",
+  "FeedUrl": "https://code.visualstudio.com/feed.xml",
+  "Tags": [
+    "release"
+  ],
+  "Description": "Learn what's new in Visual Studio Code 1.113 (Insiders)\n\n[Read the full article](https://code.visualstudio.com/updates/v1_113)",
+  "Link": "https://code.visualstudio.com/updates/v1_113",
+  "Author": "Visual Studio Code Team",
+  "EnhancedContent": "\" />\n\nExplore Agentic Development — [Join a GitHub Copilot Dev Day near you!](https://aka.ms/githubcopilotdevdays)\n\nDismiss this update\n\n# Visual Studio Code 1.113\n\n*Last updated: March 18, 2026*\n\nWelcome to the 1.113 release of Visual Studio Code.\n\nHappy Coding!\n\nTo try new features as soon as possible, [**download the nightly Insiders build**](https://code.visualstudio.com/insiders), which includes the latest updates as soon as they are available.\n\n## March 18, 2026\n\n- Add support for zooming in and out in the image carousel. [#302003](https://github.com/microsoft/vscode/issues/302003)\n- The integrated browser now allows bypassing certificate errors for localhost HTTPS connections with self-signed certificates. [#298982](https://github.com/microsoft/vscode/issues/298982)\n- Reveal in File Explorer now works correctly when connected to WSL. [#299491](https://github.com/microsoft/vscode/issues/299491)\n- Improved screen reader labels for implicit context. [#301568](https://github.com/microsoft/vscode/issues/301568)\n\n## March 16, 2026\n\n- Debug launch configurations can now be hidden per-platform using the `\"windows\"`\n, `\"linux\"` , or `\"osx\"` properties in `launch.json` . [#293394](https://github.com/microsoft/vscode/issues/293394)\n\nWe really appreciate people trying our new features as soon as they are ready, so check back here often and learn what's new.",
+  "FeedName": "Visual Studio Code Releases",
+  "Title": "Visual Studio Code 1.113"
+}

@@ -1,0 +1,17 @@
+{
+  "ProcessedDate": "2026-03-19 23:10:25",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-03-19T22:26:33+00:00",
+  "EnhancedContent": "When you delegate a task to [Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent), it works in the background, then requests your review. You can view the agent session logs to understand what Copilot did while working on your task.\n\nWe’ve made a number of improvements to Copilot coding agent’s session logs to give you better visibility of what Copilot is up to:\n\n- **Better visibility of built-in setup steps:** Before Copilot starts working on your task, it needs to get ready by cloning your repository and starting the [agent firewall](https://docs.github.com/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-firewall) (if enabled). You’ll now see updates in the logs when these steps start and finish, so you can understand what’s happening while you wait for Copilot to start work.\n\n![Screenshot of logs showing Copilot coding agent's built-in setup steps](https://github.com/user-attachments/assets/aa52adf0-16a2-433b-8f0d-97b366e5885a)\n\n- **Better visibility of your custom setup steps:** You can [customize Copilot’s development environment](https://docs.github.com/enterprise-cloud@latest/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment) with a `copilot-setup-steps.yml`\nfile in your repository. If you’ve defined setup steps for Copilot to run, the output from those steps now shows in the session logs, so you can verify the environment is configured correctly and debug any issues without jumping to the verbose logs in GitHub Actions.\n\n![Screenshot of logs showing custom setup step for Copilot coding agent](https://github.com/user-attachments/assets/719af188-a616-4bc2-9dde-479d0071ae0a)\n\n- **Better visibility when Copilot delegates work to subagents:** Copilot can delegate tasks to subagents. For example, it will often spin up a subagent to research and understand the current state of your code before making changes. When Copilot delegates work to a subagent, the subagent’s activity is now collapsed by default, with a heads-up display showing what it’s working on right now. Expand the details at any time to see the full output.\n\n![Screen recording showing visibility of subagents in Copilot coding agent's session logs](https://github.com/user-attachments/assets/23db5540-d1c4-4cd5-80f6-f23df7f0e7b6)\n\nTo learn more, head to [our documentation about Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent).",
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "Description": "When you delegate a task to Copilot coding agent, it works in the background, then requests your review. You can view the agent session logs to understand what Copilot did…\n\nThe post [More visibility into Copilot coding agent sessions](https://github.blog/changelog/2026-03-19-more-visibility-into-copilot-coding-agent-sessions) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "More visibility into Copilot coding agent sessions",
+  "FeedName": "The GitHub Blog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-03-19-more-visibility-into-copilot-coding-agent-sessions"
+}

@@ -1,0 +1,31 @@
+{
+  "Description": "Getting going with GitHub Copilot CLI and Work IQ step-by-step.\n\nSigning up for GitHub - https://github.com/signup\n\nInstall PowerShell 7 (these are all case sensitive) winget install -e --id Microsoft.PowerShell\n\nInstall Microsoft Terminal winget install -e --id Microsoft.WindowsTerminal\n\nInstall node.js winget install -e --id OpenJS.NodeJS\n\nInstall GitHub Copilot CLI winget install -e --id GitHub.Copilot\n\nInstall Work IQ plug-in within the GitHub Copilot CLI /plugin install workiq@copilot-plugins\n\nAccept the EULA (again in GitHub Copilot CLI) workiq accept-eula\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:11 - Why CLIs 01:16 - GitHub Copilot CLI 02:29 - Work IQ 05:19 - Organization onboarding 06:22 - Things I need (accounts) 08:03 - Things to install on my machine 09:05 - Core components 11:20 - Non Windows installation 11:48 - Using Terminal 13:40 - Launching the GitHub Copilot CLI 14:18 - Logging into GitHub 15:41 - My first CLI agentic use 16:06 - Adding Work IQ plug-in 17:23 - Accepting the EULA 18:01 - New Work IQ skill 18:52 - Using Work IQ 19:22 - Authenticating to M365 20:31 - Other types of interaction 23:22 - Using other inferencing models 23:49 - Closing and resuming 24:21 - Non-interactive use\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► GitHub Copilot CLI install: 🔗 https://docs.github.com/en/copilot/how-tos/copilot-cli/cli-getting-started\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #Copilot #m365copilot #github #ai #johnsavillstechnicaltraining #onboardtoazure",
+  "Tags": [
+    "ai",
+    "azure",
+    "azure cloud",
+    "CLI",
+    "cloud",
+    "Copilot",
+    "github",
+    "github copilot",
+    "johnsavillstechnicaltraining",
+    "m365",
+    "m365 copilot",
+    "m365copilot",
+    "microsoft",
+    "microsoft azure",
+    "onboardtoazure",
+    "work IQ"
+  ],
+  "Author": "John Savill's Technical Training",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "PubDate": "2026-03-18T09:57:04+00:00",
+  "ProcessedDate": "2026-03-18 10:22:43",
+  "Link": "https://www.youtube.com/watch?v=tQlNq8bH674",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "FeedName": "John Savill's Technical Training",
+  "Title": "Getting Started with GitHub Copilot CLI and Work IQ",
+  "EnhancedContent": null
+}

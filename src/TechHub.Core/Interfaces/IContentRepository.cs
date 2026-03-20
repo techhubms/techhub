@@ -99,4 +99,11 @@ public interface IContentRepository
     /// Used for XML sitemap generation.
     /// </summary>
     Task<IReadOnlyList<SitemapItem>> GetSitemapItemsAsync(CancellationToken ct = default);
+
+    /// <summary>
+    /// Get all known authors with their published content item counts.
+    /// Returns authors sorted alphabetically by name.
+    /// Only includes authors with at least one published (non-draft) content item.
+    /// </summary>
+    Task<IReadOnlyList<AuthorSummary>> GetAuthorsAsync(CancellationToken ct = default);
 }

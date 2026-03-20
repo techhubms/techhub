@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Components;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Web.Services;
 
@@ -173,7 +174,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         {
             _tags = restored.Tags;
             _isLoading = false;
-            Logger.LogDebug("Restored tag cloud from persisted state for key {Key}", stateKey);
+            Logger.LogDebug("Restored tag cloud from persisted state for key {Key}", stateKey.Sanitize());
             return;
         }
 
@@ -192,7 +193,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         if (scopeChanged)
         {
             Logger.LogDebug("Section/collection scope changed from {PrevSection}/{PrevCollection} to {Section}/{Collection}",
-                _previousSectionName, _previousCollectionName, SectionName, CollectionName);
+                _previousSectionName.Sanitize(), _previousCollectionName.Sanitize(), SectionName.Sanitize(), CollectionName.Sanitize());
             _previousSectionName = SectionName;
             _previousCollectionName = CollectionName;
             _previousSelectedTags = new HashSet<string>(StringComparer.OrdinalIgnoreCase); // Reset change tracking
@@ -202,7 +203,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         var datesChanged = _previousFromDate != FromDate || _previousToDate != ToDate;
         if (datesChanged)
         {
-            Logger.LogDebug("Date range changed. From: {From}, To: {To}", FromDate, ToDate);
+            Logger.LogDebug("Date range changed. From: {From}, To: {To}", FromDate.Sanitize(), ToDate.Sanitize());
             _previousFromDate = FromDate;
             _previousToDate = ToDate;
         }
@@ -211,7 +212,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         var searchChanged = _previousSearchQuery != SearchQuery;
         if (searchChanged)
         {
-            Logger.LogDebug("Search query changed. Query: {Query}", SearchQuery);
+            Logger.LogDebug("Search query changed. Query: {Query}", SearchQuery.Sanitize());
             _previousSearchQuery = SearchQuery;
         }
 
@@ -219,8 +220,8 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         if (scopeChanged || datesChanged || searchChanged || !_selectedTagsInternal.SetEquals(_previousSelectedTags))
         {
             Logger.LogDebug("Filters changed, reloading tag cloud. Previous tags: [{Previous}], Current: [{Current}]",
-                string.Join(", ", _previousSelectedTags),
-                string.Join(", ", _selectedTagsInternal));
+                string.Join(", ", _previousSelectedTags).Sanitize(),
+                string.Join(", ", _selectedTagsInternal).Sanitize());
 
             _previousSelectedTags = new HashSet<string>(_selectedTagsInternal, StringComparer.OrdinalIgnoreCase);
             await LoadTagsAsync();
@@ -245,7 +246,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
             {
                 _selectedTagsInternal = normalizedTags;
                 Logger.LogDebug("Synced selected tags from parameter: {Tags}",
-                    string.Join(", ", _selectedTagsInternal));
+                    string.Join(", ", _selectedTagsInternal).Sanitize());
             }
         }
         else if (_selectedTagsInternal.Count > 0)
@@ -278,7 +279,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
                     var collectionForTags = string.IsNullOrWhiteSpace(CollectionName) ? "all" : CollectionName;
 
                     Logger.LogDebug("Fetching real counts for {Count} content item tags in section {SectionName}",
-                        distinctTags.Count, sectionForTags);
+                        distinctTags.Count, sectionForTags.Sanitize());
 
                     var tagCounts = await ApiClient.GetTagCloudAsync(
                         sectionForTags,
@@ -315,7 +316,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
             // Bail out not needed here — MainLayout guarantees section/collection names
             // are valid before any page body (and thus this component) renders.
             Logger.LogDebug("Loading tag cloud for section: {SectionName}, collection: {CollectionName}, with {FilterCount} filter tags",
-                effectiveSectionName, effectiveCollectionName, _selectedTagsInternal.Count);
+                effectiveSectionName.Sanitize(), effectiveCollectionName.Sanitize(), _selectedTagsInternal.Count);
 
             // Create filter list from selected tags (for content filtering)
             List<string>? filterTags = _selectedTagsInternal.Count > 0
@@ -371,7 +372,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         catch (Exception ex)
         {
             Logger.LogError(ex, "Failed to load tag cloud for section {SectionName}, collection {CollectionName}",
-                SectionName ?? "all", CollectionName ?? "all");
+                (SectionName ?? "all").Sanitize(), (CollectionName ?? "all").Sanitize());
             _hasError = true;
             _tags = null;
         }
@@ -391,7 +392,7 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
             var encodedTag = Uri.EscapeDataString(tag.ToLowerInvariant());
             var targetUrl = $"{baseUrl}?tags={encodedTag}";
 
-            Logger.LogDebug("Navigating to {Url} with tag {Tag}", targetUrl, tag);
+            Logger.LogDebug("Navigating to {Url} with tag {Tag}", targetUrl.Sanitize(), tag.Sanitize());
             NavigationManager.NavigateTo(targetUrl);
         }
         else
@@ -411,12 +412,12 @@ public sealed partial class SidebarTagCloud : ComponentBase, IDisposable
         if (_selectedTagsInternal.Contains(normalizedTag))
         {
             _selectedTagsInternal.Remove(normalizedTag);
-            Logger.LogDebug("Deselected tag: {Tag}", normalizedTag);
+            Logger.LogDebug("Deselected tag: {Tag}", normalizedTag.Sanitize());
         }
         else
         {
             _selectedTagsInternal.Add(normalizedTag);
-            Logger.LogDebug("Selected tag: {Tag}", normalizedTag);
+            Logger.LogDebug("Selected tag: {Tag}", normalizedTag.Sanitize());
         }
 #pragma warning restore CA1868 // Unnecessary call to 'Contains(item)'
 

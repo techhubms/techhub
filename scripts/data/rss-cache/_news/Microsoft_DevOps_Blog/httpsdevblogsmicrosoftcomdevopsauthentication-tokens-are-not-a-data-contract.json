@@ -1,0 +1,18 @@
+{
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/",
+  "ProcessedDate": "2026-03-18 19:23:52",
+  "Description": "Authentication tokens exist to answer one question: is this caller authorized to do this? They are not intended to be a stable data interface, a schema you can depend on, or an input into application logic. If your application decodes tokens and reads claims from them, this is an important heads-up. Token Claims Were Never […]\n\nThe post [Authentication Tokens Are Not a Data Contract](https://devblogs.microsoft.com/devops/authentication-tokens-are-not-a-data-contract/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "PubDate": "2026-03-18T18:46:49+00:00",
+  "Title": "Authentication Tokens Are Not a Data Contract",
+  "OutputDir": "_news",
+  "Tags": [
+    "Azure & Cloud",
+    "DevOps",
+    "Security"
+  ],
+  "Author": "Angel Wong",
+  "Link": "https://devblogs.microsoft.com/devops/authentication-tokens-are-not-a-data-contract/",
+  "EnhancedContent": "Authentication tokens exist to answer one question: *is this caller authorized to do this?*\n\nThey are not intended to be a stable data interface, a schema you can depend on, or an input into application logic.\n\nIf your application decodes tokens and reads claims from them, this is an important heads-up.\n\n## Token Claims Were Never Guaranteed\n\nAlthough tokens may appear readable today, that was never a promise. We have never publicly documented token contents, and as a result, we have always reserved the right to change token claims at any point, for any reason.\n\nClaims may change, become optional, be renamed, be removed, or stop being readable altogether. Relying on decoded token contents may work today, but it has always been an unsupported and fragile pattern across the industry.\n\n## What’s Changing\n\n**Coming this summer, we will be further encrypting authentication tokens.** In some scenarios, these changes may take effect even earlier, as we continue to evolve and change token formats. As this happens, token payloads will no longer be readable by clients. Any application that depends on decoding tokens to extract claims will break.\n\nApplications that already treat tokens as opaque will not be impacted.\n\n## What to Do Instead\n\nTokens should be used only for validation and authorization. After validating a token, your application should rely on [supported Azure DevOps REST APIs](https://learn.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-7.2) to retrieve user or organization data. Those APIs provide stable contracts, documentation, and clear expectations around change. Token claims do not.\n\nAs a rule of thumb:\n\n- Use tokens to prove who the caller is and what they’re allowed to do\n- Use supported APIs when you need actual data\n- Assume any token claim may change or disappear without notice\n\nIf you find yourself decoding tokens to read values, that logic belongs elsewhere.\n\n## Final Reminder\n\nIf your application depends on decoded token claims, consider this your warning to move off that pattern now—especially before encryption is enforced this summer.\n\nAuthentication tokens are for authentication and authorization, not data access. Treat them as opaque, and use [supported APIs](https://learn.microsoft.com/en-us/rest/api/azure/devops/?view=azure-devops-rest-7.2) instead.",
+  "FeedName": "Microsoft DevOps Blog"
+}

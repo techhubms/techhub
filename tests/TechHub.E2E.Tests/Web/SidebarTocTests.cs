@@ -66,9 +66,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Without this, the scroll-spy active-class update may not fire on CI
         // where JS initialization lags behind Blazor's ready signal. The same
         // wait is used in SidebarToc_Scrolling_ShouldUpdateActiveLink.
-        await Page.WaitForConditionAsync(
-            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        await Page.WaitForTocInitializedAsync();
 
         // Get all TOC links
         var tocLinks = Page.Locator(".sidebar-toc a");
@@ -107,9 +105,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Wait for TOC scroll spy JS to finish initialization.
         // Under full Run load (unit + integration tests running in parallel),
         // the scroll spy setup can take longer than page load signals.
-        await Page.WaitForConditionAsync(
-            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        await Page.WaitForTocInitializedAsync();
 
         // Find a section heading (h2 or h3 with ID)
         var headings = Page.Locator("h2[id], h3[id]");
@@ -120,8 +116,9 @@ public class SidebarTocTests : PlaywrightTestBase
             Assert.Fail($"Not enough headings with IDs found on {url}");
         }
 
-        // Act - Scroll to second heading using JS window.scrollTo
-        // Avoids Mouse.WheelAsync which can hang under parallel Chrome load
+        // Act - Scroll to second heading using JS window.scrollTo with behavior: 'instant'.
+        // This fires a synchronous scroll event that the scroll spy listens for.
+        // Avoids Mouse.WheelAsync which can hang under parallel Chrome load.
         var secondHeadingY = await Page.EvaluateAsync<int>(
             "document.querySelectorAll('h2[id], h3[id]')[1].getBoundingClientRect().top + window.scrollY - 150"
         );
@@ -134,7 +131,7 @@ public class SidebarTocTests : PlaywrightTestBase
         // Assert - Active TOC link should update via the scroll spy's own
         // scroll event → rAF → updateActiveHeading chain. No manual nudge:
         // we're testing that the mechanism works end-to-end.
-        // Uses centralized DefaultTimeout (5s locally, 15s in CI via CiMultiplier)
+        // Uses centralized E2ETimeout (60s safety net)
         // to accommodate rAF throttling + scrollend delays under CI load.
         var activeTocLink = Page.Locator(".sidebar-toc a.active").First;
         await activeTocLink.AssertElementVisibleAsync();
@@ -153,9 +150,7 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for TOC scroll spy JS to finish initialization.
         // Under full Run load, the scroll spy setup can take longer than page load signals.
-        await Page.WaitForConditionAsync(
-            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        await Page.WaitForTocInitializedAsync();
 
         // Get last heading with ID
         var headings = Page.Locator("h2[id], h3[id]");
@@ -169,11 +164,10 @@ public class SidebarTocTests : PlaywrightTestBase
         var lastHeading = headings.Last;
         var lastHeadingId = await lastHeading.GetAttributeAsync("id");
 
-        // Act - Scroll to bottom using JS window.scrollTo
-        // Avoids Mouse.WheelAsync which can hang under parallel Chrome load
+        // Act - Scroll to bottom using JS window.scrollTo with behavior: 'instant'.
+        // This fires a synchronous scroll event that the scroll spy listens for.
+        // Avoids Mouse.WheelAsync which can hang under parallel Chrome load.
         var scrollHeight = await Page.EvaluateAsync<int>("document.documentElement.scrollHeight - window.innerHeight");
-
-        // window.scrollTo fires scroll events that scroll spy listens for
         await Page.EvaluateAsync($"window.scrollTo({{ top: {scrollHeight}, behavior: 'instant' }})");
 
         // Wait for scroll to reach bottom (use navigation timeout for scroll operations)
@@ -185,8 +179,8 @@ public class SidebarTocTests : PlaywrightTestBase
         // No manual nudge: we're testing that the mechanism works end-to-end.
         var lastTocLink = Page.Locator($".sidebar-toc a[href$='#{lastHeadingId}']");
 
-        // Use Playwright's auto-retrying assertion with centralized DefaultTimeout
-        // (5s locally, 15s in CI via CiMultiplier) to accommodate rAF throttling
+        // Use Playwright's auto-retrying assertion with centralized E2ETimeout
+        // (60s safety net) to accommodate rAF throttling
         // + scrollend delays under CI load.
         await lastTocLink.AssertHasClassAsync(
             new System.Text.RegularExpressions.Regex(".*active.*"));
@@ -235,10 +229,15 @@ public class SidebarTocTests : PlaywrightTestBase
         // Arrange - Navigate to page with hash anchor
         await Page.GotoRelativeAsync("/ai/genai-basics#types-of-prompts-and-messages");
 
-        // Wait for scroll position to fully settle after page load.
-        // Mermaid diagrams render after initial page load, causing layout shifts above the
-        // target heading. Browser scroll anchoring adjusts scrollY to compensate, but this
-        // happens asynchronously. We wait until scrollY is stable across multiple frames.
+        // Wait for Mermaid diagrams to finish rendering. This page has multiple diagrams
+        // that render asynchronously after page load. Until they complete, layout shifts
+        // above the target heading cause the scroll position to change — making the
+        // "no scroll change" assertion unreliable.
+        await Page.WaitForBlazorReadyAsync();
+
+        // Also wait for scroll position to fully settle after Mermaid layout shifts.
+        // Browser scroll anchoring adjusts scrollY asynchronously to compensate for
+        // content height changes above the viewport.
         await Page.WaitForConditionAsync(
             @"() => {
                 if (!window.__scrollCheck) window.__scrollCheck = { lastY: -1, stableFrames: 0 };
@@ -249,7 +248,7 @@ public class SidebarTocTests : PlaywrightTestBase
                     c.stableFrames = 0;
                 }
                 c.lastY = window.scrollY;
-                return c.stableFrames >= 3;
+                return c.stableFrames >= 5;
             }");
 
         // Get initial scroll position (fully settled after mermaid rendering + scroll anchoring)
@@ -328,10 +327,8 @@ public class SidebarTocTests : PlaywrightTestBase
 
         // Wait for TOC scroll spy JS to finish initialization after client-side navigation.
         // Under full Run load (unit + integration tests running), the scroll spy
-        // setup and initial heading scan can take longer than DefaultTimeout (10s).
-        await Page.WaitForConditionAsync(
-            "() => { const toc = document.querySelector('[data-toc-scroll-spy]'); return toc?._tocScrollSpy?.initialized === true; }",
-            new PageWaitForFunctionOptions { Timeout = BlazorHelpers.IncreasedTimeout, PollingInterval = BlazorHelpers.DefaultPollingInterval });
+        // setup and initial heading scan needs a generous timeout.
+        await Page.WaitForTocInitializedAsync();
 
         // Scroll down so a heading passes above the detection line (30% from top).
         // The scroll spy intentionally leaves no heading active when at scroll-top=0,
@@ -341,7 +338,7 @@ public class SidebarTocTests : PlaywrightTestBase
             "() => window.scrollY > 100");
 
         // Wait for at least one TOC link to become active after scrolling.
-        // Uses IncreasedTimeout (15s) because the scroll spy uses rAF throttling
+        // Uses E2ETimeout because the scroll spy uses rAF throttling
         // and scrollend events, which under load can be delayed.
         var activeTocLinks = Page.Locator(".sidebar-toc a.active");
         await BlazorHelpers.AssertElementVisibleAsync(activeTocLinks.First);

@@ -1626,66 +1626,6 @@
     "reason": "unknown"
   },
   {
-    "canonical_url": "https://cooknwithcopilot.com/blog/ask-better-questions-get-better-code.html",
-    "timestamp": "2025-08-07 20:43:54 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/avoid-these-common-prompts.html",
-    "timestamp": "2025-08-07 20:45:03 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/copilot-vs-chat-sidekick-showdown.html",
-    "timestamp": "2025-08-07 20:45:31 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/craft-prompts-that-get-better-results.html",
-    "timestamp": "2025-08-07 20:45:58 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/promptception-improve-prompts-with-copilot.html",
-    "timestamp": "2025-08-07 20:48:00 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/quick-chat-is-your-instant-ai-sidekick.html",
-    "timestamp": "2025-08-07 20:48:27 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/refactor-messy-code-in-seconds-with-github-copilot.html",
-    "timestamp": "2025-08-07 20:48:58 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/top-10-copilot-tips.html",
-    "timestamp": "2025-08-07 20:49:56 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/use-copilot-in-vs-code-to-summarize-prs.html",
-    "timestamp": "2025-08-07 20:50:22 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/use-github-copilot-chat-to-plan-before-you-code.html",
-    "timestamp": "2025-08-07 20:50:51 +00:00",
-    "collection": "blogs",
-    "reason": "unknown"
-  },
-  {
     "canonical_url": "https://r-vm.com/automating-my-git-workflow-vscode-copilot-chat-terminal-auto-approval.html",
     "timestamp": "2025-08-07 20:53:46 +00:00",
     "collection": "blogs",
@@ -8112,12 +8052,6 @@
     "reason": "Succesfully added: Assigned Security because the article focuses on credential theft, secret leakage, GitHub workflow exploitation, and supply chain risks (Security rules 1, 2, 4, 5, 8, 9). Assigned DevOps because the attack leveraged automation pipelines (publish.yml), GitHub Actions, npm, and highlights operational aspects of software supply chain security (DevOps rules 2, 5, 6, 7). Assigned AI because attackers specifically targeted and weaponized AI CLI tools such as Claude, Gemini, and Q for secret enumeration, which is a novel AI-related vector in this context (AI rules 4 and 5). The content maintains technical focus, is primarily in English, and is not a sales pitch or biographical. All rules are followed; social media links and newsletter prompts were ignored as instructed."
   },
   {
-    "canonical_url": "https://cooknwithcopilot.com/blog/use-edit-mode-for-quick-targeted-improvements.html",
-    "timestamp": "2025-08-29 21:11:49 +00:00",
-    "collection": "blogs",
-    "reason": "Succesfully added: Assigned the AI category because the article details the use of GitHub Copilot, which is an AI-powered code assistant (AI inclusion rule 2 and 5). 'GitHub Copilot' category is included as the content focuses specifically on Copilot functionality (GitHub Copilot rules 1, 2, and 4). 'Coding' is included since it discusses code style, logic, and error handling improvements through developer practices (Coding rules 1 and 4). Azure, DevOps, ML, and Security are not included since there is no mention of relevant Azure technologies, development operations, machine learning development, or security implementation. Exclusion rules do not apply, as the content is technical, English, meets length requirements, and is focused on developer productivity rather than business or biographical aspects."
-  },
-  {
     "canonical_url": "https://dellenny.com/how-to-enable-ransomware-protection-in-windows-11/",
     "timestamp": "2025-08-30 11:09:49 +00:00",
     "collection": "blogs",
@@ -8626,12 +8560,6 @@
     "timestamp": "2025-09-06 08:14:45 +00:00",
     "collection": "videos",
     "reason": "Succesfully added: Assigned 'AI' because the session showcases AI-assisted development using GitHub Copilot and autonomous agents (AI rule 2, 1). 'GitHub Copilot' is specifically highlighted, so both 'AI' and 'GitHub Copilot' are assigned (AI and Copilot critical distinction). 'Coding' is included as the demo covers code migration, reverse engineering, and code transformation (Coding rules 1, 4). 'Azure' is included because the modernization uses Azure services and the provided repo is an Azure sample (Azure rule 1)."
-  },
-  {
-    "canonical_url": "https://cooknwithcopilot.com/blog/draft-smarter-regex-without-the-headaches.html",
-    "timestamp": "2025-09-06 12:20:12 +00:00",
-    "collection": "blogs",
-    "reason": "Succesfully added: Assigned the 'AI' and 'GitHub Copilot' categories because the article centers on using GitHub Copilot Chat, a developer-focused AI tool (AI rule 2 and GitHub Copilot category first rule). 'Coding' is included because the content revolves around regular expression (regex) authoring, explanation, and testing within the developer workflow (Coding rule 4). Azure, DevOps, ML, and Security categories are not assigned since the content does not cover those areas. None of the generic exclusion rules apply."
   },
   {
     "canonical_url": "https://www.youtube.com/shorts/bz-e_c21Eek",
@@ -28864,5 +28792,467 @@
     "timestamp": "2026-03-18 07:29:47 +00:00",
     "collection": "community",
     "reason": "Succesfully added: Generic exclusion rules: none apply (English, not job-related, not biographical, not question-only, not sales-pitch dominant; community post is >200 words of substantive text). Assigned AI because the content is centrally about building AI agents/workflows using the Microsoft Agent Framework and related agent concepts (AI inclusion rules 3 and 4). Assigned Azure because it explicitly uses the Azure AI Evaluation SDK (an Azure AI capability) within the agent development workflow (Azure inclusion rule 3 and AI inclusion rule 1). Did not assign DevOps because OpenTelemetry/Aspire dashboard are discussed as observability tools but there is no CI/CD, GitHub Actions/Azure DevOps, or deployment pipeline focus. Did not assign ML because it focuses on using frameworks/services for agents (RAG, evaluation, workflows) rather than training/custom ML engineering. Did not assign .NET because the series is Python-focused and does not cover C#/ASP.NET/.NET tooling. Did not assign GitHub Copilot because the post references GitHub Models, not GitHub Copilot features or usage. Did not assign Security because there is no security/IAM/Defender/Key Vault content."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=tQlNq8bH674",
+    "timestamp": "2026-03-18 10:25:23 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English, technical how-to video description (not job-related, not biographical, not question-only, not primarily a sales pitch, and not short community content). Assigned \"GitHub Copilot\" because the content is explicitly a step-by-step guide to installing and using GitHub Copilot CLI and a Copilot plugin. Per rules, assigning \"GitHub Copilot\" also requires assigning \"AI\". Assigned \"DevOps\" because the video is centered on developer tooling and CLI workflows (GitHub tooling, terminal usage, automation/non-interactive use), which fits DevOps inclusion rules around developer experience and GitHub tooling. Did not assign \"Azure\" because Azure is only present in tags/learning links, while the substantive steps are about GitHub Copilot CLI and Work IQ; Azure is not central in the provided description."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/advancing-databases-for-the-next-generation-of-applications/",
+    "timestamp": "2026-03-18 13:38:47 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules triggered: this is English, technical product/feature content, not job/career focused, not question-only, and not primarily a sales pitch. Assigned Azure because it discusses multiple Azure services and capabilities (Azure SQL, Azure SQL Database Hyperscale, Azure Cosmos DB, Azure Database for PostgreSQL/MySQL, Azure Arc, Private Endpoints/VNETs). Assigned ML because Microsoft Fabric/OneLake, mirroring, analytics scenarios, and vector indexing/search (DiskANN vector indexes) are core to the announcements (ML rules 1–4). Assigned AI because the post repeatedly focuses on AI-driven applications, agent-assisted management (Database Hub agents), and AI workload features like vector search and AI coding assistants (AI rules 1 and 5). Assigned DevOps because it explicitly mentions CI/CD and deployment pipeline support for executing pre/post-deployment T-SQL scripts and source control integration (DevOps rules 5 and 6). Assigned GitHub Copilot (and therefore also AI) because it states “GitHub Copilot in SSMS 22 is now generally available” and references GitHub Copilot CLI for the Cosmos DB Agent Kit (GitHub Copilot rules 1–4). Assigned Security because it includes enterprise security controls (SQL auditing, customer-managed keys, dynamic data masking) and private networking for Cosmos DB mirroring via Private Endpoints/VNETs (Security rules 1, 4, and 7)."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabcon-and-sqlcon-2026-whats-new-in-microsoft-onelake/",
+    "timestamp": "2026-03-18 13:39:36 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is English, substantive technical news (not job/career, not question-only, not a sales pitch, not non-dev M365 Copilot content). Assigned ML because the content is centered on Microsoft Fabric/OneLake data platform capabilities (shortcuts/mirroring, Delta Lake, Iceberg, lakehouse, Databricks/Snowflake interoperability) which fits analytics/data platform engineering (ML rules 1–4). Assigned Azure because it discusses Azure services and Azure-native connectivity/security features (Azure Monitor mirroring, Azure resource identities, Private Link) and is part of Microsoft’s cloud platform ecosystem (Azure rules 1 and 5). Assigned Security because it includes OneLake security GA, row/column-level security, network security controls, CMK/BYOK, and access protection features (Security rules 1, 3, 7, 9). Assigned AI because it includes Microsoft Foundry integration and AI-powered shortcut transformations (summarization/translation/classification) and references AI agents/Copilot use in governance (AI rules 1 and 5)."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-data-factory-at-fabcon-atlanta-built-for-modern-data-integration/",
+    "timestamp": "2026-03-18 13:40:29 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English Microsoft news post with substantial technical details (not biographical, question-only, job-related, or primarily a sales pitch). Assigned ML because the content is primarily about Microsoft Fabric data integration/transform/orchestration features (Fabric Data Factory, OneLake mirroring, Dataflow Gen2, dbt jobs, pipelines, Copy job, CDC/SCD2), which aligns with ML category rules around analytics/data engineering and BI/analytics platform services (Microsoft Fabric) and data pipelines. Assigned AI because it includes AI-powered features (Pipeline Expression Copilot, AI-powered transforms) and introduces an MCP server for agentic tool integration (AI category rules 1 and 6). Assigned Security because it covers security/identity features such as Outbound Access Protection, private endpoints, Azure Key Vault integration, and Microsoft Entra ID/service principal/workspace identity (Security rules 1, 3, and 7). Assigned DevOps because it discusses orchestration, scheduling, and GitHub integration for dbt jobs plus Airflow APIs (DevOps rules 5 and 11). Did not assign Azure or .NET: Azure services are referenced (Azure Data Factory, Azure Key Vault) but the central platform discussed is Fabric; the article contains no .NET/C# focus."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-azure-synapse-and-azure-data-factory-to-microsoft-fabric-the-next-gen-analytics-leap/",
+    "timestamp": "2026-03-18 13:41:06 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English technical Microsoft news post with substantive product details (not biographical, not question-only, not a sales pitch for a third-party tool, not job/career/business-executive-only content). Assigned ML because the core topic is analytics/data platform migration covering Azure Synapse Analytics, Azure Data Factory, Spark data engineering, and data warehousing within Microsoft Fabric (ML rules 1–4). Assigned Azure because the content centrally involves Azure services (Azure Synapse Analytics and Azure Data Factory) and their migration path (Azure rule 1). Assigned AI because the post explicitly describes Copilot-powered experiences and Copilot helping resolve migration issues inside Fabric (AI rule 5). Did not assign GitHub Copilot because the Copilot mentioned is Fabric Copilot, not GitHub Copilot."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-lakehouse-to-boardroom-analytics-and-ai-for-real-insights/",
+    "timestamp": "2026-03-18 13:42:10 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, substantive technical product/feature content (not job/career, not question-only, not sales pitch, not primarily about end-user Microsoft 365 productivity usage). Assigned ML because the post is centered on Microsoft Fabric analytics/data engineering/warehousing/Power BI modeling and includes Spark, Delta, AutoML/MLflow, and data platform engineering (ML inclusion rules 1–6). Assigned AI because it covers AI capabilities such as built-in AI functions in T-SQL, Copilot-assisted engineering, multimodal AI functions, and Fabric Data Agents (AI inclusion rules 1 and 5). Assigned GitHub Copilot (and therefore also AI) because it explicitly announces and explains “Agent Skills for Fabric in GitHub Copilot CLI” (GitHub Copilot rules 1–3; AI rule 2 requires both categories). Assigned Security because it includes Purview-based auditing/compliance and outbound access protection for Data Agents, plus identity/auth options like Azure AD/managed identities (Security inclusion rules 1, 3, 7, and 10). Azure category was not assigned because, despite Azure AD and a brief Azure Synapse mention, the substantive focus is Microsoft Fabric features and architecture rather than Azure services and deployment/management guidance (Azure not central per Azure inclusion rules/40% guideline)."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-planning-in-microsoft-fabric-iq-from-historical-data-to-forecasting-the-future/",
+    "timestamp": "2026-03-18 13:43:07 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, not job/career content, not question-only, and not primarily a sales pitch for a third-party tool (it’s a Microsoft product announcement with substantive feature details).\n\nIncluded ML because the content is centered on Microsoft Fabric analytics/planning capabilities (budgeting/forecasting/scenario modeling, Power BI semantic models, plan vs actuals, IBCS financial visualizations), which falls under ML rules 1 and 4 (Fabric/Power BI analytics development and advanced analytics/BI context).\n\nIncluded AI because the post explicitly frames Planning in Fabric IQ as enabling “AI assisted decision making” and discusses AI agents reasoning over governed data and shared semantics (AI category rule 5: business applications of AI and AI strategy, plus AI usage context within the Microsoft ecosystem).\n\nDid not include Azure, .NET, DevOps, Security, or GitHub Copilot because the announcement does not provide substantive content about Azure services, .NET development, CI/CD, security/identity tooling, or GitHub Copilot features."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-auto-update-admin-triggered-generally-available/",
+    "timestamp": "2026-03-18 13:43:38 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied (this is English, news content with substantive technical/operational guidance). Assigned DevOps because the article focuses on operational lifecycle management and automation of updates (maintenance windows, change control, programmatic updates via PowerShell/scripts), which fits DevOps inclusion rules around automation and operations. Assigned ML because the on-premises data gateway is positioned in the Microsoft Fabric/Data Factory ecosystem (data integration platform); while not ML modeling, it is part of the analytics/data platform operations described in the ML category scope (Microsoft Fabric platform services and related engineering/operations content). Did not assign Azure, .NET, AI, GitHub Copilot, or Security because the content does not materially cover Azure services, application development/.NET, AI products, Copilot, or specific security tooling—security is only mentioned generically as patches."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/the-power-of-the-microsoft-fabric-ecosystem-isvs-building-natively-on-fabric/",
+    "timestamp": "2026-03-18 13:44:30 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Included ML because the content is centered on Microsoft Fabric/OneLake as a data/analytics platform and discusses workloads like semantic models, reporting, data pipelines, data replication, MDM, and lakehouse table formats (ML inclusion rules 1–4). Included AI because multiple workloads explicitly focus on AI/agents or AI-assisted capabilities (e.g., Kanerika Karl AI Agent; Intuigence AI engineers; 2TEST using AI to autogenerate tests; repeated references to analytics + AI scenarios) (AI inclusion rules 1 and 5). Excluded Azure because, while Azure is mentioned (e.g., 'Clickhouse Cloud customers on Azure', 'running natively in Azure'), the substantive focus is Fabric/OneLake and partner workloads rather than Azure services/implementation details (Azure threshold not clearly met as central architecture). Excluded DevOps, .NET, GitHub Copilot, and Security because there is no substantial content about CI/CD/version control, .NET development, GitHub Copilot, or Microsoft security services beyond brief mentions of permissions/security concepts."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/trusted-ai-starts-with-microsoft-fabric-unified-real-time-intelligence-and-iq-context/",
+    "timestamp": "2026-03-18 13:45:20 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, not job/career content, not a question-only post, and it’s not primarily a sales pitch; it contains substantive technical product information (Fabric components and capabilities). Included ML because the content is centered on Microsoft Fabric’s analytics/data platform features (OneLake, real-time streaming/analytics, Eventstream/Eventhouse, dashboards, geospatial Maps, Graph/GQL, ontology) which fits the ML category’s Microsoft Fabric and analytics-engineering scope (ML rules 1–4). Included AI because it explicitly discusses trusted enterprise AI and Fabric AI agents operating over Fabric IQ’s ontology, plus AI capabilities like anomaly detection and agentic/operations agents (AI rules 1 and 5). Did not include Azure because the post focuses on Fabric (SaaS/data platform) rather than Azure services as the main implementation surface; Azure is only referenced indirectly in an illustration. Did not include .NET, DevOps, Security, or GitHub Copilot because none of those technologies or practices are substantively covered."
+  },
+  {
+    "canonical_url": "https://azure.microsoft.com/en-us/blog/fabcon-and-sqlcon-2026-unifying-databases-and-fabric-on-a-single-data-platform/",
+    "timestamp": "2026-03-18 14:37:17 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Included ML because the post is primarily about Microsoft Fabric as a data/analytics platform (OneLake, mirroring, Spark/Delta, KQL, semantic models, Direct Lake, graph), which falls under ML inclusion rules for Microsoft Fabric and analytics engineering. Included AI because it focuses on preparing data estates for AI and introduces agent-based capabilities (Fabric IQ ontologies via MCP, data/operations agents, Copilot-powered insights, Copilot in notebooks), matching AI inclusion rules around Microsoft-provided AI content and AI agent development. Included Azure because it explicitly covers Azure services and integrations (Azure SQL, Cosmos DB, Azure Database for PostgreSQL/MySQL, Azure Arc, Azure Data Factory and Synapse migration assistants, Azure Monitor mirroring), which meets Azure inclusion rules. Included DevOps due to Git integration improvements, selective branching, and explicit CI/CD support in the Fabric Extensibility Toolkit, which matches DevOps rules for version control and CI/CD. Included Security because it announces OneLake security with roles plus row- and column-level controls and unified permissions, which qualifies under Security rules for data protection/governance. Included GitHub Copilot (and therefore AI as required) because it explicitly states Fabric local MCP connects AI coding assistants such as GitHub Copilot to Fabric and mentions using natural language in the GitHub Copilot terminal via Agent Skills for Fabric, matching GitHub Copilot inclusion rules."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=XHTc6XF0gdk",
+    "timestamp": "2026-03-18 15:34:20 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, not job-related, not biographical, not question-only, and not primarily negative. It is promotional in parts (links and GitHub channel list), but the description still conveys substantive educational/usage guidance (advanced Copilot CLI workflow tips), so it is not a primary sales pitch.\n\nAssigned \"GitHub Copilot\" because the content is explicitly about Copilot CLI and GitHub Copilot (GitHub Copilot inclusion rules 1 and 2). Assigned \"AI\" because any GitHub Copilot content must also include AI (AI inclusion rule 2: always include both together). No other categories apply because there is no Azure, .NET, Security, ML, or broader DevOps/CI/CD focus beyond terminal usage."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=uzmnpGmR2tg",
+    "timestamp": "2026-03-18 15:34:57 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply (this is a short video description, but the 200-word minimum only applies to Community content). Categorized as GitHub Copilot because the content is explicitly about building a GitHub Copilot SDK project (GitHub Copilot inclusion rules 1 and 3). Categorized as AI because GitHub Copilot content requires also assigning AI (AI inclusion rule 2: always include both AI and GitHub Copilot together). No other categories are supported by the provided text (no Azure, .NET, DevOps, ML, or Security specifics mentioned)."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/18/observability-ai-systems-strengthening-visibility-proactive-risk-detection/",
+    "timestamp": "2026-03-18 16:29:59 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, substantive technical/security guidance (not job/career, not question-only, not a sales pitch, not negative). Assigned AI because the content is specifically about GenAI and agentic AI systems observability and mentions AI-native telemetry, evaluation, and governance (AI inclusion rules 5 and 6). Assigned Azure because it explicitly references Azure services used to operationalize observability—Azure Monitor and Application Insights—and Microsoft Foundry observability features in Azure Foundry (Azure inclusion rules 1 and 4). Assigned Security because the core focus is secure development practices (SDL), risk detection, policy adherence, prompt injection/data exfiltration scenarios, and governance/controls (Security inclusion rules 2, 6, and 9). Not assigned GitHub Copilot because the post discusses copilots generically and focuses on agentic systems and observability rather than GitHub Copilot tooling/features."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-databricks/near-real-time-cdc-to-delta-lake-for-bi-and-ml-with-lakeflow-on/ba-p/4502750",
+    "timestamp": "2026-03-18 16:32:18 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: No generic exclusion rules triggered: content is English, >200 words (community), and is a technical how-to (not biographical, not question-only, not job/business-exec focused, not unconstructively negative). Assigned Azure because Azure Databricks is the central platform and it explicitly uses Azure connectivity (Azure Databricks, Azure ExpressRoute) and Azure-hosted workspace endpoints (Azure category rules 1, 4, 5). Assigned ML because the post is primarily data engineering/analytics pipeline work (CDC ingestion, Bronze/Silver/Gold modeling, ETL/ELT, BI dashboards) which fits ML inclusion rules around analytics engineering and BI development on Microsoft platforms (ML rules 2 and 4). Did not assign AI: 'AI/BI Dashboards' and 'Genie' are mentioned for NL-to-SQL usage, but there is no Microsoft AI service (e.g., Azure OpenAI) or Microsoft AI framework/tooling described, so AI category rules are not met."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/agent-framework/handling-long-running-operations-with-background-responses/",
+    "timestamp": "2026-03-18 17:27:40 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply (English, substantive technical content, not job/business-only, not a sales pitch). Included AI because the article is about AI agents and Microsoft Agent Framework and references Azure OpenAI/OpenAI Responses API providers (AI inclusion rules 1 and 6). Included .NET because it provides .NET-specific implementation details and C# code using Agent Framework types like AgentRunOptions/AgentSession and AzureOpenAIClient (. NET inclusion rules 1 and 2). Did not include Azure as a category because Azure is only shown as an example provider endpoint/client setup, while the core topic is framework behavior (continuation tokens, polling/stream resumption) rather than Azure service configuration or architecture (Azure threshold not clearly met). Did not include ML because there is no custom model training/ML engineering; it focuses on using agent APIs and background execution patterns. Did not include DevOps or Security because CI/CD, ops workflows, or security implementation are not central."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=J5KTpq7hVn4",
+    "timestamp": "2026-03-18 17:29:24 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply (this is an English, non-job, non-executive, non-question-only video description). Assigned the AI category because the content is about VS Code \"agents\" and links directly to the VS Code Copilot agents documentation, which is AI-assisted development functionality (AI inclusion rules: high-level AI usage and Microsoft-provided AI tooling content). Did not assign GitHub Copilot because the description does not explicitly name GitHub Copilot; it only references agents in VS Code."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/pin-clustering-in-dotnet-maui-maps/",
+    "timestamp": "2026-03-18 18:25:17 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied (English, technical, not job/career, not executive strategy, not a sales pitch). Assigned the .NET category because the content is specifically about .NET MAUI 11 (Map control), includes XAML and C# examples, and discusses new APIs/events like IsClusteringEnabled, ClusteringIdentifier, and ClusterClicked (.NET inclusion rules: .NET frameworks/tools such as .NET MAUI and C# development). Did not assign Azure/DevOps/AI/ML/Security because the post does not cover Azure services, CI/CD tooling, AI/ML, or security topics."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/azure-sdk/azd-ai-agent-run-invoke/",
+    "timestamp": "2026-03-18 18:25:50 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product update content (not job/career, not question-only, not a sales pitch, not negative). Assigned AI because the post is specifically about running and invoking AI agents and references Azure AI Foundry and the `azure.ai.agents` extension (AI inclusion rules 1 and 5). Assigned Azure because it centers on Azure Developer CLI and invoking agents deployed in Azure AI Foundry (Azure inclusion rules 1 and 4). Assigned DevOps because it focuses on developer workflow/inner-loop tooling and terminal-based automation via `azd` commands (DevOps inclusion rules 6 and 9). Excluded .NET, ML, Security, and GitHub Copilot because the content does not discuss those technologies or scenarios."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot",
+    "timestamp": "2026-03-18 18:26:41 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is English news content with technical/product details, not a sales pitch, job content, or Microsoft 365 Copilot productivity guidance. Assigned \"GitHub Copilot\" because the announcement is specifically about Copilot Business/Enterprise model support, base model changes, and model management. Per rules, assigning \"GitHub Copilot\" also requires assigning \"AI\"; the content is about LTS for an AI model (GPT-5.3-Codex) used in Copilot and discusses model selection/deprecation and request unit multipliers."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/devops/authentication-tokens-are-not-a-data-contract/",
+    "timestamp": "2026-03-18 19:25:31 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied (this is English, technical, and not job/business-executive or sales-pitch content). Assigned DevOps because the post is from the Azure DevOps Blog and specifically instructs developers to use supported Azure DevOps REST APIs instead of decoding tokens (DevOps rules 1 and 11). Assigned Security because it focuses on authentication/authorization tokens, token claim handling risks, and upcoming token encryption that can break insecure/unsupported patterns (Security rules 2 and 3). Not assigned Azure/.NET/AI/ML/GitHub Copilot because the content does not discuss Azure services (beyond Azure DevOps), .NET languages/frameworks, or AI/ML/Copilot tooling."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-18-configure-copilot-coding-agents-validation-tools",
+    "timestamp": "2026-03-18 20:16:07 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusions applied (English, technical, not job/business-only, not question-only, not a sales pitch). Included \"GitHub Copilot\" because the content is specifically about Copilot coding agent and its validation behavior/configuration (GitHub Copilot inclusion rules 1 and 2). Per the workflow, also included \"AI\" whenever \"GitHub Copilot\" is assigned. Included \"DevOps\" because it discusses automated tests, linting, and configurable validation checks that fit CI/quality gates and developer workflow automation (DevOps rules 5 and 9). Included \"Security\" because it covers security validation tools like CodeQL, GitHub Advisory Database, and secret scanning (Security rules 5 and 8)."
+  },
+  {
+    "canonical_url": "https://code.visualstudio.com/updates/v1_113",
+    "timestamp": "2026-03-18 20:16:33 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English Microsoft product release note (not job-related, not biographical, not question-only, not a sales pitch).\n\nIncluded DevOps because Visual Studio Code is a core developer tool and the update includes developer workflow features like debugging configuration changes in launch.json and WSL-related Explorer integration fixes (DevOps rules 9 and 11: developer experience and GitHub/Microsoft developer tooling ecosystem).\n\nIncluded .NET because Visual Studio Code is explicitly listed as a Microsoft development tool under the .NET category rules (Visual Studio Code / C# Dev Kit ecosystem) even though the notes are editor-wide rather than C#-specific (.NET rule 5).\n\nDid not include GitHub Copilot or AI: the content only contains a brief event promotion link for GitHub Copilot Dev Days, but no GitHub Copilot features, setup, or guidance are described.\n\nDid not include Azure, ML, or Security: there is no substantive Azure or ML content; the localhost certificate bypass note is a developer convenience feature but not Microsoft security service implementation content per the Security inclusion rules."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-high-performance-computing/azure-ncv6-virtual-machines-enhancements-and-ga-transition/ba-p/4503578",
+    "timestamp": "2026-03-18 20:21:21 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: No generic exclusion rules apply: the post is English, >200 words (community type), technical, and not job/business-strategy focused. Assigned Azure because the content is entirely about Azure NCv6 Virtual Machines, their sizes/specs, GA transition, SLA coverage, and regional availability (Azure inclusion rules 1 and 5). Assigned AI because it explicitly positions NCv6 as infrastructure for \"generative AI compute workloads\" and \"generative AI inference\" (AI inclusion rule 5: AI usage and AI-powered applications/infrastructure context). Not assigned ML because it does not cover model training, ML engineering pipelines, or analytics engineering—it's primarily infrastructure sizing/availability, not ML implementation."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-networking/my-first-techcommunity-post-azure-vpn-gateway-bgp-timer/m-p/4503580#M776",
+    "timestamp": "2026-03-18 20:21:51 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: No generic exclusion rules apply: the post is English, >200 words for community content, not question-only, not a sales pitch, and not primarily biographical (the anniversary mention is brief; the main body is a technical lesson). Assigned **Azure** because the content focuses on Azure networking, specifically **Azure VPN Gateway** BGP behavior, fixed keepalive/hold timers, and practical configuration guidance (Azure inclusion rule 1 and 4). Did not assign **AI**: Microsoft 365 Copilot is mentioned only as a formatting aid and is a non-development Microsoft 365 product; it is not the subject of the technical content (Non-Development Microsoft Products exclusion for M365 Copilot). Did not assign DevOps/.NET/ML/Security/GitHub Copilot because the post does not cover those areas beyond general networking stability discussion."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/powershell/announcing-powershell-7-6/",
+    "timestamp": "2026-03-18 22:12:44 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Included .NET because the announcement explicitly states PowerShell 7.6 is built on .NET 10 (LTS), and the post discusses engine/module updates and runtime-aligned dependency updates—directly tied to the .NET platform (.NET inclusion rules 1 and 4). Excluded Azure, DevOps, AI, ML, Security, and GitHub Copilot because the content does not substantively cover Azure services, CI/CD tooling, AI/ML services, security services/implementation guidance, or GitHub Copilot; it is primarily a release announcement focused on PowerShell runtime/features."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/materialized-lake-views-in-microsoft-fabric-generally-available/",
+    "timestamp": "2026-03-19 00:32:09 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules: none apply (English technical news; not job/career; not question-only; not primarily a sales pitch; constructive/technical).\n\nCategory decisions:\n- ML: Included because the content is about Microsoft Fabric Lakehouse data engineering/analytics features (Materialized Lake Views), medallion architecture pipelines, Spark SQL/PySpark transformations, incremental refresh, scheduling/orchestration, and data quality reporting—this aligns with ML rules around Microsoft Fabric and analytics/data engineering workflows.\n- AI: Not included because the post discusses data engineering features (Spark SQL/PySpark, refresh/orchestration, constraints) rather than AI services or model/prompt work; the mention of “ML models” is incidental and not a primary focus.\n- Azure: Not included because the substantive content is Fabric-specific; no Azure service implementation details are central.\n- DevOps: Not included because scheduling/orchestration described is within Fabric MLV management rather than CI/CD, GitHub Actions, Azure DevOps, IaC, or release pipelines.\n- .NET / GitHub Copilot / Security: Not included because none of those technologies are discussed."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-observability-blog/introducing-azure-managed-grafana-mcp-the-managed-data-gateway/ba-p/4503619",
+    "timestamp": "2026-03-19 00:37:25 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: No generic exclusion rules triggered: content is English, not job/career-focused, not question-only (it contains substantive explanation), not primarily sales pitch for a third-party tool, and not negative/unconstructive. Community length is >200 words.\n\nAssigned Azure because the post is centrally about Azure Managed Grafana and Azure observability services (Azure Monitor, Application Insights) and how they integrate (Azure inclusion rules 1 and 4).\n\nAssigned AI because it focuses on enabling AI agents to access telemetry via a managed MCP endpoint and references agent workflows and Foundry agents (AI inclusion rules 1 and 5; Microsoft Foundry is discussed as an agent tool integration).\n\nAssigned Security because a major theme is governed/secure access to production telemetry using Azure RBAC, managed identities, and existing access controls, explicitly discussing security posture and attack surface (Security inclusion rules 2, 3, and 4)."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-knowledge-grounded-ai-agents-with-foundry-iq/ba-p/4499683",
+    "timestamp": "2026-03-19 07:30:40 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: No generic exclusions applied: the post is English, technical, not job/career/business-exec content, not question-only, and long enough for community content.\n\nCategories:\n- AI: Included because the post focuses on building AI agents using Foundry Agent Service, MCP tool calling, LLM-assisted retrieval, and model usage (gpt-4.1), aligning with AI inclusion rules (Microsoft AI services/agent development).\n- Azure: Included because it is built around Azure services and SDKs (Azure AI Search, Azure AI Projects SDK, Azure CLI commands, Azure resource IDs, MCP endpoint on *.search.windows.net), meeting Azure inclusion rules.\n- Security: Included due to identity/authorization and permission enforcement details: RBAC enabling on Azure AI Search, managed identity authentication (ProjectManagedIdentity), role assignment (Search Index Data Reader), and permission-aware retrieval/ACL sync across SharePoint/OneLake/Blob (Security inclusion rules for IAM and access control).\n\nNot included:\n- GitHub Copilot: Not mentioned.\n- .NET: Code samples are Python; no .NET technologies discussed.\n- DevOps: Some CLI usage exists, but the post is not about CI/CD, pipelines, or DevOps practices.\n- ML: Uses embeddings/vector search and LLMs, but does not cover model training/data science/ML engineering; it’s primarily service integration (AI) rather than ML from scratch."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/19/when-tax-season-becomes-cyberattack-season-phishing-and-malware-campaigns-using-tax-related-lures/",
+    "timestamp": "2026-03-19 15:22:30 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply (English, substantial technical/security content, not job/career, not question-only, not sales pitch). Assigned Security because the article is a threat-intel report focused on phishing/malware campaigns and includes Microsoft security mitigations and hunting content: Microsoft Defender XDR/Office 365/Endpoint, Conditional Access/MFA guidance, Microsoft Sentinel/ASIM queries, and IOCs (Security inclusion rules 1, 5, 6). Assigned AI because it includes Microsoft Security Copilot (an AI-powered security product) and discusses deploying AI agents for security operations (AI inclusion rule 1: Microsoft AI products/services). Did not assign Azure/.NET/DevOps/ML because the main content is not about Azure services, software development, CI/CD, or data/ML engineering."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/custom-sql-pools-for-fabric-data-warehouse-preview/",
+    "timestamp": "2026-03-19 16:24:10 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied (English, technical product update, not job-related or executive/business-only, not a sales pitch). Assigned ML because the content is centered on Microsoft Fabric Data Warehouse and SQL analytics endpoint configuration for analytics/data platform workloads (ML inclusion rules 1 and 3: Microsoft Fabric analytics platform and data architecture/warehouse operations). Assigned Azure because Microsoft Fabric is part of Microsoft’s cloud data platform and the post focuses on cloud resource/compute allocation, scaling with capacity SKUs, and management via REST APIs (Azure inclusion rules 1 and 4: Azure service/platform operations and management). Did not assign AI, GitHub Copilot, .NET, DevOps, or Security because the article does not discuss those technologies or practices."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-runtime-2-0-preview/",
+    "timestamp": "2026-03-19 16:24:34 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: the item is English, not job/career/biographical, not question-only, not a sales pitch, and is a substantive Microsoft Fabric runtime announcement. Assigned ML because the content is about Microsoft Fabric’s runtime for data engineering/data science workloads on Apache Spark and Delta Lake (ML category rules 1 and 2: Fabric + analytics/data engineering focus). Assigned Azure because Fabric is a Microsoft cloud platform within the Azure ecosystem and the runtime stack explicitly includes Azure Linux (Azure rule 1: Azure service/technology is part of the substantive content). Did not assign AI because there is no mention of Azure OpenAI, Azure AI Foundry/Services, Copilot Studio, or other Microsoft AI services; this is primarily a Spark/Delta runtime update rather than AI integration."
+  },
+  {
+    "canonical_url": "https://microsoft.ai/news/introducing-mai-image-2/",
+    "timestamp": "2026-03-19 16:25:07 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules did not apply: this is English news content with substantive information (not job-only, not question-only, not biographical, not negative/complaint-focused, and not primarily a sales pitch for a third-party tool). Assigned the AI category because it announces a Microsoft text-to-image generative model (MAI-Image-2) and discusses model capabilities (photorealism, in-image text generation, scene generation) plus access via MAI Playground and API availability (AI inclusion rules 1 and 6). Did not assign Azure/.NET/DevOps/Security/ML because the post does not provide Azure service implementation details, code, CI/CD, security/identity specifics, or ML engineering/training details beyond high-level model capability and rollout notes. Did not assign GitHub Copilot because the content references Copilot as a product rollout target, not GitHub Copilot developer tooling."
+  },
+  {
+    "canonical_url": "https://github.blog/ai-and-ml/github-copilot/how-squad-runs-coordinated-ai-agents-inside-your-repository/",
+    "timestamp": "2026-03-19 16:25:55 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is English, not job/career content, not question-only, not primarily a sales pitch (it includes substantive architectural patterns and workflow details), and not about excluded non-development Microsoft 365 Copilot products. Assigned \"GitHub Copilot\" because the content explicitly states Squad is \"built on GitHub Copilot\" and discusses agentic workflows in that ecosystem (GitHub Copilot inclusion rules 1–4). Per rules, adding \"GitHub Copilot\" also requires adding \"AI\" (AI rule 2). Assigned \"DevOps\" because the workflow is repository- and PR-centric (branches, pull requests, review protocols, testing loop), which fits CI/CD and developer workflow/operations concerns (DevOps rules 5, 8, 9). Did not assign \".NET\", \"Azure\", \"ML\", or \"Security\" because the post does not substantively cover those Microsoft technologies or implementations."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/audit-columns-in-copy-job-in-fabric-data-factory-every-row-is-traceable-for-data-lineage-and-compliance/",
+    "timestamp": "2026-03-19 17:26:06 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical, non-biographical, and not job/career or sales-pitch content. Categorized as ML because the article is about Microsoft Fabric Data Factory (analytics/data engineering platform) and implementing data engineering lineage/compliance metadata via Copy job audit columns, which fits ML inclusion rules around analytics engineering and data platform workflows (ML rules 1–5). Did not assign Azure because the focus is Fabric Data Factory rather than Azure platform operations; the only Azure reference is a link to Azure Data Factory documentation, which is not central. Did not assign Security because it discusses compliance/auditing concepts but does not cover implementation with Microsoft security products (Entra, Key Vault, Sentinel, Defender, Purview) or security architecture."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/whats-new-and-improved-for-sql-database-in-fabric-generally-available/",
+    "timestamp": "2026-03-19 17:26:48 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: the content is English, non-biographical, not job-related, and contains substantive technical details.\n\nCategories assigned:\n- ML: Included because the core topic is Microsoft Fabric and database capabilities that bring operational data closer to analytics, including OneLake mirroring and Fabric database features; Fabric is explicitly listed under ML category platforms (ML rule 1) and the post discusses analytics-oriented integration.\n- Security: Included due to Customer-Managed Keys with Azure Key Vault, auditing, Dynamic Data Masking, and private links (Security rules 1, 4, and 7).\n- DevOps: Included because it discusses source control integration, deployment pipelines, and pre/post-deployment scripts for database CI/CD in Fabric (DevOps rules 5 and 6).\n- AI: Included because the post contains AI-focused database features, specifically vector search and DiskANN vector index improvements framed as “Optimized for AI” (AI rule 5: using AI-related capabilities, and Microsoft-provided AI-related content within the Fabric ecosystem).\n- Azure: Included because CMK explicitly uses Azure Key Vault and the post covers migrating Azure SQL workloads into Fabric; Azure is a substantial supporting technology here (Azure rule 1).\n\nNot assigned:\n- .NET: No C#/F#/ASP.NET/Visual Studio/.NET-specific implementation is discussed.\n- GitHub Copilot: No GitHub Copilot content is present."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/devops/remote-mcp-server-preview-in-microsoft-foundry/",
+    "timestamp": "2026-03-19 18:22:12 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is English, technical product guidance, not job/career, not a question-only post, and not a sales pitch. Assigned DevOps because the content is specifically about Azure DevOps and connecting an agent to Azure DevOps tooling (DevOps rule 1). Assigned AI because it is about Microsoft Foundry for building/managing AI-powered applications and agents, and using an agent with tools (AI rule 1 and rule 5). Assigned Azure because Foundry is positioned as running on Azure and the post explicitly mentions moving to production-ready systems on Azure and links to ai.azure.com (Azure rule 1 and rule 4). Not assigned GitHub Copilot because the post is about Azure DevOps MCP Server and Foundry agents, not GitHub Copilot."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-codespaces-with-data-residency-now-available-in-japan",
+    "timestamp": "2026-03-19 18:23:09 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: this is an English GitHub changelog/news update with technical product information (not biographical, question-only, job-related, or Microsoft 365 Copilot/consumer Copilot content). Included DevOps because the content is about GitHub Codespaces (a GitHub developer platform feature) and developer environment management (DevOps rule 11 and developer experience aspects). No Azure/.NET/AI/ML/Security categories were assigned because the post only covers region availability/data residency for Codespaces and does not provide Microsoft Azure services, .NET development, AI/Copilot, ML, or Microsoft security product implementation details."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-view-code-and-comments-side-by-side-in-pull-request-files-changed-page",
+    "timestamp": "2026-03-19 18:23:35 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules: none apply (English, not job/career, not question-only, not sales-pitch, sufficient substance for news).\n\nDevOps: Included because the content is about GitHub pull request workflow and code review UX (version control/collaboration and developer experience), which qualifies under DevOps rules 8 (Version Control) and 9 (Developer Experience) and 11 (GitHub content).\n\nSecurity: Included because the post specifically describes an Alerts panel that surfaces code scanning alerts and security alerts during pull request review, which is security monitoring/vulnerability context (Security rules 5 and 8).\n\nAI/GitHub Copilot: Not included because the content is about pull request UI and review panels; there is no GitHub Copilot feature mentioned.\n\nAzure/.NET/ML: Not included because no Azure services, .NET technologies, or ML/data-science topics are discussed."
+  },
+  {
+    "canonical_url": "https://github.blog/open-source/maintainers/rethinking-open-source-mentorship-in-the-ai-era/",
+    "timestamp": "2026-03-19 18:24:13 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: it’s English, not job-related, not biographical, not question-only, and not a sales pitch. Assigned DevOps because the article is about open source contribution workflows and maintainer practices around pull requests, review, and contribution guidelines on GitHub (DevOps rules: team collaboration/ways of working, version-control/PR workflow, developer experience). Assigned AI because it centrally discusses AI/LLM-assisted coding contributions and governance around AI disclosure and agent instructions (AI category: high-level AI usage and AI tooling impact on development practices). Did not assign GitHub Copilot because Copilot is only mentioned indirectly via an analogy (“robots.txt for Copilot”) and the post is not specifically about GitHub Copilot features, setup, or usage."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=6awzUxeG-b0",
+    "timestamp": "2026-03-19 18:25:59 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Generic exclusion rules: none apply (not biographical, not question-only, not sales-pitch dominant, not job/business-strategy content; type is videos so the 200-word community minimum does not apply; English).\n\nIncluded AI: The content is explicitly about Microsoft Foundry / Azure AI Foundry and Azure OpenAI fine-tuning lifecycle topics (deployment, evaluation with a custom grader, and cost management), which falls under AI category rules for Microsoft AI products/services and AI development workflows.\n\nIncluded Azure: Azure is central via Azure AI Foundry and Azure OpenAI fine-tuning and deployment references (Azure service usage and operational considerations like inference cost management).\n\nExcluded ML: While the topic mentions fine-tuning and evaluation, the provided material (video description) does not show custom model training from scratch, ML engineering details (framework-level training loops, feature engineering, MLOps infrastructure), or data science pipeline implementation, so it does not clearly meet ML inclusion rules based on the input text alone."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=GyCLzGQwaEc",
+    "timestamp": "2026-03-19 18:26:23 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English technical video description (not job/career, not sales-pitch-dominant, not question-only, not negative). Assigned AI because it focuses on Microsoft Foundry/Azure AI Foundry fine-tuning capabilities (AI inclusion: Microsoft AI products/services and AI development usage). Assigned Azure because Azure AI Foundry is an Azure service central to the content (Azure inclusion: Azure services and Azure AI services). Assigned ML because the core topic is supervised fine-tuning, model optimization, and evaluating training jobs with checkpoints/logs/metrics, which is ML engineering rather than only consuming pre-built AI APIs (ML inclusion: model training/fine-tuning and ML development workflows)."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=vKfG50oLSmk",
+    "timestamp": "2026-03-19 18:26:47 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply (this is an English technical video description, not job-related, not biographical, not question-only, and not a sales pitch). Assigned AI because the content is about AI agents and fine-tuning in Microsoft (Azure) AI Foundry (AI inclusion rules 1 and 5). Assigned Azure because AI Foundry is an Azure AI platform service and the resources point to Microsoft’s Foundry fine-tuning content (Azure inclusion rule 3 and 1). Assigned ML because it explicitly covers model optimization techniques like synthetic data generation, advanced fine-tuning methodologies, and model distillation, which are ML engineering topics rather than just consuming pre-built AI APIs (ML inclusion rules 10 and 11)."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/extended-capabilities-in-mirroring-in-microsoft-fabric-optional-enhancements-to-core-mirroring/",
+    "timestamp": "2026-03-19 19:23:22 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, substantive technical product content (not a job post, not biographical, not question-only, not primarily sales pitch, not non-dev Microsoft 365 Copilot). Assigned ML because the content is centered on Microsoft Fabric data engineering/analytics capabilities (Mirroring to OneLake, Delta format, incremental processing via Delta Change Data Feed, curated datasets via Views), which fits ML inclusion rules around analytics engineering and advanced data platform development (ML rules 1–4). Assigned AI because the post explicitly frames these capabilities as enabling “analytics, AI, and reporting” and discusses AI-ready data foundations/workflows in Fabric (AI rule 5: high-level AI usage and AI-powered applications enabled by platform data capabilities). Did not assign Azure/.NET/DevOps/Security/GitHub Copilot because the post does not focus on Azure services (beyond mentioning Azure SQL as a source), .NET development, CI/CD, or security implementation details."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/19/new-tools-and-guidance-announcing-zero-trust-for-ai/",
+    "timestamp": "2026-03-19 20:15:44 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, not job-related, not question-only, not a sales pitch, and contains substantive technical/security guidance. Assigned Security because the content is specifically about Zero Trust, security controls, security assessment, and reference architecture for securing AI systems (Security rules 1 and 9), including threats like prompt injection/data poisoning and governance/monitoring. Assigned AI because the announcement is explicitly about securing AI systems and agentic workloads across the AI lifecycle and introduces an AI pillar, AI-specific assessment roadmap, and AI security patterns (AI rules 4 and 5). No Azure/.NET/DevOps/ML categories were assigned because the post does not focus on implementing specific Azure services, .NET development, CI/CD, or data science/ML engineering."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-copilot-coding-agent-now-starts-work-50-faster",
+    "timestamp": "2026-03-19 20:16:15 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply (this is short, but it is type=news so the 200-word community minimum does not apply; it is not biographical, question-only, job-related, or a sales pitch). Assigned \"GitHub Copilot\" because the content is specifically about Copilot coding agent and how to invoke it (Copilot category rules 1, 2, and 4). Per the rules, whenever \"GitHub Copilot\" is assigned, \"AI\" must also be assigned, so \"AI\" is included as well."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-hierarchy-view-in-github-projects-is-now-generally-available",
+    "timestamp": "2026-03-19 20:16:36 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product update content (news) and not biographical, job-related, sales-only, or non-development Microsoft 365 Copilot content. Assigned DevOps because the content is about GitHub Projects/Issues workflow features (DevOps rule 11: GitHub content; also relates to developer collaboration/work management). Assigned GitHub Copilot and AI because it introduces assigning GitHub Copilot via issue templates using @copilot (GitHub Copilot inclusion rules 1 and 2), and the rules require always including AI whenever GitHub Copilot is assigned."
+  },
+  {
+    "canonical_url": "https://devblogs.microsoft.com/dotnet/accelerating-dotnet-maui-with-ai-agents/",
+    "timestamp": "2026-03-19 21:15:30 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: the post is English, technical, not job/exec-focused, and the Syncfusion mention is a minor/standard guest-post promo rather than a dominant sales pitch. Assigned .NET because the content centers on .NET MAUI contribution workflows, tests, handlers, and XAML tooling. Assigned GitHub Copilot and AI because the workflow is explicitly run via GitHub Copilot CLI and describes custom AI agents/skills for PR review, test writing, and multi-model try-fix (GitHub Copilot rule set + AI rule set; Copilot requires AI together). Assigned DevOps because it focuses on pull request lifecycle automation, code review workflows, testing/validation gates, CI-style verification, and includes Azure DevOps build investigation/Helix log retrieval via the azdo-build-investigator skill (DevOps rules for CI/CD, automation, and GitHub-based workflows). Azure category was not assigned because Azure services are not a central part of the solution; Azure DevOps is mentioned as a supporting integration rather than the primary platform."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/third-party-support-for-onelake-security/",
+    "timestamp": "2026-03-19 21:16:22 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English news content with technical implementation details (not job/career, not question-only, not sales-pitch-only, not Microsoft 365 Copilot/consumer Copilot). Assigned Security because the post is specifically about access control enforcement for OneLake, including table permissions, role-based permissions, and RLS/CLS, and describes how third-party engines enforce policies via OneLake APIs (Security inclusion rules 1, 3, 7, 9). Assigned ML because the content is centered on Microsoft Fabric/OneLake as a data platform and lakehouse interoperability for analytics engines (ML inclusion rules 1 and 3: Microsoft Fabric and data lake/analytics architecture). Did not assign Azure/.NET/DevOps/AI/GitHub Copilot because the post does not cover Azure services directly, .NET development, CI/CD, or AI/Copilot features."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-github-actions-late-march-2026-updates",
+    "timestamp": "2026-03-19 21:17:00 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English GitHub changelog-style news post with substantive technical details (not biographical, not question-only, not a sales pitch, not job/business strategy, not non-development Microsoft 365 Copilot). Assigned DevOps because the content is entirely about GitHub Actions workflow capabilities (CI/CD), including environment deployment controls and scheduled workflow syntax (DevOps rules 5 and 11). No other categories apply because the post does not cover Azure, .NET, Security, AI, ML, or GitHub Copilot."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/33772/",
+    "timestamp": "2026-03-19 22:10:06 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply (English, technical, not job/business-strategy-only, not a sales pitch). Assigned ML because the content is Microsoft Fabric data engineering guidance focused on Spark/notebook environments and dependency/library management within Fabric (ML inclusion rules: Microsoft Fabric for analytics/data engineering workloads, plus data engineering operational guidance in Fabric). Did not assign Azure/.NET/DevOps/Security/AI/GitHub Copilot because the post does not cover those technologies beyond Fabric-specific environment/library management and Spark usage."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-toolkit-ci-cd-remote-lifecycle-notifications-and-fabric-scheduler-preview/",
+    "timestamp": "2026-03-19 22:10:45 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical Microsoft content, not a job post, not biographical, not question-only, and not primarily a sales pitch. Assigned DevOps because the announcement is centered on CI/CD, Git integration, Deployment Pipelines, and explicitly mentions GitHub Actions and Azure Pipelines automation plus Deployment Pipelines REST API usage (DevOps rules 5, 8, 11). Assigned ML because Microsoft Fabric (including OneLake/Lakehouse/Warehouse concepts) is a core analytics/data platform and the post is specifically about Fabric workload development and lifecycle on that platform (ML rules 1 and 3). Assigned Azure because it discusses provisioning Azure resources (resource groups) as part of workload lifecycle and broader Azure-integrated backend scenarios (Azure rule 6). Assigned Security because Remote Jobs rely on delegated identity via an On-Behalf-Of token and reference Entra-protected services, which is identity/access control relevant in Microsoft ecosystem implementations (Security rules 3 and 4). Did not assign AI, GitHub Copilot, or .NET because the content does not discuss Microsoft AI services, Copilot, or .NET languages/frameworks."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-17-dependabot-now-detects-malware-in-npm-dependencies",
+    "timestamp": "2026-03-19 22:11:46 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is an English GitHub changelog entry with substantive technical guidance (not biographical, not question-only, not a sales pitch, not job/business strategy, not non-development Microsoft 365 content). Assigned DevOps because the content is about GitHub Dependabot alerts and configuration in repo/org/enterprise settings (DevOps rule 11: GitHub content; also CI/CD and developer workflow tooling context). Assigned Security because it focuses on supply chain security, malware detection in dependencies, and security alerting/triage rules (Security rules 5 and 8: threat detection/response and vulnerability/supply-chain risk management using Microsoft/GitHub tooling). Excluded AI, GitHub Copilot, .NET, Azure, and ML because the content does not involve those technologies or workflows."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-actions-runner-controller-release-0-14-0",
+    "timestamp": "2026-03-19 22:12:14 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules: none apply (English technical release note; not job-related, not biographical, not sales pitch, not question-only, not Microsoft 365 Copilot/consumer Copilot content).\n\nIncluded DevOps because the content is about GitHub Actions infrastructure and operations (self-hosted runners, runner scale sets, autoscaling behavior, Helm chart configuration, and Kubernetes scheduling), which matches DevOps inclusion rules for GitHub DevOps tools and CI/CD infrastructure/automation.\n\nExcluded Azure/.NET/AI/ML/Security/GitHub Copilot because the post does not cover Azure services, .NET development, AI/ML topics, security implementation, or GitHub Copilot features—it's specifically about GitHub Actions Runner Controller and Kubernetes/Helm configuration."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/microsoft-fabric-extensibility-toolkit-generally-available/",
+    "timestamp": "2026-03-19 23:12:19 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical news, not job/career, not question-only, not a sales pitch for a third-party tool, and not Microsoft 365 Copilot/consumer Copilot content.\n\nCategories assigned:\n- ML: The content is centered on Microsoft Fabric extensibility (a Microsoft data/analytics platform) and building workloads/items that integrate with Fabric/OneLake and the Workload Hub. This fits ML category rule 1 (Microsoft Fabric for analytics platform development).\n- DevOps: It explicitly mentions CI/CD support (preview), GitHub Codespaces/DevContainer workflow, and developer setup scripts, aligning with DevOps rules 5 and 9.\n- Security: It includes Microsoft Entra authentication and acquiring On-Behalf-Of (OBO) tokens to call Entra-protected APIs, plus governed access/sensitivity labels, matching Security rules 1 and 3.\n- AI + GitHub Copilot: The table lists “AI-enabled development” with GitHub Copilot integration via `.ai/` context and repo instructions, and the Getting started section describes using Copilot in VS Code. Per rules, GitHub Copilot content requires both categories (AI rule 2 and GitHub Copilot inclusion rules). \n\nCategories not assigned:\n- Azure: Although Azure is mentioned as an example of an Entra-protected API, the article’s substantive focus is Fabric (not specific Azure services/architecture). \n- .NET: No .NET languages/frameworks are discussed; the frontend SDK is React/Fluent UI and scripts are PowerShell."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/unlock-insights-from-images-and-pdfs-with-multimodal-support-in-fabric-ai-functions-preview/",
+    "timestamp": "2026-03-19 23:12:52 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product content (not job/career, not question-only, not a sales pitch, not about Microsoft 365 Copilot/consumer Copilot). Assigned AI because the post is explicitly about Fabric AI functions and multimodal AI capabilities (AI inclusion rules: Microsoft AI products/services and AI usage via pre-built services). Assigned ML because it is Microsoft Fabric data/analytics platform content focused on applying AI over datasets/files within notebooks/dataflows and includes evaluation workflows with ML-style metrics (ML inclusion rules: Microsoft Fabric for analytics/data science, and evaluation/quality measurement concepts). Did not assign Azure/.NET/DevOps/Security/GitHub Copilot because the post does not substantially cover those technologies."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-19-more-visibility-into-copilot-coding-agent-sessions",
+    "timestamp": "2026-03-19 23:13:35 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is English, not job/career content, not question-only, not a sales pitch, and not negative/unconstructive. Assigned \"GitHub Copilot\" because the content is specifically about Copilot coding agent and its agent session logs (GitHub Copilot inclusion rules 1 and 2). Per the workflow rule, whenever \"GitHub Copilot\" is assigned, \"AI\" must also be assigned (AI rule 2). No other categories apply: there is no Azure, .NET, ML, or Security implementation guidance beyond mentioning GitHub Actions logs as a place to debug."
+  },
+  {
+    "canonical_url": "https://www.thomasmaurer.ch/2026/03/built-in-cis-benchmarks-on-microsoft-azure/",
+    "timestamp": "2026-03-19 23:14:49 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: No generic exclusion rules apply: the post is English, not job-related, not question-only, not a sales pitch, and not primarily biographical (the long author bio/footer is page boilerplate rather than the main content). Assigned Azure because the core topic is built-in CIS Benchmarks on Azure and links to Azure OSConfig (Azure inclusion rules 1 and 4). Assigned Security because it focuses on security baselines/compliance benchmarks and applying standardized security practices in regulated/hybrid environments (Security inclusion rules 4, 9, and 10). No AI/.NET/DevOps/ML/GitHub Copilot: none of those technologies are substantively discussed in the post body."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-the-updated-copilot-for-data-engineering-and-data-science-preview/",
+    "timestamp": "2026-03-20 00:30:10 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is English, technical product content (not biographical, job-related, question-only, or primarily promotional), and it’s a news post with substantial technical detail. Included AI because the article is centered on a Copilot feature embedded in Microsoft Fabric notebooks that generates/refactors code and provides diagnostic summaries (AI inclusion: Microsoft-provided AI content and AI-powered development assistance). Included ML because the feature is specifically for data engineering and data science workflows in Microsoft Fabric notebooks, involving Spark, Lakehouse context, performance optimization guidance, and notebook-based analytics work (ML inclusion: Microsoft Fabric for data science/analytics engineering). Did not include Azure/.NET/DevOps/Security/GitHub Copilot because the content does not materially cover Azure services (beyond hosting the image), .NET development, CI/CD/version control, security tooling, or GitHub Copilot specifically."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/maps-in-microsoft-fabric-generally-available/",
+    "timestamp": "2026-03-20 00:30:38 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product content (not biographical, job-related, question-only, or a sales pitch-only post). Included ML because the content is centered on Microsoft Fabric capabilities for analytics/real-time intelligence and geospatial data modeling/visualization (ML rules 1 and 4; Fabric and analytics engineering focus). Included AI because it explicitly discusses Fabric IQ Ontology enabling AI agents to reason over entities/relationships with spatial-temporal context (AI rule 1/4: Microsoft AI platform features in Fabric). Included Azure because it references Azure-hosted services/products and integrations, specifically Azure Maps (WMTS example) and Microsoft Planetary Computer Pro on azure.microsoft.com, which are central to the described connectivity options (Azure rule 1 and 6). Excluded .NET, DevOps, and Security because the post does not discuss .NET development, CI/CD/version control, or security/identity tooling."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/proactive-and-incremental-statistics-refresh-for-fabric-data-warehouse-and-sql-analytics-endpoint/",
+    "timestamp": "2026-03-20 00:31:05 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules did not apply: this is English technical news content (not biographical, not question-only, not a sales pitch, not job/business-executive content). Categorized as ML because the post focuses on Microsoft Fabric Data Warehouse and the SQL Analytics Endpoint—analytics/data-platform engineering topics—and specifically discusses query optimizer statistics, histograms, and performance behavior in an analytics warehouse (ML category rules 1–4 around Fabric and analytics engineering). Not categorized as Azure because the content is centered on Fabric SQL Warehouse features rather than Azure services, and no specific Azure services are discussed. Not categorized as AI because mentions of “Copilot Analytics” are contextual and the post is not about building/using AI services or tools. Not categorized as DevOps, .NET, GitHub Copilot, or Security because none of those technologies or practices are substantively covered."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/centralized-monitoring-in-azure/ba-p/4504027",
+    "timestamp": "2026-03-20 06:28:35 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Generic exclusion rules: none triggered (English, technical, not job/biographical, not question-only, not sales-pitch-dominant; community post is well over 200 words).\n\nIncluded Azure: the content is centered on Azure Monitor diagnostic settings, Log Analytics Workspaces, and Azure CLI commands like `az monitor diagnostic-settings` and `az resource list` (Azure inclusion rules 1 and 4).\n\nIncluded DevOps: the post focuses on operational automation at scale (bulk remediation via scripting, governance trade-offs between script vs Azure Policy), which fits infrastructure/automation and operations/observability practices (DevOps inclusion rules 6 and 7).\n\nExcluded other categories: no AI/GitHub Copilot/.NET/ML topics are present. Security is mentioned only as a motivation (security team mandate), but there are no Microsoft security services or security implementation details, so Security category is not assigned."
+  },
+  {
+    "canonical_url": "https://dellenny.com/how-solution-architects-can-use-microsofts-azure-globe-experience-to-design-smarter-cloud-architectures/",
+    "timestamp": "2026-03-20 09:19:17 +00:00",
+    "collection": "blogs",
+    "reason": "Succesfully added: Generic exclusion rules did not apply: the content is English, not job/career-focused, not question-only, not a sales pitch, and not overly negative. Assigned the Azure category because the post is centered on Azure Global Infrastructure and the Azure “Globe” experience, including regions, availability zones, region pairs, and multi-region deployment planning (Azure inclusion rules: Azure services/technology and Azure architecture). Did not assign Security because it discusses compliance at a high level without Microsoft security services or implementation details (e.g., Entra ID, Key Vault, Sentinel). Did not assign DevOps, .NET, AI, or ML because no relevant tooling, coding, CI/CD, or data/ML engineering content is present."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/designing-an-azure-disaster-recovery-strategy-for-enterprise/ba-p/4504142",
+    "timestamp": "2026-03-20 10:21:02 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Generic exclusion rules: none triggered (English, substantive >200 words for community, not job/career, not sales pitch, not question-only, not non-development Microsoft 365 content).\n\nIncluded Azure: The article is centered on designing a multi-region disaster recovery strategy in Microsoft Azure, including region selection, Availability Zones, region pairing/non-paired regions, Azure Site Recovery, Log Analytics considerations, and Azure region/service availability (Azure inclusion rules 1 and 5).\n\nExcluded Security: Although it mentions security controls (firewalls/proxy) and compliance as criteria, it does not provide Microsoft security service implementation details (e.g., Entra ID, Key Vault, Defender, Sentinel) beyond brief references.\n\nExcluded DevOps: Terraform/IaC and runbooks are mentioned, but the post is not primarily about CI/CD, pipelines, GitHub/Azure DevOps tooling, or operational automation patterns in depth.\n\nExcluded AI/ML: AI/ML is only mentioned as a consideration for service/model availability across regions; there is no Azure AI service usage or ML engineering content."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/sql-server/blog/2026/03/18/advancing-agentic-ai-with-microsoft-databases-across-a-unified-data-estate/",
+    "timestamp": "2026-03-20 12:15:58 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English news content and not job-related, biographical, question-only, or a sales pitch. Assigned Azure because the description is explicitly centered on Azure SQL (Azure inclusion rule 1). Assigned AI because it states Azure SQL brings AI capabilities directly into the database experience and references agentic AI (AI inclusion rule 4/5). Did not assign ML because the provided text does not describe data science/ML engineering, training, or analytics pipelines; it’s a high-level AI capability positioning rather than ML implementation details."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=FQdu5cyvb5k",
+    "timestamp": "2026-03-20 12:17:34 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules apply: the content is English, not job/business/executive focused, not question-only, and while it contains a promotional discount link, the primary purpose is discussing a technical vulnerability (sales pitch exclusion does not apply). Assigned .NET because the topic is a .NET library (AutoMapper) and crashing a .NET server (.NET inclusion rules 1 and 3). Assigned Security because it discusses a high-severity vulnerability that can be exploited to crash a server (Security inclusion rules 2 and 8). Excluded Azure/DevOps/AI/ML/GitHub Copilot because none of those technologies are part of the described topic."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-20-a-smoother-navigation-experience-in-github-mobile-for-android",
+    "timestamp": "2026-03-20 14:21:54 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules did not apply (English, not job-related, not biographical, not question-only, not a sales pitch, not overly negative). Assigned DevOps because the content is a GitHub product update (GitHub is explicitly included under DevOps category rule 11: \"GitHub content that doesn't fit GitHub Copilot category\"). Did not assign GitHub Copilot or AI because the update is about GitHub Mobile app navigation UX, not Copilot features or AI services. No Azure/.NET/ML/Security content is present."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-20-monitor-copilot-coding-agent-logs-live-in-raycast",
+    "timestamp": "2026-03-20 14:22:19 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product update content (news) and not job/career, executive strategy, question-only, or primarily promotional. Included \"GitHub Copilot\" because the content is specifically about the GitHub Copilot extension for Raycast and the Copilot coding agent, including how to view tasks/logs and plan/admin enablement. Per rules, when assigning \"GitHub Copilot\" we must also include \"AI\", so \"AI\" is included alongside it."
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-entered-maintenance-mode-here-s-your-next-move/ba-p/4504021",
+    "timestamp": "2026-03-20 15:22:04 +00:00",
+    "collection": "community",
+    "reason": "Succesfully added: Generic exclusion rules: not triggered (English technical migration content; not a job post, not biographical, not question-only, not primarily a sales pitch).\n\nCategories:\n- Azure: Included because the post is centered on Azure Container Apps migration and uses multiple Azure services/commands (Container Apps, ACR, Azure Cache for Redis, Azure Monitor/Log Analytics, provider registration).\n- DevOps: Included because it covers deployment automation and workflows (Azure CLI-based build/deploy, ACR build, and maps Heroku Pipelines to GitHub Actions; also discusses rollout concepts like revisions/traffic splitting).\n- AI: Included because it discusses AI-related Azure capabilities and services (Container Apps serverless GPU, Dynamic Sessions, and Azure AI Foundry) in the context of building AI-native workloads (AI inclusion rules 1 and 4/5).\n- GitHub Copilot: Included because it explicitly recommends using GitHub Copilot with a migration repo to generate Dockerfiles and assist the migration; per rules, assigning GitHub Copilot also requires including AI."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/20/secure-agentic-ai-end-to-end/",
+    "timestamp": "2026-03-20 16:19:09 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: the content is English, not job-related, not question-only, not biographical, and while it is an announcement-style news post, it contains substantial security capability details (not a pure sales pitch). Assigned Security because the article is centrally about cybersecurity capabilities across Microsoft Defender, Entra, Purview, Sentinel, Zero Trust, identity protection, DLP, container security, and incident response (Security inclusion rules 1, 3, 5, 9). Assigned AI because it focuses on securing and using agentic AI, Security Copilot, agent-related control/defense concepts, and AI-specific threats like prompt injection protection (AI inclusion rules 1 and 5). Did not assign Azure/.NET/DevOps/ML because Azure services and development frameworks are not the core focus; mentions like Azure Data Lake Storage and Microsoft Fabric appear as parts of security platform features rather than Azure development or ML engineering guidance."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=jkpcFAYJjvM",
+    "timestamp": "2026-03-20 16:21:00 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: Generic exclusion rules: none apply (English video description, not job/career-focused, not question-only, not primarily sales/promo, not unconstructive negativity).\n\nIncluded Azure because the chapter list is dominated by Azure services and platform updates (AKS, Azure Batch, AVS node retirements, VM SKU retirements, Standard HDD retirement, Azure SQL DB updates), which clearly meets Azure inclusion rules (any Azure service/technology and Azure architecture/operations).\n\nIncluded Security because the content explicitly includes identity and protection topics such as Microsoft Entra ID (blob SFTP access) and “Entra Backup and Recovery”, which match Security inclusion rules (IAM and Microsoft security/identity services).\n\nIncluded AI because it covers Azure AI Foundry items (Agent Service, Observability, Foundry Local updates) and references OpenAI model updates, which fits AI inclusion rules for Microsoft AI products/services and model/platform updates.\n\nIncluded ML because it includes data/analytics platform topics tied to Microsoft Fabric and Azure Databricks (Lakeflow Connect, Databricks to Fabric federation, Fabric mirroring/shortcuts, Fabric IQ), which fits ML inclusion rules around Microsoft Fabric/Databricks analytics engineering and BI/analytics development content."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-self-service-workload-publishing-generally-available/",
+    "timestamp": "2026-03-20 17:18:48 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: this is English, technical product news, not job/career, not question-only, and not a sales pitch for a third-party tool. Categorized as ML because the content is specifically about Microsoft Fabric (ML rule 1: Microsoft Fabric for analytics platform). Azure/.NET/DevOps/Security/AI/GitHub Copilot are not assigned because the announcement does not discuss Azure services directly, .NET languages/frameworks, CI/CD tooling, identity/security implementations beyond a brief mention of validation against security requirements, or any AI/Copilot functionality."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/workspace-monitoring-dashboard-templates-in-microsoft-fabric-eventhouse/",
+    "timestamp": "2026-03-20 17:19:40 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: this is English, technical product documentation-style news, not a job post, not biographical, not question-only, and not primarily promotional. Included the ML category because the content is about Microsoft Fabric (Power BI/Fabric ecosystem) operational monitoring and dashboards for semantic models and Eventhouse telemetry, which fits the ML category’s scope for Fabric and advanced analytics/BI development/operations. Excluded Azure, .NET, DevOps, AI, GitHub Copilot, and Security because the article does not cover Azure services directly, code/.NET frameworks, CI/CD or GitHub/Azure DevOps, Microsoft AI services, Copilot, or security/identity tooling."
+  },
+  {
+    "canonical_url": "https://www.youtube.com/watch?v=CMvnRYgB5Ac",
+    "timestamp": "2026-03-20 17:21:29 +00:00",
+    "collection": "videos",
+    "reason": "Succesfully added: No generic exclusion rules applied: this is an English video description with substantive technical workflow detail (not job/career, not question-only, not sales pitch, not Microsoft 365 Copilot/consumer Copilot content). Assigned \"GitHub Copilot\" because the description explicitly discusses GitHub Copilot usage (CLI, chat, models, plan mode) and related workflows; per rules, \"AI\" must also be included whenever \"GitHub Copilot\" is included. Assigned \"AI\" additionally because the content is about practical AI-assisted workflows. Assigned \"DevOps\" because it discusses repo-based workflows and version-control practices like parallel sessions and Git worktrees (version control/developer workflow). Did not assign \".NET\", \"Azure\", \"ML\", or \"Security\" because the description does not mention those technologies or topics."
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/building-real-time-event-driven-applications-with-database-cdc-feeds-and-fabric-eventstreams-deltaflow-preview/",
+    "timestamp": "2026-03-20 18:17:30 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: the content is English, technical, and not job-related, biographical, question-only, or primarily promotional. Assigned ML because the post is centered on Microsoft Fabric Real-Time Intelligence / Eventstreams and turning operational CDC into analytics-ready streaming data for dashboards and continuous aggregation (ML rules 1, 2, and 4; Power BI/Fabric analytics context). Assigned Azure because it explicitly uses Azure SQL, SQL Managed Instance, and SQL on Azure VMs as CDC sources and is about building on Microsoft’s cloud database/services ecosystem (Azure rule 1). Did not assign AI because there is no use of Microsoft AI services/models; anomaly detection is mentioned as a scenario but without AI implementation details. Did not assign DevOps, .NET, GitHub Copilot, or Security because none of those technologies/practices are substantively covered."
+  },
+  {
+    "canonical_url": "https://www.microsoft.com/en-us/security/blog/2026/03/20/cti-realm-a-new-benchmark-for-end-to-end-detection-rule-generation-with-ai-agents/",
+    "timestamp": "2026-03-20 18:18:13 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: Generic exclusion rules: none triggered (English technical news content; not job-related; not question-only; not primarily a sales pitch; contains substantial technical detail).\n\nAssigned AI because the piece is explicitly about evaluating “AI agents”/LLMs and an agent benchmark for end-to-end detection engineering (AI inclusion rules 4–6).\n\nAssigned Security because the entire benchmark is about cybersecurity detection engineering, CTI operationalization into detections, and validated detection rules (Security inclusion rules 2, 5, 8–9).\n\nAssigned Azure because CTI-REALM spans Azure environments including Azure Kubernetes Service (AKS) and Azure cloud infrastructure and discusses evaluation against telemetry in those Azure contexts (Azure inclusion rules 1 and 5)."
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-20-trace-any-copilot-coding-agent-commit-to-its-session-logs",
+    "timestamp": "2026-03-20 18:18:44 +00:00",
+    "collection": "news",
+    "reason": "Succesfully added: No generic exclusion rules apply: the item is English, not job/career content, not question-only, and not a sales pitch. Assigned \"GitHub Copilot\" because the content is specifically about Copilot coding agent features (commit authorship, co-authoring, session logs, and enablement for Copilot plans). Per the rules, whenever \"GitHub Copilot\" is included, \"AI\" must also be included, so \"AI\" was added as well. No other categories apply because the content does not discuss Azure, .NET, DevOps tooling beyond Copilot itself, ML, or Security implementation details."
   }
 ]

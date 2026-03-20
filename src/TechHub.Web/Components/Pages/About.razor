@@ -1,8 +1,14 @@
 @page "/about"
 @using TechHub.Web.Services
 @inject BrandingService Branding
+@inject IConfiguration Configuration
 
 <PageTitle>About Us - @Branding.SiteName</PageTitle>
+
+<SeoMetaTags
+    Title="@($"About Us - {Branding.SiteName}")"
+    Description="@($"Meet the team behind {Branding.BannerTitle} — technology consultants passionate about GitHub Copilot, AI, Azure, .NET, and cloud-native development.")"
+    ContentType="SeoMetaTags.SeoContentType.Website" />
 
 <main class="page-without-sidebar">
     <section>
@@ -32,7 +38,7 @@
                 <h3>Reinier van Maanen</h3>
                 <p class="team-role">Cloud Native Development Consultant</p>
                 <p class="team-bio">
-                    Reinier is a Cloud Native Development Consultant at Microsoft, specializing in Azure,
+                    Reinier is a Cloud Native Development Consultant at Xebia Microsoft Services, specializing in Azure,
                     GitHub, and cloud-native solutions. He is passionate about helping organizations
                     transform their software development practices and modernize their applications.
                 </p>
@@ -116,5 +122,35 @@
                 provide useful content.
             </p>
         </div>
+
+        <div class="version-info">
+            <span>@Branding.SiteName</span>
+            <span>·</span>
+            <span>.NET @Environment.Version</span>
+            @if (!string.IsNullOrEmpty(DeployTimestamp))
+            {
+                <span>·</span>
+                <span>Deployed @DeployTimestamp</span>
+            }
+        </div>
     </section>
 </main>
+
+@code {
+    private string? DeployTimestamp { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var imageTag = Configuration["DEPLOY_IMAGE_TAG"];
+        if (!string.IsNullOrEmpty(imageTag) && imageTag.Length == 14
+            && DateTime.TryParseExact(imageTag, "yyyyMMddHHmmss",
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.AssumeUniversal,
+                out var deployTime))
+        {
+            var brusselsTz = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+            var localTime = TimeZoneInfo.ConvertTimeFromUtc(deployTime.ToUniversalTime(), brusselsTz);
+            DeployTimestamp = localTime.ToString("d MMMM yyyy 'at' HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+        }
+    }
+}

@@ -64,7 +64,7 @@ public class InfiniteScrollTests : PlaywrightTestBase
             "() => document.querySelectorAll('.card').length > 0");
 
         // Act - Keep scrolling until we see the end message or all content is loaded.
-        // ScrollToEndOfContentAsync uses IncreasedTimeout internally (CI-aware via CiMultiplier).
+        // ScrollToEndOfContentAsync uses E2ETimeout internally (60s safety net).
         await Page.ScrollToEndOfContentAsync();
 
         // Assert - End message should be visible

@@ -1,4 +1,5 @@
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Validation;
 
@@ -113,6 +114,7 @@ public static class RssEndpoints
         IContentRepository contentRepository,
         IRssService rssService)
     {
+        sectionName = sectionName.Sanitize();
         var section = await contentRepository.GetSectionByNameAsync(sectionName);
         if (section is null)
         {
@@ -143,6 +145,8 @@ public static class RssEndpoints
         IContentRepository contentRepository,
         IRssService rssService)
     {
+        sectionName = sectionName.Sanitize();
+        collectionName = collectionName.Sanitize();
         // Validate section exists (unless "all")
         if (!sectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
