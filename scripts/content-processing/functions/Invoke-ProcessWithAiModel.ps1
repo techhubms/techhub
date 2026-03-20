@@ -11,13 +11,23 @@ function Invoke-ProcessWithAiModel {
         [Parameter(Mandatory = $false)]
         [int]$MaxRetries = 3,
         [Parameter(Mandatory = $false)]
-        [int]$RateLimitPreventionDelay = 15
+        [int]$RateLimitPreventionDelay = 15,
+        [Parameter(Mandatory = $false)]
+        [int]$MaxContentLength = 200000
     )
 
     $sourceRoot = Get-SourceRoot
     $contentProcessingPath = Join-Path $sourceRoot "scripts/content-processing"
     $systemMessagePath = Join-Path $contentProcessingPath "system-message.md"
     $systemMessage = Get-Content -Path $systemMessagePath -Raw
+
+    # Truncate content field if it exceeds MaxContentLength to avoid token limit errors
+    if ($InputData.ContainsKey('content') -and $InputData['content'] -and $InputData['content'].Length -gt $MaxContentLength) {
+        $originalLength = $InputData['content'].Length
+        $truncationMessage = "`n`n[Content truncated from $originalLength to $MaxContentLength characters]"
+        $InputData['content'] = $InputData['content'].Substring(0, $MaxContentLength - $truncationMessage.Length) + $truncationMessage
+        Write-Host "⚠️ Content truncated from $originalLength to $MaxContentLength characters to fit within token limits" -ForegroundColor Yellow
+    }
 
     # Convert the input data hashtable to JSON for the API call
     $inputDataJson = $InputData | ConvertTo-Json -Depth 10 -Compress

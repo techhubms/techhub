@@ -406,4 +406,113 @@ Describe "Invoke-ProcessWithAiModel" {
             $parsedResult.ResponseContent | Should -Not -BeNullOrEmpty
         }
     }
+    
+    Context "Content Truncation" {
+        It "Should truncate content that exceeds MaxContentLength" {
+            # Track the user message passed to Invoke-AiApiCall
+            $script:capturedUserMessage = $null
+            Mock Invoke-AiApiCall {
+                param($Token, $Environment, $SystemMessage, $UserMessage, $MaxRetries, $RateLimitPreventionDelay)
+                $script:capturedUserMessage = $UserMessage
+                $responseObject = @{
+                    title = "Test"
+                    categories = @("AI")
+                }
+                return ($responseObject | ConvertTo-Json -Compress)
+            }
+            
+            # Create input data with very long content
+            $longContent = "A" * 300000
+            $inputData = @{
+                title       = "Test Article"
+                description = "Test description"
+                content     = $longContent
+                author      = "Test Author"
+                tags        = "test,ai"
+                type        = "news"
+            }
+            
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData -MaxContentLength 200000
+            
+            # Verify the content was truncated to approximately MaxContentLength
+            $result | Should -Not -BeNullOrEmpty
+            $capturedJson = $script:capturedUserMessage | ConvertFrom-Json
+            $capturedJson.content.Length | Should -BeLessOrEqual 200000
+            $capturedJson.content.Length | Should -BeGreaterThan 199000
+            $capturedJson.content | Should -Match "\[Content truncated from 300000 to 200000 characters\]"
+        }
+        
+        It "Should not truncate content that is within MaxContentLength" {
+            $script:capturedUserMessage = $null
+            Mock Invoke-AiApiCall {
+                param($Token, $Environment, $SystemMessage, $UserMessage, $MaxRetries, $RateLimitPreventionDelay)
+                $script:capturedUserMessage = $UserMessage
+                $responseObject = @{
+                    title = "Test"
+                    categories = @("AI")
+                }
+                return ($responseObject | ConvertTo-Json -Compress)
+            }
+            
+            $shortContent = "A" * 1000
+            $inputData = @{
+                title       = "Test Article"
+                description = "Test description"
+                content     = $shortContent
+                author      = "Test Author"
+                tags        = "test,ai"
+                type        = "news"
+            }
+            
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData -MaxContentLength 200000
+            
+            $result | Should -Not -BeNullOrEmpty
+            $capturedJson = $script:capturedUserMessage | ConvertFrom-Json
+            $capturedJson.content | Should -Be $shortContent
+            $capturedJson.content | Should -Not -Match "\[Content truncated"
+        }
+        
+        It "Should handle input data without content field" {
+            Mock Invoke-AiApiCall {
+                $responseObject = @{
+                    title = "Test"
+                    categories = @("AI")
+                }
+                return ($responseObject | ConvertTo-Json -Compress)
+            }
+            
+            $inputData = @{
+                title       = "Test Article"
+                description = "Test description"
+            }
+            
+            # Should not throw when content key is missing
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData
+            $result | Should -Not -BeNullOrEmpty
+        }
+        
+        It "Should accept custom MaxContentLength parameter" {
+            $script:capturedUserMessage = $null
+            Mock Invoke-AiApiCall {
+                param($Token, $Environment, $SystemMessage, $UserMessage, $MaxRetries, $RateLimitPreventionDelay)
+                $script:capturedUserMessage = $UserMessage
+                $responseObject = @{
+                    title = "Test"
+                    categories = @("AI")
+                }
+                return ($responseObject | ConvertTo-Json -Compress)
+            }
+            
+            $longContent = "B" * 50000
+            $inputData = @{
+                title   = "Test"
+                content = $longContent
+            }
+            
+            $result = Invoke-ProcessWithAiModel -Token "test-token" -Environment "staging" -InputData $inputData -MaxContentLength 10000
+            
+            $capturedJson = $script:capturedUserMessage | ConvertFrom-Json
+            $capturedJson.content | Should -Match "\[Content truncated from 50000 to 10000 characters\]"
+        }
+    }
 }
