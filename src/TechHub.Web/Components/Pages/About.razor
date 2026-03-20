@@ -1,6 +1,7 @@
 @page "/about"
 @using TechHub.Web.Services
 @inject BrandingService Branding
+@inject IConfiguration Configuration
 
 <PageTitle>About Us - @Branding.SiteName</PageTitle>
 
@@ -121,5 +122,35 @@
                 provide useful content.
             </p>
         </div>
+
+        <div class="version-info">
+            <span>@Branding.SiteName</span>
+            <span>·</span>
+            <span>.NET @Environment.Version</span>
+            @if (!string.IsNullOrEmpty(DeployTimestamp))
+            {
+                <span>·</span>
+                <span>Deployed @DeployTimestamp</span>
+            }
+        </div>
     </section>
 </main>
+
+@code {
+    private string? DeployTimestamp { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var imageTag = Configuration["DEPLOY_IMAGE_TAG"];
+        if (!string.IsNullOrEmpty(imageTag) && imageTag.Length == 14
+            && DateTime.TryParseExact(imageTag, "yyyyMMddHHmmss",
+                System.Globalization.CultureInfo.InvariantCulture,
+                System.Globalization.DateTimeStyles.AssumeUniversal,
+                out var deployTime))
+        {
+            var brusselsTz = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+            var localTime = TimeZoneInfo.ConvertTimeFromUtc(deployTime.ToUniversalTime(), brusselsTz);
+            DeployTimestamp = localTime.ToString("d MMMM yyyy 'at' HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+        }
+    }
+}
