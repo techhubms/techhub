@@ -31,16 +31,28 @@
                 </svg>
                 <span class="hero-banner-label">Upcoming Events</span>
             </div>
-            <button type="button"
-                    class="hero-banner-toggle"
-                    aria-expanded="@(_isCollapsed ? "false" : "true")"
-                    aria-controls="hero-banner-content"
-                    @onclick="ToggleAsync">
-                <span class="hero-banner-toggle-label">@(_isCollapsed ? "Show" : "Hide")</span>
-                <svg class="hero-banner-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                    <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
+            <div class="hero-banner-header-actions">
+                <a href="https://luma.com/githubcopilotdevdays"
+                   class="hero-banner-find-more"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Find a Dev Day near you (opens in new tab)">
+                    <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 .54 3.05 3.34 3.34 0 0 0 3.36 0 9.64 9.64 0 0 0 .54-3.05Zm4.44-1.5a9.64 9.64 0 0 0-.54-3.05 3.34 3.34 0 0 0-3.36 0 9.64 9.64 0 0 0-.54 3.05Zm-5.93 1.5H1.63a6.5 6.5 0 0 0 4.08 5.57 11.2 11.2 0 0 1-.42-5.57Zm7.04 0a11.2 11.2 0 0 1-.42 5.57 6.5 6.5 0 0 0 4.08-5.57Zm-7.04-1.5a11.2 11.2 0 0 1 .42-5.57A6.5 6.5 0 0 0 1.63 7.25Zm7.04 0h2.63a6.5 6.5 0 0 0-4.08-5.57 11.2 11.2 0 0 1 .42 5.57Z"/>
+                    </svg>
+                    <span class="hero-banner-find-more-text">Find a Dev Day near you</span>
+                </a>
+                <button type="button"
+                        class="hero-banner-toggle"
+                        aria-expanded="@(_isCollapsed ? "false" : "true")"
+                        aria-controls="hero-banner-content"
+                        @onclick="ToggleAsync">
+                    <span class="hero-banner-toggle-label">@(_isCollapsed ? "Show" : "Hide")</span>
+                    <svg class="hero-banner-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
         </div>
 
         <div id="hero-banner-content" class="hero-banner-content" aria-hidden="@(_isCollapsed ? "true" : "false")">

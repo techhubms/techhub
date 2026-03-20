@@ -239,4 +239,37 @@ public class HeroBannerTests : BunitContext
         toggleButton.Should().NotBeNull();
         toggleButton.GetAttribute("aria-expanded").Should().Be("true");
     }
+
+    [Fact]
+    public void HeroBanner_ShowsFindMoreLink()
+    {
+        // Arrange
+        RegisterHttpContextWithCookies();
+        _mockApiClient
+            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new HeroBannerData
+            {
+                Cards =
+                [
+                    new HeroBannerCard
+                    {
+                        Title = "Event",
+                        Description = "Description",
+                        StartDate = "2020-01-01",
+                        EndDate = "2099-12-31"
+                    }
+                ]
+            });
+
+        // Act
+        var cut = Render<HeroBanner>();
+        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
+
+        // Assert — "Find a Dev Day near you" link is always visible in the header
+        var findMore = cut.Find("a.hero-banner-find-more");
+        findMore.Should().NotBeNull();
+        findMore.GetAttribute("href").Should().Be("https://luma.com/githubcopilotdevdays");
+        findMore.GetAttribute("target").Should().Be("_blank");
+        findMore.GetAttribute("rel").Should().Contain("noopener");
+    }
 }
