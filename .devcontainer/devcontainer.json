@@ -59,6 +59,5 @@
       "label": "OTLP (OpenTelemetry Protocol)"
     }
   },
-  // VS Code Dev Containers automatically forwards Git config (name, email, credentials) into the container
   "remoteUser": "vscode"
 }

@@ -149,7 +149,7 @@ public class SidebarSearchTests : BunitContext
     }
 
     [Fact]
-    public void SidebarSearch_MaxLength_LimitsInputTo100Characters()
+    public void SidebarSearch_MaxLength_LimitsInputTo200Characters()
     {
         // Arrange & Act
         var cut = Render<SidebarSearch>();
@@ -157,7 +157,7 @@ public class SidebarSearchTests : BunitContext
         // Assert
         var searchInput = cut.Find("input[type='search']");
         var maxLength = searchInput.GetAttribute("maxlength");
-        maxLength.Should().Be("100", "Search input should have maxlength of 100 characters");
+        maxLength.Should().Be("200", "Search input should have maxlength of 200 characters to match API limit");
     }
 
     [Fact]

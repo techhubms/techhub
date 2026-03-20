@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-03-19 20:13:50",
+  "Description": "Hierarchy view in GitHub Projects is now generally available. Starting today, hierarchy view is enabled by default for all new project views. If you have existing views, you can turn…\n\nThe post [Hierarchy view in GitHub Projects is now generally available](https://github.blog/changelog/2026-03-19-hierarchy-view-in-github-projects-is-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Author": "Allison",
+  "Title": "Hierarchy view in GitHub Projects is now generally available",
+  "Link": "https://github.blog/changelog/2026-03-19-hierarchy-view-in-github-projects-is-now-generally-available",
+  "PubDate": "2026-03-19T16:18:09+00:00",
+  "EnhancedContent": "[Hierarchy view in GitHub Projects](https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects/) is now generally available. Starting today, **hierarchy view is enabled by default for all new project views**. If you have existing views, you can turn it on from the **View** menu by toggling **Show hierarchy**.\n\nSince our last release, we’ve also shipped several improvements and bug fixes:\n\n- **Improved discoverability of sub-issue filters**: Sub-issue specific filters are now easier to find in the filter suggestion bar.\n- **Auto-apply filters to sub-issues**: When sub-issues are added to a filtered view, we now attempt to automatically apply matching filters.\n\nWe’ve also made multiple accessibility improvements for a better overall experience.\n\nFor feedback or questions, join the discussion in [GitHub Community](https://github.com/orgs/community/discussions/184225).\n\n## Additional improvements to issues and projects\n\n### Assign Copilot via issue templates\n\nYou can now auto-assign Copilot to issue templates. To get started, add `@copilot` to the `assignees` field in your issue template.\n\nThis works for users with write access to the repository who are allowed to assign Copilot.\n\n### Blank issues for maintainers\n\n![A list of options under a \"Create new issue\" window showing all the possible type of issues. The \"Blank issue - maintainers only\" option is highlighted.](https://github.com/user-attachments/assets/b3f163d9-ca70-4ada-86ff-b33448c08068)\n\nUsers with triage, write, or admin access can now create blank issues even when `blank_issues_enabled: false` is configured in the repository’s issue template settings. The **Blank issue** option will appear in the template picker for these users automatically, while contributors without write access continue to be guided by templates.",
+  "Tags": [
+    "Improvement",
+    "projects & issues"
+  ],
+  "OutputDir": "_news"
+}

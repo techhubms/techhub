@@ -54,6 +54,8 @@ export function observeScrollTrigger(helper, triggerElementId) {
     const currentVersion = window.__scrollListenerVersion[triggerElementId] || 0;
     window.__scrollListenerVersion[triggerElementId] = currentVersion + 1;
 
+    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-listener:' + triggerElementId);
+
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 
     // Check immediately in case trigger is already visible (e.g. short content)
@@ -71,6 +73,7 @@ export function dispose() {
         // from true → false → true when the listener is re-attached after a filter change.
         window.__scrollListenerReady ??= {};
         window.__scrollListenerReady[activeTriggerId] = false;
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-disposed:' + activeTriggerId);
         activeTriggerId = null;
     }
 }

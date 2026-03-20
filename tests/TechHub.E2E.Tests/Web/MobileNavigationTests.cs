@@ -129,8 +129,8 @@ public class MobileNavigationTests : PlaywrightTestBase
         var count = await subItems.CountAsync();
         count.Should().BeGreaterThan(0, "should show sub-items after expanding section");
 
-        // Should contain "All" link
-        await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a", new() { HasTextString = "All" })).ToBeVisibleAsync();
+        // Should contain "Browse" link
+        await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a", new() { HasTextString = "Browse" })).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -158,8 +158,8 @@ public class MobileNavigationTests : PlaywrightTestBase
         // Expand GitHub Copilot section
         await Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" }).ClickAsync();
 
-        // Act - Click "All" sub-item
-        var allLink = Page.Locator(".mobile-menu-sub-items a", new() { HasTextString = "All" });
+        // Act - Click "Browse" sub-item
+        var allLink = Page.Locator(".mobile-menu-sub-items a", new() { HasTextString = "Browse" });
         await allLink.ClickBlazorElementAsync();
 
         // Assert - Should navigate and close menu

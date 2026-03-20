@@ -1,0 +1,14 @@
+{
+  "Description": "With most users having dynamic Ip addresses how does one handle the Azure Firewall?\n\nI do not think setting a range for the IP's is useful because different ISP's have different ranges...\n\nWhat is the solution, VNET Peering? Use a VPN/ Virtual Network Service? At another additional unnecessary cost & further complicating things.\n\nIt would be helpful if the Azure Security pinned thread contained content on the options of security implementation within Azure.",
+  "FeedName": "Microsoft Tech Community",
+  "EnhancedContent": "With most users having dynamic Ip addresses how does one handle the Azure Firewall?\n\nI do not think setting a range for the IP's is useful because different ISP's have different ranges...\n\nWhat is the solution, VNET Peering? Use a VPN/ Virtual Network Service? At another additional unnecessary cost & further complicating things.\n\nIt would be helpful if the Azure Security pinned thread contained content on the options of security implementation within Azure.",
+  "ProcessedDate": "2026-03-18 16:28:12",
+  "Author": "DalskiBo",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/how-to-handle-dynamic-ip-addresses-of-clients/m-p/4503377#M22455",
+  "PubDate": "2026-03-18T12:41:15+00:00",
+  "Title": "How To Handle Dynamic IP Addresses Of Clients?",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Tags": []
+}

@@ -20,18 +20,21 @@
     <nav class="sub-nav" aria-label="@Section.Title navigation">
         @* Desktop: horizontal button bar *@
         <div class="sub-nav-wrapper">
-<a href="/@Section.Name/all" class="btn-subnav @(IsActive($"/{Section.Name}/all") ? "active" : "")"
+<a href="/@Section.Name/all" class="btn-subnav btn-subnav-custom @(IsBrowseActive ? "active" : "")"
                @onclick="@(() => OnSubNavClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
-                All
+                Browse
             </a>
 
-            @foreach (var collection in RegularCollections)
+            @if (!Section.HideCollectionPages)
             {
-                var url = $"/{Section.Name}/{collection.Name}";
-                <a href="@url" class="btn-subnav @(IsActive(url) ? "active" : "")"
-                   @onclick="@(() => OnSubNavClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
-                    @collection.Title
-                </a>
+                @foreach (var collection in RegularCollections)
+                {
+                    var url = $"/{Section.Name}/{collection.Name}";
+                    <a href="@url" class="btn-subnav @(IsActive(url) ? "active" : "")"
+                       @onclick="@(() => OnSubNavClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
+                        @collection.Title
+                    </a>
+                }
             }
 
             @foreach (var customPage in CustomPages)
@@ -52,17 +55,20 @@
             @if (dropdownOpen)
             {
                 <div class="sub-nav-dropdown-menu">
-                    <a href="/@Section.Name/all" class="sub-nav-dropdown-item @(IsActive($"/{Section.Name}/all") ? "active" : "")"
+                    <a href="/@Section.Name/all" class="sub-nav-dropdown-item sub-nav-dropdown-custom @(IsBrowseActive ? "active" : "")"
                        @onclick="@(() => OnSubNavDropdownClick($"/{Section.Name}/all"))" @onclick:preventDefault="@IsCurrentPage($"/{Section.Name}/all")">
-                        All
+                        Browse
                     </a>
-                    @foreach (var collection in RegularCollections)
+                    @if (!Section.HideCollectionPages)
                     {
-                        var url = $"/{Section.Name}/{collection.Name}";
-                        <a href="@url" class="sub-nav-dropdown-item @(IsActive(url) ? "active" : "")"
-                           @onclick="@(() => OnSubNavDropdownClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
-                            @collection.Title
-                        </a>
+                        @foreach (var collection in RegularCollections)
+                        {
+                            var url = $"/{Section.Name}/{collection.Name}";
+                            <a href="@url" class="sub-nav-dropdown-item @(IsActive(url) ? "active" : "")"
+                               @onclick="@(() => OnSubNavDropdownClick(url))" @onclick:preventDefault="@IsCurrentPage(url)">
+                                @collection.Title
+                            </a>
+                        }
                     }
                     @foreach (var customPage in CustomPages)
                     {
@@ -141,16 +147,45 @@ else if (Sections != null && Sections.Any())
         .OrderBy(c => c.Order)
         .ThenBy(c => c.Title) ?? Enumerable.Empty<Collection>();
 
+    /// <summary>
+    /// Whether the "Browse" button should be active. When HideCollectionPages is true,
+    /// Browse is also active when viewing any regular collection route (e.g., /github-copilot/videos).
+    /// </summary>
+    private bool IsBrowseActive
+    {
+        get
+        {
+            if (Section == null) return false;
+            if (IsActive($"/{Section.Name}/all")) return true;
+
+            // When collection pages are hidden, Browse is also active for regular collection routes
+            if (Section.HideCollectionPages)
+            {
+                foreach (var collection in RegularCollections)
+                {
+                    var url = $"/{Section.Name}/{collection.Name}";
+                    if (IsActive(url)) return true;
+                }
+            }
+
+            return false;
+        }
+    }
+
     private string ActiveLabel
     {
         get
         {
             if (Section == null) return "";
 
-            foreach (var collection in RegularCollections)
+            // When collection pages are hidden, show "Browse" for any regular collection route
+            if (!Section.HideCollectionPages)
             {
-                var url = $"/{Section.Name}/{collection.Name}";
-                if (IsActive(url)) return collection.Title;
+                foreach (var collection in RegularCollections)
+                {
+                    var url = $"/{Section.Name}/{collection.Name}";
+                    if (IsActive(url)) return collection.Title;
+                }
             }
 
             foreach (var customPage in CustomPages)
@@ -158,7 +193,7 @@ else if (Sections != null && Sections.Any())
                 if (IsActive(customPage.Url)) return customPage.Title;
             }
 
-            return "All";
+            return "Browse";
         }
     }
 

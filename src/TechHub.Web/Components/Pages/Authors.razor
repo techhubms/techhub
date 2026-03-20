@@ -1,0 +1,183 @@
+@page "/all/authors"
+@page "/all/authors/{authorName}"
+@using TechHub.Core.Logging
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject ITechHubApiClient ApiClient
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>@PageTitleText</PageTitle>
+
+<SeoMetaTags
+    Title="@PageTitleText"
+    Description="@SeoDescription"
+    ContentType="SeoMetaTags.SeoContentType.Website"
+    Breadcrumbs="@GetBreadcrumbs()" />
+
+<main class="page-with-sidebar">
+    <aside class="sidebar">
+        <SidebarToggle />
+        <MobileSidebarToolbar>
+            <MobileSidebarPanel Label="Authors" Icon="filter" HasActiveFilter="@(!string.IsNullOrWhiteSpace(authorFilter))">
+                <nav class="sidebar-section" aria-label="Authors">
+                    <h2 class="sidebar-h2">Authors</h2>
+                    @if (authors != null && authors.Count > 0)
+                    {
+                        <div class="author-filter-box">
+                            <input type="search"
+                                   class="author-filter-input"
+                                   placeholder="Filter authors..."
+                                   aria-label="Filter authors by name"
+                                   value="@authorFilter"
+                                   maxlength="100"
+                                   @oninput="HandleAuthorFilterInput" />
+                            @if (!string.IsNullOrWhiteSpace(authorFilter))
+                            {
+                                <button type="button"
+                                        class="author-filter-clear"
+                                        aria-label="Clear filter"
+                                        @onclick="ClearAuthorFilter">
+                                    <span aria-hidden="true">✕</span>
+                                </button>
+                            }
+                        </div>
+                        <ul class="sidebar-list author-sidebar-list">
+                            @foreach (var author in FilteredAuthors)
+                            {
+                                var isActive = HasAuthorSelected &&
+                                    string.Equals(DecodedAuthorName, author.Name, StringComparison.OrdinalIgnoreCase);
+                                <li>
+                                    <a href="/all/authors/@Uri.EscapeDataString(author.Name)"
+                                       class="author-sidebar-link sidebar-link-button @(isActive ? "active" : "")"
+                                       aria-label="@author.Name - @author.ItemCount item@(author.ItemCount == 1 ? "" : "s")"
+                                       aria-current="@(isActive ? "page" : null)">
+                                        @author.Name (@author.ItemCount)
+                                    </a>
+                                </li>
+                            }
+                        </ul>
+                        @if (FilteredAuthors.Count == 0 && !string.IsNullOrWhiteSpace(authorFilter))
+                        {
+                            <p class="author-filter-no-results">No authors match "@authorFilter"</p>
+                        }
+                    }
+                </nav>
+            </MobileSidebarPanel>
+        </MobileSidebarToolbar>
+    </aside>
+
+    <section>
+        @if (!HasAuthorSelected)
+        {
+            <h1 id="skiptohere" class="page-h1">
+                Content by Author
+            </h1>
+
+            @if (isLoadingAuthors)
+            {
+                <div role="status" aria-busy="true" aria-label="Loading authors">
+                    <p>Loading authors...</p>
+                </div>
+            }
+            else if (authors != null && authors.Count > 0)
+            {
+                <div class="authors-select-prompt">
+                    <p>Select an author from the sidebar to browse their content.</p>
+                </div>
+            }
+            else
+            {
+                <p class="no-content">No authors found.</p>
+            }
+        }
+        else
+        {
+            <ContentItemsGrid SectionName="all" CollectionName="authors"
+                AuthorName="@DecodedAuthorName" Title="@($"Content by {DecodedAuthorName}")"
+                @key="@AuthorName" />
+        }
+    </section>
+</main>
+
+@code {
+    [Parameter]
+    public string? AuthorName { get; set; }
+
+    private IReadOnlyList<AuthorSummary>? authors;
+    private bool isLoadingAuthors = true;
+
+    private PersistingComponentStateSubscription _persistingSubscription;
+
+    private string authorFilter = string.Empty;
+
+    private bool HasAuthorSelected => !string.IsNullOrEmpty(AuthorName);
+    private string DecodedAuthorName => HasAuthorSelected ? Uri.UnescapeDataString(AuthorName!) : string.Empty;
+
+    private IReadOnlyList<AuthorSummary> FilteredAuthors =>
+        string.IsNullOrWhiteSpace(authorFilter)
+            ? authors ?? []
+            : (authors ?? []).Where(a => a.Name.Contains(authorFilter, StringComparison.OrdinalIgnoreCase)).ToList();
+
+    private string PageTitleText => HasAuthorSelected
+        ? $"Content by {DecodedAuthorName} - Tech Hub"
+        : "Content by Author - Tech Hub";
+
+    private string SeoDescription => HasAuthorSelected
+        ? $"Browse all content by {DecodedAuthorName} on Tech Hub."
+        : "Browse all authors on Tech Hub. Find content from your favourite authors across all sections and collections.";
+
+    private void HandleAuthorFilterInput(ChangeEventArgs e)
+    {
+        authorFilter = e.Value?.ToString() ?? string.Empty;
+    }
+
+    private void ClearAuthorFilter()
+    {
+        authorFilter = string.Empty;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<AuthorSummary>>("authors", out var restoredAuthors) && restoredAuthors != null)
+        {
+            authors = restoredAuthors;
+            isLoadingAuthors = false;
+        }
+        else
+        {
+            authors = await ApiClient.GetAuthorsAsync() ?? [];
+            isLoadingAuthors = false;
+        }
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("authors", authors ?? Array.Empty<AuthorSummary>());
+        return Task.CompletedTask;
+    }
+
+    private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs()
+    {
+        var breadcrumbs = new List<SeoMetaTags.BreadcrumbItem>
+        {
+            new("Home", "/"),
+            new("Content by Author", "/all/authors")
+        };
+
+        if (HasAuthorSelected)
+        {
+            breadcrumbs.Add(new(DecodedAuthorName, $"/all/authors/{Uri.EscapeDataString(AuthorName!)}"));
+        }
+
+        return breadcrumbs;
+    }
+
+    public void Dispose()
+    {
+        _persistingSubscription.Dispose();
+    }
+}

@@ -163,17 +163,20 @@ public class TabHighlightingTests : PlaywrightTestBase
             "() => document.activeElement && document.activeElement.classList.contains('skip-link')");
 
         // Verify it's actually focused
-        var focusedElement = Page.Locator(":focus");
-        var isFocusedSkipLink = await focusedElement.EvaluateAsync<bool>("el => el.classList.contains('skip-link')");
+        // Pattern 9: Use Page.EvaluateAsync on document.activeElement instead of Locator(":focus")
+        var isFocusedSkipLink = await Page.EvaluateAsync<bool>(
+            "() => document.activeElement && document.activeElement.classList.contains('skip-link')");
         isFocusedSkipLink.Should().BeTrue("first Tab should focus the skip link");
 
-        // Assert - Skip link should have visible outline (check the focused element directly)
-        var outlineStyle = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outline");
+        // Assert - Skip link should have visible outline (evaluate on document.activeElement directly)
+        var outlineStyle = await Page.EvaluateAsync<string>(
+            "() => window.getComputedStyle(document.activeElement).outline");
         outlineStyle.Should().NotBeNullOrEmpty("focused skip link should have outline style");
         outlineStyle.Should().NotContain("none", "focused skip link outline should not be 'none'");
 
         // Check outline width is at least 2px
-        var outlineWidth = await focusedElement.EvaluateAsync<string>("el => window.getComputedStyle(el).outlineWidth");
+        var outlineWidth = await Page.EvaluateAsync<string>(
+            "() => window.getComputedStyle(document.activeElement).outlineWidth");
         outlineWidth.Should().NotBe("0px", "focused skip link should have visible outline width");
     }
 
