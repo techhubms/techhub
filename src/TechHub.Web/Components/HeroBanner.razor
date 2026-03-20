@@ -1,0 +1,226 @@
+@using TechHub.Core.Models
+@using TechHub.Web.Services
+@implements IDisposable
+
+@inject ITechHubApiClient ApiClient
+@inject IJSRuntime JS
+@inject IHttpContextAccessor HttpContextAccessor
+@inject PersistentComponentState ApplicationState
+@inject ILogger<HeroBanner> Logger
+
+@*
+    HeroBanner - Collapsible announcement banner shown above section content.
+
+    - Fetches card data from /api/custom-pages/hero-banner
+    - Filters cards whose today's date falls between startDate and endDate (Europe/Brussels)
+    - Renders nothing when no active cards exist
+    - Remembers collapsed/expanded state via a cookie (hero-banner-collapsed)
+    - Auto-expands when new cards appear (hash of active titles differs from stored cookie)
+
+    Usage:
+      <HeroBanner />
+*@
+
+@if (_activeCards.Count > 0)
+{
+    <aside class="hero-banner @(_isCollapsed ? "hero-banner-collapsed" : "")">
+        <div class="hero-banner-header">
+            <div class="hero-banner-header-content">
+                <svg class="hero-banner-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-3a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 8 5zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="currentColor"/>
+                </svg>
+                <span class="hero-banner-label">Upcoming Events</span>
+            </div>
+            <button type="button"
+                    class="hero-banner-toggle"
+                    aria-expanded="@(_isCollapsed ? "false" : "true")"
+                    aria-controls="hero-banner-content"
+                    @onclick="ToggleAsync">
+                <span class="hero-banner-toggle-label">@(_isCollapsed ? "Show" : "Hide")</span>
+                <svg class="hero-banner-chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+
+        <div id="hero-banner-content" class="hero-banner-content" aria-hidden="@(_isCollapsed ? "true" : "false")">
+            <div class="hero-banner-cards">
+                @foreach (var card in _activeCards)
+                {
+                    <div class="hero-banner-card">
+                        @if (!string.IsNullOrEmpty(card.LogoUrl))
+                        {
+                            <img src="@card.LogoUrl" alt="" class="hero-banner-card-logo" aria-hidden="true" />
+                        }
+                        <div class="hero-banner-card-body">
+                            <p class="hero-banner-card-title">@card.Title</p>
+                            <p class="hero-banner-card-description">@card.Description</p>
+                        </div>
+                        @if (!string.IsNullOrEmpty(card.LinkUrl))
+                        {
+                            <a href="@card.LinkUrl"
+                               class="btn hero-banner-card-link"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                @(card.LinkText ?? "Learn more")
+                            </a>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </aside>
+}
+
+@code {
+    private HeroBannerData? _data;
+    private List<HeroBannerCard> _activeCards = new();
+    private bool _isCollapsed;
+    private string? _currentHash;
+    private bool _hashChanged;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    // State key for PersistentComponentState
+    private const string StateKey = "hero-banner-state";
+
+    // Cookie names – must match hero-banner.js
+    private const string CollapsedCookieName = "hero-banner-collapsed";
+    private const string HashCookieName = "hero-banner-hash";
+
+    protected override void OnInitialized()
+    {
+        // Read cookies server-side (available during SSR; null on client after hydration)
+        var ctx = HttpContextAccessor.HttpContext;
+        var cookieCollapsed = ctx?.Request.Cookies[CollapsedCookieName] == "true";
+        var cookieHash = ctx?.Request.Cookies[HashCookieName];
+
+        // Store for use in OnInitializedAsync (where we have the data to compute the hash)
+        _storedCookieCollapsed = cookieCollapsed;
+        _storedCookieHash = cookieHash;
+    }
+
+    // Temporary storage set in OnInitialized, consumed in OnInitializedAsync
+    private bool _storedCookieCollapsed;
+    private string? _storedCookieHash;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        // Try to restore persisted state (avoids duplicate API call during SSR → hydration)
+        if (ApplicationState.TryTakeFromJson<PersistedState>(StateKey, out var restored) && restored != null)
+        {
+            _data = restored.Data;
+            _isCollapsed = restored.IsCollapsed;
+            _currentHash = restored.CurrentHash;
+            _hashChanged = restored.HashChanged;
+            _activeCards = BuildActiveCards(_data);
+            return;
+        }
+
+        // Load data from API
+        try
+        {
+            _data = await ApiClient.GetHeroBannerDataAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load hero banner data");
+            return;
+        }
+
+        _activeCards = BuildActiveCards(_data);
+        _currentHash = ComputeHash(_activeCards);
+
+        // Determine collapsed state: auto-expand when new cards appeared
+        _hashChanged = !string.Equals(_storedCookieHash, _currentHash, StringComparison.Ordinal);
+        _isCollapsed = _hashChanged ? false : _storedCookieCollapsed;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && _hashChanged && _currentHash != null)
+        {
+            // Update the hash cookie so the banner doesn't auto-reopen next visit
+            await JS.InvokeVoidAsync("TechHub.heroBanner.setHash", _currentHash);
+
+            // If we auto-expanded due to new content, also clear the collapsed cookie
+            if (!_isCollapsed)
+            {
+                await JS.InvokeVoidAsync("TechHub.heroBanner.setCollapsed", false);
+            }
+        }
+    }
+
+    private async Task ToggleAsync()
+    {
+        _isCollapsed = !_isCollapsed;
+        await JS.InvokeVoidAsync("TechHub.heroBanner.setCollapsed", _isCollapsed);
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson(StateKey, new PersistedState(
+            _data,
+            _isCollapsed,
+            _currentHash,
+            _hashChanged));
+        return Task.CompletedTask;
+    }
+
+    /// <summary>
+    /// Filter cards that are active today (inclusive on both boundaries).
+    /// Uses Europe/Brussels timezone per project timezone standard.
+    /// </summary>
+    private static List<HeroBannerCard> BuildActiveCards(HeroBannerData? data)
+    {
+        if (data == null) return new List<HeroBannerCard>();
+
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+        var today = DateOnly.FromDateTime(TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone));
+
+        var result = new List<HeroBannerCard>();
+        foreach (var card in data.Cards)
+        {
+            if (DateOnly.TryParse(card.StartDate, out var start)
+                && DateOnly.TryParse(card.EndDate, out var end)
+                && today >= start
+                && today <= end)
+            {
+                result.Add(card);
+            }
+        }
+
+        return result;
+    }
+
+    /// <summary>
+    /// Compute a stable hash from active card titles.
+    /// A different hash means new content has appeared; the banner should auto-expand.
+    /// </summary>
+    private static string ComputeHash(IEnumerable<HeroBannerCard> cards)
+    {
+        var content = string.Join("|", cards.Select(c => c.Title).OrderBy(t => t, StringComparer.Ordinal));
+        // Use a simple, stable numeric hash (not security-sensitive – just change detection)
+        var hash = 0u;
+        foreach (var ch in content)
+        {
+            hash = hash * 31u + ch;
+        }
+
+        return hash.ToString(System.Globalization.CultureInfo.InvariantCulture);
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        GC.SuppressFinalize(this);
+    }
+
+    /// <summary>State persisted across SSR → hydration via PersistentComponentState.</summary>
+    private record PersistedState(
+        HeroBannerData? Data,
+        bool IsCollapsed,
+        string? CurrentHash,
+        bool HashChanged);
+}

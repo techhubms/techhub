@@ -16,6 +16,11 @@
     Breadcrumbs="@GetBreadcrumbs()"
     RssFeedUrl="@($"/{SectionName}/feed.xml")" />
 
+@if (string.Equals(SectionName, "github-copilot", StringComparison.OrdinalIgnoreCase))
+{
+    <HeroBanner />
+}
+
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarToggle />
