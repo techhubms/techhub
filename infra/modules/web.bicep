@@ -47,6 +47,10 @@ var staticEnvVars = [
     name: 'TECHHUB_TMP'
     value: '/tmp/techhub'
   }
+  {
+    name: 'DEPLOY_IMAGE_TAG'
+    value: imageTag
+  }
 ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'

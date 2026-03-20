@@ -290,6 +290,8 @@ module apiApp './modules/api.bicep' = {
 }
 
 // Web Container App
+// Note: implicit dependency on apiApp via apiBaseUrl parameter ensures API deploys first.
+// The SectionCacheRefreshService in the web app handles data freshness after deployment.
 module webApp './modules/web.bicep' = {
   scope: resourceGroup
   name: 'web-deployment'
