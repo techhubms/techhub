@@ -1,7 +1,7 @@
-﻿---
+---
 external_url: https://youtu.be/ri8EG4-rM9A
 title: Ice Breakers
-author: Randy Pagels
+author: randy.pagels@xebia.com (Randy Pagels)
 date: 2025-01-02 11:21:13 +00:00
 ghes_support: true
 plans:

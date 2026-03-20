@@ -1,7 +1,7 @@
-﻿---
+---
 external_url: https://youtu.be/eAh9qLmBgKg
 title: Commit Message Custom Instructions
-author: Randy Pagels
+author: randy.pagels@xebia.com (Randy Pagels)
 date: 2025-01-02 11:05:37 +00:00
 ghes_support: true
 plans:

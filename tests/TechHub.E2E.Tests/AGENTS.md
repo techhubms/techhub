@@ -94,6 +94,7 @@ tests/TechHub.E2E.Tests/
 │   │   ├── TagFilteringTests.cs        ← Tag filtering
 │   │   ├── DateRangeSliderTests.cs     ← Date range slider filtering
 │   │   ├── DynamicTagCountsTests.cs    ← Dynamic tag count updates
+│   │   ├── ContentTypeFilterTests.cs   ← Content type filter on browse pages
 │   │   ├── InfiniteScrollTests.cs      ← Infinite scroll pagination
 │   │   └── InfiniteScrollWithTagsTests.cs ← Infinite scroll with tag filtering
 ├── Api/                                 ← Direct API testing (no Playwright)
@@ -214,7 +215,7 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **See**: [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs) for complete examples
 
-**Total**: 215 E2E test cases across all test files.
+**Total**: 224 E2E test cases across all test files.
 
 Note: Test count includes common component tests, page-specific tests, feature tests (infinite scroll, tag filtering, date range slider, dynamic tag counts, keyboard navigation), accessibility tests, and API E2E tests.
 
@@ -345,49 +346,51 @@ $env:E2E_NETWORK_THROTTLE = ""
   - CI (`dotnet test`) uses the default `testconfig.json` with no extra flags
 - Each collection gets isolated resources (browser contexts, HTTP clients)
 
-**3. CI-Aware Timeouts** (fast locally, generous in CI):
+**3. Timeout Constants** (single generous timeout for all environments):
 
-- Base element operations: 5s locally, 15s in CI (×3 multiplier)
-- Base page loads: 10s locally, 30s in CI (×3 multiplier)
-- CI detection: automatic via `CI` environment variable (GitHub Actions sets this)
-- Override multiplier: set `E2E_TIMEOUT_MULTIPLIER` environment variable
-- Managed centrally via `static readonly` fields in `BlazorHelpers.cs`
+- `E2ETimeout` (60s) — safety-net timeout for all `WaitForConditionAsync` / `WaitForFunctionAsync` calls
+- `E2EPollingInterval` (100ms) — polling interval for condition checks
+- No CI multiplier — the lifecycle counter makes tests event-driven, so timeouts rarely fire
+- Managed centrally as `const` fields in `BlazorHelpers.cs`
 - **No `timeoutMs` parameters on helper methods** — timeouts are fully centralized
+- Prefer `WaitForConditionAsync` (wraps `WaitForFunctionAsync` with default timeout/polling) over raw `WaitForFunctionAsync`
 - Most operations complete in &lt;500ms; timeouts only matter under peak load
 
-### Blazor JavaScript Initializers (Ready Detection)
+### E2E Lifecycle Counter (`window.__e2e`)
 
-**The Challenge**: Blazor Server uses SignalR for interactivity. After the initial HTML loads, Blazor needs to:
+**The Challenge**: Blazor Server uses SignalR for interactivity. After the initial HTML loads, Blazor needs to initialize its runtime, establish the SignalR circuit, and attach event handlers. Tests that interact too early will fail.
 
-1. Initialize the Blazor runtime (`window.Blazor`)
-2. Establish the SignalR circuit (for Server rendering)
-3. Attach event handlers (`@onclick`, `@onchange`, etc.)
+**The Solution**: A single monotonic lifecycle counter on `window.__e2e` replaces the previous 8+ independent `window.__*` flags. Every JS lifecycle hook calls `__e2eSignal(label)` which increments the counter. Test helpers capture the counter before an action and wait for it to change.
 
-Until step 3 completes, clicking buttons does nothing. Tests that click too early will fail.
+**How it works**:
 
-**The Solution**: We use [Blazor JavaScript initializers](https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup) to set flags when each stage completes.
+1. [App.razor](../../src/TechHub.Web/Components/App.razor) injects an inline `<script>` (Development only) that initializes `window.__e2e = { counter, label, history[] }` and defines `__e2eSignal(label)`
+2. [TechHub.Web.lib.module.js](../../src/TechHub.Web/wwwroot/TechHub.Web.lib.module.js) fires signals: `blazor-web-ready`, `blazor-server-ready`, `blazor-wasm-ready`, `enhanced-nav`
+3. [page-scripts.js](../../src/TechHub.Web/wwwroot/js/page-scripts.js) fires: `scripts-loading`, `scripts-ready`, `mermaid-rendered`
+4. [infinite-scroll.js](../../src/TechHub.Web/wwwroot/js/infinite-scroll.js) fires: `scroll-listener:{triggerId}`, `scroll-disposed:{triggerId}`
+5. [toc-scroll-spy.js](../../src/TechHub.Web/wwwroot/js/toc-scroll-spy.js) fires: `toc-initialized`, `toc-active-updated`
+6. The `scrollend` browser event fires: `scroll-end`
 
-**File**: [TechHub.Web.lib.module.js](../../src/TechHub.Web/wwwroot/TechHub.Web.lib.module.js) (MUST be in wwwroot root, not wwwroot/js)
+**Signal history**: A ring buffer of 20 entries allows helpers to check for specific signals.
 
-**JavaScript Initializer Functions**:
+**Timeout constants**: `E2ETimeout` (60s) and `E2EPollingInterval` (100ms) replace the old `IsCI`/`CiMultiplier` system. A single generous timeout works on both local and CI environments.
 
-- `afterWebStarted()` - Sets `window.__blazorWebReady = true`
-- `afterServerStarted()` - Sets `window.__blazorServerReady = true`  
-- `afterWebAssemblyStarted()` - Sets `window.__blazorWasmReady = true`
+**Key internal helpers** (tests never call these directly):
 
-**Test Detection**: `BlazorHelpers.WaitForBlazorReadyAsync()` uses a single combined `WaitForConditionAsync` call that checks: Blazor runtime exists, interactive runtime ready, and page scripts are not actively loading. Pages without page scripts (e.g., `SectionCollection.razor`) resolve immediately — the check only blocks if `__scriptsLoading` is explicitly `true`.
+- `GetE2ECounterAsync()` — Captures the current counter value
+- `WaitForE2ECounterChangeAsync()` — Waits for counter to exceed a captured value
+- `WaitForE2ESignalAsync()` — Waits for a specific signal label in the history
+- `WaitForPageReadyAsync()` — Waits for counter to advance and scripts to finish loading
 
-**Key Methods That Use This**:
+**Key public helpers that use the counter**:
 
-- `GotoRelativeAsync()` - Navigates and waits for Blazor ready
-- `ClickBlazorElementAsync()` - Clicks element after ensuring Blazor ready
-- `ClickAndNavigateAsync()` - High-level click + navigate + verify pattern
+- `GotoRelativeAsync()` / `GotoAndWaitForBlazorAsync()` — Navigates and waits for page ready via `WaitForPageReadyAsync(0)`
+- `ClickBlazorElementAsync()` — Captures counter before click, waits for URL change + `WaitForBlazorReadyAsync`
+- `ClickAndWaitForScrollAsync()` — Captures counter before click, waits for `scroll-end` signal
+- `ScrollToAndWaitForTocUpdateAsync()` — Captures counter, scrolls, waits for `toc-active-updated` signal
+- `WaitForTocInitializedAsync()` — Captures counter, waits for `toc-initialized` signal
 
-**Why URL Waiting Is Default**: `ClickBlazorElementAsync()` waits for URL changes by default (`waitForUrlChange = true`) because:
-
-- Blazor Server updates URLs via SignalR (not HTTP redirects)
-- Standard `WaitForNavigationAsync()` doesn't detect SignalR URL changes
-- Most Blazor element clicks (navigation, tag toggles, filters) DO change URLs
+**Legacy flags**: `WaitForBlazorReadyAsync()` is retained for backward compatibility. It checks the old `__blazorServerReady`/`__blazorWasmReady`/`__blazorWebReady` flags plus script loading state plus Mermaid rendering.
 
 ## Writing New Tests
 
@@ -438,12 +441,12 @@ await Page.WaitForLoadStateAsync(LoadState.NetworkIdle);
 | Scroll to finish | `WaitForTimeoutAsync(200)` | `Page.WaitForFunctionAsync` polling scroll position |
 | Expand/collapse toggle | `WaitForTimeoutAsync(1000)` | `Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded"))` |
 | No navigation occurred | `WaitForTimeoutAsync(200)` | `Page.WaitForBlazorReadyAsync()` then assert URL unchanged |
-| Browser paint settle | `Task.Delay(100)` | `WaitForFunctionAsync` with double `requestAnimationFrame` |
+| Browser paint settle | `Task.Delay(100)` | `GotoRelativeAsync` / `WaitForBlazorReadyAsync()` (handles Mermaid rendering internally) |
 | Infinite scroll next batch | `Mouse.WheelAsync()` or `loading="eager"` | `Page.ScrollToLoadMoreAsync(expectedCount)` |
 | Infinite scroll end | Manual wheel scrolling loop | `Page.ScrollToEndOfContentAsync()` |
 | Lazy-loaded element visible | `loading="eager"` attribute hack | Fix in source: remove `loading="lazy"` for above-fold/hero images (see Pattern 10) |
 | Focus after navigation reset | `Locator(":focus").EvaluateAsync()` | `WaitForConditionAsync` + `Page.EvaluateAsync()` |
-| Custom timeout value | `Timeout = 5000` (hardcoded) | `BlazorHelpers.DefaultTimeout` (10s) |
+| Custom timeout value | `Timeout = 5000` (hardcoded) | `WaitForConditionAsync` (uses `E2ETimeout` 60s default) |
 | Search input fill + URL update | `FillAsync` + `WaitForConditionAsync` | `searchInput.FillBlazorInputAsync("query")` |
 
 #### Pattern 1: Expand/Collapse Animations
@@ -491,9 +494,8 @@ Wait for the library to apply its effects to the DOM:
 await Page.WaitForTimeoutAsync(500); // Hope highlight.js ran
 
 // ✅ CORRECT - Wait for hljs classes to appear
-await Page.WaitForFunctionAsync(
-    "() => document.querySelector('pre code.hljs') !== null",
-    new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultElementTimeout, PollingInterval = 50 });
+await Page.WaitForConditionAsync(
+    "() => document.querySelector('pre code.hljs') !== null");
 ```
 
 #### Pattern 4: Scroll Position Stability
@@ -507,33 +509,40 @@ await Page.WaitForTimeoutAsync(200);
 
 // ✅ CORRECT - Poll for scroll position
 await Page.Mouse.WheelAsync(0, targetY);
-await Page.WaitForFunctionAsync(
+await Page.WaitForConditionAsync(
     @"(targetY) => Math.abs(window.scrollY - targetY) < 100",
-    targetY,
-    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+    targetY);
 ```
 
 For scrolling to the bottom of the page:
 
 ```csharp
 await Page.Mouse.WheelAsync(0, scrollHeight);
-await Page.WaitForFunctionAsync(
-    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
-    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+await Page.WaitForConditionAsync(
+    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50");
 ```
 
 #### Pattern 5: Browser Paint/Layout Settle
 
-When the browser needs to complete a paint cycle after DOM mutations (e.g., after mermaid diagram rendering):
+When the browser needs to complete a paint cycle after DOM mutations (e.g., after mermaid diagram rendering), rely on the existing readiness infrastructure rather than manual frame waits:
 
 ```csharp
-// ❌ WRONG
+// ❌ WRONG - arbitrary delay
 await Task.Delay(100);
 
-// ✅ CORRECT - Double requestAnimationFrame ensures paint completed
+// ❌ WRONG - double requestAnimationFrame is a hack, not used anywhere in this codebase
 await page.WaitForFunctionAsync(
-    "() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve(true))))",
-    new PageWaitForFunctionOptions { Timeout = 2000 });
+    "() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve(true))))");
+
+// ✅ CORRECT - GotoRelativeAsync / WaitForBlazorReadyAsync already checks for Mermaid SVG rendering
+await Page.GotoRelativeAsync(url);
+// WaitForBlazorReadyAsync (called internally) waits for:
+// 1. Blazor runtime ready
+// 2. Page scripts finished loading
+// 3. Mermaid diagrams rendered (checks SVG count matches <pre class="mermaid"> count)
+
+// ✅ CORRECT - For post-navigation checks, use Playwright auto-retrying assertions
+await Assertions.Expect(Page.Locator("svg[id^='mermaid-']").First).ToBeVisibleAsync();
 ```
 
 #### Pattern 6: Verifying No Navigation Occurred
@@ -563,9 +572,8 @@ await Page.WaitForTimeoutAsync(500);
 
 // ✅ CORRECT - Wait for DOM to update
 await tagButton.ClickBlazorElementAsync();
-await Page.WaitForFunctionAsync(
-    "() => document.querySelectorAll('.card').length > 0",
-    new PageWaitForFunctionOptions { Timeout = BlazorHelpers.DefaultElementTimeout, PollingInterval = 50 });
+await Page.WaitForConditionAsync(
+    "() => document.querySelectorAll('.card').length > 0");
 await Page.WaitForBlazorReadyAsync();
 ```
 
@@ -693,26 +701,23 @@ isVisible.Should().BeTrue();
 
 | Method | Purpose | Timeout |
 | ------ | ------- | ------- |
-| `NewPageWithDefaultsAsync()` | Create page with optimized timeouts | 5s/10s |
-| `GotoRelativeAsync()` | Navigate to relative URL with Blazor wait | 10s |
-| `ClickAndNavigateAsync()` | High-level click + navigate + verify pattern | 10s |
-| `WaitForBlazorUrlContainsAsync()` | Wait for SPA navigation | 10s |
-| `WaitForBlazorRenderAsync()` | Wait for element to appear | 5s |
-| `ClickBlazorElementAsync()` | Click with Blazor-aware handling | 5s |
-| `AssertElementVisibleAsync()` | Assert element is visible | 5s |
-| `AssertUrlEndsWithAsync()` | Assert URL ends with segment | 10s |
-| `AssertElementVisibleBySelectorAsync()` | Assert element visible by selector | 5s |
-| `AssertElementContainsTextBySelectorAsync()` | Assert text content by selector | 5s |
-| `AssertElementVisibleByRoleAsync()` | Assert element visible by ARIA role | 5s |
-| `TextContentWithTimeoutAsync()` | Get text content with timeout | 5s |
-| `GetHrefAsync()` | Get href attribute from element | 5s |
-| `WaitForSelectorWithTimeoutAsync()` | Wait for selector with timeout | 5s |
-| `WaitForConditionAsync()` | Wait for JS condition (string or options overloads) | 5s |
-| `ScrollToLoadMoreAsync()` | Scroll infinite scroll until item count reached | 5s |
-| `ScrollToEndOfContentAsync()` | Scroll infinite scroll until end-of-content marker | 5s |
+| `NewPageWithDefaultsAsync()` | Create page with optimized timeouts | 60s |
+| `GotoRelativeAsync()` | Navigate to relative URL + wait for page ready | 60s |
+| `ClickAndNavigateAsync()` | High-level click + navigate + verify pattern | 60s |
+| `WaitForBlazorUrlContainsAsync()` | Wait for SPA navigation | 60s |
+| `WaitForBlazorRenderAsync()` | Wait for element to appear | 60s |
+| `ClickBlazorElementAsync()` | Click with URL change + Blazor ready wait | 60s |
+| `ClickAndWaitForScrollAsync()` | Click + wait for `scroll-end` signal via counter | 60s |
+| `ScrollToAndWaitForTocUpdateAsync()` | Scroll + wait for `toc-active-updated` signal | 60s |
+| `WaitForTocInitializedAsync()` | Wait for `toc-initialized` signal via counter | 60s |
+| `AssertElementVisibleAsync()` | Assert element is visible | 60s |
+| `AssertUrlEndsWithAsync()` | Assert URL ends with segment | 60s |
+| `WaitForConditionAsync()` | Wait for JS condition (string or options overloads) | 60s |
+| `ScrollToLoadMoreAsync()` | Scroll infinite scroll until item count reached | 60s |
+| `ScrollToEndOfContentAsync()` | Scroll infinite scroll until end-of-content marker | 60s |
 | `ScrollIntoViewAsync()` | Scroll element into viewport via JS `scrollIntoView()` | - |
 | `ScrollIntoViewIfNeededAsync()` | Scroll element into viewport (native Playwright) | - |
-| `FillBlazorInputAsync()` | Fill input + wait for URL query param, with input event retry | 15s |
+| `FillBlazorInputAsync()` | Fill input + wait for URL query param, with input event retry | 60s |
 
 ### Assertion Style
 
@@ -804,7 +809,7 @@ using Microsoft.Playwright;             // For Assertions
 
 ### Solution 2: Event-Based Waiting (Helper Methods)
 
-The `ClickAndWaitForScrollAsync()` helper uses browser's native `scrollend` event:
+The `ClickAndWaitForScrollAsync()` helper uses the `__e2e` lifecycle counter to detect scroll completion:
 
 ```csharp
 // Click TOC link and wait for scroll to complete
@@ -813,120 +818,82 @@ await secondLink.ClickAndWaitForScrollAsync();
 
 **How it works**:
 
-1. Set up `scrollend` event listener (fires when scrolling stops)
-2. Set up `scroll` event listener (detects if scroll started)
-3. Execute action (click link)
-4. Wait for `scrollend` event
-5. Wait 2 RAF cycles for TOC scroll-spy to update
-6. Timeout after 50ms if no scroll detected (already at target)
+1. Captures the current `__e2e` counter value
+2. Clicks the element (triggers anchor navigation/scrolling)
+3. Waits for the `scroll-end` signal to appear in the `__e2e` history ring buffer
+4. Returns when the signal is detected or max timeout is reached
 
-**Why 2 RAF cycles?**
+**Why this works**: The `scrollend` browser event fires when scrolling stops. [App.razor](../../src/TechHub.Web/Components/App.razor) listens for `scrollend` and calls `__e2eSignal('scroll-end')`, which increments the lifecycle counter. The helper waits for this specific signal, making it event-driven rather than time-based.
 
-The TOC scroll-spy schedules its update inside a RAF callback:
-
-```javascript
-handleScroll() {
-    if (!this.ticking) {
-        window.requestAnimationFrame(() => {
-            this.updateActiveHeading();  // ← Happens in RAF callback
-            this.ticking = false;
-        });
-        this.ticking = true;
-    }
-}
-```
-
-So we need:
-
-- 1st RAF: `scrollend` event fires
-- 2nd RAF: TOC scroll-spy's RAF callback executes
+The TOC scroll-spy also uses the same scroll events (with RAF throttling) to update the active heading. By the time `scroll-end` fires, the scroll-spy's RAF callback has typically already executed.
 
 **IMPORTANT**: Even after `ClickAndWaitForScrollAsync()`, still use Playwright polling for assertions (Solution 1). The helper ensures scrolling completes, but the final class update timing can still vary.
 
-### Solution 3: Native Scrolling for Programmatic Tests
+### Solution 3: Programmatic Scrolling for Scroll-Spy Tests
 
-**CRITICAL**: When testing scroll-spy behavior without user clicks, you **MUST** use native Playwright scrolling methods that fire scroll events. Programmatic JavaScript methods like `window.scrollTo()` do **NOT** fire scroll events in headless browsers.
+There are two approaches for programmatic scrolling. Both work, with different trade-offs:
 
-**Why JavaScript scrolling fails**:
+**Approach A: `window.scrollTo({ behavior: 'instant' })` (preferred for TOC tests)**
 
-```csharp
-// ❌ WRONG - Does NOT fire scroll events in headless Playwright
-await Page.EvaluateAsync("window.scrollTo(0, 1000)");
-// Result: Page scrolls but scroll-spy never updates (0 scroll events fired)
-```
-
-In headless browsers, `window.scrollTo()` executes synchronously and completes instantly without triggering scroll/scrollend events that the TOC scroll-spy depends on.
-
-**Use native Playwright scrolling instead**:
+`window.scrollTo` with `behavior: 'instant'` **does** fire a `scroll` event in modern Chrome (including headless). This is what the actual TOC tests use:
 
 ```csharp
-// ✅ CORRECT - Simulates real mouse wheel scrolling, fires scroll events
+// ✅ CORRECT - scrollTo with behavior: 'instant' fires scroll events
 var secondHeadingY = await Page.EvaluateAsync<int>(
     "document.querySelectorAll('h2[id], h3[id]')[1].getBoundingClientRect().top + window.scrollY - 150"
 );
+await Page.EvaluateAsync($"window.scrollTo({{ top: {secondHeadingY}, behavior: 'instant' }})");
+
+// Wait for scroll position to stabilize
+await Page.WaitForConditionAsync(
+    @$"() => Math.abs(window.scrollY - {secondHeadingY}) < 100");
+
+// Then verify with Playwright auto-retrying assertion
+await activeTocLink.AssertHasClassAsync(
+    new System.Text.RegularExpressions.Regex(".*active.*"));
+```
+
+Or use the convenience helper:
+
+```csharp
+// ✅ CORRECT - Helper captures counter, scrolls, waits for toc-active-updated signal
+await Page.ScrollToAndWaitForTocUpdateAsync(targetY);
+```
+
+**Approach B: `Mouse.WheelAsync()` (simulates real user input)**
+
+```csharp
+// ✅ ALSO CORRECT - Simulates actual user mouse wheel input
 await Page.Mouse.WheelAsync(0, secondHeadingY);
 
 // Wait for scroll to reach target position
-await Page.WaitForFunctionAsync(
+await Page.WaitForConditionAsync(
     @"(targetY) => Math.abs(window.scrollY - targetY) < 100",
-    secondHeadingY,
-    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
-
-// Then verify with polling
-await Assertions.Expect(secondLink).ToHaveClassAsync(
-    new Regex("active"),
-    new LocatorAssertionsToHaveClassOptions { Timeout = 500 }
-);
+    secondHeadingY);
 ```
 
-**How `Mouse.WheelAsync()` works**:
+**⚠️ Caveat**: `Mouse.WheelAsync` can hang under parallel Chrome load (multiple test collections running simultaneously). The actual TOC tests prefer `window.scrollTo` for this reason.
 
-- Simulates actual user mouse wheel input
-- Fires native browser scroll events (scroll, scrollend)
-- Triggers TOC scroll-spy event handlers just like real user scrolling
-- Takes `deltaX` and `deltaY` parameters (typically `deltaX=0`, `deltaY=scrollAmount`)
+**When `window.scrollTo` does NOT fire scroll events**:
 
-**Pattern for scrolling to specific elements**:
-
-```csharp
-// Calculate scroll position to element
-var targetY = await Page.EvaluateAsync<int>(
-    "element.getBoundingClientRect().top + window.scrollY - offsetFromTop"
-);
-
-// Scroll with native mouse wheel
-await Page.Mouse.WheelAsync(0, targetY);
-
-// Wait for scroll to reach target
-await Page.WaitForFunctionAsync(
-    @"(targetY) => Math.abs(window.scrollY - targetY) < 100",
-    targetY,
-    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
-```
+When called repeatedly to the **same position** inside a polling loop (e.g., in infinite scroll helpers), `scrollTo` won't fire a new `scroll` event because the scroll position doesn't change. In this case, you need `window.dispatchEvent(new Event('scroll'))`. This is already handled by `ScrollToLoadMoreAsync` and `ScrollToEndOfContentAsync` — see [Pattern 8](#pattern-8-infinite-scroll-scroll-event-based).
 
 **Pattern for scrolling to bottom**:
 
 ```csharp
-// Calculate total scrollable height
 var scrollHeight = await Page.EvaluateAsync<int>(
-    "document.documentElement.scrollHeight - window.innerHeight"
-);
-
-// Scroll to bottom with native mouse wheel
-await Page.Mouse.WheelAsync(0, scrollHeight);
-
-// Wait for scroll to reach bottom
-await Page.WaitForFunctionAsync(
-    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
-    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+    "document.documentElement.scrollHeight - window.innerHeight");
+await Page.EvaluateAsync($"window.scrollTo({{ top: {scrollHeight}, behavior: 'instant' }})");
+await Page.WaitForConditionAsync(
+    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50");
 ```
 
-**When to use native scrolling**:
+**When to use which**:
 
-- ✅ Testing scroll-spy updates when programmatically scrolling (without clicking)
-- ✅ Testing "scroll to bottom" scenarios for last heading detection
-- ✅ Any test that needs to trigger scroll event handlers
-- ❌ **NOT** needed when using `ClickAndWaitForScrollAsync()` (already handles events)
+- ✅ `window.scrollTo({ behavior: 'instant' })` — TOC scroll-spy tests, precise positioning (preferred)
+- ✅ `Mouse.WheelAsync()` — When you specifically need to simulate user wheel input
+- ✅ `ClickAndWaitForScrollAsync()` — TOC link clicks (handles everything automatically)
+- ✅ `ScrollToAndWaitForTocUpdateAsync()` — Programmatic scroll + wait for TOC update signal
 
 ### Pattern for TOC Tests
 
@@ -978,9 +945,8 @@ var scrollHeight = await Page.EvaluateAsync<int>(
 await Page.Mouse.WheelAsync(0, scrollHeight);
 
 // Wait for scroll to reach bottom
-await Page.WaitForFunctionAsync(
-    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50",
-    new PageWaitForFunctionOptions { Timeout = 3000, PollingInterval = 50 });
+await Page.WaitForConditionAsync(
+    @"() => Math.abs((window.innerHeight + window.scrollY) - document.documentElement.scrollHeight) < 50");
 
 // Verify last heading is active
 var lastHeadingLink = Page.Locator(".sidebar-toc a").Last;

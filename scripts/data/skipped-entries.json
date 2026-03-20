@@ -11382,12 +11382,6 @@
     "canonical_url": "https://www.youtube.com/shorts/BeLtZZJSGRY"
   },
   {
-    "collection": "news",
-    "timestamp": "2026-01-01 15:36:53 +00:00",
-    "reason": "API call retries failed: All API call retries failed - no response received",
-    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/visualizing-github-audit-log-in-microsoft-defender/"
-  },
-  {
     "collection": "videos",
     "timestamp": "2026-01-01 15:43:31 +00:00",
     "reason": "No categories found: No categories assigned. The content, based on the title and description, is a news/discussion video analysing recent language popularity trends in GitHub's Octoverse report. It discusses TypeScript overtaking Python and JavaScript, mentions the language's strengths and future industry directions, and contains general commentary. There is no substantive coverage of Microsoft technologies, developer tools, or coding practices within the Microsoft ecosystem as required by AI, Coding, Azure, DevOps, ML, Security, or GitHub Copilot categories. Although TypeScript is a Microsoft-created language, the content here focuses on popularity and ecosystem trends, not technical implementation, development with Microsoft frameworks/tools, or detailed instructions relevant to Microsoft developer consulting. This falls outside the inclusion rules for all categories.",
@@ -13056,12 +13050,6 @@
     "canonical_url": "https://www.youtube.com/watch?v=7QljM3-IzSQ"
   },
   {
-    "collection": "community",
-    "timestamp": "2026-02-27 00:13:54 +00:00",
-    "reason": "API call retries failed: All API call retries failed - no response received",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/get-started-with-pagerduty-mcp-server-and-pagerduty-sre-agent-in/ba-p/4497124"
-  },
-  {
     "collection": "videos",
     "timestamp": "2026-02-27 10:12:03 +00:00",
     "reason": "No categories found: No categories assigned. The content is a brief event announcement and highlights for a community competition ('Agents League - Reasoning Agents Battle') hosted by Microsoft. There is no substantive technical explanation, tutorial, or implementation detail present. The description is promotional and focuses on an on-demand video and project registration, without discussion of Microsoft technology features, development techniques, or technical architecture. Per generic exclusion rules, content lacking substantive technical depth or hands-on guidance does not qualify.",
@@ -13204,12 +13192,6 @@
     "timestamp": "2026-03-06 01:32:55 +00:00",
     "reason": "No categories found: Content excluded due to generic exclusion rule – this video is primarily biographical in nature, focusing on John Leider's personal journey as an open source maintainer, as indicated by the phrase 'his incredible journey as an open source maintainer.' The primary topic centers on Vuetify, a UI library that is not Microsoft-related. There's no substantive technical discussion of Microsoft technologies or products present in the title, description, or linked project. Therefore, no categories apply.",
     "canonical_url": "https://www.youtube.com/watch?v=Q_Ef-JMdAG0"
-  },
-  {
-    "collection": "community",
-    "timestamp": "2026-03-06 07:21:36 +00:00",
-    "reason": "API call retries failed: All API call retries failed - no response received",
-    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-architecture-blog/decision-matrix-api-vs-mcp-tools-the-great-integration-showdown/ba-p/4499385"
   },
   {
     "collection": "news",
@@ -13672,5 +13654,185 @@
     "timestamp": "2026-03-17 22:15:43 +00:00",
     "reason": "No categories found: Excluded because the content is primarily about non-Microsoft JavaScript tooling (Vite 8, Rolldown, Oxc, Rollup, esbuild, Turbopack, Rspack, Bun) and the only Microsoft-related mention is a brief note about TypeScript’s native port and Anders Hejlsberg. Microsoft technologies are not central to the article and do not make up ≥40% of the substantive content (Multi-Platform Content Threshold). Therefore, no categories apply.",
     "canonical_url": "https://www.devclass.com/development/2026/03/17/vite-team-boasts-10-30x-faster-builds-with-rust-powered-rolldown/5209472"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-18 11:22:23 +00:00",
+    "reason": "No categories found: Excluded via Generic Exclusion Rule: Business Strategy and Executive Content / Workplace and Business Focus. The article is a high-level, vendor-neutral strategy piece about how organizations and IT teams should adapt to AI (upskilling, redefining roles, culture, ethics) without substantive Microsoft technology implementation details, and it does not center on Microsoft developer tools or platforms (only a navigational link mentions “Microsoft Copilot Prompts…”). Because it triggers a generic exclusion, no categories are assigned.",
+    "canonical_url": "https://dellenny.com/thriving-in-the-age-of-ai-how-software-companies-and-it-teams-can-adapt-evolve-and-win/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-18 13:42:26 +00:00",
+    "reason": "No categories found: Excluded due to generic exclusion rule: Sales Pitches. This news post is primarily an announcement/promotional overview of Auger (an ISV product) building on Microsoft Fabric, emphasizing business outcomes (\"supply chain autonomy\", \"operational intelligence\", \"collaboration\") with minimal technical implementation detail. It ends with a direct call-to-action and marketplace link (\"Explore Auger now\"), reinforcing that the dominant intent is promotion rather than an educational, technical walkthrough.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-unified-data-to-decisive-action-advancing-supply-chain-autonomy-with-microsoft-fabric-and-auger/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-18 13:47:12 +00:00",
+    "reason": "No categories found: Excluded because this is primarily business/finance-focused content (FinOps/cost optimization, pricing, commitments, budgeting) describing a new pricing model rather than providing technical implementation guidance. This triggers the Generic Exclusion Rule for Business Strategy and Executive Content / Workplace and Business Focus (targets IT finance/FinOps, forecasting, budgeting). Even though it references Azure services (Azure SQL Database, Azure Database for PostgreSQL, Azure Advisor, Azure portal), the substance is pricing and purchasing, not developer/architect implementation details.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/finops-blog/announcing-savings-plan-for-databases-flexible-savings-for/ba-p/4503107"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-18 14:37:33 +00:00",
+    "reason": "No categories found: Excluded by generic exclusion rules: this is business/workplace-focused content about career growth and early-in-career experiences (survey results, mentorship, office dynamics) rather than technical implementation (Workplace and Business Focus / Business Strategy and Executive Content). It also centers on Microsoft 365 Copilot as a productivity tool for young professionals, which is explicitly a non-development Microsoft product and is excluded from categorization (Non-Development Microsoft Products: Microsoft 365 Copilot).",
+    "canonical_url": "https://blogs.microsoft.com/conexiones/features/makinamode/"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-18 15:32:56 +00:00",
+    "reason": "No categories found: No categories assigned because the substantive content is about Salesforce/Heroku (a non-Microsoft PaaS) and its product direction. Microsoft is only mentioned briefly in a list of alternative cloud providers (“AWS, Google Cloud Platform or Microsoft Azure”) and is not central to the article (fails the ≥40% / centrality threshold in the Multi-Platform Content rules). No other Microsoft technologies (Azure services, .NET, GitHub, etc.) are discussed in a way that qualifies for inclusion.",
+    "canonical_url": "https://www.devclass.com/containers/2026/02/09/heroku-future-in-doubt-as-salesforce-freezes-features-to-focus-on-ai/4090238"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-18 15:33:12 +00:00",
+    "reason": "No categories found: Excluded from categorization because the article is entirely about Oracle/Java ecosystem topics (Java 26 release, OpenJDK, FFM API, Project Detroit embedding V8 and CPython in the JVM, Helidon, JavaFX, Java in VS Code/Jupyter). Microsoft technologies are not central to the content and do not make up ≥40% of the substantive text (only a brief mention of the Java platform extension for Visual Studio Code and Java support in VS Code/Jupyter notebooks). Under the multi-platform threshold rules, this is insufficient to assign any of the predefined Microsoft categories.",
+    "canonical_url": "https://www.devclass.com/development/2026/03/18/oracle-introduces-project-detroit-for-fast-java-interop-with-javascript-and-python/5209478"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-18 16:28:38 +00:00",
+    "reason": "No categories found: Excluded due to the Generic Exclusion Rule: Business Strategy and Executive Content / Workplace and Business Focus. The piece is a high-level discussion about platform engineering challenges (cognitive overload, tool sprawl, productivity fragmentation) and a conceptual vision for AI-assisted “conversation layers” and “golden/paved paths,” but it does not provide technical implementation details tied to Microsoft technologies (no Azure/GitHub configuration steps, architectures, code, or concrete how-to guidance). While Azure Monitor, GitHub, and Slack are mentioned, they are illustrative examples rather than central, detailed technical content, so the content doesn’t meet the inclusion threshold for any category.",
+    "canonical_url": "https://devblogs.microsoft.com/all-things-azure/when-infrastructure-scales-but-understanding-doesnt/"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-18 16:31:30 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rule: Short Community Content (<200 words). Although the post announces “Lakeflow Connect Free Tier … on Azure Databricks” and lists benefits and links, the substantive explanatory text is brief and largely promotional/announcement-style, with most of the remainder being resource links, footer/profile/navigation elements, and metadata (which should be ignored). Therefore, no categories are assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-databricks/introducing-lakeflow-connect-free-tier-now-available-on-azure/ba-p/4502755"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-18 16:32:19 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-to-handle-dynamic-ip-addresses-of-clients/m-p/4503377#M22455"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-18 19:27:24 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rules → Short Community Content (<200 words). Although it mentions Azure Databricks, the post is primarily a brief relocation announcement (“blog has moved to a new address”) plus links, with no substantive technical guidance, walkthroughs, or implementation details. Link lists and page chrome (published date, tags, profile info) don’t count toward meaningful explanatory text, so it doesn’t meet the minimum threshold for community posts.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/analytics-on-azure-blog/announcing-the-new-home-for-the-azure-databricks-blog/ba-p/4503570"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-19 09:19:58 +00:00",
+    "reason": "No categories found: Excluded due to the Generic Exclusion Rule: Sales Pitches. The content is explicitly labeled “SPonsored post” / “Sponsored by Arm” and primarily promotes Arm’s viewpoint and links to Arm marketing pages and a sponsored report summary (e.g., calls to “see Arm's summary” and multiple arm.com UTM links), rather than providing a hands-on, practitioner-focused technical guide about Microsoft technologies. Microsoft is only mentioned briefly as one of several hyperscalers (AWS, Microsoft, Google), which is not central enough to qualify for any Microsoft category.",
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/03/19/why-real-world-ai-performance-depends-on-the-control-layer/5209562"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-19 13:34:53 +00:00",
+    "reason": "No categories found: Excluded by the Microsoft content threshold rule (Chapter 2, Multi-Platform Content Threshold). The article is a general discussion of AI-assisted software development risks (agentic coding, context engineering, MCP/model context protocol, sub-agents, Claude Code, Cursor, Anthropic, OpenAI “harness engineering”, prompt injection, secret extraction) but it does not make Microsoft technologies central to the content (≥40%) and it is not focused on Microsoft AI products (e.g., Azure OpenAI, Azure AI Foundry, Copilot Studio) or GitHub Copilot specifically. Because no Microsoft category qualifies, no categories can be assigned.",
+    "canonical_url": "https://www.devclass.com/ai-ml/2026/03/19/ai-for-software-developers-is-in-a-dangerous-state/5209518"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-19 15:21:24 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rule: Business Strategy and Executive Content / Workplace and Business Focus. While the article discusses cybersecurity in the water sector and a pilot program’s findings, it stays at a high level (training + coaching model, participation stats, and policy implications like incentives and trusted messengers) and does not provide technical implementation details or Microsoft technology specifics (e.g., no Defender/Sentinel/Entra ID/Key Vault configuration, architecture, or developer guidance). Therefore it does not qualify for the Security category under the inclusion rules, and no categories are assigned.",
+    "canonical_url": "https://blogs.microsoft.com/on-the-issues/2026/03/19/how-hands-on-support-can-improve-water-sector-cybersecurity/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-19 15:23:59 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rules (Non-English Content): the provided description/title are primarily Spanish (e.g., \"Jueves de Quack en modo coworking\"), with no English version present. Per Chapter 3, non-English content (<80% English in main text) receives no categories. Additionally, the input has no substantive technical content text (content is null), so there isn’t enough Microsoft-technology detail to evaluate category inclusion.",
+    "canonical_url": "https://www.youtube.com/watch?v=rtGs98ihne8"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-19 17:28:22 +00:00",
+    "reason": "No categories found: Content excluded because there is no substantive technical content to evaluate (the input only contains a short invite: \"Come hang and hack with us!\" and the main `content` is null). With no meaningful Microsoft-technology details, no category inclusion rules can be satisfied, so categories must remain empty.",
+    "canonical_url": "https://www.youtube.com/watch?v=jFaHrHnGmtI"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-19 18:22:34 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rules (Chapter 3) because the provided `content` is not substantive article text; it is largely scraped LinkedIn login/registration UI and boilerplate (e.g., “Agree & Join LinkedIn”, “User Agreement”, “Privacy Policy”, “Sign in”), plus an empty image marker `![]()` and no meaningful technical details. With no actual Microsoft technical content to assess beyond the brief description/title, it cannot be categorized or transformed into structured markdown.",
+    "canonical_url": "https://www.linkedin.com/posts/satyanadella_our-new-image-generator-mai-image-2-is-out-activity-7440448725023350784-VIuz"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-19 18:25:27 +00:00",
+    "reason": "No categories found: Excluded by generic exclusion rule: Sales Pitches. The video description is primarily promotional marketing for the “GitHub Copilot coding agent” (e.g., “Stop letting tech debt slow down…”, “Let AI handle the heavy lifting…”) and does not provide substantive technical implementation details, configuration steps, or actionable guidance. Most of the remaining text is social/channel links and an “About GitHub” blurb, so there isn’t enough educational content to categorize.",
+    "canonical_url": "https://www.youtube.com/shorts/fiq-pNjOb3U"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-19 19:24:19 +00:00",
+    "reason": "No categories found: Excluded due to Generic Exclusion Rules → Non-English Content. The main text is primarily German (e.g., sections like “Dieses Community Event richtet sich…”, “Eventdetails”, “Das nimmst du mit”), so it fails the requirement that content must be primarily English (≥80% English). Per the workflow, this triggers immediate exclusion and therefore no categories are assigned, even though GitHub Copilot/AI is the topic.",
+    "canonical_url": "https://harrybin.de/posts/github-copilot-dev-days-trier-2026/"
+  },
+  {
+    "collection": "blogs",
+    "timestamp": "2026-03-19 20:17:09 +00:00",
+    "reason": "No categories found: Excluded by Generic Exclusion Rules → Non-Development Microsoft Products. The article is about SharePoint Hub Sites as part of Microsoft 365 (information architecture, navigation/branding, search, governance, and admin-center steps). It does not cover SharePoint development (SPFx, APIs, customization, coding), so it falls under end-user/business platform guidance rather than developer-focused technical content.",
+    "canonical_url": "https://dellenny.com/sharepoint-hub-sites-building-a-true-digital-workplace/"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-19 22:11:02 +00:00",
+    "reason": "No categories found: Excluded by Generic Exclusion Rules: this news post’s primary purpose is announcing/advertising a third-party tool/workload (“Spectral Core migration workload (Preview)”) and directing readers to product pages (Spectral Core docs and Microsoft Fabric Workload Hub listing), with only high-level feature descriptions and no substantive technical implementation details. This matches the Sales Pitches exclusion (primary intent is promotion/announcement of a tool). Per workflow, once a generic exclusion applies, no categories are assigned.",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/from-legacy-to-fabric-a-new-guided-migration-experience-through-spectral-core-fabric-workload-preview/"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-19 22:13:41 +00:00",
+    "reason": "No categories found: Excluded by generic exclusion rule: the provided text is essentially a YouTube description/agenda for a KubeCon video compilation (CNCF projects like COPA, External Secrets, Dapr, Flux, etc.) plus timestamps and links, but it does not contain substantive technical content or implementation details to categorize. Also, Microsoft technologies are not central in the described content (mostly Kubernetes/CNCF projects; “Microsoft” appears only as the channel/author branding and generic tags), so it doesn’t meet the threshold for Microsoft-focused categorization.",
+    "canonical_url": "https://www.youtube.com/watch?v=Z8ck1_n5g8c"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-20 00:32:44 +00:00",
+    "reason": "No categories found: Content excluded because there is no substantive content to evaluate: the input `content` is null and the `description` is empty. With no technical details provided, no category inclusion rules can be verified, so categories must remain empty (Fundamental guideline: never fabricate information; base decisions only on provided content).",
+    "canonical_url": "https://www.youtube.com/watch?v=8NMH6--qm1k"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-20 00:32:57 +00:00",
+    "reason": "No categories found: Excluded because there is no substantive content provided to evaluate (the `content` field is null and `description` is empty). With no main text, it's not possible to verify Microsoft technology relevance, apply inclusion rules, or extract accurate tags/excerpt/markdown content without fabricating information, so no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=BU59cYcz4WU"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-20 01:39:09 +00:00",
+    "reason": "No categories found: Content excluded due to generic exclusion rule: Non-English Content. The provided description is primarily in Spanish (e.g., “Este Jueves de Quack…”, “Invitada especial”, “Ya no programamos solos”), and there is no English version present. Per Chapter 3, non-English content (<80% English) must be excluded, so no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/watch?v=VMPap6uuErU"
+  },
+  {
+    "collection": "videos",
+    "timestamp": "2026-03-20 04:40:21 +00:00",
+    "reason": "No categories found: Content excluded because the input provides no substantive technical content to evaluate (the `content` field is null and `description` is empty). With no actual material, category inclusion rules cannot be applied without fabricating information, so no categories are assigned.",
+    "canonical_url": "https://www.youtube.com/shorts/fYEF6m6rQdY"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-20 05:30:02 +00:00",
+    "reason": "No categories found: Excluded all categories due to a generic exclusion rule: the input content contains an empty image link `![]()` (in the description section). This violates the required markdown rule MD042 (no empty links) and MD045 (images must have alt text). Per workflow, generic exclusion rules are applied first; since this formatting violation exists in the provided content, no categories are assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/heroku-set-the-standard-we-re-just-removing-the-ceiling/ba-p/4504021"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-20 07:28:27 +00:00",
+    "reason": "No categories found: Excluded all categories due to the Generic Exclusion Rule: Non-Development Microsoft Products. The content is primarily about Microsoft Power Apps/Power Platform as a low-code business app builder (citizen developer enablement, workflow/process apps, Dataverse-backed apps, governance) rather than developer-focused Microsoft technologies covered by the allowed categories (.NET, Azure, DevOps, Security, AI developer services, GitHub Copilot, ML). Although it mentions 'AI-assisted application generation', it is framed as business application creation in Power Apps (not Azure OpenAI/Azure AI services, GitHub Copilot, or code-level AI development), so no categories are assigned.",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/power-apps-vibe-experience-build-business-apps-at-the-speed-of/ba-p/4502347"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-20 09:23:26 +00:00",
+    "reason": "Insufficient content length",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure/how-solution-architects-can-use-microsoft-s-azure-globe/m-p/4504110#M22462"
+  },
+  {
+    "collection": "community",
+    "timestamp": "2026-03-20 14:23:52 +00:00",
+    "reason": "Too many tokens in the request",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/the-swarm-diaries-what-happens-when-you-let-ai-agents-loose-on-a/ba-p/4501393"
+  },
+  {
+    "collection": "news",
+    "timestamp": "2026-03-20 17:19:14 +00:00",
+    "reason": "No categories found",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-whats-new-in-workload-management/"
   }
 ]

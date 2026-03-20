@@ -4,7 +4,7 @@
 @implements IDisposable
 
 @inject IJSRuntime JS
-@inject TechHubApiClient ApiClient
+@inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
 @inject ILogger<GitHubCopilotGettingStarted> Logger
@@ -14,6 +14,9 @@
 
 @if (pageData != null)
 {
+    <SeoMetaTags
+        Title="@pageData.Title"
+        Description="@pageData.Description" />
     <main class="page-with-sidebar">
         <aside class="sidebar">
             <SidebarToggle />

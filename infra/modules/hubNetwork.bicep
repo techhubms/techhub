@@ -130,10 +130,10 @@ resource vpnGateway 'Microsoft.Network/virtualNetworkGateways@2025-01-01' = {
     gatewayType: 'Vpn'
     vpnType: 'RouteBased'
     sku: {
-      name: 'VpnGw2'
-      tier: 'VpnGw2'
+      name: 'VpnGw1AZ'
+      tier: 'VpnGw1AZ'
     }
-    vpnGatewayGeneration: 'Generation2'
+    vpnGatewayGeneration: 'Generation1'
     vpnClientConfiguration: {
       vpnClientAddressPool: {
         addressPrefixes: [

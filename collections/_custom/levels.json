@@ -1,5 +1,6 @@
 {
     "title": "GitHub Copilot: Levels of Enlightenment",
+    "description": "A structured learning path of nine practical insights for mastering GitHub Copilot — from explaining intent to advanced context management.",
     "intro": "Want to master GitHub Copilot? Go through this journey of discovery through \"Levels of Enlightenment\" - a series of nine practical insights gained from over a year of using the AI pair programmer. Each level represents an \"aha\" moment that dramatically improved productivity when working with Copilot.",
     "overview": {
         "content": "After using GitHub Copilot extensively, we documented the critical insights that helped us extract maximum value from this AI tool. Each level builds upon the previous one, creating a structured learning path that can significantly enhance your Copilot skills.",

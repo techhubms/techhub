@@ -24,7 +24,7 @@ public class PlaywrightCollectionFixture : IAsyncLifetime
         // Assertions.Expect() uses a separate global assertion timeout (default: 5000ms) that
         // ignores page.SetDefaultTimeout(). Without this call, Expect() assertions always run at
         // 5000ms — even in CI where we need 15000ms (3x multiplier) to avoid flaky failures.
-        Assertions.SetDefaultExpectTimeout(BlazorHelpers.DefaultTimeout);
+        Assertions.SetDefaultExpectTimeout(BlazorHelpers.E2ETimeout);
 
         Browser = await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
         {
