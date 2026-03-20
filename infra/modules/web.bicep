@@ -95,8 +95,8 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
           name: 'web'
           image: imageReference
           resources: {
-            cpu: json('0.5')
-            memory: '1Gi'
+            cpu: json(environmentName == 'staging' ? '0.25' : '0.5')
+            memory: environmentName == 'staging' ? '0.5Gi' : '1Gi'
           }
           env: allEnvVars
           probes: [
@@ -138,8 +138,8 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       scale: {
-        minReplicas: environmentName == 'staging' ? 0 : 2
-        maxReplicas: 20
+        minReplicas: environmentName == 'staging' ? 0 : 1
+        maxReplicas: environmentName == 'staging' ? 3 : 20
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [
