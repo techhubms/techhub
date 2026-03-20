@@ -547,8 +547,10 @@ public static class BlazorHelpers
         // so counter will restart from 0. We wait for it to become > 0.
         await page.GotoAsync(url, gotoOptions);
 
-        // Wait for page readiness via lifecycle counter (replaces WaitForBlazorReadyAsync)
-        await page.WaitForPageReadyAsync(0);
+        // Wait for Blazor to be fully interactive (circuit established, scripts loaded).
+        // WaitForBlazorReadyAsync correctly waits for __blazorServerReady/__blazorWasmReady
+        // instead of the weaker __blazorWebReady which fires before the interactive circuit.
+        await page.WaitForBlazorReadyAsync();
     }
 
     /// <summary>
@@ -588,7 +590,7 @@ public static class BlazorHelpers
         {
             // Single combined check for all readiness conditions INCLUDING Mermaid diagrams:
             // 1. Blazor runtime exists
-            // 2. Interactive runtime is ready (Server/WASM circuit established, or SSR-only page)
+            // 2. Interactive runtime is ready (Server/WASM circuit established)
             // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
             // 4. Mermaid diagrams rendered (if present on page)
             //
@@ -603,11 +605,12 @@ public static class BlazorHelpers
                     // Step 1: Blazor runtime must exist
                     if (typeof window.Blazor === 'undefined') return false;
 
-                    // Step 2: Interactive runtime or SSR must be ready
-                    // Flags set by TechHub.Web.lib.module.js afterServerStarted/afterWebAssemblyStarted/afterWebStarted
-                    if (window.__blazorServerReady !== true && 
-                        window.__blazorWasmReady !== true && 
-                        window.__blazorWebReady !== true) {
+                    // Step 2: Interactive Server/WASM circuit must be established.
+                    // __blazorServerReady is set by afterServerStarted() — SignalR circuit ready, event handlers attached.
+                    // __blazorWasmReady  is set by afterWebAssemblyStarted() — WASM runtime ready.
+                    // NOTE: __blazorWebReady (afterWebStarted) fires too early — before the interactive circuit
+                    // is established — and must NOT be used here to avoid returning before @onclick handlers attach.
+                    if (window.__blazorServerReady !== true && window.__blazorWasmReady !== true) {
                         return false;
                     }
 
@@ -673,8 +676,7 @@ public static class BlazorHelpers
         // Step 1: Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync();
 
-        // Step 2: Capture counter before click
-        var counterBefore = await page.GetE2ECounterAsync();
+        // Step 2: Capture URL before click
         var urlBeforeClick = page.Url;
 
         // Step 3: Click with Force=true to bypass stability checks
@@ -706,8 +708,9 @@ public static class BlazorHelpers
         // Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync();
 
-        // Ensure page is ready via lifecycle counter (counter > 0 means at least one lifecycle event fired)
-        await locator.Page.WaitForPageReadyAsync(0);
+        // Ensure page is interactive (server circuit established, scripts loaded).
+        // WaitForBlazorReadyAsync waits for __blazorServerReady/__blazorWasmReady.
+        await locator.Page.WaitForBlazorReadyAsync();
     }
 
     /// <summary>
@@ -1232,7 +1235,7 @@ public static class BlazorHelpers
         double targetY)
     {
         var counterBefore = await page.GetE2ECounterAsync();
-        await page.EvaluateAsync($"window.scrollTo({{ top: {targetY}, behavior: 'instant' }})");
+        await page.EvaluateAsync("top => window.scrollTo({ top, behavior: 'instant' })", targetY);
         await page.WaitForE2ESignalAsync(counterBefore, "toc-active-updated");
     }
 

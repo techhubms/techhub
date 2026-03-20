@@ -36,11 +36,11 @@
 
     @{
         var appInsightsConnectionString = Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING");
-        var isProduction = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Development";
+        var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
         var gaMeasurementId = Configuration["GoogleAnalytics:MeasurementId"];
     }
 
-    @if (!isProduction)
+    @if (isDevelopment)
     {
         <!-- E2E test lifecycle counter — provides a single monotonic counter that
              all JS lifecycle hooks increment via __e2eSignal(label). Tests capture
@@ -62,7 +62,7 @@
         </script>
     }
 
-    @if (isProduction && !string.IsNullOrEmpty(gaMeasurementId))
+    @if (!isDevelopment && !string.IsNullOrEmpty(gaMeasurementId))
     {
         <!-- Google Analytics 4 - async loading, no render blocking -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=@gaMeasurementId"></script>
@@ -79,7 +79,7 @@
         </script>
     }
 
-    @if (isProduction && !string.IsNullOrEmpty(appInsightsConnectionString))
+    @if (!isDevelopment && !string.IsNullOrEmpty(appInsightsConnectionString))
     {
         <!-- Application Insights JavaScript SDK for client-side telemetry -->
         <script type="text/javascript">
@@ -116,7 +116,7 @@
     <ReconnectModal />
     <script src="@Assets["_framework/blazor.web.js"]"></script>
 
-    @if (isProduction && !string.IsNullOrEmpty(gaMeasurementId))
+    @if (!isDevelopment && !string.IsNullOrEmpty(gaMeasurementId))
     {
         <!-- Google Analytics - Track Blazor enhanced navigation -->
         <script>
@@ -150,7 +150,7 @@
         </script>
     }
 
-    @if (isProduction && !string.IsNullOrEmpty(appInsightsConnectionString))
+    @if (!isDevelopment && !string.IsNullOrEmpty(appInsightsConnectionString))
     {
         <!-- Application Insights - Track Blazor enhanced navigation -->
         <script>
