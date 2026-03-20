@@ -19,7 +19,7 @@
 <main class="page-with-sidebar">
     <aside class="sidebar">
         <SidebarToggle />
-        <MobileSidebarToolbar>
+        <MobileSidebarToolbar @key="@ShowContentTypeFilter">
         @if (ShowContentTypeFilter)
         {
         <MobileSidebarPanel Label="Content" Icon="filter" HasActiveFilter="@HasActiveTypeFilter">
