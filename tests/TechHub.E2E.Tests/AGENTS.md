@@ -94,6 +94,7 @@ tests/TechHub.E2E.Tests/
 │   │   ├── TagFilteringTests.cs        ← Tag filtering
 │   │   ├── DateRangeSliderTests.cs     ← Date range slider filtering
 │   │   ├── DynamicTagCountsTests.cs    ← Dynamic tag count updates
+│   │   ├── ContentTypeFilterTests.cs   ← Content type filter on browse pages
 │   │   ├── InfiniteScrollTests.cs      ← Infinite scroll pagination
 │   │   └── InfiniteScrollWithTagsTests.cs ← Infinite scroll with tag filtering
 ├── Api/                                 ← Direct API testing (no Playwright)
@@ -214,7 +215,7 @@ API E2E tests are organized by endpoint group for maintainability:
 
 **See**: [Api/ContentEndpointsE2ETests.cs](Api/ContentEndpointsE2ETests.cs) for complete examples
 
-**Total**: 215 E2E test cases across all test files.
+**Total**: 224 E2E test cases across all test files.
 
 Note: Test count includes common component tests, page-specific tests, feature tests (infinite scroll, tag filtering, date range slider, dynamic tag counts, keyboard navigation), accessibility tests, and API E2E tests.
 

@@ -102,16 +102,10 @@
     private bool IsAll => string.Equals(CollectionName, "all", StringComparison.OrdinalIgnoreCase);
 
     /// <summary>
-    /// Whether this section hides individual collection pages and uses unified Browse with filtering.
-    /// </summary>
-    private bool HideCollectionPages => section?.HideCollectionPages == true;
-
-    /// <summary>
     /// Whether to show the content-type filter in the sidebar.
-    /// Only shown on Browse page when HideCollectionPages is enabled.
-    /// Collection routes render identically to normal /section/collection pages (no filter).
+    /// Shown on every Browse page (the /all route) that has at least one filterable (non-custom) collection.
     /// </summary>
-    private bool ShowContentTypeFilter => HideCollectionPages && IsAll;
+    private bool ShowContentTypeFilter => IsAll && ContentTypeCollections.Count > 0;
 
     /// <summary>
     /// Whether any content type filter is active (not all types selected).
@@ -139,7 +133,7 @@
     {
         get
         {
-            if (!HideCollectionPages || !IsAll) return null;
+            if (!IsAll) return null;
 
             // On Browse page with content type filter
             if (activeContentTypes.Count == 0 || activeContentTypes.Count == ContentTypeCollections.Count)
@@ -308,7 +302,7 @@
 
     private void ParseTypesFromUrl()
     {
-        if (!string.IsNullOrEmpty(TypesParam) && HideCollectionPages && IsAll)
+        if (!string.IsNullOrEmpty(TypesParam) && IsAll)
         {
             var parsed = TypesParam.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             activeContentTypes = new HashSet<string>(parsed, StringComparer.OrdinalIgnoreCase);
