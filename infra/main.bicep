@@ -239,8 +239,8 @@ module postgres './modules/postgres.bicep' = {
     serverName: postgresServerName
     administratorLogin: postgresAdminLogin
     administratorLoginPassword: postgresAdminPassword
-    skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_D2ads_v5'
-    skuTier: environmentName == 'staging' ? 'Burstable' : 'GeneralPurpose'
+    skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_B2s'
+    skuTier: 'Burstable'
     backupRetentionDays: environmentName == 'staging' ? 7 : 14
   }
 }
