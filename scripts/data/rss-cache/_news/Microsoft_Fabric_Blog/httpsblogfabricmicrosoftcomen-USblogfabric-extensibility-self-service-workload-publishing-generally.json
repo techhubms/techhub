@@ -1,0 +1,14 @@
+{
+  "FeedName": "Microsoft Fabric Blog",
+  "FeedLevelAuthor": "Microsoft Fabric Blog",
+  "Description": "If you haven’t already, check out Arun Ulag’s hero blog “FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings. Fabric Extensibility—Self-Service Workload Publishing now offers ISV partners a streamlined path to deliver …\n\n[Continue reading “Fabric Extensibility—Self Service Workload Publishing (Generally Available)”](https://blog.fabric.microsoft.com/en-us/blog/fabric-extensibility-self-service-workload-publishing-generally-available/)",
+  "Author": "Microsoft Fabric Blog",
+  "Tags": [],
+  "OutputDir": "_news",
+  "Title": "Fabric Extensibility—Self Service Workload Publishing (Generally Available)",
+  "Link": "https://blog.fabric.microsoft.com/en-US/blog/fabric-extensibility-self-service-workload-publishing-generally-available/",
+  "ProcessedDate": "2026-03-20 17:17:09",
+  "PubDate": "2026-03-20T09:15:00+00:00",
+  "FeedUrl": "https://blog.fabric.microsoft.com/en-us/blog/feed/",
+  "EnhancedContent": "*If you haven’t already, check out Arun Ulag’s hero blog “*[*FabCon and SQLCon 2026: Unifying databases and Fabric on a single, complete platform*](https://aka.ms/FabCon-SQLCon-2026-news)*” for a complete look at all of our FabCon and SQLCon announcements across both Fabric and our database offerings.*\n\nFabric Extensibility—Self-Service Workload Publishing now offers ISV partners a streamlined path to deliver innovation and value to customers. This feature simplifies the publishing, validation, and management of custom workloads within Microsoft Fabric, making it easier than ever for partners to share solutions and scale their impact.\n\nSelf-Service Workload Publishing gives ISV partners full control over their private preview journey:\n\n- Publish up to 20 customer tenants: Share your workload with selected customers for testing and validation—no Microsoft certification required.\n- **Workload name reservation**: Reserve your globally unique workload name (e.g., Contoso.DataQuality) to protect your brand identity before formal publication.\n- **Automated validation**: Your workload package is automatically validated against manifest schema, naming conventions, and security requirements at upload time.\n- **Seamless path**: Once validated with customers, use the same workload package to pursue formal certification and publish to the global Workload Hub.\n\nLearn more: [Publishing Overview – Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/fabric/extensibility-toolkit/publishing-overview)"
+}
