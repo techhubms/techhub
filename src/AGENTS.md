@@ -27,6 +27,7 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Always use context7 MCP tool** for latest .NET/Blazor documentation
 - **Always check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
 - **Always add the latest stable version when adding NuGet packages**
+- **Always sanitize user-controlled strings for logging**: Use the `.Sanitize()` extension method (from `TechHub.Core.Logging`) on any user-controlled value passed to logging calls — e.g. `Logger.LogError("Bad input for {Name}", name.Sanitize())`. For methods with many log calls using the same parameter (like `TechHubApiClient` service methods), assign at entry: `param = param.Sanitize();`. In Blazor components, call `.Sanitize()` inline at each log site. See [docs/input-validation-and-sanitization.md](../docs/input-validation-and-sanitization.md) for the full strategy.
 
 ### ⚠️ Ask First
 

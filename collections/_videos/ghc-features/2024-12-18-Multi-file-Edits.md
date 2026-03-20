@@ -1,7 +1,7 @@
-﻿---
+---
 external_url: https://youtu.be/lI_5yc7zrDo
 title: Multi-file Edits
-author: Randy Pagels
+author: randy.pagels@xebia.com (Randy Pagels)
 date: 2024-12-18 23:00:38 +00:00
 ghes_support: false
 plans:

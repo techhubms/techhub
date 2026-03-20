@@ -240,6 +240,53 @@ curl -k "https://localhost:5001/api/sections/ai/collections/videos/2024-06-ai-ov
 
 **Note**: Only `videos` and `roundups` collections return content. External collections (`news`, `blogs`, `community`) return `404 Not Found`.
 
+### Authors
+
+#### GET /api/authors
+
+Get all authors with their published content item counts.
+
+**Response**: `200 OK`
+
+Returns authors sorted alphabetically (case-insensitive).
+
+```bash
+curl -k https://localhost:5001/api/authors
+```
+
+**Response Body**:
+
+```json
+[
+  { "name": "Alice Example", "itemCount": 12 },
+  { "name": "Bob Smith", "itemCount": 5 }
+]
+```
+
+#### GET /api/authors/{authorName}/items
+
+Get paginated content items attributed to a specific author across all sections and collections.
+
+**Parameters**:
+
+- `authorName` (path): Author display name (URL-encoded if contains spaces, e.g., `Alice%20Example`)
+
+**Query Parameters**:
+
+- `take` (optional): Number of items to return (default: 20, max: 50)
+- `skip` (optional): Number of items to skip for pagination
+
+**Response**: `200 OK`, `400 Bad Request` (invalid author name), or `404 Not Found` (author not found)
+
+```bash
+curl -k "https://localhost:5001/api/authors/Alice%20Example/items"
+```
+
+**Notes**:
+
+- Author name matching is case-insensitive (URL parameter) but the stored name casing is used for the database query.
+- Only published (non-draft) items are returned.
+
 ### Tag Cloud
 
 #### GET /api/sections/{sectionName}/collections/{collectionName}/tags

@@ -84,12 +84,52 @@ public class AboutTests : BunitContext
         xebiaSection.TextContent.Should().Contain("Xebia");
     }
 
-    private void RegisterBranding(string host)
+    [Fact]
+    public void About_WithDeployImageTag_ShowsVersionInfo()
+    {
+        // Arrange
+        RegisterBranding("tech.hub.ms", deployImageTag: "20260320123232");
+
+        // Act
+        var cut = Render<About>();
+
+        // Assert
+        var versionInfo = cut.Find(".version-info");
+        versionInfo.Should().NotBeNull();
+        versionInfo.TextContent.Should().Contain("Deployed");
+        versionInfo.TextContent.Should().Contain("20 March 2026");
+        versionInfo.TextContent.Should().Contain(".NET");
+    }
+
+    [Fact]
+    public void About_WithoutDeployImageTag_ShowsVersionInfoWithoutDeployDate()
+    {
+        // Arrange
+        RegisterBranding("tech.hub.ms");
+
+        // Act
+        var cut = Render<About>();
+
+        // Assert
+        var versionInfo = cut.Find(".version-info");
+        versionInfo.Should().NotBeNull();
+        versionInfo.TextContent.Should().Contain(".NET");
+        versionInfo.TextContent.Should().NotContain("Deployed");
+    }
+
+    private void RegisterBranding(string host, string? deployImageTag = null)
     {
         var httpContext = new DefaultHttpContext();
         httpContext.Request.Host = new HostString(host);
         var accessor = new HttpContextAccessor { HttpContext = httpContext };
-        var config = new ConfigurationBuilder().Build();
+        var configData = new Dictionary<string, string?>();
+        if (deployImageTag != null)
+        {
+            configData["DEPLOY_IMAGE_TAG"] = deployImageTag;
+        }
+
+        var config = new ConfigurationBuilder().AddInMemoryCollection(configData).Build();
         Services.AddScoped<BrandingService>(_ => new BrandingService(accessor, config));
+        Services.AddSingleton<IConfiguration>(config);
     }
 }

@@ -332,17 +332,6 @@
   border-left: 3px solid var(--color-purple-bright);
 }
 
-.mobile-menu-sub-items a.mobile-menu-custom-page::after {
-  content: '✦';
-  font-size: 0.85em;
-  color: var(--color-purple-bright);
-  opacity: 0.5;
-  margin-left: 0.15em;
-  vertical-align: super;
-  position: relative;
-  top: -0.35em;
-}
-
 @media (hover: hover) {
   .mobile-menu-sub-items a.mobile-menu-custom-page:hover {
     border-left-color: var(--color-purple-medium);
@@ -351,10 +340,6 @@
 
 .mobile-menu-sub-items a.mobile-menu-custom-page.active {
   border-left-color: var(--color-purple-bright);
-}
-
-.mobile-menu-sub-items a.mobile-menu-custom-page.active::after {
-  opacity: 0.7;
 }
 
 /* About link in mobile menu */

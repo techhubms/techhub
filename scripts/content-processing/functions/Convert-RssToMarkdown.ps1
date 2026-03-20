@@ -149,7 +149,7 @@ function Convert-RssToMarkdown {
                     continue
                 }
                 elseif ($response.Type -eq "RequestEntityTooLarge") {
-                    Write-Host "Too many tokens for GPT 4.1" -ForegroundColor Yellow
+                    Write-Host "Too many tokens in the request, even after content truncation" -ForegroundColor Yellow
                     # Add to skipped entries and continue to next item
                     Add-TrackingEntry -EntriesPath $skippedEntriesPath -ExternalUrl $item.Link -Reason "Too many tokens in the request" -Collection $collection_value
                     
