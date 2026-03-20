@@ -164,6 +164,7 @@ public class TechHubApiClient : ITechHubApiClient
         string? fromDate = null,
         string? toDate = null,
         bool includeDraft = false,
+        string? types = null,
         CancellationToken cancellationToken = default)
     {
         sectionName = sectionName.Sanitize();
@@ -214,6 +215,11 @@ public class TechHubApiClient : ITechHubApiClient
             if (includeDraft)
             {
                 queryParams.Add("includeDraft=true");
+            }
+
+            if (!string.IsNullOrEmpty(types))
+            {
+                queryParams.Add($"types={Uri.EscapeDataString(types)}");
             }
 
             var queryString = queryParams.Count > 0 ? "?" + string.Join("&", queryParams) : "";

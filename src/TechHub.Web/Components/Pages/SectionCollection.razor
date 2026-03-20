@@ -20,22 +20,21 @@
     <aside class="sidebar">
         <SidebarToggle />
         <MobileSidebarToolbar>
-        @if (IsGitHubCopilotCommunity)
+        @if (ShowContentTypeFilter)
         {
-        <MobileSidebarPanel Label="Discord" Icon="discord">
+        <MobileSidebarPanel Label="Content" Icon="filter" HasActiveFilter="@HasActiveTypeFilter">
         <div class="sidebar-section">
-            <h2 class="sidebar-h2">Discord</h2>
-            <p style="margin-bottom: var(--spacing-3)">Connect with GitHub Copilot experts on our Discord server. Ask questions, share experiences, and get help.</p>
-            <ul class="sidebar-list">
-                <li>
-                    <a href="https://discord.gg/cURHV9TvFS" target="_blank" rel="noopener noreferrer" class="sidebar-link-button">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
-                        </svg>
-                        Join our Discord server
-                    </a>
-                </li>
-            </ul>
+            <h2 class="sidebar-h2">Content Type</h2>
+            <div class="content-type-filter">
+                @foreach (var collectionType in ContentTypeCollections)
+                {
+                    var isActive = IsContentTypeActive(collectionType.Name);
+                    <button class="content-type-btn @(isActive ? "active" : "")"
+                            @onclick="@(() => ToggleContentType(collectionType.Name))">
+                        @collectionType.Title
+                    </button>
+                }
+            </div>
         </div>
         </MobileSidebarPanel>
         }
@@ -47,7 +46,7 @@
             OnDateRangeChanged="HandleDateRangeChanged" />
         </MobileSidebarPanel>
         <MobileSidebarPanel Label="Tags" Icon="tags" HasActiveFilter="@(selectedTags.Count > 0)">
-        <SidebarTagCloud SectionName="@SectionName" CollectionName="@CollectionName"
+        <SidebarTagCloud SectionName="@SectionName" CollectionName="@EffectiveCollectionName"
             Title="Popular Tags" NavigationMode="TagCloudNavigationMode.Filter" SelectedTags="@selectedTags"
             FromDate="@fromDateString" ToDate="@toDateString"
             SearchQuery="@searchQuery"
@@ -60,9 +59,10 @@
     </aside>
 
     <section>
-        <ContentItemsGrid SectionName="@SectionName" CollectionName="@CollectionName" FilterTags="@selectedTags"
+        <ContentItemsGrid SectionName="@SectionName" CollectionName="@EffectiveCollectionName" FilterTags="@selectedTags"
             SearchQuery="@searchQuery" FromDate="@fromDateString" ToDate="@toDateString"
-            @key="@CollectionName" />
+            ContentTypes="@ActiveContentTypesParam"
+            @key="@GridKey" />
     </section>
 </main>
 
@@ -85,6 +85,9 @@
     [SupplyParameterFromQuery(Name = "to")]
     public string? ToParam { get; set; }
 
+    [SupplyParameterFromQuery(Name = "types")]
+    public string? TypesParam { get; set; }
+
     private List<string> selectedTags = new();
     private string searchQuery = string.Empty;
     private TechHub.Core.Models.Section? section;
@@ -95,10 +98,64 @@
     private string? toDateString;
     private string? _previousSectionName;
     private string? _previousCollectionName;
+    private HashSet<string> activeContentTypes = new(StringComparer.OrdinalIgnoreCase);
     private bool IsAll => string.Equals(CollectionName, "all", StringComparison.OrdinalIgnoreCase);
-    private bool IsGitHubCopilotCommunity =>
-        string.Equals(SectionName, "github-copilot", StringComparison.OrdinalIgnoreCase) &&
-        string.Equals(CollectionName, "community", StringComparison.OrdinalIgnoreCase);
+
+    /// <summary>
+    /// Whether this section hides individual collection pages and uses unified Browse with filtering.
+    /// </summary>
+    private bool HideCollectionPages => section?.HideCollectionPages == true;
+
+    /// <summary>
+    /// Whether to show the content-type filter in the sidebar.
+    /// Only shown on Browse page when HideCollectionPages is enabled.
+    /// Collection routes render identically to normal /section/collection pages (no filter).
+    /// </summary>
+    private bool ShowContentTypeFilter => HideCollectionPages && IsAll;
+
+    /// <summary>
+    /// Whether any content type filter is active (not all types selected).
+    /// </summary>
+    private bool HasActiveTypeFilter => activeContentTypes.Count > 0 && activeContentTypes.Count < ContentTypeCollections.Count;
+
+    /// <summary>
+    /// The regular (non-custom) collections that can be toggled as content type filters.
+    /// </summary>
+    private IReadOnlyList<TechHub.Core.Models.Collection> ContentTypeCollections =>
+        section?.Collections.Where(c => !c.IsCustom).ToList() ?? [];
+
+    /// <summary>
+    /// The effective collection name to pass to ContentItemsGrid.
+    /// Collection routes use the actual collection name, same as normal /section/collection pages.
+    /// </summary>
+    private string EffectiveCollectionName => CollectionName ?? "all";
+
+    /// <summary>
+    /// The content types to pass to the API for filtering.
+    /// Only used on Browse page with content-type filter toggles.
+    /// Returns null when all types are active (no filtering needed).
+    /// </summary>
+    private string? ActiveContentTypesParam
+    {
+        get
+        {
+            if (!HideCollectionPages || !IsAll) return null;
+
+            // On Browse page with content type filter
+            if (activeContentTypes.Count == 0 || activeContentTypes.Count == ContentTypeCollections.Count)
+            {
+                return null; // All types active = no filter needed
+            }
+
+            return string.Join(",", activeContentTypes);
+        }
+    }
+
+    /// <summary>
+    /// Key for the ContentItemsGrid component to force re-render on type changes.
+    /// </summary>
+    private string GridKey => $"{CollectionName}_{ActiveContentTypesParam}";
+
     private string PageTitleText => IsAll
         ? $"{section?.Title ?? SectionName} - Tech Hub"
         : $"{collection?.Title ?? CollectionName} - {section?.Title ?? SectionName} - Tech Hub";
@@ -123,6 +180,7 @@
         ParseTagsFromUrl();
         ParseSearchFromUrl();
         ParseDatesFromUrl();
+        ParseTypesFromUrl();
 
         // Initialize change tracking
         _previousSectionName = SectionName;
@@ -159,11 +217,51 @@
             toDate = null;
             fromDateString = null;
             toDateString = null;
+            activeContentTypes = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         }
 
         ParseTagsFromUrl();
         ParseSearchFromUrl();
         ParseDatesFromUrl();
+        ParseTypesFromUrl();
+    }
+
+    private bool IsContentTypeActive(string collectionName)
+    {
+        // On Browse page: all active if no filter set, otherwise check the set
+        return activeContentTypes.Count == 0 || activeContentTypes.Contains(collectionName);
+    }
+
+    private void ToggleContentType(string collectionName)
+    {
+        var allTypes = ContentTypeCollections.Select(c => c.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
+
+        if (activeContentTypes.Count == 0)
+        {
+            // Currently all active (empty set = all) — switch to all EXCEPT the clicked type
+            activeContentTypes = new HashSet<string>(
+                allTypes.Where(t => !string.Equals(t, collectionName, StringComparison.OrdinalIgnoreCase)),
+                StringComparer.OrdinalIgnoreCase);
+        }
+        else if (activeContentTypes.Contains(collectionName))
+        {
+            // Don't allow deactivating the last type
+            if (activeContentTypes.Count > 1)
+            {
+                activeContentTypes.Remove(collectionName);
+            }
+        }
+        else
+        {
+            activeContentTypes.Add(collectionName);
+            // If all types are now active, clear the set (no filter)
+            if (activeContentTypes.Count == allTypes.Count)
+            {
+                activeContentTypes.Clear();
+            }
+        }
+
+        UpdateUrl();
     }
 
     private void ParseTagsFromUrl()
@@ -208,6 +306,15 @@
         toDateString = toDate?.ToString("yyyy-MM-dd");
     }
 
+    private void ParseTypesFromUrl()
+    {
+        if (!string.IsNullOrEmpty(TypesParam) && HideCollectionPages && IsAll)
+        {
+            var parsed = TypesParam.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            activeContentTypes = new HashSet<string>(parsed, StringComparer.OrdinalIgnoreCase);
+        }
+    }
+
     private static DateOnly? ParseDate(string? value)
     {
         if (string.IsNullOrWhiteSpace(value))
@@ -225,7 +332,10 @@
             ["search"] = string.IsNullOrWhiteSpace(searchQuery) ? null : searchQuery,
             ["tags"] = selectedTags.Count > 0 ? string.Join(",", selectedTags) : null,
             ["from"] = fromDate?.ToString("yyyy-MM-dd"),
-            ["to"] = toDate?.ToString("yyyy-MM-dd")
+            ["to"] = toDate?.ToString("yyyy-MM-dd"),
+            ["types"] = activeContentTypes.Count > 0 && activeContentTypes.Count < ContentTypeCollections.Count
+                ? string.Join(",", activeContentTypes)
+                : null
         };
 
         var url = Navigation.GetUriWithQueryParameters(queryParams);

@@ -40,6 +40,13 @@ public class SectionConfig
     public required string Url { get; init; }
     public required string Tag { get; init; }
     public required Dictionary<string, CollectionConfig> Collections { get; init; }
+
+    /// <summary>
+    /// When true, hides individual collection pages (News, Blogs, Videos, Community) from the sub-navigation
+    /// and shows a unified Browse page with content-type filtering instead.
+    /// Collection routes still work but are presented as filtered Browse views.
+    /// </summary>
+    public bool HideCollectionPages { get; init; }
 }
 
 /// <summary>

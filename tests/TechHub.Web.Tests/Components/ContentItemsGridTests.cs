@@ -35,6 +35,7 @@ public class ContentItemsGridTests : BunitContext
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
                 It.IsAny<bool>(),
+                It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new TechHub.Core.Models.CollectionItemsResponse([], 0));
 

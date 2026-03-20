@@ -73,15 +73,15 @@ public class NavigationTests : PlaywrightTestBase
     [Fact]
     public async Task CollectionNavigation_UpdatesURL_ToSectionSlashCollection()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai");
 
         // Act - Click on "News" collection button
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickBlazorElementAsync();
 
-        // Assert - URL should be /github-copilot/news
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
+        // Assert - URL should be /ai/news
+        await Page.WaitForBlazorUrlContainsAsync("/ai/news");
         Page.Url.Should().NotContain("#"); // No hash fragments
     }
 
@@ -136,15 +136,15 @@ public class NavigationTests : PlaywrightTestBase
     [Fact]
     public async Task SectionPage_SubNavIsClickable()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot");
+        // Arrange - Use AI section which doesn't hide collection pages
+        await Page.GotoRelativeAsync("/ai");
 
         // Act - Click on "Videos" collection in sub-nav
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickBlazorElementAsync();
 
         // Assert - Should navigate and load videos
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/videos");
+        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
 
         // Wait for page to fully load after navigation
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
@@ -248,8 +248,9 @@ public class NavigationTests : PlaywrightTestBase
     [Fact]
     public async Task CollectionNavigation_ChangesDisplayedContent()
     {
-        // Arrange - Start on GitHub Copilot with "All" collection (default)
-        await Page.GotoRelativeAsync("/github-copilot");
+        // Arrange - Start on AI section with "All" collection (default)
+        // Using AI instead of GitHub Copilot because GitHub Copilot has HideCollectionPages enabled
+        await Page.GotoRelativeAsync("/ai");
         await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Get the titles/hrefs of the first few cards displayed in "All" collection
@@ -275,7 +276,7 @@ public class NavigationTests : PlaywrightTestBase
         // Act - Navigate to "News" collection
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/news");
+        await Page.WaitForBlazorUrlContainsAsync("/ai/news");
         await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Get the hrefs of cards in the "News" collection
