@@ -29,9 +29,7 @@
                 @foreach (var collectionType in ContentTypeCollections)
                 {
                     var isActive = IsContentTypeActive(collectionType.Name);
-                    var isDisabled = IsCollectionRoute;
-                    <button class="content-type-btn @(isActive ? "active" : "") @(isDisabled ? "disabled" : "")"
-                            disabled="@isDisabled"
+                    <button class="content-type-btn @(isActive ? "active" : "")"
                             @onclick="@(() => ToggleContentType(collectionType.Name))">
                         @collectionType.Title
                     </button>
@@ -109,16 +107,11 @@
     private bool HideCollectionPages => section?.HideCollectionPages == true;
 
     /// <summary>
-    /// Whether we're on a specific collection route (not "all") while HideCollectionPages is enabled.
-    /// In this case, the collection route still works but shows as a filtered Browse view.
-    /// </summary>
-    private bool IsCollectionRoute => HideCollectionPages && !IsAll;
-
-    /// <summary>
     /// Whether to show the content-type filter in the sidebar.
-    /// Shown on Browse page for ALL sections, and on collection routes when HideCollectionPages is enabled.
+    /// Only shown on Browse page when HideCollectionPages is enabled.
+    /// Collection routes render identically to normal /section/collection pages (no filter).
     /// </summary>
-    private bool ShowContentTypeFilter => IsAll || IsCollectionRoute;
+    private bool ShowContentTypeFilter => HideCollectionPages && IsAll;
 
     /// <summary>
     /// Whether any content type filter is active (not all types selected).
@@ -133,26 +126,20 @@
 
     /// <summary>
     /// The effective collection name to pass to ContentItemsGrid.
-    /// When on a collection route with HideCollectionPages, use "all" so the grid shows
-    /// all content (filtered by the content type).
+    /// Collection routes use the actual collection name, same as normal /section/collection pages.
     /// </summary>
-    private string EffectiveCollectionName => IsCollectionRoute ? "all" : (CollectionName ?? "all");
+    private string EffectiveCollectionName => CollectionName ?? "all";
 
     /// <summary>
     /// The content types to pass to the API for filtering.
-    /// When on a collection route, filters to that specific collection.
-    /// When on Browse page, uses the active content type toggles.
+    /// Only used on Browse page with content-type filter toggles.
     /// Returns null when all types are active (no filtering needed).
     /// </summary>
     private string? ActiveContentTypesParam
     {
         get
         {
-            if (IsCollectionRoute)
-            {
-                // On a collection route, filter to that specific collection
-                return CollectionName;
-            }
+            if (!HideCollectionPages || !IsAll) return null;
 
             // On Browse page with content type filter
             if (activeContentTypes.Count == 0 || activeContentTypes.Count == ContentTypeCollections.Count)
@@ -169,7 +156,7 @@
     /// </summary>
     private string GridKey => $"{CollectionName}_{ActiveContentTypesParam}";
 
-    private string PageTitleText => IsAll || IsCollectionRoute
+    private string PageTitleText => IsAll
         ? $"{section?.Title ?? SectionName} - Tech Hub"
         : $"{collection?.Title ?? CollectionName} - {section?.Title ?? SectionName} - Tech Hub";
 
@@ -241,20 +228,12 @@
 
     private bool IsContentTypeActive(string collectionName)
     {
-        if (IsCollectionRoute)
-        {
-            // On a collection route, only that collection's type is active
-            return string.Equals(collectionName, CollectionName, StringComparison.OrdinalIgnoreCase);
-        }
-
         // On Browse page: all active if no filter set, otherwise check the set
         return activeContentTypes.Count == 0 || activeContentTypes.Contains(collectionName);
     }
 
     private void ToggleContentType(string collectionName)
     {
-        if (IsCollectionRoute) return; // Can't toggle on collection routes
-
         var allTypes = ContentTypeCollections.Select(c => c.Name).ToHashSet(StringComparer.OrdinalIgnoreCase);
 
         if (activeContentTypes.Count == 0)
@@ -329,7 +308,7 @@
 
     private void ParseTypesFromUrl()
     {
-        if (!string.IsNullOrEmpty(TypesParam) && IsAll)
+        if (!string.IsNullOrEmpty(TypesParam) && HideCollectionPages && IsAll)
         {
             var parsed = TypesParam.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
             activeContentTypes = new HashSet<string>(parsed, StringComparer.OrdinalIgnoreCase);
@@ -384,7 +363,7 @@
         UpdateUrl();
     }
 
-    private string SeoDescription => IsAll || IsCollectionRoute
+    private string SeoDescription => IsAll
         ? section?.Description ?? $"Browse the latest content in {section?.Title ?? SectionName}"
         : collection?.Description ?? $"Browse {collection?.Title ?? CollectionName} in {section?.Title ?? SectionName}";
 
@@ -400,7 +379,7 @@
             items.Add(new(section.Title, section.Url));
         }
 
-        if (!IsAll && !IsCollectionRoute && collection != null)
+        if (!IsAll && collection != null)
         {
             items.Add(new(collection.Title, $"{section?.Url}/{collection.Name}"));
         }

@@ -30,7 +30,7 @@
 }
 
 @media (hover: hover) {
-  .content-type-btn:hover:not(.disabled) {
+  .content-type-btn:hover {
     background: var(--color-bg-hover-subtle);
     border-color: var(--color-purple-bright);
     color: var(--color-text-emphasis);
@@ -44,14 +44,9 @@
 }
 
 @media (hover: hover) {
-  .content-type-btn.active:hover:not(.disabled) {
+  .content-type-btn.active:hover {
     background: var(--color-purple-medium);
   }
-}
-
-.content-type-btn.disabled {
-  cursor: default;
-  opacity: 0.7;
 }
 
 /* ============================================================================
