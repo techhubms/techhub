@@ -5,6 +5,7 @@ WORKDIR /src
 # Copy solution and project files
 COPY TechHub.slnx .
 COPY Directory.Build.props .
+COPY Directory.Packages.props .
 COPY src/TechHub.Api/TechHub.Api.csproj src/TechHub.Api/
 COPY src/TechHub.Core/TechHub.Core.csproj src/TechHub.Core/
 COPY src/TechHub.Infrastructure/TechHub.Infrastructure.csproj src/TechHub.Infrastructure/
