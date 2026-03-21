@@ -34,12 +34,19 @@
   - Common observability, health checks, and service defaults
   - Reusable across all Aspire-managed services
 
-### Utilities
+### Utilities and Background Services
 
 - **`TechHub.ContentFixer/`** - CLI utility for content maintenance
   - Bulk updates to frontmatter across collections
   - Content validation and normalization
   - Run from command line or as part of CI/CD pipeline
+- **`TechHub.ContentProcessor/`** - Background content processing worker
+  - Runs on a configurable schedule (default: every hour)
+  - Downloads and parses RSS/Atom feeds from configured sources
+  - Fetches full article content from source URLs
+  - Categorizes content using Azure OpenAI
+  - Writes processed items directly to the PostgreSQL database
+  - **Production only** — staging/local environments receive data via `scripts/Restore-Database.ps1`
 
 See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and architecture guidelines.
 
@@ -147,17 +154,21 @@ PowerShell automation scripts for development and maintenance tasks:
 - **`Generate-DocumentationIndex.ps1`** - Generates `docs/documentation-index.md` from doc headings
 - **`Generate-DevCertificate.ps1`** - Creates HTTPS dev certificates
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
+- **`Restore-Database.ps1`** - Downloads and restores the production PostgreSQL database
+  - Target: `local` (Docker Compose) or `staging` (Azure)
+  - Replaces `collections/` sync for non-production environments
+  - Requires PostgreSQL client tools and VPN access to production
 - **`Deploy-Infrastructure.ps1`** - Azure infrastructure deployment (Bicep)
   - Supports shared, staging, and production environments
   - Modes: validate, whatif, deploy
   - Pre-flight checks (soft-deleted AI purge, ACR pull roles)
 - **`Deploy-Application.ps1`** - Container image build, push, and deployment
-  - Builds and pushes Docker images to ACR
+  - Builds and pushes Docker images to ACR (API, Web, and ContentProcessor in production)
   - Deploys to Azure Container Apps
   - Default 'dev' tag for local builds, git SHA in CI
   - Smoke tests and automatic production rollback
 - **`analyze-markdown-errors.ps1`** - Linting and markdown analysis
-- **`content-processing/`** - Content import and transformation scripts
+- **`content-processing/`** - PowerShell content import scripts (being replaced by TechHub.ContentProcessor)
 - **`data/`** - Data files for scripts
 
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.

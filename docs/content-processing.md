@@ -2,21 +2,53 @@
 
 ## Overview
 
-The Tech Hub supports both manual and automated content creation. Content is organized into collections and automatically categorized using AI-powered processing.
+The Tech Hub supports both manual and automated content creation. Content is organized into collections and automatically categorized using AI-powered processing. All content is stored exclusively in the PostgreSQL database.
 
-## Content Creation Methods
+## Content Architecture
 
-### Database Synchronization
+### Database as Source of Truth
 
-**Important**: Tech Hub uses a **database-backed** content system. Markdown files in the `collections/` folder are the **source of truth**, but the application serves content from a database (PostgreSQL) for performance.
+**Important**: The PostgreSQL database is the **single source of truth** for all content. Content is written directly to the database by:
 
-**How it works**:
+1. **`TechHub.ContentProcessor`** (production) — C# worker service that runs on a schedule, downloads RSS feeds, categorizes content with Azure OpenAI, and writes directly to the database.
+2. **`ContentSyncService`** (legacy) — Synchronizes markdown files from `collections/` to the database on API startup. Still active while the migration to database-first is in progress.
 
-1. **First startup**: Database syncs from all markdown files (~30-60s for 4000+ files)
-2. **Subsequent startups**: Hash-based diff detects changes (<1s if no changes)
-3. **Configuration**: Set `ContentSync:Enabled = false` in appsettings.json to skip sync for faster local dev
+### Environment Strategy
 
-For details on supported database providers and their configuration, see [database.md](database.md).
+| Environment | Content Source |
+|-------------|---------------|
+| Production | `TechHub.ContentProcessor` writes RSS content directly to the database |
+| Staging | Database restore from production snapshot (`scripts/Restore-Database.ps1`) |
+| Local development | Database restore from production snapshot, or ContentSync from `collections/` |
+
+For local development, see [running-and-testing.md](running-and-testing.md) for setup instructions.
+
+### Database Restore (Staging/Local)
+
+To populate a non-production environment with real data:
+
+```powershell
+# Restore production data to local Docker Compose database
+./scripts/Restore-Database.ps1 -Target local
+
+# Restore production data to staging
+./scripts/Restore-Database.ps1 -Target staging
+```
+
+This replaces the need to run ContentSyncService against markdown files in non-production environments. Requires VPN access to the production environment and PostgreSQL client tools installed.
+
+### Disabling ContentSync Locally
+
+After a database restore, disable the markdown sync to prevent it from overwriting restored data:
+
+```json
+// appsettings.json (local development only)
+{
+  "ContentSync": {
+    "Enabled": false
+  }
+}
+```
 
 ### Manual Content Creation with GitHub Copilot
 
@@ -91,7 +123,19 @@ This script automatically fixes markdown formatting issues like missing blank li
 
 ## RSS Feed Processing
 
-The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. This system combines automated feed processing with AI-powered content categorization and runs hourly via GitHub Actions.
+The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. The processing pipeline is implemented in C# (`TechHub.ContentProcessor`) and runs hourly in production.
+
+### Content Processor Pipeline
+
+The `TechHub.ContentProcessor` worker service runs on a configurable schedule (default: every hour) and performs:
+
+1. **Feed ingestion** — Downloads and parses RSS/Atom XML from configured feed URLs
+2. **Content fetching** — Fetches the full article HTML from each item's source URL (non-YouTube items only)
+3. **AI categorization** — Sends article content to Azure OpenAI to determine collection, sections, tags, title, and excerpt
+4. **Deduplication** — Checks the database for existing items by `external_url` before writing
+5. **Database write** — Inserts or updates the content item and tag expansions directly in PostgreSQL
+
+Items that the AI determines are off-topic or low quality are skipped (not written to the database).
 
 ### Feed Configuration
 

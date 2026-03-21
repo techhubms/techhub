@@ -292,7 +292,7 @@ public sealed class RssFeedIngestionService
     }
 
     /// <summary>
-    /// Normalises the outputDir value from the JSON config to a plain collection name.
+    /// Normalizes the outputDir value from the JSON config to a plain collection name.
     /// e.g. "_news" → "news", "blogs" → "blogs"
     /// </summary>
     private static string NormalizeCollectionName(string outputDir)

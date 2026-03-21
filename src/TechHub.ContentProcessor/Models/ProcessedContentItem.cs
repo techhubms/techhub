@@ -23,7 +23,7 @@ public sealed class ProcessedContentItem
     /// <summary>Target collection name (e.g. "blogs", "news", "videos", "community").</summary>
     public required string CollectionName { get; init; }
 
-    /// <summary>Optional subcollection name for further categorisation.</summary>
+    /// <summary>Optional subcollection name for further categorization.</summary>
     public string? SubcollectionName { get; init; }
 
     /// <summary>
