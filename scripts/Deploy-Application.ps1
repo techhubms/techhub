@@ -98,9 +98,14 @@ $envSuffix = if ($Environment -eq 'production') { 'prod' } else { $Environment }
 $registryServer = "$($RegistryName).azurecr.io"
 $apiImage = "$registryServer/techhub-api"
 $webImage = "$registryServer/techhub-web"
+$contentProcessorImage = "$registryServer/techhub-content-processor"
 $apiAppName = "ca-techhub-api-$envSuffix"
 $webAppName = "ca-techhub-web-$envSuffix"
+$contentProcessorAppName = "ca-techhub-content-processor-$envSuffix"
 $resourceGroup = "rg-techhub-$envSuffix"
+
+# Content processor only deploys to production
+$deployContentProcessor = ($Environment -eq 'production')
 
 # ============================================================================
 # HELPERS
@@ -139,11 +144,12 @@ function Write-Detail {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  TechHub Application Deployment" -ForegroundColor White
-Write-Host "  Environment : $Environment" -ForegroundColor Gray
-Write-Host "  Tag         : $Tag" -ForegroundColor Gray
-Write-Host "  Registry    : $registryServer" -ForegroundColor Gray
-Write-Host "  Source      : $(if ($isCI) { 'CI (GitHub Actions)' } else { 'Local' })" -ForegroundColor Gray
-Write-Host "  Steps       : $(if ($SkipBuild) { '-' } else { 'Build' }) $(if ($SkipPush) { '-' } else { 'Push' }) $(if ($SkipDeploy) { '-' } else { 'Deploy' })" -ForegroundColor Gray
+Write-Host "  Environment         : $Environment" -ForegroundColor Gray
+Write-Host "  Tag                 : $Tag" -ForegroundColor Gray
+Write-Host "  Registry            : $registryServer" -ForegroundColor Gray
+Write-Host "  Source              : $(if ($isCI) { 'CI (GitHub Actions)' } else { 'Local' })" -ForegroundColor Gray
+Write-Host "  Steps               : $(if ($SkipBuild) { '-' } else { 'Build' }) $(if ($SkipPush) { '-' } else { 'Push' }) $(if ($SkipDeploy) { '-' } else { 'Deploy' })" -ForegroundColor Gray
+Write-Host "  Content Processor   : $(if ($deployContentProcessor) { 'Yes (production)' } else { 'No (staging)' })" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -202,6 +208,19 @@ if (-not $SkipBuild) {
             exit 1
         }
         Write-Ok "Web image: $($webImage):$Tag"
+
+        # Build Content Processor image (production only)
+        if ($deployContentProcessor) {
+            Write-Detail "Building Content Processor image..."
+            docker build -f src/TechHub.ContentProcessor/Dockerfile `
+                -t "$($contentProcessorImage):$Tag" `
+                .
+            if ($LASTEXITCODE -ne 0) {
+                Write-Fail "Failed to build Content Processor image"
+                exit 1
+            }
+            Write-Ok "Content Processor image: $($contentProcessorImage):$Tag"
+        }
     }
     finally {
         Pop-Location
@@ -235,6 +254,17 @@ if (-not $SkipPush) {
         exit 1
     }
     Write-Ok "Web image pushed"
+
+    # Push Content Processor (production only)
+    if ($deployContentProcessor) {
+        Write-Detail "Pushing Content Processor image..."
+        docker push "$($contentProcessorImage):$Tag"
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Failed to push Content Processor image (tag: $Tag)"
+            exit 1
+        }
+        Write-Ok "Content Processor image pushed"
+    }
 }
 else {
     Write-Step "Skipping push"
@@ -355,6 +385,21 @@ if (-not $SkipDeploy) {
     }
     Write-Ok "Web deployed"
 
+    # Update Content Processor container app (production only)
+    if ($deployContentProcessor) {
+        Write-Detail "Deploying Content Processor..."
+        az containerapp update `
+            --name $contentProcessorAppName `
+            --resource-group $resourceGroup `
+            --image "$($contentProcessorImage):$Tag" `
+            --revision-suffix "cp-$Tag"
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Failed to deploy Content Processor"
+            exit 1
+        }
+        Write-Ok "Content Processor deployed"
+    }
+
     # Wait for stabilization
     $waitSeconds = if ($Environment -eq 'production') { 60 } else { 30 }
     Write-Detail "Waiting $waitSeconds seconds for deployment to stabilize before running smoke tests..."
@@ -438,10 +483,13 @@ else {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  Application Deployment Complete" -ForegroundColor Green
-Write-Host "  Environment : $Environment" -ForegroundColor Gray
-Write-Host "  Tag         : $Tag" -ForegroundColor Gray
-Write-Host "  API image   : $($apiImage):$Tag" -ForegroundColor Gray
-Write-Host "  Web image   : $($webImage):$Tag" -ForegroundColor Gray
+Write-Host "  Environment          : $Environment" -ForegroundColor Gray
+Write-Host "  Tag                  : $Tag" -ForegroundColor Gray
+Write-Host "  API image            : $($apiImage):$Tag" -ForegroundColor Gray
+Write-Host "  Web image            : $($webImage):$Tag" -ForegroundColor Gray
+if ($deployContentProcessor) {
+    Write-Host "  Content Processor    : $($contentProcessorImage):$Tag" -ForegroundColor Gray
+}
 
 if (-not $SkipDeploy) {
     $webFqdn = az containerapp show `

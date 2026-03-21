@@ -65,3 +65,5 @@ output openAiName string = openAiAccount.name
 output openAiEndpoint string = openAiAccount.properties.endpoint
 output openAiId string = openAiAccount.id
 output deploymentName string = modelDeployment.name
+#disable-next-line outputs-should-not-contain-secrets
+output openAiApiKey string = openAiAccount.listKeys().key1
