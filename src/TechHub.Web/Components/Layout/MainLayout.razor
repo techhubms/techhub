@@ -15,6 +15,11 @@
         CustomBannerTitle="@_customBannerTitle"
         CustomBannerDescription="@_customBannerDescription" />
 
+@if (_currentSection?.ShowHeroBanner == true)
+{
+    <HeroBanner />
+}
+
 @if (!_isInvalid)
 {
     @Body
@@ -53,6 +58,7 @@
     private string? _customBannerTitle;
     private string? _customBannerDescription;
     private bool _isInvalid;
+    private TechHub.Core.Models.Section? _currentSection;
 
     // Pages that are valid destinations but are NOT section names.
     private static readonly HashSet<string> KnownNonSectionPages = new(StringComparer.OrdinalIgnoreCase)
@@ -88,6 +94,7 @@
         _currentRssFeedUrl = null;
         _customBannerTitle = null;
         _customBannerDescription = null;
+        _currentSection = null;
 
         // Try to match first URL segment to a known section
         if (!string.IsNullOrEmpty(firstSegment))
@@ -114,6 +121,7 @@
                 }
 
                 _currentSectionName = sectionData.Name;
+                _currentSection = sectionData;
                 _currentRssFeedUrl = $"/{sectionData.Name}/feed.xml";
                 return;
             }

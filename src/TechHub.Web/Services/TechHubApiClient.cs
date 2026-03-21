@@ -632,6 +632,14 @@ public class TechHubApiClient : ITechHubApiClient
         return await GetCustomPageDataAsync<GettingStartedPageData>("/api/custom-pages/getting-started", "Getting Started", cancellationToken);
     }
 
+    /// <summary>
+    /// Get hero banner data
+    /// </summary>
+    public virtual async Task<HeroBannerData?> GetHeroBannerDataAsync(CancellationToken cancellationToken = default)
+    {
+        return await GetCustomPageDataAsync<HeroBannerData>("/api/custom-pages/hero-banner", "Hero Banner", cancellationToken);
+    }
+
     // ================================================================
     // Sitemap endpoint
     // ================================================================

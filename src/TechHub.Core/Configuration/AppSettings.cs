@@ -47,6 +47,11 @@ public class SectionConfig
     /// Collection routes still work but are presented as filtered Browse views.
     /// </summary>
     public bool HideCollectionPages { get; init; }
+
+    /// <summary>
+    /// When true, the collapsible hero banner is rendered above the section content.
+    /// </summary>
+    public bool ShowHeroBanner { get; init; }
 }
 
 /// <summary>

@@ -208,7 +208,7 @@ public class ContentRepository : IContentRepository
                 .ThenBy(c => c.Title))
             .ToList();
 
-        return new Section(sectionName, config.Title, config.Description, config.Url, config.Tag, ordered, config.HideCollectionPages);
+        return new Section(sectionName, config.Title, config.Description, config.Url, config.Tag, ordered, config.HideCollectionPages, config.ShowHeroBanner);
     }
 
     /// <summary>

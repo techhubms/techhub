@@ -18,6 +18,11 @@ public record Section
     /// </summary>
     public bool HideCollectionPages { get; }
 
+    /// <summary>
+    /// When true, the collapsible hero banner is rendered above the section content.
+    /// </summary>
+    public bool ShowHeroBanner { get; }
+
     public Section(
         string name,
         string title,
@@ -25,7 +30,8 @@ public record Section
         string url,
         string tag,
         IReadOnlyList<Collection> collections,
-        bool hideCollectionPages = false)
+        bool hideCollectionPages = false,
+        bool showHeroBanner = false)
     {
         // Validate all required properties
         if (string.IsNullOrWhiteSpace(name))
@@ -76,5 +82,6 @@ public record Section
         Tag = tag;
         Collections = collections;
         HideCollectionPages = hideCollectionPages;
+        ShowHeroBanner = showHeroBanner;
     }
 }

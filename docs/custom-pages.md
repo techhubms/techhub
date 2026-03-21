@@ -92,6 +92,12 @@ Retrieves the structured data required to render the corresponding custom page.
 **Data Model**: `SDLCPageData`
 **Description**: Data mapping GenAI tools and practices to SDLC phases.
 
+### Hero Banner
+
+**Endpoint**: `GET /api/custom-pages/hero-banner`
+**Data Model**: `HeroBannerData`
+**Description**: Cards for the collapsible announcement banner shown above section content (currently used in the GitHub Copilot section). All cards are returned regardless of date — clients filter by `startDate`/`endDate` using the Europe/Brussels timezone. When no active cards remain, the banner is hidden automatically.
+
 ## Response Format
 
 **Success Response**: `200 OK`

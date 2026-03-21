@@ -52,7 +52,8 @@ public static class JsFiles
     [
         "js/nav-helpers.js",    // Back to top, back to previous navigation
         "js/mobile-nav.js",     // Mobile navigation scroll lock and keyboard handling
-        "js/sidebar-toggle.js"  // Desktop sidebar collapse/expand with localStorage persistence
+        "js/sidebar-toggle.js", // Desktop sidebar collapse/expand with localStorage persistence
+        "js/hero-banner.js"     // Hero banner collapse/expand with cookie persistence
     ];
 
     /// <summary>

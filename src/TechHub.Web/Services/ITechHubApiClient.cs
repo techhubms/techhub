@@ -225,6 +225,12 @@ internal interface ITechHubApiClient
     /// </summary>
     Task<GettingStartedPageData?> GetGettingStartedDataAsync(CancellationToken cancellationToken = default);
 
+    /// <summary>
+    /// Get hero banner data.
+    /// GET /api/custom-pages/hero-banner
+    /// </summary>
+    Task<HeroBannerData?> GetHeroBannerDataAsync(CancellationToken cancellationToken = default);
+
     // ================================================================
     // Sitemap endpoint
     // ================================================================

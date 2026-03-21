@@ -1,0 +1,20 @@
+{
+  "cards": [
+    {
+      "title": "Test Event — City A",
+      "description": "January 1, 2025 · 09:00–17:00 CET · Full-day workshop",
+      "startDate": "2025-01-01",
+      "endDate": "2099-12-31",
+      "linkUrl": "https://example.com/event-a",
+      "linkText": "Register"
+    },
+    {
+      "title": "Test Event — City B",
+      "description": "February 1, 2025 · 17:00–20:00 CEST · Evening session",
+      "startDate": "2025-01-01",
+      "endDate": "2099-12-31",
+      "linkUrl": "https://example.com/event-b",
+      "linkText": "Register"
+    }
+  ]
+}

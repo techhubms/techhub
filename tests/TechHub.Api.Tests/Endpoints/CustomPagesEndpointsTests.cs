@@ -28,6 +28,7 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     [InlineData("/api/custom-pages/genai-advanced")]
     [InlineData("/api/custom-pages/tool-tips")]
     [InlineData("/api/custom-pages/getting-started")]
+    [InlineData("/api/custom-pages/hero-banner")]
     public async Task GetSpecificCustomPage_ReturnsOk(string endpoint)
     {
         // Act
@@ -213,5 +214,30 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         // Verify at least some videos have external URLs (YouTube)
         nonDraftItems.Should().Contain(item => !string.IsNullOrEmpty(item.ExternalUrl),
             "At least some videos should have external URLs for YouTube thumbnails");
+    }
+
+    [Fact]
+    public async Task GetHeroBannerData_ReturnsStructuredData()
+    {
+        // Act
+        var response = await _client.GetAsync("/api/custom-pages/hero-banner", TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var data = await response.Content.ReadFromJsonAsync<HeroBannerData>(TestContext.Current.CancellationToken);
+        data.Should().NotBeNull();
+        data!.Cards.Should().NotBeEmpty();
+        data.Cards[0].Title.Should().NotBeNullOrWhiteSpace();
+        data.Cards[0].Description.Should().NotBeNullOrWhiteSpace();
+        data.Cards[0].StartDate.Should().NotBeNullOrWhiteSpace();
+        data.Cards[0].EndDate.Should().NotBeNullOrWhiteSpace();
+
+        // All cards must have valid date strings parseable as DateOnly
+        foreach (var card in data.Cards)
+        {
+            DateOnly.TryParse(card.StartDate, out _).Should().BeTrue($"Card '{card.Title}' StartDate '{card.StartDate}' must be a valid date");
+            DateOnly.TryParse(card.EndDate, out _).Should().BeTrue($"Card '{card.Title}' EndDate '{card.EndDate}' must be a valid date");
+        }
     }
 }

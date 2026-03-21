@@ -140,6 +140,14 @@ public static class CustomPagesEndpoints
             .Produces<GettingStartedPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
+        // Get Hero Banner data
+        group.MapGet("/hero-banner", GetHeroBannerData)
+            .WithName("GetHeroBannerData")
+            .WithSummary("Get hero banner data")
+            .WithDescription("Returns structured data for the hero banner shown above section content. All cards are returned regardless of date; clients filter by startDate/endDate.")
+            .Produces<HeroBannerData>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status404NotFound);
+
         return endpoints;
     }
 
@@ -294,6 +302,10 @@ public static class CustomPagesEndpoints
     private static Task<Results<Ok<ToolTipsPageData>, NotFound>> GetToolTipsData(
         IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
         => GetPageData<ToolTipsPageData>("tool-tips.json", env, settings, cancellationToken);
+
+    private static Task<Results<Ok<HeroBannerData>, NotFound>> GetHeroBannerData(
+        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
+        => GetPageData<HeroBannerData>("hero-banner.json", env, settings, cancellationToken);
 
     private static async Task<Results<Ok<GettingStartedPageData>, NotFound>> GetGettingStartedData(
         IWebHostEnvironment env,
