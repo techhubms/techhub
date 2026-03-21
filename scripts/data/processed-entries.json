@@ -29296,5 +29296,17 @@
     "timestamp": "2026-03-20 21:11:52 +00:00",
     "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/instantly-run-and-preview-functions-in-microsoft-fabric-eventhouse-no-code-required/",
     "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: No generic exclusion rules apply (English, technical content, not job/business-only, not community-short, not a sales pitch). Assigned DevOps because the article is centered on CI/CD automation, Git versioning, pull request workflows, and build/release pipelines (DevOps rules 5, 8, 11). Assigned ML because it is Microsoft Fabric platform content; Fabric is explicitly included under ML for data/analytics platform services (ML rule 1), and the APIs are about deploying Fabric artifacts like notebooks, pipelines, reports, and semantic models. Did not assign Azure/.NET/AI/Security/GitHub Copilot because the post does not focus on Azure services, .NET development, AI services, security implementation, or GitHub Copilot.",
+    "timestamp": "2026-03-21 00:28:27 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-bulk-export-and-import-apis-for-ci-cd-in-microsoft-fabric-preview/",
+    "collection": "news"
+  },
+  {
+    "reason": "Succesfully added: No generic exclusion rules apply: the content is English, technical, and not job/career-focused, not question-only, and not primarily promotional. \n\nIncluded DevOps because the article is centered on Git-based developer workflows in Fabric: Git integration, feature branching, diff/compare, conflict inspection, and a CI workflow including pull requests (DevOps inclusion rules 5, 8, and 11).\n\nIncluded ML because Microsoft Fabric is a data/analytics platform and the post is specifically about developer/engineering experiences inside Fabric workspaces and CI/CD for Fabric artifacts (ML inclusion rule 1: Microsoft Fabric). \n\nExcluded Azure: while the image is hosted on an Azure-fronted domain, the substantive content is about Microsoft Fabric Git features rather than Azure services or Azure architecture.\n\nExcluded AI, GitHub Copilot, .NET, and Security because the post does not discuss Microsoft AI services/frameworks, Copilot, .NET languages/frameworks, or security/identity controls.",
+    "timestamp": "2026-03-21 00:28:56 +00:00",
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/introducing-new-git-developer-experiences-in-microsoft-fabric-preview/",
+    "collection": "news"
   }
 ]
