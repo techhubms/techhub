@@ -377,7 +377,8 @@ On mobile, sidebar content is organized into individually toggleable panels acce
 | Page | Panels (Label / Icon) |
 |---|---|
 | Home | "Latest" / `latest`, "Tags" / `tags` |
-| SectionCollection | "Search" / `search`, "Date" / `calendar`, "Tags" / `tags` |
+| SectionCollection (Browse page `/section/all`) | "Content" / `filter` *(conditional)*, "Search" / `search`, "Date" / `calendar`, "Tags" / `tags` |
+| SectionCollection (collection page `/section/collection`) | "Search" / `search`, "Date" / `calendar`, "Tags" / `tags` |
 | ContentItem | "Tags" / `tags`, "Table of Contents" / `toc` |
 | GitHubCopilotFeatures | "Table of Contents" / `toc`, "Filters" / `filter` |
 | GitHubCopilotVSCodeUpdates | "All Updates" / `updates`, "Table of Contents" / `toc` |
