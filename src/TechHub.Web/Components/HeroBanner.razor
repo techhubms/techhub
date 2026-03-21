@@ -29,19 +29,25 @@
                 <svg class="hero-banner-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                     <path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-3a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0v-4.5A.75.75 0 0 1 8 5zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" fill="currentColor"/>
                 </svg>
-                <span class="hero-banner-label">Upcoming Events</span>
+                @if (!string.IsNullOrEmpty(_data?.Label))
+                {
+                    <span class="hero-banner-label">@_data.Label</span>
+                }
             </div>
             <div class="hero-banner-header-actions">
-                <a href="https://luma.com/githubcopilotdevdays"
-                   class="hero-banner-find-more"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   aria-label="Find a Dev Day near you (opens in new tab)">
-                    <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-                        <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 .54 3.05 3.34 3.34 0 0 0 3.36 0 9.64 9.64 0 0 0 .54-3.05Zm4.44-1.5a9.64 9.64 0 0 0-.54-3.05 3.34 3.34 0 0 0-3.36 0 9.64 9.64 0 0 0-.54 3.05Zm-5.93 1.5H1.63a6.5 6.5 0 0 0 4.08 5.57 11.2 11.2 0 0 1-.42-5.57Zm7.04 0a11.2 11.2 0 0 1-.42 5.57 6.5 6.5 0 0 0 4.08-5.57Zm-7.04-1.5a11.2 11.2 0 0 1 .42-5.57A6.5 6.5 0 0 0 1.63 7.25Zm7.04 0h2.63a6.5 6.5 0 0 0-4.08-5.57 11.2 11.2 0 0 1 .42 5.57Z"/>
-                    </svg>
-                    <span class="hero-banner-find-more-text">Find a Dev Day near you</span>
-                </a>
+                @if (!string.IsNullOrEmpty(_data?.FindMoreUrl))
+                {
+                    <a href="@_data.FindMoreUrl"
+                       class="hero-banner-find-more"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       aria-label="@((_data.FindMoreText ?? "Find more") + " (opens in new tab)")">
+                        <svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM5.78 8.75a9.64 9.64 0 0 0 .54 3.05 3.34 3.34 0 0 0 3.36 0 9.64 9.64 0 0 0 .54-3.05Zm4.44-1.5a9.64 9.64 0 0 0-.54-3.05 3.34 3.34 0 0 0-3.36 0 9.64 9.64 0 0 0-.54 3.05Zm-5.93 1.5H1.63a6.5 6.5 0 0 0 4.08 5.57 11.2 11.2 0 0 1-.42-5.57Zm7.04 0a11.2 11.2 0 0 1-.42 5.57 6.5 6.5 0 0 0 4.08-5.57Zm-7.04-1.5a11.2 11.2 0 0 1 .42-5.57A6.5 6.5 0 0 0 1.63 7.25Zm7.04 0h2.63a6.5 6.5 0 0 0-4.08-5.57 11.2 11.2 0 0 1 .42 5.57Z"/>
+                        </svg>
+                        <span class="hero-banner-find-more-text">@(_data.FindMoreText ?? "Find more")</span>
+                    </a>
+                }
                 <button type="button"
                         class="hero-banner-toggle"
                         aria-expanded="@(_isCollapsed ? "false" : "true")"

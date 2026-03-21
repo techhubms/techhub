@@ -7,6 +7,24 @@ namespace TechHub.Core.Models;
 public record HeroBannerData
 {
     public required IReadOnlyList<HeroBannerCard> Cards { get; init; }
+
+    /// <summary>
+    /// Optional label shown in the banner header (e.g. "Upcoming Events").
+    /// When null or empty, no label text is displayed.
+    /// </summary>
+    public string? Label { get; init; }
+
+    /// <summary>
+    /// Optional URL for a secondary "find more" link button in the banner header.
+    /// When null, no secondary link is rendered.
+    /// </summary>
+    public string? FindMoreUrl { get; init; }
+
+    /// <summary>
+    /// Optional display text for the secondary "find more" link button.
+    /// Falls back to "Find more" when <see cref="FindMoreUrl"/> is set but this is null.
+    /// </summary>
+    public string? FindMoreText { get; init; }
 }
 
 /// <summary>

@@ -243,12 +243,15 @@ public class HeroBannerTests : BunitContext
     [Fact]
     public void HeroBanner_ShowsFindMoreLink()
     {
-        // Arrange
+        // Arrange — banner data includes a find-more URL and text
         RegisterHttpContextWithCookies();
         _mockApiClient
             .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(new HeroBannerData
             {
+                Label = "Upcoming Events",
+                FindMoreUrl = "https://luma.com/githubcopilotdevdays",
+                FindMoreText = "Find a Dev Day near you",
                 Cards =
                 [
                     new HeroBannerCard
@@ -265,11 +268,71 @@ public class HeroBannerTests : BunitContext
         var cut = Render<HeroBanner>();
         cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
-        // Assert — "Find a Dev Day near you" link is always visible in the header
+        // Assert — find-more link uses URL and text from the data model
         var findMore = cut.Find("a.hero-banner-find-more");
         findMore.Should().NotBeNull();
         findMore.GetAttribute("href").Should().Be("https://luma.com/githubcopilotdevdays");
         findMore.GetAttribute("target").Should().Be("_blank");
         findMore.GetAttribute("rel").Should().Contain("noopener");
+        findMore.QuerySelector(".hero-banner-find-more-text")!.TextContent.Should().Be("Find a Dev Day near you");
+    }
+
+    [Fact]
+    public void HeroBanner_WithNoFindMoreUrl_DoesNotRenderFindMoreLink()
+    {
+        // Arrange — banner data has no find-more URL
+        RegisterHttpContextWithCookies();
+        _mockApiClient
+            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new HeroBannerData
+            {
+                Cards =
+                [
+                    new HeroBannerCard
+                    {
+                        Title = "Announcement",
+                        Description = "A generic announcement",
+                        StartDate = "2020-01-01",
+                        EndDate = "2099-12-31"
+                    }
+                ]
+            });
+
+        // Act
+        var cut = Render<HeroBanner>();
+        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
+
+        // Assert — no find-more link rendered
+        cut.FindAll("a.hero-banner-find-more").Should().BeEmpty();
+    }
+
+    [Fact]
+    public void HeroBanner_WithLabel_ShowsLabelInHeader()
+    {
+        // Arrange
+        RegisterHttpContextWithCookies();
+        _mockApiClient
+            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new HeroBannerData
+            {
+                Label = "Upcoming Events",
+                Cards =
+                [
+                    new HeroBannerCard
+                    {
+                        Title = "Event",
+                        Description = "Description",
+                        StartDate = "2020-01-01",
+                        EndDate = "2099-12-31"
+                    }
+                ]
+            });
+
+        // Act
+        var cut = Render<HeroBanner>();
+        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
+
+        // Assert — label rendered in header
+        cut.Find(".hero-banner-label").TextContent.Should().Be("Upcoming Events");
     }
 }

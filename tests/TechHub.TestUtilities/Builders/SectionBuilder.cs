@@ -14,6 +14,7 @@ public class SectionBuilder
     private string _url = "/github-copilot";
     private string _tag = "GitHub Copilot";
     private bool _hideCollectionPages;
+    private bool _showHeroBanner;
     private IReadOnlyList<Collection> _collections = [
         new Collection("blogs", "Blogs", "/github-copilot/blogs", "Blog posts", "Blogs"),
         new Collection("news", "News", "/github-copilot/news", "News articles", "News")
@@ -55,6 +56,12 @@ public class SectionBuilder
         return this;
     }
 
+    public SectionBuilder WithShowHeroBanner(bool showHeroBanner = true)
+    {
+        _showHeroBanner = showHeroBanner;
+        return this;
+    }
+
     public SectionBuilder WithCollections(params Collection[] collections)
     {
         _collections = collections;
@@ -63,6 +70,6 @@ public class SectionBuilder
 
     public Section Build()
     {
-        return new Section(_name, _title, _description, _url, _tag, _collections, _hideCollectionPages);
+        return new Section(_name, _title, _description, _url, _tag, _collections, _hideCollectionPages, _showHeroBanner);
     }
 }
