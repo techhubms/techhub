@@ -253,7 +253,7 @@ public sealed class ContentProcessorWorker : BackgroundService
                 return [];
             }
 
-            // Normalise outputDir: strip leading underscore if present
+            // Normalize outputDir: strip leading underscore if present
             return configs
                 .Select(c => new FeedConfig
                 {

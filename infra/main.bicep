@@ -194,6 +194,16 @@ module openai './modules/openai.bicep' = {
   }
 }
 
+// Reference the deployed OpenAI account to retrieve the API key securely via listKeys().
+// This avoids passing the secret through a module output, which would expose it in state files.
+resource openAiAccountRef 'Microsoft.CognitiveServices/accounts@2025-06-01' existing = {
+  name: openAiName
+  scope: resourceGroup
+}
+// openAiApiKey is intentionally not stored in a variable — it is consumed only in the
+// contentProcessorApp module call below. Using listKeys() directly at the call site keeps
+// the secret out of intermediate Bicep variables and deployment outputs.
+
 // Container Apps Environment (VNet-integrated)
 module containerAppsEnv './modules/containerApps.bicep' = {
   scope: resourceGroup
@@ -324,7 +334,7 @@ module webApp './modules/web.bicep' = {
 module contentProcessorApp './modules/contentprocessor.bicep' = if (!empty(contentProcessorImageTag)) {
   scope: resourceGroup
   name: 'content-processor-deployment'
-  dependsOn: [acrRoleAssignment]
+  dependsOn: [acrRoleAssignment, openai]
   params: {
     location: location
     containerAppName: contentProcessorAppName
@@ -334,7 +344,7 @@ module contentProcessorApp './modules/contentprocessor.bicep' = if (!empty(conte
     imageTag: contentProcessorImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require'
-    openAiApiKey: openai.outputs.openAiApiKey
+    openAiApiKey: openAiAccountRef.listKeys().key1
     openAiEndpoint: openai.outputs.openAiEndpoint
     openAiDeploymentName: openai.outputs.deploymentName
     environmentName: environmentName
