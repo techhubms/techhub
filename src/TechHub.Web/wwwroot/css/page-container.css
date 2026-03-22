@@ -20,14 +20,14 @@
   --section-grid-columns: 2;
   display: grid;
   grid-template-columns: var(--sidebar-width) 1fr;
-  gap: var(--spacing-5);
+  column-gap: var(--spacing-5);
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
+  padding: var(--spacing-3);
   flex: 1;
   transition: grid-template-columns var(--duration-normal) var(--easing-ease-in-out),
-              gap var(--duration-normal) var(--easing-ease-in-out);
+              column-gap var(--duration-normal) var(--easing-ease-in-out);
 }
 
 /* Desktop: 3 columns for section cards grid */
@@ -41,24 +41,38 @@
 html.sidebar-collapsed .page-with-sidebar {
   --sidebar-width: 48px;
   --section-grid-columns: 4;
-  gap: var(--spacing-1);
+  column-gap: var(--spacing-1);
+}
+
+/* Sidebar spans all rows so content items don't wrap below it */
+.page-with-sidebar > .sidebar {
+  grid-row: 1 / span 99;
 }
 
 /* Main content area - ensure it maintains width during loading */
 /* Applies to direct children of page-with-sidebar (article or section) */
 .page-with-sidebar > article,
 .page-with-sidebar > section {
+  grid-column: 2;
   min-width: 0;
   /* Prevent grid blowout */
   width: 100%;
   max-width: 100%;
 }
 
+/* Hero banner: sits in content column on desktop, above toolbar on mobile */
+.page-with-sidebar > .hero-banner {
+  grid-column: 2;
+  align-self: start;
+  min-width: 0;
+  margin-bottom: var(--spacing-3);
+}
+
 /* Standard page container without sidebar */
 .page-without-sidebar {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 var(--spacing-3) var(--spacing-6) var(--spacing-3);
+  padding: var(--spacing-3);
   flex: 1;
 }
 
@@ -68,8 +82,25 @@ html.sidebar-collapsed .page-with-sidebar {
     --section-grid-columns: 2;
     grid-template-columns: 1fr;
     gap: var(--spacing-3);
+    padding: var(--spacing-3);
     transition: none;
     align-content: start;
+  }
+
+  /* Reset column placement on mobile (single column) */
+  .page-with-sidebar > .sidebar {
+    grid-row: auto;
+  }
+
+  .page-with-sidebar > article,
+  .page-with-sidebar > section {
+    grid-column: 1;
+  }
+
+  /* Hero banner above toolbar on mobile */
+  .page-with-sidebar > .hero-banner {
+    grid-column: 1;
+    order: -1;
   }
 
   /* Disable collapsed state on mobile */
@@ -81,10 +112,10 @@ html.sidebar-collapsed .page-with-sidebar {
 
 @media (max-width: 768px) {
   .page-with-sidebar {
-    padding: 0 var(--spacing-2) var(--spacing-4) var(--spacing-2);
+    padding: var(--spacing-2);
   }
 
   .page-without-sidebar {
-    padding: 0 var(--spacing-2) var(--spacing-4) var(--spacing-2);
+    padding: var(--spacing-2);
   }
 }

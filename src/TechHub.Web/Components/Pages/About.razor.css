@@ -134,12 +134,8 @@
 }
 
 .version-info {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-2);
     margin-top: var(--spacing-6);
-    padding-top: var(--spacing-4);
-    border-top: 1px solid var(--color-border-default);
+    text-align: center;
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
 }

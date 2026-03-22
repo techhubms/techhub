@@ -102,16 +102,15 @@ public class AboutPageTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task AboutPage_ShouldDisplay_VersionInfo()
+    public async Task AboutPage_ShouldDisplay_DeploymentInfo()
     {
         // Act
         await Page.GotoRelativeAsync("/about");
 
-        // Assert - Version info section should be visible at the bottom with .NET version
+        // Assert - Deployment info should always be visible
         var versionInfo = Page.Locator(".version-info");
         await Assertions.Expect(versionInfo).ToBeVisibleAsync();
         var text = await versionInfo.TextContentAsync();
-        text.Should().Contain(".NET");
-        text.Should().Contain("Tech Hub");
+        text.Should().Contain("Last deployment:");
     }
 }

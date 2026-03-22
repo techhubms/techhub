@@ -124,20 +124,13 @@
         </div>
 
         <div class="version-info">
-            <span>@Branding.SiteName</span>
-            <span>·</span>
-            <span>.NET @Environment.Version</span>
-            @if (!string.IsNullOrEmpty(DeployTimestamp))
-            {
-                <span>·</span>
-                <span>Deployed @DeployTimestamp</span>
-            }
+            <span>Last deployment: @DeployTimestamp</span>
         </div>
     </section>
 </main>
 
 @code {
-    private string? DeployTimestamp { get; set; }
+    private string DeployTimestamp { get; set; } = "unknown";
 
     protected override void OnInitialized()
     {
@@ -150,7 +143,7 @@
         {
             var brusselsTz = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
             var localTime = TimeZoneInfo.ConvertTimeFromUtc(deployTime.ToUniversalTime(), brusselsTz);
-            DeployTimestamp = localTime.ToString("d MMMM yyyy 'at' HH:mm", System.Globalization.CultureInfo.InvariantCulture);
+            DeployTimestamp = $"{localTime.ToString("d MMMM yyyy 'at' HH:mm", System.Globalization.CultureInfo.InvariantCulture)} (tag: {imageTag})";
         }
     }
 }

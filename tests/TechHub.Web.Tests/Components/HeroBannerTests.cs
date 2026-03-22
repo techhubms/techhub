@@ -249,9 +249,9 @@ public class HeroBannerTests : BunitContext
             .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(new HeroBannerData
             {
-                Label = "Upcoming Events",
+                Label = "Featured Events",
                 FindMoreUrl = "https://luma.com/githubcopilotdevdays",
-                FindMoreText = "Find a Dev Day near you",
+                FindMoreText = "Find a GitHub Copilot Dev Day near you",
                 Cards =
                 [
                     new HeroBannerCard
@@ -274,7 +274,7 @@ public class HeroBannerTests : BunitContext
         findMore.GetAttribute("href").Should().Be("https://luma.com/githubcopilotdevdays");
         findMore.GetAttribute("target").Should().Be("_blank");
         findMore.GetAttribute("rel").Should().Contain("noopener");
-        findMore.QuerySelector(".hero-banner-find-more-text")!.TextContent.Should().Be("Find a Dev Day near you");
+        findMore.QuerySelector(".hero-banner-find-more-text")!.TextContent.Should().Be("Find a GitHub Copilot Dev Day near you");
     }
 
     [Fact]
@@ -315,7 +315,7 @@ public class HeroBannerTests : BunitContext
             .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(new HeroBannerData
             {
-                Label = "Upcoming Events",
+                Label = "Featured Events",
                 Cards =
                 [
                     new HeroBannerCard
@@ -333,6 +333,6 @@ public class HeroBannerTests : BunitContext
         cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert — label rendered in header
-        cut.Find(".hero-banner-label").TextContent.Should().Be("Upcoming Events");
+        cut.Find(".hero-banner-label").TextContent.Should().Be("Featured Events");
     }
 }

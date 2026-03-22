@@ -1,7 +1,7 @@
 {
-  "label": "Upcoming Events",
+  "label": "Featured Events",
   "findMoreUrl": "https://luma.com/githubcopilotdevdays",
-  "findMoreText": "Find a Dev Day near you",
+  "findMoreText": "Find a GitHub Copilot Dev Day near you",
   "cards": [
     {
       "title": "GitHub Copilot Dev Day — Zürich",

@@ -34,7 +34,7 @@
                             aria-expanded="@(ActivePanelId == panelId ? "true" : "false")"
                             @onclick="() => TogglePanel(panelId)">
                         @((MarkupString)GetIconSvg(panel.Icon))
-                        @panel.Label
+                        <span class="sidebar-toolbar-btn-label">@panel.Label</span>
                         @if (panel.HasActiveFilter)
                         {
                             <span class="sidebar-toolbar-filter-dot" aria-hidden="true"></span>

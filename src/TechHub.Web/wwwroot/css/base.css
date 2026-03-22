@@ -118,7 +118,7 @@ h6 {
 
 h1 {
   font-size: var(--font-size-h1);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
 }
 
 h2 {
@@ -131,7 +131,7 @@ h2 {
 h3 {
   font-size: var(--font-size-h3);
   margin-top: var(--spacing-4);
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-1);
   scroll-margin-top: var(--scroll-margin-top);
 }
 
@@ -144,14 +144,14 @@ h4 {
 
 h5 {
   font-size: var(--font-size-h5);
-  margin-top: var(--spacing-3);
+  margin-top: var(--spacing-4);
   margin-bottom: var(--spacing-2);
   scroll-margin-top: var(--scroll-margin-top);
 }
 
 h6 {
   font-size: var(--font-size-h6);
-  margin-top: var(--spacing-3);
+  margin-top: var(--spacing-4);
   margin-bottom: var(--spacing-2);
   scroll-margin-top: var(--scroll-margin-top);
 }
@@ -379,7 +379,6 @@ img {
 .sidebar-h2 {
   font-size: var(--font-size-3xl);
   margin-top: 0;
-  margin-bottom: var(--spacing-3);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-emphasis);
   line-height: var(--line-height-heading);
@@ -389,7 +388,6 @@ img {
 .page-h1 {
   font-size: var(--font-size-3xl);
   margin-top: 0;
-  margin-bottom: var(--spacing-3);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-emphasis);
   text-align: left;
@@ -398,11 +396,6 @@ img {
 @media (max-width: 1292px) {
   .page-h1 {
     font-size: var(--font-size-3xl);
-    margin-bottom: var(--spacing-3);
-  }
-
-  .sidebar-h2 {
-    margin-bottom: var(--spacing-3);
   }
 }
 
