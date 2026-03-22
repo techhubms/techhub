@@ -229,5 +229,10 @@
     .hero-banner-find-more-text {
         display: none;
     }
+
+    /* Keep button the same height as when text was visible */
+    .hero-banner-find-more {
+        min-height: 1.625rem;
+    }
 }
 

@@ -82,7 +82,6 @@ html.sidebar-collapsed .page-with-sidebar {
     --section-grid-columns: 2;
     grid-template-columns: 1fr;
     gap: var(--spacing-3);
-    padding: var(--spacing-3);
     transition: none;
     align-content: start;
   }
@@ -101,6 +100,7 @@ html.sidebar-collapsed .page-with-sidebar {
   .page-with-sidebar > .hero-banner {
     grid-column: 1;
     order: -1;
+    margin-bottom: 0; /* Grid gap handles spacing; desktop margin would double it */
   }
 
   /* Disable collapsed state on mobile */
