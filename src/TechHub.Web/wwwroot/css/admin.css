@@ -126,6 +126,15 @@
     margin-top: var(--space-2);
 }
 
+/* Sign-in link styled as a full-width primary button */
+.admin-login-btn-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    margin-top: var(--space-2);
+}
+
 /* ─── Form Controls ───────────────────────────────────────────────────────── */
 
 .admin-field {

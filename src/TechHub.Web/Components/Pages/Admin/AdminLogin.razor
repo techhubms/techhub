@@ -1,58 +1,35 @@
 @page "/admin/login"
 @layout AdminLayout
-@rendermode InteractiveServer
-@using TechHub.Web.Services
-@inject NavigationManager Navigation
-@inject IConfiguration Configuration
 
-<PageTitle>Admin Login — TechHub</PageTitle>
+<PageTitle>Admin Sign-in — TechHub</PageTitle>
 
 <div class="admin-login-container">
     <div class="admin-login-card">
         <div class="admin-login-logo">⚙️</div>
         <h1 class="admin-login-title">TechHub Admin</h1>
-        <p class="admin-login-subtitle">Sign in to access the admin panel</p>
+        <p class="admin-login-subtitle">Sign in with your Microsoft account to continue</p>
 
         @if (_showError)
         {
             <div class="admin-alert admin-alert-error" role="alert">
-                Invalid username or password. Please try again.
+                Sign-in failed or you are not authorised to access this area.
+                Contact the site administrator if you believe this is an error.
             </div>
         }
 
-        <form method="post" action="/admin/login-submit" class="admin-login-form">
-            <AntiforgeryToken />
-            <input type="hidden" name="returnUrl" value="@_returnUrl" />
-
-            <div class="admin-field">
-                <label for="username" class="admin-label">Username</label>
-                <input id="username" name="username" type="text"
-                       class="admin-input" autocomplete="username"
-                       placeholder="Enter username" required />
-            </div>
-
-            <div class="admin-field">
-                <label for="password" class="admin-label">Password</label>
-                <input id="password" name="password" type="password"
-                       class="admin-input" autocomplete="current-password"
-                       placeholder="Enter password" required />
-            </div>
-
-            <button type="submit" class="btn-primary admin-login-btn">Sign in</button>
-        </form>
+        <a href="/MicrosoftIdentity/Account/SignIn?returnUrl=%2Fadmin" class="btn-primary admin-login-btn-link">
+            Sign in with Microsoft
+        </a>
     </div>
 </div>
 
 @code {
-    [SupplyParameterFromQuery] private string? ReturnUrl { get; set; }
     [SupplyParameterFromQuery] private string? Error { get; set; }
 
     private bool _showError;
-    private string _returnUrl = "/admin";
 
     protected override void OnInitialized()
     {
-        _showError = Error == "1";
-        _returnUrl = ReturnUrl ?? "/admin";
+        _showError = !string.IsNullOrEmpty(Error);
     }
 }

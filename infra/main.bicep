@@ -47,6 +47,18 @@ param apiImageTag string
 @description('Web Docker image tag (yyyyMMddHHmmss format)')
 param webImageTag string
 
+@secure()
+@description('Azure AD tenant ID for admin dashboard authentication')
+param azureAdTenantId string = ''
+
+@secure()
+@description('Azure AD client ID for admin dashboard authentication')
+param azureAdClientId string = ''
+
+@secure()
+@description('Azure AD client secret for admin dashboard authentication')
+param azureAdClientSecret string = ''
+
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
@@ -309,6 +321,9 @@ module webApp './modules/web.bicep' = {
     primaryHosts: primaryHosts
     environmentName: environmentName
     wildcardCertificateIds: wildcardCertIds
+    azureAdTenantId: azureAdTenantId
+    azureAdClientId: azureAdClientId
+    azureAdClientSecret: azureAdClientSecret
   }
 }
 

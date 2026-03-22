@@ -20,10 +20,7 @@
             <a href="/admin" class="admin-brand">⚙️ TechHub Admin</a>
             <div class="admin-nav-actions">
                 <a href="/" class="admin-nav-link">← Back to Site</a>
-                <form method="post" action="/admin/logout-submit" class="admin-logout-form">
-                    <AntiforgeryToken />
-                    <button type="submit" class="btn-secondary admin-logout-btn">Log out</button>
-                </form>
+                <a href="/MicrosoftIdentity/Account/SignOut" class="btn-secondary admin-logout-btn">Log out</a>
             </div>
         </nav>
     </header>
