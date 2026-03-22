@@ -166,7 +166,10 @@ public sealed class AiCategorizationService
                 {
                     Summary = GetString(roundupProp, "summary") ?? string.Empty,
                     KeyTopics = GetStringArray(roundupProp, "key_topics"),
-                    Relevance = GetString(roundupProp, "relevance") ?? "medium"
+                    Relevance = GetString(roundupProp, "relevance") ?? "medium",
+                    TopicType = GetString(roundupProp, "topic_type") ?? "news",
+                    ImpactLevel = GetString(roundupProp, "impact_level") ?? "medium",
+                    TimeSensitivity = GetString(roundupProp, "time_sensitivity") ?? "this-week"
                 };
             }
 
@@ -240,7 +243,10 @@ public sealed class AiCategorizationService
         sb.AppendLine("  \"roundup\": {");
         sb.AppendLine("    \"summary\": \"1-2 sentence neutral summary for a weekly roundup\",");
         sb.AppendLine("    \"key_topics\": [\"Topic1\", \"Topic2\"],");
-        sb.AppendLine("    \"relevance\": \"high|medium|low\"");
+        sb.AppendLine("    \"relevance\": \"high|medium|low\",");
+        sb.AppendLine("    \"topic_type\": \"announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison\",");
+        sb.AppendLine("    \"impact_level\": \"high|medium|low\",");
+        sb.AppendLine("    \"time_sensitivity\": \"immediate|this-week|this-month|long-term\"");
         sb.AppendLine("  }");
 
         return sb.ToString();
