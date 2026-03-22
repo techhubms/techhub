@@ -41,17 +41,11 @@ param apiAppName string = 'ca-techhub-api-${environmentName}'
 @description('Web Container App name')
 param webAppName string = 'ca-techhub-web-${environmentName}'
 
-@description('Content Processor Container App name')
-param contentProcessorAppName string = 'ca-techhub-content-processor-${environmentName}'
-
 @description('API Docker image tag (yyyyMMddHHmmss format)')
 param apiImageTag string
 
 @description('Web Docker image tag (yyyyMMddHHmmss format)')
 param webImageTag string
-
-@description('Content Processor Docker image tag (yyyyMMddHHmmss format). Leave empty to skip deployment.')
-param contentProcessorImageTag string = ''
 
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
@@ -194,16 +188,6 @@ module openai './modules/openai.bicep' = {
   }
 }
 
-// Reference the deployed OpenAI account to retrieve the API key securely via listKeys().
-// This avoids passing the secret through a module output, which would expose it in state files.
-resource openAiAccountRef 'Microsoft.CognitiveServices/accounts@2025-06-01' existing = {
-  name: openAiName
-  scope: resourceGroup
-}
-// openAiApiKey is intentionally not stored in a variable — it is consumed only in the
-// contentProcessorApp module call below. Using listKeys() directly at the call site keeps
-// the secret out of intermediate Bicep variables and deployment outputs.
-
 // Container Apps Environment (VNet-integrated)
 module containerAppsEnv './modules/containerApps.bicep' = {
   scope: resourceGroup
@@ -325,29 +309,6 @@ module webApp './modules/web.bicep' = {
     primaryHosts: primaryHosts
     environmentName: environmentName
     wildcardCertificateIds: wildcardCertIds
-  }
-}
-
-// Content Processor Container App (production only — runs the RSS ingestion and AI categorization pipeline)
-// Staging and local environments receive data via database restore (see scripts/Restore-Database.ps1).
-// Deploy is conditional: set contentProcessorImageTag to skip.
-module contentProcessorApp './modules/contentprocessor.bicep' = if (!empty(contentProcessorImageTag)) {
-  scope: resourceGroup
-  name: 'content-processor-deployment'
-  dependsOn: [acrRoleAssignment, openai]
-  params: {
-    location: location
-    containerAppName: contentProcessorAppName
-    containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
-    containerRegistryName: containerRegistryName
-    acrPullIdentityId: identity.outputs.identityId
-    imageTag: contentProcessorImageTag
-    appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require'
-    openAiApiKey: openAiAccountRef.listKeys().key1
-    openAiEndpoint: openai.outputs.openAiEndpoint
-    openAiDeploymentName: openai.outputs.deploymentName
-    environmentName: environmentName
   }
 }
 

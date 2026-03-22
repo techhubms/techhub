@@ -1,4 +1,4 @@
-namespace TechHub.ContentProcessor.Models;
+namespace TechHub.Core.Models.ContentProcessing;
 
 /// <summary>
 /// A raw item downloaded from an RSS/Atom feed before AI processing.
@@ -29,7 +29,7 @@ public sealed class RawFeedItem
     /// <summary>Target collection name (e.g. "news", "blogs", "videos", "community").</summary>
     public required string CollectionName { get; init; }
 
-    /// <summary>Full HTML content of the article (fetched separately from the feed URL).</summary>
+    /// <summary>Full text content of the article (fetched separately from the feed URL).</summary>
     public string? FullContent { get; init; }
 
     /// <summary>Whether this item links to a YouTube video.</summary>

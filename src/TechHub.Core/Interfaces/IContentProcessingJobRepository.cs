@@ -1,0 +1,27 @@
+using TechHub.Core.Models.Admin;
+
+namespace TechHub.Core.Interfaces;
+
+/// <summary>
+/// Persistence for content processing job history.
+/// </summary>
+public interface IContentProcessingJobRepository
+{
+    /// <summary>Creates a new job record and returns the assigned ID.</summary>
+    Task<long> CreateAsync(string triggerType, CancellationToken ct = default);
+
+    /// <summary>Marks a job as completed with final statistics.</summary>
+    Task CompleteAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, string logOutput, CancellationToken ct = default);
+
+    /// <summary>Marks a job as failed.</summary>
+    Task FailAsync(long jobId, string logOutput, CancellationToken ct = default);
+
+    /// <summary>Appends a log line to a running job (best-effort, no throw on failure).</summary>
+    Task AppendLogAsync(long jobId, string line, CancellationToken ct = default);
+
+    /// <summary>Gets a specific job by ID, or null if not found.</summary>
+    Task<ContentProcessingJob?> GetByIdAsync(long jobId, CancellationToken ct = default);
+
+    /// <summary>Gets the most recent <paramref name="count"/> jobs, newest first.</summary>
+    Task<IReadOnlyList<ContentProcessingJob>> GetRecentAsync(int count = 20, CancellationToken ct = default);
+}

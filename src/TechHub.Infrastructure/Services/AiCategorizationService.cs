@@ -6,14 +6,16 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using TechHub.ContentProcessor.Models;
-using TechHub.ContentProcessor.Options;
+using TechHub.Core.Configuration;
+using TechHub.Core.Models.ContentProcessing;
 
-namespace TechHub.ContentProcessor.Services;
+namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Calls Azure OpenAI to categorize a raw feed item and produce a <see cref="ProcessedContentItem"/>.
+/// Also extracts roundup-ready metadata (summary, key topics, relevance) in the same call.
 /// </summary>
 public sealed class AiCategorizationService
 {
@@ -21,7 +23,6 @@ public sealed class AiCategorizationService
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCategorizationService> _logger;
 
-    // Loaded once at construction time from embedded resource
     private static readonly string SystemMessage = LoadSystemMessage();
 
     private static readonly JsonSerializerOptions JsonOptions = new()
@@ -45,8 +46,7 @@ public sealed class AiCategorizationService
     }
 
     /// <summary>
-    /// Calls Azure OpenAI with the system message and item content to produce a
-    /// <see cref="ProcessedContentItem"/>.
+    /// Calls Azure OpenAI to categorize <paramref name="item"/>.
     /// Returns <see langword="null"/> when the AI determines the content should be skipped.
     /// </summary>
     public async Task<ProcessedContentItem?> CategorizeAsync(RawFeedItem item, CancellationToken ct = default)
@@ -59,8 +59,6 @@ public sealed class AiCategorizationService
         }
 
         var userContent = BuildUserPrompt(item);
-
-        // Truncate to stay within model context window
         if (userContent.Length > _options.MaxContentLength)
         {
             userContent = userContent[.._options.MaxContentLength];
@@ -83,7 +81,6 @@ public sealed class AiCategorizationService
         while (attempt < _options.MaxRetries)
         {
             attempt++;
-
             try
             {
                 using var request = new HttpRequestMessage(
@@ -104,7 +101,6 @@ public sealed class AiCategorizationService
                 }
 
                 response.EnsureSuccessStatusCode();
-
                 var responseJson = await response.Content.ReadAsStringAsync(ct);
                 return ParseAiResponse(responseJson, item);
             }
@@ -135,7 +131,6 @@ public sealed class AiCategorizationService
                 return null;
             }
 
-            // Extract JSON object from AI response (may be wrapped in markdown code fences)
             var jsonContent = ExtractJsonFromResponse(content);
             if (string.IsNullOrWhiteSpace(jsonContent))
             {
@@ -146,25 +141,34 @@ public sealed class AiCategorizationService
             using var aiDoc = JsonDocument.Parse(jsonContent);
             var root = aiDoc.RootElement;
 
-            // Check if the AI decided to skip this item
             if (root.TryGetProperty("skip", out var skipProp) && skipProp.GetBoolean())
             {
                 _logger.LogInformation("AI decided to skip item: {Title}", source.Title);
                 return null;
             }
 
-            var title = GetStringProperty(root, "title") ?? source.Title;
-            var excerpt = GetStringProperty(root, "excerpt") ?? source.Description;
-            var collectionName = GetStringProperty(root, "collection") ?? source.CollectionName;
-            var author = GetStringProperty(root, "author") ?? source.Author;
-            var primarySection = GetStringProperty(root, "primary_section");
-
+            var title = GetString(root, "title") ?? source.Title;
+            var excerpt = GetString(root, "excerpt") ?? source.Description;
+            var collectionName = GetString(root, "collection") ?? source.CollectionName;
+            var author = GetString(root, "author") ?? source.Author;
+            var primarySection = GetString(root, "primary_section");
             var tags = GetStringArray(root, "tags");
             var sections = GetStringArray(root, "sections");
-
-            var itemContent = GetStringProperty(root, "content") ?? string.Empty;
+            var itemContent = GetString(root, "content") ?? string.Empty;
             var slug = GenerateSlug(title, source.PublishedAt);
             var contentHash = ComputeHash(title + itemContent + excerpt);
+
+            // Extract roundup metadata
+            RoundupMetadata? roundupMetadata = null;
+            if (root.TryGetProperty("roundup", out var roundupProp))
+            {
+                roundupMetadata = new RoundupMetadata
+                {
+                    Summary = GetString(roundupProp, "summary") ?? string.Empty,
+                    KeyTopics = GetStringArray(roundupProp, "key_topics"),
+                    Relevance = GetString(roundupProp, "relevance") ?? "medium"
+                };
+            }
 
             return new ProcessedContentItem
             {
@@ -180,7 +184,8 @@ public sealed class AiCategorizationService
                 Tags = tags,
                 Sections = sections,
                 PrimarySectionName = primarySection,
-                ContentHash = contentHash
+                ContentHash = contentHash,
+                RoundupMetadata = roundupMetadata
             };
         }
         catch (JsonException ex)
@@ -227,22 +232,25 @@ public sealed class AiCategorizationService
 
         if (item.FeedTags.Count > 0)
         {
-            sb.AppendLine();
             sb.AppendLine(CultureInfo.InvariantCulture, $"FEED TAGS: {string.Join(", ", item.FeedTags)}");
         }
+
+        sb.AppendLine();
+        sb.AppendLine("In addition to the standard categorization fields, include a \"roundup\" object:");
+        sb.AppendLine("  \"roundup\": {");
+        sb.AppendLine("    \"summary\": \"1-2 sentence neutral summary for a weekly roundup\",");
+        sb.AppendLine("    \"key_topics\": [\"Topic1\", \"Topic2\"],");
+        sb.AppendLine("    \"relevance\": \"high|medium|low\"");
+        sb.AppendLine("  }");
 
         return sb.ToString();
     }
 
     private static string ExtractJsonFromResponse(string response)
     {
-        // Remove markdown code fences if present
         var cleaned = Regex.Replace(response, @"```(?:json)?\s*", string.Empty, RegexOptions.IgnoreCase).Trim();
-
-        // Find first { and last }
         var start = cleaned.IndexOf('{', StringComparison.Ordinal);
         var end = cleaned.LastIndexOf('}');
-
         if (start < 0 || end < 0 || end <= start)
         {
             return string.Empty;
@@ -251,7 +259,7 @@ public sealed class AiCategorizationService
         return cleaned[start..(end + 1)];
     }
 
-    private static string? GetStringProperty(JsonElement root, string name)
+    private static string? GetString(JsonElement root, string name)
     {
         if (root.TryGetProperty(name, out var prop) && prop.ValueKind == JsonValueKind.String)
         {
@@ -279,8 +287,6 @@ public sealed class AiCategorizationService
     {
         var datePrefix = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
         var slugBase = Regex.Replace(title.ToLowerInvariant(), @"[^a-z0-9]+", "-").Trim('-');
-
-        // Truncate to reasonable length
         if (slugBase.Length > 80)
         {
             slugBase = slugBase[..80].TrimEnd('-');
@@ -291,20 +297,19 @@ public sealed class AiCategorizationService
 
     private static string TruncateExcerpt(string excerpt)
     {
-        const int MaxExcerptLength = 300;
+        const int MaxLength = 300;
         if (string.IsNullOrWhiteSpace(excerpt))
         {
             return string.Empty;
         }
 
         excerpt = excerpt.Trim();
-        if (excerpt.Length <= MaxExcerptLength)
+        if (excerpt.Length <= MaxLength)
         {
             return excerpt;
         }
 
-        // Truncate at word boundary
-        var truncated = excerpt[..MaxExcerptLength];
+        var truncated = excerpt[..MaxLength];
         var lastSpace = truncated.LastIndexOf(' ');
         return lastSpace > 0 ? truncated[..lastSpace] + "\u2026" : truncated + "\u2026";
     }
@@ -312,19 +317,17 @@ public sealed class AiCategorizationService
     private static string ComputeHash(string input)
     {
         var bytes = Encoding.UTF8.GetBytes(input);
-        var hash = SHA256.HashData(bytes);
-        return Convert.ToHexStringLower(hash);
+        return Convert.ToHexStringLower(SHA256.HashData(bytes));
     }
 
     private static string LoadSystemMessage()
     {
         var assembly = Assembly.GetExecutingAssembly();
-        const string ResourceName = "TechHub.ContentProcessor.Resources.system-message.md";
-
+        const string ResourceName = "TechHub.Infrastructure.Data.Resources.system-message.md";
         using var stream = assembly.GetManifestResourceStream(ResourceName);
         if (stream == null)
         {
-            return "You are a content categorization assistant. Analyze the provided content and return a JSON object with fields: title, excerpt, collection, sections (array), tags (array), author, primary_section, content (markdown). If the content is irrelevant or low quality, return {\"skip\": true}.";
+            return "You are a content categorization assistant. Analyze the provided content and return a JSON object with fields: title, excerpt, collection, sections (array), tags (array), author, primary_section, content (markdown), and roundup ({summary, key_topics, relevance}). If irrelevant or low quality, return {\"skip\": true}.";
         }
 
         using var reader = new StreamReader(stream);

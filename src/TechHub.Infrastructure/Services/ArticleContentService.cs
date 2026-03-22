@@ -1,12 +1,13 @@
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using TechHub.ContentProcessor.Models;
-using TechHub.ContentProcessor.Options;
+using TechHub.Core.Configuration;
+using TechHub.Core.Models.ContentProcessing;
 
-namespace TechHub.ContentProcessor.Services;
+namespace TechHub.Infrastructure.Services;
 
 /// <summary>
-/// Fetches the full HTML content for a given article URL and extracts the main body text
-/// as Markdown using <see cref="Markdig"/>.
+/// Fetches the full HTML content for an article URL and extracts the main body text.
+/// YouTube items are returned as-is (no content to fetch).
 /// </summary>
 public sealed class ArticleContentService
 {
@@ -29,21 +30,15 @@ public sealed class ArticleContentService
     }
 
     /// <summary>
-    /// Fetches the full HTML content for <paramref name="item"/> and returns a new instance
+    /// Fetches the full article content for <paramref name="item"/> and returns a new instance
     /// with <see cref="RawFeedItem.FullContent"/> populated.
-    /// YouTube items are returned as-is (no content to fetch).
+    /// Returns the original item unchanged on failure or for YouTube items.
     /// </summary>
     public async Task<RawFeedItem> EnrichWithContentAsync(RawFeedItem item, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(item);
 
-        // YouTube items don't have scrapable article content
-        if (item.IsYouTube)
-        {
-            return item;
-        }
-
-        if (string.IsNullOrWhiteSpace(item.ExternalUrl))
+        if (item.IsYouTube || string.IsNullOrWhiteSpace(item.ExternalUrl))
         {
             return item;
         }
@@ -58,18 +53,15 @@ public sealed class ArticleContentService
             using var response = await _httpClient.GetAsync(item.ExternalUrl, cts.Token);
             if (!response.IsSuccessStatusCode)
             {
-                _logger.LogWarning(
-                    "Failed to fetch content for {Url}: HTTP {Status}",
-                    item.ExternalUrl, (int)response.StatusCode);
+                _logger.LogWarning("Failed to fetch content for {Url}: HTTP {Status}", item.ExternalUrl, (int)response.StatusCode);
                 return item;
             }
 
             var html = await response.Content.ReadAsStringAsync(cts.Token);
-            var mainContent = ExtractMainContent(html, item.ExternalUrl);
+            var mainContent = ExtractMainContent(html);
 
             if (string.IsNullOrWhiteSpace(mainContent))
             {
-                _logger.LogDebug("No extractable content found for {Url}", item.ExternalUrl);
                 return item;
             }
 
@@ -91,27 +83,20 @@ public sealed class ArticleContentService
             _logger.LogWarning("Timeout fetching content for {Url}", item.ExternalUrl);
             return item;
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
-            _logger.LogWarning(ex, "Error fetching content for {Url}", item.ExternalUrl);
+            _logger.LogWarning(ex, "HTTP error fetching content for {Url}", item.ExternalUrl);
             return item;
         }
     }
 
-    /// <summary>
-    /// Extracts the main article body from raw HTML.
-    /// Uses a heuristic priority: article > main > body.
-    /// Returns plain text with some Markdown formatting preserved.
-    /// </summary>
-    private static string ExtractMainContent(string html, string sourceUrl)
+    private static string ExtractMainContent(string html)
     {
         if (string.IsNullOrWhiteSpace(html))
         {
             return string.Empty;
         }
 
-        // Look for <article>, <main>, or the largest <div> with class "content"
-        // using lightweight regex heuristics (avoids heavy HTML parser dependency)
         var candidates = new[]
         {
             ExtractTagContent(html, "article"),
@@ -121,54 +106,29 @@ public sealed class ArticleContentService
         var best = candidates
             .Where(c => !string.IsNullOrWhiteSpace(c))
             .OrderByDescending(c => c!.Length)
-            .FirstOrDefault();
+            .FirstOrDefault()
+            ?? html;
 
-        if (string.IsNullOrWhiteSpace(best))
-        {
-            // Fall back to stripping all HTML
-            best = StripHtmlTags(html);
-        }
-        else
-        {
-            best = StripHtmlTags(best);
-        }
+        best = StripHtmlTags(best);
 
-        // Truncate to avoid sending massive payloads to the AI
         const int MaxLength = 50_000;
-        if (best.Length > MaxLength)
-        {
-            best = best[..MaxLength];
-            _ = sourceUrl; // used for future logging
-        }
-
-        return best.Trim();
+        return best.Length > MaxLength ? best[..MaxLength].Trim() : best.Trim();
     }
 
     private static string? ExtractTagContent(string html, string tagName)
     {
         var pattern = $@"<{tagName}[^>]*>([\s\S]*?)</{tagName}>";
         var match = System.Text.RegularExpressions.Regex.Match(
-            html, pattern,
-            System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-
+            html, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         return match.Success ? match.Groups[1].Value : null;
     }
 
     private static string StripHtmlTags(string html)
     {
-        // Remove script and style blocks first
         var cleaned = System.Text.RegularExpressions.Regex.Replace(
-            html,
-            @"<(script|style)[^>]*>[\s\S]*?</(script|style)>",
-            string.Empty,
-            System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-
-        // Strip remaining HTML tags
+            html, @"<(script|style)[^>]*>[\s\S]*?</(script|style)>",
+            string.Empty, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         cleaned = System.Text.RegularExpressions.Regex.Replace(cleaned, @"<[^>]+>", " ");
-
-        // Collapse whitespace
-        cleaned = System.Text.RegularExpressions.Regex.Replace(cleaned, @"\s{2,}", " ");
-
-        return cleaned.Trim();
+        return System.Text.RegularExpressions.Regex.Replace(cleaned, @"\s{2,}", " ").Trim();
     }
 }

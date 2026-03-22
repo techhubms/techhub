@@ -1,9 +1,13 @@
+using System.Globalization;
 using System.Xml;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using TechHub.ContentProcessor.Models;
-using TechHub.ContentProcessor.Options;
+using TechHub.Core.Configuration;
+using TechHub.Core.Models.ContentProcessing;
 
-namespace TechHub.ContentProcessor.Services;
+#pragma warning disable CA1031 // Catch-all intentional: errors must not stop pipeline processing
+
+namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Downloads and parses RSS/Atom feeds into <see cref="RawFeedItem"/> instances
@@ -56,11 +60,10 @@ public sealed class RssFeedIngestionService
         }
 
         var cutoff = DateTimeOffset.UtcNow.AddDays(-_options.ItemAgeLimitDays);
-        var collectionName = NormalizeCollectionName(feedConfig.OutputDir);
 
         try
         {
-            var items = ParseFeed(xmlContent, feedConfig, collectionName, cutoff);
+            var items = ParseFeed(xmlContent, feedConfig, cutoff);
 
             _logger.LogInformation(
                 "Feed {FeedName}: {Count} items within age limit of {Days} days",
@@ -75,39 +78,28 @@ public sealed class RssFeedIngestionService
         }
     }
 
-    private static List<RawFeedItem> ParseFeed(
-        string xmlContent,
-        FeedConfig feedConfig,
-        string collectionName,
-        DateTimeOffset cutoff)
+    private static List<RawFeedItem> ParseFeed(string xmlContent, FeedConfig feedConfig, DateTimeOffset cutoff)
     {
         var doc = new XmlDocument();
         doc.LoadXml(xmlContent);
 
         var nsMgr = new XmlNamespaceManager(doc.NameTable);
         nsMgr.AddNamespace("atom", "http://www.w3.org/2005/Atom");
-        nsMgr.AddNamespace("media", "http://search.yahoo.com/mrss/");
         nsMgr.AddNamespace("dc", "http://purl.org/dc/elements/1.1/");
 
-        // Determine feed format: RSS 2.0 or Atom
         var isAtom = doc.DocumentElement?.NamespaceURI == "http://www.w3.org/2005/Atom"
-            || doc.DocumentElement?.Name == "feed";
+            || string.Equals(doc.DocumentElement?.Name, "feed", StringComparison.OrdinalIgnoreCase);
 
         return isAtom
-            ? ParseAtomFeed(doc, nsMgr, feedConfig, collectionName, cutoff)
-            : ParseRssFeed(doc, nsMgr, feedConfig, collectionName, cutoff);
+            ? ParseAtomFeed(doc, nsMgr, feedConfig, cutoff)
+            : ParseRssFeed(doc, nsMgr, feedConfig, cutoff);
     }
 
     private static List<RawFeedItem> ParseRssFeed(
-        XmlDocument doc,
-        XmlNamespaceManager nsMgr,
-        FeedConfig feedConfig,
-        string collectionName,
-        DateTimeOffset cutoff)
+        XmlDocument doc, XmlNamespaceManager nsMgr, FeedConfig feedConfig, DateTimeOffset cutoff)
     {
         var items = new List<RawFeedItem>();
         var itemNodes = doc.SelectNodes("//channel/item");
-
         if (itemNodes == null)
         {
             return items;
@@ -118,16 +110,10 @@ public sealed class RssFeedIngestionService
             var title = GetNodeText(itemNode, "title") ?? string.Empty;
             var link = GetNodeText(itemNode, "link") ?? string.Empty;
             var description = StripHtml(GetNodeText(itemNode, "description") ?? string.Empty);
-            var author = GetNodeText(itemNode, "author")
-                ?? GetNodeText(itemNode, "dc:creator", nsMgr);
+            var author = GetNodeText(itemNode, "author") ?? GetNodeText(itemNode, "dc:creator", nsMgr);
             var pubDateStr = GetNodeText(itemNode, "pubDate");
 
-            if (!TryParseDate(pubDateStr, out var pubDate) || pubDate < cutoff)
-            {
-                continue;
-            }
-
-            if (string.IsNullOrWhiteSpace(link))
+            if (!TryParseDate(pubDateStr, out var pubDate) || pubDate < cutoff || string.IsNullOrWhiteSpace(link))
             {
                 continue;
             }
@@ -154,7 +140,7 @@ public sealed class RssFeedIngestionService
                 Author = author?.Trim(),
                 FeedTags = tags,
                 FeedName = feedConfig.Name,
-                CollectionName = collectionName
+                CollectionName = feedConfig.CollectionName
             });
         }
 
@@ -162,20 +148,10 @@ public sealed class RssFeedIngestionService
     }
 
     private static List<RawFeedItem> ParseAtomFeed(
-        XmlDocument doc,
-        XmlNamespaceManager nsMgr,
-        FeedConfig feedConfig,
-        string collectionName,
-        DateTimeOffset cutoff)
+        XmlDocument doc, XmlNamespaceManager nsMgr, FeedConfig feedConfig, DateTimeOffset cutoff)
     {
         var items = new List<RawFeedItem>();
-        var nsPrefix = doc.DocumentElement?.NamespaceURI == "http://www.w3.org/2005/Atom" ? "atom" : "";
-        var entryPath = nsPrefix.Length > 0 ? "atom:feed/atom:entry" : "//entry";
-
-        // Try multiple XPath selectors
-        var entryNodes = doc.SelectNodes(entryPath, nsMgr)
-            ?? doc.SelectNodes("//entry", nsMgr);
-
+        var entryNodes = doc.SelectNodes("//entry", nsMgr) ?? doc.SelectNodes("//atom:entry", nsMgr);
         if (entryNodes == null)
         {
             return items;
@@ -189,12 +165,7 @@ public sealed class RssFeedIngestionService
             var author = GetAtomAuthorName(entry, nsMgr);
             var updatedStr = GetAtomText(entry, "updated", nsMgr) ?? GetAtomText(entry, "published", nsMgr);
 
-            if (!TryParseDate(updatedStr, out var pubDate) || pubDate < cutoff)
-            {
-                continue;
-            }
-
-            if (string.IsNullOrWhiteSpace(link))
+            if (!TryParseDate(updatedStr, out var pubDate) || pubDate < cutoff || string.IsNullOrWhiteSpace(link))
             {
                 continue;
             }
@@ -222,7 +193,7 @@ public sealed class RssFeedIngestionService
                 Author = author?.Trim(),
                 FeedTags = tags,
                 FeedName = feedConfig.Name,
-                CollectionName = collectionName
+                CollectionName = feedConfig.CollectionName
             });
         }
 
@@ -231,33 +202,25 @@ public sealed class RssFeedIngestionService
 
     private static string? GetNodeText(XmlNode node, string xpath, XmlNamespaceManager? nsMgr = null)
     {
-        var selected = nsMgr != null
-            ? node.SelectSingleNode(xpath, nsMgr)
-            : node.SelectSingleNode(xpath);
-
+        var selected = nsMgr != null ? node.SelectSingleNode(xpath, nsMgr) : node.SelectSingleNode(xpath);
         return selected?.InnerText?.Trim();
     }
 
     private static string? GetAtomText(XmlNode node, string elementName, XmlNamespaceManager nsMgr)
-        => GetNodeText(node, elementName, null)
-            ?? GetNodeText(node, $"atom:{elementName}", nsMgr);
+        => GetNodeText(node, elementName) ?? GetNodeText(node, $"atom:{elementName}", nsMgr);
 
     private static string? GetAtomLink(XmlNode entry, XmlNamespaceManager nsMgr)
     {
-        // Try alternate link first
         var linkNode = entry.SelectSingleNode("link[@rel='alternate']")
             ?? entry.SelectSingleNode("atom:link[@rel='alternate']", nsMgr)
             ?? entry.SelectSingleNode("link")
             ?? entry.SelectSingleNode("atom:link", nsMgr);
-
         return linkNode?.Attributes?["href"]?.Value ?? linkNode?.InnerText?.Trim();
     }
 
     private static string? GetAtomAuthorName(XmlNode entry, XmlNamespaceManager nsMgr)
     {
-        var authorNode = entry.SelectSingleNode("author/name")
-            ?? entry.SelectSingleNode("atom:author/atom:name", nsMgr);
-
+        var authorNode = entry.SelectSingleNode("author/name") ?? entry.SelectSingleNode("atom:author/atom:name", nsMgr);
         return authorNode?.InnerText?.Trim();
     }
 
@@ -269,18 +232,9 @@ public sealed class RssFeedIngestionService
             return false;
         }
 
-        // Try RFC 1123 (RSS)
-        if (DateTimeOffset.TryParse(dateStr, System.Globalization.CultureInfo.InvariantCulture,
-                System.Globalization.DateTimeStyles.None, out result))
-        {
-            return true;
-        }
-
-        result = default;
-        return false;
+        return DateTimeOffset.TryParse(dateStr, CultureInfo.InvariantCulture, DateTimeStyles.None, out result);
     }
 
-    /// <summary>Strips HTML tags from a string.</summary>
     private static string StripHtml(string html)
     {
         if (string.IsNullOrWhiteSpace(html))
@@ -290,11 +244,6 @@ public sealed class RssFeedIngestionService
 
         return System.Text.RegularExpressions.Regex.Replace(html, "<[^>]*>", string.Empty).Trim();
     }
-
-    /// <summary>
-    /// Normalizes the outputDir value from the JSON config to a plain collection name.
-    /// e.g. "_news" → "news", "blogs" → "blogs"
-    /// </summary>
-    private static string NormalizeCollectionName(string outputDir)
-        => outputDir.TrimStart('_').ToLowerInvariant();
 }
+
+#pragma warning restore CA1031

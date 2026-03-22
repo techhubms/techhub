@@ -5,7 +5,6 @@ param environmentName = 'staging'
 // Image tags — injected via environment variables by Deploy-Infrastructure.ps1
 param apiImageTag = readEnvironmentVariable('API_IMAGE_TAG')
 param webImageTag = readEnvironmentVariable('WEB_IMAGE_TAG')
-// Content processor is not deployed to staging (staging uses database restore instead)
 param resourceGroupName = 'rg-techhub-staging'
 param appInsightsName = 'appi-techhub-staging'
 param containerRegistryName = 'crtechhubms'
