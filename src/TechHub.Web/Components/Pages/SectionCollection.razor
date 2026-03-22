@@ -58,6 +58,11 @@
         </div>
     </aside>
 
+    @if (section?.ShowHeroBanner == true)
+    {
+        <HeroBanner />
+    }
+
     <section>
         <ContentItemsGrid SectionName="@SectionName" CollectionName="@EffectiveCollectionName" FilterTags="@selectedTags"
             SearchQuery="@searchQuery" FromDate="@fromDateString" ToDate="@toDateString"

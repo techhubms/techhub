@@ -71,18 +71,20 @@
                             <img src="@card.LogoUrl" alt="" class="hero-banner-card-logo" aria-hidden="true" />
                         }
                         <div class="hero-banner-card-body">
-                            <p class="hero-banner-card-title">@card.Title</p>
-                            <p class="hero-banner-card-description">@card.Description</p>
+                            <div class="hero-banner-card-text">
+                                <p class="hero-banner-card-title">@card.Title</p>
+                                <p class="hero-banner-card-description">@card.Description</p>
+                            </div>
+                            @if (!string.IsNullOrEmpty(card.LinkUrl))
+                            {
+                                <a href="@card.LinkUrl"
+                                   class="hero-banner-card-link"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    @(card.LinkText ?? "Learn more")
+                                </a>
+                            }
                         </div>
-                        @if (!string.IsNullOrEmpty(card.LinkUrl))
-                        {
-                            <a href="@card.LinkUrl"
-                               class="btn hero-banner-card-link"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                @(card.LinkText ?? "Learn more")
-                            </a>
-                        }
                     </div>
                 }
             </div>

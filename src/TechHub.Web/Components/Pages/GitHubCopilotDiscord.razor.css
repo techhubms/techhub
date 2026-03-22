@@ -3,8 +3,7 @@
    ============================================================================ */
 
 .discord-page {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: none;
 }
 
 .discord-header {
@@ -32,11 +31,18 @@
 }
 
 .discord-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-5);
+  align-items: start;
+}
+
+.discord-main {
   font-size: var(--font-size-lg);
   line-height: 1.7;
 }
 
-.discord-content p {
+.discord-main p {
   margin-bottom: var(--spacing-3);
 }
 
@@ -44,8 +50,17 @@
   font-size: var(--font-size-xl);
 }
 
+.discord-aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+}
+
 .discord-cta {
-  margin: var(--spacing-5) 0;
   text-align: center;
 }
 
@@ -74,11 +89,11 @@
   }
 }
 
-/* Members as subtle inline text */
 .discord-members {
   color: var(--color-text-secondary);
   font-size: var(--font-size-base);
   line-height: 1.8;
+  margin: 0;
 }
 
 .discord-members strong {
@@ -99,5 +114,9 @@
 
   .discord-header h1 {
     font-size: var(--font-size-xl);
+  }
+
+  .discord-content {
+    grid-template-columns: 1fr;
   }
 }

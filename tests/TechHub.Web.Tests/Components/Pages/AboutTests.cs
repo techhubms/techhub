@@ -85,7 +85,7 @@ public class AboutTests : BunitContext
     }
 
     [Fact]
-    public void About_WithDeployImageTag_ShowsVersionInfo()
+    public void About_WithDeployImageTag_ShowsDeploymentInfo()
     {
         // Arrange
         RegisterBranding("tech.hub.ms", deployImageTag: "20260320123232");
@@ -96,13 +96,13 @@ public class AboutTests : BunitContext
         // Assert
         var versionInfo = cut.Find(".version-info");
         versionInfo.Should().NotBeNull();
-        versionInfo.TextContent.Should().Contain("Deployed");
+        versionInfo.TextContent.Should().Contain("Last deployment:");
         versionInfo.TextContent.Should().Contain("20 March 2026");
-        versionInfo.TextContent.Should().Contain(".NET");
+        versionInfo.TextContent.Should().Contain("tag: 20260320123232");
     }
 
     [Fact]
-    public void About_WithoutDeployImageTag_ShowsVersionInfoWithoutDeployDate()
+    public void About_WithoutDeployImageTag_ShowsUnknown()
     {
         // Arrange
         RegisterBranding("tech.hub.ms");
@@ -113,8 +113,7 @@ public class AboutTests : BunitContext
         // Assert
         var versionInfo = cut.Find(".version-info");
         versionInfo.Should().NotBeNull();
-        versionInfo.TextContent.Should().Contain(".NET");
-        versionInfo.TextContent.Should().NotContain("Deployed");
+        versionInfo.TextContent.Should().Contain("Last deployment: unknown");
     }
 
     private void RegisterBranding(string host, string? deployImageTag = null)
