@@ -8,7 +8,9 @@
 
 .discord-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: var(--spacing-3);
   margin-bottom: var(--spacing-5);
 }
@@ -33,7 +35,7 @@
 .discord-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-5);
+  gap: var(--spacing-3);
   align-items: start;
 }
 
@@ -107,11 +109,6 @@
 }
 
 @media (max-width: 768px) {
-  .discord-header {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .discord-header h1 {
     font-size: var(--font-size-xl);
   }
