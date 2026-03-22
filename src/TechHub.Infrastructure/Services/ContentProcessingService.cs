@@ -216,20 +216,10 @@ public sealed class ContentProcessingService
     /// </summary>
     private async Task RegisterRoundupItemAsync(ProcessedContentItem item, CancellationToken ct)
     {
-        // Determine the Monday of the current ISO week in Europe/Brussels
-        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
-            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
-        var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone);
-        var monday = now.Date.AddDays(-(((int)now.DayOfWeek - 1 + 7) % 7));
+        var weekStart = GetCurrentIsoWeekMonday();
+        var sections = GetSectionsToRegister(item);
 
-        // All sections this item belongs to (primary + cross-sections)
-        var sectionsToRegister = item.Sections.Count > 0
-            ? item.Sections
-            : item.PrimarySectionName is not null and not "all"
-                ? [item.PrimarySectionName]
-                : (IEnumerable<string>)[];
-
-        foreach (var section in sectionsToRegister)
+        foreach (var section in sections)
         {
             await _connection.ExecuteAsync(new CommandDefinition(
                 @"INSERT INTO section_roundup_items
@@ -239,12 +229,45 @@ public sealed class ContentProcessingService
                 new
                 {
                     Section = section.ToLowerInvariant(),
-                    WeekStart = monday,
+                    WeekStart = weekStart,
                     Collection = item.CollectionName,
                     Slug = item.Slug
                 },
                 cancellationToken: ct));
         }
+    }
+
+    /// <summary>
+    /// Returns the date of the Monday of the current ISO week, expressed in Europe/Brussels time.
+    /// </summary>
+    private static DateOnly GetCurrentIsoWeekMonday()
+    {
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
+            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
+        var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone);
+        var weekYear = System.Globalization.ISOWeek.GetYear(now);
+        var weekNumber = System.Globalization.ISOWeek.GetWeekOfYear(now);
+        var monday = System.Globalization.ISOWeek.ToDateTime(weekYear, weekNumber, DayOfWeek.Monday);
+        return DateOnly.FromDateTime(monday);
+    }
+
+    /// <summary>
+    /// Returns the list of sections an item should be registered in for roundup drafts.
+    /// Uses the item's known sections first; falls back to the primary section if no sections are set.
+    /// </summary>
+    private static IEnumerable<string> GetSectionsToRegister(ProcessedContentItem item)
+    {
+        if (item.Sections.Count > 0)
+        {
+            return item.Sections;
+        }
+
+        if (!string.IsNullOrEmpty(item.PrimarySectionName) && item.PrimarySectionName != "all")
+        {
+            return [item.PrimarySectionName];
+        }
+
+        return [];
     }
 
     private async Task WriteItemAsync(ProcessedContentItem item, CancellationToken ct)
