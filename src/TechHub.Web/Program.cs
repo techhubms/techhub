@@ -1,4 +1,9 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.Extensions.Options;
+using System.Security.Claims;
+using TechHub.Core.Configuration;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -54,6 +59,29 @@ builder.Services.Configure<RouteOptions>(options =>
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// ─── Admin Authentication (Cookie-based) ─────────────────────────────────────
+// Simple username/password auth for the admin area. Credentials are configured
+// via Admin:Username and Admin:Password in appsettings / environment variables.
+// Intentionally designed to be replaceable with IdentityServer when external
+// user account support is required.
+builder.Services.Configure<AdminOptions>(
+    builder.Configuration.GetSection(AdminOptions.SectionName));
+
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.LoginPath = "/admin/login";
+        options.AccessDeniedPath = "/admin/login";
+        options.Cookie.Name = "techhub-admin";
+        options.Cookie.HttpOnly = true;
+        options.Cookie.SameSite = SameSiteMode.Lax;
+        options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
+        options.ExpireTimeSpan = TimeSpan.FromHours(8);
+        options.SlidingExpiration = true;
+    });
+
+builder.Services.AddAuthorization();
 
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
@@ -193,6 +221,8 @@ app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProv
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
 app.UseAntiforgery();
+app.UseAuthentication();
+app.UseAuthorization();
 
 // ── Step 4: Validate URL structure ───────────────────────────────────────────
 // Reject segments that contain dots, digits at start, or other characters that
@@ -255,6 +285,46 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 })
 .WithName("GetSitemap")
 .WithSummary("XML sitemap")
+.ExcludeFromDescription();
+
+// ─── Admin Auth Endpoints ─────────────────────────────────────────────────────
+// Standard form-POST login/logout: sets/clears the admin auth cookie.
+// The Blazor login page renders a plain HTML form that POSTs here, enabling
+// cookie sign-in from within an InteractiveServer Blazor circuit.
+app.MapPost("/admin/login-submit", async (
+    HttpContext context,
+    [Microsoft.AspNetCore.Mvc.FromForm] string username,
+    [Microsoft.AspNetCore.Mvc.FromForm] string password,
+    [Microsoft.AspNetCore.Mvc.FromForm] string? returnUrl,
+    IOptions<AdminOptions> adminOpts) =>
+{
+    var opts = adminOpts.Value;
+
+    if (string.Equals(username, opts.Username, StringComparison.Ordinal)
+        && !string.IsNullOrEmpty(opts.Password)
+        && string.Equals(password, opts.Password, StringComparison.Ordinal))
+    {
+        var claims = new[] { new Claim(ClaimTypes.Name, username), new Claim(ClaimTypes.Role, "Admin") };
+        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+        var principal = new ClaimsPrincipal(identity);
+        await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+        var redirect = !string.IsNullOrWhiteSpace(returnUrl) && returnUrl.StartsWith('/')
+            ? returnUrl : "/admin";
+        return Results.Redirect(redirect);
+    }
+
+    return Results.Redirect("/admin/login?error=1");
+})
+.WithName("AdminLoginSubmit")
+.ExcludeFromDescription();
+
+app.MapPost("/admin/logout-submit", async (HttpContext context) =>
+{
+    await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+    return Results.Redirect("/admin/login");
+})
+.WithName("AdminLogoutSubmit")
 .ExcludeFromDescription();
 
 await app.RunAsync();

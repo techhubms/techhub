@@ -1,4 +1,4 @@
-namespace TechHub.ContentProcessor.Options;
+namespace TechHub.Core.Configuration;
 
 /// <summary>
 /// Configuration for the Azure OpenAI-backed AI categorization service.

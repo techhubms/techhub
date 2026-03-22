@@ -1,5 +1,6 @@
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
 
 namespace TechHub.Web.Services;
 
@@ -769,6 +770,78 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch {PageName} data", pageName);
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Admin methods
+    // ================================================================
+
+    /// <summary>
+    /// Trigger an immediate content processing run.
+    /// POST /api/admin/processing/trigger
+    /// </summary>
+    public virtual async Task TriggerContentProcessingAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Triggering content processing run");
+            using var response = await _httpClient.PostAsync("/api/admin/processing/trigger", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger content processing");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get recent content processing job history.
+    /// GET /api/admin/processing/jobs
+    /// </summary>
+    public virtual async Task<IReadOnlyList<ContentProcessingJob>> GetProcessingJobsAsync(
+        int count = 20,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogDebug("Fetching processing jobs (count: {Count})", count);
+            var jobs = await _httpClient.GetFromJsonAsync<IReadOnlyList<ContentProcessingJob>>(
+                $"/api/admin/processing/jobs?count={count}",
+                cancellationToken);
+            return jobs ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch processing jobs");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a specific content processing job by ID.
+    /// GET /api/admin/processing/jobs/{id}
+    /// </summary>
+    public virtual async Task<ContentProcessingJob?> GetProcessingJobByIdAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var job = await _httpClient.GetFromJsonAsync<ContentProcessingJob>(
+                $"/api/admin/processing/jobs/{id}",
+                cancellationToken);
+            return job;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch processing job {JobId}", id);
             throw;
         }
     }

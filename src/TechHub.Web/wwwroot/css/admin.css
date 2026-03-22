@@ -1,0 +1,340 @@
+/* =============================================================================
+   Admin Area Styles
+   Minimal, functional styling for the TechHub admin panel.
+   Uses design tokens where possible.
+   ============================================================================= */
+
+/* ─── Layout ──────────────────────────────────────────────────────────────── */
+
+.admin-body {
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-family-sans);
+}
+
+.admin-header {
+    background: var(--color-bg-elevated);
+    border-bottom: 1px solid var(--color-border-subtle);
+    padding: 0 var(--space-6);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.admin-brand {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.admin-nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.admin-nav-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    transition: color 0.15s ease;
+}
+
+.admin-nav-link:hover {
+    color: var(--color-text-primary);
+}
+
+.admin-logout-form {
+    display: flex;
+}
+
+.admin-logout-btn {
+    font-size: var(--font-size-sm);
+    padding: var(--space-1) var(--space-3);
+}
+
+.admin-main {
+    flex: 1;
+    padding: var(--space-8) var(--space-6);
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ─── Login Page ──────────────────────────────────────────────────────────── */
+
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
+    padding: var(--space-6);
+}
+
+.admin-login-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    width: 100%;
+    max-width: 400px;
+}
+
+.admin-login-logo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: var(--space-4);
+}
+
+.admin-login-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin: 0 0 var(--space-2);
+}
+
+.admin-login-subtitle {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    text-align: center;
+    margin: 0 0 var(--space-6);
+}
+
+.admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.admin-login-btn {
+    width: 100%;
+    margin-top: var(--space-2);
+}
+
+/* ─── Form Controls ───────────────────────────────────────────────────────── */
+
+.admin-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.admin-label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.admin-input {
+    background: var(--color-bg-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    padding: var(--space-2) var(--space-3);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease;
+}
+
+.admin-input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-accent) 20%, transparent);
+}
+
+/* ─── Alerts ──────────────────────────────────────────────────────────────── */
+
+.admin-alert {
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-4);
+}
+
+.admin-alert-error {
+    background: color-mix(in srgb, #ef4444 12%, transparent);
+    border: 1px solid color-mix(in srgb, #ef4444 40%, transparent);
+    color: #fca5a5;
+}
+
+.admin-alert-success {
+    background: color-mix(in srgb, #22c55e 12%, transparent);
+    border: 1px solid color-mix(in srgb, #22c55e 40%, transparent);
+    color: #86efac;
+}
+
+/* ─── Dashboard Page ──────────────────────────────────────────────────────── */
+
+.admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+    gap: var(--space-4);
+}
+
+.admin-page-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin: 0 0 var(--space-1);
+    color: var(--color-text-primary);
+}
+
+.admin-page-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0;
+}
+
+.admin-actions {
+    display: flex;
+    gap: var(--space-2);
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.admin-loading,
+.admin-empty {
+    padding: var(--space-10);
+    text-align: center;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+/* ─── Jobs Table ──────────────────────────────────────────────────────────── */
+
+.admin-jobs-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--font-size-sm);
+}
+
+.admin-table th {
+    text-align: left;
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 2px solid var(--color-border);
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.admin-table td {
+    padding: var(--space-2) var(--space-3);
+    border-bottom: 1px solid var(--color-border-subtle);
+    vertical-align: top;
+}
+
+.admin-table tr:hover td {
+    background: var(--color-bg-elevated);
+}
+
+.admin-cell-mono {
+    font-family: var(--font-family-mono);
+    color: var(--color-text-secondary);
+}
+
+.admin-cell-number {
+    text-align: right;
+}
+
+.admin-cell-error {
+    color: #ef4444;
+    font-weight: 600;
+}
+
+/* ─── Badges and Status ───────────────────────────────────────────────────── */
+
+.admin-badge {
+    display: inline-block;
+    padding: 0.1em 0.5em;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.admin-badge-scheduled {
+    background: color-mix(in srgb, var(--color-accent) 15%, transparent);
+    color: var(--color-accent);
+}
+
+.admin-badge-manual {
+    background: color-mix(in srgb, #a855f7 15%, transparent);
+    color: #d8b4fe;
+}
+
+.admin-status {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.admin-status-running {
+    color: #fbbf24;
+}
+
+.admin-status-completed {
+    color: #22c55e;
+}
+
+.admin-status-failed {
+    color: #ef4444;
+}
+
+/* ─── Log Output ──────────────────────────────────────────────────────────── */
+
+.admin-log-row td {
+    padding: var(--space-2) var(--space-3) var(--space-4);
+    background: var(--color-bg-primary);
+}
+
+.admin-log {
+    background: #0d1117;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: #c9d1d9;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    line-height: 1.6;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: var(--space-3) var(--space-4);
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.admin-link-btn {
+    background: none;
+    border: none;
+    color: var(--color-accent);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    padding: 0;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.admin-link-btn:hover {
+    opacity: 0.8;
+}

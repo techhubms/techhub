@@ -1,11 +1,11 @@
-namespace TechHub.ContentProcessor.Models;
+namespace TechHub.Core.Models.ContentProcessing;
 
 /// <summary>
 /// A content item that has been categorized by AI and is ready to be written to the database.
 /// </summary>
 public sealed class ProcessedContentItem
 {
-    /// <summary>URL-friendly slug derived from the title.</summary>
+    /// <summary>URL-friendly slug derived from the title and date.</summary>
     public required string Slug { get; init; }
 
     /// <summary>Cleaned article title (may differ from raw feed title).</summary>
@@ -14,7 +14,7 @@ public sealed class ProcessedContentItem
     /// <summary>Full markdown content of the article.</summary>
     public string Content { get; init; } = string.Empty;
 
-    /// <summary>Short excerpt (≤160 chars) for use in cards and SEO.</summary>
+    /// <summary>Short excerpt (≤300 chars) for use in cards and SEO.</summary>
     public required string Excerpt { get; init; }
 
     /// <summary>Unix timestamp of the publication date (seconds since epoch).</summary>
@@ -26,9 +26,7 @@ public sealed class ProcessedContentItem
     /// <summary>Optional subcollection name for further categorization.</summary>
     public string? SubcollectionName { get; init; }
 
-    /// <summary>
-    /// Canonical external URL of the original article. Used to detect duplicates.
-    /// </summary>
+    /// <summary>Canonical external URL of the original article. Used to detect duplicates.</summary>
     public required string ExternalUrl { get; init; }
 
     /// <summary>Author name, if available.</summary>
@@ -49,6 +47,12 @@ public sealed class ProcessedContentItem
     /// <summary>Primary section name (the most relevant section).</summary>
     public string? PrimarySectionName { get; init; }
 
-    /// <summary>SHA-256 hash of the content used to detect changes on re-processing.</summary>
+    /// <summary>SHA-256 hash of the content for change detection on re-processing.</summary>
     public required string ContentHash { get; init; }
+
+    /// <summary>
+    /// AI-extracted metadata for roundup generation.
+    /// Includes roundup summary, key topics, and relevance level.
+    /// </summary>
+    public RoundupMetadata? RoundupMetadata { get; init; }
 }

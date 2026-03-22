@@ -17,4 +17,10 @@
     <ProjectReference Include="..\TechHub.ServiceDefaults\TechHub.ServiceDefaults.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="rss-feeds.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
