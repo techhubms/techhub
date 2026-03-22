@@ -104,8 +104,6 @@ builder.Services.Configure<ContentProcessorOptions>(
     builder.Configuration.GetSection(ContentProcessorOptions.SectionName));
 builder.Services.Configure<AiCategorizationOptions>(
     builder.Configuration.GetSection(AiCategorizationOptions.SectionName));
-builder.Services.Configure<AdminOptions>(
-    builder.Configuration.GetSection(AdminOptions.SectionName));
 
 // Repository for job tracking (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJobRepository>();

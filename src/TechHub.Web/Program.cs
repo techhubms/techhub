@@ -1,9 +1,8 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.StaticFiles;
-using Microsoft.Extensions.Options;
-using System.Security.Claims;
-using TechHub.Core.Configuration;
+using Microsoft.Identity.Web;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -60,26 +59,17 @@ builder.Services.Configure<RouteOptions>(options =>
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
-// ─── Admin Authentication (Cookie-based) ─────────────────────────────────────
-// Simple username/password auth for the admin area. Credentials are configured
-// via Admin:Username and Admin:Password in appsettings / environment variables.
-// Intentionally designed to be replaceable with IdentityServer when external
-// user account support is required.
-builder.Services.Configure<AdminOptions>(
-    builder.Configuration.GetSection(AdminOptions.SectionName));
-
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-    .AddCookie(options =>
-    {
-        options.LoginPath = "/admin/login";
-        options.AccessDeniedPath = "/admin/login";
-        options.Cookie.Name = "techhub-admin";
-        options.Cookie.HttpOnly = true;
-        options.Cookie.SameSite = SameSiteMode.Lax;
-        options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
-        options.ExpireTimeSpan = TimeSpan.FromHours(8);
-        options.SlidingExpiration = true;
-    });
+// ─── Admin Authentication (Azure AD / Microsoft Entra ID) ────────────────────
+// Uses Microsoft.Identity.Web (OIDC + cookie session). No password stored in config.
+// Required appsettings / environment variables:
+//   AzureAd:TenantId     — Directory (tenant) ID from the Entra app registration
+//   AzureAd:ClientId     — Application (client) ID from the Entra app registration
+//   AzureAd:ClientSecret — Client secret (set as a deployment secret, never in source)
+// The admin area is accessible to any user assigned to the enterprise application.
+// To restrict to specific users/groups, configure assignment required + add group claims
+// to the app registration in Entra ID.
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
 
 builder.Services.AddAuthorization();
 
@@ -287,44 +277,20 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 .WithSummary("XML sitemap")
 .ExcludeFromDescription();
 
-// ─── Admin Auth Endpoints ─────────────────────────────────────────────────────
-// Standard form-POST login/logout: sets/clears the admin auth cookie.
-// The Blazor login page renders a plain HTML form that POSTs here, enabling
-// cookie sign-in from within an InteractiveServer Blazor circuit.
-app.MapPost("/admin/login-submit", async (
-    HttpContext context,
-    [Microsoft.AspNetCore.Mvc.FromForm] string username,
-    [Microsoft.AspNetCore.Mvc.FromForm] string password,
-    [Microsoft.AspNetCore.Mvc.FromForm] string? returnUrl,
-    IOptions<AdminOptions> adminOpts) =>
+// ─── Admin Logout Endpoint ────────────────────────────────────────────────────
+// Microsoft.Identity.Web provides /MicrosoftIdentity/Account/SignIn and /SignOut
+// built-in. We expose /admin/logout as a stable alias for the logout button.
+// Signs out of OIDC first (issues the end_session request to Azure AD), then
+// clears the local cookie. The OIDC sign-out redirects to "/" on completion.
+app.MapGet("/admin/logout", async (HttpContext context) =>
 {
-    var opts = adminOpts.Value;
-
-    if (string.Equals(username, opts.Username, StringComparison.Ordinal)
-        && !string.IsNullOrEmpty(opts.Password)
-        && string.Equals(password, opts.Password, StringComparison.Ordinal))
-    {
-        var claims = new[] { new Claim(ClaimTypes.Name, username), new Claim(ClaimTypes.Role, "Admin") };
-        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-        var principal = new ClaimsPrincipal(identity);
-        await context.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
-
-        var redirect = !string.IsNullOrWhiteSpace(returnUrl) && returnUrl.StartsWith('/')
-            ? returnUrl : "/admin";
-        return Results.Redirect(redirect);
-    }
-
-    return Results.Redirect("/admin/login?error=1");
-})
-.WithName("AdminLoginSubmit")
-.ExcludeFromDescription();
-
-app.MapPost("/admin/logout-submit", async (HttpContext context) =>
-{
+    // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
+    // Cookie sign-out is handled by the OIDC post-logout flow automatically.
+    await context.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme,
+        new AuthenticationProperties { RedirectUri = "/" });
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-    return Results.Redirect("/admin/login");
 })
-.WithName("AdminLogoutSubmit")
+.WithName("AdminLogout")
 .ExcludeFromDescription();
 
 await app.RunAsync();

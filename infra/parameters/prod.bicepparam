@@ -34,4 +34,8 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
 param openAiModelCapacity = 200
+// Azure AD — admin dashboard authentication
+param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
+param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
+param azureAdClientSecret = readEnvironmentVariable('AZURE_AD_CLIENT_SECRET')
 

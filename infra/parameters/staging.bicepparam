@@ -32,4 +32,8 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-staging'
 param openAiModelCapacity = 100
+// Azure AD — admin dashboard authentication (same app registration as prod, different redirect URIs registered)
+param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
+param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
+param azureAdClientSecret = readEnvironmentVariable('AZURE_AD_CLIENT_SECRET')
 
