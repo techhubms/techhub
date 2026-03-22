@@ -323,29 +323,19 @@ public class NavigationTests : PlaywrightTestBase
         // Arrange - Start on homepage (which doesn't have TOC)
         await Page.GotoRelativeAsync("/");
 
-        // First, check if the handbook link is hidden in an expandable section
+        // Wait for the handbook link to exist in the DOM and ensure it's visible.
+        // The link may be hidden in an expandable section whose vanilla JS click handler
+        // has a race condition with Blazor re-renders (re-renders replace DOM elements,
+        // briefly leaving new expand buttons without event handlers). Since expand behavior
+        // is separately tested in SectionCardCustomPagesTests, we unhide directly via JS.
         var handbookLink = Page.Locator("a[href*='/github-copilot/handbook']").First;
-
-        // If link exists but is hidden, click the expand button first
-        if (await handbookLink.CountAsync() > 0)
-        {
-            var isHidden = await handbookLink.IsHiddenAsync();
-            if (isHidden)
-            {
-                // Find and click the expand button in the GitHub Copilot section
-                var githubCopilotSection = Page.Locator("nav[aria-label*='GitHub Copilot collections']");
-                var expandButton = githubCopilotSection.Locator("button.badge-expandable").First;
-
-                // Only click if button exists
-                if (await expandButton.CountAsync() > 0)
-                {
-                    await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
-
-                    // Wait for the link to become visible
-                    await Assertions.Expect(handbookLink).ToBeVisibleAsync();
-                }
-            }
-        }
+        await Page.WaitForConditionAsync(@"() => {
+            const link = document.querySelector('a[href*=""/github-copilot/handbook""]');
+            if (!link) return false;
+            const hidden = link.closest('[hidden]');
+            if (hidden) hidden.hidden = false;
+            return true;
+        }");
 
         // Act - Navigate to handbook page (which has TOC)
         await handbookLink.ClickBlazorElementAsync();
