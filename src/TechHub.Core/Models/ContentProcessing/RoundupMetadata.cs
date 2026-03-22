@@ -20,4 +20,26 @@ public sealed class RoundupMetadata
     /// Values: "high" (major announcement/release), "medium" (useful update), "low" (minor or niche).
     /// </summary>
     public string Relevance { get; init; } = "medium";
+
+    /// <summary>
+    /// The type of content, used for thematic grouping within roundup sections.
+    /// Values: announcement | tutorial | update | guide | analysis | feature |
+    ///         troubleshooting | case-study | news | preview | ga-release |
+    ///         deprecation | migration | integration | comparison
+    /// </summary>
+    public string TopicType { get; init; } = "news";
+
+    /// <summary>
+    /// How much this item directly affects developer workflows.
+    /// Values: "high" (direct impact on developer productivity), "medium" (useful update),
+    ///         "low" (niche or minor).
+    /// </summary>
+    public string ImpactLevel { get; init; } = "medium";
+
+    /// <summary>
+    /// How time-sensitive the content is for developers reading it this week.
+    /// Values: "immediate" (act now), "this-week" (relevant this week),
+    ///         "this-month" (useful soon), "long-term" (reference material).
+    /// </summary>
+    public string TimeSensitivity { get; init; } = "this-week";
 }

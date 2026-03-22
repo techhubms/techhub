@@ -162,6 +162,13 @@ public sealed class ContentProcessingService
                     try
                     {
                         await WriteItemAsync(processed, ct);
+
+                        // Register high/medium relevance items in weekly per-section draft accumulators
+                        if (processed.RoundupMetadata?.Relevance is "high" or "medium")
+                        {
+                            await RegisterRoundupItemAsync(processed, ct);
+                        }
+
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ADDED: {processed.Title}"));
                         itemsAdded++;
                     }
@@ -200,6 +207,44 @@ public sealed class ContentProcessingService
                 new { ExternalUrl = externalUrl },
                 cancellationToken: ct));
         return count > 0;
+    }
+
+    /// <summary>
+    /// Registers a newly processed item in the <c>section_roundup_items</c> accumulation table
+    /// for each section the item belongs to.
+    /// The week is identified by the Monday of the current ISO week in Europe/Brussels time.
+    /// </summary>
+    private async Task RegisterRoundupItemAsync(ProcessedContentItem item, CancellationToken ct)
+    {
+        // Determine the Monday of the current ISO week in Europe/Brussels
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
+            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
+        var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone);
+        var monday = now.Date.AddDays(-(((int)now.DayOfWeek - 1 + 7) % 7));
+
+        // All sections this item belongs to (primary + cross-sections)
+        var sectionsToRegister = item.Sections.Count > 0
+            ? item.Sections
+            : item.PrimarySectionName is not null and not "all"
+                ? [item.PrimarySectionName]
+                : (IEnumerable<string>)[];
+
+        foreach (var section in sectionsToRegister)
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"INSERT INTO section_roundup_items
+                      (section_name, week_start_date, collection_name, slug)
+                  VALUES (@Section, @WeekStart, @Collection, @Slug)
+                  ON CONFLICT DO NOTHING",
+                new
+                {
+                    Section = section.ToLowerInvariant(),
+                    WeekStart = monday,
+                    Collection = item.CollectionName,
+                    Slug = item.Slug
+                },
+                cancellationToken: ct));
+        }
     }
 
     private async Task WriteItemAsync(ProcessedContentItem item, CancellationToken ct)
@@ -258,7 +303,10 @@ public sealed class ContentProcessingService
             {
                 roundup_summary = item.RoundupMetadata.Summary,
                 key_topics = item.RoundupMetadata.KeyTopics,
-                roundup_relevance = item.RoundupMetadata.Relevance
+                roundup_relevance = item.RoundupMetadata.Relevance,
+                topic_type = item.RoundupMetadata.TopicType,
+                impact_level = item.RoundupMetadata.ImpactLevel,
+                time_sensitivity = item.RoundupMetadata.TimeSensitivity
             }, JsonOptions)
             : null;
 
