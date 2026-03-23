@@ -1,4 +1,5 @@
 using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
 
 namespace TechHub.Web.Services;
 
@@ -259,5 +260,31 @@ internal interface ITechHubApiClient
         string authorName,
         int? take = null,
         int? skip = null,
+        CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Trigger an immediate content processing run.
+    /// POST /api/admin/processing/trigger
+    /// </summary>
+    Task TriggerContentProcessingAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get recent content processing job history.
+    /// GET /api/admin/processing/jobs
+    /// </summary>
+    Task<IReadOnlyList<ContentProcessingJob>> GetProcessingJobsAsync(
+        int count = 20,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a specific content processing job by ID.
+    /// GET /api/admin/processing/jobs/{id}
+    /// </summary>
+    Task<ContentProcessingJob?> GetProcessingJobByIdAsync(
+        long id,
         CancellationToken cancellationToken = default);
 }

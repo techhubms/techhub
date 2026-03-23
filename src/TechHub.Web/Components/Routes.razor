@@ -1,6 +1,24 @@
-﻿<Router AppAssembly="typeof(Program).Assembly"
-        NotFoundPage="typeof(Pages.NotFound)">
-    <Found Context="routeData">
-        <RouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
-    </Found>
-</Router>
+﻿@using Microsoft.AspNetCore.Components.Authorization
+
+<CascadingAuthenticationState>
+    <Router AppAssembly="typeof(Program).Assembly"
+            NotFoundPage="typeof(Pages.NotFound)">
+        <Found Context="routeData">
+            <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
+                <NotAuthorized>
+                    @{
+                        // Redirect unauthenticated users to the Azure AD sign-in page.
+                        // /MicrosoftIdentity/Account/SignIn is the built-in MSAL endpoint that
+                        // issues the OIDC challenge and redirects back to returnUrl after login.
+                        var returnUrl = Navigation.Uri;
+                        Navigation.NavigateTo(
+                            $"/MicrosoftIdentity/Account/SignIn?returnUrl={Uri.EscapeDataString(returnUrl)}",
+                            forceLoad: true);
+                    }
+                </NotAuthorized>
+            </AuthorizeRouteView>
+        </Found>
+    </Router>
+</CascadingAuthenticationState>
+
+@inject NavigationManager Navigation

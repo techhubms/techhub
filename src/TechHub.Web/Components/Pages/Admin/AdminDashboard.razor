@@ -1,0 +1,196 @@
+@page "/admin"
+@layout AdminLayout
+@rendermode InteractiveServer
+@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inject NavigationManager Navigation
+
+<PageTitle>Admin Dashboard — TechHub</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Content Processing</h1>
+            <p class="admin-page-subtitle">Manage RSS feed ingestion and AI categorization</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-primary" @onclick="TriggerRunAsync" disabled="@_triggering">
+                @if (_triggering)
+                {
+                    <span>Triggering…</span>
+                }
+                else
+                {
+                    <span>▶ Run Now</span>
+                }
+            </button>
+            <button class="btn-secondary" @onclick="LoadJobsAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_triggerMessage != null)
+    {
+        <div class="admin-alert @(_triggerError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_triggerMessage
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading job history…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_jobs == null || _jobs.Count == 0)
+    {
+        <div class="admin-empty">No processing jobs yet. Click <strong>Run Now</strong> to start the first run.</div>
+    }
+    else
+    {
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Started</th>
+                        <th>Duration</th>
+                        <th>Trigger</th>
+                        <th>Status</th>
+                        <th>Added</th>
+                        <th>Skipped</th>
+                        <th>Errors</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var job in _jobs)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@job.Id</td>
+                            <td>@job.StartedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                            <td>@FormatDuration(job.DurationMs)</td>
+                            <td>
+                                <span class="admin-badge admin-badge-@job.TriggerType">@job.TriggerType</span>
+                            </td>
+                            <td>
+                                <span class="admin-status admin-status-@job.Status">
+                                    @StatusIcon(job.Status) @job.Status
+                                </span>
+                            </td>
+                            <td class="admin-cell-number">@job.ItemsAdded</td>
+                            <td class="admin-cell-number">@job.ItemsSkipped</td>
+                            <td class="admin-cell-number @(job.ErrorCount > 0 ? "admin-cell-error" : "")">
+                                @job.ErrorCount
+                            </td>
+                            <td>
+                                @if (_expandedJobId == job.Id)
+                                {
+                                    <button class="admin-link-btn" @onclick="() => CollapseLog()">Hide log</button>
+                                }
+                                else
+                                {
+                                    <button class="admin-link-btn" @onclick="() => ExpandLog(job.Id)">View log</button>
+                                }
+                            </td>
+                        </tr>
+                        @if (_expandedJobId == job.Id && !string.IsNullOrWhiteSpace(job.LogOutput))
+                        {
+                            <tr class="admin-log-row">
+                                <td colspan="9">
+                                    <pre class="admin-log">@job.LogOutput</pre>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@code {
+    private bool _loading = true;
+    private bool _triggering;
+    private string? _error;
+    private string? _triggerMessage;
+    private bool _triggerError;
+    private IReadOnlyList<ContentProcessingJob>? _jobs;
+    private long? _expandedJobId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadJobsAsync();
+    }
+
+    private async Task LoadJobsAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _jobs = await Api.GetProcessingJobsAsync();
+        }
+        catch (Exception ex)
+        {
+            _error = $"Failed to load jobs: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task TriggerRunAsync()
+    {
+        _triggering = true;
+        _triggerMessage = null;
+
+        try
+        {
+            await Api.TriggerContentProcessingAsync();
+            _triggerMessage = "Processing run triggered successfully. Refresh in a moment to see the new job.";
+            _triggerError = false;
+        }
+        catch (Exception ex)
+        {
+            _triggerMessage = $"Failed to trigger run: {ex.Message}";
+            _triggerError = true;
+        }
+        finally
+        {
+            _triggering = false;
+        }
+    }
+
+    private void ExpandLog(long jobId)
+    {
+        _expandedJobId = jobId;
+    }
+
+    private void CollapseLog()
+    {
+        _expandedJobId = null;
+    }
+
+    private static string FormatDuration(long? durationMs)
+    {
+        if (durationMs == null) return "—";
+        var ts = TimeSpan.FromMilliseconds(durationMs.Value);
+        return ts.TotalMinutes >= 1
+            ? $"{(int)ts.TotalMinutes}m {ts.Seconds}s"
+            : $"{ts.TotalSeconds:F1}s";
+    }
+
+    private static string StatusIcon(string status) => status switch
+    {
+        ContentProcessingJobStatus.Running => "⏳",
+        ContentProcessingJobStatus.Completed => "✅",
+        ContentProcessingJobStatus.Failed => "❌",
+        _ => "❓"
+    };
+}

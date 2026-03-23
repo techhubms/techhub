@@ -1,0 +1,35 @@
+@page "/admin/login"
+@layout AdminLayout
+
+<PageTitle>Admin Sign-in — TechHub</PageTitle>
+
+<div class="admin-login-container">
+    <div class="admin-login-card">
+        <div class="admin-login-logo">⚙️</div>
+        <h1 class="admin-login-title">TechHub Admin</h1>
+        <p class="admin-login-subtitle">Sign in with your Microsoft account to continue</p>
+
+        @if (_showError)
+        {
+            <div class="admin-alert admin-alert-error" role="alert">
+                Sign-in failed or you are not authorised to access this area.
+                Contact the site administrator if you believe this is an error.
+            </div>
+        }
+
+        <a href="/MicrosoftIdentity/Account/SignIn?returnUrl=%2Fadmin" class="btn-primary admin-login-btn-link">
+            Sign in with Microsoft
+        </a>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromQuery] private string? Error { get; set; }
+
+    private bool _showError;
+
+    protected override void OnInitialized()
+    {
+        _showError = !string.IsNullOrEmpty(Error);
+    }
+}

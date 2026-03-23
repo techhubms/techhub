@@ -10,7 +10,6 @@ using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 using TechHub.ServiceDefaults;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
@@ -99,6 +98,44 @@ builder.Services.AddTransient<IRssService, RssService>();
 builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
 builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
 
+// ─── Content Processing Pipeline ─────────────────────────────────────────────
+// Configure content processing options
+builder.Services.Configure<ContentProcessorOptions>(
+    builder.Configuration.GetSection(ContentProcessorOptions.SectionName));
+builder.Services.Configure<AiCategorizationOptions>(
+    builder.Configuration.GetSection(AiCategorizationOptions.SectionName));
+
+// Repository for job tracking (scoped — reuses the scoped IDbConnection)
+builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJobRepository>();
+
+// Typed HTTP clients for the processing services
+builder.Services.AddHttpClient<RssFeedIngestionService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
+        client.Timeout = TimeSpan.FromSeconds(60);
+    });
+
+builder.Services.AddHttpClient<ArticleContentService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
+        client.Timeout = TimeSpan.FromSeconds(30);
+    });
+
+builder.Services.AddHttpClient<AiCategorizationService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.Timeout = TimeSpan.FromSeconds(120);
+    });
+
+// Scoped orchestrator — creates its own scope per call to run in IHostedService
+builder.Services.AddScoped<ContentProcessingService>();
+
+// Background service — singleton, schedules processing runs
+builder.Services.AddSingleton<ContentProcessingBackgroundService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentProcessingBackgroundService>());
+
 // Register startup background service that runs migrations and content sync
 // after Kestrel starts, so health endpoints are reachable during startup
 builder.Services.AddHostedService<StartupBackgroundService>();
@@ -142,6 +179,7 @@ app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
 app.MapSitemapEndpoints();
 app.MapAuthorEndpoints();
+app.MapAdminEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();

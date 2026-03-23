@@ -1,0 +1,34 @@
+@inherits LayoutComponentBase
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — TechHub</title>
+    <base href="/" />
+    <link rel="stylesheet" href="@Assets["css/design-tokens.css"]" />
+    <link rel="stylesheet" href="@Assets["css/base.css"]" />
+    <link rel="stylesheet" href="@Assets["css/buttons.css"]" />
+    <link rel="stylesheet" href="@Assets["css/admin.css"]" />
+    <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
+    <HeadOutlet @rendermode="InteractiveServer" />
+</head>
+<body class="admin-body">
+    <header class="admin-header">
+        <nav class="admin-nav">
+            <a href="/admin" class="admin-brand">⚙️ TechHub Admin</a>
+            <div class="admin-nav-actions">
+                <a href="/" class="admin-nav-link">← Back to Site</a>
+                <a href="/MicrosoftIdentity/Account/SignOut" class="btn-secondary admin-logout-btn">Log out</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="admin-main">
+        @Body
+    </main>
+
+    <script src="@Assets["_framework/blazor.web.js"]"></script>
+</body>
+</html>

@@ -22,6 +22,18 @@ param primaryHosts string[] = []
 @description('Key Vault certificate resource IDs for wildcard TLS (mapped by base domain, e.g. { "hub.ms": "cert-resource-id" }). When provided, domains use SniEnabled binding with these certs instead of managed certificates.')
 param wildcardCertificateIds object = {}
 
+@secure()
+@description('Azure AD tenant ID for admin authentication')
+param azureAdTenantId string = ''
+
+@secure()
+@description('Azure AD client ID for admin authentication')
+param azureAdClientId string = ''
+
+@secure()
+@description('Azure AD client secret for admin authentication')
+param azureAdClientSecret string = ''
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
 
@@ -50,6 +62,18 @@ var staticEnvVars = [
   {
     name: 'DEPLOY_IMAGE_TAG'
     value: imageTag
+  }
+  {
+    name: 'AzureAd__TenantId'
+    secretRef: 'azure-ad-tenant-id'
+  }
+  {
+    name: 'AzureAd__ClientId'
+    secretRef: 'azure-ad-client-id'
+  }
+  {
+    name: 'AzureAd__ClientSecret'
+    secretRef: 'azure-ad-client-secret'
   }
 ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
@@ -89,6 +113,20 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         {
           server: '${containerRegistryName}.azurecr.io'
           identity: acrPullIdentityId
+        }
+      ]
+      secrets: [
+        {
+          name: 'azure-ad-tenant-id'
+          value: azureAdTenantId
+        }
+        {
+          name: 'azure-ad-client-id'
+          value: azureAdClientId
+        }
+        {
+          name: 'azure-ad-client-secret'
+          value: azureAdClientSecret
         }
       ]
     }

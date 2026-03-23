@@ -1,4 +1,8 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.Identity.Web;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -54,6 +58,20 @@ builder.Services.Configure<RouteOptions>(options =>
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// ─── Admin Authentication (Azure AD / Microsoft Entra ID) ────────────────────
+// Uses Microsoft.Identity.Web (OIDC + cookie session). No password stored in config.
+// Required appsettings / environment variables:
+//   AzureAd:TenantId     — Directory (tenant) ID from the Entra app registration
+//   AzureAd:ClientId     — Application (client) ID from the Entra app registration
+//   AzureAd:ClientSecret — Client secret (set as a deployment secret, never in source)
+// The admin area is accessible to any user assigned to the enterprise application.
+// To restrict to specific users/groups, configure assignment required + add group claims
+// to the app registration in Entra ID.
+builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+
+builder.Services.AddAuthorization();
 
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
@@ -193,6 +211,8 @@ app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProv
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
 app.UseAntiforgery();
+app.UseAuthentication();
+app.UseAuthorization();
 
 // ── Step 4: Validate URL structure ───────────────────────────────────────────
 // Reject segments that contain dots, digits at start, or other characters that
@@ -255,6 +275,22 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 })
 .WithName("GetSitemap")
 .WithSummary("XML sitemap")
+.ExcludeFromDescription();
+
+// ─── Admin Logout Endpoint ────────────────────────────────────────────────────
+// Microsoft.Identity.Web provides /MicrosoftIdentity/Account/SignIn and /SignOut
+// built-in. We expose /admin/logout as a stable alias for the logout button.
+// Signs out of OIDC first (issues the end_session request to Azure AD), then
+// clears the local cookie. The OIDC sign-out redirects to "/" on completion.
+app.MapGet("/admin/logout", async (HttpContext context) =>
+{
+    // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
+    // Cookie sign-out is handled by the OIDC post-logout flow automatically.
+    await context.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme,
+        new AuthenticationProperties { RedirectUri = "/" });
+    await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+})
+.WithName("AdminLogout")
 .ExcludeFromDescription();
 
 await app.RunAsync();
