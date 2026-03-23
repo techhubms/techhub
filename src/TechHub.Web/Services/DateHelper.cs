@@ -6,7 +6,7 @@ namespace TechHub.Web.Services;
 /// </summary>
 public static class DateHelper
 {
-    private static readonly TimeZoneInfo BrusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+    private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
 
     /// <summary>
     /// Formats a Unix epoch timestamp as a relative date string:
@@ -15,8 +15,8 @@ public static class DateHelper
     public static string FormatDateRelative(long epochSeconds)
     {
         var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
-        var brusselsDate = TimeZoneInfo.ConvertTime(dateTime, BrusselsTimeZone).Date;
-        var todayBrussels = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTimeZone).Date;
+        var brusselsDate = TimeZoneInfo.ConvertTime(dateTime, _brusselsTimeZone).Date;
+        var todayBrussels = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, _brusselsTimeZone).Date;
         var daysDiff = (todayBrussels - brusselsDate).Days;
 
         if (daysDiff == 0)
