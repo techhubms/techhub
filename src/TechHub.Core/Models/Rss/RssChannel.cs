@@ -11,4 +11,9 @@ public record RssChannel
     public required string Language { get; init; }
     public required DateTimeOffset LastBuildDate { get; init; }
     public required IReadOnlyList<RssItem> Items { get; init; }
+
+    /// <summary>
+    /// The canonical URL of this feed (used for atom:link rel="self")
+    /// </summary>
+    public string? FeedUrl { get; init; }
 }
