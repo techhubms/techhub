@@ -1,0 +1,32 @@
+{
+  "OutputDir": "_videos",
+  "PubDate": "2026-03-23T10:56:00+00:00",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "FeedName": "John Savill's Technical Training",
+  "Tags": [
+    "agent builder",
+    "agent framework",
+    "ai",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "Copilot",
+    "copilot studio",
+    "copilotstudio",
+    "johnsavillstechnicaltraining",
+    "m365",
+    "m365 copilot",
+    "microsoft",
+    "microsoft azure",
+    "microsoft foundry",
+    "microsoftfoundry",
+    "onboardtoazure"
+  ],
+  "Description": "How to pick between Agent Builder, Copilot Studio and Microsoft Foundry to build your agent.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:17 - Quick way to decide 02:02 - Organizational maturity progression 05:19 - Building agents 05:39 - Agent Builder, Copilot Studio and Microsoft Foundry 06:39 - Code complexity 10:23 - Model selection 13:01 - Deployment target 14:27 - Lifecycle management 16:09 - Observability 17:43 - Evaluations 21:13 - Safety 22:39 - Tools and knowledge 24:04 - Multi-agent 25:29 - Memory 27:11 - Audience 27:42 - Cost control 29:18 - Summary, box meals, restaurants and really good kitchens 31:09 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/WhichAgentBuilder.png ► Neat table version: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Images/WhichAgentTable.png\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #Copilot #copilotstudio #microsoftfoundry #AI #johnsavillstechnicaltraining #onboardtoazure",
+  "Author": "John Savill's Technical Training",
+  "Link": "https://www.youtube.com/watch?v=WUgujz0y1K4",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Title": "Picking the right Agent Builder solution",
+  "ProcessedDate": "2026-03-23 11:20:19"
+}
