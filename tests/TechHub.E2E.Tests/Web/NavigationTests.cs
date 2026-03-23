@@ -318,26 +318,17 @@ public class NavigationTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task TOC_HighlightingWorksAfterNavigation_FromHomepageToHandbook()
+    public async Task TOC_HighlightingWorksAfterNavigation_FromGitHubCopilotToHandbook()
     {
-        // Arrange - Start on homepage (which doesn't have TOC)
-        await Page.GotoRelativeAsync("/");
+        // Arrange - Start on the GitHub Copilot section page where the handbook link
+        // is always visible in the sub-nav (not hidden in a collapsed section).
+        // This tests the same scenario as "from a page without TOC to a page with TOC"
+        // via enhanced navigation (Blazor SPA-style link click, no full page reload).
+        await Page.GotoRelativeAsync("/github-copilot/all");
 
-        // Wait for the handbook link to exist in the DOM and ensure it's visible.
-        // The link may be hidden in an expandable section whose vanilla JS click handler
-        // has a race condition with Blazor re-renders (re-renders replace DOM elements,
-        // briefly leaving new expand buttons without event handlers). Since expand behavior
-        // is separately tested in SectionCardCustomPagesTests, we unhide directly via JS.
-        var handbookLink = Page.Locator("a[href*='/github-copilot/handbook']").First;
-        await Page.WaitForConditionAsync(@"() => {
-            const link = document.querySelector('a[href*=""/github-copilot/handbook""]');
-            if (!link) return false;
-            const hidden = link.closest('[hidden]');
-            if (hidden) hidden.hidden = false;
-            return true;
-        }");
-
-        // Act - Navigate to handbook page (which has TOC)
+        // Act - Navigate to handbook page (which has TOC) via the sub-nav link.
+        // The sub-nav renders all custom pages including the handbook as visible links.
+        var handbookLink = Page.Locator(".sub-nav a[href*='/github-copilot/handbook']").First;
         await handbookLink.ClickBlazorElementAsync();
 
         // Wait for navigation to complete
