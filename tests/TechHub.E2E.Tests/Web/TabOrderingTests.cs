@@ -364,10 +364,13 @@ public class TabOrderingTests : PlaywrightTestBase
         // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation,
         // but rAF doesn't fire reliably in headless Chrome. Explicitly reset focus to body
         // (same action nav-helpers.js performs) to ensure Tab starts from top.
+        // IMPORTANT: Keep tabindex=-1 here — body with tabindex=-1 is a valid Tab target,
+        // so pressing Tab reliably moves focus to the NEXT element (the skip link).
+        // Removing tabindex before pressing Tab leaves body without a tab position,
+        // causing headless Chromium to sometimes keep focus on body and time out.
         await Page.EvaluateAsync(@"() => {
             document.body.tabIndex = -1;
             document.body.focus();
-            document.body.removeAttribute('tabindex');
         }");
 
         // Step 5: Verify we're on a new page (not homepage)
@@ -378,12 +381,22 @@ public class TabOrderingTests : PlaywrightTestBase
         // The application should have reset focus to body during enhanced navigation
         await Page.Keyboard.PressAsync("Tab");
 
-        // Wait for focus to land on a real element (not body) after Tab
-        await Page.WaitForConditionAsync(
-            "() => document.activeElement && document.activeElement !== document.body");
+        // Remove tabindex from body after Tab press (body should not stay in tab order)
+        await Page.EvaluateAsync("() => document.body.removeAttribute('tabindex')");
 
-        var tagName = await Page.EvaluateAsync<string>("() => document.activeElement.tagName.toLowerCase()");
-        var className = await Page.EvaluateAsync<string>("() => document.activeElement.className || ''");
+        // Tab focus changes are synchronous in the browser — a direct EvaluateAsync is
+        // faster and more reliable than WaitForConditionAsync, which can timeout in CI
+        // when focus briefly stays on body (see: TabOrdering_AfterNavigation_ShouldStart_WithSkipLink).
+        var focusedElementInfo = await Page.EvaluateAsync<string>(
+            @"() => {
+                const el = document.activeElement;
+                if (!el) return 'none|none';
+                return el.tagName.toLowerCase() + '|' + (el.className || '');
+            }");
+
+        var parts = focusedElementInfo.Split('|');
+        var tagName = parts[0];
+        var className = parts.Length > 1 ? parts[1] : "";
 
         // First focusable element should be the skip link
         (tagName == "a" && className.Contains("skip-link")).Should().BeTrue(
