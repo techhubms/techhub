@@ -30,6 +30,17 @@ public class ContentItemCardTests : BunitContext
                     new Collection("videos", "Videos", "/ai/videos", "Videos", "Videos", false),
                     new Collection("community", "Community", "/ai/community", "Community", "Community Posts", false)
                 ]
+            ),
+            new Section(
+                "all",
+                "All",
+                "All content",
+                "/all",
+                "All",
+                [
+                    new Collection("news", "News", "/all/news", "All news", "News", false),
+                    new Collection("roundups", "Roundups", "/all/roundups", "Weekly roundups", "Roundups", false)
+                ]
             )
         ]);
         Services.AddSingleton(sectionCache);
