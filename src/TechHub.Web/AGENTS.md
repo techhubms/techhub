@@ -625,9 +625,13 @@ else
 
 ### Date Formatting
 
-**Pattern**: Use helper methods for relative dates ("Today", "Yesterday", "3 days ago", etc.) instead of absolute dates. Convert Unix epoch to `DateTimeOffset` and calculate difference from now.
+**Pattern**: Use `DateHelper` in `TechHub.Web.Services` for all relative and formatted date output. Never duplicate date formatting logic in components.
 
-See component code for implementation.
+- `DateHelper.FormatDateRelative(epochSeconds)` — "Today", "Yesterday", "X days ago", "X weeks ago", or "MMM d, yyyy"
+- `DateHelper.FormatDateFull(epochSeconds)` — full date, e.g. "March 23, 2026"
+- `DateHelper.FormatDateIso(epochSeconds)` — ISO date, e.g. "2026-03-23"
+
+All methods use `Europe/Brussels` timezone for date comparisons.
 
 ## File Structure
 

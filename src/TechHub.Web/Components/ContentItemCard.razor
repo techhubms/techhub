@@ -168,32 +168,9 @@
         _showAllTags = true;
     }
 
-    private static readonly TimeZoneInfo BrusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
-
-    private string FormatDate(long epochSeconds)
-    {
-        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
-        var brusselsDate = TimeZoneInfo.ConvertTime(dateTime, BrusselsTimeZone).Date;
-        var todayBrussels = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTimeZone).Date;
-        var daysDiff = (todayBrussels - brusselsDate).Days;
-
-        if (daysDiff == 0)
-            return "Today";
-        if (daysDiff == 1)
-            return "Yesterday";
-        if (daysDiff < 7)
-            return $"{daysDiff} days ago";
-        if (daysDiff < 30)
-            return $"{daysDiff / 7} weeks ago";
-
-        return dateTime.ToString("MMM d, yyyy");
-    }
-
-    private static string FormatDateFull(long epochSeconds) =>
-        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("MMMM d, yyyy");
-
-    private static string FormatDateIso(long epochSeconds) =>
-        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd");
+    private static string FormatDate(long epochSeconds) => DateHelper.FormatDateRelative(epochSeconds);
+    private static string FormatDateFull(long epochSeconds) => DateHelper.FormatDateFull(epochSeconds);
+    private static string FormatDateIso(long epochSeconds) => DateHelper.FormatDateIso(epochSeconds);
 
     private string CapitalizeCollection(string collection)
     {

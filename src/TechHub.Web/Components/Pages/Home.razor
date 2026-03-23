@@ -202,24 +202,5 @@ ErrorService.HandleError(ex, Navigation, Logger);
         GC.SuppressFinalize(this);
     }
 
-    private static readonly TimeZoneInfo BrusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
-
-    private static string FormatDateShort(long epochSeconds)
-    {
-        var dateTime = DateTimeOffset.FromUnixTimeSeconds(epochSeconds);
-        var brusselsDate = TimeZoneInfo.ConvertTime(dateTime, BrusselsTimeZone).Date;
-        var todayBrussels = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTimeZone).Date;
-        var daysDiff = (todayBrussels - brusselsDate).Days;
-
-        if (daysDiff == 0)
-            return "Today";
-        if (daysDiff == 1)
-            return "Yesterday";
-        if (daysDiff < 7)
-            return $"{daysDiff} days ago";
-        if (daysDiff < 30)
-            return $"{daysDiff / 7} weeks ago";
-
-        return dateTime.ToString("MMM d, yyyy");
-    }
+    private static string FormatDateShort(long epochSeconds) => DateHelper.FormatDateRelative(epochSeconds);
 }
