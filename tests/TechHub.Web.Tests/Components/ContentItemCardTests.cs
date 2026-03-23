@@ -1,8 +1,10 @@
 using Bunit;
 using FluentAssertions;
+using Microsoft.Extensions.DependencyInjection;
 using TechHub.Core.Models;
 using TechHub.TestUtilities.Builders;
 using TechHub.Web.Components;
+using TechHub.Web.Services;
 
 namespace TechHub.Web.Tests.Components;
 
@@ -11,6 +13,28 @@ namespace TechHub.Web.Tests.Components;
 /// </summary>
 public class ContentItemCardTests : BunitContext
 {
+    public ContentItemCardTests()
+    {
+        var sectionCache = new SectionCache();
+        sectionCache.Initialize(
+        [
+            new Section(
+                "ai",
+                "Artificial Intelligence",
+                "AI content",
+                "/ai",
+                "AI",
+                [
+                    new Collection("news", "News", "/ai/news", "News", "News", false),
+                    new Collection("blogs", "Blogs", "/ai/blogs", "Blogs", "Blog Posts", false),
+                    new Collection("videos", "Videos", "/ai/videos", "Videos", "Videos", false),
+                    new Collection("community", "Community", "/ai/community", "Community", "Community Posts", false)
+                ]
+            )
+        ]);
+        Services.AddSingleton(sectionCache);
+    }
+
     [Fact]
     public void ContentItemCard_RendersTitle_Correctly()
     {
@@ -507,6 +531,50 @@ public class ContentItemCardTests : BunitContext
             .WithPrimarySectionName("ai")
             .WithExternalUrl("https://example.com/post")
             .Build();
+    }
+
+    [Fact]
+    public void ContentItemCard_CollectionBadge_FallsBackToAll_WhenCollectionNotInSection()
+    {
+        // Arrange - Item has "roundups" collection which doesn't exist in the "ai" section
+        var item = A.ContentItem
+            .WithTitle("Weekly Roundup")
+            .WithCollectionName("roundups")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/roundup")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.ShowCollectionBadge, true));
+
+        // Assert - Badge link should fall back to /all/roundups since "roundups" doesn't exist in "ai"
+        var badge = cut.Find(".badge-purple");
+        badge.GetAttribute("href").Should().Be("/all/roundups");
+    }
+
+    [Fact]
+    public void ContentItemCard_CollectionBadge_UsesCurrentSection_WhenCollectionExists()
+    {
+        // Arrange - Item has "news" collection which exists in the "ai" section
+        var item = A.ContentItem
+            .WithTitle("AI News")
+            .WithCollectionName("news")
+            .WithPrimarySectionName("ai")
+            .WithExternalUrl("https://example.com/news")
+            .Build();
+
+        // Act
+        var cut = Render<ContentItemCard>(parameters => parameters
+            .Add(p => p.Item, item)
+            .Add(p => p.SectionName, "ai")
+            .Add(p => p.ShowCollectionBadge, true));
+
+        // Assert - Badge link should use the current section since "news" exists in "ai"
+        var badge = cut.Find(".badge-purple");
+        badge.GetAttribute("href").Should().Be("/ai/news");
     }
 }
 

@@ -1,5 +1,7 @@
 @using TechHub.Core.Models
+@using TechHub.Web.Services
 @inject NavigationManager Navigation
+@inject SectionCache SectionCache
 
 <div class="card"
    aria-label="@Item.GetAriaLabel()">
@@ -97,6 +99,15 @@
     private string GetCollectionUrl()
     {
         var section = SectionName ?? Item.PrimarySectionName;
+        var sectionData = SectionCache.GetSectionByName(section);
+
+        // If the collection doesn't exist in the current section, fall back to "all"
+        if (sectionData != null &&
+            !sectionData.Collections.Any(c => string.Equals(c.Name, Item.CollectionName, StringComparison.OrdinalIgnoreCase)))
+        {
+            section = "all";
+        }
+
         return $"/{section}/{Item.CollectionName}";
     }
 
