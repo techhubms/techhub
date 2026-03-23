@@ -41,6 +41,7 @@ public class RssService : IRssService
 
         var rssItems = sortedItems.Select(CreateRssItem).ToList();
 
+        var sectionUrlPath = section.Url == "/" ? "/all" : section.Url;
         var channel = new RssChannel
         {
             Title = $"{SiteTitle} - {section.Title}",
@@ -50,7 +51,8 @@ public class RssService : IRssService
             LastBuildDate = sortedItems.FirstOrDefault() != null
                 ? DateTimeOffset.FromUnixTimeSeconds(sortedItems.First().DateEpoch)
                 : DateTimeOffset.UtcNow,
-            Items = rssItems
+            Items = rssItems,
+            FeedUrl = $"{_settings.BaseUrl}{sectionUrlPath}/feed.xml"
         };
 
         return Task.FromResult(channel);
@@ -84,7 +86,8 @@ public class RssService : IRssService
             LastBuildDate = sortedItems.FirstOrDefault() != null
                 ? DateTimeOffset.FromUnixTimeSeconds(sortedItems.First().DateEpoch)
                 : DateTimeOffset.UtcNow,
-            Items = rssItems
+            Items = rssItems,
+            FeedUrl = $"{_settings.BaseUrl}/all/{collectionName}/feed.xml"
         };
 
         return Task.FromResult(channel);
@@ -103,14 +106,16 @@ public class RssService : IRssService
             OmitXmlDeclaration = false
         };
 
-        using var stringWriter = new StringWriter();
-        using (var xmlWriter = XmlWriter.Create(stringWriter, settings))
+        using var memoryStream = new MemoryStream();
+        using (var xmlWriter = XmlWriter.Create(memoryStream, settings))
         {
             xmlWriter.WriteStartDocument();
 
-            // <rss version="2.0">
+            // <rss version="2.0" xmlns:atom="..." xmlns:dc="...">
             xmlWriter.WriteStartElement("rss");
             xmlWriter.WriteAttributeString("version", "2.0");
+            xmlWriter.WriteAttributeString("xmlns", "atom", "http://www.w3.org/2000/xmlns/", "http://www.w3.org/2005/Atom");
+            xmlWriter.WriteAttributeString("xmlns", "dc", "http://www.w3.org/2000/xmlns/", "http://purl.org/dc/elements/1.1/");
 
             // <channel>
             xmlWriter.WriteStartElement("channel");
@@ -121,6 +126,16 @@ public class RssService : IRssService
             xmlWriter.WriteElementString("link", channel.Link);
             xmlWriter.WriteElementString("language", channel.Language);
             xmlWriter.WriteElementString("lastBuildDate", channel.LastBuildDate.ToString("R")); // RFC1123
+
+            // atom:link rel="self" — identifies the canonical URL of this feed
+            if (!string.IsNullOrWhiteSpace(channel.FeedUrl))
+            {
+                xmlWriter.WriteStartElement("atom", "link", "http://www.w3.org/2005/Atom");
+                xmlWriter.WriteAttributeString("href", channel.FeedUrl);
+                xmlWriter.WriteAttributeString("rel", "self");
+                xmlWriter.WriteAttributeString("type", "application/rss+xml");
+                xmlWriter.WriteEndElement();
+            }
 
             // Items
             foreach (var item in channel.Items)
@@ -139,9 +154,11 @@ public class RssService : IRssService
 
                 xmlWriter.WriteElementString("pubDate", item.PubDate.ToString("R")); // RFC1123
 
+                // Use dc:creator instead of author — RSS 2.0 <author> requires an email address
+                // per RFC 2822, but dc:creator accepts plain author names.
                 if (!string.IsNullOrWhiteSpace(item.Author))
                 {
-                    xmlWriter.WriteElementString("author", item.Author);
+                    xmlWriter.WriteElementString("dc", "creator", "http://purl.org/dc/elements/1.1/", item.Author);
                 }
 
                 // Write tags as categories
@@ -159,7 +176,7 @@ public class RssService : IRssService
             xmlWriter.WriteEndDocument();
         }
 
-        return stringWriter.ToString();
+        return Encoding.UTF8.GetString(memoryStream.ToArray());
     }
 
     private RssItem CreateRssItem(ContentItem item)
