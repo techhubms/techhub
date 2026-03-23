@@ -321,18 +321,25 @@ public class RssServiceTests
         var xml = _rssService.SerializeToXml(channel);
 
         // Assert
-        xml.Should().Contain("<?xml version=\"1.0\" encoding=\"utf-16\"?>");  // StringWriter uses UTF-16
-        xml.Should().Contain("<rss version=\"2.0\">");
+        xml.Should().Contain("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
+        xml.Should().Contain("<rss version=\"2.0\"");
+        xml.Should().Contain("xmlns:atom=\"http://www.w3.org/2005/Atom\"");
+        xml.Should().Contain("xmlns:dc=\"http://purl.org/dc/elements/1.1/\"");
         xml.Should().Contain("<channel>");
         xml.Should().Contain("<title>Tech Hub - AI</title>");
         xml.Should().Contain("<description>Artificial Intelligence resources</description>");
         xml.Should().Contain("<link>https://localhost:5003/ai</link>");
         xml.Should().Contain("<language>en-us</language>");
+        xml.Should().Contain("<atom:link");
+        xml.Should().Contain("href=\"https://localhost:5003/ai/feed.xml\"");
+        xml.Should().Contain("rel=\"self\"");
+        xml.Should().Contain("type=\"application/rss+xml\"");
         xml.Should().Contain("<item>");
         xml.Should().Contain("<title>Test Article 1</title>");
         xml.Should().Contain("<guid isPermaLink=\"true\">");
         xml.Should().Contain("<pubDate>");
-        xml.Should().Contain("<author>John Doe</author>");
+        xml.Should().Contain("<dc:creator>John Doe</dc:creator>");
+        xml.Should().NotContain("<author>John Doe</author>");
         xml.Should().Contain("<category>AI</category>");  // Tag from content
         xml.Should().Contain("<category>Machine Learning</category>");  // Tag from content
         xml.Should().Contain("</item>");
