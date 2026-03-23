@@ -13942,5 +13942,11 @@
     "collection": "blogs",
     "reason": "No categories found: Excluded by Generic Exclusion Rules: this is general, vendor-neutral enterprise AI/architecture content without Microsoft development technologies being central (no Azure AI Foundry/Azure OpenAI, no .NET, no GitHub Copilot, no Azure services, no Entra/Defender/Sentinel specifics). It also references 'Copilot' only in a generic/enterprise sense, which is ambiguous and could map to non-development Microsoft Copilot products; without explicit GitHub Copilot or Microsoft developer tooling context, categories must be left empty (\"When in doubt, exclude\").",
     "canonical_url": "https://dellenny.com/reference-architecture-for-agentic-ai-in-enterprise-it/"
+  },
+  {
+    "timestamp": "2026-03-23 21:18:03 +00:00",
+    "collection": "videos",
+    "reason": "No categories found: Excluded because there is no substantive content provided (the `content` field is null and the `description` is empty), so there’s nothing to evaluate against the category inclusion rules or the ≥40% Microsoft-centrality threshold. Without actual technical details about the video, assigning categories would require fabrication, which is not allowed.",
+    "canonical_url": "https://www.youtube.com/shorts/GSK2fSfAYYU"
   }
 ]
