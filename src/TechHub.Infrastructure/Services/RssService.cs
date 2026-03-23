@@ -98,11 +98,14 @@ public class RssService : IRssService
     {
         ArgumentNullException.ThrowIfNull(channel);
 
+        // Use UTF-8 without BOM — HTTP responses must not start with a BOM, and XmlParser
+        // will reject a string that begins with the U+FEFF byte-order-mark character.
+        var utf8NoBom = new UTF8Encoding(encoderShouldEmitUTF8Identifier: false);
         var settings = new XmlWriterSettings
         {
             Indent = true,
             IndentChars = "  ",
-            Encoding = Encoding.UTF8,
+            Encoding = utf8NoBom,
             OmitXmlDeclaration = false
         };
 
@@ -176,7 +179,7 @@ public class RssService : IRssService
             xmlWriter.WriteEndDocument();
         }
 
-        return Encoding.UTF8.GetString(memoryStream.ToArray());
+        return utf8NoBom.GetString(memoryStream.ToArray());
     }
 
     private RssItem CreateRssItem(ContentItem item)
