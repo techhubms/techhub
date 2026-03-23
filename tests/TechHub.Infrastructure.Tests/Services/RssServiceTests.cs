@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using FluentAssertions;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -321,6 +322,10 @@ public class RssServiceTests
         var xml = _rssService.SerializeToXml(channel);
 
         // Assert
+        // Verify the XML can be parsed — catches issues such as a leading BOM character
+        var act = () => XDocument.Parse(xml);
+        act.Should().NotThrow("the serialized XML must be parseable without a leading byte-order mark");
+
         xml.Should().Contain("<?xml version=\"1.0\" encoding=\"utf-8\"?>");
         xml.Should().Contain("<rss version=\"2.0\"");
         xml.Should().Contain("xmlns:atom=\"http://www.w3.org/2005/Atom\"");

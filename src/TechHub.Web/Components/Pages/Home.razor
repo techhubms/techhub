@@ -202,6 +202,5 @@ ErrorService.HandleError(ex, Navigation, Logger);
         GC.SuppressFinalize(this);
     }
 
-    private static string FormatDateShort(long epochSeconds) =>
-        DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("MMM dd, yyyy");
+    private static string FormatDateShort(long epochSeconds) => DateHelper.FormatDateRelative(epochSeconds);
 }

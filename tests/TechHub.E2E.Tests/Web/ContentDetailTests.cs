@@ -113,8 +113,8 @@ public class ContentDetailTests : PlaywrightTestBase
         // Arrange - Start from homepage where latest roundup is featured
         await Page.GotoRelativeAsync("/");
 
-        // Act - Click roundup link (finds links with date format like "Dec 29, 2025")
-        var roundupLinks = Page.Locator("a").Filter(new() { HasTextRegex = new Regex(@"[A-Z][a-z]{2}\s+\d{1,2},\s+\d{4}", RegexOptions.None) });
+        // Act - Click roundup link (find featured roundup link in the sidebar)
+        var roundupLinks = Page.Locator(".latest-roundup a.sidebar-featured-link");
         var count = await roundupLinks.CountAsync();
 
         if (count > 0)
