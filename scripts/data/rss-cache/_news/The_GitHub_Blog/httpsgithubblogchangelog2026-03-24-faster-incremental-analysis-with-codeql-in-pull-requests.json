@@ -1,0 +1,17 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "Faster incremental analysis with CodeQL in pull requests",
+  "EnhancedContent": "CodeQL scans on pull requests for C#, Java, JavaScript/TypeScript, Python, and Ruby are now incremental, making them faster. Earlier this year, [we sped up scans](https://github.blog/changelog/2025-05-28-incremental-security-analysis-makes-codeql-up-to-20-faster-in-pull-requests/) during pull requests with CodeQL by approximately 20% by analyzing only new or changed code. We are now further improving the performance of CodeQL incremental analysis by generating a CodeQL database to represent your new or changed code introduced in pull requests and combining it with a cached database for your entire codebase.\n\nAcross more than 100,000 repositories, we classified repositories into three groups based on how long it takes to run a non-incremental scan:\n\n- Less than three minutes\n- Between three and seven minutes\n- Over seven minutes\n\nBased on that classification, here’s the average per-language speedup we observed on scan times over a seven-day period:\n\n![Seven day average speedup per language, split by non-incremental scan duration under three, between three and seven, over seven minutes. Java 22%, 32%, 51%, C# 4%, 6%, 8%, JavaScript/TypeScript 29%, 47%, 70%, Python 11%, 57%, 70%, Ruby 10%, 43%, 63% ](https://github.com/user-attachments/assets/0ddacdce-622c-4329-8c78-2a3540d1df7a)\n\nThis latest improvement to incremental analysis will only be applicable to those using the default CodeQL query suite.\n\nThe incremental analysis is enabled by default for C#, Java, JavaScript/TypeScript, Python, and Ruby projects that are using the `build mode none` extraction mechanism in both default setup and advanced setup on github.com.\n\nCodeQL CLI will receive support for incremental scanning at a later date.",
+  "Description": "CodeQL scans on pull requests for C#, Java, JavaScript/TypeScript, Python, and Ruby are now incremental, making them faster. Earlier this year, we sped up scans during pull requests with CodeQL…\n\nThe post [Faster incremental analysis with CodeQL in pull requests](https://github.blog/changelog/2026-03-24-faster-incremental-analysis-with-codeql-in-pull-requests) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2026-03-24T13:25:15+00:00",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ],
+  "Link": "https://github.blog/changelog/2026-03-24-faster-incremental-analysis-with-codeql-in-pull-requests",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-03-24 15:28:09"
+}
