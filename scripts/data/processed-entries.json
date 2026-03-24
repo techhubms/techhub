@@ -29488,5 +29488,11 @@
     "reason": "Succesfully added: No generic exclusion rules triggered: the post is English, technical, >200 words (community), and not job/business/biographical/sales-pitch content. Assigned Azure because the content is centered on Azure Functions and Azure Service Bus triggers and message settlement (Azure inclusion rule 1). Assigned .NET because it includes a C# isolated worker example using ServiceBusTrigger/ServiceBusMessageActions (. NET inclusion rule 1). Did not assign DevOps because there is no substantive CI/CD, GitHub Actions, pipelines, or operational DevOps focus beyond messaging behavior. Did not assign AI/GitHub Copilot/ML/Security because the content does not cover Microsoft AI services, Copilot, ML/data engineering, or security tooling/implementation.",
     "timestamp": "2026-03-24 03:06:30 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/apps-on-azure-blog/take-control-of-every-message-partial-failure-handling-for/ba-p/4504893"
+  },
+  {
+    "collection": "community",
+    "reason": "Succesfully added: No generic exclusion rules triggered: the content is English, technical, constructive, and well over 200 words for a community post.\n\nAssigned \"Azure\" because Azure services are central throughout (Azure Container Apps, Azure Container Registry, Cosmos DB, Azure Developer CLI/azd, Bicep provisioning).\n\nAssigned \"AI\" because the example system uses Azure OpenAI and discusses agent frameworks and hosted agent options (Microsoft Agent Framework, Azure OpenAI, Foundry hosted agents).\n\nAssigned \"DevOps\" because it covers containerization and deployment practices (Docker/Dockerfile, azd up, infrastructure as code with Bicep/Terraform/Pulumi, CI/CD references). \n\nDid not assign \".NET\" because the implementation discussed is Python/FastAPI and no .NET technologies are central. Did not assign \"ML\" because the focus is on using agent frameworks and hosted AI services rather than custom model training or data science pipelines. Did not assign \"Security\" because security is only briefly mentioned (non-root container user best practice) and is not a substantive focus.",
+    "timestamp": "2026-03-24 07:29:58 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/hosted-containers-and-ai-agent-solutions/ba-p/4500627"
   }
 ]
