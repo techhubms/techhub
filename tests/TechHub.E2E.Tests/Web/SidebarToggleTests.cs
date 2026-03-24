@@ -80,10 +80,11 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act - Use ClickBlazorElementAsync to ensure Blazor's @onclick handler is attached
-        // before sending the click. Raw ClickAsync() can fire before Blazor re-establishes
-        // event handlers after a post-navigation render cycle, silently dropping the click.
-        await Page.Locator(".sidebar-toggle").ClickBlazorElementAsync(waitForUrlChange: false);
+        // Act - ClickAsync() is sufficient here: Playwright's built-in stability check
+        // waits until the element is not being updated by a Blazor DOM diff before
+        // dispatching the click. No URL change is expected, so ClickBlazorElementAsync
+        // (which waits for URL change) is not needed.
+        await Page.Locator(".sidebar-toggle").ClickAsync();
 
         // Assert
         var toggle = Page.Locator(".sidebar-toggle");

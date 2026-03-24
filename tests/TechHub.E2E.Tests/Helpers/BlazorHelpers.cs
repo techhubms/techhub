@@ -659,7 +659,7 @@ public static class BlazorHelpers
     /// 4. Uses Force=true to bypass stability checks (safe because we've already
     ///    verified Blazor is ready and the element is visible)
     /// 5. Waits for URL to change (Blazor Server updates URL via SignalR)
-    /// 6. Waits for network to settle
+    /// 6. Waits for page readiness after navigation
     ///
     /// This is NOT a hack - it's the correct pattern for Blazor Server testing.
     /// The "stability" check is designed for CSS animations, not for Blazor's
@@ -676,15 +676,21 @@ public static class BlazorHelpers
         // Step 1: Wait for element to be visible using our centralized helper
         await locator.AssertElementVisibleAsync();
 
-        // Step 2: Capture URL before click
+        // Step 2: Wait for Blazor to be fully ready before clicking.
+        // Ensures scripts are not actively loading (e.g., page's OnAfterRenderAsync
+        // has finished calling window.markScriptsReady defined in page-scripts.js)
+        // so Force=true does not dispatch the click during an active DOM update window.
+        await page.WaitForBlazorReadyAsync();
+
+        // Step 3: Capture URL before click
         var urlBeforeClick = page.Url;
 
-        // Step 3: Click with Force=true to bypass stability checks
+        // Step 4: Click with Force=true to bypass stability checks
         // Blazor Server's continuous DOM updates prevent elements from being
         // "stable" by Playwright's criteria. We've already verified visibility.
         await locator.ClickAsync(new() { Force = true, Timeout = E2ETimeout });
 
-        // Step 4: Wait for URL to change and page to become ready
+        // Step 5: Wait for URL to change and page to become ready
         if (waitForUrlChange)
         {
             // Wait for URL change (works for both enhanced nav and full page reload)
