@@ -1,0 +1,18 @@
+{
+  "Title": "Manage Copilot coding agent repository access via the API",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api",
+  "Author": "Allison",
+  "EnhancedContent": "Organization owners who want to manage [Copilot coding agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) access at scale can now do so programmatically with the new [Copilot coding agent management REST APIs](https://docs.github.com/rest/copilot/copilot-coding-agent-management?apiVersion=2026-03-10), available in public preview.\n\nWith these APIs, you can:\n\n- Decide whether Copilot coding agent is available for no repositories, all repositories, or selected repositories owned by your organization.\n- Add or remove allowed repositories when your organization is set to allow **Only selected repositories**.\n\nYou can also manage these settings through the UI by navigating to your organization’s settings and clicking **Copilot** then **Coding agent**.\n\nTo learn more, see [“Managing access to GitHub Copilot coding agent”](https://docs.github.com/enterprise-cloud@latest/copilot/concepts/agents/coding-agent/access-management) in the GitHub Docs.",
+  "OutputDir": "_news",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-24T20:07:01+00:00",
+  "Tags": [
+    "account management",
+    "copilot",
+    "Release"
+  ],
+  "Description": "Organization owners who want to manage Copilot coding agent access at scale can now do so programmatically with the new Copilot coding agent management REST APIs, available in public preview.…\n\nThe post [Manage Copilot coding agent repository access via the API](https://github.blog/changelog/2026-03-24-manage-copilot-coding-agent-repository-access-via-the-api) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-03-24 21:15:32"
+}
