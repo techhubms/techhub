@@ -1,0 +1,18 @@
+{
+  "Description": "At KubeCon + CloudNativeCon Europe 2026 in Amsterdam, we're making announcements that reflect the goal of bringing the operational maturity of Kubernetes to today's workloads and demands.\n\nThe post [What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026](https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/) appeared first on [Microsoft Azure Blog](https://azure.microsoft.com/en-us/blog).",
+  "OutputDir": "_news",
+  "Author": "Brendan Burns",
+  "FeedUrl": "https://azure.microsoft.com/en-us/blog/feed/",
+  "Title": "What’s new with Microsoft in open-source and Kubernetes at KubeCon + CloudNativeCon Europe 2026",
+  "FeedLevelAuthor": "Microsoft Azure Blog",
+  "EnhancedContent": "![](https://opensource.microsoft.com/blog/wp-content/uploads/2025/11/media_12ad04443c26addc9f77cca646fb59a8266634ca9-388x218.jpg)\n\nNovember 10, 2025 •\n\n8 min read\n\n### [What’s new with Microsoft in open-source and Kubernetes at KubeCon North America 2025](https://opensource.microsoft.com/blog/2025/11/10/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-north-america-2025/)\n\nFrom improving reliability and performance to advancing security and AI-native workloads, our goal remains the same: make Kubernetes better for everyone.",
+  "PubDate": "2026-03-24T07:05:00+00:00",
+  "FeedName": "The Azure Blog",
+  "Link": "https://opensource.microsoft.com/blog/2026/03/24/whats-new-with-microsoft-in-open-source-and-kubernetes-at-kubecon-cloudnativecon-europe-2026/",
+  "Tags": [
+    "AI",
+    "Compute",
+    "Containers"
+  ],
+  "ProcessedDate": "2026-03-24 14:30:04"
+}

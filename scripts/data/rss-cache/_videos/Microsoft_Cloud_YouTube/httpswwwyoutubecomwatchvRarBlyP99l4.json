@@ -1,0 +1,19 @@
+{
+  "Tags": [
+    "Microsoft Energy",
+    "MicrosoftEnergy",
+    "Nvidia Energy",
+    "Safer Nuclear"
+  ],
+  "FeedName": "Microsoft Cloud YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw",
+  "Title": "Microsoft-NVIDIA collaborate on AI for nuclear",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Link": "https://www.youtube.com/watch?v=RarBlyP99l4",
+  "Description": "Microsoft and NVIDIA are collaborating to accelerate the deployment of commercially scalable, next-generation nuclear power by leveraging AI, cloud, and simulation technologies. Their solutions aim to make nuclear energy safer, more efficient, and accessible, supporting rapid electrification, regulatory compliance, and the mass manufacturing of nuclear plants to address global energy needs.\n\nLearn more here: Sustainable Energy Solutions | Microsoft AI: https://msft.it/6054QssTE\n\n#MicrosoftEnergy",
+  "Author": "Microsoft Cloud",
+  "ProcessedDate": "2026-03-24 14:31:05",
+  "FeedLevelAuthor": "Microsoft Cloud",
+  "PubDate": "2026-03-24T14:00:40+00:00"
+}

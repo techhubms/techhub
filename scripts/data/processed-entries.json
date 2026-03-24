@@ -29518,5 +29518,11 @@
     "reason": "Succesfully added: No generic exclusion rules applied: the post is English, not job/business-executive content, not question-only, and has substantial technical guidance well over 200 words for community content. Assigned Azure because it centers on Azure Budgets, Action Groups, and Azure Automation Runbooks and includes PowerShell Az commands managing an Azure OpenAI (Cognitive Services) resource. Assigned AI because the workload being governed is Azure OpenAI and the automation explicitly disables/re-enables Azure OpenAI API access (AI rule 1). Assigned DevOps because it focuses on operational automation/guardrails (alerting + runbooks), monitoring and enforcement workflows, and auditable operational processes (DevOps rules 6 and 7). Excluded .NET/ML/Security/GitHub Copilot because the content does not discuss .NET development, ML engineering, security/IAM tooling, or GitHub Copilot.",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-infrastructure-blog/automating-azure-openai-cost-control-using-budgets-action-groups/ba-p/4505164",
     "timestamp": "2026-03-24 13:37:43 +00:00"
+  },
+  {
+    "collection": "news",
+    "reason": "Succesfully added: Included AI because the content centers on a conversational generative-AI interface (KAYA) built with Azure OpenAI in Microsoft Foundry/Azure AI Foundry and Azure AI Speech, and it explicitly mentions using GPT-5 (AI inclusion rules 1 and 5). Included Azure because the implementation is built on Azure services (Azure OpenAI and Azure AI Speech) and references Microsoft Foundry/Azure AI Foundry as the platform (Azure inclusion rules 1 and 3). Excluded .NET, DevOps, ML, and Security because the provided text does not mention .NET languages/frameworks, CI/CD or GitHub/Azure DevOps tooling, custom model training/data science work, or security/identity technologies.",
+    "canonical_url": "https://news.microsoft.com/source/asia/features/japans-arum-turns-craftsmanship-into-scalable-ai-for-precision-manufacturing/",
+    "timestamp": "2026-03-24 14:32:42 +00:00"
   }
 ]

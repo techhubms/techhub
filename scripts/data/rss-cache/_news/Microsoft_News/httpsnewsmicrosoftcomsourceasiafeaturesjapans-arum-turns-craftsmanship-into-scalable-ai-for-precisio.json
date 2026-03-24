@@ -1,0 +1,16 @@
+{
+  "Description": "The post [Japan’s ARUM turns craftsmanship into scalable AI for precision manufacturing](https://news.microsoft.com/source/asia/features/japans-arum-turns-craftsmanship-into-scalable-ai-for-precision-manufacturing/) appeared first on [Source](https://news.microsoft.com/source).",
+  "OutputDir": "_news",
+  "Author": "stclarke",
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "Title": "Japan’s ARUM turns craftsmanship into scalable AI for precision manufacturing",
+  "FeedLevelAuthor": "Source",
+  "EnhancedContent": "*Read the story in [Japanese](https://news.microsoft.com/source/asia/features/apans-arum-turns-craftsmanship-into-scalable-ai-for-precision-manufacturing/?lang=ja)*\n\nKANAZAWA, Japan –Tetsuya Kitanishi stands outside a metal cubicle the size of a sauna shed and taps its display panel. An avatar of a woman in a bright yellow jumpsuit springs up and asks him, in Japanese, to select the file for the precision part he wants to make. It then analyzes the file and says, “Would you like to set up the machining process?”\n\nMeet KAYA, the conversational AI interface for TTMC Origin. This machining center is being prototyped by ARUM Inc., which builds fully automated manufacturing systems in Kanazawa, Japan.\n\nPowered by ARUM’s in-house software ARUMCODE and built using Azure AI Speech and Azure OpenAI in Microsoft Foundry, KAYA guides workers using the machine to make precision parts, instructing them step-by-step in natural language to change a drill bit or reposition the item being cut.\n\nThe idea is to build a CNC (computer-numerical control) machining center that can be operated by junior workers and not just skilled experts, a dwindling breed in Japan.\n\nAccording to Kitanishi, the lead software developer for TTMC Origin, incorporating generative AI into the machine to voice these intricate manual steps forms a key part of the solution. KAYA currently runs on GPT-5, OpenAI’s large language model.",
+  "PubDate": "2026-03-24T13:37:05+00:00",
+  "FeedName": "Microsoft News",
+  "Link": "https://news.microsoft.com/source/asia/features/japans-arum-turns-craftsmanship-into-scalable-ai-for-precision-manufacturing/",
+  "Tags": [
+    "AI"
+  ],
+  "ProcessedDate": "2026-03-24 14:30:38"
+}
