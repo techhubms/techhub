@@ -130,7 +130,7 @@ The Tech Hub automatically processes RSS feeds from Microsoft and technology sou
 The `TechHub.ContentProcessor` worker service runs on a configurable schedule (default: every hour) and performs:
 
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from configured feed URLs
-2. **Content fetching** — Fetches the full article HTML from each item's source URL (non-YouTube items only)
+2. **Content fetching** — Fetches the full article HTML from each item's source URL, or YouTube closed captions (transcripts) for video items
 3. **AI categorization** — Sends article content to Azure OpenAI to determine collection, sections, tags, title, and excerpt
 4. **Deduplication** — Checks the database for existing items by `external_url` before writing
 5. **Database write** — Inserts or updates the content item and tag expansions directly in PostgreSQL
@@ -139,48 +139,31 @@ Items that the AI determines are off-topic or low quality are skipped (not writt
 
 ### Feed Configuration
 
-RSS feeds are configured in `scripts/data/rss-feeds.json`:
-
-```json
-{
-  "feeds": [
-    {
-      "name": "Microsoft AI Blog",
-      "url": "https://blogs.microsoft.com/ai/feed/",
-      "output_dir": "_news",
-      "section": "AI",
-      "enabled": true
-    }
-  ]
-}
-```
+RSS feeds are stored in the PostgreSQL database and managed via the admin UI at `/admin/feeds`. On first startup, the API seeds the database from `scripts/data/rss-feeds.json` if no feeds exist yet.
 
 **Required Fields**:
 
 - **name**: Human-readable feed identifier
 - **url**: RSS or Atom feed URL
 - **output_dir**: Target collection directory (`_news`, `_blogs`, etc.)
-- **section**: Section display title for categorization (e.g., "AI", "GitHub Copilot") - RSS processing converts these to normalized `section_names` array in frontmatter (e.g., ["ai"], ["github-copilot", "ai"])
 
 **Optional Fields**:
 
 - **enabled**: Boolean to enable/disable feed (default: true)
-- **max_items**: Maximum items per processing run (default: 10)
 
 ### Adding New Feeds
 
-**Using GitHub Copilot**:
+**Via Admin UI** (recommended):
 
-```text
-/new-rss-feeds
-```
+1. Navigate to `/admin/feeds` (requires Azure AD authentication in deployed environments)
+2. Click "Add Feed"
+3. Fill in name, URL, output directory
+4. Save
 
-**Manual Addition**:
+**Via JSON seed file** (initial setup only):
 
 1. Edit `scripts/data/rss-feeds.json`
-2. Add new feed object to the feeds array
-3. Validate JSON format
-4. Commit changes
+2. On next startup (if database has no feeds), the API seeds from this file
 
 ### Processing Pipeline
 
@@ -199,9 +182,9 @@ RSS Download → Per-Entry Content Fetching → AI Analysis (Azure AI Foundry) �
 
 **Content Fetching Strategy**:
 
-1. **YouTube Videos**: Metadata processing without content fetching
-2. **Other URLs**: Individual HTTP requests with 10-second rate limiting
-3. **Error Handling**: Graceful degradation when content fetching fails
+1. **YouTube Videos**: Closed captions (transcripts) are fetched via **YoutubeExplode**, preferring English tracks. The transcript text is sent to the AI as context for generating structured video summaries. Transcript fetching is resilient — failures are non-fatal and the pipeline continues with metadata only.
+2. **Other URLs**: Individual HTTP requests with rate limiting between requests
+3. **Error Handling**: Graceful degradation when content or transcript fetching fails
 
 ### Azure AI Foundry Integration
 

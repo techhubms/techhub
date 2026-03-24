@@ -1,6 +1,7 @@
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
+using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Web.Services;
 
@@ -842,6 +843,123 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to fetch processing job {JobId}", id);
+            throw;
+        }
+    }
+
+    // ================================================================
+    // RSS Feed config methods
+    // ================================================================
+
+    /// <summary>
+    /// Get all RSS feed configurations.
+    /// GET /api/admin/feeds
+    /// </summary>
+    public virtual async Task<IReadOnlyList<FeedConfig>> GetFeedConfigsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var feeds = await _httpClient.GetFromJsonAsync<IReadOnlyList<FeedConfig>>(
+                "/api/admin/feeds",
+                cancellationToken);
+            return feeds ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch feed configs");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a specific RSS feed config by ID.
+    /// GET /api/admin/feeds/{id}
+    /// </summary>
+    public virtual async Task<FeedConfig?> GetFeedConfigByIdAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var feed = await _httpClient.GetFromJsonAsync<FeedConfig>(
+                $"/api/admin/feeds/{id}",
+                cancellationToken);
+            return feed;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch feed config {FeedId}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Create a new RSS feed config.
+    /// POST /api/admin/feeds
+    /// </summary>
+    public virtual async Task<FeedConfig> CreateFeedConfigAsync(
+        FeedConfig config,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync("/api/admin/feeds", config, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<FeedConfig>(cancellationToken)
+                ?? throw new InvalidOperationException("API returned null for created feed config");
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to create feed config");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Update an existing RSS feed config.
+    /// PUT /api/admin/feeds/{id}
+    /// </summary>
+    public virtual async Task<FeedConfig> UpdateFeedConfigAsync(
+        FeedConfig config,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(config);
+
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync($"/api/admin/feeds/{config.Id}", config, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<FeedConfig>(cancellationToken)
+                ?? throw new InvalidOperationException("API returned null for updated feed config");
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update feed config {FeedId}", config.Id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Delete an RSS feed config.
+    /// DELETE /api/admin/feeds/{id}
+    /// </summary>
+    public virtual async Task DeleteFeedConfigAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.DeleteAsync($"/api/admin/feeds/{id}", cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete feed config {FeedId}", id);
             throw;
         }
     }

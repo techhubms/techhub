@@ -1,4 +1,6 @@
 using System.Data;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
 using TechHub.Api.Endpoints;
 using TechHub.Api.HealthChecks;
 using TechHub.Api.Middleware;
@@ -90,6 +92,9 @@ builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionF
 builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
 builder.Services.AddTransient<IContentRepository, ContentRepository>();
 
+// TimeProvider for testable date/time
+builder.Services.AddSingleton(TimeProvider.System);
+
 // Register singleton services - none currently
 
 // Register transient services
@@ -97,6 +102,9 @@ builder.Services.AddTransient<IMarkdownService, MarkdownService>();
 builder.Services.AddTransient<IRssService, RssService>();
 builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
 builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
+
+// RSS feed config repository (database-backed)
+builder.Services.AddScoped<IRssFeedConfigRepository, RssFeedConfigRepository>();
 
 // ─── Content Processing Pipeline ─────────────────────────────────────────────
 // Configure content processing options
@@ -107,6 +115,12 @@ builder.Services.Configure<AiCategorizationOptions>(
 
 // Repository for job tracking (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJobRepository>();
+
+// Repository for processed URL tracking (scoped — reuses the scoped IDbConnection)
+builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
+
+// YouTube transcript fetcher (no HTTP client needed — uses YoutubeExplode internally)
+builder.Services.AddTransient<YouTubeTranscriptService>();
 
 // Typed HTTP clients for the processing services
 builder.Services.AddHttpClient<RssFeedIngestionService>()
@@ -121,6 +135,13 @@ builder.Services.AddHttpClient<ArticleContentService>()
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
         client.Timeout = TimeSpan.FromSeconds(30);
+    });
+
+builder.Services.AddHttpClient<YouTubeTagService>()
+    .ConfigureHttpClient(client =>
+    {
+        client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
+        client.Timeout = TimeSpan.FromSeconds(10);
     });
 
 builder.Services.AddHttpClient<AiCategorizationService>()
@@ -153,6 +174,38 @@ builder.Services.AddCors(options =>
             .AllowCredentials());
 });
 
+// ─── Admin Authentication (Azure AD JWT Bearer) ─────────────────────────────
+// When AzureAd:ClientId is configured, admin endpoints require a valid bearer token
+// issued by Azure AD (forwarded by the Web front-end). When not configured (local dev),
+// the AdminOnly policy allows all requests so admin endpoints remain accessible.
+var azureAdClientId = builder.Configuration["AzureAd:ClientId"];
+if (!string.IsNullOrEmpty(azureAdClientId))
+{
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+}
+else
+{
+    // Register base auth services so UseAuthentication() middleware doesn't throw
+    builder.Services.AddAuthentication();
+}
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy =>
+    {
+        if (!string.IsNullOrEmpty(azureAdClientId))
+        {
+            policy.RequireAuthenticatedUser();
+        }
+        else
+        {
+            // When Azure AD is not configured (local dev), allow all requests
+            policy.RequireAssertion(_ => true);
+        }
+    });
+});
+
 var app = builder.Build();
 
 // Global exception handler (must be first)
@@ -172,6 +225,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors();
+app.UseAuthentication();
+app.UseAuthorization();
 
 // Map API endpoints
 app.MapContentEndpoints();

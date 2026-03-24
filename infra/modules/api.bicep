@@ -19,6 +19,14 @@ param webFqdns string[] = []
 @description('PostgreSQL connection string')
 param databaseConnectionString string
 
+@secure()
+@description('Azure AD tenant ID for admin authentication')
+param azureAdTenantId string = ''
+
+@secure()
+@description('Azure AD client ID for admin authentication')
+param azureAdClientId string = ''
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
@@ -60,6 +68,14 @@ var staticEnvVars = [
     name: 'TECHHUB_TMP'
     value: '/tmp/techhub'
   }
+  {
+    name: 'AzureAd__TenantId'
+    secretRef: 'azure-ad-tenant-id'
+  }
+  {
+    name: 'AzureAd__ClientId'
+    secretRef: 'azure-ad-client-id'
+  }
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -97,6 +113,14 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         {
           name: 'db-connection-string'
           value: databaseConnectionString
+        }
+        {
+          name: 'azure-ad-tenant-id'
+          value: azureAdTenantId
+        }
+        {
+          name: 'azure-ad-client-id'
+          value: azureAdClientId
         }
       ]
     }

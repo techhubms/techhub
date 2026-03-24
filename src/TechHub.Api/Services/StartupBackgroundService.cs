@@ -41,6 +41,12 @@ public class StartupBackgroundService : BackgroundService
             _logger.LogInformation("✅ Database migrations completed");
             _startupState.MarkMigrationsCompleted();
 
+            // Seed RSS feed configs from JSON if the table is empty (first run)
+            var feedRepo = services.GetRequiredService<IRssFeedConfigRepository>();
+            var rssFeedsPath = Path.Combine(AppContext.BaseDirectory, "rss-feeds.json");
+            await feedRepo.SeedFromJsonAsync(rssFeedsPath, stoppingToken);
+            _logger.LogInformation("✅ RSS feed configs seeded (if table was empty)");
+
             // Synchronize content from markdown files to database
             var contentSyncService = services.GetRequiredService<IContentSyncService>();
             var syncResult = await contentSyncService.SyncAsync(stoppingToken);

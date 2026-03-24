@@ -16,7 +16,7 @@ namespace TechHub.Infrastructure.Services;
 /// <summary>
 /// Orchestrates the full content processing pipeline:
 /// <list type="number">
-///   <item>Load RSS feed configuration.</item>
+///   <item>Load RSS feed configuration from the database.</item>
 ///   <item>Ingest RSS feeds into raw items.</item>
 ///   <item>Fetch full article content for non-YouTube items.</item>
 ///   <item>Categorize each item with Azure OpenAI.</item>
@@ -29,8 +29,12 @@ public sealed class ContentProcessingService
     private readonly RssFeedIngestionService _rssService;
     private readonly ArticleContentService _articleService;
     private readonly AiCategorizationService _aiService;
+    private readonly YouTubeTagService _youtubeTagService;
     private readonly IDbConnection _connection;
     private readonly IContentProcessingJobRepository _jobRepo;
+    private readonly IProcessedUrlRepository _processedUrlRepo;
+    private readonly IRssFeedConfigRepository _feedRepo;
+    private readonly TimeProvider _timeProvider;
     private readonly ContentProcessorOptions _options;
     private readonly ILogger<ContentProcessingService> _logger;
 
@@ -43,24 +47,36 @@ public sealed class ContentProcessingService
         RssFeedIngestionService rssService,
         ArticleContentService articleService,
         AiCategorizationService aiService,
+        YouTubeTagService youtubeTagService,
         IDbConnection connection,
         IContentProcessingJobRepository jobRepo,
+        IProcessedUrlRepository processedUrlRepo,
+        IRssFeedConfigRepository feedRepo,
+        TimeProvider timeProvider,
         IOptions<ContentProcessorOptions> options,
         ILogger<ContentProcessingService> logger)
     {
         ArgumentNullException.ThrowIfNull(rssService);
         ArgumentNullException.ThrowIfNull(articleService);
         ArgumentNullException.ThrowIfNull(aiService);
+        ArgumentNullException.ThrowIfNull(youtubeTagService);
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(jobRepo);
+        ArgumentNullException.ThrowIfNull(processedUrlRepo);
+        ArgumentNullException.ThrowIfNull(feedRepo);
+        ArgumentNullException.ThrowIfNull(timeProvider);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
         _rssService = rssService;
         _articleService = articleService;
         _aiService = aiService;
+        _youtubeTagService = youtubeTagService;
         _connection = connection;
         _jobRepo = jobRepo;
+        _processedUrlRepo = processedUrlRepo;
+        _feedRepo = feedRepo;
+        _timeProvider = timeProvider;
         _options = options.Value;
         _logger = logger;
     }
@@ -71,9 +87,9 @@ public sealed class ContentProcessingService
     /// </summary>
     public async Task RunAsync(string triggerType = "scheduled", CancellationToken ct = default)
     {
-        var jobId = await _jobRepo.CreateAsync(triggerType, ct);
+        long jobId = 0;
         var log = new StringBuilder();
-        var startedAt = DateTime.UtcNow;
+        var startedAt = _timeProvider.GetUtcNow();
         var feedsProcessed = 0;
         var itemsAdded = 0;
         var itemsSkipped = 0;
@@ -82,13 +98,15 @@ public sealed class ContentProcessingService
         void Log(string msg)
         {
             var line = string.Create(CultureInfo.InvariantCulture,
-                $"[{DateTime.UtcNow:HH:mm:ss}] {msg}");
+                $"[{_timeProvider.GetUtcNow():HH:mm:ss}] {msg}");
             log.AppendLine(line);
             _logger.LogInformation("ContentProcessing[{JobId}] {Message}", jobId, msg);
         }
 
         try
         {
+            jobId = await _jobRepo.CreateAsync(triggerType, ct);
+
             if (!_options.Enabled)
             {
                 Log("Content processing is disabled. Skipping run.");
@@ -98,8 +116,8 @@ public sealed class ContentProcessingService
 
             Log(string.Create(CultureInfo.InvariantCulture, $"Starting content processing run (trigger: {triggerType})"));
 
-            var feeds = await LoadFeedConfigsAsync(ct);
-            Log(string.Create(CultureInfo.InvariantCulture, $"Loaded {feeds.Count} feed(s) from configuration"));
+            var feeds = await _feedRepo.GetEnabledAsync(ct);
+            Log(string.Create(CultureInfo.InvariantCulture, $"Loaded {feeds.Count} feed(s) from database"));
 
             foreach (var feed in feeds)
             {
@@ -122,14 +140,49 @@ public sealed class ContentProcessingService
                 {
                     var raw = rawItems[i];
 
-                    // Check duplicate
+                    // Check if already in content_items (existing duplicate check)
                     if (await ExistsAsync(raw.ExternalUrl, ct))
                     {
                         itemsSkipped++;
                         continue;
                     }
 
-                    // Fetch full content (non-YouTube only)
+                    // Check if we already attempted this URL (success or failure)
+                    if (await _processedUrlRepo.ExistsAsync(raw.ExternalUrl, ct))
+                    {
+                        itemsSkipped++;
+                        continue;
+                    }
+
+                    // Fetch YouTube tags for YouTube items (merged into FeedTags for AI)
+                    if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
+                    {
+                        var ytTags = await _youtubeTagService.GetTagsAsync(raw.ExternalUrl, ct);
+                        if (ytTags.Count > 0)
+                        {
+                            var mergedTags = raw.FeedTags.Concat(ytTags)
+                                .Select(t => t.Trim())
+                                .Where(t => t.Length > 0)
+                                .Distinct(StringComparer.OrdinalIgnoreCase)
+                                .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
+                                .ToList();
+                            raw = new RawFeedItem
+                            {
+                                Title = raw.Title,
+                                ExternalUrl = raw.ExternalUrl,
+                                PublishedAt = raw.PublishedAt,
+                                Description = raw.Description,
+                                Author = raw.Author,
+                                FeedTags = mergedTags,
+                                FeedName = raw.FeedName,
+                                CollectionName = raw.CollectionName,
+                                FullContent = raw.FullContent
+                            };
+                            Log(string.Create(CultureInfo.InvariantCulture, $"  YouTube tags: {ytTags.Count} fetched, {mergedTags.Count} total after merge"));
+                        }
+                    }
+
+                    // Fetch full content (YouTube transcript or article body)
                     raw = await _articleService.EnrichWithContentAsync(raw, ct);
 
                     // Delay between external requests
@@ -144,9 +197,14 @@ public sealed class ContentProcessingService
                     {
                         processed = await _aiService.CategorizeAsync(raw, ct);
                     }
+                    catch (OperationCanceledException)
+                    {
+                        throw;
+                    }
                     catch (Exception ex)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR categorizing {raw.ExternalUrl}: {ex.Message}"));
+                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, ct);
                         errorCount++;
                         continue;
                     }
@@ -154,6 +212,7 @@ public sealed class ContentProcessingService
                     if (processed == null)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  SKIPPED (AI): {raw.Title}"));
+                        await _processedUrlRepo.RecordSuccessAsync(raw.ExternalUrl, ct: ct);
                         itemsSkipped++;
                         continue;
                     }
@@ -170,17 +229,35 @@ public sealed class ContentProcessingService
                         }
 
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ADDED: {processed.Title}"));
+                        await _processedUrlRepo.RecordSuccessAsync(
+                            raw.ExternalUrl,
+                            raw.IsYouTube ? raw.FeedTags : null,
+                            ct);
                         itemsAdded++;
+                    }
+                    catch (OperationCanceledException)
+                    {
+                        throw;
                     }
                     catch (Exception ex)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR writing {processed.ExternalUrl}: {ex.Message}"));
+                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, ct);
                         errorCount++;
                     }
                 }
             }
 
-            var duration = DateTime.UtcNow - startedAt;
+            // Clean up old job records (keep last 500)
+            await PurgeOldJobsAsync(ct);
+
+            // Purge old failed URL records so they can be retried
+            if (_options.FailedUrlRetentionDays > 0)
+            {
+                await _processedUrlRepo.PurgeFailedAsync(TimeSpan.FromDays(_options.FailedUrlRetentionDays), ct);
+            }
+
+            var duration = _timeProvider.GetUtcNow() - startedAt;
             Log(string.Create(CultureInfo.InvariantCulture,
                 $"Run complete. Added: {itemsAdded}, Skipped: {itemsSkipped}, Errors: {errorCount}, Duration: {duration.TotalSeconds:F1}s"));
 
@@ -189,24 +266,59 @@ public sealed class ContentProcessingService
         catch (OperationCanceledException)
         {
             Log("Run cancelled.");
-            await _jobRepo.FailAsync(jobId, log.ToString(), ct);
+            await TryFailJobAsync(jobId, log.ToString(), ct);
         }
         catch (Exception ex)
         {
             Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message}"));
             _logger.LogError(ex, "Content processing run {JobId} failed with unhandled exception", jobId);
-            await _jobRepo.FailAsync(jobId, log.ToString(), ct);
+            await TryFailJobAsync(jobId, log.ToString(), ct);
+        }
+    }
+
+    private async Task TryFailJobAsync(long jobId, string logOutput, CancellationToken ct)
+    {
+        if (jobId <= 0)
+        {
+            return;
+        }
+
+        try
+        {
+            await _jobRepo.FailAsync(jobId, logOutput, ct);
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Failed to mark job {JobId} as failed", jobId);
+        }
+    }
+
+    private async Task PurgeOldJobsAsync(CancellationToken ct)
+    {
+        try
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"DELETE FROM content_processing_jobs
+                  WHERE id NOT IN (
+                      SELECT id FROM content_processing_jobs
+                      ORDER BY started_at DESC LIMIT 500
+                  )",
+                cancellationToken: ct));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogWarning(ex, "Failed to purge old processing jobs");
         }
     }
 
     private async Task<bool> ExistsAsync(string externalUrl, CancellationToken ct)
     {
-        var count = await _connection.ExecuteScalarAsync<int>(
+        var exists = await _connection.ExecuteScalarAsync<bool>(
             new CommandDefinition(
-                "SELECT COUNT(*) FROM content_items WHERE external_url = @ExternalUrl",
+                "SELECT EXISTS(SELECT 1 FROM content_items WHERE external_url = @ExternalUrl)",
                 new { ExternalUrl = externalUrl },
                 cancellationToken: ct));
-        return count > 0;
+        return exists;
     }
 
     /// <summary>
@@ -216,7 +328,7 @@ public sealed class ContentProcessingService
     /// </summary>
     private async Task RegisterRoundupItemAsync(ProcessedContentItem item, CancellationToken ct)
     {
-        var weekStart = GetCurrentIsoWeekMonday();
+        var weekStart = GetCurrentIsoWeekMonday(_timeProvider);
         var sections = GetSectionsToRegister(item);
 
         foreach (var section in sections)
@@ -240,11 +352,12 @@ public sealed class ContentProcessingService
     /// <summary>
     /// Returns the date of the Monday of the current ISO week, expressed in Europe/Brussels time.
     /// </summary>
-    private static DateOnly GetCurrentIsoWeekMonday()
+    private static DateOnly GetCurrentIsoWeekMonday(TimeProvider timeProvider)
     {
         var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
             OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
-        var now = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, brusselsZone);
+        var utcNow = timeProvider.GetUtcNow().UtcDateTime;
+        var now = TimeZoneInfo.ConvertTimeFromUtc(utcNow, brusselsZone);
         var weekYear = System.Globalization.ISOWeek.GetYear(now);
         var weekNumber = System.Globalization.ISOWeek.GetWeekOfYear(now);
         var monday = System.Globalization.ISOWeek.ToDateTime(weekYear, weekNumber, DayOfWeek.Monday);
@@ -471,57 +584,6 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         }
 
         return rows;
-    }
-
-    private async Task<List<FeedConfig>> LoadFeedConfigsAsync(CancellationToken ct)
-    {
-        var path = _options.RssFeedsConfigPath;
-        if (!Path.IsPathRooted(path))
-        {
-            path = Path.Combine(AppContext.BaseDirectory, path);
-        }
-
-        if (!File.Exists(path))
-        {
-            _logger.LogWarning("rss-feeds.json not found at {Path}. No feeds to process.", path);
-            return [];
-        }
-
-        await using var stream = File.OpenRead(path);
-        using var doc = await JsonDocument.ParseAsync(stream, cancellationToken: ct);
-
-        // Support both flat array format: [...]
-        // and wrapped object format: {"feeds": [...]}
-        var feedsArray = doc.RootElement.ValueKind == JsonValueKind.Array
-            ? doc.RootElement
-            : doc.RootElement.TryGetProperty("feeds", out var fa) ? fa : default;
-
-        if (feedsArray.ValueKind != JsonValueKind.Array)
-        {
-            return [];
-        }
-
-        var configs = new List<FeedConfig>();
-        foreach (var feedEl in feedsArray.EnumerateArray())
-        {
-            var enabled = !feedEl.TryGetProperty("enabled", out var ep) || ep.GetBoolean();
-            if (!enabled)
-            {
-                continue;
-            }
-
-            var name = feedEl.TryGetProperty("name", out var n) ? n.GetString() ?? string.Empty : string.Empty;
-            var url = feedEl.TryGetProperty("url", out var u) ? u.GetString() ?? string.Empty : string.Empty;
-            var outputDir = feedEl.TryGetProperty("outputDir", out var od) || feedEl.TryGetProperty("output_dir", out od)
-                ? od.GetString() ?? string.Empty : string.Empty;
-
-            if (!string.IsNullOrWhiteSpace(name) && !string.IsNullOrWhiteSpace(url) && !string.IsNullOrWhiteSpace(outputDir))
-            {
-                configs.Add(new FeedConfig { Name = name, Url = url, OutputDir = outputDir });
-            }
-        }
-
-        return configs;
     }
 }
 

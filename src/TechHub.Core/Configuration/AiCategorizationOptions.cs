@@ -12,13 +12,13 @@ public class AiCategorizationOptions
     public bool Enabled { get; init; } = true;
 
     /// <summary>Azure OpenAI endpoint URL (e.g. https://oai-techhub-prod.openai.azure.com/).</summary>
-    public required string Endpoint { get; init; }
+    public string Endpoint { get; init; } = string.Empty;
 
     /// <summary>Azure OpenAI API key.</summary>
-    public required string ApiKey { get; init; }
+    public string ApiKey { get; init; } = string.Empty;
 
     /// <summary>Azure OpenAI deployment name (e.g. gpt-4.1).</summary>
-    public required string DeploymentName { get; init; }
+    public string DeploymentName { get; init; } = string.Empty;
 
     /// <summary>Maximum content length in characters sent to the AI model.</summary>
     public int MaxContentLength { get; init; } = 200_000;

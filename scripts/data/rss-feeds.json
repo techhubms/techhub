@@ -293,5 +293,15 @@
     "name": "Emanuele Bartolesi's Blog",
     "outputDir": "_blogs",
     "url": "https://dev.to/feed/kasuken"
-  }
+  },
+  {
+    "name": "Bruno Van Thournout's Blog",
+    "outputDir": "_blogs",
+    "url": "https://brunovt.be/rss.xml"
+  },
+  {
+    "name": "Authorised Territory's YouTube",
+    "outputDir": "_videos",
+    "url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCR2VG1Rq7abZ33S1T3XSWNg"
+  },
 ]

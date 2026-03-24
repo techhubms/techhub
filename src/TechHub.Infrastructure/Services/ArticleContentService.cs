@@ -7,25 +7,29 @@ namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Fetches the full HTML content for an article URL and extracts the main body text.
-/// YouTube items are returned as-is (no content to fetch).
+/// YouTube items are enriched with transcript text from closed captions.
 /// </summary>
 public sealed class ArticleContentService
 {
     private readonly HttpClient _httpClient;
     private readonly ContentProcessorOptions _options;
+    private readonly YouTubeTranscriptService _transcriptService;
     private readonly ILogger<ArticleContentService> _logger;
 
     public ArticleContentService(
         HttpClient httpClient,
         IOptions<ContentProcessorOptions> options,
+        YouTubeTranscriptService transcriptService,
         ILogger<ArticleContentService> logger)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
         ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(transcriptService);
         ArgumentNullException.ThrowIfNull(logger);
 
         _httpClient = httpClient;
         _options = options.Value;
+        _transcriptService = transcriptService;
         _logger = logger;
     }
 
@@ -38,7 +42,12 @@ public sealed class ArticleContentService
     {
         ArgumentNullException.ThrowIfNull(item);
 
-        if (item.IsYouTube || string.IsNullOrWhiteSpace(item.ExternalUrl))
+        if (item.IsYouTube)
+        {
+            return await EnrichYouTubeWithTranscriptAsync(item, ct);
+        }
+
+        if (string.IsNullOrWhiteSpace(item.ExternalUrl))
         {
             return item;
         }
@@ -130,5 +139,27 @@ public sealed class ArticleContentService
             string.Empty, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
         cleaned = System.Text.RegularExpressions.Regex.Replace(cleaned, @"<[^>]+>", " ");
         return System.Text.RegularExpressions.Regex.Replace(cleaned, @"\s{2,}", " ").Trim();
+    }
+
+    private async Task<RawFeedItem> EnrichYouTubeWithTranscriptAsync(RawFeedItem item, CancellationToken ct)
+    {
+        var transcript = await _transcriptService.GetTranscriptAsync(item.ExternalUrl, ct);
+        if (string.IsNullOrWhiteSpace(transcript))
+        {
+            return item;
+        }
+
+        return new RawFeedItem
+        {
+            Title = item.Title,
+            ExternalUrl = item.ExternalUrl,
+            PublishedAt = item.PublishedAt,
+            Description = item.Description,
+            Author = item.Author,
+            FeedTags = item.FeedTags,
+            FeedName = item.FeedName,
+            CollectionName = item.CollectionName,
+            FullContent = transcript
+        };
     }
 }

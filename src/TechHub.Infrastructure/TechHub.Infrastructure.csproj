@@ -21,6 +21,7 @@
     <PackageReference Include="Npgsql" />
     <PackageReference Include="Polly" />
     <PackageReference Include="YamlDotNet" />
+    <PackageReference Include="YoutubeExplode" />
   </ItemGroup>
 
   <ItemGroup>

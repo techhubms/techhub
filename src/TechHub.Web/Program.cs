@@ -68,8 +68,25 @@ builder.Services.AddRazorComponents()
 // The admin area is accessible to any user assigned to the enterprise application.
 // To restrict to specific users/groups, configure assignment required + add group claims
 // to the app registration in Entra ID.
-builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-    .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+var azureAdClientId = builder.Configuration["AzureAd:ClientId"];
+if (!string.IsNullOrEmpty(azureAdClientId))
+{
+    builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+        .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+
+    // Save the ID token in the auth cookie so the AdminTokenDelegatingHandler
+    // can forward it as a Bearer token to the API for admin requests.
+    builder.Services.Configure<OpenIdConnectOptions>(
+        OpenIdConnectDefaults.AuthenticationScheme,
+        options => options.SaveTokens = true);
+}
+else
+{
+    // When Azure AD is not configured (local dev without Entra), register cookie
+    // auth so the auth middleware doesn't throw. Admin pages simply won't work.
+    builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie();
+}
 
 builder.Services.AddAuthorization();
 
@@ -128,11 +145,15 @@ var startupLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("Star
 #pragma warning restore CA2000
 startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseUrl);
 
-builder.Services.AddHttpClient<TechHubApiClient>(client =>
+// Register delegating handler for forwarding auth tokens to admin API endpoints
+builder.Services.AddTransient<AdminTokenDelegatingHandler>();
+
+builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(100); // Allow extra time beyond resilience timeout
 })
+.AddHttpMessageHandler<AdminTokenDelegatingHandler>()
 .ConfigurePrimaryHttpMessageHandler(sp =>
 {
     var handler = new SocketsHttpHandler();

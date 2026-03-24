@@ -715,6 +715,43 @@ You will receive a JSON object with these 6 fields:
 }
 ```
 
+### YouTube Video Transcript Processing
+
+When the input includes a TRANSCRIPT section (from auto-generated closed captions), you are processing a YouTube video. Transcripts are raw spoken word — messy, without punctuation or structure. Your job is to transform this into a well-structured summary.
+
+**For YouTube videos with transcripts, the `content` field in your output should follow this structure:**
+
+1. **Short introduction** (1-2 sentences) — A brief, down-to-earth summary of what the video covers and who presents it. This text appears above the embedded video.
+2. **Video embed** — `{% youtube VIDEO_ID %}` on its own line (extract the video ID from the URL, e.g. `dQw4w9WgXcQ` from `https://www.youtube.com/watch?v=dQw4w9WgXcQ`)
+3. **Detailed breakdown** — A comprehensive, well-structured overview of the video content based on the transcript:
+   - Start with `## Full summary based on transcript` as the heading
+   - Use clear headings (`###` level) for each major topic or segment discussed
+   - Include bullet points for lists of features, steps, or options
+   - Preserve all technical details, specific settings, commands, or code mentioned
+   - Write in third person (e.g. "The presenter demonstrates...", "{Author} covers...")
+
+**Example content structure for a YouTube video:**
+
+```markdown
+{Author} walks through how to set up and use GitHub Copilot for .NET development in Visual Studio Code.
+
+{% youtube dQw4w9WgXcQ %}
+
+## Full summary based on transcript
+
+### Setting up the environment
+
+The presenter demonstrates how to install the GitHub Copilot extension...
+
+### Code completion features
+
+{Author} covers the different types of completions available...
+```
+
+**For YouTube videos without transcripts:** Use the title and description to create the best content you can. Follow the same structure (intro → video embed → overview from description).
+
+**Excerpt for videos:** The excerpt should summarize what the video covers and mention the author, suitable for a content card (target 50 words).
+
 ## Chapter 7: Output Format
 
 **CRITICAL**: Return ONLY the raw JSON object. Do NOT wrap your response in markdown code blocks or any other formatting. Your entire response should be a valid JSON object that can be parsed directly.
@@ -825,6 +862,17 @@ Return a JSON object with these 6 fields:
 - Reference specific content parts and rules that influenced decisions
 - Used for prompt refinement and quality improvement
 
+**roundup** (object)
+
+Include a `roundup` object with metadata for weekly roundup generation:
+
+- **summary** (string) — 1-2 sentence neutral summary suitable for direct inclusion in a weekly roundup
+- **key_topics** (array of strings) — Key technical topics/concepts covered (e.g. "Semantic Kernel", "MCP", "RAG")
+- **relevance** (string) — How relevant for a weekly roundup: `"high"` (major announcement/release), `"medium"` (useful update), `"low"` (minor or niche)
+- **topic_type** (string) — Content type for thematic grouping: `"announcement"` | `"tutorial"` | `"update"` | `"guide"` | `"analysis"` | `"feature"` | `"troubleshooting"` | `"case-study"` | `"news"` | `"preview"` | `"ga-release"` | `"deprecation"` | `"migration"` | `"integration"` | `"comparison"`
+- **impact_level** (string) — How much it affects developer workflows: `"high"` | `"medium"` | `"low"`
+- **time_sensitivity** (string) — How time-sensitive for developers: `"immediate"` (act now) | `"this-week"` | `"this-month"` | `"long-term"` (reference material)
+
 ### Option B: Content Does Not Qualify (No Categories)
 
 Return a JSON object with only this field:
@@ -848,7 +896,15 @@ Return a JSON object with only this field:
   "tags": ["Azure OpenAI Service", "C#", "API Integration", "Authentication", "GPT-4", "Microsoft Azure", "REST API", "Cloud Development", "AI Development", "Programming Tutorial"],
   "excerpt": "Jane Smith provides a comprehensive tutorial on integrating Azure OpenAI Service into C# applications, covering the essential steps for developers.",
   "content": "# Getting Started with Azure OpenAI Service in C#\n\nThis tutorial demonstrates how to integrate Azure OpenAI Service into C# applications...",
-  "explanation": "Assigned AI category because content focuses on Azure OpenAI Service (AI rule 1). Assigned Azure category because it covers Azure service usage (Azure rule 1). Assigned .NET category because it involves C# development and API integration (.NET rules 1 and 2)."
+  "explanation": "Assigned AI category because content focuses on Azure OpenAI Service (AI rule 1). Assigned Azure category because it covers Azure service usage (Azure rule 1). Assigned .NET category because it involves C# development and API integration (.NET rules 1 and 2).",
+  "roundup": {
+    "summary": "Jane Smith walks through integrating Azure OpenAI Service into C# applications, covering authentication, API calls, and response handling with GPT-4.",
+    "key_topics": ["Azure OpenAI Service", "C#", "API Integration", "GPT-4"],
+    "relevance": "medium",
+    "topic_type": "tutorial",
+    "impact_level": "medium",
+    "time_sensitivity": "long-term"
+  }
 }
 ```
 

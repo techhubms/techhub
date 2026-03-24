@@ -7,6 +7,7 @@ using Moq;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Api.Tests.Services;
 
@@ -32,9 +33,14 @@ public class StartupBackgroundServiceTests
         var mockConnectionFactory = new Mock<IDbConnectionFactory>();
         mockConnectionFactory.Setup(f => f.CreateConnection()).Returns(Mock.Of<IDbConnection>());
 
+        var mockFeedRepo = new Mock<IRssFeedConfigRepository>();
+        mockFeedRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Returns(Task.CompletedTask);
+
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockContentSync.Object);
         services.AddSingleton(mockConnectionFactory.Object);
+        services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
 
@@ -73,9 +79,12 @@ public class StartupBackgroundServiceTests
         var mockConnectionFactory = new Mock<IDbConnectionFactory>();
         mockConnectionFactory.Setup(f => f.CreateConnection()).Returns(Mock.Of<IDbConnection>());
 
+        var mockFeedRepo = new Mock<IRssFeedConfigRepository>();
+
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockContentSync.Object);
         services.AddSingleton(mockConnectionFactory.Object);
+        services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
 
@@ -127,9 +136,14 @@ public class StartupBackgroundServiceTests
             return mockCommand.Object;
         });
 
+        var mockFeedRepo = new Mock<IRssFeedConfigRepository>();
+        mockFeedRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Returns(Task.CompletedTask);
+
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockContentSync.Object);
         services.AddSingleton(mockConnectionFactory.Object);
+        services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
 

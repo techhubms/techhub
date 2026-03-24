@@ -229,7 +229,15 @@ public sealed class AiCategorizationService
         if (!string.IsNullOrWhiteSpace(item.FullContent))
         {
             sb.AppendLine();
-            sb.AppendLine("CONTENT:");
+            if (item.IsYouTube)
+            {
+                sb.AppendLine("TRANSCRIPT (auto-generated from video closed captions):");
+            }
+            else
+            {
+                sb.AppendLine("CONTENT:");
+            }
+
             sb.AppendLine(item.FullContent);
         }
 
@@ -237,17 +245,6 @@ public sealed class AiCategorizationService
         {
             sb.AppendLine(CultureInfo.InvariantCulture, $"FEED TAGS: {string.Join(", ", item.FeedTags)}");
         }
-
-        sb.AppendLine();
-        sb.AppendLine("In addition to the standard categorization fields, include a \"roundup\" object:");
-        sb.AppendLine("  \"roundup\": {");
-        sb.AppendLine("    \"summary\": \"1-2 sentence neutral summary for a weekly roundup\",");
-        sb.AppendLine("    \"key_topics\": [\"Topic1\", \"Topic2\"],");
-        sb.AppendLine("    \"relevance\": \"high|medium|low\",");
-        sb.AppendLine("    \"topic_type\": \"announcement|tutorial|update|guide|analysis|feature|troubleshooting|case-study|news|preview|ga-release|deprecation|migration|integration|comparison\",");
-        sb.AppendLine("    \"impact_level\": \"high|medium|low\",");
-        sb.AppendLine("    \"time_sensitivity\": \"immediate|this-week|this-month|long-term\"");
-        sb.AppendLine("  }");
 
         return sb.ToString();
     }

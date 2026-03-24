@@ -298,6 +298,8 @@ module apiApp './modules/api.bicep' = {
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require'
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     environmentName: environmentName
+    azureAdTenantId: azureAdTenantId
+    azureAdClientId: azureAdClientId
   }
 }
 

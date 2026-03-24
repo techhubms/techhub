@@ -347,3 +347,58 @@
 .admin-link-btn:hover {
     opacity: 0.8;
 }
+
+.admin-link-btn-danger {
+    color: #ef4444;
+    margin-left: var(--space-2);
+}
+
+/* ─── Navigation Links ────────────────────────────────────────────────────── */
+
+.admin-nav-links {
+    display: flex;
+    gap: var(--space-4);
+    align-items: center;
+}
+
+/* ─── Form Card ───────────────────────────────────────────────────────────── */
+
+.admin-form-card {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.admin-form-title {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin: 0 0 var(--space-4);
+    color: var(--color-text-primary);
+}
+
+.admin-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-4);
+}
+
+.admin-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.admin-form-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.admin-cell-url {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

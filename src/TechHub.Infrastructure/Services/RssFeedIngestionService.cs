@@ -53,6 +53,10 @@ public sealed class RssFeedIngestionService
 
             xmlContent = await _httpClient.GetStringAsync(feedConfig.Url, cts.Token);
         }
+        catch (OperationCanceledException) when (ct.IsCancellationRequested)
+        {
+            throw;
+        }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Failed to download feed {FeedName} from {Url}", feedConfig.Name, feedConfig.Url);
@@ -70,6 +74,10 @@ public sealed class RssFeedIngestionService
                 feedConfig.Name, items.Count, _options.ItemAgeLimitDays);
 
             return items;
+        }
+        catch (OperationCanceledException) when (ct.IsCancellationRequested)
+        {
+            throw;
         }
         catch (Exception ex)
         {

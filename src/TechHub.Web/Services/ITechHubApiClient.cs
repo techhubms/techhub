@@ -1,5 +1,6 @@
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
+using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Web.Services;
 
@@ -287,4 +288,38 @@ internal interface ITechHubApiClient
     Task<ContentProcessingJob?> GetProcessingJobByIdAsync(
         long id,
         CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // RSS Feed config endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all RSS feed configurations.
+    /// GET /api/admin/feeds
+    /// </summary>
+    Task<IReadOnlyList<FeedConfig>> GetFeedConfigsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a specific RSS feed config by ID.
+    /// GET /api/admin/feeds/{id}
+    /// </summary>
+    Task<FeedConfig?> GetFeedConfigByIdAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Create a new RSS feed config.
+    /// POST /api/admin/feeds
+    /// </summary>
+    Task<FeedConfig> CreateFeedConfigAsync(FeedConfig config, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update an existing RSS feed config.
+    /// PUT /api/admin/feeds/{id}
+    /// </summary>
+    Task<FeedConfig> UpdateFeedConfigAsync(FeedConfig config, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete an RSS feed config.
+    /// DELETE /api/admin/feeds/{id}
+    /// </summary>
+    Task DeleteFeedConfigAsync(long id, CancellationToken cancellationToken = default);
 }

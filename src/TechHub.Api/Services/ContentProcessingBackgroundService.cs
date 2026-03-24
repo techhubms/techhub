@@ -14,6 +14,7 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
 {
     private readonly IServiceProvider _serviceProvider;
     private readonly ContentProcessorOptions _options;
+    private readonly StartupStateService _startupState;
     private readonly ILogger<ContentProcessingBackgroundService> _logger;
 
     // Used to signal an immediate manual run; reset to null after use
@@ -22,14 +23,17 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
     public ContentProcessingBackgroundService(
         IServiceProvider serviceProvider,
         IOptions<ContentProcessorOptions> options,
+        StartupStateService startupState,
         ILogger<ContentProcessingBackgroundService> logger)
     {
         ArgumentNullException.ThrowIfNull(serviceProvider);
         ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(startupState);
         ArgumentNullException.ThrowIfNull(logger);
 
         _serviceProvider = serviceProvider;
         _options = options.Value;
+        _startupState = startupState;
         _logger = logger;
     }
 
@@ -62,6 +66,11 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
         _logger.LogInformation(
             "ContentProcessingBackgroundService started — interval: {Interval} minutes",
             _options.IntervalMinutes);
+
+        // Wait for database migrations and content sync to complete before processing
+        _logger.LogInformation("Waiting for startup operations to complete before first processing run…");
+        await _startupState.StartupTask.WaitAsync(stoppingToken);
+        _logger.LogInformation("Startup complete — starting first processing run");
 
         // Run once immediately on startup
         await RunOnceAsync("scheduled", stoppingToken);

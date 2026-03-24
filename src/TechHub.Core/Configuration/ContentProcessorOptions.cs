@@ -33,6 +33,19 @@ public class ContentProcessorOptions
     /// <summary>Maximum number of items to process per run (0 = unlimited).</summary>
     public int MaxItemsPerRun { get; init; }
 
+    /// <summary>
+    /// Maximum number of YouTube tags to accept from the external API.
+    /// Videos with more tags than this are assumed to be SEO-spammed and their tags are ignored.
+    /// Set to 0 to disable YouTube tag fetching entirely.
+    /// </summary>
+    public int MaxYouTubeTagCount { get; init; } = 15;
+
+    /// <summary>
+    /// Number of days to keep failed URL records before purging them for retry.
+    /// Set to 0 to never purge (failed URLs are never retried).
+    /// </summary>
+    public int FailedUrlRetentionDays { get; init; } = 7;
+
     /// <summary>Computed processing interval.</summary>
     public TimeSpan Interval => TimeSpan.FromMinutes(IntervalMinutes);
 }
