@@ -28,7 +28,7 @@
     <PackageVersion Include="OpenTelemetry.Instrumentation.Http" Version="1.15.0" />
     <PackageVersion Include="OpenTelemetry.Instrumentation.Runtime" Version="1.15.0" />
     <PackageVersion Include="Polly" Version="8.6.6" />
-    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.1.5" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="10.1.6" />
     <PackageVersion Include="Testcontainers.PostgreSql" Version="4.11.0" />
     <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.2" />
     <PackageVersion Include="xunit.v3.mtp-v2" Version="3.2.2" />
