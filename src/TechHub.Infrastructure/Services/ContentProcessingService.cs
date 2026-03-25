@@ -37,7 +37,7 @@ public sealed class ContentProcessingService
     private readonly ContentProcessorOptions _options;
     private readonly ILogger<ContentProcessingService> _logger;
 
-    private static readonly JsonSerializerOptions JsonOptions = new()
+    private static readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
     };
@@ -442,7 +442,7 @@ public sealed class ContentProcessingService
                 topic_type = item.RoundupMetadata.TopicType,
                 impact_level = item.RoundupMetadata.ImpactLevel,
                 time_sensitivity = item.RoundupMetadata.TimeSensitivity
-            }, JsonOptions)
+            }, _jsonOptions)
             : null;
 
         const string Upsert = @"

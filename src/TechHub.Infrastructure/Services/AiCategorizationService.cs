@@ -23,9 +23,9 @@ public sealed class AiCategorizationService
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCategorizationService> _logger;
 
-    private static readonly string SystemMessage = LoadSystemMessage();
+    private static readonly string _systemMessage = LoadSystemMessage();
 
-    private static readonly JsonSerializerOptions JsonOptions = new()
+    private static readonly JsonSerializerOptions _jsonOptions = new()
     {
         PropertyNameCaseInsensitive = true,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
@@ -68,14 +68,14 @@ public sealed class AiCategorizationService
         {
             messages = new[]
             {
-                new { role = "system", content = SystemMessage },
+                new { role = "system", content = _systemMessage },
                 new { role = "user", content = userContent }
             },
             temperature = 0.1,
             max_tokens = 2000
         };
 
-        var json = JsonSerializer.Serialize(requestBody, JsonOptions);
+        var json = JsonSerializer.Serialize(requestBody, _jsonOptions);
         var attempt = 0;
 
         while (attempt < _options.MaxRetries)

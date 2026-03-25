@@ -607,8 +607,10 @@ public static class BlazorHelpers
 
                     // Step 2: If web started but server circuit hasn't connected within 5s,
                     // the circuit likely failed (e.g. content detail pages where the SignalR
-                    // connection drops during initialization). Bail out early instead of
-                    // waiting the full 60s timeout.
+                    // connection drops during initialization). Return true to proceed because
+                    // these pages have fully rendered SSR content — the tests only inspect the
+                    // DOM (URLs, meta tags, layout) and don't need interactive Blazor features.
+                    // Without this, every content detail test would wait the full 60s timeout.
                     if (window.__blazorWebReadyAt && !window.__blazorServerReady && !window.__blazorWasmReady) {
                         if (Date.now() - window.__blazorWebReadyAt > 5000) return true;
                     }

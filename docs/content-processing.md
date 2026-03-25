@@ -123,11 +123,11 @@ This script automatically fixes markdown formatting issues like missing blank li
 
 ## RSS Feed Processing
 
-The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. The processing pipeline is implemented in C# (`TechHub.ContentProcessor`) and runs hourly in production.
+The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. The processing pipeline is implemented in C# as `ContentProcessingBackgroundService` inside `TechHub.Api` and runs on a configurable interval (default: every 15 minutes) in production.
 
-### Content Processor Pipeline
+### Content Processing Pipeline
 
-The `TechHub.ContentProcessor` worker service runs on a configurable schedule (default: every hour) and performs:
+The `ContentProcessingBackgroundService` (`IHostedService`) runs inside the API on a configurable schedule and performs:
 
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from configured feed URLs
 2. **Content fetching** — Fetches the full article HTML from each item's source URL, or YouTube closed captions (transcripts) for video items

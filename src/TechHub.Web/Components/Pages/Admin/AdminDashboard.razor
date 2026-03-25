@@ -71,7 +71,7 @@
                     {
                         <tr>
                             <td class="admin-cell-mono">@job.Id</td>
-                            <td>@job.StartedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                            <td>@FormatTimestamp(job.StartedAt)</td>
                             <td>@FormatDuration(job.DurationMs)</td>
                             <td>
                                 <span class="admin-badge admin-badge-@job.TriggerType">@job.TriggerType</span>
@@ -184,6 +184,11 @@
     {
         _expandedJobId = null;
     }
+
+    private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
+
+    private static string FormatTimestamp(DateTimeOffset timestamp) =>
+        TimeZoneInfo.ConvertTime(timestamp, _brusselsTimeZone).ToString("yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
 
     private static string FormatDuration(long? durationMs)
     {

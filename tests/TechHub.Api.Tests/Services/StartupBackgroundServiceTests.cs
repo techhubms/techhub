@@ -3,12 +3,12 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Moq;
 using TechHub.Api.Services;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Api.Tests.Services;

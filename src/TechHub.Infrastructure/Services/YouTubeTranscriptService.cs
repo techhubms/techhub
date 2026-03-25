@@ -3,9 +3,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using YoutubeExplode;
+using YoutubeExplode.Exceptions;
 using YoutubeExplode.Videos.ClosedCaptions;
-
-#pragma warning disable CA1031 // Catch-all intentional: transcript fetch failures must not stop pipeline processing
 
 namespace TechHub.Infrastructure.Services;
 
@@ -106,7 +105,7 @@ public class YouTubeTranscriptService : IDisposable
             _logger.LogWarning("Timeout fetching transcript for {Url}", videoUrl);
             return null;
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is YoutubeExplodeException or HttpRequestException or IOException)
         {
             _logger.LogWarning(ex, "Failed to fetch transcript for {Url}", videoUrl);
             return null;

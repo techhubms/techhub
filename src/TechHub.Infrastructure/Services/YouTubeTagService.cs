@@ -4,8 +4,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 
-#pragma warning disable CA1031 // Catch-all intentional: tag fetch failures must not stop the pipeline
-
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
@@ -88,7 +86,7 @@ public class YouTubeTagService
             _logger.LogWarning("Timeout fetching YouTube tags for {VideoId}", videoId);
             return [];
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is HttpRequestException or JsonException or IOException)
         {
             _logger.LogWarning(ex, "Failed to fetch YouTube tags for video {VideoId}", videoId);
             return [];

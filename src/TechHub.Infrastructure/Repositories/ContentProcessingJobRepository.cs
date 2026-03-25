@@ -60,8 +60,15 @@ WHERE id = @JobId";
 
         await _connection.ExecuteAsync(new CommandDefinition(
             Sql,
-            new { JobId = jobId, FeedsProcessed = feedsProcessed, ItemsAdded = itemsAdded,
-                  ItemsSkipped = itemsSkipped, ErrorCount = errorCount, LogOutput = logOutput },
+            new
+            {
+                JobId = jobId,
+                FeedsProcessed = feedsProcessed,
+                ItemsAdded = itemsAdded,
+                ItemsSkipped = itemsSkipped,
+                ErrorCount = errorCount,
+                LogOutput = logOutput
+            },
             cancellationToken: ct));
     }
 
