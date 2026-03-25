@@ -1,0 +1,17 @@
+{
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-03-25 19:20:55",
+  "EnhancedContent": "Copilot usage metrics now indicate which users have Copilot coding agent (CCA) activity. Enterprise and organization admins can identify which users are actively using Copilot coding agent on daily and 28-day reports, enabling a more complete picture of Copilot adoption across surfaces beyond the IDE.\n\nWithin the [API response](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10), CCA usage is denoted by the `used_copilot_coding_agent` field at the user level. You can learn more in [our documentation about Copilot usage metrics](https://docs.github.com/copilot/concepts/copilot-usage-metrics/copilot-metrics).\n\nThis includes whether a user triggered a Copilot coding agent session by assigning Copilot to an issue or by tagging `@copilot` in a pull request comment.\n\n### Why this matters\n\nWith this update, you can:\n\n- Track Copilot coding agent adoption across your enterprise and organization alongside existing IDE metrics.\n- Distinguish between IDE agent mode usage (`used_agent`\n) and Copilot coding agent usage (`used_copilot_coding_agent` ) for clearer adoption insights.\n- Understand how teams are leveraging Copilot beyond the IDE to plan and code autonomously.\n\nVisit our [API documentation](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10) to learn more.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Description": "Copilot usage metrics now indicate which users have Copilot coding agent (CCA) activity. Enterprise and organization admins can identify which users are actively using Copilot coding agent on daily and…\n\nThe post [Copilot usage metrics now identify active Copilot coding agent users](https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "Copilot usage metrics now identify active Copilot coding agent users",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2026-03-25T18:49:10+00:00",
+  "Link": "https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users"
+}
