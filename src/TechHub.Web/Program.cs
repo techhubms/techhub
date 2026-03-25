@@ -303,7 +303,8 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 // built-in. We expose /admin/logout as a stable alias for the logout button.
 // Signs out of OIDC first (issues the end_session request to Azure AD), then
 // clears the local cookie. The OIDC sign-out redirects to "/" on completion.
-app.MapGet("/admin/logout", async (HttpContext context) =>
+// Uses POST to prevent CSRF / prefetch-triggered logout (antiforgery validated).
+app.MapPost("/admin/logout", async (HttpContext context) =>
 {
     // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
     // Cookie sign-out is handled by the OIDC post-logout flow automatically.

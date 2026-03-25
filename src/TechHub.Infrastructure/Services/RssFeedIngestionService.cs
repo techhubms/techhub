@@ -251,5 +251,3 @@ public sealed class RssFeedIngestionService
         return System.Text.RegularExpressions.Regex.Replace(html, "<[^>]*>", string.Empty).Trim();
     }
 }
-
-#pragma warning restore CA1031

@@ -529,13 +529,13 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         }
     }
 
-        private static List<object> BuildTagWords(
-            IReadOnlyList<string> tags, string collection, string slug,
-            bool isAi, bool isAzure, bool isDotnet, bool isDevops, bool isGhc,
-            bool isMl, bool isSecurity, int bitmask)
-        {
-            var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            var rows = new List<object>();
+    private static List<object> BuildTagWords(
+        IReadOnlyList<string> tags, string collection, string slug,
+        bool isAi, bool isAzure, bool isDotnet, bool isDevops, bool isGhc,
+        bool isMl, bool isSecurity, int bitmask)
+    {
+        var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var rows = new List<object>();
 
         void Add(string word, string display, bool full)
         {

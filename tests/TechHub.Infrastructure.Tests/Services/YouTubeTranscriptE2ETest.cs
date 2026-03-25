@@ -1,5 +1,4 @@
 using System.Globalization;
-using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
@@ -128,7 +127,7 @@ public class YouTubeTranscriptE2ETest : IDisposable
         var json = JsonSerializer.Serialize(requestBody);
         using var request = new HttpRequestMessage(HttpMethod.Post, endpoint);
         request.Headers.Add("api-key", _apiKey);
-        request.Content = new StringContent(json, Encoding.UTF8, new MediaTypeHeaderValue("application/json"));
+        request.Content = new StringContent(json, Encoding.UTF8, "application/json");
 
         Console.WriteLine("Calling Azure OpenAI API...");
         var response = await httpClient.SendAsync(request, TestContext.Current.CancellationToken);
@@ -347,10 +346,11 @@ public class YouTubeTranscriptE2ETest : IDisposable
         var datePrefix = DateTimeOffset.Now.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
         var filename = $"{datePrefix}-{safeTitle}.md";
 
-        // Find the collections/_videos directory relative to the test project
+        // Write to .tmp/tests/ instead of collections/ to avoid polluting the repository
         var repoRoot = FindRepoRoot();
-        var videosDir = Path.Join(repoRoot, "collections", "_videos");
-        var filePath = Path.Join(videosDir, filename);
+        var outputDir = Path.Join(repoRoot, ".tmp", "tests", "videos");
+        Directory.CreateDirectory(outputDir);
+        var filePath = Path.Join(outputDir, filename);
 
         File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
         Console.WriteLine();

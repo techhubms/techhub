@@ -24,7 +24,10 @@
             </div>
             <div class="admin-nav-actions">
                 <a href="/" class="admin-nav-link">← Back to Site</a>
-                <a href="/admin/logout" class="btn-secondary admin-logout-btn">Log out</a>
+                <form method="post" action="/admin/logout" class="admin-logout-form">
+                    <AntiforgeryToken />
+                    <button type="submit" class="btn-secondary admin-logout-btn">Log out</button>
+                </form>
             </div>
         </nav>
     </header>

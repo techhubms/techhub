@@ -36,7 +36,8 @@ public sealed class ArticleContentService
     /// <summary>
     /// Fetches the full article content for <paramref name="item"/> and returns a new instance
     /// with <see cref="RawFeedItem.FullContent"/> populated.
-    /// Returns the original item unchanged on failure or for YouTube items.
+    /// YouTube items are enriched with transcript text when available.
+    /// Returns the original item unchanged on failure.
     /// </summary>
     public async Task<RawFeedItem> EnrichWithContentAsync(RawFeedItem item, CancellationToken ct = default)
     {
