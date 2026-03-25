@@ -29728,5 +29728,23 @@
     "timestamp": "2026-03-25 17:28:15 +00:00",
     "reason": "Succesfully added: No generic exclusion rules applied (English, not job/career, not question-only, not primarily sales pitch). Assigned Security because the content is centered on identity and access security using Microsoft technologies including Microsoft Entra, Entra Conditional Access, Entra ID Protection, and Microsoft Defender/Defender XDR (Security rules 1, 3, 5, 9). Assigned AI because it specifically discusses Microsoft Security Copilot and its AI-powered triage agent for identity (AI rule 1: Microsoft AI products/services; also AI usage in security operations). Did not assign Azure, .NET, DevOps, ML, or GitHub Copilot because the post does not cover Azure services, development frameworks, CI/CD, data science/ML engineering, or GitHub Copilot.",
     "collection": "news"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/explore-edit-and-organize-item-definitions-and-fabric-mcp-server-in-vs-code/",
+    "timestamp": "2026-03-25 18:25:24 +00:00",
+    "reason": "Succesfully added: No generic exclusions apply: it’s English, technical, and news-type content. Assigned ML because the post is centered on Microsoft Fabric and common Fabric analytics artifacts and architecture (lakehouse, notebooks, OneLake, Medallion architecture), which fits the ML category’s Microsoft Fabric and analytics architecture rules (ML rules 1, 3, 4). Assigned GitHub Copilot and AI because it explicitly covers using the Fabric MCP server within GitHub Copilot Chat and a Fabric agent mode (GitHub Copilot inclusion rules 1–4), and the workflow requires adding AI whenever GitHub Copilot is assigned (AI rule 2). Did not assign Azure/.NET/DevOps/Security because the article doesn’t materially cover Azure services, .NET development, CI/CD practices, or security implementation details.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://blog.fabric.microsoft.com/en-US/blog/sql-server-management-studio-ssms-22-4-1-and-github-copilot-in-ssms-generally-available/",
+    "timestamp": "2026-03-25 18:26:11 +00:00",
+    "reason": "Succesfully added: No generic exclusion rules applied (English, substantive technical product update, not job/career, not sales-pitch-dominant, not question-only). Assigned \"GitHub Copilot\" because the content is specifically about \"GitHub Copilot in SQL Server Management Studio (SSMS)\" reaching general availability and adding features like custom instructions and roadmap items (GitHub Copilot inclusion rules 1, 2, and 4). Assigned \"AI\" because GitHub Copilot content always requires adding the AI category together with GitHub Copilot (AI rule 2). Did not assign Azure/.NET/DevOps/ML/Security because the article focuses on SSMS feature updates and Copilot integration, without substantive coverage of Azure services, .NET development, CI/CD workflows, data science/ML engineering, or security implementation.",
+    "collection": "news"
+  },
+  {
+    "canonical_url": "https://github.blog/changelog/2026-03-25-disable-comments-on-individual-commits",
+    "timestamp": "2026-03-25 18:26:57 +00:00",
+    "reason": "Succesfully added: Generic exclusion rules do not apply: this is English, not job/career content, not question-only, not a sales pitch, and it provides a concrete product change. Assigned DevOps because it is a GitHub repository administration/collaboration feature affecting commit commenting and APIs (DevOps inclusion rules 8 and 11: version control and GitHub tooling). Not assigned Azure/.NET/Security/AI/ML/GitHub Copilot because the content does not discuss those technologies or GitHub Copilot specifically.",
+    "collection": "news"
   }
 ]
