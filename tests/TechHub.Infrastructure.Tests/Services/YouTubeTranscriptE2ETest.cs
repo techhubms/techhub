@@ -190,7 +190,7 @@ public class YouTubeTranscriptE2ETest : IDisposable
             }
         }
 
-        content.Should().NotBeNullOrWhiteSpace("AI should return content");
+        content!.Should().NotBeNullOrWhiteSpace("AI should return content");
     }
 
     private static string BuildUserPrompt(RawFeedItem item)
@@ -268,33 +268,20 @@ public class YouTubeTranscriptE2ETest : IDisposable
         var sectionNames = new List<string>();
         if (root.TryGetProperty("categories", out var catProp) && catProp.ValueKind == JsonValueKind.Array)
         {
-            foreach (var cat in catProp.EnumerateArray())
-            {
-                var catStr = cat.GetString();
-                if (catStr != null && sectionNameMapping.TryGetValue(catStr, out var mapped))
-                {
-                    sectionNames.Add(mapped);
-                }
-                else if (catStr != null)
-                {
-                    sectionNames.Add(Regex.Replace(catStr.ToLowerInvariant(), @"\s+", "-"));
-                }
-            }
+            sectionNames = catProp.EnumerateArray()
+                .Select(cat => cat.GetString())
+                .Where(catStr => catStr != null)
+                .Select(catStr => sectionNameMapping.TryGetValue(catStr!, out var mapped)
+                    ? mapped
+                    : Regex.Replace(catStr!.ToLowerInvariant(), @"\s+", "-"))
+                .ToList();
         }
 
         sectionNames = sectionNames.Distinct().OrderBy(s => s).ToList();
 
         // Compute primary_section
         var priorityOrder = new[] { "github-copilot", "ai", "ml", "dotnet", "azure", "devops", "security" };
-        var primarySection = "all";
-        foreach (var p in priorityOrder)
-        {
-            if (sectionNames.Contains(p))
-            {
-                primarySection = p;
-                break;
-            }
-        }
+        var primarySection = priorityOrder.FirstOrDefault(sectionNames.Contains) ?? "all";
 
         if (primarySection == "all" && sectionNames.Count > 0)
         {
@@ -362,8 +349,8 @@ public class YouTubeTranscriptE2ETest : IDisposable
 
         // Find the collections/_videos directory relative to the test project
         var repoRoot = FindRepoRoot();
-        var videosDir = Path.Combine(repoRoot, "collections", "_videos");
-        var filePath = Path.Combine(videosDir, filename);
+        var videosDir = Path.Join(repoRoot, "collections", "_videos");
+        var filePath = Path.Join(videosDir, filename);
 
         File.WriteAllText(filePath, sb.ToString(), Encoding.UTF8);
         Console.WriteLine();
@@ -377,7 +364,7 @@ public class YouTubeTranscriptE2ETest : IDisposable
         var dir = AppContext.BaseDirectory;
         while (dir != null)
         {
-            if (File.Exists(Path.Combine(dir, "TechHub.slnx")))
+            if (File.Exists(Path.Join(dir, "TechHub.slnx")))
             {
                 return dir;
             }

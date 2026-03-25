@@ -40,13 +40,9 @@
   - Bulk updates to frontmatter across collections
   - Content validation and normalization
   - Run from command line or as part of CI/CD pipeline
-- **`TechHub.ContentProcessor/`** - Background content processing worker
-  - Runs on a configurable schedule (default: every hour)
-  - Downloads and parses RSS/Atom feeds from configured sources
-  - Fetches full article content from source URLs
-  - Categorizes content using Azure OpenAI
-  - Writes processed items directly to the PostgreSQL database
-  - **Production only** — staging/local environments receive data via `scripts/Restore-Database.ps1`
+- **`TechHub.ContentProcessor/`** - CLI utility for one-time content processing migration tasks
+  - Retained for reference; active content processing now runs inside `TechHub.Api` as `ContentProcessingBackgroundService`
+  - See [content-processing.md](content-processing.md) for the current architecture
 
 See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and architecture guidelines.
 

@@ -93,11 +93,11 @@ ON CONFLICT (external_url) DO UPDATE SET
         const string Sql = @"
 DELETE FROM processed_urls
 WHERE status = 'failed'
-  AND processed_at < NOW() - @Interval::INTERVAL";
+  AND processed_at < NOW() - make_interval(secs => @TotalSeconds)";
 
         var deleted = await _connection.ExecuteAsync(new CommandDefinition(
             Sql,
-            new { Interval = olderThan.ToString() },
+            new { TotalSeconds = olderThan.TotalSeconds },
             cancellationToken: ct));
 
         if (deleted > 0)

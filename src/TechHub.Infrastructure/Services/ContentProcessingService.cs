@@ -1,4 +1,5 @@
 using System.Data;
+using System.Data.Common;
 using System.Globalization;
 using System.Text;
 using System.Text.Json;
@@ -8,8 +9,6 @@ using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
-
-#pragma warning disable CA1031 // Catch-all intentional: errors must not stop pipeline processing
 
 namespace TechHub.Infrastructure.Services;
 
@@ -201,7 +200,7 @@ public sealed class ContentProcessingService
                     {
                         throw;
                     }
-                    catch (Exception ex)
+                    catch (Exception ex) when (ex is HttpRequestException or JsonException or InvalidOperationException or TimeoutException)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR categorizing {raw.ExternalUrl}: {ex.Message}"));
                         await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, ct);
@@ -239,7 +238,7 @@ public sealed class ContentProcessingService
                     {
                         throw;
                     }
-                    catch (Exception ex)
+                    catch (DbException ex)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR writing {processed.ExternalUrl}: {ex.Message}"));
                         await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, ct);
@@ -268,7 +267,7 @@ public sealed class ContentProcessingService
             Log("Run cancelled.");
             await TryFailJobAsync(jobId, log.ToString(), ct);
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
         {
             Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message}"));
             _logger.LogError(ex, "Content processing run {JobId} failed with unhandled exception", jobId);
@@ -287,7 +286,7 @@ public sealed class ContentProcessingService
         {
             await _jobRepo.FailAsync(jobId, logOutput, ct);
         }
-        catch (Exception ex)
+        catch (DbException ex)
         {
             _logger.LogError(ex, "Failed to mark job {JobId} as failed", jobId);
         }
@@ -305,7 +304,7 @@ public sealed class ContentProcessingService
                   )",
                 cancellationToken: ct));
         }
-        catch (Exception ex)
+        catch (DbException ex)
         {
             _logger.LogWarning(ex, "Failed to purge old processing jobs");
         }

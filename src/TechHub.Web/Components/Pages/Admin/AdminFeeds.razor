@@ -126,7 +126,6 @@
         await LoadFeedsAsync();
     }
 
-#pragma warning disable CA1031 // Catch-all intentional: UI must display errors, not crash
     private async Task LoadFeedsAsync()
     {
         _loading = true;
@@ -136,7 +135,11 @@
         {
             _feeds = await Api.GetFeedConfigsAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
         {
             _error = $"Failed to load feeds: {ex.Message}";
         }
@@ -201,7 +204,11 @@
             _editingFeed = null;
             await LoadFeedsAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
         {
             _message = $"Failed to save feed: {ex.Message}";
             _messageIsError = true;
@@ -223,11 +230,14 @@
             _messageIsError = false;
             await LoadFeedsAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
         {
             _message = $"Failed to delete feed: {ex.Message}";
             _messageIsError = true;
         }
     }
-#pragma warning restore CA1031
 }

@@ -44,7 +44,10 @@ export function beforeWebStarted(options) {
  */
 export function afterWebStarted(blazor) {
     // Mark that Blazor Web is ready (initial SSR rendering complete)
+    // Timestamp is used by WaitForBlazorReadyAsync to detect circuit initialization failures:
+    // if the server circuit hasn't connected within 5s of web start, the circuit likely failed.
     window.__blazorWebReady = true;
+    window.__blazorWebReadyAt = Date.now();
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-web-ready');
     console.debug('[TechHub] Blazor Web started');
 

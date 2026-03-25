@@ -7,6 +7,8 @@ using Moq;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Api.Tests.Services;
@@ -50,6 +52,7 @@ public class StartupBackgroundServiceTests
             serviceProvider,
             mockStartupState,
             mockHostLifetime.Object,
+            Options.Create(new ContentProcessorOptions()),
             mockLogger.Object);
 
         // Act
@@ -94,6 +97,7 @@ public class StartupBackgroundServiceTests
             serviceProvider,
             mockStartupState,
             mockHostLifetime.Object,
+            Options.Create(new ContentProcessorOptions()),
             mockLogger.Object);
 
         // Act
@@ -153,6 +157,7 @@ public class StartupBackgroundServiceTests
             serviceProvider,
             mockStartupState,
             mockHostLifetime.Object,
+            Options.Create(new ContentProcessorOptions()),
             mockLogger.Object);
 
         // Act

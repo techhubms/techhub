@@ -5,8 +5,6 @@ using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Models.ContentProcessing;
 
-#pragma warning disable CA1031 // Catch-all intentional: errors must not stop pipeline processing
-
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
@@ -57,7 +55,7 @@ public sealed class RssFeedIngestionService
         {
             throw;
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to download feed {FeedName} from {Url}", feedConfig.Name, feedConfig.Url);
             return [];
@@ -79,7 +77,7 @@ public sealed class RssFeedIngestionService
         {
             throw;
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is XmlException or FormatException or ArgumentException)
         {
             _logger.LogError(ex, "Failed to parse feed {FeedName}", feedConfig.Name);
             return [];

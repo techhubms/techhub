@@ -50,7 +50,7 @@ public class YouTubeTagService
         try
         {
             using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-            cts.CancelAfter(TimeSpan.FromSeconds(10));
+            cts.CancelAfter(TimeSpan.FromSeconds(_options.RequestTimeoutSeconds));
 
             var url = $"{ApiBaseUrl}{Uri.EscapeDataString(videoId)}";
             _logger.LogDebug("Fetching YouTube tags for video {VideoId}", videoId);
@@ -167,15 +167,11 @@ public class YouTubeTagService
                 return [];
             }
 
-            var tags = new List<string>();
-            foreach (var tag in tagsArray.EnumerateArray())
-            {
-                var value = tag.GetString();
-                if (!string.IsNullOrWhiteSpace(value))
-                {
-                    tags.Add(value.Trim());
-                }
-            }
+            var tags = tagsArray.EnumerateArray()
+                .Select(tag => tag.GetString())
+                .Where(value => !string.IsNullOrWhiteSpace(value))
+                .Select(value => value!.Trim())
+                .ToList();
 
             return tags;
         }

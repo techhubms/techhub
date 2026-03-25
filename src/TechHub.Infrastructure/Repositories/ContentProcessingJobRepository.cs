@@ -1,10 +1,9 @@
 using System.Data;
+using System.Data.Common;
 using Dapper;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
-
-#pragma warning disable CA1031 // Catch-all intentional: errors must not stop pipeline processing
 
 namespace TechHub.Infrastructure.Repositories;
 
@@ -94,7 +93,7 @@ WHERE id = @JobId";
             await _connection.ExecuteAsync(new CommandDefinition(
                 Sql, new { JobId = jobId, Line = line }, cancellationToken: ct));
         }
-        catch (Exception ex)
+        catch (DbException ex)
         {
             // Best-effort: log internally but don't surface the error
             _logger.LogDebug(ex, "Failed to append log line to job {JobId}", jobId);

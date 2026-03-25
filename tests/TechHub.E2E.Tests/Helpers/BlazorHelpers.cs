@@ -605,7 +605,15 @@ public static class BlazorHelpers
                     // Step 1: Blazor runtime must exist
                     if (typeof window.Blazor === 'undefined') return false;
 
-                    // Step 2: Interactive Server/WASM circuit must be established.
+                    // Step 2: If web started but server circuit hasn't connected within 5s,
+                    // the circuit likely failed (e.g. content detail pages where the SignalR
+                    // connection drops during initialization). Bail out early instead of
+                    // waiting the full 60s timeout.
+                    if (window.__blazorWebReadyAt && !window.__blazorServerReady && !window.__blazorWasmReady) {
+                        if (Date.now() - window.__blazorWebReadyAt > 5000) return true;
+                    }
+
+                    // Step 3: Interactive Server/WASM circuit must be established.
                     // __blazorServerReady is set by afterServerStarted() — SignalR circuit ready, event handlers attached.
                     // __blazorWasmReady  is set by afterWebAssemblyStarted() — WASM runtime ready.
                     // NOTE: __blazorWebReady (afterWebStarted) fires too early — before the interactive circuit
@@ -614,14 +622,14 @@ public static class BlazorHelpers
                         return false;
                     }
 
-                    // Step 3: Page scripts must not be actively loading
+                    // Step 4: Page scripts must not be actively loading
                     // __scriptsLoading is set true by markScriptsLoading() when page scripts start,
                     // and set false by markScriptsReady() when they complete.
                     // Only block if scripts are ACTIVELY loading. If both flags are undefined,
                     // the page has no page scripts (e.g., SectionCollection.razor) — proceed immediately.
                     if (window.__scriptsLoading === true) return false;
 
-                    // Step 4: Mermaid diagrams rendered (if present)
+                    // Step 5: Mermaid diagrams rendered (if present)
                     // Only wait if page has <pre class='mermaid'> elements that haven't been converted to SVG yet
                     const mermaidPres = document.querySelectorAll('pre.mermaid');
                     if (mermaidPres.length > 0) {

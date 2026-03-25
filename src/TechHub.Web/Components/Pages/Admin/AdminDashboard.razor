@@ -135,7 +135,11 @@
         {
             _jobs = await Api.GetProcessingJobsAsync();
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
         {
             _error = $"Failed to load jobs: {ex.Message}";
         }
@@ -156,7 +160,11 @@
             _triggerMessage = "Processing run triggered successfully. Refresh in a moment to see the new job.";
             _triggerError = false;
         }
-        catch (Exception ex)
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
         {
             _triggerMessage = $"Failed to trigger run: {ex.Message}";
             _triggerError = true;

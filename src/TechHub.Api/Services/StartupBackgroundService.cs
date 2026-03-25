@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Api.Services;
@@ -13,17 +15,20 @@ public class StartupBackgroundService : BackgroundService
     private readonly IServiceProvider _serviceProvider;
     private readonly StartupStateService _startupState;
     private readonly IHostApplicationLifetime _hostLifetime;
+    private readonly ContentProcessorOptions _options;
     private readonly ILogger<StartupBackgroundService> _logger;
 
     public StartupBackgroundService(
         IServiceProvider serviceProvider,
         StartupStateService startupState,
         IHostApplicationLifetime hostLifetime,
+        IOptions<ContentProcessorOptions> options,
         ILogger<StartupBackgroundService> logger)
     {
         _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
         _startupState = startupState ?? throw new ArgumentNullException(nameof(startupState));
         _hostLifetime = hostLifetime ?? throw new ArgumentNullException(nameof(hostLifetime));
+        _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
@@ -43,7 +48,9 @@ public class StartupBackgroundService : BackgroundService
 
             // Seed RSS feed configs from JSON if the table is empty (first run)
             var feedRepo = services.GetRequiredService<IRssFeedConfigRepository>();
-            var rssFeedsPath = Path.Combine(AppContext.BaseDirectory, "rss-feeds.json");
+            var rssFeedsPath = Path.IsPathRooted(_options.RssFeedsConfigPath)
+                ? _options.RssFeedsConfigPath
+                : Path.Join(AppContext.BaseDirectory, _options.RssFeedsConfigPath);
             await feedRepo.SeedFromJsonAsync(rssFeedsPath, stoppingToken);
             _logger.LogInformation("✅ RSS feed configs seeded (if table was empty)");
 

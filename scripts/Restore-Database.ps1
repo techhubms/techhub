@@ -109,7 +109,11 @@ $localConnectionString = "Host=localhost;Port=5432;Database=techhub;Username=tec
 $contentTables = @(
     "content_items",
     "content_tags_expanded",
-    "_migrations"
+    "_migrations",
+    "content_processing_jobs",
+    "rss_feed_configs",
+    "processed_urls",
+    "section_roundup_items"
 )
 
 # ============================================================================
@@ -219,7 +223,7 @@ function Invoke-PgRestore {
         "--no-owner",
         "--no-acl",
         "--single-transaction",
-        "--dbname=postgresql://$($PgEnv.PGUSER):$($PgEnv.PGPASSWORD)@$($PgEnv.PGHOST):$($PgEnv.PGPORT)/$($PgEnv.PGDATABASE)",
+        "--dbname=postgresql://$($PgEnv.PGUSER)@$($PgEnv.PGHOST):$($PgEnv.PGPORT)/$($PgEnv.PGDATABASE)",
         $InputFile
     )
 
