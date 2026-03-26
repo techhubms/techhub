@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-03-26 17:26:57",
+  "EnhancedContent": "We use the \"direct launch URL\" feature of the AVD web client to deep link users to a session desktop (https://learn.microsoft.com/en-us/windows-app/direct-launch-urls?tabs=avd). One of the reason we use the web client is because we use AVD in exam halls on Chromebooks in kiosk-mode. The ChromeOS kiosk-mode only supports websites.\n\nStudents are faced with a connection dialog in which they can toggle IME and Special Keys. The students have to enable IME, but since these are university-owned devices, they do not know and just click \"Connect\".\n\nWe would like to be able to configure these client options automatically. For example, as query parameters in the direct-launch-url.\n\nIdeally, we would also skip the \"Connect\" dialog entirely and just go strait into the session once the direct-launch-url is loaded.",
+  "PubDate": "2026-03-26T16:59:14+00:00",
+  "FeedName": "Microsoft Tech Community",
+  "OutputDir": "_community",
+  "Author": "laurens2305",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Description": "We use the \"direct launch URL\" feature of the AVD web client to deep link users to a session desktop ([https://learn.microsoft.com/en-us/windows-app/direct-launch-urls?tabs=avd](https://learn.microsoft.com/en-us/windows-app/direct-launch-urls?tabs=avd)). One of the reason we use the web client is because we use AVD in exam halls on Chromebooks in kiosk-mode. The ChromeOS kiosk-mode only supports websites.\n\nStudents are faced with a connection dialog in which they can toggle IME and Special Keys. The students have to enable IME, but since these are university-owned devices, they do not know and just click \"Connect\".\n\nWe would like to be able to configure these client options automatically. For example, as query parameters in the direct-launch-url.\n\nIdeally, we would also skip the \"Connect\" dialog entirely and just go strait into the session once the direct-launch-url is loaded.",
+  "Title": "Feature request: allow setting web client features from direct-launch-url",
+  "Tags": [],
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/feature-request-allow-setting-web-client-features-from-direct/m-p/4505993#M14032"
+}
