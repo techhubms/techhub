@@ -227,10 +227,36 @@
                         }
                     </div>
 
+                    @if (!string.IsNullOrWhiteSpace(pageData.Relationships.DxCore4Heading) && pageData.Relationships.DxCore4Content is { Count: > 0 })
+                    {
+                        <h3 id="relationships-dxcore4">@pageData.Relationships.DxCore4Heading</h3>
+                        @foreach (var paragraph in pageData.Relationships.DxCore4Content)
+                        {
+                            <p>@paragraph</p>
+                        }
+
+                        if (pageData.Relationships.DxCore4Insight is not null)
+                        {
+                            <div class="dx-insight-box">
+                                <h4>@pageData.Relationships.DxCore4Insight.Heading</h4>
+                                <p>@pageData.Relationships.DxCore4Insight.Content</p>
+                            </div>
+                        }
+                    }
+
                     <div class="dx-insight-box">
                         <h4>@pageData.Relationships.Insight.Heading</h4>
                         <p>@pageData.Relationships.Insight.Content</p>
                     </div>
+
+                    @if (!string.IsNullOrWhiteSpace(pageData.Relationships.RealWorldHeading) && pageData.Relationships.RealWorldContent is { Count: > 0 })
+                    {
+                        <h3 id="relationships-real-world">@pageData.Relationships.RealWorldHeading</h3>
+                        @foreach (var paragraph in pageData.Relationships.RealWorldContent)
+                        {
+                            <p>@paragraph</p>
+                        }
+                    }
                 </section>
 
                 @* Getting Started Section *@
@@ -361,6 +387,14 @@
         sb.Append($"<h2 id=\"dx-card-relationships\">{pageData.Relationships.Title}</h2>");
         sb.Append($"<h3 id=\"relationships-intro\">{pageData.Relationships.IntroHeading}</h3>");
         sb.Append($"<h3 id=\"relationships-choice\">{pageData.Relationships.ChoiceHeading}</h3>");
+        if (!string.IsNullOrWhiteSpace(pageData.Relationships.DxCore4Heading))
+        {
+            sb.Append($"<h3 id=\"relationships-dxcore4\">{pageData.Relationships.DxCore4Heading}</h3>");
+        }
+        if (!string.IsNullOrWhiteSpace(pageData.Relationships.RealWorldHeading))
+        {
+            sb.Append($"<h3 id=\"relationships-real-world\">{pageData.Relationships.RealWorldHeading}</h3>");
+        }
 
         // Getting Started
         sb.Append($"<h2 id=\"dx-card-getting-started\">{pageData.GettingStarted.Title}</h2>");

@@ -195,6 +195,10 @@ Configure these secrets in GitHub repository settings:
 - `AZURE_CREDENTIALS` - Azure service principal credentials (JSON)
 - `AZURE_CONTAINER_REGISTRY` - Name of shared Azure Container Registry: `crtechhub`
 - `AZURE_SUBSCRIPTION_ID` - Azure subscription ID
+- `AZURE_AD_TENANT_ID` - Entra ID tenant (directory) ID
+- `AZURE_AD_CLIENT_ID` - Entra ID application (client) ID
+- `AZURE_AD_CLIENT_SECRET` - Entra ID client secret (rotate with `scripts/Rotate-EntraIdSecret.ps1`)
+- `AZURE_AD_SCOPES` - API scope for access token validation (e.g. `api://<client-id>/Admin.Access`)
 
 ## GitHub Environments
 

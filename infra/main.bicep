@@ -59,6 +59,9 @@ param azureAdClientId string = ''
 @description('Azure AD client secret for admin dashboard authentication')
 param azureAdClientSecret string = ''
 
+@description('Azure AD API scope for admin access token validation (e.g. api://<client-id>/Admin.Access)')
+param azureAdScopes string = ''
+
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
@@ -300,6 +303,7 @@ module apiApp './modules/api.bicep' = {
     environmentName: environmentName
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
+    azureAdScopes: azureAdScopes
   }
 }
 
@@ -326,6 +330,7 @@ module webApp './modules/web.bicep' = {
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     azureAdClientSecret: azureAdClientSecret
+    azureAdScopes: azureAdScopes
   }
 }
 

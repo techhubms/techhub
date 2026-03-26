@@ -34,6 +34,9 @@ param azureAdClientId string = ''
 @description('Azure AD client secret for admin authentication')
 param azureAdClientSecret string = ''
 
+@description('Azure AD API scope for access token acquisition')
+param azureAdScopes string = ''
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
 
@@ -74,6 +77,10 @@ var staticEnvVars = [
   {
     name: 'AzureAd__ClientSecret'
     secretRef: 'azure-ad-client-secret'
+  }
+  {
+    name: 'AzureAd__Scopes'
+    value: azureAdScopes
   }
 ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {

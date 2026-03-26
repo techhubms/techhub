@@ -86,8 +86,18 @@ public sealed class RssFeedIngestionService
 
     private static List<RawFeedItem> ParseFeed(string xmlContent, FeedConfig feedConfig, DateTimeOffset cutoff)
     {
-        var doc = new XmlDocument();
-        doc.LoadXml(xmlContent);
+        // Use a safe XmlReader to prohibit DTD processing and external entities (XXE prevention)
+        var settings = new XmlReaderSettings
+        {
+            DtdProcessing = DtdProcessing.Prohibit,
+            XmlResolver = null
+        };
+
+        var doc = new XmlDocument { XmlResolver = null };
+        using (var reader = XmlReader.Create(new System.IO.StringReader(xmlContent), settings))
+        {
+            doc.Load(reader);
+        }
 
         var nsMgr = new XmlNamespaceManager(doc.NameTable);
         nsMgr.AddNamespace("atom", "http://www.w3.org/2005/Atom");
@@ -157,7 +167,14 @@ public sealed class RssFeedIngestionService
         XmlDocument doc, XmlNamespaceManager nsMgr, FeedConfig feedConfig, DateTimeOffset cutoff)
     {
         var items = new List<RawFeedItem>();
-        var entryNodes = doc.SelectNodes("//entry", nsMgr) ?? doc.SelectNodes("//atom:entry", nsMgr);
+        // SelectNodes returns an empty list (not null) when no nodes match,
+        // so we must check Count before falling through to the prefixed query.
+        var entryNodes = doc.SelectNodes("//entry", nsMgr);
+        if (entryNodes is null or { Count: 0 })
+        {
+            entryNodes = doc.SelectNodes("//atom:entry", nsMgr);
+        }
+
         if (entryNodes == null)
         {
             return items;
@@ -248,6 +265,6 @@ public sealed class RssFeedIngestionService
             return string.Empty;
         }
 
-        return System.Text.RegularExpressions.Regex.Replace(html, "<[^>]*>", string.Empty).Trim();
+        return System.Text.RegularExpressions.Regex.Replace(html, "<[^>]*>", string.Empty, System.Text.RegularExpressions.RegexOptions.None, TimeSpan.FromSeconds(2)).Trim();
     }
 }

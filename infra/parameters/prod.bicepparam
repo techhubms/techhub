@@ -38,4 +38,5 @@ param openAiModelCapacity = 200
 param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
 param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
 param azureAdClientSecret = readEnvironmentVariable('AZURE_AD_CLIENT_SECRET')
+param azureAdScopes = readEnvironmentVariable('AZURE_AD_SCOPES')
 

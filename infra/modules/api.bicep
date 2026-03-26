@@ -27,6 +27,9 @@ param azureAdTenantId string = ''
 @description('Azure AD client ID for admin authentication')
 param azureAdClientId string = ''
 
+@description('Azure AD API scope for admin access token validation')
+param azureAdScopes string = ''
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
@@ -75,6 +78,10 @@ var staticEnvVars = [
   {
     name: 'AzureAd__ClientId'
     secretRef: 'azure-ad-client-id'
+  }
+  {
+    name: 'AzureAd__Scopes'
+    value: azureAdScopes
   }
 ]
 

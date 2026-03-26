@@ -71,14 +71,16 @@ builder.Services.AddRazorComponents()
 var azureAdClientId = builder.Configuration["AzureAd:ClientId"];
 if (!string.IsNullOrEmpty(azureAdClientId))
 {
-    builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
-        .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
+    // Acquire a proper access token (not an id_token) for calling the API.
+    // Requires an "Expose an API" scope on the Entra app registration
+    // (e.g. api://<client-id>/Admin.Access) configured in AzureAd:Scopes.
+    var apiScopes = builder.Configuration.GetValue<string>("AzureAd:Scopes")?.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+        ?? [];
 
-    // Save the ID token in the auth cookie so the AdminTokenDelegatingHandler
-    // can forward it as a Bearer token to the API for admin requests.
-    builder.Services.Configure<OpenIdConnectOptions>(
-        OpenIdConnectDefaults.AuthenticationScheme,
-        options => options.SaveTokens = true);
+    builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+        .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))
+        .EnableTokenAcquisitionToCallDownstreamApi(apiScopes)
+        .AddInMemoryTokenCaches();
 }
 else
 {

@@ -197,6 +197,16 @@ builder.Services.AddAuthorization(options =>
         if (!string.IsNullOrEmpty(azureAdClientId))
         {
             policy.RequireAuthenticatedUser();
+
+            // Validate that the access token contains the expected API scope.
+            // The scope is configured via AzureAd:Scopes (e.g. "Admin.Access").
+            // Microsoft.Identity.Web normalizes scope claims so only the short
+            // name (without the api:// prefix) appears in the "scp" claim.
+            var requiredScope = builder.Configuration.GetValue<string>("AzureAd:Scopes");
+            if (!string.IsNullOrEmpty(requiredScope))
+            {
+                policy.RequireScope(requiredScope.Split(' ', StringSplitOptions.RemoveEmptyEntries));
+            }
         }
         else
         {

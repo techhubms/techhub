@@ -174,9 +174,14 @@ public record DXRelationshipsSection
     public required string IntroHeading { get; init; }
     public required string IntroContent { get; init; }
     public required List<DXFrameworkComparison> Frameworks { get; init; }
+    public string? DxCore4Heading { get; init; }
+    public List<string>? DxCore4Content { get; init; }
+    public DXInsightBox? DxCore4Insight { get; init; }
     public required string ChoiceHeading { get; init; }
     public required List<DXCard> Choices { get; init; }
     public required DXInsightBox Insight { get; init; }
+    public string? RealWorldHeading { get; init; }
+    public List<string>? RealWorldContent { get; init; }
 }
 
 public record DXFrameworkComparison

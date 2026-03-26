@@ -129,7 +129,7 @@ public sealed class ArticleContentService
     {
         var pattern = $@"<{tagName}[^>]*>([\s\S]*?)</{tagName}>";
         var match = System.Text.RegularExpressions.Regex.Match(
-            html, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+            html, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase, TimeSpan.FromSeconds(2));
         return match.Success ? match.Groups[1].Value : null;
     }
 
@@ -137,9 +137,9 @@ public sealed class ArticleContentService
     {
         var cleaned = System.Text.RegularExpressions.Regex.Replace(
             html, @"<(script|style)[^>]*>[\s\S]*?</(script|style)>",
-            string.Empty, System.Text.RegularExpressions.RegexOptions.IgnoreCase);
-        cleaned = System.Text.RegularExpressions.Regex.Replace(cleaned, @"<[^>]+>", " ");
-        return System.Text.RegularExpressions.Regex.Replace(cleaned, @"\s{2,}", " ").Trim();
+            string.Empty, System.Text.RegularExpressions.RegexOptions.IgnoreCase, TimeSpan.FromSeconds(2));
+        cleaned = System.Text.RegularExpressions.Regex.Replace(cleaned, @"<[^>]+>", " ", System.Text.RegularExpressions.RegexOptions.None, TimeSpan.FromSeconds(2));
+        return System.Text.RegularExpressions.Regex.Replace(cleaned, @"\s{2,}", " ", System.Text.RegularExpressions.RegexOptions.None, TimeSpan.FromSeconds(2)).Trim();
     }
 
     private async Task<RawFeedItem> EnrichYouTubeWithTranscriptAsync(RawFeedItem item, CancellationToken ct)

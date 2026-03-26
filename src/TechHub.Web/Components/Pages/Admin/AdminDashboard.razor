@@ -185,10 +185,8 @@
         _expandedJobId = null;
     }
 
-    private static readonly TimeZoneInfo _brusselsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
-
     private static string FormatTimestamp(DateTimeOffset timestamp) =>
-        TimeZoneInfo.ConvertTime(timestamp, _brusselsTimeZone).ToString("yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
+        DateHelper.FormatTimestamp(timestamp);
 
     private static string FormatDuration(long? durationMs)
     {

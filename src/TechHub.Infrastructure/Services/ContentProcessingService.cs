@@ -585,5 +585,3 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
         return rows;
     }
 }
-
-#pragma warning restore CA1031
