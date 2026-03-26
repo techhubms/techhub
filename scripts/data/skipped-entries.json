@@ -14116,5 +14116,17 @@
     "reason": "No categories found: Excluded due to generic exclusion rule: Short Community Content (<200 words) does not apply because the post has substantial text, but the content contains an empty image link `![]()` (MD042/MD045 violation) and multiple empty fenced code blocks with no code content. Given the workflow’s requirement to preserve content accurately while producing valid markdown output, these elements indicate malformed/low-quality formatting in the provided text, so categories are left empty.",
     "collection": "community",
     "timestamp": "2026-03-26 01:40:15 +00:00"
+  },
+  {
+    "canonical_url": "https://dellenny.com/real-use-cases-5-agentic-ai-workflows-that-actually-save-time/",
+    "reason": "No categories found: Excluded by Generic Exclusion Rules (Chapter 3: Non-Development Microsoft Products). The post is primarily about business productivity/workplace automation use cases for “agentic AI” (IT helpdesk, CRM, document processing, internal knowledge assistant). It explicitly tags and references “M365 Copilot”/“Copilot” in a business context, and the Microsoft products mentioned (Microsoft 365 Copilot and Dynamics 365 in a sales/CRM usage scenario) are not covered as development-focused content here. While it briefly mentions a “DevOps incident triage bot,” it provides no Microsoft-specific implementation details (no Azure/GitHub/.NET services, tooling, or code), so it doesn’t qualify for Microsoft tech categories under the inclusion rules.",
+    "collection": "blogs",
+    "timestamp": "2026-03-26 13:36:19 +00:00"
+  },
+  {
+    "canonical_url": "https://www.youtube.com/shorts/Tr1uVFYepME",
+    "reason": "No categories found: Excluded because no substantive content was provided (the `content` field is null). Without the actual text/transcript, it’s not possible to verify that Microsoft technologies are central (≥40% rule) or to apply the category inclusion rules reliably. Per the workflow’s “never fabricate information” guideline, no categories can be assigned.",
+    "collection": "videos",
+    "timestamp": "2026-03-26 14:38:43 +00:00"
   }
 ]
