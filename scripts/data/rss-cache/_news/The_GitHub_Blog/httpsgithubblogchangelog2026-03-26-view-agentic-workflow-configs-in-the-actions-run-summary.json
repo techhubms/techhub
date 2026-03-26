@@ -1,0 +1,17 @@
+{
+  "Title": "View Agentic Workflow configs in the Actions run summary",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "You can now view your Agentic Workflow markdown configs directly in the GitHub Actions run summary for any agentic workflow. This update makes it easier to review runs by:\n\n- Reducing the need to switch between pages.\n- Showing the exact configuration used when the workflow ran.\n\nFor more information about GitHub Agentic Workflows, see [the documentation](https://github.github.com/gh-aw/). To get started, see the [quickstart guide](https://github.github.com/gh-aw/setup/quick-start/).",
+  "Tags": [
+    "actions",
+    "Improvement"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary",
+  "ProcessedDate": "2026-03-26 19:28:37",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "PubDate": "2026-03-26T17:00:12+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "You can now view your Agentic Workflow markdown configs directly in the GitHub Actions run summary for any agentic workflow. This update makes it easier to review runs by: Reducing…\n\nThe post [View Agentic Workflow configs in the Actions run summary](https://github.blog/changelog/2026-03-26-view-agentic-workflow-configs-in-the-actions-run-summary) appeared first on [The GitHub Blog](https://github.blog)."
+}
