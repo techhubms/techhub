@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "collaboration tools",
+    "copilot",
+    "Improvement"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Link": "https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements",
+  "Title": "GitHub Copilot for Jira — Public preview enhancements",
+  "ProcessedDate": "2026-03-26 00:31:19",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "PubDate": "2026-03-25T21:09:35+00:00",
+  "EnhancedContent": "Since launching the [public preview](https://github.blog/changelog/2026-03-05-github-copilot-coding-agent-for-jira-is-now-in-public-preview/) of GitHub Copilot coding agent for Jira, we’ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try the integration, report issues, and share suggestions—your input has directly shaped the improvements we have shipped.\n\n## What’s new\n\n### Improved onboarding and setup guidance\n\nBased on feedback from early adopters, the integration now provides better guidance, including clearer error messages and steps to resolve common configuration issues. We’ve also extended [our documentation](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-jira) to more comprehensively cover integration prerequisites.\n\n### Model selection\n\nYou can now choose which AI model Copilot coding agent uses for your task, directly from Jira. Simply indicate the model you wish to use in your comment when mentioning `@GitHub Copilot` . For more information on available models, see [Supported AI models in Copilot](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/changing-the-ai-model).\n\n### Jira ticket references in pull requests\n\nWe now instruct Copilot coding agent to include your Jira ticket number in the pull request title and branch name. The pull request will also include a link back to the originating Jira ticket and the Jira context provided to the agent. This makes it easier to trace work from Jira through to your codebase.\n\n### Confluence context via MCP\n\nProvide Copilot coding agent with access to your Confluence pages by configuring the Atlassian MCP server with a personal access token (PAT). This allows the agent to reference design documents, specifications, and other context stored in Confluence when working on your Jira issues. For setup instructions, see [Extending Copilot coding agent with MCP](https://docs.github.com/copilot/customizing-copilot/extending-copilot-coding-agent-with-mcp).\n\n## Getting started\n\nTo get all these updates, ensure you have the latest version of the GitHub Copilot for Jira app from your [Atlassian instance](https://support.atlassian.com/organization-administration/docs/managing-an-installed-app/#:~:text=is%20installed%20on.-,Update%20an%20app,-App%20developers%20may).\n\n- [Atlassian Marketplace listing](https://marketplace.atlassian.com/apps/1582455624)\n- [Documentation about integrating Copilot coding agent with Jira](https://docs.github.com/copilot/how-tos/use-copilot-agents/coding-agent/integrate-coding-agent-with-jira)\n- [Share feedback or access integration support](https://www.surveymonkey.com/r/CCAforJira)",
+  "Author": "Allison",
+  "Description": "Since launching the public preview of GitHub Copilot coding agent for Jira, we’ve been listening closely to customer feedback. Thank you to everyone who has taken the time to try…\n\nThe post [GitHub Copilot for Jira — Public preview enhancements](https://github.blog/changelog/2026-03-25-github-copilot-for-jira-public-preview-enhancements) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news"
+}

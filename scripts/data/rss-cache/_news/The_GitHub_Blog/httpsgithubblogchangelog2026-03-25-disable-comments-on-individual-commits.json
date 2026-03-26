@@ -1,0 +1,17 @@
+{
+  "Description": "Repository admins can now disable comments on individual commits, a small but meaningful improvement for maintainers dealing with unwanted noise on old commits. A new “Commits” section in repository settings…\n\nThe post [Disable comments on individual commits](https://github.blog/changelog/2026-03-25-disable-comments-on-individual-commits) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Disable comments on individual commits",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-03-25 18:23:00",
+  "Author": "Allison",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "Repository admins can now disable comments on individual commits, a small but meaningful improvement for maintainers dealing with unwanted noise on old commits.\n\nA new “Commits” section in repository settings includes the option **Allow comments on individual commits**, which is enabled by default to preserve existing behavior across all repositories.\n\n![The Commits section in repository settings, showing a checkbox labeled 'Allow comments on individual commits'](https://github.com/user-attachments/assets/6bf4a702-452e-450f-8bb1-a09e607aff2d)\n\na\n\nWhen this option is unchecked:\n\n- The comment form, inline diff comment affordance, and inline thread reply capability are hidden on commit pages.\n- Comment creation through both the REST API and GraphQL API is blocked.\n- Existing commit comments are not affected—they can be viewed, edited, and deleted.\n\nTo try it out, navigate to your repository’s **Settings**, scroll to the “Commits” section, and uncheck **Allow comments on individual commits**.\n\nDrop a comment in our [Community discussion](https://github.com/orgs/community/discussions/189794) to share your feedback.",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "collaboration tools",
+    "Improvement"
+  ],
+  "Link": "https://github.blog/changelog/2026-03-25-disable-comments-on-individual-commits",
+  "PubDate": "2026-03-25T17:07:52+00:00"
+}
