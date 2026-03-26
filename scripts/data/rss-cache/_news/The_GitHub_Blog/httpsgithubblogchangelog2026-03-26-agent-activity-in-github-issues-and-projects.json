@@ -1,0 +1,17 @@
+{
+  "Description": "Today, we’re shipping two new features that bring agent activity directly into your planning workflows. Agent sessions under assignees in GitHub Issues When a coding agent (e.g., Copilot, Claude, or…\n\nThe post [Agent activity in GitHub Issues and Projects](https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-03-26 18:25:13",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "PubDate": "2026-03-26T16:59:45+00:00",
+  "Link": "https://github.blog/changelog/2026-03-26-agent-activity-in-github-issues-and-projects",
+  "EnhancedContent": "Today, we’re shipping two new features that bring agent activity directly into your planning workflows.\n\n## Agent sessions under assignees in GitHub Issues\n\nWhen a coding agent (e.g., Copilot, Claude, or Codex) is assigned to an issue, its session now appears directly under the assignee in the sidebar. Each session shows a live status: “queued”, “working”, “waiting for review”, or “completed”. Click any session to jump straight into the session logs.\n\nThis is now generally available for all repositories with access to coding agents.\n\n## Agent sessions in project table and board views\n\nAgent sessions now surface directly in project table and board views. You can see at a glance which items have attached agent sessions, their current status, and how work is progressing across a large body of work.\n\nTo try this out, open the **View** menu and turn on **Show agent sessions**.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/190731).",
+  "Tags": [
+    "projects & issues",
+    "Release"
+  ],
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "Agent activity in GitHub Issues and Projects"
+}
