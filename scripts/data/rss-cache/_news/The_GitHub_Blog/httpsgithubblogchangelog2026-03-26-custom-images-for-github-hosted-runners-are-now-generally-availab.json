@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "Custom images for GitHub-hosted runners are now generally available. Originally introduced in [public preview](https://github.blog/changelog/2025-10-28-custom-images-for-github-hosted-runners-are-now-available-in-public-preview/) in October 2025, this feature lets you start with a GitHub-curated base image and build your own virtual machine image tailored to your workflow needs.\n\nBy defining your runner environment up front with preinstalled tools, dependencies, certificates, and configurations, you can create faster, more consistent, and more secure workflows while reducing setup time and operational overhead. Custom images also give organizations greater control over how build environments are standardized, updated, and governed at scale.\n\nIf you’ve been using custom images during the public preview, no action is required. Your existing images and workflows will continue to work as-is.\n\nFor detailed instructions, advanced configuration options, and troubleshooting tips, see our official documentation:\n\n- [Managing larger runners](https://docs.github.com/actions/how-tos/manage-runners/larger-runners/manage-larger-runners)\n- [Using custom images](https://docs.github.com/actions/how-tos/manage-runners/larger-runners/use-custom-images)\n\nYou’ll find step-by-step guides, workflow examples, and best practices for using custom images with GitHub-hosted runners.",
+  "Tags": [
+    "actions",
+    "Release"
+  ],
+  "Author": "Allison",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2026-03-26-custom-images-for-github-hosted-runners-are-now-generally-available",
+  "Description": "Custom images for GitHub-hosted runners are now generally available. Originally introduced in public preview in October 2025, this feature lets you start with a GitHub-curated base image and build your…\n\nThe post [Custom images for GitHub-hosted runners are now generally available](https://github.blog/changelog/2026-03-26-custom-images-for-github-hosted-runners-are-now-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "Title": "Custom images for GitHub-hosted runners are now generally available",
+  "PubDate": "2026-03-26T14:30:13+00:00",
+  "ProcessedDate": "2026-03-26 16:29:23",
+  "OutputDir": "_news"
+}
