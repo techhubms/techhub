@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2026-03-27 08:18:34",
+  "Tags": [],
+  "PubDate": "2026-03-27T00:34:53+00:00",
+  "FeedUrl": "https://blog.fabric.microsoft.com/en-us/blog/feed/",
+  "EnhancedContent": "The February 2026 release of the on-premises data gateway is (version 3000.306).\n\n## Power BI Desktop compatibility\n\nThis update brings the on-premises data gateway up to date with the February 2026 release of Power BI Desktop.\n\n[Download on-premises data gateway (standard mode)](https://download.microsoft.com/download/d/a/1/da1fddb8-6da8-4f50-b4d0-18019591e182/GatewayInstall-26-02.exe)\n\n[Download on-premises data gateway (personal mode)](https://download.microsoft.com/download/6/0/2/602A459E-E1A3-4FB9-B07F-FC2B60881900/On-premises%20data%20gateway%20%28personal%20mode%29-26-02.exe)\n\nThis version of the gateway will ensure that the reports that you publish to the Power BI Service and refresh via the gateway will go through the same query execution logic/run-time as in the February’s version of Power BI Desktop. View the data connectivity section of Power BI’s February 2026 feature summary for updates on relevant connectors.\n\n## Thank you!\n\nPlease continue to send us feedback for what new capabilities you’d like in the future! You can vote for your favorite feature suggestions at [Ideas](https://ideas.powerbi.com/ideas/).",
+  "FeedName": "Microsoft Fabric Blog",
+  "Title": "On-premises data gateway February 2026 release",
+  "Link": "https://blog.fabric.microsoft.com/en-US/blog/on-premises-data-gateway-february-2026-release/",
+  "Author": "Microsoft Fabric Blog",
+  "FeedLevelAuthor": "Microsoft Fabric Blog",
+  "Description": "Here is the February 2026 release of the on-premises data gateway (version 3000.306).",
+  "OutputDir": "_news"
+}
