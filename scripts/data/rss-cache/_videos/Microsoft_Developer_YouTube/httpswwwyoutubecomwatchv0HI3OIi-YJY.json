@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-03-27 21:14:07",
+  "PubDate": "2026-03-27T20:17:39+00:00",
+  "Link": "https://www.youtube.com/watch?v=0HI3OIi-YJY",
+  "EnhancedContent": null,
+  "Author": "Microsoft Developer",
+  "Description": "Demonstration from Patrick Chanezon, VP of Developer Relations at Microsoft. This was originally recorded at DevX Summit, March 2026.\n\nAI coding agents have made significant progress in the last 6 months, completely transforming the role of developers: this talk covers some aspects of this transformation. Learning to manage teams of agents, working at a higher level of abstraction, the impact of AI on early in career developers and how to hire and train the next generation of developers, developing different hygiene and work habits to survive the AI fatigue that occurs when working with machines that go faster than human colleagues, never get tired, and never sleep.\n\nTimestamps:\n\n00:00 Introduction 01:40 Using Github CoPilot CLI to make presentations 03:23 Never create a PPT manually again 04:45 Working with images 05:25 Sub agents 11:00 Using WorkIQ 23:36 Developers become managers of agents 25:05 AI Coding agents are changing the developer role 26:20 The Frontier Firm and Microsoft 28:09 Patrick's book recommendation 29:15 Software G forces 29:56 What kind of new skills do you need? 33:32 Redefining the software engineering profession 36:00 AI fatigue 37:45 Why Patrick is optimistic about the role of developers 41:00 The imperfections to be aware of\n\nLinks:\n\n🚀GitHub repo: https://aka.ms/EMEADevSummitChanezon 🚀Access the slides here: https://aka.ms/EMEADevSummitSlides",
+  "OutputDir": "_videos",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Title": "The Transformation of the Developer Role with AI Agents",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube"
+}
