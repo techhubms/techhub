@@ -29938,5 +29938,11 @@
     "timestamp": "2026-03-27 00:34:34 +00:00",
     "collection": "community",
     "canonical_url": "https://techcommunity.microsoft.com/t5/azure-maps-blog/azure-maps-adds-support-to-private-endpoints-preview/ba-p/4505743"
+  },
+  {
+    "reason": "Succesfully added: Generic exclusion rules: none apply (English technical community post well over 200 words; not job/career advice, not question-only, not primarily promotional, and not negative). Included AI because the post is centered on Microsoft Foundry Local (Microsoft on-device AI runtime) and building an AI app with a local LLM plus RAG and an OpenAI-compatible API (AI inclusion rules 1 and 4/5). Did not include Azure because the solution is explicitly “100% offline” and uses Foundry Local rather than Azure services; “Azure AI Foundry” appears as a tag but the substantive content focuses on local runtime usage, not Azure resource setup or Azure architecture. Did not include DevOps, .NET, ML, or Security because the core implementation is JavaScript/Node.js RAG application engineering without Microsoft DevOps tooling, .NET stack, or ML-from-scratch training/MLOps; and there’s no security implementation detail beyond privacy benefits of offline execution.",
+    "timestamp": "2026-03-27 07:33:20 +00:00",
+    "collection": "community",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/building-an-offline-ai-interview-coach-with-foundry-local-rag/ba-p/4500614"
   }
 ]
