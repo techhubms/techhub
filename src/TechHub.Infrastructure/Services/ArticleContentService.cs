@@ -1,6 +1,4 @@
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services;
@@ -9,28 +7,20 @@ namespace TechHub.Infrastructure.Services;
 /// Fetches the full HTML content for an article URL and extracts the main body text.
 /// YouTube items are enriched with transcript text from closed captions.
 /// </summary>
-public sealed class ArticleContentService
+public sealed class ArticleContentService : IArticleContentService
 {
-    private readonly HttpClient _httpClient;
-    private readonly ContentProcessorOptions _options;
-    private readonly YouTubeTranscriptService _transcriptService;
-    private readonly ILogger<ArticleContentService> _logger;
+    private readonly IArticleFetchClient _fetchClient;
+    private readonly IYouTubeTranscriptService _transcriptService;
 
     public ArticleContentService(
-        HttpClient httpClient,
-        IOptions<ContentProcessorOptions> options,
-        YouTubeTranscriptService transcriptService,
-        ILogger<ArticleContentService> logger)
+        IArticleFetchClient fetchClient,
+        IYouTubeTranscriptService transcriptService)
     {
-        ArgumentNullException.ThrowIfNull(httpClient);
-        ArgumentNullException.ThrowIfNull(options);
+        ArgumentNullException.ThrowIfNull(fetchClient);
         ArgumentNullException.ThrowIfNull(transcriptService);
-        ArgumentNullException.ThrowIfNull(logger);
 
-        _httpClient = httpClient;
-        _options = options.Value;
+        _fetchClient = fetchClient;
         _transcriptService = transcriptService;
-        _logger = logger;
     }
 
     /// <summary>
@@ -55,19 +45,12 @@ public sealed class ArticleContentService
 
         try
         {
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-            cts.CancelAfter(TimeSpan.FromSeconds(_options.RequestTimeoutSeconds));
-
-            _logger.LogDebug("Fetching content for: {Url}", item.ExternalUrl);
-
-            using var response = await _httpClient.GetAsync(item.ExternalUrl, cts.Token);
-            if (!response.IsSuccessStatusCode)
+            var html = await _fetchClient.FetchHtmlAsync(item.ExternalUrl, ct);
+            if (html is null)
             {
-                _logger.LogWarning("Failed to fetch content for {Url}: HTTP {Status}", item.ExternalUrl, (int)response.StatusCode);
                 return item;
             }
 
-            var html = await response.Content.ReadAsStringAsync(cts.Token);
             var mainContent = ExtractMainContent(html);
 
             if (string.IsNullOrWhiteSpace(mainContent))
@@ -88,15 +71,9 @@ public sealed class ArticleContentService
                 FullContent = mainContent
             };
         }
-        catch (OperationCanceledException) when (!ct.IsCancellationRequested)
+        catch (OperationCanceledException) when (ct.IsCancellationRequested)
         {
-            _logger.LogWarning("Timeout fetching content for {Url}", item.ExternalUrl);
-            return item;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogWarning(ex, "HTTP error fetching content for {Url}", item.ExternalUrl);
-            return item;
+            throw;
         }
     }
 

@@ -25,7 +25,6 @@ TechHub.Infrastructure/
 │   ├── ContentRepositoryBase.cs               # Abstract base for content repos
 │   └── ContentRepository.cs                   # Database repository (PostgreSQL)
 ├── Services/                                  # Infrastructure services
-│   ├── ContentSyncService.cs                  # Sync markdown files to database
 │   ├── FrontMatterParser.cs                   # YAML frontmatter parsing
 │   ├── MarkdownService.cs                     # Markdown to HTML conversion
 │   └── RssService.cs                          # RSS feed generation
@@ -103,36 +102,6 @@ WHERE (collection_name, slug) IN (
 )
 ```
 
-## Content Synchronization
-
-### ContentSyncService
-
-**Key Pattern**: Hash-based change detection → Incremental sync → Transaction safety.
-
-**Implementation**: `ContentSyncService`
-
-**Sync Process**:
-
-1. Scan markdown files in `collections/` directory
-2. Compute SHA-256 hash of each file
-3. Compare with stored hashes in `sync_metadata`
-4. INSERT new items, UPDATE changed items, DELETE removed items
-5. Rebuild FTS index after bulk operations
-
-**Performance Optimizations**:
-
-- Bulk operations in single transaction
-- Index/trigger disable during sync for speed
-- FTS rebuild at end instead of per-row triggers
-
-**Important Details**:
-
-- Runs at API startup (see Program.cs)
-- Entire sync is transactional (rollback on error)
-- Logs detailed metrics for performance monitoring
-
-**See**: [Services/ContentSyncService.cs](Services/ContentSyncService.cs) for implementation
-
 ## Markdown Processing
 
 ### Frontmatter Parsing
@@ -177,7 +146,6 @@ builder.Services.AddSingleton<ISectionRepository, ConfigurationBasedSectionRepos
 builder.Services.AddTransient<IMarkdownService, MarkdownService>();
 builder.Services.AddTransient<IRssService, RssService>();
 builder.Services.AddTransient<ITagCloudService, TagCloudService>();
-builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
 builder.Services.AddTransient<MigrationRunner>();
 ```
 
@@ -235,7 +203,6 @@ item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase)
 **See [tests/TechHub.Infrastructure.Tests/AGENTS.md](../../tests/TechHub.Infrastructure.Tests/AGENTS.md)** for comprehensive testing patterns including:
 
 - Repository testing with PostgreSQL Testcontainers
-- ContentSyncService integration tests
 - Markdown parsing test cases
 - Error handling scenarios
 
@@ -243,9 +210,9 @@ item.Tags.Any(t => t.Contains(normalizedTag, StringComparison.OrdinalIgnoreCase)
 
 ### Functional Documentation (docs/)
 
-- **[Database](../../docs/database.md)** - Database configuration and sync settings
+- **[Database](../../docs/database.md)** - Database configuration
 - **[Filtering](../../docs/filtering.md)** - Tag filtering and tag cloud algorithm
-- **[Content Processing](../../docs/content-processing.md)** - Content sync workflow
+- **[Content Processing](../../docs/content-processing.md)** - Content processing workflow
 
 ### Implementation Guides (AGENTS.md)
 

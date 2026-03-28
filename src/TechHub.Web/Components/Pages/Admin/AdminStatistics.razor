@@ -1,0 +1,331 @@
+@page "/admin/statistics"
+@layout AdminLayout
+@rendermode InteractiveServer
+@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>Statistics — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Database Statistics</h1>
+            <p class="admin-page-subtitle">Content counts, database sizes, and processing metrics</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="LoadStatsAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading statistics…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_stats != null)
+    {
+        @* ── Overview Cards ─────────────────────────────────────────────── *@
+        <div class="admin-stats-grid">
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.TotalContentItems.ToString("N0")</div>
+                <div class="admin-stat-label">Content Items</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.TotalUniqueTags.ToString("N0")</div>
+                <div class="admin-stat-label">Unique Tags</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.TotalTagWords.ToString("N0")</div>
+                <div class="admin-stat-label">Tag Words</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.Processing.TotalJobs.ToString("N0")</div>
+                <div class="admin-stat-label">Processing Jobs</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.Processing.TotalProcessedUrls.ToString("N0")</div>
+                <div class="admin-stat-label">Processed URLs</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.DatabaseSize.TotalSize</div>
+                <div class="admin-stat-label">Database Size</div>
+            </div>
+        </div>
+
+        @* ── Items by Collection & Section ──────────────────────────────── *@
+        <div class="admin-stats-columns">
+            <div>
+                <h2 class="admin-section-title">Items by Collection</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Collection</th>
+                            <th style="text-align: right">Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in _stats.ItemsByCollection)
+                        {
+                            <tr>
+                                <td>@item.CollectionName</td>
+                                <td class="admin-cell-number">@item.Count.ToString("N0")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h2 class="admin-section-title">Items by Section</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Section</th>
+                            <th style="text-align: right">Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in _stats.ItemsBySection)
+                        {
+                            <tr>
+                                <td>@item.SectionName</td>
+                                <td class="admin-cell-number">@item.Count.ToString("N0")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @* ── Latest Items ───────────────────────────────────────────────── *@
+        <h2 class="admin-section-title">Latest Items (by created_at)</h2>
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Collection</th>
+                        <th>Section</th>
+                        <th>Date</th>
+                        <th>Added</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in _stats.LatestItems)
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td class="admin-cell-mono">@item.CollectionName</td>
+                            <td>@item.PrimarySectionName</td>
+                            <td>@DateHelper.FormatDateRelative(item.DateEpoch)</td>
+                            <td>@FormatTimestamp(item.CreatedAt)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @* ── Database Size Breakdown ────────────────────────────────────── *@
+        <div class="admin-stats-columns">
+            <div>
+                <h2 class="admin-section-title">Table Sizes</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Table</th>
+                            <th style="text-align: right">Rows</th>
+                            <th style="text-align: right">Total</th>
+                            <th style="text-align: right">Data</th>
+                            <th style="text-align: right">Indexes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var table in _stats.TableSizes)
+                        {
+                            <tr>
+                                <td class="admin-cell-mono">@table.TableName</td>
+                                <td class="admin-cell-number">@table.RowCount.ToString("N0")</td>
+                                <td class="admin-cell-number">@table.TotalSize</td>
+                                <td class="admin-cell-number">@table.DataSize</td>
+                                <td class="admin-cell-number">@table.IndexSize</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h2 class="admin-section-title">Processing Summary</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th style="text-align: right">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Completed Jobs</td>
+                            <td class="admin-cell-number">@_stats.Processing.CompletedJobs.ToString("N0")</td>
+                        </tr>
+                        <tr>
+                            <td>Failed Jobs</td>
+                            <td class="admin-cell-number admin-cell-error">@_stats.Processing.FailedJobs.ToString("N0")</td>
+                        </tr>
+                        <tr>
+                            <td>Total Items Added</td>
+                            <td class="admin-cell-number">@_stats.Processing.TotalItemsAdded.ToString("N0")</td>
+                        </tr>
+                        <tr>
+                            <td>Processed URLs</td>
+                            <td class="admin-cell-number">@_stats.Processing.TotalProcessedUrls.ToString("N0")</td>
+                        </tr>
+                        <tr>
+                            <td>Last Run</td>
+                            <td class="admin-cell-number">@FormatTimestamp(_stats.Processing.LastRunAt)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="admin-section-title">Database Info</h2>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Property</th>
+                            <th style="text-align: right">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Database</td>
+                            <td class="admin-cell-mono admin-cell-number">@_stats.DatabaseSize.DatabaseName</td>
+                        </tr>
+                        <tr>
+                            <td>Total Size</td>
+                            <td class="admin-cell-number">@_stats.DatabaseSize.TotalSize</td>
+                        </tr>
+                        <tr>
+                            <td>Data Size</td>
+                            <td class="admin-cell-number">@_stats.DatabaseSize.DataSize</td>
+                        </tr>
+                        <tr>
+                            <td>Index Size</td>
+                            <td class="admin-cell-number">@_stats.DatabaseSize.IndexSize</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @* ── Slow Queries ───────────────────────────────────────────────── *@
+        @if (_stats.SlowQueries is { Count: > 0 })
+        {
+            <h2 class="admin-section-title">Slowest Queries (pg_stat_statements)</h2>
+            <div class="admin-jobs-table-wrapper">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Query</th>
+                            <th style="text-align: right">Calls</th>
+                            <th style="text-align: right">Mean (ms)</th>
+                            <th style="text-align: right">Total (ms)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var q in _stats.SlowQueries)
+                        {
+                            <tr>
+                                <td class="admin-cell-mono" style="max-width: 400px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">@q.Query</td>
+                                <td class="admin-cell-number">@q.Calls.ToString("N0")</td>
+                                <td class="admin-cell-number">@q.MeanTimeMs.ToString("F1")</td>
+                                <td class="admin-cell-number">@q.TotalTimeMs.ToString("F0")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+
+        <div class="admin-stats-footer">
+            Generated at @_stats.GeneratedAt.ToString("yyyy-MM-dd HH:mm:ss zzz")
+        </div>
+    }
+</div>
+
+@code {
+    private bool _loading = true;
+    private string? _error;
+    private DatabaseStatistics? _stats;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<DatabaseStatistics>("admin-statistics", out var restored) && restored != null)
+        {
+            _stats = restored;
+            _loading = false;
+            return;
+        }
+
+        await LoadStatsAsync();
+    }
+
+    private async Task LoadStatsAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _stats = await Api.GetDatabaseStatisticsAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        {
+            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn", forceLoad: true);
+            return;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load statistics: {ex.Message}";
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _error = $"Failed to load statistics: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (_stats != null)
+        {
+            ApplicationState.PersistAsJson("admin-statistics", _stats);
+        }
+        return Task.CompletedTask;
+    }
+
+    private static string FormatTimestamp(DateTimeOffset? timestamp) =>
+        timestamp.HasValue ? DateHelper.FormatTimestamp(timestamp.Value) : "—";
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+}

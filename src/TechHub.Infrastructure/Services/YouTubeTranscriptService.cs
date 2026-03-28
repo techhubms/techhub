@@ -6,6 +6,8 @@ using YoutubeExplode;
 using YoutubeExplode.Exceptions;
 using YoutubeExplode.Videos.ClosedCaptions;
 
+using TechHub.Core.Interfaces;
+
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
@@ -14,7 +16,7 @@ namespace TechHub.Infrastructure.Services;
 /// Returns plain text transcript suitable for AI analysis. Failures are non-fatal
 /// — the pipeline continues without transcript data if fetching fails.
 /// </summary>
-public class YouTubeTranscriptService : IDisposable
+public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
 {
     private readonly YoutubeClient _youtube;
     private readonly ContentProcessorOptions _options;

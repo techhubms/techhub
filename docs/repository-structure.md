@@ -48,18 +48,11 @@ See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and 
 
 ## Content (`collections/`)
 
-Markdown content organized by content type. Each collection is synced to the database during application startup or via the ContentSyncService.
+Custom page data files (JSON) for manually curated pages. Content collections (news, blogs, videos, etc.) are managed exclusively in the PostgreSQL database via the `ContentProcessingBackgroundService`.
 
-- **`_news/`** - Official GitHub Copilot announcements and product updates
-- **`_videos/`** - Video content and tutorials (YouTube embeds, tutorials)
-- **`_community/`** - Microsoft Tech Community posts and community contributions
 - **`_custom/`** - Custom manually created pages (e.g., About, Documentation)
-- **`_blogs/`** - Technical articles and blogs from various Microsoft sources
-- **`_roundups/`** - Curated weekly summaries (e.g., This Week in GitHub Copilot)
 
-All collections follow the [frontmatter schema](frontmatter.md) and are processed according to [content-processing.md](content-processing.md).
-
-See [collections/AGENTS.md](../collections/AGENTS.md) for content creation and maintenance guidelines.
+See [collections/AGENTS.md](../collections/AGENTS.md) for content guidelines.
 
 ## Tests (`tests/`)
 

@@ -3,6 +3,7 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -10,24 +11,22 @@ namespace TechHub.Infrastructure.Services;
 /// Fetches YouTube video tags from the YouTube snippet API.
 /// Mirrors the PowerShell <c>GetYouTubeTags</c> logic in <c>Feed.ps1</c>.
 /// </summary>
-public class YouTubeTagService
+public class YouTubeTagService : IYouTubeTagService
 {
-    private const string ApiBaseUrl = "https://ytapi.apps.mattw.io/v3/videos?part=snippet&id=";
-
-    private readonly HttpClient _httpClient;
+    private readonly IYouTubeTagClient _tagClient;
     private readonly ContentProcessorOptions _options;
     private readonly ILogger<YouTubeTagService> _logger;
 
     public YouTubeTagService(
-        HttpClient httpClient,
+        IYouTubeTagClient tagClient,
         IOptions<ContentProcessorOptions> options,
         ILogger<YouTubeTagService> logger)
     {
-        ArgumentNullException.ThrowIfNull(httpClient);
+        ArgumentNullException.ThrowIfNull(tagClient);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
-        _httpClient = httpClient;
+        _tagClient = tagClient;
         _options = options.Value;
         _logger = logger;
     }
@@ -47,20 +46,12 @@ public class YouTubeTagService
 
         try
         {
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-            cts.CancelAfter(TimeSpan.FromSeconds(_options.RequestTimeoutSeconds));
-
-            var url = $"{ApiBaseUrl}{Uri.EscapeDataString(videoId)}";
-            _logger.LogDebug("Fetching YouTube tags for video {VideoId}", videoId);
-
-            using var response = await _httpClient.GetAsync(url, cts.Token);
-            if (!response.IsSuccessStatusCode)
+            var json = await _tagClient.FetchVideoSnippetAsync(videoId, ct);
+            if (json is null)
             {
-                _logger.LogWarning("YouTube tag API returned {Status} for video {VideoId}", (int)response.StatusCode, videoId);
                 return [];
             }
 
-            var json = await response.Content.ReadAsStringAsync(cts.Token);
             var tags = ParseTags(json);
 
             if (tags.Count == 0)
@@ -81,14 +72,9 @@ public class YouTubeTagService
             _logger.LogDebug("Found {Count} tags for YouTube video {VideoId}", tags.Count, videoId);
             return tags;
         }
-        catch (OperationCanceledException) when (!ct.IsCancellationRequested)
+        catch (Exception ex) when (ex is JsonException or IOException)
         {
-            _logger.LogWarning("Timeout fetching YouTube tags for {VideoId}", videoId);
-            return [];
-        }
-        catch (Exception ex) when (ex is HttpRequestException or JsonException or IOException)
-        {
-            _logger.LogWarning(ex, "Failed to fetch YouTube tags for video {VideoId}", videoId);
+            _logger.LogWarning(ex, "Failed to parse YouTube tags for video {VideoId}", videoId);
             return [];
         }
     }

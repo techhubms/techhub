@@ -124,6 +124,6 @@ After removing the databases:
 1. Run `Run` to recreate the database with the latest schema (PostgreSQL starts automatically via docker-compose)
 2. Or run `Run -Docker` to run the full stack in Docker containers
 
-The ContentSync process will automatically populate the new database with content from the `collections/` directory during startup.
+The database will be recreated with the latest schema (PostgreSQL starts automatically via docker-compose). Content is populated by the `ContentProcessingBackgroundService` in production, or by restoring a database snapshot locally.
 
 > **Note**: Database schema changes are rare but do happen. Always check the migration scripts in `src/TechHub.Infrastructure/Data/Migrations/` to understand what changed.

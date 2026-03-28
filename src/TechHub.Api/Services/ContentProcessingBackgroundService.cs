@@ -17,8 +17,9 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
     private readonly StartupStateService _startupState;
     private readonly ILogger<ContentProcessingBackgroundService> _logger;
 
-    // Used to signal an immediate manual run; reset to null after use
-    private volatile TaskCompletionSource<bool>? _manualTrigger;
+    // Always holds a live (incomplete) TCS that the background loop awaits.
+    // TriggerImmediateRun completes it; the loop then replaces it with a fresh one.
+    private volatile TaskCompletionSource<bool> _manualTrigger = new(TaskCreationOptions.RunContinuationsAsynchronously);
 
     public ContentProcessingBackgroundService(
         IServiceProvider serviceProvider,
@@ -43,34 +44,48 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
     /// </summary>
     public void TriggerImmediateRun()
     {
-        var tcs = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
-        var existing = Interlocked.CompareExchange(ref _manualTrigger, tcs, null);
-        if (existing != null)
+        if (_manualTrigger.TrySetResult(true))
+        {
+            _logger.LogInformation("Manual content processing run triggered");
+        }
+        else
         {
             _logger.LogInformation("Manual trigger requested but a run is already queued");
-            return;
         }
-
-        tcs.SetResult(true);
-        _logger.LogInformation("Manual content processing run triggered");
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
+        // Wait for database migrations and content sync to complete before processing
+        _logger.LogInformation("Waiting for startup operations to complete before first processing run…");
+        await _startupState.StartupTask.WaitAsync(stoppingToken);
+        _logger.LogInformation("Startup complete");
+
         if (!_options.Enabled)
         {
-            _logger.LogInformation("ContentProcessingBackgroundService is disabled via configuration");
+            _logger.LogInformation(
+                "Scheduled content processing is disabled via configuration. Manual triggers via admin UI are still accepted.");
+
+            // Keep listening for manual triggers even when scheduled processing is off
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                await _manualTrigger.Task.WaitAsync(stoppingToken);
+
+                if (stoppingToken.IsCancellationRequested)
+                {
+                    break;
+                }
+
+                _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+                await RunOnceAsync("manual", stoppingToken);
+            }
+
             return;
         }
 
         _logger.LogInformation(
             "ContentProcessingBackgroundService started — interval: {Interval} minutes",
             _options.IntervalMinutes);
-
-        // Wait for database migrations and content sync to complete before processing
-        _logger.LogInformation("Waiting for startup operations to complete before first processing run…");
-        await _startupState.StartupTask.WaitAsync(stoppingToken);
-        _logger.LogInformation("Startup complete — starting first processing run");
 
         // Run once immediately on startup
         await RunOnceAsync("scheduled", stoppingToken);
@@ -80,7 +95,7 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
         while (!stoppingToken.IsCancellationRequested)
         {
             // Wait for either the periodic timer or a manual trigger
-            var manualTask = _manualTrigger?.Task ?? Task.Delay(Timeout.Infinite, stoppingToken);
+            var manualTask = _manualTrigger.Task;
             var timerTask = timer.WaitForNextTickAsync(stoppingToken).AsTask();
 
             var completed = await Task.WhenAny(manualTask, timerTask);
@@ -91,7 +106,7 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
             }
 
             var trigger = completed == manualTask ? "manual" : "scheduled";
-            Interlocked.Exchange(ref _manualTrigger, null);
+            _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
 
             await RunOnceAsync(trigger, stoppingToken);
         }

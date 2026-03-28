@@ -1,41 +1,39 @@
 @inherits LayoutComponentBase
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin — TechHub</title>
-    <base href="/" />
-    <link rel="stylesheet" href="@Assets["css/design-tokens.css"]" />
-    <link rel="stylesheet" href="@Assets["css/base.css"]" />
-    <link rel="stylesheet" href="@Assets["css/buttons.css"]" />
+<PageTitle>Admin — TechHub</PageTitle>
+
+<HeadContent>
     <link rel="stylesheet" href="@Assets["css/admin.css"]" />
-    <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
-    <HeadOutlet @rendermode="InteractiveServer" />
-</head>
-<body class="admin-body">
-    <header class="admin-header">
-        <nav class="admin-nav">
-            <a href="/admin" class="admin-brand">⚙️ TechHub Admin</a>
-            <div class="admin-nav-links">
-                <a href="/admin" class="admin-nav-link">Dashboard</a>
-                <a href="/admin/feeds" class="admin-nav-link">RSS Feeds</a>
-            </div>
-            <div class="admin-nav-actions">
-                <a href="/" class="admin-nav-link">← Back to Site</a>
-                <form method="post" action="/admin/logout" class="admin-logout-form">
-                    <AntiforgeryToken />
-                    <button type="submit" class="btn-secondary admin-logout-btn">Log out</button>
-                </form>
-            </div>
-        </nav>
-    </header>
+</HeadContent>
 
-    <main class="admin-main">
-        @Body
-    </main>
+<nav class="admin-nav" aria-label="Admin navigation">
+    <div class="admin-nav-content">
+        <a href="/admin" class="admin-brand">
+            <span class="admin-brand-text">Tech Hub</span>
+            <span class="admin-brand-badge">Admin</span>
+        </a>
 
-    <script src="@Assets["_framework/blazor.web.js"]"></script>
-</body>
-</html>
+        <div class="admin-nav-links">
+            <a href="/admin" class="admin-nav-link">Dashboard</a>
+            <a href="/admin/feeds" class="admin-nav-link">RSS Feeds</a>
+            <a href="/admin/statistics" class="admin-nav-link">Statistics</a>
+        </div>
+
+        <div class="admin-nav-actions">
+            <a href="/" class="admin-nav-link admin-back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"/>
+                </svg>
+                Back to Site
+            </a>
+            <form method="post" action="/admin/logout" class="admin-logout-form">
+                <AntiforgeryToken />
+                <button type="submit" class="admin-logout-btn">Log out</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<main class="admin-main">
+    @Body
+</main>

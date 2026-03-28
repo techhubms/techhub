@@ -264,7 +264,7 @@ These patterns apply across all .NET projects. **See project-specific AGENTS.md 
 
 - `IContentRepository` (ContentRepository - uses scoped IDbConnection)
 - `IMarkdownService`, `IRssService`, `ITagCloudService`
-- `IContentSyncService`, `MigrationRunner`
+- `MigrationRunner`
 
 **Options Pattern for Configuration**:
 

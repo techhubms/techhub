@@ -54,13 +54,13 @@ The API does not need a `ClientSecret` because it only validates incoming tokens
 
 ## Local Development Setup
 
-Use the setup script to create all required Entra ID resources:
+Use the management script to create all required Entra ID resources:
 
 ```powershell
-./scripts/Setup-EntraIdDev.ps1
+./scripts/Manage-EntraId.ps1 -Environment localhost
 ```
 
-This creates:
+This creates (on first run):
 
 1. An app registration with localhost redirect URIs
 2. An `Admin.Access` API scope
@@ -83,22 +83,26 @@ dotnet user-secrets set AzureAd:ClientId '<client-id>'
 dotnet user-secrets set AzureAd:Scopes 'Admin.Access'
 ```
 
-Parameters: `-DisplayName`, `-WebPort`, `-SecretExpiryDays`, `-SkipUserAssignment`.
+On subsequent runs, the script detects the existing app registration, skips creation, and only rotates the secret. Old secrets remain valid for overlap — no downtime.
+
+Parameters: `-DisplayName`, `-WebPort`, `-SecretExpiryDays`, `-SkipUserAssignment`, `-RemoveExpired`.
 
 ## Secret Rotation
 
-Client secrets should be rotated regularly. Use the rotation script:
+All environments use the same script. It appends a new secret without invalidating existing ones, so there is no downtime during rotation.
 
 ```powershell
-# Rotate and update GitHub Actions environment secret
-./scripts/Rotate-EntraIdSecret.ps1 -ClientId '<client-id>' -Environment staging
-./scripts/Rotate-EntraIdSecret.ps1 -ClientId '<client-id>' -Environment production -RemoveExpired
+# Localhost — prints new secret to console
+./scripts/Manage-EntraId.ps1 -Environment localhost
 
-# Rotate without updating GitHub (manual)
-./scripts/Rotate-EntraIdSecret.ps1 -ClientId '<client-id>' -SkipGitHub
+# Staging — rotates secret and updates GitHub Actions environment secrets
+./scripts/Manage-EntraId.ps1 -Environment staging
+
+# Production — rotates secret, updates GitHub, and cleans up expired secrets
+./scripts/Manage-EntraId.ps1 -Environment production -RemoveExpired
 ```
 
-The script creates a new secret (appended, not replacing), optionally updates GitHub Actions secrets via `gh secret set`, and can clean up expired secrets with `-RemoveExpired`.
+For staging and production, the script also pushes all four `AZURE_AD_*` secrets to the corresponding GitHub Actions environment via `gh secret set`.
 
 ## Infrastructure
 
@@ -117,7 +121,6 @@ These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env va
 
 - Auth setup — `src/TechHub.Web/Program.cs`, `src/TechHub.Api/Program.cs`
 - Token handler — `src/TechHub.Web/Services/AdminTokenDelegatingHandler.cs`
-- Local dev script — `scripts/Setup-EntraIdDev.ps1`
-- Secret rotation — `scripts/Rotate-EntraIdSecret.ps1`
+- Entra ID management — `scripts/Manage-EntraId.ps1` (create + rotate for all environments)
 - Bicep modules — `infra/modules/web.bicep`, `infra/modules/api.bicep`
 - CI/CD secrets — `.github/workflows/ci-cd.yml`

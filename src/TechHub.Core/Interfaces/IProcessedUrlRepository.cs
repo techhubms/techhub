@@ -25,4 +25,11 @@ public interface IProcessedUrlRepository
     /// Records older than <paramref name="olderThan"/> are removed.
     /// </summary>
     Task PurgeFailedAsync(TimeSpan olderThan, CancellationToken ct = default);
+
+    /// <summary>
+    /// Seeds processed URLs from JSON files (one-time migration from legacy processing pipeline).
+    /// Only seeds if the table is empty. Each JSON file contains an array of objects with a
+    /// <c>canonical_url</c> property.
+    /// </summary>
+    Task SeedFromJsonAsync(IEnumerable<string> jsonPaths, CancellationToken ct = default);
 }

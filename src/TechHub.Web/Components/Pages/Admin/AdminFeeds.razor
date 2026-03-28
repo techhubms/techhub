@@ -4,7 +4,9 @@
 @attribute [Microsoft.AspNetCore.Authorization.Authorize]
 @using TechHub.Core.Models.ContentProcessing
 @using TechHub.Web.Services
+@implements IDisposable
 @inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>RSS Feeds — TechHub Admin</PageTitle>
 
@@ -120,10 +122,34 @@
     private bool _messageIsError;
     private IReadOnlyList<FeedConfig>? _feeds;
     private FeedConfig? _editingFeed;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<FeedConfig>>("admin-feeds", out var restored) && restored != null)
+        {
+            _feeds = restored;
+            _loading = false;
+            return;
+        }
+
         await LoadFeedsAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_feeds != null)
+        {
+            ApplicationState.PersistAsJson("admin-feeds", _feeds);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
     }
 
     private async Task LoadFeedsAsync()

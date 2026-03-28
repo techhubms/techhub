@@ -25,10 +25,10 @@ namespace TechHub.Infrastructure.Services;
 /// </summary>
 public sealed class ContentProcessingService
 {
-    private readonly RssFeedIngestionService _rssService;
-    private readonly ArticleContentService _articleService;
-    private readonly AiCategorizationService _aiService;
-    private readonly YouTubeTagService _youtubeTagService;
+    private readonly IRssFeedIngestionService _rssService;
+    private readonly IArticleContentService _articleService;
+    private readonly IAiCategorizationService _aiService;
+    private readonly IYouTubeTagService _youtubeTagService;
     private readonly IDbConnection _connection;
     private readonly IContentProcessingJobRepository _jobRepo;
     private readonly IProcessedUrlRepository _processedUrlRepo;
@@ -43,10 +43,10 @@ public sealed class ContentProcessingService
     };
 
     public ContentProcessingService(
-        RssFeedIngestionService rssService,
-        ArticleContentService articleService,
-        AiCategorizationService aiService,
-        YouTubeTagService youtubeTagService,
+        IRssFeedIngestionService rssService,
+        IArticleContentService articleService,
+        IAiCategorizationService aiService,
+        IYouTubeTagService youtubeTagService,
         IDbConnection connection,
         IContentProcessingJobRepository jobRepo,
         IProcessedUrlRepository processedUrlRepo,

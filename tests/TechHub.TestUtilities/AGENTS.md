@@ -82,7 +82,7 @@ public class MyE2ETests
 
 ## TestCollectionsSeeder
 
-Seeds database from markdown files using production `ContentSyncService`:
+Seeds database from markdown files using `ContentSyncService` (test-only, moved from production code):
 
 ```csharp
 // Basic usage
@@ -94,7 +94,7 @@ await TestCollectionsSeeder.SeedFromFilesAsync(connection, customPath, logger);
 
 **Features**:
 
-- Uses actual production sync logic for test consistency
+- Uses `ContentSyncService` (test-only) to parse markdown and seed database
 - Logs seeding progress: files synced, duration
 - Logs record counts for all database tables
 

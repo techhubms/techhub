@@ -105,4 +105,58 @@ WHERE status = 'failed'
             _logger.LogInformation("Purged {Count} old failed URL records", deleted);
         }
     }
+
+    /// <inheritdoc/>
+    public async Task SeedFromJsonAsync(IEnumerable<string> jsonPaths, CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(jsonPaths);
+
+        // Check if we already have records — only seed into an empty table
+        var existingCount = await _connection.ExecuteScalarAsync<int>(
+            new CommandDefinition("SELECT COUNT(*) FROM processed_urls", cancellationToken: ct));
+
+        if (existingCount > 0)
+        {
+            _logger.LogInformation("processed_urls table already has {Count} entries. Skipping seed.", existingCount);
+            return;
+        }
+
+        var seeded = 0;
+
+        foreach (var jsonPath in jsonPaths)
+        {
+            if (!File.Exists(jsonPath))
+            {
+                _logger.LogWarning("Processed URLs JSON file not found at {Path}. Skipping.", jsonPath);
+                continue;
+            }
+
+            await using var stream = File.OpenRead(jsonPath);
+            using var doc = await System.Text.Json.JsonDocument.ParseAsync(stream, cancellationToken: ct);
+
+            if (doc.RootElement.ValueKind != System.Text.Json.JsonValueKind.Array)
+            {
+                continue;
+            }
+
+            foreach (var entry in doc.RootElement.EnumerateArray())
+            {
+                var url = entry.TryGetProperty("canonical_url", out var u) ? u.GetString() : null;
+                if (string.IsNullOrWhiteSpace(url))
+                {
+                    continue;
+                }
+
+                await _connection.ExecuteAsync(new CommandDefinition(
+                    @"INSERT INTO processed_urls (external_url, status)
+                      VALUES (@ExternalUrl, 'succeeded')
+                      ON CONFLICT (external_url) DO NOTHING",
+                    new { ExternalUrl = url },
+                    cancellationToken: ct));
+                seeded++;
+            }
+        }
+
+        _logger.LogInformation("Seeded {Count} processed URLs from JSON files", seeded);
+    }
 }

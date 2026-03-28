@@ -39,9 +39,6 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
   "Database": {
     "Provider": "PostgreSQL",
     "ConnectionString": "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
-  },
-  "ContentSync": {
-    "Enabled": true
   }
 }
 ```
@@ -49,30 +46,9 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 **Pros**: Production-ready, best performance at scale, full-text search with tsvector, semantic search ready  
 **Cons**: Requires Docker (`docker compose up -d postgres`) or cloud PostgreSQL instance
 
-**Sync Behavior**:
-
-- **First Run**: Syncs from markdown files (~30-60s for 4000+ files)
-- **Subsequent Runs**: Hash-based diff (<1s if no changes)
-
 **Usage**:
 
 - See [running-and-testing.md](running-and-testing.md) for instructions on running with Docker.
-
-## Content Sync Configuration
-
-Control database sync behavior via `appsettings.json`:
-
-```json
-{
-  "ContentSync": {
-    "Enabled": true,         // Set false to skip sync (faster startup)
-    "ForceFullSync": false,  // Set true to force complete reimport
-    "MaxParallelFiles": 10   // Parallel file processing during sync
-  }
-}
-```
-
-**Tip**: Set `ContentSync:Enabled = false` for rapid iteration when not testing search/filtering features.
 
 ## Database Schema
 

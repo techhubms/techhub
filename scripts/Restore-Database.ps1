@@ -7,7 +7,8 @@
     Performs a logical dump of the production TechHub PostgreSQL database (content_items and
     related tables only) and restores it to the target environment. This replaces the need to
     run ContentSyncService locally or in staging — developers get a production data snapshot
-    instead of processing markdown files.
+    instead of processing markdown files. ContentSync has been removed from production; the
+    database is now the single source of truth.
 
     Prerequisites:
     - pg_dump and psql (or pg_restore) installed locally (PostgreSQL client tools)
@@ -410,13 +411,6 @@ if (-not $SkipRestore) {
     $targetPgEnv = Get-PgEnv -Params $targetParams
 
     Write-Detail "Target: $($targetPgEnv.PGHOST):$($targetPgEnv.PGPORT)/$($targetPgEnv.PGDATABASE)"
-
-    # For local restore: warn that ContentSyncService must be disabled to prevent overwrite
-    if ($Target -eq 'local') {
-        Write-Host ""
-        Write-Host "   ⚠️  NOTE: Set ContentSync:Enabled = false in appsettings.json to prevent" -ForegroundColor Yellow
-        Write-Host "           the API from overwriting this data with the markdown file sync." -ForegroundColor Yellow
-    }
 
     Invoke-PgRestore -PgEnv $targetPgEnv -InputFile $OutputPath
 

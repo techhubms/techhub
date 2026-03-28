@@ -1,56 +1,29 @@
 using System.Xml;
 using FluentAssertions;
-using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Options;
-using Moq;
-using Moq.Protected;
-using TechHub.Core.Configuration;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Services;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
 /// <summary>
-/// Tests for RssFeedIngestionService XML parsing safety and feed ingestion behavior.
-/// Validates XXE protection and feed parsing.
+/// Tests for RssFeedIngestionService XML parsing safety and feed parsing behavior.
+/// Validates XXE protection and feed parsing via the internal ParseFeed method.
 /// </summary>
-public class RssFeedIngestionServiceTests : IDisposable
+public class RssFeedIngestionServiceTests
 {
-    private readonly Mock<HttpMessageHandler> _mockHandler;
-    private readonly HttpClient _httpClient;
-    private readonly RssFeedIngestionService _service;
-    private bool _disposed;
+    private static readonly DateTimeOffset _cutoff = DateTimeOffset.UtcNow.AddDays(-365);
 
-    public RssFeedIngestionServiceTests()
+    private static readonly FeedConfig _defaultFeedConfig = new()
     {
-        _mockHandler = new Mock<HttpMessageHandler>();
-        _httpClient = new HttpClient(_mockHandler.Object);
-        var options = Options.Create(new ContentProcessorOptions
-        {
-            RequestTimeoutSeconds = 10,
-            ItemAgeLimitDays = 365
-        });
-        _service = new RssFeedIngestionService(
-            _httpClient,
-            options,
-            NullLogger<RssFeedIngestionService>.Instance);
-    }
-
-    public void Dispose()
-    {
-        if (!_disposed)
-        {
-            _httpClient.Dispose();
-            _disposed = true;
-        }
-
-        GC.SuppressFinalize(this);
-    }
+        Name = "Test",
+        Url = "https://example.com/feed.xml",
+        OutputDir = "_blogs"
+    };
 
     [Fact]
-    public async Task IngestAsync_WithDtdInXml_RejectsAndReturnsEmpty()
+    public void ParseFeed_WithDtdInXml_ThrowsXmlException()
     {
-        // Arrange - XML with DTD that should be rejected
+        // Arrange - XML with DTD that should be rejected (XXE prevention)
         var xmlWithDtd = """
             <?xml version="1.0" encoding="UTF-8"?>
             <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
@@ -66,18 +39,13 @@ public class RssFeedIngestionServiceTests : IDisposable
             </rss>
             """;
 
-        SetupHttpResponse("https://example.com/feed.xml", xmlWithDtd);
-        var feedConfig = new FeedConfig { Name = "Test", Url = "https://example.com/feed.xml", OutputDir = "_blogs" };
-
-        // Act
-        var items = await _service.IngestAsync(feedConfig, TestContext.Current.CancellationToken);
-
-        // Assert - DTD processing is prohibited, so parsing should fail and return empty
-        items.Should().BeEmpty();
+        // Act & Assert - DTD processing is prohibited, so parsing must throw
+        var act = () => RssFeedIngestionService.ParseFeed(xmlWithDtd, _defaultFeedConfig, _cutoff);
+        act.Should().Throw<XmlException>();
     }
 
     [Fact]
-    public async Task IngestAsync_WithValidRssFeed_ParsesItems()
+    public void ParseFeed_WithValidRssFeed_ParsesItems()
     {
         // Arrange
         var validRss = $"""
@@ -95,11 +63,8 @@ public class RssFeedIngestionServiceTests : IDisposable
             </rss>
             """;
 
-        SetupHttpResponse("https://example.com/feed.xml", validRss);
-        var feedConfig = new FeedConfig { Name = "Test", Url = "https://example.com/feed.xml", OutputDir = "_blogs" };
-
         // Act
-        var items = await _service.IngestAsync(feedConfig, TestContext.Current.CancellationToken);
+        var items = RssFeedIngestionService.ParseFeed(validRss, _defaultFeedConfig, _cutoff);
 
         // Assert
         items.Should().ContainSingle();
@@ -108,7 +73,7 @@ public class RssFeedIngestionServiceTests : IDisposable
     }
 
     [Fact]
-    public async Task IngestAsync_WithValidAtomFeed_ParsesItems()
+    public void ParseFeed_WithValidAtomFeed_ParsesItems()
     {
         // Arrange
         var validAtom = $"""
@@ -124,29 +89,11 @@ public class RssFeedIngestionServiceTests : IDisposable
             </feed>
             """;
 
-        SetupHttpResponse("https://example.com/atom.xml", validAtom);
-        var feedConfig = new FeedConfig { Name = "AtomTest", Url = "https://example.com/atom.xml", OutputDir = "_blogs" };
-
         // Act
-        var items = await _service.IngestAsync(feedConfig, TestContext.Current.CancellationToken);
+        var items = RssFeedIngestionService.ParseFeed(validAtom, _defaultFeedConfig, _cutoff);
 
         // Assert
         items.Should().ContainSingle();
         items[0].Title.Should().Be("Atom Article");
-    }
-
-    private void SetupHttpResponse(string url, string content)
-    {
-        _mockHandler
-            .Protected()
-            .Setup<Task<HttpResponseMessage>>(
-                "SendAsync",
-                ItExpr.Is<HttpRequestMessage>(m => m.RequestUri != null && m.RequestUri.ToString() == url),
-                ItExpr.IsAny<CancellationToken>())
-            .ReturnsAsync(new HttpResponseMessage
-            {
-                StatusCode = System.Net.HttpStatusCode.OK,
-                Content = new StringContent(content)
-            });
     }
 }

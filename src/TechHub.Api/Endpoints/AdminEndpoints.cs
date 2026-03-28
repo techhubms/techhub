@@ -2,6 +2,7 @@ using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Services;
 
 namespace TechHub.Api.Endpoints;
 
@@ -54,6 +55,12 @@ public static class AdminEndpoints
         group.MapDelete("/feeds/{id:long}", DeleteFeedAsync)
             .WithName("DeleteRssFeedConfig")
             .WithSummary("Delete an RSS feed configuration");
+
+        // ── Database statistics ──────────────────────────────────────────────
+
+        group.MapGet("/statistics", GetStatisticsAsync)
+            .WithName("GetDatabaseStatistics")
+            .WithSummary("Get database statistics for the admin dashboard");
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
@@ -189,6 +196,16 @@ public static class AdminEndpoints
     {
         var deleted = await feedRepo.DeleteAsync(id, ct);
         return deleted ? Results.NoContent() : Results.NotFound();
+    }
+
+    // ── Statistics handlers ──────────────────────────────────────────────────
+
+    private static async Task<IResult> GetStatisticsAsync(
+        DatabaseStatisticsService statsService,
+        CancellationToken ct)
+    {
+        var stats = await statsService.GetStatisticsAsync(ct);
+        return Results.Ok(stats);
     }
 }
 

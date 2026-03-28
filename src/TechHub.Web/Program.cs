@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.UI;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -69,7 +70,9 @@ builder.Services.AddRazorComponents()
 // To restrict to specific users/groups, configure assignment required + add group claims
 // to the app registration in Entra ID.
 var azureAdClientId = builder.Configuration["AzureAd:ClientId"];
-if (!string.IsNullOrEmpty(azureAdClientId))
+var isAzureAdConfigured = !string.IsNullOrEmpty(azureAdClientId);
+
+if (isAzureAdConfigured)
 {
     // Acquire a proper access token (not an id_token) for calling the API.
     // Requires an "Expose an API" scope on the Entra app registration
@@ -81,16 +84,37 @@ if (!string.IsNullOrEmpty(azureAdClientId))
         .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))
         .EnableTokenAcquisitionToCallDownstreamApi(apiScopes)
         .AddInMemoryTokenCaches();
+
+    // Always show account picker so users can switch accounts.
+    // PostConfigure ensures Microsoft.Identity.Web's event handlers are already registered;
+    // we chain ours before calling the existing handler to preserve token redemption.
+    builder.Services.PostConfigure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
+    {
+        var previousHandler = options.Events.OnRedirectToIdentityProvider;
+        options.Events.OnRedirectToIdentityProvider = async context =>
+        {
+            context.ProtocolMessage.Prompt = "select_account";
+            await previousHandler(context);
+        };
+    });
 }
 else
 {
     // When Azure AD is not configured (local dev without Entra), register cookie
     // auth so the auth middleware doesn't throw. Admin pages simply won't work.
     builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-        .AddCookie();
+        .AddCookie(options => options.LoginPath = "/admin/login");
 }
 
 builder.Services.AddAuthorization();
+
+// AddMicrosoftIdentityUI registers the /MicrosoftIdentity/Account/* controller
+// which requires the OpenIdConnect scheme — only register when Azure AD is configured.
+var mvcBuilder = builder.Services.AddControllersWithViews();
+if (isAzureAdConfigured)
+{
+    mvcBuilder.AddMicrosoftIdentityUI();
+}
 
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
@@ -150,6 +174,11 @@ startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseU
 // Register delegating handler for forwarding auth tokens to admin API endpoints
 builder.Services.AddTransient<AdminTokenDelegatingHandler>();
 
+// Logger for resilience retry events (captures request URL on failures)
+#pragma warning disable CA2000 // Intentional: logger must outlive startup, disposed with app lifetime
+var retryLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("TechHubApiClient.Resilience");
+#pragma warning restore CA2000
+
 builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
@@ -183,6 +212,19 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
     options.Retry.MaxRetryAttempts = 5;
     options.Retry.Delay = TimeSpan.FromSeconds(3);
     options.Retry.BackoffType = Polly.DelayBackoffType.Constant; // Don't use exponential backoff
+    options.Retry.OnRetry = args =>
+    {
+        // Log the request URI on retry so we can identify which endpoint is failing.
+        // args.Outcome.Result?.RequestMessage gives us the URL for HTTP error responses (e.g. 500).
+        // For timeout exceptions, RequestMessage is null so we fall back to RequestMetadata.
+        var uri = args.Outcome.Result?.RequestMessage?.RequestUri?.PathAndQuery ?? "unknown";
+        var result = args.Outcome.Result?.StatusCode.ToString()
+            ?? args.Outcome.Exception?.GetType().Name
+            ?? "unknown";
+        retryLogger.LogWarning("API retry attempt {Attempt} for {RequestUri}: {Result}",
+            args.AttemptNumber, uri, result);
+        return ValueTask.CompletedTask;
+    };
 });
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
@@ -233,9 +275,9 @@ app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProv
 // Must wrap the validators so their 404 responses are replaced with /not-found.
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
-app.UseAntiforgery();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseAntiforgery();
 
 // ── Step 4: Validate URL structure ───────────────────────────────────────────
 // Reject segments that contain dots, digits at start, or other characters that
@@ -249,6 +291,8 @@ app.UseInvalidRouteSegmentFilter();
 
 // MapStaticAssets for optimized static assets (fingerprinting, compression, ETags)
 app.MapStaticAssets();
+
+app.MapControllers();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();

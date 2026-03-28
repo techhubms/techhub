@@ -963,4 +963,34 @@ public class TechHubApiClient : ITechHubApiClient
             throw;
         }
     }
+
+    // ================================================================
+    // Database statistics methods
+    // ================================================================
+
+    /// <summary>
+    /// Get database statistics for the admin dashboard.
+    /// GET /api/admin/statistics
+    /// </summary>
+    public virtual async Task<DatabaseStatistics?> GetDatabaseStatisticsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogDebug("Fetching database statistics");
+            return await _httpClient.GetFromJsonAsync<DatabaseStatistics>(
+                "/api/admin/statistics",
+                cancellationToken);
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch database statistics");
+            throw;
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _logger.LogError(ex, "Failed to fetch database statistics (timeout or unexpected error)");
+            throw;
+        }
+    }
 }

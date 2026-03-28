@@ -46,10 +46,18 @@ public sealed class AdminTokenDelegatingHandler : DelegatingHandler
             var httpContext = _httpContextAccessor.HttpContext;
             if (httpContext?.User?.Identity?.IsAuthenticated == true)
             {
-                var token = await _tokenAcquisition.GetAccessTokenForUserAsync(_scopes);
-                if (!string.IsNullOrEmpty(token))
+                try
                 {
-                    request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                    var token = await _tokenAcquisition.GetAccessTokenForUserAsync(_scopes);
+                    if (!string.IsNullOrEmpty(token))
+                    {
+                        request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
+                    }
+                }
+                catch (MicrosoftIdentityWebChallengeUserException)
+                {
+                    // Token cache is empty (e.g. after logout or server restart).
+                    // Let the request proceed without a token — the API will return 401.
                 }
             }
         }

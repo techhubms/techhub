@@ -322,4 +322,10 @@ internal interface ITechHubApiClient
     /// DELETE /api/admin/feeds/{id}
     /// </summary>
     Task DeleteFeedConfigAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get database statistics for the admin dashboard.
+    /// GET /api/admin/statistics
+    /// </summary>
+    Task<DatabaseStatistics?> GetDatabaseStatisticsAsync(CancellationToken cancellationToken = default);
 }

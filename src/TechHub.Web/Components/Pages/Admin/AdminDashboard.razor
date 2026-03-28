@@ -4,8 +4,10 @@
 @attribute [Microsoft.AspNetCore.Authorization.Authorize]
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
+@implements IDisposable
 @inject ITechHubApiClient Api
 @inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
 
 <PageTitle>Admin Dashboard — TechHub</PageTitle>
 
@@ -120,10 +122,34 @@
     private bool _triggerError;
     private IReadOnlyList<ContentProcessingJob>? _jobs;
     private long? _expandedJobId;
+    private PersistingComponentStateSubscription? _persistSubscription;
 
     protected override async Task OnInitializedAsync()
     {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<ContentProcessingJob>>("admin-dashboard-jobs", out var restored) && restored != null)
+        {
+            _jobs = restored;
+            _loading = false;
+            return;
+        }
+
         await LoadJobsAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_jobs != null)
+        {
+            ApplicationState.PersistAsJson("admin-dashboard-jobs", _jobs);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
     }
 
     private async Task LoadJobsAsync()
@@ -138,6 +164,12 @@
         catch (OperationCanceledException)
         {
             throw;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        {
+            // Token cache expired (e.g. after server restart) — redirect to re-authenticate
+            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn", forceLoad: true);
+            return;
         }
         catch (HttpRequestException ex)
         {

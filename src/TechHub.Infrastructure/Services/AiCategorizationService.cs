@@ -1,5 +1,4 @@
 using System.Globalization;
-using System.Net.Http.Headers;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
@@ -9,6 +8,7 @@ using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services;
@@ -17,9 +17,9 @@ namespace TechHub.Infrastructure.Services;
 /// Calls Azure OpenAI to categorize a raw feed item and produce a <see cref="ProcessedContentItem"/>.
 /// Also extracts roundup-ready metadata (summary, key topics, relevance) in the same call.
 /// </summary>
-public sealed class AiCategorizationService
+public sealed class AiCategorizationService : IAiCategorizationService
 {
-    private readonly HttpClient _httpClient;
+    private readonly IAiCompletionClient _completionClient;
     private readonly AiCategorizationOptions _options;
     private readonly ILogger<AiCategorizationService> _logger;
 
@@ -32,15 +32,15 @@ public sealed class AiCategorizationService
     };
 
     public AiCategorizationService(
-        HttpClient httpClient,
+        IAiCompletionClient completionClient,
         IOptions<AiCategorizationOptions> options,
         ILogger<AiCategorizationService> logger)
     {
-        ArgumentNullException.ThrowIfNull(httpClient);
+        ArgumentNullException.ThrowIfNull(completionClient);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
-        _httpClient = httpClient;
+        _completionClient = completionClient;
         _options = options.Value;
         _logger = logger;
     }
@@ -52,11 +52,6 @@ public sealed class AiCategorizationService
     public async Task<ProcessedContentItem?> CategorizeAsync(RawFeedItem item, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(item);
-
-        if (!_options.Enabled)
-        {
-            return null;
-        }
 
         var userContent = BuildUserPrompt(item);
         if (userContent.Length > _options.MaxContentLength)
@@ -83,26 +78,16 @@ public sealed class AiCategorizationService
             attempt++;
             try
             {
-                using var request = new HttpRequestMessage(
-                    HttpMethod.Post,
-                    string.Create(CultureInfo.InvariantCulture,
-                        $"{_options.Endpoint.TrimEnd('/')}/openai/deployments/{_options.DeploymentName}/chat/completions?api-version=2024-10-21"));
+                var result = await _completionClient.SendCompletionAsync(json, ct);
 
-                request.Headers.Add("api-key", _options.ApiKey);
-                request.Content = new StringContent(json, Encoding.UTF8, new MediaTypeHeaderValue("application/json"));
-
-                using var response = await _httpClient.SendAsync(request, ct);
-
-                if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
+                if (result.IsRateLimited)
                 {
                     _logger.LogWarning("AI rate limit hit, waiting before retry {Attempt}/{Max}", attempt, _options.MaxRetries);
                     await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds * attempt), ct);
                     continue;
                 }
 
-                response.EnsureSuccessStatusCode();
-                var responseJson = await response.Content.ReadAsStringAsync(ct);
-                return ParseAiResponse(responseJson, item);
+                return ParseAiResponse(result.ResponseBody!, item);
             }
             catch (HttpRequestException ex) when (attempt < _options.MaxRetries)
             {

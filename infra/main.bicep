@@ -304,6 +304,9 @@ module apiApp './modules/api.bicep' = {
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
     azureAdScopes: azureAdScopes
+    aiCategorizationApiKey: openai.outputs.openAiApiKey
+    aiCategorizationEndpoint: openai.outputs.openAiEndpoint
+    aiCategorizationDeploymentName: openai.outputs.deploymentName
   }
 }
 

@@ -1,48 +1,29 @@
 using FluentAssertions;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using Microsoft.Extensions.Options;
 using Moq;
-using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
-using TechHub.Infrastructure.Services;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
 /// <summary>
 /// Unit tests for ArticleContentService YouTube transcript enrichment.
 /// Tests verify that YouTube items are correctly enriched with transcript text
-/// via the YouTubeTranscriptService dependency.
+/// via the IYouTubeTranscriptService dependency.
 /// </summary>
-public class ArticleContentServiceTests : IDisposable
+public class ArticleContentServiceTests
 {
-    private readonly Mock<YouTubeTranscriptService> _mockTranscript;
-    private readonly ArticleContentService _service;
-    private bool _disposed;
+    private readonly Mock<IYouTubeTranscriptService> _mockTranscript;
+    private readonly Mock<IArticleFetchClient> _mockFetchClient;
+    private readonly IArticleContentService _service;
 
     public ArticleContentServiceTests()
     {
-        var httpClient = new HttpClient();
-        var options = Options.Create(new ContentProcessorOptions { RequestTimeoutSeconds = 10 });
-        _mockTranscript = new Mock<YouTubeTranscriptService>(
-            Options.Create(new ContentProcessorOptions { RequestTimeoutSeconds = 10 }),
-            NullLogger<YouTubeTranscriptService>.Instance);
+        _mockTranscript = new Mock<IYouTubeTranscriptService>();
+        _mockFetchClient = new Mock<IArticleFetchClient>();
 
-        _service = new ArticleContentService(
-            httpClient,
-            options,
-            _mockTranscript.Object,
-            NullLogger<ArticleContentService>.Instance);
-    }
-
-    public void Dispose()
-    {
-        if (!_disposed)
-        {
-            _disposed = true;
-        }
-
-        GC.SuppressFinalize(this);
+        _service = new Infrastructure.Services.ArticleContentService(
+            _mockFetchClient.Object,
+            _mockTranscript.Object);
     }
 
     private static RawFeedItem CreateYouTubeItem(string url = "https://www.youtube.com/watch?v=abc123") => new()

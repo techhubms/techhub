@@ -190,15 +190,28 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
 
 ## GitHub Secrets Required
 
-Configure these secrets in GitHub repository settings:
+### Repository Secrets
+
+Configure these in GitHub repository settings → Secrets and variables → Actions → Repository secrets:
 
 - `AZURE_CREDENTIALS` - Azure service principal credentials (JSON)
 - `AZURE_CONTAINER_REGISTRY` - Name of shared Azure Container Registry: `crtechhub`
 - `AZURE_SUBSCRIPTION_ID` - Azure subscription ID
-- `AZURE_AD_TENANT_ID` - Entra ID tenant (directory) ID
-- `AZURE_AD_CLIENT_ID` - Entra ID application (client) ID
-- `AZURE_AD_CLIENT_SECRET` - Entra ID client secret (rotate with `scripts/Rotate-EntraIdSecret.ps1`)
-- `AZURE_AD_SCOPES` - API scope for access token validation (e.g. `api://<client-id>/Admin.Access`)
+- `RSS_APP_APPID` - GitHub App ID for RSS processing and secret sync
+- `RSS_APP_PRIVATEKEY` - GitHub App private key
+
+### Environment Secrets
+
+Configure these per-environment in GitHub repository settings → Environments → (staging/production) → Environment secrets:
+
+| Secret | Staging | Production | Notes |
+|--------|---------|------------|-------|
+| `POSTGRES_ADMIN_PASSWORD` | Staging DB password | Production DB password | Set manually from 1Password |
+| `AZURE_AD_TENANT_ID` | Entra ID tenant ID | Entra ID tenant ID | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `AZURE_AD_CLIENT_ID` | Entra ID client ID | Entra ID client ID | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `AZURE_AD_CLIENT_SECRET` | Entra ID client secret | Entra ID client secret | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `AZURE_AD_SCOPES` | API scope | API scope | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `AZURE_AI_KEY` | Staging AI Foundry key | Production AI Foundry key | Set manually from Azure portal |
 
 ## GitHub Environments
 
@@ -215,7 +228,6 @@ Create these environments in GitHub:
 - **Protection rules**:
   - Required reviewers (at least 1)
   - Wait timer: 5 minutes (optional)
-  - Environment secrets: Same as repository secrets
 
 ## Deployment Process
 

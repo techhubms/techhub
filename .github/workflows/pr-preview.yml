@@ -58,6 +58,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build-and-push
     if: github.event.action != 'closed'
+    environment: staging
     outputs:
       web-url: ${{ steps.deploy.outputs.web-url }}
 
@@ -74,7 +75,7 @@ jobs:
         id: deploy
         shell: pwsh
         env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ACC_PW }}
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
         run: |
           ./scripts/Deploy-PrPreview.ps1 `
             -PrNumber ${{ github.event.pull_request.number }} `

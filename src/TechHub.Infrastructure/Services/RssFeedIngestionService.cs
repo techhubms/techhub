@@ -3,6 +3,7 @@ using System.Xml;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services;
@@ -11,22 +12,22 @@ namespace TechHub.Infrastructure.Services;
 /// Downloads and parses RSS/Atom feeds into <see cref="RawFeedItem"/> instances
 /// using standard <see cref="XmlDocument"/> parsing (no extra NuGet packages required).
 /// </summary>
-public sealed class RssFeedIngestionService
+public sealed class RssFeedIngestionService : IRssFeedIngestionService
 {
-    private readonly HttpClient _httpClient;
+    private readonly IRssFeedClient _feedClient;
     private readonly ContentProcessorOptions _options;
     private readonly ILogger<RssFeedIngestionService> _logger;
 
     public RssFeedIngestionService(
-        HttpClient httpClient,
+        IRssFeedClient feedClient,
         IOptions<ContentProcessorOptions> options,
         ILogger<RssFeedIngestionService> logger)
     {
-        ArgumentNullException.ThrowIfNull(httpClient);
+        ArgumentNullException.ThrowIfNull(feedClient);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
-        _httpClient = httpClient;
+        _feedClient = feedClient;
         _options = options.Value;
         _logger = logger;
     }
@@ -43,21 +44,10 @@ public sealed class RssFeedIngestionService
 
         _logger.LogInformation("Downloading RSS feed: {FeedName} ({Url})", feedConfig.Name, feedConfig.Url);
 
-        string xmlContent;
-        try
+        var xmlContent = await _feedClient.FetchFeedXmlAsync(feedConfig.Url, ct);
+        if (xmlContent is null)
         {
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-            cts.CancelAfter(TimeSpan.FromSeconds(_options.RequestTimeoutSeconds));
-
-            xmlContent = await _httpClient.GetStringAsync(feedConfig.Url, cts.Token);
-        }
-        catch (OperationCanceledException) when (ct.IsCancellationRequested)
-        {
-            throw;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to download feed {FeedName} from {Url}", feedConfig.Name, feedConfig.Url);
+            _logger.LogError("Failed to download feed {FeedName} from {Url}", feedConfig.Name, feedConfig.Url);
             return [];
         }
 
@@ -84,7 +74,7 @@ public sealed class RssFeedIngestionService
         }
     }
 
-    private static List<RawFeedItem> ParseFeed(string xmlContent, FeedConfig feedConfig, DateTimeOffset cutoff)
+    internal static List<RawFeedItem> ParseFeed(string xmlContent, FeedConfig feedConfig, DateTimeOffset cutoff)
     {
         // Use a safe XmlReader to prohibit DTD processing and external entities (XXE prevention)
         var settings = new XmlReaderSettings

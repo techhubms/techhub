@@ -5,10 +5,10 @@ using TechHub.Core.Interfaces;
 namespace TechHub.Api.Services;
 
 /// <summary>
-/// Runs database migrations and content sync as a background service after Kestrel starts.
+/// Runs database migrations and data seeding as a background service after Kestrel starts.
 /// This ensures the health endpoint is reachable during startup, allowing Aspire's WaitFor
 /// to properly gate dependent services (like the web frontend) until startup completes.
-/// FAIL-FAST: If migrations or content sync fail, the application is stopped immediately.
+/// FAIL-FAST: If migrations fail, the application is stopped immediately.
 /// </summary>
 public class StartupBackgroundService : BackgroundService
 {
@@ -44,37 +44,42 @@ public class StartupBackgroundService : BackgroundService
             var migrationRunner = services.GetRequiredService<IMigrationRunner>();
             await migrationRunner.RunMigrationsAsync(stoppingToken);
             _logger.LogInformation("✅ Database migrations completed");
-            _startupState.MarkMigrationsCompleted();
 
             // Seed RSS feed configs from JSON if the table is empty (first run)
             var feedRepo = services.GetRequiredService<IRssFeedConfigRepository>();
-            var rssFeedsPath = Path.IsPathRooted(_options.RssFeedsConfigPath)
-                ? _options.RssFeedsConfigPath
-                : Path.Join(AppContext.BaseDirectory, _options.RssFeedsConfigPath);
+            var rssFeedsPath = ResolvePath(_options.RssFeedsConfigPath);
             await feedRepo.SeedFromJsonAsync(rssFeedsPath, stoppingToken);
             _logger.LogInformation("✅ RSS feed configs seeded (if table was empty)");
 
-            // Synchronize content from markdown files to database
-            var contentSyncService = services.GetRequiredService<IContentSyncService>();
-            var syncResult = await contentSyncService.SyncAsync(stoppingToken);
-            _logger.LogInformation("✅ Content sync: {Added} added, {Updated} updated, {Deleted} deleted, {Unchanged} unchanged ({Duration}ms)",
-                syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Unchanged, syncResult.Duration.TotalMilliseconds);
-            _startupState.MarkContentSyncCompleted();
+            // Seed processed URLs from legacy JSON files (one-time migration)
+            var processedUrlRepo = services.GetRequiredService<IProcessedUrlRepository>();
+            var processedUrlPaths = new[]
+            {
+                ResolvePath("processed-entries.json"),
+                ResolvePath("skipped-entries.json")
+            };
+            await processedUrlRepo.SeedFromJsonAsync(processedUrlPaths, stoppingToken);
+            _logger.LogInformation("✅ Processed URLs seeded (if table was empty)");
+
+            // Mark startup complete — content is already in the database
+            _startupState.MarkStartupCompleted();
 
             // Log database record counts for verification
             LogDatabaseRecordCounts(services);
         }
         catch (Exception ex)
         {
-            _logger.LogCritical(ex, "💥 CRITICAL: Startup operations failed. Application cannot continue without content. Shutting down...");
+            _logger.LogCritical(ex, "💥 CRITICAL: Startup operations failed. Application cannot continue. Shutting down...");
 
             // Fail fast: Stop the application immediately
-            // Without content, the application is useless
             _hostLifetime.StopApplication();
 
             throw;
         }
     }
+
+    private static string ResolvePath(string path) =>
+        Path.IsPathRooted(path) ? path : Path.Join(AppContext.BaseDirectory, path);
 
     private void LogDatabaseRecordCounts(IServiceProvider services)
     {
@@ -84,7 +89,8 @@ public class StartupBackgroundService : BackgroundService
         {
             ("content_items", "content items"),
             ("content_tags_expanded", "expanded tags"),
-            ("sync_metadata", "sync metadata entries")
+            ("processed_urls", "processed URLs"),
+            ("rss_feed_configs", "RSS feed configs")
         };
 
         _logger.LogInformation("📊 Database record counts:");

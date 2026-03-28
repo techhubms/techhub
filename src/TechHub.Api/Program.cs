@@ -80,7 +80,6 @@ builder.Services.Configure<TagCloudOptions>(builder.Configuration.GetSection("Ap
 builder.Services.Configure<ApiOptions>(builder.Configuration.GetSection("AppSettings:Api"));
 builder.Services.Configure<RssOptions>(builder.Configuration.GetSection("AppSettings:Rss"));
 builder.Services.Configure<DatabaseOptions>(builder.Configuration.GetSection("Database"));
-builder.Services.Configure<ContentSyncOptions>(builder.Configuration.GetSection("ContentSync"));
 builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("AppSettings:Content"));
 
 // Register database connection and repository (PostgreSQL only)
@@ -100,7 +99,6 @@ builder.Services.AddSingleton(TimeProvider.System);
 // Register transient services
 builder.Services.AddTransient<IMarkdownService, MarkdownService>();
 builder.Services.AddTransient<IRssService, RssService>();
-builder.Services.AddTransient<IContentSyncService, ContentSyncService>();
 builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
 
 // RSS feed config repository (database-backed)
@@ -120,35 +118,44 @@ builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJob
 builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
 
 // YouTube transcript fetcher (no HTTP client needed — uses YoutubeExplode internally)
-builder.Services.AddTransient<YouTubeTranscriptService>();
+builder.Services.AddTransient<IYouTubeTranscriptService, YouTubeTranscriptService>();
 
-// Typed HTTP clients for the processing services
-builder.Services.AddHttpClient<RssFeedIngestionService>()
+// Typed HTTP clients for external API communication
+builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
         client.Timeout = TimeSpan.FromSeconds(60);
     });
 
-builder.Services.AddHttpClient<ArticleContentService>()
+builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
         client.Timeout = TimeSpan.FromSeconds(30);
     });
 
-builder.Services.AddHttpClient<YouTubeTagService>()
+builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
         client.Timeout = TimeSpan.FromSeconds(10);
     });
 
-builder.Services.AddHttpClient<AiCategorizationService>()
+builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
     .ConfigureHttpClient(client =>
     {
         client.Timeout = TimeSpan.FromSeconds(120);
     });
+
+// Processing services (depend on typed clients above, not on HttpClient directly)
+builder.Services.AddTransient<IRssFeedIngestionService, RssFeedIngestionService>();
+builder.Services.AddTransient<IArticleContentService, ArticleContentService>();
+builder.Services.AddTransient<IYouTubeTagService, YouTubeTagService>();
+builder.Services.AddTransient<IAiCategorizationService, AiCategorizationService>();
+
+// Admin services
+builder.Services.AddTransient<DatabaseStatisticsService>();
 
 // Scoped orchestrator — creates its own scope per call to run in IHostedService
 builder.Services.AddScoped<ContentProcessingService>();

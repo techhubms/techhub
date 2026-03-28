@@ -3,14 +3,15 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Services;
 
 namespace TechHub.TestUtilities;
 
 /// <summary>
-/// Seeds in-memory test database with markdown files from TestCollections directory.
-/// Uses the actual production ContentSyncService to ensure tests run against real sync logic.
+/// Seeds test database with markdown files from TestCollections directory.
+/// Uses ContentSyncService (test-only) to parse markdown and insert into the database.
 /// Provides logging for seeding progress and final record counts.
 /// </summary>
 public static class TestCollectionsSeeder
@@ -62,7 +63,7 @@ public static class TestCollectionsSeeder
         var syncLogger = loggerFactory.CreateLogger<ContentSyncService>();
         var syncService = new ContentSyncService(connection, markdownService, syncLogger, dialect, syncOptions, contentOptions);
 
-        // Use actual production sync logic - ensures tests validate real code path
+        // Use ContentSyncService to parse markdown files and insert into database
         var syncResult = await syncService.SyncAsync(CancellationToken.None);
 
         logger.LogInformation(

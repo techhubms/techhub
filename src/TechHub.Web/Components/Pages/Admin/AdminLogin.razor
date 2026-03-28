@@ -1,5 +1,6 @@
 @page "/admin/login"
 @layout AdminLayout
+@inject IConfiguration Configuration
 
 <PageTitle>Admin Sign-in — TechHub</PageTitle>
 
@@ -17,9 +18,19 @@
             </div>
         }
 
-        <a href="/MicrosoftIdentity/Account/SignIn?returnUrl=%2Fadmin" class="btn-primary admin-login-btn-link">
-            Sign in with Microsoft
-        </a>
+        @if (_isAzureAdConfigured)
+        {
+            <a href="/MicrosoftIdentity/Account/SignIn?returnUrl=%2Fadmin" class="btn-primary admin-login-btn-link" data-enhance-nav="false">
+                Sign in with Microsoft
+            </a>
+        }
+        else
+        {
+            <div class="admin-alert admin-alert-error" role="alert">
+                Azure AD is not configured. Run <code>./scripts/Manage-EntraId.ps1 -Environment localhost</code>
+                and configure the user secrets to enable admin sign-in.
+            </div>
+        }
     </div>
 </div>
 
@@ -27,9 +38,11 @@
     [SupplyParameterFromQuery] private string? Error { get; set; }
 
     private bool _showError;
+    private bool _isAzureAdConfigured;
 
     protected override void OnInitialized()
     {
         _showError = !string.IsNullOrEmpty(Error);
+        _isAzureAdConfigured = !string.IsNullOrEmpty(Configuration["AzureAd:ClientId"]);
     }
 }

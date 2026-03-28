@@ -11,7 +11,6 @@ The Tech Hub supports both manual and automated content creation. Content is org
 **Important**: The PostgreSQL database is the **single source of truth** for all content. Content is written directly to the database by:
 
 1. **`ContentProcessingBackgroundService`** (production) — Background service running inside `TechHub.Api` on a configurable schedule. Downloads RSS feeds, categorizes content with Azure OpenAI, and writes directly to the database.
-2. **`ContentSyncService`** (legacy) — Synchronizes markdown files from `collections/` to the database on API startup. Still active while the migration to database-first is in progress.
 
 ### Environment Strategy
 
@@ -19,7 +18,7 @@ The Tech Hub supports both manual and automated content creation. Content is org
 |-------------|---------------|
 | Production | `ContentProcessingBackgroundService` (in `TechHub.Api`) writes RSS content directly to the database |
 | Staging | Database restore from production snapshot (`scripts/Restore-Database.ps1`) |
-| Local development | Database restore from production snapshot, or ContentSync from `collections/` |
+| Local development | Database restore from production snapshot |
 
 For local development, see [running-and-testing.md](running-and-testing.md) for setup instructions.
 
@@ -35,20 +34,7 @@ To populate a non-production environment with real data:
 ./scripts/Restore-Database.ps1 -Target staging
 ```
 
-This replaces the need to run ContentSyncService against markdown files in non-production environments. Requires VPN access to the production environment and PostgreSQL client tools installed.
-
-### Disabling ContentSync Locally
-
-After a database restore, disable the markdown sync to prevent it from overwriting restored data:
-
-```json
-// appsettings.json (local development only)
-{
-  "ContentSync": {
-    "Enabled": false
-  }
-}
-```
+Requires VPN access to the production environment and PostgreSQL client tools installed.
 
 ### Manual Content Creation with GitHub Copilot
 

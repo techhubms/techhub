@@ -8,9 +8,6 @@ public class AiCategorizationOptions
     /// <summary>Configuration section name.</summary>
     public const string SectionName = "AiCategorization";
 
-    /// <summary>Whether AI categorization is enabled. When false, items are skipped.</summary>
-    public bool Enabled { get; init; } = true;
-
     /// <summary>Azure OpenAI endpoint URL (e.g. https://oai-techhub-prod.openai.azure.com/).</summary>
     public string Endpoint { get; init; } = string.Empty;
 

@@ -45,10 +45,8 @@ TechHub.Core/
 │   │   ├── AllTagsResponse.cs   # Response for all tags API
 │   │   ├── TagCloudItem.cs      # Tag cloud item with size
 │   │   ├── TagWithCount.cs      # Tag with usage count
-│   └── SyncResult.cs            # Content sync operation result
 ├── Interfaces/                   # Repository contracts
 │   ├── IContentRepository.cs    # Content & Section data access
-│   ├── IContentSyncService.cs   # Content sync operations
 │   ├── IDbConnectionFactory.cs  # Database connection factory
 │   ├── IMarkdownService.cs      # Markdown processing
 │   ├── IRssService.cs           # RSS feed generation
@@ -264,7 +262,6 @@ var orderedCustomPages = section.Collections
 - `IContentRepository` - Section and content data access ([Interfaces/IContentRepository.cs](Interfaces/IContentRepository.cs))
 - `IMarkdownService` - Markdown processing ([Interfaces/IMarkdownService.cs](Interfaces/IMarkdownService.cs))
 - `IRssService` - RSS feed generation ([Interfaces/IRssService.cs](Interfaces/IRssService.cs))
-- `IContentSyncService` - Content sync operations ([Interfaces/IContentSyncService.cs](Interfaces/IContentSyncService.cs))
 
 **Repository Method Patterns**:
 
