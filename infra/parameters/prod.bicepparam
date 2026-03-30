@@ -34,8 +34,9 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
 param openAiModelCapacity = 200
-// Admin IP for PostgreSQL firewall (same as shared NSP admin IP)
-param adminIpAddress = '86.89.119.3'
+// Comma-separated admin IP addresses for PostgreSQL firewall.
+// Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
+param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
 // NSP from shared deployment (for associating environment resources)
 param nspId = readEnvironmentVariable('NSP_ID', '')
 param nspProfileId = readEnvironmentVariable('NSP_PROFILE_ID', '')

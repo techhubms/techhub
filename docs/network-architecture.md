@@ -41,22 +41,21 @@ The spoke-to-hub peering depends on hub-to-spoke being established first.
 
 ## Network Security Perimeter (NSP)
 
-A single NSP (`nsp-techhub`) in the shared resource group controls public access to NSP-supported resources. Admin access is via IP allowlisting; same-subscription Azure services are allowed implicitly.
+A single NSP (`nsp-techhub`) in the shared resource group controls public access to NSP-supported resources. Admin access is via IP allowlisting (supports multiple IPs via `ADMIN_IP_ADDRESSES` env var); same-subscription Azure services are allowed implicitly.
 
 ```text
 NSP: nsp-techhub (rg-techhub-shared)
 └── Profile: profile-techhub
-    ├── Inbound: allow-admin-ip  → addressPrefixes: ["<ADMIN_IP>/32"]
+    ├── Inbound: allow-admin-ip  → addressPrefixes: ["<IP1>/32", "<IP2>/32", ...]
     └── Inbound: allow-subscription → subscriptions: [{id: "<subscription-id>"}]
 
 Associated resources:
   - Key Vault (shared)
   - App Insights (shared, staging, prod)
   - Log Analytics (shared, staging, prod)
-  - AI Foundry (staging, prod)
 ```
 
-Resources that do **not** support NSP (PostgreSQL) use per-resource IP firewall rules instead.
+AI Foundry is **not** associated with the NSP — content processing scripts run from GitHub Actions runners with dynamic public IPs that cannot be allowlisted. AI Foundry remains publicly accessible with API key authentication.
 
 ## Azure Monitor Private Link Scope (AMPLS)
 
@@ -99,8 +98,8 @@ A public Azure DNS zone (`acme.hub.ms`) is used for automated wildcard certifica
 
 Each environment has its own PostgreSQL Flexible Server.
 
-- **Public access**: Enabled with admin IP firewall rule (PostgreSQL does not support NSP)
-- **Firewall**: Single admin IP rule — all other public access denied
+- **Public access**: Enabled with admin IP firewall rules (PostgreSQL does not support NSP)
+- **Firewall**: One rule per admin IP from `ADMIN_IP_ADDRESSES` — all other public access denied
 - **Access**: Private endpoint in the environment's spoke VNet
 - **Container Apps** reach PostgreSQL through the spoke VNet private endpoint
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
@@ -109,7 +108,7 @@ Each environment has its own PostgreSQL Flexible Server.
 
 Each environment has its own AI Foundry (Cognitive Services) account.
 
-- **Public access**: Enabled (controlled by NSP — only admin IP allowed)
+- **Public access**: Enabled (AI Foundry is **not** behind NSP — GitHub Actions runners use dynamic IPs)
 - **Private endpoint**: In each spoke VNet for Container Apps to use a private path
 - **DNS zones**: 3 zones per spoke (`privatelink.cognitiveservices.azure.com`, `privatelink.openai.azure.com`, `privatelink.services.ai.azure.com`)
 

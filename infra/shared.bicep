@@ -19,9 +19,9 @@ param keyVaultAdminObjectIds array = []
 @description('Hub VNet name')
 param hubVnetName string = 'vnet-techhub-hub'
 
-@description('Admin IP address for NSP inbound rule and PostgreSQL firewall (e.g. "1.2.3.4")')
+@description('Comma-separated admin IP addresses for NSP inbound rule and PostgreSQL firewall (e.g. "1.2.3.4,5.6.7.8")')
 @minLength(7)
-param adminIpAddress string
+param adminIpAddresses string
 
 @description('DNS zone name for ACME challenge delegation (used by certbot-dns-azure for wildcard cert renewal)')
 param acmeDnsZoneName string = 'acme.hub.ms'
@@ -110,15 +110,18 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
   }
 }
 
-// Network Security Perimeter — controls public access to Key Vault, App Insights, Log Analytics, AI Foundry
-// Associated resources are added by environment deployments via the NSP resource ID output
+// Parse comma-separated admin IPs into an array
+var adminIpList = split(adminIpAddresses, ',')
+
+// Network Security Perimeter — controls public access to Key Vault, App Insights, Log Analytics
+// AI Foundry is excluded: content processing scripts run from GitHub Actions runners with dynamic IPs
 module nsp './modules/networkSecurityPerimeter.bicep' = {
   scope: resourceGroup
   name: 'nsp-deployment'
   params: {
     location: location
     nspName: 'nsp-techhub'
-    adminIpCidr: '${adminIpAddress}/32'
+    adminIpCidrs: [for ip in adminIpList: '${trim(ip)}/32']
     associatedResourceIds: [
       keyVault.outputs.vaultId
       sharedMonitoring.outputs.appInsightsId

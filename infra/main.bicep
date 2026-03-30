@@ -81,8 +81,8 @@ param openAiName string = 'oai-techhub-${environmentName}'
 @description('Azure AI Foundry model capacity (TPM in thousands)')
 param openAiModelCapacity int = 100
 
-@description('Admin IP address for PostgreSQL firewall rule (e.g. "1.2.3.4")')
-param adminIpAddress string = ''
+@description('Comma-separated admin IP addresses for PostgreSQL firewall rules (e.g. "1.2.3.4,5.6.7.8")')
+param adminIpAddresses string = ''
 
 @description('NSP resource ID from shared deployment (for associating environment resources)')
 param nspId string = ''
@@ -211,7 +211,8 @@ module openAiPrivateEndpoint './modules/openAiPrivateEndpoint.bicep' = {
 }
 
 // Associate environment-specific resources with the shared NSP
-module nspAssociations './modules/nspAssociation.bicep' = if (!empty(nspId)) {
+// AI Foundry excluded: content processing runs from GitHub Actions runners with dynamic IPs
+module nspAssociations './modules/nspAssociation.bicep' = if (!empty(nspId) && !empty(nspProfileId)) {
   scope: sharedResourceGroup
   name: 'nspAssoc-${environmentName}'
   params: {
@@ -222,7 +223,6 @@ module nspAssociations './modules/nspAssociation.bicep' = if (!empty(nspId)) {
     resourceIds: [
       monitoring.outputs.appInsightsId
       monitoring.outputs.logAnalyticsWorkspaceId
-      openai.outputs.openAiId
     ]
   }
 }
@@ -295,7 +295,7 @@ module postgres './modules/postgres.bicep' = {
     skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_B2s'
     skuTier: 'Burstable'
     backupRetentionDays: environmentName == 'staging' ? 7 : 14
-    adminIpAddress: adminIpAddress
+    adminIpAddresses: !empty(adminIpAddresses) ? split(adminIpAddresses, ',') : []
   }
 }
 

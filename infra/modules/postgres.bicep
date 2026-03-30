@@ -39,8 +39,8 @@ param backupRetentionDays int = 14
 @description('Enable geo-redundant backup for disaster recovery')
 param geoRedundantBackup bool = false
 
-@description('Admin IP address for firewall rule (optional — leave empty to keep public access disabled)')
-param adminIpAddress string = ''
+@description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
+param adminIpAddresses string[] = []
 
 // PostgreSQL Flexible Server
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
@@ -80,21 +80,21 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      // Public access enabled with per-IP firewall rule for admin; app uses private endpoint
-      publicNetworkAccess: !empty(adminIpAddress) ? 'Enabled' : 'Disabled'
+      // Public access enabled with per-IP firewall rules for admin; app uses private endpoint
+      publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     }
   }
 }
 
-// Firewall rule: allow admin IP only (PostgreSQL does not support NSP)
-resource adminFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(adminIpAddress)) {
+// Firewall rules: allow admin IPs (PostgreSQL does not support NSP)
+resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = [for (ip, i) in adminIpAddresses: {
   parent: postgresServer
-  name: 'allow-admin-ip'
+  name: 'allow-admin-ip-${i}'
   properties: {
-    startIpAddress: adminIpAddress
-    endIpAddress: adminIpAddress
+    startIpAddress: ip
+    endIpAddress: ip
   }
-}
+}]
 
 // Database
 resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-01' = {

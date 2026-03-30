@@ -11,8 +11,8 @@ param nspName string
 @description('NSP profile name')
 param profileName string = 'profile-techhub'
 
-@description('Admin IP address (CIDR notation, e.g. "1.2.3.4/32")')
-param adminIpCidr string
+@description('Admin IP addresses in CIDR notation (e.g. ["1.2.3.4/32", "5.6.7.8/32"])')
+param adminIpCidrs string[]
 
 @description('Subscription ID to allow inbound access from (defaults to current subscription)')
 param allowedSubscriptionId string = subscription().subscriptionId
@@ -33,16 +33,14 @@ resource profile 'Microsoft.Network/networkSecurityPerimeters/profiles@2023-08-0
   location: location
 }
 
-// Inbound rule: allow admin IP
-resource adminIpRule 'Microsoft.Network/networkSecurityPerimeters/profiles/accessRules@2023-08-01-preview' = {
+// Inbound rule: allow admin IPs
+resource adminIpRule 'Microsoft.Network/networkSecurityPerimeters/profiles/accessRules@2023-08-01-preview' = if (!empty(adminIpCidrs)) {
   parent: profile
   name: 'allow-admin-ip'
   location: location
   properties: {
     direction: 'Inbound'
-    addressPrefixes: [
-      adminIpCidr
-    ]
+    addressPrefixes: adminIpCidrs
   }
 }
 

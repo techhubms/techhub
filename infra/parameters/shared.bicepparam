@@ -9,8 +9,9 @@ param keyVaultName = 'kv-techhub-shared'
 // Override in environment-specific parameter files or local overrides.
 param keyVaultAdminObjectIds = []
 param hubVnetName = 'vnet-techhub-hub'
-// Admin IP for NSP inbound rule and PostgreSQL firewall.
-param adminIpAddress = '86.89.119.3'
+// Comma-separated admin IP addresses for NSP inbound rule and PostgreSQL firewall.
+// Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
+param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
 // ACME DNS zone for automated wildcard certificate renewal via certbot-dns-azure.
 // External DNS (GoDaddy) delegates _acme-challenge CNAMEs to this zone.
 param acmeDnsZoneName = 'acme.hub.ms'
