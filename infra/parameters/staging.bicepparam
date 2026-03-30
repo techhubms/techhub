@@ -20,7 +20,7 @@ param privateEndpointsSubnetPrefix = '10.1.2.0/24'
 param postgresServerName = 'psql-techhub-staging'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
-// Hub VNet (for peering — VPN access to spoke resources)
+// Hub VNet (for peering — private endpoint resolution across environments)
 param hubVnetId = '/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-shared/providers/Microsoft.Network/virtualNetworks/vnet-techhub-hub'
 param hubVnetName = 'vnet-techhub-hub'
 // Custom domains — wildcard CNAME in GoDaddy routes all *.hub.ms to the Container App.
@@ -32,4 +32,9 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-staging'
 param openAiModelCapacity = 100
+// Admin IP for PostgreSQL firewall (same as shared NSP admin IP)
+param adminIpAddress = readEnvironmentVariable('ADMIN_IP_ADDRESS', '')
+// NSP from shared deployment (for associating environment resources)
+param nspId = readEnvironmentVariable('NSP_ID', '')
+param nspProfileId = readEnvironmentVariable('NSP_PROFILE_ID', '')
 

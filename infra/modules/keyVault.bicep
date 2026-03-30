@@ -20,10 +20,12 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
     enableSoftDelete: true
     softDeleteRetentionInDays: 90
     enablePurgeProtection: true
-    publicNetworkAccess: 'Disabled'
+    // Public access controlled by Network Security Perimeter (NSP).
+    // NSP enforces admin IP allowlist; app traffic uses existing private endpoint.
+    publicNetworkAccess: 'Enabled'
     networkAcls: {
-      defaultAction: 'Deny'
-      bypass: 'None'
+      defaultAction: 'Allow'
+      bypass: 'AzureServices'
     }
   }
 }
