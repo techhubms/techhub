@@ -1,14 +1,15 @@
+using System.Net;
 using System.Text.Json;
 using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
 namespace TechHub.Api.Endpoints;
 
 /// <summary>
-/// API endpoints for custom pages
+/// API endpoints for custom pages.
+/// Custom page JSON is stored in the custom_page_data database table and managed
+/// via the admin UI at /admin/custom-pages.
 /// </summary>
 public static class CustomPagesEndpoints
 {
@@ -17,50 +18,12 @@ public static class CustomPagesEndpoints
         PropertyNameCaseInsensitive = true
     };
 
-    /// <summary>
-    /// Find solution root by walking up directory tree looking for TechHub.slnx
-    /// </summary>
-    private static string FindSolutionRoot(string startPath)
-    {
-        var directory = new DirectoryInfo(startPath);
-        while (directory != null)
-        {
-            if (File.Exists(Path.Combine(directory.FullName, "TechHub.slnx")))
-            {
-                return directory.FullName;
-            }
-
-            directory = directory.Parent;
-        }
-
-        // Fallback to start path if solution file not found
-        return startPath;
-    }
-
-    /// <summary>
-    /// Resolves the collections path from configuration, handling relative paths
-    /// </summary>
-    private static string ResolveCollectionsPath(string collectionsPath, string contentRootPath)
-    {
-        if (Path.IsPathRooted(collectionsPath))
-        {
-            return collectionsPath;
-        }
-
-        var solutionRoot = FindSolutionRoot(contentRootPath);
-        return Path.Combine(solutionRoot, collectionsPath);
-    }
-
-    /// <summary>
-    /// Maps all custom pages endpoints to the application
-    /// </summary>
     public static IEndpointRouteBuilder MapCustomPagesEndpoints(this IEndpointRouteBuilder endpoints)
     {
         var group = endpoints.MapGroup("/api/custom-pages")
             .WithTags("Custom Pages")
             .WithDescription("Endpoints for custom standalone pages");
 
-        // Get DX Space page data (specific endpoint with structured data)
         group.MapGet("/dx-space", GetDXSpaceData)
             .WithName("GetDXSpaceData")
             .WithSummary("Get DX Space page data")
@@ -68,7 +31,6 @@ public static class CustomPagesEndpoints
             .Produces<DXSpacePageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get Handbook page data
         group.MapGet("/handbook", GetHandbookData)
             .WithName("GetHandbookData")
             .WithSummary("Get GitHub Copilot Handbook page data")
@@ -76,7 +38,6 @@ public static class CustomPagesEndpoints
             .Produces<HandbookPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get Levels of Enlightenment page data
         group.MapGet("/levels", GetLevelsData)
             .WithName("GetLevelsData")
             .WithSummary("Get Levels of Enlightenment page data")
@@ -84,7 +45,6 @@ public static class CustomPagesEndpoints
             .Produces<LevelsPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get Features page data
         group.MapGet("/features", GetFeaturesData)
             .WithName("GetFeaturesData")
             .WithSummary("Get GitHub Copilot Features page data")
@@ -92,7 +52,6 @@ public static class CustomPagesEndpoints
             .Produces<FeaturesPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get GenAI Basics page data
         group.MapGet("/genai-basics", GetGenAIBasicsData)
             .WithName("GetGenAIBasicsData")
             .WithSummary("Get GenAI Basics page data")
@@ -100,7 +59,6 @@ public static class CustomPagesEndpoints
             .Produces<GenAIPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get GenAI Advanced page data
         group.MapGet("/genai-advanced", GetGenAIAdvancedData)
             .WithName("GetGenAIAdvancedData")
             .WithSummary("Get GenAI Advanced page data")
@@ -108,7 +66,6 @@ public static class CustomPagesEndpoints
             .Produces<GenAIPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get GenAI Applied page data
         group.MapGet("/genai-applied", GetGenAIAppliedData)
             .WithName("GetGenAIAppliedData")
             .WithSummary("Get GenAI Applied page data")
@@ -116,7 +73,6 @@ public static class CustomPagesEndpoints
             .Produces<GenAIPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get SDLC page data
         group.MapGet("/sdlc", GetSDLCData)
             .WithName("GetSDLCData")
             .WithSummary("Get AI SDLC page data")
@@ -124,7 +80,6 @@ public static class CustomPagesEndpoints
             .Produces<SDLCPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get Tool Tips page data
         group.MapGet("/tool-tips", GetToolTipsData)
             .WithName("GetToolTipsData")
             .WithSummary("Get GitHub Copilot Tool Tips page data")
@@ -132,7 +87,6 @@ public static class CustomPagesEndpoints
             .Produces<ToolTipsPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get Getting Started page data
         group.MapGet("/getting-started", GetGettingStartedData)
             .WithName("GetGettingStartedData")
             .WithSummary("Get GitHub Copilot Getting Started page data")
@@ -140,78 +94,55 @@ public static class CustomPagesEndpoints
             .Produces<GettingStartedPageData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
-        // Get Hero Banner data
         group.MapGet("/hero-banner", GetHeroBannerData)
             .WithName("GetHeroBannerData")
             .WithSummary("Get hero banner data")
-            .WithDescription("Returns structured data for the hero banner shown above section content. All cards are returned regardless of date; clients filter by startDate/endDate.")
+            .WithDescription("Returns all hero banner cards regardless of date; clients filter by startDate/endDate.")
             .Produces<HeroBannerData>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
         return endpoints;
     }
 
-    /// <summary>
-    /// Generic helper to load and deserialize custom page JSON data
-    /// </summary>
+    // ── Generic helpers ──────────────────────────────────────────────────────
+
     private static async Task<Results<Ok<T>, NotFound>> GetPageData<T>(
-        string jsonFileName,
-        IWebHostEnvironment env,
-        IOptions<AppSettings> settings,
-        CancellationToken cancellationToken)
+        string key,
+        ICustomPageDataRepository repo,
+        CancellationToken ct)
     {
-        var collectionsPath = ResolveCollectionsPath(settings.Value.Content.CollectionsPath, env.ContentRootPath);
-        var jsonPath = Path.Combine(collectionsPath, "_custom", jsonFileName);
-
-        if (!File.Exists(jsonPath))
+        var entry = await repo.GetByKeyAsync(key, ct);
+        if (entry is null)
         {
             return TypedResults.NotFound();
         }
 
-        var jsonContent = await File.ReadAllTextAsync(jsonPath, cancellationToken);
-        var data = JsonSerializer.Deserialize<T>(jsonContent, _jsonOptions);
-
-        if (data == null)
-        {
-            return TypedResults.NotFound();
-        }
-
-        return TypedResults.Ok(data);
+        var data = JsonSerializer.Deserialize<T>(entry.JsonData, _jsonOptions);
+        return data is null ? TypedResults.NotFound() : TypedResults.Ok(data);
     }
 
-    /// <summary>
-    /// Special handler for GenAI pages that process markdown content.
-    /// Replaces {{mermaid:id}} placeholders with actual diagram code and renders markdown to HTML.
-    /// </summary>
     private static async Task<Results<Ok<T>, NotFound>> GetGenAIPageData<T>(
-        string jsonFileName,
-        IWebHostEnvironment env,
-        IOptions<AppSettings> settings,
+        string key,
+        ICustomPageDataRepository repo,
         IMarkdownService markdownService,
-        CancellationToken cancellationToken) where T : GenAIPageData
+        CancellationToken ct) where T : GenAIPageData
     {
-        var collectionsPath = ResolveCollectionsPath(settings.Value.Content.CollectionsPath, env.ContentRootPath);
-        var jsonPath = Path.Combine(collectionsPath, "_custom", jsonFileName);
-
-        if (!File.Exists(jsonPath))
+        var entry = await repo.GetByKeyAsync(key, ct);
+        if (entry is null)
         {
             return TypedResults.NotFound();
         }
 
-        var jsonContent = await File.ReadAllTextAsync(jsonPath, cancellationToken);
-        var data = JsonSerializer.Deserialize<T>(jsonContent, _jsonOptions);
-
-        if (data == null)
+        var data = JsonSerializer.Deserialize<T>(entry.JsonData, _jsonOptions);
+        if (data is null)
         {
             return TypedResults.NotFound();
         }
 
-        // Process each section: replace mermaid placeholders and render markdown
         var processedSections = data.Sections.Select(section =>
         {
             var content = section.Content;
 
-            // Replace {{mermaid:id}} placeholders with diagram code + unique caption marker
             if (section.Mermaid != null)
             {
                 foreach (var diagram in section.Mermaid)
@@ -223,18 +154,15 @@ public static class CustomPagesEndpoints
                 }
             }
 
-            // Render markdown to HTML
             var htmlContent = markdownService.RenderToHtml(content);
 
-            // Replace caption markers with actual caption paragraphs (only if title exists)
             if (section.Mermaid != null)
             {
                 foreach (var diagram in section.Mermaid)
                 {
                     var captionMarker = $"<p>{{{{CAPTION:{diagram.Id}}}}}</p>";
-                    // Only add caption if title is provided
                     var caption = !string.IsNullOrWhiteSpace(diagram.Title)
-                        ? $"<p class=\"mermaid-caption\">{System.Net.WebUtility.HtmlEncode(diagram.Title)}</p>"
+                        ? $"<p class=\"mermaid-caption\">{WebUtility.HtmlEncode(diagram.Title)}</p>"
                         : string.Empty;
                     htmlContent = htmlContent.Replace(captionMarker, caption, StringComparison.Ordinal);
                 }
@@ -243,99 +171,76 @@ public static class CustomPagesEndpoints
             return section with { Content = htmlContent };
         }).ToList();
 
-        // Serialize and deserialize to create a new instance with updated sections
-        // This approach works because T is a record type implementing IGenAIPageData
-        var json = JsonSerializer.Serialize(new
-        {
-            data.Title,
-            data.Description,
-            Sections = processedSections
-        }, _jsonOptions);
-
+        var json = JsonSerializer.Serialize(new { data.Title, data.Description, Sections = processedSections }, _jsonOptions);
         var processedData = JsonSerializer.Deserialize<T>(json, _jsonOptions)
             ?? throw new InvalidOperationException($"Failed to deserialize processed data for type {typeof(T).Name}");
 
         return TypedResults.Ok(processedData);
     }
 
+    // ── Endpoint handlers ────────────────────────────────────────────────────
+
     private static Task<Results<Ok<DXSpacePageData>, NotFound>> GetDXSpaceData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<DXSpacePageData>("dx-space.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<DXSpacePageData>("dx-space", repo, ct);
 
     private static Task<Results<Ok<HandbookPageData>, NotFound>> GetHandbookData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<HandbookPageData>("handbook.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<HandbookPageData>("handbook", repo, ct);
 
     private static Task<Results<Ok<LevelsPageData>, NotFound>> GetLevelsData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<LevelsPageData>("levels.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<LevelsPageData>("levels", repo, ct);
 
     private static Task<Results<Ok<FeaturesPageData>, NotFound>> GetFeaturesData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<FeaturesPageData>("features.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<FeaturesPageData>("features", repo, ct);
 
     private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIBasicsData(
-        IWebHostEnvironment env,
-        IOptions<AppSettings> settings,
-        IMarkdownService markdownService,
-        CancellationToken cancellationToken)
-        => GetGenAIPageData<GenAIPageData>("genai-basics.json", env, settings, markdownService, cancellationToken);
+        ICustomPageDataRepository repo, IMarkdownService markdownService, CancellationToken ct)
+        => GetGenAIPageData<GenAIPageData>("genai-basics", repo, markdownService, ct);
 
     private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIAdvancedData(
-        IWebHostEnvironment env,
-        IOptions<AppSettings> settings,
-        IMarkdownService markdownService,
-        CancellationToken cancellationToken)
-        => GetGenAIPageData<GenAIPageData>("genai-advanced.json", env, settings, markdownService, cancellationToken);
+        ICustomPageDataRepository repo, IMarkdownService markdownService, CancellationToken ct)
+        => GetGenAIPageData<GenAIPageData>("genai-advanced", repo, markdownService, ct);
 
     private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIAppliedData(
-        IWebHostEnvironment env,
-        IOptions<AppSettings> settings,
-        IMarkdownService markdownService,
-        CancellationToken cancellationToken)
-        => GetGenAIPageData<GenAIPageData>("genai-applied.json", env, settings, markdownService, cancellationToken);
+        ICustomPageDataRepository repo, IMarkdownService markdownService, CancellationToken ct)
+        => GetGenAIPageData<GenAIPageData>("genai-applied", repo, markdownService, ct);
 
     private static Task<Results<Ok<SDLCPageData>, NotFound>> GetSDLCData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<SDLCPageData>("sdlc.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<SDLCPageData>("sdlc", repo, ct);
 
     private static Task<Results<Ok<ToolTipsPageData>, NotFound>> GetToolTipsData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<ToolTipsPageData>("tool-tips.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<ToolTipsPageData>("tool-tips", repo, ct);
 
     private static Task<Results<Ok<HeroBannerData>, NotFound>> GetHeroBannerData(
-        IWebHostEnvironment env, IOptions<AppSettings> settings, CancellationToken cancellationToken)
-        => GetPageData<HeroBannerData>("hero-banner.json", env, settings, cancellationToken);
+        ICustomPageDataRepository repo, CancellationToken ct)
+        => GetPageData<HeroBannerData>("hero-banner", repo, ct);
 
     private static async Task<Results<Ok<GettingStartedPageData>, NotFound>> GetGettingStartedData(
-        IWebHostEnvironment env,
-        IOptions<AppSettings> settings,
+        ICustomPageDataRepository repo,
         IMarkdownService markdownService,
-        CancellationToken cancellationToken)
+        CancellationToken ct)
     {
-        var collectionsPath = ResolveCollectionsPath(settings.Value.Content.CollectionsPath, env.ContentRootPath);
-        var jsonPath = Path.Combine(collectionsPath, "_custom", "getting-started.json");
-
-        if (!File.Exists(jsonPath))
+        var entry = await repo.GetByKeyAsync("getting-started", ct);
+        if (entry is null)
         {
             return TypedResults.NotFound();
         }
 
-        var jsonContent = await File.ReadAllTextAsync(jsonPath, cancellationToken);
-        var data = JsonSerializer.Deserialize<GettingStartedPageData>(jsonContent, _jsonOptions);
-
-        if (data == null)
+        var data = JsonSerializer.Deserialize<GettingStartedPageData>(entry.JsonData, _jsonOptions);
+        if (data is null)
         {
             return TypedResults.NotFound();
         }
 
-        var processedSections = data.Sections.Select(section =>
-        {
-            var htmlContent = markdownService.RenderToHtml(section.Content);
-            return section with { Content = htmlContent };
-        }).ToList();
+        var processedSections = data.Sections
+            .Select(s => s with { Content = markdownService.RenderToHtml(s.Content) })
+            .ToList();
 
-        var processedData = data with { Sections = processedSections };
-        return TypedResults.Ok(processedData);
+        return TypedResults.Ok(data with { Sections = processedSections });
     }
 }

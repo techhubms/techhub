@@ -1,0 +1,109 @@
+@using Microsoft.AspNetCore.Components
+@implements IDisposable
+
+@if (IsOpen)
+{
+    <div class="json-editor-backdrop" @onclick="HandleBackdropClickAsync" role="dialog" aria-modal="true" aria-labelledby="json-editor-title">
+        <div class="json-editor-modal" @onclick:stopPropagation>
+            <div class="json-editor-header">
+                <h2 id="json-editor-title" class="json-editor-title">@Title</h2>
+                <button class="json-editor-close" @onclick="HandleCloseAsync" aria-label="Close editor">×</button>
+            </div>
+
+            @if (_error != null)
+            {
+                <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+            }
+
+            <div class="json-editor-body">
+                <textarea class="json-editor-textarea"
+                          @bind="_json"
+                          spellcheck="false"
+                          aria-label="JSON content"
+                          rows="30"></textarea>
+            </div>
+
+            <div class="json-editor-footer">
+                <button class="btn" @onclick="SaveAsync" disabled="@_saving">
+                    @(_saving ? "Saving…" : "Save")
+                </button>
+                <button class="btn-secondary" @onclick="HandleCloseAsync">Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    /// <summary>Dialog title shown in the header.</summary>
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+
+    /// <summary>The JSON string to edit. Set before opening the modal.</summary>
+    [Parameter] public string Json { get; set; } = string.Empty;
+
+    /// <summary>Whether the modal is currently open.</summary>
+    [Parameter] public bool IsOpen { get; set; }
+
+    /// <summary>Fires when the user clicks Save with the edited JSON string.</summary>
+    [Parameter] public EventCallback<string> OnSave { get; set; }
+
+    /// <summary>Fires when the modal is closed (Save or Cancel).</summary>
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private string _json = string.Empty;
+    private bool _saving;
+    private string? _error;
+
+    protected override void OnParametersSet()
+    {
+        // Sync the textarea content whenever the caller updates Json or reopens the modal
+        if (IsOpen)
+        {
+            _json = Json;
+            _error = null;
+        }
+    }
+
+    private async Task SaveAsync()
+    {
+        _error = null;
+
+        // Validate JSON before saving
+        try
+        {
+            System.Text.Json.JsonDocument.Parse(_json);
+        }
+        catch (System.Text.Json.JsonException ex)
+        {
+            _error = $"Invalid JSON: {ex.Message}";
+            return;
+        }
+
+        _saving = true;
+        try
+        {
+            await OnSave.InvokeAsync(_json);
+            await OnClose.InvokeAsync();
+        }
+        catch (Exception ex)
+        {
+            _error = $"Save failed: {ex.Message}";
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task HandleCloseAsync()
+    {
+        _error = null;
+        await OnClose.InvokeAsync();
+    }
+
+    private async Task HandleBackdropClickAsync()
+    {
+        await HandleCloseAsync();
+    }
+
+    public void Dispose() { }
+}

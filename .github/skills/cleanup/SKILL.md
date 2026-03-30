@@ -152,17 +152,7 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 
 ### Step 6: Documentation Review
 
-**Step 6a: Generate Documentation Index**
-
-**Run**: `../../../scripts/Generate-DocumentationIndex.ps1`
-
-This creates [docs/documentation-index.md](../../../docs/documentation-index.md) containing:
-
-- All documentation files (AGENTS.md, README.md, docs/*.md)
-- All H1/H2/H3 headers from each file
-- Relative links to each file
-
-**Step 6b: Run Documentation Quality Checks**
+**Step 6a: Run Documentation Quality Checks**
 
 **Run**: [verify-documentation.ps1](scripts/verify-documentation.ps1)
 
@@ -172,12 +162,11 @@ This performs quality checks:
 - **Broken Links**: Detects broken internal markdown links
 - **Missing AGENTS.md**: Checks if code directories lack AGENTS.md files
 
-**Step 6c: Analyze Documentation**
+**Step 6b: Analyze Documentation**
 
-**No script** - YOU analyze using both outputs.  
-**Read**: [docs/documentation-index.md](../../../docs/documentation-index.md)
+**No script** - YOU analyze using verification results.
 
-Use the index + verification results to:
+Use the verification results to:
 
 - Verify all features are documented (compare with Step 5a)
 - Check documentation is in the right location

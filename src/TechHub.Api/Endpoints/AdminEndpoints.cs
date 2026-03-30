@@ -61,6 +61,44 @@ public static class AdminEndpoints
         group.MapGet("/statistics", GetStatisticsAsync)
             .WithName("GetDatabaseStatistics")
             .WithSummary("Get database statistics for the admin dashboard");
+
+        // ── Processed URLs ───────────────────────────────────────────────────
+
+        group.MapGet("/processed-urls", GetProcessedUrlsAsync)
+            .WithName("GetProcessedUrls")
+            .WithSummary("Get a paginated list of processed URLs with optional filters");
+
+        group.MapDelete("/processed-urls", DeleteProcessedUrlAsync)
+            .WithName("DeleteProcessedUrl")
+            .WithSummary("Delete a specific processed URL so it can be retried");
+
+        group.MapDelete("/processed-urls/failed", DeleteAllFailedUrlsAsync)
+            .WithName("DeleteAllFailedUrls")
+            .WithSummary("Delete all failed processed URL records");
+
+        // ── Custom page data ─────────────────────────────────────────────────
+
+        group.MapGet("/custom-pages", GetCustomPagesAsync)
+            .WithName("GetCustomPages")
+            .WithSummary("List all custom page entries (key, description, last updated)");
+
+        group.MapGet("/custom-pages/{key}", GetCustomPageByKeyAsync)
+            .WithName("GetCustomPageByKey")
+            .WithSummary("Get the raw JSON for a custom page by key");
+
+        group.MapPut("/custom-pages/{key}", UpdateCustomPageAsync)
+            .WithName("UpdateCustomPage")
+            .WithSummary("Update the raw JSON for a custom page");
+
+        // ── Content item editing ─────────────────────────────────────────────
+
+        group.MapGet("/content-items/ai-metadata", GetContentItemAiMetadataAsync)
+            .WithName("GetContentItemAiMetadata")
+            .WithSummary("Get the ai_metadata JSON for a content item by external URL");
+
+        group.MapPut("/content-items/ai-metadata", UpdateContentItemAiMetadataAsync)
+            .WithName("UpdateContentItemAiMetadata")
+            .WithSummary("Update the ai_metadata JSON for a content item by external URL");
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
@@ -207,6 +245,165 @@ public static class AdminEndpoints
         var stats = await statsService.GetStatisticsAsync(ct);
         return Results.Ok(stats);
     }
+
+    // ── Processed URL handlers ───────────────────────────────────────────────
+
+    private static async Task<IResult> GetProcessedUrlsAsync(
+        IProcessedUrlRepository repo,
+        CancellationToken ct,
+        int page = 1,
+        int pageSize = 100,
+        string? status = null,
+        string? search = null,
+        string? feedName = null,
+        string? collectionName = null)
+    {
+        page = Math.Max(1, page);
+        pageSize = Math.Clamp(pageSize, 1, 500);
+        status = status?.Trim().Sanitize();
+        search = search?.Trim().Sanitize();
+        feedName = feedName?.Trim().Sanitize();
+        collectionName = collectionName?.Trim().Sanitize();
+
+        // Validate status filter
+        if (!string.IsNullOrEmpty(status) && status is not "succeeded" and not "skipped" and not "failed")
+        {
+            return Results.BadRequest("Status must be 'succeeded', 'skipped', or 'failed'.");
+        }
+
+        var offset = (page - 1) * pageSize;
+        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, ct);
+        return Results.Ok(result);
+    }
+
+    private static async Task<IResult> DeleteProcessedUrlAsync(
+        IProcessedUrlRepository repo,
+        CancellationToken ct,
+        string? url = null)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            return Results.BadRequest("The 'url' query parameter is required.");
+        }
+
+        var deleted = await repo.DeleteByUrlAsync(url, ct);
+        return deleted ? Results.NoContent() : Results.NotFound();
+    }
+
+    private static async Task<IResult> DeleteAllFailedUrlsAsync(
+        IProcessedUrlRepository repo,
+        CancellationToken ct)
+    {
+        var count = await repo.DeleteAllFailedAsync(ct);
+        return Results.Ok(new { deleted = count });
+    }
+
+    // ── Custom page data handlers ────────────────────────────────────────────
+
+    private static async Task<IResult> GetCustomPagesAsync(
+        ICustomPageDataRepository repo,
+        CancellationToken ct)
+    {
+        var pages = await repo.GetAllAsync(ct);
+        return Results.Ok(pages.Select(p => new
+        {
+            p.Key,
+            p.Description,
+            p.UpdatedAt
+        }));
+    }
+
+    private static async Task<IResult> GetCustomPageByKeyAsync(
+        string key,
+        ICustomPageDataRepository repo,
+        CancellationToken ct)
+    {
+        key = key.Trim().Sanitize();
+        var entry = await repo.GetByKeyAsync(key, ct);
+        return entry is null ? Results.NotFound() : Results.Ok(entry);
+    }
+
+    private static async Task<IResult> UpdateCustomPageAsync(
+        string key,
+        CustomPageUpdateRequest request,
+        ICustomPageDataRepository repo,
+        CancellationToken ct)
+    {
+        key = key.Trim().Sanitize();
+
+        if (string.IsNullOrWhiteSpace(request.JsonData))
+        {
+            return Results.BadRequest("JsonData is required.");
+        }
+
+        // Validate that it is well-formed JSON
+        try
+        {
+            System.Text.Json.JsonDocument.Parse(request.JsonData);
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            return Results.BadRequest("JsonData must be valid JSON.");
+        }
+
+        var existing = await repo.GetByKeyAsync(key, ct);
+        if (existing is null)
+        {
+            return Results.NotFound();
+        }
+
+        await repo.UpsertAsync(key, existing.Description, request.JsonData, ct);
+        var updated = await repo.GetByKeyAsync(key, ct);
+        return Results.Ok(updated);
+    }
+
+    // ── Content item ai_metadata handlers ────────────────────────────────────
+
+    private static async Task<IResult> GetContentItemAiMetadataAsync(
+        IContentRepository contentRepo,
+        CancellationToken ct,
+        string? url = null)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            return Results.BadRequest("The 'url' query parameter is required.");
+        }
+
+        url = url.Trim().Sanitize();
+        var item = await contentRepo.GetAiMetadataByUrlAsync(url, ct);
+        return item is null ? Results.NotFound() : Results.Ok(item);
+    }
+
+    private static async Task<IResult> UpdateContentItemAiMetadataAsync(
+        ContentItemMetadataRequest request,
+        IContentRepository contentRepo,
+        CancellationToken ct,
+        string? url = null)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            return Results.BadRequest("The 'url' query parameter is required.");
+        }
+
+        url = url.Trim().Sanitize();
+
+        if (string.IsNullOrWhiteSpace(request.AiMetadata))
+        {
+            return Results.BadRequest("AiMetadata is required.");
+        }
+
+        try
+        {
+            System.Text.Json.JsonDocument.Parse(request.AiMetadata);
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            return Results.BadRequest("AiMetadata must be valid JSON.");
+        }
+
+        var updated = await contentRepo.UpdateAiMetadataAsync(url, request.AiMetadata, ct);
+        return updated ? Results.NoContent() : Results.NotFound();
+    }
 }
 
 /// <summary>DTO for creating/updating RSS feed configurations.</summary>
@@ -216,4 +413,16 @@ public sealed class FeedConfigRequest
     public string? Url { get; init; }
     public string? OutputDir { get; init; }
     public bool Enabled { get; init; } = true;
+}
+
+/// <summary>DTO for updating custom page raw JSON.</summary>
+public sealed class CustomPageUpdateRequest
+{
+    public string? JsonData { get; init; }
+}
+
+/// <summary>DTO for updating a content item's ai_metadata JSON.</summary>
+public sealed class ContentItemMetadataRequest
+{
+    public string? AiMetadata { get; init; }
 }

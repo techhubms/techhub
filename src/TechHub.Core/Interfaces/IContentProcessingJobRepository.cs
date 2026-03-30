@@ -19,6 +19,9 @@ public interface IContentProcessingJobRepository
     /// <summary>Appends a log line to a running job (best-effort, no throw on failure).</summary>
     Task AppendLogAsync(long jobId, string line, CancellationToken ct = default);
 
+    /// <summary>Replaces the full log output for a running job (best-effort, for live progress).</summary>
+    Task UpdateLogAsync(long jobId, string logOutput, CancellationToken ct = default);
+
     /// <summary>Gets a specific job by ID, or null if not found.</summary>
     Task<ContentProcessingJob?> GetByIdAsync(long jobId, CancellationToken ct = default);
 

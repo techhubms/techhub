@@ -1,13 +1,13 @@
 @page "/admin"
 @layout AdminLayout
 @rendermode InteractiveServer
-@attribute [Microsoft.AspNetCore.Authorization.Authorize]
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
 @implements IDisposable
 @inject ITechHubApiClient Api
 @inject NavigationManager Navigation
 @inject PersistentComponentState ApplicationState
+@inject ILogger<AdminDashboard> Logger
 
 <PageTitle>Admin Dashboard — TechHub</PageTitle>
 
@@ -18,7 +18,7 @@
             <p class="admin-page-subtitle">Manage RSS feed ingestion and AI categorization</p>
         </div>
         <div class="admin-actions">
-            <button class="btn-primary" @onclick="TriggerRunAsync" disabled="@_triggering">
+            <button class="btn" @onclick="TriggerRunAsync" disabled="@_triggering">
                 @if (_triggering)
                 {
                     <span>Triggering…</span>
@@ -123,6 +123,7 @@
     private IReadOnlyList<ContentProcessingJob>? _jobs;
     private long? _expandedJobId;
     private PersistingComponentStateSubscription? _persistSubscription;
+    private CancellationTokenSource? _pollCts;
 
     protected override async Task OnInitializedAsync()
     {
@@ -132,10 +133,12 @@
         {
             _jobs = restored;
             _loading = false;
+            StartPollingIfRunning();
             return;
         }
 
         await LoadJobsAsync();
+        StartPollingIfRunning();
     }
 
     private Task PersistState()
@@ -150,6 +153,7 @@
     public void Dispose()
     {
         _persistSubscription?.Dispose();
+        StopPolling();
     }
 
     private async Task LoadJobsAsync()
@@ -168,7 +172,7 @@
         catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
         {
             // Token cache expired (e.g. after server restart) — redirect to re-authenticate
-            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn", forceLoad: true);
+            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn?redirectUri=%2Fadmin", forceLoad: true);
             return;
         }
         catch (HttpRequestException ex)
@@ -189,8 +193,13 @@
         try
         {
             await Api.TriggerContentProcessingAsync();
-            _triggerMessage = "Processing run triggered successfully. Refresh in a moment to see the new job.";
             _triggerError = false;
+
+            // Give the API a moment to create the job, then reload and start live polling
+            await Task.Delay(500);
+            await LoadJobsAsync();
+            AutoExpandRunningJob();
+            StartPollingIfRunning();
         }
         catch (OperationCanceledException)
         {
@@ -236,4 +245,73 @@
         ContentProcessingJobStatus.Failed => "❌",
         _ => "❓"
     };
+
+    private bool HasRunningJob =>
+        _jobs?.Any(j => j.Status == ContentProcessingJobStatus.Running) == true;
+
+    private void AutoExpandRunningJob()
+    {
+        var running = _jobs?.FirstOrDefault(j => j.Status == ContentProcessingJobStatus.Running);
+        if (running != null)
+        {
+            _expandedJobId = running.Id;
+        }
+    }
+
+    private void StartPollingIfRunning()
+    {
+        if (!HasRunningJob || _pollCts != null)
+        {
+            return;
+        }
+
+        _pollCts = new CancellationTokenSource();
+        _ = PollLoopAsync(_pollCts.Token);
+    }
+
+    private void StopPolling()
+    {
+        _pollCts?.Cancel();
+        _pollCts?.Dispose();
+        _pollCts = null;
+    }
+
+    private async Task PollLoopAsync(CancellationToken ct)
+    {
+        try
+        {
+            using var timer = new PeriodicTimer(TimeSpan.FromSeconds(3));
+
+            while (await timer.WaitForNextTickAsync(ct))
+            {
+                try
+                {
+                    _jobs = await Api.GetProcessingJobsAsync(cancellationToken: ct);
+                    AutoExpandRunningJob();
+                    await InvokeAsync(StateHasChanged);
+
+                    if (!HasRunningJob)
+                    {
+                        break;
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    Logger.LogDebug(ex, "Polling for job updates failed, will retry");
+                }
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            // Expected on dispose
+        }
+        finally
+        {
+            StopPolling();
+        }
+    }
 }

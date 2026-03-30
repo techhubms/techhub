@@ -104,6 +104,9 @@ builder.Services.AddTransient<IMigrationRunner, MigrationRunner>();
 // RSS feed config repository (database-backed)
 builder.Services.AddScoped<IRssFeedConfigRepository, RssFeedConfigRepository>();
 
+// Custom page data repository (database-backed)
+builder.Services.AddScoped<ICustomPageDataRepository, CustomPageDataRepository>();
+
 // ─── Content Processing Pipeline ─────────────────────────────────────────────
 // Configure content processing options
 builder.Services.Configure<ContentProcessorOptions>(
@@ -163,6 +166,14 @@ builder.Services.AddScoped<ContentProcessingService>();
 // Background service — singleton, schedules processing runs
 builder.Services.AddSingleton<ContentProcessingBackgroundService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentProcessingBackgroundService>());
+
+// ─── Roundup Generator Pipeline ──────────────────────────────────────────────
+builder.Services.Configure<RoundupGeneratorOptions>(
+    builder.Configuration.GetSection(RoundupGeneratorOptions.SectionName));
+builder.Services.AddScoped<ISectionRoundupRepository, SectionRoundupRepository>();
+builder.Services.AddScoped<IRoundupGeneratorService, RoundupGeneratorService>();
+builder.Services.AddSingleton<RoundupGeneratorBackgroundService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<RoundupGeneratorBackgroundService>());
 
 // Register startup background service that runs migrations and content sync
 // after Kestrel starts, so health endpoints are reachable during startup

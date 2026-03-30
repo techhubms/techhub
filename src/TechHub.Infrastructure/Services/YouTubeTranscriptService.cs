@@ -2,11 +2,10 @@ using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using YoutubeExplode;
 using YoutubeExplode.Exceptions;
 using YoutubeExplode.Videos.ClosedCaptions;
-
-using TechHub.Core.Interfaces;
 
 namespace TechHub.Infrastructure.Services;
 

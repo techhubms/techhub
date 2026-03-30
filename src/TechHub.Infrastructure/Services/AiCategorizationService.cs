@@ -47,9 +47,10 @@ public sealed class AiCategorizationService : IAiCategorizationService
 
     /// <summary>
     /// Calls Azure OpenAI to categorize <paramref name="item"/>.
-    /// Returns <see langword="null"/> when the AI determines the content should be skipped.
+    /// Returns a <see cref="CategorizationResult"/> containing the processed item (or <c>null</c> if excluded)
+    /// and the AI's explanation for why the content was included or excluded.
     /// </summary>
-    public async Task<ProcessedContentItem?> CategorizeAsync(RawFeedItem item, CancellationToken ct = default)
+    public async Task<CategorizationResult> CategorizeAsync(RawFeedItem item, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(item);
 
@@ -67,7 +68,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
                 new { role = "user", content = userContent }
             },
             temperature = 0.1,
-            max_tokens = 2000
+            max_completion_tokens = 2000
         };
 
         var json = JsonSerializer.Serialize(requestBody, _jsonOptions);
@@ -97,10 +98,14 @@ public sealed class AiCategorizationService : IAiCategorizationService
         }
 
         _logger.LogError("AI categorization failed after {MaxRetries} attempts for {Url}", _options.MaxRetries, item.ExternalUrl);
-        return null;
+        return new CategorizationResult
+        {
+            Item = null,
+            Explanation = $"AI categorization failed after {_options.MaxRetries} attempts"
+        };
     }
 
-    private ProcessedContentItem? ParseAiResponse(string responseJson, RawFeedItem source)
+    private CategorizationResult ParseAiResponse(string responseJson, RawFeedItem source)
     {
         try
         {
@@ -113,23 +118,26 @@ public sealed class AiCategorizationService : IAiCategorizationService
 
             if (string.IsNullOrWhiteSpace(content))
             {
-                return null;
+                return new CategorizationResult { Explanation = "AI returned empty response" };
             }
 
             var jsonContent = ExtractJsonFromResponse(content);
             if (string.IsNullOrWhiteSpace(jsonContent))
             {
                 _logger.LogWarning("AI response did not contain valid JSON for {Url}", source.ExternalUrl);
-                return null;
+                return new CategorizationResult { Explanation = "AI response did not contain valid JSON" };
             }
 
             using var aiDoc = JsonDocument.Parse(jsonContent);
             var root = aiDoc.RootElement;
 
+            // Extract explanation from the AI's response (available for both included and excluded items)
+            var explanation = GetString(root, "explanation") ?? string.Empty;
+
             if (root.TryGetProperty("skip", out var skipProp) && skipProp.GetBoolean())
             {
                 _logger.LogInformation("AI decided to skip item: {Title}", source.Title);
-                return null;
+                return new CategorizationResult { Explanation = explanation };
             }
 
             var title = GetString(root, "title") ?? source.Title;
@@ -142,6 +150,14 @@ public sealed class AiCategorizationService : IAiCategorizationService
             var itemContent = GetString(root, "content") ?? string.Empty;
             var slug = GenerateSlug(title, source.PublishedAt);
             var contentHash = ComputeHash(title + itemContent + excerpt);
+
+            // If there's no title and no sections, the AI excluded this item
+            // (Option B response format: just an explanation, no content fields)
+            if (string.IsNullOrWhiteSpace(GetString(root, "title")) && sections.Count == 0)
+            {
+                _logger.LogInformation("AI excluded item (no categories): {Title}", source.Title);
+                return new CategorizationResult { Explanation = explanation };
+            }
 
             // Extract roundup metadata
             RoundupMetadata? roundupMetadata = null;
@@ -158,33 +174,37 @@ public sealed class AiCategorizationService : IAiCategorizationService
                 };
             }
 
-            return new ProcessedContentItem
+            return new CategorizationResult
             {
-                Slug = slug,
-                Title = title,
-                Content = itemContent,
-                Excerpt = TruncateExcerpt(excerpt),
-                DateEpoch = source.PublishedAt.ToUnixTimeSeconds(),
-                CollectionName = collectionName,
-                ExternalUrl = source.ExternalUrl,
-                Author = author,
-                FeedName = source.FeedName,
-                Tags = tags,
-                Sections = sections,
-                PrimarySectionName = primarySection,
-                ContentHash = contentHash,
-                RoundupMetadata = roundupMetadata
+                Item = new ProcessedContentItem
+                {
+                    Slug = slug,
+                    Title = title,
+                    Content = itemContent,
+                    Excerpt = TruncateExcerpt(excerpt),
+                    DateEpoch = source.PublishedAt.ToUnixTimeSeconds(),
+                    CollectionName = collectionName,
+                    ExternalUrl = source.ExternalUrl,
+                    Author = author,
+                    FeedName = source.FeedName,
+                    Tags = tags,
+                    Sections = sections,
+                    PrimarySectionName = primarySection,
+                    ContentHash = contentHash,
+                    RoundupMetadata = roundupMetadata
+                },
+                Explanation = explanation
             };
         }
         catch (JsonException ex)
         {
             _logger.LogError(ex, "Failed to parse AI response JSON for {Url}", source.ExternalUrl);
-            return null;
+            return new CategorizationResult { Explanation = $"Failed to parse AI response: {ex.Message}" };
         }
         catch (InvalidOperationException ex)
         {
             _logger.LogError(ex, "Failed to parse AI response structure for {Url}", source.ExternalUrl);
-            return null;
+            return new CategorizationResult { Explanation = $"Invalid AI response structure: {ex.Message}" };
         }
     }
 

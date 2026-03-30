@@ -1,15 +1,7 @@
 # Source Code Development Guide
 
-> **AI CONTEXT**: This is a **LEAF** context file for the `src/` directory. It complements the [Root AGENTS.md](/AGENTS.md).
+> **AI CONTEXT**: This is a **LEAF** context file for the `src/` directory. It complements the [Root AGENTS.md](../AGENTS.md).
 > **RULE**: Follow the 8-step workflow in Root [AGENTS.md](../AGENTS.md).
-
-## Overview
-
-You are a .NET development specialist for the Tech Hub source code. This directory contains all production code for the .NET implementation: REST API, Blazor frontend, domain models, and infrastructure services.
-
-**CRITICAL**: Test code also has development guidance. See [tests/AGENTS.md](../tests/AGENTS.md) for comprehensive testing patterns and rules.
-
-**Documentation Philosophy**: This file describes .NET development patterns - WHAT to use and WHY. Show structure and key decisions, not full implementations. Reference actual source files for complete code.
 
 ## Critical Development Rules
 
@@ -18,16 +10,14 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 - **Always run tests after code changes**: `Run -Clean` or `Run -Clean -TestProject <name>`
 - **Always use -Clean to expose build warnings** so you can fix them
 - **Always fix all build warnings** (0 warnings policy enforced)
-- **Always follow EditorConfig rules** (auto-format code)
 - **Always use file-scoped namespaces** in all C# files
-- **Always enable nullable reference types** (already global)
 - **Always simplify collection initialization**: Only when its a simple collection, don't wrap larger statements in `[]`
 - **Always write tests BEFORE or DURING implementation** (TDD)
 - **Always maintain 80%+ code coverage** for unit tests
 - **Always use context7 MCP tool** for latest .NET/Blazor documentation
 - **Always check ALL occurrences before renaming** (use `grep_search` to find all, then update each)
 - **Always add the latest stable version when adding NuGet packages**
-- **Always sanitize user-controlled strings for logging**: Use the `.Sanitize()` extension method (from `TechHub.Core.Logging`) on any user-controlled value passed to logging calls — e.g. `Logger.LogError("Bad input for {Name}", name.Sanitize())`. For methods with many log calls using the same parameter (like `TechHubApiClient` service methods), assign at entry: `param = param.Sanitize();`. In Blazor components, call `.Sanitize()` inline at each log site. See [docs/input-validation-and-sanitization.md](../docs/input-validation-and-sanitization.md) for the full strategy.
+- **Always sanitize user-controlled strings for logging**: Use `.Sanitize()` extension method (from `TechHub.Core.Logging`). See [docs/input-validation-and-sanitization.md](../docs/input-validation-and-sanitization.md).
 
 ### ⚠️ Ask First
 
@@ -39,359 +29,59 @@ You are a .NET development specialist for the Tech Hub source code. This directo
 ### 🚫 Never Do
 
 - **Never commit code with build warnings or errors**
-- **Never skip tests after code changes**
-- **Never suppress warnings without documenting rationale**
+- **Never suppress warnings without documenting rationale** in `Directory.Build.props`
 - **Never assume UTC** (use `Europe/Brussels` timezone)
 - **Never make parameters nullable without good reason**
-- **Never duplicate production logic in tests**
-- **Never add wrapper methods just for tests**
-- **Never rename identifiers without checking ALL occurrences**
 - **Never use `List<T>` in public APIs** (use `IReadOnlyList<T>`)
-- **Never catch exceptions without logging them**
-- **Never use primary constructors** as I like explicit constructors better
+- **Never hide errors or swallow exceptions** — See [Error Handling Philosophy](#error-handling-philosophy)
+- **Never use primary constructors** (use explicit constructors)
+- **Never rename identifiers without checking ALL occurrences**
 
-## Directory Structure
+## Error Handling Philosophy
+
+- **Be defensive for expected failures** — User input, external services, transient network issues: use retry policies (Polly), validation, or other appropriate strategies
+- **Let unexpected errors surface** — After retries exhaust, let exceptions propagate. Never silently catch-and-continue; that hides faults and bad behavior
+- **End users get friendly error messages** — But logs and Application Insights must contain full exception details, parameters, and context
+- **Log then rethrow or let it crash** — Prefer logging with context and rethrowing over catching and returning a default value
+
+## Project Structure
 
 ```text
 src/
-├── AGENTS.md                          # This file
-├── TechHub.Api/                       # REST API Backend
-│   ├── Program.cs                     # API entry point
-│   ├── Endpoints/                     # Minimal API endpoints
-│   ├── appsettings.json
-│   └── TechHub.Api.csproj
-├── TechHub.Web/                       # Blazor Frontend
-│   ├── AGENTS.md                      # Blazor component patterns (READ THIS for Web development)
-│   ├── Program.cs                     # Web entry point
-│   ├── Components/                    # Blazor components
-│   │   ├── Layout/
-│   │   ├── Pages/
-│   │   └── Shared/
-│   ├── Services/                      # Frontend services (TechHubApiClient)
-│   ├── wwwroot/                       # Static assets
-│   │   ├── css/                      # Global CSS (design system, components)
-│   │   │   ├── design-tokens.css
-│   │   │   ├── base.css
-│   │   │   ├── sidebar.css
-│   │   │   └── ...
-│   │   └── images/                   # Images (/images/ convention, NOT /assets/)
-│   └── TechHub.Web.csproj
-├── TechHub.Core/                      # Domain Models & Interfaces
-│   ├── Models/                        # Domain entities
-│   ├── Interfaces/                    # Repository interfaces
-│   └── TechHub.Core.csproj
-├── TechHub.Infrastructure/            # Data Access Implementation
-│   ├── Repositories/                  # Repository implementations
-│   ├── Services/                      # Infrastructure services
-│   └── TechHub.Infrastructure.csproj
-├── TechHub.ServiceDefaults/           # Shared Aspire Configuration
-│   ├── Extensions.cs
-│   └── TechHub.ServiceDefaults.csproj
-└── TechHub.AppHost/                   # Aspire Orchestration
-    ├── Program.cs
-    └── TechHub.AppHost.csproj
+├── TechHub.Api/           # REST API Backend (Minimal APIs)
+├── TechHub.Web/           # Blazor Frontend (InteractiveServer)
+├── TechHub.Core/          # Domain Models & Interfaces (zero dependencies)
+├── TechHub.Infrastructure/ # Data Access (PostgreSQL, Markdown, RSS)
+├── TechHub.ServiceDefaults/ # Shared Aspire Configuration
+└── TechHub.AppHost/       # Aspire Orchestration
 ```
 
-## Code Quality Standards
+Each project has its own AGENTS.md with detailed patterns.
 
-### Code Analysis Configuration
+## Code Quality
 
-The Tech Hub .NET project uses comprehensive code quality tooling to maintain consistent code style, catch potential issues early, and enforce best practices across the entire codebase.
+- **Code analysis**: `latest-all` level, all analyzers enabled, style enforced in build
+- **EditorConfig**: Auto-formatting (Allman braces, file-scoped namespaces, pattern matching)
+- **Warning suppressions**: Documented in `Directory.Build.props` with XML comments
+- **Naming**: `PascalCase` for types/methods/properties, `_camelCase` for private fields, `camelCase` for parameters
 
-**Key Configuration Files**:
+## Domain Terminology
 
-- **`.editorconfig`** (root): Coding styles and formatting rules enforced by IDEs and build tools
-- **`Directory.Build.props`** (root): Central configuration for all projects (analysis level, code analyzers, global settings)
-- **`tests/Directory.Build.props`**: Additional suppressions for test projects
+- **`section`** / **`sectionName`**: Section object vs its Name string identifier (e.g., "ai", "github-copilot")
+- **`collection`** / **`collectionName`**: Collection object vs its Name string identifier (e.g., "news", "videos")
+- Use suffixed names (`sectionName`, `collectionName`) for string identifiers in API/route/method parameters
 
-### EditorConfig Standards
+## Dependency Injection Service Lifetimes
 
-**File Encodings**:
-
-- UTF-8 for all files
-- Consistent line endings (LF on Linux)
-
-**Indentation**:
-
-- **C# files**: 4 spaces
-- **JSON/YAML/XML**: 2 spaces
-- **PowerShell**: 4 spaces
-
-**Formatting Rules**:
-
-- **Trailing whitespace**: Automatically trimmed
-- **Final newline**: Required in all files
-- **Brace style**: Allman style (opening braces on new line)
-
-**C# Conventions**:
-
-- **File-scoped namespaces**: Required (`namespace TechHub.Api;` not `namespace TechHub.Api { }`)
-- **Expression-bodied members**: Preferred where appropriate (`int Prop => value;`)
-- **Pattern matching**: Preferred over type checks (`if (obj is string s)`)
-- **Null-checking**: Use modern patterns (`ArgumentNullException.ThrowIfNull()`)
-
-**Naming Conventions**:
-
-- **Interfaces**: `IName` (PascalCase with I prefix)
-- **Types/Classes**: `PascalCase`
-- **Methods/Properties**: `PascalCase`
-- **Private fields**: `_camelCase` (underscore prefix)
-- **Parameters/Locals**: `camelCase`
-- **Constants**: `PascalCase`
-
-**Domain Terminology**:
-
-- **`section`**: Refers to the entire Section object/concept (e.g., `var section = new Section()`)
-- **`sectionName`**: Refers to the Name property of a section (the string identifier/slug, e.g., "ai", "github-copilot")
-- **`collection`**: Refers to the entire Collection object/concept
-- **`collectionName`**: Refers to the Name property of a collection (the string identifier, e.g., "news", "videos")
-- **Consistency Rule**: Use suffixed names (`sectionName`, `collectionName`) for string identifiers in API parameters, route parameters, and method parameters
-
-### Code Analysis Settings
-
-**Analysis Level**: `latest-all` - Enables all available code analyzers
-
-**Enforce Code Style**: Style violations reported during build (`EnforceCodeStyleInBuild=true`)
-
-**Analysis Mode**: `All` - Maximum strictness for code analysis
-
-**Code Analyzers**: Microsoft.CodeAnalysis.NetAnalyzers (v10.0.100)
-
-**Global Settings**:
-
-- **Nullable Reference Types**: Enabled globally
-- **Implicit Usings**: Enabled to reduce boilerplate
-- **Deterministic Builds**: Enabled for reproducible builds
-
-### Strategic Warning Suppressions
-
-The following warnings are intentionally suppressed because they represent deliberate design decisions or patterns appropriate for this application:
-
-**API Design Suppressions**:
-
-- **CA1002**: List vs Collection - Internal API uses `List<T>` for better LINQ integration and performance
-- **CA1054/CA1055/CA1056**: URI parameters/properties/returns - Project uses strings for URLs for JSON serialization simplicity and relative path support
-- **CA1720**: Identifier contains type name - 'Guid' in RSS feeds is the RSS standard field name, not `System.Guid`
-
-**Error Handling Suppressions**:
-
-- **CA1031**: Catch-all exceptions - Intentional in middleware and error handling where we need to prevent unhandled exceptions
-
-**String/Culture Suppressions**:
-
-- **CA1308**: ToLowerInvariant - Intentional for tag/search normalization (lowercase is conventional for web URLs)
-
-**Code Structure Suppressions**:
-
-- **CA1805**: Explicit initialization - Sometimes improves clarity over implicit defaults
-- **CA1812**: Internal class never instantiated - Models are instantiated by JSON deserializer
-- **CA1848**: LoggerMessage performance - Traditional logging is clearer, performance optimization not critical
-- **CA1852**: Seal internal types - JSON models need to remain non-sealed for proper deserialization
-
-**ASP.NET Core Suppressions**:
-
-- **CA2007**: ConfigureAwait - Not necessary for ASP.NET Core applications (no SynchronizationContext)
-
-**IDE Suppressions**:
-
-- **IDE0011**: Add braces - Enforced by EditorConfig, auto-fixes when code is formatted
-- **IDE0060**: Unused parameter - Sometimes needed for interface/signature compatibility
-- **IDE0211**: Top-level statements - Project uses top-level statements; suppression prevents "Convert to Program.Main" suggestions
-
-See [Directory.Build.props](../Directory.Build.props) for complete list with detailed XML documentation.
-
-### Code Quality Results
-
-**Key Learnings**:
-
-1. **Clean builds are essential** - Incremental builds can mask warnings due to MSBuild result caching
-2. **Not all warnings are actionable** - Some analyzer rules are library-focused and don't apply to applications
-3. **Strategic suppressions > forced fixes** - Better to suppress with clear rationale than blindly fix warnings
-4. **Document decisions** - All suppressions include XML comments explaining why they're intentional
-5. **EditorConfig handles style** - Many style warnings (like IDE0011 braces) are better handled by formatting tools
-
-**In Visual Studio / VS Code**:
-
-- EditorConfig rules are automatically applied as you type
-- Code analysis warnings appear in the Problems panel
-- Quick fixes and refactorings respect the configured rules
-
-**Customizing Suppressions**:
-
-To suppress additional warnings globally:
-
-1. Edit `/Directory.Build.props`
-2. Add to `<NoWarn>` property:
-
-   ```xml
-   <NoWarn>$(NoWarn);CA1234</NoWarn>
-   ```
-
-To suppress warnings for specific projects:
-
-1. Add to the project's `.csproj` file:
-
-   ```xml
-   <PropertyGroup>
-     <NoWarn>$(NoWarn);CA1234</NoWarn>
-   </PropertyGroup>
-   ```
-
-## Shared .NET Patterns
-
-These patterns apply across all .NET projects. **See project-specific AGENTS.md files** for detailed examples:
-
-- **[TechHub.Api/AGENTS.md](TechHub.Api/AGENTS.md)** - Minimal API endpoint patterns
-- **[TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md)** - Domain model patterns  
-- **[TechHub.Infrastructure/AGENTS.md](TechHub.Infrastructure/AGENTS.md)** - Repository and data access patterns
-- **[TechHub.Web/AGENTS.md](TechHub.Web/AGENTS.md)** - Blazor component patterns
-
-### Dependency Injection Service Lifetimes
-
-**Singleton** - Service has no state or state is shared across all requests:
-
-- `ISectionRepository` (ConfigurationBasedSectionRepository - loads from appsettings.json)
-- `ISqlDialect` (PostgresDialect)
-- `IDbConnectionFactory` (creates database connections)
-- `IMemoryCache`, `TimeProvider` (built-in)
-
-**Scoped** - Service lifetime matches HTTP request:
-
-- `IDbConnection` (database connection per request)
-- `ITechHubApiClient` (typed HttpClient)
-
-**Transient** - Lightweight, stateless, new instance each time:
-
-- `IContentRepository` (ContentRepository - uses scoped IDbConnection)
-- `IMarkdownService`, `IRssService`, `ITagCloudService`
-- `MigrationRunner`
-
-**Options Pattern for Configuration**:
-
-```csharp
-// Configuration class
-public class ContentOptions
-{
-    public required string SectionsJsonPath { get; init; }
-    public required string CollectionsRootPath { get; init; }
-    public string Timezone { get; init; } = "Europe/Brussels";
-}
-
-// Registration in Program.cs
-builder.Services.Configure<ContentOptions>(
-    builder.Configuration.GetSection("Content"));
-
-// Injection in service
-public class FileSectionRepository : ISectionRepository
-{
-    private readonly ContentOptions _options;
-    
-    public FileSectionRepository(IOptions<ContentOptions> options)
-    {
-        _options = options.Value;
-    }
-}
-```
-
-**Typed HttpClient Pattern**:
-
-```csharp
-// Registration with resilience
-builder.Services.AddHttpClient<ITechHubApiClient, TechHubApiClient>(client =>
-{
-    client.BaseAddress = new Uri("https+http://api"); // Aspire service discovery
-})
-.AddStandardResilienceHandler(); // Retry + Circuit Breaker
-```
-
-**Common DI Pitfalls**:
-
-❌ **WRONG**: Singleton with scoped dependency (e.g., HttpContext)  
-❌ **WRONG**: Transient for heavy objects (creates too many instances)  
-❌ **WRONG**: Direct configuration access (`builder.Configuration["Key"]`)  
-
-✅ **CORRECT**: Match lifetime to dependency requirements  
-✅ **CORRECT**: Singleton for stateless services  
-✅ **CORRECT**: Use Options pattern for configuration
-
-### Markdown Frontmatter Mapping
-
-**See [TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md#markdown-frontmatter-mapping)** for complete mapping documentation showing how markdown frontmatter fields map to domain model properties.
+- **Singleton**: `ISectionRepository`, `ISqlDialect`, `IDbConnectionFactory`, `IMemoryCache`
+- **Scoped**: `IDbConnection`, `ITechHubApiClient`
+- **Transient**: `IContentRepository`, `IMarkdownService`, `IRssService`, `ITagCloudService`, `MigrationRunner`
+- Always use Options pattern for configuration (never `builder.Configuration["Key"]`)
 
 ## Port Configuration
 
-**Goal**: HTTPS everywhere, fixed ports, single source of truth (no redundant configuration).
+Fixed ports defined in `launchSettings.json` (single source of truth):
 
-**Strategy**: Define ports in `launchSettings.json` only. Aspire reads these automatically - no explicit endpoint configuration needed in AppHost.
-
-**Fixed Ports**:
-
-- API: 5001 (HTTPS) - Defined in [TechHub.Api/Properties/launchSettings.json](TechHub.Api/Properties/launchSettings.json)
-- Web: 5003 (HTTPS) - Defined in [TechHub.Web/Properties/launchSettings.json](TechHub.Web/Properties/launchSettings.json)
+- API: 5001 (HTTPS)
+- Web: 5003 (HTTPS)
 - Aspire Dashboard: 18888 (HTTP)
-
-**Benefits**:
-
-- Same ports whether running via Aspire (`Run`) or directly (`dotnet run`)
-- No duplicate endpoint definitions
-- Single source of truth prevents configuration drift
-
-## Documentation Resources
-
-**Primary Resources** (use context7 MCP tool):
-
-When working on .NET features, ALWAYS use context7 MCP tool to fetch current documentation:
-
-```plaintext
-# .NET Runtime and Libraries
-mcp_context7_resolve-library-id(libraryName: "dotnet")
-mcp_context7_query-docs(libraryID: "/dotnet/docs", query: "your topic")
-
-# ASP.NET Core
-mcp_context7_resolve-library-id(libraryName: "aspnetcore")
-mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "minimal apis")
-
-# Blazor
-mcp_context7_query-docs(libraryID: "/dotnet/aspnetcore", query: "blazor server-side rendering")
-
-# .NET Aspire
-mcp_context7_resolve-library-id(libraryName: "aspire")
-mcp_context7_query-docs(libraryID: "/dotnet/aspire", query: "service discovery")
-
-# xUnit Testing
-mcp_context7_resolve-library-id(libraryName: "xunit")
-mcp_context7_query-docs(libraryID: "/xunit/xunit", query: "theories and data-driven tests")
-```
-
-**Tech Hub Documentation**:
-
-- **[Root AGENTS.md](../AGENTS.md)** - AI Workflow, starting/stopping website, repository-wide principles
-- **[TechHub.Api/AGENTS.md](TechHub.Api/AGENTS.md)** - API development patterns
-- **[TechHub.Core/AGENTS.md](TechHub.Core/AGENTS.md)** - Domain model patterns
-- **[TechHub.Infrastructure/AGENTS.md](TechHub.Infrastructure/AGENTS.md)** - Repository and data access patterns
-- **[TechHub.Web/AGENTS.md](TechHub.Web/AGENTS.md)** - Blazor component patterns
-- **[tests/AGENTS.md](../tests/AGENTS.md)** - Testing strategies and patterns
-- **[docs/AGENTS.md](../docs/AGENTS.md)** - Documentation maintenance guidelines
-
-## Related Documentation
-
-### Functional Documentation (docs/)
-
-- **[Design System](../docs/design-system.md)** - Design tokens, colors, typography, spacing
-- **[Page Structure](../docs/page-structure.md)** - Semantic HTML, layouts, sidebar architecture
-- **[Render Modes](../docs/render-modes.md)** - Blazor render mode strategy (SSR vs Interactive)
-- **[Frontmatter](../docs/frontmatter.md)** - Content frontmatter schema and field definitions
-- **[Testing Strategy](../docs/testing-strategy.md)** - Testing diamond, layer definitions
-- **[Content API](../docs/content-api.md)** - REST API contracts and endpoints
-- **[Filtering](../docs/filtering.md)** - Tag filtering system and tag cloud
-
-### Implementation Guides (AGENTS.md)
-
-- **[Root AGENTS.md](../AGENTS.md)** - AI workflow, starting/stopping website, principles
-- **[tests/AGENTS.md](../tests/AGENTS.md)** - Testing strategies (test code is also source code!)
-- **[docs/AGENTS.md](../docs/AGENTS.md)** - Documentation maintenance
-- **Project-specific AGENTS.md files**: See each subdirectory for detailed patterns
-
----
-
-**Remember**: Code quality is not negotiable. Every commit should build with 0 warnings, pass all tests, and follow established patterns.

@@ -17,6 +17,9 @@ public class AiCategorizationOptions
     /// <summary>Azure OpenAI deployment name (e.g. gpt-4.1).</summary>
     public string DeploymentName { get; init; } = string.Empty;
 
+    /// <summary>Azure OpenAI REST API version (e.g. 2025-04-01-preview).</summary>
+    public string ApiVersion { get; init; } = string.Empty;
+
     /// <summary>Maximum content length in characters sent to the AI model.</summary>
     public int MaxContentLength { get; init; } = 200_000;
 

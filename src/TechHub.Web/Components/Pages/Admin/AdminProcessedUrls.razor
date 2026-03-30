@@ -1,0 +1,536 @@
+@page "/admin/processed-urls"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+@using TechHub.Core.Models.ContentProcessing
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject NavigationManager Navigation
+@inject PersistentComponentState ApplicationState
+@inject IJSRuntime JS
+
+<PageTitle>Processed URLs — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Processed URLs</h1>
+            <p class="admin-page-subtitle">View and manage URLs processed by the content pipeline — remove entries to retry on next run</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+            @if (_failedCount > 0)
+            {
+                <button class="btn-danger" @onclick="DeleteAllFailedAsync" disabled="@_deleting">
+                    @(_deleting ? "Deleting…" : $"🗑 Remove All Failed ({_failedCount})")
+                </button>
+            }
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @* ── Filters ── *@
+    <div class="admin-filters">
+        <div class="admin-filter-group">
+            <label class="admin-label" for="statusFilter">Status</label>
+            <select id="statusFilter" class="admin-input" @bind="_statusFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All</option>
+                <option value="succeeded">Added</option>
+                <option value="skipped">Skipped</option>
+                <option value="failed">Failed</option>
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="searchFilter">URL Search</label>
+            <input id="searchFilter" class="admin-input" @bind="_searchFilter" @bind:after="ApplyFiltersAsync"
+                   placeholder="Search by URL…" />
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="feedFilter">Feed Name</label>
+            <input id="feedFilter" class="admin-input" @bind="_feedNameFilter" @bind:after="ApplyFiltersAsync"
+                   placeholder="Filter by feed…" />
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="collectionFilter">Collection</label>
+            <input id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync"
+                   placeholder="e.g. blogs" />
+        </div>
+    </div>
+
+    @* ── Content ── *@
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading processed URLs…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_result == null || _result.Items.Count == 0)
+    {
+        <div class="admin-empty">No processed URLs match the current filters.</div>
+    }
+    else
+    {
+        <div class="admin-result-summary">
+            Showing @((_currentPage - 1) * PageSize + 1)–@(Math.Min(_currentPage * PageSize, _result.TotalCount))
+            of @_result.TotalCount.ToString("N0") entries
+        </div>
+
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Site</th>
+                        <th>Article</th>
+                        <th>Status</th>
+                        <th>Reason</th>
+                        <th>Feed</th>
+                        <th>Collection</th>
+                        <th>Processed</th>
+                        <th>Actions</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in _result.Items)
+                    {
+                        <tr>
+                            <td class="admin-cell-site" title="@item.ExternalUrl">
+                                @GetUrlSite(item.ExternalUrl)
+                            </td>
+                            <td class="admin-cell-article" title="@item.ExternalUrl">
+                                <a href="@item.ExternalUrl" target="_blank" rel="noopener noreferrer">@GetUrlArticle(item.ExternalUrl)</a>
+                            </td>
+                            <td>
+                                <span class="admin-status @GetStatusCssClass(item.Status)"
+                                      title="@GetStatusTooltip(item)">
+                                    @GetStatusLabel(item.Status)
+                                </span>
+                            </td>
+                            <td class="admin-cell-reason" title="@(item.Reason ?? item.ErrorMessage ?? "—")">
+                                @(TruncateReason(item.Reason ?? item.ErrorMessage))
+                            </td>
+                            <td class="admin-cell-feed" title="@item.FeedName">@(item.FeedName ?? "—")</td>
+                            <td class="admin-cell-mono">@(item.CollectionName ?? "—")</td>
+                            <td class="admin-cell-mono">@item.ProcessedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>
+                                <button class="admin-link-btn admin-link-btn-danger"
+                                        @onclick="() => DeleteUrlAsync(item.ExternalUrl)"
+                                        title="Remove so it can be retried">Remove</button>
+                            </td>
+                            <td>
+                                <button class="admin-link-btn"
+                                        @onclick="() => CopyToClipboardAsync(item)"
+                                        title="Copy details to clipboard">
+                                    @(_copiedUrl == item.ExternalUrl ? "✓ Copied" : "Copy")
+                                </button>
+                            </td>
+                            <td>
+                                @if (item.Status == "succeeded")
+                                {
+                                    <button class="admin-link-btn"
+                                            @onclick="() => OpenAiMetadataEditorAsync(item.ExternalUrl)"
+                                            title="Edit AI metadata">Edit</button>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @* ── Pagination ── *@
+        @if (_totalPages > 1)
+        {
+            <div class="admin-pagination">
+                <button class="btn-secondary" disabled="@(_currentPage <= 1)" @onclick="PreviousPageAsync">← Previous</button>
+                <span class="admin-pagination-info">Page @_currentPage of @_totalPages</span>
+                <button class="btn-secondary" disabled="@(_currentPage >= _totalPages)" @onclick="NextPageAsync">Next →</button>
+            </div>
+        }
+    }
+</div>
+
+<JsonEditorModal IsOpen="_aiEditorOpen"
+                 Title="_aiEditorTitle"
+                 Json="_aiEditorJson"
+                 OnSave="SaveAiMetadataAsync"
+                 OnClose="CloseAiMetadataEditor" />
+
+@code {
+    private const int PageSize = 100;
+
+    private bool _loading = true;
+    private bool _deleting;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private PagedResult<ProcessedUrlListItem>? _result;
+    private int _currentPage = 1;
+    private int _totalPages;
+    private int _failedCount;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    // Filters
+    private string _statusFilter = string.Empty;
+    private string _searchFilter = string.Empty;
+    private string _feedNameFilter = string.Empty;
+    private string _collectionFilter = string.Empty;
+
+    // Debounce timer for text input filters
+    private CancellationTokenSource? _debounce;
+
+    // Clipboard feedback
+    private string? _copiedUrl;
+
+    // AI metadata editor
+    private bool _aiEditorOpen;
+    private string _aiEditorTitle = string.Empty;
+    private string _aiEditorJson = "{}";
+    private string _aiEditorUrl = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<PagedResult<ProcessedUrlListItem>>("admin-processed-urls", out var restored) && restored != null)
+        {
+            _result = restored;
+            _loading = false;
+            UpdatePagination();
+            await LoadFailedCountAsync();
+            return;
+        }
+
+        await LoadDataAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_result != null)
+        {
+            ApplicationState.PersistAsJson("admin-processed-urls", _result);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        _debounce?.Cancel();
+        _debounce?.Dispose();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _result = await Api.GetProcessedUrlsAsync(
+                _currentPage,
+                PageSize,
+                string.IsNullOrEmpty(_statusFilter) ? null : _statusFilter,
+                string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
+                string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter,
+                string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter);
+
+            UpdatePagination();
+            await LoadFailedCountAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
+        {
+            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn?redirectUri=%2Fadmin%2Fprocessed-urls", forceLoad: true);
+            return;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load processed URLs: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task LoadFailedCountAsync()
+    {
+        try
+        {
+            var failedResult = await Api.GetProcessedUrlsAsync(1, 1, status: "failed");
+            _failedCount = failedResult.TotalCount;
+        }
+        catch
+        {
+            _failedCount = 0;
+        }
+    }
+
+    private void UpdatePagination()
+    {
+        if (_result != null)
+        {
+            _totalPages = Math.Max(1, (int)Math.Ceiling((double)_result.TotalCount / PageSize));
+        }
+    }
+
+    private async Task ApplyFiltersAsync()
+    {
+        // Debounce text input filters
+        _debounce?.Cancel();
+        _debounce = new CancellationTokenSource();
+        var token = _debounce.Token;
+
+        try
+        {
+            await Task.Delay(300, token);
+        }
+        catch (OperationCanceledException)
+        {
+            return;
+        }
+
+        _currentPage = 1;
+        await LoadDataAsync();
+    }
+
+    private async Task RefreshAsync()
+    {
+        _message = null;
+        await LoadDataAsync();
+    }
+
+    private async Task PreviousPageAsync()
+    {
+        if (_currentPage > 1)
+        {
+            _currentPage--;
+            await LoadDataAsync();
+        }
+    }
+
+    private async Task NextPageAsync()
+    {
+        if (_currentPage < _totalPages)
+        {
+            _currentPage++;
+            await LoadDataAsync();
+        }
+    }
+
+    private async Task DeleteUrlAsync(string url)
+    {
+        _message = null;
+
+        try
+        {
+            var deleted = await Api.DeleteProcessedUrlAsync(url);
+            if (deleted)
+            {
+                _message = $"Removed: {TruncateUrl(url)} — will be retried on next run.";
+                _messageIsError = false;
+                await LoadDataAsync();
+            }
+            else
+            {
+                _message = "URL not found (may have already been removed).";
+                _messageIsError = true;
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to remove URL: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private async Task DeleteAllFailedAsync()
+    {
+        _message = null;
+        _deleting = true;
+
+        try
+        {
+            var count = await Api.DeleteAllFailedProcessedUrlsAsync();
+            _message = $"Removed {count} failed entries — they will be retried on next run.";
+            _messageIsError = false;
+            _failedCount = 0;
+            await LoadDataAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to remove entries: {ex.Message}";
+            _messageIsError = true;
+        }
+        finally
+        {
+            _deleting = false;
+        }
+    }
+
+    private async Task CopyToClipboardAsync(ProcessedUrlListItem item)
+    {
+        var sb = new System.Text.StringBuilder();
+        sb.AppendLine("Processed URL entry:");
+        sb.AppendLine($"  URL:        {item.ExternalUrl}");
+        sb.AppendLine($"  Status:     {item.Status}");
+        sb.AppendLine($"  Feed:       {item.FeedName ?? "—"}");
+        sb.AppendLine($"  Collection: {item.CollectionName ?? "—"}");
+        sb.AppendLine($"  Processed:  {item.ProcessedAt:yyyy-MM-dd HH:mm}");
+        if (!string.IsNullOrWhiteSpace(item.Reason))
+            sb.AppendLine($"  Reason:     {item.Reason}");
+        if (!string.IsNullOrWhiteSpace(item.ErrorMessage))
+            sb.AppendLine($"  Error:      {item.ErrorMessage}");
+
+        await JS.InvokeVoidAsync("navigator.clipboard.writeText", sb.ToString().TrimEnd());
+
+        _copiedUrl = item.ExternalUrl;
+        StateHasChanged();
+
+        await Task.Delay(2000);
+        if (_copiedUrl == item.ExternalUrl)
+        {
+            _copiedUrl = null;
+            StateHasChanged();
+        }
+    }
+
+    private async Task OpenAiMetadataEditorAsync(string url)
+    {
+        _message = null;
+        try
+        {
+            var result = await Api.GetContentItemAiMetadataAsync(url);
+            if (result is null)
+            {
+                _message = "Content item not found.";
+                _messageIsError = true;
+                return;
+            }
+            _aiEditorUrl = url;
+            _aiEditorTitle = $"AI Metadata — {GetUrlArticle(url)}";
+            _aiEditorJson = result.AiMetadata ?? "{}";
+            _aiEditorOpen = true;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to load AI metadata: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private async Task SaveAiMetadataAsync(string json)
+    {
+        try
+        {
+            await Api.UpdateContentItemAiMetadataAsync(_aiEditorUrl, json);
+            _aiEditorOpen = false;
+            _message = "AI metadata saved.";
+            _messageIsError = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to save AI metadata: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private void CloseAiMetadataEditor() => _aiEditorOpen = false;
+
+    private static string TruncateUrl(string url)
+    {
+        const int MaxLength = 80;
+        return url.Length <= MaxLength ? url : string.Concat(url.AsSpan(0, MaxLength - 1), "…");
+    }
+
+    private static string GetUrlSite(string url)
+    {
+        if (Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        {
+            return uri.Host;
+        }
+
+        var withoutScheme = url.Contains("://") ? url[(url.IndexOf("://", StringComparison.Ordinal) + 3)..] : url;
+        var slashIdx = withoutScheme.IndexOf('/');
+        return slashIdx >= 0 ? withoutScheme[..slashIdx] : withoutScheme;
+    }
+
+    private static string GetUrlArticle(string url)
+    {
+        if (Uri.TryCreate(url, UriKind.Absolute, out var uri))
+        {
+            var segments = uri.AbsolutePath.TrimEnd('/').Split('/', StringSplitOptions.RemoveEmptyEntries);
+
+            if (segments.Length == 0)
+                return uri.Host;
+
+            var longestIndex = 0;
+            for (var i = 1; i < segments.Length; i++)
+            {
+                if (segments[i].Length > segments[longestIndex].Length)
+                    longestIndex = i;
+            }
+
+            var segment = segments[longestIndex];
+
+            if (longestIndex == segments.Length - 1 && !string.IsNullOrEmpty(uri.Query))
+                segment += uri.Query;
+
+            return segment;
+        }
+
+        var trimmed = url.TrimEnd('/');
+        var idx = trimmed.LastIndexOf('/');
+        return idx >= 0 ? trimmed[(idx + 1)..] : trimmed;
+    }
+
+    private static string TruncateReason(string? reason)
+    {
+        if (string.IsNullOrWhiteSpace(reason))
+        {
+            return "—";
+        }
+
+        const int MaxLength = 120;
+        return reason.Length <= MaxLength ? reason : string.Concat(reason.AsSpan(0, MaxLength - 1), "…");
+    }
+
+    private static string GetStatusCssClass(string status) => status switch
+    {
+        "succeeded" => "admin-status-completed",
+        "skipped" => "admin-status-skipped",
+        "failed" => "admin-status-failed",
+        _ => "admin-status-failed"
+    };
+
+    private static string GetStatusLabel(string status) => status switch
+    {
+        "succeeded" => "✓ Added",
+        "skipped" => "⊘ Skipped",
+        "failed" => "✗ Failed",
+        _ => status
+    };
+
+    private static string GetStatusTooltip(ProcessedUrlListItem item) => item.Status switch
+    {
+        "succeeded" => item.Reason ?? "AI included this content",
+        "skipped" => item.Reason ?? "AI excluded this content",
+        "failed" => item.ErrorMessage ?? "Processing error",
+        _ => ""
+    };
+}

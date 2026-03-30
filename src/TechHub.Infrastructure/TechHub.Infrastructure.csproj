@@ -31,6 +31,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Data\Migrations\**\*.sql" />
     <EmbeddedResource Include="Data\Resources\system-message.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-step3-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-step4-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-step6-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-step7-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-step9-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-writing-guidelines.md" />
   </ItemGroup>
 
 </Project>

@@ -108,11 +108,33 @@ WHERE id = @JobId";
     }
 
     /// <inheritdoc/>
+    public async Task UpdateLogAsync(long jobId, string logOutput, CancellationToken ct = default)
+    {
+        try
+        {
+            const string Sql = @"
+UPDATE content_processing_jobs
+SET log_output = @LogOutput
+WHERE id = @JobId";
+
+            await _connection.ExecuteAsync(new CommandDefinition(
+                Sql, new { JobId = jobId, LogOutput = logOutput }, cancellationToken: ct));
+        }
+        catch (DbException ex)
+        {
+            _logger.LogDebug(ex, "Failed to update log for job {JobId}", jobId);
+        }
+    }
+
+    /// <inheritdoc/>
     public async Task<ContentProcessingJob?> GetByIdAsync(long jobId, CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, started_at, completed_at, duration_ms, status, trigger_type,
-       feeds_processed, items_added, items_skipped, error_count, log_output
+SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
+       duration_ms AS DurationMs, status, trigger_type AS TriggerType,
+       feeds_processed AS FeedsProcessed, items_added AS ItemsAdded,
+       items_skipped AS ItemsSkipped, error_count AS ErrorCount,
+       log_output AS LogOutput
 FROM content_processing_jobs
 WHERE id = @JobId";
 
@@ -124,8 +146,11 @@ WHERE id = @JobId";
     public async Task<IReadOnlyList<ContentProcessingJob>> GetRecentAsync(int count = 20, CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, started_at, completed_at, duration_ms, status, trigger_type,
-       feeds_processed, items_added, items_skipped, error_count, log_output
+SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
+       duration_ms AS DurationMs, status, trigger_type AS TriggerType,
+       feeds_processed AS FeedsProcessed, items_added AS ItemsAdded,
+       items_skipped AS ItemsSkipped, error_count AS ErrorCount,
+       log_output AS LogOutput
 FROM content_processing_jobs
 ORDER BY started_at DESC
 LIMIT @Count";

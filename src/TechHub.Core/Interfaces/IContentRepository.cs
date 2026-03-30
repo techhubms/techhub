@@ -1,4 +1,5 @@
 using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
 
 namespace TechHub.Core.Interfaces;
 
@@ -106,4 +107,18 @@ public interface IContentRepository
     /// Only includes authors with at least one published (non-draft) content item.
     /// </summary>
     Task<IReadOnlyList<AuthorSummary>> GetAuthorsAsync(CancellationToken ct = default);
+
+    // ==================== Admin Methods ====================
+
+    /// <summary>
+    /// Get the ai_metadata JSON for a content item identified by its external URL.
+    /// Returns null if no item with that URL exists.
+    /// </summary>
+    Task<ContentItemAiMetadataResult?> GetAiMetadataByUrlAsync(string externalUrl, CancellationToken ct = default);
+
+    /// <summary>
+    /// Update the ai_metadata JSON column for a content item identified by its external URL.
+    /// Returns true if found and updated, false if not found.
+    /// </summary>
+    Task<bool> UpdateAiMetadataAsync(string externalUrl, string aiMetadata, CancellationToken ct = default);
 }

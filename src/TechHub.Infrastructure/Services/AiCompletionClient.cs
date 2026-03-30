@@ -38,7 +38,7 @@ public sealed class AiCompletionClient : IAiCompletionClient
         using var request = new HttpRequestMessage(
             HttpMethod.Post,
             string.Create(CultureInfo.InvariantCulture,
-                $"{_options.Endpoint.TrimEnd('/')}/openai/deployments/{_options.DeploymentName}/chat/completions?api-version=2024-10-21"));
+                $"{_options.Endpoint.TrimEnd('/')}/openai/deployments/{_options.DeploymentName}/chat/completions?api-version={_options.ApiVersion}"));
 
         request.Headers.Add("api-key", _options.ApiKey);
         request.Content = new StringContent(jsonBody, Encoding.UTF8, new MediaTypeHeaderValue("application/json"));
@@ -49,6 +49,12 @@ public sealed class AiCompletionClient : IAiCompletionClient
         {
             _logger.LogWarning("AI rate limit hit");
             return new AiCompletionResult(IsRateLimited: true, ResponseBody: null);
+        }
+
+        if (!response.IsSuccessStatusCode)
+        {
+            var errorBody = await response.Content.ReadAsStringAsync(ct);
+            _logger.LogError("AI API returned {StatusCode}: {ErrorBody}", (int)response.StatusCode, errorBody);
         }
 
         response.EnsureSuccessStatusCode();

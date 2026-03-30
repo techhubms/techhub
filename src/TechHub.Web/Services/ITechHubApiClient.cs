@@ -328,4 +328,71 @@ internal interface ITechHubApiClient
     /// GET /api/admin/statistics
     /// </summary>
     Task<DatabaseStatistics?> GetDatabaseStatisticsAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Processed URLs endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get a paginated list of processed URLs with optional filters.
+    /// GET /api/admin/processed-urls
+    /// </summary>
+    Task<PagedResult<ProcessedUrlListItem>> GetProcessedUrlsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? status = null,
+        string? search = null,
+        string? feedName = null,
+        string? collectionName = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a specific processed URL so it can be retried.
+    /// DELETE /api/admin/processed-urls?url={url}
+    /// </summary>
+    Task<bool> DeleteProcessedUrlAsync(string url, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete all failed processed URL records.
+    /// DELETE /api/admin/processed-urls/failed
+    /// </summary>
+    Task<int> DeleteAllFailedProcessedUrlsAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Custom page data endpoints
+    // ================================================================
+
+    /// <summary>
+    /// List all custom page entries (key, description, last updated).
+    /// GET /api/admin/custom-pages
+    /// </summary>
+    Task<IReadOnlyList<CustomPageEntry>> GetCustomPageEntriesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a single custom page entry with its raw JSON.
+    /// GET /api/admin/custom-pages/{key}
+    /// </summary>
+    Task<CustomPageEntry?> GetCustomPageEntryAsync(string key, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the raw JSON for a custom page.
+    /// PUT /api/admin/custom-pages/{key}
+    /// </summary>
+    Task<CustomPageEntry> UpdateCustomPageAsync(string key, string jsonData, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content item ai_metadata endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get the ai_metadata JSON for a content item by its external URL.
+    /// GET /api/admin/content-items/ai-metadata?url={url}
+    /// </summary>
+    Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(string url, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the ai_metadata JSON for a content item by its external URL.
+    /// PUT /api/admin/content-items/ai-metadata?url={url}
+    /// </summary>
+    Task UpdateContentItemAiMetadataAsync(string url, string aiMetadata, CancellationToken cancellationToken = default);
 }

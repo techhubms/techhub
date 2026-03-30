@@ -1,7 +1,6 @@
 @page "/admin/statistics"
 @layout AdminLayout
 @rendermode InteractiveServer
-@attribute [Microsoft.AspNetCore.Authorization.Authorize]
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
 @implements IDisposable
@@ -295,7 +294,7 @@
         }
         catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
         {
-            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn", forceLoad: true);
+            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn?redirectUri=%2Fadmin%2Fstatistics", forceLoad: true);
             return;
         }
         catch (HttpRequestException ex)

@@ -26,7 +26,6 @@ DOCUMENTATION STATUS:
 ✅ Root AGENTS.md: Complete 8-step workflow with checklists
 ✅ Domain AGENTS.md files: Comprehensive implementation guides
 ✅ docs/AGENTS.md: Complete documentation placement strategy
-✅ docs/documentation-index.md: Auto-generated searchable index
 ✅ docs/running-and-testing.md: Complete testing and running guide
 ✅ All specs updated to reference correct documentation
 
@@ -91,8 +90,6 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 
 **They are nested**: When working on API changes, read src/AGENTS.md → TechHub.Api/AGENTS.md → TechHub.Web/AGENTS.md (if contract changes) → tests/AGENTS.md → tests/TechHub.Api.Tests/AGENTS.md.
 
-**Reference**: See [docs/documentation-index.md](../../docs/documentation-index.md) for complete documentation map.
-
 ### 3. Documentation Updates Are Mandatory
 
 **🚨 MANDATORY**: Documentation MUST be updated when code behavior changes.
@@ -111,7 +108,6 @@ NEXT AMENDMENT: When new principles emerge or fundamental approach changes
 1. Search for existing docs: `grep_search` in docs/ and AGENTS.md files
 2. Update relevant files or create new ones if needed
 3. Fix markdown linting: `npx markdownlint-cli2 --fix <file> --config .markdownlint-cli2.jsonc`
-4. Regenerate index if headings changed: `scripts/Generate-DocumentationIndex.ps1`
 
 **Reference**: See [docs/AGENTS.md](../../docs/AGENTS.md) for complete documentation placement strategy.
 

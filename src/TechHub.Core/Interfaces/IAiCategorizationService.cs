@@ -9,7 +9,8 @@ public interface IAiCategorizationService
 {
     /// <summary>
     /// Calls Azure OpenAI to categorize <paramref name="item"/>.
-    /// Returns <see langword="null"/> when the AI determines the content should be skipped.
+    /// Returns a <see cref="CategorizationResult"/> containing the processed item (or <c>null</c> if excluded)
+    /// and the AI's explanation for why the content was included or excluded.
     /// </summary>
-    Task<ProcessedContentItem?> CategorizeAsync(RawFeedItem item, CancellationToken ct = default);
+    Task<CategorizationResult> CategorizeAsync(RawFeedItem item, CancellationToken ct = default);
 }

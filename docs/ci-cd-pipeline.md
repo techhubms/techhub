@@ -197,8 +197,6 @@ Configure these in GitHub repository settings → Secrets and variables → Acti
 - `AZURE_CREDENTIALS` - Azure service principal credentials (JSON)
 - `AZURE_CONTAINER_REGISTRY` - Name of shared Azure Container Registry: `crtechhub`
 - `AZURE_SUBSCRIPTION_ID` - Azure subscription ID
-- `RSS_APP_APPID` - GitHub App ID for RSS processing and secret sync
-- `RSS_APP_PRIVATEKEY` - GitHub App private key
 
 ### Environment Secrets
 

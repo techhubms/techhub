@@ -102,11 +102,20 @@ public sealed class ContentProcessingService
             _logger.LogInformation("ContentProcessing[{JobId}] {Message}", jobId, msg);
         }
 
+        // Flush accumulated log to the database so the frontend can show live progress
+        async Task FlushLogAsync()
+        {
+            if (jobId > 0)
+            {
+                await _jobRepo.UpdateLogAsync(jobId, log.ToString(), ct);
+            }
+        }
+
         try
         {
             jobId = await _jobRepo.CreateAsync(triggerType, ct);
 
-            if (!_options.Enabled)
+            if (!_options.Enabled && triggerType != "manual")
             {
                 Log("Content processing is disabled. Skipping run.");
                 await _jobRepo.CompleteAsync(jobId, 0, 0, 0, 0, log.ToString(), ct);
@@ -117,6 +126,7 @@ public sealed class ContentProcessingService
 
             var feeds = await _feedRepo.GetEnabledAsync(ct);
             Log(string.Create(CultureInfo.InvariantCulture, $"Loaded {feeds.Count} feed(s) from database"));
+            await FlushLogAsync();
 
             foreach (var feed in feeds)
             {
@@ -129,29 +139,45 @@ public sealed class ContentProcessingService
                 feedsProcessed++;
 
                 var rawItems = await _rssService.IngestAsync(feed, ct);
-                Log(string.Create(CultureInfo.InvariantCulture, $"  {rawItems.Count} items from feed"));
+
+                // Pre-filter: check which items are already known (in content_items or processed_urls)
+                var newItems = new List<RawFeedItem>();
+                var alreadyInDb = 0;
+                var alreadyProcessed = 0;
+
+                foreach (var item in rawItems)
+                {
+                    if (await ExistsAsync(item.ExternalUrl, ct))
+                    {
+                        alreadyInDb++;
+                        itemsSkipped++;
+                    }
+                    else if (await _processedUrlRepo.ExistsAsync(item.ExternalUrl, ct))
+                    {
+                        alreadyProcessed++;
+                        itemsSkipped++;
+                    }
+                    else
+                    {
+                        newItems.Add(item);
+                    }
+                }
+
+                Log(string.Create(CultureInfo.InvariantCulture,
+                    $"  {rawItems.Count} items from feed, {newItems.Count} new, {alreadyInDb} already in DB, {alreadyProcessed} previously processed"));
+
+                if (newItems.Count == 0)
+                {
+                    continue;
+                }
 
                 var limit = _options.MaxItemsPerRun > 0
-                    ? Math.Min(rawItems.Count, _options.MaxItemsPerRun - itemsAdded)
-                    : rawItems.Count;
+                    ? Math.Min(newItems.Count, _options.MaxItemsPerRun - itemsAdded)
+                    : newItems.Count;
 
                 for (var i = 0; i < limit && !ct.IsCancellationRequested; i++)
                 {
-                    var raw = rawItems[i];
-
-                    // Check if already in content_items (existing duplicate check)
-                    if (await ExistsAsync(raw.ExternalUrl, ct))
-                    {
-                        itemsSkipped++;
-                        continue;
-                    }
-
-                    // Check if we already attempted this URL (success or failure)
-                    if (await _processedUrlRepo.ExistsAsync(raw.ExternalUrl, ct))
-                    {
-                        itemsSkipped++;
-                        continue;
-                    }
+                    var raw = newItems[i];
 
                     // Fetch YouTube tags for YouTube items (merged into FeedTags for AI)
                     if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
@@ -191,10 +217,10 @@ public sealed class ContentProcessingService
                     }
 
                     // AI categorization
-                    ProcessedContentItem? processed;
+                    CategorizationResult categorizationResult;
                     try
                     {
-                        processed = await _aiService.CategorizeAsync(raw, ct);
+                        categorizationResult = await _aiService.CategorizeAsync(raw, ct);
                     }
                     catch (OperationCanceledException)
                     {
@@ -203,18 +229,20 @@ public sealed class ContentProcessingService
                     catch (Exception ex) when (ex is HttpRequestException or JsonException or InvalidOperationException or TimeoutException)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR categorizing {raw.ExternalUrl}: {ex.Message}"));
-                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, ct);
+                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, ct);
                         errorCount++;
                         continue;
                     }
 
-                    if (processed == null)
+                    if (categorizationResult.Item == null)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  SKIPPED (AI): {raw.Title}"));
-                        await _processedUrlRepo.RecordSuccessAsync(raw.ExternalUrl, ct: ct);
+                        await _processedUrlRepo.RecordSkippedAsync(raw.ExternalUrl, feedName: raw.FeedName, collectionName: raw.CollectionName, reason: categorizationResult.Explanation, ct: ct);
                         itemsSkipped++;
                         continue;
                     }
+
+                    var processed = categorizationResult.Item;
 
                     // Write to database
                     try
@@ -231,6 +259,9 @@ public sealed class ContentProcessingService
                         await _processedUrlRepo.RecordSuccessAsync(
                             raw.ExternalUrl,
                             raw.IsYouTube ? raw.FeedTags : null,
+                            raw.FeedName,
+                            raw.CollectionName,
+                            categorizationResult.Explanation,
                             ct);
                         itemsAdded++;
                     }
@@ -241,10 +272,13 @@ public sealed class ContentProcessingService
                     catch (DbException ex)
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR writing {processed.ExternalUrl}: {ex.Message}"));
-                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, ct);
+                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, categorizationResult.Explanation, ct);
                         errorCount++;
                     }
                 }
+
+                // Flush log to DB after each feed so the frontend shows live progress
+                await FlushLogAsync();
             }
 
             // Clean up old job records (keep last 500)
@@ -340,7 +374,7 @@ public sealed class ContentProcessingService
                 new
                 {
                     Section = section.ToLowerInvariant(),
-                    WeekStart = weekStart,
+                    WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
                     Collection = item.CollectionName,
                     Slug = item.Slug
                 },
@@ -509,18 +543,18 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
 
         if (item.Tags.Count > 0)
         {
-            var tagRows = BuildTagWords(item.Tags, item.CollectionName, item.Slug,
+            var tagRows = BuildTagWords(item.Tags, item.CollectionName, item.Slug, item.DateEpoch,
                 isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
             foreach (var row in tagRows)
             {
                 await _connection.ExecuteAsync(new CommandDefinition(
                     @"INSERT INTO content_tags_expanded
                         (collection_name, slug, tag_word, tag_display, is_full_tag,
-                         is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                         date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
                          is_ml, is_security, sections_bitmask)
                       VALUES
                         (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
-                         @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                         @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
                          @IsMl, @IsSecurity, @Bitmask)
                       ON CONFLICT DO NOTHING",
                     row,
@@ -530,7 +564,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     }
 
     private static List<object> BuildTagWords(
-        IReadOnlyList<string> tags, string collection, string slug,
+        IReadOnlyList<string> tags, string collection, string slug, long dateEpoch,
         bool isAi, bool isAzure, bool isDotnet, bool isDevops, bool isGhc,
         bool isMl, bool isSecurity, int bitmask)
     {
@@ -551,6 +585,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                 TagWord = word.ToLowerInvariant(),
                 TagDisplay = display,
                 IsFullTag = full,
+                DateEpoch = dateEpoch,
                 IsAi = isAi,
                 IsAzure = isAzure,
                 IsDotnet = isDotnet,

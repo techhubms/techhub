@@ -1,97 +1,31 @@
-# API Integration Tests - Tech Hub
+# API Integration Tests
 
-> **AI CONTEXT**: This is a **LEAF** context file for API integration tests in the `tests/TechHub.Api.Tests/` directory. It complements the [tests/AGENTS.md](../AGENTS.md) testing strategy.
-> **RULE**: Follow the 8-step workflow in Root [AGENTS.md](../../AGENTS.md).
+> **RULE**: Follow [tests/AGENTS.md](../AGENTS.md) for shared testing rules and [Root AGENTS.md](../../AGENTS.md) for workflow.
 
-## Overview
+Integration tests for the REST API using xUnit and WebApplicationFactory, backed by PostgreSQL via Testcontainers.
 
-This directory contains **integration tests** for the Tech Hub REST API using **xUnit** and **WebApplicationFactory**. These tests validate API endpoints, HTTP contracts, and request/response behavior against a real ASP.NET Core application backed by PostgreSQL via Testcontainers.
+## Test Infrastructure
 
-**Implementation being tested**: See [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) for endpoint patterns.
+- `TechHubApiFactory.cs` (via TechHub.TestUtilities) — Custom `WebApplicationFactory<Program>` with PostgreSQL Testcontainer
+- Test classes use `IClassFixture<TechHubApiFactory>` to share the factory
+- See [TechHub.TestUtilities/AGENTS.md](../TechHub.TestUtilities/AGENTS.md) for factory details
 
-## What This Directory Contains
+## What to Test
 
-**Test Files**: xUnit test classes that validate API endpoint behavior:
+- ✅ HTTP status codes (200, 404, 400)
+- ✅ Response body structure (JSON deserialization)
+- ✅ Query parameter handling (filtering, pagination)
+- ✅ Error responses (validation errors, not found)
+- ✅ HTTP pipeline (CORS, cache, security headers)
 
-- `Endpoints/ContentEndpointsTests.cs` - Tests for section & content endpoints
-- `Endpoints/RssEndpointsTests.cs` - Tests for RSS feed generation
-- `Endpoints/CustomPagesEndpointsTests.cs` - Tests for custom page data
+## What NOT to Test Here
 
-**Test Infrastructure**:
+- ❌ Business logic (belongs in Core unit tests)
+- ❌ Repository internals (belongs in Infrastructure tests)
+- ❌ UI rendering (belongs in E2E tests)
 
-- `TechHubApiFactory.cs` (via TechHub.TestUtilities) - Custom `WebApplicationFactory<Program>` for test setup
-- Configures test server with PostgreSQL Testcontainer
-- Sets up test-specific configuration (file paths, etc.)
+## Key Rules
 
-## Testing Strategy
-
-**What to Test**:
-
-- ✅ **HTTP status codes** (200, 404, 400, etc.)
-- ✅ **Response body structure** (JSON serialization)
-- ✅ **Query parameter handling** (filtering, pagination)
-- ✅ **Content negotiation** (Accept headers)
-- ✅ **Error responses** (validation errors, not found)
-- ✅ **Integration with real repositories** (file-based)
-
-**What NOT to Test**:
-
-- ❌ **Business logic** (belongs in unit tests)
-- ❌ **Repository internals** (belongs in Infrastructure tests)
-- ❌ **UI rendering** (belongs in E2E tests)
-
-## Test Patterns
-
-### Using WebApplicationFactory
-
-The `TechHubApiFactory` class configures `WebApplicationFactory<Program>` for integration testing:
-
-- Creates a test server backed by PostgreSQL Testcontainer
-- Allows dependency injection overrides for mocking
-- Produces `HttpClient` instances for making requests
-
-Test classes use `IClassFixture<TechHubApiFactory>` to share the factory across tests.
-
-### What to Test
-
-**HTTP Status Codes**:
-
-- 200 OK for successful requests
-- 404 Not Found for missing resources
-- 400 Bad Request for validation errors
-
-**Query Parameters**:
-
-- Filtering by section, collection, tags
-- Pagination parameters
-- Invalid parameter handling
-
-**Response Structure**:
-
-- Deserialize responses to models
-- Verify expected properties are present
-- Validate collection counts and ordering
-
-See actual tests in `Endpoints/` for implementation examples.
-
-## Best Practices
-
-1. **Use FluentAssertions** for readable assertions
-2. **Test realistic scenarios** - Use actual file-based data
-3. **Verify response structure** - Deserialize and validate DTOs
-4. **Test error cases** - Invalid inputs, missing resources
-5. **Use [Theory]** for testing multiple similar scenarios
-6. **Clean test names** - `MethodName_Scenario_ExpectedResult`
-
-## Common Pitfalls
-
-❌ **Don't mock repositories** in integration tests (use real implementations)  
-❌ **Don't test business logic** here (belongs in unit tests)  
-❌ **Don't share state** between tests (each test is isolated)  
-❌ **Don't ignore status codes** (always verify expected HTTP codes)
-
-## Related Documentation
-
-- [tests/AGENTS.md](../AGENTS.md) - Complete testing strategy
-- [src/TechHub.Api/AGENTS.md](../../src/TechHub.Api/AGENTS.md) - API development patterns
-- [Root AGENTS.md](../../AGENTS.md#4-write-tests-before-implementing-changes-tdd) - When to write tests
+- Don't mock repositories — use real implementations with Testcontainers
+- Don't share state between tests
+- Always verify HTTP status codes

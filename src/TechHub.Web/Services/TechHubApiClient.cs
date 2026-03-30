@@ -993,4 +993,232 @@ public class TechHubApiClient : ITechHubApiClient
             throw;
         }
     }
+
+    // ================================================================
+    // Processed URLs methods
+    // ================================================================
+
+    /// <summary>
+    /// Get a paginated list of processed URLs with optional filters.
+    /// GET /api/admin/processed-urls
+    /// </summary>
+    public virtual async Task<PagedResult<ProcessedUrlListItem>> GetProcessedUrlsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? status = null,
+        string? search = null,
+        string? feedName = null,
+        string? collectionName = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var query = $"/api/admin/processed-urls?page={page}&pageSize={pageSize}";
+            if (!string.IsNullOrEmpty(status))
+            {
+                query += $"&status={Uri.EscapeDataString(status)}";
+            }
+
+            if (!string.IsNullOrEmpty(search))
+            {
+                query += $"&search={Uri.EscapeDataString(search)}";
+            }
+
+            if (!string.IsNullOrEmpty(feedName))
+            {
+                query += $"&feedName={Uri.EscapeDataString(feedName)}";
+            }
+
+            if (!string.IsNullOrEmpty(collectionName))
+            {
+                query += $"&collectionName={Uri.EscapeDataString(collectionName)}";
+            }
+
+            var result = await _httpClient.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
+                query, cancellationToken);
+            return result ?? new PagedResult<ProcessedUrlListItem> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch processed URLs");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Delete a specific processed URL so it can be retried.
+    /// DELETE /api/admin/processed-urls?url={url}
+    /// </summary>
+    public virtual async Task<bool> DeleteProcessedUrlAsync(
+        string url,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                $"/api/admin/processed-urls?url={Uri.EscapeDataString(url)}", cancellationToken);
+            return response.IsSuccessStatusCode;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete processed URL");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Delete all failed processed URL records.
+    /// DELETE /api/admin/processed-urls/failed
+    /// </summary>
+    public virtual async Task<int> DeleteAllFailedProcessedUrlsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                "/api/admin/processed-urls/failed", cancellationToken);
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<DeletedCountResponse>(cancellationToken);
+            return result?.Deleted ?? 0;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete all failed processed URLs");
+            throw;
+        }
+    }
+
+    private sealed class DeletedCountResponse
+    {
+        public int Deleted { get; init; }
+    }
+
+    // ================================================================
+    // Admin – Custom page data methods
+    // ================================================================
+
+    /// <summary>
+    /// List all custom page entries.
+    /// GET /api/admin/custom-pages
+    /// </summary>
+    public virtual async Task<IReadOnlyList<CustomPageEntry>> GetCustomPageEntriesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var entries = await _httpClient.GetFromJsonAsync<IReadOnlyList<CustomPageEntry>>(
+                "/api/admin/custom-pages",
+                cancellationToken);
+            return entries ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch custom page entries");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get a single custom page entry with full JSON.
+    /// GET /api/admin/custom-pages/{key}
+    /// </summary>
+    public virtual async Task<CustomPageEntry?> GetCustomPageEntryAsync(
+        string key,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<CustomPageEntry>(
+                $"/api/admin/custom-pages/{Uri.EscapeDataString(key)}",
+                cancellationToken);
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch custom page entry {Key}", key);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Update the raw JSON for a custom page.
+    /// PUT /api/admin/custom-pages/{key}
+    /// </summary>
+    public virtual async Task<CustomPageEntry> UpdateCustomPageAsync(
+        string key,
+        string jsonData,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/custom-pages/{Uri.EscapeDataString(key)}",
+                new { JsonData = jsonData },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<CustomPageEntry>(cancellationToken)
+                ?? throw new InvalidOperationException("API returned null for updated custom page entry");
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update custom page {Key}", key);
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Admin – Content item ai_metadata methods
+    // ================================================================
+
+    /// <summary>
+    /// Get the ai_metadata JSON for a content item by external URL.
+    /// GET /api/admin/content-items/ai-metadata?url={url}
+    /// </summary>
+    public virtual async Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(
+        string url,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<ContentItemAiMetadataResult>(
+                $"/api/admin/content-items/ai-metadata?url={Uri.EscapeDataString(url)}",
+                cancellationToken);
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch ai_metadata for URL {Url}", url.Sanitize());
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Update the ai_metadata JSON for a content item by external URL.
+    /// PUT /api/admin/content-items/ai-metadata?url={url}
+    /// </summary>
+    public virtual async Task UpdateContentItemAiMetadataAsync(
+        string url,
+        string aiMetadata,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/content-items/ai-metadata?url={Uri.EscapeDataString(url)}",
+                new { AiMetadata = aiMetadata },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update ai_metadata for URL {Url}", url.Sanitize());
+            throw;
+        }
+    }
 }

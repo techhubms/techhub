@@ -1,7 +1,6 @@
 @page "/admin/feeds"
 @layout AdminLayout
 @rendermode InteractiveServer
-@attribute [Microsoft.AspNetCore.Authorization.Authorize]
 @using TechHub.Core.Models.ContentProcessing
 @using TechHub.Web.Services
 @implements IDisposable
@@ -17,7 +16,7 @@
             <p class="admin-page-subtitle">Manage the list of RSS feeds that are processed for content ingestion</p>
         </div>
         <div class="admin-actions">
-            <button class="btn-primary" @onclick="ShowAddForm">+ Add Feed</button>
+            <button class="btn" @onclick="ShowAddForm">+ Add Feed</button>
             <button class="btn-secondary" @onclick="LoadFeedsAsync">⟳ Refresh</button>
         </div>
     </div>
@@ -54,7 +53,7 @@
                 </div>
             </div>
             <div class="admin-form-actions">
-                <button class="btn-primary" @onclick="SaveFeedAsync" disabled="@_saving">
+                <button class="btn" @onclick="SaveFeedAsync" disabled="@_saving">
                     @(_saving ? "Saving…" : "Save")
                 </button>
                 <button class="btn-secondary" @onclick="CancelForm">Cancel</button>

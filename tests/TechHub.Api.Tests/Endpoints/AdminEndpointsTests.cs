@@ -1,6 +1,10 @@
 using System.Net;
 using System.Net.Http.Json;
+using System.Text.Json;
 using FluentAssertions;
+using Microsoft.Extensions.DependencyInjection;
+using TechHub.Core.Interfaces;
+using TechHub.Core.Models;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.TestUtilities;
 
@@ -13,11 +17,13 @@ namespace TechHub.Api.Tests.Endpoints;
 public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
 {
     private readonly HttpClient _client;
+    private readonly TechHubIntegrationTestApiFactory _factory;
 
     public AdminEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
         ArgumentNullException.ThrowIfNull(factory);
 
+        _factory = factory;
         _client = factory.CreateClient();
     }
 
@@ -283,5 +289,174 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+    }
+
+    // ── Processed URL Endpoints ──────────────────────────────────────────────
+
+    [Fact]
+    public async Task GetProcessedUrls_ReturnsPagedResult()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/processed-urls",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().NotBeNull();
+        result.TotalCount.Should().BeGreaterThanOrEqualTo(0);
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithValidStatusFilter_ReturnsOk()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/processed-urls?status=succeeded",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithInvalidStatus_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/processed-urls?status=invalid",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithPagination_ReturnsOk()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/processed-urls?page=1&pageSize=10",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithSearchFilter_ReturnsOk()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/processed-urls?search=example.com",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+    }
+
+    [Fact]
+    public async Task DeleteProcessedUrl_WithMissingUrl_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.DeleteAsync(
+            "/api/admin/processed-urls",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task DeleteProcessedUrl_WithNonExistentUrl_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.DeleteAsync(
+            "/api/admin/processed-urls?url=https://nonexistent.example.com/page",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task DeleteAllFailedUrls_ReturnsDeletedCount()
+    {
+        // Act
+        var response = await _client.DeleteAsync(
+            "/api/admin/processed-urls/failed",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var body = await response.Content.ReadFromJsonAsync<JsonElement>(
+            TestContext.Current.CancellationToken);
+        body.GetProperty("deleted").GetInt32().Should().BeGreaterThanOrEqualTo(0);
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithFeedMetadata_ReturnsFeedAndCollection()
+    {
+        // Arrange — seed a processed URL with feed metadata stored directly
+        const string testUrl = "https://example.com/feed-meta-test";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var repo = scope.ServiceProvider.GetRequiredService<IProcessedUrlRepository>();
+            await repo.RecordSuccessAsync(testUrl, feedName: "Test Feed", collectionName: "blogs",
+                ct: TestContext.Current.CancellationToken);
+        }
+
+        // Act
+        var response = await _client.GetAsync(
+            $"/api/admin/processed-urls?search={Uri.EscapeDataString(testUrl)}",
+            TestContext.Current.CancellationToken);
+
+        // Assert — verify raw JSON contains feedName and collectionName
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+
+        var json = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var doc = JsonDocument.Parse(json);
+        var items = doc.RootElement.GetProperty("items");
+        items.GetArrayLength().Should().BeGreaterThan(0);
+
+        var first = items[0];
+        first.GetProperty("externalUrl").GetString().Should().Be(testUrl);
+        first.GetProperty("feedName").GetString().Should().Be("Test Feed");
+        first.GetProperty("collectionName").GetString().Should().Be("blogs");
+    }
+
+    [Fact]
+    public async Task GetProcessedUrls_WithFeedMetadata_DeserializesToModel()
+    {
+        // Arrange — seed a processed URL with feed metadata stored directly
+        const string testUrl = "https://example.com/feed-meta-deserialize";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var repo = scope.ServiceProvider.GetRequiredService<IProcessedUrlRepository>();
+            await repo.RecordSuccessAsync(testUrl, feedName: "Test Feed", collectionName: "blogs",
+                ct: TestContext.Current.CancellationToken);
+        }
+
+        // Act — deserialize using the same type as the Web client
+        var result = await _client.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
+            $"/api/admin/processed-urls?search={Uri.EscapeDataString(testUrl)}",
+            TestContext.Current.CancellationToken);
+
+        // Assert — FeedName and CollectionName must survive deserialization
+        result.Should().NotBeNull();
+        result!.Items.Should().NotBeEmpty();
+
+        var first = result.Items[0];
+        first.ExternalUrl.Should().Be(testUrl);
+        first.FeedName.Should().Be("Test Feed");
+        first.CollectionName.Should().Be("blogs");
     }
 }

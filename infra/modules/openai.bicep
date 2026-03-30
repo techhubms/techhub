@@ -29,8 +29,8 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   kind: 'AIServices'
   properties: {
     customSubDomainName: openAiName
-    // Must remain public: content processing scripts run from GitHub Actions runners
-    // which have dynamic IPs. Authentication is via API key.
+    // Public access is required for admin operations and is restricted via NSP association.
+    // Container Apps access AI Foundry through the private endpoint in the spoke VNet.
     publicNetworkAccess: 'Enabled'
   }
 }

@@ -119,9 +119,8 @@ See [tests/AGENTS.md](../tests/AGENTS.md) for testing strategies, TDD workflow, 
 
 ### Documentation (`docs/`)
 
-Comprehensive functional and technical documentation. **Always consult [docs/documentation-index.md](documentation-index.md) to find relevant documentation.**
+Comprehensive functional and technical documentation.
 
-- **`documentation-index.md`** - **INDEX OF ALL DOCUMENTATION** - use this to find what you need
 - **`architecture.md`** - System architecture overview
 - **`technology-stack.md`** - Technologies used and rationale
 - **`repository-structure.md`** - This file
@@ -140,7 +139,6 @@ PowerShell automation scripts for development and maintenance tasks:
   - `Run -WithoutTests` - Start servers without running tests
   - `Run -TestProject <name>` - Run specific test project
 
-- **`Generate-DocumentationIndex.ps1`** - Generates `docs/documentation-index.md` from doc headings
 - **`Generate-DevCertificate.ps1`** - Creates HTTPS dev certificates
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
 - **`Restore-Database.ps1`** - Downloads and restores the production PostgreSQL database

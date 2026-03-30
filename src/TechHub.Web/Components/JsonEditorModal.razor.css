@@ -1,0 +1,90 @@
+.json-editor-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--spacing-2);
+}
+
+.json-editor-modal {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: min(900px, 100%);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.json-editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-2) var(--spacing-3);
+    border-bottom: 1px solid var(--color-border);
+    gap: var(--spacing-2);
+}
+
+.json-editor-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.json-editor-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    padding: 0 var(--spacing-1);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--color-text-primary);
+    }
+}
+
+.json-editor-body {
+    flex: 1;
+    overflow: hidden;
+    padding: var(--spacing-2) var(--spacing-3);
+    display: flex;
+    flex-direction: column;
+}
+
+.json-editor-textarea {
+    flex: 1;
+    width: 100%;
+    min-height: 400px;
+    resize: vertical;
+    font-family: var(--font-family-mono, ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+    color: var(--color-text-primary);
+    background: var(--color-surface-raised);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2);
+    tab-size: 2;
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 2px var(--color-primary-alpha);
+    }
+}
+
+.json-editor-footer {
+    display: flex;
+    gap: var(--spacing-1);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-top: 1px solid var(--color-border);
+}

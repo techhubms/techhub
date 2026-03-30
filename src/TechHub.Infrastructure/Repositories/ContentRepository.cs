@@ -1456,4 +1456,37 @@ public class ContentRepository : IContentRepository
             sql.Append(" AND c.date_epoch <= @toDate");
         }
     }
+
+    // ==================== Admin Methods ====================
+
+    /// <inheritdoc/>
+    public async Task<TechHub.Core.Models.Admin.ContentItemAiMetadataResult?> GetAiMetadataByUrlAsync(
+        string externalUrl,
+        CancellationToken ct = default)
+    {
+        const string Sql = @"
+SELECT collection_name AS CollectionName, slug AS Slug, ai_metadata::text AS AiMetadata
+FROM content_items
+WHERE external_url = @ExternalUrl
+LIMIT 1";
+
+        return await Connection.QueryFirstOrDefaultAsync<TechHub.Core.Models.Admin.ContentItemAiMetadataResult>(
+            new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));
+    }
+
+    /// <inheritdoc/>
+    public async Task<bool> UpdateAiMetadataAsync(
+        string externalUrl,
+        string aiMetadata,
+        CancellationToken ct = default)
+    {
+        const string Sql = @"
+UPDATE content_items
+SET ai_metadata = @AiMetadata::jsonb, updated_at = NOW()
+WHERE external_url = @ExternalUrl";
+
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new { ExternalUrl = externalUrl, AiMetadata = aiMetadata }, cancellationToken: ct));
+        return rows > 0;
+    }
 }

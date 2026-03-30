@@ -315,18 +315,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Install Pester and dependencies
+      - name: Install Pester
         shell: pwsh
         run: |
           Install-Module -Name Pester -MinimumVersion 5.0.0 -Force -Scope CurrentUser
-          Install-Module -Name HtmlToMarkdown -Force -Scope CurrentUser
 
       - name: Run Pester tests
         shell: pwsh
         run: |
-          # Pre-load all content-processing functions (required by tests)
-          . "$PWD/tests/powershell/Initialize-BeforeAll.ps1"
-
           $config = New-PesterConfiguration
           $config.Run.Path = "tests/powershell"
           $config.Run.Throw = $true

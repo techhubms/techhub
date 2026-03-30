@@ -6,17 +6,10 @@
         <Found Context="routeData">
             <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
                 <NotAuthorized>
-                    @{
-                        // Only redirect to Azure AD sign-in for admin pages.
-                        // Public pages should render normally for unauthenticated users.
-                        var currentPath = new Uri(Navigation.Uri).AbsolutePath;
-                        if (currentPath.StartsWith("/admin", StringComparison.OrdinalIgnoreCase))
-                        {
-                            Navigation.NavigateTo(
-                                $"/admin/login?returnUrl={Uri.EscapeDataString(Navigation.Uri)}",
-                                forceLoad: true);
-                        }
-                    }
+                    @* Admin pages handle authorization inline via AdminLayout's AuthorizeView.
+                       No server-side redirect is needed — Blazor initializes normally and the
+                       layout shows the login form when the user is not authenticated.
+                       If a non-admin page ever requires [Authorize], add redirect logic here. *@
                 </NotAuthorized>
             </AuthorizeRouteView>
         </Found>
