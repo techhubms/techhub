@@ -26,7 +26,7 @@ var dnsZoneNames = [
   'privatelink.services.ai.azure.com'
 ]
 
-// Reference existing DNS zones in shared RG (created by the first spoke deployment, or create if needed)
+// DNS zones required for AIServices account private endpoint (idempotent — safe to redeploy)
 resource dnsZones 'Microsoft.Network/privateDnsZones@2024-06-01' = [for zone in dnsZoneNames: {
   name: zone
   location: 'global'

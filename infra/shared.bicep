@@ -20,6 +20,7 @@ param keyVaultAdminObjectIds array = []
 param hubVnetName string = 'vnet-techhub-hub'
 
 @description('Admin IP address for NSP inbound rule and PostgreSQL firewall (e.g. "1.2.3.4")')
+@minLength(7)
 param adminIpAddress string
 
 @description('DNS zone name for ACME challenge delegation (used by certbot-dns-azure for wildcard cert renewal)')
