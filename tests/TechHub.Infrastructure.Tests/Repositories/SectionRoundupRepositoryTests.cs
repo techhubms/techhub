@@ -179,7 +179,7 @@ public class SectionRoundupRepositoryTests
         IEnumerable<string>? keyTopics = null)
     {
         var topics = keyTopics?.ToList() ?? [];
-        var topicsJson = System.Text.Json.JsonSerializer.Serialize(topics);
+        _ = System.Text.Json.JsonSerializer.Serialize(topics);
 
         var aiMetadata = System.Text.Json.JsonSerializer.Serialize(new
         {

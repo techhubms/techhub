@@ -91,10 +91,26 @@ public class StartupBackgroundServiceTests
         mockProcessedUrlRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<IEnumerable<string>>(), It.IsAny<CancellationToken>()))
             .Returns(Task.CompletedTask);
 
+        var mockCustomPageRepo = new Mock<ICustomPageDataRepository>();
+        mockCustomPageRepo.Setup(r => r.IsEmptyAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(false);
+
+        var appSettings = Options.Create(new AppSettings
+        {
+            BaseUrl = "https://localhost",
+            Content = new ContentSettings
+            {
+                CollectionsPath = Path.GetTempPath(),
+                Sections = []
+            }
+        });
+
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockConnectionFactory.Object);
         services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockProcessedUrlRepo.Object);
+        services.AddSingleton(mockCustomPageRepo.Object);
+        services.AddSingleton<IOptions<AppSettings>>(appSettings);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
 

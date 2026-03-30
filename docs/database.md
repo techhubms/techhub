@@ -60,6 +60,11 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
 | `sync_metadata` | Tracks last sync time and content hashes |
 | `content_fts` | Full-text search using tsvector/tsquery |
+| `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag) |
+| `processed_urls` | Tracks processed/skipped/failed URLs for the content pipeline |
+| `content_processing_jobs` | Audit log of content processing runs |
+| `section_roundup_items` | Weekly AI-generated roundup articles |
+| `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 
 ### Design Decisions
 

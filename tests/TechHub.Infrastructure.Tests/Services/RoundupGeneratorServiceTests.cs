@@ -6,7 +6,6 @@ using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
-using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
 using TechHub.TestUtilities;
 

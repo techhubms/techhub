@@ -221,7 +221,7 @@ If an article was skipped with an unexpected reason:
 
 ### Common Frontmatter Issues (Manual Content)
 
-- **Missing Frontmatter**: Check requirements in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema)
+- **Missing Frontmatter**: Check requirements in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter)
 - **File Naming**: Use `YYYY-MM-DD-title.md` pattern
 - **Sections/Tags**: Verify against site configuration in [terminology.md](terminology.md)
 - **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`

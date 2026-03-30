@@ -110,8 +110,21 @@ If the data cannot be constructed or the page definition is missing.
 
 Custom pages content is hydrated from:
 
-1. **JSON data files** in `collections/_custom/` directory (e.g., `dx-space.json`, `levels.json`)
+1. **Database** (`custom_page_data` table) — JSON is stored in the database and seeded on first run from `collections/_custom/*.json` files. Admin users can edit the JSON directly from the admin UI.
 2. **Aggregation of items** from standard collections (e.g., Features page pulls from `collections/_videos/ghc-features/`)
+
+### Admin Management
+
+Custom page JSON data can be viewed and edited from the admin dashboard at `/admin/custom-pages`. Each entry shows:
+
+- **Key** — Unique identifier matching the API endpoint (e.g., `dx-space`, `levels`)
+- **Description** — Human-readable label
+- **Last Updated** — Timestamp of the most recent edit
+- **Edit** — Opens a JSON editor modal (`JsonEditorModal`) for in-place editing
+
+Changes made via the admin UI are immediately persisted to the `custom_page_data` database table and reflected on the next page load (no seeding or restart required).
+
+See [src/TechHub.Api/Endpoints/AdminEndpoints.cs](../src/TechHub.Api/Endpoints/AdminEndpoints.cs) for the admin API endpoints and [src/TechHub.Infrastructure/Repositories/CustomPageDataRepository.cs](../src/TechHub.Infrastructure/Repositories/CustomPageDataRepository.cs) for the repository.
 
 The three GenAI endpoints use a special handler that processes markdown content within the JSON and replaces `{{mermaid:id}}` placeholders with actual mermaid diagram code blocks. Other endpoints deserialize JSON directly.
 
