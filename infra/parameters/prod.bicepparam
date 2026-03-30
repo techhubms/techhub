@@ -35,7 +35,7 @@ param wildcardCertNames = {
 param openAiName = 'oai-techhub-prod'
 param openAiModelCapacity = 200
 // Admin IP for PostgreSQL firewall (same as shared NSP admin IP)
-param adminIpAddress = readEnvironmentVariable('ADMIN_IP_ADDRESS', '')
+param adminIpAddress = '86.89.119.3'
 // NSP from shared deployment (for associating environment resources)
 param nspId = readEnvironmentVariable('NSP_ID', '')
 param nspProfileId = readEnvironmentVariable('NSP_PROFILE_ID', '')
