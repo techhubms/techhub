@@ -82,7 +82,8 @@ param openAiName string = 'oai-techhub-${environmentName}'
 param openAiModelCapacity int = 100
 
 @description('Comma-separated admin IP addresses for PostgreSQL firewall rules (e.g. "1.2.3.4,5.6.7.8")')
-param adminIpAddresses string = ''
+@minLength(7)
+param adminIpAddresses string
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
@@ -201,21 +202,6 @@ module openAiPrivateEndpoint './modules/openAiPrivateEndpoint.bicep' = {
     subnetId: network.outputs.privateEndpointsSubnetId
     openAiAccountId: openai.outputs.openAiId
     vnetId: network.outputs.vnetId
-  }
-}
-
-// Associate environment-specific resources with the shared NSP
-// AI Foundry excluded: content processing runs from GitHub Actions runners with dynamic IPs
-module nspAssociations './modules/nspAssociation.bicep' = {
-  scope: sharedResourceGroup
-  name: 'nspAssoc-${environmentName}'
-  params: {
-    nspName: 'nsp-techhub'
-    associationPrefix: 'assoc-${environmentName}'
-    resourceIds: [
-      monitoring.outputs.appInsightsId
-      monitoring.outputs.logAnalyticsWorkspaceId
-    ]
   }
 }
 

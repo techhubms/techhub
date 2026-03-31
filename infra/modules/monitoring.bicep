@@ -24,9 +24,10 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
       name: 'PerGB2018'
     }
     retentionInDays: 30
-    // Always disabled: per-environment resources are NSP-associated (nspAssociation.bicep in main.bicep)
+    // Ingestion disabled: app telemetry uses AMPLS private path
     publicNetworkAccessForIngestion: 'Disabled'
-    publicNetworkAccessForQuery: 'Disabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
+    publicNetworkAccessForQuery: 'Enabled'
     workspaceCapping: {
       dailyQuotaGb: dailyQuotaGb
     }
@@ -42,10 +43,11 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
     RetentionInDays: appInsightsRetentionInDays
-    // Always disabled: per-environment resources are NSP-associated (nspAssociation.bicep in main.bicep).
+    // Ingestion disabled: app telemetry uses AMPLS private path.
     // Availability tests use Azure-internal paths and are not affected by this setting.
     publicNetworkAccessForIngestion: 'Disabled'
-    publicNetworkAccessForQuery: 'Disabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
+    publicNetworkAccessForQuery: 'Enabled'
   }
 }
 

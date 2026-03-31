@@ -48,7 +48,7 @@ resource privateEndpointsNsg 'Microsoft.Network/networkSecurityGroups@2025-01-01
   }
 }
 
-// Hub Virtual Network (VPN Gateway removed — admin access via NSP + IP firewall rules)
+// Hub Virtual Network (admin access via IP firewall rules on each resource)
 resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
   name: vnetName
   location: location

@@ -1,11 +1,11 @@
 # Network Architecture
 
-Tech Hub uses a **hub-spoke VNet topology** with private endpoints for all data services. Admin access is controlled via Network Security Perimeter (NSP) with IP allowlisting and per-resource firewall rules.
+Tech Hub uses a **hub-spoke VNet topology** with private endpoints for all data services. Admin access is controlled via per-resource IP firewall rules and RBAC.
 
 ## Topology
 
 ```text
-Admin IP (NSP allowlisted)
+Admin IP (firewall allowlisted)
     │
     ▼
 Hub VNet — vnet-techhub-hub (10.100.0.0/16) [rg-techhub-shared]
@@ -39,24 +39,17 @@ Each spoke VNet has bidirectional peering with the hub:
 
 The spoke-to-hub peering depends on hub-to-spoke being established first.
 
-## Network Security Perimeter (NSP)
+## IP Firewall Rules
 
-A single NSP (`nsp-techhub`) in the shared resource group controls public access to NSP-supported resources. Admin access is via IP allowlisting (supports multiple IPs via `ADMIN_IP_ADDRESSES` env var); same-subscription Azure services are allowed implicitly. All NSP-associated resources have their underlying network default set to deny (defense-in-depth).
+Admin access to Azure resources is controlled via per-resource IP firewall rules using the `ADMIN_IP_ADDRESSES` environment variable (supports multiple comma-separated IPs).
 
-```text
-NSP: nsp-techhub (rg-techhub-shared)
-└── Profile: profile-techhub
-    ├── Inbound: allow-admin-ip  → addressPrefixes: ["<IP1>/32", "<IP2>/32", ...]
-    └── Inbound: allow-subscription → subscriptions: [{id: "<subscription-id>"}]
-
-Associated resources:
-  - Key Vault (shared)
-  - Log Analytics (shared)
-  - App Insights (staging, prod)
-  - Log Analytics (staging, prod)
-```
-
-AI Foundry is **not** associated with the NSP — content processing scripts run from GitHub Actions runners with dynamic public IPs that cannot be allowlisted. AI Foundry remains publicly accessible with API key authentication.
+| Resource | Firewall Mechanism | Admin Access |
+|----------|-------------------|--------------|
+| Key Vault | `networkAcls.ipRules` | Admin IPs allowlisted; default deny; no Azure services bypass |
+| PostgreSQL | Per-IP firewall rules | Admin IPs allowlisted; public access enabled only when IPs configured |
+| Log Analytics | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
+| App Insights | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
+| AI Foundry | Public access enabled | API key authentication; GitHub Actions needs public access |
 
 ## Azure Monitor Private Link Scope (AMPLS)
 
@@ -68,7 +61,7 @@ AMPLS routes app telemetry privately through the hub VNet. All Application Insig
 
 ## Private Endpoints
 
-Data services use private endpoints. Key Vault uses NSP for public admin access; AI Foundry remains publicly accessible with API key authentication; PostgreSQL uses IP firewall rules.
+Data services use private endpoints. Key Vault uses IP firewall rules for admin access; AI Foundry remains publicly accessible with API key authentication; PostgreSQL uses IP firewall rules.
 
 | Resource | PE Location | DNS Zone | Linked VNets |
 |----------|-------------|----------|--------------|
@@ -85,9 +78,8 @@ Private DNS zones are linked to the appropriate VNets for name resolution.
 
 The shared Key Vault stores wildcard TLS certificates used by both staging and production Container Apps.
 
-- **Public access**: Enabled (controlled by NSP — only admin IP allowed)
-- **Network ACLs**: Default deny, bypass Azure services (defense-in-depth behind NSP)
-- **Access**: Private endpoint in hub VNet + NSP-controlled public access
+- **Public access**: Enabled (admin IPs allowlisted via `networkAcls.ipRules`; default deny; bypass disabled)
+- **Access**: Private endpoint in hub VNet + IP-allowlisted public access (no trusted Azure services bypass — all app traffic uses private endpoint)
 - **Authorization**: RBAC (Key Vault Administrator role assigned to specific Azure AD object IDs)
 - **Certificates**: Wildcard certs for `*.hub.ms` and `*.xebia.ms` — see [wildcard-certificates.md](wildcard-certificates.md)
 
@@ -99,7 +91,7 @@ A public Azure DNS zone (`acme.hub.ms`) is used for automated wildcard certifica
 
 Each environment has its own PostgreSQL Flexible Server.
 
-- **Public access**: Enabled with admin IP firewall rules (PostgreSQL does not support NSP)
+- **Public access**: Enabled with admin IP firewall rules
 - **Firewall**: One rule per admin IP from `ADMIN_IP_ADDRESSES` — all other public access denied
 - **Access**: Private endpoint in the environment's spoke VNet
 - **Container Apps** reach PostgreSQL through the spoke VNet private endpoint
@@ -109,7 +101,7 @@ Each environment has its own PostgreSQL Flexible Server.
 
 Each environment has its own AI Foundry (Cognitive Services) account.
 
-- **Public access**: Enabled (AI Foundry is **not** behind NSP — GitHub Actions runners use dynamic IPs)
+- **Public access**: Enabled (AI Foundry is not behind IP firewall — GitHub Actions runners use dynamic IPs)
 - **Private endpoint**: In each spoke VNet for Container Apps to use a private path
 - **DNS zones**: 3 zones per spoke (`privatelink.cognitiveservices.azure.com`, `privatelink.openai.azure.com`, `privatelink.services.ai.azure.com`)
 
@@ -132,8 +124,8 @@ Private DNS zones ensure all consumers can resolve private endpoint IPs:
 
 ## Deploy Order
 
-1. **Shared** (`rg-techhub-shared`): ACR, Log Analytics, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, NSP, AMPLS
-2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, App Insights + Log Analytics, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, NSP associations, AMPLS scoping
+1. **Shared** (`rg-techhub-shared`): ACR, Log Analytics, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, AMPLS
+2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, App Insights + Log Analytics, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, AMPLS scoping
 
 Shared must be deployed first — spoke deployments reference the hub VNet ID for peering.
 
@@ -150,8 +142,6 @@ Shared must be deployed first — spoke deployments reference the hub VNet ID fo
 - PostgreSQL PE: [infra/modules/postgresPrivateEndpoint.bicep](../infra/modules/postgresPrivateEndpoint.bicep)
 - PostgreSQL DNS Zone: [infra/modules/postgresDnsZone.bicep](../infra/modules/postgresDnsZone.bicep)
 - DNS Zone Link: [infra/modules/privateDnsZoneLink.bicep](../infra/modules/privateDnsZoneLink.bicep)
-- NSP: [infra/modules/networkSecurityPerimeter.bicep](../infra/modules/networkSecurityPerimeter.bicep)
-- NSP Association: [infra/modules/nspAssociation.bicep](../infra/modules/nspAssociation.bicep)
 - AMPLS: [infra/modules/monitorPrivateLink.bicep](../infra/modules/monitorPrivateLink.bicep)
 - AMPLS Scope: [infra/modules/amplsScope.bicep](../infra/modules/amplsScope.bicep)
 - AI Foundry PE: [infra/modules/openAiPrivateEndpoint.bicep](../infra/modules/openAiPrivateEndpoint.bicep)
