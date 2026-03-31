@@ -1,9 +1,6 @@
 // Associates resources with an existing Network Security Perimeter (NSP).
-// Used by environment deployments to add their App Insights, Log Analytics,
-// and AI Foundry resources to the shared NSP.
-
-@description('Azure region for the resource associations')
-param location string
+// Used by environment deployments to add selected resources, such as
+// App Insights and Log Analytics, to the shared NSP.
 
 @description('NSP name (must exist in this resource group)')
 param nspName string
@@ -25,7 +22,7 @@ resource nsp 'Microsoft.Network/networkSecurityPerimeters@2023-08-01-preview' ex
 // Associate each resource with the NSP (Enforced mode)
 resource associations 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2023-08-01-preview' = [for (resourceId, i) in resourceIds: {
   name: '${associationPrefix}-${i}'
-  location: location
+  location: nsp.location
   parent: nsp
   properties: {
     privateLinkResource: {

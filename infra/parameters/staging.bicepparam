@@ -36,6 +36,5 @@ param openAiModelCapacity = 100
 // Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
 param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
 // NSP from shared deployment (for associating environment resources)
-param nspId = readEnvironmentVariable('NSP_ID', '')
 param nspProfileId = readEnvironmentVariable('NSP_PROFILE_ID', '')
 

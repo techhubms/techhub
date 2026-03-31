@@ -67,7 +67,7 @@ AMPLS routes app telemetry privately through the hub VNet. All Application Insig
 
 ## Private Endpoints
 
-Data services use private endpoints. Key Vault and AI Foundry use NSP for public admin access; PostgreSQL uses IP firewall rules.
+Data services use private endpoints. Key Vault uses NSP for public admin access; AI Foundry remains publicly accessible with API key authentication; PostgreSQL uses IP firewall rules.
 
 | Resource | PE Location | DNS Zone | Linked VNets |
 |----------|-------------|----------|--------------|

@@ -84,9 +84,6 @@ param openAiModelCapacity int = 100
 @description('Comma-separated admin IP addresses for PostgreSQL firewall rules (e.g. "1.2.3.4,5.6.7.8")')
 param adminIpAddresses string = ''
 
-@description('NSP resource ID from shared deployment (for associating environment resources)')
-param nspId string = ''
-
 @description('NSP profile ID from shared deployment')
 param nspProfileId string = ''
 
@@ -212,11 +209,10 @@ module openAiPrivateEndpoint './modules/openAiPrivateEndpoint.bicep' = {
 
 // Associate environment-specific resources with the shared NSP
 // AI Foundry excluded: content processing runs from GitHub Actions runners with dynamic IPs
-module nspAssociations './modules/nspAssociation.bicep' = if (!empty(nspId) && !empty(nspProfileId)) {
+module nspAssociations './modules/nspAssociation.bicep' = if (!empty(nspProfileId)) {
   scope: sharedResourceGroup
   name: 'nspAssoc-${environmentName}'
   params: {
-    location: location
     nspName: 'nsp-techhub'
     profileId: nspProfileId
     associationPrefix: 'assoc-${environmentName}'
@@ -295,7 +291,7 @@ module postgres './modules/postgres.bicep' = {
     skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_B2s'
     skuTier: 'Burstable'
     backupRetentionDays: environmentName == 'staging' ? 7 : 14
-    adminIpAddresses: !empty(adminIpAddresses) ? split(adminIpAddresses, ',') : []
+    adminIpAddresses: !empty(adminIpAddresses) ? [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)] : []
   }
 }
 

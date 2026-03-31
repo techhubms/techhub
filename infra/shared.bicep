@@ -110,8 +110,8 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
   }
 }
 
-// Parse comma-separated admin IPs into an array
-var adminIpList = split(adminIpAddresses, ',')
+// Parse comma-separated admin IPs into an array (filter empty entries from trailing/double commas)
+var adminIpList = filter(split(adminIpAddresses, ','), ip => !empty(trim(ip)))
 
 // Network Security Perimeter — controls public access to Key Vault, App Insights, Log Analytics
 // AI Foundry is excluded: content processing scripts run from GitHub Actions runners with dynamic IPs
