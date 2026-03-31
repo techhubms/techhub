@@ -24,7 +24,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
     // NSP enforces admin IP allowlist; app traffic uses existing private endpoint.
     publicNetworkAccess: 'Enabled'
     networkAcls: {
-      defaultAction: 'Allow'
+      defaultAction: 'Deny'
       bypass: 'AzureServices'
     }
   }
