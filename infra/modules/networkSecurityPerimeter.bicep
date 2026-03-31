@@ -1,6 +1,6 @@
 // Network Security Perimeter (NSP) — controls public access to associated Azure resources.
 // Admin access via IP allowlist; same-subscription Azure services allowed implicitly.
-// Associated resources: Key Vault, App Insights, Log Analytics, AI Foundry.
+// Associated resources: Key Vault, App Insights, Log Analytics.
 
 @description('Azure region for the NSP')
 param location string
