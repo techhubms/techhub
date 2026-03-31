@@ -2,7 +2,7 @@ namespace TechHub.Core.Models.ContentProcessing;
 
 /// <summary>
 /// An article candidate read from the database for inclusion in a weekly roundup.
-/// Populated by joining <c>section_roundup_items</c> with <c>content_items</c>.
+/// Populated from <c>content_items</c> using section boolean columns and AI metadata.
 /// </summary>
 public sealed class RoundupArticle
 {

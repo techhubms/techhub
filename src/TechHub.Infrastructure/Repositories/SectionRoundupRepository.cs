@@ -8,7 +8,7 @@ using TechHub.Core.Models.ContentProcessing;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// Queries the <c>section_roundup_items</c> table joined with <c>content_items</c>
+/// Queries <c>content_items</c> directly using section boolean columns and AI metadata
 /// to retrieve article candidates for weekly roundup generation.
 /// </summary>
 public sealed class SectionRoundupRepository : ISectionRoundupRepository
@@ -42,29 +42,40 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         DateOnly weekEnd,
         CancellationToken ct = default)
     {
+        // Expand each content item into one row per section it belongs to using the
+        // denormalized boolean columns. Excludes roundups to prevent circular inclusion.
         const string Sql = @"
             SELECT
-                sri.section_name    AS SectionName,
+                s.section_name      AS SectionName,
                 ci.title            AS Title,
                 ci.external_url     AS ExternalUrl,
                 ci.slug             AS Slug,
                 ci.collection_name  AS CollectionName,
                 ci.ai_metadata      AS AiMetadataJson
-            FROM section_roundup_items sri
-            JOIN content_items ci
-                ON ci.collection_name = sri.collection_name
-               AND ci.slug            = sri.slug
-            WHERE sri.week_start_date >= @WeekStart
-              AND sri.week_start_date <= @WeekEnd
+            FROM content_items ci
+            CROSS JOIN LATERAL (VALUES
+                ('ai',              ci.is_ai),
+                ('azure',           ci.is_azure),
+                ('dotnet',          ci.is_dotnet),
+                ('devops',          ci.is_devops),
+                ('github-copilot',  ci.is_github_copilot),
+                ('ml',              ci.is_ml),
+                ('security',        ci.is_security)
+            ) AS s(section_name, is_member)
+            WHERE s.is_member = TRUE
+              AND ci.created_at >= @WeekStart
+              AND ci.created_at < @WeekEndExclusive
               AND ci.ai_metadata IS NOT NULL
-            ORDER BY sri.section_name, sri.added_at";
+              AND ci.collection_name != 'roundups'
+            ORDER BY s.section_name, ci.created_at";
 
+        // WeekEnd is Sunday (inclusive) — add 1 day for exclusive upper bound.
         var rows = await _connection.QueryAsync<RoundupRow>(new CommandDefinition(
             Sql,
             new
             {
                 WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
-                WeekEnd = weekEnd.ToDateTime(TimeOnly.MinValue)
+                WeekEndExclusive = weekEnd.AddDays(1).ToDateTime(TimeOnly.MinValue)
             },
             cancellationToken: ct));
 

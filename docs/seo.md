@@ -164,12 +164,12 @@ All page types have full `SeoMetaTags` coverage:
 | Section/collection listing | `Collection` | Section/collection metadata from API |
 | Content detail (article) | `Article` | Content item summary from API |
 | Content detail (video) | `Video` | Content item summary from API |
-| Custom pages | `Website` | `description` field in `collections/_custom/*.json` |
+| Custom pages | `Website` | `description` field in Custom Page database entry |
 | VS Code Updates (index) | `Collection` | Static description |
 | VS Code Updates (selected video) | `Video` | Video title and summary from page data |
 | About | `Website` | Static description |
 
-Custom page data files (`collections/_custom/*.json`) each contain a top-level `description` field used for the meta description and Open Graph tags. This field is required in the corresponding `PageData` C# model.
+Custom page data objects stored in the database each contain a top-level `description` field used for the meta description and Open Graph tags. This field is required in the corresponding `PageData` C# model.
 
 ## Implementation Reference
 
@@ -180,5 +180,4 @@ Custom page data files (`collections/_custom/*.json`) each contain a top-level `
 - Custom pages: [src/TechHub.Web/Components/Pages/Custom/](../src/TechHub.Web/Components/Pages/Custom/) (Features, Handbook, Levels, ToolTips, GettingStarted, GenAI, SDLC, DXSpace)
 - VS Code Updates: [src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor](../src/TechHub.Web/Components/Pages/GitHubCopilotVSCodeUpdates.razor)
 - About page: [src/TechHub.Web/Components/Pages/About.razor](../src/TechHub.Web/Components/Pages/About.razor)
-- Custom page data (JSON): [collections/_custom/](../collections/_custom/)
 - RSS feeds: [rss-feeds.md](rss-feeds.md)

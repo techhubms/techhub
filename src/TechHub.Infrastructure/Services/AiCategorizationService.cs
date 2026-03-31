@@ -31,6 +31,15 @@ public sealed class AiCategorizationService : IAiCategorizationService
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
     };
 
+    /// <summary>
+    /// Valid section names that map to database boolean columns and bitmask positions.
+    /// Any section returned by the AI that is not in this set is discarded.
+    /// </summary>
+    private static readonly HashSet<string> _validSections = new(StringComparer.OrdinalIgnoreCase)
+    {
+        "ai", "azure", "dotnet", "devops", "github-copilot", "ml", "security"
+    };
+
     public AiCategorizationService(
         IAiCompletionClient completionClient,
         IOptions<AiCategorizationOptions> options,
@@ -55,10 +64,6 @@ public sealed class AiCategorizationService : IAiCategorizationService
         ArgumentNullException.ThrowIfNull(item);
 
         var userContent = BuildUserPrompt(item);
-        if (userContent.Length > _options.MaxContentLength)
-        {
-            userContent = userContent[.._options.MaxContentLength];
-        }
 
         var requestBody = new
         {
@@ -83,17 +88,34 @@ public sealed class AiCategorizationService : IAiCategorizationService
 
                 if (result.IsRateLimited)
                 {
-                    _logger.LogWarning("AI rate limit hit, waiting before retry {Attempt}/{Max}", attempt, _options.MaxRetries);
-                    await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds * attempt), ct);
+                    // Use server-provided retry-after if available, otherwise fall back to config-based delay
+                    var delaySeconds = result.RetryAfterSeconds ?? (_options.RateLimitDelaySeconds * attempt);
+                    _logger.LogWarning("AI rate limit hit, waiting {Delay}s before retry {Attempt}/{Max}",
+                        delaySeconds, attempt, _options.MaxRetries);
+                    await Task.Delay(TimeSpan.FromSeconds(delaySeconds), ct);
                     continue;
+                }
+
+                if (result.ContentFilterMessage != null)
+                {
+                    _logger.LogWarning("AI content filter triggered for {Url}: {Message}",
+                        item.ExternalUrl, result.ContentFilterMessage);
+                    return new CategorizationResult { Explanation = result.ContentFilterMessage };
                 }
 
                 return ParseAiResponse(result.ResponseBody!, item);
             }
-            catch (HttpRequestException ex) when (attempt < _options.MaxRetries)
+            catch (OperationCanceledException) when (ct.IsCancellationRequested)
             {
-                _logger.LogWarning(ex, "AI API call failed (attempt {Attempt}/{Max}), retrying", attempt, _options.MaxRetries);
-                await Task.Delay(TimeSpan.FromSeconds(5 * attempt), ct);
+                throw;
+            }
+            catch (Exception ex) when (attempt < _options.MaxRetries
+                && ex is HttpRequestException or TaskCanceledException or OperationCanceledException or TimeoutException)
+            {
+                var delaySeconds = 5 * attempt;
+                _logger.LogWarning(ex, "AI API call failed (attempt {Attempt}/{Max}), retrying in {Delay}s",
+                    attempt, _options.MaxRetries, delaySeconds);
+                await Task.Delay(TimeSpan.FromSeconds(delaySeconds), ct);
             }
         }
 
@@ -134,43 +156,109 @@ public sealed class AiCategorizationService : IAiCategorizationService
             // Extract explanation from the AI's response (available for both included and excluded items)
             var explanation = GetString(root, "explanation") ?? string.Empty;
 
-            if (root.TryGetProperty("skip", out var skipProp) && skipProp.GetBoolean())
-            {
-                _logger.LogInformation("AI decided to skip item: {Title}", source.Title);
-                return new CategorizationResult { Explanation = explanation };
-            }
-
-            var title = GetString(root, "title") ?? source.Title;
-            var excerpt = GetString(root, "excerpt") ?? source.Description;
-            var collectionName = GetString(root, "collection") ?? source.CollectionName;
-            var author = GetString(root, "author") ?? source.Author;
+            var title = GetString(root, "title");
+            var excerpt = GetString(root, "excerpt");
             var primarySection = GetString(root, "primary_section");
             var tags = GetStringArray(root, "tags");
             var sections = GetStringArray(root, "sections");
-            var itemContent = GetString(root, "content") ?? string.Empty;
-            var slug = GenerateSlug(title, source.PublishedAt);
-            var contentHash = ComputeHash(title + itemContent + excerpt);
+            var itemContent = GetString(root, "content");
 
-            // If there's no title and no sections, the AI excluded this item
+            // If there are no sections, the AI excluded this item
             // (Option B response format: just an explanation, no content fields)
-            if (string.IsNullOrWhiteSpace(GetString(root, "title")) && sections.Count == 0)
+            if (sections.Count == 0)
             {
-                _logger.LogInformation("AI excluded item (no categories): {Title}", source.Title);
+                _logger.LogInformation("AI excluded item (no sections): {Title}", source.Title);
                 return new CategorizationResult { Explanation = explanation };
             }
+
+            // ── Comprehensive AI output validation ────────────────────────────
+            // Reject the entire item if any required field is missing or invalid.
+            // We do NOT silently fix bad data — the item is treated as failed.
+
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                _logger.LogInformation("AI returned item with empty title, treating as excluded: {Url}", source.ExternalUrl);
+                return new CategorizationResult { Explanation = string.IsNullOrWhiteSpace(explanation) ? "AI returned empty title" : explanation };
+            }
+
+            if (string.IsNullOrWhiteSpace(excerpt))
+            {
+                _logger.LogInformation("AI returned item with no excerpt, treating as excluded: {Title}", source.Title);
+                return new CategorizationResult { Explanation = string.IsNullOrWhiteSpace(explanation) ? "AI returned no excerpt" : explanation };
+            }
+
+            if (string.IsNullOrWhiteSpace(itemContent))
+            {
+                _logger.LogInformation("AI returned item with no content, treating as excluded: {Title}", source.Title);
+                return new CategorizationResult { Explanation = string.IsNullOrWhiteSpace(explanation) ? "AI returned no content" : explanation };
+            }
+
+            // All sections must be from the known set — reject if any are invalid
+            var invalidSections = sections.Where(s => !_validSections.Contains(s)).ToList();
+            if (invalidSections.Count > 0)
+            {
+                _logger.LogInformation("AI returned invalid sections [{InvalidSections}] for {Title}, treating as excluded",
+                    string.Join(", ", invalidSections), source.Title);
+                return new CategorizationResult { Explanation = $"AI returned invalid sections: {string.Join(", ", invalidSections)}" };
+            }
+
+            if (tags.Count == 0)
+            {
+                _logger.LogInformation("AI returned item with no tags, treating as excluded: {Title}", source.Title);
+                return new CategorizationResult { Explanation = string.IsNullOrWhiteSpace(explanation) ? "AI returned no tags" : explanation };
+            }
+
+            // Validate primary_section: must be present and a known section
+            if (string.IsNullOrWhiteSpace(primarySection))
+            {
+                _logger.LogInformation("AI returned item with no primary_section, treating as excluded: {Title}", source.Title);
+                return new CategorizationResult { Explanation = string.IsNullOrWhiteSpace(explanation) ? "AI returned no primary_section" : explanation };
+            }
+
+            if (!_validSections.Contains(primarySection))
+            {
+                _logger.LogInformation("AI returned invalid primary_section '{PrimarySection}' for {Title}, treating as excluded",
+                    primarySection, source.Title);
+                return new CategorizationResult { Explanation = $"AI returned invalid primary_section: {primarySection}" };
+            }
+
+            if (!sections.Contains(primarySection, StringComparer.OrdinalIgnoreCase))
+            {
+                _logger.LogInformation("AI primary_section '{PrimarySection}' is not in sections [{Sections}] for {Title}, treating as excluded",
+                    primarySection, string.Join(", ", sections), source.Title);
+                return new CategorizationResult { Explanation = $"AI primary_section '{primarySection}' is not in sections list" };
+            }
+
+            // All required fields validated — safe to generate slug and hash
+            var slug = GenerateSlug(title, source.PublishedAt);
+            var contentHash = ComputeHash(title + itemContent + excerpt);
 
             // Extract roundup metadata
             RoundupMetadata? roundupMetadata = null;
             if (root.TryGetProperty("roundup", out var roundupProp))
             {
+                var roundupSummary = GetString(roundupProp, "summary");
+                var roundupRelevance = GetString(roundupProp, "relevance");
+                var roundupTopicType = GetString(roundupProp, "topic_type");
+                var roundupImpactLevel = GetString(roundupProp, "impact_level");
+                var roundupTimeSensitivity = GetString(roundupProp, "time_sensitivity");
+
+                if (string.IsNullOrWhiteSpace(roundupSummary) || string.IsNullOrWhiteSpace(roundupRelevance)
+                    || string.IsNullOrWhiteSpace(roundupTopicType) || string.IsNullOrWhiteSpace(roundupImpactLevel)
+                    || string.IsNullOrWhiteSpace(roundupTimeSensitivity))
+                {
+                    _logger.LogInformation("AI returned incomplete roundup metadata for {Title}, treating as excluded", source.Title);
+                    return new CategorizationResult { Explanation = "AI returned incomplete roundup metadata" };
+                }
+
                 roundupMetadata = new RoundupMetadata
                 {
-                    Summary = GetString(roundupProp, "summary") ?? string.Empty,
+                    Summary = roundupSummary,
                     KeyTopics = GetStringArray(roundupProp, "key_topics"),
-                    Relevance = GetString(roundupProp, "relevance") ?? "medium",
-                    TopicType = GetString(roundupProp, "topic_type") ?? "news",
-                    ImpactLevel = GetString(roundupProp, "impact_level") ?? "medium",
-                    TimeSensitivity = GetString(roundupProp, "time_sensitivity") ?? "this-week"
+                    Relevance = roundupRelevance,
+                    TopicType = roundupTopicType,
+                    ImpactLevel = roundupImpactLevel,
+                    TimeSensitivity = roundupTimeSensitivity
                 };
             }
 
@@ -181,11 +269,11 @@ public sealed class AiCategorizationService : IAiCategorizationService
                     Slug = slug,
                     Title = title,
                     Content = itemContent,
-                    Excerpt = TruncateExcerpt(excerpt),
+                    Excerpt = excerpt,
                     DateEpoch = source.PublishedAt.ToUnixTimeSeconds(),
-                    CollectionName = collectionName,
+                    CollectionName = source.CollectionName,
                     ExternalUrl = source.ExternalUrl,
-                    Author = author,
+                    Author = source.Author,
                     FeedName = source.FeedName,
                     Tags = tags,
                     Sections = sections,
@@ -295,31 +383,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
     {
         var datePrefix = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
         var slugBase = Regex.Replace(title.ToLowerInvariant(), @"[^a-z0-9]+", "-").Trim('-');
-        if (slugBase.Length > 80)
-        {
-            slugBase = slugBase[..80].TrimEnd('-');
-        }
-
         return string.Create(CultureInfo.InvariantCulture, $"{datePrefix}-{slugBase}");
-    }
-
-    private static string TruncateExcerpt(string excerpt)
-    {
-        const int MaxLength = 300;
-        if (string.IsNullOrWhiteSpace(excerpt))
-        {
-            return string.Empty;
-        }
-
-        excerpt = excerpt.Trim();
-        if (excerpt.Length <= MaxLength)
-        {
-            return excerpt;
-        }
-
-        var truncated = excerpt[..MaxLength];
-        var lastSpace = truncated.LastIndexOf(' ');
-        return lastSpace > 0 ? truncated[..lastSpace] + "\u2026" : truncated + "\u2026";
     }
 
     private static string ComputeHash(string input)
@@ -332,11 +396,8 @@ public sealed class AiCategorizationService : IAiCategorizationService
     {
         var assembly = Assembly.GetExecutingAssembly();
         const string ResourceName = "TechHub.Infrastructure.Data.Resources.system-message.md";
-        using var stream = assembly.GetManifestResourceStream(ResourceName);
-        if (stream == null)
-        {
-            return "You are a content categorization assistant. Analyze the provided content and return a JSON object with fields: title, excerpt, collection, sections (array), tags (array), author, primary_section, content (markdown), and roundup ({summary, key_topics, relevance}). If irrelevant or low quality, return {\"skip\": true}.";
-        }
+        using var stream = assembly.GetManifestResourceStream(ResourceName)
+            ?? throw new InvalidOperationException($"Embedded resource '{ResourceName}' not found. Ensure system-message.md is included as an embedded resource.");
 
         using var reader = new StreamReader(stream);
         return reader.ReadToEnd();

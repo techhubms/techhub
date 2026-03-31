@@ -73,6 +73,19 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
 
+    [Fact]
+    public async Task TriggerRoundupGeneration_ReturnsAccepted()
+    {
+        // Act
+        var response = await _client.PostAsync(
+            "/api/admin/roundup/trigger",
+            null,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.Accepted);
+    }
+
     // ── RSS Feed CRUD Endpoints ──────────────────────────────────────────────
 
     [Fact]

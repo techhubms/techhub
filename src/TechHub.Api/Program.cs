@@ -1,6 +1,7 @@
 using System.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Identity.Web;
+using Polly;
 using TechHub.Api.Endpoints;
 using TechHub.Api.HealthChecks;
 using TechHub.Api.Middleware;
@@ -123,32 +124,68 @@ builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
 // YouTube transcript fetcher (no HTTP client needed — uses YoutubeExplode internally)
 builder.Services.AddTransient<IYouTubeTranscriptService, YouTubeTranscriptService>();
 
-// Typed HTTP clients for external API communication
+// Typed HTTP clients for external API communication with Polly resilience
 builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
-        client.Timeout = TimeSpan.FromSeconds(60);
+        client.Timeout = TimeSpan.FromSeconds(90);
+    })
+    .AddStandardResilienceHandler(options =>
+    {
+        options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(90);
+        options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(30);
+        options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(90);
+        options.Retry.MaxRetryAttempts = 2;
+        options.Retry.Delay = TimeSpan.FromSeconds(3);
+        options.Retry.BackoffType = DelayBackoffType.Exponential;
     });
 
 builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
-        client.Timeout = TimeSpan.FromSeconds(30);
+        client.Timeout = TimeSpan.FromSeconds(60);
+    })
+    .AddStandardResilienceHandler(options =>
+    {
+        options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(60);
+        options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(20);
+        options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(60);
+        options.Retry.MaxRetryAttempts = 2;
+        options.Retry.Delay = TimeSpan.FromSeconds(2);
+        options.Retry.BackoffType = DelayBackoffType.Exponential;
     });
 
 builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
-        client.Timeout = TimeSpan.FromSeconds(10);
+        client.Timeout = TimeSpan.FromSeconds(30);
+    })
+    .AddStandardResilienceHandler(options =>
+    {
+        options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(30);
+        options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(10);
+        options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(30);
+        options.Retry.MaxRetryAttempts = 2;
+        options.Retry.Delay = TimeSpan.FromSeconds(1);
+        options.Retry.BackoffType = DelayBackoffType.Exponential;
     });
 
 builder.Services.AddHttpClient<IAiCompletionClient, AiCompletionClient>()
     .ConfigureHttpClient(client =>
     {
         client.Timeout = TimeSpan.FromSeconds(120);
+    })
+    .AddStandardResilienceHandler(options =>
+    {
+        // No Polly-level retries — AiCategorizationService handles retries with rate limit awareness
+        options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(120);
+        options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(120);
+        options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(240);
+        options.Retry.MaxRetryAttempts = 1;
+        options.Retry.ShouldHandle = _ => ValueTask.FromResult(false);
     });
 
 // Processing services (depend on typed clients above, not on HttpClient directly)

@@ -799,6 +799,25 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Trigger an immediate roundup generation run.
+    /// POST /api/admin/roundup/trigger
+    /// </summary>
+    public virtual async Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Triggering roundup generation run");
+            using var response = await _httpClient.PostAsync("/api/admin/roundup/trigger", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger roundup generation");
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Get recent content processing job history.
     /// GET /api/admin/processing/jobs
     /// </summary>
@@ -1218,6 +1237,59 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to update ai_metadata for URL {Url}", url.Sanitize());
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Admin – Content item editing methods
+    // ================================================================
+
+    /// <summary>
+    /// Get all editable fields for a content item by external URL.
+    /// GET /api/admin/content-items/edit-data?url={url}
+    /// </summary>
+    public virtual async Task<ContentItemEditData?> GetContentItemEditDataAsync(
+        string url,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            return await _httpClient.GetFromJsonAsync<ContentItemEditData>(
+                $"/api/admin/content-items/edit-data?url={Uri.EscapeDataString(url)}",
+                cancellationToken);
+        }
+        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
+        {
+            return null;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch edit data for URL {Url}", url.Sanitize());
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Update all editable fields for a content item by external URL.
+    /// PUT /api/admin/content-items/edit-data?url={url}
+    /// </summary>
+    public virtual async Task UpdateContentItemEditDataAsync(
+        string url,
+        ContentItemEditData editData,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/content-items/edit-data?url={Uri.EscapeDataString(url)}",
+                editData,
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update edit data for URL {Url}", url.Sanitize());
             throw;
         }
     }

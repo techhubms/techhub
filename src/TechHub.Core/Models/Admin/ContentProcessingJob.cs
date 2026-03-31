@@ -6,10 +6,18 @@ public static class ContentProcessingJobStatus
     public const string Running = "running";
     public const string Completed = "completed";
     public const string Failed = "failed";
+    public const string Aborted = "aborted";
+}
+
+/// <summary>Job type constants for <see cref="ContentProcessingJob"/>.</summary>
+public static class ContentProcessingJobType
+{
+    public const string ContentProcessing = "content-processing";
+    public const string RoundupGeneration = "roundup-generation";
 }
 
 /// <summary>
-/// Represents a single content processing pipeline run (scheduled or manual).
+/// Represents a single background job run (content processing or roundup generation).
 /// </summary>
 public sealed class ContentProcessingJob
 {
@@ -30,6 +38,9 @@ public sealed class ContentProcessingJob
 
     /// <summary>How the job was triggered: "scheduled" or "manual".</summary>
     public string TriggerType { get; init; } = "scheduled";
+
+    /// <summary>Job type: "content-processing" or "roundup-generation".</summary>
+    public string JobType { get; init; } = ContentProcessingJobType.ContentProcessing;
 
     /// <summary>Number of RSS feeds processed during this run.</summary>
     public int FeedsProcessed { get; init; }

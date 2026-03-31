@@ -1,30 +1,25 @@
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Typed HTTP client that fetches article HTML content from external URLs.
+/// Timeout and retry behavior is managed by Polly via AddStandardResilienceHandler.
 /// </summary>
 public sealed class ArticleFetchClient : IArticleFetchClient
 {
     private readonly HttpClient _httpClient;
-    private readonly ContentProcessorOptions _options;
     private readonly ILogger<ArticleFetchClient> _logger;
 
     public ArticleFetchClient(
         HttpClient httpClient,
-        IOptions<ContentProcessorOptions> options,
         ILogger<ArticleFetchClient> logger)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
-        ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
         _httpClient = httpClient;
-        _options = options.Value;
         _logger = logger;
     }
 
@@ -33,28 +28,16 @@ public sealed class ArticleFetchClient : IArticleFetchClient
     {
         try
         {
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-            cts.CancelAfter(TimeSpan.FromSeconds(_options.RequestTimeoutSeconds));
-
             _logger.LogDebug("Fetching content for: {Url}", url);
 
-            using var response = await _httpClient.GetAsync(url, cts.Token);
+            using var response = await _httpClient.GetAsync(url, ct);
             if (!response.IsSuccessStatusCode)
             {
                 _logger.LogWarning("Failed to fetch content for {Url}: HTTP {Status}", url, (int)response.StatusCode);
                 return null;
             }
 
-            return await response.Content.ReadAsStringAsync(cts.Token);
-        }
-        catch (OperationCanceledException) when (ct.IsCancellationRequested)
-        {
-            throw;
-        }
-        catch (OperationCanceledException)
-        {
-            _logger.LogWarning("Timeout fetching content for {Url}", url);
-            return null;
+            return await response.Content.ReadAsStringAsync(ct);
         }
         catch (HttpRequestException ex)
         {

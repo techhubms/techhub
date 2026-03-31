@@ -1,6 +1,7 @@
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
+using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Services;
 
@@ -25,6 +26,10 @@ public static class AdminEndpoints
         group.MapPost("/processing/trigger", TriggerProcessingAsync)
             .WithName("TriggerContentProcessing")
             .WithSummary("Trigger an immediate content processing run");
+
+        group.MapPost("/roundup/trigger", TriggerRoundupAsync)
+            .WithName("TriggerRoundupGeneration")
+            .WithSummary("Trigger an immediate roundup generation run");
 
         group.MapGet("/processing/jobs", GetJobsAsync)
             .WithName("GetProcessingJobs")
@@ -70,7 +75,7 @@ public static class AdminEndpoints
 
         group.MapDelete("/processed-urls", DeleteProcessedUrlAsync)
             .WithName("DeleteProcessedUrl")
-            .WithSummary("Delete a specific processed URL so it can be retried");
+            .WithSummary("Delete a processed URL and its associated content item so it can be retried");
 
         group.MapDelete("/processed-urls/failed", DeleteAllFailedUrlsAsync)
             .WithName("DeleteAllFailedUrls")
@@ -99,6 +104,14 @@ public static class AdminEndpoints
         group.MapPut("/content-items/ai-metadata", UpdateContentItemAiMetadataAsync)
             .WithName("UpdateContentItemAiMetadata")
             .WithSummary("Update the ai_metadata JSON for a content item by external URL");
+
+        group.MapGet("/content-items/edit-data", GetContentItemEditDataAsync)
+            .WithName("GetContentItemEditData")
+            .WithSummary("Get all editable fields for a content item by external URL");
+
+        group.MapPut("/content-items/edit-data", UpdateContentItemEditDataAsync)
+            .WithName("UpdateContentItemEditData")
+            .WithSummary("Update all editable fields for a content item by external URL");
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
@@ -108,6 +121,13 @@ public static class AdminEndpoints
     {
         backgroundService.TriggerImmediateRun();
         return Results.Accepted("/api/admin/processing/jobs", new { message = "Processing run triggered" });
+    }
+
+    private static IResult TriggerRoundupAsync(
+        RoundupGeneratorBackgroundService roundupService)
+    {
+        roundupService.TriggerImmediateRun();
+        return Results.Accepted("/api/admin/processing/jobs", new { message = "Roundup generation triggered" });
     }
 
     private static async Task<IResult> GetJobsAsync(
@@ -402,6 +422,76 @@ public static class AdminEndpoints
         }
 
         var updated = await contentRepo.UpdateAiMetadataAsync(url, request.AiMetadata, ct);
+        return updated ? Results.NoContent() : Results.NotFound();
+    }
+
+    private static async Task<IResult> GetContentItemEditDataAsync(
+        IContentRepository contentRepo,
+        CancellationToken ct,
+        string? url = null)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            return Results.BadRequest("The 'url' query parameter is required.");
+        }
+
+        url = url.Trim().Sanitize();
+        var item = await contentRepo.GetEditDataByUrlAsync(url, ct);
+        return item is null ? Results.NotFound() : Results.Ok(item);
+    }
+
+    private static async Task<IResult> UpdateContentItemEditDataAsync(
+        ContentItemEditData request,
+        IContentRepository contentRepo,
+        CancellationToken ct,
+        string? url = null)
+    {
+        if (string.IsNullOrWhiteSpace(url))
+        {
+            return Results.BadRequest("The 'url' query parameter is required.");
+        }
+
+        url = url.Trim().Sanitize();
+
+        if (string.IsNullOrWhiteSpace(request.Title))
+        {
+            return Results.BadRequest("Title is required.");
+        }
+
+        if (string.IsNullOrWhiteSpace(request.Author))
+        {
+            return Results.BadRequest("Author is required.");
+        }
+
+        if (string.IsNullOrWhiteSpace(request.PrimarySectionName))
+        {
+            return Results.BadRequest("PrimarySectionName is required.");
+        }
+
+        if (request.Tags.Count == 0)
+        {
+            return Results.BadRequest("At least one tag is required.");
+        }
+
+        if (request.Sections.Count == 0)
+        {
+            return Results.BadRequest("At least one section is required.");
+        }
+
+        // Validate ai_metadata JSON if provided
+        if (!string.IsNullOrWhiteSpace(request.AiMetadata))
+        {
+            try
+            {
+                System.Text.Json.JsonDocument.Parse(request.AiMetadata);
+            }
+            catch (System.Text.Json.JsonException)
+            {
+                return Results.BadRequest("AiMetadata must be valid JSON.");
+            }
+        }
+
+        var updated = await contentRepo.UpdateEditDataAsync(url, request, ct);
         return updated ? Results.NoContent() : Results.NotFound();
     }
 }

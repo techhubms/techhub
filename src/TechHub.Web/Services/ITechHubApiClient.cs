@@ -274,6 +274,12 @@ internal interface ITechHubApiClient
     Task TriggerContentProcessingAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Trigger an immediate roundup generation run.
+    /// POST /api/admin/roundup/trigger
+    /// </summary>
+    Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get recent content processing job history.
     /// GET /api/admin/processing/jobs
     /// </summary>
@@ -395,4 +401,20 @@ internal interface ITechHubApiClient
     /// PUT /api/admin/content-items/ai-metadata?url={url}
     /// </summary>
     Task UpdateContentItemAiMetadataAsync(string url, string aiMetadata, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content item editing endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all editable fields for a content item by its external URL.
+    /// GET /api/admin/content-items/edit-data?url={url}
+    /// </summary>
+    Task<ContentItemEditData?> GetContentItemEditDataAsync(string url, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update all editable fields for a content item by its external URL.
+    /// PUT /api/admin/content-items/edit-data?url={url}
+    /// </summary>
+    Task UpdateContentItemEditDataAsync(string url, ContentItemEditData editData, CancellationToken cancellationToken = default);
 }

@@ -113,8 +113,7 @@ $contentTables = @(
     "_migrations",
     "content_processing_jobs",
     "rss_feed_configs",
-    "processed_urls",
-    "section_roundup_items"
+    "processed_urls"
 )
 
 # ============================================================================

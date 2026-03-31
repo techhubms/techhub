@@ -47,7 +47,6 @@
 | Code patterns, framework guidance | Domain AGENTS.md files |
 | Functional docs, architecture, features, specs | docs/ |
 | Writing standards | [writing-style-guidelines.md](writing-style-guidelines.md) |
-| Content frontmatter | [collections/AGENTS.md](../collections/AGENTS.md) |
 
 **docs/ File Categories**:
 
@@ -55,7 +54,7 @@
 |----------|-------|
 | **Architecture** | architecture.md, database.md, technology-stack.md |
 | **Observability** | telemetry.md, google-analytics.md, query-logging.md |
-| **Content** | content-api.md, content-processing.md, frontmatter.md, rss-feeds.md |
+| **Content** | content-api.md, content-processing.md, content-schema.md, rss-feeds.md |
 | **UI/UX** | design-system.md, page-structure.md, toc-component.md, render-modes.md |
 | **Features** | filtering.md, custom-pages.md, health-checks.md |
 | **Frontend** | javascript.md, caching.md, seo.md |

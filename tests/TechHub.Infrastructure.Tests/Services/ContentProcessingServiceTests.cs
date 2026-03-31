@@ -1,4 +1,5 @@
 using System.Data;
+using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
@@ -378,5 +379,306 @@ public class ContentProcessingServiceTests
         _aiService.Verify(s => s.CategorizeAsync(
             It.Is<RawFeedItem>(r => r.FeedTags.Count == 3), // existing-tag + yt-tag-1 + yt-tag-2
             It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    // ── DB Write Verification ─────────────────────────────────────────────
+
+    [Fact]
+    public async Task RunAsync_NewItem_WritesContentItemWithCorrectSectionsAndBitmask()
+    {
+        // Arrange
+        const string url = "https://example.com/verify-db-write";
+        const string slug = "verify-db-write";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+        var processed = new ProcessedContentItem
+        {
+            Slug = slug,
+            Title = "Verify DB Write",
+            Content = "Full content here",
+            Excerpt = "Short excerpt",
+            DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            CollectionName = "blogs",
+            ExternalUrl = url,
+            FeedName = "Test Feed",
+            ContentHash = "abc123",
+            Sections = ["ai", "azure", "dotnet"],
+            PrimarySectionName = "ai",
+            Tags = ["csharp", "azure-openai"]
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — verify the row in content_items
+        var title = await _fixture.Connection.QueryFirstOrDefaultAsync<string>(
+            "SELECT title FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        title.Should().NotBeNull("WriteItemAsync should have inserted the content item");
+        title.Should().Be("Verify DB Write");
+
+        var isAi = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT is_ai FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        isAi.Should().BeTrue();
+
+        var isAzure = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT is_azure FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        isAzure.Should().BeTrue();
+
+        var isDotnet = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT is_dotnet FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        isDotnet.Should().BeTrue();
+
+        var isDevops = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT is_devops FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        isDevops.Should().BeFalse();
+
+        var bitmask = await _fixture.Connection.QueryFirstAsync<int>(
+            "SELECT sections_bitmask FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        bitmask.Should().Be(1 | 2 | 4); // ai=1, azure=2, dotnet=4
+
+        var tagsCsv = await _fixture.Connection.QueryFirstAsync<string>(
+            "SELECT tags_csv FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        tagsCsv.Should().Be(",csharp,azure-openai,");
+
+        var primarySection = await _fixture.Connection.QueryFirstAsync<string>(
+            "SELECT primary_section_name FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+        primarySection.Should().Be("ai");
+    }
+
+    [Fact]
+    public async Task RunAsync_NewItem_WritesAiMetadataToDatabase()
+    {
+        // Arrange
+        const string url = "https://example.com/verify-ai-metadata";
+        const string slug = "verify-ai-metadata";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+        var processed = new ProcessedContentItem
+        {
+            Slug = slug,
+            Title = "AI Metadata Write",
+            Excerpt = "Testing",
+            DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            CollectionName = "news",
+            ExternalUrl = url,
+            FeedName = "Test Feed",
+            ContentHash = "meta123",
+            Sections = ["ai"],
+            PrimarySectionName = "ai",
+            Tags = [],
+            RoundupMetadata = new RoundupMetadata
+            {
+                Summary = "AI metadata test summary",
+                KeyTopics = ["testing", "metadata"],
+                Relevance = "high",
+                TopicType = "announcement",
+                ImpactLevel = "high",
+                TimeSensitivity = "immediate"
+            }
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — verify ai_metadata JSONB column
+        var metaJson = await _fixture.Connection.QueryFirstOrDefaultAsync<string>(
+            "SELECT ai_metadata::text FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "news" });
+
+        metaJson.Should().NotBeNullOrWhiteSpace();
+        using var doc = System.Text.Json.JsonDocument.Parse(metaJson!);
+        doc.RootElement.GetProperty("roundup_summary").GetString().Should().Be("AI metadata test summary");
+        doc.RootElement.GetProperty("roundup_relevance").GetString().Should().Be("high");
+        doc.RootElement.GetProperty("topic_type").GetString().Should().Be("announcement");
+        doc.RootElement.GetProperty("key_topics").GetArrayLength().Should().Be(2);
+    }
+
+    // ── Tag Expansion Verification ────────────────────────────────────────
+
+    [Fact]
+    public async Task RunAsync_NewItem_PopulatesContentTagsExpanded()
+    {
+        // Arrange
+        const string url = "https://example.com/verify-tags-expanded";
+        const string slug = "verify-tags-expanded";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+        var processed = new ProcessedContentItem
+        {
+            Slug = slug,
+            Title = "Tag Expansion Test",
+            Excerpt = "Testing",
+            DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            CollectionName = "blogs",
+            ExternalUrl = url,
+            FeedName = "Test Feed",
+            ContentHash = "tags123",
+            Sections = ["ai"],
+            PrimarySectionName = "ai",
+            Tags = ["azure openai", "csharp"]
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — verify content_tags_expanded has full tags + word expansions
+        var tags = (await _fixture.Connection.QueryAsync<string>(
+            "SELECT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY tag_word",
+            new { Slug = slug, Collection = "blogs" })).ToList();
+
+        // "azure openai" → full tag + "azure" + "openai" word expansions
+        // "csharp" → full tag only (single word, no expansion)
+        tags.Should().Contain("azure openai");
+        tags.Should().Contain("azure");
+        tags.Should().Contain("openai");
+        tags.Should().Contain("csharp");
+    }
+
+    [Fact]
+    public async Task RunAsync_NewItem_TagExpansionHasDenormalizedSectionFlags()
+    {
+        // Arrange
+        const string url = "https://example.com/verify-tag-sections";
+        const string slug = "verify-tag-sections";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+        var processed = new ProcessedContentItem
+        {
+            Slug = slug,
+            Title = "Tag Section Flags",
+            Excerpt = "Testing",
+            DateEpoch = 1700000000,
+            CollectionName = "blogs",
+            ExternalUrl = url,
+            FeedName = "Test Feed",
+            ContentHash = "tagsec123",
+            Sections = ["ai", "security"],
+            PrimarySectionName = "ai",
+            Tags = ["zero-trust"]
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — tag row should have the same section flags as the content item
+        var isAi = await _fixture.Connection.QueryFirstOrDefaultAsync<bool?>(
+            "SELECT is_ai FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            new { Slug = slug, Collection = "blogs" });
+
+        isAi.Should().NotBeNull("tag row should exist for 'zero-trust'");
+        isAi.Should().BeTrue();
+
+        var isSecurity = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT is_security FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            new { Slug = slug, Collection = "blogs" });
+        isSecurity.Should().BeTrue();
+
+        var isAzure = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT is_azure FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            new { Slug = slug, Collection = "blogs" });
+        isAzure.Should().BeFalse();
+
+        var dateEpoch = await _fixture.Connection.QueryFirstAsync<long>(
+            "SELECT date_epoch FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            new { Slug = slug, Collection = "blogs" });
+        dateEpoch.Should().Be(1700000000);
+
+        var sectionsBitmask = await _fixture.Connection.QueryFirstAsync<int>(
+            "SELECT sections_bitmask FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            new { Slug = slug, Collection = "blogs" });
+        sectionsBitmask.Should().Be(1 | 64); // ai=1, security=64
+    }
+
+    // ── Improved Log Messages ─────────────────────────────────────────────
+
+    [Fact]
+    public async Task RunAsync_LogShowsPreviouslySkippedSeparately()
+    {
+        // Arrange — pre-record a URL as skipped
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var skippedUrl = $"https://example.com/previously-skipped-{testId}";
+        await _processedUrlRepo.RecordSkippedAsync(skippedUrl, feedName: "Test", reason: "Not relevant", ct: CancellationToken.None);
+
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(skippedUrl);
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — log should mention "previously skipped", not "previously processed"
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs.Should().NotBeEmpty();
+        jobs[0].LogOutput.Should().Contain("previously skipped");
+        jobs[0].LogOutput.Should().NotContain("previously processed");
+    }
+
+    // ── Real-time Progress ────────────────────────────────────────────────
+
+    [Fact]
+    public async Task RunAsync_CompletedJob_HasCountersSet()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var url = $"https://example.com/progress-counters-{testId}";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+        var processed = CreateProcessedItem(url, $"progress-counters-{testId}");
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — completed job should have non-zero counters
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs.Should().NotBeEmpty();
+        jobs[0].FeedsProcessed.Should().BeGreaterThanOrEqualTo(1);
+        jobs[0].ItemsAdded.Should().BeGreaterThanOrEqualTo(1);
     }
 }

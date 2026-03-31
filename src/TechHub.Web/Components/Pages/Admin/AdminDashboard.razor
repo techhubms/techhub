@@ -14,18 +14,28 @@
 <div class="admin-page">
     <div class="admin-page-header">
         <div>
-            <h1 class="admin-page-title">Content Processing</h1>
-            <p class="admin-page-subtitle">Manage RSS feed ingestion and AI categorization</p>
+            <h1 class="admin-page-title">Background Tasks</h1>
+            <p class="admin-page-subtitle">Unified overview of RSS content processing and weekly roundup generation</p>
         </div>
         <div class="admin-actions">
-            <button class="btn" @onclick="TriggerRunAsync" disabled="@_triggering">
-                @if (_triggering)
+            <button class="btn" @onclick="TriggerProcessingAsync" disabled="@_triggeringProcessing">
+                @if (_triggeringProcessing)
                 {
                     <span>Triggering…</span>
                 }
                 else
                 {
-                    <span>▶ Run Now</span>
+                    <span>▶ Run Processing</span>
+                }
+            </button>
+            <button class="btn" @onclick="TriggerRoundupAsync" disabled="@_triggeringRoundup">
+                @if (_triggeringRoundup)
+                {
+                    <span>Triggering…</span>
+                }
+                else
+                {
+                    <span>▶ Run Roundup</span>
                 }
             </button>
             <button class="btn-secondary" @onclick="LoadJobsAsync">⟳ Refresh</button>
@@ -58,13 +68,14 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Type</th>
                         <th>Started</th>
                         <th>Duration</th>
                         <th>Trigger</th>
                         <th>Status</th>
-                        <th>Added</th>
-                        <th>Skipped</th>
-                        <th>Errors</th>
+                        <th class="admin-cell-number">Added</th>
+                        <th class="admin-cell-number">Skipped</th>
+                        <th class="admin-cell-number">Errors</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -73,6 +84,9 @@
                     {
                         <tr>
                             <td class="admin-cell-mono">@job.Id</td>
+                            <td>
+                                <span class="admin-badge admin-badge-@JobTypeBadge(job.JobType)">@JobTypeLabel(job.JobType)</span>
+                            </td>
                             <td>@FormatTimestamp(job.StartedAt)</td>
                             <td>@FormatDuration(job.DurationMs)</td>
                             <td>
@@ -102,7 +116,7 @@
                         @if (_expandedJobId == job.Id && !string.IsNullOrWhiteSpace(job.LogOutput))
                         {
                             <tr class="admin-log-row">
-                                <td colspan="9">
+                                <td colspan="10">
                                     <pre class="admin-log">@job.LogOutput</pre>
                                 </td>
                             </tr>
@@ -116,7 +130,8 @@
 
 @code {
     private bool _loading = true;
-    private bool _triggering;
+    private bool _triggeringProcessing;
+    private bool _triggeringRoundup;
     private string? _error;
     private string? _triggerMessage;
     private bool _triggerError;
@@ -185,9 +200,9 @@
         }
     }
 
-    private async Task TriggerRunAsync()
+    private async Task TriggerProcessingAsync()
     {
-        _triggering = true;
+        _triggeringProcessing = true;
         _triggerMessage = null;
 
         try
@@ -198,7 +213,6 @@
             // Give the API a moment to create the job, then reload and start live polling
             await Task.Delay(500);
             await LoadJobsAsync();
-            AutoExpandRunningJob();
             StartPollingIfRunning();
         }
         catch (OperationCanceledException)
@@ -207,12 +221,42 @@
         }
         catch (HttpRequestException ex)
         {
-            _triggerMessage = $"Failed to trigger run: {ex.Message}";
+            _triggerMessage = $"Failed to trigger processing: {ex.Message}";
             _triggerError = true;
         }
         finally
         {
-            _triggering = false;
+            _triggeringProcessing = false;
+        }
+    }
+
+    private async Task TriggerRoundupAsync()
+    {
+        _triggeringRoundup = true;
+        _triggerMessage = null;
+
+        try
+        {
+            await Api.TriggerRoundupGenerationAsync();
+            _triggerError = false;
+
+            // Give the API a moment to create the job, then reload and start live polling
+            await Task.Delay(500);
+            await LoadJobsAsync();
+            StartPollingIfRunning();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _triggerMessage = $"Failed to trigger roundup generation: {ex.Message}";
+            _triggerError = true;
+        }
+        finally
+        {
+            _triggeringRoundup = false;
         }
     }
 
@@ -243,20 +287,26 @@
         ContentProcessingJobStatus.Running => "⏳",
         ContentProcessingJobStatus.Completed => "✅",
         ContentProcessingJobStatus.Failed => "❌",
+        ContentProcessingJobStatus.Aborted => "⛔",
         _ => "❓"
+    };
+
+    private static string JobTypeLabel(string jobType) => jobType switch
+    {
+        ContentProcessingJobType.ContentProcessing => "Processing",
+        ContentProcessingJobType.RoundupGeneration => "Roundup",
+        _ => jobType
+    };
+
+    private static string JobTypeBadge(string jobType) => jobType switch
+    {
+        ContentProcessingJobType.ContentProcessing => "processing",
+        ContentProcessingJobType.RoundupGeneration => "roundup",
+        _ => "unknown"
     };
 
     private bool HasRunningJob =>
         _jobs?.Any(j => j.Status == ContentProcessingJobStatus.Running) == true;
-
-    private void AutoExpandRunningJob()
-    {
-        var running = _jobs?.FirstOrDefault(j => j.Status == ContentProcessingJobStatus.Running);
-        if (running != null)
-        {
-            _expandedJobId = running.Id;
-        }
-    }
 
     private void StartPollingIfRunning()
     {
@@ -287,7 +337,6 @@
                 try
                 {
                     _jobs = await Api.GetProcessingJobsAsync(cancellationToken: ct);
-                    AutoExpandRunningJob();
                     await InvokeAsync(StateHasChanged);
 
                     if (!HasRunningJob)

@@ -47,18 +47,79 @@ public sealed class AiCompletionClient : IAiCompletionClient
 
         if (response.StatusCode == HttpStatusCode.TooManyRequests)
         {
-            _logger.LogWarning("AI rate limit hit");
-            return new AiCompletionResult(IsRateLimited: true, ResponseBody: null);
+            var retryAfter = ExtractRetryAfterSeconds(response);
+            _logger.LogWarning("AI rate limit hit{RetryInfo}",
+                retryAfter.HasValue ? $", retry-after: {retryAfter}s" : "");
+            return new AiCompletionResult(IsRateLimited: true, ResponseBody: null, RetryAfterSeconds: retryAfter);
         }
 
         if (!response.IsSuccessStatusCode)
         {
             var errorBody = await response.Content.ReadAsStringAsync(ct);
             _logger.LogError("AI API returned {StatusCode}: {ErrorBody}", (int)response.StatusCode, errorBody);
+
+            // Detect content filter violations and context length exceeded (400) — no point retrying these
+            if (response.StatusCode == HttpStatusCode.BadRequest && !string.IsNullOrEmpty(errorBody))
+            {
+                var errorLower = errorBody.ToLowerInvariant();
+                if (errorLower.Contains("content_filter", StringComparison.Ordinal)
+                    || errorLower.Contains("content filter", StringComparison.Ordinal)
+                    || errorLower.Contains("responsibleaipolicyviolation", StringComparison.Ordinal)
+                    || errorLower.Contains("jailbreak", StringComparison.Ordinal))
+                {
+                    return new AiCompletionResult(IsRateLimited: false, ResponseBody: null,
+                        ContentFilterMessage: "Content blocked by Azure AI content filter");
+                }
+
+                if (errorLower.Contains("context_length_exceeded", StringComparison.Ordinal)
+                    || errorLower.Contains("too many tokens", StringComparison.Ordinal))
+                {
+                    return new AiCompletionResult(IsRateLimited: false, ResponseBody: null,
+                        ContentFilterMessage: "Content too large for AI model context window");
+                }
+            }
         }
 
         response.EnsureSuccessStatusCode();
         var responseJson = await response.Content.ReadAsStringAsync(ct);
         return new AiCompletionResult(IsRateLimited: false, ResponseBody: responseJson);
+    }
+
+    /// <summary>
+    /// Extracts the number of seconds to wait from rate-limit response headers.
+    /// Checks <c>Retry-After</c>, <c>x-ratelimit-reset-requests</c>, and <c>x-ratelimit-timeremaining</c>.
+    /// </summary>
+    private static int? ExtractRetryAfterSeconds(HttpResponseMessage response)
+    {
+        // Standard Retry-After header (seconds or HTTP-date)
+        if (response.Headers.RetryAfter is { } retryAfter)
+        {
+            if (retryAfter.Delta.HasValue)
+            {
+                return (int)retryAfter.Delta.Value.TotalSeconds;
+            }
+
+            if (retryAfter.Date.HasValue)
+            {
+                var wait = (int)(retryAfter.Date.Value - DateTimeOffset.UtcNow).TotalSeconds;
+                return wait > 0 ? wait : null;
+            }
+        }
+
+        // Azure OpenAI custom headers
+        foreach (var headerName in new[] { "x-ratelimit-reset-requests", "x-ratelimit-timeremaining", "retry-after-ms" })
+        {
+            if (response.Headers.TryGetValues(headerName, out var values))
+            {
+                var value = values.FirstOrDefault();
+                if (int.TryParse(value, out var seconds) && seconds > 0)
+                {
+                    // retry-after-ms is in milliseconds
+                    return headerName == "retry-after-ms" ? Math.Max(1, seconds / 1000) : seconds;
+                }
+            }
+        }
+
+        return null;
     }
 }

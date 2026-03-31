@@ -12,6 +12,9 @@ public interface IProcessedUrlRepository
     /// <summary>Returns <c>true</c> if the URL has already been processed (regardless of outcome).</summary>
     Task<bool> ExistsAsync(string externalUrl, CancellationToken ct = default);
 
+    /// <summary>Returns the processing status of the URL ("succeeded", "skipped", "failed"), or <c>null</c> if not found.</summary>
+    Task<string?> GetStatusAsync(string externalUrl, CancellationToken ct = default);
+
     /// <summary>Gets the processed URL record, or <c>null</c> if the URL has never been processed.</summary>
     Task<ProcessedUrl?> GetAsync(string externalUrl, CancellationToken ct = default);
 
@@ -37,7 +40,7 @@ public interface IProcessedUrlRepository
         string? collectionName = null,
         CancellationToken ct = default);
 
-    /// <summary>Deletes a processed URL record so it can be retried on the next run.</summary>
+    /// <summary>Deletes a processed URL record, its associated content item, and expanded tags so it can be retried on the next run.</summary>
     Task<bool> DeleteByUrlAsync(string externalUrl, CancellationToken ct = default);
 
     /// <summary>Deletes all failed processed URL records.</summary>

@@ -15,9 +15,9 @@ using TechHub.Core.Models.ContentProcessing;
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
-/// Orchestrates the 7-step AI weekly roundup generation pipeline.
-/// Reads article candidates from <c>section_roundup_items</c>, runs AI steps 3-9 (ported from
-/// the original PowerShell script), and writes the resulting roundup directly to <c>content_items</c>.
+/// Orchestrates the AI weekly roundup generation pipeline.
+/// Reads article candidates from <c>content_items</c> (filtered by section flags and AI metadata),
+/// runs AI steps 3-8, and writes the resulting roundup directly to <c>content_items</c>.
 /// </summary>
 public sealed class RoundupGeneratorService : IRoundupGeneratorService
 {
@@ -25,7 +25,7 @@ public sealed class RoundupGeneratorService : IRoundupGeneratorService
     private static readonly string[] _sectionOrder =
         ["GitHub Copilot", "AI", "ML", "Azure", ".NET", "DevOps", "Security"];
 
-    // Maps the display section name to the DB slug used in section_roundup_items.
+    // Maps the display section name to the DB slug used for section boolean columns.
     private static readonly Dictionary<string, string> _sectionNameToSlug = new(StringComparer.OrdinalIgnoreCase)
     {
         ["GitHub Copilot"] = "github-copilot",
@@ -54,7 +54,6 @@ public sealed class RoundupGeneratorService : IRoundupGeneratorService
     private static readonly Lazy<string> _step4System = LoadResource("roundup-step4-system.md");
     private static readonly Lazy<string> _step6System = LoadResource("roundup-step6-system.md");
     private static readonly Lazy<string> _step7System = LoadResource("roundup-step7-system.md");
-    private static readonly Lazy<string> _step9System = LoadResource("roundup-step9-system.md");
     private static readonly Lazy<string> _writingGuidelines = LoadResource("roundup-writing-guidelines.md");
 
     public RoundupGeneratorService(
@@ -139,13 +138,9 @@ public sealed class RoundupGeneratorService : IRoundupGeneratorService
         var tableOfContents = BuildTableOfContents(step6Content);
         var fullContent = BuildFullContent(step6Content, metadata, tableOfContents);
 
-        // ── Step 9: AI - Rewrite for style compliance ─────────────────────────
-        _logger.LogInformation("Step 9: Rewriting for style compliance");
-        var (finalContent, finalTitle, finalDescription) = await RunStep9Async(fullContent, metadata, writingGuidelines, ct);
-
         // ── Write to database ─────────────────────────────────────────────────
         _logger.LogInformation("Writing roundup to database");
-        await WriteRoundupAsync(slug, publishDate, finalTitle, finalDescription, finalContent, metadata, ct);
+        await WriteRoundupAsync(slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata, ct);
 
         _logger.LogInformation("Roundup for week {WeekStart}–{WeekEnd} written successfully (slug={Slug})", weekStart, weekEnd, slug);
         return true;
@@ -381,33 +376,6 @@ public sealed class RoundupGeneratorService : IRoundupGeneratorService
         };
     }
 
-    // ── Step 9: Style Rewrite ─────────────────────────────────────────────────
-
-    private async Task<(string Content, string Title, string Description)> RunStep9Async(
-        string fullContent,
-        RoundupMetadataAi metadata,
-        string writingGuidelines,
-        CancellationToken ct)
-    {
-        var systemMessage = _step9System.Value
-            .Replace("{WritingStyleGuidelines}", writingGuidelines, StringComparison.Ordinal);
-
-        var userMessage = $"CONTENT TO REWRITE IF NEEDED:\n\n{fullContent}";
-
-        var response = await CallAiWithRetryAsync(systemMessage, userMessage, "Step 9", ct);
-
-        if (response is null)
-        {
-            _logger.LogWarning("Step 9: Style rewrite failed, using step 8 content");
-            return (fullContent, metadata.Title, metadata.Description);
-        }
-
-        await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
-
-        // Step 9 returns a JSON block at the start followed by --- and the markdown content.
-        return ParseStep9Response(response, metadata);
-    }
-
     // ── Helpers ───────────────────────────────────────────────────────────────
 
     private static string BuildSlug(DateOnly publishDate) =>
@@ -563,39 +531,6 @@ public sealed class RoundupGeneratorService : IRoundupGeneratorService
 
     private static string BuildFullContent(string sectionContent, RoundupMetadataAi metadata, string tableOfContents) =>
         $"{metadata.Introduction}\n\n<!--excerpt_end-->\n\n## This Week's Overview\n\n{tableOfContents}\n\n{sectionContent}";
-
-    private static readonly JsonSerializerOptions _step9JsonOptions = new() { PropertyNameCaseInsensitive = true };
-
-    private static (string Content, string Title, string Description) ParseStep9Response(
-        string response,
-        RoundupMetadataAi fallback)
-    {
-        // Expected format: {"title":"...","description":"..."}\n---\n[markdown content]
-        var separatorIndex = response.IndexOf("\n---\n", StringComparison.Ordinal);
-
-        if (separatorIndex < 0)
-        {
-            return (response, fallback.Title, fallback.Description);
-        }
-
-        var jsonPart = response[..separatorIndex].Trim();
-        var markdownPart = response[(separatorIndex + 5)..].Trim();
-
-        try
-        {
-            var meta = JsonSerializer.Deserialize<Step9MetaResponse>(jsonPart, _step9JsonOptions);
-
-            return (
-                markdownPart,
-                meta?.Title ?? fallback.Title,
-                meta?.Description ?? fallback.Description
-            );
-        }
-        catch (JsonException)
-        {
-            return (response, fallback.Title, fallback.Description);
-        }
-    }
 
     private async Task<string?> LoadPreviousRoundupContentAsync(DateOnly weekStart, CancellationToken ct)
     {
@@ -814,11 +749,5 @@ public sealed class RoundupGeneratorService : IRoundupGeneratorService
         public IReadOnlyList<string> Tags { get; init; } = [];
         public string Description { get; init; } = string.Empty;
         public string Introduction { get; init; } = string.Empty;
-    }
-
-    private sealed class Step9MetaResponse
-    {
-        public string? Title { get; init; }
-        public string? Description { get; init; }
     }
 }

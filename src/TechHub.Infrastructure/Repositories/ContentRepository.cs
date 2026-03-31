@@ -1489,4 +1489,145 @@ WHERE external_url = @ExternalUrl";
             new CommandDefinition(Sql, new { ExternalUrl = externalUrl, AiMetadata = aiMetadata }, cancellationToken: ct));
         return rows > 0;
     }
+
+    /// <inheritdoc/>
+    public async Task<TechHub.Core.Models.Admin.ContentItemEditData?> GetEditDataByUrlAsync(
+        string externalUrl,
+        CancellationToken ct = default)
+    {
+        const string Sql = @"
+SELECT collection_name, slug, title, author, excerpt, content, primary_section_name,
+       tags_csv, ai_metadata::text AS ai_metadata,
+       is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
+FROM content_items
+WHERE external_url = @ExternalUrl
+LIMIT 1";
+
+        var row = await Connection.QueryFirstOrDefaultAsync(
+            new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));
+
+        if (row is null)
+        {
+            return null;
+        }
+
+        var sections = new List<string>();
+        if ((bool)row.is_ai)
+        {
+            sections.Add("ai");
+        }
+
+        if ((bool)row.is_azure)
+        {
+            sections.Add("azure");
+        }
+
+        if ((bool)row.is_dotnet)
+        {
+            sections.Add("dotnet");
+        }
+
+        if ((bool)row.is_devops)
+        {
+            sections.Add("devops");
+        }
+
+        if ((bool)row.is_github_copilot)
+        {
+            sections.Add("github-copilot");
+        }
+
+        if ((bool)row.is_ml)
+        {
+            sections.Add("ml");
+        }
+
+        if ((bool)row.is_security)
+        {
+            sections.Add("security");
+        }
+
+        var tagsCsv = (string)row.tags_csv;
+        var tags = string.IsNullOrWhiteSpace(tagsCsv)
+            ? []
+            : tagsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+        return new TechHub.Core.Models.Admin.ContentItemEditData
+        {
+            CollectionName = (string)row.collection_name,
+            Slug = (string)row.slug,
+            Title = (string)row.title,
+            Author = (string)row.author,
+            Excerpt = (string)row.excerpt,
+            Content = (string)row.content,
+            PrimarySectionName = (string)row.primary_section_name,
+            Tags = tags,
+            Sections = sections,
+            AiMetadata = (string?)row.ai_metadata
+        };
+    }
+
+    /// <inheritdoc/>
+    public async Task<bool> UpdateEditDataAsync(
+        string externalUrl,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(editData);
+
+        var tagsCsv = editData.Tags.Count > 0
+            ? $",{string.Join(",", editData.Tags)},"
+            : string.Empty;
+
+        var isAi = editData.Sections.Contains("ai");
+        var isAzure = editData.Sections.Contains("azure");
+        var isDotnet = editData.Sections.Contains("dotnet");
+        var isDevops = editData.Sections.Contains("devops");
+        var isGhc = editData.Sections.Contains("github-copilot");
+        var isMl = editData.Sections.Contains("ml");
+        var isSecurity = editData.Sections.Contains("security");
+        var bitmask = CalculateSectionBitmask(editData.Sections);
+
+        const string Sql = @"
+UPDATE content_items
+SET title                = @Title,
+    author               = @Author,
+    excerpt              = @Excerpt,
+    content              = @Content,
+    primary_section_name = @PrimarySectionName,
+    tags_csv             = @TagsCsv,
+    is_ai                = @IsAi,
+    is_azure             = @IsAzure,
+    is_dotnet            = @IsDotnet,
+    is_devops            = @IsDevops,
+    is_github_copilot    = @IsGhc,
+    is_ml                = @IsMl,
+    is_security          = @IsSecurity,
+    sections_bitmask     = @Bitmask,
+    ai_metadata          = @AiMetadata::jsonb,
+    updated_at           = NOW()
+WHERE external_url = @ExternalUrl";
+
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new
+            {
+                Title = editData.Title,
+                Author = editData.Author,
+                Excerpt = editData.Excerpt,
+                Content = editData.Content,
+                PrimarySectionName = editData.PrimarySectionName,
+                TagsCsv = tagsCsv,
+                IsAi = isAi,
+                IsAzure = isAzure,
+                IsDotnet = isDotnet,
+                IsDevops = isDevops,
+                IsGhc = isGhc,
+                IsMl = isMl,
+                IsSecurity = isSecurity,
+                Bitmask = bitmask,
+                AiMetadata = editData.AiMetadata,
+                ExternalUrl = externalUrl
+            }, cancellationToken: ct));
+        return rows > 0;
+    }
 }

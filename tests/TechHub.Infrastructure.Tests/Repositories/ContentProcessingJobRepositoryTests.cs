@@ -30,7 +30,7 @@ public class ContentProcessingJobRepositoryTests
     public async Task CreateAsync_ReturnsPositiveJobId()
     {
         // Act
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Assert
         jobId.Should().BeGreaterThan(0);
@@ -43,7 +43,7 @@ public class ContentProcessingJobRepositoryTests
         var before = DateTimeOffset.UtcNow.AddSeconds(-2);
 
         // Act
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -56,7 +56,7 @@ public class ContentProcessingJobRepositoryTests
     public async Task CreateAsync_SetsStatusToRunning()
     {
         // Act
-        var jobId = await _repository.CreateAsync("scheduled", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("scheduled", ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -68,12 +68,36 @@ public class ContentProcessingJobRepositoryTests
     public async Task CreateAsync_SetsTriggerType()
     {
         // Act
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
         job.Should().NotBeNull();
         job!.TriggerType.Should().Be("manual");
+    }
+
+    [Fact]
+    public async Task CreateAsync_DefaultsJobTypeToContentProcessing()
+    {
+        // Act
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.JobType.Should().Be(ContentProcessingJobType.ContentProcessing);
+    }
+
+    [Fact]
+    public async Task CreateAsync_WithRoundupJobType_SetsJobType()
+    {
+        // Act
+        var jobId = await _repository.CreateAsync("scheduled", ContentProcessingJobType.RoundupGeneration, CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.JobType.Should().Be(ContentProcessingJobType.RoundupGeneration);
     }
 
     // ── CompleteAsync ──────────────────────────────────────────────────────
@@ -82,7 +106,7 @@ public class ContentProcessingJobRepositoryTests
     public async Task CompleteAsync_SetsAllStatistics()
     {
         // Arrange
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
         await _repository.CompleteAsync(jobId, feedsProcessed: 5, itemsAdded: 10,
@@ -104,7 +128,7 @@ public class ContentProcessingJobRepositoryTests
     public async Task CompleteAsync_SetsCompletedAtAndDuration()
     {
         // Arrange
-        var jobId = await _repository.CreateAsync("scheduled", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("scheduled", ct: CancellationToken.None);
 
         // Act
         await _repository.CompleteAsync(jobId, 1, 0, 0, 0, "done", CancellationToken.None);
@@ -124,10 +148,10 @@ public class ContentProcessingJobRepositoryTests
     public async Task FailAsync_SetsStatusToFailed()
     {
         // Arrange
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
-        await _repository.FailAsync(jobId, "error log", CancellationToken.None);
+        await _repository.FailAsync(jobId, feedsProcessed: 2, itemsAdded: 3, itemsSkipped: 5, errorCount: 1, "error log", CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -136,6 +160,10 @@ public class ContentProcessingJobRepositoryTests
         job.LogOutput.Should().Be("error log");
         job.CompletedAt.Should().NotBeNull();
         job.DurationMs.Should().NotBeNull();
+        job.FeedsProcessed.Should().Be(2);
+        job.ItemsAdded.Should().Be(3);
+        job.ItemsSkipped.Should().Be(5);
+        job.ErrorCount.Should().Be(1);
     }
 
     // ── UpdateLogAsync ─────────────────────────────────────────────────────
@@ -144,7 +172,7 @@ public class ContentProcessingJobRepositoryTests
     public async Task UpdateLogAsync_ReplacesLogOutput()
     {
         // Arrange
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
         await _repository.UpdateLogAsync(jobId, "first flush", CancellationToken.None);
 
         // Act
@@ -162,8 +190,8 @@ public class ContentProcessingJobRepositoryTests
     public async Task GetRecentAsync_ReturnsJobsInDescendingOrder()
     {
         // Arrange — create multiple jobs
-        var id1 = await _repository.CreateAsync("scheduled", CancellationToken.None);
-        var id2 = await _repository.CreateAsync("manual", CancellationToken.None);
+        var id1 = await _repository.CreateAsync("scheduled", ct: CancellationToken.None);
+        var id2 = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
         var jobs = await _repository.GetRecentAsync(10, CancellationToken.None);
@@ -180,7 +208,7 @@ public class ContentProcessingJobRepositoryTests
     public async Task GetRecentAsync_AllFieldsMappedCorrectly()
     {
         // Arrange
-        var jobId = await _repository.CreateAsync("manual", CancellationToken.None);
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
         await _repository.CompleteAsync(jobId, 3, 7, 2, 1, "log content", CancellationToken.None);
 
         // Act
@@ -194,6 +222,7 @@ public class ContentProcessingJobRepositoryTests
         job.DurationMs.Should().NotBeNull("duration_ms must be mapped from DB");
         job.Status.Should().Be("completed", "status must be mapped from DB");
         job.TriggerType.Should().Be("manual", "trigger_type must be mapped from DB");
+        job.JobType.Should().Be(ContentProcessingJobType.ContentProcessing, "job_type must be mapped from DB");
         job.FeedsProcessed.Should().Be(3, "feeds_processed must be mapped from DB");
         job.ItemsAdded.Should().Be(7, "items_added must be mapped from DB");
         job.ItemsSkipped.Should().Be(2, "items_skipped must be mapped from DB");
@@ -211,5 +240,80 @@ public class ContentProcessingJobRepositoryTests
 
         // Assert
         job.Should().BeNull();
+    }
+
+    // ── AbortRunningJobsAsync ──────────────────────────────────────────────
+
+    [Fact]
+    public async Task AbortRunningJobsAsync_MarksRunningJobsAsAborted()
+    {
+        // Arrange — create a running job
+        var jobId = await _repository.CreateAsync("scheduled", ct: CancellationToken.None);
+
+        // Act
+        var aborted = await _repository.AbortRunningJobsAsync(CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        aborted.Should().BeGreaterThanOrEqualTo(1);
+        job.Should().NotBeNull();
+        job!.Status.Should().Be(ContentProcessingJobStatus.Aborted);
+        job.CompletedAt.Should().NotBeNull();
+        job.DurationMs.Should().NotBeNull();
+        job.LogOutput.Should().Contain("server was restarted");
+    }
+
+    [Fact]
+    public async Task AbortRunningJobsAsync_DoesNotAffectCompletedJobs()
+    {
+        // Arrange — create a completed job
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, "done", CancellationToken.None);
+
+        // Act
+        await _repository.AbortRunningJobsAsync(CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.Status.Should().Be(ContentProcessingJobStatus.Completed);
+    }
+
+    // ── UpdateProgressAsync ────────────────────────────────────────────────
+
+    [Fact]
+    public async Task UpdateProgressAsync_UpdatesCountersForRunningJob()
+    {
+        // Arrange
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+
+        // Act
+        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 3, itemsAdded: 5, itemsSkipped: 2, errorCount: 1, CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.FeedsProcessed.Should().Be(3);
+        job.ItemsAdded.Should().Be(5);
+        job.ItemsSkipped.Should().Be(2);
+        job.ErrorCount.Should().Be(1);
+        job.Status.Should().Be(ContentProcessingJobStatus.Running, "status should remain running");
+    }
+
+    [Fact]
+    public async Task UpdateProgressAsync_DoesNotAffectCompletedJob()
+    {
+        // Arrange — complete the job first
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, "done", CancellationToken.None);
+
+        // Act — try to update progress on a completed job
+        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 99, itemsAdded: 99, itemsSkipped: 99, errorCount: 99, CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert — counters should not change
+        job.Should().NotBeNull();
+        job!.FeedsProcessed.Should().Be(1);
+        job.ItemsAdded.Should().Be(1);
     }
 }

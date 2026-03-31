@@ -1,34 +1,19 @@
 # Database Configuration
 
-Tech Hub supports two content storage backends configured via `appsettings.json`.
+Tech Hub uses PostgreSQL as its exclusive content storage backend, configured via `appsettings.json`.
 
 **Related Documentation**:
 
 - [Content Processing](content-processing.md) - How content syncs to the database
 - [Filtering](filtering.md) - Tag filtering that leverages database indexes
-- [Running & Testing](running-and-testing.md) - How to run with different database providers
+- [Running & Testing](running-and-testing.md) - How to run during development
 - [Query Logging](query-logging.md) - Debug and performance monitoring with query logging
 
-## Supported Providers
+## Provider
 
-> **Default provider**: If `Database:Provider` is not specified, Tech Hub.Api defaults to **PostgreSQL** with connection string `Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev`.
+> **Default provider**: Tech Hub.Api defaults to **PostgreSQL** with connection string `Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev`.
 
-### Option 1: FileSystem (No Database)
-
-Reads markdown files directly from `collections/` folder.
-
-```json
-{
-  "Database": {
-    "Provider": "FileSystem"
-  }
-}
-```
-
-**Pros**: Fastest startup, no database needed, simplest setup  
-**Cons**: No full-text search, slower filtering on large datasets
-
-### Option 2: PostgreSQL (Recommended)
+### PostgreSQL
 
 Uses PostgreSQL with tsvector full-text search and GIN indexes.
 
@@ -63,7 +48,6 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 | `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag) |
 | `processed_urls` | Tracks processed/skipped/failed URLs for the content pipeline |
 | `content_processing_jobs` | Audit log of content processing runs |
-| `section_roundup_items` | Weekly AI-generated roundup articles |
 | `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 
 ### Design Decisions

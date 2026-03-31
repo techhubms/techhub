@@ -1,0 +1,252 @@
+@using Microsoft.AspNetCore.Components
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+
+@if (IsOpen && _editData is not null)
+{
+    <div class="editor-backdrop" @onclick="HandleBackdropClickAsync" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+        <div class="editor-modal" @onclick:stopPropagation>
+            <div class="editor-header">
+                <h2 id="editor-title" class="editor-title">@Title</h2>
+                <button class="editor-close" @onclick="HandleCloseAsync" aria-label="Close editor">×</button>
+            </div>
+
+            @if (_error != null)
+            {
+                <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+            }
+
+            <div class="editor-body">
+                <div class="editor-form-grid">
+                    <div class="admin-form-group editor-full-width">
+                        <label class="admin-label" for="ci-title">Title</label>
+                        <input id="ci-title" class="admin-input" @bind="_title" />
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label class="admin-label" for="ci-author">Author</label>
+                        <input id="ci-author" class="admin-input" @bind="_author" />
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label class="admin-label" for="ci-primary-section">Primary Section</label>
+                        <select id="ci-primary-section" class="admin-input" @bind="_primarySectionName">
+                            <option value="">— select —</option>
+                            @foreach (var sectionData in AllSections)
+                            {
+                                <option value="@sectionData">@sectionData</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="admin-form-group editor-full-width">
+                        <label class="admin-label" for="ci-excerpt">Excerpt</label>
+                        <textarea id="ci-excerpt" class="admin-input editor-textarea-sm" @bind="_excerpt" rows="3"></textarea>
+                    </div>
+
+                    <div class="admin-form-group editor-full-width">
+                        <label class="admin-label" for="ci-content">Content <span class="editor-hint">(markdown)</span></label>
+                        <textarea id="ci-content" class="admin-input editor-textarea-mono editor-textarea-lg" @bind="_content"
+                                  spellcheck="false" rows="16"></textarea>
+                    </div>
+
+                    <div class="admin-form-group editor-full-width">
+                        <label class="admin-label" for="ci-tags">Tags <span class="editor-hint">(comma-separated)</span></label>
+                        <input id="ci-tags" class="admin-input" @bind="_tagsCsv" />
+                    </div>
+
+                    <div class="admin-form-group editor-full-width">
+                        <label class="admin-label">Sections</label>
+                        <div class="editor-checkbox-row">
+                            @foreach (var sectionData in AllSections)
+                            {
+                                <label class="editor-checkbox-label">
+                                    <input type="checkbox"
+                                           checked="@_selectedSections.Contains(sectionData)"
+                                           @onchange="(e) => ToggleSection(sectionData, (bool)(e.Value ?? false))" />
+                                    @sectionData
+                                </label>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="admin-form-group editor-full-width">
+                        <details class="editor-details">
+                            <summary class="admin-label">AI Metadata <span class="editor-hint">(used for weekly roundup generation: summary, relevance, topic type, impact level)</span></summary>
+                            <textarea id="ci-ai-metadata" class="admin-input editor-textarea-mono" @bind="_aiMetadata"
+                                      spellcheck="false" rows="6"></textarea>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="editor-readonly-info">
+                    <span class="admin-cell-mono">@_editData.CollectionName / @_editData.Slug</span>
+                </div>
+            </div>
+
+            <div class="editor-footer">
+                <button class="btn" @onclick="SaveAsync" disabled="@_saving">
+                    @(_saving ? "Saving…" : "Save")
+                </button>
+                <button class="btn-secondary" @onclick="HandleCloseAsync">Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private static readonly string[] AllSections = ["ai", "azure", "devops", "dotnet", "github-copilot", "ml", "security"];
+
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+    [Parameter] public ContentItemEditData? EditData { get; set; }
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public EventCallback<ContentItemEditData> OnSave { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+
+    private ContentItemEditData? _editData;
+    private string _title = string.Empty;
+    private string _author = string.Empty;
+    private string _excerpt = string.Empty;
+    private string _content = string.Empty;
+    private string _primarySectionName = string.Empty;
+    private string _tagsCsv = string.Empty;
+    private string _aiMetadata = string.Empty;
+    private HashSet<string> _selectedSections = [];
+    private bool _saving;
+    private string? _error;
+
+    protected override void OnParametersSet()
+    {
+        if (IsOpen && EditData is not null)
+        {
+            _editData = EditData;
+            _title = EditData.Title;
+            _author = EditData.Author;
+            _excerpt = EditData.Excerpt;
+            _content = EditData.Content;
+            _primarySectionName = EditData.PrimarySectionName;
+            _tagsCsv = string.Join(", ", EditData.Tags);
+            _aiMetadata = EditData.AiMetadata ?? "{}";
+            _selectedSections = new HashSet<string>(EditData.Sections, StringComparer.OrdinalIgnoreCase);
+            _error = null;
+        }
+    }
+
+    private void ToggleSection(string sectionData, bool isChecked)
+    {
+        if (isChecked)
+        {
+            _selectedSections.Add(sectionData);
+        }
+        else
+        {
+            _selectedSections.Remove(sectionData);
+
+            // Clear primary section if it was just unchecked
+            if (string.Equals(_primarySectionName, sectionData, StringComparison.OrdinalIgnoreCase))
+            {
+                _primarySectionName = string.Empty;
+            }
+        }
+    }
+
+    private async Task SaveAsync()
+    {
+        _error = null;
+
+        if (string.IsNullOrWhiteSpace(_title))
+        {
+            _error = "Title is required.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_author))
+        {
+            _error = "Author is required.";
+            return;
+        }
+
+        if (_selectedSections.Count == 0)
+        {
+            _error = "At least one section must be selected.";
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(_primarySectionName))
+        {
+            _error = "Primary section is required.";
+            return;
+        }
+
+        if (!_selectedSections.Contains(_primarySectionName))
+        {
+            _error = "Primary section must be one of the selected sections.";
+            return;
+        }
+
+        var tags = _tagsCsv
+            .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+            .ToList();
+
+        if (tags.Count == 0)
+        {
+            _error = "At least one tag is required.";
+            return;
+        }
+
+        // Validate ai_metadata JSON if non-empty
+        var aiMeta = string.IsNullOrWhiteSpace(_aiMetadata) ? null : _aiMetadata.Trim();
+        if (aiMeta is not null)
+        {
+            try
+            {
+                System.Text.Json.JsonDocument.Parse(aiMeta);
+            }
+            catch (System.Text.Json.JsonException ex)
+            {
+                _error = $"Invalid AI Metadata JSON: {ex.Message}";
+                return;
+            }
+        }
+
+        var result = new ContentItemEditData
+        {
+            CollectionName = _editData!.CollectionName,
+            Slug = _editData.Slug,
+            Title = _title.Trim(),
+            Author = _author.Trim(),
+            Excerpt = _excerpt.Trim(),
+            Content = _content,
+            PrimarySectionName = _primarySectionName,
+            Tags = tags,
+            Sections = _selectedSections.OrderBy(s => s).ToList(),
+            AiMetadata = aiMeta
+        };
+
+        _saving = true;
+        try
+        {
+            await OnSave.InvokeAsync(result);
+            await OnClose.InvokeAsync();
+        }
+        catch (Exception ex)
+        {
+            _error = $"Save failed: {ex.Message}";
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task HandleCloseAsync()
+    {
+        _error = null;
+        await OnClose.InvokeAsync();
+    }
+
+    private async Task HandleBackdropClickAsync()
+    {
+        await HandleCloseAsync();
+    }
+}

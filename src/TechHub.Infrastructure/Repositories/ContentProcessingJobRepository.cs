@@ -27,17 +27,17 @@ public sealed class ContentProcessingJobRepository : IContentProcessingJobReposi
     }
 
     /// <inheritdoc/>
-    public async Task<long> CreateAsync(string triggerType, CancellationToken ct = default)
+    public async Task<long> CreateAsync(string triggerType, string jobType = ContentProcessingJobType.ContentProcessing, CancellationToken ct = default)
     {
         const string Sql = @"
-INSERT INTO content_processing_jobs (started_at, status, trigger_type)
-VALUES (NOW(), 'running', @TriggerType)
+INSERT INTO content_processing_jobs (started_at, status, trigger_type, job_type)
+VALUES (NOW(), 'running', @TriggerType, @JobType)
 RETURNING id";
 
         var id = await _connection.ExecuteScalarAsync<long>(
-            new CommandDefinition(Sql, new { TriggerType = triggerType }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { TriggerType = triggerType, JobType = jobType }, cancellationToken: ct));
 
-        _logger.LogDebug("Created processing job {JobId} (trigger: {TriggerType})", id, triggerType);
+        _logger.LogDebug("Created processing job {JobId} (trigger: {TriggerType}, type: {JobType})", id, triggerType, jobType);
         return id;
     }
 
@@ -73,18 +73,32 @@ WHERE id = @JobId";
     }
 
     /// <inheritdoc/>
-    public async Task FailAsync(long jobId, string logOutput, CancellationToken ct = default)
+    public async Task FailAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, string logOutput, CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_processing_jobs SET
-    completed_at = NOW(),
-    duration_ms  = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
-    status       = 'failed',
-    log_output   = @LogOutput
+    completed_at    = NOW(),
+    duration_ms     = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    status          = 'failed',
+    feeds_processed = @FeedsProcessed,
+    items_added     = @ItemsAdded,
+    items_skipped   = @ItemsSkipped,
+    error_count     = @ErrorCount,
+    log_output      = @LogOutput
 WHERE id = @JobId";
 
         await _connection.ExecuteAsync(new CommandDefinition(
-            Sql, new { JobId = jobId, LogOutput = logOutput }, cancellationToken: ct));
+            Sql,
+            new
+            {
+                JobId = jobId,
+                FeedsProcessed = feedsProcessed,
+                ItemsAdded = itemsAdded,
+                ItemsSkipped = itemsSkipped,
+                ErrorCount = errorCount,
+                LogOutput = logOutput
+            },
+            cancellationToken: ct));
     }
 
     /// <inheritdoc/>
@@ -132,9 +146,9 @@ WHERE id = @JobId";
         const string Sql = @"
 SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        duration_ms AS DurationMs, status, trigger_type AS TriggerType,
-       feeds_processed AS FeedsProcessed, items_added AS ItemsAdded,
-       items_skipped AS ItemsSkipped, error_count AS ErrorCount,
-       log_output AS LogOutput
+       job_type AS JobType, feeds_processed AS FeedsProcessed,
+       items_added AS ItemsAdded, items_skipped AS ItemsSkipped,
+       error_count AS ErrorCount, log_output AS LogOutput
 FROM content_processing_jobs
 WHERE id = @JobId";
 
@@ -148,9 +162,9 @@ WHERE id = @JobId";
         const string Sql = @"
 SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        duration_ms AS DurationMs, status, trigger_type AS TriggerType,
-       feeds_processed AS FeedsProcessed, items_added AS ItemsAdded,
-       items_skipped AS ItemsSkipped, error_count AS ErrorCount,
-       log_output AS LogOutput
+       job_type AS JobType, feeds_processed AS FeedsProcessed,
+       items_added AS ItemsAdded, items_skipped AS ItemsSkipped,
+       error_count AS ErrorCount, log_output AS LogOutput
 FROM content_processing_jobs
 ORDER BY started_at DESC
 LIMIT @Count";
@@ -160,6 +174,50 @@ LIMIT @Count";
 
         return result.ToList();
     }
-}
 
-#pragma warning restore CA1031
+    /// <inheritdoc/>
+    public async Task UpdateProgressAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, CancellationToken ct = default)
+    {
+        try
+        {
+            const string Sql = @"
+UPDATE content_processing_jobs SET
+    feeds_processed = @FeedsProcessed,
+    items_added     = @ItemsAdded,
+    items_skipped   = @ItemsSkipped,
+    error_count     = @ErrorCount
+WHERE id = @JobId AND status = 'running'";
+
+            await _connection.ExecuteAsync(new CommandDefinition(
+                Sql,
+                new { JobId = jobId, FeedsProcessed = feedsProcessed, ItemsAdded = itemsAdded, ItemsSkipped = itemsSkipped, ErrorCount = errorCount },
+                cancellationToken: ct));
+        }
+        catch (DbException ex)
+        {
+            _logger.LogDebug(ex, "Failed to update progress for job {JobId}", jobId);
+        }
+    }
+
+    /// <inheritdoc/>
+    public async Task<int> AbortRunningJobsAsync(CancellationToken ct = default)
+    {
+        const string Sql = @"
+UPDATE content_processing_jobs SET
+    completed_at = NOW(),
+    duration_ms  = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    status       = 'aborted',
+    log_output   = COALESCE(log_output, '') || E'\n[Startup] Job aborted — server was restarted while job was running.'
+WHERE status = 'running'";
+
+        var count = await _connection.ExecuteAsync(
+            new CommandDefinition(Sql, cancellationToken: ct));
+
+        if (count > 0)
+        {
+            _logger.LogWarning("Aborted {Count} stale running job(s) from prior server instance", count);
+        }
+
+        return count;
+    }
+}

@@ -110,8 +110,8 @@ If the data cannot be constructed or the page definition is missing.
 
 Custom pages content is hydrated from:
 
-1. **Database** (`custom_page_data` table) — JSON is stored in the database and seeded on first run from `collections/_custom/*.json` files. Admin users can edit the JSON directly from the admin UI.
-2. **Aggregation of items** from standard collections (e.g., Features page pulls from `collections/_videos/ghc-features/`)
+1. **Database** (`custom_page_data` table) — JSON objects representing the structured data are stored directly in the database. Admin users can edit the JSON directly from the admin UI.
+2. **Aggregation of items** from standard collections (e.g., Features page aggregates data from collection items)
 
 ### Admin Management
 
@@ -130,31 +130,30 @@ The three GenAI endpoints use a special handler that processes markdown content 
 
 All three GenAI pages (`genai-basics`, `genai-advanced`, `genai-applied`) share a single Razor component (`GenAI.razor`) with three `@page` routes.
 
-The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content through the standard content collection API from markdown files in `collections/_videos/vscode-updates/`.
+The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content through the standard content collection API pulling from the `vscode-updates` subcollection.
 
 See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs) for endpoint implementation.
 
 ## Content Sources for Custom Pages
 
-Some custom pages are populated by specialized content collections based on their directory location.
+Some custom pages are populated by specialized content collections based on their `subcollection` field in the database.
 
 ### GitHub Copilot Features Content
 
-**Location**: `collections/_videos/ghc-features/`
+**Location**: Managed in the database under `videos` collection with subcollection `ghc-features`
 
-This subfolder is treated as a specialized collection for GitHub Copilot feature demonstrations.
+This subcollection is treated as a specialized collection for GitHub Copilot feature demonstrations.
 
 **Requirements**:
 
-- Must be placed in `collections/_videos/ghc-features/`
-- **Frontmatter**:
-  - `section_names: ["github-copilot", "ai"]` (Required)
-  - `plans`: Array of supported tiers (Required: `["Free", "Pro", "Business", "Pro+", "Enterprise"]`)
-  - `ghes_support`: Boolean (Required: `true` or `false`)
+- Must be categorized in the database with subcollection `ghc-features`
+- **Metadata**:
+  - Requires `plans` array in AI metadata indicating supported tiers (Required: `["Free", "Pro", "Business", "Pro+", "Enterprise"]`)
+  - Requires `ghes_support` boolean in AI metadata
 
 **Features**:
 
-- Automatically identified as "Features" content based on directory location
+- Automatically identified as "Features" content based on subcollection
 - Populates the features page at `/github-copilot/features` (via `/api/custom-pages/features`)
 - Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
 - Supports per-section filtering by GHES support and video availability
@@ -164,20 +163,19 @@ This subfolder is treated as a specialized collection for GitHub Copilot feature
 
 ### VS Code Updates
 
-**Location**: `collections/_videos/vscode-updates/`
+**Location**: Managed in the database under `videos` collection with subcollection `vscode-updates`
 
-This subfolder is treated as a specialized collection for VS Code update videos.
+This subcollection is treated as a specialized collection for VS Code update videos.
 
 **Requirements**:
 
-- Must be placed in `collections/_videos/vscode-updates/`
-- **Frontmatter**:
-  - `section_names: ["github-copilot", "ai"]` (Recommended if relevant)
-  - `youtube_id`: ID of the video (Recommended for embedding)
+- Must be categorized in the database with subcollection `vscode-updates`
+- **Metadata**:
+  - `youtube_id` should be available for embedding
 
 **Features**:
 
-- Automatically identified as "Updates" content based on directory location
+- Automatically identified as "Updates" content based on subcollection
 - Populates the updates page at `/github-copilot/vscode-updates`
 - Latest video is featured prominently
 - Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date

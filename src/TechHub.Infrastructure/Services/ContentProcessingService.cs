@@ -102,18 +102,19 @@ public sealed class ContentProcessingService
             _logger.LogInformation("ContentProcessing[{JobId}] {Message}", jobId, msg);
         }
 
-        // Flush accumulated log to the database so the frontend can show live progress
-        async Task FlushLogAsync()
+        // Flush accumulated log and progress counters to the database so the frontend shows live progress
+        async Task FlushProgressAsync()
         {
             if (jobId > 0)
             {
                 await _jobRepo.UpdateLogAsync(jobId, log.ToString(), ct);
+                await _jobRepo.UpdateProgressAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, ct);
             }
         }
 
         try
         {
-            jobId = await _jobRepo.CreateAsync(triggerType, ct);
+            jobId = await _jobRepo.CreateAsync(triggerType, ct: ct);
 
             if (!_options.Enabled && triggerType != "manual")
             {
@@ -126,7 +127,7 @@ public sealed class ContentProcessingService
 
             var feeds = await _feedRepo.GetEnabledAsync(ct);
             Log(string.Create(CultureInfo.InvariantCulture, $"Loaded {feeds.Count} feed(s) from database"));
-            await FlushLogAsync();
+            await FlushProgressAsync();
 
             foreach (var feed in feeds)
             {
@@ -143,7 +144,8 @@ public sealed class ContentProcessingService
                 // Pre-filter: check which items are already known (in content_items or processed_urls)
                 var newItems = new List<RawFeedItem>();
                 var alreadyInDb = 0;
-                var alreadyProcessed = 0;
+                var previouslySkipped = 0;
+                var previouslyFailed = 0;
 
                 foreach (var item in rawItems)
                 {
@@ -152,22 +154,51 @@ public sealed class ContentProcessingService
                         alreadyInDb++;
                         itemsSkipped++;
                     }
-                    else if (await _processedUrlRepo.ExistsAsync(item.ExternalUrl, ct))
-                    {
-                        alreadyProcessed++;
-                        itemsSkipped++;
-                    }
                     else
                     {
-                        newItems.Add(item);
+                        var processedStatus = await _processedUrlRepo.GetStatusAsync(item.ExternalUrl, ct);
+                        if (processedStatus != null)
+                        {
+                            if (processedStatus == "skipped")
+                            {
+                                previouslySkipped++;
+                            }
+                            else
+                            {
+                                previouslyFailed++;
+                            }
+
+                            itemsSkipped++;
+                        }
+                        else
+                        {
+                            newItems.Add(item);
+                        }
                     }
                 }
 
+                var parts = new List<string>
+                {
+                    $"{rawItems.Count} items from feed",
+                    $"{newItems.Count} new",
+                    $"{alreadyInDb} already in DB"
+                };
+                if (previouslySkipped > 0)
+                {
+                    parts.Add($"{previouslySkipped} previously skipped");
+                }
+
+                if (previouslyFailed > 0)
+                {
+                    parts.Add($"{previouslyFailed} previously failed");
+                }
+
                 Log(string.Create(CultureInfo.InvariantCulture,
-                    $"  {rawItems.Count} items from feed, {newItems.Count} new, {alreadyInDb} already in DB, {alreadyProcessed} previously processed"));
+                    $"  {string.Join(", ", parts)}"));
 
                 if (newItems.Count == 0)
                 {
+                    await FlushProgressAsync();
                     continue;
                 }
 
@@ -178,107 +209,130 @@ public sealed class ContentProcessingService
                 for (var i = 0; i < limit && !ct.IsCancellationRequested; i++)
                 {
                     var raw = newItems[i];
+                    var step = "tags";
 
-                    // Fetch YouTube tags for YouTube items (merged into FeedTags for AI)
-                    if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
-                    {
-                        var ytTags = await _youtubeTagService.GetTagsAsync(raw.ExternalUrl, ct);
-                        if (ytTags.Count > 0)
-                        {
-                            var mergedTags = raw.FeedTags.Concat(ytTags)
-                                .Select(t => t.Trim())
-                                .Where(t => t.Length > 0)
-                                .Distinct(StringComparer.OrdinalIgnoreCase)
-                                .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
-                                .ToList();
-                            raw = new RawFeedItem
-                            {
-                                Title = raw.Title,
-                                ExternalUrl = raw.ExternalUrl,
-                                PublishedAt = raw.PublishedAt,
-                                Description = raw.Description,
-                                Author = raw.Author,
-                                FeedTags = mergedTags,
-                                FeedName = raw.FeedName,
-                                CollectionName = raw.CollectionName,
-                                FullContent = raw.FullContent
-                            };
-                            Log(string.Create(CultureInfo.InvariantCulture, $"  YouTube tags: {ytTags.Count} fetched, {mergedTags.Count} total after merge"));
-                        }
-                    }
-
-                    // Fetch full content (YouTube transcript or article body)
-                    raw = await _articleService.EnrichWithContentAsync(raw, ct);
-
-                    // Delay between external requests
-                    if (_options.RequestDelayMs > 0 && i > 0)
-                    {
-                        await Task.Delay(_options.RequestDelayMs, ct);
-                    }
-
-                    // AI categorization
-                    CategorizationResult categorizationResult;
                     try
                     {
-                        categorizationResult = await _aiService.CategorizeAsync(raw, ct);
+                        // Fetch YouTube tags for YouTube items (merged into FeedTags for AI)
+                        var ytTagCount = 0;
+                        if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
+                        {
+                            var ytTags = await _youtubeTagService.GetTagsAsync(raw.ExternalUrl, ct);
+                            ytTagCount = ytTags.Count;
+                            if (ytTags.Count > 0)
+                            {
+                                var mergedTags = raw.FeedTags.Concat(ytTags)
+                                    .Select(t => t.Trim())
+                                    .Where(t => t.Length > 0)
+                                    .Distinct(StringComparer.OrdinalIgnoreCase)
+                                    .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
+                                    .ToList();
+                                raw = new RawFeedItem
+                                {
+                                    Title = raw.Title,
+                                    ExternalUrl = raw.ExternalUrl,
+                                    PublishedAt = raw.PublishedAt,
+                                    Description = raw.Description,
+                                    Author = raw.Author,
+                                    FeedTags = mergedTags,
+                                    FeedName = raw.FeedName,
+                                    CollectionName = raw.CollectionName,
+                                    FullContent = raw.FullContent
+                                };
+                            }
+                        }
+
+                        // Fetch full content (YouTube transcript or article body)
+                        step = raw.IsYouTube ? "transcript" : "content";
+                        var hadContentBefore = !string.IsNullOrWhiteSpace(raw.FullContent);
+                        raw = await _articleService.EnrichWithContentAsync(raw, ct);
+                        var hasContentAfter = !string.IsNullOrWhiteSpace(raw.FullContent);
+                        var contentFetched = !hadContentBefore && hasContentAfter;
+
+                        // Pre-AI delay to prevent rate limiting (like the original PS scripts: 15s between every call)
+                        if (_options.RequestDelayMs > 0 && i > 0)
+                        {
+                            await Task.Delay(_options.RequestDelayMs, ct);
+                        }
+
+                        // AI categorization
+                        step = "AI";
+                        CategorizationResult categorizationResult;
+                        try
+                        {
+                            categorizationResult = await _aiService.CategorizeAsync(raw, ct);
+                        }
+                        catch (OperationCanceledException ex) when (!ct.IsCancellationRequested)
+                        {
+                            // Polly timeout or internal AI timeout (not user cancellation)
+                            Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error ({step}): {raw.ExternalUrl} — {ex.Message}"));
+                            await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, ct);
+                            errorCount++;
+                            continue;
+                        }
+                        catch (Exception ex) when (ex is HttpRequestException or JsonException or InvalidOperationException or TimeoutException)
+                        {
+                            Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error ({step}): {raw.ExternalUrl} — {ex.Message}"));
+                            await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, ct);
+                            errorCount++;
+                            continue;
+                        }
+
+                        if (categorizationResult.Item == null)
+                        {
+                            var skipReason = TruncateLogReason(categorizationResult.Explanation);
+                            var skipMsg = raw.IsYouTube
+                                ? string.Create(CultureInfo.InvariantCulture, $"  ⊘ Skipped: {raw.ExternalUrl} ({ytTagCount} tags, transcript {(contentFetched ? "fetched" : "failed")}) — {skipReason}")
+                                : string.Create(CultureInfo.InvariantCulture, $"  ⊘ Skipped: {raw.ExternalUrl} — {skipReason}");
+                            Log(skipMsg);
+                            await _processedUrlRepo.RecordSkippedAsync(raw.ExternalUrl, feedName: raw.FeedName, collectionName: raw.CollectionName, reason: categorizationResult.Explanation, ct: ct);
+                            itemsSkipped++;
+                            continue;
+                        }
+
+                        var processed = categorizationResult.Item;
+
+                        // Write to database
+                        step = "db-write";
+                        try
+                        {
+                            await WriteItemAsync(processed, ct);
+
+                            var addMsg = raw.IsYouTube
+                                ? string.Create(CultureInfo.InvariantCulture, $"  ✓ Added: {raw.ExternalUrl} ({ytTagCount} tags, transcript {(contentFetched ? "fetched" : "failed")})")
+                                : string.Create(CultureInfo.InvariantCulture, $"  ✓ Added: {raw.ExternalUrl}");
+                            Log(addMsg);
+                            await _processedUrlRepo.RecordSuccessAsync(
+                                raw.ExternalUrl,
+                                raw.IsYouTube ? raw.FeedTags : null,
+                                raw.FeedName,
+                                raw.CollectionName,
+                                categorizationResult.Explanation,
+                                ct);
+                            itemsAdded++;
+                        }
+                        catch (DbException ex)
+                        {
+                            Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error writing: {processed.ExternalUrl} — {ex.Message}"));
+                            await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, categorizationResult.Explanation, ct);
+                            errorCount++;
+                        }
                     }
-                    catch (OperationCanceledException)
+                    catch (OperationCanceledException) when (ct.IsCancellationRequested)
                     {
                         throw;
                     }
-                    catch (Exception ex) when (ex is HttpRequestException or JsonException or InvalidOperationException or TimeoutException)
+                    catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
                     {
-                        Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR categorizing {raw.ExternalUrl}: {ex.Message}"));
+                        Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error ({step}): {raw.ExternalUrl} — {ex.Message}"));
                         await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, ct);
                         errorCount++;
-                        continue;
                     }
 
-                    if (categorizationResult.Item == null)
-                    {
-                        Log(string.Create(CultureInfo.InvariantCulture, $"  SKIPPED (AI): {raw.Title}"));
-                        await _processedUrlRepo.RecordSkippedAsync(raw.ExternalUrl, feedName: raw.FeedName, collectionName: raw.CollectionName, reason: categorizationResult.Explanation, ct: ct);
-                        itemsSkipped++;
-                        continue;
-                    }
-
-                    var processed = categorizationResult.Item;
-
-                    // Write to database
-                    try
-                    {
-                        await WriteItemAsync(processed, ct);
-
-                        // Register high/medium relevance items in weekly per-section draft accumulators
-                        if (processed.RoundupMetadata?.Relevance is "high" or "medium")
-                        {
-                            await RegisterRoundupItemAsync(processed, ct);
-                        }
-
-                        Log(string.Create(CultureInfo.InvariantCulture, $"  ADDED: {processed.Title}"));
-                        await _processedUrlRepo.RecordSuccessAsync(
-                            raw.ExternalUrl,
-                            raw.IsYouTube ? raw.FeedTags : null,
-                            raw.FeedName,
-                            raw.CollectionName,
-                            categorizationResult.Explanation,
-                            ct);
-                        itemsAdded++;
-                    }
-                    catch (OperationCanceledException)
-                    {
-                        throw;
-                    }
-                    catch (DbException ex)
-                    {
-                        Log(string.Create(CultureInfo.InvariantCulture, $"  ERROR writing {processed.ExternalUrl}: {ex.Message}"));
-                        await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, categorizationResult.Explanation, ct);
-                        errorCount++;
-                    }
+                    // Flush log and counters to DB after each URL so the frontend shows live progress
+                    await FlushProgressAsync();
                 }
 
-                // Flush log to DB after each feed so the frontend shows live progress
-                await FlushLogAsync();
             }
 
             // Clean up old job records (keep last 500)
@@ -299,17 +353,17 @@ public sealed class ContentProcessingService
         catch (OperationCanceledException)
         {
             Log("Run cancelled.");
-            await TryFailJobAsync(jobId, log.ToString(), ct);
+            await TryFailJobAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, log.ToString(), ct);
         }
         catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
         {
             Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message}"));
             _logger.LogError(ex, "Content processing run {JobId} failed with unhandled exception", jobId);
-            await TryFailJobAsync(jobId, log.ToString(), ct);
+            await TryFailJobAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, log.ToString(), ct);
         }
     }
 
-    private async Task TryFailJobAsync(long jobId, string logOutput, CancellationToken ct)
+    private async Task TryFailJobAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, string logOutput, CancellationToken ct)
     {
         if (jobId <= 0)
         {
@@ -318,7 +372,7 @@ public sealed class ContentProcessingService
 
         try
         {
-            await _jobRepo.FailAsync(jobId, logOutput, ct);
+            await _jobRepo.FailAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, logOutput, ct);
         }
         catch (DbException ex)
         {
@@ -354,66 +408,19 @@ public sealed class ContentProcessingService
         return exists;
     }
 
-    /// <summary>
-    /// Registers a newly processed item in the <c>section_roundup_items</c> accumulation table
-    /// for each section the item belongs to.
-    /// The week is identified by the Monday of the current ISO week in Europe/Brussels time.
-    /// </summary>
-    private async Task RegisterRoundupItemAsync(ProcessedContentItem item, CancellationToken ct)
+    private static string TruncateLogReason(string reason)
     {
-        var weekStart = GetCurrentIsoWeekMonday(_timeProvider);
-        var sections = GetSectionsToRegister(item);
-
-        foreach (var section in sections)
+        const int MaxLength = 120;
+        if (string.IsNullOrWhiteSpace(reason))
         {
-            await _connection.ExecuteAsync(new CommandDefinition(
-                @"INSERT INTO section_roundup_items
-                      (section_name, week_start_date, collection_name, slug)
-                  VALUES (@Section, @WeekStart, @Collection, @Slug)
-                  ON CONFLICT DO NOTHING",
-                new
-                {
-                    Section = section.ToLowerInvariant(),
-                    WeekStart = weekStart.ToDateTime(TimeOnly.MinValue),
-                    Collection = item.CollectionName,
-                    Slug = item.Slug
-                },
-                cancellationToken: ct));
-        }
-    }
-
-    /// <summary>
-    /// Returns the date of the Monday of the current ISO week, expressed in Europe/Brussels time.
-    /// </summary>
-    private static DateOnly GetCurrentIsoWeekMonday(TimeProvider timeProvider)
-    {
-        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
-            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
-        var utcNow = timeProvider.GetUtcNow().UtcDateTime;
-        var now = TimeZoneInfo.ConvertTimeFromUtc(utcNow, brusselsZone);
-        var weekYear = System.Globalization.ISOWeek.GetYear(now);
-        var weekNumber = System.Globalization.ISOWeek.GetWeekOfYear(now);
-        var monday = System.Globalization.ISOWeek.ToDateTime(weekYear, weekNumber, DayOfWeek.Monday);
-        return DateOnly.FromDateTime(monday);
-    }
-
-    /// <summary>
-    /// Returns the list of sections an item should be registered in for roundup drafts.
-    /// Uses the item's known sections first; falls back to the primary section if no sections are set.
-    /// </summary>
-    private static IEnumerable<string> GetSectionsToRegister(ProcessedContentItem item)
-    {
-        if (item.Sections.Count > 0)
-        {
-            return item.Sections;
+            return "no reason provided";
         }
 
-        if (!string.IsNullOrEmpty(item.PrimarySectionName) && item.PrimarySectionName != "all")
-        {
-            return [item.PrimarySectionName];
-        }
-
-        return [];
+        // Take first line/sentence only
+        var firstLine = reason.Split('\n', 2)[0].Trim();
+        return firstLine.Length <= MaxLength
+            ? firstLine
+            : firstLine[..MaxLength] + "…";
     }
 
     private async Task WriteItemAsync(ProcessedContentItem item, CancellationToken ct)
@@ -465,7 +472,6 @@ public sealed class ContentProcessingService
         }
 
         var tagsCsv = item.Tags.Count > 0 ? $",{string.Join(",", item.Tags)}," : string.Empty;
-        var primarySection = item.PrimarySectionName ?? (item.Sections.Count > 0 ? item.Sections[0] : "all");
 
         var aiMetadataJson = item.RoundupMetadata != null
             ? JsonSerializer.Serialize(new
@@ -517,7 +523,7 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                 Content = item.Content ?? string.Empty,
                 item.Excerpt,
                 item.DateEpoch,
-                PrimarySection = primarySection,
+                PrimarySection = item.PrimarySectionName,
                 item.ExternalUrl,
                 Author = item.Author ?? string.Empty,
                 FeedName = item.FeedName,

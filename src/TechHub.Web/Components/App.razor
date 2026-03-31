@@ -31,6 +31,9 @@
     <!-- Scoped Component Styles -->
     <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
 
+    <!-- Admin styles (loaded globally to prevent FOUC on InteractiveServer pages) -->
+    <link rel="stylesheet" href="@Assets["css/admin.css"]" />
+
     <!-- Favicon embedded as data URI to eliminate HTTP requests during navigation -->
     <link id="favicon" rel="icon" type="image/x-icon" href="@FaviconService.DataUri" sizes="any" data-permanent />
 

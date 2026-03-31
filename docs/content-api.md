@@ -14,7 +14,7 @@ This document describes the core Content API endpoints for retrieving sections, 
 
 The Tech Hub Content API provides RESTful access to content organized by sections and collections. It uses a nested route structure that mirrors the site's hierarchical organization.
 
-**Content Storage**: The API serves content from a database backend (PostgreSQL or FileSystem) configured via appsettings.json. The database syncs from markdown files in the `collections/` folder on startup.
+**Content Storage**: The API serves content exclusively from a PostgreSQL database backend. All content is populated via background services and administrative tools.
 
 **Key Design Principles**:
 
@@ -340,7 +340,7 @@ Returned when a section, collection, or item does not exist.
 ## Performance Characteristics
 
 - **Sections**: ~25ms response time
-- **Content (first load)**: ~5-9 seconds (2251+ markdown files)
+- **Content (first load)**: ~500ms (database query)
 - **Content (cached)**: < 100ms
 - **Filtering**: Varies based on criteria (typically < 2 seconds)
 

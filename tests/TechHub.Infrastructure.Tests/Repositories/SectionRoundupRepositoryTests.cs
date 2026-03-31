@@ -36,8 +36,9 @@ public class SectionRoundupRepositoryTests
     {
         // Arrange
         await SeedContentItemAsync("test-article-1", "news", "Test Article 1",
-            "https://example.com/1", relevance: "high", summary: "Summary of article 1", keyTopics: ["AI", "Testing"]);
-        await SeedRoundupItemAsync("ai", _weekStart, "news", "test-article-1");
+            "https://example.com/1", sections: ["ai"],
+            relevance: "high", summary: "Summary of article 1", keyTopics: ["AI", "Testing"],
+            createdAt: new DateTime(2025, 3, 25, 10, 0, 0, DateTimeKind.Utc));
 
         // Act
         var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
@@ -59,8 +60,9 @@ public class SectionRoundupRepositoryTests
     {
         // Arrange
         await SeedContentItemAsync("test-video-1", "videos", "Test Video 1",
-            "/videos/watch?v=abc", relevance: "medium");
-        await SeedRoundupItemAsync("ai", _weekStart, "videos", "test-video-1");
+            "/videos/watch?v=abc", sections: ["ai"],
+            relevance: "medium",
+            createdAt: new DateTime(2025, 3, 26, 12, 0, 0, DateTimeKind.Utc));
 
         // Act
         var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
@@ -74,14 +76,15 @@ public class SectionRoundupRepositoryTests
     [Fact]
     public async Task GetArticlesForWeekAsync_WithMultipleSections_GroupsBySection()
     {
-        // Arrange
+        // Arrange — article belongs to azure only, other to dotnet only
         await SeedContentItemAsync("azure-article-1", "blogs", "Azure Article 1",
-            "https://azure.example.com/1", relevance: "high");
+            "https://azure.example.com/1", sections: ["azure"],
+            relevance: "high",
+            createdAt: new DateTime(2025, 3, 25, 8, 0, 0, DateTimeKind.Utc));
         await SeedContentItemAsync("dotnet-article-1", "blogs", ".NET Article 1",
-            "https://dotnet.example.com/1", relevance: "medium");
-
-        await SeedRoundupItemAsync("azure", _weekStart, "blogs", "azure-article-1");
-        await SeedRoundupItemAsync("dotnet", _weekStart, "blogs", "dotnet-article-1");
+            "https://dotnet.example.com/1", sections: ["dotnet"],
+            relevance: "medium",
+            createdAt: new DateTime(2025, 3, 26, 8, 0, 0, DateTimeKind.Utc));
 
         // Act
         var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
@@ -96,20 +99,18 @@ public class SectionRoundupRepositoryTests
     [Fact]
     public async Task GetArticlesForWeekAsync_OutsideDateRange_ReturnsEmpty()
     {
-        // Arrange — item belongs to a different week
-        var differentWeekStart = new DateOnly(2025, 1, 6);
+        // Arrange — item created outside the queried week
         await SeedContentItemAsync("out-of-range-article", "news", "Out of Range Article",
-            "https://example.com/out", relevance: "high");
-        await SeedRoundupItemAsync("ai", differentWeekStart, "news", "out-of-range-article");
+            "https://example.com/out", sections: ["ai"],
+            relevance: "high",
+            createdAt: new DateTime(2025, 1, 7, 10, 0, 0, DateTimeKind.Utc));
 
-        // Act — query the current week, not the different week
+        // Act — query a week that doesn't contain the article
         var result = await _sut.GetArticlesForWeekAsync(
             new DateOnly(2025, 3, 24),
             new DateOnly(2025, 3, 30));
 
         // Assert
-        result.Should().NotContainKey("out-of-range-article");
-        // If the section exists it should not contain our out-of-range article
         if (result.TryGetValue("ai", out var articles))
         {
             articles.Should().NotContain(a => a.Slug == "out-of-range-article");
@@ -117,24 +118,24 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
-    public async Task GetArticlesForWeekAsync_WithNullAiMetadata_DefaultsToMediumRelevance()
+    public async Task GetArticlesForWeekAsync_WithNullAiMetadata_ExcludesItem()
     {
         // Arrange — no ai_metadata
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items
                 (slug, collection_name, title, content, excerpt, date_epoch,
                  primary_section_name, external_url, author, feed_name, tags_csv,
-                 sections_bitmask, content_hash)
+                 sections_bitmask, content_hash, is_ai, created_at)
             VALUES ('no-meta-article', 'news', 'No Meta Article', '', '', 1711699200,
-                    'ai', 'https://example.com/no-meta', 'Author', 'Feed', '', 4, 'hash-no-meta')
+                    'ai', 'https://example.com/no-meta', 'Author', 'Feed', '', 4, 'hash-no-meta',
+                    TRUE, '2025-03-25T10:00:00Z')
             ON CONFLICT (collection_name, slug) DO NOTHING
             """);
-        await SeedRoundupItemAsync("ai", _weekStart, "news", "no-meta-article");
 
         // Act
         var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
 
-        // Assert — item is excluded because ai_metadata IS NULL (see WHERE clause)
+        // Assert — item is excluded because ai_metadata IS NULL
         if (result.TryGetValue("ai", out var articles))
         {
             articles.Should().NotContain(a => a.Slug == "no-meta-article");
@@ -146,15 +147,17 @@ public class SectionRoundupRepositoryTests
     {
         // Arrange
         await SeedContentItemAsync("relevance-high", "news", "High Relevance",
-            "https://example.com/high", relevance: "high");
+            "https://example.com/high", sections: ["security"],
+            relevance: "high",
+            createdAt: new DateTime(2025, 3, 24, 8, 0, 0, DateTimeKind.Utc));
         await SeedContentItemAsync("relevance-medium", "news", "Medium Relevance",
-            "https://example.com/medium", relevance: "medium");
+            "https://example.com/medium", sections: ["security"],
+            relevance: "medium",
+            createdAt: new DateTime(2025, 3, 25, 8, 0, 0, DateTimeKind.Utc));
         await SeedContentItemAsync("relevance-low", "news", "Low Relevance",
-            "https://example.com/low", relevance: "low");
-
-        await SeedRoundupItemAsync("security", _weekStart, "news", "relevance-high");
-        await SeedRoundupItemAsync("security", _weekStart, "news", "relevance-medium");
-        await SeedRoundupItemAsync("security", _weekStart, "news", "relevance-low");
+            "https://example.com/low", sections: ["security"],
+            relevance: "low",
+            createdAt: new DateTime(2025, 3, 26, 8, 0, 0, DateTimeKind.Utc));
 
         // Act
         var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
@@ -167,6 +170,44 @@ public class SectionRoundupRepositoryTests
         articles.Should().Contain(a => a.Slug == "relevance-low");
     }
 
+    [Fact]
+    public async Task GetArticlesForWeekAsync_WithMultipleSectionFlags_ExpandsIntoEachSection()
+    {
+        // Arrange — one article belongs to both "ai" and "github-copilot"
+        await SeedContentItemAsync("multi-section-article", "news", "Multi-Section Article",
+            "https://example.com/multi", sections: ["ai", "github-copilot"],
+            relevance: "high",
+            createdAt: new DateTime(2025, 3, 27, 10, 0, 0, DateTimeKind.Utc));
+
+        // Act
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+
+        // Assert — article appears in both sections
+        result.Should().ContainKey("ai");
+        result.Should().ContainKey("github-copilot");
+        result["ai"].Should().Contain(a => a.Slug == "multi-section-article");
+        result["github-copilot"].Should().Contain(a => a.Slug == "multi-section-article");
+    }
+
+    [Fact]
+    public async Task GetArticlesForWeekAsync_ExcludesRoundups()
+    {
+        // Arrange — insert a roundup in the same week
+        await SeedContentItemAsync("existing-roundup", "roundups", "Weekly Roundup",
+            "/all/roundups/existing-roundup", sections: ["ai"],
+            relevance: "high",
+            createdAt: new DateTime(2025, 3, 28, 9, 0, 0, DateTimeKind.Utc));
+
+        // Act
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+
+        // Assert — roundups are excluded to prevent circular inclusion
+        if (result.TryGetValue("ai", out var articles))
+        {
+            articles.Should().NotContain(a => a.Slug == "existing-roundup");
+        }
+    }
+
     // ── Helpers ────────────────────────────────────────────────────────────────
 
     private async Task SeedContentItemAsync(
@@ -174,12 +215,31 @@ public class SectionRoundupRepositoryTests
         string collection,
         string title,
         string externalUrl,
+        IReadOnlyList<string> sections,
         string relevance = "high",
         string summary = "",
-        IEnumerable<string>? keyTopics = null)
+        IEnumerable<string>? keyTopics = null,
+        DateTime? createdAt = null)
     {
         var topics = keyTopics?.ToList() ?? [];
-        _ = System.Text.Json.JsonSerializer.Serialize(topics);
+
+        var sectionSet = new HashSet<string>(sections, StringComparer.OrdinalIgnoreCase);
+        var isAi = sectionSet.Contains("ai");
+        var isAzure = sectionSet.Contains("azure");
+        var isDotnet = sectionSet.Contains("dotnet");
+        var isDevops = sectionSet.Contains("devops");
+        var isGhc = sectionSet.Contains("github-copilot");
+        var isMl = sectionSet.Contains("ml");
+        var isSecurity = sectionSet.Contains("security");
+
+        var bitmask = 0;
+        if (isAi) bitmask |= 1;
+        if (isAzure) bitmask |= 2;
+        if (isDotnet) bitmask |= 4;
+        if (isDevops) bitmask |= 8;
+        if (isGhc) bitmask |= 16;
+        if (isMl) bitmask |= 32;
+        if (isSecurity) bitmask |= 64;
 
         var aiMetadata = System.Text.Json.JsonSerializer.Serialize(new
         {
@@ -191,16 +251,30 @@ public class SectionRoundupRepositoryTests
             time_sensitivity = "this-week"
         });
 
+        var ts = createdAt ?? new DateTime(2025, 3, 25, 10, 0, 0, DateTimeKind.Utc);
+
         await _fixture.Connection.ExecuteAsync("""
             INSERT INTO content_items
                 (slug, collection_name, title, content, excerpt, date_epoch,
                  primary_section_name, external_url, author, feed_name, tags_csv,
-                 sections_bitmask, content_hash, ai_metadata)
+                 is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security,
+                 sections_bitmask, content_hash, ai_metadata, created_at)
             VALUES (@Slug, @Collection, @Title, '', '', 1743278400,
-                    'ai', @ExternalUrl, 'Author', 'Feed', '', 4, @Hash, @AiMetadata::jsonb)
+                    'ai', @ExternalUrl, 'Author', 'Feed', '',
+                    @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc, @IsMl, @IsSecurity,
+                    @Bitmask, @Hash, @AiMetadata::jsonb, @CreatedAt)
             ON CONFLICT (collection_name, slug) DO UPDATE SET
                 ai_metadata = EXCLUDED.ai_metadata,
-                title       = EXCLUDED.title
+                title       = EXCLUDED.title,
+                is_ai       = EXCLUDED.is_ai,
+                is_azure    = EXCLUDED.is_azure,
+                is_dotnet   = EXCLUDED.is_dotnet,
+                is_devops   = EXCLUDED.is_devops,
+                is_github_copilot = EXCLUDED.is_github_copilot,
+                is_ml       = EXCLUDED.is_ml,
+                is_security = EXCLUDED.is_security,
+                sections_bitmask = EXCLUDED.sections_bitmask,
+                created_at  = EXCLUDED.created_at
             """,
             new
             {
@@ -208,28 +282,17 @@ public class SectionRoundupRepositoryTests
                 Collection = collection,
                 Title = title,
                 ExternalUrl = externalUrl,
+                IsAi = isAi,
+                IsAzure = isAzure,
+                IsDotnet = isDotnet,
+                IsDevops = isDevops,
+                IsGhc = isGhc,
+                IsMl = isMl,
+                IsSecurity = isSecurity,
+                Bitmask = bitmask,
                 Hash = $"hash-{slug}",
-                AiMetadata = aiMetadata
-            });
-    }
-
-    private async Task SeedRoundupItemAsync(
-        string sectionName,
-        DateOnly weekStartDate,
-        string collectionName,
-        string slug)
-    {
-        await _fixture.Connection.ExecuteAsync("""
-            INSERT INTO section_roundup_items (section_name, week_start_date, collection_name, slug)
-            VALUES (@SectionName, @WeekStartDate, @CollectionName, @Slug)
-            ON CONFLICT (section_name, week_start_date, collection_name, slug) DO NOTHING
-            """,
-            new
-            {
-                SectionName = sectionName,
-                WeekStartDate = weekStartDate.ToDateTime(TimeOnly.MinValue),
-                CollectionName = collectionName,
-                Slug = slug
+                AiMetadata = aiMetadata,
+                CreatedAt = ts
             });
     }
 }

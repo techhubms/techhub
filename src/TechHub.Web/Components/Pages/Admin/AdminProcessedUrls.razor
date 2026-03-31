@@ -87,6 +87,16 @@
 
         <div class="admin-jobs-table-wrapper">
             <table class="admin-table">
+                <colgroup>
+                    <col class="col-site" />
+                    <col class="col-article" />
+                    <col class="col-status" />
+                    <col class="col-reason" />
+                    <col class="col-feed" />
+                    <col class="col-collection" />
+                    <col class="col-processed" />
+                    <col class="col-actions" />
+                </colgroup>
                 <thead>
                     <tr>
                         <th>Site</th>
@@ -97,8 +107,6 @@
                         <th>Collection</th>
                         <th>Processed</th>
                         <th>Actions</th>
-                        <th></th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -122,25 +130,21 @@
                             </td>
                             <td class="admin-cell-feed" title="@item.FeedName">@(item.FeedName ?? "—")</td>
                             <td class="admin-cell-mono">@(item.CollectionName ?? "—")</td>
-                            <td class="admin-cell-mono">@item.ProcessedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td class="admin-cell-mono">@item.ProcessedAt.ToString("MM-dd HH:mm")</td>
                             <td>
                                 <button class="admin-link-btn admin-link-btn-danger"
                                         @onclick="() => DeleteUrlAsync(item.ExternalUrl)"
                                         title="Remove so it can be retried">Remove</button>
-                            </td>
-                            <td>
                                 <button class="admin-link-btn"
                                         @onclick="() => CopyToClipboardAsync(item)"
                                         title="Copy details to clipboard">
                                     @(_copiedUrl == item.ExternalUrl ? "✓ Copied" : "Copy")
                                 </button>
-                            </td>
-                            <td>
                                 @if (item.Status == "succeeded")
                                 {
                                     <button class="admin-link-btn"
-                                            @onclick="() => OpenAiMetadataEditorAsync(item.ExternalUrl)"
-                                            title="Edit AI metadata">Edit</button>
+                                            @onclick="() => OpenContentItemEditorAsync(item.ExternalUrl)"
+                                            title="Edit content item">Edit</button>
                                 }
                             </td>
                         </tr>
@@ -161,11 +165,11 @@
     }
 </div>
 
-<JsonEditorModal IsOpen="_aiEditorOpen"
-                 Title="_aiEditorTitle"
-                 Json="_aiEditorJson"
-                 OnSave="SaveAiMetadataAsync"
-                 OnClose="CloseAiMetadataEditor" />
+<ContentItemEditorModal IsOpen="@_editorOpen"
+                        Title="@_editorTitle"
+                        EditData="@_editorData"
+                        OnSave="SaveContentItemAsync"
+                        OnClose="CloseContentItemEditor" />
 
 @code {
     private const int PageSize = 100;
@@ -193,11 +197,11 @@
     // Clipboard feedback
     private string? _copiedUrl;
 
-    // AI metadata editor
-    private bool _aiEditorOpen;
-    private string _aiEditorTitle = string.Empty;
-    private string _aiEditorJson = "{}";
-    private string _aiEditorUrl = string.Empty;
+    // Content item editor
+    private bool _editorOpen;
+    private string _editorTitle = string.Empty;
+    private TechHub.Core.Models.Admin.ContentItemEditData? _editorData;
+    private string _editorUrl = string.Empty;
 
     protected override async Task OnInitializedAsync()
     {
@@ -410,47 +414,47 @@
         }
     }
 
-    private async Task OpenAiMetadataEditorAsync(string url)
+    private async Task OpenContentItemEditorAsync(string url)
     {
         _message = null;
         try
         {
-            var result = await Api.GetContentItemAiMetadataAsync(url);
+            var result = await Api.GetContentItemEditDataAsync(url);
             if (result is null)
             {
                 _message = "Content item not found.";
                 _messageIsError = true;
                 return;
             }
-            _aiEditorUrl = url;
-            _aiEditorTitle = $"AI Metadata — {GetUrlArticle(url)}";
-            _aiEditorJson = result.AiMetadata ?? "{}";
-            _aiEditorOpen = true;
+            _editorUrl = url;
+            _editorTitle = $"Edit — {GetUrlArticle(url)}";
+            _editorData = result;
+            _editorOpen = true;
         }
         catch (HttpRequestException ex)
         {
-            _message = $"Failed to load AI metadata: {ex.Message}";
+            _message = $"Failed to load content item: {ex.Message}";
             _messageIsError = true;
         }
     }
 
-    private async Task SaveAiMetadataAsync(string json)
+    private async Task SaveContentItemAsync(TechHub.Core.Models.Admin.ContentItemEditData editData)
     {
         try
         {
-            await Api.UpdateContentItemAiMetadataAsync(_aiEditorUrl, json);
-            _aiEditorOpen = false;
-            _message = "AI metadata saved.";
+            await Api.UpdateContentItemEditDataAsync(_editorUrl, editData);
+            _editorOpen = false;
+            _message = "Content item saved.";
             _messageIsError = false;
         }
         catch (HttpRequestException ex)
         {
-            _message = $"Failed to save AI metadata: {ex.Message}";
+            _message = $"Failed to save content item: {ex.Message}";
             _messageIsError = true;
         }
     }
 
-    private void CloseAiMetadataEditor() => _aiEditorOpen = false;
+    private void CloseContentItemEditor() => _editorOpen = false;
 
     private static string TruncateUrl(string url)
     {

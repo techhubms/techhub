@@ -8,6 +8,6 @@ public sealed record CustomPageEntry
 {
     public required string Key { get; init; }
     public required string Description { get; init; }
-    public required string JsonData { get; init; }
+    public string JsonData { get; init; } = string.Empty;
     public DateTimeOffset UpdatedAt { get; init; }
 }

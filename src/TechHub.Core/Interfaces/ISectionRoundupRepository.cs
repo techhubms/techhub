@@ -8,11 +8,11 @@ namespace TechHub.Core.Interfaces;
 public interface ISectionRoundupRepository
 {
     /// <summary>
-    /// Returns all articles registered in <c>section_roundup_items</c> for the given week,
+    /// Returns all articles from <c>content_items</c> created during the given week,
     /// grouped by section name (e.g. "github-copilot", "ai", "azure").
-    /// Only articles whose <c>content_item</c> exists with AI metadata are returned.
+    /// Only articles with AI metadata are returned; roundups are excluded.
     /// </summary>
-    /// <param name="weekStart">Monday of the ISO week (Europe/Brussels time).</param>
+    /// <param name="weekStart">Monday of the ISO week.</param>
     /// <param name="weekEnd">Sunday of the ISO week (inclusive).</param>
     /// <param name="ct">Cancellation token.</param>
     /// <returns>

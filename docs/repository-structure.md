@@ -36,23 +36,10 @@
 
 ### Utilities and Background Services
 
-- **`TechHub.ContentFixer/`** - CLI utility for content maintenance
-  - Bulk updates to frontmatter across collections
-  - Content validation and normalization
-  - Run from command line or as part of CI/CD pipeline
-- **`TechHub.ContentProcessor/`** - CLI utility for one-time content processing migration tasks
-  - Retained for reference; active content processing now runs inside `TechHub.Api` as `ContentProcessingBackgroundService`
-  - See [content-processing.md](content-processing.md) for the current architecture
+- **`TechHub.ContentFixer/`** - CLI utility for legacy content maintenance
+  - Retained for historical migrations of local development data
 
 See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and architecture guidelines.
-
-## Content (`collections/`)
-
-Custom page data files (JSON) for manually curated pages. Content collections (news, blogs, videos, etc.) are managed exclusively in the PostgreSQL database via the `ContentProcessingBackgroundService`.
-
-- **`_custom/`** - Custom manually created pages (e.g., About, Documentation)
-
-See [collections/AGENTS.md](../collections/AGENTS.md) for content guidelines.
 
 ## Tests (`tests/`)
 
@@ -87,7 +74,7 @@ See [collections/AGENTS.md](../collections/AGENTS.md) for content guidelines.
 ### Test Utilities & Test Collections
 
 - **`TechHub.TestUtilities/`** - Shared test infrastructure
-  - **`TestCollections/`** - Sample markdown files for testing (mirrors `collections/` structure):
+  - **`TestCollections/`** - Sample file-based fixtures for test seeding:
     - `_blogs/` - Sample blog posts
     - `_community/` - Sample community posts
     - `_custom/` - Sample custom pages
@@ -126,7 +113,7 @@ Comprehensive functional and technical documentation.
 - **`repository-structure.md`** - This file
 - **`running-and-testing.md`** - How to build, run, and test the application
 - **`testing-strategy.md`** - Testing approach and patterns
-- **Additional docs:** caching, content-api, database, design-system, filtering, frontmatter, health-checks, render-modes, RSS feeds, SEO, and more
+- **Additional docs:** caching, content-api, database, design-system, filtering, health-checks, render-modes, RSS feeds, SEO, and more
 
 See [docs/AGENTS.md](AGENTS.md) for documentation maintenance guidelines.
 
@@ -143,19 +130,17 @@ PowerShell automation scripts for development and maintenance tasks:
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
 - **`Restore-Database.ps1`** - Downloads and restores the production PostgreSQL database
   - Target: `local` (Docker Compose) or `staging` (Azure)
-  - Replaces `collections/` sync for non-production environments
+  - Crucial step to populate data in non-production environments
   - Requires PostgreSQL client tools and VPN access to production
 - **`Deploy-Infrastructure.ps1`** - Azure infrastructure deployment (Bicep)
   - Supports shared, staging, and production environments
   - Modes: validate, whatif, deploy
   - Pre-flight checks (soft-deleted AI purge, ACR pull roles)
 - **`Deploy-Application.ps1`** - Container image build, push, and deployment
-  - Builds and pushes Docker images to ACR (API, Web, and ContentProcessor in production)
+  - Builds and pushes Docker images to ACR (API and Web in production)
   - Deploys to Azure Container Apps
   - Default 'dev' tag for local builds, git SHA in CI
   - Smoke tests and automatic production rollback
-- **`analyze-markdown-errors.ps1`** - Linting and markdown analysis
-- **`content-processing/`** - PowerShell content import scripts (being replaced by TechHub.ContentProcessor)
 - **`data/`** - Data files for scripts
 
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.

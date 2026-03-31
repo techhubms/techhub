@@ -37,6 +37,15 @@ public sealed class ProcessedUrlRepository : IProcessedUrlRepository
     }
 
     /// <inheritdoc/>
+    public async Task<string?> GetStatusAsync(string externalUrl, CancellationToken ct = default)
+    {
+        const string Sql = "SELECT status FROM processed_urls WHERE external_url = @ExternalUrl";
+
+        return await _connection.ExecuteScalarAsync<string?>(
+            new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));
+    }
+
+    /// <inheritdoc/>
     public async Task<ProcessedUrl?> GetAsync(string externalUrl, CancellationToken ct = default)
     {
         const string Sql = @"
@@ -185,7 +194,12 @@ LIMIT @Limit OFFSET @Offset";
     /// <inheritdoc/>
     public async Task<bool> DeleteByUrlAsync(string externalUrl, CancellationToken ct = default)
     {
-        const string Sql = "DELETE FROM processed_urls WHERE external_url = @ExternalUrl";
+        // Delete the content item (tags cascade via FK) and the processed URL record
+        // so the URL can be retried on the next processing run.
+        const string Sql = """
+            DELETE FROM content_items WHERE external_url = @ExternalUrl;
+            DELETE FROM processed_urls WHERE external_url = @ExternalUrl;
+            """;
 
         var deleted = await _connection.ExecuteAsync(
             new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));

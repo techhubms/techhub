@@ -121,4 +121,16 @@ public interface IContentRepository
     /// Returns true if found and updated, false if not found.
     /// </summary>
     Task<bool> UpdateAiMetadataAsync(string externalUrl, string aiMetadata, CancellationToken ct = default);
+
+    /// <summary>
+    /// Get all editable fields for a content item identified by its external URL.
+    /// Returns null if no item with that URL exists.
+    /// </summary>
+    Task<ContentItemEditData?> GetEditDataByUrlAsync(string externalUrl, CancellationToken ct = default);
+
+    /// <summary>
+    /// Update the editable fields of a content item identified by its external URL.
+    /// Returns true if found and updated, false if not found.
+    /// </summary>
+    Task<bool> UpdateEditDataAsync(string externalUrl, ContentItemEditData editData, CancellationToken ct = default);
 }

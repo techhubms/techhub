@@ -1,30 +1,25 @@
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Typed HTTP client that downloads RSS/Atom feed XML from external URLs.
+/// Timeout and retry behavior is managed by Polly via AddStandardResilienceHandler.
 /// </summary>
 public sealed class RssFeedClient : IRssFeedClient
 {
     private readonly HttpClient _httpClient;
-    private readonly ContentProcessorOptions _options;
     private readonly ILogger<RssFeedClient> _logger;
 
     public RssFeedClient(
         HttpClient httpClient,
-        IOptions<ContentProcessorOptions> options,
         ILogger<RssFeedClient> logger)
     {
         ArgumentNullException.ThrowIfNull(httpClient);
-        ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
         _httpClient = httpClient;
-        _options = options.Value;
         _logger = logger;
     }
 
@@ -33,14 +28,7 @@ public sealed class RssFeedClient : IRssFeedClient
     {
         try
         {
-            using var cts = CancellationTokenSource.CreateLinkedTokenSource(ct);
-            cts.CancelAfter(TimeSpan.FromSeconds(_options.RequestTimeoutSeconds));
-
-            return await _httpClient.GetStringAsync(url, cts.Token);
-        }
-        catch (OperationCanceledException) when (ct.IsCancellationRequested)
-        {
-            throw;
+            return await _httpClient.GetStringAsync(url, ct);
         }
         catch (HttpRequestException ex)
         {

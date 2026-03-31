@@ -2,9 +2,8 @@
 
 ## Overview
 
-The Tech Hub supports both manual and automated content creation. Content is organized into
-collections and automatically categorized using AI-powered processing. All content is stored
-exclusively in the PostgreSQL database.
+Content is automatically ingested from RSS feeds, categorized using AI-powered processing,
+and stored exclusively in the PostgreSQL database.
 
 ## Content Architecture
 
@@ -39,29 +38,6 @@ To populate a non-production environment with real data:
 
 Requires VPN access to the production environment and PostgreSQL client tools installed.
 
-## Manual Content Creation
-
-The easiest way to add a single content item is using the built-in GitHub Copilot command:
-
-```text
-/new-article
-```
-
-For detailed information about site structure and terminology, see:
-
-- [Terminology](terminology.md) — Site terminology, sections, and standard values
-- [Repository Structure](repository-structure.md) — Code and content organization
-- [Collections Guide](../collections/AGENTS.md) — Content management overview
-- [Custom Pages](custom-pages.md) — Custom pages and specialized collections
-
-## Publishing Content
-
-Use the GitHub Copilot command for publishing:
-
-```text
-/pushall
-```
-
 ## RSS Feed Processing
 
 The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep
@@ -79,17 +55,14 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
    system prompt embedded in `TechHub.Infrastructure/Data/Resources/system-message.md`
 4. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
 5. **Database write** — Upserts into `content_items` + `content_tags_expanded`; records the run
-   in `content_processing_jobs`; registers items in per-section roundup accumulators
-   (`section_roundup_items`)
+   in `content_processing_jobs`
 
 Items that the AI determines are off-topic or low quality are skipped and recorded in
 `processed_urls` with status `skipped`.
 
 ### Feed Configuration
 
-RSS feeds are stored in the `rss_feed_configs` database table and managed via the admin UI at
-`/admin/feeds`. On first startup, the API seeds the database from `scripts/data/rss-feeds.json`
-if no feeds exist yet.
+RSS feeds are stored in the `rss_feed_configs` database table and managed directly via the admin UI at `/admin/feeds`.
 
 **Required Fields**:
 
@@ -109,11 +82,6 @@ if no feeds exist yet.
 2. Click "Add Feed"
 3. Fill in name, URL, output directory
 4. Save — the feed is picked up on the next scheduled run
-
-**Via JSON seed file** (initial setup only):
-
-1. Edit `scripts/data/rss-feeds.json`
-2. On next startup (if database has no feeds), the API seeds from this file
 
 ### AI Content Analysis
 
@@ -146,8 +114,8 @@ The AI extracts roundup metadata for each included item (stored in `ai_metadata`
 - `impact_level` — significance rating
 - `time_sensitivity` — `immediate` / `this-week` / `this-month` / `long-term`
 
-Items with `high` or `medium` relevance are automatically registered in `section_roundup_items`
-for use in the weekly roundup generation (see [Weekly Roundups](#weekly-roundups)).
+Items with `high` or `medium` relevance are used by the weekly roundup generation
+(see [Weekly Roundups](#weekly-roundups)).
 
 ### Admin Dashboard
 
@@ -176,8 +144,8 @@ completed roundup directly to the `content_items` table (`collection_name = 'rou
 
 ### Roundup Pipeline
 
-1. **Article loading** — Reads accumulated candidates from `section_roundup_items` (joined with
-   `content_items` for AI metadata)
+1. **Article loading** — Queries `content_items` directly using section boolean columns
+   and `ai_metadata`, filtered by `created_at` within the target week
 2. **Relevance filtering** — Per section: includes all `high`-relevance articles; adds `medium`
    articles when fewer than `MinHighArticlesPerSection` high articles exist; adds `low` articles
    when the combined count is still below `MinTotalArticlesPerSection`
@@ -186,10 +154,10 @@ completed roundup directly to the `content_items` table (`collection_name = 'rou
 5. **Step 6** — AI condenses the content paragraph-by-paragraph
 6. **Step 7** — AI generates metadata: `title`, `description`, `tags`, `introduction`
 7. **Step 8** — Table of contents is built from `##`/`###` headers (pure C#)
-8. **Step 9** — AI rewrites for writing style compliance and returns the final
-   `title` and `description`; returns `{"title": "...", "description": "..."}` followed by `---`
-   and the markdown body
-9. **DB write** — Upserts into `content_items` + `content_tags_expanded`
+8. **DB write** — Upserts into `content_items` + `content_tags_expanded`
+
+Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into every AI step
+prompt to ensure consistent tone and style throughout the roundup.
 
 ### Roundup Configuration
 
@@ -204,9 +172,6 @@ Configured under `"RoundupGenerator"` in `appsettings.json`:
 | `RateLimitDelaySeconds` | `15` | Delay between AI calls |
 | `MaxRetries` | `3` | Max retries per AI call |
 
-The `section_roundup_items` table is populated automatically during RSS processing — one row per
-`(section, week, content item)` for all items with `high` or `medium` roundup relevance.
-
 ## Troubleshooting
 
 ### Processed URL Was Incorrectly Skipped
@@ -218,10 +183,3 @@ If an article was skipped with an unexpected reason:
 3. Check the `Reason` field to understand the AI''s decision
 4. If the decision was wrong, click **Remove** to delete the entry — it will be retried on the
    next scheduled run
-
-### Common Frontmatter Issues (Manual Content)
-
-- **Missing Frontmatter**: Check requirements in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter)
-- **File Naming**: Use `YYYY-MM-DD-title.md` pattern
-- **Sections/Tags**: Verify against site configuration in [terminology.md](terminology.md)
-- **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`

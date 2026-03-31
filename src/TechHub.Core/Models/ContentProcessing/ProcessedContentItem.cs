@@ -44,8 +44,8 @@ public sealed class ProcessedContentItem
     /// </summary>
     public IReadOnlyList<string> Sections { get; init; } = [];
 
-    /// <summary>Primary section name (the most relevant section).</summary>
-    public string? PrimarySectionName { get; init; }
+    /// <summary>Primary section name — determined by AI as the most relevant section.</summary>
+    public required string PrimarySectionName { get; init; }
 
     /// <summary>SHA-256 hash of the content for change detection on re-processing.</summary>
     public required string ContentHash { get; init; }

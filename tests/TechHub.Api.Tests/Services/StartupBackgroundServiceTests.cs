@@ -91,6 +91,10 @@ public class StartupBackgroundServiceTests
         mockProcessedUrlRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<IEnumerable<string>>(), It.IsAny<CancellationToken>()))
             .Returns(Task.CompletedTask);
 
+        var mockJobRepo = new Mock<IContentProcessingJobRepository>();
+        mockJobRepo.Setup(r => r.AbortRunningJobsAsync(It.IsAny<CancellationToken>()))
+            .ReturnsAsync(0);
+
         var mockCustomPageRepo = new Mock<ICustomPageDataRepository>();
         mockCustomPageRepo.Setup(r => r.IsEmptyAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(false);
@@ -109,6 +113,7 @@ public class StartupBackgroundServiceTests
         services.AddSingleton(mockConnectionFactory.Object);
         services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockProcessedUrlRepo.Object);
+        services.AddSingleton(mockJobRepo.Object);
         services.AddSingleton(mockCustomPageRepo.Object);
         services.AddSingleton<IOptions<AppSettings>>(appSettings);
         services.AddSingleton(mockHostLifetime.Object);
@@ -130,6 +135,7 @@ public class StartupBackgroundServiceTests
         // Assert
         mockHostLifetime.Verify(l => l.StopApplication(), Times.Never);
         mockStartupState.IsStartupCompleted.Should().BeTrue();
+        mockJobRepo.Verify(r => r.AbortRunningJobsAsync(It.IsAny<CancellationToken>()), Times.Once);
     }
 }
 

@@ -19,7 +19,7 @@ public class ContentProcessingBackgroundServiceTests
         startupState.MarkStartupCompleted(); // bypass startup wait
 
         var mockJobRepo = new Mock<IContentProcessingJobRepository>();
-        mockJobRepo.Setup(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+        mockJobRepo.Setup(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(1L);
 
         var services = new ServiceCollection();
@@ -46,7 +46,7 @@ public class ContentProcessingBackgroundServiceTests
 
         // Assert — CreateAsync should have been called with "manual" trigger
         mockJobRepo.Verify(
-            r => r.CreateAsync("manual", It.IsAny<CancellationToken>()),
+            r => r.CreateAsync("manual", It.IsAny<string>(), It.IsAny<CancellationToken>()),
             Times.Once);
     }
 
@@ -58,7 +58,7 @@ public class ContentProcessingBackgroundServiceTests
         startupState.MarkStartupCompleted();
 
         var mockJobRepo = new Mock<IContentProcessingJobRepository>();
-        mockJobRepo.Setup(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+        mockJobRepo.Setup(r => r.CreateAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(1L);
 
         var services = new ServiceCollection();
@@ -86,10 +86,10 @@ public class ContentProcessingBackgroundServiceTests
 
         // Assert — one scheduled + one manual
         mockJobRepo.Verify(
-            r => r.CreateAsync("scheduled", It.IsAny<CancellationToken>()),
+            r => r.CreateAsync("scheduled", It.IsAny<string>(), It.IsAny<CancellationToken>()),
             Times.Once);
         mockJobRepo.Verify(
-            r => r.CreateAsync("manual", It.IsAny<CancellationToken>()),
+            r => r.CreateAsync("manual", It.IsAny<string>(), It.IsAny<CancellationToken>()),
             Times.Once);
     }
 

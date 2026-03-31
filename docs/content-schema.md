@@ -1,46 +1,38 @@
-# Frontmatter Schema
+# Content Entity Schema
 
-This document defines the complete frontmatter schema for content files in Tech Hub collections.
+This document defines the complete schema for ContentItems stored in the Tech Hub database.
 
-## File Structure
+## Entity Structure
 
-All content files use this structure:
+All content items fundamentally contain:
 
-1. **Frontmatter**: YAML metadata between `---` delimiters
-2. **Excerpt**: Brief introduction (max 200 words) ending with `<!--excerpt_end-->`
-3. **Content**: Main detailed content in Markdown format
+1. **Metadata**: Core structured metadata mapping (Title, Author, Date, Tags, Sections).
+2. **Excerpt**: A brief summary or introduction snippet suitable for feed and card previews.
+3. **Markdown Content**: Main detailed body content in markdown format. 
 
-## Required Fields (All Content)
+## Required Properties
 
-All content files **must** include these frontmatter fields:
+All primary content records **must** provide values mapped for these conceptual fields:
 
 ```yaml
----
-layout: "post"                          # Always "post" for collection content
 title: "Content Title"                  # Plain text title
-author: "Author Name"                   # Author or presenter name
-date: 2025-01-15 10:00:00 +01:00       # ISO format with timezone
-permalink: "/section/collection/slug"   # URL path
-tags: ["Tag1", "Tag2", "Tag3"]         # Topic keywords (can include spaces)
-section_names: ["ai", "github-copilot"] # Normalized section identifiers
----
+author: "Author Name"                   # Author or publisher
+date: '2025-01-15T10:00:00Z'            # Standard DateTime
+permalink: "/section/collection/slug"   # Canonical routing path
+tags: ["Tag1", "Tag2", "Tag3"]          # Topic keywords 
+section_names: ["ai", "github-copilot"] # Normalized section relations
 ```
 
-## Field Definitions
+## Property Definitions
 
-| Field | Type | Required | Description |
+| Property | Type | Required | Description |
 |-------|------|----------|-------------|
-| `layout` | string | Yes | Always `"post"` for collection content |
 | `title` | string | Yes | Content title in plain text (no HTML/markdown) |
 | `author` | string | Yes | Author or presenter name |
-| `date` | datetime | Yes | ISO format with timezone (`YYYY-MM-DD HH:MM:SS +HH:MM`) |
+| `date` | datetime | Yes | Evaluated date and time used for timeline sorting |
 | `permalink` | string | Yes | URL path: `/section/collection/slug` |
 | `tags` | array | Yes | Topic keywords (display format, can include spaces) |
 | `section_names` | array | Yes | Normalized section identifiers (lowercase, hyphenated) |
-
-### Layout
-
-Always `"post"` for collection content (_news,_videos, _blogs,_community, _roundups).
 
 ### Title
 
@@ -48,19 +40,17 @@ Content title in plain text. No HTML or markdown formatting.
 
 ### Author
 
-Author name or presenter name. For YouTube videos, use the actual presenter/demonstrator, not the channel owner.
+Author name or presenter name. For YouTube videos, use the actual presenter/demonstrator.
 
 ### Date
 
-Publication date in ISO format with timezone:
-
-- Format: `YYYY-MM-DD HH:MM:SS +HH:MM`
-- Timezone: Use `+01:00` for Europe/Brussels (or `+02:00` during DST)
-- **Important**: Filename date must match frontmatter date (date portion only)
+Publication or creation date:
+- Normalized into UTC database columns `date_epoch` and structured DateTime internally
+- Preserves the logical publish timing
 
 ### Permalink
 
-URL path in format `/section/collection/slug`:
+URL routing syntax `/section/collection/slug`:
 
 - **section**: Primary section (determined automatically by the system)
 - **collection**: Collection name without underscore (e.g., `news`, `videos`, `blogs`)
@@ -104,11 +94,11 @@ plans: ["Free", "Pro", "Business"]  # Required - supported subscription tiers
 ghes_support: true                  # Required - GitHub Enterprise Server support
 ```
 
-## Frontmatter to Domain Model Mapping
+## Metadata to Domain Model Mapping
 
-This table shows how frontmatter fields map to C# domain properties:
+This table shows how properties map to C# domain properties inside `TechHub.Core`:
 
-| Frontmatter Field | Domain Property | Type | Notes |
+| Entity Property | Domain Property | Type | Notes |
 |-------------------|-----------------|------|-------|
 | `title` | `Title` | `string` | Required |
 | `author` | `Author` | `string?` | Optional |
@@ -208,9 +198,9 @@ Serves as a logical introduction to the main content and provides users with a q
 
 ### Requirements
 
-- Must appear directly after the frontmatter
+- Acts as a logical preamble before detailed content
 - **Maximum 200 words**
-- Must be immediately followed by the `<!--excerpt_end-->` marker
+- Separated via the `<!--excerpt_end-->` marker (or strictly stored in `excerpt` DB field depending on source pipeline)
 - Should be informative and engaging
 - **Must mention the author's name**
 
@@ -273,18 +263,10 @@ These fields are no longer supported:
 | `tags_normalized` | Normalization happens automatically |
 | `excerpt_separator` | Use `<!--excerpt_end-->` marker in content |
 | `description` | Excerpt serves this purpose |
-| `page` | Collection is determined from file path |
+| `page` | Collection mapped appropriately in storage |
 | `video_id` | Use `youtube_id` instead (or embed in content) |
-
-## File Naming Convention
-
-All content files use the format: `YYYY-MM-DD-title-slug.md`
-
-- Date in filename must match the `date` field in frontmatter
-- Title slug should be URL-friendly (lowercase, hyphens)
 
 ## Implementation Reference
 
-- **Frontmatter parsing**: [src/TechHub.Infrastructure/Services/FrontMatterParser.cs](../src/TechHub.Infrastructure/Services/FrontMatterParser.cs)
 - **Content model**: [src/TechHub.Core/Models/Core/ContentItem.cs](../src/TechHub.Core/Models/Core/ContentItem.cs)
 - **Content management**: [collections/AGENTS.md](../collections/AGENTS.md)

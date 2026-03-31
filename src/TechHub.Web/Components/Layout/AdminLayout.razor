@@ -1,9 +1,6 @@
 @inherits LayoutComponentBase
 @using Microsoft.AspNetCore.Components.Authorization
-
-<HeadContent>
-    <link rel="stylesheet" href="@Assets["css/admin.css"]" />
-</HeadContent>
+@inject NavigationManager Navigation
 
 <AuthorizeView>
     <Authorized>
@@ -17,11 +14,11 @@
                 </a>
 
                 <div class="admin-nav-links">
-                    <a href="/admin" class="admin-nav-link">Dashboard</a>
-                    <a href="/admin/feeds" class="admin-nav-link">RSS Feeds</a>
-                    <a href="/admin/processed-urls" class="admin-nav-link">Processed URLs</a>
-                    <a href="/admin/custom-pages" class="admin-nav-link">Custom Pages</a>
-                    <a href="/admin/statistics" class="admin-nav-link">Statistics</a>
+                    <a href="/admin" class="admin-nav-link @NavLinkClass("/admin", exact: true)">Dashboard</a>
+                    <a href="/admin/feeds" class="admin-nav-link @NavLinkClass("/admin/feeds")">RSS Feeds</a>
+                    <a href="/admin/processed-urls" class="admin-nav-link @NavLinkClass("/admin/processed-urls")">Processed URLs</a>
+                    <a href="/admin/custom-pages" class="admin-nav-link @NavLinkClass("/admin/custom-pages")">Custom Pages</a>
+                    <a href="/admin/statistics" class="admin-nav-link @NavLinkClass("/admin/statistics")">Statistics</a>
                 </div>
 
                 <div class="admin-nav-actions">
@@ -49,3 +46,21 @@
         </main>
     </NotAuthorized>
 </AuthorizeView>
+
+@code {
+    private string NavLinkClass(string href, bool exact = false)
+    {
+        var relativePath = Navigation.ToBaseRelativePath(Navigation.Uri);
+        var currentPath = "/" + relativePath.TrimEnd('/');
+        var targetPath = href.TrimEnd('/');
+
+        if (exact)
+        {
+            return string.Equals(currentPath, targetPath, StringComparison.OrdinalIgnoreCase)
+                ? "active" : "";
+        }
+
+        return currentPath.StartsWith(targetPath, StringComparison.OrdinalIgnoreCase)
+            ? "active" : "";
+    }
+}

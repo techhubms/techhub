@@ -85,6 +85,14 @@ public class StartupBackgroundService : BackgroundService
             await processedUrlRepo.SeedFromJsonAsync(processedUrlPaths, stoppingToken);
             _logger.LogInformation("✅ Processed URLs seeded (if table was empty)");
 
+            // Abort any jobs left in 'running' state from a prior crash/restart
+            var jobRepo = services.GetRequiredService<IContentProcessingJobRepository>();
+            var aborted = await jobRepo.AbortRunningJobsAsync(stoppingToken);
+            if (aborted > 0)
+            {
+                _logger.LogWarning("✅ Aborted {Count} stale running job(s) from prior server instance", aborted);
+            }
+
             // Seed custom page data from collections/_custom/*.json (one-time migration)
             var appSettings = services.GetRequiredService<IOptions<AppSettings>>().Value;
             var customPageRepo = services.GetRequiredService<ICustomPageDataRepository>();

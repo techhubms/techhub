@@ -248,7 +248,7 @@ resource openAiPrivateEndpoint 'Microsoft.Network/privateEndpoints@2025-01-01' =
 ```
 
 > **DNS zones**: The `account` group requires three private DNS zones: `privatelink.cognitiveservices.azure.com`, `privatelink.openai.azure.com`, and `privatelink.services.ai.azure.com`. All three must be created and linked to the spoke VNet (and hub) for DNS resolution to work for the `<name>.openai.azure.com` endpoint used by Container Apps.
-
+>
 > **Note**: Content processing (RSS feeds, roundups) runs from the API, which is hosted on VNet-integrated Container Apps. All application AI Foundry calls originate from within the spoke VNet and route through the private endpoint. The public side exists only as an admin entry point controlled by NSP.
 
 ### Private Endpoint Summary (After All Changes)

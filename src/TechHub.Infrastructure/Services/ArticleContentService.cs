@@ -104,7 +104,9 @@ public sealed class ArticleContentService : IArticleContentService
 
     private static string? ExtractTagContent(string html, string tagName)
     {
-        var pattern = $@"<{tagName}[^>]*>([\s\S]*?)</{tagName}>";
+        // Use greedy match to capture content up to the LAST closing tag,
+        // correctly handling nested elements of the same type.
+        var pattern = $@"<{tagName}[^>]*>([\s\S]*)</{tagName}>";
         var match = System.Text.RegularExpressions.Regex.Match(
             html, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase, TimeSpan.FromSeconds(2));
         return match.Success ? match.Groups[1].Value : null;
