@@ -86,7 +86,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
   }
 }
 
-// Firewall rules: allow admin IPs (PostgreSQL does not support NSP)
+// Firewall rules: allow admin IPs
 resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = [for (ip, i) in adminIpAddresses: {
   parent: postgresServer
   name: 'allow-admin-ip-${i}'

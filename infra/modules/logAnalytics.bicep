@@ -1,5 +1,4 @@
 // Log Analytics workspace module — used by the shared deployment for Key Vault audit logs.
-// Public network access disabled by default (defense-in-depth behind NSP).
 
 @description('Azure region for the workspace')
 param location string
@@ -19,7 +18,8 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
     }
     retentionInDays: 30
     publicNetworkAccessForIngestion: 'Disabled'
-    publicNetworkAccessForQuery: 'Disabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
+    publicNetworkAccessForQuery: 'Enabled'
     workspaceCapping: {
       dailyQuotaGb: dailyQuotaGb
     }

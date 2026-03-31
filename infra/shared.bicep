@@ -1,4 +1,4 @@
-// Shared infrastructure for TechHub — ACR, Key Vault, Hub VNet, NSP, AMPLS
+// Shared infrastructure for TechHub — ACR, Key Vault, Hub VNet, AMPLS
 targetScope = 'subscription'
 
 @description('Azure region for shared resources')
@@ -19,7 +19,7 @@ param keyVaultAdminObjectIds array = []
 @description('Hub VNet name')
 param hubVnetName string = 'vnet-techhub-hub'
 
-@description('Comma-separated admin IP addresses for NSP inbound rule and PostgreSQL firewall (e.g. "1.2.3.4,5.6.7.8")')
+@description('Comma-separated admin IP addresses for Key Vault and PostgreSQL firewall (e.g. "1.2.3.4,5.6.7.8")')
 @minLength(7)
 param adminIpAddresses string
 
@@ -65,10 +65,11 @@ module keyVault './modules/keyVault.bicep' = {
     vaultName: keyVaultName
     adminObjectIds: keyVaultAdminObjectIds
     logAnalyticsWorkspaceId: sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
+    adminIpAddresses: adminIpList
   }
 }
 
-// Hub VNet (VPN Gateway removed — admin access via NSP + IP firewall rules)
+// Hub VNet (admin access via IP firewall rules on each resource)
 module hubNetwork './modules/hubNetwork.bicep' = {
   scope: resourceGroup
   name: 'hubNetwork-deployment'
@@ -113,23 +114,6 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
 // Parse comma-separated admin IPs into an array (filter empty entries from trailing/double commas)
 var adminIpList = filter(split(adminIpAddresses, ','), ip => !empty(trim(ip)))
 
-// Network Security Perimeter — controls public access to Key Vault and shared Log Analytics
-// AI Foundry is excluded: content processing scripts run from GitHub Actions runners with dynamic IPs
-// Per-environment App Insights and Log Analytics are associated via nspAssociation.bicep in main.bicep
-module nsp './modules/networkSecurityPerimeter.bicep' = {
-  scope: resourceGroup
-  name: 'nsp-deployment'
-  params: {
-    location: location
-    nspName: 'nsp-techhub'
-    adminIpCidrs: [for ip in adminIpList: '${trim(ip)}/32']
-    associatedResourceIds: [
-      keyVault.outputs.vaultId
-      sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
-    ]
-  }
-}
-
 // Azure Monitor Private Link Scope — routes app telemetry privately through the hub VNet
 module ampls './modules/monitorPrivateLink.bicep' = {
   scope: resourceGroup
@@ -155,7 +139,6 @@ output keyVaultUri string = keyVault.outputs.vaultUri
 output keyVaultId string = keyVault.outputs.vaultId
 output hubVnetId string = hubNetwork.outputs.vnetId
 output hubVnetName string = hubNetwork.outputs.vnetName
-output nspId string = nsp.outputs.nspId
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
 output postgresDnsZoneName string = postgresDnsZone.outputs.dnsZoneName

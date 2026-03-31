@@ -204,21 +204,6 @@ module openAiPrivateEndpoint './modules/openAiPrivateEndpoint.bicep' = {
   }
 }
 
-// Associate environment-specific resources with the shared NSP
-// AI Foundry excluded: content processing runs from GitHub Actions runners with dynamic IPs
-module nspAssociations './modules/nspAssociation.bicep' = {
-  scope: sharedResourceGroup
-  name: 'nspAssoc-${environmentName}'
-  params: {
-    nspName: 'nsp-techhub'
-    associationPrefix: 'assoc-${environmentName}'
-    resourceIds: [
-      monitoring.outputs.appInsightsId
-      monitoring.outputs.logAnalyticsWorkspaceId
-    ]
-  }
-}
-
 // Add environment monitoring to the shared AMPLS (private telemetry path)
 module amplsScope './modules/amplsScope.bicep' = {
   scope: sharedResourceGroup

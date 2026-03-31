@@ -7,6 +7,9 @@ param adminObjectIds string[] = []
 @description('Log Analytics Workspace ID for audit logging (optional)')
 param logAnalyticsWorkspaceId string = ''
 
+@description('Admin IP addresses for firewall rules (optional — leave empty for Azure Services-only access)')
+param adminIpAddresses string[] = []
+
 resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
   name: vaultName
   location: location
@@ -20,12 +23,11 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
     enableSoftDelete: true
     softDeleteRetentionInDays: 90
     enablePurgeProtection: true
-    // Public access controlled by Network Security Perimeter (NSP).
-    // NSP enforces admin IP allowlist; app traffic uses existing private endpoint.
     publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Deny'
       bypass: 'AzureServices'
+      ipRules: [for ip in adminIpAddresses: { value: ip }]
     }
   }
 }
