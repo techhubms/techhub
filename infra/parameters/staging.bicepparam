@@ -35,6 +35,4 @@ param openAiModelCapacity = 100
 // Comma-separated admin IP addresses for PostgreSQL firewall.
 // Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
 param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
-// NSP from shared deployment (for associating environment resources)
-param nspProfileId = readEnvironmentVariable('NSP_PROFILE_ID', '')
 

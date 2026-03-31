@@ -5,8 +5,8 @@
 @description('NSP name (must exist in this resource group)')
 param nspName string
 
-@description('NSP profile ID to associate resources with')
-param profileId string
+@description('NSP profile name (child of the NSP)')
+param profileName string = 'profile-techhub'
 
 @description('Association name prefix (must be unique per NSP)')
 param associationPrefix string
@@ -19,17 +19,23 @@ resource nsp 'Microsoft.Network/networkSecurityPerimeters@2023-08-01-preview' ex
   name: nspName
 }
 
+// Reference existing profile (child of NSP)
+resource profile 'Microsoft.Network/networkSecurityPerimeters/profiles@2023-08-01-preview' existing = {
+  parent: nsp
+  name: profileName
+}
+
 // Associate each resource with the NSP (Enforced mode)
 resource associations 'Microsoft.Network/networkSecurityPerimeters/resourceAssociations@2023-08-01-preview' = [for (resourceId, i) in resourceIds: {
   name: '${associationPrefix}-${i}'
-  location: nsp.location
+  location: resourceGroup().location
   parent: nsp
   properties: {
     privateLinkResource: {
       id: resourceId
     }
     profile: {
-      id: profileId
+      id: profile.id
     }
     accessMode: 'Enforced'
   }

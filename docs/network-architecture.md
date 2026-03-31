@@ -51,15 +51,16 @@ NSP: nsp-techhub (rg-techhub-shared)
 
 Associated resources:
   - Key Vault (shared)
-  - App Insights (shared, staging, prod)
-  - Log Analytics (shared, staging, prod)
+  - Log Analytics (shared)
+  - App Insights (staging, prod)
+  - Log Analytics (staging, prod)
 ```
 
 AI Foundry is **not** associated with the NSP — content processing scripts run from GitHub Actions runners with dynamic public IPs that cannot be allowlisted. AI Foundry remains publicly accessible with API key authentication.
 
 ## Azure Monitor Private Link Scope (AMPLS)
 
-AMPLS routes app telemetry privately through the hub VNet. All Application Insights and Log Analytics workspaces (shared, staging, prod) are scoped to `ampls-techhub`.
+AMPLS routes app telemetry privately through the hub VNet. All Application Insights and Log Analytics workspaces (staging, prod) and the shared Log Analytics workspace are scoped to `ampls-techhub`.
 
 - **Access mode**: Open (allows both private and public ingestion/query)
 - **Private endpoint**: In hub VNet `snet-private-endpoints` subnet
@@ -131,8 +132,8 @@ Private DNS zones ensure all consumers can resolve private endpoint IPs:
 
 ## Deploy Order
 
-1. **Shared** (`rg-techhub-shared`): ACR, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, NSP, AMPLS
-2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, NSP associations, AMPLS scoping
+1. **Shared** (`rg-techhub-shared`): ACR, Log Analytics, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, NSP, AMPLS
+2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, App Insights + Log Analytics, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, NSP associations, AMPLS scoping
 
 Shared must be deployed first — spoke deployments reference the hub VNet ID for peering.
 
@@ -143,6 +144,8 @@ Shared must be deployed first — spoke deployments reference the hub VNet ID fo
 - VNet Peering: [infra/modules/vnetPeering.bicep](../infra/modules/vnetPeering.bicep)
 - Key Vault: [infra/modules/keyVault.bicep](../infra/modules/keyVault.bicep)
 - Key Vault PE: [infra/modules/keyVaultPrivateEndpoint.bicep](../infra/modules/keyVaultPrivateEndpoint.bicep)
+- Log Analytics (shared): [infra/modules/logAnalytics.bicep](../infra/modules/logAnalytics.bicep)
+- Monitoring (per-env): [infra/modules/monitoring.bicep](../infra/modules/monitoring.bicep)
 - PostgreSQL: [infra/modules/postgres.bicep](../infra/modules/postgres.bicep)
 - PostgreSQL PE: [infra/modules/postgresPrivateEndpoint.bicep](../infra/modules/postgresPrivateEndpoint.bicep)
 - PostgreSQL DNS Zone: [infra/modules/postgresDnsZone.bicep](../infra/modules/postgresDnsZone.bicep)

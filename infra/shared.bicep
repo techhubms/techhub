@@ -47,13 +47,12 @@ module registry './modules/registry.bicep' = {
 }
 
 // Shared Log Analytics workspace (for Key Vault audit logs)
-module sharedMonitoring './modules/monitoring.bicep' = {
+module sharedLogAnalytics './modules/logAnalytics.bicep' = {
   scope: resourceGroup
+  name: 'logAnalytics-deployment'
   params: {
     location: location
-    appInsightsName: 'appi-techhub-shared'
     logAnalyticsWorkspaceName: 'law-techhub-shared'
-    disablePublicNetworkAccess: true
   }
 }
 
@@ -65,7 +64,7 @@ module keyVault './modules/keyVault.bicep' = {
     location: location
     vaultName: keyVaultName
     adminObjectIds: keyVaultAdminObjectIds
-    logAnalyticsWorkspaceId: sharedMonitoring.outputs.logAnalyticsWorkspaceId
+    logAnalyticsWorkspaceId: sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
   }
 }
 
@@ -114,8 +113,9 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
 // Parse comma-separated admin IPs into an array (filter empty entries from trailing/double commas)
 var adminIpList = filter(split(adminIpAddresses, ','), ip => !empty(trim(ip)))
 
-// Network Security Perimeter — controls public access to Key Vault, App Insights, Log Analytics
+// Network Security Perimeter — controls public access to Key Vault and shared Log Analytics
 // AI Foundry is excluded: content processing scripts run from GitHub Actions runners with dynamic IPs
+// Per-environment App Insights and Log Analytics are associated via nspAssociation.bicep in main.bicep
 module nsp './modules/networkSecurityPerimeter.bicep' = {
   scope: resourceGroup
   name: 'nsp-deployment'
@@ -125,8 +125,7 @@ module nsp './modules/networkSecurityPerimeter.bicep' = {
     adminIpCidrs: [for ip in adminIpList: '${trim(ip)}/32']
     associatedResourceIds: [
       keyVault.outputs.vaultId
-      sharedMonitoring.outputs.appInsightsId
-      sharedMonitoring.outputs.logAnalyticsWorkspaceId
+      sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
     ]
   }
 }
@@ -140,11 +139,9 @@ module ampls './modules/monitorPrivateLink.bicep' = {
     amplsName: 'ampls-techhub'
     subnetId: hubNetwork.outputs.privateEndpointsSubnetId
     vnetId: hubNetwork.outputs.vnetId
-    appInsightsIds: [
-      sharedMonitoring.outputs.appInsightsId
-    ]
+    appInsightsIds: []
     logAnalyticsWorkspaceIds: [
-      sharedMonitoring.outputs.logAnalyticsWorkspaceId
+      sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
     ]
   }
 }
@@ -159,7 +156,6 @@ output keyVaultId string = keyVault.outputs.vaultId
 output hubVnetId string = hubNetwork.outputs.vnetId
 output hubVnetName string = hubNetwork.outputs.vnetName
 output nspId string = nsp.outputs.nspId
-output nspProfileId string = nsp.outputs.profileId
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
 output postgresDnsZoneName string = postgresDnsZone.outputs.dnsZoneName

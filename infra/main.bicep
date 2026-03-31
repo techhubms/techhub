@@ -84,9 +84,6 @@ param openAiModelCapacity int = 100
 @description('Comma-separated admin IP addresses for PostgreSQL firewall rules (e.g. "1.2.3.4,5.6.7.8")')
 param adminIpAddresses string = ''
 
-@description('NSP profile ID from shared deployment')
-param nspProfileId string = ''
-
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
@@ -209,12 +206,11 @@ module openAiPrivateEndpoint './modules/openAiPrivateEndpoint.bicep' = {
 
 // Associate environment-specific resources with the shared NSP
 // AI Foundry excluded: content processing runs from GitHub Actions runners with dynamic IPs
-module nspAssociations './modules/nspAssociation.bicep' = if (!empty(nspProfileId)) {
+module nspAssociations './modules/nspAssociation.bicep' = {
   scope: sharedResourceGroup
   name: 'nspAssoc-${environmentName}'
   params: {
     nspName: 'nsp-techhub'
-    profileId: nspProfileId
     associationPrefix: 'assoc-${environmentName}'
     resourceIds: [
       monitoring.outputs.appInsightsId
@@ -279,6 +275,9 @@ var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certId
 // A single wildcard binding per domain covers all subdomains — no per-subdomain registration needed.
 var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 
+// Parse comma-separated admin IPs into a trimmed, filtered array
+var adminIpList = [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)]
+
 // PostgreSQL Flexible Server (private endpoint + admin IP firewall rule)
 module postgres './modules/postgres.bicep' = {
   scope: resourceGroup
@@ -291,7 +290,7 @@ module postgres './modules/postgres.bicep' = {
     skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_B2s'
     skuTier: 'Burstable'
     backupRetentionDays: environmentName == 'staging' ? 7 : 14
-    adminIpAddresses: !empty(adminIpAddresses) ? [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)] : []
+    adminIpAddresses: adminIpList
   }
 }
 
