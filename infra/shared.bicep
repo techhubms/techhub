@@ -53,6 +53,7 @@ module sharedMonitoring './modules/monitoring.bicep' = {
     location: location
     appInsightsName: 'appi-techhub-shared'
     logAnalyticsWorkspaceName: 'law-techhub-shared'
+    disablePublicNetworkAccess: true
   }
 }
 

@@ -41,7 +41,7 @@ The spoke-to-hub peering depends on hub-to-spoke being established first.
 
 ## Network Security Perimeter (NSP)
 
-A single NSP (`nsp-techhub`) in the shared resource group controls public access to NSP-supported resources. Admin access is via IP allowlisting (supports multiple IPs via `ADMIN_IP_ADDRESSES` env var); same-subscription Azure services are allowed implicitly.
+A single NSP (`nsp-techhub`) in the shared resource group controls public access to NSP-supported resources. Admin access is via IP allowlisting (supports multiple IPs via `ADMIN_IP_ADDRESSES` env var); same-subscription Azure services are allowed implicitly. All NSP-associated resources have their underlying network default set to deny (defense-in-depth).
 
 ```text
 NSP: nsp-techhub (rg-techhub-shared)
@@ -85,7 +85,7 @@ Private DNS zones are linked to the appropriate VNets for name resolution.
 The shared Key Vault stores wildcard TLS certificates used by both staging and production Container Apps.
 
 - **Public access**: Enabled (controlled by NSP — only admin IP allowed)
-- **Network ACLs**: Default allow, bypass Azure services
+- **Network ACLs**: Default deny, bypass Azure services (defense-in-depth behind NSP)
 - **Access**: Private endpoint in hub VNet + NSP-controlled public access
 - **Authorization**: RBAC (Key Vault Administrator role assigned to specific Azure AD object IDs)
 - **Certificates**: Wildcard certs for `*.hub.ms` and `*.xebia.ms` — see [wildcard-certificates.md](wildcard-certificates.md)

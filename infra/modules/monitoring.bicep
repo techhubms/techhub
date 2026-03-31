@@ -16,6 +16,9 @@ param appInsightsRetentionInDays int = 90
 @description('Host names to monitor with availability tests (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
 param availabilityTestHosts string[] = []
 
+@description('Disable public network access (defense-in-depth when resource is behind NSP)')
+param disablePublicNetworkAccess bool = false
+
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: logAnalyticsWorkspaceName
   location: location
@@ -24,8 +27,8 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
       name: 'PerGB2018'
     }
     retentionInDays: 30
-    publicNetworkAccessForIngestion: 'Enabled'
-    publicNetworkAccessForQuery: 'Enabled'
+    publicNetworkAccessForIngestion: disablePublicNetworkAccess ? 'Disabled' : 'Enabled'
+    publicNetworkAccessForQuery: disablePublicNetworkAccess ? 'Disabled' : 'Enabled'
     workspaceCapping: {
       dailyQuotaGb: dailyQuotaGb
     }
@@ -41,8 +44,8 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
     RetentionInDays: appInsightsRetentionInDays
-    publicNetworkAccessForIngestion: 'Enabled'
-    publicNetworkAccessForQuery: 'Enabled'
+    publicNetworkAccessForIngestion: disablePublicNetworkAccess ? 'Disabled' : 'Enabled'
+    publicNetworkAccessForQuery: disablePublicNetworkAccess ? 'Disabled' : 'Enabled'
   }
 }
 
