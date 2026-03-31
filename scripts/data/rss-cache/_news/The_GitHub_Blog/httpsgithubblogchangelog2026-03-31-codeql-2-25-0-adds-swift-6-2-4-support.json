@@ -1,0 +1,17 @@
+{
+  "Author": "Allison",
+  "Title": "CodeQL 2.25.0 adds Swift 6.2.4 support",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "CodeQL is the static analysis engine behind [GitHub code scanning](https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning-with-codeql), which finds and remediates security issues in your code. We’ve recently released [CodeQL 2.25.0](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.25.0/), which upgrades Swift analysis to 6.2.4, rewrites the Java control flow graph for improved accuracy, and includes various other improvements across languages. CodeQL 2.25.1 is also available, but only includes minor bug fixes.\n\n## Language and framework support\n\n**Swift**\n\n- CodeQL now supports analysis of apps built with Swift 6.2.4.\n\n**Java/Kotlin**\n\n- We’ve completely rewritten the Java control flow graph (CFG) implementation. The new CFG includes additional nodes to more accurately represent certain constructs and only includes nodes reachable from the entry point, improving overall analysis precision.\n\n**C#**\n\n- We’ve added support for C# 14 partial constructors.\n- We’ve added `System.Net.WebSockets::ReceiveAsync`\nas a remote flow source, improving detection of taint originating from WebSocket connections.\n\n**JavaScript/TypeScript**\n\n- We’ve added support for browser-specific source kinds (e.g., `browser-url-query`\n, `browser-url-fragment` , and `browser-message-event` ) that can be used in data extensions to model sources in browser environments.\n\nFor a full list of changes, please refer to the complete [changelog for version 2.25.0](https://codeql.github.com/docs/codeql-overview/codeql-changelog/codeql-cli-2.25.0/). Every new version of CodeQL is automatically deployed to users of GitHub code scanning on github.com. The new functionality in CodeQL 2.25.0 will also be included in a future GitHub Enterprise Server (GHES) release. If you use an older version of GHES, you can [manually upgrade your CodeQL version](https://docs.github.com/enterprise-server@3.19/admin/managing-code-security/managing-github-advanced-security-for-your-enterprise/configuring-code-scanning-for-your-appliance#configuring-codeql-analysis-on-a-server-without-internet-access).",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ],
+  "Description": "CodeQL is the static analysis engine behind GitHub code scanning, which finds and remediates security issues in your code. We’ve recently released CodeQL 2.25.0, which upgrades Swift analysis to 6.2.4,…\n\nThe post [CodeQL 2.25.0 adds Swift 6.2.4 support](https://github.blog/changelog/2026-03-31-codeql-2-25-0-adds-swift-6-2-4-support) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-03-31-codeql-2-25-0-adds-swift-6-2-4-support",
+  "FeedName": "The GitHub Blog",
+  "OutputDir": "_news",
+  "PubDate": "2026-03-31T14:05:32+00:00",
+  "ProcessedDate": "2026-03-31 14:34:04"
+}
