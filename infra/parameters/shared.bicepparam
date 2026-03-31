@@ -9,10 +9,9 @@ param keyVaultName = 'kv-techhub-shared'
 // Override in environment-specific parameter files or local overrides.
 param keyVaultAdminObjectIds = []
 param hubVnetName = 'vnet-techhub-hub'
-param vpnGatewayName = 'vpng-techhub'
-// Uses the Microsoft-registered App ID for VPN auth — no manual app registration needed.
-// Override with a custom audience value only if you need user/group-based access control.
-param vpnAadAudienceAppId = 'c632b3df-fb67-4d84-bdcf-b95ad541b5c8'
+// Comma-separated admin IP addresses for NSP inbound rule and PostgreSQL firewall.
+// Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
+param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
 // ACME DNS zone for automated wildcard certificate renewal via certbot-dns-azure.
 // External DNS (GoDaddy) delegates _acme-challenge CNAMEs to this zone.
 param acmeDnsZoneName = 'acme.hub.ms'

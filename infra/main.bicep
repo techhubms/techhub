@@ -81,6 +81,9 @@ param openAiName string = 'oai-techhub-${environmentName}'
 @description('Azure AI Foundry model capacity (TPM in thousands)')
 param openAiModelCapacity int = 100
 
+@description('Comma-separated admin IP addresses for PostgreSQL firewall rules (e.g. "1.2.3.4,5.6.7.8")')
+param adminIpAddresses string = ''
+
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
@@ -139,7 +142,7 @@ module monitoring './modules/monitoring.bicep' = {
   }
 }
 
-// VNet Peering: spoke → hub (use hub's VPN gateway for P2S access)
+// VNet Peering: spoke → hub (gateway transit removed — no VPN Gateway)
 module peeringSpokeToHub './modules/vnetPeering.bicep' = if (!empty(hubVnetId)) {
   scope: resourceGroup
   name: 'peering-spoke-to-hub'
@@ -148,12 +151,12 @@ module peeringSpokeToHub './modules/vnetPeering.bicep' = if (!empty(hubVnetId)) 
     remoteVnetId: hubVnetId
     peeringName: 'peer-${vnetName}-to-hub'
     allowForwardedTraffic: true
-    useRemoteGateways: true
+    useRemoteGateways: false
   }
   dependsOn: [network, peeringHubToSpoke]
 }
 
-// VNet Peering: hub → spoke (allow gateway transit so VPN clients can reach spoke resources)
+// VNet Peering: hub → spoke (gateway transit removed — no VPN Gateway)
 module peeringHubToSpoke './modules/vnetPeering.bicep' = if (!empty(hubVnetId)) {
   scope: sharedResourceGroup
   name: 'peering-hub-to-${environmentName}'
@@ -162,7 +165,7 @@ module peeringHubToSpoke './modules/vnetPeering.bicep' = if (!empty(hubVnetId)) 
     remoteVnetId: network.outputs.vnetId
     peeringName: 'peer-hub-to-${vnetName}'
     allowForwardedTraffic: true
-    allowGatewayTransit: true
+    allowGatewayTransit: false
   }
 }
 
@@ -185,6 +188,48 @@ module openai './modules/openai.bicep' = {
     location: location
     openAiName: openAiName
     modelCapacity: openAiModelCapacity
+  }
+}
+
+// AI Foundry Private Endpoint in spoke VNet (so Container Apps use a private path)
+module openAiPrivateEndpoint './modules/openAiPrivateEndpoint.bicep' = {
+  scope: resourceGroup
+  name: 'openAiPe-deployment'
+  params: {
+    location: location
+    privateEndpointName: 'pe-oai-techhub-${environmentName}'
+    subnetId: network.outputs.privateEndpointsSubnetId
+    openAiAccountId: openai.outputs.openAiId
+    vnetId: network.outputs.vnetId
+  }
+}
+
+// Associate environment-specific resources with the shared NSP
+// AI Foundry excluded: content processing runs from GitHub Actions runners with dynamic IPs
+module nspAssociations './modules/nspAssociation.bicep' = {
+  scope: sharedResourceGroup
+  name: 'nspAssoc-${environmentName}'
+  params: {
+    nspName: 'nsp-techhub'
+    associationPrefix: 'assoc-${environmentName}'
+    resourceIds: [
+      monitoring.outputs.appInsightsId
+      monitoring.outputs.logAnalyticsWorkspaceId
+    ]
+  }
+}
+
+// Add environment monitoring to the shared AMPLS (private telemetry path)
+module amplsScope './modules/amplsScope.bicep' = {
+  scope: sharedResourceGroup
+  name: 'amplsScope-${environmentName}'
+  params: {
+    amplsName: 'ampls-techhub'
+    scopePrefix: 'scope-${environmentName}'
+    resourceIds: [
+      monitoring.outputs.appInsightsId
+      monitoring.outputs.logAnalyticsWorkspaceId
+    ]
   }
 }
 
@@ -230,7 +275,10 @@ var wildcardCertIds = toObject(_certDomains, domain => domain, domain => _certId
 // A single wildcard binding per domain covers all subdomains — no per-subdomain registration needed.
 var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 
-// PostgreSQL Flexible Server (private endpoint only — no public access)
+// Parse comma-separated admin IPs into a trimmed, filtered array
+var adminIpList = [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)]
+
+// PostgreSQL Flexible Server (private endpoint + admin IP firewall rule)
 module postgres './modules/postgres.bicep' = {
   scope: resourceGroup
   name: 'postgres-deployment'
@@ -242,6 +290,7 @@ module postgres './modules/postgres.bicep' = {
     skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_B2s'
     skuTier: 'Burstable'
     backupRetentionDays: environmentName == 'staging' ? 7 : 14
+    adminIpAddresses: adminIpList
   }
 }
 

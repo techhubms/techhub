@@ -1,4 +1,4 @@
-// Shared infrastructure for TechHub — ACR, Key Vault, Hub VNet with VPN Gateway
+// Shared infrastructure for TechHub — ACR, Key Vault, Hub VNet, NSP, AMPLS
 targetScope = 'subscription'
 
 @description('Azure region for shared resources')
@@ -19,11 +19,9 @@ param keyVaultAdminObjectIds array = []
 @description('Hub VNet name')
 param hubVnetName string = 'vnet-techhub-hub'
 
-@description('VPN Gateway name')
-param vpnGatewayName string = 'vpng-techhub'
-
-@description('Azure AD audience value for VPN authentication. Uses the Microsoft-registered App ID by default — no manual app registration needed.')
-param vpnAadAudienceAppId string = 'c632b3df-fb67-4d84-bdcf-b95ad541b5c8'
+@description('Comma-separated admin IP addresses for NSP inbound rule and PostgreSQL firewall (e.g. "1.2.3.4,5.6.7.8")')
+@minLength(7)
+param adminIpAddresses string
 
 @description('DNS zone name for ACME challenge delegation (used by certbot-dns-azure for wildcard cert renewal)')
 param acmeDnsZoneName string = 'acme.hub.ms'
@@ -49,11 +47,11 @@ module registry './modules/registry.bicep' = {
 }
 
 // Shared Log Analytics workspace (for Key Vault audit logs)
-module sharedMonitoring './modules/monitoring.bicep' = {
+module sharedLogAnalytics './modules/logAnalytics.bicep' = {
   scope: resourceGroup
+  name: 'logAnalytics-deployment'
   params: {
     location: location
-    appInsightsName: 'appi-techhub-shared'
     logAnalyticsWorkspaceName: 'law-techhub-shared'
   }
 }
@@ -66,19 +64,17 @@ module keyVault './modules/keyVault.bicep' = {
     location: location
     vaultName: keyVaultName
     adminObjectIds: keyVaultAdminObjectIds
-    logAnalyticsWorkspaceId: sharedMonitoring.outputs.logAnalyticsWorkspaceId
+    logAnalyticsWorkspaceId: sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
   }
 }
 
-// Hub VNet with VPN Gateway (Point-to-Site) for admin access
+// Hub VNet (VPN Gateway removed — admin access via NSP + IP firewall rules)
 module hubNetwork './modules/hubNetwork.bicep' = {
   scope: resourceGroup
   name: 'hubNetwork-deployment'
   params: {
     location: location
     vnetName: hubVnetName
-    vpnGatewayName: vpnGatewayName
-    aadAudienceAppId: vpnAadAudienceAppId
   }
 }
 
@@ -114,6 +110,42 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
   }
 }
 
+// Parse comma-separated admin IPs into an array (filter empty entries from trailing/double commas)
+var adminIpList = filter(split(adminIpAddresses, ','), ip => !empty(trim(ip)))
+
+// Network Security Perimeter — controls public access to Key Vault and shared Log Analytics
+// AI Foundry is excluded: content processing scripts run from GitHub Actions runners with dynamic IPs
+// Per-environment App Insights and Log Analytics are associated via nspAssociation.bicep in main.bicep
+module nsp './modules/networkSecurityPerimeter.bicep' = {
+  scope: resourceGroup
+  name: 'nsp-deployment'
+  params: {
+    location: location
+    nspName: 'nsp-techhub'
+    adminIpCidrs: [for ip in adminIpList: '${trim(ip)}/32']
+    associatedResourceIds: [
+      keyVault.outputs.vaultId
+      sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
+    ]
+  }
+}
+
+// Azure Monitor Private Link Scope — routes app telemetry privately through the hub VNet
+module ampls './modules/monitorPrivateLink.bicep' = {
+  scope: resourceGroup
+  name: 'ampls-deployment'
+  params: {
+    location: location
+    amplsName: 'ampls-techhub'
+    subnetId: hubNetwork.outputs.privateEndpointsSubnetId
+    vnetId: hubNetwork.outputs.vnetId
+    appInsightsIds: []
+    logAnalyticsWorkspaceIds: [
+      sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
+    ]
+  }
+}
+
 // Outputs
 output resourceGroupName string = resourceGroup.name
 output containerRegistryName string = registry.outputs.name
@@ -123,7 +155,7 @@ output keyVaultUri string = keyVault.outputs.vaultUri
 output keyVaultId string = keyVault.outputs.vaultId
 output hubVnetId string = hubNetwork.outputs.vnetId
 output hubVnetName string = hubNetwork.outputs.vnetName
-output vpnGatewayId string = hubNetwork.outputs.vpnGatewayId
+output nspId string = nsp.outputs.nspId
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
 output postgresDnsZoneName string = postgresDnsZone.outputs.dnsZoneName
