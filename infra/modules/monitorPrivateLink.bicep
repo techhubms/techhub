@@ -11,8 +11,11 @@ param amplsName string
 @description('Subnet ID in the hub VNet for the AMPLS private endpoint')
 param subnetId string
 
-@description('VNet ID for private DNS zone links')
+@description('VNet ID for private DNS zone links (hub VNet)')
 param vnetId string
+
+@description('Additional spoke VNet IDs to link AMPLS DNS zones to')
+param spokeVnetIds string[] = []
 
 @description('Application Insights resource IDs to scope')
 param appInsightsIds string[]
@@ -76,6 +79,17 @@ resource dnsZoneLinks 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@202
       id: vnetId
     }
   }
+}]
+
+// Link AMPLS DNS zones to spoke VNets (so spoke workloads resolve telemetry through private endpoint)
+module spokeDnsLinks './amplsSpokeLinks.bicep' = [for (spokeVnetId, si) in spokeVnetIds: {
+  name: 'ampls-spoke-dns-${si}'
+  params: {
+    dnsZoneNames: dnsZoneNames
+    spokeVnetId: spokeVnetId
+    spokeIndex: si
+  }
+  dependsOn: [dnsZones]
 }]
 
 // AMPLS Private Endpoint in hub VNet
