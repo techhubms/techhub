@@ -111,8 +111,8 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
   }
 }
 
-// Parse comma-separated admin IPs into an array (filter empty entries from trailing/double commas)
-var adminIpList = filter(split(adminIpAddresses, ','), ip => !empty(trim(ip)))
+// Parse comma-separated admin IPs into a trimmed, filtered array
+var adminIpList = [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)]
 
 // Azure Monitor Private Link Scope — routes app telemetry privately through the hub VNet
 module ampls './modules/monitorPrivateLink.bicep' = {
