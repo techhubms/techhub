@@ -45,7 +45,7 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 
 | Resource | Firewall Mechanism | Admin Access |
 |----------|-------------------|--------------|
-| Key Vault | `networkAcls.ipRules` | Admin IPs allowlisted; default deny; bypass Azure services |
+| Key Vault | `networkAcls.ipRules` | Admin IPs allowlisted; default deny; no Azure services bypass |
 | PostgreSQL | Per-IP firewall rules | Admin IPs allowlisted; public access enabled only when IPs configured |
 | Log Analytics | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
 | App Insights | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
@@ -78,8 +78,8 @@ Private DNS zones are linked to the appropriate VNets for name resolution.
 
 The shared Key Vault stores wildcard TLS certificates used by both staging and production Container Apps.
 
-- **Public access**: Enabled (admin IPs allowlisted via `networkAcls.ipRules`; default deny; bypass Azure services)
-- **Access**: Private endpoint in hub VNet + IP-allowlisted public access
+- **Public access**: Enabled (admin IPs allowlisted via `networkAcls.ipRules`; default deny; bypass disabled)
+- **Access**: Private endpoint in hub VNet + IP-allowlisted public access (no trusted Azure services bypass — all app traffic uses private endpoint)
 - **Authorization**: RBAC (Key Vault Administrator role assigned to specific Azure AD object IDs)
 - **Certificates**: Wildcard certs for `*.hub.ms` and `*.xebia.ms` — see [wildcard-certificates.md](wildcard-certificates.md)
 

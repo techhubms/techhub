@@ -7,8 +7,8 @@ param adminObjectIds string[] = []
 @description('Log Analytics Workspace ID for audit logging (optional)')
 param logAnalyticsWorkspaceId string = ''
 
-@description('Admin IP addresses for firewall rules (optional — leave empty for Azure Services-only access)')
-param adminIpAddresses string[] = []
+@description('Admin IP addresses for firewall rules (app traffic uses the private endpoint)')
+param adminIpAddresses string[]
 
 resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
   name: vaultName
@@ -26,7 +26,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
     publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Deny'
-      bypass: 'AzureServices'
+      bypass: 'None'
       ipRules: [for ip in adminIpAddresses: { value: ip }]
     }
   }

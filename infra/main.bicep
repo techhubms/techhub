@@ -82,7 +82,8 @@ param openAiName string = 'oai-techhub-${environmentName}'
 param openAiModelCapacity int = 100
 
 @description('Comma-separated admin IP addresses for PostgreSQL firewall rules (e.g. "1.2.3.4,5.6.7.8")')
-param adminIpAddresses string = ''
+@minLength(7)
+param adminIpAddresses string
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
