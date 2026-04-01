@@ -83,11 +83,10 @@ resource dnsZoneLinks 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@202
 
 // Link AMPLS DNS zones to spoke VNets (so spoke workloads resolve telemetry through private endpoint)
 module spokeDnsLinks './amplsSpokeLinks.bicep' = [for (spokeVnetId, si) in spokeVnetIds: {
-  name: 'ampls-spoke-dns-${si}'
+  name: 'ampls-spoke-dns-${uniqueString(spokeVnetId)}'
   params: {
     dnsZoneNames: dnsZoneNames
     spokeVnetId: spokeVnetId
-    spokeIndex: si
   }
   dependsOn: [dnsZones]
 }]

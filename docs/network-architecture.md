@@ -48,7 +48,7 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | Key Vault | `networkAcls.ipRules` | Admin IPs allowlisted; default deny; no Azure services bypass |
 | PostgreSQL | Per-IP firewall rules | Admin IPs allowlisted; public access enabled only when IPs configured |
 | Log Analytics | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
-| App Insights | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
+| App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK sends over public internet; server-side uses AMPLS |
 | AI Foundry | Public access enabled | API key authentication; GitHub Actions needs public access |
 
 ## Azure Monitor Private Link Scope (AMPLS)

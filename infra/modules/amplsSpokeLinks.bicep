@@ -7,16 +7,13 @@ param dnsZoneNames string[]
 @description('Spoke VNet resource ID')
 param spokeVnetId string
 
-@description('Index of the spoke VNet (for unique link naming)')
-param spokeIndex int
-
 resource dnsZones 'Microsoft.Network/privateDnsZones@2024-06-01' existing = [for zone in dnsZoneNames: {
   name: zone
 }]
 
 resource links 'Microsoft.Network/privateDnsZones/virtualNetworkLinks@2024-06-01' = [for (zone, i) in dnsZoneNames: {
   parent: dnsZones[i]
-  name: 'link-spoke-${spokeIndex}'
+  name: 'link-spoke-${uniqueString(spokeVnetId)}'
   location: 'global'
   properties: {
     registrationEnabled: false
