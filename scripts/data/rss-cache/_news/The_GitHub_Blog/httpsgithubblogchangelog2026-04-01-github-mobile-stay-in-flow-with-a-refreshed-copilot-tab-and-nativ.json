@@ -1,0 +1,18 @@
+{
+  "OutputDir": "_news",
+  "Title": "GitHub Mobile: Stay in flow with a refreshed Copilot tab and native session logs",
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "client apps",
+    "copilot",
+    "Release"
+  ],
+  "EnhancedContent": "GitHub Mobile now makes it easier to manage agentic workflows on the go with a refreshed Copilot tab, native session logs, and more in-app controls for agent sessions.\n\nOn Android, Copilot has moved to the navigation bar as the **Copilot** tab, making it faster to jump into your sessions and chat history. Inside the **Copilot** tab, a new Home experience gives you a clearer overview of your agent sessions and chat history so you can quickly find what you need.\n\n![](https://github.blog/wp-content/uploads/2026/04/Android-inline-1.png?resize=1024%2C538)\n\nA new session list view includes filters to sort tasks by state, with real-time updates as new sessions are kicked off. You can also do more with agent sessions directly in the app:\n\n- View full session logs natively\n- Create a pull request from a completed session\n- Review the pull request in depth\n- Stop a running session\n\nTogether, these updates make GitHub Mobile a more powerful way to track progress, review outcomes, and take action from anywhere.\u2028This is now available on the latest production build of GitHub Mobile on [iOS](https://apps.apple.com/us/app/github/id1477376905) and [Android](https://play.google.com/store/apps/details?id=com.github.android).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "Author": "Allison",
+  "Description": "GitHub Mobile now makes it easier to manage agentic workflows on the go with a refreshed Copilot tab, native session logs, and more in-app controls for agent sessions. On Android,…\n\nThe post [GitHub Mobile: Stay in flow with a refreshed Copilot tab and native session logs](https://github.blog/changelog/2026-04-01-github-mobile-stay-in-flow-with-a-refreshed-copilot-tab-and-native-session-logs) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-04-01-github-mobile-stay-in-flow-with-a-refreshed-copilot-tab-and-native-session-logs",
+  "PubDate": "2026-04-01T16:36:10+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-04-01 19:27:36"
+}
