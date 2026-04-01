@@ -137,7 +137,7 @@ module monitoring './modules/monitoring.bicep' = {
     location: location
     appInsightsName: appInsightsName
     logAnalyticsWorkspaceName: 'law-techhub-${environmentName}'
-    dailyQuotaGb: environmentName == 'staging' ? 1 : 2
+    dailyQuotaGb: environmentName == 'staging' ? 1 : -1
     appInsightsRetentionInDays: 30
     availabilityTestHosts: primaryHosts
   }
