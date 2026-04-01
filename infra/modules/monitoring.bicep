@@ -43,9 +43,10 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
     RetentionInDays: appInsightsRetentionInDays
-    // Ingestion disabled: app telemetry uses AMPLS private path.
+    // Ingestion enabled: browser JS SDK sends telemetry over the public internet.
+    // Server-side telemetry uses the AMPLS private path.
     // Availability tests use Azure-internal paths and are not affected by this setting.
-    publicNetworkAccessForIngestion: 'Disabled'
+    publicNetworkAccessForIngestion: 'Enabled'
     // Query enabled: allows portal and admin access (protected by RBAC)
     publicNetworkAccessForQuery: 'Enabled'
   }

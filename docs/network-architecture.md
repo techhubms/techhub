@@ -48,7 +48,7 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | Key Vault | `networkAcls.ipRules` | Admin IPs allowlisted; default deny; no Azure services bypass |
 | PostgreSQL | Per-IP firewall rules | Admin IPs allowlisted; public access enabled only when IPs configured |
 | Log Analytics | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
-| App Insights | Public query access enabled | RBAC-protected; ingestion via AMPLS private path |
+| App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK sends over public internet; server-side uses AMPLS |
 | AI Foundry | Public access enabled | API key authentication; GitHub Actions needs public access |
 
 ## Azure Monitor Private Link Scope (AMPLS)
@@ -57,7 +57,7 @@ AMPLS routes app telemetry privately through the hub VNet. All Application Insig
 
 - **Access mode**: Open (allows both private and public ingestion/query)
 - **Private endpoint**: In hub VNet `snet-private-endpoints` subnet
-- **DNS zones**: 5 AMPLS-specific private DNS zones linked to hub VNet
+- **DNS zones**: 5 AMPLS-specific private DNS zones linked to hub VNet and spoke VNets (via `spokeVnetIds` parameter)
 
 ## Private Endpoints
 
@@ -70,7 +70,7 @@ Data services use private endpoints. Key Vault uses IP firewall rules for admin 
 | PostgreSQL Prod (`psql-techhub-prod`) | Prod VNet | `privatelink.postgres.database.azure.com` | Prod + Hub |
 | AI Foundry Staging (`oai-techhub-staging`) | Staging VNet | `privatelink.cognitiveservices.azure.com`, `privatelink.openai.azure.com`, `privatelink.services.ai.azure.com` | Staging |
 | AI Foundry Prod (`oai-techhub-prod`) | Prod VNet | (same 3 zones) | Prod |
-| AMPLS (`ampls-techhub`) | Hub VNet | 5 monitor DNS zones | Hub |
+| AMPLS (`ampls-techhub`) | Hub VNet | 5 monitor DNS zones | Hub + all spokes |
 
 Private DNS zones are linked to the appropriate VNets for name resolution.
 
@@ -116,18 +116,18 @@ Private DNS zones ensure all consumers can resolve private endpoint IPs:
 | `privatelink.cognitiveservices.azure.com` | AI Foundry PE module (per env RG) | Spoke VNet |
 | `privatelink.openai.azure.com` | AI Foundry PE module (per env RG) | Spoke VNet |
 | `privatelink.services.ai.azure.com` | AI Foundry PE module (per env RG) | Spoke VNet |
-| `privatelink.monitor.azure.com` | AMPLS module (shared RG) | Hub VNet |
-| `privatelink.oms.opinsights.azure.com` | AMPLS module (shared RG) | Hub VNet |
-| `privatelink.ods.opinsights.azure.com` | AMPLS module (shared RG) | Hub VNet |
-| `privatelink.agentsvc.azure-automation.net` | AMPLS module (shared RG) | Hub VNet |
-| `privatelink.blob.core.windows.net` | AMPLS module (shared RG) | Hub VNet |
+| `privatelink.monitor.azure.com` | AMPLS module (shared RG) | Hub VNet + each spoke VNet |
+| `privatelink.oms.opinsights.azure.com` | AMPLS module (shared RG) | Hub VNet + each spoke VNet |
+| `privatelink.ods.opinsights.azure.com` | AMPLS module (shared RG) | Hub VNet + each spoke VNet |
+| `privatelink.agentsvc.azure-automation.net` | AMPLS module (shared RG) | Hub VNet + each spoke VNet |
+| `privatelink.blob.core.windows.net` | AMPLS module (shared RG) | Hub VNet + each spoke VNet |
 
 ## Deploy Order
 
-1. **Shared** (`rg-techhub-shared`): ACR, Log Analytics, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, AMPLS
+1. **Shared** (`rg-techhub-shared`): ACR, Log Analytics, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, AMPLS (with optional spoke VNet DNS links via `spokeVnetIds`)
 2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, App Insights + Log Analytics, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, AMPLS scoping
 
-Shared must be deployed first — spoke deployments reference the hub VNet ID for peering.
+Shared must be deployed first — spoke deployments reference the hub VNet ID for peering. To link AMPLS DNS zones to spoke VNets, re-deploy shared with `spokeVnetIds` after spoke VNets are created.
 
 ## Implementation Reference
 
@@ -143,6 +143,7 @@ Shared must be deployed first — spoke deployments reference the hub VNet ID fo
 - PostgreSQL DNS Zone: [infra/modules/postgresDnsZone.bicep](../infra/modules/postgresDnsZone.bicep)
 - DNS Zone Link: [infra/modules/privateDnsZoneLink.bicep](../infra/modules/privateDnsZoneLink.bicep)
 - AMPLS: [infra/modules/monitorPrivateLink.bicep](../infra/modules/monitorPrivateLink.bicep)
+- AMPLS Spoke DNS Links: [infra/modules/amplsSpokeLinks.bicep](../infra/modules/amplsSpokeLinks.bicep)
 - AMPLS Scope: [infra/modules/amplsScope.bicep](../infra/modules/amplsScope.bicep)
 - AI Foundry PE: [infra/modules/openAiPrivateEndpoint.bicep](../infra/modules/openAiPrivateEndpoint.bicep)
 - Shared orchestration: [infra/shared.bicep](../infra/shared.bicep)

@@ -29,6 +29,9 @@ param acmeDnsZoneName string = 'acme.hub.ms'
 @description('Domains that need ACME-delegated wildcard certificate renewal')
 param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
 
+@description('Spoke VNet resource IDs to link AMPLS DNS zones to (pass after spoke VNets are created)')
+param spokeVnetIds string[] = []
+
 // Shared Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
@@ -123,6 +126,7 @@ module ampls './modules/monitorPrivateLink.bicep' = {
     amplsName: 'ampls-techhub'
     subnetId: hubNetwork.outputs.privateEndpointsSubnetId
     vnetId: hubNetwork.outputs.vnetId
+    spokeVnetIds: spokeVnetIds
     appInsightsIds: []
     logAnalyticsWorkspaceIds: [
       sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
