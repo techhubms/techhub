@@ -24,7 +24,9 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
       name: 'PerGB2018'
     }
     retentionInDays: 30
-    publicNetworkAccessForIngestion: 'Enabled'
+    // Ingestion disabled: app telemetry uses AMPLS private path
+    publicNetworkAccessForIngestion: 'Disabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
     publicNetworkAccessForQuery: 'Enabled'
     workspaceCapping: {
       dailyQuotaGb: dailyQuotaGb
@@ -41,12 +43,17 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
     RetentionInDays: appInsightsRetentionInDays
+    // Ingestion enabled: browser JS SDK sends telemetry over the public internet.
+    // Server-side telemetry uses the AMPLS private path.
+    // Availability tests use Azure-internal paths and are not affected by this setting.
     publicNetworkAccessForIngestion: 'Enabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
     publicNetworkAccessForQuery: 'Enabled'
   }
 }
 
 output appInsightsName string = appInsights.name
+output appInsightsId string = appInsights.id
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
 

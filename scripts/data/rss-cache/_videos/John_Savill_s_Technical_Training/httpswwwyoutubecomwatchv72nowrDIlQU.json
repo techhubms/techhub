@@ -1,0 +1,26 @@
+{
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "Description": "Quick walkthrough of Entra Backup and Restore and how it complements soft delete and protected actions.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:17 - Entra daily snapshot 01:45 - Restoring state 02:50 - Difference report 04:34 - Recovering 05:13 - Soft delete 07:08 - Protected actions 09:36 - Complete solution 10:10 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/EntraBackupRestore.png ► Neat version: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Images/entrabrneat.png ► Backup and Restore Docs: 🔗 https://learn.microsoft.com/entra/backup/overview\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #entraid #azuread #johnsavillstechnicaltraining #onboardtoazure",
+  "FeedName": "John Savill's Technical Training",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "Author": "John Savill's Technical Training",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-03-25 11:19:18",
+  "Link": "https://www.youtube.com/watch?v=72nowrDIlQU",
+  "Title": "Overview of Entra Backup and Recovery",
+  "PubDate": "2026-03-25T11:05:16+00:00",
+  "Tags": [
+    "azure ad",
+    "azuread",
+    "cloud",
+    "entra",
+    "entra id",
+    "entraid",
+    "identity",
+    "johnsavillstechnicaltraining",
+    "microsoft",
+    "onboardtoazure",
+    "security"
+  ]
+}
