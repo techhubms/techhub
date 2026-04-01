@@ -14410,5 +14410,11 @@
     "reason": "No categories found: Content excluded because the substantive content text is missing (the `content` field is null and `description` is empty), so there is no technical information to assess against the inclusion rules or the requirement that Microsoft technologies be central (≥40% of substantive content). With only a marketing-style title and tags, categorization would require fabricating details, which is not allowed.",
     "collection": "videos",
     "timestamp": "2026-04-01 18:25:20 +00:00"
+  },
+  {
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/uninstalling-remote-desktop-client-closes-users-windows-app/m-p/4507719#M14035",
+    "reason": "Insufficient content length",
+    "collection": "community",
+    "timestamp": "2026-04-01 20:20:50 +00:00"
   }
 ]

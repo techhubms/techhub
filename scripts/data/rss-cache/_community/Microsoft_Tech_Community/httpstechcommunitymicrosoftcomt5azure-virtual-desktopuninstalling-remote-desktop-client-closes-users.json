@@ -1,0 +1,14 @@
+{
+  "ProcessedDate": "2026-04-01 20:17:10",
+  "PubDate": "2026-04-01T13:46:21+00:00",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "EnhancedContent": "We have our users working from Windows App now to meet the 3/27 out of support date.  We are beginning to uninstall the Remote Desktop from their laptops and are finding it closes active Windows App connections on uninstall (of Remote Desktop).  That is less than ideal.  Looking to see if any way around that, but wondered if others had seen the same?",
+  "FeedName": "Microsoft Tech Community",
+  "Tags": [],
+  "Title": "Uninstalling Remote Desktop client closes users' Windows App connections",
+  "Description": "We have our users working from Windows App now to meet the 3/27 out of support date. We are beginning to uninstall the Remote Desktop from their laptops and are finding it closes active Windows App connections on uninstall (of Remote Desktop). That is less than ideal. Looking to see if any way around that, but wondered if others had seen the same?",
+  "Author": "shaaric",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop/uninstalling-remote-desktop-client-closes-users-windows-app/m-p/4507719#M14035"
+}
