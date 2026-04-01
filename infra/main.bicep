@@ -273,9 +273,9 @@ module postgres './modules/postgres.bicep' = {
     serverName: postgresServerName
     administratorLogin: postgresAdminLogin
     administratorLoginPassword: postgresAdminPassword
-    skuName: environmentName == 'staging' ? 'Standard_B1ms' : 'Standard_B2s'
+    skuName: 'Standard_B1ms'
     skuTier: 'Burstable'
-    backupRetentionDays: environmentName == 'staging' ? 7 : 14
+    backupRetentionDays: 7
     adminIpAddresses: adminIpList
   }
 }
