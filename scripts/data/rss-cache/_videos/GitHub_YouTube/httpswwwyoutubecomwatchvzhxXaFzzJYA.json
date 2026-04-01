@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "DevSecOps",
+    "GitHub",
+    "Security"
+  ],
+  "Title": "Getting started with GitHub security | GitHub for Beginners",
+  "FeedLevelAuthor": "GitHub",
+  "EnhancedContent": null,
+  "PubDate": "2026-03-30T15:00:00+00:00",
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "Link": "https://www.youtube.com/watch?v=zhxXaFzzJYA",
+  "Description": "Welcome back to GitHub for Beginners! In this episode, we cover the essentials of getting started with GitHub security. Learn why securing your code matters and how to easily fix vulnerabilities in your repositories. We walk you through built-in tools like secret scanning, Dependabot, code scanning, and Copilot autofix to keep your projects safe.\n\nLearn more about GitHub Security: https://github.blog/developer-skills/github/github-for-beginners-getting-started-with-github-security?utm\\_source=youtube-episode-3&utm\\_medium=video&utm\\_campaign=gfb-s3-2026\n\n#Security #GitHub #DevSecOps\n\n— CHAPTERS —\n\n00:00 Introduction 00:28 Why does security matter? 01:05 What is GitHub Advanced Security (GHAS)? 02:36 What is Dependabot? 03:37 Fixing vulnerabilities with Copilot Autofix 04:37 Outro\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "ProcessedDate": "2026-03-30 15:32:12",
+  "Author": "GitHub"
+}

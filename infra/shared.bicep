@@ -1,4 +1,4 @@
-// Shared infrastructure for TechHub — ACR, Key Vault, Hub VNet with VPN Gateway
+// Shared infrastructure for TechHub — ACR, Key Vault, Hub VNet, AMPLS
 targetScope = 'subscription'
 
 @description('Azure region for shared resources')
@@ -19,17 +19,18 @@ param keyVaultAdminObjectIds array = []
 @description('Hub VNet name')
 param hubVnetName string = 'vnet-techhub-hub'
 
-@description('VPN Gateway name')
-param vpnGatewayName string = 'vpng-techhub'
-
-@description('Azure AD audience value for VPN authentication. Uses the Microsoft-registered App ID by default — no manual app registration needed.')
-param vpnAadAudienceAppId string = 'c632b3df-fb67-4d84-bdcf-b95ad541b5c8'
+@description('Comma-separated admin IP addresses for Key Vault and PostgreSQL firewall (e.g. "1.2.3.4,5.6.7.8")')
+@minLength(7)
+param adminIpAddresses string
 
 @description('DNS zone name for ACME challenge delegation (used by certbot-dns-azure for wildcard cert renewal)')
 param acmeDnsZoneName string = 'acme.hub.ms'
 
 @description('Domains that need ACME-delegated wildcard certificate renewal')
 param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
+
+@description('Spoke VNet resource IDs to link AMPLS DNS zones to (pass after spoke VNets are created)')
+param spokeVnetIds string[] = []
 
 // Shared Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
@@ -49,11 +50,11 @@ module registry './modules/registry.bicep' = {
 }
 
 // Shared Log Analytics workspace (for Key Vault audit logs)
-module sharedMonitoring './modules/monitoring.bicep' = {
+module sharedLogAnalytics './modules/logAnalytics.bicep' = {
   scope: resourceGroup
+  name: 'logAnalytics-deployment'
   params: {
     location: location
-    appInsightsName: 'appi-techhub-shared'
     logAnalyticsWorkspaceName: 'law-techhub-shared'
   }
 }
@@ -66,19 +67,18 @@ module keyVault './modules/keyVault.bicep' = {
     location: location
     vaultName: keyVaultName
     adminObjectIds: keyVaultAdminObjectIds
-    logAnalyticsWorkspaceId: sharedMonitoring.outputs.logAnalyticsWorkspaceId
+    logAnalyticsWorkspaceId: sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
+    adminIpAddresses: adminIpList
   }
 }
 
-// Hub VNet with VPN Gateway (Point-to-Site) for admin access
+// Hub VNet (admin access via IP firewall rules on each resource)
 module hubNetwork './modules/hubNetwork.bicep' = {
   scope: resourceGroup
   name: 'hubNetwork-deployment'
   params: {
     location: location
     vnetName: hubVnetName
-    vpnGatewayName: vpnGatewayName
-    aadAudienceAppId: vpnAadAudienceAppId
   }
 }
 
@@ -114,6 +114,26 @@ module postgresDnsZone './modules/postgresDnsZone.bicep' = {
   }
 }
 
+// Parse comma-separated admin IPs into a trimmed, filtered array
+var adminIpList = [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)]
+
+// Azure Monitor Private Link Scope — routes app telemetry privately through the hub VNet
+module ampls './modules/monitorPrivateLink.bicep' = {
+  scope: resourceGroup
+  name: 'ampls-deployment'
+  params: {
+    location: location
+    amplsName: 'ampls-techhub'
+    subnetId: hubNetwork.outputs.privateEndpointsSubnetId
+    vnetId: hubNetwork.outputs.vnetId
+    spokeVnetIds: spokeVnetIds
+    appInsightsIds: []
+    logAnalyticsWorkspaceIds: [
+      sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
+    ]
+  }
+}
+
 // Outputs
 output resourceGroupName string = resourceGroup.name
 output containerRegistryName string = registry.outputs.name
@@ -123,7 +143,6 @@ output keyVaultUri string = keyVault.outputs.vaultUri
 output keyVaultId string = keyVault.outputs.vaultId
 output hubVnetId string = hubNetwork.outputs.vnetId
 output hubVnetName string = hubNetwork.outputs.vnetName
-output vpnGatewayId string = hubNetwork.outputs.vpnGatewayId
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
 output postgresDnsZoneName string = postgresDnsZone.outputs.dnsZoneName

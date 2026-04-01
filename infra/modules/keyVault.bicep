@@ -7,6 +7,9 @@ param adminObjectIds string[] = []
 @description('Log Analytics Workspace ID for audit logging (optional)')
 param logAnalyticsWorkspaceId string = ''
 
+@description('Admin IP addresses for firewall rules (app traffic uses the private endpoint)')
+param adminIpAddresses string[]
+
 resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
   name: vaultName
   location: location
@@ -20,10 +23,11 @@ resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
     enableSoftDelete: true
     softDeleteRetentionInDays: 90
     enablePurgeProtection: true
-    publicNetworkAccess: 'Disabled'
+    publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Deny'
       bypass: 'None'
+      ipRules: [for ip in adminIpAddresses: { value: ip }]
     }
   }
 }

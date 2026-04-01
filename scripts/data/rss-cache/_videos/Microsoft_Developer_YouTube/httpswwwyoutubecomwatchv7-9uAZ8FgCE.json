@@ -1,0 +1,24 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "AzureSQL",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "SQLServer",
+    "Tech",
+    "Technology"
+  ],
+  "PubDate": "2026-03-30T19:46:50+00:00",
+  "Link": "https://www.youtube.com/watch?v=7-9uAZ8FgCE",
+  "Author": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2026-03-30 20:16:13",
+  "OutputDir": "_videos",
+  "Title": "Native Regex in SQL Server 2025 | Data Exposed: MVP Edition",
+  "Description": "It has finally arrived - native Regex directly in SQL Server! Now text can be searched using any Regex patterns using a variety of powerful, new functions. Enjoy demonstrations of some of the new features and why they will be a huge help for anyone that writes T-SQL!\n\n✅ Chapters: 0:00 Introduction 2:40 Demo 9:00 Demo 9:55 Getting started\n\n✅ Resources: Regular Expressions Overview (Microsoft Learn): https://learn.microsoft.com/en-us/sql/relational-databases/regular-expressions/overview Regex re2 syntax (Github): https://github.com/google/re2/wiki/Syntax Re2 Regex library (GitHub): https://github.com/google/re2/\n\nAbout MVPs: Microsoft Most Valuable Professionals, or MVPs, are technology experts who passionately share their knowledge with the community. They are always on the \"bleeding edge\" and have an unstoppable urge to get their hands on new, exciting technologies. They have very deep knowledge of Microsoft products and services, while also being able to bring together diverse platforms, products and solutions, to solve real world problems. MVPs make up a global community of over 4,000 technical experts and community leaders across 90 countries/regions and are driven by their passion, community spirit, and quest for knowledge. Above all and in addition to their amazing technical abilities, MVPs are always willing to help others - that's what sets them apart. Learn more: https://aka.ms/mvpprogram\n\n📌 Let's connect: Twitter: Anna Hoffman, https://twitter.com/AnalyticAnna Twitter: AzureSQL, https://aka.ms/azuresqltw\n\n🔴 To watch other MVP Edition episodes, see our playlist: https://aka.ms/dataexposedmvps To check out even more Data Exposed episodes, see our playlist: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQLServer",
+  "EnhancedContent": null
+}
