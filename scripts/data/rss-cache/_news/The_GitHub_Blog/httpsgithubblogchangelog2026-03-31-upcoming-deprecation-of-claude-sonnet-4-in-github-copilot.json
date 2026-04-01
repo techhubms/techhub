@@ -1,0 +1,16 @@
+{
+  "ProcessedDate": "2026-04-01 01:37:35",
+  "Link": "https://github.blog/changelog/2026-03-31-upcoming-deprecation-of-claude-sonnet-4-in-github-copilot",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "EnhancedContent": "We will deprecate the following model across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on 5/1/2026:\n\n| Model | Deprecation date | Suggested alternative | | --- | --- | --- | | Claude Sonnet 4 | 2026-05-01 | Claude Sonnet 4.6 |\n\nPlease update your workflows and integrations to use supported models before this date. Copilot Enterprise administrators may need to enable access to alternative models through their model policies in Copilot settings. As an administrator, you can verify availability by checking your individual Copilot settings and confirming that the policy is enabled for the specific model. Once enabled, you’ll see the model in the Copilot Chat model selector in VS Code and on github.com. No action is required to remove the models once they have been deprecated.\n\nGitHub Enterprise customers with questions or concerns are encouraged to reach out to their account manager for further assistance.\n\n### Share your feedback\n\nTo learn more about the models available in Copilot, see [our documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) and get started with Copilot today.\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations?utm_source=model-release-announcement&amp;utm_medium=changelog&amp;utm_campaign=newmodels) to share your feedback.",
+  "Tags": [
+    "copilot"
+  ],
+  "OutputDir": "_news",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "PubDate": "2026-04-01T00:14:43+00:00",
+  "Title": "Upcoming deprecation of Claude Sonnet 4 in GitHub Copilot",
+  "FeedName": "The GitHub Blog",
+  "Description": "We will deprecate the following model across all GitHub Copilot experiences (including Copilot Chat, inline edits, ask and agent modes, and code completions) on 5/1/2026: Model Deprecation date Suggested alternative…\n\nThe post [Upcoming deprecation of Claude Sonnet 4 in GitHub Copilot](https://github.blog/changelog/2026-03-31-upcoming-deprecation-of-claude-sonnet-4-in-github-copilot) appeared first on [The GitHub Blog](https://github.blog)."
+}
