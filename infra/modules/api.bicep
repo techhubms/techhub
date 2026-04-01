@@ -107,8 +107,8 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           name: 'api'
           image: imageReference
           resources: {
-            cpu: json(environmentName == 'staging' ? '0.25' : '0.5')
-            memory: environmentName == 'staging' ? '0.5Gi' : '1Gi'
+            cpu: json('0.25')
+            memory: '0.5Gi'
           }
           env: concat(staticEnvVars, corsEnvVars)
           probes: [
@@ -151,7 +151,7 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
       ]
       scale: {
         minReplicas: environmentName == 'staging' ? 0 : 1
-        maxReplicas: environmentName == 'staging' ? 2 : 10
+        maxReplicas: environmentName == 'staging' ? 2 : 3
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [
