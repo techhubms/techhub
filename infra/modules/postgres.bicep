@@ -19,11 +19,11 @@ param databaseName string = 'techhub'
 param postgresVersion string = '17'
 
 @description('SKU name for the server')
-param skuName string = 'Standard_D2ads_v5'
+param skuName string = 'Standard_B1ms'
 
 @description('SKU tier')
 @allowed(['Burstable', 'GeneralPurpose', 'MemoryOptimized'])
-param skuTier string = 'GeneralPurpose'
+param skuTier string = 'Burstable'
 
 @description('Storage size in GB')
 param storageSizeGB int = 32
