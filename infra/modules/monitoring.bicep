@@ -57,13 +57,11 @@ output appInsightsId string = appInsights.id
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
 
-// Five geographically distributed probe locations for global coverage
+// Three geographically distributed probe locations for sufficient coverage
 var availabilityLocations = [
   { Id: 'emea-nl-ams-azr' }  // West Europe (Amsterdam)
   { Id: 'us-ca-sjc-azr' }    // West US (San Jose)
-  { Id: 'us-tx-sn1-azr' }    // South Central US
   { Id: 'apac-sg-sin-azr' }  // Southeast Asia (Singapore)
-  { Id: 'emea-gb-db3-azr' }  // North Europe (Dublin)
 ]
 
 // Standard availability test (HTTP GET, SSL check, expect HTTP 200) per host
