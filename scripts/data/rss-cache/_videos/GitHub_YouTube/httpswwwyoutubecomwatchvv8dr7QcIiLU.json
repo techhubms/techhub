@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "CopilotCLI",
+    "GitHubCodingAgent",
+    "GitHubCopilot"
+  ],
+  "Author": "GitHub",
+  "Link": "https://www.youtube.com/watch?v=v8dr7QcIiLU",
+  "Title": "Copilot CLI for beginners: Plan, delegate, and review",
+  "EnhancedContent": null,
+  "Description": "Did you know you can have GitHub Copilot CLI build features for you in the background? We explore how to use the plan and delegate commands to create a draft pull request while you work on other tasks. After the cloud agent finishes coding, we show you how to review the changes directly in your terminal. Watch to see how these three commands streamline your daily developer workflow.\n\n#GitHubCopilot #CopilotCLI #GitHubCodingAgent\n\nGitHub Copilot CLI for Beginners: https://github.com/github/copilot-cli-for-beginners?utm\\_source=youtube-cli-beginners-series-episode4-repo-cta&utm\\_medium=social&utm\\_campaign=copilot-cli-ga-phase-two-2026\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "OutputDir": "_videos",
+  "PubDate": "2026-04-02T15:00:00+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "FeedName": "GitHub YouTube",
+  "ProcessedDate": "2026-04-02 15:25:51"
+}
