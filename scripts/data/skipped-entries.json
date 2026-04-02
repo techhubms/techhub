@@ -14446,5 +14446,11 @@
     "canonical_url": "https://news.xbox.com/en-us/2026/04/02/xbox-fanfest-tour/",
     "collection": "news",
     "reason": "No categories found: Excluded by Generic Exclusion Rules: this is a non-development Microsoft product/community announcement focused on Xbox FanFest events and tour locations for the Xbox 25th anniversary. It contains no developer/IT implementation details and is not about Microsoft developer technologies (Azure, .NET, DevOps, Security, AI/ML, GitHub Copilot). Therefore, no categories apply."
+  },
+  {
+    "timestamp": "2026-04-02 22:16:05 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=QiB5B7DaF4M",
+    "collection": "videos",
+    "reason": "No categories found: Content excluded due to generic exclusion rule (Content Quality): the provided input does not include substantive technical content to evaluate—`content` is null and the remaining description is primarily a promotional/announcement-style overview of the Serena toolkit and an invitation to “Join us for a chat”. Without actual talk/transcript details, there isn’t enough technical Microsoft-centered material to categorize reliably. Per the workflow, when in doubt, exclude and leave categories empty."
   }
 ]
