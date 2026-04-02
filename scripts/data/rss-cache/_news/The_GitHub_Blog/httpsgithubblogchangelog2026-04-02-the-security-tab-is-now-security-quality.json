@@ -1,0 +1,19 @@
+{
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Link": "https://github.blog/changelog/2026-04-02-the-security-tab-is-now-security-quality",
+  "ProcessedDate": "2026-04-02 14:30:31",
+  "EnhancedContent": "The top-level **Security** tab across repositories, organizations, and enterprises has been renamed to **Security & quality** on github.com. This change restructures the navigation to colocate code quality findings alongside security alerts, making it easier to triage all code-related issues from a single place.\n\n### What’s changed\n\n- The **Security** tab is now **Security & quality** at the repository, organization, and enterprise levels.\n- The repository sidebar section previously labeled **Vulnerability alerts** is now **Findings**.\n- The repository sidebar includes a new **Code quality** section showing enablement status.\n- The repository **Policy** sidebar item is now **Security policy**.\n\n### What hasn’t changed\n\n- All existing URLs and API endpoints remain the same. You won’t need to update bookmarks, scripts, or integrations.\n- The underlying alert types and data are unchanged.\n\nThis navigation update lays the groundwork for the upcoming GitHub Code Quality general availability launch. The updated navigation is available now on github.com and is not included in GitHub Enterprise Server.\n\nJoin the discussion in the [GitHub Community](https://github.com/orgs/community/discussions/177488).",
+  "Description": "The top-level Security tab across repositories, organizations, and enterprises has been renamed to Security & quality on github.com. This change restructures the navigation to colocate code quality findings alongside security…\n\nThe post [The Security tab is now Security & quality](https://github.blog/changelog/2026-04-02-the-security-tab-is-now-security-quality) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "PubDate": "2026-04-02T13:57:45+00:00",
+  "Tags": [
+    "application security",
+    "enterprise management tools",
+    "Improvement",
+    "platform governance"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "Title": "The Security tab is now Security & quality",
+  "Author": "Allison"
+}
