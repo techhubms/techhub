@@ -1,0 +1,20 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "EnhancedContent": null,
+  "Tags": [
+    "appmodernization",
+    "devtools",
+    "dotnet",
+    "githubcopilot",
+    "softwaredevelopment"
+  ],
+  "Description": "Modernizing apps always sounds great… until you actually have to do it. Matt Soucoup breaks down how GitHub Copilot can analyze your project, generate a plan, and even create task lists to help you move from legacy .NET to modern .NET faster. It moves you from a “someday project” to “let’s actually ship this.”\n\nLearn more: https://msft.it/6053Q0gRh\n\n#dotnet #githubcopilot #appmodernization #devtools #softwaredevelopment",
+  "PubDate": "2026-04-03T15:45:43+00:00",
+  "FeedName": "Microsoft Developer YouTube",
+  "ProcessedDate": "2026-04-03 16:15:07",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=DgIweLo3-Oo",
+  "OutputDir": "_videos",
+  "Title": "How can AI help me modernize my app?"
+}
