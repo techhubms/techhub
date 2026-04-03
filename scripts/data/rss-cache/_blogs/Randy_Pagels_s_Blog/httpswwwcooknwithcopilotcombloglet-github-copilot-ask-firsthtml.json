@@ -1,0 +1,14 @@
+{
+  "EnhancedContent": "[← Back to Main Page](../index.html)\n\n# Let GitHub Copilot Ask First\n\n*Posted on Apr 3, 2026*\n\nUsage\n\nSometimes the best answer does not come from asking better questions.\n\nIt comes from letting GitHub Copilot ask them first.\n\nProTip\n\n**Before jumping to a solution, ask GitHub Copilot to clarify the problem.**\n\nBetter understanding leads to better output.\n\nWhy This Works\n\nDevelopers often rush to solutions. But unclear requirements lead to:\n\n- wrong assumptions\n- missing edge cases\n- extra rework\n\nGitHub Copilot can help slow things down just enough to get it right the first time.\n\nStart With Clarifying Questions\n\nInstead of:\n\n`Add validation to this function`\n\nTry:\n\n`Before making changes, ask clarifying questions about expected behavior and edge cases.`\n\nNow Copilot shifts from answering to understanding.\n\nUse It for Ambiguous Tasks\n\nWhen requirements are not fully defined:\n\n`Ask questions to better understand what this feature should do before suggesting an implementation.`\n\nThis is especially useful for:\n\n- new features\n- vague tickets\n- legacy code\n\nCombine With Context\n\nPair this with what you learned last time. Give Copilot:\n\n- the relevant code\n- a short goal\n\nThen ask:\n\n`Based on this code, what questions should we answer before making changes?`\n\nYou’ll get a much stronger starting point.\n\nTurn Questions Into Better Prompts\n\nOnce Copilot asks questions, you can refine your request. This creates a natural loop:\n\n1. Copilot asks\n2. You clarify\n3. Copilot improves\n4. You get better results\n\nThat’s real collaboration.\n\nA Simple Rule of Thumb\n\n1. If the task feels unclear, do not push forward.\n2. Pause and ask Copilot to ask you questions.\n3. Clarity first. Code second.\n\nQuick Takeaway\n\nGitHub Copilot does not just generate answers. It can help you ask better questions, and that is often where the real value is. Let it slow things down just enough to get things right.",
+  "Tags": [],
+  "FeedName": "Randy Pagels's Blog",
+  "OutputDir": "_blogs",
+  "ProcessedDate": "2026-04-03 20:11:38",
+  "FeedLevelAuthor": "randy.pagels@xebia.com (Randy Pagels)",
+  "FeedUrl": "https://www.cooknwithcopilot.com/rss.xml",
+  "Link": "https://www.cooknwithcopilot.com/blog/let-github-copilot-ask-first.html",
+  "PubDate": "2026-04-03T00:00:00+00:00",
+  "Author": "randy.pagels@xebia.com (Randy Pagels)",
+  "Description": "Ask Copilot to clarify the problem first so you get fewer assumptions, better prompts, and stronger results.",
+  "Title": "Let GitHub Copilot Ask First"
+}
