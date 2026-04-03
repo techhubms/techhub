@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "PubDate": "2026-04-02T23:06:51+00:00",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "GitHub",
+  "ProcessedDate": "2026-04-03 00:31:32",
+  "Link": "https://www.youtube.com/watch?v=Ro_VMXWbLt8",
+  "OutputDir": "_videos",
+  "Title": "Open Source Friday - Welcome to Maintainer Month 2026",
+  "Author": "GitHub",
+  "Description": "It's Maintainer Month and we're kicking things off with Nicholas Tindle, maintainer of AutoGPT. Nicholas shares how his team stopped fighting AI contributions and started shaping them by embedding agent instructions directly into the repo. We talk about the challenge of knowing whether you're reviewing a human or an agent, why that changes how you give feedback, and what maintainers actually want from platforms like GitHub to make better review decisions.",
+  "Tags": [],
+  "FeedName": "GitHub YouTube"
+}
