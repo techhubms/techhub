@@ -1,0 +1,17 @@
+{
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits",
+  "Tags": [
+    "copilot",
+    "Improvement"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "Copilot cloud agent now signs every commit it makes. Signed commits appear as Verified on GitHub, giving you confidence that the commit was genuinely made by the agent and hasn’t…\n\nThe post [Copilot cloud agent signs its commits](https://github.blog/changelog/2026-04-03-copilot-cloud-agent-signs-its-commits) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-04-03 13:31:18",
+  "OutputDir": "_news",
+  "EnhancedContent": "[Copilot cloud agent](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) now signs every commit it makes. Signed commits appear as `Verified` on GitHub, giving you confidence that the commit was genuinely made by the agent and hasn’t been tampered with.\n\nThis means that Copilot cloud agent now works in repositories with the [“Require signed commits”](https://docs.github.com/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/available-rules-for-rulesets#require-signed-commits) branch protection rule or ruleset enabled. Previously, this was one of the rules that the agent couldn’t comply with, which blocked it entirely from being used in those repositories.\n\nTo learn more about Copilot cloud agent, head to [“About Copilot cloud agent”](https://docs.github.com/copilot/concepts/agents/coding-agent/about-coding-agent) in the documentation.",
+  "Title": "Copilot cloud agent signs its commits",
+  "PubDate": "2026-04-03T12:05:23+00:00"
+}
