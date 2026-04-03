@@ -1,0 +1,18 @@
+{
+  "ProcessedDate": "2026-04-03 15:18:39",
+  "FeedName": "GitHub YouTube",
+  "FeedLevelAuthor": "GitHub",
+  "PubDate": "2026-04-03T15:01:15+00:00",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "Tags": [
+    "DevNews",
+    "GitHub",
+    "OpenAI"
+  ],
+  "Author": "GitHub",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Title": "The Download: LiteLLM hacked, Pretext layout engine, OpenAI news & more",
+  "Description": "Welcome back to The Download! This week, we cover the serious supply chain attack on the LiteLLM Python package and OpenAI's intent to acquire Astral. We also look at Pretext, a new layout engine designed to help your browser handle complex tasks with ease. Plus, learn how to turn your GitHub contributions into a 3D pixel art city. Drop a comment and let us know which update is your favorite!\n\n#DevNews #OpenAI #GitHub\n\n— CHAPTERS —\n\n00:00 Welcome to the Download 00:30 Pretext high performance layout engine 01:00 LiteLLM Python package supply chain attack 02:09 OpenAI to acquire Astral 02:49 GitHub Actions native timezone support 03:18 Agentevals for AI system reliability 04:05 Turn your GitHub profile into Git City 04:53 Outro\n\n— RESOURCES —\n\nPretext https://chenglou.me/pretext/ https://x.com/\\_chenglou/status/2037713766205608234\n\nLiteLLM https://futuresearch.ai/blog/no-prompt-injection-required/ https://snyk.io/articles/poisoned-security-scanner-backdooring-litellm/\n\nAstral Acquisition https://openai.com/index/openai-to-acquire-astral/\n\nGitHub Actions Crons support https://github.blog/changelog/2026-03-19-github-actions-late-march-2026-updates/#github-actions-timezone-support-for-scheduled-workflows\n\nhttps://www.linkedin.com/posts/bengotch\\_you-know-what-feels-good-on-a-friday-morning-activity-7440808005568258048-KXSL?utm\\_source=share&utm\\_medium=member\\_desktop&rcm=ACoAABuOjfwBvMcYGBdcy1lJ550ifkI\\_DwoPEYc\n\nAgent Evals: https://www.solo.io/press-releases/introducing-new-agentic-open-source-project-agentevals\n\nOpen Source Project: https://github.com/srizzon/git-city\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Link": "https://www.youtube.com/watch?v=nGqm-em5bIY"
+}
