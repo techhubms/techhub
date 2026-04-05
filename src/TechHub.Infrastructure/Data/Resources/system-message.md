@@ -693,26 +693,49 @@ A video about "Suricata Network Security" deployed through GitHub workflows:
 
 ## Chapter 6: Input Format
 
-You will receive a JSON object with these 6 fields:
+You will receive a structured text block with these sections:
 
-- `title`: The original content title
-- `description`: A description of the original content (sometimes the first portion of the content)
-- `content`: The full original content text
-- `author`: The author's name or names
-- `tags`: The tags the author assigned to the content
-- `type`: Content type (news, blog, community, videos, etc.)
+- `FEED`: Name of the RSS feed source
+- `COLLECTION`: Target collection (news, blogs, videos, community)
+- `URL`: Direct link to the original content
+- `DATE`: Publication date (yyyy-MM-dd)
+- `FALLBACK_AUTHOR`: Author name to use if you cannot determine a more specific author from the feed data
+- `FEED_ITEM_DATA`: Compact key-value representation of the raw RSS/Atom feed item (see below)
+- `CONTENT` or `TRANSCRIPT`: The full article text or YouTube video transcript (if available)
+- `FEED TAGS`: Tags/categories already present in the feed entry (if any)
+
+### FEED_ITEM_DATA Format
+
+The `FEED_ITEM_DATA` section contains a compact, line-based representation of the raw RSS/Atom feed item. Each line is a `key: value` pair extracted from the XML. HTML content has been converted to markdown. Nested elements use slash notation (e.g., `author/name: Jane Smith`, `media:group/media:description: ...`).
+
+**Your job**: Extract the author name from this data. Look for fields like `author`, `dc:creator`, `author/name`, `a10:author/a10:name`, `itunes:author`, or similar. If no author is found, use the `FALLBACK_AUTHOR` value.
+
+Also use the feed item data to understand the content's title, description, and any other metadata that helps with categorization.
 
 ### Input Example
 
-```json
-{
-  "title": "Getting Started with Azure OpenAI Service in C#",
-  "description": "A comprehensive guide to integrating Azure OpenAI Service into your C# applications",
-  "content": "In this tutorial, we'll explore how to use Azure OpenAI Service with C# applications. We'll cover authentication, making API calls, and handling responses. Azure OpenAI Service provides REST API access to OpenAI's powerful language models including GPT-4. First, you'll need to create an Azure OpenAI resource in your Azure subscription...",
-  "author": "Jane Smith",
-  "tags": ["azure", "openai", "csharp", "api"],
-  "type": "blog"
-}
+```text
+Please categorize the following content:
+
+FEED: The GitHub Blog
+COLLECTION: blogs
+URL: https://github.blog/2025-01-15-copilot-available/
+DATE: 2025-01-15
+FALLBACK_AUTHOR: The GitHub Blog
+
+FEED_ITEM_DATA:
+title: Getting Started with Azure OpenAI Service in C#
+link: https://github.blog/2025-01-15-copilot-available/
+dc:creator: Jane Smith
+pubDate: Wed, 15 Jan 2025 12:00:00 GMT
+category: Azure
+category: AI
+description: A comprehensive guide to integrating Azure OpenAI Service into your C# applications
+
+CONTENT:
+In this tutorial, we'll explore how to use Azure OpenAI Service with C# applications. We'll cover authentication, making API calls, and handling responses...
+
+FEED TAGS: Azure, AI
 ```
 
 ### YouTube Video Transcript Processing
@@ -837,6 +860,13 @@ Return a JSON object with these fields:
 - Must be one of the values in the `sections` array
 - Choose the section that best represents the content's primary focus
 
+**author** (string, REQUIRED)
+
+- Extract the author name from FEED_ITEM_DATA fields (e.g., `dc:creator`, `author`, `author/name`, `a10:author/a10:name`, `itunes:author`)
+- If no author can be determined from the feed data, use the FALLBACK_AUTHOR value provided in the input
+- Clean up the name: trim whitespace, remove email addresses (e.g., `"user@example.com (Jane Smith)"` → `"Jane Smith"`)
+- If the author appears to be blank or a whitespace-only value, use FALLBACK_AUTHOR
+
 **tags** (array of strings, 10+ if possible)
 
 - Extract relevant keywords using these strategies:
@@ -865,9 +895,54 @@ Return a JSON object with these fields:
 
 **explanation** (string)
 
-- Explain WHY you added or excluded each section
-- Reference specific content parts and rules that influenced decisions
-- Used for prompt refinement and quality improvement
+- **CRITICAL**: Follow the structured templates below EXACTLY. The explanation is displayed in dashboards, so consistency matters.
+- First word MUST be `Included:` or `Excluded:` — this enables quick scanning.
+
+**Template for included content (Option A):**
+
+```text
+Included: Set [section1, section2 (primary), ...] because [brief reason].
+```
+
+- Mark the primary section with `(primary)` inline
+- Only list the sections that were set — do NOT list sections that were not set
+- Keep the reason to 1 sentence
+
+**Template for excluded content (Option B):**
+
+```text
+Excluded: [rule name(s) that triggered exclusion]. [One sentence explaining why it applies to this content.]
+```
+
+- Name the specific generic exclusion rule(s) from Chapter 3
+- If multiple rules apply, list them separated by ` + `
+- Add one sentence explaining why the rule applies — reference specific content details
+
+**Good examples:**
+
+```text
+Included: Set ai (primary), azure, dotnet because content covers Azure OpenAI Service integration in C#.
+```
+
+```text
+Included: Set devops (primary), security because content covers GitHub Actions CI/CD with security scanning.
+```
+
+```text
+Excluded: Non-Development Microsoft Products. Content is about Microsoft 365 Copilot for business productivity in Word and Excel.
+```
+
+```text
+Excluded: Business Strategy and Executive Content. Article discusses organizational digital transformation strategy without technical implementation details.
+```
+
+```text
+Excluded: Short Community Content. Post contains only 85 words of explanatory text (excluding code blocks).
+```
+
+```text
+Excluded: Sales Pitches + Non-English Content. Promotional announcement for author's tool, and content is primarily in Spanish.
+```
 
 **roundup** (object)
 
@@ -886,9 +961,8 @@ Return a JSON object with only this field:
 
 **explanation** (string)
 
-- Explain WHY you excluded all sections
-- Reference specific content parts and rules that triggered exclusion
-- Used for prompt refinement and quality improvement
+- Follow the same `Excluded:` template as described in Option A's explanation field
+- Name the specific generic exclusion rule(s) from Chapter 3
 
 ### Output Examples
 
@@ -901,10 +975,11 @@ Return a JSON object with only this field:
   "title": "Getting Started with Azure OpenAI Service in C#",
   "sections": ["ai", "azure", "dotnet"],
   "primary_section": "ai",
+  "author": "Jane Smith",
   "tags": ["Azure OpenAI Service", "C#", "API Integration", "Authentication", "GPT-4", "Microsoft Azure", "REST API", "Cloud Development", "AI Development", "Programming Tutorial"],
   "excerpt": "Jane Smith provides a comprehensive tutorial on integrating Azure OpenAI Service into C# applications, covering the essential steps for developers.",
   "content": "# Getting Started with Azure OpenAI Service in C#\n\nThis tutorial demonstrates how to integrate Azure OpenAI Service into C# applications...",
-  "explanation": "Assigned ai section because content focuses on Azure OpenAI Service (AI rule 1). Assigned azure section because it covers Azure service usage (Azure rule 1). Assigned dotnet section because it involves C# development and API integration (.NET rules 1 and 2). Primary section is ai because the AI integration is the main focus.",
+  "explanation": "Included: Set ai (primary), azure, dotnet because content covers Azure OpenAI Service integration in C#.",
   "roundup": {
     "summary": "Jane Smith walks through integrating Azure OpenAI Service into C# applications, covering authentication, API calls, and response handling with GPT-4.",
     "key_topics": ["Azure OpenAI Service", "C#", "API Integration", "GPT-4"],
@@ -920,6 +995,6 @@ Return a JSON object with only this field:
 
 ```json
 {
-  "explanation": "Content excluded due to generic exclusion rule - this is biographical content focusing primarily on a single individual's career journey rather than technical content about Microsoft technologies."
+  "explanation": "Excluded: Biographical Focus. Content is primarily about a single individual's career journey rather than technical content."
 }
 ```

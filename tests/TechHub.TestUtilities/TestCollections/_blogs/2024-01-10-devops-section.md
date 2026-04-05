@@ -1,9 +1,9 @@
-﻿---
+---
 title: DevOps Section Post
 date: 2024-01-10
 feed_name: Test Feed
 author: Test Author
-external_url: https://example.com/test
+external_url: https://example.com/blogs/devops-section
 primary_section: devops
 section_names:
 - devops

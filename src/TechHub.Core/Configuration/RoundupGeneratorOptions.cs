@@ -8,7 +8,7 @@ public class RoundupGeneratorOptions
     /// <summary>Configuration section name.</summary>
     public const string SectionName = "RoundupGenerator";
 
-    /// <summary>Whether the roundup generator is enabled.</summary>
+    /// <summary>Whether scheduled roundup generation is enabled.</summary>
     public bool Enabled { get; init; } = true;
 
     /// <summary>Hour of day (UTC) to run roundup generation. Default: 8 (8:00 AM UTC = ~9-10 AM Brussels).</summary>

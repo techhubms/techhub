@@ -1,3 +1,5 @@
+using TechHub.Core.Models.ContentProcessing;
+
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
@@ -7,7 +9,7 @@ public interface IYouTubeTranscriptService
 {
     /// <summary>
     /// Fetches the transcript for <paramref name="videoUrl"/>.
-    /// Returns <see langword="null"/> if no captions are available or on failure.
+    /// Returns a <see cref="TranscriptResult"/> indicating success with text or failure with a reason.
     /// </summary>
-    Task<string?> GetTranscriptAsync(string videoUrl, CancellationToken ct = default);
+    Task<TranscriptResult> GetTranscriptAsync(string videoUrl, CancellationToken ct = default);
 }

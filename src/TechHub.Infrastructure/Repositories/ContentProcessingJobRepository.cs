@@ -44,7 +44,7 @@ RETURNING id";
     /// <inheritdoc/>
     public async Task CompleteAsync(
         long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped,
-        int errorCount, string logOutput, CancellationToken ct = default)
+        int errorCount, int transcriptsSucceeded, int transcriptsFailed, string logOutput, int itemsFixed = 0, CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_processing_jobs SET
@@ -55,6 +55,9 @@ UPDATE content_processing_jobs SET
     items_added     = @ItemsAdded,
     items_skipped   = @ItemsSkipped,
     error_count     = @ErrorCount,
+    transcripts_succeeded = @TranscriptsSucceeded,
+    transcripts_failed    = @TranscriptsFailed,
+    items_fixed     = @ItemsFixed,
     log_output      = @LogOutput
 WHERE id = @JobId";
 
@@ -67,13 +70,16 @@ WHERE id = @JobId";
                 ItemsAdded = itemsAdded,
                 ItemsSkipped = itemsSkipped,
                 ErrorCount = errorCount,
+                TranscriptsSucceeded = transcriptsSucceeded,
+                TranscriptsFailed = transcriptsFailed,
+                ItemsFixed = itemsFixed,
                 LogOutput = logOutput
             },
             cancellationToken: ct));
     }
 
     /// <inheritdoc/>
-    public async Task FailAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, string logOutput, CancellationToken ct = default)
+    public async Task FailAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, int transcriptsSucceeded, int transcriptsFailed, string logOutput, int itemsFixed = 0, CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_processing_jobs SET
@@ -84,6 +90,9 @@ UPDATE content_processing_jobs SET
     items_added     = @ItemsAdded,
     items_skipped   = @ItemsSkipped,
     error_count     = @ErrorCount,
+    transcripts_succeeded = @TranscriptsSucceeded,
+    transcripts_failed    = @TranscriptsFailed,
+    items_fixed     = @ItemsFixed,
     log_output      = @LogOutput
 WHERE id = @JobId";
 
@@ -96,6 +105,9 @@ WHERE id = @JobId";
                 ItemsAdded = itemsAdded,
                 ItemsSkipped = itemsSkipped,
                 ErrorCount = errorCount,
+                TranscriptsSucceeded = transcriptsSucceeded,
+                TranscriptsFailed = transcriptsFailed,
+                ItemsFixed = itemsFixed,
                 LogOutput = logOutput
             },
             cancellationToken: ct));
@@ -148,7 +160,11 @@ SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        duration_ms AS DurationMs, status, trigger_type AS TriggerType,
        job_type AS JobType, feeds_processed AS FeedsProcessed,
        items_added AS ItemsAdded, items_skipped AS ItemsSkipped,
-       error_count AS ErrorCount, log_output AS LogOutput
+       error_count AS ErrorCount,
+       transcripts_succeeded AS TranscriptsSucceeded,
+       transcripts_failed AS TranscriptsFailed,
+       items_fixed AS ItemsFixed,
+       log_output AS LogOutput
 FROM content_processing_jobs
 WHERE id = @JobId";
 
@@ -164,7 +180,10 @@ SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        duration_ms AS DurationMs, status, trigger_type AS TriggerType,
        job_type AS JobType, feeds_processed AS FeedsProcessed,
        items_added AS ItemsAdded, items_skipped AS ItemsSkipped,
-       error_count AS ErrorCount, log_output AS LogOutput
+       error_count AS ErrorCount,
+       transcripts_succeeded AS TranscriptsSucceeded,
+       transcripts_failed AS TranscriptsFailed,
+       items_fixed AS ItemsFixed
 FROM content_processing_jobs
 ORDER BY started_at DESC
 LIMIT @Count";
@@ -176,7 +195,7 @@ LIMIT @Count";
     }
 
     /// <inheritdoc/>
-    public async Task UpdateProgressAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, CancellationToken ct = default)
+    public async Task UpdateProgressAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, int transcriptsSucceeded, int transcriptsFailed, int itemsFixed = 0, CancellationToken ct = default)
     {
         try
         {
@@ -185,18 +204,58 @@ UPDATE content_processing_jobs SET
     feeds_processed = @FeedsProcessed,
     items_added     = @ItemsAdded,
     items_skipped   = @ItemsSkipped,
-    error_count     = @ErrorCount
+    error_count     = @ErrorCount,
+    transcripts_succeeded = @TranscriptsSucceeded,
+    transcripts_failed    = @TranscriptsFailed,
+    items_fixed     = @ItemsFixed
 WHERE id = @JobId AND status = 'running'";
 
             await _connection.ExecuteAsync(new CommandDefinition(
                 Sql,
-                new { JobId = jobId, FeedsProcessed = feedsProcessed, ItemsAdded = itemsAdded, ItemsSkipped = itemsSkipped, ErrorCount = errorCount },
+                new { JobId = jobId, FeedsProcessed = feedsProcessed, ItemsAdded = itemsAdded, ItemsSkipped = itemsSkipped, ErrorCount = errorCount, TranscriptsSucceeded = transcriptsSucceeded, TranscriptsFailed = transcriptsFailed, ItemsFixed = itemsFixed },
                 cancellationToken: ct));
         }
         catch (DbException ex)
         {
             _logger.LogDebug(ex, "Failed to update progress for job {JobId}", jobId);
         }
+    }
+
+    /// <inheritdoc/>
+    public async Task AbortJobAsync(
+        long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped,
+        int errorCount, int transcriptsSucceeded, int transcriptsFailed, string logOutput, int itemsFixed = 0, CancellationToken ct = default)
+    {
+        const string Sql = @"
+UPDATE content_processing_jobs SET
+    completed_at    = NOW(),
+    duration_ms     = EXTRACT(MILLISECONDS FROM (NOW() - started_at))::BIGINT,
+    status          = 'aborted',
+    feeds_processed = @FeedsProcessed,
+    items_added     = @ItemsAdded,
+    items_skipped   = @ItemsSkipped,
+    error_count     = @ErrorCount,
+    transcripts_succeeded = @TranscriptsSucceeded,
+    transcripts_failed    = @TranscriptsFailed,
+    items_fixed     = @ItemsFixed,
+    log_output      = @LogOutput
+WHERE id = @JobId AND status = 'running'";
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            Sql,
+            new
+            {
+                JobId = jobId,
+                FeedsProcessed = feedsProcessed,
+                ItemsAdded = itemsAdded,
+                ItemsSkipped = itemsSkipped,
+                ErrorCount = errorCount,
+                TranscriptsSucceeded = transcriptsSucceeded,
+                TranscriptsFailed = transcriptsFailed,
+                ItemsFixed = itemsFixed,
+                LogOutput = logOutput
+            },
+            cancellationToken: ct));
     }
 
     /// <inheritdoc/>
@@ -219,5 +278,25 @@ WHERE status = 'running'";
         }
 
         return count;
+    }
+
+    /// <inheritdoc/>
+    public async Task PurgeOldJobsAsync(int keepCount, CancellationToken ct = default)
+    {
+        try
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"DELETE FROM content_processing_jobs
+                  WHERE id NOT IN (
+                      SELECT id FROM content_processing_jobs
+                      ORDER BY started_at DESC LIMIT @KeepCount
+                  )",
+                new { KeepCount = keepCount },
+                cancellationToken: ct));
+        }
+        catch (DbException ex)
+        {
+            _logger.LogWarning(ex, "Failed to purge old processing jobs");
+        }
     }
 }

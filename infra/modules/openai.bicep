@@ -35,8 +35,29 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   }
 }
 
-// Note: AIServices kind includes Microsoft.DefaultV2 content safety policy by default.
-// No need to explicitly create it - it's a system-managed policy.
+// Custom RAI (content filter) policy for content categorization.
+// The default Microsoft.DefaultV2 policy is too strict for processing tech articles,
+// causing false-positive content filter rejections. This policy uses 'High' severity
+// thresholds so only the most severe content is blocked — appropriate for automated
+// ingestion of published tech articles that are not user-generated.
+resource raiPolicy 'Microsoft.CognitiveServices/accounts/raiPolicies@2025-06-01' = {
+  parent: openAiAccount
+  name: 'content-categorization'
+  properties: {
+    mode: 'Blocking'
+    basePolicyName: 'Microsoft.DefaultV2'
+    contentFilters: [
+      { name: 'hate',     blocking: true, enabled: true, severityThreshold: 'High', source: 'Prompt' }
+      { name: 'sexual',   blocking: true, enabled: true, severityThreshold: 'High', source: 'Prompt' }
+      { name: 'selfharm', blocking: true, enabled: true, severityThreshold: 'High', source: 'Prompt' }
+      { name: 'violence', blocking: true, enabled: true, severityThreshold: 'High', source: 'Prompt' }
+      { name: 'hate',     blocking: true, enabled: true, severityThreshold: 'High', source: 'Completion' }
+      { name: 'sexual',   blocking: true, enabled: true, severityThreshold: 'High', source: 'Completion' }
+      { name: 'selfharm', blocking: true, enabled: true, severityThreshold: 'High', source: 'Completion' }
+      { name: 'violence', blocking: true, enabled: true, severityThreshold: 'High', source: 'Completion' }
+    ]
+  }
+}
 
 // GPT Model Deployment
 resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-06-01' = {
@@ -53,7 +74,7 @@ resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-
       version: modelVersion
     }
     versionUpgradeOption: 'OnceNewDefaultVersionAvailable'
-    raiPolicyName: 'Microsoft.DefaultV2'
+    raiPolicyName: raiPolicy.name
   }
 }
 

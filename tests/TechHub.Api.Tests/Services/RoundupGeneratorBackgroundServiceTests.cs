@@ -16,7 +16,7 @@ public class RoundupGeneratorBackgroundServiceTests
     private RoundupGeneratorBackgroundService CreateSut(int runHourUtc = 8) =>
         new(
             Mock.Of<IServiceProvider>(),
-            Options.Create(new RoundupGeneratorOptions { Enabled = true, RunHourUtc = runHourUtc }),
+            Options.Create(new RoundupGeneratorOptions { RunHourUtc = runHourUtc }),
             new StartupStateService(),
             NullLogger<RoundupGeneratorBackgroundService>.Instance);
 

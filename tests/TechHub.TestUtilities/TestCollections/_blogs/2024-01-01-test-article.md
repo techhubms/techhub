@@ -1,4 +1,4 @@
-﻿---
+---
 title: Test Article with AI and Azure Tags
 date: 2024-01-01
 primary_section: ai
@@ -9,7 +9,7 @@ tags:
 - AI
 - Azure
 - Cloud Computing
-external_url: https://example.com/test
+external_url: https://example.com/blogs/test-article
 author: Test Author
 feed_name: Test Feed
 ---

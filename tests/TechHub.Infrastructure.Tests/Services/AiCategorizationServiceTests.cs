@@ -6,7 +6,7 @@ using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
-using TechHub.Infrastructure.Services;
+using TechHub.Infrastructure.Services.ContentProcessing;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
@@ -41,7 +41,7 @@ public class AiCategorizationServiceTests
         Title = title,
         ExternalUrl = url,
         PublishedAt = new DateTimeOffset(2025, 6, 15, 12, 0, 0, TimeSpan.Zero),
-        Description = "A test description",
+        FeedItemData = "A test description",
         FeedName = "Test Feed",
         CollectionName = "blogs"
     };
@@ -197,8 +197,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert
+        // Assert — legitimate AI exclusion (Option B), not a failure
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeFalse();
         result.Explanation.Should().Contain("sales pitch");
     }
 
@@ -220,8 +221,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert
+        // Assert — legitimate AI exclusion (Option B), not a failure
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeFalse();
         result.Explanation.Should().Contain("not relevant");
     }
 
@@ -329,10 +331,10 @@ public class AiCategorizationServiceTests
     // ── Error Handling ────────────────────────────────────────────────────────
 
     [Fact]
-    public async Task CategorizeAsync_WhenAiReturnsEmptyContent_ReturnsNullItem()
+    public async Task CategorizeAsync_WhenAiReturnsEmptyContent_ReturnsNullItemWithFinishReason()
     {
-        // Arrange — AI returns empty content string
-        var response = """{"choices":[{"message":{"content":""}}]}""";
+        // Arrange — AI returns empty content string with unknown finish_reason
+        var response = """{"choices":[{"message":{"content":""},"finish_reason":"stop"}]}""";
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new AiCompletionResult(false, response));
@@ -342,9 +344,149 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert
+        // Assert — failure: AI returned no content, explanation includes the finish_reason
         result.Item.Should().BeNull();
-        result.Explanation.Should().Contain("empty");
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("empty", because: "should describe the empty response");
+        result.Explanation.Should().Contain("stop", because: "should include the finish_reason for diagnostics");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenFinishReasonIsLengthWithEmptyContent_ShowsFinishReasonAndUsage()
+    {
+        // Arrange — AI returned finish_reason: length but content is empty (model ran out of tokens before producing output)
+        var response = """{"choices":[{"message":{"content":null},"finish_reason":"length"}],"usage":{"prompt_tokens":3800,"completion_tokens":0,"total_tokens":3800}}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, response));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — explanation includes the finish_reason and token usage so you can see what went wrong
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("empty", because: "content was empty");
+        result.Explanation.Should().Contain("length", because: "finish_reason should be included verbatim");
+        result.Explanation.Should().Contain("3800", because: "token usage should be included for diagnostics");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenFinishReasonIsLength_IncludesTokenUsageInExplanation()
+    {
+        // Arrange — AI response has non-empty content but finish_reason is "length" (truncated), with usage info
+        var response = """{"choices":[{"message":{"content":"{ \"title\": \"Trunca"},"finish_reason":"length"}],"usage":{"prompt_tokens":3800,"completion_tokens":200,"total_tokens":4000}}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, response));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — should include finish_reason and token usage info for diagnostics
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("incomplete", because: "non-stop finish_reason means the response is incomplete");
+        result.Explanation.Should().Contain("length", because: "finish_reason should be included verbatim");
+        result.Explanation.Should().Contain("3800", because: "prompt token count helps diagnose why length was exceeded");
+        result.Explanation.Should().Contain("200", because: "completion token count shows how much was generated before cutoff");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenFinishReasonIsContentFilter_ReturnsContentFilterFailure()
+    {
+        // Arrange — Azure OpenAI returns 200 OK but finish_reason is "content_filter" with null content
+        var response = """{"choices":[{"message":{"content":null},"finish_reason":"content_filter"}]}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, response));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — explanation includes the finish_reason so you can see it was content_filter
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("content_filter", because: "finish_reason should be included verbatim in the explanation");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenFinishReasonIsLength_ReturnsIncompleteFailure()
+    {
+        // Arrange — AI response was truncated due to max_completion_tokens
+        var response = """{"choices":[{"message":{"content":"{ \"title\": \"Trunca"},"finish_reason":"length"}]}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, response));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — explanation includes finish_reason verbatim
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("incomplete", because: "non-stop finish_reason means the response is incomplete");
+        result.Explanation.Should().Contain("length", because: "finish_reason should appear verbatim");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenFinishReasonIsContentFilterWithEmptyString_ReturnsContentFilterFailure()
+    {
+        // Arrange — finish_reason content_filter with empty string content (not null)
+        var response = """{"choices":[{"message":{"content":""},"finish_reason":"content_filter"}]}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, response));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — explanation includes the finish_reason verbatim
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+        result.Explanation.Should().Contain("content_filter", because: "finish_reason should appear in the explanation");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenFinishReasonIsStop_ProcessesNormally()
+    {
+        // Arrange — normal response with finish_reason "stop"
+        var aiJson = """
+            {
+                "title": "Normal Article",
+                "excerpt": "Normal excerpt",
+                "collection": "blogs",
+                "sections": ["ai"],
+                "tags": ["ai-test"],
+                "primary_section": "ai",
+                "content": "Normal content",
+                "explanation": "Included"
+            }
+            """;
+        var serialized = JsonSerializer.Serialize(aiJson);
+        var response = $$$"""{"choices":[{"message":{"content":{{{serialized}}}},"finish_reason":"stop"}]}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, response));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — should process normally when finish_reason is "stop"
+        result.Item.Should().NotBeNull();
+        result.Item!.Title.Should().Be("Normal Article");
     }
 
     [Fact]
@@ -361,8 +503,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert
+        // Assert — failure: response was not valid JSON
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
     }
 
     [Fact]
@@ -436,8 +579,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — exhausted retries, returns null with explanation
+        // Assert — failure: exhausted retries, returns null with explanation
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("failed after");
     }
 
@@ -497,8 +641,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — should skip immediately without retrying
+        // Assert — failure: content exceeded context window
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("too large");
         _aiClient.Verify(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
     }
@@ -518,8 +663,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — should skip immediately without retrying
+        // Assert — failure: content filter blocked the request
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
         result.Explanation.Should().Contain("content filter");
         _aiClient.Verify(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()), Times.Once);
     }
@@ -598,8 +744,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — incomplete items should be treated as excluded
+        // Assert — failure: incomplete AI response is a failure, not a skip
         result.Item.Should().BeNull(scenario);
+        result.IsFailure.Should().BeTrue(scenario);
         result.Explanation.Should().NotBeNullOrWhiteSpace();
     }
 
@@ -690,8 +837,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — missing primary_section should reject the item entirely
+        // Assert — failure: missing primary_section
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
     }
 
     [Fact]
@@ -719,8 +867,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — invalid primary_section should reject the item entirely
+        // Assert — failure: invalid primary_section
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
     }
 
     [Fact]
@@ -748,8 +897,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — primary_section not in sections array should reject the item
+        // Assert — failure: primary_section not in sections array
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
     }
 
     [Fact]
@@ -777,8 +927,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — whitespace-only tags should be treated as empty
+        // Assert — failure: whitespace-only tags
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
     }
 
     [Fact]
@@ -806,7 +957,8 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
 
-        // Assert — no fallbacks: missing content means rejection
+        // Assert — failure: no fallbacks, missing content means rejection
         result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
     }
 }

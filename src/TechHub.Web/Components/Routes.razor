@@ -4,14 +4,7 @@
     <Router AppAssembly="typeof(Program).Assembly"
             NotFoundPage="typeof(Pages.NotFound)">
         <Found Context="routeData">
-            <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
-                <NotAuthorized>
-                    @* Admin pages handle authorization inline via AdminLayout's AuthorizeView.
-                       No server-side redirect is needed — Blazor initializes normally and the
-                       layout shows the login form when the user is not authenticated.
-                       If a non-admin page ever requires [Authorize], add redirect logic here. *@
-                </NotAuthorized>
-            </AuthorizeRouteView>
+            <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)" />
         </Found>
     </Router>
 </CascadingAuthenticationState>

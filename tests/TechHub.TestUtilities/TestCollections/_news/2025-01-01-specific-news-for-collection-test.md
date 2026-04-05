@@ -1,4 +1,4 @@
-﻿---
+---
 title: Specific News Item for Collection Test
 date: 2025-01-01
 primary_section: ai
@@ -8,7 +8,7 @@ tags:
 - News
 - Test
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/news/specific-news-for-collection-test
 author: Test Author
 feed_name: Test Feed
 ---

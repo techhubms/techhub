@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
@@ -67,15 +68,17 @@ public sealed class AiCompletionClient : IAiCompletionClient
                     || errorLower.Contains("responsibleaipolicyviolation", StringComparison.Ordinal)
                     || errorLower.Contains("jailbreak", StringComparison.Ordinal))
                 {
+                    var detail = ExtractErrorMessage(errorBody);
                     return new AiCompletionResult(IsRateLimited: false, ResponseBody: null,
-                        ContentFilterMessage: "Content blocked by Azure AI content filter");
+                        ContentFilterMessage: $"Content blocked by Azure AI content filter — {detail}");
                 }
 
                 if (errorLower.Contains("context_length_exceeded", StringComparison.Ordinal)
                     || errorLower.Contains("too many tokens", StringComparison.Ordinal))
                 {
+                    var detail = ExtractErrorMessage(errorBody);
                     return new AiCompletionResult(IsRateLimited: false, ResponseBody: null,
-                        ContentFilterMessage: "Content too large for AI model context window");
+                        ContentFilterMessage: $"Content too large for AI model context window — {detail}");
                 }
             }
         }
@@ -83,6 +86,35 @@ public sealed class AiCompletionClient : IAiCompletionClient
         response.EnsureSuccessStatusCode();
         var responseJson = await response.Content.ReadAsStringAsync(ct);
         return new AiCompletionResult(IsRateLimited: false, ResponseBody: responseJson);
+    }
+
+    /// <summary>
+    /// Extracts the inner error message from an Azure OpenAI JSON error response.
+    /// Falls back to the raw body (truncated) if the JSON structure is unexpected.
+    /// </summary>
+    private static string ExtractErrorMessage(string errorBody)
+    {
+        try
+        {
+            using var doc = JsonDocument.Parse(errorBody);
+            if (doc.RootElement.TryGetProperty("error", out var errorObj))
+            {
+                var message = errorObj.TryGetProperty("message", out var msgProp) ? msgProp.GetString() : null;
+                var code = errorObj.TryGetProperty("code", out var codeProp) ? codeProp.GetString() : null;
+
+                if (!string.IsNullOrWhiteSpace(message))
+                {
+                    return string.IsNullOrWhiteSpace(code) ? message : $"{code}: {message}";
+                }
+            }
+        }
+        catch (JsonException)
+        {
+            // Not valid JSON, fall through
+        }
+
+        // Truncate raw body to avoid excessively long messages
+        return errorBody.Length > 200 ? string.Concat(errorBody.AsSpan(0, 200), "…") : errorBody;
     }
 
     /// <summary>

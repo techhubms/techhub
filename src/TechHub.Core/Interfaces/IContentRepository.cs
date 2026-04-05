@@ -111,26 +111,33 @@ public interface IContentRepository
     // ==================== Admin Methods ====================
 
     /// <summary>
-    /// Get the ai_metadata JSON for a content item identified by its external URL.
-    /// Returns null if no item with that URL exists.
+    /// Get the ai_metadata JSON for a content item identified by its primary key.
+    /// Returns null if no item with that key exists.
     /// </summary>
-    Task<ContentItemAiMetadataResult?> GetAiMetadataByUrlAsync(string externalUrl, CancellationToken ct = default);
+    Task<ContentItemAiMetadataResult?> GetAiMetadataAsync(string collectionName, string slug, CancellationToken ct = default);
 
     /// <summary>
-    /// Update the ai_metadata JSON column for a content item identified by its external URL.
+    /// Update the ai_metadata JSON column for a content item identified by its primary key.
     /// Returns true if found and updated, false if not found.
     /// </summary>
-    Task<bool> UpdateAiMetadataAsync(string externalUrl, string aiMetadata, CancellationToken ct = default);
+    Task<bool> UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadata, CancellationToken ct = default);
 
     /// <summary>
-    /// Get all editable fields for a content item identified by its external URL.
-    /// Returns null if no item with that URL exists.
+    /// Get all editable fields for a content item identified by its primary key.
+    /// Returns null if no item with that key exists.
     /// </summary>
-    Task<ContentItemEditData?> GetEditDataByUrlAsync(string externalUrl, CancellationToken ct = default);
+    Task<ContentItemEditData?> GetEditDataAsync(string collectionName, string slug, CancellationToken ct = default);
 
     /// <summary>
-    /// Update the editable fields of a content item identified by its external URL.
+    /// Update the editable fields of a content item identified by its primary key.
     /// Returns true if found and updated, false if not found.
     /// </summary>
-    Task<bool> UpdateEditDataAsync(string externalUrl, ContentItemEditData editData, CancellationToken ct = default);
+    Task<bool> UpdateEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken ct = default);
+
+    /// <summary>
+    /// Invalidates all cached content data (search results, slugs, sitemaps, etc.).
+    /// Call after mutations that change content_items (delete, update) to ensure
+    /// subsequent queries return fresh data from the database.
+    /// </summary>
+    void InvalidateCachedData();
 }

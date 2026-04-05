@@ -2,6 +2,7 @@ using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
+using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Api.Services;
 
@@ -21,6 +22,12 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
     // Always holds a live (incomplete) TCS that the background loop awaits.
     // TriggerImmediateRun completes it; the loop then replaces it with a fresh one.
     private volatile TaskCompletionSource<bool> _manualTrigger = new(TaskCreationOptions.RunContinuationsAsynchronously);
+
+    // Per-run CTS for admin-triggered cancellation. Linked to the host's stoppingToken.
+    // Disposed in RunOnceAsync finally block; also disposed on service shutdown.
+#pragma warning disable CA2213 // Disposed in RunOnceAsync finally block and Dispose override
+    private volatile CancellationTokenSource? _runCts;
+#pragma warning restore CA2213
 
     public RoundupGeneratorBackgroundService(
         IServiceProvider serviceProvider,
@@ -55,35 +62,40 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
         }
     }
 
+    /// <summary>
+    /// Cancels the currently running roundup generation job (admin cancel).
+    /// Returns <c>true</c> if a run was in progress and cancellation was requested.
+    /// </summary>
+    public bool CancelCurrentRun()
+    {
+        var cts = _runCts;
+        if (cts is null || cts.IsCancellationRequested)
+        {
+            return false;
+        }
+
+        cts.Cancel();
+        _logger.LogInformation("Admin-triggered cancellation of roundup generation run");
+        return true;
+    }
+
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
         _logger.LogInformation("Waiting for startup operations to complete before first roundup check…");
         await _startupState.StartupTask.WaitAsync(stoppingToken);
 
-        if (!_options.Enabled)
+        var enabled = await IsEnabledAsync(stoppingToken);
+
+        if (!enabled)
         {
-            _logger.LogInformation("RoundupGeneratorBackgroundService is disabled via configuration. Manual triggers via admin UI are still accepted.");
-
-            // Keep listening for manual triggers even when scheduled processing is off
-            while (!stoppingToken.IsCancellationRequested)
-            {
-                await _manualTrigger.Task.WaitAsync(stoppingToken);
-
-                if (stoppingToken.IsCancellationRequested)
-                {
-                    break;
-                }
-
-                _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
-                await RunOnceAsync("manual", stoppingToken);
-            }
-
-            return;
+            _logger.LogInformation("RoundupGeneratorBackgroundService is disabled via database setting. Manual triggers via admin UI are still accepted.");
         }
-
-        _logger.LogInformation(
-            "RoundupGeneratorBackgroundService started — scheduled every Monday at {RunHourUtc:00}:00 UTC",
-            _options.RunHourUtc);
+        else
+        {
+            _logger.LogInformation(
+                "RoundupGeneratorBackgroundService started — scheduled every Monday at {RunHourUtc:00}:00 UTC",
+                _options.RunHourUtc);
+        }
 
         while (!stoppingToken.IsCancellationRequested)
         {
@@ -104,67 +116,121 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
                 break;
             }
 
-            var triggerType = manualTask.IsCompleted ? "manual" : "scheduled";
-
-            // Reset the manual trigger for future manual runs
             if (manualTask.IsCompleted)
             {
+                // Manual triggers always execute regardless of enabled state
                 _manualTrigger = new TaskCompletionSource<bool>(TaskCreationOptions.RunContinuationsAsynchronously);
+                await RunOnceAsync("manual", stoppingToken);
             }
-
-            await RunOnceAsync(triggerType, stoppingToken);
+            else
+            {
+                // Scheduled runs check the database setting each time
+                if (await IsEnabledAsync(stoppingToken))
+                {
+                    await RunOnceAsync("scheduled", stoppingToken);
+                }
+            }
         }
+    }
+
+    private async Task<bool> IsEnabledAsync(CancellationToken ct)
+    {
+        await using var scope = _serviceProvider.CreateAsyncScope();
+        var repo = scope.ServiceProvider.GetRequiredService<IBackgroundJobSettingRepository>();
+        return await repo.IsEnabledAsync(RoundupGeneratorOptions.SectionName, ct);
     }
 
 #pragma warning disable CA1031
     private async Task RunOnceAsync(string triggerType, CancellationToken ct)
     {
-        await using var scope = _serviceProvider.CreateAsyncScope();
-        var jobRepo = scope.ServiceProvider.GetRequiredService<IContentProcessingJobRepository>();
-        var jobId = await jobRepo.CreateAsync(triggerType, ContentProcessingJobType.RoundupGeneration, ct);
-
+        _runCts = CancellationTokenSource.CreateLinkedTokenSource(ct);
+        var runToken = _runCts.Token;
         try
         {
-            // Generate roundup for the previous week (Monday–Sunday).
-            var today = DateOnly.FromDateTime(DateTime.UtcNow);
-            var daysSinceMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
-            var thisWeekMonday = today.AddDays(-daysSinceMonday);
+            await using var scope = _serviceProvider.CreateAsyncScope();
+            var jobRepo = scope.ServiceProvider.GetRequiredService<IContentProcessingJobRepository>();
+            var jobId = await jobRepo.CreateAsync(triggerType, ContentProcessingJobType.RoundupGeneration, runToken);
 
-            // Previous week: the Monday before this week's Monday.
-            var weekStart = thisWeekMonday.AddDays(-7);
-            var weekEnd = weekStart.AddDays(6);
-
-            _logger.LogInformation(
-                "Running roundup generation for week {WeekStart}–{WeekEnd} (job {JobId})",
-                weekStart, weekEnd, jobId);
-
-            await jobRepo.AppendLogAsync(jobId, $"Generating roundup for week {weekStart}–{weekEnd}", ct);
-
-            var service = scope.ServiceProvider.GetRequiredService<IRoundupGeneratorService>();
-            var generated = await service.GenerateAsync(weekStart, weekEnd, ct);
-
-            if (generated)
+            try
             {
-                _logger.LogInformation("Roundup generated successfully for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
-                await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 1, itemsSkipped: 0, errorCount: 0,
-                    $"Generating roundup for week {weekStart}–{weekEnd}\nRoundup generated successfully.", ct);
+                // Generate roundup for the previous week (Monday–Sunday).
+                var today = DateOnly.FromDateTime(DateTime.UtcNow);
+                var daysSinceMonday = ((int)today.DayOfWeek - (int)DayOfWeek.Monday + 7) % 7;
+                var thisWeekMonday = today.AddDays(-daysSinceMonday);
+
+                // Previous week: the Monday before this week's Monday.
+                var weekStart = thisWeekMonday.AddDays(-7);
+                var weekEnd = weekStart.AddDays(6);
+
+                _logger.LogInformation(
+                    "Running roundup generation for week {WeekStart}–{WeekEnd} (job {JobId})",
+                    weekStart, weekEnd, jobId);
+
+                await jobRepo.AppendLogAsync(jobId, $"Generating roundup for week {weekStart}–{weekEnd}", runToken);
+
+                var service = scope.ServiceProvider.GetRequiredService<IRoundupGeneratorService>();
+                var progress = new Progress<string>(message => _ = jobRepo.AppendLogAsync(jobId, message, CancellationToken.None));
+                var outcome = await service.GenerateAsync(weekStart, weekEnd, progress, runToken);
+
+                if (outcome.Result == RoundupGenerationResult.Generated)
+                {
+                    _logger.LogInformation("Roundup generated successfully for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
+
+                    // Record the generated roundup in processed_urls so it appears in "View Processed"
+                    var processedUrlRepo = scope.ServiceProvider.GetRequiredService<IProcessedUrlRepository>();
+                    var externalUrl = $"/all/roundups/{outcome.Slug}";
+                    await processedUrlRepo.RecordSuccessAsync(
+                        externalUrl, feedName: "TechHub", collectionName: "roundups",
+                        reason: "roundup-generated", jobId: jobId, slug: outcome.Slug, ct: runToken);
+
+                    await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 1, itemsSkipped: 0, errorCount: 0,
+                        transcriptsSucceeded: 0, transcriptsFailed: 0,
+                        $"Generating roundup for week {weekStart}–{weekEnd}\nRoundup generated successfully.", ct: runToken);
+
+                    // Invalidate content cache so the new roundup is served immediately
+                    var contentRepo = scope.ServiceProvider.GetRequiredService<IContentRepository>();
+                    contentRepo.InvalidateCachedData();
+                }
+                else
+                {
+                    var reason = outcome.Result switch
+                    {
+                        RoundupGenerationResult.AlreadyExists => "Roundup already existed, skipped.",
+                        RoundupGenerationResult.NoArticles => "No articles found for this week, skipped.",
+                        RoundupGenerationResult.NoArticlesAfterFiltering => "No articles remained after relevance filtering, skipped.",
+                        _ => "Roundup generation skipped."
+                    };
+
+                    _logger.LogInformation("Roundup generation skipped for week {WeekStart}–{WeekEnd}: {Reason}", weekStart, weekEnd, reason);
+                    await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 1, errorCount: 0,
+                        transcriptsSucceeded: 0, transcriptsFailed: 0,
+                        $"Generating roundup for week {weekStart}–{weekEnd}\n{reason}", ct: runToken);
+                }
             }
-            else
+            catch (OperationCanceledException) when (!ct.IsCancellationRequested)
             {
-                _logger.LogInformation("Roundup already existed for week {WeekStart}–{WeekEnd}, skipped", weekStart, weekEnd);
-                await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 1, errorCount: 0,
-                    $"Generating roundup for week {weekStart}–{weekEnd}\nRoundup already existed, skipped.", ct);
+                // Admin-triggered cancellation — mark as aborted
+                _logger.LogInformation("Roundup generation job {JobId} cancelled by admin", jobId);
+                await jobRepo.AbortJobAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 0,
+                    transcriptsSucceeded: 0, transcriptsFailed: 0,
+                    "Roundup generation cancelled by admin.", ct: CancellationToken.None);
+            }
+            catch (OperationCanceledException) when (ct.IsCancellationRequested)
+            {
+                // Shutting down — expected
+            }
+            catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+            {
+                _logger.LogError(ex, "Unexpected exception in RoundupGeneratorBackgroundService (job {JobId})", jobId);
+                await jobRepo.FailAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 1,
+                    transcriptsSucceeded: 0, transcriptsFailed: 0,
+                    $"Roundup generation failed: {ex.Message}", ct: CancellationToken.None);
             }
         }
-        catch (OperationCanceledException) when (ct.IsCancellationRequested)
+        finally
         {
-            // Shutting down — expected
-        }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
-        {
-            _logger.LogError(ex, "Unexpected exception in RoundupGeneratorBackgroundService (job {JobId})", jobId);
-            await jobRepo.FailAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 1,
-                $"Roundup generation failed: {ex.Message}", ct);
+            _runCts.Dispose();
+            _runCts = null;
         }
     }
 #pragma warning restore CA1031

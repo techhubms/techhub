@@ -818,6 +818,44 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
+    /// Trigger a bulk content fix run.
+    /// POST /api/admin/content-fixer/trigger
+    /// </summary>
+    public virtual async Task TriggerContentFixerAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Triggering content fixer run");
+            using var response = await _httpClient.PostAsync("/api/admin/content-fixer/trigger", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to trigger content fixer");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Cancel the currently running background job.
+    /// POST /api/admin/processing/cancel
+    /// </summary>
+    public virtual async Task CancelRunningJobAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Requesting cancellation of running background job");
+            using var response = await _httpClient.PostAsync("/api/admin/processing/cancel", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to cancel running job");
+            throw;
+        }
+    }
+
+    /// <summary>
     /// Get recent content processing job history.
     /// GET /api/admin/processing/jobs
     /// </summary>
@@ -1028,6 +1066,7 @@ public class TechHubApiClient : ITechHubApiClient
         string? search = null,
         string? feedName = null,
         string? collectionName = null,
+        long? jobId = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1051,6 +1090,11 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrEmpty(collectionName))
             {
                 query += $"&collectionName={Uri.EscapeDataString(collectionName)}";
+            }
+
+            if (jobId.HasValue)
+            {
+                query += $"&jobId={jobId.Value}";
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
@@ -1193,17 +1237,18 @@ public class TechHubApiClient : ITechHubApiClient
     // ================================================================
 
     /// <summary>
-    /// Get the ai_metadata JSON for a content item by external URL.
-    /// GET /api/admin/content-items/ai-metadata?url={url}
+    /// Get the ai_metadata JSON for a content item by primary key.
+    /// GET /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
     /// </summary>
     public virtual async Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(
-        string url,
+        string collectionName,
+        string slug,
         CancellationToken cancellationToken = default)
     {
         try
         {
             return await _httpClient.GetFromJsonAsync<ContentItemAiMetadataResult>(
-                $"/api/admin/content-items/ai-metadata?url={Uri.EscapeDataString(url)}",
+                $"/api/admin/content-items/ai-metadata?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
                 cancellationToken);
         }
         catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -1212,31 +1257,32 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch ai_metadata for URL {Url}", url.Sanitize());
+            _logger.LogError(ex, "Failed to fetch ai_metadata for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
             throw;
         }
     }
 
     /// <summary>
-    /// Update the ai_metadata JSON for a content item by external URL.
-    /// PUT /api/admin/content-items/ai-metadata?url={url}
+    /// Update the ai_metadata JSON for a content item by primary key.
+    /// PUT /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
     /// </summary>
     public virtual async Task UpdateContentItemAiMetadataAsync(
-        string url,
+        string collectionName,
+        string slug,
         string aiMetadata,
         CancellationToken cancellationToken = default)
     {
         try
         {
             using var response = await _httpClient.PutAsJsonAsync(
-                $"/api/admin/content-items/ai-metadata?url={Uri.EscapeDataString(url)}",
+                $"/api/admin/content-items/ai-metadata?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
                 new { AiMetadata = aiMetadata },
                 cancellationToken);
             response.EnsureSuccessStatusCode();
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to update ai_metadata for URL {Url}", url.Sanitize());
+            _logger.LogError(ex, "Failed to update ai_metadata for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
             throw;
         }
     }
@@ -1246,17 +1292,18 @@ public class TechHubApiClient : ITechHubApiClient
     // ================================================================
 
     /// <summary>
-    /// Get all editable fields for a content item by external URL.
-    /// GET /api/admin/content-items/edit-data?url={url}
+    /// Get all editable fields for a content item by primary key.
+    /// GET /api/admin/content-items/edit-data?collection={collection}&amp;slug={slug}
     /// </summary>
     public virtual async Task<ContentItemEditData?> GetContentItemEditDataAsync(
-        string url,
+        string collectionName,
+        string slug,
         CancellationToken cancellationToken = default)
     {
         try
         {
             return await _httpClient.GetFromJsonAsync<ContentItemEditData>(
-                $"/api/admin/content-items/edit-data?url={Uri.EscapeDataString(url)}",
+                $"/api/admin/content-items/edit-data?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
                 cancellationToken);
         }
         catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
@@ -1265,32 +1312,312 @@ public class TechHubApiClient : ITechHubApiClient
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to fetch edit data for URL {Url}", url.Sanitize());
+            _logger.LogError(ex, "Failed to fetch edit data for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
             throw;
         }
     }
 
     /// <summary>
-    /// Update all editable fields for a content item by external URL.
-    /// PUT /api/admin/content-items/edit-data?url={url}
+    /// Update all editable fields for a content item by primary key.
+    /// PUT /api/admin/content-items/edit-data?collection={collection}&amp;slug={slug}
     /// </summary>
     public virtual async Task UpdateContentItemEditDataAsync(
-        string url,
+        string collectionName,
+        string slug,
         ContentItemEditData editData,
         CancellationToken cancellationToken = default)
     {
         try
         {
             using var response = await _httpClient.PutAsJsonAsync(
-                $"/api/admin/content-items/edit-data?url={Uri.EscapeDataString(url)}",
+                $"/api/admin/content-items/edit-data?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
                 editData,
                 cancellationToken);
             response.EnsureSuccessStatusCode();
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to update edit data for URL {Url}", url.Sanitize());
+            _logger.LogError(ex, "Failed to update edit data for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
             throw;
         }
+    }
+
+    // ================================================================
+    // Background job settings methods
+    // ================================================================
+
+    /// <summary>
+    /// Get all background job settings.
+    /// GET /api/admin/job-settings
+    /// </summary>
+    public virtual async Task<IReadOnlyList<BackgroundJobSetting>> GetJobSettingsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var settings = await _httpClient.GetFromJsonAsync<IReadOnlyList<BackgroundJobSetting>>(
+                "/api/admin/job-settings",
+                cancellationToken);
+            return settings ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch job settings");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Update the enabled state for a background job.
+    /// PUT /api/admin/job-settings/{jobName}
+    /// </summary>
+    public virtual async Task UpdateJobSettingAsync(
+        string jobName,
+        bool enabled,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/job-settings/{Uri.EscapeDataString(jobName)}",
+                new { Enabled = enabled },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update job setting {JobName}", jobName.Sanitize());
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Cache management methods
+    // ================================================================
+
+    /// <summary>
+    /// Invalidate all server-side caches.
+    /// POST /api/admin/cache/invalidate
+    /// </summary>
+    public virtual async Task InvalidateCachesAsync(CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            _logger.LogInformation("Invalidating all server-side caches");
+            using var response = await _httpClient.PostAsync("/api/admin/cache/invalidate", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to invalidate caches");
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Content review methods
+    // ================================================================
+
+    /// <summary>
+    /// Get content reviews filtered by status.
+    /// GET /api/admin/reviews
+    /// </summary>
+    public virtual async Task<IReadOnlyList<ContentReview>> GetContentReviewsAsync(
+        string? status = null,
+        int limit = 100,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var query = $"/api/admin/reviews?limit={limit}";
+            if (!string.IsNullOrEmpty(status))
+            {
+                query += $"&status={Uri.EscapeDataString(status)}";
+            }
+
+            var reviews = await _httpClient.GetFromJsonAsync<IReadOnlyList<ContentReview>>(
+                query, cancellationToken);
+            return reviews ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch content reviews");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Get review summary counts.
+    /// GET /api/admin/reviews/summary
+    /// </summary>
+    public virtual async Task<ContentReviewSummary> GetContentReviewSummaryAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var summary = await _httpClient.GetFromJsonAsync<ContentReviewSummary>(
+                "/api/admin/reviews/summary", cancellationToken);
+            return summary ?? new ContentReviewSummary();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch review summary");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Approve a single content review.
+    /// POST /api/admin/reviews/{id}/approve
+    /// </summary>
+    public virtual async Task<bool> ApproveContentReviewAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsync(
+                $"/api/admin/reviews/{id}/approve", null, cancellationToken);
+            return response.IsSuccessStatusCode;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to approve review {Id}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Reject a single content review.
+    /// POST /api/admin/reviews/{id}/reject
+    /// </summary>
+    public virtual async Task<bool> RejectContentReviewAsync(
+        long id,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsync(
+                $"/api/admin/reviews/{id}/reject", null, cancellationToken);
+            return response.IsSuccessStatusCode;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to reject review {Id}", id);
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Approve all pending content reviews.
+    /// POST /api/admin/reviews/approve-all
+    /// </summary>
+    public virtual async Task<int> ApproveAllContentReviewsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsync(
+                "/api/admin/reviews/approve-all", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<ApprovedCountResponse>(cancellationToken);
+            return result?.Approved ?? 0;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to approve all reviews");
+            throw;
+        }
+    }
+
+    private sealed class ApprovedCountResponse
+    {
+        public int Approved { get; init; }
+    }
+
+    /// <summary>
+    /// Reject all pending content reviews.
+    /// POST /api/admin/reviews/reject-all
+    /// </summary>
+    public virtual async Task<int> RejectAllContentReviewsAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsync(
+                "/api/admin/reviews/reject-all", null, cancellationToken);
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<RejectedCountResponse>(cancellationToken);
+            return result?.Rejected ?? 0;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to reject all reviews");
+            throw;
+        }
+    }
+
+    private sealed class RejectedCountResponse
+    {
+        public int Rejected { get; init; }
+    }
+
+    /// <summary>
+    /// Update the fixed value of a pending review.
+    /// PUT /api/admin/reviews/{id}
+    /// </summary>
+    public virtual async Task<bool> UpdateContentReviewFixedValueAsync(
+        long id,
+        string fixedValue,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/reviews/{id}",
+                new { FixedValue = fixedValue },
+                cancellationToken);
+
+            return response.IsSuccessStatusCode;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update review {ReviewId}", id);
+            throw;
+        }
+    }
+
+    // ================================================================
+    // Content preview methods
+    // ================================================================
+
+    /// <summary>
+    /// Render markdown to HTML for preview.
+    /// POST /api/admin/content-items/preview-markdown
+    /// </summary>
+    public virtual async Task<string> PreviewMarkdownAsync(
+        string markdown,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                "/api/admin/content-items/preview-markdown",
+                new { Markdown = markdown },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<MarkdownPreviewResponse>(cancellationToken);
+            return result?.Html ?? string.Empty;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to preview markdown");
+            throw;
+        }
+    }
+
+    private sealed class MarkdownPreviewResponse
+    {
+        public string? Html { get; init; }
     }
 }

@@ -7,9 +7,9 @@
 @using TechHub.Web.Services
 @implements IDisposable
 @inject ITechHubApiClient Api
-@inject NavigationManager Navigation
 @inject PersistentComponentState ApplicationState
 @inject IJSRuntime JS
+@inject NavigationManager Navigation
 
 <PageTitle>Processed URLs — TechHub Admin</PageTitle>
 
@@ -54,14 +54,27 @@
                    placeholder="Search by URL…" />
         </div>
         <div class="admin-filter-group">
-            <label class="admin-label" for="feedFilter">Feed Name</label>
-            <input id="feedFilter" class="admin-input" @bind="_feedNameFilter" @bind:after="ApplyFiltersAsync"
-                   placeholder="Filter by feed…" />
+            <label class="admin-label" for="feedFilter">Feed</label>
+            <select id="feedFilter" class="admin-input" @bind="_feedNameFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All feeds</option>
+                @if (_feedNames != null)
+                {
+                    @foreach (var feedName in _feedNames)
+                    {
+                        <option value="@feedName">@feedName</option>
+                    }
+                }
+            </select>
         </div>
         <div class="admin-filter-group">
             <label class="admin-label" for="collectionFilter">Collection</label>
             <input id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync"
                    placeholder="e.g. blogs" />
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="jobIdFilter">Job ID</label>
+            <input id="jobIdFilter" class="admin-input" @bind="_jobIdFilterText" @bind:after="ApplyJobIdFilterAsync"
+                   placeholder="e.g. 26" />
         </div>
     </div>
 
@@ -87,24 +100,13 @@
 
         <div class="admin-jobs-table-wrapper">
             <table class="admin-table">
-                <colgroup>
-                    <col class="col-site" />
-                    <col class="col-article" />
-                    <col class="col-status" />
-                    <col class="col-reason" />
-                    <col class="col-feed" />
-                    <col class="col-collection" />
-                    <col class="col-processed" />
-                    <col class="col-actions" />
-                </colgroup>
                 <thead>
                     <tr>
-                        <th>Site</th>
+                        <th>Feed</th>
+                        <th>Collection</th>
                         <th>Article</th>
                         <th>Status</th>
                         <th>Reason</th>
-                        <th>Feed</th>
-                        <th>Collection</th>
                         <th>Processed</th>
                         <th>Actions</th>
                     </tr>
@@ -113,23 +115,20 @@
                     @foreach (var item in _result.Items)
                     {
                         <tr>
-                            <td class="admin-cell-site" title="@item.ExternalUrl">
-                                @GetUrlSite(item.ExternalUrl)
-                            </td>
+                            <td class="admin-cell-feed" title="@item.FeedName">@(item.FeedName ?? "—")</td>
+                            <td class="admin-cell-mono">@(item.CollectionName ?? "—")</td>
                             <td class="admin-cell-article" title="@item.ExternalUrl">
                                 <a href="@item.ExternalUrl" target="_blank" rel="noopener noreferrer">@GetUrlArticle(item.ExternalUrl)</a>
                             </td>
                             <td>
                                 <span class="admin-status @GetStatusCssClass(item.Status)"
                                       title="@GetStatusTooltip(item)">
-                                    @GetStatusLabel(item.Status)
+                                    @GetStatusLabel(item.Status)@if (item.HasTranscript == false){<span class="admin-transcript-warning" title="Transcript not fetched">!</span>}
                                 </span>
                             </td>
                             <td class="admin-cell-reason" title="@(item.Reason ?? item.ErrorMessage ?? "—")">
                                 @(TruncateReason(item.Reason ?? item.ErrorMessage))
                             </td>
-                            <td class="admin-cell-feed" title="@item.FeedName">@(item.FeedName ?? "—")</td>
-                            <td class="admin-cell-mono">@(item.CollectionName ?? "—")</td>
                             <td class="admin-cell-mono">@item.ProcessedAt.ToString("MM-dd HH:mm")</td>
                             <td>
                                 <button class="admin-link-btn admin-link-btn-danger"
@@ -140,10 +139,10 @@
                                         title="Copy details to clipboard">
                                     @(_copiedUrl == item.ExternalUrl ? "✓ Copied" : "Copy")
                                 </button>
-                                @if (item.Status == "succeeded")
+                                @if (item.Status == "succeeded" && !string.IsNullOrEmpty(item.CollectionName) && !string.IsNullOrEmpty(item.Slug))
                                 {
                                     <button class="admin-link-btn"
-                                            @onclick="() => OpenContentItemEditorAsync(item.ExternalUrl)"
+                                            @onclick="() => OpenContentItemEditorAsync(item.CollectionName, item.Slug)"
                                             title="Edit content item">Edit</button>
                                 }
                             </td>
@@ -190,6 +189,8 @@
     private string _searchFilter = string.Empty;
     private string _feedNameFilter = string.Empty;
     private string _collectionFilter = string.Empty;
+    private long? _jobIdFilter;
+    private string _jobIdFilterText = string.Empty;
 
     // Debounce timer for text input filters
     private CancellationTokenSource? _debounce;
@@ -201,13 +202,29 @@
     private bool _editorOpen;
     private string _editorTitle = string.Empty;
     private TechHub.Core.Models.Admin.ContentItemEditData? _editorData;
-    private string _editorUrl = string.Empty;
+    private string _editorCollectionName = string.Empty;
+    private string _editorSlug = string.Empty;
+
+    // Feed name dropdown options
+    private IReadOnlyList<string>? _feedNames;
 
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        if (ApplicationState.TryTakeFromJson<PagedResult<ProcessedUrlListItem>>("admin-processed-urls", out var restored) && restored != null)
+        // Parse jobId from query string (e.g. /admin/processed-urls?jobId=123)
+        var uri = new Uri(Navigation.Uri);
+        var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
+        if (long.TryParse(queryParams["jobId"], out var jobId))
+        {
+            _jobIdFilter = jobId;
+            _jobIdFilterText = jobId.ToString();
+        }
+
+        // Load feed names for dropdown filter
+        await LoadFeedNamesAsync();
+
+        if (_jobIdFilter == null && ApplicationState.TryTakeFromJson<PagedResult<ProcessedUrlListItem>>("admin-processed-urls", out var restored) && restored != null)
         {
             _result = restored;
             _loading = false;
@@ -248,7 +265,8 @@
                 string.IsNullOrEmpty(_statusFilter) ? null : _statusFilter,
                 string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
                 string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter,
-                string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter);
+                string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter,
+                _jobIdFilter);
 
             UpdatePagination();
             await LoadFailedCountAsync();
@@ -256,11 +274,6 @@
         catch (OperationCanceledException)
         {
             throw;
-        }
-        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-        {
-            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn?redirectUri=%2Fadmin%2Fprocessed-urls", forceLoad: true);
-            return;
         }
         catch (HttpRequestException ex)
         {
@@ -285,12 +298,62 @@
         }
     }
 
+    private async Task LoadFeedNamesAsync()
+    {
+        try
+        {
+            var feeds = await Api.GetFeedConfigsAsync();
+            _feedNames = feeds.Select(f => f.Name).OrderBy(n => n).ToList();
+        }
+        catch
+        {
+            _feedNames = [];
+        }
+    }
+
+    private async Task ClearJobFilter()
+    {
+        _jobIdFilter = null;
+        _jobIdFilterText = string.Empty;
+        _currentPage = 1;
+        Navigation.NavigateTo("/admin/processed-urls", replace: true);
+        await LoadDataAsync();
+    }
+
     private void UpdatePagination()
     {
         if (_result != null)
         {
             _totalPages = Math.Max(1, (int)Math.Ceiling((double)_result.TotalCount / PageSize));
         }
+    }
+
+    private async Task ApplyJobIdFilterAsync()
+    {
+        _debounce?.Cancel();
+        _debounce = new CancellationTokenSource();
+        var token = _debounce.Token;
+
+        try
+        {
+            await Task.Delay(300, token);
+        }
+        catch (OperationCanceledException)
+        {
+            return;
+        }
+
+        if (long.TryParse(_jobIdFilterText, out var jobId))
+        {
+            _jobIdFilter = jobId;
+        }
+        else
+        {
+            _jobIdFilter = null;
+        }
+
+        _currentPage = 1;
+        await LoadDataAsync();
     }
 
     private async Task ApplyFiltersAsync()
@@ -414,20 +477,21 @@
         }
     }
 
-    private async Task OpenContentItemEditorAsync(string url)
+    private async Task OpenContentItemEditorAsync(string collectionName, string slug)
     {
         _message = null;
         try
         {
-            var result = await Api.GetContentItemEditDataAsync(url);
+            var result = await Api.GetContentItemEditDataAsync(collectionName, slug);
             if (result is null)
             {
                 _message = "Content item not found.";
                 _messageIsError = true;
                 return;
             }
-            _editorUrl = url;
-            _editorTitle = $"Edit — {GetUrlArticle(url)}";
+            _editorCollectionName = collectionName;
+            _editorSlug = slug;
+            _editorTitle = $"Edit — {collectionName}/{slug}";
             _editorData = result;
             _editorOpen = true;
         }
@@ -442,7 +506,7 @@
     {
         try
         {
-            await Api.UpdateContentItemEditDataAsync(_editorUrl, editData);
+            await Api.UpdateContentItemEditDataAsync(_editorCollectionName, _editorSlug, editData);
             _editorOpen = false;
             _message = "Content item saved.";
             _messageIsError = false;

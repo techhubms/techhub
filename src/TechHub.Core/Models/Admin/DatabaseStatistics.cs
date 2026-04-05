@@ -101,4 +101,6 @@ public sealed class ProcessingStats
     public int TotalItemsAdded { get; init; }
     public int TotalProcessedUrls { get; init; }
     public DateTimeOffset? LastRunAt { get; init; }
+    public int TranscriptsSucceeded { get; init; }
+    public int TranscriptsFailed { get; init; }
 }

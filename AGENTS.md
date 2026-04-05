@@ -13,7 +13,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Always use `Run` function** for all build/test/run operations — see [docs/running-and-testing.md](docs/running-and-testing.md)
 - **Always check for errors after editing files** (`get_errors` tool)
 - **Always fix all linter issues**
-- **Always store temp files in `.tmp/`**
+- **Always store temp files, scripts, output, etc in `.tmp/`**
 - **Always use PowerShell for scripts** (save as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise**

@@ -280,6 +280,18 @@ internal interface ITechHubApiClient
     Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Trigger a bulk content fix run (tags, authors, markdown, AI metadata backfill).
+    /// POST /api/admin/content-fixer/trigger
+    /// </summary>
+    Task TriggerContentFixerAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Cancel the currently running background job.
+    /// POST /api/admin/processing/cancel
+    /// </summary>
+    Task CancelRunningJobAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Get recent content processing job history.
     /// GET /api/admin/processing/jobs
     /// </summary>
@@ -350,6 +362,7 @@ internal interface ITechHubApiClient
         string? search = null,
         string? feedName = null,
         string? collectionName = null,
+        long? jobId = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -391,30 +404,115 @@ internal interface ITechHubApiClient
     // ================================================================
 
     /// <summary>
-    /// Get the ai_metadata JSON for a content item by its external URL.
-    /// GET /api/admin/content-items/ai-metadata?url={url}
+    /// Get the ai_metadata JSON for a content item by its primary key.
+    /// GET /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
     /// </summary>
-    Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(string url, CancellationToken cancellationToken = default);
+    Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Update the ai_metadata JSON for a content item by its external URL.
-    /// PUT /api/admin/content-items/ai-metadata?url={url}
+    /// Update the ai_metadata JSON for a content item by its primary key.
+    /// PUT /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
     /// </summary>
-    Task UpdateContentItemAiMetadataAsync(string url, string aiMetadata, CancellationToken cancellationToken = default);
+    Task UpdateContentItemAiMetadataAsync(string collectionName, string slug, string aiMetadata, CancellationToken cancellationToken = default);
 
     // ================================================================
     // Admin – Content item editing endpoints
     // ================================================================
 
     /// <summary>
-    /// Get all editable fields for a content item by its external URL.
-    /// GET /api/admin/content-items/edit-data?url={url}
+    /// Get all editable fields for a content item by its primary key.
+    /// GET /api/admin/content-items/edit-data?collection={collection}&amp;slug={slug}
     /// </summary>
-    Task<ContentItemEditData?> GetContentItemEditDataAsync(string url, CancellationToken cancellationToken = default);
+    Task<ContentItemEditData?> GetContentItemEditDataAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Update all editable fields for a content item by its external URL.
-    /// PUT /api/admin/content-items/edit-data?url={url}
+    /// Update all editable fields for a content item by its primary key.
+    /// PUT /api/admin/content-items/edit-data?collection={collection}&amp;slug={slug}
     /// </summary>
-    Task UpdateContentItemEditDataAsync(string url, ContentItemEditData editData, CancellationToken cancellationToken = default);
+    Task UpdateContentItemEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Background job settings endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all background job settings.
+    /// GET /api/admin/job-settings
+    /// </summary>
+    Task<IReadOnlyList<BackgroundJobSetting>> GetJobSettingsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the enabled state for a background job.
+    /// PUT /api/admin/job-settings/{jobName}
+    /// </summary>
+    Task UpdateJobSettingAsync(string jobName, bool enabled, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Cache management endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Invalidate all server-side caches.
+    /// POST /api/admin/cache/invalidate
+    /// </summary>
+    Task InvalidateCachesAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content review endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get content reviews filtered by status.
+    /// GET /api/admin/reviews
+    /// </summary>
+    Task<IReadOnlyList<ContentReview>> GetContentReviewsAsync(
+        string? status = null,
+        int limit = 100,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get review summary counts (pending/approved/rejected).
+    /// GET /api/admin/reviews/summary
+    /// </summary>
+    Task<ContentReviewSummary> GetContentReviewSummaryAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Approve a single review and apply the change.
+    /// POST /api/admin/reviews/{id}/approve
+    /// </summary>
+    Task<bool> ApproveContentReviewAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Reject a single review without applying the change.
+    /// POST /api/admin/reviews/{id}/reject
+    /// </summary>
+    Task<bool> RejectContentReviewAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Approve all pending reviews and apply changes.
+    /// POST /api/admin/reviews/approve-all
+    /// </summary>
+    Task<int> ApproveAllContentReviewsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Reject all pending reviews.
+    /// POST /api/admin/reviews/reject-all
+    /// </summary>
+    Task<int> RejectAllContentReviewsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the fixed value of a pending review.
+    /// PUT /api/admin/reviews/{id}
+    /// </summary>
+    Task<bool> UpdateContentReviewFixedValueAsync(long id, string fixedValue, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content preview endpoint
+    // ================================================================
+
+    /// <summary>
+    /// Render markdown to HTML for preview.
+    /// POST /api/admin/content-items/preview-markdown
+    /// </summary>
+    Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
 }

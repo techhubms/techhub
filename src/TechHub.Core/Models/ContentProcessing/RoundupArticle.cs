@@ -62,4 +62,16 @@ public sealed class RoundupArticle
     /// From <c>ai_metadata.time_sensitivity</c>.
     /// </summary>
     public string TimeSensitivity { get; init; } = "this-week";
+
+    /// <summary>Whether this article is missing AI metadata and needs on-the-fly backfill.</summary>
+    public bool NeedsAiMetadata { get; init; }
+
+    /// <summary>Full article content (for on-the-fly AI categorization when ai_metadata is NULL).</summary>
+    public string Content { get; init; } = string.Empty;
+
+    /// <summary>Feed name (for on-the-fly AI categorization when ai_metadata is NULL).</summary>
+    public string FeedName { get; init; } = string.Empty;
+
+    /// <summary>Unix epoch publication date (for on-the-fly AI categorization when ai_metadata is NULL).</summary>
+    public long DateEpoch { get; init; }
 }

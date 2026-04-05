@@ -5,7 +5,6 @@
 @using TechHub.Web.Services
 @implements IDisposable
 @inject ITechHubApiClient Api
-@inject NavigationManager Navigation
 @inject PersistentComponentState ApplicationState
 
 <PageTitle>Statistics — TechHub Admin</PageTitle>
@@ -52,6 +51,14 @@
             <div class="admin-stat-card">
                 <div class="admin-stat-value">@_stats.Processing.TotalProcessedUrls.ToString("N0")</div>
                 <div class="admin-stat-label">Processed URLs</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.Processing.TranscriptsSucceeded.ToString("N0")</div>
+                <div class="admin-stat-label">Transcripts ✓</div>
+            </div>
+            <div class="admin-stat-card">
+                <div class="admin-stat-value">@_stats.Processing.TranscriptsFailed.ToString("N0")</div>
+                <div class="admin-stat-label">Transcripts ✗</div>
             </div>
             <div class="admin-stat-card">
                 <div class="admin-stat-value">@_stats.DatabaseSize.TotalSize</div>
@@ -291,11 +298,6 @@
         catch (OperationCanceledException)
         {
             throw;
-        }
-        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-        {
-            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn?redirectUri=%2Fadmin%2Fstatistics", forceLoad: true);
-            return;
         }
         catch (HttpRequestException ex)
         {

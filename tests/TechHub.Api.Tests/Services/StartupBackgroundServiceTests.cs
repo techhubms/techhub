@@ -29,12 +29,10 @@ public class StartupBackgroundServiceTests
         var mockConnectionFactory = new Mock<IDbConnectionFactory>();
         mockConnectionFactory.Setup(f => f.CreateConnection()).Returns(Mock.Of<IDbConnection>());
 
-        var mockFeedRepo = new Mock<IRssFeedConfigRepository>();
         var mockProcessedUrlRepo = new Mock<IProcessedUrlRepository>();
 
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockConnectionFactory.Object);
-        services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockProcessedUrlRepo.Object);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
@@ -45,7 +43,6 @@ public class StartupBackgroundServiceTests
             serviceProvider,
             mockStartupState,
             mockHostLifetime.Object,
-            Options.Create(new ContentProcessorOptions()),
             mockLogger.Object);
 
         // Act
@@ -83,10 +80,6 @@ public class StartupBackgroundServiceTests
             return mockCommand.Object;
         });
 
-        var mockFeedRepo = new Mock<IRssFeedConfigRepository>();
-        mockFeedRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .Returns(Task.CompletedTask);
-
         var mockProcessedUrlRepo = new Mock<IProcessedUrlRepository>();
         mockProcessedUrlRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<IEnumerable<string>>(), It.IsAny<CancellationToken>()))
             .Returns(Task.CompletedTask);
@@ -111,7 +104,6 @@ public class StartupBackgroundServiceTests
 
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockConnectionFactory.Object);
-        services.AddSingleton(mockFeedRepo.Object);
         services.AddSingleton(mockProcessedUrlRepo.Object);
         services.AddSingleton(mockJobRepo.Object);
         services.AddSingleton(mockCustomPageRepo.Object);
@@ -125,7 +117,6 @@ public class StartupBackgroundServiceTests
             serviceProvider,
             mockStartupState,
             mockHostLifetime.Object,
-            Options.Create(new ContentProcessorOptions()),
             mockLogger.Object);
 
         // Act

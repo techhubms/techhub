@@ -1,0 +1,43 @@
+@using TechHub.Web.Helpers
+@using static TechHub.Web.Helpers.DiffHelper
+
+<div class="diff-view" role="region" aria-label="Diff view">
+    @foreach (var line in Lines)
+    {
+        <div class="diff-line diff-line-@line.Op.ToString().ToLowerInvariant()">
+            <span class="diff-prefix" aria-hidden="true">@Prefix(line.Op)</span><span class="diff-text">@VisibleText(line)</span>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public required IReadOnlyList<DiffLine> Lines { get; set; }
+
+    private static string Prefix(DiffOp op) => op switch
+    {
+        DiffOp.Insert => "+",
+        DiffOp.Delete => "-",
+        _             => " "
+    };
+
+    // For changed lines, replace trailing spaces with visible middle-dot markers.
+    private static MarkupString VisibleText(DiffLine line)
+    {
+        if (line.Op == DiffOp.Equal)
+        {
+            return (MarkupString)System.Net.WebUtility.HtmlEncode(line.Text);
+        }
+
+        var text = line.Text;
+        int trailingSpaces = text.Length - text.TrimEnd(' ').Length;
+        if (trailingSpaces == 0)
+        {
+            return (MarkupString)System.Net.WebUtility.HtmlEncode(text);
+        }
+
+        var body = System.Net.WebUtility.HtmlEncode(text[..^trailingSpaces]);
+        var dots = $"<span class=\"diff-trailing-ws\">{new string('\u00b7', trailingSpaces)}</span>";
+        return (MarkupString)(body + dots);
+    }
+}

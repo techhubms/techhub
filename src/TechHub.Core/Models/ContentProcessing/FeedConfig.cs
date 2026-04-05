@@ -23,6 +23,12 @@ public sealed class FeedConfig
     /// <summary>Whether this feed is active and should be processed.</summary>
     public bool Enabled { get; set; } = true;
 
+    /// <summary>
+    /// When <c>true</c>, YouTube items from this feed that fail transcript
+    /// fetching are marked as failed instead of proceeding without a transcript.
+    /// </summary>
+    public bool TranscriptMandatory { get; set; }
+
     /// <summary>Collection name with leading underscore stripped.</summary>
     public string CollectionName => OutputDir.TrimStart('_').ToLowerInvariant();
 }

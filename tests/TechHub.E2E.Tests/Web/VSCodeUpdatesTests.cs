@@ -25,9 +25,9 @@ public class VSCodeUpdatesTests : PlaywrightTestBase
         // Act
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Assert - Check page title attribute contains expected text
-        // Dynamic page shows latest video title
-        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("Visual Studio Code and GitHub Copilot - What's new in"));
+        // Assert - Page title shows the selected video title (latest video auto-selected)
+        // or "VS Code Updates" if no video loaded yet — both end with "- Tech Hub"
+        await Assertions.Expect(Page).ToHaveTitleAsync(new Regex("(Visual Studio Code|VS Code Updates).+Tech Hub"));
     }
 
     [Fact]

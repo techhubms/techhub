@@ -30,33 +30,46 @@
 
     @if (_showForm)
     {
-        <div class="admin-form-card">
-            <h2 class="admin-form-title">@(_editingFeed?.Id > 0 ? "Edit Feed" : "Add Feed")</h2>
-            <div class="admin-form-grid">
-                <div class="admin-form-group">
-                    <label class="admin-label" for="feedName">Name</label>
-                    <input id="feedName" class="admin-input" @bind="_editingFeed!.Name" placeholder="e.g. GitHub Blog" />
+        <div class="admin-modal-backdrop" @onclick="CancelForm" @onkeydown="HandleKeyDown" role="dialog" aria-modal="true" aria-labelledby="feed-editor-title" tabindex="-1">
+            <div class="admin-modal" @onclick:stopPropagation>
+                <div class="admin-modal-header">
+                    <h2 id="feed-editor-title" class="admin-modal-title">@(_editingFeed?.Id > 0 ? "Edit Feed" : "Add Feed")</h2>
+                    <button class="admin-modal-close" @onclick="CancelForm" aria-label="Close editor">×</button>
                 </div>
-                <div class="admin-form-group">
-                    <label class="admin-label" for="feedUrl">URL</label>
-                    <input id="feedUrl" class="admin-input" @bind="_editingFeed!.Url" placeholder="https://github.blog/feed/" />
+                <div class="admin-modal-body">
+                    <div class="admin-form-grid">
+                        <div class="admin-form-group">
+                            <label class="admin-label" for="feedName">Name</label>
+                            <input id="feedName" class="admin-input" @bind="_editingFeed!.Name" placeholder="e.g. GitHub Blog" />
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label" for="feedUrl">URL</label>
+                            <input id="feedUrl" class="admin-input" @bind="_editingFeed!.Url" placeholder="https://github.blog/feed/" />
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label" for="feedOutputDir">Output Directory</label>
+                            <input id="feedOutputDir" class="admin-input" @bind="_editingFeed!.OutputDir" placeholder="_blogs" />
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label">
+                                <input type="checkbox" @bind="_editingFeed!.Enabled" />
+                                Enabled
+                            </label>
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label">
+                                <input type="checkbox" @bind="_editingFeed!.TranscriptMandatory" />
+                                Transcript Mandatory
+                            </label>
+                        </div>
+                    </div>
                 </div>
-                <div class="admin-form-group">
-                    <label class="admin-label" for="feedOutputDir">Output Directory</label>
-                    <input id="feedOutputDir" class="admin-input" @bind="_editingFeed!.OutputDir" placeholder="_blogs" />
+                <div class="admin-modal-footer">
+                    <button class="btn" @onclick="SaveFeedAsync" disabled="@_saving">
+                        @(_saving ? "Saving…" : "Save")
+                    </button>
+                    <button class="btn-secondary" @onclick="CancelForm">Cancel</button>
                 </div>
-                <div class="admin-form-group">
-                    <label class="admin-label">
-                        <input type="checkbox" @bind="_editingFeed!.Enabled" />
-                        Enabled
-                    </label>
-                </div>
-            </div>
-            <div class="admin-form-actions">
-                <button class="btn" @onclick="SaveFeedAsync" disabled="@_saving">
-                    @(_saving ? "Saving…" : "Save")
-                </button>
-                <button class="btn-secondary" @onclick="CancelForm">Cancel</button>
             </div>
         </div>
     }
@@ -84,6 +97,7 @@
                         <th>URL</th>
                         <th>Output Dir</th>
                         <th>Enabled</th>
+                        <th>Transcript</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -98,6 +112,11 @@
                             <td>
                                 <span class="admin-status @(feed.Enabled ? "admin-status-completed" : "admin-status-failed")">
                                     @(feed.Enabled ? "✓ Yes" : "✗ No")
+                                </span>
+                            </td>
+                            <td>
+                                <span class="admin-status @(feed.TranscriptMandatory ? "admin-status-completed" : "")">
+                                    @(feed.TranscriptMandatory ? "✓ Required" : "—")
                                 </span>
                             </td>
                             <td>
@@ -189,7 +208,8 @@
             Name = feed.Name,
             Url = feed.Url,
             OutputDir = feed.OutputDir,
-            Enabled = feed.Enabled
+            Enabled = feed.Enabled,
+            TranscriptMandatory = feed.TranscriptMandatory
         };
         _showForm = true;
         _message = null;
@@ -199,6 +219,14 @@
     {
         _showForm = false;
         _editingFeed = null;
+    }
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            CancelForm();
+        }
     }
 
     private async Task SaveFeedAsync()

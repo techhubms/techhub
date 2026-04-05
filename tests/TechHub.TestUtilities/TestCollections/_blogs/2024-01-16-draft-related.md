@@ -1,4 +1,4 @@
-﻿---
+---
 title: Draft Related Post
 date: 2024-01-16
 primary_section: github-copilot
@@ -8,7 +8,7 @@ tags:
 - AI
 - GitHub Copilot
 draft: true
-external_url: https://example.com/test
+external_url: https://example.com/blogs/draft-related
 author: Test Author
 feed_name: Test Feed
 ---

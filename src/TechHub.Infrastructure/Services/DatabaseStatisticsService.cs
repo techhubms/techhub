@@ -165,6 +165,8 @@ public sealed class DatabaseStatisticsService
                     COUNT(*) FILTER (WHERE status = 'failed') AS FailedJobs,
                     COALESCE(SUM(items_added), 0) AS TotalItemsAdded,
                     (SELECT COUNT(*) FROM processed_urls) AS TotalProcessedUrls,
+                    (SELECT COUNT(*) FROM processed_urls WHERE has_transcript = TRUE) AS TranscriptsSucceeded,
+                    (SELECT COUNT(*) FROM processed_urls WHERE has_transcript = FALSE) AS TranscriptsFailed,
                     MAX(started_at) AS LastRunAt
                 FROM content_processing_jobs
                 """);

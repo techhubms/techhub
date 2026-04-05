@@ -8,18 +8,11 @@ public class ContentProcessorOptions
     /// <summary>Configuration section name.</summary>
     public const string SectionName = "ContentProcessor";
 
-    /// <summary>Whether the content processing pipeline is enabled.</summary>
+    /// <summary>Whether scheduled content processing is enabled.</summary>
     public bool Enabled { get; init; } = true;
 
     /// <summary>How often to run the content processing pipeline (in minutes).</summary>
     public int IntervalMinutes { get; init; } = 15;
-
-    /// <summary>
-    /// Path to the RSS feeds configuration JSON file.
-    /// Supports absolute paths and paths relative to the application base directory.
-    /// Defaults to "rss-feeds.json" next to the executable.
-    /// </summary>
-    public string RssFeedsConfigPath { get; init; } = "rss-feeds.json";
 
     /// <summary>Maximum age in days for RSS items. Items older than this are skipped.</summary>
     public int ItemAgeLimitDays { get; init; } = 365;
@@ -46,6 +39,36 @@ public class ContentProcessorOptions
     /// </summary>
     public int FailedUrlRetentionDays { get; init; } = 7;
 
+    /// <summary>
+    /// Number of recent processing jobs to keep when purging old records.
+    /// Older jobs beyond this count are deleted during each run.
+    /// </summary>
+    public int PurgeJobKeepCount { get; init; } = 500;
+
+    /// <summary>
+    /// Rules for automatically assigning subcollections to content items
+    /// based on the feed name and video/article title pattern.
+    /// </summary>
+    public IReadOnlyList<SubcollectionRule> SubcollectionRules { get; init; } = [];
+
     /// <summary>Computed processing interval.</summary>
     public TimeSpan Interval => TimeSpan.FromMinutes(IntervalMinutes);
+}
+
+/// <summary>
+/// A rule that assigns a subcollection to content items matching a feed name and title pattern.
+/// </summary>
+public class SubcollectionRule
+{
+    /// <summary>Feed name to match (exact, case-insensitive).</summary>
+    public string FeedName { get; init; } = string.Empty;
+
+    /// <summary>
+    /// Title pattern with wildcard support. Use <c>*</c> to match any sequence of characters.
+    /// Example: <c>Visual Studio Code and GitHub Copilot*</c>
+    /// </summary>
+    public string TitlePattern { get; init; } = string.Empty;
+
+    /// <summary>Subcollection name to assign when the rule matches (e.g. "vscode-updates").</summary>
+    public string Subcollection { get; init; } = string.Empty;
 }

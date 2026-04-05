@@ -73,14 +73,14 @@
 .admin-nav-links {
     display: flex;
     align-items: center;
-    gap: var(--spacing-1);
+    gap: var(--spacing-2);
 }
 
 .admin-nav-link {
     display: inline-flex;
     align-items: center;
     gap: 0.35em;
-    padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
+    padding: calc(var(--spacing-1) + var(--spacing-1) / 2);
     background: transparent;
     color: var(--color-text-primary);
     text-decoration: none;
@@ -250,6 +250,14 @@
     font-family: inherit;
 }
 
+select.admin-input {
+    appearance: none;
+    padding-right: var(--spacing-6);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%239ca3af' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-2) center;
+}
+
 .admin-input:focus {
     border-color: var(--color-purple-bright);
     outline: none;
@@ -283,7 +291,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: var(--spacing-6);
+    margin-bottom: var(--spacing-3);
     gap: var(--spacing-4);
 }
 
@@ -324,18 +332,9 @@
 .admin-table {
     width: 100%;
     border-collapse: collapse;
-    table-layout: fixed;
+    table-layout: auto;
     font-size: var(--font-size-sm);
 }
-
-.admin-table col.col-site       { width: 10%; }
-.admin-table col.col-article    { width: 25%; }
-.admin-table col.col-status     { width: 7%; }
-.admin-table col.col-reason     { width: 20%; }
-.admin-table col.col-feed       { width: 10%; }
-.admin-table col.col-collection { width: 7%; }
-.admin-table col.col-processed  { width: 8%; }
-.admin-table col.col-actions    { width: 13%; }
 
 .admin-table th {
     text-align: left;
@@ -405,6 +404,21 @@
     color: #d8b4fe;
 }
 
+.admin-badge-processing {
+    background: color-mix(in srgb, #3b82f6 15%, transparent);
+    color: #93c5fd;
+}
+
+.admin-badge-roundup {
+    background: color-mix(in srgb, #f59e0b 15%, transparent);
+    color: #fcd34d;
+}
+
+.admin-badge-cleanup {
+    background: color-mix(in srgb, #10b981 15%, transparent);
+    color: #6ee7b7;
+}
+
 .admin-status {
     font-size: var(--font-size-sm);
     font-weight: 500;
@@ -425,6 +439,14 @@
 
 .admin-status-failed {
     color: #ef4444;
+}
+
+.admin-status-warning {
+    color: #fbbf24;
+}
+
+.admin-status-success {
+    color: #22c55e;
 }
 
 .admin-status-aborted {
@@ -478,12 +500,10 @@
     color: #ef4444;
 }
 
-/* ─── Navigation Links ────────────────────────────────────────────────────── */
-
-.admin-nav-links {
-    display: flex;
-    gap: var(--spacing-4);
-    align-items: center;
+.admin-transcript-warning {
+    color: #fbbf24;
+    font-weight: var(--font-weight-bold);
+    margin-left: 0.25em;
 }
 
 /* ─── Form Card ───────────────────────────────────────────────────────────── */
@@ -621,7 +641,7 @@
     flex-wrap: wrap;
     gap: var(--spacing-3);
     margin-bottom: var(--spacing-4);
-    padding: var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3);
     background: var(--color-bg-hover-subtle);
     border: 1px solid var(--color-border-default);
     border-radius: var(--border-radius-lg);
@@ -658,4 +678,278 @@
     color: var(--color-text-secondary);
 }
 
+/* ─── Admin Modal (shared popup pattern) ──────────────────────────────────── */
 
+.admin-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--spacing-2);
+}
+
+.admin-modal {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: min(550px, 100%);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-2) var(--spacing-3);
+    border-bottom: 1px solid var(--color-border-default);
+    gap: var(--spacing-2);
+}
+
+.admin-modal-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.admin-modal-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    padding: 0 var(--spacing-1);
+    border-radius: var(--radius-sm);
+    transition: color var(--duration-fast) var(--easing-ease);
+}
+
+.admin-modal-close:hover {
+    color: var(--color-text-primary);
+}
+
+.admin-modal-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-3);
+}
+
+.admin-modal-footer {
+    display: flex;
+    gap: var(--spacing-1);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-top: 1px solid var(--color-border-default);
+}
+
+/* ─── Content Reviews ─────────────────────────────────────────────────────── */
+
+.review-summary-badges {
+    display: flex;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+.review-change-type {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.review-change-type-tags {
+    background: var(--color-purple-bg-subtle);
+    color: var(--color-purple-bright);
+}
+
+.review-change-type-markdown {
+    background: var(--color-blue-bg);
+    color: var(--color-blue);
+}
+
+.review-change-type-author {
+    background: var(--color-green-bg);
+    color: var(--color-green);
+}
+
+.review-change-type-validation {
+    background: var(--color-orange-bg);
+    color: var(--color-orange);
+}
+
+.review-cell-diff {
+    max-width: 350px;
+}
+
+.review-value-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.review-value-fixed {
+    color: var(--color-green-light);
+}
+
+.review-value-warning {
+    color: var(--color-orange);
+}
+
+.review-preview-content {
+    padding: var(--spacing-2);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-subtle);
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.admin-preview-article {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.admin-preview-article::after {
+    display: none;
+}
+
+.review-raw-markdown {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    color: var(--color-text-primary);
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-3);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.admin-modal-large {
+    max-width: 900px;
+}
+
+.review-article-link {
+    color: var(--color-blue);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+}
+
+.review-article-link:hover {
+    text-decoration: underline;
+}
+
+.review-actions-cell {
+    white-space: nowrap;
+}
+
+.review-edit-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+.review-edit-textarea {
+    min-height: 200px;
+    max-height: 40vh;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    resize: vertical;
+    white-space: pre;
+}
+
+.review-edit-preview-actions {
+    margin-bottom: var(--spacing-2);
+}
+
+.review-textarea-code {
+    min-height: 300px;
+    max-height: 60vh;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-sm);
+    resize: vertical;
+    white-space: pre;
+    width: 100%;
+}
+
+.admin-content-preview-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    padding: var(--spacing-2) var(--spacing-3);
+    margin-bottom: var(--spacing-3);
+    background: var(--color-bg-subtle);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+}
+
+/* ─── Review diff: inline tag pills ─── */
+
+.review-tag-diff {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-1);
+    align-items: center;
+}
+
+.review-tag-pill {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-family-mono);
+    white-space: nowrap;
+}
+
+.review-tag-removed {
+    background: var(--color-red-bg);
+    color: var(--color-red);
+    text-decoration: line-through;
+    text-decoration-color: var(--color-red);
+}
+
+.review-tag-kept {
+    background: var(--color-bg-emphasis);
+    color: var(--color-text-secondary);
+}
+
+.review-tag-added {
+    background: var(--color-green-dark-bg);
+    color: var(--color-green-light);
+}
+
+/* ─── Review diff: author change ─── */
+
+.review-author-diff {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: var(--font-size-sm);
+}
+
+.review-author-removed {
+    color: var(--color-red);
+    text-decoration: line-through;
+    text-decoration-color: var(--color-red);
+}
+
+.review-author-added {
+    color: var(--color-green-light);
+}
+
+.review-author-arrow {
+    color: var(--color-text-tertiary);
+    flex-shrink: 0;
+}

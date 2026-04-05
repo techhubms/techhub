@@ -1,0 +1,48 @@
+.diff-view {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+    overflow-x: auto;
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-emphasis);
+}
+
+.diff-line {
+    display: flex;
+    white-space: pre-wrap;
+    word-break: break-all;
+    padding: 0 0.5rem;
+    min-height: 1.4em;
+}
+
+.diff-line-equal {
+    background: transparent;
+    color: var(--color-text-primary);
+}
+
+.diff-line-insert {
+    background: var(--color-green-dark-bg);
+    color: var(--color-green-light);
+}
+
+.diff-line-delete {
+    background: var(--color-red-bg);
+    color: var(--color-red);
+}
+
+.diff-prefix {
+    width: 1.2em;
+    flex-shrink: 0;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.diff-text {
+    flex: 1;
+}
+
+.diff-trailing-ws {
+    opacity: 0.5;
+    text-decoration: underline;
+}

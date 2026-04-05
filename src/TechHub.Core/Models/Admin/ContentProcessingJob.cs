@@ -14,6 +14,7 @@ public static class ContentProcessingJobType
 {
     public const string ContentProcessing = "content-processing";
     public const string RoundupGeneration = "roundup-generation";
+    public const string ContentCleanup = "content-cleanup";
 }
 
 /// <summary>
@@ -53,6 +54,15 @@ public sealed class ContentProcessingJob
 
     /// <summary>Number of items that encountered errors.</summary>
     public int ErrorCount { get; init; }
+
+    /// <summary>Number of YouTube items where transcript fetching succeeded.</summary>
+    public int TranscriptsSucceeded { get; init; }
+
+    /// <summary>Number of YouTube items where transcript fetching failed.</summary>
+    public int TranscriptsFailed { get; init; }
+
+    /// <summary>Number of content items fixed (tags, markdown, authors, AI metadata).</summary>
+    public int ItemsFixed { get; init; }
 
     /// <summary>Accumulated log output from the run.</summary>
     public string? LogOutput { get; init; }

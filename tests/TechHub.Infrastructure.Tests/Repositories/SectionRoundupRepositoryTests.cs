@@ -41,7 +41,7 @@ public class SectionRoundupRepositoryTests
             createdAt: new DateTime(2025, 3, 25, 10, 0, 0, DateTimeKind.Utc));
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
         // Assert
         result.Should().ContainKey("ai");
@@ -65,7 +65,7 @@ public class SectionRoundupRepositoryTests
             createdAt: new DateTime(2025, 3, 26, 12, 0, 0, DateTimeKind.Utc));
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
         // Assert
         result.Should().ContainKey("ai");
@@ -87,7 +87,7 @@ public class SectionRoundupRepositoryTests
             createdAt: new DateTime(2025, 3, 26, 8, 0, 0, DateTimeKind.Utc));
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
         // Assert
         result.Should().ContainKey("azure");
@@ -108,7 +108,8 @@ public class SectionRoundupRepositoryTests
         // Act — query a week that doesn't contain the article
         var result = await _sut.GetArticlesForWeekAsync(
             new DateOnly(2025, 3, 24),
-            new DateOnly(2025, 3, 30));
+            new DateOnly(2025, 3, 30),
+            CancellationToken.None);
 
         // Assert
         if (result.TryGetValue("ai", out var articles))
@@ -118,7 +119,7 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
-    public async Task GetArticlesForWeekAsync_WithNullAiMetadata_ExcludesItem()
+    public async Task GetArticlesForWeekAsync_WithNullAiMetadata_IncludesItemWithNeedsFlag()
     {
         // Arrange — no ai_metadata
         await _fixture.Connection.ExecuteAsync("""
@@ -133,13 +134,13 @@ public class SectionRoundupRepositoryTests
             """);
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
-        // Assert — item is excluded because ai_metadata IS NULL
-        if (result.TryGetValue("ai", out var articles))
-        {
-            articles.Should().NotContain(a => a.Slug == "no-meta-article");
-        }
+        // Assert — item is included with NeedsAiMetadata flag
+        result.Should().ContainKey("ai");
+        var articles = result["ai"];
+        var article = articles.Should().Contain(a => a.Slug == "no-meta-article").Subject;
+        article.NeedsAiMetadata.Should().BeTrue();
     }
 
     [Fact]
@@ -160,7 +161,7 @@ public class SectionRoundupRepositoryTests
             createdAt: new DateTime(2025, 3, 26, 8, 0, 0, DateTimeKind.Utc));
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
         // Assert — repository returns all levels unfiltered
         result.Should().ContainKey("security");
@@ -180,7 +181,7 @@ public class SectionRoundupRepositoryTests
             createdAt: new DateTime(2025, 3, 27, 10, 0, 0, DateTimeKind.Utc));
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
         // Assert — article appears in both sections
         result.Should().ContainKey("ai");
@@ -199,7 +200,7 @@ public class SectionRoundupRepositoryTests
             createdAt: new DateTime(2025, 3, 28, 9, 0, 0, DateTimeKind.Utc));
 
         // Act
-        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd);
+        var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
         // Assert — roundups are excluded to prevent circular inclusion
         if (result.TryGetValue("ai", out var articles))

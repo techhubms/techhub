@@ -39,20 +39,17 @@ public class StartupBackgroundService : BackgroundService
     private readonly IServiceProvider _serviceProvider;
     private readonly StartupStateService _startupState;
     private readonly IHostApplicationLifetime _hostLifetime;
-    private readonly ContentProcessorOptions _options;
     private readonly ILogger<StartupBackgroundService> _logger;
 
     public StartupBackgroundService(
         IServiceProvider serviceProvider,
         StartupStateService startupState,
         IHostApplicationLifetime hostLifetime,
-        IOptions<ContentProcessorOptions> options,
         ILogger<StartupBackgroundService> logger)
     {
         _serviceProvider = serviceProvider ?? throw new ArgumentNullException(nameof(serviceProvider));
         _startupState = startupState ?? throw new ArgumentNullException(nameof(startupState));
         _hostLifetime = hostLifetime ?? throw new ArgumentNullException(nameof(hostLifetime));
-        _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
@@ -68,12 +65,6 @@ public class StartupBackgroundService : BackgroundService
             var migrationRunner = services.GetRequiredService<IMigrationRunner>();
             await migrationRunner.RunMigrationsAsync(stoppingToken);
             _logger.LogInformation("✅ Database migrations completed");
-
-            // Seed RSS feed configs from JSON if the table is empty (first run)
-            var feedRepo = services.GetRequiredService<IRssFeedConfigRepository>();
-            var rssFeedsPath = ResolvePath(_options.RssFeedsConfigPath);
-            await feedRepo.SeedFromJsonAsync(rssFeedsPath, stoppingToken);
-            _logger.LogInformation("✅ RSS feed configs seeded (if table was empty)");
 
             // Seed processed URLs from legacy JSON files (one-time migration)
             var processedUrlRepo = services.GetRequiredService<IProcessedUrlRepository>();
@@ -126,6 +117,11 @@ public class StartupBackgroundService : BackgroundService
 
             // Log database record counts for verification
             LogDatabaseRecordCounts(services);
+        }
+        catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
+        {
+            // Application is shutting down (e.g. dotnet watch restart) — not a startup failure.
+            _logger.LogWarning("Startup operations cancelled due to application shutdown");
         }
         catch (Exception ex)
         {

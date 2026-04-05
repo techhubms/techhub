@@ -154,7 +154,15 @@ builder.Services.AddSignalR(options =>
 
 // Increase disconnected circuit retention so mobile users switching apps can reconnect
 builder.Services.AddOptions<Microsoft.AspNetCore.Components.Server.CircuitOptions>()
-    .Configure(options => options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(5));
+    .Configure(options =>
+    {
+        options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(5);
+        // Surface detailed errors in Development so unhandled circuit exceptions are visible
+        if (builder.Environment.IsDevelopment())
+        {
+            options.DetailedErrors = true;
+        }
+    });
 
 // Configure HTTP client for API with service discovery
 // When running via Aspire, "https+http://api" resolves via service discovery
@@ -277,6 +285,7 @@ app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages:
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseAdminTokenValidation();
 app.UseAntiforgery();
 
 // ── Step 4: Validate URL structure ───────────────────────────────────────────

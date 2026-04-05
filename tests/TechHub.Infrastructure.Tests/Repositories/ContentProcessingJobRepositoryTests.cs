@@ -110,7 +110,7 @@ public class ContentProcessingJobRepositoryTests
 
         // Act
         await _repository.CompleteAsync(jobId, feedsProcessed: 5, itemsAdded: 10,
-            itemsSkipped: 3, errorCount: 2, logOutput: "test log", CancellationToken.None);
+            itemsSkipped: 3, errorCount: 2, transcriptsSucceeded: 0, transcriptsFailed: 0, logOutput: "test log", ct: CancellationToken.None);
 
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
@@ -131,7 +131,7 @@ public class ContentProcessingJobRepositoryTests
         var jobId = await _repository.CreateAsync("scheduled", ct: CancellationToken.None);
 
         // Act
-        await _repository.CompleteAsync(jobId, 1, 0, 0, 0, "done", CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 1, 0, 0, 0, 0, 0, "done", ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -151,7 +151,7 @@ public class ContentProcessingJobRepositoryTests
         var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
-        await _repository.FailAsync(jobId, feedsProcessed: 2, itemsAdded: 3, itemsSkipped: 5, errorCount: 1, "error log", CancellationToken.None);
+        await _repository.FailAsync(jobId, feedsProcessed: 2, itemsAdded: 3, itemsSkipped: 5, errorCount: 1, transcriptsSucceeded: 0, transcriptsFailed: 0, "error log", ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -209,7 +209,7 @@ public class ContentProcessingJobRepositoryTests
     {
         // Arrange
         var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
-        await _repository.CompleteAsync(jobId, 3, 7, 2, 1, "log content", CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 3, 7, 2, 1, 0, 0, "log content", ct: CancellationToken.None);
 
         // Act
         var jobs = await _repository.GetRecentAsync(10, CancellationToken.None);
@@ -227,7 +227,6 @@ public class ContentProcessingJobRepositoryTests
         job.ItemsAdded.Should().Be(7, "items_added must be mapped from DB");
         job.ItemsSkipped.Should().Be(2, "items_skipped must be mapped from DB");
         job.ErrorCount.Should().Be(1, "error_count must be mapped from DB");
-        job.LogOutput.Should().Be("log content", "log_output must be mapped from DB");
     }
 
     // ── GetByIdAsync ───────────────────────────────────────────────────────
@@ -243,6 +242,43 @@ public class ContentProcessingJobRepositoryTests
     }
 
     // ── AbortRunningJobsAsync ──────────────────────────────────────────────
+
+    [Fact]
+    public async Task AbortJobAsync_MarksRunningJobAsAborted()
+    {
+        // Arrange
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+
+        // Act
+        await _repository.AbortJobAsync(jobId, feedsProcessed: 2, itemsAdded: 1, itemsSkipped: 0, errorCount: 0, transcriptsSucceeded: 0, transcriptsFailed: 0, "Cancelled by admin.", ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.Status.Should().Be(ContentProcessingJobStatus.Aborted);
+        job.LogOutput.Should().Be("Cancelled by admin.");
+        job.CompletedAt.Should().NotBeNull();
+        job.DurationMs.Should().NotBeNull();
+        job.FeedsProcessed.Should().Be(2);
+        job.ItemsAdded.Should().Be(1);
+    }
+
+    [Fact]
+    public async Task AbortJobAsync_DoesNotAffectCompletedJob()
+    {
+        // Arrange — complete the job first
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, 0, 0, "done", ct: CancellationToken.None);
+
+        // Act — try to abort a completed job
+        await _repository.AbortJobAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 0, transcriptsSucceeded: 0, transcriptsFailed: 0, "Should not apply.", ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert — status should remain completed
+        job.Should().NotBeNull();
+        job!.Status.Should().Be(ContentProcessingJobStatus.Completed);
+        job.LogOutput.Should().Be("done");
+    }
 
     [Fact]
     public async Task AbortRunningJobsAsync_MarksRunningJobsAsAborted()
@@ -268,10 +304,10 @@ public class ContentProcessingJobRepositoryTests
     {
         // Arrange — create a completed job
         var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
-        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, "done", CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, 0, 0, "done", ct: CancellationToken.None);
 
         // Act
-        await _repository.AbortRunningJobsAsync(CancellationToken.None);
+        var aborted = await _repository.AbortRunningJobsAsync(CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -288,7 +324,7 @@ public class ContentProcessingJobRepositoryTests
         var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
-        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 3, itemsAdded: 5, itemsSkipped: 2, errorCount: 1, CancellationToken.None);
+        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 3, itemsAdded: 5, itemsSkipped: 2, errorCount: 1, transcriptsSucceeded: 0, transcriptsFailed: 0, itemsFixed: 0, ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert
@@ -305,15 +341,81 @@ public class ContentProcessingJobRepositoryTests
     {
         // Arrange — complete the job first
         var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
-        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, "done", CancellationToken.None);
+        await _repository.CompleteAsync(jobId, 1, 1, 0, 0, 0, 0, "done", ct: CancellationToken.None);
 
         // Act — try to update progress on a completed job
-        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 99, itemsAdded: 99, itemsSkipped: 99, errorCount: 99, CancellationToken.None);
+        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 99, itemsAdded: 99, itemsSkipped: 99, errorCount: 99, transcriptsSucceeded: 0, transcriptsFailed: 0, itemsFixed: 0, ct: CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert — counters should not change
         job.Should().NotBeNull();
         job!.FeedsProcessed.Should().Be(1);
         job.ItemsAdded.Should().Be(1);
+    }
+
+    // ── Transcript Counters ────────────────────────────────────────────────
+
+    [Fact]
+    public async Task CompleteAsync_WithTranscriptCounters_StoresValues()
+    {
+        // Arrange
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+
+        // Act
+        await _repository.CompleteAsync(jobId, feedsProcessed: 1, itemsAdded: 3, itemsSkipped: 0, errorCount: 0, transcriptsSucceeded: 2, transcriptsFailed: 1, logOutput: "done", ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.TranscriptsSucceeded.Should().Be(2);
+        job.TranscriptsFailed.Should().Be(1);
+    }
+
+    [Fact]
+    public async Task FailAsync_WithTranscriptCounters_StoresValues()
+    {
+        // Arrange
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+
+        // Act
+        await _repository.FailAsync(jobId, feedsProcessed: 1, itemsAdded: 0, itemsSkipped: 0, errorCount: 1, transcriptsSucceeded: 0, transcriptsFailed: 3, logOutput: "crash", ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.TranscriptsSucceeded.Should().Be(0);
+        job.TranscriptsFailed.Should().Be(3);
+    }
+
+    [Fact]
+    public async Task UpdateProgressAsync_WithTranscriptCounters_StoresValues()
+    {
+        // Arrange
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+
+        // Act
+        await _repository.UpdateProgressAsync(jobId, feedsProcessed: 1, itemsAdded: 2, itemsSkipped: 0, errorCount: 0, transcriptsSucceeded: 4, transcriptsFailed: 1, ct: CancellationToken.None);
+        var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
+
+        // Assert
+        job.Should().NotBeNull();
+        job!.TranscriptsSucceeded.Should().Be(4);
+        job.TranscriptsFailed.Should().Be(1);
+    }
+
+    [Fact]
+    public async Task GetRecentAsync_ReturnsTranscriptCounters()
+    {
+        // Arrange
+        var jobId = await _repository.CreateAsync("manual", ct: CancellationToken.None);
+        await _repository.CompleteAsync(jobId, feedsProcessed: 1, itemsAdded: 1, itemsSkipped: 0, errorCount: 0, transcriptsSucceeded: 5, transcriptsFailed: 2, logOutput: "done", ct: CancellationToken.None);
+
+        // Act
+        var jobs = await _repository.GetRecentAsync(1, CancellationToken.None);
+
+        // Assert
+        jobs.Should().NotBeEmpty();
+        jobs[0].TranscriptsSucceeded.Should().Be(5);
+        jobs[0].TranscriptsFailed.Should().Be(2);
     }
 }

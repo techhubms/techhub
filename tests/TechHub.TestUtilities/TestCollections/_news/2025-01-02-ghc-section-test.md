@@ -1,4 +1,4 @@
-﻿---
+---
 title: GitHub Copilot Only Section Test
 date: 2025-01-02
 primary_section: github-copilot
@@ -8,7 +8,7 @@ tags:
 - Test
 - GitHub Copilot
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/news/ghc-section-test
 author: Test Author
 feed_name: Test Feed
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Recent Blog Post
 date: 2025-12-01
 primary_section: github-copilot
@@ -8,7 +8,7 @@ tags:
 - Test Tag
 - GitHub Copilot
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/blogs/recent-post
 author: Test Author
 feed_name: Test Feed
 ---

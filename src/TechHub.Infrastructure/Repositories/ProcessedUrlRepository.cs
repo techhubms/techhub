@@ -63,11 +63,11 @@ WHERE external_url = @ExternalUrl";
     }
 
     /// <inheritdoc/>
-    public async Task RecordSuccessAsync(string externalUrl, IReadOnlyList<string>? youtubeTags = null, string? feedName = null, string? collectionName = null, string? reason = null, CancellationToken ct = default)
+    public async Task RecordSuccessAsync(string externalUrl, IReadOnlyList<string>? youtubeTags = null, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default)
     {
         const string Sql = @"
-INSERT INTO processed_urls (external_url, status, youtube_tags, feed_name, collection_name, reason)
-VALUES (@ExternalUrl, 'succeeded', @YouTubeTags, @FeedName, @CollectionName, @Reason)
+INSERT INTO processed_urls (external_url, status, youtube_tags, feed_name, collection_name, reason, has_transcript, job_id, slug)
+VALUES (@ExternalUrl, 'succeeded', @YouTubeTags, @FeedName, @CollectionName, @Reason, @HasTranscript, @JobId, @Slug)
 ON CONFLICT (external_url) DO UPDATE SET
     status = 'succeeded',
     error_message = NULL,
@@ -75,6 +75,9 @@ ON CONFLICT (external_url) DO UPDATE SET
     feed_name = COALESCE(@FeedName, processed_urls.feed_name),
     collection_name = COALESCE(@CollectionName, processed_urls.collection_name),
     reason = COALESCE(@Reason, processed_urls.reason),
+    has_transcript = COALESCE(@HasTranscript, processed_urls.has_transcript),
+    job_id = COALESCE(@JobId, processed_urls.job_id),
+    slug = COALESCE(@Slug, processed_urls.slug),
     updated_at = NOW()";
 
         await _connection.ExecuteAsync(new CommandDefinition(
@@ -85,23 +88,29 @@ ON CONFLICT (external_url) DO UPDATE SET
                 YouTubeTags = youtubeTags as string[] ?? youtubeTags?.ToArray(),
                 FeedName = feedName,
                 CollectionName = collectionName,
-                Reason = reason
+                Reason = reason,
+                HasTranscript = hasTranscript,
+                JobId = jobId,
+                Slug = slug
             },
             cancellationToken: ct));
     }
 
     /// <inheritdoc/>
-    public async Task RecordSkippedAsync(string externalUrl, string? feedName = null, string? collectionName = null, string? reason = null, CancellationToken ct = default)
+    public async Task RecordSkippedAsync(string externalUrl, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default)
     {
         const string Sql = @"
-INSERT INTO processed_urls (external_url, status, feed_name, collection_name, reason)
-VALUES (@ExternalUrl, 'skipped', @FeedName, @CollectionName, @Reason)
+INSERT INTO processed_urls (external_url, status, feed_name, collection_name, reason, has_transcript, job_id, slug)
+VALUES (@ExternalUrl, 'skipped', @FeedName, @CollectionName, @Reason, @HasTranscript, @JobId, @Slug)
 ON CONFLICT (external_url) DO UPDATE SET
     status = 'skipped',
     error_message = NULL,
     feed_name = COALESCE(@FeedName, processed_urls.feed_name),
     collection_name = COALESCE(@CollectionName, processed_urls.collection_name),
     reason = COALESCE(@Reason, processed_urls.reason),
+    has_transcript = COALESCE(@HasTranscript, processed_urls.has_transcript),
+    job_id = COALESCE(@JobId, processed_urls.job_id),
+    slug = COALESCE(@Slug, processed_urls.slug),
     updated_at = NOW()";
 
         await _connection.ExecuteAsync(new CommandDefinition(
@@ -111,23 +120,29 @@ ON CONFLICT (external_url) DO UPDATE SET
                 ExternalUrl = externalUrl,
                 FeedName = feedName,
                 CollectionName = collectionName,
-                Reason = reason
+                Reason = reason,
+                HasTranscript = hasTranscript,
+                JobId = jobId,
+                Slug = slug
             },
             cancellationToken: ct));
     }
 
     /// <inheritdoc/>
-    public async Task RecordFailureAsync(string externalUrl, string errorMessage, string? feedName = null, string? collectionName = null, string? reason = null, CancellationToken ct = default)
+    public async Task RecordFailureAsync(string externalUrl, string errorMessage, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default)
     {
         const string Sql = @"
-INSERT INTO processed_urls (external_url, status, error_message, feed_name, collection_name, reason)
-VALUES (@ExternalUrl, 'failed', @ErrorMessage, @FeedName, @CollectionName, @Reason)
+INSERT INTO processed_urls (external_url, status, error_message, feed_name, collection_name, reason, has_transcript, job_id, slug)
+VALUES (@ExternalUrl, 'failed', @ErrorMessage, @FeedName, @CollectionName, @Reason, @HasTranscript, @JobId, @Slug)
 ON CONFLICT (external_url) DO UPDATE SET
     status = 'failed',
     error_message = @ErrorMessage,
     feed_name = COALESCE(@FeedName, processed_urls.feed_name),
     collection_name = COALESCE(@CollectionName, processed_urls.collection_name),
     reason = COALESCE(@Reason, processed_urls.reason),
+    has_transcript = COALESCE(@HasTranscript, processed_urls.has_transcript),
+    job_id = COALESCE(@JobId, processed_urls.job_id),
+    slug = COALESCE(@Slug, processed_urls.slug),
     updated_at = NOW()";
 
         await _connection.ExecuteAsync(new CommandDefinition(
@@ -138,7 +153,10 @@ ON CONFLICT (external_url) DO UPDATE SET
                 ErrorMessage = errorMessage,
                 FeedName = feedName,
                 CollectionName = collectionName,
-                Reason = reason
+                Reason = reason,
+                HasTranscript = hasTranscript,
+                JobId = jobId,
+                Slug = slug
             },
             cancellationToken: ct));
     }
@@ -151,10 +169,11 @@ ON CONFLICT (external_url) DO UPDATE SET
         string? search = null,
         string? feedName = null,
         string? collectionName = null,
+        long? jobId = null,
         CancellationToken ct = default)
     {
-        var where = BuildWhereClause(status, search, feedName, collectionName);
-        var parameters = BuildParameters(status, search, feedName, collectionName);
+        var where = BuildWhereClause(status, search, feedName, collectionName, jobId);
+        var parameters = BuildParameters(status, search, feedName, collectionName, jobId);
 
         var countSql = $@"
 SELECT COUNT(*)
@@ -170,7 +189,10 @@ SELECT p.external_url AS ExternalUrl,
        p.error_message AS ErrorMessage,
        p.feed_name AS FeedName,
        p.collection_name AS CollectionName,
+       p.slug AS Slug,
        p.reason AS Reason,
+       p.has_transcript AS HasTranscript,
+       p.job_id AS JobId,
        p.processed_at AS ProcessedAt,
        p.updated_at AS UpdatedAt
 FROM processed_urls p
@@ -194,8 +216,10 @@ LIMIT @Limit OFFSET @Offset";
     /// <inheritdoc/>
     public async Task<bool> DeleteByUrlAsync(string externalUrl, CancellationToken ct = default)
     {
-        // Delete the content item (tags cascade via FK) and the processed URL record
-        // so the URL can be retried on the next processing run.
+        // Delete the content item first — FK cascade (fk_processed_urls_content_item)
+        // automatically removes the linked processed_urls record.
+        // The explicit processed_urls DELETE handles orphan records that have no
+        // matching content item (e.g. failed items with NULL slug).
         const string Sql = """
             DELETE FROM content_items WHERE external_url = @ExternalUrl;
             DELETE FROM processed_urls WHERE external_url = @ExternalUrl;
@@ -372,7 +396,7 @@ WHERE status = 'failed'
         }
     }
 
-    private static string BuildWhereClause(string? status, string? search, string? feedName, string? collectionName)
+    private static string BuildWhereClause(string? status, string? search, string? feedName, string? collectionName, long? jobId = null)
     {
         var conditions = new List<string>();
 
@@ -396,12 +420,17 @@ WHERE status = 'failed'
             conditions.Add("p.collection_name = @CollectionName");
         }
 
+        if (jobId.HasValue)
+        {
+            conditions.Add("p.job_id = @JobId");
+        }
+
         return conditions.Count > 0
             ? "WHERE " + string.Join(" AND ", conditions)
             : string.Empty;
     }
 
-    private static DynamicParameters BuildParameters(string? status, string? search, string? feedName, string? collectionName)
+    private static DynamicParameters BuildParameters(string? status, string? search, string? feedName, string? collectionName, long? jobId = null)
     {
         var parameters = new DynamicParameters();
 
@@ -423,6 +452,11 @@ WHERE status = 'failed'
         if (!string.IsNullOrEmpty(collectionName))
         {
             parameters.Add("CollectionName", collectionName);
+        }
+
+        if (jobId.HasValue)
+        {
+            parameters.Add("JobId", jobId.Value);
         }
 
         return parameters;

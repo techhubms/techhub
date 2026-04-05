@@ -1,5 +1,4 @@
 using System.Data;
-using System.Text.Json;
 using Dapper;
 using Microsoft.Extensions.Logging;
 using TechHub.Core.Interfaces;
@@ -30,7 +29,7 @@ public sealed class RssFeedConfigRepository : IRssFeedConfigRepository
     public async Task<IReadOnlyList<FeedConfig>> GetEnabledAsync(CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, name, url, output_dir AS OutputDir, enabled
+SELECT id, name, url, output_dir AS OutputDir, enabled, transcript_mandatory AS TranscriptMandatory
 FROM rss_feed_configs
 WHERE enabled = TRUE
 ORDER BY name";
@@ -44,7 +43,7 @@ ORDER BY name";
     public async Task<IReadOnlyList<FeedConfig>> GetAllAsync(CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, name, url, output_dir AS OutputDir, enabled
+SELECT id, name, url, output_dir AS OutputDir, enabled, transcript_mandatory AS TranscriptMandatory
 FROM rss_feed_configs
 ORDER BY enabled DESC, name";
 
@@ -57,7 +56,7 @@ ORDER BY enabled DESC, name";
     public async Task<FeedConfig?> GetByIdAsync(long id, CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, name, url, output_dir AS OutputDir, enabled
+SELECT id, name, url, output_dir AS OutputDir, enabled, transcript_mandatory AS TranscriptMandatory
 FROM rss_feed_configs
 WHERE id = @Id";
 
@@ -71,12 +70,12 @@ WHERE id = @Id";
         ArgumentNullException.ThrowIfNull(feed);
 
         const string Sql = @"
-INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
-VALUES (@Name, @Url, @OutputDir, @Enabled)
+INSERT INTO rss_feed_configs (name, url, output_dir, enabled, transcript_mandatory)
+VALUES (@Name, @Url, @OutputDir, @Enabled, @TranscriptMandatory)
 RETURNING id";
 
         var id = await _connection.ExecuteScalarAsync<long>(
-            new CommandDefinition(Sql, new { feed.Name, feed.Url, feed.OutputDir, feed.Enabled }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { feed.Name, feed.Url, feed.OutputDir, feed.Enabled, feed.TranscriptMandatory }, cancellationToken: ct));
 
         _logger.LogInformation("Created RSS feed config {FeedId}: {FeedName} ({Url})", id, feed.Name, feed.Url);
         return id;
@@ -93,11 +92,12 @@ UPDATE rss_feed_configs SET
     url        = @Url,
     output_dir = @OutputDir,
     enabled    = @Enabled,
+    transcript_mandatory = @TranscriptMandatory,
     updated_at = NOW()
 WHERE id = @Id";
 
         var rows = await _connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { feed.Id, feed.Name, feed.Url, feed.OutputDir, feed.Enabled }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { feed.Id, feed.Name, feed.Url, feed.OutputDir, feed.Enabled, feed.TranscriptMandatory }, cancellationToken: ct));
 
         return rows > 0;
     }
@@ -111,63 +111,5 @@ WHERE id = @Id";
             new CommandDefinition(Sql, new { Id = id }, cancellationToken: ct));
 
         return rows > 0;
-    }
-
-    /// <inheritdoc/>
-    public async Task SeedFromJsonAsync(string jsonPath, CancellationToken ct = default)
-    {
-        ArgumentException.ThrowIfNullOrWhiteSpace(jsonPath);
-
-        if (!File.Exists(jsonPath))
-        {
-            _logger.LogWarning("RSS feeds JSON file not found at {Path}. Skipping seed.", jsonPath);
-            return;
-        }
-
-        // Check if we already have feeds in the database
-        var existingCount = await _connection.ExecuteScalarAsync<int>(
-            new CommandDefinition("SELECT COUNT(*) FROM rss_feed_configs", cancellationToken: ct));
-
-        if (existingCount > 0)
-        {
-            _logger.LogInformation("RSS feed configs table already has {Count} entries. Skipping seed.", existingCount);
-            return;
-        }
-
-        await using var stream = File.OpenRead(jsonPath);
-        using var doc = await JsonDocument.ParseAsync(stream, cancellationToken: ct);
-
-        var feedsArray = doc.RootElement.ValueKind == JsonValueKind.Array
-            ? doc.RootElement
-            : doc.RootElement.TryGetProperty("feeds", out var fa) ? fa : default;
-
-        if (feedsArray.ValueKind != JsonValueKind.Array)
-        {
-            return;
-        }
-
-        var seeded = 0;
-        foreach (var feedEl in feedsArray.EnumerateArray())
-        {
-            var name = feedEl.TryGetProperty("name", out var n) ? n.GetString() ?? string.Empty : string.Empty;
-            var url = feedEl.TryGetProperty("url", out var u) ? u.GetString() ?? string.Empty : string.Empty;
-            var outputDir = feedEl.TryGetProperty("outputDir", out var od) || feedEl.TryGetProperty("output_dir", out od)
-                ? od.GetString() ?? string.Empty : string.Empty;
-
-            if (string.IsNullOrWhiteSpace(name) || string.IsNullOrWhiteSpace(url) || string.IsNullOrWhiteSpace(outputDir))
-            {
-                continue;
-            }
-
-            await _connection.ExecuteAsync(new CommandDefinition(
-                @"INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
-                  VALUES (@Name, @Url, @OutputDir, TRUE)
-                  ON CONFLICT (url) DO NOTHING",
-                new { Name = name, Url = url, OutputDir = outputDir },
-                cancellationToken: ct));
-            seeded++;
-        }
-
-        _logger.LogInformation("Seeded {Count} RSS feed configs from {Path}", seeded, jsonPath);
     }
 }

@@ -20,7 +20,7 @@ public class ArticleContentServiceTests
         _mockTranscript = new Mock<IYouTubeTranscriptService>();
         _mockFetchClient = new Mock<IArticleFetchClient>();
 
-        _service = new Infrastructure.Services.ArticleContentService(
+        _service = new Infrastructure.Services.ContentProcessing.ArticleContentService(
             _mockFetchClient.Object,
             _mockTranscript.Object);
     }
@@ -30,7 +30,7 @@ public class ArticleContentServiceTests
         Title = "Test Video",
         ExternalUrl = url,
         PublishedAt = DateTimeOffset.UtcNow,
-        Description = "A test video description",
+        FeedItemData = "A test video description",
         FeedName = "Test Feed",
         CollectionName = "videos"
     };
@@ -40,7 +40,7 @@ public class ArticleContentServiceTests
         Title = "Test Article",
         ExternalUrl = "https://example.com/article",
         PublishedAt = DateTimeOffset.UtcNow,
-        Description = "A test article",
+        FeedItemData = "A test article",
         FeedName = "Test Feed",
         CollectionName = "blogs"
     };
@@ -52,7 +52,7 @@ public class ArticleContentServiceTests
         var item = CreateYouTubeItem();
         _mockTranscript
             .Setup(t => t.GetTranscriptAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
-            .ReturnsAsync("This is the transcript text from the video.");
+            .ReturnsAsync(TranscriptResult.Success("This is the transcript text from the video."));
 
         // Act
         var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
@@ -61,7 +61,8 @@ public class ArticleContentServiceTests
         result.FullContent.Should().Be("This is the transcript text from the video.");
         result.Title.Should().Be(item.Title);
         result.ExternalUrl.Should().Be(item.ExternalUrl);
-        result.Description.Should().Be(item.Description);
+        result.FeedItemData.Should().Be(item.FeedItemData);
+        result.TranscriptFailureReason.Should().BeNull();
     }
 
     [Fact]
@@ -71,14 +72,14 @@ public class ArticleContentServiceTests
         var item = CreateYouTubeItem();
         _mockTranscript
             .Setup(t => t.GetTranscriptAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
-            .ReturnsAsync((string?)null);
+            .ReturnsAsync(TranscriptResult.Failure("No caption tracks available"));
 
         // Act
         var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
 
         // Assert
-        result.Should().BeSameAs(item);
         result.FullContent.Should().BeNull();
+        result.TranscriptFailureReason.Should().Be("No caption tracks available");
     }
 
     [Fact]
@@ -88,7 +89,7 @@ public class ArticleContentServiceTests
         var item = CreateYouTubeItem();
         _mockTranscript
             .Setup(t => t.GetTranscriptAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync("transcript");
+            .ReturnsAsync(TranscriptResult.Success("transcript"));
 
         // Act
         await _service.EnrichWithContentAsync(item, CancellationToken.None);
@@ -119,15 +120,15 @@ public class ArticleContentServiceTests
             Title = "Copilot Features",
             ExternalUrl = "https://www.youtube.com/watch?v=xyz789",
             PublishedAt = new DateTimeOffset(2024, 6, 1, 12, 0, 0, TimeSpan.Zero),
-            Description = "Video about Copilot",
-            Author = "John Doe",
+            FeedItemData = "Video about Copilot",
+            FeedLevelAuthor = "John Doe",
             FeedTags = ["AI", "Copilot"],
             FeedName = "GitHub Blog",
             CollectionName = "videos"
         };
         _mockTranscript
             .Setup(t => t.GetTranscriptAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
-            .ReturnsAsync("Full transcript here.");
+            .ReturnsAsync(TranscriptResult.Success("Full transcript here."));
 
         // Act
         var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
@@ -136,8 +137,8 @@ public class ArticleContentServiceTests
         result.Title.Should().Be("Copilot Features");
         result.ExternalUrl.Should().Be("https://www.youtube.com/watch?v=xyz789");
         result.PublishedAt.Should().Be(item.PublishedAt);
-        result.Description.Should().Be("Video about Copilot");
-        result.Author.Should().Be("John Doe");
+        result.FeedItemData.Should().Be("Video about Copilot");
+        result.FeedLevelAuthor.Should().Be("John Doe");
         result.FeedTags.Should().BeEquivalentTo(new[] { "AI", "Copilot" });
         result.FeedName.Should().Be("GitHub Blog");
         result.CollectionName.Should().Be("videos");
@@ -151,7 +152,7 @@ public class ArticleContentServiceTests
         var item = CreateYouTubeItem("https://youtu.be/abc123");
         _mockTranscript
             .Setup(t => t.GetTranscriptAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
-            .ReturnsAsync("Short url transcript");
+            .ReturnsAsync(TranscriptResult.Success("Short url transcript"));
 
         // Act
         var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
@@ -168,13 +169,14 @@ public class ArticleContentServiceTests
         var item = CreateYouTubeItem();
         _mockTranscript
             .Setup(t => t.GetTranscriptAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
-            .ReturnsAsync("   ");
+            .ReturnsAsync(TranscriptResult.Failure("Caption track was empty"));
 
         // Act
         var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
 
         // Assert
-        result.Should().BeSameAs(item);
+        result.FullContent.Should().BeNull();
+        result.TranscriptFailureReason.Should().Be("Caption track was empty");
     }
 
     // ── HTML Content Extraction Tests ────────────────────────────────────────
@@ -387,7 +389,7 @@ public class ArticleContentServiceTests
             Title = "Test",
             ExternalUrl = "",
             PublishedAt = DateTimeOffset.UtcNow,
-            Description = "Desc",
+            FeedItemData = "Desc",
             FeedName = "Feed",
             CollectionName = "blogs"
         };
@@ -409,8 +411,8 @@ public class ArticleContentServiceTests
             Title = "Article Title",
             ExternalUrl = "https://example.com/article",
             PublishedAt = new DateTimeOffset(2024, 6, 1, 12, 0, 0, TimeSpan.Zero),
-            Description = "Article description",
-            Author = "Jane Doe",
+            FeedItemData = "Article description",
+            FeedLevelAuthor = "Jane Doe",
             FeedTags = ["Azure", "DevOps"],
             FeedName = "Tech Blog",
             CollectionName = "blogs"
@@ -426,8 +428,8 @@ public class ArticleContentServiceTests
         result.Title.Should().Be("Article Title");
         result.ExternalUrl.Should().Be("https://example.com/article");
         result.PublishedAt.Should().Be(item.PublishedAt);
-        result.Description.Should().Be("Article description");
-        result.Author.Should().Be("Jane Doe");
+        result.FeedItemData.Should().Be("Article description");
+        result.FeedLevelAuthor.Should().Be("Jane Doe");
         result.FeedTags.Should().BeEquivalentTo(new[] { "Azure", "DevOps" });
         result.FeedName.Should().Be("Tech Blog");
         result.CollectionName.Should().Be("blogs");

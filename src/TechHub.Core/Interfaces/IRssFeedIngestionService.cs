@@ -8,8 +8,9 @@ namespace TechHub.Core.Interfaces;
 public interface IRssFeedIngestionService
 {
     /// <summary>
-    /// Downloads the feed at <paramref name="feedConfig"/> and returns items published
-    /// within the configured age limit, newest first.
+    /// Downloads the feed at <paramref name="feedConfig"/> and returns a result indicating
+    /// success (with items published within the configured age limit, newest first) or failure
+    /// (feed download or parse error).
     /// </summary>
-    Task<IReadOnlyList<RawFeedItem>> IngestAsync(FeedConfig feedConfig, CancellationToken ct = default);
+    Task<FeedIngestionResult> IngestAsync(FeedConfig feedConfig, CancellationToken ct = default);
 }

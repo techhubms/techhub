@@ -1067,7 +1067,7 @@ function Run {
             Start-Job -ScriptBlock {
                 param($dir, $project, $launchProfile, $config, $logPath)
                 Set-Location $dir
-                & dotnet watch --project $project --no-build --launch-profile $launchProfile --configuration $config *> $logPath
+                & dotnet watch --project $project --no-restore --launch-profile $launchProfile --configuration $config *> $logPath
             } -ArgumentList $appHostDir, $appHostProjectPath, $Environment, $configuration, $consoleLogPath | Out-Null
             Write-Info "AppHost starting in background..."
         }

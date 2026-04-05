@@ -162,6 +162,7 @@ function Get-PgEnv {
         PGDATABASE = $Params['Database']
         PGUSER     = $Params['Username']
         PGPASSWORD = $Params['Password']
+        PGSSLMODE  = if ($Params.ContainsKey('SSL Mode')) { $Params['SSL Mode'].ToLower() -replace ' ', '' } else { 'prefer' }
     }
 }
 
@@ -179,6 +180,7 @@ function Invoke-PgDump {
     $env:PGDATABASE = $PgEnv.PGDATABASE
     $env:PGUSER = $PgEnv.PGUSER
     $env:PGPASSWORD = $PgEnv.PGPASSWORD
+    $env:PGSSLMODE = $PgEnv.PGSSLMODE
 
     $args = @(
         "--format=custom",
@@ -187,7 +189,7 @@ function Invoke-PgDump {
         "--file=$OutputFile"
     )
 
-    if ($Tables -and $Tables.Count -gt 0) {
+    if ($Tables.Count -gt 0) {
         foreach ($table in $Tables) {
             $args += "--table=$table"
         }
@@ -196,6 +198,7 @@ function Invoke-PgDump {
     & pg_dump @args
 
     $env:PGPASSWORD = $null
+    $env:PGSSLMODE = $null
 
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "pg_dump failed with exit code $LASTEXITCODE"
@@ -206,20 +209,44 @@ function Invoke-PgDump {
 function Invoke-PgRestore {
     param(
         [hashtable]$PgEnv,
-        [string]$InputFile
+        [string]$InputFile,
+        [switch]$DropAndRecreate
     )
-
-    Write-Detail "Running pg_restore..."
 
     $env:PGHOST = $PgEnv.PGHOST
     $env:PGPORT = $PgEnv.PGPORT
     $env:PGDATABASE = $PgEnv.PGDATABASE
     $env:PGUSER = $PgEnv.PGUSER
     $env:PGPASSWORD = $PgEnv.PGPASSWORD
+    $env:PGSSLMODE = $PgEnv.PGSSLMODE
+
+    if ($DropAndRecreate) {
+        # Drop and recreate the database from scratch so no stale tables remain.
+        # Connect to the 'postgres' maintenance DB to issue DROP/CREATE.
+        Write-Detail "Dropping and recreating database '$($PgEnv.PGDATABASE)'..."
+        $resetSql = @"
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = '$($PgEnv.PGDATABASE)' AND pid <> pg_backend_pid();
+DROP DATABASE IF EXISTS "$($PgEnv.PGDATABASE)";
+CREATE DATABASE "$($PgEnv.PGDATABASE)" OWNER "$($PgEnv.PGUSER)";
+"@
+        $resetSql | & psql `
+            --host $PgEnv.PGHOST `
+            --port $PgEnv.PGPORT `
+            --username $PgEnv.PGUSER `
+            --dbname postgres `
+            --no-password `
+            -f - 2>&1 | Out-Null
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Failed to drop/recreate database."
+            exit 1
+        }
+        Write-Detail "Database recreated."
+    }
+
+    Write-Detail "Running pg_restore..."
 
     $args = @(
-        "--clean",
-        "--if-exists",
         "--no-owner",
         "--no-acl",
         "--single-transaction",
@@ -230,6 +257,7 @@ function Invoke-PgRestore {
     & pg_restore @args
 
     $env:PGPASSWORD = $null
+    $env:PGSSLMODE = $null
 
     if ($LASTEXITCODE -ne 0) {
         # pg_restore exits with 1 even on partial success (warnings); only fail on exit code > 1
@@ -302,11 +330,26 @@ if (-not $ProductionConnectionString) {
             -o tsv 2>$null
 
         if ($serverFqdn -and $LASTEXITCODE -eq 0) {
-            # Password must be provided via env var POSTGRES_ADMIN_PASSWORD
-            $adminPassword = $env:POSTGRES_ADMIN_PASSWORD
+            Write-Host "   Production server: $serverFqdn" -ForegroundColor Yellow
+
+            # Try to fetch password from GitHub secret POSTGRES_PROD_PW
+            $adminPassword = $null
+            $ghPw = gh secret view POSTGRES_PROD_PW --json value -q ".value" 2>$null
+            if ($ghPw -and $LASTEXITCODE -eq 0) {
+                $adminPassword = $ghPw.Trim()
+                Write-Ok "Retrieved production password from GitHub secret POSTGRES_PROD_PW"
+            }
+
             if (-not $adminPassword) {
-                Write-Fail "POSTGRES_ADMIN_PASSWORD environment variable is required when auto-fetching connection string."
-                Write-Fail "Set it or provide -ProductionConnectionString explicitly."
+                # Fall back to interactive prompt
+                $securePassword = Read-Host -Prompt "   Enter production database password for '$adminUser'" -AsSecureString
+                $adminPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto(
+                    [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
+                )
+            }
+
+            if (-not $adminPassword) {
+                Write-Fail "Password is required to connect to the production database."
                 exit 1
             }
             $ProductionConnectionString = "Host=$serverFqdn;Database=$prodDb;Username=$adminUser;Password=$adminPassword;SSL Mode=Require"
@@ -346,9 +389,14 @@ if (-not $TargetConnectionString) {
                 -o tsv 2>$null
 
             if ($serverFqdn -and $LASTEXITCODE -eq 0) {
-                $adminPassword = $env:POSTGRES_ADMIN_PASSWORD
+                Write-Host ""
+                Write-Host "   Staging server: $serverFqdn" -ForegroundColor Yellow
+                $securePassword = Read-Host -Prompt "   Enter staging database password for '$adminUser'" -AsSecureString
+                $adminPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto(
+                    [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
+                )
                 if (-not $adminPassword) {
-                    Write-Fail "POSTGRES_ADMIN_PASSWORD environment variable is required for staging restore."
+                    Write-Fail "Password is required to connect to the staging database."
                     exit 1
                 }
                 $TargetConnectionString = "Host=$serverFqdn;Database=$stagingDb;Username=$adminUser;Password=$adminPassword;SSL Mode=Require"
@@ -376,7 +424,7 @@ if (-not $SkipDump) {
     $prodParams = Parse-ConnectionString -ConnectionString $ProductionConnectionString
     $prodPgEnv = Get-PgEnv -Params $prodParams
 
-    $tablesToDump = if ($TablesOnly) { $contentTables } else { @() }
+    [string[]]$tablesToDump = @(if ($TablesOnly) { $contentTables })
 
     if ($tablesToDump.Count -gt 0) {
         Write-Detail "Dumping tables: $($tablesToDump -join ', ')"
@@ -411,9 +459,53 @@ if (-not $SkipRestore) {
 
     Write-Detail "Target: $($targetPgEnv.PGHOST):$($targetPgEnv.PGPORT)/$($targetPgEnv.PGDATABASE)"
 
-    Invoke-PgRestore -PgEnv $targetPgEnv -InputFile $OutputPath
+    # For local restores, stop app servers first so they don't hold DB connections
+    # that would race with DROP DATABASE, then drop and recreate for a clean slate.
+    if ($Target -eq 'local') {
+        Write-Step "Stopping app servers"
+        docker compose stop api web 2>&1 | Out-Null
+        docker compose rm -f api web 2>&1 | Out-Null
+        foreach ($port in @(5001, 5003)) {
+            $pids = lsof -ti ":$port" 2>$null
+            if ($pids) {
+                foreach ($p in $pids) { kill -9 $p 2>$null }
+            }
+        }
+        Write-Ok "App servers stopped"
+    }
+
+    $dropAndRecreate = $Target -eq 'local'
+    Invoke-PgRestore -PgEnv $targetPgEnv -InputFile $OutputPath -DropAndRecreate:$dropAndRecreate
 
     Write-Ok "Restore complete"
+
+    # Reset the local database user password to match the local connection string,
+    # so the app can connect without changing connection strings.
+    if ($Target -eq 'local') {
+        Write-Step "Resetting local database password"
+
+        $localTargetParams = Parse-ConnectionString -ConnectionString $TargetConnectionString
+        $localUser = $localTargetParams['Username']
+        $localPassword = $localTargetParams['Password']
+
+        Write-Detail "Setting password for role '$localUser' to match local connection string"
+
+        $env:PGHOST = $targetPgEnv.PGHOST
+        $env:PGPORT = $targetPgEnv.PGPORT
+        $env:PGDATABASE = $targetPgEnv.PGDATABASE
+        $env:PGUSER = $targetPgEnv.PGUSER
+        $env:PGPASSWORD = $targetPgEnv.PGPASSWORD
+
+        & psql -c "ALTER ROLE $localUser WITH PASSWORD '$localPassword';"
+
+        $env:PGPASSWORD = $null
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Failed to reset local password for role '$localUser'"
+            exit 1
+        }
+        Write-Ok "Local password reset for role '$localUser'"
+    }
 }
 else {
     Write-Step "Skipping restore"

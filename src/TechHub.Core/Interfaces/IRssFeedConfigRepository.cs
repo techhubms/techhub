@@ -25,7 +25,4 @@ public interface IRssFeedConfigRepository
 
     /// <summary>Deletes a feed configuration by ID. Returns true if found and deleted.</summary>
     Task<bool> DeleteAsync(long id, CancellationToken ct = default);
-
-    /// <summary>Seeds feed configs from a JSON file (one-time migration from rss-feeds.json).</summary>
-    Task SeedFromJsonAsync(string jsonPath, CancellationToken ct = default);
 }

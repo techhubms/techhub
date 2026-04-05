@@ -19,9 +19,9 @@
 
         @if (_isAzureAdConfigured)
         {
-            <a href="/MicrosoftIdentity/Account/SignIn?redirectUri=@(Uri.EscapeDataString(_returnUrl))" class="btn admin-login-btn-link" data-enhance-nav="false">
+            <button class="btn admin-login-btn-link" @onclick="SignIn">
                 Sign in with Microsoft
-            </a>
+            </button>
         }
         else
         {
@@ -75,5 +75,12 @@
         {
             _showError = true;
         }
+    }
+
+    private void SignIn()
+    {
+        Navigation.NavigateTo(
+            $"/MicrosoftIdentity/Account/SignIn?redirectUri={Uri.EscapeDataString(_returnUrl)}",
+            forceLoad: true);
     }
 }

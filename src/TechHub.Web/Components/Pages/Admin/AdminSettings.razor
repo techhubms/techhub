@@ -1,0 +1,225 @@
+@page "/admin/settings"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject SectionCache SectionCache
+@inject PersistentComponentState ApplicationState
+@inject ILogger<AdminSettings> Logger
+
+<PageTitle>Settings — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Background Job Settings</h1>
+            <p class="admin-page-subtitle">Enable or disable scheduled background jobs at runtime</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="LoadSettingsAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading settings…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_settings == null || _settings.Count == 0)
+    {
+        <div class="admin-empty">No background job settings found.</div>
+    }
+    else
+    {
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Job Name</th>
+                        <th>Description</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var setting in _settings)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@setting.JobName</td>
+                            <td>@setting.Description</td>
+                            <td>
+                                <button class="@(setting.Enabled ? "btn btn-sm" : "btn-secondary btn-sm")"
+                                        @onclick="() => ToggleJobAsync(setting)"
+                                        disabled="@(_toggling == setting.JobName)">
+                                    @if (_toggling == setting.JobName)
+                                    {
+                                        <span>Saving…</span>
+                                    }
+                                    else
+                                    {
+                                        <span>@(setting.Enabled ? "Enabled" : "Disabled")</span>
+                                    }
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <p class="admin-page-subtitle" style="margin-top: var(--spacing-3);">
+            Disabling a job stops its scheduled runs. Manual triggers from the dashboard still work regardless of this setting.
+        </p>
+    }
+
+    <div class="admin-page-header" style="margin-top: var(--spacing-6);">
+        <div>
+            <h2 class="admin-page-title">Cache Management</h2>
+            <p class="admin-page-subtitle">Invalidate all server-side caches (API content cache and web section cache)</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary"
+                    @onclick="InvalidateCachesAsync"
+                    disabled="@_invalidating">
+                @if (_invalidating)
+                {
+                    <span>Invalidating…</span>
+                }
+                else
+                {
+                    <span>🗑 Invalidate All Caches</span>
+                }
+            </button>
+        </div>
+    </div>
+</div>
+
+@code {
+    private IReadOnlyList<BackgroundJobSetting>? _settings;
+    private bool _loading = true;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private string? _toggling;
+    private bool _invalidating;
+    private PersistingComponentStateSubscription _persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistSettings);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<BackgroundJobSetting>>("admin-job-settings", out var restored))
+        {
+            _settings = restored;
+            _loading = false;
+        }
+        else
+        {
+            await LoadSettingsAsync();
+        }
+    }
+
+    private Task PersistSettings()
+    {
+        ApplicationState.PersistAsJson("admin-job-settings", _settings);
+        return Task.CompletedTask;
+    }
+
+    private async Task LoadSettingsAsync()
+    {
+        _loading = true;
+        _error = null;
+        _message = null;
+
+        try
+        {
+            _settings = await Api.GetJobSettingsAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to load job settings");
+            _error = "Failed to load job settings.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task ToggleJobAsync(BackgroundJobSetting setting)
+    {
+        _toggling = setting.JobName;
+        _message = null;
+
+        try
+        {
+            var newEnabled = !setting.Enabled;
+            await Api.UpdateJobSettingAsync(setting.JobName, newEnabled);
+            _message = $"{setting.JobName} has been {(newEnabled ? "enabled" : "disabled")}.";
+            _messageIsError = false;
+            await LoadSettingsAsync();
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to toggle job {JobName}", setting.JobName);
+            _message = $"Failed to update {setting.JobName}.";
+            _messageIsError = true;
+        }
+        finally
+        {
+            _toggling = null;
+        }
+    }
+
+    private async Task InvalidateCachesAsync()
+    {
+        _invalidating = true;
+        _message = null;
+
+        try
+        {
+            // Invalidate API-side content cache
+            await Api.InvalidateCachesAsync();
+
+            // Refresh the web-side section cache
+            var sections = await Api.GetAllSectionsAsync();
+            if (sections != null)
+            {
+                var sectionList = sections.ToList();
+                if (sectionList.Count > 0)
+                {
+                    SectionCache.Initialize(sectionList);
+                }
+            }
+
+            _message = "All caches invalidated successfully.";
+            _messageIsError = false;
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Failed to invalidate caches");
+            _message = "Failed to invalidate caches.";
+            _messageIsError = true;
+        }
+        finally
+        {
+            _invalidating = false;
+        }
+    }
+
+    public void Dispose()
+    {
+        _persistingSubscription.Dispose();
+    }
+}

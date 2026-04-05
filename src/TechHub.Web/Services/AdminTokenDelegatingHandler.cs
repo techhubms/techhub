@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using Microsoft.Identity.Client;
 using Microsoft.Identity.Web;
 
 namespace TechHub.Web.Services;
@@ -57,6 +58,11 @@ public sealed class AdminTokenDelegatingHandler : DelegatingHandler
                 catch (MicrosoftIdentityWebChallengeUserException)
                 {
                     // Token cache is empty (e.g. after logout or server restart).
+                    // Let the request proceed without a token — the API will return 401.
+                }
+                catch (MsalUiRequiredException)
+                {
+                    // User context unavailable in SignalR circuit (no HttpContext with auth cookies).
                     // Let the request proceed without a token — the API will return 401.
                 }
             }

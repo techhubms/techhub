@@ -36,9 +36,6 @@
 
 ### Utilities and Background Services
 
-- **`TechHub.ContentFixer/`** - CLI utility for legacy content maintenance
-  - Retained for historical migrations of local development data
-
 See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and architecture guidelines.
 
 ## Tests (`tests/`)

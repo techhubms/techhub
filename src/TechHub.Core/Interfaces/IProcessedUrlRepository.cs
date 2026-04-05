@@ -19,13 +19,13 @@ public interface IProcessedUrlRepository
     Task<ProcessedUrl?> GetAsync(string externalUrl, CancellationToken ct = default);
 
     /// <summary>Records a successfully processed URL (AI included, written to content_items), optionally with YouTube tags.</summary>
-    Task RecordSuccessAsync(string externalUrl, IReadOnlyList<string>? youtubeTags = null, string? feedName = null, string? collectionName = null, string? reason = null, CancellationToken ct = default);
+    Task RecordSuccessAsync(string externalUrl, IReadOnlyList<string>? youtubeTags = null, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default);
 
     /// <summary>Records a URL that was skipped by AI categorization (not relevant enough to include).</summary>
-    Task RecordSkippedAsync(string externalUrl, string? feedName = null, string? collectionName = null, string? reason = null, CancellationToken ct = default);
+    Task RecordSkippedAsync(string externalUrl, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default);
 
     /// <summary>Records a failed processing attempt for a URL.</summary>
-    Task RecordFailureAsync(string externalUrl, string errorMessage, string? feedName = null, string? collectionName = null, string? reason = null, CancellationToken ct = default);
+    Task RecordFailureAsync(string externalUrl, string errorMessage, string? feedName = null, string? collectionName = null, string? reason = null, bool? hasTranscript = null, long? jobId = null, string? slug = null, CancellationToken ct = default);
 
     /// <summary>
     /// Gets a paged list of processed URLs with optional filters.
@@ -38,6 +38,7 @@ public interface IProcessedUrlRepository
         string? search = null,
         string? feedName = null,
         string? collectionName = null,
+        long? jobId = null,
         CancellationToken ct = default);
 
     /// <summary>Deletes a processed URL record, its associated content item, and expanded tags so it can be retried on the next run.</summary>

@@ -55,4 +55,54 @@ public sealed class ProcessedContentItem
     /// Includes roundup summary, key topics, and relevance level.
     /// </summary>
     public RoundupMetadata? RoundupMetadata { get; init; }
+
+    /// <summary>
+    /// Creates a copy of this item with the specified subcollection name.
+    /// </summary>
+    public ProcessedContentItem WithSubcollectionName(string subcollectionName)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = Content,
+            Excerpt = Excerpt,
+            DateEpoch = DateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = subcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = Tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = ContentHash,
+            RoundupMetadata = RoundupMetadata
+        };
+    }
+
+    /// <summary>
+    /// Creates a copy of this item with the specified content.
+    /// </summary>
+    public ProcessedContentItem WithContent(string content)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = content,
+            Excerpt = Excerpt,
+            DateEpoch = DateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = SubcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = Tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = ContentHash,
+            RoundupMetadata = RoundupMetadata
+        };
+    }
 }

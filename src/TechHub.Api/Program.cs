@@ -12,6 +12,8 @@ using TechHub.Core.Logging;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services;
+using TechHub.Infrastructure.Services.ContentProcessing;
+using TechHub.Infrastructure.Services.RoundupGeneration;
 using TechHub.ServiceDefaults;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -108,6 +110,9 @@ builder.Services.AddScoped<IRssFeedConfigRepository, RssFeedConfigRepository>();
 // Custom page data repository (database-backed)
 builder.Services.AddScoped<ICustomPageDataRepository, CustomPageDataRepository>();
 
+// Background job settings repository (database-backed)
+builder.Services.AddScoped<IBackgroundJobSettingRepository, BackgroundJobSettingRepository>();
+
 // ─── Content Processing Pipeline ─────────────────────────────────────────────
 // Configure content processing options
 builder.Services.Configure<ContentProcessorOptions>(
@@ -197,6 +202,12 @@ builder.Services.AddTransient<IAiCategorizationService, AiCategorizationService>
 // Admin services
 builder.Services.AddTransient<DatabaseStatisticsService>();
 
+// Content review repository — scoped (reuses the scoped IDbConnection)
+builder.Services.AddScoped<IContentReviewRepository, ContentReviewRepository>();
+
+// Content fixer service — scoped (reuses the scoped IDbConnection)
+builder.Services.AddScoped<IContentFixerService, ContentFixerService>();
+
 // Scoped orchestrator — creates its own scope per call to run in IHostedService
 builder.Services.AddScoped<ContentProcessingService>();
 
@@ -204,11 +215,18 @@ builder.Services.AddScoped<ContentProcessingService>();
 builder.Services.AddSingleton<ContentProcessingBackgroundService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentProcessingBackgroundService>());
 
+// Content item write repository (scoped — reuses the scoped IDbConnection)
+builder.Services.AddScoped<IContentItemWriteRepository, ContentItemWriteRepository>();
+
+// Content fixer background service — manual trigger only, no periodic schedule
+builder.Services.AddSingleton<ContentFixerBackgroundService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<ContentFixerBackgroundService>());
+
 // ─── Roundup Generator Pipeline ──────────────────────────────────────────────
 builder.Services.Configure<RoundupGeneratorOptions>(
     builder.Configuration.GetSection(RoundupGeneratorOptions.SectionName));
 builder.Services.AddScoped<ISectionRoundupRepository, SectionRoundupRepository>();
-builder.Services.AddScoped<IRoundupGeneratorService, RoundupGeneratorService>();
+builder.Services.AddRoundupGeneration();
 builder.Services.AddSingleton<RoundupGeneratorBackgroundService>();
 builder.Services.AddHostedService(sp => sp.GetRequiredService<RoundupGeneratorBackgroundService>());
 

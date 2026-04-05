@@ -326,47 +326,4 @@ public record ContentItem
     /// Computed property: Date as DateTime (UTC)
     /// </summary>
     public DateTime DateUtc => DateTimeOffset.FromUnixTimeSeconds(DateEpoch).UtcDateTime;
-
-    /// <summary>
-    /// Section priority order (matches the menubar order).
-    /// Used to determine which section is "primary" when an item belongs to multiple sections.
-    /// </summary>
-    private static readonly string[] _sectionPriorityOrder =
-    [
-        "github-copilot",
-        "ai",
-        "ml",
-        "dotnet",
-        "azure",
-        "devops",
-        "security"
-    ];
-
-    /// <summary>
-    /// Computes the primary section name from a list of section names using priority rules.
-    /// Priority order: github-copilot > ai > ml > dotnet > azure > devops > security.
-    /// </summary>
-    /// <param name="sectionNames">List of section names (e.g., ["ai", "github-copilot"])</param>
-    /// <returns>The primary section name, or "all" if no priority section found</returns>
-    public static string ComputePrimarySectionName(IReadOnlyList<string> sectionNames)
-    {
-        ArgumentNullException.ThrowIfNull(sectionNames);
-
-        if (sectionNames.Count == 0)
-        {
-            return "all";
-        }
-
-        // Find the first section that matches in priority order
-        foreach (var prioritySection in _sectionPriorityOrder)
-        {
-            if (sectionNames.Contains(prioritySection, StringComparer.OrdinalIgnoreCase))
-            {
-                return prioritySection;
-            }
-        }
-
-        // No priority match found, return first section (we already checked Count > 0 above)
-        return sectionNames[0].ToLowerInvariant();
-    }
 }

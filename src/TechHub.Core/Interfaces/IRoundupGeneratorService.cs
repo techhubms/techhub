@@ -1,3 +1,5 @@
+using TechHub.Core.Models.ContentProcessing;
+
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
@@ -9,11 +11,11 @@ public interface IRoundupGeneratorService
 {
     /// <summary>
     /// Generates a weekly roundup for the given date range and writes it to the database.
-    /// Skips generation if a roundup for this week already exists.
     /// </summary>
     /// <param name="weekStart">Monday of the week to generate (Europe/Brussels).</param>
     /// <param name="weekEnd">Sunday of the week to generate (Europe/Brussels).</param>
+    /// <param name="progress">Optional progress reporter for streaming status messages to callers.</param>
     /// <param name="ct">Cancellation token.</param>
-    /// <returns>True if a new roundup was generated; false if one already existed.</returns>
-    Task<bool> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, CancellationToken ct = default);
+    /// <returns>Outcome indicating whether a roundup was generated (including its slug) or why it was skipped.</returns>
+    Task<RoundupGenerationOutcome> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, IProgress<string>? progress = null, CancellationToken ct = default);
 }

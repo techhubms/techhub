@@ -125,6 +125,7 @@ The admin area at `/admin` provides:
 - **Run Now** button — Triggers an immediate out-of-schedule run
 - **RSS Feeds** — Full CRUD management of feed configurations
 - **Processed URLs** — Browse all processed URLs with status/reason; remove entries to retry
+- **Reviews** — Content review queue for proposed fixer changes (approve/reject before applying)
 
 See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
@@ -135,6 +136,43 @@ See [admin-authentication.md](admin-authentication.md) for authentication setup.
 - **Transcript failures**: Non-fatal; YouTube items are processed without transcript
 - **AI API failures**: Retried up to `MaxRetries` times (configurable in `AiCategorizationOptions`)
 - **Rate limiting**: Configurable delay between AI calls (`RateLimitDelaySeconds`)
+
+### Subcollection Rules
+
+Content items can be automatically assigned to subcollections based on the feed name and
+video/article title. This is configured in `appsettings.json` under `ContentProcessor.SubcollectionRules`.
+
+Each rule has three fields:
+
+| Field | Description |
+|---|---|
+| `FeedName` | Feed name to match (exact, case-insensitive) |
+| `TitlePattern` | Title pattern with `*` wildcard support (case-insensitive) |
+| `Subcollection` | Subcollection name to assign when the rule matches |
+
+**Example configuration**:
+
+```json
+{
+  "ContentProcessor": {
+    "SubcollectionRules": [
+      {
+        "FeedName": "Fokko at Work YouTube",
+        "TitlePattern": "Visual Studio Code and GitHub Copilot*",
+        "Subcollection": "vscode-updates"
+      }
+    ]
+  }
+}
+```
+
+This rule automatically assigns the `vscode-updates` subcollection to any video from the
+"Fokko at Work YouTube" feed whose title starts with "Visual Studio Code and GitHub Copilot".
+These videos then appear on the VS Code Updates page at `/github-copilot/vscode-updates`.
+
+Rules are applied after AI categorization succeeds, so only items that pass the AI filter
+are assigned subcollections. Manually added items with subcollections already set in the
+database are not affected (the pipeline skips items that already exist).
 
 ## Weekly Roundups
 
@@ -183,3 +221,58 @@ If an article was skipped with an unexpected reason:
 3. Check the `Reason` field to understand the AI''s decision
 4. If the decision was wrong, click **Remove** to delete the entry — it will be retried on the
    next scheduled run
+
+## Content Fixer
+
+`ContentFixerBackgroundService` performs bulk content quality fixes across all items in the
+database. It runs on-demand via the admin dashboard (manual trigger only).
+
+### Fix Operations
+
+| Operation | Description |
+|---|---|
+| **Tag normalization** | Adds missing collection/section tags, removes deprecated tags |
+| **Author normalization** | Standardizes author names to canonical forms |
+| **Markdown repair** | Fixes formatting issues (heading spacing, whitespace, HTML entities) |
+| **Markdown validation** | Detects structural issues via Markdig AST (empty headings, broken links) |
+
+### Content Review Queue
+
+When the content fixer runs, proposed changes are queued in the `content_reviews` table for
+admin approval instead of being applied directly. This provides a review step before any
+automated changes are applied to content.
+
+**Review workflow**:
+
+1. Admin triggers a content fixer run from the dashboard
+2. The fixer scans all content and creates review records for proposed changes
+3. Admin navigates to **Reviews** (`/admin/reviews`) to see pending changes
+4. Each review shows the change type (tags/markdown/author/validation), original value, and fixed value
+5. Slug column links to the live article (when `primary_section_name` is available)
+6. Admin can **Approve** or **Reject** individual changes, or use **Approve All** / **Reject All**
+   for bulk actions
+7. Admin can click the **Edit** button to open a modal and manually fix the content before approving
+8. Approved changes are applied to `content_items`; rejected changes are discarded
+
+**Review statuses**: `pending`, `approved`, `rejected`
+
+**Change types**: `tags` (tag normalization), `markdown` (formatting fixes), `author` (name standardization), `validation` (structural issues — informational, no automatic fix)
+
+### Markdown Preview
+
+The admin area provides a markdown preview endpoint (`POST /api/admin/content-items/preview-markdown`)
+that renders raw markdown to HTML. This is used in the review page to preview before/after
+markdown changes.
+
+### Admin Endpoints
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/admin/reviews` | GET | List reviews filtered by status |
+| `/api/admin/reviews/summary` | GET | Get pending/approved/rejected counts |
+| `/api/admin/reviews/{id}/approve` | POST | Approve and apply a single change |
+| `/api/admin/reviews/{id}/reject` | POST | Reject a single change |
+| `/api/admin/reviews/approve-all` | POST | Approve all pending reviews |
+| `/api/admin/reviews/reject-all` | POST | Reject all pending reviews |
+| `/api/admin/reviews/{id}` | PUT | Update fixed value of a pending review |
+| `/api/admin/content-items/preview-markdown` | POST | Render markdown to HTML |

@@ -1,0 +1,644 @@
+@page "/admin/reviews"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@using TechHub.Web.Helpers
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+@inject ILogger<AdminReviews> Logger
+
+<PageTitle>Content Reviews — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Content Reviews</h1>
+            <p class="admin-page-subtitle">Review proposed content fixes before they are applied — approve or reject changes</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+            @if (_summary is { Pending: > 0 })
+            {
+                <button class="btn" @onclick="ApproveAllAsync" disabled="@_bulkActioning">
+                    @(_bulkActioning ? "Processing…" : $"✓ Approve All ({_summary.Pending})")
+                </button>
+                <button class="btn-danger" @onclick="RejectAllAsync" disabled="@_bulkActioning">
+                    @(_bulkActioning ? "Processing…" : $"✗ Reject All ({_summary.Pending})")
+                </button>
+            }
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @* ── Filters ── *@
+    <div class="admin-filters">
+        <div class="admin-filter-group">
+            <label class="admin-label" for="statusFilter">Status</label>
+            <select id="statusFilter" class="admin-input" @bind="_statusFilter" @bind:after="ApplyFilterAsync">
+                <option value="">All</option>
+                <option value="pending">Pending</option>
+                <option value="approved">Approved</option>
+                <option value="rejected">Rejected</option>
+            </select>
+        </div>
+    </div>
+
+    @* ── Summary badges ── *@
+    @if (_summary != null)
+    {
+        <div class="review-summary-badges">
+            <span class="admin-status admin-status-warning">@_summary.Pending pending</span>
+            <span class="admin-status admin-status-success">@_summary.Approved approved</span>
+            <span class="admin-status admin-status-failed">@_summary.Rejected rejected</span>
+        </div>
+    }
+
+    @* ── Content ── *@
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading reviews…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_reviews == null || _reviews.Count == 0)
+    {
+        <div class="admin-empty">No content reviews match the current filter.</div>
+    }
+    else
+    {
+        <div class="admin-result-summary">Showing @_reviews.Count reviews</div>
+
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Collection</th>
+                        <th>Slug</th>
+                        <th>Type</th>
+                        <th colspan="2">Changes</th>
+                        <th>Status</th>
+                        <th>Created</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var review in _reviews)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@review.CollectionName</td>
+                            <td class="admin-cell-article" title="@review.Slug">
+                                <a href="/admin/content-preview/@review.CollectionName/@review.Slug"
+                                   target="_blank" rel="noopener" class="review-article-link"
+                                   title="View content (admin preview)">
+                                    @TruncateSlug(review.Slug)
+                                </a>
+                            </td>
+                            <td>
+                                <span class="review-change-type review-change-type-@review.ChangeType">
+                                    @review.ChangeType
+                                </span>
+                            </td>
+                            <td class="review-cell-diff" colspan="2">
+                                @if (review.ChangeType == ContentReviewChangeType.Tags)
+                                {
+                                    @* Inline tag diff: show removed/kept/added pills *@
+                                    var (removed, added, kept) = DiffHelper.DiffTagsCsv(review.OriginalValue, review.FixedValue);
+                                    <div class="review-tag-diff">
+                                        @foreach (var t in removed)
+                                        {
+                                            <span class="review-tag-pill review-tag-removed">−@t</span>
+                                        }
+                                        @foreach (var t in kept)
+                                        {
+                                            <span class="review-tag-pill review-tag-kept">@t</span>
+                                        }
+                                        @foreach (var t in added)
+                                        {
+                                            <span class="review-tag-pill review-tag-added">+@t</span>
+                                        }
+                                    </div>
+                                }
+                                else if (review.ChangeType == ContentReviewChangeType.Author)
+                                {
+                                    <span class="review-author-diff">
+                                        <span class="review-author-removed">@review.OriginalValue</span>
+                                        <span class="review-author-arrow">→</span>
+                                        <span class="review-author-added">@review.FixedValue</span>
+                                    </span>
+                                }
+                                else if (review.ChangeType == ContentReviewChangeType.Validation)
+                                {
+                                    <span class="review-value-text" title="@review.OriginalValue">@TruncateValue(review.OriginalValue)</span>
+                                    <span class="review-author-arrow">→</span>
+                                    <span class="review-value-text review-value-warning" title="@review.FixedValue">@TruncateValue(review.FixedValue)</span>
+                                }
+                                else if (review.ChangeType == ContentReviewChangeType.Markdown)
+                                {
+                                    <button class="admin-link-btn review-value-text" title="View diff"
+                                            @onclick="() => ShowDiff(review)">
+                                        ⊕ Diff
+                                    </button>
+                                    <button class="admin-link-btn review-value-text" title="View original markdown"
+                                            @onclick="() => ShowPreview(review, showOriginal: true)">
+                                        Original
+                                    </button>
+                                    <button class="admin-link-btn review-value-text review-value-fixed" title="View rendered result"
+                                            @onclick="() => ShowPreview(review, showOriginal: false)">
+                                        Fixed
+                                    </button>
+                                    @if (review.Status == ContentReviewStatus.Pending)
+                                    {
+                                        <button class="admin-link-btn" @onclick="() => OpenFixedValueEditor(review)"
+                                                title="Edit proposed change">
+                                            ✎
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="review-value-text" title="@review.OriginalValue">@TruncateValue(review.OriginalValue)</span>
+                                    <span class="review-author-arrow">→</span>
+                                    <span class="review-value-text review-value-fixed" title="@review.FixedValue">@TruncateValue(review.FixedValue)</span>
+                                }
+                            </td>
+                            <td>
+                                <span class="admin-status @GetStatusCssClass(review.Status)">
+                                    @review.Status
+                                </span>
+                            </td>
+                            <td class="admin-cell-mono">@review.CreatedAt.ToString("MM-dd HH:mm")</td>
+                            <td class="review-actions-cell">
+                                @if (review.Status == ContentReviewStatus.Pending)
+                                {
+                                    <button class="admin-link-btn"
+                                            @onclick="() => ApproveAsync(review)"
+                                            disabled="@(_actioningId == review.Id)">
+                                        @(_actioningId == review.Id ? "…" : "✓")
+                                    </button>
+                                    <button class="admin-link-btn admin-link-btn-danger"
+                                            @onclick="() => RejectAsync(review)"
+                                            disabled="@(_actioningId == review.Id)">
+                                        @(_actioningId == review.Id ? "…" : "✗")
+                                    </button>
+                                    @if (review.ChangeType != ContentReviewChangeType.Markdown)
+                                    {
+                                        <button class="admin-link-btn"
+                                                @onclick="() => OpenContentItemEditorAsync(review)"
+                                                title="Edit content item">
+                                            ✎
+                                        </button>
+                                    }
+                                }
+                                else
+                                {
+                                    <span class="admin-cell-mono">—</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@* ── Preview Modal (rendered markdown / diff) ── *@
+@if (_previewOpen)
+{
+    <div class="admin-modal-backdrop" @onclick="ClosePreview" role="dialog" aria-modal="true" tabindex="-1">
+        <div class="admin-modal admin-modal-large" @onclick:stopPropagation="true">
+            <div class="admin-modal-header">
+                <h3 class="admin-modal-title">@_previewTitle</h3>
+                <button class="admin-modal-close" @onclick="ClosePreview" aria-label="Close">×</button>
+            </div>
+            <div class="admin-modal-body">
+                @if (_previewLoading)
+                {
+                    <div class="admin-loading">Rendering preview…</div>
+                }
+                else if (_previewIsDiff && _diffLines != null)
+                {
+                    <ReviewDiff Lines="@_diffLines" />
+                }
+                else if (_previewIsRaw)
+                {
+                    <pre class="review-raw-markdown">@_previewHtml</pre>
+                }
+                else
+                {
+                    <article class="article-body admin-preview-article">
+                        @((MarkupString)_previewHtml)
+                    </article>
+                }
+            </div>
+            <div class="admin-modal-footer">
+                <button class="btn-secondary" @onclick="ClosePreview">Close</button>
+            </div>
+        </div>
+    </div>
+}
+
+@* ── Fixed Value Editor Modal ── *@
+@if (_fixedValueEditorOpen)
+{
+    <div class="admin-modal-backdrop" @onclick="CloseFixedValueEditor" role="dialog" aria-modal="true" tabindex="-1">
+        <div class="admin-modal admin-modal-large" @onclick:stopPropagation="true">
+            <div class="admin-modal-header">
+                <h3 class="admin-modal-title">Edit proposed change — @_fixedValueEditorSlug</h3>
+                <button class="admin-modal-close" @onclick="CloseFixedValueEditor" aria-label="Close">×</button>
+            </div>
+            <div class="admin-modal-body">
+                <textarea class="admin-input review-textarea-code"
+                          rows="20"
+                          @bind="_fixedValueEditorText"
+                          @bind:event="oninput"></textarea>
+            </div>
+            <div class="admin-modal-footer">
+                <button class="btn-secondary" @onclick="CloseFixedValueEditor">Cancel</button>
+                <button class="btn" @onclick="SaveFixedValueAsync" disabled="@_fixedValueSaving">
+                    @(_fixedValueSaving ? "Saving…" : "Save")
+                </button>
+            </div>
+        </div>
+    </div>
+}
+
+@* ── Content Item Editor Modal ── *@
+<ContentItemEditorModal Title="@_editorTitle"
+                        EditData="@_editorData"
+                        IsOpen="@_editorOpen"
+                        OnSave="SaveContentItemAsync"
+                        OnClose="CloseContentItemEditor" />
+
+@code {
+    private bool _loading = true;
+    private bool _bulkActioning;
+    private long? _actioningId;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private IReadOnlyList<ContentReview>? _reviews;
+    private ContentReviewSummary? _summary;
+    private string _statusFilter = "pending";
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    // Preview modal state
+    private bool _previewOpen;
+    private bool _previewLoading;
+    private bool _previewIsRaw;
+    private bool _previewIsDiff;
+    private IReadOnlyList<DiffLine>? _diffLines;
+    private string _previewTitle = string.Empty;
+    private string _previewHtml = string.Empty;
+
+    // Fixed value editor modal state
+    private bool _fixedValueEditorOpen;
+    private bool _fixedValueSaving;
+    private long _fixedValueEditorId;
+    private string _fixedValueEditorSlug = string.Empty;
+    private string _fixedValueEditorText = string.Empty;
+
+    // Content item editor modal state
+    private bool _editorOpen;
+    private string _editorTitle = string.Empty;
+    private ContentItemEditData? _editorData;
+    private string _editorCollectionName = string.Empty;
+    private string _editorSlug = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<ContentReview>>("admin-reviews", out var restored) && restored != null)
+        {
+            _reviews = restored;
+            _loading = false;
+            await LoadSummaryAsync();
+            return;
+        }
+
+        await LoadDataAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_reviews != null)
+        {
+            ApplicationState.PersistAsJson("admin-reviews", _reviews);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            var status = string.IsNullOrEmpty(_statusFilter) ? null : _statusFilter;
+            _reviews = await Api.GetContentReviewsAsync(status: status);
+            await LoadSummaryAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load reviews: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task LoadSummaryAsync()
+    {
+        try
+        {
+            _summary = await Api.GetContentReviewSummaryAsync();
+        }
+        catch
+        {
+            // Summary is non-critical; page still works without it
+        }
+    }
+
+    private async Task RefreshAsync()
+    {
+        _message = null;
+        await LoadDataAsync();
+    }
+
+    private async Task ApplyFilterAsync()
+    {
+        await LoadDataAsync();
+    }
+
+    private async Task ApproveAsync(ContentReview review)
+    {
+        _actioningId = review.Id;
+        _message = null;
+
+        try
+        {
+            var approved = await Api.ApproveContentReviewAsync(review.Id);
+            if (approved)
+            {
+                ShowMessage($"Approved review for [{review.CollectionName}/{review.Slug}] ({review.ChangeType})", isError: false);
+            }
+            else
+            {
+                ShowMessage($"Review {review.Id} not found or already processed", isError: true);
+            }
+
+            await LoadDataAsync();
+        }
+        catch (Exception ex)
+        {
+            ShowMessage($"Failed to approve: {ex.Message}", isError: true);
+        }
+        finally
+        {
+            _actioningId = null;
+        }
+    }
+
+    private async Task RejectAsync(ContentReview review)
+    {
+        _actioningId = review.Id;
+        _message = null;
+
+        try
+        {
+            var rejected = await Api.RejectContentReviewAsync(review.Id);
+            if (rejected)
+            {
+                ShowMessage($"Rejected review for [{review.CollectionName}/{review.Slug}] ({review.ChangeType})", isError: false);
+            }
+            else
+            {
+                ShowMessage($"Review {review.Id} not found or already processed", isError: true);
+            }
+
+            await LoadDataAsync();
+        }
+        catch (Exception ex)
+        {
+            ShowMessage($"Failed to reject: {ex.Message}", isError: true);
+        }
+        finally
+        {
+            _actioningId = null;
+        }
+    }
+
+    private async Task ApproveAllAsync()
+    {
+        _bulkActioning = true;
+        _message = null;
+
+        try
+        {
+            var count = await Api.ApproveAllContentReviewsAsync();
+            ShowMessage($"Approved {count} reviews and applied changes", isError: false);
+            await LoadDataAsync();
+        }
+        catch (Exception ex)
+        {
+            ShowMessage($"Failed to approve all: {ex.Message}", isError: true);
+        }
+        finally
+        {
+            _bulkActioning = false;
+        }
+    }
+
+    private async Task RejectAllAsync()
+    {
+        _bulkActioning = true;
+        _message = null;
+
+        try
+        {
+            var count = await Api.RejectAllContentReviewsAsync();
+            ShowMessage($"Rejected {count} reviews", isError: false);
+            await LoadDataAsync();
+        }
+        catch (Exception ex)
+        {
+            ShowMessage($"Failed to reject all: {ex.Message}", isError: true);
+        }
+        finally
+        {
+            _bulkActioning = false;
+        }
+    }
+
+    private async Task ShowPreview(ContentReview review, bool showOriginal)
+    {
+        _previewTitle = showOriginal
+            ? $"Original markdown — {review.Slug}"
+            : $"Edited preview — {review.Slug}";
+        _previewIsRaw = showOriginal;
+        _previewIsDiff = false;
+        _diffLines = null;
+        _previewOpen = true;
+        _previewLoading = true;
+        _previewHtml = string.Empty;
+
+        try
+        {
+            var markdown = showOriginal ? review.OriginalValue : review.FixedValue;
+            if (showOriginal)
+            {
+                _previewHtml = markdown;
+            }
+            else
+            {
+                _previewHtml = await Api.PreviewMarkdownAsync(markdown);
+            }
+        }
+        catch (Exception ex)
+        {
+            _previewHtml = $"Failed to render preview: {ex.Message}";
+            _previewIsRaw = true;
+        }
+        finally
+        {
+            _previewLoading = false;
+        }
+    }
+
+    private void ShowDiff(ContentReview review)
+    {
+        _previewTitle = $"Diff — {review.Slug}";
+        _previewIsRaw = false;
+        _previewIsDiff = true;
+        _previewOpen = true;
+        _previewLoading = false;
+        _diffLines = DiffHelper.DiffLines(review.OriginalValue, review.FixedValue);
+    }
+
+    private void ClosePreview()
+    {
+        _previewOpen = false;
+        _previewIsDiff = false;
+        _diffLines = null;
+        _previewHtml = string.Empty;
+    }
+
+    private void OpenFixedValueEditor(ContentReview review)
+    {
+        _fixedValueEditorId = review.Id;
+        _fixedValueEditorSlug = review.Slug;
+        _fixedValueEditorText = review.FixedValue;
+        _fixedValueEditorOpen = true;
+    }
+
+    private async Task SaveFixedValueAsync()
+    {
+        _fixedValueSaving = true;
+        try
+        {
+            var updated = await Api.UpdateContentReviewFixedValueAsync(_fixedValueEditorId, _fixedValueEditorText);
+            if (updated)
+            {
+                _fixedValueEditorOpen = false;
+                ShowMessage($"Updated proposed change for review {_fixedValueEditorId}.", isError: false);
+                await LoadDataAsync();
+            }
+            else
+            {
+                ShowMessage($"Review {_fixedValueEditorId} not found.", isError: true);
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            ShowMessage($"Failed to save: {ex.Message}", isError: true);
+        }
+        finally
+        {
+            _fixedValueSaving = false;
+        }
+    }
+
+    private void CloseFixedValueEditor() => _fixedValueEditorOpen = false;
+
+    private async Task OpenContentItemEditorAsync(ContentReview review)
+    {
+        _message = null;
+        try
+        {
+            var result = await Api.GetContentItemEditDataAsync(review.CollectionName, review.Slug);
+            if (result is null)
+            {
+                ShowMessage("Content item not found.", isError: true);
+                return;
+            }
+            _editorCollectionName = review.CollectionName;
+            _editorSlug = review.Slug;
+            _editorTitle = $"Edit — {review.CollectionName}/{TruncateSlug(review.Slug)}";
+            _editorData = result;
+            _editorOpen = true;
+        }
+        catch (HttpRequestException ex)
+        {
+            ShowMessage($"Failed to load content item: {ex.Message}", isError: true);
+        }
+    }
+
+    private async Task SaveContentItemAsync(ContentItemEditData editData)
+    {
+        try
+        {
+            await Api.UpdateContentItemEditDataAsync(_editorCollectionName, _editorSlug, editData);
+            _editorOpen = false;
+            ShowMessage($"Content item [{_editorCollectionName}/{_editorSlug}] saved.", isError: false);
+            await LoadDataAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            ShowMessage($"Failed to save content item: {ex.Message}", isError: true);
+        }
+    }
+
+    private void CloseContentItemEditor() => _editorOpen = false;
+
+    private void ShowMessage(string text, bool isError)
+    {
+        _message = text;
+        _messageIsError = isError;
+    }
+
+    private static string GetStatusCssClass(string status) => status switch
+    {
+        ContentReviewStatus.Pending => "admin-status-warning",
+        ContentReviewStatus.Approved => "admin-status-success",
+        ContentReviewStatus.Rejected => "admin-status-failed",
+        _ => ""
+    };
+
+    private static string TruncateSlug(string slug) =>
+        slug.Length > 40 ? string.Concat(slug.AsSpan(0, 37), "…") : slug;
+
+    private static string TruncateValue(string value) =>
+        value.Length > 80 ? string.Concat(value.AsSpan(0, 77), "…") : value;
+}

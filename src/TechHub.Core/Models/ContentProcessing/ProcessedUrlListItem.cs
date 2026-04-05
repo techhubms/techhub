@@ -24,6 +24,15 @@ public sealed class ProcessedUrlListItem
     /// <summary>Collection name from the RSS feed (null for legacy data).</summary>
     public string? CollectionName { get; init; }
 
+    /// <summary>Slug of the associated content item (null when no content item exists, e.g. failed or skipped URLs).</summary>
+    public string? Slug { get; init; }
+
+    /// <summary>Whether a YouTube transcript was successfully fetched. Null for non-YouTube items.</summary>
+    public bool? HasTranscript { get; init; }
+
+    /// <summary>ID of the processing job that last touched this URL. Null for legacy data or after job purge.</summary>
+    public long? JobId { get; init; }
+
     /// <summary>When this URL was first processed.</summary>
     public DateTimeOffset ProcessedAt { get; init; }
 

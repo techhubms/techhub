@@ -8,14 +8,14 @@ using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Repositories;
-using TechHub.Infrastructure.Services;
+using TechHub.Infrastructure.Services.ContentProcessing;
 using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Services;
 
 /// <summary>
 /// Integration tests for <see cref="ContentProcessingService"/>.
-/// Uses a real PostgreSQL database for DB-hitting methods (ExistsAsync, WriteItemAsync, PurgeOldJobsAsync)
+/// Uses a real PostgreSQL database for DB-hitting methods via repositories
 /// while mocking external services (RSS, AI, article fetching, YouTube tags).
 /// </summary>
 public class ContentProcessingServiceTests
@@ -26,8 +26,10 @@ public class ContentProcessingServiceTests
     private readonly Mock<IArticleContentService> _articleService = new();
     private readonly Mock<IAiCategorizationService> _aiService = new();
     private readonly Mock<IYouTubeTagService> _youtubeTagService = new();
+    private readonly Mock<IContentFixerService> _contentFixer = new();
     private readonly ContentProcessingJobRepository _jobRepo;
     private readonly ProcessedUrlRepository _processedUrlRepo;
+    private readonly ContentItemWriteRepository _writeRepo;
     private readonly Mock<IRssFeedConfigRepository> _feedRepo = new();
 
     public ContentProcessingServiceTests(DatabaseFixture<ContentProcessingServiceTests> fixture)
@@ -37,26 +39,33 @@ public class ContentProcessingServiceTests
         _fixture = fixture;
         _jobRepo = new ContentProcessingJobRepository(fixture.Connection, NullLogger<ContentProcessingJobRepository>.Instance);
         _processedUrlRepo = new ProcessedUrlRepository(fixture.Connection, NullLogger<ProcessedUrlRepository>.Instance);
+        _writeRepo = new ContentItemWriteRepository(fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance);
     }
 
     private ContentProcessingService CreateService(ContentProcessorOptions? options = null)
     {
-        var opts = options ?? new ContentProcessorOptions { Enabled = true };
+        var opts = options ?? new ContentProcessorOptions();
 
         // EnrichWithContentAsync returns the item unchanged by default
         _articleService
             .Setup(s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((RawFeedItem item, CancellationToken _) => item);
 
+        // RepairMarkdown returns content unchanged
+        _contentFixer
+            .Setup(s => s.RepairMarkdown(It.IsAny<string>()))
+            .Returns((string content) => content);
+
         return new ContentProcessingService(
             _rssService.Object,
             _articleService.Object,
             _aiService.Object,
             _youtubeTagService.Object,
-            _fixture.Connection,
+            _writeRepo,
             _jobRepo,
             _processedUrlRepo,
             _feedRepo.Object,
+            _contentFixer.Object,
             TimeProvider.System,
             Options.Create(opts),
             NullLogger<ContentProcessingService>.Instance);
@@ -107,34 +116,6 @@ public class ContentProcessingServiceTests
         job.TriggerType.Should().Be("scheduled");
     }
 
-    [Fact]
-    public async Task RunAsync_WhenDisabledAndScheduled_SkipsProcessing()
-    {
-        // Arrange
-        var sut = CreateService(new ContentProcessorOptions { Enabled = false });
-
-        // Act
-        await sut.RunAsync("scheduled", CancellationToken.None);
-
-        // Assert — should not fetch feeds
-        _feedRepo.Verify(r => r.GetEnabledAsync(It.IsAny<CancellationToken>()), Times.Never);
-    }
-
-    [Fact]
-    public async Task RunAsync_WhenDisabledAndManual_ProcessesFeeds()
-    {
-        // Arrange
-        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([]);
-
-        var sut = CreateService(new ContentProcessorOptions { Enabled = false });
-
-        // Act
-        await sut.RunAsync("manual", CancellationToken.None);
-
-        // Assert — should fetch feeds even when disabled
-        _feedRepo.Verify(r => r.GetEnabledAsync(It.IsAny<CancellationToken>()), Times.Once);
-    }
-
     // ── Dedup Logic ────────────────────────────────────────────────────────
 
     [Fact]
@@ -148,7 +129,7 @@ public class ContentProcessingServiceTests
         var rawItem = CreateRawItem(url);
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
 
         var sut = CreateService();
 
@@ -171,7 +152,7 @@ public class ContentProcessingServiceTests
         var processed = CreateProcessedItem(url, "new-pipeline-item");
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included: relevant content" });
 
@@ -197,7 +178,7 @@ public class ContentProcessingServiceTests
         var rawItem = CreateRawItem(url);
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = null, Explanation = "Content excluded: not relevant" });
 
@@ -215,6 +196,33 @@ public class ContentProcessingServiceTests
         result.Items[0].Status.Should().Be("skipped");
     }
 
+    [Fact]
+    public async Task RunAsync_WhenCategorizationFails_RecordsFailureNotSkipped()
+    {
+        // Arrange — AI returns a failure (e.g., empty response) rather than a legitimate skip
+        const string url = "https://example.com/ai-failure-item";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = null, Explanation = "AI returned empty response", IsFailure = true });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — URL recorded as failed, not skipped
+        var exists = await _processedUrlRepo.ExistsAsync(url, CancellationToken.None);
+        exists.Should().BeTrue();
+
+        var result = await _processedUrlRepo.GetPagedAsync(0, 10, status: "failed", search: url, ct: CancellationToken.None);
+        result.Items.Should().ContainSingle();
+        result.Items[0].Status.Should().Be("failed");
+    }
+
     // ── Error Handling ─────────────────────────────────────────────────────
 
     [Fact]
@@ -230,7 +238,7 @@ public class ContentProcessingServiceTests
         var processed2 = CreateProcessedItem(okUrl, $"ai-ok-{testId}");
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([item1, item2]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([item1, item2]));
 
         _aiService.Setup(s => s.CategorizeAsync(
             It.Is<RawFeedItem>(i => i.ExternalUrl == failUrl), It.IsAny<CancellationToken>()))
@@ -272,6 +280,64 @@ public class ContentProcessingServiceTests
         jobs[0].Status.Should().Be("failed");
     }
 
+    [Fact]
+    public async Task RunAsync_WhenFeedDownloadFails_CountsAsError()
+    {
+        // Arrange — feed ingestion returns a failure (e.g., HTTP 404 or timeout)
+        var feed = new FeedConfig { Id = 1, Name = "Broken Feed", Url = "https://example.com/broken", OutputDir = "_blogs", Enabled = true };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Failure("Failed to download feed from https://example.com/broken"));
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — job should complete with errorCount >= 1
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs.Should().NotBeEmpty();
+        jobs[0].Status.Should().Be("completed");
+        jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
+        var jobDetail = await _jobRepo.GetByIdAsync(jobs[0].Id, CancellationToken.None);
+        jobDetail!.LogOutput.Should().Contain("Feed error");
+        jobDetail.LogOutput.Should().Contain("Broken Feed");
+    }
+
+    [Fact]
+    public async Task RunAsync_WhenFeedParseFails_CountsAsErrorAndContinuesNextFeed()
+    {
+        // Arrange — first feed fails, second succeeds
+        var brokenFeed = new FeedConfig { Id = 1, Name = "Broken", Url = "https://example.com/broken", OutputDir = "_blogs", Enabled = true };
+        var goodFeed = new FeedConfig { Id = 2, Name = "Good", Url = "https://example.com/good", OutputDir = "_news", Enabled = true };
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var goodUrl = $"https://example.com/good-item-{testId}";
+        var goodItem = CreateRawItem(goodUrl);
+        var processed = CreateProcessedItem(goodUrl, $"good-item-{testId}");
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([brokenFeed, goodFeed]);
+        _rssService.Setup(r => r.IngestAsync(brokenFeed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Failure("Failed to parse feed: invalid XML"));
+        _rssService.Setup(r => r.IngestAsync(goodFeed, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(FeedIngestionResult.Success([goodItem]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — job completed, error counted for broken feed, good item still processed
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs.Should().NotBeEmpty();
+        jobs[0].Status.Should().Be("completed");
+        jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
+        jobs[0].ItemsAdded.Should().BeGreaterThanOrEqualTo(1);
+        jobs[0].FeedsProcessed.Should().Be(2);
+    }
+
     // ── MaxItemsPerRun ────────────────────────────────────────────────────
 
     [Fact]
@@ -284,11 +350,11 @@ public class ContentProcessingServiceTests
             .ToList();
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(items);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success(items));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((RawFeedItem r, CancellationToken _) => new CategorizationResult { Item = CreateProcessedItem(r.ExternalUrl, $"max-limit-{r.Title.Split(' ').Last()}"), Explanation = "Included" });
 
-        var sut = CreateService(new ContentProcessorOptions { Enabled = true, MaxItemsPerRun = 2 });
+        var sut = CreateService(new ContentProcessorOptions { MaxItemsPerRun = 2 });
 
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
@@ -309,8 +375,8 @@ public class ContentProcessingServiceTests
         var item2 = CreateRawItem("https://example.com/multi-feed-b");
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed1, feed2]);
-        _rssService.Setup(r => r.IngestAsync(feed1, It.IsAny<CancellationToken>())).ReturnsAsync([item1]);
-        _rssService.Setup(r => r.IngestAsync(feed2, It.IsAny<CancellationToken>())).ReturnsAsync([item2]);
+        _rssService.Setup(r => r.IngestAsync(feed1, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([item1]));
+        _rssService.Setup(r => r.IngestAsync(feed2, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([item2]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((RawFeedItem r, CancellationToken _) => new CategorizationResult { Item = CreateProcessedItem(r.ExternalUrl, $"multi-feed-{Guid.NewGuid():N}"), Explanation = "Included" });
 
@@ -332,7 +398,7 @@ public class ContentProcessingServiceTests
         var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([]));
 
         var sut = CreateService();
 
@@ -342,8 +408,9 @@ public class ContentProcessingServiceTests
         // Assert — job should have log content
         var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
         jobs.Should().NotBeEmpty();
-        jobs[0].LogOutput.Should().NotBeNullOrWhiteSpace();
-        jobs[0].LogOutput.Should().Contain("Starting content processing run");
+        var jobDetail = await _jobRepo.GetByIdAsync(jobs[0].Id, CancellationToken.None);
+        jobDetail!.LogOutput.Should().NotBeNullOrWhiteSpace();
+        jobDetail.LogOutput.Should().Contain("Starting content processing run");
     }
 
     // ── YouTube Tag Merging ────────────────────────────────────────────────
@@ -364,13 +431,13 @@ public class ContentProcessingServiceTests
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([ytItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
         _youtubeTagService.Setup(s => s.GetTagsAsync(ytItem.ExternalUrl, It.IsAny<CancellationToken>()))
             .ReturnsAsync(new List<string> { "yt-tag-1", "yt-tag-2" });
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = CreateProcessedItem(ytItem.ExternalUrl, "yt-merge-test"), Explanation = "Included" });
 
-        var sut = CreateService(new ContentProcessorOptions { Enabled = true, MaxYouTubeTagCount = 10 });
+        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 10 });
 
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
@@ -408,7 +475,7 @@ public class ContentProcessingServiceTests
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
 
@@ -452,7 +519,7 @@ public class ContentProcessingServiceTests
         var tagsCsv = await _fixture.Connection.QueryFirstAsync<string>(
             "SELECT tags_csv FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
             new { Slug = slug, Collection = "blogs" });
-        tagsCsv.Should().Be(",csharp,azure-openai,");
+        tagsCsv.Should().Be(",csharp,azure-openai,Blogs,");
 
         var primarySection = await _fixture.Connection.QueryFirstAsync<string>(
             "SELECT primary_section_name FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
@@ -493,7 +560,7 @@ public class ContentProcessingServiceTests
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
 
@@ -541,7 +608,7 @@ public class ContentProcessingServiceTests
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
 
@@ -587,7 +654,7 @@ public class ContentProcessingServiceTests
         };
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
 
@@ -639,7 +706,7 @@ public class ContentProcessingServiceTests
         var rawItem = CreateRawItem(skippedUrl);
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
 
         var sut = CreateService();
 
@@ -649,8 +716,9 @@ public class ContentProcessingServiceTests
         // Assert — log should mention "previously skipped", not "previously processed"
         var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
         jobs.Should().NotBeEmpty();
-        jobs[0].LogOutput.Should().Contain("previously skipped");
-        jobs[0].LogOutput.Should().NotContain("previously processed");
+        var jobDetail = await _jobRepo.GetByIdAsync(jobs[0].Id, CancellationToken.None);
+        jobDetail!.LogOutput.Should().Contain("previously skipped");
+        jobDetail.LogOutput.Should().NotContain("previously processed");
     }
 
     // ── Real-time Progress ────────────────────────────────────────────────
@@ -666,7 +734,7 @@ public class ContentProcessingServiceTests
         var processed = CreateProcessedItem(url, $"progress-counters-{testId}");
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync([rawItem]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
 
@@ -680,5 +748,447 @@ public class ContentProcessingServiceTests
         jobs.Should().NotBeEmpty();
         jobs[0].FeedsProcessed.Should().BeGreaterThanOrEqualTo(1);
         jobs[0].ItemsAdded.Should().BeGreaterThanOrEqualTo(1);
+    }
+
+    // ── Transcript Tracking ───────────────────────────────────────────────
+
+    [Fact]
+    public async Task RunAsync_YouTubeItem_WithTranscript_TracksSucceeded()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var feed = new FeedConfig { Id = 1, Name = "YT", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true };
+        var ytUrl = $"https://youtube.com/watch?v=transcript-ok-{testId}";
+        var ytItem = new RawFeedItem
+        {
+            Title = "Video",
+            ExternalUrl = ytUrl,
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "YT",
+            CollectionName = "videos",
+            FeedTags = []
+        };
+        var processed = CreateProcessedItem(ytUrl, $"transcript-ok-{testId}");
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
+
+        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+
+        // Override default article service mock to simulate transcript fetch succeeding
+        _articleService
+            .Setup(s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((RawFeedItem item, CancellationToken _) => new RawFeedItem
+            {
+                Title = item.Title,
+                ExternalUrl = item.ExternalUrl,
+                PublishedAt = item.PublishedAt,
+                FeedName = item.FeedName,
+                CollectionName = item.CollectionName,
+                FeedTags = item.FeedTags,
+                FullContent = "Transcript text here"
+            });
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — has_transcript should be true in processed_urls
+        var result = await _processedUrlRepo.GetPagedAsync(0, 10, search: ytUrl, ct: CancellationToken.None);
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeTrue();
+
+        // Assert — job should track transcript counts
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs[0].TranscriptsSucceeded.Should().BeGreaterThanOrEqualTo(1);
+    }
+
+    [Fact]
+    public async Task RunAsync_YouTubeItem_WithoutTranscript_TracksFailed()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var feed = new FeedConfig { Id = 1, Name = "YT", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true };
+        var ytUrl = $"https://youtube.com/watch?v=transcript-fail-{testId}";
+        var ytItem = new RawFeedItem
+        {
+            Title = "Video",
+            ExternalUrl = ytUrl,
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "YT",
+            CollectionName = "videos",
+            FeedTags = []
+        };
+        var processed = CreateProcessedItem(ytUrl, $"transcript-fail-{testId}");
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
+
+        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+
+        // CreateService already sets up EnrichWithContentAsync to return item unchanged (no transcript)
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — has_transcript should be false in processed_urls
+        var result = await _processedUrlRepo.GetPagedAsync(0, 10, search: ytUrl, ct: CancellationToken.None);
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeFalse();
+
+        // Assert — job should track transcript failures
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs[0].TranscriptsFailed.Should().BeGreaterThanOrEqualTo(1);
+    }
+
+    [Fact]
+    public async Task RunAsync_NonYouTubeItem_HasTranscriptIsNull()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var feed = new FeedConfig { Id = 1, Name = "Blog", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var blogUrl = $"https://example.com/article-{testId}";
+        var rawItem = CreateRawItem(blogUrl);
+        var processed = CreateProcessedItem(blogUrl, $"article-{testId}");
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService();
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — has_transcript should be null for non-YouTube items
+        var result = await _processedUrlRepo.GetPagedAsync(0, 10, search: blogUrl, ct: CancellationToken.None);
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task RunAsync_TranscriptMandatory_WithoutTranscript_FailsItem()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var feed = new FeedConfig { Id = 1, Name = "YT Mandatory", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true, TranscriptMandatory = true };
+        var ytUrl = $"https://youtube.com/watch?v=mandatory-fail-{testId}";
+        var ytItem = new RawFeedItem
+        {
+            Title = "Video",
+            ExternalUrl = ytUrl,
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "YT Mandatory",
+            CollectionName = "videos",
+            FeedTags = []
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
+
+        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+
+        // CreateService sets up EnrichWithContentAsync to return item unchanged (no transcript)
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — AI should NOT be called (item fails before AI)
+        _aiService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
+
+        // Assert — item should be recorded as failed
+        var result = await _processedUrlRepo.GetPagedAsync(0, 10, status: "failed", search: ytUrl, ct: CancellationToken.None);
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeFalse();
+        result.Items[0].ErrorMessage.Should().Contain("Transcript mandatory");
+
+        // Assert — job should count it as an error
+        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
+        jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
+        jobs[0].TranscriptsFailed.Should().BeGreaterThanOrEqualTo(1);
+    }
+
+    [Fact]
+    public async Task RunAsync_TranscriptMandatory_WithTranscript_Succeeds()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var feed = new FeedConfig { Id = 1, Name = "YT Mandatory", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true, TranscriptMandatory = true };
+        var ytUrl = $"https://youtube.com/watch?v=mandatory-ok-{testId}";
+        var ytItem = new RawFeedItem
+        {
+            Title = "Video",
+            ExternalUrl = ytUrl,
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "YT Mandatory",
+            CollectionName = "videos",
+            FeedTags = []
+        };
+        var processed = CreateProcessedItem(ytUrl, $"mandatory-ok-{testId}");
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
+
+        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+
+        // Override default article service mock to simulate transcript fetch succeeding
+        _articleService
+            .Setup(s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((RawFeedItem item, CancellationToken _) => new RawFeedItem
+            {
+                Title = item.Title,
+                ExternalUrl = item.ExternalUrl,
+                PublishedAt = item.PublishedAt,
+                FeedName = item.FeedName,
+                CollectionName = item.CollectionName,
+                FeedTags = item.FeedTags,
+                FullContent = "Transcript text here"
+            });
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — AI should be called (transcript available)
+        _aiService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Once);
+
+        // Assert — item should succeed
+        var result = await _processedUrlRepo.GetPagedAsync(0, 10, search: ytUrl, ct: CancellationToken.None);
+        result.Items.Should().ContainSingle();
+        result.Items[0].Status.Should().Be("succeeded");
+        result.Items[0].HasTranscript.Should().BeTrue();
+    }
+
+    // ── Subcollection Rules ────────────────────────────────────────────────
+
+    [Theory]
+    [InlineData("Visual Studio Code and GitHub Copilot - What's new in March 2026", true)]
+    [InlineData("Visual Studio Code and GitHub Copilot - What's new in April 2026", true)]
+    [InlineData("Visual Studio Code and GitHub Copilot", true)]
+    [InlineData("Some other video about Azure", false)]
+    [InlineData("visual studio code and github copilot - lowercase test", true)]
+    public void MatchesWildcardPattern_WithVSCodePattern_MatchesCorrectly(string title, bool expected)
+    {
+        // Arrange
+        const string pattern = "Visual Studio Code and GitHub Copilot*";
+
+        // Act
+        var result = ContentProcessingService.MatchesWildcardPattern(title, pattern);
+
+        // Assert
+        result.Should().Be(expected);
+    }
+
+    [Fact]
+    public void MatchSubcollectionRule_WhenFeedAndTitleMatch_ReturnsSubcollection()
+    {
+        // Arrange
+        var options = new ContentProcessorOptions
+        {
+            SubcollectionRules =
+            [
+                new SubcollectionRule
+                {
+                    FeedName = "Fokko at Work YouTube",
+                    TitlePattern = "Visual Studio Code and GitHub Copilot*",
+                    Subcollection = "vscode-updates"
+                }
+            ]
+        };
+        var sut = CreateService(options);
+
+        // Act
+        var result = sut.MatchSubcollectionRule("Fokko at Work YouTube", "Visual Studio Code and GitHub Copilot - What's new in March 2026");
+
+        // Assert
+        result.Should().Be("vscode-updates");
+    }
+
+    [Fact]
+    public void MatchSubcollectionRule_WhenFeedMatchesButTitleDoesNot_ReturnsNull()
+    {
+        // Arrange
+        var options = new ContentProcessorOptions
+        {
+            SubcollectionRules =
+            [
+                new SubcollectionRule
+                {
+                    FeedName = "Fokko at Work YouTube",
+                    TitlePattern = "Visual Studio Code and GitHub Copilot*",
+                    Subcollection = "vscode-updates"
+                }
+            ]
+        };
+        var sut = CreateService(options);
+
+        // Act
+        var result = sut.MatchSubcollectionRule("Fokko at Work YouTube", "Building a Custom MCP Server");
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void MatchSubcollectionRule_WhenFeedDoesNotMatch_ReturnsNull()
+    {
+        // Arrange
+        var options = new ContentProcessorOptions
+        {
+            SubcollectionRules =
+            [
+                new SubcollectionRule
+                {
+                    FeedName = "Fokko at Work YouTube",
+                    TitlePattern = "Visual Studio Code and GitHub Copilot*",
+                    Subcollection = "vscode-updates"
+                }
+            ]
+        };
+        var sut = CreateService(options);
+
+        // Act
+        var result = sut.MatchSubcollectionRule("Some Other Channel", "Visual Studio Code and GitHub Copilot - What's new");
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public void MatchSubcollectionRule_WhenNoRulesConfigured_ReturnsNull()
+    {
+        // Arrange
+        var sut = CreateService();
+
+        // Act
+        var result = sut.MatchSubcollectionRule("Any Feed", "Any Title");
+
+        // Assert
+        result.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task RunAsync_WhenSubcollectionRuleMatches_SetsSubcollectionOnItem()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var url = $"https://www.youtube.com/watch?v=sub-rule-{testId}";
+        var feed = new FeedConfig { Id = 1, Name = "Fokko at Work YouTube", Url = "https://example.com/feed", OutputDir = "_videos", Enabled = true };
+        var rawItem = new RawFeedItem
+        {
+            Title = "Visual Studio Code and GitHub Copilot - What's new in March 2026",
+            ExternalUrl = url,
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "Fokko at Work YouTube",
+            CollectionName = "videos"
+        };
+        var processed = new ProcessedContentItem
+        {
+            Slug = $"vscode-copilot-march-{testId}",
+            Title = "Visual Studio Code and GitHub Copilot - What's new in March 2026",
+            Excerpt = "Monthly VS Code updates",
+            DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            CollectionName = "videos",
+            ExternalUrl = url,
+            FeedName = "Fokko at Work YouTube",
+            ContentHash = $"hash-{testId}",
+            Sections = ["github-copilot", "ai"],
+            PrimarySectionName = "github-copilot",
+            Tags = ["vscode", "copilot"]
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _youtubeTagService.Setup(s => s.GetTagsAsync(It.IsAny<string>(), It.IsAny<CancellationToken>())).ReturnsAsync([]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var options = new ContentProcessorOptions
+        {
+            SubcollectionRules =
+            [
+                new SubcollectionRule
+                {
+                    FeedName = "Fokko at Work YouTube",
+                    TitlePattern = "Visual Studio Code and GitHub Copilot*",
+                    Subcollection = "vscode-updates"
+                }
+            ]
+        };
+        var sut = CreateService(options);
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — verify the item was written to DB with subcollection_name set
+        var dbItem = await _fixture.Connection.QuerySingleOrDefaultAsync<dynamic>(
+            "SELECT subcollection_name FROM content_items WHERE external_url = @Url",
+            new { Url = url });
+        ((string)dbItem!.subcollection_name).Should().Be("vscode-updates");
+    }
+
+    [Fact]
+    public async Task RunAsync_WhenNoSubcollectionRuleMatches_SubcollectionRemainsNull()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var url = $"https://www.youtube.com/watch?v=no-sub-{testId}";
+        var feed = new FeedConfig { Id = 1, Name = "Fokko at Work YouTube", Url = "https://example.com/feed", OutputDir = "_videos", Enabled = true };
+        var rawItem = new RawFeedItem
+        {
+            Title = "Building a Custom MCP Server",
+            ExternalUrl = url,
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "Fokko at Work YouTube",
+            CollectionName = "videos"
+        };
+        var processed = new ProcessedContentItem
+        {
+            Slug = $"mcp-server-{testId}",
+            Title = "Building a Custom MCP Server",
+            Excerpt = "How to build MCP servers",
+            DateEpoch = DateTimeOffset.UtcNow.ToUnixTimeSeconds(),
+            CollectionName = "videos",
+            ExternalUrl = url,
+            FeedName = "Fokko at Work YouTube",
+            ContentHash = $"hash-{testId}",
+            Sections = ["ai"],
+            PrimarySectionName = "ai",
+            Tags = ["mcp"]
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _youtubeTagService.Setup(s => s.GetTagsAsync(It.IsAny<string>(), It.IsAny<CancellationToken>())).ReturnsAsync([]);
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var options = new ContentProcessorOptions
+        {
+            SubcollectionRules =
+            [
+                new SubcollectionRule
+                {
+                    FeedName = "Fokko at Work YouTube",
+                    TitlePattern = "Visual Studio Code and GitHub Copilot*",
+                    Subcollection = "vscode-updates"
+                }
+            ]
+        };
+        var sut = CreateService(options);
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — verify the item was written without a subcollection
+        var dbItem = await _fixture.Connection.QuerySingleOrDefaultAsync<dynamic>(
+            "SELECT subcollection_name FROM content_items WHERE external_url = @Url",
+            new { Url = url });
+        ((string?)dbItem!.subcollection_name).Should().BeNull();
     }
 }

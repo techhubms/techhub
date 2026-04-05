@@ -31,6 +31,14 @@ public static class AdminEndpoints
             .WithName("TriggerRoundupGeneration")
             .WithSummary("Trigger an immediate roundup generation run");
 
+        group.MapPost("/content-fixer/trigger", TriggerContentFixerAsync)
+            .WithName("TriggerContentFixer")
+            .WithSummary("Trigger a bulk content fix run (tags, authors, markdown)");
+
+        group.MapPost("/processing/cancel", CancelRunningJobAsync)
+            .WithName("CancelRunningJob")
+            .WithSummary("Cancel the currently running background job");
+
         group.MapGet("/processing/jobs", GetJobsAsync)
             .WithName("GetProcessingJobs")
             .WithSummary("Get recent content processing job history");
@@ -99,19 +107,71 @@ public static class AdminEndpoints
 
         group.MapGet("/content-items/ai-metadata", GetContentItemAiMetadataAsync)
             .WithName("GetContentItemAiMetadata")
-            .WithSummary("Get the ai_metadata JSON for a content item by external URL");
+            .WithSummary("Get the ai_metadata JSON for a content item by primary key");
 
         group.MapPut("/content-items/ai-metadata", UpdateContentItemAiMetadataAsync)
             .WithName("UpdateContentItemAiMetadata")
-            .WithSummary("Update the ai_metadata JSON for a content item by external URL");
+            .WithSummary("Update the ai_metadata JSON for a content item by primary key");
 
         group.MapGet("/content-items/edit-data", GetContentItemEditDataAsync)
             .WithName("GetContentItemEditData")
-            .WithSummary("Get all editable fields for a content item by external URL");
+            .WithSummary("Get all editable fields for a content item by primary key");
 
         group.MapPut("/content-items/edit-data", UpdateContentItemEditDataAsync)
             .WithName("UpdateContentItemEditData")
-            .WithSummary("Update all editable fields for a content item by external URL");
+            .WithSummary("Update all editable fields for a content item by primary key");
+
+        // ── Background job settings ──────────────────────────────────────────
+
+        group.MapGet("/job-settings", GetJobSettingsAsync)
+            .WithName("GetBackgroundJobSettings")
+            .WithSummary("Get all background job settings");
+
+        group.MapPut("/job-settings/{jobName}", UpdateJobSettingAsync)
+            .WithName("UpdateBackgroundJobSetting")
+            .WithSummary("Update the enabled state for a background job");
+
+        // ── Cache management ─────────────────────────────────────────────────
+
+        group.MapPost("/cache/invalidate", InvalidateCacheAsync)
+            .WithName("InvalidateAllCaches")
+            .WithSummary("Invalidate all server-side caches (content, sections, etc.)");
+
+        // ── Content reviews ──────────────────────────────────────────────────
+
+        group.MapGet("/reviews", GetReviewsAsync)
+            .WithName("GetContentReviews")
+            .WithSummary("Get content reviews filtered by status");
+
+        group.MapGet("/reviews/summary", GetReviewSummaryAsync)
+            .WithName("GetContentReviewSummary")
+            .WithSummary("Get summary counts of pending/approved/rejected reviews");
+
+        group.MapPost("/reviews/{id:long}/approve", ApproveReviewAsync)
+            .WithName("ApproveContentReview")
+            .WithSummary("Approve a single review and apply the change");
+
+        group.MapPost("/reviews/{id:long}/reject", RejectReviewAsync)
+            .WithName("RejectContentReview")
+            .WithSummary("Reject a single review without applying the change");
+
+        group.MapPost("/reviews/approve-all", ApproveAllReviewsAsync)
+            .WithName("ApproveAllContentReviews")
+            .WithSummary("Approve all pending reviews and apply changes");
+
+        group.MapPost("/reviews/reject-all", RejectAllReviewsAsync)
+            .WithName("RejectAllContentReviews")
+            .WithSummary("Reject all pending reviews");
+
+        group.MapPut("/reviews/{id:long}", UpdateReviewFixedValueAsync)
+            .WithName("UpdateContentReviewFixedValue")
+            .WithSummary("Update the fixed value of a pending review");
+
+        // ── Content preview ──────────────────────────────────────────────────
+
+        group.MapPost("/content-items/preview-markdown", PreviewMarkdownAsync)
+            .WithName("PreviewMarkdown")
+            .WithSummary("Render raw markdown to HTML for preview");
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
@@ -128,6 +188,27 @@ public static class AdminEndpoints
     {
         roundupService.TriggerImmediateRun();
         return Results.Accepted("/api/admin/processing/jobs", new { message = "Roundup generation triggered" });
+    }
+
+    private static IResult TriggerContentFixerAsync(
+        ContentFixerBackgroundService contentFixerService)
+    {
+        contentFixerService.TriggerImmediateRun();
+        return Results.Accepted(value: new { message = "Content fixer run triggered" });
+    }
+
+    private static IResult CancelRunningJobAsync(
+        ContentProcessingBackgroundService backgroundService,
+        RoundupGeneratorBackgroundService roundupService,
+        ContentFixerBackgroundService contentFixerService)
+    {
+        var cancelled = backgroundService.CancelCurrentRun() | roundupService.CancelCurrentRun() | contentFixerService.CancelCurrentRun();
+        if (!cancelled)
+        {
+            return Results.Ok(new { message = "No running job to cancel" });
+        }
+
+        return Results.Ok(new { message = "Cancellation requested" });
     }
 
     private static async Task<IResult> GetJobsAsync(
@@ -192,7 +273,8 @@ public static class AdminEndpoints
             Name = name,
             Url = url,
             OutputDir = outputDir,
-            Enabled = request.Enabled
+            Enabled = request.Enabled,
+            TranscriptMandatory = request.TranscriptMandatory
         };
 
         var id = await feedRepo.CreateAsync(feed, ct);
@@ -202,7 +284,8 @@ public static class AdminEndpoints
             Name = name,
             Url = url,
             OutputDir = outputDir,
-            Enabled = request.Enabled
+            Enabled = request.Enabled,
+            TranscriptMandatory = request.TranscriptMandatory
         };
         return Results.Created($"/api/admin/feeds/{id}", created);
     }
@@ -240,7 +323,8 @@ public static class AdminEndpoints
             Name = name,
             Url = url,
             OutputDir = outputDir,
-            Enabled = request.Enabled
+            Enabled = request.Enabled,
+            TranscriptMandatory = request.TranscriptMandatory
         };
 
         var updated = await feedRepo.UpdateAsync(feed, ct);
@@ -276,7 +360,8 @@ public static class AdminEndpoints
         string? status = null,
         string? search = null,
         string? feedName = null,
-        string? collectionName = null)
+        string? collectionName = null,
+        long? jobId = null)
     {
         page = Math.Max(1, page);
         pageSize = Math.Clamp(pageSize, 1, 500);
@@ -292,12 +377,13 @@ public static class AdminEndpoints
         }
 
         var offset = (page - 1) * pageSize;
-        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, ct);
+        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, jobId, ct);
         return Results.Ok(result);
     }
 
     private static async Task<IResult> DeleteProcessedUrlAsync(
         IProcessedUrlRepository repo,
+        IContentRepository contentRepo,
         CancellationToken ct,
         string? url = null)
     {
@@ -307,7 +393,13 @@ public static class AdminEndpoints
         }
 
         var deleted = await repo.DeleteByUrlAsync(url, ct);
-        return deleted ? Results.NoContent() : Results.NotFound();
+        if (!deleted)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.NoContent();
     }
 
     private static async Task<IResult> DeleteAllFailedUrlsAsync(
@@ -382,15 +474,17 @@ public static class AdminEndpoints
     private static async Task<IResult> GetContentItemAiMetadataAsync(
         IContentRepository contentRepo,
         CancellationToken ct,
-        string? url = null)
+        string? collection = null,
+        string? slug = null)
     {
-        if (string.IsNullOrWhiteSpace(url))
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
         {
-            return Results.BadRequest("The 'url' query parameter is required.");
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
         }
 
-        url = url.Trim().Sanitize();
-        var item = await contentRepo.GetAiMetadataByUrlAsync(url, ct);
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
+        var item = await contentRepo.GetAiMetadataAsync(collection, slug, ct);
         return item is null ? Results.NotFound() : Results.Ok(item);
     }
 
@@ -398,14 +492,16 @@ public static class AdminEndpoints
         ContentItemMetadataRequest request,
         IContentRepository contentRepo,
         CancellationToken ct,
-        string? url = null)
+        string? collection = null,
+        string? slug = null)
     {
-        if (string.IsNullOrWhiteSpace(url))
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
         {
-            return Results.BadRequest("The 'url' query parameter is required.");
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
         }
 
-        url = url.Trim().Sanitize();
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
 
         if (string.IsNullOrWhiteSpace(request.AiMetadata))
         {
@@ -421,22 +517,30 @@ public static class AdminEndpoints
             return Results.BadRequest("AiMetadata must be valid JSON.");
         }
 
-        var updated = await contentRepo.UpdateAiMetadataAsync(url, request.AiMetadata, ct);
-        return updated ? Results.NoContent() : Results.NotFound();
+        var updated = await contentRepo.UpdateAiMetadataAsync(collection, slug, request.AiMetadata, ct);
+        if (!updated)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.NoContent();
     }
 
     private static async Task<IResult> GetContentItemEditDataAsync(
         IContentRepository contentRepo,
         CancellationToken ct,
-        string? url = null)
+        string? collection = null,
+        string? slug = null)
     {
-        if (string.IsNullOrWhiteSpace(url))
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
         {
-            return Results.BadRequest("The 'url' query parameter is required.");
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
         }
 
-        url = url.Trim().Sanitize();
-        var item = await contentRepo.GetEditDataByUrlAsync(url, ct);
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
+        var item = await contentRepo.GetEditDataAsync(collection, slug, ct);
         return item is null ? Results.NotFound() : Results.Ok(item);
     }
 
@@ -444,14 +548,16 @@ public static class AdminEndpoints
         ContentItemEditData request,
         IContentRepository contentRepo,
         CancellationToken ct,
-        string? url = null)
+        string? collection = null,
+        string? slug = null)
     {
-        if (string.IsNullOrWhiteSpace(url))
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
         {
-            return Results.BadRequest("The 'url' query parameter is required.");
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
         }
 
-        url = url.Trim().Sanitize();
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
 
         if (string.IsNullOrWhiteSpace(request.Title))
         {
@@ -491,8 +597,150 @@ public static class AdminEndpoints
             }
         }
 
-        var updated = await contentRepo.UpdateEditDataAsync(url, request, ct);
+        var updated = await contentRepo.UpdateEditDataAsync(collection, slug, request, ct);
+        if (!updated)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.NoContent();
+    }
+
+    // ── Background job settings handlers ─────────────────────────────────────
+
+    private static async Task<IResult> GetJobSettingsAsync(
+        IBackgroundJobSettingRepository repo,
+        CancellationToken ct)
+    {
+        var settings = await repo.GetAllAsync(ct);
+        return Results.Ok(settings);
+    }
+
+    private static async Task<IResult> UpdateJobSettingAsync(
+        string jobName,
+        JobSettingUpdateRequest request,
+        IBackgroundJobSettingRepository repo,
+        CancellationToken ct)
+    {
+        jobName = jobName.Trim().Sanitize();
+        var updated = await repo.SetEnabledAsync(jobName, request.Enabled, ct);
         return updated ? Results.NoContent() : Results.NotFound();
+    }
+
+    // ── Cache management handlers ────────────────────────────────────────────
+
+    private static IResult InvalidateCacheAsync(
+        IContentRepository contentRepo)
+    {
+        contentRepo.InvalidateCachedData();
+        return Results.Ok(new { message = "All caches invalidated" });
+    }
+
+    // ── Content review handlers ──────────────────────────────────────────────
+
+    private static async Task<IResult> GetReviewsAsync(
+        IContentReviewRepository reviewRepo,
+        CancellationToken ct,
+        string? status = null,
+        int limit = 100)
+    {
+        status = status?.Trim().Sanitize();
+
+        if (!string.IsNullOrEmpty(status) && status is not "pending" and not "approved" and not "rejected")
+        {
+            return Results.BadRequest("Status must be 'pending', 'approved', or 'rejected'.");
+        }
+
+        limit = Math.Clamp(limit, 1, 1000);
+        var reviews = await reviewRepo.GetByStatusAsync(status, limit, ct);
+        return Results.Ok(reviews);
+    }
+
+    private static async Task<IResult> GetReviewSummaryAsync(
+        IContentReviewRepository reviewRepo,
+        CancellationToken ct)
+    {
+        var summary = await reviewRepo.GetSummaryAsync(ct);
+        return Results.Ok(summary);
+    }
+
+    private static async Task<IResult> ApproveReviewAsync(
+        long id,
+        IContentReviewRepository reviewRepo,
+        IContentRepository contentRepo,
+        CancellationToken ct)
+    {
+        var approved = await reviewRepo.ApproveAsync(id, ct);
+        if (!approved)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.Ok(new { message = "Review approved and change applied" });
+    }
+
+    private static async Task<IResult> RejectReviewAsync(
+        long id,
+        IContentReviewRepository reviewRepo,
+        CancellationToken ct)
+    {
+        var rejected = await reviewRepo.RejectAsync(id, ct);
+        return rejected ? Results.Ok(new { message = "Review rejected" }) : Results.NotFound();
+    }
+
+    private static async Task<IResult> ApproveAllReviewsAsync(
+        IContentReviewRepository reviewRepo,
+        IContentRepository contentRepo,
+        CancellationToken ct)
+    {
+        var count = await reviewRepo.ApproveAllAsync(ct);
+        if (count > 0)
+        {
+            contentRepo.InvalidateCachedData();
+        }
+
+        return Results.Ok(new { approved = count });
+    }
+
+    private static async Task<IResult> RejectAllReviewsAsync(
+        IContentReviewRepository reviewRepo,
+        CancellationToken ct)
+    {
+        var count = await reviewRepo.RejectAllAsync(ct);
+        return Results.Ok(new { rejected = count });
+    }
+
+    private static async Task<IResult> UpdateReviewFixedValueAsync(
+        long id,
+        ReviewFixedValueRequest request,
+        IContentReviewRepository reviewRepo,
+        CancellationToken ct)
+    {
+        if (request.FixedValue is null)
+        {
+            return Results.BadRequest("FixedValue is required.");
+        }
+
+        var updated = await reviewRepo.UpdateFixedValueAsync(id, request.FixedValue, ct);
+        return updated ? Results.Ok(new { message = "Review updated" }) : Results.NotFound();
+    }
+
+    // ── Content preview handlers ─────────────────────────────────────────────
+
+    private static IResult PreviewMarkdownAsync(
+        MarkdownPreviewRequest request,
+        IMarkdownService markdownService)
+    {
+        if (string.IsNullOrWhiteSpace(request.Markdown))
+        {
+            return Results.BadRequest("Markdown content is required.");
+        }
+
+        var processed = markdownService.ProcessYouTubeEmbeds(request.Markdown);
+        var html = markdownService.RenderToHtml(processed);
+        return Results.Ok(new { html });
     }
 }
 
@@ -503,6 +751,7 @@ public sealed class FeedConfigRequest
     public string? Url { get; init; }
     public string? OutputDir { get; init; }
     public bool Enabled { get; init; } = true;
+    public bool TranscriptMandatory { get; init; }
 }
 
 /// <summary>DTO for updating custom page raw JSON.</summary>
@@ -515,4 +764,22 @@ public sealed class CustomPageUpdateRequest
 public sealed class ContentItemMetadataRequest
 {
     public string? AiMetadata { get; init; }
+}
+
+/// <summary>DTO for updating a background job's enabled state.</summary>
+public sealed class JobSettingUpdateRequest
+{
+    public bool Enabled { get; init; }
+}
+
+/// <summary>DTO for rendering markdown to HTML preview.</summary>
+public sealed class MarkdownPreviewRequest
+{
+    public string? Markdown { get; init; }
+}
+
+/// <summary>DTO for updating a review's fixed value.</summary>
+public sealed class ReviewFixedValueRequest
+{
+    public string? FixedValue { get; init; }
 }

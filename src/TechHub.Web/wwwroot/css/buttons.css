@@ -102,6 +102,14 @@
   border-radius: var(--radius-md);
 }
 
+/* Small Button Modifier */
+.btn-sm,
+.btn-secondary.btn-sm {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+  min-height: auto;
+}
+
 /* Link Button - Minimal styling for link-like buttons */
 .btn-link {
   display: inline-flex;

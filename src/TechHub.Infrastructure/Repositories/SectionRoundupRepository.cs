@@ -1,4 +1,7 @@
 using System.Data;
+using System.Globalization;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.Json;
 using Dapper;
 using Microsoft.Extensions.Logging;
@@ -27,7 +30,9 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         "videos", "roundups", "custom"
     };
 
-    public SectionRoundupRepository(IDbConnection connection, ILogger<SectionRoundupRepository> logger)
+    public SectionRoundupRepository(
+        IDbConnection connection,
+        ILogger<SectionRoundupRepository> logger)
     {
         ArgumentNullException.ThrowIfNull(connection);
         ArgumentNullException.ThrowIfNull(logger);
@@ -51,7 +56,10 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
                 ci.external_url     AS ExternalUrl,
                 ci.slug             AS Slug,
                 ci.collection_name  AS CollectionName,
-                ci.ai_metadata      AS AiMetadataJson
+                ci.ai_metadata      AS AiMetadataJson,
+                ci.content          AS Content,
+                ci.feed_name        AS FeedName,
+                ci.date_epoch       AS DateEpoch
             FROM content_items ci
             CROSS JOIN LATERAL (VALUES
                 ('ai',              ci.is_ai),
@@ -65,7 +73,6 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             WHERE s.is_member = TRUE
               AND ci.created_at >= @WeekStart
               AND ci.created_at < @WeekEndExclusive
-              AND ci.ai_metadata IS NOT NULL
               AND ci.collection_name != 'roundups'
             ORDER BY s.section_name, ci.created_at";
 
@@ -138,7 +145,11 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             Relevance = meta?.RoundupRelevance ?? "medium",
             TopicType = meta?.TopicType ?? "news",
             ImpactLevel = meta?.ImpactLevel ?? "medium",
-            TimeSensitivity = meta?.TimeSensitivity ?? "this-week"
+            TimeSensitivity = meta?.TimeSensitivity ?? "this-week",
+            NeedsAiMetadata = meta is null,
+            Content = row.Content,
+            FeedName = row.FeedName,
+            DateEpoch = row.DateEpoch
         };
     }
 
@@ -152,6 +163,9 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         public string Slug { get; init; } = string.Empty;
         public string CollectionName { get; init; } = string.Empty;
         public string? AiMetadataJson { get; init; }
+        public string Content { get; init; } = string.Empty;
+        public string FeedName { get; init; } = string.Empty;
+        public long DateEpoch { get; init; }
     }
 
     private sealed class RoundupAiMetadata
@@ -162,5 +176,146 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         public string TopicType { get; init; } = "news";
         public string ImpactLevel { get; init; } = "medium";
         public string TimeSensitivity { get; init; } = "this-week";
+    }
+
+    // ── ISectionRoundupRepository additional methods ──────────────────────────
+
+    /// <inheritdoc />
+    public async Task<bool> RoundupExistsAsync(string slug, CancellationToken ct = default)
+    {
+        var count = await _connection.ExecuteScalarAsync<int>(new CommandDefinition(
+            "SELECT COUNT(*) FROM content_items WHERE collection_name = 'roundups' AND slug = @Slug",
+            new { Slug = slug },
+            cancellationToken: ct));
+
+        return count > 0;
+    }
+
+    /// <inheritdoc />
+    public async Task<string?> GetPreviousRoundupContentAsync(DateOnly weekStart, CancellationToken ct = default)
+    {
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
+            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
+        var weekStartDt = weekStart.ToDateTime(TimeOnly.MinValue);
+        var weekStartEpoch = (long)TimeZoneInfo.ConvertTimeToUtc(weekStartDt, brusselsZone)
+            .Subtract(DateTime.UnixEpoch).TotalSeconds;
+
+        var content = await _connection.QueryFirstOrDefaultAsync<string>(new CommandDefinition(
+            @"SELECT content
+              FROM content_items
+              WHERE collection_name = 'roundups'
+                AND date_epoch < @WeekStartEpoch
+              ORDER BY date_epoch DESC
+              LIMIT 1",
+            new { WeekStartEpoch = weekStartEpoch },
+            cancellationToken: ct));
+
+        return content;
+    }
+
+    /// <inheritdoc />
+    public async Task WriteRoundupAsync(
+        string slug,
+        DateOnly publishDate,
+        string title,
+        string description,
+        string content,
+        string introduction,
+        IReadOnlyList<string> tags,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(tags);
+
+        var brusselsZone = TimeZoneInfo.FindSystemTimeZoneById(
+            OperatingSystem.IsWindows() ? "Romance Standard Time" : "Europe/Brussels");
+
+        // Publish at 9:00 AM Brussels time on publish date.
+        var publishDt = publishDate.ToDateTime(new TimeOnly(9, 0, 0));
+        var publishUtc = TimeZoneInfo.ConvertTimeToUtc(publishDt, brusselsZone);
+        var dateEpoch = (long)publishUtc.Subtract(DateTime.UnixEpoch).TotalSeconds;
+
+        var externalUrl = string.Create(CultureInfo.InvariantCulture, $"/all/roundups/{slug}");
+
+        // Ensure collection-name tag is always present.
+        const string CollectionTag = "Roundups";
+        var allTags = tags.Any(t => t.Equals(CollectionTag, StringComparison.OrdinalIgnoreCase))
+            ? tags
+            : tags.Concat([CollectionTag]).ToList();
+
+        var tagsCsv = allTags.Count > 0
+            ? string.Create(CultureInfo.InvariantCulture, $",{string.Join(",", allTags)},")
+            : string.Empty;
+
+        var computedHash = Convert.ToHexString(
+            SHA256.HashData(Encoding.UTF8.GetBytes(content)));
+
+        var aiMetadataJson = JsonSerializer.Serialize(new
+        {
+            roundup_summary = description,
+            key_topics = tags,
+            roundup_relevance = "high",
+            topic_type = "news"
+        }, _jsonOptions);
+
+        await _connection.ExecuteAsync(new CommandDefinition(
+            @"INSERT INTO content_items
+                (slug, collection_name, title, content, excerpt, date_epoch,
+                 primary_section_name, external_url, author, feed_name,
+                 tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                 is_ml, is_security, sections_bitmask, content_hash, ai_metadata)
+              VALUES
+                (@Slug, 'roundups', @Title, @Content, @Excerpt, @DateEpoch,
+                 'github-copilot', @ExternalUrl, 'TechHub', 'TechHub',
+                 @TagsCsv, TRUE, TRUE, TRUE, TRUE, TRUE,
+                 TRUE, TRUE, 127, @ContentHash, @AiMetadata::jsonb)
+              ON CONFLICT (collection_name, slug) DO UPDATE SET
+                title            = EXCLUDED.title,
+                content          = EXCLUDED.content,
+                excerpt          = EXCLUDED.excerpt,
+                tags_csv         = EXCLUDED.tags_csv,
+                content_hash     = EXCLUDED.content_hash,
+                ai_metadata      = EXCLUDED.ai_metadata,
+                updated_at       = NOW()",
+            new
+            {
+                Slug = slug,
+                Title = title,
+                Content = content,
+                Excerpt = introduction,
+                DateEpoch = dateEpoch,
+                ExternalUrl = externalUrl,
+                TagsCsv = tagsCsv,
+                ContentHash = computedHash,
+                AiMetadata = aiMetadataJson
+            },
+            cancellationToken: ct));
+
+        // Rebuild expanded tags for the roundup.
+        await _connection.ExecuteAsync(new CommandDefinition(
+            "DELETE FROM content_tags_expanded WHERE collection_name = 'roundups' AND slug = @Slug",
+            new { Slug = slug },
+            cancellationToken: ct));
+
+        foreach (var tag in tags)
+        {
+            var tagLower = tag.ToLowerInvariant();
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"INSERT INTO content_tags_expanded
+                    (collection_name, slug, tag_word, tag_display, is_full_tag,
+                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                     is_ml, is_security, sections_bitmask)
+                  VALUES
+                    ('roundups', @Slug, @TagWord, @TagDisplay, TRUE,
+                     @DateEpoch, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 127)
+                  ON CONFLICT DO NOTHING",
+                new
+                {
+                    Slug = slug,
+                    TagWord = tagLower,
+                    TagDisplay = tag,
+                    DateEpoch = dateEpoch
+                },
+                cancellationToken: ct));
+        }
     }
 }

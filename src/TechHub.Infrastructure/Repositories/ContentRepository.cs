@@ -86,6 +86,17 @@ public class ContentRepository : IContentRepository
     private readonly ILogger<ContentRepository>? _logger;
     private readonly bool _enableQueryLogging;
 
+    // ── Cache TTLs ───────────────────────────────────────────────────────────
+    // Content-derived caches use TTLs as a safety net. Event-driven invalidation
+    // (via InvalidateCachedData) provides immediate freshness after writes;
+    // TTLs ensure self-healing if an invalidation path is missed.
+    private static readonly TimeSpan SearchCacheTtl = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan SlugCacheTtl = TimeSpan.FromMinutes(15);
+    private static readonly TimeSpan TagCacheTtl = TimeSpan.FromMinutes(10);
+    private static readonly TimeSpan SitemapCacheTtl = TimeSpan.FromMinutes(30);
+    private static readonly TimeSpan AuthorCacheTtl = TimeSpan.FromMinutes(30);
+    private static readonly TimeSpan ConfigCacheTtl = TimeSpan.FromHours(1);
+
     // High-frequency tags excluded from all tag clouds.
     // These appear on most content items and don't provide filtering value.
     private static readonly string[] _highFrequencyExcludedTags = new[] { "github", "copilot", "microsoft" };
@@ -219,7 +230,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("sections:all", entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(ConfigCacheTtl);
             return Task.FromResult(InitializeSections(_settings));
         }) ?? [];
     }
@@ -246,7 +257,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("sitemap:items", async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(SitemapCacheTtl);
             return await GetSitemapItemsInternalAsync(ct);
         }) ?? [];
     }
@@ -279,7 +290,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("authors:all", async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(AuthorCacheTtl);
             return await GetAuthorsInternalAsync(ct);
         }) ?? [];
     }
@@ -357,7 +368,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = $"slug:{collectionName}:{slug}:{includeDraft}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(SlugCacheTtl);
             var item = await GetBySlugInternalAsync(collectionName, slug, includeDraft, ct);
             return item != null ? RenderHtmlIfNeeded(item) : null;
         });
@@ -374,7 +385,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(SearchCacheTtl);
             return await SearchInternalAsync(request, ct);
         }) ?? new SearchResults<ContentItem>
         {
@@ -395,7 +406,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(SearchCacheTtl);
             return await GetFacetsInternalAsync(request, ct);
         }) ?? new FacetResults { Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(), TotalCount = 0 };
     }
@@ -414,7 +425,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(TagCacheTtl);
             return await GetTagCountsInternalAsync(request, ct);
         }) ?? [];
     }
@@ -431,7 +442,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("excludetags:set", async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(ConfigCacheTtl);
             return await BuildExcludeTagsSetAsync();
         }) ?? [];
     }
@@ -1460,39 +1471,42 @@ public class ContentRepository : IContentRepository
     // ==================== Admin Methods ====================
 
     /// <inheritdoc/>
-    public async Task<TechHub.Core.Models.Admin.ContentItemAiMetadataResult?> GetAiMetadataByUrlAsync(
-        string externalUrl,
+    public async Task<TechHub.Core.Models.Admin.ContentItemAiMetadataResult?> GetAiMetadataAsync(
+        string collectionName,
+        string slug,
         CancellationToken ct = default)
     {
         const string Sql = @"
 SELECT collection_name AS CollectionName, slug AS Slug, ai_metadata::text AS AiMetadata
 FROM content_items
-WHERE external_url = @ExternalUrl
+WHERE collection_name = @CollectionName AND slug = @Slug
 LIMIT 1";
 
         return await Connection.QueryFirstOrDefaultAsync<TechHub.Core.Models.Admin.ContentItemAiMetadataResult>(
-            new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
     }
 
     /// <inheritdoc/>
     public async Task<bool> UpdateAiMetadataAsync(
-        string externalUrl,
+        string collectionName,
+        string slug,
         string aiMetadata,
         CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_items
 SET ai_metadata = @AiMetadata::jsonb, updated_at = NOW()
-WHERE external_url = @ExternalUrl";
+WHERE collection_name = @CollectionName AND slug = @Slug";
 
         var rows = await Connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { ExternalUrl = externalUrl, AiMetadata = aiMetadata }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadata }, cancellationToken: ct));
         return rows > 0;
     }
 
     /// <inheritdoc/>
-    public async Task<TechHub.Core.Models.Admin.ContentItemEditData?> GetEditDataByUrlAsync(
-        string externalUrl,
+    public async Task<TechHub.Core.Models.Admin.ContentItemEditData?> GetEditDataAsync(
+        string collectionName,
+        string slug,
         CancellationToken ct = default)
     {
         const string Sql = @"
@@ -1500,11 +1514,11 @@ SELECT collection_name, slug, title, author, excerpt, content, primary_section_n
        tags_csv, ai_metadata::text AS ai_metadata,
        is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
 FROM content_items
-WHERE external_url = @ExternalUrl
+WHERE collection_name = @CollectionName AND slug = @Slug
 LIMIT 1";
 
         var row = await Connection.QueryFirstOrDefaultAsync(
-            new CommandDefinition(Sql, new { ExternalUrl = externalUrl }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
 
         if (row is null)
         {
@@ -1569,7 +1583,8 @@ LIMIT 1";
 
     /// <inheritdoc/>
     public async Task<bool> UpdateEditDataAsync(
-        string externalUrl,
+        string collectionName,
+        string slug,
         TechHub.Core.Models.Admin.ContentItemEditData editData,
         CancellationToken ct = default)
     {
@@ -1606,7 +1621,7 @@ SET title                = @Title,
     sections_bitmask     = @Bitmask,
     ai_metadata          = @AiMetadata::jsonb,
     updated_at           = NOW()
-WHERE external_url = @ExternalUrl";
+WHERE collection_name = @CollectionName AND slug = @Slug";
 
         var rows = await Connection.ExecuteAsync(
             new CommandDefinition(Sql, new
@@ -1626,8 +1641,21 @@ WHERE external_url = @ExternalUrl";
                 IsSecurity = isSecurity,
                 Bitmask = bitmask,
                 AiMetadata = editData.AiMetadata,
-                ExternalUrl = externalUrl
+                CollectionName = collectionName,
+                Slug = slug
             }, cancellationToken: ct));
         return rows > 0;
+    }
+
+    // ==================== Cache Invalidation ====================
+
+    /// <inheritdoc/>
+    public void InvalidateCachedData()
+    {
+        if (Cache is MemoryCache memoryCache)
+        {
+            memoryCache.Clear();
+            _logger?.LogInformation("Content cache invalidated");
+        }
     }
 }

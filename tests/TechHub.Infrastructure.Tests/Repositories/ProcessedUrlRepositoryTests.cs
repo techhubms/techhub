@@ -13,6 +13,7 @@ public class ProcessedUrlRepositoryTests
     : IClassFixture<DatabaseFixture<ProcessedUrlRepositoryTests>>
 {
     private readonly ProcessedUrlRepository _repository;
+    private readonly ContentProcessingJobRepository _jobRepository;
 
     public ProcessedUrlRepositoryTests(DatabaseFixture<ProcessedUrlRepositoryTests> fixture)
     {
@@ -21,6 +22,10 @@ public class ProcessedUrlRepositoryTests
         _repository = new ProcessedUrlRepository(
             fixture.Connection,
             NullLogger<ProcessedUrlRepository>.Instance);
+
+        _jobRepository = new ContentProcessingJobRepository(
+            fixture.Connection,
+            NullLogger<ContentProcessingJobRepository>.Instance);
     }
 
     // ── ExistsAsync ────────────────────────────────────────────────────────
@@ -333,5 +338,169 @@ public class ProcessedUrlRepositoryTests
         result.Items.Should().Contain(i => i.ExternalUrl == skippedUrl);
         result.Items.Should().NotContain(i => i.ExternalUrl == addedUrl);
         result.Items.Should().NotContain(i => i.ExternalUrl == failedUrl);
+    }
+
+    // ── HasTranscript ──────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task RecordSuccessAsync_WithHasTranscriptTrue_StoresValue()
+    {
+        // Arrange
+        const string url = "https://youtube.com/watch?v=transcript-true";
+
+        // Act
+        await _repository.RecordSuccessAsync(url, hasTranscript: true, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task RecordSuccessAsync_WithHasTranscriptFalse_StoresValue()
+    {
+        // Arrange
+        const string url = "https://youtube.com/watch?v=transcript-false";
+
+        // Act
+        await _repository.RecordSuccessAsync(url, hasTranscript: false, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task RecordSuccessAsync_WithoutHasTranscript_StoresNull()
+    {
+        // Arrange
+        const string url = "https://example.com/no-transcript-field";
+
+        // Act
+        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task RecordFailureAsync_WithHasTranscript_StoresValue()
+    {
+        // Arrange
+        const string url = "https://youtube.com/watch?v=fail-transcript";
+
+        // Act
+        await _repository.RecordFailureAsync(url, "transcript mandatory", hasTranscript: false, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].HasTranscript.Should().BeFalse();
+    }
+
+    // ── JobId ──────────────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task RecordSuccessAsync_WithJobId_StoresJobId()
+    {
+        // Arrange
+        var jobId = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var url = $"https://example.com/jobid-success-{Guid.NewGuid():N}";
+
+        // Act
+        await _repository.RecordSuccessAsync(url, jobId: jobId, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].JobId.Should().Be(jobId);
+    }
+
+    [Fact]
+    public async Task RecordSkippedAsync_WithJobId_StoresJobId()
+    {
+        // Arrange
+        var jobId = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var url = $"https://example.com/jobid-skipped-{Guid.NewGuid():N}";
+
+        // Act
+        await _repository.RecordSkippedAsync(url, jobId: jobId, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].JobId.Should().Be(jobId);
+    }
+
+    [Fact]
+    public async Task RecordFailureAsync_WithJobId_StoresJobId()
+    {
+        // Arrange
+        var jobId = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var url = $"https://example.com/jobid-failure-{Guid.NewGuid():N}";
+
+        // Act
+        await _repository.RecordFailureAsync(url, "test error", jobId: jobId, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].JobId.Should().Be(jobId);
+    }
+
+    [Fact]
+    public async Task RecordSuccessAsync_WithoutJobId_StoresNull()
+    {
+        // Arrange
+        var url = $"https://example.com/jobid-null-{Guid.NewGuid():N}";
+
+        // Act
+        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().ContainSingle();
+        result.Items[0].JobId.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task GetPagedAsync_FilterByJobId_ReturnsOnlyMatchingItems()
+    {
+        // Arrange
+        var jobId1 = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var jobId2 = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var url1 = $"https://example.com/jobfilter-1-{Guid.NewGuid():N}";
+        var url2 = $"https://example.com/jobfilter-2-{Guid.NewGuid():N}";
+        await _repository.RecordSuccessAsync(url1, jobId: jobId1, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(url2, jobId: jobId2, ct: CancellationToken.None);
+
+        // Act
+        var result = await _repository.GetPagedAsync(0, 100, jobId: jobId1, ct: CancellationToken.None);
+
+        // Assert
+        result.Items.Should().Contain(i => i.ExternalUrl == url1);
+        result.Items.Should().NotContain(i => i.ExternalUrl == url2);
+    }
+
+    [Fact]
+    public async Task RecordSuccessAsync_OnConflict_UpdatesJobId()
+    {
+        // Arrange — first record with one job
+        var jobId1 = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var jobId2 = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
+        var url = $"https://example.com/jobid-update-{Guid.NewGuid():N}";
+        await _repository.RecordSuccessAsync(url, jobId: jobId1, ct: CancellationToken.None);
+
+        // Act — re-process with a different job
+        await _repository.RecordSuccessAsync(url, jobId: jobId2, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+
+        // Assert — job_id updated to the newer job
+        result.Items.Should().ContainSingle();
+        result.Items[0].JobId.Should().Be(jobId2);
     }
 }

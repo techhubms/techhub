@@ -3,6 +3,7 @@ using System.Security.Claims;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Identity.Client;
 using Microsoft.Identity.Web;
 using Moq;
 using TechHub.Web.Services;
@@ -187,19 +188,62 @@ public class AdminTokenDelegatingHandlerTests : IDisposable
         _httpContextAccessor.Setup(a => a.HttpContext).Returns(httpContext);
     }
 
+    [Fact]
+    public async Task AdminRequest_WhenMsalUiRequiredException_ProceedsWithoutToken()
+    {
+        // Arrange
+        SetupAuthenticatedUser();
+        _tokenAcquisition
+            .Setup(t => t.GetAccessTokenForUserAsync(
+                It.IsAny<IEnumerable<string>>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<ClaimsPrincipal?>(), It.IsAny<TokenAcquisitionOptions?>()))
+            .ThrowsAsync(new MsalUiRequiredException("user_null", "No account or login hint"));
+
+        // Act — MSAL exception caught, request proceeds without token
+        var response = await _httpClient.GetAsync("/api/admin/dashboard", TestContext.Current.CancellationToken);
+
+        // Assert — request sent without auth header, response returned as-is
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        _innerHandler.LastRequest!.Headers.Authorization.Should().BeNull();
+    }
+
+    [Fact]
+    public async Task AdminRequest_WhenChallengeUserException_ProceedsWithoutToken()
+    {
+        // Arrange
+        SetupAuthenticatedUser();
+        _tokenAcquisition
+            .Setup(t => t.GetAccessTokenForUserAsync(
+                It.IsAny<IEnumerable<string>>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<ClaimsPrincipal?>(), It.IsAny<TokenAcquisitionOptions?>()))
+            .ThrowsAsync(new MicrosoftIdentityWebChallengeUserException(
+                new MsalUiRequiredException("user_null", "No account"),
+                ["api://test/Admin.Access"]));
+
+        // Act — exception caught, request proceeds without token
+        var response = await _httpClient.GetAsync("/api/admin/dashboard", TestContext.Current.CancellationToken);
+
+        // Assert — request sent without auth header, response returned as-is
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        _innerHandler.LastRequest!.Headers.Authorization.Should().BeNull();
+    }
+
     /// <summary>
     /// Stub handler that captures the outgoing request for assertions.
     /// </summary>
     private sealed class StubHandler : DelegatingHandler
     {
         public HttpRequestMessage? LastRequest { get; private set; }
+        public HttpStatusCode ResponseStatusCode { get; set; } = HttpStatusCode.OK;
 
         protected override Task<HttpResponseMessage> SendAsync(
             HttpRequestMessage request,
             CancellationToken cancellationToken)
         {
             LastRequest = request;
-            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK));
+            return Task.FromResult(new HttpResponseMessage(ResponseStatusCode));
         }
     }
 }

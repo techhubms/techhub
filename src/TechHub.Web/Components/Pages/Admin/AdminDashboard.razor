@@ -5,7 +5,6 @@
 @using TechHub.Web.Services
 @implements IDisposable
 @inject ITechHubApiClient Api
-@inject NavigationManager Navigation
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminDashboard> Logger
 
@@ -38,6 +37,29 @@
                     <span>▶ Run Roundup</span>
                 }
             </button>
+            <button class="btn" @onclick="TriggerContentFixerAsync" disabled="@_triggeringContentFixer">
+                @if (_triggeringContentFixer)
+                {
+                    <span>Triggering…</span>
+                }
+                else
+                {
+                    <span>▶ Run Cleanup</span>
+                }
+            </button>
+            @if (HasRunningJob)
+            {
+                <button class="btn-danger" @onclick="CancelRunningJobAsync" disabled="@_cancelling">
+                    @if (_cancelling)
+                    {
+                        <span>Cancelling…</span>
+                    }
+                    else
+                    {
+                        <span>⏹ Cancel Running</span>
+                    }
+                </button>
+            }
             <button class="btn-secondary" @onclick="LoadJobsAsync">⟳ Refresh</button>
         </div>
     </div>
@@ -76,7 +98,9 @@
                         <th class="admin-cell-number">Added</th>
                         <th class="admin-cell-number">Skipped</th>
                         <th class="admin-cell-number">Errors</th>
-                        <th></th>
+                        <th class="admin-cell-number">Fixed</th>
+                        <th class="admin-cell-number">Transcripts</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -88,7 +112,7 @@
                                 <span class="admin-badge admin-badge-@JobTypeBadge(job.JobType)">@JobTypeLabel(job.JobType)</span>
                             </td>
                             <td>@FormatTimestamp(job.StartedAt)</td>
-                            <td>@FormatDuration(job.DurationMs)</td>
+                            <td>@FormatDuration(job.DurationMs, job.Status == ContentProcessingJobStatus.Running ? job.StartedAt : null)</td>
                             <td>
                                 <span class="admin-badge admin-badge-@job.TriggerType">@job.TriggerType</span>
                             </td>
@@ -97,12 +121,62 @@
                                     @StatusIcon(job.Status) @job.Status
                                 </span>
                             </td>
-                            <td class="admin-cell-number">@job.ItemsAdded</td>
-                            <td class="admin-cell-number">@job.ItemsSkipped</td>
+                            <td class="admin-cell-number">
+                                @if (job.JobType == ContentProcessingJobType.ContentCleanup)
+                                {
+                                    <span>—</span>
+                                }
+                                else
+                                {
+                                    @job.ItemsAdded
+                                }
+                            </td>
+                            <td class="admin-cell-number">
+                                @if (job.JobType == ContentProcessingJobType.ContentCleanup)
+                                {
+                                    <span>—</span>
+                                }
+                                else
+                                {
+                                    @job.ItemsSkipped
+                                }
+                            </td>
                             <td class="admin-cell-number @(job.ErrorCount > 0 ? "admin-cell-error" : "")">
                                 @job.ErrorCount
                             </td>
+                            <td class="admin-cell-number">
+                                @if (job.JobType == ContentProcessingJobType.ContentCleanup)
+                                {
+                                    @job.ItemsFixed
+                                }
+                                else
+                                {
+                                    <span>—</span>
+                                }
+                            </td>
+                            <td class="admin-cell-number">
+                                @if (job.JobType == ContentProcessingJobType.ContentProcessing)
+                                {
+                                    if (job.TranscriptsSucceeded > 0 || job.TranscriptsFailed > 0)
+                                    {
+                                        <span title="@job.TranscriptsSucceeded succeeded, @job.TranscriptsFailed failed">@job.TranscriptsSucceeded ✓ @job.TranscriptsFailed ✗</span>
+                                    }
+                                    else
+                                    {
+                                        <span>—</span>
+                                    }
+                                }
+                                else
+                                {
+                                    <span>—</span>
+                                }
+                            </td>
                             <td>
+                                @if (job.JobType != ContentProcessingJobType.ContentCleanup)
+                                {
+                                    <a class="admin-link-btn" href="@($"/admin/processed-urls?jobId={job.Id}")"
+                                       title="Show URLs processed by this job">View Processed</a>
+                                }
                                 @if (_expandedJobId == job.Id)
                                 {
                                     <button class="admin-link-btn" @onclick="() => CollapseLog()">Hide log</button>
@@ -113,11 +187,11 @@
                                 }
                             </td>
                         </tr>
-                        @if (_expandedJobId == job.Id && !string.IsNullOrWhiteSpace(job.LogOutput))
+                        @if (_expandedJobId == job.Id && _expandedLogOutput != null)
                         {
                             <tr class="admin-log-row">
-                                <td colspan="10">
-                                    <pre class="admin-log">@job.LogOutput</pre>
+                                <td colspan="12">
+                                    <pre class="admin-log">@_expandedLogOutput</pre>
                                 </td>
                             </tr>
                         }
@@ -132,11 +206,14 @@
     private bool _loading = true;
     private bool _triggeringProcessing;
     private bool _triggeringRoundup;
+    private bool _triggeringContentFixer;
+    private bool _cancelling;
     private string? _error;
     private string? _triggerMessage;
     private bool _triggerError;
     private IReadOnlyList<ContentProcessingJob>? _jobs;
     private long? _expandedJobId;
+    private string? _expandedLogOutput;
     private PersistingComponentStateSubscription? _persistSubscription;
     private CancellationTokenSource? _pollCts;
 
@@ -148,11 +225,12 @@
         {
             _jobs = restored;
             _loading = false;
-            StartPollingIfRunning();
-            return;
+        }
+        else
+        {
+            await LoadJobsAsync();
         }
 
-        await LoadJobsAsync();
         StartPollingIfRunning();
     }
 
@@ -180,16 +258,6 @@
         {
             _jobs = await Api.GetProcessingJobsAsync();
         }
-        catch (OperationCanceledException)
-        {
-            throw;
-        }
-        catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized)
-        {
-            // Token cache expired (e.g. after server restart) — redirect to re-authenticate
-            Navigation.NavigateTo("/MicrosoftIdentity/Account/SignIn?redirectUri=%2Fadmin", forceLoad: true);
-            return;
-        }
         catch (HttpRequestException ex)
         {
             _error = $"Failed to load jobs: {ex.Message}";
@@ -198,6 +266,8 @@
         {
             _loading = false;
         }
+
+        StartPollingIfRunning();
     }
 
     private async Task TriggerProcessingAsync()
@@ -210,7 +280,6 @@
             await Api.TriggerContentProcessingAsync();
             _triggerError = false;
 
-            // Give the API a moment to create the job, then reload and start live polling
             await Task.Delay(500);
             await LoadJobsAsync();
             StartPollingIfRunning();
@@ -240,7 +309,6 @@
             await Api.TriggerRoundupGenerationAsync();
             _triggerError = false;
 
-            // Give the API a moment to create the job, then reload and start live polling
             await Task.Delay(500);
             await LoadJobsAsync();
             StartPollingIfRunning();
@@ -260,23 +328,105 @@
         }
     }
 
-    private void ExpandLog(long jobId)
+    private async Task TriggerContentFixerAsync()
+    {
+        _triggeringContentFixer = true;
+        _triggerMessage = null;
+
+        try
+        {
+            await Api.TriggerContentFixerAsync();
+            _triggerError = false;
+
+            await Task.Delay(500);
+            await LoadJobsAsync();
+            StartPollingIfRunning();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _triggerMessage = $"Failed to trigger content fixer: {ex.Message}";
+            _triggerError = true;
+        }
+        finally
+        {
+            _triggeringContentFixer = false;
+        }
+    }
+
+    private async Task CancelRunningJobAsync()
+    {
+        _cancelling = true;
+        _triggerMessage = null;
+
+        try
+        {
+            await Api.CancelRunningJobAsync();
+            _triggerMessage = "Cancellation requested — job will stop shortly.";
+            _triggerError = false;
+
+            await Task.Delay(1000);
+            await LoadJobsAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _triggerMessage = $"Failed to cancel job: {ex.Message}";
+            _triggerError = true;
+        }
+        finally
+        {
+            _cancelling = false;
+        }
+    }
+
+    private async Task ExpandLog(long jobId)
     {
         _expandedJobId = jobId;
+        _expandedLogOutput = null;
+
+        try
+        {
+            var job = await Api.GetProcessingJobByIdAsync(jobId);
+            _expandedLogOutput = job?.LogOutput ?? "(no log output)";
+        }
+        catch (HttpRequestException ex)
+        {
+            _expandedLogOutput = $"Failed to load log: {ex.Message}";
+        }
     }
 
     private void CollapseLog()
     {
         _expandedJobId = null;
+        _expandedLogOutput = null;
     }
 
     private static string FormatTimestamp(DateTimeOffset timestamp) =>
         DateHelper.FormatTimestamp(timestamp);
 
-    private static string FormatDuration(long? durationMs)
+    private static string FormatDuration(long? durationMs, DateTimeOffset? runningStartedAt = null)
     {
-        if (durationMs == null) return "—";
-        var ts = TimeSpan.FromMilliseconds(durationMs.Value);
+        TimeSpan ts;
+        if (runningStartedAt != null)
+        {
+            ts = DateTimeOffset.UtcNow - runningStartedAt.Value;
+        }
+        else if (durationMs != null)
+        {
+            ts = TimeSpan.FromMilliseconds(durationMs.Value);
+        }
+        else
+        {
+            return "—";
+        }
+
         return ts.TotalMinutes >= 1
             ? $"{(int)ts.TotalMinutes}m {ts.Seconds}s"
             : $"{ts.TotalSeconds:F1}s";
@@ -295,6 +445,7 @@
     {
         ContentProcessingJobType.ContentProcessing => "Processing",
         ContentProcessingJobType.RoundupGeneration => "Roundup",
+        ContentProcessingJobType.ContentCleanup => "Cleanup",
         _ => jobType
     };
 
@@ -302,6 +453,7 @@
     {
         ContentProcessingJobType.ContentProcessing => "processing",
         ContentProcessingJobType.RoundupGeneration => "roundup",
+        ContentProcessingJobType.ContentCleanup => "cleanup",
         _ => "unknown"
     };
 
@@ -337,6 +489,18 @@
                 try
                 {
                     _jobs = await Api.GetProcessingJobsAsync(cancellationToken: ct);
+
+                    // Auto-refresh the expanded log if viewing a running job
+                    if (_expandedJobId != null)
+                    {
+                        var expandedJob = _jobs?.FirstOrDefault(j => j.Id == _expandedJobId);
+                        if (expandedJob?.Status == ContentProcessingJobStatus.Running)
+                        {
+                            var job = await Api.GetProcessingJobByIdAsync(_expandedJobId.Value, ct);
+                            _expandedLogOutput = job?.LogOutput ?? _expandedLogOutput;
+                        }
+                    }
+
                     await InvokeAsync(StateHasChanged);
 
                     if (!HasRunningJob)

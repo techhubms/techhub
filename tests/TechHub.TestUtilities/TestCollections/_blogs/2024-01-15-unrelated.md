@@ -1,4 +1,4 @@
-﻿---
+---
 title: Unrelated Post
 date: 2024-01-15
 primary_section: github-copilot
@@ -8,7 +8,7 @@ tags:
 - Test Tag
 - GitHub Copilot
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/blogs/unrelated
 author: Test Author
 feed_name: Test Feed
 ---

@@ -30,7 +30,7 @@ public class RssFeedConfigRepositoryTests
     public async Task CreateAsync_ReturnsPositiveId()
     {
         // Arrange
-        var feed = new FeedConfig { Name = "Test Feed", Url = "https://example.com/create-test.xml", OutputDir = "_blogs", Enabled = true };
+        var feed = new FeedConfig { Name = "CRUD Test Feed", Url = "https://example.com/create-test.xml", OutputDir = "_blogs", Enabled = true };
 
         // Act
         var id = await _repository.CreateAsync(feed, CancellationToken.None);
@@ -169,5 +169,96 @@ public class RssFeedConfigRepositoryTests
 
         // Assert
         success.Should().BeFalse();
+    }
+
+    // ── TranscriptMandatory ───────────────────────────────────────────────
+
+    [Fact]
+    public async Task CreateAsync_WithTranscriptMandatory_StoresValue()
+    {
+        // Arrange
+        var feed = new FeedConfig
+        {
+            Name = "CRUD YT Mandatory",
+            Url = "https://youtube.com/tm-create.xml",
+            OutputDir = "_videos",
+            Enabled = true,
+            TranscriptMandatory = true
+        };
+
+        // Act
+        var id = await _repository.CreateAsync(feed, CancellationToken.None);
+        var result = await _repository.GetByIdAsync(id, CancellationToken.None);
+
+        // Assert
+        result.Should().NotBeNull();
+        result!.TranscriptMandatory.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task CreateAsync_WithoutTranscriptMandatory_DefaultsFalse()
+    {
+        // Arrange
+        var feed = new FeedConfig
+        {
+            Name = "Blog No TM",
+            Url = "https://example.com/no-tm.xml",
+            OutputDir = "_blogs",
+            Enabled = true
+        };
+
+        // Act
+        var id = await _repository.CreateAsync(feed, CancellationToken.None);
+        var result = await _repository.GetByIdAsync(id, CancellationToken.None);
+
+        // Assert
+        result.Should().NotBeNull();
+        result!.TranscriptMandatory.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task UpdateAsync_ChangesTranscriptMandatory()
+    {
+        // Arrange
+        var feed = new FeedConfig
+        {
+            Name = "TM Toggle",
+            Url = "https://youtube.com/tm-toggle.xml",
+            OutputDir = "_videos",
+            Enabled = true,
+            TranscriptMandatory = false
+        };
+        var id = await _repository.CreateAsync(feed, CancellationToken.None);
+
+        // Act — enable TranscriptMandatory
+        feed.Id = id;
+        feed.TranscriptMandatory = true;
+        await _repository.UpdateAsync(feed, CancellationToken.None);
+        var result = await _repository.GetByIdAsync(id, CancellationToken.None);
+
+        // Assert
+        result.Should().NotBeNull();
+        result!.TranscriptMandatory.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task GetEnabledAsync_ReturnsTranscriptMandatoryField()
+    {
+        // Arrange
+        var feed = new FeedConfig
+        {
+            Name = "YT Enabled TM",
+            Url = "https://youtube.com/enabled-tm.xml",
+            OutputDir = "_videos",
+            Enabled = true,
+            TranscriptMandatory = true
+        };
+        await _repository.CreateAsync(feed, CancellationToken.None);
+
+        // Act
+        var feeds = await _repository.GetEnabledAsync(CancellationToken.None);
+
+        // Assert
+        feeds.Should().Contain(f => f.Name == "YT Enabled TM" && f.TranscriptMandatory);
     }
 }
