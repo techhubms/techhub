@@ -1,0 +1,30 @@
+{
+  "EnhancedContent": null,
+  "Tags": [
+    "autoscale",
+    "azure",
+    "azure cloud",
+    "cloud",
+    "cosmos db",
+    "cosmosdb",
+    "cost optimization",
+    "johnsavillstechnicaltraining",
+    "microsoft",
+    "microsoft azure",
+    "nosql",
+    "onboardtoazure",
+    "request units",
+    "RUs",
+    "serverless"
+  ],
+  "ProcessedDate": "2026-04-06 11:21:48",
+  "Author": "John Savill's Technical Training",
+  "FeedName": "John Savill's Technical Training",
+  "Title": "Cosmos DB Optimization",
+  "Link": "https://www.youtube.com/watch?v=RbH5F_3w47E",
+  "Description": "A dive into how we can optimize our Cosmos DB deployments and data morels.\n\n▬▬▬▬▬▬ C H A P T E R S ⏰ ▬▬▬▬▬▬ 00:00 - Introduction 00:37 - Service options and structure 01:48 - Request Units (RUs) 04:07 - Free SKU 05:26 - Provisioned 06:06 - Manual 11:13 - Autoscale 16:58 - Configuration 23:03 - Account throughput limit 25:34 - Partitions 30:34 - What should I use 35:48 - Bookmark 36:26 - Optimizing design 37:52 - Optimize the RU use 39:45 - Importance of partition key 44:13 - High cardinality 45:57 - Document size 49:21 - Global secondary index 54:00 - Storage heavy 56:50 - Write heavy 58:47 - Summary 59:29 - Close\n\n▬▬▬▬▬▬ K E Y L I N K S 🔗 ▬▬▬▬▬▬ ► Whiteboard: 🔗 https://github.com/johnthebrit/RandomStuff/raw/master/Whiteboards/CosmosDBOptimization.png ► Cosmos DB Request Units: 🔗 https://learn.microsoft.com/azure/cosmos-db/request-units ► Cosmos DB Pricing: 🔗 https://azure.microsoft.com/pricing/details/cosmos-db/standard-provisioned/ ► Cosmos DB Reservations: 🔗 https://learn.microsoft.com/azure/cosmos-db/reserved-capacity\n\n▬▬▬▬▬▬ Want to learn more? 🚀 ▬▬▬▬▬▬ 📖 Recommended Learning Path for Azure 🔗 https://learn.onboardtoazure.com 🥇 Certification Content Repository 🔗 https://github.com/johnthebrit/CertificationMaterials 📅 Weekly Azure Update 🔗 https://youtube.com/playlist?list=PLlVtbbG169nEv7jSfOVmQGRp9wAoAM0Ks ☁ Azure Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGccbp8VSpAozu3w9xSQJoY ⚙ DevOps Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFr8RzQ4GIxUEznpNR53ERq 💻 PowerShell Master Class 🔗 https://youtube.com/playlist?list=PLlVtbbG169nFq\\_hR7FcMYg32xsSAObuq8 🎓 Certification Cram Videos 🔗 https://youtube.com/playlist?list=PLlVtbbG169nHz2qfLvPsAz9CnnXofhmcA 🧠 Mentoring Content 🔗 https://youtube.com/playlist?list=PLlVtbbG169nGHxNkSWB0PjzZHwZ0BkXZZ ❔ Questions? Maybe I answered it in my FAQ 🔗 https://savilltech.com/faq 👕 Cure Childhood Cancer Charity T-Shirt Channel Store 🔗 https://johns-t-shirts-store.creator-spring.com/\n\n👂 Enable the subtitles and from there you can translate to your native language via the auto-translate feature in settings! https://youtu.be/v5b53-PgEmI for a demo of using this feature.\n\nSUBSCRIBE ✅ https://www.youtube.com/channel/UCpIn7ox7j7bH\\_OFj7tYouOQ?sub\\_confirmation=1\n\n#microsoft #cosmosdb #johnsavillstechnicaltraining #onboardtoazure",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCpIn7ox7j7bH_OFj7tYouOQ",
+  "PubDate": "2026-04-06T11:02:11+00:00",
+  "FeedLevelAuthor": "John Savill's Technical Training",
+  "OutputDir": "_videos"
+}
