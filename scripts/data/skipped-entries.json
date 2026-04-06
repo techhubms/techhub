@@ -14632,5 +14632,17 @@
     "reason": "No categories found: Excluded because the input does not contain the substantive video content (the `content` field is null). With only a short description and chapter timestamps, there isn’t enough technical detail to verify what Microsoft technologies are actually covered beyond a general mention of VS Code “agent sessions”, so categories cannot be assigned reliably per the “Never fabricate information / Focus on actual content” guidance.",
     "timestamp": "2026-04-06 17:25:53 +00:00",
     "canonical_url": "https://www.youtube.com/watch?v=WcN74XvZGes"
+  },
+  {
+    "collection": "videos",
+    "reason": "No categories found: Excluded from categorization because the input does not contain the actual substantive content to evaluate: `content` is null, and the `description` is only a brief event summary plus a link. Without the main video transcript/notes, there isn’t enough technical material to reliably apply the category inclusion rules or meet the “focus on actual content” guideline, so categories are left empty per the “when in doubt, exclude” rule.",
+    "timestamp": "2026-04-06 19:29:13 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=7ycBQh1Ilag"
+  },
+  {
+    "collection": "community",
+    "reason": "No categories found: Excluded due to generic exclusion rule: Question-Only Content. This community post is a feature request/ask (\"Requested enhancement\") describing a usability issue in the Windows App (Azure Virtual Desktop client) and requesting configurable keyboard mapping, but it does not provide a substantive solution or technical implementation details beyond noting a workaround (AutoHotkey).",
+    "timestamp": "2026-04-06 19:30:40 +00:00",
+    "canonical_url": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/allow-swapping-alt-pageup-alt-pagedown-direction-in-windows-app/idi-p/4508940"
   }
 ]
