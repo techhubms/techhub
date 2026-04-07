@@ -1,0 +1,18 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "Title": "How Pretext is fixing browser layout struggles",
+  "Description": "Have you ever watched a browser get stuck on a complex layout? Software engineer Cheng Lou has released Pretext, a high-performance open-source layout engine designed to stop your browser from struggling. By predicting text height and routing lines without expensive DOM reads, Pretext significantly improves rendering speeds. The demos showcase incredible features like accordion height prediction and particle-driven ASCII art. We love seeing the community build tools like this to solve fundamental web performance issues.\n\n#Pretext #WebPerformance #WebLayout\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Tags": [
+    "Pretext",
+    "WebLayout",
+    "WebPerformance"
+  ],
+  "Link": "https://www.youtube.com/shorts/P7x63VkDYgI",
+  "PubDate": "2026-04-07T15:00:46+00:00",
+  "FeedLevelAuthor": "GitHub",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-04-07 15:33:07",
+  "OutputDir": "_videos",
+  "FeedName": "GitHub YouTube",
+  "Author": "GitHub"
+}
