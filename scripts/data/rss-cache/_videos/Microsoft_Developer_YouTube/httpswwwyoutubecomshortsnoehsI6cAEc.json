@@ -1,0 +1,14 @@
+{
+  "PubDate": "2026-04-07T16:29:52+00:00",
+  "Tags": [],
+  "EnhancedContent": null,
+  "Title": "Setting Up Figma MCP Server in VS Code",
+  "Author": "Microsoft Developer",
+  "Link": "https://www.youtube.com/shorts/noehsI6cAEc",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedName": "Microsoft Developer YouTube",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "ProcessedDate": "2026-04-07 17:24:25",
+  "Description": "Designers have long handed off work from Figma to engineering—but Model Context Protocol (MCP) is changing that workflow. In this episode of Cozy AI Kitchen, Joanna Oikawa (Product Design Lead, VS Code) walks through how Figma MCP connects Figma designs directly to VS Code, enabling faster iteration, live collaboration, and AI‑assisted UI development.\n\nWatch the full episode at https://aka.ms/CAIK-JoannaOikawa",
+  "OutputDir": "_videos"
+}
