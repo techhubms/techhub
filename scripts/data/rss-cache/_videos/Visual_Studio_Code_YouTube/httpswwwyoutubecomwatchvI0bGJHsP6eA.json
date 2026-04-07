@@ -1,0 +1,29 @@
+{
+  "FeedLevelAuthor": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "Link": "https://www.youtube.com/watch?v=I0bGJHsP6eA",
+  "OutputDir": "_videos",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-04-07 19:28:13",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Tags": [
+    "code",
+    "codeeditor",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "github",
+    "githubcopilot",
+    "githubcopiot",
+    "microsoft",
+    "softwaredeveloper",
+    "visualstudiocode",
+    "vscode",
+    "vscoderelease"
+  ],
+  "Author": "Visual Studio Code",
+  "Description": "Join us as we demo some of the major updates to VS Code and GitHub Copilot in the past month. This is your chance to chat live with members of the product team.\n\n🎙️Featuring: Olivia McVicker (@OliviaGuzzardo) and more!\n\n#vscode #vscoderelease #githubcopilot",
+  "PubDate": "2026-04-07T18:47:25+00:00",
+  "Title": "🔴 VS Code Live: April Recap of Releases"
+}
