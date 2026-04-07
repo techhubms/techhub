@@ -1,0 +1,17 @@
+{
+  "FeedName": "The GitHub Blog",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "Link": "https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview",
+  "PubDate": "2026-04-02T21:26:37+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Title": "Copilot SDK in public preview",
+  "Author": "Allison",
+  "ProcessedDate": "2026-04-02 22:12:53",
+  "OutputDir": "_news",
+  "EnhancedContent": "The [GitHub Copilot SDK](https://github.com/github/copilot-sdk) is now available in public preview. This gives you the building blocks to embed Copilot’s agentic capabilities directly into your own applications, workflows, and platform services.\n\nThe Copilot SDK exposes the same production-tested agent runtime that powers GitHub Copilot cloud agent and Copilot CLI. Instead of building your own AI orchestration layer, you get tool invocation, streaming, file operations, and multi-turn sessions out of the box.\n\n### Now available in five languages\n\nBuild with the SDK in your language of choice:\n\n- **Node.js / TypeScript**: `npm install @github/copilot-sdk`\n- **Python**: `pip install github-copilot-sdk`\n- **Go**: `go get github.com/github/copilot-sdk/go`\n- **.NET**: `dotnet add package GitHub.Copilot.SDK`\n- **Java**: Newly available to install via Maven.\n\n### Key capabilities\n\n- **Custom tools and agents**: Define domain-specific tools with handlers and let the agent decide when to invoke them. Build custom agents with tailored instructions for your use case.\n- **Fine-grained system prompt customization**: Customize sections of the Copilot system prompt using `replace`\n, `append` , `prepend` , or dynamic `transform` callbacks. There’s no need to rewrite the entire prompt.\n- **Streaming and real-time responses**: Stream responses token-by-token for responsive user experiences.\n- **Blob attachments**: Send images, screenshots, and binary data inline without writing to disk.\n- **OpenTelemetry support**: Built-in distributed tracing with W3C trace context propagation across all SDKs.\n- **Permission framework**: Gate sensitive operations with approval handlers, or mark read-only tools to skip permissions entirely.\n- **Bring Your Own Key (BYOK)**: Use your own API keys for OpenAI, Azure AI Foundry, or Anthropic.\n\n### Get started\n\nThe Copilot SDK is available to all Copilot and non-Copilot subscribers, including Copilot Free for personal use and BYOK for enterprises. Each prompt counts toward your premium request quota for Copilot subscribers.\n\nCheck out the [getting started guide](https://github.com/github/copilot-sdk) to start building and join the discussion in the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot).",
+  "Description": "The GitHub Copilot SDK is now available in public preview. This gives you the building blocks to embed Copilot’s agentic capabilities directly into your own applications, workflows, and platform services.…\n\nThe post [Copilot SDK in public preview](https://github.blog/changelog/2026-04-02-copilot-sdk-in-public-preview) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/"
+}

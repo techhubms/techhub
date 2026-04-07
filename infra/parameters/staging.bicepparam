@@ -20,7 +20,7 @@ param privateEndpointsSubnetPrefix = '10.1.2.0/24'
 param postgresServerName = 'psql-techhub-staging'
 param postgresAdminLogin = 'techhubadmin'
 param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
-// Hub VNet (for peering — VPN access to spoke resources)
+// Hub VNet (for peering — private endpoint resolution across environments)
 param hubVnetId = '/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-shared/providers/Microsoft.Network/virtualNetworks/vnet-techhub-hub'
 param hubVnetName = 'vnet-techhub-hub'
 // Custom domains — wildcard CNAME in GoDaddy routes all *.hub.ms to the Container App.

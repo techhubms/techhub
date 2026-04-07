@@ -1,0 +1,28 @@
+{
+  "FeedName": "DotNet YouTube",
+  "Description": "Join us for a look at in progress work on Blazor integration with Aspire, where we’re exploring a new Blazor gateway and deeper platform integration to enable configuration flow, service discovery, richer diagnostics, and improved scaling for Blazor WebAssembly and Blazor Server apps.\n\n🔗 Links: https://www.theurlist.com/blazor-standup-20260407\n\n🎙️ Featuring: Daniel Roth, Javier Calvarro Nelson\n\n#dotnet #aspnetcore #blazor #aspire",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Title": "Blazor Community Standup | Blazor integration with Aspire",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "dotnet",
+  "PubDate": "2026-04-06T19:08:33+00:00",
+  "Tags": [
+    "aspire",
+    "aspnetcore",
+    "blazor",
+    "blazorintegration",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetaspire",
+    "dotnetdeveloper",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "ProcessedDate": "2026-04-06 19:26:01",
+  "Author": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=7ycBQh1Ilag"
+}

@@ -1,0 +1,14 @@
+{
+  "Title": "How GitHub secret scanning saves your code",
+  "OutputDir": "_videos",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ",
+  "FeedLevelAuthor": "GitHub",
+  "ProcessedDate": "2026-04-02 18:21:57",
+  "Link": "https://www.youtube.com/shorts/wYmTs1LSvTw",
+  "FeedName": "GitHub YouTube",
+  "Tags": [],
+  "Description": "Accidentally pushing an API key or token to your repository can be terrifying. Luckily, GitHub secret scanning automatically checks your commits and alerts you if sensitive information is found. It shows you the exact file and line number so you can revoke the key before anyone exploits it.\n\nLearn more about securing your code in GitHub for Beginners season 3: https://www.youtube.com/watch?v=zhxXaFzzJYA\n\nStay up-to-date on all things GitHub by connecting with us:\n\nYouTube: https://gh.io/subgithub Blog: https://github.blog X: https://twitter.com/github LinkedIn: https://linkedin.com/company/github Insider newsletter: https://resources.github.com/newsletter/ Instagram: https://www.instagram.com/github TikTok: https://www.tiktok.com/@github\n\nAbout GitHub It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com",
+  "Author": "GitHub",
+  "EnhancedContent": null,
+  "PubDate": "2026-04-02T18:00:00+00:00"
+}

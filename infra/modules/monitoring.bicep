@@ -24,7 +24,9 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
       name: 'PerGB2018'
     }
     retentionInDays: 30
-    publicNetworkAccessForIngestion: 'Enabled'
+    // Ingestion disabled: app telemetry uses AMPLS private path
+    publicNetworkAccessForIngestion: 'Disabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
     publicNetworkAccessForQuery: 'Enabled'
     workspaceCapping: {
       dailyQuotaGb: dailyQuotaGb
@@ -41,22 +43,25 @@ resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
     WorkspaceResourceId: logAnalyticsWorkspace.id
     IngestionMode: 'LogAnalytics'
     RetentionInDays: appInsightsRetentionInDays
+    // Ingestion enabled: browser JS SDK sends telemetry over the public internet.
+    // Server-side telemetry uses the AMPLS private path.
+    // Availability tests use Azure-internal paths and are not affected by this setting.
     publicNetworkAccessForIngestion: 'Enabled'
+    // Query enabled: allows portal and admin access (protected by RBAC)
     publicNetworkAccessForQuery: 'Enabled'
   }
 }
 
 output appInsightsName string = appInsights.name
+output appInsightsId string = appInsights.id
 output appInsightsConnectionString string = appInsights.properties.ConnectionString
 output logAnalyticsWorkspaceId string = logAnalyticsWorkspace.id
 
-// Five geographically distributed probe locations for global coverage
+// Three geographically distributed probe locations for sufficient coverage
 var availabilityLocations = [
   { Id: 'emea-nl-ams-azr' }  // West Europe (Amsterdam)
   { Id: 'us-ca-sjc-azr' }    // West US (San Jose)
-  { Id: 'us-tx-sn1-azr' }    // South Central US
   { Id: 'apac-sg-sin-azr' }  // Southeast Asia (Singapore)
-  { Id: 'emea-gb-db3-azr' }  // North Europe (Dublin)
 ]
 
 // Standard availability test (HTTP GET, SSL check, expect HTTP 200) per host

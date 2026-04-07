@@ -1,0 +1,25 @@
+{
+  "PubDate": "2026-04-01T16:01:19+00:00",
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=63awEoYxEGg",
+  "Description": "Every insert, update, and delete in your SQL database is a business event — but turning those changes into real-time streams has traditionally meant stitching together complex pumbling, managing destination tables and handling schema changes that introduce downtime. In this episode, we show you how DeltaFlow in Microsoft Fabric Eventstreams eliminates that complexity. You will see how to go from a SQL database to analytics-ready, queryable tables in minutes; with automatic schema registration, destination table creation, and schema evolution handling built in. Whether you're building real-time dashboards, building real-time AI applications, this episode shows you the fastest path from your SQL database to real-time intelligence in Microsoft Fabric.\n\n✅ Chapters: 0:00 Introduction 1:15 Why isn't every SQL application real-time yet? 2:45 Real-Time Intelligence 3:15 Fabric Eventstream: Ingest, process and route events in real-time 5:45 Building event-driven, real-time applications with DeltaFlow 8:15 Demo 12:25 Handling Source Schema Changes 14:00 Demo 15:25 Getting started\n\n✅ Resources: Building real-time, event-driven applications with Database CDC feeds and Fabric Eventstreams DeltaFlow (Preview): https://blog.fabric.microsoft.com/en-US/blog/building-real-time-event-driven-applications-with-database-cdc-feeds-and-fabric-eventstreams-deltaflow-preview/\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "Title": "How to Turn SQL Database changes into Real-Time Intelligence with Fabric Eventstreams | Data Exposed",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-04-01 16:23:47",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "OutputDir": "_videos",
+  "Tags": [
+    "Azure",
+    "AzureSQL",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "LearnSQL",
+    "Microsoft",
+    "SQL",
+    "Tech",
+    "Technology"
+  ]
+}

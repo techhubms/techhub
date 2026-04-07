@@ -19,11 +19,11 @@ param databaseName string = 'techhub'
 param postgresVersion string = '17'
 
 @description('SKU name for the server')
-param skuName string = 'Standard_D2ads_v5'
+param skuName string = 'Standard_B1ms'
 
 @description('SKU tier')
 @allowed(['Burstable', 'GeneralPurpose', 'MemoryOptimized'])
-param skuTier string = 'GeneralPurpose'
+param skuTier string = 'Burstable'
 
 @description('Storage size in GB')
 param storageSizeGB int = 32
@@ -38,6 +38,9 @@ param backupRetentionDays int = 14
 
 @description('Enable geo-redundant backup for disaster recovery')
 param geoRedundantBackup bool = false
+
+@description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
+param adminIpAddresses string[] = []
 
 // PostgreSQL Flexible Server
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
@@ -77,11 +80,21 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      // All access via private endpoint only — no public network access
-      publicNetworkAccess: 'Disabled'
+      // Public access enabled with per-IP firewall rules for admin; app uses private endpoint
+      publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     }
   }
 }
+
+// Firewall rules: allow admin IPs
+resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = [for (ip, i) in adminIpAddresses: {
+  parent: postgresServer
+  name: 'allow-admin-ip-${i}'
+  properties: {
+    startIpAddress: ip
+    endIpAddress: ip
+  }
+}]
 
 // Database
 resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-01' = {

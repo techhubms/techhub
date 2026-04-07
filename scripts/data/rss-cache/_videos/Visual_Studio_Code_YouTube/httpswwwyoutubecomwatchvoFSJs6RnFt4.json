@@ -1,0 +1,26 @@
+{
+  "EnhancedContent": null,
+  "FeedName": "Visual Studio Code YouTube",
+  "Link": "https://www.youtube.com/watch?v=oFSJs6RnFt4",
+  "OutputDir": "_videos",
+  "Title": "VS Code Learn | Reviewing and controlling agent changes",
+  "Tags": [
+    "agents",
+    "agentsessions",
+    "beginner",
+    "demo",
+    "developer",
+    "developertools",
+    "microsoft",
+    "tutorial",
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2026-04-06 17:20:16",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "In this video we'll cover reviewing, controlling agent changes and forking our session.\n\n➡️ See full series playlist: https://aka.ms/vsc-learn\n\n🔎 Chapters: 00:00 In this session 00:23 Editing messages 01:15 Steering messages 02:25 Reviewing the code 04:03 Forking the session 06:00 Todos 06:50 Restore checkpoints 07:19 In summary 07:42 What's Next - Agent Sessions and Where Agents Run\n\n🎙️ Featuring: Gwyneth Peña-Siguenza (https://x.com/madebygps)\n\n📲 Follow VS Code: X: https://x.com/code Bluesky: https://bsky.app/profile/vscode.dev YouTube: / code LinkedIn: / 104107263 GitHub: https://github.com/microsoft/vscode\n\n#vscode #agents",
+  "PubDate": "2026-04-06T16:57:15+00:00",
+  "Author": "Visual Studio Code"
+}

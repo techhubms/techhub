@@ -1,0 +1,17 @@
+{
+  "Link": "https://github.blog/changelog/2026-04-07-code-scanning-batch-apply-security-alert-suggestions-on-pull-requests",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "ProcessedDate": "2026-04-07 11:22:52",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "EnhancedContent": "GitHub code scanning alerts on pull requests are now easier to address with bulk actions.\n\nYou can now apply fixes for code scanning alerts in the **Files changed** tab by adding them to a batch, helping you interact with multiple alerts faster. Batching changes into a single commit means you’ll run one scan instead of a separate one for each alert, reducing remediation and review time and keeping pull requests moving.\n\n![Screen showing a code security alert in the Files changed tab in a pull request.](https://github.com/user-attachments/assets/a6d129f4-4aa5-4eca-8527-1a483ba94ef3)\n\nThis update is now generally available on github.com.\n\nTo learn more, check out [our GitHub Code Scanning documentation](https://docs.github.com/code-security/code-scanning/introduction-to-code-scanning/about-code-scanning).",
+  "PubDate": "2026-04-07T10:22:33+00:00",
+  "Title": "Code scanning: Batch apply security alert suggestions on pull requests",
+  "Description": "GitHub code scanning alerts on pull requests are now easier to address with bulk actions. You can now apply fixes for code scanning alerts in the Files changed tab by…\n\nThe post [Code scanning: Batch apply security alert suggestions on pull requests](https://github.blog/changelog/2026-04-07-code-scanning-batch-apply-security-alert-suggestions-on-pull-requests) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "Tags": [
+    "application security",
+    "Improvement"
+  ]
+}

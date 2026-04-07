@@ -1,0 +1,26 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "PubDate": "2026-04-02T23:48:10+00:00",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Visual Studio Code",
+  "ProcessedDate": "2026-04-03 00:31:30",
+  "Link": "https://www.youtube.com/watch?v=JQ3x362nc6c",
+  "OutputDir": "_videos",
+  "Title": "🔴 VS Code Live - Modernizing Legacy .NET applications with GitHub Copilot Modernization in VS Code",
+  "Author": "Visual Studio Code",
+  "Description": "Join Joel Norman and Jorge Balderas and watch them let Copilot loose to try modernizing a .NET application with GitHub Copilot Modernization in VS Code.\n\n🔗 Links: https://dotnet.microsoft.com/platform/modernize https://learn.microsoft.com/azure/developer/github-copilot-app-modernization/ https://github.com/dotnet/modernize-dotnet\n\n🎙️ Featuring: Olivia Guzzardo McVicker: https://x.com/OliviaGuzzardo Joel Norman: https://x.com/normandeveloper GitHub: microsoftnorman LinkedIn: joeltnorman/ Jorge Balderas: https://x.com/jorgerbf GitHub: yortch LinkedIn: joeltnorman/ LinkedIn: balderas\n\n#vscode #dotnet #githubcopilot",
+  "Tags": [
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "githubcopilot",
+    "microsoft",
+    "softwaredeveloper",
+    "visualstudiocode",
+    "vscode"
+  ],
+  "FeedName": "Visual Studio Code YouTube"
+}

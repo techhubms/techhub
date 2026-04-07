@@ -1,0 +1,18 @@
+{
+  "Link": "https://www.youtube.com/shorts/AzVCss_wFOs",
+  "Description": "@code introduces message steering and queuing. You can now send follow-up messages while an agent request is still running.",
+  "Title": "Steering & Queueing is Here!",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Visual Studio Code",
+  "Tags": [
+    "visual studio code",
+    "vs code",
+    "vscode"
+  ],
+  "Author": "Visual Studio Code",
+  "FeedName": "Visual Studio Code YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "ProcessedDate": "2026-04-06 15:19:43",
+  "PubDate": "2026-04-06T15:00:22+00:00",
+  "OutputDir": "_videos"
+}
