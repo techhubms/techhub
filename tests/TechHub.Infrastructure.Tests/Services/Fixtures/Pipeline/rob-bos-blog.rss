@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><title>Rob's Blog</title><link href="https://devopsjournal.io/blog/atom.xml" rel="self" /><link href="https://devopsjournal.io/" /><updated>2026-04-01T20:29:43+00:00</updated><id>https://devopsjournal.io/blog/</id><author><name>Rob Bos</name><email>raj.bos+devopsjournal_io@gmail.com</email></author><entry><title>Show you Microsoft Certification badges in Credly</title><link href="https://devopsjournal.io/blog/2026/02/02/Link-MS-certification-to-Credly" /><updated>2026-02-02T00:00:00+00:00</updated><id>https://devopsjournal.io/blog/2026/02/02/Link-MS-certification-to-Credly</id><content type="html">&lt;p&gt;Microsoft has stopped their partnership with Credly for hosting certification badges and instead centralized everything to the Microsoft Learn platform. However, if you still want to showcase your Microsoft Certification badges in Credly, you can do so by following these steps:&lt;/p&gt;
+
+&lt;h2 id="microsoft-learn-steps"&gt;Microsoft Learn steps&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Log in to your &lt;a href="https://learn.microsoft.com/"&gt;Microsoft Learn&lt;/a&gt; account.&lt;/li&gt;
+  &lt;li&gt;Navigate to the “Credentials” section of your profile.&lt;/li&gt;
+  &lt;li&gt;Open the “view all” link to see all of your certifications in case the new certification is not immediately visible (I have two renewals that took over the list).&lt;/li&gt;
+  &lt;li&gt;So do not use the “Past exams” view, that will not help&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="/images/2026/20260202/20260202_01_CertificationOverview.png" alt="Screenshot of the Microsoft Learn Credentials page showing certifications" /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Find the certification you want to add to Credly and click on “View certification details”.&lt;/li&gt;
+  &lt;li&gt;Copy the url from the browser.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id="credly-steps"&gt;Credly steps&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Log in to your &lt;a href="https://www.credly.com/"&gt;Credly&lt;/a&gt; account.&lt;/li&gt;
+  &lt;li&gt;Navigate to your profile in the acccount drop down menu.&lt;/li&gt;
+  &lt;li&gt;Click on “Upload other badges” button.&lt;/li&gt;
+  &lt;li&gt;Use the badge url option at hte bottom of the screen and paste in the url you copied from Microsoft Learn.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src="/images/2026/20260202/20260202_02_CredlyAddBadge.png" alt="Screenshot of the Credly &amp;quot;Upload other badges&amp;quot; page showing the badge url option" /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Click on “Add Badge” button and wait for the validation to complete.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Wait until the actual bafdge shows up in your Credly profile, takes over an hour in my experience.&lt;/p&gt;
+</content></entry></feed>

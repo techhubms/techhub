@@ -26,6 +26,7 @@ INSERT INTO rss_feed_configs (name, url, output_dir, enabled, transcript_mandato
     ('The GitHub Blog (Changelog)',              'https://github.blog/changelog/feed/',                                                                '_news',      TRUE,  FALSE),
     ('Microsoft AI Foundry Blog',                'https://devblogs.microsoft.com/foundry/feed/',                                                       '_news',      TRUE,  FALSE),
     ('Microsoft Semantic Kernel Blog',           'https://devblogs.microsoft.com/semantic-kernel/feed/',                                               '_news',      TRUE,  FALSE),
+    ('Microsoft Agent Framework Blog',           'https://devblogs.microsoft.com/agent-framework/feed/',                                               '_news',      TRUE,  FALSE),
     ('Microsoft AutoGen Blog',                   'https://devblogs.microsoft.com/autogen/feed/',                                                       '_news',      TRUE,  FALSE),
     ('Microsoft News',                           'https://news.microsoft.com/source/feed/',                                                            '_news',      TRUE,  FALSE),
     ('Rob Bos'' Blog',                           'https://devopsjournal.io/blog/atom.xml',                                                             '_blogs',     TRUE,  FALSE),

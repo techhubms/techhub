@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>DEV Community: Emanuele Bartolesi</title><description>The latest articles on DEV Community by Emanuele Bartolesi (@kasuken).</description><link>https://dev.to/kasuken</link><image><url>https://media2.dev.to/dynamic/image/width=90,height=90,fit=cover,gravity=auto,format=auto/https:%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Fuser%2Fprofile_image%2F79932%2Fbe7bcd76-1f69-4336-9155-6017aebb2c53.png</url><title>DEV Community: Emanuele Bartolesi</title><link>https://dev.to/kasuken</link></image><atom:link rel="self" type="application/rss+xml" href="https://dev.to/feed/kasuken" /><language>en</language><item><title>GitHub Copilot Is Too Nice. Fix It With a Tone of Voice File.</title><dc:creator>Emanuele Bartolesi</dc:creator><pubDate>Wed, 01 Apr 2026 12:21:58 +0000</pubDate><link>https://dev.to/playfulprogramming/github-copilot-is-too-nice-fix-it-with-a-tone-of-voice-file-39ij</link><guid>https://dev.to/playfulprogramming/github-copilot-is-too-nice-fix-it-with-a-tone-of-voice-file-39ij</guid><description>&lt;p&gt;Most GitHub Copilot setups are too polite to be useful.&lt;/p&gt;
+
+&lt;p&gt;By default, Copilot tries to agree, avoid criticism, and keep answers "safe".&lt;br&gt;
+That sounds good, but in practice it leads to weak suggestions, missed problems, and bad decisions slipping through.&lt;/p&gt;
+
+&lt;p&gt;If you want better output, you need to change its behavior.&lt;/p&gt;
+
+&lt;p&gt;The simplest way is a tone of voice file.&lt;/p&gt;
+
+&lt;p&gt;Create a &lt;code&gt;voice-instructions.md&lt;/code&gt; in your repo and force Copilot to be critical:&lt;br&gt;
+&lt;/p&gt;
+
+&lt;div class="highlight js-code-highlight"&gt;
+&lt;pre class="highlight yaml"&gt;&lt;code&gt;&lt;span class="nn"&gt;---&lt;/span&gt;
+&lt;span class="na"&gt;applyTo&lt;/span&gt;&lt;span class="pi"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="s"&gt;**'&lt;/span&gt;
+&lt;span class="nn"&gt;---&lt;/span&gt;
+
+&lt;span class="s"&gt;Give direct, critical feedback.&lt;/span&gt;
+&lt;span class="s"&gt;Identify mistakes, weak assumptions, unnecessary complexity, unclear naming, hidden risks, and poor trade-offs without softening the message.&lt;/span&gt;
+
+&lt;span class="s"&gt;Do not add generic praise or filler. Do not agree by default.&lt;/span&gt;
+
+&lt;span class="s"&gt;When something is wrong, say exactly what is wrong, why it is a problem, and what should be done instead.&lt;/span&gt;
+
+&lt;span class="s"&gt;Prioritize correctness, clarity, simplicity, maintainability, and practical delivery.&lt;/span&gt;
+
+&lt;span class="s"&gt;Challenge vague requirements and surface missing constraints, edge cases, and operational risks.&lt;/span&gt;
+
+&lt;span class="s"&gt;Be blunt but professional. Never be insulting. Always aim to be useful.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;/div&gt;
+
+
+
+&lt;p&gt;You get:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Clear problems called out&lt;/li&gt;
+&lt;li&gt;Weak assumptions challenged&lt;/li&gt;
+&lt;li&gt;Simpler and more maintainable alternatives&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The result is better code and faster decisions.&lt;/p&gt;
+
+&lt;p&gt;There is a trade-off.&lt;/p&gt;
+
+&lt;p&gt;It feels harsher.&lt;br&gt;
+It is not ideal for beginners.&lt;br&gt;
+It removes the "friendly assistant" vibe.&lt;/p&gt;
+
+&lt;p&gt;But if you are building real systems, that is the wrong goal anyway.&lt;/p&gt;
+
+&lt;p&gt;If you want better output, demand better behavior.&lt;/p&gt;
+
+
+&lt;h3&gt;
+  
+  
+  👀 GitHub Copilot quota visibility in VS Code
+&lt;/h3&gt;
+
+&lt;p&gt;
+&lt;a href="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsqzk5hamyymcmuh515a4.png" class="article-body-image-wrapper"&gt;&lt;img src="https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsqzk5hamyymcmuh515a4.png" width="700" height="700"&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If you use GitHub Copilot and ever wondered:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;what plan you’re on&lt;/li&gt;
+&lt;li&gt;whether you have limits&lt;/li&gt;
+&lt;li&gt;how much premium quota is left&lt;/li&gt;
+&lt;li&gt;when it resets&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I built a small VS Code extension called &lt;strong&gt;Copilot Insights&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It shows Copilot &lt;strong&gt;plan and quota status&lt;/strong&gt; directly inside VS Code.&lt;br&gt;&lt;br&gt;
+No usage analytics. No productivity scoring. Just clarity.&lt;/p&gt;
+
+&lt;p&gt;👉 VS Code Marketplace:&lt;br&gt;
+&lt;a href="https://marketplace.visualstudio.com/items?itemName=emanuelebartolesi.vscode-copilot-insights" rel="noopener noreferrer"&gt;https://marketplace.visualstudio.com/items?itemName=emanuelebartolesi.vscode-copilot-insights&lt;/a&gt;&lt;/p&gt;
+
+</description><category>github</category><category>githubcopilot</category><category>ai</category><category>programming</category></item></channel></rss>

@@ -37,6 +37,14 @@ public sealed class RawFeedItem
     /// <summary>Target collection name (e.g. "news", "blogs", "videos", "community").</summary>
     public required string CollectionName { get; init; }
 
+    /// <summary>
+    /// HTML content embedded directly in the RSS/Atom feed (e.g. <c>content:encoded</c> for Medium,
+    /// Ghost, WordPress; Atom <c>&lt;content&gt;</c>). Used as a fallback in
+    /// <c>ArticleContentService</c> when the HTTP fetch for the article URL fails (e.g. bot-blocking).
+    /// <see langword="null"/> when the feed does not embed article content.
+    /// </summary>
+    public string? EmbeddedHtml { get; init; }
+
     /// <summary>Full text content of the article (fetched separately from the feed URL).</summary>
     public string? FullContent { get; init; }
 

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>.NET Blog</title><atom:link href="https://devblogs.microsoft.com/dotnet/feed/" rel="self" type="application/rss+xml" /><link>https://devblogs.microsoft.com/dotnet/</link><description>Free. Cross-platform. Open source. A developer platform for building all your apps.</description><lastBuildDate>Thu, 02 Apr 2026 18:09:10 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><image><url>https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2024/10/Microsoft-favicon-48x48.jpg</url><title>.NET Blog</title><link>https://devblogs.microsoft.com/dotnet/</link><width>32</width><height>32</height></image><item><title>Explore union types in C# 15</title><link>https://devblogs.microsoft.com/dotnet/csharp-15-union-types/</link><comments>https://devblogs.microsoft.com/dotnet/csharp-15-union-types/#comments</comments><dc:creator><![CDATA[Bill Wagner]]></dc:creator><pubDate>Thu, 02 Apr 2026 17:05:00 +0000</pubDate><category><![CDATA[.NET]]></category><category><![CDATA[C#]]></category><category><![CDATA[.NET 11]]></category><category><![CDATA[Pattern Matching]]></category><category><![CDATA[union types]]></category><guid isPermaLink="false">https://devblogs.microsoft.com/dotnet/?p=59829</guid><description><![CDATA[<p>C# 15 introduces union types — declare a closed set of case types with implicit conversions and exhaustive pattern matching. Try unions in preview today and see the broader exhaustiveness roadmap.</p>
+<p>The post <a href="https://devblogs.microsoft.com/dotnet/csharp-15-union-types/">Explore union types in C# 15</a> appeared first on <a href="https://devblogs.microsoft.com/dotnet">.NET Blog</a>.</p>
+]]></description><content:encoded><![CDATA[<p>Union types have been frequently requested for C#, and they&#8217;re here. Starting with .NET 11 Preview 2, C# 15 introduces the <code>union</code> keyword. The <code>union</code> keyword declares that a value is exactly one of a fixed set of types with compiler-enforced exhaustive pattern matching. If you&#8217;ve used discriminated unions in F# or similar features in other languages, you&#8217;ll feel right at home. But C# unions are designed for a C#-native experience: they&#8217;re type unions that compose existing types, integrate with the pattern matching you already know, and work seamlessly with the rest of the language.</p>
+<h2>What are union types?</h2>
+<p>Before C# 15, when a method needs to return one of several possible types, you had imperfect options. Using <code>object</code> placed no constraints on what types are actually stored — any type could end up there, and the caller had to write defensive logic for unexpected values. Marker interfaces and abstract base classes were better because they restrict the set of types, but they can&#8217;t be &#8220;closed&#8221; — anyone can implement the interface or derive from the base class, so the compiler can never consider the set complete. And both approaches require the types to share a common ancestor, which doesn&#8217;t work when you wanted a union of unrelated types like <code>string</code> and <code>Exception</code>, or <code>int</code> and <code>IEnumerable&lt;T&gt;</code>.</p>
+<p>Union types solve these problems. A union declares a closed set of case types — they don&#8217;t need to be related to each other, and no other types can be added. The compiler guarantees that <code>switch</code> expressions handling the union are exhaustive, covering every case type without needing a discard <code>_</code> or default branch. But it&#8217;s more than exhaustiveness: unions enable designs that traditional hierarchies can&#8217;t express, composing any combination of existing types into a single, compiler-verified contract.</p>
+<p>Here&#8217;s the simplest declaration:</p>
+<pre><code class="language-csharp">public record class Cat(string Name);
+public record class Dog(string Name);
+public record class Bird(string Name);
+
+public union Pet(Cat, Dog, Bird);</code></pre>
+<p>This single line declares <code>Pet</code> as a new type whose variables can hold a <code>Cat</code>, a <code>Dog</code>, or a <code>Bird</code>. The compiler provides implicit conversions from each case type, so you can assign any of them directly:</p>
+<pre><code class="language-csharp">Pet pet = new Dog("Rex");
+Console.WriteLine(pet.Value); // Dog { Name = Rex }
+
+Pet pet2 = new Cat("Whiskers");
+Console.WriteLine(pet2.Value); // Cat { Name = Whiskers }</code></pre>
+<p>The compiler issues an error if you assign an instance of a type that isn&#8217;t one of the case types to a <code>Pet</code> object.</p>
+<p>The When you use an instance of a <code>union</code> type known to be not null, the compiler knows the complete set of case types, so a <code>switch</code> expression that covers all of them is exhaustive— no discard needed:</p>
+<pre><code class="language-csharp">string name = pet switch
+{
+    Dog d =&gt; d.Name,
+    Cat c =&gt; c.Name,
+    Bird b =&gt; b.Name,
+};</code></pre>
+<p>The types <code>Dog</code>, <code>Cat</code>, and <code>Bird</code> are all non-nullable types. The <code>pet</code> variable is known to be non-null, it was set in the earlier snippet. Therefore, this <code>switch</code> expression isn&#8217;t required to check for <code>null</code>. If any of the types are nullable, for example <code>int?</code> or <code>Bird?</code>, all <code>switch</code> expressions for a <code>Pet</code> instance would need a <code>null</code> arm for exhaustiveness. If you later add a fourth case type to <code>Pet</code>, every <code>switch</code> expression that doesn&#8217;t handle it produces a compiler warning. That&#8217;s one core value: the compiler catches missing cases at build time, not at runtime.</p>
+<p>Patterns apply to the union&#8217;s <code>Value</code> property, not the union struct itself. This &#8220;unwrapping&#8221; is automatic — you write <code>Dog d</code> and the compiler checks <code>Value</code> for you. The two exceptions are <code>var</code> and <code>_</code>, which apply to the union value itself so you can capture or ignore the whole union.</p>
+<p>For <code>union</code> types, the <code>null</code> pattern checks whether <code>Value</code> is null. The <code>default</code> value of a union struct has a null <code>Value</code>:</p>
+<pre><code class="language-csharp">Pet pet = default;
+
+var description = pet switch
+{
+    Dog d =&gt; d.Name,
+    Cat c =&gt; c.Name,
+    Bird b =&gt; b.Name,
+    null =&gt; "no pet",
+};
+// description is "no pet"</code></pre>
+<p>The <code>Pet</code> example illustrates the syntax. Now, let&#8217;s explore real world scenarios for union types.</p>
+<h3>OneOrMore&lt;T&gt; — single value or collection</h3>
+<p>APIs sometimes accept either a single item or a collection. A union with a body lets you add helper members alongside the case types. The <code>OneOrMore&lt;T&gt;</code> declaration includes an <code>AsEnumerable()</code> method directly in the union body — just like you&#8217;d add methods to any type declaration:</p>
+<pre><code class="language-csharp">public union OneOrMore&lt;T&gt;(T, IEnumerable&lt;T&gt;)
+{
+    public IEnumerable&lt;T&gt; AsEnumerable() =&gt; Value switch
+    {
+        T single =&gt; [single],
+        IEnumerable&lt;T&gt; multiple =&gt; multiple,
+        null =&gt; []
+    };
+}</code></pre>
+<p>Notice that the <code>AsEnumerable</code> method must handle the case where <code>Value</code> is <code>null</code>. That&#8217;s because the default null-state of the <code>Value</code> property is <em>maybe-null</em>. This rule is necessary to provide proper warnings for arrays of a union type, or instances of the default value for the <code>union</code> struct.</p>
+<p>Callers pass whichever form is convenient, and <code>AsEnumerable()</code> normalizes it:</p>
+<pre><code class="language-csharp">OneOrMore&lt;string&gt; tags = "dotnet";
+OneOrMore&lt;string&gt; moreTags = new[] { "csharp", "unions", "preview" };
+
+foreach (var tag in tags.AsEnumerable())
+    Console.Write($"[{tag}] ");
+// [dotnet]
+
+foreach (var tag in moreTags.AsEnumerable())
+    Console.Write($"[{tag}] ");
+// [csharp] [unions] [preview]</code></pre>
+<h2>Custom unions for existing libraries</h2>
+<p>The <code>union</code> declaration is an opinionated shorthand. The compiler generates a struct with a constructor for each case type and a <code>Value</code> property of type <code>object?</code> that holds the underlying value. The constructors enable implicit conversions from any of the case types to the union type. The union instance always stores its contents as a single <code>object?</code> reference and boxes value types. That covers the majority of use cases cleanly.</p>
+<p>But several community libraries already provide union-like types with their own storage strategies. Those libraries don&#8217;t need to switch to the <code>union</code> syntax to benefit from C# 15. Any class or struct with a <code>[System.Runtime.CompilerServices.Union]</code> attribute is recognized as a union type, as long as it follows the basic union pattern: one or more public single-parameter constructors (defining the case types) and a public <code>Value</code> property.</p>
+<p>For performance-sensitive scenarios where case types include value types, libraries can also implement the non-boxing access pattern by adding a <code>HasValue</code> property and <code>TryGetValue</code> methods. This lets the compiler implement pattern matching without boxing.</p>
+<p>For full details on creating custom union types and the non-boxing access pattern, see the <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/union#custom-union-types">union types language reference</a>.</p>
+<h2>Related proposals</h2>
+<p>Union types give you a type that contains one of a closed set of types. Two proposed features provide related functionality for type hierarchies and enumerations. You can learn about both proposals and how they relate to unions by reading the feature specifications:</p>
+<ul>
+<li><a href="https://github.com/dotnet/csharplang/blob/main/proposals/closed-hierarchies.md">Closed hierarchies</a>: The <code>closed</code> modifier on a class prevents derived classes from being declared outside the defining assembly.</li>
+<li><a href="https://github.com/dotnet/csharplang/blob/main/proposals/closed-enums.md">Closed enums</a>: A <code>closed</code> enum prevents creation of values other than the declared members.</li>
+</ul>
+<p>Together, these three features give C# a comprehensive exhaustiveness story:</p>
+<ul>
+<li><strong>Union types</strong> — exhaustive matching over a closed set of types</li>
+<li><strong>Closed hierarchies</strong> — exhaustive matching over a sealed class hierarchy</li>
+<li><strong>Closed enums</strong> — exhaustive matching over a fixed set of enum values</li>
+</ul>
+<p>Union types are available now in preview. When evaluating them, keep this broader roadmap in mind. These proposals are active, but aren&#8217;t yet committed to a release. Join the discussion as we continue the design and implementation of them.</p>
+<h2>Try it yourself</h2>
+<p>Union types are available starting with .NET 11 Preview 2. To get started:</p>
+<ol>
+<li>Install the <a href="https://dotnet.microsoft.com/download/dotnet">.NET 11 Preview SDK</a>.</li>
+<li>Create or update a project targeting <code>net11.0</code>.</li>
+<li>Set <code>&lt;LangVersion&gt;preview&lt;/LangVersion&gt;</code> in your project file.</li>
+</ol>
+<p>IDE support in Visual Studio will be available in the next Visual Studio Insiders build. It is included in the latest C# DevKit Insiders build.</p>
+<p><div class="alert alert-info"><p class="alert-divider"><i class="fabric-icon fabric-icon--Info"></i><strong>Early preview: declare runtime types yourself</strong></p>
+In .NET 11 Preview 2, the <code>UnionAttribute</code> and <code>IUnion</code> interface aren&#8217;t included in the runtime yet. You must declare them in your project. Later preview versions will include these types in the runtime.
+</div></p>
+<p>Add the following to your project (or grab <a href="https://github.com/dotnet/docs/blob/e68b5dd1e557b53c45ca43e61b013bc919619fb9/docs/csharp/language-reference/builtin-types/snippets/unions/RuntimePolyfill.cs">RuntimePolyfill.cs</a> from the docs repo):</p>
+<pre><code class="language-csharp">namespace System.Runtime.CompilerServices
+{
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Struct,
+        AllowMultiple = false)]
+    public sealed class UnionAttribute : Attribute;
+
+    public interface IUnion
+    {
+        object? Value { get; }
+    }
+}</code></pre>
+<p>Once those are in place, you can declare and use union types:</p>
+<pre><code class="language-csharp">public record class Cat(string Name);
+public record class Dog(string Name);
+
+public union Pet(Cat, Dog);
+
+Pet pet = new Cat("Whiskers");
+Console.WriteLine(pet switch
+{
+    Cat c =&gt; $"Cat: {c.Name}",
+    Dog d =&gt; $"Dog: {d.Name}",
+});</code></pre>
+<p>Some features from the full <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/proposals/unions">proposal specification</a> aren&#8217;t yet implemented, including union member providers. Those are coming in future previews.</p>
+<h2>Share your feedback</h2>
+<p>Union types are in preview, and your feedback directly shapes the final design. Try them in your projects, explore edge cases, and tell us what works and what doesn&#8217;t.</p>
+<p><div  class="d-flex justify-content-center"><a class="cta_button_link btn-primary mb-24" href="https://github.com/dotnet/csharplang/discussions/9663" target="_blank">Join the unions discussion on GitHub</a></div></p>
+<p>To learn more:</p>
+<ul>
+<li><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/union">Union types — language reference</a></li>
+<li><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/proposals/unions">Unions — feature specification</a></li>
+<li><a href="https://learn.microsoft.com/dotnet/csharp/whats-new/csharp-15">What&#8217;s new in C# 15</a></li>
+</ul>
+<p>The post <a href="https://devblogs.microsoft.com/dotnet/csharp-15-union-types/">Explore union types in C# 15</a> appeared first on <a href="https://devblogs.microsoft.com/dotnet">.NET Blog</a>.</p>
+]]></content:encoded><wfw:commentRss>https://devblogs.microsoft.com/dotnet/csharp-15-union-types/feed/</wfw:commentRss><slash:comments>23</slash:comments><image url="https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2026/03/csharp-15-union-types.webp" type="image/jpeg" /></item></channel></rss>

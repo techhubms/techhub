@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://www.mindbyte.nl/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.mindbyte.nl/" rel="alternate" type="text/html" /><updated>2025-06-06T00:42:22+02:00</updated><id>https://www.mindbyte.nl/feed.xml</id><title type="html">MindByte</title><subtitle>Microsoft .NET consultant, developer, architect. Focus on ALM, DevOps, APIs, Azure and everything around it.</subtitle><author><name>Michiel van Oudheusden</name><uri>https://www.mindbyte.nl</uri></author><entry><title type="html">Dynamic IIS Server Deployments with GitHub Actions</title><link href="https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html" rel="alternate" type="text/html" title="Dynamic IIS Server Deployments with GitHub Actions" /><published>2025-06-02T00:00:00+02:00</published><updated>2025-06-02T00:00:00+02:00</updated><id>https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions</id><content type="html" xml:base="https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html"><![CDATA[<p>When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?</p>
+
+<h2 id="background">Background</h2>
+
+<p>Our environment consisted of a load balancer distributing traffic to several Windows servers hosting IIS. These servers (EC2 instances) were spun up via CloudFormation, each automatically registering a GitHub self-hosted runner. In essence, every server became a target for GitHub Actions workflows.</p>
+
+<p>To deploy across the entire group of servers with the same tag (for example, all IIS-Server machines), we needed the workflow to run on each of them, not just on a single available runner. While setting <code class="language-plaintext highlighter-rouge">runs-on: [self-hosted, &lt;label&gt;]</code> directs GitHub Actions to run the job on a runner matching that label, it does not instruct it to execute on all such servers simultaneously.</p>
+
+<p>As <a href="https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions">documented by GitHub</a>, <code class="language-plaintext highlighter-rouge">runs-on</code> selects only one matching runner; to execute a job on multiple machines, you need to use a matrix strategy.</p>
+
+<p>Hard-coding runner names would defeat our goal of dynamic scaling, since servers could be added or removed without updating the workflow.</p>
+
+<p>We looked for an approach that would adapt dynamically as servers joined or left our environment. Azure DevOps offered “<a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/release/deployment-groups/deploying-azure-vms-deployment-groups?view=azure-devops">deployment groups</a>”, but GitHub Actions does not include a direct equivalent. Instead, we needed to leverage the GitHub API to query our organization’s runners at runtime, filter them by environment labels, and build a dynamic matrix of targets for our workflow. This blog post describes the story of how we achieved that goal.</p>
+
+<h2 id="gathering-runner-information">Gathering Runner Information</h2>
+
+<p>The first obstacle we encountered was obtaining an authentication token capable of listing all self-hosted runners in our organization. The default <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> provided to workflows only has repository scope, so it cannot retrieve organization-wide runner details. Our solution was to create a GitHub App with “Read access to organization self hosted runners”, then install it on our repository. By storing the App’s ID and private key as repository secrets (<code class="language-plaintext highlighter-rouge">RUNNER_TOKEN_APP_ID</code> and <code class="language-plaintext highlighter-rouge">RUNNER_TOKEN_APP_PRIVATE_KEY</code>), we could exchange these credentials for a short-lived token that the GitHub CLI (<code class="language-plaintext highlighter-rouge">gh</code>) could use to query the runners API.</p>
+
+<p>Below is the YAML snippet for the <code class="language-plaintext highlighter-rouge">determine-runners</code> job. It runs on <code class="language-plaintext highlighter-rouge">ubuntu-latest</code>, invokes a third-party action to fetch an application token, then uses <code class="language-plaintext highlighter-rouge">gh api</code> and <code class="language-plaintext highlighter-rouge">jq</code> to filter runners with a specific environment label (e.g., <code class="language-plaintext highlighter-rouge">staging</code> or <code class="language-plaintext highlighter-rouge">production</code>) and a fixed label (e.g., <code class="language-plaintext highlighter-rouge">IIS-Server</code>):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">determine-runners</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Determine target runners</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">outputs</span><span class="pi">:</span>
+      <span class="na">runners_json</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">env</span><span class="pi">:</span>
+      <span class="na">ORG_NAME</span><span class="pi">:</span> <span class="s">$</span>
+      <span class="na">TARGET_ENV_LABEL</span><span class="pi">:</span> <span class="s">$</span>
+      <span class="na">REQUIRED_LABEL_1</span><span class="pi">:</span> <span class="s">IIS-Server</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get Organization API Token</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">get_workflow_token</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">peter-murray/workflow-application-token-action@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">application_id</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">application_private_key</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">organization</span><span class="pi">:</span> <span class="s">$</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get matching runners (including offline)</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">get_runners</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s"># Retrieve all runners for the organization (up to 100 per page)</span>
+          <span class="s">runners_data=$(gh api "orgs/$/actions/runners?per_page=100" --jq '.runners[]')</span>
+
+          <span class="s"># Filter runners by both the fixed label and environment label</span>
+          <span class="s">matching_runners=$(echo "$runners_data" | jq -c \</span>
+            <span class="s">--arg label1 "$" \</span>
+            <span class="s">--arg label2 "$" \</span>
+            <span class="s">'select(.labels | map(.name) | (contains([$label1]) and contains([$label2])))'</span>
+          <span class="s">)</span>
+
+          <span class="s"># Build a JSON array of runner names</span>
+          <span class="s">runners_json=$(echo "$matching_runners" | jq -cs '[.[].name]')</span>
+
+          <span class="s">if [ -z "$runners_json" ] || [ "$runners_json" == "[]" ]; then</span>
+            <span class="s">echo "::error::No runners found with labels: '$' and '$'."</span>
+            <span class="s">exit 1</span>
+          <span class="s">else</span>
+            <span class="s">echo "runners_json=$runners_json" &gt;&gt; $GITHUB_OUTPUT</span>
+          <span class="s">fi</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GH_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+</code></pre></div></div>
+
+<h2 id="building-the-deployment-matrix">Building the Deployment Matrix</h2>
+
+<p>Once we had a JSON list of runner names in the output variable <code class="language-plaintext highlighter-rouge">runners_json</code>, we could construct a dynamic matrix for our deployment job. The second job, <code class="language-plaintext highlighter-rouge">deployment-web-app</code>, depends on <code class="language-plaintext highlighter-rouge">determine-runners</code>. It uses <code class="language-plaintext highlighter-rouge">fromJson(...)</code> to transform the JSON string into an array for the matrix. Each array element corresponds to a runner name, resulting in one parallel job per server.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">deployment-web-app</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to $ on $</span>
+    <span class="na">environment</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">determine-runners</span><span class="pi">]</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">fail-fast</span><span class="pi">:</span> <span class="no">false</span>
+      <span class="na">matrix</span><span class="pi">:</span>
+        <span class="na">runner</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Clean Workspace Folder</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">Remove-Item -Recurse -Force $\*</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Download artifact</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/download-artifact@v4</span>
+
+      <span class="c1"># Additional steps to deploy the IIS website go here</span>
+</code></pre></div></div>
+
+<p>In our case, deploying to IIS involved copying build artifacts, stopping the IIS site, replacing the files, and restarting the service. By running these steps on each runner in parallel, we reduced total deployment time and avoided manual coordination.</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>When we first set out, we worried that this dynamic approach would introduce more complexity than it solved. However, by automating the discovery of runners, we created a resilient pipeline that adapts as servers come online or go offline. Below are some key takeaways:</p>
+
+<ul>
+  <li>
+    <p><strong>Use Labels Strategically</strong><br />
+By combining environment labels (e.g., <code class="language-plaintext highlighter-rouge">staging</code>, <code class="language-plaintext highlighter-rouge">production</code>) with a fixed label (e.g., <code class="language-plaintext highlighter-rouge">IIS-Server</code>), we narrowed down the runner list precisely. Labels become powerful selectors when applied consistently.</p>
+  </li>
+  <li>
+    <p><strong>Manage GitHub App Credentials Carefully</strong><br />
+The process requires a GitHub App with appropriate permissions. You must secure its private key and ensure it remains installed on your repository. Losing this App or its credentials would break the token exchange and halt deployments.</p>
+  </li>
+  <li>
+    <p><strong>CLI Tools Preinstalled</strong><br />
+We used a GitHub-hosted runner to run this workflow, which already has <code class="language-plaintext highlighter-rouge">gh</code> and <code class="language-plaintext highlighter-rouge">jq</code> installed by default.</p>
+  </li>
+  <li>
+    <p><strong>Account for Pagination</strong><br />
+Our example handles only the first 100 runners. If your organization has more, implement pagination logic by iterating over pages until no runners remain.</p>
+  </li>
+  <li>
+    <p><strong>Embrace Parallelism</strong><br />
+Running deployments in parallel saved us time and reduced the risk of inconsistent state. We could also monitor each runner’s status separately, making troubleshooting easier.</p>
+  </li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>GitHub Actions does not natively support a construct like deployment groups. By querying the GitHub API, filtering runners with <code class="language-plaintext highlighter-rouge">jq</code>, and building a dynamic matrix, we created a solution that scales automatically as servers change. Although it requires extra setup, a GitHub App, additional CLI tools, and careful label management, the result is a more flexible, resilient deployment pipeline.</p>
+
+<p>While this post uses IIS server deployments as the example, the same technique can be applied to any deployment scenario. By defining tags or labels on your runners and building a dynamic matrix, you can select machines based on any condition, such as environment, role, or geographic region, and run workflows in parallel across them.</p>]]></content><author><name>Michiel van Oudheusden</name><uri>https://www.mindbyte.nl</uri></author><category term="github-actions" /><category term="iis" /><category term="windows" /><category term="aws" /><category term="devops" /><category term="self-hosted-runners" /><summary type="html"><![CDATA[When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?]]></summary></entry></feed>

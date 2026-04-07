@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom"><link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCZSAqzABRmDxDHuPS6YuXZA" /><id>yt:channel:ZSAqzABRmDxDHuPS6YuXZA</id><yt:channelId>ZSAqzABRmDxDHuPS6YuXZA</yt:channelId><title>Alireza Chegini | AI Skills for Your Career</title><link rel="alternate" href="https://www.youtube.com/channel/UCZSAqzABRmDxDHuPS6YuXZA" /><author><name>Alireza Chegini | AI Skills for Your Career</name><uri>https://www.youtube.com/channel/UCZSAqzABRmDxDHuPS6YuXZA</uri></author><published>2019-03-21T13:34:11+00:00</published><entry><id>yt:video:WFgGGl5C4PI</id><yt:videoId>WFgGGl5C4PI</yt:videoId><yt:channelId>UCZSAqzABRmDxDHuPS6YuXZA</yt:channelId><title>Build Your FIRST AI Agent in Minutes with Azure AI Foundry</title><link rel="alternate" href="https://www.youtube.com/watch?v=WFgGGl5C4PI" /><author><name>Alireza Chegini | AI Skills for Your Career</name><uri>https://www.youtube.com/channel/UCZSAqzABRmDxDHuPS6YuXZA</uri></author><published>2025-11-10T15:21:11+00:00</published><updated>2026-03-26T17:53:59+00:00</updated><media:group><media:title>Build Your FIRST AI Agent in Minutes with Azure AI Foundry</media:title><media:content url="https://www.youtube.com/v/WFgGGl5C4PI?version=3" type="application/x-shockwave-flash" width="640" height="390" /><media:thumbnail url="https://i4.ytimg.com/vi/WFgGGl5C4PI/hqdefault.jpg" width="480" height="360" /><media:description>🔗 Join AI Studio to easily &amp; quickly build AI agents &amp; automations:: https://www.skool.com/cac-ai-studio
+
+🔗If you want an automation/agent built in your business - book a call: 
+https://calendly.com/alireza-chegini/discovery-call
+
+
+🚀 Want to build your first AI agent without writing a single line of code? In this step-by-step beginner tutorial, I show you exactly how to create, test, and manage your very first AI agent using Azure AI Foundry — in less than 20 minutes!
+
+✅ What you’ll learn in this video:
+ • How to set up an Azure AI Foundry account
+ • How to create a new agent from scratch
+ • How to give your agent instructions and personality
+ • How to add private knowledge (PDF upload &amp; RAG-style Q&amp;A)
+ • How to monitor your agent’s performance
+ • How to clean up your resources and avoid surprise Azure bills
+
+00:00 - What You’ll Learn
+00:21 - Azure AI Foundry Introduction 
+00:58 - Setting Up Azure AI Foundry
+01:44 - Creating a New AI Agent Project
+04:35 - Deploying Your First Agent
+05:04 - Customizing Agent Behavior &amp; Settings
+07:27 - Testing Your Agent Live
+09:54 - Writing Agent Instructions
+11:40 - Adding Knowledge (PDF Upload for RAG)
+13:08 - Talking to Your Document (PDF Q&amp;A)
+14:37 - Monitoring &amp; Observability Dashboard
+17:11 - Cleaning Up Your Azure Resources
+20:03 - Final Recap &amp; Next Steps
+
+
+
+🙏 Buy me a coffee ☕ : https://coff.ee/alirezachegini
+
+ 🔗 Azure AI Foundry: https://ai.azure.com/
+
+
+Background Music:    • 🍂 [https://www.youtube.com/watch?v=Q7HjxOAU5Kc]
+
+🔔 Hit the bell icon to stay notified of future AI automation tutorials! #ai #automation #n8n</media:description><media:community><media:starRating count="20" average="5.00" min="1" max="5" /><media:statistics views="1276" /></media:community></media:group></entry></feed>

@@ -133,7 +133,11 @@ builder.Services.AddTransient<IYouTubeTranscriptService, YouTubeTranscriptServic
 builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     .ConfigureHttpClient(client =>
     {
-        client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(
+            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://techhub.microsoft.community)");
+        client.DefaultRequestHeaders.Accept.ParseAdd(
+            "application/rss+xml,application/atom+xml,application/xml;q=0.9,*/*;q=0.8");
+        client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
         client.Timeout = TimeSpan.FromSeconds(90);
     })
     .AddStandardResilienceHandler(options =>
@@ -147,9 +151,19 @@ builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     });
 
 builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
+    .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
+    {
+        // Disable auto-redirect so ArticleFetchClient can handle HTTPS→HTTP scheme-downgrade
+        // redirects explicitly (e.g. mindbyte.nl redirects www.mindbyte.nl → mindbyte.nl over HTTP).
+        AllowAutoRedirect = false
+    })
     .ConfigureHttpClient(client =>
     {
-        client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(
+            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://techhub.microsoft.community)");
+        client.DefaultRequestHeaders.Accept.ParseAdd(
+            "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+        client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
         client.Timeout = TimeSpan.FromSeconds(60);
     })
     .AddStandardResilienceHandler(options =>

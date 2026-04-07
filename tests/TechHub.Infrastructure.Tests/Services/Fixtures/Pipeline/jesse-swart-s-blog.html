@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>TDD with GitHub Copilot in Python | Jesse Swart Coding Blog</title>
+<meta name="keywords" content="GitHub, Copilot, Python, TDD, Development">
+<meta name="description" content="Though I have some experience with coding in Python, I&rsquo;ve never actually done TDD in it. I wanted to see if GitHub Copilot could help me with this.
+To start off, I needed something to build. Top of mind from the trusty &rsquo;list of example projects&rsquo; came a system for personal finance administration. I have some previous experience with building such a system, and got a good idea of how I would want that to work.">
+<meta name="author" content="">
+<link rel="canonical" href="https://sswart.github.io/post/tdd-python-copilot/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b609c58d5c11bb90b1a54e04005d74ad1ddf22165eb79f5533967e57df9c3b50.css" integrity="sha256-tgnFjVwRu5CxpU4EAF10rR3fIhZet59VM5Z&#43;V9&#43;cO1A=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://sswart.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://sswart.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://sswart.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://sswart.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://sswart.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://sswart.github.io/post/tdd-python-copilot/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:title" content="TDD with GitHub Copilot in Python" />
+<meta property="og:description" content="Though I have some experience with coding in Python, I&rsquo;ve never actually done TDD in it. I wanted to see if GitHub Copilot could help me with this.
+To start off, I needed something to build. Top of mind from the trusty &rsquo;list of example projects&rsquo; came a system for personal finance administration. I have some previous experience with building such a system, and got a good idea of how I would want that to work." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://sswart.github.io/post/tdd-python-copilot/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-06-24T16:06:14+02:00" />
+<meta property="article:modified_time" content="2024-06-24T16:06:14+02:00" /><meta property="og:site_name" content="Software Engineering" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="TDD with GitHub Copilot in Python"/>
+<meta name="twitter:description" content="Though I have some experience with coding in Python, I&rsquo;ve never actually done TDD in it. I wanted to see if GitHub Copilot could help me with this.
+To start off, I needed something to build. Top of mind from the trusty &rsquo;list of example projects&rsquo; came a system for personal finance administration. I have some previous experience with building such a system, and got a good idea of how I would want that to work."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://sswart.github.io/post/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "TDD with GitHub Copilot in Python",
+      "item": "https://sswart.github.io/post/tdd-python-copilot/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "TDD with GitHub Copilot in Python",
+  "name": "TDD with GitHub Copilot in Python",
+  "description": "Though I have some experience with coding in Python, I\u0026rsquo;ve never actually done TDD in it. I wanted to see if GitHub Copilot could help me with this.\nTo start off, I needed something to build. Top of mind from the trusty \u0026rsquo;list of example projects\u0026rsquo; came a system for personal finance administration. I have some previous experience with building such a system, and got a good idea of how I would want that to work.",
+  "keywords": [
+    "GitHub", "Copilot", "Python", "TDD", "Development"
+  ],
+  "articleBody": "Though I have some experience with coding in Python, I’ve never actually done TDD in it. I wanted to see if GitHub Copilot could help me with this.\nTo start off, I needed something to build. Top of mind from the trusty ’list of example projects’ came a system for personal finance administration. I have some previous experience with building such a system, and got a good idea of how I would want that to work.\nI started off by describing the first functionality, and instructing Copilot Chat to generate a test for it:\nHelp me create the unit tests for a personal finance administration system in Python. Start with tests for the code that can allow the user to enter a transaction. The system will need to prompt the user for input on each property of the transaction. A transaction consists of the following fields: - Date - Time - Description - Amount - Category The prompt, as usual, resulted in a broad step by step instruction on how to implement this, followed by the actual code. Which looked something like this:\nimport unittest from unittest.mock import patch import finance_system # Assuming this is the module with your finance system class TestTransactionEntry(unittest.TestCase): @patch('builtins.input', side_effect=['2023-04-01', '12:00', 'Lunch', '15.00', 'Food']) def test_add_transaction(self, mock_inputs): # Assuming finance_system has a function add_transaction() that returns True if the transaction is added successfully result = finance_system.add_transaction() self.assertTrue(result, \"The transaction should be added successfully.\") if __name__ == '__main__': unittest.main() At first glance, it looks like a passable test. There is one test case, and that is perfectly fine for now. It tests if calling an add_transaction function with the correct inputs will return True.\nRunning the test of course results in a failure. We did not write any implementation yet.\nI then proceeded to implement the add_transaction function. I instructed Copilot to generate the implementation for me:\nImplement the finance_system module and add_transaction function for me The resulting code was straightforward:\n# finance_system.py class Transaction: def __init__(self, date, time, description, amount, category): self.date = date self.time = time self.description = description self.amount = amount self.category = category # Assuming transactions are stored in a list transactions = [] def add_transaction(): date = input(\"Enter the transaction date (YYYY-MM-DD): \") time = input(\"Enter the transaction time (HH:MM): \") description = input(\"Enter the transaction description: \") amount = input(\"Enter the transaction amount: \") category = input(\"Enter the transaction category: \") # Create a new Transaction instance transaction = Transaction(date, time, description, amount, category) # Add the transaction to the list transactions.append(transaction) # For simplicity, return True to indicate success return True I ran the test again, and this time it passed!\nIt was time to get back to the tests.\nAdd edge cases for things like invalid date input, invalid time input. Also add tests that checks if the description has a maximum of 50 characters and the category has a maximum of 20 characters Copilot came up with the following test cases:\n@patch('builtins.input', side_effect=['2023/04/01', '12:00', 'Lunch', '15.00', 'Food']) def test_invalid_date_format(self, mock_inputs): with self.assertRaises(ValueError): finance_system.add_transaction() @patch('builtins.input', side_effect=['2023-04-01', '1200', 'Lunch', '15.00', 'Food']) def test_invalid_time_format(self, mock_inputs): with self.assertRaises(ValueError): finance_system.add_transaction() @patch('builtins.input', side_effect=['2023-04-01', '12:00', 'L' * 51, '15.00', 'Food']) def test_description_length_exceeds_limit(self, mock_inputs): with self.assertRaises(ValueError): finance_system.add_transaction() @patch('builtins.input', side_effect=['2023-04-01', '12:00', 'Lunch', '15.00', 'F' * 21]) def test_category_length_exceeds_limit(self, mock_inputs): with self.assertRaises(ValueError): finance_system.add_transaction() Running the tests of course resulted in failures. I then proceeded to have copilot implement the checks in the add_transaction function. At this point I needed to start thinking about what context is available to Copilot Chat. Not only does it need to know about the contents of my tests file, it also needs to know about the contents of my finance_system module so that it can match the implementation to the tests. Using #file to refer to both files did the trick:\nImplement the functionality described by the tests #file:test.py #file:finance_system.py def add_transaction(): date_input = input(\"Enter the transaction date (YYYY-MM-DD): \") time_input = input(\"Enter the transaction time (HH:MM): \") description = input(\"Enter the transaction description: \") amount = input(\"Enter the transaction amount: \") category = input(\"Enter the transaction category: \") # Validate date try: datetime.datetime.strptime(date_input, '%Y-%m-%d') except ValueError: raise ValueError(\"Invalid date format. Please use YYYY-MM-DD.\") # Validate time try: datetime.datetime.strptime(time_input, '%H:%M') except ValueError: raise ValueError(\"Invalid time format. Please use HH:MM.\") # Validate description length if len(description) \u003e 50: raise ValueError(\"Description exceeds 50 characters.\") # Validate category length if len(category) \u003e 20: raise ValueError(\"Category exceeds 20 characters.\") # Create and add the transaction transaction = Transaction(date_input, time_input, description, amount, category) transactions.append(transaction) return True The suggestion was not very user friendly. Instead of providing feedback right away, the user would have to enter all values, and only after that be told that the input was invalid. Copilot needed some more pointers:\nDo the validation for each input right after it is received so that the user can get instant feedback def add_transaction(): date_input = input(\"Enter the transaction date (YYYY-MM-DD): \") # Validate date immediately try: datetime.datetime.strptime(date_input, '%Y-%m-%d') except ValueError: raise ValueError(\"Invalid date format. Please use YYYY-MM-DD.\") time_input = input(\"Enter the transaction time (HH:MM): \") # Validate time immediately try: datetime.datetime.strptime(time_input, '%H:%M') except ValueError: raise ValueError(\"Invalid time format. Please use HH:MM.\") description = input(\"Enter the transaction description: \") # Validate description length immediately if len(description) \u003e 50: raise ValueError(\"Description exceeds 50 characters.\") amount = input(\"Enter the transaction amount: \") # Amount validation can be added here if needed category = input(\"Enter the transaction category: \") # Validate category length immediately if len(category) \u003e 20: raise ValueError(\"Category exceeds 20 characters.\") # Create and add the transaction transaction = Transaction(date_input, time_input, description, amount, category) transactions.append(transaction) return True The tests passed. Time to refactor. Of course, for challenges sake, I asked Copilot to do it for me.\nUse a Value Object for each input to handle the validation Now we are starting to get somewhere. We are ensuring we are using the correct types for our inputs and can now trust that any use of the input values in the future will be valid.\nimport datetime class TransactionDate: def __init__(self, date_str): try: self.value = datetime.datetime.strptime(date_str, '%Y-%m-%d').date() except ValueError: raise ValueError(\"Invalid date format. Please use YYYY-MM-DD.\") class TransactionTime: def __init__(self, time_str): try: self.value = datetime.datetime.strptime(time_str, '%H:%M').time() except ValueError: raise ValueError(\"Invalid time format. Please use HH:MM.\") class TransactionDescription: def __init__(self, description): if len(description) \u003e 50: raise ValueError(\"Description exceeds 50 characters.\") self.value = description class TransactionAmount: def __init__(self, amount): # Assuming amount is a numeric value; add more validation as needed self.value = float(amount) class TransactionCategory: def __init__(self, category): if len(category) \u003e 20: raise ValueError(\"Category exceeds 20 characters.\") self.value = category class Transaction: def __init__(self, date, time, description, amount, category): self.date = date self.time = time self.description = description self.amount = amount self.category = category transactions = [] def add_transaction(): date_input = TransactionDate(input(\"Enter the transaction date (YYYY-MM-DD): \")) time_input = TransactionTime(input(\"Enter the transaction time (HH:MM): \")) description = TransactionDescription(input(\"Enter the transaction description: \")) amount = TransactionAmount(input(\"Enter the transaction amount: \")) category = TransactionCategory(input(\"Enter the transaction category: \")) transaction = Transaction(date_input.value, time_input.value, description.value, amount.value, category.value) transactions.append(transaction) return True One thing left to do is have the Transaction class also use the newly defined Value Objects:\nMake the Transaction class use the newly created Value Objects class Transaction: def __init__(self, date: TransactionDate, time: TransactionTime, description: TransactionDescription, amount: TransactionAmount, category: TransactionCategory): self.date = date.value self.time = time.value self.description = description.value self.amount = amount.value self.category = category.value def add_transaction(): date_input = TransactionDate(input(\"Enter the transaction date (YYYY-MM-DD): \")) time_input = TransactionTime(input(\"Enter the transaction time (HH:MM): \")) description = TransactionDescription(input(\"Enter the transaction description: \")) amount = TransactionAmount(input(\"Enter the transaction amount: \")) category = TransactionCategory(input(\"Enter the transaction category: \")) transaction = Transaction(date_input, time_input, description, amount, category) transactions.append(transaction) return True The tests passed. I was happy with the result. I had a working system that I could build upon. I had a decent set of tests that I could trust.\nThis experiment showed me that even if I’m no expert in a language, I can get started developing with any language quickly with the help of Copilot, while even using a way of working that is familiar to me.\n",
+  "wordCount" : "1339",
+  "inLanguage": "en",
+  "datePublished": "2024-06-24T16:06:14+02:00",
+  "dateModified": "2024-06-24T16:06:14+02:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sswart.github.io/post/tdd-python-copilot/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jesse Swart Coding Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sswart.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://sswart.github.io/" accesskey="h" title="Jesse Swart Coding Blog (Alt + H)">Jesse Swart Coding Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      TDD with GitHub Copilot in Python
+    </h1>
+    <div class="post-meta"><span title='2024-06-24 16:06:14 +0200 CEST'>June 24, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Though I have some experience with coding in Python, I&rsquo;ve never actually done TDD in it. I wanted to see if GitHub Copilot could help me with this.</p>
+<p>To start off, I needed something to build. Top of mind from the trusty &rsquo;list of example projects&rsquo; came a system for personal finance administration. I have some previous experience with building such a system, and got a good idea of how I would want that to work.</p>
+<p>I started off by describing the first functionality, and instructing Copilot Chat to generate a test for it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Help me create the unit tests for a personal finance administration system in Python.
+</span></span><span style="display:flex;"><span>Start with tests for the code that can allow the user to enter a transaction. 
+</span></span><span style="display:flex;"><span>The system will need to prompt the user for input on each property of the transaction. 
+</span></span><span style="display:flex;"><span>A transaction consists of the following fields:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- Date
+</span></span><span style="display:flex;"><span>- Time
+</span></span><span style="display:flex;"><span>- Description
+</span></span><span style="display:flex;"><span>- Amount
+</span></span><span style="display:flex;"><span>- Category
+</span></span></code></pre></div><p>The prompt, as usual, resulted in a broad step by step instruction on how to implement this, followed by the actual code. Which looked something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> unittest
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> unittest.mock <span style="color:#f92672">import</span> patch
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> finance_system  <span style="color:#75715e"># Assuming this is the module with your finance system</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestTransactionEntry</span>(unittest<span style="color:#f92672">.</span>TestCase):
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@patch</span>(<span style="color:#e6db74">&#39;builtins.input&#39;</span>, side_effect<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;2023-04-01&#39;</span>, <span style="color:#e6db74">&#39;12:00&#39;</span>, <span style="color:#e6db74">&#39;Lunch&#39;</span>, <span style="color:#e6db74">&#39;15.00&#39;</span>, <span style="color:#e6db74">&#39;Food&#39;</span>])
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_add_transaction</span>(self, mock_inputs):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Assuming finance_system has a function add_transaction() that returns True if the transaction is added successfully</span>
+</span></span><span style="display:flex;"><span>        result <span style="color:#f92672">=</span> finance_system<span style="color:#f92672">.</span>add_transaction()
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>assertTrue(result, <span style="color:#e6db74">&#34;The transaction should be added successfully.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    unittest<span style="color:#f92672">.</span>main()
+</span></span></code></pre></div><p>At first glance, it looks like a passable test. There is one test case, and that is perfectly fine for now. It tests if calling an <code>add_transaction</code> function with the correct inputs will return <code>True</code>.</p>
+<p>Running the test of course results in a failure. We did not write any implementation yet.</p>
+<p><img loading="lazy" src="/images/python-tdd-copilot/test-failure.png" alt="Test failure"  />
+</p>
+<p>I then proceeded to implement the <code>add_transaction</code> function. I instructed Copilot to generate the implementation for me:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Implement the finance_system module and add_transaction function for me
+</span></span></code></pre></div><p>The resulting code was straightforward:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># finance_system.py</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Transaction</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, date, time, description, amount, category):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>date <span style="color:#f92672">=</span> date
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>time <span style="color:#f92672">=</span> time
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>description <span style="color:#f92672">=</span> description
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>amount <span style="color:#f92672">=</span> amount
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>category <span style="color:#f92672">=</span> category
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Assuming transactions are stored in a list</span>
+</span></span><span style="display:flex;"><span>transactions <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_transaction</span>():
+</span></span><span style="display:flex;"><span>    date <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction date (YYYY-MM-DD): &#34;</span>)
+</span></span><span style="display:flex;"><span>    time <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction time (HH:MM): &#34;</span>)
+</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction description: &#34;</span>)
+</span></span><span style="display:flex;"><span>    amount <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>    category <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction category: &#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create a new Transaction instance</span>
+</span></span><span style="display:flex;"><span>    transaction <span style="color:#f92672">=</span> Transaction(date, time, description, amount, category)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Add the transaction to the list</span>
+</span></span><span style="display:flex;"><span>    transactions<span style="color:#f92672">.</span>append(transaction)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># For simplicity, return True to indicate success</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><p>I ran the test again, and this time it passed!</p>
+<p><img loading="lazy" src="/images/python-tdd-copilot/test-success.png" alt="Test success"  />
+</p>
+<p>It was time to get back to the tests.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Add edge cases for things like invalid date input, invalid time input. Also add tests that checks if the description has a maximum of 50 characters and the category has a maximum of 20 characters
+</span></span></code></pre></div><p>Copilot came up with the following test cases:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#a6e22e">@patch</span>(<span style="color:#e6db74">&#39;builtins.input&#39;</span>, side_effect<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;2023/04/01&#39;</span>, <span style="color:#e6db74">&#39;12:00&#39;</span>, <span style="color:#e6db74">&#39;Lunch&#39;</span>, <span style="color:#e6db74">&#39;15.00&#39;</span>, <span style="color:#e6db74">&#39;Food&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_invalid_date_format</span>(self, mock_inputs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>assertRaises(<span style="color:#a6e22e">ValueError</span>):
+</span></span><span style="display:flex;"><span>        finance_system<span style="color:#f92672">.</span>add_transaction()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@patch</span>(<span style="color:#e6db74">&#39;builtins.input&#39;</span>, side_effect<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;2023-04-01&#39;</span>, <span style="color:#e6db74">&#39;1200&#39;</span>, <span style="color:#e6db74">&#39;Lunch&#39;</span>, <span style="color:#e6db74">&#39;15.00&#39;</span>, <span style="color:#e6db74">&#39;Food&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_invalid_time_format</span>(self, mock_inputs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>assertRaises(<span style="color:#a6e22e">ValueError</span>):
+</span></span><span style="display:flex;"><span>        finance_system<span style="color:#f92672">.</span>add_transaction()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@patch</span>(<span style="color:#e6db74">&#39;builtins.input&#39;</span>, side_effect<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;2023-04-01&#39;</span>, <span style="color:#e6db74">&#39;12:00&#39;</span>, <span style="color:#e6db74">&#39;L&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">51</span>, <span style="color:#e6db74">&#39;15.00&#39;</span>, <span style="color:#e6db74">&#39;Food&#39;</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_description_length_exceeds_limit</span>(self, mock_inputs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>assertRaises(<span style="color:#a6e22e">ValueError</span>):
+</span></span><span style="display:flex;"><span>        finance_system<span style="color:#f92672">.</span>add_transaction()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@patch</span>(<span style="color:#e6db74">&#39;builtins.input&#39;</span>, side_effect<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;2023-04-01&#39;</span>, <span style="color:#e6db74">&#39;12:00&#39;</span>, <span style="color:#e6db74">&#39;Lunch&#39;</span>, <span style="color:#e6db74">&#39;15.00&#39;</span>, <span style="color:#e6db74">&#39;F&#39;</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">21</span>])
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_category_length_exceeds_limit</span>(self, mock_inputs):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> self<span style="color:#f92672">.</span>assertRaises(<span style="color:#a6e22e">ValueError</span>):
+</span></span><span style="display:flex;"><span>        finance_system<span style="color:#f92672">.</span>add_transaction()
+</span></span></code></pre></div><p>Running the tests of course resulted in failures. I then proceeded to have copilot implement the checks in the <code>add_transaction</code> function. At this point I needed to start thinking about what context is available to Copilot Chat. Not only does it need to know about the contents of my tests file, it also needs to know about the contents of my <code>finance_system</code> module so that it can match the implementation to the tests. Using <code>#file</code> to refer to both files did the trick:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Implement the functionality described by the tests #file:test.py #file:finance_system.py
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_transaction</span>():
+</span></span><span style="display:flex;"><span>    date_input <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction date (YYYY-MM-DD): &#34;</span>)
+</span></span><span style="display:flex;"><span>    time_input <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction time (HH:MM): &#34;</span>)
+</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction description: &#34;</span>)
+</span></span><span style="display:flex;"><span>    amount <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>    category <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction category: &#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate date</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(date_input, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Invalid date format. Please use YYYY-MM-DD.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate time</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(time_input, <span style="color:#e6db74">&#39;%H:%M&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Invalid time format. Please use HH:MM.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate description length</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(description) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Description exceeds 50 characters.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate category length</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(category) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Category exceeds 20 characters.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create and add the transaction</span>
+</span></span><span style="display:flex;"><span>    transaction <span style="color:#f92672">=</span> Transaction(date_input, time_input, description, amount, category)
+</span></span><span style="display:flex;"><span>    transactions<span style="color:#f92672">.</span>append(transaction)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><p>The suggestion was not very user friendly. Instead of providing feedback right away, the user would have to enter all values, and only after that be told that the input was invalid. Copilot needed some more pointers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Do the validation for each input right after it is received so that the user can get instant feedback
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_transaction</span>():
+</span></span><span style="display:flex;"><span>    date_input <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction date (YYYY-MM-DD): &#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate date immediately</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(date_input, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Invalid date format. Please use YYYY-MM-DD.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    time_input <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction time (HH:MM): &#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate time immediately</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(time_input, <span style="color:#e6db74">&#39;%H:%M&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Invalid time format. Please use HH:MM.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction description: &#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate description length immediately</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(description) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Description exceeds 50 characters.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    amount <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction amount: &#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Amount validation can be added here if needed</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    category <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;Enter the transaction category: &#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Validate category length immediately</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(category) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Category exceeds 20 characters.&#34;</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create and add the transaction</span>
+</span></span><span style="display:flex;"><span>    transaction <span style="color:#f92672">=</span> Transaction(date_input, time_input, description, amount, category)
+</span></span><span style="display:flex;"><span>    transactions<span style="color:#f92672">.</span>append(transaction)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><p>The tests passed. Time to refactor. Of course, for challenges sake, I asked Copilot to do it for me.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Use a Value Object for each input to handle the validation
+</span></span></code></pre></div><p>Now we are starting to get somewhere. We are ensuring we are using the correct types for our inputs and can now trust that any use of the input values in the future will be valid.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> datetime
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TransactionDate</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, date_str):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(date_str, <span style="color:#e6db74">&#39;%Y-%m-</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span>)<span style="color:#f92672">.</span>date()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Invalid date format. Please use YYYY-MM-DD.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TransactionTime</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, time_str):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>            self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> datetime<span style="color:#f92672">.</span>datetime<span style="color:#f92672">.</span>strptime(time_str, <span style="color:#e6db74">&#39;%H:%M&#39;</span>)<span style="color:#f92672">.</span>time()
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Invalid time format. Please use HH:MM.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TransactionDescription</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, description):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(description) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">50</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Description exceeds 50 characters.&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> description
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TransactionAmount</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, amount):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Assuming amount is a numeric value; add more validation as needed</span>
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> float(amount)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TransactionCategory</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, category):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> len(category) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">20</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">raise</span> <span style="color:#a6e22e">ValueError</span>(<span style="color:#e6db74">&#34;Category exceeds 20 characters.&#34;</span>)
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>value <span style="color:#f92672">=</span> category
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Transaction</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, date, time, description, amount, category):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>date <span style="color:#f92672">=</span> date
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>time <span style="color:#f92672">=</span> time
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>description <span style="color:#f92672">=</span> description
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>amount <span style="color:#f92672">=</span> amount
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>category <span style="color:#f92672">=</span> category
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>transactions <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_transaction</span>():
+</span></span><span style="display:flex;"><span>    date_input <span style="color:#f92672">=</span> TransactionDate(input(<span style="color:#e6db74">&#34;Enter the transaction date (YYYY-MM-DD): &#34;</span>))
+</span></span><span style="display:flex;"><span>    time_input <span style="color:#f92672">=</span> TransactionTime(input(<span style="color:#e6db74">&#34;Enter the transaction time (HH:MM): &#34;</span>))
+</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> TransactionDescription(input(<span style="color:#e6db74">&#34;Enter the transaction description: &#34;</span>))
+</span></span><span style="display:flex;"><span>    amount <span style="color:#f92672">=</span> TransactionAmount(input(<span style="color:#e6db74">&#34;Enter the transaction amount: &#34;</span>))
+</span></span><span style="display:flex;"><span>    category <span style="color:#f92672">=</span> TransactionCategory(input(<span style="color:#e6db74">&#34;Enter the transaction category: &#34;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    transaction <span style="color:#f92672">=</span> Transaction(date_input<span style="color:#f92672">.</span>value, time_input<span style="color:#f92672">.</span>value, description<span style="color:#f92672">.</span>value, amount<span style="color:#f92672">.</span>value, category<span style="color:#f92672">.</span>value)
+</span></span><span style="display:flex;"><span>    transactions<span style="color:#f92672">.</span>append(transaction)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><p>One thing left to do is have the Transaction class also use the newly defined Value Objects:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Make the Transaction class use the newly created Value Objects
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Transaction</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, date: TransactionDate, time: TransactionTime, description: TransactionDescription, amount: TransactionAmount, category: TransactionCategory):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>date <span style="color:#f92672">=</span> date<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>time <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>description <span style="color:#f92672">=</span> description<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>amount <span style="color:#f92672">=</span> amount<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>category <span style="color:#f92672">=</span> category<span style="color:#f92672">.</span>value
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_transaction</span>():
+</span></span><span style="display:flex;"><span>    date_input <span style="color:#f92672">=</span> TransactionDate(input(<span style="color:#e6db74">&#34;Enter the transaction date (YYYY-MM-DD): &#34;</span>))
+</span></span><span style="display:flex;"><span>    time_input <span style="color:#f92672">=</span> TransactionTime(input(<span style="color:#e6db74">&#34;Enter the transaction time (HH:MM): &#34;</span>))
+</span></span><span style="display:flex;"><span>    description <span style="color:#f92672">=</span> TransactionDescription(input(<span style="color:#e6db74">&#34;Enter the transaction description: &#34;</span>))
+</span></span><span style="display:flex;"><span>    amount <span style="color:#f92672">=</span> TransactionAmount(input(<span style="color:#e6db74">&#34;Enter the transaction amount: &#34;</span>))
+</span></span><span style="display:flex;"><span>    category <span style="color:#f92672">=</span> TransactionCategory(input(<span style="color:#e6db74">&#34;Enter the transaction category: &#34;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    transaction <span style="color:#f92672">=</span> Transaction(date_input, time_input, description, amount, category)
+</span></span><span style="display:flex;"><span>    transactions<span style="color:#f92672">.</span>append(transaction)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">True</span>
+</span></span></code></pre></div><p>The tests passed. I was happy with the result. I had a working system that I could build upon. I had a decent set of tests that I could trust.</p>
+<p>This experiment showed me that even if I&rsquo;m no expert in a language, I can get started developing with any language quickly with the help of Copilot, while even using a way of working that is familiar to me.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="https://sswart.github.io/tags/github/">GitHub</a></li>
+      <li><a href="https://sswart.github.io/tags/copilot/">Copilot</a></li>
+      <li><a href="https://sswart.github.io/tags/python/">Python</a></li>
+      <li><a href="https://sswart.github.io/tags/tdd/">TDD</a></li>
+      <li><a href="https://sswart.github.io/tags/development/">Development</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2024 <a href="https://sswart.github.io/">Jesse Swart Coding Blog</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

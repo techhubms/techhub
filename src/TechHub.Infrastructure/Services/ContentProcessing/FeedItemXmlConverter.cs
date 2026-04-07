@@ -145,6 +145,7 @@ internal static partial class FeedItemXmlConverter
 
     /// <summary>
     /// Decodes HTML entities and converts common HTML to lightweight markdown.
+    /// Delegates to <see cref="HtmlToMarkdownConverter"/> which is the shared implementation.
     /// </summary>
     internal static string CleanValue(string raw)
     {
@@ -153,135 +154,22 @@ internal static partial class FeedItemXmlConverter
             return string.Empty;
         }
 
-        // Decode HTML entities first (e.g. &lt;p&gt; → <p>)
-        var decoded = WebUtility.HtmlDecode(raw);
-
-        // If the decoded text contains HTML tags, convert to markdown
-        if (decoded.Contains('<', StringComparison.Ordinal) && HtmlTagPattern().IsMatch(decoded))
+        // If the raw text contains HTML tags, run it through the full converter.
+        if (raw.Contains('<', StringComparison.Ordinal) && HtmlTagPattern().IsMatch(raw))
         {
-            decoded = HtmlToMarkdown(decoded);
+            return HtmlToMarkdownConverter.Convert(raw);
         }
 
-        // Collapse excessive whitespace/newlines
-        decoded = ExcessiveNewlines().Replace(decoded, "\n\n");
-        decoded = ExcessiveSpaces().Replace(decoded, " ");
-
-        return decoded.Trim();
+        // Plain text — decode entities and collapse excessive whitespace.
+        var result = WebUtility.HtmlDecode(raw);
+        result = ExcessiveNewlines().Replace(result, "\n\n");
+        result = ExcessiveSpaces().Replace(result, " ");
+        return result.Trim();
     }
 
-    private static string HtmlToMarkdown(string html)
-    {
-        var result = html;
-
-        // Block-level elements first (order matters)
-
-        // Headings: <h1>...<h6>
-        result = Heading1().Replace(result, "\n# $1\n");
-        result = Heading2().Replace(result, "\n## $1\n");
-        result = Heading3().Replace(result, "\n### $1\n");
-        result = Heading4().Replace(result, "\n#### $1\n");
-        result = Heading5().Replace(result, "\n##### $1\n");
-        result = Heading6().Replace(result, "\n###### $1\n");
-
-        // Paragraphs
-        result = ParagraphTag().Replace(result, "\n\n$1\n\n");
-
-        // Line breaks
-        result = LineBreakTag().Replace(result, "\n");
-
-        // List items
-        result = ListItemTag().Replace(result, "\n- $1");
-
-        // Unordered/ordered list wrappers (just remove tags, items are already converted)
-        result = ListWrapperTag().Replace(result, string.Empty);
-
-        // Blockquotes
-        result = BlockquoteTag().Replace(result, "\n> $1\n");
-
-        // Code blocks (pre > code)
-        result = PreCodeTag().Replace(result, "\n```\n$1\n```\n");
-        result = PreTag().Replace(result, "\n```\n$1\n```\n");
-
-        // Inline elements
-        result = StrongTag().Replace(result, "**$1**");
-        result = EmTag().Replace(result, "*$1*");
-        result = CodeTag().Replace(result, "`$1`");
-
-        // Links: <a href="url">text</a>
-        result = AnchorTag().Replace(result, "[$2]($1)");
-
-        // Images: <img src="url" alt="text">
-        result = ImgTag().Replace(result, "![$2]($1)");
-
-        // Strip remaining HTML tags
-        result = AnyHtmlTag().Replace(result, string.Empty);
-
-        return result;
-    }
-
-    // HTML detection
+    // HTML detection — kept here so CleanValue can short-circuit on plain text.
     [GeneratedRegex(@"<[a-zA-Z][^>]*>", RegexOptions.None, matchTimeoutMilliseconds: 2000)]
     private static partial Regex HtmlTagPattern();
-
-    // Block elements
-    [GeneratedRegex(@"<h1[^>]*>(.*?)</h1>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex Heading1();
-
-    [GeneratedRegex(@"<h2[^>]*>(.*?)</h2>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex Heading2();
-
-    [GeneratedRegex(@"<h3[^>]*>(.*?)</h3>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex Heading3();
-
-    [GeneratedRegex(@"<h4[^>]*>(.*?)</h4>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex Heading4();
-
-    [GeneratedRegex(@"<h5[^>]*>(.*?)</h5>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex Heading5();
-
-    [GeneratedRegex(@"<h6[^>]*>(.*?)</h6>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex Heading6();
-
-    [GeneratedRegex(@"<p[^>]*>(.*?)</p>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex ParagraphTag();
-
-    [GeneratedRegex(@"<br\s*/?>", RegexOptions.IgnoreCase, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex LineBreakTag();
-
-    [GeneratedRegex(@"<li[^>]*>(.*?)</li>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex ListItemTag();
-
-    [GeneratedRegex(@"</?(?:ul|ol)[^>]*>", RegexOptions.IgnoreCase, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex ListWrapperTag();
-
-    [GeneratedRegex(@"<blockquote[^>]*>(.*?)</blockquote>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex BlockquoteTag();
-
-    [GeneratedRegex(@"<pre[^>]*>\s*<code[^>]*>(.*?)</code>\s*</pre>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex PreCodeTag();
-
-    [GeneratedRegex(@"<pre[^>]*>(.*?)</pre>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex PreTag();
-
-    // Inline elements
-    [GeneratedRegex(@"<(?:strong|b)[^>]*>(.*?)</(?:strong|b)>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex StrongTag();
-
-    [GeneratedRegex(@"<(?:em|i)[^>]*>(.*?)</(?:em|i)>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex EmTag();
-
-    [GeneratedRegex(@"<code[^>]*>(.*?)</code>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex CodeTag();
-
-    [GeneratedRegex(@"<a\s+[^>]*href=""([^""]*)""[^>]*>(.*?)</a>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex AnchorTag();
-
-    [GeneratedRegex(@"<img\s+[^>]*src=""([^""]*)""[^>]*alt=""([^""]*)""[^>]*/?>", RegexOptions.IgnoreCase | RegexOptions.Singleline, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex ImgTag();
-
-    // Cleanup
-    [GeneratedRegex(@"<[^>]+>", RegexOptions.None, matchTimeoutMilliseconds: 2000)]
-    private static partial Regex AnyHtmlTag();
 
     [GeneratedRegex(@"\n{3,}", RegexOptions.None, matchTimeoutMilliseconds: 2000)]
     private static partial Regex ExcessiveNewlines();

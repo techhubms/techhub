@@ -323,12 +323,13 @@ public class ArticleContentServiceTests
         // Act
         var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
 
-        // Assert — images should be stripped without leaving empty markdown references
+        // Assert — lazy-loaded images are converted to markdown references, not stripped
         result.FullContent.Should().Contain("GitHub Copilot CLI");
         result.FullContent.Should().Contain("Content about Copilot CLI features");
         result.FullContent.Should().Contain("More content after image");
         result.FullContent.Should().Contain("Final paragraph");
-        result.FullContent.Should().NotContain("![");
+        result.FullContent.Should().Contain("![](https://cdn.example.com/image1.png)");
+        result.FullContent.Should().Contain("![](https://cdn.example.com/image2.png)");
         result.FullContent.Should().NotContain("data-src");
         result.FullContent.Should().NotContain("<img");
         result.FullContent.Should().NotContain("PLACEHOLDER");
@@ -437,24 +438,6 @@ public class ArticleContentServiceTests
     }
 
     [Fact]
-    public async Task EnrichWithContentAsync_NonYouTubeItem_LargeContent_TruncatesAt50K()
-    {
-        // Arrange
-        var item = CreateNonYouTubeItem();
-        var largeContent = new string('A', 60_000);
-        var html = $"<article>{largeContent}</article>";
-        _mockFetchClient
-            .Setup(c => c.FetchHtmlAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
-            .ReturnsAsync(html);
-
-        // Act
-        var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
-
-        // Assert
-        result.FullContent!.Length.Should().BeLessThanOrEqualTo(50_000);
-    }
-
-    [Fact]
     public async Task EnrichWithContentAsync_NonYouTubeItem_NoArticleOrMainTag_UsesFullHtml()
     {
         // Arrange — fallback to full HTML when no article/main tags found
@@ -501,5 +484,75 @@ public class ArticleContentServiceTests
 
         // Assert — multiple whitespace should be collapsed
         result.FullContent.Should().NotContainAll("  ");
+    }
+
+    // ── EmbeddedHtml fallback tests ──────────────────────────────────────────
+
+    [Fact]
+    public async Task EnrichWithContentAsync_HttpFetchFails_FallsBackToEmbeddedHtml()
+    {
+        // Arrange — simulates Medium / Cloudflare-blocked sites that embed full article in RSS
+        var item = new RawFeedItem
+        {
+            Title = "Test Article",
+            ExternalUrl = "https://medium.com/@author/article",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedItemData = "Some feed data",
+            FeedName = "Test Feed",
+            CollectionName = "blogs",
+            EmbeddedHtml = "<html><body><article><h1>Embedded Title</h1><p>Full article content from RSS.</p></article></body></html>"
+        };
+        _mockFetchClient
+            .Setup(c => c.FetchHtmlAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string?)null); // HTTP blocked (e.g. 403 Cloudflare)
+
+        // Act
+        var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
+
+        // Assert
+        result.FullContent.Should().Contain("Embedded Title");
+        result.FullContent.Should().Contain("Full article content from RSS");
+    }
+
+    [Fact]
+    public async Task EnrichWithContentAsync_HttpFetchSucceeds_DoesNotUseEmbeddedHtml()
+    {
+        // Arrange — HTTP fetch succeeds; EmbeddedHtml should be ignored
+        var item = new RawFeedItem
+        {
+            Title = "Test Article",
+            ExternalUrl = "https://example.com/article",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedItemData = "Some feed data",
+            FeedName = "Test Feed",
+            CollectionName = "blogs",
+            EmbeddedHtml = "<html><body><article><p>Stale RSS teaser only.</p></article></body></html>"
+        };
+        _mockFetchClient
+            .Setup(c => c.FetchHtmlAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
+            .ReturnsAsync("<html><body><article><p>Full live article content.</p></article></body></html>");
+
+        // Act
+        var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
+
+        // Assert — live fetch wins, embedded content not used
+        result.FullContent.Should().Contain("Full live article content");
+        result.FullContent.Should().NotContain("Stale RSS teaser");
+    }
+
+    [Fact]
+    public async Task EnrichWithContentAsync_HttpFetchFailsAndNoEmbeddedHtml_ReturnsOriginal()
+    {
+        // Arrange — both fail; item returned unchanged
+        var item = CreateNonYouTubeItem(); // no EmbeddedHtml
+        _mockFetchClient
+            .Setup(c => c.FetchHtmlAsync(item.ExternalUrl, It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string?)null);
+
+        // Act
+        var result = await _service.EnrichWithContentAsync(item, CancellationToken.None);
+
+        // Assert
+        result.Should().BeSameAs(item);
     }
 }

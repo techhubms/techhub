@@ -1,0 +1,572 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>GitHub Copilot will start training on your interactions</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="preconnect" href="https://code.jquery.com" crossorigin />
+    <link rel="preload" as="script" href="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin />
+    <link rel="preload" as="style" href="https://jessehouwing.net/assets/built/screen.css?v=ff04f45d53" />
+    <link rel="preload" as="style" href="https://jessehouwing.net/public/cards.min.css" />
+    <link rel="preload" as="script" href="https://jessehouwing.net/assets/built/casper.js?v=ff04f45d53" />
+
+    <link rel="stylesheet" type="text/css" href="https://jessehouwing.net/assets/built/screen.css?v=ff04f45d53" />
+
+    <meta name="description" content="GitHub Copilot will start training on your data... You&#x27;ve probably seen this on your LinkedIn timeline in the past few days. Probably with alarming notes that this can&#x27;t be controlled and that there is no policy for it.
+
+But this simply isn&#x27;t true.">
+    <link rel="icon" href="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w256h256/2018/06/scrumbug-icon.png" type="image/png">
+    <link rel="canonical" href="https://jessehouwing.net/github-copilot-will-start-training-on-your-interactions/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta property="og:site_name" content="Scrum Bug">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="GitHub Copilot will start training on your interactions">
+    <meta property="og:description" content="GitHub Copilot will start training on your data... You&#x27;ve probably seen this on your LinkedIn timeline in the past few days. Probably with alarming notes that this can&#x27;t be controlled and that there is no policy for it.
+
+But this simply isn&#x27;t true.">
+    <meta property="og:url" content="https://jessehouwing.net/github-copilot-will-start-training-on-your-interactions/">
+    <meta property="og:image" content="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/2026/04/image-1-.png">
+    <meta property="article:published_time" content="2026-04-02T08:10:25.000Z">
+    <meta property="article:modified_time" content="2026-04-02T21:15:31.000Z">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="github copilot">
+    <meta property="article:tag" content="Security">
+    
+    <meta property="article:publisher" content="https://www.facebook.com/jessehouwing">
+    <meta property="article:author" content="https://www.facebook.com/jessehouwing">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GitHub Copilot will start training on your interactions">
+    <meta name="twitter:description" content="GitHub Copilot will start training on your data... You&#x27;ve probably seen this on your LinkedIn timeline in the past few days. Probably with alarming notes that this can&#x27;t be controlled and that there is no policy for it.
+
+But this simply isn&#x27;t true.">
+    <meta name="twitter:url" content="https://jessehouwing.net/github-copilot-will-start-training-on-your-interactions/">
+    <meta name="twitter:image" content="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/2026/04/image-1-.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Jesse Houwing">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="GitHub, github copilot, Security">
+    <meta name="twitter:site" content="@jessehouwing">
+    <meta name="twitter:creator" content="@jessehouwing">
+    <meta property="og:image:width" content="680">
+    <meta property="og:image:height" content="455">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Scrum Bug",
+        "url": "https://jessehouwing.net/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/2018/07/scrumbug-2.png",
+            "width": 271,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Jesse Houwing",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/2026/01/1761785425859.png",
+            "width": 800,
+            "height": 800
+        },
+        "url": "https://jessehouwing.net/author/jesse-houwing/",
+        "sameAs": [
+            "https://jessehouwing.net/",
+            "https://www.facebook.com/jessehouwing",
+            "https://x.com/jessehouwing"
+        ]
+    },
+    "headline": "GitHub Copilot will start training on your interactions",
+    "url": "https://jessehouwing.net/github-copilot-will-start-training-on-your-interactions/",
+    "datePublished": "2026-04-02T08:10:25.000Z",
+    "dateModified": "2026-04-02T21:15:31.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/2026/04/image-1-.png",
+        "width": 680,
+        "height": 455
+    },
+    "keywords": "GitHub, github copilot, Security",
+    "description": "GitHub Copilot will start training on your data... You&#x27;ve probably seen this on your LinkedIn timeline in the past few days. Probably with alarming notes that this can&#x27;t be controlled and that there is no policy for it.\n\nBut this simply isn&#x27;t true.",
+    "mainEntityOfPage": "https://jessehouwing.net/github-copilot-will-start-training-on-your-interactions/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 6.26">
+    <link rel="alternate" type="application/rss+xml" title="Scrum Bug" href="https://jessehouwing.net/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.67/umd/portal.min.js" data-i18n="true" data-ghost="https://jessehouwing.net/" data-key="bb257633efdd8d6fab5ece15d9" data-api="https://scrumbug.ghost.io/ghost/api/content/" data-locale="en" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/sodo-search.min.js" data-key="bb257633efdd8d6fab5ece15d9" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.8/umd/main.css" data-sodo-search="https://scrumbug.ghost.io/" data-locale="en" crossorigin="anonymous"></script>
+    
+    <link href="https://jessehouwing.net/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=ff04f45d53"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=ff04f45d53">
+    <script defer src="/public/comment-counts.min.js?v=ff04f45d53" data-ghost-comments-counts-api="https://jessehouwing.net/members/api/comments/counts/"></script>
+    <script defer src="/public/member-attribution.min.js?v=ff04f45d53"></script><style>:root {--ghost-accent-color: #68a5ce;}</style>
+    <meta name="google-site-verification" content="I8wXq4yCSt-kDo1j4IOm1Sn0amQQG0Nmc0B11HJu3ts" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-791RJJ3REE"></script>
+<script type="text/javascript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-791RJJ3REE');
+</script>
+<script>document.documentElement.classList.add('dark-mode');</script>
+
+</head>
+<body class="post-template tag-github tag-github-copilot tag-security is-head-left-logo has-cover">
+<div class="viewport">
+
+    <header id="gh-head" class="gh-head outer">
+        <div class="gh-head-inner inner">
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="https://jessehouwing.net">
+                        <img src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/2018/07/scrumbug-2.png" alt="Scrum Bug">
+                </a>
+                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                <button class="gh-burger" aria-label="Main Menu"></button>
+            </div>
+
+            <nav class="gh-head-menu">
+                <ul class="nav">
+    <li class="nav-home"><a href="https://jessehouwing.net/">Home</a></li>
+    <li class="nav-github"><a href="https://jessehouwing.net/tag/github/">GitHub</a></li>
+    <li class="nav-training"><a href="https://jessehouwing.net/training/">Training</a></li>
+    <li class="nav-scrum"><a href="https://jessehouwing.net/tag/scrum/">Scrum</a></li>
+</ul>
+
+            </nav>
+
+            <div class="gh-head-actions">
+
+                    <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>
+                    <div class="gh-head-members">
+                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-head-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                    </div>
+                
+                <div class="gh-social" style="flex-wrap: wrap; flex-direction: row-reverse;">
+                    <div class="gh-social">
+                        <a class="gh-social-link gh-social-ghsponsor" href="https://github.com/sponsors/jessehouwing/" title="GitHub Sponsors" target="_blank" rel="noopener me"><svg aria-hidden="true" fill="#bf3989" version="1.1" viewBox="0 1 16 14"><path fill-rule="evenodd" d="M4.25 2.5c-1.336 0-2.75 1.164-2.75 3 0 2.15 1.58 4.144 3.365 5.682A20.565 20.565 0 008 13.393a20.561 20.561 0 003.135-2.211C12.92 9.644 14.5 7.65 14.5 5.5c0-1.836-1.414-3-2.75-3-1.373 0-2.609.986-3.029 2.456a.75.75 0 01-1.442 0C6.859 3.486 5.623 2.5 4.25 2.5zM8 14.25l-.345.666-.002-.001-.006-.003-.018-.01a7.643 7.643 0 01-.31-.17 22.075 22.075 0 01-3.434-2.414C2.045 10.731 0 8.35 0 5.5 0 2.836 2.086 1 4.25 1 5.797 1 7.153 1.802 8 3.02 8.847 1.802 10.203 1 11.75 1 13.914 1 16 2.836 16 5.5c0 2.85-2.045 5.231-3.885 6.818a22.08 22.08 0 01-3.744 2.584l-.018.01-.006.003h-.002L8 14.25zm0 0l.345.666a.752.752 0 01-.69 0L8 14.25z"></path></svg></a>
+                        <a class="gh-social-link gh-social-github" href="https://github.com/jessehouwing/" title="Github" target="_blank" rel="noopener me"><svg class="icon" version="1.1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 15.61"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+                        <a class="gh-social-link gh-social-bsky" href="https://bsky.app/profile/jessehouwing.net" title="Bluesky" target="_blank" rel="noopener me"><?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.9.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve" fill="currentColor">
+<path d="M16,14.8C14.6,12,10.7,6.8,7.1,4.3c-3.4-2.4-4.8-2-5.6-1.6c-1,0.5-1.2,2-1.2,2.9S0.8,13,1.1,14c1.1,3.6,4.9,4.8,8.4,4.4
+	c0.2,0,0.4-0.1,0.5-0.1c-0.2,0-0.4,0.1-0.5,0.1c-5.1,0.8-9.7,2.6-3.7,9.3c6.6,6.8,9-1.5,10.2-5.6c1.2,4.2,2.7,12.1,10.1,5.6
+	c5.6-5.6,1.5-8.5-3.6-9.3c-0.2,0-0.4,0-0.5-0.1c0.2,0,0.4,0,0.5,0.1c3.5,0.4,7.3-0.8,8.4-4.4c0.3-1.1,0.8-7.6,0.8-8.5
+	s-0.2-2.4-1.2-2.9c-0.9-0.4-2.2-0.8-5.6,1.6C21.3,6.8,17.4,12,16,14.8z"/>
+</svg>
+</a>                        
+                        <a class="gh-social-link gh-social-mastadon" href="https://hachyderm.io/@jessehouwing" title="Mastadon" target="_blank" rel="noopener me"><svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0.5 0 15 16">   <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"></path> </svg></a>
+                        <a class="gh-social-link gh-social-facebook" href="https://www.facebook.com/jessehouwing" title="Facebook" target="_blank" rel="noopener me"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 23.85"><path d="M23.9981 11.9991C23.9981 5.37216 18.626 0 11.9991 0C5.37216 0 0 5.37216 0 11.9991C0 17.9882 4.38789 22.9522 10.1242 23.8524V15.4676H7.07758V11.9991H10.1242V9.35553C10.1242 6.34826 11.9156 4.68714 14.6564 4.68714C15.9692 4.68714 17.3424 4.92149 17.3424 4.92149V7.87439H15.8294C14.3388 7.87439 13.8739 8.79933 13.8739 9.74824V11.9991H17.2018L16.6698 15.4676H13.8739V23.8524C19.6103 22.9522 23.9981 17.9882 23.9981 11.9991Z"></path></svg></a>
+                        <a class="gh-social-link gh-social-instagram" href="https://www.instagram.com/jesse.houwing/" title="Instagram" target="_blank" rel="noopener me"><svg role="img" viewBox="0 0 24 24" height="32" width="32" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+</a>
+                        <a class="gh-social-link gh-social-threads" href="https://www.threads.net/@jesse.houwing" title="Threads" target="_blank" rel="noopener me"><svg aria-label="Threads" width="32" height="32" fill="currentColor" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"><path d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.19447 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z"></path></svg></a>
+                        <a class="gh-social-link gh-social-linkedin" href="https://www.linkedin.com/in/jessehouwing/" title="LinkedIn" target="_blank" rel="noopener me"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0.4 0 27.2 27.6"><path d="M25.1,0H2.9C1.5,0,0.4,1.2,0.4,2.6V25c0,1.4,1.1,2.6,2.6,2.6h1.1H14h3.4h5.5h2.1c1.4,0,2.6-1.2,2.6-2.6V2.6 		C27.6,1.2,26.5,0,25.1,0z M8.8,24H4.6V9.7h4.2V24z M6.7,7.7c-1.2,0-2.1-0.9-2.1-2c0-1.1,0.9-2,2.1-2s2.1,0.9,2.1,2 		C8.8,6.8,7.8,7.7,6.7,7.7z M23.4,24h-4.2v-8.1c0-1.1-0.9-2-2.1-2s-2.1,0.9-2.1,2V24h-4.2V9.7H15v2.5c0.9-1.2,2.2-2.5,3.7-2.5 		c2.6,0,4.7,2.3,4.7,5.1V24z" stroke="none" fill-rule="evenodd"></path></svg></a>
+                        <a class="gh-social-link gh-social-stackoverflow" href="https://stackoverflow.com/users/736079/jessehouwing" title="StackOverflow" target="_blank" rel="noopener me"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="2 0.71 14.6 17.29"><path d="M14 16v-5h2v7H2v-7h2v5h10z"></path><path d="M12.09.72l-1.21.9 4.5 6.07 1.22-.9L12.09.71zM5 15h8v-2H5v2zm9.15-5.87L8.35 4.3l.96-1.16 5.8 4.83-.96 1.16zm-7.7-1.47l6.85 3.19.63-1.37-6.85-3.2-.63 1.38zm6.53 5L5.4 11.39l.38-1.67 7.42 1.48-.22 1.46z"></path></svg></a>
+                        <a class="gh-social-link gh-social-mvp" href="https://mvp.microsoft.com/en-us/PublicProfile/5001511?fullName=Jesse%20Houwing" title="Microsoft MVP Profile" target="_blank" rel="noopener me"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" class="icon" fill="currentColor" viewBox="16 16 193 193"><path d="M64.2 64.3 16 112.5l48.3 48.3 48.2 48.2 48.3-48.3 48.2-48.2-48.3-48.3L112.5 16 64.2 64.3zm2.1 17.4c.3.5 2.4 9.7 4.8 20.5 2.4 10.9 4.6 19.8 4.9 19.8.3 0 1.5-5.3 2.8-11.8 1.3-6.4 3.3-15.6 4.4-20.5l2-8.7H100v59.1l-4.7-.3-4.8-.3v-21.7c0-18.9-.1-21.1-1.1-16.5-.7 2.8-2.9 12.7-4.9 21.9L80.7 140H70.2l-4.5-18.8c-2.5-10.3-4.7-19.8-5-21.2-.2-1.4-.5 7.1-.6 18.7L60 140H50v-28.8c0-15.9.3-29.2.7-29.5.9-1 15.1-.9 15.6 0zm53.5 19c2.3 10.9 4.2 20.9 4.2 22.2 0 4.8 1 1.2 4.9-17.4 2.2-10.5 4.2-20.2 4.6-21.8.7-2.5 1.1-2.7 6.1-2.7 3.4 0 5.4.4 5.4 1.1 0 .7-3.2 13.9-7.1 29.5l-7.2 28.4h-12.3l-6.9-27.8c-3.7-15.2-7-28.5-7.3-29.5-.4-1.5.3-1.7 5.5-1.7h6l4.1 19.7zM175 83.6c5.6 3.3 7.4 6.6 7.8 14.8.3 5.8 0 8.1-1.6 11.2-3.7 7.3-8.8 10.4-16.8 10.4H160v20h-11V80.7l11.3.5c8.9.3 12.1.8 14.7 2.4z"></path><path d="M160 100.4v9.6h3.5c5.3 0 7.5-2.8 7.5-9.3 0-6.3-1.7-8.5-7.4-9.4l-3.6-.6v9.7z"></path></svg></a>
+                        <a class="gh-social-link gh-social-twitter" href="https://x.com/jessehouwing" title="Twitter" target="_blank" rel="noopener me"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<title>Twitter</title><g>
+<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+</g>
+</svg>
+</a>
+                        <a class="gh-social-link phone-button" href="tel:+31641813338" title="Call" target="_blank" rel="noopener me"><?xml version="1.0" encoding="utf-8"?>
+<svg stroke="currentColor" fill="currentColor" width="20" height="20" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<title>phone</title>
+<path d="M31.129 23.072c-0.118-0.743-0.365-1.409-0.719-2.004l0.014 0.026c-0.189-0.31-0.502-0.529-0.868-0.589l-0.007-0.001-8.969-1.424c-0.056-0.009-0.12-0.013-0.185-0.013-0.348 0-0.664 0.138-0.895 0.363l0-0c-0.605 0.609-1.094 1.334-1.429 2.14l-0.016 0.044c-3.506-1.573-6.252-4.319-7.785-7.729l-0.039-0.097c0.849-0.351 1.574-0.839 2.182-1.445l-0 0c0.226-0.226 0.366-0.539 0.366-0.885 0-0.069-0.006-0.137-0.017-0.204l0.001 0.007-1.423-8.97c-0.061-0.374-0.281-0.688-0.587-0.873l-0.006-0.003c-0.546-0.327-1.185-0.568-1.866-0.684l-0.033-0.005c-0.349-0.078-0.75-0.122-1.161-0.122-0.024 0-0.047 0-0.071 0l0.004-0h-0.010c-3.772 0.028-6.821 3.081-6.844 6.851v0.002c0.015 13.037 10.579 23.601 23.615 23.616h0.001c3.776-0.022 6.831-3.076 6.854-6.849v-0.002c0.001-0.029 0.001-0.063 0.001-0.098 0-0.373-0.039-0.737-0.114-1.088l0.006 0.034zM24.383 28.576c-11.657-0.013-21.103-9.459-21.116-21.115v-0.001c0.019-2.399 1.961-4.338 4.359-4.354h0.001c0.010-0 0.023-0 0.035-0 0.249 0 0.492 0.027 0.726 0.079l-0.022-0.004c0.233 0.039 0.438 0.093 0.635 0.163l-0.025-0.008 1.21 7.634c-0.516 0.379-1.135 0.651-1.807 0.768l-0.026 0.004c-0.591 0.107-1.033 0.618-1.033 1.232 0 0.146 0.025 0.286 0.071 0.416l-0.003-0.009c1.824 5.217 5.859 9.252 10.951 11.038l0.125 0.038c0.121 0.043 0.261 0.067 0.407 0.067 0.234 0 0.452-0.063 0.64-0.174l-0.006 0.003c0.311-0.184 0.532-0.492 0.597-0.854l0.001-0.008c0.121-0.698 0.393-1.317 0.78-1.846l-0.009 0.012 7.633 1.211c0.068 0.193 0.129 0.425 0.17 0.663l0.004 0.026c0.037 0.177 0.057 0.381 0.057 0.589 0 0.024-0 0.048-0.001 0.073l0-0.004c-0.013 2.4-1.954 4.343-4.352 4.359h-0.002z"></path>
+</svg>
+</a>
+                        <a class="gh-social-link rss-button" href="https://feedly.com/i/subscription/feed/https://jessehouwing.net/rss/" title="RSS" target="_blank" rel="noopener me"><svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="4 4.44 15.56 15.56"><circle cx="6.18" cy="17.82" r="2.18"></circle><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"></path></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="site-content">
+        
+
+<main id="site-main" class="site-main">
+    <article class="article post tag-github tag-github-copilot tag-security featured ">
+
+        <header class="article-header gh-canvas">
+
+            <div class="article-tag post-card-tags">
+                <span class="post-card-primary-tag">
+                    <a href="/tag/github/">GitHub</a>
+                </span>
+                <span class="post-card-featured"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.49365 4.58752C3.53115 6.03752 2.74365 7.70002 2.74365 9.25002C2.74365 10.6424 3.29678 11.9778 4.28134 12.9623C5.26591 13.9469 6.60127 14.5 7.99365 14.5C9.38604 14.5 10.7214 13.9469 11.706 12.9623C12.6905 11.9778 13.2437 10.6424 13.2437 9.25002C13.2437 6.00002 10.9937 3.50002 9.16865 1.68127L6.99365 6.25002L4.49365 4.58752Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> Featured</span>
+            </div>
+
+            <h1 class="article-title">GitHub Copilot will start training on your interactions</h1>
+
+            <p class="article-excerpt">GitHub Copilot will start training on your data... You&#x27;ve probably seen this on your LinkedIn timeline in the past few days. Probably with alarming notes that this can&#x27;t be controlled and that there is no policy for it.
+
+But this simply isn&#x27;t true.</p>
+
+            <div class="article-byline">
+                <section class="article-byline-content">
+
+                    <ul class="author-list instapaper_ignore">
+                        <li class="author-list-item">
+                            <a href="/author/jesse-houwing/" class="author-avatar" aria-label="Read more of Jesse Houwing">
+                                <img class="author-profile-image" src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w100/2026/01/1761785425859.png" alt="Jesse Houwing" />
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="article-byline-meta">
+                        <h4 class="author-name"><a href="/author/jesse-houwing/">Jesse Houwing</a></h4>
+                        <div class="byline-meta-content">
+                            <time class="byline-meta-date" datetime="2026-04-02">02 Apr 2026</time>
+                            <span class="byline-reading-time"><span class="bull">&bull;</span> 2 min read</span>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <figure class="article-image">
+                <img srcset="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w300/2026/04/image-1-.png 300w,
+                            https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w600/2026/04/image-1-.png 600w,
+                            https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w1000/2026/04/image-1-.png 1000w,
+                            https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w2000/2026/04/image-1-.png 2000w"
+                     sizes="(min-width: 1400px) 1400px, 92vw"
+                     src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/size/w2000/2026/04/image-1-.png"
+                     alt="GitHub Copilot will start training on your interactions"
+                     fetchpriority="high" />
+                <figcaption><span style="white-space: pre-wrap;">The new Allow GitHub to use my data for AI model training policy</span></figcaption>
+            </figure>
+
+        </header>
+
+        <section class="gh-content gh-canvas">
+            <p>GitHub Copilot will start training on your data... You've probably seen this on your LinkedIn timeline in the past few days. Probably with alarming notes that this can't be controlled and that <em>there is no policy for it</em>.<br><br><strong>But this simply isn't true.</strong></p><h2 id="so-lets-get-some-things-straight">So, let's get some things straight.</h2><p>GitHub Copilot will enable training on data it receives through <strong>GitHub Copilot Free, Pro and Pro+ subscriptions</strong> unless you opt out.</p><p>And GitHub won't suddenly start training its models on the contents of your private repos or your locally stored projects in the background. But it will use the data shared with GitHub Copilot through interactions to train its systems.</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://github.blog/news-insights/company-news/updates-to-github-copilot-interaction-data-usage-policy/?ref=jessehouwing.net"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Updates to GitHub Copilot interaction data usage policy</div><div class="kg-bookmark-description">From April 24 onward, interaction data from Copilot Free, Pro, and Pro+ users will be used to train and improve our AI models unless they opt out.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/icon/cropped-github-favicon-512.png" alt=""><span class="kg-bookmark-author">The GitHub Blog</span><span class="kg-bookmark-publisher">Mario Rodriguez</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://storage.ghost.io/c/13/29/1329ef25-4e8e-4ebc-be08-4f1135b51be8/content/images/thumbnail/generic-github-logo-right.png" alt="" onerror="this.style.display = 'none'"></div></a></figure><p><strong>It will not enable this for Copilot for Business or Copilot Enterprise licenses.</strong><br><br>And there are controls in place to prevent <em>your </em>users from using the non-commercial tiers of GitHub Copilot. Here are a few:</p><ul><li>If your company assigns a Copilot for Business or Copilot Enterprise license to a GitHub user, this will override the individual user's settings.</li><li>You can <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access?ref=jessehouwing.net" rel="noreferrer">centrally block access to free, pro and pro+ licenses though network controls such as DNS filtering or Proxy filtering or PiHole</a>.</li><li>You <a href="https://docs.github.com/en/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-access/manage-network-access?ref=jessehouwing.net" rel="noreferrer">can block access to free, pro and pro+ licenses through adding 1 line to a machine's hosts file</a>.</li><li>You can <a href="https://learn.microsoft.com/en-us/visualstudio/ide/visual-studio-github-copilot-admin?view=visualstudio&ref=jessehouwing.net#disable-copilot-skus" rel="noreferrer">use Windows Group Policy to control which Copilot tiers are available in Visual Studio</a>.</li><li>Companies using GitHub Enterprise with Managed Users (EMU) can <a href="https://docs.github.com/en/enterprise-cloud@latest/admin/configuring-settings/hardening-security-for-your-enterprise/restricting-access-to-githubcom-using-a-corporate-proxy?ref=jessehouwing.net" rel="noreferrer">inject a special HTTP header to prevent people from using a non-enterprise GitHub account</a>.</li><li>If you're on GitHub Enterprise with Managed Users with Data Residency you can block access to the GitHub.com logon page on a proxy.</li></ul><p>Luckily GitHub Copilot has many of these controls, many more than many of its competitors. And while assigning a license to these users will cost you money, this trade-off isn't new. You're hopefully not running your company on the free tier of Gmail either or allowing your engineers to send sensitive documents through their personal email accounts.<br><br>And if you're worried about GitHub Copilot stealing your data, I hope you are protected against personal cloud drive backups (onedrive, dropbox), supply chain attacks against npm, pipy and other package management tools used by your engineers, malicious Visual Studio Code or browser extensions or your users simply bringing any of the many other AI tools available out there in the market, many without any policy controls.<br><br>It's time to take control of your development environments. Allowing contractors and new hires to simply start working on your source code on unmanaged devices just isn't an option anymore.<br><br>Want to learn how to put some controls on your environments? Ping me!</p>
+        </section>
+
+        <section class="article-comments gh-canvas">
+            
+        <script defer src="https://cdn.jsdelivr.net/ghost/comments-ui@~1.4/umd/comments-ui.min.js" data-locale="en" data-ghost-comments="https://jessehouwing.net/" data-api="https://scrumbug.ghost.io/ghost/api/content/" data-admin="https://scrumbug.ghost.io/ghost/" data-key="bb257633efdd8d6fab5ece15d9" data-title="null" data-count="true" data-post-id="69ce205aad8a920001174998" data-color-scheme="auto" data-avatar-saturation="60" data-accent-color="#68a5ce" data-comments-enabled="all" data-publication="Scrum Bug" crossorigin="anonymous"></script>
+    
+        </section>
+
+
+    </article>
+</main>
+
+
+
+<aside class="read-more-wrap outer">
+    <div class="read-more inner">
+        
+<article class="post-card post featured">
+
+    <a class="post-card-image-link" href="/azure-devops-marketplace-tasks-and-actions/">
+
+        <img class="post-card-image"
+            srcset="https://images.unsplash.com/photo-1488459716781-31db52582fe9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fG1hcmtldHxlbnwwfHx8fDE3NzQ5NTgwMzR8MA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+                    https://images.unsplash.com/photo-1488459716781-31db52582fe9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fG1hcmtldHxlbnwwfHx8fDE3NzQ5NTgwMzR8MA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+                    https://images.unsplash.com/photo-1488459716781-31db52582fe9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fG1hcmtldHxlbnwwfHx8fDE3NzQ5NTgwMzR8MA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+                    https://images.unsplash.com/photo-1488459716781-31db52582fe9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fG1hcmtldHxlbnwwfHx8fDE3NzQ5NTgwMzR8MA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://images.unsplash.com/photo-1488459716781-31db52582fe9?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fG1hcmtldHxlbnwwfHx8fDE3NzQ5NTgwMzR8MA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;600"
+            alt="Introducing Azure DevOps Marketplace tasks and actions: A Complete Rebuild for Speed, Stability, and Security"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/azure-devops-marketplace-tasks-and-actions/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                        <span class="post-card-featured"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.49365 4.58752C3.53115 6.03752 2.74365 7.70002 2.74365 9.25002C2.74365 10.6424 3.29678 11.9778 4.28134 12.9623C5.26591 13.9469 6.60127 14.5 7.99365 14.5C9.38604 14.5 10.7214 13.9469 11.706 12.9623C12.6905 11.9778 13.2437 10.6424 13.2437 9.25002C13.2437 6.00002 10.9937 3.50002 9.16865 1.68127L6.99365 6.25002L4.49365 4.58752Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> Featured</span>
+                </div>
+                <h2 class="post-card-title">
+                    Introducing Azure DevOps Marketplace tasks and actions: A Complete Rebuild for Speed, Stability, and Security
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Introducing the Azdo marketplace project. Azure Pipelines tasks and GitHub Actions for publishing to the Azure DevOps marketplace.</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2026-03-31">31 Mar 2026</time>
+                <span class="post-card-meta-length">9 min read</span>
+                <script
+    data-ghost-comment-count="69cbb01e9abe560001417249"
+    data-ghost-comment-count-empty=""
+    data-ghost-comment-count-singular="comment"
+    data-ghost-comment-count-plural="comments"
+    data-ghost-comment-count-tag="span"
+    data-ghost-comment-count-class-name=""
+    data-ghost-comment-count-autowrap="true"
+>
+</script>
+        </footer>
+
+    </div>
+
+</article>
+        
+<article class="post-card post">
+
+    <a class="post-card-image-link" href="/keep-your-examples-in-sync-with-your-action/">
+
+        <img class="post-card-image"
+            srcset="https://images.unsplash.com/photo-1495722281458-25edbdb08a1c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxtaXJyb3J8ZW58MHx8fHwxNzcyNDQ0NDI1fDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+                    https://images.unsplash.com/photo-1495722281458-25edbdb08a1c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxtaXJyb3J8ZW58MHx8fHwxNzcyNDQ0NDI1fDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+                    https://images.unsplash.com/photo-1495722281458-25edbdb08a1c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxtaXJyb3J8ZW58MHx8fHwxNzcyNDQ0NDI1fDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+                    https://images.unsplash.com/photo-1495722281458-25edbdb08a1c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxtaXJyb3J8ZW58MHx8fHwxNzcyNDQ0NDI1fDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://images.unsplash.com/photo-1495722281458-25edbdb08a1c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI4fHxtaXJyb3J8ZW58MHx8fHwxNzcyNDQ0NDI1fDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;600"
+            alt="Keep your examples in sync with your Action"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/keep-your-examples-in-sync-with-your-action/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                </div>
+                <h2 class="post-card-title">
+                    Keep your examples in sync with your Action
+                </h2>
+            </header>
+                <div class="post-card-excerpt">Last month I added a few more GitHub Actions to the Marketplace and while working on them found that it was easy to forget to update my examples as the implementation of the Action evolved</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2026-03-02">02 Mar 2026</time>
+                <span class="post-card-meta-length">2 min read</span>
+                <script
+    data-ghost-comment-count="69a55af42882bd00014986bb"
+    data-ghost-comment-count-empty=""
+    data-ghost-comment-count-singular="comment"
+    data-ghost-comment-count-plural="comments"
+    data-ghost-comment-count-tag="span"
+    data-ghost-comment-count-class-name=""
+    data-ghost-comment-count-autowrap="true"
+>
+</script>
+        </footer>
+
+    </div>
+
+</article>
+        
+<article class="post-card post featured">
+
+    <a class="post-card-image-link" href="/github-actions-automatic-versioning-for-actions/">
+
+        <img class="post-card-image"
+            srcset="https://images.unsplash.com/photo-1708257011173-3deefa3dc338?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4OHx8cm9ib3R8ZW58MHx8fHwxNzcwNDU2ODIxfDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;300 300w,
+                    https://images.unsplash.com/photo-1708257011173-3deefa3dc338?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4OHx8cm9ib3R8ZW58MHx8fHwxNzcwNDU2ODIxfDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+                    https://images.unsplash.com/photo-1708257011173-3deefa3dc338?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4OHx8cm9ib3R8ZW58MHx8fHwxNzcwNDU2ODIxfDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;1000 1000w,
+                    https://images.unsplash.com/photo-1708257011173-3deefa3dc338?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4OHx8cm9ib3R8ZW58MHx8fHwxNzcwNDU2ODIxfDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1000px) 400px, 800px"
+            src="https://images.unsplash.com/photo-1708257011173-3deefa3dc338?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4OHx8cm9ib3R8ZW58MHx8fHwxNzcwNDU2ODIxfDA&amp;ixlib&#x3D;rb-4.1.0&amp;q&#x3D;80&amp;w&#x3D;600"
+            alt="Automatic versioning for GitHub Actions authors"
+            loading="lazy"
+        />
+
+
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="/github-actions-automatic-versioning-for-actions/">
+            <header class="post-card-header">
+                <div class="post-card-tags">
+                        <span class="post-card-featured"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M4.49365 4.58752C3.53115 6.03752 2.74365 7.70002 2.74365 9.25002C2.74365 10.6424 3.29678 11.9778 4.28134 12.9623C5.26591 13.9469 6.60127 14.5 7.99365 14.5C9.38604 14.5 10.7214 13.9469 11.706 12.9623C12.6905 11.9778 13.2437 10.6424 13.2437 9.25002C13.2437 6.00002 10.9937 3.50002 9.16865 1.68127L6.99365 6.25002L4.49365 4.58752Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg> Featured</span>
+                </div>
+                <h2 class="post-card-title">
+                    Automatic versioning for GitHub Actions authors
+                </h2>
+            </header>
+                <div class="post-card-excerpt">As a maintainer of 3 GitHub Actions, I&#39;ve always struggled a bit with the versioning  of them. GitHub&#39;s documentation provides guidance, but no easy way to verify you did everything right. Based on a quick scan of the actions on the marketplace I&#39;m not alone, even GitHub&#39;s own actions have some.</div>
+        </a>
+
+        <footer class="post-card-meta">
+            <time class="post-card-meta-date" datetime="2026-02-07">07 Feb 2026</time>
+                <span class="post-card-meta-length">5 min read</span>
+                <script
+    data-ghost-comment-count="698706825911a800011e248b"
+    data-ghost-comment-count-empty=""
+    data-ghost-comment-count-singular="comment"
+    data-ghost-comment-count-plural="comments"
+    data-ghost-comment-count-tag="span"
+    data-ghost-comment-count-class-name=""
+    data-ghost-comment-count-autowrap="true"
+>
+</script>
+        </footer>
+
+    </div>
+
+</article>
+    </div>
+</aside>
+
+
+
+    </div>
+
+    <footer class="site-footer outer">
+        <div class="inner">
+            <section class="copyright"><a href="https://jessehouwing.net">Scrum Bug</a> &copy; 2026</section>
+            <nav class="site-footer-nav">
+                
+            </nav>
+            <div>
+                <a href="https://www.facebook.com/jessehouwing" title="Facebook" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://x.com/jessehouwing" title="Twitter" target="_blank" rel="noopener">Twitter</a>
+                <a href="https://www.linkedin.com/in/jessehouwing/" title="LinkedIn" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/jessehouwing/" title="GitHub" target="_blank" rel="noopener">GitHub</a>
+                <div class="gh-powered-by"><a href="https://ghost.org/" target="_blank" rel="noopener">Powered by Ghost</a></div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"
+    defer>
+</script>
+<script src="https://jessehouwing.net/assets/built/casper.js?v=ff04f45d53" defer></script>
+
+
+
+</body>
+</html>

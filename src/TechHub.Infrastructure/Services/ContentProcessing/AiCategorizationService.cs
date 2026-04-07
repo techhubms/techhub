@@ -335,7 +335,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
         }
     }
 
-    private static string BuildUserPrompt(RawFeedItem item)
+    internal static string BuildUserPrompt(RawFeedItem item)
     {
         var sb = new StringBuilder();
         sb.AppendLine(CultureInfo.InvariantCulture, $"Please categorize the following content:");

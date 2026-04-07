@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Microsoft Foundry Blog</title><atom:link href="https://devblogs.microsoft.com/foundry/feed/" rel="self" type="application/rss+xml" /><link>https://devblogs.microsoft.com/foundry/</link><description>Your source for learning and building with our models, agents, and tools.</description><lastBuildDate>Tue, 17 Mar 2026 17:37:46 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><image><url>https://devblogs.microsoft.com/foundry/wp-content/uploads/sites/89/2025/11/cropped-Microsoft-Foundry.2mb-scaled-1-32x32.webp</url><title>Microsoft Foundry Blog</title><link>https://devblogs.microsoft.com/foundry/</link><width>32</width><height>32</height></image><item><title>Foundry Agent Service is GA: private networking, Voice Live, and enterprise-grade evaluations</title><link>https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/</link><comments>https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/#respond</comments><dc:creator><![CDATA[Bala Venkataraman, jeffhollan, Nick Brady]]></dc:creator><pubDate>Mon, 16 Mar 2026 20:30:57 +0000</pubDate><category><![CDATA[Foundry Agent Service]]></category><category><![CDATA[Microsoft Foundry]]></category><category><![CDATA[agents]]></category><category><![CDATA[azure-ai-foundry]]></category><category><![CDATA[evaluations]]></category><category><![CDATA[mcp]]></category><category><![CDATA[private-networking]]></category><category><![CDATA[vnet]]></category><category><![CDATA[voice-live]]></category><guid isPermaLink="false">https://devblogs.microsoft.com/foundry/?p=2053</guid><description><![CDATA[<p>The next-gen Foundry Agent Service is generally available today with end-to-end private networking, Voice Live integration, expanded MCP authentication, GA evaluations with continuous monitoring, and hosted agent deployments in six new Azure regions.</p>
+<p>The post <a href="https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/">Foundry Agent Service is GA: private networking, Voice Live, and enterprise-grade evaluations</a> appeared first on <a href="https://devblogs.microsoft.com/foundry">Microsoft Foundry Blog</a>.</p>
+]]></description><content:encoded><![CDATA[<p><!-- TODO: add featured image before publishing --></p>
+<p>The hardest part of shipping production AI agents isn&#8217;t the prototype — it&#8217;s everything after. Network isolation requirements. Compliance audits. Voice channels your operations team actually wants to use. Evaluations that aren&#8217;t just a pre-ship checkbox.</p>
+<p>Today&#8217;s GA release of the next-gen Foundry Agent Service addresses all of these directly. Here&#8217;s what shipped and what it means for your builds.</p>
+<h2>What&#8217;s new</h2>
+<ul>
+<li><strong>Foundry Agent Service (GA):</strong> Responses API-based runtime, wire-compatible with OpenAI agents, open model support across DeepSeek, xAI, Meta, LangChain, LangGraph, and more</li>
+<li><strong>End-to-end private networking:</strong> BYO VNet with no public egress, extended to cover tool connectivity — MCP servers, Azure AI Search, and Fabric data agents</li>
+<li><strong>MCP authentication expansion:</strong> Key-based, Entra Agent Identity, Managed Identity, and OAuth Identity Passthrough in a single service</li>
+<li><strong>Voice Live (preview) + Foundry Agents:</strong> Real-time speech-to-speech, fully managed, wired natively to your agent&#8217;s prompt, tools, and tracing</li>
+<li><strong>Evaluations (GA):</strong> Out-of-the-box evaluators, custom evaluators, and continuous production monitoring piped into Azure Monitor</li>
+<li><strong>Hosted agents (preview) in six new Azure regions:</strong> East US, North Central US, Sweden Central, Southeast Asia, Japan East, and more</li>
+</ul>
+<hr />
+<h2>Foundry Agent Service GA: built on the Responses API</h2>
+<p>The next-gen Foundry Agent Service is built on the OpenAI Responses API — the same agentic wire protocol developers are already building on. If you&#8217;re building with the Responses API today, migrating to Foundry is minimal code changes. What you gain immediately: Foundry&#8217;s enterprise security layer, private networking, Entra RBAC, full tracing, and evaluation — on top of your existing agent logic.</p>
+<p><div style="width: 930px;" class="wp-video"><video class="wp-video-shortcode" id="video-2053-1" width="930" height="360" preload="auto" controls="controls"><source type="video/mp4" src="https://devblogs.microsoft.com/foundry/wp-content/uploads/sites/89/2026/03/agents-demo.mp4?_=1" /><a href="https://devblogs.microsoft.com/foundry/wp-content/uploads/sites/89/2026/03/agents-demo.mp4">https://devblogs.microsoft.com/foundry/wp-content/uploads/sites/89/2026/03/agents-demo.mp4</a></video></div></p>
+<p>The architecture is intentionally open. You’re not locked to a single model provider or orchestration framework. Use a DeepSeek model for planning, an OpenAI model for generation, LangGraph for orchestration — the runtime handles the consistency layer. Agents, tools, and the surrounding infrastructure all speak the same protocol.</p>
+<pre><code class="language-python">import os
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+from azure.ai.projects.models import PromptAgentDefinition
+
+with (
+    DefaultAzureCredential() as credential,
+    AIProjectClient(endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"], credential=credential) as project_client,
+    project_client.get_openai_client() as openai_client,
+):
+    agent = project_client.agents.create_version(
+        agent_name="my-enterprise-agent",
+        definition=PromptAgentDefinition(
+            model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+            instructions="You are a helpful assistant.",
+        ),
+    )
+
+    conversation = openai_client.conversations.create()
+
+    response = openai_client.responses.create(
+        conversation=conversation.id,
+        input="What are best practices for building AI agents?",
+        extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
+    )
+    print(response.output_text)</code></pre>
+<blockquote><p><strong>Note:</strong> If you&#8217;re coming from the <code>azure-ai-agents</code> package, agents are now first-class operations on <code>AIProjectClient</code> in <code>azure-ai-projects</code>. Remove your standalone <code>azure-ai-agents</code> pin and use <code>get_openai_client()</code> to drive responses.</p></blockquote>
+<div class="d-flex"><a class="cta_button_link btn-secondary" href="https://learn.microsoft.com/azure/foundry/quickstarts/get-started-code?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=agents-quickstart" target="_blank" rel="noopener">Agents Quickstart</a></div>
+<hr />
+<h2>End-to-end private networking</h2>
+<p>Unmanaged network paths are a showstopper for enterprises operating under data classification policies that prohibit external routing of query content or retrieved documents. Every retrieval call, every tool invocation, every model round-trip is a potential exposure vector if it crosses the public internet.</p>
+<p>Foundry Agent Service now supports <strong>Standard Setup with private networking</strong>, where you bring your own virtual network (BYO VNet):</p>
+<ul>
+<li>No public egress — agent traffic never traverses the public internet</li>
+<li>Container/subnet injection into your network for local communication to Azure resources</li>
+<li>Access to private resources via the platform network with appropriate authorization</li>
+</ul>
+<p>More importantly, private networking is extended to <strong>tool connectivity</strong>. MCP servers, Azure AI Search indexes, and Fabric data agents can all operate over private network paths — so retrieval and action surfaces sit inside your network boundary, not just inference calls.</p>
+<div class="d-flex"><a class="cta_button_link btn-secondary" href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/virtual-networks?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=private-networking" target="_blank" rel="noopener">Private Networking Docs</a></div>
+<hr />
+<h2>MCP authentication: the full spectrum</h2>
+<p>MCP as a connection primitive is only as secure as its auth model. Enterprise MCP deployments span org-wide shared services, user-delegated access, and service-to-service connections — and they need different auth patterns for each.</p>
+<p>Foundry now supports the full spectrum for MCP server connections:</p>
+<table>
+<thead>
+<tr>
+<th>Auth method</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Key-based</strong></td>
+<td>Simple shared access for org-wide internal tools</td>
+</tr>
+<tr>
+<td><strong>Entra Agent Identity</strong></td>
+<td>Service-to-service; the agent authenticates as itself</td>
+</tr>
+<tr>
+<td><strong>Entra Foundry Project Managed Identity</strong></td>
+<td>Per-project permission isolation; no credential management overhead</td>
+</tr>
+<tr>
+<td><strong>OAuth Identity Passthrough</strong></td>
+<td>User-delegated access; user authenticates to the MCP server and grants the agent their credentials</td>
+</tr>
+</tbody>
+</table>
+<p>OAuth Identity Passthrough is the one worth calling out. When users need to grant an agent access to their personal data or permissions — their OneDrive, their Salesforce org, a SaaS API that scopes by user — the agent should act on their behalf, not as a shared system identity. Passthrough enables exactly that with standard OAuth flows.</p>
+<p>For key-based auth, add a Custom Keys connection in your Foundry project with an <code>Authorization: Bearer &lt;token&gt;</code> header, then reference it via <code>project_connection_id</code>:</p>
+<pre><code class="language-python">from azure.ai.projects.models import MCPTool, PromptAgentDefinition
+
+# project_connection_id: resource ID of a Custom Keys connection
+# storing Authorization: Bearer &lt;your-pat-token&gt;
+tool = MCPTool(
+    server_label="github-api",
+    server_url="https://api.githubcopilot.com/mcp",
+    require_approval="always",
+    project_connection_id=os.environ["MCP_PROJECT_CONNECTION_ID"],
+)
+
+agent = project_client.agents.create_version(
+    agent_name="my-mcp-agent",
+    definition=PromptAgentDefinition(
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        instructions="Use MCP tools as needed.",
+        tools=[tool],
+    ),
+)</code></pre>
+<div class="d-flex"><a class="cta_button_link btn-secondary" href="https://learn.microsoft.com/en-us/azure/ai-foundry/agents/how-to/tools/model-context-protocol?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=mcp-auth" target="_blank" rel="noopener">MCP Auth Docs</a></div>
+<hr />
+<h2>Voice Live (preview): a managed speech channel for your agents</h2>
+<p>Adding voice to an agent used to mean stitching together three separate services (STT, LLM, TTS) — three latency hops, three billing surfaces, three failure modes, all synchronized by hand. <strong>Voice Live</strong> is a fully managed, real-time speech-to-speech runtime that collapses that into a single managed API.</p>
+<p>What Voice Live handles:</p>
+<ul>
+<li><strong>Semantic voice activity detection</strong> — knows when you&#8217;ve stopped speaking based on meaning, not just silence or audio level</li>
+<li><strong>Semantic end-of-turn detection</strong> — understands conversational context to determine when the agent should respond</li>
+<li><strong>Server-side noise suppression and echo cancellation</strong> — no post-processing pipeline required</li>
+<li><strong>Barge-in support</strong> — users can interrupt mid-response</li>
+</ul>
+<p>With this integration, you connect Voice Live directly to an existing Foundry agent. The agent&#8217;s prompt, tool definitions, and configuration are managed in Foundry; Voice Live handles the audio pipeline. Voice interactions go through the same agent runtime as text — which means the same evaluators, the same traces, the same cost visibility. Voice doesn&#8217;t get a second-class observability story.</p>
+<p>For customer support, field service, accessibility, and any hands-free workflow where spoken dialogue is the primary interface, this replaces what previously required a custom audio pipeline.</p>
+<p>Connecting Voice Live to a Foundry agent uses <code>AgentSessionConfig</code> at connection time — point it at an agent name and project, and the session is immediately voice-enabled:</p>
+<pre><code class="language-python">import asyncio
+from azure.ai.voicelive.aio import connect, AgentSessionConfig
+from azure.identity.aio import DefaultAzureCredential
+
+async def run():
+    agent_config: AgentSessionConfig = {
+        "agent_name": "my-enterprise-agent",
+        "project_name": "my-foundry-project",
+        # "agent_version": "v1",  # optional — defaults to latest
+    }
+
+    async with DefaultAzureCredential() as credential:
+        async with connect(
+            endpoint=os.environ["AZURE_VOICELIVE_ENDPOINT"],
+            credential=credential,
+            agent_config=agent_config,
+        ) as connection:
+            # Update session: modalities, voice, VAD, echo cancellation
+            await connection.session.update(session=session_config)
+            # Process audio events
+            async for event in connection:
+                ...
+
+asyncio.run(run())</code></pre>
+<p>The agent&#8217;s prompt, tool definitions, and safety configuration stay in Foundry. Voice Live owns the audio I/O. The full working sample — including audio capture/playback via PyAudio and interrupt handling — is in the SDK repo.</p>
+<div class="d-flex"><a class="cta_button_link btn-secondary" href="https://github.com/microsoft-foundry/voicelive-samples/blob/main/python/voice-live-quickstarts/AgentsNewQuickstart/voice-live-with-agent-v2.py" target="_blank" rel="noopener">Voice Live + Agents Sample</a></div>
+<hr />
+<h2>Evaluations: GA with continuous production monitoring</h2>
+<p>Running a test suite before shipping is not a production quality strategy — it&#8217;s a snapshot. Quality degrades in production as traffic patterns shift, retrieved documents go stale, and new edge cases emerge that never appeared in your eval dataset.</p>
+<p>Foundry Evaluations are now generally available with three layers that together enable a proper quality lifecycle:</p>
+<p><strong>Out-of-the-box evaluators</strong> cover the standard RAG and generation scenarios: coherence, relevance, groundedness, retrieval quality, and safety. No custom configuration required — connect them to a dataset or live traffic and get quantitative scores back.</p>
+<p><strong>Custom evaluators</strong> let you encode your own criteria: business logic, internal tone standards, domain-specific compliance rules, or any quality signal that doesn&#8217;t map cleanly to a general evaluator.</p>
+<p><strong>Continuous evaluation</strong> closes the production loop. Foundry samples live traffic automatically, runs your evaluator suite against it, and surfaces results through integrated dashboards. Configure Azure Monitor alerts to fire when groundedness drops, safety thresholds breach, or performance degrades — before users notice.</p>
+<p>All evaluation results, traces, and red-teaming runs publish to Azure Monitor Application Insights. You get full-stack observability that spans agent quality, infrastructure health, cost, and traditional app telemetry in one place.</p>
+<p>Evaluations in <code>azure-ai-projects</code> run through the OpenAI-compatible <code>evals</code> API on <code>AIProjectClient</code>. The pattern: define the schema and evaluators in <code>openai_client.evals.create()</code>, then run against an agent target with <code>openai_client.evals.runs.create()</code>.</p>
+<pre><code class="language-python">import os, time
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
+from azure.ai.projects.models import PromptAgentDefinition
+from openai.types.eval_create_params import DataSourceConfigCustom
+
+with (
+    DefaultAzureCredential() as credential,
+    AIProjectClient(endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"], credential=credential) as project_client,
+    project_client.get_openai_client() as openai_client,
+):
+    agent = project_client.agents.create_version(
+        agent_name=os.environ["AZURE_AI_AGENT_NAME"],
+        definition=PromptAgentDefinition(
+            model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+            instructions="You are a helpful assistant.",
+        ),
+    )
+
+    eval_object = openai_client.evals.create(
+        name="Agent Quality Evaluation",
+        data_source_config=DataSourceConfigCustom(
+            type="custom",
+            item_schema={"type": "object", "properties": {"query": {"type": "string"}}, "required": ["query"]},
+            include_sample_schema=True,
+        ),
+        testing_criteria=[
+            {
+                "type": "azure_ai_evaluator",
+                "name": "fluency",
+                "evaluator_name": "builtin.fluency",
+                "initialization_parameters": {"deployment_name": os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"]},
+                "data_mapping": {"query": "{{item.query}}", "response": "{{sample.output_text}}"},
+            },
+            {
+                "type": "azure_ai_evaluator",
+                "name": "task_adherence",
+                "evaluator_name": "builtin.task_adherence",
+                "initialization_parameters": {"deployment_name": os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"]},
+                "data_mapping": {"query": "{{item.query}}", "response": "{{sample.output_items}}"},
+            },
+        ],
+    )
+
+    run = openai_client.evals.runs.create(
+        eval_id=eval_object.id,
+        name=f"Run for {agent.name}",
+        data_source={
+            "type": "azure_ai_target_completions",
+            "source": {
+                "type": "file_content",
+                "content": [{"item": {"query": "What is the capital of France?"}},
+                             {"item": {"query": "How do I reverse a string in Python?"}}],
+            },
+            "input_messages": {
+                "type": "template",
+                "template": [{"type": "message", "role": "user",
+                               "content": {"type": "input_text", "text": "{{item.query}}"}}],
+            },
+            "target": {"type": "azure_ai_agent", "name": agent.name, "version": agent.version},
+        },
+    )
+
+    while run.status not in ["completed", "failed"]:
+        run = openai_client.evals.runs.retrieve(run_id=run.id, eval_id=eval_object.id)
+        time.sleep(5)
+
+    print(f"Status: {run.status}, Results: {run.result_counts}")</code></pre>
+<div class="d-flex"><a class="cta_button_link btn-secondary" href="https://github.com/Azure/azure-sdk-for-python/tree/main/sdk/ai/azure-ai-projects/samples/evaluations" target="_blank" rel="noopener">Evaluation Samples</a></div>
+<hr />
+<h2>Hosted agents (preview) in six new regions</h2>
+<p>Hosted agents — containerized agent code running as managed services on Foundry Agent Service — are now available in six additional Azure regions: <strong>East US</strong>, <strong>North Central US</strong>, <strong>Sweden Central</strong>, <strong>Southeast Asia</strong>, <strong>Japan East</strong>, and more.</p>
+<p>This is relevant for two concrete scenarios: data residency requirements that mandate processing stays within a geographic boundary, and latency that compresses when your agent runs close to its data sources and users. Foundry handles container orchestration, scaling, networking, and endpoint management — you own the agent behavior and business logic.</p>
+<div class="d-flex"><a class="cta_button_link btn-secondary" href="https://learn.microsoft.com/azure/foundry/agents/quickstarts/quickstart-hosted-agent?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=hosted-agents" target="_blank" rel="noopener">Hosted Agents Docs</a></div>
+<hr />
+<h2>Learn more</h2>
+<p>For a hands-on walkthrough of the Foundry Agent Service capabilities, watch the session below — covering building a basic conversational agent, adding custom skills, grounding with documents, code execution, real-time internet access, connecting to external servers via MCP, and combining multiple tools:</p>
+<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/Gw8Il0qJPD0?si=UZz4543C4tvv_ZuS&amp;start=2554" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<hr />
+<h2>Get started</h2>
+<p>The next-gen Foundry Agent Service is available now. Install the SDK, open the portal, and go:</p>
+<pre><code class="language-bash">pip install azure-ai-projects azure-identity</code></pre>
+<p>The <a href="https://ai.azure.com?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=portal">Foundry portal</a> has an updated agents experience with visual workflow building, a unified Tools tab for MCP, A2A, and Azure AI Search connections, and the separated v1/v2 resource view. If you&#8217;re coming from Foundry Classic, the new experience is the default.</p>
+<p>For a hands-on introduction, the <a href="https://learn.microsoft.com/azure/foundry/quickstarts/get-started-code?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=quickstart-footer">agents quickstart</a> takes you from zero to a running, tool-using agent in a few minutes.</p>
+<div class="d-flex"><a class="cta_button_link btn-primary" href="https://ai.azure.com?utm_source=devblog&amp;utm_medium=blog&amp;utm_campaign=foundry-agent-service-ga&amp;utm_content=open-foundry" target="_blank" rel="noopener">Open Microsoft Foundry</a></div>
+<p>The post <a href="https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/">Foundry Agent Service is GA: private networking, Voice Live, and enterprise-grade evaluations</a> appeared first on <a href="https://devblogs.microsoft.com/foundry">Microsoft Foundry Blog</a>.</p>
+]]></content:encoded><wfw:commentRss>https://devblogs.microsoft.com/foundry/foundry-agent-service-ga/feed/</wfw:commentRss><slash:comments>0</slash:comments><enclosure url="https://devblogs.microsoft.com/foundry/wp-content/uploads/sites/89/2026/03/agents-demo.mp4" length="13856383" type="video/mp4" /><image url="https://devblogs.microsoft.com/foundry/wp-content/uploads/sites/89/2026/03/Foundry-Agent-Service-GA-hero.webp" type="image/png" /></item></channel></rss>

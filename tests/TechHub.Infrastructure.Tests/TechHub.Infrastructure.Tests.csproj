@@ -22,6 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Services\Fixtures\*.html" />
+    <EmbeddedResource Include="Services\Fixtures\Pipeline\*" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\src\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
     <ProjectReference Include="..\TechHub.TestUtilities\TechHub.TestUtilities.csproj" />
   </ItemGroup>

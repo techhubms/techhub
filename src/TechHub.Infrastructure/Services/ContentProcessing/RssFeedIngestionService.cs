@@ -146,6 +146,13 @@ public sealed class RssFeedIngestionService : IRssFeedIngestionService
             // Convert the full XML node to compact text for AI processing
             var feedItemData = FeedItemXmlConverter.ToCompactText(itemNode);
 
+            // Extract content:encoded (Medium, Ghost, WordPress) for fallback when HTTP fetch is blocked.
+            // Use local-name() to match regardless of XML namespace prefix.
+            var encodedNode = itemNode.SelectSingleNode("*[local-name()='encoded']");
+            var embeddedHtml = !string.IsNullOrWhiteSpace(encodedNode?.InnerText)
+                ? $"<html><body><article>{encodedNode!.InnerText}</article></body></html>"
+                : null;
+
             items.Add(new RawFeedItem
             {
                 Title = title,
@@ -155,7 +162,8 @@ public sealed class RssFeedIngestionService : IRssFeedIngestionService
                 FeedLevelAuthor = feedLevelAuthor,
                 FeedTags = tags,
                 FeedName = feedConfig.Name,
-                CollectionName = feedConfig.CollectionName
+                CollectionName = feedConfig.CollectionName,
+                EmbeddedHtml = embeddedHtml
             });
         }
 
@@ -213,6 +221,12 @@ public sealed class RssFeedIngestionService : IRssFeedIngestionService
             // Convert the full XML node to compact text for AI processing
             var feedItemData = FeedItemXmlConverter.ToCompactText(entry);
 
+            // Extract Atom <content> element for fallback when HTTP fetch is blocked
+            var contentNode = entry.SelectSingleNode("content") ?? entry.SelectSingleNode("atom:content", nsMgr);
+            var embeddedHtml = !string.IsNullOrWhiteSpace(contentNode?.InnerText)
+                ? $"<html><body><article>{contentNode!.InnerText}</article></body></html>"
+                : null;
+
             items.Add(new RawFeedItem
             {
                 Title = title,
@@ -222,7 +236,8 @@ public sealed class RssFeedIngestionService : IRssFeedIngestionService
                 FeedLevelAuthor = feedLevelAuthor,
                 FeedTags = tags,
                 FeedName = feedConfig.Name,
-                CollectionName = feedConfig.CollectionName
+                CollectionName = feedConfig.CollectionName,
+                EmbeddedHtml = embeddedHtml
             });
         }
 

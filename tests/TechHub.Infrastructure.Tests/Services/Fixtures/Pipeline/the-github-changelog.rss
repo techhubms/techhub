@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Archive: 2026 - GitHub Changelog</title><atom:link href="https://github.blog/changelog/feed/" rel="self" type="application/rss+xml" /><link>https://github.blog/changelog/</link><description>Updates, ideas, and inspiration from GitHub to help developers build and design software.</description><lastBuildDate>Mon, 06 Apr 2026 23:30:58 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><generator>https://wordpress.org/?v=6.9.4</generator><image><url>https://github.blog/wp-content/uploads/2019/01/cropped-github-favicon-512.png?fit=32%2C32</url><title>Archive: 2026 - GitHub Changelog</title><link>https://github.blog/changelog/</link><width>32</width><height>32</height></image><site xmlns="com-wordpress:feed-additions:1">153214340</site><item><title>Copilot usage metrics now identify active and passive Copilot code review users</title><link>https://github.blog/changelog/2026-04-06-copilot-usage-metrics-now-identify-active-and-passive-copilot-code-review-users</link><dc:creator><![CDATA[Allison]]></dc:creator><pubDate>Mon, 06 Apr 2026 23:20:14 +0000</pubDate><guid isPermaLink="false">https://github.blog/changelog/2026-04-06-copilot-usage-metrics-now-identify-active-and-passive-copilot-code-review-users</guid><description><![CDATA[<p>Copilot usage metrics now indicate which users have Copilot code review (CCR) activity, and whether that activity was active or passive. Enterprise and organization admins can see how users engage&#8230;</p>
+<p>The post <a href="https://github.blog/changelog/2026-04-06-copilot-usage-metrics-now-identify-active-and-passive-copilot-code-review-users">Copilot usage metrics now identify active and passive Copilot code review users</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></description><content:encoded><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Copilot usage metrics now indicate which users have Copilot code review (CCR) activity, and whether that activity was active or passive. Enterprise and organization admins can see how users engage with Copilot code review on daily and 28-day user-level reports, enabling a clearer picture of CCR adoption and engagement.</p>
+<p>Within the <a href="https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10">API response</a>, CCR usage is represented by two fields at the user level:</p>
+<ul>
+<li><strong><code>used_copilot_code_review_active</code></strong>: Set to <code>true</code> when a user intentionally engaged with Copilot code review by:
+<ul>
+<li>Assigning Copilot as a reviewer on a pull request.</li>
+<li>Requesting Copilot reviews again.</li>
+<li>Applying a CCR suggestion.</li>
+</ul>
+</li>
+<li><strong><code>used_copilot_code_review_passive</code></strong>: Set to <code>true</code> when Copilot code review automatically ran on a user&rsquo;s pull request (via a repo-level policy), but the user did not interact with the review.</li>
+</ul>
+<p>If a user has both active and passive CCR events on the same day, the active signal takes precedence.</p>
+<p>You can learn more in <a href="https://docs.github.com/copilot/concepts/copilot-usage-metrics/copilot-metrics">our documentation about Copilot usage metrics</a>.</p>
+<h3 id="why-this-matters" id="why-this-matters" ><a class="heading-link" href="#why-this-matters">Why this matters<span class="heading-hash pl-2 text-italic text-bold" aria-hidden="true"></span></a></h3>
+<p>With this update, you can:</p>
+<ul>
+<li><strong>Measure real engagement, not just coverage.</strong> Distinguish between users who actively interact with Copilot code review and those whose pull requests are reviewed automatically but without engagement.</li>
+<li><strong>Track adoption maturity.</strong> An admin can now say &ldquo;100% of my repositories are covered by CCR, and 60% of my users engage with those reviews actively&rdquo; instead of a single, undifferentiated active-user count.</li>
+<li><strong>Distinguish across Copilot surfaces.</strong> <code>used_copilot_code_review_active</code> / <code>used_copilot_code_review_passive</code> sit alongside <code>used_agent</code> (IDE agent mode) and <code>used_copilot_coding_agent</code> (CCA) for a complete view of adoption.</li>
+</ul>
+<p>Visit our <a href="https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10">API documentation</a> to learn more.</p>
+<p>Join the discussion within <a href="https://github.com/orgs/community/discussions/categories/announcements">GitHub Community</a>.</p>
+</body></html>
+<p>The post <a href="https://github.blog/changelog/2026-04-06-copilot-usage-metrics-now-identify-active-and-passive-copilot-code-review-users">Copilot usage metrics now identify active and passive Copilot code review users</a> appeared first on <a href="https://github.blog">The GitHub Blog</a>.</p>
+]]></content:encoded><category domain="changelog-type"><![CDATA[Release]]></category><category domain="changelog-label"><![CDATA[account management]]></category><category domain="changelog-label"><![CDATA[copilot]]></category><category domain="changelog-label"><![CDATA[enterprise management tools]]></category><post-id xmlns="com-wordpress:feed-additions:1">95069</post-id></item></channel></rss>

@@ -20,6 +20,7 @@
     <PackageReference Include="Microsoft.Extensions.Options" />
     <PackageReference Include="Npgsql" />
     <PackageReference Include="Polly" />
+    <PackageReference Include="SmartReader" />
     <PackageReference Include="YamlDotNet" />
     <PackageReference Include="YoutubeExplode" />
   </ItemGroup>
