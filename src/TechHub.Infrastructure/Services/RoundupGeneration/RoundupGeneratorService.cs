@@ -1,3 +1,4 @@
+using System.Collections.Concurrent;
 using System.Globalization;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
@@ -168,76 +169,83 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _logger.LogInformation("On-the-fly AI metadata backfill: {Count} items missing ai_metadata", needsBackfill.Count);
         progress?.Report($"AI metadata backfill: {needsBackfill.Count} items missing ai_metadata");
 
-        // Map ExternalUrl → enriched metadata for updating articles across sections
-        var enriched = new Dictionary<string, RoundupArticle>(StringComparer.OrdinalIgnoreCase);
+        // Phase 1: AI categorization in parallel (bounded concurrency to avoid rate limits).
+        // IDbConnection is not thread-safe, so DB writes are deferred to Phase 2.
+        var aiResults = new ConcurrentBag<(RoundupArticle Article, RoundupMetadata Meta)>();
         var errorCount = 0;
 
-        foreach (var article in needsBackfill)
+#pragma warning disable CA1031 // Best-effort: continue with other articles if one fails
+        await Parallel.ForEachAsync(needsBackfill, new ParallelOptions { MaxDegreeOfParallelism = 5, CancellationToken = ct },
+            async (article, innerCt) =>
+            {
+                try
+                {
+                    var rawItem = new RawFeedItem
+                    {
+                        Title = article.Title,
+                        ExternalUrl = article.ExternalUrl,
+                        PublishedAt = DateTimeOffset.FromUnixTimeSeconds(article.DateEpoch),
+                        FeedName = article.FeedName,
+                        CollectionName = article.CollectionName,
+                        FullContent = article.Content
+                    };
+
+                    var result = await _aiService.CategorizeAsync(rawItem, innerCt);
+                    if (result.Item?.RoundupMetadata is { } meta)
+                    {
+                        aiResults.Add((article, meta));
+                        _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                    }
+                    else
+                    {
+                        _logger.LogDebug("AI categorization returned no metadata for {Slug} — using defaults", article.Slug);
+                    }
+                }
+                catch (Exception ex) when (ex is not OperationCanceledException)
+                {
+                    Interlocked.Increment(ref errorCount);
+                    _logger.LogWarning(ex, "Failed to backfill AI metadata for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                }
+            });
+#pragma warning restore CA1031
+
+        // Phase 2: DB writes sequentially — IDbConnection (scoped) is not safe for concurrent access.
+        var enriched = new Dictionary<string, RoundupArticle>(StringComparer.OrdinalIgnoreCase);
+        foreach (var (article, meta) in aiResults)
         {
             ct.ThrowIfCancellationRequested();
 
-            try
+            var aiMetadataJson = JsonSerializer.Serialize(new
             {
-                var rawItem = new RawFeedItem
-                {
-                    Title = article.Title,
-                    ExternalUrl = article.ExternalUrl,
-                    PublishedAt = DateTimeOffset.FromUnixTimeSeconds(article.DateEpoch),
-                    FeedName = article.FeedName,
-                    CollectionName = article.CollectionName,
-                    FullContent = article.Content
-                };
+                roundup_summary = meta.Summary,
+                key_topics = meta.KeyTopics,
+                roundup_relevance = meta.Relevance,
+                topic_type = meta.TopicType,
+                impact_level = meta.ImpactLevel,
+                time_sensitivity = meta.TimeSensitivity
+            }, _jsonOptions);
 
-                var result = await _aiService.CategorizeAsync(rawItem, ct);
-                if (result.Item?.RoundupMetadata is { } meta)
-                {
-                    // Update only ai_metadata on the existing row (avoids PK/unique-constraint conflicts)
-                    var aiMetadataJson = System.Text.Json.JsonSerializer.Serialize(new
-                    {
-                        roundup_summary = meta.Summary,
-                        key_topics = meta.KeyTopics,
-                        roundup_relevance = meta.Relevance,
-                        topic_type = meta.TopicType,
-                        impact_level = meta.ImpactLevel,
-                        time_sensitivity = meta.TimeSensitivity
-                    }, _jsonOptions);
+            await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, aiMetadataJson, ct);
 
-                    await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, aiMetadataJson, ct);
-
-                    enriched[article.ExternalUrl] = new RoundupArticle
-                    {
-                        SectionName = article.SectionName,
-                        Title = article.Title,
-                        ExternalUrl = article.ExternalUrl,
-                        Slug = article.Slug,
-                        CollectionName = article.CollectionName,
-                        IsInternal = article.IsInternal,
-                        Content = article.Content,
-                        FeedName = article.FeedName,
-                        DateEpoch = article.DateEpoch,
-                        NeedsAiMetadata = false,
-                        Summary = meta.Summary,
-                        KeyTopics = meta.KeyTopics,
-                        Relevance = meta.Relevance,
-                        TopicType = meta.TopicType,
-                        ImpactLevel = meta.ImpactLevel,
-                        TimeSensitivity = meta.TimeSensitivity
-                    };
-
-                    _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
-                }
-                else
-                {
-                    _logger.LogDebug("AI categorization returned no metadata for {Slug} — using defaults", article.Slug);
-                }
-            }
-#pragma warning disable CA1031 // Best-effort: continue with other articles if one fails
-            catch (Exception ex) when (ex is not OperationCanceledException)
+            enriched[article.ExternalUrl] = new RoundupArticle
             {
-                errorCount++;
-                _logger.LogWarning(ex, "Failed to backfill AI metadata for {Slug} in {Collection}", article.Slug, article.CollectionName);
-            }
-#pragma warning restore CA1031
+                SectionName = article.SectionName,
+                Title = article.Title,
+                ExternalUrl = article.ExternalUrl,
+                Slug = article.Slug,
+                CollectionName = article.CollectionName,
+                IsInternal = article.IsInternal,
+                Content = article.Content,
+                FeedName = article.FeedName,
+                DateEpoch = article.DateEpoch,
+                NeedsAiMetadata = false,
+                Summary = meta.Summary,
+                KeyTopics = meta.KeyTopics,
+                Relevance = meta.Relevance,
+                TopicType = meta.TopicType,
+                ImpactLevel = meta.ImpactLevel,
+                TimeSensitivity = meta.TimeSensitivity
+            };
         }
 
         if (enriched.Count == 0 && errorCount == 0)

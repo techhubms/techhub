@@ -20,7 +20,7 @@ public static class DiffHelper
         ArgumentNullException.ThrowIfNull(modified);
 
         var orig = original.ReplaceLineEndings("\n").Split('\n');
-        var mod  = modified.ReplaceLineEndings("\n").Split('\n');
+        var mod = modified.ReplaceLineEndings("\n").Split('\n');
         return Lcs(orig, mod);
     }
 
@@ -34,15 +34,15 @@ public static class DiffHelper
         ArgumentNullException.ThrowIfNull(originalCsv);
         ArgumentNullException.ThrowIfNull(fixedCsv);
 
-        var orig   = ParseCsv(originalCsv);
+        var orig = ParseCsv(originalCsv);
         var fixed_ = ParseCsv(fixedCsv);
 
-        var origSet  = orig.ToHashSet(StringComparer.OrdinalIgnoreCase);
+        var origSet = orig.ToHashSet(StringComparer.OrdinalIgnoreCase);
         var fixedSet = fixed_.ToHashSet(StringComparer.OrdinalIgnoreCase);
 
         var removed = orig.Where(t => !fixedSet.Contains(t)).ToList();
-        var added   = fixed_.Where(t => !origSet.Contains(t)).ToList();
-        var kept    = orig.Where(t => fixedSet.Contains(t)).ToList();
+        var added = fixed_.Where(t => !origSet.Contains(t)).ToList();
+        var kept = orig.Where(t => fixedSet.Contains(t)).ToList();
 
         return (removed, added, kept);
     }

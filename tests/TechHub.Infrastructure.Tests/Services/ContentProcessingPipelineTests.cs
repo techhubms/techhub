@@ -80,18 +80,18 @@ public class ContentProcessingPipelineTests
     [MemberData(nameof(GetPipelineFixtures))]
     public async Task Pipeline_WithFixture_PassesAllThreeTiers(string fixtureName)
     {
-        var feedXml         = LoadEmbeddedResource($"{fixtureName}.rss");
+        var feedXml = LoadEmbeddedResource($"{fixtureName}.rss");
         var expectedFixture = TryLoadExpectedFixture(fixtureName);
 
         var feedConfig = new FeedConfig
         {
-            Name      = expectedFixture?.FeedName      ?? fixtureName,
+            Name = expectedFixture?.FeedName ?? fixtureName,
             OutputDir = expectedFixture?.CollectionOutputDir ?? "_test",
-            Url       = $"https://fixture.test/{fixtureName}/feed.rss"
+            Url = $"https://fixture.test/{fixtureName}/feed.rss"
         };
 
         var cutoff = new DateTimeOffset(2020, 1, 1, 0, 0, 0, TimeSpan.Zero);
-        var items  = RssFeedIngestionService.ParseFeed(feedXml, feedConfig, cutoff);
+        var items = RssFeedIngestionService.ParseFeed(feedXml, feedConfig, cutoff);
         items.Should().ContainSingle(
             $"fixture '{fixtureName}.rss' must contain exactly one item");
 
@@ -121,14 +121,11 @@ public class ContentProcessingPipelineTests
         if (!rawItem.IsYouTube && ShouldVerifyLiveHtml())
         {
             var storedHtml = LoadEmbeddedResource($"{fixtureName}.html");
-            var liveHtml   = await FetchLiveHtmlAsync(rawItem.ExternalUrl);
+            var liveHtml = await FetchLiveHtmlAsync(rawItem.ExternalUrl);
 
-            if (liveHtml is not null)
-            {
-                liveHtml.Should().Be(storedHtml,
+            liveHtml?.Should().Be(storedHtml,
                     $"[Tier 1] Live HTML for '{fixtureName}' has changed since fixtures were generated. " +
                     $"Re-run with GENERATE_PIPELINE_FIXTURES=true to refresh the stored .html fixture.");
-            }
         }
 
         // ── Tiers 2 & 3: Deterministic pipeline on stored .html ──────────────
@@ -139,7 +136,7 @@ public class ContentProcessingPipelineTests
         //   AiCategorizationService.BuildUserPrompt → the AI user prompt string
 
         var fetchClient = new Mock<IArticleFetchClient>();
-        var ytService   = new Mock<IYouTubeTranscriptService>();
+        var ytService = new Mock<IYouTubeTranscriptService>();
 
         if (rawItem.IsYouTube)
         {
@@ -158,8 +155,8 @@ public class ContentProcessingPipelineTests
         }
 
         var articleService = new ArticleContentService(fetchClient.Object, ytService.Object);
-        var enrichedItem   = await articleService.EnrichWithContentAsync(rawItem, CancellationToken.None);
-        var actualPrompt   = AiCategorizationService.BuildUserPrompt(enrichedItem);
+        var enrichedItem = await articleService.EnrichWithContentAsync(rawItem, CancellationToken.None);
+        var actualPrompt = AiCategorizationService.BuildUserPrompt(enrichedItem);
 
         // ── Tier 2: HTML → markdown ───────────────────────────────────────────
         //
@@ -192,7 +189,7 @@ public class ContentProcessingPipelineTests
     private static string LoadEmbeddedResource(string resourceSuffix)
     {
         var assembly = Assembly.GetExecutingAssembly();
-        var name     = $"{FixtureNamespace}{resourceSuffix}";
+        var name = $"{FixtureNamespace}{resourceSuffix}";
 
         using var stream = assembly.GetManifestResourceStream(name)
             ?? throw new InvalidOperationException(
@@ -206,10 +203,13 @@ public class ContentProcessingPipelineTests
     private static string? TryLoadEmbeddedText(string resourceSuffix)
     {
         var assembly = Assembly.GetExecutingAssembly();
-        var name     = $"{FixtureNamespace}{resourceSuffix}";
+        var name = $"{FixtureNamespace}{resourceSuffix}";
 
         using var stream = assembly.GetManifestResourceStream(name);
-        if (stream is null) return null;
+        if (stream is null)
+        {
+            return null;
+        }
 
         using var reader = new StreamReader(stream);
         return reader.ReadToEnd();
@@ -218,7 +218,10 @@ public class ContentProcessingPipelineTests
     private static PipelineFixture? TryLoadExpectedFixture(string fixtureName)
     {
         var json = TryLoadEmbeddedText($"{fixtureName}.json");
-        if (json is null) return null;
+        if (json is null)
+        {
+            return null;
+        }
 
         return JsonSerializer.Deserialize<PipelineFixture>(json, JsonOptions);
     }
@@ -245,7 +248,7 @@ public class ContentProcessingPipelineTests
         string fixtureName, RawFeedItem rawItem, string feedXml, FeedConfig feedConfig)
     {
         var fetchClient = new Mock<IArticleFetchClient>();
-        var ytService   = new Mock<IYouTubeTranscriptService>();
+        var ytService = new Mock<IYouTubeTranscriptService>();
 
         if (rawItem.IsYouTube)
         {
@@ -254,9 +257,11 @@ public class ContentProcessingPipelineTests
                 "The actual transcript would be fetched via YoutubeExplode at runtime.";
 
             if (Directory.Exists(_fixtureRepoDir))
+            {
                 File.WriteAllText(
                     Path.Combine(_fixtureRepoDir, $"{fixtureName}.transcript.txt"),
                     transcript, Encoding.UTF8);
+            }
 
             ytService
                 .Setup(s => s.GetTranscriptAsync(rawItem.ExternalUrl, It.IsAny<CancellationToken>()))
@@ -267,14 +272,16 @@ public class ContentProcessingPipelineTests
             // Real HTTP fetch, falling back to content:encoded already parsed into rawItem.EmbeddedHtml.
             var html = await FetchAndSaveHtmlAsync(fixtureName, rawItem);
             if (html is not null)
+            {
                 fetchClient
                     .Setup(c => c.FetchHtmlAsync(rawItem.ExternalUrl, It.IsAny<CancellationToken>()))
                     .ReturnsAsync(html);
+            }
         }
 
         var articleService = new ArticleContentService(fetchClient.Object, ytService.Object);
-        var enrichedItem   = await articleService.EnrichWithContentAsync(rawItem, CancellationToken.None);
-        var actualPrompt   = AiCategorizationService.BuildUserPrompt(enrichedItem);
+        var enrichedItem = await articleService.EnrichWithContentAsync(rawItem, CancellationToken.None);
+        var actualPrompt = AiCategorizationService.BuildUserPrompt(enrichedItem);
 
         WriteGeneratedFixture(fixtureName, feedConfig, actualPrompt, enrichedItem.FullContent);
     }
@@ -318,7 +325,7 @@ public class ContentProcessingPipelineTests
         httpClient.Timeout = TimeSpan.FromSeconds(60);
 
         var client = new ArticleFetchClient(httpClient, NullLogger<ArticleFetchClient>.Instance);
-        var html   = await client.FetchHtmlAsync(item.ExternalUrl, CancellationToken.None);
+        var html = await client.FetchHtmlAsync(item.ExternalUrl, CancellationToken.None);
 
         // Fall back to content:encoded / Atom <content> already parsed from the feed.
         // Mirrors ArticleContentService production behavior.
@@ -339,9 +346,9 @@ public class ContentProcessingPipelineTests
     {
         var fixture = new PipelineFixture
         {
-            FeedName           = feedConfig.Name,
+            FeedName = feedConfig.Name,
             CollectionOutputDir = feedConfig.OutputDir,
-            UserPrompt         = actualPrompt
+            UserPrompt = actualPrompt
         };
 
         var json = JsonSerializer.Serialize(fixture, JsonOptions);
@@ -363,7 +370,7 @@ public class ContentProcessingPipelineTests
         {
             // _fixtureRepoDir is 5 levels deep inside the repo root.
             var repoRoot = Path.GetFullPath(Path.Combine(_fixtureRepoDir, "..", "..", "..", "..", ".."));
-            var tmpDir   = Path.Combine(repoRoot, ".tmp", "pipeline-fixtures");
+            var tmpDir = Path.Combine(repoRoot, ".tmp", "pipeline-fixtures");
             try
             {
                 Directory.CreateDirectory(tmpDir);

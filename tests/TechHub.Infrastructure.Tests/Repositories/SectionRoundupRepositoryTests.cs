@@ -234,13 +234,40 @@ public class SectionRoundupRepositoryTests
         var isSecurity = sectionSet.Contains("security");
 
         var bitmask = 0;
-        if (isAi) bitmask |= 1;
-        if (isAzure) bitmask |= 2;
-        if (isDotnet) bitmask |= 4;
-        if (isDevops) bitmask |= 8;
-        if (isGhc) bitmask |= 16;
-        if (isMl) bitmask |= 32;
-        if (isSecurity) bitmask |= 64;
+        if (isAi)
+        {
+            bitmask |= 1;
+        }
+
+        if (isAzure)
+        {
+            bitmask |= 2;
+        }
+
+        if (isDotnet)
+        {
+            bitmask |= 4;
+        }
+
+        if (isDevops)
+        {
+            bitmask |= 8;
+        }
+
+        if (isGhc)
+        {
+            bitmask |= 16;
+        }
+
+        if (isMl)
+        {
+            bitmask |= 32;
+        }
+
+        if (isSecurity)
+        {
+            bitmask |= 64;
+        }
 
         var aiMetadata = System.Text.Json.JsonSerializer.Serialize(new
         {

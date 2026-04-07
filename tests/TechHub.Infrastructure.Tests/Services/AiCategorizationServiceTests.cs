@@ -37,14 +37,14 @@ public class AiCategorizationServiceTests
     private static RawFeedItem CreateRawItem(
         string url = "https://example.com/article",
         string title = "Test Article") => new()
-    {
-        Title = title,
-        ExternalUrl = url,
-        PublishedAt = new DateTimeOffset(2025, 6, 15, 12, 0, 0, TimeSpan.Zero),
-        FeedItemData = "A test description",
-        FeedName = "Test Feed",
-        CollectionName = "blogs"
-    };
+        {
+            Title = title,
+            ExternalUrl = url,
+            PublishedAt = new DateTimeOffset(2025, 6, 15, 12, 0, 0, TimeSpan.Zero),
+            FeedItemData = "A test description",
+            FeedName = "Test Feed",
+            CollectionName = "blogs"
+        };
 
     private static string WrapInAiResponse(string jsonContent)
     {
