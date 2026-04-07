@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Description": "npm trusted publishing now supports CircleCI as an OIDC provider, joining GitHub Actions and GitLab CI/CD. Maintainers publishing from CircleCI workflows can now eliminate stored credentials entirely and authenticate directly…\n\nThe post [npm trusted publishing now supports CircleCI](https://github.blog/changelog/2026-04-06-npm-trusted-publishing-now-supports-circleci) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-04-06-npm-trusted-publishing-now-supports-circleci",
+  "PubDate": "2026-04-07T00:20:50+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ],
+  "Author": "Allison",
+  "OutputDir": "_news",
+  "Title": "npm trusted publishing now supports CircleCI",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-04-07 16:26:23",
+  "EnhancedContent": "npm trusted publishing now supports CircleCI as an OIDC provider, joining GitHub Actions and GitLab CI/CD. Maintainers publishing from CircleCI workflows can now eliminate stored credentials entirely and authenticate directly through their CI/CD pipeline.\n\nWith this expansion, trusted publishing now covers a large majority of npm publishers by CI provider. Configuration is available through the npm website and the `npm trust` CLI command. See the [trusted publishing documentation](https://docs.npmjs.com/trusted-publishers) for setup instructions.\n\nWe’re also shipping dark mode for the [npmjs.com](https://npmjs.com/) website, one of the most requested features from the community. Our team built this using [GitHub Copilot agent mode](https://github.com/features/copilot), allowing us to deliver it with minimal engineering time beyond final review and shipping. Our focus remains on strengthening npm security and enhancing maintainer agency over the packages they publish.\n\nTo share feedback or ask questions, join the [community discussion](https://github.com/orgs/community/discussions/191807)."
+}
