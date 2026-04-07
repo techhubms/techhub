@@ -93,6 +93,11 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
         var testCollectionsPath = Path.Combine(assemblyDir, "TestCollections");
         builder.UseSetting("AppSettings:Content:CollectionsPath", testCollectionsPath);
 
+        // Disable default date range filter for integration tests.
+        // Production uses 90-day default, but test data has fixed dates that age out over time.
+        // Tests that specifically validate date filtering use explicit lastDays parameters.
+        builder.UseSetting("AppSettings:TagCloud:DefaultDateRangeDays", "0");
+
         // Override database configuration to use the Testcontainers PostgreSQL instance
         builder.UseSetting("Database:Provider", "PostgreSQL");
         builder.UseSetting("Database:ConnectionString", _container.GetConnectionString());
