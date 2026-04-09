@@ -156,7 +156,7 @@ jobs:
 
       - name: Run E2E tests against PR preview
         run: |
-          dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
+          dotnet test --project tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
             --configuration Release \
             --no-build \
             --results-directory TestResults \
