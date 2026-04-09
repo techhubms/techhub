@@ -1,0 +1,14 @@
+{
+  "Title": "Building a Production-Ready Azure Lighthouse Deployment Pipeline with EPAC",
+  "Tags": [],
+  "ProcessedDate": "2026-04-09 11:25:27",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/building-a-production-ready-azure-lighthouse-deployment-pipeline/m-p/4509962#M22484",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Author": "omidvahedv",
+  "Description": "Recently I worked on an interesting project for an end-to-end Azure Lighthouse implementation. What really stood out to me was the combination of Azure Lighthouse, EPAC, DevOps, and workload identity federation. The deployment model was so compelling that I decided to build and validate the full solution hands-on in my own personal Azure tenants. The result is a detailed article that documents the entire journey, including pipeline design, implementation steps, and the scripts I prepared along the way. You can read the full article [here](https://vakhsha.com/blog/blog-16.html)",
+  "EnhancedContent": "Recently I worked on an interesting project for an end-to-end Azure Lighthouse implementation. What really stood out to me was the combination of Azure Lighthouse, EPAC, DevOps, and workload identity federation. The deployment model was so compelling that I decided to build and validate the full solution hands-on in my own personal Azure tenants. The result is a detailed article that documents the entire journey, including pipeline design, implementation steps, and the scripts I prepared along the way. You can read the full article [here](https://vakhsha.com/blog/blog-16.html)",
+  "FeedName": "Microsoft Tech Community",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "PubDate": "2026-04-09T11:24:00+00:00",
+  "OutputDir": "_community"
+}
