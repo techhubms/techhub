@@ -145,7 +145,7 @@ public class HomePageTests : PlaywrightTestBase
                 await firstLink.ClickBlazorElementAsync();
 
                 // Assert - Should navigate away from homepage
-                await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("^https://localhost:5003/?$"));
+                await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"));
             }
         }
     }
@@ -169,7 +169,7 @@ public class HomePageTests : PlaywrightTestBase
             var currentUrl = Page.Url;
             (currentUrl.Contains("tag=", StringComparison.OrdinalIgnoreCase) ||
                 currentUrl.Contains("tags=", StringComparison.OrdinalIgnoreCase) ||
-                currentUrl != "https://localhost:5003/")
+                currentUrl != $"{BlazorHelpers.BaseUrl}/")
                 .Should().BeTrue($"Expected URL to change or contain tag parameter, but got: {currentUrl}");
         }
     }
