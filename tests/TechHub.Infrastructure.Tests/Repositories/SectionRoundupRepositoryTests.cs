@@ -172,9 +172,9 @@ public class SectionRoundupRepositoryTests
     }
 
     [Fact]
-    public async Task GetArticlesForWeekAsync_WithMultipleSectionFlags_ExpandsIntoEachSection()
+    public async Task GetArticlesForWeekAsync_WithMultipleSectionFlags_UsePrimarySectionOnly()
     {
-        // Arrange — one article belongs to both "ai" and "github-copilot"
+        // Arrange — one article has multiple section flags but primary_section_name = "ai"
         await SeedContentItemAsync("multi-section-article", "news", "Multi-Section Article",
             "https://example.com/multi", sections: ["ai", "github-copilot"],
             relevance: "high",
@@ -183,11 +183,15 @@ public class SectionRoundupRepositoryTests
         // Act
         var result = await _sut.GetArticlesForWeekAsync(_weekStart, _weekEnd, CancellationToken.None);
 
-        // Assert — article appears in both sections
+        // Assert — article appears only in its primary section
         result.Should().ContainKey("ai");
-        result.Should().ContainKey("github-copilot");
         result["ai"].Should().Contain(a => a.Slug == "multi-section-article");
-        result["github-copilot"].Should().Contain(a => a.Slug == "multi-section-article");
+
+        // Should NOT appear in github-copilot (secondary section)
+        if (result.TryGetValue("github-copilot", out var ghcArticles))
+        {
+            ghcArticles.Should().NotContain(a => a.Slug == "multi-section-article");
+        }
     }
 
     [Fact]
@@ -225,6 +229,7 @@ public class SectionRoundupRepositoryTests
         var topics = keyTopics?.ToList() ?? [];
 
         var sectionSet = new HashSet<string>(sections, StringComparer.OrdinalIgnoreCase);
+        var primarySection = sections[0];
         var isAi = sectionSet.Contains("ai");
         var isAzure = sectionSet.Contains("azure");
         var isDotnet = sectionSet.Contains("dotnet");
@@ -288,12 +293,13 @@ public class SectionRoundupRepositoryTests
                  is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security,
                  sections_bitmask, content_hash, ai_metadata, created_at)
             VALUES (@Slug, @Collection, @Title, '', '', 1743278400,
-                    'ai', @ExternalUrl, 'Author', 'Feed', '',
+                    @PrimarySection, @ExternalUrl, 'Author', 'Feed', '',
                     @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc, @IsMl, @IsSecurity,
                     @Bitmask, @Hash, @AiMetadata::jsonb, @CreatedAt)
             ON CONFLICT (collection_name, slug) DO UPDATE SET
                 ai_metadata = EXCLUDED.ai_metadata,
                 title       = EXCLUDED.title,
+                primary_section_name = EXCLUDED.primary_section_name,
                 is_ai       = EXCLUDED.is_ai,
                 is_azure    = EXCLUDED.is_azure,
                 is_dotnet   = EXCLUDED.is_dotnet,
@@ -319,6 +325,7 @@ public class SectionRoundupRepositoryTests
                 IsSecurity = isSecurity,
                 Bitmask = bitmask,
                 Hash = $"hash-{slug}",
+                PrimarySection = primarySection,
                 AiMetadata = aiMetadata,
                 CreatedAt = ts
             });

@@ -15,16 +15,13 @@ public class RoundupGeneratorOptions
     public int RunHourUtc { get; init; } = 8;
 
     /// <summary>
-    /// Minimum number of high-relevance articles per section before medium items are added.
-    /// If a section has fewer than this many "high" articles, "medium" items are also included.
+    /// Minimum number of articles per section. High-relevance articles are always included.
+    /// If the total is below this threshold, medium then low articles are added to reach it.
     /// </summary>
-    public int MinHighArticlesPerSection { get; init; } = 3;
+    public int MinArticlesPerSection { get; init; } = 10;
 
-    /// <summary>
-    /// Minimum total articles per section (high + medium) before low items are added.
-    /// If a section has fewer than this many "high" + "medium" articles, "low" items are also included.
-    /// </summary>
-    public int MinTotalArticlesPerSection { get; init; } = 5;
+    /// <summary>Whether the condensing step is enabled. When false, the pipeline skips AI condensing.</summary>
+    public bool CondensingEnabled { get; init; } = true;
 
     /// <summary>Delay in seconds between AI API calls to prevent rate limiting.</summary>
     public int RateLimitDelaySeconds { get; init; } = 15;

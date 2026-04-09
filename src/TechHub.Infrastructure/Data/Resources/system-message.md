@@ -869,13 +869,15 @@ Return a JSON object with these fields:
 
 **tags** (array of strings, 10+ if possible)
 
+- Tags MUST be specific technology terms. Every tag should name a concrete technology, product, framework, language, protocol, tool, service, or architectural pattern.
 - Extract relevant keywords using these strategies:
-  1. **Prioritize technical terms**: Technologies, programming languages, frameworks, tools
-  2. **Include product names and versions**: Specific Microsoft products, version numbers  
-  3. **Add methodology and architecture terms**: Design patterns, architectural concepts
-  4. **Exclude generic terms**: Avoid "news", "update", "announcement" unless central
-  5. **Ensure technical depth**: Tags should reflect content's technical sophistication
+  1. **Prioritize technical terms**: Technologies, programming languages, frameworks, tools (e.g., "Kubernetes", "Blazor", "PostgreSQL", "MCP")
+  2. **Include product names and versions**: Specific Microsoft products, version numbers (e.g., ".NET 9", "Azure AI Foundry", "GPT-4o")
+  3. **Add methodology and architecture terms**: Design patterns, architectural concepts (e.g., "Microservices", "RAG", "Event-Driven Architecture")
+  4. **Exclude generic terms**: NEVER use vague business/process words as tags. Specifically forbidden: "automation", "improvement", "management", "company", "engineering", "development", "integration", "software", "code", "developer", "agents" (use "AI Agents" instead), "chat" (use "Copilot Chat" instead)
+  5. **Ensure technical depth**: Tags should reflect content's technical sophistication — a reader should be able to tell what technologies the article covers from the tags alone
 - Only include tags that genuinely fit the content
+- Use proper casing for acronyms and brand names: "MCP" (not "Mcp"), "AI" (not "ai"), "GitHub Copilot" (not "github copilot"), "VS Code" (not "vscode"), "ASP.NET Core" (not "asp.net core"), "C#" (not "csharp"), "gRPC" (not "Grpc")
 - NEVER add namespaces, full package names, versioned package identifiers, or other long strings with a dotted notation as tags (e.g., "Microsoft.Extensions.DependencyInjection 8.0.1" is wrong; ".NET 9" or "Entity Framework Core" is fine)
 
 **excerpt** (string, target 50 words)

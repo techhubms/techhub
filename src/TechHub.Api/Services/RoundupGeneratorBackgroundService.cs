@@ -1,4 +1,5 @@
 using Microsoft.Extensions.Options;
+using System.Threading.Channels;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
@@ -168,28 +169,53 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
 
                 await jobRepo.AppendLogAsync(jobId, $"Generating roundup for week {weekStart}–{weekEnd}", runToken);
 
-                var service = scope.ServiceProvider.GetRequiredService<IRoundupGeneratorService>();
-                var progress = new Progress<string>(message => _ = jobRepo.AppendLogAsync(jobId, message, CancellationToken.None));
-                var outcome = await service.GenerateAsync(weekStart, weekEnd, progress, runToken);
+                // Use a channel to serialize all progress log appends in the order they were reported.
+                // Progress<T> posts callbacks to the thread pool, which would cause concurrent AppendLogAsync
+                // calls to race — producing out-of-order messages in the UI log.
+                var logChannel = Channel.CreateUnbounded<string>(new UnboundedChannelOptions { SingleReader = true });
+                var logConsumerTask = Task.Run(async () =>
+                {
+                    await foreach (var message in logChannel.Reader.ReadAllAsync(CancellationToken.None))
+                    {
+                        await jobRepo.AppendLogAsync(jobId, message, CancellationToken.None);
+                    }
+                }, CancellationToken.None);
+
+                RoundupGenerationOutcome outcome;
+                try
+                {
+                    var service = scope.ServiceProvider.GetRequiredService<IRoundupGeneratorService>();
+                    var progress = new Progress<string>(message => logChannel.Writer.TryWrite(message));
+                    outcome = await service.GenerateAsync(weekStart, weekEnd, progress, jobId, runToken);
+                }
+                finally
+                {
+                    // Always complete the channel so the consumer task finishes
+                    // and all buffered progress messages are written before terminal entries.
+                    logChannel.Writer.Complete();
+                    await logConsumerTask;
+                }
 
                 if (outcome.Result == RoundupGenerationResult.Generated)
                 {
                     _logger.LogInformation("Roundup generated successfully for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
 
-                    // Record the generated roundup in processed_urls so it appears in "View Processed"
-                    var processedUrlRepo = scope.ServiceProvider.GetRequiredService<IProcessedUrlRepository>();
-                    var externalUrl = $"/all/roundups/{outcome.Slug}";
-                    await processedUrlRepo.RecordSuccessAsync(
-                        externalUrl, feedName: "TechHub", collectionName: "roundups",
-                        reason: "roundup-generated", jobId: jobId, slug: outcome.Slug, ct: runToken);
-
+                    await jobRepo.AppendLogAsync(jobId, "Roundup generated successfully.", runToken);
                     await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 1, itemsSkipped: 0, errorCount: 0,
                         transcriptsSucceeded: 0, transcriptsFailed: 0,
-                        $"Generating roundup for week {weekStart}–{weekEnd}\nRoundup generated successfully.", ct: runToken);
+                        logOutput: null, ct: runToken);
 
                     // Invalidate content cache so the new roundup is served immediately
                     var contentRepo = scope.ServiceProvider.GetRequiredService<IContentRepository>();
                     contentRepo.InvalidateCachedData();
+                }
+                else if (outcome.Result == RoundupGenerationResult.ContentGenerationFailed)
+                {
+                    _logger.LogError("Roundup content generation failed for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
+                    await jobRepo.AppendLogAsync(jobId, "Content generation failed — AI produced no usable content.", runToken);
+                    await jobRepo.FailAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 1,
+                        transcriptsSucceeded: 0, transcriptsFailed: 0,
+                        logOutput: null, ct: runToken);
                 }
                 else
                 {
@@ -202,18 +228,20 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
                     };
 
                     _logger.LogInformation("Roundup generation skipped for week {WeekStart}–{WeekEnd}: {Reason}", weekStart, weekEnd, reason);
+                    await jobRepo.AppendLogAsync(jobId, reason, runToken);
                     await jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 1, errorCount: 0,
                         transcriptsSucceeded: 0, transcriptsFailed: 0,
-                        $"Generating roundup for week {weekStart}–{weekEnd}\n{reason}", ct: runToken);
+                        logOutput: null, ct: runToken);
                 }
             }
             catch (OperationCanceledException) when (!ct.IsCancellationRequested)
             {
                 // Admin-triggered cancellation — mark as aborted
                 _logger.LogInformation("Roundup generation job {JobId} cancelled by admin", jobId);
+                await jobRepo.AppendLogAsync(jobId, "Roundup generation cancelled by admin.", CancellationToken.None);
                 await jobRepo.AbortJobAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 0,
                     transcriptsSucceeded: 0, transcriptsFailed: 0,
-                    "Roundup generation cancelled by admin.", ct: CancellationToken.None);
+                    logOutput: null, ct: CancellationToken.None);
             }
             catch (OperationCanceledException) when (ct.IsCancellationRequested)
             {
@@ -222,9 +250,10 @@ public sealed class RoundupGeneratorBackgroundService : BackgroundService
             catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
             {
                 _logger.LogError(ex, "Unexpected exception in RoundupGeneratorBackgroundService (job {JobId})", jobId);
+                await jobRepo.AppendLogAsync(jobId, $"Roundup generation failed: {ex.Message}\n{ex.StackTrace}", CancellationToken.None);
                 await jobRepo.FailAsync(jobId, feedsProcessed: 0, itemsAdded: 0, itemsSkipped: 0, errorCount: 1,
                     transcriptsSucceeded: 0, transcriptsFailed: 0,
-                    $"Roundup generation failed: {ex.Message}", ct: CancellationToken.None);
+                    logOutput: null, ct: CancellationToken.None);
             }
         }
         finally

@@ -97,24 +97,6 @@ echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'
 pwsh -Command 'Install-Module Pester -Force -SkipPublisherCheck -MinimumVersion "5.0.0" -Scope CurrentUser'
 
-# ==================== Spec-Kit for Spec-Driven Development ====================
-if ! command -v uv &> /dev/null; then
-    echo "Installing uv package manager..."
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-else
-    echo "uv package manager already installed"
-fi
-
-# Ensure uv is in PATH
-export PATH="$HOME/.local/bin:$PATH"
-
-if ! uv tool list | grep -q specify-cli; then
-    echo "Installing spec-kit CLI..."
-    uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
-else
-    echo "spec-kit CLI already installed"
-fi
-
 # ==================== PowerShell Profile ====================
 echo "Setting up PowerShell profile..."
 PWSH_PROFILE_DIR="$HOME/.config/powershell"
@@ -127,9 +109,6 @@ cat > "$PWSH_PROFILE" << 'EOF'
 # Tech Hub .NET Development Environment Profile
 
 # ==================== PATH Configuration ====================
-# Add uv and spec-kit tools
-$env:PATH = "$HOME/.local/bin:$env:PATH"
-
 # Add Aspire CLI
 $env:PATH = "$HOME/.aspire/bin:$env:PATH"
 

@@ -1343,6 +1343,74 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     // ================================================================
+    // Content items listing methods
+    // ================================================================
+
+    /// <summary>
+    /// Get a paginated list of content items with optional filters.
+    /// GET /api/admin/content-items
+    /// </summary>
+    public virtual async Task<PagedResult<ContentItemListItem>> GetContentItemsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var query = $"/api/admin/content-items?page={page}&pageSize={pageSize}";
+            if (!string.IsNullOrEmpty(search))
+            {
+                query += $"&search={Uri.EscapeDataString(search)}";
+            }
+
+            if (!string.IsNullOrEmpty(collectionName))
+            {
+                query += $"&collectionName={Uri.EscapeDataString(collectionName)}";
+            }
+
+            if (!string.IsNullOrEmpty(feedName))
+            {
+                query += $"&feedName={Uri.EscapeDataString(feedName)}";
+            }
+
+            var result = await _httpClient.GetFromJsonAsync<PagedResult<ContentItemListItem>>(
+                query, cancellationToken);
+            return result ?? new PagedResult<ContentItemListItem> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch content items");
+            throw;
+        }
+    }
+
+    /// <summary>
+    /// Delete a content item by its primary key (cascades to processed_urls).
+    /// DELETE /api/admin/content-items?collection={collection}&amp;slug={slug}
+    /// </summary>
+    public virtual async Task<bool> DeleteContentItemAsync(
+        string collectionName,
+        string slug,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                $"/api/admin/content-items?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
+                cancellationToken);
+            return response.IsSuccessStatusCode;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete content item {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
+            throw;
+        }
+    }
+
+    // ================================================================
     // Background job settings methods
     // ================================================================
 

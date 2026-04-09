@@ -1,7 +1,7 @@
-using System.Collections.Concurrent;
 using System.Globalization;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
 
@@ -29,6 +29,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     private readonly RoundupNarrativeEnhancer _narrativeEnhancer;
     private readonly RoundupCondenser _condenser;
     private readonly RoundupMetadataGenerator _metadataGenerator;
+    private readonly RoundupGeneratorOptions _options;
     private readonly ILogger<RoundupGeneratorService> _logger;
 
     public RoundupGeneratorService(
@@ -41,6 +42,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         RoundupNarrativeEnhancer narrativeEnhancer,
         RoundupCondenser condenser,
         RoundupMetadataGenerator metadataGenerator,
+        RoundupGeneratorOptions options,
         ILogger<RoundupGeneratorService> logger)
     {
         ArgumentNullException.ThrowIfNull(roundupRepo);
@@ -52,6 +54,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         ArgumentNullException.ThrowIfNull(narrativeEnhancer);
         ArgumentNullException.ThrowIfNull(condenser);
         ArgumentNullException.ThrowIfNull(metadataGenerator);
+        ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
         _roundupRepo = roundupRepo;
@@ -63,11 +66,12 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         _narrativeEnhancer = narrativeEnhancer;
         _condenser = condenser;
         _metadataGenerator = metadataGenerator;
+        _options = options;
         _logger = logger;
     }
 
     /// <inheritdoc />
-    public async Task<RoundupGenerationOutcome> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, IProgress<string>? progress = null, CancellationToken ct = default)
+    public async Task<RoundupGenerationOutcome> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, IProgress<string>? progress = null, long? jobId = null, CancellationToken ct = default)
     {
         var publishDate = weekEnd.AddDays(1); // Monday after the week ends
         var slug = RoundupContentBuilder.BuildSlug(publishDate);
@@ -79,11 +83,11 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             return RoundupGenerationOutcome.AlreadyExists;
         }
 
-        _logger.LogInformation("Generating roundup for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
+        var lp = new LoggingProgress(_logger, progress);
 
         var articlesBySection = await _roundupRepo.GetArticlesForWeekAsync(weekStart, weekEnd, ct);
         var totalArticles = articlesBySection.Values.Sum(a => a.Count);
-        progress?.Report($"Loaded {totalArticles} articles across {articlesBySection.Count} sections");
+        lp.Report($"Loaded {totalArticles} articles across {articlesBySection.Count} sections");
 
         if (articlesBySection.Count == 0)
         {
@@ -92,55 +96,72 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         }
 
         // On-the-fly AI metadata backfill: categorize any items missing ai_metadata
-        articlesBySection = await BackfillMissingAiMetadataAsync(articlesBySection, progress, ct);
+        articlesBySection = await BackfillMissingAiMetadataAsync(articlesBySection, lp, ct);
 
-        var filtered = _relevanceFilter.Filter(articlesBySection);
+        var filtered = _relevanceFilter.Filter(articlesBySection, lp);
 
         if (filtered.Count == 0)
         {
             _logger.LogWarning("No articles remain after relevance filtering for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
-            progress?.Report("No articles remain after relevance filtering, skipping");
+            lp.Report("No articles remain after relevance filtering, skipping");
             return RoundupGenerationOutcome.NoArticlesAfterFiltering;
         }
 
         var filteredTotal = filtered.Values.Sum(a => a.Count);
-        progress?.Report($"After relevance filtering: {filteredTotal} articles across {filtered.Count} sections");
+        lp.Report($"After relevance filtering: {filteredTotal} articles across {filtered.Count} sections");
 
         var weekDescription = string.Create(CultureInfo.InvariantCulture,
             $"the week of {weekStart.ToString("MMMM d", CultureInfo.InvariantCulture)} to {weekEnd.ToString("MMMM d, yyyy", CultureInfo.InvariantCulture)}");
 
         var writingGuidelines = _writingGuidelines.Value;
 
-        _logger.LogInformation("Step 1/5: Creating news-like stories per section");
-        progress?.Report("Step 1/5: Creating news-like stories per section");
-        var sectionStories = await _newsWriter.WriteAsync(filtered, weekDescription, writingGuidelines, ct);
+        lp.Report("Step 1/5: Creating news-like stories per section");
+        var sectionStories = await _newsWriter.WriteAsync(filtered, weekDescription, writingGuidelines, lp, ct);
 
-        _logger.LogInformation("Step 2/5: Adding ongoing narrative");
-        progress?.Report("Step 2/5: Adding ongoing narrative");
-        var narrativeContent = await _narrativeEnhancer.EnhanceAsync(sectionStories, weekStart, writingGuidelines, ct);
+        if (string.IsNullOrWhiteSpace(sectionStories))
+        {
+            _logger.LogError("Step 1 produced no content — all AI calls failed for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
+            lp.Report("Content generation failed: Step 1 produced no content");
+            return RoundupGenerationOutcome.ContentGenerationFailed;
+        }
 
-        _logger.LogInformation("Step 3/5: Condensing content");
-        progress?.Report("Step 3/5: Condensing content");
-        var condensedContent = await _condenser.CondenseAsync(narrativeContent, writingGuidelines, ct);
+        lp.Report("Step 2/5: Adding ongoing narrative");
+        var narrativeContent = await _narrativeEnhancer.EnhanceAsync(sectionStories, weekStart, writingGuidelines, lp, ct);
 
-        _logger.LogInformation("Step 4/5: Generating metadata");
-        progress?.Report("Step 4/5: Generating metadata");
+        if (string.IsNullOrWhiteSpace(narrativeContent))
+        {
+            _logger.LogError("Step 2 produced no content — narrative enhancement failed for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
+            lp.Report("Content generation failed: Step 2 produced no content");
+            return RoundupGenerationOutcome.ContentGenerationFailed;
+        }
+
+        string condensedContent;
+        if (_options.CondensingEnabled)
+        {
+            lp.Report("Step 3/5: Condensing content");
+            condensedContent = await _condenser.CondenseAsync(narrativeContent, writingGuidelines, ct);
+        }
+        else
+        {
+            lp.Report("Step 3/5: Condensing skipped (disabled)");
+            condensedContent = narrativeContent;
+        }
+
+        lp.Report("Step 4/5: Generating metadata");
         var metadata = await _metadataGenerator.GenerateAsync(condensedContent, weekDescription, writingGuidelines, ct);
 
-        _logger.LogInformation("Step 5/5: Building final content");
-        progress?.Report("Step 5/5: Building final content");
+        lp.Report("Step 5/5: Building final content");
         var tableOfContents = RoundupContentBuilder.BuildTableOfContents(condensedContent);
         var fullContent = RoundupContentBuilder.BuildFullContent(condensedContent, metadata.Introduction, tableOfContents);
 
         // Repair markdown formatting before writing
         fullContent = _contentFixer.RepairMarkdown(fullContent);
 
-        _logger.LogInformation("Writing roundup to database");
-        progress?.Report("Writing roundup to database");
-        await _roundupRepo.WriteRoundupAsync(slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata.Introduction, metadata.Tags, ct);
+        lp.Report("Writing roundup to database");
+        var normalizedTags = TagNormalizer.NormalizeTags(metadata.Tags);
+        await _roundupRepo.WriteRoundupAsync(slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 
-        _logger.LogInformation("Roundup for week {WeekStart}–{WeekEnd} written successfully (slug={Slug})", weekStart, weekEnd, slug);
-        progress?.Report($"Roundup written successfully (slug={slug})");
+        lp.Report($"Roundup for week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");
         return RoundupGenerationOutcome.Generated(slug);
     }
 
@@ -151,7 +172,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     /// </summary>
     private async Task<IReadOnlyDictionary<string, IReadOnlyList<RoundupArticle>>> BackfillMissingAiMetadataAsync(
         IReadOnlyDictionary<string, IReadOnlyList<RoundupArticle>> articlesBySection,
-        IProgress<string>? progress,
+        LoggingProgress lp,
         CancellationToken ct)
     {
         // Collect unique articles needing backfill (same article appears in multiple sections)
@@ -166,96 +187,90 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             return articlesBySection;
         }
 
-        _logger.LogInformation("On-the-fly AI metadata backfill: {Count} items missing ai_metadata", needsBackfill.Count);
-        progress?.Report($"AI metadata backfill: {needsBackfill.Count} items missing ai_metadata");
+        lp.Report($"AI metadata backfill: {needsBackfill.Count} items need categorization");
 
-        // Phase 1: AI categorization in parallel (bounded concurrency to avoid rate limits).
-        // IDbConnection is not thread-safe, so DB writes are deferred to Phase 2.
-        var aiResults = new ConcurrentBag<(RoundupArticle Article, RoundupMetadata Meta)>();
-        var errorCount = 0;
-
-#pragma warning disable CA1031 // Best-effort: continue with other articles if one fails
-        await Parallel.ForEachAsync(needsBackfill, new ParallelOptions { MaxDegreeOfParallelism = 5, CancellationToken = ct },
-            async (article, innerCt) =>
-            {
-                try
-                {
-                    var rawItem = new RawFeedItem
-                    {
-                        Title = article.Title,
-                        ExternalUrl = article.ExternalUrl,
-                        PublishedAt = DateTimeOffset.FromUnixTimeSeconds(article.DateEpoch),
-                        FeedName = article.FeedName,
-                        CollectionName = article.CollectionName,
-                        FullContent = article.Content
-                    };
-
-                    var result = await _aiService.CategorizeAsync(rawItem, innerCt);
-                    if (result.Item?.RoundupMetadata is { } meta)
-                    {
-                        aiResults.Add((article, meta));
-                        _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
-                    }
-                    else
-                    {
-                        _logger.LogDebug("AI categorization returned no metadata for {Slug} — using defaults", article.Slug);
-                    }
-                }
-                catch (Exception ex) when (ex is not OperationCanceledException)
-                {
-                    Interlocked.Increment(ref errorCount);
-                    _logger.LogWarning(ex, "Failed to backfill AI metadata for {Slug} in {Collection}", article.Slug, article.CollectionName);
-                }
-            });
-#pragma warning restore CA1031
-
-        // Phase 2: DB writes sequentially — IDbConnection (scoped) is not safe for concurrent access.
+        // Map ExternalUrl → enriched metadata for updating articles across sections
         var enriched = new Dictionary<string, RoundupArticle>(StringComparer.OrdinalIgnoreCase);
-        foreach (var (article, meta) in aiResults)
+        var errorCount = 0;
+        var doneCount = 0;
+
+        foreach (var article in needsBackfill)
         {
             ct.ThrowIfCancellationRequested();
 
-            var aiMetadataJson = JsonSerializer.Serialize(new
+            try
             {
-                roundup_summary = meta.Summary,
-                key_topics = meta.KeyTopics,
-                roundup_relevance = meta.Relevance,
-                topic_type = meta.TopicType,
-                impact_level = meta.ImpactLevel,
-                time_sensitivity = meta.TimeSensitivity
-            }, _jsonOptions);
+                var rawItem = new RawFeedItem
+                {
+                    Title = article.Title,
+                    ExternalUrl = article.ExternalUrl,
+                    PublishedAt = DateTimeOffset.FromUnixTimeSeconds(article.DateEpoch),
+                    FeedName = article.FeedName,
+                    CollectionName = article.CollectionName,
+                    FullContent = article.Content
+                };
 
-            await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, aiMetadataJson, ct);
+                var result = await _aiService.CategorizeAsync(rawItem, ct);
+                if (result.Item?.RoundupMetadata is { } meta)
+                {
+                    // Update only ai_metadata on the existing row (avoids PK/unique-constraint conflicts)
+                    var aiMetadataJson = System.Text.Json.JsonSerializer.Serialize(new
+                    {
+                        roundup_summary = meta.Summary,
+                        key_topics = meta.KeyTopics,
+                        roundup_relevance = meta.Relevance,
+                        topic_type = meta.TopicType,
+                        impact_level = meta.ImpactLevel,
+                        time_sensitivity = meta.TimeSensitivity
+                    }, _jsonOptions);
 
-            enriched[article.ExternalUrl] = new RoundupArticle
+                    await _writeRepo.UpdateAiMetadataAsync(article.CollectionName, article.Slug, aiMetadataJson, ct);
+
+                    enriched[article.ExternalUrl] = new RoundupArticle
+                    {
+                        SectionName = article.SectionName,
+                        Title = article.Title,
+                        ExternalUrl = article.ExternalUrl,
+                        Slug = article.Slug,
+                        CollectionName = article.CollectionName,
+                        IsInternal = article.IsInternal,
+                        Content = article.Content,
+                        FeedName = article.FeedName,
+                        DateEpoch = article.DateEpoch,
+                        NeedsAiMetadata = false,
+                        Summary = meta.Summary,
+                        KeyTopics = meta.KeyTopics,
+                        Relevance = meta.Relevance,
+                        TopicType = meta.TopicType,
+                        ImpactLevel = meta.ImpactLevel,
+                        TimeSensitivity = meta.TimeSensitivity
+                    };
+
+                    _logger.LogDebug("AI metadata backfilled for {Slug} in {Collection}", article.Slug, article.CollectionName);
+                }
+                else
+                {
+                    _logger.LogDebug("AI categorization returned no metadata for {Slug} — using defaults", article.Slug);
+                }
+            }
+#pragma warning disable CA1031 // Best-effort: continue with other articles if one fails
+            catch (Exception ex) when (ex is not OperationCanceledException)
             {
-                SectionName = article.SectionName,
-                Title = article.Title,
-                ExternalUrl = article.ExternalUrl,
-                Slug = article.Slug,
-                CollectionName = article.CollectionName,
-                IsInternal = article.IsInternal,
-                Content = article.Content,
-                FeedName = article.FeedName,
-                DateEpoch = article.DateEpoch,
-                NeedsAiMetadata = false,
-                Summary = meta.Summary,
-                KeyTopics = meta.KeyTopics,
-                Relevance = meta.Relevance,
-                TopicType = meta.TopicType,
-                ImpactLevel = meta.ImpactLevel,
-                TimeSensitivity = meta.TimeSensitivity
-            };
+                errorCount++;
+                _logger.LogWarning(ex, "Failed to backfill AI metadata for {Slug} in {Collection}", article.Slug, article.CollectionName);
+            }
+#pragma warning restore CA1031
+
+            doneCount++;
+            lp.Report($"AI metadata backfill: {doneCount}/{needsBackfill.Count} \u2014 {article.Slug}");
         }
 
-        if (enriched.Count == 0 && errorCount == 0)
+        lp.Report($"AI metadata backfill complete: {doneCount}/{needsBackfill.Count} processed, {enriched.Count} enriched, {errorCount} errors");
+
+        if (enriched.Count == 0)
         {
             return articlesBySection;
         }
-
-        _logger.LogInformation("AI metadata backfill completed: {Enriched}/{Total} items enriched, {Errors} errors",
-            enriched.Count, needsBackfill.Count, errorCount);
-        progress?.Report($"AI metadata backfill: {enriched.Count}/{needsBackfill.Count} enriched, {errorCount} errors");
 
         // Rebuild the dictionary with enriched articles replacing the originals
         var updated = new Dictionary<string, IReadOnlyList<RoundupArticle>>(articlesBySection.Count, StringComparer.OrdinalIgnoreCase);

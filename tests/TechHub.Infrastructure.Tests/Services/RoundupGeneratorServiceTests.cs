@@ -17,6 +17,8 @@ public class RoundupGeneratorServiceTests
 {
     private readonly Mock<ISectionRoundupRepository> _roundupRepo = new();
     private readonly Mock<IAiCompletionClient> _aiClient = new();
+    private readonly Mock<IAiCategorizationService> _aiCategorizationService = new();
+    private readonly Mock<IContentItemWriteRepository> _writeRepo = new();
 
     private static readonly DateOnly WeekStart = new(2025, 4, 7);    // Monday
     private static readonly DateOnly WeekEnd = new(2025, 4, 13);     // Sunday
@@ -36,6 +38,7 @@ public class RoundupGeneratorServiceTests
                     Description = "GitHub Copilot section",
                     Url = "/github-copilot",
                     Tag = "github-copilot",
+                    Order = 1,
                     Collections = new Dictionary<string, CollectionConfig>
                     {
                         ["news"] = new() { Title = "News", Url = "/news", Description = "News" }
@@ -47,6 +50,7 @@ public class RoundupGeneratorServiceTests
                     Description = "AI section",
                     Url = "/ai",
                     Tag = "ai",
+                    Order = 2,
                     Collections = new Dictionary<string, CollectionConfig>
                     {
                         ["news"] = new() { Title = "News", Url = "/news", Description = "News" }
@@ -58,6 +62,7 @@ public class RoundupGeneratorServiceTests
                     Description = "Azure section",
                     Url = "/azure",
                     Tag = "azure",
+                    Order = 3,
                     Collections = new Dictionary<string, CollectionConfig>
                     {
                         ["news"] = new() { Title = "News", Url = "/news", Description = "News" }
@@ -70,8 +75,7 @@ public class RoundupGeneratorServiceTests
     private static readonly RoundupGeneratorOptions DefaultOptions = new()
     {
         RunHourUtc = 8,
-        MinHighArticlesPerSection = 3,
-        MinTotalArticlesPerSection = 5,
+        MinArticlesPerSection = 10,
         RateLimitDelaySeconds = 0,
         MaxRetries = 1
     };
@@ -88,8 +92,7 @@ public class RoundupGeneratorServiceTests
 
         var relevanceFilter = new RoundupRelevanceFilter(
             options,
-            appSettingsOptions,
-            NullLogger<RoundupRelevanceFilter>.Instance);
+            appSettingsOptions);
 
         var newsWriter = new RoundupNewsWriter(
             aiHelper,
@@ -101,8 +104,7 @@ public class RoundupGeneratorServiceTests
             aiHelper,
             _roundupRepo.Object,
             appSettingsOptions,
-            options,
-            NullLogger<RoundupNarrativeEnhancer>.Instance);
+            options);
 
         var condenser = new RoundupCondenser(
             aiHelper,
@@ -120,13 +122,14 @@ public class RoundupGeneratorServiceTests
         return new RoundupGeneratorService(
             _roundupRepo.Object,
             contentFixerMock.Object,
-            Mock.Of<IAiCategorizationService>(),
-            Mock.Of<IContentItemWriteRepository>(),
+            _aiCategorizationService.Object,
+            _writeRepo.Object,
             relevanceFilter,
             newsWriter,
             narrativeEnhancer,
             condenser,
             metadataGenerator,
+            options,
             NullLogger<RoundupGeneratorService>.Instance);
     }
 
@@ -219,6 +222,7 @@ public class RoundupGeneratorServiceTests
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.IsAny<IReadOnlyList<string>>(),
+            It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
@@ -227,14 +231,14 @@ public class RoundupGeneratorServiceTests
     [Fact]
     public async Task GenerateAsync_WithOnlyHighArticles_UsesHighRelevanceOnly()
     {
-        // Arrange — section has 4 high articles (above MinHighArticlesPerSection=3)
+        // Arrange — section has 12 high articles (above MinArticlesPerSection=10)
         var uniqueWeekStart = new DateOnly(2025, 6, 2);
         var uniqueWeekEnd = new DateOnly(2025, 6, 8);
 
         var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
         {
-            ["ai"] = BuildArticles("ai", 4, "high")
-                .Concat(BuildArticles("ai", 3, "medium", startIndex: 4))
+            ["ai"] = BuildArticles("ai", 12, "high")
+                .Concat(BuildArticles("ai", 5, "medium", startIndex: 12))
                 .ToList()
         };
 
@@ -251,10 +255,10 @@ public class RoundupGeneratorServiceTests
 
         var sut = CreateSut();
 
-        // Act — call GenerateAsync (it will fail after step 3 due to incomplete mocking, but that's OK)
+        // Act — call GenerateAsync (it will fail after step 1 due to incomplete mocking, but that's OK)
         await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
 
-        // Assert — first AI call (step 3) user message should contain exactly 4 articles (all high, no medium)
+        // Assert — first AI call (step 1) user message should contain exactly 12 articles (all high, no medium)
         capturedMessages.Should().NotBeEmpty();
         var messageBody = System.Text.Json.JsonDocument.Parse(capturedMessages[0]);
         var userContent = messageBody.RootElement
@@ -262,22 +266,22 @@ public class RoundupGeneratorServiceTests
             .GetProperty("content")
             .GetString();
 
-        // 4 high articles = 4 "ARTICLE:" entries; medium articles are excluded
+        // 12 high articles = 12 "ARTICLE:" entries; medium articles are excluded
         var articleCount = CountOccurrences(userContent ?? "", "ARTICLE:");
-        articleCount.Should().Be(4, "filtering should include only high when count >= MinHighArticlesPerSection");
+        articleCount.Should().Be(12, "filtering should include only high when count >= MinArticlesPerSection");
     }
 
     [Fact]
-    public async Task GenerateAsync_WithFewHighArticles_IncludesMediumArticles()
+    public async Task GenerateAsync_WithFewHighArticles_IncludesMediumArticlesRankedByImportance()
     {
-        // Arrange — section has only 1 high article (below MinHighArticlesPerSection=3)
+        // Arrange — section has only 3 high articles (below MinArticlesPerSection=10)
         var uniqueWeekStart = new DateOnly(2025, 6, 9);
         var uniqueWeekEnd = new DateOnly(2025, 6, 15);
 
         var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
         {
-            ["azure"] = BuildArticles("azure", 1, "high")
-                .Concat(BuildArticles("azure", 4, "medium", startIndex: 1))
+            ["azure"] = BuildArticles("azure", 3, "high")
+                .Concat(BuildArticles("azure", 12, "medium", startIndex: 3))
                 .ToList()
         };
 
@@ -297,7 +301,7 @@ public class RoundupGeneratorServiceTests
         // Act
         await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
 
-        // Assert — should contain 5 articles total (1 high + 4 medium, capped at MinTotalArticlesPerSection=5)
+        // Assert — should contain 10 articles total (3 high + 7 medium to reach MinArticlesPerSection=10)
         capturedMessages2.Should().NotBeEmpty();
         var doc = System.Text.Json.JsonDocument.Parse(capturedMessages2[0]);
         var userContent = doc.RootElement
@@ -306,7 +310,7 @@ public class RoundupGeneratorServiceTests
             .GetString();
 
         var articleCount = CountOccurrences(userContent ?? "", "ARTICLE:");
-        articleCount.Should().Be(5, "1 high + 4 medium = 5, capped at MinTotalArticlesPerSection=5");
+        articleCount.Should().Be(10, "3 high + 7 medium = 10, filling up to MinArticlesPerSection=10");
     }
 
     // ── Tag Expansion for Roundups ────────────────────────────────────────────
@@ -328,7 +332,7 @@ public class RoundupGeneratorServiceTests
             .ReturnsAsync(articles);
 
         // Use body-inspecting callback: step 7 requests contain "Return only JSON"
-        var step7Json = """{"title": "Tag Test Roundup", "tags": ["AI", "Machine Learning", "Azure OpenAI"], "description": "A test.", "introduction": "Welcome."}""";
+        var step7Json = """{"title": "Tag Test Roundup", "tags": ["AI", "ML", "Azure OpenAI"], "description": "A test.", "introduction": "Welcome."}""";
         _aiClient
             .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((string body, CancellationToken _) =>
@@ -353,8 +357,9 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.Is<IReadOnlyList<string>>(tags =>
                 tags.Contains("AI") &&
-                tags.Contains("Machine Learning") &&
+                tags.Contains("ML") &&
                 tags.Contains("Azure OpenAI")),
+            It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
@@ -462,7 +467,203 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(),
+            It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    // ── Content Generation Failure ────────────────────────────────────────────
+
+    [Fact]
+    public async Task GenerateAsync_WhenAllAiCallsFail_ReturnsContentGenerationFailed()
+    {
+        // Arrange — AI returns null for everything (simulates total AI outage)
+        var uniqueWeekStart = new DateOnly(2025, 11, 3);
+        var uniqueWeekEnd = new DateOnly(2025, 11, 9);
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticles("ai", 4, "high")
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        // AI returns null for all calls (extraction fails)
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(IsRateLimited: false, ResponseBody: null));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert — should fail, NOT write to database
+        result.Result.Should().Be(RoundupGenerationResult.ContentGenerationFailed);
+        result.Slug.Should().BeNull();
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(),
+            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
+            It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task GenerateAsync_WhenStep1ProducesEmptyContent_ReturnsContentGenerationFailed()
+    {
+        // Arrange — AI returns empty strings (technically "succeeds" but produces nothing)
+        var uniqueWeekStart = new DateOnly(2025, 11, 10);
+        var uniqueWeekEnd = new DateOnly(2025, 11, 16);
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticles("ai", 4, "high")
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        // AI returns empty content for step 1
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(OkAiResponse(""));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert — should fail, NOT write empty content to database
+        result.Result.Should().Be(RoundupGenerationResult.ContentGenerationFailed);
+        result.Slug.Should().BeNull();
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(),
+            It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
+            It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
+    public async Task GenerateAsync_WhenContentGenerated_WritesNonEmptyContent()
+    {
+        // Arrange — verify that a successful pipeline writes non-empty, non-whitespace content
+        var uniqueWeekStart = new DateOnly(2025, 12, 1);
+        var uniqueWeekEnd = new DateOnly(2025, 12, 7);
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticles("ai", 4, "high")
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        SetupAiForAllSteps(
+            step3Content: "## AI\n\nAI had a busy week with multiple announcements.\n\n- [Article 0](https://example.com/0)",
+            step4Content: "## AI\n\nBuilding on last week, AI continues to evolve.\n\n- [Article 0](https://example.com/0)",
+            step6Content: "## AI\n\nAI had a busy week.\n\n- [Article 0](https://example.com/0)",
+            step7Metadata: """{"title": "Test Roundup", "tags": ["AI"], "description": "A test roundup.", "introduction": "Welcome to this week's roundup covering the latest in AI."}"""
+        );
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert — content written must contain actual section content (not just boilerplate)
+        result.Result.Should().Be(RoundupGenerationResult.Generated);
+
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
+            It.IsAny<DateOnly>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.Is<string>(content =>
+                content.Contains("## AI") &&
+                content.Contains("## This Week's Overview") &&
+                content.Contains("<!--excerpt_end-->")),
+            It.IsAny<string>(),
+            It.IsAny<IReadOnlyList<string>>(),
+            It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    // ── AI Metadata Backfill Progress ─────────────────────────────────────────
+
+    [Fact]
+    public async Task GenerateAsync_WithBackfillNeeded_ReportsProgressAfterEachItemIsProcessed()
+    {
+        // Arrange — 2 articles with NeedsAiMetadata = true
+        var uniqueWeekStart = new DateOnly(2025, 10, 6);
+        var uniqueWeekEnd = new DateOnly(2025, 10, 12);
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticlesNeedingBackfill("ai", 2)
+                .Concat(BuildArticles("ai", 4, "high", startIndex: 2))
+                .ToList()
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        _aiCategorizationService
+            .Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult
+            {
+                Explanation = "ok",
+                Item = new ProcessedContentItem
+                {
+                    Slug = "backfill-result",
+                    Title = "Backfilled",
+                    Excerpt = "excerpt",
+                    DateEpoch = 0,
+                    CollectionName = "news",
+                    ExternalUrl = "https://example.com/backfill",
+                    FeedName = "Test Feed",
+                    PrimarySectionName = "ai",
+                    ContentHash = "abc123",
+                    RoundupMetadata = new RoundupMetadata
+                    {
+                        Summary = "Summary",
+                        Relevance = "high",
+                        TopicType = "news",
+                        ImpactLevel = "medium",
+                        TimeSensitivity = "this-week"
+                    }
+                }
+            });
+
+        SetupAiForAllSteps(
+            step3Content: "## AI\n\nAI news.\n\n- [Article 2](https://example.com/2)\n- [Article 3](https://example.com/3)",
+            step4Content: "## AI\n\nAI news.\n\n- [Article 2](https://example.com/2)",
+            step6Content: "## AI\n\nAI news.\n\n- [Article 2](https://example.com/2)",
+            step7Metadata: "{\"title\": \"Backfill Test\", \"tags\": [\"AI\"], \"description\": \"Test.\", \"introduction\": \"Intro.\"}"
+        );
+
+        var progressMessages = new List<string>();
+        var progress = new Progress<string>(progressMessages.Add);
+
+        var sut = CreateSut();
+
+        // Act
+        await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, progress, ct: TestContext.Current.CancellationToken);
+
+        // Assert — per-item progress messages appear AFTER each item is processed
+        var backfillMessages = progressMessages
+            .Where(m => m.StartsWith("AI metadata backfill:", StringComparison.Ordinal) && m.Contains('/') && m.Contains('\u2014'))
+            .ToList();
+
+        backfillMessages.Should().HaveCount(2, "one progress message per backfilled item");
+        backfillMessages[0].Should().Contain("1/2", "first item is reported as 1/2 after it completes");
+        backfillMessages[1].Should().Contain("2/2", "second item is reported as 2/2 after it completes");
+
+        // Neither message should appear with doneCount=0
+        progressMessages.Should().NotContain(m => m.Contains("0/2"));
     }
 
     // ── Helpers ───────────────────────────────────────────────────────────────
@@ -486,6 +687,21 @@ public class RoundupGeneratorServiceTests
             TopicType = "news",
             ImpactLevel = "medium",
             TimeSensitivity = "this-week"
+        }).ToList();
+
+    private static IReadOnlyList<RoundupArticle> BuildArticlesNeedingBackfill(string section, int count) =>
+        Enumerable.Range(0, count).Select(i => new RoundupArticle
+        {
+            SectionName = section,
+            Title = $"Backfill Article {i}",
+            ExternalUrl = $"https://example.com/backfill-{i}",
+            Slug = $"backfill-{section}-{i}",
+            CollectionName = "news",
+            IsInternal = false,
+            NeedsAiMetadata = true,
+            Content = $"Content of backfill article {i}",
+            FeedName = "Test Feed",
+            DateEpoch = 1_700_000_000 + i
         }).ToList();
 
     private void SetupAiForAllSteps(

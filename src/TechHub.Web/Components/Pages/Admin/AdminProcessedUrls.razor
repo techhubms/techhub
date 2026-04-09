@@ -102,12 +102,12 @@
             <table class="admin-table">
                 <thead>
                     <tr>
+                        <th>Processed</th>
                         <th>Feed</th>
                         <th>Collection</th>
                         <th>Article</th>
                         <th>Status</th>
                         <th>Reason</th>
-                        <th>Processed</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -115,6 +115,7 @@
                     @foreach (var item in _result.Items)
                     {
                         <tr>
+                            <td class="admin-cell-mono">@item.ProcessedAt.ToString("MM-dd HH:mm")</td>
                             <td class="admin-cell-feed" title="@item.FeedName">@(item.FeedName ?? "—")</td>
                             <td class="admin-cell-mono">@(item.CollectionName ?? "—")</td>
                             <td class="admin-cell-article" title="@item.ExternalUrl">
@@ -129,7 +130,6 @@
                             <td class="admin-cell-reason" title="@(item.Reason ?? item.ErrorMessage ?? "—")">
                                 @(TruncateReason(item.Reason ?? item.ErrorMessage))
                             </td>
-                            <td class="admin-cell-mono">@item.ProcessedAt.ToString("MM-dd HH:mm")</td>
                             <td>
                                 <button class="admin-link-btn admin-link-btn-danger"
                                         @onclick="() => DeleteUrlAsync(item.ExternalUrl)"

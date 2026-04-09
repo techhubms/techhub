@@ -135,6 +135,24 @@ public interface IContentRepository
     Task<bool> UpdateEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken ct = default);
 
     /// <summary>
+    /// Gets a paged list of content items for the admin listing page with optional filters.
+    /// </summary>
+    Task<PagedResult<ContentItemListItem>> GetContentItemsPagedAsync(
+        int offset,
+        int limit,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null,
+        CancellationToken ct = default);
+
+    /// <summary>
+    /// Deletes a content item by its primary key (collection_name, slug).
+    /// FK cascades automatically delete the associated processed_urls and content_tags_expanded rows.
+    /// Returns true if a row was deleted, false if not found.
+    /// </summary>
+    Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken ct = default);
+
+    /// <summary>
     /// Invalidates all cached content data (search results, slugs, sitemaps, etc.).
     /// Call after mutations that change content_items (delete, update) to ensure
     /// subsequent queries return fresh data from the database.

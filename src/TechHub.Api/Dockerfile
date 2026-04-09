@@ -17,6 +17,9 @@ RUN dotnet restore src/TechHub.Api/TechHub.Api.csproj
 # Copy source code
 COPY src/ src/
 
+# Copy docs files referenced as embedded resources
+COPY docs/writing-style-guidelines.md docs/
+
 # Build and publish
 WORKDIR /src/src/TechHub.Api
 RUN dotnet publish -c Release -o /app/publish

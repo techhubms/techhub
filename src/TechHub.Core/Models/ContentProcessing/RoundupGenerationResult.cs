@@ -15,7 +15,10 @@ public enum RoundupGenerationResult
     NoArticles,
 
     /// <summary>Articles existed but none remained after relevance filtering.</summary>
-    NoArticlesAfterFiltering
+    NoArticlesAfterFiltering,
+
+    /// <summary>AI content generation failed — no usable content was produced.</summary>
+    ContentGenerationFailed
 }
 
 /// <summary>
@@ -38,4 +41,5 @@ public sealed class RoundupGenerationOutcome
     public static RoundupGenerationOutcome AlreadyExists => new(RoundupGenerationResult.AlreadyExists);
     public static RoundupGenerationOutcome NoArticles => new(RoundupGenerationResult.NoArticles);
     public static RoundupGenerationOutcome NoArticlesAfterFiltering => new(RoundupGenerationResult.NoArticlesAfterFiltering);
+    public static RoundupGenerationOutcome ContentGenerationFailed => new(RoundupGenerationResult.ContentGenerationFailed);
 }

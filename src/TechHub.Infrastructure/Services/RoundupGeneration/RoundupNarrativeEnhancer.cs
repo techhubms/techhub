@@ -1,4 +1,3 @@
-using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
@@ -16,26 +15,22 @@ internal sealed class RoundupNarrativeEnhancer
     private readonly ISectionRoundupRepository _roundupRepo;
     private readonly AppSettings _settings;
     private readonly RoundupGeneratorOptions _options;
-    private readonly ILogger<RoundupNarrativeEnhancer> _logger;
 
     public RoundupNarrativeEnhancer(
         RoundupAiHelper aiHelper,
         ISectionRoundupRepository roundupRepo,
         IOptions<AppSettings> settings,
-        RoundupGeneratorOptions options,
-        ILogger<RoundupNarrativeEnhancer> logger)
+        RoundupGeneratorOptions options)
     {
         ArgumentNullException.ThrowIfNull(aiHelper);
         ArgumentNullException.ThrowIfNull(roundupRepo);
         ArgumentNullException.ThrowIfNull(settings);
         ArgumentNullException.ThrowIfNull(options);
-        ArgumentNullException.ThrowIfNull(logger);
 
         _aiHelper = aiHelper;
         _roundupRepo = roundupRepo;
         _settings = settings.Value;
         _options = options;
-        _logger = logger;
     }
 
     /// <summary>
@@ -46,13 +41,14 @@ internal sealed class RoundupNarrativeEnhancer
         string step3Content,
         DateOnly weekStart,
         string writingGuidelines,
+        LoggingProgress lp,
         CancellationToken ct)
     {
         var previousRoundupContent = await _roundupRepo.GetPreviousRoundupContentAsync(weekStart, ct);
 
         if (string.IsNullOrWhiteSpace(previousRoundupContent))
         {
-            _logger.LogInformation("Step 4: No previous roundup found, skipping narrative enhancement");
+            lp.Report("No previous roundup found, skipping narrative enhancement");
             return step3Content;
         }
 
@@ -62,7 +58,8 @@ internal sealed class RoundupNarrativeEnhancer
         var sectionContents = RoundupAiHelper.ParseSections(step3Content);
         var responses = new List<string>();
 
-        foreach (var (sectionSlug, sectionConfig) in _settings.Content.Sections)
+        foreach (var (sectionSlug, sectionConfig) in _settings.Content.Sections
+            .OrderBy(s => s.Value.Order))
         {
             if (sectionSlug.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
@@ -80,18 +77,18 @@ internal sealed class RoundupNarrativeEnhancer
 
             if (string.IsNullOrWhiteSpace(previousSection))
             {
-                _logger.LogInformation("Step 4: No previous section for {Section}, using current", displayName);
+                lp.Report($"No previous section for {displayName}, using current");
                 responses.Add(currentSection);
                 continue;
             }
 
-            _logger.LogInformation("Step 4: Processing ongoing narrative for section {Section}", displayName);
+            lp.Report($"Processing ongoing narrative for section {displayName}");
 
             var userMessage =
                 $"PREVIOUS WEEK'S {displayName} SECTION:\n{previousSection}\n\n---\n\n" +
                 $"CURRENT WEEK'S {displayName} SECTION CONTENT TO ENHANCE:\n{currentSection}";
 
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 4 - " + displayName, ct);
+            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 2 - " + displayName, ct);
             responses.Add(response ?? currentSection);
 
             await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);

@@ -15,7 +15,8 @@ public interface IRoundupGeneratorService
     /// <param name="weekStart">Monday of the week to generate (Europe/Brussels).</param>
     /// <param name="weekEnd">Sunday of the week to generate (Europe/Brussels).</param>
     /// <param name="progress">Optional progress reporter for streaming status messages to callers.</param>
+    /// <param name="jobId">Optional content processing job ID for tracking in <c>processed_urls</c>.</param>
     /// <param name="ct">Cancellation token.</param>
     /// <returns>Outcome indicating whether a roundup was generated (including its slug) or why it was skipped.</returns>
-    Task<RoundupGenerationOutcome> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, IProgress<string>? progress = null, CancellationToken ct = default);
+    Task<RoundupGenerationOutcome> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, IProgress<string>? progress = null, long? jobId = null, CancellationToken ct = default);
 }

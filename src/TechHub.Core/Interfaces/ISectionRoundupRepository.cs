@@ -38,7 +38,8 @@ public interface ISectionRoundupRepository
     Task<string?> GetPreviousRoundupContentAsync(DateOnly weekStart, CancellationToken ct = default);
 
     /// <summary>
-    /// Writes a generated roundup to <c>content_items</c> and <c>content_tags_expanded</c>.
+    /// Writes a generated roundup to <c>content_items</c>, <c>content_tags_expanded</c>,
+    /// and <c>processed_urls</c> atomically in a single transaction.
     /// Uses an upsert so re-running for the same week updates the existing record.
     /// </summary>
     Task WriteRoundupAsync(
@@ -49,5 +50,6 @@ public interface ISectionRoundupRepository
         string content,
         string introduction,
         IReadOnlyList<string> tags,
+        long? jobId = null,
         CancellationToken ct = default);
 }

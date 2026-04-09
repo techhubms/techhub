@@ -1,6 +1,7 @@
 using FluentAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Core.Models.Admin;
+using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.TestUtilities;
 
@@ -21,6 +22,7 @@ public class ContentProcessingJobRepositoryTests
 
         _repository = new ContentProcessingJobRepository(
             fixture.Connection,
+            new PostgresConnectionFactory(fixture.ConnectionString),
             NullLogger<ContentProcessingJobRepository>.Instance);
     }
 

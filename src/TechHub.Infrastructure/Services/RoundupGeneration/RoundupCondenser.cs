@@ -38,11 +38,11 @@ internal sealed class RoundupCondenser
 
         var userMessage = $"WELL-ORGANIZED ROUNDUP CONTENT TO CONDENSE:\n\n{content}";
 
-        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 6", ct);
+        var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 3", ct);
 
         if (response is null)
         {
-            _logger.LogWarning("Step 6: AI condensing failed, using step 5 content");
+            _logger.LogWarning("Step 3: AI condensing failed, using previous step content");
             return content;
         }
 

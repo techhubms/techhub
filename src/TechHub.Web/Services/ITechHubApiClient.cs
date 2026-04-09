@@ -432,6 +432,28 @@ internal interface ITechHubApiClient
     Task UpdateContentItemEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken cancellationToken = default);
 
     // ================================================================
+    // Admin – Content items listing endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get a paginated list of content items with optional filters.
+    /// GET /api/admin/content-items
+    /// </summary>
+    Task<PagedResult<ContentItemListItem>> GetContentItemsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a content item by its primary key (cascades to processed_urls).
+    /// DELETE /api/admin/content-items?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
+
+    // ================================================================
     // Admin – Background job settings endpoints
     // ================================================================
 

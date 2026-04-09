@@ -359,6 +359,13 @@ public sealed class ContentProcessingService
                             processed = processed.WithContent(_contentFixer.RepairMarkdown(processed.Content));
                         }
 
+                        // Ensure section-derived tags are present (e.g., sections=["ai"] → tag "AI")
+                        processed = processed.WithTags(
+                            TagNormalizer.EnsureSectionTags(processed.Tags, processed.Sections));
+
+                        // Normalize tags (fix casing, remove noise, deduplicate)
+                        processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
+
                         // Write to database
                         step = "db-write";
                         try

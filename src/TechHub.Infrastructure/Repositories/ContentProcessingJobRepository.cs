@@ -13,16 +13,20 @@ namespace TechHub.Infrastructure.Repositories;
 public sealed class ContentProcessingJobRepository : IContentProcessingJobRepository
 {
     private readonly IDbConnection _connection;
+    private readonly IDbConnectionFactory _connectionFactory;
     private readonly ILogger<ContentProcessingJobRepository> _logger;
 
     public ContentProcessingJobRepository(
         IDbConnection connection,
+        IDbConnectionFactory connectionFactory,
         ILogger<ContentProcessingJobRepository> logger)
     {
         ArgumentNullException.ThrowIfNull(connection);
+        ArgumentNullException.ThrowIfNull(connectionFactory);
         ArgumentNullException.ThrowIfNull(logger);
 
         _connection = connection;
+        _connectionFactory = connectionFactory;
         _logger = logger;
     }
 
@@ -44,7 +48,7 @@ RETURNING id";
     /// <inheritdoc/>
     public async Task CompleteAsync(
         long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped,
-        int errorCount, int transcriptsSucceeded, int transcriptsFailed, string logOutput, int itemsFixed = 0, CancellationToken ct = default)
+        int errorCount, int transcriptsSucceeded, int transcriptsFailed, string? logOutput, int itemsFixed = 0, CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_processing_jobs SET
@@ -58,7 +62,7 @@ UPDATE content_processing_jobs SET
     transcripts_succeeded = @TranscriptsSucceeded,
     transcripts_failed    = @TranscriptsFailed,
     items_fixed     = @ItemsFixed,
-    log_output      = @LogOutput
+    log_output      = CASE WHEN @LogOutput IS NOT NULL THEN @LogOutput ELSE log_output END
 WHERE id = @JobId";
 
         await _connection.ExecuteAsync(new CommandDefinition(
@@ -79,7 +83,7 @@ WHERE id = @JobId";
     }
 
     /// <inheritdoc/>
-    public async Task FailAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, int transcriptsSucceeded, int transcriptsFailed, string logOutput, int itemsFixed = 0, CancellationToken ct = default)
+    public async Task FailAsync(long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped, int errorCount, int transcriptsSucceeded, int transcriptsFailed, string? logOutput, int itemsFixed = 0, CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_processing_jobs SET
@@ -93,7 +97,7 @@ UPDATE content_processing_jobs SET
     transcripts_succeeded = @TranscriptsSucceeded,
     transcripts_failed    = @TranscriptsFailed,
     items_fixed     = @ItemsFixed,
-    log_output      = @LogOutput
+    log_output      = CASE WHEN @LogOutput IS NOT NULL THEN @LogOutput ELSE log_output END
 WHERE id = @JobId";
 
         await _connection.ExecuteAsync(new CommandDefinition(
@@ -123,7 +127,11 @@ UPDATE content_processing_jobs
 SET log_output = COALESCE(log_output, '') || @Line || E'\n'
 WHERE id = @JobId";
 
-            await _connection.ExecuteAsync(new CommandDefinition(
+            // Use an independent connection so this can safely be called concurrently
+            // with other database operations on the scoped connection (e.g. Progress<T>
+            // callbacks that fire on thread-pool threads while the main pipeline is running).
+            using var conn = _connectionFactory.CreateConnection();
+            await conn.ExecuteAsync(new CommandDefinition(
                 Sql, new { JobId = jobId, Line = line }, cancellationToken: ct));
         }
         catch (DbException ex)
@@ -224,7 +232,7 @@ WHERE id = @JobId AND status = 'running'";
     /// <inheritdoc/>
     public async Task AbortJobAsync(
         long jobId, int feedsProcessed, int itemsAdded, int itemsSkipped,
-        int errorCount, int transcriptsSucceeded, int transcriptsFailed, string logOutput, int itemsFixed = 0, CancellationToken ct = default)
+        int errorCount, int transcriptsSucceeded, int transcriptsFailed, string? logOutput, int itemsFixed = 0, CancellationToken ct = default)
     {
         const string Sql = @"
 UPDATE content_processing_jobs SET
@@ -238,7 +246,7 @@ UPDATE content_processing_jobs SET
     transcripts_succeeded = @TranscriptsSucceeded,
     transcripts_failed    = @TranscriptsFailed,
     items_fixed     = @ItemsFixed,
-    log_output      = @LogOutput
+    log_output      = CASE WHEN @LogOutput IS NOT NULL THEN @LogOutput ELSE log_output END
 WHERE id = @JobId AND status = 'running'";
 
         await _connection.ExecuteAsync(new CommandDefinition(

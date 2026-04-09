@@ -105,4 +105,29 @@ public sealed class ProcessedContentItem
             RoundupMetadata = RoundupMetadata
         };
     }
+
+    /// <summary>
+    /// Creates a copy of this item with the specified tags.
+    /// </summary>
+    public ProcessedContentItem WithTags(IReadOnlyList<string> tags)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = Content,
+            Excerpt = Excerpt,
+            DateEpoch = DateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = SubcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = ContentHash,
+            RoundupMetadata = RoundupMetadata
+        };
+    }
 }

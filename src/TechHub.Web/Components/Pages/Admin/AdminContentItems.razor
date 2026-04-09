@@ -1,0 +1,375 @@
+@page "/admin/content-items"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+@using TechHub.Core.Models.ContentProcessing
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+@inject IJSRuntime JS
+
+<PageTitle>Content Items — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Content Items</h1>
+            <p class="admin-page-subtitle">View and manage content items in the database — delete entries to remove content and associated processed URLs</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @* ── Filters ── *@
+    <div class="admin-filters">
+        <div class="admin-filter-group">
+            <label class="admin-label" for="searchFilter">Search</label>
+            <input id="searchFilter" class="admin-input" @bind="_searchFilter" @bind:after="ApplyFiltersAsync"
+                   placeholder="Search by title, slug or URL…" />
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="collectionFilter">Collection</label>
+            <input id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync"
+                   placeholder="e.g. blogs" />
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="feedFilter">Feed</label>
+            <select id="feedFilter" class="admin-input" @bind="_feedNameFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All feeds</option>
+                @if (_feedNames != null)
+                {
+                    @foreach (var feedName in _feedNames)
+                    {
+                        <option value="@feedName">@feedName</option>
+                    }
+                }
+            </select>
+        </div>
+    </div>
+
+    @* ── Content ── *@
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading content items…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_result == null || _result.Items.Count == 0)
+    {
+        <div class="admin-empty">No content items match the current filters.</div>
+    }
+    else
+    {
+        <div class="admin-result-summary">
+            Showing @((_currentPage - 1) * PageSize + 1)–@(Math.Min(_currentPage * PageSize, _result.TotalCount))
+            of @_result.TotalCount.ToString("N0") entries
+        </div>
+
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Created</th>
+                        <th>Feed</th>
+                        <th>Primary Section</th>
+                        <th>Collection</th>
+                        <th>Title</th>
+                        <th>Processed URL</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in _result.Items)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@item.CreatedAt.ToString("MM-dd HH:mm")</td>
+                            <td class="admin-cell-feed" title="@item.FeedName">@(item.FeedName ?? "—")</td>
+                            <td class="admin-cell-mono" title="@(item.AllSections ?? item.PrimarySectionName)">@(item.PrimarySectionName ?? "—")</td>
+                            <td class="admin-cell-mono">@item.CollectionName</td>
+                            <td class="admin-cell-article" title="@item.Title">
+                                @if (!string.IsNullOrEmpty(item.ExternalUrl))
+                                {
+                                    <a href="@item.ExternalUrl" target="_blank" rel="noopener noreferrer">@item.Title</a>
+                                }
+                                else
+                                {
+                                    @item.Title
+                                }
+                            </td>
+                            <td>
+                                <span class="admin-status @(item.HasProcessedUrl ? "admin-status-completed" : "admin-status-failed")"
+                                      title="@(item.HasProcessedUrl ? "Has a matching processed_url record" : "No matching processed_url record — orphan")">
+                                    @(item.HasProcessedUrl ? "✓ Yes" : "✗ No")
+                                </span>
+                            </td>
+                            <td>
+                                <button class="admin-link-btn"
+                                        @onclick="() => OpenContentItemEditorAsync(item.CollectionName, item.Slug)"
+                                        title="Edit content item">Edit</button>
+                                <button class="admin-link-btn admin-link-btn-danger"
+                                        @onclick="() => DeleteItemAsync(item.CollectionName, item.Slug)"
+                                        title="Delete content item and associated processed URL">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @* ── Pagination ── *@
+        @if (_totalPages > 1)
+        {
+            <div class="admin-pagination">
+                <button class="btn-secondary" disabled="@(_currentPage <= 1)" @onclick="PreviousPageAsync">← Previous</button>
+                <span class="admin-pagination-info">Page @_currentPage of @_totalPages</span>
+                <button class="btn-secondary" disabled="@(_currentPage >= _totalPages)" @onclick="NextPageAsync">Next →</button>
+            </div>
+        }
+    }
+</div>
+
+<ContentItemEditorModal IsOpen="@_editorOpen"
+                        Title="@_editorTitle"
+                        EditData="@_editorData"
+                        OnSave="SaveContentItemAsync"
+                        OnClose="CloseContentItemEditor" />
+
+@code {
+    private const int PageSize = 100;
+
+    private bool _loading = true;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private PagedResult<ContentItemListItem>? _result;
+    private int _currentPage = 1;
+    private int _totalPages;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    // Filters
+    private string _searchFilter = string.Empty;
+    private string _collectionFilter = string.Empty;
+    private string _feedNameFilter = string.Empty;
+
+    // Debounce timer for text input filters
+    private CancellationTokenSource? _debounce;
+
+    // Content item editor
+    private bool _editorOpen;
+    private string _editorTitle = string.Empty;
+    private ContentItemEditData? _editorData;
+    private string _editorCollectionName = string.Empty;
+    private string _editorSlug = string.Empty;
+
+    // Feed name dropdown options
+    private IReadOnlyList<string>? _feedNames;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        // Load feed names for dropdown filter
+        await LoadFeedNamesAsync();
+
+        if (ApplicationState.TryTakeFromJson<PagedResult<ContentItemListItem>>("admin-content-items", out var restored) && restored != null)
+        {
+            _result = restored;
+            _loading = false;
+            UpdatePagination();
+            return;
+        }
+
+        await LoadDataAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_result != null)
+        {
+            ApplicationState.PersistAsJson("admin-content-items", _result);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        _debounce?.Cancel();
+        _debounce?.Dispose();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _result = await Api.GetContentItemsAsync(
+                _currentPage,
+                PageSize,
+                string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
+                string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter,
+                string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter);
+
+            UpdatePagination();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load content items: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task LoadFeedNamesAsync()
+    {
+        try
+        {
+            var feeds = await Api.GetFeedConfigsAsync();
+            _feedNames = feeds.Select(f => f.Name).OrderBy(n => n).ToList();
+        }
+        catch
+        {
+            _feedNames = [];
+        }
+    }
+
+    private void UpdatePagination()
+    {
+        if (_result != null)
+        {
+            _totalPages = Math.Max(1, (int)Math.Ceiling((double)_result.TotalCount / PageSize));
+        }
+    }
+
+    private async Task ApplyFiltersAsync()
+    {
+        _debounce?.Cancel();
+        _debounce = new CancellationTokenSource();
+        var token = _debounce.Token;
+
+        try
+        {
+            await Task.Delay(300, token);
+        }
+        catch (OperationCanceledException)
+        {
+            return;
+        }
+
+        _currentPage = 1;
+        await LoadDataAsync();
+    }
+
+    private async Task RefreshAsync()
+    {
+        _message = null;
+        await LoadDataAsync();
+    }
+
+    private async Task PreviousPageAsync()
+    {
+        if (_currentPage > 1)
+        {
+            _currentPage--;
+            await LoadDataAsync();
+        }
+    }
+
+    private async Task NextPageAsync()
+    {
+        if (_currentPage < _totalPages)
+        {
+            _currentPage++;
+            await LoadDataAsync();
+        }
+    }
+
+    private async Task DeleteItemAsync(string collectionName, string slug)
+    {
+        _message = null;
+
+        try
+        {
+            var deleted = await Api.DeleteContentItemAsync(collectionName, slug);
+            if (deleted)
+            {
+                _message = $"Deleted: {collectionName}/{slug} — associated processed URL removed via cascade.";
+                _messageIsError = false;
+                await LoadDataAsync();
+            }
+            else
+            {
+                _message = "Content item not found (may have already been deleted).";
+                _messageIsError = true;
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to delete content item: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private async Task OpenContentItemEditorAsync(string collectionName, string slug)
+    {
+        _message = null;
+        try
+        {
+            var result = await Api.GetContentItemEditDataAsync(collectionName, slug);
+            if (result is null)
+            {
+                _message = "Content item not found.";
+                _messageIsError = true;
+                return;
+            }
+            _editorCollectionName = collectionName;
+            _editorSlug = slug;
+            _editorTitle = $"Edit — {collectionName}/{slug}";
+            _editorData = result;
+            _editorOpen = true;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to load content item: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private async Task SaveContentItemAsync(ContentItemEditData editData)
+    {
+        try
+        {
+            await Api.UpdateContentItemEditDataAsync(_editorCollectionName, _editorSlug, editData);
+            _editorOpen = false;
+            _message = "Content item saved.";
+            _messageIsError = false;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to save content item: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private void CloseContentItemEditor() => _editorOpen = false;
+}

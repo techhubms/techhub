@@ -1051,4 +1051,248 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         review.Should().NotBeNull();
         review!.PrimarySectionName.Should().Be("github-copilot");
     }
+
+    // ── Content Items Listing Endpoints ──────────────────────────────────────
+
+    [Fact]
+    public async Task GetContentItemsPaged_ReturnsOkWithPagedResult()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/content-items",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().NotBeNull();
+    }
+
+    [Fact]
+    public async Task GetContentItemsPaged_WithSearchFilter_ReturnsFilteredResults()
+    {
+        // Arrange — seed a content item with a known title
+        const string slug = "content-items-search-test";
+        const string collection = "blogs";
+        const string testUrl = "https://example.com/content-items-search-test";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, @Collection, 'UniqueSearchableTitle', '# Test', 'Test excerpt',
+                     1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
+                     ',ai,', TRUE, 1, 'searchhash1')
+                  ON CONFLICT (collection_name, slug) DO NOTHING",
+                new { Slug = slug, Collection = collection, Url = testUrl });
+        }
+
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/content-items?search=UniqueSearchableTitle",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().Contain(i => i.Slug == slug);
+    }
+
+    [Fact]
+    public async Task GetContentItemsPaged_WithCollectionFilter_ReturnsFilteredResults()
+    {
+        // Act
+        var response = await _client.GetAsync(
+            "/api/admin/content-items?collectionName=nonexistent-collection",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        result!.Items.Should().BeEmpty();
+        result.TotalCount.Should().Be(0);
+    }
+
+    [Fact]
+    public async Task DeleteContentItem_WithMissingParams_ReturnsBadRequest()
+    {
+        // Act
+        var response = await _client.DeleteAsync(
+            "/api/admin/content-items",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task DeleteContentItem_WithNonExistentItem_ReturnsNotFound()
+    {
+        // Act
+        var response = await _client.DeleteAsync(
+            "/api/admin/content-items?collection=nonexistent&slug=nonexistent",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
+
+    [Fact]
+    public async Task DeleteContentItem_WithExistingItem_ReturnsNoContent()
+    {
+        // Arrange — seed a content item
+        const string slug = "content-items-delete-test";
+        const string collection = "blogs";
+        const string testUrl = "https://example.com/content-items-delete-test";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, @Collection, 'Delete Test Item', '# Test', 'Test excerpt',
+                     1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
+                     ',ai,', TRUE, 1, 'deletehash1')
+                  ON CONFLICT (collection_name, slug) DO NOTHING",
+                new { Slug = slug, Collection = collection, Url = testUrl });
+        }
+
+        // Act
+        var response = await _client.DeleteAsync(
+            $"/api/admin/content-items?collection={Uri.EscapeDataString(collection)}&slug={Uri.EscapeDataString(slug)}",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
+
+        // Verify it's actually gone
+        var getResponse = await _client.GetAsync(
+            $"/api/admin/content-items?search={Uri.EscapeDataString(slug)}",
+            TestContext.Current.CancellationToken);
+        var result = await getResponse.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        result!.Items.Should().NotContain(i => i.Slug == slug && i.CollectionName == collection);
+    }
+
+    [Fact]
+    public async Task DeleteContentItem_CascadesToProcessedUrls()
+    {
+        // Arrange — seed a content item WITH a processed_url record
+        const string slug = "content-items-cascade-test";
+        const string collection = "blogs";
+        const string testUrl = "https://example.com/content-items-cascade-test";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+
+            // Create required feed config for FK
+            await connection.ExecuteAsync(
+                @"INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
+                  VALUES ('CascadeTestFeed', 'https://example.com/cascade.xml', '_blogs', TRUE)
+                  ON CONFLICT DO NOTHING");
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, @Collection, 'Cascade Test Item', '# Test', 'Test excerpt',
+                     1700000000, 'ai', @Url, 'Test Author', 'CascadeTestFeed',
+                     ',ai,', TRUE, 1, 'cascadehash1')
+                  ON CONFLICT (collection_name, slug) DO NOTHING",
+                new { Slug = slug, Collection = collection, Url = testUrl });
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, slug, reason)
+                  VALUES (@Url, 'succeeded', 'CascadeTestFeed', @Collection, @Slug, 'test')
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { Url = testUrl, Collection = collection, Slug = slug });
+        }
+
+        // Act — delete the content item
+        var response = await _client.DeleteAsync(
+            $"/api/admin/content-items?collection={Uri.EscapeDataString(collection)}&slug={Uri.EscapeDataString(slug)}",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
+
+        // Verify the processed_url was also deleted via FK cascade
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            var processedUrl = await connection.QuerySingleOrDefaultAsync<string>(
+                "SELECT external_url FROM processed_urls WHERE external_url = @Url",
+                new { Url = testUrl });
+            processedUrl.Should().BeNull("processed_url should be cascade-deleted when content_item is deleted");
+        }
+    }
+
+    [Fact]
+    public async Task GetContentItemsPaged_ShowsHasProcessedUrl()
+    {
+        // Arrange — seed a content item with a processed_url
+        const string slug = "has-processed-url-test";
+        const string collection = "blogs";
+        const string testUrl = "https://example.com/has-processed-url-test";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
+                  VALUES ('HasPuTestFeed', 'https://example.com/haspu.xml', '_blogs', TRUE)
+                  ON CONFLICT DO NOTHING");
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, @Collection, 'HasPU Test', '# Test', 'Test',
+                     1700000000, 'ai', @Url, 'Author', 'HasPuTestFeed',
+                     ',ai,', TRUE, 1, 'haspuhash')
+                  ON CONFLICT (collection_name, slug) DO NOTHING",
+                new { Slug = slug, Collection = collection, Url = testUrl });
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, slug, reason)
+                  VALUES (@Url, 'succeeded', 'HasPuTestFeed', @Collection, @Slug, 'test')
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { Url = testUrl, Collection = collection, Slug = slug });
+        }
+
+        // Act
+        var response = await _client.GetAsync(
+            $"/api/admin/content-items?search={Uri.EscapeDataString(slug)}",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
+            TestContext.Current.CancellationToken);
+        result.Should().NotBeNull();
+        var item = result!.Items.FirstOrDefault(i => i.Slug == slug);
+        item.Should().NotBeNull();
+        item!.HasProcessedUrl.Should().BeTrue();
+    }
 }

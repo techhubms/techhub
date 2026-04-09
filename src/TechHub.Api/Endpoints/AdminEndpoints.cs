@@ -121,6 +121,14 @@ public static class AdminEndpoints
             .WithName("UpdateContentItemEditData")
             .WithSummary("Update all editable fields for a content item by primary key");
 
+        group.MapGet("/content-items", GetContentItemsPagedAsync)
+            .WithName("GetContentItemsPaged")
+            .WithSummary("Get a paginated list of content items with optional filters");
+
+        group.MapDelete("/content-items", DeleteContentItemAsync)
+            .WithName("DeleteContentItem")
+            .WithSummary("Delete a content item by collection name and slug (cascades to processed_urls)");
+
         // ── Background job settings ──────────────────────────────────────────
 
         group.MapGet("/job-settings", GetJobSettingsAsync)
@@ -741,6 +749,52 @@ public static class AdminEndpoints
         var processed = markdownService.ProcessYouTubeEmbeds(request.Markdown);
         var html = markdownService.RenderToHtml(processed);
         return Results.Ok(new { html });
+    }
+
+    // ── Content items listing handlers ───────────────────────────────────────
+
+    private static async Task<IResult> GetContentItemsPagedAsync(
+        IContentRepository contentRepo,
+        CancellationToken ct,
+        int page = 1,
+        int pageSize = 100,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null)
+    {
+        page = Math.Max(1, page);
+        pageSize = Math.Clamp(pageSize, 1, 500);
+        search = search?.Trim().Sanitize();
+        collectionName = collectionName?.Trim().Sanitize();
+        feedName = feedName?.Trim().Sanitize();
+
+        var offset = (page - 1) * pageSize;
+        var result = await contentRepo.GetContentItemsPagedAsync(offset, pageSize, search, collectionName, feedName, ct);
+        return Results.Ok(result);
+    }
+
+    private static async Task<IResult> DeleteContentItemAsync(
+        IContentRepository contentRepo,
+        CancellationToken ct,
+        string? collection = null,
+        string? slug = null)
+    {
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
+        {
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
+        }
+
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
+
+        var deleted = await contentRepo.DeleteContentItemAsync(collection, slug, ct);
+        if (!deleted)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.NoContent();
     }
 }
 

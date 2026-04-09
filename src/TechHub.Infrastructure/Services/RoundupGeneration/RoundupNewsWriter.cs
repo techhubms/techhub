@@ -43,6 +43,7 @@ internal sealed class RoundupNewsWriter
         Dictionary<string, IReadOnlyList<RoundupArticle>> filtered,
         string weekDescription,
         string writingGuidelines,
+        LoggingProgress lp,
         CancellationToken ct)
     {
         var systemMessage = _systemPrompt.Value
@@ -51,7 +52,8 @@ internal sealed class RoundupNewsWriter
 
         var responses = new List<string>();
 
-        foreach (var (sectionSlug, sectionConfig) in _settings.Content.Sections)
+        foreach (var (sectionSlug, sectionConfig) in _settings.Content.Sections
+            .OrderBy(s => s.Value.Order))
         {
             if (sectionSlug.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
@@ -65,22 +67,22 @@ internal sealed class RoundupNewsWriter
 
             var displayName = sectionConfig.Title;
 
-            _logger.LogInformation("Step 3: Processing section {Section} ({Count} articles)", displayName, articles.Count);
+            lp.Report($"Processing section {displayName} ({articles.Count} articles)");
 
             var sectionInput = BuildSectionInput(displayName, articles);
 
             var userMessage = string.Create(CultureInfo.InvariantCulture,
                 $"ARTICLE ANALYSIS RESULTS FOR {displayName} SECTION TO TRANSFORM INTO NEWS-STYLE CONTENT:\n\n{sectionInput}");
 
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 3 - " + displayName, ct);
+            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 1 - " + displayName, ct);
             if (response is not null)
             {
                 responses.Add(response);
-                _logger.LogInformation("Step 3: Section {Section} complete", displayName);
+                lp.Report($"Section {displayName} complete");
             }
             else
             {
-                _logger.LogWarning("Step 3: Section {Section} AI call failed, skipping section", displayName);
+                _logger.LogWarning("Step 1: Section {Section} AI call failed, skipping section", displayName);
             }
 
             await Task.Delay(TimeSpan.FromSeconds(_options.RateLimitDelaySeconds), ct);
@@ -122,11 +124,8 @@ internal sealed class RoundupNewsWriter
                     $"KEY_TOPICS: {string.Join(", ", article.KeyTopics)}"));
             }
 
-            var link = article.IsInternal
-                ? string.Create(CultureInfo.InvariantCulture,
-                    $"[{article.Title}]({{{{ \"{article.ExternalUrl}\" | relative_url }}}})")
-                : string.Create(CultureInfo.InvariantCulture,
-                    $"[{article.Title}]({article.ExternalUrl})");
+var link = string.Create(CultureInfo.InvariantCulture,
+                $"[{article.Title}]({article.ExternalUrl})");
 
             sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"LINK: {link}"));
             sb.AppendLine();

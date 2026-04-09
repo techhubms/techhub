@@ -5,8 +5,10 @@ using Markdig;
 using Markdig.Syntax;
 using Markdig.Syntax.Inlines;
 using Microsoft.Extensions.Logging;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.Admin;
+using TechHub.Infrastructure.Repositories;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -22,29 +24,13 @@ public sealed class ContentFixerService : IContentFixerService
     private readonly ILogger<ContentFixerService> _logger;
 
     /// <summary>
-    /// Reverse mapping: URL slug → Tag name.
-    /// </summary>
-    private static readonly Dictionary<string, string> _sectionSlugToTag = new(StringComparer.OrdinalIgnoreCase)
-    {
-        ["all"] = "All",
-        ["ai"] = "AI",
-        ["azure"] = "Azure",
-        ["github-copilot"] = "GitHub Copilot",
-        ["dotnet"] = ".NET",
-        ["devops"] = "DevOps",
-        ["security"] = "Security",
-        ["ml"] = "ML"
-    };
-
-    /// <summary>
     /// Deprecated tag names that should be removed from content items.
+    /// Tags with useful replacements are handled by TagNormalizer._tagMappings
+    /// (e.g. "dotnet" → ".NET", "Machine Learning" → "ML").
     /// </summary>
     private static readonly HashSet<string> _deprecatedTags = new(StringComparer.OrdinalIgnoreCase)
     {
-        "Machine Learning",
-        "Artificial Intelligence",
         "Cloud",
-        "dotnet",
         "Coding"
     };
 
@@ -221,6 +207,7 @@ public sealed class ContentFixerService : IContentFixerService
 
         var sql = $@"
 SELECT slug, collection_name AS CollectionName, tags_csv AS TagsCsv,
+       date_epoch AS DateEpoch, sections_bitmask AS SectionsBitmask,
        is_ai AS IsAi, is_azure AS IsAzure, is_dotnet AS IsDotnet,
        is_devops AS IsDevops, is_github_copilot AS IsGithubCopilot,
        is_ml AS IsMl, is_security AS IsSecurity
@@ -241,41 +228,19 @@ ORDER BY date_epoch DESC";
             // 1. Remove deprecated tags
             tags.RemoveAll(t => _deprecatedTags.Contains(t));
 
-            // 2. Add section tags based on section booleans
+            // 2. Add section-derived tags and collection tag
             var sections = GetSectionSlugs(item);
-            var tagsToAdd = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-
-            foreach (var section in sections)
-            {
-                if (_sectionSlugToTag.TryGetValue(section, out var tag))
-                {
-                    tagsToAdd.Add(tag);
-                }
-            }
+            tags = TagNormalizer.EnsureSectionTags(tags, sections);
 
             // Add collection tag
             var collectionTag = char.ToUpperInvariant(item.CollectionName[0]) + item.CollectionName[1..];
-            tagsToAdd.Add(collectionTag);
-
-            // GitHub Copilot → also add AI
-            if (tagsToAdd.Any(t => t.Equals("GitHub Copilot", StringComparison.OrdinalIgnoreCase)))
+            if (!tags.Any(t => t.Equals(collectionTag, StringComparison.OrdinalIgnoreCase)))
             {
-                tagsToAdd.Add("AI");
+                tags.Add(collectionTag);
             }
 
-            // Add missing tags
-            var existingLower = new HashSet<string>(tags.Select(t => t.ToLowerInvariant()));
-            foreach (var tag in tagsToAdd)
-            {
-                if (existingLower.Add(tag.ToLowerInvariant()))
-                {
-                    tags.Add(tag);
-                }
-            }
-
-            // 3. Deduplicate (case-insensitive, keep first occurrence)
-            var seen = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-            tags = tags.Where(t => seen.Add(t)).ToList();
+            // 3. Full normalization: casing, noise removal, dedup (same pipeline as ingestion)
+            tags = TagNormalizer.NormalizeTags(tags);
 
             if (tags.SequenceEqual(originalTags, StringComparer.Ordinal))
             {
@@ -298,6 +263,36 @@ ORDER BY date_epoch DESC";
                       WHERE collection_name = @Collection AND slug = @Slug",
                     new { TagsCsv = newTagsCsv, Collection = item.CollectionName, Slug = item.Slug },
                     cancellationToken: ct));
+
+                // Rebuild content_tags_expanded to match updated tags
+                await _connection.ExecuteAsync(new CommandDefinition(
+                    "DELETE FROM content_tags_expanded WHERE collection_name = @Collection AND slug = @Slug",
+                    new { Collection = item.CollectionName, Slug = item.Slug },
+                    cancellationToken: ct));
+
+                if (tags.Count > 0)
+                {
+                    var tagRows = ContentItemWriteRepository.BuildTagWords(
+                        tags, item.CollectionName, item.Slug, item.DateEpoch,
+                        item.IsAi, item.IsAzure, item.IsDotnet, item.IsDevops,
+                        item.IsGithubCopilot, item.IsMl, item.IsSecurity, item.SectionsBitmask);
+
+                    foreach (var row in tagRows)
+                    {
+                        await _connection.ExecuteAsync(new CommandDefinition(
+                            @"INSERT INTO content_tags_expanded
+                                (collection_name, slug, tag_word, tag_display, is_full_tag,
+                                 date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                                 is_ml, is_security, sections_bitmask)
+                              VALUES
+                                (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
+                                 @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                                 @IsMl, @IsSecurity, @Bitmask)
+                              ON CONFLICT DO NOTHING",
+                            row,
+                            cancellationToken: ct));
+                    }
+                }
             }
 
             fixedCount++;
@@ -647,6 +642,8 @@ ORDER BY date_epoch DESC";
         public string Slug { get; init; } = string.Empty;
         public string CollectionName { get; init; } = string.Empty;
         public string? TagsCsv { get; init; }
+        public long DateEpoch { get; init; }
+        public int SectionsBitmask { get; init; }
         public bool IsAi { get; init; }
         public bool IsAzure { get; init; }
         public bool IsDotnet { get; init; }

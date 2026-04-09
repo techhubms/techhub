@@ -11,7 +11,7 @@ using TechHub.Core.Models.ContentProcessing;
 namespace TechHub.Infrastructure.Repositories;
 
 /// <summary>
-/// Queries <c>content_items</c> directly using section boolean columns and AI metadata
+/// Queries <c>content_items</c> using <c>primary_section_name</c> and AI metadata
 /// to retrieve article candidates for weekly roundup generation.
 /// </summary>
 public sealed class SectionRoundupRepository : ISectionRoundupRepository
@@ -47,34 +47,27 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         DateOnly weekEnd,
         CancellationToken ct = default)
     {
-        // Expand each content item into one row per section it belongs to using the
-        // denormalized boolean columns. Excludes roundups to prevent circular inclusion.
+        // Use primary_section_name so each article appears in exactly one section.
+        // This prevents the same article from being counted multiple times and gives
+        // the AI a clearer signal of what content belongs where.
         const string Sql = @"
             SELECT
-                s.section_name      AS SectionName,
-                ci.title            AS Title,
-                ci.external_url     AS ExternalUrl,
-                ci.slug             AS Slug,
-                ci.collection_name  AS CollectionName,
-                ci.ai_metadata      AS AiMetadataJson,
-                ci.content          AS Content,
-                ci.feed_name        AS FeedName,
-                ci.date_epoch       AS DateEpoch
+                ci.primary_section_name AS SectionName,
+                ci.title                AS Title,
+                ci.external_url         AS ExternalUrl,
+                ci.slug                 AS Slug,
+                ci.collection_name      AS CollectionName,
+                ci.ai_metadata          AS AiMetadataJson,
+                ci.content              AS Content,
+                ci.feed_name            AS FeedName,
+                ci.date_epoch           AS DateEpoch
             FROM content_items ci
-            CROSS JOIN LATERAL (VALUES
-                ('ai',              ci.is_ai),
-                ('azure',           ci.is_azure),
-                ('dotnet',          ci.is_dotnet),
-                ('devops',          ci.is_devops),
-                ('github-copilot',  ci.is_github_copilot),
-                ('ml',              ci.is_ml),
-                ('security',        ci.is_security)
-            ) AS s(section_name, is_member)
-            WHERE s.is_member = TRUE
-              AND ci.created_at >= @WeekStart
+            WHERE ci.created_at >= @WeekStart
               AND ci.created_at < @WeekEndExclusive
               AND ci.collection_name != 'roundups'
-            ORDER BY s.section_name, ci.created_at";
+              AND ci.primary_section_name IS NOT NULL
+              AND ci.primary_section_name != 'all'
+            ORDER BY ci.primary_section_name, ci.created_at";
 
         // WeekEnd is Sunday (inclusive) — add 1 day for exclusive upper bound.
         var rows = await _connection.QueryAsync<RoundupRow>(new CommandDefinition(
@@ -222,6 +215,7 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         string content,
         string introduction,
         IReadOnlyList<string> tags,
+        long? jobId = null,
         CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(tags);
@@ -257,65 +251,109 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
             topic_type = "news"
         }, _jsonOptions);
 
-        await _connection.ExecuteAsync(new CommandDefinition(
-            @"INSERT INTO content_items
-                (slug, collection_name, title, content, excerpt, date_epoch,
-                 primary_section_name, external_url, author, feed_name,
-                 tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
-                 is_ml, is_security, sections_bitmask, content_hash, ai_metadata)
-              VALUES
-                (@Slug, 'roundups', @Title, @Content, @Excerpt, @DateEpoch,
-                 'github-copilot', @ExternalUrl, 'TechHub', 'TechHub',
-                 @TagsCsv, TRUE, TRUE, TRUE, TRUE, TRUE,
-                 TRUE, TRUE, 127, @ContentHash, @AiMetadata::jsonb)
-              ON CONFLICT (collection_name, slug) DO UPDATE SET
-                title            = EXCLUDED.title,
-                content          = EXCLUDED.content,
-                excerpt          = EXCLUDED.excerpt,
-                tags_csv         = EXCLUDED.tags_csv,
-                content_hash     = EXCLUDED.content_hash,
-                ai_metadata      = EXCLUDED.ai_metadata,
-                updated_at       = NOW()",
-            new
-            {
-                Slug = slug,
-                Title = title,
-                Content = content,
-                Excerpt = introduction,
-                DateEpoch = dateEpoch,
-                ExternalUrl = externalUrl,
-                TagsCsv = tagsCsv,
-                ContentHash = computedHash,
-                AiMetadata = aiMetadataJson
-            },
-            cancellationToken: ct));
-
-        // Rebuild expanded tags for the roundup.
-        await _connection.ExecuteAsync(new CommandDefinition(
-            "DELETE FROM content_tags_expanded WHERE collection_name = 'roundups' AND slug = @Slug",
-            new { Slug = slug },
-            cancellationToken: ct));
-
-        foreach (var tag in tags)
+        if (_connection.State != ConnectionState.Open)
         {
-            var tagLower = tag.ToLowerInvariant();
+            _connection.Open();
+        }
+
+        using var transaction = _connection.BeginTransaction();
+
+        try
+        {
             await _connection.ExecuteAsync(new CommandDefinition(
-                @"INSERT INTO content_tags_expanded
-                    (collection_name, slug, tag_word, tag_display, is_full_tag,
-                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
-                     is_ml, is_security, sections_bitmask)
+                @"INSERT INTO content_items
+                    (slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                     is_ml, is_security, sections_bitmask, content_hash, ai_metadata)
                   VALUES
-                    ('roundups', @Slug, @TagWord, @TagDisplay, TRUE,
-                     @DateEpoch, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, 127)
-                  ON CONFLICT DO NOTHING",
+                    (@Slug, 'roundups', @Title, @Content, @Excerpt, @DateEpoch,
+                     'github-copilot', @ExternalUrl, 'TechHub', 'TechHub',
+                     @TagsCsv, TRUE, TRUE, TRUE, TRUE, TRUE,
+                     TRUE, TRUE, 127, @ContentHash, @AiMetadata::jsonb)
+                  ON CONFLICT (collection_name, slug) DO UPDATE SET
+                    title            = EXCLUDED.title,
+                    content          = EXCLUDED.content,
+                    excerpt          = EXCLUDED.excerpt,
+                    tags_csv         = EXCLUDED.tags_csv,
+                    content_hash     = EXCLUDED.content_hash,
+                    ai_metadata      = EXCLUDED.ai_metadata,
+                    updated_at       = NOW()",
                 new
                 {
                     Slug = slug,
-                    TagWord = tagLower,
-                    TagDisplay = tag,
-                    DateEpoch = dateEpoch
+                    Title = title,
+                    Content = content,
+                    Excerpt = introduction,
+                    DateEpoch = dateEpoch,
+                    ExternalUrl = externalUrl,
+                    TagsCsv = tagsCsv,
+                    ContentHash = computedHash,
+                    AiMetadata = aiMetadataJson
                 },
+                transaction: transaction,
                 cancellationToken: ct));
+
+            // Record in processed_urls atomically with the content_item insert.
+            await _connection.ExecuteAsync(new CommandDefinition(
+                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, reason, job_id, slug)
+                  VALUES (@ExternalUrl, 'succeeded', 'TechHub', 'roundups', 'roundup-generated', @JobId, @Slug)
+                  ON CONFLICT (external_url) DO UPDATE SET
+                    status          = 'succeeded',
+                    error_message   = NULL,
+                    feed_name       = 'TechHub',
+                    collection_name = 'roundups',
+                    reason          = 'roundup-generated',
+                    job_id          = COALESCE(@JobId, processed_urls.job_id),
+                    slug            = @Slug,
+                    updated_at      = NOW()",
+                new
+                {
+                    ExternalUrl = externalUrl,
+                    JobId = jobId,
+                    Slug = slug
+                },
+                transaction: transaction,
+                cancellationToken: ct));
+
+            // Rebuild expanded tags for the roundup (with word expansion for multi-word tags).
+            await _connection.ExecuteAsync(new CommandDefinition(
+                "DELETE FROM content_tags_expanded WHERE collection_name = 'roundups' AND slug = @Slug",
+                new { Slug = slug },
+                transaction: transaction,
+                cancellationToken: ct));
+
+            if (allTags.Count > 0)
+            {
+                var tagRows = ContentItemWriteRepository.BuildTagWords(
+                    allTags, "roundups", slug, dateEpoch,
+                    isAi: true, isAzure: true, isDotnet: true, isDevops: true,
+                    isGhc: true, isMl: true, isSecurity: true, bitmask: 127);
+
+                foreach (var row in tagRows)
+                {
+                    await _connection.ExecuteAsync(new CommandDefinition(
+                        @"INSERT INTO content_tags_expanded
+                            (collection_name, slug, tag_word, tag_display, is_full_tag,
+                             date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                             is_ml, is_security, sections_bitmask)
+                          VALUES
+                            (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
+                             @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                             @IsMl, @IsSecurity, @Bitmask)
+                          ON CONFLICT DO NOTHING",
+                        row,
+                        transaction: transaction,
+                        cancellationToken: ct));
+                }
+            }
+
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
         }
     }
 }

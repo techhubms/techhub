@@ -49,7 +49,7 @@ internal sealed class RoundupMetadataGenerator
 
         for (var attempt = 0; attempt < _options.MaxRetries; attempt++)
         {
-            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 7", ct);
+            var response = await _aiHelper.CallAiWithRetryAsync(systemMessage, userMessage, "Step 4", ct);
 
             if (response is not null)
             {
@@ -64,12 +64,12 @@ internal sealed class RoundupMetadataGenerator
                 }
                 catch (JsonException ex)
                 {
-                    _logger.LogWarning(ex, "Step 7: Failed to parse metadata JSON (attempt {Attempt})", attempt + 1);
+                    _logger.LogWarning(ex, "Step 4: Failed to parse metadata JSON (attempt {Attempt})", attempt + 1);
                 }
             }
         }
 
-        _logger.LogWarning("Step 7: Metadata generation failed after retries, using fallback metadata");
+        _logger.LogWarning("Step 4: Metadata generation failed after retries, using fallback metadata");
         return new RoundupMetadataAi
         {
             Title = string.Create(CultureInfo.InvariantCulture, $"Weekly AI and Tech News Roundup - {weekDescription}"),

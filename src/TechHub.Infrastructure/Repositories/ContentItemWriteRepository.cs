@@ -180,9 +180,9 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
             new { Collection = item.CollectionName, Slug = item.Slug },
             cancellationToken: ct));
 
-        if (item.Tags.Count > 0)
+        if (tags.Count > 0)
         {
-            var tagRows = BuildTagWords(item.Tags, item.CollectionName, item.Slug, item.DateEpoch,
+            var tagRows = BuildTagWords(tags, item.CollectionName, item.Slug, item.DateEpoch,
                 isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
             foreach (var row in tagRows)
             {
@@ -220,7 +220,7 @@ UPDATE content_items
             cancellationToken: ct));
     }
 
-    private static List<object> BuildTagWords(
+    internal static List<object> BuildTagWords(
         IReadOnlyList<string> tags, string collection, string slug, long dateEpoch,
         bool isAi, bool isAzure, bool isDotnet, bool isDevops, bool isGhc,
         bool isMl, bool isSecurity, int bitmask)

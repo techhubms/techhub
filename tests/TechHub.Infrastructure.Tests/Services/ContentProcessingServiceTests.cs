@@ -7,6 +7,7 @@ using Moq;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models.ContentProcessing;
+using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services.ContentProcessing;
 using TechHub.TestUtilities;
@@ -37,7 +38,7 @@ public class ContentProcessingServiceTests
         ArgumentNullException.ThrowIfNull(fixture);
 
         _fixture = fixture;
-        _jobRepo = new ContentProcessingJobRepository(fixture.Connection, NullLogger<ContentProcessingJobRepository>.Instance);
+        _jobRepo = new ContentProcessingJobRepository(fixture.Connection, new PostgresConnectionFactory(fixture.ConnectionString), NullLogger<ContentProcessingJobRepository>.Instance);
         _processedUrlRepo = new ProcessedUrlRepository(fixture.Connection, NullLogger<ProcessedUrlRepository>.Instance);
         _writeRepo = new ContentItemWriteRepository(fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance);
     }
@@ -519,7 +520,7 @@ public class ContentProcessingServiceTests
         var tagsCsv = await _fixture.Connection.QueryFirstAsync<string>(
             "SELECT tags_csv FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
             new { Slug = slug, Collection = "blogs" });
-        tagsCsv.Should().Be(",csharp,azure-openai,Blogs,");
+        tagsCsv.Should().Be(",C#,Azure OpenAI,AI,Azure,.NET,Blogs,");
 
         var primarySection = await _fixture.Connection.QueryFirstAsync<string>(
             "SELECT primary_section_name FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
@@ -622,12 +623,12 @@ public class ContentProcessingServiceTests
             "SELECT tag_word FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection ORDER BY tag_word",
             new { Slug = slug, Collection = "blogs" })).ToList();
 
-        // "azure openai" → full tag + "azure" + "openai" word expansions
-        // "csharp" → full tag only (single word, no expansion)
+        // "azure-openai" → normalized to "Azure OpenAI" → tag_word="azure openai" + "azure" + "openai" word expansions
+        // "csharp" → normalized to "C#" → tag_word="c#" (single word, no expansion)
         tags.Should().Contain("azure openai");
         tags.Should().Contain("azure");
         tags.Should().Contain("openai");
-        tags.Should().Contain("csharp");
+        tags.Should().Contain("c#");
     }
 
     [Fact]
@@ -664,30 +665,31 @@ public class ContentProcessingServiceTests
         await sut.RunAsync("scheduled", CancellationToken.None);
 
         // Assert — tag row should have the same section flags as the content item
+        // Note: TagNormalizer converts "zero-trust" → "Zero Trust" (hyphens to spaces), so tag_word = 'zero trust'
         var isAi = await _fixture.Connection.QueryFirstOrDefaultAsync<bool?>(
-            "SELECT is_ai FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            "SELECT is_ai FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero trust'",
             new { Slug = slug, Collection = "blogs" });
 
-        isAi.Should().NotBeNull("tag row should exist for 'zero-trust'");
+        isAi.Should().NotBeNull("tag row should exist for 'Zero Trust'");
         isAi.Should().BeTrue();
 
         var isSecurity = await _fixture.Connection.QueryFirstAsync<bool>(
-            "SELECT is_security FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            "SELECT is_security FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero trust'",
             new { Slug = slug, Collection = "blogs" });
         isSecurity.Should().BeTrue();
 
         var isAzure = await _fixture.Connection.QueryFirstAsync<bool>(
-            "SELECT is_azure FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            "SELECT is_azure FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero trust'",
             new { Slug = slug, Collection = "blogs" });
         isAzure.Should().BeFalse();
 
         var dateEpoch = await _fixture.Connection.QueryFirstAsync<long>(
-            "SELECT date_epoch FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            "SELECT date_epoch FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero trust'",
             new { Slug = slug, Collection = "blogs" });
         dateEpoch.Should().Be(1700000000);
 
         var sectionsBitmask = await _fixture.Connection.QueryFirstAsync<int>(
-            "SELECT sections_bitmask FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero-trust'",
+            "SELECT sections_bitmask FROM content_tags_expanded WHERE slug = @Slug AND collection_name = @Collection AND tag_word = 'zero trust'",
             new { Slug = slug, Collection = "blogs" });
         sectionsBitmask.Should().Be(1 | 64); // ai=1, security=64
     }

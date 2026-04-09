@@ -551,10 +551,11 @@ select.admin-input {
 }
 
 .admin-cell-article {
-    max-width: 280px;
+    max-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    width: 100%;
 }
 
 .admin-cell-reason {

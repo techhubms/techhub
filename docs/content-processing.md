@@ -184,9 +184,8 @@ completed roundup directly to the `content_items` table (`collection_name = 'rou
 
 1. **Article loading** — Queries `content_items` directly using section boolean columns
    and `ai_metadata`, filtered by `created_at` within the target week
-2. **Relevance filtering** — Per section: includes all `high`-relevance articles; adds `medium`
-   articles when fewer than `MinHighArticlesPerSection` high articles exist; adds `low` articles
-   when the combined count is still below `MinTotalArticlesPerSection`
+2. **Relevance filtering** — Per section: always includes all `high`-relevance articles; fills up
+   to `MinArticlesPerSection` with `medium` then `low` articles if the high count is below the minimum
 3. **Step 3** — AI creates news-style narrative stories per section
 4. **Step 4** — AI adds continuity by comparing with the previous week's roundup
 5. **Step 6** — AI condenses the content paragraph-by-paragraph
@@ -205,8 +204,7 @@ Configured under `"RoundupGenerator"` in `appsettings.json`:
 |---|---|---|
 | `Enabled` | `false` | Enable/disable weekly roundup generation |
 | `RunHourUtc` | `8` | UTC hour to fire on Monday |
-| `MinHighArticlesPerSection` | `3` | Threshold below which medium articles are included |
-| `MinTotalArticlesPerSection` | `5` | Threshold below which low articles are included |
+| `MinArticlesPerSection` | `10` | Minimum articles per section; fills from medium/low if high count is below |
 | `RateLimitDelaySeconds` | `15` | Delay between AI calls |
 | `MaxRetries` | `3` | Max retries per AI call |
 
