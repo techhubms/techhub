@@ -1,0 +1,14 @@
+{
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "FeedName": "Microsoft Tech Community",
+  "ProcessedDate": "2026-04-09 21:25:14",
+  "Title": "Allow copy and paste directly to local desktop",
+  "OutputDir": "_community",
+  "Author": "atorrens",
+  "Tags": [],
+  "EnhancedContent": "Hello Microsoft\n\nI came across an issue , where the user wanted to copy and paste a file from their AVD session desktop to their **local desktop** on their computer. However the paste option was not grayed out(not available), due to microsoft not supporting it. I would like to have this option available for them rather than having drive redirection enabled and having them go to the c drive users\\desktop and then pasting the file.\n\nPlease implement the option to copy/paste files DIRECTLY  onto their local desktop for future AVD updates/implementations\n\nKind regards",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-virtual-desktop-feedback/allow-copy-and-paste-directly-to-local-desktop/idi-p/4509986",
+  "PubDate": "2026-04-09T13:04:39+00:00",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node",
+  "Description": "Hello Microsoft\n\nI came across an issue , where the user wanted to copy and paste a file from their AVD session desktop to their **local desktop** on their computer. However the paste option was not grayed out(not available), due to microsoft not supporting it. I would like to have this option available for them rather than having drive redirection enabled and having them go to the c drive users\\desktop and then pasting the file.\n\nPlease implement the option to copy/paste files DIRECTLY onto their local desktop for future AVD updates/implementations\n\nKind regards"
+}

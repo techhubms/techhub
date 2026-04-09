@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-04-09 21:22:56",
+  "Title": "Release information in issue sidebar and default values for project fields",
+  "OutputDir": "_news",
+  "Author": "Allison",
+  "Tags": [
+    "Improvement",
+    "projects & issues"
+  ],
+  "EnhancedContent": "This update brings release tracking closer to your issues, configurable defaults for project fields, and faster navigation across related issues.\n\n### Release information in the issue sidebar\n\n![Screenshot of an issue sidebar showing a linked pull request with a \"Latest\" release tag beneath it](https://github.com/user-attachments/assets/ec969161-8e22-487f-9336-40873cf3dedd)\n\nWhen an issue is linked by a pull request, the “Development” section now shows the first release that shipped that pull request, directly beneath the pull request reference.\n\nWhere available, linked pull request includes the release tag and one of the following badges:\n\n- `Latest`\n: Available in a stable release.\n- `Pre-release`\n: Included in a pre-release and not yet stable.\n\nInstantly see when a fix shipped, right from the issue page.\n\n### Default values for project fields\n\n![Screenshot of project field settings showing a default value configured for a single select field](https://github.com/user-attachments/assets/91f4d7b5-8d42-432f-b0f7-32834635efdf)\n\nYou can now set default values for text, number, and single select project fields. These values are automatically applied when new items are added to a project.\n\n## Other improvements\n\nYou can now open issue references in the issue viewer. Clicking an issue reference now opens the issue in the issue viewer so you can quickly view related issues without losing your place. This works from comments or timeline activity, including mentions, cross-references, sub-issues, and parent issues.\n\nShare your feedback in the [GitHub Community](https://github.com/orgs/community/discussions/191987).",
+  "Link": "https://github.blog/changelog/2026-04-09-release-info-in-issue-sidebar-and-project-defaults",
+  "PubDate": "2026-04-09T16:15:32+00:00",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Description": "This update brings release tracking closer to your issues, configurable defaults for project fields, and faster navigation across related issues. Release information in the issue sidebar When an issue is…\n\nThe post [Release information in issue sidebar and default values for project fields](https://github.blog/changelog/2026-04-09-release-info-in-issue-sidebar-and-project-defaults) appeared first on [The GitHub Blog](https://github.blog)."
+}

@@ -1,0 +1,25 @@
+{
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "AzureSQL",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "LearnSQL",
+    "Microsoft",
+    "SQL",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2026-04-09T16:01:17+00:00",
+  "OutputDir": "_videos",
+  "Title": "Next-Level SQL in VS Code: GitHub Copilot Custom Instructions, Plan Mode & Skills | Data Exposed",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=noEj1AhZUwE",
+  "Description": "GitHub Copilot already generates awesome SQL code but awesome is different from aligned with your team. In this episode, we explore how to take full control of GitHub Copilot context inside VS Code using the MSSQL extension.\n\nWe start with a clean workspace to demonstrate what GitHub Copilot produces with zero context, then add a single custom instruction file that teaches it your team's exact T-SQL conventions automatically. We then use Plan Mode to design a full data model from a PRD (Product Requirements Document) and bring it to life in Schema Designer with Agent Mode, connecting GitHub Copilot to your actual database. From there, we create a skills file that teaches GitHub Copilot your vector search architecture as a slash command, generating SQL Server 2025/Azure SQL Database T-SQL without explaining anything in the prompt. To wrap up, we open the GitHub Copilot debug panel to inspect the full LLM request payload, including the system prompt and injected context, so you can see exactly what GitHub Copilot receives with every request.\n\nLearn how to make GitHub Copilot and the MSSQL extension for VS Code work like a teammate who already knows your standards and architecture in this episode of Data Exposed.\n\n0:00 Introduction 1:33 Demo 8:45 Demo 17:16 Demo 18:33 Getting started\n\n✔️Resources: Install: https://aka.ms/vscode-mssql Demos: https://aka.ms/vscode-mssql-demos Blogs: https://aka.ms/vscode-mssql-blogs Documentation: https://aka.ms/vscode-mssql-docs\n\n📌 Let's connect: Twitter - Anna Hoffman, https://twitter.com/AnalyticAnna Twitter - AzureSQL, https://aka.ms/azuresqltw\n\n🔴 Watch even more Data Exposed episodes: https://aka.ms/dataexposedyt\n\n🔔 Subscribe to our channels for even more SQL tips: Microsoft Azure SQL: https://aka.ms/msazuresqlyt Microsoft SQL Server: https://aka.ms/mssqlserveryt Microsoft Developer: https://aka.ms/microsoftdeveloperyt\n\n#AzureSQL #SQL #LearnSQL",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2026-04-09 21:24:07"
+}

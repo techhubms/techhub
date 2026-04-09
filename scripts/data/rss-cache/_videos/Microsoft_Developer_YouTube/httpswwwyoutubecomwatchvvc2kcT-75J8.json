@@ -1,0 +1,22 @@
+{
+  "Author": "Microsoft Developer",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "PubDate": "2026-04-09T18:59:31+00:00",
+  "OutputDir": "_videos",
+  "Title": "AI, Budget, and the Future of Databases",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=vc2kcT-75J8",
+  "Description": "In this Budget Bites finale, we take a step back to explore what building AI-powered applications on a budget really signals for developers today. Join Microsoft leaders Shireesh (CVP, Azure Databases) and Priya Sati (VP, SQL) as they reflect on the season’s journey - from building AI apps with just $25 to scaling production-ready systems using Azure SQL, GitHub Copilot, and intelligent agents.\n\n⏱️ Chapters 00:07 – Welcome to Budget Bites and the $25 AI challenge 01:09 – What’s changed for customers building AI today 01:43 – The AI–Cloud–Developer experience trifecta 03:02 – Building AI on a budget: Azure SQL perspective 04:25 – AI infrastructure costs and what people get wrong 07:13 – Data as the new oil: what’s the modern refinery? 08:53 – Why experience matters in the age of AI and agents 10:23 – DBA agents and reducing operational drudgery 13:52 – Agents + structured, governed data with Azure SQL 18:26 – Scaling from free Azure SQL to hyperscale production 20:24 – From data to unified intelligence: Microsoft’s vision 25:02 – Final takeaways and building budget-smart AI apps\n\n🚀Visit the Repo: https://aka.ms/budgetbytes 🚀Get started for FREE: https://aka.ms/budgetbytes/freeoffer 🚀Watch more Budget Bytes: https://aka.ms/budgetbytes/series",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2026-04-09 21:24:07"
+}

@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://news.microsoft.com/source/feed/",
+  "FeedName": "Microsoft News",
+  "ProcessedDate": "2026-04-09 21:23:38",
+  "Title": "What is quantum computing? 10 terms everyone should know",
+  "OutputDir": "_news",
+  "Author": "stclarke",
+  "Tags": [
+    "Innovation",
+    "Technology"
+  ],
+  "EnhancedContent": "Quantum computing has long felt like a perpetual promise — a mysteriously powerful technology that’s always “about 10 years away.” If you tuned it out, you weren’t alone.\n\nBut something has shifted recently. Researchers are now talking years, not decades.\n\nYes, it’s still early. Quantum systems are still fragile, complex and mostly confined to labs, which is why classical computers are still the more reliable workhorses. But quantum development has crossed a threshold where progress feels tangible, not theoretical.\n\nThis is the moment when you’ll start hearing more about the concepts — and the vocabulary — because they’ll start shaping things like how scientists simulate molecular behavior, explore new materials that could lead to longer-lasting batteries or cleaner chemicals, and grapple with other complex problems that could take today’s computers millions of years to solve.\n\nAs the impact of quantum computing moves beyond research settings, so will its notoriously hard-to-grasp terminology. Here’s a guide to help you understand the key ideas behind this emerging technology.",
+  "Link": "https://news.microsoft.com/source/features/innovation/quantum-computing-10-terms-to-know/",
+  "PubDate": "2026-04-09T15:22:48+00:00",
+  "FeedLevelAuthor": "Source",
+  "Description": "The post [What is quantum computing? 10 terms everyone should know](https://news.microsoft.com/source/features/innovation/quantum-computing-10-terms-to-know/) appeared first on [Source](https://news.microsoft.com/source)."
+}

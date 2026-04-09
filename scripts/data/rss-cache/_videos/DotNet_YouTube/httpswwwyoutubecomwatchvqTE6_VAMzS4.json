@@ -1,0 +1,25 @@
+{
+  "Author": "dotnet",
+  "Tags": [
+    "data",
+    "demo",
+    "developer",
+    "dotnet",
+    "dotnetdata",
+    "dotnetdeveloper",
+    "efcore",
+    "entityframework",
+    "microsoft",
+    "softwaredeveloper"
+  ],
+  "FeedName": "DotNet YouTube",
+  "PubDate": "2026-04-09T17:42:53+00:00",
+  "OutputDir": "_videos",
+  "Title": ".NET Data Community Standup: Lightweight Framework to Automate EF Components",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "dotnet",
+  "Link": "https://www.youtube.com/watch?v=qTE6_VAMzS4",
+  "Description": "Join us for a stream where Klaus Kirchhoff introduces \"Lightweight Framework to Automate EF Components\".\n\n🎙️ Featuring: Jiri Cincura, Klaus Kirchhoff\n\n#efcore #data #dotnet",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "ProcessedDate": "2026-04-09 21:24:00"
+}

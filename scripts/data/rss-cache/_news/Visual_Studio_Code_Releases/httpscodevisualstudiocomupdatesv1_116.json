@@ -1,0 +1,16 @@
+{
+  "FeedUrl": "https://code.visualstudio.com/feed.xml",
+  "FeedName": "Visual Studio Code Releases",
+  "ProcessedDate": "2026-04-09 21:21:27",
+  "Title": "Visual Studio Code 1.116",
+  "OutputDir": "_news",
+  "Author": "Visual Studio Code Team",
+  "Tags": [
+    "release"
+  ],
+  "EnhancedContent": "Explore Agentic Development - [Join a GitHub Copilot Dev Day near you!](https://aka.ms/githubcopilotdevdays)\n\nDismiss this update\n\n# Visual Studio Code 1.116\n\nFollow us on [LinkedIn](https://www.linkedin.com/showcase/vs-code), [X](https://go.microsoft.com/fwlink/?LinkID=533687), [Bluesky](https://bsky.app/profile/vscode.dev) |\n\n*Last updated: April 8, 2026*\n\nWelcome to the 1.116 release of Visual Studio Code.\n\nHappy Coding!\n\n## April 8, 2026\n\n- Add dedicated commands and keybindings to the Agents app to focus the Changes view (), the files tree within the Changes view, and the Chat Customizations view, enabling full keyboard navigation. *[#308327](https://github.com/microsoft/vscode/issues/308327), [#308322](https://github.com/microsoft/vscode/issues/308322), [#308265](https://github.com/microsoft/vscode/issues/308265)*\n- Add an accessibility help dialog (⌥F1 (Windows Alt+F1, Linux Shift+Alt+F1)) to the Agents app chat input box that displays available commands and keybindings for screen reader users, with an option to control announcement verbosity. *[#308259](https://github.com/microsoft/vscode/issues/308259)*\n- Add support for CSS `@import`\nlink node\\_modules resolution, allowing you to Ctrl+click through imports like `@import \"some-module/style.css\"` when using bundlers. *[#295074](https://github.com/microsoft/vscode/issues/295074)*\n\n## April 7, 2026\n\n- Add #-triggered file-context completions to the Agents app, scoped to the workspace chosen in the picker. *[#299057](https://github.com/microsoft/vscode/issues/299057)*\n\nWe really appreciate people trying our new features as soon as they are ready, so check back here often and learn what's new.",
+  "Link": "https://code.visualstudio.com/updates/v1_116",
+  "PubDate": "2026-04-15T17:00:00+00:00",
+  "FeedLevelAuthor": "Visual Studio Code - Code Editing. Redefined.",
+  "Description": "Learn what's new in Visual Studio Code 1.116 (Insiders)\n\n[Read the full article](https://code.visualstudio.com/updates/v1_116)"
+}
