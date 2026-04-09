@@ -70,7 +70,7 @@ Current valid collection values (slugs) used in the system:
 - `blogs` - Blogs and technical articles
 - `roundups` - Weekly content summaries
 
-# Specialized Collections & Classification
+## Specialized Collections & Classification
 
 ## Specialized Collections
 

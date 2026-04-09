@@ -90,12 +90,12 @@ public class ContentRepository : IContentRepository
     // Content-derived caches use TTLs as a safety net. Event-driven invalidation
     // (via InvalidateCachedData) provides immediate freshness after writes;
     // TTLs ensure self-healing if an invalidation path is missed.
-    private static readonly TimeSpan SearchCacheTtl = TimeSpan.FromMinutes(5);
-    private static readonly TimeSpan SlugCacheTtl = TimeSpan.FromMinutes(15);
-    private static readonly TimeSpan TagCacheTtl = TimeSpan.FromMinutes(10);
-    private static readonly TimeSpan SitemapCacheTtl = TimeSpan.FromMinutes(30);
-    private static readonly TimeSpan AuthorCacheTtl = TimeSpan.FromMinutes(30);
-    private static readonly TimeSpan ConfigCacheTtl = TimeSpan.FromHours(1);
+    private static readonly TimeSpan _searchCacheTtl = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan _slugCacheTtl = TimeSpan.FromMinutes(15);
+    private static readonly TimeSpan _tagCacheTtl = TimeSpan.FromMinutes(10);
+    private static readonly TimeSpan _sitemapCacheTtl = TimeSpan.FromMinutes(30);
+    private static readonly TimeSpan _authorCacheTtl = TimeSpan.FromMinutes(30);
+    private static readonly TimeSpan _configCacheTtl = TimeSpan.FromHours(1);
 
     static ContentRepository()
     {
@@ -215,7 +215,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("sections:all", entry =>
         {
-            entry.SetAbsoluteExpiration(ConfigCacheTtl);
+            entry.SetAbsoluteExpiration(_configCacheTtl);
             return Task.FromResult(InitializeSections(_settings));
         }) ?? [];
     }
@@ -242,7 +242,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("sitemap:items", async entry =>
         {
-            entry.SetAbsoluteExpiration(SitemapCacheTtl);
+            entry.SetAbsoluteExpiration(_sitemapCacheTtl);
             return await GetSitemapItemsInternalAsync(ct);
         }) ?? [];
     }
@@ -275,7 +275,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("authors:all", async entry =>
         {
-            entry.SetAbsoluteExpiration(AuthorCacheTtl);
+            entry.SetAbsoluteExpiration(_authorCacheTtl);
             return await GetAuthorsInternalAsync(ct);
         }) ?? [];
     }
@@ -353,7 +353,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = $"slug:{collectionName}:{slug}:{includeDraft}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetAbsoluteExpiration(SlugCacheTtl);
+            entry.SetAbsoluteExpiration(_slugCacheTtl);
             var item = await GetBySlugInternalAsync(collectionName, slug, includeDraft, ct);
             return item != null ? RenderHtmlIfNeeded(item) : null;
         });
@@ -370,7 +370,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetAbsoluteExpiration(SearchCacheTtl);
+            entry.SetAbsoluteExpiration(_searchCacheTtl);
             return await SearchInternalAsync(request, ct);
         }) ?? new SearchResults<ContentItem>
         {
@@ -391,7 +391,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetAbsoluteExpiration(SearchCacheTtl);
+            entry.SetAbsoluteExpiration(_searchCacheTtl);
             return await GetFacetsInternalAsync(request, ct);
         }) ?? new FacetResults { Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(), TotalCount = 0 };
     }
@@ -410,7 +410,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetAbsoluteExpiration(TagCacheTtl);
+            entry.SetAbsoluteExpiration(_tagCacheTtl);
             return await GetTagCountsInternalAsync(request, ct);
         }) ?? [];
     }
@@ -427,7 +427,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("excludetags:set", async entry =>
         {
-            entry.SetAbsoluteExpiration(ConfigCacheTtl);
+            entry.SetAbsoluteExpiration(_configCacheTtl);
             return await BuildExcludeTagsSetAsync();
         }) ?? [];
     }

@@ -14,7 +14,7 @@ public sealed class DatabaseStatisticsService
     private readonly IDbConnection _connection;
     private readonly ILogger<DatabaseStatisticsService> _logger;
 
-    private static readonly TimeZoneInfo BrusselsTimeZone =
+    private static readonly TimeZoneInfo _brusselsTimeZone =
         TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
 
     public DatabaseStatisticsService(
@@ -57,7 +57,7 @@ public sealed class DatabaseStatisticsService
             TableSizes = tableSizes,
             SlowQueries = slowQueries,
             Processing = processing,
-            GeneratedAt = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, BrusselsTimeZone)
+            GeneratedAt = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, _brusselsTimeZone)
         };
     }
 

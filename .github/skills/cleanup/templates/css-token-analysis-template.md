@@ -1,10 +1,10 @@
-## CSS Color Token Analysis
+# CSS Color Token Analysis
 
 **Total Tokens**: {TOTAL_TOKEN_COUNT}
 
 ---
 
-### Token Usage Summary
+## Token Usage Summary
 
 **Multi-use (2+)**: {MULTI_USE_COUNT} tokens  
 **Single-use (1)**: {SINGLE_USE_COUNT} tokens  
@@ -14,7 +14,7 @@
 
 ---
 
-### Undefined Token References
+## Undefined Token References
 
 **Status**: {UNDEFINED_STATUS}
 
@@ -22,10 +22,10 @@
 
 ---
 
-### Recommendations
+## Recommendations
 
 {YOUR_RECOMMENDATIONS}
 
-### Next steps
+## Next steps
 
 {PRESENT_USER_WITH_OPTIONS}

@@ -1,21 +1,17 @@
 {
     // markdownlint-cli2 configuration
+    // All rules enabled — external content moved to database, full control over markdown
     "config": {
         "default": true,
-        // Disable line length
+        // Disable line length — not useful for docs with long URLs, tables, etc.
         "MD013": false,
-        // Disable inline HTML
-        "MD033": false,
-        // Disable first line heading requirement
-        "MD041": false,
-        // Disable table column alignment (causes issues with long content)
-        "MD060": false,
-        // Disable closed atx heading rule (treats C# and F# as malformed closed headings)
-        "MD020": false,
-        // Disable multiple H1 headings (false positive with frontmatter title + markdown heading)
-        "MD025": false,
-        // Disable emphasis as heading (intentional style choice in content)
-        "MD036": false
+        // Disable table column alignment — too noisy for complex tables
+        "MD060": false
     },
+    "ignores": [
+        "tests/**/Fixtures/**",
+        "tests/TechHub.TestUtilities/TestCollections/**",
+        "src/**/Resources/**"
+    ],
     "gitignore": true
 }

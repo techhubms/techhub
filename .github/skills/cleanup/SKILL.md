@@ -3,10 +3,12 @@ name: cleanup
 description: Comprehensive code cleanup and quality assurance for .NET solutions. Compiles, formats, lints, removes dead code, and synchronizes documentation with code. Use this skill whenever you are asked to cleanup the solution, repository, branch, project, etc.
 ---
 
+# Cleanup Skill
+
 > **Path Convention**: All paths in this file are relative to this file's location (`.github/skills/cleanup/`).  
 > Therefore, `../../../` refers to the workspace root (`/workspaces/techhub/`).
 
-# Code Cleanup Skill
+## Code Cleanup Skill
 
 Maintain code quality, consistency, and documentation accuracy for Tech Hub.
 
@@ -152,7 +154,7 @@ The project uses **built-in .NET analyzers** for build-time dead code detection 
 
 ### Step 6: Documentation Review
 
-**Step 6a: Run Documentation Quality Checks**
+#### Step 6a: Run Documentation Quality Checks
 
 **Run**: [verify-documentation.ps1](scripts/verify-documentation.ps1)
 
@@ -162,7 +164,7 @@ This performs quality checks:
 - **Broken Links**: Detects broken internal markdown links
 - **Missing AGENTS.md**: Checks if code directories lack AGENTS.md files
 
-**Step 6b: Analyze Documentation**
+#### Step 6b: Analyze Documentation
 
 **No script** - YOU analyze using verification results.
 

@@ -223,7 +223,7 @@ public class ContentProcessingPipelineTests
             return null;
         }
 
-        return JsonSerializer.Deserialize<PipelineFixture>(json, JsonOptions);
+        return JsonSerializer.Deserialize<PipelineFixture>(json, _jsonOptions);
     }
 
     private static bool ShouldGenerate() =>
@@ -245,7 +245,7 @@ public class ContentProcessingPipelineTests
     /// Called only when <c>GENERATE_PIPELINE_FIXTURES=true</c>.
     /// </summary>
     private static async Task GenerateAllFixturesAsync(
-        string fixtureName, RawFeedItem rawItem, string feedXml, FeedConfig feedConfig)
+        string fixtureName, RawFeedItem rawItem, string _feedXml, FeedConfig feedConfig)
     {
         var fetchClient = new Mock<IArticleFetchClient>();
         var ytService = new Mock<IYouTubeTranscriptService>();
@@ -351,7 +351,7 @@ public class ContentProcessingPipelineTests
             UserPrompt = actualPrompt
         };
 
-        var json = JsonSerializer.Serialize(fixture, JsonOptions);
+        var json = JsonSerializer.Serialize(fixture, _jsonOptions);
 
         // Write to the repo source tree so the file is available to embed on next build.
         if (Directory.Exists(_fixtureRepoDir))
@@ -395,7 +395,7 @@ public class ContentProcessingPipelineTests
             : string.Empty;
     }
 
-    private static readonly JsonSerializerOptions JsonOptions = new()
+    private static readonly JsonSerializerOptions _jsonOptions = new()
     {
         WriteIndented = true,
         PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,

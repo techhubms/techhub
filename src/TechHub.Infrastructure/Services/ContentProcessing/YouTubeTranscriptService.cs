@@ -30,7 +30,7 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
     private const int MaxRetryAttempts = 2;
 
     /// <summary>Base delay between retries (doubled each attempt).</summary>
-    private static readonly TimeSpan RetryBaseDelay = TimeSpan.FromSeconds(2);
+    private static readonly TimeSpan _retryBaseDelay = TimeSpan.FromSeconds(2);
 
     public YouTubeTranscriptService(
         IOptions<ContentProcessorOptions> options,
@@ -114,7 +114,7 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
             {
                 if (attempt <= MaxRetryAttempts)
                 {
-                    var delay = RetryBaseDelay * (1 << (attempt - 1));
+                    var delay = _retryBaseDelay * (1 << (attempt - 1));
                     _logger.LogWarning(ex,
                         "Transcript fetch failed for {Url} (attempt {Attempt}/{Max}), retrying in {Delay}s",
                         videoUrl, attempt, MaxRetryAttempts + 1, delay.TotalSeconds);

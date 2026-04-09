@@ -8,7 +8,7 @@ All content items fundamentally contain:
 
 1. **Metadata**: Core structured metadata mapping (Title, Author, Date, Tags, Sections).
 2. **Excerpt**: A brief summary or introduction snippet suitable for feed and card previews.
-3. **Markdown Content**: Main detailed body content in markdown format. 
+3. **Markdown Content**: Main detailed body content in markdown format.
 
 ## Required Properties
 
@@ -45,6 +45,7 @@ Author name or presenter name. For YouTube videos, use the actual presenter/demo
 ### Date
 
 Publication or creation date:
+
 - Normalized into UTC database columns `date_epoch` and structured DateTime internally
 - Preserves the logical publish timing
 

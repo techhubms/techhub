@@ -3,6 +3,8 @@ name: pushall
 description: "Step-by-step workflow for safely and precisely executing code and GitHub operations according to strict instructions. Use this whenever asked to push code changes, create pull requests, or perform related operations to ensure a consistent and reliable process."
 ---
 
+# Push All Workflow
+
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 1**: NEVER EVER use pattern recognition or "I know what this step should do" thinking. Each step has EXACT instructions - follow them literally, not what you think they should accomplish.
 
 **🚨 ABSOLUTE CRITICAL REQUIREMENT 2**: Do NOT optimize for tokens, speed, or efficiency. This workflow is intentionally verbose and step-by-step for precision. Follow every sub-instruction within each step.
@@ -35,7 +37,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
 **🚨 CRITICAL PROMPT SCOPE**: All instructions, restrictions, and requirements in this prompt file ONLY apply when this specific prompt is being actively executed via the `/pushall` command or equivalent prompt invocation. These rules do NOT apply when editing, reviewing, or working with this file outside of prompt execution context. When working with this file in any other capacity (editing, debugging, documentation, etc.), treat it as a normal markdown file and ignore all workflow-specific instructions.
 
-# Step-by-Step Git Commit, Rebase, Conflict Resolution, and Push Workflow
+## Step-by-Step Git Commit, Rebase, Conflict Resolution, and Push Workflow
 
 1. **MANDATORY AND CRITICAL, DO NOT SKIP**: This file contains 10 absolute critical requirements at the top. Make an optimized list for yourself without losing ANY instruction or the intent behind it and tell me you did this, without showing me the list. Use this checklist internally to validate you did everything correct. These are your 10 commandments.
 

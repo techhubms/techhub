@@ -20,11 +20,11 @@ public class RoundupGeneratorServiceTests
     private readonly Mock<IAiCategorizationService> _aiCategorizationService = new();
     private readonly Mock<IContentItemWriteRepository> _writeRepo = new();
 
-    private static readonly DateOnly WeekStart = new(2025, 4, 7);    // Monday
-    private static readonly DateOnly WeekEnd = new(2025, 4, 13);     // Sunday
-    private static readonly string ExpectedSlug = "weekly-ai-and-tech-news-roundup-2025-04-14";
+    private static readonly DateOnly _weekStart = new(2025, 4, 7);    // Monday
+    private static readonly DateOnly _weekEnd = new(2025, 4, 13);     // Sunday
+    private static readonly string _expectedSlug = "weekly-ai-and-tech-news-roundup-2025-04-14";
 
-    private static readonly AppSettings TestAppSettings = new()
+    private static readonly AppSettings _testAppSettings = new()
     {
         BaseUrl = "https://test.example.com",
         Content = new ContentSettings
@@ -72,7 +72,7 @@ public class RoundupGeneratorServiceTests
         }
     };
 
-    private static readonly RoundupGeneratorOptions DefaultOptions = new()
+    private static readonly RoundupGeneratorOptions _defaultOptions = new()
     {
         RunHourUtc = 8,
         MinArticlesPerSection = 10,
@@ -82,8 +82,8 @@ public class RoundupGeneratorServiceTests
 
     private RoundupGeneratorService CreateSut(RoundupGeneratorOptions? opts = null)
     {
-        var options = opts ?? DefaultOptions;
-        var appSettingsOptions = Options.Create(TestAppSettings);
+        var options = opts ?? _defaultOptions;
+        var appSettingsOptions = Options.Create(_testAppSettings);
 
         var aiHelper = new RoundupAiHelper(
             _aiClient.Object,
@@ -140,13 +140,13 @@ public class RoundupGeneratorServiceTests
     {
         // Arrange — mock that the roundup already exists
         _roundupRepo
-            .Setup(r => r.RoundupExistsAsync(ExpectedSlug, It.IsAny<CancellationToken>()))
+            .Setup(r => r.RoundupExistsAsync(_expectedSlug, It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
 
         var sut = CreateSut();
 
         // Act
-        var result = await sut.GenerateAsync(WeekStart, WeekEnd, ct: TestContext.Current.CancellationToken);
+        var result = await sut.GenerateAsync(_weekStart, _weekEnd, ct: TestContext.Current.CancellationToken);
 
         // Assert
         result.Result.Should().Be(RoundupGenerationResult.AlreadyExists);
