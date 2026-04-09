@@ -16,7 +16,7 @@ public class ContentDetailTests : PlaywrightTestBase
 {
     public ContentDetailTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
-    private const string BaseUrl = BlazorHelpers.BaseUrl;
+    private static readonly string BaseUrl = BlazorHelpers.BaseUrl;
 
     // Test with a known roundup URL - more reliable than clicking through
     private const string TestRoundupUrl = "/all/roundups";

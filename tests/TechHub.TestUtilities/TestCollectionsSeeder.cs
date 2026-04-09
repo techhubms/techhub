@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Services;
 

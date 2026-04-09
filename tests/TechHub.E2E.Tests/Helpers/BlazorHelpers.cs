@@ -72,8 +72,8 @@ public static class BlazorHelpers
     /// </summary>
     internal const int BrowserLaunchTimeout = 30_000;
 
-    /// <summary>Base URL for the Web frontend</summary>
-    public const string BaseUrl = "https://localhost:5003";
+    /// <summary>Base URL for the Web frontend. Override with E2E_BASE_URL env var for CI/staging.</summary>
+    public static readonly string BaseUrl = Environment.GetEnvironmentVariable("E2E_BASE_URL") ?? "https://localhost:5003";
 
     // ============================================================================
     // SAFE WaitForFunctionAsync WRAPPERS
@@ -564,10 +564,10 @@ public static class BlazorHelpers
     public static Task GotoRelativeAsync(
         this IPage page,
         string relativeUrl,
-        string baseUrl = "https://localhost:5003",
+        string? baseUrl = null,
         PageGotoOptions? options = null)
     {
-        var fullUrl = $"{baseUrl}{relativeUrl}";
+        var fullUrl = $"{baseUrl ?? BaseUrl}{relativeUrl}";
         return page.GotoAndWaitForBlazorAsync(fullUrl, options);
     }
 

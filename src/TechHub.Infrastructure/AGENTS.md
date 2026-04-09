@@ -21,6 +21,7 @@ TechHub.Infrastructure/
 │   ├── ContentRepositoryBase.cs  # Abstract base for content repos
 │   └── ContentRepository.cs      # Database repository (PostgreSQL)
 ├── Services/                     # Infrastructure services
+│   ├── ContentSyncService.cs     # Markdown → DB sync (hash-based change detection)
 │   ├── FrontMatterParser.cs      # YAML frontmatter parsing
 │   ├── MarkdownService.cs        # Markdown to HTML conversion
 │   └── RssService.cs             # RSS feed generation

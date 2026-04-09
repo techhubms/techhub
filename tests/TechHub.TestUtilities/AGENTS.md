@@ -9,7 +9,8 @@ Shared test infrastructure for all test projects.
 | **Unit Tests** | Test builders (`A.ContentItem`, etc.) | None |
 | **Integration Tests** | `TestCollections/` folder | PostgreSQL (Testcontainers) |
 | **Infrastructure Tests** | `TestCollections/` folder | PostgreSQL (Testcontainers) |
-| **E2E Tests** | Production `collections/` | PostgreSQL (docker-compose) |
+| **E2E Tests (Playwright)** | Real data from local/deployed database | PostgreSQL (local or staging) |
+| **Performance Tests** | Real data (~4000+ items) | PostgreSQL (local, skipped if unavailable) |
 
 ## Test Builders (`A` Pattern)
 
@@ -32,10 +33,6 @@ var collection = A.Collection.WithName("videos").Build();
 - Seeds database from `TestCollections/` folder
 - Usage: `IClassFixture<TechHubIntegrationTestApiFactory>`
 
-### TechHubE2ETestApiFactory
-
-- `Development` environment with real database and production `collections/`
-
 ### DatabaseFixture
 
 - Repository-level integration tests with PostgreSQL Testcontainer
@@ -45,4 +42,4 @@ var collection = A.Collection.WithName("videos").Build();
 ## Configuration
 
 - **Integration tests**: `appsettings.IntegrationTest.json`, content from `tests/TechHub.TestUtilities/TestCollections`
-- **E2E tests**: `appsettings.Development.json`, content from `collections/`
+- **E2E tests**: Playwright browser tests against running servers (local or deployed via `E2E_BASE_URL`)

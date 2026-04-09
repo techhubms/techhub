@@ -8,7 +8,7 @@ using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 
-namespace TechHub.TestUtilities;
+namespace TechHub.Infrastructure.Services;
 
 /// <summary>
 /// Synchronizes content from markdown files to database using hash-based change detection.
@@ -1030,15 +1030,4 @@ public class ContentSyncService : IContentSyncService
         // No index/trigger restoration needed for PostgreSQL
         return Task.CompletedTask;
     }
-}
-
-/// <summary>
-/// Configuration options for content synchronization (test-only).
-/// </summary>
-public class ContentSyncOptions
-{
-    public bool Enabled { get; set; } = true;
-    public bool ForceFullSync { get; set; }
-    public int MaxParallelFiles { get; set; } = 10;
-    public int BulkOperationThreshold { get; set; } = 50;
 }

@@ -13,7 +13,7 @@ using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.TestUtilities;
 
-namespace TechHub.E2E.Tests.Api;
+namespace TechHub.Api.Tests;
 
 /// <summary>
 /// Performance tests for database queries against the live PostgreSQL database.
@@ -29,7 +29,12 @@ namespace TechHub.E2E.Tests.Api;
 /// - Tag cloud queries (GetTagCountsAsync) — most complex GROUP BY + HAVING queries
 /// - Search queries (SearchAsync) — FTS, tag filtering, date ranges, pagination
 /// - Content detail (GetBySlugAsync) — single item lookups
+///
+/// These tests are excluded from regular CI runs.
+/// They should run against staging environments where a fully populated database is available.
+/// To run locally: start PostgreSQL with real data, then run with --filter-trait "Category=Performance"
 /// </summary>
+[Trait("Category", "Performance")]
 public class DatabasePerformanceTests : IDisposable
 {
     private const string PostgresConnectionString =

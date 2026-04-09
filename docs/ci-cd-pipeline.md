@@ -32,6 +32,8 @@ staging application.
 1. The PR-specific Container Apps are deleted
 2. The PR comment is updated to confirm the environment has been removed
 
+**E2E Tests**: After the preview is deployed, Playwright E2E tests run automatically against the preview URL. Performance tests are excluded (they require local database access).
+
 **Key properties of PR preview environments**:
 
 - Reuse staging infrastructure (Container Apps Environment, VNet, PostgreSQL, monitoring)
@@ -68,19 +70,18 @@ This is a single unified pipeline that runs all quality checks first, and only d
 **CI Jobs** (run on every trigger):
 
 1. **Build** - Builds the entire .NET solution
-2. **Unit Tests** - Runs all unit tests (excludes E2E)
+2. **Unit Tests** - Runs all unit tests
 3. **Integration Tests** - Runs API integration tests
-4. **E2E Tests** - Runs end-to-end Playwright tests
-5. **PowerShell Tests** - Runs Pester tests for automation scripts
-6. **Lint** - Checks code formatting and markdown linting
-7. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
-8. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
-9. **Code Coverage** - Generates coverage reports
-10. **Quality Gate** - Validates all checks passed and provides clear summary
+4. **PowerShell Tests** - Runs Pester tests for automation scripts
+5. **Lint** - Checks code formatting and markdown linting
+6. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
+7. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
+8. **Code Coverage** - Generates coverage reports
+9. **Quality Gate** - Validates all checks passed and provides clear summary
 
 **Quality Gates**:
 
-- All tests must pass (unit, integration, E2E, PowerShell)
+- All tests must pass (unit, integration, PowerShell)
 - No linting errors
 - Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
 - Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
@@ -125,7 +126,13 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
    - ARM is idempotent: unchanged resources are not touched
    - Runs smoke tests (health check + homepage)
 
-4. **Deploy to Production** - Full infrastructure + application deployment
+4. **E2E Tests (Staging)** - Playwright browser tests against staging
+   - Runs after staging deployment succeeds
+   - Uses `E2E_BASE_URL=https://staging-tech.hub.ms`
+   - Excludes performance tests (local-only)
+   - Must pass before production deployment proceeds
+
+5. **Deploy to Production** - Full infrastructure + application deployment
    - Uses GitHub environment protection for approval
    - Same flow as staging: single `Deploy-Infrastructure.ps1` call with image tag
    - Deploys same images used in staging (no rebuild)

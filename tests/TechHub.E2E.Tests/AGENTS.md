@@ -1,10 +1,20 @@
 # E2E Tests - Tech Hub
 
-End-to-end tests using Playwright to verify complete user workflows and functionality.
+End-to-end tests using Playwright to verify complete user workflows against running servers (local or deployed).
+
+Also contains database performance tests that run against local PostgreSQL only.
 
 ## Critical Rules
 
 🚫 **NEVER use `Task.Delay()`, `Thread.Sleep()`, or `WaitForTimeoutAsync()` in E2E tests** — see [Wait Pattern Best Practices](#wait-pattern-best-practices).
+
+## Base URL Configuration
+
+The target server is configured via the `E2E_BASE_URL` environment variable:
+
+- **Local development**: defaults to `https://localhost:5003` (start servers with `Run -WithoutTests`)
+- **CI (staging)**: set to `https://staging-tech.hub.ms` — runs after staging deployment
+- **Performance tests**: always run against local PostgreSQL, skipped if no database is available
 
 ## Understanding Timeout Failures
 
@@ -36,7 +46,6 @@ public class MyFeatureTests : PlaywrightTestBase
 
 - `PlaywrightCollectionFixture` shared via **assembly fixture** (xUnit v3) — no `[Collection]` attribute needed
 - Each test gets its own fresh `Page` and `Context` via `InitializeAsync()`/`DisposeAsync()` (return `ValueTask`)
-- API tests use `[Collection("API E2E Tests")]` with `ApiCollectionFixture` (shared `WebApplicationFactory`)
 
 ### Browser Configuration
 

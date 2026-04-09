@@ -1,8 +1,8 @@
-namespace TechHub.TestUtilities;
+namespace TechHub.Core.Interfaces;
 
 /// <summary>
 /// Service for synchronizing markdown files from the filesystem into the database.
-/// Used only in tests for seeding test databases from markdown fixtures.
+/// Used for seeding databases from markdown files (tests, local development, staging).
 /// </summary>
 public interface IContentSyncService
 {

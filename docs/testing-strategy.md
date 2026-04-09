@@ -46,7 +46,7 @@ Tech Hub uses PostgreSQL as the database for all environments, including tests:
 |-----------|----------|-----------|
 | **Integration Tests** | PostgreSQL (Testcontainers) | Production-like, isolated per fixture, auto-cleanup |
 | **Infrastructure Tests** | PostgreSQL (Testcontainers) | Validates queries against real PostgreSQL |
-| **E2E Tests** | PostgreSQL (docker-compose) | Tests production architecture with real data |
+| **E2E Tests** | PostgreSQL (local or deployed environment) | Playwright browser tests against running servers |
 | **Local Development** | PostgreSQL | Persistent data via docker-compose |
 | **Production** | Azure PostgreSQL | Managed, scalable, production-grade |
 
@@ -56,13 +56,15 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 
 ### E2E Tests (End-to-End)
 
-**Goal**: Test critical user journeys through the complete system.
+**Goal**: Test critical user journeys through the complete system via Playwright browser tests.
+
+**Target**: Configurable via `E2E_BASE_URL` environment variable (defaults to `https://localhost:5003`). In CI, runs against the staging deployment (`https://staging-tech.hub.ms`).
 
 **What's Real**:
 
 - Real API server running
 - Real Web server running
-- Real database (via test containers or fixtures)
+- Real database (local PostgreSQL or deployed environment)
 - Real dependencies (all services, repositories)
 - Real browser interactions (Playwright)
 
@@ -143,7 +145,7 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 |-------|-----------|----------|----------------------|--------------------------------|
 | **Integration** | xUnit v3 + WebApplicationFactory | Api | PostgreSQL (Testcontainers) | Real (we control it) |
 | **Unit** | xUnit v3 + Stubs | Core, Infrastructure | NEVER | NEVER |
-| **E2E** | Playwright .NET + HttpClient | E2E | Real | Real |
+| **E2E** | Playwright .NET | E2E | Real (local or deployed) | Real |
 | **Component** | bUnit | Web | Stub/Mock | Stub/Mock |
 | **PowerShell** | Pester | powershell/ | Mock | Real (test files) |
 

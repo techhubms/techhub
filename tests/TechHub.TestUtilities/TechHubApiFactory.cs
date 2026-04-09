@@ -129,24 +129,3 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
         }
     }
 }
-
-/// <summary>
-/// Factory for E2E tests.
-/// - Uses Development environment (production-like configuration)
-/// - Uses workspace root for content files
-/// - Uses real IContentRepository with actual markdown files
-/// - Provides full integration with file system
-/// </summary>
-public class TechHubE2ETestApiFactory : TechHubApiFactoryBase
-{
-    protected override void ConfigureTestSpecificServices(IWebHostBuilder builder)
-    {
-        // Use Development environment for E2E tests (closest to production)
-        // Default content root (API project directory) is correct - no override needed
-        // ASP.NET Core automatically loads appsettings.json and appsettings.Development.json
-        // Collections path (../../collections) in appsettings.json resolves correctly
-        builder.UseEnvironment("Development");
-
-        // E2E tests use real ContentRepository (no mocking)
-    }
-}

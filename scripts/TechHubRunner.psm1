@@ -222,6 +222,7 @@ function Run {
 
     .PARAMETER TestProject
         Scope tests to a specific project (e.g., "TechHub.Web.Tests", "TechHub.Api.Tests", "E2E.Tests", "powershell").
+        E2E tests run Playwright browser tests against local servers.
         Can be combined with -TestName to further filter tests.
 
     .PARAMETER TestName
@@ -262,7 +263,7 @@ function Run {
 
     .EXAMPLE
         Run -TestProject TechHub.E2E.Tests -TestName Navigation
-        Build, run E2E tests matching "Navigation" pattern, then keep servers running.
+        Build, run Playwright tests matching "Navigation" pattern against local servers.
 
     .EXAMPLE
         Run -Environment Production -WithoutTests
@@ -314,6 +315,7 @@ function Run {
         Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor White
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
+        Write-Host "                 E2E tests = Playwright browser tests against local servers" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
         Write-Host "  -Docker        Run ALL services via docker compose (production-like containers)`n" -ForegroundColor White
         
@@ -324,7 +326,7 @@ function Run {
         Write-Host "  Run -TestProject powershell          Run only PowerShell tests" -ForegroundColor Gray
         Write-Host "  Run -TestProject Web.Tests           Run only Web tests" -ForegroundColor Gray
         Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard'" -ForegroundColor Gray
-        Write-Host "  Run -TestProject E2E -TestName Nav   Run E2E navigation tests matching 'Nav'" -ForegroundColor Gray
+        Write-Host "  Run -TestProject E2E -TestName Nav   Run Playwright tests matching 'Nav'" -ForegroundColor Gray
         Write-Host "  Run -Docker                          Build + tests + servers via Docker containers (production-like)`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
@@ -1142,13 +1144,15 @@ function Run {
     }
 
     # Run E2E tests (assumes servers are already running)
+    # Phase 1: Performance tests (validates API responsiveness, requires real data)
+    # Phase 2: Playwright browser tests (validates UI against running servers)
     function Invoke-E2ETests {
         param(
             [string]$TestName,
             [switch]$UseDocker
         )
         
-        Write-Step "Running E2E tests"
+        Write-Step "Running E2E tests (Playwright browser tests against local servers)"
         Write-Host ""
             
         # Parallelism: testconfig.json = conservative for CI (1x CPU threads)
@@ -1163,12 +1167,13 @@ function Run {
         
         Write-Host ""
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
-        Write-Host "  Phase 1: API Performance Tests (warmup + validation)" -ForegroundColor Cyan
+        Write-Host "  Phase 1: Database Performance Tests (warmup + validation)" -ForegroundColor Cyan
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host ""
         
-        # Run ALL performance tests - validates API endpoints are responsive and within thresholds
-        # This also serves as warmup before the full E2E suite runs
+        # Run performance tests - validates database queries within thresholds
+        # Also serves as warmup before the full Playwright suite runs
+        # These tests require a populated database (skipped if no data available)
         $apiPerfTestArgs = $configArgs + @(
             "--output", "Detailed",
             "--show-live-output", "on",
@@ -1183,10 +1188,10 @@ function Run {
             Write-Host ""
             Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ API PERFORMANCE TESTS FAILED                              ║" -ForegroundColor Red
+            Write-Host "║  ✗ PERFORMANCE TESTS FAILED                                  ║" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  API performance degradation detected or endpoints failing.  ║" -ForegroundColor Red
-            Write-Host "║  Fix API issues before running web tests.                    ║" -ForegroundColor Red
+            Write-Host "║  Database performance degradation detected.                  ║" -ForegroundColor Red
+            Write-Host "║  Fix performance issues before running Playwright tests.     ║" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
@@ -1196,12 +1201,12 @@ function Run {
         Write-Host ""
         Write-Host "════════════════════════════════════════" -ForegroundColor Green
         Write-Host ""
-        Write-Success "API Performance tests passed - APIs warmed up and validated"
+        Write-Success "Performance tests passed"
         Write-Host ""
         
-        # Phase 2: Run remaining E2E tests (API + Web) - exclude performance tests already run in Phase 1
+        # Phase 2: Playwright browser tests against running servers
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
-        Write-Host "  Phase 2: All E2E Tests (API + Web)" -ForegroundColor Cyan
+        Write-Host "  Phase 2: Playwright Web E2E Tests" -ForegroundColor Cyan
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
         Write-Host ""
             
@@ -1217,7 +1222,7 @@ function Run {
             $e2eTestArgs += "*$TestName*"
         }
             
-        # Run E2E tests
+        # Run Playwright tests
         $e2eSuccess = Invoke-ExternalCommand $e2eBinaryPath $e2eTestArgs
             
         if (-not $e2eSuccess) {
@@ -1226,7 +1231,7 @@ function Run {
             Write-Host ""
             Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ E2E TESTS FAILED                                          ║" -ForegroundColor Red
+            Write-Host "║  ✗ WEB E2E TESTS FAILED                                      ║" -ForegroundColor Red
             Write-Host "║                                                              ║" -ForegroundColor Red
             Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
             Write-Host ""
@@ -1433,6 +1438,7 @@ function Run {
                 }
                 else {
                     Write-Error "E2E tests failed. Servers are still running for debugging."
+                    Write-Error "Tip: Use 'Run -TestProject E2E -TestName <pattern>' to re-run specific tests."
                 }
                 Write-Host ""
             }
