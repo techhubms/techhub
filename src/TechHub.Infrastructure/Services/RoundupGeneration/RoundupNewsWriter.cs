@@ -124,8 +124,8 @@ internal sealed class RoundupNewsWriter
                     $"KEY_TOPICS: {string.Join(", ", article.KeyTopics)}"));
             }
 
-var link = string.Create(CultureInfo.InvariantCulture,
-                $"[{article.Title}]({article.ExternalUrl})");
+            var link = string.Create(CultureInfo.InvariantCulture,
+                            $"[{article.Title}]({article.ExternalUrl})");
 
             sb.AppendLine(string.Create(CultureInfo.InvariantCulture, $"LINK: {link}"));
             sb.AppendLine();
