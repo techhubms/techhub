@@ -1,2 +1,9 @@
-dotnet format --verify-no-changes TechHub.slnx --severity error
-npx markdownlint-cli2 "**/*.md" "#node_modules" "#.tmp"
+cs_files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.cs')
+if [ -n "$cs_files" ]; then
+  dotnet format --verify-no-changes TechHub.slnx --severity error --include $cs_files
+fi
+
+md_files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md')
+if [ -n "$md_files" ]; then
+  npx markdownlint-cli2 $md_files
+fi
