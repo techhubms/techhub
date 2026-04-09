@@ -189,13 +189,13 @@ public class TagNormalizerTests
     public void NormalizeTags_StripsMultipleParenthesizedGroups()
     {
         // Arrange
-        var tags = new[] { "Something (foo) (bar)" };
+        var tags = new[] { "Grafana (foo) (bar)" };
 
         // Act
         var result = TagNormalizer.NormalizeTags(tags);
 
-        // Assert — both parenthesized groups removed, left with "Something"
-        result.Should().ContainSingle(t => t == "Something");
+        // Assert — both parenthesized groups removed, left with "Grafana"
+        result.Should().ContainSingle(t => t == "Grafana");
     }
 
     [Fact]

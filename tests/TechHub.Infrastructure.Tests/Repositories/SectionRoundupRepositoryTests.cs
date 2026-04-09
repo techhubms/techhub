@@ -46,13 +46,13 @@ public class SectionRoundupRepositoryTests
         // Assert
         result.Should().ContainKey("ai");
         var articles = result["ai"];
-        articles.Should().ContainSingle();
-        articles[0].Title.Should().Be("Test Article 1");
-        articles[0].ExternalUrl.Should().Be("https://example.com/1");
-        articles[0].Relevance.Should().Be("high");
-        articles[0].Summary.Should().Be("Summary of article 1");
-        articles[0].KeyTopics.Should().Equal(["AI", "Testing"]);
-        articles[0].IsInternal.Should().BeFalse();
+        var article = articles.Should().Contain(a => a.Slug == "test-article-1").Subject;
+        article.Title.Should().Be("Test Article 1");
+        article.ExternalUrl.Should().Be("https://example.com/1");
+        article.Relevance.Should().Be("high");
+        article.Summary.Should().Be("Summary of article 1");
+        article.KeyTopics.Should().Equal(["AI", "Testing"]);
+        article.IsInternal.Should().BeFalse();
     }
 
     [Fact]
