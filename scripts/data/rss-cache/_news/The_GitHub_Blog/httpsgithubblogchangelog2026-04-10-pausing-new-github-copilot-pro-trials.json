@@ -1,0 +1,17 @@
+{
+  "Description": "As GitHub Copilot continues to grow, we’ve seen a significant rise in abuse of our free trial system. To protect the experience and integrity of the platform for legitimate developers,…\n\nThe post [Pausing new GitHub Copilot Pro trials](https://github.blog/changelog/2026-04-10-pausing-new-github-copilot-pro-trials) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-04-10-pausing-new-github-copilot-pro-trials",
+  "Tags": [
+    "copilot",
+    "Retired"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2026-04-10T20:25:32+00:00",
+  "EnhancedContent": "As GitHub Copilot continues to grow, we’ve seen a significant rise in abuse of our free trial system. To protect the experience and integrity of the platform for legitimate developers, we are pausing new GitHub Copilot Pro trials while we investigate and strengthen our protection mechanisms.\n\n## What this means\n\n- New users cannot start a free Copilot Pro trial at this time.\n- Existing trials are not affected.\n- Copilot Free and paid Copilot Pro subscriptions remain fully available.\n\n## What’s next\n\nThis is a temporary pause. We are actively working on improved safeguards to prevent misuse of the trial system, and we will reopen trials once those protections are in place. We’ll share an update as soon as new trials are available again.\n\nDevelopers who want access to Copilot now can subscribe to Copilot Free or any of our paid Copilot subscriptions directly.",
+  "ProcessedDate": "2026-04-10 21:16:04",
+  "Author": "Allison",
+  "Title": "Pausing new GitHub Copilot Pro trials",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news"
+}
