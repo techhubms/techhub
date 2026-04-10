@@ -1,0 +1,19 @@
+{
+  "Tags": [
+    "account management",
+    "copilot",
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "ProcessedDate": "2026-04-10 22:16:30",
+  "EnhancedContent": "Note: We’ve recently renamed Copilot coding agent to [Copilot cloud agent](https://github.blog/changelog/2026-04-01-research-plan-and-code-with-copilot-cloud-agent/). We will be updating our data schema for all existing coding agent fields to reflect this change in the coming weeks, and new fields from now forward will reflect the name change.\n\nFollowing the launch of [cloud agent active user identification](https://github.blog/changelog/2026-03-25-copilot-usage-metrics-now-identify-active-copilot-coding-agent-users/), enterprise and organization usage reports in the [Copilot usage metrics API](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10) now include aggregated active user counts for the Copilot coding agent.\n\nThree new fields are available in both 1-day and 28-day reports at the enterprise and organization levels:\n\n| Field | Description | | --- | --- | | `daily_active_copilot_cloud_agent_users` | Number of unique users who used Copilot cloud agent on that day | | `weekly_active_copilot_cloud_agent_users` | Number of unique users who used Copilot cloud agent in the trailing 7-day window | | `monthly_active_copilot_cloud_agent_users` | Number of unique users who used Copilot cloud agent in the trailing 28-day window |\n\nThese fields are nullable — they return a count (including zero) when data is available, or `null` when no Copilot cloud agent data exists for that period.\n\n### Why this matters\n\n- **Track adoption at a glance.** See how many users are actively using Copilot cloud agent across your enterprise or organization without aggregating user-level data yourself.\n- **Compare engagement across time windows.** Daily, weekly, and monthly counts let you spot adoption trends and measure the impact of rollout efforts.\n- **Complete the picture.** These counts sit alongside existing metrics like `monthly_active_agent_users`\n(IDE agent mode) and the user-level `used_copilot_coding_agent` flag, giving you a full view of Copilot adoption across surfaces.\n\nVisit our [API documentation](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-usage-metrics?apiVersion=2026-03-10) to learn more.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).",
+  "PubDate": "2026-04-10T21:42:47+00:00",
+  "Title": "Copilot usage metrics now aggregate Copilot cloud agent active user counts",
+  "Description": "Note: We’ve recently renamed Copilot coding agent to Copilot cloud agent. We will be updating our data schema for all existing coding agent fields to reflect this change in the…\n\nThe post [Copilot usage metrics now aggregate Copilot cloud agent active user counts](https://github.blog/changelog/2026-04-10-copilot-usage-metrics-now-aggregate-copilot-cloud-agent-active-user-counts) appeared first on [The GitHub Blog](https://github.blog).",
+  "Link": "https://github.blog/changelog/2026-04-10-copilot-usage-metrics-now-aggregate-copilot-cloud-agent-active-user-counts"
+}
