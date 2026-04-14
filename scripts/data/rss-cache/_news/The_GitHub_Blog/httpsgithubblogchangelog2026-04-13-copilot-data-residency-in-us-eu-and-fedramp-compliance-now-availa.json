@@ -1,0 +1,18 @@
+{
+  "Tags": [
+    "copilot",
+    "platform governance",
+    "Release"
+  ],
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "OutputDir": "_news",
+  "EnhancedContent": "GitHub Copilot now supports data residency for US and EU regions, ensuring all inference processing and associated data stay within your designated geography. For US government customers, all model hosts and infrastructure also meet FedRAMP Moderate authorization standards.\n\n## What’s included\n\nAll [generally available Copilot features](https://docs.github.com/copilot/get-started/features) are supported: agent mode, inline suggestions, chat, Copilot cloud agent, code review, pull request summaries, and Copilot CLI. Every feature uses only data-resident, compliance-certified model endpoints within your designated region.\n\n## Model availability\n\nA broad set of models is available at launch across both OpenAI and Anthropic, including GPT-5.4, Claude Sonnet 4.6, Claude Opus 4.6, and more. The full model-by-region matrix is available in [our documentation for data residency](https://docs.github.com/enterprise-cloud@latest/admin/data-residency/github-copilot-with-data-residency) and [our FedRAMP docs](https://docs.github.com/copilot/concepts/fedramp-models). Gemini models are not yet supported, as GCP does not currently offer data-resident inference endpoints. We’ll bring them in once they become available. Recently released models may take additional time to appear in data-resident regions.\n\n## Pricing\n\nData-resident and FedRAMP requests carry a **10% increase in the model multiplier**, reflecting provider costs for regional and compliance-certified endpoints. For example, a model that normally costs 1 premium request will cost 1.1 premium requests under data residency.\n\n## Getting started\n\nEnterprise and organization admins can enable data residency and FedRAMP policies from their Copilot settings, to restrict their enterprise or organization to models that are data-resident or FedRAMP compliant. The policies are off by default, so admins will need to explicitly opt-in to the model restrictions and understand the pricing implications.\n\nUS and EU regions are supported for this launch. Additional Proxima regions (e.g., Japan and Australia) are on the roadmap for later in 2026.",
+  "Link": "https://github.blog/changelog/2026-04-13-copilot-data-residency-in-us-eu-and-fedramp-compliance-now-available",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-04-14 00:47:17",
+  "Title": "Copilot data residency in US + EU and FedRAMP compliance now available",
+  "Description": "GitHub Copilot now supports data residency for US and EU regions, ensuring all inference processing and associated data stay within your designated geography. For US government customers, all model hosts…\n\nThe post [Copilot data residency in US + EU and FedRAMP compliance now available](https://github.blog/changelog/2026-04-13-copilot-data-residency-in-us-eu-and-fedramp-compliance-now-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "PubDate": "2026-04-13T23:03:01+00:00",
+  "Author": "Allison"
+}
