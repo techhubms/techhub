@@ -1,0 +1,22 @@
+{
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "PostgreSQL Like a Pro: Experience performance under pressure with PostgreSQL on Azure",
+  "PubDate": "2026-04-14T16:01:20+00:00",
+  "EnhancedContent": null,
+  "Description": "Learn how Azure Database for PostgreSQL helps you build resilient, high-performance applications. Gauri Kasar walks through real deployment options including high availability, read replicas, backup and restore, and elastic clusters for horizontal scale.\n\nAlso see how AMD powered SKUs can deliver better price performance, and how Azure handles failover, recovery, and scaling so your apps stay online when it matters most.\n\n0:00 Introduction 0:20 PostgreSQL on Azure delivers performance and resilience 1:17 Demo starts with deploying a server 1:54 High availability configurations 3:09 Boost read performance 3:50 Backup and restore 4:04 How to create an elastic cluster 4:40 Scale out with elastic clusters 5:19 Demo recap 5:29 Intro to Azure HorizonDB 5:48 Wrap Up\n\n📺 Watch the series: https://www.aka.ms/PostgreLikeAPro 💻 Get started: https://www.aka.ms/Postgres-performance",
+  "Author": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=jZHWptNT71I",
+  "ProcessedDate": "2026-04-14 16:32:23",
+  "OutputDir": "_videos"
+}

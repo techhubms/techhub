@@ -1,0 +1,22 @@
+{
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Trailer: PostgreSQL Like a Pro",
+  "PubDate": "2026-04-14T16:01:18+00:00",
+  "EnhancedContent": null,
+  "Description": "Whether you're building AI agents or managing a mission-critical migration, the PostgreSQL Like a Pro video series is a great place to start. It shows how PostgreSQL on Azure, powered by AMD technologies, simplifies data projects across real-world scenarios.\n\nEach episode focuses on practical concepts, real‑world use cases, and architectural decisions.\n\nHere's what you’ll learn from the pros:\n- How to build AI agents that work\n- How to migrate without the manual grind\n- How to optimize PostgreSQL performance\n- How to scale to meet the most demanding workloads\n\n📺 Watch the series: https://www.aka.ms/PostgreLikeAPro 📖 https://www.aka.ms/postgreslikeapro-blog",
+  "Author": "Microsoft Developer",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Link": "https://www.youtube.com/watch?v=p8FGGlgQCMo",
+  "ProcessedDate": "2026-04-14 16:32:23",
+  "OutputDir": "_videos"
+}

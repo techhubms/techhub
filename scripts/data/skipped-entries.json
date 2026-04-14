@@ -15004,5 +15004,11 @@
     "timestamp": "2026-04-14 07:42:22 +00:00",
     "canonical_url": "https://techcommunity.microsoft.com/t5/microsoft-developer-community/from-ci-cd-to-continuous-ai-the-future-of-github-automation/ba-p/4507378",
     "collection": "community"
+  },
+  {
+    "reason": "No categories found: Excluded due to the Generic Exclusion Rule: Sales Pitches. The provided text is primarily promotional for a video series about “PostgreSQL on Azure, powered by AMD technologies” and directs readers to watch/read via links, but does not include substantive technical implementation details (no configurations, architecture specifics, code, or concrete steps). With no qualifying technical depth to apply category inclusion rules, no categories are assigned.",
+    "timestamp": "2026-04-14 16:37:37 +00:00",
+    "canonical_url": "https://www.youtube.com/watch?v=p8FGGlgQCMo",
+    "collection": "videos"
   }
 ]

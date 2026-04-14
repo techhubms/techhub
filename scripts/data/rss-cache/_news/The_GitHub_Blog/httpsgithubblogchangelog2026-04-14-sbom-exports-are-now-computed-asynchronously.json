@@ -1,0 +1,17 @@
+{
+  "Description": "Software Bill of Materials (SBOM) exports from repository pages and new API endpoints are now asynchronous operations. Previously, navigating to a repository’s dependency graph page and clicking the Export SBOM…\n\nThe post [SBOM exports are now computed asynchronously](https://github.blog/changelog/2026-04-14-sbom-exports-are-now-computed-asynchronously) appeared first on [The GitHub Blog](https://github.blog).",
+  "Author": "Allison",
+  "EnhancedContent": "Software Bill of Materials (SBOM) exports from repository pages and new API endpoints are now asynchronous operations. Previously, navigating to a repository’s dependency graph page and clicking the **Export SBOM** button, or requesting an SBOM from the `/repos/{owner}/{repo}/dependency-graph/sbom` REST API had a hard-coded timeout value of ten seconds. This worked for most cases, but large repositories with complex dependency trees could often take longer to process. Further, multiple requests would spawn multiple independent back-end workers, with no guarantee that any would complete.\n\n## Download SBOMs in your browser\n\nNow, there’s a new web experience which polls for job completion and new API endpoints to match. These work asynchronously, eliminating timeouts. To use the new UI, navigate to a repository’s **Insights** tab, click **Dependency Graph**, then click **Export SBOM**. Once the file is ready, you’ll be able to download it from this page.\n\n## API access to SBOMs\n\nFor API access, there are two new endpoints which work together to provide asynchronous access to SBOMs:\n\n- `GET /repos/{owner}/{repo}/dependency-graph/sbom/generate-report`\n: This returns a URL containing a unique identifier, `{sbom-uuid}` , indicating the service has started working on the request.\n- `GET /repos/{owner}/{repo}/dependency-graph/sbom/fetch-report/{sbom-uuid}`\n: This returns a 201 until the report is ready for download, at which point it will perform a 302 redirect to the actual contents of the SBOM.\n\n## Limitations and caveats\n\n- Similar to the previous behavior, the SBOM export represents the state of the repository at the time you initiate the request. SBOMs are not available for refs other than HEAD.\n- Anonymous users are restricted to one concurrent SBOM request per repository. Logged-in users are not subject to this restriction.\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/categories/announcements).\n\n![social](https://github.com/user-attachments/assets/39e105e0-5405-4363-a8bf-9b72a3772279)",
+  "ProcessedDate": "2026-04-14 16:31:39",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog",
+  "PubDate": "2026-04-14T16:00:14+00:00",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Link": "https://github.blog/changelog/2026-04-14-sbom-exports-are-now-computed-asynchronously",
+  "Title": "SBOM exports are now computed asynchronously",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Tags": [
+    "Improvement",
+    "supply chain security"
+  ]
+}
