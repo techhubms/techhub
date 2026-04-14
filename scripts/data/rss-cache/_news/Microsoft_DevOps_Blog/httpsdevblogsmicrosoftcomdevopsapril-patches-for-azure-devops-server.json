@@ -1,0 +1,17 @@
+{
+  "PubDate": "2026-04-14T19:18:22+00:00",
+  "Link": "https://devblogs.microsoft.com/devops/april-patches-for-azure-devops-server/",
+  "Title": "April Patches for Azure DevOps Server",
+  "ProcessedDate": "2026-04-14 19:35:04",
+  "EnhancedContent": "We are releasing patches for our self‑hosted product, [Azure DevOps Server](https://azure.microsoft.com/services/devops/server/). We strongly recommend that all customers remain on the latest, most secure version to ensure optimal protection and reliability. The latest release of Azure DevOps Server is available from the [download page](https://learn.microsoft.com/azure/devops/server/download/azuredevopsserver?view=azure-devops).\n\nThis patch applies to the most recent version, Azure DevOps Server, and includes the following updates:\n\n- Fixed an issue where completing a pull request could fail due to a null reference exception during work item auto-completion.\n- Improved validation during sign out to prevent potential malicious redirects.\n- Fixed creating PAT connection to GitHub Enterprise Server.\n\n⬇️**Azure DevOps Server Patch Download**\n\n| Version | Patch Download | Release Notes | | --- | --- | --- | | Azure DevOps Server | [Download Patch 3](https://aka.ms/devopsserverpatch3) | [Release notes](https://learn.microsoft.com/azure/devops/server/release-notes/azuredevopsserver?view=azure-devops#azure-devops-server-patch-3-release-date-april-14-2026) |\n\n✅**Verifying Installation**\n\nTo verify that the patch is installed, run the following command on the Azure DevOps Server machine using the patch installer you downloaded:\n\n``` <patch-installer>.exe CheckInstall\n\n```\n\nReplace `<patch-installer>` with the name of the patch file you downloaded. The command output will indicate whether the patch is installed.",
+  "Author": "Gloridel Morales",
+  "Description": "We are releasing patches for our self‑hosted product, Azure DevOps Server. We strongly recommend that all customers remain on the latest, most secure version to ensure optimal protection and reliability. The latest release of Azure DevOps Server is available from the download page. This patch applies to the most recent version, Azure DevOps Server, and […]\n\nThe post [April Patches for Azure DevOps Server](https://devblogs.microsoft.com/devops/april-patches-for-azure-devops-server/) appeared first on [Azure DevOps Blog](https://devblogs.microsoft.com/devops).",
+  "OutputDir": "_news",
+  "FeedName": "Microsoft DevOps Blog",
+  "Tags": [
+    "Azure DevOps Server",
+    "Patches"
+  ],
+  "FeedLevelAuthor": "Azure DevOps Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/devops/feed/"
+}
