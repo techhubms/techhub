@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": "You can now selectively enable GitHub Copilot cloud agent (CCA) access on a per-organization basis. Previously, enterprise admins and AI managers could only enable the agent everywhere, disable it everywhere, or let each organization decide. With this release, you can selectively enable CCA for specific organizations, individually or by using [organization custom properties](https://docs.github.com/enterprise-cloud@latest/admin/managing-accounts-and-repositories/managing-organizations-in-your-enterprise/managing-custom-properties-for-organizations). You can manage this policy setting using the new API endpoints or directly in the AI Controls page.\n\nPlease note that using custom properties to enable CCA is evaluated once at the time of configuration. Organizations will not be automatically enabled or disabled for CCA if the custom property is added, removed, or modified later.\n\nThis new capability provides the flexibility to pilot CCA with select teams, progressively expand access, and manage adoption at your own pace.\n\n### New API endpoints to manage CCA\n\nYou can use three new API endpoints to manage CCA:\n\n- **`PUT`**: Set the policy state: decided by organization, enabled everywhere, disabled everywhere, or enabled for selected organizations.\n- **`POST`**: Add organizations to the CCA enabled list.\n- **`DELETE`**: Disable CCA for organizations.\n\nTo learn more, visit our [REST API documentation](https://docs.github.com/enterprise-cloud@latest/rest/copilot/copilot-coding-agent-management?apiVersion=2026-03-10).\n\n### Manage CCA for organizations from the AI controls page\n\nIn the AI Controls settings page, you can now create policies that selectively enable CCA for a subset of your organizations. No action is required to preserve your current policy.\n\nYou’ll find the new policy management on the AI Controls page under “Agent” → “Copilot Cloud Agent” → “Enabled for selected organizations”.\n\nTo learn more, visit [our documentation about managing CCA in an enterprise](https://docs.github.com/enterprise-cloud@latest/copilot/how-tos/administer-copilot/manage-for-enterprise/manage-agents/manage-copilot-cloud-agent).\n\nJoin the discussion within [GitHub Community](https://github.com/orgs/community/discussions/178247).",
+  "PubDate": "2026-04-15T18:30:28+00:00",
+  "Author": "Allison",
+  "Title": "Enable Copilot cloud agent via custom properties",
+  "FeedName": "The GitHub Blog",
+  "ProcessedDate": "2026-04-15 19:35:34",
+  "Link": "https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties",
+  "Tags": [
+    "copilot",
+    "enterprise management tools",
+    "Improvement"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "OutputDir": "_news",
+  "Description": "You can now selectively enable GitHub Copilot cloud agent (CCA) access on a per-organization basis. Previously, enterprise admins and AI managers could only enable the agent everywhere, disable it everywhere,…\n\nThe post [Enable Copilot cloud agent via custom properties](https://github.blog/changelog/2026-04-15-enable-copilot-cloud-agent-via-custom-properties) appeared first on [The GitHub Blog](https://github.blog)."
+}
