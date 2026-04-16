@@ -1,0 +1,17 @@
+{
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Title": "Claude Opus 4.7 is generally available",
+  "ProcessedDate": "2026-04-16 15:38:38",
+  "EnhancedContent": "**Claude Opus 4.7**, Anthropic’s latest Opus model, is now rolling out on GitHub Copilot. In our early testing, Opus 4.7 delivers stronger multi-step task performance and more reliable agentic execution, building on the coding strategy strengths of its predecessor. It also shows meaningful improvement in long-horizon reasoning and complex, tool-dependent workflows.\n\nAs part of our efforts to improve service reliability, we are streamlining our model offerings. Over the coming weeks, Opus 4.7 will replace Opus 4.5 and Opus 4.6 in the model picker for Copilot Pro+. We’ve seen strong improvements across our benchmarks, and we’re committed to providing individual users with state-of-the-art models while ensuring a fast, reliable Copilot experience.\n\nThis model is launching with a **7.5× premium request multiplier** as part of promotional pricing until April 30th.\n\n### Availability in GitHub Copilot\n\nClaude Opus 4.7 will be available to **Copilot Pro+**, **Business**, and **Enterprise** users.\n\nYou’ll be able to select the model in the model picker in:\n\n- Visual Studio Code\n- Visual Studio\n- Copilot CLI\n- GitHub Copilot Coding Agent\n- github.com\n- GitHub Mobile IOS and Android\n- JetBrains\n- Xcode\n- Eclipse\n\nRollout will be gradual. Check back soon if you don’t see it yet.\n\n### Enabling access\n\nCopilot Enterprise and Copilot Business plan administrators must enable the Claude Opus 4.7 policy in Copilot settings.\n\n### Learn more\n\nTo explore all models available in GitHub Copilot, see our [documentation on models](https://docs.github.com/copilot/reference/ai-models/supported-models) and get started with Copilot.\n\n### Share your feedback\n\nJoin the [GitHub Community](https://github.com/orgs/community/discussions/categories/copilot-conversations) to share your feedback.",
+  "Tags": [
+    "copilot",
+    "Release"
+  ],
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "Author": "Allison",
+  "Link": "https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available",
+  "PubDate": "2026-04-16T14:02:31+00:00",
+  "Description": "Claude Opus 4.7, Anthropic’s latest Opus model, is now rolling out on GitHub Copilot. In our early testing, Opus 4.7 delivers stronger multi-step task performance and more reliable agentic execution,…\n\nThe post [Claude Opus 4.7 is generally available](https://github.blog/changelog/2026-04-16-claude-opus-4-7-is-generally-available) appeared first on [The GitHub Blog](https://github.blog).",
+  "OutputDir": "_news",
+  "FeedName": "The GitHub Blog"
+}
