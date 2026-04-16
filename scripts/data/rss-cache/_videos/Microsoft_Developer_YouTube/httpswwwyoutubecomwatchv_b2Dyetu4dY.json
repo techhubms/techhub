@@ -1,0 +1,22 @@
+{
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Author": "Microsoft Developer",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "Title": "Get Started with Foundry Toolkit for VS Code",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "ProcessedDate": "2026-04-16 16:40:26",
+  "EnhancedContent": null,
+  "PubDate": "2026-04-16T16:01:03+00:00",
+  "Link": "https://www.youtube.com/watch?v=_b2Dyetu4dY",
+  "Description": "Whether you’re exploring your first model, shipping a production agent, or squeezing performance from edge hardware, Microsoft Foundry Toolkit for VS Code meets you where you are.\n\nTo get started, visit aka.ms/foundrytk.",
+  "FeedName": "Microsoft Developer YouTube",
+  "OutputDir": "_videos"
+}
