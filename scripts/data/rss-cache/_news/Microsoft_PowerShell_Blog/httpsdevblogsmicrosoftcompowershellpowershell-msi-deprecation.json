@@ -1,0 +1,17 @@
+{
+  "Tags": [
+    "PowerShell",
+    "PowerShell Release"
+  ],
+  "OutputDir": "_news",
+  "PubDate": "2026-04-10T14:46:23+00:00",
+  "Author": "Jason Helmick",
+  "FeedLevelAuthor": "PowerShell Team",
+  "EnhancedContent": "Beginning with PowerShell 7.7-preview.1 (April 2026), the MSIX package will be the primary installation method for PowerShell on Windows. We will no longer ship the MSI installer package for new PowerShell releases.\n\nFor existing releases, including PowerShell 7.6, we will continue to provide MSI packages. However, MSI isn’t planned for future releases, including PowerShell 7.7 GA and beyond.\n\n## Why we’re making this change\n\nMSIX provides a modern installation and servicing model and is supported by Windows deployment tools. It uses a declarative model that’s more predictable and reliable than MSI, which relies on custom actions and scripts that can lead to inconsistent behavior. MSIX supports built-in update mechanisms with differential updates. Microsoft is investing in improving MSIX.\n\nMSI is a legacy technology. Servicing MSI installations requires external tooling and often results in full reinstalls. MSI doesn’t meet modern accessibility requirements, particularly for screen reader scenarios. To be accessible, MSI must present predictable tab stops and accurate announcements for screen readers, which it doesn’t. Accessibility is a core requirement for PowerShell.\n\nThis decision isn’t *just* about modernizing packaging for its own sake. It’s about ensuring that PowerShell installations are modern and accessible for all users, now and in the future.\n\n## Looking forward\n\nOur goal is to provide a fully accessible, reliable, and enterprise-ready installation experience. At this time, MSIX doesn’t support all use case scenarios that MSI enabled, such as remoting and execution by system-level services (like Task Scheduler). We recognize this gap and are actively working to address it.\n\nAs part of this work, we’re investing in:\n\n- Improving MSIX support for system-level and enterprise deployment scenarios\n- Ensuring accessibility requirements are fully met across all installation paths\n- Providing clearer guidance and tooling for deployment at scale\n\nWe will continue to share updates as this work progresses.\n\n## Closing\n\nWe understand this change may require adjustments, especially in environments that rely heavily on MSI-based deployment. We appreciate your patience as we make this transition.\n\nOur focus is to ensure PowerShell remains accessible, predictable, and practical for all users.\n\n— The PowerShell Team",
+  "Link": "https://devblogs.microsoft.com/powershell/powershell-msi-deprecation/",
+  "Title": "PowerShell MSI package deprecation and preview updates",
+  "FeedName": "Microsoft PowerShell Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/powershell/feed/",
+  "ProcessedDate": "2026-04-10 15:22:59",
+  "Description": "This post announces the deprecation of MSI packaging beginning with PowerShell 7.7.\n\nThe post [PowerShell MSI package deprecation and preview updates](https://devblogs.microsoft.com/powershell/powershell-msi-deprecation/) appeared first on [PowerShell Team](https://devblogs.microsoft.com/powershell)."
+}

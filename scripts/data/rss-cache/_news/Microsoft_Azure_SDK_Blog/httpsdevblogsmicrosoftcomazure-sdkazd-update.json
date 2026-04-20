@@ -1,0 +1,18 @@
+{
+  "PubDate": "2026-04-14T19:24:08+00:00",
+  "Link": "https://devblogs.microsoft.com/azure-sdk/azd-update/",
+  "Title": "Stop juggling package managers—just run `azd update`",
+  "ProcessedDate": "2026-04-14 19:35:05",
+  "EnhancedContent": "*Updating `azd` used to mean remembering which package manager you installed it with. Now one command handles it on every platform.*\n\n## What’s new?\n\nThe `azd update` command updates the Azure Developer CLI (azd) to the latest version. It works on Windows, macOS, and Linux regardless of how you originally installed `azd` —winget, Chocolatey, Homebrew, or install script. No more juggling platform-specific upgrade commands.\n\n## Why it matters\n\nEvery time the “A new version of azd is available” prompt appeared, it was easy to think “I’ll do that later” and forget. Then you’d hit a bug that was already fixed. When you can’t remember whether you used winget, Homebrew, or a curl script, even a simple upgrade becomes a detour. `azd update` removes that friction so you stay current with one command.\n\n## How to use it\n\nTo update to the latest stable release, run:\n\n```bash azd update ```\n\nTo switch to the daily insiders build for early access to new features, use the `--channel` flag:\n\n```bash azd update --channel daily azd update --channel stable ```\n\n## Try it out\n\nThe `azd update` command is available starting with azd 1.23.x. To check your current version, run `azd version` . If you’re on an older version, do one last manual update using your original installation method. After that, `azd update` handles everything going forward. For a fresh install, see [Install azd](https://learn.microsoft.com/azure/developer/azure-developer-cli/install-azd).\n\nFor a deeper dive, check out this post from Jon Gallant [azd update—Stop Juggling Package Managers](https://blog.jongallant.com/2026/04/azd-update).\n\n## Feedback\n\nHave questions or ideas? File an issue or start a discussion on [GitHub](https://github.com/Azure/azure-dev). Want to help shape the future of `azd` ? [Sign up for user research](https://aka.ms/azd-user-research-signup).\n\n*This feature was introduced in [PR #6942](https://github.com/Azure/azure-dev/pull/6942), based on [Issue #6673](https://github.com/Azure/azure-dev/issues/6673).*",
+  "Author": "Kristen Womack",
+  "Description": "Update the Azure Developer CLI with a single command on any platform and switch release channels.\n\nThe post [Stop juggling package managers—just run `azd update`](https://devblogs.microsoft.com/azure-sdk/azd-update/) appeared first on [Azure SDK Blog](https://devblogs.microsoft.com/azure-sdk).",
+  "OutputDir": "_news",
+  "FeedName": "Microsoft Azure SDK Blog",
+  "Tags": [
+    "azd",
+    "Azure SDK",
+    "azure-developer-cli"
+  ],
+  "FeedLevelAuthor": "Azure SDK Blog",
+  "FeedUrl": "https://devblogs.microsoft.com/azure-sdk/feed/"
+}

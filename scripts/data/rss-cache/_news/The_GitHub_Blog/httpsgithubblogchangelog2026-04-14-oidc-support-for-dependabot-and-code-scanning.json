@@ -1,0 +1,18 @@
+{
+  "EnhancedContent": "Dependabot and code scanning now support OpenID Connect (OIDC) authentication for private registries configured at the organization level, eliminating the need to store long-lived credentials as repository secrets.\n\n## What’s new\n\nOrganization administrators can configure OIDC-based credentials for private registries across their organization. With OIDC-based authentication, you can dynamically obtain short-lived credentials from your cloud identity provider, just like GitHub Actions workflows using [OIDC federation](https://docs.github.com/actions/security-for-github-actions/security-hardening-your-deployments/about-security-hardening-with-openid-connect). This builds on [earlier support for OIDC authentication in repository-level `dependabot.yml` configuration files](https://github.blog/changelog/2026-02-03-dependabot-now-supports-oidc-authentication/) and extends it to the organization level, so you can centrally manage registry access for all repositories in your org.\n\n### Supported registries\n\n- **AWS CodeArtifact**\n- **Azure DevOps Artifacts**\n- **JFrog Artifactory**\n\nWithin the next four weeks, we will add support for Cloudsmith and Google Artifact Registry.\n\nThis feature is now generally available on github.com and will ship in GitHub Enterprise Server 3.22.\n\nLearn more about [configuring OIDC for Dependabot](https://docs.github.com/code-security/how-tos/secure-your-supply-chain/manage-your-dependency-security/configuring-access-to-private-registries-for-dependabot) and [code scanning](https://docs.github.com/en/code-security/how-tos/secure-at-scale/configure-organization-security/manage-usage-and-access/giving-org-access-private-registries) at the organization level. You can also join the [community discussion](https://github.com/orgs/community/discussions).",
+  "Link": "https://github.blog/changelog/2026-04-14-oidc-support-for-dependabot-and-code-scanning",
+  "PubDate": "2026-04-14T20:29:03+00:00",
+  "Description": "Dependabot and code scanning now support OpenID Connect (OIDC) authentication for private registries configured at the organization level, eliminating the need to store long-lived credentials as repository secrets. What’s new…\n\nThe post [OIDC support for Dependabot and code scanning](https://github.blog/changelog/2026-04-14-oidc-support-for-dependabot-and-code-scanning) appeared first on [The GitHub Blog](https://github.blog).",
+  "FeedUrl": "https://github.blog/changelog/feed/",
+  "Author": "Allison",
+  "Title": "OIDC support for Dependabot and code scanning",
+  "Tags": [
+    "application security",
+    "Improvement",
+    "supply chain security"
+  ],
+  "FeedName": "The GitHub Blog",
+  "FeedLevelAuthor": "Archive: 2026 - GitHub Changelog",
+  "ProcessedDate": "2026-04-14 21:22:17",
+  "OutputDir": "_news"
+}

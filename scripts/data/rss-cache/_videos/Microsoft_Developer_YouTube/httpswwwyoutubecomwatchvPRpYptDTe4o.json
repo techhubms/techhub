@@ -1,0 +1,33 @@
+{
+  "PubDate": "2026-04-09T21:27:27+00:00",
+  "Tags": [
+    "AI",
+    "Azure",
+    "AzureArchitecture",
+    "Cloud Computing",
+    "CloudArchitecture",
+    "CloudComputing",
+    "Dev",
+    "Development",
+    "DevOps",
+    "Microsoft",
+    "MicrosoftDeveloper",
+    "Observability",
+    "OpenTelemetry",
+    "OperationalExcellence",
+    "ResponsibleAI",
+    "Tech",
+    "Technology",
+    "WellArchitectedFramework"
+  ],
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "ProcessedDate": "2026-04-09 22:19:45",
+  "Link": "https://www.youtube.com/watch?v=PRpYptDTe4o",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Developer",
+  "Description": "In this episode, we explore how AI enhances Operational Excellence. From observability and troubleshooting to automation, governance, and human-in-the-loop decision making.\n\nIn this conversation, Boris Scholl and Niels Buit discuss where AI delivers real value—and where architects must carefully manage risks and tradeoffs.\n\nIf you’re a cloud architect, platform engineer, or developer responsible for operating systems in production, this video will help you understand how to apply AI practically and assess risks and tradeoffs in real-world environments.\n\n✅ What You’ll Learn\n\nHow AI fits into the Operational Excellence pillar of the Well-Architected Framework How AI improves observability, dependency mapping, and proactive issue detection What AI can do today in root cause analysis, summarization, and remediation The risks of non-deterministic systems and how to mitigate them When and why to keep a human in the loop Security, privacy, and governance considerations for AI-driven operations How AI can turn WAF from a static checklist into a living, evolving system\n\n00:06 – AI and Operational Excellence in the Well-Architected Framework 00:48 – Running AI vs Using AI to Improve Operations 01:21 – Why Day Two Operations Matter More Than Day One 02:05 – Observability, Deployment, and Troubleshooting 02:40 – Why Observability Is the Best Starting Point for AI 03:38 – Non-Deterministic AI and Operational Risk 04:05 – Real-World AI Use in Engineering Operations 04:39 – AI Opportunities: Simulation and Auto-Remediation 05:00 – Getting Started with OpenTelemetry 05:48 – What AI Enables in Observability Today 06:24 – Dependency Graphs and Predictive Failure Detection 07:01 – Human-in-the-Loop for Critical Incidents 08:00 – Fail Fast, Guardrails, and Responsible AI 08:50 – Hallucinations, RCA Accuracy, and Summarization Risk 09:29 – AI-as-a-Judge and Evaluation Patterns 10:17 – Security and Privacy Considerations 11:30 – How WAF Helps Navigate AI Tradeoffs 12:19 – Making WAF a Living, AI-Driven Framework 13:15 – Key Takeaways and Final Thoughts\n\n🔗 Resources & Links 🚀 Azure Well-Architected Framework https://learn.microsoft.com/azure/well-architected/ Microsoft Learn https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/ ⚡ Try Azure for free https://aka.ms/AzureFreeTrialYT\n\n👥 Speakers Boris Scholl https://www.linkedin.com/in/bscholl/\n\nNiels Buit https://www.linkedin.com/in/nielsbuit/ #Azure #AI #OperationalExcellence #WellArchitectedFramework #CloudArchitecture #Observability #OpenTelemetry #DevOps #ResponsibleAI #AzureArchitecture #MicrosoftDeveloper #CloudComputing",
+  "EnhancedContent": null,
+  "FeedLevelAuthor": "Microsoft Developer",
+  "FeedName": "Microsoft Developer YouTube",
+  "Title": "Use AI to Achieve Operational Excellence with the Well-Architected Framework practices"
+}

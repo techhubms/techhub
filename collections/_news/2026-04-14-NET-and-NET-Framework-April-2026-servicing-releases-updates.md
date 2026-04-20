@@ -1,0 +1,92 @@
+---
+tags:
+- .NET
+- .NET 10
+- .NET 8
+- .NET 9
+- .NET Framework
+- .NET Runtime
+- ASP.NET Core
+- Container Images
+- CVE
+- Denial Of Service
+- EF Core
+- Known Issues
+- Linux Packages
+- Maintenance & Updates
+- Microsoft Container Registry
+- MSRC
+- News
+- Patching
+- Release Notes
+- Remote Code Execution
+- Security
+- Security Feature Bypass
+- Security Updates
+- Servicing Releases
+- WinForms
+date: 2026-04-14 19:49:00 +00:00
+external_url: https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/
+title: .NET and .NET Framework April 2026 servicing releases updates
+section_names:
+- dotnet
+- security
+feed_name: Microsoft .NET Blog
+primary_section: dotnet
+author: Rahul Bhandari (MSFT), Tara Overfield
+---
+
+Rahul Bhandari (MSFT) and Tara Overfield summarize the April 2026 .NET and .NET Framework servicing releases, including the updated versions, links to release notes and installers, and the list of security CVEs addressed across supported .NET and .NET Framework versions.<!--excerpt_end-->
+
+## Overview
+
+Welcome to the combined .NET servicing updates for April 2026. This update refreshes **.NET** and **.NET Framework** as of **April 14, 2026**, and includes both security and non-security fixes.
+
+## Security improvements
+
+These CVEs are fixed in the April 2026 servicing releases:
+
+| CVE # | Title | Applies to |
+| --- | --- | --- |
+| [CVE-2026-23666](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-23666) | .NET Denial of Service Vulnerability | .NET Framework 3.0, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
+| [CVE-2026-26171](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-26171) | .NET Security Feature Bypass Vulnerability | .NET 10.0, .NET 9.0, .NET 8.0, .NET Framework 2.0, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
+| [CVE-2026-32178](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32178) | .NET Remote Code Execution Vulnerability | .NET 10.0, .NET 9.0, .NET 8.0, .NET Framework 2.0, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
+| [CVE-2026-32203](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32203) | .NET Denial of Service Vulnerability | .NET 10.0, .NET 9.0, .NET 8.0, .NET Framework 2.0, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
+| [CVE-2026-32226](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-32226) | .NET Denial of Service Vulnerability | .NET Framework 2.0, 4.6.2, 4.7, 4.7.1, 4.7.2, 4.8, 4.8.1 |
+| [CVE-2026-33116](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-33116) | .NET Remote Code Execution Vulnerability | .NET 10.0, .NET 9.0, .NET 8.0 |
+
+## Servicing release versions and links
+
+|  | .NET 10.0 | .NET 9.0 | .NET 8.0 |
+| --- | --- | --- | --- |
+| Release Notes | [10.0.6](https://github.com/dotnet/core/blob/main/release-notes/10.0/10.0.6/10.0.6.md) | [9.0.15](https://github.com/dotnet/core/blob/main/release-notes/9.0/9.0.15/9.0.15.md) | [8.0.26](https://github.com/dotnet/core/blob/main/release-notes/8.0/8.0.26/8.0.26.md) |
+| Installers and binaries | [10.0.6](https://dotnet.microsoft.com/download/dotnet/10.0) | [9.0.15](https://dotnet.microsoft.com/download/dotnet/9.0) | [8.0.26](https://dotnet.microsoft.com/download/dotnet/8.0) |
+| Container Images | [images](https://mcr.microsoft.com/catalog?search=dotnet/) | [images](https://mcr.microsoft.com/catalog?search=dotnet/) | [images](https://mcr.microsoft.com/catalog?search=dotnet/) |
+| Linux packages | [10.0](https://github.com/dotnet/core/blob/main/release-notes/10.0/install-linux.md) | [9.0](https://github.com/dotnet/core/blob/main/release-notes/9.0/install-linux.md) | [8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/install-linux.md) |
+| Known Issues | [10.0](https://github.com/dotnet/core/blob/main/release-notes/10.0/known-issues.md) | [9.0](https://github.com/dotnet/core/blob/main/release-notes/9.0/known-issues.md) | [8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/known-issues.md) |
+
+## Release changelogs
+
+- ASP.NET Core: [10.0.6](https://github.com/dotnet/aspnetcore/issues?q=milestone%3A10.0.6%20is%3Aclosed%20label%3Aservicing-approved)
+- .NET: [10.0.6](https://github.com/dotnet/dotnet/issues?q=state%3Aclosed%20label%3AServicing-approved%20milestone%3A10.0.6)
+- Entity Framework Core: [10.0.6](https://github.com/dotnet/efcore/issues?q=state%3Aclosed%20label%3AServicing-approved%20milestone%3A10.0.6)
+- Runtime:
+  - [10.0.6](https://github.com/dotnet/runtime/issues?q=milestone%3A10.0.6%20is%3Aclosed%20label%3Aservicing-approved)
+  - [9.0.15](https://github.com/dotnet/runtime/issues?q=milestone%3A9.0.15%20is%3Aclosed%20label%3Aservicing-approved)
+  - [8.0.26](https://github.com/dotnet/runtime/issues?q=milestone%3A8.0.26%20is%3Aclosed%20label%3Aservicing-approved)
+- WinForms: [10.0.6](https://github.com/dotnet/winforms/issues?q=state:closed%20label:servicing-approved%20milestone:10.0.6)
+
+Share feedback about this release in the [Release feedback issue](https://github.com/dotnet/core/issues/10356).
+
+## .NET Framework April 2026 updates
+
+There are new **security updates** and **non-security updates** available for .NET Framework.
+
+For recent .NET Framework servicing updates, see the [release notes for .NET Framework](https://learn.microsoft.com/dotnet/framework/release-notes/release-notes).
+
+## Wrap-up
+
+That’s it for this month—update to the latest servicing release.
+
+[Read the entire article](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-april-2026-servicing-updates/)
+

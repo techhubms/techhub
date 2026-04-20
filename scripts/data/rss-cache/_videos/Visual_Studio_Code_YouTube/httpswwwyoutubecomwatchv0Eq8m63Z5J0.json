@@ -1,0 +1,22 @@
+{
+  "Author": "Visual Studio Code",
+  "PubDate": "2026-04-16T19:00:00+00:00",
+  "FeedLevelAuthor": "Visual Studio Code",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w",
+  "Description": "In this video, we walk through the latest improvements to terminal tools for agent sessions: foreground terminal support, better handling of interactive input, progress messages, and smarter background notifications. These updates make working with REPLs, installers, and long‑running commands faster and more seamless.\n\n🔗 Check out the full release notes: https://aka.ms/VSCode/116\n\n🔎 Chapters: 00:00 Intro to Terminal Tools for Agent Sessions 00:25 Demo 03:33 Recap\n\n🎙️ Featuring: James Montemagno (@JamesMontemagno)\n\n📲 Follow VS Code: X: https://x.com/code Bluesky: https://bsky.app/profile/vscode.dev LinkedIn: https://aka.ms/VSCode/LinkedIn GitHub: https://github.com/microsoft/vscode\n\n#vscode #visualstudiocode #agents",
+  "Title": "VS Code Terminal Agent Tools",
+  "Link": "https://www.youtube.com/watch?v=0Eq8m63Z5J0",
+  "OutputDir": "_videos",
+  "ProcessedDate": "2026-04-16 19:34:56",
+  "FeedName": "Visual Studio Code YouTube",
+  "Tags": [
+    "agents",
+    "agenttools",
+    "demo",
+    "visual studio code",
+    "visualstudiocode",
+    "vs code",
+    "vscode"
+  ]
+}
