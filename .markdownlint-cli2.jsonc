@@ -11,7 +11,13 @@
     "ignores": [
         "tests/**/Fixtures/**",
         "tests/TechHub.TestUtilities/TestCollections/**",
-        "src/**/Resources/**"
+        "src/**/Resources/**",
+        // Pipeline-generated content files — not hand-written docs, not linted
+        "collections/_blogs/**",
+        "collections/_community/**",
+        "collections/_news/**",
+        "collections/_roundups/**",
+        "collections/_videos/**"
     ],
     "gitignore": true
 }
