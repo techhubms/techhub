@@ -646,7 +646,7 @@ public class RoundupGeneratorServiceTests
         );
 
         var progressMessages = new List<string>();
-        var progress = new Progress<string>(progressMessages.Add);
+        var progress = new SynchronousProgress<string>(progressMessages.Add);
 
         var sut = CreateSut();
 
@@ -743,4 +743,14 @@ public class RoundupGeneratorServiceTests
 
         return count;
     }
+}
+
+/// <summary>
+/// Synchronous <see cref="IProgress{T}"/> that invokes the callback inline,
+/// avoiding the thread-pool dispatch that <see cref="Progress{T}"/> uses
+/// when there is no <see cref="SynchronizationContext"/>.
+/// </summary>
+file sealed class SynchronousProgress<T>(Action<T> handler) : IProgress<T>
+{
+    public void Report(T value) => handler(value);
 }

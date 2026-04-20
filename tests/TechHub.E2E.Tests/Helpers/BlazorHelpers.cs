@@ -692,8 +692,15 @@ public static class BlazorHelpers
         // so Force=true does not dispatch the click during an active DOM update window.
         await page.WaitForBlazorReadyAsync();
 
-        // Step 3: Capture URL before click
+        // Step 3: Capture URL and element handle before click.
+        // The element handle must be captured BEFORE the click because a successful click
+        // may change the DOM state (e.g., remove CSS classes), causing the locator to no
+        // longer match the element. The handle is used for retry clicks in step 5.
         var urlBeforeClick = page.Url;
+        var counterBeforeClick = await page.GetE2ECounterAsync();
+        IElementHandle? handle = waitForUrlChange
+            ? await locator.ElementHandleAsync(new() { Timeout = E2ETimeout })
+            : null;
 
         // Step 4: Click with Force=true to bypass stability checks
         // Blazor Server's continuous DOM updates prevent elements from being
@@ -703,10 +710,34 @@ public static class BlazorHelpers
         // Step 5: Wait for URL to change and page to become ready
         if (waitForUrlChange)
         {
-            // Wait for URL change (works for both enhanced nav and full page reload)
+            // Wait for URL change with intelligent retry using the E2E lifecycle counter.
+            //
+            // Problem with naive retries: re-dispatching the click immediately (before Blazor
+            // has processed the first click over SignalR) causes double-toggles — the second
+            // click reverses the first, keeping the URL unchanged and triggering a timeout.
+            //
+            // Solution: wait for the E2E counter to advance (Blazor processed a lifecycle
+            // event — meaning the first click was fully handled) before deciding whether to
+            // retry. If the URL changed after the counter advanced, we're done. If not, the
+            // click was truly missed and we retry exactly once per counter increment.
             await page.WaitForFunctionAsync(
-                "prevUrl => window.location.href !== prevUrl",
-                urlBeforeClick,
+                @"([prevUrl, prevCounter, el]) => {
+                    if (window.location.href !== prevUrl) return true;
+                    // Wait for Blazor to signal that it processed a lifecycle event
+                    // (counter advanced past the value captured before the click).
+                    const currentCounter = window.__e2e?.counter ?? 0;
+                    if (currentCounter <= prevCounter) return false;
+                    // Counter advanced but URL hasn't changed — Blazor processed the click
+                    // but it may not have triggered navigation yet, OR the click was lost.
+                    // Re-dispatch once per counter increment to recover from lost clicks.
+                    // Update prevCounter so we only retry once per new lifecycle event.
+                    if (!window.__clickRetryCounter || window.__clickRetryCounter < currentCounter) {
+                        window.__clickRetryCounter = currentCounter;
+                        if (el) el.click();
+                    }
+                    return false;
+                }",
+                new object[] { urlBeforeClick, counterBeforeClick, handle! },
                 new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
             // Wait for page readiness after navigation

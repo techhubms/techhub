@@ -129,10 +129,11 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await WaitForContentTypeFilterReadyAsync();
 
         // Act - Click the "Blogs" button to deselect it (all active → all except blogs)
-        await ContentTypeButton(Blogs).ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for URL to update (the types param is added)
-        await WaitForTypesParamPresentAsync();
+        // Use default waitForUrlChange: true — toggling a content type always changes the URL
+        // (adds/modifies the types= query param). The click retry mechanism in
+        // ClickBlazorElementAsync handles CI timing issues where Force=true clicks
+        // fire before Blazor's @onclick handlers are wired up.
+        await ContentTypeButton(Blogs).ClickBlazorElementAsync();
 
         // Assert - URL should contain the types parameter
         var currentUrl = Page.Url;
@@ -151,9 +152,11 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await WaitForContentTypeFilterReadyAsync();
 
         // Act - Click the "Videos" button to deselect it (all active → all except videos)
-        await ContentTypeButton(Videos).ClickBlazorElementAsync(waitForUrlChange: false);
+        // Use default waitForUrlChange: true — toggling deselects a type, which adds
+        // the types= URL param. Click retry handles CI timing.
+        await ContentTypeButton(Videos).ClickBlazorElementAsync();
 
-        // Wait for Blazor to update: Videos button should no longer have the active class
+        // Verify: Videos button should no longer have the active class
         await Assertions.Expect(ContentTypeButton(Videos))
             .Not.ToHaveClassAsync(new Regex("active"));
 
@@ -189,10 +192,9 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await WaitForContentTypeFilterReadyAsync();
 
         // Act - Clicking Videos re-activates all 4 types, which should clear the URL param
-        await ContentTypeButton(Videos).ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for the types parameter to disappear (all types active = no param needed)
-        await WaitForTypesParamRemovedAsync();
+        // Use default waitForUrlChange: true — re-activating all types changes the URL
+        // by removing the types= param. Click retry handles CI timing.
+        await ContentTypeButton(Videos).ClickBlazorElementAsync();
 
         // Assert - URL should no longer contain types parameter
         Page.Url.Should().NotContain("types=",
