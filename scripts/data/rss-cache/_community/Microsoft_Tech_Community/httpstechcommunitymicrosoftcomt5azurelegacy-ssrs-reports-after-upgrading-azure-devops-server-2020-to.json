@@ -1,0 +1,14 @@
+{
+  "Author": "fujiwaraH2O",
+  "Description": "We are currently planning an upgrade from Azure DevOps Server 2020 to Azure DevOps Server 2022 or 25H2, and one of our biggest concerns is reporting.\n\nWe understand that Microsoft’s recommended direction is to move to Power BI based on Analytics / OData. However, for on-prem environments with a large number of existing SSRS reports, rebuilding everything from scratch would require significant time and effort.\n\nSince Warehouse and Analysis Services are no longer available in newer versions, we would like to understand how other on-prem teams are handling legacy SSRS reporting during and after the upgrade.\n\nHave you rebuilt your reports in Power BI, moved to another reporting approach, or found a practical way to keep existing SSRS reports available during the transition?\n\nAny real-world experience, lessons learned, or recommended approaches would be greatly appreciated.",
+  "Tags": [],
+  "PubDate": "2026-04-18T04:24:17+00:00",
+  "Title": "Legacy SSRS reports after upgrading Azure DevOps Server 2020 to 2022 or 25H2",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-04-20 20:21:20",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure/legacy-ssrs-reports-after-upgrading-azure-devops-server-2020-to/m-p/4512555#M22494",
+  "EnhancedContent": "We are currently planning an upgrade from Azure DevOps Server 2020 to Azure DevOps Server 2022 or 25H2, and one of our biggest concerns is reporting.\n\nWe understand that Microsoft’s recommended direction is to move to Power BI based on Analytics / OData. However, for on-prem environments with a large number of existing SSRS reports, rebuilding everything from scratch would require significant time and effort.\n\nSince Warehouse and Analysis Services are no longer available in newer versions, we would like to understand how other on-prem teams are handling legacy SSRS reporting during and after the upgrade.\n\nHave you rebuilt your reports in Power BI, moved to another reporting approach, or found a practical way to keep existing SSRS reports available during the transition?\n\nAny real-world experience, lessons learned, or recommended approaches would be greatly appreciated.",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}
