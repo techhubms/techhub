@@ -207,7 +207,7 @@
   }
 }
 
-.features-filter-btn:focus-visible {
+html.keyboard-nav .features-filter-btn:focus-visible {
   outline: var(--focus-outline-width) solid var(--color-purple-bright);
   outline-offset: var(--focus-outline-offset);
 }

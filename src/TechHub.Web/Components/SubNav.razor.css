@@ -199,7 +199,7 @@
     }
 }
 
-.btn-subnav:focus-visible {
+html.keyboard-nav .btn-subnav:focus-visible {
     outline: 3px solid var(--color-purple-bright) !important;
     outline-offset: 2px !important;
     transition: none !important;

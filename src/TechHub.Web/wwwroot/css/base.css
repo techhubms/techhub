@@ -216,9 +216,13 @@ a, button, input, select, textarea, [tabindex]:not([tabindex="-1"]) {
    ============================================================================ */
 
 /* Suppress all focus outlines by default (pointer/touch mode) */
+/* Note: outline: none sets outline-style to none but leaves outline-width at
+   its initial value (medium ≈ 3px in most browsers). We explicitly set
+   outline-width: 0 to ensure computed outlineWidth is "0px". */
 :focus,
 :focus-visible {
   outline: none !important;
+  outline-width: 0 !important;
 }
 
 /* Show focus outlines ONLY when user is navigating with keyboard */

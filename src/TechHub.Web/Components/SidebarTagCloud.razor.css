@@ -38,7 +38,7 @@
     }
 }
 
-.tag-cloud-item:focus-visible {
+html.keyboard-nav .tag-cloud-item:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
 }

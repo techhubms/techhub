@@ -53,8 +53,8 @@
   text-decoration: none !important;
 }
 
-.btn:focus-visible,
-.button:focus-visible {
+html.keyboard-nav .btn:focus-visible,
+html.keyboard-nav .button:focus-visible {
   outline: 3px solid var(--color-purple-bright) !important;
   outline-offset: 2px !important;
   transition: none !important;
@@ -95,7 +95,7 @@
   border-color: var(--color-purple-bright);
 }
 
-.btn-secondary:focus-visible {
+html.keyboard-nav .btn-secondary:focus-visible {
   outline: 3px solid var(--color-purple-bright) !important;
   outline-offset: 2px !important;
   transition: none !important;
@@ -126,7 +126,7 @@
   }
 }
 
-.btn-link:focus-visible {
+html.keyboard-nav .btn-link:focus-visible {
   outline: 3px solid var(--color-purple-bright) !important;
   outline-offset: 2px !important;
   transition: none !important;
