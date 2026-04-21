@@ -372,7 +372,6 @@ else {
         --transport http `
         --registry-server $registryServer `
         --registry-identity $identityId `
-        --user-assigned $identityId `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
@@ -449,7 +448,6 @@ else {
         --transport http `
         --registry-server $registryServer `
         --registry-identity $identityId `
-        --user-assigned $identityId `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `

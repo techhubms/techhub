@@ -4,6 +4,13 @@
 -- Must run after 002_feature_tables.sql.
 
 -- ============================================================
+-- 0. Schema guards — add columns that may be missing if the staging DB ran
+--    an older version of 002_feature_tables.sql before these columns were added.
+-- ============================================================
+ALTER TABLE processed_urls ADD COLUMN IF NOT EXISTS job_id BIGINT;
+ALTER TABLE processed_urls ADD COLUMN IF NOT EXISTS slug   TEXT;
+
+-- ============================================================
 -- 1. Fix empty author fields
 -- ============================================================
 -- A batch of early content items was ingested without author information.
@@ -196,52 +203,66 @@ WHERE NOT EXISTS (
 );
 
 -- content_tags_expanded → content_items
-ALTER TABLE content_tags_expanded
-    ADD CONSTRAINT fk_tags_content_item
-    FOREIGN KEY (collection_name, slug)
-    REFERENCES content_items (collection_name, slug)
-    ON DELETE CASCADE ON UPDATE CASCADE;
+DO $$ BEGIN
+    ALTER TABLE content_tags_expanded
+        ADD CONSTRAINT fk_tags_content_item
+        FOREIGN KEY (collection_name, slug)
+        REFERENCES content_items (collection_name, slug)
+        ON DELETE CASCADE ON UPDATE CASCADE;
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 -- content_reviews → content_items (already added inline in 002, included here for documentation)
 
 -- UNIQUE name on rss_feed_configs (names are now canonical and deduplicated)
-ALTER TABLE rss_feed_configs
-    ADD CONSTRAINT uq_rss_feed_configs_name UNIQUE (name);
+DO $$ BEGIN
+    ALTER TABLE rss_feed_configs
+        ADD CONSTRAINT uq_rss_feed_configs_name UNIQUE (name);
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 -- UNIQUE external_url on content_items (duplicates fixed in step 5)
-ALTER TABLE content_items
-    ADD CONSTRAINT uq_content_items_external_url UNIQUE (external_url);
+DO $$ BEGIN
+    ALTER TABLE content_items
+        ADD CONSTRAINT uq_content_items_external_url UNIQUE (external_url);
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 -- content_items.feed_name → rss_feed_configs.name
 -- ON UPDATE CASCADE: feed renames in admin UI cascade to all content
 -- ON DELETE RESTRICT: prevent deleting a feed that still has content
-ALTER TABLE content_items
-    ADD CONSTRAINT fk_content_items_feed
-    FOREIGN KEY (feed_name)
-    REFERENCES rss_feed_configs (name)
-    ON UPDATE CASCADE ON DELETE RESTRICT;
+DO $$ BEGIN
+    ALTER TABLE content_items
+        ADD CONSTRAINT fk_content_items_feed
+        FOREIGN KEY (feed_name)
+        REFERENCES rss_feed_configs (name)
+        ON UPDATE CASCADE ON DELETE RESTRICT;
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 -- processed_urls.feed_name → rss_feed_configs.name (nullable)
 -- ON DELETE RESTRICT: feed deletion is blocked while any processed_url still references it.
 -- This includes skipped/failed items that have no content_item. Those must be cleaned up
 -- explicitly before the feed can be removed.
-ALTER TABLE processed_urls
-    ADD CONSTRAINT fk_processed_urls_feed
-    FOREIGN KEY (feed_name)
-    REFERENCES rss_feed_configs (name)
-    ON UPDATE CASCADE ON DELETE RESTRICT;
+DO $$ BEGIN
+    ALTER TABLE processed_urls
+        ADD CONSTRAINT fk_processed_urls_feed
+        FOREIGN KEY (feed_name)
+        REFERENCES rss_feed_configs (name)
+        ON UPDATE CASCADE ON DELETE RESTRICT;
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 -- processed_urls.job_id → content_processing_jobs.id
-ALTER TABLE processed_urls
-    ADD CONSTRAINT fk_processed_urls_job
-    FOREIGN KEY (job_id)
-    REFERENCES content_processing_jobs (id)
-    ON DELETE SET NULL;
+DO $$ BEGIN
+    ALTER TABLE processed_urls
+        ADD CONSTRAINT fk_processed_urls_job
+        FOREIGN KEY (job_id)
+        REFERENCES content_processing_jobs (id)
+        ON DELETE SET NULL;
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
 -- processed_urls → content_items (via collection_name + slug)
 -- ON UPDATE CASCADE: slug renames in content_items propagate automatically
-ALTER TABLE processed_urls
-    ADD CONSTRAINT fk_processed_urls_content_item
-    FOREIGN KEY (collection_name, slug)
-    REFERENCES content_items (collection_name, slug)
-    ON DELETE CASCADE ON UPDATE CASCADE;
+DO $$ BEGIN
+    ALTER TABLE processed_urls
+        ADD CONSTRAINT fk_processed_urls_content_item
+        FOREIGN KEY (collection_name, slug)
+        REFERENCES content_items (collection_name, slug)
+        ON DELETE CASCADE ON UPDATE CASCADE;
+EXCEPTION WHEN duplicate_object THEN NULL; END $$;
