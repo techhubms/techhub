@@ -605,13 +605,20 @@ public static class BlazorHelpers
                     // Step 1: Blazor runtime must exist
                     if (typeof window.Blazor === 'undefined') return false;
 
-                    // Step 2: If web started but server circuit hasn't connected within 5s,
-                    // the circuit likely failed (e.g. content detail pages where the SignalR
-                    // connection drops during initialization). Return true to proceed because
-                    // these pages have fully rendered SSR content — the tests only inspect the
-                    // DOM (URLs, meta tags, layout) and don't need interactive Blazor features.
-                    // Without this, every content detail test would wait the full 60s timeout.
-                    if (window.__blazorWebReadyAt && !window.__blazorServerReady && !window.__blazorWasmReady) {
+                    // Step 2: If web started but server circuit hasn't connected, optionally bail out.
+                    //
+                    // LOCAL/DEV/STAGING: If window.__e2e is present (Development + Staging have it),
+                    // we know we're in an E2E-tracked environment. NEVER bail out early — wait for the
+                    // circuit to fully establish (up to E2ETimeout). This is critical for remote
+                    // deployments (e.g., PR previews in Azure Sweden Central) where higher network
+                    // latency means the Blazor Server circuit can take >5s to establish.
+                    // Bailing out early would cause tests to click before @onclick handlers attach.
+                    //
+                    // PRODUCTION (no __e2e): Bail out after 5s. These tests only inspect SSR DOM
+                    // (URLs, meta tags, layout) and don't need @onclick handlers. Without this bail-out
+                    // every content detail test that genuinely cannot establish a circuit would wait
+                    // the full 60s timeout.
+                    if (!window.__e2e && window.__blazorWebReadyAt && !window.__blazorServerReady && !window.__blazorWasmReady) {
                         if (Date.now() - window.__blazorWebReadyAt > 5000) return true;
                     }
 

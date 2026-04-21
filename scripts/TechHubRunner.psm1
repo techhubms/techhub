@@ -282,6 +282,12 @@ function Run {
         [switch]$WithoutTests,
     
         [Parameter(Mandatory = $false)]
+        [switch]$SkipE2E,
+
+        [Parameter(Mandatory = $false)]
+        [switch]$SkipPerf,
+
+        [Parameter(Mandatory = $false)]
         [switch]$BuildOnly,
 
         [Parameter(Mandatory = $false)]
@@ -314,6 +320,8 @@ function Run {
         Write-Host "  -Help          Show this help message" -ForegroundColor White
         Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor White
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
+        Write-Host "  -SkipE2E       Run unit/integration tests only, skip E2E (perf + Playwright)" -ForegroundColor White
+        Write-Host "  -SkipPerf      Skip performance tests, run Playwright E2E only (use with -TestProject E2E)" -ForegroundColor White
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
         Write-Host "                 E2E tests = Playwright browser tests against local servers" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
@@ -1149,7 +1157,8 @@ function Run {
     function Invoke-E2ETests {
         param(
             [string]$TestName,
-            [switch]$UseDocker
+            [switch]$UseDocker,
+            [switch]$SkipPerf
         )
         
         Write-Step "Running E2E tests (Playwright browser tests against local servers)"
@@ -1166,43 +1175,48 @@ function Run {
         }
         
         Write-Host ""
-        Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
-        Write-Host "  Phase 1: Database Performance Tests (warmup + validation)" -ForegroundColor Cyan
-        Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
-        Write-Host ""
-        
-        # Run performance tests - validates database queries within thresholds
-        # Also serves as warmup before the full Playwright suite runs
-        # These tests require a populated database (skipped if no data available)
-        $apiPerfTestArgs = $configArgs + @(
-            "--output", "Detailed",
-            "--show-live-output", "on",
-            "--filter-class", "*PerformanceTests*"
-        )
-        
-        $apiPerfSuccess = Invoke-ExternalCommand $e2eBinaryPath $apiPerfTestArgs
-        
-        if (-not $apiPerfSuccess) {
-            Write-Host ""
-            Write-Host "════════════════════════════════════════" -ForegroundColor Red
-            Write-Host ""
-            Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  ✗ PERFORMANCE TESTS FAILED                                  ║" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "║  Database performance degradation detected.                  ║" -ForegroundColor Red
-            Write-Host "║  Fix performance issues before running Playwright tests.     ║" -ForegroundColor Red
-            Write-Host "║                                                              ║" -ForegroundColor Red
-            Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
-            Write-Host ""
-            return $false
+        if ($SkipPerf) {
+            Write-Info "Skipping database performance tests (-SkipPerf)"
         }
-        
-        Write-Host ""
-        Write-Host "════════════════════════════════════════" -ForegroundColor Green
-        Write-Host ""
-        Write-Success "Performance tests passed"
-        Write-Host ""
+        else {
+            Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+            Write-Host "  Phase 1: Database Performance Tests (warmup + validation)" -ForegroundColor Cyan
+            Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+            Write-Host ""
+
+            # Run performance tests - validates database queries within thresholds
+            # Also serves as warmup before the full Playwright suite runs
+            # These tests require a populated database (skipped if no data available)
+            $apiPerfTestArgs = $configArgs + @(
+                "--output", "Detailed",
+                "--show-live-output", "on",
+                "--filter-class", "*PerformanceTests*"
+            )
+
+            $apiPerfSuccess = Invoke-ExternalCommand $e2eBinaryPath $apiPerfTestArgs
+
+            if (-not $apiPerfSuccess) {
+                Write-Host ""
+                Write-Host "════════════════════════════════════════" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ✗ PERFORMANCE TESTS FAILED                                  ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  Database performance degradation detected.                  ║" -ForegroundColor Red
+                Write-Host "║  Fix performance issues before running Playwright tests.     ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                return $false
+            }
+
+            Write-Host ""
+            Write-Host "════════════════════════════════════════" -ForegroundColor Green
+            Write-Host ""
+            Write-Success "Performance tests passed"
+            Write-Host ""
+        }
         
         # Phase 2: Playwright browser tests against running servers
         Write-Host "═══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
@@ -1388,7 +1402,7 @@ function Run {
                 # No TestProject specified - run ALL tests (PowerShell first, then .NET)
                 $runPowerShell = $true
                 $runUnitIntegration = $true
-                $runE2E = $true
+                $runE2E = -not $SkipE2E
             }
             elseif ($TestProject -match "E2E") {
                 # E2E tests only
@@ -1427,7 +1441,7 @@ function Run {
         
             # PHASE 4: E2E tests (servers already running)
             if ($runE2E) {
-                $e2eSuccess = Invoke-E2ETests -TestName $TestName -UseDocker:$Docker
+                $e2eSuccess = Invoke-E2ETests -TestName $TestName -UseDocker:$Docker -SkipPerf:$SkipPerf
             }
             
             # Show appropriate success message - servers run in background now

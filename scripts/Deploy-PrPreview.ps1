@@ -458,6 +458,22 @@ else {
 
 Write-Ok "Web Container App deployed: $webAppName"
 
+# Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
+# Without session affinity, WebSocket connections may route to a different container instance
+# than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
+# az containerapp create does not support --sticky-sessions, so we always set it via ingress update.
+Write-Detail "Enabling sticky sessions for $webAppName..."
+az containerapp ingress update `
+    --name $webAppName `
+    --resource-group $stagingRG `
+    --sticky-sessions affinity
+if ($LASTEXITCODE -ne 0) {
+    Write-Warn "Could not enable sticky sessions — Blazor SignalR may be unreliable with multiple replicas"
+}
+else {
+    Write-Ok "Sticky sessions enabled (required for Blazor Server)"
+}
+
 # Get the actual web FQDN
 $webFqdn = az containerapp show `
     --name $webAppName `
@@ -475,6 +491,35 @@ Write-Ok "Web FQDN: $webFqdn"
 if ($env:GITHUB_OUTPUT) {
     "web-url=https://$webFqdn" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
     Write-Ok "Written web-url to GITHUB_OUTPUT"
+}
+
+# Warmup: wait for the first successful HTTP response before returning.
+# Container Apps can take 30-90s after deployment before the container is reachable
+# (image pull, startup probe, cold-start). Waiting here means the caller (CI) gets
+# a URL that is already responding — no extra sleep needed in the workflow.
+Write-Step "Waiting for Web to respond at https://$webFqdn"
+$warmupUrl = "https://$webFqdn/alive"
+$maxAttempts = 60  # 60 × 5s = 5 minutes max
+$attempt = 0
+$ready = $false
+while ($attempt -lt $maxAttempts) {
+    $attempt++
+    try {
+        $response = Invoke-WebRequest -Uri $warmupUrl -Method GET -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
+        if ($response.StatusCode -lt 500) {
+            Write-Ok "Web is responding (HTTP $($response.StatusCode)) after $($attempt * 5)s"
+            $ready = $true
+            break
+        }
+    }
+    catch {
+        # Connection refused, timeout, or 5xx — keep waiting
+    }
+    Write-Detail "Not yet responding (attempt $attempt/$maxAttempts) — waiting 5s..."
+    Start-Sleep -Seconds 5
+}
+if (-not $ready) {
+    Write-Warn "Web did not respond within $($maxAttempts * 5)s — it may still be starting up"
 }
 
 # ============================================================================
