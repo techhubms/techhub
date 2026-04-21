@@ -286,7 +286,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var elapsedMs = await MeasureTagCountsAsync(request);
 
-        AssertPerformance(elapsedMs, "Tag cloud with high minUses=10");
+        AssertPerformance(elapsedMs, "Tag cloud with high minUses=10", _maxFtsMs);
     }
 
     // ==================== Tag Cloud: TagsToCount (Dynamic Counts) ====================
