@@ -1,0 +1,24 @@
+{
+  "Title": "Blazor Community Standup: Blazor virtualization gets flexible",
+  "PubDate": "2026-04-21T21:04:43+00:00",
+  "Tags": [
+    "aspnetcore",
+    "blazor",
+    "demo",
+    "developer",
+    "developercommunity",
+    "developertools",
+    "dotnet",
+    "dotnetdeveloper",
+    "microsoft"
+  ],
+  "OutputDir": "_videos",
+  "Link": "https://www.youtube.com/watch?v=Jd_a7uTuzmE",
+  "FeedName": "DotNet YouTube",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCvtT19MZW8dq5Wwfu6B0oxw",
+  "Description": "Join us to explore upcoming virtualization improvements in .NET 11 for Blazor, including support for variable‑height items in the Virtualize component and new APIs for controlling scroll position.\n\n🔗 Links: https://www.theurlist.com/blazor-standup-20260414\n\n🎙️ Featuring: Daniel Roth, Ilona Tomkowicz\n\n#dotnet #aspnetcore #blazor",
+  "EnhancedContent": null,
+  "ProcessedDate": "2026-04-21 21:21:34",
+  "FeedLevelAuthor": "dotnet",
+  "Author": "dotnet"
+}
