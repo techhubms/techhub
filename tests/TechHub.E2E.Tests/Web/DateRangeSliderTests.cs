@@ -106,16 +106,17 @@ public class DateRangeSliderTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot");
         await WaitForSliderReadyAsync();
 
-        // Act - Click the "7d" preset (don't wait for URL in ClickBlazorElementAsync,
-        // use explicit WaitForURLAsync instead for more control)
+        // Act + Assert — retry the [click + URL update] block to survive the
+        // Blazor Server hydration race where @onclick may not be attached yet.
+        // Blazor Server updates URLs via history.replaceState (pushState), not HTTP
+        // navigation, so we poll the location via an auto-retrying regex URL assertion.
         var sevenDayButton = Page.Locator(".date-preset-button:has-text('7d')");
-        await sevenDayButton.ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Assert - URL should contain from and to params
-        // Use WaitForFunctionAsync instead of WaitForURLAsync because Blazor Server
-        // updates URLs via history.replaceState (pushState), not HTTP navigation.
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('from=') && window.location.href.includes('to=')");
+        await sevenDayButton.ClickAndExpectAsync(async () =>
+        {
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new System.Text.RegularExpressions.Regex(@"[?&]from=.*[?&]to="),
+                new() { Timeout = 2000 });
+        });
 
         var currentUrl = Page.Url;
         currentUrl.Should().Contain("from=");
@@ -194,12 +195,16 @@ public class DateRangeSliderTests : PlaywrightTestBase
         // Wait for tag cloud to load
         await Assertions.Expect(Page.Locator(".tag-cloud-item").First).ToBeVisibleAsync();
 
-        // Act - Click a tag
+        // Act + Assert — retry [click + URL contains tags=] to survive hydration race
         var firstTag = Page.Locator(".tag-cloud-item:not(.disabled)").First;
-        await firstTag.ClickBlazorElementAsync();
+        await firstTag.ClickAndExpectAsync(async () =>
+        {
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new System.Text.RegularExpressions.Regex(@"[?&]tags="),
+                new() { Timeout = 2000 });
+        });
 
         // Assert - URL should still contain from/to along with tags
-        await Page.WaitForURLAsync(url => url.Contains("tags="));
         var currentUrl = Page.Url;
         currentUrl.Should().Contain("from=", "date range should be preserved when selecting tags");
         currentUrl.Should().Contain("to=", "date range should be preserved when selecting tags");

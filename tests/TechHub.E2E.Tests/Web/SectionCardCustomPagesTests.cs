@@ -102,11 +102,13 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var isHidden = await targetContainer.IsHiddenAsync();
             isHidden.Should().BeTrue("custom pages container should be initially hidden");
 
-            // Click to expand
-            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
-
-            // Assert - Container should now be visible
-            await Assertions.Expect(targetContainer).ToBeVisibleAsync();
+            // Click to expand — retry the [click + visibility check] block to
+            // survive the Blazor Server hydration race where @onclick may not
+            // be attached yet.
+            await expandButton.ClickAndExpectAsync(async () =>
+            {
+                await Assertions.Expect(targetContainer).ToBeVisibleAsync(new() { Timeout = 2000 });
+            });
 
             // Button with this specific target ID should be removed after clicking
             var specificButton = Page.Locator($".badge-expandable[data-expand-target='{targetId}']");

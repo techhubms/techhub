@@ -80,16 +80,16 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act - ClickAsync() is sufficient here: Playwright's built-in stability check
-        // waits until the element is not being updated by a Blazor DOM diff before
-        // dispatching the click. No URL change is expected, so ClickBlazorElementAsync
-        // (which waits for URL change) is not needed.
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-
-        // Assert
+        // Act + Assert — retry the [click + attribute check] block to cover the
+        // Blazor Server hydration race where @onclick may not be attached yet.
         var toggle = Page.Locator(".sidebar-toggle");
-        await Assertions.Expect(toggle).ToHaveAttributeAsync("aria-expanded", "false");
-        await Assertions.Expect(toggle).ToHaveAttributeAsync("aria-label", "Expand sidebar");
+        await toggle.ClickAndExpectAsync(async () =>
+        {
+            await Assertions.Expect(toggle).ToHaveAttributeAsync(
+                "aria-expanded", "false", new() { Timeout = 2000 });
+            await Assertions.Expect(toggle).ToHaveAttributeAsync(
+                "aria-label", "Expand sidebar", new() { Timeout = 2000 });
+        });
     }
 
     [Fact]

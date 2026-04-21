@@ -146,34 +146,81 @@ public static class BlazorHelpers
         page.WaitForFunctionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
     // ============================================================================
-    // E2E LIFECYCLE COUNTER - Internal helpers (tests never call these directly)
+    // RETRY-UNTIL-PASS — The Playwright-idiomatic fix for flaky Blazor interactions
     //
-    // App.razor injects window.__e2e = { counter, label, history[] } in Development.
-    // Every JS lifecycle hook calls __e2eSignal(label) which increments the counter.
-    // These methods capture the counter before an action and wait for it to change.
+    // Playwright's JavaScript API has `expect(fn).toPass()` which retries a whole
+    // code block (action + assertions) until it passes or times out. The .NET API
+    // does not expose this, so we implement the same pattern here. This is the
+    // canonical solution for Blazor Server tests where a click may be silently
+    // lost if the @onclick handler hasn't attached yet after SignalR hydration.
+    //
+    // See: https://playwright.dev/docs/test-assertions#expecttopass
+    // ============================================================================
+
+    /// <summary>
+    /// Retries an async code block until it completes without throwing, or until
+    /// <paramref name="totalTimeoutMs"/> is exceeded. .NET equivalent of Playwright's
+    /// JS <c>expect(fn).toPass()</c>.
+    ///
+    /// Use for [action + assertion] blocks where the action may need to be repeated
+    /// (e.g., a click that was lost because the event handler hadn't attached yet).
+    /// Inner assertions should use short timeouts (1-3s) so a failed attempt fails
+    /// fast and retries quickly; the outer <paramref name="totalTimeoutMs"/> is the
+    /// overall budget.
+    /// </summary>
+    public static async Task RetryUntilPassAsync(
+        Func<Task> action,
+        int totalTimeoutMs = E2ETimeout)
+    {
+        // Progressive backoff matches Playwright's JS toPass default intervals.
+        // This is retry backoff between genuine assertion attempts — not an
+        // arbitrary "wait for something to happen" sleep.
+        var intervals = new[] { 100, 250, 500, 1000, 1000 };
+        var deadline = DateTime.UtcNow.AddMilliseconds(totalTimeoutMs);
+        Exception? last = null;
+        var attempt = 0;
+        while (true)
+        {
+            try
+            {
+                await action();
+                return;
+            }
+            catch (Exception ex)
+            {
+                last = ex;
+            }
+            var delayMs = intervals[Math.Min(attempt, intervals.Length - 1)];
+            if (DateTime.UtcNow.AddMilliseconds(delayMs) >= deadline) break;
+            await Task.Delay(delayMs);
+            attempt++;
+        }
+        throw new TimeoutException(
+            $"RetryUntilPassAsync: action did not pass within {totalTimeoutMs}ms. Last error:\n{last?.Message}",
+            last);
+    }
+
+    // ============================================================================
+    // E2E LIFECYCLE SIGNALS — for genuine async events (scroll, TOC render)
+    //
+    // App.razor injects window.__e2e = { counter, label, history[] } in Development
+    // and Staging. These helpers wait for a specific named signal to appear in the
+    // history, used by scroll / TOC helpers for events that have no visible DOM
+    // state change to assert against.
     // ============================================================================
 
     /// <summary>
     /// Captures the current E2E lifecycle counter value.
-    /// INTERNAL — only called by helper methods, never by tests.
+    /// INTERNAL — only called by scroll / TOC helpers.
     /// </summary>
     internal static async Task<int> GetE2ECounterAsync(this IPage page) =>
         await page.EvaluateAsync<int>("() => window.__e2e?.counter ?? 0");
 
     /// <summary>
-    /// Waits for the E2E lifecycle counter to exceed <paramref name="previousValue"/>.
-    /// INTERNAL — only called by helper methods, never by tests.
-    /// </summary>
-    internal static async Task WaitForE2ECounterChangeAsync(this IPage page, int previousValue) =>
-        await page.WaitForFunctionAsync(
-            "(prev) => (window.__e2e?.counter ?? 0) > prev",
-            previousValue,
-            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
-
-    /// <summary>
-    /// Waits for a specific signal label to appear in the E2E history after <paramref name="afterValue"/>.
-    /// Uses the ring buffer to find the label even if later signals overwrote <c>e.label</c>.
-    /// INTERNAL — only called by helper methods, never by tests.
+    /// Waits for a specific signal label to appear in the E2E history after
+    /// <paramref name="afterValue"/>. Uses the ring buffer to find the label even
+    /// if later signals overwrote <c>e.label</c>.
+    /// INTERNAL — only called by scroll / TOC helpers.
     /// </summary>
     internal static async Task WaitForE2ESignalAsync(this IPage page, int afterValue, string label) =>
         await page.WaitForFunctionAsync(
@@ -183,21 +230,6 @@ public static class BlazorHelpers
                 return e.history ? e.history.some(h => h.counter > prev && h.label === lbl) : e.label === lbl;
             }",
             new object[] { afterValue, label },
-            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
-
-    /// <summary>
-    /// Waits for the page to be fully interactive after navigation.
-    /// Checks that the counter advanced and scripts are no longer loading.
-    /// INTERNAL — only called by helper methods, never by tests.
-    /// </summary>
-    internal static async Task WaitForPageReadyAsync(this IPage page, int counterBefore) =>
-        await page.WaitForFunctionAsync(
-            @"(prev) => {
-                const e = window.__e2e;
-                if (!e || e.counter <= prev) return false;
-                return window.__scriptsLoading !== true;
-            }",
-            counterBefore,
             new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
     // ============================================================================
@@ -661,95 +693,89 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Clicks a Blazor-enhanced element after ensuring it's ready for interaction.
+    /// Clicks a Blazor-enhanced element and waits for the URL to change.
     ///
-    /// CRITICAL BLAZOR INSIGHT:
-    /// Playwright's "stable" check waits for an element to stop moving/animating.
-    /// However, Blazor Server with enhanced navigation continuously updates the DOM
-    /// in subtle ways (SignalR heartbeats, streaming renders, etc.) that can
-    /// prevent elements from ever being considered "stable" by Playwright.
+    /// Under Blazor Server hydration, a click may be silently lost if the @onclick
+    /// handler hasn't attached yet when the click fires. This helper retries the
+    /// [click + URL-changed] block using <see cref="RetryUntilPassAsync"/> — the
+    /// Playwright-idiomatic fix.
     ///
-    /// This method:
-    /// 1. Waits for element to be visible (auto-retrying assertion)
-    /// 2. Waits for Blazor interactivity to be ready (using official JS initializer callbacks)
-    /// 3. Captures current URL before click
-    /// 4. Uses Force=true to bypass stability checks (safe because we've already
-    ///    verified Blazor is ready and the element is visible)
-    /// 5. Waits for URL to change (Blazor Server updates URL via SignalR)
-    /// 6. Waits for page readiness after navigation
-    ///
-    /// This is NOT a hack - it's the correct pattern for Blazor Server testing.
-    /// The "stability" check is designed for CSS animations, not for Blazor's
-    /// continuous DOM updates.
+    /// For interactions that do NOT change the URL (toggle button, expand panel,
+    /// tag filter, etc.), use <see cref="ClickAndExpectAsync"/> and supply your own
+    /// assertion instead. Calling this with <paramref name="waitForUrlChange"/>
+    /// = <c>false</c> just performs a single click with no retry, so a lost click
+    /// causes a silent failure in the following assertion.
     /// </summary>
-    /// <param name="locator">The element to click</param>
-    /// <param name="waitForUrlChange">Whether to wait for URL to change after click (default: true)</param>
+    /// <param name="locator">The element to click.</param>
+    /// <param name="waitForUrlChange">
+    /// <c>true</c> (default): retry the click until the URL changes. <c>false</c>:
+    /// single click, no retry — only use for interactions that can't be verified
+    /// with an assertion on the same call-site.
+    /// </param>
     public static async Task ClickBlazorElementAsync(
         this ILocator locator,
         bool waitForUrlChange = true)
     {
-        var page = locator.Page;
+        await locator.WaitForBlazorInteractivityAsync();
 
-        // Step 1: Wait for element to be visible using our centralized helper
-        await locator.AssertElementVisibleAsync();
-
-        // Step 2: Wait for Blazor to be fully ready before clicking.
-        // Ensures scripts are not actively loading (e.g., page's OnAfterRenderAsync
-        // has finished calling window.markScriptsReady defined in page-scripts.js)
-        // so Force=true does not dispatch the click during an active DOM update window.
-        await page.WaitForBlazorReadyAsync();
-
-        // Step 3: Capture URL and element handle before click.
-        // The element handle must be captured BEFORE the click because a successful click
-        // may change the DOM state (e.g., remove CSS classes), causing the locator to no
-        // longer match the element. The handle is used for retry clicks in step 5.
-        var urlBeforeClick = page.Url;
-        var counterBeforeClick = await page.GetE2ECounterAsync();
-        IElementHandle? handle = waitForUrlChange
-            ? await locator.ElementHandleAsync(new() { Timeout = E2ETimeout })
-            : null;
-
-        // Step 4: Click with Force=true to bypass stability checks
-        // Blazor Server's continuous DOM updates prevent elements from being
-        // "stable" by Playwright's criteria. We've already verified visibility.
-        await locator.ClickAsync(new() { Force = true, Timeout = E2ETimeout });
-
-        // Step 5: Wait for URL to change and page to become ready
-        if (waitForUrlChange)
+        if (!waitForUrlChange)
         {
-            // Wait for URL change with intelligent retry using the E2E lifecycle counter.
-            //
-            // Problem with naive retries: re-dispatching the click immediately (before Blazor
-            // has processed the first click over SignalR) causes double-toggles — the second
-            // click reverses the first, keeping the URL unchanged and triggering a timeout.
-            //
-            // Solution: wait for the E2E counter to advance (Blazor processed a lifecycle
-            // event — meaning the first click was fully handled) before deciding whether to
-            // retry. If the URL changed after the counter advanced, we're done. If not, the
-            // click was truly missed and we retry exactly once per counter increment.
-            await page.WaitForFunctionAsync(
-                @"([prevUrl, prevCounter, el]) => {
-                    if (window.location.href !== prevUrl) return true;
-                    // Wait for Blazor to signal that it processed a lifecycle event
-                    // (counter advanced past the value captured before the click).
-                    const currentCounter = window.__e2e?.counter ?? 0;
-                    if (currentCounter <= prevCounter) return false;
-                    // Counter advanced but URL hasn't changed — Blazor processed the click
-                    // but it may not have triggered navigation yet, OR the click was lost.
-                    // Re-dispatch once per counter increment to recover from lost clicks.
-                    // Update prevCounter so we only retry once per new lifecycle event.
-                    if (!window.__clickRetryCounter || window.__clickRetryCounter < currentCounter) {
-                        window.__clickRetryCounter = currentCounter;
-                        if (el) el.click();
-                    }
-                    return false;
-                }",
-                new object[] { urlBeforeClick, counterBeforeClick, handle! },
-                new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
-
-            // Wait for page readiness after navigation
-            await page.WaitForBlazorReadyAsync();
+            // Single click, no retry. Callers that need retry should migrate to
+            // ClickAndExpectAsync which retries the [click + assert] block.
+            await locator.ClickAsync(new() { Force = true, Timeout = E2ETimeout });
+            return;
         }
+
+        var page = locator.Page;
+        var urlBeforeClick = page.Url;
+
+        await RetryUntilPassAsync(async () =>
+        {
+            // Force = true bypasses Playwright's stability check — Blazor Server's
+            // continuous DOM updates can prevent an element from ever being "stable".
+            // We've already verified visibility via WaitForBlazorInteractivityAsync.
+            await locator.ClickAsync(new() { Force = true, Timeout = 2000 });
+            await Assertions.Expect(page).Not.ToHaveURLAsync(
+                urlBeforeClick, new() { Timeout = 2000 });
+        });
+
+        await page.WaitForBlazorReadyAsync();
+    }
+
+    /// <summary>
+    /// Clicks an element and retries if the supplied assertion does not pass.
+    /// The .NET equivalent of Playwright's JS <c>expect(fn).toPass()</c> pattern.
+    ///
+    /// This is the canonical fix for the Blazor Server E2E flakiness class where a
+    /// click is dispatched before the @onclick handler has attached during
+    /// per-component hydration — the click is silently lost, so retrying only the
+    /// assertion will never succeed. Retrying the whole [click + assert] block
+    /// eventually lands a click on a fully-hydrated component.
+    ///
+    /// Use short assertion timeouts (1-3s) so failed attempts are detected quickly.
+    /// The outer <paramref name="totalTimeoutMs"/> is the overall budget across all
+    /// retries.
+    ///
+    /// Example:
+    /// <code>
+    /// await Page.Locator(".sidebar-toggle").ClickAndExpectAsync(async () =>
+    /// {
+    ///     await Assertions.Expect(Page.Locator(".sidebar-toggle"))
+    ///         .ToHaveAttributeAsync("aria-expanded", "false", new() { Timeout = 2000 });
+    /// });
+    /// </code>
+    /// </summary>
+    public static async Task ClickAndExpectAsync(
+        this ILocator locator,
+        Func<Task> assertion,
+        int totalTimeoutMs = E2ETimeout)
+    {
+        await locator.WaitForBlazorInteractivityAsync();
+        await RetryUntilPassAsync(async () =>
+        {
+            await locator.ClickAsync(new() { Force = true, Timeout = 2000 });
+            await assertion();
+        }, totalTimeoutMs);
     }
 
     /// <summary>

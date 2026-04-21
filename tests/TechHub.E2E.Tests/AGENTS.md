@@ -68,7 +68,9 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s)
 | Method | Purpose |
 |---|---|
 | `GotoRelativeAsync()` | Navigate + wait for page ready |
-| `ClickBlazorElementAsync()` | Click + wait for URL change + Blazor ready |
+| `ClickAndExpectAsync(assert)` | **Preferred.** Click + retry [click + assert] until it passes. Fixes the Blazor Server hydration race where `@onclick` may not be attached yet (canonical [expect(fn).toPass()](https://playwright.dev/docs/test-assertions#expecttopass) pattern). |
+| `ClickBlazorElementAsync()` | Click + retry until URL changes (uses same retry pattern internally). For URL-change navigations only. |
+| `RetryUntilPassAsync(block)` | .NET equivalent of Playwright JS `expect(fn).toPass()` — retry an arbitrary `[action + assertion]` block until it passes or times out. |
 | `ClickAndWaitForScrollAsync()` | Click + wait for `scroll-end` signal |
 | `ScrollToAndWaitForTocUpdateAsync()` | Scroll + wait for `toc-active-updated` signal |
 | `WaitForTocInitializedAsync()` | Wait for `toc-initialized` signal |
@@ -76,7 +78,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s)
 | `ScrollToEndOfContentAsync()` | Scroll until end-of-content marker |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
 | `WaitForConditionAsync(js)` | Wait for JS condition (60s default) |
-| `WaitForBlazorReadyAsync()` | Legacy: checks `__blazorServerReady` + scripts + Mermaid |
+| `WaitForBlazorReadyAsync()` | Wait for `__blazorServerReady` + scripts + Mermaid (first-load only) |
 
 ## Wait Pattern Best Practices
 
@@ -102,11 +104,12 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s)
 
 **Console Error Tests**: `GotoRelativeAsync` already waits for Blazor ready + scripts loaded. No extra wait needed. Do NOT use `NetworkIdle` (Blazor's SignalR WebSocket prevents it from settling).
 
-**Expand/Collapse**: Wait for class, not time:
+**Expand/Collapse**: Use `ClickAndExpectAsync` so the click itself is retried if the first one is lost during hydration:
 
 ```csharp
-await header.ClickBlazorElementAsync(waitForUrlChange: false);
-await Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded"), new() { Timeout = 3000 });
+await header.ClickAndExpectAsync(async () =>
+    await Assertions.Expect(content).ToHaveClassAsync(
+        new Regex("expanded"), new() { Timeout = 2000 }));
 ```
 
 **Infinite Scroll**: Uses `window.scrollTo()` + `window.dispatchEvent(new Event('scroll'))` (required — `scrollTo` alone doesn't fire scroll events in headless Chrome). Always wait for `__scrollListenerReady['scroll-trigger']` before scrolling. Use `ScrollToLoadMoreAsync` or `ScrollToEndOfContentAsync`.

@@ -772,15 +772,16 @@ public class TagFilteringTests : PlaywrightTestBase
         await Page.Locator(".card").First.AssertElementVisibleAsync();
         await Page.Locator("button.badge-tag-active").First.AssertElementVisibleAsync();
 
-        // Act - Click the active (highlighted) badge to deselect the filter
-        // Use default waitForUrlChange: true — deselecting a tag changes the URL
-        // (removes the tag from the tags= param, or removes the param entirely).
-        // Click retry handles CI timing issues.
+        // Act + Assert — retry [click + active-badge-removed] to survive the Blazor
+        // hydration race where the click can be lost if @onclick hasn't attached yet.
+        // Deselecting a tag also changes the URL; we assert on the visible DOM state
+        // (no more active badges) which is a stricter, more readable signal.
         var activeBadge = Page.Locator("button.badge-tag-active").First;
-        await activeBadge.ClickBlazorElementAsync();
-
-        // Wait for Blazor re-render: active badges should disappear
-        await Page.Locator("button.badge-tag-active").AssertCountAsync(0);
+        await activeBadge.ClickAndExpectAsync(async () =>
+        {
+            await Assertions.Expect(Page.Locator("button.badge-tag-active"))
+                .ToHaveCountAsync(0, new() { Timeout = 2000 });
+        });
 
         // Assert - URL should no longer contain the tag
         var currentUrl = new Uri(Page.Url);
