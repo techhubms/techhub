@@ -554,7 +554,38 @@ while ($attempt -lt $maxAttempts) {
     Start-Sleep -Seconds 5
 }
 if (-not $ready) {
-    Write-Warn "Web did not respond within $($maxAttempts * 5)s — it may still be starting up"
+    # Hard fail: if the web app hasn't responded to /alive within the warmup
+    # window, something is wrong with the revision (failed activation,
+    # ImagePullUnauthorized, crash loop, etc.). Running E2E tests against a
+    # dead site just wastes 60s per test and obscures the real failure.
+    # Dump recent system log events for the latest revision to aid triage.
+    Write-Err "Web did not respond within $($maxAttempts * 5)s — failing deploy"
+    try {
+        $latestRevision = az containerapp revision list `
+            -n $webAppName -g $ResourceGroup `
+            --query "sort_by([], &properties.createdTime) | [-1]" -o json 2>$null |
+            ConvertFrom-Json -ErrorAction SilentlyContinue
+        if ($latestRevision) {
+            Write-Host ""
+            Write-Host "Latest revision status:" -ForegroundColor Yellow
+            Write-Host "  Name            : $($latestRevision.name)" -ForegroundColor Gray
+            Write-Host "  Image           : $($latestRevision.properties.template.containers[0].image)" -ForegroundColor Gray
+            Write-Host "  Replicas        : $($latestRevision.properties.replicas)" -ForegroundColor Gray
+            Write-Host "  HealthState     : $($latestRevision.properties.healthState)" -ForegroundColor Gray
+            Write-Host "  RunningState    : $($latestRevision.properties.runningState)" -ForegroundColor Gray
+            if ($latestRevision.properties.runningStateDetails) {
+                Write-Host "  Details         : $($latestRevision.properties.runningStateDetails)" -ForegroundColor Gray
+            }
+        }
+        Write-Host ""
+        Write-Host "Recent system events for $webAppName (last 30):" -ForegroundColor Yellow
+        az containerapp logs show -n $webAppName -g $ResourceGroup --type system --tail 30 2>&1 |
+            Select-Object -Last 30
+    }
+    catch {
+        Write-Detail "Could not fetch diagnostic info: $_"
+    }
+    exit 1
 }
 
 # ============================================================================

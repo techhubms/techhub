@@ -55,12 +55,12 @@ public class MobileNavigationTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act
-        await Page.Locator(".hamburger-btn").ClickAsync();
-
-        // Assert - Mobile menu should have "open" class and be visible
+        // Act + Assert — retry [click + visibility] to cover hydration race
+        var hamburger = Page.Locator(".hamburger-btn");
         var mobileMenu = Page.Locator(".mobile-menu.open");
-        await Assertions.Expect(mobileMenu).ToBeVisibleAsync();
+        await hamburger.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(mobileMenu).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -69,12 +69,12 @@ public class MobileNavigationTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act
-        await Page.Locator(".hamburger-btn").ClickAsync();
-
-        // Assert
+        // Act + Assert — retry [click + overlay visible]
+        var hamburger = Page.Locator(".hamburger-btn");
         var overlay = Page.Locator(".mobile-menu-overlay");
-        await Assertions.Expect(overlay).ToBeVisibleAsync();
+        await hamburger.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(overlay).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -136,16 +136,20 @@ public class MobileNavigationTests : PlaywrightTestBase
     [Fact]
     public async Task MobileMenu_OverlayClick_ClosesMenu()
     {
-        // Arrange
+        // Arrange — open via retry click+assert
         await Page.GotoRelativeAsync("/");
-        await Page.Locator(".hamburger-btn").ClickAsync();
-        await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync();
+        var mobileMenuOpen = Page.Locator(".mobile-menu.open");
+        await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
+            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
 
-        // Act - Click on far-left of the overlay (away from the menu panel on the right)
-        await Page.Locator(".mobile-menu-overlay").ClickAsync(new() { Position = new() { X = 10, Y = 200 } });
-
-        // Assert - Menu should close (no "open" class)
-        await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToHaveCountAsync(0);
+        // Act + Assert — retry overlay click until menu closes
+        var overlay = Page.Locator(".mobile-menu-overlay");
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            await overlay.ClickAsync(new() { Position = new() { X = 10, Y = 200 }, Timeout = 2000 });
+            await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0, new() { Timeout = 2000 });
+        });
     }
 
     [Fact]

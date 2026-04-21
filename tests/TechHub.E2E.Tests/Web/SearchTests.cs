@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -87,13 +88,11 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await Assertions.Expect(searchInput).ToHaveValueAsync("test");
 
-        // Act - Click clear button
+        // Act + Assert — retry [click + URL no longer has search=]
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
-        await clearButton.ClickAsync();
-
-        // Wait for URL to update (search parameter removed via Blazor pushState)
-        await Page.WaitForConditionAsync(
-            "() => !window.location.href.includes('search=')");
+        await clearButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                new Regex("search="), new() { Timeout = 2000 }));
 
         // Assert - Search should be cleared
         var inputValue = await searchInput.InputValueAsync();
@@ -143,13 +142,11 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await Assertions.Expect(searchInput).ToHaveValueAsync("test");
 
-        // Act - Clear only the search
+        // Act + Assert — retry [click + URL no longer has search=, tags= remain]
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
-        await clearButton.ClickAsync();
-
-        // Wait for URL to update (search parameter removed via Blazor)
-        await Page.WaitForConditionAsync(
-            "() => !window.location.href.includes('search=')");
+        await clearButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                new Regex("search="), new() { Timeout = 2000 }));
 
         // Assert - Tags should remain, search should be removed
         var currentUrl = Page.Url;
