@@ -202,6 +202,8 @@ if ($Action -eq 'teardown') {
     Write-Step "Cleaning up Docker images for PR #$PrNumber from ACR"
 
     $prTagFilter = "pr-$PrNumber-"
+    $deleteJobs = @()
+
     foreach ($repo in @('techhub-api', 'techhub-web')) {
         Write-Detail "Checking $repo for tags matching '$prTagFilter*'..."
 
@@ -220,17 +222,20 @@ if ($Action -eq 'teardown') {
             $tag = $tag.Trim()
             if ([string]::IsNullOrWhiteSpace($tag)) { continue }
             Write-Detail "Deleting ${repo}:$tag..."
-            az acr repository delete `
-                --name $RegistryName `
-                --image "${repo}:$tag" `
-                --yes 2>$null
-            if ($LASTEXITCODE -eq 0) {
-                Write-Ok "Deleted ${repo}:$tag"
-            }
-            else {
-                Write-Warn "Failed to delete ${repo}:$tag — continuing"
-            }
+            $deleteJobs += Start-Job -ScriptBlock {
+                param($rn, $r, $t)
+                az acr repository delete --name $rn --image "${r}:${t}" --yes 2>$null
+                $LASTEXITCODE
+            } -ArgumentList $RegistryName, $repo, $tag
         }
+    }
+
+    if ($deleteJobs.Count -gt 0) {
+        $results = $deleteJobs | Wait-Job | Receive-Job
+        $deleteJobs | Remove-Job
+        $succeeded = ($results | Where-Object { $_ -eq 0 }).Count
+        $failed    = ($results | Where-Object { $_ -ne 0 }).Count
+        Write-Ok "Deleted $succeeded ACR image(s)$(if ($failed -gt 0) { "; $failed failed (non-fatal)" })"
     }
 
     if ($deletedAny) {
@@ -457,6 +462,38 @@ else {
 }
 
 Write-Ok "Web Container App deployed: $webAppName"
+
+# Clean up old images for this PR from ACR (keep only the tag just deployed)
+Write-Step "Cleaning up old ACR images for PR #$PrNumber (keeping: $Tag)"
+$prTagFilter = "pr-$PrNumber-"
+foreach ($repo in @('techhub-api', 'techhub-web')) {
+    $oldTags = az acr repository show-tags `
+        --name $RegistryName `
+        --repository $repo `
+        --query "[?starts_with(@, '$prTagFilter') && @ != '$Tag']" `
+        -o tsv 2>$null
+
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($oldTags)) {
+        Write-Detail "No old tags to clean up for $repo"
+        continue
+    }
+
+    foreach ($oldTag in $oldTags -split "`n") {
+        $oldTag = $oldTag.Trim()
+        if ([string]::IsNullOrWhiteSpace($oldTag)) { continue }
+        Write-Detail "Deleting old ${repo}:$oldTag..."
+        az acr repository delete `
+            --name $RegistryName `
+            --image "${repo}:$oldTag" `
+            --yes 2>$null | Out-Null
+        if ($LASTEXITCODE -eq 0) {
+            Write-Ok "Deleted old ${repo}:$oldTag"
+        }
+        else {
+            Write-Warn "Could not delete ${repo}:$oldTag — skipping"
+        }
+    }
+}
 
 # Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
 # Without session affinity, WebSocket connections may route to a different container instance

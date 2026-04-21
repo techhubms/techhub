@@ -1397,6 +1397,7 @@ function Run {
             $runPowerShell = $false
             $runUnitIntegration = $false
             $runE2E = $false
+            $usingRemoteTarget = $false
             
             if (-not $TestProject) {
                 # No TestProject specified - run ALL tests (PowerShell first, then .NET)
@@ -1432,14 +1433,20 @@ function Run {
             }
             
             # PHASE 3: Start servers if needed for E2E tests
-            if ($runE2E) {
+            # Skip when E2E_BASE_URL points to a remote (non-localhost) target
+            $e2eBaseUrl = $env:E2E_BASE_URL
+            $usingRemoteTarget = $runE2E -and $e2eBaseUrl -and $e2eBaseUrl -notmatch 'localhost'
+            if ($runE2E -and -not $usingRemoteTarget) {
                 $serversStarted = Invoke-ServerStartup -Environment $Environment -Docker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
                 if ($serversStarted -ne $true) {
                     return $false
                 }
             }
+            elseif ($usingRemoteTarget) {
+                Write-Info "E2E_BASE_URL is set to remote target ($e2eBaseUrl) — skipping local server startup"
+            }
         
-            # PHASE 4: E2E tests (servers already running)
+            # PHASE 4: E2E tests (servers already running or remote target)
             if ($runE2E) {
                 $e2eSuccess = Invoke-E2ETests -TestName $TestName -UseDocker:$Docker -SkipPerf:$SkipPerf
             }
@@ -1448,10 +1455,18 @@ function Run {
             if ($runE2E) {
                 Write-Host ""
                 if ($e2eSuccess) {
-                    Write-Success "All tests passed! Servers are running in background."
+                    if ($usingRemoteTarget) {
+                        Write-Success "All E2E tests passed against $e2eBaseUrl"
+                    }
+                    else {
+                        Write-Success "All tests passed! Servers are running in background."
+                    }
                 }
                 else {
-                    Write-Error "E2E tests failed. Servers are still running for debugging."
+                    Write-Error "E2E tests failed."
+                    if (-not $usingRemoteTarget) {
+                        Write-Error "Servers are still running for debugging."
+                    }
                     Write-Error "Tip: Use 'Run -TestProject E2E -TestName <pattern>' to re-run specific tests."
                 }
                 Write-Host ""
@@ -1471,8 +1486,8 @@ function Run {
             }
         }
     
-        # Servers are running in background - show info
-        if ($WithoutTests -or $runE2E) {
+        # Servers are running in background - show info (only when running locally)
+        if ($WithoutTests -or ($runE2E -and -not $usingRemoteTarget)) {
             Write-Step "Services (running in background)"
             Write-Info "API: https://localhost:5001 (Swagger: https://localhost:5001/swagger)"
             Write-Info "Web: https://localhost:5003"

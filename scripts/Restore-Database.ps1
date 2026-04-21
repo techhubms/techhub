@@ -308,12 +308,14 @@ Write-Ok "pg_restore found: $($pgRestore.Source)"
 
 Write-Step "Resolving connection strings"
 
-# Production connection string
-if (-not $ProductionConnectionString) {
-    $ProductionConnectionString = $env:TECHHUB_PROD_DB_CONNECTION_STRING
+# Production connection string — only needed when actually dumping
+if (-not $SkipDump) {
+    if (-not $ProductionConnectionString) {
+        $ProductionConnectionString = $env:TECHHUB_PROD_DB_CONNECTION_STRING
+    }
 }
 
-if (-not $ProductionConnectionString) {
+if (-not $SkipDump -and -not $ProductionConnectionString) {
     # Try to fetch from Azure (requires az CLI login and VPN access)
     Write-Detail "Attempting to read production connection string from Azure..."
     try {
@@ -366,7 +368,9 @@ if (-not $ProductionConnectionString) {
         exit 1
     }
 }
-Write-Ok "Production connection string resolved"
+if (-not $SkipDump) {
+    Write-Ok "Production connection string resolved"
+}
 
 # Target connection string
 if (-not $TargetConnectionString) {
