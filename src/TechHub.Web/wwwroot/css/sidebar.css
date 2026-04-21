@@ -284,7 +284,7 @@ html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle) {
     }
   }
 
-  .sidebar-toolbar-btn:focus-visible {
+  html.keyboard-nav .sidebar-toolbar-btn:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
   }
