@@ -1,0 +1,20 @@
+{
+  "FeedName": "Microsoft Cloud YouTube",
+  "EnhancedContent": null,
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSgzRJMqIiCNtoM6Q7Q9Lqw",
+  "Description": "In this episode of \"The New Industrialist,\" host Adam interviews Mike Mackenzie, AVP of Digital Operations, to discuss how AI, adaptive cloud, and edge technologies are transforming manufacturing, energy, and mobility. The conversation covers real-world examples like AI-driven leak detection and self-dispatching field services, the role of digital twins, and practical advice for manufacturers of all sizes on embracing AI to stay competitive.\n\nLearn more: https://msft.it/6055Q7y7W\n\n#AIinManufacturing",
+  "OutputDir": "_videos",
+  "Author": "Microsoft Cloud",
+  "Title": "The New Industrialists | Transforming Manufacturing with Adaptive Cloud",
+  "ProcessedDate": "2026-04-21 17:28:15",
+  "PubDate": "2026-04-21T17:01:30+00:00",
+  "Tags": [
+    "#AdaptiveCloud",
+    "#AIinManufacturing",
+    "#EdgeAI",
+    "#IndustrialInnovation",
+    "AIinManufacturing"
+  ],
+  "FeedLevelAuthor": "Microsoft Cloud",
+  "Link": "https://www.youtube.com/watch?v=wgQTes-_ppc"
+}
