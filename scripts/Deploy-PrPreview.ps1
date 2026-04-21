@@ -371,7 +371,7 @@ else {
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
-        --max-replicas 5 `
+        --max-replicas 1 `
         --secrets "db-connection-string=$dbConnectionString" `
         --env-vars @apiEnvVars
     if ($LASTEXITCODE -ne 0) {
@@ -448,7 +448,7 @@ else {
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
-        --max-replicas 5 `
+        --max-replicas 1 `
         --env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to create Web Container App"
@@ -463,10 +463,10 @@ Write-Ok "Web Container App deployed: $webAppName"
 # than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
 # az containerapp create does not support --sticky-sessions, so we always set it via ingress update.
 Write-Detail "Enabling sticky sessions for $webAppName..."
-az containerapp ingress update `
+az containerapp ingress sticky-sessions set `
     --name $webAppName `
     --resource-group $stagingRG `
-    --sticky-sessions affinity
+    --affinity sticky
 if ($LASTEXITCODE -ne 0) {
     Write-Warn "Could not enable sticky sessions — Blazor SignalR may be unreliable with multiple replicas"
 }
