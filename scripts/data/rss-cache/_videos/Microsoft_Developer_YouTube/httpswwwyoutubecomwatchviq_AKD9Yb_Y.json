@@ -1,0 +1,22 @@
+{
+  "ProcessedDate": "2026-04-21 01:41:41",
+  "FeedUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=UCsMica-v34Irf9KVTh6xx-g",
+  "Description": "Build an enterprise AI agent using Copilot Studio and Power Platform to automate vendor onboarding with document validation, risk scoring, and approvals. In this episode, Dharanidharan Balasubramaniam, shares a practical, architecture-focused walkthrough using AI Builder, Dataverse, and Power Automate. You’ll see how these components work together to design a scalable, enterprise-ready agent that reduces manual effort while maintaining governance and control.",
+  "Title": "Building an Intelligent Vendor Onboarding Agent with Copilot Studio",
+  "Link": "https://www.youtube.com/watch?v=iq_AKD9Yb_Y",
+  "FeedLevelAuthor": "Microsoft Developer",
+  "PubDate": "2026-04-21T00:00:47+00:00",
+  "Tags": [
+    "Azure",
+    "Cloud Computing",
+    "Dev",
+    "Development",
+    "Microsoft",
+    "Tech",
+    "Technology"
+  ],
+  "Author": "Microsoft Developer",
+  "OutputDir": "_videos",
+  "FeedName": "Microsoft Developer YouTube",
+  "EnhancedContent": null
+}
