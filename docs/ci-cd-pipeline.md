@@ -8,31 +8,76 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 ## Workflows
 
-### PR Preview Environments
+### Unified CI/CD Pipeline
 
-**File**: [.github/workflows/pr-preview.yml](../.github/workflows/pr-preview.yml)
+**File**: [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml)
 
 **Triggers**:
 
-- Pull requests to `main` branch (opened, synchronized, reopened, or closed)
+- Push to `main` branch (CI + staging + production deployment)
+- Pull requests to `main` branch (CI + PR preview deployment)
+- Manual dispatch (CI + staging + production deployment)
 
-When a pull request is opened or updated, a dedicated preview environment is automatically
-deployed to the **staging Azure Container Apps Environment**. Each PR gets its own Container Apps
-(`ca-techhub-api-pr-{number}` and `ca-techhub-web-pr-{number}`) without touching the permanent
-staging application.
+This is a single unified pipeline. All CI quality checks run first; preview and production
+deployments are gated on them.
 
-**On PR opened / new commit pushed**:
+**CI Jobs** (run on every trigger except closed PRs, in parallel):
+
+1. **Build** - Builds the entire .NET solution
+2. **Unit Tests** - Runs all unit tests
+3. **Integration Tests** - Runs API integration tests
+4. **PowerShell Tests** - Runs Pester tests for automation scripts
+5. **Lint** - Checks code formatting and markdown linting
+6. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
+7. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
+8. **Code Coverage** - Generates coverage reports
+9. **Quality Gate** - Validates all checks passed and provides a clear summary
+
+**Quality Gates**:
+
+- All tests must pass (unit, integration, PowerShell)
+- No linting errors
+- Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
+- Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
+- CodeQL analysis completes successfully (code scanning runs on every push/PR)
+
+**Supply Chain Security**:
+
+- All GitHub Actions are SHA-pinned to specific commit hashes (not mutable tags) to prevent supply chain attacks
+- Action versions are annotated with comments (e.g., `# v4.3.1`) for readability
+
+Jobs run in parallel for faster feedback (~5-10 minutes total).
+
+**Concurrency Strategy**:
+
+- **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
+- **Deployment jobs use per-environment concurrency** (`deploy-staging`, `deploy-production`) to prevent conflicting deploys to the same environment
+- **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new pushes to an open PR cancel any in-progress preview deploy for that PR
+- CI jobs are stateless and safe to run in parallel across commits
+
+### PR Preview Environments
+
+PR preview is handled by jobs inside [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml),
+not a separate workflow. This means **the quality gate must pass before a preview is deployed** —
+if unit tests, integration tests, lint, or security checks fail, no container is built and no
+preview environment is created.
+
+When a pull request is opened or updated and the quality gate passes, a dedicated preview
+environment is automatically deployed to the **staging Azure Container Apps Environment**.
+Each PR gets its own Container Apps (`ca-techhub-api-pr-{number}` and
+`ca-techhub-web-pr-{number}`) without touching the permanent staging application.
+
+**On PR opened / new commit pushed** (after quality gate passes):
 
 1. Docker images are built and pushed to ACR, tagged `pr-{number}-{timestamp}`
 2. PR-specific Container Apps are created or updated in the staging environment
 3. A comment is posted (or updated) on the PR with the direct Container Apps URL
+4. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
 
 **On PR closed**:
 
-1. The PR-specific Container Apps are deleted
+1. The PR-specific Container Apps are deleted (no quality gate required)
 2. The PR comment is updated to confirm the environment has been removed
-
-**E2E Tests**: After the preview is deployed, Playwright E2E tests run automatically against the preview URL. Performance tests are excluded (they require local database access).
 
 **Key properties of PR preview environments**:
 
@@ -53,64 +98,9 @@ $env:POSTGRES_ADMIN_PASSWORD = "<staging-password>"
 ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action teardown
 ```
 
----
+### Main Branch Deployment Jobs
 
-### Unified CI/CD Pipeline
-
-**File**: [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml)
-
-**Triggers**:
-
-- Push to `main` branch (CI + deploy to staging)
-- Pull requests to `main` branch (CI only, no deployment)
-- Manual dispatch (CI + deploy)
-
-This is a single unified pipeline that runs all quality checks first, and only deploys after they pass. On pull requests, deployment jobs are skipped entirely.
-
-**CI Jobs** (run on every trigger):
-
-1. **Build** - Builds the entire .NET solution
-2. **Unit Tests** - Runs all unit tests
-3. **Integration Tests** - Runs API integration tests
-4. **PowerShell Tests** - Runs Pester tests for automation scripts
-5. **Lint** - Checks code formatting and markdown linting
-6. **Security** - Scans for vulnerabilities in dependencies (Trivy + dependency scan)
-7. **CodeQL** - Static analysis for security vulnerabilities (code scanning)
-8. **Code Coverage** - Generates coverage reports
-9. **Quality Gate** - Validates all checks passed and provides clear summary
-
-**Quality Gates**:
-
-- All tests must pass (unit, integration, PowerShell)
-- No linting errors
-- Build succeeds with zero warnings (`TreatWarningsAsErrors` enabled)
-- Security scan passes (Trivy fails the build on CRITICAL or HIGH vulnerabilities)
-- CodeQL analysis completes successfully (code scanning runs on every push/PR)
-
-**PR-Specific Features**:
-
-When running on pull requests, the Quality Gate provides:
-
-- Clear summary of what passed/failed
-- Actionable guidance on how to fix failures
-- Ready-for-review confirmation when all checks pass
-- Links to documentation for help
-- **No deployment** — PR runs stop after the quality gate
-
-**Supply Chain Security**:
-
-- All GitHub Actions are SHA-pinned to specific commit hashes (not mutable tags) to prevent supply chain attacks
-- Action versions are annotated with comments (e.g., `# v4.3.1`) for readability
-
-Jobs run in parallel for faster feedback (~5-10 minutes total).
-
-**Concurrency Strategy**:
-
-- **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
-- **Deployment jobs use per-environment concurrency** (`deploy-staging`, `deploy-production`) to prevent conflicting deploys to the same environment
-- CI jobs are stateless and safe to run in parallel across commits
-
-**Deployment Jobs** (run only after quality gate passes, never on PRs):
+Run only after the quality gate passes, and never on PRs.
 
 Every deployment runs the full Bicep template. ARM is idempotent and only redeploys resources whose desired state actually changed, so there is no need for change detection logic.
 
@@ -129,7 +119,7 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
 4. **E2E Tests (Staging)** - Playwright browser tests against staging
    - Runs after staging deployment succeeds
    - Uses `E2E_BASE_URL=https://staging-tech.hub.ms`
-   - Excludes performance tests (local-only)
+   - Excludes performance tests — see [Performance Tests](#performance-tests)
    - Must pass before production deployment proceeds
 
 5. **Deploy to Production** - Full infrastructure + application deployment
@@ -137,6 +127,28 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
    - Same flow as staging: single `Deploy-Infrastructure.ps1` call with image tag
    - Deploys same images used in staging (no rebuild)
    - Runs smoke tests (health check + homepage)
+
+### Performance Tests
+
+Database performance tests (`Category=Performance`) are **always excluded from CI** and can
+only be run locally. They are excluded by `--filter-not-trait "Category=Performance"` in all
+CI E2E runs.
+
+**Why local-only**: The performance tests connect directly to a PostgreSQL database containing
+a full production dataset (~4000+ content items). The production and staging databases are
+behind Azure private endpoints and are not accessible from GitHub Actions runners. There is
+no publicly reachable database with real data available in CI.
+
+**To run locally**:
+
+```powershell
+# 1. Ensure local PostgreSQL has real data (restore from production)
+./scripts/Restore-Database.ps1 -Target local
+
+# 2. Run performance tests only
+dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
+  -- --filter-trait "Category=Performance"
+```
 
 **Environments**:
 

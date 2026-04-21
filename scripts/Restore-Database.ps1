@@ -463,10 +463,10 @@ if (-not $SkipRestore) {
 
     Write-Detail "Target: $($targetPgEnv.PGHOST):$($targetPgEnv.PGPORT)/$($targetPgEnv.PGDATABASE)"
 
-    # For local restores, stop app servers first so they don't hold DB connections
-    # that would race with DROP DATABASE, then drop and recreate for a clean slate.
+    # Stop app servers first so they don't hold DB connections that would race
+    # with DROP DATABASE, then drop and recreate for a clean slate.
     if ($Target -eq 'local') {
-        Write-Step "Stopping app servers"
+        Write-Step "Stopping local app servers"
         docker compose stop api web 2>&1 | Out-Null
         docker compose rm -f api web 2>&1 | Out-Null
         foreach ($port in @(5001, 5003)) {
@@ -475,13 +475,41 @@ if (-not $SkipRestore) {
                 foreach ($p in $pids) { kill -9 $p 2>$null }
             }
         }
-        Write-Ok "App servers stopped"
+        Write-Ok "Local app servers stopped"
+    }
+    elseif ($Target -eq 'staging') {
+        Write-Step "Stopping staging Container Apps"
+        $stagingRg = "rg-techhub-staging"
+        $stagingApps = @("ca-techhub-api-staging", "ca-techhub-web-staging")
+        foreach ($app in $stagingApps) {
+            Write-Detail "Stopping $app..."
+            $stopOutput = az containerapp stop --name $app --resource-group $stagingRg --output none 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "   [WARN] Could not stop $($app): $stopOutput" -ForegroundColor Yellow
+            }
+        }
+        Write-Ok "Staging Container Apps stopped"
     }
 
-    $dropAndRecreate = $Target -eq 'local'
+    $dropAndRecreate = $true
     Invoke-PgRestore -PgEnv $targetPgEnv -InputFile $OutputPath -DropAndRecreate:$dropAndRecreate
 
     Write-Ok "Restore complete"
+
+    # Restart staging Container Apps after restore
+    if ($Target -eq 'staging') {
+        Write-Step "Starting staging Container Apps"
+        $stagingRg = "rg-techhub-staging"
+        $stagingApps = @("ca-techhub-api-staging", "ca-techhub-web-staging")
+        foreach ($app in $stagingApps) {
+            Write-Detail "Starting $app..."
+            $startOutput = az containerapp start --name $app --resource-group $stagingRg --output none 2>&1
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "   [WARN] Could not start $($app): $startOutput" -ForegroundColor Yellow
+            }
+        }
+        Write-Ok "Staging Container Apps started"
+    }
 
     # Reset the local database user password to match the local connection string,
     # so the app can connect without changing connection strings.

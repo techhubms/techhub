@@ -73,7 +73,7 @@ public static class BlazorHelpers
     internal const int BrowserLaunchTimeout = 30_000;
 
     /// <summary>Base URL for the Web frontend. Override with E2E_BASE_URL env var for CI/staging.</summary>
-    public static readonly string BaseUrl = Environment.GetEnvironmentVariable("E2E_BASE_URL") ?? "https://localhost:5003";
+    public static readonly string BaseUrl = (Environment.GetEnvironmentVariable("E2E_BASE_URL") ?? "https://localhost:5003").TrimEnd('/');
 
     // ============================================================================
     // SAFE WaitForFunctionAsync WRAPPERS
