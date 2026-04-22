@@ -93,19 +93,19 @@ Describe "Restore-Database" {
         }
 
         It "Should stop staging Container Apps before restore" {
-            $content | Should -Match 'az containerapp stop'
+            $content | Should -Match 'az containerapp revision deactivate'
             $content | Should -Match 'ca-techhub-api-staging'
             $content | Should -Match 'ca-techhub-web-staging'
         }
 
         It "Should start staging Container Apps after restore" {
-            $content | Should -Match 'az containerapp start'
+            $content | Should -Match 'az containerapp revision activate'
         }
 
         It "Should stop staging apps before drop and start them after restore" {
-            $stopIndex = $content.IndexOf('az containerapp stop')
+            $stopIndex = $content.IndexOf('az containerapp revision deactivate')
             $dropIndex = $content.IndexOf('$dropAndRecreate')
-            $startIndex = $content.IndexOf('az containerapp start')
+            $startIndex = $content.IndexOf('az containerapp revision activate')
             $stopIndex | Should -BeLessThan $dropIndex
             $dropIndex | Should -BeLessThan $startIndex
         }
