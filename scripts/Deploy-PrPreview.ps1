@@ -529,7 +529,7 @@ if (-not $ready) {
     # Dump recent system log events for the latest revision to aid triage.
     # NOTE: Old ACR images are intentionally NOT deleted here so that the
     # failing revision can still be examined and so a re-deploy can pull them.
-    Write-Err "Web did not respond within $($maxAttempts * 5)s — failing deploy"
+    Write-Fail "Web did not respond within $($maxAttempts * 5)s — failing deploy"
     try {
         $latestRevision = az containerapp revision list `
             -n $webAppName -g $ResourceGroup `
