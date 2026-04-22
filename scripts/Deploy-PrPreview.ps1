@@ -532,7 +532,7 @@ if (-not $ready) {
     Write-Fail "Web did not respond within $($maxAttempts * 5)s — failing deploy"
     try {
         $latestRevision = az containerapp revision list `
-            -n $webAppName -g $ResourceGroup `
+            -n $webAppName -g $stagingRG `
             --query "sort_by([], &properties.createdTime) | [-1]" -o json 2>$null |
             ConvertFrom-Json -ErrorAction SilentlyContinue
         if ($latestRevision) {
@@ -549,7 +549,7 @@ if (-not $ready) {
         }
         Write-Host ""
         Write-Host "Recent system events for $webAppName (last 30):" -ForegroundColor Yellow
-        az containerapp logs show -n $webAppName -g $ResourceGroup --type system --tail 30 2>&1 |
+        az containerapp logs show -n $webAppName -g $stagingRG --type system --tail 30 2>&1 |
             Select-Object -Last 30
     }
     catch {
