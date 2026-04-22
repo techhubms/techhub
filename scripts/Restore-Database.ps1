@@ -482,10 +482,14 @@ if (-not $SkipRestore) {
         $stagingRg = "rg-techhub-staging"
         $stagingApps = @("ca-techhub-api-staging", "ca-techhub-web-staging")
         foreach ($app in $stagingApps) {
-            Write-Detail "Stopping $app..."
-            $stopOutput = az containerapp stop --name $app --resource-group $stagingRg --output none 2>&1
-            if ($LASTEXITCODE -ne 0) {
-                Write-Host "   [WARN] Could not stop $($app): $stopOutput" -ForegroundColor Yellow
+            Write-Detail "Deactivating revisions of $app..."
+            $revisions = az containerapp revision list --name $app --resource-group $stagingRg --query "[?properties.active].name" -o tsv 2>&1
+            if ($LASTEXITCODE -ne 0 -or -not $revisions) {
+                Write-Host "   [WARN] Could not list revisions for $($app) (app may not exist yet)" -ForegroundColor Yellow
+                continue
+            }
+            foreach ($rev in ($revisions -split "`n" | Where-Object { $_ -ne '' })) {
+                az containerapp revision deactivate --name $app --resource-group $stagingRg --revision $rev --output none 2>&1 | Out-Null
             }
         }
         Write-Ok "Staging Container Apps stopped"
@@ -502,10 +506,14 @@ if (-not $SkipRestore) {
         $stagingRg = "rg-techhub-staging"
         $stagingApps = @("ca-techhub-api-staging", "ca-techhub-web-staging")
         foreach ($app in $stagingApps) {
-            Write-Detail "Starting $app..."
-            $startOutput = az containerapp start --name $app --resource-group $stagingRg --output none 2>&1
-            if ($LASTEXITCODE -ne 0) {
-                Write-Host "   [WARN] Could not start $($app): $startOutput" -ForegroundColor Yellow
+            Write-Detail "Activating revisions of $app..."
+            $revisions = az containerapp revision list --name $app --resource-group $stagingRg --query "[?!properties.active].name" -o tsv 2>&1
+            if ($LASTEXITCODE -ne 0 -or -not $revisions) {
+                Write-Host "   [WARN] Could not list revisions for $($app) (app may not exist yet)" -ForegroundColor Yellow
+                continue
+            }
+            foreach ($rev in ($revisions -split "`n" | Where-Object { $_ -ne '' })) {
+                az containerapp revision activate --name $app --resource-group $stagingRg --revision $rev --output none 2>&1 | Out-Null
             }
         }
         Write-Ok "Staging Container Apps started"
