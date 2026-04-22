@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "@playwright/test": "^1.59.0",
+    "@playwright/test": "^1.59.1",
     "husky": "^9.1.7",
-    "markdownlint-cli2": "^0.22.0"
+    "markdownlint-cli2": "^0.22.1"
   },
   "scripts": {
     "prepare": "husky"
