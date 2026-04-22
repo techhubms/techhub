@@ -461,38 +461,6 @@ else {
 
 Write-Ok "Web Container App deployed: $webAppName"
 
-# Clean up old images for this PR from ACR (keep only the tag just deployed)
-Write-Step "Cleaning up old ACR images for PR #$PrNumber (keeping: $Tag)"
-$prTagFilter = "pr-$PrNumber-"
-foreach ($repo in @('techhub-api', 'techhub-web')) {
-    $oldTags = az acr repository show-tags `
-        --name $RegistryName `
-        --repository $repo `
-        --query "[?starts_with(@, '$prTagFilter') && @ != '$Tag']" `
-        -o tsv 2>$null
-
-    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($oldTags)) {
-        Write-Detail "No old tags to clean up for $repo"
-        continue
-    }
-
-    foreach ($oldTag in $oldTags -split "`n") {
-        $oldTag = $oldTag.Trim()
-        if ([string]::IsNullOrWhiteSpace($oldTag)) { continue }
-        Write-Detail "Deleting old ${repo}:$oldTag..."
-        az acr repository delete `
-            --name $RegistryName `
-            --image "${repo}:$oldTag" `
-            --yes 2>$null | Out-Null
-        if ($LASTEXITCODE -eq 0) {
-            Write-Ok "Deleted old ${repo}:$oldTag"
-        }
-        else {
-            Write-Warn "Could not delete ${repo}:$oldTag — skipping"
-        }
-    }
-}
-
 # Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
 # Without session affinity, WebSocket connections may route to a different container instance
 # than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
@@ -559,6 +527,8 @@ if (-not $ready) {
     # ImagePullUnauthorized, crash loop, etc.). Running E2E tests against a
     # dead site just wastes 60s per test and obscures the real failure.
     # Dump recent system log events for the latest revision to aid triage.
+    # NOTE: Old ACR images are intentionally NOT deleted here so that the
+    # failing revision can still be examined and so a re-deploy can pull them.
     Write-Err "Web did not respond within $($maxAttempts * 5)s — failing deploy"
     try {
         $latestRevision = az containerapp revision list `
@@ -586,6 +556,39 @@ if (-not $ready) {
         Write-Detail "Could not fetch diagnostic info: $_"
     }
     exit 1
+}
+
+# New revision is healthy — clean up old ACR images for this PR (keep only the tag just deployed).
+# Done AFTER warmup so the old revision's image is still pullable if the new one fails to start.
+Write-Step "Cleaning up old ACR images for PR #$PrNumber (keeping: $Tag)"
+$prTagFilter = "pr-$PrNumber-"
+foreach ($repo in @('techhub-api', 'techhub-web')) {
+    $oldTags = az acr repository show-tags `
+        --name $RegistryName `
+        --repository $repo `
+        --query "[?starts_with(@, '$prTagFilter') && @ != '$Tag']" `
+        -o tsv 2>$null
+
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($oldTags)) {
+        Write-Detail "No old tags to clean up for $repo"
+        continue
+    }
+
+    foreach ($oldTag in $oldTags -split "`n") {
+        $oldTag = $oldTag.Trim()
+        if ([string]::IsNullOrWhiteSpace($oldTag)) { continue }
+        Write-Detail "Deleting old ${repo}:$oldTag..."
+        az acr repository delete `
+            --name $RegistryName `
+            --image "${repo}:$oldTag" `
+            --yes 2>$null | Out-Null
+        if ($LASTEXITCODE -eq 0) {
+            Write-Ok "Deleted old ${repo}:$oldTag"
+        }
+        else {
+            Write-Warn "Could not delete ${repo}:$oldTag — skipping"
+        }
+    }
 }
 
 # ============================================================================
