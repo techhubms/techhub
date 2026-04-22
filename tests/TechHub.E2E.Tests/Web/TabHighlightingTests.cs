@@ -207,11 +207,13 @@ public class TabHighlightingTests : PlaywrightTestBase
             "() => !document.documentElement.classList.contains('keyboard-nav')");
 
         // Assert - Element should NOT have a visible outline (no keyboard-nav class active)
-        // When outline: none is applied, browsers may return "0px" or "" for outlineWidth
-        var outlineWidth = await link.EvaluateAsync<string>(
-            "el => window.getComputedStyle(el).outlineWidth");
-        outlineWidth.Should().BeOneOf("0px", "",
-            "focused element should not show outline when keyboard-nav class is not active (pointer mode)");
+        // Check outline-style rather than outline-width: CSS outline: none sets style to "none"
+        // which makes the outline invisible, but some browsers still report a non-zero width
+        // for :focus-visible elements as part of accessibility heuristics.
+        var outlineStyle = await link.EvaluateAsync<string>(
+            "el => window.getComputedStyle(el).outlineStyle");
+        outlineStyle.Should().Be("none",
+            "focused element should have outline-style 'none' when keyboard-nav class is not active (pointer mode)");
     }
 
     [Fact]
@@ -237,11 +239,13 @@ public class TabHighlightingTests : PlaywrightTestBase
             "search input should not show box-shadow ring when focused via pointer");
 
         // Outline should also be suppressed
-        // When outline: none is applied, browsers may return "0px" or "" for outlineWidth
-        var outlineWidth = await searchInput.EvaluateAsync<string>(
-            "el => window.getComputedStyle(el).outlineWidth");
-        outlineWidth.Should().BeOneOf("0px", "",
-            "search input should not show outline when focused via pointer");
+        // Check outline-style rather than outline-width: CSS outline: none sets style to "none"
+        // which makes the outline invisible, but some browsers still report a non-zero width
+        // for :focus-visible elements as part of accessibility heuristics.
+        var outlineStyle = await searchInput.EvaluateAsync<string>(
+            "el => window.getComputedStyle(el).outlineStyle");
+        outlineStyle.Should().Be("none",
+            "search input should have outline-style 'none' when focused via pointer");
     }
 
     [Fact]

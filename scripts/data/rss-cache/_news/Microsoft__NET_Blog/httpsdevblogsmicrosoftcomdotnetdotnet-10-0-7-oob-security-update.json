@@ -1,0 +1,21 @@
+{
+  "OutputDir": "_news",
+  "FeedUrl": "https://devblogs.microsoft.com/dotnet/feed/",
+  "EnhancedContent": "We are releasing .NET 10.0.7 as an out-of-band (OOB) update to address a security issue introduced in [Microsoft.AspNetCore.DataProtection](https://www.nuget.org/packages/Microsoft.AspNetCore.DataProtection).\n\n## Security update details\n\nThis release includes a fix for [CVE-2026-40372](https://github.com/dotnet/announcements/issues/395)\n\nAfter the Patch Tuesday 10.0.6 release, some customers reported that decryption was failing in their applications. This behavior was reported in [aspnetcore issue #66335](https://github.com/dotnet/aspnetcore/issues/66335).\n\nWhile investigating those reports, we determined that the regression also exposed a vulnerability. In versions 10.0.0 through .NET 10.0.6 of the Microsoft.AspNetCore.DataProtection NuGet package, the managed authenticated encryptor could compute its HMAC validation tag over the wrong bytes of the payload and then discard the computed hash, which could result in elevation of privilege.\n\n**Update required**\n\nIf your application uses ASP.NET Core Data Protection, update the Microsoft.AspNetCore.DataProtection package to 10.0.7 as soon as possible to address the decryption regression and security vulnerability.\n\n### Download .NET 10.0.7\n\n| | .NET 10.0 | | --- | --- | | Release Notes | [10.0 release notes](https://github.com/dotnet/core/blob/main/release-notes/10.0/README.md) | | Installers and binaries | [10.0.7](https://dotnet.microsoft.com/download/dotnet/10.0) | | Container Images | [images](https://mcr.microsoft.com/catalog?search=dotnet/) | | Linux packages | [10.0](https://github.com/dotnet/core/blob/main/release-notes/10.0/install-linux.md) | | Known Issues | [10.0](https://github.com/dotnet/core/blob/main/release-notes/10.0/known-issues.md) |\n\n### Installation guidance\n\n1. Download and install the [.NET 10.0.7 SDK or Runtime](https://dotnet.microsoft.com/download/dotnet/10.0).\n2. Verify installation by running `dotnet --info`\nand confirming you are on 10.0.7.\n3. Rebuild and redeploy your applications using updated images or packages.\n\n## Share your feedback\n\nIf you experience any issues after installing this update, please let us know in the [.NET release feedback issues](https://github.com/dotnet/core/issues).",
+  "FeedLevelAuthor": ".NET Blog",
+  "Link": "https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/",
+  "Tags": [
+    ".NET",
+    ".NET 10",
+    "CVE-2026-40372",
+    "Maintenance & Updates",
+    "OOB",
+    "Security"
+  ],
+  "Title": ".NET 10.0.7 Out-of-Band Security Update",
+  "FeedName": "Microsoft .NET Blog",
+  "Author": "Rahul Bhandari (MSFT)",
+  "Description": "We are releasing .NET 10.0.7 as an out-of-band security update to address CVE-2026-40372.\n\nThe post [.NET 10.0.7 Out-of-Band Security Update](https://devblogs.microsoft.com/dotnet/dotnet-10-0-7-oob-security-update/) appeared first on [.NET Blog](https://devblogs.microsoft.com/dotnet).",
+  "ProcessedDate": "2026-04-21 19:32:37",
+  "PubDate": "2026-04-21T18:48:34+00:00"
+}

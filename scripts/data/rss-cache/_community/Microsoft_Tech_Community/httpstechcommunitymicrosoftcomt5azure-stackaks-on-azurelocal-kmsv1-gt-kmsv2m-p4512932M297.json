@@ -1,0 +1,14 @@
+{
+  "Author": "the-capricorn",
+  "Description": "Hey, quick question on AKS Arc — we're running moc-kms-plugin:0.2.172-official on an Arc-enabled AKS cluster on Azure Local and currently have KMSv1=true as a feature gate to keep encryption at rest working.\n\nKMSv1 is deprecated in 1.28+ and we want to migrate to KMSv2 before it gets removed. Since moc-kms-plugin is a Microsoft-managed component we can't just swap it out ourselves.\n\nA few questions:\n\n- Does version 0.2.172 already support the KMSv2 gRPC API, or is that coming in a later release?\n- Is there a supported migration path for AKS Arc specifically, or does this come automatically through a platform update?\n- Any docs or internal guidance you can point us to?\n\nThanks!",
+  "Tags": [],
+  "PubDate": "2026-04-20T10:05:49+00:00",
+  "Title": "AKS on AzureLocal: KMSv1 -> KMSv2",
+  "FeedUrl": "https://techcommunity.microsoft.com/t5/s/gxcuf89792/rss/Category?category.id=Azure",
+  "ProcessedDate": "2026-04-20 20:21:20",
+  "OutputDir": "_community",
+  "Link": "https://techcommunity.microsoft.com/t5/azure-stack/aks-on-azurelocal-kmsv1-gt-kmsv2/m-p/4512932#M297",
+  "EnhancedContent": "Hey, quick question on AKS Arc — we're running moc-kms-plugin:0.2.172-official on an Arc-enabled AKS cluster on Azure Local and currently have KMSv1=true as a feature gate to keep encryption at rest working.\n\nKMSv1 is deprecated in 1.28+ and we want to migrate to KMSv2 before it gets removed. Since moc-kms-plugin is a Microsoft-managed component we can't just swap it out ourselves.\n\nA few questions:\n\n- Does version 0.2.172 already support the KMSv2 gRPC API, or is that coming in a later release?\n- Is there a supported migration path for AKS Arc specifically, or does this come automatically through a platform update?\n- Any docs or internal guidance you can point us to?\n\nThanks!",
+  "FeedName": "Microsoft Tech Community",
+  "FeedLevelAuthor": "rss.livelink.threads-in-node"
+}

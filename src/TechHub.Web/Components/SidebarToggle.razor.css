@@ -37,7 +37,7 @@
   border-color: var(--color-purple-bright);
 }
 
-.sidebar-toggle:focus-visible {
+html.keyboard-nav .sidebar-toggle:focus-visible {
   outline: 2px solid var(--color-purple-bright);
   outline-offset: 2px;
 }

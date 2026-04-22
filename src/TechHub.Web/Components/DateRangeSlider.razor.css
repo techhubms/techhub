@@ -95,7 +95,7 @@
     }
 }
 
-.slider-input:focus-visible::-webkit-slider-thumb {
+html.keyboard-nav .slider-input:focus-visible::-webkit-slider-thumb {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
 }
@@ -120,7 +120,7 @@
     }
 }
 
-.slider-input:focus-visible::-moz-range-thumb {
+html.keyboard-nav .slider-input:focus-visible::-moz-range-thumb {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
 }
@@ -187,7 +187,7 @@
     color: var(--color-purple-bright);
 }
 
-.date-preset-button:focus-visible {
+html.keyboard-nav .date-preset-button:focus-visible {
     outline: 2px solid var(--color-purple-bright);
     outline-offset: 2px;
 }
