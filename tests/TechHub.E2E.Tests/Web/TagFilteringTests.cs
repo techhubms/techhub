@@ -462,8 +462,11 @@ public class TagFilteringTests : PlaywrightTestBase
         var tagALocator = Page.Locator(".tag-cloud-item")
             .Filter(new() { HasTextRegex = BuildTagRegex(tagAName) });
         await Assertions.Expect(tagALocator).ToBeVisibleAsync();
+        // Assert URL contains the specifically clicked tag (not just "any tags=") so we wait for
+        // the URL update that happens after LoadTagsAsync() completes — ensuring counts are fresh.
+        var tagAUrlPattern = Regex.Escape(Uri.EscapeDataString(tagAName.ToLowerInvariant()));
         await tagALocator.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagAUrlPattern}.*", RegexOptions.IgnoreCase), new() { Timeout = 5000 }));
         await WaitForTagCloudReadyAsync();
 
         var tagBLocator = Page.Locator(".tag-cloud-item")
@@ -478,8 +481,11 @@ public class TagFilteringTests : PlaywrightTestBase
         tagBLocator = Page.Locator(".tag-cloud-item")
             .Filter(new() { HasTextRegex = BuildTagRegex(tagBName) });
         await Assertions.Expect(tagBLocator).ToBeVisibleAsync();
+        // Assert URL contains the specifically clicked tag (not just "any tags=") so we wait for
+        // the URL update that happens after LoadTagsAsync() completes — ensuring counts are fresh.
+        var tagBUrlPattern = Regex.Escape(Uri.EscapeDataString(tagBName.ToLowerInvariant()));
         await tagBLocator.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagBUrlPattern}.*", RegexOptions.IgnoreCase), new() { Timeout = 5000 }));
         await WaitForTagCloudReadyAsync();
 
         tagALocator = Page.Locator(".tag-cloud-item")
