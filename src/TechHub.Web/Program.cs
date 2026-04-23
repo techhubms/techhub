@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
@@ -248,6 +249,14 @@ using (var scope = app.Services.CreateScope())
     var sections = await apiClient.GetAllSectionsAsync();
     sectionCache.Initialize(sections?.ToList() ?? []);
 }
+
+// Trust X-Forwarded-Proto and X-Forwarded-For from the Azure Container Apps reverse proxy.
+// Without this, ASP.NET Core sees the inner HTTP request and builds OIDC redirect URIs
+// with http:// instead of https://, causing AADSTS50011 redirect URI mismatch errors.
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
