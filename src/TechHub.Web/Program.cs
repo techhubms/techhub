@@ -253,13 +253,13 @@ using (var scope = app.Services.CreateScope())
 // Trust X-Forwarded-Proto and X-Forwarded-For from the Azure Container Apps reverse proxy.
 // Without this, ASP.NET Core sees the inner HTTP request and builds OIDC redirect URIs
 // with http:// instead of https://, causing AADSTS50011 redirect URI mismatch errors.
-// KnownNetworks/KnownProxies are cleared because Azure Container Apps proxies from
+// KnownIPNetworks/KnownProxies are cleared because Azure Container Apps proxies from
 // internal IPs that are not in the default loopback-only trusted list.
 var forwardedHeadersOptions = new ForwardedHeadersOptions
 {
     ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
 };
-forwardedHeadersOptions.KnownNetworks.Clear();
+forwardedHeadersOptions.KnownIPNetworks.Clear();
 forwardedHeadersOptions.KnownProxies.Clear();
 app.UseForwardedHeaders(forwardedHeadersOptions);
 
