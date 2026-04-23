@@ -34,6 +34,8 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
 param openAiModelCapacity = 200
+// Admin IP allow-list — grants firewall access to PostgreSQL and Key Vault
+param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
 // Azure AD — admin dashboard authentication
 param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
 param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
