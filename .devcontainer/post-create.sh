@@ -14,7 +14,9 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 # certbot for requesting Let's Encrypt wildcard TLS certificates
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 postgresql-client certbot certbot-dns-azure
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 postgresql-client certbot python3-pip
+# certbot-dns-azure is not an apt package — install via pip
+pip3 install certbot-dns-azure --break-system-packages
 
 # ==================== .NET Dev Certificates ====================
 sudo dotnet workload update
@@ -114,6 +116,9 @@ $env:PATH = "$HOME/.aspire/bin:$env:PATH"
 
 # Add .NET global tools
 $env:PATH = "$HOME/.dotnet/tools:$env:PATH"
+
+# Add pip user scripts (e.g. certbot installed via pip3 --user)
+$env:PATH = "$HOME/.local/bin:$env:PATH"
 
 # Add npm global packages
 $env:PATH = "/usr/local/share/nvm/versions/node/v24.13.0/bin:$env:PATH"

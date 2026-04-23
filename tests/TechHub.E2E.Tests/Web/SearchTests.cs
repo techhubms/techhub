@@ -88,11 +88,16 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await Assertions.Expect(searchInput).ToHaveValueAsync("test");
 
-        // Act + Assert — retry [click + URL no longer has search=]
+        // Act + Assert — retry [click + URL no longer has search= + input empty]
+        // URL update (history.replaceState) and input DOM clear are separate Blazor
+        // renders; asserting both inside the retry block ensures both have happened.
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
         await clearButton.ClickAndExpectAsync(async () =>
+        {
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 }));
+                new Regex("search="), new() { Timeout = 2000 });
+            await Assertions.Expect(searchInput).ToHaveValueAsync("", new() { Timeout = 2000 });
+        });
 
         // Assert - Search should be cleared
         var inputValue = await searchInput.InputValueAsync();
@@ -110,11 +115,9 @@ public class SearchTests : PlaywrightTestBase
 
         // Act 1 - Select a tag
         var tagButton = Page.Locator(".tag-cloud-item").First;
-        await tagButton.ClickBlazorElementAsync();
-
-        // Wait for tags parameter to appear in URL after tag click
-        await Page.WaitForConditionAsync(
-            "() => window.location.href.includes('tags=')");
+        await tagButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
@@ -163,13 +166,17 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await Assertions.Expect(searchInput).ToHaveValueAsync("test");
 
-        // Act - Focus search box and press Escape
-        await searchInput.FocusAsync();
-        await searchInput.PressAsync("Escape");
-
-        // Wait for URL to update (search parameter removed via Blazor)
-        await Page.WaitForConditionAsync(
-            "() => !window.location.href.includes('search=')");
+        // Act - Focus search box and press Escape, retry until URL clears.
+        // On slow networks Blazor's @onkeydown may not be attached when the first
+        // Escape fires; RetryUntilPassAsync re-focuses and re-presses until the
+        // URL update confirms the server processed the key event.
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            await searchInput.FocusAsync();
+            await searchInput.PressAsync("Escape");
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                new Regex("search="), new() { Timeout = 2000 });
+        });
 
         // Assert - Search should be cleared
         var inputValue = await searchInput.InputValueAsync();

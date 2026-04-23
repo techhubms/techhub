@@ -86,14 +86,15 @@ public class DateRangeSliderTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot");
         await WaitForSliderReadyAsync();
 
-        // Act - Click the "30d" preset (don't wait for URL change, wait for class change instead)
+        // Act + Assert — retry [click + active class] to survive the Blazor hydration race.
+        // A single click without retry loses the click silently on slow networks when
+        // @onclick hasn't been attached yet; ClickAndExpectAsync retries until the assertion passes.
         var thirtyDayButton = Page.Locator(".date-preset-button:has-text('30d')");
-        await thirtyDayButton.ClickBlazorElementAsync(waitForUrlChange: false);
+        await thirtyDayButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(thirtyDayButton).ToHaveClassAsync(
+                new System.Text.RegularExpressions.Regex("active"), new() { Timeout = 2000 }));
 
-        // Assert - 30d should become active, 90d should not be active
-        await Assertions.Expect(thirtyDayButton).ToHaveClassAsync(
-            new System.Text.RegularExpressions.Regex("active"));
-
+        // Assert - 90d should not be active
         var ninetyDayButton = Page.Locator(".date-preset-button:has-text('90d')");
         await Assertions.Expect(ninetyDayButton).Not.ToHaveClassAsync(
             new System.Text.RegularExpressions.Regex("active"));

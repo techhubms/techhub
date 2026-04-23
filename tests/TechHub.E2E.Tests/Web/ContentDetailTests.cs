@@ -119,10 +119,11 @@ public class ContentDetailTests : PlaywrightTestBase
 
         if (count > 0)
         {
-            await roundupLinks.First.ClickBlazorElementAsync();
+            await roundupLinks.First.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(
+                    new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
 
             // Assert - Should navigate to roundup detail page
-            await Page.WaitForBlazorUrlContainsAsync("/roundups/");
             Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
         }
     }

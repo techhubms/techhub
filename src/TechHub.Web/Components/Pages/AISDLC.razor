@@ -278,10 +278,16 @@
     {
         if (pageData != null)
         {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("initMermaid");
-            await JS.InvokeVoidAsync("initTocScrollSpy");
-            await JS.InvokeVoidAsync("markScriptsReady");
+            try
+            {
+                await JS.InvokeVoidAsync("markScriptsLoading");
+                await JS.InvokeVoidAsync("initMermaid");
+                await JS.InvokeVoidAsync("initTocScrollSpy");
+            }
+            finally
+            {
+                await JS.InvokeVoidAsync("markScriptsReady");
+            }
         }
     }
 

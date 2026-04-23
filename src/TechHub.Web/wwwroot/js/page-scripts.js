@@ -300,7 +300,7 @@ export async function initCustomPages() {
 /**
  * Load an external script by URL. Returns a promise that resolves when loaded.
  */
-function loadScript(src, integrity = null) {
+function loadScript(src, integrity = null, timeoutMs = 10_000) {
     return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = src;
@@ -310,8 +310,9 @@ function loadScript(src, integrity = null) {
         if (integrity) {
             script.integrity = integrity;
         }
-        script.onload = resolve;
-        script.onerror = reject;
+        const timer = setTimeout(() => reject(new Error(`Script load timeout: ${src}`)), timeoutMs);
+        script.onload = () => { clearTimeout(timer); resolve(); };
+        script.onerror = (err) => { clearTimeout(timer); reject(err); };
         document.body.appendChild(script);
     });
 }

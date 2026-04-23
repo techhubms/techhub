@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -57,10 +58,11 @@ public class UrlRoutingTests : PlaywrightTestBase
 
         // Act - Click "Blogs" collection button
         var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
-        await blogsButton.ClickBlazorElementAsync();
+        await blogsButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/blogs.*"), new() { Timeout = 2000 }));
 
         // Assert - URL should update to /ai/blogs
-        await Page.WaitForBlazorUrlContainsAsync("/ai/blogs");
 
         // Wait for page heading to actually update to show "Blog" (from "Blog Posts")
         var pageH1 = Page.Locator("h1.page-h1");
@@ -75,10 +77,11 @@ public class UrlRoutingTests : PlaywrightTestBase
 
         // Act - Click "Browse" button
         var browseButton = Page.Locator(".sub-nav a", new() { HasTextString = "Browse" });
-        await browseButton.ClickBlazorElementAsync();
+        await browseButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/all.*"), new() { Timeout = 2000 }));
 
         // Assert - URL should update to /ai/all
-        await Page.WaitForBlazorUrlContainsAsync("/ai/all");
     }
 
     [Fact]
@@ -92,8 +95,9 @@ public class UrlRoutingTests : PlaywrightTestBase
 
         // Navigate to videos
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
+        await videosButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/videos.*"), new() { Timeout = 2000 }));
 
         // Wait for Blazor to sync state (update .active class)
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
@@ -119,8 +123,9 @@ public class UrlRoutingTests : PlaywrightTestBase
 
         // Navigate to videos
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
+        await videosButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/videos.*"), new() { Timeout = 2000 }));
 
         // Go back to news
         await Page.GoBackAsync();
@@ -281,23 +286,23 @@ public class UrlRoutingTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai");
 
         // Act - Click each collection button and verify navigation
-        // NOTE: Blazor Server uses enhanced navigation (SPA-style), so we poll for URL changes
-        // instead of waiting for navigation events (see BlazorHelpers.WaitForBlazorUrlContainsAsync)
+        // NOTE: Blazor Server uses enhanced navigation (SPA-style), so we retry each
+        // click until the URL confirms navigation (ClickAndExpectAsync pattern).
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
-        await newsButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/news");
+        await newsButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/news.*"), new() { Timeout = 2000 }));
 
         var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
-        await blogsButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/blogs");
+        await blogsButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/blogs.*"), new() { Timeout = 2000 }));
 
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/videos");
+        await videosButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/videos.*"), new() { Timeout = 2000 }));
 
         var communityButton = Page.Locator(".sub-nav a", new() { HasTextString = "Community" });
-        await communityButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/community");
+        await communityButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/community.*"), new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -318,10 +323,8 @@ public class UrlRoutingTests : PlaywrightTestBase
         if (retryButtonExists)
         {
             // Act - Click retry button
-            await retryButton.ClickBlazorElementAsync();
-
-            // Assert - Should attempt to reload (check for loading state or success)
-            await Page.WaitForBlazorRenderAsync(".section-card");
+            await retryButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page.Locator(".section-card")).ToBeVisibleAsync(new() { Timeout = 2000 }));
         }
 
         // If no error state, just verify the button would work (test passes either way)

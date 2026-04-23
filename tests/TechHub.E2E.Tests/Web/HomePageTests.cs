@@ -142,10 +142,9 @@ public class HomePageTests : PlaywrightTestBase
             else
             {
                 // Internal links should navigate within the current page
-                await firstLink.ClickBlazorElementAsync();
-
-                // Assert - Should navigate away from homepage
-                await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"));
+                await firstLink.ClickAndExpectAsync(async () =>
+                    await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                        new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
             }
         }
     }
@@ -163,7 +162,9 @@ public class HomePageTests : PlaywrightTestBase
 
         if (count > 0)
         {
-            await tagLinks.First.ClickBlazorElementAsync();
+            await tagLinks.First.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                    new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
 
             // Assert - Should navigate to filtered view or section with tag parameter
             var currentUrl = Page.Url;

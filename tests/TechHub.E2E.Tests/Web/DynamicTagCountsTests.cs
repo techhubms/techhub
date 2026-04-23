@@ -48,10 +48,8 @@ public class DynamicTagCountsTests : PlaywrightTestBase
 
         // Act - Select first tag (that has a count > 0)
         var firstTag = Page.Locator(".tag-cloud-item").First;
-        await firstTag.ClickBlazorElementAsync();
-
-        // Wait for URL to update
-        await Page.WaitForURLAsync(url => url.Contains("tags="));
+        await firstTag.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
 
         // Wait for tag cloud to reload with new counts
         await WaitForTagCloudReadyAsync();
@@ -94,8 +92,8 @@ public class DynamicTagCountsTests : PlaywrightTestBase
             }
 
             // Select a tag
-            await enabledTags[0].ClickBlazorElementAsync();
-            await Page.WaitForURLAsync(url => url.Contains("tags="));
+            await enabledTags[0].ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
             await WaitForTagCloudReadyAsync();
 
             // Check if any tags are now disabled
@@ -231,8 +229,8 @@ public class DynamicTagCountsTests : PlaywrightTestBase
                 break;
             }
 
-            await enabledTags[0].ClickBlazorElementAsync();
-            await Page.WaitForURLAsync(url => url.Contains("tags="));
+            await enabledTags[0].ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
             await WaitForTagCloudReadyAsync();
 
             var disabledCount = await Page.Locator(".tag-cloud-item.disabled").CountAsync();
@@ -252,9 +250,10 @@ public class DynamicTagCountsTests : PlaywrightTestBase
             var disabledTag = Page.Locator(".tag-cloud-item.disabled").First;
             var urlBeforeClick = Page.Url;
 
-            // Use the shared helper but disable URL wait since we expect NO change
-            await disabledTag.ClickBlazorElementAsync(
-                waitForUrlChange: false);
+            // Click once and assert URL unchanged — disabled buttons should not fire events.
+            // No retry needed (we're verifying absence of action, not waiting for one).
+            await disabledTag.WaitForBlazorInteractivityAsync();
+            await disabledTag.ClickAsync(new() { Force = true, Timeout = 2000 });
 
             // Assert - URL should not change (tag should not be selected)
             Page.Url.Should().Be(urlBeforeClick, "Clicking disabled tag should not change URL or filter state");

@@ -20,21 +20,23 @@ namespace TechHub.E2E.Tests.Helpers;
 ///
 /// USAGE EXAMPLES - Common Test Patterns:
 ///
-/// 1. Click collection button and verify state:
-///    await page.ClickAndNavigateAsync(".sub-nav a", text: "Videos",
-///        expectedUrlSegment: "/videos", waitForActiveState: "Videos");
+/// 1. Click tag and wait for URL change:
+///    await tagButton.ClickAndExpectAsync(async () =>
+///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
 ///
 /// 2. Click section card on homepage:
-///    await page.ClickAndNavigateAsync(".section-card-container a.section-card[href*='github-copilot']",
-///        expectedUrlSegment: "/github-copilot");
+///    await sectionCard.ClickAndExpectAsync(async () =>
+///        await Assertions.Expect(page).Not.ToHaveURLAsync(
+///            new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
 ///
 /// 3. Click content card to detail page:
-///    await page.ClickAndNavigateAsync(".card", nth: 0,
-///        expectedUrlSegment: "/roundups/");
+///    await roundupLink.ClickAndExpectAsync(async () =>
+///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
 ///
-/// 4. Click navigation link:
-///    await page.ClickAndNavigateAsync("a", text: "About", expectedUrlSegment: "/about",
-///        customWait: async p => await Assertions.Expect(p.Locator("main")).ToBeVisibleAsync());
+/// 4. Click a button that toggles a CSS class (no navigation):
+///    await filterButton.ClickAndExpectAsync(async () =>
+///        await Assertions.Expect(filterButton).Not.ToHaveClassAsync(
+///            new Regex("active"), new() { Timeout = 2000 }));
 ///
 /// 5. Use Expect assertions instead of TextContentAsync + Should.Contain:
 ///    // DON'T: var text = await element.TextContentAsync(); text.Should().Contain("foo");
@@ -371,7 +373,8 @@ public static class BlazorHelpers
     ///
     /// Example:
     ///   var version = await page.GetScrollListenerVersionAsync();
-    ///   await tagButton.ClickBlazorElementAsync(waitForUrlChange: false);
+    ///   await tagButton.ClickAndExpectAsync(async () =>
+    ///       await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
     ///   await page.WaitForScrollListenerReattachAsync(version);
     ///   await page.ScrollToLoadMoreAsync(expectedItemCount: 21);
     /// </summary>
@@ -403,94 +406,6 @@ public static class BlazorHelpers
         page.SetDefaultTimeout(E2ETimeout);
         page.SetDefaultNavigationTimeout(E2ETimeout);
         return page;
-    }
-
-    // ============================================================================
-    // HIGH-LEVEL INTERACTION FLOWS - Use these in tests!
-    //
-    // These consolidate common patterns:
-    // - Find element → Click → Wait for URL → Wait for state sync
-    // ============================================================================
-
-    /// <summary>
-    /// Generic click-and-navigate pattern for all Blazor navigation scenarios.
-    ///
-    /// This consolidates the common pattern:
-    /// 1. Find element by selector (with optional text filter or href filter)
-    /// 2. Click the element
-    /// 3. Wait for URL to change (optional)
-    /// 4. Wait for UI state sync (optional - e.g., .active class update)
-    /// 5. Wait for page-specific content (optional - e.g., detail page ready)
-    ///
-    /// Use this instead of writing custom click-wait sequences.
-    ///
-    /// Example (collection button):
-    ///   await page.ClickAndNavigateAsync(".sub-nav a", text: "Videos",
-    ///       expectedUrlSegment: "/videos", waitForActiveState: "Videos");
-    ///
-    /// Example (content card with href filter):
-    ///   await page.ClickAndNavigateAsync(".card", filterByHref: "/roundups/",
-    ///       customWait: p => p.WaitForContentDetailPageAsync());
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="selector">CSS selector for the element to click</param>
-    /// <param name="text">Optional: Text to filter by (uses HasTextString)</param>
-    /// <param name="filterByHref">Optional: Filter by href attribute containing this value</param>
-    /// <param name="nth">Optional: Select nth matching element (0-based, default: first)</param>
-    /// <param name="expectedUrlSegment">Optional: URL segment to wait for after click</param>
-    /// <param name="waitForActiveState">Optional: Text that should appear in .active button after navigation</param>
-    /// <param name="customWait">Optional: Custom wait function to call after navigation</param>
-    public static async Task ClickAndNavigateAsync(
-        this IPage page,
-        string selector,
-        string? text = null,
-        string? filterByHref = null,
-        int nth = 0,
-        string? expectedUrlSegment = null,
-        string? waitForActiveState = null,
-        Func<IPage, Task>? customWait = null)
-    {
-        // Step 1: Find the element
-        var locator = page.Locator(selector);
-
-        // Apply text filter if specified
-        if (!string.IsNullOrEmpty(text))
-        {
-            locator = page.Locator(selector, new() { HasTextString = text });
-        }
-
-        // Apply href filter if specified
-        if (!string.IsNullOrEmpty(filterByHref))
-        {
-            locator = locator.Filter(new() { Has = page.Locator($"[href*='{filterByHref}']") });
-        }
-
-        // Select nth element if needed
-        if (nth > 0 || (string.IsNullOrEmpty(text) && string.IsNullOrEmpty(filterByHref)))
-        {
-            locator = locator.Nth(nth);
-        }
-
-        // Step 2: Click the element
-        await locator.ClickBlazorElementAsync();
-
-        // Step 3: Wait for URL to change (if specified)
-        if (!string.IsNullOrEmpty(expectedUrlSegment))
-        {
-            await page.WaitForBlazorUrlContainsAsync(expectedUrlSegment);
-        }
-
-        // Step 4: Wait for state sync (if specified)
-        if (!string.IsNullOrEmpty(waitForActiveState))
-        {
-            await page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", waitForActiveState);
-        }
-
-        // Step 5: Custom wait (if specified)
-        if (customWait != null)
-        {
-            await customWait(page);
-        }
     }
 
     // ============================================================================
@@ -614,7 +529,7 @@ public static class BlazorHelpers
     /// This approach is cleaner than Task.Delay as it uses Blazor's own lifecycle callbacks.
     /// 
     /// @see https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/startup
-    /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync and ClickBlazorElementAsync.
+    /// INTERNAL USE: Called automatically by GotoAndWaitForBlazorAsync and ClickAndExpectAsync.
     /// </summary>
     public static async Task WaitForBlazorReadyAsync(this IPage page)
     {
@@ -693,76 +608,41 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Clicks a Blazor-enhanced element and waits for the URL to change.
+    /// Clicks an element and retries the [click + assertion] block until the assertion
+    /// passes or the total timeout expires. The .NET equivalent of Playwright's JS
+    /// <c>expect(fn).toPass()</c> pattern.
     ///
-    /// Under Blazor Server hydration, a click may be silently lost if the @onclick
-    /// handler hasn't attached yet when the click fires. This helper retries the
-    /// [click + URL-changed] block using <see cref="RetryUntilPassAsync"/> — the
-    /// Playwright-idiomatic fix.
+    /// <b>This is the single canonical click helper.</b> Use it for every Blazor click —
+    /// whether the result is a URL change, a CSS class toggle, an element appearing, or
+    /// anything else. Supply the assertion that describes what success looks like.
     ///
-    /// For interactions that do NOT change the URL (toggle button, expand panel,
-    /// tag filter, etc.), use <see cref="ClickAndExpectAsync"/> and supply your own
-    /// assertion instead. Calling this with <paramref name="waitForUrlChange"/>
-    /// = <c>false</c> just performs a single click with no retry, so a lost click
-    /// causes a silent failure in the following assertion.
-    /// </summary>
-    /// <param name="locator">The element to click.</param>
-    /// <param name="waitForUrlChange">
-    /// <c>true</c> (default): retry the click until the URL changes. <c>false</c>:
-    /// single click, no retry — only use for interactions that can't be verified
-    /// with an assertion on the same call-site.
-    /// </param>
-    public static async Task ClickBlazorElementAsync(
-        this ILocator locator,
-        bool waitForUrlChange = true)
-    {
-        await locator.WaitForBlazorInteractivityAsync();
-
-        if (!waitForUrlChange)
-        {
-            // Single click, no retry. Callers that need retry should migrate to
-            // ClickAndExpectAsync which retries the [click + assert] block.
-            await locator.ClickAsync(new() { Force = true, Timeout = E2ETimeout });
-            return;
-        }
-
-        var page = locator.Page;
-        var urlBeforeClick = page.Url;
-
-        await RetryUntilPassAsync(async () =>
-        {
-            // Force = true bypasses Playwright's stability check — Blazor Server's
-            // continuous DOM updates can prevent an element from ever being "stable".
-            // We've already verified visibility via WaitForBlazorInteractivityAsync.
-            await locator.ClickAsync(new() { Force = true, Timeout = 2000 });
-            await Assertions.Expect(page).Not.ToHaveURLAsync(
-                urlBeforeClick, new() { Timeout = 2000 });
-        });
-
-        await page.WaitForBlazorReadyAsync();
-    }
-
-    /// <summary>
-    /// Clicks an element and retries if the supplied assertion does not pass.
-    /// The .NET equivalent of Playwright's JS <c>expect(fn).toPass()</c> pattern.
+    /// <b>Why retry the whole block?</b> Under Blazor Server hydration, a click may be
+    /// silently lost if the @onclick handler hasn't attached yet when the click fires.
+    /// Retrying only the assertion will never succeed because the DOM won't change
+    /// without a click. Retrying [click + assert] eventually lands a click on a fully-
+    /// hydrated component. The same pattern fixes JS-driven interactions (custom-pages.js)
+    /// where <c>data-initialized</c> may not yet be set when the first click fires.
     ///
-    /// This is the canonical fix for the Blazor Server E2E flakiness class where a
-    /// click is dispatched before the @onclick handler has attached during
-    /// per-component hydration — the click is silently lost, so retrying only the
-    /// assertion will never succeed. Retrying the whole [click + assert] block
-    /// eventually lands a click on a fully-hydrated component.
+    /// <b>After the assertion passes</b>, if the URL changed, <see cref="WaitForBlazorReadyAsync"/>
+    /// is called automatically so callers don't need to wait for Blazor hydration on the
+    /// new page themselves.
     ///
-    /// Use short assertion timeouts (1-3s) so failed attempts are detected quickly.
-    /// The outer <paramref name="totalTimeoutMs"/> is the overall budget across all
-    /// retries.
+    /// Use short assertion timeouts (1-3s) inside the lambda so failed attempts are
+    /// detected quickly. The outer <paramref name="totalTimeoutMs"/> is the overall budget
+    /// across all retries.
     ///
-    /// Example:
+    /// Example — state change (no URL change):
     /// <code>
-    /// await Page.Locator(".sidebar-toggle").ClickAndExpectAsync(async () =>
-    /// {
-    ///     await Assertions.Expect(Page.Locator(".sidebar-toggle"))
-    ///         .ToHaveAttributeAsync("aria-expanded", "false", new() { Timeout = 2000 });
-    /// });
+    /// await toggle.ClickAndExpectAsync(async () =>
+    ///     await Assertions.Expect(html).ToHaveClassAsync(
+    ///         new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+    /// </code>
+    ///
+    /// Example — navigation (URL changes):
+    /// <code>
+    /// await blogsButton.ClickAndExpectAsync(async () =>
+    ///     await Assertions.Expect(Page).ToHaveURLAsync(
+    ///         new Regex(@".*/ai/blogs.*"), new() { Timeout = 2000 }));
     /// </code>
     /// </summary>
     public static async Task ClickAndExpectAsync(
@@ -770,17 +650,27 @@ public static class BlazorHelpers
         Func<Task> assertion,
         int totalTimeoutMs = E2ETimeout)
     {
+        var page = locator.Page;
+        var urlBefore = page.Url;
+
         await locator.WaitForBlazorInteractivityAsync();
         await RetryUntilPassAsync(async () =>
         {
             await locator.ClickAsync(new() { Force = true, Timeout = 2000 });
             await assertion();
         }, totalTimeoutMs);
+
+        // If a navigation happened, wait for Blazor to be ready on the new page
+        // (SignalR circuit re-established, page scripts loaded).
+        if (page.Url != urlBefore)
+        {
+            await page.WaitForBlazorReadyAsync();
+        }
     }
 
     /// <summary>
     /// Waits for a Blazor element to be fully interactive and actionable.
-    /// Use this before custom interactions that don't use ClickBlazorElementAsync.
+    /// Use this before custom interactions that don't use ClickAndExpectAsync.
     /// </summary>
     public static async Task WaitForBlazorInteractivityAsync(
         this ILocator locator)
@@ -1205,43 +1095,6 @@ public static class BlazorHelpers
             new System.Text.RegularExpressions.Regex($".*{System.Text.RegularExpressions.Regex.Escape(urlSegment)}$"),
             new() { Timeout = E2ETimeout }
         );
-    }
-
-    /// <summary>
-    /// Clicks an element found by selector using Blazor-aware click handling.
-    ///
-    /// Example:
-    ///   await page.ClickElementBySelectorAsync(".sub-nav a");
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="selector">CSS selector</param>
-    public static async Task ClickElementBySelectorAsync(
-        this IPage page,
-        string selector)
-    {
-        await page.Locator(selector).ClickBlazorElementAsync();
-    }
-
-    /// <summary>
-    /// Clicks an element found by ARIA role using Blazor-aware click handling.
-    ///
-    /// Example:
-    ///   await page.ClickElementByRoleAsync(AriaRole.Link, "About");
-    /// </summary>
-    /// <param name="page">The Playwright page</param>
-    /// <param name="role">ARIA role</param>
-    /// <param name="name">Accessible name (case-sensitive)</param>
-    public static async Task ClickElementByRoleAsync(
-        this IPage page,
-        AriaRole role,
-        string name)
-    {
-        var options = new PageGetByRoleOptions
-        {
-            Name = name,
-            Exact = true
-        };
-        await page.GetByRole(role, options).ClickBlazorElementAsync();
     }
 
     /// <summary>

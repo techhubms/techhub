@@ -99,11 +99,17 @@ else
     {
         if (selectedVideoDetail != null)
         {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("initHighlighting");
-            await JS.InvokeVoidAsync("initMermaid");
-            await JS.InvokeVoidAsync("initTocScrollSpy");
-            await JS.InvokeVoidAsync("markScriptsReady");
+            try
+            {
+                await JS.InvokeVoidAsync("markScriptsLoading");
+                await JS.InvokeVoidAsync("initHighlighting");
+                await JS.InvokeVoidAsync("initMermaid");
+                await JS.InvokeVoidAsync("initTocScrollSpy");
+            }
+            finally
+            {
+                await JS.InvokeVoidAsync("markScriptsReady");
+            }
         }
     }
 

@@ -53,7 +53,13 @@ Centralized in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs):
 
 ### Network Throttling (CI Simulation)
 
-Set `E2E_NETWORK_THROTTLE` environment variable: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`. Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+Set `E2E_NETWORK_THROTTLE` environment variable: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+
+Run with throttle and skip the performance phase (which doesn't need throttling):
+
+```powershell
+$env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E -SkipPerf
+```
 
 ### E2E Lifecycle Counter (`window.__e2e`)
 
@@ -68,8 +74,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s)
 | Method | Purpose |
 |---|---|
 | `GotoRelativeAsync()` | Navigate + wait for page ready |
-| `ClickAndExpectAsync(assert)` | **Preferred.** Click + retry [click + assert] until it passes. Fixes the Blazor Server hydration race where `@onclick` may not be attached yet (canonical [expect(fn).toPass()](https://playwright.dev/docs/test-assertions#expecttopass) pattern). |
-| `ClickBlazorElementAsync()` | Click + retry until URL changes (uses same retry pattern internally). For URL-change navigations only. |
+| `ClickAndExpectAsync(assert)` | **The only click helper.** Retries [click + assert] until it passes. Use for every Blazor/JS click — whether the result is a URL change, CSS class toggle, element appearing, or anything else. If the URL changes after the assertion, automatically waits for Blazor to be ready on the new page. |
 | `RetryUntilPassAsync(block)` | .NET equivalent of Playwright JS `expect(fn).toPass()` — retry an arbitrary `[action + assertion]` block until it passes or times out. |
 | `ClickAndWaitForScrollAsync()` | Click + wait for `scroll-end` signal |
 | `ScrollToAndWaitForTocUpdateAsync()` | Scroll + wait for `toc-active-updated` signal |
