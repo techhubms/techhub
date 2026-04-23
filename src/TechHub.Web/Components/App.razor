@@ -225,7 +225,8 @@
             },
             mermaid: {
                 version: '@TechHub.Web.Configuration.CdnLibraries.Mermaid.Version',
-                cdnUrl: '@TechHub.Web.Configuration.CdnLibraries.Mermaid.CdnUrl'
+                cdnUrl: '@TechHub.Web.Configuration.CdnLibraries.Mermaid.CdnUrl',
+                cdnUrls: @(new MarkupString(System.Text.Json.JsonSerializer.Serialize(TechHub.Web.Configuration.CdnLibraries.Mermaid.CdnUrls)))
             }
         };
     </script>

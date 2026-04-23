@@ -159,9 +159,20 @@ public static class CdnLibraries
         public const string Version = "11.13.0";
 
         /// <summary>
-        /// Full CDN URL for Mermaid (pinned version)
+        /// Full CDN URL for Mermaid (pinned version) — primary.
         /// </summary>
         public static string CdnUrl => $"https://cdn.jsdelivr.net/npm/mermaid@{Version}/dist/mermaid.min.js";
+
+        /// <summary>
+        /// Ordered list of CDN URLs for Mermaid. The loader tries each in order,
+        /// falling back to the next one if the previous fails. This guards against
+        /// transient outages of a single CDN (e.g., jsdelivr 5xx responses).
+        /// </summary>
+        public static readonly string[] CdnUrls =
+        [
+            $"https://cdn.jsdelivr.net/npm/mermaid@{Version}/dist/mermaid.min.js",
+            $"https://unpkg.com/mermaid@{Version}/dist/mermaid.min.js",
+        ];
 
         // Note: jsdelivr generates SRI hashes dynamically via ?integrity query param if needed
     }

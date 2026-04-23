@@ -102,17 +102,10 @@ export async function initMermaid() {
     if (mermaidElements.length === 0) return;
 
     try {
-        // Load library only once (retry up to 3 times with 1s delay on transient CDN failure)
+        // Load library only once. loadScript handles per-URL retries with exponential
+        // backoff and transparently falls back to the next CDN if the primary fails.
         if (!loaded.mermaid) {
-            for (let attempt = 1; attempt <= 3; attempt++) {
-                try {
-                    await loadScript(CDN.mermaid.cdnUrl);
-                    break;
-                } catch (err) {
-                    if (attempt === 3) throw err;
-                    await new Promise(r => setTimeout(r, 1000));
-                }
-            }
+            await loadScript(CDN.mermaid.cdnUrls ?? CDN.mermaid.cdnUrl);
             loaded.mermaid = true;
 
             const config = {
@@ -298,23 +291,61 @@ export async function initCustomPages() {
 // ─── Script Loading Helper ───────────────────────────────────────────────────
 
 /**
- * Load an external script by URL. Returns a promise that resolves when loaded.
+ * Load an external script. Resilient against transient CDN failures:
+ *   - Accepts either a single URL string or an array of fallback URLs (tried in order).
+ *   - Retries each URL with exponential backoff before moving on to the next.
+ *
+ * @param {string|string[]} sources   - URL, or ordered list of URLs to try.
+ * @param {object} [opts]
+ * @param {string} [opts.integrity]   - Optional SRI hash (only applied when a single URL is given;
+ *                                      fallback URLs usually have different hashes).
+ * @param {number} [opts.timeoutMs=10000] - Per-attempt load timeout.
+ * @param {number} [opts.retries=2]   - Retries per URL (on top of the initial attempt).
+ * @param {number} [opts.backoffMs=500] - Initial backoff; doubles each retry.
  */
-function loadScript(src, integrity = null, timeoutMs = 10_000) {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.defer = true;
-        script.crossOrigin = 'anonymous';
-        script.referrerPolicy = 'no-referrer';
-        if (integrity) {
-            script.integrity = integrity;
+function loadScript(sources, opts = {}) {
+    const urls = Array.isArray(sources) ? sources : [sources];
+    const { integrity = null, timeoutMs = 10_000, retries = 2, backoffMs = 500 } = opts;
+    const applyIntegrity = integrity && urls.length === 1;
+
+    function attempt(url) {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = url;
+            script.defer = true;
+            script.crossOrigin = 'anonymous';
+            script.referrerPolicy = 'no-referrer';
+            if (applyIntegrity) {
+                script.integrity = integrity;
+            }
+            const timer = setTimeout(() => {
+                script.remove();
+                reject(new Error(`Script load timeout: ${url}`));
+            }, timeoutMs);
+            script.onload = () => { clearTimeout(timer); resolve(); };
+            script.onerror = (err) => { clearTimeout(timer); script.remove(); reject(err); };
+            document.body.appendChild(script);
+        });
+    }
+
+    return (async () => {
+        let lastError;
+        for (const url of urls) {
+            for (let i = 0; i <= retries; i++) {
+                try {
+                    await attempt(url);
+                    return;
+                } catch (err) {
+                    lastError = err;
+                    if (i < retries) {
+                        await new Promise(r => setTimeout(r, backoffMs * (2 ** i)));
+                    }
+                }
+            }
+            console.warn(`All attempts failed for ${url}, trying next source if available.`);
         }
-        const timer = setTimeout(() => reject(new Error(`Script load timeout: ${src}`)), timeoutMs);
-        script.onload = () => { clearTimeout(timer); resolve(); };
-        script.onerror = (err) => { clearTimeout(timer); reject(err); };
-        document.body.appendChild(script);
-    });
+        throw lastError ?? new Error('loadScript: no sources provided');
+    })();
 }
 
 // ─── Global Exposure ─────────────────────────────────────────────────────────
