@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>AutoGen Blog</title><atom:link href="https://devblogs.microsoft.com/autogen/feed/" rel="self" type="application/rss+xml" /><link>https://devblogs.microsoft.com/autogen/</link><description>An open-source framework for building AI agent systems.</description><lastBuildDate>Fri, 17 Jan 2025 23:39:51 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><image><url>https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2024/11/Microsoft-favicon-48x48.jpg</url><title>AutoGen Blog</title><link>https://devblogs.microsoft.com/autogen/</link><width>32</width><height>32</height></image><item><title>AutoGen reimagined: Launching AutoGen 0.4</title><link>https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/</link><dc:creator><![CDATA[Friederike Niedtner]]></dc:creator><pubDate>Fri, 17 Jan 2025 23:39:51 +0000</pubDate><category><![CDATA[Announcements]]></category><category><![CDATA[Autogen]]></category><category><![CDATA[new release]]></category><guid isPermaLink="false">https://devblogs.microsoft.com/autogen/?p=97</guid><description><![CDATA[<p>We are thrilled to announce the release of AutoGen v0.4! This new version represents a complete redesign of the AutoGen library, focusing on improved code quality, robustness, usability, and scalability of agentic workflows. This release sets the stage for a robust ecosystem to drive advances in agentic AI. Key Features: Asynchronous Messaging: Agents now communicate [&#8230;]</p>
+<p>The post <a href="https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/">AutoGen reimagined: Launching AutoGen 0.4</a> appeared first on <a href="https://devblogs.microsoft.com/autogen">AutoGen Blog</a>.</p>
+]]></description><content:encoded><![CDATA[<p>We are thrilled to announce the release of <a href="https://microsoft.github.io/autogen/stable/">AutoGen v0.4</a>! This new version represents a complete redesign of the AutoGen library, focusing on improved code quality, robustness, usability, and scalability of agentic workflows. This release sets the stage for a robust ecosystem to drive advances in agentic AI.</p>
+<p><strong>Key Features:</strong></p>
+<ul>
+<li><strong>Asynchronous Messaging:</strong> Agents now communicate through asynchronous messages, supporting both event-driven and request/response interaction patterns. </li>
+<li><strong>Modular and Extensible:</strong> Create easily customize systems with pluggable components, including custom agents, tools, memory, and models. Build proactive and long-running agents. </li>
+<li><strong>Full type support:</strong> Interfaces and extensive typing are enforced in the library, ensuring consistent and high-quality code and dependable APIs. </li>
+<li><strong>Layered architecture:</strong> With a new layered and modular approach users can target the level of abstraction that their scenario requires. </li>
+<li><strong>Observability and Debugging:</strong> Built-in tools for tracking, tracing, and debugging agent interactions and workflows, with support for OpenTelemetry. </li>
+<li><strong>Scalable and Distributed:</strong> Design complex, distributed agent networks that operate seamlessly across organizational boundaries. </li>
+<li><strong>Cross-Language Support:</strong> Interoperability between agents built in different programming languages, currently supporting Python and .NET. </li>
+<li><strong>Built-in and community extensions</strong>: Support for community extensions allows open-source developers to manage their own extensions to enhance the framework’s functionality. </li>
+</ul>
+<p><strong>Layered Architecture</strong></p>
+<p><a href="https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2025/01/a-screenshot-of-a-computer-ai-generated-content-m-4.png"><img fetchpriority="high" decoding="async" src="https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2025/01/a-screenshot-of-a-computer-ai-generated-content-m-4-300x184.png" alt="A screenshot of a computer AI-generated content may be incorrect." width="600" height="368" class="alignnone size-medium wp-image-112" srcset="https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2025/01/a-screenshot-of-a-computer-ai-generated-content-m-4-300x184.png 300w, https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2025/01/a-screenshot-of-a-computer-ai-generated-content-m-4-768x471.png 768w, https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2025/01/a-screenshot-of-a-computer-ai-generated-content-m-4.png 838w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>Figure 1. The v0.4 update introduces a cohesive AutoGen ecosystem that includes the framework, developer tools, and applications. The framework’s layered architecture clearly defines each layer’s functionality. It supports both first-party and third-party applications and extensions.</p>
+<p><strong>Framework:</strong></p>
+<ul>
+<li><strong>Core API:</strong> The foundation layer offering a scalable, event-driven actor framework for creating agentic workflows </li>
+<li><strong>AgentChat API:</strong> Built on Core, offering a task-driven, high-level framework for building interactive agentic applications. It is a replacement for AutoGen v0.2. </li>
+</ul>
+<p><strong>Developer Tools:</strong></p>
+<ul>
+<li><strong>AutoGen Bench:</strong> Benchmark agents by measuring and comparing performance across tasks and environments. </li>
+<li><strong>AutoGen Studio:</strong> Rebuilt on the v0.4 AgentChat API, this enhanced low-code interface enables rapid prototyping of AI agents. The tool features real-time agent updates, mid-execution control, message flow visualization, drag-and-drop builder and more. </li>
+</ul>
+<p><strong>Apps:</strong></p>
+<ul>
+<li><strong>Magentic-One:</strong> A new generalist multi-agent application to solve open-ended web and file-based tasks across various domains. </li>
+</ul>
+<p><strong>Migrating to AutoGen v0.4</strong></p>
+<p>Despite the new architecture of v0.4, the library offers a path to facilitate a smooth upgrade of applications built on v0.2. The AgentChat API maintains the same level of abstraction as v0.2, making it easy to migrate existing code to v0.4. For example, AgentChat offers an AssistantAgent and UserProxy agent with similar behaviors to those in v0.2. It also provides a team interface with implementations like RoundRobinGroupChat and SelectorGroupChat, which cover all the capabilities of the GroupChat class in v0.2.</p>
+<p>For detailed guidance on how to migrate se the <a href="https://aka.ms/autogen-migrate">migration guide</a>.</p>
+<p><strong>What’s Next?</strong></p>
+<p>We will soon release a .NET version of v0.4!</p>
+<p>Our roadmap includes built-in extensions and applications as well as fostering a community-driven ecosystem of extensions and applications—some of which are already being developed by users.</p>
+<p>We’re certainly not stopping here! There’s plenty of exciting new features on the roadmap and we’re going to be releasing more frequently going forward.</p>
+<p>We encourage you to engage with us on <a href="https://discord.gg/HeEdc5nu">AutoGen&#8217;s discord</a> channel and share feedback on the official AutoGen <a href="https://github.com/microsoft/autogen">repository</a> via GitHub Issues.</p>
+<p>The post <a href="https://devblogs.microsoft.com/autogen/autogen-reimagined-launching-autogen-0-4/">AutoGen reimagined: Launching AutoGen 0.4</a> appeared first on <a href="https://devblogs.microsoft.com/autogen">AutoGen Blog</a>.</p>
+]]></content:encoded><image url="https://devblogs.microsoft.com/autogen/wp-content/uploads/sites/86/2025/01/0.42.png" type="image/png" /></item></channel></rss>

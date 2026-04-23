@@ -52,6 +52,12 @@ public class SectionConfig
     /// When true, the collapsible hero banner is rendered above the section content.
     /// </summary>
     public bool ShowHeroBanner { get; init; }
+
+    /// <summary>
+    /// Display order for sections (lower values appear first).
+    /// Required because .NET configuration binding does not preserve JSON key order.
+    /// </summary>
+    public int Order { get; init; }
 }
 
 /// <summary>

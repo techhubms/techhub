@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom"><link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UC7c3Kb6jYCRj4JOHHZTxKsQ" /><id>yt:channel:7c3Kb6jYCRj4JOHHZTxKsQ</id><yt:channelId>7c3Kb6jYCRj4JOHHZTxKsQ</yt:channelId><title>GitHub</title><link rel="alternate" href="https://www.youtube.com/channel/UC7c3Kb6jYCRj4JOHHZTxKsQ" /><author><name>GitHub</name><uri>https://www.youtube.com/channel/UC7c3Kb6jYCRj4JOHHZTxKsQ</uri></author><published>2010-07-28T18:50:31+00:00</published><entry><id>yt:video:34nTbYNWm4c</id><yt:videoId>34nTbYNWm4c</yt:videoId><yt:channelId>UC7c3Kb6jYCRj4JOHHZTxKsQ</yt:channelId><title>Turn your GitHub profile into a 3D city</title><link rel="alternate" href="https://www.youtube.com/shorts/34nTbYNWm4c" /><author><name>GitHub</name><uri>https://www.youtube.com/channel/UC7c3Kb6jYCRj4JOHHZTxKsQ</uri></author><published>2026-04-06T16:57:01+00:00</published><updated>2026-04-06T16:57:05+00:00</updated><media:group><media:title>Turn your GitHub profile into a 3D city</media:title><media:content url="https://www.youtube.com/v/34nTbYNWm4c?version=3" type="application/x-shockwave-flash" width="640" height="390" /><media:thumbnail url="https://i4.ytimg.com/vi/34nTbYNWm4c/hqdefault.jpg" width="480" height="360" /><media:description>We are exploring Git City, an open-source project that transforms your GitHub profile into a 3D pixel art city. Your contributions determine building height, while your repository count sets the width and your stars light up the windows. It is built with Next.js 15 and Three.js, offering a unique way to visualize your developer journey. Try the flight mode to explore your own digital real estate today.
+
+#GitCity #GitHub #OpenSource
+
+Stay up-to-date on all things GitHub by connecting with us:
+
+YouTube: https://gh.io/subgithub
+Blog: https://github.blog
+X: https://twitter.com/github
+LinkedIn: https://linkedin.com/company/github
+Insider newsletter: https://resources.github.com/newsletter/
+Instagram: https://www.instagram.com/github
+TikTok: https://www.tiktok.com/@github
+
+About GitHub
+It’s where over 180 million developers create, share, and ship the best code possible. It’s a place for anyone, from anywhere, to build anything—it’s where the world builds software. https://github.com</media:description><media:community><media:starRating count="99" average="5.00" min="1" max="5" /><media:statistics views="2619" /></media:community></media:group></entry></feed>

@@ -13,7 +13,7 @@ using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.TestUtilities;
 
-namespace TechHub.E2E.Tests.Api;
+namespace TechHub.Api.Tests;
 
 /// <summary>
 /// Performance tests for database queries against the live PostgreSQL database.
@@ -29,7 +29,14 @@ namespace TechHub.E2E.Tests.Api;
 /// - Tag cloud queries (GetTagCountsAsync) — most complex GROUP BY + HAVING queries
 /// - Search queries (SearchAsync) — FTS, tag filtering, date ranges, pagination
 /// - Content detail (GetBySlugAsync) — single item lookups
+///
+/// These tests are excluded from all CI runs and can only be run locally.
+/// The production and staging databases are behind Azure private endpoints and are not
+/// reachable from GitHub Actions runners, so there is no way to run these in CI.
+/// To run locally: restore production data first, then run with --filter-trait "Category=Performance"
+///   ./scripts/Restore-Database.ps1 -Target local
 /// </summary>
+[Trait("Category", "Performance")]
 public class DatabasePerformanceTests : IDisposable
 {
     private const string PostgresConnectionString =

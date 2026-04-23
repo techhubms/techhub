@@ -11,8 +11,7 @@ public class RssTests : PlaywrightTestBase
 {
     public RssTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
-    private const string BaseUrl = "https://localhost:5003";
-    private const string ApiUrl = "https://localhost:5001";
+    private static string BaseUrl => BlazorHelpers.BaseUrl;
 
     [Fact]
     public async Task HomePage_HasRssFeedDiscoveryLink()
@@ -59,10 +58,8 @@ public class RssTests : PlaywrightTestBase
     [Fact]
     public async Task RssFeed_AllContent_ReturnsValidXml()
     {
-        // Arrange
-
-        // Act
-        var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
+        // Act - Fetch via web proxy endpoint
+        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/feed.xml");
 
         // Assert
         response.Status.Should().Be(200);
@@ -89,10 +86,8 @@ public class RssTests : PlaywrightTestBase
     [InlineData("ml")]
     public async Task RssFeed_SectionFeeds_ReturnValidXml(string sectionName)
     {
-        // Arrange
-
-        // Act
-        var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/{sectionName}");
+        // Act - Fetch via web proxy endpoint
+        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/{sectionName}/feed.xml");
 
         // Assert
         response.Status.Should().Be(200);
@@ -122,10 +117,8 @@ public class RssTests : PlaywrightTestBase
     [Fact]
     public async Task RssFeed_ContainsRecentContent()
     {
-        // Arrange
-
-        // Act
-        var response = await Page.APIRequest.GetAsync($"{ApiUrl}/api/rss/all");
+        // Act - Fetch via web proxy endpoint
+        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/feed.xml");
         var xmlContent = await response.TextAsync();
         var doc = XDocument.Parse(xmlContent);
 

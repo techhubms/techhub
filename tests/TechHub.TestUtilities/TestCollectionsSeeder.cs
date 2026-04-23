@@ -3,14 +3,16 @@ using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
+using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Services;
 
 namespace TechHub.TestUtilities;
 
 /// <summary>
-/// Seeds in-memory test database with markdown files from TestCollections directory.
-/// Uses the actual production ContentSyncService to ensure tests run against real sync logic.
+/// Seeds test database with markdown files from TestCollections directory.
+/// Uses ContentSyncService (test-only) to parse markdown and insert into the database.
 /// Provides logging for seeding progress and final record counts.
 /// </summary>
 public static class TestCollectionsSeeder
@@ -44,6 +46,11 @@ public static class TestCollectionsSeeder
 
         logger.LogInformation("🌱 Seeding database from TestCollections: {Path}", testCollectionsPath);
 
+        // Insert test-only feed configs before syncing content.
+        // Required because FK constraints on content_items.feed_name and processed_urls.feed_name
+        // reference rss_feed_configs.name. Test data uses feed names not present in production seeds.
+        await SeedTestFeedConfigsAsync(connection);
+
         var syncOptions = Options.Create(new ContentSyncOptions
         {
             Enabled = true,
@@ -62,7 +69,7 @@ public static class TestCollectionsSeeder
         var syncLogger = loggerFactory.CreateLogger<ContentSyncService>();
         var syncService = new ContentSyncService(connection, markdownService, syncLogger, dialect, syncOptions, contentOptions);
 
-        // Use actual production sync logic - ensures tests validate real code path
+        // Use ContentSyncService to parse markdown files and insert into database
         var syncResult = await syncService.SyncAsync(CancellationToken.None);
 
         logger.LogInformation(
@@ -94,6 +101,47 @@ public static class TestCollectionsSeeder
         {
             var count = await connection.ExecuteScalarAsync<int>($"SELECT COUNT(*) FROM {tableName}");
             logger.LogInformation("   - {TableName}: {Count} {Description}", tableName, count, description);
+        }
+    }
+
+    /// <summary>
+    /// Inserts test-only feed configs into rss_feed_configs.
+    /// Required because migration 017 adds FK constraints from content_items.feed_name
+    /// and processed_urls.feed_name to rss_feed_configs.name.
+    /// Test markdown files and test code use feed names not present in production seed data.
+    /// </summary>
+    private static async Task SeedTestFeedConfigsAsync(IDbConnection connection)
+    {
+        const string sql = """
+            INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
+            VALUES (@Name, @Url, @OutputDir, FALSE)
+            ON CONFLICT (name) DO NOTHING;
+            """;
+
+        var testFeeds = new[]
+        {
+            // Used in test markdown frontmatter
+            new { Name = "Test Feed", Url = "https://test/test-feed", OutputDir = "_blogs" },
+            new { Name = "Test Data", Url = "https://test/test-data", OutputDir = "_blogs" },
+            new { Name = "Randy Pagels", Url = "https://test/randy-pagels", OutputDir = "_blogs" },
+            new { Name = "Thomas Maurer", Url = "https://test/thomas-maurer", OutputDir = "_blogs" },
+            // Used in ContentProcessingServiceTests and ProcessedUrlRepositoryTests
+            new { Name = "Test", Url = "https://test/test", OutputDir = "_blogs" },
+            new { Name = "Broken Feed", Url = "https://test/broken-feed", OutputDir = "_blogs" },
+            new { Name = "Broken", Url = "https://test/broken", OutputDir = "_blogs" },
+            new { Name = "Good", Url = "https://test/good", OutputDir = "_news" },
+            new { Name = "Feed A", Url = "https://test/feed-a", OutputDir = "_blogs" },
+            new { Name = "Feed B", Url = "https://test/feed-b", OutputDir = "_news" },
+            new { Name = "YT", Url = "https://test/yt", OutputDir = "_videos" },
+            new { Name = "YT Mandatory", Url = "https://test/yt-mandatory", OutputDir = "_videos" },
+            new { Name = "Blog", Url = "https://test/blog", OutputDir = "_blogs" },
+            new { Name = "Some Feed", Url = "https://test/some-feed", OutputDir = "_news" },
+            new { Name = "Feed", Url = "https://test/feed", OutputDir = "_blogs" }
+        };
+
+        foreach (var feed in testFeeds)
+        {
+            await connection.ExecuteAsync(sql, feed);
         }
     }
 }

@@ -1,4 +1,5 @@
 @page "/{sectionName}/{collectionName}/{slug}"
+@using TechHub.Core.Configuration
 @using TechHub.Core.Models
 @using TechHub.Core.Validation
 @using TechHub.Web.Services
@@ -31,9 +32,9 @@
         <MobileSidebarToolbar>
         @if (item != null)
         {
-            @* Tag cloud showing this content item's tags with real section counts *@
+            @* Tag cloud showing this content item's tags with real section counts (structural tags excluded) *@
             <MobileSidebarPanel Label="Tags" Icon="tags">
-            <SidebarTagCloud Tags="@item.Tags"
+            <SidebarTagCloud Tags="@GetFilteredTags()"
                 SectionName="@SectionName"
                 Title="Tags" NavigationMode="TagCloudNavigationMode.Navigate"
                 NavigationBaseUrl="@($"/{SectionName.ToLowerInvariant()}")" />
@@ -88,11 +89,17 @@
     {
         if (item != null)
         {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("initHighlighting");
-            await JS.InvokeVoidAsync("initMermaid");
-            await JS.InvokeVoidAsync("initTocScrollSpy");
-            await JS.InvokeVoidAsync("markScriptsReady");
+            try
+            {
+                await JS.InvokeVoidAsync("markScriptsLoading");
+                await JS.InvokeVoidAsync("initHighlighting");
+                await JS.InvokeVoidAsync("initMermaid");
+                await JS.InvokeVoidAsync("initTocScrollSpy");
+            }
+            finally
+            {
+                await JS.InvokeVoidAsync("markScriptsReady");
+            }
         }
     }
 
@@ -237,6 +244,47 @@
     private string? GetSectionTitle() => section?.Title;
 
     private string? GetVideoUrl() => item?.CollectionName == "videos" ? item?.ExternalUrl : null;
+
+    /// <summary>
+    /// Filters out structural tags (section titles, collection names, high-frequency noise)
+    /// from the content item's tags so they don't clutter the sidebar tag cloud.
+    /// Mirrors the exclude logic in ContentRepository.BuildExcludeTagsSetAsync.
+    /// </summary>
+    private IReadOnlyList<string> GetFilteredTags()
+    {
+        if (item?.Tags == null || item.Tags.Count == 0)
+        {
+            return [];
+        }
+
+        var excludeSet = BuildStructuralTagsExcludeSet();
+        return item.Tags
+            .Where(t => !excludeSet.Contains(t))
+            .ToList();
+    }
+
+    private HashSet<string>? _structuralTagsCache;
+
+    private HashSet<string> BuildStructuralTagsExcludeSet()
+    {
+        if (_structuralTagsCache != null)
+        {
+            return _structuralTagsCache;
+        }
+
+        var sectionTags = SectionCache.Sections
+            .Select(s => s.Tag)
+            .Where(t => !string.IsNullOrWhiteSpace(t))
+            .Select(t => t!);
+
+        var collectionTags = SectionCache.Sections
+            .SelectMany(s => s.Collections)
+            .Select(c => Collection.GetTagFromName(c.Name))
+            .Where(t => !string.IsNullOrWhiteSpace(t));
+
+        _structuralTagsCache = TagExclusions.BuildExcludeSet(sectionTags, collectionTags);
+        return _structuralTagsCache;
+    }
 
     private IReadOnlyList<SeoMetaTags.BreadcrumbItem> GetBreadcrumbs()
     {

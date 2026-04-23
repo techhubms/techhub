@@ -71,7 +71,6 @@ See **[docs/repository-structure.md](docs/repository-structure.md)** for the com
 
 All detailed documentation lives in **[docs/](docs/)**. Start with:
 
-- **[docs/documentation-index.md](docs/documentation-index.md)** — Full index of all documentation
 - **[docs/running-and-testing.md](docs/running-and-testing.md)** — Running, testing, and debugging
 - **[docs/architecture.md](docs/architecture.md)** — System architecture and .NET Aspire setup
 - **[docs/technology-stack.md](docs/technology-stack.md)** — Complete technology stack

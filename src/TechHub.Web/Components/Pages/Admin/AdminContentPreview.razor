@@ -1,0 +1,123 @@
+@page "/admin/content-preview/{collectionName}/{slug}"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+@inject ILogger<AdminContentPreview> Logger
+
+<PageTitle>Preview — @CollectionName/@Slug — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Content Preview</h1>
+            <p class="admin-page-subtitle">@CollectionName / @Slug</p>
+        </div>
+        <div class="admin-actions">
+            <a href="/admin/reviews" class="btn-secondary">← Back to Reviews</a>
+        </div>
+    </div>
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading content…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_editData != null)
+    {
+        <div class="admin-content-preview-meta">
+            <span class="admin-cell-mono">@_editData.CollectionName</span>
+            <span class="admin-cell-mono">@_editData.Slug</span>
+            @if (!string.IsNullOrEmpty(_editData.Title))
+            {
+                <strong>@_editData.Title</strong>
+            }
+            @if (!string.IsNullOrEmpty(_editData.Author))
+            {
+                <span>by @_editData.Author</span>
+            }
+        </div>
+
+        <article class="article-body admin-preview-article">
+            @((MarkupString)_renderedHtml)
+        </article>
+    }
+</div>
+
+@code {
+    [Parameter] public string CollectionName { get; set; } = null!;
+    [Parameter] public string Slug { get; set; } = null!;
+
+    private bool _loading = true;
+    private string? _error;
+    private ContentItemEditData? _editData;
+    private string _renderedHtml = string.Empty;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<string>("admin-content-preview-html", out var restoredHtml)
+            && ApplicationState.TryTakeFromJson<ContentItemEditData>("admin-content-preview-data", out var restoredData)
+            && restoredHtml != null && restoredData != null)
+        {
+            _renderedHtml = restoredHtml;
+            _editData = restoredData;
+            _loading = false;
+            return;
+        }
+
+        await LoadContentAsync();
+    }
+
+    private async Task LoadContentAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _editData = await Api.GetContentItemEditDataAsync(CollectionName, Slug);
+            if (_editData is null)
+            {
+                _error = $"Content item [{CollectionName}/{Slug}] not found.";
+                return;
+            }
+
+            if (!string.IsNullOrWhiteSpace(_editData.Content))
+            {
+                _renderedHtml = await Api.PreviewMarkdownAsync(_editData.Content);
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load content: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private Task PersistState()
+    {
+        if (_editData != null)
+        {
+            ApplicationState.PersistAsJson("admin-content-preview-data", _editData);
+            ApplicationState.PersistAsJson("admin-content-preview-html", _renderedHtml);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+}

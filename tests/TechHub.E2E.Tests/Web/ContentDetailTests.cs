@@ -16,7 +16,7 @@ public class ContentDetailTests : PlaywrightTestBase
 {
     public ContentDetailTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
-    private const string BaseUrl = BlazorHelpers.BaseUrl;
+    private static readonly string BaseUrl = BlazorHelpers.BaseUrl;
 
     // Test with a known roundup URL - more reliable than clicking through
     private const string TestRoundupUrl = "/all/roundups";
@@ -119,10 +119,11 @@ public class ContentDetailTests : PlaywrightTestBase
 
         if (count > 0)
         {
-            await roundupLinks.First.ClickBlazorElementAsync();
+            await roundupLinks.First.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(
+                    new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
 
             // Assert - Should navigate to roundup detail page
-            await Page.WaitForBlazorUrlContainsAsync("/roundups/");
             Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
         }
     }

@@ -1,34 +1,19 @@
 # Database Configuration
 
-Tech Hub supports two content storage backends configured via `appsettings.json`.
+Tech Hub uses PostgreSQL as its exclusive content storage backend, configured via `appsettings.json`.
 
 **Related Documentation**:
 
 - [Content Processing](content-processing.md) - How content syncs to the database
 - [Filtering](filtering.md) - Tag filtering that leverages database indexes
-- [Running & Testing](running-and-testing.md) - How to run with different database providers
+- [Running & Testing](running-and-testing.md) - How to run during development
 - [Query Logging](query-logging.md) - Debug and performance monitoring with query logging
 
-## Supported Providers
+## Provider
 
-> **Default provider**: If `Database:Provider` is not specified, Tech Hub.Api defaults to **PostgreSQL** with connection string `Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev`.
+> **Default provider**: Tech Hub.Api defaults to **PostgreSQL** with connection string `Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev`.
 
-### Option 1: FileSystem (No Database)
-
-Reads markdown files directly from `collections/` folder.
-
-```json
-{
-  "Database": {
-    "Provider": "FileSystem"
-  }
-}
-```
-
-**Pros**: Fastest startup, no database needed, simplest setup  
-**Cons**: No full-text search, slower filtering on large datasets
-
-### Option 2: PostgreSQL (Recommended)
+### PostgreSQL
 
 Uses PostgreSQL with tsvector full-text search and GIN indexes.
 
@@ -39,9 +24,6 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
   "Database": {
     "Provider": "PostgreSQL",
     "ConnectionString": "Host=localhost;Port=5432;Database=techhub;Username=techhub;Password=localdev"
-  },
-  "ContentSync": {
-    "Enabled": true
   }
 }
 ```
@@ -49,30 +31,9 @@ Uses PostgreSQL with tsvector full-text search and GIN indexes.
 **Pros**: Production-ready, best performance at scale, full-text search with tsvector, semantic search ready  
 **Cons**: Requires Docker (`docker compose up -d postgres`) or cloud PostgreSQL instance
 
-**Sync Behavior**:
-
-- **First Run**: Syncs from markdown files (~30-60s for 4000+ files)
-- **Subsequent Runs**: Hash-based diff (<1s if no changes)
-
 **Usage**:
 
 - See [running-and-testing.md](running-and-testing.md) for instructions on running with Docker.
-
-## Content Sync Configuration
-
-Control database sync behavior via `appsettings.json`:
-
-```json
-{
-  "ContentSync": {
-    "Enabled": true,         // Set false to skip sync (faster startup)
-    "ForceFullSync": false,  // Set true to force complete reimport
-    "MaxParallelFiles": 10   // Parallel file processing during sync
-  }
-}
-```
-
-**Tip**: Set `ContentSync:Enabled = false` for rapid iteration when not testing search/filtering features.
 
 ## Database Schema
 
@@ -84,6 +45,10 @@ Control database sync behavior via `appsettings.json`:
 | `content_tags_expanded` | Word-level tag matching (denormalized for fast filtering) |
 | `sync_metadata` | Tracks last sync time and content hashes |
 | `content_fts` | Full-text search using tsvector/tsquery |
+| `rss_feed_configs` | RSS feed configuration (URL, name, collection, enabled flag) |
+| `processed_urls` | Tracks processed/skipped/failed URLs for the content pipeline |
+| `content_processing_jobs` | Audit log of content processing runs |
+| `custom_page_data` | JSON data for custom pages (editable from admin UI) |
 
 ### Design Decisions
 

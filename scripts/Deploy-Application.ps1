@@ -139,11 +139,11 @@ function Write-Detail {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  TechHub Application Deployment" -ForegroundColor White
-Write-Host "  Environment : $Environment" -ForegroundColor Gray
-Write-Host "  Tag         : $Tag" -ForegroundColor Gray
-Write-Host "  Registry    : $registryServer" -ForegroundColor Gray
-Write-Host "  Source      : $(if ($isCI) { 'CI (GitHub Actions)' } else { 'Local' })" -ForegroundColor Gray
-Write-Host "  Steps       : $(if ($SkipBuild) { '-' } else { 'Build' }) $(if ($SkipPush) { '-' } else { 'Push' }) $(if ($SkipDeploy) { '-' } else { 'Deploy' })" -ForegroundColor Gray
+Write-Host "  Environment         : $Environment" -ForegroundColor Gray
+Write-Host "  Tag                 : $Tag" -ForegroundColor Gray
+Write-Host "  Registry            : $registryServer" -ForegroundColor Gray
+Write-Host "  Source              : $(if ($isCI) { 'CI (GitHub Actions)' } else { 'Local' })" -ForegroundColor Gray
+Write-Host "  Steps               : $(if ($SkipBuild) { '-' } else { 'Build' }) $(if ($SkipPush) { '-' } else { 'Push' }) $(if ($SkipDeploy) { '-' } else { 'Deploy' })" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -438,10 +438,10 @@ else {
 Write-Host ""
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host "  Application Deployment Complete" -ForegroundColor Green
-Write-Host "  Environment : $Environment" -ForegroundColor Gray
-Write-Host "  Tag         : $Tag" -ForegroundColor Gray
-Write-Host "  API image   : $($apiImage):$Tag" -ForegroundColor Gray
-Write-Host "  Web image   : $($webImage):$Tag" -ForegroundColor Gray
+Write-Host "  Environment          : $Environment" -ForegroundColor Gray
+Write-Host "  Tag                  : $Tag" -ForegroundColor Gray
+Write-Host "  API image            : $($apiImage):$Tag" -ForegroundColor Gray
+Write-Host "  Web image            : $($webImage):$Tag" -ForegroundColor Gray
 
 if (-not $SkipDeploy) {
     $webFqdn = az containerapp show `

@@ -59,12 +59,10 @@ public class NavigationTests : PlaywrightTestBase
         href.Should().NotBeNull();
         href.Should().Contain("github-copilot");
 
-        // Blazor uses enhanced navigation (SPA-style), so URL changes without page reload
-        // Use ClickBlazorElementAsync to wait for Blazor interactivity before clicking
-        await ghCopilotCard.ClickBlazorElementAsync();
-
-        // Wait for URL to contain the section name (already asserts URL change)
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot");
+        // Blazor uses enhanced navigation (SPA-style); retry click until URL confirms navigation.
+        await ghCopilotCard.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/github-copilot.*"), new() { Timeout = 2000 }));
 
         // Assert - Should not have hash fragment
         Page.Url.Should().NotContain("#");
@@ -78,10 +76,11 @@ public class NavigationTests : PlaywrightTestBase
 
         // Act - Click on "News" collection button
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
-        await newsButton.ClickBlazorElementAsync();
+        await newsButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/news.*"), new() { Timeout = 2000 }));
 
         // Assert - URL should be /ai/news
-        await Page.WaitForBlazorUrlContainsAsync("/ai/news");
         Page.Url.Should().NotContain("#"); // No hash fragments
     }
 
@@ -141,10 +140,11 @@ public class NavigationTests : PlaywrightTestBase
 
         // Act - Click on "Videos" collection in sub-nav
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
-        await videosButton.ClickBlazorElementAsync();
+        await videosButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/videos.*"), new() { Timeout = 2000 }));
 
         // Assert - Should navigate and load videos
-        await Page.WaitForBlazorUrlContainsAsync("/ai/videos");
 
         // Wait for page to fully load after navigation
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
@@ -275,8 +275,9 @@ public class NavigationTests : PlaywrightTestBase
 
         // Act - Navigate to "News" collection
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
-        await newsButton.ClickBlazorElementAsync();
-        await Page.WaitForBlazorUrlContainsAsync("/ai/news");
+        await newsButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/ai/news.*"), new() { Timeout = 2000 }));
         await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Get the hrefs of cards in the "News" collection
@@ -329,10 +330,11 @@ public class NavigationTests : PlaywrightTestBase
         // Act - Navigate to handbook page (which has TOC) via the sub-nav link.
         // The sub-nav renders all custom pages including the handbook as visible links.
         var handbookLink = Page.Locator(".sub-nav a[href*='/github-copilot/handbook']").First;
-        await handbookLink.ClickBlazorElementAsync();
+        await handbookLink.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/github-copilot/handbook.*"), new() { Timeout = 2000 }));
 
         // Wait for navigation to complete
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot/handbook");
 
         // Wait for TOC to be visible (use Expect for auto-retry)
         var tocElement = Page.Locator("[data-toc-scroll-spy]");
@@ -343,18 +345,11 @@ public class NavigationTests : PlaywrightTestBase
         var tocLinkCount = await tocLinks.CountAsync();
         tocLinkCount.Should().BeGreaterThan(0, "TOC should have links after navigation");
 
-        // Click on a TOC link (e.g., "About the Book")
+        // Click on a TOC link (e.g., "About the Book") — retry until scroll-spy marks it active.
         var aboutBookLink = tocLinks.Filter(new() { HasText = "About the Book" }).First;
-        await aboutBookLink.ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for scroll to finish and scroll-spy to update the active heading.
-        // The scroll-spy uses scrollend + RAF throttling, so we need to wait for
-        // the heading to reach the detection line and the active class to be applied.
-        await Page.WaitForConditionAsync(
-            "() => !document.querySelector('[data-toc-scroll-spy]') || document.querySelector('[data-toc-scroll-spy] a.toc-link.active') !== null");
-
-        // Wait for the clicked link specifically to become active
-        await Assertions.Expect(aboutBookLink).ToHaveClassAsync(new Regex("active"));
+        await aboutBookLink.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(aboutBookLink).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");

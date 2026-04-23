@@ -129,10 +129,9 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await WaitForContentTypeFilterReadyAsync();
 
         // Act - Click the "Blogs" button to deselect it (all active → all except blogs)
-        await ContentTypeButton(Blogs).ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for URL to update (the types param is added)
-        await WaitForTypesParamPresentAsync();
+        await ContentTypeButton(Blogs).ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*types=.*"), new() { Timeout = 2000 }));
 
         // Assert - URL should contain the types parameter
         var currentUrl = Page.Url;
@@ -151,9 +150,11 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await WaitForContentTypeFilterReadyAsync();
 
         // Act - Click the "Videos" button to deselect it (all active → all except videos)
-        await ContentTypeButton(Videos).ClickBlazorElementAsync(waitForUrlChange: false);
+        await ContentTypeButton(Videos).ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*types=.*"), new() { Timeout = 2000 }));
 
-        // Wait for Blazor to update: Videos button should no longer have the active class
+        // Verify: Videos button should no longer have the active class
         await Assertions.Expect(ContentTypeButton(Videos))
             .Not.ToHaveClassAsync(new Regex("active"));
 
@@ -189,10 +190,9 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await WaitForContentTypeFilterReadyAsync();
 
         // Act - Clicking Videos re-activates all 4 types, which should clear the URL param
-        await ContentTypeButton(Videos).ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for the types parameter to disappear (all types active = no param needed)
-        await WaitForTypesParamRemovedAsync();
+        await ContentTypeButton(Videos).ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                new Regex(@".*types=.*"), new() { Timeout = 2000 }));
 
         // Assert - URL should no longer contain types parameter
         Page.Url.Should().NotContain("types=",

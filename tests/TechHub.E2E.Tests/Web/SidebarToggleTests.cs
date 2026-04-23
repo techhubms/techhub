@@ -39,12 +39,13 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act - Click the toggle button
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-
-        // Assert - <html> element should have collapsed class
+        // Act + Assert — retry [click + class check] to cover Blazor Server
+        // hydration race where @onclick may not be attached yet.
+        var toggle = Page.Locator(".sidebar-toggle");
         var html = Page.Locator("html");
-        await Assertions.Expect(html).ToHaveClassAsync(new Regex("sidebar-collapsed"));
+        await toggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(html).ToHaveClassAsync(
+                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -52,14 +53,18 @@ public class SidebarToggleTests : PlaywrightTestBase
     {
         // Arrange
         await Page.GotoRelativeAsync("/");
-
-        // Act - Click toggle twice
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-
-        // Assert - <html> element should NOT have collapsed class
+        var toggle = Page.Locator(".sidebar-toggle");
         var html = Page.Locator("html");
-        await Assertions.Expect(html).Not.ToHaveClassAsync(new Regex("sidebar-collapsed"));
+
+        // First click: collapse (retry to handle hydration race)
+        await toggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(html).ToHaveClassAsync(
+                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+
+        // Second click: expand (retry again)
+        await toggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(html).Not.ToHaveClassAsync(
+                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -80,28 +85,28 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act - ClickAsync() is sufficient here: Playwright's built-in stability check
-        // waits until the element is not being updated by a Blazor DOM diff before
-        // dispatching the click. No URL change is expected, so ClickBlazorElementAsync
-        // (which waits for URL change) is not needed.
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-
-        // Assert
+        // Act + Assert — retry the [click + attribute check] block to cover the
+        // Blazor Server hydration race where @onclick may not be attached yet.
         var toggle = Page.Locator(".sidebar-toggle");
-        await Assertions.Expect(toggle).ToHaveAttributeAsync("aria-expanded", "false");
-        await Assertions.Expect(toggle).ToHaveAttributeAsync("aria-label", "Expand sidebar");
+        await toggle.ClickAndExpectAsync(async () =>
+        {
+            await Assertions.Expect(toggle).ToHaveAttributeAsync(
+                "aria-expanded", "false", new() { Timeout = 2000 });
+            await Assertions.Expect(toggle).ToHaveAttributeAsync(
+                "aria-label", "Expand sidebar", new() { Timeout = 2000 });
+        });
     }
 
     [Fact]
     public async Task SidebarToggle_CollapsedState_ShouldPersistAcrossNavigation()
     {
-        // Arrange - Collapse sidebar on homepage
+        // Arrange - Collapse sidebar on homepage (retry click+assert for hydration race)
         await Page.GotoRelativeAsync("/");
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-
-        // Verify collapsed
+        var toggle = Page.Locator(".sidebar-toggle");
         var html = Page.Locator("html");
-        await Assertions.Expect(html).ToHaveClassAsync(new Regex("sidebar-collapsed"));
+        await toggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(html).ToHaveClassAsync(
+                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
 
         // Act - Navigate to a section page (full page load to test cookie persistence)
         await Page.GotoRelativeAsync("/github-copilot");
@@ -117,8 +122,12 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act
-        await Page.Locator(".sidebar-toggle").ClickAsync();
+        // Act + Assert — retry click+class check to ensure collapse actually fired
+        var toggle = Page.Locator(".sidebar-toggle");
+        var html = Page.Locator("html");
+        await toggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(html).ToHaveClassAsync(
+                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
 
         // Assert - Sidebar sections should be hidden (CSS: html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle))
         var sidebarSections = Page.Locator("html.sidebar-collapsed .sidebar .sidebar-section");
@@ -143,13 +152,18 @@ public class SidebarToggleTests : PlaywrightTestBase
             return style.gridTemplateColumns.split(' ').length;
         }");
 
-        // Act - Collapse sidebar
-        await Page.Locator(".sidebar-toggle").ClickAsync();
-
-        // Wait for layout to settle after CSS transition
-        await Page.WaitForConditionAsync(
-            $"(before) => {{ const grid = document.querySelector('.sections-grid .grid'); if (!grid) return false; const cols = window.getComputedStyle(grid).gridTemplateColumns.split(' ').length; return cols > before; }}",
-            columnsBefore);
+        // Act + Assert — retry click until grid columns increase
+        var toggle = Page.Locator(".sidebar-toggle");
+        await toggle.ClickAndExpectAsync(async () =>
+        {
+            var cols = await Page.EvaluateAsync<int>(@"() => {
+                const grid = document.querySelector('.sections-grid .grid');
+                if (!grid) return 0;
+                return window.getComputedStyle(grid).gridTemplateColumns.split(' ').length;
+            }");
+            cols.Should().BeGreaterThan(columnsBefore,
+                "sidebar collapse should increase the grid column count");
+        });
 
         // Get columns after collapse
         var columnsAfter = await Page.EvaluateAsync<int>(@"() => {

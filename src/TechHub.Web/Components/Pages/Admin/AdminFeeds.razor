@@ -1,0 +1,296 @@
+@page "/admin/feeds"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.ContentProcessing
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>RSS Feeds — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">RSS Feed Configuration</h1>
+            <p class="admin-page-subtitle">Manage the list of RSS feeds that are processed for content ingestion</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn" @onclick="ShowAddForm">+ Add Feed</button>
+            <button class="btn-secondary" @onclick="LoadFeedsAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_showForm)
+    {
+        <div class="admin-modal-backdrop" @onclick="CancelForm" @onkeydown="HandleKeyDown" role="dialog" aria-modal="true" aria-labelledby="feed-editor-title" tabindex="-1">
+            <div class="admin-modal" @onclick:stopPropagation>
+                <div class="admin-modal-header">
+                    <h2 id="feed-editor-title" class="admin-modal-title">@(_editingFeed?.Id > 0 ? "Edit Feed" : "Add Feed")</h2>
+                    <button class="admin-modal-close" @onclick="CancelForm" aria-label="Close editor">×</button>
+                </div>
+                <div class="admin-modal-body">
+                    <div class="admin-form-grid">
+                        <div class="admin-form-group">
+                            <label class="admin-label" for="feedName">Name</label>
+                            <input id="feedName" class="admin-input" @bind="_editingFeed!.Name" placeholder="e.g. GitHub Blog" />
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label" for="feedUrl">URL</label>
+                            <input id="feedUrl" class="admin-input" @bind="_editingFeed!.Url" placeholder="https://github.blog/feed/" />
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label" for="feedOutputDir">Output Directory</label>
+                            <input id="feedOutputDir" class="admin-input" @bind="_editingFeed!.OutputDir" placeholder="_blogs" />
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label">
+                                <input type="checkbox" @bind="_editingFeed!.Enabled" />
+                                Enabled
+                            </label>
+                        </div>
+                        <div class="admin-form-group">
+                            <label class="admin-label">
+                                <input type="checkbox" @bind="_editingFeed!.TranscriptMandatory" />
+                                Transcript Mandatory
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-modal-footer">
+                    <button class="btn" @onclick="SaveFeedAsync" disabled="@_saving">
+                        @(_saving ? "Saving…" : "Save")
+                    </button>
+                    <button class="btn-secondary" @onclick="CancelForm">Cancel</button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading feeds…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_feeds == null || _feeds.Count == 0)
+    {
+        <div class="admin-empty">No RSS feeds configured yet.</div>
+    }
+    else
+    {
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>URL</th>
+                        <th>Output Dir</th>
+                        <th>Enabled</th>
+                        <th>Transcript</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var feed in _feeds)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@feed.Id</td>
+                            <td>@feed.Name</td>
+                            <td class="admin-cell-url">@feed.Url</td>
+                            <td class="admin-cell-mono">@feed.OutputDir</td>
+                            <td>
+                                <span class="admin-status @(feed.Enabled ? "admin-status-completed" : "admin-status-failed")">
+                                    @(feed.Enabled ? "✓ Yes" : "✗ No")
+                                </span>
+                            </td>
+                            <td>
+                                <span class="admin-status @(feed.TranscriptMandatory ? "admin-status-completed" : "")">
+                                    @(feed.TranscriptMandatory ? "✓ Required" : "—")
+                                </span>
+                            </td>
+                            <td>
+                                <button class="admin-link-btn" @onclick="() => EditFeed(feed)">Edit</button>
+                                <button class="admin-link-btn admin-link-btn-danger" @onclick="() => DeleteFeedAsync(feed)">Delete</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@code {
+    private bool _loading = true;
+    private bool _saving;
+    private bool _showForm;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private IReadOnlyList<FeedConfig>? _feeds;
+    private FeedConfig? _editingFeed;
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<FeedConfig>>("admin-feeds", out var restored) && restored != null)
+        {
+            _feeds = restored;
+            _loading = false;
+            return;
+        }
+
+        await LoadFeedsAsync();
+    }
+
+    private Task PersistState()
+    {
+        if (_feeds != null)
+        {
+            ApplicationState.PersistAsJson("admin-feeds", _feeds);
+        }
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+    }
+
+    private async Task LoadFeedsAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _feeds = await Api.GetFeedConfigsAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load feeds: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private void ShowAddForm()
+    {
+        _editingFeed = new FeedConfig { Enabled = true };
+        _showForm = true;
+        _message = null;
+    }
+
+    private void EditFeed(FeedConfig feed)
+    {
+        _editingFeed = new FeedConfig
+        {
+            Id = feed.Id,
+            Name = feed.Name,
+            Url = feed.Url,
+            OutputDir = feed.OutputDir,
+            Enabled = feed.Enabled,
+            TranscriptMandatory = feed.TranscriptMandatory
+        };
+        _showForm = true;
+        _message = null;
+    }
+
+    private void CancelForm()
+    {
+        _showForm = false;
+        _editingFeed = null;
+    }
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Escape")
+        {
+            CancelForm();
+        }
+    }
+
+    private async Task SaveFeedAsync()
+    {
+        if (_editingFeed is null)
+        {
+            return;
+        }
+
+        _saving = true;
+        _message = null;
+
+        try
+        {
+            if (_editingFeed.Id > 0)
+            {
+                await Api.UpdateFeedConfigAsync(_editingFeed);
+                _message = $"Feed '{_editingFeed.Name}' updated successfully.";
+            }
+            else
+            {
+                await Api.CreateFeedConfigAsync(_editingFeed);
+                _message = $"Feed '{_editingFeed.Name}' created successfully.";
+            }
+
+            _messageIsError = false;
+            _showForm = false;
+            _editingFeed = null;
+            await LoadFeedsAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to save feed: {ex.Message}";
+            _messageIsError = true;
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task DeleteFeedAsync(FeedConfig feed)
+    {
+        _message = null;
+
+        try
+        {
+            await Api.DeleteFeedConfigAsync(feed.Id);
+            _message = $"Feed '{feed.Name}' deleted.";
+            _messageIsError = false;
+            await LoadFeedsAsync();
+        }
+        catch (OperationCanceledException)
+        {
+            throw;
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to delete feed: {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+}

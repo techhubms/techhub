@@ -1,25 +1,25 @@
-## Dead Code Found
+# Dead Code Found
 
 **Total**: {TOTAL_DEAD_CODE_COUNT} items
 
-### 🟢 High Confidence - Safe to Remove ({UNUSED_USINGS_COUNT})
+## 🟢 High Confidence - Safe to Remove ({UNUSED_USINGS_COUNT})
 
 {UNUSED_USINGS_DETAILS}
 
-### 🟡 Medium Confidence - Review First ({UNUSED_MEMBERS_COUNT} members, {COMMENTED_CODE_COUNT} commented)
+## 🟡 Medium Confidence - Review First ({UNUSED_MEMBERS_COUNT} members, {COMMENTED_CODE_COUNT} commented)
 
 {UNUSED_MEMBERS_DETAILS}
 
 {COMMENTED_CODE_DETAILS}
 
-### 🟠 Low Confidence - May be false positives ({UNUSED_CSS_COUNT})
+## 🟠 Low Confidence - May be false positives ({UNUSED_CSS_COUNT})
 
 {UNUSED_CSS_DETAILS}
 
-### Recommendations
+## Recommendations
 
 {YOUR RECOMMENDATIONS}
 
-### Next steps
+## Next steps
 
 {PRESENT USER WITH OPTIONS}

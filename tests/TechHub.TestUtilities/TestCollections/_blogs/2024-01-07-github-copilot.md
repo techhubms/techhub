@@ -1,4 +1,4 @@
-﻿---
+---
 title: GitHub Copilot Post
 date: 2024-01-07
 primary_section: github-copilot
@@ -9,7 +9,7 @@ tags:
 - GitHub
 - GitHub Copilot
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/blogs/github-copilot
 author: Test Author
 feed_name: Test Feed
 ---

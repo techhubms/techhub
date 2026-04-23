@@ -47,6 +47,21 @@ param apiImageTag string
 @description('Web Docker image tag (yyyyMMddHHmmss format)')
 param webImageTag string
 
+@secure()
+@description('Azure AD tenant ID for admin dashboard authentication')
+param azureAdTenantId string = ''
+
+@secure()
+@description('Azure AD client ID for admin dashboard authentication')
+param azureAdClientId string = ''
+
+@secure()
+@description('Azure AD client secret for admin dashboard authentication')
+param azureAdClientSecret string = ''
+
+@description('Azure AD API scope for admin access token validation (e.g. api://<client-id>/Admin.Access)')
+param azureAdScopes string = ''
+
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
 
@@ -321,6 +336,12 @@ module apiApp './modules/api.bicep' = {
     databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require'
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     environmentName: environmentName
+    azureAdTenantId: azureAdTenantId
+    azureAdClientId: azureAdClientId
+    azureAdScopes: azureAdScopes
+    aiCategorizationApiKey: openai.outputs.openAiApiKey
+    aiCategorizationEndpoint: openai.outputs.openAiEndpoint
+    aiCategorizationDeploymentName: openai.outputs.deploymentName
   }
 }
 
@@ -344,6 +365,10 @@ module webApp './modules/web.bicep' = {
     primaryHosts: primaryHosts
     environmentName: environmentName
     wildcardCertificateIds: wildcardCertIds
+    azureAdTenantId: azureAdTenantId
+    azureAdClientId: azureAdClientId
+    azureAdClientSecret: azureAdClientSecret
+    azureAdScopes: azureAdScopes
   }
 }
 

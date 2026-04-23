@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html><meta charset="utf-8"><!-- Google Tag Manager --><script type="fd179339b1008d7cfa744166-text/javascript">
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-THFXR77Q");
+    </script><!-- End Google Tag Manager --><!-- Cloudflare Web Analytics --><script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;70025a69ef4141e6a984b01064c3cc63&quot;}" type="fd179339b1008d7cfa744166-text/javascript"></script><!-- End Cloudflare Web Analytics --><title>GUID v4 vs v7: Why You Should Care About the Shift by Bruno Van Thournout</title><meta property="og:type" content="website"><meta property="og:site_name" content="brunovt.be"><meta property="og:locale" content="en_US"><meta name="description" content="A developers perspective on the shift from GUID v4 to v7. We will cover performance, ecosystem support, migration strategies and a practical decision framework for when to use which version."><link rel="canonical" href="https://brunovt.be/blog/guid-v4-vs-v7/"><meta property="og:title" content="GUID v4 vs v7: Why You Should Care About the Shift by Bruno Van Thournout"><meta property="og:url" content="https://brunovt.be/blog/guid-v4-vs-v7/"><meta property="og:description" content="A developers perspective on the shift from GUID v4 to v7. We will cover performance, ecosystem support, migration strategies and a practical decision framework for when to use which version."><meta property="og:image" content="https://brunovt.be/_astro/hero.BlLLNqvt.png"><meta property="og:image:width" content="1423"><meta property="og:image:height" content="752"><meta property="og:logo" content="/images/favicon-32x32.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@BrunoVT1992"><meta name="twitter:title" content="GUID v4 vs v7: Why You Should Care About the Shift by Bruno Van Thournout"><meta name="twitter:description" content="A developers perspective on the shift from GUID v4 to v7. We will cover performance, ecosystem support, migration strategies and a practical decision framework for when to use which version."><meta name="twitter:image" content="https://brunovt.be/_astro/hero.BlLLNqvt.png"><meta name="twitter:image:width" content="1423"><meta name="twitter:image:height" content="752"><meta name="keywords" content="Bruno Van Thournout, Bruno, BrunoVT, Blog, guid, uuid, comparison, architecture, dotnet, database"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"><link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="shortcut icon" href="/images/favicon.ico"><link rel="apple-touch-icon" href="/images/apple-touch-icon.png"><link rel="stylesheet" href="/bootstrap-5.3.3/css/bootstrap.min.css"><link rel="stylesheet" href="/bootstrap-icons-1.11.3/bootstrap-icons.min.css"><link rel="stylesheet" href="/css/app.css?v=2"><script src="/bootstrap-5.3.3/js/bootstrap.bundle.min.js" defer type="fd179339b1008d7cfa744166-text/javascript"></script><meta name="generator" content="Astro v5.17.1"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://brunovt.be/#person","name":"Bruno Van Thournout","url":"https://brunovt.be/","image":"https://brunovt.be/_astro/hero.BlLLNqvt.png"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","@id":"https://brunovt.be/#website","url":"https://brunovt.be/","name":"Bruno Van Thournout","publisher":{"@id":"https://brunovt.be/#person"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","@id":"https://brunovt.be/blog/guid-v4-vs-v7/#webpage","url":"https://brunovt.be/blog/guid-v4-vs-v7/","name":"GUID v4 vs v7: Why You Should Care About the Shift by Bruno Van Thournout","description":"A developers perspective on the shift from GUID v4 to v7. We will cover performance, ecosystem support, migration strategies and a practical decision framework for when to use which version.","image":"https://brunovt.be/_astro/hero.BlLLNqvt.png","isPartOf":{"@id":"https://brunovt.be/#website"},"about":{"@id":"https://brunovt.be/#person"}}</script> <style>.post-link[data-astro-cid-f45vxlzk]{color:inherit;display:block;text-decoration:none}.post-link[data-astro-cid-f45vxlzk]:hover{color:inherit;text-decoration:none}.post-text[data-astro-cid-f45vxlzk]{display:block;text-overflow:ellipsis;overflow:hidden}.post-date[data-astro-cid-f45vxlzk]{margin-top:0}.post-title[data-astro-cid-f45vxlzk]{line-height:.9em;overflow-wrap:break-word}.post-img[data-astro-cid-f45vxlzk]{width:300px;height:auto;max-height:150px;object-fit:contain;display:block;margin-left:auto;margin-right:auto}.post-img-mobile[data-astro-cid-f45vxlzk]{width:100%;height:auto;max-height:375px;object-fit:contain;display:block;margin-left:auto;margin-right:auto}.post-tag-link[data-astro-cid-f45vxlzk],.post-tag-link[data-astro-cid-f45vxlzk]:hover{text-decoration:none}
+.main-container[data-astro-cid-cuk5i62i]{animation:fadeIn .5s ease-in;max-width:1200px}@keyframes fadeIn{0%{opacity:0}to{opacity:.95}}
+.article-container[data-astro-cid-7jjqptxk] a{text-decoration:underline}.article-container[data-astro-cid-7jjqptxk] li::marker{color:var(--bs-secondary-color)}.article-container[data-astro-cid-7jjqptxk] h1,.article-container[data-astro-cid-7jjqptxk] h2,.article-container[data-astro-cid-7jjqptxk] h3,.article-container[data-astro-cid-7jjqptxk] h4,.article-container[data-astro-cid-7jjqptxk] h5,.article-container[data-astro-cid-7jjqptxk] h6{margin-top:30px}.article-container[data-astro-cid-7jjqptxk] p:has(+ul),.article-container[data-astro-cid-7jjqptxk] p:has(+ol){margin-bottom:.2rem}.article-container[data-astro-cid-7jjqptxk] blockquote{padding:1rem 1rem .5rem 1.75rem;position:relative;overflow:hidden;border-radius:.25rem;font-style:italic;font-weight:400}.article-container[data-astro-cid-7jjqptxk] blockquote:before,.article-container[data-astro-cid-7jjqptxk] blockquote:after{position:absolute;color:#777}.article-container[data-astro-cid-7jjqptxk] blockquote:before{content:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='%23777777'><path d='M9.983 3v7.391C9.983 16.095 6.252 19.961 1 21l-.995-2.151C2.437 17.932 4 15.211 4 13H0V3h9.983zM24 3v7.391c0 5.704-3.748 9.571-9 10.609l-.996-2.151C16.437 17.932 18 15.211 18 13h-3.983V3H24z'/></svg>");left:0;top:.35rem;line-height:0}.article-container[data-astro-cid-7jjqptxk] blockquote:after{content:"";left:5px;top:1.5rem;width:1px;height:calc(100% - 1.5rem);background-color:currentColor;opacity:.7}.article-container[data-astro-cid-7jjqptxk] blockquote p{margin:0}.article-container[data-astro-cid-7jjqptxk] blockquote p+p{margin-top:1rem}.article-container[data-astro-cid-7jjqptxk] blockquote p:last-child{margin-bottom:0}.article-container[data-astro-cid-7jjqptxk] table{width:100%;border-collapse:collapse;margin:1.5rem 0}.article-container[data-astro-cid-7jjqptxk] th,.article-container[data-astro-cid-7jjqptxk] td{padding:.75rem 1rem;border:1px solid var(--bs-border-color);text-align:left;vertical-align:top;white-space:normal;overflow-wrap:break-word}@media(max-width:768px){.article-container[data-astro-cid-7jjqptxk] table{display:block;overflow-x:auto}.article-container[data-astro-cid-7jjqptxk] th,.article-container[data-astro-cid-7jjqptxk] td{min-width:140px}}.article-container[data-astro-cid-7jjqptxk] thead th{background:var(--bs-tertiary-bg)}.hero-image[data-astro-cid-7jjqptxk]{width:100%;height:auto;max-height:400px;object-fit:contain;display:block;margin-left:auto;margin-right:auto}.post-tag-link[data-astro-cid-7jjqptxk],.post-tag-link[data-astro-cid-7jjqptxk]:hover{text-decoration:none}
+</style><body class="d-flex flex-column" data-astro-cid-cuk5i62i> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THFXR77Q" height="0" width="0" style="display:none;visibility:hidden" data-astro-cid-cuk5i62i></iframe></noscript> <!-- End Google Tag Manager (noscript) --> <nav data-astro-cid-cuk5i62i> <div class="navbar navbar-expand-md bg-body-tertiary" data-astro-cid-cuk5i62i> <div class="container-fluid gap-2" data-astro-cid-cuk5i62i> <a class="navbar-brand hstack" href="/" rel="index follow" data-astro-cid-cuk5i62i> <img src="/images/logo-32x32.png" alt="brunovt.be logo" title="brunovt.be logo" width="25" height="25" class="d-inline-block align-text-top my-auto" data-astro-cid-cuk5i62i> <span class="ms-2 text-uppercase letter-spacing-profile" data-astro-cid-cuk5i62i>Bruno Van Thournout</span> </a> <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-astro-cid-cuk5i62i> <span class="navbar-toggler-icon" data-astro-cid-cuk5i62i></span> </button> <div class="collapse navbar-collapse" id="navbarSupportedContent" data-astro-cid-cuk5i62i> <ul class="navbar-nav me-auto gap-3 mb-2 mb-md-0" data-astro-cid-cuk5i62i> <li class="nav-item mt-2 mt-md-0" data-astro-cid-cuk5i62i> <a href="/blog" rel="index follow" data-astro-cid-cuk5i62i>Blog</a> </li> <li class="nav-item" data-astro-cid-cuk5i62i> <a href="/projects" rel="index follow" data-astro-cid-cuk5i62i>Projects</a> </li> </ul> </div> </div> </div> </nav> <main class="flex-grow-1" data-astro-cid-cuk5i62i> <div class="w-100 px-2 px-sm-3" data-astro-cid-cuk5i62i> <div class="pt-4 mx-auto w-100 main-container" data-astro-cid-cuk5i62i> <article id="blog-post" class="d-flex justify-content-center article-container" data-astro-cid-7jjqptxk><div class="card content-card" data-astro-cid-7jjqptxk><div class="px-4 py-3" data-astro-cid-7jjqptxk><h1 class="m-0 p-0" data-astro-cid-7jjqptxk>GUID v4 vs v7: Why You Should Care About the Shift</h1><div class="text-muted fs-7 mt-1 mb-2" data-astro-cid-7jjqptxk><time datetime="2026-04-05T00:00:00.000Z"> Apr 5, 2026 </time>
+&bull;
+<span data-astro-cid-7jjqptxk>8 min read</span></div><div class="d-flex flex-wrap gap-2 mt-1 mb-3" data-astro-cid-7jjqptxk><a href="/blog?q=guid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link text-decoration-none" data-astro-cid-7jjqptxk>guid</a><a href="/blog?q=uuid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link text-decoration-none" data-astro-cid-7jjqptxk>uuid</a><a href="/blog?q=comparison" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link text-decoration-none" data-astro-cid-7jjqptxk>comparison</a><a href="/blog?q=architecture" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link text-decoration-none" data-astro-cid-7jjqptxk>architecture</a><a href="/blog?q=dotnet" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link text-decoration-none" data-astro-cid-7jjqptxk>dotnet</a><a href="/blog?q=database" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link text-decoration-none" data-astro-cid-7jjqptxk>database</a></div><div class="w-100 mb-4" data-astro-cid-7jjqptxk><img src="/_astro/hero.BlLLNqvt_1c1CMm.webp" srcset="/_astro/hero.BlLLNqvt_1J37vz.webp 640w, /_astro/hero.BlLLNqvt_ZTFEzn.webp 750w, /_astro/hero.BlLLNqvt_1etmxY.webp 828w, /_astro/hero.BlLLNqvt_Z2a9XO0.webp 1080w, /_astro/hero.BlLLNqvt_Zq2BdE.webp 1280w" id="blog-post-hero-image" alt="Image for GUID v4 vs v7: Why You Should Care About the Shift" loading="eager" decoding="async" data-astro-cid-7jjqptxk="true" fetchpriority="auto" sizes="100vw" style="--fit: cover; --pos: center;" data-astro-image="full-width" width="1423" height="752" class="hero-image rounded-top"></div><p>You are reviewing a pull request. Someone generated an identifier with <code>Guid.NewGuid()</code>, <code>uuid.uuid4()</code>, or <code>crypto.randomUUID()</code>. Nobody questions it. It compiles, it works, and collision risk is negligible.</p>
+<p>This is the muscle memory of nearly every development team on the planet. GUID / UUID v4 has been the unquestioned default since RFC 4122 was published in July 2005. It is simple, widely supported, and effectively bulletproof in terms of uniqueness. So why would anyone change?</p>
+<p>Because databases have evolved. Distributed systems have evolved. And in May 2024, the standards caught up: <a href="https://www.guidsgenerator.com/wiki/uuid-rfc4122-vs-rfc9562">RFC 9562</a> introduced GUID / UUID v7 as the recommended time-ordered version, and major language runtimes have already shipped native support.</p>
+<p>If you are a developer, this matters. Not because v4 is broken, but because v7 solves real problems that v4 was never designed to address.</p>
+<h2 id="what-actually-changed-v4-vs-v7-in-plain-english">What Actually Changed: v4 vs v7 in Plain English</h2>
+<p>Both GUID / UUID v4 and v7 are 128-bit identifiers using the standard <code>8-4-4-4-12</code> hex format. Both are non-deterministic. Both produce values that look like this:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>v4 example: 5c98eda8-b852-4eec-9960-ac2e29d734f4</span></span>
+<span class="line"><span>v7 example: 018f3f5e-1c2d-7a9b-8f10-3c4d5e6f7a8b</span></span></code></pre>
+<p>The difference is in how those 128 bits are allocated:</p>
+<ul>
+<li>
+<p><strong><a href="https://www.guidsgenerator.com/wiki/uuid-v4">v4</a></strong> fills 122 of its 128 bits with cryptographically random data. There is no order, no embedded metadata, and maximum privacy. The only non-random bits are the version nibble (<code>4</code>) and the variant marker.</p>
+</li>
+<li>
+<p><strong><a href="https://www.guidsgenerator.com/wiki/uuid-v7">v7</a></strong> dedicates the first 48 bits to a Unix Epoch timestamp in milliseconds, followed by 74 bits of randomness. This means v7 IDs generated later are always lexicographically greater. They sort naturally by creation time.</p>
+</li>
+</ul>
+<p>The version nibble (<code>4</code> vs <code>7</code>) is the only visible difference in the string itself. Everything else — the format, the storage, the column types — stays the same.</p>
+<p>For collision resistance, both versions are safe in any real-world scenario. V4 offers 122 random bits per ID (~5.3 × 10³⁶ possible values). V7 offers 74 random bits per millisecond (~1.9 × 10²² unique values per millisecond), combined with timestamp-based separation across milliseconds. You will not hit a collision with either version.</p>
+<h2 id="the-database-performance-story-why-this-matters-at-scale">The Database Performance Story: Why This Matters at Scale</h2>
+<p>This is where the shift from v4 to v7 goes from “interesting” to “impactful.”</p>
+<p>Most relational databases store primary keys in B-tree indexes. When you insert a row with a random v4 GUID / UUID as the key, that insert lands at a random position in the index. Over millions of rows, this causes:</p>
+<ul>
+<li><strong>Page splits</strong> — the database has to reorganize index pages to make room for randomly placed values.</li>
+<li><strong>Write amplification</strong> — more disk I/O per insert than necessary.</li>
+<li><strong>Lower cache hit rates</strong> — recently accessed pages are unlikely to be reused because inserts are scattered.</li>
+<li><strong>Index bloat</strong> — fragmented pages waste space over time.</li>
+</ul>
+<p>V7 changes this fundamentally. Because the leading 48 bits are a timestamp, new inserts always cluster near the end of the index. The behavior becomes sequential-ish, similar to auto-increment integers. The result is dramatically fewer page splits, better write throughput, and reduced storage overhead.</p>
+<p>This is not theoretical. In PostgreSQL, MySQL, SQL Server and most other relational databases, the difference is measurable at scale. Many teams that migrated from v4 to v7 primary keys report write performance approaching auto-increment integers — without losing the benefits of decentralized, coordination-free ID generation.</p>
+<p>As a bonus, you get approximate chronological ordering for free. Sorting by the primary key yields a roughly chronological list, which simplifies pagination, event streaming, audit logs, and “latest first” queries. In many cases, this eliminates the need for a separate indexed <code>created_at</code> column entirely.</p>
+<p>For a deeper dive into database-level behavior, see the <a href="https://www.guidsgenerator.com/wiki/uuid-database-performance-and-indexing">GUID Database Performance and Indexing guide</a> on GUIDsGenerator.com.</p>
+<h2 id="the-ecosystem-is-moving-language-and-framework-support">The Ecosystem Is Moving: Language and Framework Support</h2>
+<p>This is not a proposal or a draft spec. RFC 9562 was published in May 2024, and the major ecosystems have already shipped v7 support. Here is what the v4-to-v7 switch looks like in practice:</p>
+<h3 id="net-c">.NET (C#)</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#6A737D">// v4 — available since .NET 1.0</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#B392F0"> v4</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> Guid.</span><span style="color:#B392F0">NewGuid</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v7 — available since .NET 9</span></span>
+<span class="line"><span style="color:#F97583">var</span><span style="color:#B392F0"> v7</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> Guid.</span><span style="color:#B392F0">CreateVersion7</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<h3 id="python">Python</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> uuid</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># v4 — available since Python 2.5</span></span>
+<span class="line"><span style="color:#E1E4E8">v4 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> uuid.uuid4()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># v7 — available since Python 3.13</span></span>
+<span class="line"><span style="color:#E1E4E8">v7 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> uuid.uuid7()</span></span></code></pre>
+<h3 id="javascript--nodejs">JavaScript / Node.js</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="javascript"><code><span class="line"><span style="color:#6A737D">// v4 — built-in (Web Crypto API / Node.js 19+)</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> v4</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> crypto.</span><span style="color:#B392F0">randomUUID</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v7 — requires the 'uuid' package v9+</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> { v7 </span><span style="color:#F97583">as</span><span style="color:#E1E4E8"> uuidv7 } </span><span style="color:#F97583">from</span><span style="color:#9ECBFF"> 'uuid'</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#79B8FF"> v7</span><span style="color:#F97583"> =</span><span style="color:#B392F0"> uuidv7</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<h3 id="go">Go</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="go"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#9ECBFF"> "</span><span style="color:#B392F0">github.com/google/uuid</span><span style="color:#9ECBFF">"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v4 — available since google/uuid v1.0</span></span>
+<span class="line"><span style="color:#E1E4E8">v4 </span><span style="color:#F97583">:=</span><span style="color:#E1E4E8"> uuid.</span><span style="color:#B392F0">New</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v7 — available since google/uuid v1.4</span></span>
+<span class="line"><span style="color:#E1E4E8">v7, _ </span><span style="color:#F97583">:=</span><span style="color:#E1E4E8"> uuid.</span><span style="color:#B392F0">NewV7</span><span style="color:#E1E4E8">()</span></span></code></pre>
+<h3 id="rust">Rust</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="rust"><code><span class="line"><span style="color:#F97583">use</span><span style="color:#B392F0"> uuid</span><span style="color:#F97583">::</span><span style="color:#B392F0">Uuid</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v4 — requires feature "v4"</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> v4 </span><span style="color:#F97583">=</span><span style="color:#B392F0"> Uuid</span><span style="color:#F97583">::</span><span style="color:#B392F0">new_v4</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v7 — requires feature "v7", available since uuid crate v1.3</span></span>
+<span class="line"><span style="color:#F97583">let</span><span style="color:#E1E4E8"> v7 </span><span style="color:#F97583">=</span><span style="color:#B392F0"> Uuid</span><span style="color:#F97583">::</span><span style="color:#B392F0">now_v7</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<h3 id="java">Java</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.UUID;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v4 — available since Java 1.5</span></span>
+<span class="line"><span style="color:#E1E4E8">UUID v4 </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> UUID.</span><span style="color:#B392F0">randomUUID</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// v7 — no built-in support yet</span></span>
+<span class="line"><span style="color:#6A737D">// Use a library like com.fasterxml.uuid (java-uuid-generator 5.0+)</span></span>
+<span class="line"><span style="color:#6A737D">// or com.github.f4b6a3:uuid-creator</span></span></code></pre>
+<p>The pattern is the same everywhere: a one-line function swap. Same column type. Same format. No schema migration. No infrastructure changes. No coordination between services.</p>
+<p>V4 and v7 can coexist in the same system. Both are valid 128-bit GUIDs / UUIDs in the same canonical format, so you can migrate incrementally.</p>
+<h2 id="when-v4-is-still-the-right-call">When v4 Is Still the Right Call</h2>
+<p>A good technical decision is never “always use the new thing.” V4 remains the better choice in several real scenarios:</p>
+<p><strong>Privacy-sensitive public identifiers.</strong> V7 embeds an approximate creation timestamp in the first 48 bits. Anyone with access to the GUID / UUID can <a href="https://www.guidsgenerator.com/validate">extract when it was created</a>. For URLs, API keys, session tokens or any identifier visible to end users where timing metadata must stay private, v4 is the safer choice.</p>
+<p><strong>Existing v4 ecosystems with no ordering needs.</strong> If your system already uses v4 everywhere and time-based sorting adds no value to your queries, switching introduces churn without meaningful gain. Do not fix what is not broken.</p>
+<p><strong>Maximum randomness per ID.</strong> V4 gives 122 random bits per identifier. V7 gives 74 random bits per millisecond. For extreme collision paranoia within a single time-tick, v4 offers a wider spread. But in reality this is not a meaningful concern — even v7’s 74 random bits per millisecond yield over 18 quintillion unique values per time-tick, which is far beyond what any system will ever generate.</p>
+<p><strong>Environments without reliable clocks.</strong> V7 depends on a reasonably accurate system clock. Embedded systems, sandboxed environments, or virtualized setups with significant clock drift may produce out-of-order IDs, undermining the entire point of time-ordering.</p>
+<p>The bottom line: v4 is not deprecated, not going away, and remains perfectly valid. The choice should be driven by your actual constraints, not hype.</p>
+<h2 id="a-practical-decision-framework-for-your-team">A Practical Decision Framework for Your Team</h2>
+<p>Here is a straightforward decision tree you can apply in code reviews, architecture discussions, and new project kickoffs:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Scenario</th><th>Recommendation</th></tr></thead><tbody><tr><td>New project, database primary keys</td><td><strong>v7</strong> — performance and sorting benefits are significant, migration cost is zero on greenfield</td></tr><tr><td>New project, public-facing tokens or API keys</td><td><strong>v4</strong> — timestamp disclosure is an unnecessary risk for externally visible identifiers</td></tr><tr><td>Existing v4 system, hitting index performance issues</td><td><strong>Evaluate v7</strong> — migrate hot tables first, v4 and v7 coexist safely</td></tr><tr><td>Existing v4 system, no performance complaints</td><td><strong>Stay with v4</strong> — revisit when starting new services or modules</td></tr><tr><td>Event streaming, audit logs, correlation IDs</td><td><strong>v7</strong> — natural chronological ordering simplifies debugging and querying</td></tr><tr><td>Internal microservice identifiers (no external exposure)</td><td><strong>v7</strong> — ordering and performance benefits outweigh minimal timestamp disclosure</td></tr></tbody></table>
+<p>This is not about always choosing v7. It is about making GUID / UUID version selection a conscious decision rather than defaulting to whatever autocomplete suggests.</p>
+<h2 id="the-migration-is-simpler-than-you-think">The Migration Is Simpler Than You Think</h2>
+<p>The most common objection is that migration sounds painful. In practice, it is a one-line change per call site:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Language</th><th>v4</th><th>v7</th></tr></thead><tbody><tr><td>.NET</td><td><code>Guid.NewGuid()</code></td><td><code>Guid.CreateVersion7()</code></td></tr><tr><td>Python</td><td><code>uuid.uuid4()</code></td><td><code>uuid.uuid7()</code></td></tr><tr><td>Node.js</td><td><code>uuidv4()</code></td><td><code>uuidv7()</code></td></tr><tr><td>Go</td><td><code>uuid.New()</code></td><td><code>uuid.NewV7()</code></td></tr><tr><td>Rust</td><td><code>Uuid::new_v4()</code></td><td><code>Uuid::now_v7()</code></td></tr></tbody></table>
+<p>No schema changes are needed. Both versions are 128-bit values stored in the same column types (<code>uniqueidentifier</code> in SQL Server, <code>uuid</code> in PostgreSQL, <code>BINARY(16)</code> in MySQL).</p>
+<p>No coordination or central authority is required. V7 uses the same decentralized generation model as v4 — any node can generate IDs independently.</p>
+<p>Existing v4 IDs in your database remain valid. New v7 rows will sort after them in most cases, since v7 timestamps are lexicographically greater than most random v4 values.</p>
+<p>The practical migration path:</p>
+<ol>
+<li>Start by adopting v7 for new tables and new services.</li>
+<li>For existing high-write tables where you are seeing index fragmentation, evaluate whether migrating the ID generation call improves performance.</li>
+<li>Leave stable v4 systems alone unless there is a clear benefit to switching.</li>
+</ol>
+<h2 id="make-it-a-conscious-choice">Make It a Conscious Choice</h2>
+<p>The industry is shifting toward v7 as the new default. This is not a trend piece — it is an <a href="https://www.guidsgenerator.com/wiki/uuid-rfc4122-vs-rfc9562">RFC-backed standard</a> with measurable performance implications and native runtime support across every major language.</p>
+<p>As a tech lead, the right move is not to mandate v7 everywhere. It is to make GUID / UUID version selection a deliberate architectural decision instead of an afterthought.</p>
+<p>Add it to your team’s design review checklist: <strong>“Which GUID / UUID version, and why?”</strong></p>
+<p>For most new work — especially anything touching databases, event streams, or distributed systems — v7 is the stronger default. For privacy-sensitive contexts, v4 remains the right tool. And for existing systems running fine on v4, there is no urgency to change.</p>
+<p>The best identifier is not the newest one. It is the one chosen deliberately.</p>
+<p>For a full side-by-side breakdown of every GUID / UUID version, see the <a href="https://www.guidsgenerator.com/wiki/uuid-v4-vs-v7">GUID v4 vs v7 comparison</a> and the <a href="https://www.guidsgenerator.com/wiki/uuid-comparison">complete version comparison</a> on GUIDsGenerator.com.</p>
+<p>If you want the easiest, fastest and rfc-compliant browser-based guid generator to quickly create unique identifiers, visit <a href="https://www.guidsgenerator.com/">GUIDsGenerator.com</a>.</p>
+<p>Thank you for reading.<br>
+-Bruno</p></div></div></article><section class="mt-5" data-astro-cid-7jjqptxk><h2 class="text-white mb-3" data-astro-cid-7jjqptxk>Read more</h2><div class="vstack gap-4" data-astro-cid-7jjqptxk><article class="card content-card post-card" data-astro-cid-f45vxlzk> <div class="d-flex flex-column flex-md-row justify-content-start align-items-start gap-2" data-astro-cid-f45vxlzk>  <a href="/blog/guid-vs-uuid" rel="index follow" class="post-link d-md-none w-100" data-astro-cid-f45vxlzk> <img src="/_astro/hero.BN3Tr62W_1kWrPw.webp" srcset="/_astro/hero.BN3Tr62W_Z2oEPkb.webp 640w, /_astro/hero.BN3Tr62W_7DzjQ.webp 750w, /_astro/hero.BN3Tr62W_2sMCWN.webp 828w, /_astro/hero.BN3Tr62W_Zmr7j6.webp 1080w, /_astro/hero.BN3Tr62W_Z1Wmezs.webp 1280w" alt="Image for GUID vs UUID: What They Are and How to Generate Them" loading="lazy" decoding="async" data-astro-cid-f45vxlzk="true" fetchpriority="auto" sizes="100vw" style="--fit: cover; --pos: center;" data-astro-image="full-width" width="1536" height="1024" class="w-100 h-auto rounded-top post-img-mobile"> </a> <a href="/blog/guid-vs-uuid" rel="index follow" class="post-link d-none d-md-block my-auto" data-astro-cid-f45vxlzk> <img src="/_astro/hero.BN3Tr62W_ZJsFtc.webp" alt="Image for GUID vs UUID: What They Are and How to Generate Them" loading="lazy" decoding="async" data-astro-cid-f45vxlzk="true" fetchpriority="auto" width="300" height="230" class="img-fluid post-img"> </a>  <div class="container m-0 pt-2 pb-1" data-astro-cid-f45vxlzk> <a href="/blog/guid-vs-uuid" rel="index follow" class="post-link" data-astro-cid-f45vxlzk> <h2 class="fs-3 post-title" data-astro-cid-f45vxlzk>GUID vs UUID: What They Are and How to Generate Them</h2> <p class="fs-7 text-muted post-date mb-1" data-astro-cid-f45vxlzk> <time datetime="2026-02-21T00:00:00.000Z"> Feb 21, 2026 </time>
+&bull;
+<span data-astro-cid-f45vxlzk>3 min read</span> </p> </a> <div class="d-flex flex-wrap gap-2 mt-1 mb-1" data-astro-cid-f45vxlzk> <a href="/blog?q=guid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> guid </a><a href="/blog?q=uuid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> uuid </a><a href="/blog?q=comparison" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> comparison </a><a href="/blog?q=dotnet" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> dotnet </a> </div> <a href="/blog/guid-vs-uuid" rel="index follow" class="post-link" data-astro-cid-f45vxlzk> <p class="fs-6 post-text" data-astro-cid-f45vxlzk>A practical guide to GUIDs and UUIDs, how they differ in naming, and when to use v4 or v7 in real systems.</p> </a> </div> </div> </article><article class="card content-card post-card" data-astro-cid-f45vxlzk> <div class="d-flex flex-column flex-md-row justify-content-start align-items-start gap-2" data-astro-cid-f45vxlzk>  <a href="/blog/guid-generators-comparison" rel="index follow" class="post-link d-md-none w-100" data-astro-cid-f45vxlzk> <img src="/_astro/hero.C8rErNfR_1glvAO.webp" srcset="/_astro/hero.C8rErNfR_2lmrRB.webp 640w, /_astro/hero.C8rErNfR_Zcvghi.webp 750w, /_astro/hero.C8rErNfR_28CMlE.webp 828w, /_astro/hero.C8rErNfR_Zr33xN.webp 1080w, /_astro/hero.C8rErNfR_Z21XaOa.webp 1280w" alt="Image for The best GUID Generator Online? Comparing Popular Tools for Developers" loading="lazy" decoding="async" data-astro-cid-f45vxlzk="true" fetchpriority="auto" sizes="100vw" style="--fit: cover; --pos: center;" data-astro-image="full-width" width="1536" height="1024" class="w-100 h-auto rounded-top post-img-mobile"> </a> <a href="/blog/guid-generators-comparison" rel="index follow" class="post-link d-none d-md-block my-auto" data-astro-cid-f45vxlzk> <img src="/_astro/hero.C8rErNfR_Z14Cw5l.webp" alt="Image for The best GUID Generator Online? Comparing Popular Tools for Developers" loading="lazy" decoding="async" data-astro-cid-f45vxlzk="true" fetchpriority="auto" width="300" height="230" class="img-fluid post-img"> </a>  <div class="container m-0 pt-2 pb-1" data-astro-cid-f45vxlzk> <a href="/blog/guid-generators-comparison" rel="index follow" class="post-link" data-astro-cid-f45vxlzk> <h2 class="fs-3 post-title" data-astro-cid-f45vxlzk>The best GUID Generator Online? Comparing Popular Tools for Developers</h2> <p class="fs-7 text-muted post-date mb-1" data-astro-cid-f45vxlzk> <time datetime="2026-02-14T00:00:00.000Z"> Feb 14, 2026 </time>
+&bull;
+<span data-astro-cid-f45vxlzk>5 min read</span> </p> </a> <div class="d-flex flex-wrap gap-2 mt-1 mb-1" data-astro-cid-f45vxlzk> <a href="/blog?q=guid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> guid </a><a href="/blog?q=uuid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> uuid </a><a href="/blog?q=comparison" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> comparison </a> </div> <a href="/blog/guid-generators-comparison" rel="index follow" class="post-link" data-astro-cid-f45vxlzk> <p class="fs-6 post-text" data-astro-cid-f45vxlzk>A practical comparison of GUID generators for modern developer workflows.</p> </a> </div> </div> </article><article class="card content-card post-card" data-astro-cid-f45vxlzk> <div class="d-flex flex-column flex-md-row justify-content-start align-items-start gap-2" data-astro-cid-f45vxlzk>  <a href="/blog/guidsgenerator-com-a-modern-guid-uuid-toolkit-for-developers" rel="index follow" class="post-link d-md-none w-100" data-astro-cid-f45vxlzk> <img src="/_astro/hero.DstS_jfj_ZkVsgf.webp" srcset="/_astro/hero.DstS_jfj_Z1koaKy.webp 640w, /_astro/hero.DstS_jfj_Z1qriJ7.webp 750w, /_astro/hero.DstS_jfj_Z1sOzj3.webp 828w" alt="Image for GUIDsGenerator.com - A Modern GUID Generator Toolkit for Developers" loading="lazy" decoding="async" data-astro-cid-f45vxlzk="true" fetchpriority="auto" sizes="100vw" style="--fit: cover; --pos: center;" data-astro-image="full-width" width="987" height="740" class="w-100 h-auto rounded-top post-img-mobile"> </a> <a href="/blog/guidsgenerator-com-a-modern-guid-uuid-toolkit-for-developers" rel="index follow" class="post-link d-none d-md-block my-auto" data-astro-cid-f45vxlzk> <img src="/_astro/hero.DstS_jfj_1aYGc.webp" alt="Image for GUIDsGenerator.com - A Modern GUID Generator Toolkit for Developers" loading="lazy" decoding="async" data-astro-cid-f45vxlzk="true" fetchpriority="auto" width="300" height="230" class="img-fluid post-img"> </a>  <div class="container m-0 pt-2 pb-1" data-astro-cid-f45vxlzk> <a href="/blog/guidsgenerator-com-a-modern-guid-uuid-toolkit-for-developers" rel="index follow" class="post-link" data-astro-cid-f45vxlzk> <h2 class="fs-3 post-title" data-astro-cid-f45vxlzk>GUIDsGenerator.com - A Modern GUID Generator Toolkit for Developers</h2> <p class="fs-7 text-muted post-date mb-1" data-astro-cid-f45vxlzk> <time datetime="2026-02-07T00:00:00.000Z"> Feb 7, 2026 </time>
+&bull;
+<span data-astro-cid-f45vxlzk>3 min read</span> </p> </a> <div class="d-flex flex-wrap gap-2 mt-1 mb-1" data-astro-cid-f45vxlzk> <a href="/blog?q=guid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> guid </a><a href="/blog?q=uuid" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> uuid </a><a href="/blog?q=side-projects" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> side-projects </a><a href="/blog?q=development" rel="index follow" class="badge rounded-pill text-dark bg-secondary-subtle px-2 py-1 post-tag-link" data-astro-cid-f45vxlzk> development </a> </div> <a href="/blog/guidsgenerator-com-a-modern-guid-uuid-toolkit-for-developers" rel="index follow" class="post-link" data-astro-cid-f45vxlzk> <p class="fs-6 post-text" data-astro-cid-f45vxlzk>GUIDsGenerator.com is a guid generator or uuid generator, inspector and analyzer. This browser-based toolkit that lets developers learn and do everything with GUIDs / UUIDs. All in one place.</p> </a> </div> </div> </article></div></section> </div> </div> </main> <!-- Footer --> <footer class="mx-auto px-1 mb-3 mt-5" data-astro-cid-cuk5i62i> <p class="copyright text-uppercase fs-7 m-0" data-astro-cid-cuk5i62i>
+&copy; Bruno Van Thournout
+</p> </footer> <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="fd179339b1008d7cfa744166-|49" defer></script></body>

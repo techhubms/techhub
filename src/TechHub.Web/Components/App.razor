@@ -31,22 +31,28 @@
     <!-- Scoped Component Styles -->
     <link rel="stylesheet" href="@Assets["TechHub.Web.styles.css"]" />
 
+    <!-- Admin styles (loaded globally to prevent FOUC on InteractiveServer pages) -->
+    <link rel="stylesheet" href="@Assets["css/admin.css"]" />
+
     <!-- Favicon embedded as data URI to eliminate HTTP requests during navigation -->
     <link id="favicon" rel="icon" type="image/x-icon" href="@FaviconService.DataUri" sizes="any" data-permanent />
 
     @{
         var appInsightsConnectionString = Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING");
         var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+        // E2E signals are enabled in Development AND Staging — Staging is where CI/PR E2E tests run.
+        // Production excludes them (zero overhead, no test tooling in prod).
+        var enableE2ESignals = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") is "Development" or "Staging";
         var gaMeasurementId = Configuration["GoogleAnalytics:MeasurementId"];
     }
 
-    @if (isDevelopment)
+    @if (enableE2ESignals)
     {
         <!-- E2E test lifecycle counter — provides a single monotonic counter that
              all JS lifecycle hooks increment via __e2eSignal(label). Tests capture
              the counter before an action and wait for it to change, replacing 8+
              independent window.__* flags with one universal wait pattern.
-             Gated to Development only — zero production overhead. -->
+             Enabled in Development and Staging (CI/PR preview E2E tests run there). -->
         <script>
             if (!window.__e2e) {
                 window.__e2e = { counter: 0, label: 'init', history: [] };

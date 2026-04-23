@@ -34,7 +34,10 @@
         "DavidAnson.vscode-markdownlint",
         "humao.rest-client",
         // PowerShell
-        "ms-vscode.powershell"
+        "ms-vscode.powershell",
+        // Copilot Insights & Productivity
+        "RobBos.copilot-token-tracker",
+        "emanuelebartolesi.vscode-copilot-insights"
       ]
     }
   },

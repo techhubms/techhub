@@ -19,6 +19,27 @@ param webFqdns string[] = []
 @description('PostgreSQL connection string')
 param databaseConnectionString string
 
+@secure()
+@description('Azure AD tenant ID for admin authentication')
+param azureAdTenantId string = ''
+
+@secure()
+@description('Azure AD client ID for admin authentication')
+param azureAdClientId string = ''
+
+@description('Azure AD API scope for admin access token validation')
+param azureAdScopes string = ''
+
+@secure()
+@description('Azure AI Foundry API key for content categorization')
+param aiCategorizationApiKey string = ''
+
+@description('Azure AI Foundry endpoint URL')
+param aiCategorizationEndpoint string = ''
+
+@description('Azure AI Foundry deployment name')
+param aiCategorizationDeploymentName string = ''
+
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
 var customOrigins = [for fqdn in webFqdns: 'https://${fqdn}']
@@ -60,6 +81,30 @@ var staticEnvVars = [
     name: 'TECHHUB_TMP'
     value: '/tmp/techhub'
   }
+  {
+    name: 'AzureAd__TenantId'
+    secretRef: 'azure-ad-tenant-id'
+  }
+  {
+    name: 'AzureAd__ClientId'
+    secretRef: 'azure-ad-client-id'
+  }
+  {
+    name: 'AzureAd__Scopes'
+    value: azureAdScopes
+  }
+  {
+    name: 'AiCategorization__Endpoint'
+    value: aiCategorizationEndpoint
+  }
+  {
+    name: 'AiCategorization__DeploymentName'
+    value: aiCategorizationDeploymentName
+  }
+  {
+    name: 'AiCategorization__ApiKey'
+    secretRef: 'ai-categorization-api-key'
+  }
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -97,6 +142,18 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         {
           name: 'db-connection-string'
           value: databaseConnectionString
+        }
+        {
+          name: 'azure-ad-tenant-id'
+          value: azureAdTenantId
+        }
+        {
+          name: 'azure-ad-client-id'
+          value: azureAdClientId
+        }
+        {
+          name: 'ai-categorization-api-key'
+          value: aiCategorizationApiKey
         }
       ]
     }

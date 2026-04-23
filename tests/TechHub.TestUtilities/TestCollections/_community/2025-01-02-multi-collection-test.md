@@ -1,4 +1,4 @@
-﻿---
+---
 title: Community Item for Multi Collection Test
 date: 2025-01-02
 primary_section: github-copilot
@@ -8,7 +8,7 @@ tags:
 - Community
 - GitHub Copilot
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/community/multi-collection-test
 author: Test Author
 feed_name: Test Feed
 ---

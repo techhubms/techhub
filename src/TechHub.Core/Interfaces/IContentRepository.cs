@@ -1,4 +1,5 @@
 using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
 
 namespace TechHub.Core.Interfaces;
 
@@ -106,4 +107,55 @@ public interface IContentRepository
     /// Only includes authors with at least one published (non-draft) content item.
     /// </summary>
     Task<IReadOnlyList<AuthorSummary>> GetAuthorsAsync(CancellationToken ct = default);
+
+    // ==================== Admin Methods ====================
+
+    /// <summary>
+    /// Get the ai_metadata JSON for a content item identified by its primary key.
+    /// Returns null if no item with that key exists.
+    /// </summary>
+    Task<ContentItemAiMetadataResult?> GetAiMetadataAsync(string collectionName, string slug, CancellationToken ct = default);
+
+    /// <summary>
+    /// Update the ai_metadata JSON column for a content item identified by its primary key.
+    /// Returns true if found and updated, false if not found.
+    /// </summary>
+    Task<bool> UpdateAiMetadataAsync(string collectionName, string slug, string aiMetadata, CancellationToken ct = default);
+
+    /// <summary>
+    /// Get all editable fields for a content item identified by its primary key.
+    /// Returns null if no item with that key exists.
+    /// </summary>
+    Task<ContentItemEditData?> GetEditDataAsync(string collectionName, string slug, CancellationToken ct = default);
+
+    /// <summary>
+    /// Update the editable fields of a content item identified by its primary key.
+    /// Returns true if found and updated, false if not found.
+    /// </summary>
+    Task<bool> UpdateEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken ct = default);
+
+    /// <summary>
+    /// Gets a paged list of content items for the admin listing page with optional filters.
+    /// </summary>
+    Task<PagedResult<ContentItemListItem>> GetContentItemsPagedAsync(
+        int offset,
+        int limit,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null,
+        CancellationToken ct = default);
+
+    /// <summary>
+    /// Deletes a content item by its primary key (collection_name, slug).
+    /// FK cascades automatically delete the associated processed_urls and content_tags_expanded rows.
+    /// Returns true if a row was deleted, false if not found.
+    /// </summary>
+    Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken ct = default);
+
+    /// <summary>
+    /// Invalidates all cached content data (search results, slugs, sitemaps, etc.).
+    /// Call after mutations that change content_items (delete, update) to ensure
+    /// subsequent queries return fresh data from the database.
+    /// </summary>
+    void InvalidateCachedData();
 }

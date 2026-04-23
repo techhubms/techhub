@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -47,10 +48,8 @@ public class DynamicTagCountsTests : PlaywrightTestBase
 
         // Act - Select first tag (that has a count > 0)
         var firstTag = Page.Locator(".tag-cloud-item").First;
-        await firstTag.ClickBlazorElementAsync();
-
-        // Wait for URL to update
-        await Page.WaitForURLAsync(url => url.Contains("tags="));
+        await firstTag.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
 
         // Wait for tag cloud to reload with new counts
         await WaitForTagCloudReadyAsync();
@@ -93,8 +92,8 @@ public class DynamicTagCountsTests : PlaywrightTestBase
             }
 
             // Select a tag
-            await enabledTags[0].ClickBlazorElementAsync();
-            await Page.WaitForURLAsync(url => url.Contains("tags="));
+            await enabledTags[0].ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
             await WaitForTagCloudReadyAsync();
 
             // Check if any tags are now disabled
@@ -137,23 +136,12 @@ public class DynamicTagCountsTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot");
         await WaitForTagCloudReadyAsync();
 
-        // Click first tag and wait for URL to contain 'tags='.
-        // Re-dispatch the click on each poll iteration if URL hasn't changed yet,
-        // following the FillBlazorInputAsync retry pattern. Under CI load, Force=true
-        // clicks can fire before Blazor's @onclick handlers are fully wired up.
+        // Act + Assert — retry [click + URL contains tags=] to cover the
+        // Blazor Server hydration race where @onclick may not be attached yet.
         var firstTag = Page.Locator(".tag-cloud-item").First;
-        await firstTag.ClickBlazorElementAsync(waitForUrlChange: false);
-        await Page.WaitForConditionAsync(@"
-            () => {
-                if (window.location.href.includes('tags=')) return true;
-                const now = Date.now();
-                if (!window.__tagClickRetryTs || (now - window.__tagClickRetryTs > 1500)) {
-                    window.__tagClickRetryTs = now;
-                    const tag = document.querySelector('.tag-cloud-item');
-                    if (tag) tag.click();
-                }
-                return false;
-            }");
+        await firstTag.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@"tags="), new() { Timeout = 2000 }));
         await WaitForTagCloudReadyAsync();
 
         // Get counts with one tag selected
@@ -162,12 +150,11 @@ public class DynamicTagCountsTests : PlaywrightTestBase
         // Act - Deselect the tag
         // On section pages (Filter mode), deselecting the last tag may not trigger a URL change
         // (Blazor considers "no tags" the default state and may skip pushState).
-        // Use waitForUrlChange: false to avoid timeout, then wait for Blazor re-render.
+        // Retry [click + .selected count == 0] instead.
         var selectedTag = Page.Locator(".tag-cloud-item.selected").First;
-        await selectedTag.ClickBlazorElementAsync(waitForUrlChange: false);
-
-        // Wait for Blazor to process the toggle: the selected class should be removed
-        await Page.Locator(".tag-cloud-item.selected").AssertCountAsync(0);
+        await selectedTag.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
+                .ToHaveCountAsync(0, new() { Timeout = 2000 }));
         await WaitForTagCloudReadyAsync();
 
         // Assert - Counts should recalculate to show totals again
@@ -242,8 +229,8 @@ public class DynamicTagCountsTests : PlaywrightTestBase
                 break;
             }
 
-            await enabledTags[0].ClickBlazorElementAsync();
-            await Page.WaitForURLAsync(url => url.Contains("tags="));
+            await enabledTags[0].ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
             await WaitForTagCloudReadyAsync();
 
             var disabledCount = await Page.Locator(".tag-cloud-item.disabled").CountAsync();
@@ -263,9 +250,10 @@ public class DynamicTagCountsTests : PlaywrightTestBase
             var disabledTag = Page.Locator(".tag-cloud-item.disabled").First;
             var urlBeforeClick = Page.Url;
 
-            // Use the shared helper but disable URL wait since we expect NO change
-            await disabledTag.ClickBlazorElementAsync(
-                waitForUrlChange: false);
+            // Click once and assert URL unchanged — disabled buttons should not fire events.
+            // No retry needed (we're verifying absence of action, not waiting for one).
+            await disabledTag.WaitForBlazorInteractivityAsync();
+            await disabledTag.ClickAsync(new() { Force = true, Timeout = 2000 });
 
             // Assert - URL should not change (tag should not be selected)
             Page.Url.Should().Be(urlBeforeClick, "Clicking disabled tag should not change URL or filter state");

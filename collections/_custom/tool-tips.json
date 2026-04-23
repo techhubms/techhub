@@ -4,8 +4,8 @@
     "intro": "Unlock the full potential of GitHub Copilot with these community-built tools, VS Code extensions, and curated resource collections. Whether you want to track your token usage, gain deeper AI insights inside your editor, or discover new ways to integrate Copilot into your workflow, these tool tips will help you get more out of your AI pair programmer.",
     "tools": [
         {
-            "name": "Copilot Token Tracker",
-            "description": "A VS Code extension that shows your daily and monthly GitHub Copilot estimated token usage in the status bar. Track consumption patterns, view usage analysis dashboards, measure your Copilot Fluency Score, and optionally sync data across devices with an Azure Storage backend for team-wide reporting.",
+            "name": "AI Engineering Fluency",
+            "description": "A VS Code extension that tracks your AI Engineering Fluency with daily and monthly token usage, cost estimates, and productivity insights directly in the status bar. Measure your Copilot Fluency Score across prompt engineering, context engineering, agentic usage, tool usage, customization, and workflow integration. Optionally sync data across devices with an Azure Storage backend for team-wide reporting.",
             "url": "https://marketplace.visualstudio.com/items?itemName=RobBos.copilot-token-tracker",
             "category": "VS Code Extension"
         },

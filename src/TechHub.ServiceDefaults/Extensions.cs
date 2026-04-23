@@ -36,11 +36,13 @@ public static class ServiceDefaultsExtensions
 
         builder.Services.ConfigureHttpClientDefaults(http =>
         {
-            // Turn on resilience by default
-            http.AddStandardResilienceHandler();
-
             // Turn on service discovery by default
             http.AddServiceDiscovery();
+
+            // NOTE: Do NOT add AddStandardResilienceHandler() here.
+            // Each typed HttpClient configures its own resilience with custom timeouts.
+            // A global handler would add a second resilience pipeline with default 30s AttemptTimeout,
+            // overriding the per-client configuration.
         });
 
         return builder;

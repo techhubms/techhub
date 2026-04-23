@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>OpenAPI at Microsoft</title><atom:link href="https://devblogs.microsoft.com/openapi/feed/" rel="self" type="application/rss+xml" /><link>https://devblogs.microsoft.com/openapi/</link><description>The latest news about OpenAPI tools, extensions and related technology.</description><lastBuildDate>Thu, 13 Nov 2025 20:53:01 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><image><url>https://devblogs.microsoft.com/openapi/wp-content/uploads/sites/82/2024/10/cropped-Microsoft-Favicon-32x32.png</url><title>OpenAPI at Microsoft</title><link>https://devblogs.microsoft.com/openapi/</link><width>32</width><height>32</height></image><item><title>OpenAPI.NET: The Biggest Update Ever</title><link>https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/</link><dc:creator><![CDATA[Darrel Miller, Rachit Kumar Malik]]></dc:creator><pubDate>Thu, 13 Nov 2025 20:53:01 +0000</pubDate><category><![CDATA[OpenAPI]]></category><guid isPermaLink="false">https://devblogs.microsoft.com/openapi/?p=144</guid><description><![CDATA[<p>A celebratory announcement of what is new in OpenAPI.NET v2 and v3.</p>
+<p>The post <a href="https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/">OpenAPI.NET: The Biggest Update Ever</a> appeared first on <a href="https://devblogs.microsoft.com/openapi">OpenAPI at Microsoft</a>.</p>
+]]></description><content:encoded><![CDATA[<h1>Announcing the Biggest Update Ever: OpenAPI.NET v2 &amp; v3</h1>
+<p>We are excited to announce two major releases of the OpenAPI.NET library—the most significant update since its launch in 2018. These updates ensure developers can build and document modern, interoperable APIs with the latest OpenAPI specifications.</p>
+<ul>
+<li><strong>OpenAPI.NET v2</strong> Adds support for OpenAPI Specification v3.1.0, delivering performance improvements, streamlined API enhancements, and reduced dependencies. Try it <a href="https://www.nuget.org/packages/Microsoft.OpenApi/2.3.9">here</a>!</li>
+<li><strong>OpenAPI.NET v3</strong> Introduces full support for OpenAPI Specification v3.2.0, including new serialization methods, richer model properties, and expanded functionality across the API surface.Try it <a href="https://www.nuget.org/packages/Microsoft.OpenApi/">here</a>!</li>
+</ul>
+<h1>The impact</h1>
+<p>OpenAPI.NET is the backbone for many .NET tools and frameworks, including Swashbuckle, Semantic Kernel, NSwag, and .NET itself. These updates ensure:</p>
+<ul>
+<li>Future-proof API documentation for ASP.NET Core projects, especially as .NET 10 moves toward native OpenAPI support.</li>
+<li>Better performance and reliability for large-scale API ecosystems.</li>
+</ul>
+<h1>Key highlights from OpenAPI.NET v2</h1>
+<ul>
+<li><strong>OpenAPI spec v3.1 Support</strong>: Full serialization and model support.</li>
+<li><strong>API Surface improvements</strong>: Better API surface for the properties of type &#8220;json&#8221; which now use the native JSON node API.</li>
+<li><strong>Performance Gains:</strong> Faster JSON parsing using System.Text.Json while maintaining YAML support.<br />
+Our <a href="https://github.com/microsoft/OpenAPI.NET/blob/main/docs/upgrade-guide-2.md#results">results</a> outline an overall <strong>50% reduction in processing time</strong> for the document parsing as well as <strong>35% reduction in memory allocation</strong> when parsing JSON.</li>
+<li><strong>Lazy Reference Resolution:</strong> Improves load times for documents with heavy <code>$ref</code> usage.</li>
+<li><strong>Reduced Dependencies:</strong> Core library now reads/writes JSON without requiring additional packages.</li>
+</ul>
+<h1>Key highlights from OpenAPI.NET v3</h1>
+<p>Here is a summary of the key new features:</p>
+<ul>
+<li><strong>OpenAPI spec v3.2 Support:</strong> Full serialization and model support.</li>
+<li><strong>Enhanced Media Types:</strong> New properties for encoding and schema support.</li>
+<li><strong>Hierarchical Tags:</strong> Support for tag organization with kind, summary, and parent relationships.</li>
+<li><strong>Security Enhancements:</strong> Deprecated flag and device authorization flow support.</li>
+<li><strong>Enhanced Examples:</strong> New data value and serialized value properties.</li>
+<li><strong>Extended Parameter Support:</strong> New locations and styles for parameter.</li>
+</ul>
+<h1>Upgrade guides</h1>
+<p>For a full list of new features and a detailed developers guide to update your version please refer to the detailed upgrade guides below. We recommend upgrading to v2 first, and then v3. </p>
+<ul>
+<li><a href="https://github.com/microsoft/OpenAPI.NET/blob/main/docs/upgrade-guide-2.md">Upgrade guide for v2</a>.</li>
+<li><a href="https://github.com/microsoft/OpenAPI.NET/blob/main/docs/upgrade-guide-3.md">Upgrade guide for v3</a>.</li>
+</ul>
+<h1>Support going forward </h1>
+<p>We are an open source project and welcome contributions from all developers. If you feel passionate about the OpenAPI initiative and OpenAPI.NET, we welcome, and appreciate your contribution. Please leverage the <a href="https://github.com/microsoft/OpenAPI.NET/blob/main/CONTRIBUTING.md">contributing guide</a> before making a new contribution.</p>
+<h1>Shoutout to our key contributors</h1>
+<p>It takes a village, and this milestone could not have been achieved without the help of key contributors &#8211; naming a few, we probably missed some: Vincent Biret (baywet) , Matthieu Costabello (kilifu), Maggie Kimani (MaggieKimani1) , Adrian Obando (adrian05-ms), Darrel Miller (darrelmiller), Irvine Sunday (irvinesunday), Martin Costello (martincostello), Safia Abdalla (captainsafia), Mike Kistler (mikekistler) and Rachit Malik (RachitMalik12).</p>
+<h1>Feedback</h1>
+<p>For any feedback, please create a GitHub issue <a href="https://github.com/microsoft/OpenAPI.NET/issues">here</a>.</p>
+<p>The post <a href="https://devblogs.microsoft.com/openapi/openapi-net-release-announcements/">OpenAPI.NET: The Biggest Update Ever</a> appeared first on <a href="https://devblogs.microsoft.com/openapi">OpenAPI at Microsoft</a>.</p>
+]]></content:encoded><image url="https://devblogs.microsoft.com/openapi/wp-content/uploads/sites/82/2024/08/OpenAPI_Specification_Logo_Pantone.png" type="image/png" /></item></channel></rss>

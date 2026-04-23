@@ -202,6 +202,8 @@ if ($Action -eq 'teardown') {
     Write-Step "Cleaning up Docker images for PR #$PrNumber from ACR"
 
     $prTagFilter = "pr-$PrNumber-"
+    $deleteJobs = @()
+
     foreach ($repo in @('techhub-api', 'techhub-web')) {
         Write-Detail "Checking $repo for tags matching '$prTagFilter*'..."
 
@@ -220,17 +222,20 @@ if ($Action -eq 'teardown') {
             $tag = $tag.Trim()
             if ([string]::IsNullOrWhiteSpace($tag)) { continue }
             Write-Detail "Deleting ${repo}:$tag..."
-            az acr repository delete `
-                --name $RegistryName `
-                --image "${repo}:$tag" `
-                --yes 2>$null
-            if ($LASTEXITCODE -eq 0) {
-                Write-Ok "Deleted ${repo}:$tag"
-            }
-            else {
-                Write-Warn "Failed to delete ${repo}:$tag — continuing"
-            }
+            $deleteJobs += Start-Job -ScriptBlock {
+                param($rn, $r, $t)
+                az acr repository delete --name $rn --image "${r}:${t}" --yes 2>$null
+                $LASTEXITCODE
+            } -ArgumentList $RegistryName, $repo, $tag
         }
+    }
+
+    if ($deleteJobs.Count -gt 0) {
+        $results = $deleteJobs | Wait-Job | Receive-Job
+        $deleteJobs | Remove-Job
+        $succeeded = ($results | Where-Object { $_ -eq 0 }).Count
+        $failed    = ($results | Where-Object { $_ -ne 0 }).Count
+        Write-Ok "Deleted $succeeded ACR image(s)$(if ($failed -gt 0) { "; $failed failed (non-fatal)" })"
     }
 
     if ($deletedAny) {
@@ -367,11 +372,10 @@ else {
         --transport http `
         --registry-server $registryServer `
         --registry-identity $identityId `
-        --user-assigned $identityId `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
-        --max-replicas 5 `
+        --max-replicas 1 `
         --secrets "db-connection-string=$dbConnectionString" `
         --env-vars @apiEnvVars
     if ($LASTEXITCODE -ne 0) {
@@ -444,11 +448,10 @@ else {
         --transport http `
         --registry-server $registryServer `
         --registry-identity $identityId `
-        --user-assigned $identityId `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
-        --max-replicas 5 `
+        --max-replicas 1 `
         --env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to create Web Container App"
@@ -457,6 +460,22 @@ else {
 }
 
 Write-Ok "Web Container App deployed: $webAppName"
+
+# Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
+# Without session affinity, WebSocket connections may route to a different container instance
+# than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
+# az containerapp create does not support --sticky-sessions, so we always set it via ingress update.
+Write-Detail "Enabling sticky sessions for $webAppName..."
+az containerapp ingress sticky-sessions set `
+    --name $webAppName `
+    --resource-group $stagingRG `
+    --affinity sticky
+if ($LASTEXITCODE -ne 0) {
+    Write-Warn "Could not enable sticky sessions — Blazor SignalR may be unreliable with multiple replicas"
+}
+else {
+    Write-Ok "Sticky sessions enabled (required for Blazor Server)"
+}
 
 # Get the actual web FQDN
 $webFqdn = az containerapp show `
@@ -475,6 +494,101 @@ Write-Ok "Web FQDN: $webFqdn"
 if ($env:GITHUB_OUTPUT) {
     "web-url=https://$webFqdn" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
     Write-Ok "Written web-url to GITHUB_OUTPUT"
+}
+
+# Warmup: wait for the first successful HTTP response before returning.
+# Container Apps can take 30-90s after deployment before the container is reachable
+# (image pull, startup probe, cold-start). Waiting here means the caller (CI) gets
+# a URL that is already responding — no extra sleep needed in the workflow.
+Write-Step "Waiting for Web to respond at https://$webFqdn"
+$warmupUrl = "https://$webFqdn/alive"
+$maxAttempts = 60  # 60 × 5s = 5 minutes max
+$attempt = 0
+$ready = $false
+while ($attempt -lt $maxAttempts) {
+    $attempt++
+    try {
+        $response = Invoke-WebRequest -Uri $warmupUrl -Method GET -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
+        if ($response.StatusCode -lt 500) {
+            Write-Ok "Web is responding (HTTP $($response.StatusCode)) after $($attempt * 5)s"
+            $ready = $true
+            break
+        }
+    }
+    catch {
+        # Connection refused, timeout, or 5xx — keep waiting
+    }
+    Write-Detail "Not yet responding (attempt $attempt/$maxAttempts) — waiting 5s..."
+    Start-Sleep -Seconds 5
+}
+if (-not $ready) {
+    # Hard fail: if the web app hasn't responded to /alive within the warmup
+    # window, something is wrong with the revision (failed activation,
+    # ImagePullUnauthorized, crash loop, etc.). Running E2E tests against a
+    # dead site just wastes 60s per test and obscures the real failure.
+    # Dump recent system log events for the latest revision to aid triage.
+    # NOTE: Old ACR images are intentionally NOT deleted here so that the
+    # failing revision can still be examined and so a re-deploy can pull them.
+    Write-Fail "Web did not respond within $($maxAttempts * 5)s — failing deploy"
+    try {
+        $latestRevision = az containerapp revision list `
+            -n $webAppName -g $stagingRG `
+            --query "sort_by([], &properties.createdTime) | [-1]" -o json 2>$null |
+            ConvertFrom-Json -ErrorAction SilentlyContinue
+        if ($latestRevision) {
+            Write-Host ""
+            Write-Host "Latest revision status:" -ForegroundColor Yellow
+            Write-Host "  Name            : $($latestRevision.name)" -ForegroundColor Gray
+            Write-Host "  Image           : $($latestRevision.properties.template.containers[0].image)" -ForegroundColor Gray
+            Write-Host "  Replicas        : $($latestRevision.properties.replicas)" -ForegroundColor Gray
+            Write-Host "  HealthState     : $($latestRevision.properties.healthState)" -ForegroundColor Gray
+            Write-Host "  RunningState    : $($latestRevision.properties.runningState)" -ForegroundColor Gray
+            if ($latestRevision.properties.runningStateDetails) {
+                Write-Host "  Details         : $($latestRevision.properties.runningStateDetails)" -ForegroundColor Gray
+            }
+        }
+        Write-Host ""
+        Write-Host "Recent system events for $webAppName (last 30):" -ForegroundColor Yellow
+        az containerapp logs show -n $webAppName -g $stagingRG --type system --tail 30 2>&1 |
+            Select-Object -Last 30
+    }
+    catch {
+        Write-Detail "Could not fetch diagnostic info: $_"
+    }
+    exit 1
+}
+
+# New revision is healthy — clean up old ACR images for this PR (keep only the tag just deployed).
+# Done AFTER warmup so the old revision's image is still pullable if the new one fails to start.
+Write-Step "Cleaning up old ACR images for PR #$PrNumber (keeping: $Tag)"
+$prTagFilter = "pr-$PrNumber-"
+foreach ($repo in @('techhub-api', 'techhub-web')) {
+    $oldTags = az acr repository show-tags `
+        --name $RegistryName `
+        --repository $repo `
+        --query "[?starts_with(@, '$prTagFilter') && @ != '$Tag']" `
+        -o tsv 2>$null
+
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($oldTags)) {
+        Write-Detail "No old tags to clean up for $repo"
+        continue
+    }
+
+    foreach ($oldTag in $oldTags -split "`n") {
+        $oldTag = $oldTag.Trim()
+        if ([string]::IsNullOrWhiteSpace($oldTag)) { continue }
+        Write-Detail "Deleting old ${repo}:$oldTag..."
+        az acr repository delete `
+            --name $RegistryName `
+            --image "${repo}:$oldTag" `
+            --yes 2>$null | Out-Null
+        if ($LASTEXITCODE -eq 0) {
+            Write-Ok "Deleted old ${repo}:$oldTag"
+        }
+        else {
+            Write-Warn "Could not delete ${repo}:$oldTag — skipping"
+        }
+    }
 }
 
 # ============================================================================

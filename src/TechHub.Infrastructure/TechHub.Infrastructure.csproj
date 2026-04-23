@@ -15,11 +15,14 @@
     <PackageReference Include="Markdig" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Http" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
     <PackageReference Include="Microsoft.Extensions.Options" />
     <PackageReference Include="Npgsql" />
     <PackageReference Include="Polly" />
+    <PackageReference Include="SmartReader" />
     <PackageReference Include="YamlDotNet" />
+    <PackageReference Include="YoutubeExplode" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,6 +31,12 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Data\Migrations\**\*.sql" />
+    <EmbeddedResource Include="Data\Resources\system-message.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-news-writer-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-narrative-enhancer-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-condenser-system.md" />
+    <EmbeddedResource Include="Data\Resources\roundup-metadata-generator-system.md" />
+    <EmbeddedResource Include="..\..\docs\writing-style-guidelines.md" Link="Data\Resources\roundup-writing-guidelines.md" />
   </ItemGroup>
 
 </Project>

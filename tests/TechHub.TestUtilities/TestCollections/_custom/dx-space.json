@@ -249,7 +249,7 @@
     "relationships": {
         "title": "🔗 How They Relate",
         "introHeading": "A Unified View",
-        "introContent": "DORA, SPACE, and DevEx are complementary frameworks that address different aspects of software team effectiveness. Understanding how they relate helps you choose the right approach for your goals.",
+        "introContent": "DORA, SPACE, and DevEx are complementary frameworks that address different aspects of software team effectiveness. Rather than choosing between them, the industry has converged on combining them—most notably through the DX Core 4 framework, which formally unifies all three into a single practical approach.",
         "frameworks": [
             {
                 "icon": "📊",
@@ -274,8 +274,26 @@
                 "scope": "Individual experience",
                 "bestFor": "Improving day-to-day developer work",
                 "additionalInfo": "Maps to SPACE's Satisfaction and Efficiency dimensions"
+            },
+            {
+                "icon": "🔄",
+                "name": "DX Core 4",
+                "focus": "Unified developer productivity measurement",
+                "scope": "All levels—from boardroom to frontline teams",
+                "bestFor": "Organizations that want one cohesive framework instead of picking between DORA, SPACE, and DevEx",
+                "additionalInfo": "Encapsulates DORA, SPACE, and DevEx into four counterbalanced dimensions"
             }
         ],
+        "dxCore4Heading": "The DX Core 4: Unifying DORA, SPACE, and DevEx",
+        "dxCore4Content": [
+            "The DX Core 4, developed by the same researchers behind DevEx and SPACE, answers the most common question engineering leaders ask: 'Between DevEx, SPACE, and DORA—which one should we use?' The answer is: all of them, unified under four counterbalanced dimensions.",
+            "The four dimensions are Speed (how fast you deliver), Effectiveness (how well developer time is spent), Quality (reliability and stability of software), and Impact (business value delivered). Each dimension includes key metrics drawn from DORA, SPACE, and DevEx research, combining system metrics with self-reported and experience-sampled data.",
+            "The framework has been deployed at over 300 organizations across tech, finance, retail, and pharma, delivering 3-12% increases in engineering efficiency, 14% more R&D time on feature development, and 15% improvement in engagement scores."
+        ],
+        "dxCore4Insight": {
+            "heading": "💡 Why It Matters",
+            "content": "The DX Core 4 avoids the common trap of speed-only metrics by counterbalancing throughput measures (like diffs per engineer) with the Developer Experience Index (DXI) and quality metrics. This prevents gaming and fear while still giving leadership actionable data. Organizations can establish baselines using self-reported data within weeks, without waiting for expensive system instrumentation."
+        },
         "choiceHeading": "Choosing the Right Framework",
         "choices": [
             {
@@ -304,12 +322,27 @@
                     "You want to improve the day-to-day developer experience",
                     "You're investing in tooling and infrastructure"
                 ]
+            },
+            {
+                "title": "Use DX Core 4 when...",
+                "points": [
+                    "You want a single unified framework rather than juggling DORA, SPACE, and DevEx separately",
+                    "You need metrics that work from the boardroom down to individual teams",
+                    "You want to get started quickly with self-reported data while building system instrumentation",
+                    "You need counterbalanced metrics that prevent gaming and encourage healthy behaviors"
+                ]
             }
         ],
         "insight": {
             "heading": "💡 Recommendation",
-            "content": "Don't choose just one—use them together. Start with DevEx to identify pain points, use SPACE to create a balanced measurement approach, and incorporate DORA metrics to track delivery performance. The frameworks were designed by the same research community and intentionally complement each other."
-        }
+            "content": "For most organizations today, the DX Core 4 is the best starting point—it was explicitly designed to unify DORA, SPACE, and DevEx into a single actionable framework. If you've been debating which framework to adopt, the DX Core 4 eliminates the need to choose. Start by establishing baselines using self-reported data (deployable in weeks), then layer in system metrics over time. Understanding the individual frameworks (DORA, SPACE, DevEx) remains valuable for depth, but the DX Core 4 provides the cohesive measurement strategy that ties them together."
+        },
+        "realWorldHeading": "🏢 Real-World Example: Developer Experience at Dropbox",
+        "realWorldContent": [
+            "Dropbox's Senior Director of Engineering Productivity, Uma Namasivayam, leads DevEx across roughly 1,000 engineers. Her team treats developer productivity as a sociotechnical problem—not just an engineering challenge. Improving deep work time, for example, required partnering with HR to restructure meeting times, not just fixing CI pipelines.",
+            "Dropbox drove AI coding tool adoption from one-third of engineers to three-quarters within three months by combining top-down executive support with a product mindset that addressed specific adoption blockers in different teams. They deliberately offer multiple AI tools rather than standardizing on one, recognizing that different teams have genuinely different needs.",
+            "Their biggest unsolved challenge echoes what many organizations face: connecting developer productivity improvements to actual business outcomes. As Namasivayam puts it, the arc from 'developers are more productive' to 'we shipped more value to customers faster' is instrumentation that the industry hasn't fully cracked yet—which is exactly the kind of gap the DX Core 4's Impact dimension aims to address."
+        ]
     },
     "gettingStarted": {
         "title": "🚀 Getting Started",
@@ -408,7 +441,7 @@
             {
                 "name": "DX (getdx.com)",
                 "type": "Developer experience platform",
-                "description": "Founded by DevEx researchers, combines survey data with system metrics for comprehensive DevEx measurement."
+                "description": "Founded by DevEx researchers, offers the DX Core 4 framework and platform that unifies DORA, SPACE, and DevEx. Combines self-reported surveys, system metrics, and experience sampling for comprehensive measurement across Speed, Effectiveness, Quality, and Impact dimensions."
             },
             {
                 "name": "Swarmia / Faros / Waydev",
@@ -437,6 +470,16 @@
                 "icon": "🔬",
                 "title": "Microsoft Developer Experience Lab",
                 "description": "Ongoing research from Microsoft and GitHub on developer productivity and well-being. Visit microsoft.com/research/group/developer-experience-lab."
+            },
+            {
+                "icon": "📊",
+                "title": "Measuring Developer Productivity with the DX Core 4",
+                "description": "Research paper introducing the DX Core 4 unified framework. Explains the four dimensions (Speed, Effectiveness, Quality, Impact) and how they encapsulate DORA, SPACE, and DevEx. Available at getdx.com/research/measuring-developer-productivity-with-the-dx-core-4."
+            },
+            {
+                "icon": "🏢",
+                "title": "Developer Experience at Scale: Lessons from Dropbox",
+                "description": "Case study on how Dropbox treats developer productivity as a sociotechnical problem, drove AI adoption across 1,000 engineers, and built an internal AI platform. Available at getdx.com/blog/developer-experience-at-scale-lessons-from-dropbox."
             }
         ]
     },

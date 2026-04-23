@@ -175,7 +175,11 @@ public class HeroBannerTests : BunitContext
         const string cardTitle = "Test Event";
         // Compute the same hash the component would compute
         var hash = 0u;
-        foreach (var ch in cardTitle) hash = hash * 31u + ch;
+        foreach (var ch in cardTitle)
+        {
+            hash = hash * 31u + ch;
+        }
+
         var hashString = hash.ToString(System.Globalization.CultureInfo.InvariantCulture);
 
         RegisterHttpContextWithCookies(new Dictionary<string, string>

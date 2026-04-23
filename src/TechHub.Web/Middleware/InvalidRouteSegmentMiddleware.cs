@@ -61,6 +61,13 @@ public partial class InvalidRouteSegmentMiddleware
                 return;
             }
 
+            // Allow Microsoft Identity platform paths (/MicrosoftIdentity/Account/SignIn, /SignOut)
+            if (string.Equals(firstSegment, "MicrosoftIdentity", StringComparison.OrdinalIgnoreCase))
+            {
+                await _next(context);
+                return;
+            }
+
             // If the segment contains anything other than lowercase letters and hyphens
             // it can never match a Blazor route — return 404.
             if (!string.IsNullOrEmpty(firstSegment) && !ValidSegmentPattern().IsMatch(firstSegment))

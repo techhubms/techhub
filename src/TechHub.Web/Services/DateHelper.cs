@@ -53,4 +53,10 @@ public static class DateHelper
     /// </summary>
     public static string FormatDateIso(long epochSeconds) =>
         DateTimeOffset.FromUnixTimeSeconds(epochSeconds).ToString("yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
+
+    /// <summary>
+    /// Formats a <see cref="DateTimeOffset"/> as "yyyy-MM-dd HH:mm:ss" in Europe/Brussels timezone.
+    /// </summary>
+    public static string FormatTimestamp(DateTimeOffset timestamp) =>
+        TimeZoneInfo.ConvertTime(timestamp, _brusselsTimeZone).ToString("yyyy-MM-dd HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture);
 }

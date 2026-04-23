@@ -5,8 +5,8 @@ using System.Text;
 using Dapper;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
-using TechHub.Core.Models;
 
 namespace TechHub.Infrastructure.Services;
 
@@ -1030,23 +1030,4 @@ public class ContentSyncService : IContentSyncService
         // No index/trigger restoration needed for PostgreSQL
         return Task.CompletedTask;
     }
-}
-
-/// <summary>
-/// Configuration options for content synchronization.
-/// </summary>
-public class ContentSyncOptions
-{
-    public bool Enabled { get; set; } = true;
-    public bool ForceFullSync { get; set; }
-    public int MaxParallelFiles { get; set; } = 10;
-    public int BulkOperationThreshold { get; set; } = 50;
-}
-
-/// <summary>
-/// Configuration options for content paths.
-/// </summary>
-public class ContentOptions
-{
-    public required string CollectionsPath { get; set; }
 }
