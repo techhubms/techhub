@@ -1,0 +1,3 @@
+paths-ignore:
+  - tests/TechHub.Infrastructure.Tests/Services/Fixtures
+  - tests/TechHub.TestUtilities/TestCollections
