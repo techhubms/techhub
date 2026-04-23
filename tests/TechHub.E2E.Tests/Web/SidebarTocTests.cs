@@ -293,11 +293,13 @@ public class SidebarTocTests : PlaywrightTestBase
         // Filter out expected/benign errors:
         // - SRI integrity errors for highlight.js (CDN resources that work despite errors)
         // - Ad-blocker related errors (ERR_CONNECTION_REFUSED, ERR_ADDRESS_INVALID - blocked by DNS-level ad blockers)
+        // - Permissions policy violations for features not enabled (e.g. compute-pressure used by third-party scripts)
         var significantErrors = consoleErrors
             .Where(e => !e.Contains("integrity") || !e.Contains("highlight.js"))
             .Where(e => !e.Contains("ERR_CONNECTION_REFUSED"))
             .Where(e => !e.Contains("ERR_ADDRESS_INVALID"))
             .Where(e => !e.Contains("ERR_NAME_NOT_RESOLVED"))
+            .Where(e => !e.Contains("Permissions policy violation"))
             .ToList();
 
         significantErrors.Should().BeEmpty($"Expected no console errors on {url}, but found: {string.Join(", ", significantErrors)}");
