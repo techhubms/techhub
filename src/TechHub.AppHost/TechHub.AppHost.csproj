@@ -8,7 +8,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsAspireHost>true</IsAspireHost>
-    <UserSecretsId>25c13092-d777-4daa-8ad5-5e566dd0d835</UserSecretsId>
+    <UserSecretsId>techhub-apphost</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

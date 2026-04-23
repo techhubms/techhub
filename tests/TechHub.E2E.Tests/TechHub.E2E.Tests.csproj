@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
     <PackageReference Include="Microsoft.Playwright" />
     <PackageReference Include="Moq" />
     <PackageReference Include="xunit.v3.mtp-v2" />
@@ -25,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TechHub.Api\TechHub.Api.csproj" />
     <ProjectReference Include="..\..\src\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
     <ProjectReference Include="..\TechHub.TestUtilities\TechHub.TestUtilities.csproj" />
   </ItemGroup>

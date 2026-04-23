@@ -1,4 +1,9 @@
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.Identity.Web;
+using Microsoft.Identity.Web.UI;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -55,6 +60,62 @@ builder.Services.Configure<RouteOptions>(options =>
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
+// ─── Admin Authentication (Azure AD / Microsoft Entra ID) ────────────────────
+// Uses Microsoft.Identity.Web (OIDC + cookie session). No password stored in config.
+// Required appsettings / environment variables:
+//   AzureAd:TenantId     — Directory (tenant) ID from the Entra app registration
+//   AzureAd:ClientId     — Application (client) ID from the Entra app registration
+//   AzureAd:ClientSecret — Client secret (set as a deployment secret, never in source)
+// The admin area is accessible to any user assigned to the enterprise application.
+// To restrict to specific users/groups, configure assignment required + add group claims
+// to the app registration in Entra ID.
+var azureAdClientId = builder.Configuration["AzureAd:ClientId"];
+var isAzureAdConfigured = !string.IsNullOrEmpty(azureAdClientId);
+
+if (isAzureAdConfigured)
+{
+    // Acquire a proper access token (not an id_token) for calling the API.
+    // Requires an "Expose an API" scope on the Entra app registration
+    // (e.g. api://<client-id>/Admin.Access) configured in AzureAd:Scopes.
+    var apiScopes = builder.Configuration.GetValue<string>("AzureAd:Scopes")?.Split(' ', StringSplitOptions.RemoveEmptyEntries)
+        ?? [];
+
+    builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+        .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"))
+        .EnableTokenAcquisitionToCallDownstreamApi(apiScopes)
+        .AddInMemoryTokenCaches();
+
+    // Always show account picker so users can switch accounts.
+    // PostConfigure ensures Microsoft.Identity.Web's event handlers are already registered;
+    // we chain ours before calling the existing handler to preserve token redemption.
+    builder.Services.PostConfigure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, options =>
+    {
+        var previousHandler = options.Events.OnRedirectToIdentityProvider;
+        options.Events.OnRedirectToIdentityProvider = async context =>
+        {
+            context.ProtocolMessage.Prompt = "select_account";
+            await previousHandler(context);
+        };
+    });
+}
+else
+{
+    // When Azure AD is not configured (local dev without Entra), register cookie
+    // auth so the auth middleware doesn't throw. Admin pages simply won't work.
+    builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+        .AddCookie(options => options.LoginPath = "/admin/login");
+}
+
+builder.Services.AddAuthorization();
+
+// AddMicrosoftIdentityUI registers the /MicrosoftIdentity/Account/* controller
+// which requires the OpenIdConnect scheme — only register when Azure AD is configured.
+var mvcBuilder = builder.Services.AddControllersWithViews();
+if (isAzureAdConfigured)
+{
+    mvcBuilder.AddMicrosoftIdentityUI();
+}
+
 // Section cache for immediate (flicker-free) navigation rendering
 builder.Services.AddSingleton<SectionCache>();
 
@@ -93,7 +154,15 @@ builder.Services.AddSignalR(options =>
 
 // Increase disconnected circuit retention so mobile users switching apps can reconnect
 builder.Services.AddOptions<Microsoft.AspNetCore.Components.Server.CircuitOptions>()
-    .Configure(options => options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(5));
+    .Configure(options =>
+    {
+        options.DisconnectedCircuitRetentionPeriod = TimeSpan.FromMinutes(5);
+        // Surface detailed errors in Development so unhandled circuit exceptions are visible
+        if (builder.Environment.IsDevelopment())
+        {
+            options.DetailedErrors = true;
+        }
+    });
 
 // Configure HTTP client for API with service discovery
 // When running via Aspire, "https+http://api" resolves via service discovery
@@ -110,11 +179,20 @@ var startupLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("Star
 #pragma warning restore CA2000
 startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseUrl);
 
-builder.Services.AddHttpClient<TechHubApiClient>(client =>
+// Register delegating handler for forwarding auth tokens to admin API endpoints
+builder.Services.AddTransient<AdminTokenDelegatingHandler>();
+
+// Logger for resilience retry events (captures request URL on failures)
+#pragma warning disable CA2000 // Intentional: logger must outlive startup, disposed with app lifetime
+var retryLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("TechHubApiClient.Resilience");
+#pragma warning restore CA2000
+
+builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     client.Timeout = TimeSpan.FromSeconds(100); // Allow extra time beyond resilience timeout
 })
+.AddHttpMessageHandler<AdminTokenDelegatingHandler>()
 .ConfigurePrimaryHttpMessageHandler(sp =>
 {
     var handler = new SocketsHttpHandler();
@@ -142,6 +220,19 @@ builder.Services.AddHttpClient<TechHubApiClient>(client =>
     options.Retry.MaxRetryAttempts = 5;
     options.Retry.Delay = TimeSpan.FromSeconds(3);
     options.Retry.BackoffType = Polly.DelayBackoffType.Constant; // Don't use exponential backoff
+    options.Retry.OnRetry = args =>
+    {
+        // Log the request URI on retry so we can identify which endpoint is failing.
+        // args.Outcome.Result?.RequestMessage gives us the URL for HTTP error responses (e.g. 500).
+        // For timeout exceptions, RequestMessage is null so we fall back to RequestMetadata.
+        var uri = args.Outcome.Result?.RequestMessage?.RequestUri?.PathAndQuery ?? "unknown";
+        var result = args.Outcome.Result?.StatusCode.ToString()
+            ?? args.Outcome.Exception?.GetType().Name
+            ?? "unknown";
+        retryLogger.LogWarning("API retry attempt {Attempt} for {RequestUri}: {Result}",
+            args.AttemptNumber, uri, result);
+        return ValueTask.CompletedTask;
+    };
 });
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
@@ -192,6 +283,9 @@ app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProv
 // Must wrap the validators so their 404 responses are replaced with /not-found.
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseAdminTokenValidation();
 app.UseAntiforgery();
 
 // ── Step 4: Validate URL structure ───────────────────────────────────────────
@@ -206,6 +300,8 @@ app.UseInvalidRouteSegmentFilter();
 
 // MapStaticAssets for optimized static assets (fingerprinting, compression, ETags)
 app.MapStaticAssets();
+
+app.MapControllers();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
@@ -255,6 +351,23 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 })
 .WithName("GetSitemap")
 .WithSummary("XML sitemap")
+.ExcludeFromDescription();
+
+// ─── Admin Logout Endpoint ────────────────────────────────────────────────────
+// Microsoft.Identity.Web provides /MicrosoftIdentity/Account/SignIn and /SignOut
+// built-in. We expose /admin/logout as a stable alias for the logout button.
+// Signs out of OIDC first (issues the end_session request to Azure AD), then
+// clears the local cookie. The OIDC sign-out redirects to "/" on completion.
+// Uses POST to prevent CSRF / prefetch-triggered logout (antiforgery validated).
+app.MapPost("/admin/logout", async (HttpContext context) =>
+{
+    // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
+    // Cookie sign-out is handled by the OIDC post-logout flow automatically.
+    await context.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme,
+        new AuthenticationProperties { RedirectUri = "/" });
+    await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+})
+.WithName("AdminLogout")
 .ExcludeFromDescription();
 
 await app.RunAsync();

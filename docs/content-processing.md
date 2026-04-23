@@ -2,241 +2,275 @@
 
 ## Overview
 
-The Tech Hub supports both manual and automated content creation. Content is organized into collections and automatically categorized using AI-powered processing.
+Content is automatically ingested from RSS feeds, categorized using AI-powered processing,
+and stored exclusively in the PostgreSQL database.
 
-## Content Creation Methods
+## Content Architecture
 
-### Database Synchronization
+### Database as Source of Truth
 
-**Important**: Tech Hub uses a **database-backed** content system. Markdown files in the `collections/` folder are the **source of truth**, but the application serves content from a database (PostgreSQL) for performance.
+The PostgreSQL database is the **single source of truth** for all content. Content is written
+directly to the database by **`ContentProcessingBackgroundService`** — a background service
+running inside `TechHub.Api` that downloads RSS feeds, categorizes content with Azure OpenAI,
+and writes directly to the database.
 
-**How it works**:
+### Environment Strategy
 
-1. **First startup**: Database syncs from all markdown files (~30-60s for 4000+ files)
-2. **Subsequent startups**: Hash-based diff detects changes (<1s if no changes)
-3. **Configuration**: Set `ContentSync:Enabled = false` in appsettings.json to skip sync for faster local dev
+| Environment | Content Source |
+|-------------|---------------|
+| Production | `ContentProcessingBackgroundService` writes RSS content directly every 15 minutes |
+| Staging | Database restore from production snapshot (`scripts/Restore-Database.ps1`) |
+| Local development | Database restore from production snapshot |
 
-For details on supported database providers and their configuration, see [database.md](database.md).
+For local development, see [running-and-testing.md](running-and-testing.md) for setup instructions.
 
-### Manual Content Creation with GitHub Copilot
+### Database Restore (Staging/Local)
 
-The easiest way to add a single contentitem is using the built-in GitHub Copilot commands:
-
-```text
-/new-article
-```
-
-This command will:
-
-- Ask for the source URL and content type
-- Automatically extract and process the content
-- Generate appropriate frontmatter and structure
-- Create the markdown file in the correct location
-- Apply proper formatting (use `npx markdownlint-cli2 --fix` to fix issues)
-
-### Automated RSS Content Creation
-
-The site automatically processes RSS feeds from Microsoft and technology sources. This system combines automated feed processing with AI-powered content categorization.
-
-For full details on the RSS processing pipeline, see the [RSS Feed Processing](#rss-feed-processing) section below.
-
-## Publishing Content
-
-Use the GitHub Copilot command for publishing:
-
-```text
-/pushall
-```
-
-This command will:
-
-- Stage all changes
-- Create a commit with descriptive message
-- Handle branch protection and rebasing
-- Push changes to remote repository
-- Optionally create pull request
-
-For detailed information about site structure and terminology, see:
-
-- [Terminology](terminology.md) - Site terminology, sections, and standard values
-- [Repository Structure](repository-structure.md) - Code and content organization
-- [Collections Guide](../collections/AGENTS.md) - Content management overview
-- [Custom Pages](custom-pages.md) - Custom pages and specialized collections
-- [Terminology](terminology.md) - Site terminology and standard values
-
-## Troubleshooting
-
-### Common Issues
-
-- **Missing Frontmatter**: Check requirements in [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema)
-- **File Naming**: Use `YYYY-MM-DD-title.md` pattern
-- **Sections/Tags**: Verify against site configuration in [terminology.md](terminology.md). Note: frontmatter uses `section_names` field with normalized section identifiers ("ai", "github-copilot")
-- **Date Formats**: Use ISO 8601 format: `YYYY-MM-DD HH:MM:SS +00:00`
-
-### Repair Tools
-
-Use the PowerShell repair script to fix AI-generated markdown formatting issues:
+To populate a non-production environment with real data:
 
 ```powershell
-# Fix all markdown files in the repository
-scripts/content-processing/fix-markdown-files.ps1
+# Restore production data to local Docker Compose database
+./scripts/Restore-Database.ps1 -Target local
 
-# Fix a specific file only
-scripts/content-processing/fix-markdown-files.ps1 -FilePath "docs/example-file.md"
+# Restore production data to staging
+./scripts/Restore-Database.ps1 -Target staging
 ```
 
-This script automatically fixes markdown formatting issues like missing blank lines, heading spacing, and list formatting.
-
-**Note**: New content from RSS feeds already has correct frontmatter format (section_names). This script does NOT modify frontmatter - it only fixes AI-generated markdown formatting problems.
+Requires VPN access to the production environment and PostgreSQL client tools installed.
 
 ## RSS Feed Processing
 
-The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep content current. This system combines automated feed processing with AI-powered content categorization and runs hourly via GitHub Actions.
+The Tech Hub automatically processes RSS feeds from Microsoft and technology sources to keep
+content current. The pipeline is implemented entirely in C# and runs inside `TechHub.Api`.
+
+### Content Processing Pipeline
+
+`ContentProcessingBackgroundService` (`IHostedService`) runs on a configurable schedule
+(default: every 15 minutes) and performs:
+
+1. **Feed ingestion** — Downloads and parses RSS/Atom XML from all enabled feeds in the database
+2. **Content fetching** — Fetches the full article HTML for each item, or closed captions
+   (transcripts) for YouTube video items via **YoutubeExplode**. Failures are non-fatal.
+3. **AI categorization** — Sends content to Azure OpenAI (`AiCategorizationService`) using the
+   system prompt embedded in `TechHub.Infrastructure/Data/Resources/system-message.md`
+4. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
+5. **Database write** — Upserts into `content_items` + `content_tags_expanded`; records the run
+   in `content_processing_jobs`
+
+Items that the AI determines are off-topic or low quality are skipped and recorded in
+`processed_urls` with status `skipped`.
 
 ### Feed Configuration
 
-RSS feeds are configured in `scripts/data/rss-feeds.json`:
-
-```json
-{
-  "feeds": [
-    {
-      "name": "Microsoft AI Blog",
-      "url": "https://blogs.microsoft.com/ai/feed/",
-      "output_dir": "_news",
-      "section": "AI",
-      "enabled": true
-    }
-  ]
-}
-```
+RSS feeds are stored in the `rss_feed_configs` database table and managed directly via the admin UI at `/admin/feeds`.
 
 **Required Fields**:
 
 - **name**: Human-readable feed identifier
 - **url**: RSS or Atom feed URL
 - **output_dir**: Target collection directory (`_news`, `_blogs`, etc.)
-- **section**: Section display title for categorization (e.g., "AI", "GitHub Copilot") - RSS processing converts these to normalized `section_names` array in frontmatter (e.g., ["ai"], ["github-copilot", "ai"])
 
 **Optional Fields**:
 
 - **enabled**: Boolean to enable/disable feed (default: true)
-- **max_items**: Maximum items per processing run (default: 10)
 
 ### Adding New Feeds
 
-**Using GitHub Copilot**:
+**Via Admin UI** (recommended):
 
-```text
-/new-rss-feeds
-```
-
-**Manual Addition**:
-
-1. Edit `scripts/data/rss-feeds.json`
-2. Add new feed object to the feeds array
-3. Validate JSON format
-4. Commit changes
-
-### Processing Pipeline
-
-The RSS processing system uses per-entry content fetching and Azure AI Foundry integration:
-
-```text
-RSS Download → Per-Entry Content Fetching → AI Analysis (Azure AI Foundry) → Content Creation → Tag Enhancement → Commit
-```
-
-**Download Phase**:
-
-- **Individual JSON Files**: Each RSS entry is saved as a separate JSON file in structured directories
-- **Content Enrichment**: Actual web content is fetched and stored alongside RSS metadata
-- **Rate-Limited Fetching**: Individual URL fetching with rate limiting between requests
-- **Error Handling**: Graceful degradation when content fetching fails
-
-**Content Fetching Strategy**:
-
-1. **YouTube Videos**: Metadata processing without content fetching
-2. **Other URLs**: Individual HTTP requests with 10-second rate limiting
-3. **Error Handling**: Graceful degradation when content fetching fails
-
-### Azure AI Foundry Integration
-
-The system uses Azure AI Foundry for content processing:
-
-- **Endpoint**: `https://<resource>.cognitiveservices.azure.com/openai/deployments/<model>/chat/completions`
-- **Authentication**: Azure API Key
-- **Models**: Deployment names configured in Azure resource
-- **Rate Limiting**: 15-second delays between API calls
-
-**Configuration Example**:
-
-```powershell
-./scripts/content-processing/process-rss-to-markdown.ps1 "owner/repo" "api_key123" -Endpoint "https://myresource.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions" -Model "gpt-4.1"
-```
-
-### Branch Strategy
-
-The RSS processing workflow uses a two-branch strategy:
-
-- **rss-updates branch**: All RSS processing occurs here (JSON files, AI analysis, markdown creation)
-- **main branch**: Updated only when new markdown content is published
-
-**Key Behavior**: If RSS processing only updates tracking data (JSON files), changes remain on rss-updates branch. Main branch is updated only with new/modified markdown files.
+1. Navigate to `/admin/feeds` (requires Azure AD authentication in deployed environments)
+2. Click "Add Feed"
+3. Fill in name, URL, output directory
+4. Save — the feed is picked up on the next scheduled run
 
 ### AI Content Analysis
 
-The system analyzes RSS content using comprehensive categorization rules:
+The system analyzes content using `src/TechHub.Infrastructure/Data/Resources/system-message.md`.
 
-**Exclusion Rules** (Take Precedence):
+**Exclusion Rules** (applied first — if any apply, item is skipped):
 
-- Biographical content, question-only posts, short posts (<200 words)
-- Sales pitches, non-English content, job postings
-- Non-development Microsoft business products
+- Biographical content, question-only posts, community posts under 200 words
+- Sales pitches without educational value, non-English content, job postings
+- Non-development Microsoft business products (Microsoft 365 Copilot, Dynamics, Intune, etc.)
 
 **Inclusion Categories**:
 
-- **Microsoft AI**: Azure OpenAI, Copilot services, AI Foundry, Semantic Kernel
-- **GitHub Copilot**: All Copilot editions, features, integrations (always includes AI)
-- **.NET (dotnet)**: Microsoft languages (C#, F#, TypeScript), .NET ecosystem
-- **DevOps**: Azure DevOps, GitHub Actions, CI/CD, monitoring
-- **Azure**: All Azure services, ARM/Bicep templates, cloud architecture
+- **AI**: Azure OpenAI, Copilot Studio, AI Foundry, Semantic Kernel, MCP
+- **GitHub Copilot**: All Copilot editions, features, integrations (always paired with AI)
+- **.NET**: C#, F#, ASP.NET Core, Entity Framework, Blazor, MAUI, Visual Studio
+- **DevOps**: Azure DevOps, GitHub Actions, CI/CD, Agile, monitoring
+- **Azure**: All Azure services, ARM/Bicep, Container Apps, cloud architecture
+- **ML**: Azure ML, Azure Databricks, data science pipelines, custom model training
+- **Security**: Microsoft Entra ID, Azure Key Vault, Microsoft Sentinel, zero trust
 
-### Content Output
+### Roundup Metadata
 
-Each RSS item creates a markdown file with:
+The AI extracts roundup metadata for each included item (stored in `ai_metadata` JSONB column):
 
-- AI-generated excerpt and summary
-- Proper categorization and tagging
-- External URL to original source (stored in frontmatter `external_url` field)
-- **Future date protection**: If the RSS feed's publication date is in the future (e.g., scheduled release dates), the current datetime is used instead for both the filename and frontmatter date
-- Viewing mode varies by collection:
-  - Videos and roundups: `"internal"` (content opens on site)
-  - All other collections: `"external"` (links open in new tab)
-- Standardized front matter (see [collections/AGENTS.md](../collections/AGENTS.md#frontmatter-schema))
+- `roundup_summary` — 1-2 sentence ready-to-use summary
+- `key_topics` — e.g. `["MCP", "Semantic Kernel", "RAG"]`
+- `roundup_relevance` — `high` / `medium` / `low`
+- `topic_type` — `announcement`, `tutorial`, `ga-release`, etc.
+- `impact_level` — significance rating
+- `time_sensitivity` — `immediate` / `this-week` / `this-month` / `long-term`
 
-### Processing Scripts
+Items with `high` or `medium` relevance are used by the weekly roundup generation
+(see [Weekly Roundups](#weekly-roundups)).
 
-**Core Scripts**:
+### Admin Dashboard
 
-- **`scripts/content-processing/download-rss-feeds.ps1`**: Downloads RSS feeds and saves entries as JSON files
-- **`scripts/content-processing/process-rss-to-markdown.ps1`**: Processes JSON entries through AI to create markdown files
-- **`scripts/content-processing/functions/Get-FilteredTags.ps1`**: Tag enhancement and normalization
+The admin area at `/admin` provides:
 
-**Execution**:
+- **Dashboard** — Recent processing job history with status, duration, log output
+- **Run Now** button — Triggers an immediate out-of-schedule run
+- **RSS Feeds** — Full CRUD management of feed configurations
+- **Processed URLs** — Browse all processed URLs with status/reason; remove entries to retry
+- **Reviews** — Content review queue for proposed fixer changes (approve/reject before applying)
 
-- **Automated**: Every hour via GitHub Actions (scheduled workflow)
-- **Manual**: Can be triggered through GitHub Actions interface
-- **Local**: Available for development testing
+See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
 ### Error Handling
 
-**Common Issues**:
+- **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue
+- **Content fetch failures**: Non-fatal; pipeline falls back to RSS metadata only
+- **Transcript failures**: Non-fatal; YouTube items are processed without transcript
+- **AI API failures**: Retried up to `MaxRetries` times (configurable in `AiCategorizationOptions`)
+- **Rate limiting**: Configurable delay between AI calls (`RateLimitDelaySeconds`)
 
-- **Feed Unavailability**: Automatic retry logic for temporary outages
-- **Network Issues**: Built-in retry mechanisms with exponential backoff
-- **API Limitations**: Respects rate limits and manages quotas for Azure AI Foundry
-- **Content Fetching Failures**: Graceful degradation when individual URL content cannot be fetched
+### Subcollection Rules
 
-### Automatic Deployment
+Content items can be automatically assigned to subcollections based on the feed name and
+video/article title. This is configured in `appsettings.json` under `ContentProcessor.SubcollectionRules`.
 
-When RSS workflow commits markdown files to main branch, deployment to Azure Container Apps is automatically triggered via CI/CD pipeline. New content appears on the live site within minutes.
+Each rule has three fields:
+
+| Field | Description |
+|---|---|
+| `FeedName` | Feed name to match (exact, case-insensitive) |
+| `TitlePattern` | Title pattern with `*` wildcard support (case-insensitive) |
+| `Subcollection` | Subcollection name to assign when the rule matches |
+
+**Example configuration**:
+
+```json
+{
+  "ContentProcessor": {
+    "SubcollectionRules": [
+      {
+        "FeedName": "Fokko at Work YouTube",
+        "TitlePattern": "Visual Studio Code and GitHub Copilot*",
+        "Subcollection": "vscode-updates"
+      }
+    ]
+  }
+}
+```
+
+This rule automatically assigns the `vscode-updates` subcollection to any video from the
+"Fokko at Work YouTube" feed whose title starts with "Visual Studio Code and GitHub Copilot".
+These videos then appear on the VS Code Updates page at `/github-copilot/vscode-updates`.
+
+Rules are applied after AI categorization succeeds, so only items that pass the AI filter
+are assigned subcollections. Manually added items with subcollections already set in the
+database are not affected (the pipeline skips items that already exist).
+
+## Weekly Roundups
+
+Weekly roundups are generated entirely by `RoundupGeneratorBackgroundService`, a background
+service running inside `TechHub.Api`. It fires every Monday at 08:00 UTC and writes the
+completed roundup directly to the `content_items` table (`collection_name = 'roundups'`).
+
+### Roundup Pipeline
+
+1. **Article loading** — Queries `content_items` directly using section boolean columns
+   and `ai_metadata`, filtered by `created_at` within the target week
+2. **Relevance filtering** — Per section: always includes all `high`-relevance articles; fills up
+   to `MinArticlesPerSection` with `medium` then `low` articles if the high count is below the minimum
+3. **Step 3** — AI creates news-style narrative stories per section
+4. **Step 4** — AI adds continuity by comparing with the previous week's roundup
+5. **Step 6** — AI condenses the content paragraph-by-paragraph
+6. **Step 7** — AI generates metadata: `title`, `description`, `tags`, `introduction`
+7. **Step 8** — Table of contents is built from `##`/`###` headers (pure C#)
+8. **DB write** — Upserts into `content_items` + `content_tags_expanded`
+
+Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into every AI step
+prompt to ensure consistent tone and style throughout the roundup.
+
+### Roundup Configuration
+
+Configured under `"RoundupGenerator"` in `appsettings.json`:
+
+| Setting | Default | Description |
+|---|---|---|
+| `Enabled` | `false` | Enable/disable weekly roundup generation |
+| `RunHourUtc` | `8` | UTC hour to fire on Monday |
+| `MinArticlesPerSection` | `10` | Minimum articles per section; fills from medium/low if high count is below |
+| `RateLimitDelaySeconds` | `15` | Delay between AI calls |
+| `MaxRetries` | `3` | Max retries per AI call |
+
+## Troubleshooting
+
+### Processed URL Was Incorrectly Skipped
+
+If an article was skipped with an unexpected reason:
+
+1. Open the admin panel at `/admin/processed-urls`
+2. Find the entry and click **Copy** to copy all details to the clipboard
+3. Check the `Reason` field to understand the AI''s decision
+4. If the decision was wrong, click **Remove** to delete the entry — it will be retried on the
+   next scheduled run
+
+## Content Fixer
+
+`ContentFixerBackgroundService` performs bulk content quality fixes across all items in the
+database. It runs on-demand via the admin dashboard (manual trigger only).
+
+### Fix Operations
+
+| Operation | Description |
+|---|---|
+| **Tag normalization** | Adds missing collection/section tags, removes deprecated tags |
+| **Author normalization** | Standardizes author names to canonical forms |
+| **Markdown repair** | Fixes formatting issues (heading spacing, whitespace, HTML entities) |
+| **Markdown validation** | Detects structural issues via Markdig AST (empty headings, broken links) |
+
+### Content Review Queue
+
+When the content fixer runs, proposed changes are queued in the `content_reviews` table for
+admin approval instead of being applied directly. This provides a review step before any
+automated changes are applied to content.
+
+**Review workflow**:
+
+1. Admin triggers a content fixer run from the dashboard
+2. The fixer scans all content and creates review records for proposed changes
+3. Admin navigates to **Reviews** (`/admin/reviews`) to see pending changes
+4. Each review shows the change type (tags/markdown/author/validation), original value, and fixed value
+5. Slug column links to the live article (when `primary_section_name` is available)
+6. Admin can **Approve** or **Reject** individual changes, or use **Approve All** / **Reject All**
+   for bulk actions
+7. Admin can click the **Edit** button to open a modal and manually fix the content before approving
+8. Approved changes are applied to `content_items`; rejected changes are discarded
+
+**Review statuses**: `pending`, `approved`, `rejected`
+
+**Change types**: `tags` (tag normalization), `markdown` (formatting fixes), `author` (name standardization), `validation` (structural issues — informational, no automatic fix)
+
+### Markdown Preview
+
+The admin area provides a markdown preview endpoint (`POST /api/admin/content-items/preview-markdown`)
+that renders raw markdown to HTML. This is used in the review page to preview before/after
+markdown changes.
+
+### Admin Endpoints
+
+| Endpoint | Method | Description |
+|---|---|---|
+| `/api/admin/reviews` | GET | List reviews filtered by status |
+| `/api/admin/reviews/summary` | GET | Get pending/approved/rejected counts |
+| `/api/admin/reviews/{id}/approve` | POST | Approve and apply a single change |
+| `/api/admin/reviews/{id}/reject` | POST | Reject a single change |
+| `/api/admin/reviews/approve-all` | POST | Approve all pending reviews |
+| `/api/admin/reviews/reject-all` | POST | Reject all pending reviews |
+| `/api/admin/reviews/{id}` | PUT | Update fixed value of a pending review |
+| `/api/admin/content-items/preview-markdown` | POST | Render markdown to HTML |

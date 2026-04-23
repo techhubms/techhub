@@ -68,14 +68,14 @@ html.keyboard-nav .button:focus-visible {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-2);
-  padding: var(--spacing-2) var(--spacing-3);
+  padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
   background: var(--color-bg-default);
   color: var(--color-text-primary);
   text-decoration: none;
   border: 1px solid var(--color-border-default);
   border-radius: var(--radius-md);
-  font-weight: var(--font-weight-medium);
-  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
   line-height: var(--line-height-tight);
   cursor: pointer;
   transition: all var(--duration-fast) var(--easing-ease);
@@ -100,6 +100,14 @@ html.keyboard-nav .btn-secondary:focus-visible {
   outline-offset: 2px !important;
   transition: none !important;
   border-radius: var(--radius-md);
+}
+
+/* Small Button Modifier */
+.btn-sm,
+.btn-secondary.btn-sm {
+  padding: var(--spacing-1) var(--spacing-2);
+  font-size: var(--font-size-xs);
+  min-height: auto;
 }
 
 /* Link Button - Minimal styling for link-like buttons */
@@ -138,5 +146,57 @@ html.keyboard-nav .btn-link:focus-visible {
 .button svg,
 .btn-secondary svg,
 .btn-link svg {
+  flex-shrink: 0;
+}
+
+/* Danger Button - Red styling for destructive actions */
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
+  padding: calc(var(--spacing-1) + var(--spacing-1) / 2) var(--spacing-3);
+  background: transparent;
+  color: var(--color-red-bright, #f85149);
+  text-decoration: none;
+  border: 1px solid var(--color-red-bright, #f85149);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-tight);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--easing-ease);
+  min-height: var(--touch-target-min-size);
+  text-align: center;
+  font-family: inherit;
+}
+
+@media (hover: hover) {
+  .btn-danger:hover {
+    background: var(--color-red-bright, #f85149);
+    color: var(--color-text-on-emphasis) !important;
+    text-decoration: none !important;
+  }
+}
+
+.btn-danger:active {
+  background: color-mix(in srgb, var(--color-red-bright, #f85149) 80%, transparent);
+  color: var(--color-text-on-emphasis) !important;
+}
+
+.btn-danger:focus-visible {
+  outline: 3px solid var(--color-red-bright, #f85149) !important;
+  outline-offset: 2px !important;
+  transition: none !important;
+  border-radius: var(--radius-md);
+}
+
+.btn-danger:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-danger svg {
   flex-shrink: 0;
 }

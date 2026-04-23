@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cloud Section Test
 date: 2025-01-03
 primary_section: cloud
@@ -7,7 +7,7 @@ section_names:
 tags:
 - Azure
 - Cloud Computing
-external_url: https://example.com/test
+external_url: https://example.com/news/cloud-section-test
 author: Test Author
 feed_name: Test Feed
 ---

@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -77,11 +78,13 @@ public class AboutPageTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act - Use ClickBlazorElementAsync for Blazor-enhanced navigation
-        await Page.ClickElementByRoleAsync(AriaRole.Link, "About");
+        // Act - Click the About link in the header
+        await Page.GetByRole(AriaRole.Link, new() { Name = "About", Exact = true })
+            .ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page).ToHaveURLAsync(
+                    new Regex(@".*/about.*"), new() { Timeout = 2000 }));
 
         // Assert
-        await Page.WaitForBlazorUrlContainsAsync("/about");
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Reinier van Maanen");
     }
 

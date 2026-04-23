@@ -1,0 +1,869 @@
+﻿<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Dynamic IIS Server Deployments with GitHub Actions - MindByte</title>
+<meta name="description" content="When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?">
+
+
+  <meta name="author" content="Michiel van Oudheusden">
+  
+  <meta property="article:author" content="Michiel van Oudheusden">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="MindByte">
+<meta property="og:title" content="Dynamic IIS Server Deployments with GitHub Actions">
+<meta property="og:url" content="https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html">
+
+
+  <meta property="og:description" content="When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?">
+
+
+
+  <meta property="og:image" content="https://mindbyte.nl/images/github-matrix.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2025-06-02T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="56OViBvdeJ4nT29zKUZ1EJuWqCdQaziF_FbP0ol4FmE" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="MindByte Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="5b7e389b791745f52e9c1e31-text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5b7e389b791745f52e9c1e31-|49"></script><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+<link rel="me" href="https://mastodon.social/@mivano">
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          MindByte
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/year-archive/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <a href="https://www.mindbyte.nl">
+          <img src="/images/profile.jpg" alt="Michiel van Oudheusden" itemprop="image">
+        </a>
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <a href="https://www.mindbyte.nl"><h3 class="author__name" itemprop="name">Michiel van Oudheusden</h3></a>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Microsoft .NET consultant, developer, architect. Focus on ALM, DevOps, APIs, Azure and everything around it.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">The Netherlands</span>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.mindbyte.nl" itemprop="url">
+            <i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+      <li>
+        <a href="https://pulse.mindbyte.nl">
+          <meta itemprop="Newsletter" content="https://pulse.mindbyte.nl" />
+          <i class="fas fa-fw fa-newspaper" aria-hidden="true"></i><span class="label">Newsletter</span>
+        </a>
+      </li>
+      
+
+      
+        <li>
+          <a href="https://keybase.io/mivano" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fas fa-fw fa-key" aria-hidden="true"></i><span class="label">Keybase</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/michielvanoudheusden" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://bitbucket.org/mivano" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-bitbucket" aria-hidden="true"></i><span class="label">Bitbucket</span>
+          </a>
+        </li>
+      
+
+      
+        <li>
+          <a href="https://github.com/mivano" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+        <li>
+          <a href="https://stackoverflow.com/users/44954/michiel" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">Stack Overflow</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.pinterest.com/mivano" itemprop="sameAs" rel="nofollow noopener noreferrer">
+            <i class="fab fa-fw fa-pinterest" aria-hidden="true"></i><span class="label">Pinterest</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+      
+      
+        <li>
+          <a href="https://mastodon.social/@mivano" rel="me nofollow noopener noreferrer" itemprop="sameAs">
+            <i class="fab fa-fw fa-mastodon" aria-hidden="true"></i><span class="label">mastodon.social/@mivano</span>
+          </a>
+        </li>
+      
+
+      
+      <li>
+        <a href="https://bsky.app/profile/mindbyte.nl" rel="me nofollow noopener noreferrer" itemprop="sameAs">
+          <i class="fab fa-fw fa-bluesky" aria-hidden="true"></i><span class="label">mindbyte.nl</span>
+        </a>
+      </li>
+      
+
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Dynamic IIS Server Deployments with GitHub Actions">
+    <meta itemprop="description" content="When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?">
+    <meta itemprop="datePublished" content="2025-06-02T00:00:00+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Dynamic IIS Server Deployments with GitHub Actions
+</h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2025-06-02T00:00:00+02:00">June 2, 2025</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>When we began migrating our application infrastructure to the cloud, we relied on AWS and traditional Windows servers running IIS. Although containers and Kubernetes dominate today’s conversations, there are organizations that still depend on familiar, “old-school” architectures. In one recent project, we found ourselves needing to deploy a web application across multiple IIS servers behind an AWS load balancer. Our challenge was simple in statement but complex in execution: how do you run the same GitHub Actions deployment workflow on every server in a scalable, maintainable way?</p>
+
+<h2 id="background">Background</h2>
+
+<p>Our environment consisted of a load balancer distributing traffic to several Windows servers hosting IIS. These servers (EC2 instances) were spun up via CloudFormation, each automatically registering a GitHub self-hosted runner. In essence, every server became a target for GitHub Actions workflows.</p>
+
+<p>To deploy across the entire group of servers with the same tag (for example, all IIS-Server machines), we needed the workflow to run on each of them, not just on a single available runner. While setting <code class="language-plaintext highlighter-rouge">runs-on: [self-hosted, &lt;label&gt;]</code> directs GitHub Actions to run the job on a runner matching that label, it does not instruct it to execute on all such servers simultaneously.</p>
+
+<p>As <a href="https://docs.github.com/en/actions/writing-workflows/workflow-syntax-for-github-actions">documented by GitHub</a>, <code class="language-plaintext highlighter-rouge">runs-on</code> selects only one matching runner; to execute a job on multiple machines, you need to use a matrix strategy.</p>
+
+<p>Hard-coding runner names would defeat our goal of dynamic scaling, since servers could be added or removed without updating the workflow.</p>
+
+<p>We looked for an approach that would adapt dynamically as servers joined or left our environment. Azure DevOps offered “<a href="https://learn.microsoft.com/en-us/azure/devops/pipelines/release/deployment-groups/deploying-azure-vms-deployment-groups?view=azure-devops">deployment groups</a>”, but GitHub Actions does not include a direct equivalent. Instead, we needed to leverage the GitHub API to query our organization’s runners at runtime, filter them by environment labels, and build a dynamic matrix of targets for our workflow. This blog post describes the story of how we achieved that goal.</p>
+
+<h2 id="gathering-runner-information">Gathering Runner Information</h2>
+
+<p>The first obstacle we encountered was obtaining an authentication token capable of listing all self-hosted runners in our organization. The default <code class="language-plaintext highlighter-rouge">GITHUB_TOKEN</code> provided to workflows only has repository scope, so it cannot retrieve organization-wide runner details. Our solution was to create a GitHub App with “Read access to organization self hosted runners”, then install it on our repository. By storing the App’s ID and private key as repository secrets (<code class="language-plaintext highlighter-rouge">RUNNER_TOKEN_APP_ID</code> and <code class="language-plaintext highlighter-rouge">RUNNER_TOKEN_APP_PRIVATE_KEY</code>), we could exchange these credentials for a short-lived token that the GitHub CLI (<code class="language-plaintext highlighter-rouge">gh</code>) could use to query the runners API.</p>
+
+<p>Below is the YAML snippet for the <code class="language-plaintext highlighter-rouge">determine-runners</code> job. It runs on <code class="language-plaintext highlighter-rouge">ubuntu-latest</code>, invokes a third-party action to fetch an application token, then uses <code class="language-plaintext highlighter-rouge">gh api</code> and <code class="language-plaintext highlighter-rouge">jq</code> to filter runners with a specific environment label (e.g., <code class="language-plaintext highlighter-rouge">staging</code> or <code class="language-plaintext highlighter-rouge">production</code>) and a fixed label (e.g., <code class="language-plaintext highlighter-rouge">IIS-Server</code>):</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">determine-runners</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Determine target runners</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">outputs</span><span class="pi">:</span>
+      <span class="na">runners_json</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">env</span><span class="pi">:</span>
+      <span class="na">ORG_NAME</span><span class="pi">:</span> <span class="s">$</span>
+      <span class="na">TARGET_ENV_LABEL</span><span class="pi">:</span> <span class="s">$</span>
+      <span class="na">REQUIRED_LABEL_1</span><span class="pi">:</span> <span class="s">IIS-Server</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get Organization API Token</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">get_workflow_token</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">peter-murray/workflow-application-token-action@v4</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">application_id</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">application_private_key</span><span class="pi">:</span> <span class="s">$</span>
+          <span class="na">organization</span><span class="pi">:</span> <span class="s">$</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Get matching runners (including offline)</span>
+        <span class="na">id</span><span class="pi">:</span> <span class="s">get_runners</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s"># Retrieve all runners for the organization (up to 100 per page)</span>
+          <span class="s">runners_data=$(gh api "orgs/$/actions/runners?per_page=100" --jq '.runners[]')</span>
+
+          <span class="s"># Filter runners by both the fixed label and environment label</span>
+          <span class="s">matching_runners=$(echo "$runners_data" | jq -c \</span>
+            <span class="s">--arg label1 "$" \</span>
+            <span class="s">--arg label2 "$" \</span>
+            <span class="s">'select(.labels | map(.name) | (contains([$label1]) and contains([$label2])))'</span>
+          <span class="s">)</span>
+
+          <span class="s"># Build a JSON array of runner names</span>
+          <span class="s">runners_json=$(echo "$matching_runners" | jq -cs '[.[].name]')</span>
+
+          <span class="s">if [ -z "$runners_json" ] || [ "$runners_json" == "[]" ]; then</span>
+            <span class="s">echo "::error::No runners found with labels: '$' and '$'."</span>
+            <span class="s">exit 1</span>
+          <span class="s">else</span>
+            <span class="s">echo "runners_json=$runners_json" &gt;&gt; $GITHUB_OUTPUT</span>
+          <span class="s">fi</span>
+        <span class="na">env</span><span class="pi">:</span>
+          <span class="na">GH_TOKEN</span><span class="pi">:</span> <span class="s">$</span>
+</code></pre></div></div>
+
+<h2 id="building-the-deployment-matrix">Building the Deployment Matrix</h2>
+
+<p>Once we had a JSON list of runner names in the output variable <code class="language-plaintext highlighter-rouge">runners_json</code>, we could construct a dynamic matrix for our deployment job. The second job, <code class="language-plaintext highlighter-rouge">deployment-web-app</code>, depends on <code class="language-plaintext highlighter-rouge">determine-runners</code>. It uses <code class="language-plaintext highlighter-rouge">fromJson(...)</code> to transform the JSON string into an array for the matrix. Each array element corresponds to a runner name, resulting in one parallel job per server.</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="na">deployment-web-app</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">Deploy to $ on $</span>
+    <span class="na">environment</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">needs</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">determine-runners</span><span class="pi">]</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">strategy</span><span class="pi">:</span>
+      <span class="na">fail-fast</span><span class="pi">:</span> <span class="no">false</span>
+      <span class="na">matrix</span><span class="pi">:</span>
+        <span class="na">runner</span><span class="pi">:</span> <span class="s">$</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Clean Workspace Folder</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">Remove-Item -Recurse -Force $\*</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Download artifact</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/download-artifact@v4</span>
+
+      <span class="c1"># Additional steps to deploy the IIS website go here</span>
+</code></pre></div></div>
+
+<p>In our case, deploying to IIS involved copying build artifacts, stopping the IIS site, replacing the files, and restarting the service. By running these steps on each runner in parallel, we reduced total deployment time and avoided manual coordination.</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<p>When we first set out, we worried that this dynamic approach would introduce more complexity than it solved. However, by automating the discovery of runners, we created a resilient pipeline that adapts as servers come online or go offline. Below are some key takeaways:</p>
+
+<ul>
+  <li>
+    <p><strong>Use Labels Strategically</strong><br />
+By combining environment labels (e.g., <code class="language-plaintext highlighter-rouge">staging</code>, <code class="language-plaintext highlighter-rouge">production</code>) with a fixed label (e.g., <code class="language-plaintext highlighter-rouge">IIS-Server</code>), we narrowed down the runner list precisely. Labels become powerful selectors when applied consistently.</p>
+  </li>
+  <li>
+    <p><strong>Manage GitHub App Credentials Carefully</strong><br />
+The process requires a GitHub App with appropriate permissions. You must secure its private key and ensure it remains installed on your repository. Losing this App or its credentials would break the token exchange and halt deployments.</p>
+  </li>
+  <li>
+    <p><strong>CLI Tools Preinstalled</strong><br />
+We used a GitHub-hosted runner to run this workflow, which already has <code class="language-plaintext highlighter-rouge">gh</code> and <code class="language-plaintext highlighter-rouge">jq</code> installed by default.</p>
+  </li>
+  <li>
+    <p><strong>Account for Pagination</strong><br />
+Our example handles only the first 100 runners. If your organization has more, implement pagination logic by iterating over pages until no runners remain.</p>
+  </li>
+  <li>
+    <p><strong>Embrace Parallelism</strong><br />
+Running deployments in parallel saved us time and reduced the risk of inconsistent state. We could also monitor each runner’s status separately, making troubleshooting easier.</p>
+  </li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>GitHub Actions does not natively support a construct like deployment groups. By querying the GitHub API, filtering runners with <code class="language-plaintext highlighter-rouge">jq</code>, and building a dynamic matrix, we created a solution that scales automatically as servers change. Although it requires extra setup, a GitHub App, additional CLI tools, and careful label management, the result is a more flexible, resilient deployment pipeline.</p>
+
+<p>While this post uses IIS server deployments as the example, the same technique can be applied to any deployment scenario. By defining tags or labels on your runners and building a dynamic matrix, you can select machines based on any condition, such as environment, role, or geographic region, and run workflows in parallel across them.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">aws</a><span class="sep">, </span>
+    
+      <a href="/tags/#devops" class="page__taxonomy-item" rel="tag">devops</a><span class="sep">, </span>
+    
+      <a href="/tags/#github-actions" class="page__taxonomy-item" rel="tag">github-actions</a><span class="sep">, </span>
+    
+      <a href="/tags/#iis" class="page__taxonomy-item" rel="tag">iis</a><span class="sep">, </span>
+    
+      <a href="/tags/#self-hosted-runners" class="page__taxonomy-item" rel="tag">self-hosted-runners</a><span class="sep">, </span>
+    
+      <a href="/tags/#windows" class="page__taxonomy-item" rel="tag">windows</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2025-06-02T00:00:00+02:00">June 2, 2025</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Dynamic+IIS+Server+Deployments+with+GitHub+Actions%20https%3A%2F%2Fwww.mindbyte.nl%2F2025%2F06%2F02%2Fdynamic-iis-server-deployments-github-actions.html" class="btn btn--twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" data-cf-modified-5b7e389b791745f52e9c1e31-=""><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  
+  <a href="https://www.reddit.com/submit?url=https://www.mindbyte.nl/2025/06/02/dynamic-iis-server-deployments-github-actions.html&title=Dynamic IIS Server Deployments with GitHub Actions" class="btn btn btn--danger" title="Share on Reddit"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i><span> Reddit</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.mindbyte.nl%2F2025%2F06%2F02%2Fdynamic-iis-server-deployments-github-actions.html" class="btn btn--linkedin" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" data-cf-modified-5b7e389b791745f52e9c1e31-=""><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.mindbyte.nl%2F2025%2F06%2F02%2Fdynamic-iis-server-deployments-github-actions.html" class="btn btn--facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" data-cf-modified-5b7e389b791745f52e9c1e31-=""><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/2024/12/28/practical-approach-hiring-great-full-stack-engineers.html" class="pagination--pager" title="A Practical Approach to Hiring Great Full-Stack Engineers
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Leave a comment</h4>
+      <section id="giscus-comments"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://mindbyte.nl/images/whiteboard.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2024/12/28/practical-approach-hiring-great-full-stack-engineers.html" rel="permalink">A Practical Approach to Hiring Great Full-Stack Engineers
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-12-28T00:00:00+01:00">December 28, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Hiring great software developers is always challenging, but the stakes are even higher when building small, versatile teams. Recently, I conducted a series o...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://mindbyte.nl/images/cdc-_XLJy3h77cw-unsplash.jpg" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2024/01/02/streamlining-helpdesk-operations-leveraging-github-issues-custom-workflows-templates.html" rel="permalink">Streamlining Helpdesk Operations: Leveraging GitHub Issues with Custom Workflows and Templates
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2024-01-02T00:00:00+01:00">January 2, 2024</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Setting the Scene: Choosing GitHub Issues for Internal Helpdesk Needs.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://mindbyte.nl/images/8-VWpFELw5qujytz6.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2023/09/22/apply-caching-restoring-nuget-packages-github-hosted-runner.html" rel="permalink">Apply caching when restoring NuGet packages using a GitHub hosted runner
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-09-22T00:00:00+02:00">September 22, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">When you are using a GitHub hosted runner to build your project, you can apply caching to speed up the build process. This is especially useful when you are ...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="https://mindbyte.nl/images/domain-auth.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/2023/08/29/sending-emails-behalf-saas-solutions-sendgrid-net.html" rel="permalink">Sending Emails On Behalf of Someone Else in SaaS Solutions Using SendGrid and .NET
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-08-29T00:00:00+02:00">August 29, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Introduction
+In the modern SaaS landscape, flexibility is key. One commonly sought-after feature in Helpdesk and similar software is the ability to send emai...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="if (!window.__cfRLUnblockHandlers) return false; return event.key != 'Enter';" data-cf-modified-5b7e389b791745f52e9c1e31-="">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+<div class="page__footer-newsletter">
+  <iframe src="https://embeds.beehiiv.com/3201874b-8e07-4116-b0f2-8b0a70497288" data-test-id="beehiiv-embed" width="100%" height="320" frameborder="0" scrolling="no" style="border-radius: 4px; border: 2px solid #e5e7eb; margin: 0; background-color: transparent;"></iframe>
+</div>
+<div class="page__footer-copyright">&copy; 2025 Michiel van Oudheusden. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js" type="5b7e389b791745f52e9c1e31-text/javascript"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js" type="5b7e389b791745f52e9c1e31-text/javascript"></script>
+<script src="/assets/js/lunr/lunr-store.js" type="5b7e389b791745f52e9c1e31-text/javascript"></script>
+<script src="/assets/js/lunr/lunr-en.js" type="5b7e389b791745f52e9c1e31-text/javascript"></script>
+
+
+
+
+    <script type="5b7e389b791745f52e9c1e31-text/javascript">
+  'use strict';
+
+  (function () {
+    var commentContainer = document.querySelector('#giscus-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    script.setAttribute('data-repo', 'mivano/mindbyte.nl');
+    script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkxMjYwOTA2MDY=');
+    script.setAttribute('data-category', 'Announcements');
+    script.setAttribute('data-category-id', 'DIC_kwDOB4P9bs4B-Sid');
+    script.setAttribute('data-mapping', 'og:title');
+    script.setAttribute('data-reactions-enabled', '1');
+    script.setAttribute('data-theme', 'dark');
+    script.setAttribute('crossorigin', 'anonymous');
+
+    commentContainer.appendChild(script);
+  })();
+</script>
+  
+
+
+
+
+
+  <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="5b7e389b791745f52e9c1e31-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"fbc432a34c874a67bbd367649a345356","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

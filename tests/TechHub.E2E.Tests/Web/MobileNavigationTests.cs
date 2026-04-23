@@ -55,12 +55,12 @@ public class MobileNavigationTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act
-        await Page.Locator(".hamburger-btn").ClickAsync();
-
-        // Assert - Mobile menu should have "open" class and be visible
+        // Act + Assert — retry [click + visibility] to cover hydration race
+        var hamburger = Page.Locator(".hamburger-btn");
         var mobileMenu = Page.Locator(".mobile-menu.open");
-        await Assertions.Expect(mobileMenu).ToBeVisibleAsync();
+        await hamburger.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(mobileMenu).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -69,12 +69,12 @@ public class MobileNavigationTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
 
-        // Act
-        await Page.Locator(".hamburger-btn").ClickAsync();
-
-        // Assert
+        // Act + Assert — retry [click + overlay visible]
+        var hamburger = Page.Locator(".hamburger-btn");
         var overlay = Page.Locator(".mobile-menu-overlay");
-        await Assertions.Expect(overlay).ToBeVisibleAsync();
+        await hamburger.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(overlay).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -113,17 +113,23 @@ public class MobileNavigationTests : PlaywrightTestBase
     {
         // Arrange
         await Page.GotoRelativeAsync("/");
-        await Page.Locator(".hamburger-btn").ClickAsync();
+
+        // Open the menu with retry — Blazor @onclick may not be attached yet on slow networks
+        await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
 
         // Act - Click on a section header to expand.
         // The mobile menu can be taller than the viewport; scroll the target
-        // section header into view before clicking so Playwright's actionability
-        // check (element must be within the viewport) does not time out.
+        // section header into view before clicking. Use Force=true (via ClickAndExpectAsync)
+        // to bypass Playwright's viewport-boundary check for fixed-overlay menus.
         var sectionHeader = Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" });
         await sectionHeader.ScrollIntoViewIfNeededAsync();
-        await sectionHeader.ClickAsync();
+        await sectionHeader.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a").First).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
 
-        // Assert - Wait for sub-items to appear after Blazor re-render
+        // Assert - Sub-items are now visible (confirmed above, read count)
         var subItems = Page.Locator(".mobile-menu-sub-items a");
         await Assertions.Expect(subItems.First).ToBeVisibleAsync();
         var count = await subItems.CountAsync();
@@ -136,16 +142,20 @@ public class MobileNavigationTests : PlaywrightTestBase
     [Fact]
     public async Task MobileMenu_OverlayClick_ClosesMenu()
     {
-        // Arrange
+        // Arrange — open via retry click+assert
         await Page.GotoRelativeAsync("/");
-        await Page.Locator(".hamburger-btn").ClickAsync();
-        await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync();
+        var mobileMenuOpen = Page.Locator(".mobile-menu.open");
+        await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
+            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
 
-        // Act - Click on far-left of the overlay (away from the menu panel on the right)
-        await Page.Locator(".mobile-menu-overlay").ClickAsync(new() { Position = new() { X = 10, Y = 200 } });
-
-        // Assert - Menu should close (no "open" class)
-        await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToHaveCountAsync(0);
+        // Act + Assert — retry overlay click until menu closes
+        var overlay = Page.Locator(".mobile-menu-overlay");
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            await overlay.ClickAsync(new() { Position = new() { X = 10, Y = 200 }, Timeout = 2000 });
+            await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0, new() { Timeout = 2000 });
+        });
     }
 
     [Fact]
@@ -153,33 +163,42 @@ public class MobileNavigationTests : PlaywrightTestBase
     {
         // Arrange
         await Page.GotoRelativeAsync("/");
-        await Page.Locator(".hamburger-btn").ClickAsync();
 
-        // Expand GitHub Copilot section
-        await Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" }).ClickAsync();
+        // Open the menu with retry — Blazor @onclick may not be attached yet on slow networks
+        await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
+
+        // Expand GitHub Copilot section with retry (section header is inside fixed-overlay)
+        var sectionHeader = Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" });
+        await sectionHeader.ScrollIntoViewIfNeededAsync();
+        await sectionHeader.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a").First).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
 
         // Act - Click "Browse" sub-item
         var allLink = Page.Locator(".mobile-menu-sub-items a", new() { HasTextString = "Browse" });
-        await allLink.ClickBlazorElementAsync();
+        await allLink.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/github-copilot.*"), new() { Timeout = 2000 }));
 
         // Assert - Should navigate and close menu
-        await Page.WaitForBlazorUrlContainsAsync("/github-copilot");
         await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToHaveCountAsync(0);
     }
 
     [Fact]
     public async Task MobileMenu_HamburgerToggle_ClosesOpenMenu()
     {
-        // Arrange
+        // Arrange — open menu with retry
         await Page.GotoRelativeAsync("/");
-        await Page.Locator(".hamburger-btn").ClickAsync();
-        await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync();
+        var hamburger = Page.Locator(".hamburger-btn");
+        var mobileMenuOpen = Page.Locator(".mobile-menu.open");
+        await hamburger.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync(new() { Timeout = 2000 }));
 
-        // Act - Click hamburger again
-        await Page.Locator(".hamburger-btn").ClickAsync();
-
-        // Assert
-        await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToHaveCountAsync(0);
+        // Act + Assert — toggle closed with retry
+        await hamburger.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0, new() { Timeout = 2000 }));
     }
 
     // ============================================================================

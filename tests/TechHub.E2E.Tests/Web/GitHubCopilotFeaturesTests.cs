@@ -335,13 +335,14 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var sectionCount = await sections.CountAsync();
         sectionCount.Should().BeGreaterThanOrEqualTo(2, "Need at least 2 sections to test per-section filtering");
 
-        // Act - Click the GHES filter in the first section only
+        // Act + Assert — retry [click + active class] to survive the JS-init race.
+        // On slow networks page-scripts.js may not have attached the click listener yet;
+        // ClickAndExpectAsync retries until the 'active' class appears.
         var firstSection = sections.First;
         var firstGhesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
-        await firstGhesButton.ClickAsync();
-
-        // Assert - The first section's GHES button should be active
-        await Assertions.Expect(firstGhesButton).ToHaveClassAsync(new Regex("active"));
+        await firstGhesButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(firstGhesButton).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
 
         // Assert - The second section's GHES button should NOT be active
         var secondSection = sections.Nth(1);

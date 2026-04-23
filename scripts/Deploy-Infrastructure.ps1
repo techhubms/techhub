@@ -191,6 +191,25 @@ if ($Environment -ne 'shared') {
     else {
         Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
     }
+
+    # Azure AD env vars (read by .bicepparam files via readEnvironmentVariable)
+    $azureAdVars = @('AZURE_AD_TENANT_ID', 'AZURE_AD_CLIENT_ID', 'AZURE_AD_CLIENT_SECRET', 'AZURE_AD_SCOPES')
+    foreach ($varName in $azureAdVars) {
+        if (-not [Environment]::GetEnvironmentVariable($varName)) {
+            if ($Mode -eq 'deploy') {
+                Write-Warn "$varName is not set — admin authentication will be disabled"
+            }
+            # Use empty placeholder so readEnvironmentVariable doesn't fail during validate/whatif
+            [Environment]::SetEnvironmentVariable($varName, "")
+        }
+    }
+    $adConfigured = -not [string]::IsNullOrEmpty($env:AZURE_AD_CLIENT_ID)
+    if ($adConfigured) {
+        Write-Ok "Azure AD environment variables set"
+    }
+    else {
+        Write-Warn "Azure AD not configured — admin authentication will be disabled"
+    }
 }
 
 # ============================================================================

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>Microsoft Agent Framework</title><atom:link href="https://devblogs.microsoft.com/agent-framework/feed/" rel="self" type="application/rss+xml" /><link>https://devblogs.microsoft.com/agent-framework/</link><description>The latest news from the Microsoft Agent Framework team for developers</description><lastBuildDate>Fri, 03 Apr 2026 17:04:03 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><image><url>https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2024/10/Microsoft-favicon-48x48.jpg</url><title>Microsoft Agent Framework</title><link>https://devblogs.microsoft.com/agent-framework/</link><width>32</width><height>32</height></image><item><title>Microsoft Agent Framework Version 1.0</title><link>https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/</link><comments>https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/#comments</comments><dc:creator><![CDATA[Shawn Henry]]></dc:creator><pubDate>Fri, 03 Apr 2026 17:04:03 +0000</pubDate><category><![CDATA[Agent Framework]]></category><category><![CDATA[Announcements]]></category><category><![CDATA[Announcement]]></category><category><![CDATA[Microsoft Agent Framework]]></category><guid isPermaLink="false">https://devblogs.microsoft.com/agent-framework/?p=5212</guid><description><![CDATA[<p>Today, we&#8217;re thrilled to announce that Microsoft Agent Framework has reached version 1.0 for both .NET and Python. This is the production-ready release: stable APIs, and a commitment to long-term support. Whether you&#8217;re building a single assistant or orchestrating a fleet of specialized agents, Agent Framework 1.0 gives you enterprise-grade multi-agent orchestration, multi-provider model support, [&#8230;]</p>
+<p>The post <a href="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/">Microsoft Agent Framework Version 1.0</a> appeared first on <a href="https://devblogs.microsoft.com/agent-framework">Microsoft Agent Framework</a>.</p>
+]]></description><content:encoded><![CDATA[<p>Today, we&#8217;re thrilled to announce that <strong>Microsoft Agent Framework has reached version 1.0</strong> for both <a href="https://www.nuget.org/packages/Microsoft.Agents.AI/">.NET</a> and <a href="https://pypi.org/project/agent-framework/">Python</a>. This is the production-ready release: stable APIs, and a commitment to long-term support. Whether you&#8217;re building a single assistant or orchestrating a fleet of specialized agents, Agent Framework 1.0 gives you enterprise-grade multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A and MCP.</p>
+<p>When we <a href="https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/">introduced Microsoft Agent Framework</a> last October, we set out to unify the enterprise-ready foundations of Semantic Kernel with the innovative orchestrations of AutoGen into a single, open-source SDK. When we hit <a href="https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/">Release Candidate</a> in February, we locked the feature surface and invited the community to put it through its paces. Today, after months of feedback, hardening, and real-world validation with customers and partners, Agent Framework 1.0 is ready for production.</p>
+<p><div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-5212-1" width="1280" height="720" preload="metadata" controls="controls"><source type="video/mp4" src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4?_=1" /><a href="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4">https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4</a></video></div></p>
+<p><strong>Create Your First Agent</strong></p>
+<p>Getting started takes just a few lines of code. Here&#8217;s how to create a simple agent in both languages.</p>
+<p><strong>Python</strong></p>
+<pre class="prettyprint language-py"><code class="language-py"># pip install agent-framework
+# Use `az login` to authenticate with Azure CLI
+
+import asyncio
+
+from agent_framework import Agent
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+
+agent = Agent(
+    client= FoundryChatClient(
+      project_endpoint="https://your-project.services.ai.azure.com",
+      model="gpt-5.3",
+      credential=AzureCliCredential(),
+    ),
+    name="HelloAgent",
+    instructions="You are a friendly assistant."
+)
+
+print(asyncio.run(agent.run("Write a haiku about shipping 1.0.")))</code></pre>
+<p><strong>.NET</strong></p>
+<pre class="prettyprint language-cs language-csharp"><code class="language-cs language-csharp">// dotnet add package Microsoft.Agents.AI.OpenAI --prerelease
+using Microsoft.Agents.AI;
+using Microsoft.Agents.AI.Foundry
+using Azure.Identity;
+
+// Replace the &lt;apikey&gt; with your OpenAI API key.
+var agent = new AIProjectClient(endpoint:"https://your-project.services.ai.azure.com")
+    .GetResponsesClient("gpt-5.3")
+    .AsAIAgent(
+        name: "HaikuBot", 
+        instructions: "You are an upbeat assistant that writes beautifully."
+    );
+
+Console.WriteLine(await agent.RunAsync("Write a haiku about shipping 1.0."));</code></pre>
+<p>That&#8217;s it &#8211; a working AI agent in a handful of lines. From here you can add function tools, sessions for multi-turn conversations, streaming responses, and more.</p>
+<p><strong>Multi-Agent Workflows</strong></p>
+<p>Single agents are powerful, but real-world applications often need multiple agents working together. Here&#8217;s a sequential workflow where a copywriter drafts a tagline and a reviewer provides feedback:</p>
+<p><strong>Python</strong></p>
+<pre class="prettyprint language-py"><code class="language-py">import asyncio
+
+from agent_framework import Agent, Message
+from agent_framework.foundry import FoundryChatClient
+from agent_framework.orchestrations import SequentialBuilder
+from azure.identity import AzureCliCredential
+
+
+async def main() -&gt; None:
+    # credentials read from .env
+    client = FoundryChatClient(credential=AzureCliCredential())
+
+    writer = Agent(
+        client=client,
+        instructions="You are a concise copywriter. Provide a single, punchy marketing sentence.",
+        name="writer",
+    )
+
+    reviewer = Agent(
+        client=client,
+        instructions="You are a thoughtful reviewer. Give brief feedback on the previous message.",
+        name="reviewer",
+    )
+
+
+    workflow = SequentialBuilder(participants=[writer, reviewer]).build()
+    outputs: list[list[Message]] = []
+    async for event in workflow.run("Write a tagline for Microsoft Agent Framework 1.0.", stream=True):
+        if event.type == "output":
+            outputs.append(cast(list[Message], event.data))
+    if outputs:
+        for msg in outputs[-1]:
+            print(f"[{msg.author_name or 'user'}]: {msg.text}")
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+<p>and check out the .NET version here: <a href="https://github.com/microsoft/agent-framework/tree/main/dotnet/samples/03-workflows/_StartHere/02_AgentsInWorkflows">Getting Started with Workflows</a></p>
+<p><strong>What&#8217;s in version 1.0</strong></p>
+<p>Version 1.0 represents the features we&#8217;ve battle-tested, stabilized, and committed to supporting with full backward compatibility going forward.</p>
+<ul>
+<li><strong>Single Agent and Service Connectors &#8211; </strong>The core agent abstraction is stable and production-ready across both .NET and Python. Agent Framework ships with first-party service connectors for Microsoft Foundry, Azure OpenAI, OpenAI, Anthropic Claude, Amazon Bedrock, Google Gemini and Ollama. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/">[Learn more… ]</a></li>
+<li><strong>Middleware Hooks &#8211; </strong>The middleware pipeline lets you intercept, transform, and extend agent behavior at every stage of execution: content safety filters, logging, compliance policies, custom logic &#8211; all without modifying agent prompts. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/middleware/">[Learn more… ]</a></li>
+<li><strong>Agent Memory and Context Providers &#8211; </strong>Pluggable memory architecture supporting conversational history, persistent key-value state, and vector-based retrieval. Choose your backend: Memory in Foundry Agent Service, Mem0, Redis, Neo4j or use a custom store. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/conversations/">[Learn more…]</a></li>
+<li><strong>Agent Workflows &#8211; </strong>The graph-based workflow engine for composing agents and functions into deterministic, repeatable processes is now stable. Build workflows that combine agent reasoning with business logic, branch on conditions, fan out to parallel steps, and converge results. Checkpointing and hydration ensure long-running processes survive interruptions. <a href="https://learn.microsoft.com/en-us/agent-framework/workflows/">[Learn more… ]</a></li>
+<li><strong>Multi-Agent Orchestration &#8211; </strong>Stable support for the orchestration patterns that emerged from Microsoft Research and AutoGen: sequential, concurrent, handoff, group chat, and Magentic-One. All patterns support streaming, checkpointing, human-in-the-loop approvals, and pause/resume for long-running workflows. <a href="https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/">[Learn more…]</a></li>
+<li><strong>Declarative Agents and Workflows (YAML) &#8211; </strong>Define agents&#8217; instructions, tools, memory configuration, and orchestration topology in version-controlled YAML files, then load and run them with a single API call.<a href="https://learn.microsoft.com/en-us/agent-framework/agents/declarative"> [Learn more… ]</a></li>
+<li><strong>A2A, and MCP &#8211; MCP (Model Context Protocol)</strong> support lets agents dynamically discover and invoke external tools exposed over MCP-compliant servers. <strong>A2A (Agent-to-Agent) protocol </strong>(A2A 1.0 support coming soon) support enables cross-runtime agent collaboration &#8211; your agents can coordinate with agents running in other frameworks using structured, protocol-driven messaging. <a href="https://learn.microsoft.com/en-us/agent-framework/integrations/">[Learn more…]</a></li>
+<li><strong>Migration Assistants (Semantic Kernel and AutoGen) &#8211; </strong>For teams coming from Semantic Kernel or AutoGen, migration assistants analyze your existing code and generate step-by-step migration plans. The <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel">Semantic Kernel migration guide</a> and <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen">AutoGen migration guide</a> provide detailed walkthroughs.</li>
+</ul>
+<p><strong>What&#8217;s new since the October release</strong></p>
+<p>We’re also shipping with preview features that are functional and available for early adoption. These APIs may evolve based on community feedback before reaching ‘stable’.</p>
+<ul>
+<li><strong>DevUI</strong> &#8211; browser-based local debugger for visualizing agent execution, message flows, tool calls, and orchestration decisions in real time. <a href="https://learn.microsoft.com/en-us/agent-framework/devui/">[Learn more… ]</a></li>
+<li><strong>Foundry Hosted Agent Integration</strong> &#8211; run Agent Framework agents as managed services on Microsoft Foundry or as Azure Durable Functions. <a href="https://learn.microsoft.com/en-us/agent-framework/integrations/azure-functions">[Learn more… ]</a></li>
+<li><strong>Foundry Tools, Memory, Observability and Evaluations</strong> &#8211; deep integration with Foundry&#8217;s managed tool ecosystem, memory, and OpenTelemetry-powered observability and evaluations dashboards. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/tools/">[Learn more… ]</a></li>
+<li><strong>AG-UI / CopilotKit / ChatKit</strong> &#8211; stream agent output to frontend surfaces with adapters for CopilotKit and ChatKit, including tool execution status and human-in-the-loop flows. <a href="https://learn.microsoft.com/en-us/agent-framework/integrations/ag-ui/">[Learn more… ]</a></li>
+<li><strong>Skills</strong> &#8211; reusable domain capability packages (instructions + scripts + resources)) that give agents structured capabilities out of the box. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/skills">[Learn more… ]</a></li>
+<li><span data-teams="true"><strong>GitHub Copilot SDK and Claude Code SDK</strong> — use GitHub Copilot SDK or Claude Code as an agent harness directly from your Agent Framework orchestration code. These SDKs handle the autonomous agent loop &#8211; planning, tool execution, file edits, and session management &#8211; and Agent Framework wraps them, letting you compose a coding-capable agent alongside other agents (Azure OpenAI, Anthropic, custom) in the same multi-agent workflow.</span> <a href="https://learn.microsoft.com/en-us/agent-framework/agents/providers/github-copilot">[Learn more… ]</a></li>
+<li><strong>Agent Harness</strong> — customizable Microsoft Agent Framework harness and local runtime giving agents access to shell, file system, and messaging loop for coding agents, automation, and personal assistant patterns. <a href="https://devblogs.microsoft.com/agent-framework/agent-harness-in-agent-framework/">[Learn more… ]</a></li>
+</ul>
+<p><a href="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737.webp"><img fetchpriority="high" decoding="async" class="wp-image-5216 aligncenter" src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-300x170.webp" alt="Microsoft Agent Framework DevUI" width="593" height="336" srcset="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-300x170.webp 300w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-1024x581.webp 1024w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-768x435.webp 768w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-1536x871.webp 1536w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737.webp 1753w" sizes="(max-width: 593px) 100vw, 593px" /></a></p>
+<p><strong>Getting Started</strong></p>
+<p>If you&#8217;ve been running on the RC packages, upgrading to 1.0 is a package version bump. If you&#8217;re new to Agent Framework, install and go:</p>
+<p><strong>Python</strong></p>
+<p>pip install agent-framework</p>
+<p><strong>.NET</strong></p>
+<p>dotnet add package Microsoft.Agents.AI</p>
+<p>Check out the <a href="https://learn.microsoft.com/en-us/agent-framework/get-started/">quickstart guide</a> for walkthroughs in both languages, or jump straight to the <a href="https://github.com/microsoft/agent-framework">samples on GitHub</a>.</p>
+<p>Coming from AutoGen or Semantic Kernel? Now is the time to migrate to Microsoft Agent Framework. The <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel" target="_blank" rel="noopener">Semantic Kernel migration guide</a> and <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen" target="_blank" rel="noopener">AutoGen migration guide</a> provide detailed walkthroughs.</p>
+<p><strong>What&#8217;s Next</strong></p>
+<p>Version 1.0 is a beginning, not a destination. We&#8217;re continuing to invest in graduating preview features, expanding the connector and skills ecosystem, deepening Foundry integration, and incorporating the latest orchestration research from Microsoft Research. The framework is 100% open source &#8211; we build in the open, and your feedback and contributions shape what comes next.</p>
+<p>Thank you to everyone who filed issues, submitted PRs, tested release candidates, and pushed us to make Agent Framework better. This milestone belongs to the community as much as it does to the team.</p>
+<p><strong>Get started today:</strong></p>
+<ul>
+<li><strong>Download the SDK:</strong> <a href="https://aka.ms/AgentFramework">aka.ms/AgentFramework</a></li>
+<li><strong>Documentation:</strong> <a href="https://aka.ms/AgentFramework/Docs">aka.ms/AgentFramework/Docs</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/microsoft/agent-framework">github.com/microsoft/agent-framework</a></li>
+<li><strong>Discord:</strong> <a href="https://aka.ms/foundry/discord">aka.ms/foundry/discord</a></li>
+<li><strong>NuGet (.NET):</strong> <a href="https://www.nuget.org/packages/Microsoft.Agents.AI/">Microsoft.Agents.AI</a></li>
+<li><strong>PyPI (Python):</strong> <a href="https://pypi.org/project/agent-framework/">agent-framework</a></li>
+</ul>
+<p>The post <a href="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/">Microsoft Agent Framework Version 1.0</a> appeared first on <a href="https://devblogs.microsoft.com/agent-framework">Microsoft Agent Framework</a>.</p>
+]]></content:encoded><wfw:commentRss>https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/feed/</wfw:commentRss><slash:comments>2</slash:comments><enclosure url="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4" length="3380557" type="video/mp4" /><image url="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2025/10/Screenshot-2025-10-07-233551.png" type="image/png" /></item></channel></rss>

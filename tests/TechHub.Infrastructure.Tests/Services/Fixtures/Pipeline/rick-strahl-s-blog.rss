@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0"><channel><title>Rick Strahl's Web Log</title><link>https://weblog.west-wind.com/</link><description>Life, Surf, Code and everything in between</description><generator>West Wind Web Log</generator><language>en-us</language><image><url>http://www.west-wind.com/images/WebLogBannerLogo.jpg</url><title>Rick Strahl's Web Log</title><link>https://weblog.west-wind.com/</link></image><pubDate>Tue, 07 Apr 2026 05:39:28 GMT</pubDate><lastBuildDate>Mon, 02 Mar 2026 20:10:23 GMT</lastBuildDate><xhtml:meta content="noindex" name="robots" xmlns:xhtml="http://www.w3.org/1999/xhtml" /><item><title>Azure Trusted Signing Revisited with Dotnet Sign</title><link>https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign</link><guid isPermaLink="false">5249291_202603022010</guid><pubDate>Mon, 02 Mar 2026 20:10:23 GMT</pubDate><dc:creator>Rick Strahl</dc:creator><comments>https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign#Comments</comments><slash:comments>0</slash:comments><wfw:commentRss>https://weblog.west-wind.com/commentrss.aspx?id=5249291</wfw:commentRss><category>Windows</category><category>Security</category><category>WPF</category><description>&lt;p&gt;&lt;img src="https://weblog.west-wind.com/images/2026/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign/TrustedSigningBanner.jpg" alt="Trusted Signing Banner"&gt;&lt;/p&gt;
+&lt;p&gt;I &lt;a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing"&gt;wrote about how to get Azure Trusted Signing to work&lt;/a&gt; for my application signing tasks a while back and mentioned how frustrating that process was both on Azure as well as on the client for the actual signing process. Well, since then I'm happy to say that some additional tooling has come out from Microsoft that makes this process quite a bit easier and also the signing process considerably faster than my previous workflow.&lt;/p&gt;
+&lt;p&gt;This post is specifically about &lt;strong&gt;the client side of signing&lt;/strong&gt; - the original post covers both the Azure setup for your Azure Trusted Signing account and that hasn't changed much as well as the old SignTool based workflow which was a pain in the ass. In this post I'll discuss the new-ish &lt;code&gt;dotnet sign&lt;/code&gt; tooling that now works officially with Azure Trusted Signing and is a lot simpler to set up and faster to run.&lt;/p&gt;
+&lt;p&gt;The documentation for the local client signing part of this process is still nearly non-existent or, at minimum, non-discoverable, and LLMs absolutely give the wrong advice because of it. The change of terminology and command names in the tooling isn't helping either, along with the outdated documentation. Why in the heck would you name something as obscure and non-relevant as &lt;code&gt;artifact-signing&lt;/code&gt; instead of the obvious &lt;code&gt;trusted-signing&lt;/code&gt; that already existed? But I disgress 😄&lt;/p&gt;
+&lt;p&gt;So, here's the skinny on what works with a heck of a lot less effort than what I described in the previous post.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://markdownmonster.west-wind.com?ut=weblog"  target="_blank"
+     title="Markdown Monster - Easy to use, yet powerfully productive Markdown Editing for Windows"&gt;
+&lt;img src="/images/sponsors/banner-example.png?v=1.2" class="da-content-image" /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="setting-up-trusted-signing"&gt;Setting up Trusted Signing&lt;/h2&gt;
+&lt;p&gt;You still need to set up your Azure Trusted Signing, so that part hasn't changed, although by now hopefully the process to set this up might be a little simpler than what I described in my previous post:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing#setting-up-microsoft-trusted-signing"&gt;Setting up Microsoft Azure Trusted Signing&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you have your Trusted Signing account set up and ready to go, what has changed for the better is the process of how you sign your binaries on the local machine. It's quite a bit easier using &lt;code&gt;dotnet sign&lt;/code&gt; as that tool combines everything you need through the single set of tools - except for the Azure CLI which is required for authentication.&lt;/p&gt;
+&lt;h2 id="local-signing-enter-dotnet-sign"&gt;Local Signing: Enter dotnet sign&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;dotnet sign&lt;/code&gt; is a &lt;strong&gt;dotnet tool&lt;/strong&gt; that you install via the .NET SDK. You need to have the .NET SDK installed to install dotnet sign, as well as the Azure CLI so you can authenticate your Azure account.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Prerequisites&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0"&gt;.NET 10 SDK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&amp;amp;pivots=winget"&gt;Azure CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/dotnet/sign"&gt;Dotnet Sign&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="install-net-sdk"&gt;Install .NET SDK&lt;/h3&gt;
+&lt;p&gt;The .NET SDK is required in order to install the dotnet tool infrastructure required to install and run the &lt;code&gt;dotnet sign&lt;/code&gt; tool.&lt;/p&gt;
+&lt;p&gt;You can install the SDK from here if you don't already have it on your dev machine&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0"&gt;.NET 10 SDK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;h4 id="--dotnet-tool-and-the-net-sdk"&gt;&lt;i class="fas fa-info-circle" style="font-size: 1.1em"&gt;&lt;/i&gt;  &lt;code&gt;dotnet tool&lt;/code&gt; and the .NET SDK&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;dotnet tool&lt;/code&gt; deployed &lt;em&gt;applications&lt;/em&gt; use the locally installed .NET SDK to take advantage of the cross platform features of .NET without having to install any additional framework dependencies or having to create separate installers for each platform. A Dotnet tool will run on any of .NET's supported platforms assuming you use cross-platform compatible features only. It does this by automatically creating a platform specific executable for the tool application that &lt;code&gt;dotnet tool install&lt;/code&gt; is run on.  For this reason it's a convenient way to deploy tools across platforms and if you're in the .NET development eco-system in any way it's likely the .NET SDK is already installed.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id="install-azure-cli"&gt;Install Azure CLI&lt;/h3&gt;
+&lt;p&gt;The Azure CLI is required so that you can authenticate using Azure's oAuth Authentication flow.&lt;/p&gt;
+&lt;p&gt;You can install the Azure CLI in a number of ways but the easiest is probably via WinGet.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&amp;amp;pivots=winget"&gt;Install Azure CLI&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here's the WinGet command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-ps"&gt;winget install --exact --id Microsoft.AzureCLI
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id="logging-into-azure-cli"&gt;Logging into Azure CLI&lt;/h4&gt;
+&lt;p&gt;Once the Azure CLI is installed you can then log in and set the subscription that your Certificate runs under:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;az config set core.enable_broker_on_windows=false
+az login
+az account set --subscription &amp;quot;Pay-As-You-Go&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The prompt to login is interactive - follow the yellow prompts. I've had quite a few  issues with the default Windows oAuth authentication using a Web Browser, and the first configuration line:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-ps"&gt;az config set core.enable_broker_on_windows=false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;provides more reliable authentication directly in the CLI. You can try without it first, and if that doesn't work use that line to use the alternate sign in flow.&lt;/p&gt;
+&lt;p&gt;For me this was the only way I get it to work correctly. Your mileage may vary and you may not  need it. Another thing to look out for is to make sure you choose the right subscription as subscription ids are hard to decipher in some cases if you have a few of them.&lt;/p&gt;
+&lt;h3 id="install-dotnet-sign"&gt;Install Dotnet Sign&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://github.com/dotnet/sign"&gt;Dotnet Sign&lt;/a&gt; is a &lt;strong&gt;dotnet tool&lt;/strong&gt; installed executable, and in order to install it you need use the &lt;code&gt;dotnet tool&lt;/code&gt; command that's part of the .NET SDK.&lt;/p&gt;
+&lt;p&gt;Make sure the .NET SDK is installed first, and then to install dotnet sign:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-ps"&gt;dotnet tool install -g --prerelease sign
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The tool is currently in pre-release so the &lt;code&gt;--prerelease&lt;/code&gt; switch is not optional -  otherwise the package won't be found. You can also install locally into your project by omitting the &lt;code&gt;-g&lt;/code&gt; switch which creates a fixed local copy instead of a global instance installed in the shared tools location.&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;h3 id="using-sign-code-artifact-signing"&gt;Using Sign Code Artifact Signing&lt;/h3&gt;
+&lt;p&gt;With all this in place you can now use the &lt;code&gt;Sign&lt;/code&gt; command from the command line to sign your binaries. Specifically you'll use:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-ps"&gt;sign code artifact-signing --help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that although there's a &lt;code&gt;trusted-signing&lt;/code&gt; option, it's now deprecated and you should use &lt;code&gt;artifact-signing&lt;/code&gt; instead.&lt;/p&gt;
+&lt;p&gt;A full signing command for a binary file looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;sign code artifact-signing  `
+   --verbosity warning `
+   --timestamp-url http://timestamp.digicert.com `
+   --artifact-signing-endpoint https://eus.codesigning.azure.net/ `
+   --artifact-signing-account MySigningAccount `
+   --artifact-signing-certificate-profile MySignongCertificateProfile `  .\Distribution\MarkdownMonster.exe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can specify multiple files and they will be batch sent together. Typically you'll want to run with Verbosity of warning, which doesn't show any output unless you have a problem. The default (Trace) and Information are very verbose and too much noise in any sort of build output unless you explicitly are looking for that.&lt;/p&gt;
+&lt;p&gt;Here's what that looks like with Information verbosity, when you run it in the Terminal:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://weblog.west-wind.com/images/2026/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign/SignCodeInTheTerminal.png" alt="Sign Code In The Terminal"&gt;&lt;/p&gt;
+&lt;p&gt;Signing is &lt;strong&gt;considerably faster&lt;/strong&gt; than what I saw with my old &lt;code&gt;SignTool&lt;/code&gt; based workflow, with signing times under two seconds for most files (this is one is quite large). Based on this speed, it looks like &lt;code&gt;sign&lt;/code&gt; uses locally created hashes rather than uploading the entire file to the server for processing.&lt;/p&gt;
+&lt;p&gt;Unfortunately, the new workflow with Sign doesn't support a metadata file like &lt;code&gt;SignTool&lt;/code&gt; supports, so you &lt;strong&gt;have to specify all the Azure parameters explicitly&lt;/strong&gt;. I'll fix that with the Powershell script provided below to keep that useful functionality intact.&lt;/p&gt;
+&lt;h3 id="putting-it-all-together-into-a-signing-script"&gt;Putting it all together into a Signing Script&lt;/h3&gt;
+&lt;p&gt;The basic syntax for signing via &lt;code&gt;Sign&lt;/code&gt; is now simple enough. However, I need signing in &lt;strong&gt;a lot of different projects&lt;/strong&gt;, so I need to reuse the functionality across these various projects and provide the script as part of the &lt;strong&gt;local&lt;/strong&gt; build infrastructure.&lt;/p&gt;
+&lt;p&gt;The reasons to create a script for all this are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using metadata configuration files (like SignTool used to use)&lt;/li&gt;
+&lt;li&gt;Handling login optionally&lt;/li&gt;
+&lt;li&gt;Handling parameter errors and signing errors&lt;/li&gt;
+&lt;li&gt;Documentation for prerequisites and configuration in the script&lt;/li&gt;
+&lt;li&gt;Self-contained for easy re-use - just copy two files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here's the Powershell script:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;# File name: Signfile.ps1
+# Prerequisites:  
+# dotnet tool install -g --prerelease sign
+# Azure CLI required for logging in optionally
+# Support metadata: SignfileMetaData.json
+
+param(
+    [string]$file = &amp;quot;&amp;quot;,
+    [string]$file1 = &amp;quot;&amp;quot;,
+    [string]$file2 = &amp;quot;&amp;quot;,
+    [string]$file3 = &amp;quot;&amp;quot;,
+    [string]$file4 = &amp;quot;&amp;quot;,
+    [string]$file5 = &amp;quot;&amp;quot;,
+    [string]$file6 = &amp;quot;&amp;quot;,
+    [string]$file7 = &amp;quot;&amp;quot;,
+    [string]$file8 = &amp;quot;&amp;quot;,
+    [boolean]$login = $false
+)
+if (-not $file) {
+    Write-Host &amp;quot;Usage: SignFile.ps1 -file &amp;lt;path to file to sign&amp;gt;&amp;quot;
+    exit 1
+}
+
+if ($login) {
+    az config set core.enable_broker_on_windows=false
+    az login
+    az account set --subscription &amp;quot;Pay-As-You-Go&amp;quot;
+}
+
+# SignfileMetadata.json is not checked in. Format:
+# {
+#   &amp;quot;Endpoint&amp;quot;: &amp;quot;https://eus.codesigning.azure.net/&amp;quot;,
+#   &amp;quot;CodeSigningAccountName&amp;quot;: &amp;quot;MySigningAccount&amp;quot;,
+#   &amp;quot;CertificateProfileName&amp;quot;: &amp;quot;MySigningCertificateProfile&amp;quot;
+# }
+
+$metadata = Get-Content -Path &amp;quot;SignfileMetadata.json&amp;quot; -Raw | ConvertFrom-Json
+$tsEndpoint = $metadata.Endpoint
+$tsAccount = $metadata.CodeSigningAccountName
+$tsCertProfile = $metadata.CertificateProfileName
+$timeServer = &amp;quot;http://timestamp.digicert.com&amp;quot;
+
+$signArgs = @(
+    &amp;quot;--verbosity&amp;quot;, &amp;quot;warning&amp;quot;,
+    &amp;quot;--timestamp-url&amp;quot;, $timeServer,
+    &amp;quot;--artifact-signing-endpoint&amp;quot;, $tsEndpoint,
+    &amp;quot;--artifact-signing-account&amp;quot;, $tsAccount,
+    &amp;quot;--artifact-signing-certificate-profile&amp;quot;, $tsCertProfile
+)
+
+# Add file arguments at the end
+foreach ($f in @($file, $file1, $file2, $file3, $file4, $file5, $file6, $file7, $file8)) {
+    if (![string]::IsNullOrWhiteSpace($f)) {
+        $signArgs += $f
+    }
+}
+
+# Run signtool and capture the exit code
+sign code artifact-signing $signArgs
+$exitCode = $LASTEXITCODE
+
+if ($exitCode -eq 0) {
+    Write-Host &amp;quot;File(s) signed successfully.&amp;quot; -ForegroundColor Green
+    exit 0
+} else {
+    Write-Host &amp;quot;Signing failed with exit code: $exitCode&amp;quot; -ForegroundColor Red
+    exit $exitCode
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This script uses a separate, external configuration file for the Azure values required for code signing to work. I tend to check in the signing script into Git, while the metadata is locally created and not checked in which separates the two. Alternately you can use some other approach to keep the private data out of your repo - environment variables would also do the trick, but I prefer this explicit approach because it makes it easy to copy the data and script across multiple projects while still keeping the private data out of Git.&lt;/p&gt;
+&lt;p&gt;Here's what the metadata file looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-json"&gt;// SignfileMetadata.json
+{
+  &amp;quot;Endpoint&amp;quot;: &amp;quot;https://eus.codesigning.azure.net/&amp;quot;,
+  &amp;quot;CodeSigningAccountName&amp;quot;: &amp;quot;MySigningAccount&amp;quot;,
+  &amp;quot;CertificateProfileName&amp;quot;: &amp;quot;MyCodeSignCertificateProfile&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So now I can drop &lt;code&gt;SignFile.ps&lt;/code&gt; and &lt;code&gt;SignfileMetadata.json&lt;/code&gt; file into a folder and use it for signing.&lt;/p&gt;
+&lt;p&gt;In my build script I then have something like this to invoke the signing operation after my binaries have been built:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;if ($nosign -eq $false) {    
+    &amp;quot;Signing binaries...&amp;quot;
+    .\signfile-dotnetsign.ps1 -file &amp;quot;.\Distribution\MarkdownMonster.exe&amp;quot; `
+                    -file1 &amp;quot;.\Distribution\MarkdownMonsterArm64.exe&amp;quot; `
+                    -file2 &amp;quot;.\Distribution\MarkdownMonster.dll&amp;quot; `
+                    -file3 &amp;quot;.\Distribution\mm.exe&amp;quot; `
+                    -file4 &amp;quot;.\Distribution\mmcli.exe&amp;quot; `
+                    -login $false                   
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host &amp;quot;Signing failed, exiting build script.&amp;quot;
+        exit $LASTEXITCODE
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and then again at the very end to sign the final setup distributable:
+l&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-powershell"&gt;.\signfile-dotnetsign.ps1 `
+	-file &amp;quot;.\Builds\CurrentRelease\MarkdownMonsterSetup.exe&amp;quot; `
+    -login $false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The meta data file can be created in the output folder and should not be checked into Git repo. Alternately you could also change the code to use environment variables if that suits your workflow better.&lt;/p&gt;
+&lt;h2 id="dotnet-sign-is-much-better"&gt;Dotnet Sign is Much Better&lt;/h2&gt;
+&lt;p&gt;I've been using this new workflow for a couple of weeks now, and it has made signing &lt;strong&gt;a lot faster&lt;/strong&gt; than &lt;code&gt;Signtool&lt;/code&gt;. It appears that binaries are locally hashed and only the hash data is sent to the server result in much faster processing times. Average processing with Signtool was around well over 5 seconds per file, it's now down under 1 second per file - a huge improvement in packaging performance.&lt;/p&gt;
+&lt;p&gt;Microsoft's own documentation now also uses the Digicert timestamp server &lt;a href="https://weblog.west-wind.com/posts/2026/Feb/26/Dont-use-the-Microsoft-Timestamp-Server-for-Signing"&gt;instead of the Microsoft one that has been failing for me on a regular basis&lt;/a&gt;. Using the DigitCert timestamp server I haven't had any signing failures in the last two weeks.&lt;/p&gt;
+&lt;h2 id="summary"&gt;Summary&lt;/h2&gt;
+&lt;p&gt;So all of this is good news, as it's taken away some of the early growing pains of using Azure Trusted Signing and makes it much more usable and predictable to run on the client without having to jump through all sorts of hoops.&lt;/p&gt;
+&lt;p&gt;It still isn't as simple as it could be, especially if developers are not already using the .NET ecosystem, but if you're doing code signing for Authenticode, you're likely a Windows developer.&lt;/p&gt;
+&lt;p&gt;The last hurdle that I'd like to get going now is NuGet signing. But I'll leave that for another time... Onwards.&lt;/p&gt;
+&lt;h2 id="resources"&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing"&gt;Fighting through Setting up Microsoft Trusted Signing  (for steps to set up on Azure)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://learn.microsoft.com/en-us/azure/trusted-signing/"&gt;Microsoft Trusted Signing Documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://azure.microsoft.com/en-us/pricing/details/trusted-signing/"&gt;Microsoft Trusted Signing Pricing Page&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style="margin-top: 30px;font-size: 0.8em;
+            border-top: 1px solid #eee;padding-top: 8px;"&gt;
+    &lt;img src="https://markdownmonster.west-wind.com/favicon.png" style="height: 20px;float: left; margin-right: 10px;"&gt;
+    this post created and published with the 
+    &lt;a href="https://markdownmonster.west-wind.com" target="top"&gt;Markdown Monster Editor&lt;/a&gt; 
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;div style='margin: 10px 0px'&gt;&lt;small&gt;© Rick Strahl, West Wind Technologies, 2005-2026&lt;/small&gt;&lt;/div&gt;&lt;div&gt;Posted in &lt;b&gt;&lt;a href='/ShowPosts.aspx?Category=Windows'&gt;Windows&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href='/ShowPosts.aspx?Category=Security'&gt;Security&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;a href='/ShowPosts.aspx?Category=WPF'&gt;WPF&lt;/a&gt;&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;
+&lt;/small&gt;</description></item></channel></rss>

@@ -52,8 +52,10 @@ public class SectionPageKeyboardNavigationTests : PlaywrightTestBase
         var visitedSections = new List<string>();
         var currentSection = "";
 
-        // Tab through page - max 60 tabs to avoid infinite loop
-        for (int i = 0; i < 60; i++)
+        // Tab through page - max 120 tabs to avoid infinite loop.
+        // Some sections (e.g., github-copilot) have more SubNav links and sidebar elements
+        // than simpler sections, requiring more tabs to reach the main content area.
+        for (int i = 0; i < 120; i++)
         {
             await Page.Keyboard.PressAsync("Tab");
             var newSection = await GetFocusedContainer();

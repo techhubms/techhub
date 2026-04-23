@@ -1,0 +1,1 @@
+This is a placeholder transcript for 'john-savill-s-technical-training' used in pipeline fixture tests. The actual transcript would be fetched via YoutubeExplode at runtime.

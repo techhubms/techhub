@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/"><channel><title>PowerShell Team</title><atom:link href="https://devblogs.microsoft.com/powershell/feed/" rel="self" type="application/rss+xml" /><link>https://devblogs.microsoft.com/powershell/</link><description>Automating the world one-liner at a time…</description><lastBuildDate>Wed, 01 Apr 2026 22:58:43 +0000</lastBuildDate><language>en-US</language><sy:updatePeriod>
+	hourly	</sy:updatePeriod><sy:updateFrequency>
+	1	</sy:updateFrequency><image><url>https://devblogs.microsoft.com/powershell/wp-content/uploads/sites/30/2024/10/Microsoft-favicon-48x48.jpg</url><title>PowerShell Team</title><link>https://devblogs.microsoft.com/powershell/</link><width>32</width><height>32</height></image><item><title>PowerShell 7.6 release postmortem and investments</title><link>https://devblogs.microsoft.com/powershell/powershell-7-6-release-postmortem/</link><comments>https://devblogs.microsoft.com/powershell/powershell-7-6-release-postmortem/#comments</comments><dc:creator><![CDATA[Jason Helmick]]></dc:creator><pubDate>Wed, 01 Apr 2026 21:01:54 +0000</pubDate><category><![CDATA[PowerShell]]></category><category><![CDATA[PowerShell Release]]></category><guid isPermaLink="false">https://devblogs.microsoft.com/powershell/?p=20938</guid><description><![CDATA[<p>This post shares context on the delayed timing of the PowerShell 7.6 release, our learnings, and the changes the team has already begun making to improve release predictability and transparency.</p>
+<p>The post <a href="https://devblogs.microsoft.com/powershell/powershell-7-6-release-postmortem/">PowerShell 7.6 release postmortem and investments</a> appeared first on <a href="https://devblogs.microsoft.com/powershell">PowerShell Team</a>.</p>
+]]></description><content:encoded><![CDATA[<p><!-- markdownlint-disable MD041 --></p>
+<p>We recently released PowerShell 7.6, and we want to take a moment to share context on the delayed
+timing of this release, what we learned, and what we&#8217;re already changing as a result.</p>
+<p>PowerShell releases typically align closely with the .NET release schedule. Our goal is to provide
+predictable and timely releases for our users. For 7.6, we planned to release earlier in the cycle,
+but ultimately shipped in March 2026.</p>
+<h2>What goes into a PowerShell release</h2>
+<p>Building and testing a PowerShell release is a complex process with many moving parts:</p>
+<ul>
+<li>3 to 4 release versions of PowerShell each month (e.g. 7.4.14, 7.5.5, 7.6.0)</li>
+<li>29 packages in 8 package formats</li>
+<li>4 architectures (x64, Arm64, x86, Arm32)</li>
+<li>8 operating systems (multiple versions each)</li>
+<li>Published to 4 repositories (GitHub, PMC, winget, Microsoft Store) plus a PR to the .NET SDK image</li>
+<li>287,855 total tests run across all platforms and packages per release</li>
+</ul>
+<h2>What happened</h2>
+<p>The PowerShell 7.6 release was delayed beyond its original target and ultimately shipped in March
+2026.</p>
+<p>During the release cycle, we encountered a set of issues that affected packaging, validation, and
+release coordination. These issues emerged late in the cycle and reduced our ability to validate
+changes and maintain release cadence.</p>
+<p>Combined with the standard December release pause, these factors extended the overall release
+timeline.</p>
+<h2>Timeline</h2>
+<ul>
+<li><strong>October 2025</strong> &#8211; Packaging-related changes were introduced as part of ongoing work for the 7.6
+release.</p>
+<ul>
+<li>Changes to the build created a bug in 7.6-preview.5 that caused the Alpine package to fail. The
+method used in the new build system to build the Microsoft.PowerShell.Native library wasn&#8217;t
+compatible with Alpine. This required additional changes for the Alpine build.</li>
+</ul>
+</li>
+<li><strong>November 2025</strong> &#8211; Additional compliance requirements were imposed requiring changes to packaging
+tooling for non-Windows platforms.</p>
+<ul>
+<li>Because of the additional work created by these requirements, we weren&#8217;t able to ship the fixes
+made in October until December.</li>
+</ul>
+</li>
+<li><strong>December 2025</strong> &#8211; We shipped 7.6-preview.6, but due to the holidays there were complications
+caused by a change freeze and limited availability of key personnel.</p>
+<ul>
+<li>We weren&#8217;t able to publish to PMC during our holiday freeze window.</li>
+<li>We couldn&#8217;t publish NuGet packages because the current manual process limits who can perform the
+task.</li>
+</ul>
+</li>
+<li><strong>January 2026</strong> &#8211; Packaging changes required deeper rework than initially expected and validation
+issues began surfacing across platforms.</p>
+<ul>
+<li>We also discovered a compatibility issue in RHEL 8. The libpsl-native library must be built to
+support glibc 2.28 rather than glibc 2.33 used by RHEL 9 and higher.</li>
+</ul>
+</li>
+<li><strong>February 2026</strong> &#8211; Ongoing fixes, validation, and backporting of packaging changes across release
+branches continued.</li>
+<li><strong>March 2026</strong> &#8211; Packaging changes stabilized, validation completed, and PowerShell 7.6 was
+released.</li>
+</ul>
+<h2>What went wrong and why</h2>
+<p>Several factors contributed to the delay beyond the initial packaging change.</p>
+<ul>
+<li><strong><strong>Late-cycle packaging system changes</strong></strong>
+A compliance requirement required us to replace the tooling used to generate non-Windows packages (RPM, DEB, PKG). We evaluated whether this could be addressed with incremental changes, but determined that the existing tooling could not be adapted to meet requirements. This required a
+full replacement of the packaging workflow.Because this change occurred late in the release cycle, we had limited time to validate the new system across all supported platforms and architectures.</li>
+<li><strong><strong>Tight coupling to packaging dependencies</strong></strong>
+Our release pipeline relied on this tooling as a critical dependency. When it became unavailable, we did not have an alternate implementation ready. This forced us to create a replacement for a core part of the release pipeline, from scratch, under time pressure, increasing both risk and complexity.</li>
+<li><strong><strong>Reduced validation signal from previews</strong></strong>
+Our preview cadence slowed during this period, which reduced opportunities to validate changes incrementally. As a result, issues introduced by the packaging changes were discovered later in the cycle, when changes were more expensive to correct.</li>
+<li><strong><strong>Branching and backport complexity</strong></strong>
+Because of new compliance requirements, changes needed to be backported and validated across multiple active branches. This increased the coordination overhead and extended the time required to reach a stable state.</li>
+<li><strong><strong>Release ownership and coordination gaps</strong></strong>
+Release ownership was not explicitly defined, particularly during maintainer handoffs. This made it difficult to track progress, assign responsibility for blockers, and make timely decisions during critical phases of the release.</li>
+<li><strong><strong>Lack of early risk signals</strong></strong>
+We did not have clear signals indicating that the release timeline was at risk. Without structured tracking of release health and ownership, issues accumulated without triggering early escalation or communication.</li>
+</ul>
+<h2>How we responded</h2>
+<p>As the scope of the issue became clear, we shifted from attempting incremental fixes to stabilizing
+the packaging system as a prerequisite for release.</p>
+<ul>
+<li>We evaluated patching the existing packaging workflow versus replacing it, and determined a full
+replacement was required to meet compliance requirements.</li>
+<li>We rebuilt the packaging workflows for non-Windows platforms, including RPM, DEB, and PKG formats.</li>
+<li>We validated the new packaging system across all supported architectures and operating systems to
+ensure correctness and consistency.</li>
+<li>We backported the updated packaging logic across active release branches to maintain alignment
+between versions.</li>
+<li>We coordinated across maintainers to prioritize stabilization work over continuing release
+progression with incomplete validation.</li>
+</ul>
+<p>This shift ensured a stable and compliant release, but extended the overall timeline as we
+prioritized correctness and cross-platform consistency over release speed.</p>
+<h2>Detection gap</h2>
+<p>A key gap during this release cycle was the lack of early signals indicating that the packaging
+changes would significantly impact the release timeline.</p>
+<p>Reduced preview cadence and late-cycle changes limited our ability to detect issues early.
+Additionally, the absence of clear release ownership and structured tracking made it more difficult
+to identify and communicate risk as it developed.</p>
+<h2>What we are doing to improve</h2>
+<p>This experience highlighted several areas where we can improve how we deliver releases. We&#8217;ve
+already begun implementing changes:</p>
+<ul>
+<li><strong><strong>Clear release ownership</strong></strong>
+We have established explicit ownership for each release, with clear responsibility and transfer mechanisms between maintainers.</li>
+<li><strong><strong>Improved release tracking</strong></strong>
+We are using internal tracking systems to make release status and blockers more visible across the team.</li>
+<li><strong><strong>Consistent preview cadence</strong></strong>
+We are reinforcing a regular preview schedule to surface issues earlier in the cycle.</li>
+<li><strong><strong>Reduced packaging complexity</strong></strong>
+We are working to simplify and consolidate packaging systems to make future updates more predictable.</li>
+<li><strong><strong>Improved automation</strong></strong>
+We are exploring additional automation to reduce manual steps and improve reliability in the face of changing requirements.</li>
+<li><strong><strong>Better communication signals</strong></strong>
+We are identifying clearer signals in the release process to notify the community earlier when timelines are at risk. Going forward, we will share updates through the PowerShell repository <a href="https://github.com/PowerShell/PowerShell/discussions">discussions</a>.</li>
+</ul>
+<h2>Moving forward</h2>
+<p>We understand that many of you rely on PowerShell releases to align with your own planning and
+validation cycles. Improving release predictability and transparency is a priority for the team, and
+these changes are already in progress.</p>
+<p>We appreciate the feedback and patience we received from the community as we worked through these
+changes, and we&#8217;re committed to continuing to improve how we deliver PowerShell.</p>
+<p>— The PowerShell Team</p>
+<p><!-- link references --></p>
+<p>The post <a href="https://devblogs.microsoft.com/powershell/powershell-7-6-release-postmortem/">PowerShell 7.6 release postmortem and investments</a> appeared first on <a href="https://devblogs.microsoft.com/powershell">PowerShell Team</a>.</p>
+]]></content:encoded><wfw:commentRss>https://devblogs.microsoft.com/powershell/powershell-7-6-release-postmortem/feed/</wfw:commentRss><slash:comments>1</slash:comments><image url="https://devblogs.microsoft.com/powershell/wp-content/uploads/sites/30/2018/09/Powershell_256.png" type="image/png" /></item></channel></rss>

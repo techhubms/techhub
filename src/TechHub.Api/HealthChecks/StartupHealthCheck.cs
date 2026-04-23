@@ -5,7 +5,7 @@ namespace TechHub.Api.HealthChecks;
 
 /// <summary>
 /// Health check that verifies all startup operations have completed.
-/// Reports unhealthy until migrations and content sync finish.
+/// Reports unhealthy until migrations and data seeding finish.
 /// </summary>
 public class StartupHealthCheck : IHealthCheck
 {
@@ -20,16 +20,10 @@ public class StartupHealthCheck : IHealthCheck
         HealthCheckContext context,
         CancellationToken cancellationToken = default)
     {
-        if (!_startupState.IsMigrationsCompleted)
+        if (!_startupState.IsStartupCompleted)
         {
             return Task.FromResult(
-                HealthCheckResult.Unhealthy("Database migrations have not completed yet"));
-        }
-
-        if (!_startupState.IsContentSyncCompleted)
-        {
-            return Task.FromResult(
-                HealthCheckResult.Unhealthy("Content synchronization has not completed yet"));
+                HealthCheckResult.Unhealthy("Startup operations have not completed yet"));
         }
 
         return Task.FromResult(

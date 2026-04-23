@@ -1,0 +1,1226 @@
+﻿<!doctype html>
+<!--[if !IE]>
+<html class="no-js non-ie" lang="en-GB"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="no-js ie7" lang="en-GB"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en-GB"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js ie9" lang="en-GB"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en-GB"> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2a9fbc">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="stevejgordon" data-description="Support me on Buy me a coffee!" data-message="If you found this blog helpful, please buy me a coffee!" data-color="#FF813F" data-position="left" data-x_margin="18" data-y_margin="18"></script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v24.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2) - Steve Gordon - Code with Steve</title>
+	<meta name="description" content="In this post, we build out the AES-GCM encryption layer that we will depend on in future posts to decrypt JSON properties using System.Text.Json." />
+	<link rel="canonical" href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2) - Steve Gordon - Code with Steve" />
+	<meta property="og:description" content="In this post, we build out the AES-GCM encryption layer that we will depend on in future posts to decrypt JSON properties using System.Text.Json." />
+	<meta property="og:url" content="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2" />
+	<meta property="og:site_name" content="Steve Gordon - Code with Steve" />
+	<meta property="article:published_time" content="2026-02-05T15:15:17+00:00" />
+	<meta property="article:modified_time" content="2026-02-05T15:15:18+00:00" />
+	<meta property="og:image" content="https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png" />
+	<meta property="og:image:width" content="665" />
+	<meta property="og:image:height" content="715" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="author" content="Steve Gordon" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@stevejgordon" />
+	<meta name="twitter:site" content="@stevejgordon" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Steve Gordon" />
+	<meta name="twitter:label2" content="Estimated reading time" />
+	<meta name="twitter:data2" content="6 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Article","@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#article","isPartOf":{"@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2"},"author":{"name":"Steve Gordon","@id":"https://www.stevejgordon.co.uk/#/schema/person/854225a21893fb73c1a216026c0e8c87"},"headline":"Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2)","datePublished":"2026-02-05T15:15:17+00:00","dateModified":"2026-02-05T15:15:18+00:00","mainEntityOfPage":{"@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2"},"wordCount":1338,"publisher":{"@id":"https://www.stevejgordon.co.uk/#/schema/person/854225a21893fb73c1a216026c0e8c87"},"image":{"@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#primaryimage"},"thumbnailUrl":"https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png","keywords":["encryption","json","System.Text.Json","typeinforesolver"],"articleSection":[".NET"],"inLanguage":"en-GB"},{"@type":"WebPage","@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2","url":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2","name":"Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2) - Steve Gordon - Code with Steve","isPartOf":{"@id":"https://www.stevejgordon.co.uk/#website"},"primaryImageOfPage":{"@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#primaryimage"},"image":{"@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#primaryimage"},"thumbnailUrl":"https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png","datePublished":"2026-02-05T15:15:17+00:00","dateModified":"2026-02-05T15:15:18+00:00","description":"In this post, we build out the AES-GCM encryption layer that we will depend on in future posts to decrypt JSON properties using System.Text.Json.","breadcrumb":{"@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#primaryimage","url":"https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png","contentUrl":"https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png","width":665,"height":715},{"@type":"BreadcrumbList","@id":"https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.stevejgordon.co.uk/"},{"@type":"ListItem","position":2,"name":"Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2)"}]},{"@type":"WebSite","@id":"https://www.stevejgordon.co.uk/#website","url":"https://www.stevejgordon.co.uk/","name":"Steve Gordon - Code with Steve","description":"Adventures in .NET","publisher":{"@id":"https://www.stevejgordon.co.uk/#/schema/person/854225a21893fb73c1a216026c0e8c87"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.stevejgordon.co.uk/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":["Person","Organization"],"@id":"https://www.stevejgordon.co.uk/#/schema/person/854225a21893fb73c1a216026c0e8c87","name":"Steve Gordon","image":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.stevejgordon.co.uk/#/schema/person/image/","url":"https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left.png","contentUrl":"https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left.png","width":600,"height":601,"caption":"Steve Gordon"},"logo":{"@id":"https://www.stevejgordon.co.uk/#/schema/person/image/"},"description":"Steve Gordon is a Pluralsight author, 7x Microsoft MVP, and a .NET engineer at Elastic where he maintains the .NET APM agent and related libraries. Steve is passionate about community and all things .NET related, having worked with ASP.NET for over 21 years. Steve enjoys sharing his knowledge through his blog, in videos and by presenting talks at user groups and conferences. Steve is excited to participate in the active .NET community and founded .NET South East, a .NET Meetup group based in Brighton. He enjoys contributing to and maintaining OSS projects. You can find Steve on most social media platforms as @stevejgordon","sameAs":["https://www.stevejgordon.co.uk","https://www.linkedin.com/in/steve-j-gordon/","https://x.com/stevejgordon","https://www.youtube.com/c/stevegordon"],"url":"https://www.stevejgordon.co.uk/author/stevejgordon"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.stevejgordon.co.uk' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Steve Gordon - Code with Steve &raquo; Feed" href="https://www.stevejgordon.co.uk/feed" />
+<link rel="alternate" type="application/rss+xml" title="Steve Gordon - Code with Steve &raquo; Comments Feed" href="https://www.stevejgordon.co.uk/comments/feed" />
+<link rel="alternate" type="application/rss+xml" title="Steve Gordon - Code with Steve &raquo; Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2) Comments Feed" href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2/feed" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v10.1.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+							<script src="//www.googletagmanager.com/gtag/js?id=G-8TF3DGJTVD"  data-cfasync="false" data-wpfc-render="false" type="text/javascript" async></script>
+			<script data-cfasync="false" data-wpfc-render="false" type="text/javascript">
+				var mi_version = '10.1.2';
+				var mi_track_user = true;
+				var mi_no_track_reason = '';
+								var MonsterInsightsDefaultLocations = {"page_location":"https:\/\/www.stevejgordon.co.uk\/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2\/"};
+								if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations );
+				} else {
+					var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations;
+				}
+
+								var disableStrs = [
+										'ga-disable-G-8TF3DGJTVD',
+									];
+
+				/* Function to detect opted out users */
+				function __gtagTrackerIsOptedOut() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						if (document.cookie.indexOf(disableStrs[index] + '=true') > -1) {
+							return true;
+						}
+					}
+
+					return false;
+				}
+
+				/* Disable tracking if the opt-out cookie exists. */
+				if (__gtagTrackerIsOptedOut()) {
+					for (var index = 0; index < disableStrs.length; index++) {
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				/* Opt-out function */
+				function __gtagTrackerOptout() {
+					for (var index = 0; index < disableStrs.length; index++) {
+						document.cookie = disableStrs[index] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+						window[disableStrs[index]] = true;
+					}
+				}
+
+				if ('undefined' === typeof gaOptout) {
+					function gaOptout() {
+						__gtagTrackerOptout();
+					}
+				}
+								window.dataLayer = window.dataLayer || [];
+
+				window.MonsterInsightsDualTracker = {
+					helpers: {},
+					trackers: {},
+				};
+				if (mi_track_user) {
+					function __gtagDataLayer() {
+						dataLayer.push(arguments);
+					}
+
+					function __gtagTracker(type, name, parameters) {
+						if (!parameters) {
+							parameters = {};
+						}
+
+						if (parameters.send_to) {
+							__gtagDataLayer.apply(null, arguments);
+							return;
+						}
+
+						if (type === 'event') {
+														parameters.send_to = monsterinsights_frontend.v4_id;
+							var hookName = name;
+							if (typeof parameters['event_category'] !== 'undefined') {
+								hookName = parameters['event_category'] + ':' + name;
+							}
+
+							if (typeof MonsterInsightsDualTracker.trackers[hookName] !== 'undefined') {
+								MonsterInsightsDualTracker.trackers[hookName](parameters);
+							} else {
+								__gtagDataLayer('event', name, parameters);
+							}
+							
+						} else {
+							__gtagDataLayer.apply(null, arguments);
+						}
+					}
+
+					__gtagTracker('js', new Date());
+					__gtagTracker('set', {
+						'developer_id.dZGIzZG': true,
+											});
+					if ( MonsterInsightsLocations.page_location ) {
+						__gtagTracker('set', MonsterInsightsLocations);
+					}
+										__gtagTracker('config', 'G-8TF3DGJTVD', {"forceSSL":"true"} );
+										window.gtag = __gtagTracker;										(function () {
+						/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+						/* ga and __gaTracker compatibility shim. */
+						var noopfn = function () {
+							return null;
+						};
+						var newtracker = function () {
+							return new Tracker();
+						};
+						var Tracker = function () {
+							return null;
+						};
+						var p = Tracker.prototype;
+						p.get = noopfn;
+						p.set = noopfn;
+						p.send = function () {
+							var args = Array.prototype.slice.call(arguments);
+							args.unshift('send');
+							__gaTracker.apply(null, args);
+						};
+						var __gaTracker = function () {
+							var len = arguments.length;
+							if (len === 0) {
+								return;
+							}
+							var f = arguments[len - 1];
+							if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') {
+								if ('send' === arguments[0]) {
+									var hitConverted, hitObject = false, action;
+									if ('event' === arguments[1]) {
+										if ('undefined' !== typeof arguments[3]) {
+											hitObject = {
+												'eventAction': arguments[3],
+												'eventCategory': arguments[2],
+												'eventLabel': arguments[4],
+												'value': arguments[5] ? arguments[5] : 1,
+											}
+										}
+									}
+									if ('pageview' === arguments[1]) {
+										if ('undefined' !== typeof arguments[2]) {
+											hitObject = {
+												'eventAction': 'page_view',
+												'page_path': arguments[2],
+											}
+										}
+									}
+									if (typeof arguments[2] === 'object') {
+										hitObject = arguments[2];
+									}
+									if (typeof arguments[5] === 'object') {
+										Object.assign(hitObject, arguments[5]);
+									}
+									if ('undefined' !== typeof arguments[1].hitType) {
+										hitObject = arguments[1];
+										if ('pageview' === hitObject.hitType) {
+											hitObject.eventAction = 'page_view';
+										}
+									}
+									if (hitObject) {
+										action = 'timing' === arguments[1].hitType ? 'timing_complete' : hitObject.eventAction;
+										hitConverted = mapArgs(hitObject);
+										__gtagTracker('event', action, hitConverted);
+									}
+								}
+								return;
+							}
+
+							function mapArgs(args) {
+								var arg, hit = {};
+								var gaMap = {
+									'eventCategory': 'event_category',
+									'eventAction': 'event_action',
+									'eventLabel': 'event_label',
+									'eventValue': 'event_value',
+									'nonInteraction': 'non_interaction',
+									'timingCategory': 'event_category',
+									'timingVar': 'name',
+									'timingValue': 'value',
+									'timingLabel': 'event_label',
+									'page': 'page_path',
+									'location': 'page_location',
+									'title': 'page_title',
+									'referrer' : 'page_referrer',
+								};
+								for (arg in args) {
+																		if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) {
+										hit[gaMap[arg]] = args[arg];
+									} else {
+										hit[arg] = args[arg];
+									}
+								}
+								return hit;
+							}
+
+							try {
+								f.hitCallback();
+							} catch (ex) {
+							}
+						};
+						__gaTracker.create = newtracker;
+						__gaTracker.getByName = newtracker;
+						__gaTracker.getAll = function () {
+							return [];
+						};
+						__gaTracker.remove = noopfn;
+						__gaTracker.loaded = true;
+						window['__gaTracker'] = __gaTracker;
+					})();
+									} else {
+										console.log("");
+					(function () {
+						function __gtagTracker() {
+							return null;
+						}
+
+						window['__gtagTracker'] = __gtagTracker;
+						window['gtag'] = __gtagTracker;
+					})();
+									}
+			</script>
+							<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.stevejgordon.co.uk\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.5"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.stevejgordon.co.uk/wp-includes/css/dist/block-library/style.min.css?ver=6.7.5' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.stevejgordon.co.uk/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='mailerlite_forms.css-css' href='https://www.stevejgordon.co.uk/wp-content/plugins/official-mailerlite-sign-up-forms/assets/css/mailerlite_forms.css?ver=1.7.20' type='text/css' media='all' />
+<link rel='stylesheet' id='ce_responsive-css' href='https://www.stevejgordon.co.uk/wp-content/plugins/simple-embed-code/css/video-container.min.css?ver=2.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-bootstrap-css' href='https://www.stevejgordon.co.uk/wp-content/themes/sparkling/assets/css/bootstrap.min.css?ver=6.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-icons-css' href='https://www.stevejgordon.co.uk/wp-content/themes/sparkling/assets/css/fontawesome-all.min.css?ver=5.1.1.' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-fonts-css' href='//fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C400%2C600%2C700%7CRoboto+Slab%3A400%2C300%2C700&#038;ver=6.7.5' type='text/css' media='all' />
+<link rel='stylesheet' id='sparkling-style-css' href='https://www.stevejgordon.co.uk/wp-content/themes/sparkling/style.css?ver=2.4.2' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=10.1.2" id="monsterinsights-frontend-script-js" async="async" data-wp-strategy="async"></script>
+<script data-cfasync="false" data-wpfc-render="false" type="text/javascript" id='monsterinsights-frontend-script-js-extra'>/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/www.stevejgordon.co.uk","hash_tracking":"false","v4_id":"G-8TF3DGJTVD"};/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/themes/sparkling/assets/js/vendor/bootstrap.min.js?ver=6.7.5" id="sparkling-bootstrapjs-js"></script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/themes/sparkling/assets/js/functions.js?ver=20180503" id="sparkling-functions-js"></script>
+<link rel="https://api.w.org/" href="https://www.stevejgordon.co.uk/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.stevejgordon.co.uk/wp-json/wp/v2/posts/3213" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.stevejgordon.co.uk/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.7.5" />
+<link rel='shortlink' href='https://www.stevejgordon.co.uk/?p=3213' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.stevejgordon.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.stevejgordon.co.uk%2Fencrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.stevejgordon.co.uk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.stevejgordon.co.uk%2Fencrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2&#038;format=xml" />
+            <!-- MailerLite Universal -->
+            <script>
+                (function (m, a, i, l, e, r) {
+                    m['MailerLiteObject'] = e;
+
+                    function f() {
+                        var c = {a: arguments, q: []};
+                        var r = this.push(c);
+                        return "number" != typeof r ? r : f.bind(c.q);
+                    }
+
+                    f.q = f.q || [];
+                    m[e] = m[e] || f.bind(f.q);
+                    m[e].q = m[e].q || f.q;
+                    r = a.createElement(i);
+                    var _ = a.getElementsByTagName(i)[0];
+                    r.async = 1;
+                    r.src = l + '?' + (~~(new Date().getTime() / 10000000));
+                    _.parentNode.insertBefore(r, _);
+                })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+                var ml_account = ml('accounts', '2206765', 'i6t8a5v9b2', 'load');
+            </script>
+            <!-- End MailerLite Universal -->
+        			<style type="text/css" media="screen">
+				/**
+				 * Plugin Name: Subtitles
+				 * Plugin URI: http://wordpress.org/plugins/subtitles/
+				 * Description: Easily add subtitles into your WordPress posts, pages, custom post types, and themes.
+				 * Author: We Cobble
+				 * Author URI: https://wecobble.com/
+				 * Version: 2.2.0
+				 * License: GNU General Public License v2 or later
+				 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+				 */
+
+				/**
+				 * Be explicit about this styling only applying to spans,
+				 * since that's the default markup that's returned by
+				 * Subtitles. If a developer overrides the default subtitles
+				 * markup with another element or class, we don't want to stomp
+				 * on that.
+				 *
+				 * @since 1.0.0
+				 */
+				span.entry-subtitle {
+					display: block; /* Put subtitles on their own line by default. */
+					font-size: 0.53333333333333em; /* Sensible scaling. It's assumed that post titles will be wrapped in heading tags. */
+				}
+				/**
+				 * If subtitles are shown in comment areas, we'll hide them by default.
+				 *
+				 * @since 1.0.5
+				 */
+				#comments .comments-title span.entry-subtitle {
+					display: none;
+				}
+			</style><style type="text/css">a, #infinite-handle span, #secondary .widget .post-content a, .entry-meta a {color:#5d1fc1}a:hover, a:focus, a:active, #secondary .widget .post-content a:hover, #secondary .widget .post-content a:focus, .woocommerce nav.woocommerce-pagination ul li a:focus, .woocommerce nav.woocommerce-pagination ul li a:hover, .woocommerce nav.woocommerce-pagination ul li span.current, #secondary .widget a:hover, #secondary .widget a:focus {color: #2abc90;}.btn-default, .label-default, .flex-caption h2, .btn.btn-default.read-more,button,
+              .navigation .wp-pagenavi-pagination span.current,.navigation .wp-pagenavi-pagination a:hover,
+              .woocommerce a.button, .woocommerce button.button,
+              .woocommerce input.button, .woocommerce #respond input#submit.alt,
+              .woocommerce a.button, .woocommerce button.button,
+              .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt { background-color: #2abc90; border-color: #2abc90;}.site-main [class*="navigation"] a, .more-link, .pagination>li>a, .pagination>li>span, .cfa-button { color: #2abc90}.cfa-button {border-color: #2abc90;}.btn-default:hover, .btn-default:focus,.label-default[href]:hover, .label-default[href]:focus, .tagcloud a:hover, .tagcloud a:focus, button, .main-content [class*="navigation"] a:hover, .main-content [class*="navigation"] a:focus, #infinite-handle span:hover, #infinite-handle span:focus-within, .btn.btn-default.read-more:hover, .btn.btn-default.read-more:focus, .btn-default:hover, .btn-default:focus, .scroll-to-top:hover, .scroll-to-top:focus, .btn-default:active, .btn-default.active, .site-main [class*="navigation"] a:hover, .site-main [class*="navigation"] a:focus, .more-link:hover, .more-link:focus, #image-navigation .nav-previous a:hover, #image-navigation .nav-previous a:focus, #image-navigation .nav-next a:hover, #image-navigation .nav-next a:focus, .cfa-button:hover, .cfa-button:focus, .woocommerce a.button:hover, .woocommerce a.button:focus, .woocommerce button.button:hover, .woocommerce button.button:focus, .woocommerce input.button:hover, .woocommerce input.button:focus, .woocommerce #respond input#submit.alt:hover, .woocommerce #respond input#submit.alt:focus, .woocommerce a.button:hover, .woocommerce a.button:focus, .woocommerce button.button:hover, .woocommerce button.button:focus, .woocommerce input.button:hover, .woocommerce input.button:focus, .woocommerce a.button.alt:hover, .woocommerce a.button.alt:focus, .woocommerce button.button.alt:hover, .woocommerce button.button.alt:focus, .woocommerce input.button.alt:hover, .woocommerce input.button.alt:focus, a:hover .flex-caption h2 { background-color: #2a9fbc; border-color: #2a9fbc; }.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus-within, .pagination>li>span:hover {color: #2a9fbc;}h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .entry-title, .entry-title a {color: #2a9fbc;}.navbar.navbar-default, .navbar-default .navbar-nav .open .dropdown-menu > li > a {background-color: #2a9fbc;}.navbar-default .navbar-nav > li:hover > a, .navbar-default .navbar-nav > li:focus-within > a, .navbar-nav > li:hover > .caret, .navbar-nav > li:focus-within > .caret, .navbar-default .navbar-nav.sparkling-mobile-menu > li.open > a, .navbar-default .navbar-nav.sparkling-mobile-menu > li.open > .caret, .navbar-default .navbar-nav > li:hover, .navbar-default .navbar-nav > li:focus-within, .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > .caret, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {color: #0a0002;}@media (max-width: 767px){ .navbar-default .navbar-nav > li.open > a, .navbar-default .navbar-nav > li.open > .caret { color: #0a0002 !important; } }.social-icons li a {background-color: #2abc90 !important ;}body, .entry-content {color:#4c4c4c}</style><link rel="pingback" href="https://www.stevejgordon.co.uk/xmlrpc.php">		<style type="text/css">
+				.navbar > .container .navbar-brand {
+			color: #a3a3a3;
+		}
+		</style>
+	<link rel="icon" href="https://www.stevejgordon.co.uk/wp-content/uploads/2019/07/cropped-Portrait-Small-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.stevejgordon.co.uk/wp-content/uploads/2019/07/cropped-Portrait-Small-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.stevejgordon.co.uk/wp-content/uploads/2019/07/cropped-Portrait-Small-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.stevejgordon.co.uk/wp-content/uploads/2019/07/cropped-Portrait-Small-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			.widget_sp_image img {border-radius: 50%; width: 200px
+}
+
+.navbar > .container .navbar-header .navbar-brand { color: white; font-family: 'Montserrat', sans-serif; text-transform: uppercase; } 
+
+.syntaxhighlighter code {
+	color:#217b91;
+  background-color: #eaeffa;
+}
+
+.syntaxhighlighter table td.code
+{	vertical-align: top !important;}
+
+.syntaxhighlighter {
+	border: 1px solid #CDCDCD;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 12px 2px;
+}
+
+.single_line table td.code {
+	padding-left: 8px !important;
+}
+
+.syntaxhighlighter .line {
+	line-height: 1.4 !important;
+}
+
+.syntaxhighlighter .line code {
+	font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace !important;
+}
+
+#secondary .widget ul li { color: #4f9ee3;} 
+
+.navbar {
+	background: #2a9fbc;
+background: -moz-linear-gradient(-45deg, #2a9fbc 0%, #2abc90 100%);
+background: -webkit-linear-gradient(-45deg, #2a9fbc 0%,#2abc90 100%);
+background: linear-gradient(135deg, #2a9fbc 0%,#2abc90 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a9fbc', endColorstr='#2abc90',GradientType=1 );
+}
+
+#secondary .widget a { color: #2a56bc;} 
+
+.entry-title a {color: #2A9FBC;}
+
+.entry-title a:hover {
+    color: #2ABC90;
+}
+
+.entry-title-primary {
+	font-family: 'Barlow Condensed', sans-serif; padding-top: 5px; text-transform: uppercase; letter-spacing: 1px
+}
+
+.site-main h1 {
+	font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; 
+}
+
+.site-main h2 {
+	font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; 
+}
+
+#secondary .widget > h3{
+	font-family: 'Barlow', sans-serif; text-transform: uppercase; color: #2A9FBC;
+}
+
+#menu-social li a[href*="twitter.com"]:hover {
+    background-color: #dedede !important;
+}
+
+
+#menu-social li a[href*="github.com"]:hover {
+    background-color: #dedede !important;
+}
+
+
+#menu-social li a[href*="linkedin.com"]:hover {
+    background-color: #dedede !important;
+}
+
+#menu-social li a[href*="youtube.com"]:hover {
+    background-color: #dedede !important;
+}
+
+#menu-social li a[href*="fosstodon.org"]:hover {
+    background-color: #dedede !important;
+}
+
+.author-name {
+	font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; 
+}
+
+.tagcloud a { background-color: #6c6c6c}
+
+
+.site-main h3 {
+	font-family: 'Barlow Condensed', sans-serif; text-transform: uppercase; 
+}
+
+.entry-subtitle {
+	font-family: 'Barlow', sans-serif; padding-top: 5px;
+}
+
+.cta-button {
+	width: 100%;
+	text-align: center;
+}
+
+.cta-view-course {
+	margin-top: 15px;
+	background-color: #2abc90;
+	color: #fff;
+    font-size: 23px;
+    display: inline-block;
+    height: 60px;
+  	line-height: 60px;
+    width: 50%;
+    margin-bottom: 25px;
+    border-radius: 5px;    
+}
+.cta-view-course:hover {
+	color : #2abc90;
+	background-color: #dedede; 
+}
+
+.twitter-tweet {
+	 margin: auto;
+}
+
+code
+{
+	color: #3f34a3;
+	background-color: #e8eafa;
+	font-size: 97%;
+	font-weight: bold;
+	padding: 3px 5px;
+}
+
+.wp-block-image
+{
+	padding-top: 25px;
+	padding-bottom: 25px;
+}		</style>
+		
+</head>
+
+<body class="post-template-default single single-post postid-3213 single-format-standard">
+	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<div id="page" class="hfeed site">
+
+	<header id="masthead" class="site-header" role="banner">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="site-navigation-inner col-sm-12">
+						<div class="navbar-header">
+
+
+														<div id="logo">
+															<p class="site-name">																		<a class="navbar-brand" href="https://www.stevejgordon.co.uk/" title="Steve Gordon &#8211; Code with Steve" rel="home">Steve Gordon &#8211; Code with Steve</a>
+																</p>																													</div><!-- end of #logo -->
+
+							<button type="button" class="btn navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+
+
+
+						<div class="collapse navbar-collapse navbar-ex1-collapse"><ul id="menu-main" class="nav navbar-nav"><li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12"><a href="https://www.stevejgordon.co.uk/about">About Me</a></li>
+<li id="menu-item-150" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"><a href="https://www.stevejgordon.co.uk/?page_id=148">Contact</a></li>
+<li id="menu-item-2438" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2438"><a href="https://www.stevejgordon.co.uk/subscribe-for-updates">Subscribe</a></li>
+</ul></div>
+
+
+					</div>
+				</div>
+			</div>
+		</nav><!-- .site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">
+
+		<div class="top-section">
+								</div>
+
+		<div class="container main-content-area">
+						<div class="row side-pull-left">
+				<div class="main-content-inner col-sm-12 col-md-8">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		<article id="post-3213" class="post-3213 post type-post status-publish format-standard hentry category-net tag-encryption tag-json tag-system-text-json tag-typeinforesolver">
+		<div class="post-inner-content">
+		<header class="entry-header page-header">
+
+			<h1 class="entry-title">Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2)</h1>
+
+			<div class="entry-meta">
+				<span class="posted-on"><i class="fa fa-calendar-alt"></i> <a href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2" rel="bookmark"><time class="entry-date published" datetime="2026-02-05T15:15:17+00:00">5th February 2026</time><time class="updated" datetime="2026-02-05T15:15:18+00:00">5th February 2026</time></a></span><span class="byline"> <i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="https://www.stevejgordon.co.uk/author/stevejgordon">Steve Gordon</a></span></span>
+								<span class="cat-links"><i class="fa fa-folder-open"></i>
+				 <a href="https://www.stevejgordon.co.uk/category/net" rel="category tag">.NET</a>				</span>
+								
+			</div><!-- .entry-meta -->
+		</header><!-- .entry-header -->
+
+		<div class="entry-content">
+			<!-- PRyC WP: Add custom content to bottom of post/page: Standard Content START --><div id="pryc-wp-acctp-original-content">
+<div>In the <a href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1">previous post</a>, we discussed the foundations for automatic data encryption of properties during serialisation using System.Text.Json. In this post, we&#8217;ll continue our journey, moving toward removing our fake &#8220;encryption&#8221; and replacing it with actual encryption. Along the way we&#8217;ll establish some abstractions and a design that allows us to develop flexible encryption and decryption code. Originally, I expected this series to be just two parts, but it has become clear that I need to break things down a bit further as I expected my example.</div>
+<div> </div>
+<div>Here is the planned architecture that we&#8217;ll get to in the next few posts. We&#8217;ll also create other implementations (not shown) of KeyStore once this design is achieved. In <a href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1">part 1</a>, we completed the first version of the <code>EncryptedJsonTypeInfoResolverModifier</code>.</div>
+
+
+<div class="wp-block-image">
+<figure class="aligncenter size-full"><img fetchpriority="high" decoding="async" width="665" height="715" src="https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png" alt="A high-level architectural diagram of the types we'll be creating for JSON encryption, with the EncryptedJsonTypeInfoResolverModifier at the top, which depends on the DataProtector, which depends on the KeyProvider and AesGcmDataEncryptor." class="wp-image-3214" srcset="https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture.png 665w, https://www.stevejgordon.co.uk/wp-content/uploads/2026/02/json-encryption-architecture-279x300.png 279w" sizes="(max-width: 665px) 100vw, 665px" /></figure></div>
+
+
+<div>Today, we&#8217;re going to build out the <code>AesGcmDataEncryptor</code> (in green), which can encrypt data using the AES-GCM standard. It&#8217;ll mostly be a wrapper around the built-in .NET cryptography API.</div>
+<div> </div>
+<div><strong><em>I want to warn you, once again, that while this is reasonably fully featured, it is not production-ready code and is still demoware. I haven&#8217;t thoroughly tested it, so it&#8217;s by no means battle-hardened. Use with caution!</em></strong></div>
+<div> </div>
+<div>Let&#8217;s start with the basic shape of this class.</div>
+
+
+<div class="wp-block-syntaxhighlighter-code"><pre class="brush: csharp; title: ; notranslate" title="">
+using System.Buffers;
+using System.Diagnostics.CodeAnalysis;
+using System.Security.Cryptography;
+using System.Text;
+
+namespace JsonEncryptionBlogExample;
+
+public sealed class AesGcmDataEncryptor
+{
+    public const int NonceSize = 12; // 96-bit
+    public const int TagSize = 16; // 128-bit
+    public const int Aes128KeySize = 16; // 128-bit
+    public const int Aes256KeySize = 32; // 256-bit
+
+    public bool TryEncrypt(ReadOnlySpan&lt;char&gt; plainText, ReadOnlySpan&lt;byte&gt; aesKey,
+        Span&lt;byte&gt; cipherTextDestination, out int bytesWritten)
+    {
+        // TODO
+    }
+
+    public bool TryDecrypt(ReadOnlySpan&lt;byte&gt; cipherTextBytes, ReadOnlySpan&lt;byte&gt; aesKey,
+        &#x5B;NotNullWhen(true)] out string? plainText)
+    {
+        // TODO
+    }
+
+    public static (int PlainTextLength, int CipherTextLength) CalculateByteLengths(ReadOnlySpan&lt;char&gt; plainText)
+    {
+        if (plainText.Length == 0)
+            return (0, 0);
+
+        var plainTextByteLength = Encoding.UTF8.GetByteCount(plainText);
+
+        return (plainTextByteLength, NonceSize + plainTextByteLength + TagSize);
+    }
+
+    private static bool IsValidKeySize(int keySize) =&gt;
+        keySize == Aes128KeySize || keySize == Aes256KeySize;
+}
+</pre></div>
+
+
+<div>First, we define some constants for the lengths of the encryption inputs. The nonce and tag are core concepts in AES-GCM to provide a combination of security and integrity for the encryption process. We&#8217;re using the recommended sizes here. Our code will also support both 128-bit and 256-bit keys, which will be provided by the consumer of the code.</div>
+<div> </div>
+<div>There are two scaffolded methods that we&#8217;ll complete shortly that provide the encryption and decryption functionality. <code>TryEncrypt</code> accepts a <code>ReadOnlySpan&lt;char&gt;</code>, which includes directly passing in a string instance, containing the plain text. It then requires a <code>ReadOnlySpan&lt;byte&gt;</code> containing the key to be used for encryption. We&#8217;ll later implement a concept of a <code>KeyStore</code>, which will provide these keys. The method is designed for low allocation use, so it also requires a <code>Span&lt;byte&gt;</code> as the destination for the ciphertext that will be produced. Its out parameter returns the number of bytes written.</div>
+<div> </div>
+<div><code>TryDecrypt</code> has a very similar signature, but in reverse. The first parameter is <code>ReadOnlyString&lt;byte&gt;</code> representing the ciphertext bytes to be decrypted. The next <code>ReadOnlySpan&lt;byte&gt;</code> parameter is the AES key, and the out value is the plain text string.</div>
+<div> </div>
+<div>There are three static helper methods involved in calculating the byte lengths required for plain text and ciphertext. When using AES GCM, our final bytes include more than just our encrypted data. We also store the nonce and tag value in the final payload; therefore, we account for those additional bytes. Because we&#8217;re designing low-allocation code and using <code>Span&lt;T&gt;</code> for most of our data, we need to calculate the sizes upfront in order to rent appropriately sized arrays.</div>
+<div> </div>
+<div>Next, we&#8217;ll implement the <code>TryEncrypt</code> method.</div>
+
+
+<div class="wp-block-syntaxhighlighter-code"><pre class="brush: csharp; title: ; notranslate" title="">
+public bool TryEncrypt(ReadOnlySpan&lt;char&gt; plainText, ReadOnlySpan&lt;byte&gt; aesKey,
+    Span&lt;byte&gt; cipherTextDestination, out int bytesWritten)
+{
+    bytesWritten = 0;
+
+    if (plainText.Length == 0)
+        return true;
+
+    if (!IsValidKeySize(aesKey.Length))
+        return false;
+
+    var (plainTextByteLength, cipherTextByteLength) = CalculateByteLengths(plainText);
+
+    if (cipherTextDestination.Length &lt; cipherTextByteLength)
+        return false;
+
+    var rentedPlainTextArray = ArrayPool&lt;byte&gt;.Shared.Rent(plainTextByteLength);
+
+    try
+    {
+        var plainTextBytes = rentedPlainTextArray.AsSpan();
+
+        if (!Encoding.UTF8.TryGetBytes(plainText, plainTextBytes, out var plainTextBytesWritten))
+            return false;
+
+        using var aesGcm = new AesGcm(aesKey, TagSize);
+
+        Span&lt;byte&gt; nonceAndTagBuffer = stackalloc byte&#x5B;NonceSize + TagSize];
+        var nonceSpan = nonceAndTagBuffer&#x5B;..NonceSize];
+        var tagSpan = nonceAndTagBuffer&#x5B;NonceSize..];
+
+        RandomNumberGenerator.Fill(nonceSpan);
+
+        aesGcm.Encrypt(nonceSpan, plainTextBytes&#x5B;..plainTextBytesWritten],
+            cipherTextDestination.Slice(NonceSize, plainTextBytesWritten), tagSpan);
+
+        nonceSpan.CopyTo(cipherTextDestination);
+        tagSpan.CopyTo(cipherTextDestination.Slice(NonceSize + plainTextBytesWritten, TagSize));
+
+        bytesWritten = NonceSize + plainTextBytesWritten + TagSize;
+        return true;
+    }
+    finally
+    {
+        ArrayPool&lt;byte&gt;.Shared.Return(rentedPlainTextArray, clearArray: true);
+    }
+}
+</pre></div>
+
+
+<div>Upfront, there is some validation being done. If the input plain text bytes are 0, we have nothing to do. If the provided key length is not valid for 128-bit or 256-bit encryption, we return false. Next, we calculate the required size in bytes of both the plain text (characters at this stage) and the final ciphertext. If the destination <code>Span&lt;byte&gt;</code> we have been provided for the final ciphertext (including the nonce and tags) is too small, we also return false because we can&#8217;t encrypt into an undersized buffer.</div>
+<div> </div>
+<div>With the validation complete, the first job is to encode the plain text characters into UTF8 bytes. The code first rents a suitably sized byte array and then creates a <code>Span&lt;byte&gt;</code> over the memory. We can then use the <code>TryGetBytes</code> method on <code>UTF8</code> to encode the plain text characters from the original string value into the byte array.</div>
+<div> </div>
+<div>We can now initialise an <code>AesGcm</code> instance with our key and our required tag size. The computed tag will later be used for integrity validation. When we later encrypt our data, we&#8217;ll need to pass in a <code>ReadOnlySpan&lt;byte&gt;</code> containing the nonce value and a <code>Span&lt;byte&gt;</code> large enough for the computed tag value. This non-sensitive data is only a few bytes, so the code stack allocates the appropriate number of bytes. This is a very efficient way to handle small, temporary memory, and it&#8217;s made safe through explicitly typing the result as <code>Span&lt;byte&gt;</code>.</div>
+<div> </div>
+<div>We slice the stack-allocated memory to get our nonce span and our tag span. For the nonce, we need to provide a unique value per encryption operation. In this code, we use the <code>RandomNumberGenerator</code> to fill it. For this use case and example, this is sufficient. There is, over time, a very small chance of generating the same nonce, which can render AES-GCM insecure. You&#8217;d need to perform billions of encryptions before that risk becomes a real concern. A richer implementation could use an incrementing value to avoid the risk of repeating the same nonce with the same key, but it&#8217;s likely overkill for this scenario. We could also rotate keys periodically to avoid the risk of the same key and nonce being used.</div>
+<div> </div>
+<div>We now have all the pieces in place and can call Encrypt on our <code>AesGcm</code> instance. We pass the span of bytes containing our nonce value, the plain text bytes, the destination <code>Span&lt;byte&gt;</code> slices to the correct size and the span of bytes for the tag to be written into. Note that with AES-GCM, we know the number of bytes required for the ciphertext will match the number of bytes being encrypted. The slice operation slices the destination starting from the index matching the nonce size, as we will later write the nonce bytes into the destination span, since it is also required for decryption. In fact, the next line of code copies the nonce bytes into the start of the destination span.</div>
+<div> </div>
+<div>The tag span will also have been populated with the value used to verify the integrity of the encrypted data, so we also copy this to the end of the destination span.</div>
+<div> </div>
+<div>We then set the bytesWritten out variable with the actual bytes written to the cipherTextDestination span and return true. Inside the finally block, the rented array used for the plain text bytes is returned to the pool. Crucially, we specifically pass true for the second argument so that it is cleared first. We don&#8217;t want future renters having access to the plain text data.</div>
+<div> </div>
+<div>We must also implement the <code>TryDecrypt</code> method:</div>
+
+
+<div class="wp-block-syntaxhighlighter-code"><pre class="brush: csharp; title: ; notranslate" title="">
+public bool TryDecrypt(ReadOnlySpan&lt;byte&gt; cipherTextBytes, ReadOnlySpan&lt;byte&gt; aesKey,
+    &#x5B;NotNullWhen(true)] out string? plainText)
+{
+    plainText = null;
+
+    if (cipherTextBytes.Length &lt; NonceSize + TagSize || !IsValidKeySize(aesKey.Length))
+        return false;
+
+    var plainTextLength = cipherTextBytes.Length - NonceSize - TagSize;
+
+    var plainTextLength = cipherTextBytes.Length - NonceSize - TagSize;
+    var rentedPlainTextArray = ArrayPool&lt;byte&gt;.Shared.Rent(plainTextLength);
+    var plainTextBytes = rentedPlainTextArray.AsSpan(0, plainTextLength);
+
+    try
+    {
+        var nonce = cipherTextBytes&#x5B;..NonceSize];
+        var encryptedPayload = cipherTextBytes.Slice(NonceSize, plainTextLength);
+        var tag = cipherTextBytes.Slice(NonceSize + plainTextLength, TagSize);
+
+        using var aesGcm = new AesGcm(aesKey, TagSize);
+        aesGcm.Decrypt(nonce, encryptedPayload, tag, plainTextBytes);
+
+        plainText = Encoding.UTF8.GetString(plainTextBytes);
+        return true;
+    }
+    catch
+    {
+        return false;
+    }
+}
+</pre></div>
+
+
+<div>Again, there is some validation up front to check that the ciphertext bytes are at least long enough to hold the nonce and tag and that the provided key is a valid length.</div>
+<div> </div>
+<div>We can then calculate the plain text byte length by subtracting the nonce size and tag size and rent an appropriately sized array, before creating a span over the bytes we will populate.</div>
+<div> </div>
+<div>We extract the spans for the nonce, payload and tag by slicing the incoming cipherTextBytes. We can initialise a new <code>AesGcm</code> instance with the key and the tag size before calling <code>Decrypt</code>, passing the nonce span, the encrypted payload, tag and the <code>Span&lt;byte&gt;</code> for the plain text to be decrypted into.</div>
+<div> </div>
+<div>We ultimately require a string for the decrypted data, so we can use <code>UTF8.GetString</code>, passing in the plain text bytes from our decryption operation. When everything goes to plan, we return true from this method; otherwise, any exceptions will cause us to return false.</div>
+<div> </div>
+<div>And that&#8217;s it! The encryption process is quite simple. It&#8217;s the use of low-allocation spans that makes it a little more complex, but even so, you now hopefully understand what&#8217;s happening at this layer. I&#8217;ve used low-allocation code here because I know this will be on hot paths for my authentication flow, and I want to avoid heavy overhead for each request in the application where I will eventually use this code.</div>
+<div> </div>
+<div>As this part ended up being quite long, we&#8217;ll leave it there, and in the next part, we can focus on the <code>KeyProvider</code> abstraction.</div>
+<h3><span style="color: revert; font-size: revert; font-weight: revert;">Other posts in this series:</span></h3>
+<div>
+<ul>
+<li><a href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1">Part One</a></li>
+<li>Part Two &#8211; This post!</li>
+</ul>
+</div>
+
+
+<!-- PRyC WP: Add custom content to bottom of post/page: Standard Content START --></div><!-- PRyC WP: Add custom content to bottom of post/page --><div id="pryc-wp-acctp-bottom"><div>
+<hr />
+<p>Have you enjoyed this post and found it useful? If so, please consider supporting me:</p>
+<p>
+<style>.paypal img{margin-top: -20px;margin-left:20px;}.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 20px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/stevejgordon"><img decoding="async" src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:15px;font-size:19px !important;">Buy me a coffee</span></a> <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WV4JPPV9FS34L&source=url" target="_blank" class="paypal" rel="noopener">
+<img decoding="async" src="https://www.stevejgordon.co.uk/wp-content/uploads/2020/07/PaypalLogo.png" width="125" height="33" alt="Donate with PayPal" loading="lazy">
+</a>
+</p>
+</div>
+                <div class="ml-form-embed"
+                     data-account="2206765:i6t8a5v9b2"
+                     data-form="2345524:f8w0f2">
+                </div>
+            </div><!-- /PRyC WP: Add custom content to bottom of post/page -->					</div><!-- .entry-content -->
+
+		<footer class="entry-meta">
+
+					  <!-- tags -->
+		  <div class="tagcloud">
+
+				<a href="https://www.stevejgordon.co.uk/tag/encryption">encryption</a> <a href="https://www.stevejgordon.co.uk/tag/json">json</a> <a href="https://www.stevejgordon.co.uk/tag/system-text-json">System.Text.Json</a> <a href="https://www.stevejgordon.co.uk/tag/typeinforesolver">typeinforesolver</a> 
+		  </div>
+		  <!-- end tags -->
+			
+		</footer><!-- .entry-meta -->
+	</div>
+
+			<div class="post-inner-content secondary-content-box">
+	  <!-- author bio -->
+	  <div class="author-bio content-box-inner">
+
+		<!-- avatar -->
+		<div class="avatar">
+			<img alt='' src='https://secure.gravatar.com/avatar/863d6186d3bc32b7c9036101c47d5d5b?s=60&#038;d=blank&#038;r=g' srcset='https://secure.gravatar.com/avatar/863d6186d3bc32b7c9036101c47d5d5b?s=120&#038;d=blank&#038;r=g 2x' class='avatar avatar-60 photo' height='60' width='60' decoding='async'/>		</div>
+		<!-- end avatar -->
+
+		<!-- user bio -->
+		<div class="author-bio-content">
+
+		  <h4 class="author-name"><a href="https://www.stevejgordon.co.uk/author/stevejgordon">Steve Gordon</a></h4>
+		  <p class="author-description">
+				Steve Gordon is a Pluralsight author, 7x Microsoft MVP, and a .NET engineer at <a href="https://www.elastic.co">Elastic</a> where he maintains the .NET APM agent and related libraries. Steve is passionate about community and all things .NET related, having worked with ASP.NET for over 21 years.
+
+Steve enjoys sharing his knowledge through his blog, in videos and by presenting talks at user groups and conferences. Steve is excited to participate in the active .NET community and founded .NET South East, a .NET Meetup group based in Brighton. He enjoys contributing to and maintaining OSS projects. You can find Steve on most social media platforms as <a href="https://twitter.com/stevejgordon">@stevejgordon</a>		  </p>
+
+		</div><!-- end .author-bio-content -->
+
+	  </div><!-- end .author-bio  -->
+
+		</div>
+		
+</article><!-- #post-## -->
+
+	<nav class="navigation post-navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes" rel="prev"><i class="fa fa-chevron-left"></i> <span class="post-title">The Grand Mystery of the Missing 18 Bytes</span></a></div></div>
+	</nav>
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+</div><!-- close .main-content-inner -->
+<div id="secondary" class="widget-area col-sm-12 col-md-4" role="complementary">
+	<div class="well">
+				<aside id="widget_sp_image-2" class="widget widget_sp_image"><img width="600" height="601" class="attachment-full aligncenter" style="max-width: 100%;" srcset="https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left.png 600w, https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left-150x150.png 150w, https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left-300x300.png 300w, https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left-60x60.png 60w" sizes="(max-width: 600px) 100vw, 600px" src="https://www.stevejgordon.co.uk/wp-content/uploads/2019/03/Portrait-Small-Facing-Left.png" /></aside><aside id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a href="https://mvp.microsoft.com/en-us/PublicProfile/5002866"><img src="https://www.stevejgordon.co.uk/wp-content/uploads/2017/11/MVP_Logo_Horizontal_Preferred_Cyan300_RGB_300ppi.png" /></a></div></aside><aside id="custom_html-11" class="widget_text widget widget_custom_html"><h3 class="widget-title">Pluralsight Courses</h3><div class="textwidget custom-html-widget"><a href="https://pluralsight.pxf.io/AavkN"><img src="https://www.stevejgordon.co.uk/wp-content/uploads/2019/09/pluralsight.png" /></a> 
+<div class="widget">
+<br/>
+<ul>
+	<li><a href="https://pluralsight.pxf.io/k0zbg0">
+Creating Background Services in ASP.NET Core and .NET
+			</a>
+		</li>
+			<li><a href="https://pluralsight.pxf.io/oqzbRo">
+Dependency Injection in ASP.NET Core 6
+			</a>
+		</li>
+			<li><a href="https://pluralsight.pxf.io/XYdZyG">Configuration and Options in ASP.NET Core 6</a></li>
+		<li><a href="https://pluralsight.pxf.io/rnr99d">
+String Manipulation and Regex in C#10
+			</a>
+		</li>	
+	<li><a href="https://pluralsight.pxf.io/m5zbR7">
+String Manipulation in C#: Best Practices
+			</a>
+		</li>
+		<li><a href="https://pluralsight.pxf.io/PyKk0j">Integration Testing ASP.NET Core Applications: Best Practices
+			</a>
+		</li>
+		<li><a href="https://pluralsight.pxf.io/1r1O5D">
+Implementing Cross-cutting Concerns for ASP.NET Core Microservices
+			</a>
+		</li>
+	</ul>
+	</div></div></aside><aside id="sparkling-social-2" class="widget sparkling-social"><h3 class="widget-title">Follow me</h3>
+		<!-- social icons -->
+		<div class="social-icons sticky-sidebar-social">
+
+			<nav id="menu-social" class="social-icons"><ul id="menu-social-items" class="social-menu"><li id="menu-item-73" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a target="_blank" href="https://twitter.com/stevejgordon"><i class="social_icon"><span>Twitter</span></i></a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a target="_blank" href="https://github.com/stevejgordon"><i class="social_icon"><span>Github</span></i></a></li>
+<li id="menu-item-510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-510"><a href="https://www.linkedin.com/in/steve-gordon-a6691114/"><i class="social_icon"><span>LinkedIn</span></i></a></li>
+<li id="menu-item-1066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1066"><a href="https://www.youtube.com/channel/UC_rMpypHGP8_J8AAo_bLCmA?&#038;ytbChannel=null"><i class="social_icon"><span>YouTube</span></i></a></li>
+<li id="menu-item-2977" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2977"><a rel="me" href="https://fosstodon.org/@stevejgordon"><i class="social_icon"><span>Mastodon</span></i></a></li>
+</ul></nav>
+		</div><!-- end social icons -->
+		</aside><aside id="mailerlite_widget-2" class="widget widget_mailerlite_widget">                <div class="ml-form-embed"
+                     data-account="2206765:i6t8a5v9b2"
+                     data-form="2369968:y6z1y1">
+                </div>
+            </aside><aside id="custom_html-8" class="widget_text widget widget_custom_html"><h3 class="widget-title">Support This Blog</h3><div class="textwidget custom-html-widget"><p><a href="https://www.patreon.com/bePatron?u=25212205" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+</p>
+<p>
+	<style>.bmc-button img{width: 35px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{padding: 7px 10px 7px 10px !important;line-height: 35px !important;height:51px !important;min-width:217px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 5px !important;border: 1px solid transparent !important;padding: 7px 10px 7px 10px !important;font-size: 20px !important;letter-spacing:-0.08px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Lato', sans-serif !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/stevejgordon"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Support this blog!"><span style="margin-left:15px;font-size:19px !important;">Buy me a coffee!</span></a>
+</p>
+</div></aside><aside id="search-2" class="widget widget_search">
+<form role="search" method="get" class="form-search" action="https://www.stevejgordon.co.uk/">
+  <div class="input-group">
+	  <label class="screen-reader-text" for="s">Search for:</label>
+	<input type="text" class="form-control search-query" placeholder="Search&hellip;" value="" name="s" title="Search for:" />
+	<span class="input-group-btn">
+	  <button type="submit" class="btn btn-default" name="submit" id="searchsubmit" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+	</span>
+  </div>
+</form>
+</aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-2" aria-current="page">Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 2)</a>
+									</li>
+											<li>
+					<a href="https://www.stevejgordon.co.uk/the-grand-mystery-of-the-missing-18-bytes">The Grand Mystery of the Missing 18 Bytes</a>
+									</li>
+											<li>
+					<a href="https://www.stevejgordon.co.uk/talk-application-performance-optimisation-in-practice-60-mins">Talk: Application Performance Optimisation in Practice (60 mins)</a>
+									</li>
+											<li>
+					<a href="https://www.stevejgordon.co.uk/encrypting-properties-with-system-text-json-and-a-typeinforesolver-modifier-part-1">Encrypting Properties with System.Text.Json and a TypeInfoResolver Modifier (Part 1)</a>
+									</li>
+											<li>
+					<a href="https://www.stevejgordon.co.uk/how-dotnet-muxer-resolves-and-loads-the-hostfxr-library">How dotnet.exe resolves and loads the hostfxr library &#8211; Exploring the .NET muxer</a>
+									</li>
+					</ul>
+
+		</aside><aside id="custom_html-4" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><script src="https://apis.google.com/js/platform.js"></script>
+
+<div class="g-ytsubscribe" data-channelid="UC_rMpypHGP8_J8AAo_bLCmA" data-layout="default" data-count="default"></div></div></aside><aside id="text-3" class="widget widget_text"><h3 class="widget-title">.NET South East</h3>			<div class="textwidget"><p><a href="https://www.meetup.com/dotnetsoutheast/"><img decoding="async" src="https://www.stevejgordon.co.uk/wp-content/uploads/2017/07/cropped-logo.png" /></a></p>
+<p>Please come and join our new .NET User  Group in Brighton, UK.</p>
+</div>
+		</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3><form action="https://www.stevejgordon.co.uk" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform'>
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="375">.NET&nbsp;&nbsp;(35)</option>
+	<option class="level-0" value="434">.NET 5&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="496">.NET 6&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="517">.NET 8&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="542">.NET 9&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="223">.NET Core&nbsp;&nbsp;(26)</option>
+	<option class="level-0" value="381">.NET Core 3.0&nbsp;&nbsp;(5)</option>
+	<option class="level-0" value="113">.NET South East&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="18">allReady&nbsp;&nbsp;(11)</option>
+	<option class="level-0" value="4">ASP.NET Core&nbsp;&nbsp;(86)</option>
+	<option class="level-0" value="219">ASP.NET Core 2.1&nbsp;&nbsp;(7)</option>
+	<option class="level-0" value="289">ASP.NET Core 2.2&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="365">ASP.NET Core 3.0&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="429">ASP.NET Core 3.1&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="435">ASP.NET Core 5.0&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="66">ASP.NET Core Anatomy&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="8">ASP.NET Identity&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="90">AWS&nbsp;&nbsp;(11)</option>
+	<option class="level-0" value="313">C#&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="228">Dependency Injection&nbsp;&nbsp;(5)</option>
+	<option class="level-0" value="89">Docker&nbsp;&nbsp;(11)</option>
+	<option class="level-0" value="477">Elasticsearch&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="25">Entity Framework Core&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="3">General&nbsp;&nbsp;(5)</option>
+	<option class="level-0" value="179">Git and GitHub&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="17">GitHub&nbsp;&nbsp;(5)</option>
+	<option class="level-0" value="372">gRPC&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="346">HttpClient&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="268">Microservices&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="157">Microsoft MVP&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="535">OpenTelemetry&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="318">Performance&nbsp;&nbsp;(13)</option>
+	<option class="level-0" value="280">Polly&nbsp;&nbsp;(2)</option>
+	<option class="level-0" value="508">Roslyn APIs&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="422">Software Development Skills&nbsp;&nbsp;(4)</option>
+	<option class="level-0" value="110">Speaking&nbsp;&nbsp;(3)</option>
+	<option class="level-0" value="40">Things I&#8217;ve Learnt This Week&nbsp;&nbsp;(11)</option>
+	<option class="level-0" value="168">Video Production&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="67">Visual Studio&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="33">Visual Studio 2017&nbsp;&nbsp;(4)</option>
+</select>
+</form><script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+
+/* ]]> */
+</script>
+</aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+		<select id="archives-dropdown-2" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value='https://www.stevejgordon.co.uk/2026/02'> February 2026 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2026/01'> January 2026 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2024/11'> November 2024 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2024/10'> October 2024 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2024/09'> September 2024 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2024/03'> March 2024 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2024/01'> January 2024 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2023/11'> November 2023 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2023/08'> August 2023 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2023/05'> May 2023 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2022/10'> October 2022 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2022/06'> June 2022 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2022/04'> April 2022 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/12'> December 2021 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/08'> August 2021 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/07'> July 2021 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/05'> May 2021 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/03'> March 2021 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/02'> February 2021 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2021/01'> January 2021 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/12'> December 2020 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/10'> October 2020 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/09'> September 2020 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/08'> August 2020 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/07'> July 2020 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/05'> May 2020 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/04'> April 2020 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/03'> March 2020 &nbsp;(7)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/02'> February 2020 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2020/01'> January 2020 &nbsp;(5)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/11'> November 2019 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/10'> October 2019 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/09'> September 2019 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/08'> August 2019 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/06'> June 2019 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/05'> May 2019 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/04'> April 2019 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/03'> March 2019 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/02'> February 2019 &nbsp;(5)</option>
+	<option value='https://www.stevejgordon.co.uk/2019/01'> January 2019 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/11'> November 2018 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/10'> October 2018 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/09'> September 2018 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/08'> August 2018 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/07'> July 2018 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/06'> June 2018 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/05'> May 2018 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/04'> April 2018 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/03'> March 2018 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/02'> February 2018 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2018/01'> January 2018 &nbsp;(8)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/12'> December 2017 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/11'> November 2017 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/10'> October 2017 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/09'> September 2017 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/08'> August 2017 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/07'> July 2017 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/06'> June 2017 &nbsp;(4)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/05'> May 2017 &nbsp;(5)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/04'> April 2017 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/03'> March 2017 &nbsp;(9)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/02'> February 2017 &nbsp;(6)</option>
+	<option value='https://www.stevejgordon.co.uk/2017/01'> January 2017 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/12'> December 2016 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/11'> November 2016 &nbsp;(2)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/10'> October 2016 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/09'> September 2016 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/08'> August 2016 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/05'> May 2016 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/03'> March 2016 &nbsp;(1)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/02'> February 2016 &nbsp;(3)</option>
+	<option value='https://www.stevejgordon.co.uk/2016/01'> January 2016 &nbsp;(2)</option>
+
+		</select>
+
+			<script type="text/javascript">
+/* <![CDATA[ */
+
+(function() {
+	var dropdown = document.getElementById( "archives-dropdown-2" );
+	function onSelectChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value !== '' ) {
+			document.location.href = this.options[ this.selectedIndex ].value;
+		}
+	}
+	dropdown.onchange = onSelectChange;
+})();
+
+/* ]]> */
+</script>
+</aside>	</div>
+</div><!-- #secondary -->
+		</div><!-- close .row -->
+	</div><!-- close .container -->
+</div><!-- close .site-content -->
+
+	<div id="footer-area">
+		<div class="container footer-inner">
+			<div class="row">
+				
+				</div>
+		</div>
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info container">
+				<div class="row">
+					<nav id="menu-social" class="social-icons"><ul id="menu-social-items" class="social-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a target="_blank" href="https://twitter.com/stevejgordon"><i class="social_icon"><span>Twitter</span></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a target="_blank" href="https://github.com/stevejgordon"><i class="social_icon"><span>Github</span></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-510"><a href="https://www.linkedin.com/in/steve-gordon-a6691114/"><i class="social_icon"><span>LinkedIn</span></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1066"><a href="https://www.youtube.com/channel/UC_rMpypHGP8_J8AAo_bLCmA?&#038;ytbChannel=null"><i class="social_icon"><span>YouTube</span></i></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2977"><a rel="me" href="https://fosstodon.org/@stevejgordon"><i class="social_icon"><span>Mastodon</span></i></a></li>
+</ul></nav>					<nav role="navigation" class="col-md-6">
+						<ul id="menu-social" class="nav footer-nav clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-73"><a target="_blank" href="https://twitter.com/stevejgordon">Twitter</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-74"><a target="_blank" href="https://github.com/stevejgordon">Github</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-510"><a href="https://www.linkedin.com/in/steve-gordon-a6691114/">LinkedIn</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1066"><a href="https://www.youtube.com/channel/UC_rMpypHGP8_J8AAo_bLCmA?&#038;ytbChannel=null">YouTube</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2977"><a rel="me" href="https://fosstodon.org/@stevejgordon">Mastodon</a></li>
+</ul>					</nav>
+					<div class="copyright col-md-6">
+						Copyright © Steve Gordon 2019						Theme by <a href="http://colorlib.com/" target="_blank" rel="nofollow noopener">Colorlib</a> Powered by <a href="http://wordpress.org/" target="_blank">WordPress</a>					</div>
+				</div>
+			</div><!-- .site-info -->
+			<div class="scroll-to-top"><i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
+		</footer><!-- #colophon -->
+	</div>
+</div><!-- #page -->
+
+		<script type="text/javascript">
+		  jQuery(document).ready(function ($) {
+			if ($(window).width() >= 767) {
+			  $('.navbar-nav > li.menu-item > a').click(function () {
+				if ($(this).attr('target') !== '_blank') {
+				  window.location = $(this).attr('href')
+				}
+			  })
+			}
+		  })
+		</script>
+	<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9b" id="syntaxhighlighter-core-js"></script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushCSharp.js?ver=3.0.9b" id="syntaxhighlighter-brush-csharp-js"></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://www.stevejgordon.co.uk/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.head.appendChild( corecss );
+		var themecssurl = "https://www.stevejgordon.co.uk/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		document.head.appendChild( themecss );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.defaults['quick-code'] = false;
+	SyntaxHighlighter.all();
+
+	// Infinite scroll support
+	if ( typeof( jQuery ) !== 'undefined' ) {
+		jQuery( function( $ ) {
+			$( document.body ).on( 'post-load', function() {
+				SyntaxHighlighter.highlight();
+			} );
+		} );
+	}
+</script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.0.5" id="swv-js"></script>
+<script type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2024-05-21 11:58:24+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_GB"},"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.stevejgordon.co.uk\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.0.5" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://www.stevejgordon.co.uk/wp-content/themes/sparkling/assets/js/skip-link-focus-fix.min.js?ver=20140222" id="sparkling-skip-link-focus-fix-js"></script>
+
+</body>
+</html>

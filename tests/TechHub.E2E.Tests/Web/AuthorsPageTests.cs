@@ -55,16 +55,13 @@ public class AuthorsPageTests : PlaywrightTestBase
         var firstAuthor = Page.Locator(".author-sidebar-link").First;
         await Assertions.Expect(firstAuthor).ToBeVisibleAsync();
 
-        // Act - Click the first author
-        await firstAuthor.ClickAsync();
-
-        // Assert - Content grid or no-content message should appear (author may have 0 items)
+        // Act + Assert — retry [click + grid/no-content visible] to cover hydration race
         var contentGrid = Page.Locator(".content-grid");
         var noContent = Page.Locator(".no-content");
         var endOfContent = Page.Locator(".end-of-content");
-
-        // Wait for either content grid, no-content, or end of content to appear
-        await Assertions.Expect(contentGrid.Or(noContent).Or(endOfContent).First).ToBeVisibleAsync();
+        await firstAuthor.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(contentGrid.Or(noContent).Or(endOfContent).First)
+                .ToBeVisibleAsync(new() { Timeout = 2000 }));
 
         // Select prompt should no longer be visible
         await Assertions.Expect(Page.Locator(".authors-select-prompt")).Not.ToBeVisibleAsync();
@@ -78,11 +75,11 @@ public class AuthorsPageTests : PlaywrightTestBase
         var firstAuthor = Page.Locator(".author-sidebar-link").First;
         await Assertions.Expect(firstAuthor).ToBeVisibleAsync();
 
-        // Act
-        await firstAuthor.ClickAsync();
-
-        // Assert - The clicked author should have active class
-        await Assertions.Expect(Page.Locator(".author-sidebar-link.active")).ToBeVisibleAsync();
+        // Act + Assert — retry [click + active link visible] to cover hydration race
+        var activeLink = Page.Locator(".author-sidebar-link.active");
+        await firstAuthor.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(activeLink).ToBeVisibleAsync(
+                new() { Timeout = 2000 }));
     }
 
     [Fact]

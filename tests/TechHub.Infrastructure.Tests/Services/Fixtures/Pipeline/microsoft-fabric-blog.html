@@ -1,0 +1,1863 @@
+﻿
+
+
+<!DOCTYPE html>
+<html lang="en" style= "overflow-x : hidden" dir = "ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content=Microsoft fabric blog, Microsoft fabric updates, Microsoft fabric news, Microsoft fabric news features />
+    <meta name="description" content="Modern organizations are at a crossroads. Legacy SQL Server workloads need modernization, but migration complexity often stands in the way. What if you could bring your SQL databases into a unified analytics platform&#x2014;without the hassle of manual schema conversion, complex ETL pipelines, or costly re-architecture? That&amp;#8217;s exactly what the new Migration Assistant for SQL database &amp;hellip; &#xA;&lt;p class=&quot;link-more&quot;&gt;&lt;a href=&quot;https://blog.fabric.microsoft.com/en-us/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/&quot; class=&quot;more-link&quot;&gt;Continue reading&lt;span class=&quot;screen-reader-text&quot;&gt; &amp;#8220;Introducing Migration assistant for SQL database in Fabric (Preview)&amp;#8221;&lt;/span&gt;&lt;/a&gt;&#xA;" />
+    <title>Introducing Migration assistant for SQL database in Fabric (Preview) | Microsoft Fabric Blog | Microsoft Fabric</title>
+            <script type="application/ld+json">
+                    {"@context":"https://schema.org","@type":"BlogPosting","headline":"Introducing Migration assistant for SQL database in Fabric (Preview)","image":"https://blog.fabric.microsoft.com/images/shared/social/social-image-v2.png","datePublished":"2026-04-06T15:00:00+00:00","dateModified":"2026-04-01T13:48:27+00:00","author":"Neel Ball","publisher":{"@context":"https://schema.org","@type":"Organization","url":"https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/","name":"Fabric","logo":{"@type":"ImageObject","url":"https://blog.fabric.microsoft.com/images/shared/social/social-image-v2.png","width":1200,"height":630}},"mainEntityOfPage":true}
+            </script>
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/jquery.validate.unobtrusive.js"></script>
+
+    <script>
+        var isSyncFeaturesConsentedVal = false;
+        var isUserAuthenticatedVal = false;
+    </script>
+
+
+    <link href="/images/favicon.ico" rel="icon" type="image/png" />
+    <link rel="stylesheet" href=https://navigation-svc-cdn-endpoint.azureedge.net/assets/wpsnav-ltr.styles.min.css />
+        <link rel="stylesheet" href="/bundle/main-ltr.bundle.css" />
+        <link rel="stylesheet" href="/css/header/bapi-header-ltr.css" />
+    <link rel="canonical" href="https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/"/>
+    <script>
+            var userName = "";
+    </script>
+    
+
+        <meta name="og:type" property="og:type" content="website" />
+        <meta name="og:locale" property="og:locale" content="en-US" />
+        <meta name="og:title" property="og:title" content="Introducing Migration assistant for SQL database in Fabric (Preview) | Microsoft Fabric Blog | Microsoft Fabric" />
+        <meta name="og:url" property="og:url" content="https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/" />
+        <meta name="og:description" property="og:description" content="Modern organizations are at a crossroads. Legacy SQL Server workloads need modernization, but migration complexity often stands in the way. What if you could bring your SQL databases into a unified analytics platform&#x2014;without the hassle of manual schema conversion, complex ETL pipelines, or costly re-architecture? That&amp;amp;#8217;s exactly what the new Migration Assistant for SQL database &amp;amp;hellip; &#xA;&amp;lt;p class=&amp;quot;link-more&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;https://blog.fabric.microsoft.com/en-us/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/&amp;quot; class=&amp;quot;more-link&amp;quot;&amp;gt;Continue reading&amp;lt;span class=&amp;quot;screen-reader-text&amp;quot;&amp;gt; &amp;amp;#8220;Introducing Migration assistant for SQL database in Fabric (Preview)&amp;amp;#8221;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&#xA;" />
+        <meta name="og:image" property="og:image" content="https://blog.fabric.microsoft.com/images/shared/social/social-image-v2.png" />
+        <meta name="twitter:title" property="twitter:title" content="Introducing Migration assistant for SQL database in Fabric (Preview) | Microsoft Fabric Blog | Microsoft Fabric" />
+        <meta name="twitter:card" property="twitter:card" content="summary" />
+        <meta name="twitter:url" property="twitter:url" content="https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/" />
+        <meta name="twitter:description" property="twitter:description" content="Modern organizations are at a crossroads. Legacy SQL Server workloads need modernization, but migration complexity often stands in the way. What if you could bring your SQL databases into a unified analytics platform&#x2014;without the hassle of manual schema conversion, complex ETL pipelines, or costly re-architecture? That&amp;amp;#8217;s exactly what the new Migration Assistant for SQL database &amp;amp;hellip; &#xA;&amp;lt;p class=&amp;quot;link-more&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;https://blog.fabric.microsoft.com/en-us/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/&amp;quot; class=&amp;quot;more-link&amp;quot;&amp;gt;Continue reading&amp;lt;span class=&amp;quot;screen-reader-text&amp;quot;&amp;gt; &amp;amp;#8220;Introducing Migration assistant for SQL database in Fabric (Preview)&amp;amp;#8221;&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&#xA;" />
+        <meta name="twitter:image" property="twitter:image" content="https://blog.fabric.microsoft.com/images/shared/social/social-image-v2.png" />
+
+    
+</head>
+<body lang-code="en-US">
+   
+
+
+<div id="cookie-banner"></div>
+
+
+<!-- Note: The script should always be consumed directly from the URL above and should not be bundled into any packages!
+    The reason is there is geo-sensitive logic in the CDN, which will return different content.
+    -->
+<script>
+    WcpConsent = {};
+</script>
+<!-- Cookie Banner Placeholder-->
+<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+
+
+<script>
+    (function (WcpConsent, $, global) {
+        "use strict";
+
+        var culture = "en-us";
+
+        if (!$ || !WcpConsent || !WcpConsent.name) return;
+
+        function onConsentChanged(e) {
+            if (!window.siteConsent.isConsentRequired) return;
+
+            if (global && global.CookieHelper && global.CookieHelper.cleanNonEssentialCookies) {
+                global.CookieHelper.cleanNonEssentialCookies();
+            }
+
+            window.location.reload();
+
+            $('html, body').animate({ scrollTop: 0 }, 'slow');
+        }
+
+        $(document).ready(function () {
+             $("a[id*='footer']").click(function (ev) {
+                ev.preventDefault();
+                if (window && window.siteConsent && window.siteConsent.manageConsent) {
+                    window.siteConsent.manageConsent();
+                }
+            });
+            WcpConsent.init(culture, "cookie-banner", function (err, _siteConsent) {
+                if (typeof err !== "undefined") {
+                    if (appInsights && appInsights.trackException) {
+                        appInsights.trackException({
+                            exception: err,
+                        });
+                    }
+
+                    return;
+                }
+                else {
+                    window.siteConsent = _siteConsent;
+                    // if consentRequired is true, we will show the manage cookies
+                    if (window.siteConsent.isConsentRequired) {
+                        if ($("a[id*='footer']") && $("a[id*='footer']").length) {
+                            $("a[id*='footer']").removeClass("hide");
+                        }
+
+                        if ($("#wcpConsentBannerCtrl") && $("#wcpConsentBannerCtrl").length) {
+                            $('html, body').animate({ scrollTop: 0 }, 'slow');
+                        }
+
+                        if (global && global.CookieHelper && global.CookieHelper.cleanNonEssentialCookies) {
+                            global.CookieHelper.cleanNonEssentialCookies();
+                        }
+                    }
+                }
+            }, onConsentChanged);
+        });
+    })(WcpConsent, jQuery, window);
+</script>
+<head>
+    <!-- FontAwesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<!-- SKIP TO MAIN BAR -->
+<a class="bapi-skip-to-main" href="#main" tabindex="0" style="z-index:88889">Skip to main content</a>
+<nav id="bapi-header" class="bapi-header--default trident-header" data-sticky-header="true"
+     data-me-control="false">
+    <div class="bapi-top-bar bapi-top-bar--viewport-mooncat">
+        <div class="bapi-top-bar__logo">
+            <a href="https://microsoft.com" class="logo" id="header_nav-1_microsoft-logo" aria-label="Navigate to Microsoft.com" data-bi-name="Nav_MicrosoftLogo" data-bi-area="header-nav">
+                <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                     alt="Navigate to Microsoft.com" />
+            </a>
+        </div>
+
+        <div class="bapi-top-bar__separator" aria-hidden="true" role="presentation">
+            <div class="separator"></div>
+        </div>
+
+        <div class="bapi-top-bar__brand">
+            <a href="https://aka.ms/microsoft-fabric" class="brand-text" id="header_nav-2_homepage"
+               aria-label="Navigates to Microsoft Fabric Home Page" data-bi-area="header-nav" data-bi-name="Nav_IntelligentDataPlatformHome">
+                Fabric
+            </a>
+        </div>
+
+        <!--Begin Coveo Search Box-->
+        
+<style>
+    .search-wrapper {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .clear-btn {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        color: #999;
+        outline: none;
+    }
+
+
+
+    /* Search Button UI */
+
+
+    /* Search Input */
+    .search-input {
+        /* width: 200px; */
+        outline: none;
+        padding-right: 30px;
+        padding-left: 10px;
+        height: 35px;
+        border: 1px solid #ccc;
+        background-color: white;
+        color: black;
+    }
+
+        .search-input:focus {
+            border: 1px solid black !important; /* Black border on focus */
+            box-shadow: none !important; /* Removes additional highlights */
+            outline: none !important;
+        }
+
+    /* Buttons */
+    .clear-btn, .search-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        /* padding: 5px; */
+    }
+</style>
+
+<div id="sitesearch" class="bapi-top-bar__menu bapi-top-bar__menu bapi-top-bar__menu--justify-flex-end hide">
+    <ul class="bapi-menu full-width">
+        <li style="width: 80%;">
+
+            <div class="CoveoSearchbox" style="margin-top:10px">
+
+                <div class="search-wrapper">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search Microsoft Fabric" autocomplete="off" />
+                    <a id="clearSearch" class="clear-btn">✖</a>
+                </div>
+            </div>
+
+        </li>
+        <li style="padding-top: 8px">
+            <a id="submitSearch" class="CoveoSearchButton coveo-accessible-button coveo-accessible-button-pressed" role="button" aria-label="Search" tabindex="0">
+                <span class="coveo-search-button">
+                    <svg alt="Search" focusable="false" enable-background="new 0 0 20 20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="coveo-search-button-svg"><g fill="currentColor"><path class="coveo-magnifier-circle-svg" d="m8.368 16.736c-4.614 0-8.368-3.754-8.368-8.368s3.754-8.368 8.368-8.368 8.368 3.754 8.368 8.368-3.754 8.368-8.368 8.368m0-14.161c-3.195 0-5.793 2.599-5.793 5.793s2.599 5.793 5.793 5.793 5.793-2.599 5.793-5.793-2.599-5.793-5.793-5.793"></path><path d="m18.713 20c-.329 0-.659-.126-.91-.377l-4.552-4.551c-.503-.503-.503-1.318 0-1.82.503-.503 1.318-.503 1.82 0l4.552 4.551c.503.503.503 1.318 0 1.82-.252.251-.581.377-.91.377"></path></g></svg>
+                </span><span class="coveo-search-button-loading">
+                </span>
+            </a>
+        </li>
+
+        <li class="is-menu-link is-menu-link--featured">
+            <a href="javascript:void(0)" role="button" aria-label='Cancel' data-bi-name="Cancel" data-site-search-cancel="site-search-cancel" title='Cancel' id="CoveoSearch_CTA_Cancel">
+                Cancel
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const searchInput = document.getElementById("searchInput");
+            const clearSearch = document.getElementById("clearSearch");
+            const submitSearch = document.getElementById("submitSearch");
+
+            // Show search box when clicking "Search"
+
+            // // Clear input when clicking 'X'
+            clearSearch.addEventListener("click", function () {
+                searchInput.value = "";
+            });
+
+            // Redirect on search
+            submitSearch.addEventListener("click", function () {
+                const searchQuery = searchInput.value.trim();
+                if (searchQuery !== "") {
+                // Extract culture from the URL path
+                const pathParts = window.location.pathname.split('/');
+                const culture = pathParts.length > 1 ? pathParts[1] : 'en-US';
+
+                // Correct the redirection URL
+                const searchUrl = `/${culture}/search/results?keyword=${encodeURIComponent(searchQuery)}&page=1&pageSize=10`;
+
+                // Perform the redirection
+                window.location.href = searchUrl;
+            }
+    });
+
+            // Pressing Enter also triggers search
+            searchInput.addEventListener("keypress", function (e) {
+                if (e.key === "Enter") {
+                    submitSearch.click();
+                }
+            });
+        });
+</script>
+
+        <!--End Coveo Search Box-->
+
+        <div id="top-nav" class="bapi-top-bar__menu bapi-top-bar__menu--justify-flex-end">
+            <!-- Render Left menu items here -->
+                <ul class="bapi-menu bapi-dropdown bapi-hide-until-large" data-menu-left="true">
+            <li class="is-menu-link ">
+                <a data-event="global-clicked-mainmenu" href="/en-US/blog" id="header_nav-3_Updates" aria-label="Updates" data-bi-area="header-nav" data-bi-name="Updates">
+                    Updates
+                </a>
+            </li>
+            <li class="is-menu-link ">
+                <a data-event="global-clicked-mainmenu" href="https://aka.ms/FabricCommunity" id="header_nav-4_Community" aria-label="Community" data-bi-area="header-nav" data-bi-name="Community">
+                    Community
+                </a>
+            </li>
+                            <li class="is-menu-link bapi-hide-for-large">
+                                <a href="javascript:void(0)" data-bi-name="Search" id="searchTriggerRight" class="search-trigger" data-site-search-link="site-search-link" id="Search_ID_Left" aria-label="Search" title="Search" role="button">
+                                    <span>Search</span>
+                                    <span class="glyphicon glyph-mini pbi-glyph-search"></span>
+                                </a>
+                            </li>
+
+            <li class="is-menu-link bapi-hide-for-large">
+                <a data-event="global-clicked-mainmenu" href="https://app.fabric.microsoft.com" id="header_nav-5_Signin-mobile_1" aria-label="Sign in to Microsoft Fabric" data-bi-area="header-nav" data-bi-name="Sign in">
+                    Sign in
+                </a>
+            </li>
+            <li class="bapi-hide-for-large is-menu-link">
+
+                <a data-event="global-clicked-mainmenu" class="" href="https://app.fabric.microsoft.com" id="Tryforfree_1" aria-label="Try for free Microsoft Fabric" data-bi-area="header-nav" data-bi-name="Try for free">
+                    Try for free
+                </a>
+
+            </li>
+
+                </ul>
+
+            <!-- Render Right side menu items here -->
+                <ul class="bapi-menu bapi-dropdown bapi-hide-until-large nav-items-right-container" data-menu-right="true">
+
+                            <li class="is-menu-link">
+                                <a href="javascript:void(0)" data-bi-name="Search" id="searchTriggerRight" class="search-trigger" data-site-search-link="site-search-link" id="Search_ID_right" aria-label="Search" title="Search" role="button">
+                                    <span>Search</span>
+                                    <span class="glyphicon glyph-mini pbi-glyph-search"></span>
+                                </a>
+                            </li>
+            <li class="is-menu-link ">
+                <a data-event="global-clicked-mainmenu" href="https://app.fabric.microsoft.com" id="header_nav-6_Signin-mobile" aria-label="Sign in to Microsoft Fabric" data-bi-area="header-nav" data-bi-name="Sign in">
+                    Sign in
+                </a>
+            </li>
+            <li class=" header_nav-try-free">
+
+                <a data-event="global-clicked-mainmenu" class="btn header-right-btn-trident" href="https://app.fabric.microsoft.com" id="Tryforfree" aria-label="Try for free Microsoft Fabric" data-bi-area="header-nav" data-bi-name="Try for free">
+                    Try for free
+                </a>
+
+            </li>
+                </ul>
+        </div>
+        <div class="bapi-hide-for-large hamburger-container">
+            <ul class="bapi-menu full-width">
+                <li>
+                    <button class="hamburger-container__hamburger"
+                            aria-expanded="false"
+                            aria-label="Expand or Collapse Menu">
+                        <span class="fixin top-bun"></span>
+                        <span class="fixin patty"></span>
+                        <span class="fixin bottom-bun"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+            <main b-7vgz8yqqeg role="main" class="pb-3" id="main">
+                
+
+
+
+<!-- Render the BlogPageTemplate View component with IDP specific settings, to render the IDP Blog page -->
+
+
+
+    
+<div class="modal-wrapper-mask" tabindex="-1">
+    <section class="section section-size3 mc-subscription-container__modal modal focus-trap" id="modal-subscribe-blog" tabindex="0" aria-label="{0} Blog subscription request modal">
+        <div class="mc-subscription-container__modal-close">
+            <button type="button" class="close x-hidden-focus" aria-label="Click to close Microsoft Fabric Blog subscription request modal" id="modal-form-close-button">&times;</button>
+        </div>
+        <div class="mc-subscription-container__modal-heading">
+            <h2 class="mc-subscription-container__modal-heading__text">Please enter your information to subscribe to the Microsoft Fabric Blog.</h2>
+        </div>
+        <div class="mc-subscription-container__form">
+            <div class="mc-subscription-container__modal-form-content" id="subscribeContent">
+            </div>
+        </div>
+    </section>
+</div>
+
+<section id="mc-subscription-container__success-modal" class="section section-size3 mc-subscription-container__success-modal modal focus-trap text-center" tabindex="0" aria-label="MicrosoftFabric Blog subscription request successful message modal">
+    <div class="mc-subscription-container__modal-close">
+        <button class="close x-hidden-focus" aria-label="Ok button for subscription confirmation" id="success-modal-form-close-button">&times;</button>
+    </div>
+    <div class="row row-size1">
+        <div class="column mc-subscription-container__success-modal-heading padding-top-1">
+            <span>Thanks for subscribing to the Microsoft Fabric Blog. You’ll receive email notifications when we publish new posts.</span>
+        </div>
+    </div>
+    <div class="row row-size2">
+        <div class="column mc-subscription-container__modal-close">
+            <button id="subscription-success-close-button" aria-label="Ok button for subscription confirmation" class="button button-default  button-default--whiteonblack">OK</button>
+        </div>
+    </div>
+</section></partial>
+    <section class="section section-size0 fabric-blog-page-header-background">
+        <div class="row">
+            <div class="column nested-column">
+                <div class="row">
+                    <div class="column nested-column">
+                        <h1 class="fabric-blog-title" id="searchSupport-heading">
+                            Microsoft Fabric Updates Blog
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-size5">
+        <div class="row">
+            <div class="column large-7 medium-8 fabric-bloglist nested-column">
+                <div class="margin-bottom-5">
+                    <div class="row column fabric-bloglist">
+                        <div class="nested-column">
+
+                            <ol class="breadcrumbs breadcrumbs-title text-heading4" id="orderListForBreadCrumbs">
+                                <li><a class="fontstyle" aria-label="BlogUpdates" href="/en-us/blog">Updates</a></li>
+                                <li><a class="fontstyle" aria-label="All" href="/en-us/blog">All</a></li>
+                                <li class="breadcrumbs-overflow-70" aria-label="Introducing Migration assistant for SQL database in Fabric (Preview)" id="blogDetailsTitle"><a class="fontstyle" href="#">Introducing Migration assistant for SQL database in Fabric (Preview)</a></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <article data-clarity-region="article">
+                        <div class="row row-size3" id="blogTitle">
+                            <div class="nested-column">
+                                <div class="row side-row">
+                                    <div class="column nested-column" aria-label="title: Introducing Migration assistant for SQL database in Fabric (Preview)">
+                                        <h2 class="blogdetailstitle text-responsive-24px" title="Introducing Migration assistant for SQL database in Fabric (Preview) Total views 2,123" dir="ltr"> Introducing Migration assistant for SQL database in Fabric (Preview)</h2>
+                                        <div class="metadata">
+                                            <div class="row side-row">
+                                                <ul class="linkList linkList-horizontal fabric-bloglist pull-left">
+                                                                <li><a class="blog-post-tag" aria-label="category : Data Warehouse" href="/en-us/blog/category/data-warehouse">Data Warehouse</a></li>
+                                                                <li><a class="blog-post-tag" aria-label="category : Databases" href="/en-us/blog/category/databases">Databases</a></li>
+                                                                <li><a class="blog-post-tag" aria-label="category : Microsoft Fabric" href="/en-us/blog/category/microsoft-fabric">Microsoft Fabric</a></li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="row row-size0 article-author-social-share">
+                                                <div class="column large-12 medium-12 small-12">
+                                                    <ul class="linkList linkList-horizontal fabric-bloglist">
+                                                        <li class="margin-top-0">
+                                                            <div class="post-bio">
+
+                                                                <img class="post-image fabric-blog-author-image" src="https://secure.gravatar.com/avatar/63f8dc4aceed3941a06ade35455b157e?s=62&amp;d=mm&amp;r=g" height="40" width="40" alt="Headshot of article author" />
+
+                                                                <span>April 6, 2026 by </span>
+                                                                <span class="font-semibold">
+                                                                    <a aria-label="post by Neel Ball" href="/en-us/blog/author/Neel%20Ball"><u>Neel Ball</u></a>
+                                                                </span>
+                                                                    <span class="postview postdetails">2,123&nbsp;Views</span>
+                                                                
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="column large-6 medium-12 small-12 text-right social-media-icons flex">
+                                                    
+
+
+<div class="linkList linkList-horizontal">
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/" aria-label="Share to LinkedIn" class="social-share social-linkedin">
+        <img src=/images/Blog/BlogDetails/SocialMediaShare/in_share.png srcset="/images/Blog/BlogDetails/SocialMediaShare/in_share_x2.png 2x" alt="LinkedIn share" />
+    </a>
+    <a href="https://twitter.com/share?url=https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/&text=Introducing Migration assistant for SQL database in Fabric (Preview)&via=MSFabric" aria-label="Share to Twitter" class="social-share social-twitter">
+        <img src=/images/Blog/BlogDetails/SocialMediaShare/tweet_twitter.png srcset="/images/Blog/BlogDetails/SocialMediaShare/tweet_twitter_x2.png 2x" alt="Twitter share" />
+    </a>
+    <a href="https://www.facebook.com/share.php?u=https://blog.fabric.microsoft.com/en-US/blog/introducing-migration-assistant-for-sql-database-in-fabric-preview/" aria-label="Share to Facebook" class="social-share social-facebook">
+        <img src=/images/Blog/BlogDetails/SocialMediaShare/like_fb.png srcset="/images/Blog/BlogDetails/SocialMediaShare/like_fb_x2.png 2x" alt="Facebook share" />
+    </a>
+</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-size2" id="blogContent" dir="ltr">
+                            <div class="nested-column">
+                                <div class="row side-row">
+                                    <div class="column nested-column" id="blogContentDetails">
+                                        <p>Modern organizations are at a crossroads. Legacy SQL Server workloads need modernization, but migration complexity often stands in the way. What if you could bring your SQL databases into a unified analytics platform—without the hassle of manual schema conversion, complex ETL pipelines, or costly re-architecture?</p>
+<p>That&#8217;s exactly what the new Migration Assistant for SQL database in Microsoft Fabric delivers.</p>
+<p>Following <a href="https://blog.fabric.microsoft.com/en-US/blog/announcing-sql-database-in-microsoft-fabric-public-preview" target="_blank" rel="noopener">Announcing SQL database in Fabric (Generally Available)</a>, we&#8217;ve seen incredible momentum. Over 50,000+ SQL databases have been created in Fabric, and organizations are modernizing SQL workloads, reducing operational overhead, and bringing operational data closer to analytics and AI.</p>
+<p>Now, with the <strong>Migration assistant (Preview)</strong>, we&#8217;re making it even easier to move SQL Server to Fabric with confidence.</p>
+<h2>Why migrate to SQL database in Fabric?</h2>
+<p>SQL database in Fabric is built on three foundational pillars:</p>
+<ul>
+<li><strong>Simple</strong>: Provision databases in seconds. No complex networking, storage, or configuration decisions. Just name your database and start building.</li>
+<li><strong>Autonomous and secure</strong>: Serverless architecture that automatically scales compute and storage to meet demand. High availability, disaster recovery, Microsoft Entra authentication, customer-managed keys (CMK), and SQL auditing are all built-in.</li>
+<li><strong>Optimized for AI</strong>: Native support for vector search (along with all the updates in this space across Microsoft SQL), Retrieval-Augmented Generation (RAG), and seamless integration with Azure OpenAI, Microsoft Foundry etc.</li>
+</ul>
+<p>But the real gamechanger? Near real-time replication to OneLake. Your operational data becomes instantly available for analytics, Power BI reports, Spark notebooks, and AI workloads—without moving or duplicating data.</p>
+<h2>Migration assistant for SQL database in Fabric</h2>
+<p>The Migration Assistant is a Fabric-native, wizard-driven experience designed to simplify moving SQL Server–based workloads into Fabric. Whether you&#8217;re migrating from on-premises SQL Server or Azure SQL Database, the assistant guides you through every step—from schema import to data copy—with clarity, control, and confidence.</p>
+<p><img decoding="async" loading="lazy" width="1267" height="965" class="wp-image-34915" src="//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/03/screenshot-of-a-software-interface-showing-migrati-2.png" alt="Screenshot of a software interface showing migration options for data engineering items within a project named &quot;zava-demo-fix.&quot; A highlighted section outlines &quot;Migrate to a database&quot; with details about SQL Server (Preview), emphasizing its suitability for workloads requiring full T-SQL support, low-latency/high concurrency OLTP, and smaller analytics without MPP." //dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/03/screenshot-of-a-software-interface-showing-migrati-2.png 1267w, /wp-content/uploads/2026/03/screenshot-of-a-software-interface-showing-migrati-2-300x228.png 300w, /wp-content/uploads/2026/03/screenshot-of-a-software-interface-showing-migrati-2-1024x780.png 1024w, /wp-content/uploads/2026/03/screenshot-of-a-software-interface-showing-migrati-2-768x585.png 768w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /></p>
+<p><em>Figure: Migration Assistant for SQL Server in Fabric landing page.</em></p>
+<h2>Key features</h2>
+<ul>
+<li>DACPAC-based schema migration – Import your database schema using industry-standard DACPAC files.</li>
+<li>Compatibility assessment – Automatically identifies unsupported objects and compatibility issues before migration.</li>
+<li>Actionable guidance – Get clear, step-by-step recommendations to resolve issues.</li>
+<li>Built-in data copy workflows – Seamlessly move data using Fabric Copy Jobs powered by Data Factory.</li>
+<li>Preserves SQL skills – No need to learn new languages or tools. Use familiar T-SQL, SSMS, and Visual Studio Code.</li>
+</ul>
+<h2>How it works: A step-by-step migration journey</h2>
+<p><strong>Step 1: Launch the Migration wizard</strong></p>
+<p>From your Fabric workspace, select the &#8220;Migrate&#8221; button and select &#8220;Migrate to SQL database in Fabric&#8221;.</p>
+<p><strong>Step 2: Upload DACPAC file</strong></p>
+<p>Export your source database schema as a DACPAC file using SQL Server Management Studio (SSMS), the MSSQL extension for VS Code, or SqlPackage. Upload it to the wizard for validation.</p>
+<p><strong>Step 3: Provision target database</strong></p>
+<p>Name your new SQL database in Fabric. The wizard provisions it in seconds.</p>
+<p><strong>Step 4: Deploy schema with compatibility checks</strong></p>
+<p>The Migration assistant imports your schema and identifies any compatibility issues. For example, if your source database uses a feature that is not supported in SQL database in Fabric, the assistant flags these objects and provides guidance.</p>
+<p>Copilot-powered fix suggestions help you resolve issues faster. Accept or reject recommendations interactively.</p>
+<p><img decoding="async" loading="lazy" width="1817" height="940" class="wp-image-34916" src="//dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/03/screenshot-of-a-database-migration-assistant-inter.png" alt="Screenshot of a database migration assistant interface showing a metadata migration summary and step-by-step migration process. Key elements include a progress bar with migrated and failed object counts, a sidebar with database queries, and a central panel prompting users to query, preview, or connect data." //dataplatformblogwebfd-d3h9cbawf0h8ecgf.b01.azurefd.net/wp-content/uploads/2026/03/screenshot-of-a-database-migration-assistant-inter.png 1817w, /wp-content/uploads/2026/03/screenshot-of-a-database-migration-assistant-inter-300x155.png 300w, /wp-content/uploads/2026/03/screenshot-of-a-database-migration-assistant-inter-1024x530.png 1024w, /wp-content/uploads/2026/03/screenshot-of-a-database-migration-assistant-inter-768x397.png 768w, /wp-content/uploads/2026/03/screenshot-of-a-database-migration-assistant-inter-1536x795.png 1536w" sizes="(max-width: 767px) 89vw, (max-width: 1000px) 54vw, (max-width: 1071px) 543px, 580px" /></p>
+<p><em>Figure: Steps to migrate using the Migration Assistant.</em></p>
+<p><strong>Step 5: Copy Data</strong></p>
+<p>Once schema deployment is complete, launch a Fabric Copy Job to move your data. The assistant integrates with Fabric Data Gateway to securely connect to on-premises sources.</p>
+<p>Run pre-deployment scripts (e.g., disable foreign keys) and post-deployment scripts (e.g., re-enable constraints) to ensure a smooth data load.</p>
+<p><strong>Step 6: Validate and go live</strong></p>
+<p>Review migration results in the Migration Assistant panel within the SQL Editor. Fix any remaining issues, validate your data, and you&#8217;re ready to go live.</p>
+<h2>Coming soon</h2>
+<p>Ready to simplify your SQL migration journey? We will launch in a few weeks, and it will soon be accessible through the fabric portal. Join the conversation by sharing your feedback on the <a href="https://blog.fabric.microsoft.com/blog/announcing-sql-database-in-fabric-is-now-generally-available-ga">Fabric C</a><a id="post-34914-_Hlt224203656"></a><a href="https://blog.fabric.microsoft.com/blog/announcing-sql-database-in-fabric-is-now-generally-available-ga" target="_blank" rel="noopener">ommunity Forums</a>.</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <div class="row row-size2">
+                        <div class="column">
+                            <div class="disqus-block">
+                                <div id="disqus-container">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="padding-top-4">
+                        <div class="row row-size0">
+                            <div class="column">
+                                <h3 class="text-responsive-24px     mc-content-item__heading">Related blog posts</h3>
+                                <p class="text-responsive-18px mc-content-item__paragraph">Introducing Migration assistant for SQL database in Fabric (Preview)</p>
+                            </div>
+                        </div>
+                        <div class="mc-content-item__cards-container css-grid-wrapper two-wide">
+                                    <div class="css-grid-card-container">
+                                        <div class="mc-content-item-container card">
+                                            <div class="row column mc-content-item__picture flex-grid-img">
+                                                <a class="fabric-blog-post-header" id="related-articles-card-image-2" href="/en-us/blog/use-any_value-for-simpler-grouping-of-results-in-fabric-data-warehouse-generally-available?ft=All" aria-label="Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse (Generally Available)">
+                                                    <img srcset="/images/blog/blogdetails/FabricBlog_GenericImage1.jpg" alt="Blog&#x27;s featured image">
+                                                </a>
+                                            </div>
+                                            <div class="flex-grid-content mc-content-item__content-container">
+                                                <div class="row column mc-content-item__heading sd-equalize" data-set="content-item-heading">
+                                                    <a href="/en-us/blog/use-any_value-for-simpler-grouping-of-results-in-fabric-data-warehouse-generally-available?ft=All" class="fabric-blog-post-header" id="related-articles-card-heading-2" aria-label="Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse (Generally Available)">
+                                                        <h3 class="text-responsive-18px">Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse (Generally Available)</h3>
+                                                    </a>
+                                                </div>
+
+                                                <div class="row row-size0 column mc-content-item__author text-responsive-12px sd-equalize" data-set="content-item-author">
+                                                    April 6, 2026
+                                                    by <span class="font-semibold">
+                                                        <a aria-label="post by Jovan Popovic" href="/en-us/blog/author/Jovan%20Popovic"><u>Jovan Popovic</u></a>
+                                                    </span>
+                                                </div>
+                                                <div class="row row-size1 column mc-content-item__para sd-equalize" data-set="content-item-para">
+                                                    <p class="text-responsive-16px" title="Fabric Data Warehouse now supports the ANY_VALUE() aggregate, making it easier to write readable, efficient T-SQL when you want to group by a key but still return descriptive columns that are functionally the same for every row in the group. What is ANY_VALUE()? ANY_VALUE() is an aggregate or analytic function that returns an arbitrary value &amp;hellip; &#xA;Continue reading &amp;#8220;Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse (Generally Available)&amp;#8221;&#xA;">Fabric Data Warehouse now supports the ANY_VALUE() aggregate, making it easier to write readable, efficient T-SQL when you want to group by a key but still return descriptive columns that are functionally the same for every row in the group. What is ANY_VALUE()? ANY_VALUE() is an aggregate or analytic function that returns an arbitrary value &hellip; 
+Continue reading &#8220;Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse (Generally Available)&#8221;
+</p>
+                                                </div>
+                                                <div class="row row-size2 column mc-content-item__cta sd-equalize" data-set="content-item-link">
+                                                    <a id="related-article-read-more-cta-2" href="/en-us/blog/use-any_value-for-simpler-grouping-of-results-in-fabric-data-warehouse-generally-available?ft=All" target="_self" class="button button-arrowlink  button-arrowlink--black" aria-label="Read more About Use ANY_VALUE() for simpler grouping of results in Fabric Data Warehouse (Generally Available)" data-bi-name="Register now">
+                                                        <span>Read more</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="css-grid-card-container">
+                                        <div class="mc-content-item-container card">
+                                            <div class="row column mc-content-item__picture flex-grid-img">
+                                                <a class="fabric-blog-post-header" id="related-articles-card-image-4" href="/en-us/blog/working-with-unstructured-text-in-fabric-data-warehouse-with-built-in-ai-functions-preview?ft=All" aria-label="Working with unstructured text in Fabric Data Warehouse with built-in AI functions (Preview)">
+                                                    <img srcset="/images/blog/blogdetails/FabricBlog_GenericImage3.jpg" alt="Blog&#x27;s featured image">
+                                                </a>
+                                            </div>
+                                            <div class="flex-grid-content mc-content-item__content-container">
+                                                <div class="row column mc-content-item__heading sd-equalize" data-set="content-item-heading">
+                                                    <a href="/en-us/blog/working-with-unstructured-text-in-fabric-data-warehouse-with-built-in-ai-functions-preview?ft=All" class="fabric-blog-post-header" id="related-articles-card-heading-4" aria-label="Working with unstructured text in Fabric Data Warehouse with built-in AI functions (Preview)">
+                                                        <h3 class="text-responsive-18px">Working with unstructured text in Fabric Data Warehouse with built-in AI functions (Preview)</h3>
+                                                    </a>
+                                                </div>
+
+                                                <div class="row row-size0 column mc-content-item__author text-responsive-12px sd-equalize" data-set="content-item-author">
+                                                    April 6, 2026
+                                                    by <span class="font-semibold">
+                                                        <a aria-label="post by Jovan Popovic" href="/en-us/blog/author/Jovan%20Popovic"><u>Jovan Popovic</u></a>
+                                                    </span>
+                                                </div>
+                                                <div class="row row-size1 column mc-content-item__para sd-equalize" data-set="content-item-para">
+                                                    <p class="text-responsive-16px" title="Data warehouses traditionally focus on structured and semi-structured data. Free-form text such as notes, logs, or comments was difficult to process in data warehousing scenarios without external components. Microsoft Fabric Data Warehouse is opening new scenarios in modern data warehousing by enabling you to work with unstructured text using new AI capabilities. We are introducing &amp;hellip; &#xA;Continue reading &amp;#8220;Working with unstructured text in Fabric Data Warehouse with built-in AI functions (Preview)&amp;#8221;&#xA;">Data warehouses traditionally focus on structured and semi-structured data. Free-form text such as notes, logs, or comments was difficult to process in data warehousing scenarios without external components. Microsoft Fabric Data Warehouse is opening new scenarios in modern data warehousing by enabling you to work with unstructured text using new AI capabilities. We are introducing &hellip; 
+Continue reading &#8220;Working with unstructured text in Fabric Data Warehouse with built-in AI functions (Preview)&#8221;
+</p>
+                                                </div>
+                                                <div class="row row-size2 column mc-content-item__cta sd-equalize" data-set="content-item-link">
+                                                    <a id="related-article-read-more-cta-4" href="/en-us/blog/working-with-unstructured-text-in-fabric-data-warehouse-with-built-in-ai-functions-preview?ft=All" target="_self" class="button button-arrowlink  button-arrowlink--black" aria-label="Read more About Working with unstructured text in Fabric Data Warehouse with built-in AI functions (Preview)" data-bi-name="Register now">
+                                                        <span>Read more</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                </div>
+            </div>
+            <div class="column large-4 medium-4 fabric-bloglist">
+                
+
+
+
+<aside>
+        <span id="productName" hidden="hidden">MicrosoftFabric</span>
+        <span id="productTitle" hidden="hidden">Microsoft Fabric</span>
+        <div class="fabric-subscribe-text side-row">
+            <div class="column nested-column">
+                <h3 class="text-responsive-20px">
+                    Microsoft Fabric
+                </h3>
+                <p class="padding-top-1">
+                    Accelerate your data potential with a unified analytics solution that connects it all. Microsoft Fabric enables you to manage your data in one place with a suite of analytics experiences that seamlessly work together, all hosted on a lake-centric SaaS solution for simplicity and to maintain a single source of truth.
+                </p>
+            </div>
+
+            <div class="column nested-column margin-top-24">
+                <p class="text-semibold text-responsive-14px"> Get the latest news from Microsoft Fabric Blog</p>
+            </div>
+            <input id="RequestVerificationToken" type="hidden" value="CfDJ8BZxmDt1PWxLiz_nEN-3WG1sbfKpOPinzBpMLAoWEtl8XjaE-vOboea_2G8wlT6JwQYXfdOuZ1Pq3Ho4EqgZwzLjt2Q-5262yV9TDopaSv7S1rnBJ9lA4fi74-zO3V56Z49nGxijksqziJ_3LbPok2E" />
+            <div class="column nested-column margin-top-24">
+                <div class="form-row">
+                    <label class="mc-subscription-container__signup-email-label show-for-sr" for="subscription-signup-email">Subscribe by email</label>
+                    <input id="subscription-signup-email" class="mc-subscription-container__signup-email" name="subscription-signup-email" type="text" aria-required="true" placeholder="Enter your work or school email" value="">
+                    <span class="mc-subscription-container__signup-error-message invalidEmail hide" role="alert" aria-describedby="subscription-signup-email">You must enter valid email address</span>
+                    <span data-bi-id="blog-subscription_subscriber-email_validation-error_non-aad-user-error" data-bi-name="You entered a personal email address. Please enter your work or school email address." class="mc-subscription-container__signup-error-message nonAADUserError hide" role="alert" aria-describedby="subscription-signup-email">You entered a personal email address. Please enter your work or school email address.</span>
+                    <span class="mc-subscription-container__signup-error-message responseError hide" role="alert" aria-describedby="subscription-signup-email">Something went wrong. Please try again later.</span>
+                </div>
+            </div>
+
+            <div class="column nested-column margin-top-24">
+
+
+                <p class="text-responsive-12px">This will prompt you to login with your Microsoft account to subscribe</p>
+                <button type="submit"
+                        id="signup-subscription"
+                        class="button button-default btn-fabric-subscribe cta-button-padding"
+                        aria-label="Subscribe to Microsoft Fabric Blog" role="button" data-bi-mto="" ms.pgarea="content" ms.cmpgrp="body" ms.cmptyp="button" ms.cmpnm="" ms.title="" km.title="" ms.interactiontype="22">
+                    <span>Subscribe</span>
+                </button>
+            </div>
+
+            <div class="column nested-column margin-top-24">
+                <a class="button button-default btn-fabric-viewRSSFeed cta-button-padding" id="blogviewrssfeed" data-event="blog-clicked-subscribecta" href="/en-us/blog/feed/">
+                    <span class="icon rssFeedIcon">
+                        <svg style="display:none; visibility:hidden;">
+                            <defs>
+                                <symbol id="rss" viewBox="-5 -5 60 60">
+                                    <path d="M0,0c4.6,0,9,0.6,13.3,1.8s8.3,2.9,12,5s7.1,4.8,10.1,7.8c3,3,5.6,6.4,7.8,10.1s3.8,7.7,5,12         C49.4,41,50,45.4,50,50h-5.6c0-4.1-0.5-8-1.6-11.8c-1.1-3.8-2.6-7.3-4.5-10.6c-1.9-3.3-4.3-6.3-7-9s-5.7-5-9-7s-6.8-3.4-10.6-4.5 		    S4.1,5.6,0,5.6L0,0z M0,16.7c3.1,0,6,0.4,8.9,1.2s5.5,1.9,8,3.4c2.5,1.4,4.7,3.2,6.7,5.2s3.8,4.3,5.2,6.7c1.4,2.5,2.6,5.1,3.4,8 		    c0.8,2.8,1.2,5.8,1.2,8.9h-5.6c0-2.5-0.3-5-1-7.4C26.1,40.2,25.2,38,24,36c-1.2-2.1-2.6-3.9-4.3-5.6S16.1,27.2,14,26 		    c-2.1-1.2-4.3-2.1-6.6-2.8c-2.4-0.7-4.8-1-7.4-1L0,16.7z M16.7,41.7c0,1.2-0.2,2.2-0.7,3.3c-0.4,1-1,1.9-1.8,2.6 		    c-0.8,0.8-1.6,1.3-2.6,1.8c-1,0.4-2.1,0.7-3.3,0.7s-2.2-0.2-3.3-0.7c-1-0.4-1.9-1-2.6-1.8c-0.8-0.8-1.3-1.6-1.8-2.6S0,42.8,0,41.7 		    c0-1.2,0.2-2.2,0.7-3.3c0.4-1,1-1.9,1.8-2.6s1.6-1.3,2.6-1.8s2.1-0.7,3.3-0.7s2.2,0.2,3.3,0.7s1.9,1,2.6,1.8 		    c0.8,0.8,1.3,1.6,1.8,2.6C16.4,39.4,16.7,40.5,16.7,41.7z">
+                                    </path>
+                                </symbol>
+                            </defs>
+                        </svg>
+                        <svg aria-hidden="true">
+                            <use xlink:href="#rss"></use>
+                        </svg>
+                    </span>
+                    View RSS Feed
+                </a>
+            </div>
+        </div>
+
+    <div class="side-row-more-filters">
+
+        <!-- Show more products section if its IDP product blog -->
+            <div class="row row-size5 side-row">
+                <h3 id="more-products-list">
+                    Visit our product blogs
+                </h3>
+                <div class="fabric-sidebar-seperation"></div>
+                <ul class="linkList" aria-labelledby="more-product-list">
+                    <li><a href="https://powerbi.microsoft.com/blog/" arial-label="Microsoft Power BI">Power BI</a></li>
+                    <li>
+                        <a href="https://devblogs.microsoft.com/azure-sql/"
+                           aria-label="Azure SQL Devs’ Corner">
+                            Azure SQL Devs’ Corner
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        <div class="row row-size5 side-row">
+            <h3 id="search-category-list">
+                View articles by category
+            </h3>
+            <div class="fabric-sidebar-seperation"></div>
+            <ul class="linkList" aria-labelledby="search-category-list">
+                    <li>
+                        <a aria-label="Search By Category activator"
+                           href="/en-us/blog/category/activator">
+                            Activator
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category ai"
+                           href="/en-us/blog/category/ai">
+                            AI
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category announcements"
+                           href="/en-us/blog/category/announcements">
+                            Announcements
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category apacheiceberg"
+                           href="/en-us/blog/category/apacheiceberg">
+                            Apache Iceberg
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category apache-spark"
+                           href="/en-us/blog/category/apache-spark">
+                            Apache Spark
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category community"
+                           href="/en-us/blog/category/community">
+                            Community
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category community-challenge"
+                           href="/en-us/blog/category/community-challenge">
+                            Community Challenge
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category data-engineering"
+                           href="/en-us/blog/category/data-engineering">
+                            Data Engineering
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category data-factory"
+                           href="/en-us/blog/category/data-factory">
+                            Data Factory
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category data-lake"
+                           href="/en-us/blog/category/data-lake">
+                            Data Lake
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category data-loss-prevention"
+                           href="/en-us/blog/category/data-loss-prevention">
+                            Data loss prevention
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category data-science"
+                           href="/en-us/blog/category/data-science">
+                            Data Science
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category data-warehouse"
+                           href="/en-us/blog/category/data-warehouse">
+                            Data Warehouse
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category databases"
+                           href="/en-us/blog/category/databases">
+                            Databases
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category developer"
+                           href="/en-us/blog/category/developer">
+                            Developer
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category fabric-iq"
+                           href="/en-us/blog/category/fabric-iq">
+                            Fabric IQ
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category fabric-ml"
+                           href="/en-us/blog/category/fabric-ml">
+                            Fabric ML
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category fabric-platform"
+                           href="/en-us/blog/category/fabric-platform">
+                            Fabric platform
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category fabric-public-apis"
+                           href="/en-us/blog/category/fabric-public-apis">
+                            Fabric Public APIs
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category fabric-workload"
+                           href="/en-us/blog/category/fabric-workload">
+                            Fabric Workload
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category information-protection"
+                           href="/en-us/blog/category/information-protection">
+                            Information protection
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category lakehouse"
+                           href="/en-us/blog/category/lakehouse">
+                            Lakehouse
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category machine-learning"
+                           href="/en-us/blog/category/machine-learning">
+                            Machine Learning
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category microsoft-fabric"
+                           href="/en-us/blog/category/microsoft-fabric">
+                            Microsoft Fabric
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category monthly-update"
+                           href="/en-us/blog/category/monthly-update">
+                            Monthly Update
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category onelake"
+                           href="/en-us/blog/category/onelake">
+                            OneLake
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category power-bi"
+                           href="/en-us/blog/category/power-bi">
+                            Power BI
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category power-bi-reports"
+                           href="/en-us/blog/category/power-bi-reports">
+                            Power BI reports
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category real-time-intelligence"
+                           href="/en-us/blog/category/real-time-intelligence">
+                            Real-Time Intelligence
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category roadmap"
+                           href="/en-us/blog/category/roadmap">
+                            Roadmap
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category security-and-compliance"
+                           href="/en-us/blog/category/security-and-compliance">
+                            Security and Compliance
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category semantic-model"
+                           href="/en-us/blog/category/semantic-model">
+                            semantic model
+                        </a>
+                    </li>
+                    <li>
+                        <a aria-label="Search By Category uncategorized"
+                           href="/en-us/blog/category/uncategorized">
+                            Uncategorized
+                        </a>
+                    </li>
+            </ul>
+        </div>
+
+        <div class="row row-size5 side-row">
+            <h3 id="search-date-list">
+                View articles by date
+            </h3>
+            <div class="fabric-sidebar-seperation"></div>
+            <ul class="linkList" aria-labelledby="search-date-list">
+<li>
+                        <a aria-label="April 2026"
+                           href="/en-us/blog/date/04-2026">
+                            April 2026
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="March 2026"
+                           href="/en-us/blog/date/03-2026">
+                            March 2026
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="February 2026"
+                           href="/en-us/blog/date/02-2026">
+                            February 2026
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="January 2026"
+                           href="/en-us/blog/date/01-2026">
+                            January 2026
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="December 2025"
+                           href="/en-us/blog/date/12-2025">
+                            December 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="November 2025"
+                           href="/en-us/blog/date/11-2025">
+                            November 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="October 2025"
+                           href="/en-us/blog/date/10-2025">
+                            October 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="September 2025"
+                           href="/en-us/blog/date/09-2025">
+                            September 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="August 2025"
+                           href="/en-us/blog/date/08-2025">
+                            August 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="July 2025"
+                           href="/en-us/blog/date/07-2025">
+                            July 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="June 2025"
+                           href="/en-us/blog/date/06-2025">
+                            June 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="May 2025"
+                           href="/en-us/blog/date/05-2025">
+                            May 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="April 2025"
+                           href="/en-us/blog/date/04-2025">
+                            April 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="March 2025"
+                           href="/en-us/blog/date/03-2025">
+                            March 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="February 2025"
+                           href="/en-us/blog/date/02-2025">
+                            February 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="January 2025"
+                           href="/en-us/blog/date/01-2025">
+                            January 2025
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="December 2024"
+                           href="/en-us/blog/date/12-2024">
+                            December 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="November 2024"
+                           href="/en-us/blog/date/11-2024">
+                            November 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="October 2024"
+                           href="/en-us/blog/date/10-2024">
+                            October 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="September 2024"
+                           href="/en-us/blog/date/09-2024">
+                            September 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="August 2024"
+                           href="/en-us/blog/date/08-2024">
+                            August 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="July 2024"
+                           href="/en-us/blog/date/07-2024">
+                            July 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="June 2024"
+                           href="/en-us/blog/date/06-2024">
+                            June 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="May 2024"
+                           href="/en-us/blog/date/05-2024">
+                            May 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="April 2024"
+                           href="/en-us/blog/date/04-2024">
+                            April 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="March 2024"
+                           href="/en-us/blog/date/03-2024">
+                            March 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="February 2024"
+                           href="/en-us/blog/date/02-2024">
+                            February 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="January 2024"
+                           href="/en-us/blog/date/01-2024">
+                            January 2024
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="December 2023"
+                           href="/en-us/blog/date/12-2023">
+                            December 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="November 2023"
+                           href="/en-us/blog/date/11-2023">
+                            November 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="October 2023"
+                           href="/en-us/blog/date/10-2023">
+                            October 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="September 2023"
+                           href="/en-us/blog/date/09-2023">
+                            September 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="August 2023"
+                           href="/en-us/blog/date/08-2023">
+                            August 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="July 2023"
+                           href="/en-us/blog/date/07-2023">
+                            July 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="June 2023"
+                           href="/en-us/blog/date/06-2023">
+                            June 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="May 2023"
+                           href="/en-us/blog/date/05-2023">
+                            May 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="April 2023"
+                           href="/en-us/blog/date/04-2023">
+                            April 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="March 2023"
+                           href="/en-us/blog/date/03-2023">
+                            March 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="February 2023"
+                           href="/en-us/blog/date/02-2023">
+                            February 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="January 2023"
+                           href="/en-us/blog/date/01-2023">
+                            January 2023
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="December 2022"
+                           href="/en-us/blog/date/12-2022">
+                            December 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="November 2022"
+                           href="/en-us/blog/date/11-2022">
+                            November 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="October 2022"
+                           href="/en-us/blog/date/10-2022">
+                            October 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="September 2022"
+                           href="/en-us/blog/date/09-2022">
+                            September 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="August 2022"
+                           href="/en-us/blog/date/08-2022">
+                            August 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="July 2022"
+                           href="/en-us/blog/date/07-2022">
+                            July 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="June 2022"
+                           href="/en-us/blog/date/06-2022">
+                            June 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="May 2022"
+                           href="/en-us/blog/date/05-2022">
+                            May 2022
+                        </a>
+                    </li>
+<li>
+                        <a aria-label="April 2022"
+                           href="/en-us/blog/date/04-2022">
+                            April 2022
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</aside></partial>
+            </div>
+        </div>
+    </section>
+
+
+
+            </main>
+
+
+
+<footer class="bapi-common-footer">
+    <div class="bapi-footer-wrapper bapi-footer-wrapper--viewport-mooncat" id="fabric-footer">
+        <div class="bapi-row">
+            <!-- Render Level 1 Nav Items -->
+                <div class="bapi-column bapi-column--one-half" id="Whatsnew">
+                    <h3 class="bapi-heading3">
+                        What's new
+                    </h3>
+                    <ul class="bapi-link-list">
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/microsoft-365/buy/compare-all-microsoft-365-products?icid=IN_UHF_Footer_M365"
+                                       class="f-link" id="footer-nav-Microsoft365" aria-label="Microsoft 365">
+                                        Microsoft 365
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/store/b/xbox?icid=IN_UHF_Footer_Games"
+                                       class="f-link" id="footer-nav-Games" aria-label="Games">
+                                        Games
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/surface/devices/surface-pro-9?icid=IN_UHF_Footer_SurfacePro9"
+                                       class="f-link" id="footer-nav-Surface Pro 9" aria-label="Surface Pro 9">
+                                        Surface Pro 9
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-5?icid=IN_UHF_Footer_SurfaceLaptop5"
+                                       class="f-link" id="footer-nav-Surface Laptop 5" aria-label="Surface Laptop 5">
+                                        Surface Laptop 5
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-studio?icid=IN_UHF_Footer_SurfaceLaptopStudio"
+                                       class="f-link" id="footer-nav-Surface Laptop Studio" aria-label="Surface Laptop Studio">
+                                        Surface Laptop Studio
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/surface/devices/surface-laptop-go-2?icid=IN_UHF_Footer_SurfaceLaptopGo2"
+                                       class="f-link" id="footer-nav-Surface Laptop Go 2" aria-label="Surface Laptop Go 2">
+                                        Surface Laptop Go 2
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/windows/windows-11-apps?icid=IN_UHF_Footer_Windows11apps"
+                                       class="f-link" id="footer-nav-Windows 11 apps" aria-label="Windows 11 apps">
+                                        Windows 11 apps
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="bapi-column bapi-column--one-half" id="Microsoftstore">
+                    <h3 class="bapi-heading3">
+                        Microsoft Store
+                    </h3>
+                    <ul class="bapi-link-list">
+                                <li>
+                                    <a href="https://account.microsoft.com/"
+                                       class="f-link" id="footer-nav-Account profile" aria-label="Account profile">
+                                        Account profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/download"
+                                       class="f-link" id="footer-nav-Download Centre" aria-label="Download Centre">
+                                        Download Centre
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://go.microsoft.com/fwlink/?linkid=2139749"
+                                       class="f-link" id="footer-nav-Microsoft Store Support" aria-label="Microsoft Store Support">
+                                        Microsoft Store Support
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://go.microsoft.com/fwlink/p/?LinkID=824764&amp;amp;clcid=0x4009"
+                                       class="f-link" id="footer-nav-Returns" aria-label="Returns">
+                                        Returns
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://account.microsoft.com/orders"
+                                       class="f-link" id="footer-nav-Order tracking" aria-label="Order tracking">
+                                        Order tracking
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="bapi-column bapi-column--one-half" id="education">
+                    <h3 class="bapi-heading3">
+                        Education
+                    </h3>
+                    <ul class="bapi-link-list">
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/education"
+                                       class="f-link" id="footer-nav-Microsoft in education" aria-label="Microsoft in education">
+                                        Microsoft in education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/education/devices/overview"
+                                       class="f-link" id="footer-nav-Devices for education" aria-label="Devices for education">
+                                        Devices for education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/education/products/teams"
+                                       class="f-link" id="footer-nav-Microsoft Teams for Education" aria-label="Microsoft Teams for Education">
+                                        Microsoft Teams for Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/education/buy-license/microsoft365"
+                                       class="f-link" id="footer-nav-Microsoft 365 Education" aria-label="Microsoft 365 Education">
+                                        Microsoft 365 Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/education/products/office"
+                                       class="f-link" id="footer-nav-Office Education" aria-label="Office Education">
+                                        Office Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://education.microsoft.com/"
+                                       class="f-link" id="footer-nav-Educator training and development" aria-label="Educator training and development">
+                                        Educator training and development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-us/store/b/education"
+                                       class="f-link" id="footer-nav-Deals for students and parents" aria-label="Deals for students and parents">
+                                        Deals for students and parents
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://azure.microsoft.com/en-in/free/students/"
+                                       class="f-link" id="footer-nav-Azure for students" aria-label="Azure for students">
+                                        Azure for students
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="bapi-column bapi-column--one-half" id="business">
+                    <h3 class="bapi-heading3">
+                        Business
+                    </h3>
+                    <ul class="bapi-link-list">
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/microsoft-cloud"
+                                       class="f-link" id="footer-nav-Microsoft Cloud" aria-label="Microsoft Cloud">
+                                        Microsoft Cloud
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/security"
+                                       class="f-link" id="footer-nav-Microsoft Security" aria-label="Microsoft Security">
+                                        Microsoft Security
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://azure.microsoft.com/en-in/"
+                                       class="f-link" id="footer-nav-Azure" aria-label="Azure">
+                                        Azure
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://dynamics.microsoft.com/en-in/"
+                                       class="f-link" id="footer-nav-Dynamics 365" aria-label="Dynamics 365">
+                                        Dynamics 365
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/microsoft-365/business/"
+                                       class="f-link" id="footer-nav-Microsoft365_1" aria-label="Microsoft 365">
+                                        Microsoft 365
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://about.ads.microsoft.com/en-in"
+                                       class="f-link" id="footer-nav-Microsoft Advertising" aria-label="Microsoft Advertising">
+                                        Microsoft Advertising
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/industry"
+                                       class="f-link" id="footer-nav-Microsoft Industry" aria-label="Microsoft Industry">
+                                        Microsoft Industry
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/microsoft-teams/group-chat-software"
+                                       class="f-link" id="footer-nav-Microsoft Teams" aria-label="Microsoft Teams">
+                                        Microsoft Teams
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="bapi-column bapi-column--one-half" id="DeveloperAnd IT">
+                    <h3 class="bapi-heading3">
+                        Developer & IT
+                    </h3>
+                    <ul class="bapi-link-list">
+                                <li>
+                                    <a href="https://developer.microsoft.com/en-in/"
+                                       class="f-link" id="footer-nav-Developer Centre" aria-label="Developer Centre">
+                                        Developer Centre
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://learn.microsoft.com/docs/"
+                                       class="f-link" id="footer-nav-Documentation" aria-label="Documentation">
+                                        Documentation
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://learn.microsoft.com/"
+                                       class="f-link" id="footer-nav-Microsoft Learn" aria-label="Microsoft Learn">
+                                        Microsoft Learn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://techcommunity.microsoft.com/"
+                                       class="f-link" id="footer-nav-Microsoft Tech Community" aria-label="Microsoft Tech Community">
+                                        Microsoft Tech Community
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://azuremarketplace.microsoft.com/en-in/"
+                                       class="f-link" id="footer-nav-Azure Marketplace" aria-label="Azure Marketplace">
+                                        Azure Marketplace
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://appsource.microsoft.com/en-in/"
+                                       class="f-link" id="footer-nav-AppSource" aria-label="AppSource">
+                                        AppSource
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://powerplatform.microsoft.com/en-in/"
+                                       class="f-link" id="footer-nav-Microsoft Power Platform" aria-label="Microsoft Power Platform">
+                                        Microsoft Power Platform
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://visualstudio.microsoft.com/"
+                                       class="f-link" id="footer-nav-Visual Studio" aria-label="Visual Studio">
+                                        Visual Studio
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+                <div class="bapi-column bapi-column--one-half" id="company">
+                    <h3 class="bapi-heading3">
+                        Company
+                    </h3>
+                    <ul class="bapi-link-list">
+                                <li>
+                                    <a href="https://careers.microsoft.com/"
+                                       class="f-link" id="footer-nav-Careers" aria-label="Careers">
+                                        Careers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/about"
+                                       class="f-link" id="footer-nav-About Microsoft" aria-label="About Microsoft">
+                                        About Microsoft
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://news.microsoft.com/en-in"
+                                       class="f-link" id="footer-nav-Company news" aria-label="Company news">
+                                        Company news
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://privacy.microsoft.com/en-in"
+                                       class="f-link" id="footer-nav-Privacy at Microsoft" aria-label="Privacy at Microsoft">
+                                        Privacy at Microsoft
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/investor/default.aspx"
+                                       class="f-link" id="footer-nav-Investors" aria-label="Investors">
+                                        Investors
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/security/default.aspx"
+                                       class="f-link" id="footer-nav-Security" aria-label="Security">
+                                        Security
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.microsoft.com/en-in/sustainability/"
+                                       class="f-link" id="footer-nav-Sustainability" aria-label="Sustainability">
+                                        Sustainability
+                                    </a>
+                                </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="bapi-row">
+            <hr class="bapi-footer-divider" role="presentation" aria-hidden="true" />
+        </div>
+
+        <div class="bapi-row bapi-row--stack-on-medium">
+            <div class="bapi-column" id="fabric-year-footer">
+                <ul class="bapi-link-list bapi-link-list--copyright">
+                    <li>&copy; 2026 Microsoft</li>
+                </ul>
+            </div>
+
+            <!-- Render Level 1 Nav Items -->
+                <div class="bapi-column bapi-column--one-half">
+                    <ul class="bapi-link-list bapi-link-list--horizontal-on-large bapi-pull-right-on-large">
+                            <li>
+                                <a href="/en-US/#" class="f-link hide" id="footer-nav-ManageCookies-ManageCookies" aria-label="Manage Cookies">
+                                    Manage Cookies
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://support.microsoft.com/contactus" class="f-link show" id="footer-nav-ManageCookies-Contact" aria-label="Contact Microsoft">
+                                    Contact Microsoft
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?LinkId=521839" class="f-link show" id="footer-nav-ManageCookies-Privacy" aria-label="Privacy">
+                                    Privacy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?LinkID=206977" class="f-link show" id="footer-nav-ManageCookies-Terms" aria-label="Terms of use">
+                                    Terms of use
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=2196228" class="f-link show" id="footer-nav-ManageCookies-Trademarks" aria-label="Trademarks">
+                                    Trademarks
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://choice.microsoft.com/" class="f-link show" id="footer-nav-ManageCookies-About" aria-label="About our ads">
+                                    About our ads
+                                </a>
+                            </li>
+                        <!-- Countries list renders here-->
+                            <li>
+                                <select class="f-select-control wps-nav-cultures-dropdown"
+                                        aria-label="Language list drop-down">
+                                        <option  value="cs-cz">
+                                            Čeština (Česká republika)
+                                        </option>
+                                        <option  value="da-dk">
+                                            Dansk (Danmark)
+                                        </option>
+                                        <option  value="de-de">
+                                            Deutsch (Deutschland)
+                                        </option>
+                                        <option  value="de-at">
+                                            Deutsch (Österreich)
+                                        </option>
+                                        <option  value="de-ch">
+                                            Deutsch (Schweiz)
+                                        </option>
+                                        <option  value="et-ee">
+                                            Eesti (Eesti)
+                                        </option>
+                                        <option  value="en-au">
+                                            English (Australia)
+                                        </option>
+                                        <option  value="en-ca">
+                                            English (Canada)
+                                        </option>
+                                        <option  value="en-in">
+                                            English (India)
+                                        </option>
+                                        <option  value="en">
+                                            English (International)
+                                        </option>
+                                        <option  value="en-ie">
+                                            English (Ireland)
+                                        </option>
+                                        <option  value="en-my">
+                                            English (Malaysia)
+                                        </option>
+                                        <option  value="en-nz">
+                                            English (New Zealand)
+                                        </option>
+                                        <option  value="en-sg">
+                                            English (Singapore)
+                                        </option>
+                                        <option  value="en-za">
+                                            English (South Africa)
+                                        </option>
+                                        <option  value="en-gb">
+                                            English (United Kingdom)
+                                        </option>
+                                        <option selected=&#x27;selected&#x27;  value="en-us">
+                                            English (United States)
+                                        </option>
+                                        <option  value="es-ar">
+                                            Español (Argentina)
+                                        </option>
+                                        <option  value="es-cl">
+                                            Español (Chile)
+                                        </option>
+                                        <option  value="es-co">
+                                            Español (Colombia)
+                                        </option>
+                                        <option  value="es-es">
+                                            Español (España)
+                                        </option>
+                                        <option  value="es">
+                                            Español (Latinoamérica)
+                                        </option>
+                                        <option  value="es-mx">
+                                            Español (México)
+                                        </option>
+                                        <option  value="fr-be">
+                                            Français (Belgique)
+                                        </option>
+                                        <option  value="fr-ca">
+                                            Français (Canada)
+                                        </option>
+                                        <option  value="fr-fr">
+                                            Français (France)
+                                        </option>
+                                        <option  value="fr">
+                                            Français (International)
+                                        </option>
+                                        <option  value="fr-ch">
+                                            Français (Suisse)
+                                        </option>
+                                        <option  value="hr-hr">
+                                            Hrvatski (Hrvatska)
+                                        </option>
+                                        <option  value="id-id">
+                                            Indonesia (Indonesia)
+                                        </option>
+                                        <option  value="it-it">
+                                            Italiano (Italia)
+                                        </option>
+                                        <option  value="lv-lv">
+                                            Latviešu (Latvija)
+                                        </option>
+                                        <option  value="lt-lt">
+                                            Lietuvių (Lietuva)
+                                        </option>
+                                        <option  value="hu-hu">
+                                            Magyar (Magyarország)
+                                        </option>
+                                        <option  value="nl-be">
+                                            Nederlands (België)
+                                        </option>
+                                        <option  value="nl-nl">
+                                            Nederlands (Nederland)
+                                        </option>
+                                        <option  value="nb-no">
+                                            Norsk (Norge)
+                                        </option>
+                                        <option  value="pl-pl">
+                                            Polski (Polska)
+                                        </option>
+                                        <option  value="pt-br">
+                                            Português (Brasil)
+                                        </option>
+                                        <option  value="pt-pt">
+                                            Português (Portugal)
+                                        </option>
+                                        <option  value="ro-ro">
+                                            Română (România)
+                                        </option>
+                                        <option  value="sk-sk">
+                                            Slovenčina (Slovenská republika)
+                                        </option>
+                                        <option  value="sl-si">
+                                            Slovenski (Slovenija)
+                                        </option>
+                                        <option  value="sr-latn-rs">
+                                            Srpski (Rep. Srbija i Rep. Crna Gora)
+                                        </option>
+                                        <option  value="fi-fi">
+                                            Suomi (Suomi)
+                                        </option>
+                                        <option  value="sv-se">
+                                            Svenska (Sverige)
+                                        </option>
+                                        <option  value="vi-vn">
+                                            Tiếng Việt (Việt Nam)
+                                        </option>
+                                        <option  value="tr-tr">
+                                            Türkçe (Türkiye)
+                                        </option>
+                                        <option  value="el-gr">
+                                            Ελληνικά (Ελλάδα)
+                                        </option>
+                                        <option  value="bg-bg">
+                                            Български (България)
+                                        </option>
+                                        <option  value="ru-ru">
+                                            Русский (Россия)
+                                        </option>
+                                        <option  value="uk-ua">
+                                            Українська (Україна)
+                                        </option>
+                                        <option  value="he-il">
+                                            עברית (ישראל)
+                                        </option>
+                                        <option  value="ar">
+                                            (عربي (المنطقة العربية
+                                        </option>
+                                        <option  value="ar-sa">
+                                            (العربية (المملكة العربية السعودية
+                                        </option>
+                                        <option  value="th-th">
+                                            ไทย (ไทย)
+                                        </option>
+                                        <option  value="ko-kr">
+                                            한국어 (대한민국)
+                                        </option>
+                                        <option  value="zh-cn">
+                                            中文(中国)
+                                        </option>
+                                        <option  value="ja-jp">
+                                            日本語 (日本)
+                                        </option>
+                                        <option  value="zh-tw">
+                                            繁體中文 (台灣)
+                                        </option>
+                                        <option  value="zh-hk">
+                                            繁體中文 (香港特別行政區)
+                                        </option>
+                                </select>
+                            </li>
+                    </ul>
+                </div>
+        </div>
+
+
+        <div class="bapi-row">
+            <a id="footer_nav_your-california-privacy-choices" data-bi-id="footer_nav_your-california-privacy-choices"
+               data-bi-name="Your Privacy Choices" style="display: inline-flex;align-items: center;color: #000;text-decoration: underline;" href="https://aka.ms/yourcaliforniaprivacychoices">
+                <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 14" xml:space="preserve" style="height: 16px;">
+                <title>Your Privacy Choices Opt-Out Icon</title>
+                <path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+                <path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+                <path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+                <path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+                                                        </svg>
+                <span style="padding: 8px; padding-right: 16px;">Your Privacy Choices</span>
+            </a>
+
+            <a id="footer_nav_your-consumer-health" data-bi-id="footer_nav_your-consumer-health"
+               aria-label="Consumer Health Privacy" data-bi-name="Consumer Health Privacy" style="display: inline-flex;align-items: center;color: #000;text-decoration: underline;" href="https://go.microsoft.com/fwlink/?linkid=2259814">
+                <span>Consumer Health Privacy</span>
+            </a>
+        </div>
+
+
+        <!-- As this is specific to france locale instead of get this from CMS/resource file hardcoded in the code -->
+    </div>
+</footer> 
+    
+<script>
+    ClientSideMgr = {};
+</script>
+
+<script src="/js/helpers/global.js"> </script>
+<script>
+    (function () {
+
+        const App_Id = 'IntelligentDataPlatform';
+        const Instrumentation_Key = '12913d8766724e0c9c35a82ceb231cd8-ce1e47ae-3f1e-4ae6-8399-1a8488c3f617-6751';
+        const syncFeaturesEnabled = isSyncFeaturesConsentedVal;
+        const userIsAuthenticated = isUserAuthenticatedVal;
+
+        var init1Ds = function () {
+            var siteConsent = window.siteConsent || null;
+            var config = {
+                instrumentationKey: Instrumentation_Key,
+                advancedConfig: {
+                    propertyConfiguration: {
+                        gpcDataSharingOptIn: (typeof GPC_DataSharingOptIn == 'undefined') ? false : (typeof GPC_DataSharingOptIn != 'undefined') ? GPC_DataSharingOptIn : false,
+                    }
+                },
+                cookiesToCollect: ['_mkto_trk'],
+                syncMuid: syncFeaturesEnabled, //this fires the MUID sync to allow setting/copying the MUID cookie from bing.com/live.com over to microsoft.com or office.com – must be set in a conditional to only fire post cookie consent
+                ix: {
+                    a: syncFeaturesEnabled, //this fires an Adobe image pixel for id sync purposes – must be set in a conditional to only fire post cookie consent
+                    g: syncFeaturesEnabled, //this fires a Google image pixel for id sync purposes – must be set in a conditional to only fire post cookie consent
+                },
+                debounceMs: {
+                    scroll: 300,
+                    resize: 3000
+                },
+                autoCapture: {
+                    pageView: true,
+                    scroll: true,
+                    resize: true,
+                    lineage: true
+                },
+                coreData: {
+                    appId: App_Id,
+                    market: ClientSideMgr.Config.Cultureinfo.CurrentLanguage
+                },
+                urlCollectQuery: true,
+                userConsent: siteConsent ? siteConsent.getConsent : false,
+                isLoggedIn: userIsAuthenticated,
+                shareAuthStatus: true,
+                authMethod: 2,  //This is for AAD Authentication (1-MSA, 2-AAD)
+                callback: {
+                    pageActionContentTags: function (e) {
+                        if (e && e.id) {
+                            return { "id": e.id };
+                        }
+                    },
+                    userConsentDetailsCallback: siteConsent ? siteConsent.getConsent : null
+                },
+                endpoint: "https://eu-mobile.events.data.microsoft.com/OneCollector/1.0/"
+            };
+
+            awa.init(config);
+
+            if (window && window.taggingHelper) {
+                taggingHelper.init();
+            }
+        };
+
+        ClientSideMgr.LoadScript('https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js', init1Ds, window.document.body)
+    })();
+</script></partial>
+    <script type="text/javascript" src="/js/helpers/blog-subscription-modal.js"></script>
+    <script src="/js/sundog.js"> </script>
+    <script src="/js/controls/frequently-asked-questions.js"> </script>
+    <script src="/js/controls/header-search.js"> </script>
+    <script src="/js/header/header-min.js"> </script>
+  
+    
+
+</body>
+</html>

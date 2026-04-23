@@ -32,7 +32,9 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-staging'
 param openAiModelCapacity = 100
-// Comma-separated admin IP addresses for PostgreSQL firewall.
-// Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
-param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
+// Azure AD — admin dashboard authentication (same app registration as prod, different redirect URIs registered)
+param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
+param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
+param azureAdClientSecret = readEnvironmentVariable('AZURE_AD_CLIENT_SECRET')
+param azureAdScopes = readEnvironmentVariable('AZURE_AD_SCOPES')
 

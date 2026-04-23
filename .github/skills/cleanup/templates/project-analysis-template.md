@@ -1,4 +1,4 @@
-## Project Analysis
+# Project Analysis
 
 **Analysis Date**: {DATE}
 

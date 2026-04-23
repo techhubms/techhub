@@ -318,23 +318,28 @@ public class SeoMetaTagsTests : PlaywrightTestBase
         // Wait for cards to appear
         await Page.Locator(".card").First.AssertElementVisibleAsync();
 
-        var cards = Page.Locator(".card");
-        var cardCount = await cards.CountAsync();
-        string? firstCardHref = null;
-
-        for (var i = 0; i < cardCount; i++)
-        {
-            var href = await cards.Nth(i).Locator(".card-link").GetHrefAsync();
-            if (href?.StartsWith("/") == true)
-            {
-                firstCardHref = href;
-                break;
-            }
-        }
+        // Find the first card with an internal href in a single JS evaluation
+        // (avoids N browser round-trips from looping through cards individually)
+        var firstCardHref = await Page.EvaluateAsync<string?>(
+            @"() => {
+                const links = document.querySelectorAll('.card .card-link');
+                for (const link of links) {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('/')) return href;
+                }
+                return null;
+            }");
 
         firstCardHref.Should().NotBeNullOrEmpty("should find at least one card with an internal href");
 
-        await Page.GotoAndWaitForBlazorAsync($"{BlazorHelpers.BaseUrl}{firstCardHref}");
+        // Navigate to the detail page with DOMContentLoaded only — do NOT use GotoAndWaitForBlazorAsync.
+        // Content detail pages have a known 5s delay in WaitForBlazorReadyAsync because the SignalR
+        // circuit often fails to connect (see the 5s bailout in BlazorHelpers.WaitForBlazorReadyAsync).
+        // SEO tests only inspect SSR-rendered meta tags, so Blazor readiness is irrelevant.
+        // WaitForSeoMetaTagsAsync below handles all necessary waiting.
+        await Page.GotoAsync(
+            $"{BlazorHelpers.BaseUrl}{firstCardHref}",
+            new() { WaitUntil = WaitUntilState.DOMContentLoaded, Timeout = BlazorHelpers.E2ETimeout });
 
         // Wait for the DETAIL page's SeoMetaTags to render by checking page-path.
         // The page-path meta is the first element in the HeadContent block — when it

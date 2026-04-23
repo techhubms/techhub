@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
@@ -265,16 +266,13 @@ public class TabOrderingTests : PlaywrightTestBase
         // Wait for section cards to be rendered
         await Page.WaitForSelectorAsync(".section-card");
 
-        // Act - Click on the first section card to navigate (simpler than tabbing through)
-        // This directly tests that after navigation, tab order restarts with skip link
+        // Act - Click on the first section card to navigate; retry until URL changes.
         var firstSectionCard = Page.Locator("a.section-card").First;
-        await firstSectionCard.ClickBlazorElementAsync();
+        await firstSectionCard.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(
+                new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
 
-        // Wait for enhanced navigation to complete
         // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation,
-        // but rAF doesn't fire reliably in headless Chrome. Instead, wait for Blazor to be
-        // ready, then explicitly reset focus to body (same action nav-helpers.js performs).
-        await Page.WaitForBlazorReadyAsync();
 
         // Explicitly reset focus to body (what nav-helpers.js does via rAF)
         // Keep tabindex until after we press Tab to ensure proper tab order

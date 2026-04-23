@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom"><link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCs5Y5_7XK8HLDX0SLNwkd3w" /><id>yt:channel:s5Y5_7XK8HLDX0SLNwkd3w</id><yt:channelId>s5Y5_7XK8HLDX0SLNwkd3w</yt:channelId><title>Visual Studio Code</title><link rel="alternate" href="https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w" /><author><name>Visual Studio Code</name><uri>https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w</uri></author><published>2016-05-27T18:11:37+00:00</published><entry><id>yt:video:hmfldW7dmgw</id><yt:videoId>hmfldW7dmgw</yt:videoId><yt:channelId>UCs5Y5_7XK8HLDX0SLNwkd3w</yt:channelId><title>DEMO - Build your first app with agent mode | Ep 6 of 6 - VS Code Learn</title><link rel="alternate" href="https://www.youtube.com/watch?v=hmfldW7dmgw" /><author><name>Visual Studio Code</name><uri>https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w</uri></author><published>2026-04-06T16:58:25+00:00</published><updated>2026-04-06T20:21:34+00:00</updated><media:group><media:title>DEMO - Build your first app with agent mode | Ep 6 of 6 - VS Code Learn</media:title><media:content url="https://www.youtube.com/v/hmfldW7dmgw?version=3" type="application/x-shockwave-flash" width="640" height="390" /><media:thumbnail url="https://i1.ytimg.com/vi/hmfldW7dmgw/hqdefault.jpg" width="480" height="360" /><media:description>In this video, we will demo how to build your first app - a URL Shortener - with Agent Mode in Plan Mode from scratch!
+
+➡️ See full series playlist: https://aka.ms/vsc-learn
+
+🔎 Chapters:
+00:00 In this session
+00:17 Demo - Creating a URL Shortener App using Plan Mode
+07:18 In Summary
+07:59 Wrap
+
+📲 Follow VS Code:
+X: https://x.com/code
+LinkedIn: https://aka.ms/VSCode/LinkedIn
+Bluesky: https://bsky.app/profile/vscode.dev
+GitHub: https://github.com/microsoft/vscode
+
+#vscode #agents</media:description><media:community><media:starRating count="20" average="5.00" min="1" max="5" /><media:statistics views="649" /></media:community></media:group></entry></feed>

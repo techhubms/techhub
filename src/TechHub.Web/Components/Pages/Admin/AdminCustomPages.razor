@@ -1,0 +1,186 @@
+@page "/admin/custom-pages"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+
+<PageTitle>Custom Pages — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Custom Pages</h1>
+            <p class="admin-page-subtitle">Edit the raw JSON data for site custom pages</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="LoadEntriesAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading custom pages…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_entries == null || _entries.Count == 0)
+    {
+        <div class="admin-empty">No custom page data found in database.</div>
+    }
+    else
+    {
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Description</th>
+                        <th>Last Updated</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var entry in _entries)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">@entry.Key</td>
+                            <td>@entry.Description</td>
+                            <td class="admin-cell-mono">@entry.UpdatedAt.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td>
+                                <button class="admin-link-btn" @onclick="() => OpenEditorAsync(entry.Key)">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+<JsonEditorModal
+    Title="@_editorTitle"
+    Json="@_editorJson"
+    IsOpen="@_editorOpen"
+    OnSave="SaveJsonAsync"
+    OnClose="CloseEditor" />
+
+@code {
+    private bool _loading = true;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private IReadOnlyList<CustomPageEntry>? _entries;
+
+    private bool _editorOpen;
+    private string _editorTitle = string.Empty;
+    private string _editorJson = string.Empty;
+    private string _editorKey = string.Empty;
+
+    private PersistingComponentStateSubscription _persistingSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistingSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<IReadOnlyList<CustomPageEntry>>("customPages", out var persisted) && persisted != null)
+        {
+            _entries = persisted;
+            _loading = false;
+        }
+        else
+        {
+            await LoadEntriesAsync();
+        }
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("customPages", _entries);
+        return Task.CompletedTask;
+    }
+
+    private async Task LoadEntriesAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            _entries = await Api.GetCustomPageEntriesAsync();
+        }
+        catch (Exception ex)
+        {
+            _error = $"Failed to load custom pages: {ex.Message}";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private async Task OpenEditorAsync(string key)
+    {
+        _message = null;
+
+        try
+        {
+            var entry = await Api.GetCustomPageEntryAsync(key);
+            if (entry is null)
+            {
+                _message = $"Custom page '{key}' not found.";
+                _messageIsError = true;
+                return;
+            }
+
+            _editorKey = key;
+            _editorTitle = $"Edit — {entry.Description}";
+            _editorJson = entry.JsonData;
+            _editorOpen = true;
+        }
+        catch (Exception ex)
+        {
+            _message = $"Failed to load '{key}': {ex.Message}";
+            _messageIsError = true;
+        }
+    }
+
+    private async Task SaveJsonAsync(string json)
+    {
+        var updated = await Api.UpdateCustomPageAsync(_editorKey, json);
+
+        // Refresh the in-memory list for the updated timestamp
+        if (_entries != null)
+        {
+            _entries = _entries
+                .Select(e => e.Key == updated.Key ? e with { UpdatedAt = updated.UpdatedAt } : e)
+                .ToList();
+        }
+
+        _message = $"'{_editorKey}' saved successfully.";
+        _messageIsError = false;
+    }
+
+    private void CloseEditor()
+    {
+        _editorOpen = false;
+    }
+
+    public void Dispose()
+    {
+        _persistingSubscription.Dispose();
+    }
+}

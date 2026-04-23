@@ -32,10 +32,10 @@ When working with sections and collections in code, use consistent naming:
 **Items**: Individual pieces of content within collections. Also referred to as content or content items.
 
 - **Definition**: Actual content users consume (articles, videos, announcements, blogs)
-- **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blogs from `_blogs/`)
-- **Structure**: Markdown files with YAML front matter containing metadata (title, date, author, sections, tags) and content body
-- **Section Names Frontmatter Field**: The `section_names` field in frontmatter contains section names (e.g., "ai", "github-copilot") that determine which sections this content appears in.
-- **Processing**: Items are processed by the build system and can be listed on collection pages, filtered by date/tags/sections, displayed on section index pages, and included in RSS feeds
+- **Terminology Note**: "Item" is the preferred term, but "Article" and "Post" are also used in code/documentation to refer to content (note: "Post" in variables does NOT specifically mean blog posts)
+- **Structure**: Managed exclusively in the database with metadata (title, date, author, sections, tags) and content body
+- **Section Names Metadata Field**: The section array in the database specifies which sections this content appears in.
+- **Processing**: Items are processed by the backend services and can be listed on collection pages, filtered by date/tags/sections, displayed on section index pages, and included in RSS feeds
 
 ## Collection Types
 
@@ -70,7 +70,7 @@ Current valid collection values (slugs) used in the system:
 - `blogs` - Blogs and technical articles
 - `roundups` - Weekly content summaries
 
-# Specialized Collections & Classification
+## Specialized Collections & Classification
 
 ## Specialized Collections
 

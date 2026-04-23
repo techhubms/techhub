@@ -8,9 +8,7 @@ public class StartupStateService
 {
     private readonly TaskCompletionSource _startupCompleted = new(TaskCreationOptions.RunContinuationsAsynchronously);
 
-    public bool IsContentSyncCompleted { get; private set; }
-    public bool IsMigrationsCompleted { get; private set; }
-    public bool IsFullyStarted => IsMigrationsCompleted && IsContentSyncCompleted;
+    public bool IsStartupCompleted { get; private set; }
 
     /// <summary>
     /// Gets a task that completes when all startup operations have finished.
@@ -18,11 +16,9 @@ public class StartupStateService
     /// </summary>
     public Task StartupTask => _startupCompleted.Task;
 
-    public void MarkMigrationsCompleted() => IsMigrationsCompleted = true;
-
-    public void MarkContentSyncCompleted()
+    public void MarkStartupCompleted()
     {
-        IsContentSyncCompleted = true;
+        IsStartupCompleted = true;
         _startupCompleted.TrySetResult();
     }
 }

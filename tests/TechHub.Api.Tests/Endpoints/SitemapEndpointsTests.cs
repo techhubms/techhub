@@ -12,7 +12,7 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 {
     private readonly HttpClient _client;
 
-    private static readonly XNamespace SitemapNs = "http://www.sitemaps.org/schemas/sitemap/0.9";
+    private static readonly XNamespace _sitemapNs = "http://www.sitemaps.org/schemas/sitemap/0.9";
 
     public SitemapEndpointsTests(TechHubIntegrationTestApiFactory factory)
     {
@@ -44,7 +44,7 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var doc = XDocument.Parse(xml);
         doc.Root.Should().NotBeNull();
-        doc.Root!.Name.Should().Be(SitemapNs + "urlset");
+        doc.Root!.Name.Should().Be(_sitemapNs + "urlset");
     }
 
     [Fact]
@@ -54,7 +54,7 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(SitemapNs + "loc").Select(e => e.Value).ToList();
+        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
         locs.Should().Contain(l => l.EndsWith("/"), "homepage should be in the sitemap");
     }
@@ -66,7 +66,7 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(SitemapNs + "loc").Select(e => e.Value).ToList();
+        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
         locs.Should().Contain(l => l.Contains("/ai"), "AI section should be in the sitemap");
         locs.Should().Contain(l => l.Contains("/github-copilot"), "GitHub Copilot section should be in the sitemap");
@@ -79,13 +79,13 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         var doc = XDocument.Parse(xml);
-        var urls = doc.Descendants(SitemapNs + "url").ToList();
+        var urls = doc.Descendants(_sitemapNs + "url").ToList();
 
         urls.Should().NotBeEmpty();
 
         foreach (var url in urls)
         {
-            url.Element(SitemapNs + "loc").Should().NotBeNull("every <url> must have a <loc>");
+            url.Element(_sitemapNs + "loc").Should().NotBeNull("every <url> must have a <loc>");
         }
     }
 
@@ -97,7 +97,7 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(SitemapNs + "loc").Select(e => e.Value).ToList();
+        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
         // Individual content URLs from "news" collection should not appear (they're all external links)
         locs.Should().NotContain(
@@ -121,7 +121,7 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
         var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(SitemapNs + "loc").Select(e => e.Value).ToList();
+        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
         locs.Should().Contain(
             l => System.Text.RegularExpressions.Regex.IsMatch(l, @"/[^/]+/videos/[^/]+$"),

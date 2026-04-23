@@ -1,0 +1,80 @@
+@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Navigation
+
+<AuthorizeView>
+    <Authorized>
+        <PageTitle>Admin — TechHub</PageTitle>
+
+        <nav class="admin-nav" aria-label="Admin navigation">
+            <div class="admin-nav-content">
+                <a href="/admin" class="admin-brand">
+                    <span class="admin-brand-text">Tech Hub</span>
+                    <span class="admin-brand-badge">Admin</span>
+                </a>
+
+                <div class="admin-nav-links">
+                    <a href="/admin" class="admin-nav-link @NavLinkClass("/admin", exact: true)">Dashboard</a>
+                    <a href="/admin/feeds" class="admin-nav-link @NavLinkClass("/admin/feeds")">RSS Feeds</a>
+                    <a href="/admin/processed-urls" class="admin-nav-link @NavLinkClass("/admin/processed-urls")">Processed URLs</a>
+                    <a href="/admin/content-items" class="admin-nav-link @NavLinkClass("/admin/content-items")">Content Items</a>
+                    <a href="/admin/reviews" class="admin-nav-link @NavLinkClass("/admin/reviews")">Reviews</a>
+                    <a href="/admin/custom-pages" class="admin-nav-link @NavLinkClass("/admin/custom-pages")">Custom Pages</a>
+                    <a href="/admin/statistics" class="admin-nav-link @NavLinkClass("/admin/statistics")">Statistics</a>
+                    <a href="/admin/settings" class="admin-nav-link @NavLinkClass("/admin/settings")">Settings</a>
+                </div>
+
+                <div class="admin-nav-actions">
+                    <form method="post" action="/admin/logout" class="admin-logout-form">
+                        <AntiforgeryToken />
+                        <button type="submit" class="admin-logout-btn">Log out</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <main class="admin-main">
+            <ErrorBoundary @ref="_errorBoundary">
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent Context="ex">
+                    <div class="admin-alert admin-alert-error" role="alert">
+                        An unexpected error occurred. Please try refreshing the page.
+                    </div>
+                </ErrorContent>
+            </ErrorBoundary>
+        </main>
+    </Authorized>
+    <NotAuthorized>
+        <main class="admin-main">
+            <TechHub.Web.Components.Pages.Admin.AdminLoginContent />
+        </main>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private ErrorBoundary? _errorBoundary;
+
+    protected override void OnParametersSet()
+    {
+        // Clear error boundary when navigating between admin pages
+        _errorBoundary?.Recover();
+    }
+
+    private string NavLinkClass(string href, bool exact = false)
+    {
+        var relativePath = Navigation.ToBaseRelativePath(Navigation.Uri);
+        var currentPath = "/" + relativePath.TrimEnd('/');
+        var targetPath = href.TrimEnd('/');
+
+        if (exact)
+        {
+            return string.Equals(currentPath, targetPath, StringComparison.OrdinalIgnoreCase)
+                ? "active" : "";
+        }
+
+        return currentPath.StartsWith(targetPath, StringComparison.OrdinalIgnoreCase)
+            ? "active" : "";
+    }
+}

@@ -1,0 +1,1244 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head><meta charset="UTF-8">
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+<!-- Social Warfare v4.5.6 https://warfareplugins.com - BEGINNING OF OUTPUT -->
+<meta property="og:description" content="In today’s threat landscape, security teams need more than fast detection—they need confidence in recovery. Commvault’s latest announcement marks an important step forward by deepening its integration with Microsoft Security, tightly connecting Microsoft Sentinel, Microsoft Security Copilot, and the Commvault Cloud platform to streamline modern Resilience Operations (ResOps). 👉 Official announcement:Commvault Connects AI Threat Detection, Investigation, and Trusted Recovery with Microsoft Security Bringing Recovery Intelligence into Microsoft Sentinel With the modernized Microsoft Sentinel connector, alerts and signals from Commvault Cloud Threat Scan and Risk Analysis—including malware detections, backup anomalies, and sensitive data exposure—are streamed into Sentinel in real time. This">
+<meta property="og:title" content="Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration">
+<meta property="article_author" content="https://www.facebook.com/thomasmaurermvp">
+<meta property="article_publisher" content="https://www.facebook.com/thomasmaurermvp">
+<meta property="og:image" content="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg">
+<meta property="fb:app_id" content="529576650555031">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.thomasmaurer.ch/2026/03/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration/">
+<meta property="og:site_name" content="Thomas Maurer">
+<meta property="article:published_time" content="2026-03-25T12:22:39+01:00">
+<meta property="article:modified_time" content="2026-03-25T12:22:43+01:00">
+<meta property="og:updated_time" content="2026-03-25T12:22:43+01:00">
+<meta name="twitter:title" content="Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration">
+<meta name="twitter:description" content="In today’s threat landscape, security teams need more than fast detection—they need confidence in recovery. Commvault’s latest announcement marks an important step forward by deepening its integration with Microsoft Security, tightly connecting Microsoft Sentinel, Microsoft Security Copilot, and the Commvault Cloud platform to streamline modern Resilience Operations (ResOps). 👉 Official announcement:Commvault Connects AI Threat Detection, Investigation, and Trusted Recovery with Microsoft Security Bringing Recovery Intelligence into Microsoft Sentinel With the modernized Microsoft Sentinel connector, alerts and signals from Commvault Cloud Threat Scan and Risk Analysis—including malware detections, backup anomalies, and sensitive data exposure—are streamed into Sentinel in real time. This">
+<meta name="twitter:image" content="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg">
+<meta name="twitter:site" content="@ThomasMaurer">
+<meta name="twitter:creator" content="@ThomasMaurer">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+	@font-face {
+		font-family: "sw-icon-font";
+		src:url("https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=4.5.6");
+		src:url("https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=4.5.6#iefix") format("embedded-opentype"),
+		url("https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=4.5.6") format("woff"),
+		url("https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=4.5.6") format("truetype"),
+		url("https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=4.5.6#1445203416") format("svg");
+		font-weight: normal;
+		font-style: normal;
+		font-display:block;
+	}
+</style>
+<!-- Social Warfare v4.5.6 https://warfareplugins.com - END OF OUTPUT -->
+
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v27.3 (Yoast SEO v27.3) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<title>Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration - Thomas Maurer</title>
+<link data-rocket-prefetch href="https://fonts.googleapis.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://challenges.cloudflare.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://stats.wp.com" rel="dns-prefetch">
+<link data-rocket-preload as="style" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C500%2C600%2C700%2C800%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%7CPoppins%3A600%2C500%2C700%7CSource%20Sans%20Pro%3A900%2C700&#038;display=swap" rel="preload">
+<style id="" media="print" onload="this.media=&#039;all&#039;">@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWVAexQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWVAexQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk_RkWVAexQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWVAexQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWVAexQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWVAexQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0B4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/opensans/v44/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4gaVc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9Z1xlEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6Z1xlEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7Z1xlEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(/fonts.gstatic.com/s/sourcesanspro/v23/6xKydSBYKcSV-LCoeQqfX1RYOo3iu4nwlxdr.ttf) format('truetype');
+}
+</style>
+<noscript data-wpr-hosted-gf-parameters=""><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans%3A300%2C400%2C500%2C600%2C700%2C800%2C300italic%2C400italic%2C500italic%2C600italic%2C700italic%2C800italic%7CPoppins%3A600%2C500%2C700%7CSource%20Sans%20Pro%3A900%2C700&#038;display=swap"></noscript><link rel="preload" data-rocket-preload as="image" href="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se-870x600.jpg" fetchpriority="high">
+	<link rel="canonical" href="https://www.thomasmaurer.ch/2026/03/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration" />
+	<meta property="og:description" content="In today’s threat landscape, security teams need more than fast detection—they need confidence in recovery. Commvault’s latest announcement marks an important step forward by deepening its integration with Microsoft Security, tightly connecting Microsoft Sentinel, Microsoft Security Copilot, and the Commvault Cloud platform to streamline modern Resilience Operations (ResOps). 👉 Official announcement:Commvault Connects AI Threat Detection, &hellip;" />
+	<meta property="og:url" content="https://www.thomasmaurer.ch/2026/03/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration/" />
+	<meta property="og:site_name" content="Thomas Maurer" />
+	<meta property="article:publisher" content="https://www.facebook.com/thomasmaurermvp" />
+	<meta property="article:author" content="https://www.facebook.com/thomasmaurermvp" />
+	<meta property="article:published_time" content="2026-03-25T11:22:39+00:00" />
+	<meta property="article:modified_time" content="2026-03-25T11:22:43+00:00" />
+	<meta property="og:image" content="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg" />
+	<meta property="og:image:width" content="1536" />
+	<meta property="og:image:height" content="1024" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="author" content="Thomas Maurer" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@thomasmaurer" />
+	<meta name="twitter:site" content="@thomasmaurer" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Thomas Maurer" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="2 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"Article","@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#article","isPartOf":{"@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/"},"author":{"name":"Thomas Maurer","@id":"https:\/\/www.thomasmaurer.ch\/#\/schema\/person\/cfb4b9823059e25b878bc2ead47b3c19"},"headline":"Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration","datePublished":"2026-03-25T11:22:39+00:00","dateModified":"2026-03-25T11:22:43+00:00","mainEntityOfPage":{"@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/"},"wordCount":394,"commentCount":0,"publisher":{"@id":"https:\/\/www.thomasmaurer.ch\/#\/schema\/person\/cfb4b9823059e25b878bc2ead47b3c19"},"image":{"@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#primaryimage"},"thumbnailUrl":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2026\/03\/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg","keywords":["AI","Cloud","Commcault","Copilot","Microsoft","Security","Sentinel"],"articleSection":["Microsoft"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#respond"]}]},{"@type":"WebPage","@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/","url":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/","name":"Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration - Thomas Maurer","isPartOf":{"@id":"https:\/\/www.thomasmaurer.ch\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#primaryimage"},"image":{"@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#primaryimage"},"thumbnailUrl":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2026\/03\/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg","datePublished":"2026-03-25T11:22:39+00:00","dateModified":"2026-03-25T11:22:43+00:00","breadcrumb":{"@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#primaryimage","url":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2026\/03\/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg","contentUrl":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2026\/03\/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se.jpg","width":1536,"height":1024,"caption":"Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration"},{"@type":"BreadcrumbList","@id":"https:\/\/www.thomasmaurer.ch\/2026\/03\/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https:\/\/www.thomasmaurer.ch\/"},{"@type":"ListItem","position":2,"name":"Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration"}]},{"@type":"WebSite","@id":"https:\/\/www.thomasmaurer.ch\/#website","url":"https:\/\/www.thomasmaurer.ch\/","name":"Thomas Maurer - Cloud and Datacenter Blog","description":"Cloud and Datacenter Blog focusing on Microsoft Azure","publisher":{"@id":"https:\/\/www.thomasmaurer.ch\/#\/schema\/person\/cfb4b9823059e25b878bc2ead47b3c19"},"alternateName":"Thomas Maurer","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.thomasmaurer.ch\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https:\/\/www.thomasmaurer.ch\/#\/schema\/person\/cfb4b9823059e25b878bc2ead47b3c19","name":"Thomas Maurer","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2020\/12\/Thomas-Maurer-Blue-on-Black-Logo-1024x1024-1.jpg","url":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2020\/12\/Thomas-Maurer-Blue-on-Black-Logo-1024x1024-1.jpg","contentUrl":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2020\/12\/Thomas-Maurer-Blue-on-Black-Logo-1024x1024-1.jpg","width":1024,"height":1024,"caption":"Thomas Maurer"},"logo":{"@id":"https:\/\/www.thomasmaurer.ch\/wp-content\/uploads\/2020\/12\/Thomas-Maurer-Blue-on-Black-Logo-1024x1024-1.jpg"},"description":"Thomas is the EMEA Global Black Belt (GBB) for Sovereign Cloud at Microsoft, helping organizations across the region harness Microsoft’s sovereign, hybrid, multicloud, and edge solutions. He works directly with C-level leaders and technical teams to remove roadblocks, accelerate digital transformation, and shape long-term cloud strategies that meet business and regulatory needs. With over 15 years of experience in cloud and datacenter, including his previous role as Principal Program Manager and Chief Evangelist for Azure Hybrid, he combines deep technical expertise with a passion for customer success. He specializes in creating scalable architectures, solution accelerators, and thought leadership that drive adoption and innovation on Azure. Thomas is a passionate community advocate and frequently speaks at industry events such as Microsoft Ignite and Microsoft TechDays. He shares his expertise through his Cloud and Datacenter Blog at www.thomasmaurer.ch and on LinkedIn and X.com www.twitter.com\/thomasmaurer.","sameAs":["https:\/\/www.thomasmaurer.ch","https:\/\/www.facebook.com\/thomasmaurermvp","https:\/\/www.instagram.com\/thomas_maurer\/","http:\/\/linkedin.com\/in\/thomasmaurer2\/","https:\/\/www.pinterest.ch\/thomasmaurer\/","https:\/\/x.com\/thomasmaurer","https:\/\/www.youtube.com\/c\/thomasmaurercloud"],"honorificPrefix":"Mr","gender":"male","award":["Microsoft MVP","Veeam Vanguard","Cisco Champion"],"knowsAbout":["Cloud Computing","Public Speaking","Windows Server","Microsoft","Azure","Microsoft Azure","PowerShell"],"knowsLanguage":["English","German"],"jobTitle":"EMEA Global Black Belt (GBB) for Sovereign Cloud at Microsoft","worksFor":"Microsoft Corp"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//challenges.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Thomas Maurer &raquo; Feed" href="https://www.thomasmaurer.ch/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Thomas Maurer &raquo; Comments Feed" href="https://www.thomasmaurer.ch/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Thomas Maurer &raquo; Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration Comments Feed" href="https://www.thomasmaurer.ch/2026/03/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.thomasmaurer.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.thomasmaurer.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link data-minify="1" rel='stylesheet' id='social-warfare-block-css-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/social-warfare/assets/js/post-editor/dist/blocks.style.build.css?ver=1774302508' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='wp-block-list-inline-css' type='text/css'>
+ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
+/*# sourceURL=https://www.thomasmaurer.ch/wp-includes/blocks/list/style.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 14px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 26px;--wp--preset--font-size--x-large: 32px;--wp--preset--font-size--normal: 16x;--wp--preset--spacing--20: min(1.5rem, 2vw);--wp--preset--spacing--30: min(2.5rem, 3vw);--wp--preset--spacing--40: min(4rem, 5vw);--wp--preset--spacing--50: min(6.5rem, 8vw);--wp--preset--spacing--60: min(10.5rem, 13vw);--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--10: 1rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 750px;--wp--style--global--wide-size: 1100px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){color: #f00;text-decoration: underline;}h1{font-size: 32px;}h2{font-size: 24px;}h3{font-size: 20px;}h4{font-size: 18px;}h5{font-size: 16px;}h6{font-size: 14px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link data-minify="1" rel='stylesheet' id='cookie-law-info-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-public.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='cookie-law-info-gdpr-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-gdpr.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='mc4wp-form-styles-builder-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/uploads/mc4wp-stylesheets/bundle.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='extendify-utility-styles-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/extendify/public/build/utility-minimum.css?ver=1774302508' type='text/css' media='all' />
+<link rel='stylesheet' id='social_warfare-css' href='https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/css/style.min.css?ver=4.5.6' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='gutenverse-style-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/themes/gutenverse/style.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='gutenverse-addons-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/themes/gutenverse/styles/gutenverse-addons.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='edulogy-custom-fonts-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/themes/gutenverse/styles/fonts.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='fontawesome-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/themes/gutenverse/styles/fontawesome.css?ver=1774302508' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='gutenverse-mobile-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/themes/gutenverse/style-mobile.css?ver=1774302508' type='text/css' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.thomasmaurer.ch/wp-content/tablepress-combined.min.css?ver=59' type='text/css' media='all' />
+<noscript></noscript><style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:url(https://www.thomasmaurer.ch/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}.wp-embed-responsive .wp-has-aspect-ratio .rll-youtube-player{position:absolute;padding-bottom:0;width:100%;height:100%;top:0;bottom:0;left:0;right:0}
+/*# sourceURL=rocket-lazyload-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-paragraph-css' href='https://www.thomasmaurer.ch/wp-includes/blocks/paragraph/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-heading-css' href='https://www.thomasmaurer.ch/wp-includes/blocks/heading/style.min.css?ver=6.9.4' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.thomasmaurer.ch/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.thomasmaurer.ch/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="cookie-law-info-js-extra">
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[],"non_necessary_cookies":[],"ccpaEnabled":"","ccpaRegionBased":"","ccpaBarEnabled":"","strictlyEnabled":["necessary","obligatoire"],"ccpaType":"gdpr","js_blocking":"1","custom_integration":"","triggerDomRefresh":"","secure_cookies":""};
+var cli_cookiebar_settings = {"animate_speed_hide":"500","animate_speed_show":"500","background":"#FFF","border":"#b1a6a6c2","border_on":"","button_1_button_colour":"#61a229","button_1_button_hover":"#4e8221","button_1_link_colour":"#fff","button_1_as_button":"1","button_1_new_win":"","button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":"","button_2_hidebar":"","button_3_button_colour":"#dedfe0","button_3_button_hover":"#b2b2b3","button_3_link_colour":"#333333","button_3_as_button":"1","button_3_new_win":"","button_4_button_colour":"#dedfe0","button_4_button_hover":"#b2b2b3","button_4_link_colour":"#333333","button_4_as_button":"1","button_7_button_colour":"#61a229","button_7_button_hover":"#4e8221","button_7_link_colour":"#fff","button_7_as_button":"1","button_7_new_win":"","font_family":"inherit","header_fix":"","notify_animate_hide":"1","notify_animate_show":"","notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":"","scroll_close_reload":"","accept_close_reload":"","reject_close_reload":"","showagain_tab":"","showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#333333","show_once_yn":"","show_once":"10000","logging_on":"","as_popup":"","popup_overlay":"1","bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"};
+var log_object = {"ajax_url":"https://www.thomasmaurer.ch/wp-admin/admin-ajax.php"};
+//# sourceURL=cookie-law-info-js-extra
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/legacy/public/js/cookie-law-info-public.js?ver=1774302508" id="cookie-law-info-js"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-JBWPQGRTL8" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.thomasmaurer.ch"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "G-JBWPQGRTL8");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+/* ]]> */
+</script>
+<link rel="https://api.w.org/" href="https://www.thomasmaurer.ch/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.thomasmaurer.ch/wp-json/wp/v2/posts/26235" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.thomasmaurer.ch/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<link rel='shortlink' href='https://www.thomasmaurer.ch/?p=26235' />
+<meta name="generator" content="Redux 4.5.11" />
+		<!-- GA Google Analytics @ https://m0n.co/ga -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1021649-6"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-1021649-6');
+		</script>
+
+	<meta name="generator" content="Site Kit by Google 1.176.0" /><script type="text/javascript">//<![CDATA[
+  function external_links_in_new_windows_loop() {
+    if (!document.links) {
+      document.links = document.getElementsByTagName('a');
+    }
+    var change_link = false;
+    var force = '';
+    var ignore = '';
+
+    for (var t=0; t<document.links.length; t++) {
+      var all_links = document.links[t];
+      change_link = false;
+      
+      if(document.links[t].hasAttribute('onClick') == false) {
+        // forced if the address starts with http (or also https), but does not link to the current domain
+        if(all_links.href.search(/^http/) != -1 && all_links.href.search('www.thomasmaurer.ch') == -1 && all_links.href.search(/^#/) == -1) {
+          // console.log('Changed ' + all_links.href);
+          change_link = true;
+        }
+          
+        if(force != '' && all_links.href.search(force) != -1) {
+          // forced
+          // console.log('force ' + all_links.href);
+          change_link = true;
+        }
+        
+        if(ignore != '' && all_links.href.search(ignore) != -1) {
+          // console.log('ignore ' + all_links.href);
+          // ignored
+          change_link = false;
+        }
+
+        if(change_link == true) {
+          // console.log('Changed ' + all_links.href);
+          document.links[t].setAttribute('onClick', 'javascript:window.open(\'' + all_links.href.replace(/'/g, '') + '\', \'_blank\', \'noopener\'); return false;');
+          document.links[t].removeAttribute('target');
+        }
+      }
+    }
+  }
+  
+  // Load
+  function external_links_in_new_windows_load(func)
+  {  
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function'){
+      window.onload = func;
+    } else {
+      window.onload = function(){
+        oldonload();
+        func();
+      }
+    }
+  }
+
+  external_links_in_new_windows_load(external_links_in_new_windows_loop);
+  //]]></script>
+
+	<style>img#wpstats{display:none}</style>
+		<script>
+			document.addEventListener( "DOMContentLoaded", function() {
+				var div, i,
+					youtubePlayers = document.getElementsByClassName( "video-seo-youtube-player" );
+				for ( i = 0; i < youtubePlayers.length; i++ ) {
+					div = document.createElement( "div" );
+					div.className = "video-seo-youtube-embed-loader";
+					div.setAttribute( "data-id", youtubePlayers[ i ].dataset.id );
+					div.setAttribute( "tabindex", "0" );
+					div.setAttribute( "role", "button" );
+					div.setAttribute(
+						"aria-label", "Load YouTube video"
+					);
+					div.innerHTML = videoSEOGenerateYouTubeThumbnail( youtubePlayers[ i ].dataset.id );
+					div.addEventListener( "click", videoSEOGenerateYouTubeIframe );
+					div.addEventListener( "keydown", videoSEOYouTubeThumbnailHandleKeydown );
+					div.addEventListener( "keyup", videoSEOYouTubeThumbnailHandleKeyup );
+					youtubePlayers[ i ].appendChild( div );
+				}
+			} );
+
+			function videoSEOGenerateYouTubeThumbnail( id ) {
+				var thumbnail = '<picture class="video-seo-youtube-picture">\n' +
+					'<source class="video-seo-source-to-maybe-replace" media="(min-width: 801px)" srcset="https://i.ytimg.com/vi/' + id + '/maxresdefault.jpg" >\n' +
+					'<source class="video-seo-source-hq" media="(max-width: 800px)" srcset="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg">\n' +
+					'<img class="sp-no-webp"  onload="videoSEOMaybeReplaceMaxResSourceWithHqSource( event );" src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" width="480" height="360" loading="eager" alt="">\n' +
+					'</picture>\n',
+					play = '<div class="video-seo-youtube-player-play"></div>';
+				return thumbnail.replace( "ID", id ) + play;
+			}
+
+			function videoSEOMaybeReplaceMaxResSourceWithHqSource( event ) {
+				var sourceMaxRes,
+					sourceHighQuality,
+					loadedThumbnail = event.target,
+					parent = loadedThumbnail.parentNode;
+
+				if ( loadedThumbnail.naturalWidth < 150 ) {
+					sourceMaxRes = parent.querySelector(".video-seo-source-to-maybe-replace");
+					sourceHighQuality = parent.querySelector(".video-seo-source-hq");
+					sourceMaxRes.srcset = sourceHighQuality.srcset;
+					parent.className = "video-seo-youtube-picture video-seo-youtube-picture-replaced-srcset";
+				}
+			}
+
+			function videoSEOYouTubeThumbnailHandleKeydown( event ) {
+				if ( event.keyCode !== 13 && event.keyCode !== 32 ) {
+					return;
+				}
+
+				if ( event.keyCode === 13 ) {
+					videoSEOGenerateYouTubeIframe( event );
+				}
+
+				if ( event.keyCode === 32 ) {
+					event.preventDefault();
+				}
+			}
+
+			function videoSEOYouTubeThumbnailHandleKeyup( event ) {
+				if ( event.keyCode !== 32 ) {
+					return;
+				}
+
+				videoSEOGenerateYouTubeIframe( event );
+			}
+
+			function videoSEOGenerateYouTubeIframe( event ) {
+				var el = ( event.type === "click" ) ? this : event.target,
+					iframe = document.createElement( "iframe" );
+
+				iframe.setAttribute( "src", "https://www.youtube.com/embed/" + el.dataset.id + "?autoplay=1&enablejsapi=1&origin=https%3A%2F%2Fwww.thomasmaurer.ch" );
+				iframe.setAttribute( "frameborder", "0" );
+				iframe.setAttribute( "allowfullscreen", "1" );
+				iframe.setAttribute( "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" );
+				el.parentNode.replaceChild( iframe, el );
+			}
+		</script><link rel="pingback" href="https://www.thomasmaurer.ch/xmlrpc.php"><link rel="icon" href="https://www.thomasmaurer.ch/wp-content/uploads/2018/06/cropped-icon1024-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.thomasmaurer.ch/wp-content/uploads/2018/06/cropped-icon1024-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.thomasmaurer.ch/wp-content/uploads/2018/06/cropped-icon1024-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.thomasmaurer.ch/wp-content/uploads/2018/06/cropped-icon1024-270x270.png" />
+		<style type="text/css" id="wp-custom-css">
+			@media only screen and (min-width: 1155px) {
+.entryhead_single{min-height:426px;}
+}
+		</style>
+		<style id="themnific_redux-dynamic-css" title="dynamic-css" class="redux-options-output">body,input,button,textarea{font-family:"Open Sans";font-weight:400;font-style:normal;color:#3a3a3a;font-size:17px;}.wrapper_inn,.postbar,.item_small.has-post-thumbnail .item_inn{background-color:#fff;}.ghost,.sidebar_item,#respond textarea,#respond input{background-color:#f9fbff;}a:not(.wp-block-button__link){color:#2d4044;}a:not(.wp-block-button__link):hover{color:#25ceff;}a:not(.wp-block-button__link):active{color:#000;}.entry p:not(.has-background) a,.entry ol:not(.has-background) a,.entry ul:not(.has-background) a,.elementor-text-editor a,.site-title a,.postauthor h3 a{color:#25ceff;}.entry p:not(.has-background) a,.entry ol:not(.has-background) a,.entry ul:not(.has-background) a{border-color:#25ceff;}.entry p:not(.has-background) a:hover,.entry ol:not(.has-background) a.hover,.entry ul:not(.has-background) a:hover,.site-title a:hover{background-color:#dce2ea;}.p-border,.content_inn,.sidebar_item,.sidebar_item  h5,.sidebar_item li,.sidebar_item ul.menu li,.block_title:after,.meta,.tagcloud a,.page-numbers,input,textarea,select,.page-link span,.post-pagination>p a{border-color:#e6ecf5;}#sidebar{color:#3b505e;}.widgetable a{color:#2d4044;}#header{background-color:#1a1a1f;}#header h1 a{color:#000;}#titles a:hover,.head_extend a:hover{color:#25ceff;}.header_row,.nav>li{border-color:#1a1a1f;}.will_stick{background-color:#1a1a1f;}.nav>li>a,.top_nav .searchform input.s{font-family:Poppins;font-weight:600;font-style:normal;color:#ffffff;font-size:15px;}.nav>li.current-menu-item>a,.nav>li>a:hover,.menu-item-has-children>a:after{color:#25ceff;}#header ul.social-menu li a,.head_extend a{color:#ffffff;}.nav li ul{background-color:#1a1a1f;}.nav>li>ul:after{border-bottom-color:#1a1a1f;}.nav ul li>a,.topnav,.topnav a{font-family:Poppins;font-weight:500;font-style:normal;color:#ffffff;font-size:12px;}.nav li ul li>a:hover{color:#25ceff;}.show-menu,#main-nav>li.special>a{background-color:#e8ecf2;}.nav a i{color:#e8ecf2;}#header .show-menu,#main-nav>li.special>a{color:#6b7391;}#titles{width:650px;}#titles,.header_fix{margin-top:10px;margin-bottom:1px;}#main-nav,.head_extend,#header ul.social-menu{margin-top:15px;margin-bottom:15px;}.topnav{background-color:#222;}#topnav,#topnav a{color:#ccc;}#topnav i,#topnav a:hover{color:#25ceff;}#footer,#footer .searchform input.s{background-color:#1a1a1f;}.mailchimp_section,.footer_icons{background-color:#e6ecf5;}#footer,#footer a,#footer h2,#footer h3,#footer h4,#footer h5,#footer .meta,#footer .meta a,#footer ul.social-menu a span,#footer .searchform input.s,.bottom-menu li a{color:#ffffff;}#footer a:hover{color:#25ceff;}#footer,#footer h5.widget,#footer .sidebar_item li,#copyright,#footer .tagcloud a,#footer .tp_recent_tweets ul li,#footer .p-border,#footer .searchform input.s,#footer input,.footer-icons ul.social-menu a,.footer_text{border-color:#1a1a1f;}#header h1{font-family:"Source Sans Pro";font-weight:900;font-style:normal;color:#002044;font-size:24px;}h1.entry-title,h2 .maintitle,.item_mag3_big h2.posttitle,.blogger .item_big h2,.block_title h2, .tmnf_titles_are_large .tmnf_title.posttitle{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:50px;}h2.posttitle:not(.maintitle),.format-quote p.teaser, .tmnf_titles_are_medium .tmnf_title.posttitle{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:28px;}.show-menu,.tab-post h4,.tptn_title,.nav-previous a,.post-pagination,.tmnf_events_widget a,.post_nav_text,.item_mag3 h2, .tmnf_titles_are_small .tmnf_title.posttitle{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:18px;}.tptn_posts_widget li::before,cite,.menuClose span,.icon_extend,ul.social-menu a span,a.mainbutton,.owl-nav>div,.submit,.mc4wp-form input,.woocommerce #respond input#submit, .woocommerce a.button,.woocommerce button.button, .woocommerce input.button,.bottom-menu li a{font-family:Poppins;font-weight:600;font-style:normal;color:#002044;font-size:16px;}h1{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:40px;}h2{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:34px;}h3{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:28px;}h4,h3#reply-title,.entry h5, .entry h6{font-family:"Source Sans Pro";font-weight:700;font-style:normal;color:#002044;font-size:24px;}h5,h6,.block_title span{font-family:Poppins;font-weight:700;font-style:normal;color:#002044;font-size:14px;}.meta,.meta a,.tptn_date,.post_nav_text span{font-family:Poppins;line-height:18px;font-weight:500;font-style:normal;color:#444;font-size:11px;}.meta_more a{color:#25ceff;}a.searchSubmit,.sticky:after,.ribbon,.post_pagination_inn,h2.block_title,.format-quote .item_inn,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button.alt,.woocommerce button.button,.woocommerce a.button.alt.checkout-button,input#place_order,.woocommerce input.button,#respond #submit,li.current a,.page-numbers.current,a.mainbutton,#submit,#comments .navigation a,.contact-form .submit,.wpcf7-submit,.meta_deko:after,.owl-nav>div,h3#reply-title:after{background-color:#25ceff;}input.button,button.submit,.entry blockquote{border-color:#25ceff;}a.searchSubmit,.sticky:after,.ribbon,.ribbon a,.ribbon p,#footer .ribbon,h2.block_title,.woocommerce #respond input#submit,.woocommerce a.button,.woocommerce button.button.alt, .woocommerce button.button,.woocommerce a.button.alt.checkout-button,input#place_order,.woocommerce input.button,#respond #submit,.tmnf_icon,a.mainbutton,#submit,#comments .navigation a,.tagssingle a,.wpcf7-submit,.page-numbers.current,.owl-nav>div,.format-quote .item_inn p,.format-quote a,.post_pagination_inn a,.owl-nav>div:before,.mc4wp-form input[type="submit"]{color:#fff;}.owl-nav>div:after{background-color:#fff;}a.searchSubmit:hover,.ribbon:hover,a.mainbutton:hover,.entry a.ribbon:hover,.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,.owl-nav>div:hover{background-color:#e1e5ea;}input.button:hover,button.submit:hover{border-color:#e1e5ea;}.ribbon:hover,.ribbon:hover a,.ribbon a:hover,.entry a.ribbon:hover,a.mainbutton:hover,.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover,.owl-nav>div:hover,.owl-nav>div:hover:before,.mc4wp-form input[type="submit"]:hover{color:#465863;}.owl-nav>div:hover:after{background-color:#465863;}.guten_slider .item_inn,.content_inn .mc4wp-form,.tptn_posts_widget li::before,.block_title::after{background-color:#1a1a1f;}.guten_slider .item_inn a,.guten_slider .item_inn p,.guten_slider .item_inn,.content_inn .mc4wp-form,.tptn_posts_widget li::before{color:#ffffff;}.has-post-thumbnail .imgwrap,.page_hero,.main_slider_wrap{background-color:#192126;}.page_hero p,.page_hero h1,.page_hero a,.page_hero .meta,.page_hero .tmnf_excerpt,.item_big.has-post-thumbnail p,.item_big.has-post-thumbnail .tmnf_excerpt,.item_big.has-post-thumbnail h2 a,.item_big.has-post-thumbnail .meta_deko a,.has-post-thumbnail .item_inn_over a,.has-post-thumbnail .item_inn_over p,.guten_main_slider a,.guten_main_slider p,.guten_main_slider .tmnf_excerpt{color:#ffffff;}</style><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><link rel='stylesheet' id='redux-custom-fonts-css' href='//www.thomasmaurer.ch/wp-content/uploads/redux/custom-fonts/fonts.css?ver=1674201811' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='cookie-law-info-table-css' href='https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/cookie-law-info/legacy/public/css/cookie-law-info-table.css?ver=1774302508' type='text/css' media='all' />
+
+<meta name="generator" content="WP Rocket 3.21.0.1" data-wpr-features="wpr_minify_js wpr_lazyload_images wpr_lazyload_iframes wpr_preconnect_external_domains wpr_oci wpr_minify_css wpr_preload_links wpr_desktop" /></head>
+
+<body class="wp-singular post-template-default single single-post postid-26235 single-format-standard wp-embed-responsive wp-theme-gutenverse">
+
+    <div  class="wrapper_main upper letter_space tmnf_width_normal image_css_none tmnf-sidebar-active header_classic">
+    
+        <div  class="wrapper">
+        
+            <div  class="wrapper_inn">
+            
+            	            
+                <div id="header" itemscope itemtype="https://schema.org//WPHeader">
+                    <div class="clearfix"></div>
+                    <a class="screen-reader-text ribbon skip-link" href="#content_start">Skip to content</a>
+                    
+                        <div class="header_classic_content">
+    
+        <div class="header_row header_row_top clearfix">
+        
+        </div><!-- end .header_row_top -->
+        
+        <div class="header_row header_row_center clearfix">
+        <div class="container_vis">
+            
+                    
+        	<div id="titles" class="tranz2">
+	  
+				<a class="logo" href="https://www.thomasmaurer.ch/">
+					<picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2020/12/Thomas-Maurer-Logo-2021-220.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2020/12/Thomas-Maurer-Logo-2021-220.jpg" class="tranz this-is-logo sp-no-webp" alt="Thomas Maurer"  > </picture>
+				</a>
+		</div><!-- end #titles  -->            
+        </div>
+        </div><!-- end .header_row_center -->
+        
+        <div class="will_stick_wrap">
+        <div class="header_row header_row_bottom clearfix will_stick">
+        <div class="container_vis">
+        
+        	<input type="checkbox" id="show-menu" role="button" aria-pressed="true">
+<label for="show-menu" class="show-menu">
+    <i class="fas fa-bars"></i><span class="close_menu">✕</span> 
+    Main Menu</label>
+<nav id="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement" role="navigation" aria-label="Main Menu">
+    <ul id="main-nav" class="nav" role="menubar"><li id="menu-item-24267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-24267"><a href="https://www.thomasmaurer.ch">Home</a></li>
+<li id="menu-item-1102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1102"><a rel="author" href="https://www.thomasmaurer.ch/about/">About</a></li>
+<li id="menu-item-9582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9582"><a href="https://www.thomasmaurer.ch/speaking/">Speaking</a></li>
+<li id="menu-item-10526" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10526"><a href="https://www.thomasmaurer.ch/shop/">Shop</a></li>
+<li id="menu-item-4662" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4662"><a href="https://www.thomasmaurer.ch/links/">Links</a></li>
+<li id="menu-item-6559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6559"><a href="https://www.thomasmaurer.ch/subscribe/">Subscribe</a></li>
+<li id="menu-item-1105" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1105" aria-haspopup="true" role="menuitem" aria-expanded="false" tabindex="0"><a href="https://www.thomasmaurer.ch/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-8040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8040"><a href="https://www.thomasmaurer.ch/contact/">Contact</a></li>
+	<li id="menu-item-10303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10303"><a href="https://www.thomasmaurer.ch/contact/donate/">Donate</a></li>
+	<li id="menu-item-7895" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7895"><a href="https://www.thomasmaurer.ch/contact/booking/">Booking</a></li>
+	<li id="menu-item-9485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-9485"><a href="https://www.thomasmaurer.ch/contact/privacy-policy/">Privacy Policy</a></li>
+	<li id="menu-item-1106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1106"><a href="https://www.thomasmaurer.ch/contact/disclaimer/">Disclaimer</a></li>
+</ul>
+</li>
+</ul></nav>
+            
+            <div class="head_extend">
+   
+    <a class="searchOpen icon_extend" href="" aria-label="Open Search Window">
+        <i class=" icon-search-2"></i><span class="screen-reader-text">Open Search Window</span>
+    </a>
+
+    
+</div>            
+                            <ul class="social-menu tranz">
+            
+                        <li class="tmnf_social_rss"><a title="Rss Feed" href="https://www.thomasmaurer.ch/feed"><i class="fas fa-rss"></i><span>Rss Feed</span></a></li>            
+                        <li class="tmnf_social_facebook"><a target="_blank" class="width1" title="Facebook" href="https://www.facebook.com/ThomasmaurerMVP"><i class="fa-brands fa-facebook-f"></i><span>Facebook</span></a></li>            
+                        <li class="tmnf_social_twitter"><a target="_blank" title="Twitter" href="https://www.twitter.com/thomasmaurer"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-x-twitter"></i><span>Twitter</span></a></li>            
+            
+                        
+                        
+                        <li class="tmnf_social_instagram"><a target="_blank" title="Instagram" href="https://www.instagram.com/thomas_maurer/"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a></li>            
+                        <li class="tmnf_social_pinterest"><a target="_blank" title="Pinterest" href="https://www.pinterest.ch/thomasmaurer/"><i class="fa-brands fa-pinterest"></i><span>Pinterest</span></a></li>            
+                        <li class="tmnf_social_youtube"><a target="_blank" title="YouTube" href="https://www.youtube.com/c/ThomasMaurerCloud"><i class="fa-brands fa-youtube"></i><span>YouTube</span></a></li>            
+                        
+                        <li class="tmnf_social_github"><a target="_blank" title="GitHub" href="https://github.com/thomasmaurer"><i class="fa-brands fa-github"></i><span>GitHub</span></a></li>            
+                        <li class="tmnf_social_linkedin"><a target="_blank"title="LinkedIn" href="https://linkedin.com/in/thomasmaurer2/"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a></li>            
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+        </ul>        
+        </div>
+        </div><!-- end .header_row_bottom -->
+        </div>
+    
+    </div>                    
+                    <div class="clearfix"></div>
+                    
+                </div><!-- end #header  -->
+        
+    <div class="main_part"><article itemscope itemtype="https://schema.org/Article">
+
+<div class="container_alt container_vis">
+
+	<div id="core" class="postbar postbarRight post-26235 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft tag-ai tag-cloud tag-commcault tag-copilot tag-microsoft tag-security tag-sentinel">
+
+        <div id="content_start"></div><!-- accessibility anchor -->
+    
+    	<div id="content" class="eightcol">
+        
+        	<div class="content_inn">
+            
+            	                        
+		<p class="meta tranz ">
+			<span class="author"><span>Written by </span><a href="https://www.thomasmaurer.ch/author/d9pe/" title="Posts by Thomas Maurer" rel="author">Thomas Maurer</a><span class="divider">&bull;</span></span>			<span class="post-date">March 25, 2026<span class="divider">&bull;</span></span>
+			<span class="post-time">12:22 pm<span class="divider">&bull;</span></span>
+			<span class="categs"><a href="https://www.thomasmaurer.ch/category/microsoft/" rel="category tag">Microsoft</a></span>
+			<span class="commes"></span>
+		</p>
+	                    <h1 itemprop="headline" class="entry-title p-border">Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration</h1>
+                    <div class="main-breadcrumbs meta">
+                        <span class="crumb"><a href="https://www.thomasmaurer.ch/">Home</a></span><span class="crumb"><a href="https://www.thomasmaurer.ch/category/microsoft/" rel="category tag">Microsoft</a></span><span class="">Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration</span>                    </div>
+                                    	                    
+                        <div class="entryhead entryhead_single">
+                        
+                            <picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se-870x600.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Create-me-a-blog-header-for-the-blog-called-Strengthening-Resilience-with-Microsoft-Sentinel-and-Se-870x600.jpg" height="600" width="870" class="standard grayscale grayscale-fade wp-post-image sp-no-webp" alt="Strengthening Resilience with Microsoft Sentinel and Security Copilot: Commvault Expands Microsoft Security Integration" decoding="async" fetchpriority="high"  > </picture>                            
+                        </div>
+                        
+                                    
+                <div class="entry">
+                
+                    <div class="swp_social_panel swp_horizontal_panel swp_modern  swp_default_full_color swp_other_color_outlines swp_individual_full_color scale-100 scale-full_width" data-min-width="1100" data-float-color="#ffffff" data-float="none" data-float-mobile="none" data-transition="slide" data-post-id="26235" ><div class="nc_tweetContainer swp_share_button swp_twitter" data-network="twitter"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://twitter.com/intent/tweet?text=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration&url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&via=ThomasMaurer" data-link="https://twitter.com/intent/tweet?text=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration&url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&via=ThomasMaurer"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_twitter_icon"></i><span class="swp_share">Tweet</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_linkedin" data-network="linkedin"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_linkedin_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_facebook" data-network="facebook"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_facebook_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_whatsapp" data-network="whatsapp"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" data-link="https://api.whatsapp.com/send?text=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_whatsapp_icon"></i><span class="swp_share">WhatsApp</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_pinterest" data-network="pinterest"><a rel="nofollow noreferrer noopener" class="nc_tweet swp_share_link noPop" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" onClick="event.preventDefault(); 
+							var e=document.createElement('script');
+							e.setAttribute('type','text/javascript');
+							e.setAttribute('charset','UTF-8');
+							e.setAttribute('src','//assets.pinterest.com/js/pinmarklet.js?r='+Math.random()*99999999);
+							document.body.appendChild(e);
+						" ><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pinterest_icon"></i><span class="swp_share">Pin</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_tumblr" data-network="tumblr"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&title=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration" data-link="https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&title=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_tumblr_icon"></i><span class="swp_share">Share</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_reddit" data-network="reddit"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" data-link="https://www.reddit.com/submit?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_reddit_icon"></i><span class="swp_share">Reddit</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_pocket" data-network="pocket"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://getpocket.com/save?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" data-link="https://getpocket.com/save?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_pocket_icon"></i><span class="swp_share">Pocket</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_hacker_news" data-network="hacker_news"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&t=Strengthening%20Resilience%20with%20Microsoft%20Sentinel%20and%20Security%20Copilot%3A%20Commvault%20Expands%20Microsoft%20Security%20Integration" data-link="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&t=Strengthening%20Resilience%20with%20Microsoft%20Sentinel%20and%20Security%20Copilot%3A%20Commvault%20Expands%20Microsoft%20Security%20Integration"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_hacker_news_icon"></i><span class="swp_share">Vote</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_flipboard" data-network="flipboard"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://share.flipboard.com/bookmarklet/popout?v=2&title=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration&url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F" data-link="https://share.flipboard.com/bookmarklet/popout?v=2&title=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration&url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_flipboard_icon"></i><span class="swp_share">Flip</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_buffer" data-network="buffer"><a class="nc_tweet swp_share_link" rel="nofollow noreferrer noopener" target="_blank" href="https://bufferapp.com/add?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&text=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration" data-link="https://bufferapp.com/add?url=https%3A%2F%2Fwww.thomasmaurer.ch%2F2026%2F03%2Fstrengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration%2F&text=Strengthening+Resilience+with+Microsoft+Sentinel+and+Security+Copilot%3A+Commvault+Expands+Microsoft+Security+Integration"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_buffer_icon"></i><span class="swp_share">Buffer</span></span></span></span></a></div><div class="nc_tweetContainer swp_share_button swp_email" data-network="email"><a class="nc_tweet noPop swp_share_link" rel="nofollow noreferrer noopener" href="/cdn-cgi/l/email-protection#5d622e283f37383e29600e292f38333a2935383334333a786f6d0f382e34313438333e38786f6d2a342935786f6d10343e2f322e323b29786f6d0e38332934333831786f6d3c3339786f6d0e383e282f342924786f6d1e322d34313229786e1c786f6d1e3230302b3c283129786f6d18252d3c33392e786f6d10343e2f322e323b29786f6d0e383e282f342924786f6d143329383a2f3c293432337b3f323924601433786f6d2932393c2478186f78656d7864642e786f6d29352f383c29786f6d313c33392e3e3c2d38786f1e786f6d2e383e282f342924786f6d29383c302e786f6d33383839786f6d30322f38786f6d29353c33786f6d3b3c2e29786f6d393829383e2934323378186f78656d78646929353824786f6d33383839786f6d3e32333b343938333e38786f6d3433786f6d2f383e322b382f2473786f6d1e3230302b3c28312978186f78656d7864642e786f6d313c29382e29786f6d3c33333228333e3830383329786f6d303c2f362e786f6d3c33786f6d34302d322f293c3329786f6d2e29382d786f6d3b322f2a3c2f39786f6d3f24786f6d3938382d383334333a786f6d34292e786f6d343329383a2f3c29343233786f6d2a342935786f6d10343e2f322e323b29786f6d0e383e282f342924786f1e786f6d29343a35293124786f6d3e323333383e2934333a786f6d10343e2f322e323b29786f6d0e38332934333831786f1e786f6d10343e2f322e323b29786f6d0e383e282f342924786f6d1e322d34313229786f1e786f6d3c3339786f6d293538786f6d1e3230302b3c283129786f6d1e31322839786f6d2d313c293b322f30786f6d2932786f6d2e292f383c3031343338786f6d303239382f33786f6d0f382e34313438333e38786f6d122d382f3c293432332e786f6d786f650f382e122d2e786f6473786f6d781b6d78641b78646c786564786f6d123b3b343e343c31786f6d3c33333228333e3830383329786e1c1e3230302b3c283129786f6d1e323333383e292e786f6d1c14786f6d09352f383c29786f6d193829383e29343233786f1e786f6d14332b382e29343a3c29343233786f1e786f6d3c3339786f6d092f282e293839786f6d0f383e322b382f24786f6d2a342935786f6d10343e2f322e323b29786f6d0e383e282f342924786f6d1f2f34333a34333a786f6d0f383e322b382f24786f6d143329383131343a38333e38786f6d34332932786f6d10343e2f322e323b29786f6d0e38332934333831786f6d0a342935786f6d293538786f6d303239382f3334273839786f6d10343e2f322e323b29786f6d0e38332934333831786f6d3e323333383e29322f786f1e786f6d3c31382f292e786f6d3c3339786f6d2e343a333c312e786f6d3b2f3230786f6d1e3230302b3c283129786f6d1e31322839786f6d09352f383c29786f6d0e3e3c33786f6d3c3339786f6d0f342e36786f6d1c333c31242e342e78186f78656d78646934333e31283934333a786f6d303c312a3c2f38786f6d393829383e293432332e786f1e786f6d3f3c3e36282d786f6d3c3332303c3134382e786f1e786f6d3c3339786f6d2e38332e3429342b38786f6d393c293c786f6d38252d322e282f3878186f78656d7864693c2f38786f6d2e292f383c303839786f6d34332932786f6d0e38332934333831786f6d3433786f6d2f383c31786f6d2934303873786f6d0935342e786d19786d1c786d19786d1c0f383c397d10322f387d15382f38677d786f6d3529292d2e786e1c786f1b786f1b2a2a2a73293532303c2e303c282f382f733e35786f1b6f6d6f6b786f1b6d6e786f1b2e292f38333a2935383334333a702f382e34313438333e38702a3429357030343e2f322e323b29702e38332934333831703c3339702e383e282f342924703e322d34313229703e3230302b3c2831297038252d3c33392e7030343e2f322e323b29702e383e282f34292470343329383a2f3c29343233786f1b" target="_blank"><span class="swp_count swp_hide"><span class="iconFiller"><span class="spaceManWilly"><i class="sw swp_email_icon"></i><span class="swp_share">Email</span></span></span></span></a></div></div>
+<p id="h-">In today’s threat landscape, security teams need more than fast detection—they need confidence in recovery. Commvault’s latest announcement marks an important step forward by deepening its integration with <strong>Microsoft Security</strong>, tightly connecting <strong>Microsoft Sentinel</strong>, <strong>Microsoft Security Copilot</strong>, and the <strong>Commvault Cloud platform</strong> to streamline modern Resilience Operations (ResOps).</p>
+
+
+
+<p id="h-">👉 Official announcement:<br /><a href="https://www.commvault.com/news/connect-ai-threat-detection-investigation-trusted-recovery-with-microsoft" target="_blank" rel="noreferrer noopener">Commvault Connects AI Threat Detection, Investigation, and Trusted Recovery with Microsoft Security</a></p>
+
+
+
+<p id="h-">Bringing Recovery Intelligence into Microsoft Sentinel</p>
+
+
+
+<p>With the modernized <strong>Microsoft Sentinel connector</strong>, alerts and signals from <strong>Commvault Cloud Threat Scan and Risk Analysis</strong>—including malware detections, backup anomalies, and sensitive data exposure—are streamed into Sentinel in real time.</p>
+
+
+
+<p>This gives SOC teams:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Visibility into <strong>backup‑layer risks</strong> alongside security telemetry</li>
+
+
+
+<li>Earlier insight into ransomware patterns</li>
+
+
+
+<li>The ability to assess impact and scope directly within existing Sentinel workflows</li>
+</ul>
+
+
+
+<p id="h-">By enriching Sentinel with recovery‑aware signals, organizations can make better decisions earlier—before moving into containment and recovery phases.</p>
+
+
+
+<h2 class="wp-block-heading" id="h-ai-driven-investigation-with-microsoft-security-copilot">AI‑Driven Investigation with Microsoft Security Copilot</h2>
+
+
+
+<p>Commvault is also introducing an <strong>Investigation Agent for Microsoft Security Copilot</strong>, purpose‑built for cyber recovery scenarios. The agent autonomously analyzes suspicious activity using Commvault’s recovery‑layer intelligence and correlates it with Microsoft security signals to determine:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Impacted hosts</li>
+
+
+
+<li>Anomalous encryption patterns</li>
+
+
+
+<li>Validated, clean restore points</li>
+</ul>
+
+
+
+<p>This significantly reduces manual coordination between security and backup teams and helps lower <strong>mean time to clean recovery (MTCR)</strong>—a critical outcome during ransomware and destructive attacks.</p>
+
+
+
+<h2 class="wp-block-heading">A Unified, Microsoft‑Aligned ResOps Model</h2>
+
+
+
+<p>Together, <strong>Microsoft Sentinel</strong>, <strong>Security Copilot</strong>, and <strong>Commvault Cloud</strong> provide a more unified approach to cyber resilience—connecting AI‑powered detection, investigation, and trusted recovery.</p>
+
+
+
+<p>As Microsoft’s Sentinel platform leadership highlights, the ability to combine AI‑enabled intelligence with recovery automation is becoming essential for modern enterprises. In future releases, these insights are expected to drive <strong>policy‑based, automated recovery workflows</strong>, further accelerating clean recovery.</p>
+
+
+
+<h2 class="wp-block-heading">Availability</h2>
+
+
+
+<p>The updated <strong>Microsoft Sentinel connector</strong> and <strong>Commvault Investigation Agent for Security Copilot</strong> are currently in <strong>early access</strong>, with <strong>general availability expected this summer</strong>.</p>
+
+
+
+<p>This integration reinforces the role of <strong>Microsoft Sentinel as the central SOC platform</strong> and <strong>Security Copilot as the AI‑driven security brain</strong>, now extended into recovery and resilience. For organizations standardizing on Microsoft Security, this is a strong signal that ResOps is becoming an integrated, AI‑assisted discipline—not a separate afterthought.</p>
+<div class="swp-content-locator"></div>                    
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.12.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-11140 mc4wp-ajax" method="post" data-id="11140" data-name="Subscribe Widget" ><div class="mc4wp-form-fields"><p>
+	<label>Email address: </label>
+	<input type="email" name="EMAIL" placeholder="Your email address" required />
+</p>
+
+<p>
+	
+    <input type="submit" value="Subscribe">
+</p></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1775571222" /><input type="hidden" name="_mc4wp_form_id" value="11140" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin -->                    
+                    <div class="clearfix"></div>
+                    
+					Tags: <a href="https://www.thomasmaurer.ch/tag/ai/" rel="tag">AI</a>, <a href="https://www.thomasmaurer.ch/tag/cloud/" rel="tag">Cloud</a>, <a href="https://www.thomasmaurer.ch/tag/commcault/" rel="tag">Commcault</a>, <a href="https://www.thomasmaurer.ch/tag/copilot/" rel="tag">Copilot</a>, <a href="https://www.thomasmaurer.ch/tag/microsoft/" rel="tag">Microsoft</a>, <a href="https://www.thomasmaurer.ch/tag/security/" rel="tag">Security</a>, <a href="https://www.thomasmaurer.ch/tag/sentinel/" rel="tag">Sentinel</a>                            <span class="modified small cntr" itemprop="dateModified" >Last modified: March 25, 2026</span>
+                                        
+                </div>
+                
+                <div class="clearfix"></div>
+                
+				<div class="post-pagination"><div class="post_pagination_inn"></div></div>                
+                <div class="clearfix"></div>
+
+    <div class="postinfo p-border">  
+    
+                    <div class="postauthor vcard ghost rad author p-border"  itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+        	<h3>About the Author / <span class="fn" itemprop="name"><a href="https://www.thomasmaurer.ch/author/d9pe/" title="Posts by Thomas Maurer" rel="author">Thomas Maurer</a></span></h3>
+            <div itemprop="logo" src="https://secure.gravatar.com/avatar/768a5047e61b8b01a6d6ea209320ef0c92a3ef30e79f9fb877723e2f73b5ba86?s=96&d=mm&r=g" itemscope itemtype="https://schema.org/ImageObject">
+				<img alt='' src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2080%2080'%3E%3C/svg%3E" data-lazy-srcset='https://secure.gravatar.com/avatar/768a5047e61b8b01a6d6ea209320ef0c92a3ef30e79f9fb877723e2f73b5ba86?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' decoding='async' data-lazy-src="https://secure.gravatar.com/avatar/768a5047e61b8b01a6d6ea209320ef0c92a3ef30e79f9fb877723e2f73b5ba86?s=80&#038;d=mm&#038;r=g"/><noscript><img alt='' src='https://secure.gravatar.com/avatar/768a5047e61b8b01a6d6ea209320ef0c92a3ef30e79f9fb877723e2f73b5ba86?s=80&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/768a5047e61b8b01a6d6ea209320ef0c92a3ef30e79f9fb877723e2f73b5ba86?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' decoding='async'/></noscript>            </div>
+            
+ 			<div class="authordesc">Thomas is the EMEA Global Black Belt (GBB) for Sovereign Cloud at Microsoft, helping organizations across the region harness Microsoft’s sovereign, hybrid, multicloud, and edge solutions. He works directly with C-level leaders and technical teams to remove roadblocks, accelerate digital transformation, and shape long-term cloud strategies that meet business and regulatory needs.
+With over 15 years of experience in cloud and datacenter, including his previous role as Principal Program Manager and Chief Evangelist for Azure Hybrid, he combines deep technical expertise with a passion for customer success. He specializes in creating scalable architectures, solution accelerators, and thought leadership that drive adoption and innovation on Azure.
+Thomas is a passionate community advocate and frequently speaks at industry events such as Microsoft Ignite and Microsoft TechDays. He shares his expertise through his Cloud and Datacenter Blog at www.thomasmaurer.ch and on LinkedIn and X.com www.twitter.com/thomasmaurer.</div>
+            
+            <div class="authoricons">
+                <p>
+                    <a target="_blank" href="https://www.facebook.com/thomasmaurermvp" class="rad_big https://www.facebook.com/thomasmaurermvphidd" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="thomasmaurer" class="rad_big thomasmaurerhidd" target="_blank" ><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/thomas_maurer/" class="rad_big https://www.instagram.com/thomas_maurer/hidd" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="http://linkedin.com/in/thomasmaurer2/" class="rad_big http://linkedin.com/in/thomasmaurer2/hidd" target="_blank" ><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://www.pinterest.ch/thomasmaurer/" class="rad_big https://www.pinterest.ch/thomasmaurer/hidd" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                    <a target="_blank" href="" itemprop="url" class="rad_big hidd" target="_blank"><i class="fas fa-link"></i></a>
+                </p>
+            </div>
+            
+		</div>
+		<div class="clearfix"></div>
+        <div id="post_nav" class="p-border">
+            <div class="post_nav_item post_nav_prev tranz p-border">
+            <span class="post_nav_arrow">&larr;</span>
+        	<a href="https://www.thomasmaurer.ch/2026/03/azure-hybrid-networking-for-sovereign-cloud/">
+        		<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Azure Hybrid Networking for Sovereign Cloud" decoding="async" data-lazy-srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-150x150.jpg 150w, https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-100x100.jpg 100w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-150x150.jpg" /><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-150x150.webp 150w,https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-100x100.webp 100w" sizes="(max-width: 150px) 100vw, 150px" type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-150x150.jpg" height="150" width="150" srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-150x150.jpg 150w, https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" class="attachment-thumbnail size-thumbnail wp-post-image sp-no-webp" alt="Azure Hybrid Networking for Sovereign Cloud" decoding="async"  > </picture></noscript>            </a>
+            <a class="post_nav_text" href="https://www.thomasmaurer.ch/2026/03/azure-hybrid-networking-for-sovereign-cloud/"><span class="post_nav_label">Previous Story</span><br/>Azure Hybrid Networking for Sovereign Cloud</a>
+        </div>
+            <div class="post_nav_item post_nav_next tranz p-border">
+            <span class="post_nav_arrow">&rarr;</span>
+        	<a href="https://www.thomasmaurer.ch/2026/04/azure-local-disconnected-operations-running-sovereign-cloud-productivity-and-ai-in-air-gapped-environments/">
+        		<img width="150" height="150" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20150%20150'%3E%3C/svg%3E" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Azure Local Disconnect Operations" decoding="async" data-lazy-srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-150x150.jpg 150w, https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-100x100.jpg 100w" data-lazy-sizes="(max-width: 150px) 100vw, 150px" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-150x150.jpg" /><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-150x150.webp 150w,https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-100x100.webp 100w" sizes="(max-width: 150px) 100vw, 150px" type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-150x150.jpg" height="150" width="150" srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-150x150.jpg 150w, https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-100x100.jpg 100w" sizes="(max-width: 150px) 100vw, 150px" class="attachment-thumbnail size-thumbnail wp-post-image sp-no-webp" alt="Azure Local Disconnect Operations" decoding="async"  > </picture></noscript>            </a>
+            <a class="post_nav_text" href="https://www.thomasmaurer.ch/2026/04/azure-local-disconnected-operations-running-sovereign-cloud-productivity-and-ai-in-air-gapped-environments/"><span class="post_nav_label">Next Story</span><br/>Azure Local Disconnected Operations: Running Sovereign Cloud, Productivity, and AI in Air‑Gapped Environments</a>
+        </div>
+    </div><div class="clearfix"></div>            <div class="blogger tmnf_related">
+			<h3 class="meta_deko related_title"><span>Related Posts</span></h3>				<div class="item item_small post-26245 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft category-microsoft-azure category-virtualization tag-air-gapped tag-aldo tag-azure tag-azure-local tag-azure-local-disconnected-operations tag-cloud tag-disconnected tag-microsoft tag-microsoft-azure tag-sovereign-cloud tag-virtualization">  
+                                        	<div class="imgwrap">
+							                            <div class="icon-rating tranz"></div>
+                            <a href="https://www.thomasmaurer.ch/2026/04/azure-local-disconnected-operations-running-sovereign-cloud-productivity-and-ai-in-air-gapped-environments/">
+                                <img width="409" height="320" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20409%20320'%3E%3C/svg%3E" class="standard grayscale grayscale-fade wp-post-image" alt="Azure Local Disconnect Operations" decoding="async" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-409x320.jpg" /><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-409x320.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2026/04/Azure-Local-Disconnced-Operations-409x320.jpg" height="320" width="409" class="standard grayscale grayscale-fade wp-post-image sp-no-webp" alt="Azure Local Disconnect Operations" decoding="async"  > </picture></noscript>                            </a>
+                        </div>
+                     	
+                    <div class="item_inn tranz">
+                        <h2 class="posttitle tmnf_title"><a class="link link--forsure" href="https://www.thomasmaurer.ch/2026/04/azure-local-disconnected-operations-running-sovereign-cloud-productivity-and-ai-in-air-gapped-environments/">Azure Local Disconnected Operations: Running Sovereign Cloud, Productivity, and AI in Air‑Gapped Environments</a></h2>
+                        <div class="clearfix"></div>
+                           
+		<p class="meta meta_deko tranz ">
+			<span class="post-date">April 7, 2026<span class="divider">&bull;</span></span>
+			<span class="categs"><a href="https://www.thomasmaurer.ch/category/microsoft/" rel="category tag">Microsoft</a>, <a href="https://www.thomasmaurer.ch/category/microsoft/microsoft-azure/" rel="category tag">Microsoft Azure</a>, <a href="https://www.thomasmaurer.ch/category/virtualization/" rel="category tag">Virtualization</a></span>
+			<span class="commes"></span>
+		</p>
+	                        <div class="clearfix"></div>
+                    	                    		<div class="tmnf_excerpt">Many organizations operate in environments where continuous cloud connectivity is not possible—or simply not allowed. Sovereignty<span class="helip">...</span></div>
+                    	                           
+		<span class="meta meta_more tranz ">
+				<a href="https://www.thomasmaurer.ch/2026/04/azure-local-disconnected-operations-running-sovereign-cloud-productivity-and-ai-in-air-gapped-environments/">Read More <span class="gimmimore tranz">&rarr;</span> <span class="screen-reader-text">Read More: Azure Local Disconnected Operations: Running Sovereign Cloud, Productivity, and AI in Air‑Gapped Environments</span></a>
+	
+		</span>
+	                    </div><!-- end .item_inn -->     
+                </div><!-- end .item -->				<div class="item item_small post-26230 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft-azure tag-azure tag-azure-hybrid tag-azure-hybrid-networking tag-cloud tag-express-route tag-global-network tag-hybrid-cloud tag-microsoft tag-microsoft-azure tag-networking tag-sovereign-cloud tag-vpn">  
+                                        	<div class="imgwrap">
+							                            <div class="icon-rating tranz"></div>
+                            <a href="https://www.thomasmaurer.ch/2026/03/azure-hybrid-networking-for-sovereign-cloud/">
+                                <img width="409" height="320" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20409%20320'%3E%3C/svg%3E" class="standard grayscale grayscale-fade wp-post-image" alt="Azure Hybrid Networking for Sovereign Cloud" decoding="async" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-409x320.jpg" /><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-409x320.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Thumbnail-Azure-Hybrid-Networking-for-Sovereign-Cloud-409x320.jpg" height="320" width="409" class="standard grayscale grayscale-fade wp-post-image sp-no-webp" alt="Azure Hybrid Networking for Sovereign Cloud" decoding="async"  > </picture></noscript>                            </a>
+                        </div>
+                     	
+                    <div class="item_inn tranz">
+                        <h2 class="posttitle tmnf_title"><a class="link link--forsure" href="https://www.thomasmaurer.ch/2026/03/azure-hybrid-networking-for-sovereign-cloud/">Azure Hybrid Networking for Sovereign Cloud</a></h2>
+                        <div class="clearfix"></div>
+                           
+		<p class="meta meta_deko tranz ">
+			<span class="post-date">March 24, 2026<span class="divider">&bull;</span></span>
+			<span class="categs"><a href="https://www.thomasmaurer.ch/category/microsoft/microsoft-azure/" rel="category tag">Microsoft Azure</a></span>
+			<span class="commes"></span>
+		</p>
+	                        <div class="clearfix"></div>
+                    	                    		<div class="tmnf_excerpt">I’m happy to share a new video where I sit down with Cynthia Treger (EMEA GBB for Networking at Microsoft) to discuss Azure Hybrid<span class="helip">...</span></div>
+                    	                           
+		<span class="meta meta_more tranz ">
+				<a href="https://www.thomasmaurer.ch/2026/03/azure-hybrid-networking-for-sovereign-cloud/">Read More <span class="gimmimore tranz">&rarr;</span> <span class="screen-reader-text">Read More: Azure Hybrid Networking for Sovereign Cloud</span></a>
+	
+		</span>
+	                    </div><!-- end .item_inn -->     
+                </div><!-- end .item -->				<div class="item item_small post-26215 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft-azure tag-azure tag-azure-local tag-cloud tag-homelab tag-hyper-v tag-jumpstart tag-localbox tag-microsoft tag-microsoft-azure tag-virtualization">  
+                                        	<div class="imgwrap">
+							                            <div class="icon-rating tranz"></div>
+                            <a href="https://www.thomasmaurer.ch/2026/03/how-to-evaluate-test-and-demo-azure-local/">
+                                <img width="409" height="320" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20409%20320'%3E%3C/svg%3E" class="standard grayscale grayscale-fade wp-post-image" alt="Evaluate and Test Azure Local" decoding="async" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Evaluate-and-Test-Azure-Local-409x320.jpg" /><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Evaluate-and-Test-Azure-Local-409x320.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2026/03/Evaluate-and-Test-Azure-Local-409x320.jpg" height="320" width="409" class="standard grayscale grayscale-fade wp-post-image sp-no-webp" alt="Evaluate and Test Azure Local" decoding="async"  > </picture></noscript>                            </a>
+                        </div>
+                     	
+                    <div class="item_inn tranz">
+                        <h2 class="posttitle tmnf_title"><a class="link link--forsure" href="https://www.thomasmaurer.ch/2026/03/how-to-evaluate-test-and-demo-azure-local/">How to Evaluate, Test, and Demo Azure Local</a></h2>
+                        <div class="clearfix"></div>
+                           
+		<p class="meta meta_deko tranz ">
+			<span class="post-date">March 17, 2026<span class="divider">&bull;</span></span>
+			<span class="categs"><a href="https://www.thomasmaurer.ch/category/microsoft/microsoft-azure/" rel="category tag">Microsoft Azure</a></span>
+			<span class="commes">• One Comment</span>
+		</p>
+	                        <div class="clearfix"></div>
+                    	                    		<div class="tmnf_excerpt">Azure Local enables customers to run Azure services on customer‑owned infrastructure, bringing Azure’s consistent operations, security,<span class="helip">...</span></div>
+                    	                           
+		<span class="meta meta_more tranz ">
+				<a href="https://www.thomasmaurer.ch/2026/03/how-to-evaluate-test-and-demo-azure-local/">Read More <span class="gimmimore tranz">&rarr;</span> <span class="screen-reader-text">Read More: How to Evaluate, Test, and Demo Azure Local</span></a>
+	
+		</span>
+	                    </div><!-- end .item_inn -->     
+                </div><!-- end .item -->				<div class="item item_small post-26221 post type-post status-publish format-standard has-post-thumbnail hentry category-microsoft-azure category-speaking category-thomas-maurer tag-azure tag-azure-local tag-cloud tag-hybrid-cloud tag-microsoft tag-microsoft-azure tag-sovereign-cloud tag-virtualization">  
+                                        	<div class="imgwrap">
+							                            <div class="icon-rating tranz"></div>
+                            <a href="https://www.thomasmaurer.ch/2026/03/speaking-at-azure-user-group-iceland-microsoft-sovereign-private-cloud-with-azure-local/">
+                                <img width="409" height="230" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20409%20230'%3E%3C/svg%3E" class="standard grayscale grayscale-fade wp-post-image" alt="Setup" decoding="async" data-lazy-srcset="https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup.jpg 1331w, https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup-300x169.jpg 300w, https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup-768x432.jpg 768w" data-lazy-sizes="(max-width: 409px) 100vw, 409px" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup.jpg" /><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup.webp 1331w,https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup-300x169.webp 300w,https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup-768x432.webp 768w" sizes="(max-width: 409px) 100vw, 409px" type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup.jpg" height="230" width="409" srcset="https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup.jpg 1331w, https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup-300x169.jpg 300w, https://www.thomasmaurer.ch/wp-content/uploads/2019/12/Setup-768x432.jpg 768w" sizes="(max-width: 409px) 100vw, 409px" class="standard grayscale grayscale-fade wp-post-image sp-no-webp" alt="Setup" decoding="async"  > </picture></noscript>                            </a>
+                        </div>
+                     	
+                    <div class="item_inn tranz">
+                        <h2 class="posttitle tmnf_title"><a class="link link--forsure" href="https://www.thomasmaurer.ch/2026/03/speaking-at-azure-user-group-iceland-microsoft-sovereign-private-cloud-with-azure-local/">Speaking at Azure User Group Iceland: Microsoft Sovereign Private Cloud with Azure Local</a></h2>
+                        <div class="clearfix"></div>
+                           
+		<p class="meta meta_deko tranz ">
+			<span class="post-date">March 16, 2026<span class="divider">&bull;</span></span>
+			<span class="categs"><a href="https://www.thomasmaurer.ch/category/microsoft/microsoft-azure/" rel="category tag">Microsoft Azure</a>, <a href="https://www.thomasmaurer.ch/category/microsoft/thomas-maurer/speaking/" rel="category tag">Speaking</a>, <a href="https://www.thomasmaurer.ch/category/microsoft/thomas-maurer/" rel="category tag">Thomas Maurer</a></span>
+			<span class="commes"></span>
+		</p>
+	                        <div class="clearfix"></div>
+                    	                    		<div class="tmnf_excerpt">I’m excited to share that I’ll be speaking at the Azure User Group Iceland on March 19, and I’d love to see you there! In this<span class="helip">...</span></div>
+                    	                           
+		<span class="meta meta_more tranz ">
+				<a href="https://www.thomasmaurer.ch/2026/03/speaking-at-azure-user-group-iceland-microsoft-sovereign-private-cloud-with-azure-local/">Read More <span class="gimmimore tranz">&rarr;</span> <span class="screen-reader-text">Read More: Speaking at Azure User Group Iceland: Microsoft Sovereign Private Cloud with Azure Local</span></a>
+	
+		</span>
+	                    </div><!-- end .item_inn -->     
+                </div><!-- end .item -->		</div>
+		<div class="clearfix"></div><div id="comments" class="p-border">
+
+	    
+        
+    	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2026/03/strengthening-resilience-with-microsoft-sentinel-and-security-copilot-commvault-expands-microsoft-security-integration/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://www.thomasmaurer.ch/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="required" /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="required" /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<!-- Mailchimp for WordPress v4.12.1 - https://www.mc4wp.com/ --><input type="hidden" name="_mc4wp_subscribe_wp-comment-form" value="0" /><p class="mc4wp-checkbox mc4wp-checkbox-wp-comment-form "><label><input type="checkbox" name="_mc4wp_subscribe_wp-comment-form" value="1" ><span>Sign me up for the weekly update!</span></label></p><!-- / Mailchimp for WordPress --><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='26235' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="dfb240aade" /></p><p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="33"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">This site uses Akismet to reduce spam. <a href="https://akismet.com/privacy/" target="_blank" rel="nofollow noopener">Learn how your comment data is processed.</a></p>
+</div><!-- #comments -->
+                
+    </div>
+
+<div class="clearfix"></div>
+ 			
+            
+
+                        
+                
+            </div><!-- end .content_inn -->
+            
+		</div><!-- end #content -->
+        
+        	<div id="sidebar"  class="fourcol woocommerce p-border">
+    
+    	        
+            <div class="widgetable p-border">
+    
+                <div class="widget_text sidebar_item"><h5 class="widget"><span>About Thomas Maurer</span></h5><div class="textwidget custom-html-widget"><center><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2019/08/Thomas-Maurer-Website-200.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2019/08/Thomas-Maurer-Website-200.jpg" height="194" width="200" class=" sp-no-webp" alt="Thomas Maurer"  > </picture></center>
+<p>
+My name is Thomas Maurer. I am a EMEA Global Black Belt (GBB) for Sovereign Cloud at Microsoft. I am part of Azure Cloud & AI Platforms and engage with the community and customers around the world. Opinions are my own.
+</p></div></div><div class="sidebar_item"><h5 class="widget"><span>Subscribe</span></h5><script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.12.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-2" class="mc4wp-form mc4wp-form-11140 mc4wp-ajax" method="post" data-id="11140" data-name="Subscribe Widget" ><div class="mc4wp-form-fields"><p>
+	<label>Email address: </label>
+	<input type="email" name="EMAIL" placeholder="Your email address" required />
+</p>
+
+<p>
+	
+    <input type="submit" value="Subscribe">
+</p></div><label style="display: none !important;">Leave this field empty if you're human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1775571222" /><input type="hidden" name="_mc4wp_form_id" value="11140" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-2" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></div><div class="widget_text sidebar_item"><h5 class="widget"><span>Sponsors</span></h5><div class="textwidget custom-html-widget"><p class="aligncenter">
+ <a href="https://www.thomasmaurer.ch/contact"
+        target="_blank">
+        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20200%20300'%3E%3C/svg%3E" alt="Your Ad" height="300" width="200" data-lazy-src="https://www.thomasmaurer.ch/wp-content/uploads/2020/01/your-ad-here.jpg"/><noscript><picture><source srcset="https://www.thomasmaurer.ch/wp-content/uploads/2020/01/your-ad-here.webp "  type="image/webp"><img src="https://www.thomasmaurer.ch/wp-content/uploads/2020/01/your-ad-here.jpg" height="300" width="200" class=" sp-no-webp" alt="Your Ad"  > </picture></noscript>
+	 </a>
+</p></div></div>            
+            </div>
+            
+		        
+    </div><!-- #sidebar -->         
+        <div class="clearfix"></div>
+        
+	</div><!-- end #core -->
+    
+</div><!-- end .container -->
+</article>
+<div class="clearfix"></div>
+
+
+                    <div class="clearfix"></div>
+                    
+                    <div id="footer" class="p-border">
+                
+                        <div class="footer-below p-border">
+                                
+                            <ul id="menu-footer" class="bottom-menu"><li id="menu-item-5530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5530"><a href="https://www.thomasmaurer.ch">Home</a></li>
+<li id="menu-item-5531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5531"><a href="https://www.thomasmaurer.ch/about/">About</a></li>
+<li id="menu-item-9584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9584"><a href="https://www.thomasmaurer.ch/speaking/">Speaking</a></li>
+<li id="menu-item-10525" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10525"><a href="https://www.thomasmaurer.ch/shop/">Shop</a></li>
+<li id="menu-item-7897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7897"><a href="https://www.thomasmaurer.ch/contact/booking/">Booking</a></li>
+<li id="menu-item-9484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-9484"><a rel="privacy-policy" href="https://www.thomasmaurer.ch/contact/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-5532" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5532"><a href="https://www.thomasmaurer.ch/contact/">Contact</a></li>
+<li id="menu-item-10302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10302"><a href="https://www.thomasmaurer.ch/contact/donate/">Donate</a></li>
+<li id="menu-item-6561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6561"><a href="https://www.thomasmaurer.ch/subscribe/">Subscribe</a></li>
+</ul>                            
+                        </div>
+                        
+                        
+                    
+                        <div class="container container_alt woocommerce"> 
+                        
+                            		
+            <div class="foocol first p-border"> 
+            
+                                
+            </div>
+    
+            <div class="foocol second p-border"> 
+            
+                                
+            </div>
+    
+            <div class="foocol third p-border"> 
+            
+                                
+            </div>
+        
+            <div class="foocol last p-border">
+            
+                                
+            </div>                                    
+                        </div>
+                        
+                        <div class="clearfix"></div>
+                                                <div class="clearfix"></div>
+                            
+                    </div><!-- /#footer  -->
+                    
+                <div class="clearfix"></div>
+                
+                </div>
+                
+            </div>
+            
+            <div  id="curtain" class="tranz">
+                
+                <form role="search" class="searchform" method="get" action="https://www.thomasmaurer.ch/">
+	<label for="search-form-69d5111666e55">
+		<span class="screen-reader-text">Search for:</span>
+	</label>
+<input id="search-form-69d5111666e55"  type="text" name="s" class="s p-border" size="30" value="I am looking for..." onfocus="if (this.value = '') {this.value = '';}" onblur="if (this.value == '') {this.value = 'I am looking for...';}" />
+<button class='searchSubmit ribbon' >Search</button>
+</form>                
+                <a class="curtainclose rad" href="#">
+                    <i class="fa fa-times"></i>
+                    <span class="screen-reader-text">
+                        Close Search Window                    </span>
+                </a>
+
+
+
+            </div>
+                
+            <div  class="scrollTo_top ribbon">
+            
+                <a title="Scroll to top" class="rad" href="">&uarr;</a>
+                
+            </div><!-- /.warpper_inn class  -->
+        </div><!-- /.warpper class  -->
+    </div><!-- /.upper class  -->
+    	<div  id="flyoff" class="ghost tranz">
+    
+    <a class="menuClose" href="#" ><i class="fas fa-times"></i><span>Close</span></a>
+    
+    	        
+    </div><!-- #sidebar --> 
+    
+    <div  class="action-overlay"></div> 
+    <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/gutenverse/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span><div class="cli-bar-container cli-style-v2"><div class="cli-bar-message">We use cookies on our website to give you the most relevant experience by remembering your preferences and repeat visits. By clicking “Accept All”, you consent to the use of ALL the cookies. However, you may visit "Cookie Settings" to provide a controlled consent.</div><div class="cli-bar-btn_container"><a role='button' class="medium cli-plugin-button cli-plugin-main-button cli_settings_button" style="margin:0px 5px 0px 0px">Cookie Settings</a><a id="wt-cli-accept-all-btn" role='button' data-cli_action="accept_all" class="wt-cli-element medium cli-plugin-button wt-cli-accept-all-btn cookie_action_close_header cli_action_button">Accept All</a></div></div></span></div><div id="cookie-law-info-again" data-nosnippet="true"><span id="cookie_hdr_showagain">Manage consent</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+	<div class="cli-modal-content cli-bar-popup">
+		  <button type="button" class="cli-modal-close" id="cliModalClose">
+			<svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+			<span class="wt-cli-sr-only">Close</span>
+		  </button>
+		  <div class="cli-modal-body">
+			<div class="cli-container-fluid cli-tab-container">
+	<div class="cli-row">
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+			<div class="cli-privacy-overview">
+				<h4>Privacy Overview</h4>				<div class="cli-privacy-content">
+					<div class="cli-privacy-content-text">This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.</div>
+				</div>
+				<a class="cli-privacy-readmore" aria-label="Show more" role="button" data-readmore-text="Show more" data-readless-text="Show less"></a>			</div>
+		</div>
+		<div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+												<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab">
+								Necessary							</a>
+															<div class="wt-cli-necessary-checkbox">
+									<input type="checkbox" class="cli-user-preference-checkbox"  id="wt-cli-checkbox-necessary" data-id="checkbox-necessary" checked="checked"  />
+									<label class="form-check-label" for="wt-cli-checkbox-necessary">Necessary</label>
+								</div>
+								<span class="cli-necessary-caption">Always Enabled</span>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="necessary">
+								<div class="wt-cli-cookie-description">
+									Necessary cookies are absolutely essential for the website to function properly. These cookies ensure basic functionalities and security features of the website, anonymously.
+<table class="cookielawinfo-row-cat-table cookielawinfo-winter"><thead><tr><th class="cookielawinfo-column-1">Cookie</th><th class="cookielawinfo-column-3">Duration</th><th class="cookielawinfo-column-4">Description</th></tr></thead><tbody><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-analytics</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Analytics".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-functional</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by GDPR cookie consent to record the user consent for the cookies in the category "Functional".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-necessary</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookies is used to store the user consent for the cookies in the category "Necessary".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-others</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Other.</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">cookielawinfo-checkbox-performance</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">This cookie is set by GDPR Cookie Consent plugin. The cookie is used to store the user consent for the cookies in the category "Performance".</td></tr><tr class="cookielawinfo-row"><td class="cookielawinfo-column-1">viewed_cookie_policy</td><td class="cookielawinfo-column-3">11 months</td><td class="cookielawinfo-column-4">The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data.</td></tr></tbody></table>								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="functional" data-toggle="cli-toggle-tab">
+								Functional							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-functional" class="cli-user-preference-checkbox"  data-id="checkbox-functional" />
+									<label for="wt-cli-checkbox-functional" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Functional</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="functional">
+								<div class="wt-cli-cookie-description">
+									Functional cookies help to perform certain functionalities like sharing the content of the website on social media platforms, collect feedbacks, and other third-party features.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="performance" data-toggle="cli-toggle-tab">
+								Performance							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-performance" class="cli-user-preference-checkbox"  data-id="checkbox-performance" />
+									<label for="wt-cli-checkbox-performance" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Performance</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="performance">
+								<div class="wt-cli-cookie-description">
+									Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="analytics" data-toggle="cli-toggle-tab">
+								Analytics							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-analytics" class="cli-user-preference-checkbox"  data-id="checkbox-analytics" />
+									<label for="wt-cli-checkbox-analytics" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Analytics</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="analytics">
+								<div class="wt-cli-cookie-description">
+									Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="advertisement" data-toggle="cli-toggle-tab">
+								Advertisement							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-advertisement" class="cli-user-preference-checkbox"  data-id="checkbox-advertisement" />
+									<label for="wt-cli-checkbox-advertisement" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Advertisement</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="advertisement">
+								<div class="wt-cli-cookie-description">
+									Advertisement cookies are used to provide visitors with relevant ads and marketing campaigns. These cookies track visitors across websites and collect information to provide customized ads.
+								</div>
+							</div>
+						</div>
+					</div>
+																	<div class="cli-tab-section">
+						<div class="cli-tab-header">
+							<a role="button" tabindex="0" class="cli-nav-link cli-settings-mobile" data-target="others" data-toggle="cli-toggle-tab">
+								Others							</a>
+															<div class="cli-switch">
+									<input type="checkbox" id="wt-cli-checkbox-others" class="cli-user-preference-checkbox"  data-id="checkbox-others" />
+									<label for="wt-cli-checkbox-others" class="cli-slider" data-cli-enable="Enabled" data-cli-disable="Disabled"><span class="wt-cli-sr-only">Others</span></label>
+								</div>
+													</div>
+						<div class="cli-tab-content">
+							<div class="cli-tab-pane cli-fade" data-id="others">
+								<div class="wt-cli-cookie-description">
+									Other uncategorized cookies are those that are being analyzed and have not been classified into a category as yet.
+								</div>
+							</div>
+						</div>
+					</div>
+										</div>
+	</div>
+</div>
+		  </div>
+		  <div class="cli-modal-footer">
+			<div class="wt-cli-element cli-container-fluid cli-tab-container">
+				<div class="cli-row">
+					<div class="cli-col-12 cli-align-items-stretch cli-px-0">
+						<div class="cli-tab-footer wt-cli-privacy-overview-actions">
+						
+															<a id="wt-cli-privacy-save-btn" role="button" tabindex="0" data-cli-action="accept" class="wt-cli-privacy-btn cli_setting_save_button wt-cli-privacy-accept-btn cli-btn">SAVE &amp; ACCEPT</a>
+													</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+</div>
+<div  class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div  class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<!--googleon: all--><script>(function() {function maybePrefixUrlField () {
+  const value = this.value.trim()
+  if (value !== '' && value.indexOf('http') !== 0) {
+    this.value = 'http://' + value
+  }
+}
+
+const urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]')
+for (let j = 0; j < urlFields.length; j++) {
+  urlFields[j].addEventListener('blur', maybePrefixUrlField)
+}
+})();</script><script type="text/javascript" src="https://challenges.cloudflare.com/turnstile/v0/api.js" id="cloudflare-turnstile-js" data-wp-strategy="async"></script>
+<script type="text/javascript" id="cloudflare-turnstile-js-after">
+/* <![CDATA[ */
+document.addEventListener( 'wpcf7submit', e => turnstile.reset() );
+//# sourceURL=cloudflare-turnstile-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="social_warfare_script-js-extra">
+/* <![CDATA[ */
+var socialWarfare = {"addons":["pro"],"post_id":"26235","variables":{"emphasizeIcons":"0","powered_by_toggle":false,"affiliate_link":"https://warfareplugins.com"},"floatBeforeContent":""};
+//# sourceURL=social_warfare_script-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.thomasmaurer.ch/wp-content/plugins/social-warfare/assets/js/script.min.js?ver=4.5.6" id="social_warfare_script-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://www.thomasmaurer.ch","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" src="https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/themes/gutenverse/js/ownScript.js?ver=1774302508" id="gutenverse-ownscript-js"></script>
+<script type="text/javascript" src="https://www.thomasmaurer.ch/wp-includes/js/comment-reply.min.js?ver=6.9.4" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" src="https://www.thomasmaurer.ch/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-83c32a029ed2cf5b6a82.js" id="googlesitekit-events-provider-contact-form-7-js" defer></script>
+<script data-minify="1" type="text/javascript" defer src="https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=1774302508" id="mc4wp-forms-api-js"></script>
+<script type="text/javascript" src="https://www.thomasmaurer.ch/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-mailchimp-2a06afd825b0d5e3e83c.js" id="googlesitekit-events-provider-mailchimp-js" defer></script>
+<script type="text/javascript" id="jetpack-stats-js-before">
+/* <![CDATA[ */
+_stq = window._stq || [];
+_stq.push([ "view", {"v":"ext","blog":"71605618","post":"26235","tz":"2","srv":"www.thomasmaurer.ch","j":"1:15.6"} ]);
+_stq.push([ "clickTrackerInit", "71605618", "26235" ]);
+//# sourceURL=jetpack-stats-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://stats.wp.com/e-202615.js" id="jetpack-stats-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="mc4wp-ajax-forms-js-extra">
+/* <![CDATA[ */
+var mc4wp_ajax_vars = {"loading_character":"\u2022","ajax_url":"https://www.thomasmaurer.ch/wp-admin/admin-ajax.php?action=mc4wp-form","error_text":"Oops. Something went wrong. Please try again later."};
+//# sourceURL=mc4wp-ajax-forms-js-extra
+/* ]]> */
+</script>
+<script data-minify="1" type="text/javascript" defer src="https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/mc4wp-premium/ajax-forms/assets/js/ajax-forms.js?ver=1774302508" id="mc4wp-ajax-forms-js"></script>
+<script data-minify="1" defer type="text/javascript" src="https://www.thomasmaurer.ch/wp-content/cache/min/1/wp-content/plugins/akismet/_inc/akismet-frontend.js?ver=1774302508" id="akismet-frontend-js"></script>
+<script type="text/javascript"> var swp_nonce = "df1fc843ef";var swpFloatBeforeContent = false; var swp_ajax_url = "https://www.thomasmaurer.ch/wp-admin/admin-ajax.php"; var swp_post_id = "26235";var swpClickTracking = true; swpPinIt={"enabled":false};</script><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://www.thomasmaurer.ch/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"3c94469a57574a10a40469821f4907a1","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

@@ -163,21 +163,13 @@
 }
 
 /* Methodology Mermaid Diagrams */
-::deep .sdlc-methodology-diagram {
-    margin: 16px 0 0;
-    padding: 20px;
-    background: var(--color-bg-section);
-    border: 1px solid var(--color-purple-border-very-subtle);
+::deep pre.mermaid.sdlc-methodology-diagram {
+    margin: 16px 0 0 !important;
+    padding: 20px !important;
+    background: var(--color-bg-section) !important;
+    border: 1px solid var(--color-purple-border-very-subtle) !important;
     border-radius: 8px;
-    overflow-x: auto;
-}
-
-::deep .sdlc-methodology-diagram pre.mermaid {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    border: none;
-    text-align: center;
+    overflow-x: auto !important;
 }
 
 ::deep .sdlc-methodology-diagram svg {

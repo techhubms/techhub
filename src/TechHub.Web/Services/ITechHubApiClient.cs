@@ -1,4 +1,6 @@
 using TechHub.Core.Models;
+using TechHub.Core.Models.Admin;
+using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Web.Services;
 
@@ -260,4 +262,279 @@ internal interface ITechHubApiClient
         int? take = null,
         int? skip = null,
         CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Trigger an immediate content processing run.
+    /// POST /api/admin/processing/trigger
+    /// </summary>
+    Task TriggerContentProcessingAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Trigger an immediate roundup generation run.
+    /// POST /api/admin/roundup/trigger
+    /// </summary>
+    Task TriggerRoundupGenerationAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Trigger a bulk content fix run (tags, authors, markdown, AI metadata backfill).
+    /// POST /api/admin/content-fixer/trigger
+    /// </summary>
+    Task TriggerContentFixerAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Cancel the currently running background job.
+    /// POST /api/admin/processing/cancel
+    /// </summary>
+    Task CancelRunningJobAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get recent content processing job history.
+    /// GET /api/admin/processing/jobs
+    /// </summary>
+    Task<IReadOnlyList<ContentProcessingJob>> GetProcessingJobsAsync(
+        int count = 20,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a specific content processing job by ID.
+    /// GET /api/admin/processing/jobs/{id}
+    /// </summary>
+    Task<ContentProcessingJob?> GetProcessingJobByIdAsync(
+        long id,
+        CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // RSS Feed config endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all RSS feed configurations.
+    /// GET /api/admin/feeds
+    /// </summary>
+    Task<IReadOnlyList<FeedConfig>> GetFeedConfigsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a specific RSS feed config by ID.
+    /// GET /api/admin/feeds/{id}
+    /// </summary>
+    Task<FeedConfig?> GetFeedConfigByIdAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Create a new RSS feed config.
+    /// POST /api/admin/feeds
+    /// </summary>
+    Task<FeedConfig> CreateFeedConfigAsync(FeedConfig config, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update an existing RSS feed config.
+    /// PUT /api/admin/feeds/{id}
+    /// </summary>
+    Task<FeedConfig> UpdateFeedConfigAsync(FeedConfig config, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete an RSS feed config.
+    /// DELETE /api/admin/feeds/{id}
+    /// </summary>
+    Task DeleteFeedConfigAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get database statistics for the admin dashboard.
+    /// GET /api/admin/statistics
+    /// </summary>
+    Task<DatabaseStatistics?> GetDatabaseStatisticsAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Processed URLs endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get a paginated list of processed URLs with optional filters.
+    /// GET /api/admin/processed-urls
+    /// </summary>
+    Task<PagedResult<ProcessedUrlListItem>> GetProcessedUrlsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? status = null,
+        string? search = null,
+        string? feedName = null,
+        string? collectionName = null,
+        long? jobId = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a specific processed URL so it can be retried.
+    /// DELETE /api/admin/processed-urls?url={url}
+    /// </summary>
+    Task<bool> DeleteProcessedUrlAsync(string url, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete all failed processed URL records.
+    /// DELETE /api/admin/processed-urls/failed
+    /// </summary>
+    Task<int> DeleteAllFailedProcessedUrlsAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Custom page data endpoints
+    // ================================================================
+
+    /// <summary>
+    /// List all custom page entries (key, description, last updated).
+    /// GET /api/admin/custom-pages
+    /// </summary>
+    Task<IReadOnlyList<CustomPageEntry>> GetCustomPageEntriesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a single custom page entry with its raw JSON.
+    /// GET /api/admin/custom-pages/{key}
+    /// </summary>
+    Task<CustomPageEntry?> GetCustomPageEntryAsync(string key, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the raw JSON for a custom page.
+    /// PUT /api/admin/custom-pages/{key}
+    /// </summary>
+    Task<CustomPageEntry> UpdateCustomPageAsync(string key, string jsonData, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content item ai_metadata endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get the ai_metadata JSON for a content item by its primary key.
+    /// GET /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task<ContentItemAiMetadataResult?> GetContentItemAiMetadataAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the ai_metadata JSON for a content item by its primary key.
+    /// PUT /api/admin/content-items/ai-metadata?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task UpdateContentItemAiMetadataAsync(string collectionName, string slug, string aiMetadata, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content item editing endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all editable fields for a content item by its primary key.
+    /// GET /api/admin/content-items/edit-data?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task<ContentItemEditData?> GetContentItemEditDataAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update all editable fields for a content item by its primary key.
+    /// PUT /api/admin/content-items/edit-data?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task UpdateContentItemEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content items listing endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get a paginated list of content items with optional filters.
+    /// GET /api/admin/content-items
+    /// </summary>
+    Task<PagedResult<ContentItemListItem>> GetContentItemsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a content item by its primary key (cascades to processed_urls).
+    /// DELETE /api/admin/content-items?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Background job settings endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get all background job settings.
+    /// GET /api/admin/job-settings
+    /// </summary>
+    Task<IReadOnlyList<BackgroundJobSetting>> GetJobSettingsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the enabled state for a background job.
+    /// PUT /api/admin/job-settings/{jobName}
+    /// </summary>
+    Task UpdateJobSettingAsync(string jobName, bool enabled, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Cache management endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Invalidate all server-side caches.
+    /// POST /api/admin/cache/invalidate
+    /// </summary>
+    Task InvalidateCachesAsync(CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content review endpoints
+    // ================================================================
+
+    /// <summary>
+    /// Get content reviews filtered by status.
+    /// GET /api/admin/reviews
+    /// </summary>
+    Task<IReadOnlyList<ContentReview>> GetContentReviewsAsync(
+        string? status = null,
+        int limit = 100,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get review summary counts (pending/approved/rejected).
+    /// GET /api/admin/reviews/summary
+    /// </summary>
+    Task<ContentReviewSummary> GetContentReviewSummaryAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Approve a single review and apply the change.
+    /// POST /api/admin/reviews/{id}/approve
+    /// </summary>
+    Task<bool> ApproveContentReviewAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Reject a single review without applying the change.
+    /// POST /api/admin/reviews/{id}/reject
+    /// </summary>
+    Task<bool> RejectContentReviewAsync(long id, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Approve all pending reviews and apply changes.
+    /// POST /api/admin/reviews/approve-all
+    /// </summary>
+    Task<int> ApproveAllContentReviewsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Reject all pending reviews.
+    /// POST /api/admin/reviews/reject-all
+    /// </summary>
+    Task<int> RejectAllContentReviewsAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Update the fixed value of a pending review.
+    /// PUT /api/admin/reviews/{id}
+    /// </summary>
+    Task<bool> UpdateContentReviewFixedValueAsync(long id, string fixedValue, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Admin – Content preview endpoint
+    // ================================================================
+
+    /// <summary>
+    /// Render markdown to HTML for preview.
+    /// POST /api/admin/content-items/preview-markdown
+    /// </summary>
+    Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
 }

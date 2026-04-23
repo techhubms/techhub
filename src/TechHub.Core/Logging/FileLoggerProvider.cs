@@ -173,6 +173,35 @@ public sealed class FileLoggerProvider : ILoggerProvider
 
         public bool IsEnabled(LogLevel logLevel) => logLevel >= _minLogLevel;
 
+        /// <summary>
+        /// Appends a compact exception summary: type + message for each exception in the chain,
+        /// plus only stacktrace frames from TechHub code (skips framework internals).
+        /// </summary>
+        private static void AppendCompactException(StringBuilder sb, Exception exception)
+        {
+            var current = exception;
+            while (current != null)
+            {
+                sb.AppendLine();
+                sb.Append("  ").Append(current.GetType().Name).Append(": ").Append(current.Message);
+
+                if (current.StackTrace != null)
+                {
+                    foreach (var line in current.StackTrace.Split('\n'))
+                    {
+                        var trimmed = line.TrimStart();
+                        if (trimmed.Contains("TechHub", StringComparison.Ordinal))
+                        {
+                            sb.AppendLine();
+                            sb.Append("    ").Append(trimmed.TrimEnd());
+                        }
+                    }
+                }
+
+                current = current.InnerException;
+            }
+        }
+
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
         {
             if (!IsEnabled(logLevel))
@@ -192,18 +221,19 @@ public sealed class FileLoggerProvider : ILoggerProvider
                     .Append(": ")
                     .Append(formatter(state, exception));
 
+            // Append exception info inline — type + message on the same line,
+            // then only stacktrace frames from our own code (TechHub.*) for readability
+            if (exception != null)
+            {
+                AppendCompactException(logEntry, exception);
+            }
+
             // Non-blocking write to queue - if queue is full, TryAdd will fail gracefully
             // This prevents logging from blocking application threads
             if (!_writeQueue.TryAdd(logEntry.ToString(), millisecondsTimeout: 100))
             {
                 // Queue is full - log entry is dropped to prevent blocking
                 // This only happens under extreme load (10000+ queued messages)
-            }
-
-            // If exception exists, queue it as a separate entry
-            if (exception != null)
-            {
-                _writeQueue.TryAdd(exception.ToString(), millisecondsTimeout: 100);
             }
         }
     }

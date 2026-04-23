@@ -102,11 +102,13 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var isHidden = await targetContainer.IsHiddenAsync();
             isHidden.Should().BeTrue("custom pages container should be initially hidden");
 
-            // Click to expand
-            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
-
-            // Assert - Container should now be visible
-            await Assertions.Expect(targetContainer).ToBeVisibleAsync();
+            // Click to expand — retry the [click + visibility check] block to
+            // survive the Blazor Server hydration race where @onclick may not
+            // be attached yet.
+            await expandButton.ClickAndExpectAsync(async () =>
+            {
+                await Assertions.Expect(targetContainer).ToBeVisibleAsync(new() { Timeout = 2000 });
+            });
 
             // Button with this specific target ID should be removed after clicking
             var specificButton = Page.Locator($".badge-expandable[data-expand-target='{targetId}']");
@@ -147,7 +149,9 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var firstVisibleText = await firstVisibleCustom.TextContentAsync();
 
             // Expand to see all custom pages
-            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
+            await expandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
+                    new() { Timeout = 2000 }));
 
             // Get all custom page badges (visible + hidden) in display order
             var allCustomBadges = new List<string>
@@ -197,7 +201,10 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
 
             // Act - Click expand button should not navigate
             var initialUrl = Page.Url;
-            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
+            var targetId2 = await expandButton.GetAttributeAsync("data-expand-target");
+            await expandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page.Locator($"#{targetId2}")).ToBeVisibleAsync(
+                    new() { Timeout = 2000 }));
 
             // Assert - Should still be on homepage
             Page.Url.Should().Be(initialUrl, "clicking expand button should not navigate away from homepage");
@@ -252,7 +259,9 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var targetId = await expandButton.GetAttributeAsync("data-expand-target");
 
             // Expand to reveal hidden custom pages
-            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
+            await expandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
+                    new() { Timeout = 2000 }));
 
             var targetContainer = Page.Locator($"#{targetId}");
             var hiddenBadges = targetContainer.Locator(".badge-custom");
@@ -305,8 +314,10 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
         {
             // Act - Click expand button
             var expandButton = expandButtons.First;
-
-            await expandButton.ClickBlazorElementAsync(waitForUrlChange: false);
+            var targetId = await expandButton.GetAttributeAsync("data-expand-target");
+            await expandButton.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
+                    new() { Timeout = 2000 }));
 
             // Assert - No JavaScript errors
             consoleErrors.Should().BeEmpty("expanding custom pages should not cause JavaScript errors");

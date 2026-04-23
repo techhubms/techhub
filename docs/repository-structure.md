@@ -34,29 +34,9 @@
   - Common observability, health checks, and service defaults
   - Reusable across all Aspire-managed services
 
-### Utilities
-
-- **`TechHub.ContentFixer/`** - CLI utility for content maintenance
-  - Bulk updates to frontmatter across collections
-  - Content validation and normalization
-  - Run from command line or as part of CI/CD pipeline
+### Utilities and Background Services
 
 See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and architecture guidelines.
-
-## Content (`collections/`)
-
-Markdown content organized by content type. Each collection is synced to the database during application startup or via the ContentSyncService.
-
-- **`_news/`** - Official GitHub Copilot announcements and product updates
-- **`_videos/`** - Video content and tutorials (YouTube embeds, tutorials)
-- **`_community/`** - Microsoft Tech Community posts and community contributions
-- **`_custom/`** - Custom manually created pages (e.g., About, Documentation)
-- **`_blogs/`** - Technical articles and blogs from various Microsoft sources
-- **`_roundups/`** - Curated weekly summaries (e.g., This Week in GitHub Copilot)
-
-All collections follow the [frontmatter schema](frontmatter.md) and are processed according to [content-processing.md](content-processing.md).
-
-See [collections/AGENTS.md](../collections/AGENTS.md) for content creation and maintenance guidelines.
 
 ## Tests (`tests/`)
 
@@ -91,7 +71,7 @@ See [collections/AGENTS.md](../collections/AGENTS.md) for content creation and m
 ### Test Utilities & Test Collections
 
 - **`TechHub.TestUtilities/`** - Shared test infrastructure
-  - **`TestCollections/`** - Sample markdown files for testing (mirrors `collections/` structure):
+  - **`TestCollections/`** - Sample file-based fixtures for test seeding:
     - `_blogs/` - Sample blog posts
     - `_community/` - Sample community posts
     - `_custom/` - Sample custom pages
@@ -123,15 +103,14 @@ See [tests/AGENTS.md](../tests/AGENTS.md) for testing strategies, TDD workflow, 
 
 ### Documentation (`docs/`)
 
-Comprehensive functional and technical documentation. **Always consult [docs/documentation-index.md](documentation-index.md) to find relevant documentation.**
+Comprehensive functional and technical documentation.
 
-- **`documentation-index.md`** - **INDEX OF ALL DOCUMENTATION** - use this to find what you need
 - **`architecture.md`** - System architecture overview
 - **`technology-stack.md`** - Technologies used and rationale
 - **`repository-structure.md`** - This file
 - **`running-and-testing.md`** - How to build, run, and test the application
 - **`testing-strategy.md`** - Testing approach and patterns
-- **Additional docs:** caching, content-api, database, design-system, filtering, frontmatter, health-checks, render-modes, RSS feeds, SEO, and more
+- **Additional docs:** caching, content-api, database, design-system, filtering, health-checks, render-modes, RSS feeds, SEO, and more
 
 See [docs/AGENTS.md](AGENTS.md) for documentation maintenance guidelines.
 
@@ -144,20 +123,21 @@ PowerShell automation scripts for development and maintenance tasks:
   - `Run -WithoutTests` - Start servers without running tests
   - `Run -TestProject <name>` - Run specific test project
 
-- **`Generate-DocumentationIndex.ps1`** - Generates `docs/documentation-index.md` from doc headings
 - **`Generate-DevCertificate.ps1`** - Creates HTTPS dev certificates
 - **`Normalize-Images.ps1`** - Optimizes and normalizes images
+- **`Restore-Database.ps1`** - Downloads and restores the production PostgreSQL database
+  - Target: `local` (Docker Compose) or `staging` (Azure)
+  - Crucial step to populate data in non-production environments
+  - Requires PostgreSQL client tools and VPN access to production
 - **`Deploy-Infrastructure.ps1`** - Azure infrastructure deployment (Bicep)
   - Supports shared, staging, and production environments
   - Modes: validate, whatif, deploy
   - Pre-flight checks (soft-deleted AI purge, ACR pull roles)
 - **`Deploy-Application.ps1`** - Container image build, push, and deployment
-  - Builds and pushes Docker images to ACR
+  - Builds and pushes Docker images to ACR (API and Web in production)
   - Deploys to Azure Container Apps
   - Default 'dev' tag for local builds, git SHA in CI
   - Smoke tests and automatic production rollback
-- **`analyze-markdown-errors.ps1`** - Linting and markdown analysis
-- **`content-processing/`** - Content import and transformation scripts
 - **`data/`** - Data files for scripts
 
 See [scripts/AGENTS.md](../scripts/AGENTS.md) for scripting guidelines and patterns.

@@ -1,10 +1,8 @@
-using TechHub.Core.Models;
-
 namespace TechHub.Core.Interfaces;
 
 /// <summary>
 /// Service for synchronizing markdown files from the filesystem into the database.
-/// Uses hash-based change detection for incremental updates.
+/// Used for seeding databases from markdown files (tests, local development, staging).
 /// </summary>
 public interface IContentSyncService
 {
@@ -29,8 +27,16 @@ public interface IContentSyncService
 
     /// <summary>
     /// Check if the database has any content items.
-    /// Used to determine if sync should run (sync only when database is empty).
     /// </summary>
     Task<bool> HasContentAsync(CancellationToken ct = default);
 }
 
+/// <summary>
+/// Result of a content sync operation.
+/// </summary>
+public record SyncResult(
+    int Added,
+    int Updated,
+    int Deleted,
+    int Unchanged,
+    TimeSpan Duration);

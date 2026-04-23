@@ -1,4 +1,4 @@
-﻿---
+---
 title: Copilot Features Post
 date: 2024-01-08
 primary_section: github-copilot
@@ -8,7 +8,7 @@ tags:
 - Copilot
 - GitHub Copilot
 - AI
-external_url: https://example.com/test
+external_url: https://example.com/blogs/copilot-only
 author: Test Author
 feed_name: Test Feed
 ---

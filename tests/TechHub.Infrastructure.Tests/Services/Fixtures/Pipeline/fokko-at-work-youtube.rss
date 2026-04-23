@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom"><link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCemYJar_AE5cF_dkCoag02A" /><id>yt:channel:emYJar_AE5cF_dkCoag02A</id><yt:channelId>emYJar_AE5cF_dkCoag02A</yt:channelId><title>Fokko at Work</title><link rel="alternate" href="https://www.youtube.com/channel/UCemYJar_AE5cF_dkCoag02A" /><author><name>Fokko at Work</name><uri>https://www.youtube.com/channel/UCemYJar_AE5cF_dkCoag02A</uri></author><published>2024-12-24T07:35:17+00:00</published><entry><id>yt:video:vjG6khuXuiI</id><yt:videoId>vjG6khuXuiI</yt:videoId><yt:channelId>UCemYJar_AE5cF_dkCoag02A</yt:channelId><title>Visual Studio Code and GitHub Copilot - What's new in 1.114</title><link rel="alternate" href="https://www.youtube.com/watch?v=vjG6khuXuiI" /><author><name>Fokko at Work</name><uri>https://www.youtube.com/channel/UCemYJar_AE5cF_dkCoag02A</uri></author><published>2026-04-03T05:30:34+00:00</published><updated>2026-04-03T07:42:27+00:00</updated><media:group><media:title>Visual Studio Code and GitHub Copilot - What's new in 1.114</media:title><media:content url="https://www.youtube.com/v/vjG6khuXuiI?version=3" type="application/x-shockwave-flash" width="640" height="390" /><media:thumbnail url="https://i3.ytimg.com/vi/vjG6khuXuiI/hqdefault.jpg" width="480" height="360" /><media:description>In VS Code 1.114 new features like copy the final response from a chat were introduced. This video explains the new features by demoing them. Keep in mind that some features might not be available to you due to enterprise policies or a different pricing plan.
+
+More info on https://tech.xebia.ms/github-copilot
+
+00:00 Intro
+00:12 Preview videos in the image carousel
+00:46 Copy final response in chat
+01:58 Troubleshoot previous chat sessions
+
+Source: https://code.visualstudio.com/updates/v1_114</media:description><media:community><media:starRating count="12" average="5.00" min="1" max="5" /><media:statistics views="254" /></media:community></media:group></entry></feed>

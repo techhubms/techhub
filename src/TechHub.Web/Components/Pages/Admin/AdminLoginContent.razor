@@ -1,0 +1,86 @@
+@inject IConfiguration Configuration
+@inject NavigationManager Navigation
+
+<PageTitle>Admin Sign-in — TechHub</PageTitle>
+
+<div class="admin-login-container">
+    <div class="admin-login-card">
+        <div class="admin-login-logo">⚙️</div>
+        <h1 class="admin-login-title">TechHub Admin</h1>
+        <p class="admin-login-subtitle">Sign in with your Microsoft account to continue</p>
+
+        @if (_showError)
+        {
+            <div class="admin-alert admin-alert-error" role="alert">
+                Sign-in failed or you are not authorised to access this area.
+                Contact the site administrator if you believe this is an error.
+            </div>
+        }
+
+        @if (_isAzureAdConfigured)
+        {
+            <button class="btn admin-login-btn-link" @onclick="SignIn">
+                Sign in with Microsoft
+            </button>
+        }
+        else
+        {
+            <div class="admin-alert admin-alert-error" role="alert">
+                Azure AD is not configured. Run <code>./scripts/Manage-EntraId.ps1 -Environment localhost</code>
+                and configure the user secrets to enable admin sign-in.
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    private bool _showError;
+    private bool _isAzureAdConfigured;
+    private string _returnUrl = "/admin";
+
+    protected override void OnInitialized()
+    {
+        _showError = false;
+        _isAzureAdConfigured = !string.IsNullOrEmpty(Configuration["AzureAd:ClientId"]);
+
+        // Determine the return URL from query string or from the current page URL
+        var uri = new Uri(Navigation.Uri);
+        var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
+
+        var returnUrl = queryParams["returnUrl"];
+        if (!string.IsNullOrEmpty(returnUrl))
+        {
+            var decoded = Uri.UnescapeDataString(returnUrl);
+            var path = new Uri(decoded, UriKind.RelativeOrAbsolute);
+            var localPath = path.IsAbsoluteUri ? path.AbsolutePath : decoded;
+            if (localPath.StartsWith("/admin", StringComparison.OrdinalIgnoreCase))
+            {
+                _returnUrl = localPath;
+            }
+        }
+        else
+        {
+            // Use the current page URL as the return URL (e.g., /admin/feeds)
+            var currentPath = uri.AbsolutePath;
+            if (currentPath.StartsWith("/admin", StringComparison.OrdinalIgnoreCase)
+                && !currentPath.Equals("/admin/login", StringComparison.OrdinalIgnoreCase))
+            {
+                _returnUrl = currentPath;
+            }
+        }
+
+        // Check for error query parameter
+        var error = queryParams["error"];
+        if (!string.IsNullOrEmpty(error))
+        {
+            _showError = true;
+        }
+    }
+
+    private void SignIn()
+    {
+        Navigation.NavigateTo(
+            $"/MicrosoftIdentity/Account/SignIn?redirectUri={Uri.EscapeDataString(_returnUrl)}",
+            forceLoad: true);
+    }
+}

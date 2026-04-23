@@ -1,4 +1,5 @@
 using FluentAssertions;
+using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
 
@@ -15,7 +16,7 @@ public class SecurityHeadersTests : PlaywrightTestBase
     public async Task HomePage_ShouldHave_XContentTypeOptions()
     {
         // Act
-        var response = await Page.GotoAsync("https://localhost:5003/");
+        var response = await Page.GotoAsync($"{BlazorHelpers.BaseUrl}/");
 
         // Assert
         response.Should().NotBeNull();
@@ -27,7 +28,7 @@ public class SecurityHeadersTests : PlaywrightTestBase
     public async Task HomePage_ShouldHave_XFrameOptions()
     {
         // Act
-        var response = await Page.GotoAsync("https://localhost:5003/");
+        var response = await Page.GotoAsync($"{BlazorHelpers.BaseUrl}/");
 
         // Assert
         response.Should().NotBeNull();
@@ -39,7 +40,7 @@ public class SecurityHeadersTests : PlaywrightTestBase
     public async Task HomePage_ShouldHave_ReferrerPolicy()
     {
         // Act
-        var response = await Page.GotoAsync("https://localhost:5003/");
+        var response = await Page.GotoAsync($"{BlazorHelpers.BaseUrl}/");
 
         // Assert
         response.Should().NotBeNull();
@@ -51,7 +52,7 @@ public class SecurityHeadersTests : PlaywrightTestBase
     public async Task HomePage_ShouldHave_PermissionsPolicy()
     {
         // Act
-        var response = await Page.GotoAsync("https://localhost:5003/");
+        var response = await Page.GotoAsync($"{BlazorHelpers.BaseUrl}/");
 
         // Assert
         response.Should().NotBeNull();
@@ -63,7 +64,7 @@ public class SecurityHeadersTests : PlaywrightTestBase
     public async Task SectionPage_ShouldHave_SecurityHeaders()
     {
         // Act - verify security headers are present on non-homepage routes too
-        var response = await Page.GotoAsync("https://localhost:5003/github-copilot");
+        var response = await Page.GotoAsync($"{BlazorHelpers.BaseUrl}/github-copilot");
 
         // Assert
         response.Should().NotBeNull();

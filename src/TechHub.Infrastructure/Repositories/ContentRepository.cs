@@ -86,9 +86,16 @@ public class ContentRepository : IContentRepository
     private readonly ILogger<ContentRepository>? _logger;
     private readonly bool _enableQueryLogging;
 
-    // High-frequency tags excluded from all tag clouds.
-    // These appear on most content items and don't provide filtering value.
-    private static readonly string[] _highFrequencyExcludedTags = new[] { "github", "copilot", "microsoft" };
+    // ── Cache TTLs ───────────────────────────────────────────────────────────
+    // Content-derived caches use TTLs as a safety net. Event-driven invalidation
+    // (via InvalidateCachedData) provides immediate freshness after writes;
+    // TTLs ensure self-healing if an invalidation path is missed.
+    private static readonly TimeSpan _searchCacheTtl = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan _slugCacheTtl = TimeSpan.FromMinutes(15);
+    private static readonly TimeSpan _tagCacheTtl = TimeSpan.FromMinutes(10);
+    private static readonly TimeSpan _sitemapCacheTtl = TimeSpan.FromMinutes(30);
+    private static readonly TimeSpan _authorCacheTtl = TimeSpan.FromMinutes(30);
+    private static readonly TimeSpan _configCacheTtl = TimeSpan.FromHours(1);
 
     static ContentRepository()
     {
@@ -147,26 +154,15 @@ public class ContentRepository : IContentRepository
 
     /// <summary>
     /// Initialize sections from configuration.
-    /// Converts configuration to Section models and applies ordering.
+    /// Converts configuration to Section models and applies ordering using <see cref="SectionConfig.Order"/>.
     /// </summary>
     private static ReadOnlyCollection<Section> InitializeSections(AppSettings settings)
     {
-        // Define section display order (matches live site - starts with "all")
-        var sectionOrder = new[]
-        {
-            "all", "github-copilot", "ai", "ml", "devops", "azure", "dotnet", "security"
-        };
-
-        // Convert configuration to Section models
-        var sectionsDict = settings.Content.Sections
+        // Convert configuration to Section models, ordered by the configured Order property.
+        // "all" has Order=0 (default) so it comes first, then sections by their explicit Order value.
+        return settings.Content.Sections
+            .OrderBy(kvp => kvp.Value.Order)
             .Select(kvp => ConvertToSection(kvp.Key, kvp.Value))
-            .ToDictionary(s => s.Name);
-
-        // Order sections according to defined order, then any remaining alphabetically
-        return sectionOrder
-            .Where(name => sectionsDict.ContainsKey(name))
-            .Select(name => sectionsDict[name])
-            .Concat(sectionsDict.Values.Where(s => !sectionOrder.Contains(s.Name)).OrderBy(s => s.Title))
             .ToList()
             .AsReadOnly();
     }
@@ -219,7 +215,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("sections:all", entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_configCacheTtl);
             return Task.FromResult(InitializeSections(_settings));
         }) ?? [];
     }
@@ -246,7 +242,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("sitemap:items", async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_sitemapCacheTtl);
             return await GetSitemapItemsInternalAsync(ct);
         }) ?? [];
     }
@@ -279,7 +275,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("authors:all", async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_authorCacheTtl);
             return await GetAuthorsInternalAsync(ct);
         }) ?? [];
     }
@@ -357,7 +353,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = $"slug:{collectionName}:{slug}:{includeDraft}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_slugCacheTtl);
             var item = await GetBySlugInternalAsync(collectionName, slug, includeDraft, ct);
             return item != null ? RenderHtmlIfNeeded(item) : null;
         });
@@ -374,7 +370,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_searchCacheTtl);
             return await SearchInternalAsync(request, ct);
         }) ?? new SearchResults<ContentItem>
         {
@@ -395,7 +391,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_searchCacheTtl);
             return await GetFacetsInternalAsync(request, ct);
         }) ?? new FacetResults { Facets = new Dictionary<string, IReadOnlyList<FacetValue>>(), TotalCount = 0 };
     }
@@ -414,7 +410,7 @@ public class ContentRepository : IContentRepository
         var cacheKey = request.GetCacheKey();
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_tagCacheTtl);
             return await GetTagCountsInternalAsync(request, ct);
         }) ?? [];
     }
@@ -431,7 +427,7 @@ public class ContentRepository : IContentRepository
     {
         return await Cache.GetOrCreateAsync("excludetags:set", async entry =>
         {
-            entry.SetPriority(CacheItemPriority.NeverRemove);
+            entry.SetAbsoluteExpiration(_configCacheTtl);
             return await BuildExcludeTagsSetAsync();
         }) ?? [];
     }
@@ -444,36 +440,19 @@ public class ContentRepository : IContentRepository
     /// </summary>
     private async Task<HashSet<string>> BuildExcludeTagsSetAsync()
     {
-        var excludeSet = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var sections = await GetAllSectionsAsync();
 
-        foreach (var section in sections)
-        {
-            // Add section tag from configuration (e.g., "AI" for ai section, "All" for all section)
-            if (!string.IsNullOrWhiteSpace(section.Tag))
-            {
-                excludeSet.Add(section.Tag);
-            }
+        var sectionTags = sections
+            .Select(s => s.Tag)
+            .Where(t => !string.IsNullOrWhiteSpace(t))
+            .Select(t => t!);
 
-            // Add collection tags generated from collection names
-            foreach (var collection in section.Collections)
-            {
-                // Generate tag from collection name (e.g., "blogs" -> "Blogs", "community" -> "Community")
-                var collectionTag = Collection.GetTagFromName(collection.Name);
-                if (!string.IsNullOrWhiteSpace(collectionTag))
-                {
-                    excludeSet.Add(collectionTag);
-                }
-            }
-        }
+        var collectionTags = sections
+            .SelectMany(s => s.Collections)
+            .Select(c => Collection.GetTagFromName(c.Name))
+            .Where(t => !string.IsNullOrWhiteSpace(t));
 
-        // Add high-frequency tags (already defined in HighFrequencyExcludedTags array)
-        foreach (var tag in _highFrequencyExcludedTags)
-        {
-            excludeSet.Add(tag);
-        }
-
-        return excludeSet;
+        return TagExclusions.BuildExcludeSet(sectionTags, collectionTags);
     }
 
     // ==================== Internal Data Access Methods ====================
@@ -1454,6 +1433,286 @@ public class ContentRepository : IContentRepository
         if (request.DateTo.HasValue)
         {
             sql.Append(" AND c.date_epoch <= @toDate");
+        }
+    }
+
+    // ==================== Admin Methods ====================
+
+    /// <inheritdoc/>
+    public async Task<TechHub.Core.Models.Admin.ContentItemAiMetadataResult?> GetAiMetadataAsync(
+        string collectionName,
+        string slug,
+        CancellationToken ct = default)
+    {
+        const string Sql = @"
+SELECT collection_name AS CollectionName, slug AS Slug, ai_metadata::text AS AiMetadata
+FROM content_items
+WHERE collection_name = @CollectionName AND slug = @Slug
+LIMIT 1";
+
+        return await Connection.QueryFirstOrDefaultAsync<TechHub.Core.Models.Admin.ContentItemAiMetadataResult>(
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
+    }
+
+    /// <inheritdoc/>
+    public async Task<bool> UpdateAiMetadataAsync(
+        string collectionName,
+        string slug,
+        string aiMetadata,
+        CancellationToken ct = default)
+    {
+        const string Sql = @"
+UPDATE content_items
+SET ai_metadata = @AiMetadata::jsonb, updated_at = NOW()
+WHERE collection_name = @CollectionName AND slug = @Slug";
+
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug, AiMetadata = aiMetadata }, cancellationToken: ct));
+        return rows > 0;
+    }
+
+    /// <inheritdoc/>
+    public async Task<TechHub.Core.Models.Admin.ContentItemEditData?> GetEditDataAsync(
+        string collectionName,
+        string slug,
+        CancellationToken ct = default)
+    {
+        const string Sql = @"
+SELECT collection_name, slug, title, author, excerpt, content, primary_section_name,
+       tags_csv, ai_metadata::text AS ai_metadata,
+       is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
+FROM content_items
+WHERE collection_name = @CollectionName AND slug = @Slug
+LIMIT 1";
+
+        var row = await Connection.QueryFirstOrDefaultAsync(
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
+
+        if (row is null)
+        {
+            return null;
+        }
+
+        var sections = new List<string>();
+        if ((bool)row.is_ai)
+        {
+            sections.Add("ai");
+        }
+
+        if ((bool)row.is_azure)
+        {
+            sections.Add("azure");
+        }
+
+        if ((bool)row.is_dotnet)
+        {
+            sections.Add("dotnet");
+        }
+
+        if ((bool)row.is_devops)
+        {
+            sections.Add("devops");
+        }
+
+        if ((bool)row.is_github_copilot)
+        {
+            sections.Add("github-copilot");
+        }
+
+        if ((bool)row.is_ml)
+        {
+            sections.Add("ml");
+        }
+
+        if ((bool)row.is_security)
+        {
+            sections.Add("security");
+        }
+
+        var tagsCsv = (string)row.tags_csv;
+        var tags = string.IsNullOrWhiteSpace(tagsCsv)
+            ? []
+            : tagsCsv.Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+
+        return new TechHub.Core.Models.Admin.ContentItemEditData
+        {
+            CollectionName = (string)row.collection_name,
+            Slug = (string)row.slug,
+            Title = (string)row.title,
+            Author = (string)row.author,
+            Excerpt = (string)row.excerpt,
+            Content = (string)row.content,
+            PrimarySectionName = (string)row.primary_section_name,
+            Tags = tags,
+            Sections = sections,
+            AiMetadata = (string?)row.ai_metadata
+        };
+    }
+
+    /// <inheritdoc/>
+    public async Task<bool> UpdateEditDataAsync(
+        string collectionName,
+        string slug,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(editData);
+
+        var tagsCsv = editData.Tags.Count > 0
+            ? $",{string.Join(",", editData.Tags)},"
+            : string.Empty;
+
+        var isAi = editData.Sections.Contains("ai");
+        var isAzure = editData.Sections.Contains("azure");
+        var isDotnet = editData.Sections.Contains("dotnet");
+        var isDevops = editData.Sections.Contains("devops");
+        var isGhc = editData.Sections.Contains("github-copilot");
+        var isMl = editData.Sections.Contains("ml");
+        var isSecurity = editData.Sections.Contains("security");
+        var bitmask = CalculateSectionBitmask(editData.Sections);
+
+        const string Sql = @"
+UPDATE content_items
+SET title                = @Title,
+    author               = @Author,
+    excerpt              = @Excerpt,
+    content              = @Content,
+    primary_section_name = @PrimarySectionName,
+    tags_csv             = @TagsCsv,
+    is_ai                = @IsAi,
+    is_azure             = @IsAzure,
+    is_dotnet            = @IsDotnet,
+    is_devops            = @IsDevops,
+    is_github_copilot    = @IsGhc,
+    is_ml                = @IsMl,
+    is_security          = @IsSecurity,
+    sections_bitmask     = @Bitmask,
+    ai_metadata          = @AiMetadata::jsonb,
+    updated_at           = NOW()
+WHERE collection_name = @CollectionName AND slug = @Slug";
+
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new
+            {
+                Title = editData.Title,
+                Author = editData.Author,
+                Excerpt = editData.Excerpt,
+                Content = editData.Content,
+                PrimarySectionName = editData.PrimarySectionName,
+                TagsCsv = tagsCsv,
+                IsAi = isAi,
+                IsAzure = isAzure,
+                IsDotnet = isDotnet,
+                IsDevops = isDevops,
+                IsGhc = isGhc,
+                IsMl = isMl,
+                IsSecurity = isSecurity,
+                Bitmask = bitmask,
+                AiMetadata = editData.AiMetadata,
+                CollectionName = collectionName,
+                Slug = slug
+            }, cancellationToken: ct));
+        return rows > 0;
+    }
+
+    // ==================== Admin Content Items ====================
+
+    /// <inheritdoc/>
+    public async Task<PagedResult<TechHub.Core.Models.Admin.ContentItemListItem>> GetContentItemsPagedAsync(
+        int offset,
+        int limit,
+        string? search = null,
+        string? collectionName = null,
+        string? feedName = null,
+        CancellationToken ct = default)
+    {
+        var whereClauses = new List<string>();
+        var parameters = new DynamicParameters();
+
+        if (!string.IsNullOrWhiteSpace(search))
+        {
+            whereClauses.Add("(ci.title ILIKE @Search OR ci.slug ILIKE @Search OR ci.external_url ILIKE @Search)");
+            parameters.Add("Search", $"%{search}%");
+        }
+
+        if (!string.IsNullOrWhiteSpace(collectionName))
+        {
+            whereClauses.Add("ci.collection_name = @CollectionName");
+            parameters.Add("CollectionName", collectionName);
+        }
+
+        if (!string.IsNullOrWhiteSpace(feedName))
+        {
+            whereClauses.Add("ci.feed_name = @FeedName");
+            parameters.Add("FeedName", feedName);
+        }
+
+        var whereStr = whereClauses.Count > 0
+            ? "WHERE " + string.Join(" AND ", whereClauses)
+            : string.Empty;
+
+        var countSql = $"SELECT COUNT(*) FROM content_items ci {whereStr}";
+        var totalCount = await Connection.ExecuteScalarAsync<int>(
+            new CommandDefinition(countSql, parameters, cancellationToken: ct));
+
+        var dataSql = $@"
+SELECT ci.slug           AS Slug,
+       ci.collection_name AS CollectionName,
+       ci.title           AS Title,
+       ci.author          AS Author,
+       ci.feed_name       AS FeedName,
+       ci.external_url    AS ExternalUrl,
+       ci.primary_section_name AS PrimarySectionName,
+       NULLIF(CONCAT_WS(', ',
+           CASE WHEN ci.is_ai THEN 'ai' END,
+           CASE WHEN ci.is_azure THEN 'azure' END,
+           CASE WHEN ci.is_dotnet THEN 'dotnet' END,
+           CASE WHEN ci.is_devops THEN 'devops' END,
+           CASE WHEN ci.is_github_copilot THEN 'github-copilot' END,
+           CASE WHEN ci.is_ml THEN 'ml' END,
+           CASE WHEN ci.is_security THEN 'security' END
+       ), '') AS AllSections,
+       ci.date_epoch      AS DateEpoch,
+       ci.created_at      AS CreatedAt,
+       (pu.external_url IS NOT NULL) AS HasProcessedUrl
+FROM content_items ci
+LEFT JOIN processed_urls pu
+    ON pu.collection_name = ci.collection_name AND pu.slug = ci.slug
+{whereStr}
+ORDER BY ci.created_at DESC
+LIMIT @Limit OFFSET @Offset";
+
+        parameters.Add("Limit", limit);
+        parameters.Add("Offset", offset);
+
+        var items = await Connection.QueryAsync<TechHub.Core.Models.Admin.ContentItemListItem>(
+            new CommandDefinition(dataSql, parameters, cancellationToken: ct));
+
+        return new PagedResult<TechHub.Core.Models.Admin.ContentItemListItem>
+        {
+            Items = items.AsList(),
+            TotalCount = totalCount
+        };
+    }
+
+    /// <inheritdoc/>
+    public async Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken ct = default)
+    {
+        const string Sql = "DELETE FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug";
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
+        return rows > 0;
+    }
+
+    // ==================== Cache Invalidation ====================
+
+    /// <inheritdoc/>
+    public void InvalidateCachedData()
+    {
+        if (Cache is MemoryCache memoryCache)
+        {
+            memoryCache.Clear();
+            _logger?.LogInformation("Content cache invalidated");
         }
     }
 }

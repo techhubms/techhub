@@ -1,23 +1,23 @@
-## Code Best Practices
+# Code Best Practices
 
 **Issues**: 🔴 {CRITICAL_COUNT} Critical | 🟡 {IMPORTANT_COUNT} Important | 🟢 {MINOR_COUNT} Minor
 
-### 🔴 Critical ({CRITICAL_COUNT})
+## 🔴 Critical ({CRITICAL_COUNT})
 
 {CRITICAL_ISSUES}
 
-### 🟡 Important ({IMPORTANT_COUNT})
+## 🟡 Important ({IMPORTANT_COUNT})
 
 {IMPORTANT_ISSUES}
 
-### 🟢 Minor ({MINOR_COUNT})
+## 🟢 Minor ({MINOR_COUNT})
 
 {MINOR_ISSUES}
 
-### Recommendations
+## Recommendations
 
 {YOUR RECOMMENDATIONS}
 
-### Next steps
+## Next steps
 
 {PRESENT USER WITH OPTIONS}

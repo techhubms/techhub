@@ -1,0 +1,575 @@
+
+        <div class="entry-content sharepostcontent  "
+            data-bi-area="body_article" data-bi-id="post_page_body_article">
+            <p>Today, we&#8217;re thrilled to announce that <strong>Microsoft Agent Framework has reached version 1.0</strong> for both <a href="https://www.nuget.org/packages/Microsoft.Agents.AI/">.NET</a> and <a href="https://pypi.org/project/agent-framework/">Python</a>. This is the production-ready release: stable APIs, and a commitment to long-term support. Whether you&#8217;re building a single assistant or orchestrating a fleet of specialized agents, Agent Framework 1.0 gives you enterprise-grade multi-agent orchestration, multi-provider model support, and cross-runtime interoperability via A2A and MCP.</p>
+<p>When we <a href="https://devblogs.microsoft.com/foundry/introducing-microsoft-agent-framework-the-open-source-engine-for-agentic-ai-apps/">introduced Microsoft Agent Framework</a> last October, we set out to unify the enterprise-ready foundations of Semantic Kernel with the innovative orchestrations of AutoGen into a single, open-source SDK. When we hit <a href="https://devblogs.microsoft.com/foundry/microsoft-agent-framework-reaches-release-candidate/">Release Candidate</a> in February, we locked the feature surface and invited the community to put it through its paces. Today, after months of feedback, hardening, and real-world validation with customers and partners, Agent Framework 1.0 is ready for production.</p>
+<p><div style="width: 1280px;" class="wp-video"><video class="wp-video-shortcode" id="video-5212-1" width="1280" height="720" preload="metadata" controls="controls"><source type="video/mp4" src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4?_=1" /><a href="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4">https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/devui6_720p.mp4</a></video></div></p>
+<p><strong>Create Your First Agent</strong></p>
+<p>Getting started takes just a few lines of code. Here&#8217;s how to create a simple agent in both languages.</p>
+<p><strong>Python</strong></p>
+<pre class="prettyprint language-py"><code class="language-py"># pip install agent-framework
+# Use `az login` to authenticate with Azure CLI
+
+import asyncio
+
+from agent_framework import Agent
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+
+agent = Agent(
+    client= FoundryChatClient(
+      project_endpoint="https://your-project.services.ai.azure.com",
+      model="gpt-5.3",
+      credential=AzureCliCredential(),
+    ),
+    name="HelloAgent",
+    instructions="You are a friendly assistant."
+)
+
+print(asyncio.run(agent.run("Write a haiku about shipping 1.0.")))</code></pre>
+<p><strong>.NET</strong></p>
+<pre class="prettyprint language-cs language-csharp"><code class="language-cs language-csharp">// dotnet add package Microsoft.Agents.AI.OpenAI --prerelease
+using Microsoft.Agents.AI;
+using Microsoft.Agents.AI.Foundry
+using Azure.Identity;
+
+// Replace the &lt;apikey&gt; with your OpenAI API key.
+var agent = new AIProjectClient(endpoint:"https://your-project.services.ai.azure.com")
+    .GetResponsesClient("gpt-5.3")
+    .AsAIAgent(
+        name: "HaikuBot", 
+        instructions: "You are an upbeat assistant that writes beautifully."
+    );
+
+Console.WriteLine(await agent.RunAsync("Write a haiku about shipping 1.0."));</code></pre>
+<p>That&#8217;s it &#8211; a working AI agent in a handful of lines. From here you can add function tools, sessions for multi-turn conversations, streaming responses, and more.</p>
+<p><strong>Multi-Agent Workflows</strong></p>
+<p>Single agents are powerful, but real-world applications often need multiple agents working together. Here&#8217;s a sequential workflow where a copywriter drafts a tagline and a reviewer provides feedback:</p>
+<p><strong>Python</strong></p>
+<pre class="prettyprint language-py"><code class="language-py">import asyncio
+
+from agent_framework import Agent, Message
+from agent_framework.foundry import FoundryChatClient
+from agent_framework.orchestrations import SequentialBuilder
+from azure.identity import AzureCliCredential
+
+
+async def main() -&gt; None:
+    # credentials read from .env
+    client = FoundryChatClient(credential=AzureCliCredential())
+
+    writer = Agent(
+        client=client,
+        instructions="You are a concise copywriter. Provide a single, punchy marketing sentence.",
+        name="writer",
+    )
+
+    reviewer = Agent(
+        client=client,
+        instructions="You are a thoughtful reviewer. Give brief feedback on the previous message.",
+        name="reviewer",
+    )
+
+
+    workflow = SequentialBuilder(participants=[writer, reviewer]).build()
+    outputs: list[list[Message]] = []
+    async for event in workflow.run("Write a tagline for Microsoft Agent Framework 1.0.", stream=True):
+        if event.type == "output":
+            outputs.append(cast(list[Message], event.data))
+    if outputs:
+        for msg in outputs[-1]:
+            print(f"[{msg.author_name or 'user'}]: {msg.text}")
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+<p>and check out the .NET version here: <a href="https://github.com/microsoft/agent-framework/tree/main/dotnet/samples/03-workflows/_StartHere/02_AgentsInWorkflows">Getting Started with Workflows</a></p>
+<p><strong>What&#8217;s in version 1.0</strong></p>
+<p>Version 1.0 represents the features we&#8217;ve battle-tested, stabilized, and committed to supporting with full backward compatibility going forward.</p>
+<ul>
+<li><strong>Single Agent and Service Connectors &#8211; </strong>The core agent abstraction is stable and production-ready across both .NET and Python. Agent Framework ships with first-party service connectors for Microsoft Foundry, Azure OpenAI, OpenAI, Anthropic Claude, Amazon Bedrock, Google Gemini and Ollama. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/">[Learn more… ]</a></li>
+<li><strong>Middleware Hooks &#8211; </strong>The middleware pipeline lets you intercept, transform, and extend agent behavior at every stage of execution: content safety filters, logging, compliance policies, custom logic &#8211; all without modifying agent prompts. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/middleware/">[Learn more… ]</a></li>
+<li><strong>Agent Memory and Context Providers &#8211; </strong>Pluggable memory architecture supporting conversational history, persistent key-value state, and vector-based retrieval. Choose your backend: Memory in Foundry Agent Service, Mem0, Redis, Neo4j or use a custom store. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/conversations/">[Learn more…]</a></li>
+<li><strong>Agent Workflows &#8211; </strong>The graph-based workflow engine for composing agents and functions into deterministic, repeatable processes is now stable. Build workflows that combine agent reasoning with business logic, branch on conditions, fan out to parallel steps, and converge results. Checkpointing and hydration ensure long-running processes survive interruptions. <a href="https://learn.microsoft.com/en-us/agent-framework/workflows/">[Learn more… ]</a></li>
+<li><strong>Multi-Agent Orchestration &#8211; </strong>Stable support for the orchestration patterns that emerged from Microsoft Research and AutoGen: sequential, concurrent, handoff, group chat, and Magentic-One. All patterns support streaming, checkpointing, human-in-the-loop approvals, and pause/resume for long-running workflows. <a href="https://learn.microsoft.com/en-us/agent-framework/workflows/orchestrations/">[Learn more…]</a></li>
+<li><strong>Declarative Agents and Workflows (YAML) &#8211; </strong>Define agents&#8217; instructions, tools, memory configuration, and orchestration topology in version-controlled YAML files, then load and run them with a single API call.<a href="https://learn.microsoft.com/en-us/agent-framework/agents/declarative"> [Learn more… ]</a></li>
+<li><strong>A2A, and MCP &#8211; MCP (Model Context Protocol)</strong> support lets agents dynamically discover and invoke external tools exposed over MCP-compliant servers. <strong>A2A (Agent-to-Agent) protocol </strong>(A2A 1.0 support coming soon) support enables cross-runtime agent collaboration &#8211; your agents can coordinate with agents running in other frameworks using structured, protocol-driven messaging. <a href="https://learn.microsoft.com/en-us/agent-framework/integrations/">[Learn more…]</a></li>
+<li><strong>Migration Assistants (Semantic Kernel and AutoGen) &#8211; </strong>For teams coming from Semantic Kernel or AutoGen, migration assistants analyze your existing code and generate step-by-step migration plans. The <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel">Semantic Kernel migration guide</a> and <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen">AutoGen migration guide</a> provide detailed walkthroughs.</li>
+</ul>
+<p><strong>What&#8217;s new since the October release</strong></p>
+<p>We’re also shipping with preview features that are functional and available for early adoption. These APIs may evolve based on community feedback before reaching ‘stable’.</p>
+<ul>
+<li><strong>DevUI</strong> &#8211; browser-based local debugger for visualizing agent execution, message flows, tool calls, and orchestration decisions in real time. <a href="https://learn.microsoft.com/en-us/agent-framework/devui/">[Learn more… ]</a></li>
+<li><strong>Foundry Hosted Agent Integration</strong> &#8211; run Agent Framework agents as managed services on Microsoft Foundry or as Azure Durable Functions. <a href="https://learn.microsoft.com/en-us/agent-framework/integrations/azure-functions">[Learn more… ]</a></li>
+<li><strong>Foundry Tools, Memory, Observability and Evaluations</strong> &#8211; deep integration with Foundry&#8217;s managed tool ecosystem, memory, and OpenTelemetry-powered observability and evaluations dashboards. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/tools/">[Learn more… ]</a></li>
+<li><strong>AG-UI / CopilotKit / ChatKit</strong> &#8211; stream agent output to frontend surfaces with adapters for CopilotKit and ChatKit, including tool execution status and human-in-the-loop flows. <a href="https://learn.microsoft.com/en-us/agent-framework/integrations/ag-ui/">[Learn more… ]</a></li>
+<li><strong>Skills</strong> &#8211; reusable domain capability packages (instructions + scripts + resources)) that give agents structured capabilities out of the box. <a href="https://learn.microsoft.com/en-us/agent-framework/agents/skills">[Learn more… ]</a></li>
+<li><span data-teams="true"><strong>GitHub Copilot SDK and Claude Code SDK</strong> — use GitHub Copilot SDK or Claude Code as an agent harness directly from your Agent Framework orchestration code. These SDKs handle the autonomous agent loop &#8211; planning, tool execution, file edits, and session management &#8211; and Agent Framework wraps them, letting you compose a coding-capable agent alongside other agents (Azure OpenAI, Anthropic, custom) in the same multi-agent workflow.</span> <a href="https://learn.microsoft.com/en-us/agent-framework/agents/providers/github-copilot">[Learn more… ]</a></li>
+<li><strong>Agent Harness</strong> — customizable Microsoft Agent Framework harness and local runtime giving agents access to shell, file system, and messaging loop for coding agents, automation, and personal assistant patterns. <a href="https://devblogs.microsoft.com/agent-framework/agent-harness-in-agent-framework/">[Learn more… ]</a></li>
+</ul>
+<p><a href="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737.webp"><img fetchpriority="high" decoding="async" class="wp-image-5216 aligncenter lazyload" data-src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-300x170.webp" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACqAQMAAAAtLeBHAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAHUlEQVRYhe3BAQ0AAADCoPdPbQ43oAAAAAAAAPgzGeYAAZBDJlMAAAAASUVORK5CYII="  alt="Microsoft Agent Framework DevUI" width="593" height="336" srcset="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-300x170.webp 300w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-1024x581.webp 1024w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-768x435.webp 768w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737-1536x871.webp 1536w, https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2026/04/Screenshot-2026-04-02-090737.webp 1753w" sizes="(max-width: 593px) 100vw, 593px" /></a></p>
+<p><strong>Getting Started</strong></p>
+<p>If you&#8217;ve been running on the RC packages, upgrading to 1.0 is a package version bump. If you&#8217;re new to Agent Framework, install and go:</p>
+<p><strong>Python</strong></p>
+<p>pip install agent-framework</p>
+<p><strong>.NET</strong></p>
+<p>dotnet add package Microsoft.Agents.AI</p>
+<p>Check out the <a href="https://learn.microsoft.com/en-us/agent-framework/get-started/">quickstart guide</a> for walkthroughs in both languages, or jump straight to the <a href="https://github.com/microsoft/agent-framework">samples on GitHub</a>.</p>
+<p>Coming from AutoGen or Semantic Kernel? Now is the time to migrate to Microsoft Agent Framework. The <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-semantic-kernel" target="_blank" rel="noopener">Semantic Kernel migration guide</a> and <a href="https://learn.microsoft.com/en-us/agent-framework/migration-guide/from-autogen" target="_blank" rel="noopener">AutoGen migration guide</a> provide detailed walkthroughs.</p>
+<p><strong>What&#8217;s Next</strong></p>
+<p>Version 1.0 is a beginning, not a destination. We&#8217;re continuing to invest in graduating preview features, expanding the connector and skills ecosystem, deepening Foundry integration, and incorporating the latest orchestration research from Microsoft Research. The framework is 100% open source &#8211; we build in the open, and your feedback and contributions shape what comes next.</p>
+<p>Thank you to everyone who filed issues, submitted PRs, tested release candidates, and pushed us to make Agent Framework better. This milestone belongs to the community as much as it does to the team.</p>
+<p><strong>Get started today:</strong></p>
+<ul>
+<li><strong>Download the SDK:</strong> <a href="https://aka.ms/AgentFramework">aka.ms/AgentFramework</a></li>
+<li><strong>Documentation:</strong> <a href="https://aka.ms/AgentFramework/Docs">aka.ms/AgentFramework/Docs</a></li>
+<li><strong>GitHub:</strong> <a href="https://github.com/microsoft/agent-framework">github.com/microsoft/agent-framework</a></li>
+<li><strong>Discord:</strong> <a href="https://aka.ms/foundry/discord">aka.ms/foundry/discord</a></li>
+<li><strong>NuGet (.NET):</strong> <a href="https://www.nuget.org/packages/Microsoft.Agents.AI/">Microsoft.Agents.AI</a></li>
+<li><strong>PyPI (Python):</strong> <a href="https://pypi.org/project/agent-framework/">agent-framework</a></li>
+</ul>
+        </div><!-- .entry-content -->
+
+        <!-- AI Disclaimer -->
+            </article>
+    <style>
+    @media (min-width: 1083px) {
+        .social-panel {
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: 1083px) {
+        .evo-social-sidebar {
+            margin-bottom: 24px;
+        }
+
+        .social-panel {
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+
+    a.like-button svg {
+        /* width: 24px; */
+        width: 28px;
+    }
+
+    nav.evo-social-sidebar {
+        z-index: 5;
+    }
+
+    .evo-social-sidebar .votes-count {
+        font-size: 14px;
+        color: var(--clr-social-btn-count);
+        height: 20px;
+    }
+
+    .evo-social-sidebar .sharing-btns .share-post span {
+        color: var(--clr-body-light);
+        text-transform: initial;
+    }
+
+    .evo-social-sidebar .sharing-btns .share-post:hover span {
+        color: var(--clr-body);
+    }
+
+    .evo-social-sidebar .sharing-btns {
+        box-shadow: var(--clr-share-btn-shadow);
+    }
+
+    .evo-social-sidebar .social-panel a:focus,
+    .evo-social-sidebar .social-panel button:focus {
+        outline-offset: -4px;
+    }
+
+    .evo-social-sidebar .evo-dropdown-content {
+        position: absolute;
+        bottom: 100%;
+        z-index: 1000;
+    }
+
+    .evo-social-sidebar .evo-dropdown-content ul {
+        list-style: none;
+    }
+
+    @media screen and (min-width: 1890px) {
+        .evo-dropdown-menu.horizontal-dropdown .evo-dropdown-content {
+            transform: translateX(-40%);
+        }
+    }
+
+    @media screen and (max-width: 1084px) {
+        .evo-social-sidebar .evo-dropdown-content {
+            top: 100%;
+            bottom: unset;
+            left: 0;
+        }
+    }
+
+    @media (max-width: 1083px) {
+        .left-sidebar {
+            margin-top: 40px;
+        }
+    }
+</style>
+<div class="left-sidebar">
+    <nav class="evo-social-sidebar sticky d-flex position-relative" data-bi-area="sidebar_left_social" aria-label="Share">
+        <div class="social-panel bg-white d-inline-flex p-8 border-r-8 border-2">
+            <div style="width: 60px; height: 64px;">
+                                <div id="likesMenu" class="position-relative d-flex flex-column evo-dropdown-menu horizontal-dropdown">
+                    <span  class="post-like" id="postLike-5212"><span class="icon-like-dislike1 d-flex flex-column"><a class='d-flex flex-column align-items-center p-8 btn-outline-secondary border-0 rounded' data-toggle='tooltip' aria-label='Sign in to react, vote count 4' title='Sign in to react' href='https://devblogs.microsoft.com/agent-framework/wp-login.php?redirect_to=https%3A%2F%2Fdevblogs.microsoft.com%2Fagent-framework%2Fmicrosoft-agent-framework-version-1-0%2F' data-bi-id='post_page_sidebar_left_social_Sign in to react' data-bi-name='Sign in to react'><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.4167 13.9999C23.9605 13.9999 26.8334 16.8727 26.8334 20.4166C26.8334 23.9604 23.9605 26.8332 20.4167 26.8332C16.8729 26.8332 14 23.9604 14 20.4166C14 16.8727 16.8729 13.9999 20.4167 13.9999ZM14 2.33203C20.4443 2.33203 25.6685 7.55619 25.6685 14.0005C25.6685 14.3076 25.6566 14.6119 25.6333 14.9131C25.1225 14.4282 24.5439 14.014 23.9135 13.6858C23.7477 8.35391 19.3727 4.08203 14 4.08203C8.5222 4.08203 4.08154 8.52268 4.08154 14.0005C4.08154 19.3736 8.35404 23.7488 13.687 23.9141C14.0146 24.5444 14.4286 25.1226 14.913 25.6335C14.6122 25.6571 14.3075 25.669 14 25.669C7.5557 25.669 2.33154 20.4448 2.33154 14.0005C2.33154 7.55619 7.5557 2.33203 14 2.33203ZM20.4167 16.3323L20.3118 16.3417C20.0737 16.385 19.886 16.5727 19.8428 16.8108L19.8334 16.9157L19.8329 19.8323L16.9139 19.8332L16.8091 19.8426C16.571 19.8859 16.3832 20.0736 16.34 20.3117L16.3306 20.4166L16.34 20.5214C16.3832 20.7595 16.571 20.9473 16.8091 20.9905L16.9139 20.9999L19.8341 20.999L19.8346 23.9206L19.844 24.0255C19.8873 24.2636 20.075 24.4514 20.3131 24.4946L20.418 24.504L20.5228 24.4946C20.7609 24.4514 20.9487 24.2636 20.9919 24.0255L21.0013 23.9206L21.0008 20.999L23.922 20.9999L24.0269 20.9905C24.265 20.9473 24.4527 20.7595 24.4959 20.5214L24.5053 20.4166L24.4959 20.3117C24.4527 20.0736 24.265 19.8859 24.0269 19.8426L23.922 19.8332L20.9996 19.8323L21 16.9157L20.9906 16.8108C20.9474 16.5727 20.7597 16.385 20.5215 16.3417L20.4167 16.3323ZM9.87205 17.2477C10.6436 18.227 11.7279 18.8969 12.9404 19.1453C12.8698 19.5577 12.8334 19.9829 12.8334 20.4166C12.8334 20.5809 12.8386 20.7441 12.8489 20.9058C11.1278 20.6227 9.57985 19.7045 8.49745 18.3308C8.19838 17.9512 8.26365 17.401 8.64323 17.1019C9.02281 16.8029 9.57297 16.8681 9.87205 17.2477ZM10.5005 10.2096C11.3055 10.2096 11.958 10.8621 11.958 11.6671C11.958 12.4721 11.3055 13.1246 10.5005 13.1246C9.69558 13.1246 9.04304 12.4721 9.04304 11.6671C9.04304 10.8621 9.69558 10.2096 10.5005 10.2096ZM17.5005 10.2096C18.3055 10.2096 18.958 10.8621 18.958 11.6671C18.958 12.4721 18.3055 13.1246 17.5005 13.1246C16.6956 13.1246 16.043 12.4721 16.043 11.6671C16.043 10.8621 16.6956 10.2096 17.5005 10.2096Z" fill="#0F6CBD"/></svg><span class='votes-count fw-600'> 4</span></a><div id="like-announcement" class="visually-hidden" role="status" aria-live="polite"></div></span></span>                    <nav id="emoji-reactions" class="evo-dropdown-content" style="display: none;">
+                        <ul class="sharing-btns rounded bg-white d-flex flex-row m-0 p-8" role="menu">
+                            <li role="presentation">
+                                <button data-bi-id="post_page_sidebar_left_social_like" data-bi-name="" data-post-id="5212" data-react="like" role="menuitem" class="d-flex flex-row align-items-center evo-dropdown-item btn-outline-secondary border-0 rounded p-8 gap-8 " title="" aria-label="like" onclick="post_like_vote_add(5212,'3f88c56300',0,78,'like');">
+                                    <svg width="28" height="28" style="max-width:unset;">
+                                        <image xlink:href="/wp-content/themes/devblogs-evo/images/emojis/like.svg" width="28" height="28" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button data-bi-id="post_page_sidebar_left_social_heart" data-bi-name="" data-post-id="5212" data-react="heart" role="menuitem" class="d-flex flex-row align-items-center evo-dropdown-item btn-outline-secondary border-0 rounded p-8 gap-8 " title="" aria-label="heart" onclick="post_like_vote_add(5212,'3f88c56300',0,78,'heart');">
+                                    <svg width="28" height="28" style="max-width:unset;">
+                                        <image xlink:href="/wp-content/themes/devblogs-evo/images/emojis/heart.svg" width="28" height="28" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button data-bi-id="post_page_sidebar_left_social_celebrate" data-bi-name="" data-post-id="5212" data-react="celebrate" role="menuitem" class="d-flex flex-row align-items-center evo-dropdown-item btn-outline-secondary border-0 rounded p-8 gap-8 " title="" aria-label="celebrate" onclick="post_like_vote_add(5212,'3f88c56300',0,78,'celebrate');">
+                                    <svg width="28" height="28" style="max-width:unset;">
+                                        <image xlink:href="/wp-content/themes/devblogs-evo/images/emojis/celebrate.svg" width="28" height="28" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button data-bi-id="post_page_sidebar_left_social_mind-blown" data-bi-name="" data-post-id="5212" data-react="mind-blown" role="menuitem" class="d-flex flex-row align-items-center evo-dropdown-item btn-outline-secondary border-0 rounded p-8 gap-8 " title="" aria-label="mind-blown" onclick="post_like_vote_add(5212,'3f88c56300',0,78,'mind-blown');">
+                                    <svg width="28" height="28" style="max-width:unset;">
+                                        <image xlink:href="/wp-content/themes/devblogs-evo/images/emojis/mind-blown.svg" width="28" height="28" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button data-bi-id="post_page_sidebar_left_social_intriguing" data-bi-name="" data-post-id="5212" data-react="intriguing" role="menuitem" class="d-flex flex-row align-items-center evo-dropdown-item btn-outline-secondary border-0 rounded p-8 gap-8 " title="" aria-label="intriguing" onclick="post_like_vote_add(5212,'3f88c56300',0,78,'intriguing');">
+                                    <svg width="28" height="28" style="max-width:unset;">
+                                        <image xlink:href="/wp-content/themes/devblogs-evo/images/emojis/intriguing.svg" width="28" height="28" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li role="presentation">
+                                <button data-bi-id="post_page_sidebar_left_social_compelling" data-bi-name="" data-post-id="5212" data-react="compelling" role="menuitem" class="d-flex flex-row align-items-center evo-dropdown-item btn-outline-secondary border-0 rounded p-8 gap-8 " title="" aria-label="compelling" onclick="post_like_vote_add(5212,'3f88c56300',0,78,'compelling');">
+                                    <svg width="28" height="28" style="max-width:unset;">
+                                        <image xlink:href="/wp-content/themes/devblogs-evo/images/emojis/compelling.svg" width="28" height="28" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+                            <div class="d-flex flex-column" style="width: 60px; height: 64px;">
+                    <a class="d-flex flex-column align-items-center p-8 btn-outline-secondary border-0 rounded" data-toggle="tooltip" title="Go to comments section" aria-label="Jump to comments, 2 total comments" href="#comments" data-bi-id="post_page_sidebar_left_social_comment" data-bi-name="comment">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M5.75 4.5C4.50736 4.5 3.5 5.50736 3.5 6.75V17.25C3.5 18.4926 4.50736 19.5 5.75 19.5H8.5V24.2955C8.5 24.4994 8.73092 24.6175 8.89627 24.4982L15.8244 19.5H22.25C23.4926 19.5 24.5 18.4926 24.5 17.25V6.75C24.5 5.50736 23.4926 4.5 22.25 4.5H5.75ZM2 6.75C2 4.67893 3.67893 3 5.75 3H22.25C24.3211 3 26 4.67893 26 6.75V17.25C26 19.3211 24.3211 21 22.25 21H16.309L9.77388 25.7147C8.61646 26.5497 7 25.7227 7 24.2955V21H5.75C3.67893 21 2 19.3211 2 17.25V6.75Z" fill="#0F6CBD" />
+                        </svg>
+                        <span class="votes-count fw-600"> 2</span>
+                    </a>
+                </div>
+                        <div class="d-flex flex-column" style="width: 60px; height: 64px;">
+                <div class="position-relative d-flex flex-column evo-dropdown-menu">
+                                        <button data-bi-id="post_page_sidebar_left_social_share" data-bi-name="click to open" data-toggle="tooltip" title="Share this post" class="evo-dropdown-button d-flex flex-column align-items-center p-8 btn-outline-secondary border-0 rounded" type="button" aria-expanded="false" aria-controls="#social-sharing-buttons" aria-label="Share on social media, 25 total shares">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                            <path d="M18.27 3.21001L25.77 10.46C25.8426 10.53 25.9003 10.6139 25.9398 10.7066C25.9792 10.7994 25.9995 10.8992 25.9995 11C25.9995 11.1008 25.9792 11.2006 25.9398 11.2934C25.9003 11.3862 25.8426 11.4701 25.77 11.54L18.27 18.79C18.2014 18.8576 18.1202 18.9109 18.031 18.9469C17.9417 18.983 17.8462 19.001 17.75 19C17.6502 19.0003 17.5515 18.9799 17.46 18.94C17.324 18.883 17.2078 18.7871 17.126 18.6644C17.0441 18.5416 17.0003 18.3975 17 18.25V14.51C10.3 14.78 7.48 18.53 7.36 18.69C7.26453 18.8157 7.13275 18.909 6.98251 18.9573C6.83226 19.0056 6.67081 19.0065 6.52 18.96C6.36957 18.9115 6.2383 18.8168 6.14492 18.6893C6.05153 18.5618 6.00081 18.4081 6 18.25C6 10.23 12.59 7.77001 17 7.52001V3.75001C17.0003 3.60251 17.0441 3.45838 17.126 3.33565C17.2078 3.21293 17.324 3.11705 17.46 3.06001C17.5947 3.00193 17.7436 2.98518 17.8878 3.01188C18.032 3.03859 18.1651 3.10755 18.27 3.21001ZM18.5 13.75V16.46L24.17 11L18.5 5.52001V8.25001C18.4974 8.44812 18.4176 8.63738 18.2775 8.77748C18.1374 8.91757 17.9481 8.99742 17.75 9.00001C16.78 9.00001 8.9 9.22001 7.66 16.28C10.536 14.0399 14.1065 12.8792 17.75 13C17.9481 13.0026 18.1374 13.0825 18.2775 13.2225C18.4176 13.3626 18.4974 13.5519 18.5 13.75ZM22.7225 19.2225C22.8626 19.0824 23.0519 19.0026 23.25 19C23.4481 19.0026 23.6374 19.0824 23.7775 19.2225C23.9176 19.3626 23.9974 19.5519 24 19.75V20.25C24 21.5098 23.4996 22.718 22.6088 23.6088C21.718 24.4996 20.5098 25 19.25 25H7.75C6.49022 25 5.28204 24.4996 4.39124 23.6088C3.50045 22.718 3 21.5098 3 20.25V8.75C3 7.49022 3.50045 6.28204 4.39124 5.39124C5.28204 4.50045 6.49022 4 7.75 4H12.25C12.4489 4 12.6397 4.07902 12.7803 4.21967C12.921 4.36032 13 4.55109 13 4.75C13 4.94891 12.921 5.13968 12.7803 5.28033C12.6397 5.42098 12.4489 5.5 12.25 5.5H7.75C6.88886 5.50264 6.06374 5.84589 5.45482 6.45482C4.84589 7.06374 4.50264 7.88886 4.5 8.75V20.25C4.50264 21.1111 4.84589 21.9363 5.45482 22.5452C6.06374 23.1541 6.88886 23.4974 7.75 23.5H19.25C20.1111 23.4974 20.9363 23.1541 21.5452 22.5452C22.1541 21.9363 22.4974 21.1111 22.5 20.25V19.75C22.5026 19.5519 22.5824 19.3626 22.7225 19.2225Z" fill="#0F6CBD" />
+                        </svg>
+                        <div data-post-id="5212" class="evo-count-shares votes-count fw-600 d-flex p-6 align-items-center border-r-40 clr-neutral clr-brand-bg" style="position:relative;">
+                            25                        </div>
+                    </button>
+                    <nav id="social-sharing-buttons" class="evo-dropdown-content" style="display: none;">
+                        <ul class="sharing-btns rounded bg-white d-flex flex-column m-0 p-8" role="menu">
+                            <li role="presentation">
+                                <a data-bi-id="post_page_sidebar_left_social_share" data-bi-name="Share on Facebook" role="menuitem" data-post-id="5212" class="share-post d-flex flex-row align-items-center evo-dropdown-item facebook btn-outline-secondary border-0 rounded p-8 gap-8" href="https://www.facebook.com/sharer/sharer.php?u=https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/" title="Share on Facebook" aria-label="Share on Facebook" target="_blank" rel="noopener noreferrer nofollow" tabindex="-1">
+                                    <img style="max-width: unset;" src="https://devblogs.microsoft.com/agent-framework/wp-content/themes/devblogs-evo/images/social-icons/facebook.svg" alt="Facebook">
+                                    <span class="text-nowrap fs-16">Share on Facebook</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a data-bi-id="post_page_sidebar_left_social_share" data-bi-name="Share on X" role="menuitem" data-post-id="5212" class="share-post d-flex flex-row align-items-center evo-dropdown-item twitter btn-outline-secondary border-0 rounded p-8 gap-8" href="https://twitter.com/intent/tweet?url=https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/&text=Microsoft Agent Framework Version 1.0" title="Share on X" aria-label="Share on X" target="_blank" rel="noopener noreferrer nofollow" tabindex="-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path class="dark-theme" d="M14.4821 10.6218L21.0389 3H19.4852L13.7919 9.61788L9.24467 3H4L10.8763 13.0074L4 21H5.55384L11.5661 14.0113L16.3683 21H21.613L14.4817 10.6218H14.4821ZM12.3539 13.0956L11.6572 12.0991L6.11372 4.16971H8.50033L12.974 10.5689L13.6707 11.5655L19.4859 19.8835H17.0993L12.3539 13.096V13.0956Z" />
+                                    </svg>
+                                    <span class="text-nowrap fs-16">Share on X</span>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a data-bi-id="post_page_sidebar_left_social_share" data-bi-name="Share on LinkedIn" role="menuitem" data-post-id="5212" class="share-post d-flex flex-row align-items-center evo-dropdown-item linkedin btn-outline-secondary border-0 rounded p-8 gap-8" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/" title="Share on LinkedIn" aria-label="Share on LinkedIn" target="_blank" rel="noopener noreferrer nofollow" tabindex="-1">
+                                    <img style="max-width: unset;" src="https://devblogs.microsoft.com/agent-framework/wp-content/themes/devblogs-evo/images/social-icons/linkedin.svg" alt="LinkedIn">
+                                    <span class="text-nowrap fs-16">Share on Linkedin</span>
+                                </a>
+                            </li>
+                            <!--    <li role="presentation">
+                                <button role="menuitem"
+                                    class="d-flex flex-row align-items-center evo-dropdown-item copy-url-button btn-outline-secondary border-0 rounded p-8 gap-8"
+                                    type="button" tabindex="-1" style="width: 100%;">
+                                    <svg width="24" height="10" viewBox="0 0 16 8" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 0C14.2091 0 16 1.79086 16 4C16 6.1422 14.316 7.89108 12.1996 7.9951L12 8H10C9.58579 8 9.25 7.66421 9.25 7.25C9.25 6.8703 9.53215 6.55651 9.89823 6.50685L10 6.5H12C13.3807 6.5 14.5 5.38071 14.5 4C14.5 2.67452 13.4685 1.58996 12.1644 1.50532L12 1.5H10C9.58579 1.5 9.25 1.16421 9.25 0.75C9.25 0.370304 9.53215 0.0565088 9.89823 0.00684643L10 0H12ZM6 0C6.41421 0 6.75 0.335786 6.75 0.75C6.75 1.1297 6.46785 1.44349 6.10177 1.49315L6 1.5H4C2.61929 1.5 1.5 2.61929 1.5 4C1.5 5.32548 2.53154 6.41004 3.83562 6.49468L4 6.5H6C6.41421 6.5 6.75 6.83579 6.75 7.25C6.75 7.6297 6.46785 7.94349 6.10177 7.99315L6 8H4C1.79086 8 0 6.20914 0 4C0 1.8578 1.68397 0.108921 3.80036 0.00489521L4 0H6ZM4.25 3.25H11.75C12.1642 3.25 12.5 3.58579 12.5 4C12.5 4.3797 12.2178 4.69349 11.8518 4.74315L11.75 4.75H4.25C3.83579 4.75 3.5 4.41421 3.5 4C3.5 3.6203 3.78215 3.30651 4.14823 3.25685L4.25 3.25H11.75H4.25Z" />
+                                    </svg>
+                                    <span class="text-nowrap fs-16">Copy Link</span>
+                                </button>
+                            </li> -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div></div><!-- This is the end of main section three column -->
+<div class="container-three-column-post mb-40">
+    <div></div>
+    <div>
+        <div class="border-bottom pb-40 mb-64"><div class="mb-24"><div class="fs-16 fw-600 mb-16">Category</div><div class="d-flex justify-content-start flex-wrap gap-12 post-topics"><a data-bi-area="body_category" data-bi-id="post_page_body_category" data-bi-name="Agent Framework Category" class="d-flex align-items-center btn-outline-secondary px-8" href="https://devblogs.microsoft.com/agent-framework/category/agent-framework/"
+                            aria-label="Agent Framework Category">Agent Framework</a><a data-bi-area="body_category" data-bi-id="post_page_body_category" data-bi-name="Announcements Category" class="d-flex align-items-center btn-outline-secondary px-8" href="https://devblogs.microsoft.com/agent-framework/category/announcements/"
+                            aria-label="Announcements Category">Announcements</a></div></div><div class="mb-24"><div class="fs-16 fw-600 pb-16">Topics</div><div class="d-flex justify-content-start flex-wrap gap-12 post-topics"><a data-bi-area="body_topics" data-bi-id="post_page_body_topics" data-bi-name="Announcement tag" class="d-flex align-items-center btn-outline-secondary px-8" href="https://devblogs.microsoft.com/agent-framework/tag/announcement/"
+							aria-label="Announcement tag">Announcement</a><a data-bi-area="body_topics" data-bi-id="post_page_body_topics" data-bi-name="Microsoft Agent Framework tag" class="d-flex align-items-center btn-outline-secondary px-8" href="https://devblogs.microsoft.com/agent-framework/tag/microsoft-agent-framework/"
+							aria-label="Microsoft Agent Framework tag">Microsoft Agent Framework</a></div></div><div class="post-detail-share social-panel" data-bi-area="body_share post">
+					<div class="fs-16 fw-600 mb-16 x-hidden-focus">Share</div>
+					<ul class="d-flex social-share-list gap-24 pl-0" style="list-style-type: none;">
+						<li class="social-share-item">
+							<a href="https://www.facebook.com/sharer/sharer.php?u=https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/" data-bi-id="post_page_body_share post" data-post-id=5212 data-bi-name="Share on Facebook" aria-label="Share on Facebook" rel="noopener noreferrer nofollow" target="_blank" class="d-flex share-post">
+								<span aria-hidden="true" class="msx-svg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+								<path d="M25.6663 13.9997C25.6663 7.55635 20.443 2.33301 13.9997 2.33301C7.55635 2.33301 2.33301 7.55635 2.33301 13.9997C2.33301 19.8228 6.59934 24.6494 12.1768 25.5246V17.3721H9.21452V13.9997H12.1768V11.4294C12.1768 8.5054 13.9185 6.8903 16.5834 6.8903C17.8599 6.8903 19.195 7.11816 19.195 7.11816V9.98926H17.7238C16.2746 9.98926 15.8226 10.8886 15.8226 11.8112V13.9997H19.0583L18.541 17.3721H15.8226V25.5246C21.4 24.6494 25.6663 19.8228 25.6663 13.9997Z" fill="#0F6CBD"/>
+								<path d="M19.0586 14H15.8229V11.8115C15.8229 10.8889 16.2749 9.98958 17.7242 9.98958H19.1953V7.11849C19.1953 7.11849 17.8602 6.89062 16.5838 6.89062C13.9188 6.89062 12.1771 8.50573 12.1771 11.4297V14H9.21484V17.3724H12.1771V25.5249C12.7711 25.6181 13.3798 25.6667 14 25.6667C14.6202 25.6667 15.2289 25.6181 15.8229 25.5249V17.3724H18.5413L19.0586 14Z" fill="white"/></span></svg></a>
+						</li>
+						<li class="social-share-item">
+							<a href="https://twitter.com/intent/tweet?url=https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/&text=Microsoft Agent Framework Version 1.0" data-bi-id="post_page_body_share post" data-post-id=5212 data-bi-name="Share on X" aria-label="Share on X" target="_blank" rel="noreferrer noopener" class="d-flex share-post">
+								<span aria-hidden="true" class="msx-svg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path class="dark-theme" d="M16.1643 12.2581L24.6335 2.625H22.6266L15.2728 10.9893L9.39934 2.625H2.625L11.5068 15.2732L2.625 25.375H4.63204L12.3979 16.5421L18.6007 25.375H25.375L16.1638 12.2581H16.1643ZM13.4154 15.3847L12.5155 14.1252L5.35521 4.10339H8.43791L14.2164 12.1913L15.1163 13.4508L22.6276 23.9639H19.5449L13.4154 15.3852V15.3847Z" fill="#242424"/></svg></span></a>
+						</li>
+						<li class="list-inline-item social-share-item">
+							<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/" data-bi-id="post_page_body_share post" data-post-id=5212 data-bi-name="Share on LinkedIn" aria-label="Share on LinkedIn" target="_blank" rel="noreferrer noopener" class="d-flex share-post"><span aria-hidden="true" class="msx-svg"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M2.625 5.01974C2.625 3.69716 3.69716 2.625 5.01974 2.625H22.9803C24.3028 2.625 25.375 3.69716 25.375 5.01974V22.9803C25.375 24.3028 24.3028 25.375 22.9803 25.375H5.01974C3.69716 25.375 2.625 24.3028 2.625 22.9803V5.01974Z" fill="#0F6CBD"/><path d="M9.77138 7.8028C9.77138 6.7122 8.8826 5.82715 7.79011 5.82715C6.69276 5.82715 5.80762 6.7122 5.80762 7.8028C5.80762 8.89461 6.69276 9.77967 7.79011 9.77967C8.8826 9.77967 9.77138 8.89461 9.77138 7.8028ZM18.1982 11.0052C21.6588 11.0052 22.2978 13.2747 22.2978 16.2273V22.2401H18.8809L18.8798 16.6214C18.8681 15.404 18.7292 14.0025 17.1057 14.0025C15.327 14.0025 15.0553 15.3882 15.0553 16.8185V22.2401H11.6433V11.2772H14.9183V12.7753H14.9656C15.4203 11.9132 16.5358 11.0052 18.1982 11.0052ZM9.50026 11.2774V22.2402H6.07971V11.2774H9.50026Z" fill="white"/></svg></span></a>
+						</li>
+					</ul>
+				</div></div>        <div><!-- Author section -->
+            <h2 class="fs-20 mb-24">Author</h2>
+            <div class="d-flex gap-24 flex-column flex-lg-row"><div style="flex: 0 0 100%"><div class="d-flex gap-12 align-items-start"><div class="avatar-parent" style="flex:0 0 auto;"><img class="avatar-40" src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2024/10/ShawnHenry-96x96.jpg" alt="Shawn Henry" style="width: 64px; height: 64px;"></div><div style="flex: 1 0;"><div class="fs-16 fw-600"><a data-bi-area="body_author_bottom" data-bi-id="post_page_body_author_bottom_name" data-bi-name="Shawn Henry"  class="read-more" href="https://devblogs.microsoft.com/agent-framework/author/shawnhenry">Shawn Henry</a></div><div class="fs-12 lh-20 fw-400">Principal Group Product Manager</div></div></div><p class="pt-20 fs-14">Principal Group Product Manager</p></div></div>        </div>
+    </div>
+    <div></div>
+</div>  <div class="container-three-column-even"><!-- start comments bottom full-width section -->
+    <div></div><!-- Place holder for left sidebar -->
+    <div class="mb-80" style="max-width: 1324px;"><!-- start max-width bottom section -->
+      <!-- Comments section -->
+      <div id="comments" class="mb-40" data-bi-area="body_comments" data-bi-id="post_page_body_comments">
+        
+
+    <div id="comments" class="comments-area" data-bi-id="post_page_body_comments">
+    				<h2 class="comments-title">
+            <span class="cm_count">2</span> comments		</h2>
+		
+	<p class="must-log-in"><span class="login-text"> Join the discussion.</span></p>	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title"><a href="javascript:void(0)" title="Leave a comment" class="btn btn-primary">Leave a comment</a><span class="screen-reader-only"><a rel="nofollow" id="cancel-comment-reply-link" href="/agent-framework/microsoft-agent-framework-version-1-0/#respond" style="display:none;">Cancel reply</a></span></h3><p class="must-log-in"><a href='https://devblogs.microsoft.com/agent-framework/wp-login.php?redirect_to=https%3A%2F%2Fdevblogs.microsoft.com%2Fagent-framework%2Fmicrosoft-agent-framework-version-1-0%2F%23comments' class='btn btn-primary'>Sign in</a></p>	</div><!-- #respond -->
+	<div class="comment-reply-respond" id="comment-reply-respond">
+	<form method="post" action="https://devblogs.microsoft.com/agent-framework/wp-comments-post.php" id="commentform" class="wp-core-ui">
+		<div id="editor-container-0">
+			<div id="wp-comment_reply_content-wrap" class="wp-core-ui wp-editor-wrap html-active"><div id="wp-comment_reply_content-editor-container" class="wp-editor-container"><div id="qt_comment_reply_content_toolbar" class="quicktags-toolbar hide-if-no-js"></div><textarea class="wp-editor-area" style="height: 200px" cols="40" name="comment_reply_content" id="comment_reply_content"></textarea></div>
+</div>
+
+			<div class="vote">
+				<span class="form-submit">
+					<input name="submit" type="submit" id="submit" class="btn btn-primary" value="Reply">
+					<input type="button" value="Cancel" id="cancel-reply-comment-form" name="Cancel" class="btn btn-secondary">
+					<input type="hidden" name="comment_post_ID" value="5212" id="comment_post_ID">
+					<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+				</span>
+				<span class="code-of-conduct"><a href="https://aka.ms/msftqacodeconduct">Code of Conduct</a></span>
+			</div>
+			<input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="ad7af05511">
+		</div><!-- editor-container -->
+	</form>
+</div>
+					<div class="cm-top-section">
+				<div class="column center">
+						<span class="solid border-bottom"></span>
+				</div>
+				<div class="column right">
+					<div class="dev_order_list">
+						<span id="sort-filter-label" class="">Sort by :</span>
+						<div class="sel" id="sort-dropdown">
+							<div role="combobox" aria-labelledby="sort-filter-label" aria-controls="sort-filter-options" aria-expanded="false" aria-haspopup="listbox" class="label" tabindex="0">Newest</div>
+							<div role="listbox" aria-labelledby="sort-filter-label" id="sort-filter-options" class="options sort-comment" data-bi-area="body_comments" >
+								<a role="option" aria-selected="true" aria-posinset="1" aria-setsize="3" selected href="javascript:void(0)" value="latest" data-bi-id="post_page_body_comments" aria-label="Newest" data-bi-name="comments_sort_Newest" class="selected">Newest</a>
+								<a role="option" aria-selected="false" aria-posinset="2" aria-setsize="3" href="javascript:void(0)" value="voted" data-bi-id="post_page_body_comments" aria-label="Popular" data-bi-name="comments_sort_Popular" >Popular</a>
+								<a role="option" aria-selected="false" aria-posinset="3" aria-setsize="3" href="javascript:void(0)" value="old" data-bi-id="post_page_body_comments" aria-label="Oldest" data-bi-name="comments_sort_Oldest">Oldest</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				<ul class="commentlist">
+								
+    <li class="comment byuser comment-author-nareshnagaraj1996 even thread-even depth-1 comment-show" id="li-comment-183">
+    	<article id="comment-183" class="comment ">
+						<div class="comment-author vcard">
+				<img alt='' data-src='https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/nsl_avatars/d8bf060152b526a38a0c6e41fadd2e17-48x48.webp' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwAQMAAABtzGvEAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAADUlEQVQYlWNgGAXUBAABUAABeLzIBgAAAABJRU5ErkJggg=="  data-srcset='https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/nsl_avatars/d8bf060152b526a38a0c6e41fadd2e17.webp 2x' class="avatar avatar-40 photo avatar-default lazyload" height='40' width='40' decoding='async'/>			</div><!-- .comment-author .vcard -->
+        <header>
+			
+					<!-- <span class="author-name" <cite class="fn">naresh nagaraj</cite> 					</span> -->
+					<span class="author-name fs-16 fw-600">
+												naresh nagaraj											</span>
+					
+					<span class="comment-date fs-14">
+						<!-- <time pubdate datetime="2026-04-04T10:15:04-07:00">
+							          	</time> -->
+				
+			2 minutes ago							 	</span>
+					
+					 <span class="voting"><span id="loggedoutvotes183"><span class="icon-like-dislike"><button class='btn-no-styles comment-reply-login x-hidden-focus' title='Login to vote' data-toggle='tooltip'
+				onclick='window.location="https://devblogs.microsoft.com/agent-framework/wp-login.php?redirect_to=https%3A%2F%2Fdevblogs.microsoft.com%2Fagent-framework%2Fmicrosoft-agent-framework-version-1-0%2F%3Fcommentid%3D183%2F%23comments"' data-bi-id='post_page_body_comments' data-bi-name='Login to vote' aria-label='Login to vote, 0 total votes'><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.052 2.29418C10.3913 1.31688 11.6841 0.866611 12.4829 1.70374C12.6455 1.87416 12.8081 2.05832 12.9176 2.22254C13.2379 2.70305 13.3725 3.33584 13.4218 3.9522C13.4721 4.58034 13.438 5.25446 13.3738 5.86473C13.3093 6.47735 13.2129 7.03948 13.1328 7.44766C13.1294 7.46535 13.1259 7.48277 13.1225 7.49989H14.006C15.8777 7.49989 17.2924 9.19503 16.9576 11.0365L16.2737 14.7983C15.8017 17.3942 13.2078 19.0289 10.6622 18.3347L5.06251 16.8075C4.14894 16.5583 3.45455 15.8144 3.26885 14.8859L2.91581 13.1207C2.63809 11.7321 3.69991 10.5623 4.82905 10.116C5.15163 9.9885 5.44337 9.82668 5.66974 9.62586C7.37583 8.11234 7.99442 6.90276 9.05406 4.77684C9.4084 4.06594 9.77205 3.10043 10.052 2.29418ZM12.0165 7.87851L12.0169 7.87696L12.0187 7.86962L12.0262 7.83852C12.0328 7.81068 12.0426 7.76892 12.0549 7.71482C12.0793 7.60658 12.1135 7.44919 12.1515 7.25525C12.2277 6.86655 12.3188 6.33493 12.3793 5.76005C12.4401 5.18282 12.4685 4.57569 12.425 4.03195C12.3806 3.47644 12.2652 3.04673 12.0855 2.77724C12.0264 2.68859 11.9138 2.55593 11.7594 2.3941C11.5605 2.18565 11.1314 2.23417 10.9967 2.62217C10.7141 3.43598 10.3334 4.45183 9.94904 5.22294C8.88216 7.36338 8.19326 8.72396 6.33336 10.3739C5.99304 10.6758 5.58878 10.891 5.19665 11.046C4.31631 11.394 3.75035 12.1944 3.89639 12.9246L4.24943 14.6898C4.36085 15.2469 4.77748 15.6932 5.32562 15.8427L10.9254 17.3699C12.9052 17.9099 14.9227 16.6384 15.2898 14.6194L15.9738 10.8577C16.197 9.62998 15.2538 8.49989 14.006 8.49989H12.5015C12.3476 8.49989 12.2022 8.42895 12.1074 8.3076C12.0127 8.18627 11.9792 8.02785 12.0165 7.87851C12.0165 7.87847 12.0165 7.87855 12.0165 7.87851Z" fill="#0F6CBD"/></svg><span class='vote_counts'> 0</span></button></span></span>				</span>
+				
+					<div class="comment-meta commentmetadata">
+						<span class="collapse-comment" id="collapse-comment-183" data-toggle="collapse">
+							<!-- <a href="javascript:void(0)" title="Collapse this comment"> -->
+							<button class="btn" title="Collapse this comment" data-toggle="tooltip" aria-expanded="true" aria-controls="comment-text-183">
+							<span class="sr-only">Collapse this comment</span>	
+							<span class="svg-icon">						
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10C6 9.72386 6.22386 9.5 6.5 9.5C10.7032 9.5 8.98852 9.5 13.5 9.5C13.7761 9.5 14 9.72386 14 10C14 10.2761 13.7761 10.5 13.5 10.5C9.29954 10.5 11.0162 10.5 6.5 10.5C6.22386 10.5 6 10.2761 6 10ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" fill="#0F6CBD"/></svg>
+							</span>
+							</button>
+							<!-- </a> -->
+						</span>
+						
+						<span class="copy-link">
+							<button class="copy-link-anchor btn" title="Copy link" data-toggle="tooltip" data-clipboard-text="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/?commentid=183#comment-183" targetUri="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/?commentid=183#comment-183">
+								<span class="sr-only">Copy link</span>
+								<!-- <i class="fabric-icon fabric-icon--Link" aria-hidden="true"></i>-->
+								<!-- <div class="copy-link-live" role="region" aria-live="assertive"></div> -->
+								<!-- <span class="fabric-icon"> -->
+								<svg class="fabric-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 6C16.2091 6 18 7.79086 18 10C18 12.1422 16.316 13.8911 14.1996 13.9951L14 14H12C11.5858 14 11.25 13.6642 11.25 13.25C11.25 12.8703 11.5322 12.5565 11.8982 12.5068L12 12.5H14C15.3807 12.5 16.5 11.3807 16.5 10C16.5 8.67452 15.4685 7.58996 14.1644 7.50532L14 7.5H12C11.5858 7.5 11.25 7.16421 11.25 6.75C11.25 6.3703 11.5322 6.05651 11.8982 6.00685L12 6H14ZM8 6C8.41421 6 8.75 6.33579 8.75 6.75C8.75 7.1297 8.46785 7.44349 8.10177 7.49315L8 7.5H6C4.61929 7.5 3.5 8.61929 3.5 10C3.5 11.3255 4.53154 12.41 5.83562 12.4947L6 12.5H8C8.41421 12.5 8.75 12.8358 8.75 13.25C8.75 13.6297 8.46785 13.9435 8.10177 13.9932L8 14H6C3.79086 14 2 12.2091 2 10C2 7.8578 3.68397 6.10892 5.80036 6.0049L6 6H8ZM6.25 9.25H13.75C14.1642 9.25 14.5 9.58579 14.5 10C14.5 10.3797 14.2178 10.6935 13.8518 10.7432L13.75 10.75H6.25C5.83579 10.75 5.5 10.4142 5.5 10C5.5 9.6203 5.78215 9.30651 6.14823 9.25685L6.25 9.25H13.75H6.25Z" fill="#115EA3"/>
+								</svg>
+								<!-- </span>								 -->
+								<div class="copy-link-live" role="status"></div>
+
+							</button>
+						</span>
+
+											</div><!-- .comment-meta .commentmetadata -->
+				</header>
+																		<div class="comment-content default-cm-content" id="comment-text-183">
+									<p>Cool, Finally we are ready to fun with other core (Java, .js) developers.</p>
+									</div>
+
+				
+							
+					<footer><div class="reply fs-14">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M17.5 4C17.7761 4 18 4.22386 18 4.5C18 8.64214 14.6421 12 10.5 12H3.70711L7.35355 15.6464C7.54882 15.8417 7.54882 16.1583 7.35355 16.3536C7.15829 16.5488 6.84171 16.5488 6.64645 16.3536L2.14645 11.8536C1.95118 11.6583 1.95118 11.3417 2.14645 11.1464L6.64645 6.64645C6.84171 6.45118 7.15829 6.45118 7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L3.70711 11H10.5C14.0899 11 17 8.08985 17 4.5C17 4.22386 17.2239 4 17.5 4Z" fill="#0F6CBD"/>
+						</svg> <a class='comment-reply-login x-hidden-focus' href='https://devblogs.microsoft.com/agent-framework/wp-login.php?redirect_to=https%3A%2F%2Fdevblogs.microsoft.com%2Fagent-framework%2Fmicrosoft-agent-framework-version-1-0%2F%23comments'>Log in to Vote or Reply</a></div></footer>				
+			        
+      </article><!-- #comment-## -->
+    </li><!-- #comment-## -->
+	
+    <li class="comment byuser comment-author-charles odd alt thread-odd thread-alt depth-1 comment-show" id="li-comment-182">
+    	<article id="comment-182" class="comment ">
+						<div class="comment-author vcard">
+				<img alt='' data-src='https://secure.gravatar.com/avatar/c29ad652d31c087cbee154f6f9d8ed1e?s=40&#038;r=g' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoAQMAAAC2MCouAAAAA1BMVEXW1taWrGEgAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAADElEQVQImWNgGFkAAADwAAFTiaRLAAAAAElFTkSuQmCC"  data-srcset='https://secure.gravatar.com/avatar/c29ad652d31c087cbee154f6f9d8ed1e?s=80&#038;r=g 2x' class="avatar avatar-40 photo lazyload" height='40' width='40' decoding='async'/>			</div><!-- .comment-author .vcard -->
+        <header>
+			
+					<!-- <span class="author-name" <cite class="fn">Charles Fettinger</cite> 					</span> -->
+					<span class="author-name fs-16 fw-600">
+												Charles Fettinger											</span>
+					
+					<span class="comment-date fs-14">
+						<!-- <time pubdate datetime="2026-04-04T09:04:20-07:00">
+							          	</time> -->
+				
+			1 hour ago							 	</span>
+					
+					 <span class="voting"><span id="loggedoutvotes182"><span class="icon-like-dislike"><button class='btn-no-styles comment-reply-login x-hidden-focus' title='Login to vote' data-toggle='tooltip'
+				onclick='window.location="https://devblogs.microsoft.com/agent-framework/wp-login.php?redirect_to=https%3A%2F%2Fdevblogs.microsoft.com%2Fagent-framework%2Fmicrosoft-agent-framework-version-1-0%2F%3Fcommentid%3D182%2F%23comments"' data-bi-id='post_page_body_comments' data-bi-name='Login to vote' aria-label='Login to vote, 0 total votes'><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.052 2.29418C10.3913 1.31688 11.6841 0.866611 12.4829 1.70374C12.6455 1.87416 12.8081 2.05832 12.9176 2.22254C13.2379 2.70305 13.3725 3.33584 13.4218 3.9522C13.4721 4.58034 13.438 5.25446 13.3738 5.86473C13.3093 6.47735 13.2129 7.03948 13.1328 7.44766C13.1294 7.46535 13.1259 7.48277 13.1225 7.49989H14.006C15.8777 7.49989 17.2924 9.19503 16.9576 11.0365L16.2737 14.7983C15.8017 17.3942 13.2078 19.0289 10.6622 18.3347L5.06251 16.8075C4.14894 16.5583 3.45455 15.8144 3.26885 14.8859L2.91581 13.1207C2.63809 11.7321 3.69991 10.5623 4.82905 10.116C5.15163 9.9885 5.44337 9.82668 5.66974 9.62586C7.37583 8.11234 7.99442 6.90276 9.05406 4.77684C9.4084 4.06594 9.77205 3.10043 10.052 2.29418ZM12.0165 7.87851L12.0169 7.87696L12.0187 7.86962L12.0262 7.83852C12.0328 7.81068 12.0426 7.76892 12.0549 7.71482C12.0793 7.60658 12.1135 7.44919 12.1515 7.25525C12.2277 6.86655 12.3188 6.33493 12.3793 5.76005C12.4401 5.18282 12.4685 4.57569 12.425 4.03195C12.3806 3.47644 12.2652 3.04673 12.0855 2.77724C12.0264 2.68859 11.9138 2.55593 11.7594 2.3941C11.5605 2.18565 11.1314 2.23417 10.9967 2.62217C10.7141 3.43598 10.3334 4.45183 9.94904 5.22294C8.88216 7.36338 8.19326 8.72396 6.33336 10.3739C5.99304 10.6758 5.58878 10.891 5.19665 11.046C4.31631 11.394 3.75035 12.1944 3.89639 12.9246L4.24943 14.6898C4.36085 15.2469 4.77748 15.6932 5.32562 15.8427L10.9254 17.3699C12.9052 17.9099 14.9227 16.6384 15.2898 14.6194L15.9738 10.8577C16.197 9.62998 15.2538 8.49989 14.006 8.49989H12.5015C12.3476 8.49989 12.2022 8.42895 12.1074 8.3076C12.0127 8.18627 11.9792 8.02785 12.0165 7.87851C12.0165 7.87847 12.0165 7.87855 12.0165 7.87851Z" fill="#0F6CBD"/></svg><span class='vote_counts'> 0</span></button></span></span>				</span>
+				
+					<div class="comment-meta commentmetadata">
+						<span class="collapse-comment" id="collapse-comment-182" data-toggle="collapse">
+							<!-- <a href="javascript:void(0)" title="Collapse this comment"> -->
+							<button class="btn" title="Collapse this comment" data-toggle="tooltip" aria-expanded="true" aria-controls="comment-text-182">
+							<span class="sr-only">Collapse this comment</span>	
+							<span class="svg-icon">						
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10C6 9.72386 6.22386 9.5 6.5 9.5C10.7032 9.5 8.98852 9.5 13.5 9.5C13.7761 9.5 14 9.72386 14 10C14 10.2761 13.7761 10.5 13.5 10.5C9.29954 10.5 11.0162 10.5 6.5 10.5C6.22386 10.5 6 10.2761 6 10ZM10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18ZM10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17Z" fill="#0F6CBD"/></svg>
+							</span>
+							</button>
+							<!-- </a> -->
+						</span>
+						
+						<span class="copy-link">
+							<button class="copy-link-anchor btn" title="Copy link" data-toggle="tooltip" data-clipboard-text="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/?commentid=182#comment-182" targetUri="https://devblogs.microsoft.com/agent-framework/microsoft-agent-framework-version-1-0/?commentid=182#comment-182">
+								<span class="sr-only">Copy link</span>
+								<!-- <i class="fabric-icon fabric-icon--Link" aria-hidden="true"></i>-->
+								<!-- <div class="copy-link-live" role="region" aria-live="assertive"></div> -->
+								<!-- <span class="fabric-icon"> -->
+								<svg class="fabric-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M14 6C16.2091 6 18 7.79086 18 10C18 12.1422 16.316 13.8911 14.1996 13.9951L14 14H12C11.5858 14 11.25 13.6642 11.25 13.25C11.25 12.8703 11.5322 12.5565 11.8982 12.5068L12 12.5H14C15.3807 12.5 16.5 11.3807 16.5 10C16.5 8.67452 15.4685 7.58996 14.1644 7.50532L14 7.5H12C11.5858 7.5 11.25 7.16421 11.25 6.75C11.25 6.3703 11.5322 6.05651 11.8982 6.00685L12 6H14ZM8 6C8.41421 6 8.75 6.33579 8.75 6.75C8.75 7.1297 8.46785 7.44349 8.10177 7.49315L8 7.5H6C4.61929 7.5 3.5 8.61929 3.5 10C3.5 11.3255 4.53154 12.41 5.83562 12.4947L6 12.5H8C8.41421 12.5 8.75 12.8358 8.75 13.25C8.75 13.6297 8.46785 13.9435 8.10177 13.9932L8 14H6C3.79086 14 2 12.2091 2 10C2 7.8578 3.68397 6.10892 5.80036 6.0049L6 6H8ZM6.25 9.25H13.75C14.1642 9.25 14.5 9.58579 14.5 10C14.5 10.3797 14.2178 10.6935 13.8518 10.7432L13.75 10.75H6.25C5.83579 10.75 5.5 10.4142 5.5 10C5.5 9.6203 5.78215 9.30651 6.14823 9.25685L6.25 9.25H13.75H6.25Z" fill="#115EA3"/>
+								</svg>
+								<!-- </span>								 -->
+								<div class="copy-link-live" role="status"></div>
+
+							</button>
+						</span>
+
+											</div><!-- .comment-meta .commentmetadata -->
+				</header>
+																		<div class="comment-content default-cm-content" id="comment-text-182">
+									<div class="hide-content"><p>This sounds like a great development project, congratulations on 1.0!</p>
+<p>I have been a Microsoft developer and partner since earning my MCSD. At that time, it covered software development and infrastructure through the entire life cycle. For AI, I created some MCP servers to expand Visual Studio agentic capacity, but VS Code is clearly more capable.</p>
+<p>I built local infrastructure for AI to protect my code. My AMD 395 AI based servers have replaced expensive Nvidia GPUs.  </p>
+<p>Can I integrate your fine work into my local model serving system? Is there a server software version or is this all closed source...</div><a href="javascript:void(0)" class="readmore-comment read-more_1 fs-16 fw-600">Read more</a><div class="show-morecontent" style="display:none;"><p>This sounds like a great development project, congratulations on 1.0!</p>
+<p>I have been a Microsoft developer and partner since earning my MCSD. At that time, it covered software development and infrastructure through the entire life cycle. For AI, I created some MCP servers to expand Visual Studio agentic capacity, but VS Code is clearly more capable.</p>
+<p>I built local infrastructure for AI to protect my code. My AMD 395 AI based servers have replaced expensive Nvidia GPUs.  </p>
+<p>Can I integrate your fine work into my local model serving system? Is there a server software version or is this all closed source on Azure?</p>
+</div><a href="javascript:void(0)" class="readless-comment read-less_1 fs-16 fw-600" style="display:none;">Read less</a>									</div>
+
+				
+							
+					<footer><div class="reply fs-14">
+						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M17.5 4C17.7761 4 18 4.22386 18 4.5C18 8.64214 14.6421 12 10.5 12H3.70711L7.35355 15.6464C7.54882 15.8417 7.54882 16.1583 7.35355 16.3536C7.15829 16.5488 6.84171 16.5488 6.64645 16.3536L2.14645 11.8536C1.95118 11.6583 1.95118 11.3417 2.14645 11.1464L6.64645 6.64645C6.84171 6.45118 7.15829 6.45118 7.35355 6.64645C7.54882 6.84171 7.54882 7.15829 7.35355 7.35355L3.70711 11H10.5C14.0899 11 17 8.08985 17 4.5C17 4.22386 17.2239 4 17.5 4Z" fill="#0F6CBD"/>
+						</svg> <a class='comment-reply-login x-hidden-focus' href='https://devblogs.microsoft.com/agent-framework/wp-login.php?redirect_to=https%3A%2F%2Fdevblogs.microsoft.com%2Fagent-framework%2Fmicrosoft-agent-framework-version-1-0%2F%23comments'>Log in to Vote or Reply</a></div></footer>				
+			        
+      </article><!-- #comment-## -->
+    </li><!-- #comment-## -->
+					</ul><!-- .commentlist -->
+			</div><!-- #comments .comments-area -->
+<script id="commentsloader">
+								var ajaxurl_comments = 'https://devblogs.microsoft.com/agent-framework/wp-admin/admin-ajax.php';
+								var parent_post_id = 5212;
+								var cpage = 1;
+								</script>      </div>
+      <div class="read-next-desktop">
+        <div class="read-next">
+          <!-- Read Next Section -->
+    
+                <h2 class="fs-20 mb-24">Read next</h2>
+            <div>
+                <article>
+  <div class="box bg-white p-12 rounded shadow mb-24 position-relative border-1" style="max-width: 334px;">
+      <div class="fs-14 mb-16 fw-light">March 18, 2026</div>
+      <h3 class="fs-16 mb-16"><a class="single-click" data-bi-area="sidebar_right_read_next" data-bi-id="post_page_sidebar_right_read_next_singleclick" data-bi-name="Handling Long-Running Operations with Background Responses" href="https://devblogs.microsoft.com/agent-framework/handling-long-running-operations-with-background-responses/">Handling Long-Running Operations with Background Responses</a></h3>
+      <div class="d-flex gap-6 align-items-center"><div class="d-flex gap-6 align-items-center">
+            <div class="avatar-parent">
+                            <img src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2023/12/9e589fc0-853d-43d4-9ebd-7de4e5642d0a-96x96.jpeg" style="width: 20px; height: 20px;"
+                    class="avatar-20 rounded-pill" alt="Sergey Menshykh">
+                            <img src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2024/03/1594794760570-96x96.jpeg" style="width: 20px; height: 20px;"
+                    class="avatar-20 rounded-pill" alt="Eduard van Valkenburg">
+                    </div>
+        <div class="d-flex gap-6">
+            <div class="d-flex fs-14">Sergey,</div><div class="d-flex fs-14">Eduard</div>        </div>
+    </div></div>
+</div>
+</article><article>
+  <div class="box bg-white p-12 rounded shadow mb-24 position-relative border-1" style="max-width: 334px;">
+      <div class="fs-14 mb-16 fw-light">March 13, 2026</div>
+      <h3 class="fs-16 mb-16"><a class="single-click" data-bi-area="sidebar_right_read_next" data-bi-id="post_page_sidebar_right_read_next_singleclick" data-bi-name="What&#8217;s New in Agent Skills: Code Skills, Script Execution, and Approval for Python" href="https://devblogs.microsoft.com/agent-framework/whats-new-in-agent-skills-code-skills-script-execution-and-approval-for-python/">What&#8217;s New in Agent Skills: Code Skills, Script Execution, and Approval for Python</a></h3>
+      <div class="d-flex gap-6 align-items-center"><div class="d-flex gap-6 align-items-center">
+            <div class="avatar-parent">
+                        <img src="https://devblogs.microsoft.com/agent-framework/wp-content/uploads/sites/78/2023/12/9e589fc0-853d-43d4-9ebd-7de4e5642d0a-96x96.jpeg" style="width: 20px; height: 20px;"
+            class="avatar-20 rounded-pill a" alt="Sergey Menshykh">
+        </div>
+        <span class="fs-14">Sergey Menshykh</span>
+    </div></div>
+</div>
+

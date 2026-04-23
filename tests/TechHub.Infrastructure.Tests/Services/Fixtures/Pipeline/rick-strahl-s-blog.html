@@ -1,0 +1,878 @@
+﻿
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+if (typeof(jQuery) == 'undefined')  
+        document.write(unescape("%3Cscript src='/wwSC.axd?r=Westwind.Web.Resources.jquery.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<title>
+	Azure Trusted Signing Revisited with Dotnet Sign - Rick Strahl's Web Log
+</title><meta http-equiv="x-ua-compatible" content="ie=edge" /><meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1" /><link id="ctl00_RssLink" rel="alternate" type="application/rss+xml" title="Rick Strahl&#39;s Web Log" href="https://feeds.feedburner.com/rickstrahl" /><meta id="ctl00_metaKeyWords" name="Keywords" content="Code Signing,Azure Trusted Signing,dotnet-sign,Sign" /><meta id="ctl00_metaDescription" name="Description" content="In this follow-up post to my previous guide on Azure Trusted Signing, I  explore how the new `dotnet sign` tool significantly simplifies the code signing process compared to the traditional `SignTool` workflow. The post identifies `dotnet sign` using `artifact-signing` as a faster, more efficient alternative." /><link rel="stylesheet" href="/scripts/fontawesome/css/all.min.css?v=1.26" type="text/css" />
+
+    <style type="text/css">
+        .blogimgtag  { border:none;margin-top:5px; }
+    
+        a.paypal {
+            background: steelblue;margin: 5px 10% 5px 10%; padding: 4px 4px 2px 4px; text-align: center; display: block;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        a.paypal:hover {
+            background: rgb(46, 115, 172);
+        }
+        a.paypal img {
+            height: 30px;
+        }
+        .product-icon { max-width: 1.1em; display: inline; vert-align: bottom  }
+    </style>
+    
+   
+    
+        <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Search Rick Strahl's Blog">         
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://weblog.west-wind.com/rsd.xml" />
+    
+    <meta name="author" content="Rick Strahl" />
+
+    <meta name="twitter:title" content="Azure Trusted Signing Revisited with Dotnet Sign" />
+    <meta name="twitter:description" content="In this follow-up post to my previous guide on Azure Trusted Signing, I  explore how the new `dotnet sign` tool significantly simplifies the code signing process compared to the traditional `SignTool` workflow. The post identifies `dotnet sign` using `artifact-signing` as a faster, more efficient alternative." />
+    <meta name="twitter:creator" content="@rickstrahl" />
+    <meta name="twitter:domain" content="weblog.west-wind.com" />
+
+    <meta property="og:title" content="Azure Trusted Signing Revisited with Dotnet Sign" />
+    <meta property="og:description" content="In this follow-up post to my previous guide on Azure Trusted Signing, I  explore how the new `dotnet sign` tool significantly simplifies the code signing process compared to the traditional `SignTool` workflow. The post identifies `dotnet sign` using `artifact-signing` as a faster, more efficient alternative." />    
+    <meta property="og:type" content="article" />
+    <meta property="article:author" content="https://facebook.com/rickstrahl" />
+    <meta property="og:url" content="https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />    
+    <meta property="twitter:image" content="https://weblog.west-wind.com/images/2026/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign/TrustedSigningBanner.jpg"/>
+    <meta property="og:image" content="https://weblog.west-wind.com/images/2026/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign/TrustedSigningBanner.jpg"/>
+          
+    
+    <link href="/ShowPost.css?v=1.26" rel="stylesheet" type="text/css" />
+    <style>
+        #ArticleBody {
+            margin-right: 0;            
+        }
+
+        *.code-badge {
+            padding: 8px !important;
+            background: #505050 !important;
+        }
+        /*#Article img {
+            pointer-events: none;
+        }*/
+    </style>
+
+<script src="/scripts/ww.jQuery.js" type="text/javascript"></script>
+
+<script src="/ShowPost.js" type="text/javascript"></script>
+<link href="../../../../App_Themes/Standard/Standard.css?v=1.26" type="text/css" rel="stylesheet" /></head>
+<body>
+
+<div id="page-wrapper">
+<div id="toplevel">
+    
+<form method="post" action="./Azure-Trusted-Signing-Revisited-with-Dotnet-Sign" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJODA4NTkyMDkwZBgBBRVjdGwwMCRDb250ZW50JENhcHRjaGEPMpICAAEAAAD/////AQAAAAAAAAAMAgAAAE1XZXN0d2luZC5XZWIuV2ViRm9ybXMsIFZlcnNpb249Mi44NS4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49bnVsbAUBAAAAJ1dlc3R3aW5kLldlYi5Db250cm9scy5EaXNwbGF5RXhwcmVzc2lvbgcAAAANRXhwZWN0ZWRWYWx1ZQZWYWx1ZTEGVmFsdWUyCU9wZXJhdGlvbgJJZAxVbmlxdWVQYWdlSWQHRW50ZXJlZAAAAAEBAQAICAgNAgAAAAgAAAAEAAAABAAAAAYDAAAAASsGBAAAAAgzZTAyYjVjYgYFAAAAAOnVRqeylN5IC2RqLDzp7BxpVvOFFgC85LQAb9F2AUviEtbAmBOHs1W6aw==" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var scriptVars = {
+	webBasePath: "/"
+};
+var serverVars = {
+	commentMaxLength: 4000,
+	txtBodyId: "ctl00_Content_txtBody",
+	txtAuthorId: "ctl00_Content_txtAuthor"
+};
+function WebForm_OnSubmit() {
+var CpCtl = document.getElementById('3e02b5cb');
+if (CpCtl) CpCtl.value += '_3e02b5cb';
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3F8968ED" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKqKvPAVqJy0LrJoZUtCd0EARF5kFqnCFqtyoWIwXSnSyZsiJYGr03PZMJfLMjLCXUiZ4+EgHs9UqnrUNWZ6qaV" />
+</div>
+
+<div class="pagemarquee">           
+   <img class="hero-image" src="/images/HeroImages/RickHero15.jpg"  />   
+
+
+   <img class="author-image"  src="/images/rick175x175.jpg"/>     
+    <header class="blog-name-container" onclick="window.location='/';">
+        <h2 style="margin: 0">Rick Strahl's Weblog &nbsp;</h2>
+        <b>Wind, waves, code and everything in between...<br />
+           .NET &bull; C# &bull; Markdown &bull; WPF &bull; All Things Web
+        </b>
+    </header>  
+</div>
+    
+<div class="marquee-bottom-menu" style="margin-bottom: 0;">    
+    <div class="marquee-bottom-sharing" style="float: right; margin-right:20px; margin-top: -20px; font-size: 35px;  ">        
+        <a href="https://twitter.com/rickstrahl" title="Rick Strahl on Twitter" >
+            <span class="fa-stack" style="line-height: 1em;width: 1em;height: 1em;">
+                <i class="fas fa-square fa-stack-1x" style=" color: white; font-size: 0.95em "></i>
+                <i class="fab fa-twitter-square fa-stack-1x" style=" color: rgb(53, 155, 240);"></i>                
+            </span>
+        </a>        
+        <a href="https://feeds.feedburner.com/rickstrahl" title="RSS feed for Rick Strahl's Weblog">
+         <span class="fa-stack" style="width: 1em;line-height: 1em;height: 1em;">
+                <i class="fas fa-square fa-stack-1x" style=" width: 20px; color: white; font-size: 0.9em "></i>
+                <i class="fas fa-rss-square fa-stack-1x" style="width: 20px; color: #ff6a00"></i>                
+         </span>
+        </a>
+        
+    </div>
+
+    <span class="marquee-bottom-links">
+        <a href="https://west-wind.com/contact/" title="">Contact</a> &nbsp; &bull; &nbsp;
+        <a href="https://west-wind.com/articles.aspx">Articles</a>  <span class="hide-small">&nbsp; &bull; &nbsp;</span>
+        <a href="https://store.west-wind.com" class="hide-small">Products</a>  <span class="hide-small">&nbsp; &bull; &nbsp;</span> 
+        <a href="https://support.west-wind.com" class="hide-small">Support</a>  <span class="hide-small">&nbsp; &bull; &nbsp;</span> 
+        <a href="https://weblog.west-wind.com/advertise" class="hide-small">Advertise</a>
+    </span>             
+</div>
+  
+    
+    <div id="SponsorPanel"
+     onclick="window.location.href='https://markdownmonster.west-wind.com?utm_campaign=westwind-weblog-sponsored'"
+     title="Please stop by our friends at West Wind Technologies who are graciously&#010providing sponsorship to remove all other ads on this site."
+     style="cursor: pointer">
+    
+    <div class="ad-free-msg">
+        Sponsored by:
+    </div> 
+    <div style="flex: auto;">
+        <a href="https://markdownmonster.west-wind.com?utm_campaign=westwind-weblog-sponsored"
+           title="Please stop by our friends at West Wind Technologies who are graciously&#010providing sponsorship.">
+            <img src="https://markdownmonster.west-wind.com/Images/MarkdownMonster_Icon_256.png"
+                 style="height: 1.3em;  vertical-align: top" />
+            <b>Markdown Monster</b>
+        </a>
+        - The Markdown Editor for Windows
+        <a href="https://markdownmonster.west-wind.com?utm_campaign=westwind-weblog-sponsored"
+           title="Please stop by our friends at West Wind Technologies who are graciously&#010providing sponsorship to remove all other ads on this site.">
+            <i class="fa fa-external-link" style="color: #333; padding: 0 5px; font-weight: bold"></i>
+        </a>
+    </div>    
+    <div class="right">
+        <a href="/advertise" ><span style="font-size: 0.7em">advertise here</span></a>
+    </div>
+</div>
+
+<div class="clearfix"></div>
+
+
+<div class="post-container">
+
+    <aside class="post-sidebar" >
+        <div class="author-name">Rick Strahl</div>
+        <nav class="twitter-name" style="font-weight: bold;">
+            <a href="https://twitter.com/rickstrahl" title="Rick Strahl on Twitter">
+                @RickStrahl
+            </a>
+        </nav>
+
+
+        
+        <nav class="sidebar-group" style="margin-top: 10px;">
+            <div><a  href='/posts' ><i class='far fa-file-alt'></i>  Posts - 1291</span></a></div>
+<div><a href='/comments' ><i class='far fa-comments'></i> Comments - 15664</a></div>
+ 
+            <div>
+                <a href="https://feeds.feedburner.com/rickstrahl"
+                    title="RSS feed for this Weblog">
+                    <i class="fa fa-rss-square" style="color: orange" class="product-icon"></i>
+                    RSS Feed
+                </a>
+            </div>
+            <div>
+                 
+
+            </div>
+        </nav>
+
+        <div class="sidebar-header">Rick's Sites</div>
+        <nav class="sidebar-group">
+            <div>
+                <img src="https://webconnection.west-wind.com/favicon.png" class="product-icon" />
+                <a href="https://west-wind.com"
+                    title="Rick's company home page.">West Wind Technologies</a>
+            </div>
+            <div>
+                <a href="https://github.com/RickStrahl?tab=repositories"
+                    title="Rick Strahl's Open Source and Sample projects on GitHub">
+                    <i class="fab fa-github"></i>
+                    Rick's GitHub Projects
+                </a>
+            </div>
+            <div>
+                <a href="https://west-wind.com/wconnect/weblog/"
+                    title="Rick's other blog to discuss FoxPro and Web Connection topics">
+                    <img src="https://www.west-wind.com/images/foxIcon_small.gif" class="product-icon" />
+                    Rick's FoxPro Web Log
+                </a>
+            </div>
+            <div>
+                <a href="https://support.west-wind.com/"
+                    title="West Wind Technologies Support forum">
+                    <img src="https://support.west-wind.com/images/icon.png" class="product-icon"/>
+                    West Wind Support Site
+                </a>
+            </div>
+            <div>
+                <a href="https://anti-trust.rocks" title="Rick's Old School Punk Rock Project">
+                    <img src="https://anti-trust.rocks/favicon.png" class="product-icon" /> 
+                    Anti-Trust: Punk Rock Music
+                </a>
+            </div>            
+            
+            <div>
+                <a href="https://goldenbeartshirts.com" title="Bear Styled Custom T-Shirts">
+                    <img src="https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/16851761/6b436631-ed8a-4c82-a81c-30b2128cf04a" class="product-icon" /> 
+                    Golden Bear T-Shirts
+                </a>
+            </div>            
+        </nav>
+        
+        <div class="sidebar-header">Rick's Products</div>
+        <nav class="sidebar-group">
+             <div>
+                <a href="https://markdownmonster.west-wind.com"
+                   title="Markdown Monster - a powerful Markdown Editor for Windows">
+                    <img src="https://markdownmonster.west-wind.com/images/MarkdownMonster_Icon_32.png" class="product-icon" /> 
+                    Markdown Monster
+                </a>
+            </div>
+      
+            <div>
+                <a href="https://websurge.west-wind.com"
+                   title="West Wind WebSurge: Http Request and Load Testing on Windows">
+                    <img src="https://websurge.west-wind.com/favicon.png" class="product-icon" /> 
+                    WebSurge
+                </a>
+            </div>
+
+            <div>
+                <a href="https://documentationmonster.com"
+                   title="Documentation Monster - Create Markdown based structured documentation">
+                    <img src="https://documentationmonster.com/images/DocumentationMonster_Icon_32.png" class="product-icon" /> 
+                    Documentation Monster
+                </a>
+            </div>
+
+           
+            <div>
+                <a href="https://webconnection.west-wind.com"
+                   title="West Wind Web Connection: Build Visual FoxPro Web applications">
+                    <img src="https://webconnection.west-wind.com/favicon.png" class="product-icon" />
+                    West Wind Web Connection
+                </a>
+            </div>
+        </nav>            
+
+
+
+
+           
+         <hr />
+    
+          <!-- Twitter List -->
+
+    </aside>
+    
+    <main class="post-content" >        
+         
+    
+
+<article id="Article" 
+         itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost" >   
+
+    <header>
+    <h2 itemprop="headline_name" >
+        <a id="PostTitle" href='https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign' style="text-decoration:none;">Azure Trusted Signing Revisited with Dotnet Sign</a>
+            
+    </h2>
+    </header>    
+    <hr />
+
+ 
+    <div class="byline" >
+        <div class="share-box" style="float:right; margin-top: -10px;">
+            <span class="share-label hidable-xs">Share on:</span>
+                                        
+                                                    
+            <a href="https://twitter.com/intent/tweet?url=https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign&amp;text=Azure Trusted Signing Revisited with Dotnet Sign&amp;via=RickStrahl" target="_blank" title="Tweet on Twitter">
+                <i class="fab fa-twitter-square" style=" color: rgb(51, 132, 217);"></i>                                         
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign&amp;t=Azure Trusted Signing Revisited with Dotnet Sign" target="_blank" title="Share on Facebook">
+               <i class="fab fa-facebook-square" style=" color: rgb(63, 96, 170); "></i>                                
+            </a>
+            <a href="http://www.reddit.com/submit?url=https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign&amp;title=Azure Trusted Signing Revisited with Dotnet Sign" target="_blank" title="Submit to Reddit">
+                <i class="fab fa-reddit-square" style=" color: rgb(245, 58, 0); "></i>                                
+            </a>                     
+        </div>
+
+        <div class="leftbox" >
+            <i class="far fa-clock" style="font-size: 15px;"></i> March 02, 2026
+             &bull; from Maui, Hawaii    
+            
+            
+        </div>
+  
+    
+      
+
+            
+    </div>
+
+    
+    
+
+
+    <div class="clearfix">:P</div>
+
+
+
+    <div id="ArticleBody" class="postcontent" 
+         itemprop="articleBody" 
+         style="position: relative" >
+        
+        <div class="document-outline" >
+            <div class="document-outline-header">On this page:</div>
+            <div class="document-outline-content">           
+            </div>
+            
+                
+        </div>
+
+
+        <p><img src="https://weblog.west-wind.com/images/2026/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign/TrustedSigningBanner.jpg" alt="Trusted Signing Banner"></p>
+<p>I <a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing">wrote about how to get Azure Trusted Signing to work</a> for my application signing tasks a while back and mentioned how frustrating that process was both on Azure as well as on the client for the actual signing process. Well, since then I'm happy to say that some additional tooling has come out from Microsoft that makes this process quite a bit easier and also the signing process considerably faster than my previous workflow.</p>
+<p>This post is specifically about <strong>the client side of signing</strong> - the original post covers both the Azure setup for your Azure Trusted Signing account and that hasn't changed much as well as the old SignTool based workflow which was a pain in the ass. In this post I'll discuss the new-ish <code>dotnet sign</code> tooling that now works officially with Azure Trusted Signing and is a lot simpler to set up and faster to run.</p>
+<p>The documentation for the local client signing part of this process is still nearly non-existent or, at minimum, non-discoverable, and LLMs absolutely give the wrong advice because of it. The change of terminology and command names in the tooling isn't helping either, along with the outdated documentation. Why in the heck would you name something as obscure and non-relevant as <code>artifact-signing</code> instead of the obvious <code>trusted-signing</code> that already existed? But I disgress 😄</p>
+<p>So, here's the skinny on what works with a heck of a lot less effort than what I described in the previous post.</p>
+<p><a href="https://markdownmonster.west-wind.com?ut=weblog"  target="_blank"
+     title="Markdown Monster - Easy to use, yet powerfully productive Markdown Editing for Windows">
+<img src="/images/sponsors/banner-example.png?v=1.2" class="da-content-image" />
+</a></p>
+<h2 id="setting-up-trusted-signing">Setting up Trusted Signing</h2>
+<p>You still need to set up your Azure Trusted Signing, so that part hasn't changed, although by now hopefully the process to set this up might be a little simpler than what I described in my previous post:</p>
+<ul>
+<li><a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing#setting-up-microsoft-trusted-signing">Setting up Microsoft Azure Trusted Signing</a></li>
+</ul>
+<p>Once you have your Trusted Signing account set up and ready to go, what has changed for the better is the process of how you sign your binaries on the local machine. It's quite a bit easier using <code>dotnet sign</code> as that tool combines everything you need through the single set of tools - except for the Azure CLI which is required for authentication.</p>
+<h2 id="local-signing-enter-dotnet-sign">Local Signing: Enter dotnet sign</h2>
+<p><code>dotnet sign</code> is a <strong>dotnet tool</strong> that you install via the .NET SDK. You need to have the .NET SDK installed to install dotnet sign, as well as the Azure CLI so you can authenticate your Azure account.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">.NET 10 SDK</a></li>
+<li><a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&amp;pivots=winget">Azure CLI</a></li>
+<li><a href="https://github.com/dotnet/sign">Dotnet Sign</a></li>
+</ul>
+<h3 id="install-net-sdk">Install .NET SDK</h3>
+<p>The .NET SDK is required in order to install the dotnet tool infrastructure required to install and run the <code>dotnet sign</code> tool.</p>
+<p>You can install the SDK from here if you don't already have it on your dev machine</p>
+<ul>
+<li><a href="https://dotnet.microsoft.com/en-us/download/dotnet/10.0">.NET 10 SDK</a></li>
+</ul>
+<blockquote>
+<h4 id="--dotnet-tool-and-the-net-sdk"><i class="fas fa-info-circle" style="font-size: 1.1em"></i>  <code>dotnet tool</code> and the .NET SDK</h4>
+<p><code>dotnet tool</code> deployed <em>applications</em> use the locally installed .NET SDK to take advantage of the cross platform features of .NET without having to install any additional framework dependencies or having to create separate installers for each platform. A Dotnet tool will run on any of .NET's supported platforms assuming you use cross-platform compatible features only. It does this by automatically creating a platform specific executable for the tool application that <code>dotnet tool install</code> is run on.  For this reason it's a convenient way to deploy tools across platforms and if you're in the .NET development eco-system in any way it's likely the .NET SDK is already installed.</p>
+</blockquote>
+<h3 id="install-azure-cli">Install Azure CLI</h3>
+<p>The Azure CLI is required so that you can authenticate using Azure's oAuth Authentication flow.</p>
+<p>You can install the Azure CLI in a number of ways but the easiest is probably via WinGet.</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&amp;pivots=winget">Install Azure CLI</a></li>
+</ul>
+<p>Here's the WinGet command:</p>
+<pre><code class="language-ps">winget install --exact --id Microsoft.AzureCLI
+</code></pre>
+<h4 id="logging-into-azure-cli">Logging into Azure CLI</h4>
+<p>Once the Azure CLI is installed you can then log in and set the subscription that your Certificate runs under:</p>
+<pre><code class="language-powershell">az config set core.enable_broker_on_windows=false
+az login
+az account set --subscription &quot;Pay-As-You-Go&quot;
+</code></pre>
+<p>The prompt to login is interactive - follow the yellow prompts. I've had quite a few  issues with the default Windows oAuth authentication using a Web Browser, and the first configuration line:</p>
+<pre><code class="language-ps">az config set core.enable_broker_on_windows=false
+</code></pre>
+<p>provides more reliable authentication directly in the CLI. You can try without it first, and if that doesn't work use that line to use the alternate sign in flow.</p>
+<p>For me this was the only way I get it to work correctly. Your mileage may vary and you may not  need it. Another thing to look out for is to make sure you choose the right subscription as subscription ids are hard to decipher in some cases if you have a few of them.</p>
+<h3 id="install-dotnet-sign">Install Dotnet Sign</h3>
+<p><a href="https://github.com/dotnet/sign">Dotnet Sign</a> is a <strong>dotnet tool</strong> installed executable, and in order to install it you need use the <code>dotnet tool</code> command that's part of the .NET SDK.</p>
+<p>Make sure the .NET SDK is installed first, and then to install dotnet sign:</p>
+<pre><code class="language-ps">dotnet tool install -g --prerelease sign
+</code></pre>
+<p>The tool is currently in pre-release so the <code>--prerelease</code> switch is not optional -  otherwise the package won't be found. You can also install locally into your project by omitting the <code>-g</code> switch which creates a fixed local copy instead of a global instance installed in the shared tools location.</p>
+<p><a href="https://www.linqpad.net/?affiliate=4n4zaa6t"  target="_blank"
+         title="LinqPad - The Scratchpad for .NET Developers">
+<img src="/images/sponsors/LinqPad-DisplayAd.jpg" class="da-content-image" />
+</a></p>
+<h3 id="using-sign-code-artifact-signing">Using Sign Code Artifact Signing</h3>
+<p>With all this in place you can now use the <code>Sign</code> command from the command line to sign your binaries. Specifically you'll use:</p>
+<pre><code class="language-ps">sign code artifact-signing --help
+</code></pre>
+<p>Note that although there's a <code>trusted-signing</code> option, it's now deprecated and you should use <code>artifact-signing</code> instead.</p>
+<p>A full signing command for a binary file looks like this:</p>
+<pre><code class="language-powershell">sign code artifact-signing  `
+   --verbosity warning `
+   --timestamp-url http://timestamp.digicert.com `
+   --artifact-signing-endpoint https://eus.codesigning.azure.net/ `
+   --artifact-signing-account MySigningAccount `
+   --artifact-signing-certificate-profile MySignongCertificateProfile `  .\Distribution\MarkdownMonster.exe
+</code></pre>
+<p>You can specify multiple files and they will be batch sent together. Typically you'll want to run with Verbosity of warning, which doesn't show any output unless you have a problem. The default (Trace) and Information are very verbose and too much noise in any sort of build output unless you explicitly are looking for that.</p>
+<p>Here's what that looks like with Information verbosity, when you run it in the Terminal:</p>
+<p><img src="https://weblog.west-wind.com/images/2026/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign/SignCodeInTheTerminal.png" alt="Sign Code In The Terminal"></p>
+<p>Signing is <strong>considerably faster</strong> than what I saw with my old <code>SignTool</code> based workflow, with signing times under two seconds for most files (this is one is quite large). Based on this speed, it looks like <code>sign</code> uses locally created hashes rather than uploading the entire file to the server for processing.</p>
+<p>Unfortunately, the new workflow with Sign doesn't support a metadata file like <code>SignTool</code> supports, so you <strong>have to specify all the Azure parameters explicitly</strong>. I'll fix that with the Powershell script provided below to keep that useful functionality intact.</p>
+<h3 id="putting-it-all-together-into-a-signing-script">Putting it all together into a Signing Script</h3>
+<p>The basic syntax for signing via <code>Sign</code> is now simple enough. However, I need signing in <strong>a lot of different projects</strong>, so I need to reuse the functionality across these various projects and provide the script as part of the <strong>local</strong> build infrastructure.</p>
+<p>The reasons to create a script for all this are:</p>
+<ul>
+<li>Using metadata configuration files (like SignTool used to use)</li>
+<li>Handling login optionally</li>
+<li>Handling parameter errors and signing errors</li>
+<li>Documentation for prerequisites and configuration in the script</li>
+<li>Self-contained for easy re-use - just copy two files</li>
+</ul>
+<p>Here's the Powershell script:</p>
+<pre><code class="language-powershell"># File name: Signfile.ps1
+# Prerequisites:  
+# dotnet tool install -g --prerelease sign
+# Azure CLI required for logging in optionally
+# Support metadata: SignfileMetaData.json
+
+param(
+    [string]$file = &quot;&quot;,
+    [string]$file1 = &quot;&quot;,
+    [string]$file2 = &quot;&quot;,
+    [string]$file3 = &quot;&quot;,
+    [string]$file4 = &quot;&quot;,
+    [string]$file5 = &quot;&quot;,
+    [string]$file6 = &quot;&quot;,
+    [string]$file7 = &quot;&quot;,
+    [string]$file8 = &quot;&quot;,
+    [boolean]$login = $false
+)
+if (-not $file) {
+    Write-Host &quot;Usage: SignFile.ps1 -file &lt;path to file to sign&gt;&quot;
+    exit 1
+}
+
+if ($login) {
+    az config set core.enable_broker_on_windows=false
+    az login
+    az account set --subscription &quot;Pay-As-You-Go&quot;
+}
+
+# SignfileMetadata.json is not checked in. Format:
+# {
+#   &quot;Endpoint&quot;: &quot;https://eus.codesigning.azure.net/&quot;,
+#   &quot;CodeSigningAccountName&quot;: &quot;MySigningAccount&quot;,
+#   &quot;CertificateProfileName&quot;: &quot;MySigningCertificateProfile&quot;
+# }
+
+$metadata = Get-Content -Path &quot;SignfileMetadata.json&quot; -Raw | ConvertFrom-Json
+$tsEndpoint = $metadata.Endpoint
+$tsAccount = $metadata.CodeSigningAccountName
+$tsCertProfile = $metadata.CertificateProfileName
+$timeServer = &quot;http://timestamp.digicert.com&quot;
+
+$signArgs = @(
+    &quot;--verbosity&quot;, &quot;warning&quot;,
+    &quot;--timestamp-url&quot;, $timeServer,
+    &quot;--artifact-signing-endpoint&quot;, $tsEndpoint,
+    &quot;--artifact-signing-account&quot;, $tsAccount,
+    &quot;--artifact-signing-certificate-profile&quot;, $tsCertProfile
+)
+
+# Add file arguments at the end
+foreach ($f in @($file, $file1, $file2, $file3, $file4, $file5, $file6, $file7, $file8)) {
+    if (![string]::IsNullOrWhiteSpace($f)) {
+        $signArgs += $f
+    }
+}
+
+# Run signtool and capture the exit code
+sign code artifact-signing $signArgs
+$exitCode = $LASTEXITCODE
+
+if ($exitCode -eq 0) {
+    Write-Host &quot;File(s) signed successfully.&quot; -ForegroundColor Green
+    exit 0
+} else {
+    Write-Host &quot;Signing failed with exit code: $exitCode&quot; -ForegroundColor Red
+    exit $exitCode
+}
+</code></pre>
+<p>This script uses a separate, external configuration file for the Azure values required for code signing to work. I tend to check in the signing script into Git, while the metadata is locally created and not checked in which separates the two. Alternately you can use some other approach to keep the private data out of your repo - environment variables would also do the trick, but I prefer this explicit approach because it makes it easy to copy the data and script across multiple projects while still keeping the private data out of Git.</p>
+<p>Here's what the metadata file looks like:</p>
+<pre><code class="language-json">// SignfileMetadata.json
+{
+  &quot;Endpoint&quot;: &quot;https://eus.codesigning.azure.net/&quot;,
+  &quot;CodeSigningAccountName&quot;: &quot;MySigningAccount&quot;,
+  &quot;CertificateProfileName&quot;: &quot;MyCodeSignCertificateProfile&quot;
+}
+</code></pre>
+<p>So now I can drop <code>SignFile.ps</code> and <code>SignfileMetadata.json</code> file into a folder and use it for signing.</p>
+<p>In my build script I then have something like this to invoke the signing operation after my binaries have been built:</p>
+<pre><code class="language-powershell">if ($nosign -eq $false) {    
+    &quot;Signing binaries...&quot;
+    .\signfile-dotnetsign.ps1 -file &quot;.\Distribution\MarkdownMonster.exe&quot; `
+                    -file1 &quot;.\Distribution\MarkdownMonsterArm64.exe&quot; `
+                    -file2 &quot;.\Distribution\MarkdownMonster.dll&quot; `
+                    -file3 &quot;.\Distribution\mm.exe&quot; `
+                    -file4 &quot;.\Distribution\mmcli.exe&quot; `
+                    -login $false                   
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host &quot;Signing failed, exiting build script.&quot;
+        exit $LASTEXITCODE
+    }
+}
+</code></pre>
+<p>and then again at the very end to sign the final setup distributable:
+l</p>
+<pre><code class="language-powershell">.\signfile-dotnetsign.ps1 `
+	-file &quot;.\Builds\CurrentRelease\MarkdownMonsterSetup.exe&quot; `
+    -login $false
+</code></pre>
+<p>The meta data file can be created in the output folder and should not be checked into Git repo. Alternately you could also change the code to use environment variables if that suits your workflow better.</p>
+<h2 id="dotnet-sign-is-much-better">Dotnet Sign is Much Better</h2>
+<p>I've been using this new workflow for a couple of weeks now, and it has made signing <strong>a lot faster</strong> than <code>Signtool</code>. It appears that binaries are locally hashed and only the hash data is sent to the server result in much faster processing times. Average processing with Signtool was around well over 5 seconds per file, it's now down under 1 second per file - a huge improvement in packaging performance.</p>
+<p>Microsoft's own documentation now also uses the Digicert timestamp server <a href="https://weblog.west-wind.com/posts/2026/Feb/26/Dont-use-the-Microsoft-Timestamp-Server-for-Signing">instead of the Microsoft one that has been failing for me on a regular basis</a>. Using the DigitCert timestamp server I haven't had any signing failures in the last two weeks.</p>
+<h2 id="summary">Summary</h2>
+<p>So all of this is good news, as it's taken away some of the early growing pains of using Azure Trusted Signing and makes it much more usable and predictable to run on the client without having to jump through all sorts of hoops.</p>
+<p>It still isn't as simple as it could be, especially if developers are not already using the .NET ecosystem, but if you're doing code signing for Authenticode, you're likely a Windows developer.</p>
+<p>The last hurdle that I'd like to get going now is NuGet signing. But I'll leave that for another time... Onwards.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing">Fighting through Setting up Microsoft Trusted Signing  (for steps to set up on Azure)</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/trusted-signing/">Microsoft Trusted Signing Documentation</a></li>
+<li><a href="https://azure.microsoft.com/en-us/pricing/details/trusted-signing/">Microsoft Trusted Signing Pricing Page</a></li>
+</ul>
+<div style="margin-top: 30px;font-size: 0.8em;
+            border-top: 1px solid #eee;padding-top: 8px;">
+    <img src="https://markdownmonster.west-wind.com/favicon.png" style="height: 20px;float: left; margin-right: 10px;">
+    this post created and published with the 
+    <a href="https://markdownmonster.west-wind.com" target="top">Markdown Monster Editor</a> 
+</div>
+<p><a href="https://amzn.to/3XmyPE0"  target="_blank"
+     title="Needs More Bass Bear T-Shirt">
+<img src="/images/Sponsors/NeedsMoreBassTShirt-Display.png" class="da-content-image" />
+</a></p>
+
+
+
+
+        
+        <div style="margin: 30px 0">
+            <h3 style="margin-top: 30px">Other Posts you might also like
+            </h3>
+
+            <ul>
+                
+                        <li><a href="https://weblog.west-wind.com/posts/2025/Jul/20/Fighting-through-Setting-up-Microsoft-Trusted-Signing">Fighting through Setting up Microsoft Trusted Signing</a></li>
+                    
+                        <li><a href="https://weblog.west-wind.com/posts/2024/Oct/24/Using-Sql-Server-on-Windows-ARM">Using SQL Server on Windows ARM</a></li>
+                    
+                        <li><a href="https://weblog.west-wind.com/posts/2021/Jan/14/Taking-the-new-Chromium-WebView2-Control-for-a-Spin-in-NET-Part-1">Taking the new Chromium WebView2 Control for a Spin in .NET - Part 1</a></li>
+                    
+                        <li><a href="https://weblog.west-wind.com/posts/2024/Jan/10/Sharing-Tab-Missing-in-Windows-11-Folder-Properties">Sharing Tab Missing in Windows 11 Folder Properties</a></li>
+                    
+            </ul>
+        </div>
+        
+    </div>
+    
+       
+
+    <div class="advert">                  
+        
+        
+
+    </div>
+    
+  
+   <div class='borderbox'>
+       
+       <div id="CategoryHeader">
+            <div class="share-box">
+                <span class="share-label">Share on:</span>   
+                                   
+                <a href="https://twitter.com/intent/tweet?url=https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign&amp;text=Azure Trusted Signing Revisited with Dotnet Sign&amp;via=RickStrahl" target="_blank" title="Tweet on Twitter">
+                    <span class="fa-stack" style="line-height: 1em; width: 1em; height: 1em;">
+                        <i class="fas fa-square fa-stack-1x" style="color: white; font-size: 0.95em"></i>
+                        <i class="fab fa-twitter-square fa-stack-1x" style="color: rgb(53, 155, 240);"></i>
+                    </span>
+                </a>               
+
+              
+
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign&amp;t=Azure Trusted Signing Revisited with Dotnet Sign" target="_blank" title="Share on Facebook">
+                        <span class="fa-stack" style="line-height: 1em; width: 1em; height: 1em;">
+                            <i class="fas fa-square fa-stack-1x" style="color: white; font-size: 0.96em"></i>
+                            <i class="fab fa-facebook-square fa-stack-1x" style=" color: rgb(63, 96, 170); "></i>                
+                        </span>
+                </a>
+                <a href="http://www.reddit.com/submit?url=https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign&amp;title=Azure Trusted Signing Revisited with Dotnet Sign" target="_blank" title="Submit to Reddit">
+                        <span class="fa-stack" style="line-height: 1em; width: 1em; height: 1em;">
+                        <i class="fas fa-square fa-stack-1x" style="color: white; font-size: 0.95em"></i>
+                            <i class="fab fa-reddit-square fa-stack-1x" style=" color: rgb(245, 58, 0); "></i>                
+                            </span>
+                </a>                   
+            </div>
+
+           
+           <div class="donate-buttons">
+
+               
+
+               <div style="flex: none;">
+                   <img onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_donations&amp;business=rstrahl@west-wind.com&amp;item_name=Rick+Strahl%27s+Web+Log&amp;no_shipping=0&amp;no_note=1&amp;tax=0&amp;currency_code=USD&amp;lc=US&amp;bn=PP%2dDonationsBF&amp;charset=UTF%2d8&amp;image_url=https://weblog.west-wind.com/images/WebLogBannerLogo.jpg','PayPal');"
+                       title="Find this content useful? Consider making a small donation."
+                       alt="Make Donation"                                              
+                       src="/images/donation.png" />
+               </div>
+               <div style="font-size: 0.8em; width: 210px;margin-left: 10px" class="hidable-xs">
+                   Is this content useful to you? <b>Consider making a small donation</b> to show your support.               
+               </div>
+           </div>
+           
+       </div>
+       
+
+       <div style="margin-top: 20px">
+        <div>Posted in <b><a href='/ShowPosts.aspx?Category=Windows'>Windows</a>&nbsp;&nbsp;<a href='/ShowPosts.aspx?Category=Security'>Security</a>&nbsp;&nbsp;<a href='/ShowPosts.aspx?Category=WPF'>WPF</a>&nbsp;&nbsp;</b></div>
+</small>  
+       </div>
+
+    </div>
+
+
+    <br />
+    
+    
+    <h2>The Voices of Reason</h2>        
+    <hr style="margin-bottom: 30px;"/>
+
+        <div id="ctl00_Content_FeedbackPanel">
+	        
+        <a name="Feedback">&nbsp;</a>            
+        <div class="clearfix"></div>
+        
+            
+            
+               <div id="cmt_5264153" class="comment">
+                   <div class="comment-panel-left">
+                       <img src='https://www.gravatar.com/avatar.php?gravatar_id=00&size=100&rating=R' style='border-radius: 4px;box-shadow: 2px 2px 4px #5353535; '>
+                       <br />
+                       <small>
+                           Alexey
+                           <br />
+                           March 12, 2026
+                       </small>
+                   </div>
+                   <div class="comment-panel-right">
+                       <h3 style="margin-top: 0; font-size: 1.21em;">
+                           <a name="5264153" href="#5264153">#</a>
+                           re: Azure Trusted Signing Revisited with Dotnet Sign
+                       </h3>
+                       <div class="commentbody" style="padding-top: 15px;">
+                           <p>For better performance, use the <code>--max-concurrency</code> option and a lot of files in single <code>sign code artifact-signing</code> call.</p>
+<p>Default is <code>4</code>, try to set <code>10</code> or more.</p>
+
+                       </div>
+
+                       
+                   </div>
+               </div>
+               <div class="clearfix"></div>                              
+            
+    
+</div>
+    <span id="ctl00_Content_ErrorDisplay" ErrorImage="~/app_themes/"></span>
+
+    <input type="submit" name="ctl00$Content$btnShowCommentTable" value="Add a Comment" id="ctl00_Content_btnShowCommentTable" class="submitbutton" /> 
+
+    
+    <div id="ContentOverlay" style="background:steelblue"></div>
+
+
+
+    
+    
+
+    
+    
+    
+     
+    
+
+    
+
+    
+
+    <link href="/scripts/highlightjs/styles/vs2015.css" rel="stylesheet" />
+    <script src="/scripts/highlightjs/highlight.pack.js"></script>
+    <script>
+        setTimeout(function () {
+            var pres = document.querySelectorAll("pre>code");
+            for (var i = 0; i < pres.length; i++) {
+                hljs.highlightBlock(pres[i]);
+            }
+            var options = {
+                contentSelector: "#ArticleBody",
+                // Delay in ms used for `setTimeout` before badging is applied
+                // Use if you need to time highlighting and badge application
+                // since the badges need to be applied afterwards.
+                // 0 - direct execution (ie. you handle timing
+                loadDelay:0,
+
+                // CSS class(es) used to render the copy icon.
+                copyIconClass: "fa fa-copy",
+                // CSS class(es) used to render the done icon.
+                checkIconClass: "fa fa-check text-success"
+            };
+            if (window.highlightJsBadge)
+                window.highlightJsBadge(options);
+        },5);
+    </script>
+    <script src="/scripts/highlightjs-badge.min.js" ></script>
+<br />
+</article>
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+<rdf:Description
+    rdf:about="https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign"
+    dc:identifier="https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign"
+    dc:title="Azure Trusted Signing Revisited with Dotnet Sign"
+    trackback:ping="https://weblog.west-wind.com/posts/2026/Mar/02/Azure-Trusted-Signing-Revisited-with-Dotnet-Sign?Trackback=True" />
+</rdf:RDF>
+-->    
+
+
+    
+
+    </main>      
+</div>
+
+
+    <footer>
+        
+        <a href="https://west-wind.com"><img id="ctl00_Image1" align="right" border="0" alt="West Wind" src="../../../../images/wwToolbarlogo.png" /></a>
+        &nbsp;<small>&copy; Rick Strahl, West Wind Technologies, 2005 - 2026</small>        
+        <p>&nbsp;</p>        
+    </footer>
+
+
+
+
+
+<script type="text/javascript">
+//<![CDATA[
+var Proxy = { 
+    Hello: function (name,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("Hello",[name],completed,errorHandler);
+        return _cb;           
+    },
+    FormatComment: function (inputText,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("FormatComment",[inputText],completed,errorHandler);
+        return _cb;           
+    },
+    DeleteComment: function (id,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("DeleteComment",[id],completed,errorHandler);
+        return _cb;           
+    },
+    ApproveComment: function (id,approve,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("ApproveComment",[id,approve],completed,errorHandler);
+        return _cb;           
+    },
+    DeleteEntry: function (id,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("DeleteEntry",[id],completed,errorHandler);
+        return _cb;           
+    },
+    GetCommentText: function (id,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("GetCommentText",[id],completed,errorHandler);
+        return _cb;           
+    },
+    UpdateCommentText: function (id,html,completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("UpdateCommentText",[id,html],completed,errorHandler);
+        return _cb;           
+    },
+    GetRandomBookImage: function (completed,errorHandler)
+    {
+        var _cb = Proxy_GetProxy();
+        _cb.callMethod("GetRandomBookImage",[],completed,errorHandler);
+        return _cb;           
+    }
+}
+function Proxy_GetProxy() {
+    var _cb = new AjaxMethodCallback('Proxy','/WebLogCallbacks.ashx',
+                                    { timeout: 20000,
+                                      postbackMode: 'PostMethodParametersOnly',
+                                      formName: '' 
+                                    });
+    return _cb;
+}
+//]]>
+</script>
+</form>
+        
+</div>
+</div>
+
+
+
+
+    <script src="/scripts/weblog.js"></script>
+
+
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9492219-4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-9492219-4');
+</script>
+
+</body>
+</html>
