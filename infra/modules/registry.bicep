@@ -24,8 +24,10 @@ resource containerRegistry 'Microsoft.ContainerRegistry/registries@2025-04-01' =
     // Allow trusted Azure services (e.g. Container Apps pulling images) to bypass the IP firewall.
     networkRuleBypassOptions: 'AzureServices'
     networkRuleSet: {
-      // Deny all by default when admin IPs are provided; fall back to Allow for initial bootstrapping.
-      defaultAction: empty(adminIpAddresses) ? 'Allow' : 'Deny'
+      // Always deny direct access; Container Apps pull via the AzureServices bypass above.
+      // This is safe even with an empty adminIpAddresses list: the CI runner adds its IP
+      // dynamically via Deploy-Application.ps1 before pushing, and removes it afterward.
+      defaultAction: 'Deny'
       ipRules: [for ip in adminIpAddresses: {
         action: 'Allow'
         value: ip

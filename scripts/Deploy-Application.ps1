@@ -306,7 +306,7 @@ if (-not $SkipPush) {
     }
     catch {
         Write-Fail $_.Exception.Message
-        exit 1
+        throw  # rethrow so the finally block always runs for cleanup
     }
     finally {
         if ($acrIpWasAdded) {
