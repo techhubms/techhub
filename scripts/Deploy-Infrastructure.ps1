@@ -193,20 +193,45 @@ if ($Environment -ne 'shared') {
         Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
     }
 
-    # Azure AD env vars (read by .bicepparam files via readEnvironmentVariable)
-    $azureAdVars = @('AZURE_AD_TENANT_ID', 'AZURE_AD_CLIENT_ID', 'AZURE_AD_CLIENT_SECRET')
-    foreach ($varName in $azureAdVars) {
-        if (-not [Environment]::GetEnvironmentVariable($varName)) {
-            if ($Mode -eq 'deploy') {
-                Write-Warn "$varName is not set — admin authentication will be disabled"
-            }
-            # Use empty placeholder so readEnvironmentVariable doesn't fail during validate/whatif
-            [Environment]::SetEnvironmentVariable($varName, "")
+    # AZURE_AD_TENANT_ID — derive from the authenticated Azure CLI session; no GitHub secret needed.
+    if (-not $env:AZURE_AD_TENANT_ID) {
+        $env:AZURE_AD_TENANT_ID = $accountInfo.tenantId
+        Write-Ok "AZURE_AD_TENANT_ID resolved from Azure CLI session: $($env:AZURE_AD_TENANT_ID)"
+    }
+    else {
+        Write-Ok "AZURE_AD_TENANT_ID already set"
+    }
+
+    # AZURE_AD_CLIENT_ID — look up the app registration by its deterministic display name.
+    # The name convention matches what Manage-EntraId.ps1 creates; no GitHub secret needed.
+    if (-not $env:AZURE_AD_CLIENT_ID) {
+        $appDisplayName = if ($Environment -eq 'production') { 'TechHub Production' } else { 'TechHub Staging' }
+        $clientId = az ad app list --display-name $appDisplayName --query '[0].appId' -o tsv 2>$null
+        if ($LASTEXITCODE -eq 0 -and $clientId) {
+            $env:AZURE_AD_CLIENT_ID = $clientId.Trim()
+            Write-Ok "AZURE_AD_CLIENT_ID resolved from Entra (app: '$appDisplayName'): $($env:AZURE_AD_CLIENT_ID)"
+        }
+        else {
+            $env:AZURE_AD_CLIENT_ID = ""
+            Write-Warn "App registration '$appDisplayName' not found — admin authentication will be disabled"
+            Write-Detail "Run 'Manage-EntraId.ps1 -Environment $Environment' to create it."
         }
     }
+    else {
+        Write-Ok "AZURE_AD_CLIENT_ID already set"
+    }
+
+    # AZURE_AD_CLIENT_SECRET — must be provided externally; there is no way to read it from Azure.
+    if (-not $env:AZURE_AD_CLIENT_SECRET) {
+        if ($Mode -eq 'deploy') {
+            Write-Warn "AZURE_AD_CLIENT_SECRET is not set — admin authentication will be disabled"
+        }
+        [Environment]::SetEnvironmentVariable('AZURE_AD_CLIENT_SECRET', "")
+    }
+
     $adConfigured = -not [string]::IsNullOrEmpty($env:AZURE_AD_CLIENT_ID)
     if ($adConfigured) {
-        Write-Ok "Azure AD environment variables set"
+        Write-Ok "Azure AD configured"
     }
     else {
         Write-Warn "Azure AD not configured — admin authentication will be disabled"
@@ -239,10 +264,30 @@ if ($Environment -ne 'shared') {
 
     # Sync application secrets into Key Vault before deployment.
     # Container Apps reference these secrets via keyVaultUrl; they must exist before
-    # the new revision starts. Running this automatically here means CI/CD workflows
-    # do not need a separate step — just set POSTGRES_ADMIN_PASSWORD, AI_API_KEY, and
-    # AZURE_AD_CLIENT_SECRET in the workflow env and they will be synced automatically.
+    # the new revision starts. POSTGRES_ADMIN_PASSWORD and AZURE_AD_CLIENT_SECRET must
+    # be provided externally (GitHub secrets). AI_API_KEY is read from Azure directly
+    # so it does not need to be a GitHub secret.
     if ($Mode -eq 'deploy') {
+        # AI_API_KEY — read from the Azure AI Foundry account directly; no GitHub secret needed.
+        if (-not $env:AI_API_KEY) {
+            $aiName = "oai-techhub-$($config.EnvSuffix)"
+            $aiRg   = $config.ResourceGroup
+            $aiKey  = az cognitiveservices account keys list `
+                --name $aiName `
+                --resource-group $aiRg `
+                --query key1 -o tsv 2>$null
+            if ($LASTEXITCODE -eq 0 -and $aiKey) {
+                $env:AI_API_KEY = $aiKey.Trim()
+                Write-Ok "AI_API_KEY resolved from Azure Cognitive Services '$aiName'"
+            }
+            else {
+                Write-Warn "Could not read AI Foundry key from '$aiName' — AI categorization may be unavailable"
+            }
+        }
+        else {
+            Write-Ok "AI_API_KEY already set"
+        }
+
         Write-Step "Syncing application secrets to Key Vault"
         $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
         # Map Deploy-Infrastructure.ps1 environment names to the sync script's convention

@@ -16,8 +16,9 @@
 
     This script is called AUTOMATICALLY by Deploy-Infrastructure.ps1 in deploy
     mode, so you normally do not need to run it manually. The CI/CD workflow
-    provides all required env vars (POSTGRES_ADMIN_PASSWORD, AI_API_KEY,
-    AZURE_AD_CLIENT_SECRET) to the deploy step, which forwards them here.
+    provides POSTGRES_ADMIN_PASSWORD and AZURE_AD_CLIENT_SECRET as GitHub
+    secrets; AI_API_KEY is read directly from Azure Cognitive Services by
+    Deploy-Infrastructure.ps1 before calling this script.
 
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login

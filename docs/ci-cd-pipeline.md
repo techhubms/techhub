@@ -223,11 +223,10 @@ Configure these per-environment in GitHub repository settings â†’ Environments â
 
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
-| `POSTGRES_ADMIN_PASSWORD` | Staging DB password | Production DB password | Set manually from 1Password |
-| `AZURE_AD_TENANT_ID` | Entra ID tenant ID | Entra ID tenant ID | Set via `Manage-EntraId.ps1 -Environment <env>` |
-| `AZURE_AD_CLIENT_ID` | Entra ID client ID | Entra ID client ID | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `POSTGRES_ADMIN_PASSWORD` | Staging DB password | Production DB password | Set manually, stored in 1Password |
 | `AZURE_AD_CLIENT_SECRET` | Entra ID client secret | Entra ID client secret | Set via `Manage-EntraId.ps1 -Environment <env>` |
-| `AZURE_AI_KEY` | Staging AI Foundry key | Production AI Foundry key | Set manually from Azure portal |
+
+> **Tenant ID, Client ID, and AI key are no longer GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
 
 ## GitHub Environments
 
