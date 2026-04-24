@@ -158,7 +158,15 @@ $ipCidr = "$currentIp/32"
 $existingRules = az keyvault network-rule list `
     --vault-name $KeyVaultName `
     --query 'ipRules[].value' `
-    --output tsv 2>$null
+    --output tsv 2>&1
+if ($LASTEXITCODE -ne 0) {
+    $existingRulesError = ($existingRules | Out-String).Trim()
+    if ([string]::IsNullOrWhiteSpace($existingRulesError)) {
+        $existingRulesError = 'Azure CLI returned a non-zero exit code with no error output.'
+    }
+    Write-Warning "Failed to list existing Key Vault network rules for '$KeyVaultName': $existingRulesError"
+    $existingRules = $null
+}
 # Normalize existing rules and use exact matching to avoid false positives.
 # e.g. IP 1.2.3.4 must not match an existing rule 1.2.3.40/32.
 $existingRuleValues = @()
