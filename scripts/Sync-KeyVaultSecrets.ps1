@@ -156,7 +156,7 @@ if (-not $currentIp) {
 $ipCidr = "$currentIp/32"
 
 $existingRules = az keyvault network-rule list `
-    --vault-name $KeyVaultName `
+    --name $KeyVaultName `
     --query 'ipRules[].value' `
     --output tsv 2>&1
 if ($LASTEXITCODE -ne 0) {
@@ -185,7 +185,7 @@ try {
     if (-not $ruleAlreadyPresent) {
         Write-Host "Adding current IP $currentIp to Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
         az keyvault network-rule add `
-            --vault-name $KeyVaultName `
+            --name $KeyVaultName `
             --ip-address $ipCidr `
             --output none
         if ($LASTEXITCODE -ne 0) {
@@ -234,11 +234,11 @@ finally {
     if ($ipWasAdded) {
         Write-Host "Removing current IP $currentIp from Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
         az keyvault network-rule remove `
-            --vault-name $KeyVaultName `
+            --name $KeyVaultName `
             --ip-address $ipCidr `
             --output none
         if ($LASTEXITCODE -ne 0) {
-            Write-Warning "Failed to remove IP $currentIp from Key Vault firewall. Remove manually: az keyvault network-rule remove --vault-name $($KeyVaultName) --ip-address $ipCidr"
+            Write-Warning "Failed to remove IP $currentIp from Key Vault firewall. Remove manually: az keyvault network-rule remove --name $($KeyVaultName) --ip-address $ipCidr"
         }
     }
 }

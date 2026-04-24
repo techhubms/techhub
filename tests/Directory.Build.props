@@ -12,4 +12,12 @@
     <!-- Use Microsoft Testing Platform (MTP) runner instead of VSTest -->
     <UseMicrosoftTestingPlatformRunner>true</UseMicrosoftTestingPlatformRunner>
   </PropertyGroup>
+
+  <!-- Pin Microsoft.AspNetCore.DataProtection to the patched version (CVE-2026-40372 / GHSA-9mv3-2cwr-p262).
+       Microsoft.Identity.Web.TokenCache pulls in 10.0.0 transitively; this direct reference forces 10.0.7.
+       Excluded for projects with an explicit FrameworkReference (e.g. TechHub.TestUtilities) which already
+       consume the patched version from the Microsoft.AspNetCore.App shared framework. -->
+  <ItemGroup Condition="'$(IsTestProject)' != 'false'">
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" />
+  </ItemGroup>
 </Project>
