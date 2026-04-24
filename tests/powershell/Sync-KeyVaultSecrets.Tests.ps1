@@ -85,11 +85,41 @@ Describe "Sync-KeyVaultSecrets" {
             $content | Should -Match "az keyvault network-rule add"
         }
 
+        It "Should use fallback IP providers if the primary one fails" {
+            $content = Get-Content $scriptPath -Raw
+            # Primary and fallback providers must all be referenced
+            $content | Should -Match "checkip\.amazonaws\.com"
+            $content | Should -Match "api\.ipify\.org"
+            $content | Should -Match "icanhazip\.com"
+        }
+
+        It "Should validate the IP response is a valid IPv4 address" {
+            $content = Get-Content $scriptPath -Raw
+            $content | Should -Match '\\d\{1,3\}'
+        }
+
         It "Should remove the current IP from the Key Vault firewall in a finally block" {
             $content = Get-Content $scriptPath -Raw
-            # Verify both 'finally' and 'network-rule remove' are present
-            $content | Should -Match "finally"
-            $content | Should -Match "az keyvault network-rule remove"
+            $tokens = $null
+            $errors = $null
+            $ast = [System.Management.Automation.Language.Parser]::ParseInput($content, [ref]$tokens, [ref]$errors)
+            $errors.Count | Should -Be 0
+            # Find the specific TryStatementAst whose TryBlock contains both the firewall rule add
+            # and Set-KvSecret calls, and whose Finally contains the firewall rule remove.
+            # Using AST is more precise than grepping for 'finally' — the script already has a
+            # finally block in Set-KvSecret for temp-file cleanup, which would cause a false pass.
+            $firewallCleanupTry = $ast.FindAll({
+                param($node)
+                if ($node -isnot [System.Management.Automation.Language.TryStatementAst]) { return $false }
+                # TryStatementAst.Body is the try block; TryBlock is not a valid property name.
+                if ($null -eq $node.Finally -or $null -eq $node.Body) { return $false }
+                $tryText = $node.Body.Extent.Text
+                $finallyText = $node.Finally.Extent.Text
+                return $tryText -match 'az keyvault network-rule add' -and
+                    $tryText -match 'Set-KvSecret' -and
+                    $finallyText -match 'az keyvault network-rule remove'
+            }, $true)
+            @($firewallCleanupTry).Count | Should -BeGreaterThan 0
         }
 
         It "Should only remove the IP if it was added by this script" {

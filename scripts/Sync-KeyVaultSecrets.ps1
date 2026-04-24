@@ -134,7 +134,25 @@ $dbConnectionString = "Host=$($PostgresHost);Database=$($PostgresDatabase);Usern
 # Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
 # static allow-list, so we add the current outbound IP before writing secrets and remove it
 # in a finally block so the rule is always cleaned up even if the sync fails.
-$currentIp = (Invoke-RestMethod -Uri 'https://checkip.amazonaws.com' -UseBasicParsing).Trim()
+# Detect outbound IP — try multiple providers and validate the response is a valid IPv4 address.
+# This prevents a hard deployment failure if checkip.amazonaws.com is temporarily unavailable.
+$currentIp = $null
+foreach ($provider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
+    try {
+        $response = (Invoke-RestMethod -Uri $provider -UseBasicParsing -TimeoutSec 10).Trim()
+        if ($response -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
+            $currentIp = $response
+            break
+        }
+        Write-Warning "IP provider '$provider' returned unexpected response: '$response'"
+    }
+    catch {
+        Write-Warning "IP provider '$provider' failed: $($_.Exception.Message)"
+    }
+}
+if (-not $currentIp) {
+    throw "Failed to detect outbound IP from any provider. Cannot add Key Vault firewall rule."
+}
 $ipCidr = "$currentIp/32"
 
 $existingRules = az keyvault network-rule list `
@@ -152,25 +170,46 @@ if ($existingRules) {
 $ruleAlreadyPresent = $existingRuleValues -contains $currentIp -or $existingRuleValues -contains $ipCidr
 
 $ipWasAdded = $false
-if (-not $ruleAlreadyPresent) {
-    Write-Host "Adding current IP $currentIp to Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
-    az keyvault network-rule add `
-        --vault-name $KeyVaultName `
-        --ip-address $ipCidr `
-        --output none
-    if ($LASTEXITCODE -ne 0) {
-        throw "Failed to add IP $currentIp to Key Vault '$($KeyVaultName)' firewall."
-    }
-    $ipWasAdded = $true
-    Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
-    Start-Sleep -Seconds 10
-}
-else {
-    Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
-}
-
-# --- Write secrets ---
+# --- Add firewall rule and write secrets ---
+# The firewall rule add is inside the try block so the finally cleanup always runs if the
+# add succeeds but a subsequent step fails.
 try {
+    if (-not $ruleAlreadyPresent) {
+        Write-Host "Adding current IP $currentIp to Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
+        az keyvault network-rule add `
+            --vault-name $KeyVaultName `
+            --ip-address $ipCidr `
+            --output none
+        if ($LASTEXITCODE -ne 0) {
+            throw "Failed to add IP $currentIp to Key Vault '$($KeyVaultName)' firewall."
+        }
+        $ipWasAdded = $true
+        # Poll until the rule takes effect instead of a fixed sleep, so CI runs don't wait
+        # longer than needed and won't time out if propagation is slow.
+        Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
+        $maxWaitSecs = 60
+        $elapsed = 0
+        $propagated = $false
+        while ($elapsed -lt $maxWaitSecs -and -not $propagated) {
+            Start-Sleep -Seconds 5
+            $elapsed += 5
+            az keyvault secret list --vault-name $KeyVaultName --query '[]' --output none 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                $propagated = $true
+                Write-Host "   Firewall rule active after ${elapsed}s." -ForegroundColor Gray
+            }
+            else {
+                Write-Host "   Still propagating (${elapsed}s / ${maxWaitSecs}s)..." -ForegroundColor Gray
+            }
+        }
+        if (-not $propagated) {
+            Write-Warning "Firewall rule may not have propagated after ${maxWaitSecs}s — proceeding anyway."
+        }
+    }
+    else {
+        Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
+    }
+
     Set-KvSecret -Name "techhub-$($Environment)-db-connection-string" -Value $dbConnectionString -Description 'PostgreSQL connection string'
     Set-KvSecret -Name "techhub-$($Environment)-ai-api-key" -Value $aiApiKey -Description 'AI Foundry API key'
     Set-KvSecret -Name "techhub-$($Environment)-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'

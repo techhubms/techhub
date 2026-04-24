@@ -221,7 +221,25 @@ if (-not $SkipPush) {
     # --- Temporarily add this machine's IP to the ACR firewall ---
     # ACR uses Standard SKU (Premium is required for private endpoints — not cost-effective).
     # Instead we restrict to admin IPs via networkRuleSet and add/remove the runner IP on the fly.
-    $acrCurrentIp = (Invoke-RestMethod -Uri 'https://checkip.amazonaws.com' -UseBasicParsing).Trim()
+    # Try multiple providers so a transient outage of one doesn't break the entire deployment.
+    $acrCurrentIp = $null
+    foreach ($provider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
+        try {
+            $response = (Invoke-RestMethod -Uri $provider -UseBasicParsing -TimeoutSec 10).Trim()
+            if ($response -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
+                $acrCurrentIp = $response
+                break
+            }
+            Write-Warning "IP provider '$provider' returned unexpected response: '$response'"
+        }
+        catch {
+            Write-Warning "IP provider '$provider' failed: $($_.Exception.Message)"
+        }
+    }
+    if (-not $acrCurrentIp) {
+        Write-Fail "Failed to detect outbound IP from any provider. Cannot add ACR firewall rule."
+        exit 1
+    }
     $acrIpCidr = "$acrCurrentIp/32"
 
     $acrExistingRules = az acr network-rule list `
@@ -238,26 +256,42 @@ if (-not $SkipPush) {
     $acrRuleAlreadyPresent = $acrExistingRuleValues -contains $acrCurrentIp -or $acrExistingRuleValues -contains $acrIpCidr
 
     $acrIpWasAdded = $false
-    if (-not $acrRuleAlreadyPresent) {
-        Write-Host "   Adding current IP $acrCurrentIp to ACR '$($RegistryName)' firewall..." -ForegroundColor Cyan
-        az acr network-rule add `
-            --name $RegistryName `
-            --ip-address $acrIpCidr `
-            --output none
-        if ($LASTEXITCODE -ne 0) {
-            Write-Fail "Failed to add IP $acrCurrentIp to ACR '$($RegistryName)' firewall."
-            exit 1
-        }
-        $acrIpWasAdded = $true
-        Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
-        Start-Sleep -Seconds 10
-    }
-    else {
-        Write-Host "   IP $acrCurrentIp is already permitted by ACR '$($RegistryName)' firewall." -ForegroundColor Gray
-    }
-
-    # Use throw (not exit) inside try so that finally always executes for cleanup.
+    # The firewall rule add is inside the try block so the finally cleanup always runs if the
+    # add succeeds but a subsequent push step fails.
     try {
+        if (-not $acrRuleAlreadyPresent) {
+            Write-Host "   Adding current IP $acrCurrentIp to ACR '$($RegistryName)' firewall..." -ForegroundColor Cyan
+            az acr network-rule add `
+                --name $RegistryName `
+                --ip-address $acrIpCidr `
+                --output none
+            if ($LASTEXITCODE -ne 0) { throw "Failed to add IP $acrCurrentIp to ACR '$($RegistryName)' firewall." }
+            $acrIpWasAdded = $true
+            # Poll until the rule takes effect instead of a fixed sleep.
+            Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
+            $acrMaxWaitSecs = 60
+            $acrElapsed = 0
+            $acrPropagated = $false
+            while ($acrElapsed -lt $acrMaxWaitSecs -and -not $acrPropagated) {
+                Start-Sleep -Seconds 5
+                $acrElapsed += 5
+                az acr repository list --name $RegistryName --output none 2>$null
+                if ($LASTEXITCODE -eq 0) {
+                    $acrPropagated = $true
+                    Write-Host "   Firewall rule active after ${acrElapsed}s." -ForegroundColor Gray
+                }
+                else {
+                    Write-Host "   Still propagating (${acrElapsed}s / ${acrMaxWaitSecs}s)..." -ForegroundColor Gray
+                }
+            }
+            if (-not $acrPropagated) {
+                Write-Warning "Firewall rule may not have propagated after ${acrMaxWaitSecs}s — proceeding anyway."
+            }
+        }
+        else {
+            Write-Host "   IP $acrCurrentIp is already permitted by ACR '$($RegistryName)' firewall." -ForegroundColor Gray
+        }
+
         # Push API
         Write-Detail "Pushing API image..."
         docker push "$($apiImage):$Tag"
