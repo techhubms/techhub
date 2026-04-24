@@ -179,8 +179,8 @@ public static class BlazorHelpers
         // arbitrary "wait for something to happen" sleep.
         var intervals = new[] { 100, 250, 500, 1000, 1000 };
         var deadline = DateTime.UtcNow.AddMilliseconds(totalTimeoutMs);
-        Exception? last = null;
         var attempt = 0;
+        Exception? last;
         while (true)
         {
             try
@@ -192,11 +192,17 @@ public static class BlazorHelpers
             {
                 last = ex;
             }
+
             var delayMs = intervals[Math.Min(attempt, intervals.Length - 1)];
-            if (DateTime.UtcNow.AddMilliseconds(delayMs) >= deadline) break;
+            if (DateTime.UtcNow.AddMilliseconds(delayMs) >= deadline)
+            {
+                break;
+            }
+
             await Task.Delay(delayMs);
             attempt++;
         }
+
         throw new TimeoutException(
             $"RetryUntilPassAsync: action did not pass within {totalTimeoutMs}ms. Last error:\n{last?.Message}",
             last);

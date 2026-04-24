@@ -10,11 +10,28 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 # Install NSS tools for certificate management, ImageMagick for image processing, and libjxl for JPEG XL encoding
 # Also install exiftool (libimage-exiftool-perl), webp tools, and file utility for Normalize-Images.ps1 script
 # sqlite3 is needed for database inspection and queries
-# postgresql-client for connecting to PostgreSQL databases (docker-compose or Azure)
+# postgresql-client-17 for connecting to PostgreSQL databases (docker-compose or Azure Postgres 17.x).
+# We pull this from the official PGDG apt repo because Ubuntu 24.04 only ships v16, and pg_dump
+# requires its version to be >= the server version (Azure Postgres Flexible Server runs 17.x).
 # certbot for requesting Let's Encrypt wildcard TLS certificates
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 postgresql-client certbot python3-pip
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 certbot python3-pip curl gnupg
+
+# Add the PostgreSQL Global Development Group (PGDG) apt repo and install the v17 client tools
+echo "Installing PostgreSQL 17 client from PGDG..."
+sudo install -d /usr/share/postgresql-common/pgdg
+sudo curl -fsSL -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc \
+    https://www.postgresql.org/media/keys/ACCC4CF8.asc
+UBUNTU_CODENAME="$(. /etc/os-release && echo "$VERSION_CODENAME")"
+echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt ${UBUNTU_CODENAME}-pgdg main" \
+    | sudo tee /etc/apt/sources.list.d/pgdg.list > /dev/null
+sudo apt-get update
+sudo apt-get install -y postgresql-client-17
+
+# Verify that pg_dump 17.x is the default on PATH
+pg_dump --version
+
 # certbot-dns-azure is not an apt package — install via pip
 pip3 install certbot-dns-azure --break-system-packages
 

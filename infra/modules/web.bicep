@@ -22,20 +22,20 @@ param primaryHosts string[] = []
 @description('Key Vault certificate resource IDs for wildcard TLS (mapped by base domain, e.g. { "hub.ms": "cert-resource-id" }). When provided, domains use SniEnabled binding with these certs instead of managed certificates.')
 param wildcardCertificateIds object = {}
 
-@secure()
-@description('Azure AD tenant ID for admin authentication')
+@description('Key Vault URI (e.g. https://kv-techhub-shared.vault.azure.net/) — used to resolve KV secret references')
+param keyVaultUri string
+
+@description('Key Vault secret name holding the Azure AD client secret')
+param aadClientSecretSecretName string
+
+@description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
 
-@secure()
-@description('Azure AD client ID for admin authentication')
+@description('Azure AD client ID (not a secret — public Entra identifier)')
 param azureAdClientId string = ''
 
-@secure()
-@description('Azure AD client secret for admin authentication')
-param azureAdClientSecret string = ''
-
-@description('Azure AD API scope for access token acquisition')
-param azureAdScopes string = ''
+@description('Tags applied to the Container App')
+param tags object = {}
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-web:${imageTag}'
 var revisionSuffix = 'web-${imageTag}'
@@ -68,30 +68,38 @@ var staticEnvVars = [
   }
   {
     name: 'AzureAd__TenantId'
-    secretRef: 'azure-ad-tenant-id'
+    value: azureAdTenantId
   }
   {
     name: 'AzureAd__ClientId'
-    secretRef: 'azure-ad-client-id'
-  }
-  {
-    name: 'AzureAd__ClientSecret'
-    secretRef: 'azure-ad-client-secret'
+    value: azureAdClientId
   }
   {
     name: 'AzureAd__Scopes'
-    value: azureAdScopes
+    value: empty(azureAdClientId) ? '' : 'api://${azureAdClientId}/Admin.Access'
   }
 ]
+// AzureAd__ClientSecret is only needed when AAD is enabled (azureAdClientId is set).
+// When AAD is disabled the KV reference is omitted entirely — the revision would crash-loop
+// if the secret entry existed in the secrets list but the KV secret did not.
+var aadSecretEnvVars = empty(azureAdClientId)
+  ? []
+  : [
+      {
+        name: 'AzureAd__ClientSecret'
+        secretRef: 'azure-ad-client-secret'
+      }
+    ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'
   value: host
 }]
-var allEnvVars = concat(staticEnvVars, primaryHostEnvVars)
+var allEnvVars = concat(staticEnvVars, aadSecretEnvVars, primaryHostEnvVars)
 
 resource web 'Microsoft.App/containerApps@2025-07-01' = {
   name: containerAppName
   location: location
+  tags: tags
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
@@ -122,20 +130,17 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
           identity: acrPullIdentityId
         }
       ]
-      secrets: [
-        {
-          name: 'azure-ad-tenant-id'
-          value: azureAdTenantId
-        }
-        {
-          name: 'azure-ad-client-id'
-          value: azureAdClientId
-        }
-        {
-          name: 'azure-ad-client-secret'
-          value: azureAdClientSecret
-        }
-      ]
+      secrets: empty(azureAdClientId)
+        ? []
+        : [
+            // Container App references the Key Vault secret at revision start via the managed identity.
+            // Rotate by updating Key Vault + restarting the revision — no redeploy required.
+            {
+              name: 'azure-ad-client-secret'
+              keyVaultUrl: '${keyVaultUri}secrets/${aadClientSecretSecretName}'
+              identity: acrPullIdentityId
+            }
+          ]
     }
     template: {
       revisionSuffix: revisionSuffix

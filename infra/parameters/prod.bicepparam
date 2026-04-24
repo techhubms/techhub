@@ -34,11 +34,15 @@ param wildcardCertNames = {
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-prod'
 param openAiModelCapacity = 200
-// Admin IP allow-list — grants firewall access to PostgreSQL and Key Vault
-param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
+// Admin IP allow-list — grants firewall access to PostgreSQL and Key Vault.
+// MUST be set via ADMIN_IP_ADDRESSES env var — no default to prevent leaking IPs into git.
+param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // Azure AD — admin dashboard authentication
+// Tenant ID and Client ID are public Entra identifiers (issuer URL contains tenant ID).
+// The actual Client Secret lives in Key Vault — see scripts/Sync-KeyVaultSecrets.ps1.
 param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
 param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
-param azureAdClientSecret = readEnvironmentVariable('AZURE_AD_CLIENT_SECRET')
-param azureAdScopes = readEnvironmentVariable('AZURE_AD_SCOPES')
+// Shared action group resource ID — resolved automatically by Deploy-Infrastructure.ps1.
+// Leave empty to skip alert creation (e.g. when shared infra has not yet been deployed).
+param actionGroupId = readEnvironmentVariable('ACTION_GROUP_ID', '')
 

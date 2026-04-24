@@ -47,20 +47,11 @@ param apiImageTag string
 @description('Web Docker image tag (yyyyMMddHHmmss format)')
 param webImageTag string
 
-@secure()
-@description('Azure AD tenant ID for admin dashboard authentication')
+@description('Azure AD tenant ID for admin dashboard authentication (public Entra identifier)')
 param azureAdTenantId string = ''
 
-@secure()
-@description('Azure AD client ID for admin dashboard authentication')
+@description('Azure AD client ID for admin dashboard authentication (public Entra identifier)')
 param azureAdClientId string = ''
-
-@secure()
-@description('Azure AD client secret for admin dashboard authentication')
-param azureAdClientSecret string = ''
-
-@description('Azure AD API scope for admin access token validation (e.g. api://<client-id>/Admin.Access)')
-param azureAdScopes string = ''
 
 @description('VNet name')
 param vnetName string = 'vnet-techhub-${environmentName}'
@@ -100,10 +91,26 @@ param openAiModelCapacity int = 100
 @minLength(7)
 param adminIpAddresses string
 
+@description('Shared action group resource ID (notification target for operational alerts). Leave empty to skip alert creation.')
+param actionGroupId string = ''
+
+@description('Common tags applied to all resources managed by this template')
+param commonTags object = {
+  owner: 'techhub-maintainer'
+  project: 'techhub'
+  managedBy: 'bicep'
+}
+
+// Per-environment tag set — combines commonTags with the env name for clear resource attribution.
+var envTags = union(commonTags, {
+  env: environmentName
+})
+
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
   location: location
+  tags: envTags
 }
 
 // Reference shared resource group (for cross-RG role assignment)
@@ -118,6 +125,7 @@ module identity './modules/identity.bicep' = {
   params: {
     location: location
     identityName: 'id-techhub-${environmentName}'
+    tags: envTags
   }
 }
 
@@ -141,6 +149,7 @@ module network './modules/network.bicep' = {
     addressSpacePrefix: addressSpacePrefix
     containerAppsSubnetPrefix: containerAppsSubnetPrefix
     privateEndpointsSubnetPrefix: privateEndpointsSubnetPrefix
+    tags: envTags
   }
 }
 
@@ -155,6 +164,7 @@ module monitoring './modules/monitoring.bicep' = {
     dailyQuotaGb: environmentName == 'staging' ? 1 : -1
     appInsightsRetentionInDays: 30
     availabilityTestHosts: primaryHosts
+    tags: envTags
   }
 }
 
@@ -204,6 +214,7 @@ module openai './modules/openai.bicep' = {
     location: location
     openAiName: openAiName
     modelCapacity: openAiModelCapacity
+    tags: envTags
   }
 }
 
@@ -244,6 +255,7 @@ module containerAppsEnv './modules/containerApps.bicep' = {
     logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
     infrastructureSubnetId: network.outputs.containerAppsSubnetId
     identityId: identity.outputs.identityId
+    tags: envTags
   }
 }
 
@@ -290,8 +302,12 @@ module postgres './modules/postgres.bicep' = {
     administratorLoginPassword: postgresAdminPassword
     skuName: 'Standard_B1ms'
     skuTier: 'Burstable'
-    backupRetentionDays: 7
+    // Prod keeps backups longer for a wider PITR window; staging stays on the minimum to save cost.
+    backupRetentionDays: environmentName == 'prod' ? 21 : 7
+    // Prod enables geo-redundant backup for cross-region restore; staging does not need it.
+    geoRedundantBackup: environmentName == 'prod'
     adminIpAddresses: adminIpList
+    tags: envTags
   }
 }
 
@@ -320,6 +336,26 @@ module postgresDnsLink './modules/privateDnsZoneLink.bicep' = {
   }
 }
 
+// Key Vault URI used for Container App KV-reference secrets (e.g. https://kv-techhub-shared.vault.azure.net/).
+// Shared secrets live in the shared Key Vault under names like: techhub-<env>-db-connection-string.
+var sharedKeyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/'
+var dbConnectionSecretName = 'techhub-${environmentName}-db-connection-string'
+var aiApiKeySecretName = 'techhub-${environmentName}-ai-api-key'
+var aadClientSecretSecretName = 'techhub-${environmentName}-aad-client-secret'
+
+// Grant Key Vault Secrets User to the managed identity on the shared Key Vault.
+// Required for Container App KV-reference secrets (db connection string, AI key, AAD secret).
+// This is unconditional — wildcardCertificates.bicep also grants this role but only runs when
+// wildcardCertNames is non-empty; we need it for all environments including bare deployments.
+module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
+  scope: sharedResourceGroup
+  name: 'kvSecretsUserRole-${environmentName}'
+  params: {
+    keyVaultName: keyVaultName
+    principalId: identity.outputs.identityPrincipalId
+  }
+}
+
 // API Container App
 module apiApp './modules/api.bicep' = {
   scope: resourceGroup
@@ -333,15 +369,16 @@ module apiApp './modules/api.bicep' = {
     acrPullIdentityId: identity.outputs.identityId
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
-    databaseConnectionString: 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${postgresAdminLogin};Password=${postgresAdminPassword};SSL Mode=Require'
+    keyVaultUri: sharedKeyVaultUri
+    dbConnectionSecretName: dbConnectionSecretName
+    aiApiKeySecretName: aiApiKeySecretName
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     environmentName: environmentName
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
-    azureAdScopes: azureAdScopes
-    aiCategorizationApiKey: openai.outputs.openAiApiKey
     aiCategorizationEndpoint: openai.outputs.openAiEndpoint
     aiCategorizationDeploymentName: openai.outputs.deploymentName
+    tags: envTags
   }
 }
 
@@ -365,10 +402,27 @@ module webApp './modules/web.bicep' = {
     primaryHosts: primaryHosts
     environmentName: environmentName
     wildcardCertificateIds: wildcardCertIds
+    keyVaultUri: sharedKeyVaultUri
+    aadClientSecretSecretName: aadClientSecretSecretName
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId
-    azureAdClientSecret: azureAdClientSecret
-    azureAdScopes: azureAdScopes
+    tags: envTags
+  }
+}
+
+// Operational alerts — only when an action group has been provided by the shared deployment.
+module alerts './modules/alerts.bicep' = if (!empty(actionGroupId)) {
+  scope: resourceGroup
+  name: 'alerts-deployment'
+  params: {
+    location: location
+    environmentName: environmentName
+    actionGroupId: actionGroupId
+    appInsightsId: monitoring.outputs.appInsightsId
+    logAnalyticsWorkspaceId: monitoring.outputs.logAnalyticsWorkspaceId
+    postgresServerId: postgres.outputs.serverId
+    openAiAccountId: openai.outputs.openAiId
+    tags: envTags
   }
 }
 

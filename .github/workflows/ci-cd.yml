@@ -500,6 +500,8 @@ jobs:
 
       - name: Deploy shared infrastructure
         shell: pwsh
+        env:
+          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment shared `
@@ -566,10 +568,8 @@ jobs:
         shell: pwsh
         env:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
-          AZURE_AD_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
-          AZURE_AD_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
           AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
-          AZURE_AD_SCOPES: ${{ secrets.AZURE_AD_SCOPES }}
+          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment staging `
@@ -701,10 +701,8 @@ jobs:
         shell: pwsh
         env:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
-          AZURE_AD_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
-          AZURE_AD_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
           AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
-          AZURE_AD_SCOPES: ${{ secrets.AZURE_AD_SCOPES }}
+          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment production `

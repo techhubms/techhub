@@ -16,9 +16,13 @@ param appInsightsRetentionInDays int = 90
 @description('Host names to monitor with availability tests (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
 param availabilityTestHosts string[] = []
 
+@description('Tags applied to the Log Analytics workspace, Application Insights component and availability resources')
+param tags object = {}
+
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: logAnalyticsWorkspaceName
   location: location
+  tags: tags
   properties: {
     sku: {
       name: 'PerGB2018'
@@ -37,6 +41,7 @@ resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02
 resource appInsights 'Microsoft.Insights/components@2020-02-02' = {
   name: appInsightsName
   location: location
+  tags: tags
   kind: 'web'
   properties: {
     Application_Type: 'web'

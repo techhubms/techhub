@@ -15,30 +15,29 @@ var aspnetEnvironment = environmentName == 'prod' ? 'Production' : 'Staging'
 @description('FQDNs for the web frontend (used for CORS and BaseUrl configuration)')
 param webFqdns string[] = []
 
-@secure()
-@description('PostgreSQL connection string')
-param databaseConnectionString string
+@description('Key Vault URI (e.g. https://kv-techhub-shared.vault.azure.net/) — used to resolve KV secret references')
+param keyVaultUri string
 
-@secure()
-@description('Azure AD tenant ID for admin authentication')
+@description('Key Vault secret name holding the full PostgreSQL connection string')
+param dbConnectionSecretName string
+
+@description('Key Vault secret name holding the AI Foundry API key')
+param aiApiKeySecretName string
+
+@description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
 
-@secure()
-@description('Azure AD client ID for admin authentication')
+@description('Azure AD client ID (not a secret — public Entra identifier)')
 param azureAdClientId string = ''
-
-@description('Azure AD API scope for admin access token validation')
-param azureAdScopes string = ''
-
-@secure()
-@description('Azure AI Foundry API key for content categorization')
-param aiCategorizationApiKey string = ''
 
 @description('Azure AI Foundry endpoint URL')
 param aiCategorizationEndpoint string = ''
 
 @description('Azure AI Foundry deployment name')
 param aiCategorizationDeploymentName string = ''
+
+@description('Tags applied to the Container App')
+param tags object = {}
 
 var imageReference = '${containerRegistryName}.azurecr.io/techhub-api:${imageTag}'
 var revisionSuffix = 'api-${imageTag}'
@@ -83,15 +82,11 @@ var staticEnvVars = [
   }
   {
     name: 'AzureAd__TenantId'
-    secretRef: 'azure-ad-tenant-id'
+    value: azureAdTenantId
   }
   {
     name: 'AzureAd__ClientId'
-    secretRef: 'azure-ad-client-id'
-  }
-  {
-    name: 'AzureAd__Scopes'
-    value: azureAdScopes
+    value: azureAdClientId
   }
   {
     name: 'AiCategorization__Endpoint'
@@ -110,6 +105,7 @@ var staticEnvVars = [
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
   name: containerAppName
   location: location
+  tags: tags
   identity: {
     type: 'UserAssigned'
     userAssignedIdentities: {
@@ -139,21 +135,17 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       secrets: [
+        // Container App references Key Vault secrets at revision start via the managed identity.
+        // Rotate secrets by updating Key Vault + restarting the revision — no redeploy required.
         {
           name: 'db-connection-string'
-          value: databaseConnectionString
-        }
-        {
-          name: 'azure-ad-tenant-id'
-          value: azureAdTenantId
-        }
-        {
-          name: 'azure-ad-client-id'
-          value: azureAdClientId
+          keyVaultUrl: '${keyVaultUri}secrets/${dbConnectionSecretName}'
+          identity: acrPullIdentityId
         }
         {
           name: 'ai-categorization-api-key'
-          value: aiCategorizationApiKey
+          keyVaultUrl: '${keyVaultUri}secrets/${aiApiKeySecretName}'
+          identity: acrPullIdentityId
         }
       ]
     }
