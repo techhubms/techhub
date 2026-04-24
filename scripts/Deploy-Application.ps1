@@ -161,10 +161,7 @@ if ($LASTEXITCODE -ne 0) {
 $accountInfo = $account | ConvertFrom-Json
 Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 
-# ACR login is deferred to the Push step (after the dynamic IP firewall rule is added).
-# With networkRuleSet.defaultAction = Deny, any login attempted before the runner IP
-# is allow-listed would fail. Login here is only kept for build-only runs (SkipPush).
-if (-not $SkipBuild -and $SkipPush) {
+if (-not $SkipPush) {
     Write-Step "Authenticating with Azure Container Registry"
     az acr login --name $RegistryName
     if ($LASTEXITCODE -ne 0) {
@@ -220,115 +217,23 @@ else {
 if (-not $SkipPush) {
     Write-Step "Pushing images to ACR"
 
-    # --- Temporarily add this machine's IP to the ACR firewall ---
-    # ACR uses Standard SKU (Premium is required for private endpoints — not cost-effective).
-    # Instead we restrict to admin IPs via networkRuleSet and add/remove the runner IP on the fly.
-    # Try multiple providers so a transient outage of one doesn't break the entire deployment.
-    $acrCurrentIp = $null
-    foreach ($provider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
-        try {
-            $response = (Invoke-RestMethod -Uri $provider -TimeoutSec 10).Trim()
-            if ($response -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
-                $acrCurrentIp = $response
-                break
-            }
-            Write-Warning "IP provider '$provider' returned unexpected response: '$response'"
-        }
-        catch {
-            Write-Warning "IP provider '$provider' failed: $($_.Exception.Message)"
-        }
-    }
-    if (-not $acrCurrentIp) {
-        Write-Fail "Failed to detect outbound IP from any provider. Cannot add ACR firewall rule."
+    # Push API
+    Write-Detail "Pushing API image..."
+    docker push "$($apiImage):$Tag"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to push API image (tag: $Tag)"
         exit 1
     }
-    $acrIpCidr = "$acrCurrentIp/32"
+    Write-Ok "API image pushed"
 
-    $acrExistingRules = az acr network-rule list `
-        --name $RegistryName `
-        --query 'ipRules[].value' `
-        --output tsv 2>$null
-    # Normalize and exact-match to avoid false positives (e.g. 1.2.3.4 matching 1.2.3.40/32).
-    $acrExistingRuleValues = @()
-    if ($acrExistingRules) {
-        $acrExistingRuleValues = @(($acrExistingRules -split "`n") |
-            ForEach-Object { $_.Trim() } |
-            Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    # Push Web
+    Write-Detail "Pushing Web image..."
+    docker push "$($webImage):$Tag"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to push Web image (tag: $Tag)"
+        exit 1
     }
-    $acrRuleAlreadyPresent = $acrExistingRuleValues -contains $acrCurrentIp -or $acrExistingRuleValues -contains $acrIpCidr
-
-    $acrIpWasAdded = $false
-    # The firewall rule add is inside the try block so the finally cleanup always runs if the
-    # add succeeds but a subsequent push step fails.
-    try {
-        if (-not $acrRuleAlreadyPresent) {
-            Write-Host "   Adding current IP $acrCurrentIp to ACR '$($RegistryName)' firewall..." -ForegroundColor Cyan
-            az acr network-rule add `
-                --name $RegistryName `
-                --ip-address $acrIpCidr `
-                --output none
-            if ($LASTEXITCODE -ne 0) { throw "Failed to add IP $acrCurrentIp to ACR '$($RegistryName)' firewall." }
-            $acrIpWasAdded = $true
-            # Poll until the rule takes effect instead of a fixed sleep.
-            Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
-            $acrMaxWaitSecs = 60
-            $acrElapsed = 0
-            $acrPropagated = $false
-            while ($acrElapsed -lt $acrMaxWaitSecs -and -not $acrPropagated) {
-                Start-Sleep -Seconds 5
-                $acrElapsed += 5
-                az acr repository list --name $RegistryName --output none 2>$null
-                if ($LASTEXITCODE -eq 0) {
-                    $acrPropagated = $true
-                    Write-Host "   Firewall rule active after ${acrElapsed}s." -ForegroundColor Gray
-                }
-                else {
-                    Write-Host "   Still propagating (${acrElapsed}s / ${acrMaxWaitSecs}s)..." -ForegroundColor Gray
-                }
-            }
-            if (-not $acrPropagated) {
-                Write-Warning "Firewall rule may not have propagated after ${acrMaxWaitSecs}s — proceeding anyway."
-            }
-        }
-        else {
-            Write-Host "   IP $acrCurrentIp is already permitted by ACR '$($RegistryName)' firewall." -ForegroundColor Gray
-        }
-
-        # ACR login must happen AFTER the firewall rule is active — with defaultAction = Deny,
-        # any login attempted before the runner IP is allow-listed will fail.
-        Write-Step "Authenticating with Azure Container Registry"
-        az acr login --name $RegistryName
-        if ($LASTEXITCODE -ne 0) { throw "Failed to authenticate with ACR '$RegistryName'" }
-        Write-Ok "Authenticated with $registryServer"
-
-        # Push API
-        Write-Detail "Pushing API image..."
-        docker push "$($apiImage):$Tag"
-        if ($LASTEXITCODE -ne 0) { throw "Failed to push API image (tag: $Tag)" }
-        Write-Ok "API image pushed"
-
-        # Push Web
-        Write-Detail "Pushing Web image..."
-        docker push "$($webImage):$Tag"
-        if ($LASTEXITCODE -ne 0) { throw "Failed to push Web image (tag: $Tag)" }
-        Write-Ok "Web image pushed"
-    }
-    catch {
-        Write-Fail $_.Exception.Message
-        throw  # rethrow so the finally block always runs for cleanup
-    }
-    finally {
-        if ($acrIpWasAdded) {
-            Write-Host "   Removing current IP $acrCurrentIp from ACR '$($RegistryName)' firewall..." -ForegroundColor Cyan
-            az acr network-rule remove `
-                --name $RegistryName `
-                --ip-address $acrIpCidr `
-                --output none
-            if ($LASTEXITCODE -ne 0) {
-                Write-Warning "Failed to remove IP $acrCurrentIp from ACR firewall. Remove manually: az acr network-rule remove --name $RegistryName --ip-address $acrIpCidr"
-            }
-        }
-    }
+    Write-Ok "Web image pushed"
 }
 else {
     Write-Step "Skipping push"
