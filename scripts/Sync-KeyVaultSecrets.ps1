@@ -14,10 +14,21 @@
         techhub-<env>-ai-api-key             — AI Foundry API key
         techhub-<env>-aad-client-secret      — Entra client secret
 
-    Typical workflow (from an admin machine allowed through the KV firewall):
+    This script is called AUTOMATICALLY by Deploy-Infrastructure.ps1 in deploy
+    mode, so you normally do not need to run it manually. The CI/CD workflow
+    provides all required env vars (POSTGRES_ADMIN_PASSWORD, AI_API_KEY,
+    AZURE_AD_CLIENT_SECRET) to the deploy step, which forwards them here.
+
+    Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
         2. Set env vars: POSTGRES_ADMIN_PASSWORD, AI_API_KEY, AZURE_AD_CLIENT_SECRET
         3. ./scripts/Sync-KeyVaultSecrets.ps1 -Environment prod
+
+    Fail-fast behaviour: if a secret value is empty AND the secret does not yet
+    exist in Key Vault, the script throws so the caller can fix the missing value
+    before the Bicep deployment tries to reference it. If the secret already
+    exists in Key Vault, an empty value causes it to be skipped (existing value
+    is left unchanged — useful for re-deploying without re-specifying stable secrets).
 
     Requires the caller to have the 'Key Vault Secrets Officer' role on the vault.
 
@@ -70,16 +81,37 @@ function Set-KvSecret {
     )
 
     if ([string]::IsNullOrWhiteSpace($Value)) {
-        Write-Warning "$($Description): value is empty. Skipping."
-        return
+        # Value is empty — check whether the secret already exists in Key Vault.
+        # If it does, leave it as-is (stable secrets don't need to be re-specified on every deploy).
+        # If it doesn't, fail fast so the crash-loop caused by a missing KV reference is caught here.
+        $existing = az keyvault secret show `
+            --vault-name $KeyVaultName `
+            --name $Name `
+            --query id --output tsv 2>$null
+        if ($LASTEXITCODE -eq 0 -and $existing) {
+            Write-Host "   [SKIP] $($Description): no new value provided — existing secret kept." -ForegroundColor Gray
+            return
+        }
+        throw "$($Description): value is empty and the secret '$($Name)' does not exist in Key Vault '$($KeyVaultName)'. " +
+              "Set the required env var before deploying."
     }
 
     Write-Host "Writing $($Name) ($($Description))..." -ForegroundColor Cyan
-    az keyvault secret set `
-        --vault-name $KeyVaultName `
-        --name $Name `
-        --value $Value `
-        --output none
+
+    # Write the secret value via a temp file so the value never appears in process arguments
+    # or shell history (avoids exposure through /proc/<pid>/cmdline and logging).
+    $tmpFile = [System.IO.Path]::GetTempFileName()
+    try {
+        [System.IO.File]::WriteAllText($tmpFile, $Value)
+        az keyvault secret set `
+            --vault-name $KeyVaultName `
+            --name $Name `
+            --file $tmpFile `
+            --output none
+    }
+    finally {
+        Remove-Item $tmpFile -Force -ErrorAction SilentlyContinue
+    }
 
     if ($LASTEXITCODE -ne 0) {
         throw "Failed to write secret '$($Name)' to Key Vault '$($KeyVaultName)'."

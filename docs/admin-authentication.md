@@ -100,7 +100,7 @@ All environments use the same script. It appends a new secret without invalidati
 ./scripts/Manage-EntraId.ps1 -Environment production -RemoveExpired
 ```
 
-For staging and production, the script also pushes all four `AZURE_AD_*` secrets to the corresponding GitHub Actions environment via `gh secret set`.
+For staging and production, the script also pushes the three `AZURE_AD_*` secrets (TenantId, ClientId, ClientSecret) to the corresponding GitHub Actions environment via `gh secret set`.
 
 ## Infrastructure
 
@@ -108,9 +108,9 @@ The Bicep templates pass Azure AD configuration as environment variables to Cont
 
 | Env Variable | Source | Used By |
 |---|---|---|
-| `AzureAd__TenantId` | Secret ref in Container App | Web + API |
-| `AzureAd__ClientId` | Secret ref in Container App | Web + API |
-| `AzureAd__ClientSecret` | Secret ref in Container App | Web only |
+| `AzureAd__TenantId` | Plain env var in Container App | Web + API |
+| `AzureAd__ClientId` | Plain env var in Container App | Web + API |
+| `AzureAd__ClientSecret` | Secret ref in Container App (KV reference) | Web only |
 | `AzureAd__Scopes` | Plain env var in Container App | Web only |
 
 These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env vars → Bicep `readEnvironmentVariable()` → Container App secrets/env vars.

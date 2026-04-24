@@ -74,25 +74,26 @@ $workspaceRoot = if (Test-Path (Join-Path $PSScriptRoot "../infra")) {
 # Environment configuration
 $envConfig = @{
     shared     = @{
-        TemplatePath    = "infra/shared.bicep"
-        ParamsPath      = "infra/parameters/shared.bicepparam"
-        DefaultLocation = "westeurope"
-        ResourceGroup   = "rg-techhub-shared"
-        EnvSuffix       = "shared"
+        TemplatePath     = "infra/shared.bicep"
+        ParamsPath       = "infra/parameters/shared.bicepparam"
+        DefaultLocation  = "westeurope"
+        ResourceGroup    = "rg-techhub-shared"
+        EnvSuffix        = "shared"
+        ActionGroupName  = "ag-techhub-ops"
     }
     staging    = @{
-        TemplatePath    = "infra/main.bicep"
-        ParamsPath      = "infra/parameters/staging.bicepparam"
-        DefaultLocation = "swedencentral"
-        ResourceGroup   = "rg-techhub-staging"
-        EnvSuffix       = "staging"
+        TemplatePath     = "infra/main.bicep"
+        ParamsPath       = "infra/parameters/staging.bicepparam"
+        DefaultLocation  = "swedencentral"
+        ResourceGroup    = "rg-techhub-staging"
+        EnvSuffix        = "staging"
     }
     production = @{
-        TemplatePath    = "infra/main.bicep"
-        ParamsPath      = "infra/parameters/prod.bicepparam"
-        DefaultLocation = "swedencentral"
-        ResourceGroup   = "rg-techhub-prod"
-        EnvSuffix       = "prod"
+        TemplatePath     = "infra/main.bicep"
+        ParamsPath       = "infra/parameters/prod.bicepparam"
+        DefaultLocation  = "swedencentral"
+        ResourceGroup    = "rg-techhub-prod"
+        EnvSuffix        = "prod"
     }
 }
 
@@ -212,11 +213,14 @@ if ($Environment -ne 'shared') {
     }
 
     # Resolve the shared action group resource ID automatically so callers don't need to
-    # set ACTION_GROUP_ID manually. The action group name and resource group are deterministic.
+    # set ACTION_GROUP_ID manually. Names are taken from the shared envConfig entry so a
+    # rename in config is the only change needed — no hardcoded strings here.
     if (-not $env:ACTION_GROUP_ID) {
+        $sharedRg  = $envConfig.shared.ResourceGroup
+        $sharedAgName = $envConfig.shared.ActionGroupName
         $agJson = az monitor action-group show `
-            --resource-group 'rg-techhub-shared' `
-            --name 'ag-techhub-ops' `
+            --resource-group $sharedRg `
+            --name $sharedAgName `
             --query id --output tsv 2>$null
         if ($LASTEXITCODE -eq 0 -and $agJson) {
             $env:ACTION_GROUP_ID = $agJson.Trim()
@@ -225,12 +229,30 @@ if ($Environment -ne 'shared') {
         else {
             # Shared infra not yet deployed or action group not created — alerts will be skipped.
             $env:ACTION_GROUP_ID = ""
-            Write-Warn "Action group not found in rg-techhub-shared — operational alerts will be disabled for this deployment"
+            Write-Warn "Action group '$sharedAgName' not found in '$sharedRg' — operational alerts will be disabled for this deployment"
             Write-Detail "Deploy shared infrastructure first to enable alerts."
         }
     }
     else {
         Write-Ok "ACTION_GROUP_ID already set: $($env:ACTION_GROUP_ID)"
+    }
+
+    # Sync application secrets into Key Vault before deployment.
+    # Container Apps reference these secrets via keyVaultUrl; they must exist before
+    # the new revision starts. Running this automatically here means CI/CD workflows
+    # do not need a separate step — just set POSTGRES_ADMIN_PASSWORD, AI_API_KEY, and
+    # AZURE_AD_CLIENT_SECRET in the workflow env and they will be synced automatically.
+    if ($Mode -eq 'deploy') {
+        Write-Step "Syncing application secrets to Key Vault"
+        $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
+        # Map Deploy-Infrastructure.ps1 environment names to the sync script's convention
+        $syncEnv = if ($Environment -eq 'production') { 'prod' } else { $Environment }
+        & $syncScript -Environment $syncEnv
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Secret sync failed — aborting deployment to prevent a crash-looping revision."
+            exit 1
+        }
+        Write-Ok "Secrets synced"
     }
 }
 

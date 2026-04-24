@@ -75,19 +75,26 @@ var staticEnvVars = [
     value: azureAdClientId
   }
   {
-    name: 'AzureAd__ClientSecret'
-    secretRef: 'azure-ad-client-secret'
-  }
-  {
     name: 'AzureAd__Scopes'
     value: empty(azureAdClientId) ? '' : 'api://${azureAdClientId}/Admin.Access'
   }
 ]
+// AzureAd__ClientSecret is only needed when AAD is enabled (azureAdClientId is set).
+// When AAD is disabled the KV reference is omitted entirely — the revision would crash-loop
+// if the secret entry existed in the secrets list but the KV secret did not.
+var aadSecretEnvVars = empty(azureAdClientId)
+  ? []
+  : [
+      {
+        name: 'AzureAd__ClientSecret'
+        secretRef: 'azure-ad-client-secret'
+      }
+    ]
 var primaryHostEnvVars = [for (host, i) in primaryHosts: {
   name: 'PrimaryHosts__${i}'
   value: host
 }]
-var allEnvVars = concat(staticEnvVars, primaryHostEnvVars)
+var allEnvVars = concat(staticEnvVars, aadSecretEnvVars, primaryHostEnvVars)
 
 resource web 'Microsoft.App/containerApps@2025-07-01' = {
   name: containerAppName
@@ -123,15 +130,17 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
           identity: acrPullIdentityId
         }
       ]
-      secrets: [
-        // Container App references the Key Vault secret at revision start via the managed identity.
-        // Rotate by updating Key Vault + restarting the revision — no redeploy required.
-        {
-          name: 'azure-ad-client-secret'
-          keyVaultUrl: '${keyVaultUri}secrets/${aadClientSecretSecretName}'
-          identity: acrPullIdentityId
-        }
-      ]
+      secrets: empty(azureAdClientId)
+        ? []
+        : [
+            // Container App references the Key Vault secret at revision start via the managed identity.
+            // Rotate by updating Key Vault + restarting the revision — no redeploy required.
+            {
+              name: 'azure-ad-client-secret'
+              keyVaultUrl: '${keyVaultUri}secrets/${aadClientSecretSecretName}'
+              identity: acrPullIdentityId
+            }
+          ]
     }
     template: {
       revisionSuffix: revisionSuffix
