@@ -141,9 +141,15 @@ $existingRules = az keyvault network-rule list `
     --vault-name $KeyVaultName `
     --query 'ipRules[].value' `
     --output tsv 2>$null
-$ruleAlreadyPresent = $existingRules -and (
-    ($existingRules -split "`n") | Where-Object { $_.Trim() -like "$currentIp*" }
-).Count -gt 0
+# Normalize existing rules and use exact matching to avoid false positives.
+# e.g. IP 1.2.3.4 must not match an existing rule 1.2.3.40/32.
+$existingRuleValues = @()
+if ($existingRules) {
+    $existingRuleValues = @(($existingRules -split "`n") |
+        ForEach-Object { $_.Trim() } |
+        Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+}
+$ruleAlreadyPresent = $existingRuleValues -contains $currentIp -or $existingRuleValues -contains $ipCidr
 
 $ipWasAdded = $false
 if (-not $ruleAlreadyPresent) {

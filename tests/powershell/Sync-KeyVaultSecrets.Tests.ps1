@@ -94,8 +94,12 @@ Describe "Sync-KeyVaultSecrets" {
 
         It "Should only remove the IP if it was added by this script" {
             $content = Get-Content $scriptPath -Raw
-            # The removal is guarded by $ipWasAdded
-            $content | Should -Match '\$ipWasAdded'
+            # The removal should be guarded by an explicit if ($ipWasAdded) check
+            $guardMatch = [regex]::Match($content, 'if\s*\(\s*\$ipWasAdded\s*\)')
+            $guardMatch.Success | Should -BeTrue
+            # And the removal command must appear after the guard
+            $removeIndex = $content.IndexOf('az keyvault network-rule remove')
+            $removeIndex | Should -BeGreaterThan $guardMatch.Index
         }
 
         It "Should not throw if IP removal fails in the finally block" {

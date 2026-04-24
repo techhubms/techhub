@@ -233,8 +233,10 @@ if ($Action -eq 'teardown') {
     if ($deleteJobs.Count -gt 0) {
         $results = $deleteJobs | Wait-Job | Receive-Job
         $deleteJobs | Remove-Job
-        $succeeded = ($results | Where-Object { $_ -eq 0 }).Count
-        $failed    = ($results | Where-Object { $_ -ne 0 }).Count
+        # @(...) forces array context so .Count is always valid under Set-StrictMode -Version Latest.
+        # Without it, Where-Object returning zero results yields $null, and $null.Count throws.
+        $succeeded = @($results | Where-Object { $_ -eq 0 }).Count
+        $failed    = @($results | Where-Object { $_ -ne 0 }).Count
         Write-Ok "Deleted $succeeded ACR image(s)$(if ($failed -gt 0) { "; $failed failed (non-fatal)" })"
     }
 
