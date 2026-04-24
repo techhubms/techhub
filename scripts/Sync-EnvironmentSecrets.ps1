@@ -11,7 +11,8 @@
 
     - AI Foundry keys:  Read from Azure Cognitive Services, then:
                         1. Written to Key Vault as 'techhub-<env>-ai-api-key'
-                        2. Set as GitHub environment secret AZURE_AI_KEY
+                        (No GitHub secret needed — Deploy-Infrastructure.ps1 reads the key
+                        from Azure directly at deploy time.)
     - Postgres password: Prompted interactively, then synced everywhere:
                         1. Resets the Azure PostgreSQL Flexible Server admin password (optional)
                         2. Writes the full connection string to Key Vault as
@@ -251,17 +252,7 @@ foreach ($env in $Environment) {
                 $totalSet++
             }
             else {
-                Write-Warn "Could not write '$kvAiKey' to Key Vault '$KeyVaultName' — GitHub secret will still be updated."
-            }
-
-            # Keep GitHub secret in sync so the automated deploy can re-write it if needed
-            gh secret set AZURE_AI_KEY --env $env --body $key --repo $GitHubRepo
-            if ($LASTEXITCODE -eq 0) {
-                Write-Ok "AZURE_AI_KEY set for '$env'"
-                $totalSet++
-            }
-            else {
-                Write-Fail "Failed to set AZURE_AI_KEY for '$env'"
+                Write-Warn "Could not write '$kvAiKey' to Key Vault '$KeyVaultName'."
             }
         }
     }
