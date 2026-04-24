@@ -214,8 +214,6 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 Configure these in GitHub repository settings → Secrets and variables → Actions → Repository secrets:
 
 - `AZURE_CREDENTIALS` - Azure service principal credentials (JSON)
-- `AZURE_CONTAINER_REGISTRY` - Name of shared Azure Container Registry: `crtechhub`
-- `AZURE_SUBSCRIPTION_ID` - Azure subscription ID
 
 ### Environment Secrets
 
