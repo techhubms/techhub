@@ -220,7 +220,7 @@ resource containerRestartAlert 'Microsoft.Insights/scheduledQueryRules@2023-03-1
     criteria: {
       allOf: [
         {
-          query: 'ContainerAppSystemLogs_CL\n| where Reason_s in ("StartupProbeFailed", "LivenessProbeFailed", "ContainerCrashed", "Killing")\n| summarize restartCount = count() by ContainerAppName_s, RevisionName_s\n| where restartCount >= 5'
+          query: 'ContainerAppSystemLogs\n| where Reason in ("StartupProbeFailed", "LivenessProbeFailed", "ContainerCrashed", "Killing")\n| summarize restartCount = count() by ContainerAppName, RevisionName\n| where restartCount >= 5'
           timeAggregation: 'Count'
           operator: 'GreaterThan'
           threshold: 0
