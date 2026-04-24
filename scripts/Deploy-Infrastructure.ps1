@@ -211,33 +211,8 @@ if ($Environment -ne 'shared') {
         Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
     }
 
-    # AZURE_AD_TENANT_ID — derive from the authenticated Azure CLI session; no GitHub secret needed.
-    if (-not $env:AZURE_AD_TENANT_ID) {
-        $env:AZURE_AD_TENANT_ID = $accountInfo.tenantId
-        Write-Ok "AZURE_AD_TENANT_ID resolved from Azure CLI session: $($env:AZURE_AD_TENANT_ID)"
-    }
-    else {
-        Write-Ok "AZURE_AD_TENANT_ID already set"
-    }
-
-    # AZURE_AD_CLIENT_ID — look up the app registration by its deterministic display name.
-    # The name convention matches what Manage-EntraId.ps1 creates; no GitHub secret needed.
-    if (-not $env:AZURE_AD_CLIENT_ID) {
-        $appDisplayName = if ($Environment -eq 'production') { 'TechHub Production' } else { 'TechHub Staging' }
-        $clientId = az ad app list --display-name $appDisplayName --query '[0].appId' -o tsv 2>$null
-        if ($LASTEXITCODE -eq 0 -and $clientId) {
-            $env:AZURE_AD_CLIENT_ID = $clientId.Trim()
-            Write-Ok "AZURE_AD_CLIENT_ID resolved from Entra (app: '$appDisplayName'): $($env:AZURE_AD_CLIENT_ID)"
-        }
-        else {
-            $env:AZURE_AD_CLIENT_ID = ""
-            Write-Warn "App registration '$appDisplayName' not found — admin authentication will be disabled"
-            Write-Detail "Run 'Manage-EntraId.ps1 -Environment $Environment' to create it."
-        }
-    }
-    else {
-        Write-Ok "AZURE_AD_CLIENT_ID already set"
-    }
+    # AZURE_AD_TENANT_ID and AZURE_AD_CLIENT_ID are hardcoded in the .bicepparam files
+    # (public Entra identifiers — not secrets). No env var resolution needed.
 
     # AZURE_AD_CLIENT_SECRET — must be provided externally; there is no way to read it from Azure.
     if (-not $env:AZURE_AD_CLIENT_SECRET) {
@@ -245,14 +220,6 @@ if ($Environment -ne 'shared') {
             Write-Warn "AZURE_AD_CLIENT_SECRET is not set — admin authentication will be disabled"
         }
         [Environment]::SetEnvironmentVariable('AZURE_AD_CLIENT_SECRET', "")
-    }
-
-    $adConfigured = -not [string]::IsNullOrEmpty($env:AZURE_AD_CLIENT_ID)
-    if ($adConfigured) {
-        Write-Ok "Azure AD configured"
-    }
-    else {
-        Write-Warn "Azure AD not configured — admin authentication will be disabled"
     }
 
     # Resolve the shared action group resource ID automatically so callers don't need to

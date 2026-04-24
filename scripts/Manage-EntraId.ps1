@@ -19,6 +19,14 @@
     2. Creates a new client secret (appended — old secrets remain valid for overlap)
     3. Optionally cleans up expired secrets
 
+    Deployment SP Key Vault roles (staging/production only):
+    The GitHub Actions deployment service principal (AZURE_CREDENTIALS) is separate from the
+    TechHub OIDC app registration. It needs two roles on the subscription to write secrets and
+    manage Key Vault network firewall rules during deploy:
+        - Key Vault Secrets Officer  (write/read/delete secrets)
+        - Key Vault Contributor      (manage network ACL rules)
+    Pass -DeploymentSpObjectId <OID> to assign these roles automatically.
+
     Secret delivery:
     - localhost:   Prints values to the console for manual configuration
     - staging:     Updates GitHub Actions environment secret
@@ -50,6 +58,11 @@
 
 .PARAMETER GitHubRepo
     GitHub repository in 'owner/repo' format. Defaults to the current repo.
+
+.PARAMETER DeploymentSpObjectId
+    Object ID of the GitHub Actions deployment service principal (from AZURE_CREDENTIALS).
+    When provided for staging/production, assigns 'Key Vault Secrets Officer' and
+    'Key Vault Contributor' roles at subscription scope. Safe to re-run (idempotent).
 
 .EXAMPLE
     ./scripts/Manage-EntraId.ps1 -Environment localhost
@@ -90,7 +103,10 @@ param(
     [string]$GitHubSecretName = 'AZURE_AD_CLIENT_SECRET',
 
     [Parameter(Mandatory = $false)]
-    [string]$GitHubRepo
+    [string]$GitHubRepo,
+
+    [Parameter(Mandatory = $false)]
+    [string]$DeploymentSpObjectId
 )
 
 $ErrorActionPreference = "Stop"
@@ -158,6 +174,9 @@ if ($isLocalhost) {
     Write-Host "  Web Port         : $WebPort" -ForegroundColor Gray
 }
 Write-Host "  Remove Expired   : $RemoveExpired" -ForegroundColor Gray
+if ($DeploymentSpObjectId) {
+    Write-Host "  Deployment SP OID: $DeploymentSpObjectId" -ForegroundColor Gray
+}
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -588,6 +607,48 @@ else {
     Write-Host ""
     Write-Host "  Old secrets remain valid — deploy at your convenience." -ForegroundColor Gray
     Write-Host ""
+}
+
+# ============================================================================
+# DEPLOYMENT SP KEY VAULT ROLES (staging/production only)
+# ============================================================================
+
+if (-not $isLocalhost -and $DeploymentSpObjectId) {
+    Write-Step "Assigning Key Vault roles to deployment SP ($DeploymentSpObjectId)"
+
+    $subscriptionId = $accountInfo.id
+    $subscriptionScope = "/subscriptions/$subscriptionId"
+
+    $kvRoles = @(
+        @{ Name = 'Key Vault Secrets Officer'; Reason = 'write/read/delete secrets during deploy' },
+        @{ Name = 'Key Vault Contributor';     Reason = 'manage network ACL firewall rules' }
+    )
+
+    foreach ($kvRole in $kvRoles) {
+        $result = az role assignment create `
+            --assignee-object-id $DeploymentSpObjectId `
+            --assignee-principal-type ServicePrincipal `
+            --role $($kvRole.Name) `
+            --scope $subscriptionScope `
+            -o json 2>&1
+
+        if ($LASTEXITCODE -eq 0) {
+            Write-Ok "'$($kvRole.Name)' assigned ($($kvRole.Reason))"
+        }
+        else {
+            $resultText = ($result | Out-String).Trim()
+            # RoleAssignmentExists is not a failure — the role is already in place.
+            if ($resultText -match 'RoleAssignmentAlreadyExists') {
+                Write-Ok "'$($kvRole.Name)' already assigned — no change needed"
+            }
+            else {
+                Write-Warn "Failed to assign '$($kvRole.Name)': $resultText"
+            }
+        }
+    }
+}
+elseif ($DeploymentSpObjectId -and $isLocalhost) {
+    Write-Detail "Skipping deployment SP role assignment — not applicable for localhost"
 }
 
 # Warn if too many active secrets

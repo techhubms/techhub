@@ -40,8 +40,8 @@ param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // Azure AD — admin dashboard authentication
 // Tenant ID and Client ID are public Entra identifiers (issuer URL contains tenant ID).
 // The actual Client Secret lives in Key Vault — see scripts/Sync-KeyVaultSecrets.ps1.
-param azureAdTenantId = readEnvironmentVariable('AZURE_AD_TENANT_ID')
-param azureAdClientId = readEnvironmentVariable('AZURE_AD_CLIENT_ID')
+param azureAdTenantId = '3d4d17ea-1ae4-4705-947e-51369c5a5f79'
+param azureAdClientId = '6f993c39-347a-49a2-a854-836d07358905'
 // Shared action group resource ID — resolved automatically by Deploy-Infrastructure.ps1.
 // Leave empty to skip alert creation (e.g. when shared infra has not yet been deployed).
 param actionGroupId = readEnvironmentVariable('ACTION_GROUP_ID', '')
