@@ -139,7 +139,7 @@ $dbConnectionString = "Host=$($PostgresHost);Database=$($PostgresDatabase);Usern
 $currentIp = $null
 foreach ($provider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
     try {
-        $response = (Invoke-RestMethod -Uri $provider -UseBasicParsing -TimeoutSec 10).Trim()
+        $response = (Invoke-RestMethod -Uri $provider -TimeoutSec 10).Trim()
         if ($response -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
             $currentIp = $response
             break

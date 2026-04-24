@@ -161,8 +161,10 @@ if ($LASTEXITCODE -ne 0) {
 $accountInfo = $account | ConvertFrom-Json
 Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 
-# ACR login (needed for push; also needed for build if pulling base images through ACR)
-if (-not $SkipBuild -or -not $SkipPush) {
+# ACR login is deferred to the Push step (after the dynamic IP firewall rule is added).
+# With networkRuleSet.defaultAction = Deny, any login attempted before the runner IP
+# is allow-listed would fail. Login here is only kept for build-only runs (SkipPush).
+if (-not $SkipBuild -and $SkipPush) {
     Write-Step "Authenticating with Azure Container Registry"
     az acr login --name $RegistryName
     if ($LASTEXITCODE -ne 0) {
@@ -225,7 +227,7 @@ if (-not $SkipPush) {
     $acrCurrentIp = $null
     foreach ($provider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
         try {
-            $response = (Invoke-RestMethod -Uri $provider -UseBasicParsing -TimeoutSec 10).Trim()
+            $response = (Invoke-RestMethod -Uri $provider -TimeoutSec 10).Trim()
             if ($response -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
                 $acrCurrentIp = $response
                 break
@@ -291,6 +293,13 @@ if (-not $SkipPush) {
         else {
             Write-Host "   IP $acrCurrentIp is already permitted by ACR '$($RegistryName)' firewall." -ForegroundColor Gray
         }
+
+        # ACR login must happen AFTER the firewall rule is active — with defaultAction = Deny,
+        # any login attempted before the runner IP is allow-listed will fail.
+        Write-Step "Authenticating with Azure Container Registry"
+        az acr login --name $RegistryName
+        if ($LASTEXITCODE -ne 0) { throw "Failed to authenticate with ACR '$RegistryName'" }
+        Write-Ok "Authenticated with $registryServer"
 
         # Push API
         Write-Detail "Pushing API image..."
