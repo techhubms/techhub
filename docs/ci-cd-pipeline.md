@@ -214,6 +214,7 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 Configure these in GitHub repository settings → Secrets and variables → Actions → Repository secrets:
 
 - `AZURE_CREDENTIALS` - Azure service principal credentials (JSON)
+- `ADMIN_IP_ADDRESSES` - Comma-separated IP addresses allowed through PostgreSQL and Key Vault firewalls
 
 ### Environment Secrets
 

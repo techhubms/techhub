@@ -175,6 +175,24 @@ if (-not (Test-Path $paramsFile)) {
 }
 Write-Ok "Template files found"
 
+# ADMIN_IP_ADDRESSES — used by all environments (shared, staging, production) to configure
+# PostgreSQL and Key Vault firewall rules. Must be set externally; no safe default exists.
+if (-not $env:ADMIN_IP_ADDRESSES) {
+    if ($Mode -eq 'deploy') {
+        Write-Fail "Environment variable ADMIN_IP_ADDRESSES is not set."
+        Write-Detail "Set it with: `$env:ADMIN_IP_ADDRESSES = '<ip1>,<ip2>'"
+        exit 1
+    }
+    else {
+        # For validate/whatif, use a non-routable placeholder — Bicep only checks the type
+        $env:ADMIN_IP_ADDRESSES = "0.0.0.0"
+        Write-Warn "ADMIN_IP_ADDRESSES not set — using placeholder (acceptable for $Mode mode)"
+    }
+}
+else {
+    Write-Ok "ADMIN_IP_ADDRESSES is set"
+}
+
 # Check POSTGRES_ADMIN_PASSWORD for environments that need it
 if ($Environment -ne 'shared') {
     if (-not $env:POSTGRES_ADMIN_PASSWORD) {
