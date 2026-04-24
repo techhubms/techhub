@@ -20,8 +20,8 @@ Both the API and Web services export OpenTelemetry data to Application Insights 
 The shared `AddServiceDefaults()` method configures:
 
 - **Logging**: Structured logs with formatted messages and scopes
-- **Metrics**: ASP.NET Core request metrics, HTTP client metrics, .NET runtime metrics
-- **Tracing**: ASP.NET Core request traces, HTTP client dependency traces
+- **Metrics**: ASP.NET Core request metrics, HTTP client metrics (runtime metrics intentionally excluded to reduce ingestion volume)
+- **Tracing**: ASP.NET Core request traces (health probe endpoints excluded), HTTP client dependency traces
 
 When `APPLICATIONINSIGHTS_CONNECTION_STRING` is set, `UseAzureMonitor()` exports all three signals to Application Insights. When `OTEL_EXPORTER_OTLP_ENDPOINT` is set (local dev), `UseOtlpExporter()` sends the same signals to the Aspire Dashboard. Both exporters can run simultaneously.
 
@@ -105,7 +105,7 @@ The Aspire AppHost automatically configures `OTEL_EXPORTER_OTLP_ENDPOINT` for bo
 
 - **Traces**: Distributed traces across API and Web with full request/dependency correlation
 - **Structured Logs**: All log output with severity, scopes, and structured properties
-- **Metrics**: Runtime metrics, request rates, response times, and HTTP client metrics
+- **Metrics**: Request rates, response times, and HTTP client metrics
 
 When running via docker-compose (`Run -Docker`), the same setup applies - an Aspire Dashboard container receives OTLP data from both services.
 

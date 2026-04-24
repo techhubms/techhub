@@ -1,6 +1,7 @@
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
@@ -65,18 +66,34 @@ public static class ServiceDefaultsExtensions
             .WithMetrics(metrics =>
             {
                 metrics.AddAspNetCoreInstrumentation()
-                       .AddHttpClientInstrumentation()
-                       .AddRuntimeInstrumentation();
+                       .AddHttpClientInstrumentation();
+                // Runtime instrumentation (.AddRuntimeInstrumentation()) intentionally omitted:
+                // GC, thread pool, and assembly metrics generated ~8 GB/month in AppMetrics
+                // and AppPerformanceCounters with minimal operational value.
             })
             .WithTracing(tracing =>
             {
-                tracing.AddAspNetCoreInstrumentation()
+                tracing.AddAspNetCoreInstrumentation(options =>
+                       {
+                           // Filter out health probe requests from telemetry.
+                           // Container Apps fires /alive (liveness) and /health (readiness)
+                           // every 10-30s × 2 replicas × 2 services, generating ~2.9 GB/month
+                           // in AppRequests with no diagnostic value.
+                           options.Filter = httpContext =>
+                               !IsHealthProbeRequest(httpContext.Request.Path);
+                       })
                        .AddHttpClientInstrumentation();
             });
 
         builder.AddOpenTelemetryExporters();
 
         return builder;
+    }
+
+    internal static bool IsHealthProbeRequest(PathString path)
+    {
+        return path.Equals("/health", StringComparison.OrdinalIgnoreCase)
+            || path.Equals("/alive", StringComparison.OrdinalIgnoreCase);
     }
 
     private static IHostApplicationBuilder AddOpenTelemetryExporters(this IHostApplicationBuilder builder)
