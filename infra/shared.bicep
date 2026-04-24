@@ -69,6 +69,7 @@ module registry './modules/registry.bicep' = {
     location: location
     registryName: containerRegistryName
     sku: 'Standard'
+    adminIpAddresses: adminIpList
     tags: commonTags
   }
 }

@@ -218,23 +218,74 @@ else {
 if (-not $SkipPush) {
     Write-Step "Pushing images to ACR"
 
-    # Push API
-    Write-Detail "Pushing API image..."
-    docker push "$($apiImage):$Tag"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to push API image (tag: $Tag)"
-        exit 1
-    }
-    Write-Ok "API image pushed"
+    # --- Temporarily add this machine's IP to the ACR firewall ---
+    # ACR uses Standard SKU (Premium is required for private endpoints — not cost-effective).
+    # Instead we restrict to admin IPs via networkRuleSet and add/remove the runner IP on the fly.
+    $acrCurrentIp = (Invoke-RestMethod -Uri 'https://checkip.amazonaws.com' -UseBasicParsing).Trim()
+    $acrIpCidr = "$acrCurrentIp/32"
 
-    # Push Web
-    Write-Detail "Pushing Web image..."
-    docker push "$($webImage):$Tag"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to push Web image (tag: $Tag)"
+    $acrExistingRules = az acr network-rule list `
+        --name $RegistryName `
+        --query 'ipRules[].value' `
+        --output tsv 2>$null
+    # Normalize and exact-match to avoid false positives (e.g. 1.2.3.4 matching 1.2.3.40/32).
+    $acrExistingRuleValues = @()
+    if ($acrExistingRules) {
+        $acrExistingRuleValues = @(($acrExistingRules -split "`n") |
+            ForEach-Object { $_.Trim() } |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+    }
+    $acrRuleAlreadyPresent = $acrExistingRuleValues -contains $acrCurrentIp -or $acrExistingRuleValues -contains $acrIpCidr
+
+    $acrIpWasAdded = $false
+    if (-not $acrRuleAlreadyPresent) {
+        Write-Host "   Adding current IP $acrCurrentIp to ACR '$($RegistryName)' firewall..." -ForegroundColor Cyan
+        az acr network-rule add `
+            --name $RegistryName `
+            --ip-address $acrIpCidr `
+            --output none
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Failed to add IP $acrCurrentIp to ACR '$($RegistryName)' firewall."
+            exit 1
+        }
+        $acrIpWasAdded = $true
+        Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
+        Start-Sleep -Seconds 10
+    }
+    else {
+        Write-Host "   IP $acrCurrentIp is already permitted by ACR '$($RegistryName)' firewall." -ForegroundColor Gray
+    }
+
+    # Use throw (not exit) inside try so that finally always executes for cleanup.
+    try {
+        # Push API
+        Write-Detail "Pushing API image..."
+        docker push "$($apiImage):$Tag"
+        if ($LASTEXITCODE -ne 0) { throw "Failed to push API image (tag: $Tag)" }
+        Write-Ok "API image pushed"
+
+        # Push Web
+        Write-Detail "Pushing Web image..."
+        docker push "$($webImage):$Tag"
+        if ($LASTEXITCODE -ne 0) { throw "Failed to push Web image (tag: $Tag)" }
+        Write-Ok "Web image pushed"
+    }
+    catch {
+        Write-Fail $_.Exception.Message
         exit 1
     }
-    Write-Ok "Web image pushed"
+    finally {
+        if ($acrIpWasAdded) {
+            Write-Host "   Removing current IP $acrCurrentIp from ACR '$($RegistryName)' firewall..." -ForegroundColor Cyan
+            az acr network-rule remove `
+                --name $RegistryName `
+                --ip-address $acrIpCidr `
+                --output none
+            if ($LASTEXITCODE -ne 0) {
+                Write-Warning "Failed to remove IP $acrCurrentIp from ACR firewall. Remove manually: az acr network-rule remove --name $RegistryName --ip-address $acrIpCidr"
+            }
+        }
+    }
 }
 else {
     Write-Step "Skipping push"
