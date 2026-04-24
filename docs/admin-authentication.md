@@ -48,9 +48,8 @@ Both the Web and API projects read from the `AzureAd` configuration section. Whe
 | `AzureAd:Instance` | Login endpoint (`https://login.microsoftonline.com/`) |
 | `AzureAd:TenantId` | Directory (tenant) ID |
 | `AzureAd:ClientId` | Application (client) ID (same as Web) |
-| `AzureAd:Scopes` | Expected scope in access token (e.g., `Admin.Access`) |
 
-The API does not need a `ClientSecret` because it only validates incoming tokens — it does not acquire tokens itself.
+The API validates the `Admin.Access` scope (hardcoded in `Program.cs`) because the scope name is part of the app registration contract, not an environment-specific value. The API does not need a `ClientSecret` because it only validates incoming tokens — it does not acquire tokens itself.
 
 ## Local Development Setup
 
@@ -80,7 +79,6 @@ dotnet user-secrets set AzureAd:Scopes 'api://<client-id>/Admin.Access'
 cd ../TechHub.Api
 dotnet user-secrets set AzureAd:TenantId '<tenant-id>'
 dotnet user-secrets set AzureAd:ClientId '<client-id>'
-dotnet user-secrets set AzureAd:Scopes 'Admin.Access'
 ```
 
 On subsequent runs, the script detects the existing app registration, skips creation, and only rotates the secret. Old secrets remain valid for overlap — no downtime.
@@ -102,7 +100,7 @@ All environments use the same script. It appends a new secret without invalidati
 ./scripts/Manage-EntraId.ps1 -Environment production -RemoveExpired
 ```
 
-For staging and production, the script also pushes all four `AZURE_AD_*` secrets to the corresponding GitHub Actions environment via `gh secret set`.
+For staging and production, the script also pushes the three `AZURE_AD_*` secrets (TenantId, ClientId, ClientSecret) to the corresponding GitHub Actions environment via `gh secret set`.
 
 ## Infrastructure
 
@@ -110,10 +108,10 @@ The Bicep templates pass Azure AD configuration as environment variables to Cont
 
 | Env Variable | Source | Used By |
 |---|---|---|
-| `AzureAd__TenantId` | Secret ref in Container App | Web + API |
-| `AzureAd__ClientId` | Secret ref in Container App | Web + API |
-| `AzureAd__ClientSecret` | Secret ref in Container App | Web only |
-| `AzureAd__Scopes` | Plain env var in Container App | Web + API |
+| `AzureAd__TenantId` | Plain env var in Container App | Web + API |
+| `AzureAd__ClientId` | Plain env var in Container App | Web + API |
+| `AzureAd__ClientSecret` | Secret ref in Container App (KV reference) | Web only |
+| `AzureAd__Scopes` | Plain env var in Container App | Web only |
 
 These are fed from GitHub Actions secrets → `Deploy-Infrastructure.ps1` env vars → Bicep `readEnvironmentVariable()` → Container App secrets/env vars.
 

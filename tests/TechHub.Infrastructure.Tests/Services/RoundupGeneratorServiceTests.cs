@@ -750,7 +750,7 @@ public class RoundupGeneratorServiceTests
 /// avoiding the thread-pool dispatch that <see cref="Progress{T}"/> uses
 /// when there is no <see cref="SynchronizationContext"/>.
 /// </summary>
-file sealed class SynchronousProgress<T>(Action<T> handler) : IProgress<T>
+sealed file class SynchronousProgress<T>(Action<T> handler) : IProgress<T>
 {
     public void Report(T value) => handler(value);
 }

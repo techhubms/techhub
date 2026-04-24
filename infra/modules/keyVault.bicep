@@ -10,9 +10,13 @@ param logAnalyticsWorkspaceId string = ''
 @description('Admin IP addresses for firewall rules (app traffic uses the private endpoint)')
 param adminIpAddresses string[]
 
+@description('Tags applied to the Key Vault')
+param tags object = {}
+
 resource keyVault 'Microsoft.KeyVault/vaults@2024-04-01-preview' = {
   name: vaultName
   location: location
+  tags: tags
   properties: {
     sku: {
       family: 'A'

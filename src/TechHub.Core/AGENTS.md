@@ -53,7 +53,7 @@ All methods async with `CancellationToken ct = default`. Return `IReadOnlyList<T
 
 ## Frontmatter Mapping
 
-📖 See [docs/frontmatter.md](../../docs/frontmatter.md#frontmatter-to-domain-model-mapping) for complete field definitions.
+📖 See [docs/content-schema.md](../../docs/content-schema.md#metadata-to-domain-model-mapping) for complete field definitions.
 
 Key mappings: `date` → `DateEpoch` (Unix timestamp, Europe/Brussels), `section_names` → `SectionNames` (array), `tags` → `Tags` (normalized lowercase), filename → `Slug`.
 

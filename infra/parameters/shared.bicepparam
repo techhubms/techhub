@@ -10,9 +10,13 @@ param keyVaultName = 'kv-techhub-shared'
 param keyVaultAdminObjectIds = []
 param hubVnetName = 'vnet-techhub-hub'
 // Comma-separated admin IP addresses for Key Vault and PostgreSQL firewall.
-// Set ADMIN_IP_ADDRESSES env var or GitHub Actions secret to override.
-param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES', '86.89.119.3')
+// MUST be set via ADMIN_IP_ADDRESSES env var or GitHub Actions secret — no default to prevent leaking IPs into git.
+param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // ACME DNS zone for automated wildcard certificate renewal via certbot-dns-azure.
 // External DNS (GoDaddy) delegates _acme-challenge CNAMEs to this zone.
 param acmeDnsZoneName = 'acme.hub.ms'
 param acmeDelegatedDomains = ['hub.ms', 'xebia.ms']
+// Monthly budget alert — tracks calendar months (not the Apr 7–May 6 billing cycle,
+// which Azure budgets cannot match). Alerts at 80% / 100% / 120%.
+param monthlyBudgetAmount = 150
+param budgetStartDate = '2026-04-01'

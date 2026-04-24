@@ -214,10 +214,4 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await Assertions.Expect(Page.Locator(".content-type-filter")).ToBeVisibleAsync();
         await Assertions.Expect(Page.Locator(".content-type-btn").First).ToBeVisibleAsync();
     }
-
-    private Task WaitForTypesParamPresentAsync() =>
-        Page.WaitForConditionAsync(TypesParamPresentJs);
-
-    private Task WaitForTypesParamRemovedAsync() =>
-        Page.WaitForConditionAsync(TypesParamRemovedJs);
 }

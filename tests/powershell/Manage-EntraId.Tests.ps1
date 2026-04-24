@@ -207,11 +207,10 @@ Describe "Manage-EntraId" {
             $content | Should -Match '--env'
         }
 
-        It "Should push all four GitHub secrets (TenantId, ClientId, ClientSecret, Scopes)" {
+        It "Should push the three GitHub secrets (TenantId, ClientId, ClientSecret)" {
             $content | Should -Match 'AZURE_AD_TENANT_ID'
             $content | Should -Match 'AZURE_AD_CLIENT_ID'
             $content | Should -Match 'AZURE_AD_CLIENT_SECRET'
-            $content | Should -Match 'AZURE_AD_SCOPES'
         }
     }
 }
