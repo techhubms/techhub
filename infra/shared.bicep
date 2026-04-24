@@ -32,10 +32,33 @@ param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
 @description('Spoke VNet resource IDs to link AMPLS DNS zones to (pass after spoke VNets are created)')
 param spokeVnetIds string[] = []
 
+@description('Email address that receives operational alerts and budget notifications')
+param alertEmailAddress string = 'reinier.vanmaanen@xebia.com'
+
+@description('Monthly subscription budget amount (in billing currency, typically EUR).')
+param monthlyBudgetAmount int = 250
+
+@description('Budget start date (first-of-month, YYYY-MM-01). Must be in the current or past month at deploy time.')
+param budgetStartDate string = '2026-04-01'
+
+@description('Azure Policy: allowed deployment locations')
+param allowedLocations string[] = ['swedencentral', 'westeurope', 'global']
+
+@description('Tag name required on resource groups (enforced by Azure Policy)')
+param requiredResourceGroupTagName string = 'owner'
+
+@description('Common tags applied to all resources managed by this template')
+param commonTags object = {
+  owner: 'techhub-maintainer'
+  project: 'techhub'
+  managedBy: 'bicep'
+}
+
 // Shared Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   name: resourceGroupName
   location: location
+  tags: commonTags
 }
 
 // Shared Container Registry
@@ -46,6 +69,7 @@ module registry './modules/registry.bicep' = {
     location: location
     registryName: containerRegistryName
     sku: 'Standard'
+    tags: commonTags
   }
 }
 
@@ -56,6 +80,7 @@ module sharedLogAnalytics './modules/logAnalytics.bicep' = {
   params: {
     location: location
     logAnalyticsWorkspaceName: 'law-techhub-shared'
+    tags: commonTags
   }
 }
 
@@ -69,6 +94,7 @@ module keyVault './modules/keyVault.bicep' = {
     adminObjectIds: keyVaultAdminObjectIds
     logAnalyticsWorkspaceId: sharedLogAnalytics.outputs.logAnalyticsWorkspaceId
     adminIpAddresses: adminIpList
+    tags: commonTags
   }
 }
 
@@ -79,6 +105,7 @@ module hubNetwork './modules/hubNetwork.bicep' = {
   params: {
     location: location
     vnetName: hubVnetName
+    tags: commonTags
   }
 }
 
@@ -134,6 +161,35 @@ module ampls './modules/monitorPrivateLink.bicep' = {
   }
 }
 
+// Shared action group — email notifications for all operational alerts (per-env alerts reference this).
+module actionGroup './modules/actionGroup.bicep' = {
+  scope: resourceGroup
+  name: 'actionGroup-deployment'
+  params: {
+    emailAddress: alertEmailAddress
+    tags: commonTags
+  }
+}
+
+// Subscription monthly cost budget with 80 / 100 / 120% email alerts.
+module budget './modules/budget.bicep' = {
+  name: 'budget-deployment'
+  params: {
+    amount: monthlyBudgetAmount
+    contactEmails: [alertEmailAddress]
+    startDate: budgetStartDate
+  }
+}
+
+// Subscription-level Azure Policy assignments (governance baseline).
+module policyAssignments './modules/policy.bicep' = {
+  name: 'policy-deployment'
+  params: {
+    allowedLocations: allowedLocations
+    requiredTagName: requiredResourceGroupTagName
+  }
+}
+
 // Outputs
 output resourceGroupName string = resourceGroup.name
 output containerRegistryName string = registry.outputs.name
@@ -146,3 +202,4 @@ output hubVnetName string = hubNetwork.outputs.vnetName
 output acmeDnsZoneName string = acmeDnsZone.outputs.zoneName
 output acmeDnsNameServers string[] = acmeDnsZone.outputs.nameServers
 output postgresDnsZoneName string = postgresDnsZone.outputs.dnsZoneName
+output actionGroupId string = actionGroup.outputs.actionGroupId

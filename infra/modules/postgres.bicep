@@ -42,10 +42,14 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
+@description('Tags applied to the PostgreSQL server')
+param tags object = {}
+
 // PostgreSQL Flexible Server
 resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' = {
   name: serverName
   location: location
+  tags: tags
   sku: {
     name: skuName
     tier: skuTier

@@ -8,9 +8,13 @@ param infrastructureSubnetId string
 @description('Optional user-assigned managed identity resource ID (needed for Key Vault certificate access)')
 param identityId string = ''
 
+@description('Tags applied to the Container Apps Environment')
+param tags object = {}
+
 resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-07-01' = {
   name: environmentName
   location: location
+  tags: tags
   identity: !empty(identityId) ? {
     type: 'UserAssigned'
     userAssignedIdentities: {

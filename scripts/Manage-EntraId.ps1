@@ -530,7 +530,6 @@ if ($isLocalhost) {
     Write-Host "    cd ../TechHub.Api" -ForegroundColor DarkGray
     Write-Host "    dotnet user-secrets set AzureAd:TenantId '$tenantId'" -ForegroundColor DarkGray
     Write-Host "    dotnet user-secrets set AzureAd:ClientId '$clientId'" -ForegroundColor DarkGray
-    Write-Host "    dotnet user-secrets set AzureAd:Scopes 'Admin.Access'" -ForegroundColor DarkGray
     Write-Host ""
     Write-Host "  Redirect URI: $($redirectUris -join ', ')" -ForegroundColor Gray
     Write-Host "  API Scope   : $fullScope" -ForegroundColor Gray
@@ -545,7 +544,6 @@ else {
         'AZURE_AD_TENANT_ID' = $tenantId
         'AZURE_AD_CLIENT_ID' = $clientId
         $GitHubSecretName    = $secret
-        'AZURE_AD_SCOPES'    = $fullScope
     }
 
     $allOk = $true

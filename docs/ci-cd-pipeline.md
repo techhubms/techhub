@@ -227,7 +227,6 @@ Configure these per-environment in GitHub repository settings â†’ Environments â
 | `AZURE_AD_TENANT_ID` | Entra ID tenant ID | Entra ID tenant ID | Set via `Manage-EntraId.ps1 -Environment <env>` |
 | `AZURE_AD_CLIENT_ID` | Entra ID client ID | Entra ID client ID | Set via `Manage-EntraId.ps1 -Environment <env>` |
 | `AZURE_AD_CLIENT_SECRET` | Entra ID client secret | Entra ID client secret | Set via `Manage-EntraId.ps1 -Environment <env>` |
-| `AZURE_AD_SCOPES` | API scope | API scope | Set via `Manage-EntraId.ps1 -Environment <env>` |
 | `AZURE_AI_KEY` | Staging AI Foundry key | Production AI Foundry key | Set manually from Azure portal |
 
 ## GitHub Environments

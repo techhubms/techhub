@@ -193,7 +193,7 @@ if ($Environment -ne 'shared') {
     }
 
     # Azure AD env vars (read by .bicepparam files via readEnvironmentVariable)
-    $azureAdVars = @('AZURE_AD_TENANT_ID', 'AZURE_AD_CLIENT_ID', 'AZURE_AD_CLIENT_SECRET', 'AZURE_AD_SCOPES')
+    $azureAdVars = @('AZURE_AD_TENANT_ID', 'AZURE_AD_CLIENT_ID', 'AZURE_AD_CLIENT_SECRET')
     foreach ($varName in $azureAdVars) {
         if (-not [Environment]::GetEnvironmentVariable($varName)) {
             if ($Mode -eq 'deploy') {
@@ -209,6 +209,28 @@ if ($Environment -ne 'shared') {
     }
     else {
         Write-Warn "Azure AD not configured — admin authentication will be disabled"
+    }
+
+    # Resolve the shared action group resource ID automatically so callers don't need to
+    # set ACTION_GROUP_ID manually. The action group name and resource group are deterministic.
+    if (-not $env:ACTION_GROUP_ID) {
+        $agJson = az monitor action-group show `
+            --resource-group 'rg-techhub-shared' `
+            --name 'ag-techhub-ops' `
+            --query id --output tsv 2>$null
+        if ($LASTEXITCODE -eq 0 -and $agJson) {
+            $env:ACTION_GROUP_ID = $agJson.Trim()
+            Write-Ok "Action group resolved: $($env:ACTION_GROUP_ID)"
+        }
+        else {
+            # Shared infra not yet deployed or action group not created — alerts will be skipped.
+            $env:ACTION_GROUP_ID = ""
+            Write-Warn "Action group not found in rg-techhub-shared — operational alerts will be disabled for this deployment"
+            Write-Detail "Deploy shared infrastructure first to enable alerts."
+        }
+    }
+    else {
+        Write-Ok "ACTION_GROUP_ID already set: $($env:ACTION_GROUP_ID)"
     }
 }
 

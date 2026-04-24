@@ -285,15 +285,11 @@ builder.Services.AddAuthorization(options =>
         {
             policy.RequireAuthenticatedUser();
 
-            // Validate that the access token contains the expected API scope.
-            // The scope is configured via AzureAd:Scopes (e.g. "Admin.Access").
-            // Microsoft.Identity.Web normalizes scope claims so only the short
-            // name (without the api:// prefix) appears in the "scp" claim.
-            var requiredScope = builder.Configuration.GetValue<string>("AzureAd:Scopes");
-            if (!string.IsNullOrEmpty(requiredScope))
-            {
-                policy.RequireScope(requiredScope.Split(' ', StringSplitOptions.RemoveEmptyEntries));
-            }
+            // The API scope is part of the app registration's public contract,
+            // defined by Manage-EntraId.ps1 and not environment-specific. Entra ID
+            // places the short scope name (without the "api://<client-id>/" prefix)
+            // in the JWT "scp" claim, so we validate against that directly.
+            policy.RequireScope("Admin.Access");
         }
         else
         {

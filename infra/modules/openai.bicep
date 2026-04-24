@@ -19,10 +19,14 @@ param modelVersion string = '2025-12-11'
 @maxValue(1000)
 param modelCapacity int = 100
 
+@description('Tags applied to the AI Foundry account')
+param tags object = {}
+
 // Azure AI Foundry Account (AIServices)
 resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   name: openAiName
   location: location
+  tags: tags
   sku: {
     name: sku
   }

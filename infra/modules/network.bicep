@@ -19,10 +19,14 @@ param privateEndpointsSubnetName string = 'snet-private-endpoints'
 @description('Private endpoints subnet prefix')
 param privateEndpointsSubnetPrefix string = '10.0.2.0/24'
 
+@description('Tags applied to networking resources')
+param tags object = {}
+
 // NSG for private endpoints subnet — only allows traffic from the Container Apps subnet
 resource privateEndpointsNsg 'Microsoft.Network/networkSecurityGroups@2025-01-01' = {
   name: 'nsg-${privateEndpointsSubnetName}'
   location: location
+  tags: tags
   properties: {
     securityRules: [
       {
@@ -62,6 +66,7 @@ resource privateEndpointsNsg 'Microsoft.Network/networkSecurityGroups@2025-01-01
 resource vnet 'Microsoft.Network/virtualNetworks@2025-01-01' = {
   name: vnetName
   location: location
+  tags: tags
   properties: {
     addressSpace: {
       addressPrefixes: [

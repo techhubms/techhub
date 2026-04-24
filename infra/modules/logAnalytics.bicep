@@ -9,9 +9,13 @@ param logAnalyticsWorkspaceName string
 @description('Log Analytics daily ingestion cap in GB (-1 = unlimited)')
 param dailyQuotaGb int = -1
 
+@description('Tags applied to the Log Analytics workspace')
+param tags object = {}
+
 resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-02-01' = {
   name: logAnalyticsWorkspaceName
   location: location
+  tags: tags
   properties: {
     sku: {
       name: 'PerGB2018'
