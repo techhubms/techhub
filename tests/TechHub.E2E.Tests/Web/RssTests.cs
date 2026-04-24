@@ -59,7 +59,7 @@ public class RssTests : PlaywrightTestBase
     public async Task RssFeed_AllContent_ReturnsValidXml()
     {
         // Act - Fetch via web proxy endpoint
-        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/feed.xml");
+        var response = await Page.APIGetAsync($"{BaseUrl}/all/feed.xml");
 
         // Assert
         response.Status.Should().Be(200);
@@ -87,7 +87,7 @@ public class RssTests : PlaywrightTestBase
     public async Task RssFeed_SectionFeeds_ReturnValidXml(string sectionName)
     {
         // Act - Fetch via web proxy endpoint
-        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/{sectionName}/feed.xml");
+        var response = await Page.APIGetAsync($"{BaseUrl}/{sectionName}/feed.xml");
 
         // Assert
         response.Status.Should().Be(200);
@@ -118,7 +118,7 @@ public class RssTests : PlaywrightTestBase
     public async Task RssFeed_ContainsRecentContent()
     {
         // Act - Fetch via web proxy endpoint
-        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/feed.xml");
+        var response = await Page.APIGetAsync($"{BaseUrl}/all/feed.xml");
         var xmlContent = await response.TextAsync();
         var doc = XDocument.Parse(xmlContent);
 
@@ -156,7 +156,7 @@ public class RssTests : PlaywrightTestBase
         // Arrange
 
         // Act - Test roundups collection feed via web proxy
-        var response = await Page.APIRequest.GetAsync($"{BaseUrl}/all/roundups/feed.xml");
+        var response = await Page.APIGetAsync($"{BaseUrl}/all/roundups/feed.xml");
 
         // Assert
         response.Status.Should().Be(200);

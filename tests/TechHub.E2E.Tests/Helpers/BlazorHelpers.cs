@@ -415,6 +415,22 @@ public static class BlazorHelpers
     }
 
     // ============================================================================
+    // API REQUEST HELPERS
+    // ============================================================================
+    // NOTE: Page.APIRequest.GetAsync() does NOT inherit the page's SetDefaultTimeout().
+    // The Playwright APIRequestContext has its own fixed 30s default. Always use
+    // this helper instead of calling Page.APIRequest.GetAsync() directly.
+    // ============================================================================
+
+    /// <summary>
+    /// Sends a GET request via Playwright's API request context with the standard
+    /// E2E timeout. Use this instead of <c>Page.APIRequest.GetAsync()</c> directly
+    /// because <c>page.SetDefaultTimeout()</c> does NOT apply to API requests.
+    /// </summary>
+    public static Task<IAPIResponse> APIGetAsync(this IPage page, string url) =>
+        page.APIRequest.GetAsync(url, new APIRequestContextOptions { Timeout = E2ETimeout });
+
+    // ============================================================================
     // GENERIC ELEMENT ASSERTIONS
     // ============================================================================
 

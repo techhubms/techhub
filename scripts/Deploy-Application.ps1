@@ -161,8 +161,7 @@ if ($LASTEXITCODE -ne 0) {
 $accountInfo = $account | ConvertFrom-Json
 Write-Ok "Azure CLI authenticated (subscription: $($accountInfo.name))"
 
-# ACR login (needed for push; also needed for build if pulling base images through ACR)
-if (-not $SkipBuild -or -not $SkipPush) {
+if (-not $SkipPush) {
     Write-Step "Authenticating with Azure Container Registry"
     az acr login --name $RegistryName
     if ($LASTEXITCODE -ne 0) {

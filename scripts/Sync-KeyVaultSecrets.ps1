@@ -130,8 +130,94 @@ if ([string]::IsNullOrWhiteSpace($postgresPassword)) {
 
 $dbConnectionString = "Host=$($PostgresHost);Database=$($PostgresDatabase);Username=$($PostgresUser);Password=$($postgresPassword);SSL Mode=Require"
 
-# --- Write secrets ---
+# --- Temporarily add this machine's IP to the Key Vault firewall ---
+# Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
+# static allow-list, so we add the current outbound IP before writing secrets and remove it
+# in a finally block so the rule is always cleaned up even if the sync fails.
+# Detect outbound IP — try multiple providers and validate the response is a valid IPv4 address.
+# This prevents a hard deployment failure if checkip.amazonaws.com is temporarily unavailable.
+$currentIp = $null
+foreach ($provider in @('https://checkip.amazonaws.com', 'https://api.ipify.org', 'https://icanhazip.com')) {
+    try {
+        $response = (Invoke-RestMethod -Uri $provider -TimeoutSec 10).Trim()
+        if ($response -match '^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$') {
+            $currentIp = $response
+            break
+        }
+        Write-Warning "IP provider '$provider' returned unexpected response: '$response'"
+    }
+    catch {
+        Write-Warning "IP provider '$provider' failed: $($_.Exception.Message)"
+    }
+}
+if (-not $currentIp) {
+    throw "Failed to detect outbound IP from any provider. Cannot add Key Vault firewall rule."
+}
+$ipCidr = "$currentIp/32"
+
+$existingRules = az keyvault network-rule list `
+    --vault-name $KeyVaultName `
+    --query 'ipRules[].value' `
+    --output tsv 2>&1
+if ($LASTEXITCODE -ne 0) {
+    $existingRulesError = ($existingRules | Out-String).Trim()
+    if ([string]::IsNullOrWhiteSpace($existingRulesError)) {
+        $existingRulesError = 'Azure CLI returned a non-zero exit code with no error output.'
+    }
+    Write-Warning "Failed to list existing Key Vault network rules for '$KeyVaultName': $existingRulesError"
+    $existingRules = $null
+}
+# Normalize existing rules and use exact matching to avoid false positives.
+# e.g. IP 1.2.3.4 must not match an existing rule 1.2.3.40/32.
+$existingRuleValues = @()
+if ($existingRules) {
+    $existingRuleValues = @(($existingRules -split "`n") |
+        ForEach-Object { $_.Trim() } |
+        Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+}
+$ruleAlreadyPresent = $existingRuleValues -contains $currentIp -or $existingRuleValues -contains $ipCidr
+
+$ipWasAdded = $false
+# --- Add firewall rule and write secrets ---
+# The firewall rule add is inside the try block so the finally cleanup always runs if the
+# add succeeds but a subsequent step fails.
 try {
+    if (-not $ruleAlreadyPresent) {
+        Write-Host "Adding current IP $currentIp to Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
+        az keyvault network-rule add `
+            --vault-name $KeyVaultName `
+            --ip-address $ipCidr `
+            --output none
+        if ($LASTEXITCODE -ne 0) {
+            throw "Failed to add IP $currentIp to Key Vault '$($KeyVaultName)' firewall."
+        }
+        $ipWasAdded = $true
+        # Poll until the rule takes effect instead of a fixed sleep, so CI runs don't wait
+        # longer than needed and won't time out if propagation is slow.
+        Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
+        $maxWaitSecs = 60
+        $elapsed = 0
+        $propagated = $false
+        while ($elapsed -lt $maxWaitSecs -and -not $propagated) {
+            Start-Sleep -Seconds 5
+            $elapsed += 5
+            az keyvault secret list --vault-name $KeyVaultName --query '[]' --output none 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                $propagated = $true
+                Write-Host "   Firewall rule active after ${elapsed}s." -ForegroundColor Gray
+            }
+            else {
+                Write-Host "   Still propagating (${elapsed}s / ${maxWaitSecs}s)..." -ForegroundColor Gray
+            }
+        }
+        if (-not $propagated) {
+            Write-Warning "Firewall rule may not have propagated after ${maxWaitSecs}s — proceeding anyway."
+        }
+    }
+    else {
+        Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
+    }
+
     Set-KvSecret -Name "techhub-$($Environment)-db-connection-string" -Value $dbConnectionString -Description 'PostgreSQL connection string'
     Set-KvSecret -Name "techhub-$($Environment)-ai-api-key" -Value $aiApiKey -Description 'AI Foundry API key'
     Set-KvSecret -Name "techhub-$($Environment)-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'
@@ -143,4 +229,16 @@ try {
 catch {
     Write-Error "Sync-KeyVaultSecrets.ps1 failed: $($_.Exception.Message)"
     throw
+}
+finally {
+    if ($ipWasAdded) {
+        Write-Host "Removing current IP $currentIp from Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
+        az keyvault network-rule remove `
+            --vault-name $KeyVaultName `
+            --ip-address $ipCidr `
+            --output none
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "Failed to remove IP $currentIp from Key Vault firewall. Remove manually: az keyvault network-rule remove --vault-name $($KeyVaultName) --ip-address $ipCidr"
+        }
+    }
 }

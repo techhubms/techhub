@@ -84,7 +84,6 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      // Public access enabled with per-IP firewall rules for admin; app uses private endpoint
       publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
     }
   }
