@@ -40,8 +40,10 @@ resource containerAppsEnvironment 'Microsoft.App/managedEnvironments@2025-07-01'
   }
 }
 
-// Route container app logs to Log Analytics via diagnostic settings
-// instead of the shared key approach, which triggers redeployments.
+// Route container app system logs to Log Analytics via diagnostic settings.
+// Application console logs (stdout/stderr) are intentionally excluded:
+// structured logs already flow to Application Insights via OpenTelemetry,
+// so console logs would be double-logging (~630 MB/month saved).
 resource diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01-preview' = {
   name: 'logs-to-law'
   scope: containerAppsEnvironment
@@ -49,7 +51,7 @@ resource diagnosticSettings 'Microsoft.Insights/diagnosticSettings@2021-05-01-pr
     workspaceId: logAnalyticsWorkspaceId
     logs: [
       {
-        categoryGroup: 'allLogs'
+        category: 'ContainerAppSystemLogs'
         enabled: true
       }
     ]
