@@ -130,6 +130,39 @@ if ([string]::IsNullOrWhiteSpace($postgresPassword)) {
 
 $dbConnectionString = "Host=$($PostgresHost);Database=$($PostgresDatabase);Username=$($PostgresUser);Password=$($postgresPassword);SSL Mode=Require"
 
+# --- Temporarily add this machine's IP to the Key Vault firewall ---
+# Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
+# static allow-list, so we add the current outbound IP before writing secrets and remove it
+# in a finally block so the rule is always cleaned up even if the sync fails.
+$currentIp = (Invoke-RestMethod -Uri 'https://checkip.amazonaws.com' -UseBasicParsing).Trim()
+$ipCidr = "$currentIp/32"
+
+$existingRules = az keyvault network-rule list `
+    --vault-name $KeyVaultName `
+    --query 'ipRules[].value' `
+    --output tsv 2>$null
+$ruleAlreadyPresent = $existingRules -and (
+    ($existingRules -split "`n") | Where-Object { $_.Trim() -like "$currentIp*" }
+).Count -gt 0
+
+$ipWasAdded = $false
+if (-not $ruleAlreadyPresent) {
+    Write-Host "Adding current IP $currentIp to Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
+    az keyvault network-rule add `
+        --vault-name $KeyVaultName `
+        --ip-address $ipCidr `
+        --output none
+    if ($LASTEXITCODE -ne 0) {
+        throw "Failed to add IP $currentIp to Key Vault '$($KeyVaultName)' firewall."
+    }
+    $ipWasAdded = $true
+    Write-Host "   Waiting for firewall rule to propagate..." -ForegroundColor Gray
+    Start-Sleep -Seconds 10
+}
+else {
+    Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
+}
+
 # --- Write secrets ---
 try {
     Set-KvSecret -Name "techhub-$($Environment)-db-connection-string" -Value $dbConnectionString -Description 'PostgreSQL connection string'
@@ -143,4 +176,16 @@ try {
 catch {
     Write-Error "Sync-KeyVaultSecrets.ps1 failed: $($_.Exception.Message)"
     throw
+}
+finally {
+    if ($ipWasAdded) {
+        Write-Host "Removing current IP $currentIp from Key Vault '$($KeyVaultName)' firewall..." -ForegroundColor Cyan
+        az keyvault network-rule remove `
+            --vault-name $KeyVaultName `
+            --ip-address $ipCidr `
+            --output none
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warning "Failed to remove IP $currentIp from Key Vault firewall. Remove manually: az keyvault network-rule remove --vault-name $($KeyVaultName) --ip-address $ipCidr"
+        }
+    }
 }
