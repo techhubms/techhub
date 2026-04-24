@@ -133,10 +133,23 @@ Describe "Sync-KeyVaultSecrets" {
         }
 
         It "Should not throw if IP removal fails in the finally block" {
-            $content = Get-Content $scriptPath -Raw
-            # Uses Write-Warning instead of throw for cleanup failures
-            $addSection = $content -replace '(?s).*finally\s*\{', ''
-            $addSection | Should -Match "Write-Warning"
+            $tokens = $null
+            $parseErrors = $null
+            $ast = [System.Management.Automation.Language.Parser]::ParseFile($scriptPath, [ref]$tokens, [ref]$parseErrors)
+
+            $firewallCleanupTry = $ast.FindAll({
+                param($node)
+
+                $node -is [System.Management.Automation.Language.TryStatementAst] -and
+                $null -ne $node.Finally -and
+                $node.Finally.Extent.Text -match 'az keyvault network-rule remove'
+            }, $true) | Select-Object -First 1
+
+            $firewallCleanupTry | Should -Not -BeNullOrEmpty
+
+            $finallyText = $firewallCleanupTry.Finally.Extent.Text
+            $finallyText | Should -Match "Write-Warning"
+            $finallyText | Should -Not -Match '\bthrow\b'
         }
     }
 
