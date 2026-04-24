@@ -5,15 +5,19 @@
 
 .DESCRIPTION
     Reads secrets from Azure and sets them as GitHub environment secrets for
-    staging and/or production. Handles:
+    staging and/or production. Container Apps reference secrets via Key Vault
+    URL references, so this script writes new values to Key Vault directly;
+    no redeploy is needed — restarting a revision is sufficient.
 
-    - AI Foundry keys:      Read from Azure Cognitive Services (oai-techhub-staging / oai-techhub-prod)
-    - Postgres passwords:   Prompted interactively, then synced everywhere:
-                            1. Resets the Azure PostgreSQL Flexible Server admin password
-                            2. Stores the password in Azure Key Vault (kv-techhub-shared)
-                            3. Sets the GitHub environment secret POSTGRES_ADMIN_PASSWORD
-                            4. Updates the 'db-connection-string' secret on the API Container App
-                            5. Forces a new revision so the running app picks up the new password
+    - AI Foundry keys:  Read from Azure Cognitive Services, then:
+                        1. Written to Key Vault as 'techhub-<env>-ai-api-key'
+                        2. Set as GitHub environment secret AZURE_AI_KEY
+    - Postgres password: Prompted interactively, then synced everywhere:
+                        1. Resets the Azure PostgreSQL Flexible Server admin password (optional)
+                        2. Writes the full connection string to Key Vault as
+                           'techhub-<env>-db-connection-string'
+                        3. Sets the GitHub environment secret POSTGRES_ADMIN_PASSWORD
+                        4. Restarts the API Container App revision so it re-reads the KV secret
 
     Requires:
     - Azure CLI authenticated (`az login`)
@@ -61,7 +65,7 @@
 
 .EXAMPLE
     ./scripts/Sync-EnvironmentSecrets.ps1 -SkipAiKey -SkipServerPasswordReset
-    Sync a known Postgres password to Key Vault, GitHub, and Container Apps
+    Sync a known Postgres password to Key Vault, GitHub, and restart Container App
     without touching the PostgreSQL server itself.
 #>
 
@@ -119,6 +123,29 @@ function Write-Detail {
     Write-Host "   $Message" -ForegroundColor Gray
 }
 
+# Write a secret to Key Vault using a temp file so the value never appears in
+# process arguments (avoids exposure via /proc/<pid>/cmdline and shell history).
+function Set-KvSecretFromValue {
+    param(
+        [Parameter(Mandatory = $true)][string]$VaultName,
+        [Parameter(Mandatory = $true)][string]$SecretName,
+        [Parameter(Mandatory = $true)][string]$Value
+    )
+    $tmpFile = [System.IO.Path]::GetTempFileName()
+    try {
+        [System.IO.File]::WriteAllText($tmpFile, $Value)
+        az keyvault secret set `
+            --vault-name $VaultName `
+            --name $SecretName `
+            --file $tmpFile `
+            --output none
+        return $LASTEXITCODE -eq 0
+    }
+    finally {
+        Remove-Item $tmpFile -Force -ErrorAction SilentlyContinue
+    }
+}
+
 # ============================================================================
 # ENVIRONMENT CONFIG
 # ============================================================================
@@ -170,7 +197,7 @@ $tenantId = ($account | ConvertFrom-Json).tenantId
 Write-Ok "Azure CLI authenticated (tenant: $tenantId)"
 
 # GitHub CLI
-$ghStatus = gh auth status 2>&1
+gh auth status 2>&1 | Out-Null
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "GitHub CLI not authenticated. Run 'gh auth login' first."
     exit 1
@@ -215,6 +242,19 @@ foreach ($env in $Environment) {
             Write-Detail "$key"
         }
         else {
+            # Write to Key Vault so the Container App picks it up on next revision start
+            $kvAiKey = "techhub-$($config.EnvSuffix)-ai-api-key"
+            Write-Detail "Writing '$kvAiKey' to Key Vault '$KeyVaultName'..."
+            $kvOk = Set-KvSecretFromValue -VaultName $KeyVaultName -SecretName $kvAiKey -Value $key
+            if ($kvOk) {
+                Write-Ok "Key Vault secret '$kvAiKey' updated"
+                $totalSet++
+            }
+            else {
+                Write-Warn "Could not write '$kvAiKey' to Key Vault '$KeyVaultName' — GitHub secret will still be updated."
+            }
+
+            # Keep GitHub secret in sync so the automated deploy can re-write it if needed
             gh secret set AZURE_AI_KEY --env $env --body $key --repo $GitHubRepo
             if ($LASTEXITCODE -eq 0) {
                 Write-Ok "AZURE_AI_KEY set for '$env'"
@@ -233,7 +273,6 @@ foreach ($env in $Environment) {
         $pgServer = $config.PostgresServer
         $rgName   = $config.ResourceGroup
         $apiApp   = $config.ApiAppName
-        $kvSecret = "postgres-admin-password-$($config.EnvSuffix)"
 
         $securePassword = Read-Host -Prompt "   Enter new Postgres admin password for $env" -AsSecureString
         $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto(
@@ -257,41 +296,14 @@ foreach ($env in $Environment) {
                 else {
                     Write-Fail "Failed to reset Azure PostgreSQL admin password on '$pgServer'"
                     Write-Detail "$pgUpdateOutput"
-                    Write-Detail "Continuing with Key Vault / GitHub / Container App sync..."
+                    Write-Detail "Continuing with Key Vault / GitHub sync..."
                 }
             }
             else {
                 Write-Detail "Skipping server password reset (-SkipServerPasswordReset)"
             }
 
-            # 2. Store in Azure Key Vault
-            Write-Detail "Storing password in Key Vault '$KeyVaultName' as '$kvSecret'..."
-            $kvOutput = az keyvault secret set `
-                --vault-name $KeyVaultName `
-                --name $kvSecret `
-                --value $password `
-                -o none 2>&1
-            if ($LASTEXITCODE -eq 0) {
-                Write-Ok "Password stored in Key Vault as '$kvSecret'"
-                $totalSet++
-            }
-            else {
-                Write-Warn "Could not store password in Key Vault '$KeyVaultName'."
-                Write-Detail "$kvOutput"
-                Write-Detail "Skipping Key Vault storage. GitHub secret and Container App will still be updated."
-            }
-
-            # 3. Set GitHub environment secret
-            gh secret set POSTGRES_ADMIN_PASSWORD --env $env --body $password --repo $GitHubRepo
-            if ($LASTEXITCODE -eq 0) {
-                Write-Ok "POSTGRES_ADMIN_PASSWORD set in GitHub environment '$env'"
-                $totalSet++
-            }
-            else {
-                Write-Fail "Failed to set POSTGRES_ADMIN_PASSWORD in GitHub environment '$env'"
-            }
-
-            # 4. Update the Container App 'db-connection-string' secret and force a new revision
+            # Fetch the server FQDN to build the connection string
             Write-Detail "Retrieving PostgreSQL server FQDN for '$pgServer'..."
             $pgFqdn = az postgres flexible-server show `
                 --name $pgServer `
@@ -299,18 +311,27 @@ foreach ($env in $Environment) {
                 --query fullyQualifiedDomainName `
                 -o tsv 2>&1
 
-            if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($pgFqdn)) {
+            if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($pgFqdn)) {
+                Write-Fail "Could not retrieve FQDN for '$pgServer'"
+                Write-Detail "Run 'az postgres flexible-server show --name $pgServer --resource-group $rgName' to troubleshoot."
+                Write-Detail "Continuing with GitHub secret sync. Key Vault and Container App will not be updated."
+            }
+            else {
                 $connStr = "Host=$pgFqdn;Database=techhub;Username=techhubadmin;Password=$password;SSL Mode=Require"
 
-                Write-Detail "Updating 'db-connection-string' secret on Container App '$apiApp'..."
-                az containerapp secret set `
-                    --name $apiApp `
-                    --resource-group $rgName `
-                    --secrets "db-connection-string=$connStr" 2>&1 | Out-Null
-                if ($LASTEXITCODE -eq 0) {
-                    Write-Ok "Secret 'db-connection-string' updated on '$apiApp'"
+                # 2. Write the full connection string to Key Vault.
+                # The API Container App references this secret via keyVaultUrl — no redeploy needed,
+                # only a revision restart to pick up the new value.
+                $kvConnStr = "techhub-$($config.EnvSuffix)-db-connection-string"
+                Write-Detail "Writing '$kvConnStr' to Key Vault '$KeyVaultName'..."
+                $kvOk = Set-KvSecretFromValue -VaultName $KeyVaultName -SecretName $kvConnStr -Value $connStr
+                if ($kvOk) {
+                    Write-Ok "Key Vault secret '$kvConnStr' updated"
+                    $totalSet++
 
-                    # Force a new revision so the running app picks up the new secret value
+                    # 3. Restart the Container App revision so it re-reads the new KV secret value.
+                    # We create a new revision (not just restart) because Container Apps resolves
+                    # KV references at revision start, not dynamically.
                     $revSuffix = "pwupdate-$(Get-Date -Format 'yyyyMMddHHmmss')"
                     Write-Detail "Creating new revision on '$apiApp' (suffix: $revSuffix)..."
                     az containerapp update `
@@ -318,21 +339,27 @@ foreach ($env in $Environment) {
                         --resource-group $rgName `
                         --revision-suffix $revSuffix 2>&1 | Out-Null
                     if ($LASTEXITCODE -eq 0) {
-                        Write-Ok "New revision '$revSuffix' deployed — '$apiApp' now uses the new password"
+                        Write-Ok "New revision '$revSuffix' started — '$apiApp' will use the new connection string"
                     }
                     else {
-                        Write-Fail "Failed to create new revision for '$apiApp'"
-                        Write-Detail "The secret was updated but the app needs a manual restart or redeploy to pick it up."
+                        Write-Warn "Could not create new revision for '$apiApp'."
+                        Write-Detail "The KV secret was updated. Trigger a redeploy or create a revision manually to apply it."
                     }
                 }
                 else {
-                    Write-Fail "Failed to update 'db-connection-string' secret on '$apiApp'"
-                    Write-Detail "The password was changed on the server. Redeploy the API to restore connectivity."
+                    Write-Warn "Could not write '$kvConnStr' to Key Vault '$KeyVaultName'."
+                    Write-Detail "GitHub secret will still be updated. The new value will reach Key Vault on the next deploy."
                 }
             }
+
+            # Always update the GitHub secret so the next automated deploy uses the new password
+            gh secret set POSTGRES_ADMIN_PASSWORD --env $env --body $password --repo $GitHubRepo
+            if ($LASTEXITCODE -eq 0) {
+                Write-Ok "POSTGRES_ADMIN_PASSWORD set in GitHub environment '$env'"
+                $totalSet++
+            }
             else {
-                Write-Fail "Could not retrieve FQDN for '$pgServer' — skipping Container App update"
-                Write-Detail "Run 'az postgres flexible-server show --name $pgServer --resource-group $rgName' to troubleshoot."
+                Write-Fail "Failed to set POSTGRES_ADMIN_PASSWORD in GitHub environment '$env'"
             }
         }
     }
