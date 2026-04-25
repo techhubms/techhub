@@ -514,15 +514,8 @@ if ($dnsRecordExists -and -not [string]::IsNullOrWhiteSpace($existingIpsRaw)) {
 $dnsNeedsUpdate = (-not $dnsRecordExists) -or ($existingIps.Count -ne 1) -or ($existingIps[0] -ne $peIp)
 
 if ($dnsNeedsUpdate) {
-    if (-not $dnsRecordExists) {
-        # Create the record set if it doesn't exist yet
-        az network private-dns record-set a create `
-            --resource-group $privateDnsRG `
-            --zone-name $privateDnsZoneName `
-            --name $prPostgresServer 2>$null | Out-Null
-    }
-    else {
-        # Remove all existing A records to prevent round-robin
+    if ($dnsRecordExists) {
+        # Remove all existing A records to prevent round-robin.
         foreach ($oldIp in $existingIps) {
             az network private-dns record-set a remove-record `
                 --resource-group $privateDnsRG `
@@ -531,6 +524,14 @@ if ($dnsNeedsUpdate) {
                 --ipv4-address $oldIp 2>$null | Out-Null
         }
     }
+
+    # Always (re-)create the record set before adding. When remove-record deletes the
+    # last A record, Azure auto-deletes the entire record set — so it must be recreated.
+    # This is idempotent: if the record set already exists, create returns it as-is.
+    az network private-dns record-set a create `
+        --resource-group $privateDnsRG `
+        --zone-name $privateDnsZoneName `
+        --name $prPostgresServer 2>$null | Out-Null
 
     # Add the current IP
     az network private-dns record-set a add-record `
