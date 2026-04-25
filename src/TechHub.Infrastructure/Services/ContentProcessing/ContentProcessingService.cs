@@ -269,6 +269,8 @@ public sealed class ContentProcessingService
                             else
                             {
                                 transcriptsFailed++;
+                                Log(string.Create(CultureInfo.InvariantCulture,
+                                    $"  ⚠ Transcript unavailable: {raw.ExternalUrl} — {raw.TranscriptFailureReason ?? "unknown"}"));
 
                                 // Enforce TranscriptMandatory — fail the item if transcript is required but absent
                                 if (feed.TranscriptMandatory)
@@ -343,6 +345,18 @@ public sealed class ContentProcessingService
                         }
 
                         var processed = categorizationResult.Item;
+
+                        // Cap future-dated items to the processing date.
+                        // Some feeds publish articles with dates a few days in the future.
+                        // Without this cap, the item would be excluded from weekly roundups
+                        // which filter by date range relative to the run time.
+                        var nowEpoch = _timeProvider.GetUtcNow().ToUnixTimeSeconds();
+                        if (processed.DateEpoch > nowEpoch)
+                        {
+                            Log(string.Create(CultureInfo.InvariantCulture,
+                                $"  → Future date capped to now: {raw.ExternalUrl} (was {DateTimeOffset.FromUnixTimeSeconds(processed.DateEpoch):yyyy-MM-dd})"));
+                            processed = processed.WithDateEpoch(nowEpoch);
+                        }
 
                         // Apply subcollection rules from configuration
                         var matchedSubcollection = MatchSubcollectionRule(raw.FeedName, raw.Title);

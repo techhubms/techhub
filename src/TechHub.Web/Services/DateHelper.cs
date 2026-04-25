@@ -19,6 +19,27 @@ public static class DateHelper
         var todayBrussels = TimeZoneInfo.ConvertTime(DateTimeOffset.UtcNow, _brusselsTimeZone).Date;
         var daysDiff = (todayBrussels - brusselsDate).Days;
 
+        if (daysDiff < 0)
+        {
+            var futureDays = -daysDiff;
+            if (futureDays == 1)
+            {
+                return "Tomorrow";
+            }
+
+            if (futureDays < 7)
+            {
+                return $"In {futureDays} days";
+            }
+
+            if (futureDays < 30)
+            {
+                return $"In {futureDays / 7} weeks";
+            }
+
+            return dateTime.ToString("MMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);
+        }
+
         if (daysDiff == 0)
         {
             return "Today";

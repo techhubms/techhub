@@ -492,6 +492,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         {
             CollectionName = collectionName,
             Slug = slug,
+            DateEpoch = 1700000000L,
             Title = "Updated Title",
             Author = "Test Author",
             Excerpt = "Updated excerpt",

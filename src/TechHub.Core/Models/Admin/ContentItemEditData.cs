@@ -8,6 +8,10 @@ public sealed record ContentItemEditData
 {
     public required string CollectionName { get; init; }
     public required string Slug { get; init; }
+
+    /// <summary>Unix epoch publication date (seconds). Editable in admin UI.</summary>
+    public long DateEpoch { get; init; }
+
     public required string Title { get; init; }
     public required string Author { get; init; }
     public required string Excerpt { get; init; }

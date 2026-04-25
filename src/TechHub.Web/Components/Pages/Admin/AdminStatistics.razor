@@ -56,9 +56,9 @@
                 <div class="admin-stat-value">@_stats.Processing.TranscriptsSucceeded.ToString("N0")</div>
                 <div class="admin-stat-label">Transcripts ✓</div>
             </div>
-            <div class="admin-stat-card">
+            <div class="admin-stat-card" title="All-time count of processed YouTube video URLs where the transcript fetch failed. Includes videos that were later AI-excluded or failed other steps, so this number may exceed the videos collection count.">
                 <div class="admin-stat-value">@_stats.Processing.TranscriptsFailed.ToString("N0")</div>
-                <div class="admin-stat-label">Transcripts ✗</div>
+                <div class="admin-stat-label">Transcript Failures</div>
             </div>
             <div class="admin-stat-card">
                 <div class="admin-stat-value">@_stats.DatabaseSize.TotalSize</div>

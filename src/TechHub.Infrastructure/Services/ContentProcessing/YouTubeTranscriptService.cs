@@ -110,6 +110,18 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
             {
                 throw;
             }
+            catch (VideoUnavailableException ex)
+            {
+                // Non-transient: video is private, removed, or region-restricted. No point retrying.
+                _logger.LogWarning("Video unavailable for transcript: {Url} — {Message}", videoUrl, ex.Message);
+                return TranscriptResult.Failure(ex.Message);
+            }
+            catch (VideoUnplayableException ex)
+            {
+                // Non-transient: video requires purchase or is age-restricted. No point retrying.
+                _logger.LogWarning("Video unplayable for transcript: {Url} — {Message}", videoUrl, ex.Message);
+                return TranscriptResult.Failure(ex.Message);
+            }
             catch (Exception ex) when (ex is OperationCanceledException or HttpRequestException or IOException or YoutubeExplodeException)
             {
                 if (attempt <= MaxRetryAttempts)
