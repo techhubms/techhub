@@ -128,6 +128,50 @@ function Get-PostgresServerExists {
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
+function Write-ContainerAppDiagnostics {
+    <#
+    .SYNOPSIS
+        Dumps the latest revision status and system logs for a Container App.
+        Used when warmup fails to help triage ActivationFailed / crash-loop / image-pull errors.
+    #>
+    param([string]$AppName, [string]$ResourceGroup)
+
+    try {
+        $latestRevision = az containerapp revision list `
+            -n $AppName -g $ResourceGroup `
+            --query "sort_by([], &properties.createdTime) | [-1]" -o json 2>$null |
+            ConvertFrom-Json -ErrorAction SilentlyContinue
+        if ($latestRevision) {
+            Write-Host ""
+            Write-Host "Latest revision status for ${AppName}:" -ForegroundColor Yellow
+            Write-Host "  Name            : $($latestRevision.name)" -ForegroundColor Gray
+            Write-Host "  Image           : $($latestRevision.properties.template.containers[0].image)" -ForegroundColor Gray
+            Write-Host "  Replicas        : $($latestRevision.properties.replicas)" -ForegroundColor Gray
+            Write-Host "  HealthState     : $($latestRevision.properties.healthState)" -ForegroundColor Gray
+            Write-Host "  RunningState    : $($latestRevision.properties.runningState)" -ForegroundColor Gray
+            # runningStateDetails is only present on some revisions (e.g., when ActivationFailed).
+            # With Set-StrictMode -Version Latest, accessing a missing property throws —
+            # use PSObject.Properties to safely check.
+            if ($latestRevision.properties.PSObject.Properties['runningStateDetails']) {
+                Write-Host "  Details         : $($latestRevision.properties.runningStateDetails)" -ForegroundColor Gray
+            }
+        }
+    }
+    catch {
+        Write-Detail "Could not fetch revision status for ${AppName}: $_"
+    }
+
+    try {
+        Write-Host ""
+        Write-Host "Recent system events for ${AppName}:" -ForegroundColor Yellow
+        az containerapp logs show -n $AppName -g $ResourceGroup --type system --tail 30 2>&1 |
+            ForEach-Object { Write-Host $_ }
+    }
+    catch {
+        Write-Detail "Could not fetch system logs for ${AppName}: $_"
+    }
+}
+
 # ============================================================================
 # BANNER
 # ============================================================================
@@ -605,7 +649,19 @@ Write-Step "Deploying API Container App: $apiAppName"
 $apiExists = Get-ContainerAppExists -Name $apiAppName -ResourceGroup $stagingRG
 
 if ($apiExists) {
-    Write-Detail "Updating existing $apiAppName (image + env vars)..."
+    Write-Detail "Updating existing $apiAppName (image + env vars + secrets)..."
+
+    # Always refresh the DB connection string secret to ensure it matches the current
+    # POSTGRES_ADMIN_PASSWORD. The create path sets the secret initially, but subsequent
+    # deploys must update it in case the password rotated or the PITR server was recreated.
+    az containerapp secret set `
+        --name $apiAppName `
+        --resource-group $stagingRG `
+        --secrets "db-connection-string=$dbConnectionString" 2>$null | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to update API Container App secrets"
+        exit 1
+    }
 
     az containerapp update `
         --name $apiAppName `
@@ -754,6 +810,44 @@ if ($env:GITHUB_OUTPUT) {
     Write-Ok "Written web-url to GITHUB_OUTPUT"
 }
 
+# ============================================================================
+# WARMUP — API then Web
+# ============================================================================
+
+# First, wait for the API to respond. The Web app depends on the API, so there's
+# no point waiting 5 minutes for the Web if the API itself is crashing.
+# The API has internal ingress, so we can't call it from the GitHub runner.
+# Instead, check its latest revision's running state.
+Write-Step "Checking API Container App activation: $apiAppName"
+$apiMaxWait = 36  # 36 × 5s = 3 minutes max
+$apiAttempt = 0
+$apiActivated = $false
+while ($apiAttempt -lt $apiMaxWait) {
+    $apiAttempt++
+    $apiRunningState = az containerapp revision list `
+        -n $apiAppName -g $stagingRG `
+        --query "sort_by([], &properties.createdTime) | [-1].properties.runningState" -o tsv 2>$null
+
+    if ($apiRunningState -eq 'Running' -or $apiRunningState -eq 'Ready') {
+        Write-Ok "API is active (RunningState: $apiRunningState) after $($apiAttempt * 5)s"
+        $apiActivated = $true
+        break
+    }
+    elseif ($apiRunningState -eq 'Failed' -or $apiRunningState -eq 'ActivationFailed' -or $apiRunningState -eq 'Stopped' -or $apiRunningState -eq 'Degraded') {
+        Write-Fail "API revision entered terminal state: $apiRunningState"
+        Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
+        exit 1
+    }
+
+    Write-Detail "API not yet active (state: $apiRunningState, attempt $apiAttempt/$apiMaxWait) — waiting 5s..."
+    Start-Sleep -Seconds 5
+}
+if (-not $apiActivated) {
+    Write-Fail "API did not activate within $($apiMaxWait * 5)s"
+    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
+    exit 1
+}
+
 # Warmup: wait for the first successful HTTP response before returning.
 # Container Apps can take 30-90s after deployment before the container is reachable
 # (image pull, startup probe, cold-start). Waiting here means the caller (CI) gets
@@ -788,31 +882,8 @@ if (-not $ready) {
     # NOTE: Old ACR images are intentionally NOT deleted here so that the
     # failing revision can still be examined and so a re-deploy can pull them.
     Write-Fail "Web did not respond within $($maxAttempts * 5)s — failing deploy"
-    try {
-        $latestRevision = az containerapp revision list `
-            -n $webAppName -g $stagingRG `
-            --query "sort_by([], &properties.createdTime) | [-1]" -o json 2>$null |
-            ConvertFrom-Json -ErrorAction SilentlyContinue
-        if ($latestRevision) {
-            Write-Host ""
-            Write-Host "Latest revision status:" -ForegroundColor Yellow
-            Write-Host "  Name            : $($latestRevision.name)" -ForegroundColor Gray
-            Write-Host "  Image           : $($latestRevision.properties.template.containers[0].image)" -ForegroundColor Gray
-            Write-Host "  Replicas        : $($latestRevision.properties.replicas)" -ForegroundColor Gray
-            Write-Host "  HealthState     : $($latestRevision.properties.healthState)" -ForegroundColor Gray
-            Write-Host "  RunningState    : $($latestRevision.properties.runningState)" -ForegroundColor Gray
-            if ($latestRevision.properties.runningStateDetails) {
-                Write-Host "  Details         : $($latestRevision.properties.runningStateDetails)" -ForegroundColor Gray
-            }
-        }
-        Write-Host ""
-        Write-Host "Recent system events for $webAppName (last 30):" -ForegroundColor Yellow
-        az containerapp logs show -n $webAppName -g $stagingRG --type system --tail 30 2>&1 |
-            Select-Object -Last 30
-    }
-    catch {
-        Write-Detail "Could not fetch diagnostic info: $_"
-    }
+    Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $stagingRG
+    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
     exit 1
 }
 
