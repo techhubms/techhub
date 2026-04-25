@@ -107,6 +107,32 @@ public sealed class ProcessedContentItem
     }
 
     /// <summary>
+    /// Creates a copy of this item with the specified date epoch.
+    /// Used to cap future-dated items to the processing date.
+    /// </summary>
+    public ProcessedContentItem WithDateEpoch(long dateEpoch)
+    {
+        return new ProcessedContentItem
+        {
+            Slug = Slug,
+            Title = Title,
+            Content = Content,
+            Excerpt = Excerpt,
+            DateEpoch = dateEpoch,
+            CollectionName = CollectionName,
+            SubcollectionName = SubcollectionName,
+            ExternalUrl = ExternalUrl,
+            Author = Author,
+            FeedName = FeedName,
+            Tags = Tags,
+            Sections = Sections,
+            PrimarySectionName = PrimarySectionName,
+            ContentHash = ContentHash,
+            RoundupMetadata = RoundupMetadata
+        };
+    }
+
+    /// <summary>
     /// Creates a copy of this item with the specified tags.
     /// </summary>
     public ProcessedContentItem WithTags(IReadOnlyList<string> tags)

@@ -43,7 +43,7 @@ public class ContentProcessingServiceTests
         _writeRepo = new ContentItemWriteRepository(fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance);
     }
 
-    private ContentProcessingService CreateService(ContentProcessorOptions? options = null)
+    private ContentProcessingService CreateService(ContentProcessorOptions? options = null, TimeProvider? timeProvider = null)
     {
         var opts = options ?? new ContentProcessorOptions();
 
@@ -67,9 +67,22 @@ public class ContentProcessingServiceTests
             _processedUrlRepo,
             _feedRepo.Object,
             _contentFixer.Object,
-            TimeProvider.System,
+            timeProvider ?? TimeProvider.System,
             Options.Create(opts),
             NullLogger<ContentProcessingService>.Instance);
+    }
+
+    /// <summary>Minimal stub that returns a fixed point in time.</summary>
+    private sealed class FrozenTimeProvider : TimeProvider
+    {
+        private readonly DateTimeOffset _fixedTime;
+
+        public FrozenTimeProvider(DateTimeOffset fixedTime)
+        {
+            _fixedTime = fixedTime;
+        }
+
+        public override DateTimeOffset GetUtcNow() => _fixedTime;
     }
 
     private static RawFeedItem CreateRawItem(string url = "https://example.com/article-1", string title = "Test Article") => new()
@@ -1192,5 +1205,56 @@ public class ContentProcessingServiceTests
             "SELECT subcollection_name FROM content_items WHERE external_url = @Url",
             new { Url = url });
         ((string?)dbItem!.subcollection_name).Should().BeNull();
+    }
+
+    // ── Future Date Cap ───────────────────────────────────────────────────
+
+    [Fact]
+    public async Task RunAsync_WhenItemHasFutureDate_CapsDateEpochToNow()
+    {
+        // Arrange
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var url = $"https://example.com/future-dated-{testId}";
+        var slug = $"future-dated-{testId}";
+        var feed = new FeedConfig { Id = 1, Name = "Test", Url = "https://example.com/feed", OutputDir = "_blogs", Enabled = true };
+        var rawItem = CreateRawItem(url);
+
+        // "Now" is frozen to a fixed point; future date is 5 days ahead
+        var frozenNow = new DateTimeOffset(2026, 1, 15, 12, 0, 0, TimeSpan.Zero);
+        var futureDateEpoch = frozenNow.AddDays(5).ToUnixTimeSeconds();
+
+        var processed = new ProcessedContentItem
+        {
+            Slug = slug,
+            Title = "Future Article",
+            Excerpt = "An article published in the future",
+            DateEpoch = futureDateEpoch,
+            CollectionName = "blogs",
+            ExternalUrl = url,
+            FeedName = "Test Feed",
+            ContentHash = $"hash-{testId}",
+            Sections = ["ai"],
+            PrimarySectionName = "ai",
+            Tags = []
+        };
+
+        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
+        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([rawItem]));
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService(timeProvider: new FrozenTimeProvider(frozenNow));
+
+        // Act
+        await sut.RunAsync("scheduled", CancellationToken.None);
+
+        // Assert — date_epoch in DB must not exceed frozenNow
+        var storedEpoch = await _fixture.Connection.QueryFirstOrDefaultAsync<long?>(
+            "SELECT date_epoch FROM content_items WHERE slug = @Slug AND collection_name = @Collection",
+            new { Slug = slug, Collection = "blogs" });
+
+        storedEpoch.Should().NotBeNull("item should have been written to DB");
+        storedEpoch!.Value.Should().Be(frozenNow.ToUnixTimeSeconds(),
+            "future-dated items must be capped to the processing time");
     }
 }
