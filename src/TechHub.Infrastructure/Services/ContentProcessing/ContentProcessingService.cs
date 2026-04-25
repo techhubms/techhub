@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services.ContentProcessing;
@@ -270,7 +271,7 @@ public sealed class ContentProcessingService
                             {
                                 transcriptsFailed++;
                                 Log(string.Create(CultureInfo.InvariantCulture,
-                                    $"  ⚠ Transcript unavailable: {raw.ExternalUrl} — {raw.TranscriptFailureReason ?? "unknown"}"));
+                                    $"  ⚠ Transcript unavailable: {raw.ExternalUrl.Sanitize()} — {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}"));
 
                                 // Enforce TranscriptMandatory — fail the item if transcript is required but absent
                                 if (feed.TranscriptMandatory)
@@ -354,7 +355,7 @@ public sealed class ContentProcessingService
                         if (processed.DateEpoch > nowEpoch)
                         {
                             Log(string.Create(CultureInfo.InvariantCulture,
-                                $"  → Future date capped to now: {raw.ExternalUrl} (was {DateTimeOffset.FromUnixTimeSeconds(processed.DateEpoch):yyyy-MM-dd})"));
+                                $"  → Future date capped to now: {raw.ExternalUrl.Sanitize()} (was {DateTimeOffset.FromUnixTimeSeconds(processed.DateEpoch):yyyy-MM-dd})"));
                             processed = processed.WithDateEpoch(nowEpoch);
                         }
 

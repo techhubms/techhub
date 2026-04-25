@@ -73,9 +73,16 @@ public class ContentProcessingServiceTests
     }
 
     /// <summary>Minimal stub that returns a fixed point in time.</summary>
-    private sealed class FrozenTimeProvider(DateTimeOffset fixedTime) : TimeProvider
+    private sealed class FrozenTimeProvider : TimeProvider
     {
-        public override DateTimeOffset GetUtcNow() => fixedTime;
+        private readonly DateTimeOffset _fixedTime;
+
+        public FrozenTimeProvider(DateTimeOffset fixedTime)
+        {
+            _fixedTime = fixedTime;
+        }
+
+        public override DateTimeOffset GetUtcNow() => _fixedTime;
     }
 
     private static RawFeedItem CreateRawItem(string url = "https://example.com/article-1", string title = "Test Article") => new()

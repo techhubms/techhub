@@ -34,7 +34,8 @@ public static class DateHelper
 
             if (futureDays < 30)
             {
-                return $"In {futureDays / 7} weeks";
+                var weeks = futureDays / 7;
+                return weeks == 1 ? "In 1 week" : $"In {weeks} weeks";
             }
 
             return dateTime.ToString("MMM d, yyyy", System.Globalization.CultureInfo.InvariantCulture);

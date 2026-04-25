@@ -1615,17 +1615,42 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             Slug = slug
         };
 
-        var rows = await Connection.ExecuteAsync(
-            new CommandDefinition(ItemSql, parameters, cancellationToken: ct));
-
-        if (rows > 0)
+        var rows = 0;
+        using var transaction = Connection.BeginTransaction();
+        try
         {
-            // Sync denormalized date_epoch in content_tags_expanded
-            await Connection.ExecuteAsync(
-                new CommandDefinition(
-                    "UPDATE content_tags_expanded SET date_epoch = @DateEpoch WHERE collection_name = @CollectionName AND slug = @Slug",
-                    new { editData.DateEpoch, CollectionName = collectionName, Slug = slug },
-                    cancellationToken: ct));
+            rows = await Connection.ExecuteAsync(
+                new CommandDefinition(ItemSql, parameters, transaction: transaction, cancellationToken: ct));
+
+            if (rows > 0)
+            {
+                // Sync all denormalized fields in content_tags_expanded atomically.
+                // Admin edits can change date_epoch, section booleans, and sections_bitmask —
+                // all are denormalized here and must stay in sync with content_items.
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        @"UPDATE content_tags_expanded
+                          SET date_epoch        = @DateEpoch,
+                              is_ai             = @IsAi,
+                              is_azure          = @IsAzure,
+                              is_dotnet         = @IsDotnet,
+                              is_devops         = @IsDevops,
+                              is_github_copilot = @IsGhc,
+                              is_ml             = @IsMl,
+                              is_security       = @IsSecurity,
+                              sections_bitmask  = @Bitmask
+                          WHERE collection_name = @CollectionName AND slug = @Slug",
+                        parameters,
+                        transaction: transaction,
+                        cancellationToken: ct));
+            }
+
+            transaction.Commit();
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
         }
 
         return rows > 0;
