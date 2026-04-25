@@ -661,7 +661,9 @@ jobs:
             }
           }
 
-          # Representative API call (read-only, safe for production)
+          # Representative API call (read-only, safe for production).
+          # This verifies the API is serving data. The endpoint is a public read-only content
+          # listing that requires no authentication and is part of the stable public API.
           $apiUrl = "https://tech.hub.ms/api/content?limit=1"
           $api = try { Invoke-WebRequest -Uri $apiUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
           if ($api -and $api.StatusCode -eq 200) {

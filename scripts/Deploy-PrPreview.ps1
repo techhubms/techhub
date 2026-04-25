@@ -352,8 +352,8 @@ else {
     }
     Write-Ok "Production server ID: $prodServerId"
 
-    # Use a restore time of 3:00 AM today (Europe/Brussels) for a stable backup point.
-    # If it's before 03:00 UTC, use yesterday's 03:00 to ensure the backup exists.
+    # Use a restore time of 03:00 UTC today for a stable backup point (avoids mid-migration state).
+    # If it's before 04:00 UTC, use yesterday's 03:00 UTC to ensure the backup window has completed.
     $nowUtc = [DateTime]::UtcNow
     $restoreDate = if ($nowUtc.Hour -lt 4) { $nowUtc.AddDays(-1).Date.AddHours(3) } else { $nowUtc.Date.AddHours(3) }
     $restoreTime = $restoreDate.ToString('yyyy-MM-ddTHH:mm:ssZ')
