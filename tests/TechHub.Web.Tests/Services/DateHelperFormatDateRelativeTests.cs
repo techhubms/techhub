@@ -9,7 +9,6 @@ namespace TechHub.Web.Tests.Services;
 /// </summary>
 public class DateHelperFormatDateRelativeTests
 {
-
     [Fact]
     public void FormatDateRelative_Today_ReturnsToday()
     {
