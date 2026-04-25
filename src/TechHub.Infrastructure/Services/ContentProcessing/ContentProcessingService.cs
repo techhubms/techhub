@@ -276,7 +276,7 @@ public sealed class ContentProcessingService
                                 // Enforce TranscriptMandatory — fail the item if transcript is required but absent
                                 if (feed.TranscriptMandatory)
                                 {
-                                    Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Failed: {raw.ExternalUrl} — transcript mandatory but not available"));
+                                    Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Failed: {raw.ExternalUrl.Sanitize()} — transcript mandatory but not available"));
                                     await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, "Transcript mandatory but not available", raw.FeedName, raw.CollectionName, reason: null, hasTranscript: false, jobId: jobId, ct: ct);
                                     errorCount++;
                                     await FlushProgressAsync();
