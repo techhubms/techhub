@@ -9,10 +9,9 @@ param resourceGroupName = 'rg-techhub-staging'
 param appInsightsName = 'appi-techhub-staging'
 param containerRegistryName = 'crtechhubms'
 param containerAppsEnvName = 'cae-techhub-staging'
-// No permanent staging Container Apps — PR environments deploy their own
+// Staging Container Apps deployed by main.bicep (idempotent).
+// PR environments also deploy their own ephemeral apps
 // (ca-techhub-api-pr-{N}, ca-techhub-web-pr-{N}) via Deploy-PrPreview.ps1.
-// These placeholder names satisfy Bicep's required params but are only used
-// by the Bicep template's Container App modules which are deployed idempotently.
 param apiAppName = 'ca-techhub-api-staging'
 param webAppName = 'ca-techhub-web-staging'
 // Networking (10.1.x range — must not overlap with hub 10.100.x or prod 10.2.x)

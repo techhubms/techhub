@@ -370,6 +370,20 @@ else {
         exit 1
     }
     Write-Ok "PR PostgreSQL server created: $prPostgresServer"
+
+    # The PITR-restored server inherits the production admin password.
+    # Reset it to match the POSTGRES_ADMIN_PASSWORD env var (the staging environment secret)
+    # so the connection string built later uses the correct credentials.
+    Write-Detail "Resetting admin password on $prPostgresServer to match staging secret..."
+    az postgres flexible-server update `
+        --resource-group $stagingRG `
+        --name $prPostgresServer `
+        --admin-password $env:POSTGRES_ADMIN_PASSWORD
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to reset admin password on $prPostgresServer"
+        exit 1
+    }
+    Write-Ok "Admin password reset on $prPostgresServer"
 }
 
 # Create private endpoint for the PR Postgres server (if not already present)
@@ -395,18 +409,6 @@ else {
         exit 1
     }
 
-    # Get the private endpoints subnet ID from the staging VNet
-    $subnetId = az network vnet subnet show `
-        --resource-group $stagingRG `
-        --vnet-name 'vnet-techhub-staging' `
-        --name 'snet-private-endpoints' `
-        --query id -o tsv 2>$null
-
-    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($subnetId)) {
-        Write-Fail "Could not find private endpoints subnet in staging VNet"
-        exit 1
-    }
-
     Write-Detail "Creating private endpoint $prPrivateEndpointName..."
     az network private-endpoint create `
         --name $prPrivateEndpointName `
@@ -421,31 +423,85 @@ else {
         exit 1
     }
 
-    # Register DNS record in the existing PostgreSQL private DNS zone
-    $peNicId = az network private-endpoint show `
-        --name $prPrivateEndpointName `
-        --resource-group $stagingRG `
-        --query "networkInterfaces[0].id" -o tsv 2>$null
+    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+}
 
-    if (-not [string]::IsNullOrWhiteSpace($peNicId)) {
-        $peIp = az network nic show --ids $peNicId --query "ipConfigurations[0].privateIpAddress" -o tsv 2>$null
-        if (-not [string]::IsNullOrWhiteSpace($peIp)) {
-            Write-Detail "Registering DNS record for $prPostgresServer → $peIp"
-            az network private-dns record-set a add-record `
-                --resource-group 'rg-techhub-shared' `
-                --zone-name 'privatelink.postgres.database.azure.com' `
+# Always reconcile DNS A record to the current private endpoint NIC IP.
+# This ensures the record is correct even if the PE was recreated (new IP) or the record was
+# deleted externally. Uses delete-then-add to prevent round-robin multi-IP records.
+Write-Step "Reconciling DNS A record for PR PostgreSQL"
+
+$privateDnsZoneName = 'privatelink.postgres.database.azure.com'
+$privateDnsRG = 'rg-techhub-shared'
+
+$peNicId = az network private-endpoint show `
+    --name $prPrivateEndpointName `
+    --resource-group $stagingRG `
+    --query "networkInterfaces[0].id" -o tsv 2>$null
+
+if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($peNicId)) {
+    Write-Fail "Could not retrieve NIC for private endpoint '$prPrivateEndpointName'"
+    exit 1
+}
+
+$peIp = az network nic show --ids $peNicId --query "ipConfigurations[0].privateIpAddress" -o tsv 2>$null
+
+if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($peIp)) {
+    Write-Fail "Could not retrieve private IP for private endpoint '$prPrivateEndpointName'"
+    exit 1
+}
+
+Write-Detail "Private endpoint IP: $peIp"
+
+# Check if an A record already exists and what IPs it has
+$existingIpsRaw = az network private-dns record-set a show `
+    --resource-group $privateDnsRG `
+    --zone-name $privateDnsZoneName `
+    --name $prPostgresServer `
+    --query "arecords[].ipv4Address" -o tsv 2>$null
+
+$dnsRecordExists = ($LASTEXITCODE -eq 0)
+$existingIps = @()
+if ($dnsRecordExists -and -not [string]::IsNullOrWhiteSpace($existingIpsRaw)) {
+    $existingIps = @($existingIpsRaw -split "`r?`n" | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
+}
+
+# Determine if DNS needs updating: record missing, multiple IPs (round-robin), or wrong IP
+$dnsNeedsUpdate = (-not $dnsRecordExists) -or ($existingIps.Count -ne 1) -or ($existingIps[0] -ne $peIp)
+
+if ($dnsNeedsUpdate) {
+    if (-not $dnsRecordExists) {
+        # Create the record set if it doesn't exist yet
+        az network private-dns record-set a create `
+            --resource-group $privateDnsRG `
+            --zone-name $privateDnsZoneName `
+            --name $prPostgresServer 2>$null | Out-Null
+    }
+    else {
+        # Remove all existing A records to prevent round-robin
+        foreach ($oldIp in $existingIps) {
+            az network private-dns record-set a remove-record `
+                --resource-group $privateDnsRG `
+                --zone-name $privateDnsZoneName `
                 --record-set-name $prPostgresServer `
-                --ipv4-address $peIp 2>$null
-            if ($LASTEXITCODE -eq 0) {
-                Write-Ok "DNS A record created for $prPostgresServer"
-            }
-            else {
-                Write-Warn "Could not create DNS record — Container Apps may not resolve the PR Postgres endpoint"
-            }
+                --ipv4-address $oldIp 2>$null | Out-Null
         }
     }
 
-    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+    # Add the current IP
+    az network private-dns record-set a add-record `
+        --resource-group $privateDnsRG `
+        --zone-name $privateDnsZoneName `
+        --record-set-name $prPostgresServer `
+        --ipv4-address $peIp 2>$null | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to set DNS A record for '$prPostgresServer' → $peIp"
+        exit 1
+    }
+    Write-Ok "DNS A record set: $prPostgresServer → $peIp"
+}
+else {
+    Write-Ok "DNS A record already correct: $prPostgresServer → $peIp"
 }
 
 # ============================================================================
@@ -493,7 +549,7 @@ else {
 }
 
 # Compute the PR postgres FQDN and build the connection string.
-# The PITR-restored server retains the same admin login and password from production.
+# After PITR restore, the admin password is reset to match POSTGRES_ADMIN_PASSWORD.
 # The connection string uses the private endpoint FQDN for VNet-internal access.
 $prPostgresFqdn = "$prPostgresServer.postgres.database.azure.com"
 $dbConnectionString = "Host=$prPostgresFqdn;Database=$prPostgresDb;Username=$prPostgresUser;Password=$($env:POSTGRES_ADMIN_PASSWORD);SSL Mode=Require"

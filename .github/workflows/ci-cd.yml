@@ -542,8 +542,11 @@ jobs:
             -SkipDeploy
 
   # ──────────────────────────────────────────────
-  # Staging infrastructure deployment (networking, monitoring, shared env)
-  # No permanent staging Container Apps — PR environments handle that.
+  # Staging infrastructure deployment
+  # Runs the full Bicep template (VNet, monitoring, CAE, Container Apps, PostgreSQL).
+  # main.bicep unconditionally deploys all modules — the staging Container Apps
+  # exist as Bicep-managed resources but are not the primary deployment target;
+  # PR environments deploy their own ephemeral apps via Deploy-PrPreview.ps1.
   # ──────────────────────────────────────────────
   deploy-staging-infra:
     name: Deploy Staging Infrastructure
@@ -659,18 +662,18 @@ jobs:
               Write-Host "::error::Homepage not accessible ($webUrl)"
               exit 1
             }
-          }
 
-          # Representative API call (read-only, safe for production).
-          # This verifies the API is serving data. The endpoint is a public read-only content
-          # listing that requires no authentication and is part of the stable public API.
-          $apiUrl = "https://tech.hub.ms/api/content?limit=1"
-          $api = try { Invoke-WebRequest -Uri $apiUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($api -and $api.StatusCode -eq 200) {
-            Write-Host "[OK] API smoke test passed ($apiUrl)"
-          } else {
-            Write-Host "::error::API smoke test failed ($apiUrl)"
-            exit 1
+            # Representative API call (read-only, safe for production).
+            # This verifies the API is serving data. The endpoint is a public read-only content
+            # listing that requires no authentication and is part of the stable public API.
+            $apiUrl = "$webUrl/api/content?limit=1"
+            $api = try { Invoke-WebRequest -Uri $apiUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+            if ($api -and $api.StatusCode -eq 200) {
+              Write-Host "[OK] API smoke test passed ($apiUrl)"
+            } else {
+              Write-Host "::error::API smoke test failed ($apiUrl)"
+              exit 1
+            }
           }
 
       - name: Deployment summary
