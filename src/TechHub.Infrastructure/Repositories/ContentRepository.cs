@@ -1615,11 +1615,10 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             Slug = slug
         };
 
-        var rows = 0;
         using var transaction = Connection.BeginTransaction();
         try
         {
-            rows = await Connection.ExecuteAsync(
+            var rows = await Connection.ExecuteAsync(
                 new CommandDefinition(ItemSql, parameters, transaction: transaction, cancellationToken: ct));
 
             if (rows > 0)
@@ -1646,14 +1645,13 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             }
 
             transaction.Commit();
+            return rows > 0;
         }
         catch
         {
             transaction.Rollback();
             throw;
         }
-
-        return rows > 0;
     }
 
     // ==================== Admin Content Items ====================
