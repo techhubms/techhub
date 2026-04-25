@@ -833,7 +833,7 @@ while ($apiAttempt -lt $apiMaxWait) {
         $apiActivated = $true
         break
     }
-    elseif ($apiRunningState -eq 'Failed' -or $apiRunningState -eq 'ActivationFailed' -or $apiRunningState -eq 'Stopped' -or $apiRunningState -eq 'Degraded') {
+    elseif ($apiRunningState -in @('Failed', 'ActivationFailed', 'Stopped', 'Degraded')) {
         Write-Fail "API revision entered terminal state: $apiRunningState"
         Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
         exit 1
