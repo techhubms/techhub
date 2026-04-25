@@ -13,7 +13,7 @@ Also contains database performance tests that run against local PostgreSQL only.
 The target server is configured via the `E2E_BASE_URL` environment variable:
 
 - **Local development**: defaults to `https://localhost:5003` (start servers with `Run -WithoutTests`)
-- **CI (staging)**: set to `https://staging-tech.hub.ms` — runs after staging deployment
+- **CI (PR preview)**: set to the PR preview URL — runs after PR environment deployment
 - **Performance tests**: always run against local PostgreSQL, skipped if no database is available
 
 ## Understanding Timeout Failures
