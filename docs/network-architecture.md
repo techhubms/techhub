@@ -11,9 +11,9 @@ Admin IP (firewall allowlisted)
 Hub VNet — vnet-techhub-hub (10.100.0.0/16) [rg-techhub-shared]
     │   └── snet-private-endpoints (10.100.1.0/24) — Key Vault PE, AMPLS PE
     │
-    ├── Peering ──► Staging Spoke VNet — vnet-techhub-staging (10.1.0.0/16) [rg-techhub-staging]
-    │                   ├── snet-container-apps (10.1.0.0/23) — Container Apps Environment
-    │                   └── snet-private-endpoints (10.1.2.0/24) — PostgreSQL PE, AI Foundry PE
+    ├── Peering ──► Staging/PR-env Spoke VNet — vnet-techhub-staging (10.1.0.0/16) [rg-techhub-staging]
+    │                   ├── snet-container-apps (10.1.0.0/23) — Container Apps Environment (shared by all PRs)
+    │                   └── snet-private-endpoints (10.1.2.0/24) — PostgreSQL PEs (per-PR), AI Foundry PE
     │
     └── Peering ──► Prod Spoke VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
                         ├── snet-container-apps (10.2.0.0/23) — Container Apps Environment
@@ -25,7 +25,7 @@ Hub VNet — vnet-techhub-hub (10.100.0.0/16) [rg-techhub-shared]
 | VNet | CIDR | Resource Group | Purpose |
 |------|------|----------------|---------|
 | `vnet-techhub-hub` | `10.100.0.0/16` | `rg-techhub-shared` | Key Vault PE, AMPLS PE |
-| `vnet-techhub-staging` | `10.1.0.0/16` | `rg-techhub-staging` | Container Apps, PostgreSQL PE, AI Foundry PE |
+| `vnet-techhub-staging` | `10.1.0.0/16` | `rg-techhub-staging` | PR-env Container Apps, per-PR PostgreSQL PEs, AI Foundry PE |
 | `vnet-techhub-prod` | `10.2.0.0/16` | `rg-techhub-prod` | Container Apps, PostgreSQL PE, AI Foundry PE |
 
 Address spaces are deliberately non-overlapping to support VNet peering.
@@ -66,7 +66,7 @@ Data services use private endpoints. Key Vault uses IP firewall rules for admin 
 | Resource | PE Location | DNS Zone | Linked VNets |
 |----------|-------------|----------|--------------|
 | Key Vault (`kv-techhub-shared`) | Hub VNet | `privatelink.vaultcore.azure.net` | Hub + all spokes |
-| PostgreSQL Staging (`psql-techhub-staging`) | Staging VNet | `privatelink.postgres.database.azure.com` | Staging + Hub |
+| PostgreSQL per-PR (`psql-techhub-pr-{N}`) | Staging VNet | `privatelink.postgres.database.azure.com` | Staging + Hub |
 | PostgreSQL Prod (`psql-techhub-prod`) | Prod VNet | `privatelink.postgres.database.azure.com` | Prod + Hub |
 | AI Foundry Staging (`oai-techhub-staging`) | Staging VNet | `privatelink.cognitiveservices.azure.com`, `privatelink.openai.azure.com`, `privatelink.services.ai.azure.com` | Staging |
 | AI Foundry Prod (`oai-techhub-prod`) | Prod VNet | (same 3 zones) | Prod |
@@ -89,11 +89,12 @@ A public Azure DNS zone (`acme.hub.ms`) is used for automated wildcard certifica
 
 ## PostgreSQL
 
-Each environment has its own PostgreSQL Flexible Server.
+Production has a permanent PostgreSQL Flexible Server. PR environments get ephemeral servers created via PITR from the production backup.
 
+- **Production**: `psql-techhub-prod` — permanent, with private endpoint in prod VNet
+- **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore from production, with private endpoint in staging VNet
 - **Public access**: Enabled with admin IP firewall rules
 - **Firewall**: One rule per admin IP from `ADMIN_IP_ADDRESSES` — all other public access denied
-- **Access**: Private endpoint in the environment's spoke VNet
 - **Container Apps** reach PostgreSQL through the spoke VNet private endpoint
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
@@ -125,7 +126,8 @@ Private DNS zones ensure all consumers can resolve private endpoint IPs:
 ## Deploy Order
 
 1. **Shared** (`rg-techhub-shared`): ACR, Log Analytics, Key Vault, Hub VNet, KV Private Endpoint, ACME DNS Zone, PostgreSQL Private DNS Zone, AMPLS (with optional spoke VNet DNS links via `spokeVnetIds`)
-2. **Staging/Production** (`rg-techhub-staging`, `rg-techhub-prod`): VNet, peering, App Insights + Log Analytics, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, AMPLS scoping
+2. **Staging/PR-env** (`rg-techhub-staging`): VNet, peering, App Insights + Log Analytics, Container Apps Environment, PostgreSQL (Bicep-managed base), AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, AMPLS scoping. PR-specific Postgres instances are created at PR deploy time via PITR, not by Bicep.
+3. **Production** (`rg-techhub-prod`): VNet, peering, App Insights + Log Analytics, Container Apps, PostgreSQL, PostgreSQL PE, AI Foundry PE, KV DNS zone link, PostgreSQL DNS zone link, AMPLS scoping
 
 Shared must be deployed first — spoke deployments reference the hub VNet ID for peering. To link AMPLS DNS zones to spoke VNets, re-deploy shared with `spokeVnetIds` after spoke VNets are created.
 
