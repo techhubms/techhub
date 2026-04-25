@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
+using TechHub.Core.Logging;
 using TechHub.Core.Models.ContentProcessing;
 
 namespace TechHub.Infrastructure.Services.ContentProcessing;
@@ -269,11 +270,13 @@ public sealed class ContentProcessingService
                             else
                             {
                                 transcriptsFailed++;
+                                Log(string.Create(CultureInfo.InvariantCulture,
+                                    $"  ⚠ Transcript unavailable: {raw.ExternalUrl.Sanitize()} — {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}"));
 
                                 // Enforce TranscriptMandatory — fail the item if transcript is required but absent
                                 if (feed.TranscriptMandatory)
                                 {
-                                    Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Failed: {raw.ExternalUrl} — transcript mandatory but not available"));
+                                    Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Failed: {raw.ExternalUrl.Sanitize()} — transcript mandatory but not available"));
                                     await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, "Transcript mandatory but not available", raw.FeedName, raw.CollectionName, reason: null, hasTranscript: false, jobId: jobId, ct: ct);
                                     errorCount++;
                                     await FlushProgressAsync();
@@ -343,6 +346,18 @@ public sealed class ContentProcessingService
                         }
 
                         var processed = categorizationResult.Item;
+
+                        // Cap future-dated items to the processing date.
+                        // Some feeds publish articles with dates a few days in the future.
+                        // Without this cap, the item would be excluded from weekly roundups
+                        // which filter by date range relative to the run time.
+                        var nowEpoch = _timeProvider.GetUtcNow().ToUnixTimeSeconds();
+                        if (processed.DateEpoch > nowEpoch)
+                        {
+                            Log(string.Create(CultureInfo.InvariantCulture,
+                                $"  → Future date capped to now: {raw.ExternalUrl.Sanitize()} (was {DateTimeOffset.FromUnixTimeSeconds(processed.DateEpoch):yyyy-MM-dd})"));
+                            processed = processed.WithDateEpoch(nowEpoch);
+                        }
 
                         // Apply subcollection rules from configuration
                         var matchedSubcollection = MatchSubcollectionRule(raw.FeedName, raw.Title);

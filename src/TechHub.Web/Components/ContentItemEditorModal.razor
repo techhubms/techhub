@@ -29,6 +29,11 @@
                     </div>
 
                     <div class="admin-form-group">
+                        <label class="admin-label" for="ci-date">Date</label>
+                        <input id="ci-date" type="date" class="admin-input" @bind="_date" />
+                    </div>
+
+                    <div class="admin-form-group">
                         <label class="admin-label" for="ci-primary-section">Primary Section</label>
                         <select id="ci-primary-section" class="admin-input" @bind="_primarySectionName">
                             <option value="">— select —</option>
@@ -96,6 +101,7 @@
 
 @code {
     private static readonly string[] AllSections = ["ai", "azure", "devops", "dotnet", "github-copilot", "ml", "security"];
+    private static readonly TimeZoneInfo BrusselsTz = TimeZoneInfo.FindSystemTimeZoneById("Europe/Brussels");
 
     [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
     [Parameter] public ContentItemEditData? EditData { get; set; }
@@ -106,6 +112,7 @@
     private ContentItemEditData? _editData;
     private string _title = string.Empty;
     private string _author = string.Empty;
+    private DateOnly? _date;
     private string _excerpt = string.Empty;
     private string _content = string.Empty;
     private string _primarySectionName = string.Empty;
@@ -122,6 +129,9 @@
             _editData = EditData;
             _title = EditData.Title;
             _author = EditData.Author;
+            _date = EditData.DateEpoch > 0
+                ? DateOnly.FromDateTime(TimeZoneInfo.ConvertTime(DateTimeOffset.FromUnixTimeSeconds(EditData.DateEpoch), BrusselsTz).DateTime)
+                : null;
             _excerpt = EditData.Excerpt;
             _content = EditData.Content;
             _primarySectionName = EditData.PrimarySectionName;
@@ -213,6 +223,9 @@
         {
             CollectionName = _editData!.CollectionName,
             Slug = _editData.Slug,
+            DateEpoch = _date.HasValue
+                ? new DateTimeOffset(_date.Value.ToDateTime(TimeOnly.MinValue), BrusselsTz.GetUtcOffset(_date.Value.ToDateTime(TimeOnly.MinValue))).ToUnixTimeSeconds()
+                : _editData.DateEpoch,
             Title = _title.Trim(),
             Author = _author.Trim(),
             Excerpt = _excerpt.Trim(),

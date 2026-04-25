@@ -1478,7 +1478,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT collection_name, slug, title, author, excerpt, content, primary_section_name,
+SELECT collection_name, slug, date_epoch, title, author, excerpt, content, primary_section_name,
        tags_csv, ai_metadata::text AS ai_metadata,
        is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
 FROM content_items
@@ -1538,6 +1538,7 @@ LIMIT 1";
         {
             CollectionName = (string)row.collection_name,
             Slug = (string)row.slug,
+            DateEpoch = (long)row.date_epoch,
             Title = (string)row.title,
             Author = (string)row.author,
             Excerpt = (string)row.excerpt,
@@ -1571,12 +1572,13 @@ LIMIT 1";
         var isSecurity = editData.Sections.Contains("security");
         var bitmask = CalculateSectionBitmask(editData.Sections);
 
-        const string Sql = @"
+        const string ItemSql = @"
 UPDATE content_items
 SET title                = @Title,
     author               = @Author,
     excerpt              = @Excerpt,
     content              = @Content,
+    date_epoch           = @DateEpoch,
     primary_section_name = @PrimarySectionName,
     tags_csv             = @TagsCsv,
     is_ai                = @IsAi,
@@ -1591,28 +1593,65 @@ SET title                = @Title,
     updated_at           = NOW()
 WHERE collection_name = @CollectionName AND slug = @Slug";
 
-        var rows = await Connection.ExecuteAsync(
-            new CommandDefinition(Sql, new
+        var parameters = new
+        {
+            Title = editData.Title,
+            Author = editData.Author,
+            Excerpt = editData.Excerpt,
+            Content = editData.Content,
+            DateEpoch = editData.DateEpoch,
+            PrimarySectionName = editData.PrimarySectionName,
+            TagsCsv = tagsCsv,
+            IsAi = isAi,
+            IsAzure = isAzure,
+            IsDotnet = isDotnet,
+            IsDevops = isDevops,
+            IsGhc = isGhc,
+            IsMl = isMl,
+            IsSecurity = isSecurity,
+            Bitmask = bitmask,
+            AiMetadata = editData.AiMetadata,
+            CollectionName = collectionName,
+            Slug = slug
+        };
+
+        using var transaction = Connection.BeginTransaction();
+        try
+        {
+            var rows = await Connection.ExecuteAsync(
+                new CommandDefinition(ItemSql, parameters, transaction: transaction, cancellationToken: ct));
+
+            if (rows > 0)
             {
-                Title = editData.Title,
-                Author = editData.Author,
-                Excerpt = editData.Excerpt,
-                Content = editData.Content,
-                PrimarySectionName = editData.PrimarySectionName,
-                TagsCsv = tagsCsv,
-                IsAi = isAi,
-                IsAzure = isAzure,
-                IsDotnet = isDotnet,
-                IsDevops = isDevops,
-                IsGhc = isGhc,
-                IsMl = isMl,
-                IsSecurity = isSecurity,
-                Bitmask = bitmask,
-                AiMetadata = editData.AiMetadata,
-                CollectionName = collectionName,
-                Slug = slug
-            }, cancellationToken: ct));
-        return rows > 0;
+                // Sync all denormalized fields in content_tags_expanded atomically.
+                // Admin edits can change date_epoch, section booleans, and sections_bitmask —
+                // all are denormalized here and must stay in sync with content_items.
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        @"UPDATE content_tags_expanded
+                          SET date_epoch        = @DateEpoch,
+                              is_ai             = @IsAi,
+                              is_azure          = @IsAzure,
+                              is_dotnet         = @IsDotnet,
+                              is_devops         = @IsDevops,
+                              is_github_copilot = @IsGhc,
+                              is_ml             = @IsMl,
+                              is_security       = @IsSecurity,
+                              sections_bitmask  = @Bitmask
+                          WHERE collection_name = @CollectionName AND slug = @Slug",
+                        parameters,
+                        transaction: transaction,
+                        cancellationToken: ct));
+            }
+
+            transaction.Commit();
+            return rows > 0;
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
     }
 
     // ==================== Admin Content Items ====================

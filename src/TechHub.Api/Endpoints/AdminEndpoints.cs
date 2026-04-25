@@ -592,6 +592,11 @@ public static class AdminEndpoints
             return Results.BadRequest("At least one section is required.");
         }
 
+        if (request.DateEpoch <= 0)
+        {
+            return Results.BadRequest("A valid date is required.");
+        }
+
         // Validate ai_metadata JSON if provided
         if (!string.IsNullOrWhiteSpace(request.AiMetadata))
         {
