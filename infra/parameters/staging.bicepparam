@@ -9,6 +9,10 @@ param resourceGroupName = 'rg-techhub-staging'
 param appInsightsName = 'appi-techhub-staging'
 param containerRegistryName = 'crtechhubms'
 param containerAppsEnvName = 'cae-techhub-staging'
+// No permanent staging Container Apps — PR environments deploy their own
+// (ca-techhub-api-pr-{N}, ca-techhub-web-pr-{N}) via Deploy-PrPreview.ps1.
+// These placeholder names satisfy Bicep's required params but are only used
+// by the Bicep template's Container App modules which are deployed idempotently.
 param apiAppName = 'ca-techhub-api-staging'
 param webAppName = 'ca-techhub-web-staging'
 // Networking (10.1.x range — must not overlap with hub 10.100.x or prod 10.2.x)
@@ -23,12 +27,10 @@ param postgresAdminPassword = readEnvironmentVariable('POSTGRES_ADMIN_PASSWORD')
 // Hub VNet (for peering — private endpoint resolution across environments)
 param hubVnetId = '/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-shared/providers/Microsoft.Network/virtualNetworks/vnet-techhub-hub'
 param hubVnetName = 'vnet-techhub-hub'
-// Custom domains — wildcard CNAME in GoDaddy routes all *.hub.ms to the Container App.
-// Wildcard certificate from Key Vault — no per-domain managed certs needed.
-param primaryHosts = ['staging-tech.hub.ms']
-param wildcardCertNames = {
-  'hub.ms': 'wildcard-hub-ms'
-}
+// No custom domains or availability tests for PR-env infrastructure.
+// PR environments are ephemeral — E2E tests serve as validation, not synthetic monitoring.
+param primaryHosts = []
+param wildcardCertNames = {}
 // Azure AI Foundry (OpenAI)
 param openAiName = 'oai-techhub-staging'
 param openAiModelCapacity = 100

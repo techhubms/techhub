@@ -1,19 +1,26 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Deploys or tears down a PR preview environment in the staging Azure Container Apps environment.
+    Deploys or tears down a fully ephemeral PR preview environment.
 
 .DESCRIPTION
-    Creates/updates or deletes PR-specific Container Apps in the existing staging Container Apps
-    Environment. Each PR gets its own Container Apps (ca-techhub-api-pr-{number} and
-    ca-techhub-web-pr-{number}) running in the shared staging environment, without affecting
-    the permanent staging application.
+    Creates/updates or deletes a fully isolated PR preview environment in the staging Azure
+    Container Apps Environment. Each PR gets its own:
+    - PostgreSQL Flexible Server (created via PITR from production)
+    - Container Apps (ca-techhub-api-pr-{number} and ca-techhub-web-pr-{number})
 
-    The PR apps share the staging PostgreSQL database, monitoring, and networking — only the
-    Container Apps themselves are PR-specific.
+    The PR apps share the staging Container Apps Environment, VNet, and monitoring —
+    but get their own isolated database.
+
+    On deploy, a PR-specific Postgres instance is provisioned using Azure Point-in-Time
+    Restore (PITR) from the production server. This creates an independent copy with
+    realistic production data — no dump files, no firewall rules, no DB credentials needed.
+
+    On teardown, the PR-specific Postgres instance and its private endpoint are deleted
+    along with the Container Apps.
 
 .PARAMETER PrNumber
-    Pull request number. Used to derive unique Container App names.
+    Pull request number. Used to derive unique resource names.
 
 .PARAMETER Action
     Action to perform: 'deploy' to create/update the PR environment, 'teardown' to remove it.
@@ -60,9 +67,16 @@ $stagingRG = 'rg-techhub-staging'
 $stagingEnvName = 'cae-techhub-staging'
 $stagingIdentityName = 'id-techhub-staging'
 $stagingAppInsightsName = 'appi-techhub-staging'
-$stagingPostgresServer = 'psql-techhub-staging'
-$stagingPostgresDb = 'techhub'
-$stagingPostgresUser = 'techhubadmin'
+
+# Production server (source for PITR database clone)
+$prodRG = 'rg-techhub-prod'
+$prodPostgresServer = 'psql-techhub-prod'
+
+# PR-specific resource names
+$prPostgresServer = "psql-techhub-pr-$PrNumber"
+$prPostgresDb = 'techhub'
+$prPostgresUser = 'techhubadmin'
+$prPrivateEndpointName = "pe-psql-techhub-pr-$PrNumber"
 
 # PR-specific Container App names
 $apiAppName = "ca-techhub-api-pr-$PrNumber"
@@ -108,6 +122,12 @@ function Get-ContainerAppExists {
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
+function Get-PostgresServerExists {
+    param([string]$Name, [string]$ResourceGroup)
+    $result = az postgres flexible-server show --name $Name --resource-group $ResourceGroup --query name -o tsv 2>$null
+    return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
+}
+
 # ============================================================================
 # BANNER
 # ============================================================================
@@ -122,6 +142,7 @@ if ($Tag) {
 }
 Write-Host "  API App     : $apiAppName" -ForegroundColor Gray
 Write-Host "  Web App     : $webAppName" -ForegroundColor Gray
+Write-Host "  PostgreSQL  : $prPostgresServer" -ForegroundColor Gray
 Write-Host "  Resource RG : $stagingRG" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
@@ -147,7 +168,7 @@ if ($Action -eq 'deploy') {
     }
 
     if (-not $env:POSTGRES_ADMIN_PASSWORD) {
-        Write-Fail "Environment variable POSTGRES_ADMIN_PASSWORD is not set."
+        Write-Fail "Environment variable POSTGRES_ADMIN_PASSWORD is not set. The PITR-restored server retains the production admin password."
         exit 1
     }
     Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
@@ -196,6 +217,63 @@ if ($Action -eq 'teardown') {
     }
     else {
         Write-Warn "$apiAppName not found — already removed or never deployed"
+    }
+
+    # Delete PR-specific PostgreSQL private endpoint
+    Write-Step "Deleting PR PostgreSQL private endpoint: $prPrivateEndpointName"
+    $peExists = az network private-endpoint show `
+        --name $prPrivateEndpointName `
+        --resource-group $stagingRG `
+        --query name -o tsv 2>$null
+    if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($peExists)) {
+        az network private-endpoint delete `
+            --name $prPrivateEndpointName `
+            --resource-group $stagingRG
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warn "Failed to delete private endpoint $prPrivateEndpointName — continuing"
+        }
+        else {
+            Write-Ok "Deleted private endpoint $prPrivateEndpointName"
+            $deletedAny = $true
+        }
+    }
+    else {
+        Write-Warn "$prPrivateEndpointName not found — already removed or never deployed"
+    }
+
+    # Delete PR-specific PostgreSQL server
+    Write-Step "Deleting PR PostgreSQL server: $prPostgresServer"
+
+    # Clean up DNS A record from the shared private DNS zone first
+    Write-Detail "Removing DNS A record for $prPostgresServer..."
+    az network private-dns record-set a delete `
+        --resource-group 'rg-techhub-shared' `
+        --zone-name 'privatelink.postgres.database.azure.com' `
+        --name $prPostgresServer `
+        --yes 2>$null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Ok "Deleted DNS A record for $prPostgresServer"
+    }
+    else {
+        Write-Warn "DNS A record for $prPostgresServer not found or could not be deleted — continuing"
+    }
+
+    if (Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $stagingRG) {
+        Write-Detail "Deleting $prPostgresServer (this may take a few minutes)..."
+        az postgres flexible-server delete `
+            --name $prPostgresServer `
+            --resource-group $stagingRG `
+            --yes
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warn "Failed to delete $prPostgresServer — continuing"
+        }
+        else {
+            Write-Ok "Deleted $prPostgresServer"
+            $deletedAny = $true
+        }
+    }
+    else {
+        Write-Warn "$prPostgresServer not found — already removed or never deployed"
     }
 
     # Clean up Docker images tagged for this PR from ACR
@@ -251,6 +329,126 @@ if ($Action -eq 'teardown') {
 }
 
 # ============================================================================
+# DEPLOY — Provision PR-specific PostgreSQL via PITR from production
+# ============================================================================
+
+Write-Step "Provisioning PR PostgreSQL server: $prPostgresServer"
+
+$pgExists = Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $stagingRG
+
+if ($pgExists) {
+    Write-Ok "PR PostgreSQL server already exists — reusing $prPostgresServer"
+}
+else {
+    # Get the production server resource ID for PITR source
+    $prodServerId = az postgres flexible-server show `
+        --name $prodPostgresServer `
+        --resource-group $prodRG `
+        --query id -o tsv 2>$null
+
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($prodServerId)) {
+        Write-Fail "Could not find production PostgreSQL server '$prodPostgresServer' in '$prodRG'"
+        exit 1
+    }
+    Write-Ok "Production server ID: $prodServerId"
+
+    # Use a restore time of 3:00 AM today (Europe/Brussels) for a stable backup point.
+    # If it's before 03:00 UTC, use yesterday's 03:00 to ensure the backup exists.
+    $nowUtc = [DateTime]::UtcNow
+    $restoreDate = if ($nowUtc.Hour -lt 4) { $nowUtc.AddDays(-1).Date.AddHours(3) } else { $nowUtc.Date.AddHours(3) }
+    $restoreTime = $restoreDate.ToString('yyyy-MM-ddTHH:mm:ssZ')
+    Write-Detail "PITR restore time: $restoreTime"
+
+    Write-Detail "Creating $prPostgresServer via PITR from production (this takes 5-8 minutes)..."
+    az postgres flexible-server restore `
+        --resource-group $stagingRG `
+        --name $prPostgresServer `
+        --source-server $prodServerId `
+        --restore-time $restoreTime
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to create PR PostgreSQL server via PITR"
+        exit 1
+    }
+    Write-Ok "PR PostgreSQL server created: $prPostgresServer"
+}
+
+# Create private endpoint for the PR Postgres server (if not already present)
+Write-Step "Ensuring private endpoint for PR PostgreSQL: $prPrivateEndpointName"
+
+$peExists = az network private-endpoint show `
+    --name $prPrivateEndpointName `
+    --resource-group $stagingRG `
+    --query name -o tsv 2>$null
+
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($peExists)) {
+    Write-Ok "Private endpoint already exists: $prPrivateEndpointName"
+}
+else {
+    # Get the PR Postgres server resource ID
+    $prServerId = az postgres flexible-server show `
+        --name $prPostgresServer `
+        --resource-group $stagingRG `
+        --query id -o tsv 2>$null
+
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($prServerId)) {
+        Write-Fail "Could not retrieve PR PostgreSQL server ID"
+        exit 1
+    }
+
+    # Get the private endpoints subnet ID from the staging VNet
+    $subnetId = az network vnet subnet show `
+        --resource-group $stagingRG `
+        --vnet-name 'vnet-techhub-staging' `
+        --name 'snet-private-endpoints' `
+        --query id -o tsv 2>$null
+
+    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($subnetId)) {
+        Write-Fail "Could not find private endpoints subnet in staging VNet"
+        exit 1
+    }
+
+    Write-Detail "Creating private endpoint $prPrivateEndpointName..."
+    az network private-endpoint create `
+        --name $prPrivateEndpointName `
+        --resource-group $stagingRG `
+        --vnet-name 'vnet-techhub-staging' `
+        --subnet 'snet-private-endpoints' `
+        --private-connection-resource-id $prServerId `
+        --group-ids postgresqlServer `
+        --connection-name "$($prPrivateEndpointName)-conn"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to create private endpoint for PR PostgreSQL"
+        exit 1
+    }
+
+    # Register DNS record in the existing PostgreSQL private DNS zone
+    $peNicId = az network private-endpoint show `
+        --name $prPrivateEndpointName `
+        --resource-group $stagingRG `
+        --query "networkInterfaces[0].id" -o tsv 2>$null
+
+    if (-not [string]::IsNullOrWhiteSpace($peNicId)) {
+        $peIp = az network nic show --ids $peNicId --query "ipConfigurations[0].privateIpAddress" -o tsv 2>$null
+        if (-not [string]::IsNullOrWhiteSpace($peIp)) {
+            Write-Detail "Registering DNS record for $prPostgresServer → $peIp"
+            az network private-dns record-set a add-record `
+                --resource-group 'rg-techhub-shared' `
+                --zone-name 'privatelink.postgres.database.azure.com' `
+                --record-set-name $prPostgresServer `
+                --ipv4-address $peIp 2>$null
+            if ($LASTEXITCODE -eq 0) {
+                Write-Ok "DNS A record created for $prPostgresServer"
+            }
+            else {
+                Write-Warn "Could not create DNS record — Container Apps may not resolve the PR Postgres endpoint"
+            }
+        }
+    }
+
+    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+}
+
+# ============================================================================
 # DEPLOY — Query staging infrastructure
 # ============================================================================
 
@@ -294,10 +492,12 @@ else {
     Write-Ok "Application Insights: retrieved connection string"
 }
 
-# Compute the postgres FQDN and build the connection string
-$postgresFqdn = "$stagingPostgresServer.postgres.database.azure.com"
-$dbConnectionString = "Host=$postgresFqdn;Database=$stagingPostgresDb;Username=$stagingPostgresUser;Password=$($env:POSTGRES_ADMIN_PASSWORD);SSL Mode=Require"
-Write-Ok "PostgreSQL: $postgresFqdn"
+# Compute the PR postgres FQDN and build the connection string.
+# The PITR-restored server retains the same admin login and password from production.
+# The connection string uses the private endpoint FQDN for VNet-internal access.
+$prPostgresFqdn = "$prPostgresServer.postgres.database.azure.com"
+$dbConnectionString = "Host=$prPostgresFqdn;Database=$prPostgresDb;Username=$prPostgresUser;Password=$($env:POSTGRES_ADMIN_PASSWORD);SSL Mode=Require"
+Write-Ok "PostgreSQL: $prPostgresFqdn"
 
 # Get the Container Apps Environment default domain (to compute expected FQDNs)
 $envDefaultDomain = az containerapp env show `
@@ -604,6 +804,7 @@ Write-Host "  PR Number   : #$PrNumber" -ForegroundColor Gray
 Write-Host "  Tag         : $Tag" -ForegroundColor Gray
 Write-Host "  API App     : $apiAppName" -ForegroundColor Gray
 Write-Host "  Web App     : $webAppName" -ForegroundColor Gray
+Write-Host "  PostgreSQL  : $prPostgresServer" -ForegroundColor Gray
 Write-Host "  Web URL     : https://$webFqdn" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host ""

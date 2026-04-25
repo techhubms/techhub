@@ -542,10 +542,11 @@ jobs:
             -SkipDeploy
 
   # ──────────────────────────────────────────────
-  # Deploy to Staging (infra + app in one shot)
+  # Staging infrastructure deployment (networking, monitoring, shared env)
+  # No permanent staging Container Apps — PR environments handle that.
   # ──────────────────────────────────────────────
-  deploy-staging:
-    name: Deploy to Staging
+  deploy-staging-infra:
+    name: Deploy Staging Infrastructure
     runs-on: ubuntu-latest
     needs: build-and-push
     concurrency:
@@ -553,7 +554,6 @@ jobs:
       cancel-in-progress: false
     environment:
       name: staging
-      url: https://${{ steps.deploy.outputs.web-url }}
     steps:
       - name: Checkout code
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
@@ -563,8 +563,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Deploy staging infrastructure and application
-        id: deploy
+      - name: Deploy staging infrastructure
         shell: pwsh
         env:
           POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
@@ -577,110 +576,23 @@ jobs:
             -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-          # Use the known primary hostname (wildcard custom domains like *.hub.ms are not valid URLs)
-          "web-url=staging-tech.hub.ms" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
-
-      - name: Smoke tests
-        shell: pwsh
-        run: |
-          $webUrl = "https://${{ steps.deploy.outputs.web-url }}"
-          Write-Host "Waiting 30 seconds for deployment to stabilize..."
-          Start-Sleep -Seconds 30
-
-          # Health check
-          $health = try { Invoke-WebRequest -Uri "$webUrl/health" -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($health -and $health.StatusCode -eq 200) {
-            Write-Host "[OK] Health check passed ($webUrl/health)"
-          } else {
-            Write-Host "::error::Health check failed ($webUrl/health)"
-            exit 1
-          }
-
-          # Homepage check
-          $homepage = try { Invoke-WebRequest -Uri $webUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
-          if ($homepage -and $homepage.StatusCode -eq 200) {
-            Write-Host "[OK] Homepage accessible ($webUrl)"
-          } else {
-            Write-Host "::error::Homepage not accessible ($webUrl)"
-            exit 1
-          }
-
       - name: Deployment summary
         run: |
-          echo "## Staging Deployment Complete" >> $GITHUB_STEP_SUMMARY
+          echo "## Staging Infrastructure Deployment Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Image Tag**: ${{ needs.build-and-push.outputs.image-tag }}" >> $GITHUB_STEP_SUMMARY
-          echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
-
-  # ──────────────────────────────────────────────
-  # E2E Tests — Run against staging after deployment
-  # Validates the deployed application with Playwright
-  # ──────────────────────────────────────────────
-  test-e2e-staging:
-    name: E2E Tests (Staging)
-    runs-on: ubuntu-latest
-    needs: deploy-staging
-    concurrency:
-      group: test-e2e-staging
-      cancel-in-progress: true
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@c2fa09f4bde5ebb9d1777cf28262a3eb3db3ced7 # v5.2.0
-        with:
-          global-json-file: global.json
-
-      - name: Restore dependencies
-        run: dotnet restore TechHub.slnx
-
-      - name: Build solution
-        run: dotnet build TechHub.slnx --configuration Release --no-restore
-
-      - name: Install Playwright dependencies
-        run: |
-          cd tests/TechHub.E2E.Tests
-          pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
-
-      - name: Run E2E tests against staging
-        run: |
-          dotnet test --project tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
-            --configuration Release \
-            --no-build \
-            --results-directory TestResults \
-            --report-xunit-trx \
-            --report-xunit-trx-filename e2e-test-results.trx \
-            -- --filter-not-trait "Category=Performance"
-        env:
-          E2E_BASE_URL: https://staging-tech.hub.ms
-
-      - name: Upload test results
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: always()
-        with:
-          name: e2e-test-results
-          path: '**/TestResults/**'
-          retention-days: 7
-
-      - name: Upload Playwright traces
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: failure()
-        with:
-          name: playwright-traces
-          path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
-          retention-days: 7
+          echo "Staging infrastructure (VNet, monitoring, Container Apps Environment) is ready for PR environments." >> $GITHUB_STEP_SUMMARY
 
   # ──────────────────────────────────────────────
   # Deploy to Production (infra + app in one shot)
   # Uses GitHub environment protection for approval
+  # No staging E2E gate — E2E runs in the PR preview environment before merge.
+  # Production gets smoke tests (read-only, < 30s) instead.
   # ──────────────────────────────────────────────
   deploy-production:
     name: Deploy to Production
     runs-on: ubuntu-latest
-    needs: [build-and-push, deploy-staging, test-e2e-staging]
+    needs: [build-and-push]
     concurrency:
       group: deploy-production
       cancel-in-progress: false
@@ -721,6 +633,15 @@ jobs:
           Start-Sleep -Seconds 60
 
           foreach ($webUrl in $primaryUrls) {
+            # Alive check
+            $alive = try { Invoke-WebRequest -Uri "$webUrl/alive" -TimeoutSec 30 -UseBasicParsing } catch { $null }
+            if ($alive -and $alive.StatusCode -eq 200) {
+              Write-Host "[OK] Alive check passed ($webUrl/alive)"
+            } else {
+              Write-Host "::error::Alive check failed ($webUrl/alive)"
+              exit 1
+            }
+
             # Health check
             $health = try { Invoke-WebRequest -Uri "$webUrl/health" -TimeoutSec 30 -UseBasicParsing } catch { $null }
             if ($health -and $health.StatusCode -eq 200) {
@@ -738,6 +659,16 @@ jobs:
               Write-Host "::error::Homepage not accessible ($webUrl)"
               exit 1
             }
+          }
+
+          # Representative API call (read-only, safe for production)
+          $apiUrl = "https://tech.hub.ms/api/content?limit=1"
+          $api = try { Invoke-WebRequest -Uri $apiUrl -TimeoutSec 30 -UseBasicParsing } catch { $null }
+          if ($api -and $api.StatusCode -eq 200) {
+            Write-Host "[OK] API smoke test passed ($apiUrl)"
+          } else {
+            Write-Host "::error::API smoke test failed ($apiUrl)"
+            exit 1
           }
 
       - name: Deployment summary
@@ -838,7 +769,7 @@ jobs:
           | **Commit** | \`${SHORT_SHA}\` |
 
           > [!NOTE]
-          > The environment uses the shared staging database and runs in the staging Azure Container Apps Environment.
+          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the staging Azure Container Apps Environment.
           > It will be automatically removed when this PR is closed.
           EOF
 
