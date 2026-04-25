@@ -444,7 +444,7 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($peNicId)) {
     exit 1
 }
 
-$peIp = az network nic show --ids $peNicId --query "ipConfigurations[0].privateIpAddress" -o tsv 2>$null
+$peIp = az network nic show --ids $peNicId --query "ipConfigurations[0].privateIPAddress" -o tsv 2>$null
 
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($peIp)) {
     Write-Fail "Could not retrieve private IP for private endpoint '$prPrivateEndpointName'"
