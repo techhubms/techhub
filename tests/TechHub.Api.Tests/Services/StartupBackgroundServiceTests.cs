@@ -89,9 +89,11 @@ public class StartupBackgroundServiceTests
             .ReturnsAsync(0);
 
         var mockCustomPageRepo = new Mock<ICustomPageDataRepository>();
-        mockCustomPageRepo.Setup(r => r.IsEmptyAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(false);
+        mockCustomPageRepo.Setup(r => r.UpsertAsync(It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Returns(Task.CompletedTask);
 
+        var customDir = Path.Combine(Path.GetTempPath(), "_custom");
+        Directory.CreateDirectory(customDir);
         var appSettings = Options.Create(new AppSettings
         {
             BaseUrl = "https://localhost",

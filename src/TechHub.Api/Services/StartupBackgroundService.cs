@@ -84,32 +84,27 @@ public class StartupBackgroundService : BackgroundService
                 _logger.LogWarning("✅ Aborted {Count} stale running job(s) from prior server instance", aborted);
             }
 
-            // Seed custom page data from collections/_custom/*.json (one-time migration)
+            // Sync custom page data from collections/_custom/*.json on every startup.
+            // This ensures JSON file changes deployed via CI/CD are always reflected in the
+            // database, including on PR preview environments restored from a production backup.
             var appSettings = services.GetRequiredService<IOptions<AppSettings>>().Value;
             var customPageRepo = services.GetRequiredService<ICustomPageDataRepository>();
-            if (await customPageRepo.IsEmptyAsync(stoppingToken))
+            var customDir = Path.Combine(appSettings.Content.CollectionsPath, "_custom");
+            if (Directory.Exists(customDir))
             {
-                var customDir = Path.Combine(appSettings.Content.CollectionsPath, "_custom");
-                if (Directory.Exists(customDir))
+                foreach (var file in Directory.EnumerateFiles(customDir, "*.json"))
                 {
-                    foreach (var file in Directory.EnumerateFiles(customDir, "*.json"))
-                    {
-                        var key = Path.GetFileNameWithoutExtension(file);
-                        var json = await File.ReadAllTextAsync(file, stoppingToken);
-                        var description = CustomPageDescriptions.Get(key);
-                        await customPageRepo.UpsertAsync(key, description, json, stoppingToken);
-                    }
+                    var key = Path.GetFileNameWithoutExtension(file);
+                    var json = await File.ReadAllTextAsync(file, stoppingToken);
+                    var description = CustomPageDescriptions.Get(key);
+                    await customPageRepo.UpsertAsync(key, description, json, stoppingToken);
+                }
 
-                    _logger.LogInformation("✅ Custom page data seeded from {Dir}", customDir);
-                }
-                else
-                {
-                    _logger.LogWarning("Custom page data directory not found at {Dir}, skipping seed", customDir);
-                }
+                _logger.LogInformation("✅ Custom page data synced from {Dir}", customDir);
             }
             else
             {
-                _logger.LogInformation("✅ Custom page data already present, skipping seed");
+                _logger.LogWarning("Custom page data directory not found at {Dir}, skipping sync", customDir);
             }
 
             // Mark startup complete — content is already in the database
