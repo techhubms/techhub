@@ -670,11 +670,6 @@ select.admin-input {
         grid-template-columns: 1fr;
     }
 
-    /* Pagination: allow wrapping */
-    .admin-pagination {
-        flex-wrap: wrap;
-        gap: var(--spacing-2) !important;
-    }
 }
 
 .admin-stats-footer {
@@ -1002,4 +997,14 @@ select.admin-input {
 .review-author-arrow {
     color: var(--color-text-tertiary);
     flex-shrink: 0;
+}
+
+/* ─── Responsive Layout (mobile) — kept at end so overrides win in cascade ── */
+
+@media (max-width: 768px) {
+    /* Pagination: allow wrapping */
+    .admin-pagination {
+        flex-wrap: wrap;
+        gap: var(--spacing-2);
+    }
 }
