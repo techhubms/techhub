@@ -128,6 +128,87 @@ function Get-PostgresServerExists {
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
+function Set-WebStartupProbe {
+    <#
+    .SYNOPSIS
+        Configures a startup probe on the Web Container App via ARM REST PATCH.
+
+        The Web's Program.cs blocks Kestrel startup while pre-loading the section cache
+        from the API. Without an explicit startup probe, Container Apps injects a default
+        TCP liveness probe (failureThreshold=3, periodSeconds=10) that kills the container
+        after ~30s — before the API cold-starts (~15-30s) and responds.
+
+        Defining a startup probe also disables the auto-injected TCP liveness probe for the
+        duration of startup. This allows both apps to stay at minReplicas=0 without the Web
+        being killed while it waits for the API to scale from zero.
+
+        Probes are configured via az rest PATCH (partial ARM update) because az containerapp
+        create/update have no individual probe CLI flags — only --yaml, which requires the
+        full container spec and YAML serialisation tooling.
+
+        ACA probe limits: failureThreshold 1-10, periodSeconds 1-240, initialDelaySeconds 1-60.
+        initialDelaySeconds=5 + failureThreshold=10 × periodSeconds=20 → 205s ≈ 3.4 min.
+    #>
+    param([string]$AppName, [string]$ResourceGroup)
+
+    try {
+        $webApp = az containerapp show --name $AppName --resource-group $ResourceGroup -o json 2>$null |
+            ConvertFrom-Json -ErrorAction SilentlyContinue
+        if (-not $webApp) {
+            Write-Warn "Could not retrieve Web Container App spec — startup probe not configured"
+            return
+        }
+
+        $subId = az account show --query id -o tsv 2>$null
+        $container = $webApp.properties.template.containers[0]
+
+        # Preserve all existing non-Startup probes, then add ours.
+        $existingProbes = @()
+        if ($null -ne $container.probes) {
+            $existingProbes = @($container.probes | Where-Object { $_.type -ne 'Startup' })
+        }
+
+        $startupProbe = [PSCustomObject]@{
+            type                = 'Startup'
+            httpGet             = [PSCustomObject]@{ path = '/alive'; port = 8080 }
+            initialDelaySeconds = 5
+            periodSeconds       = 20
+            failureThreshold    = 10   # ACA max is 10; 5 + 10×20 = 205s ≈ 3.4-min tolerance
+        }
+
+        $container.probes = @($existingProbes) + @($startupProbe)
+
+        # ARM PATCH semantics: arrays are replaced in full, so we include the complete
+        # modified container (fetched from the live app) to preserve image/env/resources.
+        $patchBody = [PSCustomObject]@{
+            properties = [PSCustomObject]@{
+                template = [PSCustomObject]@{
+                    containers = @($container)
+                }
+            }
+        } | ConvertTo-Json -Depth 20 -Compress
+
+        $patchFile = Join-Path ([System.IO.Path]::GetTempPath()) "web-probe-patch-$AppName.json"
+        $patchBody | Set-Content $patchFile -Encoding utf8
+
+        $apiUrl = "https://management.azure.com/subscriptions/$subId/resourceGroups/$ResourceGroup" +
+                  "/providers/Microsoft.App/containerApps/$AppName?api-version=2024-03-01"
+        az rest --method PATCH --url $apiUrl --body "@$patchFile" --output none
+
+        Remove-Item $patchFile -ErrorAction SilentlyContinue
+
+        if ($LASTEXITCODE -eq 0) {
+            Write-Ok "Startup probe configured (initialDelaySeconds=5, failureThreshold=10, periodSeconds=20 → ~3.4 min tolerance)"
+        }
+        else {
+            Write-Warn "Startup probe REST PATCH failed — Web may be killed if API cold-start takes >30s"
+        }
+    }
+    catch {
+        Write-Warn "Startup probe configuration error: $_ — continuing"
+    }
+}
+
 function Write-ContainerAppDiagnostics {
     <#
     .SYNOPSIS
@@ -638,7 +719,7 @@ if ($apiExists) {
         --name $apiAppName `
         --resource-group $stagingRG `
         --image $apiImage `
-        --min-replicas 1 `
+        --min-replicas 0 `
         --replace-env-vars @apiEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update API Container App"
@@ -660,7 +741,7 @@ else {
         --registry-identity $identityId `
         --cpu 0.5 `
         --memory 1Gi `
-        --min-replicas 1 `
+        --min-replicas 0 `
         --max-replicas 1 `
         --secrets "db-connection-string=$dbConnectionString" `
         --env-vars @apiEnvVars
@@ -701,54 +782,6 @@ if (-not [string]::IsNullOrWhiteSpace($actualApiPrFqdn)) {
 }
 
 # ============================================================================
-# WAIT FOR API TO BE HEALTHY (required before Web deployment)
-# ============================================================================
-# The web app calls the API synchronously during startup, before Kestrel starts
-# (Program.cs pre-loads the section cache). This means the Web container cannot
-# respond to /alive until the API has responded. With minReplicas=1 the API
-# container starts as soon as it is deployed; we wait here until it is Running
-# so the Web's startup API call is guaranteed to succeed.
-
-Write-Step "Waiting for API to become healthy before deploying Web"
-$apiRevisionName = az containerapp show `
-    --name $apiAppName `
-    --resource-group $stagingRG `
-    --query properties.latestRevisionName -o tsv 2>$null
-
-if ([string]::IsNullOrWhiteSpace($apiRevisionName)) {
-    Write-Fail "Could not determine latest API revision name"
-    exit 1
-}
-
-$apiRevMaxAttempts = 60  # 60 × 5s = 5 minutes max
-$apiRevAttempt = 0
-$apiRevReady = $false
-while ($apiRevAttempt -lt $apiRevMaxAttempts) {
-    $apiRevAttempt++
-    $revInfo = az containerapp revision show `
-        --name $apiAppName `
-        --resource-group $stagingRG `
-        --revision $apiRevisionName `
-        --query "{runningState: properties.runningState, healthState: properties.healthState}" `
-        -o json 2>$null | ConvertFrom-Json -ErrorAction SilentlyContinue
-
-    $readyStates = @('Running', 'RunningAtMaxScale', 'RunningAtMinScale')
-    if ($revInfo -and $revInfo.runningState -in $readyStates) {
-        Write-Ok "API revision '$apiRevisionName' is $($revInfo.runningState) after $($apiRevAttempt * 5)s"
-        $apiRevReady = $true
-        break
-    }
-    $state = if ($revInfo) { "$($revInfo.runningState)/$($revInfo.healthState)" } else { 'unknown' }
-    Write-Detail "API not ready yet ($state, attempt $apiRevAttempt/$apiRevMaxAttempts) — waiting 5s..."
-    Start-Sleep -Seconds 5
-}
-if (-not $apiRevReady) {
-    Write-Fail "API did not become healthy within $($apiRevMaxAttempts * 5)s — cannot deploy Web"
-    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
-    exit 1
-}
-
-# ============================================================================
 # DEPLOY WEB CONTAINER APP
 # ============================================================================
 
@@ -763,7 +796,7 @@ if ($webExists) {
         --name $webAppName `
         --resource-group $stagingRG `
         --image $webImage `
-        --min-replicas 1 `
+        --min-replicas 0 `
         --replace-env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update Web Container App"
@@ -785,7 +818,7 @@ else {
         --registry-identity $identityId `
         --cpu 0.5 `
         --memory 1Gi `
-        --min-replicas 1 `
+        --min-replicas 0 `
         --max-replicas 1 `
         --env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
@@ -795,6 +828,13 @@ else {
 }
 
 Write-Ok "Web Container App deployed: $webAppName"
+
+# Configure a startup probe on the Web so it is not killed while waiting for the API to
+# cold-start. The Web's Program.cs blocks Kestrel startup on an API call (section cache
+# pre-load). Without a startup probe, Container Apps' default TCP liveness probe kills the
+# container after ~30s. The startup probe gives ~3.4 min tolerance to pass /alive.
+Write-Step "Configuring startup probe on Web Container App"
+Set-WebStartupProbe -AppName $webAppName -ResourceGroup $stagingRG
 
 # Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
 # Without session affinity, WebSocket connections may route to a different container instance
@@ -835,13 +875,19 @@ if ($env:GITHUB_OUTPUT) {
 # WARMUP — HTTP requests to verify health
 # ============================================================================
 
-# Both apps are deployed with minReplicas=1 so they start immediately without
-# needing HTTP traffic. The API is confirmed Running before the Web is deployed,
-# guaranteeing the Web's startup API call (section cache pre-load in Program.cs)
-# succeeds and Kestrel can start.
+# Both apps are deployed with minReplicas=0 — they scale from zero on first HTTP traffic.
+# The Web has a startup probe configured (initialDelaySeconds=5, failureThreshold=10, periodSeconds=20 ≈ 3.4 min),
+# which suppresses the default TCP liveness probe during startup.
+#
+# Phase 1: Hitting /alive triggers the Web to scale from 0. The Web's Program.cs then
+# blocks Kestrel on an API call (section cache pre-load), which triggers the API to scale
+# from 0 via the Container Apps HTTP ingress trigger. Once the API responds, the Web
+# completes startup and /alive returns 200. The startup probe gives 3 minutes for this.
+#
+# Phase 2: Hit the homepage to validate the full Web → API → DB chain. The API is already
+# running at this point (triggered by the Web's startup in Phase 1).
 
-# Phase 1: Wait for the Web container to start responding (/alive liveness check).
-# With the API already Running, the Web startup completes quickly.
+# Phase 1: Wait for the Web container to start responding (/alive).
 Write-Step "Warming up Web Container App at https://$webFqdn"
 $aliveUrl = "https://$webFqdn/alive"
 $maxAttempts = 60  # 60 × 5s = 5 minutes max
