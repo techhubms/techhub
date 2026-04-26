@@ -288,8 +288,10 @@ if ($Action -eq 'teardown') {
     # Delete PR-specific PostgreSQL server
     Write-Step "Deleting PR PostgreSQL server: $prPostgresServer"
 
-    # Clean up DNS A record from the shared private DNS zone first
-    Write-Detail "Removing DNS A record for $prPostgresServer..."
+    # Clean up DNS A record from the shared private DNS zone (safety net).
+    # The dns-zone-group on the PE should auto-remove the record when the PE is deleted,
+    # but we clean up explicitly in case the PE was created without a zone group.
+    Write-Detail "Removing DNS A record for $prPostgresServer (safety net)..."
     az network private-dns record-set a delete `
         --resource-group 'rg-techhub-shared' `
         --zone-name 'privatelink.postgres.database.azure.com' `
@@ -470,84 +472,38 @@ else {
     Write-Ok "Private endpoint created: $prPrivateEndpointName"
 }
 
-# Always reconcile DNS A record to the current private endpoint NIC IP.
-# This ensures the record is correct even if the PE was recreated (new IP) or the record was
-# deleted externally. Uses delete-then-add to prevent round-robin multi-IP records.
-Write-Step "Reconciling DNS A record for PR PostgreSQL"
+# Register the private endpoint in the shared PostgreSQL private DNS zone via a DNS zone group.
+# This is equivalent to the Bicep 'privateDnsZoneGroups' resource used by prod/staging PEs —
+# Azure automatically manages the A record (create on attach, update on IP change, delete on
+# PE teardown). No manual record-set management needed.
+Write-Step "Ensuring DNS zone group for PR PostgreSQL private endpoint"
 
 $privateDnsZoneName = 'privatelink.postgres.database.azure.com'
-$privateDnsRG = 'rg-techhub-shared'
+$sharedRG = 'rg-techhub-shared'
 
-$peNicId = az network private-endpoint show `
-    --name $prPrivateEndpointName `
+$dnsZoneId = az network private-dns zone show `
+    --resource-group $sharedRG `
+    --name $privateDnsZoneName `
+    --query id -o tsv 2>$null
+
+if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($dnsZoneId)) {
+    Write-Fail "Could not retrieve private DNS zone ID for '$privateDnsZoneName' in '$sharedRG'"
+    exit 1
+}
+
+# Create or update the DNS zone group on the PE (idempotent).
+az network private-endpoint dns-zone-group create `
     --resource-group $stagingRG `
-    --query "networkInterfaces[0].id" -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($peNicId)) {
-    Write-Fail "Could not retrieve NIC for private endpoint '$prPrivateEndpointName'"
+    --endpoint-name $prPrivateEndpointName `
+    --name 'default' `
+    --private-dns-zone $dnsZoneId `
+    --zone-name 'privatelink-postgres-database-azure-com'
+if ($LASTEXITCODE -ne 0) {
+    Write-Fail "Failed to create DNS zone group on '$prPrivateEndpointName'"
     exit 1
 }
 
-$peIp = az network nic show --ids $peNicId --query "ipConfigurations[0].privateIPAddress" -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($peIp)) {
-    Write-Fail "Could not retrieve private IP for private endpoint '$prPrivateEndpointName'"
-    exit 1
-}
-
-Write-Detail "Private endpoint IP: $peIp"
-
-# Check if an A record already exists and what IPs it has
-$existingIpsRaw = az network private-dns record-set a show `
-    --resource-group $privateDnsRG `
-    --zone-name $privateDnsZoneName `
-    --name $prPostgresServer `
-    --query "arecords[].ipv4Address" -o tsv 2>$null
-
-$dnsRecordExists = ($LASTEXITCODE -eq 0)
-$existingIps = @()
-if ($dnsRecordExists -and -not [string]::IsNullOrWhiteSpace($existingIpsRaw)) {
-    $existingIps = @($existingIpsRaw -split "`r?`n" | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
-}
-
-# Determine if DNS needs updating: record missing, multiple IPs (round-robin), or wrong IP
-$dnsNeedsUpdate = (-not $dnsRecordExists) -or ($existingIps.Count -ne 1) -or ($existingIps[0] -ne $peIp)
-
-if ($dnsNeedsUpdate) {
-    if ($dnsRecordExists) {
-        # Remove all existing A records to prevent round-robin.
-        foreach ($oldIp in $existingIps) {
-            az network private-dns record-set a remove-record `
-                --resource-group $privateDnsRG `
-                --zone-name $privateDnsZoneName `
-                --record-set-name $prPostgresServer `
-                --ipv4-address $oldIp 2>$null | Out-Null
-        }
-    }
-
-    # Always (re-)create the record set before adding. When remove-record deletes the
-    # last A record, Azure auto-deletes the entire record set — so it must be recreated.
-    # This is idempotent: if the record set already exists, create returns it as-is.
-    az network private-dns record-set a create `
-        --resource-group $privateDnsRG `
-        --zone-name $privateDnsZoneName `
-        --name $prPostgresServer 2>$null | Out-Null
-
-    # Add the current IP
-    az network private-dns record-set a add-record `
-        --resource-group $privateDnsRG `
-        --zone-name $privateDnsZoneName `
-        --record-set-name $prPostgresServer `
-        --ipv4-address $peIp 2>$null | Out-Null
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to set DNS A record for '$prPostgresServer' → $peIp"
-        exit 1
-    }
-    Write-Ok "DNS A record set: $prPostgresServer → $peIp"
-}
-else {
-    Write-Ok "DNS A record already correct: $prPostgresServer → $peIp"
-}
+Write-Ok "DNS zone group configured — A record auto-managed for $prPostgresServer"
 
 # ============================================================================
 # DEPLOY — Query staging infrastructure

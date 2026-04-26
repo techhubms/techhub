@@ -16,6 +16,9 @@ param appInsightsRetentionInDays int = 90
 @description('Host names to monitor with availability tests (e.g. ["tech.hub.ms", "tech.xebia.ms"]). Leave empty to skip.')
 param availabilityTestHosts string[] = []
 
+@description('Enable smart detection alert rules (Failure Anomalies). Set false for staging where alerts add no value.')
+param enableSmartDetection bool = true
+
 @description('Tags applied to the Log Analytics workspace, Application Insights component and availability resources')
 param tags object = {}
 
@@ -124,3 +127,24 @@ resource availabilityAlerts 'Microsoft.Insights/metricAlerts@2018-03-01' = [for 
     actions: []
   }
 }]
+
+// Smart detection: Failure Anomalies alert rule.
+// Azure auto-creates this when App Insights is provisioned. We manage it explicitly
+// so it can be disabled for environments where alerts add no value (e.g., staging).
+resource failureAnomaliesRule 'Microsoft.AlertsManagement/smartDetectorAlertRules@2021-04-01' = {
+  name: 'failure anomalies - ${appInsightsName}'
+  location: 'global'
+  properties: {
+    description: 'Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls.'
+    state: enableSmartDetection ? 'Enabled' : 'Disabled'
+    severity: 'Sev3'
+    frequency: 'PT1M'
+    detector: {
+      id: 'FailureAnomaliesDetector'
+    }
+    scope: [appInsights.id]
+    actionGroups: {
+      groupIds: []
+    }
+  }
+}

@@ -225,7 +225,12 @@ if ($Environment -ne 'shared') {
     # Resolve the shared action group resource ID automatically so callers don't need to
     # set ACTION_GROUP_ID manually. Names are taken from the shared envConfig entry so a
     # rename in config is the only change needed — no hardcoded strings here.
-    if (-not $env:ACTION_GROUP_ID) {
+    # Staging: skip alerts entirely — PR environments use E2E tests, not synthetic monitoring.
+    if ($Environment -eq 'staging') {
+        $env:ACTION_GROUP_ID = ""
+        Write-Ok "Alerts disabled for staging (PR environments rely on E2E tests, not alerts)"
+    }
+    elseif (-not $env:ACTION_GROUP_ID) {
         $sharedRg  = $envConfig.shared.ResourceGroup
         $sharedAgName = $envConfig.shared.ActionGroupName
         $agJson = az monitor action-group show `

@@ -164,6 +164,7 @@ module monitoring './modules/monitoring.bicep' = {
     dailyQuotaGb: environmentName == 'staging' ? 1 : -1
     appInsightsRetentionInDays: 30
     availabilityTestHosts: primaryHosts
+    enableSmartDetection: environmentName != 'staging'
     tags: envTags
   }
 }

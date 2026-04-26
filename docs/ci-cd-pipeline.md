@@ -72,7 +72,7 @@ created via Point-in-Time Restore (PITR) from the production database.
 
 1. Docker images are built and pushed to ACR, tagged `pr-{number}-{timestamp}`
 2. A PR-specific PostgreSQL server is created via PITR from production (5–8 min)
-3. A private endpoint and DNS record are created for the PR Postgres
+3. A private endpoint with DNS zone group is created for the PR Postgres (auto-registers the A record in the shared `privatelink.postgres.database.azure.com` DNS zone)
 4. PR-specific Container Apps are created or updated in the staging environment
 5. A comment is posted (or updated) on the PR with the direct Container Apps URL
 6. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
@@ -80,7 +80,7 @@ created via Point-in-Time Restore (PITR) from the production database.
 **On PR closed**:
 
 1. The PR-specific Container Apps are deleted (no quality gate required)
-2. The PR-specific PostgreSQL private endpoint and DNS record are deleted
+2. The PR-specific PostgreSQL private endpoint is deleted (DNS zone group auto-removes the A record)
 3. The PR-specific PostgreSQL server is deleted
 4. Docker images tagged for the PR are cleaned up from ACR
 5. The PR comment is updated to confirm the environment has been removed
