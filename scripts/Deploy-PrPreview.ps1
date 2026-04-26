@@ -768,59 +768,29 @@ if ($env:GITHUB_OUTPUT) {
 }
 
 # ============================================================================
-# WARMUP — API then Web
+# WARMUP — HTTP requests to trigger scaling and verify health
 # ============================================================================
 
-# First, wait for the API to respond. The Web app depends on the API, so there's
-# no point waiting 5 minutes for the Web if the API itself is crashing.
-# The API has internal ingress, so we can't call it from the GitHub runner.
-# Instead, check its latest revision's running state.
-Write-Step "Checking API Container App activation: $apiAppName"
-$apiMaxWait = 36  # 36 × 5s = 3 minutes max
-$apiAttempt = 0
-$apiActivated = $false
-while ($apiAttempt -lt $apiMaxWait) {
-    $apiAttempt++
-    $apiRunningState = az containerapp revision list `
-        -n $apiAppName -g $stagingRG `
-        --query "sort_by([], &properties.createdTime) | [-1].properties.runningState" -o tsv 2>$null
+# Both apps are deployed with minReplicas=0 (scale to zero). They stay at ScaledToZero
+# until actual HTTP traffic arrives — management-plane polling (revision runningState)
+# can't trigger scaling. We send real HTTP requests to the Web app, which triggers both:
+# 1. Web scaling (direct HTTP request)
+# 2. API scaling (Web makes server-side calls to the internal API on page load)
 
-    if ($apiRunningState -eq 'Running' -or $apiRunningState -eq 'Ready') {
-        Write-Ok "API is active (RunningState: $apiRunningState) after $($apiAttempt * 5)s"
-        $apiActivated = $true
-        break
-    }
-    elseif ($apiRunningState -in @('Failed', 'ActivationFailed', 'Stopped', 'Degraded')) {
-        Write-Fail "API revision entered terminal state: $apiRunningState"
-        Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
-        exit 1
-    }
-
-    Write-Detail "API not yet active (state: $apiRunningState, attempt $apiAttempt/$apiMaxWait) — waiting 5s..."
-    Start-Sleep -Seconds 5
-}
-if (-not $apiActivated) {
-    Write-Fail "API did not activate within $($apiMaxWait * 5)s"
-    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
-    exit 1
-}
-
-# Warmup: wait for the first successful HTTP response before returning.
-# Container Apps can take 30-90s after deployment before the container is reachable
-# (image pull, startup probe, cold-start). Waiting here means the caller (CI) gets
-# a URL that is already responding — no extra sleep needed in the workflow.
-Write-Step "Waiting for Web to respond at https://$webFqdn"
-$warmupUrl = "https://$webFqdn/alive"
+# Phase 1: Wait for the Web container to start responding (/alive liveness check).
+# This triggers the Web to scale from zero but doesn't hit the API yet.
+Write-Step "Warming up Web Container App at https://$webFqdn"
+$aliveUrl = "https://$webFqdn/alive"
 $maxAttempts = 60  # 60 × 5s = 5 minutes max
 $attempt = 0
-$ready = $false
+$webAlive = $false
 while ($attempt -lt $maxAttempts) {
     $attempt++
     try {
-        $response = Invoke-WebRequest -Uri $warmupUrl -Method GET -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
+        $response = Invoke-WebRequest -Uri $aliveUrl -Method GET -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
         if ($response.StatusCode -lt 500) {
-            Write-Ok "Web is responding (HTTP $($response.StatusCode)) after $($attempt * 5)s"
-            $ready = $true
+            Write-Ok "Web is alive (HTTP $($response.StatusCode)) after $($attempt * 5)s"
+            $webAlive = $true
             break
         }
     }
@@ -830,17 +800,43 @@ while ($attempt -lt $maxAttempts) {
     Write-Detail "Not yet responding (attempt $attempt/$maxAttempts) — waiting 5s..."
     Start-Sleep -Seconds 5
 }
-if (-not $ready) {
-    # Hard fail: if the web app hasn't responded to /alive within the warmup
-    # window, something is wrong with the revision (failed activation,
-    # ImagePullUnauthorized, crash loop, etc.). Running E2E tests against a
-    # dead site just wastes 60s per test and obscures the real failure.
-    # Dump recent system log events for the latest revision to aid triage.
-    # NOTE: Old ACR images are intentionally NOT deleted here so that the
-    # failing revision can still be examined and so a re-deploy can pull them.
-    Write-Fail "Web did not respond within $($maxAttempts * 5)s — failing deploy"
+if (-not $webAlive) {
+    Write-Fail "Web did not respond to /alive within $($maxAttempts * 5)s — failing deploy"
     Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $stagingRG
     Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
+    exit 1
+}
+
+# Phase 2: Hit the homepage to trigger the API to scale up. The Web's SSR page load
+# makes server-side calls to the internal API, which triggers it to scale from zero.
+# This also validates the full Web → API → DB chain before E2E tests run.
+Write-Step "Warming up API via Web homepage (triggers Web → API → DB)"
+$homepageUrl = "https://$webFqdn/"
+$apiMaxAttempts = 36  # 36 × 5s = 3 minutes max
+$apiAttempt = 0
+$apiReady = $false
+while ($apiAttempt -lt $apiMaxAttempts) {
+    $apiAttempt++
+    try {
+        $response = Invoke-WebRequest -Uri $homepageUrl -Method GET -TimeoutSec 15 -UseBasicParsing -ErrorAction Stop
+        if ($response.StatusCode -eq 200) {
+            Write-Ok "Homepage loaded successfully (HTTP 200) after $($apiAttempt * 5)s — API is responding"
+            $apiReady = $true
+            break
+        }
+        Write-Detail "Homepage returned HTTP $($response.StatusCode) (attempt $apiAttempt/$apiMaxAttempts) — waiting 5s..."
+    }
+    catch {
+        Write-Detail "Homepage not ready (attempt $apiAttempt/$apiMaxAttempts) — waiting 5s..."
+    }
+    Start-Sleep -Seconds 5
+}
+if (-not $apiReady) {
+    # The Web is alive but the homepage fails — likely an API or DB connectivity issue.
+    # Dump diagnostics for both apps to aid triage.
+    Write-Fail "Homepage did not return HTTP 200 within $($apiMaxAttempts * 5)s — API may be unhealthy"
+    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
+    Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $stagingRG
     exit 1
 }
 
