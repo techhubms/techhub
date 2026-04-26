@@ -120,6 +120,7 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
    - Images are built once and reused for production
 
 3. **Deploy Staging Infrastructure** - Deploys the staging/PR-env networking, monitoring, and Container Apps Environment
+   - Runs in **parallel with Build & Push** (both depend only on Deploy Shared Infrastructure)
    - Runs `Deploy-Infrastructure.ps1 -Environment staging` — keeps the shared infrastructure ready for PR environments
    - No permanent staging Container Apps are deployed (PR environments create their own)
    - No staging smoke tests or E2E tests (those run in PR preview environments)
@@ -137,8 +138,8 @@ only be run locally. They are excluded by `--filter-not-trait "Category=Performa
 CI E2E runs.
 
 **Why local-only**: The performance tests connect directly to a PostgreSQL database containing
-a full production dataset (~4000+ content items). The production and staging databases are
-behind Azure private endpoints and are not accessible from GitHub Actions runners. There is
+a full production dataset (~4000+ content items). The production database is
+behind an Azure private endpoint and is not accessible from GitHub Actions runners. There is
 no publicly reachable database with real data available in CI.
 
 **To run locally**:
@@ -222,8 +223,8 @@ Configure these per-environment in GitHub repository settings → Environments �
 
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
-| `POSTGRES_ADMIN_PASSWORD` | Staging DB password | Production DB password | Set manually, stored in 1Password |
-| `AZURE_AD_CLIENT_SECRET` | Entra ID client secret | Entra ID client secret | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `POSTGRES_ADMIN_PASSWORD` | ✗ Not needed | ✓ Required | Production DB password — set manually, stored in 1Password |
+| `AZURE_AD_CLIENT_SECRET` | ✗ Not needed | ✓ Required | Entra ID client secret — set via `Manage-EntraId.ps1 -Environment prod` |
 
 > **Tenant ID, Client ID, and AI key are no longer GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
 
