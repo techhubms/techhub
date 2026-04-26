@@ -129,14 +129,15 @@ resource availabilityAlerts 'Microsoft.Insights/metricAlerts@2018-03-01' = [for 
 }]
 
 // Smart detection: Failure Anomalies alert rule.
-// Azure auto-creates this when App Insights is provisioned. We manage it explicitly
-// so it can be disabled for environments where alerts add no value (e.g., staging).
-resource failureAnomaliesRule 'Microsoft.AlertsManagement/smartDetectorAlertRules@2021-04-01' = {
-  name: 'failure anomalies - ${appInsightsName}'
+// Azure auto-creates this when App Insights is provisioned with emails enabled.
+// Only deploy explicitly when we need to disable it — for production, leave Azure's
+// auto-created rule untouched so it keeps its default notification settings.
+resource failureAnomaliesRule 'Microsoft.AlertsManagement/smartDetectorAlertRules@2021-04-01' = if (!enableSmartDetection) {
+  name: 'Failure Anomalies - ${appInsightsName}'
   location: 'global'
   properties: {
     description: 'Failure Anomalies notifies you of an unusual rise in the rate of failed HTTP requests or dependency calls.'
-    state: enableSmartDetection ? 'Enabled' : 'Disabled'
+    state: 'Disabled'
     severity: 'Sev3'
     frequency: 'PT1M'
     detector: {
