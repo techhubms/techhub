@@ -628,6 +628,50 @@ select.admin-input {
     }
 }
 
+/* ─── Responsive Layout (mobile) ─────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    /* Nav: brand + logout on first row, links wrap to scrollable second row */
+    .admin-nav-content {
+        flex-wrap: wrap;
+        padding: var(--spacing-2);
+        min-height: auto;
+        gap: var(--spacing-1) var(--spacing-2);
+    }
+
+    .admin-nav-links {
+        order: 3;
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-1);
+        scrollbar-width: thin;
+        flex-wrap: nowrap;
+        gap: var(--spacing-1);
+    }
+
+    .admin-nav-actions {
+        margin-left: auto;
+    }
+
+    /* Page header: wrap title and actions on separate lines */
+    .admin-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-2);
+    }
+
+    /* Action buttons: wrap to multiple rows if needed */
+    .admin-actions {
+        flex-wrap: wrap;
+    }
+
+    /* Form grid: single column on mobile */
+    .admin-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 .admin-stats-footer {
     text-align: right;
     font-size: var(--font-size-xs);
@@ -953,4 +997,14 @@ select.admin-input {
 .review-author-arrow {
     color: var(--color-text-tertiary);
     flex-shrink: 0;
+}
+
+/* ─── Responsive Layout (mobile) — kept at end so overrides win in cascade ── */
+
+@media (max-width: 768px) {
+    /* Pagination: allow wrapping */
+    .admin-pagination {
+        flex-wrap: wrap;
+        gap: var(--spacing-2);
+    }
 }
