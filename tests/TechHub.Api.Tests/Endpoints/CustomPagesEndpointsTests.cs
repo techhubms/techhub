@@ -159,9 +159,9 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
             f.Description.Should().NotBeNullOrWhiteSpace();
             f.ReleaseDate.Should().NotBeNullOrWhiteSpace();
             f.Tiers.Should().NotBeEmpty();
+            DateOnly.TryParse(f.ReleaseDate, out _).Should().BeTrue(
+                $"ReleaseDate '{f.ReleaseDate}' on feature '{f.Id}' should be a valid ISO 8601 date");
         });
-        data.TimelineFeatures.Should().BeInDescendingOrder(f => f.ReleaseDate,
-            "timeline features should be parseable for ordering (all valid ISO dates)");
     }
 
     [Fact]

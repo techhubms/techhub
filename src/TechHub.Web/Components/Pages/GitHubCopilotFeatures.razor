@@ -242,18 +242,21 @@
 @code {
     private const string SectionName = "github-copilot";
 
-    private static readonly string[] AllTiers = ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
-
     private FeaturesPageData? pageData;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
     private HashSet<string> activeFilters = new(StringComparer.OrdinalIgnoreCase);
     private HashSet<string> expandedItems = new(StringComparer.OrdinalIgnoreCase);
     private PersistingComponentStateSubscription? _persistSubscription;
 
+    /// <summary>Tier names in display order, derived from the page data.</summary>
+    private IReadOnlyList<string> AllTiers =>
+        pageData?.SubscriptionTiers.Select(t => t.Name).ToList() ?? [];
+
     private List<FeatureTimelineItem> GetVisibleItems()
     {
         if (pageData == null) return [];
 
+        var allTiers = AllTiers;
         var items = pageData.TimelineFeatures
             .OrderByDescending(f => f.ReleaseDate)
             .AsEnumerable();
@@ -262,7 +265,7 @@
             items = items.Where(f => f.GhesSupport);
 
         var tierFilters = activeFilters
-            .Where(f => AllTiers.Contains(f, StringComparer.OrdinalIgnoreCase))
+            .Where(f => allTiers.Contains(f, StringComparer.OrdinalIgnoreCase))
             .ToList();
 
         if (tierFilters.Count > 0)
