@@ -624,6 +624,7 @@ if ($apiExists) {
         --name $apiAppName `
         --resource-group $stagingRG `
         --image $apiImage `
+        --min-replicas 1 `
         --replace-env-vars @apiEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update API Container App"
@@ -645,7 +646,7 @@ else {
         --registry-identity $identityId `
         --cpu 0.5 `
         --memory 1Gi `
-        --min-replicas 0 `
+        --min-replicas 1 `
         --max-replicas 1 `
         --secrets "db-connection-string=$dbConnectionString" `
         --env-vars @apiEnvVars
@@ -686,6 +687,53 @@ if (-not [string]::IsNullOrWhiteSpace($actualApiPrFqdn)) {
 }
 
 # ============================================================================
+# WAIT FOR API TO BE HEALTHY (required before Web deployment)
+# ============================================================================
+# The web app calls the API synchronously during startup, before Kestrel starts
+# (Program.cs pre-loads the section cache). This means the Web container cannot
+# respond to /alive until the API has responded. With minReplicas=1 the API
+# container starts as soon as it is deployed; we wait here until it is Running
+# so the Web's startup API call is guaranteed to succeed.
+
+Write-Step "Waiting for API to become healthy before deploying Web"
+$apiRevisionName = az containerapp show `
+    --name $apiAppName `
+    --resource-group $stagingRG `
+    --query properties.latestRevisionName -o tsv 2>$null
+
+if ([string]::IsNullOrWhiteSpace($apiRevisionName)) {
+    Write-Fail "Could not determine latest API revision name"
+    exit 1
+}
+
+$apiRevMaxAttempts = 60  # 60 × 5s = 5 minutes max
+$apiRevAttempt = 0
+$apiRevReady = $false
+while ($apiRevAttempt -lt $apiRevMaxAttempts) {
+    $apiRevAttempt++
+    $revInfo = az containerapp revision show `
+        --name $apiAppName `
+        --resource-group $stagingRG `
+        --revision $apiRevisionName `
+        --query "{runningState: properties.runningState, healthState: properties.healthState}" `
+        -o json 2>$null | ConvertFrom-Json -ErrorAction SilentlyContinue
+
+    if ($revInfo -and $revInfo.runningState -eq 'Running') {
+        Write-Ok "API revision '$apiRevisionName' is Running after $($apiRevAttempt * 5)s"
+        $apiRevReady = $true
+        break
+    }
+    $state = if ($revInfo) { "$($revInfo.runningState)/$($revInfo.healthState)" } else { 'unknown' }
+    Write-Detail "API not ready yet ($state, attempt $apiRevAttempt/$apiRevMaxAttempts) — waiting 5s..."
+    Start-Sleep -Seconds 5
+}
+if (-not $apiRevReady) {
+    Write-Fail "API did not become healthy within $($apiRevMaxAttempts * 5)s — cannot deploy Web"
+    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
+    exit 1
+}
+
+# ============================================================================
 # DEPLOY WEB CONTAINER APP
 # ============================================================================
 
@@ -700,6 +748,7 @@ if ($webExists) {
         --name $webAppName `
         --resource-group $stagingRG `
         --image $webImage `
+        --min-replicas 1 `
         --replace-env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update Web Container App"
@@ -721,7 +770,7 @@ else {
         --registry-identity $identityId `
         --cpu 0.5 `
         --memory 1Gi `
-        --min-replicas 0 `
+        --min-replicas 1 `
         --max-replicas 1 `
         --env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
@@ -768,17 +817,16 @@ if ($env:GITHUB_OUTPUT) {
 }
 
 # ============================================================================
-# WARMUP — HTTP requests to trigger scaling and verify health
+# WARMUP — HTTP requests to verify health
 # ============================================================================
 
-# Both apps are deployed with minReplicas=0 (scale to zero). They stay at ScaledToZero
-# until actual HTTP traffic arrives — management-plane polling (revision runningState)
-# can't trigger scaling. We send real HTTP requests to the Web app, which triggers both:
-# 1. Web scaling (direct HTTP request)
-# 2. API scaling (Web makes server-side calls to the internal API on page load)
+# Both apps are deployed with minReplicas=1 so they start immediately without
+# needing HTTP traffic. The API is confirmed Running before the Web is deployed,
+# guaranteeing the Web's startup API call (section cache pre-load in Program.cs)
+# succeeds and Kestrel can start.
 
 # Phase 1: Wait for the Web container to start responding (/alive liveness check).
-# This triggers the Web to scale from zero but doesn't hit the API yet.
+# With the API already Running, the Web startup completes quickly.
 Write-Step "Warming up Web Container App at https://$webFqdn"
 $aliveUrl = "https://$webFqdn/alive"
 $maxAttempts = 60  # 60 × 5s = 5 minutes max
