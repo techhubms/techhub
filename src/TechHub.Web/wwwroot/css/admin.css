@@ -673,7 +673,7 @@ select.admin-input {
     /* Pagination: allow wrapping */
     .admin-pagination {
         flex-wrap: wrap;
-        gap: var(--spacing-2);
+        gap: var(--spacing-2) !important;
     }
 }
 
