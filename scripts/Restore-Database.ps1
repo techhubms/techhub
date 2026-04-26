@@ -1,12 +1,12 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Downloads and restores the production PostgreSQL database to a local or staging environment.
+    Downloads and restores the production PostgreSQL database to the local development environment.
 
 .DESCRIPTION
     Performs a logical dump of the production TechHub PostgreSQL database (content_items and
     related tables only) and restores it to the target environment. This replaces the need to
-    run ContentSyncService locally or in staging — developers get a production data snapshot
+    run ContentSyncService locally — developers get a production data snapshot
     instead of processing markdown files. ContentSync has been removed from production; the
     database is now the single source of truth.
 
@@ -18,7 +18,6 @@
 .PARAMETER Target
     Target environment to restore the database into. Options:
     - local:   Restores to the local Docker Compose PostgreSQL instance.
-    - staging: Restores to the Azure staging PostgreSQL instance.
 
 .PARAMETER ProductionConnectionString
     Optional. Full PostgreSQL connection string for the production database.
@@ -48,10 +47,6 @@
     ./scripts/Restore-Database.ps1 -Target local
 
 .EXAMPLE
-    # Restore to staging environment
-    ./scripts/Restore-Database.ps1 -Target staging
-
-.EXAMPLE
     # Dump production data to file only (no restore)
     ./scripts/Restore-Database.ps1 -Target local -SkipRestore
 
@@ -62,7 +57,7 @@
 
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet('local', 'staging')]
+    [ValidateSet('local')]
     [string]$Target,
 
     [Parameter(Mandatory = $false)]
@@ -378,44 +373,6 @@ if (-not $TargetConnectionString) {
         $TargetConnectionString = $localConnectionString
         Write-Ok "Target: local Docker Compose PostgreSQL"
     }
-    else {
-        # Staging: try to fetch from Azure
-        try {
-            $stagingRg = "rg-techhub-staging"
-            $stagingServer = "psql-techhub-staging"
-            $stagingDb = "techhub"
-            $adminUser = "techhubadmin"
-
-            $serverFqdn = az postgres flexible-server show `
-                --name $stagingServer `
-                --resource-group $stagingRg `
-                --query fullyQualifiedDomainName `
-                -o tsv 2>$null
-
-            if ($serverFqdn -and $LASTEXITCODE -eq 0) {
-                Write-Host ""
-                Write-Host "   Staging server: $serverFqdn" -ForegroundColor Yellow
-                $securePassword = Read-Host -Prompt "   Enter staging database password for '$adminUser'" -AsSecureString
-                $adminPassword = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto(
-                    [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
-                )
-                if (-not $adminPassword) {
-                    Write-Fail "Password is required to connect to the staging database."
-                    exit 1
-                }
-                $TargetConnectionString = "Host=$serverFqdn;Database=$stagingDb;Username=$adminUser;Password=$adminPassword;SSL Mode=Require"
-                Write-Ok "Target: staging PostgreSQL ($serverFqdn)"
-            }
-            else {
-                Write-Fail "Could not retrieve staging PostgreSQL FQDN."
-                exit 1
-            }
-        }
-        catch {
-            Write-Fail "Failed to retrieve staging connection string: $($_.Exception.Message)"
-            exit 1
-        }
-    }
 }
 
 # ============================================================================
@@ -477,47 +434,14 @@ if (-not $SkipRestore) {
         }
         Write-Ok "Local app servers stopped"
     }
-    elseif ($Target -eq 'staging') {
-        Write-Step "Stopping staging Container Apps"
-        $stagingRg = "rg-techhub-staging"
-        $stagingApps = @("ca-techhub-api-staging", "ca-techhub-web-staging")
-        foreach ($app in $stagingApps) {
-            Write-Detail "Deactivating revisions of $app..."
-            $revisions = az containerapp revision list --name $app --resource-group $stagingRg --query "[?properties.active].name" -o tsv 2>&1
-            if ($LASTEXITCODE -ne 0 -or -not $revisions) {
-                Write-Host "   [WARN] Could not list revisions for $($app) (app may not exist yet)" -ForegroundColor Yellow
-                continue
-            }
-            foreach ($rev in ($revisions -split "`n" | Where-Object { $_ -ne '' })) {
-                az containerapp revision deactivate --name $app --resource-group $stagingRg --revision $rev --output none 2>&1 | Out-Null
-            }
-        }
-        Write-Ok "Staging Container Apps stopped"
-    }
+
 
     $dropAndRecreate = $true
     Invoke-PgRestore -PgEnv $targetPgEnv -InputFile $OutputPath -DropAndRecreate:$dropAndRecreate
 
     Write-Ok "Restore complete"
 
-    # Restart staging Container Apps after restore
-    if ($Target -eq 'staging') {
-        Write-Step "Starting staging Container Apps"
-        $stagingRg = "rg-techhub-staging"
-        $stagingApps = @("ca-techhub-api-staging", "ca-techhub-web-staging")
-        foreach ($app in $stagingApps) {
-            Write-Detail "Activating revisions of $app..."
-            $revisions = az containerapp revision list --name $app --resource-group $stagingRg --query "[?!properties.active].name" -o tsv 2>&1
-            if ($LASTEXITCODE -ne 0 -or -not $revisions) {
-                Write-Host "   [WARN] Could not list revisions for $($app) (app may not exist yet)" -ForegroundColor Yellow
-                continue
-            }
-            foreach ($rev in ($revisions -split "`n" | Where-Object { $_ -ne '' })) {
-                az containerapp revision activate --name $app --resource-group $stagingRg --revision $rev --output none 2>&1 | Out-Null
-            }
-        }
-        Write-Ok "Staging Container Apps started"
-    }
+
 
     # Reset the local database user password to match the local connection string,
     # so the app can connect without changing connection strings.

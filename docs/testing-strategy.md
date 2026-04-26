@@ -58,7 +58,7 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 
 **Goal**: Test critical user journeys through the complete system via Playwright browser tests.
 
-**Target**: Configurable via `E2E_BASE_URL` environment variable (defaults to `https://localhost:5003`). In CI, runs against the staging deployment (`https://staging-tech.hub.ms`).
+**Target**: Configurable via `E2E_BASE_URL` environment variable (defaults to `https://localhost:5003`). In CI, runs against the PR preview deployment (each PR gets its own isolated environment with its own database).
 
 **What's Real**:
 

@@ -244,34 +244,7 @@ else {
 # ============================================================================
 
 if (-not $SkipDeploy) {
-    # Production safety: validate staging health first
     if ($Environment -eq 'production') {
-        Write-Step "Validating staging health before production deployment"
-
-        $stagingWebFqdn = az containerapp show `
-            --name ca-techhub-web-staging `
-            --resource-group rg-techhub-staging `
-            --query properties.configuration.ingress.fqdn `
-            -o tsv 2>$null
-
-        if ($stagingWebFqdn) {
-            $response = try {
-                Invoke-WebRequest -Uri "https://$stagingWebFqdn/health" -TimeoutSec 15 -UseBasicParsing
-            }
-            catch { $null }
-
-            if ($response -and $response.StatusCode -eq 200) {
-                Write-Ok "Staging health check passed"
-            }
-            else {
-                Write-Fail "Staging health check failed. Fix staging before deploying to production."
-                exit 1
-            }
-        }
-        else {
-            Write-Warn "Could not retrieve staging URL. Proceeding without staging validation."
-        }
-
         # Save current production images for rollback
         $previousApiImage = az containerapp show `
             --name $apiAppName `

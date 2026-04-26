@@ -14,9 +14,9 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 **Triggers**:
 
-- Push to `main` branch (CI + staging + production deployment)
+- Push to `main` branch (CI + staging infrastructure + production deployment)
 - Pull requests to `main` branch (CI + PR preview deployment)
-- Manual dispatch (CI + staging + production deployment)
+- Manual dispatch (CI + staging infrastructure + production deployment)
 
 This is a single unified pipeline. All CI quality checks run first; preview and production
 deployments are gated on them.
@@ -52,7 +52,7 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 
 - **No workflow-level concurrency group** — each push starts its own CI run immediately, so new commits are never blocked by older runs waiting for environment approval
 - **Deployment jobs use per-environment concurrency** (`deploy-staging`, `deploy-production`) to prevent conflicting deploys to the same environment
-- **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new pushes to an open PR cancel any in-progress preview deploy for that PR
+- **PR preview jobs use per-PR concurrency** (`pr-preview-{N}`) — new pushes to an open PR cancel any in-progress preview deploy for that PR; each PR gets its own isolated database so there is no cross-PR interference
 - CI jobs are stateless and safe to run in parallel across commits
 
 ### PR Preview Environments
@@ -62,28 +62,36 @@ not a separate workflow. This means **the quality gate must pass before a previe
 if unit tests, integration tests, lint, or security checks fail, no container is built and no
 preview environment is created.
 
-When a pull request is opened or updated and the quality gate passes, a dedicated preview
-environment is automatically deployed to the **staging Azure Container Apps Environment**.
+When a pull request is opened or updated and the quality gate passes, a **fully isolated preview
+environment** is automatically deployed to the **staging Azure Container Apps Environment**.
 Each PR gets its own Container Apps (`ca-techhub-api-pr-{number}` and
-`ca-techhub-web-pr-{number}`) without touching the permanent staging application.
+`ca-techhub-web-pr-{number}`) and its own **PostgreSQL Flexible Server** (`psql-techhub-pr-{number}`)
+created via Point-in-Time Restore (PITR) from the production database.
 
 **On PR opened / new commit pushed** (after quality gate passes):
 
 1. Docker images are built and pushed to ACR, tagged `pr-{number}-{timestamp}`
-2. PR-specific Container Apps are created or updated in the staging environment
-3. A comment is posted (or updated) on the PR with the direct Container Apps URL
-4. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
+2. A PR-specific PostgreSQL server is created via PITR from production (5–8 min)
+3. A private endpoint with DNS zone group is created for the PR Postgres (auto-registers the A record in the shared `privatelink.postgres.database.azure.com` DNS zone)
+4. PR-specific Container Apps are created or updated in the staging environment
+5. A comment is posted (or updated) on the PR with the direct Container Apps URL
+6. Playwright E2E tests run against the preview URL (`Category=Performance` excluded)
 
 **On PR closed**:
 
 1. The PR-specific Container Apps are deleted (no quality gate required)
-2. The PR comment is updated to confirm the environment has been removed
+2. The PR-specific PostgreSQL private endpoint is deleted (DNS zone group auto-removes the A record)
+3. The PR-specific PostgreSQL server is deleted
+4. Docker images tagged for the PR are cleaned up from ACR
+5. The PR comment is updated to confirm the environment has been removed
 
 **Key properties of PR preview environments**:
 
-- Reuse staging infrastructure (Container Apps Environment, VNet, PostgreSQL, monitoring)
+- Each PR gets an **isolated PostgreSQL database** cloned from production via PITR
+- No shared database state — multiple PRs cannot interfere with each other
+- Reuse staging infrastructure (Container Apps Environment, VNet, monitoring)
 - Accessible via the default Azure Container Apps URL (no custom domain)
-- Multiple PRs run in parallel, each with a unique URL
+- Multiple PRs run in parallel, each with a unique URL and isolated database
 - Concurrency per PR: new pushes cancel in-progress deploys for the same PR
 - Images tagged with `pr-{number}-{timestamp}` for easy identification
 
@@ -91,7 +99,7 @@ Each PR gets its own Container Apps (`ca-techhub-api-pr-{number}` and
 
 ```powershell
 # Deploy PR #42 preview environment (Azure login required)
-$env:POSTGRES_ADMIN_PASSWORD = "<staging-password>"
+$env:POSTGRES_ADMIN_PASSWORD = "<production-password>"
 ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-dev"
 
 # Remove the PR #42 preview environment
@@ -109,24 +117,19 @@ Every deployment runs the full Bicep template. ARM is idempotent and only redepl
 2. **Build & Push** - Calls `Deploy-Application.ps1 -SkipDeploy` to build Docker images and push to ACR
    - Waits for shared infrastructure (ACR) to be ready first
    - Tags images with commit SHA and `latest`
-   - Images are built once and reused for both staging and production
+   - Images are built once and reused for production
 
-3. **Deploy to Staging** - Full infrastructure + application deployment
-   - Runs `Deploy-Infrastructure.ps1` with image tag — Bicep manages everything declaratively (infra config + container image)
-   - ARM is idempotent: unchanged resources are not touched
-   - Runs smoke tests (health check + homepage)
+3. **Deploy Staging Infrastructure** - Deploys the staging/PR-env networking, monitoring, and Container Apps Environment
+   - Runs in **parallel with Build & Push** (both depend only on Deploy Shared Infrastructure)
+   - Runs `Deploy-Infrastructure.ps1 -Environment staging` — keeps the shared infrastructure ready for PR environments
+   - No permanent staging Container Apps are deployed (PR environments create their own)
+   - No staging smoke tests or E2E tests (those run in PR preview environments)
 
-4. **E2E Tests (Staging)** - Playwright browser tests against staging
-   - Runs after staging deployment succeeds
-   - Uses `E2E_BASE_URL=https://staging-tech.hub.ms`
-   - Excludes performance tests — see [Performance Tests](#performance-tests)
-   - Must pass before production deployment proceeds
-
-5. **Deploy to Production** - Full infrastructure + application deployment
+4. **Deploy to Production** - Full infrastructure + application deployment
    - Uses GitHub environment protection for approval
-   - Same flow as staging: single `Deploy-Infrastructure.ps1` call with image tag
-   - Deploys same images used in staging (no rebuild)
-   - Runs smoke tests (health check + homepage)
+   - Single `Deploy-Infrastructure.ps1` call with image tag
+   - Runs comprehensive smoke tests: `/alive`, `/health`, homepage, and a representative API call
+   - E2E tests are **not** run against production (they create/modify data — see below)
 
 ### Performance Tests
 
@@ -135,8 +138,8 @@ only be run locally. They are excluded by `--filter-not-trait "Category=Performa
 CI E2E runs.
 
 **Why local-only**: The performance tests connect directly to a PostgreSQL database containing
-a full production dataset (~4000+ content items). The production and staging databases are
-behind Azure private endpoints and are not accessible from GitHub Actions runners. There is
+a full production dataset (~4000+ content items). The production database is
+behind an Azure private endpoint and is not accessible from GitHub Actions runners. There is
 no publicly reachable database with real data available in CI.
 
 **To run locally**:
@@ -155,17 +158,16 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 **Shared Resources** (one-time setup):
 
 - Resource Group: `rg-techhub-shared`
-- Container Registry: `crtechhub` (used by both staging and production)
-- Same tested images are promoted from staging → production
+- Container Registry: `crtechhub` (used by all environments)
 
-**Staging**:
+**Staging (PR-env infrastructure)**:
 
 - Resource Group: `rg-techhub-staging`
-- API App: `ca-techhub-api-staging`
-- Web App: `ca-techhub-web-staging`
-- Azure OpenAI: `oai-techhub-staging` (independent testing)
-- Auto-deployed on every merge to `main`
-- No approval required
+- Container Apps Environment: `cae-techhub-staging` (shared by all PR environments)
+- No permanent staging Container Apps — each PR deploys its own
+- Each PR gets its own PostgreSQL: `psql-techhub-pr-{N}` (created via PITR from production)
+- Azure OpenAI: `oai-techhub-staging` (used by PR environments)
+- VNet, monitoring, and networking are shared across PR environments
 
 **Production**:
 
@@ -174,7 +176,6 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 - Web App: `ca-techhub-web-prod`
 - Azure OpenAI: `oai-techhub-prod` (production workloads)
 - **Manual approval required** via GitHub Environments
-- Same Docker images as staging (no rebuild)
 
 **Rollback Strategy**:
 
@@ -222,8 +223,8 @@ Configure these per-environment in GitHub repository settings → Environments �
 
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
-| `POSTGRES_ADMIN_PASSWORD` | Staging DB password | Production DB password | Set manually, stored in 1Password |
-| `AZURE_AD_CLIENT_SECRET` | Entra ID client secret | Entra ID client secret | Set via `Manage-EntraId.ps1 -Environment <env>` |
+| `POSTGRES_ADMIN_PASSWORD` | ✗ Not needed | ✓ Required | Production DB password — set manually, stored in 1Password |
+| `AZURE_AD_CLIENT_SECRET` | ✗ Not needed | ✓ Required | Entra ID client secret — set via `Manage-EntraId.ps1 -Environment prod` |
 
 > **Tenant ID, Client ID, and AI key are no longer GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
 
@@ -235,6 +236,7 @@ Create these environments in GitHub:
 
 - **Name**: `staging`
 - **Protection rules**: None (auto-deploy)
+- **Purpose**: Hosts PR-env infrastructure (Container Apps Environment, VNet, monitoring) and PR preview deployments
 
 ### Production Environment
 
@@ -288,34 +290,34 @@ When run locally, images default to the `dev` tag to distinguish them from CI-pr
 
 When deploying to a completely new Azure subscription for the first time:
 
-1. **Deploy Infrastructure + Application** (initial setup)
+1. **Deploy Infrastructure** (initial setup)
    - Go to GitHub Actions → "CI/CD Pipeline"
    - Click "Run workflow"
-   - This deploys shared infrastructure (ACR), staging infrastructure, builds images, and deploys to staging — all in one run
+   - This deploys shared infrastructure (ACR), staging infrastructure (VNet, monitoring, Container Apps Environment), builds images, and deploys to production
    - Shared resources: `rg-techhub-shared` with container registry `crtechhub`
-   - Staging resources: `rg-techhub-staging` with Container Apps, PostgreSQL, OpenAI, etc.
+   - Staging resources: `rg-techhub-staging` with Container Apps Environment, PostgreSQL, OpenAI, networking, and monitoring (used by PR environments)
 
 2. **Deploy Production** (when ready)
-   - After staging succeeds, the production deployment awaits approval
-   - All CI checks run first, then staging deploys, then after approval, production infrastructure and application deploy
+   - After staging infrastructure succeeds, the production deployment awaits approval
+   - All CI checks run first, then staging infrastructure deploys, then after approval, production infrastructure and application deploy
    - Creates separate Azure OpenAI `oai-techhub-prod` (independent from staging)
 
 **Note**: The Bicep templates use `imageTag = 'initial'` which deploys a Microsoft-provided placeholder ASP.NET app. The deployment workflow immediately replaces this with your actual application. This solves the chicken-and-egg problem of needing Container Apps to exist before images are built, but needing images to exist before Container Apps can be created.
 
 **Why Separate OpenAI Instances?**
 
-- **Test safely**: Try new model versions (e.g., GPT-5.3) in staging before production
-- **Independent quotas**: Staging testing won't affect production rate limits
-- **Cost tracking**: See staging vs production AI costs separately
+- **Test safely**: Try new model versions (e.g., GPT-5.3) in PR environments before production
+- **Independent quotas**: PR environment testing won't affect production rate limits
+- **Cost tracking**: See PR-env vs production AI costs separately
 - **Configuration testing**: Test new content filters, deployments, etc. without risk
 
-**Why a Shared Registry?** Both staging and production use the same container registry. This ensures:
+**Why a Shared Registry?** All environments (PR previews and production) use the same container registry. This ensures:
 
-- **Immutability**: The exact same tested image from staging is deployed to production (no rebuild risk)
+- **Immutability**: The exact same tested image from the PR preview is deployed to production (no rebuild risk)
 - **Cost-effective**: No duplicate storage of images
 - **Simpler management**: Single source of truth for all container images
 
-### Automatic Staging Deployment
+### Automatic Staging Infrastructure Deployment
 
 1. Push to `main` branch (or merge PR)
 2. Unified CI/CD workflow triggers automatically
@@ -323,33 +325,30 @@ When deploying to a completely new Azure subscription for the first time:
 4. Quality gate validates all checks passed
 5. Docker images built once (tagged with commit SHA and `latest`)
 6. Images pushed to Azure Container Registry
-7. Staging Container Apps updated
-8. Smoke tests run
-9. **Deployment complete** - Staging is live with new version
+7. Staging infrastructure deployed (VNet, monitoring, Container Apps Environment)
+8. **Infrastructure ready** — PR environments can deploy into the staging Container Apps Environment
 
 ### Manual Production Deployment
 
-1. **Validate staging** - Test staging environment thoroughly
+1. **Verify PR E2E tests passed** — Every PR is E2E-tested in its own isolated preview environment before merge
 2. Go to GitHub Actions → "CI/CD Pipeline"
 3. Click "Run workflow"
-4. All CI checks run first, then staging deploys
+4. All CI checks run first, then images are built and pushed
 5. **Approval required** - Workflow will pause at the production deployment job
    - Designated approvers receive notification
-   - Review staging health, commit details, changes
+   - Review PR E2E results, commit details, changes
    - Approve or reject deployment
 6. After approval, deployment proceeds:
-   - Validates staging health one more time
-   - Backs up current production configuration
-   - Deploys same images used in staging (no rebuild)
-   - Runs comprehensive smoke tests
-   - Monitors for 5 minutes
+   - Deploys production infrastructure and application
+   - Runs comprehensive smoke tests (`/alive`, `/health`, homepage, API call)
    - Auto-rollback if any health check fails
 7. **Deployment complete** - Production is live with new version
 
 **Key Points**:
 
-- **Same images** are deployed to both staging and production (no rebuild between environments)
 - Production deployment **requires human approval** via GitHub Environments
+- E2E tests run in PR preview environments **before merge**, not against production
+- Production smoke tests are read-only and complete in under 30 seconds
 - Failed deployments trigger **automatic rollback** to previous version
 - All deployments are tagged with commit SHA for traceability
 
@@ -428,7 +427,7 @@ Production deployment automatically rolls back if:
 
 ### Before Production Deployment
 
-- ✅ Staging validated and working
+- ✅ PR E2E tests passed in preview environment
 - ✅ No known critical issues
 - ✅ Deployment scheduled during low-traffic window
 - ✅ Monitoring ready
