@@ -384,6 +384,20 @@ $pgExists = Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $sta
 
 if ($pgExists) {
     Write-Ok "PR PostgreSQL server already exists — reusing $prPostgresServer"
+    # Always reset the password when reusing an existing server.
+    # The PITR-restored server starts with the production password; if the prior run's
+    # password reset failed or was skipped, the server may have an unexpected password.
+    # Resetting unconditionally ensures the password always matches POSTGRES_ADMIN_PASSWORD.
+    Write-Detail "Resetting admin password on $prPostgresServer to match current staging secret..."
+    az postgres flexible-server update `
+        --resource-group $stagingRG `
+        --name $prPostgresServer `
+        --admin-password $env:POSTGRES_ADMIN_PASSWORD
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to reset admin password on $prPostgresServer"
+        exit 1
+    }
+    Write-Ok "Admin password reset on $prPostgresServer"
 }
 else {
     # Get the production server resource ID for PITR source
@@ -718,8 +732,9 @@ while ($apiRevAttempt -lt $apiRevMaxAttempts) {
         --query "{runningState: properties.runningState, healthState: properties.healthState}" `
         -o json 2>$null | ConvertFrom-Json -ErrorAction SilentlyContinue
 
-    if ($revInfo -and $revInfo.runningState -eq 'Running') {
-        Write-Ok "API revision '$apiRevisionName' is Running after $($apiRevAttempt * 5)s"
+    $readyStates = @('Running', 'RunningAtMaxScale', 'RunningAtMinScale')
+    if ($revInfo -and $revInfo.runningState -in $readyStates) {
+        Write-Ok "API revision '$apiRevisionName' is $($revInfo.runningState) after $($apiRevAttempt * 5)s"
         $apiRevReady = $true
         break
     }
