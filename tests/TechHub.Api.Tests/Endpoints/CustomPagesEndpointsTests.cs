@@ -149,6 +149,19 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         data.FeatureSections[0].Plans.Should().Contain("Free");
         data.FeatureSections[1].Plans.Should().Contain("Student");
         data.VideoCollection.Should().Be("ghc-features");
+
+        // Timeline features
+        data.TimelineFeatures.Should().NotBeEmpty("features timeline should have entries");
+        data.TimelineFeatures.Should().AllSatisfy(f =>
+        {
+            f.Id.Should().NotBeNullOrWhiteSpace();
+            f.Title.Should().NotBeNullOrWhiteSpace();
+            f.Description.Should().NotBeNullOrWhiteSpace();
+            f.ReleaseDate.Should().NotBeNullOrWhiteSpace();
+            f.Tiers.Should().NotBeEmpty();
+        });
+        data.TimelineFeatures.Should().BeInDescendingOrder(f => f.ReleaseDate,
+            "timeline features should be parseable for ordering (all valid ISO dates)");
     }
 
     [Fact]

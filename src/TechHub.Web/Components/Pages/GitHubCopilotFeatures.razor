@@ -29,7 +29,7 @@
                         <div class="features-tiers-scroll">
                             @foreach (var tier in pageData.SubscriptionTiers)
                             {
-                                <a href="/github-copilot/features#@tier.VideoAnchor" id="tier-@tier.Id" class="features-tier-card">
+                                <a href="/github-copilot/features#timeline" id="tier-@tier.Id" class="features-tier-card">
                                     <h3>@tier.Name</h3>
                                     <p class="features-tier-tagline">@tier.Tagline</p>
                                     <ul class="features-tier-features">
@@ -58,22 +58,134 @@
                     <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
                 </div>
 
+                @if (pageData.TimelineFeatures.Count > 0)
+                {
+                    var visibleItems = GetVisibleItems();
+
+                    <section class="features-timeline-section" aria-label="Feature timeline">
+                        <h2 id="timeline" class="features-timeline-heading">Feature Timeline</h2>
+                        <p class="features-timeline-subtitle">A chronological history of GitHub Copilot features — filter by subscription tier or GHES support.</p>
+
+                        <div class="features-timeline-filters" role="group" aria-label="Timeline filters">
+                            <button type="button"
+                                    class="features-filter-btn @(activeFilters.Contains("ghes") ? "active" : "")"
+                                    @onclick='() => ToggleFilter("ghes")'
+                                    aria-pressed="@activeFilters.Contains("ghes").ToString().ToLower()">
+                                GHES Support
+                            </button>
+                            @foreach (var tier in AllTiers)
+                            {
+                                <button type="button"
+                                        class="features-filter-btn @(activeFilters.Contains(tier) ? "active" : "")"
+                                        @onclick='() => ToggleFilter(tier)'
+                                        aria-pressed="@activeFilters.Contains(tier).ToString().ToLower()">
+                                    @tier
+                                </button>
+                            }
+                            @if (activeFilters.Count > 0)
+                            {
+                                <button type="button" class="features-filter-btn features-filter-clear" @onclick="ClearFilters">
+                                    Clear filters ×
+                                </button>
+                            }
+                        </div>
+
+                        <div class="features-timeline" id="timeline-list" aria-live="polite">
+                            @if (visibleItems.Count == 0)
+                            {
+                                <p class="features-timeline-empty">No features match the selected filters.</p>
+                            }
+                            else
+                            {
+                                @foreach (var item in visibleItems)
+                                {
+                                    var isExpanded = expandedItems.Contains(item.Id);
+                                    var videoItem = GetVideoForFeature(item.VideoSlug);
+
+                                    <div class="features-timeline-item @(isExpanded ? "expanded" : "")"
+                                         data-ghes="@item.GhesSupport.ToString().ToLower()"
+                                         data-tiers="@string.Join(",", item.Tiers).ToLower()">
+                                        <div class="features-timeline-marker" aria-hidden="true">
+                                            <div class="features-timeline-dot"></div>
+                                            <div class="features-timeline-line"></div>
+                                        </div>
+                                        <div class="features-timeline-content">
+                                            <button type="button"
+                                                    class="features-timeline-header"
+                                                    @onclick='() => ToggleExpand(item.Id)'
+                                                    aria-expanded="@isExpanded.ToString().ToLower()">
+                                                <div class="features-timeline-meta">
+                                                    <time class="features-timeline-date" datetime="@item.ReleaseDate">
+                                                        @FormatDate(item.ReleaseDate)
+                                                    </time>
+                                                    @if (!string.IsNullOrEmpty(item.Category))
+                                                    {
+                                                        <span class="badge badge-category">@item.Category</span>
+                                                    }
+                                                </div>
+                                                <h3 class="features-timeline-title">@item.Title</h3>
+                                                <div class="features-timeline-badges">
+                                                    @foreach (var tier in item.Tiers)
+                                                    {
+                                                        <span class="badge badge-tier">@tier</span>
+                                                    }
+                                                    @if (item.GhesSupport)
+                                                    {
+                                                        <span class="badge-success">✓ GHES</span>
+                                                    }
+                                                </div>
+                                                <span class="features-timeline-toggle-icon" aria-hidden="true">@(isExpanded ? "▲" : "▼")</span>
+                                            </button>
+
+                                            @if (isExpanded)
+                                            {
+                                                <div class="features-timeline-detail">
+                                                    <p class="features-timeline-description">@item.Description</p>
+
+                                                    @if (videoItem != null)
+                                                    {
+                                                        var videoId = GetYouTubeVideoId(videoItem.ExternalUrl);
+                                                        @if (!string.IsNullOrEmpty(videoId))
+                                                        {
+                                                            <a href="@videoItem.GetHref(SectionName)" class="features-timeline-video-link feature-card" aria-label="Watch video: @videoItem.Title">
+                                                                <div class="feature-card-thumbnail">
+                                                                    <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
+                                                                    <div class="feature-card-play-icon">
+                                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="card-header">
+                                                                    <span class="card-title features-timeline-video-title">@videoItem.Title</span>
+                                                                </div>
+                                                            </a>
+                                                        }
+                                                    }
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </section>
+                }
+
+                @* Legacy feature sections — kept for video browsing by plan *@
                 @foreach (var featureSection in pageData.FeatureSections)
                 {
-                    // Get videos that belong to this tier's plans
                     var sectionVideos = videoItems.Where(v =>
                         featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
                         .OrderBy(v => v.Title)
                         .ToList();
 
-                    <div class="features-video-section">
-                        <h2 id="@featureSection.Id">@featureSection.Title</h2>
-                        <div class="features-section-filters">
-                            <button type="button" class="features-filter-btn" data-filter="ghes">GHES Support</button>
-                            <button type="button" class="features-filter-btn" data-filter="videos">With videos</button>
-                        </div>
-                        @if (sectionVideos.Any())
-                        {
+                    @if (sectionVideos.Count > 0)
+                    {
+                        <div class="features-video-section">
+                            <h2 id="@featureSection.Id">@featureSection.Title</h2>
+                            <div class="features-section-filters">
+                                <button type="button" class="features-filter-btn" data-filter="ghes">GHES Support</button>
+                                <button type="button" class="features-filter-btn" data-filter="videos">With videos</button>
+                            </div>
                             <div class="features-cards-grid">
                                 @foreach (var feature in sectionVideos)
                                 {
@@ -119,8 +231,8 @@
                                     }
                                 }
                             </div>
-                        }
-                    </div>
+                        </div>
+                    }
                 }
             </div>
         </article>
@@ -129,9 +241,66 @@
 
 @code {
     private const string SectionName = "github-copilot";
+
+    private static readonly string[] AllTiers = ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
+
     private FeaturesPageData? pageData;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private HashSet<string> activeFilters = new(StringComparer.OrdinalIgnoreCase);
+    private HashSet<string> expandedItems = new(StringComparer.OrdinalIgnoreCase);
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    private List<FeatureTimelineItem> GetVisibleItems()
+    {
+        if (pageData == null) return [];
+
+        var items = pageData.TimelineFeatures
+            .OrderByDescending(f => f.ReleaseDate)
+            .AsEnumerable();
+
+        if (activeFilters.Contains("ghes"))
+            items = items.Where(f => f.GhesSupport);
+
+        var tierFilters = activeFilters
+            .Where(f => AllTiers.Contains(f, StringComparer.OrdinalIgnoreCase))
+            .ToList();
+
+        if (tierFilters.Count > 0)
+            items = items.Where(f => f.Tiers.Any(t => tierFilters.Contains(t, StringComparer.OrdinalIgnoreCase)));
+
+        return [.. items];
+    }
+
+    private void ToggleFilter(string filter)
+    {
+        if (!activeFilters.Remove(filter))
+            activeFilters.Add(filter);
+    }
+
+    private void ClearFilters() => activeFilters.Clear();
+
+    private void ToggleExpand(string id)
+    {
+        if (!expandedItems.Remove(id))
+            expandedItems.Add(id);
+    }
+
+    private TechHub.Core.Models.ContentItem? GetVideoForFeature(string? videoSlug)
+    {
+        if (string.IsNullOrEmpty(videoSlug)) return null;
+        return videoItems.FirstOrDefault(v =>
+            string.Equals(v.Slug, videoSlug, StringComparison.OrdinalIgnoreCase));
+    }
+
+    /// <summary>
+    /// Format an ISO date string as "Month YYYY" (e.g. "June 2022").
+    /// </summary>
+    private static string FormatDate(string isoDate)
+    {
+        if (DateOnly.TryParse(isoDate, out var date))
+            return date.ToString("MMMM yyyy");
+        return isoDate;
+    }
 
     /// <summary>
     /// Extract YouTube video ID from a URL (supports youtu.be and youtube.com formats).
@@ -141,14 +310,12 @@
         if (string.IsNullOrWhiteSpace(url))
             return null;
 
-        // youtu.be/VIDEO_ID
         if (url.Contains("youtu.be/", StringComparison.OrdinalIgnoreCase))
         {
             var uri = new Uri(url);
             return uri.AbsolutePath.TrimStart('/').Split('?')[0];
         }
 
-        // youtube.com/watch?v=VIDEO_ID
         if (url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase))
         {
             var uri = new Uri(url);

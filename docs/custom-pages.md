@@ -60,7 +60,21 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/features`
 **Data Model**: `FeaturesPageData`
-**Description**: A matrix or list of specific GitHub Copilot features and their status.
+**Description**: A chronological timeline of GitHub Copilot features showing when each capability was introduced, along with subscription tier comparisons and related video content.
+
+**Key fields**:
+
+- `timelineFeatures` — Ordered list of `FeatureTimelineItem` entries, each with:
+  - `id` — Unique slug identifier
+  - `title` — Feature name
+  - `description` — Brief description of the capability
+  - `releaseDate` — ISO 8601 date string (e.g. `"2024-06-01"`)
+  - `tiers` — Subscription tiers that include this feature
+  - `ghesSupport` — Whether the feature is available on GitHub Enterprise Server
+  - `category` — High-level category (e.g. `"Code Completion"`, `"Chat"`, `"Agent"`)
+  - `videoSlug` — Optional slug of a related video in the `ghc-features` collection
+- `subscriptionTiers` — Comparison cards shown in the sidebar
+- `featureSections` — Legacy groupings used by the video card grid
 
 ### GenAI Basics
 

@@ -143,5 +143,247 @@
             ]
         }
     ],
-    "videoCollection": "ghc-features"
+    "videoCollection": "ghc-features",
+    "timelineFeatures": [
+        {
+            "id": "code-completions",
+            "title": "AI Code Completions",
+            "description": "Real-time AI-powered inline code suggestions as you type, supporting dozens of languages and frameworks directly in your editor.",
+            "releaseDate": "2022-06-21",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": true,
+            "category": "Code Completion",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-for-business",
+            "title": "GitHub Copilot for Business",
+            "description": "Enterprise-grade GitHub Copilot with organization policy management, user management, and data privacy controls for teams.",
+            "releaseDate": "2023-02-14",
+            "tiers": [
+                "Business",
+                "Enterprise"
+            ],
+            "ghesSupport": true,
+            "category": "Enterprise",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-chat",
+            "title": "Copilot Chat",
+            "description": "Conversational AI assistant embedded in your IDE to explain code, answer programming questions, and generate solutions with natural language.",
+            "releaseDate": "2023-07-25",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": true,
+            "category": "Chat",
+            "videoSlug": null
+        },
+        {
+            "id": "pr-summaries",
+            "title": "Pull Request Summaries",
+            "description": "Automatically generate clear, contextual summaries for pull requests, reducing review time and improving team communication.",
+            "releaseDate": "2023-11-08",
+            "tiers": [
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "PR Workflow",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-enterprise",
+            "title": "GitHub Copilot Enterprise",
+            "description": "Full enterprise capabilities including Copilot knowledge bases built from your own codebase, advanced security policies, and audit logs.",
+            "releaseDate": "2024-02-27",
+            "tiers": [
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Enterprise",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-cli",
+            "title": "Copilot in the CLI",
+            "description": "Get shell command suggestions and explanations from Copilot directly in your terminal, helping you discover and use CLI tools more effectively.",
+            "releaseDate": "2024-03-21",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "CLI",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-extensions",
+            "title": "Copilot Extensions",
+            "description": "Extend GitHub Copilot Chat with third-party integrations, letting developers interact with external tools and services without leaving their IDE.",
+            "releaseDate": "2024-06-28",
+            "tiers": [
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Extensions",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-mobile",
+            "title": "Copilot in GitHub Mobile",
+            "description": "Access Copilot Chat on the go via GitHub Mobile to review pull requests, understand code changes, and get answers about your repositories.",
+            "releaseDate": "2024-08-01",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Chat",
+            "videoSlug": null
+        },
+        {
+            "id": "knowledge-bases",
+            "title": "Copilot Knowledge Bases",
+            "description": "Build custom knowledge bases from your organisation's code and documentation so Copilot Chat answers questions grounded in your own context.",
+            "releaseDate": "2024-10-01",
+            "tiers": [
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Enterprise",
+            "videoSlug": null
+        },
+        {
+            "id": "copilot-free",
+            "title": "GitHub Copilot Free Tier",
+            "description": "Free access to GitHub Copilot for all individual developers, with 2,000 code completions and 50 premium chat requests per month at no cost.",
+            "releaseDate": "2024-12-18",
+            "tiers": [
+                "Free"
+            ],
+            "ghesSupport": true,
+            "category": "Code Completion",
+            "videoSlug": null
+        },
+        {
+            "id": "code-review",
+            "title": "Copilot Code Review",
+            "description": "AI-powered pull request reviews that detect bugs, explain code changes, and suggest improvements, helping teams ship higher-quality code faster.",
+            "releaseDate": "2024-11-04",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "PR Workflow",
+            "videoSlug": null
+        },
+        {
+            "id": "coding-agent",
+            "title": "Copilot Coding Agent",
+            "description": "An autonomous AI coding agent that can take on entire GitHub Issues, write code, run tests, and open pull requests with minimal human input.",
+            "releaseDate": "2025-02-06",
+            "tiers": [
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Agent",
+            "videoSlug": null
+        },
+        {
+            "id": "agent-mode",
+            "title": "Agent Mode in VS Code",
+            "description": "Multi-step agentic AI workflows in Visual Studio Code, enabling Copilot to plan, edit multiple files, run terminal commands, and iterate autonomously.",
+            "releaseDate": "2025-03-27",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Agent",
+            "videoSlug": null
+        },
+        {
+            "id": "claude-models",
+            "title": "Claude & Multi-Model Support",
+            "description": "Choose from a growing roster of frontier AI models \u2014 including Anthropic Claude, Google Gemini, and OpenAI GPT models \u2014 powering Copilot across IDEs.",
+            "releaseDate": "2025-04-04",
+            "tiers": [
+                "Free",
+                "Student",
+                "Pro",
+                "Business",
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Chat",
+            "videoSlug": null
+        },
+        {
+            "id": "github-spark",
+            "title": "GitHub Spark",
+            "description": "A natural-language-first micro app builder powered by Copilot, allowing anyone to create and deploy personal web apps from a simple text description.",
+            "releaseDate": "2025-04-04",
+            "tiers": [
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Agent",
+            "videoSlug": null
+        },
+        {
+            "id": "third-party-agents",
+            "title": "Third-Party Coding Agents",
+            "description": "Connect external AI coding agents (such as Devin, Cursor, and others) to GitHub issues and pull requests via the Copilot Extensions platform.",
+            "releaseDate": "2025-04-15",
+            "tiers": [
+                "Pro+",
+                "Enterprise"
+            ],
+            "ghesSupport": false,
+            "category": "Extensions",
+            "videoSlug": null
+        }
+    ]
 }
