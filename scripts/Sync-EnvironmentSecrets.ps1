@@ -156,8 +156,11 @@ $envConfig = @{
         ResourceGroup  = 'rg-techhub-staging'
         AiName         = 'oai-techhub-staging'
         EnvSuffix      = 'staging'
-        PostgresServer = 'psql-techhub-staging'
-        ApiAppName     = 'ca-techhub-api-staging'
+        # PostgreSQL and Container Apps are no longer permanent staging resources.
+        # psql-techhub-staging and ca-techhub-api-staging were deleted as part of the
+        # migration to ephemeral PR environments. Postgres password sync is skipped for staging.
+        PostgresServer = $null
+        ApiAppName     = $null
     }
     production = @{
         ResourceGroup  = 'rg-techhub-prod'
@@ -265,6 +268,11 @@ foreach ($env in $Environment) {
         $rgName   = $config.ResourceGroup
         $apiApp   = $config.ApiAppName
 
+        if (-not $pgServer) {
+            Write-Ok "Postgres password sync skipped for '$env' — no permanent PostgreSQL server (PR environments use ephemeral databases)"
+        }
+        else {
+
         $securePassword = Read-Host -Prompt "   Enter new Postgres admin password for $env" -AsSecureString
         $password = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto(
             [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassword)
@@ -353,6 +361,7 @@ foreach ($env in $Environment) {
                 Write-Fail "Failed to set POSTGRES_ADMIN_PASSWORD in GitHub environment '$env'"
             }
         }
+        } # end else ($pgServer check)
     }
 }
 

@@ -193,8 +193,10 @@ else {
     Write-Ok "ADMIN_IP_ADDRESSES is set"
 }
 
-# Check POSTGRES_ADMIN_PASSWORD for environments that need it
-if ($Environment -ne 'shared') {
+# Check POSTGRES_ADMIN_PASSWORD for production only
+# Staging no longer deploys a PostgreSQL server via Bicep — PR environments handle
+# their own databases via Deploy-PrPreview.ps1 (PITR + password reset).
+if ($Environment -eq 'production') {
     if (-not $env:POSTGRES_ADMIN_PASSWORD) {
         if ($Mode -eq 'deploy') {
             Write-Fail "Environment variable POSTGRES_ADMIN_PASSWORD is not set."
@@ -221,74 +223,68 @@ if ($Environment -ne 'shared') {
         }
         [Environment]::SetEnvironmentVariable('AZURE_AD_CLIENT_SECRET', "")
     }
+}
 
-    # Resolve the shared action group resource ID automatically so callers don't need to
-    # set ACTION_GROUP_ID manually. Names are taken from the shared envConfig entry so a
-    # rename in config is the only change needed — no hardcoded strings here.
-    # Staging: skip alerts entirely — PR environments use E2E tests, not synthetic monitoring.
-    if ($Environment -eq 'staging') {
-        $env:ACTION_GROUP_ID = ""
-        Write-Ok "Alerts disabled for staging (PR environments rely on E2E tests, not alerts)"
+
+# Resolve ACTION_GROUP_ID for environments that use Bicep alerts.
+# Staging: skip alerts entirely — PR environments use E2E tests, not synthetic monitoring.
+# Production: resolve from the shared action group.
+if ($Environment -eq 'staging') {
+    $env:ACTION_GROUP_ID = ""
+    Write-Ok "Alerts disabled for staging (PR environments rely on E2E tests, not alerts)"
+}
+elseif ($Environment -eq 'production') {
+    $sharedRg     = $envConfig.shared.ResourceGroup
+    $sharedAgName = $envConfig.shared.ActionGroupName
+    $agJson = az monitor action-group show `
+        --resource-group $sharedRg `
+        --name $sharedAgName `
+        --query id --output tsv 2>$null
+    if ($LASTEXITCODE -eq 0 -and $agJson) {
+        $env:ACTION_GROUP_ID = $agJson.Trim()
+        Write-Ok "Action group resolved: $($env:ACTION_GROUP_ID)"
     }
-    elseif (-not $env:ACTION_GROUP_ID) {
-        $sharedRg  = $envConfig.shared.ResourceGroup
-        $sharedAgName = $envConfig.shared.ActionGroupName
-        $agJson = az monitor action-group show `
-            --resource-group $sharedRg `
-            --name $sharedAgName `
-            --query id --output tsv 2>$null
-        if ($LASTEXITCODE -eq 0 -and $agJson) {
-            $env:ACTION_GROUP_ID = $agJson.Trim()
-            Write-Ok "Action group resolved: $($env:ACTION_GROUP_ID)"
+    else {
+        # Shared infra not yet deployed or action group not created — alerts will be skipped.
+        $env:ACTION_GROUP_ID = ""
+        Write-Warn "Action group '$sharedAgName' not found in '$sharedRg' — operational alerts will be disabled for this deployment"
+        Write-Detail "Deploy shared infrastructure first to enable alerts."
+    }
+}
+
+# Sync application secrets into Key Vault before deployment.
+# Container Apps reference these secrets via keyVaultUrl; they must exist before
+# the new revision starts. Only required for production — staging no longer deploys
+# Container Apps via Bicep (PR environments set their own secrets directly).
+if ($Mode -eq 'deploy' -and $Environment -eq 'production') {
+    # AI_API_KEY — read from the Azure AI Foundry account directly; no GitHub secret needed.
+    if (-not $env:AI_API_KEY) {
+        $aiName = "oai-techhub-$($config.EnvSuffix)"
+        $aiRg   = $config.ResourceGroup
+        $aiKey  = az cognitiveservices account keys list `
+            --name $aiName `
+            --resource-group $aiRg `
+            --query key1 -o tsv 2>$null
+        if ($LASTEXITCODE -eq 0 -and $aiKey) {
+            $env:AI_API_KEY = $aiKey.Trim()
+            Write-Ok "AI_API_KEY resolved from Azure Cognitive Services '$aiName'"
         }
         else {
-            # Shared infra not yet deployed or action group not created — alerts will be skipped.
-            $env:ACTION_GROUP_ID = ""
-            Write-Warn "Action group '$sharedAgName' not found in '$sharedRg' — operational alerts will be disabled for this deployment"
-            Write-Detail "Deploy shared infrastructure first to enable alerts."
+            Write-Warn "Could not read AI Foundry key from '$aiName' — AI categorization may be unavailable"
         }
     }
     else {
-        Write-Ok "ACTION_GROUP_ID already set: $($env:ACTION_GROUP_ID)"
+        Write-Ok "AI_API_KEY already set"
     }
 
-    # Sync application secrets into Key Vault before deployment.
-    # Container Apps reference these secrets via keyVaultUrl; they must exist before
-    # the new revision starts. POSTGRES_ADMIN_PASSWORD and AZURE_AD_CLIENT_SECRET must
-    # be provided externally (GitHub secrets). AI_API_KEY is read from Azure directly
-    # so it does not need to be a GitHub secret.
-    if ($Mode -eq 'deploy') {
-        # AI_API_KEY — read from the Azure AI Foundry account directly; no GitHub secret needed.
-        if (-not $env:AI_API_KEY) {
-            $aiName = "oai-techhub-$($config.EnvSuffix)"
-            $aiRg   = $config.ResourceGroup
-            $aiKey  = az cognitiveservices account keys list `
-                --name $aiName `
-                --resource-group $aiRg `
-                --query key1 -o tsv 2>$null
-            if ($LASTEXITCODE -eq 0 -and $aiKey) {
-                $env:AI_API_KEY = $aiKey.Trim()
-                Write-Ok "AI_API_KEY resolved from Azure Cognitive Services '$aiName'"
-            }
-            else {
-                Write-Warn "Could not read AI Foundry key from '$aiName' — AI categorization may be unavailable"
-            }
-        }
-        else {
-            Write-Ok "AI_API_KEY already set"
-        }
-
-        Write-Step "Syncing application secrets to Key Vault"
-        $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
-        # Map Deploy-Infrastructure.ps1 environment names to the sync script's convention
-        $syncEnv = if ($Environment -eq 'production') { 'prod' } else { $Environment }
-        & $syncScript -Environment $syncEnv
-        if ($LASTEXITCODE -ne 0) {
-            Write-Fail "Secret sync failed — aborting deployment to prevent a crash-looping revision."
-            exit 1
-        }
-        Write-Ok "Secrets synced"
+    Write-Step "Syncing application secrets to Key Vault"
+    $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
+    & $syncScript -Environment 'prod'
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Secret sync failed — aborting deployment to prevent a crash-looping revision."
+        exit 1
     }
+    Write-Ok "Secrets synced"
 }
 
 # ============================================================================
@@ -298,7 +294,8 @@ if ($Environment -ne 'shared') {
 $deploymentName = "techhub-$($config.EnvSuffix)-$(Get-Date -Format 'yyyyMMdd-HHmmss')"
 
 # Set image tag environment variables (read by .bicepparam files via readEnvironmentVariable)
-if ($Environment -ne 'shared') {
+# Only required for production — staging no longer deploys Container Apps via Bicep.
+if ($Environment -eq 'production') {
     if (-not $ImageTag) {
         if ($Mode -eq 'deploy') {
             Write-Fail "ImageTag is required for $Environment deployments."
@@ -363,6 +360,35 @@ if ($Mode -eq 'deploy') {
         exit 1
     }
     Write-Ok "Infrastructure deployed successfully"
+
+    # One-time cleanup: permanently remove old permanent staging resources that are no
+    # longer deployed by Bicep. This is idempotent — subsequent runs simply find nothing
+    # to delete. The CAE, VNet, monitoring stack, and OpenAI resources are kept because
+    # they host ephemeral PR environments (ca-techhub-api-pr-{N}, ca-techhub-web-pr-{N}).
+    if ($Environment -eq 'staging') {
+        Write-Step "Removing permanent staging resources (one-time cleanup — idempotent)"
+        $stagingRg = $config.ResourceGroup
+
+        $resourcesToDelete = @(
+            @{ Type = 'Container App';            Name = 'ca-techhub-api-staging';  Cmd = { az containerapp delete --name ca-techhub-api-staging --resource-group $stagingRg --yes 2>$null } }
+            @{ Type = 'Container App';            Name = 'ca-techhub-web-staging';  Cmd = { az containerapp delete --name ca-techhub-web-staging --resource-group $stagingRg --yes 2>$null } }
+            @{ Type = 'Private Endpoint';         Name = 'pe-psql-techhub-staging'; Cmd = { az network private-endpoint delete --name pe-psql-techhub-staging --resource-group $stagingRg 2>$null } }
+            @{ Type = 'PostgreSQL Flexible Server'; Name = 'psql-techhub-staging';  Cmd = { az postgres flexible-server delete --name psql-techhub-staging --resource-group $stagingRg --yes 2>$null } }
+        )
+
+        foreach ($res in $resourcesToDelete) {
+            Write-Detail "Deleting $($res.Type) '$($res.Name)'..."
+            & $res.Cmd
+            if ($LASTEXITCODE -eq 0) {
+                Write-Ok "$($res.Type) '$($res.Name)' deleted (or was already gone)"
+            }
+            else {
+                Write-Ok "$($res.Type) '$($res.Name)' not found — skipping (already deleted)"
+            }
+        }
+
+        Write-Ok "Staging cleanup complete"
+    }
 }
 
 # ============================================================================

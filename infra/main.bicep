@@ -41,11 +41,11 @@ param apiAppName string = 'ca-techhub-api-${environmentName}'
 @description('Web Container App name')
 param webAppName string = 'ca-techhub-web-${environmentName}'
 
-@description('API Docker image tag (yyyyMMddHHmmss format)')
-param apiImageTag string
+@description('API Docker image tag (yyyyMMddHHmmss format). Required for production. Not used for staging — staging no longer deploys Container Apps via Bicep.')
+param apiImageTag string = ''
 
-@description('Web Docker image tag (yyyyMMddHHmmss format)')
-param webImageTag string
+@description('Web Docker image tag (yyyyMMddHHmmss format). Required for production. Not used for staging — staging no longer deploys Container Apps via Bicep.')
+param webImageTag string = ''
 
 @description('Azure AD tenant ID for admin dashboard authentication (public Entra identifier)')
 param azureAdTenantId string = ''
@@ -78,8 +78,8 @@ param postgresServerName string = 'psql-techhub-${environmentName}'
 param postgresAdminLogin string = 'techhubadmin'
 
 @secure()
-@description('PostgreSQL administrator password')
-param postgresAdminPassword string
+@description('PostgreSQL administrator password. Required for production. Not used for staging — staging no longer deploys a PostgreSQL server via Bicep.')
+param postgresAdminPassword string = ''
 
 @description('Azure AI Foundry (OpenAI) resource name')
 param openAiName string = 'oai-techhub-${environmentName}'
@@ -105,6 +105,12 @@ param commonTags object = {
 var envTags = union(commonTags, {
   env: environmentName
 })
+
+// Staging deploys only the shared foundation (VNet, monitoring, CAE, OpenAI, networking).
+// Container Apps and PostgreSQL are NOT deployed for staging — PR environments create ephemeral
+// instances (ca-techhub-api-pr-{N}, ca-techhub-web-pr-{N}, psql-techhub-pr-{N}) on demand.
+// This keeps the staging environment cheap (no always-on containers or database).
+var deployApplications = environmentName == 'prod'
 
 // Resource Group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
@@ -293,7 +299,8 @@ var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 var adminIpList = [for ip in filter(split(adminIpAddresses, ','), entry => !empty(trim(entry))): trim(ip)]
 
 // PostgreSQL Flexible Server (private endpoint + admin IP firewall rule)
-module postgres './modules/postgres.bicep' = {
+// Production only — staging uses ephemeral PR databases via Deploy-PrPreview.ps1.
+module postgres './modules/postgres.bicep' = if (deployApplications) {
   scope: resourceGroup
   name: 'postgres-deployment'
   params: {
@@ -313,7 +320,8 @@ module postgres './modules/postgres.bicep' = {
 }
 
 // PostgreSQL Private Endpoint (connects environment VNet to PostgreSQL)
-module postgresPrivateEndpoint './modules/postgresPrivateEndpoint.bicep' = {
+// Production only — PR environments create their own ephemeral PEs.
+module postgresPrivateEndpoint './modules/postgresPrivateEndpoint.bicep' = if (deployApplications) {
   scope: resourceGroup
   name: 'postgresPe-deployment'
   params: {
@@ -357,8 +365,9 @@ module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   }
 }
 
-// API Container App
-module apiApp './modules/api.bicep' = {
+// API Container App — production only.
+// Staging uses ephemeral PR Container Apps (ca-techhub-api-pr-{N}) via Deploy-PrPreview.ps1.
+module apiApp './modules/api.bicep' = if (deployApplications) {
   scope: resourceGroup
   name: 'api-deployment'
   dependsOn: [acrRoleAssignment]
@@ -383,10 +392,9 @@ module apiApp './modules/api.bicep' = {
   }
 }
 
-// Web Container App
-// Note: implicit dependency on apiApp via apiBaseUrl parameter ensures API deploys first.
-// The SectionCacheRefreshService in the web app handles data freshness after deployment.
-module webApp './modules/web.bicep' = {
+// Web Container App — production only.
+// Staging uses ephemeral PR Container Apps (ca-techhub-web-pr-{N}) via Deploy-PrPreview.ps1.
+module webApp './modules/web.bicep' = if (deployApplications) {
   scope: resourceGroup
   name: 'web-deployment'
   dependsOn: [acrRoleAssignment]
@@ -411,8 +419,10 @@ module webApp './modules/web.bicep' = {
   }
 }
 
-// Operational alerts — only when an action group has been provided by the shared deployment.
-module alerts './modules/alerts.bicep' = if (!empty(actionGroupId)) {
+// Operational alerts — production only, and only when an action group has been provided.
+// Staging skips alerts (PR environments rely on E2E tests, not synthetic monitoring).
+// The condition explicitly includes deployApplications to allow safe access to postgres/openai outputs.
+module alerts './modules/alerts.bicep' = if (!empty(actionGroupId) && deployApplications) {
   scope: resourceGroup
   name: 'alerts-deployment'
   params: {
@@ -429,12 +439,14 @@ module alerts './modules/alerts.bicep' = if (!empty(actionGroupId)) {
 
 // Outputs
 output resourceGroupName string = resourceGroup.name
-output apiUrl string = 'https://${apiApp.outputs.fqdn}'
-output webUrl string = 'https://${webApp.outputs.fqdn}'
+// apiUrl and webUrl are only available for production (Container Apps not deployed for staging).
+output apiUrl string = deployApplications ? 'https://${apiApp.outputs.fqdn}' : ''
+output webUrl string = deployApplications ? 'https://${webApp.outputs.fqdn}' : ''
 output appInsightsName string = monitoring.outputs.appInsightsName
 output containerRegistryName string = containerRegistryName
 output openAiEndpoint string = openai.outputs.openAiEndpoint
 output openAiDeploymentName string = openai.outputs.deploymentName
 output vnetName string = vnetName
-output postgresServerFqdn string = postgres.outputs.serverFqdn
-output postgresDatabaseName string = postgres.outputs.databaseName
+// postgresServerFqdn and postgresDatabaseName are only available for production.
+output postgresServerFqdn string = deployApplications ? postgres.outputs.serverFqdn : ''
+output postgresDatabaseName string = deployApplications ? postgres.outputs.databaseName : ''

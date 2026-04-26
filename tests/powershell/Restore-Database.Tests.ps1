@@ -44,13 +44,13 @@ Describe "Restore-Database" {
             $mandatory | Should -Not -BeNullOrEmpty
         }
 
-        It "Should validate Target to local and staging" {
+        It "Should validate Target to local only (staging removed — permanent staging DB deleted)" {
             $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "Target" }
             $validateSet = $param.Attributes | Where-Object { $_.TypeName.Name -eq "ValidateSet" }
             $validateSet | Should -Not -BeNullOrEmpty
             $values = $validateSet.PositionalArguments | ForEach-Object { $_.Value }
             $values | Should -Contain "local"
-            $values | Should -Contain "staging"
+            $values | Should -Not -Contain "staging"
         }
 
         It "Should have an optional ProductionConnectionString parameter" {
@@ -82,32 +82,22 @@ Describe "Restore-Database" {
         }
     }
 
-    Context "Staging restore behavior" {
+    Context "Staging target removed" {
         BeforeAll {
             $content = Get-Content $scriptPath -Raw
         }
 
-        It "Should drop and recreate database for all targets" {
-            # dropAndRecreate should be true for all targets, not just local
+        It "Should not reference psql-techhub-staging (permanent staging DB was deleted)" {
+            $content | Should -Not -Match 'psql-techhub-staging'
+        }
+
+        It "Should not reference ca-techhub-api-staging or ca-techhub-web-staging (permanent staging apps deleted)" {
+            $content | Should -Not -Match 'ca-techhub-api-staging'
+            $content | Should -Not -Match 'ca-techhub-web-staging'
+        }
+
+        It "Should still drop and recreate database for local target" {
             $content | Should -Match '\$dropAndRecreate\s*=\s*\$true'
-        }
-
-        It "Should stop staging Container Apps before restore" {
-            $content | Should -Match 'az containerapp revision deactivate'
-            $content | Should -Match 'ca-techhub-api-staging'
-            $content | Should -Match 'ca-techhub-web-staging'
-        }
-
-        It "Should start staging Container Apps after restore" {
-            $content | Should -Match 'az containerapp revision activate'
-        }
-
-        It "Should stop staging apps before drop and start them after restore" {
-            $stopIndex = $content.IndexOf('az containerapp revision deactivate')
-            $dropIndex = $content.IndexOf('$dropAndRecreate')
-            $startIndex = $content.IndexOf('az containerapp revision activate')
-            $stopIndex | Should -BeLessThan $dropIndex
-            $dropIndex | Should -BeLessThan $startIndex
         }
     }
 

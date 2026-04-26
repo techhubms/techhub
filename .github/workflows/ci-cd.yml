@@ -542,16 +542,16 @@ jobs:
             -SkipDeploy
 
   # ──────────────────────────────────────────────
-  # Staging infrastructure deployment
-  # Runs the full Bicep template (VNet, monitoring, CAE, Container Apps, PostgreSQL).
-  # main.bicep unconditionally deploys all modules — the staging Container Apps
-  # exist as Bicep-managed resources but are not the primary deployment target;
-  # PR environments deploy their own ephemeral apps via Deploy-PrPreview.ps1.
+  # Staging infrastructure deployment (placeholder)
+  # Deploys the shared foundation: VNet, monitoring, CAE, OpenAI, networking.
+  # Container Apps and PostgreSQL are NOT deployed — they are ephemeral and created
+  # per-PR by Deploy-PrPreview.ps1. No image tag or DB password required.
+  # Runs in parallel with build-and-push (both depend only on deploy-shared-infra).
   # ──────────────────────────────────────────────
   deploy-staging-infra:
     name: Deploy Staging Infrastructure
     runs-on: ubuntu-latest
-    needs: build-and-push
+    needs: deploy-shared-infra
     concurrency:
       group: deploy-staging
       cancel-in-progress: false
@@ -569,14 +569,11 @@ jobs:
       - name: Deploy staging infrastructure
         shell: pwsh
         env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
-          AZURE_AD_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
           ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
         run: |
           ./scripts/Deploy-Infrastructure.ps1 `
             -Environment staging `
-            -Mode deploy `
-            -ImageTag "${{ needs.build-and-push.outputs.image-tag }}"
+            -Mode deploy
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Deployment summary
@@ -584,7 +581,8 @@ jobs:
           echo "## Staging Infrastructure Deployment Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
-          echo "Staging infrastructure (VNet, monitoring, Container Apps Environment) is ready for PR environments." >> $GITHUB_STEP_SUMMARY
+          echo "Staging infrastructure (VNet, monitoring, Container Apps Environment, OpenAI) is ready for ephemeral PR environments." >> $GITHUB_STEP_SUMMARY
+          echo "No permanent Container Apps or PostgreSQL are deployed — PR environments provision those on demand." >> $GITHUB_STEP_SUMMARY
 
   # ──────────────────────────────────────────────
   # Deploy to Production (infra + app in one shot)
