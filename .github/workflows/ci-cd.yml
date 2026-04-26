@@ -729,7 +729,11 @@ jobs:
       group: pr-preview-${{ github.event.pull_request.number }}
       cancel-in-progress: true
     outputs:
-      web-url: ${{ steps.deploy.outputs.web-url }}
+      # NOTE: web-url is NOT output directly — the PR number in the URL may coincide with a
+      # registered secret substring and get masked in $GITHUB_OUTPUT. Instead we output the
+      # CAE default domain and reconstruct the full URL in consuming jobs using the PR number
+      # from github context (which is never masked).
+      cae-default-domain: ${{ steps.deploy.outputs.cae-default-domain }}
 
     steps:
       - name: Checkout code
@@ -756,7 +760,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           PR_NUMBER="${{ github.event.pull_request.number }}"
-          WEB_URL="${{ steps.deploy.outputs.web-url }}"
+          WEB_URL="https://ca-techhub-web-pr-${PR_NUMBER}.${{ steps.deploy.outputs.cae-default-domain }}"
           SHORT_SHA="${{ github.event.pull_request.head.sha }}"
           SHORT_SHA="${SHORT_SHA:0:7}"
 
@@ -829,7 +833,7 @@ jobs:
             --report-xunit-trx-filename e2e-test-results.trx \
             -- --filter-not-trait "Category=Performance"
         env:
-          E2E_BASE_URL: ${{ needs.pr-preview-deploy.outputs.web-url }}
+          E2E_BASE_URL: https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ needs.pr-preview-deploy.outputs.cae-default-domain }}
 
       - name: Upload test results
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1

@@ -866,9 +866,14 @@ if ([string]::IsNullOrWhiteSpace($webFqdn)) {
 Write-Ok "Web FQDN: $webFqdn"
 
 # Write output for GitHub Actions
+# NOTE: web-url is intentionally NOT written here. The PR number portion of the URL
+# may coincide with a substring of a registered secret (e.g. POSTGRES_ADMIN_PASSWORD),
+# causing GitHub Actions to mask it in $GITHUB_OUTPUT and corrupt the value. Instead,
+# we output the CAE default domain (which contains no secret-sensitive content) and let
+# the consuming job reconstruct the full URL from github.event.pull_request.number.
 if ($env:GITHUB_OUTPUT) {
-    "web-url=https://$webFqdn" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
-    Write-Ok "Written web-url to GITHUB_OUTPUT"
+    "cae-default-domain=$envDefaultDomain" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+    Write-Ok "Written cae-default-domain to GITHUB_OUTPUT"
 }
 
 # ============================================================================
