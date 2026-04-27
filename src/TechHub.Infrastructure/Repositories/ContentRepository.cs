@@ -228,7 +228,7 @@ public class ContentRepository : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(name);
         var sections = await GetAllSectionsAsync(ct);
-        return sections.FirstOrDefault(s => s.Name == name);
+        return sections.FirstOrDefault(s => s.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
     }
 
     // ==================== Sitemap Methods ====================
@@ -349,6 +349,10 @@ public class ContentRepository : IContentRepository
     {
         ArgumentNullException.ThrowIfNull(collectionName);
         ArgumentNullException.ThrowIfNull(slug);
+
+        // Lowercase before cache lookup and DB query so that URL casing never causes a miss.
+        collectionName = collectionName.ToLowerInvariant();
+        slug = slug.ToLowerInvariant();
 
         var cacheKey = $"slug:{collectionName}:{slug}:{includeDraft}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
@@ -1753,5 +1757,76 @@ LIMIT @Limit OFFSET @Offset";
             memoryCache.Clear();
             _logger?.LogInformation("Content cache invalidated");
         }
+    }
+
+    // ==================== Legacy Redirect ====================
+
+    private sealed record LegacySlugRow(string PrimarySectionName, string CollectionName, string Slug, string? ExternalUrl);
+
+    /// <inheritdoc/>
+    public async Task<LegacyRedirectResult?> FindByLegacySlugAsync(
+        string slug,
+        string? sectionHint = null,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(slug);
+
+        // Normalize: lowercase and strip .html extension
+        var normalizedSlug = slug.ToLowerInvariant().Trim('/');
+        if (normalizedSlug.EndsWith(".html", StringComparison.OrdinalIgnoreCase))
+        {
+            normalizedSlug = normalizedSlug[..^5];
+        }
+
+        // Also prepare a date-prefix-stripped variant (YYYY-MM-DD-slug → slug)
+        var strippedSlug = System.Text.RegularExpressions.Regex.Replace(
+            normalizedSlug,
+            @"^\d{4}-\d{2}-\d{2}-",
+            string.Empty);
+
+        // Lowercase section hint so the DB comparison is case-insensitive without needing LOWER() in SQL.
+        var normalizedHint = sectionHint?.ToLowerInvariant() ?? string.Empty;
+        var hasSectionHint = !string.IsNullOrEmpty(normalizedHint);
+
+        var sql = $"""
+            SELECT
+                primary_section_name AS PrimarySectionName,
+                collection_name      AS CollectionName,
+                slug                 AS Slug,
+                external_url         AS ExternalUrl
+            FROM content_items
+            WHERE (slug = @NormalizedSlug OR slug = @StrippedSlug)
+              AND draft = {Dialect.GetBooleanLiteral(false)}
+            ORDER BY
+                CASE WHEN @HasSectionHint AND primary_section_name = @SectionHint THEN 0 ELSE 1 END,
+                date_epoch DESC
+            LIMIT 1
+            """;
+
+        var row = await Connection.QueryFirstOrDefaultAsync<LegacySlugRow>(
+            new CommandDefinition(
+                sql,
+                new
+                {
+                    NormalizedSlug = normalizedSlug,
+                    StrippedSlug = strippedSlug,
+                    HasSectionHint = hasSectionHint,
+                    SectionHint = normalizedHint,
+                },
+                cancellationToken: ct));
+
+        if (row == null)
+        {
+            return null;
+        }
+
+        // Items in externally-linking collections (news, blogs, community) don't have
+        // their own detail page — redirect straight to the source URL when available.
+        var isExternalCollection = row.CollectionName is "news" or "blogs" or "community";
+        var redirectUrl = (isExternalCollection && !string.IsNullOrEmpty(row.ExternalUrl))
+            ? row.ExternalUrl
+            : $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";
+
+        return new LegacyRedirectResult(redirectUrl);
     }
 }

@@ -7,7 +7,7 @@ namespace TechHub.Api.Services;
 
 /// <summary>
 /// Runs the content processing pipeline on a <see cref="PeriodicTimer"/> schedule.
-/// The interval is configured via <see cref="ContentProcessorOptions.IntervalMinutes"/> (default: 15).
+/// The interval is configured via <see cref="ContentProcessorOptions.IntervalMinutes"/> (default: 60).
 /// Also runs immediately on startup.
 /// Invoked manually by the admin UI via <see cref="TriggerImmediateRun"/>.
 /// </summary>

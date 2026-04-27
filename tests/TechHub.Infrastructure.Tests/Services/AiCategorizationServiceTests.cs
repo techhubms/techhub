@@ -230,7 +230,7 @@ public class AiCategorizationServiceTests
     // ── Slug Generation ───────────────────────────────────────────────────────
 
     [Fact]
-    public async Task CategorizeAsync_GeneratesDatePrefixedSlug()
+    public async Task CategorizeAsync_GeneratesTitleOnlySlug()
     {
         // Arrange
         var aiJson = """
@@ -255,10 +255,9 @@ public class AiCategorizationServiceTests
         // Act
         var result = await sut.CategorizeAsync(item, CancellationToken.None);
 
-        // Assert — slug starts with the date prefix and contains sanitized title
+        // Assert — slug is title-only (no date prefix)
         result.Item.Should().NotBeNull();
-        result.Item!.Slug.Should().StartWith("2025-06-15-");
-        result.Item.Slug.Should().Contain("what-s-new-in-net-10");
+        result.Item!.Slug.Should().Be("what-s-new-in-net-10");
     }
 
     // ── Content Hash ──────────────────────────────────────────────────────────

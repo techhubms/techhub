@@ -275,12 +275,11 @@ if (!app.Environment.IsDevelopment())
 app.UseSecurityHeaders();
 
 // ── Step 1: Fix URLs (301 redirects) ─────────────────────────────────────────
-// Redirect subdomain shortcuts (e.g., ghc.xebia.ms -> /github-copilot)
+// Redirect subdomain shortcuts (e.g., ghc.xebia.ms -> /github-copilot, www.tech.hub.ms -> tech.hub.ms)
 app.UseSubdomainRedirects();
-// Strip .html extensions (e.g., /github-copilot/features.html -> /github-copilot/features)
-app.UseStripHtmlExtension();
-// Redirect date-prefixed slugs (e.g., /ai/videos/2026-01-01-slug -> /ai/videos/slug)
-app.UseRedirectDatePrefixedSlugs();
+// Unified URL normalization: strips .html, strips YYYY-MM-DD- date prefixes, resolves legacy
+// single-segment slugs via the API — all in one pass, at most one 301 redirect per request.
+app.UseUrlNormalization();
 // Redirect HTTP → HTTPS
 app.UseHttpsRedirection();
 

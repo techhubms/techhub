@@ -86,7 +86,7 @@ resource availabilityTests 'Microsoft.Insights/webtests@2022-06-15' = [for host 
     SyntheticMonitorId: 'avail-${replace(host, '.', '-')}'
     Kind: 'standard'
     Enabled: true
-    Frequency: 300
+    Frequency: 900
     Timeout: 30
     RetryEnabled: true
     Locations: availabilityLocations
