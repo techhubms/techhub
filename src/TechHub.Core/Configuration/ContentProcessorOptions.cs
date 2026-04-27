@@ -12,7 +12,7 @@ public class ContentProcessorOptions
     public bool Enabled { get; init; } = true;
 
     /// <summary>How often to run the content processing pipeline (in minutes).</summary>
-    public int IntervalMinutes { get; init; } = 15;
+    public int IntervalMinutes { get; init; } = 60;
 
     /// <summary>Maximum age in days for RSS items. Items older than this are skipped.</summary>
     public int ItemAgeLimitDays { get; init; } = 365;

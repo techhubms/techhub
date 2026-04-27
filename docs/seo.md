@@ -83,13 +83,16 @@ Twitter Card tags are emitted by the `SeoMetaTags` component. When an `og:image`
 
 ## robots.txt
 
-The `robots.txt` file is served as a static file from `src/TechHub.Web/wwwroot/robots.txt`. It allows all crawlers while blocking internal framework paths, the API, and health endpoints:
+The `robots.txt` file is served as a static file from `src/TechHub.Web/wwwroot/robots.txt`. It allows all crawlers while disallowing paths that have no indexable content:
 
 - `/_blazor` — Blazor SignalR negotiation traffic
 - `/_framework` — .NET framework assets
 - `/api/` — Internal API (not meant for crawlers)
 - `/swagger/` — API documentation UI
 - `/health` and `/alive` — Health check endpoints
+- `/not-found` — 404 error page (not a real content destination)
+- `/Error` — ASP.NET error handler page
+- `/admin` — Admin section (not for public indexing)
 
 The file also points crawlers to `https://tech.hub.ms/sitemap.xml`.
 
@@ -153,6 +156,8 @@ This structure:
 - Uses human-readable slugs
 - Includes keywords relevant to content
 - Enables breadcrumb navigation
+
+For the full request processing pipeline — subdomain redirects, legacy URL resolution, `.html` stripping, invalid segment filtering, and Blazor routing — see [url-routing.md](url-routing.md).
 
 ## SEO Coverage
 

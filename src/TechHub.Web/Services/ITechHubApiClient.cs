@@ -537,4 +537,17 @@ internal interface ITechHubApiClient
     /// POST /api/admin/content-items/preview-markdown
     /// </summary>
     Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
+
+    // ================================================================
+    // Legacy redirect endpoint
+    // ================================================================
+
+    /// <summary>
+    /// Look up a legacy slug and return the canonical URL to redirect to, or null if not found.
+    /// GET /api/legacy-redirect?slug={slug}&amp;section={sectionHint}
+    /// </summary>
+    Task<LegacyRedirectResult?> GetLegacyRedirectAsync(
+        string slug,
+        string? sectionHint = null,
+        CancellationToken cancellationToken = default);
 }

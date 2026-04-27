@@ -101,6 +101,22 @@ public static class ContentEndpoints
             .Produces<ContentItemDetail>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound);
 
+        // ============================================================
+        // Legacy redirect endpoint (outside the section hierarchy group)
+        // ============================================================
+
+        endpoints.MapGet("/api/legacy-redirect", GetLegacyRedirect)
+            .WithTags("Legacy")
+            .WithName("GetLegacyRedirect")
+            .WithSummary("Resolve a legacy slug to its canonical URL")
+            .WithDescription(
+                "Looks up a content item by a legacy-format slug (with or without a YYYY-MM-DD- date prefix). " +
+                "Returns the canonical redirect URL. An optional section hint is used to prefer items from that section " +
+                "when multiple matches exist. Items in externally-linking collections resolve to the original source URL.")
+            .Produces<LegacyRedirectResult>(StatusCodes.Status200OK)
+            .Produces(StatusCodes.Status400BadRequest)
+            .Produces(StatusCodes.Status404NotFound);
+
         return endpoints;
     }
 
@@ -676,5 +692,36 @@ public static class ContentEndpoints
         }
 
         return TypedResults.Ok(item);
+    }
+
+    // ================================================================
+    // Legacy redirect endpoint implementation
+    // ================================================================
+
+    /// <summary>
+    /// GET /api/legacy-redirect?slug={slug}&amp;section={section}
+    /// Resolves a legacy slug to its canonical URL for permanent redirect.
+    /// </summary>
+    private static async Task<Results<Ok<LegacyRedirectResult>, NotFound, BadRequest<string>>> GetLegacyRedirect(
+        string slug,
+        string? section,
+        IContentRepository contentRepository,
+        CancellationToken cancellationToken)
+    {
+        slug = slug.Sanitize().ToLowerInvariant();
+        section = section?.Sanitize().ToLowerInvariant();
+
+        if (!RouteParameterValidator.IsValidSlug(slug))
+        {
+            return TypedResults.BadRequest("Invalid slug format.");
+        }
+
+        if (section != null && !RouteParameterValidator.IsValidNameSegment(section))
+        {
+            return TypedResults.BadRequest("Invalid section format.");
+        }
+
+        var result = await contentRepository.FindByLegacySlugAsync(slug, section, cancellationToken);
+        return result != null ? TypedResults.Ok(result) : TypedResults.NotFound();
     }
 }

@@ -383,18 +383,26 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Enter");
         await Page.WaitForBlazorReadyAsync();
 
-        // Wait for enhanced navigation to complete
-        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation,
-        // but rAF doesn't fire reliably in headless Chrome. Explicitly reset focus to body
-        // (same action nav-helpers.js performs) to ensure Tab starts from top.
-        // IMPORTANT: Keep tabindex=-1 here — body with tabindex=-1 is a valid Tab target,
-        // so pressing Tab reliably moves focus to the NEXT element (the skip link).
-        // Removing tabindex before pressing Tab leaves body without a tab position,
-        // causing headless Chromium to sometimes keep focus on body and time out.
-        await Page.EvaluateAsync(@"() => {
-            document.body.tabIndex = -1;
-            document.body.focus();
-        }");
+        // Flush any pending requestAnimationFrame callbacks from nav-helpers.js before
+        // setting up the body-focus state for our Tab test.
+        //
+        // When Blazor enhanced navigation fires (pushState), nav-helpers.js intercepts it
+        // and schedules a rAF that: sets body.tabIndex=-1, focuses body, then REMOVES tabIndex.
+        // If WaitForBlazorReadyAsync returns before that rAF fires, the test would set
+        // body.tabIndex=-1, but then nav-helpers.js's rAF fires afterwards and removes it —
+        // leaving body with no tabIndex when Tab is pressed, which causes headless Chrome to
+        // keep focus on body instead of moving it to the skip link.
+        //
+        // By scheduling our setup inside a rAF, we run AFTER nav-helpers.js's rAF in the queue
+        // (rAF callbacks fire in the order they were scheduled). This guarantees body.tabIndex=-1
+        // is set and stays set when Tab is pressed.
+        await Page.EvaluateAsync(@"() => new Promise(resolve => {
+            requestAnimationFrame(() => {
+                document.body.tabIndex = -1;
+                document.body.focus();
+                resolve();
+            });
+        })");
 
         // Step 5: Verify we're on a new page (not homepage)
         var currentUrl = Page.Url;

@@ -1,11 +1,8 @@
-name: CI/CD Pipeline
+name: CD Pipeline
 
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
-    types: [opened, synchronize, reopened, closed]
   workflow_dispatch:
 
 # Concurrency strategy:
@@ -14,8 +11,6 @@ on:
 #   block the entire concurrency group, preventing newer runs from starting.
 # - Deployment jobs use per-environment concurrency (see deploy-staging, deploy-production)
 #   to prevent conflicting deploys to the same environment.
-# - PR preview jobs use per-PR concurrency (see pr-preview-build-and-push, pr-preview-deploy)
-#   to cancel stale preview deploys when a new commit is pushed to the same PR.
 # - CI jobs are stateless and safe to run in parallel across commits.
 
 permissions:
@@ -25,14 +20,13 @@ permissions:
   security-events: write
 
 # ════════════════════════════════════════════════════════════════════════════════
-# CI JOBS — Run on every trigger (push, PR, manual)
+# CI JOBS — Run on every trigger
 # ════════════════════════════════════════════════════════════════════════════════
 
 jobs:
   build:
     name: Build .NET Solution
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -49,20 +43,9 @@ jobs:
       - name: Build solution
         run: dotnet build TechHub.slnx --configuration Release --no-restore
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: build-output
-          path: |
-            **/bin/Release/
-            **/obj/Release/
-          retention-days: 1
-
   test-unit:
     name: Unit Tests
     runs-on: ubuntu-latest
-    needs: build
-    if: github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -110,8 +93,6 @@ jobs:
   test-integration:
     name: Integration Tests
     runs-on: ubuntu-latest
-    needs: build
-    if: github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -163,7 +144,6 @@ jobs:
   test-powershell:
     name: PowerShell Tests
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -197,7 +177,6 @@ jobs:
   lint:
     name: Lint & Format Check
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -231,7 +210,6 @@ jobs:
   security:
     name: Security Scan
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -271,7 +249,6 @@ jobs:
   codeql:
     name: CodeQL Analysis
     runs-on: ubuntu-latest
-    if: github.event.action != 'closed'
 
     steps:
       - name: Checkout code
@@ -291,7 +268,7 @@ jobs:
     name: Code Coverage Report
     runs-on: ubuntu-latest
     needs: [test-unit, test-integration]
-    if: always() && github.event.action != 'closed'
+    if: always()
 
     steps:
       - name: Download unit coverage
@@ -354,7 +331,7 @@ jobs:
     name: Quality Gate
     runs-on: ubuntu-latest
     needs: [build, test-unit, test-integration, test-powershell, lint, security, codeql]
-    if: always() && github.event.action != 'closed'
+    if: always()
 
     steps:
       - name: Check quality gate
@@ -434,20 +411,11 @@ jobs:
              [ "$SECURITY_STATUS" = "success" ] && \
              [ "$CODEQL_STATUS" = "success" ]; then
             echo "### ✅ All quality gates passed! 🎉" >> $GITHUB_STEP_SUMMARY
-            echo "" >> $GITHUB_STEP_SUMMARY
-
-            # PR-specific guidance
-            if [ "${{ github.event_name }}" = "pull_request" ]; then
-              echo "**Next Steps:**" >> $GITHUB_STEP_SUMMARY
-              echo "- 🎉 This PR is ready for review and merge!" >> $GITHUB_STEP_SUMMARY
-              echo "- 📊 Code coverage reports available in artifacts" >> $GITHUB_STEP_SUMMARY
-            fi
-
             exit 0
           else
             echo "### ❌ Quality gate failed" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "**Please fix the failing checks before merging:**" >> $GITHUB_STEP_SUMMARY
+            echo "**Please fix the failing checks before deploying:**" >> $GITHUB_STEP_SUMMARY
 
             if [ "$BUILD_STATUS" != "success" ]; then
               echo "- 🏗️ Build failed - check compilation errors" >> $GITHUB_STEP_SUMMARY
@@ -471,12 +439,12 @@ jobs:
             exit 1
           fi
 
-  # ══════════════════════════════════════════════════════════════════════════════
-  # DEPLOYMENT JOBS — Only run on push/manual (NOT on PRs)
+  # ════════════════════════════════════════════════════════════════════════════════
+  # DEPLOYMENT JOBS — Only run on push/manual.
   # All deployment jobs require quality-gate to pass first.
   # Every deployment runs the full Bicep template — ARM is idempotent and only
   # redeploys resources whose desired state actually changed.
-  # ══════════════════════════════════════════════════════════════════════════════
+  # ════════════════════════════════════════════════════════════════════════════════
 
   # ──────────────────────────────────────────────
   # Shared infrastructure (ACR) — always runs
@@ -484,7 +452,6 @@ jobs:
   deploy-shared-infra:
     name: Deploy Shared Infrastructure
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
     needs: quality-gate
     concurrency:
       group: deploy-shared-infra
@@ -643,7 +610,6 @@ jobs:
     name: E2E Tests (Production)
     runs-on: ubuntu-latest
     needs: deploy-production
-    if: github.event_name != 'pull_request'
     concurrency:
       group: test-e2e-production
       cancel-in-progress: false
@@ -698,221 +664,3 @@ jobs:
           name: playwright-traces-production
           path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
           retention-days: 7
-
-  # ════════════════════════════════════════════════════════════════════════════════
-  # PR PREVIEW JOBS — Only run on pull requests (not closed), after quality gate
-  # ════════════════════════════════════════════════════════════════════════════════
-
-  pr-preview-build-and-push:
-    name: Build & Push Docker Images (PR Preview)
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.action != 'closed'
-    needs: quality-gate
-    concurrency:
-      group: pr-preview-${{ github.event.pull_request.number }}
-      cancel-in-progress: true
-    outputs:
-      image-tag: ${{ steps.tag.outputs.image-tag }}
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Generate image tag
-        id: tag
-        run: echo "image-tag=pr-${{ github.event.pull_request.number }}-$(date -u +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
-
-      - name: Azure Login
-        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Build and push images
-        shell: pwsh
-        run: |
-          ./scripts/Deploy-Application.ps1 `
-            -Environment staging `
-            -Tag "${{ steps.tag.outputs.image-tag }}" `
-            -SkipDeploy
-
-  pr-preview-deploy:
-    name: Deploy PR Preview
-    runs-on: ubuntu-latest
-    needs: pr-preview-build-and-push
-    if: github.event_name == 'pull_request' && github.event.action != 'closed'
-    environment: staging
-    concurrency:
-      group: pr-preview-${{ github.event.pull_request.number }}
-      cancel-in-progress: true
-    outputs:
-      # NOTE: web-url is NOT output directly — the PR number in the URL may coincide with a
-      # registered secret substring and get masked in $GITHUB_OUTPUT. Instead we output the
-      # CAE default domain and reconstruct the full URL in consuming jobs using the PR number
-      # from github context (which is never masked).
-      cae-default-domain: ${{ steps.deploy.outputs.cae-default-domain }}
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Azure Login
-        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Deploy PR preview Container Apps
-        id: deploy
-        shell: pwsh
-        env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
-        run: |
-          ./scripts/Deploy-PrPreview.ps1 `
-            -PrNumber ${{ github.event.pull_request.number }} `
-            -Action deploy `
-            -Tag "${{ needs.pr-preview-build-and-push.outputs.image-tag }}"
-
-      - name: Post or update PR comment
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR_NUMBER="${{ github.event.pull_request.number }}"
-          WEB_URL="https://ca-techhub-web-pr-${PR_NUMBER}.${{ steps.deploy.outputs.cae-default-domain }}"
-          SHORT_SHA="${{ github.event.pull_request.head.sha }}"
-          SHORT_SHA="${SHORT_SHA:0:7}"
-
-          cat > /tmp/pr-preview-comment.md << EOF
-          <!-- PR-PREVIEW -->
-          ## 🚀 PR Preview Environment
-
-          A preview environment has been deployed for this pull request.
-
-          | | |
-          |---|---|
-          | **Web URL** | ${WEB_URL} |
-          | **Commit** | \`${SHORT_SHA}\` |
-
-          > [!NOTE]
-          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the staging Azure Container Apps Environment.
-          > It will be automatically removed when this PR is closed.
-          EOF
-
-          # Find any existing PR preview comment (returns ID or empty)
-          COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${PR_NUMBER}/comments" \
-            --jq 'first(.[] | select(.body | startswith("<!-- PR-PREVIEW -->")) | .id) // empty')
-
-          if [ -n "$COMMENT_ID" ]; then
-            # Update the existing comment
-            gh api "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" \
-              --method PATCH \
-              -f body="$(cat /tmp/pr-preview-comment.md)"
-          else
-            # Create a new comment
-            gh pr comment "$PR_NUMBER" --body-file /tmp/pr-preview-comment.md
-          fi
-
-  pr-preview-e2e:
-    name: E2E Tests (PR Preview)
-    runs-on: ubuntu-latest
-    needs: pr-preview-deploy
-    if: github.event_name == 'pull_request' && github.event.action != 'closed'
-    concurrency:
-      group: test-e2e-preview-${{ github.event.pull_request.number }}
-      cancel-in-progress: true
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@c2fa09f4bde5ebb9d1777cf28262a3eb3db3ced7 # v5.2.0
-        with:
-          global-json-file: global.json
-
-      - name: Restore dependencies
-        run: dotnet restore TechHub.slnx
-
-      - name: Build solution
-        run: dotnet build TechHub.slnx --configuration Release --no-restore
-
-      - name: Install Playwright dependencies
-        run: |
-          cd tests/TechHub.E2E.Tests
-          pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
-
-      - name: Run E2E tests against PR preview
-        run: |
-          dotnet test --project tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
-            --configuration Release \
-            --no-build \
-            --results-directory TestResults \
-            --report-xunit-trx \
-            --report-xunit-trx-filename e2e-test-results.trx \
-            -- --filter-not-trait "Category=Performance"
-        env:
-          E2E_BASE_URL: https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ needs.pr-preview-deploy.outputs.cae-default-domain }}
-
-      - name: Upload test results
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: always()
-        with:
-          name: e2e-preview-test-results
-          path: '**/TestResults/**'
-          retention-days: 7
-
-      - name: Upload Playwright traces
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: failure()
-        with:
-          name: playwright-traces-preview
-          path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
-          retention-days: 7
-
-  # ════════════════════════════════════════════════════════════════════════════════
-  # PR PREVIEW TEARDOWN — Runs when PR is closed (no quality gate needed)
-  # ════════════════════════════════════════════════════════════════════════════════
-
-  pr-preview-teardown:
-    name: Teardown PR Preview
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Azure Login
-        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Delete PR preview Container Apps
-        shell: pwsh
-        run: |
-          ./scripts/Deploy-PrPreview.ps1 `
-            -PrNumber ${{ github.event.pull_request.number }} `
-            -Action teardown
-
-      - name: Update PR comment to reflect teardown
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR_NUMBER="${{ github.event.pull_request.number }}"
-
-          cat > /tmp/pr-preview-removed.md << 'EOF'
-          <!-- PR-PREVIEW -->
-          ## ✅ PR Preview Environment Removed
-
-          The preview environment for this pull request has been removed.
-          EOF
-
-          # Find the existing PR preview comment and update it
-          COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${PR_NUMBER}/comments" \
-            --jq 'first(.[] | select(.body | startswith("<!-- PR-PREVIEW -->")) | .id) // empty')
-
-          if [ -n "$COMMENT_ID" ]; then
-            gh api "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" \
-              --method PATCH \
-              -f body="$(cat /tmp/pr-preview-removed.md)"
-          else
-            gh pr comment "$PR_NUMBER" --body-file /tmp/pr-preview-removed.md
-          fi

@@ -70,6 +70,19 @@ public static class ServiceDefaultsExtensions
                 // Runtime instrumentation (.AddRuntimeInstrumentation()) intentionally omitted:
                 // GC, thread pool, and assembly metrics generated ~8 GB/month in AppMetrics
                 // and AppPerformanceCounters with minimal operational value.
+
+                // Drop high-volume metrics with no operational value for this app.
+                // Only metrics generating >5k rows/day are targeted; everything else is left as-is
+                // to avoid over-engineering the blocklist.
+
+                // Tracks connection pool state (active/idle) per backend IP. Azure services rotate
+                // IPs constantly, creating a new row per IP (~10x fan-out). http.client.active_requests
+                // covers any connection pressure scenario worth alerting on.
+                metrics.AddView("http.client.open_connections", MetricStreamConfiguration.Drop);
+
+                // Fires for every Blazor component on every SSR page render (~20 components/request).
+                // Pure render profiling data; no production health or alerting value.
+                metrics.AddView("aspnetcore.components.update_parameters.duration", MetricStreamConfiguration.Drop);
             })
             .WithTracing(tracing =>
             {

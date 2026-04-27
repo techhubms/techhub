@@ -8,5 +8,10 @@ Disallow: /api/
 Disallow: /swagger/
 Disallow: /health
 Disallow: /alive
+Disallow: /not-found
+Disallow: /Error
+
+# Admin section — not for public indexing
+Disallow: /admin
 
 Sitemap: https://tech.hub.ms/sitemap.xml

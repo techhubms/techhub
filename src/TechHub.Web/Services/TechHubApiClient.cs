@@ -1688,4 +1688,41 @@ public class TechHubApiClient : ITechHubApiClient
     {
         public string? Html { get; init; }
     }
+
+    // ================================================================
+    // Legacy redirect endpoint
+    // ================================================================
+
+    /// <inheritdoc/>
+    public virtual async Task<LegacyRedirectResult?> GetLegacyRedirectAsync(
+        string slug,
+        string? sectionHint = null,
+        CancellationToken cancellationToken = default)
+    {
+        slug = slug.Sanitize();
+        var url = $"/api/legacy-redirect?slug={Uri.EscapeDataString(slug)}";
+        if (!string.IsNullOrEmpty(sectionHint))
+        {
+            url += $"&section={Uri.EscapeDataString(sectionHint.Sanitize()!)}";
+        }
+
+        try
+        {
+            _logger.LogDebug("Looking up legacy slug: {Slug}", slug);
+            var response = await _httpClient.GetAsync(url, cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<LegacyRedirectResult>(cancellationToken: cancellationToken);
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to look up legacy slug {Slug}", slug);
+            throw;
+        }
+    }
 }

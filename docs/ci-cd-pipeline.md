@@ -8,18 +8,29 @@ All deployment logic lives in reusable PowerShell scripts (`scripts/Deploy-Infra
 
 ## Workflows
 
-### Unified CI/CD Pipeline
+The pipeline is split into two separate workflows to keep the GitHub Actions overview clean:
+PR failures show up under "CI Pipeline" and production deployments under "CD Pipeline".
 
-**File**: [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml)
+### CI Pipeline (Pull Requests)
+
+**File**: [.github/workflows/ci.yml](../.github/workflows/ci.yml)
+
+**Triggers**:
+
+- Pull requests to `main` branch (opened, synchronize, reopened, closed)
+
+Runs all quality checks and, when they pass, deploys and tears down PR preview environments.
+
+### CD Pipeline (Production)
+
+**File**: [.github/workflows/cd.yml](../.github/workflows/cd.yml)
 
 **Triggers**:
 
 - Push to `main` branch (CI + staging infrastructure + production deployment)
-- Pull requests to `main` branch (CI + PR preview deployment)
 - Manual dispatch (CI + staging infrastructure + production deployment)
 
-This is a single unified pipeline. All CI quality checks run first; preview and production
-deployments are gated on them.
+Runs all quality checks and, when they pass, deploys to staging and production.
 
 **CI Jobs** (run on every trigger except closed PRs, in parallel):
 
@@ -57,8 +68,8 @@ Jobs run in parallel for faster feedback (~5-10 minutes total).
 
 ### PR Preview Environments
 
-PR preview is handled by jobs inside [.github/workflows/ci-cd.yml](../.github/workflows/ci-cd.yml),
-not a separate workflow. This means **the quality gate must pass before a preview is deployed** —
+PR preview is handled by jobs inside [.github/workflows/ci.yml](../.github/workflows/ci.yml).
+This means **the quality gate must pass before a preview is deployed** —
 if unit tests, integration tests, lint, or security checks fail, no container is built and no
 preview environment is created.
 

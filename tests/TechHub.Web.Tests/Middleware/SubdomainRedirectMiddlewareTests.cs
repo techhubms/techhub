@@ -222,6 +222,53 @@ public class SubdomainRedirectMiddlewareTests
     }
 
     [Theory]
+    [InlineData("www.tech.hub.ms", "https://tech.hub.ms")]
+    [InlineData("www.tech.xebia.ms", "https://tech.xebia.ms")]
+    public async Task WwwOnPrimaryHost_RedirectsToPrimaryHost(string host, string expectedRedirectBase)
+    {
+        // Arrange
+        var (middleware, context, nextCalled) = CreateMiddleware(host);
+
+        // Act
+        await middleware.InvokeAsync(context);
+
+        // Assert
+        nextCalled().Should().BeFalse("middleware should redirect, not pass through");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(expectedRedirectBase);
+    }
+
+    [Fact]
+    public async Task WwwOnPrimaryHost_PreservesPathAndQueryString()
+    {
+        // Arrange
+        var (middleware, context, _) = CreateMiddleware("www.tech.hub.ms", path: "/ai/news", queryString: "?q=test");
+
+        // Act
+        await middleware.InvokeAsync(context);
+
+        // Assert
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be("https://tech.hub.ms/ai/news?q=test");
+    }
+
+    [Theory]
+    [InlineData("WWW.TECH.HUB.MS", "https://tech.hub.ms")]
+    [InlineData("Www.Tech.Xebia.Ms", "https://tech.xebia.ms")]
+    public async Task WwwOnPrimaryHost_CaseInsensitive(string host, string expectedRedirectBase)
+    {
+        // Arrange
+        var (middleware, context, _) = CreateMiddleware(host);
+
+        // Act
+        await middleware.InvokeAsync(context);
+
+        // Assert
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(expectedRedirectBase);
+    }
+
+    [Theory]
     [InlineData("staging-tech.hub.ms")]
     [InlineData("STAGING-TECH.HUB.MS")]
     [InlineData("staging-tech.xebia.ms")]
