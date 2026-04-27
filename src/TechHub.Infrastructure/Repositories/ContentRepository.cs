@@ -1830,8 +1830,8 @@ LIMIT @Limit OFFSET @Offset";
             && Uri.TryCreate(row.ExternalUrl, UriKind.Absolute, out var parsedUri)
             && (parsedUri.Scheme == Uri.UriSchemeHttp || parsedUri.Scheme == Uri.UriSchemeHttps);
 
-        // row.ExternalUrl is guaranteed non-null here when hasValidExternalUrl is true
-        // (the IsNullOrEmpty check above ensures it). The null-forgiving operator is safe.
+        // row.ExternalUrl is guaranteed non-null here because hasValidExternalUrl requires
+        // !IsNullOrEmpty(row.ExternalUrl) (line above). The null-forgiving operator is safe.
         var redirectUrl = hasValidExternalUrl
             ? row.ExternalUrl!
             : $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";

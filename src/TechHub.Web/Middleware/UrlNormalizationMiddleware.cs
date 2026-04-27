@@ -128,14 +128,13 @@ public partial class UrlNormalizationMiddleware
             var apiClient = scope.ServiceProvider.GetRequiredService<ITechHubApiClient>();
             result = await apiClient.GetLegacyRedirectAsync(segment, sectionHint, context.RequestAborted);
         }
+        catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
+        {
+            // Rethrow when the client disconnected — avoid writing a redirect onto an aborted connection.
+            throw;
+        }
         catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException or OperationCanceledException)
         {
-            // Rethrow if the request itself was cancelled — avoid writing a redirect onto an aborted connection.
-            if (context.RequestAborted.IsCancellationRequested)
-            {
-                throw;
-            }
-
             _logger.LogWarning(ex, "Legacy slug lookup failed for {Slug}; falling back to normalized path", segment);
 
             // Graceful degradation: still clean up .html / date prefix even when API is unavailable.
