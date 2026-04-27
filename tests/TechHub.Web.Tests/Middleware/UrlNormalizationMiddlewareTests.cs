@@ -240,6 +240,60 @@ public class UrlNormalizationMiddlewareTests
         nextCalled().Should().BeFalse();
     }
 
+    [Fact]
+    public async Task ApiTimeout_WhenNotRequestAbort_PassesThrough()
+    {
+        // TaskCanceledException from an HTTP client timeout (not a request abort) should fall through gracefully.
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new TaskCanceledException("API timeout"));
+
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/Some-Slug", mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("HTTP timeout (not a request abort) should fall through gracefully");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+    }
+
+    [Fact]
+    public async Task RequestAbort_Rethrows()
+    {
+        // When the client disconnects (RequestAborted is signaled) the exception must propagate,
+        // not be swallowed, to avoid writing a redirect onto an already-closed connection.
+        using var cts = new CancellationTokenSource();
+        await cts.CancelAsync();
+
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new OperationCanceledException("Request was cancelled"));
+
+        var (middleware, context, _) = CreateMiddleware(path: "/Some-Slug", mockApiClient: mockApi);
+        context.RequestAborted = cts.Token;
+
+        var act = () => middleware.InvokeAsync(context);
+
+        await act.Should().ThrowAsync<OperationCanceledException>();
+    }
+
+    [Fact]
+    public async Task InvalidOperationException_Propagates()
+    {
+        // InvalidOperationException indicates a DI/config bug and must not be swallowed.
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new InvalidOperationException("Service not registered"));
+
+        var (middleware, context, _) = CreateMiddleware(path: "/Some-Slug", mockApiClient: mockApi);
+
+        var act = () => middleware.InvokeAsync(context);
+
+        await act.Should().ThrowAsync<InvalidOperationException>();
+    }
+
     // ── Pass-through cases — no API call, no redirect ──────────────────────
 
     [Fact]
@@ -334,6 +388,23 @@ public class UrlNormalizationMiddlewareTests
         await middleware.InvokeAsync(context);
 
         context.Response.Headers.Location.ToString().Should().Be("/ai/videos/article?ref=rss");
+    }
+
+    [Fact]
+    public async Task QueryString_IsPreservedInLegacyLookupRedirect()
+    {
+        // When the API resolves a legacy slug to a canonical URL, the original query string
+        // (e.g. UTM parameters) must be appended so tracking is not lost.
+        var canonical = "/ai/videos/my-article";
+        var (middleware, context, _) = CreateMiddleware(
+            path: "/my-article",
+            queryString: "?utm_source=newsletter&utm_medium=email",
+            apiResult: new LegacyRedirectResult(canonical));
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.Headers.Location.ToString()
+            .Should().Be(canonical + "?utm_source=newsletter&utm_medium=email");
     }
 
     // ── Round-trip: dates at end of slug are NOT stripped (e.g. roundups) ──

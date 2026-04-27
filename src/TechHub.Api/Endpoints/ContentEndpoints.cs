@@ -702,14 +702,24 @@ public static class ContentEndpoints
     /// GET /api/legacy-redirect?slug={slug}&amp;section={section}
     /// Resolves a legacy slug to its canonical URL for permanent redirect.
     /// </summary>
-    private static async Task<Results<Ok<LegacyRedirectResult>, NotFound>> GetLegacyRedirect(
+    private static async Task<Results<Ok<LegacyRedirectResult>, NotFound, BadRequest<string>>> GetLegacyRedirect(
         string slug,
         string? section,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
     {
-        slug = slug.Sanitize();
-        section = section?.Sanitize();
+        slug = slug.Sanitize().ToLowerInvariant();
+        section = section?.Sanitize().ToLowerInvariant();
+
+        if (!RouteParameterValidator.IsValidSlug(slug))
+        {
+            return TypedResults.BadRequest("Invalid slug format.");
+        }
+
+        if (section != null && !RouteParameterValidator.IsValidNameSegment(section))
+        {
+            return TypedResults.BadRequest("Invalid section format.");
+        }
 
         var result = await contentRepository.FindByLegacySlugAsync(slug, section, cancellationToken);
         return result != null ? TypedResults.Ok(result) : TypedResults.NotFound();

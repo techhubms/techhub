@@ -45,6 +45,28 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
 
+    [Theory]
+    [InlineData("/api/legacy-redirect?slug=")]
+    [InlineData("/api/legacy-redirect?slug=has spaces")]
+    [InlineData("/api/legacy-redirect?slug=../../etc/passwd")]
+    [InlineData("/api/legacy-redirect?slug=<script>alert(1)</script>")]
+    public async Task GetLegacyRedirect_ReturnsBadRequest_ForInvalidSlug(string url)
+    {
+        var response = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task GetLegacyRedirect_ReturnsBadRequest_ForInvalidSection()
+    {
+        var response = await _client.GetAsync(
+            "/api/legacy-redirect?slug=valid-slug&section=Invalid Section!",
+            TestContext.Current.CancellationToken);
+
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
     [Fact]
     public async Task GetLegacyRedirect_ReturnsUrl_ForKnownSlug()
     {

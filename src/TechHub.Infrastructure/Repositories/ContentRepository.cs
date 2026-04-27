@@ -1822,9 +1822,18 @@ LIMIT @Limit OFFSET @Offset";
 
         // Items in externally-linking collections (news, blogs, community) don't have
         // their own detail page — redirect straight to the source URL when available.
+        // Validate that the external URL is an absolute http/https URL to prevent open-redirect
+        // or unsafe-scheme vulnerabilities (e.g. javascript: or malformed relative URLs).
         var isExternalCollection = row.CollectionName is "news" or "blogs" or "community";
-        var redirectUrl = (isExternalCollection && !string.IsNullOrEmpty(row.ExternalUrl))
-            ? row.ExternalUrl
+        var hasValidExternalUrl = isExternalCollection
+            && !string.IsNullOrEmpty(row.ExternalUrl)
+            && Uri.TryCreate(row.ExternalUrl, UriKind.Absolute, out var parsedUri)
+            && (parsedUri.Scheme == Uri.UriSchemeHttp || parsedUri.Scheme == Uri.UriSchemeHttps);
+
+        // row.ExternalUrl is guaranteed non-null here when hasValidExternalUrl is true
+        // (the IsNullOrEmpty check above ensures it). The null-forgiving operator is safe.
+        var redirectUrl = hasValidExternalUrl
+            ? row.ExternalUrl!
             : $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";
 
         return new LegacyRedirectResult(redirectUrl);
