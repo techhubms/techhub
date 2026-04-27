@@ -251,6 +251,7 @@ jobs:
         if: always()
         with:
           sarif_file: 'trivy-results.sarif'
+          category: trivy
 
   codeql:
     name: CodeQL Analysis
@@ -270,6 +271,8 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@95e58e9a2cdfd71adc6e0353d5c52f41a045d225 # v4.35.2
+        with:
+          category: codeql
 
   code-coverage:
     name: Code Coverage Report

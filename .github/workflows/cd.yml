@@ -245,6 +245,7 @@ jobs:
         if: always()
         with:
           sarif_file: 'trivy-results.sarif'
+          category: trivy
 
   codeql:
     name: CodeQL Analysis
@@ -263,6 +264,8 @@ jobs:
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@95e58e9a2cdfd71adc6e0353d5c52f41a045d225 # v4.35.2
+        with:
+          category: codeql
 
   code-coverage:
     name: Code Coverage Report
@@ -604,7 +607,9 @@ jobs:
   # ──────────────────────────────────────────────
   # Production E2E tests — run after deployment
   # Uses the same E2E test suite as PR preview environments,
-  # but skips the database performance tests.
+  # but skips performance tests (Category=Performance) and
+  # dev-environment-only tests (Category=DevEnvironment) such as
+  # GoogleAnalyticsTests which assert GA is absent (true in dev, false in prod).
   # ──────────────────────────────────────────────
   production-e2e:
     name: E2E Tests (Production)
@@ -645,7 +650,7 @@ jobs:
             --results-directory TestResults \
             --report-xunit-trx \
             --report-xunit-trx-filename e2e-production-test-results.trx \
-            -- --filter-not-trait "Category=Performance"
+            -- --filter-not-trait "Category=Performance" --filter-not-trait "Category=DevEnvironment"
         env:
           E2E_BASE_URL: https://tech.hub.ms
 
