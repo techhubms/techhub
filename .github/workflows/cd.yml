@@ -554,7 +554,8 @@ jobs:
   # ──────────────────────────────────────────────
   # Deploy to Production (infra + app in one shot)
   # Uses GitHub environment protection for approval
-  # Followed by E2E tests (without performance tests) to validate the deployment.
+  # Followed by lightweight smoke tests to validate the deployment.
+  # E2E tests run in PR preview environments before merge — not against production.
   # ──────────────────────────────────────────────
   deploy-production:
     name: Deploy to Production
@@ -602,65 +603,50 @@ jobs:
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
   # ──────────────────────────────────────────────
-  # Production E2E tests — run after deployment
-  # Uses the same E2E test suite as PR preview environments,
-  # but skips the database performance tests.
+  # Production smoke tests — run after deployment
+  # Lightweight HTTP checks against the live site.
+  # Full E2E tests run in isolated PR preview environments before merge —
+  # they must NOT run against production because they include dev-environment
+  # assertions (e.g. GA disabled, test data) that do not hold in production.
   # ──────────────────────────────────────────────
-  production-e2e:
-    name: E2E Tests (Production)
+  production-smoke-tests:
+    name: Production Smoke Tests
     runs-on: ubuntu-latest
     needs: deploy-production
     concurrency:
-      group: test-e2e-production
+      group: test-smoke-production
       cancel-in-progress: false
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@c2fa09f4bde5ebb9d1777cf28262a3eb3db3ced7 # v5.2.0
-        with:
-          global-json-file: global.json
-
-      - name: Restore dependencies
-        run: dotnet restore TechHub.slnx
-
-      - name: Build solution
-        run: dotnet build TechHub.slnx --configuration Release --no-restore
-
-      - name: Install Playwright dependencies
-        run: |
-          cd tests/TechHub.E2E.Tests
-          pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
-
       - name: Wait for deployment to stabilize
-        run: sleep 60
+        run: sleep 30
 
-      - name: Run E2E tests against production
+      - name: Smoke test /alive
         run: |
-          dotnet test --project tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj \
-            --configuration Release \
-            --no-build \
-            --results-directory TestResults \
-            --report-xunit-trx \
-            --report-xunit-trx-filename e2e-production-test-results.trx \
-            -- --filter-not-trait "Category=Performance"
-        env:
-          E2E_BASE_URL: https://tech.hub.ms
+          status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://tech.hub.ms/alive)
+          if [ "$status" = "200" ]; then
+            echo "✅ /alive → $status"
+          else
+            echo "❌ /alive → $status (expected 200)"
+            exit 1
+          fi
 
-      - name: Upload test results
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: always()
-        with:
-          name: e2e-production-test-results
-          path: '**/TestResults/**'
-          retention-days: 7
+      - name: Smoke test /health
+        run: |
+          status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://tech.hub.ms/health)
+          if [ "$status" = "200" ]; then
+            echo "✅ /health → $status"
+          else
+            echo "❌ /health → $status (expected 200)"
+            exit 1
+          fi
 
-      - name: Upload Playwright traces
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        if: failure()
-        with:
-          name: playwright-traces-production
-          path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
-          retention-days: 7
+      - name: Smoke test homepage
+        run: |
+          status=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://tech.hub.ms/)
+          if [ "$status" = "200" ]; then
+            echo "✅ homepage → $status"
+          else
+            echo "❌ homepage → $status (expected 200)"
+            exit 1
+          fi
