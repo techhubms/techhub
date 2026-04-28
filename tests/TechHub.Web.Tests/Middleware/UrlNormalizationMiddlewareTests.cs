@@ -364,6 +364,37 @@ public class UrlNormalizationMiddlewareTests
         mockApi.Verify(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 
+    [Theory]
+    [InlineData("/_blazor")]
+    [InlineData("/_framework")]
+    [InlineData("/_content")]
+    public async Task UnderscorePrefixedPath_PassesThrough_WithoutApiCall(string path)
+    {
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("underscore-prefixed paths (Blazor internals) should pass through");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        mockApi.Verify(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Theory]
+    [InlineData("/wp_admin")]
+    [InlineData("/@username")]
+    [InlineData("/some~path")]
+    public async Task InvalidSlugFormat_PassesThrough_WithoutApiCall(string path)
+    {
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("segments that can never be valid slugs should not trigger an API call");
+        mockApi.Verify(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
     // ── Query string preservation ───────────────────────────────────────────
 
     [Fact]

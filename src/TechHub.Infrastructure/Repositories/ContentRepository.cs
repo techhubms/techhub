@@ -1784,7 +1784,7 @@ LIMIT @Limit OFFSET @Offset";
             @"^\d{4}-\d{2}-\d{2}-",
             string.Empty);
 
-        // Lowercase section hint so the DB comparison is case-insensitive without needing LOWER() in SQL.
+        // Lowercase section hint for case-insensitive comparison.
         var normalizedHint = sectionHint?.ToLowerInvariant() ?? string.Empty;
         var hasSectionHint = !string.IsNullOrEmpty(normalizedHint);
 
@@ -1795,10 +1795,10 @@ LIMIT @Limit OFFSET @Offset";
                 slug                 AS Slug,
                 external_url         AS ExternalUrl
             FROM content_items
-            WHERE (slug = @NormalizedSlug OR slug = @StrippedSlug)
+            WHERE (LOWER(slug) = @NormalizedSlug OR LOWER(slug) = @StrippedSlug)
               AND draft = {Dialect.GetBooleanLiteral(false)}
             ORDER BY
-                CASE WHEN @HasSectionHint AND primary_section_name = @SectionHint THEN 0 ELSE 1 END,
+                CASE WHEN @HasSectionHint AND LOWER(primary_section_name) = @SectionHint THEN 0 ELSE 1 END,
                 date_epoch DESC
             LIMIT 1
             """;

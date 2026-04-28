@@ -1711,7 +1711,8 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Looking up legacy slug: {Slug}", slug);
             var response = await _httpClient.GetAsync(url, cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode is System.Net.HttpStatusCode.NotFound
+                or System.Net.HttpStatusCode.BadRequest)
             {
                 return null;
             }

@@ -52,9 +52,10 @@ public static partial class RouteParameterValidator
     private static partial Regex NameSegmentRegex();
 
     /// <summary>
-    /// Lowercase letters, digits, and hyphens. Must start with a letter or digit.
+    /// Letters, digits, and hyphens. Must start with a letter or digit.
+    /// Case-insensitive so URLs work regardless of casing (normalization happens downstream).
     /// No dots (blocks .php probes), no slashes, no special characters.
     /// </summary>
-    [GeneratedRegex(@"^[a-z0-9][a-z0-9-]*$", RegexOptions.Compiled)]
+    [GeneratedRegex(@"^[a-z0-9][a-z0-9-]*$", RegexOptions.Compiled | RegexOptions.IgnoreCase)]
     private static partial Regex SlugRegex();
 }
