@@ -51,6 +51,8 @@ public class RouteParameterValidatorTests
     [InlineData("encrypting-properties-with-systemtextjson")]
     [InlineData("fts-test")]
     [InlineData("123-numeric-start")]
+    [InlineData("HAS-UPPER")]
+    [InlineData("Mixed-Case-Slug")]
     public void IsValidSlug_WithValidSlugs_ReturnsTrue(string slug)
     {
         RouteParameterValidator.IsValidSlug(slug).Should().BeTrue();
@@ -62,7 +64,6 @@ public class RouteParameterValidatorTests
     [InlineData("file.php")]
     [InlineData("../../etc/passwd")]
     [InlineData("script<alert>")]
-    [InlineData("HAS-UPPER")]
     [InlineData("has space")]
     [InlineData("#anchor")]
     [InlineData("-starts-with-hyphen")]
