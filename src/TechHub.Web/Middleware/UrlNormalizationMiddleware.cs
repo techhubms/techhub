@@ -1,5 +1,6 @@
 using System.Text.RegularExpressions;
 using TechHub.Core.Models;
+using TechHub.Core.Validation;
 using TechHub.Web.Services;
 
 namespace TechHub.Web.Middleware;
@@ -173,6 +174,12 @@ public partial class UrlNormalizationMiddleware
     /// </summary>
     private bool IsLegacyLookupCandidate(string segment)
     {
+        // Framework-internal paths (e.g. _blazor, _framework) are never content slugs.
+        if (segment.StartsWith('_'))
+        {
+            return false;
+        }
+
         if (_knownNonSectionPages.Contains(segment))
         {
             return false;
@@ -186,6 +193,13 @@ public partial class UrlNormalizationMiddleware
         // Skip static files (e.g. .css, .js, .png). At this point .html has already been stripped,
         // so any remaining extension is a genuine static file.
         if (Path.HasExtension(segment))
+        {
+            return false;
+        }
+
+        // Segments that can never be valid slugs (contain underscores, dots, special characters,
+        // etc.) would only produce a 400 from the API. Skip the call.
+        if (!RouteParameterValidator.IsValidSlug(segment))
         {
             return false;
         }
