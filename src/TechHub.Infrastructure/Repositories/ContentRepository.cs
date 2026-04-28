@@ -1795,7 +1795,7 @@ LIMIT @Limit OFFSET @Offset";
                 slug                 AS Slug,
                 external_url         AS ExternalUrl
             FROM content_items
-            WHERE (LOWER(slug) = @NormalizedSlug OR LOWER(slug) = @StrippedSlug)
+            WHERE (slug = @NormalizedSlug OR slug = @StrippedSlug)
               AND draft = {Dialect.GetBooleanLiteral(false)}
             ORDER BY
                 CASE WHEN @HasSectionHint AND LOWER(primary_section_name) = @SectionHint THEN 0 ELSE 1 END,
