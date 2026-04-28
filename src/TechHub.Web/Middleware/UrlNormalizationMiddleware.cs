@@ -36,6 +36,8 @@ public partial class UrlNormalizationMiddleware
         "not-found",
         "error",
         "admin",
+        "health",
+        "alive",
     };
 
     // Matches YYYY-MM-DD- at the start of a segment. Capture group 1 is the slug remainder.
