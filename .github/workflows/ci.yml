@@ -598,7 +598,7 @@ jobs:
       - name: Install Playwright dependencies
         run: |
           cd tests/TechHub.E2E.Tests
-          pwsh bin/Release/net10.0/playwright.ps1 install --with-deps
+          pwsh bin/Release/net10.0/playwright.ps1 install chrome --with-deps
 
       - name: Run E2E tests against PR preview
         run: |

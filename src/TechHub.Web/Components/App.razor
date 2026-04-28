@@ -40,33 +40,28 @@
     @{
         var appInsightsConnectionString = Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING");
         var isDevelopment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
-        // E2E signals are enabled in Development AND Staging — Staging is where CI/PR E2E tests run.
-        // Production excludes them (zero overhead, no test tooling in prod).
-        var enableE2ESignals = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") is "Development" or "Staging";
         var gaMeasurementId = Configuration["GoogleAnalytics:MeasurementId"];
     }
 
-    @if (enableE2ESignals)
-    {
-        <!-- E2E test lifecycle counter — provides a single monotonic counter that
-             all JS lifecycle hooks increment via __e2eSignal(label). Tests capture
-             the counter before an action and wait for it to change, replacing 8+
-             independent window.__* flags with one universal wait pattern.
-             Enabled in Development and Staging (CI/PR preview E2E tests run there). -->
-        <script>
-            if (!window.__e2e) {
-                window.__e2e = { counter: 0, label: 'init', history: [] };
-                window.__e2eSignal = function(label) {
-                    if (!window.__e2e) return;
-                    window.__e2e.counter++;
-                    window.__e2e.label = label;
-                    window.__e2e.history.push({ counter: window.__e2e.counter, label: label });
-                    if (window.__e2e.history.length > 20) window.__e2e.history.shift();
-                };
-                window.addEventListener('scrollend', function() { window.__e2eSignal('scroll-end'); });
-            }
-        </script>
-    }
+    <!-- E2E test lifecycle counter — provides a single monotonic counter that
+         all JS lifecycle hooks increment via __e2eSignal(label). Tests capture
+         the counter before an action and wait for it to change, replacing 8+
+         independent window.__* flags with one universal wait pattern.
+         Always enabled: trivial overhead (~200 bytes), no security risk, and ensures
+         E2E tests behave identically regardless of target environment. -->
+    <script>
+        if (!window.__e2e) {
+            window.__e2e = { counter: 0, label: 'init', history: [] };
+            window.__e2eSignal = function(label) {
+                if (!window.__e2e) return;
+                window.__e2e.counter++;
+                window.__e2e.label = label;
+                window.__e2e.history.push({ counter: window.__e2e.counter, label: label });
+                if (window.__e2e.history.length > 20) window.__e2e.history.shift();
+            };
+            window.addEventListener('scrollend', function() { window.__e2eSignal('scroll-end'); });
+        }
+    </script>
 
     @if (!isDevelopment && !string.IsNullOrEmpty(gaMeasurementId))
     {
