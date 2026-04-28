@@ -91,8 +91,8 @@ export function dispose() {
     activeStateKey = null;
 }
 
-/// Restores scroll position saved for the given state key.
-/// Returns true if a position was restored, false otherwise.
+// Restores scroll position saved for the given state key.
+// Returns true if a position was restored, false otherwise.
 export function restoreScrollPosition(stateKey) {
     const y = window.__gridScrollPositions[stateKey];
     if (y != null && y > 0) {
