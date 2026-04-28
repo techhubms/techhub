@@ -75,6 +75,9 @@ public class ContentItemsGridTests : BunitContext
 
         // ContentItemsGrid uses RendererInfo.IsInteractive in OnAfterRenderAsync
         SetRendererInfo(new RendererInfo("Server", true));
+
+        // JS interop is not under test — allow all calls (infinite-scroll module import, etc.)
+        JSInterop.Mode = JSRuntimeMode.Loose;
     }
 
     [Fact]

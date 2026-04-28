@@ -149,6 +149,7 @@
     private IJSObjectReference? scrollModule;
     private DotNetObjectReference<ContentItemsGrid>? dotNetRef;
     private bool needsScrollListenerSetup;
+    private bool needsScrollRestore;
 
     // State persistence (prevents double-fetch during prerender -> interactive transition)
     private PersistingComponentStateSubscription _persistSubscription;
@@ -191,6 +192,7 @@
             totalCount = cached.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
+            needsScrollRestore = true;
             Logger.LogDebug("Restored {Count} items from circuit cache for {Key}", contentItems.Count, stateKey);
         }
         // Priority 2: PersistentComponentState (prerender → interactive transition)
@@ -289,6 +291,18 @@
             return;
         }
 
+        // When restoring from circuit cache (back-button navigation), restore the saved
+        // scroll position BEFORE attaching the scroll listener. This prevents the immediate
+        // handleScroll() check from seeing the trigger element in viewport (at scrollY=0)
+        // and triggering a cascade of batch loads that scrolls to "End of content".
+        if (needsScrollRestore)
+        {
+            needsScrollRestore = false;
+            scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
+                "import", "/js/infinite-scroll.js");
+            await scrollModule.InvokeAsync<bool>("restoreScrollPosition", GetStateKey());
+        }
+
         // Setup scroll listener on first render, or re-attach when filters change
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
@@ -308,9 +322,10 @@
             // Only create dotNetRef once (avoid memory leak)
             dotNetRef ??= DotNetObjectReference.Create(this);
 
-            // (Re-)attach scroll listener to current scroll-trigger element
-            // JS dispose() handles cleanup of previous listener
-            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
+            // (Re-)attach scroll listener to current scroll-trigger element.
+            // Pass state key so JS can save scroll position per grid for back-button restoration.
+            // JS dispose() handles cleanup of previous listener.
+            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger", GetStateKey());
             Logger.LogDebug("Infinite scroll listener attached");
         }
         catch (Exception ex)
