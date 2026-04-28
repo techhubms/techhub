@@ -6,6 +6,7 @@
 @using Microsoft.AspNetCore.Components.Web
 @inject ITechHubApiClient ApiClient
 @inject SectionCache SectionCache
+@inject ContentGridStateCache GridStateCache
 @inject ILogger<ContentItemsGrid> Logger
 @inject IJSRuntime JSRuntime
 @inject PersistentComponentState ApplicationState
@@ -176,7 +177,24 @@
 
         // Try to restore state from prerender
         var stateKey = GetStateKey();
-        if (ApplicationState.TryTakeFromJson<PersistedGridState>(stateKey, out var restored) && restored != null)
+
+        // Priority 1: Circuit-scoped cache (survives enhanced navigations for back-button support).
+        // When the user scrolls through many batches, navigates to a detail page, and presses back,
+        // this cache restores ALL loaded items so the browser's scroll restoration doesn't trigger
+        // a cascade of batch loads that scrolls to "End of content".
+        var cached = GridStateCache.Get(stateKey);
+        if (cached != null)
+        {
+            contentItems = cached.Items;
+            currentBatch = cached.CurrentBatch;
+            hasMoreContent = cached.HasMoreContent;
+            totalCount = cached.TotalCount;
+            isLoading = false;
+            needsScrollListenerSetup = hasMoreContent;
+            Logger.LogDebug("Restored {Count} items from circuit cache for {Key}", contentItems.Count, stateKey);
+        }
+        // Priority 2: PersistentComponentState (prerender → interactive transition)
+        else if (ApplicationState.TryTakeFromJson<PersistedGridState>(stateKey, out var restored) && restored != null)
         {
             // Restored from prerender - skip API call
             contentItems = restored.Items;
@@ -385,6 +403,9 @@
 
         contentItems.AddRange(newItems);
         currentBatch = batch;
+
+        // Update circuit-scoped cache so back-navigation can restore all loaded items
+        GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount);
     }
 
     [JSInvokable]

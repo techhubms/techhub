@@ -29,11 +29,8 @@ public class StartupBackgroundServiceTests
         var mockConnectionFactory = new Mock<IDbConnectionFactory>();
         mockConnectionFactory.Setup(f => f.CreateConnection()).Returns(Mock.Of<IDbConnection>());
 
-        var mockProcessedUrlRepo = new Mock<IProcessedUrlRepository>();
-
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockConnectionFactory.Object);
-        services.AddSingleton(mockProcessedUrlRepo.Object);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
 
@@ -80,10 +77,6 @@ public class StartupBackgroundServiceTests
             return mockCommand.Object;
         });
 
-        var mockProcessedUrlRepo = new Mock<IProcessedUrlRepository>();
-        mockProcessedUrlRepo.Setup(r => r.SeedFromJsonAsync(It.IsAny<IEnumerable<string>>(), It.IsAny<CancellationToken>()))
-            .Returns(Task.CompletedTask);
-
         var mockJobRepo = new Mock<IContentProcessingJobRepository>();
         mockJobRepo.Setup(r => r.AbortRunningJobsAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(0);
@@ -104,7 +97,6 @@ public class StartupBackgroundServiceTests
 
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockConnectionFactory.Object);
-        services.AddSingleton(mockProcessedUrlRepo.Object);
         services.AddSingleton(mockJobRepo.Object);
         services.AddSingleton(mockCustomPageRepo.Object);
         services.AddSingleton<IOptions<AppSettings>>(appSettings);

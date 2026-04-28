@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using TechHub.Core.Models;
+using TechHub.TestUtilities.Builders;
 using TechHub.Web.Components;
 using TechHub.Web.Services;
 
@@ -69,6 +70,7 @@ public class ContentItemsGridTests : BunitContext
 
         Services.AddSingleton(_mockApiClient.Object);
         Services.AddSingleton(_sectionCache);
+        Services.AddScoped<ContentGridStateCache>();
         AddBunitPersistentComponentState();
 
         // ContentItemsGrid uses RendererInfo.IsInteractive in OnAfterRenderAsync
@@ -185,5 +187,63 @@ public class ContentItemsGridTests : BunitContext
         // Act & Assert - Disposal should not throw
         var disposeAction = async () => await cut.Instance.DisposeAsync();
         await disposeAction.Should().NotThrowAsync("disposal should always be safe to call");
+    }
+
+    [Fact]
+    public void ContentItemsGrid_RestoresFromCircuitCache_WhenAvailable()
+    {
+        // Arrange - Pre-populate the circuit-scoped cache (simulates back-navigation
+        // after the user had scrolled through multiple batches)
+        var cache = Services.GetRequiredService<ContentGridStateCache>();
+        var cachedItems = Enumerable.Range(1, 60).Select(i =>
+            new ContentItemBuilder().WithSlug($"item-{i}").WithTitle($"Item {i}")
+                .WithPrimarySectionName("github-copilot").WithCollectionName("news").Build()
+        ).ToList();
+        cache.Set("ContentItemsGrid_github-copilot_news", cachedItems, currentBatch: 3, hasMoreContent: true, totalCount: 100);
+
+        // Act - Render the component (should restore from cache, not call API)
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news"));
+
+        // Assert - All 60 cached items are rendered, and API was NOT called
+        cut.WaitForAssertion(() =>
+        {
+            var cards = cut.FindAll(".content-grid > *");
+            cards.Count.Should().Be(60, "all cached items should be restored on back-navigation");
+        });
+        _mockApiClient.Verify(x => x.GetCollectionItemsAsync(
+            It.IsAny<string>(), It.IsAny<string>(),
+            It.IsAny<int?>(), It.IsAny<int?>(),
+            It.IsAny<string?>(), It.IsAny<string?>(),
+            It.IsAny<string?>(), It.IsAny<int?>(),
+            It.IsAny<string?>(), It.IsAny<string?>(),
+            It.IsAny<bool>(), It.IsAny<string?>(),
+            It.IsAny<CancellationToken>()), Times.Never,
+            "grid should use circuit cache instead of calling API");
+    }
+
+    [Fact]
+    public void ContentItemsGrid_ShowsEndOfContent_WhenCacheHasNoMore()
+    {
+        // Arrange - Cache indicates no more content available
+        var cache = Services.GetRequiredService<ContentGridStateCache>();
+        var cachedItems = Enumerable.Range(1, 15).Select(i =>
+            new ContentItemBuilder().WithSlug($"item-{i}").WithTitle($"Item {i}")
+                .WithPrimarySectionName("github-copilot").WithCollectionName("news").Build()
+        ).ToList();
+        cache.Set("ContentItemsGrid_github-copilot_news", cachedItems, currentBatch: 1, hasMoreContent: false, totalCount: 15);
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news"));
+
+        // Assert - End of content shown, no scroll trigger
+        cut.WaitForAssertion(() =>
+        {
+            cut.Find(".end-of-content").TextContent.Should().Contain("End of content");
+            cut.FindAll("#scroll-trigger").Should().BeEmpty("no scroll trigger when all content loaded");
+        });
     }
 }

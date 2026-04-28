@@ -132,6 +132,9 @@ builder.Services.AddSingleton<FaviconService>();
 // Error handling service for centralized exception management
 builder.Services.AddScoped<ErrorService>();
 
+// Circuit-scoped cache for infinite scroll state (survives enhanced navigations for back-button support)
+builder.Services.AddScoped<ContentGridStateCache>();
+
 // Domain-based branding (tech.xebia.ms vs tech.hub.ms)
 builder.Services.AddScoped<BrandingService>();
 
