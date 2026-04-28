@@ -312,6 +312,237 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   }
 }
 
+/* ============================================================================
+   Feature Timeline
+   ============================================================================ */
+
+.features-timeline-section {
+  margin-bottom: var(--spacing-6);
+}
+
+.features-timeline-heading {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-1);
+  color: var(--color-text-emphasis);
+}
+
+.features-timeline-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-3);
+}
+
+/* Filter buttons row */
+.features-timeline-filters {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.features-filter-clear {
+  border-color: var(--color-amber-border);
+  color: var(--color-amber);
+}
+
+@media (hover: hover) {
+  .features-filter-clear:hover {
+    border-color: var(--color-amber);
+    color: var(--color-amber);
+    background: var(--color-amber-bg);
+  }
+}
+
+/* Timeline list */
+.features-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.features-timeline-empty {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  padding: var(--spacing-4) 0;
+}
+
+/* Individual timeline item */
+.features-timeline-item {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 0 var(--spacing-3);
+  margin-bottom: var(--spacing-1);
+}
+
+/* Left marker column: dot + vertical line */
+.features-timeline-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--spacing-2);
+}
+
+.features-timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-purple-bright);
+  border: 2px solid var(--color-bg-default);
+  box-shadow: 0 0 0 2px var(--color-purple-medium);
+  flex-shrink: 0;
+  z-index: 1;
+  transition: background var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-timeline-item.expanded .features-timeline-dot {
+  background: var(--color-purple-medium);
+  box-shadow: 0 0 0 3px var(--color-purple-bright);
+}
+
+.features-timeline-line {
+  width: 2px;
+  flex: 1;
+  background: var(--color-border-default);
+  margin-top: var(--spacing-1);
+  min-height: var(--spacing-3);
+}
+
+.features-timeline-item:last-child .features-timeline-line {
+  display: none;
+}
+
+/* Right content column */
+.features-timeline-content {
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-2);
+  overflow: hidden;
+  transition: border-color var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-timeline-item.expanded .features-timeline-content {
+  border-color: var(--color-purple-border-subtle);
+}
+
+/* Header button (click to expand) */
+.features-timeline-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  background: var(--color-bg-default);
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3);
+  text-align: left;
+  cursor: pointer;
+  color: inherit;
+  position: relative;
+  transition: background var(--duration-normal) var(--easing-ease-out);
+}
+
+@media (hover: hover) {
+  .features-timeline-header:hover {
+    background: var(--color-bg-emphasis);
+  }
+}
+
+html.keyboard-nav .features-timeline-header:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+}
+
+.features-timeline-item.expanded .features-timeline-header {
+  background: var(--color-purple-bg-subtle);
+}
+
+/* Date + category row */
+.features-timeline-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-1);
+}
+
+.features-timeline-date {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Category badge */
+.badge-category {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 2px var(--spacing-1);
+  border-radius: var(--radius-sm);
+  background: var(--color-purple-bg-badge);
+  color: var(--color-purple-bright);
+  border: 1px solid var(--color-purple-border);
+}
+
+/* Tier badge */
+.badge-tier {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  padding: 2px var(--spacing-1);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-emphasis);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-default);
+}
+
+/* Feature title */
+.features-timeline-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-emphasis);
+  margin: 0 0 var(--spacing-1) 0;
+  padding-right: var(--spacing-5);
+}
+
+/* Tier + GHES badges row */
+.features-timeline-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}
+
+/* Expand/collapse chevron */
+.features-timeline-toggle-icon {
+  position: absolute;
+  top: var(--spacing-2);
+  right: var(--spacing-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* Expanded detail panel */
+.features-timeline-detail {
+  padding: var(--spacing-2) var(--spacing-3) var(--spacing-3);
+  background: var(--color-bg-emphasis);
+  border-top: 1px solid var(--color-border-default);
+}
+
+.features-timeline-description {
+  color: var(--color-text-primary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-3);
+}
+
+/* Video link within expanded detail */
+.features-timeline-video-link {
+  display: block;
+  max-width: 400px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.features-timeline-video-title {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
 /* Print */
 @media print {
   .features-tier-card {
@@ -327,6 +558,14 @@ html.keyboard-nav .features-filter-btn:focus-visible {
 
   .feature-card-thumbnail {
     display: none;
+  }
+
+  .features-timeline-toggle-icon {
+    display: none;
+  }
+
+  .features-timeline-detail {
+    display: block !important;
   }
 }
 
