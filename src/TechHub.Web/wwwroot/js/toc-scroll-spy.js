@@ -34,6 +34,7 @@ export class TocScrollSpy {
         this.initialScrollEndHandler = null; // One-time scrollend handler
         this.initialScrollTimeout = null; // Fallback timeout for browsers without scrollend
         this.initialized = false; // Track initialization state to prevent duplicate listeners
+        this.initialPagePath = null; // pathname+search when initialized; used to detect page changes
 
         // Expose toggle function globally for console access
         window.toggleTocDebug = this.toggleDebug.bind(this);
@@ -84,6 +85,11 @@ export class TocScrollSpy {
             return;
         }
 
+        // Record the current page path (pathname+search, no hash) so we can detect
+        // when the user navigates away during enhanced navigation transitions.
+        // This prevents spurious replaceState calls from corrupting the new page's URL.
+        this.initialPagePath = window.location.pathname + window.location.search;
+
         // Find all H2 and H3 headings in content with IDs
         // H2 and H3 are always in the TOC, H4+ are not tracked
         this.headings = Array.from(
@@ -121,6 +127,10 @@ export class TocScrollSpy {
         // Set up one-time handler that auto-cancels when regular scroll/resize handlers trigger
         if ('onscrollend' in window) {
             this.initialScrollEndHandler = () => {
+                if (window.location.pathname + window.location.search !== this.initialPagePath) {
+                    this.cleanupInitialScrollHandlers();
+                    return;
+                }
                 this.updateActiveHeading();
                 this.cleanupInitialScrollHandlers();
             };
@@ -128,6 +138,10 @@ export class TocScrollSpy {
         } else {
             // Fallback for browsers without scrollend support
             this.initialScrollTimeout = setTimeout(() => {
+                if (window.location.pathname + window.location.search !== this.initialPagePath) {
+                    this.cleanupInitialScrollHandlers();
+                    return;
+                }
                 this.updateActiveHeading();
                 this.cleanupInitialScrollHandlers();
             }, 200);
@@ -157,6 +171,18 @@ export class TocScrollSpy {
      * This ensures updates happen at most once per frame (~60fps)
      */
     handleScroll() {
+        // During Blazor enhanced back/forward navigation the URL changes (popstate) before
+        // the DOM is swapped out. If this spy's scroll listener fires in that window it
+        // would call replaceState on the *new* page's URL, appending a stale heading hash
+        // (e.g. /all?types=videos → /all?types=videos#notes). That corrupted URL then
+        // causes Blazor's hash-scroll handler to fire on the browse page and reset scrollY
+        // to 0, defeating the scroll-position restoration and triggering an infinite-scroll
+        // cascade. Detecting the mismatch here and self-destructing breaks the chain.
+        if (this.initialPagePath !== null &&
+            window.location.pathname + window.location.search !== this.initialPagePath) {
+            this.destroy();
+            return;
+        }
         this.cleanupInitialScrollHandlers(); // Cancel initial scroll handlers
         if (!this.ticking) {
             window.requestAnimationFrame(() => {

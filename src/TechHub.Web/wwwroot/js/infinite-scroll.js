@@ -4,10 +4,15 @@
 
 let boundHandleScroll = null;
 let activeTriggerId = null;
+let activeStateKey = null;
 
 const TRIGGER_MARGIN_PX = 300; // Load when trigger is within 300px of viewport bottom
 
-export function observeScrollTrigger(helper, triggerElementId) {
+// Persist scroll positions across component lifecycles (survives enhanced navigations).
+// Keyed by state key so each grid page remembers its own scroll position.
+window.__gridScrollPositions ??= {};
+
+export function observeScrollTrigger(helper, triggerElementId, stateKey) {
     // Clean up previous listener if any
     dispose();
 
@@ -16,6 +21,8 @@ export function observeScrollTrigger(helper, triggerElementId) {
         console.warn('[InfiniteScroll] Trigger element not found:', triggerElementId);
         return;
     }
+
+    activeStateKey = stateKey || null;
 
     // Capture helper and triggerElementId via closure — no module-level state needed.
     // No rAF throttling needed here — unlike TOC scroll-spy (which updates UI on every frame),
@@ -26,6 +33,11 @@ export function observeScrollTrigger(helper, triggerElementId) {
     function handleScroll() {
         const el = document.getElementById(triggerElementId);
         if (!el) return;
+
+        // Save scroll position on every scroll for back-button restoration
+        if (activeStateKey) {
+            window.__gridScrollPositions[activeStateKey] = window.scrollY;
+        }
 
         // Trigger when the element is within TRIGGER_MARGIN_PX of the viewport bottom
         // Same concept as IO rootMargin: '300px' but using scroll events
@@ -76,4 +88,16 @@ export function dispose() {
         if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-disposed:' + activeTriggerId);
         activeTriggerId = null;
     }
+    activeStateKey = null;
+}
+
+// Restores scroll position saved for the given state key.
+// Returns true if a position was restored, false otherwise.
+export function restoreScrollPosition(stateKey) {
+    const y = window.__gridScrollPositions[stateKey];
+    if (y != null && y > 0) {
+        window.scrollTo(0, y);
+        return true;
+    }
+    return false;
 }

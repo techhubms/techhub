@@ -31,6 +31,9 @@ public class SectionTests : BunitContext
         // SeoMetaTags requires BrandingService
         var config = new ConfigurationBuilder().Build();
         Services.AddScoped<BrandingService>(_ => new BrandingService(httpContextAccessor, config));
+
+        // ContentItemsGrid requires circuit-scoped state cache
+        Services.AddScoped<ContentGridStateCache>();
     }
 
     [Fact]
