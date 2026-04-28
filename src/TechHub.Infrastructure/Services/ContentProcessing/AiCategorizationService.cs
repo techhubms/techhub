@@ -269,7 +269,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
             }
 
             // All required fields validated — safe to generate slug and hash
-            var slug = GenerateSlug(title, source.PublishedAt);
+            var slug = GenerateSlug(title);
             var contentHash = ComputeHash(title + itemContent + excerpt);
 
             // Extract roundup metadata
@@ -444,11 +444,11 @@ public sealed class AiCategorizationService : IAiCategorizationService
             .ToList();
     }
 
-    private static string GenerateSlug(string title, DateTimeOffset date)
+    private static string GenerateSlug(string title)
     {
-        var datePrefix = date.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture);
-        var slugBase = Regex.Replace(title.ToLowerInvariant(), @"[^a-z0-9]+", "-").Trim('-');
-        return string.Create(CultureInfo.InvariantCulture, $"{datePrefix}-{slugBase}");
+        // Date prefix intentionally omitted — canonical slugs are title-only.
+        // Existing date-prefixed URLs are handled by UrlNormalizationMiddleware (301 redirect).
+        return Regex.Replace(title.ToLowerInvariant(), @"[^a-z0-9]+", "-").Trim('-');
     }
 
     private static string ComputeHash(string input)

@@ -158,4 +158,18 @@ public interface IContentRepository
     /// subsequent queries return fresh data from the database.
     /// </summary>
     void InvalidateCachedData();
+
+    /// <summary>
+    /// Find a content item by a legacy slug for redirect purposes.
+    /// Tries an exact slug match first, then falls back to stripping a YYYY-MM-DD- date prefix.
+    /// When sectionHint is provided, items in that section are preferred.
+    /// Among multiple matches the most recently published item wins.
+    /// For items in externally-linking collections (news, blogs, community) the returned URL
+    /// is the external source URL. For all other items it is the internal path.
+    /// Returns null if no matching published item is found.
+    /// </summary>
+    Task<LegacyRedirectResult?> FindByLegacySlugAsync(
+        string slug,
+        string? sectionHint = null,
+        CancellationToken ct = default);
 }

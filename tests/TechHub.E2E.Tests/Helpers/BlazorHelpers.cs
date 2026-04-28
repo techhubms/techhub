@@ -574,24 +574,7 @@ public static class BlazorHelpers
                     // Step 1: Blazor runtime must exist
                     if (typeof window.Blazor === 'undefined') return false;
 
-                    // Step 2: If web started but server circuit hasn't connected, optionally bail out.
-                    //
-                    // LOCAL/DEV/STAGING: If window.__e2e is present (Development + Staging have it),
-                    // we know we're in an E2E-tracked environment. NEVER bail out early — wait for the
-                    // circuit to fully establish (up to E2ETimeout). This is critical for remote
-                    // deployments (e.g., PR previews in Azure Sweden Central) where higher network
-                    // latency means the Blazor Server circuit can take >5s to establish.
-                    // Bailing out early would cause tests to click before @onclick handlers attach.
-                    //
-                    // PRODUCTION (no __e2e): Bail out after 5s. These tests only inspect SSR DOM
-                    // (URLs, meta tags, layout) and don't need @onclick handlers. Without this bail-out
-                    // every content detail test that genuinely cannot establish a circuit would wait
-                    // the full 60s timeout.
-                    if (!window.__e2e && window.__blazorWebReadyAt && !window.__blazorServerReady && !window.__blazorWasmReady) {
-                        if (Date.now() - window.__blazorWebReadyAt > 5000) return true;
-                    }
-
-                    // Step 3: Interactive Server/WASM circuit must be established.
+                    // Step 2: Interactive Server/WASM circuit must be established.
                     // __blazorServerReady is set by afterServerStarted() — SignalR circuit ready, event handlers attached.
                     // __blazorWasmReady  is set by afterWebAssemblyStarted() — WASM runtime ready.
                     // NOTE: __blazorWebReady (afterWebStarted) fires too early — before the interactive circuit
@@ -600,14 +583,14 @@ public static class BlazorHelpers
                         return false;
                     }
 
-                    // Step 4: Page scripts must not be actively loading
+                    // Step 3: Page scripts must not be actively loading
                     // __scriptsLoading is set true by markScriptsLoading() when page scripts start,
                     // and set false by markScriptsReady() when they complete.
                     // Only block if scripts are ACTIVELY loading. If both flags are undefined,
                     // the page has no page scripts (e.g., SectionCollection.razor) — proceed immediately.
                     if (window.__scriptsLoading === true) return false;
 
-                    // Step 5: Mermaid diagrams rendered (if present)
+                    // Step 4: Mermaid diagrams rendered (if present)
                     // Only wait if page has <pre class='mermaid'> elements that haven't been converted to SVG yet
                     const mermaidPres = document.querySelectorAll('pre.mermaid');
                     if (mermaidPres.length > 0) {

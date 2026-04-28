@@ -94,6 +94,24 @@ public class SubdomainRedirectMiddleware
                 return;
             }
 
+            // www.<primaryHost> → strip www and redirect to <primaryHost>
+            // e.g., www.tech.hub.ms → https://tech.hub.ms/
+            if (string.Equals(subdomain, "www", StringComparison.OrdinalIgnoreCase) && _primaryHosts.Contains(baseDomain))
+            {
+                var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
+                var canonicalHost = baseDomain.ToLowerInvariant();
+                var redirectUrl = $"https://{canonicalHost}{originalPath}{context.Request.QueryString}";
+
+                _logger.LogInformation(
+                    "www subdomain redirect: {Host} -> {RedirectUrl}",
+                    host,
+                    redirectUrl.Sanitize());
+
+                context.Response.StatusCode = StatusCodes.Status301MovedPermanently;
+                context.Response.Headers.Location = redirectUrl;
+                return;
+            }
+
             if (_shortcuts.TryGetValue(subdomain, out var sectionPath))
             {
                 // Known shortcut: redirect to the section path on the primary host.

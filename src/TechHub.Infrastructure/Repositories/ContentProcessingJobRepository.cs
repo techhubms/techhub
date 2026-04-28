@@ -193,7 +193,7 @@ SELECT id, started_at AS StartedAt, completed_at AS CompletedAt,
        transcripts_failed AS TranscriptsFailed,
        items_fixed AS ItemsFixed
 FROM content_processing_jobs
-ORDER BY started_at DESC
+ORDER BY started_at DESC, id DESC
 LIMIT @Count";
 
         var result = await _connection.QueryAsync<ContentProcessingJob>(

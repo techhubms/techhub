@@ -19,13 +19,5 @@
     <ProjectReference Include="..\TechHub.ServiceDefaults\TechHub.ServiceDefaults.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Update="processed-entries.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Update="skipped-entries.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 
 </Project>

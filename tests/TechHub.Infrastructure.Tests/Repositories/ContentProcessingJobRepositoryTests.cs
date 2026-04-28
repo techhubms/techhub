@@ -196,7 +196,7 @@ public class ContentProcessingJobRepositoryTests
         var id2 = await _repository.CreateAsync("manual", ct: CancellationToken.None);
 
         // Act
-        var jobs = await _repository.GetRecentAsync(10, CancellationToken.None);
+        var jobs = await _repository.GetRecentAsync(50, CancellationToken.None);
 
         // Assert
         jobs.Should().HaveCountGreaterThanOrEqualTo(2);
@@ -214,7 +214,7 @@ public class ContentProcessingJobRepositoryTests
         await _repository.CompleteAsync(jobId, 3, 7, 2, 1, 0, 0, "log content", ct: CancellationToken.None);
 
         // Act
-        var jobs = await _repository.GetRecentAsync(10, CancellationToken.None);
+        var jobs = await _repository.GetRecentAsync(50, CancellationToken.None);
         var job = jobs.FirstOrDefault(j => j.Id == jobId);
 
         // Assert — verify ALL fields are mapped (not defaulted)

@@ -81,18 +81,27 @@ public class InfiniteScrollWithTagsTests : PlaywrightTestBase
             // component believes more items may exist. However, the next batch may return 0 items
             // (e.g., when total items exactly equals the batch size), which replaces the scroll
             // trigger with end-of-content. Accept either outcome: more items OR end-of-content.
+            // Wait for EITHER: scroll listener ready OR end-of-content already appeared (race
+            // where Blazor re-renders between our check and this wait, replacing the trigger).
             await Page.WaitForConditionAsync(
-                $"() => window.__scrollListenerReady?.['scroll-trigger'] === true && document.getElementById('scroll-trigger') !== null");
+                "() => document.querySelector('.end-of-content') !== null || (window.__scrollListenerReady?.['scroll-trigger'] === true && document.getElementById('scroll-trigger') !== null)");
 
-            await Page.WaitForConditionAsync(
-                @"(firstBatch) => {
-                    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
-                    window.dispatchEvent(new Event('scroll'));
-                    const cardCount = document.querySelectorAll('.card').length;
-                    const endOfContent = document.querySelector('.end-of-content') !== null;
-                    return cardCount > firstBatch || endOfContent;
-                }",
-                firstBatchCount);
+            // If end-of-content appeared during the wait, skip scrolling entirely.
+            var endAlreadyReached = await Page.EvaluateAsync<bool>(
+                "() => document.querySelector('.end-of-content') !== null");
+
+            if (!endAlreadyReached)
+            {
+                await Page.WaitForConditionAsync(
+                    @"(firstBatch) => {
+                        window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'instant' });
+                        window.dispatchEvent(new Event('scroll'));
+                        const cardCount = document.querySelectorAll('.card').length;
+                        const endOfContent = document.querySelector('.end-of-content') !== null;
+                        return cardCount > firstBatch || endOfContent;
+                    }",
+                    firstBatchCount);
+            }
 
             // Verify that something happened (more items loaded or end reached)
             var afterScrollCount = await Page.Locator(".card").CountAsync();

@@ -60,6 +60,7 @@ public class AuthorsTests : BunitContext
         sectionCache.Initialize([]);
         Services.AddSingleton(sectionCache);
         Services.AddSingleton<ILogger<ContentItemsGrid>>(Mock.Of<ILogger<ContentItemsGrid>>());
+        Services.AddScoped<ContentGridStateCache>();
 
         AddBunitPersistentComponentState();
         SetRendererInfo(new RendererInfo("Server", true));

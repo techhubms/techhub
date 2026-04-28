@@ -66,16 +66,6 @@ public class StartupBackgroundService : BackgroundService
             await migrationRunner.RunMigrationsAsync(stoppingToken);
             _logger.LogInformation("✅ Database migrations completed");
 
-            // Seed processed URLs from legacy JSON files (one-time migration)
-            var processedUrlRepo = services.GetRequiredService<IProcessedUrlRepository>();
-            var processedUrlPaths = new[]
-            {
-                ResolvePath("processed-entries.json"),
-                ResolvePath("skipped-entries.json")
-            };
-            await processedUrlRepo.SeedFromJsonAsync(processedUrlPaths, stoppingToken);
-            _logger.LogInformation("✅ Processed URLs seeded (if table was empty)");
-
             // Abort any jobs left in 'running' state from a prior crash/restart
             var jobRepo = services.GetRequiredService<IContentProcessingJobRepository>();
             var aborted = await jobRepo.AbortRunningJobsAsync(stoppingToken);
@@ -128,9 +118,6 @@ public class StartupBackgroundService : BackgroundService
             throw;
         }
     }
-
-    private static string ResolvePath(string path) =>
-        Path.IsPathRooted(path) ? path : Path.Join(AppContext.BaseDirectory, path);
 
     private void LogDatabaseRecordCounts(IServiceProvider services)
     {

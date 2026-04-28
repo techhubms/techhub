@@ -8,7 +8,10 @@ namespace TechHub.E2E.Tests.Web;
 /// E2E tests for Google Analytics integration.
 /// GA4 is only active in non-Development environments when a measurement ID is configured.
 /// In E2E tests (Development mode), GA scripts should NOT be present.
+/// These tests are marked DevEnvironment because they assert development-mode behavior
+/// (GA absent) and must not run against production where GA is intentionally active.
 /// </summary>
+[Trait("Category", "DevEnvironment")]
 public class GoogleAnalyticsTests : PlaywrightTestBase
 {
     public GoogleAnalyticsTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
