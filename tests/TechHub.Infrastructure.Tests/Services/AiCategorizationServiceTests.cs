@@ -60,6 +60,7 @@ public class AiCategorizationServiceTests
         // Arrange
         var aiJson = """
             {
+                "included": true,
                 "title": "Azure AI Foundry Update",
                 "excerpt": "New features in Azure AI Foundry",
                 "collection": "news",
@@ -108,6 +109,7 @@ public class AiCategorizationServiceTests
         // Arrange
         var aiJson = """
             {
+                "included": true,
                 "title": "Copilot Studio GA",
                 "excerpt": "Copilot Studio is now generally available",
                 "collection": "news",
@@ -153,6 +155,7 @@ public class AiCategorizationServiceTests
         // Arrange — no "roundup" property
         var aiJson = """
             {
+                "included": true,
                 "title": "Some Article",
                 "excerpt": "An article",
                 "collection": "blogs",
@@ -185,6 +188,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns Option B (explanation only, no content fields)
         var aiJson = """
             {
+                "included": false,
                 "explanation": "Content excluded: sales pitch without educational value"
             }
             """;
@@ -209,6 +213,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns explanation only (Option B response), no content fields
         var aiJson = """
             {
+                "included": false,
                 "explanation": "Content excluded: not relevant to developer audience"
             }
             """;
@@ -235,6 +240,7 @@ public class AiCategorizationServiceTests
         // Arrange
         var aiJson = """
             {
+                "included": true,
                 "title": "What's New in .NET 10?",
                 "excerpt": "Overview of .NET 10 features",
                 "collection": "blogs",
@@ -268,6 +274,7 @@ public class AiCategorizationServiceTests
         // Arrange
         var aiJson = """
             {
+                "included": true,
                 "title": "Hash Test",
                 "excerpt": "Testing hash",
                 "collection": "blogs",
@@ -302,6 +309,7 @@ public class AiCategorizationServiceTests
         var wrappedJson = """
             ```json
             {
+                "included": true,
                 "title": "Code Fence Article",
                 "excerpt": "Wrapped in fence",
                 "collection": "news",
@@ -462,6 +470,7 @@ public class AiCategorizationServiceTests
         // Arrange — normal response with finish_reason "stop"
         var aiJson = """
             {
+                "included": true,
                 "title": "Normal Article",
                 "excerpt": "Normal excerpt",
                 "collection": "blogs",
@@ -529,6 +538,7 @@ public class AiCategorizationServiceTests
         // Arrange — first call times out, second succeeds
         var aiJson = """
             {
+                "included": true,
                 "title": "Timeout Retry Article",
                 "excerpt": "After timeout retry",
                 "collection": "news",
@@ -592,6 +602,7 @@ public class AiCategorizationServiceTests
         // Arrange — first call rate-limited, second succeeds
         var aiJson = """
             {
+                "included": true,
                 "title": "Rate Limited Article",
                 "excerpt": "After retry",
                 "collection": "news",
@@ -676,7 +687,7 @@ public class AiCategorizationServiceTests
     {
         // Arrange
         var aiJson = """
-            { "explanation": "Excluded" }
+            { "included": false, "explanation": "Excluded" }
             """;
         string? capturedBody = null;
         _aiClient
@@ -725,6 +736,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns a response with one or more required fields missing or invalid
         var aiJson = $$"""
             {
+                "included": true,
                 "title": "{{title}}",
                 "excerpt": "{{excerpt}}",
                 "sections": {{sectionsJson}},
@@ -755,6 +767,7 @@ public class AiCategorizationServiceTests
         // Arrange — sanity check: a fully valid response still works
         var aiJson = """
             {
+                "included": true,
                 "title": "Valid Article",
                 "excerpt": "A great excerpt",
                 "collection": "blogs",
@@ -788,6 +801,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns primary_section, it should be used as-is
         var aiJson = """
             {
+                "included": true,
                 "title": "Azure ML Article",
                 "excerpt": "About Azure ML",
                 "collection": "blogs",
@@ -818,6 +832,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI omits primary_section
         var aiJson = """
             {
+                "included": true,
                 "title": "No Primary",
                 "excerpt": "Missing primary",
                 "collection": "blogs",
@@ -847,6 +862,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns an invalid primary_section not in the known list
         var aiJson = """
             {
+                "included": true,
                 "title": "Invalid Primary",
                 "excerpt": "Bad primary section",
                 "collection": "blogs",
@@ -877,6 +893,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns primary_section that is valid but not in sections list
         var aiJson = """
             {
+                "included": true,
                 "title": "Mismatched Primary",
                 "excerpt": "Primary not in sections",
                 "collection": "blogs",
@@ -907,6 +924,7 @@ public class AiCategorizationServiceTests
         // Arrange — AI returns tags that are all whitespace
         var aiJson = """
             {
+                "included": true,
                 "title": "Whitespace Tags",
                 "excerpt": "An excerpt",
                 "collection": "blogs",
@@ -932,11 +950,138 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
+    public async Task CategorizeAsync_WithIncludedFalse_AndExplanation_TreatsAsSkip()
+    {
+        // Arrange — AI explicitly marks content as excluded with the included flag
+        var aiJson = """
+            {
+                "included": false,
+                "title": "Announcing TypeScript 6.0",
+                "explanation": "Excluded: No categories found. Content is about TypeScript 6.0 and does not substantially cover any predefined Microsoft technology categories."
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — legitimate skip (AI explicitly excluded), not a failure
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeFalse();
+        result.Explanation.Should().Contain("No categories found");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WithIncludedFalse_NoExplanation_TreatsAsFailure()
+    {
+        // Arrange — AI explicitly marks content as excluded but provides no explanation
+        var aiJson = """
+            {
+                "included": false
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — failure: excluded without explanation
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WithIncludedTrue_NoSections_TreatsAsFailure()
+    {
+        // Arrange — AI says included but provides no sections
+        var aiJson = """
+            {
+                "included": true,
+                "title": "Some Article",
+                "content": "Full content here",
+                "sections": [],
+                "explanation": "Included: relevant content"
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — failure: included but no sections
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WithNoIncludedFlag_NoSections_NoExplanation_TreatsAsFailure()
+    {
+        // Arrange — legacy response: no included flag, no sections, no explanation
+        var aiJson = """
+            {
+                "title": "Some Article",
+                "content": "Full content here",
+                "sections": []
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — failure: no way to determine intent
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeTrue();
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WithNoIncludedFlag_NoSections_WithExplanation_TreatsAsSkip()
+    {
+        // Arrange — legacy response: no included flag, no sections, but has explanation
+        var aiJson = """
+            {
+                "title": "TypeScript Release",
+                "explanation": "Excluded: Not relevant to any predefined category."
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — skip: legacy response with explanation
+        result.Item.Should().BeNull();
+        result.IsFailure.Should().BeFalse();
+        result.Explanation.Should().Contain("Not relevant");
+    }
+
+    [Fact]
     public async Task CategorizeAsync_WithExcerptOnly_NoContent_RejectsItem()
     {
         // Arrange — excerpt is present but content is empty
         var aiJson = """
             {
+                "included": true,
                 "title": "Excerpt Only",
                 "excerpt": "A solid excerpt",
                 "collection": "videos",

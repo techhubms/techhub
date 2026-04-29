@@ -1,5 +1,6 @@
 using System.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
 using Polly;
 using TechHub.Api.Endpoints;
@@ -114,9 +115,11 @@ builder.Services.AddScoped<ICustomPageDataRepository, CustomPageDataRepository>(
 builder.Services.AddScoped<IBackgroundJobSettingRepository, BackgroundJobSettingRepository>();
 
 // ─── Content Processing Pipeline ─────────────────────────────────────────────
-// Configure content processing options
-builder.Services.Configure<ContentProcessorOptions>(
-    builder.Configuration.GetSection(ContentProcessorOptions.SectionName));
+// Configure content processing options (fails at startup if YouTubeUserAgent is missing)
+builder.Services.AddOptionsWithValidateOnStart<ContentProcessorOptions>()
+    .Bind(builder.Configuration.GetSection(ContentProcessorOptions.SectionName))
+    .Validate(o => !string.IsNullOrWhiteSpace(o.YouTubeUserAgent),
+        "ContentProcessor:YouTubeUserAgent must be configured. Set it in appsettings.json or Key Vault.");
 builder.Services.Configure<AiCategorizationOptions>(
     builder.Configuration.GetSection(AiCategorizationOptions.SectionName));
 
@@ -126,8 +129,16 @@ builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJob
 // Repository for processed URL tracking (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
 
-// YouTube transcript fetcher (no HTTP client needed — uses YoutubeExplode internally)
-builder.Services.AddTransient<IYouTubeTranscriptService, YouTubeTranscriptService>();
+// YouTube transcript fetcher (yt-dlp first, YoutubeExplode fallback)
+builder.Services.AddTransient<YtDlpTranscriptService>();
+builder.Services.AddHttpClient<IYouTubeTranscriptService, YouTubeTranscriptService>()
+    .ConfigureHttpClient((sp, client) =>
+    {
+        var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(options.YouTubeUserAgent);
+        client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
+        client.Timeout = TimeSpan.FromSeconds(options.RequestTimeoutSeconds);
+    });
 
 // Typed HTTP clients for external API communication with Polly resilience
 builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()

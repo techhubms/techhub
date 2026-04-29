@@ -421,6 +421,21 @@ function Run {
         return $proc.ExitCode -eq 0
     }
 
+    # Run a test binary and return a result object distinguishing real failures from zero-test runs.
+    # Microsoft.Testing.Platform exit code 8 = no tests matched the filter (not a failure).
+    function Invoke-TestBinary {
+        param(
+            [string]$BinaryPath,
+            [string[]]$Arguments
+        )
+        $proc = Start-Process -FilePath $BinaryPath -ArgumentList $Arguments -NoNewWindow -Wait -PassThru
+        return @{
+            Success   = $proc.ExitCode -eq 0
+            ZeroTests = $proc.ExitCode -eq 8
+            ExitCode  = $proc.ExitCode
+        }
+    }
+
     # Get the compiled test binary path from a .csproj path
     function Get-TestBinaryPath {
         param([string]$CsprojPath)
@@ -801,9 +816,12 @@ function Run {
                 $testArgs += $extraFilters
             }
             
-            $success = Invoke-ExternalCommand $binaryPath $testArgs
-            
-            if (-not $success) {
+            $testResult = Invoke-TestBinary $binaryPath $testArgs
+
+            if ($testResult.ZeroTests) {
+                Write-Info "  No tests matched filter in $projectName — skipped"
+            }
+            elseif (-not $testResult.Success) {
                 Write-Host ""
                 Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
                 Write-Host "║                                                              ║" -ForegroundColor Red
@@ -1193,9 +1211,16 @@ function Run {
                 "--filter-class", "*PerformanceTests*"
             )
 
-            $apiPerfSuccess = Invoke-ExternalCommand $e2eBinaryPath $apiPerfTestArgs
+            $perfResult = Invoke-TestBinary $e2eBinaryPath $apiPerfTestArgs
 
-            if (-not $apiPerfSuccess) {
+            if ($perfResult.ZeroTests) {
+                Write-Host ""
+                Write-Host "════════════════════════════════════════" -ForegroundColor Yellow
+                Write-Host ""
+                Write-Info "No performance tests matched the current filter — skipped"
+                Write-Host ""
+            }
+            elseif (-not $perfResult.Success) {
                 Write-Host ""
                 Write-Host "════════════════════════════════════════" -ForegroundColor Red
                 Write-Host ""
@@ -1210,12 +1235,13 @@ function Run {
                 Write-Host ""
                 return $false
             }
-
-            Write-Host ""
-            Write-Host "════════════════════════════════════════" -ForegroundColor Green
-            Write-Host ""
-            Write-Success "Performance tests passed"
-            Write-Host ""
+            else {
+                Write-Host ""
+                Write-Host "════════════════════════════════════════" -ForegroundColor Green
+                Write-Host ""
+                Write-Success "Performance tests passed"
+                Write-Host ""
+            }
         }
         
         # Phase 2: Playwright browser tests against running servers
@@ -1237,9 +1263,23 @@ function Run {
         }
             
         # Run Playwright tests
-        $e2eSuccess = Invoke-ExternalCommand $e2eBinaryPath $e2eTestArgs
-            
-        if (-not $e2eSuccess) {
+        $e2eResult = Invoke-TestBinary $e2eBinaryPath $e2eTestArgs
+
+        if ($e2eResult.ZeroTests) {
+            Write-Host ""
+            Write-Host "════════════════════════════════════════" -ForegroundColor Yellow
+            Write-Host ""
+            if ($TestName) {
+                Write-Info "No Playwright tests matched filter '$TestName' — skipped"
+            }
+            else {
+                Write-Info "No Playwright tests found — skipped"
+            }
+            Write-Host ""
+            Write-Success "E2E tests passed (performance only)"
+            return $true
+        }
+        elseif (-not $e2eResult.Success) {
             Write-Host ""
             Write-Host "════════════════════════════════════════" -ForegroundColor Red
             Write-Host ""

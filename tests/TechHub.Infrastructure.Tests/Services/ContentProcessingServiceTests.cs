@@ -45,7 +45,7 @@ public class ContentProcessingServiceTests
 
     private ContentProcessingService CreateService(ContentProcessorOptions? options = null, TimeProvider? timeProvider = null)
     {
-        var opts = options ?? new ContentProcessorOptions();
+        var opts = options ?? new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0" };
 
         // EnrichWithContentAsync returns the item unchanged by default
         _articleService
@@ -368,7 +368,7 @@ public class ContentProcessingServiceTests
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync((RawFeedItem r, CancellationToken _) => new CategorizationResult { Item = CreateProcessedItem(r.ExternalUrl, $"max-limit-{r.Title.Split(' ').Last()}"), Explanation = "Included" });
 
-        var sut = CreateService(new ContentProcessorOptions { MaxItemsPerRun = 2 });
+        var sut = CreateService(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", MaxItemsPerRun = 2 });
 
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
@@ -451,7 +451,7 @@ public class ContentProcessingServiceTests
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = CreateProcessedItem(ytItem.ExternalUrl, "yt-merge-test"), Explanation = "Included" });
 
-        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 10 });
+        var sut = CreateService(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 10 });
 
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
@@ -788,7 +788,7 @@ public class ContentProcessingServiceTests
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
         _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
 
-        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+        var sut = CreateService(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
 
         // Override default article service mock to simulate transcript fetch succeeding
         _articleService
@@ -840,7 +840,7 @@ public class ContentProcessingServiceTests
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
         _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
 
-        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+        var sut = CreateService(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
 
         // CreateService already sets up EnrichWithContentAsync to return item unchanged (no transcript)
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
@@ -905,7 +905,7 @@ public class ContentProcessingServiceTests
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
         _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
 
-        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+        var sut = CreateService(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
 
         // CreateService sets up EnrichWithContentAsync to return item unchanged (no transcript)
 
@@ -948,7 +948,7 @@ public class ContentProcessingServiceTests
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
         _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
 
-        var sut = CreateService(new ContentProcessorOptions { MaxYouTubeTagCount = 0 });
+        var sut = CreateService(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
 
         // Override default article service mock to simulate transcript fetch succeeding
         _articleService
@@ -1005,6 +1005,7 @@ public class ContentProcessingServiceTests
         // Arrange
         var options = new ContentProcessorOptions
         {
+            YouTubeUserAgent = "TestAgent/1.0",
             SubcollectionRules =
             [
                 new SubcollectionRule
@@ -1030,6 +1031,7 @@ public class ContentProcessingServiceTests
         // Arrange
         var options = new ContentProcessorOptions
         {
+            YouTubeUserAgent = "TestAgent/1.0",
             SubcollectionRules =
             [
                 new SubcollectionRule
@@ -1055,6 +1057,7 @@ public class ContentProcessingServiceTests
         // Arrange
         var options = new ContentProcessorOptions
         {
+            YouTubeUserAgent = "TestAgent/1.0",
             SubcollectionRules =
             [
                 new SubcollectionRule
@@ -1125,6 +1128,7 @@ public class ContentProcessingServiceTests
 
         var options = new ContentProcessorOptions
         {
+            YouTubeUserAgent = "TestAgent/1.0",
             SubcollectionRules =
             [
                 new SubcollectionRule
@@ -1185,6 +1189,7 @@ public class ContentProcessingServiceTests
 
         var options = new ContentProcessorOptions
         {
+            YouTubeUserAgent = "TestAgent/1.0",
             SubcollectionRules =
             [
                 new SubcollectionRule

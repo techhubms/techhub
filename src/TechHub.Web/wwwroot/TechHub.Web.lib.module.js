@@ -51,8 +51,10 @@ export function afterWebStarted(blazor) {
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-web-ready');
     console.debug('[TechHub] Blazor Web started');
 
-    // Enable browser's native scroll restoration for back/forward navigation
-    // This prevents any JavaScript from interfering with scroll position restoration
+    // Enable browser's native scroll restoration for back/forward navigation.
+    // This works together with infinite-scroll.js's restoreScrollPosition (which handles
+    // infinite-scroll pages specifically) and nav-helpers.js's resetPagePosition (which
+    // scrolls to top on forward navigation only).
     if ('scrollRestoration' in history) {
         history.scrollRestoration = 'auto';
     }

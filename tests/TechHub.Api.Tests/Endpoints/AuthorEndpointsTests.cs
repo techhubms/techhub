@@ -105,15 +105,15 @@ public class AuthorEndpointsTests : IClassFixture<TechHubIntegrationTestApiFacto
     }
 
     [Fact]
-    public async Task GetAuthorItems_WithNonExistentAuthor_ReturnsNotFound()
+    public async Task GetAuthorItems_WithNonExistentAuthor_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync(
             "/api/authors/NonExistentAuthorXYZ123/items",
             TestContext.Current.CancellationToken);
 
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        // Assert - returns 204 No Content (this is a lookup, not a page request)
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]

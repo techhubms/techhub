@@ -841,6 +841,10 @@ public class Example { }
 
 Return a JSON object with these fields:
 
+**included** (boolean, REQUIRED)
+
+- Must be `true` for included content, `false` otherwise
+
 **title** (string, max 120 characters)
 
 - Use INPUT title if it fits within 120 characters
@@ -959,7 +963,11 @@ Include a `roundup` object with metadata for weekly roundup generation:
 
 ### Option B: Content Does Not Qualify (No Sections)
 
-Return a JSON object with only this field:
+Return a JSON object with these fields:
+
+**included** (boolean, REQUIRED)
+
+- Must be `false` for excluded content
 
 **explanation** (string)
 
@@ -974,6 +982,7 @@ Return a JSON object with only this field:
 
 ```json
 {
+  "included": true,
   "title": "Getting Started with Azure OpenAI Service in C#",
   "sections": ["ai", "azure", "dotnet"],
   "primary_section": "ai",
@@ -997,6 +1006,7 @@ Return a JSON object with only this field:
 
 ```json
 {
+  "included": false,
   "explanation": "Excluded: Biographical Focus. Content is primarily about a single individual's career journey rather than technical content."
 }
 ```

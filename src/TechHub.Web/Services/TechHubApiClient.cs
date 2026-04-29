@@ -726,9 +726,9 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Fetching items for author: {AuthorName}", authorName);
             var response = await _httpClient.GetAsync(url, cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
-                _logger.LogWarning("Author not found: {AuthorName}", authorName);
+                _logger.LogDebug("No content found for author: {AuthorName}", authorName);
                 return null;
             }
 
@@ -1711,7 +1711,7 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Looking up legacy slug: {Slug}", slug);
             using var response = await _httpClient.GetAsync(url, cancellationToken);
 
-            if (response.StatusCode is System.Net.HttpStatusCode.NotFound
+            if (response.StatusCode is System.Net.HttpStatusCode.NoContent
                 or System.Net.HttpStatusCode.BadRequest)
             {
                 return null;

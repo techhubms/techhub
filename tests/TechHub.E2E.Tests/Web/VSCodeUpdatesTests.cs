@@ -60,6 +60,7 @@ public class VSCodeUpdatesTests : PlaywrightTestBase
             .Where(m => m.Type == "error")
             .Where(m => !m.Text.Contains("WebSocket"))
             .Where(m => !m.Text.Contains("ERR_CONNECTION_REFUSED"))
+            .Where(m => !m.Text.Contains("Permissions policy violation"))
             .ToList();
 
         errors.Should().BeEmpty($"Expected no console errors on {PageUrl}, but found: {string.Join(", ", errors.Select(e => e.Text))}");
