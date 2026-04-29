@@ -1759,6 +1759,31 @@ LIMIT @Limit OFFSET @Offset";
         return rows > 0;
     }
 
+    /// <inheritdoc/>
+    public async Task<bool> UpdateGhcFeaturePlansAsync(
+        string slug,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        bool draft,
+        CancellationToken ct = default)
+    {
+        var plansCsv = string.Join(",", plans);
+
+        const string Sql = @"
+UPDATE content_items
+SET plans        = @Plans,
+    ghes_support = @GhesSupport,
+    draft        = @Draft,
+    updated_at   = NOW()
+WHERE slug = @Slug
+  AND collection_name = 'videos'
+  AND subcollection_name = 'ghc-features'";
+
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new { Plans = plansCsv, GhesSupport = ghesSupport, Draft = draft, Slug = slug }, cancellationToken: ct));
+        return rows > 0;
+    }
+
     // ==================== Cache Invalidation ====================
 
     /// <inheritdoc/>

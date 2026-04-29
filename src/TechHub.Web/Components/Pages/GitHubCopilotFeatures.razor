@@ -78,7 +78,7 @@
                                 @foreach (var feature in sectionVideos)
                                 {
                                     var featureId = $"feature-{feature.Slug}";
-                                    var videoId = GetYouTubeVideoId(feature.ExternalUrl);
+                                    var videoId = feature.Draft ? null : GetYouTubeVideoId(feature.ExternalUrl);
 
                                     @if (!string.IsNullOrEmpty(videoId))
                                     {

@@ -4,6 +4,7 @@ using TechHub.Core.Logging;
 using TechHub.Core.Models.Admin;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Services;
+using TechHub.Infrastructure.Services.ContentProcessing;
 
 namespace TechHub.Api.Endpoints;
 
@@ -180,6 +181,22 @@ public static class AdminEndpoints
         group.MapPost("/content-items/preview-markdown", PreviewMarkdownAsync)
             .WithName("PreviewMarkdown")
             .WithSummary("Render raw markdown to HTML for preview");
+
+        // ── GHC feature plans ────────────────────────────────────────────────
+
+        group.MapPut("/ghc-features/{slug}/plans", UpdateGhcFeaturePlansAsync)
+            .WithName("UpdateGhcFeaturePlans")
+            .WithSummary("Update subscription plans, GHES support, and draft status for a ghc-features video");
+
+        group.MapDelete("/ghc-features/{slug}", DeleteGhcFeatureAsync)
+            .WithName("DeleteGhcFeature")
+            .WithSummary("Delete a ghc-features video from the database");
+
+        // ── Ad-hoc URL processing ────────────────────────────────────────────
+
+        group.MapPost("/urls/process", ProcessAdHocUrlAsync)
+            .WithName("ProcessAdHocUrl")
+            .WithSummary("Process a single URL outside the RSS pipeline");
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
@@ -800,6 +817,149 @@ public static class AdminEndpoints
 
         contentRepo.InvalidateCachedData();
         return Results.NoContent();
+    }
+
+    // ── GHC feature plans handlers ───────────────────────────────────────────
+
+    private static readonly HashSet<string> _validPlanNames =
+        ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
+
+    private static async Task<IResult> UpdateGhcFeaturePlansAsync(
+        string slug,
+        GhcFeaturePlansUpdateRequest request,
+        IContentRepository contentRepo,
+        CancellationToken ct)
+    {
+        slug = slug.Trim().Sanitize();
+
+        if (request.Plans is null || request.Plans.Count == 0)
+        {
+            return Results.BadRequest("At least one plan is required.");
+        }
+
+        var invalidPlan = request.Plans.FirstOrDefault(p => !_validPlanNames.Contains(p));
+        if (invalidPlan is not null)
+        {
+            return Results.BadRequest($"Invalid plan name '{invalidPlan}'. Valid plans: {string.Join(", ", _validPlanNames)}.");
+        }
+
+        var updated = await contentRepo.UpdateGhcFeaturePlansAsync(slug, request.Plans, request.GhesSupport, request.Draft, ct);
+        if (!updated)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.NoContent();
+    }
+
+    private static async Task<IResult> DeleteGhcFeatureAsync(
+        string slug,
+        IContentRepository contentRepo,
+        CancellationToken ct)
+    {
+        slug = slug.Trim().Sanitize();
+
+        var deleted = await contentRepo.DeleteContentItemAsync("videos", slug, ct);
+        if (!deleted)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.NoContent();
+    }
+
+    // ── Ad-hoc URL processing handlers ──────────────────────────────────────
+
+    private static readonly HashSet<string> _validCollectionNames =
+        ["blogs", "news", "videos", "community"];
+
+    private static async Task<IResult> ProcessAdHocUrlAsync(
+        AdHocUrlProcessRequest request,
+        ContentProcessingService processingService,
+        IContentRepository contentRepo,
+        CancellationToken ct)
+    {
+        // Validate URL
+        if (string.IsNullOrWhiteSpace(request.Url)
+            || !Uri.TryCreate(request.Url.Trim(), UriKind.Absolute, out var uri)
+            || (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        {
+            return Results.BadRequest("A valid HTTP or HTTPS URL is required.");
+        }
+
+        // Validate collection
+        var collection = request.CollectionName?.Trim().ToLowerInvariant() ?? string.Empty;
+        if (!_validCollectionNames.Contains(collection))
+        {
+            return Results.BadRequest(
+                $"Invalid collection '{request.CollectionName}'. Valid collections: {string.Join(", ", _validCollectionNames)}.");
+        }
+
+        // Validate ghc-features constraints
+        string? subcollection = null;
+        if (request.IsGhcFeature)
+        {
+            var isYouTube = request.Url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
+                || request.Url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
+            if (!isYouTube)
+            {
+                return Results.BadRequest("GitHub Copilot Feature videos must be YouTube URLs.");
+            }
+
+            if (request.Plans is null || request.Plans.Count == 0)
+            {
+                return Results.BadRequest("At least one plan is required for GitHub Copilot Feature videos.");
+            }
+
+            var invalidPlan = request.Plans.FirstOrDefault(p => !_validPlanNames.Contains(p));
+            if (invalidPlan is not null)
+            {
+                return Results.BadRequest(
+                    $"Invalid plan name '{invalidPlan}'. Valid plans: {string.Join(", ", _validPlanNames)}.");
+            }
+
+            subcollection = "ghc-features";
+        }
+
+        var sanitizedUrl = request.Url.Trim().Sanitize();
+        var feedName = !string.IsNullOrWhiteSpace(request.FeedName)
+            ? request.FeedName.Trim().Sanitize()
+            : "TechHub";
+        var titleHint = !string.IsNullOrWhiteSpace(request.TitleHint)
+            ? request.TitleHint.Trim().Sanitize()
+            : null;
+
+        var result = await processingService.ProcessSingleAsync(
+            sanitizedUrl,
+            collection,
+            feedName,
+            subcollection,
+            titleHint,
+            ct);
+
+        if (result is null)
+        {
+            return Results.Conflict(new { message = "This URL has already been processed." });
+        }
+
+        // If ghc-features, update plans/ghesSupport on the newly-created item
+        if (subcollection == "ghc-features"
+            && result.Outcome == AdHocUrlProcessOutcome.Added
+            && result.Slug is not null)
+        {
+            await contentRepo.UpdateGhcFeaturePlansAsync(result.Slug, request.Plans, request.GhesSupport, draft: false, ct);
+        }
+
+        contentRepo.InvalidateCachedData();
+
+        return result.Outcome switch
+        {
+            AdHocUrlProcessOutcome.Added => Results.Ok(result),
+            AdHocUrlProcessOutcome.Skipped => Results.Ok(result),
+            _ => Results.UnprocessableEntity(result)
+        };
     }
 }
 

@@ -19,6 +19,7 @@
             <p class="admin-page-subtitle">View and manage content items in the database — delete entries to remove content and associated processed URLs</p>
         </div>
         <div class="admin-actions">
+            <button class="btn" @onclick="OpenAddContentModal">+ Add Content Item</button>
             <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
         </div>
     </div>
@@ -146,6 +147,10 @@
                         OnSave="SaveContentItemAsync"
                         OnClose="CloseContentItemEditor" />
 
+<AddContentModal IsOpen="@_addContentOpen"
+                 OnClose="CloseAddContentModal"
+                 OnItemAdded="OnContentItemAddedAsync" />
+
 @code {
     private const int PageSize = 100;
 
@@ -172,6 +177,9 @@
     private ContentItemEditData? _editorData;
     private string _editorCollectionName = string.Empty;
     private string _editorSlug = string.Empty;
+
+    // Add content modal
+    private bool _addContentOpen;
 
     // Feed name dropdown options
     private IReadOnlyList<string>? _feedNames;
@@ -372,4 +380,15 @@
     }
 
     private void CloseContentItemEditor() => _editorOpen = false;
+
+    private void OpenAddContentModal() => _addContentOpen = true;
+
+    private void CloseAddContentModal() => _addContentOpen = false;
+
+    private async Task OnContentItemAddedAsync()
+    {
+        _message = "Content item added successfully.";
+        _messageIsError = false;
+        await LoadDataAsync();
+    }
 }

@@ -20,9 +20,10 @@ public class AppSettings
 public class ContentSettings
 {
     /// <summary>
-    /// Path to collections directory (relative to repository root)
+    /// Path to collections directory. Only used for test data seeding.
+    /// Not required in production — custom page data is managed via the admin UI.
     /// </summary>
-    public required string CollectionsPath { get; init; }
+    public string? CollectionsPath { get; init; }
 
     /// <summary>
     /// Sections configuration (replaces sections.json file)

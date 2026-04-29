@@ -678,7 +678,6 @@ $apiEnvVars = @(
     "OTEL_SERVICE_NAME=techhub-api",
     "Database__Provider=PostgreSQL",
     "Database__ConnectionString=secretref:db-connection-string",
-    "AppSettings__Content__CollectionsPath=/app/collections",
     "AppSettings__BaseUrl=https://$webPrFqdn",
     "TECHHUB_TMP=/tmp/techhub",
     "Cors__AllowedOrigins__0=https://$webPrFqdn"

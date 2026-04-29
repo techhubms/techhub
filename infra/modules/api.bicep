@@ -72,10 +72,6 @@ var staticEnvVars = [
     secretRef: 'db-connection-string'
   }
   {
-    name: 'AppSettings__Content__CollectionsPath'
-    value: '/app/collections'
-  }
-  {
     name: 'AppSettings__BaseUrl'
     value: !empty(webFqdns) ? 'https://${webFqdns[0]}' : 'https://${containerAppName}.azurecontainerapps.io'
   }

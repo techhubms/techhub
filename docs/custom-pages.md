@@ -110,7 +110,7 @@ If the data cannot be constructed or the page definition is missing.
 
 Custom pages content is hydrated from:
 
-1. **Database** (`custom_page_data` table) — JSON objects representing the structured data are stored directly in the database. Admin users can edit the JSON directly from the admin UI.
+1. **Database** (`custom_page_data` table) — JSON objects representing the structured data are stored directly in the database. Admin users can edit the JSON from the admin UI. This is the **only** source of truth for custom page data (database-first).
 2. **Aggregation of items** from standard collections (e.g., Features page aggregates data from collection items)
 
 ### Admin Management

@@ -34,7 +34,6 @@ If your change spans directories (e.g., API + Web + Tests), read the `AGENTS.md`
 - `tests/TechHub.E2E.Tests/` — E2E test conventions
 - `tests/TechHub.TestUtilities/` — Test utilities conventions
 - `tests/powershell/` — PowerShell test conventions
-- `collections/` — Content collection rules
 - `scripts/` — Script conventions
 - `docs/` — Documentation rules
 

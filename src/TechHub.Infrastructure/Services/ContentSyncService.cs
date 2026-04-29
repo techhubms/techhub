@@ -81,7 +81,7 @@ public class ContentSyncService : IContentSyncService
         _logger = logger;
         _dialect = dialect;
         _options = options.Value;
-        _collectionsPath = contentOptions.Value.CollectionsPath;
+        _collectionsPath = contentOptions.Value.CollectionsPath ?? string.Empty;
     }
 
     public async Task<SyncResult> SyncAsync(CancellationToken ct = default)

@@ -39,7 +39,6 @@ services:
       - TECHHUB_TMP=/tmp/techhub
       - Database__Provider=PostgreSQL
       - Database__ConnectionString=Host=postgres;Database=techhub;Username=techhub;Password=localdev
-      - AppSettings__Content__CollectionsPath=/app/collections
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://aspire-dashboard:18889
       - OTEL_SERVICE_NAME=techhub-api
     ports:

@@ -18,6 +18,7 @@
 .PARAMETER Target
     Target environment to restore the database into. Options:
     - local:   Restores to the local Docker Compose PostgreSQL instance.
+    - disk:    Dumps to the .tmp/ folder only (no restore). Useful for backups.
 
 .PARAMETER ProductionConnectionString
     Optional. Full PostgreSQL connection string for the production database.
@@ -51,13 +52,17 @@
     ./scripts/Restore-Database.ps1 -Target local -SkipRestore
 
 .EXAMPLE
+    # Backup production data to .tmp/ folder
+    ./scripts/Restore-Database.ps1 -Target disk
+
+.EXAMPLE
     # Restore a previously downloaded dump to local
     ./scripts/Restore-Database.ps1 -Target local -SkipDump -OutputPath .tmp/db-restore-20260101.dump
 #>
 
 param(
     [Parameter(Mandatory = $true)]
-    [ValidateSet('local')]
+    [ValidateSet('local', 'disk')]
     [string]$Target,
 
     [Parameter(Mandatory = $false)]
@@ -95,7 +100,8 @@ if (-not (Test-Path $tmpDir)) {
 
 $timestamp = Get-Date -Format 'yyyyMMddHHmmss'
 if (-not $OutputPath) {
-    $OutputPath = Join-Path $tmpDir "db-restore-$timestamp.dump"
+    $prefix = if ($Target -eq 'disk') { 'db-backup' } else { 'db-restore' }
+    $OutputPath = Join-Path $tmpDir "$prefix-$timestamp.dump"
 }
 
 # Default local connection string (matches docker-compose.yml)
@@ -373,6 +379,11 @@ if (-not $TargetConnectionString) {
         $TargetConnectionString = $localConnectionString
         Write-Ok "Target: local Docker Compose PostgreSQL"
     }
+    elseif ($Target -eq 'disk') {
+        # Disk target only dumps — no target connection needed.
+        $SkipRestore = $true
+        Write-Ok "Target: disk (.tmp/ backup only)"
+    }
 }
 
 # ============================================================================
@@ -469,6 +480,26 @@ if (-not $SkipRestore) {
             exit 1
         }
         Write-Ok "Local password reset for role '$localUser'"
+
+        # Disable all RSS feeds so background processing doesn't run against
+        # restored production data in the local dev environment.
+        Write-Step "Disabling RSS feeds to prevent background processing"
+        $env:PGPASSWORD = $localPassword
+        & psql `
+            --host $targetPgEnv.PGHOST `
+            --port $targetPgEnv.PGPORT `
+            --username $localUser `
+            --dbname $targetPgEnv.PGDATABASE `
+            --no-password `
+            -c "UPDATE rss_feed_configs SET enabled = FALSE WHERE enabled = TRUE;"
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "   [WARN] Failed to disable RSS feeds — you may want to disable them manually from /admin/feeds" -ForegroundColor Yellow
+        }
+        else {
+            Write-Ok "All RSS feeds disabled (re-enable from /admin/feeds as needed)"
+        }
+        $env:PGPASSWORD = $null
     }
 }
 else {

@@ -1684,6 +1684,84 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    /// <inheritdoc/>
+    public virtual async Task UpdateGhcFeaturePlansAsync(
+        string slug,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        bool draft,
+        CancellationToken cancellationToken = default)
+    {
+        slug = slug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}/plans",
+                new { Plans = plans, GhesSupport = ghesSupport, Draft = draft },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update plans for ghc-feature slug {Slug}", slug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<bool> DeleteGhcFeatureAsync(
+        string slug,
+        CancellationToken cancellationToken = default)
+    {
+        slug = slug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}",
+                cancellationToken);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return false;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return true;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete ghc-feature slug {Slug}", slug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<AdHocUrlProcessResult?> ProcessAdHocUrlAsync(
+        AdHocUrlProcessRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                "/api/admin/urls/process",
+                request,
+                cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<AdHocUrlProcessResult>(cancellationToken);
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to process ad-hoc URL {Url}", request.Url);
+            throw;
+        }
+    }
+
     private sealed class MarkdownPreviewResponse
     {
         public string? Html { get; init; }

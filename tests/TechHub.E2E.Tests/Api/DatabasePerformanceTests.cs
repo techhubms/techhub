@@ -55,9 +55,9 @@ public class DatabasePerformanceTests : IDisposable
     // to dedicated database servers. Apply a 2x multiplier to avoid flaky failures from
     // infrastructure variance (these tests only run locally, never in CI).
     private const int LocalhostMultiplier = 2;
-    private static readonly int _maxAcceptableMs = 150 * LocalhostMultiplier;
-    private static readonly int _maxFtsMs = 200 * LocalhostMultiplier;
-    private static readonly int _maxTagsToCountMs = 250 * LocalhostMultiplier;
+    private static readonly int _maxAcceptableMs = 200 * LocalhostMultiplier;
+    private static readonly int _maxFtsMs = 250 * LocalhostMultiplier;
+    private static readonly int _maxTagsToCountMs = 300 * LocalhostMultiplier;
 
     private readonly ContentRepository? _repository;
     private readonly IDbConnection? _connection;

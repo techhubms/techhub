@@ -787,9 +787,16 @@ select.admin-input {
 
 .admin-modal-footer {
     display: flex;
+    align-items: center;
     gap: var(--spacing-1);
     padding: var(--spacing-2) var(--spacing-3);
     border-top: 1px solid var(--color-border-default);
+}
+
+.admin-modal-footer-right {
+    display: flex;
+    gap: var(--spacing-1);
+    margin-left: auto;
 }
 
 /* ─── Content Reviews ─────────────────────────────────────────────────────── */

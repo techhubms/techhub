@@ -28,4 +28,4 @@ Unit and integration tests for the Infrastructure layer. Validates repositories,
 
 ## Test Data
 
-Tests use real content from `collections/` directory and `TestCollections/` folder.
+Tests use real content from the `TestCollections/` folder.

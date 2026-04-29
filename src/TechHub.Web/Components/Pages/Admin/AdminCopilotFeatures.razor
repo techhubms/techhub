@@ -1,0 +1,454 @@
+@page "/admin/copilot-features"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject PersistentComponentState ApplicationState
+@inject ILogger<AdminCopilotFeatures> Logger
+
+<PageTitle>Copilot Features — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">Copilot Features</h1>
+            <p class="admin-page-subtitle">Manage subscription tier assignments for GitHub Copilot feature videos</p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="LoadFeaturesAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading features…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_items == null || _items.Count == 0)
+    {
+        <div class="admin-empty">No ghc-features videos found in the database.</div>
+    }
+    else
+    {
+        <div class="admin-result-summary">@_items.Count feature@(_items.Count == 1 ? "" : "s")</div>
+
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table features-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Plans</th>
+                        <th>GHES</th>
+                        <th>Draft</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in _items)
+                    {
+                        <tr>
+                            <td>
+                                @if (item.Draft)
+                                {
+                                    <span class="features-title-text">@item.Title</span>
+                                }
+                                else
+                                {
+                                    <a href="/@item.PrimarySectionName/@item.CollectionName/@item.Slug" class="features-title-link">
+                                        @item.Title
+                                    </a>
+                                }
+                            </td>
+                            <td class="admin-cell-mono">@item.Slug</td>
+                            <td>
+                                <div class="features-plans-badges">
+                                    @foreach (var plan in item.Plans)
+                                    {
+                                        <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
+                                    }
+                                </div>
+                            </td>
+                            <td>
+                                @if (item.GhesSupport)
+                                {
+                                    <span class="badge-success">✓</span>
+                                }
+                                else
+                                {
+                                    <span class="admin-cell-mono">—</span>
+                                }
+                            </td>
+                            <td>
+                                @if (item.Draft)
+                                {
+                                    <span class="badge-warning">Draft</span>
+                                }
+                                else
+                                {
+                                    <span class="admin-cell-mono">—</span>
+                                }
+                            </td>
+                            <td>
+                                <button class="admin-link-btn" @onclick="() => OpenEditor(item)">Edit</button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@* ── Plans editor modal ── *@
+@if (_editorOpen && _editing != null)
+{
+    <div class="admin-modal-backdrop" @onclick="CloseEditor">
+        <div class="admin-modal" @onclick:stopPropagation>
+            <div class="admin-modal-header">
+                <h2 class="admin-modal-title">@(_editingDraft ? "Edit Draft" : "Edit Feature")</h2>
+                <button class="admin-modal-close" @onclick="CloseEditor" aria-label="Close">✕</button>
+            </div>
+
+            <div class="admin-modal-body">
+                <div class="features-editor-title">
+                    @_editing.Title
+                    @if (!_editingDraft && !string.IsNullOrWhiteSpace(_editing.ExternalUrl))
+                    {
+                        <span class="features-editor-title-link">(<a href="@_editing.ExternalUrl" target="_blank" rel="noopener">@_editing.ExternalUrl</a>)</span>
+                    }
+                </div>
+
+                <fieldset class="features-plans-fieldset">
+                    <legend class="features-plans-legend">Subscription Tier</legend>
+                    @foreach (var group in _planGroups)
+                    {
+                        var isChecked = _editingPlanGroup == group.Key;
+                        <label class="features-plan-radio-label">
+                            <input type="radio"
+                                   name="plan-group"
+                                   value="@group.Key"
+                                   checked="@isChecked"
+                                   @onchange="() => _editingPlanGroup = group.Key" />
+                            <span class="features-plan-radio-name">@group.Label</span>
+                            <span class="features-plan-radio-badges">
+                                @foreach (var plan in group.Plans)
+                                {
+                                    <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
+                                }
+                            </span>
+                        </label>
+                    }
+                </fieldset>
+
+                <div class="features-editor-options">
+                    <label class="features-ghes-label">
+                        <input type="checkbox" @bind="_editingGhesSupport" />
+                        <span>GHES Support</span>
+                    </label>
+                </div>
+
+                @if (_editingDraft)
+                {
+                    <div class="features-publish-section">
+                        <p class="features-publish-heading">Publish from YouTube</p>
+                        <p class="features-publish-hint">Enter the YouTube URL to process and replace this draft with the published video. Plans and GHES settings will be preserved.</p>
+                        <input type="url"
+                               class="admin-input features-publish-input"
+                               placeholder="https://youtu.be/..."
+                               @bind="_publishUrl"
+                               disabled="@_publishing" />
+                        @if (_publishError != null)
+                        {
+                            <div class="admin-alert admin-alert-error">@_publishError</div>
+                        }
+                    </div>
+                }
+
+            </div>
+
+            <div class="admin-modal-footer">
+                @if (_confirmingDelete)
+                {
+                    <span class="features-delete-confirm-text">Delete <strong>@_editing?.Title</strong>? This cannot be undone.</span>
+                    <button class="btn-danger" @onclick="ExecuteDeleteAsync" disabled="@(_saving || _publishing)">Confirm Delete</button>
+                    <button class="btn-secondary" @onclick="() => _confirmingDelete = false" disabled="@(_saving || _publishing)">Cancel</button>
+                }
+                else
+                {
+                    <button class="btn-danger" @onclick="() => _confirmingDelete = true" disabled="@(_saving || _publishing)">Delete</button>
+                    <div class="admin-modal-footer-right">
+                        <button class="btn-secondary" @onclick="CloseEditor" disabled="@(_saving || _publishing)">Cancel</button>
+                        @if (_editingDraft)
+                        {
+                            <button class="btn-secondary" @onclick="SavePlansAsync" disabled="@(_saving || _publishing || _editingPlanGroup is null)">
+                                @(_saving ? "Saving…" : "Save")
+                            </button>
+                            <button class="btn" @onclick="PublishDraftAsync" disabled="@(_saving || _publishing || string.IsNullOrWhiteSpace(_publishUrl) || _editingPlanGroup is null)">
+                                @(_publishing ? "Publishing…" : "Publish")
+                            </button>
+                        }
+                        else
+                        {
+                            <button class="btn" @onclick="SavePlansAsync" disabled="@(_saving || _publishing || _editingPlanGroup is null)">
+                                @(_saving ? "Saving…" : "Save")
+                            </button>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    private sealed record PlanGroup(int Key, string Label, string[] Plans);
+
+    private static readonly PlanGroup[] _planGroups =
+    [
+        new(0, "Free", ["Free"]),
+        new(1, "Student / Pro / Business", ["Student", "Pro", "Business"]),
+        new(2, "Pro+ / Enterprise", ["Pro+", "Enterprise"]),
+    ];
+
+    private bool _loading = true;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+    private List<ContentItem> _items = [];
+
+    private bool _editorOpen;
+    private ContentItem? _editing;
+    private int? _editingPlanGroup;
+    private bool _editingGhesSupport;
+    private bool _editingDraft;
+    private bool _saving;
+    private bool _confirmingDelete;
+    private string _publishUrl = "";
+    private string? _publishError;
+    private bool _publishing;
+
+    private PersistingComponentStateSubscription _persistSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<List<ContentItem>>("admin-copilot-features", out var persisted) && persisted != null)
+        {
+            _items = persisted;
+            _loading = false;
+            return;
+        }
+
+        await LoadFeaturesAsync();
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("admin-copilot-features", _items);
+        return Task.CompletedTask;
+    }
+
+    private async Task LoadFeaturesAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            var result = await Api.GetGhcFeaturesAsync();
+            _items = (result ?? Enumerable.Empty<ContentItem>())
+                .OrderBy(i => _planGroups
+                    .Where(g => i.Plans.Any(p => g.Plans.Contains(p)))
+                    .Select(g => g.Key)
+                    .DefaultIfEmpty(int.MaxValue)
+                    .Min())
+                .ThenBy(i => i.Title)
+                .ToList();
+        }
+        catch (Exception ex)
+        {
+            _error = $"Failed to load features: {ex.Message}";
+            Logger.LogError(ex, "Failed to load ghc-features for admin page");
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private void OpenEditor(ContentItem item)
+    {
+        _editing = item;
+        _editingPlanGroup = _planGroups.FirstOrDefault(g => item.Plans.Any(p => g.Plans.Contains(p)))?.Key;
+        _editingGhesSupport = item.GhesSupport;
+        _editingDraft = item.Draft;
+        _confirmingDelete = false;
+        _publishUrl = "";
+        _publishError = null;
+        _editorOpen = true;
+        _message = null;
+    }
+
+    private void CloseEditor()
+    {
+        _editorOpen = false;
+        _editing = null;
+        _confirmingDelete = false;
+        _publishUrl = "";
+        _publishError = null;
+    }
+
+    private async Task SavePlansAsync()
+    {
+        if (_editing is null || _editingPlanGroup is null)
+        {
+            return;
+        }
+
+        _saving = true;
+        _message = null;
+
+        try
+        {
+            var plans = _planGroups[_editingPlanGroup.Value].Plans.ToList();
+            await Api.UpdateGhcFeaturePlansAsync(_editing.Slug, plans, _editingGhesSupport, _editingDraft);
+
+            _message = $"'{_editing.Title}' updated successfully.";
+            _messageIsError = false;
+            CloseEditor();
+
+            // Reload to reflect the saved changes in the table
+            await LoadFeaturesAsync();
+        }
+        catch (Exception ex)
+        {
+            _message = $"Failed to save: {ex.Message}";
+            _messageIsError = true;
+            Logger.LogError(ex, "Failed to update plans for {Slug}", _editing?.Slug);
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task ExecuteDeleteAsync()
+    {
+        if (_editing is null)
+        {
+            return;
+        }
+
+        _saving = true;
+
+        try
+        {
+            var deleted = await Api.DeleteGhcFeatureAsync(_editing.Slug);
+            _message = deleted
+                ? $"'{_editing.Title}' deleted successfully."
+                : $"'{_editing.Title}' was not found.";
+            _messageIsError = !deleted;
+            CloseEditor();
+
+            await LoadFeaturesAsync();
+        }
+        catch (Exception ex)
+        {
+            _message = $"Failed to delete: {ex.Message}";
+            _messageIsError = true;
+            Logger.LogError(ex, "Failed to delete ghc-feature {Slug}", _editing?.Slug);
+            _confirmingDelete = false;
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task PublishDraftAsync()
+    {
+        if (_editing is null || _editingPlanGroup is null || string.IsNullOrWhiteSpace(_publishUrl))
+        {
+            return;
+        }
+
+        _publishing = true;
+        _publishError = null;
+
+        try
+        {
+            var plans = _planGroups[_editingPlanGroup.Value].Plans.ToList();
+            var oldSlug = _editing.Slug;
+
+            var request = new AdHocUrlProcessRequest
+            {
+                Url = _publishUrl.Trim(),
+                CollectionName = "videos",
+                IsGhcFeature = true,
+                Plans = plans,
+                GhesSupport = _editingGhesSupport,
+            };
+
+            var result = await Api.ProcessAdHocUrlAsync(request);
+
+            // null = 409 Conflict: URL already in processed_urls — record exists, just delete draft
+            if (result is null)
+            {
+                await Api.DeleteGhcFeatureAsync(oldSlug);
+                _message = $"URL was already processed. Draft '{oldSlug}' deleted — check the list for the existing record.";
+                _messageIsError = false;
+                CloseEditor();
+                await LoadFeaturesAsync();
+                return;
+            }
+
+            if (result.Outcome == AdHocUrlProcessOutcome.Failed)
+            {
+                _publishError = result.Message ?? "Processing failed — check the URL and try again.";
+                return;
+            }
+
+            if (result.Outcome == AdHocUrlProcessOutcome.Skipped)
+            {
+                _publishError = $"The AI skipped this URL: {result.Message}";
+                return;
+            }
+
+            // Added — success
+            await Api.DeleteGhcFeatureAsync(oldSlug);
+            _message = $"Published as '{result.Slug}'. Draft '{oldSlug}' replaced.";
+            _messageIsError = false;
+            CloseEditor();
+            await LoadFeaturesAsync();
+        }
+        catch (Exception ex)
+        {
+            _publishError = $"Failed to publish: {ex.Message}";
+            Logger.LogError(ex, "Failed to publish draft {Slug} from URL {Url}", _editing?.Slug, _publishUrl);
+        }
+        finally
+        {
+            _publishing = false;
+        }
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription.Dispose();
+    }
+}

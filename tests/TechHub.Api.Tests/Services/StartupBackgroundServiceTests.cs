@@ -3,10 +3,8 @@ using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Moq;
 using TechHub.Api.Services;
-using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Api.Tests.Services;
@@ -81,25 +79,9 @@ public class StartupBackgroundServiceTests
         mockJobRepo.Setup(r => r.AbortRunningJobsAsync(It.IsAny<CancellationToken>()))
             .ReturnsAsync(0);
 
-        var mockCustomPageRepo = new Mock<ICustomPageDataRepository>();
-        mockCustomPageRepo.Setup(r => r.IsEmptyAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(false);
-
-        var appSettings = Options.Create(new AppSettings
-        {
-            BaseUrl = "https://localhost",
-            Content = new ContentSettings
-            {
-                CollectionsPath = Path.GetTempPath(),
-                Sections = []
-            }
-        });
-
         services.AddSingleton(mockMigrationRunner.Object);
         services.AddSingleton(mockConnectionFactory.Object);
         services.AddSingleton(mockJobRepo.Object);
-        services.AddSingleton(mockCustomPageRepo.Object);
-        services.AddSingleton<IOptions<AppSettings>>(appSettings);
         services.AddSingleton(mockHostLifetime.Object);
         services.AddSingleton(mockStartupState);
 
