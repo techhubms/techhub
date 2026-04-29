@@ -737,14 +737,26 @@ public static class BlazorHelpers
         // Blazor's @oninput handler receives the correct value even after a reset.
         // The JS value escaping is safe because `value` is a test-supplied literal.
         var escapedValue = value.Replace("\\", "\\\\").Replace("'", "\\'");
-        var inputSelector = await locator.EvaluateAsync<string>("el => el.tagName.toLowerCase() + (el.type ? '[type=' + el.type + ']' : '')");
+        var inputSelector = await locator.EvaluateAsync<string>(
+            "el => el.tagName.toLowerCase() + (el.type ? '[type=' + el.type + ']' : '')");
         await locator.Page.WaitForConditionAsync($@"
             () => {{
                 if (window.location.href.includes('{urlQueryParam}=')) return true;
                 const now = Date.now();
                 if (!window.__fillRetryTs || (now - window.__fillRetryTs > 1000)) {{
                     window.__fillRetryTs = now;
-                    const input = document.querySelector('{inputSelector}');
+                    // Find the VISIBLE input matching the selector. SidebarSearch may
+                    // render in both desktop sidebar and mobile panel — querySelector
+                    // returns the first in DOM order which may be the hidden mobile one.
+                    const inputs = document.querySelectorAll('{inputSelector}');
+                    let input = null;
+                    for (const inp of inputs) {{
+                        if (inp.offsetParent !== null || inp.getClientRects().length > 0) {{
+                            input = inp;
+                            break;
+                        }}
+                    }}
+                    if (!input && inputs.length > 0) input = inputs[0];
                     if (input) {{
                         // Re-fill via native setter if Blazor re-render reset the value.
                         // This bypasses Blazor's virtual DOM so the DOM value is correct

@@ -40,16 +40,25 @@
                 {
                     var expandId = $"custom-pages-{Section.Name}";
                     var remainingCount = CustomPages.Count - DefaultVisibleCustomPages;
-                    <button type="button" 
-                            class="badge-grey badge-expandable" 
-                            data-expand-target="@expandId"
-                            aria-expanded="false"
-                            aria-label="Show @remainingCount more custom pages">
-                        +@remainingCount more
-                    </button>
+                    var isExpanded = _expandedSections.Contains(expandId);
+                    
+                    @if (!isExpanded)
+                    {
+                        <button type="button" 
+                                class="badge-grey badge-expandable" 
+                                data-expand-target="@expandId"
+                                data-initialized="true"
+                                @onclick="() => ExpandSection(expandId)"
+                                @onclick:stopPropagation="true"
+                                @onclick:preventDefault="true"
+                                aria-expanded="false"
+                                aria-label="Show @remainingCount more custom pages">
+                            +@remainingCount more
+                        </button>
+                    }
                     
                     @* Hidden custom pages - revealed when button clicked *@
-                    <span id="@expandId" class="custom-pages-expanded" hidden>
+                    <span id="@expandId" class="custom-pages-expanded" hidden="@(!isExpanded)">
                         @foreach (var customPage in CustomPages.Skip(DefaultVisibleCustomPages))
                         {
                             <a href="@customPage.Url" class="badge-custom"
@@ -79,4 +88,11 @@
             .OrderBy(c => c.Order)
             .ThenBy(c => c.Title)
             .ToList();
+    
+    private readonly HashSet<string> _expandedSections = new();
+    
+    private void ExpandSection(string sectionId)
+    {
+        _expandedSections.Add(sectionId);
+    }
 }

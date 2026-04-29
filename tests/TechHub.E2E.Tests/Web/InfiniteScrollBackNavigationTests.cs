@@ -94,6 +94,10 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
 
         // Assert - Scroll position should be restored near where the user was
+        // Wait briefly for scroll position to be applied (scrollTo is synchronous but
+        // the browser may batch the update with the preceding DOM changes).
+        await Page.WaitForConditionAsync(
+            "() => window.scrollY > 0");
         var restoredPosition = await Page.EvaluateAsync<double>("() => window.scrollY");
         var maxScrollY = await Page.EvaluateAsync<double>(
             "() => document.documentElement.scrollHeight - window.innerHeight");
@@ -160,6 +164,12 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             $"(expected) => document.querySelectorAll('.card').length >= expected && window.__scrollListenerReady?.['scroll-trigger'] === true",
             afterScrollCount);
+
+        // Wait for scroll position to be restored (restoreScrollPosition runs before
+        // SetupScrollListener in OnAfterRenderAsync, but the browser may batch the
+        // scrollTo update with preceding DOM changes).
+        await Page.WaitForConditionAsync(
+            "() => window.scrollY > 0");
 
         var finalCount = await Page.Locator(".card").CountAsync();
 

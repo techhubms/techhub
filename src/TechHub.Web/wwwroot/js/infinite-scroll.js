@@ -114,6 +114,11 @@ export function dispose() {
 export function restoreScrollPosition(stateKey) {
     const y = window.__gridScrollPositions[stateKey];
     if (y != null && y > 0) {
+        // Force synchronous layout recalculation before scrolling.
+        // After Blazor patches the DOM with cached content, the browser may not
+        // have calculated the new layout yet. Without this, scrollTo may be
+        // silently clamped to 0 because scrollHeight hasn't updated.
+        void document.documentElement.offsetHeight;
         window.scrollTo(0, y);
         return true;
     }
