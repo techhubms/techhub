@@ -46,7 +46,7 @@
         <div class="admin-result-summary">@_items.Count feature@(_items.Count == 1 ? "" : "s")</div>
 
         <div class="admin-jobs-table-wrapper">
-            <table class="admin-table features-table">
+            <table class="admin-table">
                 <thead>
                     <tr>
                         <th>Title</th>
@@ -61,7 +61,7 @@
                     @foreach (var item in _items)
                     {
                         <tr>
-                            <td>
+                            <td class="admin-cell-article" title="@item.Title">
                                 @if (item.Draft)
                                 {
                                     <span class="features-title-text">@item.Title</span>
@@ -73,7 +73,7 @@
                                     </a>
                                 }
                             </td>
-                            <td class="admin-cell-mono">@item.Slug</td>
+                            <td class="admin-cell-mono" title="@item.Slug">@item.Slug</td>
                             <td>
                                 <div class="features-plans-badges">
                                     @foreach (var plan in item.Plans)

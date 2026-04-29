@@ -168,7 +168,7 @@ public class AdminProcessUrlEndpointTests : IClassFixture<TechHubIntegrationTest
     [Fact]
     public async Task ProcessUrl_WithEmptyFeedName_DefaultsToTechHub_ReturnsConflict()
     {
-        // Arrange — empty FeedName should be accepted (defaults to "Tech Hub"); use a known duplicate URL
+        // Arrange — empty FeedName should be accepted (defaults to "TechHub"); use a known duplicate URL
         var request = new { Url = "https://youtu.be/abc123test1", CollectionName = "videos", FeedName = "" };
 
         // Act

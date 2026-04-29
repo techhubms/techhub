@@ -418,7 +418,11 @@
             try
             {
                 var configs = await Api.GetFeedConfigsAsync();
-                _feedNames = configs.Select(c => c.Name).Order(StringComparer.OrdinalIgnoreCase).ToList();
+                var names = configs.Select(c => c.Name).Order(StringComparer.OrdinalIgnoreCase).ToList();
+                if (names.Count > 0)
+                {
+                    _feedNames = names;
+                }
                 var match = _feedNames.FirstOrDefault(
                     n => n.Equals(DefaultFeedName, StringComparison.OrdinalIgnoreCase));
                 _feedName = match ?? _feedNames[0];

@@ -145,8 +145,8 @@ public sealed partial class YtDlpTranscriptService : IDisposable
         ArgumentNullException.ThrowIfNull(videoUrl);
         ArgumentNullException.ThrowIfNull(outputDir);
 
-        // Use GetFileName to ensure the template segment can never be an absolute path
-        var outputTemplate = Path.Combine(outputDir, Path.GetFileName("%(id)s"));
+        // Use Path.Join to avoid Path.Combine silently dropping earlier arguments
+        var outputTemplate = Path.Join(outputDir, "%(id)s");
 
         // --write-sub: download manual subtitles
         // --write-auto-sub: download auto-generated subtitles as fallback
@@ -179,9 +179,8 @@ public sealed partial class YtDlpTranscriptService : IDisposable
         var seenLines = new HashSet<string>(StringComparer.Ordinal);
         var lines = vttContent.Split('\n');
 
-        foreach (var rawLine in lines)
+        foreach (var line in lines.Select(static l => l.Trim()))
         {
-            var line = rawLine.Trim();
 
             // Skip empty lines, WEBVTT header, Kind/Language metadata, NOTE blocks
             if (string.IsNullOrWhiteSpace(line)

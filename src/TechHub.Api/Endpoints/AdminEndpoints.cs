@@ -828,7 +828,7 @@ public static partial class AdminEndpoints
     // ── GHC feature plans handlers ───────────────────────────────────────────
 
     private static readonly HashSet<string> _validPlanNames =
-        ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
+        new(["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"], StringComparer.OrdinalIgnoreCase);
 
     private static async Task<IResult> UpdateGhcFeaturePlansAsync(
         string slug,
@@ -903,10 +903,21 @@ public static partial class AdminEndpoints
                 $"Invalid collection '{request.CollectionName}'. Valid collections: {string.Join(", ", _validCollectionNames)}.");
         }
 
+        // Validate ghc-features/vscode-updates are mutually exclusive
+        if (request.IsGhcFeature && request.IsVscodeUpdate)
+        {
+            return Results.BadRequest("IsGhcFeature and IsVscodeUpdate are mutually exclusive.");
+        }
+
         // Validate ghc-features constraints
         string? subcollection = null;
         if (request.IsGhcFeature)
         {
+            if (collection != "videos")
+            {
+                return Results.BadRequest("GitHub Copilot Feature items must use the 'videos' collection.");
+            }
+
             var isYouTube = request.Url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
                 || request.Url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
             if (!isYouTube)
@@ -930,6 +941,11 @@ public static partial class AdminEndpoints
         }
         else if (request.IsVscodeUpdate)
         {
+            if (collection != "videos")
+            {
+                return Results.BadRequest("VS Code Update items must use the 'videos' collection.");
+            }
+
             var isYouTube = request.Url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
                 || request.Url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
             if (!isYouTube)

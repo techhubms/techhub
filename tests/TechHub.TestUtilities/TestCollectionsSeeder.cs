@@ -156,7 +156,7 @@ public static class TestCollectionsSeeder
     /// </summary>
     private static async Task SeedCustomPageDataAsync(IDbConnection connection, string testCollectionsPath, ILogger logger)
     {
-        var customDir = Path.Combine(testCollectionsPath, "_custom");
+        var customDir = Path.Join(testCollectionsPath, "_custom");
         if (!Directory.Exists(customDir))
         {
             logger.LogWarning("No _custom directory found at {Dir}, skipping custom page seeding", customDir);
