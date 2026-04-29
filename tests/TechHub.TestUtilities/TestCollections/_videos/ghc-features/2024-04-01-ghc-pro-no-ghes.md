@@ -9,7 +9,9 @@ external_url: https://youtu.be/abc123test3
 author: Test Author
 feed_name: Test Feed
 plans:
+- Student
 - Pro
+- Business
 ghes_support: false
 ---
 

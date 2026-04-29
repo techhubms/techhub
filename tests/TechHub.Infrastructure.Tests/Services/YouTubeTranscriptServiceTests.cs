@@ -149,4 +149,79 @@ public class YouTubeTranscriptServiceTests
     }
 
     #endregion
+
+    #region ParseCookies Tests
+
+    [Fact]
+    public void ParseCookies_ValidEntries_ReturnsCookies()
+    {
+        // Act
+        var result = YouTubeTranscriptService.ParseCookies("CONSENT=YES+42;LOGIN_INFO=abc123");
+
+        // Assert
+        result.Should().HaveCount(2);
+        result[0].Name.Should().Be("CONSENT");
+        result[0].Value.Should().Be("YES+42");
+        result[0].Domain.Should().Be(".youtube.com");
+        result[1].Name.Should().Be("LOGIN_INFO");
+        result[1].Value.Should().Be("abc123");
+    }
+
+    [Fact]
+    public void ParseCookies_EmptyString_ReturnsEmpty()
+    {
+        // Act
+        var result = YouTubeTranscriptService.ParseCookies("");
+
+        // Assert
+        result.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ParseCookies_NullString_ReturnsEmpty()
+    {
+        // Act
+        var result = YouTubeTranscriptService.ParseCookies(null!);
+
+        // Assert
+        result.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ParseCookies_SkipsBlankAndMalformedEntries()
+    {
+        // Act
+        var result = YouTubeTranscriptService.ParseCookies(";;no-equals-sign;VALID=value;  ");
+
+        // Assert
+        result.Should().ContainSingle();
+        result[0].Name.Should().Be("VALID");
+    }
+
+    [Fact]
+    public void ParseCookies_ValueContainsEqualsSign_PreservesFullValue()
+    {
+        // Arrange — values like base64 can contain '='
+        // Act
+        var result = YouTubeTranscriptService.ParseCookies("TOKEN=abc=def==");
+
+        // Assert
+        result.Should().ContainSingle();
+        result[0].Name.Should().Be("TOKEN");
+        result[0].Value.Should().Be("abc=def==");
+    }
+
+    [Fact]
+    public void ParseCookies_TrimsWhitespace()
+    {
+        // Act
+        var result = YouTubeTranscriptService.ParseCookies("  NAME  =  value  ");
+
+        // Assert
+        result.Should().ContainSingle();
+        result[0].Name.Should().Be("NAME");
+        result[0].Value.Should().Be("value");
+    }
+
+    #endregion
 }

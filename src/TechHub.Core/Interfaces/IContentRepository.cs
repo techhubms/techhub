@@ -153,6 +153,13 @@ public interface IContentRepository
     Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken ct = default);
 
     /// <summary>
+    /// Updates the subscription plans, GHES support flag, and draft status for a ghc-features content item.
+    /// Identified by slug alone (all ghc-features items share the "videos" collection).
+    /// Returns true if found and updated, false if not found.
+    /// </summary>
+    Task<bool> UpdateGhcFeaturePlansAsync(string slug, IReadOnlyList<string> plans, bool ghesSupport, bool draft, CancellationToken ct = default);
+
+    /// <summary>
     /// Invalidates all cached content data (search results, slugs, sitemaps, etc.).
     /// Call after mutations that change content_items (delete, update) to ensure
     /// subsequent queries return fresh data from the database.

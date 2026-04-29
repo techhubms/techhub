@@ -278,6 +278,13 @@ public class NavigationTests : PlaywrightTestBase
         await newsButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
                 new Regex(@".*/ai/news.*"), new() { Timeout = 2000 }));
+
+        // Wait for enhanced navigation DOM swap to complete. ClickAndExpectAsync checks
+        // __blazorServerReady which stays true across enhanced navigations, so the old
+        // page's .card elements may still be in the DOM. Verifying the heading changed
+        // confirms the new page has rendered before we count cards.
+        await Assertions.Expect(Page.Locator("h1.page-h1")).ToContainTextAsync("News",
+            new() { Timeout = BlazorHelpers.E2ETimeout });
         await Page.WaitForSelectorWithTimeoutAsync(".card");
 
         // Get the hrefs of cards in the "News" collection

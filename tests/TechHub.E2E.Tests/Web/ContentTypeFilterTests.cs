@@ -199,13 +199,6 @@ public class ContentTypeFilterTests : PlaywrightTestBase
             "when all content types are active, the types URL parameter should be removed");
     }
 
-    // ========================================================================
-    // Private helpers
-    // ========================================================================
-
-    private const string TypesParamPresentJs = "() => window.location.search.includes('types=')";
-    private const string TypesParamRemovedJs = "() => !window.location.search.includes('types=')";
-
     private ILocator ContentTypeButton(string label) =>
         Page.Locator(".content-type-btn", new() { HasTextString = label });
 

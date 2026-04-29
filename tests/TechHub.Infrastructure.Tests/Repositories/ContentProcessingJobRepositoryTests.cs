@@ -309,7 +309,7 @@ public class ContentProcessingJobRepositoryTests
         await _repository.CompleteAsync(jobId, 1, 1, 0, 0, 0, 0, "done", ct: CancellationToken.None);
 
         // Act
-        var aborted = await _repository.AbortRunningJobsAsync(CancellationToken.None);
+        _ = await _repository.AbortRunningJobsAsync(CancellationToken.None);
         var job = await _repository.GetByIdAsync(jobId, CancellationToken.None);
 
         // Assert

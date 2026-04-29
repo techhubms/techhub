@@ -38,9 +38,13 @@ This enables auto-complete-style search behavior where users don't need to type 
 **Backend**: Full-text search is implemented at the database level:
 
 - **PostgreSQL**: Uses `tsvector` with `to_tsquery` for prefix support
-- Supports weighted search (title > excerpt > content)
+- Supports weighted search (title weight A > excerpt weight B > content weight C)
+- Storage uses dual tsvector config: `english` (stemming) + `simple` (preserves stop words like "vs")
+- Queries use `simple` config only — this preserves stop words (e.g., "vs" in "VS Code") at the cost of no stemming at query time (e.g., "running" won't match stemmed "run")
+- Uses **OR logic** between search terms for better recall (matching any term surfaces results)
 - Automatically appends wildcards for prefix matching (`copilot` → `copilot:*` for PostgreSQL)
-- Results are ordered by date (newest first), consistent with non-search browsing
+- **Compound word expansion**: known compounds like "vscode" expand to also match "vs" + "code"
+- Results are ordered by **relevance first** (ts_rank), then by date (newest first)
 
 ### Search + Filter Combination
 

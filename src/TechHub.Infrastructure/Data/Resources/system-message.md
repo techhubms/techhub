@@ -708,7 +708,7 @@ You will receive a structured text block with these sections:
 
 The `FEED_ITEM_DATA` section contains a compact, line-based representation of the raw RSS/Atom feed item. Each line is a `key: value` pair extracted from the XML. HTML content has been converted to markdown. Nested elements use slash notation (e.g., `author/name: Jane Smith`, `media:group/media:description: ...`).
 
-**Your job**: Extract the author name from this data. Look for fields like `author`, `dc:creator`, `author/name`, `a10:author/a10:name`, `itunes:author`, or similar. If no author is found, use the `FALLBACK_AUTHOR` value.
+**Your job**: Extract the author name from this data. Look for fields like `author`, `dc:creator`, `author/name`, `a10:author/a10:name`, `itunes:author`, or similar. **Also check the CONTENT or TRANSCRIPT** for the actual author or presenter — especially for YouTube videos where the channel owner is not always the presenter. If the content reveals a different presenter with high confidence, use that name instead. If no author is found, use the `FALLBACK_AUTHOR` value.
 
 Also use the feed item data to understand the content's title, description, and any other metadata that helps with categorization.
 
@@ -841,6 +841,10 @@ public class Example { }
 
 Return a JSON object with these fields:
 
+**included** (boolean, REQUIRED)
+
+- Must be `true` for included content, `false` otherwise
+
 **title** (string, max 120 characters)
 
 - Use INPUT title if it fits within 120 characters
@@ -862,8 +866,9 @@ Return a JSON object with these fields:
 
 **author** (string, REQUIRED)
 
-- Extract the author name from FEED_ITEM_DATA fields (e.g., `dc:creator`, `author`, `author/name`, `a10:author/a10:name`, `itunes:author`)
-- If no author can be determined from the feed data, use the FALLBACK_AUTHOR value provided in the input
+- **Step 1 — Check feed metadata**: Extract the author name from FEED_ITEM_DATA fields (e.g., `dc:creator`, `author`, `author/name`, `a10:author/a10:name`, `itunes:author`)
+- **Step 2 — Check content/transcript for actual presenter**: Analyze the CONTENT or TRANSCRIPT to determine whether the actual author or presenter differs from the feed-level author. This is especially important for **YouTube videos** where the channel owner (feed author) may not be the person presenting. Look for cues like introductions ("Hi, I'm X"), speaker attributions, bylines, or presenter mentions in the description.
+- **Step 3 — Decide**: If you can determine the actual author/presenter from the content with **high confidence**, use that name. If you cannot determine it with certainty, use the feed metadata author (Step 1) or the FALLBACK_AUTHOR value.
 - Clean up the name: trim whitespace, remove email addresses (e.g., `"user@example.com (Jane Smith)"` → `"Jane Smith"`)
 - If the author appears to be blank or a whitespace-only value, use FALLBACK_AUTHOR
 
@@ -959,7 +964,11 @@ Include a `roundup` object with metadata for weekly roundup generation:
 
 ### Option B: Content Does Not Qualify (No Sections)
 
-Return a JSON object with only this field:
+Return a JSON object with these fields:
+
+**included** (boolean, REQUIRED)
+
+- Must be `false` for excluded content
 
 **explanation** (string)
 
@@ -974,6 +983,7 @@ Return a JSON object with only this field:
 
 ```json
 {
+  "included": true,
   "title": "Getting Started with Azure OpenAI Service in C#",
   "sections": ["ai", "azure", "dotnet"],
   "primary_section": "ai",
@@ -997,6 +1007,7 @@ Return a JSON object with only this field:
 
 ```json
 {
+  "included": false,
   "explanation": "Excluded: Biographical Focus. Content is primarily about a single individual's career journey rather than technical content."
 }
 ```

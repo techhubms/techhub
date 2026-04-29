@@ -5,5 +5,5 @@ namespace TechHub.Core.Configuration;
 /// </summary>
 public class ContentOptions
 {
-    public required string CollectionsPath { get; set; }
+    public string? CollectionsPath { get; set; }
 }

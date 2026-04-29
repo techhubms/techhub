@@ -726,9 +726,9 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Fetching items for author: {AuthorName}", authorName);
             var response = await _httpClient.GetAsync(url, cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
-                _logger.LogWarning("Author not found: {AuthorName}", authorName);
+                _logger.LogDebug("No content found for author: {AuthorName}", authorName);
                 return null;
             }
 
@@ -1684,6 +1684,121 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    /// <inheritdoc/>
+    public virtual async Task UpdateGhcFeaturePlansAsync(
+        string slug,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        bool draft,
+        CancellationToken cancellationToken = default)
+    {
+        slug = slug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.PutAsJsonAsync(
+                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}/plans",
+                new { Plans = plans, GhesSupport = ghesSupport, Draft = draft },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to update plans for ghc-feature slug {Slug}", slug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<bool> DeleteGhcFeatureAsync(
+        string slug,
+        CancellationToken cancellationToken = default)
+    {
+        slug = slug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}",
+                cancellationToken);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return false;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return true;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to delete ghc-feature slug {Slug}", slug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<AdHocUrlProcessResult?> ProcessAdHocUrlAsync(
+        AdHocUrlProcessRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentNullException.ThrowIfNull(request);
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                "/api/admin/urls/process",
+                request,
+                cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<AdHocUrlProcessResult>(cancellationToken);
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to process ad-hoc URL {Url}", request.Url);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<string?> FetchUrlTitleAsync(
+        string url,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(url);
+        try
+        {
+            var encodedUrl = Uri.EscapeDataString(url);
+            using var response = await _httpClient.GetAsync(
+                $"/api/admin/urls/title?url={encodedUrl}",
+                cancellationToken);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+
+            var result = await response.Content.ReadFromJsonAsync<TitleResponse>(cancellationToken);
+            return result?.Title;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogWarning(ex, "Failed to fetch title for {Url}", url);
+            return null;
+        }
+        catch (TaskCanceledException)
+        {
+            return null;
+        }
+    }
+
+    private sealed class TitleResponse
+    {
+        public string? Title { get; init; }
+    }
+
     private sealed class MarkdownPreviewResponse
     {
         public string? Html { get; init; }
@@ -1711,7 +1826,7 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Looking up legacy slug: {Slug}", slug);
             using var response = await _httpClient.GetAsync(url, cancellationToken);
 
-            if (response.StatusCode is System.Net.HttpStatusCode.NotFound
+            if (response.StatusCode is System.Net.HttpStatusCode.NoContent
                 or System.Net.HttpStatusCode.BadRequest)
             {
                 return null;

@@ -1006,21 +1006,75 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     }
 
     /// <summary>
-    /// Test: Full-text search results are ordered by date descending (newest first)
-    /// Why: Content hub users expect search results sorted by most recent, not relevance
+    /// Test: Full-text search results are ordered by relevance when a query is provided.
+    /// Why: Users searching for specific content expect the most relevant items first,
+    /// not just the newest items that happen to contain a search term.
+    /// Items matching in title (weight A) should rank higher than content-only matches (weight C).
     /// </summary>
     [Fact]
-    public async Task SearchAsync_FullTextSearch_OrderedByDateDescending()
+    public async Task SearchAsync_FullTextSearch_TitleMatchesRankHigherThanContentMatches()
     {
-        // Arrange - search for a common term that matches multiple items
+        // Arrange - "TechHubSpecialKeyword" appears in content of fts-test.md
+        // while the fts-test title is "Full Text Search Test" (no "TechHubSpecialKeyword" in title)
+        // Search for a term that matches in title of some items and in content of others
         var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "copilot");
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
-        // Assert
-        results.Items.Should().HaveCountGreaterThan(1, "Need multiple results to verify ordering");
-        results.Items.Should().BeInDescendingOrder(item => item.DateEpoch, "Search results should be ordered by date descending");
+        // Assert - results should exist and items with "copilot" in title should rank early
+        results.Items.Should().HaveCountGreaterThan(1, "Need multiple results to verify ranking");
+
+        var items = results.Items.ToList();
+        var titleMatchIndices = items
+            .Select((item, index) => new { item, index })
+            .Where(x => x.item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase))
+            .Select(x => x.index)
+            .ToList();
+        titleMatchIndices.Should().NotBeEmpty("Items with search term in title should appear in results");
+        titleMatchIndices.First().Should().BeLessThan(items.Count / 2,
+            "Title matches (weight A) should rank in the first half of results");
+    }
+
+    /// <summary>
+    /// Test: OR-based search finds items matching any search term, not requiring all terms.
+    /// Why: "vscode updates" should still find "VS Code Updates" videos even if "vscode" (compound)
+    /// doesn't match - "updates" alone should bring relevant results.
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_FullTextSearch_OrLogic_FindsPartialTermMatches()
+    {
+        // Arrange - search for terms where only one might match
+        // "updates" matches the VS Code Updates video title, "vscode" may not match directly
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "vscode updates");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - should find VS Code Updates videos because "updates" matches
+        results.Items.Should().NotBeEmpty("OR-based search should find items matching any term");
+        results.Items.Should().Contain(item => item.Slug == "whats-new-in-vs-code-1112",
+            "Should find the VS Code 1.112 video matching on 'updates' via content or related terms");
+    }
+
+    /// <summary>
+    /// Test: Search for "vs code" finds VS Code content despite "vs" being a stop word in English config.
+    /// Why: The simple tsvector config preserves stop words like "vs", enabling this search.
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_FullTextSearch_VsCode_FindsVsCodeContent()
+    {
+        // Arrange - "VS Code" has "vs" which is an English stop word
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "vs code");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - should find VS Code content
+        results.Items.Should().NotBeEmpty("Should find VS Code content");
+        results.Items.Should().Contain(item =>
+            item.Title.Contains("VS Code", StringComparison.OrdinalIgnoreCase),
+            "Should find items with 'VS Code' in title");
     }
 
     #endregion

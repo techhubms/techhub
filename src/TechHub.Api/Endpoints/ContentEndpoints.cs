@@ -112,10 +112,11 @@ public static class ContentEndpoints
             .WithDescription(
                 "Looks up a content item by a legacy-format slug (with or without a YYYY-MM-DD- date prefix). " +
                 "Returns the canonical redirect URL. An optional section hint is used to prefer items from that section " +
-                "when multiple matches exist. Items in externally-linking collections resolve to the original source URL.")
+                "when multiple matches exist. Items in externally-linking collections resolve to the original source URL. " +
+                "Returns 204 No Content when no matching slug is found (this is a lookup, not a page request).")
             .Produces<LegacyRedirectResult>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status400BadRequest)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         return endpoints;
     }
@@ -702,7 +703,7 @@ public static class ContentEndpoints
     /// GET /api/legacy-redirect?slug={slug}&amp;section={section}
     /// Resolves a legacy slug to its canonical URL for permanent redirect.
     /// </summary>
-    private static async Task<Results<Ok<LegacyRedirectResult>, NotFound, BadRequest<string>>> GetLegacyRedirect(
+    private static async Task<Results<Ok<LegacyRedirectResult>, NoContent, BadRequest<string>>> GetLegacyRedirect(
         string slug,
         string? section,
         IContentRepository contentRepository,
@@ -722,6 +723,6 @@ public static class ContentEndpoints
         }
 
         var result = await contentRepository.FindByLegacySlugAsync(slug, section, cancellationToken);
-        return result != null ? TypedResults.Ok(result) : TypedResults.NotFound();
+        return result != null ? TypedResults.Ok(result) : TypedResults.NoContent();
     }
 }

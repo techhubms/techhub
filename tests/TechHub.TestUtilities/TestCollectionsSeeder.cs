@@ -75,6 +75,11 @@ public static class TestCollectionsSeeder
             "✅ Content sync complete: {Added} added, {Updated} updated, {Deleted} deleted ({Duration:N0}ms)",
             syncResult.Added, syncResult.Updated, syncResult.Deleted, syncResult.Duration.TotalMilliseconds);
 
+        // Seed custom page data from TestCollections/_custom/*.json into custom_page_data table.
+        // In production, custom pages are managed entirely through the admin UI (database-first).
+        // This seeding is test-only to populate data for integration tests.
+        await SeedCustomPageDataAsync(connection, testCollectionsPath, logger);
+
         // Log record counts for each table
         await LogTableRecordCountsAsync(connection, logger);
     }
@@ -142,5 +147,40 @@ public static class TestCollectionsSeeder
         {
             await connection.ExecuteAsync(sql, feed);
         }
+    }
+
+    /// <summary>
+    /// Seeds custom page data from TestCollections/_custom/*.json into the custom_page_data table.
+    /// Mirrors what StartupBackgroundService used to do from the collections/ folder, but is now
+    /// only used for test data seeding (production uses database-first admin UI).
+    /// </summary>
+    private static async Task SeedCustomPageDataAsync(IDbConnection connection, string testCollectionsPath, ILogger logger)
+    {
+        var customDir = Path.Join(testCollectionsPath, "_custom");
+        if (!Directory.Exists(customDir))
+        {
+            logger.LogWarning("No _custom directory found at {Dir}, skipping custom page seeding", customDir);
+            return;
+        }
+
+        const string sql = """
+            INSERT INTO custom_page_data (key, description, json_data, updated_at)
+            VALUES (@Key, @Description, @JsonData::jsonb, NOW())
+            ON CONFLICT (key) DO UPDATE SET
+                description = @Description,
+                json_data = @JsonData::jsonb,
+                updated_at = NOW();
+            """;
+
+        var count = 0;
+        foreach (var file in Directory.EnumerateFiles(customDir, "*.json"))
+        {
+            var key = Path.GetFileNameWithoutExtension(file);
+            var json = await File.ReadAllTextAsync(file);
+            await connection.ExecuteAsync(sql, new { Key = key, Description = $"{key} (test data)", JsonData = json });
+            count++;
+        }
+
+        logger.LogInformation("✅ Seeded {Count} custom page(s) from {Dir}", count, customDir);
     }
 }

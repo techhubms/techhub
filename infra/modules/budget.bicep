@@ -1,25 +1,27 @@
-// Subscription-scoped monthly cost budget with email alerts at 80% / 100% / 120%.
+// Subscription-scoped budget aligned to the billing cycle, with email alerts at 80% / 100% / 120%.
+// Uses BillingMonth so the reset period follows the invoice billing period (e.g. Apr 7 – May 6)
+// instead of calendar months.
 // Requires the deploying principal to have Microsoft.Consumption/budgets/write at subscription scope.
 targetScope = 'subscription'
 
 @description('Budget name')
-param budgetName string = 'budget-techhub-monthly'
+param budgetName string = 'budget-techhub-billing-month'
 
-@description('Monthly budget amount in the billing currency (e.g. EUR)')
+@description('Budget amount per billing period in the billing currency (e.g. EUR)')
 param amount int
 
 @description('Email addresses to notify when thresholds are exceeded')
 param contactEmails string[]
 
-@description('Start date for the budget (YYYY-MM-01 format; must be first of the month)')
+@description('Start date for the budget (YYYY-MM-DD format, aligned to billing period start)')
 param startDate string
 
-resource budget 'Microsoft.Consumption/budgets@2023-11-01' = {
+resource budget 'Microsoft.Consumption/budgets@2024-08-01' = {
   name: budgetName
   properties: {
     category: 'Cost'
     amount: amount
-    timeGrain: 'Monthly'
+    timeGrain: 'BillingMonth'
     timePeriod: {
       startDate: startDate
     }

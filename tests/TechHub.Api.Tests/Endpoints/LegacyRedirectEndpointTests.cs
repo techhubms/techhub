@@ -22,7 +22,7 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
     }
 
     [Fact]
-    public async Task GetLegacyRedirect_ReturnsNotFound_ForNonexistentSlug()
+    public async Task GetLegacyRedirect_ReturnsNoContent_ForNonexistentSlug()
     {
         // Act
         var response = await _client.GetAsync(
@@ -30,7 +30,7 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
             TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]

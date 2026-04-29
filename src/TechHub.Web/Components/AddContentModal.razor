@@ -1,0 +1,456 @@
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inject ILogger<AddContentModal> Logger
+
+@if (IsOpen)
+{
+    <div class="editor-backdrop" @onclick="HandleBackdropClickAsync" role="dialog" aria-modal="true" aria-labelledby="add-content-title">
+        <div class="editor-modal" @onclick:stopPropagation>
+            <div class="editor-header">
+                <h2 id="add-content-title" class="editor-title">Add Content Item</h2>
+                <button class="editor-close" @onclick="CloseAsync" aria-label="Close">×</button>
+            </div>
+
+            <div class="editor-body">
+                @if (_result != null)
+                {
+                    <div class="admin-alert @ResultAlertClass" role="alert">
+                        @if (_result.Outcome == AdHocUrlProcessOutcome.Added)
+                        {
+                            <strong>Added!</strong>
+                            @if (_result.Slug != null)
+                            {
+                                <span> Slug: <code>@_result.Slug</code></span>
+                            }
+                            <br /><em>@_result.Message</em>
+                        }
+                        else if (_result.Outcome == AdHocUrlProcessOutcome.Skipped)
+                        {
+                            <strong>Skipped by AI:</strong> <em>@_result.Message</em>
+                        }
+                        else
+                        {
+                            <strong>Failed:</strong> <em>@_result.Message</em>
+                        }
+                    </div>
+                }
+
+                @if (_isAlreadyExists)
+                {
+                    <div class="admin-alert admin-alert-error" role="alert">
+                        This URL has already been processed and exists in the database.
+                    </div>
+                }
+
+                @if (_validationError != null)
+                {
+                    <div class="admin-alert admin-alert-error" role="alert">@_validationError</div>
+                }
+
+                <div class="add-content-form">
+                    <div class="admin-form-group">
+                        <label class="admin-form-label" for="acm-url-input">URL</label>
+                        <input id="acm-url-input"
+                               class="admin-form-input"
+                               type="url"
+                               placeholder="https://www.youtube.com/watch?v=… or https://example.com/article"
+                               @bind="_url"
+                               @bind:event="oninput"
+                               @bind:after="OnUrlChanged"
+                               disabled="@_processing" />
+                        @if (_isYouTube)
+                        {
+                            <span class="admin-form-hint badge-info">YouTube URL detected</span>
+                        }
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label class="admin-form-label" for="acm-collection-select">Collection</label>
+                        <select id="acm-collection-select"
+                                class="admin-form-select"
+                                @bind="_collection"
+                                disabled="@_processing">
+                            @foreach (var c in _collections)
+                            {
+                                <option value="@c">@c</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label class="admin-form-label" for="acm-feed-name-select">Feed Name</label>
+                        <select id="acm-feed-name-select"
+                                class="admin-form-select"
+                                @bind="_feedName"
+                                disabled="@(_processing || _feedNames.Count == 0)">
+                            @foreach (var name in _feedNames)
+                            {
+                                <option value="@name">@name</option>
+                            }
+                        </select>
+                        <span class="admin-form-hint">Used for attribution in the processed URLs log.</span>
+                    </div>
+
+                    <div class="admin-form-group">
+                        <label class="admin-form-label" for="acm-title-hint-input">Title Hint <span class="admin-form-hint">(optional)</span></label>
+                        <div class="admin-input-with-status">
+                            <input id="acm-title-hint-input"
+                                   class="admin-form-input"
+                                   type="text"
+                                   placeholder="e.g. GitHub Copilot for VS Code — New Features"
+                                   @bind="_titleHint"
+                                   disabled="@_processing" />
+                            @if (_fetchingTitle)
+                            {
+                                <span class="admin-form-hint">Fetching title…</span>
+                            }
+                        </div>
+                        <span class="admin-form-hint">Points the AI in the right direction — the final title will be extracted from the page content.</span>
+                    </div>
+
+                    @if (_collection == "videos")
+                    {
+                        <div class="admin-form-group">
+                            <label class="admin-form-checkbox-label">
+                                <input type="checkbox"
+                                       @bind="_isGhcFeature"
+                                       disabled="@(!_isYouTube || _processing)"
+                                       @bind:after="OnGhcFeatureChanged" />
+                                Assign as GitHub Copilot Feature
+                                @if (!_isYouTube)
+                                {
+                                    <span class="admin-form-hint"> (requires a YouTube URL)</span>
+                                }
+                            </label>
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label class="admin-form-checkbox-label">
+                                <input type="checkbox"
+                                       @bind="_isVscodeUpdate"
+                                       disabled="@(!_isYouTube || _processing)"
+                                       @bind:after="OnVscodeUpdateChanged" />
+                                Assign as VS Code Update
+                                @if (!_isYouTube)
+                                {
+                                    <span class="admin-form-hint"> (requires a YouTube URL)</span>
+                                }
+                            </label>
+                        </div>
+                    }
+
+                    @if (_collection == "videos" && _isGhcFeature && _isYouTube)
+                    {
+                        <div class="admin-form-group">
+                            <label class="admin-form-label">Subscription Tier</label>
+                            <div class="admin-radio-stack">
+                                @foreach (var group in _planGroups)
+                                {
+                                    <label class="features-plan-radio-label">
+                                        <input type="radio"
+                                               name="acm-plan-group"
+                                               value="@group.Key"
+                                               checked="@(_selectedPlanGroup == group.Key)"
+                                               @onchange="() => _selectedPlanGroup = group.Key"
+                                               disabled="@_processing" />
+                                        <span class="features-plan-radio-name">@group.Label</span>
+                                        <span class="features-plan-radio-badges">
+                                            @foreach (var plan in group.Plans)
+                                            {
+                                                <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
+                                            }
+                                        </span>
+                                    </label>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label class="admin-form-checkbox-label">
+                                <input type="checkbox" @bind="_ghesSupport" disabled="@_processing" />
+                                Available in GitHub Enterprise Server (GHES)
+                            </label>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="editor-footer">
+                <button class="btn" @onclick="SubmitAsync" disabled="@(_processing || string.IsNullOrWhiteSpace(_url))">
+                    @if (_processing)
+                    {
+                        <span>Processing…</span>
+                    }
+                    else
+                    {
+                        <span>▶ Process URL</span>
+                    }
+                </button>
+                <button class="btn-secondary" @onclick="CloseAsync" disabled="@_processing">Cancel</button>
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public EventCallback OnItemAdded { get; set; }
+
+    private static readonly IReadOnlyList<string> _collections = ["blogs", "news", "videos", "community"];
+    private sealed record PlanGroup(int Key, string Label, string[] Plans);
+
+    private static readonly PlanGroup[] _planGroups =
+    [
+        new(0, "Free", ["Free"]),
+        new(1, "Student / Pro / Business", ["Student", "Pro", "Business"]),
+        new(2, "Pro+ / Enterprise", ["Pro+", "Enterprise"]),
+    ];
+
+    private const string DefaultFeedName = "TechHub";
+
+    private IReadOnlyList<string> _feedNames = [DefaultFeedName];
+    private string _url = string.Empty;
+    private string _collection = "videos";
+    private string _feedName = DefaultFeedName;
+    private string _titleHint = string.Empty;
+    private bool _isGhcFeature;
+    private bool _isVscodeUpdate;
+    private bool _ghesSupport;
+    private int? _selectedPlanGroup;
+
+    private bool _isYouTube;
+    private bool _processing;
+    private bool _fetchingTitle;
+    private CancellationTokenSource? _titleFetchCts;
+    private AdHocUrlProcessResult? _result;
+    private bool _isAlreadyExists;
+    private string? _validationError;
+
+    private string ResultAlertClass => _result?.Outcome switch
+    {
+        AdHocUrlProcessOutcome.Added => "admin-alert-success",
+        AdHocUrlProcessOutcome.Skipped => "admin-alert-warning",
+        _ => "admin-alert-error"
+    };
+
+    private void OnUrlChanged()
+    {
+        _isYouTube = _url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
+            || _url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
+
+        if (_isYouTube && _collection != "videos")
+        {
+            _collection = "videos";
+        }
+
+        if (!_isYouTube)
+        {
+            _isGhcFeature = false;
+            _isVscodeUpdate = false;
+        }
+
+        // Auto-fetch title when a valid URL is entered and title hint is empty
+        _ = TryFetchTitleAsync();
+    }
+
+    private void OnGhcFeatureChanged()
+    {
+        if (_isGhcFeature)
+        {
+            _isVscodeUpdate = false;
+        }
+    }
+
+    private void OnVscodeUpdateChanged()
+    {
+        if (_isVscodeUpdate)
+        {
+            _isGhcFeature = false;
+            _selectedPlanGroup = null;
+            _ghesSupport = false;
+        }
+    }
+
+    private async Task TryFetchTitleAsync()
+    {
+        // Cancel any in-flight title fetch
+        _titleFetchCts?.Cancel();
+
+        var url = _url.Trim();
+        if (string.IsNullOrWhiteSpace(url)
+            || !Uri.TryCreate(url, UriKind.Absolute, out var uri)
+            || (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        {
+            return;
+        }
+
+        // Only auto-fill if the user hasn't typed something already
+        if (!string.IsNullOrWhiteSpace(_titleHint))
+        {
+            return;
+        }
+
+        _titleFetchCts = new CancellationTokenSource();
+        var ct = _titleFetchCts.Token;
+
+        _fetchingTitle = true;
+        StateHasChanged();
+
+        try
+        {
+            var title = await Api.FetchUrlTitleAsync(url, ct);
+            if (!ct.IsCancellationRequested && !string.IsNullOrWhiteSpace(title) && string.IsNullOrWhiteSpace(_titleHint))
+            {
+                _titleHint = title;
+                StateHasChanged();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            // Expected when URL changes quickly
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogWarning(ex, "Title fetch failed for {Url}", url);
+        }
+        finally
+        {
+            _fetchingTitle = false;
+            StateHasChanged();
+        }
+    }
+
+    private async Task SubmitAsync()
+    {
+        _result = null;
+        _isAlreadyExists = false;
+        _validationError = null;
+
+        if (string.IsNullOrWhiteSpace(_url))
+        {
+            _validationError = "URL is required.";
+            return;
+        }
+
+        if (_isGhcFeature && _selectedPlanGroup is null)
+        {
+            _validationError = "Select a subscription tier before processing.";
+            return;
+        }
+
+        _processing = true;
+        try
+        {
+            var plans = _isGhcFeature
+                ? (IReadOnlyList<string>)_planGroups[_selectedPlanGroup!.Value].Plans.ToList()
+                : [];
+
+            var request = new AdHocUrlProcessRequest
+            {
+                Url = _url.Trim(),
+                CollectionName = _collection,
+                FeedName = string.IsNullOrWhiteSpace(_feedName) ? DefaultFeedName : _feedName.Trim(),
+                TitleHint = string.IsNullOrWhiteSpace(_titleHint) ? null : _titleHint.Trim(),
+                IsGhcFeature = _isGhcFeature,
+                IsVscodeUpdate = _isVscodeUpdate,
+                Plans = plans,
+                GhesSupport = _ghesSupport
+            };
+
+            var result = await Api.ProcessAdHocUrlAsync(request);
+
+            if (result is null)
+            {
+                _isAlreadyExists = true;
+            }
+            else
+            {
+                _result = result;
+
+                if (result.Outcome == AdHocUrlProcessOutcome.Added)
+                {
+                    _url = string.Empty;
+                    _feedName = DefaultFeedName;
+                    _titleHint = string.Empty;
+                    _isGhcFeature = false;
+                    _isVscodeUpdate = false;
+                    _ghesSupport = false;
+                    _isYouTube = false;
+                    _selectedPlanGroup = null;
+                    await OnItemAdded.InvokeAsync();
+                    await CloseAsync();
+                }
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to submit URL for processing");
+            _validationError = $"An error occurred: {ex.Message}";
+        }
+        finally
+        {
+            _processing = false;
+        }
+    }
+
+    private async Task CloseAsync()
+    {
+        ResetForm();
+        await OnClose.InvokeAsync();
+    }
+
+    private async Task HandleBackdropClickAsync()
+    {
+        if (!_processing)
+        {
+            await CloseAsync();
+        }
+    }
+
+    private bool _feedsLoaded;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (IsOpen && !_feedsLoaded)
+        {
+            try
+            {
+                var configs = await Api.GetFeedConfigsAsync();
+                var names = configs.Select(c => c.Name).Order(StringComparer.OrdinalIgnoreCase).ToList();
+                if (names.Count > 0)
+                {
+                    _feedNames = names;
+                }
+                var match = _feedNames.FirstOrDefault(
+                    n => n.Equals(DefaultFeedName, StringComparison.OrdinalIgnoreCase));
+                _feedName = match ?? _feedNames[0];
+            }
+            catch (HttpRequestException ex)
+            {
+                Logger.LogWarning(ex, "Failed to load feed configs, using default");
+            }
+
+            _feedsLoaded = true;
+        }
+    }
+
+    private void ResetForm()
+    {
+        _url = string.Empty;
+        _collection = "videos";
+        _feedName = DefaultFeedName;
+        _titleHint = string.Empty;
+        _isGhcFeature = false;
+        _isVscodeUpdate = false;
+        _ghesSupport = false;
+        _isYouTube = false;
+        _selectedPlanGroup = null;
+        _result = null;
+        _isAlreadyExists = false;
+        _validationError = null;
+        _fetchingTitle = false;
+        _titleFetchCts?.Cancel();
+    }
+}

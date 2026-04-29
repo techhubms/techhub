@@ -81,7 +81,15 @@ public class ContentSyncService : IContentSyncService
         _logger = logger;
         _dialect = dialect;
         _options = options.Value;
-        _collectionsPath = contentOptions.Value.CollectionsPath;
+
+        var collectionsPath = contentOptions.Value.CollectionsPath;
+        if (string.IsNullOrWhiteSpace(collectionsPath))
+        {
+            throw new InvalidOperationException(
+                "ContentOptions:CollectionsPath must be configured when ContentSync is enabled.");
+        }
+
+        _collectionsPath = collectionsPath;
     }
 
     public async Task<SyncResult> SyncAsync(CancellationToken ct = default)

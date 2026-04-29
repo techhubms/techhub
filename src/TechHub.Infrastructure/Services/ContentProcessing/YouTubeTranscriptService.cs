@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -12,14 +13,17 @@ using YoutubeExplode.Videos.ClosedCaptions;
 namespace TechHub.Infrastructure.Services.ContentProcessing;
 
 /// <summary>
-/// Fetches YouTube video closed captions (transcripts) using YoutubeExplode.
-/// Tries English captions first, then falls back to any auto-generated track.
+/// Fetches YouTube video closed captions (transcripts) using YoutubeExplode
+/// (with configured HTTP client, browser UA, and cookies).
+/// yt-dlp is registered as a dependency for future fallback use, but currently disabled
+/// while we validate whether cookies alone are sufficient.
 /// Returns plain text transcript suitable for AI analysis. Failures are non-fatal
-/// — the pipeline continues without transcript data if fetching fails.
+/// - the pipeline continues without transcript data if fetching fails.
 /// </summary>
 public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
 {
     private readonly YoutubeClient _youtube;
+    private readonly YtDlpTranscriptService _ytDlp;
     private readonly ContentProcessorOptions _options;
     private readonly ILogger<YouTubeTranscriptService> _logger;
     private bool _disposed;
@@ -34,15 +38,28 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
     private static readonly TimeSpan _retryBaseDelay = TimeSpan.FromSeconds(2);
 
     public YouTubeTranscriptService(
+        HttpClient httpClient,
+        YtDlpTranscriptService ytDlp,
         IOptions<ContentProcessorOptions> options,
         ILogger<YouTubeTranscriptService> logger)
     {
+        ArgumentNullException.ThrowIfNull(httpClient);
+        ArgumentNullException.ThrowIfNull(ytDlp);
         ArgumentNullException.ThrowIfNull(options);
         ArgumentNullException.ThrowIfNull(logger);
 
-        _youtube = new YoutubeClient();
+        var cookies = ParseCookies(options.Value.YouTubeCookies);
+        _youtube = cookies.Count > 0
+            ? new YoutubeClient(httpClient, cookies)
+            : new YoutubeClient(httpClient);
+        _ytDlp = ytDlp;
         _options = options.Value;
         _logger = logger;
+
+        if (cookies.Count > 0)
+        {
+            _logger.LogInformation("YouTubeTranscriptService configured with {Count} persistent cookie(s)", cookies.Count);
+        }
     }
 
     public void Dispose()
@@ -58,6 +75,7 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
             if (disposing)
             {
                 (_youtube as IDisposable)?.Dispose();
+                _ytDlp.Dispose();
             }
 
             _disposed = true;
@@ -65,13 +83,24 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
     }
 
     /// <summary>
-    /// Fetches the transcript for <paramref name="videoUrl"/>.
+    /// Fetches the transcript for <paramref name="videoUrl"/> using YoutubeExplode.
+    /// yt-dlp fallback is currently disabled while validating cookie-based approach.
     /// Returns a <see cref="TranscriptResult"/> indicating success with text or failure with a reason.
     /// </summary>
     public virtual async Task<TranscriptResult> GetTranscriptAsync(string videoUrl, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(videoUrl);
 
+        // Use YoutubeExplode only (with browser UA + cookies)
+        // yt-dlp fallback is disabled while we validate whether cookies are sufficient
+        return await TryYoutubeExplodeAsync(videoUrl, ct);
+    }
+
+    /// <summary>
+    /// Attempts to fetch a transcript using YoutubeExplode with retry logic.
+    /// </summary>
+    private async Task<TranscriptResult> TryYoutubeExplodeAsync(string videoUrl, CancellationToken ct)
+    {
         for (var attempt = 1; attempt <= MaxRetryAttempts + 1; attempt++)
         {
             try
@@ -113,13 +142,11 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
             }
             catch (VideoUnavailableException ex)
             {
-                // Non-transient: video is private, removed, or region-restricted. No point retrying.
                 _logger.LogWarning("Video unavailable for transcript: {Url} — {Message}", videoUrl.Sanitize(), ex.Message.Sanitize());
                 return TranscriptResult.Failure(ex.Message);
             }
             catch (VideoUnplayableException ex)
             {
-                // Non-transient: video requires purchase or is age-restricted. No point retrying.
                 _logger.LogWarning("Video unplayable for transcript: {Url} — {Message}", videoUrl.Sanitize(), ex.Message.Sanitize());
                 return TranscriptResult.Failure(ex.Message);
             }
@@ -135,7 +162,7 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
                 }
                 else
                 {
-                    _logger.LogWarning(ex, "Failed to fetch transcript for {Url} after {Attempts} attempts", videoUrl, attempt);
+                    _logger.LogWarning(ex, "YoutubeExplode failed for {Url} after {Attempts} attempts", videoUrl, attempt);
                     return TranscriptResult.Failure(ex.Message);
                 }
             }
@@ -202,5 +229,39 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
         }
 
         return sb.ToString().Trim();
+    }
+
+    /// <summary>
+    /// Parses a semicolon-delimited cookie string (e.g. "PREF=value;VISITOR_PRIVACY_METADATA=value")
+    /// into <see cref="Cookie"/> objects scoped to .youtube.com domain.
+    /// </summary>
+    internal static List<Cookie> ParseCookies(string cookieString)
+    {
+        var cookies = new List<Cookie>();
+        if (string.IsNullOrWhiteSpace(cookieString))
+        {
+            return cookies;
+        }
+
+        foreach (var entry in cookieString.Split(';'))
+        {
+            if (string.IsNullOrWhiteSpace(entry))
+            {
+                continue;
+            }
+
+            var separatorIndex = entry.IndexOf('=', StringComparison.Ordinal);
+            if (separatorIndex <= 0)
+            {
+                continue;
+            }
+
+            var name = entry[..separatorIndex].Trim();
+            var value = entry[(separatorIndex + 1)..].Trim();
+
+            cookies.Add(new Cookie(name, value, "/", ".youtube.com"));
+        }
+
+        return cookies;
     }
 }

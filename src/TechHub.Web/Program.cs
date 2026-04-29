@@ -186,15 +186,12 @@ startupLogger.LogInformation("🔗 Connecting to API at: {ApiBaseUrl}", apiBaseU
 // Register delegating handler for forwarding auth tokens to admin API endpoints
 builder.Services.AddTransient<AdminTokenDelegatingHandler>();
 
-// Logger for resilience retry events (captures request URL on failures)
-#pragma warning disable CA2000 // Intentional: logger must outlive startup, disposed with app lifetime
-var retryLogger = LoggerFactory.Create(b => b.AddConsole()).CreateLogger("TechHubApiClient.Resilience");
-#pragma warning restore CA2000
-
 builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
-    client.Timeout = TimeSpan.FromSeconds(100); // Allow extra time beyond resilience timeout
+    // Generous timeout: some admin operations (URL processing) involve AI calls that take 30-60s.
+    // Retries/resilience belong inside the API around external dependencies, not here.
+    client.Timeout = TimeSpan.FromMinutes(3);
 })
 .AddHttpMessageHandler<AdminTokenDelegatingHandler>()
 .ConfigurePrimaryHttpMessageHandler(sp =>
@@ -214,29 +211,6 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
     }
 
     return handler;
-})
-.AddStandardResilienceHandler(options =>
-{
-    // Configure timeouts to handle slow API startup (database seeding can take ~60s)
-    // Total: 6 attempts × 10s + 5 retries × 3s = 75s, capped at 90s hard timeout
-    options.TotalRequestTimeout.Timeout = TimeSpan.FromSeconds(90);
-    options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(10);
-    options.Retry.MaxRetryAttempts = 5;
-    options.Retry.Delay = TimeSpan.FromSeconds(3);
-    options.Retry.BackoffType = Polly.DelayBackoffType.Constant; // Don't use exponential backoff
-    options.Retry.OnRetry = args =>
-    {
-        // Log the request URI on retry so we can identify which endpoint is failing.
-        // args.Outcome.Result?.RequestMessage gives us the URL for HTTP error responses (e.g. 500).
-        // For timeout exceptions, RequestMessage is null so we fall back to RequestMetadata.
-        var uri = args.Outcome.Result?.RequestMessage?.RequestUri?.PathAndQuery ?? "unknown";
-        var result = args.Outcome.Result?.StatusCode.ToString()
-            ?? args.Outcome.Exception?.GetType().Name
-            ?? "unknown";
-        retryLogger.LogWarning("API retry attempt {Attempt} for {RequestUri}: {Result}",
-            args.AttemptNumber, uri, result);
-        return ValueTask.CompletedTask;
-    };
 });
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());

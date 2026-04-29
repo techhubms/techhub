@@ -1,0 +1,234 @@
+/* AddContentModal.razor.css — scoped styles for add-content modal */
+
+.editor-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: var(--spacing-2);
+}
+
+.editor-modal {
+    background: var(--color-bg-elevated);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    width: min(640px, 100%);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-2) var(--spacing-3);
+    border-bottom: 1px solid var(--color-border-default);
+    gap: var(--spacing-2);
+}
+
+.editor-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.editor-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    padding: 0 var(--spacing-1);
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast);
+
+    &:hover {
+        color: var(--color-text-primary);
+    }
+}
+
+.editor-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--spacing-3);
+}
+
+.editor-footer {
+    display: flex;
+    gap: var(--spacing-1);
+    padding: var(--spacing-2) var(--spacing-3);
+    border-top: 1px solid var(--color-border-default);
+}
+
+.add-content-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.admin-form-group {
+    margin-bottom: var(--spacing-2);
+}
+
+.admin-form-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-1);
+}
+
+.admin-form-input,
+.admin-form-select {
+    width: 100%;
+    padding: var(--spacing-1) var(--spacing-2);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-default);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-family-sans);
+    transition: border-color var(--duration-fast) var(--easing-ease);
+    box-sizing: border-box;
+}
+
+.admin-form-input:focus,
+.admin-form-select:focus {
+    outline: none;
+    border-color: var(--color-purple-medium);
+    box-shadow: 0 0 0 2px var(--color-purple-bg-subtle);
+}
+
+.admin-form-input:disabled,
+.admin-form-select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.admin-form-hint {
+    display: inline-block;
+    margin-top: var(--spacing-1);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.admin-form-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-primary);
+}
+
+.admin-form-checkbox-label input[type="checkbox"] {
+    accent-color: var(--color-purple-medium);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.admin-form-checkbox-label input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.admin-radio-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+    border: 1px solid var(--color-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-2);
+    background: var(--color-bg-emphasis);
+}
+
+.badge-info {
+    background: var(--color-blue-light-bg);
+    color: var(--color-blue);
+    border: 1px solid var(--color-blue-border, var(--color-border-default));
+    padding: 2px var(--spacing-1);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+}
+
+.admin-alert-warning {
+    background: var(--color-amber-bg);
+    border-color: var(--color-amber-border);
+    color: var(--color-amber);
+}
+
+/* Plan badge styles (duplicated from AdminCopilotFeatures for CSS isolation) */
+.features-plan-badge {
+    display: inline-block;
+    padding: 2px var(--spacing-1);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    background: var(--color-bg-emphasis);
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border-default);
+}
+
+.features-plan-badge-free {
+    background: var(--color-blue-light-bg);
+    color: var(--color-purple-bright);
+    border-color: var(--color-purple-border-subtle);
+}
+
+.features-plan-badge-student {
+    background: var(--color-green-dark-bg);
+    color: var(--color-green-light);
+    border-color: var(--color-green-light-border);
+}
+
+.features-plan-badge-pro {
+    background: var(--color-purple-bg-subtle);
+    color: var(--color-purple-bright);
+    border-color: var(--color-purple-border);
+}
+
+.features-plan-badge-business {
+    background: var(--color-amber-bg);
+    color: var(--color-amber);
+    border-color: var(--color-amber-border);
+}
+
+.features-plan-badge-proplus {
+    background: var(--color-purple-bg-dark);
+    color: var(--color-purple-bright);
+    border-color: var(--color-purple-border);
+}
+
+.features-plan-badge-enterprise {
+    background: var(--color-red-bg);
+    color: var(--color-red);
+    border-color: var(--color-red-light-border);
+}
+
+/* Radio group for plan selection */
+.features-plan-radio-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-1) 0;
+    cursor: pointer;
+    font-size: var(--font-size-sm);
+}
+
+.features-plan-radio-label input[type="radio"] {
+    accent-color: var(--color-purple-medium);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    flex-shrink: 0;
+}

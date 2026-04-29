@@ -35,7 +35,7 @@ public class ContentProcessingBackgroundServiceTests
 
         var serviceProvider = services.BuildServiceProvider();
 
-        var options = new ContentProcessorOptions { IntervalMinutes = 60 };
+        var options = new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
 
         var sut = new ContentProcessingBackgroundService(
             serviceProvider,
@@ -80,7 +80,7 @@ public class ContentProcessingBackgroundServiceTests
 
         var serviceProvider = services.BuildServiceProvider();
 
-        var options = new ContentProcessorOptions { IntervalMinutes = 60 };
+        var options = new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
 
         var sut = new ContentProcessingBackgroundService(
             serviceProvider,
@@ -115,7 +115,7 @@ public class ContentProcessingBackgroundServiceTests
         var services = new ServiceCollection().BuildServiceProvider();
         var sut = new ContentProcessingBackgroundService(
             services,
-            Options.Create(new ContentProcessorOptions()),
+            Options.Create(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0" }),
             startupState,
             Mock.Of<ILogger<ContentProcessingBackgroundService>>());
 
@@ -167,13 +167,13 @@ public class ContentProcessingBackgroundServiceTests
             feedRepo.Object,
             Mock.Of<IContentFixerService>(),
             TimeProvider.System,
-            Options.Create(new ContentProcessorOptions()),
+            Options.Create(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0" }),
             Mock.Of<ILogger<ContentProcessingService>>()));
         services.AddScoped(_ => mockJobSettingRepo.Object);
         services.AddScoped(_ => Mock.Of<IContentRepository>());
 
         var serviceProvider = services.BuildServiceProvider();
-        var options = new ContentProcessorOptions { IntervalMinutes = 60 };
+        var options = new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
 
         var sut = new ContentProcessingBackgroundService(
             serviceProvider,
@@ -226,7 +226,7 @@ public class ContentProcessingBackgroundServiceTests
         services.AddScoped(_ => mockContentRepo.Object);
 
         var serviceProvider = services.BuildServiceProvider();
-        var options = new ContentProcessorOptions { IntervalMinutes = 60 };
+        var options = new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0", IntervalMinutes = 60 };
 
         var sut = new ContentProcessingBackgroundService(
             serviceProvider,
@@ -269,7 +269,7 @@ public class ContentProcessingBackgroundServiceTests
             feedRepo.Object,
             Mock.Of<IContentFixerService>(),
             TimeProvider.System,
-            Options.Create(new ContentProcessorOptions()),
+            Options.Create(new ContentProcessorOptions { YouTubeUserAgent = "TestAgent/1.0" }),
             Mock.Of<ILogger<ContentProcessingService>>());
     }
 }

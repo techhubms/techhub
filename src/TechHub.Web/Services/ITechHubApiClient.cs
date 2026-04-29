@@ -538,6 +538,33 @@ internal interface ITechHubApiClient
     /// </summary>
     Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
 
+    /// <summary>
+    /// Update the subscription plans, GHES support flag, and draft status for a ghc-features video.
+    /// PUT /api/admin/ghc-features/{slug}/plans
+    /// </summary>
+    Task UpdateGhcFeaturePlansAsync(string slug, IReadOnlyList<string> plans, bool ghesSupport, bool draft, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Delete a ghc-features video from the database.
+    /// DELETE /api/admin/ghc-features/{slug}
+    /// Returns false when the item was not found (HTTP 404).
+    /// </summary>
+    Task<bool> DeleteGhcFeatureAsync(string slug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Process a single URL ad-hoc, outside the RSS pipeline.
+    /// POST /api/admin/urls/process
+    /// Returns null when the URL already exists (HTTP 409).
+    /// </summary>
+    Task<AdHocUrlProcessResult?> ProcessAdHocUrlAsync(AdHocUrlProcessRequest request, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Fetch the page title for a URL.
+    /// GET /api/admin/urls/title?url={url}
+    /// Returns null when the title could not be extracted.
+    /// </summary>
+    Task<string?> FetchUrlTitleAsync(string url, CancellationToken cancellationToken = default);
+
     // ================================================================
     // Legacy redirect endpoint
     // ================================================================

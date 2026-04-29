@@ -16,7 +16,7 @@ param adminIpAddresses = readEnvironmentVariable('ADMIN_IP_ADDRESSES')
 // External DNS (GoDaddy) delegates _acme-challenge CNAMEs to this zone.
 param acmeDnsZoneName = 'acme.hub.ms'
 param acmeDelegatedDomains = ['hub.ms', 'xebia.ms']
-// Monthly budget alert — tracks calendar months (not the Apr 7–May 6 billing cycle,
-// which Azure budgets cannot match). Alerts at 80% / 100% / 120%.
+// Budget alert aligned to the billing cycle (e.g. Apr 7–May 6) using BillingMonth
+// time grain. Alerts at 80% / 100% / 120%.
 param monthlyBudgetAmount = 150
 param budgetStartDate = '2026-04-01'

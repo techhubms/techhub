@@ -1124,7 +1124,8 @@ public class ContentRepository : IContentRepository
                 sql.Append(CultureInfo.InvariantCulture, $@"
             AND {Dialect.GetFullTextWhereClause("query")}");
                 parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
-                sql.Append(" ORDER BY c.date_epoch DESC");
+                sql.Append(CultureInfo.InvariantCulture, $@"
+            ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
                 // LIMIT is applied here because the tag subquery skips it when search is present
                 // (to avoid pruning items before FTS filter runs)
                 sql.Append(" LIMIT @take OFFSET @skip");
@@ -1218,7 +1219,18 @@ public class ContentRepository : IContentRepository
             }
 
             sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
-            sql.Append(" ORDER BY c.date_epoch DESC");
+
+            // When a search query is provided, order by relevance (ts_rank) first, then date
+            // This ensures title matches rank higher than content-only matches
+            if (hasQuery)
+            {
+                sql.Append(CultureInfo.InvariantCulture, $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
+            }
+            else
+            {
+                sql.Append(" ORDER BY c.date_epoch DESC");
+            }
+
             sql.Append(" LIMIT @take OFFSET @skip");
             parameters.Add("take", request.Take);
             parameters.Add("skip", request.Skip);
@@ -1744,6 +1756,31 @@ LIMIT @Limit OFFSET @Offset";
         const string Sql = "DELETE FROM content_items WHERE collection_name = @CollectionName AND slug = @Slug";
         var rows = await Connection.ExecuteAsync(
             new CommandDefinition(Sql, new { CollectionName = collectionName, Slug = slug }, cancellationToken: ct));
+        return rows > 0;
+    }
+
+    /// <inheritdoc/>
+    public async Task<bool> UpdateGhcFeaturePlansAsync(
+        string slug,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        bool draft,
+        CancellationToken ct = default)
+    {
+        var plansCsv = string.Join(",", plans);
+
+        const string Sql = @"
+UPDATE content_items
+SET plans        = @Plans,
+    ghes_support = @GhesSupport,
+    draft        = @Draft,
+    updated_at   = NOW()
+WHERE slug = @Slug
+  AND collection_name = 'videos'
+  AND subcollection_name = 'ghc-features'";
+
+        var rows = await Connection.ExecuteAsync(
+            new CommandDefinition(Sql, new { Plans = plansCsv, GhesSupport = ghesSupport, Draft = draft, Slug = slug }, cancellationToken: ct));
         return rows > 0;
     }
 
