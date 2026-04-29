@@ -58,28 +58,63 @@ public class PostgresDialect : ISqlDialect
     {
         // PostgreSQL tsvector @@ operator with to_tsquery for prefix support
         // Using to_tsquery instead of plainto_tsquery to support :* prefix syntax
-        return $"c.search_vector @@ to_tsquery('english', @{paramName})";
+        // Uses 'simple' config to preserve stop words (e.g., "vs" in "VS Code")
+        return $"c.search_vector @@ to_tsquery('simple', @{paramName})";
     }
 
     public string GetFullTextOrderByClause(string paramName)
     {
         // PostgreSQL ts_rank function (higher is better)
-        // Using to_tsquery to match WHERE clause
-        return $"ts_rank(c.search_vector, to_tsquery('english', @{paramName})) DESC";
+        // Using to_tsquery with 'simple' config to match WHERE clause
+        return $"ts_rank(c.search_vector, to_tsquery('simple', @{paramName})) DESC";
     }
+
+    /// <summary>
+    /// Known compound words and their expansions for search.
+    /// Maps compound terms (lowercase) to their constituent parts.
+    /// </summary>
+    private static readonly Dictionary<string, string[]> _compoundWords = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["vscode"] = ["vs", "code"],
+        ["dotnet"] = ["dot", "net"],
+        ["devops"] = ["dev", "ops"],
+        ["csharp"] = ["c", "sharp"],
+        ["github"] = ["git", "hub"],
+        ["openai"] = ["open", "ai"],
+        ["chatgpt"] = ["chat", "gpt"],
+        ["copilot"] = ["co", "pilot"],
+    };
 
     public string TransformFullTextQuery(string query)
     {
-        // PostgreSQL prefix search: replace spaces with & and append :* for prefix matching
-        // Example: "reinie" → "reinie:*" matches "Reinier"
-        // Example: "github copilot" → "github:* & copilot:*" for multi-word prefix
+        // PostgreSQL prefix search with OR logic for better recall:
+        // - Uses | (OR) so matching ANY term surfaces results (ranked by relevance)
+        // - Appends :* for prefix matching ("reinie" → "reinie:*" matches "Reinier")
+        // - Expands known compound words ("vscode" → "vscode:* | vs:* | code:*")
+        // Combined with ts_rank ordering, best matches still appear first
         if (string.IsNullOrWhiteSpace(query))
         {
             return query;
         }
 
         var terms = query.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        return string.Join(" & ", terms.Select(term => $"{term}:*"));
+        var expandedTerms = new List<string>();
+
+        foreach (var term in terms)
+        {
+            expandedTerms.Add($"{term}:*");
+
+            // Expand known compound words to also match their parts
+            if (_compoundWords.TryGetValue(term, out var parts))
+            {
+                foreach (var part in parts)
+                {
+                    expandedTerms.Add($"{part}:*");
+                }
+            }
+        }
+
+        return string.Join(" | ", expandedTerms);
     }
 
     public string GetCollectionFilterClause(string paramName, int count)

@@ -5,6 +5,7 @@
 let boundHandleScroll = null;
 let activeTriggerId = null;
 let activeStateKey = null;
+let initialPagePath = null; // pathname+search when listener attached; detects page changes
 
 const TRIGGER_MARGIN_PX = 300; // Load when trigger is within 300px of viewport bottom
 
@@ -24,6 +25,12 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
 
     activeStateKey = stateKey || null;
 
+    // Record the page path so we can detect when the user navigates away during
+    // enhanced navigation. If the URL changes before our listener is removed,
+    // handleScroll must stop immediately to avoid saving a corrupted scroll position.
+    // Same pattern as toc-scroll-spy.js's initialPagePath guard.
+    initialPagePath = window.location.pathname + window.location.search;
+
     // Capture helper and triggerElementId via closure — no module-level state needed.
     // No rAF throttling needed here — unlike TOC scroll-spy (which updates UI on every frame),
     // infinite scroll just checks position and calls LoadNextBatch which is already
@@ -33,6 +40,16 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
     function handleScroll() {
         const el = document.getElementById(triggerElementId);
         if (!el) return;
+
+        // During Blazor enhanced navigation the URL changes (pushState) before the old
+        // component is disposed. nav-helpers.js resetPagePosition() scrolls to top,
+        // firing a scroll event while this listener is still active. Without this guard
+        // we'd overwrite the saved position with 0, breaking back-button restoration.
+        if (initialPagePath !== null &&
+            window.location.pathname + window.location.search !== initialPagePath) {
+            dispose();
+            return;
+        }
 
         // Save scroll position on every scroll for back-button restoration
         if (activeStateKey) {
@@ -89,6 +106,7 @@ export function dispose() {
         activeTriggerId = null;
     }
     activeStateKey = null;
+    initialPagePath = null;
 }
 
 // Restores scroll position saved for the given state key.

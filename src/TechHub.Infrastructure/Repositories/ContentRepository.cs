@@ -1124,7 +1124,8 @@ public class ContentRepository : IContentRepository
                 sql.Append(CultureInfo.InvariantCulture, $@"
             AND {Dialect.GetFullTextWhereClause("query")}");
                 parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
-                sql.Append(" ORDER BY c.date_epoch DESC");
+                sql.Append(CultureInfo.InvariantCulture, $@"
+            ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
                 // LIMIT is applied here because the tag subquery skips it when search is present
                 // (to avoid pruning items before FTS filter runs)
                 sql.Append(" LIMIT @take OFFSET @skip");
@@ -1218,7 +1219,18 @@ public class ContentRepository : IContentRepository
             }
 
             sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
-            sql.Append(" ORDER BY c.date_epoch DESC");
+
+            // When a search query is provided, order by relevance (ts_rank) first, then date
+            // This ensures title matches rank higher than content-only matches
+            if (hasQuery)
+            {
+                sql.Append(CultureInfo.InvariantCulture, $" ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
+            }
+            else
+            {
+                sql.Append(" ORDER BY c.date_epoch DESC");
+            }
+
             sql.Append(" LIMIT @take OFFSET @skip");
             parameters.Add("take", request.Take);
             parameters.Add("skip", request.Skip);

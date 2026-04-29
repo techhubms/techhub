@@ -35,10 +35,10 @@ param spokeVnetIds string[] = []
 @description('Email address that receives operational alerts and budget notifications')
 param alertEmailAddress string = 'reinier.vanmaanen@xebia.com'
 
-@description('Monthly subscription budget amount (in billing currency, typically EUR).')
+@description('Budget amount per billing period (in billing currency, typically EUR).')
 param monthlyBudgetAmount int = 250
 
-@description('Budget start date (first-of-month, YYYY-MM-01). Must be in the current or past month at deploy time.')
+@description('Budget start date (YYYY-MM-DD, aligned to billing period start). Must be in the current or past billing period at deploy time.')
 param budgetStartDate string = '2026-04-01'
 
 @description('Azure Policy: allowed deployment locations')
@@ -171,7 +171,7 @@ module actionGroup './modules/actionGroup.bicep' = {
   }
 }
 
-// Subscription monthly cost budget with 80 / 100 / 120% email alerts.
+// Subscription cost budget aligned to billing cycle, with 80 / 100 / 120% email alerts.
 module budget './modules/budget.bicep' = {
   name: 'budget-deployment'
   params: {

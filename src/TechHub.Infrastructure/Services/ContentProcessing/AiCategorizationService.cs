@@ -184,8 +184,25 @@ public sealed class AiCategorizationService : IAiCategorizationService
             using var aiDoc = JsonDocument.Parse(jsonContent);
             var root = aiDoc.RootElement;
 
+            // Extract the explicit included/excluded flag from the AI response.
+            // This is the authoritative signal — if present, it determines the flow.
+            // Falls back to heuristics if the flag is missing (backward compatibility).
+            var included = GetBool(root, "included");
+
             // Extract explanation from the AI's response (available for both included and excluded items)
             var explanation = GetString(root, "explanation") ?? string.Empty;
+
+            // If the AI explicitly marked this as excluded, validate explanation and return as skip.
+            if (included == false)
+            {
+                if (string.IsNullOrWhiteSpace(explanation))
+                {
+                    _logger.LogWarning("AI excluded item but provided no explanation for {Url}", source.ExternalUrl);
+                    return new CategorizationResult { Explanation = "AI excluded item but provided no explanation", IsFailure = true };
+                }
+
+                return new CategorizationResult { Explanation = explanation };
+            }
 
             var title = GetString(root, "title");
             var excerpt = GetString(root, "excerpt");
@@ -195,16 +212,22 @@ public sealed class AiCategorizationService : IAiCategorizationService
             var itemContent = GetString(root, "content");
             var author = GetString(root, "author");
 
-            // If there are no sections, determine whether this is a legitimate skip or a failure.
-            // Option B response: AI returns only an explanation (no content fields) → legitimate skip.
-            // But if the AI returned content fields (title, content) with empty sections → failure.
+            // If included flag is explicitly true, all content fields are required.
+            // If included flag is missing (legacy response), infer from sections.
             if (sections.Count == 0)
             {
-                var hasContentFields = !string.IsNullOrWhiteSpace(title) || !string.IsNullOrWhiteSpace(itemContent);
-                if (hasContentFields)
+                if (included == true)
                 {
-                    _logger.LogWarning("AI returned content fields but no sections for {Title}", source.Title);
-                    return new CategorizationResult { Explanation = "AI returned content fields but no valid sections", IsFailure = true };
+                    // AI said included but provided no sections — that's a failure.
+                    _logger.LogWarning("AI marked item as included but returned no sections for {Title}", source.Title);
+                    return new CategorizationResult { Explanation = "AI marked item as included but returned no sections", IsFailure = true };
+                }
+
+                // Legacy fallback: no included flag and no sections → treat as skip if explanation exists.
+                if (string.IsNullOrWhiteSpace(explanation))
+                {
+                    _logger.LogWarning("AI returned no sections and no explanation for {Url}", source.ExternalUrl);
+                    return new CategorizationResult { Explanation = "AI returned no sections and no explanation", IsFailure = true };
                 }
 
                 return new CategorizationResult { Explanation = explanation };
@@ -425,6 +448,16 @@ public sealed class AiCategorizationService : IAiCategorizationService
         if (root.TryGetProperty(name, out var prop) && prop.ValueKind == JsonValueKind.String)
         {
             return prop.GetString();
+        }
+
+        return null;
+    }
+
+    private static bool? GetBool(JsonElement root, string name)
+    {
+        if (root.TryGetProperty(name, out var prop) && (prop.ValueKind == JsonValueKind.True || prop.ValueKind == JsonValueKind.False))
+        {
+            return prop.GetBoolean();
         }
 
         return null;

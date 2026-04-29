@@ -51,6 +51,22 @@ public class ContentProcessorOptions
     /// </summary>
     public IReadOnlyList<SubcollectionRule> SubcollectionRules { get; init; } = [];
 
+    /// <summary>
+    /// Browser User-Agent header sent with YouTube requests (YoutubeExplode).
+    /// Keep this in sync with a current Chrome stable release to avoid bot detection.
+    /// Chrome uses a "reduced" UA format since v101: major version only, frozen OS/platform tokens.
+    /// See <see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints"/>.
+    /// Must be configured explicitly — the content processor will fail at startup if empty.
+    /// </summary>
+    public required string YouTubeUserAgent { get; init; }
+
+    /// <summary>
+    /// Persistent cookies to send with YouTube requests (YoutubeExplode).
+    /// Semicolon-delimited "name=value" pairs, e.g. "PREF=tz=Europe.Amsterdam;VISITOR_PRIVACY_METADATA=CgJOT...".
+    /// Populated from Key Vault secret <c>techhub-{env}-youtube-cookies</c> at runtime.
+    /// </summary>
+    public string YouTubeCookies { get; init; } = string.Empty;
+
     /// <summary>Computed processing interval.</summary>
     public TimeSpan Interval => TimeSpan.FromMinutes(IntervalMinutes);
 }

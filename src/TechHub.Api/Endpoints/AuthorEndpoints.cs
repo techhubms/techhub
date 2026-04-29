@@ -43,8 +43,8 @@ public static class AuthorEndpoints
             .WithDescription("Returns paginated content items attributed to the specified author. " +
                 "Supports: take (default configured in appsettings), skip.")
             .Produces<CollectionItemsResponse>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status400BadRequest)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         return endpoints;
     }
@@ -80,7 +80,7 @@ public static class AuthorEndpoints
     /// <summary>
     /// GET /api/authors/{authorName}/items - Get content items for a specific author.
     /// </summary>
-    private static async Task<Results<Ok<CollectionItemsResponse>, BadRequest<string>, NotFound>> GetAuthorItems(
+    private static async Task<Results<Ok<CollectionItemsResponse>, NoContent, BadRequest<string>>> GetAuthorItems(
         string authorName,
         IOptions<ApiOptions> apiOptions,
         IContentRepository contentRepository,
@@ -101,13 +101,13 @@ public static class AuthorEndpoints
         var limit = Math.Clamp(take ?? options.DefaultPageSize, 1, options.MaxPageSize);
         var offset = Math.Max(skip, 0);
 
-        // Check that the author exists; use the stored name for case-exact SQL matching
+        // Look up the author; return 204 No Content if not found (this is a lookup, not a page request)
         var authors = await contentRepository.GetAuthorsAsync(cancellationToken);
         var matchedAuthor = authors.FirstOrDefault(a =>
             string.Equals(a.Name, decodedAuthorName, StringComparison.OrdinalIgnoreCase));
         if (matchedAuthor == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         // Use the stored author name (exact case) so the SQL filter matches precisely
