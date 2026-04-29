@@ -23,6 +23,20 @@ public class ContentProcessorOptions
     /// <summary>HTTP request timeout in seconds for fetching article content.</summary>
     public int RequestTimeoutSeconds { get; init; } = 30;
 
+    /// <summary>
+    /// Whether the YoutubeExplode-based transcript fetcher is enabled.
+    /// When both fetchers are enabled, YoutubeExplode is tried first with yt-dlp as fallback.
+    /// </summary>
+    public bool YouTubeExplodeEnabled { get; init; } = true;
+
+    /// <summary>
+    /// Whether the yt-dlp-based transcript fetcher is enabled.
+    /// When both fetchers are enabled, yt-dlp serves as fallback after YoutubeExplode.
+    /// When only yt-dlp is enabled, it is used as the primary (and only) fetcher.
+    /// Requires yt-dlp to be installed and available on PATH.
+    /// </summary>
+    public bool YtDlpEnabled { get; init; } = true;
+
     /// <summary>Maximum number of items to process per run (0 = unlimited).</summary>
     public int MaxItemsPerRun { get; init; }
 

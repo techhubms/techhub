@@ -172,10 +172,10 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange — collapsed cookie is set; hash matches so no auto-expand
         // The card title produces a hash; set the same hash in cookie to simulate "seen before"
-        const string cardTitle = "Test Event";
+        const string CardTitle = "Test Event";
         // Compute the same hash the component would compute
         var hash = 0u;
-        foreach (var ch in cardTitle)
+        foreach (var ch in CardTitle)
         {
             hash = hash * 31u + ch;
         }
@@ -196,7 +196,7 @@ public class HeroBannerTests : BunitContext
                 [
                     new HeroBannerCard
                     {
-                        Title = cardTitle,
+                        Title = CardTitle,
                         Description = "Description",
                         StartDate = "2020-01-01",
                         EndDate = "2099-12-31"

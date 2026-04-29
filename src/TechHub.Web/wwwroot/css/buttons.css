@@ -62,6 +62,13 @@ html.keyboard-nav .button:focus-visible {
   text-decoration: none !important;
 }
 
+.btn:disabled,
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* Secondary Button - Default background with border */
 .btn-secondary {
   display: inline-flex;
@@ -100,6 +107,12 @@ html.keyboard-nav .btn-secondary:focus-visible {
   outline-offset: 2px !important;
   transition: none !important;
   border-radius: var(--radius-md);
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* Small Button Modifier */

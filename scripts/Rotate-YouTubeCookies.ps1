@@ -13,10 +13,11 @@
 
     Cookies to provide (extract from browser DevTools > Application > Cookies > youtube.com):
         PREF                     — Browser preferences (timezone, language)
+        SOCS                     — EU consent acceptance cookie
         VISITOR_PRIVACY_METADATA — GDPR/consent cookie (bypasses EU consent wall)
 
     The secret is stored as:
-        techhub-<env>-youtube-cookies = "PREF=<value>;VISITOR_PRIVACY_METADATA=<value>"
+        techhub-<env>-youtube-cookies = "PREF=<value>;SOCS=<value>;VISITOR_PRIVACY_METADATA=<value>"
 
     After rotating, restart the Container App revision to pick up the new values.
 
@@ -57,7 +58,7 @@ Write-Host ""
 Write-Host "Only anonymous cookies are needed. Do NOT provide login cookies (SID, HSID, LOGIN_INFO, etc.)." -ForegroundColor Yellow
 Write-Host ""
 
-$cookieNames = @('PREF', 'VISITOR_PRIVACY_METADATA')
+$cookieNames = @('PREF', 'SOCS', 'VISITOR_PRIVACY_METADATA')
 $cookieParts = @()
 
 foreach ($name in $cookieNames) {

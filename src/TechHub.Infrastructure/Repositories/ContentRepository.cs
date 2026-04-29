@@ -1495,7 +1495,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
     {
         const string Sql = @"
 SELECT collection_name, slug, date_epoch, title, author, excerpt, content, primary_section_name,
-       tags_csv, ai_metadata::text AS ai_metadata,
+       feed_name, tags_csv, ai_metadata::text AS ai_metadata,
        is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
 FROM content_items
 WHERE collection_name = @CollectionName AND slug = @Slug
@@ -1560,6 +1560,7 @@ LIMIT 1";
             Excerpt = (string)row.excerpt,
             Content = (string)row.content,
             PrimarySectionName = (string)row.primary_section_name,
+            FeedName = (string?)row.feed_name,
             Tags = tags,
             Sections = sections,
             AiMetadata = (string?)row.ai_metadata
@@ -1596,6 +1597,7 @@ SET title                = @Title,
     content              = @Content,
     date_epoch           = @DateEpoch,
     primary_section_name = @PrimarySectionName,
+    feed_name            = COALESCE(@FeedName, feed_name),
     tags_csv             = @TagsCsv,
     is_ai                = @IsAi,
     is_azure             = @IsAzure,
@@ -1617,6 +1619,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             Content = editData.Content,
             DateEpoch = editData.DateEpoch,
             PrimarySectionName = editData.PrimarySectionName,
+            FeedName = editData.FeedName,
             TagsCsv = tagsCsv,
             IsAi = isAi,
             IsAzure = isAzure,
@@ -1658,6 +1661,18 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
                         parameters,
                         transaction: transaction,
                         cancellationToken: ct));
+
+                // Keep processed_urls.feed_name in sync with content_items.feed_name
+                // so the admin processed URLs listing reflects the updated feed.
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        @"UPDATE processed_urls
+                          SET feed_name  = COALESCE(@FeedName, feed_name),
+                              updated_at = NOW()
+                          WHERE collection_name = @CollectionName AND slug = @Slug",
+                        parameters,
+                        transaction: transaction,
+                        cancellationToken: ct));
             }
 
             transaction.Commit();
@@ -1679,6 +1694,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? subcollectionName = null,
         CancellationToken ct = default)
     {
         var whereClauses = new List<string>();
@@ -1700,6 +1716,12 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         {
             whereClauses.Add("ci.feed_name = @FeedName");
             parameters.Add("FeedName", feedName);
+        }
+
+        if (!string.IsNullOrWhiteSpace(subcollectionName))
+        {
+            whereClauses.Add("ci.subcollection_name = @SubcollectionName");
+            parameters.Add("SubcollectionName", subcollectionName);
         }
 
         var whereStr = whereClauses.Count > 0

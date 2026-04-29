@@ -39,11 +39,6 @@
                    placeholder="Search by title, slug or URL…" />
         </div>
         <div class="admin-filter-group">
-            <label class="admin-label" for="collectionFilter">Collection</label>
-            <input id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync"
-                   placeholder="e.g. blogs" />
-        </div>
-        <div class="admin-filter-group">
             <label class="admin-label" for="feedFilter">Feed</label>
             <select id="feedFilter" class="admin-input" @bind="_feedNameFilter" @bind:after="ApplyFiltersAsync">
                 <option value="">All feeds</option>
@@ -54,6 +49,24 @@
                         <option value="@feedName">@feedName</option>
                     }
                 }
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="collectionFilter">Collection</label>
+            <select id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All collections</option>
+                <option value="news">news</option>
+                <option value="blogs">blogs</option>
+                <option value="videos">videos</option>
+                <option value="community">community</option>
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="subcollectionFilter">Subcollection</label>
+            <select id="subcollectionFilter" class="admin-input" @bind="_subcollectionFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All subcollections</option>
+                <option value="ghc-features">ghc-features</option>
+                <option value="vscode-updates">vscode-updates</option>
             </select>
         </div>
     </div>
@@ -144,6 +157,7 @@
 <ContentItemEditorModal IsOpen="@_editorOpen"
                         Title="@_editorTitle"
                         EditData="@_editorData"
+                        FeedNames="@(_feedNames ?? [])"
                         OnSave="SaveContentItemAsync"
                         OnClose="CloseContentItemEditor" />
 
@@ -167,6 +181,7 @@
     private string _searchFilter = string.Empty;
     private string _collectionFilter = string.Empty;
     private string _feedNameFilter = string.Empty;
+    private string _subcollectionFilter = string.Empty;
 
     // Debounce timer for text input filters
     private CancellationTokenSource? _debounce;
@@ -230,7 +245,8 @@
                 PageSize,
                 string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
                 string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter,
-                string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter);
+                string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter,
+                string.IsNullOrEmpty(_subcollectionFilter) ? null : _subcollectionFilter);
 
             UpdatePagination();
         }

@@ -143,6 +143,7 @@ public interface IContentRepository
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? subcollectionName = null,
         CancellationToken ct = default);
 
     /// <summary>

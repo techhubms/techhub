@@ -15,6 +15,7 @@ public static class ContentProcessingJobType
     public const string ContentProcessing = "content-processing";
     public const string RoundupGeneration = "roundup-generation";
     public const string ContentCleanup = "content-cleanup";
+    public const string AdHocProcessing = "ad-hoc-processing";
 }
 
 /// <summary>

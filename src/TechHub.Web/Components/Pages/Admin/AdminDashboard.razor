@@ -155,7 +155,7 @@
                                 }
                             </td>
                             <td class="admin-cell-number">
-                                @if (job.JobType == ContentProcessingJobType.ContentProcessing)
+                                @if (job.JobType is ContentProcessingJobType.ContentProcessing or ContentProcessingJobType.AdHocProcessing)
                                 {
                                     if (job.TranscriptsSucceeded > 0 || job.TranscriptsFailed > 0)
                                     {
@@ -446,6 +446,7 @@
         ContentProcessingJobType.ContentProcessing => "Processing",
         ContentProcessingJobType.RoundupGeneration => "Roundup",
         ContentProcessingJobType.ContentCleanup => "Cleanup",
+        ContentProcessingJobType.AdHocProcessing => "Ad-hoc",
         _ => jobType
     };
 
@@ -454,6 +455,7 @@
         ContentProcessingJobType.ContentProcessing => "processing",
         ContentProcessingJobType.RoundupGeneration => "roundup",
         ContentProcessingJobType.ContentCleanup => "cleanup",
+        ContentProcessingJobType.AdHocProcessing => "adhoc",
         _ => "unknown"
     };
 

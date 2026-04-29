@@ -217,87 +217,20 @@ public sealed class ContentProcessingService
                 for (var i = 0; i < limit && !ct.IsCancellationRequested; i++)
                 {
                     var raw = newItems[i];
-                    var step = "tags";
 
                     try
                     {
-                        // Fetch YouTube tags for YouTube items (merged into FeedTags for AI)
-                        var ytTagCount = 0;
-                        if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
-                        {
-                            var ytTags = await _youtubeTagService.GetTagsAsync(raw.ExternalUrl, ct);
-                            ytTagCount = ytTags.Count;
-                            if (ytTags.Count > 0)
-                            {
-                                var mergedTags = raw.FeedTags.Concat(ytTags)
-                                    .Select(t => t.Trim())
-                                    .Where(t => t.Length > 0)
-                                    .Distinct(StringComparer.OrdinalIgnoreCase)
-                                    .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
-                                    .ToList();
-                                raw = new RawFeedItem
-                                {
-                                    Title = raw.Title,
-                                    ExternalUrl = raw.ExternalUrl,
-                                    PublishedAt = raw.PublishedAt,
-                                    FeedItemData = raw.FeedItemData,
-                                    FeedLevelAuthor = raw.FeedLevelAuthor,
-                                    FeedTags = mergedTags,
-                                    FeedName = raw.FeedName,
-                                    CollectionName = raw.CollectionName,
-                                    FullContent = raw.FullContent
-                                };
-                            }
-                        }
-
-                        // Fetch full content (YouTube transcript or article body)
-                        step = raw.IsYouTube ? "transcript" : "content";
-                        var hadContentBefore = !string.IsNullOrWhiteSpace(raw.FullContent);
-                        raw = await _articleService.EnrichWithContentAsync(raw, ct);
-                        var hasContentAfter = !string.IsNullOrWhiteSpace(raw.FullContent);
-                        var contentFetched = !hadContentBefore && hasContentAfter;
-
-                        // Track transcript outcome for YouTube items
-                        bool? hasTranscript = raw.IsYouTube ? contentFetched : null;
-                        var transcriptStatus = contentFetched
-                            ? "transcript fetched"
-                            : $"transcript failed: {raw.TranscriptFailureReason ?? "unknown"}";
-                        if (raw.IsYouTube)
-                        {
-                            if (contentFetched)
-                            {
-                                transcriptsSucceeded++;
-                            }
-                            else
-                            {
-                                transcriptsFailed++;
-                                Log(string.Create(CultureInfo.InvariantCulture,
-                                    $"  ⚠ Transcript unavailable: {raw.ExternalUrl.Sanitize()} — {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}"));
-
-                                // Enforce TranscriptMandatory — fail the item if transcript is required but absent
-                                if (feed.TranscriptMandatory)
-                                {
-                                    Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Failed: {raw.ExternalUrl.Sanitize()} — transcript mandatory but not available"));
-                                    await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, "Transcript mandatory but not available", raw.FeedName, raw.CollectionName, reason: null, hasTranscript: false, jobId: jobId, ct: ct);
-                                    errorCount++;
-                                    await FlushProgressAsync();
-                                    continue;
-                                }
-                            }
-                        }
-
-                        // Flush before AI call so the dashboard is current during the longest operation
-                        await FlushProgressAsync();
-
                         // Pre-AI delay to prevent rate limiting (like the original PS scripts: 15s between every call)
                         if (_options.RequestDelayMs > 0 && i > 0)
                         {
                             await Task.Delay(_options.RequestDelayMs, ct);
                         }
 
-                        // AI categorization + post-processing + DB write (shared pipeline)
-                        step = "AI";
-                        var itemResult = await CategorizeWriteAndRecordAsync(raw, hasTranscript, jobId, forcedSubcollection: null, ct);
+                        // Flush before pipeline so the dashboard is current during the longest operation
+                        await FlushProgressAsync();
+
+                        // Shared per-item pipeline: tags → content → transcript → AI → write
+                        var itemResult = await ProcessItemAsync(raw, jobId, forcedSubcollection: null, msg => Log($"  {msg}"), feed.TranscriptMandatory, ct);
 
                         // Emit any supplemental informational messages (date capping, subcollection match)
                         foreach (var line in itemResult.LogLines)
@@ -305,9 +238,19 @@ public sealed class ContentProcessingService
                             Log(line);
                         }
 
+                        // Update transcript counters
+                        if (itemResult.HasTranscript == true)
+                        {
+                            transcriptsSucceeded++;
+                        }
+                        else if (itemResult.HasTranscript == false)
+                        {
+                            transcriptsFailed++;
+                        }
+
                         // Log outcome and update counters
                         var context = raw.IsYouTube
-                            ? string.Create(CultureInfo.InvariantCulture, $" ({ytTagCount} tags, {transcriptStatus})")
+                            ? string.Create(CultureInfo.InvariantCulture, $" ({itemResult.YouTubeTagCount} tags, {itemResult.TranscriptStatus})")
                             : string.Empty;
                         switch (itemResult.Outcome)
                         {
@@ -333,7 +276,7 @@ public sealed class ContentProcessingService
                     }
                     catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
                     {
-                        Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error ({step}): {raw.ExternalUrl} — {ex.Message}"));
+                        Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error: {raw.ExternalUrl} — {ex.Message}"));
                         await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, hasTranscript: null, jobId: jobId, ct: ct);
                         errorCount++;
                     }
@@ -409,71 +352,99 @@ public sealed class ContentProcessingService
             return null;
         }
 
-        // Use the title hint for logging and subcollection rules; AI extracts the real title
-        var feedItemData = !string.IsNullOrWhiteSpace(titleHint)
-            ? string.Create(CultureInfo.InvariantCulture, $"TITLE_HINT: {titleHint}")
-            : string.Empty;
+        var startedAt = _timeProvider.GetUtcNow();
+        var log = new StringBuilder();
+        long jobId = 0;
 
-        var raw = new RawFeedItem
+        void Log(string msg)
         {
-            Title = !string.IsNullOrWhiteSpace(titleHint) ? titleHint : url,
-            ExternalUrl = url,
-            PublishedAt = _timeProvider.GetUtcNow(),
-            FeedName = feedName,
-            CollectionName = collectionName,
-            FeedItemData = feedItemData
-        };
-
-        // Fetch YouTube tags if applicable
-        if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
-        {
-            try
-            {
-                var ytTags = await _youtubeTagService.GetTagsAsync(url, ct);
-                if (ytTags.Count > 0)
-                {
-                    raw = new RawFeedItem
-                    {
-                        Title = raw.Title,
-                        ExternalUrl = raw.ExternalUrl,
-                        PublishedAt = raw.PublishedAt,
-                        FeedItemData = raw.FeedItemData,
-                        FeedTags = ytTags,
-                        FeedName = raw.FeedName,
-                        CollectionName = raw.CollectionName
-                    };
-                }
-            }
-            catch (Exception ex) when (ex is not OperationCanceledException)
-            {
-                _logger.LogWarning(ex, "Failed to fetch YouTube tags for {Url}", url);
-            }
+            var line = string.Create(CultureInfo.InvariantCulture,
+                $"[{_timeProvider.GetUtcNow():HH:mm:ss}] {msg}");
+            log.AppendLine(line);
+            _logger.LogInformation("AdHocProcessing[{JobId}] {Message}", jobId, msg);
         }
 
-        // Enrich with content (YouTube transcript or article body)
         try
         {
-            raw = await _articleService.EnrichWithContentAsync(raw, ct);
-        }
-        catch (Exception ex) when (ex is not OperationCanceledException)
-        {
-            _logger.LogWarning(ex, "Failed to enrich content for {Url}", url);
-            // Proceed without enrichment — AI may still categorize from the URL itself
-        }
+            jobId = await _jobRepo.CreateAsync("manual", ContentProcessingJobType.AdHocProcessing, ct);
+            Log(string.Create(CultureInfo.InvariantCulture, $"Ad-hoc processing: {url.Sanitize()} → {collectionName} (feed: {feedName})"));
+            if (!string.IsNullOrWhiteSpace(subcollectionName))
+            {
+                Log(string.Create(CultureInfo.InvariantCulture, $"  Subcollection: {subcollectionName}"));
+            }
 
-        bool? hasTranscript = raw.IsYouTube ? !string.IsNullOrWhiteSpace(raw.FullContent) : null;
+            // Use the title hint for logging and subcollection rules; AI extracts the real title
+            var feedItemData = !string.IsNullOrWhiteSpace(titleHint)
+                ? string.Create(CultureInfo.InvariantCulture, $"TITLE_HINT: {titleHint}")
+                : string.Empty;
 
-        var itemResult = await CategorizeWriteAndRecordAsync(raw, hasTranscript, jobId: null, subcollectionName, ct);
-        return new AdHocUrlProcessResult
+            var raw = new RawFeedItem
+            {
+                Title = !string.IsNullOrWhiteSpace(titleHint) ? titleHint : url,
+                ExternalUrl = url,
+                PublishedAt = _timeProvider.GetUtcNow(),
+                FeedName = feedName,
+                CollectionName = collectionName,
+                FeedItemData = feedItemData
+            };
+
+            // Shared per-item pipeline: tags → content → transcript → AI → write
+            var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, ct: ct);
+
+            // Emit any supplemental informational messages (date capping, subcollection match)
+            foreach (var line in itemResult.LogLines)
+            {
+                Log(line);
+            }
+
+            var itemsAdded = itemResult.Outcome == AdHocUrlProcessOutcome.Added ? 1 : 0;
+            var itemsSkipped = itemResult.Outcome == AdHocUrlProcessOutcome.Skipped ? 1 : 0;
+            var errorCount = itemResult.Outcome == AdHocUrlProcessOutcome.Failed ? 1 : 0;
+            var transcriptsSucceeded = itemResult.HasTranscript == true ? 1 : 0;
+            var transcriptsFailed = itemResult.HasTranscript == false ? 1 : 0;
+
+            var context = raw.IsYouTube
+                ? string.Create(CultureInfo.InvariantCulture,
+                    $" ({itemResult.YouTubeTagCount} tags, {itemResult.TranscriptStatus ?? "no transcript"})")
+                : string.Empty;
+            var statusIcon = itemResult.Outcome switch
+            {
+                AdHocUrlProcessOutcome.Added => "✓ Added",
+                AdHocUrlProcessOutcome.Skipped => "⊘ Skipped",
+                _ => "✗ Failed"
+            };
+            Log(string.Create(CultureInfo.InvariantCulture, $"{statusIcon}{context}: {itemResult.Message}"));
+
+            var duration = _timeProvider.GetUtcNow() - startedAt;
+            Log(string.Create(CultureInfo.InvariantCulture, $"Completed in {duration.TotalSeconds:F1}s"));
+
+            await _jobRepo.CompleteAsync(jobId, feedsProcessed: 0, itemsAdded, itemsSkipped, errorCount,
+                transcriptsSucceeded, transcriptsFailed, log.ToString(), ct: ct);
+
+            return new AdHocUrlProcessResult
+            {
+                Outcome = itemResult.Outcome,
+                Slug = itemResult.Slug,
+                Message = itemResult.Message
+            };
+        }
+        catch (OperationCanceledException)
         {
-            Outcome = itemResult.Outcome,
-            Slug = itemResult.Slug,
-            Message = itemResult.Message
-        };
+            Log("Ad-hoc processing cancelled.");
+            await TryAbortJobAsync(jobId, 0, 0, 0, 0, 0, 0, log.ToString());
+            throw;
+        }
+        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+        {
+            Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message}"));
+            _logger.LogError(ex, "Ad-hoc processing job {JobId} failed with unhandled exception", jobId);
+            await TryFailJobAsync(jobId, 0, 0, 0, 1, 0, 0, log.ToString(), ct);
+            throw;
+        }
     }
 
     /// <summary>
-    /// Result returned by <see cref="CategorizeWriteAndRecordAsync"/>.
+    /// Result returned by <see cref="CategorizeWriteAndRecordAsync"/> and <see cref="ProcessItemAsync"/>.
     /// </summary>
     private sealed record ItemPipelineResult
     {
@@ -481,8 +452,141 @@ public sealed class ContentProcessingService
         public string? Slug { get; init; }
         public required string Message { get; init; }
 
-        /// <summary>Supplemental informational lines for the batch run log (date capping, subcollection match).</summary>
+        /// <summary>Supplemental informational lines for the caller's log (date capping, subcollection match, etc.).</summary>
         public IReadOnlyList<string> LogLines { get; init; } = [];
+
+        /// <summary>Number of YouTube tags fetched (0 for non-YouTube items).</summary>
+        public int YouTubeTagCount { get; init; }
+
+        /// <summary>Transcript status: true = fetched, false = failed/unavailable, null = non-YouTube.</summary>
+        public bool? HasTranscript { get; init; }
+
+        /// <summary>Human-readable transcript status for log messages (e.g. "transcript fetched", "transcript failed: reason").</summary>
+        public string? TranscriptStatus { get; init; }
+    }
+
+    /// <summary>
+    /// Shared per-item pipeline used by both batch and ad-hoc processing.
+    /// Performs: YouTube tag fetching → content enrichment → transcript tracking → AI categorization → DB write.
+    /// </summary>
+    /// <param name="raw">The raw feed item to process.</param>
+    /// <param name="jobId">The job ID for tracking (nullable for legacy callers).</param>
+    /// <param name="forcedSubcollection">If set, forces this subcollection instead of using config rules.</param>
+    /// <param name="logAction">Callback to append log lines to the caller's log.</param>
+    /// <param name="transcriptMandatory">When true, YouTube items without a transcript are failed immediately (skipping AI).</param>
+    /// <param name="ct">Cancellation token.</param>
+    private async Task<ItemPipelineResult> ProcessItemAsync(
+        RawFeedItem raw,
+        long? jobId,
+        string? forcedSubcollection,
+        Action<string> logAction,
+        bool transcriptMandatory = false,
+        CancellationToken ct = default)
+    {
+        // 1. Fetch YouTube tags if applicable
+        var ytTagCount = 0;
+        if (raw.IsYouTube && _options.MaxYouTubeTagCount > 0)
+        {
+            try
+            {
+                var ytTags = await _youtubeTagService.GetTagsAsync(raw.ExternalUrl, ct);
+                ytTagCount = ytTags.Count;
+                if (ytTags.Count > 0)
+                {
+                    logAction(string.Create(CultureInfo.InvariantCulture, $"Fetched {ytTags.Count} YouTube tag(s)"));
+                    var mergedTags = raw.FeedTags.Concat(ytTags)
+                        .Select(t => t.Trim())
+                        .Where(t => t.Length > 0)
+                        .Distinct(StringComparer.OrdinalIgnoreCase)
+                        .OrderBy(t => t, StringComparer.OrdinalIgnoreCase)
+                        .ToList();
+                    raw = new RawFeedItem
+                    {
+                        Title = raw.Title,
+                        ExternalUrl = raw.ExternalUrl,
+                        PublishedAt = raw.PublishedAt,
+                        FeedItemData = raw.FeedItemData,
+                        FeedLevelAuthor = raw.FeedLevelAuthor,
+                        FeedTags = mergedTags,
+                        FeedName = raw.FeedName,
+                        CollectionName = raw.CollectionName,
+                        FullContent = raw.FullContent
+                    };
+                }
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogWarning(ex, "Failed to fetch YouTube tags for {Url}", raw.ExternalUrl);
+                logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ YouTube tag fetch failed: {ex.Message}"));
+            }
+        }
+
+        // 2. Enrich with content (YouTube transcript or article body)
+        logAction(string.Create(CultureInfo.InvariantCulture, $"Fetching {(raw.IsYouTube ? "transcript" : "article content")}…"));
+        var hadContentBefore = !string.IsNullOrWhiteSpace(raw.FullContent);
+        try
+        {
+            raw = await _articleService.EnrichWithContentAsync(raw, ct);
+        }
+        catch (Exception ex) when (ex is not OperationCanceledException)
+        {
+            _logger.LogWarning(ex, "Failed to enrich content for {Url}", raw.ExternalUrl);
+            logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message}"));
+        }
+
+        // 3. Track transcript outcome for YouTube items
+        var hasContentAfter = !string.IsNullOrWhiteSpace(raw.FullContent);
+        var contentFetched = !hadContentBefore && hasContentAfter;
+        bool? hasTranscript = raw.IsYouTube ? contentFetched : null;
+        string? transcriptStatus = null;
+
+        if (raw.IsYouTube)
+        {
+            transcriptStatus = contentFetched
+                ? "transcript fetched"
+                : $"transcript failed: {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}";
+
+            if (contentFetched)
+            {
+                logAction("Transcript fetched successfully");
+            }
+            else
+            {
+                logAction(string.Create(CultureInfo.InvariantCulture,
+                    $"⚠ Transcript unavailable: {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}"));
+
+                // Enforce TranscriptMandatory — fail the item early without calling AI
+                if (transcriptMandatory)
+                {
+                    const string Reason = "Transcript mandatory but not available";
+                    logAction(string.Create(CultureInfo.InvariantCulture, $"✗ {Reason}"));
+                    await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, Reason, raw.FeedName, raw.CollectionName, reason: null, hasTranscript: false, jobId, ct: ct);
+                    return new ItemPipelineResult
+                    {
+                        Outcome = AdHocUrlProcessOutcome.Failed,
+                        Message = Reason,
+                        YouTubeTagCount = ytTagCount,
+                        HasTranscript = false,
+                        TranscriptStatus = transcriptStatus
+                    };
+                }
+            }
+        }
+
+        // 4. AI categorization + post-processing + DB write
+        logAction("Running AI categorization…");
+        var itemResult = await CategorizeWriteAndRecordAsync(raw, hasTranscript, jobId, forcedSubcollection, ct);
+
+        return new ItemPipelineResult
+        {
+            Outcome = itemResult.Outcome,
+            Slug = itemResult.Slug,
+            Message = itemResult.Message,
+            LogLines = itemResult.LogLines,
+            YouTubeTagCount = ytTagCount,
+            HasTranscript = hasTranscript,
+            TranscriptStatus = transcriptStatus
+        };
     }
 
     /// <summary>

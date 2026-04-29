@@ -404,18 +404,18 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     [Fact]
     public async Task DeleteProcessedUrl_InvalidatesContentCache()
     {
-        // Arrange — seed a content item in a non-external collection (videos link internally)
-        // so we can verify it via the slug detail endpoint, which uses the content cache.
-        const string testUrl = "/all/videos/cache-invalidation-test";
-        const string slug = "cache-invalidation-test";
-        const string collectionName = "videos";
+        // Arrange — seed a content item in a non-external Collection (videos link internally)
+        // so we can verify it via the Slug detail endpoint, which uses the content cache.
+        const string TestUrl = "/all/videos/cache-invalidation-test";
+        const string Slug = "cache-invalidation-test";
+        const string CollectionName = "videos";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
@@ -423,30 +423,30 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'testhash')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Slug = slug, Collection = collectionName, Url = testUrl });
+                new { Slug = Slug, Collection = CollectionName, Url = TestUrl });
 
             await connection.ExecuteAsync(
                 @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name)
                   VALUES (@Url, 'succeeded', 'Test Feed', @Collection)
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Url = testUrl, Collection = collectionName });
+                new { Url = TestUrl, Collection = CollectionName });
         }
 
         // Act — populate the cache by fetching the item detail, then delete via admin
         var beforeResponse = await _client.GetAsync(
-            $"/api/sections/ai/collections/{collectionName}/{slug}",
+            $"/api/sections/ai/collections/{CollectionName}/{Slug}",
             TestContext.Current.CancellationToken);
         beforeResponse.StatusCode.Should().Be(HttpStatusCode.OK,
             "the seeded item should be returned before deletion");
 
         var deleteResponse = await _client.DeleteAsync(
-            $"/api/admin/processed-urls?url={Uri.EscapeDataString(testUrl)}",
+            $"/api/admin/processed-urls?url={Uri.EscapeDataString(TestUrl)}",
             TestContext.Current.CancellationToken);
         deleteResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
 
         // Assert — the same request must now return 404 (cache was invalidated)
         var afterResponse = await _client.GetAsync(
-            $"/api/sections/ai/collections/{collectionName}/{slug}",
+            $"/api/sections/ai/collections/{CollectionName}/{Slug}",
             TestContext.Current.CancellationToken);
         afterResponse.StatusCode.Should().Be(HttpStatusCode.NotFound,
             "the deleted item should not be returned after cache invalidation");
@@ -455,18 +455,18 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     [Fact]
     public async Task UpdateContentItemEditData_InvalidatesContentCache()
     {
-        // Arrange — seed a content item in a non-external collection (videos link internally)
-        // so we can verify cache invalidation via the slug detail endpoint.
-        const string testUrl = "/all/videos/edit-cache-test";
-        const string slug = "edit-cache-test";
-        const string collectionName = "videos";
+        // Arrange — seed a content item in a non-external Collection (videos link internally)
+        // so we can verify cache invalidation via the Slug detail endpoint.
+        const string TestUrl = "/all/videos/edit-cache-test";
+        const string Slug = "edit-cache-test";
+        const string CollectionName = "videos";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
@@ -474,12 +474,12 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'testhash')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Slug = slug, Collection = collectionName, Url = testUrl });
+                new { Slug = Slug, Collection = CollectionName, Url = TestUrl });
         }
 
-        // Populate the slug cache by fetching the item
+        // Populate the Slug cache by fetching the item
         var beforeResponse = await _client.GetAsync(
-            $"/api/sections/ai/collections/{collectionName}/{slug}",
+            $"/api/sections/ai/collections/{CollectionName}/{Slug}",
             TestContext.Current.CancellationToken);
         beforeResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
@@ -490,8 +490,8 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         // Act — update the title via admin endpoint
         var editData = new
         {
-            CollectionName = collectionName,
-            Slug = slug,
+            CollectionName = CollectionName,
+            Slug = Slug,
             DateEpoch = 1700000000L,
             Title = "Updated Title",
             Author = "Test Author",
@@ -504,14 +504,14 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         };
 
         var updateResponse = await _client.PutAsJsonAsync(
-            $"/api/admin/content-items/edit-data?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
+            $"/api/admin/content-items/edit-data?Collection={Uri.EscapeDataString(CollectionName)}&Slug={Uri.EscapeDataString(Slug)}",
             editData,
             TestContext.Current.CancellationToken);
         updateResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
 
-        // Assert — fetching the same slug should return the updated title (cache was invalidated)
+        // Assert — fetching the same Slug should return the updated title (cache was invalidated)
         var afterResponse = await _client.GetAsync(
-            $"/api/sections/ai/collections/{collectionName}/{slug}",
+            $"/api/sections/ai/collections/{CollectionName}/{Slug}",
             TestContext.Current.CancellationToken);
         afterResponse.StatusCode.Should().Be(HttpStatusCode.OK);
 
@@ -519,6 +519,127 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             TestContext.Current.CancellationToken);
         afterItem.GetProperty("title").GetString().Should().Be("Updated Title",
             "the updated title should be returned after cache invalidation");
+    }
+
+    [Fact]
+    public async Task GetContentItemEditData_ReturnsFeedName()
+    {
+        // Arrange — seed a content item with a known feed_name
+        const string Slug = "edit-feedname-get-test";
+        const string CollectionName = "blogs";
+        const string TestUrl = "https://example.com/edit-feedname-get-test";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, @Collection, 'Feed Name Test', '# Content', 'Excerpt',
+                     1700000000, 'ai', @Url, 'Author', 'Test Feed',
+                     ',ai,', TRUE, 1, 'testhash')
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { Slug = Slug, Collection = CollectionName, Url = TestUrl });
+        }
+
+        // Act
+        var response = await _client.GetAsync(
+            $"/api/admin/content-items/edit-data?Collection={Uri.EscapeDataString(CollectionName)}&Slug={Uri.EscapeDataString(Slug)}",
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.OK);
+        var editData = await response.Content.ReadFromJsonAsync<ContentItemEditData>(
+            TestContext.Current.CancellationToken);
+        editData.Should().NotBeNull();
+        editData!.FeedName.Should().Be("Test Feed");
+    }
+
+    [Fact]
+    public async Task UpdateContentItemEditData_UpdatesFeedNameInContentAndProcessedUrls()
+    {
+        // Arrange — seed a content item and matching processed URL with an original feed name
+        const string Slug = "edit-feedname-update-test";
+        const string CollectionName = "videos";
+        const string TestUrl = "/all/videos/edit-feedname-update-test";
+        const string NewFeedName = "FeedNameUpdateTestFeed";
+
+        using (var scope = _factory.Services.CreateScope())
+        {
+            var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+
+            // Create the target feed config for the updated feed name (FK constraint)
+            await connection.ExecuteAsync(
+                @"INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
+                  VALUES (@Name, 'https://example.com/feedname-update.xml', '_videos', TRUE)
+                  ON CONFLICT DO NOTHING",
+                new { Name = NewFeedName });
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO content_items
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
+                     primary_section_name, external_url, author, feed_name,
+                     tags_csv, is_ai, sections_bitmask, content_hash)
+                  VALUES
+                    (@Slug, @Collection, 'Feed Update Test', '# Content', 'Excerpt',
+                     1700000000, 'ai', @Url, 'Author', 'Test Feed',
+                     ',ai,', TRUE, 1, 'testhash')
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { Slug = Slug, Collection = CollectionName, Url = TestUrl });
+
+            await connection.ExecuteAsync(
+                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, Slug, reason)
+                  VALUES (@Url, 'succeeded', 'Test Feed', @Collection, @Slug, 'test')
+                  ON CONFLICT (external_url) DO NOTHING",
+                new { Url = TestUrl, Collection = CollectionName, Slug = Slug });
+        }
+
+        // Act — update with a new feed name
+        var editData = new
+        {
+            CollectionName = CollectionName,
+            Slug = Slug,
+            DateEpoch = 1700000000L,
+            Title = "Feed Update Test",
+            Author = "Author",
+            Excerpt = "Excerpt",
+            Content = "# Content",
+            PrimarySectionName = "ai",
+            FeedName = NewFeedName,
+            Tags = new[] { "ai" },
+            Sections = new[] { "ai" },
+            AiMetadata = (string?)null
+        };
+
+        var updateResponse = await _client.PutAsJsonAsync(
+            $"/api/admin/content-items/edit-data?Collection={Uri.EscapeDataString(CollectionName)}&Slug={Uri.EscapeDataString(Slug)}",
+            editData,
+            TestContext.Current.CancellationToken);
+        updateResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
+
+        // Assert — verify feed name updated in content_items via edit-data endpoint
+        var getResponse = await _client.GetAsync(
+            $"/api/admin/content-items/edit-data?Collection={Uri.EscapeDataString(CollectionName)}&Slug={Uri.EscapeDataString(Slug)}",
+            TestContext.Current.CancellationToken);
+        getResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        var updatedEditData = await getResponse.Content.ReadFromJsonAsync<ContentItemEditData>(
+            TestContext.Current.CancellationToken);
+        updatedEditData!.FeedName.Should().Be(NewFeedName);
+
+        // Assert — verify feed name also updated in processed_urls
+        var puResponse = await _client.GetAsync(
+            $"/api/admin/processed-urls?search={Uri.EscapeDataString(TestUrl)}",
+            TestContext.Current.CancellationToken);
+        puResponse.StatusCode.Should().Be(HttpStatusCode.OK);
+        var puJson = await puResponse.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var puDoc = JsonDocument.Parse(puJson);
+        var puItems = puDoc.RootElement.GetProperty("items");
+        puItems.GetArrayLength().Should().BeGreaterThan(0);
+        puItems[0].GetProperty("feedName").GetString().Should().Be(NewFeedName,
+            "processed_urls.feed_name should be synced when content item feed name is updated");
     }
 
     [Fact]
@@ -540,21 +661,21 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task GetProcessedUrls_WithFeedMetadata_ReturnsFeedAndCollection()
     {
         // Arrange — seed a processed URL with feed metadata stored directly
-        const string testUrl = "https://example.com/feed-meta-test";
+        const string TestUrl = "https://example.com/feed-meta-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var repo = scope.ServiceProvider.GetRequiredService<IProcessedUrlRepository>();
-            await repo.RecordSuccessAsync(testUrl, feedName: "Test Feed", collectionName: "blogs",
+            await repo.RecordSuccessAsync(TestUrl, feedName: "Test Feed", collectionName: "blogs",
                 ct: TestContext.Current.CancellationToken);
         }
 
         // Act
         var response = await _client.GetAsync(
-            $"/api/admin/processed-urls?search={Uri.EscapeDataString(testUrl)}",
+            $"/api/admin/processed-urls?search={Uri.EscapeDataString(TestUrl)}",
             TestContext.Current.CancellationToken);
 
-        // Assert — verify raw JSON contains feedName and collectionName
+        // Assert — verify raw JSON contains feedName and CollectionName
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
         var json = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
@@ -563,7 +684,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         items.GetArrayLength().Should().BeGreaterThan(0);
 
         var first = items[0];
-        first.GetProperty("externalUrl").GetString().Should().Be(testUrl);
+        first.GetProperty("externalUrl").GetString().Should().Be(TestUrl);
         first.GetProperty("feedName").GetString().Should().Be("Test Feed");
         first.GetProperty("collectionName").GetString().Should().Be("blogs");
     }
@@ -572,18 +693,18 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task GetProcessedUrls_WithFeedMetadata_DeserializesToModel()
     {
         // Arrange — seed a processed URL with feed metadata stored directly
-        const string testUrl = "https://example.com/feed-meta-deserialize";
+        const string TestUrl = "https://example.com/feed-meta-deserialize";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var repo = scope.ServiceProvider.GetRequiredService<IProcessedUrlRepository>();
-            await repo.RecordSuccessAsync(testUrl, feedName: "Test Feed", collectionName: "blogs",
+            await repo.RecordSuccessAsync(TestUrl, feedName: "Test Feed", collectionName: "blogs",
                 ct: TestContext.Current.CancellationToken);
         }
 
         // Act — deserialize using the same type as the Web client
         var result = await _client.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
-            $"/api/admin/processed-urls?search={Uri.EscapeDataString(testUrl)}",
+            $"/api/admin/processed-urls?search={Uri.EscapeDataString(TestUrl)}",
             TestContext.Current.CancellationToken);
 
         // Assert — FeedName and CollectionName must survive deserialization
@@ -591,7 +712,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         result!.Items.Should().NotBeEmpty();
 
         var first = result.Items[0];
-        first.ExternalUrl.Should().Be(testUrl);
+        first.ExternalUrl.Should().Be(TestUrl);
         first.FeedName.Should().Be("Test Feed");
         first.CollectionName.Should().Be("blogs");
     }
@@ -762,16 +883,16 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task ApproveReview_WithSeededReview_ApprovesAndAppliesChange()
     {
         // Arrange — seed a content item and a pending review
-        const string slug = "review-approve-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/review-approve-test";
+        const string Slug = "review-approve-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/review-approve-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
@@ -779,10 +900,10 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'reviewhash')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
 
             var reviewRepo = scope.ServiceProvider.GetRequiredService<IContentReviewRepository>();
-            await reviewRepo.CreateAsync(slug, collection, "tags", ",ai,", ",ai,copilot,",
+            await reviewRepo.CreateAsync(Slug, Collection, "tags", ",ai,", ",ai,copilot,",
                 ct: TestContext.Current.CancellationToken);
         }
 
@@ -792,7 +913,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             TestContext.Current.CancellationToken);
         var reviews = await getResponse.Content.ReadFromJsonAsync<List<ContentReview>>(
             TestContext.Current.CancellationToken);
-        var review = reviews!.FirstOrDefault(r => r.Slug == slug);
+        var review = reviews!.FirstOrDefault(r => r.Slug == Slug);
         review.Should().NotBeNull();
 
         // Act
@@ -812,16 +933,16 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task RejectReview_WithSeededReview_RejectsWithoutChangingContent()
     {
         // Arrange — seed a pending review
-        const string slug = "review-reject-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/review-reject-test";
+        const string Slug = "review-reject-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/review-reject-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
@@ -829,10 +950,10 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'rejecthash')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
 
             var reviewRepo = scope.ServiceProvider.GetRequiredService<IContentReviewRepository>();
-            await reviewRepo.CreateAsync(slug, collection, "author", "OldAuthor", "NewAuthor",
+            await reviewRepo.CreateAsync(Slug, Collection, "author", "OldAuthor", "NewAuthor",
                 ct: TestContext.Current.CancellationToken);
         }
 
@@ -842,7 +963,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             TestContext.Current.CancellationToken);
         var reviews = await getResponse.Content.ReadFromJsonAsync<List<ContentReview>>(
             TestContext.Current.CancellationToken);
-        var review = reviews!.FirstOrDefault(r => r.Slug == slug);
+        var review = reviews!.FirstOrDefault(r => r.Slug == Slug);
         review.Should().NotBeNull();
 
         // Act
@@ -950,17 +1071,17 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task UpdateReviewFixedValue_WithSeededReview_UpdatesFixedValue()
     {
         // Arrange — seed a content item and a pending review
-        const string slug = "review-edit-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/review-edit-test";
-        const string newFixedValue = "corrected markdown content";
+        const string Slug = "review-edit-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/review-edit-test";
+        const string NewFixedValue = "corrected markdown content";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
@@ -968,10 +1089,10 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'edithash')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
 
             var reviewRepo = scope.ServiceProvider.GetRequiredService<IContentReviewRepository>();
-            await reviewRepo.CreateAsync(slug, collection, "markdown", "old content", "auto-fixed content",
+            await reviewRepo.CreateAsync(Slug, Collection, "markdown", "old content", "auto-fixed content",
                 ct: TestContext.Current.CancellationToken);
         }
 
@@ -981,11 +1102,11 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             TestContext.Current.CancellationToken);
         var reviews = await getResponse.Content.ReadFromJsonAsync<List<ContentReview>>(
             TestContext.Current.CancellationToken);
-        var review = reviews!.FirstOrDefault(r => r.Slug == slug);
+        var review = reviews!.FirstOrDefault(r => r.Slug == Slug);
         review.Should().NotBeNull();
 
         // Act
-        var request = new { FixedValue = newFixedValue };
+        var request = new { FixedValue = NewFixedValue };
         var response = await _client.PutAsJsonAsync(
             $"/api/admin/reviews/{review!.Id}",
             request,
@@ -1015,16 +1136,16 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task GetReviews_IncludesPrimarySectionName()
     {
         // Arrange — seed a content item and review so we can verify PrimarySectionName is returned
-        const string slug = "review-section-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/review-section-test";
+        const string Slug = "review-section-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/review-section-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
@@ -1032,10 +1153,10 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
                      1700000000, 'github-copilot', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'sectionhash')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
 
             var reviewRepo = scope.ServiceProvider.GetRequiredService<IContentReviewRepository>();
-            await reviewRepo.CreateAsync(slug, collection, "tags", ",ai,", ",ai,copilot,",
+            await reviewRepo.CreateAsync(Slug, Collection, "tags", ",ai,", ",ai,copilot,",
                 ct: TestContext.Current.CancellationToken);
         }
 
@@ -1048,7 +1169,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         response.StatusCode.Should().Be(HttpStatusCode.OK);
         var reviews = await response.Content.ReadFromJsonAsync<List<ContentReview>>(
             TestContext.Current.CancellationToken);
-        var review = reviews!.FirstOrDefault(r => r.Slug == slug);
+        var review = reviews!.FirstOrDefault(r => r.Slug == Slug);
         review.Should().NotBeNull();
         review!.PrimarySectionName.Should().Be("github-copilot");
     }
@@ -1075,24 +1196,24 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task GetContentItemsPaged_WithSearchFilter_ReturnsFilteredResults()
     {
         // Arrange — seed a content item with a known title
-        const string slug = "content-items-search-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/content-items-search-test";
+        const string Slug = "content-items-search-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/content-items-search-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
                     (@Slug, @Collection, 'UniqueSearchableTitle', '# Test', 'Test excerpt',
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'searchhash1')
-                  ON CONFLICT (collection_name, slug) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
         }
 
         // Act
@@ -1105,7 +1226,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
             TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Items.Should().Contain(i => i.Slug == slug);
+        result!.Items.Should().Contain(i => i.Slug == Slug);
     }
 
     [Fact]
@@ -1113,7 +1234,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     {
         // Act
         var response = await _client.GetAsync(
-            "/api/admin/content-items?collectionName=nonexistent-collection",
+            "/api/admin/content-items?CollectionName=nonexistent-Collection",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -1142,7 +1263,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     {
         // Act
         var response = await _client.DeleteAsync(
-            "/api/admin/content-items?collection=nonexistent&slug=nonexistent",
+            "/api/admin/content-items?Collection=nonexistent&Slug=nonexistent",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -1153,29 +1274,29 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task DeleteContentItem_WithExistingItem_ReturnsNoContent()
     {
         // Arrange — seed a content item
-        const string slug = "content-items-delete-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/content-items-delete-test";
+        const string Slug = "content-items-delete-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/content-items-delete-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
                     (@Slug, @Collection, 'Delete Test Item', '# Test', 'Test excerpt',
                      1700000000, 'ai', @Url, 'Test Author', 'Test Feed',
                      ',ai,', TRUE, 1, 'deletehash1')
-                  ON CONFLICT (collection_name, slug) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
         }
 
         // Act
         var response = await _client.DeleteAsync(
-            $"/api/admin/content-items?collection={Uri.EscapeDataString(collection)}&slug={Uri.EscapeDataString(slug)}",
+            $"/api/admin/content-items?Collection={Uri.EscapeDataString(Collection)}&Slug={Uri.EscapeDataString(Slug)}",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -1183,20 +1304,20 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
 
         // Verify it's actually gone
         var getResponse = await _client.GetAsync(
-            $"/api/admin/content-items?search={Uri.EscapeDataString(slug)}",
+            $"/api/admin/content-items?search={Uri.EscapeDataString(Slug)}",
             TestContext.Current.CancellationToken);
         var result = await getResponse.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
             TestContext.Current.CancellationToken);
-        result!.Items.Should().NotContain(i => i.Slug == slug && i.CollectionName == collection);
+        result!.Items.Should().NotContain(i => i.Slug == Slug && i.CollectionName == Collection);
     }
 
     [Fact]
     public async Task DeleteContentItem_CascadesToProcessedUrls()
     {
         // Arrange — seed a content item WITH a processed_url record
-        const string slug = "content-items-cascade-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/content-items-cascade-test";
+        const string Slug = "content-items-cascade-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/content-items-cascade-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
@@ -1210,26 +1331,26 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
 
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
                     (@Slug, @Collection, 'Cascade Test Item', '# Test', 'Test excerpt',
                      1700000000, 'ai', @Url, 'Test Author', 'CascadeTestFeed',
                      ',ai,', TRUE, 1, 'cascadehash1')
-                  ON CONFLICT (collection_name, slug) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
 
             await connection.ExecuteAsync(
-                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, slug, reason)
+                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, Slug, reason)
                   VALUES (@Url, 'succeeded', 'CascadeTestFeed', @Collection, @Slug, 'test')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Url = testUrl, Collection = collection, Slug = slug });
+                new { Url = TestUrl, Collection = Collection, Slug = Slug });
         }
 
         // Act — delete the content item
         var response = await _client.DeleteAsync(
-            $"/api/admin/content-items?collection={Uri.EscapeDataString(collection)}&slug={Uri.EscapeDataString(slug)}",
+            $"/api/admin/content-items?Collection={Uri.EscapeDataString(Collection)}&Slug={Uri.EscapeDataString(Slug)}",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -1241,7 +1362,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
             var processedUrl = await connection.QuerySingleOrDefaultAsync<string>(
                 "SELECT external_url FROM processed_urls WHERE external_url = @Url",
-                new { Url = testUrl });
+                new { Url = TestUrl });
             processedUrl.Should().BeNull("processed_url should be cascade-deleted when content_item is deleted");
         }
     }
@@ -1250,9 +1371,9 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
     public async Task GetContentItemsPaged_ShowsHasProcessedUrl()
     {
         // Arrange — seed a content item with a processed_url
-        const string slug = "has-processed-url-test";
-        const string collection = "blogs";
-        const string testUrl = "https://example.com/has-processed-url-test";
+        const string Slug = "has-processed-url-test";
+        const string Collection = "blogs";
+        const string TestUrl = "https://example.com/has-processed-url-test";
 
         using (var scope = _factory.Services.CreateScope())
         {
@@ -1265,26 +1386,26 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
 
             await connection.ExecuteAsync(
                 @"INSERT INTO content_items
-                    (slug, collection_name, title, content, excerpt, date_epoch,
+                    (Slug, collection_name, title, content, excerpt, date_epoch,
                      primary_section_name, external_url, author, feed_name,
                      tags_csv, is_ai, sections_bitmask, content_hash)
                   VALUES
                     (@Slug, @Collection, 'HasPU Test', '# Test', 'Test',
                      1700000000, 'ai', @Url, 'Author', 'HasPuTestFeed',
                      ',ai,', TRUE, 1, 'haspuhash')
-                  ON CONFLICT (collection_name, slug) DO NOTHING",
-                new { Slug = slug, Collection = collection, Url = testUrl });
+                  ON CONFLICT (collection_name, Slug) DO NOTHING",
+                new { Slug = Slug, Collection = Collection, Url = TestUrl });
 
             await connection.ExecuteAsync(
-                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, slug, reason)
+                @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, Slug, reason)
                   VALUES (@Url, 'succeeded', 'HasPuTestFeed', @Collection, @Slug, 'test')
                   ON CONFLICT (external_url) DO NOTHING",
-                new { Url = testUrl, Collection = collection, Slug = slug });
+                new { Url = TestUrl, Collection = Collection, Slug = Slug });
         }
 
         // Act
         var response = await _client.GetAsync(
-            $"/api/admin/content-items?search={Uri.EscapeDataString(slug)}",
+            $"/api/admin/content-items?search={Uri.EscapeDataString(Slug)}",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -1292,7 +1413,7 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
         var result = await response.Content.ReadFromJsonAsync<PagedResult<ContentItemListItem>>(
             TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        var item = result!.Items.FirstOrDefault(i => i.Slug == slug);
+        var item = result!.Items.FirstOrDefault(i => i.Slug == Slug);
         item.Should().NotBeNull();
         item!.HasProcessedUrl.Should().BeTrue();
     }

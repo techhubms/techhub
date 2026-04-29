@@ -1,4 +1,8 @@
 using FluentAssertions;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
+using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Services.ContentProcessing;
 using YoutubeExplode.Videos.ClosedCaptions;
 
@@ -221,6 +225,207 @@ public class YouTubeTranscriptServiceTests
         result.Should().ContainSingle();
         result[0].Name.Should().Be("NAME");
         result[0].Value.Should().Be("value");
+    }
+
+    #endregion
+
+    #region GetTranscriptAsync Fallback Strategy Tests
+
+    /// <summary>
+    /// Creates a testable subclass with controllable YoutubeExplode/yt-dlp results.
+    /// </summary>
+    private static YouTubeTranscriptService CreateTestableService(
+        TranscriptResult? youtubeExplodeResult,
+        TranscriptResult? ytDlpResult,
+        bool youtubeExplodeEnabled = true,
+        bool ytDlpEnabled = true)
+    {
+        var httpClient = new HttpClient();
+        var ytDlp = new YtDlpTranscriptService(
+            new Microsoft.Extensions.Logging.Abstractions.NullLogger<YtDlpTranscriptService>());
+        var options = Microsoft.Extensions.Options.Options.Create(new ContentProcessorOptions
+        {
+            YouTubeUserAgent = "Test/1.0",
+            YouTubeExplodeEnabled = youtubeExplodeEnabled,
+            YtDlpEnabled = ytDlpEnabled,
+        });
+        var logger = new Microsoft.Extensions.Logging.Abstractions.NullLogger<YouTubeTranscriptService>();
+
+        return new TestableYouTubeTranscriptService(
+            httpClient, ytDlp, options, logger, youtubeExplodeResult, ytDlpResult);
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_BothEnabled_YoutubeExplodeSucceeds_ReturnsWithoutYtDlp()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Success("YE transcript"),
+            ytDlpResult: TranscriptResult.Success("YD transcript"));
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Text.Should().Be("YE transcript");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_BothEnabled_YoutubeExplodeFails_FallsBackToYtDlp()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Failure("YE failed"),
+            ytDlpResult: TranscriptResult.Success("YD transcript"));
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Text.Should().Be("YD transcript");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_BothEnabled_BothFail_ReturnsCombinedFailure()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Failure("YE failed"),
+            ytDlpResult: TranscriptResult.Failure("YD failed"));
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeFalse();
+        result.FailureReason.Should().Contain("YoutubeExplode: YE failed");
+        result.FailureReason.Should().Contain("yt-dlp: YD failed");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_OnlyYtDlpEnabled_UsesYtDlpDirectly()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Success("should not be used"),
+            ytDlpResult: TranscriptResult.Success("YD transcript"),
+            youtubeExplodeEnabled: false,
+            ytDlpEnabled: true);
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Text.Should().Be("YD transcript");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_OnlyYoutubeExplodeEnabled_NoFallback()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Failure("YE failed"),
+            ytDlpResult: TranscriptResult.Success("should not be used"),
+            youtubeExplodeEnabled: true,
+            ytDlpEnabled: false);
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeFalse();
+        result.FailureReason.Should().Be("YE failed");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_BothDisabled_ReturnsFailure()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Success("should not be used"),
+            ytDlpResult: TranscriptResult.Success("should not be used"),
+            youtubeExplodeEnabled: false,
+            ytDlpEnabled: false);
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeFalse();
+        result.FailureReason.Should().Contain("disabled");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_OnlyYoutubeExplodeEnabled_Succeeds_ReturnsResult()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Success("YE transcript"),
+            ytDlpResult: TranscriptResult.Failure("should not be called"),
+            youtubeExplodeEnabled: true,
+            ytDlpEnabled: false);
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeTrue();
+        result.Text.Should().Be("YE transcript");
+    }
+
+    [Fact]
+    public async Task GetTranscriptAsync_OnlyYtDlpEnabled_Fails_ReturnsFailure()
+    {
+        // Arrange
+        var service = CreateTestableService(
+            youtubeExplodeResult: TranscriptResult.Success("should not be used"),
+            ytDlpResult: TranscriptResult.Failure("YD failed"),
+            youtubeExplodeEnabled: false,
+            ytDlpEnabled: true);
+
+        // Act
+        var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
+
+        // Assert
+        result.IsSuccess.Should().BeFalse();
+        result.FailureReason.Should().Be("YD failed");
+    }
+
+    /// <summary>
+    /// Testable subclass that overrides the protected virtual methods to return
+    /// predetermined results, allowing us to test the fallback routing logic
+    /// without real HTTP/process calls.
+    /// </summary>
+    private sealed class TestableYouTubeTranscriptService : YouTubeTranscriptService
+    {
+        private readonly TranscriptResult? _youtubeExplodeResult;
+        private readonly TranscriptResult? _ytDlpResult;
+
+        public TestableYouTubeTranscriptService(
+            HttpClient httpClient,
+            YtDlpTranscriptService ytDlp,
+            IOptions<ContentProcessorOptions> options,
+            ILogger<YouTubeTranscriptService> logger,
+            TranscriptResult? youtubeExplodeResult,
+            TranscriptResult? ytDlpResult)
+            : base(httpClient, ytDlp, options, logger)
+        {
+            _youtubeExplodeResult = youtubeExplodeResult;
+            _ytDlpResult = ytDlpResult;
+        }
+
+        protected override Task<TranscriptResult> TryYoutubeExplodeAsync(string videoUrl, CancellationToken ct)
+        {
+            return Task.FromResult(_youtubeExplodeResult!);
+        }
+
+        protected override Task<TranscriptResult> TryYtDlpAsync(string videoUrl, CancellationToken ct)
+        {
+            return Task.FromResult(_ytDlpResult!);
+        }
     }
 
     #endregion

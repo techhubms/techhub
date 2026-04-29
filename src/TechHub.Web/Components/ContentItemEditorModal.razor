@@ -44,6 +44,17 @@
                         </select>
                     </div>
 
+                    <div class="admin-form-group">
+                        <label class="admin-label" for="ci-feed-name">Feed Name</label>
+                        <select id="ci-feed-name" class="admin-input" @bind="_feedName">
+                            <option value="">— select —</option>
+                            @foreach (var feed in FeedNames)
+                            {
+                                <option value="@feed">@feed</option>
+                            }
+                        </select>
+                    </div>
+
                     <div class="admin-form-group editor-full-width">
                         <label class="admin-label" for="ci-excerpt">Excerpt</label>
                         <textarea id="ci-excerpt" class="admin-input editor-textarea-sm" @bind="_excerpt" rows="3"></textarea>
@@ -106,6 +117,7 @@
     [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
     [Parameter] public ContentItemEditData? EditData { get; set; }
     [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public IReadOnlyList<string> FeedNames { get; set; } = [];
     [Parameter] public EventCallback<ContentItemEditData> OnSave { get; set; }
     [Parameter] public EventCallback OnClose { get; set; }
 
@@ -116,6 +128,7 @@
     private string _excerpt = string.Empty;
     private string _content = string.Empty;
     private string _primarySectionName = string.Empty;
+    private string _feedName = string.Empty;
     private string _tagsCsv = string.Empty;
     private string _aiMetadata = string.Empty;
     private HashSet<string> _selectedSections = [];
@@ -135,6 +148,7 @@
             _excerpt = EditData.Excerpt;
             _content = EditData.Content;
             _primarySectionName = EditData.PrimarySectionName;
+            _feedName = EditData.FeedName ?? string.Empty;
             _tagsCsv = string.Join(", ", EditData.Tags);
             _aiMetadata = EditData.AiMetadata ?? "{}";
             _selectedSections = new HashSet<string>(EditData.Sections, StringComparer.OrdinalIgnoreCase);
@@ -231,6 +245,7 @@
             Excerpt = _excerpt.Trim(),
             Content = _content,
             PrimarySectionName = _primarySectionName,
+            FeedName = string.IsNullOrWhiteSpace(_feedName) ? null : _feedName.Trim(),
             Tags = tags,
             Sections = _selectedSections.OrderBy(s => s).ToList(),
             AiMetadata = aiMeta

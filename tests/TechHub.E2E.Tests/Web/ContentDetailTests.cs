@@ -16,7 +16,7 @@ public class ContentDetailTests : PlaywrightTestBase
 {
     public ContentDetailTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
-    private static readonly string BaseUrl = BlazorHelpers.BaseUrl;
+    private static readonly string _baseUrl = BlazorHelpers.BaseUrl;
 
     // Test with a known roundup URL - more reliable than clicking through
     private const string TestRoundupUrl = "/all/roundups";
@@ -27,7 +27,7 @@ public class ContentDetailTests : PlaywrightTestBase
     /// </summary>
     private async Task NavigateToFirstRoundupDetailAsync()
     {
-        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{TestRoundupUrl}");
+        await Page.GotoAndWaitForBlazorAsync($"{_baseUrl}{TestRoundupUrl}");
 
         // Wait for cards to load
         await Page.Locator(".card").First.AssertElementVisibleAsync();
@@ -51,7 +51,7 @@ public class ContentDetailTests : PlaywrightTestBase
         firstCardHref.Should().NotBeNullOrEmpty("should find at least one card with internal href");
 
         // Navigate directly to the detail page (more reliable than clicking)
-        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
+        await Page.GotoAndWaitForBlazorAsync($"{_baseUrl}{firstCardHref}");
 
         // Wait for detail page to be ready - verify main article is visible (should be exactly 1)
         await Page.AssertElementVisibleBySelectorAsync("main article");
@@ -161,7 +161,7 @@ public class ContentDetailTests : PlaywrightTestBase
         }
 
         // Act - Navigate to video detail page
-        await Page.GotoAndWaitForBlazorAsync($"{BaseUrl}{firstCardHref}");
+        await Page.GotoAndWaitForBlazorAsync($"{_baseUrl}{firstCardHref}");
 
         // Assert - URL should NOT contain date prefix pattern (YYYY-MM-DD-)
         Page.Url.Should().Contain("/videos/", "URL should include collection name");
@@ -184,7 +184,7 @@ public class ContentDetailTests : PlaywrightTestBase
         var oldFormatUrl = "/ai/videos/2026-01-12-what-quantum-safe-is-and-why-we-need-it";
 
         // Act & Assert - Should get 404 or redirect behavior
-        var response = await Page.GotoAsync($"{BaseUrl}{oldFormatUrl}");
+        var response = await Page.GotoAsync($"{_baseUrl}{oldFormatUrl}");
 
         // Either 404 status code or redirected away from the old URL pattern
         // If we get a response, it should be 404
