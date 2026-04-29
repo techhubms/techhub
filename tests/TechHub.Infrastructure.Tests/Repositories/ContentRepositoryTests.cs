@@ -1022,12 +1022,18 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
-        // Assert - results should exist and items with "copilot" in title should appear early
+        // Assert - results should exist and items with "copilot" in title should rank early
         results.Items.Should().HaveCountGreaterThan(1, "Need multiple results to verify ranking");
 
-        // Items with "copilot" in the title should appear in results
-        results.Items.Should().Contain(item => item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase),
-            "Items with search term in title should appear in results");
+        var items = results.Items.ToList();
+        var titleMatchIndices = items
+            .Select((item, index) => new { item, index })
+            .Where(x => x.item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase))
+            .Select(x => x.index)
+            .ToList();
+        titleMatchIndices.Should().NotBeEmpty("Items with search term in title should appear in results");
+        titleMatchIndices.First().Should().BeLessThan(items.Count / 2,
+            "Title matches (weight A) should rank in the first half of results");
     }
 
     /// <summary>

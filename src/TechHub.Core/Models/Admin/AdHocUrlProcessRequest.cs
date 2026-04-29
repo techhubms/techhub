@@ -35,6 +35,13 @@ public sealed record AdHocUrlProcessRequest
     public bool IsGhcFeature { get; init; }
 
     /// <summary>
+    /// When <c>true</c>, assigns this video to the <c>vscode-updates</c> subcollection.
+    /// Requires <see cref="CollectionName"/> to be "videos" and a YouTube URL.
+    /// Mutually exclusive with <see cref="IsGhcFeature"/>.
+    /// </summary>
+    public bool IsVscodeUpdate { get; init; }
+
+    /// <summary>
     /// Subscription tier names for a ghc-features video.
     /// Required when <see cref="IsGhcFeature"/> is <c>true</c>.
     /// Valid values: Free, Student, Pro, Business, Pro+, Enterprise.

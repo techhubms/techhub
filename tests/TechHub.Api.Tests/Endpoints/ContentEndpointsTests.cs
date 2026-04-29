@@ -1186,10 +1186,16 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         result.Should().NotBeNull();
         result!.Items.Should().HaveCountGreaterThan(1, "Need multiple results to verify ordering");
 
-        // Items with "copilot" in title should appear early in results (relevance-based ordering)
-        var titleMatches = result.Items.Where(item =>
-            item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase)).ToList();
-        titleMatches.Should().NotBeEmpty("Items with 'copilot' in title should appear in results");
+        // Items with "copilot" in title should appear in the first half of results (relevance-based ordering)
+        var items = result.Items.ToList();
+        var titleMatchIndices = items
+            .Select((item, index) => new { item, index })
+            .Where(x => x.item.Title.Contains("copilot", StringComparison.OrdinalIgnoreCase))
+            .Select(x => x.index)
+            .ToList();
+        titleMatchIndices.Should().NotBeEmpty("Items with 'copilot' in title should appear in results");
+        titleMatchIndices.First().Should().BeLessThan(items.Count / 2,
+            "Title matches should rank in the first half due to relevance ordering");
     }
 
     #endregion

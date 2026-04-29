@@ -13,9 +13,10 @@ using YoutubeExplode.Videos.ClosedCaptions;
 namespace TechHub.Infrastructure.Services.ContentProcessing;
 
 /// <summary>
-/// Fetches YouTube video closed captions (transcripts).
-/// Tries YoutubeExplode first (with configured HTTP client, browser UA, and cookies),
-/// then falls back to yt-dlp if YoutubeExplode fails.
+/// Fetches YouTube video closed captions (transcripts) using YoutubeExplode
+/// (with configured HTTP client, browser UA, and cookies).
+/// yt-dlp is registered as a dependency for future fallback use, but currently disabled
+/// while we validate whether cookies alone are sufficient.
 /// Returns plain text transcript suitable for AI analysis. Failures are non-fatal
 /// - the pipeline continues without transcript data if fetching fails.
 /// </summary>
@@ -82,9 +83,8 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
     }
 
     /// <summary>
-    /// Fetches the transcript for <paramref name="videoUrl"/>.
-    /// Tries YoutubeExplode first (with configured HTTP client and cookies),
-    /// then falls back to yt-dlp if YoutubeExplode fails.
+    /// Fetches the transcript for <paramref name="videoUrl"/> using YoutubeExplode.
+    /// yt-dlp fallback is currently disabled while validating cookie-based approach.
     /// Returns a <see cref="TranscriptResult"/> indicating success with text or failure with a reason.
     /// </summary>
     public virtual async Task<TranscriptResult> GetTranscriptAsync(string videoUrl, CancellationToken ct = default)

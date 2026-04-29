@@ -1762,6 +1762,43 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    /// <inheritdoc/>
+    public virtual async Task<string?> FetchUrlTitleAsync(
+        string url,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(url);
+        try
+        {
+            var encodedUrl = Uri.EscapeDataString(url);
+            using var response = await _httpClient.GetAsync(
+                $"/api/admin/urls/title?url={encodedUrl}",
+                cancellationToken);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+
+            var result = await response.Content.ReadFromJsonAsync<TitleResponse>(cancellationToken);
+            return result?.Title;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogWarning(ex, "Failed to fetch title for {Url}", url);
+            return null;
+        }
+        catch (TaskCanceledException)
+        {
+            return null;
+        }
+    }
+
+    private sealed class TitleResponse
+    {
+        public string? Title { get; init; }
+    }
+
     private sealed class MarkdownPreviewResponse
     {
         public string? Html { get; init; }

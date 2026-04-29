@@ -72,17 +72,18 @@ public class PostgresDialect : ISqlDialect
     /// <summary>
     /// Known compound words and their expansions for search.
     /// Maps compound terms (lowercase) to their constituent parts.
+    /// Parts shorter than 3 characters are excluded to avoid overly broad prefix matches.
     /// </summary>
     private static readonly Dictionary<string, string[]> _compoundWords = new(StringComparer.OrdinalIgnoreCase)
     {
-        ["vscode"] = ["vs", "code"],
+        ["vscode"] = ["code"],
         ["dotnet"] = ["dot", "net"],
         ["devops"] = ["dev", "ops"],
-        ["csharp"] = ["c", "sharp"],
+        ["csharp"] = ["sharp"],
         ["github"] = ["git", "hub"],
-        ["openai"] = ["open", "ai"],
+        ["openai"] = ["open"],
         ["chatgpt"] = ["chat", "gpt"],
-        ["copilot"] = ["co", "pilot"],
+        ["copilot"] = ["pilot"],
     };
 
     public string TransformFullTextQuery(string query)

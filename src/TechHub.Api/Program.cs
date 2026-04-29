@@ -129,7 +129,7 @@ builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJob
 // Repository for processed URL tracking (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
 
-// YouTube transcript fetcher (yt-dlp first, YoutubeExplode fallback)
+// YouTube transcript fetcher (YoutubeExplode with cookies; yt-dlp registered for future fallback)
 builder.Services.AddTransient<YtDlpTranscriptService>();
 builder.Services.AddHttpClient<IYouTubeTranscriptService, YouTubeTranscriptService>()
     .ConfigureHttpClient((sp, client) =>

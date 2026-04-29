@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Mvc;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
@@ -14,7 +16,7 @@ namespace TechHub.Api.Endpoints;
 /// the authenticated user's token after OIDC sign-in.
 /// When Azure AD is not configured (local dev), the AdminOnly policy allows all requests.
 /// </summary>
-public static class AdminEndpoints
+public static partial class AdminEndpoints
 {
     public static void MapAdminEndpoints(this IEndpointRouteBuilder app)
     {
@@ -197,6 +199,10 @@ public static class AdminEndpoints
         group.MapPost("/urls/process", ProcessAdHocUrlAsync)
             .WithName("ProcessAdHocUrl")
             .WithSummary("Process a single URL outside the RSS pipeline");
+
+        group.MapGet("/urls/title", FetchUrlTitleAsync)
+            .WithName("FetchUrlTitle")
+            .WithSummary("Fetch the page title for a given URL");
     }
 
     // ── Processing handlers ──────────────────────────────────────────────────
@@ -922,6 +928,17 @@ public static class AdminEndpoints
 
             subcollection = "ghc-features";
         }
+        else if (request.IsVscodeUpdate)
+        {
+            var isYouTube = request.Url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
+                || request.Url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
+            if (!isYouTube)
+            {
+                return Results.BadRequest("VS Code Update videos must be YouTube URLs.");
+            }
+
+            subcollection = "vscode-updates";
+        }
 
         var sanitizedUrl = request.Url.Trim().Sanitize();
         var feedName = !string.IsNullOrWhiteSpace(request.FeedName)
@@ -961,6 +978,47 @@ public static class AdminEndpoints
             _ => Results.UnprocessableEntity(result)
         };
     }
+
+    // ── URL title fetch handler ──────────────────────────────────────────────
+
+    private static async Task<IResult> FetchUrlTitleAsync(
+        [FromQuery] string url,
+        IArticleFetchClient fetchClient,
+        CancellationToken ct)
+    {
+        if (string.IsNullOrWhiteSpace(url)
+            || !Uri.TryCreate(url.Trim(), UriKind.Absolute, out var uri)
+            || (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        {
+            return Results.BadRequest("A valid HTTP or HTTPS URL is required.");
+        }
+
+        string? html;
+        try
+        {
+            html = await fetchClient.FetchHtmlAsync(url.Trim(), ct);
+        }
+        catch (HttpRequestException)
+        {
+            return Results.Ok(new { title = (string?)null });
+        }
+
+        if (string.IsNullOrWhiteSpace(html))
+        {
+            return Results.Ok(new { title = (string?)null });
+        }
+
+        // Extract <title> from HTML
+        var titleMatch = TitleRegex().Match(html);
+        var title = titleMatch.Success
+            ? System.Net.WebUtility.HtmlDecode(titleMatch.Groups[1].Value).Trim()
+            : null;
+
+        return Results.Ok(new { title });
+    }
+
+    [GeneratedRegex(@"<title[^>]*>(.*?)</title>", RegexOptions.IgnoreCase | RegexOptions.Singleline)]
+    private static partial Regex TitleRegex();
 }
 
 /// <summary>DTO for creating/updating RSS feed configurations.</summary>

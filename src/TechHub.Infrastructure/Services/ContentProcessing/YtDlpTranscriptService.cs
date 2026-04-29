@@ -63,7 +63,7 @@ public sealed partial class YtDlpTranscriptService : IDisposable
 
             _logger.LogDebug("Running yt-dlp for transcript: {Url}", videoUrl);
 
-            var (exitCode, stdout, stderr) = await RunProcessAsync(
+            var (exitCode, _, stderr) = await RunProcessAsync(
                 _ytDlpPath, args, timeoutSeconds, ct);
 
             if (ct.IsCancellationRequested)
@@ -145,7 +145,8 @@ public sealed partial class YtDlpTranscriptService : IDisposable
         ArgumentNullException.ThrowIfNull(videoUrl);
         ArgumentNullException.ThrowIfNull(outputDir);
 
-        var outputTemplate = Path.Combine(outputDir, "%(id)s");
+        // Use GetFileName to ensure the template segment can never be an absolute path
+        var outputTemplate = Path.Combine(outputDir, Path.GetFileName("%(id)s"));
 
         // --write-sub: download manual subtitles
         // --write-auto-sub: download auto-generated subtitles as fallback

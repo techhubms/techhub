@@ -116,6 +116,7 @@
 @* ── Plans editor modal ── *@
 @if (_editorOpen && _editing != null)
 {
+    var editing = _editing;
     <div class="admin-modal-backdrop" @onclick="CloseEditor">
         <div class="admin-modal" @onclick:stopPropagation>
             <div class="admin-modal-header">
@@ -125,10 +126,10 @@
 
             <div class="admin-modal-body">
                 <div class="features-editor-title">
-                    @_editing.Title
-                    @if (!_editingDraft && !string.IsNullOrWhiteSpace(_editing.ExternalUrl))
+                    @editing.Title
+                    @if (!_editingDraft && !string.IsNullOrWhiteSpace(editing.ExternalUrl))
                     {
-                        <span class="features-editor-title-link">(<a href="@_editing.ExternalUrl" target="_blank" rel="noopener">@_editing.ExternalUrl</a>)</span>
+                        <span class="features-editor-title-link">(<a href="@editing.ExternalUrl" target="_blank" rel="noopener">@editing.ExternalUrl</a>)</span>
                     }
                 </div>
 
@@ -280,7 +281,7 @@
                 .ThenBy(i => i.Title)
                 .ToList();
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
             _error = $"Failed to load features: {ex.Message}";
             Logger.LogError(ex, "Failed to load ghc-features for admin page");
@@ -335,7 +336,7 @@
             // Reload to reflect the saved changes in the table
             await LoadFeaturesAsync();
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
             _message = $"Failed to save: {ex.Message}";
             _messageIsError = true;
@@ -367,7 +368,7 @@
 
             await LoadFeaturesAsync();
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
             _message = $"Failed to delete: {ex.Message}";
             _messageIsError = true;
@@ -436,7 +437,7 @@
             CloseEditor();
             await LoadFeaturesAsync();
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
             _publishError = $"Failed to publish: {ex.Message}";
             Logger.LogError(ex, "Failed to publish draft {Slug} from URL {Url}", _editing?.Slug, _publishUrl);

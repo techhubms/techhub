@@ -94,12 +94,18 @@
 
                     <div class="admin-form-group">
                         <label class="admin-form-label" for="acm-title-hint-input">Title Hint <span class="admin-form-hint">(optional)</span></label>
-                        <input id="acm-title-hint-input"
-                               class="admin-form-input"
-                               type="text"
-                               placeholder="e.g. GitHub Copilot for VS Code — New Features"
-                               @bind="_titleHint"
-                               disabled="@_processing" />
+                        <div class="admin-input-with-status">
+                            <input id="acm-title-hint-input"
+                                   class="admin-form-input"
+                                   type="text"
+                                   placeholder="e.g. GitHub Copilot for VS Code — New Features"
+                                   @bind="_titleHint"
+                                   disabled="@_processing" />
+                            @if (_fetchingTitle)
+                            {
+                                <span class="admin-form-hint">Fetching title…</span>
+                            }
+                        </div>
                         <span class="admin-form-hint">Points the AI in the right direction — the final title will be extracted from the page content.</span>
                     </div>
 
@@ -109,8 +115,23 @@
                             <label class="admin-form-checkbox-label">
                                 <input type="checkbox"
                                        @bind="_isGhcFeature"
-                                       disabled="@(!_isYouTube || _processing)" />
+                                       disabled="@(!_isYouTube || _processing)"
+                                       @bind:after="OnGhcFeatureChanged" />
                                 Assign as GitHub Copilot Feature
+                                @if (!_isYouTube)
+                                {
+                                    <span class="admin-form-hint"> (requires a YouTube URL)</span>
+                                }
+                            </label>
+                        </div>
+
+                        <div class="admin-form-group">
+                            <label class="admin-form-checkbox-label">
+                                <input type="checkbox"
+                                       @bind="_isVscodeUpdate"
+                                       disabled="@(!_isYouTube || _processing)"
+                                       @bind:after="OnVscodeUpdateChanged" />
+                                Assign as VS Code Update
                                 @if (!_isYouTube)
                                 {
                                     <span class="admin-form-hint"> (requires a YouTube URL)</span>
@@ -195,11 +216,14 @@
     private string _feedName = DefaultFeedName;
     private string _titleHint = string.Empty;
     private bool _isGhcFeature;
+    private bool _isVscodeUpdate;
     private bool _ghesSupport;
     private int? _selectedPlanGroup;
 
     private bool _isYouTube;
     private bool _processing;
+    private bool _fetchingTitle;
+    private CancellationTokenSource? _titleFetchCts;
     private AdHocUrlProcessResult? _result;
     private bool _isAlreadyExists;
     private string? _validationError;
@@ -224,6 +248,77 @@
         if (!_isYouTube)
         {
             _isGhcFeature = false;
+            _isVscodeUpdate = false;
+        }
+
+        // Auto-fetch title when a valid URL is entered and title hint is empty
+        _ = TryFetchTitleAsync();
+    }
+
+    private void OnGhcFeatureChanged()
+    {
+        if (_isGhcFeature)
+        {
+            _isVscodeUpdate = false;
+        }
+    }
+
+    private void OnVscodeUpdateChanged()
+    {
+        if (_isVscodeUpdate)
+        {
+            _isGhcFeature = false;
+            _selectedPlanGroup = null;
+            _ghesSupport = false;
+        }
+    }
+
+    private async Task TryFetchTitleAsync()
+    {
+        // Cancel any in-flight title fetch
+        _titleFetchCts?.Cancel();
+
+        var url = _url.Trim();
+        if (string.IsNullOrWhiteSpace(url)
+            || !Uri.TryCreate(url, UriKind.Absolute, out var uri)
+            || (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        {
+            return;
+        }
+
+        // Only auto-fill if the user hasn't typed something already
+        if (!string.IsNullOrWhiteSpace(_titleHint))
+        {
+            return;
+        }
+
+        _titleFetchCts = new CancellationTokenSource();
+        var ct = _titleFetchCts.Token;
+
+        _fetchingTitle = true;
+        StateHasChanged();
+
+        try
+        {
+            var title = await Api.FetchUrlTitleAsync(url, ct);
+            if (!ct.IsCancellationRequested && !string.IsNullOrWhiteSpace(title) && string.IsNullOrWhiteSpace(_titleHint))
+            {
+                _titleHint = title;
+                StateHasChanged();
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            // Expected when URL changes quickly
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogWarning(ex, "Title fetch failed for {Url}", url);
+        }
+        finally
+        {
+            _fetchingTitle = false;
+            StateHasChanged();
         }
     }
 
@@ -248,8 +343,8 @@
         _processing = true;
         try
         {
-            var plans = _isGhcFeature && _selectedPlanGroup is not null
-                ? (IReadOnlyList<string>)_planGroups[_selectedPlanGroup.Value].Plans.ToList()
+            var plans = _isGhcFeature
+                ? (IReadOnlyList<string>)_planGroups[_selectedPlanGroup!.Value].Plans.ToList()
                 : [];
 
             var request = new AdHocUrlProcessRequest
@@ -259,6 +354,7 @@
                 FeedName = string.IsNullOrWhiteSpace(_feedName) ? DefaultFeedName : _feedName.Trim(),
                 TitleHint = string.IsNullOrWhiteSpace(_titleHint) ? null : _titleHint.Trim(),
                 IsGhcFeature = _isGhcFeature,
+                IsVscodeUpdate = _isVscodeUpdate,
                 Plans = plans,
                 GhesSupport = _ghesSupport
             };
@@ -279,14 +375,16 @@
                     _feedName = DefaultFeedName;
                     _titleHint = string.Empty;
                     _isGhcFeature = false;
+                    _isVscodeUpdate = false;
                     _ghesSupport = false;
                     _isYouTube = false;
                     _selectedPlanGroup = null;
                     await OnItemAdded.InvokeAsync();
+                    await CloseAsync();
                 }
             }
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
             Logger.LogError(ex, "Failed to submit URL for processing");
             _validationError = $"An error occurred: {ex.Message}";
@@ -321,12 +419,11 @@
             {
                 var configs = await Api.GetFeedConfigsAsync();
                 _feedNames = configs.Select(c => c.Name).Order(StringComparer.OrdinalIgnoreCase).ToList();
-                if (_feedNames.Count > 0 && !_feedNames.Contains(_feedName))
-                {
-                    _feedName = _feedNames.Contains(DefaultFeedName) ? DefaultFeedName : _feedNames[0];
-                }
+                var match = _feedNames.FirstOrDefault(
+                    n => n.Equals(DefaultFeedName, StringComparison.OrdinalIgnoreCase));
+                _feedName = match ?? _feedNames[0];
             }
-            catch (Exception ex)
+            catch (HttpRequestException ex)
             {
                 Logger.LogWarning(ex, "Failed to load feed configs, using default");
             }
@@ -342,11 +439,14 @@
         _feedName = DefaultFeedName;
         _titleHint = string.Empty;
         _isGhcFeature = false;
+        _isVscodeUpdate = false;
         _ghesSupport = false;
         _isYouTube = false;
         _selectedPlanGroup = null;
         _result = null;
         _isAlreadyExists = false;
         _validationError = null;
+        _fetchingTitle = false;
+        _titleFetchCts?.Cancel();
     }
 }

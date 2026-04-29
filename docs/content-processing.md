@@ -51,8 +51,8 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from all enabled feeds in the database
 2. **Content fetching** — Fetches the full article HTML for each item, or closed captions
    (transcripts) for YouTube video items. Transcripts are fetched using **YoutubeExplode**
-   first (with configured HTTP client, browser UA, and optional cookies), falling back to
-   **yt-dlp** if YoutubeExplode fails. Failures are non-fatal.
+   (with configured HTTP client, browser UA, and persistent cookies). **yt-dlp** is registered
+   as a dependency for future fallback use but is currently disabled. Failures are non-fatal.
 3. **AI categorization** — Sends content to Azure OpenAI (`AiCategorizationService`) using the
    system prompt embedded in `TechHub.Infrastructure/Data/Resources/system-message.md`
 4. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
@@ -135,8 +135,8 @@ See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
 - **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue
 - **Content fetch failures**: Non-fatal; pipeline falls back to RSS metadata only
-- **Transcript failures**: Non-fatal; YoutubeExplode is tried first, then yt-dlp as fallback.
-  If both fail, the YouTube item is processed without transcript
+- **Transcript failures**: Non-fatal; YoutubeExplode is used with persistent cookies.
+  If it fails, the YouTube item is processed without transcript data
 - **AI API failures**: Retried up to `MaxRetries` times (configurable in `AiCategorizationOptions`)
 - **Rate limiting**: Configurable delay between AI calls (`RateLimitDelaySeconds`)
 

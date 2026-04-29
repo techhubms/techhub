@@ -1075,6 +1075,89 @@ public class AiCategorizationServiceTests
         result.Explanation.Should().Contain("Not relevant");
     }
 
+    // ── Author Resolution ──────────────────────────────────────────────────────
+
+    [Fact]
+    public async Task CategorizeAsync_WithAiAuthor_UsesAiAuthor()
+    {
+        // Arrange — AI determines a specific author from the content/transcript
+        var aiJson = """
+            {
+                "included": true,
+                "title": "Building APIs with .NET",
+                "excerpt": "Liuba Gontha walks through building APIs",
+                "collection": "videos",
+                "sections": ["dotnet"],
+                "tags": ["ASP.NET Core"],
+                "primary_section": "dotnet",
+                "author": "Liuba Gontha",
+                "content": "Content about APIs",
+                "explanation": "Included: .NET content"
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+        var item = new RawFeedItem
+        {
+            Title = "Building APIs with .NET",
+            ExternalUrl = "https://www.youtube.com/watch?v=abc123",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "Rob Bos YouTube",
+            CollectionName = "videos",
+            FeedLevelAuthor = "Rob Bos"
+        };
+
+        // Act
+        var result = await sut.CategorizeAsync(item, CancellationToken.None);
+
+        // Assert — AI-determined author takes precedence over feed-level author
+        result.Item.Should().NotBeNull();
+        result.Item!.Author.Should().Be("Liuba Gontha");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WithNoAiAuthor_FallsBackToFeedLevelAuthor()
+    {
+        // Arrange — AI omits the author field
+        var aiJson = """
+            {
+                "included": true,
+                "title": "Azure Updates",
+                "excerpt": "Latest Azure updates",
+                "collection": "news",
+                "sections": ["azure"],
+                "tags": ["Azure"],
+                "primary_section": "azure",
+                "content": "Content about Azure",
+                "explanation": "Included: Azure content"
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+        var item = new RawFeedItem
+        {
+            Title = "Azure Updates",
+            ExternalUrl = "https://example.com/azure",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "Azure Blog",
+            CollectionName = "news",
+            FeedLevelAuthor = "Azure Team"
+        };
+
+        // Act
+        var result = await sut.CategorizeAsync(item, CancellationToken.None);
+
+        // Assert — falls back to FeedLevelAuthor when AI returns no author
+        result.Item.Should().NotBeNull();
+        result.Item!.Author.Should().Be("Azure Team");
+    }
+
     [Fact]
     public async Task CategorizeAsync_WithExcerptOnly_NoContent_RejectsItem()
     {

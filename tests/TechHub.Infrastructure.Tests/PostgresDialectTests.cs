@@ -38,13 +38,13 @@ public class PostgresDialectTests
     [Fact]
     public void TransformFullTextQuery_CompoundWord_ExpandsToIncludeSubwords()
     {
-        // Arrange & Act - "vscode" is a compound of "vs" + "code"
+        // Arrange & Act - "vscode" is a compound of "code" ("vs" excluded: too short for prefix matching)
         var result = _dialect.TransformFullTextQuery("vscode");
 
-        // Assert - Should expand compound word so "vscode" also matches "vs code"
+        // Assert - Should expand compound word so "vscode" also matches "code"
         result.Should().Contain("vscode:*", "Original term should be preserved");
-        result.Should().Contain("vs:*", "Should expand to include 'vs' subword");
         result.Should().Contain("code:*", "Should expand to include 'code' subword");
+        result.Should().NotContain("vs:*", "Short parts (<3 chars) should be excluded to avoid overly broad matches");
     }
 
     [Theory]
@@ -69,8 +69,8 @@ public class PostgresDialectTests
         // Assert
         result.Should().Contain("updates:*", "Regular terms should be preserved");
         result.Should().Contain("vscode:*", "Compound term should be preserved");
-        result.Should().Contain("vs:*", "Compound 'vscode' should expand to include 'vs'");
         result.Should().Contain("code:*", "Compound 'vscode' should expand to include 'code'");
+        result.Should().NotContain("vs:*", "Short parts (<3 chars) should be excluded");
     }
 
     [Fact]

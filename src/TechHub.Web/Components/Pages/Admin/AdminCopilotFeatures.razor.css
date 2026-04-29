@@ -1,8 +1,29 @@
 /* AdminCopilotFeatures.razor.css */
 
+/* Table fits container: title & slug wrap, other columns stay compact */
+.features-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+/* Title and Slug truncate with ellipsis */
+.features-table td:nth-child(1),
+.features-table td:nth-child(2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Plans/GHES/Draft/Actions: shrink to content, never wrap */
+.features-table th:nth-child(n+3),
+.features-table td:nth-child(n+3) {
+    width: 1%;
+    white-space: nowrap;
+    overflow: visible;
+}
+
 .features-table .features-plans-badges {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: var(--spacing-1);
 }
 

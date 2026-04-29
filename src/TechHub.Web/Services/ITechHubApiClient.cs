@@ -558,6 +558,13 @@ internal interface ITechHubApiClient
     /// </summary>
     Task<AdHocUrlProcessResult?> ProcessAdHocUrlAsync(AdHocUrlProcessRequest request, CancellationToken cancellationToken = default);
 
+    /// <summary>
+    /// Fetch the page title for a URL.
+    /// GET /api/admin/urls/title?url={url}
+    /// Returns null when the title could not be extracted.
+    /// </summary>
+    Task<string?> FetchUrlTitleAsync(string url, CancellationToken cancellationToken = default);
+
     // ================================================================
     // Legacy redirect endpoint
     // ================================================================
