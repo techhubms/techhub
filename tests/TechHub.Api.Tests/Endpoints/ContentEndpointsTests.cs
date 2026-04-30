@@ -1685,7 +1685,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     [Theory]
     [InlineData("/api/sections/%23skiptohere")]
     [InlineData("/api/sections/pp.php")]
-    [InlineData("/api/sections/UPPER")]
     [InlineData("/api/sections/has space")]
     [InlineData("/api/sections/has_underscore")]
     public async Task GetSectionByName_WithInvalidFormat_ReturnsBadRequest(string url)
@@ -1699,7 +1698,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
     [Theory]
     [InlineData("/api/sections/ai/collections/pp.php")]
-    [InlineData("/api/sections/ai/collections/HAS-UPPER")]
     [InlineData("/api/sections/ai/collections/has space")]
     public async Task GetSectionCollection_WithInvalidCollectionFormat_ReturnsBadRequest(string url)
     {
@@ -1714,6 +1712,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     [InlineData("/api/sections/ai/collections/news/items")]
     [InlineData("/api/sections/github-copilot/collections/all/tags")]
     [InlineData("/api/sections/all/collections/all/items")]
+    [InlineData("/api/sections/UPPER")]                                // uppercase is valid format
+    [InlineData("/api/sections/ai/collections/HAS-UPPER")]            // uppercase is valid format
     public async Task Endpoints_WithValidPathParameters_AcceptsRequest(string url)
     {
         // Act
@@ -1721,6 +1721,33 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert - Should NOT be rejected by validation (may be 200 or 404 depending on data)
         response.StatusCode.Should().NotBe(HttpStatusCode.BadRequest);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/AI")]
+    [InlineData("/api/sections/Ai")]
+    public async Task GetSectionByName_WithUppercaseName_ReturnsSameAsLowercase(string url)
+    {
+        // Act
+        var uppercaseResponse = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+        var lowercaseResponse = await _client.GetAsync("/api/sections/ai", TestContext.Current.CancellationToken);
+
+        // Assert - case-insensitive: uppercase and lowercase resolve to the same section
+        uppercaseResponse.StatusCode.Should().Be(lowercaseResponse.StatusCode);
+    }
+
+    [Theory]
+    [InlineData("/api/sections/AI/collections/news")]
+    [InlineData("/api/sections/ai/collections/NEWS")]
+    [InlineData("/api/sections/AI/collections/NEWS")]
+    public async Task GetSectionCollection_WithUppercaseName_ReturnsSameAsLowercase(string url)
+    {
+        // Act
+        var uppercaseResponse = await _client.GetAsync(url, TestContext.Current.CancellationToken);
+        var lowercaseResponse = await _client.GetAsync("/api/sections/ai/collections/news", TestContext.Current.CancellationToken);
+
+        // Assert - case-insensitive: uppercase and lowercase resolve to the same collection
+        uppercaseResponse.StatusCode.Should().Be(lowercaseResponse.StatusCode);
     }
 
     [Theory]

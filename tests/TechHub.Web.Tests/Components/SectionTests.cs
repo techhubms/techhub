@@ -34,6 +34,9 @@ public class SectionTests : BunitContext
 
         // ContentItemsGrid requires circuit-scoped state cache
         Services.AddScoped<ContentGridStateCache>();
+
+        // HeroBanner requires HeroBannerCache singleton
+        Services.AddSingleton(new HeroBannerCache());
     }
 
     [Fact]

@@ -123,6 +123,12 @@ builder.Services.AddSingleton<SectionCache>();
 // Background service to periodically refresh the SectionCache from the API
 builder.Services.AddHostedService<SectionCacheRefreshService>();
 
+// Hero banner cache for immediate rendering without per-request API calls
+builder.Services.AddSingleton<HeroBannerCache>();
+
+// Background service to periodically refresh the HeroBannerCache from the API
+builder.Services.AddHostedService<HeroBannerCacheRefreshService>();
+
 // HTTP context accessor for reading cookies during SSR (e.g. sidebar collapsed state)
 builder.Services.AddHttpContextAccessor();
 
@@ -222,9 +228,23 @@ using (var scope = app.Services.CreateScope())
 {
     var apiClient = scope.ServiceProvider.GetRequiredService<TechHubApiClient>();
     var sectionCache = scope.ServiceProvider.GetRequiredService<SectionCache>();
+    var heroBannerCache = scope.ServiceProvider.GetRequiredService<HeroBannerCache>();
 
     var sections = await apiClient.GetAllSectionsAsync();
     sectionCache.Initialize(sections?.ToList() ?? []);
+
+    try
+    {
+        var heroBannerData = await apiClient.GetHeroBannerDataAsync();
+        heroBannerCache.Initialize(heroBannerData);
+    }
+    catch (HttpRequestException ex)
+    {
+        // Non-fatal: banner won't show until the background service refreshes the cache
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<HeroBannerCache>>();
+        startupLog.LogWarning(ex, "Failed to pre-load HeroBannerCache at startup, will retry on next background refresh");
+        heroBannerCache.Initialize(null);
+    }
 }
 
 // Trust X-Forwarded-Proto and X-Forwarded-For from the Azure Container Apps reverse proxy.
@@ -269,7 +289,26 @@ var contentTypeProvider = new FileExtensionContentTypeProvider();
 contentTypeProvider.Mappings[".jxl"] = "image/jxl";
 app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProvider });
 
-// ── Step 3: Nice 404 page for everything below ────────────────────────────────
+// ── Step 3a: Rewrite HEAD → GET ───────────────────────────────────────────────
+// MapRazorComponents only registers GET endpoints. HEAD requests to valid Blazor
+// routes return 405 without this rewrite. We convert HEAD to GET so routing
+// succeeds; Kestrel suppresses the response body at the transport level since
+// the original TCP request was HEAD.
+app.Use(async (context, next) =>
+{
+    if (HttpMethods.IsHead(context.Request.Method))
+    {
+        context.Request.Method = HttpMethods.Get;
+        await next();
+        context.Request.Method = HttpMethods.Head;
+    }
+    else
+    {
+        await next();
+    }
+});
+
+// ── Step 3b: Nice 404 page for everything below ───────────────────────────────
 // Must wrap the validators so their 404 responses are replaced with /not-found.
 app.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true);
 

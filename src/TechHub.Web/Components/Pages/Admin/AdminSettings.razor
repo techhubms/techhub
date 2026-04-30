@@ -6,6 +6,7 @@
 @implements IDisposable
 @inject ITechHubApiClient Api
 @inject SectionCache SectionCache
+@inject HeroBannerCache HeroBannerCache
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminSettings> Logger
 
@@ -86,7 +87,7 @@
     <div class="admin-page-header" style="margin-top: var(--spacing-6);">
         <div>
             <h2 class="admin-page-title">Cache Management</h2>
-            <p class="admin-page-subtitle">Invalidate all server-side caches (API content cache and web section cache)</p>
+            <p class="admin-page-subtitle">Invalidate all server-side caches (API content cache, web section cache, and hero banner cache)</p>
         </div>
         <div class="admin-actions">
             <button class="btn-secondary"
@@ -202,6 +203,11 @@
                     SectionCache.Initialize(sectionList);
                 }
             }
+
+            // Refresh the web-side hero banner cache
+            HeroBannerCache.Invalidate();
+            var heroBannerData = await Api.GetHeroBannerDataAsync();
+            HeroBannerCache.Initialize(heroBannerData);
 
             _message = "All caches invalidated successfully.";
             _messageIsError = false;

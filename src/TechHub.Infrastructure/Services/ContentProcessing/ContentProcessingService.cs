@@ -249,23 +249,19 @@ public sealed class ContentProcessingService
                         }
 
                         // Log outcome and update counters
-                        var context = raw.IsYouTube
-                            ? string.Create(CultureInfo.InvariantCulture, $" ({itemResult.YouTubeTagCount} tags, {itemResult.TranscriptStatus})")
-                            : string.Empty;
                         switch (itemResult.Outcome)
                         {
                             case AdHocUrlProcessOutcome.Added:
-                                Log(string.Create(CultureInfo.InvariantCulture, $"  ✓ Added: {raw.ExternalUrl}{context}"));
+                                Log(string.Create(CultureInfo.InvariantCulture, $"  ✓ Added: {itemResult.Title ?? raw.ExternalUrl}"));
                                 itemsAdded++;
                                 break;
                             case AdHocUrlProcessOutcome.Skipped:
-                                Log(string.Create(CultureInfo.InvariantCulture,
-                                    $"  ⊘ Skipped: {raw.ExternalUrl}{context} — {TruncateLogReason(itemResult.Message)}"));
+                                Log(string.Create(CultureInfo.InvariantCulture, $"  ⊘ Skipped: {itemResult.Title ?? raw.ExternalUrl}"));
                                 itemsSkipped++;
                                 break;
                             default:
                                 Log(string.Create(CultureInfo.InvariantCulture,
-                                    $"  ✗ Failed: {raw.ExternalUrl}{context} — {TruncateLogReason(itemResult.Message)}"));
+                                    $"  ✗ Failed: {itemResult.Title ?? raw.ExternalUrl} — {TruncateLogReason(itemResult.Message)}"));
                                 errorCount++;
                                 break;
                         }
@@ -403,17 +399,13 @@ public sealed class ContentProcessingService
             var transcriptsSucceeded = itemResult.HasTranscript == true ? 1 : 0;
             var transcriptsFailed = itemResult.HasTranscript == false ? 1 : 0;
 
-            var context = raw.IsYouTube
-                ? string.Create(CultureInfo.InvariantCulture,
-                    $" ({itemResult.YouTubeTagCount} tags, {itemResult.TranscriptStatus ?? "no transcript"})")
-                : string.Empty;
             var statusIcon = itemResult.Outcome switch
             {
                 AdHocUrlProcessOutcome.Added => "✓ Added",
                 AdHocUrlProcessOutcome.Skipped => "⊘ Skipped",
                 _ => "✗ Failed"
             };
-            Log(string.Create(CultureInfo.InvariantCulture, $"{statusIcon}{context}: {itemResult.Message}"));
+            Log(string.Create(CultureInfo.InvariantCulture, $"{statusIcon}: {itemResult.Title ?? itemResult.Message}"));
 
             var duration = _timeProvider.GetUtcNow() - startedAt;
             Log(string.Create(CultureInfo.InvariantCulture, $"Completed in {duration.TotalSeconds:F1}s"));
@@ -450,6 +442,7 @@ public sealed class ContentProcessingService
     {
         public required AdHocUrlProcessOutcome Outcome { get; init; }
         public string? Slug { get; init; }
+        public string? Title { get; init; }
         public required string Message { get; init; }
 
         /// <summary>Supplemental informational lines for the caller's log (date capping, subcollection match, etc.).</summary>
@@ -491,9 +484,9 @@ public sealed class ContentProcessingService
             {
                 var ytTags = await _youtubeTagService.GetTagsAsync(raw.ExternalUrl, ct);
                 ytTagCount = ytTags.Count;
+                logAction(string.Create(CultureInfo.InvariantCulture, $"Fetched {ytTags.Count} YouTube tag(s) from API"));
                 if (ytTags.Count > 0)
                 {
-                    logAction(string.Create(CultureInfo.InvariantCulture, $"Fetched {ytTags.Count} YouTube tag(s)"));
                     var mergedTags = raw.FeedTags.Concat(ytTags)
                         .Select(t => t.Trim())
                         .Where(t => t.Length > 0)
@@ -522,7 +515,26 @@ public sealed class ContentProcessingService
         }
 
         // 2. Enrich with content (YouTube transcript or article body)
-        logAction(string.Create(CultureInfo.InvariantCulture, $"Fetching {(raw.IsYouTube ? "transcript" : "article content")}…"));
+        string fetchLabel;
+        if (raw.IsYouTube)
+        {
+            var ye = _options.YouTubeExplodeEnabled;
+            var yd = _options.YtDlpEnabled;
+            var strategy = (ye, yd) switch
+            {
+                (false, false) => "disabled",
+                (false, true) => "yt-dlp (YoutubeExplode disabled)",
+                (true, false) => "YoutubeExplode only",
+                _ => "YoutubeExplode → yt-dlp fallback"
+            };
+            fetchLabel = string.Create(CultureInfo.InvariantCulture, $"Fetching transcript (via {strategy})…");
+        }
+        else
+        {
+            fetchLabel = "Fetching article content…";
+        }
+
+        logAction(fetchLabel);
         var hadContentBefore = !string.IsNullOrWhiteSpace(raw.FullContent);
         try
         {
@@ -564,6 +576,7 @@ public sealed class ContentProcessingService
                     return new ItemPipelineResult
                     {
                         Outcome = AdHocUrlProcessOutcome.Failed,
+                        Title = raw.Title,
                         Message = Reason,
                         YouTubeTagCount = ytTagCount,
                         HasTranscript = false,
@@ -577,10 +590,17 @@ public sealed class ContentProcessingService
         logAction("Running AI categorization…");
         var itemResult = await CategorizeWriteAndRecordAsync(raw, hasTranscript, jobId, forcedSubcollection, ct);
 
+        if (itemResult.Outcome != AdHocUrlProcessOutcome.Failed)
+        {
+            var include = itemResult.Outcome == AdHocUrlProcessOutcome.Added;
+            logAction(string.Create(CultureInfo.InvariantCulture, $"AI categorization completed. Include: {include}. Reason: {itemResult.Message}"));
+        }
+
         return new ItemPipelineResult
         {
             Outcome = itemResult.Outcome,
             Slug = itemResult.Slug,
+            Title = itemResult.Title,
             Message = itemResult.Message,
             LogLines = itemResult.LogLines,
             YouTubeTagCount = ytTagCount,
@@ -611,13 +631,13 @@ public sealed class ContentProcessingService
             // Polly timeout or internal AI timeout (not user cancellation)
             _logger.LogError(ex, "AI categorization timed out for {Url}", raw.ExternalUrl);
             await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, hasTranscript, jobId, ct: ct);
-            return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Failed, Message = ex.Message };
+            return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Failed, Title = raw.Title, Message = ex.Message };
         }
         catch (Exception ex) when (ex is HttpRequestException or JsonException or InvalidOperationException or TimeoutException)
         {
             _logger.LogError(ex, "AI categorization failed for {Url}", raw.ExternalUrl);
             await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, hasTranscript, jobId, ct: ct);
-            return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Failed, Message = ex.Message };
+            return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Failed, Title = raw.Title, Message = ex.Message };
         }
 
         if (categorizationResult.Item == null)
@@ -625,11 +645,11 @@ public sealed class ContentProcessingService
             if (categorizationResult.IsFailure)
             {
                 await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, categorizationResult.Explanation, raw.FeedName, raw.CollectionName, reason: null, hasTranscript, jobId, ct: ct);
-                return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Failed, Message = categorizationResult.Explanation };
+                return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Failed, Title = raw.Title, Message = categorizationResult.Explanation };
             }
 
             await _processedUrlRepo.RecordSkippedAsync(raw.ExternalUrl, feedName: raw.FeedName, collectionName: raw.CollectionName, reason: categorizationResult.Explanation, hasTranscript, jobId, ct: ct);
-            return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Skipped, Message = categorizationResult.Explanation };
+            return new ItemPipelineResult { Outcome = AdHocUrlProcessOutcome.Skipped, Title = raw.Title, Message = categorizationResult.Explanation };
         }
 
         var processed = categorizationResult.Item;
@@ -702,6 +722,7 @@ public sealed class ContentProcessingService
         {
             Outcome = AdHocUrlProcessOutcome.Added,
             Slug = processed.Slug,
+            Title = processed.Title,
             Message = categorizationResult.Explanation,
             LogLines = logLines
         };

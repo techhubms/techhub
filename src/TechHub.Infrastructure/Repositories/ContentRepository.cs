@@ -687,7 +687,7 @@ public class ContentRepository : IContentRepository
             !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filters.Add("collection_name = @collectionName");
-            parameters.Add("collectionName", request.CollectionName);
+            parameters.Add("collectionName", request.CollectionName.ToLowerInvariant());
         }
 
         // Date range filters
@@ -1110,7 +1110,7 @@ public class ContentRepository : IContentRepository
                 !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 sql.Append(" AND c.subcollection_name = @subcollection");
-                parameters.Add("subcollection", request.Subcollection);
+                parameters.Add("subcollection", request.Subcollection.ToLowerInvariant());
             }
 
             if (hasAuthor)
@@ -1197,7 +1197,7 @@ public class ContentRepository : IContentRepository
                 !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 whereClauses.Add("c.subcollection_name = @subcollection");
-                parameters.Add("subcollection", request.Subcollection);
+                parameters.Add("subcollection", request.Subcollection.ToLowerInvariant());
             }
 
             if (hasAuthor)
@@ -1891,9 +1891,21 @@ WHERE slug = @Slug
 
         // row.ExternalUrl is guaranteed non-null here because hasValidExternalUrl requires
         // !IsNullOrEmpty(row.ExternalUrl) (line above). The null-forgiving operator is safe.
-        var redirectUrl = hasValidExternalUrl
-            ? row.ExternalUrl!
-            : $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";
+        string redirectUrl;
+        if (hasValidExternalUrl)
+        {
+            redirectUrl = row.ExternalUrl!;
+        }
+        else if (row.CollectionName == "roundups")
+        {
+            // Roundups are only accessible via /all/roundups/ — they don't exist under
+            // individual section paths (mirrors ContentItem.GetHref() logic).
+            redirectUrl = $"/all/roundups/{row.Slug}";
+        }
+        else
+        {
+            redirectUrl = $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";
+        }
 
         return new LegacyRedirectResult(redirectUrl);
     }

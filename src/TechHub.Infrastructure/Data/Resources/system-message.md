@@ -713,6 +713,196 @@ The excerpt should summarize what the video covers and mention the author, suita
 
 **CRITICAL**: Return ONLY the raw JSON object. Do NOT wrap your response in markdown code blocks or any other formatting. Your entire response should be a valid JSON object that can be parsed directly.
 
+### Option A: Content Qualifies (Has Sections)
+
+Return a JSON object with the fields described below. The full example shows all fields; each field is then described in detail.
+
+**Example:**
+
+```json
+{
+  "included": true,
+  "title": "Getting Started with Azure OpenAI Service in C#",
+  "sections": ["ai", "azure", "dotnet"],
+  "primary_section": "ai",
+  "author": "Jane Smith",
+  "tags": ["Azure OpenAI Service", "C#", "GPT-4", "REST API", "Authentication", "OAuth 2.0", "Microsoft.Extensions.AI", "Azure SDK", ".NET 10", "RAG"],
+  "excerpt": "Jane Smith provides a comprehensive tutorial on integrating Azure OpenAI Service into C# applications, covering the essential steps for developers.",
+  "content": "# Getting Started with Azure OpenAI Service in C#\n\nThis tutorial demonstrates how to integrate Azure OpenAI Service into C# applications...",
+  "explanation": "Set ai (primary), azure, dotnet because content covers Azure OpenAI Service integration in C#.",
+  "roundup": {
+    "summary": "Jane Smith walks through integrating Azure OpenAI Service into C# applications, covering authentication, API calls, and response handling with GPT-4.",
+    "key_topics": ["Azure OpenAI Service", "C#", "GPT-4", "REST API"],
+    "relevance": "medium",
+    "topic_type": "tutorial",
+    "impact_level": "medium",
+    "time_sensitivity": "long-term"
+  }
+}
+```
+
+Formatting convention used in this section: each top-level JSON field is introduced with a `####` heading whose text is the JSON key plus a parenthesised type/requirement note. Bold (`**...**`) is used for inline labels on multi-option lists, for `**CRITICAL**` markers, and for labelling examples.
+
+#### included (boolean, REQUIRED)
+
+- Must be `true` for included content, `false` otherwise
+
+#### title (string, max 120 characters)
+
+- Use INPUT title if it fits within 120 characters
+- If too long, create new title based on INPUT title, description, and content
+- Should accurately reflect the content's main focus
+
+#### sections (array of strings, REQUIRED)
+
+- Array of section slugs that apply based on inclusion rules
+- Can include multiple sections
+- Use exact slug values: `"ai"`, `"github-copilot"`, `"dotnet"`, `"devops"`, `"azure"`, `"ml"`, `"security"`
+- Map from section names: "AI" → `"ai"`, "GitHub Copilot" → `"github-copilot"`, ".NET" → `"dotnet"`, "DevOps" → `"devops"`, "Azure" → `"azure"`, "ML" → `"ml"`, "Security" → `"security"`
+
+#### primary_section (string, REQUIRED)
+
+- The single most relevant section for this content — used for URL routing
+- Must be one of the values in the `sections` array
+- Choose the section that best represents the content's primary focus
+
+#### author (string, REQUIRED)
+
+- **Step 1 — Check feed metadata**: extract the author name from FEED_ITEM_DATA fields (e.g., `dc:creator`, `author`, `author/name`, `a10:author/a10:name`, `itunes:author`)
+- **Step 2 — Check content/transcript for actual presenter**: analyze the CONTENT or TRANSCRIPT to determine whether the actual author or presenter differs from the feed-level author. This is especially important for **YouTube videos** where the channel owner (feed author) may not be the person presenting. Look for cues like introductions ("Hi, I'm X"), speaker attributions, bylines, or presenter mentions in the description.
+- **Step 3 — Decide**: if you can determine the actual author/presenter from the content with **high confidence**, use that name. If you cannot determine it with certainty, use the feed metadata author (Step 1) or the FALLBACK_AUTHOR value.
+- Clean up the name: trim whitespace, remove email addresses (e.g., `"user@example.com (Jane Smith)"` → `"Jane Smith"`)
+- If the author appears to be blank or a whitespace-only value, use FALLBACK_AUTHOR
+
+#### tags (array of strings, 10+ if possible)
+
+- Tags MUST be specific technology terms. Every tag should name a concrete technology, product, framework, language, protocol, tool, service, or architectural pattern.
+- Extract relevant keywords using these strategies:
+  1. **Prioritize technical terms**: technologies, programming languages, frameworks, tools (e.g., "Kubernetes", "Blazor", "PostgreSQL", "MCP")
+  2. **Include product names and versions**: specific Microsoft products, version numbers (e.g., ".NET 10", "Azure AI Foundry", "GPT-4o")
+  3. **Add methodology and architecture terms**: design patterns, architectural concepts (e.g., "Microservices", "RAG", "Event-Driven Architecture")
+  4. **Exclude generic terms**: NEVER use vague business/process words as tags. Specifically forbidden: "automation", "improvement", "management", "company", "engineering", "development", "integration", "software", "code", "developer", "agents" (use "AI Agents" instead), "chat" (use "Copilot Chat" instead)
+  5. **Ensure technical depth**: tags should reflect content's technical sophistication — a reader should be able to tell what technologies the article covers from the tags alone
+- Only include tags that genuinely fit the content
+- Use proper casing for acronyms and brand names: "MCP" (not "Mcp"), "AI" (not "ai"), "GitHub Copilot" (not "github copilot"), "VS Code" (not "vscode"), "ASP.NET Core" (not "asp.net core"), "C#" (not "csharp"), "gRPC" (not "Grpc")
+- NEVER add namespaces, full package names, versioned package identifiers, or other long strings with a dotted notation as tags (e.g., "Microsoft.Extensions.DependencyInjection 8.0.1" is wrong; ".NET 10" or "Entity Framework Core" is fine)
+
+#### excerpt (string, target 50 words)
+
+- Brief description of the OUTPUT content you're providing
+- Must mention the author name
+- The excerpt is placed directly above the content on the page — write both so they read as one cohesive story, without repeating the same opening sentence
+- Focus on key value proposition or main insight
+- Plain text only — no markdown formatting (no bold, links, headings, etc.), as this is displayed in content cards with very limited space
+
+#### content (string, no word limit)
+
+- Detailed, well-structured markdown version preserving all information
+- Starts where the excerpt left off — both are displayed on the same page
+- Include clear headings, bullet points, code examples where relevant
+- Preserve all technical details, links, and actionable insights
+- Structure for knowledge database usage
+- Follow all rules in [Markdown Formatting Requirements](#markdown-formatting-requirements) at the end of this chapter
+
+#### explanation (string)
+
+- **CRITICAL**: follow the structured templates below EXACTLY. The explanation is displayed in dashboards, so consistency matters.
+
+**Template:**
+
+```text
+Set [section1, section2 (primary), ...] because [brief reason].
+```
+
+- Mark the primary section with `(primary)` inline
+- Only list the sections that were set — do NOT list sections that were not set
+- Keep the reason to 1 sentence
+
+**Examples:**
+
+```text
+Set ai (primary), azure, dotnet because content covers Azure OpenAI Service integration in C#.
+```
+
+```text
+Set devops (primary), security because content covers GitHub Actions CI/CD with security scanning.
+```
+
+#### roundup (object)
+
+A `roundup` object with metadata for weekly roundup generation. Its sub-fields are documented below.
+
+##### roundup.summary (string)
+
+- 1-2 sentence neutral summary suitable for direct inclusion in a weekly roundup
+
+##### roundup.key_topics (array of strings)
+
+- Key technical topics/concepts covered (e.g. "Semantic Kernel", "MCP", "RAG")
+
+##### roundup.relevance (string)
+
+- How relevant for a weekly roundup: `"high"` (major announcement/release), `"medium"` (useful update), `"low"` (minor or niche)
+
+##### roundup.topic_type (string)
+
+- Content type for thematic grouping: `"announcement"` | `"tutorial"` | `"update"` | `"guide"` | `"analysis"` | `"feature"` | `"troubleshooting"` | `"case-study"` | `"news"` | `"preview"` | `"ga-release"` | `"deprecation"` | `"migration"` | `"integration"` | `"comparison"`
+
+##### roundup.impact_level (string)
+
+- How much it affects developer workflows: `"high"` | `"medium"` | `"low"`
+
+##### roundup.time_sensitivity (string)
+
+- How time-sensitive for developers: `"immediate"` (act now) | `"this-week"` | `"this-month"` | `"long-term"` (reference material)
+
+### Option B: Content Does Not Qualify (No Sections)
+
+Return a JSON object with the fields described below.
+
+**Example:**
+
+```json
+{
+  "included": false,
+  "explanation": "Biographical Focus. Content is primarily about a single individual's career journey rather than technical content."
+}
+```
+
+#### included (boolean, REQUIRED)
+
+- Must be `false` for excluded content
+
+#### explanation (string)
+
+**Template:**
+
+```text
+[Rule name(s) that triggered exclusion]. [One sentence explaining why it applies to this content.]
+```
+
+- Name the specific generic exclusion rule(s) from Chapter 3
+- If multiple rules apply, list them separated by ` + `
+- Add one sentence explaining why the rule applies — reference specific content details
+
+**Examples:**
+
+```text
+Non-Development Microsoft Products. Content is about Microsoft 365 Copilot for business productivity in Word and Excel.
+```
+
+```text
+Business Strategy and Executive Content. Article discusses organizational digital transformation strategy without technical implementation details.
+```
+
+```text
+Short Community Content. Post contains only 85 words of explanatory text (excluding code blocks).
+```
+
+```text
+Sales Pitches + Non-English Content. Promotional announcement for author's tool, and content is primarily in Spanish.
+```
+
 ### Markdown Formatting Requirements
 
 When generating the `content` field, follow these critical markdown formatting rules to ensure quality and consistency:
@@ -770,197 +960,3 @@ public class Example { }
 - ✅ Internal anchor links must reference actual headings: `[See details](#actual-heading-in-document)`
 - ❌ Don't create links to non-existent anchors: `[See details](#missing-section)`
 - Verify heading IDs match the actual heading text (lowercase, hyphens for spaces)
-
-### Option A: Content Qualifies (Has Sections)
-
-Return a JSON object with the fields described below.
-
-Formatting convention used in this section: each top-level JSON field is introduced with a `####` heading whose text is the JSON key plus a parenthesised type/requirement note. Bold (`**...**`) is used for inline labels on multi-option lists, for `**CRITICAL**` markers, and for labelling examples.
-
-#### included (boolean, REQUIRED)
-
-- Must be `true` for included content, `false` otherwise
-
-#### title (string, max 120 characters)
-
-- Use INPUT title if it fits within 120 characters
-- If too long, create new title based on INPUT title, description, and content
-- Should accurately reflect the content's main focus
-
-#### sections (array of strings, REQUIRED)
-
-- Array of section slugs that apply based on inclusion rules
-- Can include multiple sections
-- Use exact slug values: `"ai"`, `"github-copilot"`, `"dotnet"`, `"devops"`, `"azure"`, `"ml"`, `"security"`
-- Map from section names: "AI" → `"ai"`, "GitHub Copilot" → `"github-copilot"`, ".NET" → `"dotnet"`, "DevOps" → `"devops"`, "Azure" → `"azure"`, "ML" → `"ml"`, "Security" → `"security"`
-
-#### primary_section (string, REQUIRED)
-
-- The single most relevant section for this content — used for URL routing
-- Must be one of the values in the `sections` array
-- Choose the section that best represents the content's primary focus
-
-#### author (string, REQUIRED)
-
-- **Step 1 — Check feed metadata**: extract the author name from FEED_ITEM_DATA fields (e.g., `dc:creator`, `author`, `author/name`, `a10:author/a10:name`, `itunes:author`)
-- **Step 2 — Check content/transcript for actual presenter**: analyze the CONTENT or TRANSCRIPT to determine whether the actual author or presenter differs from the feed-level author. This is especially important for **YouTube videos** where the channel owner (feed author) may not be the person presenting. Look for cues like introductions ("Hi, I'm X"), speaker attributions, bylines, or presenter mentions in the description.
-- **Step 3 — Decide**: if you can determine the actual author/presenter from the content with **high confidence**, use that name. If you cannot determine it with certainty, use the feed metadata author (Step 1) or the FALLBACK_AUTHOR value.
-- Clean up the name: trim whitespace, remove email addresses (e.g., `"user@example.com (Jane Smith)"` → `"Jane Smith"`)
-- If the author appears to be blank or a whitespace-only value, use FALLBACK_AUTHOR
-
-#### tags (array of strings, 10+ if possible)
-
-- Tags MUST be specific technology terms. Every tag should name a concrete technology, product, framework, language, protocol, tool, service, or architectural pattern.
-- Extract relevant keywords using these strategies:
-  1. **Prioritize technical terms**: technologies, programming languages, frameworks, tools (e.g., "Kubernetes", "Blazor", "PostgreSQL", "MCP")
-  2. **Include product names and versions**: specific Microsoft products, version numbers (e.g., ".NET 10", "Azure AI Foundry", "GPT-4o")
-  3. **Add methodology and architecture terms**: design patterns, architectural concepts (e.g., "Microservices", "RAG", "Event-Driven Architecture")
-  4. **Exclude generic terms**: NEVER use vague business/process words as tags. Specifically forbidden: "automation", "improvement", "management", "company", "engineering", "development", "integration", "software", "code", "developer", "agents" (use "AI Agents" instead), "chat" (use "Copilot Chat" instead)
-  5. **Ensure technical depth**: tags should reflect content's technical sophistication — a reader should be able to tell what technologies the article covers from the tags alone
-- Only include tags that genuinely fit the content
-- Use proper casing for acronyms and brand names: "MCP" (not "Mcp"), "AI" (not "ai"), "GitHub Copilot" (not "github copilot"), "VS Code" (not "vscode"), "ASP.NET Core" (not "asp.net core"), "C#" (not "csharp"), "gRPC" (not "Grpc")
-- NEVER add namespaces, full package names, versioned package identifiers, or other long strings with a dotted notation as tags (e.g., "Microsoft.Extensions.DependencyInjection 8.0.1" is wrong; ".NET 10" or "Entity Framework Core" is fine)
-
-#### excerpt (string, target 50 words)
-
-- Brief description of the OUTPUT content you're providing
-- Must mention the author name
-- Serves as introduction to your main content output
-- Focus on key value proposition or main insight
-
-#### content (string, no word limit)
-
-- Detailed, well-structured markdown version preserving all information
-- Should follow logically from the excerpt
-- Include clear headings, bullet points, code examples where relevant
-- Preserve all technical details, links, and actionable insights
-- Structure for knowledge database usage
-
-#### explanation (string)
-
-- **CRITICAL**: follow the structured templates below EXACTLY. The explanation is displayed in dashboards, so consistency matters.
-- First word MUST be `Included:` or `Excluded:` — this enables quick scanning.
-
-**Template for included content (Option A):**
-
-```text
-Included: Set [section1, section2 (primary), ...] because [brief reason].
-```
-
-- Mark the primary section with `(primary)` inline
-- Only list the sections that were set — do NOT list sections that were not set
-- Keep the reason to 1 sentence
-
-**Template for excluded content (Option B):**
-
-```text
-Excluded: [rule name(s) that triggered exclusion]. [One sentence explaining why it applies to this content.]
-```
-
-- Name the specific generic exclusion rule(s) from Chapter 3
-- If multiple rules apply, list them separated by ` + `
-- Add one sentence explaining why the rule applies — reference specific content details
-
-**Good examples:**
-
-```text
-Included: Set ai (primary), azure, dotnet because content covers Azure OpenAI Service integration in C#.
-```
-
-```text
-Included: Set devops (primary), security because content covers GitHub Actions CI/CD with security scanning.
-```
-
-```text
-Excluded: Non-Development Microsoft Products. Content is about Microsoft 365 Copilot for business productivity in Word and Excel.
-```
-
-```text
-Excluded: Business Strategy and Executive Content. Article discusses organizational digital transformation strategy without technical implementation details.
-```
-
-```text
-Excluded: Short Community Content. Post contains only 85 words of explanatory text (excluding code blocks).
-```
-
-```text
-Excluded: Sales Pitches + Non-English Content. Promotional announcement for author's tool, and content is primarily in Spanish.
-```
-
-#### roundup (object)
-
-A `roundup` object with metadata for weekly roundup generation. Its sub-fields are documented below.
-
-##### roundup.summary (string)
-
-- 1-2 sentence neutral summary suitable for direct inclusion in a weekly roundup
-
-##### roundup.key_topics (array of strings)
-
-- Key technical topics/concepts covered (e.g. "Semantic Kernel", "MCP", "RAG")
-
-##### roundup.relevance (string)
-
-- How relevant for a weekly roundup: `"high"` (major announcement/release), `"medium"` (useful update), `"low"` (minor or niche)
-
-##### roundup.topic_type (string)
-
-- Content type for thematic grouping: `"announcement"` | `"tutorial"` | `"update"` | `"guide"` | `"analysis"` | `"feature"` | `"troubleshooting"` | `"case-study"` | `"news"` | `"preview"` | `"ga-release"` | `"deprecation"` | `"migration"` | `"integration"` | `"comparison"`
-
-##### roundup.impact_level (string)
-
-- How much it affects developer workflows: `"high"` | `"medium"` | `"low"`
-
-##### roundup.time_sensitivity (string)
-
-- How time-sensitive for developers: `"immediate"` (act now) | `"this-week"` | `"this-month"` | `"long-term"` (reference material)
-
-### Option B: Content Does Not Qualify (No Sections)
-
-Return a JSON object with these fields:
-
-#### included (boolean, REQUIRED)
-
-- Must be `false` for excluded content
-
-#### explanation (string)
-
-- Follow the same `Excluded:` template as described in Option A's explanation field
-- Name the specific generic exclusion rule(s) from Chapter 3
-
-### Output Examples
-
-**Note**: These examples show the JSON structure for documentation. Your actual response should be the raw JSON without markdown formatting.
-
-#### Example A: Content with Sections
-
-```json
-{
-  "included": true,
-  "title": "Getting Started with Azure OpenAI Service in C#",
-  "sections": ["ai", "azure", "dotnet"],
-  "primary_section": "ai",
-  "author": "Jane Smith",
-  "tags": ["Azure OpenAI Service", "C#", "GPT-4", "REST API", "Authentication", "OAuth 2.0", "Microsoft.Extensions.AI", "Azure SDK", ".NET 10", "RAG"],
-  "excerpt": "Jane Smith provides a comprehensive tutorial on integrating Azure OpenAI Service into C# applications, covering the essential steps for developers.",
-  "content": "# Getting Started with Azure OpenAI Service in C#\n\nThis tutorial demonstrates how to integrate Azure OpenAI Service into C# applications...",
-  "explanation": "Included: Set ai (primary), azure, dotnet because content covers Azure OpenAI Service integration in C#.",
-  "roundup": {
-    "summary": "Jane Smith walks through integrating Azure OpenAI Service into C# applications, covering authentication, API calls, and response handling with GPT-4.",
-    "key_topics": ["Azure OpenAI Service", "C#", "GPT-4", "REST API"],
-    "relevance": "medium",
-    "topic_type": "tutorial",
-    "impact_level": "medium",
-    "time_sensitivity": "long-term"
-  }
-}
-```
-
-#### Example B: Content without Sections
-
-```json
-{
-  "included": false,
-  "explanation": "Excluded: Biographical Focus. Content is primarily about a single individual's career journey rather than technical content."
-}
-```

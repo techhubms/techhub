@@ -122,7 +122,8 @@ public partial class UrlNormalizationMiddleware
         // Legacy lookup: call the API with the already-normalized slug.
         // This avoids an intermediate redirect (e.g. /2026-01-12-article → /article → /ai/videos/article)
         // by going directly to the canonical URL in one step.
-        var sectionHint = context.Request.Query["section"].FirstOrDefault();
+        var rawSection = context.Request.Query["section"].FirstOrDefault();
+        var sectionHint = RouteParameterValidator.IsValidNameSegment(rawSection) ? rawSection : null;
 
         LegacyRedirectResult? result = null;
         try

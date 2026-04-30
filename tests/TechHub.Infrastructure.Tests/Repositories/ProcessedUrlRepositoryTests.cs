@@ -235,7 +235,7 @@ public class ProcessedUrlRepositoryTests
     {
         // Arrange
         const string Url = "https://example.com/Reason-success";
-        const string Reason = "Content included: Categories assigned as AI, DevOps";
+        const string Reason = "Categories assigned as AI, DevOps";
 
         // Act
         await _repository.RecordSuccessAsync(
@@ -306,7 +306,7 @@ public class ProcessedUrlRepositoryTests
     {
         // Arrange
         const string Url = "https://example.com/skipped-full";
-        const string Reason = "Content excluded: not relevant to any tracked section";
+        const string Reason = "not relevant to any tracked section";
 
         // Act
         await _repository.RecordSkippedAsync(

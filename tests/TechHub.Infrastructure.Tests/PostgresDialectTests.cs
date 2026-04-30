@@ -38,7 +38,7 @@ public class PostgresDialectTests
     [Fact]
     public void TransformFullTextQuery_CompoundWord_ExpandsToIncludeSubwords()
     {
-        // Arrange & Act - "vscode" is a compound of "code" ("vs" excluded: too short for prefix matching)
+        // Arrange & Act - "vscode" is a compound of "code" ("vs" too short for prefix matching)
         var result = _dialect.TransformFullTextQuery("vscode");
 
         // Assert - Should expand compound word so "vscode" also matches "code"

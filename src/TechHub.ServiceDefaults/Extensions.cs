@@ -95,7 +95,12 @@ public static class ServiceDefaultsExtensions
                            options.Filter = httpContext =>
                                !IsHealthProbeRequest(httpContext.Request.Path);
                        })
-                       .AddHttpClientInstrumentation();
+                       .AddHttpClientInstrumentation()
+                       // Mark HTTP 404 responses as successful spans so Azure Monitor records
+                       // Success=true. A 404 is expected server behavior, not an application error.
+                       // Without this, bots and stale links inflate the failure rate and trigger
+                       // false-positive alerts. ResultCode still shows 404 for filtering.
+                       .AddProcessor(new NotFoundRequestSuccessProcessor());
             });
 
         builder.AddOpenTelemetryExporters();

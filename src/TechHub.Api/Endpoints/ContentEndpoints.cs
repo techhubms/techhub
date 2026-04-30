@@ -722,6 +722,27 @@ public static class ContentEndpoints
             return TypedResults.BadRequest("Invalid section format.");
         }
 
+        // Special case: the legacy slug "weekly-ai-and-tech-news-roundup" was used as the
+        // permalink for all weekly roundup posts on the old site. Redirect to the latest roundup
+        // instead of returning 404, so subscribers with stale bookmarks land on fresh content.
+        if (slug == "weekly-ai-and-tech-news-roundup")
+        {
+            var latestRoundup = await contentRepository.SearchAsync(
+                new SearchRequest(
+                    take: 1,
+                    sections: ["all"],
+                    collections: ["roundups"],
+                    tags: [],
+                    orderBy: "date_desc"),
+                cancellationToken);
+
+            var roundup = latestRoundup.Items.Count > 0 ? latestRoundup.Items[0] : null;
+            if (roundup != null)
+            {
+                return TypedResults.Ok(new LegacyRedirectResult(roundup.GetHref()));
+            }
+        }
+
         var result = await contentRepository.FindByLegacySlugAsync(slug, section, cancellationToken);
         return result != null ? TypedResults.Ok(result) : TypedResults.NoContent();
     }

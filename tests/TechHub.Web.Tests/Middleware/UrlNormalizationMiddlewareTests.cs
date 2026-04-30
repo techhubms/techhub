@@ -206,6 +206,30 @@ public class UrlNormalizationMiddlewareTests
         capturedHint.Should().Be("ai");
     }
 
+    [Theory]
+    [InlineData("?section=%27")]        // single quote (SQL injection probe)
+    [InlineData("?section=coding%27")]  // trailing quote
+    [InlineData("?section=Invalid!")]   // special character
+    [InlineData("?section=has spaces")] // spaces
+    public async Task SectionHint_InvalidValue_IsDiscarded_AndApiCalledWithNull(string queryString)
+    {
+        string? capturedHint = "sentinel";
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string?, CancellationToken>((_, hint, _) => capturedHint = hint)
+            .ReturnsAsync((LegacyRedirectResult?)null);
+
+        var (middleware, context, _) = CreateMiddleware(
+            path: "/My-Slug",
+            queryString: queryString,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        capturedHint.Should().BeNull("invalid section hints must be discarded to avoid a 400 from the API");
+    }
+
     [Fact]
     public async Task ApiException_PassesThrough()
     {

@@ -6,9 +6,11 @@ namespace TechHub.Web.Tests.Middleware;
 
 /// <summary>
 /// Tests for InvalidRouteSegmentMiddleware - rejects requests whose first path segment
-/// is structurally invalid (contains digits at start, percent-encoding, uppercase, etc.)
+/// is structurally invalid (contains digits at start, percent-encoding, underscores, etc.)
 /// before Blazor routing runs. Returns a bare 404 directly.
 /// Paths whose final segment contains a dot (static file requests) always pass through.
+/// Section/collection name validation is case-insensitive, so "/AI" and "/GitHub-Copilot"
+/// pass through just like their lowercase equivalents.
 /// </summary>
 public class InvalidRouteSegmentMiddlewareTests
 {
@@ -16,9 +18,6 @@ public class InvalidRouteSegmentMiddlewareTests
     // Digits at start of segment
     [InlineData("/123abc")]
     [InlineData("/2024-something")]
-    // Uppercase letters
-    [InlineData("/GitHub-Copilot")]
-    [InlineData("/ADMIN")]
     // Underscores or special chars
     [InlineData("/bad_segment")]
     [InlineData("/bad%20segment")]
@@ -37,6 +36,8 @@ public class InvalidRouteSegmentMiddlewareTests
 
     [Theory]
     [InlineData("/github-copilot")]
+    [InlineData("/GitHub-Copilot")]
+    [InlineData("/AI")]
     [InlineData("/github-copilot/features")]
     [InlineData("/github-copilot/features/some-article")]
     [InlineData("/all")]

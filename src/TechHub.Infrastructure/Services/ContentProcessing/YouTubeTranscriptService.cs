@@ -104,9 +104,17 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
         // yt-dlp only mode
         if (!yeEnabled)
         {
-            return await TryYtDlpAsync(videoUrl, ct);
+            _logger.LogInformation("YoutubeExplode is disabled — trying yt-dlp for {Url}", videoUrl);
+            var ydOnlyResult = await TryYtDlpAsync(videoUrl, ct);
+            if (!ydOnlyResult.IsSuccess)
+            {
+                _logger.LogWarning("yt-dlp failed for {Url}: {Reason}", videoUrl, ydOnlyResult.FailureReason?.Sanitize());
+            }
+
+            return ydOnlyResult;
         }
 
+        _logger.LogInformation("Trying YoutubeExplode for {Url}", videoUrl);
         var result = await TryYoutubeExplodeAsync(videoUrl, ct);
         if (result.IsSuccess)
         {
@@ -116,6 +124,7 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
         // YoutubeExplode only mode — no fallback
         if (!ydEnabled)
         {
+            _logger.LogInformation("yt-dlp is disabled — skipping fallback for {Url}", videoUrl);
             return result;
         }
 

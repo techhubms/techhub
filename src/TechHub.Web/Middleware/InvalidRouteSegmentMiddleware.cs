@@ -27,9 +27,9 @@ public partial class InvalidRouteSegmentMiddleware
         _next = next;
     }
 
-    // A valid segment is lowercase letters + hyphens, starting with a letter.
+    // A valid segment is letters + hyphens, starting with a letter (case-insensitive).
     // Matches the same character set as RouteParameterValidator.IsValidNameSegment.
-    [GeneratedRegex(@"^[a-z][a-z-]*$", RegexOptions.Compiled)]
+    [GeneratedRegex(@"^[a-zA-Z][a-zA-Z-]*$", RegexOptions.Compiled | RegexOptions.CultureInvariant)]
     private static partial Regex ValidSegmentPattern();
 
     public async Task InvokeAsync(HttpContext context)

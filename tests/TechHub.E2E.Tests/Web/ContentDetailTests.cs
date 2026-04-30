@@ -113,19 +113,16 @@ public class ContentDetailTests : PlaywrightTestBase
         // Arrange - Start from homepage where latest roundup is featured
         await Page.GotoRelativeAsync("/");
 
-        // Act - Click roundup link (find featured roundup link in the sidebar)
+        // Act - Wait for the roundup link to appear (content renders async after Blazor is ready)
         var roundupLinks = Page.Locator(".latest-roundup a.sidebar-featured-link");
-        var count = await roundupLinks.CountAsync();
+        await roundupLinks.First.AssertElementVisibleAsync();
 
-        if (count > 0)
-        {
-            await roundupLinks.First.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page).ToHaveURLAsync(
-                    new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
+        await roundupLinks.First.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page).ToHaveURLAsync(
+                new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
 
-            // Assert - Should navigate to roundup detail page
-            Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
-        }
+        // Assert - Should navigate to roundup detail page
+        Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");
     }
 
     [Fact]

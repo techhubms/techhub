@@ -2,7 +2,7 @@
 @using TechHub.Web.Services
 @implements IDisposable
 
-@inject ITechHubApiClient ApiClient
+@inject HeroBannerCache HeroBannerCache
 @inject IJSRuntime JS
 @inject IHttpContextAccessor HttpContextAccessor
 @inject PersistentComponentState ApplicationState
@@ -17,8 +17,11 @@
     - Remembers collapsed/expanded state via a cookie (hero-banner-collapsed)
     - Auto-expands when new cards appear (hash of active titles differs from stored cookie)
 
+    Data is served from an in-process singleton cache (HeroBannerCache) populated at
+    startup and refreshed every 5 minutes, so no per-request API call is needed.
+
     Usage:
-      <HeroBanner />
+      <HeroBanner SectionName="github-copilot" />
 *@
 
 @if (_activeCards.Count > 0)
@@ -93,6 +96,9 @@
 }
 
 @code {
+    [Parameter]
+    public string SectionName { get; set; } = string.Empty;
+
     private HeroBannerData? _data;
     private List<HeroBannerCard> _activeCards = new();
     private bool _isCollapsed;
@@ -123,7 +129,15 @@
     private bool _storedCookieCollapsed;
     private string? _storedCookieHash;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnParametersSet()
+    {
+        // Recompute active cards when SectionName changes.
+        // Blazor Server reuses component instances during navigation (e.g., /ai → /cloud),
+        // so OnInitializedAsync does not run again — only OnParametersSet is called.
+        _activeCards = BuildActiveCards(_data, SectionName);
+    }
+
+    protected override Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
@@ -134,27 +148,20 @@
             _isCollapsed = restored.IsCollapsed;
             _currentHash = restored.CurrentHash;
             _hashChanged = restored.HashChanged;
-            _activeCards = BuildActiveCards(_data);
-            return;
+            _activeCards = BuildActiveCards(_data, SectionName);
+            return Task.CompletedTask;
         }
 
-        // Load data from API
-        try
-        {
-            _data = await ApiClient.GetHeroBannerDataAsync();
-        }
-        catch (Exception ex)
-        {
-            Logger.LogError(ex, "Failed to load hero banner data");
-            return;
-        }
-
-        _activeCards = BuildActiveCards(_data);
+        // Load data from in-process cache (populated at startup; no per-request I/O)
+        _data = HeroBannerCache.Data;
+        _activeCards = BuildActiveCards(_data, SectionName);
         _currentHash = ComputeHash(_activeCards);
 
         // Determine collapsed state: auto-expand when new cards appeared
         _hashChanged = !string.Equals(_storedCookieHash, _currentHash, StringComparison.Ordinal);
         _isCollapsed = _hashChanged ? false : _storedCookieCollapsed;
+
+        return Task.CompletedTask;
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -192,7 +199,7 @@
     /// Filter cards that are active today (inclusive on both boundaries).
     /// Uses Europe/Brussels timezone per project timezone standard.
     /// </summary>
-    private static List<HeroBannerCard> BuildActiveCards(HeroBannerData? data)
+    private static List<HeroBannerCard> BuildActiveCards(HeroBannerData? data, string sectionName)
     {
         if (data == null) return new List<HeroBannerCard>();
 
@@ -202,13 +209,24 @@
         var result = new List<HeroBannerCard>();
         foreach (var card in data.Cards)
         {
-            if (DateOnly.TryParse(card.StartDate, out var start)
-                && DateOnly.TryParse(card.EndDate, out var end)
-                && today >= start
-                && today <= end)
+            // Date range check
+            if (!DateOnly.TryParse(card.StartDate, out var start)
+                || !DateOnly.TryParse(card.EndDate, out var end)
+                || today < start
+                || today > end)
             {
-                result.Add(card);
+                continue;
             }
+
+            // Section filter: null/empty Sections means show in all sections
+            if (card.Sections is { Count: > 0 }
+                && !string.IsNullOrEmpty(sectionName)
+                && !card.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
+            {
+                continue;
+            }
+
+            result.Add(card);
         }
 
         return result;
