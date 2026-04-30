@@ -47,7 +47,7 @@
                         <button type="button" 
                                 class="badge-grey badge-expandable" 
                                 data-expand-target="@expandId"
-                                data-initialized="true"
+                                data-initialized="blazor"
                                 @onclick="() => ExpandSection(expandId)"
                                 @onclick:stopPropagation="true"
                                 @onclick:preventDefault="true"
@@ -90,6 +90,18 @@
             .ToList();
     
     private readonly HashSet<string> _expandedSections = new();
+    private string? _previousSectionName;
+    
+    protected override void OnParametersSet()
+    {
+        // Reset expansion state when Section changes (prevents state bleed
+        // when Blazor reuses this component instance for a different Section).
+        if (_previousSectionName != Section.Name)
+        {
+            _expandedSections.Clear();
+            _previousSectionName = Section.Name;
+        }
+    }
     
     private void ExpandSection(string sectionId)
     {

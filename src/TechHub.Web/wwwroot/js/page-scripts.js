@@ -267,9 +267,17 @@ export async function initTocScrollSpy() {
  */
 export async function initCustomPages() {
     const collapsibleElements = document.querySelector('[data-collapsible]');
-    const expandableElements = document.querySelector('[data-expand-target]');
     const featureSections = document.querySelector('.features-video-section');
-    if (!collapsibleElements && !expandableElements && !featureSections) return;
+
+    // Only detect expandable badges that need JS handling — Blazor-managed
+    // badges (in SectionCard) use @onclick and are skipped by initExpandableBadges
+    // via the data-initialized check. If ALL badges are pre-initialized, skip
+    // the import entirely to avoid loading custom-pages.js unnecessarily.
+    const expandableElements = document.querySelector('[data-expand-target]');
+    const uninitializedExpand = expandableElements &&
+        document.querySelector('[data-expand-target]:not([data-initialized])');
+
+    if (!collapsibleElements && !uninitializedExpand && !featureSections) return;
 
     try {
         const module = await import('./custom-pages.js');
@@ -277,7 +285,7 @@ export async function initCustomPages() {
         if (collapsibleElements) {
             module.initCollapsibleCards();
         }
-        if (expandableElements) {
+        if (uninitializedExpand) {
             module.initExpandableBadges();
         }
         if (featureSections) {
