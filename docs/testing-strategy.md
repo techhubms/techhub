@@ -35,6 +35,7 @@ Tech Hub uses a **testing diamond** approach that prioritizes integration tests 
 | **Unit** (narrower) | Edge cases, boundary conditions, complex business logic | High |
 | **E2E** (focused) | Critical user journeys, complete workflows | High |
 | **Component** | UI component behavior, rendering, interactions | Medium |
+| **JavaScript** | Client-side DOM interactions, scroll/navigation logic | Medium |
 
 **Key Principle**: If a code path is NEVER exposed via the API, its test priority is lower. Focus testing effort on what users can actually trigger through the API.
 
@@ -147,6 +148,7 @@ Testcontainers spins up a throwaway `postgres:17-alpine` container per test fixt
 | **Unit** | xUnit v3 + Stubs | Core, Infrastructure | NEVER | NEVER |
 | **E2E** | Playwright .NET | E2E | Real (local or deployed) | Real |
 | **Component** | bUnit | Web | Stub/Mock | Stub/Mock |
+| **JavaScript** | Vitest + jsdom | javascript/ | N/A | Mock (Blazor interop, CDN) |
 | **PowerShell** | Pester | powershell/ | Mock | Real (test files) |
 
 ## Test Doubles Terminology

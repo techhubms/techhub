@@ -2,9 +2,13 @@
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "husky": "^9.1.7",
-    "markdownlint-cli2": "^0.22.1"
+    "jsdom": "^29.1.1",
+    "markdownlint-cli2": "^0.22.1",
+    "vitest": "^4.1.5"
   },
   "scripts": {
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "vitest run",
+    "test:watch": "vitest"
   }
 }

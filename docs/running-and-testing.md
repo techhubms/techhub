@@ -33,6 +33,7 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -TestProject Api -TestName Auth` | Run only "Auth" tests within the "Api" project (combines filters). |
 | `Run -TestProject Web.Tests` | Run only the **Web** component tests. |
 | `Run -TestProject Api` | Run tests with "Api" in the project name. |
+| `Run -TestProject javascript` | Run only the **JavaScript** (Vitest) tests. |
 | `Run -TestName Filter` | Run only individual test methods containing "Filter". |
 | `Run -Docker` | Run ALL services (API + Web + PostgreSQL) via docker compose containers (production-like). |
 | `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
@@ -53,9 +54,10 @@ Run
 
 **Test execution order**:
 
-1. PowerShell/Pester tests (if any)
-2. Unit and integration tests (fast, no servers needed)
-3. E2E tests (starts servers automatically)
+1. JavaScript/Vitest tests (fast, no build needed)
+2. PowerShell/Pester tests (if any)
+3. Unit and integration tests (fast, no servers needed)
+4. E2E tests (starts servers automatically)
 
 **Performance note**: The `Run` command is optimized to only start/restart servers when actually needed (E2E tests or `-WithoutTests` mode). Running unit/integration tests alone will NOT touch running servers.
 

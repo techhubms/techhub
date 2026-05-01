@@ -33,6 +33,7 @@ If your change spans directories (e.g., API + Web + Tests), read the `AGENTS.md`
 - `tests/TechHub.Infrastructure.Tests/` — Infrastructure test conventions
 - `tests/TechHub.E2E.Tests/` — E2E test conventions
 - `tests/TechHub.TestUtilities/` — Test utilities conventions
+- `tests/javascript/` — JavaScript test conventions
 - `tests/powershell/` — PowerShell test conventions
 - `scripts/` — Script conventions
 - `docs/` — Documentation rules
