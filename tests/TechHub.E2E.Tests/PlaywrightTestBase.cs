@@ -62,7 +62,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         {
             // Best-effort CDP session cleanup
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is not PlaywrightException and not OperationCanceledException)
         {
             firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
@@ -100,7 +100,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         {
             // Best-effort: page may be on an error page, already closed, or Blazor not active
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is not PlaywrightException and not TimeoutException and not OperationCanceledException)
         {
             firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
@@ -116,7 +116,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         {
             // Best-effort context cleanup
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is not PlaywrightException and not OperationCanceledException)
         {
             firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
@@ -133,7 +133,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         {
             // Best-effort context cleanup
         }
-        catch (Exception ex)
+        catch (Exception ex) when (ex is not PlaywrightException and not OperationCanceledException)
         {
             firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }

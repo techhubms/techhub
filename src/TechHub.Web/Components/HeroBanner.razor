@@ -141,7 +141,7 @@
         _activeCards = BuildActiveCards(_data, SectionName);
         _currentHash = ComputeHash(_activeCards);
         _hashChanged = !string.Equals(_storedCookieHash, _currentHash, StringComparison.Ordinal);
-        _isCollapsed = _hashChanged ? false : _storedCookieCollapsed;
+        _isCollapsed = !_hashChanged && _storedCookieCollapsed;
     }
 
     protected override Task OnInitializedAsync()
@@ -166,7 +166,7 @@
 
         // Determine collapsed state: auto-expand when new cards appeared
         _hashChanged = !string.Equals(_storedCookieHash, _currentHash, StringComparison.Ordinal);
-        _isCollapsed = _hashChanged ? false : _storedCookieCollapsed;
+        _isCollapsed = !_hashChanged && _storedCookieCollapsed;
 
         return Task.CompletedTask;
     }
