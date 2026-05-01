@@ -79,7 +79,16 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 Write-Host ""
 Write-Host "Looking up localhost app registration '$AppDisplayName'..." -ForegroundColor Cyan
 
-$localhostApps = @(az ad app list --display-name $AppDisplayName --query "[].{appId:appId}" -o json 2>&1 | ConvertFrom-Json)
+$localhostAppsOutput = az ad app list --display-name $AppDisplayName --query "[].{appId:appId}" --only-show-errors -o json 2>&1
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "  [FAIL] Failed to look up app registration '$AppDisplayName'" -ForegroundColor Red
+    Write-Host $localhostAppsOutput -ForegroundColor Red
+    exit 1
+}
+
+$localhostAppsJson = $localhostAppsOutput | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }
+$localhostApps = @($localhostAppsJson | ConvertFrom-Json)
 if ($localhostApps.Count -eq 0) {
     Write-Host "  [FAIL] App registration '$AppDisplayName' not found." -ForegroundColor Red
     Write-Host "  Run: ./scripts/Manage-EntraId.ps1 -Environment localhost" -ForegroundColor Yellow
@@ -140,11 +149,21 @@ else {
 Write-Host ""
 Write-Host "Fetching AI configuration from production..." -ForegroundColor Cyan
 
-$apiEnvVars = az containerapp show `
+$apiEnvVarsOutput = az containerapp show `
     --name ca-techhub-api-prod `
     --resource-group rg-techhub-prod `
     --query "properties.template.containers[0].env" `
-    --output json 2>&1 | ConvertFrom-Json
+    --output json `
+    --only-show-errors 2>&1
+
+if ($LASTEXITCODE -ne 0) {
+    Write-Host "  [FAIL] Failed to fetch AI configuration from Container App" -ForegroundColor Red
+    Write-Host $apiEnvVarsOutput -ForegroundColor Red
+    exit 1
+}
+
+$apiEnvVarsJson = $apiEnvVarsOutput | Where-Object { $_ -is [string] -and $_ -notmatch '^\s*WARNING' }
+$apiEnvVars = $apiEnvVarsJson | ConvertFrom-Json
 
 function Get-EnvVar($envVars, $name) {
     $entry = $envVars | Where-Object { $_.name -eq $name }

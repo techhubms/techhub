@@ -141,7 +141,7 @@
         _activeCards = BuildActiveCards(_data, SectionName);
         _currentHash = ComputeHash(_activeCards);
         _hashChanged = !string.Equals(_storedCookieHash, _currentHash, StringComparison.Ordinal);
-        _isCollapsed = !_hashChanged && _storedCookieCollapsed;
+        _isCollapsed = _hashChanged ? false : _storedCookieCollapsed;
     }
 
     protected override Task OnInitializedAsync()
@@ -228,10 +228,12 @@
                 continue;
             }
 
-            // Section filter: null/empty Sections means show in all sections
+            // Section filter: null/empty Sections means show in all sections.
+            // If Sections is non-empty but sectionName is empty, the card is restricted
+            // to specific sections so it should not render on non-section pages.
             if (card.Sections is { Count: > 0 }
-                && !string.IsNullOrEmpty(sectionName)
-                && !card.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase))
+                && (string.IsNullOrEmpty(sectionName)
+                    || !card.Sections.Contains(sectionName, StringComparer.OrdinalIgnoreCase)))
             {
                 continue;
             }

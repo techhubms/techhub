@@ -49,6 +49,8 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         // This must happen before Browser.CloseAsync() in the fixture.
         // DisposeAsync() releases underlying resources after graceful close.
         using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        System.Runtime.ExceptionServices.ExceptionDispatchInfo? firstUnexpected = null;
+
         try
         {
             if (_cdpSession != null)
@@ -56,9 +58,13 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 await _cdpSession.DetachAsync().WaitAsync(cts.Token);
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or OperationCanceledException)
         {
             // Best-effort CDP session cleanup
+        }
+        catch (Exception ex)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
 
         try
@@ -90,9 +96,13 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 }
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or TimeoutException or OperationCanceledException)
         {
             // Best-effort: page may be on an error page, already closed, or Blazor not active
+        }
+        catch (Exception ex)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
 
         try
@@ -102,9 +112,13 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 await _page.CloseAsync().WaitAsync(cts.Token);
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or OperationCanceledException)
         {
             // Best-effort context cleanup
+        }
+        catch (Exception ex)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
 
         try
@@ -115,9 +129,16 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 await _context.DisposeAsync().AsTask().WaitAsync(cts.Token);
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or OperationCanceledException)
         {
             // Best-effort context cleanup
         }
+        catch (Exception ex)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
+        }
+
+        // Re-throw the first unexpected exception (if any) after all cleanup has completed.
+        firstUnexpected?.Throw();
     }
 }

@@ -6,6 +6,7 @@ let boundHandleScroll = null;
 let activeTriggerId = null;
 let activeStateKey = null;
 let initialPagePath = null; // pathname+search when listener attached; detects page changes
+let suppressNextTriggerCheck = false; // Anti-cascade: skip trigger check after scroll restore
 
 const TRIGGER_MARGIN_PX = 300; // Load when trigger is within 300px of viewport bottom
 
@@ -54,6 +55,16 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
         // Save scroll position on every scroll for back-button restoration
         if (activeStateKey) {
             window.__gridScrollPositions[activeStateKey] = window.scrollY;
+        }
+
+        // After scroll restoration, skip the trigger check to prevent a cascade.
+        // Layout differences (fonts, images, async CSS) can place the trigger just
+        // inside the margin. The flag is set by restoreScrollPosition and cleared here
+        // so only the first check (the immediate call in observeScrollTrigger) is skipped.
+        // Subsequent user-initiated scroll events proceed normally.
+        if (suppressNextTriggerCheck) {
+            suppressNextTriggerCheck = false;
+            return;
         }
 
         // Trigger when the element is within TRIGGER_MARGIN_PX of the viewport bottom
@@ -107,6 +118,9 @@ export function dispose() {
     }
     activeStateKey = null;
     initialPagePath = null;
+    // NOTE: suppressNextTriggerCheck is NOT reset here. It is set by
+    // restoreScrollPosition() and must survive through the dispose() → re-attach
+    // cycle that happens in observeScrollTrigger(). It's cleared inside handleScroll().
 }
 
 // Restores scroll position saved for the given state key.
@@ -125,6 +139,12 @@ export function restoreScrollPosition(stateKey) {
         // checks this to avoid clobbering the restored position when enhancedload fires
         // after the isPopstateNavigation 100ms guard has expired.
         window.__scrollRestoredAt = Date.now();
+
+        // Suppress the next trigger check in handleScroll (the immediate call inside
+        // observeScrollTrigger) to prevent a cascade of batch loads. Layout differences
+        // between the original and restored page can place the trigger just inside the
+        // TRIGGER_MARGIN_PX threshold, causing runaway loading.
+        suppressNextTriggerCheck = true;
         return true;
     }
     return false;
