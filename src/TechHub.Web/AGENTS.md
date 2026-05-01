@@ -105,6 +105,22 @@ Special: `TechHub.Web.lib.module.js` — Blazor lifecycle callbacks (auto-discov
 
 **NEVER create**: Client-side filtering JavaScript. Tag filtering is 100% Blazor server-side.
 
+### Blazor @onclick vs. Vanilla JS Event Listeners
+
+**Use Blazor `@onclick` for any interactive element inside a Blazor component.**
+
+Vanilla JS event listeners attached via `addEventListener` or `initXxx()` functions are lost when Blazor patches the DOM during re-renders (e.g., state updates, parameter changes). Blazor `@onclick` bindings survive DOM patching because they are managed by the SignalR circuit.
+
+**Rule**: If a button or interactive element lives in a `.razor` file (or in a child component rendered by one), handle its click with `@onclick`, not with a JS init function.
+
+**When JS init functions are still appropriate**:
+
+- Elements on **static HTML pages** or content rendered server-side outside of Blazor
+- **Browser-native features** with no C# equivalent (scroll events, resize, history API)
+- **Third-party widget initialization** (e.g., Highlight.js, Mermaid)
+
+**Coordination with existing JS init functions**: If an element is handled by Blazor `@onclick` but a JS init function would also try to attach a listener, add `data-initialized="blazor"` to the element. The existing `data-initialized` guard in `initExpandableBadges` and `initFeatureFilters` will skip it.
+
 ### External CDN Libraries
 
 Versions and SRI hashes centralized in [Configuration/CdnLibraries.cs](Configuration/CdnLibraries.cs). To update: change version → generate new SRI hash from srihash.org → update integrity hash → test locally.
@@ -135,7 +151,7 @@ CDN config bridged from C# via inline script in App.razor (`window.TechHubCDN`).
 | `GenAI.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` |
 | `DXSpace.razor` | `initCustomPages`, `initTocScrollSpy` |
 | `GitHubCopilotHandbook.razor` | `initCustomPages`, `initTocScrollSpy` |
-| `GitHubCopilotFeatures.razor` | `initCustomPages`, `initTocScrollSpy` |
+| `GitHubCopilotFeatures.razor` | *(none — filters use Blazor `@onclick`)* |
 | `GitHubCopilotLevels.razor` | `initCustomPages`, `initTocScrollSpy` |
 | `GitHubCopilotVSCodeUpdates.razor` | `initHighlighting`, `initMermaid`, `initTocScrollSpy` |
 | `AISDLC.razor` | `initCustomPages`, `initTocScrollSpy` |

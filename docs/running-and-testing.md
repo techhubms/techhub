@@ -37,8 +37,6 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -Docker` | Run ALL services (API + Web + PostgreSQL) via docker compose containers (production-like). |
 | `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
 | `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |
-| `Run -SkipE2E` | Run unit/integration tests only — skip all E2E (performance + Playwright). |
-| `Run -SkipPerf` | Skip database performance tests, run Playwright E2E only. Use with `-TestProject E2E`. |
 | `Stop-Servers` (without Run in front!) | Stops the servers directly. |
 
 ## Validating All Tests
@@ -50,8 +48,7 @@ There are many parameters you can give to tweak the behavior. You can combine al
 Run
 ```
 
-- **Flags exist but use sparingly**: `-SkipE2E` skips all E2E tests; `-SkipPerf` skips only the database performance phase (Playwright still runs). These are for development iteration only.
-- **E2E tests matter**: E2E tests validate the full stack (API + Web + Database) working together. Skipping them means missing critical integration issues.
+- **E2E tests matter**: E2E tests validate the full stack (API + Web + Database) working together. Never skip them when validating a change.
 - **Targeted testing during development**: Use `-TestProject` or `-TestName` for fast iteration during development, but always run `Run` (all tests) before considering work complete.
 
 **Test execution order**:
