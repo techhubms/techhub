@@ -55,10 +55,10 @@ Centralized in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs):
 
 Set `E2E_NETWORK_THROTTLE` environment variable: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
 
-Run with throttle and skip the performance phase (which doesn't need throttling):
+Run with throttle:
 
 ```powershell
-$env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E -SkipPerf
+$env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E
 ```
 
 ### E2E Lifecycle Counter (`window.__e2e`)

@@ -58,22 +58,11 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         scrollYBeforeNav.Should().BeGreaterThan(0,
             "should be scrolled down after loading more content");
 
-        // Navigate away via enhanced navigation. Use JavaScript's native .click()
-        // instead of Playwright's ClickAsync because Playwright always calls
+        // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
+        // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
         // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
         // overwrites the saved scroll position in infinite-scroll.js.
-        // JS .click() dispatches the click event directly — Blazor's router intercepts it.
-        var visibleCardIndex = await Page.EvaluateAsync<int>(@"() => {
-            const links = document.querySelectorAll('.card-link');
-            for (let i = 0; i < links.length; i++) {
-                const rect = links[i].getBoundingClientRect();
-                if (rect.top >= 0 && rect.top < window.innerHeight) return i;
-            }
-            return 0;
-        }");
-        await Page.EvaluateAsync(
-            "(idx) => document.querySelectorAll('.card-link')[idx].click()",
-            visibleCardIndex);
+        await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");
         await Page.WaitForBlazorReadyAsync();
@@ -143,23 +132,11 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             }
         }");
 
-        // Navigate away by clicking a visible card link using JS .click() (must use
-        // enhanced navigation to preserve the Blazor circuit and ContentGridStateCache —
-        // a full page load via GotoRelativeAsync would destroy both, making back-navigation
-        // start fresh). Use JS .click() instead of Playwright's ClickAsync because
-        // ClickAsync calls scrollIntoViewIfNeeded which scrolls to the element, firing a
-        // scroll event that overwrites the saved scroll position with ~0.
-        var visibleCardIndex = await Page.EvaluateAsync<int>(@"() => {
-            const links = document.querySelectorAll('.card-link');
-            for (let i = 0; i < links.length; i++) {
-                const rect = links[i].getBoundingClientRect();
-                if (rect.top >= 0 && rect.top < window.innerHeight) return i;
-            }
-            return 0;
-        }");
-        await Page.EvaluateAsync(
-            "(idx) => document.querySelectorAll('.card-link')[idx].click()",
-            visibleCardIndex);
+        // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
+        // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
+        // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
+        // overwrites the saved scroll position with ~0.
+        await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");
         await Page.WaitForBlazorReadyAsync();

@@ -1263,6 +1263,38 @@ public static class BlazorHelpers
             }}
         ");
     }
+
+    /// <summary>
+    /// Clicks a visible card link using JavaScript's native <c>.click()</c> instead of
+    /// Playwright's <c>ClickAsync</c>.
+    ///
+    /// Playwright's <c>ClickAsync</c> calls <c>scrollIntoViewIfNeeded</c> before clicking,
+    /// which fires a scroll event that can overwrite a saved scroll position in
+    /// <c>infinite-scroll.js</c>. Using JS <c>.click()</c> dispatches the click event
+    /// directly — Blazor's router intercepts it for enhanced (SPA-style) navigation
+    /// without any side-effect scrolling.
+    ///
+    /// The helper selects the first card link whose bounding rect is within the current
+    /// viewport, falling back to index 0 if none is found.
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="cardLinkSelector">CSS selector for the card links (default: ".card-link")</param>
+    public static async Task ClickVisibleCardLinkAsync(
+        this IPage page,
+        string cardLinkSelector = ".card-link")
+    {
+        var visibleCardIndex = await page.EvaluateAsync<int>($@"() => {{
+            const links = document.querySelectorAll('{cardLinkSelector}');
+            for (let i = 0; i < links.length; i++) {{
+                const rect = links[i].getBoundingClientRect();
+                if (rect.top >= 0 && rect.top < window.innerHeight) return i;
+            }}
+            return 0;
+        }}");
+        await page.EvaluateAsync(
+            "(idx) => document.querySelectorAll('" + cardLinkSelector + "')[idx].click()",
+            visibleCardIndex);
+    }
 }
 
 /// <summary>
