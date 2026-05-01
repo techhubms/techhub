@@ -51,13 +51,13 @@ public class PostgresDialectTests
     [InlineData(null)]
     [InlineData("")]
     [InlineData("   ")]
-    public void TransformFullTextQuery_EmptyOrWhitespace_ReturnsAsIs(string? query)
+    public void TransformFullTextQuery_EmptyOrWhitespace_ReturnsEmpty(string? query)
     {
         // Arrange & Act
         var result = _dialect.TransformFullTextQuery(query!);
 
-        // Assert
-        result.Should().Be(query);
+        // Assert - null/whitespace must never reach to_tsquery; always return empty string
+        result.Should().Be(string.Empty);
     }
 
     [Fact]
