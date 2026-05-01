@@ -336,9 +336,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var sectionCount = await sections.CountAsync();
         sectionCount.Should().BeGreaterThanOrEqualTo(2, "Need at least 2 sections to test per-section filtering");
 
-        // Act + Assert — retry [click + active class] to survive the JS-init race.
-        // On slow networks page-scripts.js may not have attached the click listener yet;
-        // ClickAndExpectAsync retries until the 'active' class appears.
+        // Act - Click the GHES filter button and wait for Blazor to add the active class
         var firstSection = sections.First;
         var firstGhesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
         await firstGhesButton.ClickAndExpectAsync(async () =>
@@ -362,9 +360,8 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
         await Assertions.Expect(ghesButton).ToBeVisibleAsync();
 
-        // Wait for Blazor interactivity to settle by checking a button has the initialized flag
-        await Page.WaitForConditionAsync(
-            "() => document.querySelector('.features-filter-btn[data-initialized]') !== null");
+        // Wait for Blazor interactivity to settle before clicking the filter button
+        await Page.WaitForBlazorReadyAsync();
 
         // Record the heading's viewport position before clicking
         var heading = firstSection.Locator("h2[id]");

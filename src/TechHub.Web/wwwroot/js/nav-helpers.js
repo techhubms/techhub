@@ -219,6 +219,18 @@
      * This ensures Tab goes to skip link after navigating to a new page
      */
     function resetPagePosition() {
+        // Primary guard: Navigation API (Chromium 102+). Back/forward navigations
+        // have navigationType === 'traverse' — we must not reset scroll for those.
+        if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
+
+        // Fallback for browsers without Navigation API: don't clobber a recently
+        // restored scroll position. infinite-scroll.js's restoreScrollPosition sets
+        // __scrollRestoredAt when it calls scrollTo on back-navigation. If enhancedload
+        // fires after the 100ms isPopstateNavigation guard in checkForPageNavigation
+        // has expired AND the browser lacks the Navigation API, this prevents
+        // resetPagePosition from scrolling back to 0.
+        if (window.__scrollRestoredAt && Date.now() - window.__scrollRestoredAt < 2000) return;
+
         window.scrollTo(0, 0);
         requestAnimationFrame(() => {
             document.body.tabIndex = -1;

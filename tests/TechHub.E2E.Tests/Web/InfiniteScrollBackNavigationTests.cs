@@ -1,5 +1,4 @@
 using FluentAssertions;
-using Microsoft.Playwright;
 using TechHub.E2E.Tests.Helpers;
 
 namespace TechHub.E2E.Tests.Web;
@@ -59,22 +58,11 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         scrollYBeforeNav.Should().BeGreaterThan(0,
             "should be scrolled down after loading more content");
 
-        // Navigate away via enhanced navigation. Use JavaScript's native .click()
-        // instead of Playwright's ClickAsync because Playwright always calls
+        // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
+        // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
         // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
         // overwrites the saved scroll position in infinite-scroll.js.
-        // JS .click() dispatches the click event directly — Blazor's router intercepts it.
-        var visibleCardIndex = await Page.EvaluateAsync<int>(@"() => {
-            const links = document.querySelectorAll('.card-link');
-            for (let i = 0; i < links.length; i++) {
-                const rect = links[i].getBoundingClientRect();
-                if (rect.top >= 0 && rect.top < window.innerHeight) return i;
-            }
-            return 0;
-        }");
-        await Page.EvaluateAsync(
-            "(idx) => document.querySelectorAll('.card-link')[idx].click()",
-            visibleCardIndex);
+        await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");
         await Page.WaitForBlazorReadyAsync();
@@ -94,6 +82,10 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
 
         // Assert - Scroll position should be restored near where the user was
+        // Wait briefly for scroll position to be applied (scrollTo is synchronous but
+        // the browser may batch the update with the preceding DOM changes).
+        await Page.WaitForConditionAsync(
+            "() => window.scrollY > 0");
         var restoredPosition = await Page.EvaluateAsync<double>("() => window.scrollY");
         var maxScrollY = await Page.EvaluateAsync<double>(
             "() => document.documentElement.scrollHeight - window.innerHeight");
@@ -140,14 +132,14 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             }
         }");
 
-        // Navigate away by clicking a card link (must use enhanced navigation to
-        // preserve the Blazor circuit and ContentGridStateCache — a full page load
-        // via GotoRelativeAsync would destroy both, making back-navigation start fresh).
-        var firstCardLink = Page.Locator(".card-link").First;
-        await firstCardLink.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new System.Text.RegularExpressions.Regex(@".*\?types=videos.*"),
-                new() { Timeout = 2000 }));
+        // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
+        // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
+        // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
+        // overwrites the saved scroll position with ~0.
+        await Page.ClickVisibleCardLinkAsync();
+        await Page.WaitForConditionAsync(
+            "() => !window.location.search.includes('types=videos')");
+        await Page.WaitForBlazorReadyAsync();
 
         // Act - Go back
         await Page.GoBackAsync();
@@ -160,6 +152,12 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             $"(expected) => document.querySelectorAll('.card').length >= expected && window.__scrollListenerReady?.['scroll-trigger'] === true",
             afterScrollCount);
+
+        // Wait for scroll position to be restored (restoreScrollPosition runs before
+        // SetupScrollListener in OnAfterRenderAsync, but the browser may batch the
+        // scrollTo update with preceding DOM changes).
+        await Page.WaitForConditionAsync(
+            "() => window.scrollY > 0");
 
         var finalCount = await Page.Locator(".card").CountAsync();
 
