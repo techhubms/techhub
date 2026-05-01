@@ -22,8 +22,7 @@ param modelCapacity int = 100
 @description('Tags applied to the AI Foundry account')
 param tags object = {}
 
-@description('Admin IP addresses allowed to reach the AI Foundry endpoint over the public internet.
-Container Apps always access it via the private endpoint and are unaffected by this list.')
+@description('Admin IP addresses allowed to reach the AI Foundry endpoint over the public internet. Container Apps always access it via the private endpoint and are unaffected by this list.')
 param adminIpAddresses string[] = []
 
 // Azure AI Foundry Account (AIServices)
