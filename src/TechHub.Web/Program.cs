@@ -312,12 +312,15 @@ app.Use(async (context, next) =>
     if (HttpMethods.IsHead(context.Request.Method))
     {
         context.Request.Method = HttpMethods.Get;
+        var originalBody = context.Response.Body;
+        context.Response.Body = Stream.Null;
         try
         {
             await next();
         }
         finally
         {
+            context.Response.Body = originalBody;
             context.Request.Method = HttpMethods.Head;
         }
     }

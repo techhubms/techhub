@@ -47,9 +47,10 @@ public class BlazorPathStatusCodePageExclusionTests : IAsyncLifetime
         // Simulate /_blazor/disconnect returning 404 (circuit gone).
         // Use a plain status-code response with no Content-Type so UseStatusCodePagesWithReExecute
         // would intercept it — but the UseWhen guard prevents that for /_blazor paths.
-        _app.MapPost("/_blazor/{*path}", async (HttpContext ctx) =>
+        _app.MapPost("/_blazor/{*path}", (HttpContext ctx) =>
         {
             ctx.Response.StatusCode = StatusCodes.Status404NotFound;
+            return Task.CompletedTask;
         });
 
         // The /not-found handler — simulates our 404 page returning a recognisable body
@@ -58,9 +59,10 @@ public class BlazorPathStatusCodePageExclusionTests : IAsyncLifetime
         // Simulate any other unknown path returning 404 with no body/content-type.
         // UseStatusCodePagesWithReExecute only intercepts responses with no Content-Type set,
         // so we must use a bare status code (not Results.NotFound() which adds a Problem Details body).
-        _app.MapFallback(async (HttpContext ctx) =>
+        _app.MapFallback((HttpContext ctx) =>
         {
             ctx.Response.StatusCode = StatusCodes.Status404NotFound;
+            return Task.CompletedTask;
         });
 
         await _app.StartAsync();
