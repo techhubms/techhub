@@ -4,18 +4,34 @@ updates:
     directory: /
     schedule:
       interval: weekly
+    groups:
+      github-actions-all:
+        patterns:
+          - "*"
 
   - package-ecosystem: nuget
     directory: /
     schedule:
       interval: weekly
+    groups:
+      nuget-all:
+        patterns:
+          - "*"
 
   - package-ecosystem: npm
     directory: /
     schedule:
       interval: weekly
+    groups:
+      npm-all:
+        patterns:
+          - "*"
 
   - package-ecosystem: docker
     directory: /
     schedule:
       interval: weekly
+    groups:
+      docker-all:
+        patterns:
+          - "*"
