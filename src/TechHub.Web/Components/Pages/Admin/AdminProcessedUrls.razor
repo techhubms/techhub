@@ -7,6 +7,7 @@
 @using TechHub.Web.Services
 @implements IDisposable
 @inject ITechHubApiClient Api
+@inject ILogger<AdminProcessedUrls> Logger
 @inject PersistentComponentState ApplicationState
 @inject IJSRuntime JS
 @inject NavigationManager Navigation
@@ -68,8 +69,21 @@
         </div>
         <div class="admin-filter-group">
             <label class="admin-label" for="collectionFilter">Collection</label>
-            <input id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync"
-                   placeholder="e.g. blogs" />
+            <select id="collectionFilter" class="admin-input" @bind="_collectionFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All collections</option>
+                <option value="news">news</option>
+                <option value="blogs">blogs</option>
+                <option value="videos">videos</option>
+                <option value="community">community</option>
+            </select>
+        </div>
+        <div class="admin-filter-group">
+            <label class="admin-label" for="subcollectionFilter">Subcollection</label>
+            <select id="subcollectionFilter" class="admin-input" @bind="_subcollectionFilter" @bind:after="ApplyFiltersAsync">
+                <option value="">All subcollections</option>
+                <option value="ghc-features">ghc-features</option>
+                <option value="vscode-updates">vscode-updates</option>
+            </select>
         </div>
         <div class="admin-filter-group">
             <label class="admin-label" for="jobIdFilter">Job ID</label>
@@ -167,6 +181,7 @@
 <ContentItemEditorModal IsOpen="@_editorOpen"
                         Title="@_editorTitle"
                         EditData="@_editorData"
+                        FeedNames="@(_feedNames ?? [])"
                         OnSave="SaveContentItemAsync"
                         OnClose="CloseContentItemEditor" />
 
@@ -189,6 +204,7 @@
     private string _searchFilter = string.Empty;
     private string _feedNameFilter = string.Empty;
     private string _collectionFilter = string.Empty;
+    private string _subcollectionFilter = string.Empty;
     private long? _jobIdFilter;
     private string _jobIdFilterText = string.Empty;
 
@@ -266,7 +282,8 @@
                 string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
                 string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter,
                 string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter,
-                _jobIdFilter);
+                _jobIdFilter,
+                string.IsNullOrEmpty(_subcollectionFilter) ? null : _subcollectionFilter);
 
             UpdatePagination();
             await LoadFailedCountAsync();
@@ -305,8 +322,14 @@
             var feeds = await Api.GetFeedConfigsAsync();
             _feedNames = feeds.Select(f => f.Name).OrderBy(n => n).ToList();
         }
-        catch
+        catch (HttpRequestException ex)
         {
+            Logger.LogWarning(ex, "Failed to load feed names");
+            _feedNames = [];
+        }
+        catch (TaskCanceledException ex)
+        {
+            Logger.LogWarning(ex, "Failed to load feed names (timeout)");
             _feedNames = [];
         }
     }

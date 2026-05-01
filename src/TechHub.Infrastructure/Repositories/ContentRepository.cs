@@ -687,7 +687,7 @@ public class ContentRepository : IContentRepository
             !request.CollectionName.Equals("all", StringComparison.OrdinalIgnoreCase))
         {
             filters.Add("collection_name = @collectionName");
-            parameters.Add("collectionName", request.CollectionName);
+            parameters.Add("collectionName", request.CollectionName.ToLowerInvariant());
         }
 
         // Date range filters
@@ -722,14 +722,18 @@ public class ContentRepository : IContentRepository
         // Full-text search filter (restricts to content items matching search query)
         if (!string.IsNullOrWhiteSpace(request.SearchQuery) && dialect.SupportsFullTextSearch)
         {
-            var ftsJoin = dialect.GetFullTextJoinClause();
-            var ftsJoinClause = string.IsNullOrEmpty(ftsJoin) ? "" : $" {ftsJoin}";
-            var ftsWhere = dialect.GetFullTextWhereClause("searchQuery");
+            var transformedSearchQuery = dialect.TransformFullTextQuery(request.SearchQuery!);
+            if (!string.IsNullOrEmpty(transformedSearchQuery))
+            {
+                var ftsJoin = dialect.GetFullTextJoinClause();
+                var ftsJoinClause = string.IsNullOrEmpty(ftsJoin) ? "" : $" {ftsJoin}";
+                var ftsWhere = dialect.GetFullTextWhereClause("searchQuery");
 
-            filters.Add($@"(collection_name, slug) IN (
+                filters.Add($@"(collection_name, slug) IN (
                 SELECT c.collection_name, c.slug FROM content_items c{ftsJoinClause}
                 WHERE {ftsWhere})");
-            parameters.Add("searchQuery", dialect.TransformFullTextQuery(request.SearchQuery!));
+                parameters.Add("searchQuery", transformedSearchQuery);
+            }
         }
 
         var filterClause = filters.Count > 0 ? string.Join(" AND ", filters) : "";
@@ -1068,6 +1072,15 @@ public class ContentRepository : IContentRepository
         var parameters = new DynamicParameters();
 
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
+        // Transform upfront — returns empty string when no tokenizable terms survive
+        // (e.g., "C#", "!", "#" produce no usable tokens after operator/single-char stripping).
+        // Treat an empty result as no query so callers skip FTS and avoid a to_tsquery syntax error.
+        var transformedQuery = hasQuery ? Dialect.TransformFullTextQuery(request.Query!) : null;
+        if (string.IsNullOrEmpty(transformedQuery))
+        {
+            hasQuery = false;
+        }
+
         var hasTags = request.Tags != null && request.Tags.Count > 0;
         var hasSections = request.Sections != null && request.Sections.Count > 0 &&
                           !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
@@ -1110,7 +1123,7 @@ public class ContentRepository : IContentRepository
                 !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 sql.Append(" AND c.subcollection_name = @subcollection");
-                parameters.Add("subcollection", request.Subcollection);
+                parameters.Add("subcollection", request.Subcollection.ToLowerInvariant());
             }
 
             if (hasAuthor)
@@ -1123,7 +1136,7 @@ public class ContentRepository : IContentRepository
             {
                 sql.Append(CultureInfo.InvariantCulture, $@"
             AND {Dialect.GetFullTextWhereClause("query")}");
-                parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
+                parameters.Add("query", transformedQuery!);
                 sql.Append(CultureInfo.InvariantCulture, $@"
             ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
                 // LIMIT is applied here because the tag subquery skips it when search is present
@@ -1165,7 +1178,7 @@ public class ContentRepository : IContentRepository
             if (hasQuery)
             {
                 whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
-                parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
+                parameters.Add("query", transformedQuery!);
             }
 
             if (hasSections)
@@ -1197,7 +1210,7 @@ public class ContentRepository : IContentRepository
                 !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
             {
                 whereClauses.Add("c.subcollection_name = @subcollection");
-                parameters.Add("subcollection", request.Subcollection);
+                parameters.Add("subcollection", request.Subcollection.ToLowerInvariant());
             }
 
             if (hasAuthor)
@@ -1495,7 +1508,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
     {
         const string Sql = @"
 SELECT collection_name, slug, date_epoch, title, author, excerpt, content, primary_section_name,
-       tags_csv, ai_metadata::text AS ai_metadata,
+       feed_name, tags_csv, ai_metadata::text AS ai_metadata,
        is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
 FROM content_items
 WHERE collection_name = @CollectionName AND slug = @Slug
@@ -1560,6 +1573,7 @@ LIMIT 1";
             Excerpt = (string)row.excerpt,
             Content = (string)row.content,
             PrimarySectionName = (string)row.primary_section_name,
+            FeedName = (string?)row.feed_name,
             Tags = tags,
             Sections = sections,
             AiMetadata = (string?)row.ai_metadata
@@ -1596,6 +1610,7 @@ SET title                = @Title,
     content              = @Content,
     date_epoch           = @DateEpoch,
     primary_section_name = @PrimarySectionName,
+    feed_name            = COALESCE(@FeedName, feed_name),
     tags_csv             = @TagsCsv,
     is_ai                = @IsAi,
     is_azure             = @IsAzure,
@@ -1617,6 +1632,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
             Content = editData.Content,
             DateEpoch = editData.DateEpoch,
             PrimarySectionName = editData.PrimarySectionName,
+            FeedName = editData.FeedName,
             TagsCsv = tagsCsv,
             IsAi = isAi,
             IsAzure = isAzure,
@@ -1658,6 +1674,18 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
                         parameters,
                         transaction: transaction,
                         cancellationToken: ct));
+
+                // Keep processed_urls.feed_name in sync with content_items.feed_name
+                // so the admin processed URLs listing reflects the updated feed.
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        @"UPDATE processed_urls
+                          SET feed_name  = COALESCE(@FeedName, feed_name),
+                              updated_at = NOW()
+                          WHERE collection_name = @CollectionName AND slug = @Slug",
+                        parameters,
+                        transaction: transaction,
+                        cancellationToken: ct));
             }
 
             transaction.Commit();
@@ -1679,6 +1707,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? subcollectionName = null,
         CancellationToken ct = default)
     {
         var whereClauses = new List<string>();
@@ -1700,6 +1729,12 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         {
             whereClauses.Add("ci.feed_name = @FeedName");
             parameters.Add("FeedName", feedName);
+        }
+
+        if (!string.IsNullOrWhiteSpace(subcollectionName))
+        {
+            whereClauses.Add("ci.subcollection_name = @SubcollectionName");
+            parameters.Add("SubcollectionName", subcollectionName.ToLowerInvariant());
         }
 
         var whereStr = whereClauses.Count > 0
@@ -1869,9 +1904,21 @@ WHERE slug = @Slug
 
         // row.ExternalUrl is guaranteed non-null here because hasValidExternalUrl requires
         // !IsNullOrEmpty(row.ExternalUrl) (line above). The null-forgiving operator is safe.
-        var redirectUrl = hasValidExternalUrl
-            ? row.ExternalUrl!
-            : $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";
+        string redirectUrl;
+        if (hasValidExternalUrl)
+        {
+            redirectUrl = row.ExternalUrl!;
+        }
+        else if (row.CollectionName == "roundups")
+        {
+            // Roundups are only accessible via /all/roundups/ — they don't exist under
+            // individual section paths (mirrors ContentItem.GetHref() logic).
+            redirectUrl = $"/all/roundups/{row.Slug}";
+        }
+        else
+        {
+            redirectUrl = $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";
+        }
 
         return new LegacyRedirectResult(redirectUrl);
     }

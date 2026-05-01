@@ -421,11 +421,14 @@
                 var names = configs.Select(c => c.Name).Order(StringComparer.OrdinalIgnoreCase).ToList();
                 if (names.Count > 0)
                 {
-                    _feedNames = names;
+                    // Always put TechHub first so it is the browser default regardless of
+                    // Blazor render timing; remaining feeds stay alphabetical.
+                    var rest = names.Where(n => !n.Equals(DefaultFeedName, StringComparison.OrdinalIgnoreCase)).ToList();
+                    _feedNames = names.Any(n => n.Equals(DefaultFeedName, StringComparison.OrdinalIgnoreCase))
+                        ? [DefaultFeedName, ..rest]
+                        : names;
                 }
-                var match = _feedNames.FirstOrDefault(
-                    n => n.Equals(DefaultFeedName, StringComparison.OrdinalIgnoreCase));
-                _feedName = match ?? _feedNames[0];
+                _feedName = DefaultFeedName;
             }
             catch (HttpRequestException ex)
             {

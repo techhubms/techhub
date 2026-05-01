@@ -21,6 +21,7 @@
     <Company>Tech Hub</Company>
     <Copyright>Copyright © Tech Hub 2026</Copyright>
     <Product>Tech Hub</Product>
+    <Version>1.0.0</Version>
     
     <!-- Deterministic builds -->
     <Deterministic>true</Deterministic>

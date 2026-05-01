@@ -47,11 +47,11 @@ public class ProcessedUrlRepositoryTests
     public async Task ExistsAsync_AfterRecordSuccess_ReturnsTrue()
     {
         // Arrange
-        const string url = "https://example.com/exists-after-success";
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
+        const string Url = "https://example.com/exists-after-success";
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
 
         // Act
-        var exists = await _repository.ExistsAsync(url, CancellationToken.None);
+        var exists = await _repository.ExistsAsync(Url, CancellationToken.None);
 
         // Assert
         exists.Should().BeTrue();
@@ -61,11 +61,11 @@ public class ProcessedUrlRepositoryTests
     public async Task ExistsAsync_AfterRecordFailure_ReturnsTrue()
     {
         // Arrange
-        const string url = "https://example.com/exists-after-failure";
-        await _repository.RecordFailureAsync(url, "test error", ct: CancellationToken.None);
+        const string Url = "https://example.com/exists-after-failure";
+        await _repository.RecordFailureAsync(Url, "test error", ct: CancellationToken.None);
 
         // Act
-        var exists = await _repository.ExistsAsync(url, CancellationToken.None);
+        var exists = await _repository.ExistsAsync(Url, CancellationToken.None);
 
         // Assert
         exists.Should().BeTrue();
@@ -77,15 +77,15 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_StoresSucceededStatus()
     {
         // Arrange
-        const string url = "https://example.com/success-status";
+        const string Url = "https://example.com/success-status";
 
         // Act
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
-        var record = await _repository.GetAsync(url, CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
+        var record = await _repository.GetAsync(Url, CancellationToken.None);
 
         // Assert
         record.Should().NotBeNull();
-        record!.ExternalUrl.Should().Be(url);
+        record!.ExternalUrl.Should().Be(Url);
         record.Status.Should().Be("succeeded");
         record.ErrorMessage.Should().BeNull();
         record.ProcessedAt.Should().BeCloseTo(DateTimeOffset.UtcNow, TimeSpan.FromSeconds(10));
@@ -95,12 +95,12 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithYouTubeTags_StoresTags()
     {
         // Arrange
-        const string url = "https://youtube.com/watch?v=tags123";
+        const string Url = "https://youtube.com/watch?v=tags123";
         var tags = new List<string> { "csharp", "dotnet", "tutorial" };
 
         // Act
-        await _repository.RecordSuccessAsync(url, tags, ct: CancellationToken.None);
-        var record = await _repository.GetAsync(url, CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, tags, ct: CancellationToken.None);
+        var record = await _repository.GetAsync(Url, CancellationToken.None);
 
         // Assert
         record.Should().NotBeNull();
@@ -111,12 +111,12 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_OnConflict_UpdatesStatus()
     {
         // Arrange — first record a failure
-        const string url = "https://example.com/conflict-update";
-        await _repository.RecordFailureAsync(url, "original error", ct: CancellationToken.None);
+        const string Url = "https://example.com/conflict-update";
+        await _repository.RecordFailureAsync(Url, "original error", ct: CancellationToken.None);
 
         // Act — then record success for the same URL
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
-        var record = await _repository.GetAsync(url, CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
+        var record = await _repository.GetAsync(Url, CancellationToken.None);
 
         // Assert — status flipped to succeeded, error cleared
         record.Should().NotBeNull();
@@ -130,17 +130,17 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordFailureAsync_StoresFailedStatusAndMessage()
     {
         // Arrange
-        const string url = "https://example.com/failure-record";
-        const string errorMsg = "HTTP 503 Service Unavailable";
+        const string Url = "https://example.com/failure-record";
+        const string ErrorMsg = "HTTP 503 Service Unavailable";
 
         // Act
-        await _repository.RecordFailureAsync(url, errorMsg, ct: CancellationToken.None);
-        var record = await _repository.GetAsync(url, CancellationToken.None);
+        await _repository.RecordFailureAsync(Url, ErrorMsg, ct: CancellationToken.None);
+        var record = await _repository.GetAsync(Url, CancellationToken.None);
 
         // Assert
         record.Should().NotBeNull();
         record!.Status.Should().Be("failed");
-        record.ErrorMessage.Should().Be(errorMsg);
+        record.ErrorMessage.Should().Be(ErrorMsg);
     }
 
     // ── GetAsync ───────────────────────────────────────────────────────────
@@ -162,16 +162,16 @@ public class ProcessedUrlRepositoryTests
     public async Task PurgeFailedAsync_RemovesOldFailedRecords()
     {
         // Arrange — insert a failed record, then purge with zero retention
-        const string url = "https://example.com/purge-target";
-        await _repository.RecordFailureAsync(url, "will be purged", ct: CancellationToken.None);
-        var before = await _repository.ExistsAsync(url, CancellationToken.None);
+        const string Url = "https://example.com/purge-target";
+        await _repository.RecordFailureAsync(Url, "will be purged", ct: CancellationToken.None);
+        var before = await _repository.ExistsAsync(Url, CancellationToken.None);
         before.Should().BeTrue();
 
         // Act — purge anything older than 0 seconds (everything)
         await _repository.PurgeFailedAsync(TimeSpan.Zero, CancellationToken.None);
 
         // Assert
-        var after = await _repository.ExistsAsync(url, CancellationToken.None);
+        var after = await _repository.ExistsAsync(Url, CancellationToken.None);
         after.Should().BeFalse();
     }
 
@@ -179,14 +179,14 @@ public class ProcessedUrlRepositoryTests
     public async Task PurgeFailedAsync_DoesNotRemoveSucceededRecords()
     {
         // Arrange
-        const string url = "https://example.com/purge-survivor";
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
+        const string Url = "https://example.com/purge-survivor";
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
 
         // Act — purge with zero retention
         await _repository.PurgeFailedAsync(TimeSpan.Zero, CancellationToken.None);
 
         // Assert — succeeded record survives
-        var exists = await _repository.ExistsAsync(url, CancellationToken.None);
+        var exists = await _repository.ExistsAsync(Url, CancellationToken.None);
         exists.Should().BeTrue();
     }
 
@@ -196,12 +196,12 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithFeedMetadata_StoresFeedNameAndCollection()
     {
         // Arrange
-        const string url = "https://example.com/feed-metadata-success";
+        const string Url = "https://example.com/feed-metadata-success";
 
         // Act
         await _repository.RecordSuccessAsync(
-            url, feedName: "Test Feed", collectionName: "blogs", ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+            Url, feedName: "Test Feed", collectionName: "blogs", ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -214,12 +214,12 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordFailureAsync_WithFeedMetadata_StoresFeedNameAndCollection()
     {
         // Arrange
-        const string url = "https://example.com/feed-metadata-failure";
+        const string Url = "https://example.com/feed-metadata-failure";
 
         // Act
         await _repository.RecordFailureAsync(
-            url, "test error", feedName: "Broken Feed", collectionName: "videos", ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+            Url, "test error", feedName: "Broken Feed", collectionName: "videos", ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -234,50 +234,50 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithReason_StoresReason()
     {
         // Arrange
-        const string url = "https://example.com/reason-success";
-        const string reason = "Content included: Categories assigned as AI, DevOps";
+        const string Url = "https://example.com/Reason-success";
+        const string Reason = "Categories assigned as AI, DevOps";
 
         // Act
         await _repository.RecordSuccessAsync(
-            url, feedName: "Test Feed", collectionName: "blogs", reason: reason, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+            Url, feedName: "Test Feed", collectionName: "blogs", reason: Reason, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
         var item = result.Items[0];
-        item.Reason.Should().Be(reason);
+        item.Reason.Should().Be(Reason);
     }
 
     [Fact]
     public async Task RecordFailureAsync_WithReason_StoresReason()
     {
         // Arrange
-        const string url = "https://example.com/reason-failure";
-        const string reason = "AI categorization failed after 3 attempts";
+        const string Url = "https://example.com/Reason-failure";
+        const string Reason = "AI categorization failed after 3 attempts";
 
         // Act
         await _repository.RecordFailureAsync(
-            url, "HTTP 500", feedName: "Test Feed", collectionName: "news", reason: reason, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+            Url, "HTTP 500", feedName: "Test Feed", collectionName: "news", reason: Reason, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
         var item = result.Items[0];
-        item.Reason.Should().Be(reason);
+        item.Reason.Should().Be(Reason);
         item.ErrorMessage.Should().Be("HTTP 500");
     }
 
     [Fact]
     public async Task RecordSuccessAsync_OnConflict_PreservesReasonWhenNull()
     {
-        // Arrange — first record with a reason
-        const string url = "https://example.com/reason-preserve";
+        // Arrange — first record with a Reason
+        const string Url = "https://example.com/Reason-preserve";
         await _repository.RecordSuccessAsync(
-            url, reason: "Original reason", ct: CancellationToken.None);
+            Url, reason: "Original reason", ct: CancellationToken.None);
 
-        // Act — update without reason (should preserve using COALESCE)
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        // Act — update without Reason (should preserve using COALESCE)
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -290,11 +290,11 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSkippedAsync_StoresSkippedStatus()
     {
         // Arrange
-        const string url = "https://example.com/skipped-test";
+        const string Url = "https://example.com/skipped-test";
 
         // Act
-        await _repository.RecordSkippedAsync(url, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSkippedAsync(Url, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -305,13 +305,13 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSkippedAsync_WithFeedMetadataAndReason_StoresAllFields()
     {
         // Arrange
-        const string url = "https://example.com/skipped-full";
-        const string reason = "Content excluded: not relevant to any tracked section";
+        const string Url = "https://example.com/skipped-full";
+        const string Reason = "not relevant to any tracked section";
 
         // Act
         await _repository.RecordSkippedAsync(
-            url, feedName: "Some Feed", collectionName: "news", reason: reason, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+            Url, feedName: "Some Feed", collectionName: "news", reason: Reason, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -319,7 +319,7 @@ public class ProcessedUrlRepositoryTests
         item.Status.Should().Be("skipped");
         item.FeedName.Should().Be("Some Feed");
         item.CollectionName.Should().Be("news");
-        item.Reason.Should().Be(reason);
+        item.Reason.Should().Be(Reason);
     }
 
     [Fact]
@@ -348,11 +348,11 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithHasTranscriptTrue_StoresValue()
     {
         // Arrange
-        const string url = "https://youtube.com/watch?v=transcript-true";
+        const string Url = "https://youtube.com/watch?v=transcript-true";
 
         // Act
-        await _repository.RecordSuccessAsync(url, hasTranscript: true, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, hasTranscript: true, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -363,11 +363,11 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithHasTranscriptFalse_StoresValue()
     {
         // Arrange
-        const string url = "https://youtube.com/watch?v=transcript-false";
+        const string Url = "https://youtube.com/watch?v=transcript-false";
 
         // Act
-        await _repository.RecordSuccessAsync(url, hasTranscript: false, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, hasTranscript: false, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -378,11 +378,11 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithoutHasTranscript_StoresNull()
     {
         // Arrange
-        const string url = "https://example.com/no-transcript-field";
+        const string Url = "https://example.com/no-transcript-field";
 
         // Act
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -393,11 +393,11 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordFailureAsync_WithHasTranscript_StoresValue()
     {
         // Arrange
-        const string url = "https://youtube.com/watch?v=fail-transcript";
+        const string Url = "https://youtube.com/watch?v=fail-transcript";
 
         // Act
-        await _repository.RecordFailureAsync(url, "transcript mandatory", hasTranscript: false, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordFailureAsync(Url, "transcript mandatory", hasTranscript: false, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -411,11 +411,11 @@ public class ProcessedUrlRepositoryTests
     {
         // Arrange
         var jobId = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
-        var url = $"https://example.com/jobid-success-{Guid.NewGuid():N}";
+        var Url = $"https://example.com/jobid-success-{Guid.NewGuid():N}";
 
         // Act
-        await _repository.RecordSuccessAsync(url, jobId: jobId, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, jobId: jobId, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -427,11 +427,11 @@ public class ProcessedUrlRepositoryTests
     {
         // Arrange
         var jobId = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
-        var url = $"https://example.com/jobid-skipped-{Guid.NewGuid():N}";
+        var Url = $"https://example.com/jobid-skipped-{Guid.NewGuid():N}";
 
         // Act
-        await _repository.RecordSkippedAsync(url, jobId: jobId, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSkippedAsync(Url, jobId: jobId, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -443,11 +443,11 @@ public class ProcessedUrlRepositoryTests
     {
         // Arrange
         var jobId = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
-        var url = $"https://example.com/jobid-failure-{Guid.NewGuid():N}";
+        var Url = $"https://example.com/jobid-failure-{Guid.NewGuid():N}";
 
         // Act
-        await _repository.RecordFailureAsync(url, "test error", jobId: jobId, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordFailureAsync(Url, "test error", jobId: jobId, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -458,11 +458,11 @@ public class ProcessedUrlRepositoryTests
     public async Task RecordSuccessAsync_WithoutJobId_StoresNull()
     {
         // Arrange
-        var url = $"https://example.com/jobid-null-{Guid.NewGuid():N}";
+        var Url = $"https://example.com/jobid-null-{Guid.NewGuid():N}";
 
         // Act
-        await _repository.RecordSuccessAsync(url, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert
         result.Items.Should().ContainSingle();
@@ -494,12 +494,12 @@ public class ProcessedUrlRepositoryTests
         // Arrange — first record with one job
         var jobId1 = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
         var jobId2 = await _jobRepository.CreateAsync("manual", ct: CancellationToken.None);
-        var url = $"https://example.com/jobid-update-{Guid.NewGuid():N}";
-        await _repository.RecordSuccessAsync(url, jobId: jobId1, ct: CancellationToken.None);
+        var Url = $"https://example.com/jobid-update-{Guid.NewGuid():N}";
+        await _repository.RecordSuccessAsync(Url, jobId: jobId1, ct: CancellationToken.None);
 
         // Act — re-process with a different job
-        await _repository.RecordSuccessAsync(url, jobId: jobId2, ct: CancellationToken.None);
-        var result = await _repository.GetPagedAsync(0, 10, search: url, ct: CancellationToken.None);
+        await _repository.RecordSuccessAsync(Url, jobId: jobId2, ct: CancellationToken.None);
+        var result = await _repository.GetPagedAsync(0, 10, search: Url, ct: CancellationToken.None);
 
         // Assert — job_id updated to the newer job
         result.Items.Should().ContainSingle();

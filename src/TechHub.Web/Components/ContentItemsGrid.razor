@@ -468,7 +468,7 @@
         }
 
         var section = SectionCache.GetSectionByName(SectionName);
-        var collection = section?.Collections.FirstOrDefault(c => c.Name == CollectionName);
+        var collection = section?.Collections.FirstOrDefault(c => c.Name.Equals(CollectionName, StringComparison.OrdinalIgnoreCase));
         if (collection != null)
         {
             return collection.DisplayName ?? collection.Title ?? CollectionName;

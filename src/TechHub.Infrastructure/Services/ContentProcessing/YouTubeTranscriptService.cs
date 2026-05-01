@@ -14,9 +14,8 @@ namespace TechHub.Infrastructure.Services.ContentProcessing;
 
 /// <summary>
 /// Fetches YouTube video closed captions (transcripts) using YoutubeExplode
-/// (with configured HTTP client, browser UA, and cookies).
-/// yt-dlp is registered as a dependency for future fallback use, but currently disabled
-/// while we validate whether cookies alone are sufficient.
+/// (with configured HTTP client, browser UA, and cookies), falling back to yt-dlp
+/// when YoutubeExplode fails.
 /// Returns plain text transcript suitable for AI analysis. Failures are non-fatal
 /// - the pipeline continues without transcript data if fetching fails.
 /// </summary>
@@ -83,23 +82,84 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
     }
 
     /// <summary>
-    /// Fetches the transcript for <paramref name="videoUrl"/> using YoutubeExplode.
-    /// yt-dlp fallback is currently disabled while validating cookie-based approach.
+    /// Fetches the transcript for <paramref name="videoUrl"/> using the configured strategy:
+    /// YoutubeExplode only, yt-dlp only, or YoutubeExplode with yt-dlp fallback.
+    /// Controlled by <see cref="ContentProcessorOptions.YouTubeExplodeEnabled"/> and
+    /// <see cref="ContentProcessorOptions.YtDlpEnabled"/>.
     /// Returns a <see cref="TranscriptResult"/> indicating success with text or failure with a reason.
     /// </summary>
     public virtual async Task<TranscriptResult> GetTranscriptAsync(string videoUrl, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(videoUrl);
 
-        // Use YoutubeExplode only (with browser UA + cookies)
-        // yt-dlp fallback is disabled while we validate whether cookies are sufficient
-        return await TryYoutubeExplodeAsync(videoUrl, ct);
+        var yeEnabled = _options.YouTubeExplodeEnabled;
+        var ydEnabled = _options.YtDlpEnabled;
+
+        if (!yeEnabled && !ydEnabled)
+        {
+            _logger.LogWarning("Both transcript fetchers are disabled — skipping transcript for {Url}", videoUrl.Sanitize());
+            return TranscriptResult.Failure("Both YouTubeExplode and yt-dlp are disabled");
+        }
+
+        // yt-dlp only mode
+        if (!yeEnabled)
+        {
+            _logger.LogInformation("YoutubeExplode is disabled — trying yt-dlp for {Url}", videoUrl.Sanitize());
+            var ydOnlyResult = await TryYtDlpAsync(videoUrl, ct);
+            if (!ydOnlyResult.IsSuccess)
+            {
+                _logger.LogWarning("yt-dlp failed for {Url}: {Reason}", videoUrl.Sanitize(), ydOnlyResult.FailureReason?.Sanitize());
+            }
+
+            return ydOnlyResult;
+        }
+
+        _logger.LogInformation("Trying YoutubeExplode for {Url}", videoUrl.Sanitize());
+        var result = await TryYoutubeExplodeAsync(videoUrl, ct);
+        if (result.IsSuccess)
+        {
+            return result;
+        }
+
+        // YoutubeExplode only mode — no fallback
+        if (!ydEnabled)
+        {
+            _logger.LogInformation("yt-dlp is disabled — skipping fallback for {Url}", videoUrl.Sanitize());
+            return result;
+        }
+
+        // Fall back to yt-dlp when YoutubeExplode fails
+        _logger.LogInformation(
+            "YoutubeExplode failed for {Url}, falling back to yt-dlp: {Reason}",
+            videoUrl.Sanitize(), result.FailureReason?.Sanitize());
+
+        var ytDlpResult = await TryYtDlpAsync(videoUrl, ct);
+        if (ytDlpResult.IsSuccess)
+        {
+            return ytDlpResult;
+        }
+
+        // Both strategies failed
+        _logger.LogWarning(
+            "All transcript strategies failed for {Url}. YoutubeExplode: {YeReason}; yt-dlp: {YdReason}",
+            videoUrl.Sanitize(), result.FailureReason?.Sanitize(), ytDlpResult.FailureReason?.Sanitize());
+
+        return TranscriptResult.Failure(
+            $"YoutubeExplode: {result.FailureReason}; yt-dlp: {ytDlpResult.FailureReason}");
+    }
+
+    /// <summary>
+    /// Attempts to fetch a transcript using yt-dlp as a fallback.
+    /// </summary>
+    protected virtual async Task<TranscriptResult> TryYtDlpAsync(string videoUrl, CancellationToken ct)
+    {
+        return await _ytDlp.GetTranscriptAsync(videoUrl, _options.RequestTimeoutSeconds, ct);
     }
 
     /// <summary>
     /// Attempts to fetch a transcript using YoutubeExplode with retry logic.
     /// </summary>
-    private async Task<TranscriptResult> TryYoutubeExplodeAsync(string videoUrl, CancellationToken ct)
+    protected virtual async Task<TranscriptResult> TryYoutubeExplodeAsync(string videoUrl, CancellationToken ct)
     {
         for (var attempt = 1; attempt <= MaxRetryAttempts + 1; attempt++)
         {

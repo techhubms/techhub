@@ -363,6 +363,7 @@ internal interface ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? subcollectionName = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -445,6 +446,7 @@ internal interface ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? subcollectionName = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>

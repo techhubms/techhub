@@ -19,6 +19,10 @@ public class RouteParameterValidatorTests
     [InlineData("videos")]
     [InlineData("community")]
     [InlineData("levels-of-enlightenment")]
+    [InlineData("AI")]
+    [InlineData("GitHub-Copilot")]
+    [InlineData("DotNet")]
+    [InlineData("Videos")]
     public void IsValidNameSegment_WithValidNames_ReturnsTrue(string name)
     {
         RouteParameterValidator.IsValidNameSegment(name).Should().BeTrue();
@@ -32,8 +36,6 @@ public class RouteParameterValidatorTests
     [InlineData("pp.php")]
     [InlineData("admin/passwd")]
     [InlineData("../etc")]
-    [InlineData("HAS-UPPER")]
-    [InlineData("UPPER")]
     [InlineData("has space")]
     [InlineData("has_underscore")]
     [InlineData("has.dot")]

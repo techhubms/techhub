@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using TechHub.Core.Interfaces;
 
 namespace TechHub.Infrastructure.Data;
@@ -86,23 +87,52 @@ public class PostgresDialect : ISqlDialect
         ["copilot"] = ["pilot"],
     };
 
+    /// <summary>
+    /// Matches runs of alphanumeric characters (word tokens).
+    /// Separates terms on anything that is not a letter or digit:
+    /// hyphens ("-"), slashes ("/"), underscores ("_"), periods ("."),
+    /// apostrophes ("'"), tsquery operators (&amp; | ! ( ) : * &lt; &gt;), etc.
+    /// </summary>
+    private static readonly Regex _wordTokenPattern =
+        new(@"[a-zA-Z0-9]+", RegexOptions.Compiled);
+
     public string TransformFullTextQuery(string query)
     {
         // PostgreSQL prefix search with OR logic for better recall:
+        // - Extracts alphanumeric word tokens from the raw query, stripping
+        //   ALL non-alphanumeric characters including:
+        //     • hyphens ("-") — PostgreSQL to_tsquery treats "-" as NOT operator,
+        //       so "auto-approval" would mean "auto AND NOT approval" without this fix
+        //     • underscores, slashes, periods — natural word separators in tech text
+        //     • tsquery operators (&, |, !, :, *, (, ), <, >) — syntax errors if passed through
         // - Uses | (OR) so matching ANY term surfaces results (ranked by relevance)
         // - Appends :* for prefix matching ("reinie" → "reinie:*" matches "Reinier")
-        // - Expands known compound words ("vscode" → "vscode:* | vs:* | code:*")
+        // - Expands known compound words ("vscode" → "vscode:* | code:*")
         // Combined with ts_rank ordering, best matches still appear first
         if (string.IsNullOrWhiteSpace(query))
         {
-            return query;
+            return string.Empty;
         }
 
-        var terms = query.Trim().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        var seenTerms = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var expandedTerms = new List<string>();
 
-        foreach (var term in terms)
+        foreach (Match match in _wordTokenPattern.Matches(query))
         {
+            var term = match.Value;
+
+            // Require at least 2 characters to avoid overly broad prefix matches from
+            // single-character fragments produced by splitting (e.g., "A" from "A-Z")
+            if (term.Length < 2)
+            {
+                continue;
+            }
+
+            if (!seenTerms.Add(term))
+            {
+                continue;
+            }
+
             expandedTerms.Add($"{term}:*");
 
             // Expand known compound words to also match their parts
@@ -110,9 +140,21 @@ public class PostgresDialect : ISqlDialect
             {
                 foreach (var part in parts)
                 {
-                    expandedTerms.Add($"{part}:*");
+                    // Parts shorter than 3 characters are excluded to avoid overly broad matches
+                    if (part.Length >= 3 && seenTerms.Add(part))
+                    {
+                        expandedTerms.Add($"{part}:*");
+                    }
                 }
             }
+        }
+
+        // If nothing usable was extracted (e.g., all single characters or operator-only input
+        // like "C#", "!", "#"), return empty string so callers can skip FTS entirely and avoid
+        // a to_tsquery syntax error that would result in a 500 response.
+        if (expandedTerms.Count == 0)
+        {
+            return string.Empty;
         }
 
         return string.Join(" | ", expandedTerms);

@@ -1067,6 +1067,7 @@ public class TechHubApiClient : ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
+        string? subcollectionName = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1095,6 +1096,11 @@ public class TechHubApiClient : ITechHubApiClient
             if (jobId.HasValue)
             {
                 query += $"&jobId={jobId.Value}";
+            }
+
+            if (!string.IsNullOrEmpty(subcollectionName))
+            {
+                query += $"&subcollectionName={Uri.EscapeDataString(subcollectionName)}";
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
@@ -1356,6 +1362,7 @@ public class TechHubApiClient : ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
+        string? subcollectionName = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1374,6 +1381,11 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrEmpty(feedName))
             {
                 query += $"&feedName={Uri.EscapeDataString(feedName)}";
+            }
+
+            if (!string.IsNullOrEmpty(subcollectionName))
+            {
+                query += $"&subcollectionName={Uri.EscapeDataString(subcollectionName)}";
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ContentItemListItem>>(

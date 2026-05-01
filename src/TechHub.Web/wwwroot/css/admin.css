@@ -419,6 +419,11 @@ select.admin-input {
     color: #6ee7b7;
 }
 
+.admin-badge-adhoc {
+    background: color-mix(in srgb, #ec4899 15%, transparent);
+    color: #f9a8d4;
+}
+
 .admin-status {
     font-size: var(--font-size-sm);
     font-weight: 500;

@@ -24,6 +24,7 @@ public class SectionCollectionTests : BunitContext
         ComponentFactories.AddStub<SidebarTagCloud>();
         ComponentFactories.AddStub<ContentItemsGrid>();
         ComponentFactories.AddStub<DateRangeSlider>();
+        ComponentFactories.AddStub<HeroBanner>();
 
         // SectionCache is injected directly by SectionCollection.
         // Provide an "all" section with two regular (non-custom) collections so

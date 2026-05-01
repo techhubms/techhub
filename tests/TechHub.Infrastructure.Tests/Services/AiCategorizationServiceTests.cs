@@ -69,7 +69,7 @@ public class AiCategorizationServiceTests
                 "author": "Microsoft",
                 "primary_section": "ai",
                 "content": "Full markdown content here.",
-                "explanation": "Included: relevant Azure AI content",
+                "explanation": "relevant Azure AI content",
                 "roundup": {
                     "summary": "Azure AI Foundry gets new features.",
                     "key_topics": ["AI Foundry", "Azure"],
@@ -98,7 +98,7 @@ public class AiCategorizationServiceTests
         result.Item.Tags.Should().BeEquivalentTo(["azure", "ai-foundry"]);
         result.Item.PrimarySectionName.Should().Be("ai");
         result.Item.Content.Should().Be("Full markdown content here.");
-        result.Explanation.Should().Contain("Included");
+        result.Explanation.Should().Be("relevant Azure AI content");
     }
 
     // ── Roundup Metadata Extraction ───────────────────────────────────────────
@@ -189,7 +189,7 @@ public class AiCategorizationServiceTests
         var aiJson = """
             {
                 "included": false,
-                "explanation": "Content excluded: sales pitch without educational value"
+                "explanation": "sales pitch without educational value"
             }
             """;
         _aiClient
@@ -214,7 +214,7 @@ public class AiCategorizationServiceTests
         var aiJson = """
             {
                 "included": false,
-                "explanation": "Content excluded: not relevant to developer audience"
+                "explanation": "not relevant to developer audience"
             }
             """;
         _aiClient
@@ -743,7 +743,7 @@ public class AiCategorizationServiceTests
                 "tags": {{tagsJson}},
                 "primary_section": "ai",
                 "content": "{{content}}",
-                "explanation": "Included: relevant content"
+                "explanation": "relevant content"
             }
             """;
         _aiClient
@@ -775,7 +775,7 @@ public class AiCategorizationServiceTests
                 "tags": ["csharp"],
                 "primary_section": "dotnet",
                 "content": "Full content with substance",
-                "explanation": "Included: relevant .NET content about C# patterns"
+                "explanation": "relevant .NET content about C# patterns"
             }
             """;
         _aiClient
@@ -957,7 +957,7 @@ public class AiCategorizationServiceTests
             {
                 "included": false,
                 "title": "Announcing TypeScript 6.0",
-                "explanation": "Excluded: No categories found. Content is about TypeScript 6.0 and does not substantially cover any predefined Microsoft technology categories."
+                "explanation": "No categories found. Content is about TypeScript 6.0 and does not substantially cover any predefined Microsoft technology categories."
             }
             """;
         _aiClient
@@ -1008,7 +1008,7 @@ public class AiCategorizationServiceTests
                 "title": "Some Article",
                 "content": "Full content here",
                 "sections": [],
-                "explanation": "Included: relevant content"
+                "explanation": "relevant content"
             }
             """;
         _aiClient
@@ -1057,7 +1057,7 @@ public class AiCategorizationServiceTests
         var aiJson = """
             {
                 "title": "TypeScript Release",
-                "explanation": "Excluded: Not relevant to any predefined category."
+                "explanation": "Not relevant to any predefined category."
             }
             """;
         _aiClient
@@ -1092,7 +1092,7 @@ public class AiCategorizationServiceTests
                 "primary_section": "dotnet",
                 "author": "Liuba Gontha",
                 "content": "Content about APIs",
-                "explanation": "Included: .NET content"
+                "explanation": ".NET content"
             }
             """;
         _aiClient
@@ -1132,7 +1132,7 @@ public class AiCategorizationServiceTests
                 "tags": ["Azure"],
                 "primary_section": "azure",
                 "content": "Content about Azure",
-                "explanation": "Included: Azure content"
+                "explanation": "Azure content"
             }
             """;
         _aiClient

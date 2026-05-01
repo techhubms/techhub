@@ -49,6 +49,8 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         // This must happen before Browser.CloseAsync() in the fixture.
         // DisposeAsync() releases underlying resources after graceful close.
         using var cts = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        System.Runtime.ExceptionServices.ExceptionDispatchInfo? firstUnexpected = null;
+
         try
         {
             if (_cdpSession != null)
@@ -56,9 +58,51 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 await _cdpSession.DetachAsync().WaitAsync(cts.Token);
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or OperationCanceledException)
         {
             // Best-effort CDP session cleanup
+        }
+        catch (Exception ex) when (ex is not PlaywrightException and not OperationCanceledException)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
+        }
+
+        try
+        {
+            if (_page != null)
+            {
+                // Gracefully disconnect the Blazor circuit before closing the page.
+                //
+                // Blazor Server registers a pagehide listener that sends a disconnect beacon
+                // (POST /_blazor/disconnect/) when the browser navigates or closes. When
+                // Playwright calls CloseAsync() directly, it kills the TCP connection before
+                // the beacon fires, and the server records a 499 (client closed connection)
+                // in Application Insights — inflating the failure count and triggering alerts.
+                //
+                // Calling window.Blazor.disconnect() is the proper Blazor teardown path:
+                // it sends the disconnect POST synchronously via the circuit, after which
+                // WaitForLoadStateAsync(NetworkIdle) ensures the POST fully completes before
+                // we close. Only called when the circuit is actually active.
+                var isBlazorActive = await _page.EvaluateAsync<bool>(
+                    "() => window.__blazorServerReady === true");
+
+                if (isBlazorActive)
+                {
+                    await _page.EvaluateAsync(
+                        "() => { try { window.Blazor?.disconnect?.(); } catch (_) {} }");
+
+                    await _page.WaitForLoadStateAsync(
+                        LoadState.NetworkIdle, new() { Timeout = 3000 }).WaitAsync(cts.Token);
+                }
+            }
+        }
+        catch (Exception ex) when (ex is PlaywrightException or TimeoutException or OperationCanceledException)
+        {
+            // Best-effort: page may be on an error page, already closed, or Blazor not active
+        }
+        catch (Exception ex) when (ex is not PlaywrightException and not TimeoutException and not OperationCanceledException)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
 
         try
@@ -68,9 +112,13 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 await _page.CloseAsync().WaitAsync(cts.Token);
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or OperationCanceledException)
         {
             // Best-effort context cleanup
+        }
+        catch (Exception ex) when (ex is not PlaywrightException and not OperationCanceledException)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
         }
 
         try
@@ -81,9 +129,16 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                 await _context.DisposeAsync().AsTask().WaitAsync(cts.Token);
             }
         }
-        catch (Exception)
+        catch (Exception ex) when (ex is PlaywrightException or OperationCanceledException)
         {
             // Best-effort context cleanup
         }
+        catch (Exception ex) when (ex is not PlaywrightException and not OperationCanceledException)
+        {
+            firstUnexpected ??= System.Runtime.ExceptionServices.ExceptionDispatchInfo.Capture(ex);
+        }
+
+        // Re-throw the first unexpected exception (if any) after all cleanup has completed.
+        firstUnexpected?.Throw();
     }
 }

@@ -15,21 +15,26 @@ namespace TechHub.Web.Tests.Components;
 /// </summary>
 public class HeroBannerTests : BunitContext
 {
-    private readonly Mock<ITechHubApiClient> _mockApiClient;
+    private readonly HeroBannerCache _heroBannerCache;
 
     public HeroBannerTests()
     {
-        _mockApiClient = new Mock<ITechHubApiClient>();
+        _heroBannerCache = new HeroBannerCache();
 
         // Setup JS interop mocks for cookie operations
         JSInterop.SetupVoid("TechHub.heroBanner.setCollapsed", _ => true);
         JSInterop.SetupVoid("TechHub.heroBanner.setHash", _ => true);
 
         // Default: no cookies set (new visitor)
-        Services.AddSingleton<ITechHubApiClient>(_mockApiClient.Object);
+        Services.AddSingleton(_heroBannerCache);
         Services.AddSingleton<ILogger<HeroBanner>>(new Mock<ILogger<HeroBanner>>().Object);
         AddBunitPersistentComponentState();
     }
+
+    /// <summary>
+    /// Seed the <see cref="HeroBannerCache"/> with the supplied data.
+    /// </summary>
+    private void SetupCache(HeroBannerData? data) => _heroBannerCache.Initialize(data);
 
     /// <summary>
     /// Register an <see cref="IHttpContextAccessor"/> that returns the specified cookie values.
@@ -59,27 +64,25 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange — all cards are in the past
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Expired Event",
-                        Description = "This event is over",
-                        StartDate = "2020-01-01",
-                        EndDate = "2020-01-02"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Expired Event",
+                    Description = "This event is over",
+                    StartDate = "2020-01-01",
+                    EndDate = "2020-01-02"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
 
-        // Assert — nothing rendered (no active cards); wait for async init to complete
-        cut.WaitForAssertion(() => cut.Markup.Should().BeEmpty(), TimeSpan.FromSeconds(2));
+        // Assert — nothing rendered (no active cards)
+        cut.Markup.Should().BeEmpty();
     }
 
     [Fact]
@@ -87,27 +90,24 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange — cards active for a very long time (past and far future)
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Upcoming Event",
-                        Description = "An exciting event",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31",
-                        LinkUrl = "https://example.com",
-                        LinkText = "Register"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Upcoming Event",
+                    Description = "An exciting event",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31",
+                    LinkUrl = "https://example.com",
+                    LinkText = "Register"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert
         var aside = cut.Find("aside.hero-banner");
@@ -121,27 +121,24 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Event",
-                        Description = "Description",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31",
-                        LinkUrl = "https://example.com",
-                        LinkText = "Sign up"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Event",
+                    Description = "Description",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31",
+                    LinkUrl = "https://example.com",
+                    LinkText = "Sign up"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert
         var link = cut.Find("a.hero-banner-card-link");
@@ -156,15 +153,13 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync((HeroBannerData?)null);
+        SetupCache(null);
 
         // Act
         var cut = Render<HeroBanner>();
 
-        // Assert — nothing rendered; wait for async init to complete
-        cut.WaitForAssertion(() => cut.Markup.Should().BeEmpty(), TimeSpan.FromSeconds(2));
+        // Assert — nothing rendered
+        cut.Markup.Should().BeEmpty();
     }
 
     [Fact]
@@ -172,10 +167,10 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange — collapsed cookie is set; hash matches so no auto-expand
         // The card title produces a hash; set the same hash in cookie to simulate "seen before"
-        const string cardTitle = "Test Event";
+        const string CardTitle = "Test Event";
         // Compute the same hash the component would compute
         var hash = 0u;
-        foreach (var ch in cardTitle)
+        foreach (var ch in CardTitle)
         {
             hash = hash * 31u + ch;
         }
@@ -188,25 +183,22 @@ public class HeroBannerTests : BunitContext
             { "hero-banner-hash", hashString }
         });
 
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = cardTitle,
-                        Description = "Description",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = CardTitle,
+                    Description = "Description",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert — banner rendered but collapsed
         var aside = cut.Find("aside.hero-banner");
@@ -218,25 +210,22 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Event",
-                        Description = "Description",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Event",
+                    Description = "Description",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert
         var toggleButton = cut.Find("button.hero-banner-toggle");
@@ -249,28 +238,25 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange — banner data includes a find-more URL and text
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Label = "Featured Events",
-                FindMoreUrl = "https://luma.com/githubcopilotdevdays",
-                FindMoreText = "Find a GitHub Copilot Dev Day near you",
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Event",
-                        Description = "Description",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Label = "Featured Events",
+            FindMoreUrl = "https://luma.com/githubcopilotdevdays",
+            FindMoreText = "Find a GitHub Copilot Dev Day near you",
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Event",
+                    Description = "Description",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert — find-more link uses URL and text from the data model
         var findMore = cut.Find("a.hero-banner-find-more");
@@ -286,25 +272,22 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange — banner data has no find-more URL
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Announcement",
-                        Description = "A generic announcement",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Announcement",
+                    Description = "A generic announcement",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert — no find-more link rendered
         cut.FindAll("a.hero-banner-find-more").Should().BeEmpty();
@@ -315,28 +298,149 @@ public class HeroBannerTests : BunitContext
     {
         // Arrange
         RegisterHttpContextWithCookies();
-        _mockApiClient
-            .Setup(x => x.GetHeroBannerDataAsync(It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new HeroBannerData
-            {
-                Label = "Featured Events",
-                Cards =
-                [
-                    new HeroBannerCard
-                    {
-                        Title = "Event",
-                        Description = "Description",
-                        StartDate = "2020-01-01",
-                        EndDate = "2099-12-31"
-                    }
-                ]
-            });
+        SetupCache(new HeroBannerData
+        {
+            Label = "Featured Events",
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Event",
+                    Description = "Description",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31"
+                }
+            ]
+        });
 
         // Act
         var cut = Render<HeroBanner>();
-        cut.WaitForState(() => cut.Find("aside.hero-banner") != null, TimeSpan.FromSeconds(2));
 
         // Assert — label rendered in header
         cut.Find(".hero-banner-label").TextContent.Should().Be("Featured Events");
+    }
+
+    [Fact]
+    public void HeroBanner_CardWithMatchingSection_IsShown()
+    {
+        // Arrange — card restricted to "ai" section; banner rendered with SectionName="ai"
+        RegisterHttpContextWithCookies();
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "AI Event",
+                    Description = "An AI-specific event",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31",
+                    Sections = ["ai"]
+                }
+            ]
+        });
+
+        // Act
+        var cut = Render<HeroBanner>(parameters => parameters.Add(p => p.SectionName, "ai"));
+
+        // Assert — card is shown because section matches
+        cut.Find("aside.hero-banner").Should().NotBeNull();
+        cut.Find(".hero-banner-card-title").TextContent.Should().Contain("AI Event");
+    }
+
+    [Fact]
+    public void HeroBanner_CardWithDifferentSection_IsHidden()
+    {
+        // Arrange — card restricted to "ai" section; banner rendered with SectionName="devops"
+        RegisterHttpContextWithCookies();
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "AI Event",
+                    Description = "An AI-specific event",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31",
+                    Sections = ["ai"]
+                }
+            ]
+        });
+
+        // Act
+        var cut = Render<HeroBanner>(parameters => parameters.Add(p => p.SectionName, "devops"));
+
+        // Assert — banner renders nothing because the card is not for this section
+        cut.Markup.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void HeroBanner_CardWithNoSections_IsShownInAllSections()
+    {
+        // Arrange — card has no Sections restriction
+        RegisterHttpContextWithCookies();
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "Universal Announcement",
+                    Description = "Shows everywhere",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31"
+                }
+            ]
+        });
+
+        // Act — render for an arbitrary section
+        var cut = Render<HeroBanner>(parameters => parameters.Add(p => p.SectionName, "azure"));
+
+        // Assert — card shows even though no explicit section filter
+        cut.Find("aside.hero-banner").Should().NotBeNull();
+        cut.Find(".hero-banner-card-title").TextContent.Should().Contain("Universal Announcement");
+    }
+
+    [Theory]
+    [InlineData("ai", true)]
+    [InlineData("cloud", false)]
+    [InlineData("devops", false)]
+    public void HeroBanner_SectionFiltering_OnParametersSet_CorrectlyFiltersPerSection(string sectionName, bool expectVisible)
+    {
+        // Arrange — card restricted to "ai" section only.
+        // OnParametersSet fires on every render (including initial), so this validates
+        // that section filtering applies correctly regardless of how the component was invoked.
+        // In production, Blazor Server reuses the component instance on navigation, meaning
+        // OnParametersSet is the only lifecycle method that fires after the first render.
+        RegisterHttpContextWithCookies();
+        SetupCache(new HeroBannerData
+        {
+            Cards =
+            [
+                new HeroBannerCard
+                {
+                    Title = "AI Event",
+                    Description = "An AI-specific event",
+                    StartDate = "2020-01-01",
+                    EndDate = "2099-12-31",
+                    Sections = ["ai"]
+                }
+            ]
+        });
+
+        // Act
+        var cut = Render<HeroBanner>(parameters => parameters.Add(p => p.SectionName, sectionName));
+
+        // Assert
+        if (expectVisible)
+        {
+            cut.Find("aside.hero-banner").Should().NotBeNull();
+            cut.Find(".hero-banner-card-title").TextContent.Should().Contain("AI Event");
+        }
+        else
+        {
+            cut.Markup.Should().BeEmpty($"section-specific card must not appear in '{sectionName}' section");
+        }
     }
 }

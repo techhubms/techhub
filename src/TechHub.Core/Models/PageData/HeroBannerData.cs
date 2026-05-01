@@ -44,4 +44,10 @@ public record HeroBannerCard
 
     public string? LinkUrl { get; init; }
     public string? LinkText { get; init; }
+
+    /// <summary>
+    /// Optional list of section names this card should appear in (e.g. <c>"ai"</c>, <c>"devops"</c>, <c>"security"</c>).
+    /// When <see langword="null"/> or empty, the card is shown in all sections that have the hero banner enabled.
+    /// </summary>
+    public IReadOnlyList<string>? Sections { get; init; }
 }

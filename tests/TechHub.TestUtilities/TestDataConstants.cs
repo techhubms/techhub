@@ -6,19 +6,19 @@ namespace TechHub.TestUtilities;
 /// Update these when test data changes.
 /// </summary>
 /// <remarks>
-/// Last updated: 2026-04-28 after adding vscode-updates FTS test video.
+/// Last updated: 2026-04-30 after adding second roundup for legacy redirect test coverage.
 /// 
 /// Test data composition:
-/// - 41 published items total (was 40, added 1 vscode-updates video for FTS testing)
+/// - 42 published items total (was 41, added 1 roundup for legacy redirect testing)
 /// - 4 draft items (not counted in published totals)
-/// - Collections: blogs (22), news (7), videos (9), community (2), roundups (1)
+/// - Collections: blogs (22), news (7), videos (9), community (2), roundups (2)
 /// - Tag distributions: AI (12 items), DevOps (1 item), GitHub Copilot (4 tag symmetry test items)
-/// - Date ranges: 2024 items (22), 2026 items (19)
+/// - Date ranges: 2024 items (22), 2026 items (20)
 /// </remarks>
 public static class TestDataConstants
 {
     // Total counts
-    public const int TotalPublishedItems = 41;
+    public const int TotalPublishedItems = 42;
     public const int TotalDraftItems = 4;
     public const int TotalItems = TotalPublishedItems + TotalDraftItems;
 
@@ -27,7 +27,7 @@ public static class TestDataConstants
     public const int NewsCount = 7;
     public const int VideosCount = 9;  // Includes root videos + subcollections (2 root + 5 ghc-features + 2 vscode-updates)
     public const int CommunityCount = 2;
-    public const int RoundupsCount = 1;
+    public const int RoundupsCount = 2;
 
     // Tag counts (published items only)
     // Word-based counting: tags are split by space, dash, underscore
@@ -37,7 +37,7 @@ public static class TestDataConstants
 
     // Date range counts (published items only)
     public const int Items2024Count = 22;
-    public const int Items2026Count = 19;
+    public const int Items2026Count = 20;
 
     // Facet-specific counts (context-dependent based on filtering)
     /// <summary>AI tag appears in facets with this count when no filters applied</summary>

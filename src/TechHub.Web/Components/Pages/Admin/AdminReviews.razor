@@ -277,6 +277,7 @@
 <ContentItemEditorModal Title="@_editorTitle"
                         EditData="@_editorData"
                         IsOpen="@_editorOpen"
+                        FeedNames="@(_feedNames ?? [])"
                         OnSave="SaveContentItemAsync"
                         OnClose="CloseContentItemEditor" />
 
@@ -314,6 +315,7 @@
     private ContentItemEditData? _editorData;
     private string _editorCollectionName = string.Empty;
     private string _editorSlug = string.Empty;
+    private IReadOnlyList<string>? _feedNames;
 
     protected override async Task OnInitializedAsync()
     {
@@ -328,6 +330,25 @@
         }
 
         await LoadDataAsync();
+    }
+
+    private async Task LoadFeedNamesAsync()
+    {
+        try
+        {
+            var feeds = await Api.GetFeedConfigsAsync();
+            _feedNames = feeds.Select(f => f.Name).OrderBy(n => n).ToList();
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogWarning(ex, "Failed to load feed names");
+            _feedNames = [];
+        }
+        catch (TaskCanceledException ex)
+        {
+            Logger.LogWarning(ex, "Failed to load feed names (timeout)");
+            _feedNames = [];
+        }
     }
 
     private Task PersistState()
@@ -587,6 +608,11 @@
         _message = null;
         try
         {
+            if (_feedNames is null)
+            {
+                await LoadFeedNamesAsync();
+            }
+
             var result = await Api.GetContentItemEditDataAsync(review.CollectionName, review.Slug);
             if (result is null)
             {

@@ -245,7 +245,7 @@ public class ContentProcessingPipelineTests
     /// Called only when <c>GENERATE_PIPELINE_FIXTURES=true</c>.
     /// </summary>
     private static async Task GenerateAllFixturesAsync(
-        string fixtureName, RawFeedItem rawItem, string _feedXml, FeedConfig feedConfig)
+        string fixtureName, RawFeedItem rawItem, string _, FeedConfig feedConfig)
     {
         var fetchClient = new Mock<IArticleFetchClient>();
         var ytService = new Mock<IYouTubeTranscriptService>();

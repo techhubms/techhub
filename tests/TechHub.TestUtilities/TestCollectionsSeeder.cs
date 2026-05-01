@@ -116,7 +116,7 @@ public static class TestCollectionsSeeder
     /// </summary>
     private static async Task SeedTestFeedConfigsAsync(IDbConnection connection)
     {
-        const string sql = """
+        const string Sql = """
             INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
             VALUES (@Name, @Url, @OutputDir, FALSE)
             ON CONFLICT (name) DO NOTHING;
@@ -145,7 +145,7 @@ public static class TestCollectionsSeeder
 
         foreach (var feed in testFeeds)
         {
-            await connection.ExecuteAsync(sql, feed);
+            await connection.ExecuteAsync(Sql, feed);
         }
     }
 
@@ -163,7 +163,7 @@ public static class TestCollectionsSeeder
             return;
         }
 
-        const string sql = """
+        const string Sql = """
             INSERT INTO custom_page_data (key, description, json_data, updated_at)
             VALUES (@Key, @Description, @JsonData::jsonb, NOW())
             ON CONFLICT (key) DO UPDATE SET
@@ -177,7 +177,7 @@ public static class TestCollectionsSeeder
         {
             var key = Path.GetFileNameWithoutExtension(file);
             var json = await File.ReadAllTextAsync(file);
-            await connection.ExecuteAsync(sql, new { Key = key, Description = $"{key} (test data)", JsonData = json });
+            await connection.ExecuteAsync(Sql, new { Key = key, Description = $"{key} (test data)", JsonData = json });
             count++;
         }
 

@@ -17,6 +17,7 @@ public sealed record ContentItemEditData
     public required string Excerpt { get; init; }
     public required string Content { get; init; }
     public required string PrimarySectionName { get; init; }
+    public string? FeedName { get; init; }
     public required IReadOnlyList<string> Tags { get; init; }
     public required IReadOnlyList<string> Sections { get; init; }
 

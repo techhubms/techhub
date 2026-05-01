@@ -16,7 +16,7 @@ public static partial class RouteParameterValidator
 
     /// <summary>
     /// Validates a section or collection name.
-    /// Must start with a lowercase letter, followed by lowercase letters and hyphens only.
+    /// Must start with a letter, followed by letters and hyphens only (case-insensitive).
     /// This is intentionally stricter than the Section/Collection constructors (which allow
     /// leading hyphens) to reject obviously malformed route parameters early.
     /// </summary>
@@ -45,10 +45,12 @@ public static partial class RouteParameterValidator
     }
 
     /// <summary>
-    /// Lowercase letters and hyphens only, must start with a letter.
+    /// Letters (upper or lower) and hyphens only, must start with a letter.
+    /// Case-insensitive so URLs work regardless of capitalisation — the infrastructure layer
+    /// lowercases before DB queries and the SectionCache lookup is already OrdinalIgnoreCase.
     /// Stricter than Section/Collection constructors: leading hyphens (e.g. "-foo") are rejected.
     /// </summary>
-    [GeneratedRegex(@"^[a-z][a-z-]*$", RegexOptions.Compiled)]
+    [GeneratedRegex(@"^[a-zA-Z][a-zA-Z-]*$", RegexOptions.Compiled | RegexOptions.CultureInvariant)]
     private static partial Regex NameSegmentRegex();
 
     /// <summary>
