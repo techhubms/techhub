@@ -221,6 +221,7 @@ module openai './modules/openai.bicep' = {
     location: location
     openAiName: openAiName
     modelCapacity: openAiModelCapacity
+    adminIpAddresses: adminIpList
     tags: envTags
   }
 }

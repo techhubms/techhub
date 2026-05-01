@@ -94,13 +94,26 @@ public static class ServiceDefaultsExtensions
                            // in AppRequests with no diagnostic value.
                            options.Filter = httpContext =>
                                !IsHealthProbeRequest(httpContext.Request.Path);
+
+                           // Fix client.address to reflect the real client IP after the
+                           // ForwardedHeaders middleware has updated RemoteIpAddress from
+                           // X-Forwarded-For. The OTel SDK captures client.address at activity
+                           // start — before ForwardedHeaders runs — so without this override
+                           // all requests appear to originate from the Container Apps NAT IP
+                           // (which geo-resolves to Gävle, Sweden Central).
+                           options.EnrichWithHttpResponse = (activity, httpResponse) =>
+                           {
+                               var ip = httpResponse.HttpContext.Connection.RemoteIpAddress;
+                               if (ip != null)
+                               {
+                                   activity.SetTag("client.address", ip.MapToIPv4().ToString());
+                               }
+                           };
                        })
                        .AddHttpClientInstrumentation()
-                       // Mark HTTP 404 responses as successful spans so Azure Monitor records
-                       // Success=true. A 404 is expected server behavior, not an application error.
-                       // Without this, bots and stale links inflate the failure rate and trigger
-                       // false-positive alerts. ResultCode still shows 404 for filtering.
-                       .AddProcessor(new NotFoundRequestSuccessProcessor());
+                       // Suppress bot and Blazor infrastructure noise so failure-rate alerts
+                       // reflect genuine application errors, not crawler 404s or circuit teardown.
+                       .AddProcessor(new TelemetryNoiseProcessor());
             });
 
         builder.AddOpenTelemetryExporters();

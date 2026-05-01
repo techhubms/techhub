@@ -65,6 +65,40 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
         {
             if (_page != null)
             {
+                // Gracefully disconnect the Blazor circuit before closing the page.
+                //
+                // Blazor Server registers a pagehide listener that sends a disconnect beacon
+                // (POST /_blazor/disconnect/) when the browser navigates or closes. When
+                // Playwright calls CloseAsync() directly, it kills the TCP connection before
+                // the beacon fires, and the server records a 499 (client closed connection)
+                // in Application Insights — inflating the failure count and triggering alerts.
+                //
+                // Calling window.Blazor.disconnect() is the proper Blazor teardown path:
+                // it sends the disconnect POST synchronously via the circuit, after which
+                // WaitForLoadStateAsync(NetworkIdle) ensures the POST fully completes before
+                // we close. Only called when the circuit is actually active.
+                var isBlazorActive = await _page.EvaluateAsync<bool>(
+                    "() => window.__blazorServerReady === true");
+
+                if (isBlazorActive)
+                {
+                    await _page.EvaluateAsync(
+                        "() => { try { window.Blazor?.disconnect?.(); } catch (_) {} }");
+
+                    await _page.WaitForLoadStateAsync(
+                        LoadState.NetworkIdle, new() { Timeout = 3000 }).WaitAsync(cts.Token);
+                }
+            }
+        }
+        catch (Exception)
+        {
+            // Best-effort: page may be on an error page, already closed, or Blazor not active
+        }
+
+        try
+        {
+            if (_page != null)
+            {
                 await _page.CloseAsync().WaitAsync(cts.Token);
             }
         }
