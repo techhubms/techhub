@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -243,6 +244,18 @@ using (var scope = app.Services.CreateScope())
         // Non-fatal: banner won't show until the background service refreshes the cache
         var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<HeroBannerCache>>();
         startupLog.LogWarning(ex, "Failed to pre-load HeroBannerCache at startup, will retry on next background refresh");
+        heroBannerCache.Initialize(null);
+    }
+    catch (TaskCanceledException ex)
+    {
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<HeroBannerCache>>();
+        startupLog.LogWarning(ex, "Failed to pre-load HeroBannerCache at startup (timeout), will retry on next background refresh");
+        heroBannerCache.Initialize(null);
+    }
+    catch (JsonException ex)
+    {
+        var startupLog = scope.ServiceProvider.GetRequiredService<ILogger<HeroBannerCache>>();
+        startupLog.LogWarning(ex, "Failed to deserialize HeroBannerCache data at startup, will retry on next background refresh");
         heroBannerCache.Initialize(null);
     }
 }

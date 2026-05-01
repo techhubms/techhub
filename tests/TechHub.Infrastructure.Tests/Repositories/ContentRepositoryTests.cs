@@ -1077,6 +1077,74 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
             "Should find items with 'VS Code' in title");
     }
 
+    /// <summary>
+    /// Test: Hyphenated query terms are split on the hyphen so they match content that has both words.
+    /// Why: PostgreSQL to_tsquery treats "-" as a NOT operator, making "auto-approval" mean
+    /// "auto AND NOT approval" — returning zero results. Splitting on hyphen fixes this.
+    /// Here we use "vscode-updates" as the hyphenated query, which should find the vscode-updates
+    /// subcollection items because their subcollection_name is indexed in the search vector.
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_HyphenatedQuery_FindsContentBySubterms()
+    {
+        // Arrange - "vscode-updates" with hyphen: old code produced broken tsquery (NOT operator),
+        // fixed code splits to "vscode:* | code:* | updates:*" which matches subcollection items
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "vscode-updates");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - must find items (the hyphen must NOT be treated as a NOT operator)
+        results.Items.Should().NotBeEmpty(
+            "hyphenated query must be split into sub-terms, not treated as a tsquery NOT operator");
+        results.Items.Should().Contain(item => item.SubcollectionName == "vscode-updates",
+            "vscode-updates subcollection items should be found via subcollection_name in search vector");
+    }
+
+    /// <summary>
+    /// Test: Feed name is indexed in the search vector so items are discoverable by their feed.
+    /// Why: Migration 012 adds feed_name at weight D. Items from "Visual Studio Code YouTube"
+    /// should surface when searching for that feed name even if the word "YouTube" never
+    /// appears in their title, excerpt, or body.
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_FeedNameInQuery_FindsItemsFromThatFeed()
+    {
+        // Arrange - the vscode-updates test videos have feed_name "Visual Studio Code YouTube"
+        // "youtube" does not appear in any title/excerpt/body in the test data
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "youtube");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - should find the VS Code YouTube videos via their indexed feed_name
+        results.Items.Should().NotBeEmpty("feed_name is indexed in search_vector (migration 012)");
+        results.Items.Should().Contain(item => item.FeedName == "Visual Studio Code YouTube",
+            "Items from 'Visual Studio Code YouTube' feed should be found by searching 'youtube'");
+    }
+
+    /// <summary>
+    /// Test: Subcollection name is indexed so items are discoverable via their subcollection.
+    /// Why: Migration 012 adds subcollection_name at weight D. Searching the subcollection name
+    /// finds items even when the subcollection name is not mentioned in body text.
+    /// </summary>
+    [Fact]
+    public async Task SearchAsync_SubcollectionNameInQuery_FindsSubcollectionItems()
+    {
+        // Arrange - search for the subcollection slug word "updates" which is also in
+        // subcollection_name "vscode-updates" (tokenised as "vscode", "updates", "vscode-updates")
+        // This is distinct from just matching body text — the subcollection token provides signal.
+        var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "vscode updates");
+
+        // Act
+        var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
+
+        // Assert - vscode-updates subcollection items must appear in results
+        results.Items.Should().NotBeEmpty("Should find vscode-updates content");
+        results.Items.Should().Contain(item => item.SubcollectionName == "vscode-updates",
+            "vscode-updates subcollection items should rank in results for 'vscode updates' query");
+    }
+
     #endregion
 
     #region Denormalized Tags Tests

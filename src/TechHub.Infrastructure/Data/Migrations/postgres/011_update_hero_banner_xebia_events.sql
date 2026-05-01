@@ -10,7 +10,7 @@ UPDATE custom_page_data
 SET json_data  = '{
   "label": "Featured Events",
   "findMoreUrl": "",
-  "findMoreText": "See all Xebia Microsoft events",
+  "findMoreText": "",
   "cards": [
     {
       "title": "AI Is Reshaping Software Delivery — Amsterdam",

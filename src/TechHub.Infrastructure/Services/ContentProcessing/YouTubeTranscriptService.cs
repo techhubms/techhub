@@ -97,24 +97,24 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
 
         if (!yeEnabled && !ydEnabled)
         {
-            _logger.LogWarning("Both transcript fetchers are disabled — skipping transcript for {Url}", videoUrl);
+            _logger.LogWarning("Both transcript fetchers are disabled — skipping transcript for {Url}", videoUrl.Sanitize());
             return TranscriptResult.Failure("Both YouTubeExplode and yt-dlp are disabled");
         }
 
         // yt-dlp only mode
         if (!yeEnabled)
         {
-            _logger.LogInformation("YoutubeExplode is disabled — trying yt-dlp for {Url}", videoUrl);
+            _logger.LogInformation("YoutubeExplode is disabled — trying yt-dlp for {Url}", videoUrl.Sanitize());
             var ydOnlyResult = await TryYtDlpAsync(videoUrl, ct);
             if (!ydOnlyResult.IsSuccess)
             {
-                _logger.LogWarning("yt-dlp failed for {Url}: {Reason}", videoUrl, ydOnlyResult.FailureReason?.Sanitize());
+                _logger.LogWarning("yt-dlp failed for {Url}: {Reason}", videoUrl.Sanitize(), ydOnlyResult.FailureReason?.Sanitize());
             }
 
             return ydOnlyResult;
         }
 
-        _logger.LogInformation("Trying YoutubeExplode for {Url}", videoUrl);
+        _logger.LogInformation("Trying YoutubeExplode for {Url}", videoUrl.Sanitize());
         var result = await TryYoutubeExplodeAsync(videoUrl, ct);
         if (result.IsSuccess)
         {
@@ -124,14 +124,14 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
         // YoutubeExplode only mode — no fallback
         if (!ydEnabled)
         {
-            _logger.LogInformation("yt-dlp is disabled — skipping fallback for {Url}", videoUrl);
+            _logger.LogInformation("yt-dlp is disabled — skipping fallback for {Url}", videoUrl.Sanitize());
             return result;
         }
 
         // Fall back to yt-dlp when YoutubeExplode fails
         _logger.LogInformation(
             "YoutubeExplode failed for {Url}, falling back to yt-dlp: {Reason}",
-            videoUrl, result.FailureReason?.Sanitize());
+            videoUrl.Sanitize(), result.FailureReason?.Sanitize());
 
         var ytDlpResult = await TryYtDlpAsync(videoUrl, ct);
         if (ytDlpResult.IsSuccess)
@@ -142,7 +142,7 @@ public class YouTubeTranscriptService : IYouTubeTranscriptService, IDisposable
         // Both strategies failed
         _logger.LogWarning(
             "All transcript strategies failed for {Url}. YoutubeExplode: {YeReason}; yt-dlp: {YdReason}",
-            videoUrl, result.FailureReason?.Sanitize(), ytDlpResult.FailureReason?.Sanitize());
+            videoUrl.Sanitize(), result.FailureReason?.Sanitize(), ytDlpResult.FailureReason?.Sanitize());
 
         return TranscriptResult.Failure(
             $"YoutubeExplode: {result.FailureReason}; yt-dlp: {ytDlpResult.FailureReason}");

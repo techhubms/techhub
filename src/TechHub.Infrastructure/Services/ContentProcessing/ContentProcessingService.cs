@@ -272,7 +272,7 @@ public sealed class ContentProcessingService
                     }
                     catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
                     {
-                        Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error: {raw.ExternalUrl} — {ex.Message}"));
+                        Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error: {raw.ExternalUrl.Sanitize()} — {ex.Message.Sanitize()}"));
                         await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, hasTranscript: null, jobId: jobId, ct: ct);
                         errorCount++;
                     }
@@ -363,10 +363,10 @@ public sealed class ContentProcessingService
         try
         {
             jobId = await _jobRepo.CreateAsync("manual", ContentProcessingJobType.AdHocProcessing, ct);
-            Log(string.Create(CultureInfo.InvariantCulture, $"Ad-hoc processing: {url.Sanitize()} → {collectionName} (feed: {feedName})"));
+            Log(string.Create(CultureInfo.InvariantCulture, $"Ad-hoc processing: {url.Sanitize()} → {collectionName.Sanitize()} (feed: {feedName.Sanitize()})"));
             if (!string.IsNullOrWhiteSpace(subcollectionName))
             {
-                Log(string.Create(CultureInfo.InvariantCulture, $"  Subcollection: {subcollectionName}"));
+                Log(string.Create(CultureInfo.InvariantCulture, $"  Subcollection: {subcollectionName.Sanitize()}"));
             }
 
             // Use the title hint for logging and subcollection rules; AI extracts the real title

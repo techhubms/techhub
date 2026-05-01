@@ -84,5 +84,103 @@ public class PostgresDialectTests
         result.Should().Contain("code:*");
     }
 
+    [Fact]
+    public void TransformFullTextQuery_HyphenatedTerm_SplitsIntoSubterms()
+    {
+        // Arrange & Act
+        // PostgreSQL to_tsquery treats "-" as NOT operator, so "auto-approval" without this fix
+        // would mean "auto AND NOT approval" — returning zero results for content that has both words.
+        var result = _dialect.TransformFullTextQuery("auto-approval");
+
+        // Assert - hyphen must be treated as a word separator, not tsquery NOT operator
+        result.Should().Contain("auto:*", "hyphen-separated prefix should become individual term");
+        result.Should().Contain("approval:*", "hyphen-separated suffix should become individual term");
+        result.Should().NotContain("auto-approval", "raw hyphenated form must not pass through to tsquery");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_HyphenatedTerm_WorkflowNative_SplitsCorrectly()
+    {
+        // Arrange & Act
+        var result = _dialect.TransformFullTextQuery("workflow-native");
+
+        // Assert
+        result.Should().Contain("workflow:*");
+        result.Should().Contain("native:*");
+        result.Should().NotContain("workflow-native", "raw hyphenated form must not pass through");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_HyphenatedCompound_SplitsAndExpandsCompound()
+    {
+        // Arrange & Act - "vscode-extension": hyphen splits AND "vscode" is a known compound
+        var result = _dialect.TransformFullTextQuery("vscode-extension");
+
+        // Assert
+        result.Should().Contain("vscode:*", "original compound term preserved");
+        result.Should().Contain("code:*", "compound 'vscode' expands to 'code'");
+        result.Should().Contain("extension:*", "hyphen-separated second part included");
+        result.Should().NotContain("vscode-extension", "raw hyphenated form must not pass through");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_SlashSeparated_SplitsIntoSubterms()
+    {
+        // Arrange & Act - slashes appear in URLs and path-like tech terms (e.g., "ASP/NET")
+        var result = _dialect.TransformFullTextQuery("asp/net");
+
+        // Assert
+        result.Should().Contain("asp:*");
+        result.Should().Contain("net:*");
+        result.Should().NotContain("asp/net", "raw slash-separated form must not pass through");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_UnderscoreSeparated_SplitsIntoSubterms()
+    {
+        // Arrange & Act
+        var result = _dialect.TransformFullTextQuery("vscode_extension");
+
+        // Assert
+        result.Should().Contain("vscode:*");
+        result.Should().Contain("extension:*");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_TsqueryOperatorChars_AreStrippedNotPassedThrough()
+    {
+        // Arrange & Act - tsquery operators (&, |, !, :, *, (, )) must not reach to_tsquery raw
+        var result = _dialect.TransformFullTextQuery("copilot!");
+
+        // Assert - operator char stripped; only the word token remains
+        result.Should().Contain("copilot:*");
+        result.Should().NotContain("copilot!", "raw '!' must not appear in tsquery output");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_DuplicateTermsFromSplitting_AreDeduplicatedInOutput()
+    {
+        // Arrange & Act - "code vs-code" produces "code" twice (once standalone, once from split)
+        var result = _dialect.TransformFullTextQuery("code vs-code");
+
+        // Assert - "code:*" appears exactly once
+        var codeCount = result.Split('|')
+            .Count(segment => segment.Trim() == "code:*");
+        codeCount.Should().Be(1, "duplicate terms from splitting should be deduplicated");
+    }
+
+    [Fact]
+    public void TransformFullTextQuery_SingleCharFragments_AreFiltered()
+    {
+        // Arrange & Act - splitting "a-z" produces single-char fragments that are too broad for prefix match
+        var result = _dialect.TransformFullTextQuery("a-z");
+
+        // Assert - single-char tokens filtered; method returns original if nothing usable extracted
+        // Either returns original (no valid terms) or an empty-ish result — but must NOT contain "a:*"
+        // since "a:*" would match every word starting with 'a'
+        result.Should().NotContain("a:*", "single-character tokens are too broad for prefix matching");
+        result.Should().NotContain("z:*", "single-character tokens are too broad for prefix matching");
+    }
+
     #endregion
 }

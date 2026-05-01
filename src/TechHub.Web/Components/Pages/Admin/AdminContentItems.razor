@@ -7,6 +7,7 @@
 @using TechHub.Web.Services
 @implements IDisposable
 @inject ITechHubApiClient Api
+@inject ILogger<AdminContentItems> Logger
 @inject PersistentComponentState ApplicationState
 @inject IJSRuntime JS
 
@@ -271,8 +272,14 @@
             var feeds = await Api.GetFeedConfigsAsync();
             _feedNames = feeds.Select(f => f.Name).OrderBy(n => n).ToList();
         }
-        catch
+        catch (HttpRequestException ex)
         {
+            Logger.LogWarning(ex, "Failed to load feed names");
+            _feedNames = [];
+        }
+        catch (TaskCanceledException ex)
+        {
+            Logger.LogWarning(ex, "Failed to load feed names (timeout)");
             _feedNames = [];
         }
     }

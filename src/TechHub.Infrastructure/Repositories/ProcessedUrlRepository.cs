@@ -434,7 +434,7 @@ WHERE status = 'failed'
 
         if (!string.IsNullOrEmpty(subcollectionName))
         {
-            conditions.Add("ci.subcollection_name = @SubcollectionName");
+            conditions.Add("ci.subcollection_name ILIKE @SubcollectionName");
         }
 
         return conditions.Count > 0

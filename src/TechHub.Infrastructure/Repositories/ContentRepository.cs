@@ -1721,7 +1721,7 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         if (!string.IsNullOrWhiteSpace(subcollectionName))
         {
             whereClauses.Add("ci.subcollection_name = @SubcollectionName");
-            parameters.Add("SubcollectionName", subcollectionName);
+            parameters.Add("SubcollectionName", subcollectionName.ToLowerInvariant());
         }
 
         var whereStr = whereClauses.Count > 0
