@@ -129,12 +129,19 @@
     private bool _storedCookieCollapsed;
     private string? _storedCookieHash;
 
+    // Tracks which hash value has already been written to the cookie, so OnAfterRenderAsync
+    // only invokes JS once per unique hash even across navigation-triggered re-renders.
+    private string? _lastWrittenHash;
+
     protected override void OnParametersSet()
     {
         // Recompute active cards when SectionName changes.
         // Blazor Server reuses component instances during navigation (e.g., /ai → /cloud),
         // so OnInitializedAsync does not run again — only OnParametersSet is called.
         _activeCards = BuildActiveCards(_data, SectionName);
+        _currentHash = ComputeHash(_activeCards);
+        _hashChanged = !string.Equals(_storedCookieHash, _currentHash, StringComparison.Ordinal);
+        _isCollapsed = _hashChanged ? false : _storedCookieCollapsed;
     }
 
     protected override Task OnInitializedAsync()
@@ -166,8 +173,11 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (firstRender && _hashChanged && _currentHash != null)
+        if (_hashChanged && _currentHash != null
+            && !string.Equals(_currentHash, _lastWrittenHash, StringComparison.Ordinal))
         {
+            _lastWrittenHash = _currentHash;
+
             // Update the hash cookie so the banner doesn't auto-reopen next visit
             await JS.InvokeVoidAsync("TechHub.heroBanner.setHash", _currentHash);
 

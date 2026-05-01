@@ -1,3 +1,4 @@
+using System.Text.Json;
 using TechHub.Core.Models;
 
 namespace TechHub.Web.Services;
@@ -73,6 +74,10 @@ public class HeroBannerCacheRefreshService : BackgroundService
             catch (TaskCanceledException ex) when (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogWarning(ex, "HeroBannerCache refresh timed out, will retry in {Interval}", _refreshInterval);
+            }
+            catch (JsonException ex)
+            {
+                _logger.LogWarning(ex, "HeroBannerCache refresh received malformed response, will retry in {Interval}", _refreshInterval);
             }
         }
     }

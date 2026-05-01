@@ -175,11 +175,26 @@ public class PostgresDialectTests
         // Arrange & Act - splitting "a-z" produces single-char fragments that are too broad for prefix match
         var result = _dialect.TransformFullTextQuery("a-z");
 
-        // Assert - single-char tokens filtered; method returns original if nothing usable extracted
-        // Either returns original (no valid terms) or an empty-ish result — but must NOT contain "a:*"
-        // since "a:*" would match every word starting with 'a'
+        // Assert - single-char tokens filtered; method returns empty string (no valid terms extracted)
+        // Callers treat empty string as "no FTS query" to avoid to_tsquery syntax errors
+        result.Should().BeEmpty("single-character-only input produces no usable tokens");
         result.Should().NotContain("a:*", "single-character tokens are too broad for prefix matching");
         result.Should().NotContain("z:*", "single-character tokens are too broad for prefix matching");
+    }
+
+    [Theory]
+    [InlineData("C#")]
+    [InlineData("F#")]
+    [InlineData("!")]
+    [InlineData("#")]
+    public void TransformFullTextQuery_NoTokenizableTerms_ReturnsEmpty(string query)
+    {
+        // Arrange & Act
+        var result = _dialect.TransformFullTextQuery(query);
+
+        // Assert - inputs that produce no usable alphanumeric tokens (≥2 chars) must return empty string
+        // so callers can skip FTS entirely and avoid a to_tsquery syntax error (500 response)
+        result.Should().BeEmpty($"'{query}' contains no tokenizable terms after operator/single-char stripping");
     }
 
     #endregion

@@ -312,8 +312,14 @@ app.Use(async (context, next) =>
     if (HttpMethods.IsHead(context.Request.Method))
     {
         context.Request.Method = HttpMethods.Get;
-        await next();
-        context.Request.Method = HttpMethods.Head;
+        try
+        {
+            await next();
+        }
+        finally
+        {
+            context.Request.Method = HttpMethods.Head;
+        }
     }
     else
     {

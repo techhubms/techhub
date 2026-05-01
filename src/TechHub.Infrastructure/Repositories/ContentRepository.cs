@@ -722,14 +722,18 @@ public class ContentRepository : IContentRepository
         // Full-text search filter (restricts to content items matching search query)
         if (!string.IsNullOrWhiteSpace(request.SearchQuery) && dialect.SupportsFullTextSearch)
         {
-            var ftsJoin = dialect.GetFullTextJoinClause();
-            var ftsJoinClause = string.IsNullOrEmpty(ftsJoin) ? "" : $" {ftsJoin}";
-            var ftsWhere = dialect.GetFullTextWhereClause("searchQuery");
+            var transformedSearchQuery = dialect.TransformFullTextQuery(request.SearchQuery!);
+            if (!string.IsNullOrEmpty(transformedSearchQuery))
+            {
+                var ftsJoin = dialect.GetFullTextJoinClause();
+                var ftsJoinClause = string.IsNullOrEmpty(ftsJoin) ? "" : $" {ftsJoin}";
+                var ftsWhere = dialect.GetFullTextWhereClause("searchQuery");
 
-            filters.Add($@"(collection_name, slug) IN (
+                filters.Add($@"(collection_name, slug) IN (
                 SELECT c.collection_name, c.slug FROM content_items c{ftsJoinClause}
                 WHERE {ftsWhere})");
-            parameters.Add("searchQuery", dialect.TransformFullTextQuery(request.SearchQuery!));
+                parameters.Add("searchQuery", transformedSearchQuery);
+            }
         }
 
         var filterClause = filters.Count > 0 ? string.Join(" AND ", filters) : "";
@@ -1068,6 +1072,15 @@ public class ContentRepository : IContentRepository
         var parameters = new DynamicParameters();
 
         var hasQuery = !string.IsNullOrWhiteSpace(request.Query);
+        // Transform upfront — returns empty string when no tokenizable terms survive
+        // (e.g., "C#", "!", "#" produce no usable tokens after operator/single-char stripping).
+        // Treat an empty result as no query so callers skip FTS and avoid a to_tsquery syntax error.
+        var transformedQuery = hasQuery ? Dialect.TransformFullTextQuery(request.Query!) : null;
+        if (string.IsNullOrEmpty(transformedQuery))
+        {
+            hasQuery = false;
+        }
+
         var hasTags = request.Tags != null && request.Tags.Count > 0;
         var hasSections = request.Sections != null && request.Sections.Count > 0 &&
                           !request.Sections.Any(s => s.Equals("all", StringComparison.OrdinalIgnoreCase));
@@ -1123,7 +1136,7 @@ public class ContentRepository : IContentRepository
             {
                 sql.Append(CultureInfo.InvariantCulture, $@"
             AND {Dialect.GetFullTextWhereClause("query")}");
-                parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
+                parameters.Add("query", transformedQuery!);
                 sql.Append(CultureInfo.InvariantCulture, $@"
             ORDER BY {Dialect.GetFullTextOrderByClause("query")}, c.date_epoch DESC");
                 // LIMIT is applied here because the tag subquery skips it when search is present
@@ -1165,7 +1178,7 @@ public class ContentRepository : IContentRepository
             if (hasQuery)
             {
                 whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
-                parameters.Add("query", Dialect.TransformFullTextQuery(request.Query!));
+                parameters.Add("query", transformedQuery!);
             }
 
             if (hasSections)

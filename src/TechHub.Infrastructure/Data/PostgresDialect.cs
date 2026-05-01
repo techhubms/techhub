@@ -149,11 +149,12 @@ public class PostgresDialect : ISqlDialect
             }
         }
 
-        // If nothing usable was extracted (e.g., all single characters), return original
-        // so the caller can handle the empty/invalid case consistently
+        // If nothing usable was extracted (e.g., all single characters or operator-only input
+        // like "C#", "!", "#"), return empty string so callers can skip FTS entirely and avoid
+        // a to_tsquery syntax error that would result in a 500 response.
         if (expandedTerms.Count == 0)
         {
-            return query;
+            return string.Empty;
         }
 
         return string.Join(" | ", expandedTerms);
