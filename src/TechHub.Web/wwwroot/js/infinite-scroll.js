@@ -120,6 +120,11 @@ export function restoreScrollPosition(stateKey) {
         // silently clamped to 0 because scrollHeight hasn't updated.
         void document.documentElement.offsetHeight;
         window.scrollTo(0, y);
+
+        // Signal that scroll was manually restored. nav-helpers.js's resetPagePosition
+        // checks this to avoid clobbering the restored position when enhancedload fires
+        // after the isPopstateNavigation 100ms guard has expired.
+        window.__scrollRestoredAt = Date.now();
         return true;
     }
     return false;
