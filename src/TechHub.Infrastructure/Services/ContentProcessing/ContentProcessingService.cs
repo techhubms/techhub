@@ -270,7 +270,11 @@ public sealed class ContentProcessingService
                     {
                         throw;
                     }
-                    catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+#pragma warning disable CA1031 // Intentional: per-item pipeline errors must not abort the entire feed run.
+                    // Any unexpected failure is recorded in processed_urls so it can be reviewed in the
+                    // admin management screens and retried. The loop continues with the next URL.
+                    catch (Exception ex)
+#pragma warning restore CA1031
                     {
                         Log(string.Create(CultureInfo.InvariantCulture, $"  ✗ Error: {raw.ExternalUrl.Sanitize()} — {ex.Message.Sanitize()}"));
                         await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, ex.Message, raw.FeedName, raw.CollectionName, reason: null, hasTranscript: null, jobId: jobId, ct: ct);
@@ -302,9 +306,13 @@ public sealed class ContentProcessingService
             Log("Run cancelled.");
             await TryAbortJobAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, transcriptsSucceeded, transcriptsFailed, log.ToString());
         }
-        catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
+#pragma warning disable CA1031 // Intentional: RunAsync must never throw — all errors are recorded in the job log.
+        // This is a background service; any uncaught exception would silently crash the run without marking
+        // the job as failed. Operators rely on the management screens to detect and diagnose failures.
+        catch (Exception ex)
+#pragma warning restore CA1031
         {
-            Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message}"));
+            Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message.Sanitize()}"));
             _logger.LogError(ex, "Content processing run {JobId} failed with unhandled exception", jobId);
             await TryFailJobAsync(jobId, feedsProcessed, itemsAdded, itemsSkipped, errorCount, transcriptsSucceeded, transcriptsFailed, log.ToString(), ct);
         }
@@ -428,7 +436,7 @@ public sealed class ContentProcessingService
         }
         catch (Exception ex) when (ex is not OutOfMemoryException and not StackOverflowException)
         {
-            Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message}"));
+            Log(string.Create(CultureInfo.InvariantCulture, $"FATAL ERROR: {ex.Message.Sanitize()}"));
             _logger.LogError(ex, "Ad-hoc processing job {JobId} failed with unhandled exception", jobId);
             await TryFailJobAsync(jobId, 0, 0, 0, 1, 0, 0, log.ToString(), ct);
             throw;
@@ -543,7 +551,7 @@ public sealed class ContentProcessingService
         catch (Exception ex) when (ex is not OperationCanceledException)
         {
             _logger.LogWarning(ex, "Failed to enrich content for {Url}", raw.ExternalUrl);
-            logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message}"));
+            logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message.Sanitize()}"));
         }
 
         // 3. Track transcript outcome for YouTube items

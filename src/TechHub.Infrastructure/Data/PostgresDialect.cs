@@ -111,7 +111,7 @@ public class PostgresDialect : ISqlDialect
         // Combined with ts_rank ordering, best matches still appear first
         if (string.IsNullOrWhiteSpace(query))
         {
-            return query;
+            return string.Empty;
         }
 
         var seenTerms = new HashSet<string>(StringComparer.OrdinalIgnoreCase);

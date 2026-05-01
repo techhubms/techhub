@@ -177,6 +177,7 @@
             && !string.Equals(_currentHash, _lastWrittenHash, StringComparison.Ordinal))
         {
             _lastWrittenHash = _currentHash;
+            _storedCookieHash = _currentHash; // keep in-memory backing store in sync with JS cookie
 
             // Update the hash cookie so the banner doesn't auto-reopen next visit
             await JS.InvokeVoidAsync("TechHub.heroBanner.setHash", _currentHash);
@@ -184,6 +185,7 @@
             // If we auto-expanded due to new content, also clear the collapsed cookie
             if (!_isCollapsed)
             {
+                _storedCookieCollapsed = false; // keep in-memory backing store in sync with JS cookie
                 await JS.InvokeVoidAsync("TechHub.heroBanner.setCollapsed", false);
             }
         }
@@ -192,6 +194,7 @@
     private async Task ToggleAsync()
     {
         _isCollapsed = !_isCollapsed;
+        _storedCookieCollapsed = _isCollapsed; // keep in-memory backing store in sync with JS cookie
         await JS.InvokeVoidAsync("TechHub.heroBanner.setCollapsed", _isCollapsed);
     }
 
