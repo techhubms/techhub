@@ -744,21 +744,25 @@ function Run {
         Write-Step "Running JavaScript/Vitest tests"
         Write-Host ""
 
+        # Verify npm is available
+        if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
+            Write-Host "  npm not found on PATH — skipping JavaScript tests" -ForegroundColor Yellow
+            Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Yellow
+            return $true
+        }
+
         $packageJsonPath = Join-Path $workspaceRoot "package.json"
         if (-not (Test-Path $packageJsonPath)) {
             Write-Host "  package.json not found — skipping JavaScript tests" -ForegroundColor Yellow
             return $true
         }
 
-        # Ensure node_modules are installed
-        $nodeModulesPath = Join-Path $workspaceRoot "node_modules"
-        if (-not (Test-Path $nodeModulesPath)) {
-            Write-Info "Installing npm dependencies..."
-            $npmInstallSuccess = Invoke-ExternalCommand "npm" @("ci", "--prefix", $workspaceRoot)
-            if (-not $npmInstallSuccess) {
-                Write-Error "npm ci failed"
-                return $false
-            }
+        # Always run npm ci to ensure dependencies match package-lock.json exactly
+        Write-Info "Installing npm dependencies..."
+        $npmInstallSuccess = Invoke-ExternalCommand "npm" @("ci", "--prefix", $workspaceRoot)
+        if (-not $npmInstallSuccess) {
+            Write-Error "npm ci failed"
+            return $false
         }
 
         $success = Invoke-ExternalCommand "npm" @("test", "--prefix", $workspaceRoot)

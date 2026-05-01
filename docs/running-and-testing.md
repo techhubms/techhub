@@ -54,8 +54,8 @@ Run
 
 **Test execution order**:
 
-1. JavaScript/Vitest tests (fast, no build needed)
-2. PowerShell/Pester tests (if any)
+1. PowerShell/Pester tests (if any)
+2. JavaScript/Vitest tests (fast, no build needed)
 3. Unit and integration tests (fast, no servers needed)
 4. E2E tests (starts servers automatically)
 

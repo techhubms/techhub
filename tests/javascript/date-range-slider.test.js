@@ -56,10 +56,9 @@ describe('date-range-slider.js', () => {
         toSlider.value = '50';
         fromSlider.value = '60';
 
-        // Dispatch input event on from-slider
+        // Dispatch input event on from-slider (capture listener on container fires with e.target = fromSlider)
         const event = new Event('input', { bubbles: true });
-        Object.defineProperty(event, 'target', { value: fromSlider });
-        container.dispatchEvent(event);
+        fromSlider.dispatchEvent(event);
 
         expect(fromSlider.value).toBe('50');
     });
@@ -75,10 +74,9 @@ describe('date-range-slider.js', () => {
         fromSlider.value = '40';
         toSlider.value = '30';
 
-        // Dispatch input event on to-slider
+        // Dispatch input event on to-slider (capture listener on container fires with e.target = toSlider)
         const event = new Event('input', { bubbles: true });
-        Object.defineProperty(event, 'target', { value: toSlider });
-        container.dispatchEvent(event);
+        toSlider.dispatchEvent(event);
 
         expect(toSlider.value).toBe('40');
     });
@@ -94,8 +92,7 @@ describe('date-range-slider.js', () => {
         fromSlider.value = '50';
 
         const event = new Event('input', { bubbles: true });
-        Object.defineProperty(event, 'target', { value: fromSlider });
-        container.dispatchEvent(event);
+        fromSlider.dispatchEvent(event);
 
         // Should not clamp — equal is allowed
         expect(fromSlider.value).toBe('50');
@@ -111,8 +108,7 @@ describe('date-range-slider.js', () => {
         fromSlider.value = '25';
 
         const event = new Event('input', { bubbles: true });
-        Object.defineProperty(event, 'target', { value: fromSlider });
-        container.dispatchEvent(event);
+        fromSlider.dispatchEvent(event);
 
         // from=25, to=80, max=100 → left=25%, width=55%
         expect(fill.style.left).toBe('25%');
@@ -130,8 +126,7 @@ describe('date-range-slider.js', () => {
         toSlider.value = '60';
 
         const event = new Event('input', { bubbles: true });
-        Object.defineProperty(event, 'target', { value: toSlider });
-        container.dispatchEvent(event);
+        toSlider.dispatchEvent(event);
 
         // from=20, to=60, max=100 → left=20%, width=40%
         expect(fill.style.left).toBe('20%');
@@ -149,8 +144,7 @@ describe('date-range-slider.js', () => {
         toSlider.value = '70';
 
         const event = new Event('input', { bubbles: true });
-        Object.defineProperty(event, 'target', { value: fromSlider });
-        container.dispatchEvent(event);
+        fromSlider.dispatchEvent(event);
 
         expect(fromSlider.value).toBe('30');
         expect(toSlider.value).toBe('70');
