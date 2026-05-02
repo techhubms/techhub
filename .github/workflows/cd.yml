@@ -648,18 +648,12 @@ jobs:
               "DeployedBy": "${{ github.actor }}",
               "RunUrl": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             }
-            "Properties": {
-              "ReleaseName": "${{ needs.build-and-push.outputs.image-tag }}",
-              "Commit": "${{ github.sha }}",
-              "DeployedBy": "${{ github.actor }}",
-              "RunUrl": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-            }
-            --headers "Content-Type=application/json" \
           }
           EOF
           )
 
           az rest --method put \
+            --headers "Content-Type=application/json" \
             --url "https://management.azure.com/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-prod/providers/Microsoft.Insights/components/appi-techhub-prod/Annotations/${ANNOTATION_ID}?api-version=2015-05-01" \
             --body "$ANNOTATION_BODY"
 
