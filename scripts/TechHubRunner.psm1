@@ -741,11 +741,20 @@ function Run {
 
     # Run JavaScript/Vitest tests
     function Invoke-JavaScriptTests {
+        param(
+            [switch]$Required  # When set, npm absence is a hard failure rather than a skip
+        )
+
         Write-Step "Running JavaScript/Vitest tests"
         Write-Host ""
 
         # Verify npm is available
         if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
+            if ($Required) {
+                Write-Host "  npm not found on PATH — JavaScript tests cannot run" -ForegroundColor Red
+                Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Red
+                return $false
+            }
             Write-Host "  npm not found on PATH — skipping JavaScript tests" -ForegroundColor Yellow
             Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Yellow
             return $true
@@ -1422,7 +1431,7 @@ function Run {
 
         if ($javaScriptOnly) {
             # JavaScript-only mode: Skip all .NET build/test/server operations
-            $jsSuccess = Invoke-JavaScriptTests
+            $jsSuccess = Invoke-JavaScriptTests -Required
             if ($jsSuccess -ne $true) {
                 return $false
             }

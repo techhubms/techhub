@@ -2,6 +2,8 @@ using System.Diagnostics;
 using System.Text;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using TechHub.Core.Configuration;
 using TechHub.Core.Logging;
 using TechHub.Core.Models.ContentProcessing;
 
@@ -17,6 +19,7 @@ public sealed partial class YtDlpTranscriptService : IDisposable
 {
     private readonly ILogger<YtDlpTranscriptService> _logger;
     private readonly string _ytDlpPath;
+    private readonly string? _cookieFilePath;
     private bool _disposed;
 
     /// <summary>Maximum transcript length in characters to avoid overloading the AI prompt.</summary>
@@ -31,16 +34,48 @@ public sealed partial class YtDlpTranscriptService : IDisposable
     /// <summary>Regex to strip sound effect markers like [Music], [Applause], etc.</summary>
     private static readonly Regex _soundEffectRegex = SoundEffectRegex();
 
-    public YtDlpTranscriptService(ILogger<YtDlpTranscriptService> logger, string? ytDlpPath = null)
+    public YtDlpTranscriptService(ILogger<YtDlpTranscriptService> logger, IOptions<ContentProcessorOptions>? options = null, string? ytDlpPath = null)
     {
         ArgumentNullException.ThrowIfNull(logger);
         _logger = logger;
         _ytDlpPath = ytDlpPath ?? "yt-dlp";
+
+        var cookieString = options?.Value.YouTubeCookies;
+        if (!string.IsNullOrWhiteSpace(cookieString))
+        {
+            try
+            {
+                _cookieFilePath = WriteCookiesFile(cookieString);
+                _logger.LogDebug("yt-dlp cookies file written for transcript downloads");
+            }
+            catch (IOException ex)
+            {
+                _logger.LogWarning(ex, "Failed to write yt-dlp cookies file — proceeding without cookies");
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                _logger.LogWarning(ex, "Failed to write yt-dlp cookies file — proceeding without cookies");
+            }
+        }
     }
 
     public void Dispose()
     {
-        _disposed = true;
+        if (!_disposed)
+        {
+            _disposed = true;
+            if (_cookieFilePath is not null)
+            {
+                try
+                {
+                    File.Delete(_cookieFilePath);
+                }
+                catch (IOException ex)
+                {
+                    _logger.LogDebug(ex, "Failed to delete yt-dlp cookies temp file");
+                }
+            }
+        }
     }
 
     /// <summary>
@@ -59,7 +94,7 @@ public sealed partial class YtDlpTranscriptService : IDisposable
             tempDir = Path.Combine(Path.GetTempPath(), $"yt-dlp-{Guid.NewGuid():N}");
             Directory.CreateDirectory(tempDir);
 
-            var args = BuildYtDlpArguments(videoUrl, tempDir, timeoutSeconds);
+            var args = BuildYtDlpArguments(videoUrl, tempDir, timeoutSeconds, _cookieFilePath);
 
             _logger.LogDebug("Running yt-dlp for transcript: {Url}", videoUrl);
 
@@ -140,7 +175,7 @@ public sealed partial class YtDlpTranscriptService : IDisposable
     /// <summary>
     /// Builds the command-line arguments for yt-dlp to download subtitles only.
     /// </summary>
-    internal static string BuildYtDlpArguments(string videoUrl, string outputDir, int timeoutSeconds)
+    internal static string BuildYtDlpArguments(string videoUrl, string outputDir, int timeoutSeconds, string? cookieFilePath = null)
     {
         ArgumentNullException.ThrowIfNull(videoUrl);
         ArgumentNullException.ThrowIfNull(outputDir);
@@ -155,7 +190,8 @@ public sealed partial class YtDlpTranscriptService : IDisposable
         // --skip-download: don't download the video itself
         // --no-warnings: reduce noise in stderr
         // --socket-timeout: network timeout
-        return string.Join(' ',
+        var parts = new List<string>
+        {
             "--write-sub",
             "--write-auto-sub",
             "--sub-lang", "en",
@@ -163,8 +199,95 @@ public sealed partial class YtDlpTranscriptService : IDisposable
             "--skip-download",
             "--no-warnings",
             "--socket-timeout", timeoutSeconds.ToString(System.Globalization.CultureInfo.InvariantCulture),
-            "-o", $"\"{outputTemplate}\"",
-            $"\"{videoUrl}\"");
+        };
+
+        if (!string.IsNullOrEmpty(cookieFilePath))
+        {
+            parts.Add("--cookies");
+            parts.Add($"\"{cookieFilePath}\"");
+        }
+
+        parts.Add("-o");
+        parts.Add($"\"{outputTemplate}\"");
+        parts.Add($"\"{videoUrl}\"");
+
+        return string.Join(' ', parts);
+    }
+
+    /// <summary>
+    /// Writes the cookie string to a Netscape-format cookies file that yt-dlp can read via --cookies.
+    /// The caller is responsible for deleting the file when done.
+    /// </summary>
+    /// <param name="cookieString">
+    /// Semicolon-delimited "name=value" pairs as stored in <see cref="ContentProcessorOptions.YouTubeCookies"/>.
+    /// </param>
+    /// <returns>The path to the written temp file.</returns>
+    internal static string WriteCookiesFile(string cookieString)
+    {
+        ArgumentNullException.ThrowIfNull(cookieString);
+
+        var path = Path.Combine(Path.GetTempPath(), $"yt-dlp-cookies-{Guid.NewGuid():N}.txt");
+
+        var sb = new StringBuilder();
+        sb.AppendLine("# Netscape HTTP Cookie File");
+
+        foreach (var entry in cookieString.Split(';'))
+        {
+            if (string.IsNullOrWhiteSpace(entry))
+            {
+                continue;
+            }
+
+            var sepIdx = entry.IndexOf('=', StringComparison.Ordinal);
+            if (sepIdx <= 0)
+            {
+                continue;
+            }
+
+            var name = entry[..sepIdx].Trim();
+            var value = entry[(sepIdx + 1)..].Trim();
+
+            // Determine domain/security based on cookie name prefix conventions.
+            // __Host- cookies are host-only (no leading dot, subdomains=FALSE, always secure).
+            //   __Host-GAPS is a Google Accounts cookie, so its domain is accounts.google.com.
+            //   Other __Host- cookies are assumed to be youtube.com.
+            // __Secure- cookies require HTTPS (secure=TRUE).
+            // All others default to .youtube.com with secure=FALSE.
+            string domain;
+            string includeSubdomains;
+            string secure;
+
+            if (name.StartsWith("__Host-", StringComparison.Ordinal))
+            {
+                domain = name == "__Host-GAPS" ? "accounts.google.com" : "youtube.com";
+                includeSubdomains = "FALSE";
+                secure = "TRUE";
+            }
+            else if (name.StartsWith("__Secure-", StringComparison.Ordinal))
+            {
+                domain = ".youtube.com";
+                includeSubdomains = "TRUE";
+                secure = "TRUE";
+            }
+            else
+            {
+                domain = ".youtube.com";
+                includeSubdomains = "TRUE";
+                secure = "FALSE";
+            }
+
+            // Netscape format: domain<TAB>subdomain-flag<TAB>path<TAB>secure<TAB>expiry<TAB>name<TAB>value
+            sb.Append(domain).Append('\t')
+              .Append(includeSubdomains).Append('\t')
+              .Append('/').Append('\t')
+              .Append(secure).Append('\t')
+              .Append('0').Append('\t')
+              .Append(name).Append('\t')
+              .AppendLine(value);
+        }
+
+        File.WriteAllText(path, sb.ToString());
+        return path;
     }
 
     /// <summary>

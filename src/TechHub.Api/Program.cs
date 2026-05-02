@@ -115,11 +115,11 @@ builder.Services.AddScoped<ICustomPageDataRepository, CustomPageDataRepository>(
 builder.Services.AddScoped<IBackgroundJobSettingRepository, BackgroundJobSettingRepository>();
 
 // ─── Content Processing Pipeline ─────────────────────────────────────────────
-// Configure content processing options (fails at startup if YouTubeUserAgent is missing)
+// Configure content processing options (fails at startup if BrowserUserAgent is missing)
 builder.Services.AddOptionsWithValidateOnStart<ContentProcessorOptions>()
     .Bind(builder.Configuration.GetSection(ContentProcessorOptions.SectionName))
-    .Validate(o => !string.IsNullOrWhiteSpace(o.YouTubeUserAgent),
-        "ContentProcessor:YouTubeUserAgent must be configured. Set it in appsettings.json or Key Vault.");
+    .Validate(o => !string.IsNullOrWhiteSpace(o.BrowserUserAgent),
+        "ContentProcessor:BrowserUserAgent must be configured. Set it in appsettings.json or Key Vault.");
 builder.Services.Configure<AiCategorizationOptions>(
     builder.Configuration.GetSection(AiCategorizationOptions.SectionName));
 
@@ -135,7 +135,7 @@ builder.Services.AddHttpClient<IYouTubeTranscriptService, YouTubeTranscriptServi
     .ConfigureHttpClient((sp, client) =>
     {
         var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
-        client.DefaultRequestHeaders.UserAgent.ParseAdd(options.YouTubeUserAgent);
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(options.BrowserUserAgent);
         client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
         client.Timeout = TimeSpan.FromSeconds(options.RequestTimeoutSeconds);
     });
@@ -145,7 +145,7 @@ builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     .ConfigureHttpClient(client =>
     {
         client.DefaultRequestHeaders.UserAgent.ParseAdd(
-            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://techhub.microsoft.community)");
+            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://tech.hub.ms)");
         client.DefaultRequestHeaders.Accept.ParseAdd(
             "application/rss+xml,application/atom+xml,application/xml;q=0.9,*/*;q=0.8");
         client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
@@ -168,10 +168,10 @@ builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
         // redirects explicitly (e.g. mindbyte.nl redirects www.mindbyte.nl → mindbyte.nl over HTTP).
         AllowAutoRedirect = false
     })
-    .ConfigureHttpClient(client =>
+    .ConfigureHttpClient((sp, client) =>
     {
-        client.DefaultRequestHeaders.UserAgent.ParseAdd(
-            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://techhub.microsoft.community)");
+        var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(options.BrowserUserAgent);
         client.DefaultRequestHeaders.Accept.ParseAdd(
             "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
@@ -188,9 +188,10 @@ builder.Services.AddHttpClient<IArticleFetchClient, ArticleFetchClient>()
     });
 
 builder.Services.AddHttpClient<IYouTubeTagClient, YouTubeTagClient>()
-    .ConfigureHttpClient(client =>
+    .ConfigureHttpClient((sp, client) =>
     {
-        client.DefaultRequestHeaders.UserAgent.ParseAdd("TechHub-ContentProcessor/1.0");
+        var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
+        client.DefaultRequestHeaders.UserAgent.ParseAdd(options.BrowserUserAgent);
         client.Timeout = TimeSpan.FromSeconds(30);
     })
     .AddStandardResilienceHandler(options =>

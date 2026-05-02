@@ -25,13 +25,13 @@ public class ContentProcessorOptions
 
     /// <summary>
     /// Whether the YoutubeExplode-based transcript fetcher is enabled.
-    /// When both fetchers are enabled, YoutubeExplode is tried first with yt-dlp as fallback.
+    /// When both fetchers are enabled, YoutubeExplode serves as fallback after yt-dlp.
     /// </summary>
     public bool YouTubeExplodeEnabled { get; init; } = true;
 
     /// <summary>
     /// Whether the yt-dlp-based transcript fetcher is enabled.
-    /// When both fetchers are enabled, yt-dlp serves as fallback after YoutubeExplode.
+    /// When both fetchers are enabled, yt-dlp is tried first with YoutubeExplode as fallback.
     /// When only yt-dlp is enabled, it is used as the primary (and only) fetcher.
     /// Requires yt-dlp to be installed and available on PATH.
     /// </summary>
@@ -72,7 +72,7 @@ public class ContentProcessorOptions
     /// See <see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints"/>.
     /// Must be configured explicitly — the content processor will fail at startup if empty.
     /// </summary>
-    public required string YouTubeUserAgent { get; init; }
+    public required string BrowserUserAgent { get; init; }
 
     /// <summary>
     /// Persistent cookies to send with YouTube requests (YoutubeExplode).

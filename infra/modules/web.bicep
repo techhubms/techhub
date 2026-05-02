@@ -114,7 +114,7 @@ resource web 'Microsoft.App/containerApps@2025-07-01' = {
         external: true
         allowInsecure: false
         targetPort: 8080
-        transport: 'http'
+        transport: 'auto'
         stickySessions: {
           affinity: 'sticky'
         }

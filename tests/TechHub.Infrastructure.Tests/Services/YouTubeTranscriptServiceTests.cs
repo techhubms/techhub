@@ -245,7 +245,7 @@ public class YouTubeTranscriptServiceTests
             new Microsoft.Extensions.Logging.Abstractions.NullLogger<YtDlpTranscriptService>());
         var options = Microsoft.Extensions.Options.Options.Create(new ContentProcessorOptions
         {
-            YouTubeUserAgent = "Test/1.0",
+            BrowserUserAgent = "Test/1.0",
             YouTubeExplodeEnabled = youtubeExplodeEnabled,
             YtDlpEnabled = ytDlpEnabled,
         });
@@ -256,7 +256,7 @@ public class YouTubeTranscriptServiceTests
     }
 
     [Fact]
-    public async Task GetTranscriptAsync_BothEnabled_YoutubeExplodeSucceeds_ReturnsWithoutYtDlp()
+    public async Task GetTranscriptAsync_BothEnabled_YtDlpSucceeds_ReturnsWithoutYoutubeExplode()
     {
         // Arrange
         var service = CreateTestableService(
@@ -266,25 +266,25 @@ public class YouTubeTranscriptServiceTests
         // Act
         var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
 
-        // Assert
+        // Assert — yt-dlp is primary; YoutubeExplode should not have been attempted
         result.IsSuccess.Should().BeTrue();
-        result.Text.Should().Be("YE transcript");
+        result.Text.Should().Be("YD transcript");
     }
 
     [Fact]
-    public async Task GetTranscriptAsync_BothEnabled_YoutubeExplodeFails_FallsBackToYtDlp()
+    public async Task GetTranscriptAsync_BothEnabled_YtDlpFails_FallsBackToYoutubeExplode()
     {
         // Arrange
         var service = CreateTestableService(
-            youtubeExplodeResult: TranscriptResult.Failure("YE failed"),
-            ytDlpResult: TranscriptResult.Success("YD transcript"));
+            youtubeExplodeResult: TranscriptResult.Success("YE transcript"),
+            ytDlpResult: TranscriptResult.Failure("YD failed"));
 
         // Act
         var result = await service.GetTranscriptAsync("https://youtube.com/watch?v=test", TestContext.Current.CancellationToken);
 
-        // Assert
+        // Assert — yt-dlp failed; YoutubeExplode fallback succeeded
         result.IsSuccess.Should().BeTrue();
-        result.Text.Should().Be("YD transcript");
+        result.Text.Should().Be("YE transcript");
     }
 
     [Fact]
@@ -300,8 +300,8 @@ public class YouTubeTranscriptServiceTests
 
         // Assert
         result.IsSuccess.Should().BeFalse();
-        result.FailureReason.Should().Contain("YoutubeExplode: YE failed");
         result.FailureReason.Should().Contain("yt-dlp: YD failed");
+        result.FailureReason.Should().Contain("YoutubeExplode: YE failed");
     }
 
     [Fact]

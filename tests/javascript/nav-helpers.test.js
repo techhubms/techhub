@@ -12,6 +12,13 @@ describe('nav-helpers.js', () => {
         delete window.TechHub;
         delete window.__scrollRestoredAt;
 
+        // Stub Blazor with addEventListener so nav-helpers.js can attach enhancedload
+        // listeners immediately without entering the 200ms setInterval retry loop.
+        // Without this stub, each import registers a long-lived interval/timeout pair
+        // (200ms polling, 10s max) that keeps the Vitest process alive and makes the
+        // suite slow and flaky.
+        globalThis.Blazor = { addEventListener: vi.fn() };
+
         Object.defineProperty(window, 'scrollY', {
             value: 0,
             writable: true,
@@ -57,6 +64,7 @@ describe('nav-helpers.js', () => {
 
     afterEach(() => {
         window.requestAnimationFrame = originalRAF;
+        delete globalThis.Blazor;
         vi.restoreAllMocks();
     });
 

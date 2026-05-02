@@ -185,7 +185,7 @@ public class ContentDetailTests : PlaywrightTestBase
         // for 4xx responses, making it unreliable for testing redirect-then-404 scenarios.
         using var handler = new HttpClientHandler { AllowAutoRedirect = false };
         using var client = new HttpClient(handler);
-        var response = await client.GetAsync($"{_baseUrl}{oldFormatUrl}");
+        var response = await client.GetAsync($"{_baseUrl}{oldFormatUrl}", TestContext.Current.CancellationToken);
 
         // Assert - UrlNormalizationMiddleware must return a 301 redirect to the clean URL
         response.StatusCode.Should().Be(HttpStatusCode.MovedPermanently,
@@ -193,7 +193,11 @@ public class ContentDetailTests : PlaywrightTestBase
 
         var location = response.Headers.Location?.ToString();
         location.Should().NotBeNullOrEmpty("301 redirect must include a Location header");
-        if (string.IsNullOrEmpty(location)) return;
+        if (string.IsNullOrEmpty(location))
+        {
+            return;
+        }
+
         location.Should().NotContain("2026-01-12-",
             "the redirect target should be the clean URL without the date prefix");
         location.Should().Contain("what-quantum-safe-is-and-why-we-need-it",

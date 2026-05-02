@@ -4,20 +4,25 @@
     Rotates YouTube cookies in Key Vault for transcript fetching.
 
 .DESCRIPTION
-    Interactive script that prompts for YouTube cookie values and writes them
-    as a single semicolon-delimited secret to the shared Key Vault.
+    Rotates the YouTube cookie secret in Key Vault. Accepts a full cookie string
+    via -CookieString, or prompts for each cookie value interactively.
 
     The cookies help YoutubeExplode bypass YouTube's EU consent wall and
     appear more like a real browser. Only anonymous/consent cookies are
-    requested — no login/session cookies that could risk account bans.
+    needed — no login/session cookies that could risk account bans.
 
-    Cookies to provide (extract from browser DevTools > Application > Cookies > youtube.com):
+    Cookies prompted interactively (extract from browser DevTools > Application > Cookies > youtube.com):
+        __Host-GAPS              — Anti-abuse / identity cookie
+        __Secure-ROLLOUT_TOKEN   — Feature rollout token
+        __Secure-YNID            — YouTube identity cookie
+        GPS                      — Geographic/session cookie
+        YSC                      — YouTube session cookie
         PREF                     — Browser preferences (timezone, language)
         SOCS                     — EU consent acceptance cookie
+        VISITOR_INFO1_LIVE       — Visitor info / bandwidth detection
         VISITOR_PRIVACY_METADATA — GDPR/consent cookie (bypasses EU consent wall)
 
-    The secret is stored as:
-        techhub-<env>-youtube-cookies = "PREF=<value>;SOCS=<value>;VISITOR_PRIVACY_METADATA=<value>"
+    The secret is stored as a single semicolon-delimited string in Key Vault.
 
     After rotating, restart the Container App revision to pick up the new values.
 
@@ -31,8 +36,15 @@
 .PARAMETER KeyVaultName
     Key Vault name. Defaults to 'kv-techhub-shared'.
 
+.PARAMETER CookieString
+    Full semicolon-delimited cookie string copied from the browser (e.g. from
+    a cookie manager export). When provided, skips interactive prompts entirely.
+
 .EXAMPLE
     ./scripts/Rotate-YouTubeCookies.ps1 -Environment prod
+
+.EXAMPLE
+    ./scripts/Rotate-YouTubeCookies.ps1 -Environment prod -CookieString "PREF=f4=4000000;SOCS=CAI...;VISITOR_PRIVACY_METADATA=CgJ..."
 #>
 
 param(
@@ -41,46 +53,57 @@ param(
     [string]$Environment,
 
     [Parameter(Mandatory = $false)]
-    [string]$KeyVaultName = 'kv-techhub-shared'
+    [string]$KeyVaultName = 'kv-techhub-shared',
+
+    [Parameter(Mandatory = $false)]
+    [string]$CookieString
 )
 
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-# --- Collect cookie values interactively ---
+# --- Collect cookie values ---
 Write-Host ""
 Write-Host "YouTube Cookie Rotation" -ForegroundColor Cyan
 Write-Host "========================" -ForegroundColor Cyan
-Write-Host ""
-Write-Host "Extract these values from your browser:" -ForegroundColor Yellow
-Write-Host "  DevTools > Application > Cookies > https://www.youtube.com" -ForegroundColor Yellow
-Write-Host ""
-Write-Host "Only anonymous cookies are needed. Do NOT provide login cookies (SID, HSID, LOGIN_INFO, etc.)." -ForegroundColor Yellow
-Write-Host ""
 
-$cookieNames = @('PREF', 'SOCS', 'VISITOR_PRIVACY_METADATA')
-$cookieParts = @()
-
-foreach ($name in $cookieNames) {
-    $value = Read-Host -Prompt "  $($name)"
-    if ([string]::IsNullOrWhiteSpace($value)) {
-        Write-Host "   [SKIP] $($name) — no value provided, will be omitted." -ForegroundColor Gray
-        continue
-    }
-    $cookieParts += "$($name)=$($value.Trim())"
-}
-
-if ($cookieParts.Count -eq 0) {
-    Write-Host ""
-    Write-Host "No cookies provided. Nothing to write." -ForegroundColor Yellow
-    exit 0
-}
-
-$cookieString = $cookieParts -join ';'
 $secretName = "techhub-$($Environment)-youtube-cookies"
 
+if (-not [string]::IsNullOrWhiteSpace($CookieString)) {
+    $cookieString = $CookieString.Trim()
+    Write-Host "Using provided -CookieString." -ForegroundColor Gray
+}
+else {
+    Write-Host ""
+    Write-Host "Extract these values from your browser:" -ForegroundColor Yellow
+    Write-Host "  DevTools > Application > Cookies > https://www.youtube.com" -ForegroundColor Yellow
+    Write-Host ""
+    Write-Host "Only anonymous cookies are needed. Do NOT provide login cookies (SID, HSID, LOGIN_INFO, etc.)." -ForegroundColor Yellow
+    Write-Host ""
+
+    $cookieNames = @('__Host-GAPS', '__Secure-ROLLOUT_TOKEN', '__Secure-YNID', 'GPS', 'YSC', 'PREF', 'SOCS', 'VISITOR_INFO1_LIVE', 'VISITOR_PRIVACY_METADATA')
+    $cookieParts = @()
+
+    foreach ($name in $cookieNames) {
+        $value = Read-Host -Prompt "  $($name)"
+        if ([string]::IsNullOrWhiteSpace($value)) {
+            Write-Host "   [SKIP] $($name) — no value provided, will be omitted." -ForegroundColor Gray
+            continue
+        }
+        $cookieParts += "$($name)=$($value.Trim())"
+    }
+
+    if ($cookieParts.Count -eq 0) {
+        Write-Host ""
+        Write-Host "No cookies provided. Nothing to write." -ForegroundColor Yellow
+        exit 0
+    }
+
+    $cookieString = $cookieParts -join ';'
+}
+
 Write-Host ""
-Write-Host "Will write $($cookieParts.Count) cookie(s) to secret '$($secretName)' in '$($KeyVaultName)'." -ForegroundColor Cyan
+Write-Host "Will write secret '$($secretName)' to '$($KeyVaultName)'." -ForegroundColor Cyan
 
 # --- Detect outbound IP ---
 $currentIp = $null

@@ -296,7 +296,7 @@ public class ContentProcessingPipelineTests
     {
         using var httpClient = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false });
         httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(
-            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://techhub.microsoft.community)");
+            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://tech.hub.ms)");
         httpClient.DefaultRequestHeaders.Accept.ParseAdd(
             "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         httpClient.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
@@ -318,7 +318,7 @@ public class ContentProcessingPipelineTests
         // lets ArticleFetchClient handle HTTPS→HTTP scheme-downgrade redirects explicitly).
         using var httpClient = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false });
         httpClient.DefaultRequestHeaders.UserAgent.ParseAdd(
-            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://techhub.microsoft.community)");
+            "Mozilla/5.0 (compatible; TechHub-ContentProcessor/1.0; +https://tech.hub.ms)");
         httpClient.DefaultRequestHeaders.Accept.ParseAdd(
             "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
         httpClient.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");

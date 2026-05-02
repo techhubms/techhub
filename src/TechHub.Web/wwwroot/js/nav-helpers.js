@@ -199,7 +199,7 @@
     // Only resets on pathname changes (actual page navigation), not query/hash changes
     // (tag filters, scroll spy). The JS initializer handles re-running page scripts.
     let lastPathname = window.location.pathname;
-    let isPopstateNavigation = false;
+    let lastPopstateAt = 0; // timestamp of last popstate (back/forward); cleared on pushState (forward)
 
     function checkForPageNavigation() {
         const currentPathname = window.location.pathname;
@@ -207,8 +207,11 @@
 
         lastPathname = currentPathname;
 
-        // Don't reset on back/forward — browser handles scroll restoration
-        if (isPopstateNavigation) return;
+        // Don't reset scroll on back/forward navigation — browser handles scroll restoration.
+        // lastPopstateAt is set on every popstate (back/forward) and cleared on every pushState
+        // (forward link click), so this guard is always active for back/forward regardless of
+        // how long Blazor's enhancedload takes to fire after the popstate event.
+        if (lastPopstateAt > 0) return;
         if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
 
         resetPagePosition();
@@ -223,12 +226,9 @@
         // have navigationType === 'traverse' — we must not reset scroll for those.
         if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
 
-        // Fallback for browsers without Navigation API: don't clobber a recently
-        // restored scroll position. infinite-scroll.js's restoreScrollPosition sets
-        // __scrollRestoredAt when it calls scrollTo on back-navigation. If enhancedload
-        // fires after the 100ms isPopstateNavigation guard in checkForPageNavigation
-        // has expired AND the browser lacks the Navigation API, this prevents
-        // resetPagePosition from scrolling back to 0.
+        // Belt-and-suspenders: don't clobber a recently restored scroll position.
+        // infinite-scroll.js's restoreScrollPosition sets __scrollRestoredAt when it
+        // manually scrolls to the saved Y position on back-navigation.
         if (window.__scrollRestoredAt && Date.now() - window.__scrollRestoredAt < 2000) return;
 
         window.scrollTo(0, 0);
@@ -239,17 +239,21 @@
         });
     }
 
-    // Intercept pushState to detect Blazor Router navigation
+    // Intercept pushState to detect Blazor Router navigation.
+    // Clears lastPopstateAt so that a forward link click immediately after a back-navigation
+    // correctly triggers resetPagePosition (scroll to top) on the new forward page.
     const originalPushState = history.pushState;
     history.pushState = function (...args) {
         originalPushState.apply(this, args);
+        lastPopstateAt = 0;
         checkForPageNavigation();
     };
 
-    // Track popstate for back/forward detection
+    // Track popstate for back/forward detection.
+    // Sets lastPopstateAt so checkForPageNavigation suppresses scroll reset for the
+    // duration of the back/forward navigation (until the next pushState clears it).
     window.addEventListener('popstate', () => {
-        isPopstateNavigation = true;
-        setTimeout(() => { isPopstateNavigation = false; }, 100);
+        lastPopstateAt = Date.now();
         checkForPageNavigation();
     });
 
