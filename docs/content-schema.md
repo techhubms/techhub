@@ -270,4 +270,4 @@ These fields are no longer supported:
 ## Implementation Reference
 
 - **Content model**: [src/TechHub.Core/Models/Core/ContentItem.cs](../src/TechHub.Core/Models/Core/ContentItem.cs)
-- **Content management**: [collections/AGENTS.md](../collections/AGENTS.md)
+- **Content management**: [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md)

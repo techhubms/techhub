@@ -35,10 +35,10 @@ export async function initHighlighting() {
     const codeElements = document.querySelector('pre code');
     if (!codeElements) return;
 
-    // If already loaded, just re-highlight new elements
+    // If already loaded, just highlight new (unprocessed) elements
     if (loaded.highlightJs) {
         try {
-            hljs.highlightAll();
+            document.querySelectorAll('pre code:not([data-highlighted])').forEach(el => hljs.highlightElement(el));
         } catch (e) {
             console.warn('Failed to re-highlight:', e);
         }
@@ -369,6 +369,7 @@ window.initCustomPages = initCustomPages;
 // E2E tests poll for __scriptsReady to know when page scripts are done.
 // Components call markScriptsLoading() before and markScriptsReady() after their
 // init calls, so E2E tests can wait for a stable state.
+// markScriptsReady also triggers scroll position restoration on back/forward navigation.
 
 window.markScriptsLoading = function() {
     window.__scriptsReady = false;
@@ -377,7 +378,26 @@ window.markScriptsLoading = function() {
 };
 
 window.markScriptsReady = function() {
+    // Guard: only process once per navigation. Multiple components may call this
+    // (page component + layout fallback) — the first call does the work.
+    if (window.__scriptsReady === true) {
+        // Even if scripts are already marked ready (e.g., enhancedload hasn't fired yet
+        // to reset the flag), still attempt scroll restore. restoreScrollPosition is safe
+        // to call multiple times — it only restores on traverse navigation.
+        if (typeof window.__restoreScrollPosition === 'function') {
+            window.__restoreScrollPosition();
+        }
+        return;
+    }
+
     window.__scriptsReady = true;
     window.__scriptsLoading = false;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-ready');
+
+    // Restore scroll position on back/forward navigation.
+    // This is the single synchronization point: all rendering is complete,
+    // DOM is at its final height, so scrollTo won't be clamped.
+    if (typeof window.__restoreScrollPosition === 'function') {
+        window.__restoreScrollPosition();
+    }
 };

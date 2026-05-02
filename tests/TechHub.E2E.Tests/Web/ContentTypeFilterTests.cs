@@ -128,12 +128,18 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai/all");
         await WaitForContentTypeFilterReadyAsync();
 
-        // Act - Click the "Blogs" button to deselect it (all active → all except blogs)
+        // Act - Click the "Blogs" button to deselect it (all active → all except blogs).
+        // Assert button CLASS change (not URL) inside ClickAndExpectAsync. This is safe
+        // for toggle buttons: if the click is lost (handler not attached), the class won't
+        // change, so the retry correctly clicks again. Asserting URL here would be unsafe
+        // because re-clicking a toggle undoes the action, causing oscillation on slow CI.
         await ContentTypeButton(Blogs).ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*types=.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(ContentTypeButton(Blogs))
+                .Not.ToHaveClassAsync(new Regex("active"), new() { Timeout = 2000 }));
 
-        // Assert - URL should contain the types parameter
+        // Assert - URL should contain the types parameter (arrives in same SignalR batch as class change)
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*types=.*"));
+
         var currentUrl = Page.Url;
         currentUrl.Should().Contain("types=", "clicking a content type button should add types parameter to URL");
 
@@ -149,14 +155,14 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/ai/all");
         await WaitForContentTypeFilterReadyAsync();
 
-        // Act - Click the "Videos" button to deselect it (all active → all except videos)
+        // Act - Click the "Videos" button to deselect it (all active → all except videos).
+        // Assert button CLASS change inside ClickAndExpectAsync (safe for toggle retries).
         await ContentTypeButton(Videos).ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*types=.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(ContentTypeButton(Videos))
+                .Not.ToHaveClassAsync(new Regex("active"), new() { Timeout = 2000 }));
 
-        // Verify: Videos button should no longer have the active class
-        await Assertions.Expect(ContentTypeButton(Videos))
-            .Not.ToHaveClassAsync(new Regex("active"));
+        // Verify: URL should reflect the filter change
+        await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*types=.*"));
 
         // Assert - News should remain active
         var newsClass = await ContentTypeButton(News).GetAttributeAsync("class") ?? "";

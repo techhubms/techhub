@@ -366,13 +366,19 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Record the heading's viewport position before clicking
         var heading = firstSection.Locator("h2[id]");
         await heading.ScrollIntoViewIfNeededAsync();
+        // Wait for the heading to be stably visible — Blazor may briefly re-render
+        // the component after WaitForBlazorReadyAsync, causing BoundingBoxAsync to
+        // return null if the element isn't yet fully laid out.
+        await Assertions.Expect(heading).ToBeVisibleAsync();
         var rectBefore = await heading.BoundingBoxAsync();
 
         // Act - Click the GHES filter
         await ghesButton.ClickAsync();
 
         // Assert - The heading should still be in roughly the same viewport position
-        // scrollIntoView would snap it to the top of the viewport
+        // scrollIntoView would snap it to the top of the viewport.
+        // Wait for visible in case Blazor briefly re-renders after the click.
+        await Assertions.Expect(heading).ToBeVisibleAsync();
         var rectAfter = await heading.BoundingBoxAsync();
         rectBefore.Should().NotBeNull();
         rectAfter.Should().NotBeNull();

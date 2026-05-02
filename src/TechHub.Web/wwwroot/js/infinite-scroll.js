@@ -4,17 +4,12 @@
 
 let boundHandleScroll = null;
 let activeTriggerId = null;
-let activeStateKey = null;
 let initialPagePath = null; // pathname+search when listener attached; detects page changes
 let suppressNextTriggerCheck = false; // Anti-cascade: skip trigger check after scroll restore
 
 const TRIGGER_MARGIN_PX = 300; // Load when trigger is within 300px of viewport bottom
 
-// Persist scroll positions across component lifecycles (survives enhanced navigations).
-// Keyed by state key so each grid page remembers its own scroll position.
-window.__gridScrollPositions ??= {};
-
-export function observeScrollTrigger(helper, triggerElementId, stateKey) {
+export function observeScrollTrigger(helper, triggerElementId) {
     // Clean up previous listener if any
     dispose();
 
@@ -24,11 +19,9 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
         return;
     }
 
-    activeStateKey = stateKey || null;
-
     // Record the page path so we can detect when the user navigates away during
     // enhanced navigation. If the URL changes before our listener is removed,
-    // handleScroll must stop immediately to avoid saving a corrupted scroll position.
+    // handleScroll must stop immediately to avoid triggering loads on the wrong page.
     // Same pattern as toc-scroll-spy.js's initialPagePath guard.
     initialPagePath = window.location.pathname + window.location.search;
 
@@ -42,19 +35,11 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
         // During Blazor enhanced navigation the URL changes (pushState) before the old
         // component is disposed. nav-helpers.js resetPagePosition() scrolls to top,
         // firing a scroll event while this listener is still active. Without this guard
-        // we'd overwrite the saved position with 0, breaking back-button restoration.
+        // we'd interact with stale state.
         if (initialPagePath !== null &&
             window.location.pathname + window.location.search !== initialPagePath) {
             dispose();
             return;
-        }
-
-        // Save scroll position on every scroll for back-button restoration.
-        // This MUST happen before the trigger element check — when all content is loaded
-        // the trigger is removed from DOM, but we still need to track scroll position
-        // for back-button restoration on subsequent navigations.
-        if (activeStateKey) {
-            window.__gridScrollPositions[activeStateKey] = window.scrollY;
         }
 
         const el = document.getElementById(triggerElementId);
@@ -62,9 +47,9 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
 
         // After scroll restoration, skip the trigger check to prevent a cascade.
         // Layout differences (fonts, images, async CSS) can place the trigger just
-        // inside the margin. The flag is set by restoreScrollPosition and cleared here
-        // so only the first check (the immediate call in observeScrollTrigger) is skipped.
-        // Subsequent user-initiated scroll events proceed normally.
+        // inside the margin. The flag is set by setSuppressNextTriggerCheck and cleared
+        // here so only the first check (the immediate call in observeScrollTrigger) is
+        // skipped. Subsequent user-initiated scroll events proceed normally.
         if (suppressNextTriggerCheck) {
             suppressNextTriggerCheck = false;
             return;
@@ -101,8 +86,14 @@ export function observeScrollTrigger(helper, triggerElementId, stateKey) {
 
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 
-    // Check immediately in case trigger is already visible (e.g. short content)
-    handleScroll();
+    // Check immediately in case trigger is already visible (e.g. short content).
+    // Skip when suppression is active: setSuppressNextTriggerCheck() was called for a
+    // back-navigation restore. The suppress flag must remain set to handle the first
+    // scroll event fired by markScriptsReady's window.scrollTo() — consuming it here
+    // would allow the restore scroll to trigger LoadNextBatch and cascade.
+    if (!suppressNextTriggerCheck) {
+        handleScroll();
+    }
 }
 
 export function dispose() {
@@ -119,36 +110,17 @@ export function dispose() {
         if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-disposed:' + activeTriggerId);
         activeTriggerId = null;
     }
-    activeStateKey = null;
     initialPagePath = null;
-    // NOTE: suppressNextTriggerCheck is NOT reset here. It is set by
-    // restoreScrollPosition() and must survive through the dispose() → re-attach
-    // cycle that happens in observeScrollTrigger(). It's cleared inside handleScroll().
+    // NOTE: suppressNextTriggerCheck is NOT reset here. It survives through the
+    // dispose() → re-attach cycle that happens in observeScrollTrigger().
+    // It's cleared inside handleScroll().
 }
 
-// Restores scroll position saved for the given state key.
-// Returns true if a position was restored, false otherwise.
-export function restoreScrollPosition(stateKey) {
-    const y = window.__gridScrollPositions[stateKey];
-    if (y != null && y > 0) {
-        // Force synchronous layout recalculation before scrolling.
-        // After Blazor patches the DOM with cached content, the browser may not
-        // have calculated the new layout yet. Without this, scrollTo may be
-        // silently clamped to 0 because scrollHeight hasn't updated.
-        void document.documentElement.offsetHeight;
-        window.scrollTo(0, y);
-
-        // Signal that scroll was manually restored. nav-helpers.js's resetPagePosition
-        // checks this to avoid clobbering the restored position when enhancedload fires
-        // after the isPopstateNavigation 100ms guard has expired.
-        window.__scrollRestoredAt = Date.now();
-
-        // Suppress the next trigger check in handleScroll (the immediate call inside
-        // observeScrollTrigger) to prevent a cascade of batch loads. Layout differences
-        // between the original and restored page can place the trigger just inside the
-        // TRIGGER_MARGIN_PX threshold, causing runaway loading.
-        suppressNextTriggerCheck = true;
-        return true;
-    }
-    return false;
+// Suppress the next trigger check in handleScroll (the immediate call inside
+// observeScrollTrigger) to prevent a cascade of batch loads on back-navigation.
+// Layout differences between the original and restored page can place the trigger
+// just inside the TRIGGER_MARGIN_PX threshold, causing runaway loading.
+// Called by ContentItemsGrid after scroll position restoration.
+export function setSuppressNextTriggerCheck() {
+    suppressNextTriggerCheck = true;
 }

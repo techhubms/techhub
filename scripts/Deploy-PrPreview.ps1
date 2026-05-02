@@ -719,6 +719,7 @@ if ($apiExists) {
         --resource-group $stagingRG `
         --image $apiImage `
         --min-replicas 0 `
+        --max-replicas 1 `
         --replace-env-vars @apiEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update API Container App"
@@ -796,6 +797,7 @@ if ($webExists) {
         --resource-group $stagingRG `
         --image $webImage `
         --min-replicas 0 `
+        --max-replicas 1 `
         --replace-env-vars @webEnvVars
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update Web Container App"
@@ -812,7 +814,7 @@ else {
         --image $webImage `
         --ingress external `
         --target-port 8080 `
-        --transport http `
+        --transport auto `
         --registry-server $registryServer `
         --registry-identity $identityId `
         --cpu 0.5 `

@@ -14,6 +14,7 @@ Blazor frontend with global InteractiveServer render mode and prerendering. Cons
 
 - **Always use design tokens exclusively** — ALL colors, spacing, typography from `wwwroot/css/design-tokens.css` (see [docs/design-system.md](../../docs/design-system.md))
 - **Always use PersistentComponentState for pages with async data** — Prevents duplicate API calls during prerender→hydration
+- **Always call `markScriptsReady` in every page's `OnAfterRenderAsync`** — Required for scroll position restoration on back/forward navigation. Pages with scripts call it after init; pages without call it directly. A build-time test enforces this rule.
 - **Always progressive enhancement** — Core functionality works without JavaScript
 - **Always use TechHubApiClient for all API calls** — Typed HTTP client in `Services/TechHubApiClient.cs`
 - **Always follow semantic HTML structure** — `<main>`, `<section>`, `<article>`, `<aside>` (see [docs/page-structure.md](../../docs/page-structure.md))
@@ -94,8 +95,8 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 | File                 | Purpose                                     | Loading             |
 | -------------------- | ------------------------------------------- | ------------------- |
-| `nav-helpers.js`     | Back to top, back to previous buttons       | Static (every page) |
-| `page-scripts.js`    | CDN loading + init functions for pages      | Static ES module    |
+| `nav-helpers.js`     | Back to top, back to previous, scroll pos   | Static (every page) |
+| `page-scripts.js`    | CDN loading, init functions, scroll restore | Static ES module    |
 | `toc-scroll-spy.js`  | TOC scroll highlighting, history management | Dynamic (TOC pages) |
 | `custom-pages.js`    | Collapsible sections for SDLC/DX pages      | Dynamic             |
 | `infinite-scroll.js` | Scroll-event-based infinite pagination      | Dynamic             |

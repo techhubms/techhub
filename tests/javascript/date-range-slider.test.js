@@ -33,6 +33,17 @@ describe('date-range-slider.js', () => {
         expect(typeof mod.initClamping).toBe('function');
     });
 
+    it('should warn and return early if container is null', async () => {
+        const mod = await getModule();
+        const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+        mod.initClamping(null);
+
+        expect(warn).toHaveBeenCalledWith(
+            '[DateRangeSlider] Container element not available, skipping clamping init'
+        );
+    });
+
     it('should warn if slider elements are missing', async () => {
         const mod = await getModule();
         const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});

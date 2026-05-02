@@ -251,9 +251,14 @@ export class TocScrollSpy {
             }
         }
 
-        // If clearing active state (null), just reset and return
+        // If clearing active state (null), remove hash from URL and reset
         if (headingId === null) {
             this.currentActiveId = null;
+            // Remove hash from URL when no heading is above the detection line
+            if (window.location.hash) {
+                const cleanUrl = `${window.location.pathname}${window.location.search}`;
+                history.replaceState(null, '', cleanUrl);
+            }
             return;
         }
 

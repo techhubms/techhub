@@ -3,6 +3,7 @@
 @using TechHub.Web.Services
 @inject IWebHostEnvironment Environment
 @inject ErrorService ErrorService
+@inject IJSRuntime JS
 
 <PageTitle>Error</PageTitle>
 
@@ -94,6 +95,11 @@
     private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     private Exception? LastException { get; set; }
     private bool IsDevelopment => Environment.IsDevelopment();
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("markScriptsReady");
+    }
 
     protected override void OnInitialized()
     {

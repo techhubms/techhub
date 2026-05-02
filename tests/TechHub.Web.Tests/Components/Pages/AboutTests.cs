@@ -118,6 +118,8 @@ public class AboutTests : BunitContext
 
     private void RegisterBranding(string host, string? deployImageTag = null)
     {
+        JSInterop.SetupVoid("markScriptsReady");
+
         var httpContext = new DefaultHttpContext();
         httpContext.Request.Host = new HostString(host);
         var accessor = new HttpContextAccessor { HttpContext = httpContext };

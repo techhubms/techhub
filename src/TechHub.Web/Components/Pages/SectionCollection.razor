@@ -5,6 +5,7 @@
 
 @inject SectionCache SectionCache
 @inject NavigationManager Navigation
+@inject IJSRuntime JS
 
 <PageTitle>@PageTitleText</PageTitle>
 
@@ -158,6 +159,11 @@
     private string PageTitleText => IsAll
         ? $"{section?.Title ?? SectionName} - Tech Hub"
         : $"{collection?.Title ?? CollectionName} - {section?.Title ?? SectionName} - Tech Hub";
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("markScriptsReady");
+    }
 
     protected override void OnInitialized()
     {

@@ -35,13 +35,19 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 - `[BRANCHNAME]`: Current branch name (from step 2 analysis, updated in step 7 if branch operations performed)
 - Update this section when variables change
 
+**🚨 ABSOLUTE CRITICAL REQUIREMENT 11**: **ALWAYS trust git CLI output over any VS Code metadata, context attachments, or workspace information.** VS Code may provide stale or incorrect branch/repository information in its context. The `git` CLI is the single source of truth for all branch names, status, and repository state throughout this entire workflow. If there is ever a conflict between what VS Code shows and what a git command returns, the git command wins — always.
+
 **🚨 CRITICAL PROMPT SCOPE**: All instructions, restrictions, and requirements in this prompt file ONLY apply when this specific prompt is being actively executed via the `/pushall` command or equivalent prompt invocation. These rules do NOT apply when editing, reviewing, or working with this file outside of prompt execution context. When working with this file in any other capacity (editing, debugging, documentation, etc.), treat it as a normal markdown file and ignore all workflow-specific instructions.
 
 ## Step-by-Step Git Commit, Rebase, Conflict Resolution, and Push Workflow
 
-1. **MANDATORY AND CRITICAL, DO NOT SKIP**: This file contains 10 absolute critical requirements at the top. Make an optimized list for yourself without losing ANY instruction or the intent behind it and tell me you did this, without showing me the list. Use this checklist internally to validate you did everything correct. These are your 10 commandments.
+1. **MANDATORY AND CRITICAL, DO NOT SKIP**: This file contains 11 absolute critical requirements at the top. Make an optimized list for yourself without losing ANY instruction or the intent behind it and tell me you did this, without showing me the list. Use this checklist internally to validate you did everything correct. These are your 11 commandments.
 
 2. **Check current branch:**
+
+    First, refresh VS Code's git context by running the `git.refresh` VS Code command via the `run_vscode_command` tool with `commandId: git.refresh`. This ensures VS Code has the latest git state.
+
+    Then run this command to get the current branch name:
 
     ```pwsh
     git branch --show-current
@@ -59,8 +65,9 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
 4. **Handle main branch protection:** You are on the main branch and need to handle branch protection.
 
-    First, create a proper branch name based on the changes in the current workspace:
-    - Analyze the changes to create a descriptive branch name (e.g., "feature/update-documentation", "fix/powershell-scripts", "enhancement/ui-improvements")
+    First, examine the uncommitted changes using git to understand what was changed. Look inside the repository and analyze the actual changes - not only the filenames! When you have a clear understanding of the changes, create a proper branch name that describes the changes and their intent. Use the following guidelines to create the branch name:
+
+    - Create a descriptive branch name (e.g., "feature/update-documentation", "fix/powershell-scripts", "enhancement/ui-improvements")
     - Use kebab-case format with appropriate prefix (feature/, fix/, enhancement/, etc.)
     - Keep the name concise but descriptive of the main changes
 
@@ -304,7 +311,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
     **CHECKPOINT**: Based on exit code, state either:
     - **Exit code 0 (user did not abort):** "✅ Step 16 completed successfully. User wants to proceed with PR operations. Moving to Step 17."
-    - **Exit code 1 (user aborted):** "✅ Step 16 completed successfully. User aborted PR operations. Moving to Step 22."
+    - **Exit code 1 (user aborted):** "✅ Step 16 completed successfully. User aborted PR operations. Moving to Step 21."
 
 17. **PREPARE for data analysis:**
 
@@ -452,36 +459,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
     **CHECKPOINT**: "✅ Step 20 completed successfully. PR created/updated with prepared title and description. Moving to Step 21."
 
-21. **Request Copilot review:**
-
-    First, check if Copilot has already reviewed the PR:
-
-    ```pwsh
-    gh pr view [PR_NUMBER] --json reviews --jq '.reviews[] | select(.author.login == "copilot-pull-request-reviewer") | .state'
-    ```
-
-    **If no Copilot review exists:**
-
-    ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, a Copilot code review will be requested for this pull request" -Delay 5
-    ```
-
-    **If Copilot has already reviewed:**
-
-    ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "Copilot already reviewed this pull request. If you do nothing, a new review will be requested." -Delay 10
-    ```
-
-    **CHECKPOINT**: Based on exit code, state either:
-    - **Exit code 0 (user did not abort):** Request a Copilot review using the following command, then state: "✅ Step 21 completed successfully. Copilot review requested. Moving to Step 22."
-
-      ```pwsh
-      gh pr edit [PR_NUMBER] --add-reviewer "copilot-pull-request-reviewer"
-      ```
-
-    - **Exit code 1 (user aborted):** "✅ Step 21 completed successfully. User skipped Copilot review. Moving to Step 22."
-
-22. **Workflow completion and final summary**
+21. **Workflow completion and final summary**
 
 This step provides the final workflow summary and completion status.
 
@@ -502,7 +480,7 @@ c. **Include relevant links** (if PR was created/updated):
 
 - Link to the pull request with descriptive text
 
-**Checkpoint:** ✅ Step 22 completed successfully. Workflow execution summary provided and pushall process is complete.
+**Checkpoint:** ✅ Step 21 completed successfully. Workflow execution summary provided and pushall process is complete.
 
 ## Branch Rebase Instructions
 

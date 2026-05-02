@@ -633,6 +633,30 @@ jobs:
           echo "**Deployed By**: ${{ github.actor }}" >> $GITHUB_STEP_SUMMARY
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
+      - name: Create Application Insights release annotation
+        shell: bash
+        run: |
+          ANNOTATION_ID="${{ github.run_id }}"
+          ANNOTATION_BODY=$(cat <<EOF
+          {
+            "Id": "${ANNOTATION_ID}",
+            "AnnotationName": "Release ${{ needs.build-and-push.outputs.image-tag }}",
+            "EventTime": "$(date -u +%Y-%m-%dT%H:%M:%S.0000000Z)",
+            "Properties": {
+              "ReleaseName": "${{ needs.build-and-push.outputs.image-tag }}",
+              "Commit": "${{ github.sha }}",
+              "DeployedBy": "${{ github.actor }}",
+              "RunUrl": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }
+          }
+          EOF
+          )
+
+          az rest --method put \
+            --headers "Content-Type=application/json" \
+            --url "https://management.azure.com/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-prod/providers/Microsoft.Insights/components/appi-techhub-prod/Annotations/${ANNOTATION_ID}?api-version=2015-05-01" \
+            --body "$ANNOTATION_BODY"
+
   # ──────────────────────────────────────────────
   # Production E2E tests — run after deployment
   # Uses the same E2E test suite as PR preview environments,

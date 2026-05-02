@@ -64,6 +64,8 @@ public class AuthorsTests : BunitContext
 
         AddBunitPersistentComponentState();
         SetRendererInfo(new RendererInfo("Server", true));
+
+        JSInterop.SetupVoid("markScriptsReady");
     }
 
     [Fact]

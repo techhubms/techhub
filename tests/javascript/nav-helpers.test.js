@@ -11,6 +11,8 @@ describe('nav-helpers.js', () => {
 
         delete window.TechHub;
         delete window.__scrollRestoredAt;
+        delete window.__savedScrollPositions;
+        delete window.__restoreScrollPosition;
 
         // Stub Blazor with addEventListener so nav-helpers.js can attach enhancedload
         // listeners immediately without entering the 200ms setInterval retry loop.
@@ -31,7 +33,17 @@ describe('nav-helpers.js', () => {
             configurable: true,
         });
 
-        window.scrollTo = vi.fn();
+        window.scrollTo = vi.fn((_x, y) => {
+            // Simulate browser behavior: scrollTo updates scrollY when page is tall enough
+            Object.defineProperty(window, 'scrollY', { value: y, writable: true, configurable: true });
+        });
+
+        // Make the DOM "tall enough" so scroll restore logic doesn't retry infinitely.
+        Object.defineProperty(document.documentElement, 'scrollHeight', {
+            value: 10000,
+            writable: true,
+            configurable: true,
+        });
 
         // Mock history
         window.history.replaceState = vi.fn();
@@ -229,6 +241,167 @@ describe('nav-helpers.js', () => {
             expect(window.history.replaceState).toHaveBeenCalledWith(
                 null, '', '/all'
             );
+        });
+    });
+
+    describe('scroll position management', () => {
+        it('should save scroll position on scroll events', async () => {
+            await import(MODULE_PATH);
+
+            Object.defineProperty(window, 'scrollY', { value: 500, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scroll'));
+
+            expect(window.__savedScrollPositions['/all']).toBe(500);
+        });
+
+        it('should save position keyed by pathname + search', async () => {
+            await import(MODULE_PATH);
+
+            Object.defineProperty(window, 'scrollY', { value: 300, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scroll'));
+
+            // Change location and scroll again
+            window.location.pathname = '/github-copilot';
+            window.location.search = '?tags=news';
+
+            Object.defineProperty(window, 'scrollY', { value: 700, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scroll'));
+
+            expect(window.__savedScrollPositions['/all']).toBe(300);
+            expect(window.__savedScrollPositions['/github-copilot?tags=news']).toBe(700);
+        });
+
+        it('should expose __restoreScrollPosition globally', async () => {
+            await import(MODULE_PATH);
+
+            expect(typeof window.__restoreScrollPosition).toBe('function');
+        });
+
+        it('should restore scroll position on traverse navigation', async () => {
+            // Set up navigation API to indicate traverse
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            await import(MODULE_PATH);
+
+            // Pre-save a position
+            window.__savedScrollPositions['/all'] = 450;
+
+            const result = window.__restoreScrollPosition();
+
+            expect(result).toBe(true);
+            expect(window.scrollTo).toHaveBeenCalledWith(0, 450);
+        });
+
+        it('should NOT restore on push navigation', async () => {
+            // No traverse flag, no popstate
+            window.navigation = {
+                currentEntry: { navigationType: 'push' },
+            };
+
+            await import(MODULE_PATH);
+
+            window.__savedScrollPositions['/all'] = 450;
+
+            const result = window.__restoreScrollPosition();
+
+            expect(result).toBe(false);
+            // scrollTo may have been called by init logic, but not with 450
+            const calls = window.scrollTo.mock.calls;
+            const hasRestoredTo450 = calls.some(c => c[0] === 0 && c[1] === 450);
+            expect(hasRestoredTo450).toBe(false);
+        });
+
+        it('should return false when no saved position exists', async () => {
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            await import(MODULE_PATH);
+
+            const result = window.__restoreScrollPosition();
+
+            expect(result).toBe(false);
+        });
+
+        it('should set __scrollRestoredAt after restoring', async () => {
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            await import(MODULE_PATH);
+
+            window.__savedScrollPositions['/all'] = 600;
+            const before = Date.now();
+
+            window.__restoreScrollPosition();
+
+            expect(window.__scrollRestoredAt).toBeGreaterThanOrEqual(before);
+            expect(window.__scrollRestoredAt).toBeLessThanOrEqual(Date.now());
+        });
+
+        it('should restore via popstate flag when Navigation API unavailable', async () => {
+            // No Navigation API
+            delete window.navigation;
+
+            await import(MODULE_PATH);
+
+            // Simulate popstate (back button)
+            window.dispatchEvent(new Event('popstate'));
+
+            window.__savedScrollPositions['/all'] = 800;
+
+            const result = window.__restoreScrollPosition();
+
+            expect(result).toBe(true);
+            expect(window.scrollTo).toHaveBeenCalledWith(0, 800);
+        });
+
+        it('should defer scroll when page is too short and retry after DOM mutation', async () => {
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            // Page starts too short — scrollHeight < target
+            Object.defineProperty(document.documentElement, 'scrollHeight', {
+                value: 200,
+                writable: true,
+                configurable: true,
+            });
+            Object.defineProperty(window, 'innerHeight', {
+                value: 800,
+                writable: true,
+                configurable: true,
+            });
+
+            await import(MODULE_PATH);
+
+            window.__savedScrollPositions['/all'] = 2000;
+            window.scrollTo.mockClear();
+
+            const result = window.__restoreScrollPosition();
+
+            // Should return true (deferred restore scheduled) but NOT scroll yet
+            expect(result).toBe(true);
+            expect(window.scrollTo).not.toHaveBeenCalled();
+
+            // Simulate DOM growing tall enough
+            Object.defineProperty(document.documentElement, 'scrollHeight', {
+                value: 5000,
+                writable: true,
+                configurable: true,
+            });
+
+            // Trigger a DOM mutation (MutationObserver fires)
+            const el = document.createElement('div');
+            document.body.appendChild(el);
+
+            // Wait for the 50ms debounce
+            await new Promise(r => setTimeout(r, 60));
+
+            expect(window.scrollTo).toHaveBeenCalledWith(0, 2000);
+            expect(window.__scrollRestoredAt).toBeGreaterThan(0);
         });
     });
 });

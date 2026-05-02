@@ -78,3 +78,16 @@ WHERE (collection_name, slug) IN (
 ### Schema Location
 
 See [src/TechHub.Infrastructure/Data/Migrations/postgres/](../src/TechHub.Infrastructure/Data/Migrations/postgres/) for complete schema.
+
+## Database Statistics
+
+The admin UI includes a **Statistics** page (`/admin/statistics`) powered by `DatabaseStatisticsService`. It queries PostgreSQL system views to surface:
+
+- **Content counts** — total items, broken down by collection and by section
+- **Tag statistics** — unique tag count and total tag words
+- **Table sizes** — disk usage for each table (`pg_total_relation_size`)
+- **Processing stats** — recent content processing job history
+- **Slow queries** — queries logged above the configured threshold (from `pg_stat_statements`)
+- **Latest items** — most recently synced content items
+
+All timestamps are reported in `Europe/Brussels` timezone.

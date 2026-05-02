@@ -61,15 +61,15 @@ Files in `wwwroot/js/`:
 
 | File | Purpose | Loading | Format |
 |------|---------|---------|--------|
-| `nav-helpers.js` | Back to top, back to previous buttons, keyboard nav detection | Static (every page) | IIFE |
+| `nav-helpers.js` | Back to top, back to previous buttons, keyboard nav detection, scroll position management | Static (every page) | IIFE |
 | `sidebar-toggle.js` | Desktop sidebar collapse/expand with cookie persistence | Static (every page) | Script |
 | `mobile-nav.js` | Mobile menu scroll lock and Escape key handler | Static (via Blazor JS interop) | Script |
 | `hero-banner.js` | Hero banner collapse/expand with cookie persistence | Static (via Blazor JS interop) | IIFE |
-| `infinite-scroll.js` | Scroll-based infinite loading trigger with position memory | Dynamic (via Blazor JS interop) | ES Module |
+| `infinite-scroll.js` | Scroll-based infinite loading trigger | Dynamic (via Blazor JS interop) | ES Module |
 | `toc-scroll-spy.js` | TOC scroll highlighting, history management | Dynamic (pages with TOC) | ES Module |
 | `custom-pages.js` | Collapsible sections for SDLC/DX pages, feature filters | Dynamic (pages with `[data-collapsible]`) | ES Module |
 | `date-range-slider.js` | Client-side slider clamping (prevents handles crossing) | Dynamic (via Blazor JS interop) | ES Module |
-| `page-scripts.js` | Orchestrator for CDN loading (Highlight.js, Mermaid) and page init | Static (every page) | ES Module |
+| `page-scripts.js` | Orchestrator for CDN loading (Highlight.js, Mermaid), page init, and scroll restore trigger | Static (every page) | ES Module |
 
 Special file in `wwwroot/`:
 
@@ -125,6 +125,19 @@ Features:
 - Blazor enhanced navigation support (pageshow event + MutationObserver)
 - Proper cleanup and re-initialization after page navigation
 - CSS fade-in/fade-out transitions
+
+### Scroll Position Management
+
+`nav-helpers.js` also owns centralized scroll position save/restore for all pages:
+
+- **Save**: On every scroll event (debounced via boolean flag), saves `window.scrollY` keyed by `pathname + search`
+- **Restore**: On back/forward navigation (traverse), restores the saved position after `markScriptsReady` signals that all rendering is complete
+- **Retry**: If the page isn't tall enough yet (slow network / Blazor circuit still streaming content), a MutationObserver watches for DOM changes with a 50ms debounce and 1s hard deadline
+- **Forward navigation**: Scrolls to top via `resetPagePosition()`
+
+Detection uses the Navigation API (`currentEntry.navigationType === 'traverse'`) with a `popstate` fallback for browsers without it. Browser-native scroll restoration is disabled (`history.scrollRestoration = 'manual'`) in `TechHub.Web.lib.module.js` to prevent races with Blazor's enhanced navigation.
+
+The restore is triggered by `markScriptsReady()` (in `page-scripts.js`) calling `window.__restoreScrollPosition()`. Every page **must** call `markScriptsReady` in its `OnAfterRenderAsync` — this is enforced by a convention test (`PageMarkScriptsReadyConventionTests`).
 
 ## TOC Scroll-Spy
 

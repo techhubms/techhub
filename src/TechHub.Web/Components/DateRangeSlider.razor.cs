@@ -126,12 +126,43 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
 
                 if (_jsModule is not null)
                 {
-                    await _jsModule.InvokeVoidAsync("initClamping", _sliderContainer);
+                    await InitClampingWithRetryAsync();
                 }
             }
             catch (JSDisconnectedException)
             {
                 // Circuit disconnected, safe to ignore
+            }
+        }
+    }
+
+    // Note: the JS null guard in initClamping returns early (without throwing) when
+    // the container element is missing, so this retry only activates for other
+    // unexpected "Cannot read properties of null" errors in the JS body.
+    // The outer null guard covers the most common transient timing case.
+    private async Task InitClampingWithRetryAsync()
+    {
+        const int MaxAttempts = 3;
+        const int DelayMs = 100;
+
+        for (var attempt = 1; attempt <= MaxAttempts; attempt++)
+        {
+            try
+            {
+                await _jsModule!.InvokeVoidAsync("initClamping", _sliderContainer);
+                return;
+            }
+            catch (JSException ex) when (ex.Message.Contains("Cannot read properties of null", StringComparison.Ordinal))
+            {
+                if (attempt == MaxAttempts)
+                {
+                    // Still failing after retries; server-side Math.Clamp is the fallback.
+                    Logger.LogDebug("DateRangeSlider JS init failed after {Attempts} attempts", MaxAttempts);
+                    return;
+                }
+
+                Logger.LogDebug("DateRangeSlider JS init attempt {Attempt} failed, retrying", attempt);
+                await Task.Delay(DelayMs * attempt);
             }
         }
     }

@@ -46,6 +46,8 @@ public class SectionCollectionTests : BunitContext
         Services.AddSingleton(sectionCache);
 
         SetRendererInfo(new RendererInfo("Server", true));
+
+        JSInterop.SetupVoid("markScriptsReady");
     }
 
     /// <summary>

@@ -200,6 +200,11 @@
     // Feed name dropdown options
     private IReadOnlyList<string>? _feedNames;
 
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("markScriptsReady");
+    }
+
     protected override async Task OnInitializedAsync()
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);

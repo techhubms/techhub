@@ -1,6 +1,6 @@
 /**
  * Navigation Helpers - Back to Top, Back to Previous Page, Hash Link Fixes,
- * and Keyboard Navigation Detection
+ * Keyboard Navigation Detection, and Scroll Position Management
  * 
  * Provides sticky bottom buttons for:
  * - Back to top: Smooth scroll to top of page
@@ -16,6 +16,12 @@
  * from pointer/touch input. Focus outlines are only shown in keyboard-nav mode
  * via CSS scoping. This prevents lingering focus rings on mobile after tapping
  * buttons, while preserving WCAG-compliant keyboard accessibility.
+ * 
+ * Scroll Position Management:
+ * Saves scroll position for every page on scroll events (throttled via rAF).
+ * On back/forward navigation (traverse), restores the saved position after
+ * markScriptsReady fires (signaling that all rendering is complete).
+ * On forward navigation (push), scrolls to top.
  * 
  * Buttons appear when user scrolls down (300px threshold) and are hidden at top.
  * 
@@ -201,6 +207,117 @@
     let lastPathname = window.location.pathname;
     let lastPopstateAt = 0; // timestamp of last popstate (back/forward); cleared on pushState (forward)
 
+    // ========================================================================
+    // Scroll Position Management
+    // Saves scroll position per page (pathname + search) on every scroll (rAF throttled).
+    // On back/forward navigation (traverse), restores position after markScriptsReady.
+    // On forward navigation (push), scrolls to top.
+    // ========================================================================
+    window.__savedScrollPositions ??= {};
+    let scrollSaveScheduled = false;
+
+    function getScrollKey() {
+        return window.location.pathname + window.location.search;
+    }
+
+    function saveScrollPosition() {
+        // Saves unconditionally. Post-restore scroll events save the correct restored
+        // position, which is intentional and harmless.
+        window.__savedScrollPositions[getScrollKey()] = window.scrollY;
+    }
+
+    // Throttled scroll save: fires at most once per animation frame.
+    // This feels natural (saves ~60 times/sec max during active scroll) without
+    // hammering the system. Passive listener ensures no jank.
+    function onScrollSave() {
+        if (scrollSaveScheduled) return;
+        scrollSaveScheduled = true;
+        window.requestAnimationFrame(() => {
+            scrollSaveScheduled = false;
+            saveScrollPosition();
+        });
+    }
+
+    window.addEventListener('scroll', onScrollSave, { passive: true });
+
+    /**
+     * Restore scroll position for the current page.
+     * Called by markScriptsReady (via window.__restoreScrollPosition) when all
+     * rendering is complete. Only restores on back/forward navigation (traverse).
+     * Uses retry logic: if the DOM isn't tall enough yet (e.g., Blazor circuit
+     * still patching content under slow network), waits for DOM mutations via
+     * MutationObserver (50ms debounce) and force-scrolls after a 1s timeout.
+     * Returns true if position was restored or retry scheduled, false otherwise.
+     */
+    function restoreScrollPosition() {
+        // Only restore on back/forward (traverse) navigation.
+        // Forward navigations (link clicks / pushState) should start at top.
+        const isTraversal = window.navigation?.currentEntry?.navigationType === 'traverse'
+            || lastPopstateAt > 0;
+        if (!isTraversal) return false;
+
+        const key = getScrollKey();
+        const y = window.__savedScrollPositions[key];
+        if (y == null || y <= 0) return false;
+
+        // Check if the page is already tall enough to scroll to the target.
+        void document.documentElement.offsetHeight;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        if (maxScroll >= y - 5) {
+            // Page is tall enough — scroll immediately.
+            window.scrollTo(0, y);
+            window.__scrollRestoredAt = Date.now();
+            return true;
+        }
+
+        // Page isn't tall enough yet (content still arriving via Blazor circuit).
+        // Use MutationObserver to detect when DOM changes settle, then scroll.
+        const deadline = Date.now() + 1000;
+        let debounceTimer = null;
+        const observer = new MutationObserver(() => {
+            if (debounceTimer != null) clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(tryScroll, 50);
+        });
+
+        function tryScroll() {
+            void document.documentElement.offsetHeight;
+            const currentMax = document.documentElement.scrollHeight - window.innerHeight;
+
+            if (currentMax >= y - 5) {
+                // Page is now tall enough — scroll and stop observing.
+                cleanup();
+                window.scrollTo(0, y);
+                window.__scrollRestoredAt = Date.now();
+            } else if (Date.now() >= deadline) {
+                // Deadline reached — scroll to best available position.
+                cleanup();
+                window.scrollTo(0, y);
+                window.__scrollRestoredAt = Date.now();
+            }
+            // Otherwise keep observing — more mutations will come.
+        }
+
+        function cleanup() {
+            observer.disconnect();
+            if (debounceTimer != null) clearTimeout(debounceTimer);
+            if (deadlineTimer != null) clearTimeout(deadlineTimer);
+        }
+
+        // Safety net: force scroll after 1s even if no mutations fire.
+        const deadlineTimer = setTimeout(() => {
+            cleanup();
+            window.scrollTo(0, y);
+            window.__scrollRestoredAt = Date.now();
+        }, 1000);
+
+        observer.observe(document.body, { childList: true, subtree: true });
+        return true;
+    }
+
+    // Expose for markScriptsReady to call
+    window.__restoreScrollPosition = restoreScrollPosition;
+
     function checkForPageNavigation() {
         const currentPathname = window.location.pathname;
         if (currentPathname === lastPathname) return;
@@ -227,8 +344,9 @@
         if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
 
         // Belt-and-suspenders: don't clobber a recently restored scroll position.
-        // infinite-scroll.js's restoreScrollPosition sets __scrollRestoredAt when it
-        // manually scrolls to the saved Y position on back-navigation.
+        // restoreScrollPosition sets __scrollRestoredAt on back-navigation.
+        // This guards against the edge case where Blazor fires enhancedload *after* the
+        // lastPopstateAt guard has expired, which would otherwise scroll back to top.
         if (window.__scrollRestoredAt && Date.now() - window.__scrollRestoredAt < 2000) return;
 
         window.scrollTo(0, 0);
@@ -239,6 +357,56 @@
         });
     }
 
+    // ========================================================================
+    // Navigation Spinner
+    // Shows a spinner during Blazor enhanced navigation (link click → page load).
+    // A 500ms JS delay + 150ms CSS fade-in means it only appears for slow loads,
+    // avoiding a flash on fast networks.
+    //
+    // Hide order (first one wins):
+    //   1. markScriptsReady — fired by OnAfterRenderAsync after the circuit has
+    //      fully rendered the new page (the authoritative signal).
+    //   2. enhancedload — fired earlier (after DOM patch) as a fallback for pages
+    //      that don't call markScriptsReady (e.g., simple pages with no scripts).
+    //   3. 10s safety net.
+    // ========================================================================
+    const NAV_SPINNER_ID = 'nav-spinner';
+    const NAV_SPINNER_SHOW_DELAY_MS = 500;  // wait before showing — hides on fast networks
+    const NAV_SPINNER_SAFETY_MS = 10_000;   // force-hide if nothing else does it
+    let navSpinnerShowTimeout = null;
+    let navSpinnerSafetyTimeout = null;
+
+    function createNavSpinner() {
+        if (document.getElementById(NAV_SPINNER_ID)) return;
+        const el = document.createElement('div');
+        el.id = NAV_SPINNER_ID;
+        el.className = 'nav-spinner';
+        el.setAttribute('role', 'status');
+        el.setAttribute('aria-label', 'Loading page');
+        el.setAttribute('aria-live', 'polite');
+        document.body.appendChild(el);
+    }
+
+    function showNavSpinner() {
+        createNavSpinner();
+        // Delay so fast navigations never flash the spinner
+        navSpinnerShowTimeout = setTimeout(() => {
+            navSpinnerShowTimeout = null;
+            const el = document.getElementById(NAV_SPINNER_ID);
+            if (el) el.classList.add('active');
+        }, NAV_SPINNER_SHOW_DELAY_MS);
+        // Safety net: force-hide after 10s if no other signal fires
+        if (navSpinnerSafetyTimeout) clearTimeout(navSpinnerSafetyTimeout);
+        navSpinnerSafetyTimeout = setTimeout(hideNavSpinner, NAV_SPINNER_SAFETY_MS);
+    }
+
+    function hideNavSpinner() {
+        if (navSpinnerShowTimeout) { clearTimeout(navSpinnerShowTimeout); navSpinnerShowTimeout = null; }
+        if (navSpinnerSafetyTimeout) { clearTimeout(navSpinnerSafetyTimeout); navSpinnerSafetyTimeout = null; }
+        const el = document.getElementById(NAV_SPINNER_ID);
+        if (el) el.classList.remove('active');
+    }
+
     // Intercept pushState to detect Blazor Router navigation.
     // Clears lastPopstateAt so that a forward link click immediately after a back-navigation
     // correctly triggers resetPagePosition (scroll to top) on the new forward page.
@@ -246,6 +414,7 @@
     history.pushState = function (...args) {
         originalPushState.apply(this, args);
         lastPopstateAt = 0;
+        showNavSpinner();
         checkForPageNavigation();
     };
 
@@ -257,17 +426,52 @@
         checkForPageNavigation();
     });
 
+    // Patch markScriptsReady to also hide the spinner.
+    // This is the authoritative 'page fully rendered' signal — called from
+    // OnAfterRenderAsync after the Blazor circuit has completed its render.
+    // We wrap rather than replace so the existing scroll-restore logic is unaffected.
+    function patchMarkScriptsReady() {
+        const original = window.markScriptsReady;
+        window.markScriptsReady = function () {
+            hideNavSpinner();
+            if (typeof original === 'function') original();
+        };
+    }
+
+    // markScriptsReady is defined in page-scripts.js which loads as a module.
+    // Modules execute after the parser finishes, so it may not exist yet when
+    // nav-helpers.js (defer) runs. Poll briefly until it appears.
+    function tryPatchMarkScriptsReady() {
+        if (typeof window.markScriptsReady === 'function') {
+            patchMarkScriptsReady();
+        } else {
+            const id = setInterval(() => {
+                if (typeof window.markScriptsReady === 'function') {
+                    clearInterval(id);
+                    patchMarkScriptsReady();
+                }
+            }, 50);
+            setTimeout(() => clearInterval(id), 5000);
+        }
+    }
+    tryPatchMarkScriptsReady();
+
     // Also listen for enhancedload if Blazor SSR is active
     function trySetupBlazorListeners() {
         if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {
             Blazor.addEventListener('enhancedload', init);
             Blazor.addEventListener('enhancedload', checkForPageNavigation);
+            // enhancedload is a fallback: fires before the circuit renders, so the
+            // spinner may still be visible briefly after it. markScriptsReady (above)
+            // is the primary hide trigger on pages that call it.
+            Blazor.addEventListener('enhancedload', hideNavSpinner);
         } else {
             const retryId = setInterval(() => {
                 if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {
                     clearInterval(retryId);
                     Blazor.addEventListener('enhancedload', init);
                     Blazor.addEventListener('enhancedload', checkForPageNavigation);
+                    Blazor.addEventListener('enhancedload', hideNavSpinner);
                 }
             }, 200);
             setTimeout(() => clearInterval(retryId), 10000);

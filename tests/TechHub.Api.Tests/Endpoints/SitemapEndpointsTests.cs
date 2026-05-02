@@ -23,25 +23,31 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     [Fact]
     public async Task GetSitemap_ReturnsOk()
     {
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
 
+        // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
 
     [Fact]
     public async Task GetSitemap_ReturnsXmlContentType()
     {
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
 
+        // Assert
         response.Content.Headers.ContentType?.MediaType.Should().Be("application/xml");
     }
 
     [Fact]
     public async Task GetSitemap_ReturnsValidSitemapXml()
     {
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
 
+        // Assert
         var doc = XDocument.Parse(xml);
         doc.Root.Should().NotBeNull();
         doc.Root!.Name.Should().Be(_sitemapNs + "urlset");
@@ -50,24 +56,24 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     [Fact]
     public async Task GetSitemap_ContainsHomepage()
     {
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var locs = XDocument.Parse(xml).Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
-        var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
-
+        // Assert
         locs.Should().Contain(l => l.EndsWith("/"), "homepage should be in the sitemap");
     }
 
     [Fact]
     public async Task GetSitemap_ContainsSectionPages()
     {
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var locs = XDocument.Parse(xml).Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
-        var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
-
+        // Assert
         locs.Should().Contain(l => l.Contains("/ai"), "AI section should be in the sitemap");
         locs.Should().Contain(l => l.Contains("/github-copilot"), "GitHub Copilot section should be in the sitemap");
     }
@@ -75,14 +81,13 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     [Fact]
     public async Task GetSitemap_UrlElementsHaveRequiredChildren()
     {
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var urls = XDocument.Parse(xml).Descendants(_sitemapNs + "url").ToList();
 
-        var doc = XDocument.Parse(xml);
-        var urls = doc.Descendants(_sitemapNs + "url").ToList();
-
+        // Assert
         urls.Should().NotBeEmpty();
-
         foreach (var url in urls)
         {
             url.Element(_sitemapNs + "loc").Should().NotBeNull("every <url> must have a <loc>");
@@ -93,13 +98,13 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSitemap_DoesNotContainExternalOnlyCollectionPages()
     {
         // news/blogs/community items only link externally — they have no detail page on our site.
+
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var locs = XDocument.Parse(xml).Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
-        var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
-
-        // Individual content URLs from "news" collection should not appear (they're all external links)
+        // Assert
         locs.Should().NotContain(
             l => System.Text.RegularExpressions.Regex.IsMatch(l, @"/[^/]+/news/[^/]+$"),
             "news items link to external sources and have no detail page on this site");
@@ -117,12 +122,13 @@ public class SitemapEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetSitemap_ContainsInternalContentPages()
     {
         // Videos and roundups have actual pages on our site.
+
+        // Act
         var response = await _client.GetAsync("/api/sitemap", TestContext.Current.CancellationToken);
         var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+        var locs = XDocument.Parse(xml).Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
 
-        var doc = XDocument.Parse(xml);
-        var locs = doc.Descendants(_sitemapNs + "loc").Select(e => e.Value).ToList();
-
+        // Assert
         locs.Should().Contain(
             l => System.Text.RegularExpressions.Regex.IsMatch(l, @"/[^/]+/videos/[^/]+$"),
             "video items have real detail pages and should appear in the sitemap");

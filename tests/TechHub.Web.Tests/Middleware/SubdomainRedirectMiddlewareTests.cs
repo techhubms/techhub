@@ -96,10 +96,10 @@ public class SubdomainRedirectMiddlewareTests
     }
 
     [Theory]
-    [InlineData("unknown.xebia.ms", "https://tech.xebia.ms")]
-    [InlineData("random.hub.ms", "https://tech.hub.ms")]
-    [InlineData("test.xebia.ms", "https://tech.xebia.ms")]
-    public async Task UnknownSubdomain_RedirectsToPrimaryHost(string host, string expectedRedirectBase)
+    [InlineData("unknown.xebia.ms", "https://tech.xebia.ms/")]
+    [InlineData("random.hub.ms", "https://tech.hub.ms/")]
+    [InlineData("test.xebia.ms", "https://tech.xebia.ms/")]
+    public async Task UnknownSubdomain_RedirectsToPrimaryHostHomepage(string host, string expectedRedirect)
     {
         // Arrange
         var (middleware, context, nextCalled) = CreateMiddleware(host);
@@ -110,13 +110,14 @@ public class SubdomainRedirectMiddlewareTests
         // Assert
         nextCalled().Should().BeFalse("middleware should redirect, not pass through");
         context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be(expectedRedirectBase);
+        context.Response.Headers.Location.ToString().Should().Be(expectedRedirect);
     }
 
     [Fact]
-    public async Task UnknownSubdomain_PreservesPathAndQueryString()
+    public async Task UnknownSubdomain_StripsPathAndRedirectsToHomepage()
     {
-        // Arrange
+        // Unknown subdomains (e.g. api.hub.ms, spam.hub.ms) have no meaningful path
+        // on the primary host, so the path is intentionally stripped to avoid a second 404.
         var (middleware, context, _) = CreateMiddleware("unknown.xebia.ms", path: "/some/page", queryString: "?q=test");
 
         // Act
@@ -124,7 +125,7 @@ public class SubdomainRedirectMiddlewareTests
 
         // Assert
         context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("https://tech.xebia.ms/some/page?q=test");
+        context.Response.Headers.Location.ToString().Should().Be("https://tech.xebia.ms/");
     }
 
     [Fact]

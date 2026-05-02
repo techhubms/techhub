@@ -14,6 +14,11 @@
  * @param {HTMLElement} container - The .slider-container element (passed via ElementReference)
  */
 export function initClamping(container) {
+    if (!container) {
+        console.warn('[DateRangeSlider] Container element not available, skipping clamping init');
+        return;
+    }
+
     const fromSlider = container.querySelector('.slider-from');
     const toSlider = container.querySelector('.slider-to');
     const fill = container.querySelector('.slider-fill');
