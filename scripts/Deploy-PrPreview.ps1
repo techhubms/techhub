@@ -812,7 +812,7 @@ else {
         --image $webImage `
         --ingress external `
         --target-port 8080 `
-        --transport http `
+        --transport auto `
         --registry-server $registryServer `
         --registry-identity $identityId `
         --cpu 0.5 `

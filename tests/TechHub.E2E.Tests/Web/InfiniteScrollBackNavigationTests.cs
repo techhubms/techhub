@@ -35,13 +35,28 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             return;
         }
 
-        // Act - Scroll to load at least one more batch
+        // Act - Scroll to load at least one more batch.
+        // Capture the scroll listener version BEFORE loading, so we can wait for a fresh
+        // re-attachment after the batch load. On CI (testing against remote production),
+        // the SignalR JS interop call that re-attaches the listener can arrive at the
+        // browser AFTER our CDP EvaluateAsync below. Without this wait, the scroll-to-midY
+        // event fires when no listener is active, so the position is never saved.
+        var versionBefore = await Page.EvaluateAsync<int>(
+            "() => window.__scrollListenerVersion?.['scroll-trigger'] || 0");
+
         var expectedAfterScroll = initialCount + 1;
         await Page.ScrollToLoadMoreAsync(expectedAfterScroll);
 
         var afterScrollCount = await Page.Locator(".card").CountAsync();
         afterScrollCount.Should().BeGreaterThan(initialCount,
             "should have loaded more items after scrolling");
+
+        // Wait for scroll listener to be freshly re-attached after batch load render.
+        // OnAfterRenderAsync → SetupScrollListener() → observeScrollTrigger() increments
+        // the version counter. This ensures the listener is active before we scroll.
+        await Page.WaitForConditionAsync(
+            "(v) => (window.__scrollListenerVersion?.['scroll-trigger'] || 0) > v",
+            versionBefore);
 
         // Scroll to a realistic mid-page position. ScrollToLoadMoreAsync leaves us at
         // the absolute document bottom (an edge case). A real user would be browsing

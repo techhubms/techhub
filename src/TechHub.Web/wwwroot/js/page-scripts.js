@@ -35,10 +35,10 @@ export async function initHighlighting() {
     const codeElements = document.querySelector('pre code');
     if (!codeElements) return;
 
-    // If already loaded, just re-highlight new elements
+    // If already loaded, just highlight new (unprocessed) elements
     if (loaded.highlightJs) {
         try {
-            hljs.highlightAll();
+            document.querySelectorAll('pre code:not([data-highlighted])').forEach(el => hljs.highlightElement(el));
         } catch (e) {
             console.warn('Failed to re-highlight:', e);
         }

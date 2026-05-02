@@ -741,40 +741,30 @@ function Run {
 
     # Run JavaScript/Vitest tests
     function Invoke-JavaScriptTests {
-        param(
-            [switch]$Required  # When set, npm absence is a hard failure rather than a skip
-        )
-
         Write-Step "Running JavaScript/Vitest tests"
         Write-Host ""
 
-        # Verify npm is available
+        # Verify npm is available — never auto-install; locally managed by post-create.sh
         if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
-            if ($Required) {
-                Write-Host "  npm not found on PATH — JavaScript tests cannot run" -ForegroundColor Red
-                Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Red
-                return $false
-            }
-            Write-Host "  npm not found on PATH — skipping JavaScript tests" -ForegroundColor Yellow
-            Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Yellow
-            return $true
+            Write-Host "  npm not found on PATH — JavaScript tests cannot run" -ForegroundColor Red
+            Write-Host "  Locally: ensure Node.js is installed via .devcontainer/post-create.sh" -ForegroundColor Red
+            return $false
         }
 
         $packageJsonPath = Join-Path $workspaceRoot "package.json"
         if (-not (Test-Path $packageJsonPath)) {
-            if ($Required) {
-                Write-Host "  package.json not found at: $packageJsonPath" -ForegroundColor Red
-                return $false
-            }
-            Write-Host "  package.json not found — skipping JavaScript tests" -ForegroundColor Yellow
-            return $true
+            Write-Host "  package.json not found at: $packageJsonPath" -ForegroundColor Red
+            return $false
         }
 
-        # Always run npm ci to ensure dependencies match package-lock.json exactly
-        Write-Info "Installing npm dependencies..."
-        $npmInstallSuccess = Invoke-ExternalCommand "npm" @("ci", "--prefix", $workspaceRoot)
-        if (-not $npmInstallSuccess) {
-            Write-Error "npm ci failed"
+        # Verify node_modules are present — do NOT auto-install
+        # Locally: managed by .devcontainer/post-create.sh (npm install)
+        # In CI: install step (npm ci) runs before tests
+        $nodeModulesPath = Join-Path $workspaceRoot "node_modules"
+        if (-not (Test-Path $nodeModulesPath)) {
+            Write-Host "  node_modules not found — dependencies are not installed" -ForegroundColor Red
+            Write-Host "  Locally: re-run .devcontainer/post-create.sh or run 'npm install'" -ForegroundColor Red
+            Write-Host "  In CI: ensure an 'npm ci' step runs before the test step" -ForegroundColor Red
             return $false
         }
 
@@ -868,7 +858,22 @@ function Run {
             $testResult = Invoke-TestBinary $binaryPath $testArgs
 
             if ($testResult.ZeroTests) {
-                Write-Info "  No tests matched filter in $projectName — skipped"
+                if ($TestName) {
+                    Write-Info "  No tests matched filter '$TestName' in $projectName — skipped"
+                }
+                else {
+                    Write-Host ""
+                    Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                    Write-Host "║                                                              ║" -ForegroundColor Red
+                    Write-Host "║  ✗ NO TESTS FOUND — Cannot continue                          ║" -ForegroundColor Red
+                    Write-Host "║                                                              ║" -ForegroundColor Red
+                    Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                    Write-Host ""
+                    Write-Host "  $projectName reported zero tests" -ForegroundColor Yellow
+                    Write-Host "  Check the project has tests, or use -TestName to filter" -ForegroundColor Yellow
+                    Write-Host ""
+                    return $false
+                }
             }
             elseif (-not $testResult.Success) {
                 Write-Host ""
@@ -1314,13 +1319,22 @@ function Run {
             Write-Host ""
             if ($TestName) {
                 Write-Info "No Playwright tests matched filter '$TestName' — skipped"
+                Write-Host ""
+                Write-Success "E2E tests passed (performance only)"
+                return $true
             }
             else {
-                Write-Info "No Playwright tests found — skipped"
+                Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "║  ✗ NO E2E TESTS FOUND — Cannot continue                      ║" -ForegroundColor Red
+                Write-Host "║                                                              ║" -ForegroundColor Red
+                Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
+                Write-Host ""
+                Write-Host "  No Playwright tests were found in the E2E project" -ForegroundColor Yellow
+                Write-Host "  Check the project has tests, or use -TestName to filter" -ForegroundColor Yellow
+                Write-Host ""
+                return $false
             }
-            Write-Host ""
-            Write-Success "E2E tests passed (performance only)"
-            return $true
         }
         elseif (-not $e2eResult.Success) {
             Write-Host ""
@@ -1435,7 +1449,7 @@ function Run {
 
         if ($javaScriptOnly) {
             # JavaScript-only mode: Skip all .NET build/test/server operations
-            $jsSuccess = Invoke-JavaScriptTests -Required
+            $jsSuccess = Invoke-JavaScriptTests
             if ($jsSuccess -ne $true) {
                 return $false
             }

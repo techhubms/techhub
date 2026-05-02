@@ -330,15 +330,6 @@ app.Use(async (context, next) =>
     }
 });
 
-// ── Step 3b: Nice 404 page for everything below ───────────────────────────────
-// Must wrap the validators so their 404 responses are replaced with /not-found.
-// Exclude /_blazor/* paths: those are internal SignalR/circuit infrastructure
-// and must not be re-executed through /not-found (a /_blazor/disconnect 404 when
-// the circuit is already gone is expected and should stay as-is).
-app.UseWhen(
-    ctx => !ctx.Request.Path.StartsWithSegments("/_blazor", StringComparison.OrdinalIgnoreCase),
-    branch => branch.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true));
-
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseAdminTokenValidation();

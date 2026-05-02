@@ -35,13 +35,19 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 - `[BRANCHNAME]`: Current branch name (from step 2 analysis, updated in step 7 if branch operations performed)
 - Update this section when variables change
 
+**🚨 ABSOLUTE CRITICAL REQUIREMENT 11**: **ALWAYS trust git CLI output over any VS Code metadata, context attachments, or workspace information.** VS Code may provide stale or incorrect branch/repository information in its context. The `git` CLI is the single source of truth for all branch names, status, and repository state throughout this entire workflow. If there is ever a conflict between what VS Code shows and what a git command returns, the git command wins — always.
+
 **🚨 CRITICAL PROMPT SCOPE**: All instructions, restrictions, and requirements in this prompt file ONLY apply when this specific prompt is being actively executed via the `/pushall` command or equivalent prompt invocation. These rules do NOT apply when editing, reviewing, or working with this file outside of prompt execution context. When working with this file in any other capacity (editing, debugging, documentation, etc.), treat it as a normal markdown file and ignore all workflow-specific instructions.
 
 ## Step-by-Step Git Commit, Rebase, Conflict Resolution, and Push Workflow
 
-1. **MANDATORY AND CRITICAL, DO NOT SKIP**: This file contains 10 absolute critical requirements at the top. Make an optimized list for yourself without losing ANY instruction or the intent behind it and tell me you did this, without showing me the list. Use this checklist internally to validate you did everything correct. These are your 10 commandments.
+1. **MANDATORY AND CRITICAL, DO NOT SKIP**: This file contains 11 absolute critical requirements at the top. Make an optimized list for yourself without losing ANY instruction or the intent behind it and tell me you did this, without showing me the list. Use this checklist internally to validate you did everything correct. These are your 11 commandments.
 
 2. **Check current branch:**
+
+    First, refresh VS Code's git context by running the `git.refresh` VS Code command via the `run_vscode_command` tool with `commandId: git.refresh`. This ensures VS Code has the latest git state.
+
+    Then run this command to get the current branch name:
 
     ```pwsh
     git branch --show-current
@@ -59,8 +65,9 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
 4. **Handle main branch protection:** You are on the main branch and need to handle branch protection.
 
-    First, create a proper branch name based on the changes in the current workspace:
-    - Analyze the changes to create a descriptive branch name (e.g., "feature/update-documentation", "fix/powershell-scripts", "enhancement/ui-improvements")
+    First, examine the uncommitted changes using git to understand what was changed. Look inside the repository and analyze the actual changes - not only the filenames! When you have a clear understanding of the changes, create a proper branch name that describes the changes and their intent. Use the following guidelines to create the branch name:
+
+    - Create a descriptive branch name (e.g., "feature/update-documentation", "fix/powershell-scripts", "enhancement/ui-improvements")
     - Use kebab-case format with appropriate prefix (feature/, fix/, enhancement/, etc.)
     - Keep the name concise but descriptive of the main changes
 

@@ -137,11 +137,13 @@ public class SubdomainRedirectMiddleware
                 return;
             }
 
-            // Unknown subdomain on a known domain: redirect to primary host
+            // Unknown subdomain on a known domain: redirect to the primary host homepage.
+            // Path is intentionally stripped — unknown subdomains (e.g. api.hub.ms, spam.hub.ms)
+            // have no meaningful path on the primary host, and preserving the path would just
+            // produce another 404 on the other side.
             if (_domainToPrimaryHost.TryGetValue(baseDomain, out var primaryHost))
             {
-                var originalPath = context.Request.Path.Value == "/" ? "" : context.Request.Path.Value;
-                var redirectUrl = $"https://{primaryHost}{originalPath}{context.Request.QueryString}";
+                var redirectUrl = $"https://{primaryHost}/";
 
                 _logger.LogInformation(
                     "Unknown subdomain redirect: {Host} -> {RedirectUrl}",
