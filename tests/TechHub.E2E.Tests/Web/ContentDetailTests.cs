@@ -196,13 +196,14 @@ public class ContentDetailTests : PlaywrightTestBase
         response.StatusCode.Should().Be(HttpStatusCode.MovedPermanently,
             "UrlNormalizationMiddleware should redirect date-prefixed multi-segment URLs with 301");
 
-        var location = response.Headers.Location?.ToString();
-        location.Should().NotBeNullOrEmpty("301 redirect must include a Location header");
-        if (string.IsNullOrEmpty(location))
+        var locationRaw = response.Headers.Location?.ToString();
+        locationRaw.Should().NotBeNullOrEmpty("301 redirect must include a Location header");
+        if (string.IsNullOrEmpty(locationRaw))
         {
             return;
         }
 
+        var location = locationRaw!;
         location.Should().NotContain("2026-01-12-",
             "the redirect target should be the clean URL without the date prefix");
         location.Should().Contain("what-quantum-safe-is-and-why-we-need-it",
