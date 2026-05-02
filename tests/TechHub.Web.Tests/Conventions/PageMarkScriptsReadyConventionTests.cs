@@ -3,7 +3,8 @@ using FluentAssertions;
 namespace TechHub.Web.Tests.Conventions;
 
 /// <summary>
-/// Validates that every Razor page calls markScriptsReady in OnAfterRenderAsync.
+/// Validates that every Razor page contains a call to markScriptsReady.
+/// Checks for the presence of InvokeVoidAsync("markScriptsReady") anywhere in the file.
 /// This is required for scroll position restoration on back/forward navigation.
 /// See src/TechHub.Web/AGENTS.md for the rule.
 /// </summary>

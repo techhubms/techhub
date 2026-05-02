@@ -61,8 +61,8 @@
    Navigation Spinner
 
    Shown during Blazor enhanced navigation (link click → page load).
-   A 200ms JS delay before adding .active, plus a 150ms CSS fade-in, means the
-   spinner only becomes visible for navigations that take >350ms — i.e. never
+   A 500ms JS delay before adding .active, plus a 150ms CSS fade-in, means the
+   spinner only becomes visible for navigations that take >650ms — i.e. never
    on fast networks, always on 3G or slower.
 
    Structure: full-screen backdrop (.nav-spinner) + centered ring (.nav-spinner::after).

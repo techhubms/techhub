@@ -245,8 +245,8 @@
      * Called by markScriptsReady (via window.__restoreScrollPosition) when all
      * rendering is complete. Only restores on back/forward navigation (traverse).
      * Uses retry logic: if the DOM isn't tall enough yet (e.g., Blazor circuit
-     * still patching content under slow network), retries with rAF until the
-     * target position is reachable or a timeout expires.
+     * still patching content under slow network), waits for DOM mutations via
+     * MutationObserver (50ms debounce) and force-scrolls after a 1s timeout.
      * Returns true if position was restored or retry scheduled, false otherwise.
      */
     function restoreScrollPosition() {
@@ -395,7 +395,7 @@
             const el = document.getElementById(NAV_SPINNER_ID);
             if (el) el.classList.add('active');
         }, NAV_SPINNER_SHOW_DELAY_MS);
-        // Safety net: force-hide after 5s if no other signal fires
+        // Safety net: force-hide after 10s if no other signal fires
         if (navSpinnerSafetyTimeout) clearTimeout(navSpinnerSafetyTimeout);
         navSpinnerSafetyTimeout = setTimeout(hideNavSpinner, NAV_SPINNER_SAFETY_MS);
     }
