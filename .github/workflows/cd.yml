@@ -642,13 +642,19 @@ jobs:
             "Id": "${ANNOTATION_ID}",
             "AnnotationName": "Release ${{ needs.build-and-push.outputs.image-tag }}",
             "EventTime": "$(date -u +%Y-%m-%dT%H:%M:%S.0000000Z)",
-            "Category": "Deployment",
             "Properties": {
               "ReleaseName": "${{ needs.build-and-push.outputs.image-tag }}",
               "Commit": "${{ github.sha }}",
               "DeployedBy": "${{ github.actor }}",
               "RunUrl": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
             }
+            "Properties": {
+              "ReleaseName": "${{ needs.build-and-push.outputs.image-tag }}",
+              "Commit": "${{ github.sha }}",
+              "DeployedBy": "${{ github.actor }}",
+              "RunUrl": "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            }
+            --headers "Content-Type=application/json" \
           }
           EOF
           )
