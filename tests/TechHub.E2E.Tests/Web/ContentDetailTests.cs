@@ -183,7 +183,12 @@ public class ContentDetailTests : PlaywrightTestBase
         // Act - Use HttpClient without redirect-following so we can inspect the Location header.
         // Page.GotoAsync follows redirects and throws PlaywrightException (net::ERR_HTTP_RESPONSE_CODE_FAILURE)
         // for 4xx responses, making it unreliable for testing redirect-then-404 scenarios.
-        using var handler = new HttpClientHandler { AllowAutoRedirect = false };
+        using var handler = new HttpClientHandler
+        {
+            AllowAutoRedirect = false,
+            // Allow self-signed/dev certs — same as IgnoreHTTPSErrors in PlaywrightCollectionFixture
+            ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator,
+        };
         using var client = new HttpClient(handler);
         var response = await client.GetAsync($"{_baseUrl}{oldFormatUrl}", TestContext.Current.CancellationToken);
 

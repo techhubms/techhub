@@ -8,8 +8,10 @@
     via -CookieString, or prompts for each cookie value interactively.
 
     The cookies help YoutubeExplode bypass YouTube's EU consent wall and
-    appear more like a real browser. Only anonymous/consent cookies are
-    needed — no login/session cookies that could risk account bans.
+    appear more like a real browser. Only anonymous cookies are needed —
+    no authenticated login cookies (e.g. SID, HSID, SSID) that could risk
+    account bans. The anonymous session cookies listed below (YSC, GPS) do
+    not require being signed in and carry no account credentials.
 
     Cookies prompted interactively (extract from browser DevTools > Application > Cookies > youtube.com):
         __Host-GAPS              — Anti-abuse / identity cookie

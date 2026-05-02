@@ -246,6 +246,16 @@ public class YtDlpTranscriptServiceTests
     }
 
     [Fact]
+    public void BuildYtDlpArguments_NullOutputDir_ThrowsArgumentNullException()
+    {
+        // Act
+        var act = () => YtDlpTranscriptService.BuildYtDlpArguments("https://www.youtube.com/watch?v=dQw4w9WgXcQ", null!, 30);
+
+        // Assert
+        act.Should().Throw<ArgumentNullException>();
+    }
+
+    [Fact]
     public void BuildYtDlpArguments_WithCookieFilePath_IncludesCookiesFlag()
     {
         // Arrange

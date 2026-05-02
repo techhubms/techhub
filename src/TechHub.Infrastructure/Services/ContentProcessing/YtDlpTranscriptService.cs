@@ -226,7 +226,7 @@ public sealed partial class YtDlpTranscriptService : IDisposable
     {
         ArgumentNullException.ThrowIfNull(cookieString);
 
-        var path = Path.Combine(Path.GetTempPath(), $"yt-dlp-cookies-{Guid.NewGuid():N}.txt");
+        var path = Path.Join(Path.GetTempPath(), $"yt-dlp-cookies-{Guid.NewGuid():N}.txt");
 
         var sb = new StringBuilder();
         sb.AppendLine("# Netscape HTTP Cookie File");

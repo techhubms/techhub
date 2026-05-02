@@ -762,6 +762,10 @@ function Run {
 
         $packageJsonPath = Join-Path $workspaceRoot "package.json"
         if (-not (Test-Path $packageJsonPath)) {
+            if ($Required) {
+                Write-Host "  package.json not found at: $packageJsonPath" -ForegroundColor Red
+                return $false
+            }
             Write-Host "  package.json not found — skipping JavaScript tests" -ForegroundColor Yellow
             return $true
         }
