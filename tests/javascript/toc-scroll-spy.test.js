@@ -226,6 +226,43 @@ describe('toc-scroll-spy.js', () => {
 
             spy.destroy();
         });
+
+        it('should clear URL hash when active state is set to null and hash exists', () => {
+            const { toc, content } = createTocAndContent();
+
+            const spy = new mod.TocScrollSpy(toc, content);
+            spy.init();
+
+            spy.setActive('intro');
+            // Simulate that the hash was set
+            window.location.hash = '#intro';
+            window.history.replaceState.mockClear();
+
+            spy.setActive(null);
+
+            expect(window.history.replaceState).toHaveBeenCalledWith(
+                null, '', '/handbook/testing'
+            );
+
+            spy.destroy();
+        });
+
+        it('should not call replaceState when clearing active state if no hash exists', () => {
+            const { toc, content } = createTocAndContent();
+
+            const spy = new mod.TocScrollSpy(toc, content);
+            spy.init();
+
+            spy.setActive('intro');
+            window.location.hash = '';
+            window.history.replaceState.mockClear();
+
+            spy.setActive(null);
+
+            expect(window.history.replaceState).not.toHaveBeenCalled();
+
+            spy.destroy();
+        });
     });
 
     describe('updateCollapseState', () => {

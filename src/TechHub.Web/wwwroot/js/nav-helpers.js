@@ -1,6 +1,6 @@
 /**
  * Navigation Helpers - Back to Top, Back to Previous Page, Hash Link Fixes,
- * and Keyboard Navigation Detection
+ * Keyboard Navigation Detection, and Scroll Position Management
  * 
  * Provides sticky bottom buttons for:
  * - Back to top: Smooth scroll to top of page
@@ -16,6 +16,12 @@
  * from pointer/touch input. Focus outlines are only shown in keyboard-nav mode
  * via CSS scoping. This prevents lingering focus rings on mobile after tapping
  * buttons, while preserving WCAG-compliant keyboard accessibility.
+ * 
+ * Scroll Position Management:
+ * Saves scroll position for every page on scroll events (throttled via rAF).
+ * On back/forward navigation (traverse), restores the saved position after
+ * markScriptsReady fires (signaling that all rendering is complete).
+ * On forward navigation (push), scrolls to top.
  * 
  * Buttons appear when user scrolls down (300px threshold) and are hidden at top.
  * 
@@ -201,6 +207,118 @@
     let lastPathname = window.location.pathname;
     let lastPopstateAt = 0; // timestamp of last popstate (back/forward); cleared on pushState (forward)
 
+    // ========================================================================
+    // Scroll Position Management
+    // Saves scroll position per page (pathname + search) on every scroll (rAF throttled).
+    // On back/forward navigation (traverse), restores position after markScriptsReady.
+    // On forward navigation (push), scrolls to top.
+    // ========================================================================
+    window.__savedScrollPositions ??= {};
+    let scrollSaveScheduled = false;
+
+    function getScrollKey() {
+        return window.location.pathname + window.location.search;
+    }
+
+    function saveScrollPosition() {
+        // Don't save during the brief period right after a scroll restore —
+        // the restore triggers a scroll event that would overwrite with the correct value
+        // anyway, but on pages where we haven't restored yet this is harmless.
+        window.__savedScrollPositions[getScrollKey()] = window.scrollY;
+    }
+
+    // Throttled scroll save: fires at most once per animation frame.
+    // This feels natural (saves ~60 times/sec max during active scroll) without
+    // hammering the system. Passive listener ensures no jank.
+    function onScrollSave() {
+        if (scrollSaveScheduled) return;
+        scrollSaveScheduled = true;
+        window.requestAnimationFrame(() => {
+            scrollSaveScheduled = false;
+            saveScrollPosition();
+        });
+    }
+
+    window.addEventListener('scroll', onScrollSave, { passive: true });
+
+    /**
+     * Restore scroll position for the current page.
+     * Called by markScriptsReady (via window.__restoreScrollPosition) when all
+     * rendering is complete. Only restores on back/forward navigation (traverse).
+     * Uses retry logic: if the DOM isn't tall enough yet (e.g., Blazor circuit
+     * still patching content under slow network), retries with rAF until the
+     * target position is reachable or a timeout expires.
+     * Returns true if position was restored or retry scheduled, false otherwise.
+     */
+    function restoreScrollPosition() {
+        // Only restore on back/forward (traverse) navigation.
+        // Forward navigations (link clicks / pushState) should start at top.
+        const isTraversal = window.navigation?.currentEntry?.navigationType === 'traverse'
+            || lastPopstateAt > 0;
+        if (!isTraversal) return false;
+
+        const key = getScrollKey();
+        const y = window.__savedScrollPositions[key];
+        if (y == null || y <= 0) return false;
+
+        // Check if the page is already tall enough to scroll to the target.
+        void document.documentElement.offsetHeight;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+
+        if (maxScroll >= y - 5) {
+            // Page is tall enough — scroll immediately.
+            window.scrollTo(0, y);
+            window.__scrollRestoredAt = Date.now();
+            return true;
+        }
+
+        // Page isn't tall enough yet (content still arriving via Blazor circuit).
+        // Use MutationObserver to detect when DOM changes settle, then scroll.
+        const deadline = Date.now() + 1000;
+        let debounceTimer = null;
+        const observer = new MutationObserver(() => {
+            if (debounceTimer != null) clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(tryScroll, 50);
+        });
+
+        function tryScroll() {
+            void document.documentElement.offsetHeight;
+            const currentMax = document.documentElement.scrollHeight - window.innerHeight;
+
+            if (currentMax >= y - 5) {
+                // Page is now tall enough — scroll and stop observing.
+                cleanup();
+                window.scrollTo(0, y);
+                window.__scrollRestoredAt = Date.now();
+            } else if (Date.now() >= deadline) {
+                // Deadline reached — scroll to best available position.
+                cleanup();
+                window.scrollTo(0, y);
+                window.__scrollRestoredAt = Date.now();
+            }
+            // Otherwise keep observing — more mutations will come.
+        }
+
+        function cleanup() {
+            observer.disconnect();
+            if (debounceTimer != null) clearTimeout(debounceTimer);
+            if (deadlineTimer != null) clearTimeout(deadlineTimer);
+        }
+
+        // Safety net: force scroll after 1s even if no mutations fire.
+        const deadlineTimer = setTimeout(() => {
+            cleanup();
+            window.scrollTo(0, y);
+            window.__scrollRestoredAt = Date.now();
+        }, 1000);
+
+        observer.observe(document.body, { childList: true, subtree: true });
+        return true;
+    }
+
+    // Expose for markScriptsReady to call
+    window.__restoreScrollPosition = restoreScrollPosition;
+
     function checkForPageNavigation() {
         const currentPathname = window.location.pathname;
         if (currentPathname === lastPathname) return;
@@ -227,8 +345,9 @@
         if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
 
         // Belt-and-suspenders: don't clobber a recently restored scroll position.
-        // infinite-scroll.js's restoreScrollPosition sets __scrollRestoredAt when it
-        // manually scrolls to the saved Y position on back-navigation.
+        // restoreScrollPosition sets __scrollRestoredAt on back-navigation.
+        // This guards against the edge case where Blazor fires enhancedload *after* the
+        // lastPopstateAt guard has expired, which would otherwise scroll back to top.
         if (window.__scrollRestoredAt && Date.now() - window.__scrollRestoredAt < 2000) return;
 
         window.scrollTo(0, 0);

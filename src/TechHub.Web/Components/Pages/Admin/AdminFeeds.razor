@@ -6,6 +6,7 @@
 @implements IDisposable
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
+@inject IJSRuntime JS
 
 <PageTitle>RSS Feeds — TechHub Admin</PageTitle>
 
@@ -141,6 +142,11 @@
     private IReadOnlyList<FeedConfig>? _feeds;
     private FeedConfig? _editingFeed;
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("markScriptsReady");
+    }
 
     protected override async Task OnInitializedAsync()
     {

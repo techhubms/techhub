@@ -37,10 +37,9 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
 
         // Act - Scroll to load at least one more batch.
         // Capture the scroll listener version BEFORE loading, so we can wait for a fresh
-        // re-attachment after the batch load. On CI (testing against remote production),
-        // the SignalR JS interop call that re-attaches the listener can arrive at the
-        // browser AFTER our CDP EvaluateAsync below. Without this wait, the scroll-to-midY
-        // event fires when no listener is active, so the position is never saved.
+        // re-attachment after the batch load. This ensures the infinite-scroll listener
+        // is active before we scroll to a mid-page position (needed for the trigger
+        // check to work correctly on subsequent scrolls).
         var versionBefore = await Page.EvaluateAsync<int>(
             "() => window.__scrollListenerVersion?.['scroll-trigger'] || 0");
 
@@ -76,7 +75,7 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
         // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
         // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
-        // overwrites the saved scroll position in infinite-scroll.js.
+        // overwrites the saved scroll position in nav-helpers.js with ~0.
         await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");
@@ -92,15 +91,13 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             afterScrollCount);
 
         // Wait for scroll listener to be set up (confirms OnAfterRenderAsync completed,
-        // which includes both scroll restoration and listener attachment)
+        // which includes both the anti-cascade suppression and listener attachment).
+        // The generic scroll restore in nav-helpers.js runs via markScriptsReady after
+        // all rendering is complete, so scrollY is already set when this condition becomes true.
         await Page.WaitForConditionAsync(
             "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
 
         // Assert - Scroll position should be restored near where the user was
-        // Wait briefly for scroll position to be applied (scrollTo is synchronous but
-        // the browser may batch the update with the preceding DOM changes).
-        await Page.WaitForConditionAsync(
-            "() => window.scrollY > 0");
         var restoredPosition = await Page.EvaluateAsync<double>("() => window.scrollY");
         var maxScrollY = await Page.EvaluateAsync<double>(
             "() => document.documentElement.scrollHeight - window.innerHeight");
@@ -133,8 +130,9 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Load one more batch
         await Page.ScrollToLoadMoreAsync(initialCount + 1);
 
-        // Scroll up to save a non-bottom position. The scroll listener saves scrollY
-        // on every scroll event, so this position persists for back-button restoration.
+        // Scroll up to save a non-bottom position. The global scroll listener in
+        // nav-helpers.js saves scrollY on every scroll event (throttled via rAF),
+        // so this position persists for back-button restoration.
         await Page.EvaluateAsync(@"() => {
             const trigger = document.getElementById('scroll-trigger');
             if (trigger) {
@@ -162,7 +160,7 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
         // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
         // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
-        // overwrites the saved scroll position with ~0.
+        // overwrites the saved scroll position in nav-helpers.js with ~0.
         await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");
@@ -174,9 +172,9 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
 
         // Wait for cache restoration AND scroll listener setup (both happen in
         // OnAfterRenderAsync). The scroll listener being ready confirms that
-        // OnAfterRenderAsync completed — restoreScrollPosition set suppressNextTriggerCheck,
+        // OnAfterRenderAsync completed — setSuppressNextTriggerCheck prevented a cascade,
         // and observeScrollTrigger's immediate handleScroll() ran without triggering
-        // a cascade (the suppression flag prevented it).
+        // runaway loading. The generic scroll restore via markScriptsReady already fired.
         await Page.WaitForConditionAsync(
             $"(expected) => document.querySelectorAll('.card').length >= expected && window.__scrollListenerReady?.['scroll-trigger'] === true",
             afterScrollCount);

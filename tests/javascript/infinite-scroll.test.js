@@ -25,10 +25,8 @@ describe('infinite-scroll.js', () => {
         document.body.innerHTML = '';
 
         // Reset global state that persists across module reloads
-        delete window.__gridScrollPositions;
         delete window.__scrollListenerReady;
         delete window.__scrollListenerVersion;
-        delete window.__scrollRestoredAt;
         delete window.__e2eSignal;
 
         // Reset location
@@ -73,7 +71,7 @@ describe('infinite-scroll.js', () => {
             const warn = vi.spyOn(console, 'warn').mockImplementation(() => {});
             const helper = createMockHelper();
 
-            mod.observeScrollTrigger(helper, 'nonexistent-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'nonexistent-trigger');
 
             expect(warn).toHaveBeenCalledWith(
                 '[InfiniteScroll] Trigger element not found:',
@@ -86,7 +84,7 @@ describe('infinite-scroll.js', () => {
             const helper = createMockHelper();
             const addSpy = vi.spyOn(window, 'addEventListener');
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(addSpy).toHaveBeenCalledWith('scroll', expect.any(Function), { passive: true });
         });
@@ -95,7 +93,7 @@ describe('infinite-scroll.js', () => {
             createTriggerElement();
             const helper = createMockHelper();
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(window.__scrollListenerReady['scroll-trigger']).toBe(true);
         });
@@ -104,11 +102,11 @@ describe('infinite-scroll.js', () => {
             createTriggerElement();
             const helper = createMockHelper();
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(window.__scrollListenerVersion['scroll-trigger']).toBe(1);
 
             // Re-attach (requires re-creating trigger since dispose removes reference)
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(window.__scrollListenerVersion['scroll-trigger']).toBe(2);
         });
 
@@ -117,7 +115,7 @@ describe('infinite-scroll.js', () => {
             const helper = createMockHelper();
             window.__e2eSignal = vi.fn();
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(window.__e2eSignal).toHaveBeenCalledWith('scroll-listener:scroll-trigger');
         });
@@ -136,7 +134,7 @@ describe('infinite-scroll.js', () => {
                 height: 10,
             });
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
         });
@@ -155,7 +153,7 @@ describe('infinite-scroll.js', () => {
                 height: 10,
             });
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
@@ -166,39 +164,23 @@ describe('infinite-scroll.js', () => {
             const removeSpy = vi.spyOn(window, 'removeEventListener');
 
             // First attach
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             // Second attach should dispose first
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key2');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(removeSpy).toHaveBeenCalledWith('scroll', expect.any(Function));
         });
     });
 
     describe('scroll event handling', () => {
-        it('should save scroll position on scroll', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            // Trigger far away so LoadNextBatch doesn't fire
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
-
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'my-state-key');
-
-            // Simulate scroll
-            Object.defineProperty(window, 'scrollY', { value: 450, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
-
-            expect(window.__gridScrollPositions['my-state-key']).toBe(450);
-        });
-
         it('should call LoadNextBatch when scrolling brings trigger into margin', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
             // Start with trigger far away
             trigger.getBoundingClientRect = () => ({ top: 5000 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
 
@@ -214,7 +196,7 @@ describe('infinite-scroll.js', () => {
             const helper = createMockHelper();
 
             trigger.getBoundingClientRect = () => ({ top: 5000 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             // Simulate URL change (enhanced navigation)
             window.location = { pathname: '/different-page', search: '' };
@@ -222,25 +204,8 @@ describe('infinite-scroll.js', () => {
             Object.defineProperty(window, 'scrollY', { value: 100, writable: true, configurable: true });
             window.dispatchEvent(new Event('scroll'));
 
-            // Should NOT have updated the position to 100 (the corrupted scroll)
-            // The initial handleScroll() at attach time saved 0, that stays.
-            expect(window.__gridScrollPositions['key1']).toBe(0);
             // Should have disposed
             expect(window.__scrollListenerReady['scroll-trigger']).toBe(false);
-        });
-
-        it('should not save position with null stateKey', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', null);
-
-            Object.defineProperty(window, 'scrollY', { value: 200, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
-
-            // __gridScrollPositions should remain empty
-            expect(Object.keys(window.__gridScrollPositions)).toHaveLength(0);
         });
     });
 
@@ -250,7 +215,7 @@ describe('infinite-scroll.js', () => {
             const helper = createMockHelper();
             const removeSpy = vi.spyOn(window, 'removeEventListener');
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             mod.dispose();
 
             expect(removeSpy).toHaveBeenCalledWith('scroll', expect.any(Function));
@@ -260,7 +225,7 @@ describe('infinite-scroll.js', () => {
             createTriggerElement();
             const helper = createMockHelper();
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(window.__scrollListenerReady['scroll-trigger']).toBe(true);
 
             mod.dispose();
@@ -272,7 +237,7 @@ describe('infinite-scroll.js', () => {
             const helper = createMockHelper();
             window.__e2eSignal = vi.fn();
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             window.__e2eSignal.mockClear();
 
             mod.dispose();
@@ -284,7 +249,7 @@ describe('infinite-scroll.js', () => {
             createTriggerElement();
             const helper = createMockHelper();
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             mod.dispose();
             mod.dispose(); // Should not throw
         });
@@ -294,120 +259,24 @@ describe('infinite-scroll.js', () => {
             const helper = createMockHelper();
 
             trigger.getBoundingClientRect = () => ({ top: 5000 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             mod.dispose();
 
-            // Scroll after dispose should not save position
-            Object.defineProperty(window, 'scrollY', { value: 999, writable: true, configurable: true });
+            // Scroll after dispose should not trigger
             trigger.getBoundingClientRect = () => ({ top: 500 });
             window.dispatchEvent(new Event('scroll'));
 
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-            // The position saved at attach time (scrollY=0) persists, but no new writes happen
-            expect(window.__gridScrollPositions['key1']).toBe(0);
         });
     });
 
-    describe('restoreScrollPosition', () => {
-        it('should return false if no saved position', () => {
-            const result = mod.restoreScrollPosition('unknown-key');
-            expect(result).toBe(false);
-        });
-
-        it('should return false if saved position is 0', () => {
-            window.__gridScrollPositions = { 'key1': 0 };
-            const result = mod.restoreScrollPosition('key1');
-            expect(result).toBe(false);
-        });
-
-        it('should scroll to saved position and return true', () => {
-            window.__gridScrollPositions = { 'key1': 750 };
-
-            const result = mod.restoreScrollPosition('key1');
-
-            expect(result).toBe(true);
-            expect(window.scrollTo).toHaveBeenCalledWith(0, 750);
-        });
-
-        it('should set __scrollRestoredAt timestamp', () => {
-            window.__gridScrollPositions = { 'key1': 500 };
-            const before = Date.now();
-
-            mod.restoreScrollPosition('key1');
-
-            expect(window.__scrollRestoredAt).toBeGreaterThanOrEqual(before);
-            expect(window.__scrollRestoredAt).toBeLessThanOrEqual(Date.now());
-        });
-
-        it('should work with different state keys independently', () => {
-            window.__gridScrollPositions = {
-                'page-a': 100,
-                'page-b': 2000,
-            };
-
-            mod.restoreScrollPosition('page-a');
-            expect(window.scrollTo).toHaveBeenCalledWith(0, 100);
-
-            mod.restoreScrollPosition('page-b');
-            expect(window.scrollTo).toHaveBeenCalledWith(0, 2000);
-        });
-    });
-
-    describe('scroll position persistence across lifecycle', () => {
-        it('should persist scroll positions across dispose/re-attach cycles', () => {
+    describe('setSuppressNextTriggerCheck', () => {
+        it('should NOT call LoadNextBatch on immediate check after setSuppressNextTriggerCheck', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
-
-            // Scroll to position
-            Object.defineProperty(window, 'scrollY', { value: 600, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
-
-            expect(window.__gridScrollPositions['key1']).toBe(600);
-
-            // Dispose and re-attach (simulates navigation away and back)
-            mod.dispose();
-
-            // Position should still be in global state
-            expect(window.__gridScrollPositions['key1']).toBe(600);
-
-            // Restore should work
-            const restored = mod.restoreScrollPosition('key1');
-            expect(restored).toBe(true);
-            expect(window.scrollTo).toHaveBeenCalledWith(0, 600);
-        });
-
-        it('should update position on subsequent scrolls', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
-
-            // First scroll
-            Object.defineProperty(window, 'scrollY', { value: 200, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
-            expect(window.__gridScrollPositions['key1']).toBe(200);
-
-            // Second scroll further down
-            Object.defineProperty(window, 'scrollY', { value: 800, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
-            expect(window.__gridScrollPositions['key1']).toBe(800);
-        });
-    });
-
-    describe('anti-cascade after scroll restoration', () => {
-        it('should NOT call LoadNextBatch on immediate check after restoreScrollPosition', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            // Simulate a saved scroll position (as if user scrolled before navigating away)
-            window.__gridScrollPositions = { 'key1': 600 };
-
-            // Restore scroll position — this sets suppressNextTriggerCheck = true
-            mod.restoreScrollPosition('key1');
+            // Set suppress flag (as ContentItemsGrid does on back-navigation)
+            mod.setSuppressNextTriggerCheck();
 
             // Now attach scroll listener with trigger IN viewport (simulating layout
             // differences where trigger ends up within the 300px margin after back-nav)
@@ -420,24 +289,23 @@ describe('infinite-scroll.js', () => {
                 height: 10,
             });
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             // The immediate handleScroll() call should NOT trigger LoadNextBatch
-            // because suppressNextTriggerCheck was set by restoreScrollPosition
+            // because suppressNextTriggerCheck was set
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
 
-        it('should allow LoadNextBatch on subsequent scroll after restoration', () => {
+        it('should allow LoadNextBatch on subsequent scroll after suppression', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
-            window.__gridScrollPositions = { 'key1': 600 };
-            mod.restoreScrollPosition('key1');
+            mod.setSuppressNextTriggerCheck();
 
             // Trigger in viewport — immediate handleScroll in observeScrollTrigger
             // consumes the suppressNextTriggerCheck flag (no LoadNextBatch call)
             trigger.getBoundingClientRect = () => ({ top: 900 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
 
             // Subsequent user scroll: flag is already consumed, should trigger normally
@@ -449,10 +317,8 @@ describe('infinite-scroll.js', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
-            window.__gridScrollPositions = { 'key1': 600 };
-
-            // Restore sets the flag
-            mod.restoreScrollPosition('key1');
+            // Set the flag
+            mod.setSuppressNextTriggerCheck();
 
             // Dispose (as happens in observeScrollTrigger's first line)
             mod.dispose();
@@ -466,18 +332,10 @@ describe('infinite-scroll.js', () => {
                 width: 100,
                 height: 10,
             });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
             // Should still be suppressed
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-        });
-    });
-
-    describe('__gridScrollPositions global initialization', () => {
-        it('should initialize as empty object if not already set', () => {
-            // The module initializes this at import time
-            expect(window.__gridScrollPositions).toBeDefined();
-            expect(typeof window.__gridScrollPositions).toBe('object');
         });
     });
 });

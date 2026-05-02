@@ -51,12 +51,15 @@ export function afterWebStarted(blazor) {
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-web-ready');
     console.debug('[TechHub] Blazor Web started');
 
-    // Enable browser's native scroll restoration for back/forward navigation.
-    // This works together with infinite-scroll.js's restoreScrollPosition (which handles
-    // infinite-scroll pages specifically) and nav-helpers.js's resetPagePosition (which
-    // scrolls to top on forward navigation only).
+    // Disable browser-native scroll restoration. With Blazor Enhanced Navigation, the
+    // browser's async scroll restoration races with our synchronous scroll restore
+    // (triggered by markScriptsReady), randomly clobbering the restored position with 0.
+    // We take full ownership of scroll restoration:
+    //   - Forward navigation → nav-helpers.js resetPagePosition() scrolls to top
+    //   - Back/forward navigation → nav-helpers.js restoreScrollPosition() called via
+    //     markScriptsReady after all rendering is complete
     if ('scrollRestoration' in history) {
-        history.scrollRestoration = 'auto';
+        history.scrollRestoration = 'manual';
     }
 
     // Reset script loading state on enhanced navigation.

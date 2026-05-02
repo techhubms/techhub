@@ -3,6 +3,7 @@
 @using TechHub.Web.Services
 
 @inject SectionCache SectionCache
+@inject IJSRuntime JS
 
 <PageTitle>Discord - GitHub Copilot - Tech Hub</PageTitle>
 
@@ -64,3 +65,10 @@
         </div>
     </section>
 </main>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("markScriptsReady");
+    }
+}

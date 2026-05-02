@@ -7,6 +7,7 @@
 
 @inject ITechHubApiClient ApiClient
 @inject PersistentComponentState ApplicationState
+@inject IJSRuntime JS
 
 <PageTitle>@PageTitleText</PageTitle>
 
@@ -136,6 +137,11 @@
     private void ClearAuthorFilter()
     {
         authorFilter = string.Empty;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("markScriptsReady");
     }
 
     protected override async Task OnInitializedAsync()
