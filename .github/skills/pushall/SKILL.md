@@ -311,7 +311,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
     **CHECKPOINT**: Based on exit code, state either:
     - **Exit code 0 (user did not abort):** "✅ Step 16 completed successfully. User wants to proceed with PR operations. Moving to Step 17."
-    - **Exit code 1 (user aborted):** "✅ Step 16 completed successfully. User aborted PR operations. Moving to Step 22."
+    - **Exit code 1 (user aborted):** "✅ Step 16 completed successfully. User aborted PR operations. Moving to Step 21."
 
 17. **PREPARE for data analysis:**
 
@@ -459,36 +459,7 @@ description: "Step-by-step workflow for safely and precisely executing code and 
 
     **CHECKPOINT**: "✅ Step 20 completed successfully. PR created/updated with prepared title and description. Moving to Step 21."
 
-21. **Request Copilot review:**
-
-    First, check if Copilot has already reviewed the PR:
-
-    ```pwsh
-    gh pr view [PR_NUMBER] --json reviews --jq '.reviews[] | select(.author.login == "copilot-pull-request-reviewer") | .state'
-    ```
-
-    **If no Copilot review exists:**
-
-    ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "If you do nothing, a Copilot code review will be requested for this pull request" -Delay 5
-    ```
-
-    **If Copilot has already reviewed:**
-
-    ```pwsh
-    pwsh ./.github/skills/pushall/pushall-delay.ps1 -Warning "Copilot already reviewed this pull request. If you do nothing, a new review will be requested." -Delay 10
-    ```
-
-    **CHECKPOINT**: Based on exit code, state either:
-    - **Exit code 0 (user did not abort):** Request a Copilot review using the following command, then state: "✅ Step 21 completed successfully. Copilot review requested. Moving to Step 22."
-
-      ```pwsh
-      gh pr edit [PR_NUMBER] --add-reviewer "copilot-pull-request-reviewer"
-      ```
-
-    - **Exit code 1 (user aborted):** "✅ Step 21 completed successfully. User skipped Copilot review. Moving to Step 22."
-
-22. **Workflow completion and final summary**
+21. **Workflow completion and final summary**
 
 This step provides the final workflow summary and completion status.
 
@@ -509,7 +480,7 @@ c. **Include relevant links** (if PR was created/updated):
 
 - Link to the pull request with descriptive text
 
-**Checkpoint:** ✅ Step 22 completed successfully. Workflow execution summary provided and pushall process is complete.
+**Checkpoint:** ✅ Step 21 completed successfully. Workflow execution summary provided and pushall process is complete.
 
 ## Branch Rebase Instructions
 

@@ -124,7 +124,6 @@ $domainDocs = @(
     "src/TechHub.Web/AGENTS.md",
     "src/TechHub.Core/AGENTS.md",
     "src/TechHub.Infrastructure/AGENTS.md",
-    "collections/AGENTS.md",
     "scripts/AGENTS.md",
     "tests/AGENTS.md",
     "tests/TechHub.Api.Tests/AGENTS.md",
@@ -264,7 +263,6 @@ $codeDirs = @(
     "tests/TechHub.E2E.Tests",
     "tests/powershell",
     "scripts",
-    "collections",
     "docs"
 )
 

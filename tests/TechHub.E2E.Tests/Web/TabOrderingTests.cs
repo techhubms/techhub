@@ -272,10 +272,19 @@ public class TabOrderingTests : PlaywrightTestBase
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
                 new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
 
-        // nav-helpers.js resets focus via requestAnimationFrame after enhanced navigation,
+        // Wait for the skip link to be present in the new page's DOM before proceeding.
+        await Page.WaitForSelectorAsync("a.skip-link");
 
-        // Explicitly reset focus to body (what nav-helpers.js does via rAF)
-        // Keep tabindex until after we press Tab to ensure proper tab order
+        // nav-helpers.js's resetPagePosition() schedules a requestAnimationFrame that
+        // sets body.tabIndex=-1, focuses body, then removes tabIndex. If that rAF fires
+        // after we press Tab it will steal focus back to body, causing a flaky failure.
+        // Flush any pending rAFs with a double-rAF before we take control of focus,
+        // so that resetPagePosition's rAF has already completed by the time we act.
+        await Page.EvaluateAsync(@"() => new Promise(resolve =>
+            requestAnimationFrame(() => requestAnimationFrame(resolve)))");
+
+        // Explicitly reset focus to body (mimicking what nav-helpers.js does via rAF)
+        // Keep tabindex until after we press Tab to ensure proper tab order.
         await Page.EvaluateAsync(@"() => {
             document.body.tabIndex = -1;
             document.body.focus();

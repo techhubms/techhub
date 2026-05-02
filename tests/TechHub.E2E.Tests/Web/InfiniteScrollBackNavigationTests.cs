@@ -133,12 +133,8 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Load one more batch
         await Page.ScrollToLoadMoreAsync(initialCount + 1);
 
-        // Scroll up IMMEDIATELY to prevent cascade: OnAfterRenderAsync will re-attach the
-        // scroll listener shortly after the batch completes, and its immediate handleScroll
-        // check fires at the current scrollY. EvaluateAsync (CDP, local browser connection)
-        // runs before observeScrollTrigger (SignalR, server→browser), so the trigger is
-        // positioned >300px below the viewport when the immediate check runs, preventing
-        // further cascade batch loads.
+        // Scroll up to save a non-bottom position. The scroll listener saves scrollY
+        // on every scroll event, so this position persists for back-button restoration.
         await Page.EvaluateAsync(@"() => {
             const trigger = document.getElementById('scroll-trigger');
             if (trigger) {
@@ -148,10 +144,7 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             }
         }");
 
-        // Wait for the scroll listener to be re-attached at the scrolled-up position with no
-        // batch load in progress. This confirms any cascade batch that was already in-flight
-        // before the scroll-up has completed, and observeScrollTrigger's immediate handleScroll
-        // check at the scrolled-up position did NOT trigger another cascade batch.
+        // Wait for scroll listener to be ready with no batch load in progress.
         await Page.WaitForConditionAsync(
             "() => window.__scrollListenerReady?.['scroll-trigger'] === true && !document.querySelector('.loading-more-indicator')");
 
@@ -181,17 +174,17 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
 
         // Wait for cache restoration AND scroll listener setup (both happen in
         // OnAfterRenderAsync). The scroll listener being ready confirms that
-        // OnAfterRenderAsync completed — scroll was restored and the listener's
-        // immediate handleScroll() check ran without triggering a cascade.
+        // OnAfterRenderAsync completed — restoreScrollPosition set suppressNextTriggerCheck,
+        // and observeScrollTrigger's immediate handleScroll() ran without triggering
+        // a cascade (the suppression flag prevented it).
         await Page.WaitForConditionAsync(
             $"(expected) => document.querySelectorAll('.card').length >= expected && window.__scrollListenerReady?.['scroll-trigger'] === true",
             afterScrollCount);
 
-        // Wait for scroll position to be restored (restoreScrollPosition runs before
-        // SetupScrollListener in OnAfterRenderAsync, but the browser may batch the
-        // scrollTo update with preceding DOM changes).
+        // Confirm no batch load is in progress (if a cascade was triggered, the loading
+        // indicator would be visible while the batch is fetched from the API).
         await Page.WaitForConditionAsync(
-            "() => window.scrollY > 0");
+            "() => !document.querySelector('.loading-more-indicator')");
 
         var finalCount = await Page.Locator(".card").CountAsync();
 

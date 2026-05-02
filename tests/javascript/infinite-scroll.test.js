@@ -398,6 +398,81 @@ describe('infinite-scroll.js', () => {
         });
     });
 
+    describe('anti-cascade after scroll restoration', () => {
+        it('should NOT call LoadNextBatch on immediate check after restoreScrollPosition', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            // Simulate a saved scroll position (as if user scrolled before navigating away)
+            window.__gridScrollPositions = { 'key1': 600 };
+
+            // Restore scroll position — this sets suppressNextTriggerCheck = true
+            mod.restoreScrollPosition('key1');
+
+            // Now attach scroll listener with trigger IN viewport (simulating layout
+            // differences where trigger ends up within the 300px margin after back-nav)
+            trigger.getBoundingClientRect = () => ({
+                top: 900, // within innerHeight (800) + TRIGGER_MARGIN_PX (300) = 1100
+                bottom: 910,
+                left: 0,
+                right: 100,
+                width: 100,
+                height: 10,
+            });
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+
+            // The immediate handleScroll() call should NOT trigger LoadNextBatch
+            // because suppressNextTriggerCheck was set by restoreScrollPosition
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+
+        it('should allow LoadNextBatch on subsequent scroll after restoration', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            window.__gridScrollPositions = { 'key1': 600 };
+            mod.restoreScrollPosition('key1');
+
+            // Trigger in viewport — immediate handleScroll in observeScrollTrigger
+            // consumes the suppressNextTriggerCheck flag (no LoadNextBatch call)
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // Subsequent user scroll: flag is already consumed, should trigger normally
+            window.dispatchEvent(new Event('scroll'));
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+
+        it('suppressNextTriggerCheck survives dispose/re-attach cycle', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            window.__gridScrollPositions = { 'key1': 600 };
+
+            // Restore sets the flag
+            mod.restoreScrollPosition('key1');
+
+            // Dispose (as happens in observeScrollTrigger's first line)
+            mod.dispose();
+
+            // Re-attach with trigger in viewport
+            trigger.getBoundingClientRect = () => ({
+                top: 900,
+                bottom: 910,
+                left: 0,
+                right: 100,
+                width: 100,
+                height: 10,
+            });
+            mod.observeScrollTrigger(helper, 'scroll-trigger', 'key1');
+
+            // Should still be suppressed
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+    });
+
     describe('__gridScrollPositions global initialization', () => {
         it('should initialize as empty object if not already set', () => {
             // The module initializes this at import time
