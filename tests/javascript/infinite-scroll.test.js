@@ -302,13 +302,19 @@ describe('infinite-scroll.js', () => {
 
             mod.setSuppressNextTriggerCheck();
 
-            // Trigger in viewport — immediate handleScroll in observeScrollTrigger
-            // consumes the suppressNextTriggerCheck flag (no LoadNextBatch call)
+            // Trigger in viewport — immediate handleScroll in observeScrollTrigger is
+            // skipped entirely when suppression is active (flag stays set)
             trigger.getBoundingClientRect = () => ({ top: 900 });
             mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
 
-            // Subsequent user scroll: flag is already consumed, should trigger normally
+            // First user scroll: flag is still set (immediate call was skipped), so this
+            // scroll consumes the flag and suppresses LoadNextBatch — this models the
+            // scroll-restore event from markScriptsReady's window.scrollTo()
+            window.dispatchEvent(new Event('scroll'));
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // Second user scroll: flag is now consumed, trigger fires normally
             window.dispatchEvent(new Event('scroll'));
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
         });
