@@ -249,7 +249,242 @@ public class YtDlpTranscriptServiceTests
     public void BuildYtDlpArguments_NullOutputDir_ThrowsArgumentNullException()
     {
         // Act
-        var act = () => YtDlpTranscriptService.BuildYtDlpArguments("https://youtube.com/watch?v=test", null!, 30);
+        var act = () => YtDlpTranscriptService.BuildYtDlpArguments("https://www.youtube.com/watch?v=dQw4w9WgXcQ", null!, 30);
+
+        // Assert
+        act.Should().Throw<ArgumentNullException>();
+    }
+
+    [Fact]
+    public void BuildYtDlpArguments_WithCookieFilePath_IncludesCookiesFlag()
+    {
+        // Arrange
+        var videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        var outputDir = "/tmp/test";
+        var cookieFilePath = "/tmp/yt-dlp-cookies-abc.txt";
+
+        // Act
+        var args = YtDlpTranscriptService.BuildYtDlpArguments(videoUrl, outputDir, timeoutSeconds: 30, cookieFilePath: cookieFilePath);
+
+        // Assert
+        args.Should().Contain("--cookies");
+        args.Should().Contain(cookieFilePath);
+    }
+
+    [Fact]
+    public void BuildYtDlpArguments_WithoutCookieFilePath_OmitsCookiesFlag()
+    {
+        // Arrange
+        var videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        var outputDir = "/tmp/test";
+
+        // Act
+        var args = YtDlpTranscriptService.BuildYtDlpArguments(videoUrl, outputDir, timeoutSeconds: 30);
+
+        // Assert
+        args.Should().NotContain("--cookies");
+    }
+
+    [Fact]
+    public void BuildYtDlpArguments_NullCookieFilePath_OmitsCookiesFlag()
+    {
+        // Arrange
+        var videoUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        var outputDir = "/tmp/test";
+
+        // Act
+        var args = YtDlpTranscriptService.BuildYtDlpArguments(videoUrl, outputDir, timeoutSeconds: 30, cookieFilePath: null);
+
+        // Assert
+        args.Should().NotContain("--cookies");
+    }
+
+    #endregion
+
+    #region WriteCookiesFile Tests
+
+    [Fact]
+    public void WriteCookiesFile_ValidCookieString_WritesNetscapeHeader()
+    {
+        // Arrange
+        var cookieString = "PREF=f4=4000000;SOCS=CAITest";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert: must start with Netscape HTTP Cookie File header
+            content.Should().StartWith("# Netscape HTTP Cookie File");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_RegularCookie_WritesDotYoutubeDomainWithSubdomains()
+    {
+        // Arrange
+        var cookieString = "PREF=f4=4000000";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert: regular cookies use .youtube.com domain with subdomain flag TRUE
+            content.Should().Contain(".youtube.com\tTRUE\t/\tFALSE\t0\tPREF\tf4=4000000");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_SecurePrefixedCookie_WritesSecureTrueFlag()
+    {
+        // Arrange
+        var cookieString = "__Secure-ROLLOUT_TOKEN=testvalue";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert: __Secure- cookies get secure=TRUE
+            content.Should().Contain(".youtube.com\tTRUE\t/\tTRUE\t0\t__Secure-ROLLOUT_TOKEN\ttestvalue");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_HostPrefixedGapsCookie_WritesGoogleAccountsDomain()
+    {
+        // Arrange — __Host-GAPS is a Google Accounts cookie, not a YouTube cookie
+        var cookieString = "__Host-GAPS=1:abc:def";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert: __Host-GAPS must use accounts.google.com, not youtube.com
+            content.Should().Contain("accounts.google.com\tFALSE\t/\tTRUE\t0\t__Host-GAPS\t1:abc:def");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_OtherHostPrefixedCookie_WritesHostOnlyYoutubeDomain()
+    {
+        // Arrange — other __Host- cookies (not GAPS) belong to youtube.com
+        var cookieString = "__Host-SomeOther=value123";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert: non-GAPS __Host- cookies use youtube.com (no dot), subdomains=FALSE, secure=TRUE
+            content.Should().Contain("youtube.com\tFALSE\t/\tTRUE\t0\t__Host-SomeOther\tvalue123");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_CookieWithValueContainingEquals_PreservesFullValue()
+    {
+        // Arrange — base64 values contain '='
+        var cookieString = "VISITOR_PRIVACY_METADATA=CgJOT%3D%3D";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert: value after the first '=' is preserved verbatim
+            content.Should().Contain("VISITOR_PRIVACY_METADATA\tCgJOT%3D%3D");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_MultipleCookies_WritesAllCookies()
+    {
+        // Arrange
+        var cookieString = "PREF=value1;SOCS=value2;YSC=value3";
+
+        // Act
+        var path = YtDlpTranscriptService.WriteCookiesFile(cookieString);
+
+        try
+        {
+            var content = File.ReadAllText(path);
+
+            // Assert
+            content.Should().Contain("PREF");
+            content.Should().Contain("SOCS");
+            content.Should().Contain("YSC");
+        }
+        finally
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+    }
+
+    [Fact]
+    public void WriteCookiesFile_NullInput_ThrowsArgumentNullException()
+    {
+        // Act
+        var act = () => YtDlpTranscriptService.WriteCookiesFile(null!);
 
         // Assert
         act.Should().Throw<ArgumentNullException>();

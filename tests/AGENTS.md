@@ -88,6 +88,7 @@ Use `IClassFixture<T>` for expensive shared setup (temp directories, databases).
 | **Unit** | xUnit v3 | Core, Infrastructure | High | Simple classes, pure functions, domain models | File I/O, HTTP, database |
 | **E2E** | Playwright .NET + HttpClient | E2E | High | Everything (real servers, browser) | Nothing |
 | **Component** | bUnit | Web | Medium | Component logic | All services |
+| **JavaScript** | Vitest + jsdom | javascript/ | Medium | DOM interactions, module logic | Blazor interop, CDN scripts |
 | **PowerShell** | Pester | powershell/ | Medium | Test files | External commands |
 
 ## What to Mock vs Use Real
@@ -109,5 +110,6 @@ Each test project has its own AGENTS.md with project-specific patterns:
 - [TechHub.Api.Tests/AGENTS.md](TechHub.Api.Tests/AGENTS.md) — API integration tests (WebApplicationFactory)
 - [TechHub.Web.Tests/AGENTS.md](TechHub.Web.Tests/AGENTS.md) — Blazor component tests (bUnit)
 - [TechHub.E2E.Tests/AGENTS.md](TechHub.E2E.Tests/AGENTS.md) — Playwright E2E tests
+- [javascript/AGENTS.md](javascript/AGENTS.md) — Vitest JavaScript unit tests
 - [powershell/AGENTS.md](powershell/AGENTS.md) — PowerShell Pester tests
 - [TechHub.TestUtilities/AGENTS.md](TechHub.TestUtilities/AGENTS.md) — Shared test infrastructure, builders, factories

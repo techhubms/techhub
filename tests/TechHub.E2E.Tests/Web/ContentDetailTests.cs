@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.RegularExpressions;
 using FluentAssertions;
 using Microsoft.Playwright;
@@ -174,22 +175,39 @@ public class ContentDetailTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task ContentDetailPage_OldDatePrefixedURL_Returns404()
+    public async Task ContentDetailPage_OldDatePrefixedURL_RedirectsToCleanUrl()
     {
-        // Arrange - Try to access a URL with old date prefix format
-        // This URL pattern should no longer work: /ai/videos/2026-01-12-slug
+        // Arrange - URL with old date-prefix format that UrlNormalizationMiddleware should redirect
         var oldFormatUrl = "/ai/videos/2026-01-12-what-quantum-safe-is-and-why-we-need-it";
 
-        // Act & Assert - Should get 404 or redirect behavior
-        var response = await Page.GotoAsync($"{_baseUrl}{oldFormatUrl}");
+        // Act - Use HttpClient without redirect-following so we can inspect the Location header.
+        // Page.GotoAsync follows redirects and throws PlaywrightException (net::ERR_HTTP_RESPONSE_CODE_FAILURE)
+        // for 4xx responses, making it unreliable for testing redirect-then-404 scenarios.
+        using var handler = new HttpClientHandler
+        {
+            AllowAutoRedirect = false,
+            // Allow self-signed/dev certs — same as IgnoreHTTPSErrors in PlaywrightCollectionFixture
+            ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator,
+        };
+        using var client = new HttpClient(handler);
+        var response = await client.GetAsync($"{_baseUrl}{oldFormatUrl}", TestContext.Current.CancellationToken);
 
-        // Either 404 status code or redirected away from the old URL pattern
-        // If we get a response, it should be 404
-        response?.Status.Should().Be(404, "old date-prefixed URLs should return 404");
+        // Assert - UrlNormalizationMiddleware must return a 301 redirect to the clean URL
+        response.StatusCode.Should().Be(HttpStatusCode.MovedPermanently,
+            "UrlNormalizationMiddleware should redirect date-prefixed multi-segment URLs with 301");
 
-        // Or we should be redirected to a different page (not the old format)
-        Page.Url.Should().NotContain("/2026-01-12-",
-            "should not remain on old date-prefixed URL");
+        var locationRaw = response.Headers.Location?.ToString();
+        locationRaw.Should().NotBeNullOrEmpty("301 redirect must include a Location header");
+        if (string.IsNullOrEmpty(locationRaw))
+        {
+            return;
+        }
+
+        var location = locationRaw!;
+        location.Should().NotContain("2026-01-12-",
+            "the redirect target should be the clean URL without the date prefix");
+        location.Should().Contain("what-quantum-safe-is-and-why-we-need-it",
+            "the redirect target should preserve the slug");
     }
 }
 

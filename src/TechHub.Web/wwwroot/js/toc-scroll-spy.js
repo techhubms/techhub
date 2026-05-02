@@ -28,51 +28,11 @@ export class TocScrollSpy {
         this.boundHandleScroll = this.handleScroll.bind(this);
         this.boundHandleResize = this.handleResize.bind(this);
         this.ticking = false; // RAF throttle flag
-        this.debugOverlay = null; // Visual debug line
-        this.debugEnabled = false;
         this.cachedDetectionLine = 0; // Cache detection line position
         this.initialScrollEndHandler = null; // One-time scrollend handler
         this.initialScrollTimeout = null; // Fallback timeout for browsers without scrollend
         this.initialized = false; // Track initialization state to prevent duplicate listeners
         this.initialPagePath = null; // pathname+search when initialized; used to detect page changes
-
-        // Expose toggle function globally for console access
-        window.toggleTocDebug = this.toggleDebug.bind(this);
-    }
-
-    /**
-     * Toggle debug visualization (call from console: toggleTocDebug())
-     */
-    toggleDebug() {
-        this.debugEnabled = !this.debugEnabled;
-
-        if (this.debugEnabled) {
-            if (!this.debugOverlay) {
-                this.debugOverlay = document.createElement('div');
-                // Use maximum 32-bit signed integer for z-index to ensure overlay is always on top
-                this.debugOverlay.style.cssText = `
-                    position: fixed;
-                    left: 0;
-                    right: 0;
-                    height: 3px;
-                    background: rgba(255, 0, 0, 0.8);
-                    z-index: 2147483647;
-                    pointer-events: none;
-                    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-                `;
-                document.body.appendChild(this.debugOverlay);
-            }
-            this.debugOverlay.style.display = 'block';
-            console.log('TOC Debug Mode: ENABLED - Red line shows detection position (matches CSS --scroll-margin-top)');
-            console.log('Call toggleTocDebug() again to disable');
-            // Update position immediately
-            this.updateActiveHeading();
-        } else {
-            if (this.debugOverlay) {
-                this.debugOverlay.style.display = 'none';
-            }
-            console.log('TOC Debug Mode: DISABLED');
-        }
     }
 
     /**
@@ -199,9 +159,6 @@ export class TocScrollSpy {
     handleResize() {
         this.cleanupInitialScrollHandlers(); // Cancel initial scroll handlers
         this.updateDetectionLine();
-        if (this.debugOverlay) {
-            this.debugOverlay.style.top = `${this.cachedDetectionLine}px`;
-        }
     }
 
     /**
@@ -410,16 +367,6 @@ export class TocScrollSpy {
         window.removeEventListener('resize', this.boundHandleResize);
 
         this.initialized = false;
-
-        // Clean up debug overlay
-        if (this.debugOverlay && this.debugOverlay.parentNode) {
-            this.debugOverlay.parentNode.removeChild(this.debugOverlay);
-        }
-
-        // Clean up global function
-        if (window.toggleTocDebug === this.toggleDebug) {
-            delete window.toggleTocDebug;
-        }
     }
 }
 

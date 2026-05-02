@@ -61,10 +61,15 @@ Files in `wwwroot/js/`:
 
 | File | Purpose | Loading | Format |
 |------|---------|---------|--------|
-| `nav-helpers.js` | Back to top, back to previous buttons | Static (every page) | IIFE |
+| `nav-helpers.js` | Back to top, back to previous buttons, keyboard nav detection | Static (every page) | IIFE |
+| `sidebar-toggle.js` | Desktop sidebar collapse/expand with cookie persistence | Static (every page) | Script |
+| `mobile-nav.js` | Mobile menu scroll lock and Escape key handler | Static (via Blazor JS interop) | Script |
+| `hero-banner.js` | Hero banner collapse/expand with cookie persistence | Static (via Blazor JS interop) | IIFE |
+| `infinite-scroll.js` | Scroll-based infinite loading trigger with position memory | Dynamic (via Blazor JS interop) | ES Module |
 | `toc-scroll-spy.js` | TOC scroll highlighting, history management | Dynamic (pages with TOC) | ES Module |
-| `custom-pages.js` | Collapsible sections for SDLC/DX pages | Dynamic (pages with `[data-collapsible]`) | ES Module |
+| `custom-pages.js` | Collapsible sections for SDLC/DX pages, feature filters | Dynamic (pages with `[data-collapsible]`) | ES Module |
 | `date-range-slider.js` | Client-side slider clamping (prevents handles crossing) | Dynamic (via Blazor JS interop) | ES Module |
+| `page-scripts.js` | Orchestrator for CDN loading (Highlight.js, Mermaid) and page init | Static (every page) | ES Module |
 
 Special file in `wwwroot/`:
 
@@ -152,3 +157,35 @@ history.replaceState(null, '', newUrl);
 - CDN library versions: [src/TechHub.Web/Configuration/CdnLibraries.cs](../src/TechHub.Web/Configuration/CdnLibraries.cs)
 - Navigation helpers: [src/TechHub.Web/wwwroot/js/nav-helpers.js](../src/TechHub.Web/wwwroot/js/nav-helpers.js)
 - TOC scroll-spy: [src/TechHub.Web/wwwroot/js/toc-scroll-spy.js](../src/TechHub.Web/wwwroot/js/toc-scroll-spy.js)
+
+## Testing
+
+All client-side JavaScript is unit-tested with **Vitest** + **jsdom** in `tests/javascript/`.
+
+### Running JavaScript Tests
+
+```powershell
+# Via the standard Run command
+Run -TestProject javascript
+
+# Direct npm commands
+npm test           # Single run (CI mode)
+npm run test:watch # Watch mode (development)
+```
+
+### Test Coverage
+
+Every file in `wwwroot/js/` has a corresponding `*.test.js` file. Tests verify:
+
+- Exported function behavior and return values
+- DOM manipulation (class toggling, element creation)
+- Event listener registration and cleanup
+- Cookie persistence (value only — jsdom limitation)
+- Module lifecycle (init/dispose patterns)
+- Page navigation guards (URL change detection)
+
+### CI/CD Integration
+
+JavaScript tests run as a dedicated `test-javascript` job in both CI and CD pipelines. They are part of the quality gate — failures block PR merge and deployment.
+
+See [tests/javascript/AGENTS.md](../tests/javascript/AGENTS.md) for patterns and conventions.

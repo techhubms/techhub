@@ -221,7 +221,7 @@ function Run {
         Build only, then exit (don't run tests or start servers).
 
     .PARAMETER TestProject
-        Scope tests to a specific project (e.g., "TechHub.Web.Tests", "TechHub.Api.Tests", "E2E.Tests", "powershell").
+        Scope tests to a specific project (e.g., "TechHub.Web.Tests", "TechHub.Api.Tests", "E2E.Tests", "powershell", "javascript").
         E2E tests run Playwright browser tests against local servers.
         Can be combined with -TestName to further filter tests.
 
@@ -314,7 +314,7 @@ function Run {
         Write-Host "  -Help          Show this help message" -ForegroundColor White
         Write-Host "  -Clean         Clean build artifacts before building (use when dependencies change)" -ForegroundColor White
         Write-Host "  -WithoutTests  Skip all tests, start servers directly (for debugging)" -ForegroundColor White
-        Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell)" -ForegroundColor White
+        Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell, javascript)" -ForegroundColor White
         Write-Host "                 E2E tests = Playwright browser tests against local servers" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
         Write-Host "  -Docker        Run ALL services via docker compose (production-like containers)`n" -ForegroundColor White
@@ -324,6 +324,7 @@ function Run {
         Write-Host "  Run -Clean                           Clean build + all tests + servers" -ForegroundColor Gray
         Write-Host "  Run -WithoutTests                    Build + servers (no tests, for debugging)" -ForegroundColor Gray
         Write-Host "  Run -TestProject powershell          Run only PowerShell tests" -ForegroundColor Gray
+        Write-Host "  Run -TestProject javascript         Run only JavaScript tests" -ForegroundColor Gray
         Write-Host "  Run -TestProject Web.Tests           Run only Web tests" -ForegroundColor Gray
         Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard'" -ForegroundColor Gray
         Write-Host "  Run -TestProject E2E -TestName Nav   Run Playwright tests matching 'Nav'" -ForegroundColor Gray
@@ -734,6 +735,62 @@ function Run {
         if ($result) {
             Write-Host "  Failed: $($result.FailedCount), Passed: $($result.PassedCount), Total: $($result.TotalCount)" -ForegroundColor Yellow
         }
+        Write-Host ""
+        return $false
+    }
+
+    # Run JavaScript/Vitest tests
+    function Invoke-JavaScriptTests {
+        param(
+            [switch]$Required  # When set, npm absence is a hard failure rather than a skip
+        )
+
+        Write-Step "Running JavaScript/Vitest tests"
+        Write-Host ""
+
+        # Verify npm is available
+        if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
+            if ($Required) {
+                Write-Host "  npm not found on PATH — JavaScript tests cannot run" -ForegroundColor Red
+                Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Red
+                return $false
+            }
+            Write-Host "  npm not found on PATH — skipping JavaScript tests" -ForegroundColor Yellow
+            Write-Host "  Please install Node.js: https://nodejs.org" -ForegroundColor Yellow
+            return $true
+        }
+
+        $packageJsonPath = Join-Path $workspaceRoot "package.json"
+        if (-not (Test-Path $packageJsonPath)) {
+            if ($Required) {
+                Write-Host "  package.json not found at: $packageJsonPath" -ForegroundColor Red
+                return $false
+            }
+            Write-Host "  package.json not found — skipping JavaScript tests" -ForegroundColor Yellow
+            return $true
+        }
+
+        # Always run npm ci to ensure dependencies match package-lock.json exactly
+        Write-Info "Installing npm dependencies..."
+        $npmInstallSuccess = Invoke-ExternalCommand "npm" @("ci", "--prefix", $workspaceRoot)
+        if (-not $npmInstallSuccess) {
+            Write-Error "npm ci failed"
+            return $false
+        }
+
+        $success = Invoke-ExternalCommand "npm" @("test", "--prefix", $workspaceRoot)
+        if ($success) {
+            Write-Host ""
+            Write-Success "JavaScript tests passed"
+            return $true
+        }
+
+        Write-Host ""
+        Write-Host "╔══════════════════════════════════════════════════════════════╗" -ForegroundColor Red
+        Write-Host "║                                                              ║" -ForegroundColor Red
+        Write-Host "║  ✗ JAVASCRIPT TESTS FAILED - Cannot continue                 ║" -ForegroundColor Red
+        Write-Host "║                                                              ║" -ForegroundColor Red
+        Write-Host "╚══════════════════════════════════════════════════════════════╝" -ForegroundColor Red
         Write-Host ""
         return $false
     }
@@ -1361,12 +1418,25 @@ function Run {
         
         # Check if this is PowerShell-only test run (no .NET build/tests needed)
         $powerShellOnly = $TestProject -match "^(powershell|pester|scripts)$"
+
+        # Check if this is JavaScript-only test run (no .NET build/tests needed)
+        $javaScriptOnly = $TestProject -match "^(javascript|js|vitest)$"
         
         if ($powerShellOnly) {
             # PowerShell-only mode: Skip all .NET build/test/server operations
             Write-Step "Running PowerShell/Pester tests"
             $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
             if ($pwshSuccess -ne $true) {
+                return $false
+            }
+            Write-Host ""
+            return $true
+        }
+
+        if ($javaScriptOnly) {
+            # JavaScript-only mode: Skip all .NET build/test/server operations
+            $jsSuccess = Invoke-JavaScriptTests -Required
+            if ($jsSuccess -ne $true) {
                 return $false
             }
             Write-Host ""
@@ -1421,6 +1491,7 @@ function Run {
         if (-not $WithoutTests) {
             # Determine which tests to run based on TestProject parameter
             $runPowerShell = $false
+            $runJavaScript = $false
             $runUnitIntegration = $false
             $runE2E = $false
             $usingRemoteTarget = $false
@@ -1428,6 +1499,7 @@ function Run {
             if (-not $TestProject) {
                 # No TestProject specified - run ALL tests (PowerShell first, then .NET)
                 $runPowerShell = $true
+                $runJavaScript = $true
                 $runUnitIntegration = $true
                 $runE2E = $true
             }
@@ -1445,6 +1517,15 @@ function Run {
             if ($runPowerShell) {
                 $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
                 if ($pwshSuccess -ne $true) {
+                    return $false
+                }
+                Write-Host ""
+            }
+
+            # PHASE 1.5: JavaScript tests (fast, independent, no .NET build needed)
+            if ($runJavaScript) {
+                $jsSuccess = Invoke-JavaScriptTests
+                if ($jsSuccess -ne $true) {
                     return $false
                 }
                 Write-Host ""

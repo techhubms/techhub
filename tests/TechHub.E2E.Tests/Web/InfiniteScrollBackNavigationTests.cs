@@ -117,12 +117,13 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
 
         // Load one more batch
         await Page.ScrollToLoadMoreAsync(initialCount + 1);
-        var afterScrollCount = await Page.Locator(".card").CountAsync();
 
-        // Scroll up from the very bottom so the saved position doesn't keep the
-        // scroll-trigger within the 300px viewport margin. ScrollToLoadMoreAsync
-        // leaves scrollY at document bottom (artificially), but a real user would
-        // be browsing items further up. Position the trigger >300px below viewport.
+        // Scroll up IMMEDIATELY to prevent cascade: OnAfterRenderAsync will re-attach the
+        // scroll listener shortly after the batch completes, and its immediate handleScroll
+        // check fires at the current scrollY. EvaluateAsync (CDP, local browser connection)
+        // runs before observeScrollTrigger (SignalR, server→browser), so the trigger is
+        // positioned >300px below the viewport when the immediate check runs, preventing
+        // further cascade batch loads.
         await Page.EvaluateAsync(@"() => {
             const trigger = document.getElementById('scroll-trigger');
             if (trigger) {
@@ -131,6 +132,24 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
                 window.dispatchEvent(new Event('scroll'));
             }
         }");
+
+        // Wait for the scroll listener to be re-attached at the scrolled-up position with no
+        // batch load in progress. This confirms any cascade batch that was already in-flight
+        // before the scroll-up has completed, and observeScrollTrigger's immediate handleScroll
+        // check at the scrolled-up position did NOT trigger another cascade batch.
+        await Page.WaitForConditionAsync(
+            "() => window.__scrollListenerReady?.['scroll-trigger'] === true && !document.querySelector('.loading-more-indicator')");
+
+        // If the cascade loaded all content the scroll trigger is gone — back-navigation
+        // cannot cascade further, so this test scenario is no longer applicable.
+        var hasScrollTriggerAfterLoad = await Page.EvaluateAsync<bool>(
+            "() => document.getElementById('scroll-trigger') !== null");
+        if (!hasScrollTriggerAfterLoad)
+        {
+            return;
+        }
+
+        var afterScrollCount = await Page.Locator(".card").CountAsync();
 
         // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
         // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls

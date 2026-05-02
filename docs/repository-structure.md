@@ -67,6 +67,9 @@ See [src/AGENTS.md](../src/AGENTS.md) for general .NET development patterns and 
 - **`powershell/`** - Pester tests for PowerShell scripts
   - Tests automation scripts in `scripts/`
   - See [tests/powershell/AGENTS.md](../tests/powershell/AGENTS.md)
+- **`javascript/`** - Vitest tests for client-side JavaScript
+  - Tests all JS files in `src/TechHub.Web/wwwroot/js/`
+  - See [tests/javascript/AGENTS.md](../tests/javascript/AGENTS.md)
 
 ### Test Utilities & Test Collections
 

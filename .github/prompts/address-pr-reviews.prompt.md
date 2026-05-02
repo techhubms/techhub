@@ -254,7 +254,7 @@ Repeat steps 6a–6e for every unresolved thread before moving on.
 Run:
 
 ```pwsh
-Run -SkipE2E
+Run -Clean
 ```
 
 If there are build or test failures caused by changes made in Step 6, fix them before proceeding.
