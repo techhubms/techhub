@@ -221,9 +221,8 @@
     }
 
     function saveScrollPosition() {
-        // Don't save during the brief period right after a scroll restore —
-        // the restore triggers a scroll event that would overwrite with the correct value
-        // anyway, but on pages where we haven't restored yet this is harmless.
+        // Saves unconditionally. Post-restore scroll events save the correct restored
+        // position, which is intentional and harmless.
         window.__savedScrollPositions[getScrollKey()] = window.scrollY;
     }
 
@@ -358,6 +357,56 @@
         });
     }
 
+    // ========================================================================
+    // Navigation Spinner
+    // Shows a spinner during Blazor enhanced navigation (link click → page load).
+    // A 500ms JS delay + 150ms CSS fade-in means it only appears for slow loads,
+    // avoiding a flash on fast networks.
+    //
+    // Hide order (first one wins):
+    //   1. markScriptsReady — fired by OnAfterRenderAsync after the circuit has
+    //      fully rendered the new page (the authoritative signal).
+    //   2. enhancedload — fired earlier (after DOM patch) as a fallback for pages
+    //      that don't call markScriptsReady (e.g., simple pages with no scripts).
+    //   3. 10s safety net.
+    // ========================================================================
+    const NAV_SPINNER_ID = 'nav-spinner';
+    const NAV_SPINNER_SHOW_DELAY_MS = 500;  // wait before showing — hides on fast networks
+    const NAV_SPINNER_SAFETY_MS = 10_000;   // force-hide if nothing else does it
+    let navSpinnerShowTimeout = null;
+    let navSpinnerSafetyTimeout = null;
+
+    function createNavSpinner() {
+        if (document.getElementById(NAV_SPINNER_ID)) return;
+        const el = document.createElement('div');
+        el.id = NAV_SPINNER_ID;
+        el.className = 'nav-spinner';
+        el.setAttribute('role', 'status');
+        el.setAttribute('aria-label', 'Loading page');
+        el.setAttribute('aria-live', 'polite');
+        document.body.appendChild(el);
+    }
+
+    function showNavSpinner() {
+        createNavSpinner();
+        // Delay so fast navigations never flash the spinner
+        navSpinnerShowTimeout = setTimeout(() => {
+            navSpinnerShowTimeout = null;
+            const el = document.getElementById(NAV_SPINNER_ID);
+            if (el) el.classList.add('active');
+        }, NAV_SPINNER_SHOW_DELAY_MS);
+        // Safety net: force-hide after 5s if no other signal fires
+        if (navSpinnerSafetyTimeout) clearTimeout(navSpinnerSafetyTimeout);
+        navSpinnerSafetyTimeout = setTimeout(hideNavSpinner, NAV_SPINNER_SAFETY_MS);
+    }
+
+    function hideNavSpinner() {
+        if (navSpinnerShowTimeout) { clearTimeout(navSpinnerShowTimeout); navSpinnerShowTimeout = null; }
+        if (navSpinnerSafetyTimeout) { clearTimeout(navSpinnerSafetyTimeout); navSpinnerSafetyTimeout = null; }
+        const el = document.getElementById(NAV_SPINNER_ID);
+        if (el) el.classList.remove('active');
+    }
+
     // Intercept pushState to detect Blazor Router navigation.
     // Clears lastPopstateAt so that a forward link click immediately after a back-navigation
     // correctly triggers resetPagePosition (scroll to top) on the new forward page.
@@ -365,6 +414,7 @@
     history.pushState = function (...args) {
         originalPushState.apply(this, args);
         lastPopstateAt = 0;
+        showNavSpinner();
         checkForPageNavigation();
     };
 
@@ -376,17 +426,52 @@
         checkForPageNavigation();
     });
 
+    // Patch markScriptsReady to also hide the spinner.
+    // This is the authoritative 'page fully rendered' signal — called from
+    // OnAfterRenderAsync after the Blazor circuit has completed its render.
+    // We wrap rather than replace so the existing scroll-restore logic is unaffected.
+    function patchMarkScriptsReady() {
+        const original = window.markScriptsReady;
+        window.markScriptsReady = function () {
+            hideNavSpinner();
+            if (typeof original === 'function') original();
+        };
+    }
+
+    // markScriptsReady is defined in page-scripts.js which loads as a module.
+    // Modules execute after the parser finishes, so it may not exist yet when
+    // nav-helpers.js (defer) runs. Poll briefly until it appears.
+    function tryPatchMarkScriptsReady() {
+        if (typeof window.markScriptsReady === 'function') {
+            patchMarkScriptsReady();
+        } else {
+            const id = setInterval(() => {
+                if (typeof window.markScriptsReady === 'function') {
+                    clearInterval(id);
+                    patchMarkScriptsReady();
+                }
+            }, 50);
+            setTimeout(() => clearInterval(id), 5000);
+        }
+    }
+    tryPatchMarkScriptsReady();
+
     // Also listen for enhancedload if Blazor SSR is active
     function trySetupBlazorListeners() {
         if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {
             Blazor.addEventListener('enhancedload', init);
             Blazor.addEventListener('enhancedload', checkForPageNavigation);
+            // enhancedload is a fallback: fires before the circuit renders, so the
+            // spinner may still be visible briefly after it. markScriptsReady (above)
+            // is the primary hide trigger on pages that call it.
+            Blazor.addEventListener('enhancedload', hideNavSpinner);
         } else {
             const retryId = setInterval(() => {
                 if (typeof Blazor !== 'undefined' && Blazor.addEventListener) {
                     clearInterval(retryId);
                     Blazor.addEventListener('enhancedload', init);
                     Blazor.addEventListener('enhancedload', checkForPageNavigation);
+                    Blazor.addEventListener('enhancedload', hideNavSpinner);
                 }
             }, 200);
             setTimeout(() => clearInterval(retryId), 10000);

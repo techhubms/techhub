@@ -86,8 +86,14 @@ export function observeScrollTrigger(helper, triggerElementId) {
 
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 
-    // Check immediately in case trigger is already visible (e.g. short content)
-    handleScroll();
+    // Check immediately in case trigger is already visible (e.g. short content).
+    // Skip when suppression is active: setSuppressNextTriggerCheck() was called for a
+    // back-navigation restore. The suppress flag must remain set to handle the first
+    // scroll event fired by markScriptsReady's window.scrollTo() — consuming it here
+    // would allow the restore scroll to trigger LoadNextBatch and cascade.
+    if (!suppressNextTriggerCheck) {
+        handleScroll();
+    }
 }
 
 export function dispose() {

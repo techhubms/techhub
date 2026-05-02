@@ -207,8 +207,8 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         }
       ]
       scale: {
-        minReplicas: 1
-        maxReplicas: 2
+        minReplicas: environmentName == 'staging' ? 0 : 1
+        maxReplicas: environmentName == 'staging' ? 2 : 3
         cooldownPeriod: 300
         pollingInterval: 30
         rules: [

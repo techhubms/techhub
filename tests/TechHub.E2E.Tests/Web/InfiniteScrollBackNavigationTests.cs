@@ -90,12 +90,19 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             $"(expected) => document.querySelectorAll('.card').length >= expected",
             afterScrollCount);
 
-        // Wait for scroll listener to be set up (confirms OnAfterRenderAsync completed,
-        // which includes both the anti-cascade suppression and listener attachment).
-        // The generic scroll restore in nav-helpers.js runs via markScriptsReady after
-        // all rendering is complete, so scrollY is already set when this condition becomes true.
+        // Wait for scroll listener to be set up (confirms ContentItemsGrid.OnAfterRenderAsync
+        // completed, including the anti-cascade suppression and listener attachment).
         await Page.WaitForConditionAsync(
             "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
+
+        // Wait for scroll position to be restored by markScriptsReady.
+        // SectionCollection.OnAfterRenderAsync (which calls markScriptsReady) runs after
+        // ContentItemsGrid.OnAfterRenderAsync (which sets __scrollListenerReady), and each
+        // JS interop call incurs a SignalR round-trip. On slow networks the restore fires
+        // slightly later, so we poll until scrollY reaches the expected position.
+        await Page.WaitForConditionAsync(
+            "(expectedY) => Math.abs(window.scrollY - expectedY) < 200",
+            scrollYBeforeNav);
 
         // Assert - Scroll position should be restored near where the user was
         var restoredPosition = await Page.EvaluateAsync<double>("() => window.scrollY");

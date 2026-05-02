@@ -10,7 +10,7 @@ namespace TechHub.Web.Tests.Conventions;
 public class PageMarkScriptsReadyConventionTests
 {
     private static readonly string _pagesDirectory = Path.GetFullPath(
-        Path.Combine(
+        Path.Join(
             new DirectoryInfo(AppContext.BaseDirectory).Parent!.Parent!.Parent!.Parent!.Parent!.FullName,
             "src", "TechHub.Web", "Components", "Pages"));
 
