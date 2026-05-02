@@ -328,11 +328,23 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/");
         await Page.WaitForSelectorAsync(".section-card");
 
+        // Flush any pending rAFs from nav-helpers.js (e.g., resetPagePosition's rAF) and
+        // ensure Tab starts from a known focus state — same pattern used by
+        // TabOrdering_AfterNavigation_ShouldStart_WithSkipLink. Without this, the rAF can
+        // fire after WaitForConditionAsync passes (focus != body) but before EvaluateAsync
+        // reads the href, stealing focus back to body and returning an empty string.
+        await Page.EvaluateAsync(@"() => new Promise(resolve =>
+            requestAnimationFrame(() => requestAnimationFrame(resolve)))");
+        await Page.EvaluateAsync(@"() => {
+            document.body.tabIndex = -1;
+            document.body.focus();
+        }");
+
         // Step 1: Tab to skip link
         await Page.Keyboard.PressAsync("Tab");
-        // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
-        await Page.WaitForConditionAsync(
-            "() => document.activeElement && document.activeElement !== document.body");
+        // Tab focus is synchronous — remove tabIndex and read href immediately without
+        // a WaitForConditionAsync polling gap that would expose the focus-steal race.
+        await Page.EvaluateAsync("() => document.body.removeAttribute('tabindex')");
         var href = await Page.EvaluateAsync<string>("() => document.activeElement.getAttribute('href') || ''");
         href.Should().Contain("skiptohere", "first tab should focus skip link");
 
