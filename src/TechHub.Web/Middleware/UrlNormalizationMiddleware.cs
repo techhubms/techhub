@@ -227,9 +227,10 @@ public partial class UrlNormalizationMiddleware
             return true;
         }
 
-        // If the last segment has a file extension it is a static asset (e.g. /css/article.css,
-        // /images/section-backgrounds/ai.jxl) or a registered endpoint (e.g. /all/feed.xml).
-        // Pass these through so UseStaticFiles can serve them; do not validate as a content route.
+        // If the last segment of the path has a file extension, pass through without validation.
+        // This covers static assets at any depth (e.g. /css/article.css, /images/section-backgrounds/ai.jxl)
+        // and registered endpoints with extensions (e.g. /all/feed.xml, /security/feed.xml, /sitemap.xml).
+        // UseStaticFiles or an endpoint handler downstream will serve or reject the request.
         if (Path.HasExtension(segments[^1]))
         {
             return true;
