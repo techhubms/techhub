@@ -243,8 +243,13 @@ public partial class UrlNormalizationMiddleware
             return false;
         }
 
-        // If there is a second segment, it must be a known collection of that section.
-        if (segments.Length >= 2 && !_sectionCache.IsKnownCollection(section.Name, segments[1]))
+        // If there is a second segment, it must either be the virtual "all" keyword
+        // (/{sectionName}/all shows all content in that section and is handled by
+        // SectionCollection.razor — it is not stored as a real API collection) or a
+        // known collection of that section.
+        if (segments.Length >= 2
+            && !string.Equals(segments[1], "all", StringComparison.OrdinalIgnoreCase)
+            && !_sectionCache.IsKnownCollection(section.Name, segments[1]))
         {
             return false;
         }

@@ -611,6 +611,25 @@ public class UrlNormalizationMiddlewareTests
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 
+    [Theory]
+    [InlineData("/ai/all")]
+    [InlineData("/github-copilot/all")]
+    [InlineData("/security/all")]
+    public async Task MultiSegment_KnownSection_VirtualAllCollection_PassesThrough(string path)
+    {
+        // /{sectionName}/all is a valid Blazor route handled by SectionCollection.razor.
+        // It is a virtual "show all content" view — not stored as a real API collection —
+        // so IsKnownCollection returns false. The middleware must NOT 404 these paths.
+        var sectionName = path.TrimStart('/').Split('/')[0];
+        var cache = BuildSectionCacheWithCollections(sectionName, ["videos", "blogs"]);
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"{path} is a valid section 'all' view and must not be 404'd");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
     [Fact]
     public async Task MultiSegment_UnknownSection_WithHtmlExtension_Returns404_NotRedirect()
     {
