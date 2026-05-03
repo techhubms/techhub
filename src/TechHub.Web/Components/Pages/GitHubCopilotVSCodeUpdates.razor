@@ -146,6 +146,18 @@ else
             return;
         }
 
+        // Reset not-found state so navigating from an invalid slug to a valid one works correctly.
+        // Blazor reuses the component instance on same-route navigation, so stale state must be cleared.
+        _notFound = false;
+
+        // Validate optional slug parameter on navigation changes too
+        if (VideoSlug != null && !RouteParameterValidator.IsValidSlug(VideoSlug))
+        {
+            _notFound = true;
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            return;
+        }
+
         // When URL parameter changes, reload the selected video
         if (videoItems.Any())
         {

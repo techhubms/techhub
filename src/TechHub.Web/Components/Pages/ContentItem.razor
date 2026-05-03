@@ -111,6 +111,7 @@ else
             || !RouteParameterValidator.IsValidNameSegment(CollectionName)
             || !RouteParameterValidator.IsValidSlug(Slug))
         {
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
             isLoading = false;
             return;
         }
@@ -150,6 +151,7 @@ else
                 || !RouteParameterValidator.IsValidNameSegment(CollectionName)
                 || !RouteParameterValidator.IsValidSlug(Slug))
             {
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
                 isLoading = false;
                 return;
             }

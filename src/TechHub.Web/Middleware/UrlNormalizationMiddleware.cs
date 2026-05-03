@@ -136,22 +136,34 @@ public partial class UrlNormalizationMiddleware
                 Redirect(context, result.Url + context.Request.QueryString);
                 return;
             }
+
+            // Slug confirmed not in the DB — return a hard 404 so crawlers and caches treat this
+            // as a permanent absence, not a transient failure.
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            return;
         }
         catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
         {
             // Rethrow when the client disconnected — avoid writing a redirect onto an aborted connection.
             throw;
         }
-#pragma warning disable CA1031 // Intentional: all transient failures (timeout, HTTP error, DI issues) are treated as 404
-        catch (Exception ex)
-#pragma warning restore CA1031
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
         {
-            // All retries exhausted — treat the same as a null result.
-            _logger.LogWarning(ex, "Legacy slug lookup failed for {Slug} after retries", segment);
+            // Transient API failure (network error or timeout after all retries).
+            // Graceful degradation: still clean up .html / date prefix even when the API is unavailable.
+            // Do NOT return 404 here — a legitimate legacy URL would get a cacheable permanent 404
+            // just because the API was briefly down.
+            _logger.LogWarning(ex, "Legacy slug lookup failed for {Slug}; falling back to normalized path", segment);
         }
 
-        // Slug not found (null result or API unavailable after retries): return 404 directly.
-        context.Response.StatusCode = StatusCodes.Status404NotFound;
+        // API was transiently unavailable — clean up the URL if the path changed, then pass through.
+        if (pathChanged)
+        {
+            Redirect(context, normalizedPath + context.Request.QueryString);
+            return;
+        }
+
+        await _next(context);
     }
 
     /// <summary>
