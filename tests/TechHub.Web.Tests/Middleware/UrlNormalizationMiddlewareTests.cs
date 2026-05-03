@@ -657,6 +657,9 @@ public class UrlNormalizationMiddlewareTests
     [InlineData("/admin/users")]
     [InlineData("/admin/content/edit")]
     [InlineData("/error/details")]
+    [InlineData("/all/all")]
+    [InlineData("/all/roundups")]
+    [InlineData("/all/authors")]
     public async Task MultiSegment_KnownNonSectionPages_PassThrough(string path)
     {
         var cache = BuildSectionCache("ai");
@@ -664,7 +667,7 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue($"known non-section pages (admin, error, etc.) may have sub-paths");
+        nextCalled().Should().BeTrue($"known non-section pages (admin, error, all, etc.) may have sub-paths");
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 
