@@ -84,7 +84,9 @@ For all other single-segment paths, calls `GET /api/legacy-redirect?slug={slug}&
 
 **Case is not normalized in the middleware.** The infrastructure layer lowercases parameters before DB queries, so `/My-Article` and `/my-article` both resolve to the same content without a redirect.
 
-**Not found**: if the API returns no match, or if the API is unavailable after retries (see [architecture.md](architecture.md)), the middleware returns a **404** immediately. There is no redirect to a cleaned path — the cleaned URL has already been applied upstream by normalizations, so no extra round-trip is needed.
+**Not found**: if the API returns no match, the middleware returns a **404** immediately. There is no redirect to a cleaned path — the cleaned URL has already been applied upstream by normalizations, so no extra round-trip is needed.
+
+**Transient API failure**: if the API is temporarily unavailable (network error or timeout after all retries), the middleware degrades gracefully instead of returning a cacheable 404 that could mislabel a valid legacy URL as permanently absent. When the path was cleaned (`pathChanged = true`), the middleware still issues a **301 redirect** to the normalized URL. When the path was already clean, the request is passed through to Blazor routing. In both cases the failure is logged as a warning.
 
 ## Stage 3 — HTTPS Redirect
 

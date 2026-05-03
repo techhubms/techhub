@@ -103,7 +103,7 @@ Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
 
 This makes the span appear on the **Failures** blade in Application Insights, enabling monitoring of how often users hit non-existent URLs. The description is always `"Content not found"` regardless of the URL, so the failure can be grouped and trended by operation name.
 
-> **Note**: Single-segment URLs handled entirely by `UrlNormalizationMiddleware` (returning HTTP 404 directly) are automatically tracked as failures by ASP.NET Core request tracing — no extra code needed. The `Activity.SetStatus` calls above cover the in-page cases where the response status remains 200.
+> **Note**: Single-segment URLs handled entirely by `UrlNormalizationMiddleware` (returning HTTP 404 directly) are automatically tracked as failures by ASP.NET Core request tracing — no extra code needed. The `Activity.SetStatus` calls above cover the in-page cases where the Blazor component renders inline not-found content (the `NotFoundContent` component also sets `HttpContext.Response.StatusCode = 404` during SSR prerendering, so the HTTP response carries a real 404 for crawlers even in those cases).
 
 Bot-generated not-found spans are suppressed by `TelemetryNoiseProcessor` (see [src/TechHub.ServiceDefaults/TelemetryNoiseProcessor.cs](../src/TechHub.ServiceDefaults/TelemetryNoiseProcessor.cs)), so bot traffic does not inflate the failure rate.
 

@@ -163,6 +163,7 @@ else
                 || !RouteParameterValidator.IsValidNameSegment(CollectionName)
                 || !RouteParameterValidator.IsValidSlug(Slug))
             {
+                item = null;
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
                 if (HttpContext is not null)
                 {
@@ -175,6 +176,7 @@ else
             section = SectionCache.GetSectionByName(SectionName);
             if (section == null)
             {
+                item = null;
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
                 if (HttpContext is not null)
                 {
