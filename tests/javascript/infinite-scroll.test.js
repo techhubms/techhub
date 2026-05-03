@@ -405,4 +405,78 @@ describe('infinite-scroll.js', () => {
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
     });
+
+    describe('Navigation API traverse detection', () => {
+        it('should suppress immediate check when navigationType is traverse (back-navigation)', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            // Simulate back-navigation via Navigation API (Chromium 102+)
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            // Trigger in viewport — would cascade without suppression
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            // suppressOnAttach=false but Navigation API detects traverse
+            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+
+            // Immediate handleScroll must be skipped (traverse suppression active)
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+
+        it('should consume traverse suppress flag on first scroll and allow subsequent', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // First scroll (e.g. scroll-restore from markScriptsReady): flag consumed
+            window.dispatchEvent(new Event('scroll'));
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // Second scroll: flag cleared, trigger fires normally
+            window.dispatchEvent(new Event('scroll'));
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+
+        it('should NOT suppress when Navigation API is absent (undefined)', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            // Ensure navigation API is not present (jsdom default)
+            delete window.navigation;
+
+            // Trigger in viewport
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            // suppressOnAttach=false, no navigation API → no suppression
+            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+
+        it('should NOT suppress when navigationType is push (forward navigation)', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            window.navigation = {
+                currentEntry: { navigationType: 'push' },
+            };
+
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+
+            // Push navigation: no suppression — immediate check fires
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+    });
 });

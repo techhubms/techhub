@@ -245,13 +245,50 @@ describe('nav-helpers.js', () => {
     });
 
     describe('scroll position management', () => {
-        it('should save scroll position on scroll events', async () => {
+        it('should save position on scroll events (rAF-throttled)', async () => {
             await import(MODULE_PATH);
 
             Object.defineProperty(window, 'scrollY', { value: 500, writable: true, configurable: true });
             window.dispatchEvent(new Event('scroll'));
 
             expect(window.__savedScrollPositions['/all']).toBe(500);
+        });
+
+        it('should save scroll position synchronously when pushState fires (pre-navigation save)', async () => {
+            await import(MODULE_PATH);
+
+            // Simulate user scrolling to mid-page
+            Object.defineProperty(window, 'scrollY', { value: 1234, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scroll'));
+            // rAF runs synchronously (mocked), so position is already saved at 1234
+
+            // Now scroll a little more — but rAF already fired so scrollSaveScheduled=false,
+            // a new rAF is needed. Instead of waiting for rAF, pushState should save immediately.
+            Object.defineProperty(window, 'scrollY', { value: 1500, writable: true, configurable: true });
+            // DO NOT dispatch a scroll event here — simulating the case where rAF hasn't fired yet
+            // when the user clicks a navigation link (pushState fires before rAF callback).
+
+            // Intercept and invoke the patched pushState
+            window.history.pushState('/detail', '', '/detail');
+
+            // The synchronous save in the pushState interceptor should have captured 1500
+            // (the current scrollY at pushState time) for the current page '/all'.
+            expect(window.__savedScrollPositions['/all']).toBe(1500);
+        });
+
+        it('should save correct page key when pushState fires (old URL, not new URL)', async () => {
+            await import(MODULE_PATH);
+
+            // Current page is /all, user is scrolled to 2000
+            Object.defineProperty(window, 'scrollY', { value: 2000, writable: true, configurable: true });
+
+            // Fire pushState to navigate to /detail
+            window.history.pushState('/detail', '', '/detail');
+
+            // Save must use the OLD URL key '/all' (captured before URL changes)
+            expect(window.__savedScrollPositions['/all']).toBe(2000);
+            // The new page '/detail' should not have been saved yet
+            expect(window.__savedScrollPositions['/detail']).toBeUndefined();
         });
 
         it('should save position keyed by pathname + search', async () => {
