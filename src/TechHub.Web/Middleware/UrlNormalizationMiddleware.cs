@@ -190,11 +190,13 @@ public partial class UrlNormalizationMiddleware
     /// Validates a multi-segment normalized path against the section/collection cache.
     /// Returns <c>false</c> (404) when:
     /// <list type="bullet">
-    ///   <item>segment[0] is not a known section, known page, or framework prefix</item>
+    ///   <item>segment[0] is not a known section, known page, or framework prefix and the last segment has no file extension</item>
     ///   <item>segment[0] is a known section and segment[1] is not a known collection of that section</item>
     /// </list>
     /// Returns <c>true</c> (pass through) when the cache is not ready, or when the path
-    /// starts with a framework/auth prefix, or when the section and collection are both valid.
+    /// starts with a framework/auth prefix, or when the last segment has a file extension
+    /// (static assets like /css/article.css, /images/section-backgrounds/ai.jxl),
+    /// or when the section and collection are both valid.
     /// Slug segments (segment[2+]) are not validated here — they are verified by the DB query.
     /// </summary>
     private bool IsValidMultiSegmentPath(string[] segments)
@@ -225,18 +227,19 @@ public partial class UrlNormalizationMiddleware
             return true;
         }
 
+        // If the last segment has a file extension it is a static asset (e.g. /css/article.css,
+        // /images/section-backgrounds/ai.jxl) or a registered endpoint (e.g. /all/feed.xml).
+        // Pass these through so UseStaticFiles can serve them; do not validate as a content route.
+        if (Path.HasExtension(segments[^1]))
+        {
+            return true;
+        }
+
         // Must be a known section — otherwise 404.
         var section = _sectionCache.GetSectionByName(first);
         if (section == null)
         {
             return false;
-        }
-
-        // If segment[1] has a file extension it is a static asset or a registered endpoint
-        // (e.g. /{sectionName}/feed.xml). Don't validate it as a collection name.
-        if (segments.Length >= 2 && Path.HasExtension(segments[1]))
-        {
-            return true;
         }
 
         // If there is a second segment, it must be a known collection of that section.

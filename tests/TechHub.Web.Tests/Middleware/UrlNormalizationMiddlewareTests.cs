@@ -671,6 +671,28 @@ public class UrlNormalizationMiddlewareTests
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 
+    [Theory]
+    [InlineData("/css/article.css")]
+    [InlineData("/css/sidebar.css")]
+    [InlineData("/js/nav-helpers.js")]
+    [InlineData("/js/infinite-scroll.js")]
+    [InlineData("/images/logo.png")]
+    [InlineData("/images/section-backgrounds/ai.jxl")]
+    [InlineData("/images/section-backgrounds/github-copilot.webp")]
+    [InlineData("/fakesection/something.css")]
+    public async Task MultiSegment_StaticFilePaths_PassThrough_RegardlessOfSection(string path)
+    {
+        // Static assets like /css/article.css must reach UseStaticFiles even when
+        // the first path segment is not a known section name.
+        var cache = BuildSectionCache("ai");
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"static asset path {path} must always pass through to UseStaticFiles");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
     [Fact]
     public async Task MultiSegment_CacheNotReady_PassesThrough_WithoutFalse404()
     {
