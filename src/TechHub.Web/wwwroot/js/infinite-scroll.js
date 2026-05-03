@@ -21,7 +21,7 @@ export function observeScrollTrigger(helper, triggerElementId, suppressOnAttach 
     // Passing suppressOnAttach = true eliminates that two-call window: the flag is set
     // inside this single JS execution, atomically with listener setup.
     //
-    // Second-layer defence: detect back/forward navigation via the Navigation API
+    // Second-layer defense: detect back/forward navigation via the Navigation API
     // (Chromium 102+). When navigationType === 'traverse', markScriptsReady() will fire
     // a scroll-restoration event regardless of whether the C# layer detected a cache hit.
     // For example, if PersistentComponentState (prerender) is used instead of the circuit

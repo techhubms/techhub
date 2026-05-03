@@ -254,25 +254,19 @@ describe('nav-helpers.js', () => {
             expect(window.__savedScrollPositions['/all']).toBe(500);
         });
 
-        it('should save scroll position synchronously when pushState fires (pre-navigation save)', async () => {
+        it('should save scroll position synchronously on pushState', async () => {
             await import(MODULE_PATH);
 
-            // Simulate user scrolling to mid-page
+            // User scrolls to mid-page; rAF mock fires synchronously so position is saved.
             Object.defineProperty(window, 'scrollY', { value: 1234, writable: true, configurable: true });
             window.dispatchEvent(new Event('scroll'));
-            // rAF runs synchronously (mocked), so position is already saved at 1234
 
-            // Now scroll a little more — but rAF already fired so scrollSaveScheduled=false,
-            // a new rAF is needed. Instead of waiting for rAF, pushState should save immediately.
+            // User scrolls further before the next rAF fires, then clicks a link.
+            // pushState must capture the latest position immediately without waiting for rAF.
             Object.defineProperty(window, 'scrollY', { value: 1500, writable: true, configurable: true });
-            // DO NOT dispatch a scroll event here — simulating the case where rAF hasn't fired yet
-            // when the user clicks a navigation link (pushState fires before rAF callback).
-
-            // Intercept and invoke the patched pushState
             window.history.pushState('/detail', '', '/detail');
 
-            // The synchronous save in the pushState interceptor should have captured 1500
-            // (the current scrollY at pushState time) for the current page '/all'.
+            // The synchronous save in the pushState interceptor captures 1500 for '/all'.
             expect(window.__savedScrollPositions['/all']).toBe(1500);
         });
 
