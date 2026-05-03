@@ -292,17 +292,17 @@
         }
 
         // Setup scroll listener on first render, or re-attach when filters change.
-        // When restoring from circuit cache (back-button navigation), pass suppressRestore=true
+        // When restoring from circuit cache (back-button navigation), pass suppressOnAttach=true
         // so observeScrollTrigger atomically sets the anti-cascade suppress flag AND attaches
         // the listener in a single JS call. This eliminates the two-call race where
         // SectionCollection.OnAfterRenderAsync could call markScriptsReady() between the old
         // separate setSuppressNextTriggerCheck() and observeScrollTrigger() interop calls.
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
-            var suppressRestore = needsScrollRestore;
+            var suppressOnAttach = needsScrollRestore;
             needsScrollRestore = false;
             needsScrollListenerSetup = false;
-            await SetupScrollListener(suppressRestore);
+            await SetupScrollListener(suppressOnAttach);
         }
         else if (needsScrollRestore)
         {
@@ -311,7 +311,7 @@
         }
     }
 
-    private async Task SetupScrollListener(bool suppressRestore = false)
+    private async Task SetupScrollListener(bool suppressOnAttach = false)
     {
         try
         {
@@ -323,10 +323,10 @@
             dotNetRef ??= DotNetObjectReference.Create(this);
 
             // (Re-)attach scroll listener to current scroll-trigger element.
-            // Pass suppressRestore=true on back-navigation to atomically set the
+            // Pass suppressOnAttach=true on back-navigation to atomically set the
             // anti-cascade flag inside observeScrollTrigger (no separate JS call needed).
             // JS dispose() handles cleanup of previous listener.
-            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger", suppressRestore);
+            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger", suppressOnAttach);
             Logger.LogDebug("Infinite scroll listener attached");
         }
         catch (Exception ex)

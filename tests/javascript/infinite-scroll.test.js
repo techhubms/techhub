@@ -361,7 +361,7 @@ describe('infinite-scroll.js', () => {
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
 
-        it('should suppress first scroll event after suppressOnAttach=true', () => {
+        it('should consume suppress flag on first scroll event and allow subsequent scrolls', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
