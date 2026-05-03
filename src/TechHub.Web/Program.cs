@@ -244,12 +244,7 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
             // admin POST/DELETE endpoints (processing triggers, cache invalidation, etc.).
             var method = args.Outcome.Result?.RequestMessage?.Method;
             var isIdempotent = method == HttpMethod.Get || method == HttpMethod.Head;
-            if (!isIdempotent)
-            {
-                return new ValueTask<bool>(false);
-            }
-
-            return new ValueTask<bool>(HttpClientResiliencePredicates.IsTransient(args.Outcome));
+            return new ValueTask<bool>(isIdempotent && HttpClientResiliencePredicates.IsTransient(args.Outcome));
         },
         OnRetry = args =>
         {
