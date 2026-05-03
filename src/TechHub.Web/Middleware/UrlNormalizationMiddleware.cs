@@ -299,8 +299,9 @@ public partial class UrlNormalizationMiddleware
     /// </summary>
     private bool TryRedirectLegacyFeed(HttpContext context, string path)
     {
-        // Only single-segment .xml paths qualify. Multi-segment paths like /all/feed.xml
-        // or /sitemap.xml are already correctly formed routes — do not touch them.
+        // Single-segment .xml paths are candidates for legacy feed redirection.
+        // Multi-segment paths like /all/feed.xml are already correct — leave them alone.
+        // /sitemap.xml is also excluded: it is not an RSS feed and needs no redirect.
         if (!path.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
         {
             return false;
@@ -315,8 +316,8 @@ public partial class UrlNormalizationMiddleware
         // /feed.xml → /all/feed.xml (the canonical "everything" feed)
         if (segment.Equals("feed.xml", StringComparison.OrdinalIgnoreCase))
         {
-            _logger.LogInformation("Legacy feed redirect: /feed.xml -> /all/feed.xml");
-            Redirect(context, "/all/feed.xml");
+            _logger.LogDebug("Legacy feed redirect: /feed.xml -> /all/feed.xml");
+            Redirect(context, "/all/feed.xml" + context.Request.QueryString);
             return true;
         }
 
@@ -327,8 +328,8 @@ public partial class UrlNormalizationMiddleware
         if (section != null)
         {
             var target = $"/{section.Name}/feed.xml";
-            _logger.LogInformation("Legacy feed redirect: /{OldPath} -> {Target}", segment, target);
-            Redirect(context, target);
+            _logger.LogDebug("Legacy feed redirect: /{OldPath} -> {Target}", segment, target);
+            Redirect(context, target + context.Request.QueryString);
             return true;
         }
 

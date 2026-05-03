@@ -204,7 +204,7 @@ public static class ServiceDefaultsExtensions
         if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
         {
             return !value.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
-                && !value.EndsWith("sitemap.xml", StringComparison.OrdinalIgnoreCase);
+                && !value.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
         }
 
         return _probeExtensions.Contains(ext);

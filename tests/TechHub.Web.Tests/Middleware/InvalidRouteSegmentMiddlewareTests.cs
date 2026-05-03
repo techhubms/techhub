@@ -93,6 +93,7 @@ public class InvalidRouteSegmentMiddlewareTests
     [InlineData("/.env")]
     [InlineData("/xmlrpc.php")]
     [InlineData("/random.xml")]
+    [InlineData("/evil-sitemap.xml")]     // suffix match no longer bypasses probe detection
     [InlineData("/all/feed.xml", false)]  // feed.xml is NOT a probe
     [InlineData("/sitemap.xml", false)]   // sitemap.xml is NOT a probe
     [InlineData("/github-copilot/feed.xml", false)]
