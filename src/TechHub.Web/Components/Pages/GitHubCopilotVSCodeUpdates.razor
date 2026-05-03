@@ -105,6 +105,9 @@ else
     private bool _restoredFromPersistedState;
     private bool _notFound;
 
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         try
@@ -130,6 +133,10 @@ else
         {
             _notFound = true;
             Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
             return;
         }
 
@@ -155,6 +162,10 @@ else
         {
             _notFound = true;
             Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
             return;
         }
 

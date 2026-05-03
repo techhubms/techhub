@@ -86,6 +86,9 @@ else
     private string? _previousCollectionName;
     private string? _previousSlug;
 
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         try
@@ -112,6 +115,10 @@ else
             || !RouteParameterValidator.IsValidSlug(Slug))
         {
             Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
             isLoading = false;
             return;
         }
@@ -120,6 +127,11 @@ else
         section = SectionCache.GetSectionByName(SectionName);
         if (section == null)
         {
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
             isLoading = false;
             return;
         }
@@ -152,6 +164,10 @@ else
                 || !RouteParameterValidator.IsValidSlug(Slug))
             {
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
                 isLoading = false;
                 return;
             }
@@ -159,6 +175,11 @@ else
             section = SectionCache.GetSectionByName(SectionName);
             if (section == null)
             {
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
                 isLoading = false;
                 return;
             }
@@ -187,6 +208,10 @@ else
             {
                 // Content not found - the template renders not-found content inline.
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)

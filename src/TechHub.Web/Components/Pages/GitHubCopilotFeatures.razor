@@ -161,6 +161,9 @@ else if (_notFound)
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
     private PersistingComponentStateSubscription? _persistSubscription;
 
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
     // Per-section active filters — keyed by featureSection.Id.
     // Each section maintains its own independent filter state.
     private readonly Dictionary<string, HashSet<string>> _sectionFilters = new();
@@ -241,6 +244,10 @@ else if (_notFound)
             {
                 _notFound = true;
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
                 return;
             }
 

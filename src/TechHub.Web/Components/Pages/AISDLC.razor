@@ -252,6 +252,9 @@ else if (_notFound)
     private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
 
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
     private string GetRenderedContent()
     {
         if (pageData == null)
@@ -315,6 +318,10 @@ else if (_notFound)
             {
                 _notFound = true;
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)

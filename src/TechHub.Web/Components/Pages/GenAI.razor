@@ -103,6 +103,9 @@ else if (_notFound)
     private string? _previousPageType;
     private string PageType => DeterminePageType();
 
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
     private string GetPageTitle() => pageData?.Title ?? PageType switch
     {
         "basics" => "GenAI Basics",
@@ -238,6 +241,10 @@ else if (_notFound)
             {
                 _notFound = true;
                 Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)
