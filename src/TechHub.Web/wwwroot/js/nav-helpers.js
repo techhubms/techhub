@@ -412,6 +412,13 @@
     // correctly triggers resetPagePosition (scroll to top) on the new forward page.
     const originalPushState = history.pushState;
     history.pushState = function (...args) {
+        // Save the current page's scroll position synchronously before the URL changes.
+        // onScrollSave() is rAF-throttled, so on CI runners under load the rAF callback
+        // may not have fired yet when the user clicks a link. Saving here guarantees the
+        // most-recent scrollY is captured with the correct (pre-navigation) URL key,
+        // regardless of rAF timing. This is the critical fix for scroll restoration after
+        // back-navigation in production where network latency delays rAF execution.
+        saveScrollPosition();
         originalPushState.apply(this, args);
         lastPopstateAt = 0;
         showNavSpinner();

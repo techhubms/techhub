@@ -245,13 +245,44 @@ describe('nav-helpers.js', () => {
     });
 
     describe('scroll position management', () => {
-        it('should save scroll position on scroll events', async () => {
+        it('should save position on scroll events (rAF-throttled)', async () => {
             await import(MODULE_PATH);
 
             Object.defineProperty(window, 'scrollY', { value: 500, writable: true, configurable: true });
             window.dispatchEvent(new Event('scroll'));
 
             expect(window.__savedScrollPositions['/all']).toBe(500);
+        });
+
+        it('should save scroll position synchronously on pushState', async () => {
+            await import(MODULE_PATH);
+
+            // User scrolls to mid-page; rAF mock fires synchronously so position is saved.
+            Object.defineProperty(window, 'scrollY', { value: 1234, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scroll'));
+
+            // User scrolls further before the next rAF fires, then clicks a link.
+            // pushState must capture the latest position immediately without waiting for rAF.
+            Object.defineProperty(window, 'scrollY', { value: 1500, writable: true, configurable: true });
+            window.history.pushState('/detail', '', '/detail');
+
+            // The synchronous save in the pushState interceptor captures 1500 for '/all'.
+            expect(window.__savedScrollPositions['/all']).toBe(1500);
+        });
+
+        it('should save correct page key when pushState fires (old URL, not new URL)', async () => {
+            await import(MODULE_PATH);
+
+            // Current page is /all, user is scrolled to 2000
+            Object.defineProperty(window, 'scrollY', { value: 2000, writable: true, configurable: true });
+
+            // Fire pushState to navigate to /detail
+            window.history.pushState('/detail', '', '/detail');
+
+            // Save must use the OLD URL key '/all' (captured before URL changes)
+            expect(window.__savedScrollPositions['/all']).toBe(2000);
+            // The new page '/detail' should not have been saved yet
+            expect(window.__savedScrollPositions['/detail']).toBeUndefined();
         });
 
         it('should save position keyed by pathname + search', async () => {

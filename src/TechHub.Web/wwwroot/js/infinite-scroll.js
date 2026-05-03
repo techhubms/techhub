@@ -20,7 +20,15 @@ export function observeScrollTrigger(helper, triggerElementId, suppressOnAttach 
     // run without suppression and could trigger a cascade of batch loads.
     // Passing suppressOnAttach = true eliminates that two-call window: the flag is set
     // inside this single JS execution, atomically with listener setup.
-    if (suppressOnAttach) {
+    //
+    // Second-layer defense: detect back/forward navigation via the Navigation API
+    // (Chromium 102+). When navigationType === 'traverse', markScriptsReady() will fire
+    // a scroll-restoration event regardless of whether the C# layer detected a cache hit.
+    // For example, if PersistentComponentState (prerender) is used instead of the circuit
+    // cache, suppressOnAttach arrives as false but a traverse scroll still fires. Without
+    // this guard the trigger check would run unsuppressed and cascade-load extra batches.
+    const isTraversal = window.navigation?.currentEntry?.navigationType === 'traverse';
+    if (suppressOnAttach || isTraversal) {
         suppressNextTriggerCheck = true;
     }
 
