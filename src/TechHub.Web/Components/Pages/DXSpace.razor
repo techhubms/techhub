@@ -357,9 +357,14 @@
         </article>
     </main>
 }
+else if (_notFound)
+{
+    <NotFoundContent />
+}
 
 @code {
     private DXSpacePageData? pageData;
+    private bool _notFound;
 
     private string GetRenderedContent()
     {
@@ -416,10 +421,17 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (pageData != null)
+        try
         {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("initTocScrollSpy");
+            // Single-route page; scripts only need to init once
+            if (firstRender && pageData != null)
+            {
+                await JS.InvokeVoidAsync("markScriptsLoading");
+                await JS.InvokeVoidAsync("initTocScrollSpy");
+            }
+        }
+        finally
+        {
             await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
@@ -440,7 +452,8 @@
 
             if (pageData == null)
             {
-                Navigation.NavigateTo("/not-found");
+                _notFound = true;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
             }
         }
         catch (Exception ex)

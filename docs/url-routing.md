@@ -84,7 +84,7 @@ For all other single-segment paths, calls `GET /api/legacy-redirect?slug={slug}&
 
 **Case is not normalized in the middleware.** The infrastructure layer lowercases parameters before DB queries, so `/My-Article` and `/my-article` both resolve to the same content without a redirect.
 
-**Fallback**: if the API returns no match but the URL was changed by normalizations, the request is still redirected to the cleaned path. If the API is unavailable, the same fallback applies — `.html` and date prefixes are always cleaned.
+**Not found**: if the API returns no match, or if the API is unavailable after retries (see [architecture.md](architecture.md)), the middleware returns a **404** immediately. There is no redirect to a cleaned path — the cleaned URL has already been applied upstream by normalizations, so no extra round-trip is needed.
 
 ## Stage 3 — HTTPS Redirect
 

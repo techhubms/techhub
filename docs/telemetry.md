@@ -93,6 +93,20 @@ Alerts are created with an empty actions list — add an action group in the Azu
 
 Tests are only created when `primaryHosts` is non-empty in the Bicep deployment. If no custom hostnames are provided, no availability tests or alerts are created.
 
+## Not-Found Failure Tracking
+
+All pages that render "not found" content inline (content-item pages, custom pages, and layout-level invalid-section errors) mark their OpenTelemetry span as failed with:
+
+```csharp
+Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+```
+
+This makes the span appear on the **Failures** blade in Application Insights, enabling monitoring of how often users hit non-existent URLs. The description is always `"Content not found"` regardless of the URL, so the failure can be grouped and trended by operation name.
+
+> **Note**: Single-segment URLs handled entirely by `UrlNormalizationMiddleware` (returning HTTP 404 directly) are automatically tracked as failures by ASP.NET Core request tracing — no extra code needed. The `Activity.SetStatus` calls above cover the in-page cases where the response status remains 200.
+
+Bot-generated not-found spans are suppressed by `TelemetryNoiseProcessor` (see [src/TechHub.ServiceDefaults/TelemetryNoiseProcessor.cs](../src/TechHub.ServiceDefaults/TelemetryNoiseProcessor.cs)), so bot traffic does not inflate the failure rate.
+
 ## Google Analytics
 
 GA4 is active in Production only (controlled by `GoogleAnalytics:MeasurementId` in `appsettings.Production.json`).

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using Polly;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -197,7 +198,6 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     // Generous timeout: some admin operations (URL processing) involve AI calls that take 30-60s.
-    // Retries/resilience belong inside the API around external dependencies, not here.
     client.Timeout = TimeSpan.FromMinutes(3);
 })
 .AddHttpMessageHandler<AdminTokenDelegatingHandler>()
@@ -218,7 +218,17 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
     }
 
     return handler;
-});
+})
+.AddResilienceHandler("web-api-retry", pipeline =>
+    // 3 fast retries for transient failures (dropped connections, brief API restarts).
+    // Exponential backoff: 50 → 100 → 200ms with jitter (~350ms worst case total).
+    pipeline.AddRetry(new Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions
+    {
+        MaxRetryAttempts = 3,
+        Delay = TimeSpan.FromMilliseconds(50),
+        BackoffType = DelayBackoffType.Exponential,
+        UseJitter = true,
+    }));
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
@@ -406,7 +416,7 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 // Signs out of OIDC first (issues the end_session request to Azure AD), then
 // clears the local cookie. The OIDC sign-out redirects to "/" on completion.
 // Uses POST to prevent CSRF / prefetch-triggered logout (antiforgery validated).
-app.MapPost("/admin/logout", async (HttpContext context) =>
+app.MapPost("/admin/logout", async context =>
 {
     // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
     // Cookie sign-out is handled by the OIDC post-logout flow automatically.

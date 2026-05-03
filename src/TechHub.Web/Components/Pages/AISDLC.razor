@@ -242,9 +242,14 @@
         </article>
     </main>
 }
+else if (_notFound)
+{
+    <NotFoundContent />
+}
 
 @code {
     private SDLCPageData? pageData;
+    private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
 
     private string GetRenderedContent()
@@ -276,18 +281,19 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (pageData != null)
+        try
         {
-            try
+            // Single-route page; scripts only need to init once
+            if (firstRender && pageData != null)
             {
                 await JS.InvokeVoidAsync("markScriptsLoading");
                 await JS.InvokeVoidAsync("initMermaid");
                 await JS.InvokeVoidAsync("initTocScrollSpy");
             }
-            finally
-            {
-                await JS.InvokeVoidAsync("markScriptsReady");
-            }
+        }
+        finally
+        {
+            await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
 
@@ -307,7 +313,8 @@
 
             if (pageData == null)
             {
-                Navigation.NavigateTo("/not-found");
+                _notFound = true;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
             }
         }
         catch (Exception ex)

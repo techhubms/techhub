@@ -56,15 +56,14 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task SingleSegment_HtmlExtension_UnknownSlug_RedirectsToCleanPath()
+    public async Task SingleSegment_HtmlExtension_UnknownSlug_Returns404()
     {
-        // /article.html → strip .html → /article → API returns null → still 301 /article (URL cleaned)
+        // /article.html → strip .html → /article → API returns null → 404 directly
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/article.html", apiResult: null);
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/article");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
         nextCalled().Should().BeFalse();
     }
 
@@ -116,15 +115,15 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task SingleSegment_DatePrefix_NotFound_RedirectsToStrippedPath()
+    public async Task SingleSegment_DatePrefix_NotFound_Returns404()
     {
-        // /2026-01-12-article → strip date → /article → API returns null → 301 /article
+        // /2026-01-12-article → strip date → /article → API returns null → 404 directly
+        // (redirecting to /article would only produce another 404, so we skip the round-trip)
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/2026-01-12-article", apiResult: null);
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/article");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
         nextCalled().Should().BeFalse();
     }
 
@@ -176,14 +175,14 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task SingleSegment_LegacySlug_NotFound_PassesThrough()
+    public async Task SingleSegment_LegacySlug_NotFound_Returns404()
     {
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/Unknown-Slug", apiResult: null);
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue();
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        nextCalled().Should().BeFalse();
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
     }
 
     [Fact]
@@ -231,7 +230,7 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiException_PassesThrough()
+    public async Task ApiException_Returns404()
     {
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
@@ -242,14 +241,14 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("should pass through when API throws");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+        nextCalled().Should().BeFalse();
     }
 
     [Fact]
-    public async Task ApiException_WithHtmlPath_StillCleansUrl()
+    public async Task ApiException_WithHtmlPath_Returns404()
     {
-        // Even when the API is down, .html should be stripped.
+        // .html is stripped before the API call, so the lookup is for /article — which fails.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -259,15 +258,13 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/article");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
         nextCalled().Should().BeFalse();
     }
 
     [Fact]
-    public async Task ApiTimeout_WhenNotRequestAbort_PassesThrough()
+    public async Task ApiTimeout_WhenNotRequestAbort_Returns404()
     {
-        // TaskCanceledException from an HTTP client timeout (not a request abort) should fall through gracefully.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -277,8 +274,8 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("HTTP timeout (not a request abort) should fall through gracefully");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+        nextCalled().Should().BeFalse();
     }
 
     [Fact]
@@ -303,9 +300,9 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task InvalidOperationException_Propagates()
+    public async Task UnexpectedException_Returns404()
     {
-        // InvalidOperationException indicates a DI/config bug and must not be swallowed.
+        // Any unexpected exception (DI bug, etc.) is caught and results in 404, not an unhandled crash.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -313,9 +310,9 @@ public class UrlNormalizationMiddlewareTests
 
         var (middleware, context, _) = CreateMiddleware(path: "/Some-Slug", mockApiClient: mockApi);
 
-        var act = () => middleware.InvokeAsync(context);
+        await middleware.InvokeAsync(context);
 
-        await act.Should().ThrowAsync<InvalidOperationException>();
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
     }
 
     // ── Pass-through cases — no API call, no redirect ──────────────────────
