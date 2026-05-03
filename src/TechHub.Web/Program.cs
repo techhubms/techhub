@@ -219,16 +219,33 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 
     return handler;
 })
-.AddResilienceHandler("web-api-retry", pipeline =>
+.AddResilienceHandler("web-api-retry", (pipeline, context) =>
+{
+    var logger = context.ServiceProvider
+        .GetRequiredService<ILoggerFactory>()
+        .CreateLogger("TechHub.Web.Resilience");
+
     // 3 fast retries for transient failures (dropped connections, brief API restarts).
     // Exponential backoff: 50 → 100 → 200ms with jitter (~350ms worst case total).
+    // OnRetry logs at Debug so intermediate attempts stay out of Warning/Error channels.
+    // The final failure (after all retries) is logged at Error by TechHubApiClient.catch — exactly once.
     pipeline.AddRetry(new Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions
     {
         MaxRetryAttempts = 3,
         Delay = TimeSpan.FromMilliseconds(50),
         BackoffType = DelayBackoffType.Exponential,
         UseJitter = true,
-    }));
+        OnRetry = args =>
+        {
+            logger.LogDebug(
+                args.Outcome.Exception,
+                "Web→API transient failure (attempt {Attempt}/3), retrying in {Delay}ms",
+                args.AttemptNumber + 1,
+                args.RetryDelay.TotalMilliseconds);
+            return ValueTask.CompletedTask;
+        },
+    });
+});
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
@@ -416,7 +433,7 @@ app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken 
 // Signs out of OIDC first (issues the end_session request to Azure AD), then
 // clears the local cookie. The OIDC sign-out redirects to "/" on completion.
 // Uses POST to prevent CSRF / prefetch-triggered logout (antiforgery validated).
-app.MapPost("/admin/logout", async context =>
+app.MapPost("/admin/logout", async (HttpContext context) =>
 {
     // OIDC sign-out must happen first — it issues the end_session_endpoint redirect.
     // Cookie sign-out is handled by the OIDC post-logout flow automatically.
