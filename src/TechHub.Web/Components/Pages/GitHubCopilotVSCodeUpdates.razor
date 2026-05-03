@@ -14,6 +14,13 @@
 
 <PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
 
+@if (_notFound)
+{
+    <NotFoundContent />
+}
+else
+{
+
 @if (selectedVideoDetail != null)
 {
     <SeoMetaTags
@@ -83,6 +90,8 @@ else
     }
 </main>
 
+}
+
 @code {
     private const string VideoCollectionName = "vscode-updates";
 
@@ -94,22 +103,26 @@ else
     private string selectedVideoSlug = "";
     private PersistingComponentStateSubscription? _persistSubscription;
     private bool _restoredFromPersistedState;
+    private bool _notFound;
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (selectedVideoDetail != null)
+        try
         {
-            try
+            if (selectedVideoDetail != null)
             {
                 await JS.InvokeVoidAsync("markScriptsLoading");
                 await JS.InvokeVoidAsync("initHighlighting");
                 await JS.InvokeVoidAsync("initMermaid");
                 await JS.InvokeVoidAsync("initTocScrollSpy");
             }
-            finally
-            {
-                await JS.InvokeVoidAsync("markScriptsReady");
-            }
+        }
+        finally
+        {
+            await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
 
@@ -118,7 +131,12 @@ else
         // Validate optional slug parameter
         if (VideoSlug != null && !RouteParameterValidator.IsValidSlug(VideoSlug))
         {
-            Navigation.NavigateTo("/not-found");
+            _notFound = true;
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
             return;
         }
 
@@ -132,6 +150,22 @@ else
         if (_restoredFromPersistedState)
         {
             _restoredFromPersistedState = false;
+            return;
+        }
+
+        // Reset not-found state so navigating from an invalid slug to a valid one works correctly.
+        // Blazor reuses the component instance on same-route navigation, so stale state must be cleared.
+        _notFound = false;
+
+        // Validate optional slug parameter on navigation changes too
+        if (VideoSlug != null && !RouteParameterValidator.IsValidSlug(VideoSlug))
+        {
+            _notFound = true;
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
             return;
         }
 

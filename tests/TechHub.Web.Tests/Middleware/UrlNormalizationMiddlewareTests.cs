@@ -56,15 +56,14 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task SingleSegment_HtmlExtension_UnknownSlug_RedirectsToCleanPath()
+    public async Task SingleSegment_HtmlExtension_UnknownSlug_Returns404()
     {
-        // /article.html → strip .html → /article → API returns null → still 301 /article (URL cleaned)
+        // /article.html → strip .html → /article → API returns null → 404 directly
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/article.html", apiResult: null);
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/article");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
         nextCalled().Should().BeFalse();
     }
 
@@ -116,15 +115,15 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task SingleSegment_DatePrefix_NotFound_RedirectsToStrippedPath()
+    public async Task SingleSegment_DatePrefix_NotFound_Returns404()
     {
-        // /2026-01-12-article → strip date → /article → API returns null → 301 /article
+        // /2026-01-12-article → strip date → /article → API returns null → 404 directly
+        // (redirecting to /article would only produce another 404, so we skip the round-trip)
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/2026-01-12-article", apiResult: null);
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
-        context.Response.Headers.Location.ToString().Should().Be("/article");
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
         nextCalled().Should().BeFalse();
     }
 
@@ -176,14 +175,14 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task SingleSegment_LegacySlug_NotFound_PassesThrough()
+    public async Task SingleSegment_LegacySlug_NotFound_Returns404()
     {
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/Unknown-Slug", apiResult: null);
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue();
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        nextCalled().Should().BeFalse();
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
     }
 
     [Fact]
@@ -231,8 +230,10 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiException_PassesThrough()
+    public async Task ApiException_GracefulDegradation_PassesThrough()
     {
+        // /Some-Slug → API throws HttpRequestException (transient failure) →
+        // no pathChanged → pass through to Blazor routing (not a permanent 404)
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -242,14 +243,15 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("should pass through when API throws");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        nextCalled().Should().BeTrue("a transient API failure must not hard-404 a potentially valid legacy URL");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 
     [Fact]
-    public async Task ApiException_WithHtmlPath_StillCleansUrl()
+    public async Task ApiException_WithHtmlPath_GracefulDegradation_RedirectsToNormalizedPath()
     {
-        // Even when the API is down, .html should be stripped.
+        // /article.html → strip .html → /article (pathChanged=true) → API throws →
+        // graceful degradation redirects to /article (still cleans up the URL)
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -259,15 +261,16 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently,
+            "path changed (.html stripped) so we redirect to the clean URL even on API failure");
         context.Response.Headers.Location.ToString().Should().Be("/article");
         nextCalled().Should().BeFalse();
     }
 
     [Fact]
-    public async Task ApiTimeout_WhenNotRequestAbort_PassesThrough()
+    public async Task ApiTimeout_WhenNotRequestAbort_GracefulDegradation_PassesThrough()
     {
-        // TaskCanceledException from an HTTP client timeout (not a request abort) should fall through gracefully.
+        // Timeout is a transient failure: gracefully degrade instead of hard-404ing.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -277,8 +280,8 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("HTTP timeout (not a request abort) should fall through gracefully");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        nextCalled().Should().BeTrue("a timeout must not hard-404 a potentially valid legacy URL");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 
     [Fact]
@@ -303,9 +306,10 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task InvalidOperationException_Propagates()
+    public async Task UnexpectedException_Propagates()
     {
-        // InvalidOperationException indicates a DI/config bug and must not be swallowed.
+        // Non-transient exceptions (DI bugs, NullReferenceException, etc.) must propagate so
+        // they surface as 500 errors in monitoring — not silently disappear as phantom 404s.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -315,7 +319,7 @@ public class UrlNormalizationMiddlewareTests
 
         var act = () => middleware.InvokeAsync(context);
 
-        await act.Should().ThrowAsync<InvalidOperationException>();
+        await act.Should().ThrowAsync<InvalidOperationException>("unexpected exceptions must not be swallowed");
     }
 
     // ── Pass-through cases — no API call, no redirect ──────────────────────

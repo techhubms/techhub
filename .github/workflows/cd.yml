@@ -634,33 +634,17 @@ jobs:
           echo "**Web**: https://${{ steps.deploy.outputs.web-url }}" >> $GITHUB_STEP_SUMMARY
 
       - name: Create Application Insights release annotation
-        shell: bash
+        shell: pwsh
         run: |
-          ANNOTATION_ID="${{ github.run_id }}"
-          RELEASE_NAME="${{ needs.build-and-push.outputs.image-tag }}"
-          COMMIT="${{ github.sha }}"
-          DEPLOYED_BY="${{ github.actor }}"
-          RUN_URL="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-
-          # The 2015-05-01 API requires Properties to be a JSON-encoded string, not a nested object.
-          PROPERTIES=$(jq -cn \
-            --arg rel "$RELEASE_NAME" \
-            --arg commit "$COMMIT" \
-            --arg by "$DEPLOYED_BY" \
-            --arg url "$RUN_URL" \
-            '{"ReleaseName":$rel,"Commit":$commit,"DeployedBy":$by,"RunUrl":$url}')
-
-          ANNOTATION_BODY=$(jq -cn \
-            --arg id "$ANNOTATION_ID" \
-            --arg name "Release $RELEASE_NAME" \
-            --arg time "$(date -u +%Y-%m-%dT%H:%M:%S.0000000Z)" \
-            --arg props "$PROPERTIES" \
-            '{"Id":$id,"AnnotationName":$name,"EventTime":$time,"Properties":$props}')
-
-          az rest --method put \
-            --headers "Content-Type=application/json" \
-            --url "https://management.azure.com/subscriptions/bc8ab567-c645-4e51-9317-992203eb369a/resourceGroups/rg-techhub-prod/providers/Microsoft.Insights/components/appi-techhub-prod/Annotations/${ANNOTATION_ID}?api-version=2015-05-01" \
-            --body "$ANNOTATION_BODY"
+          ./scripts/Add-AppInsightsAnnotation.ps1 `
+            -SubscriptionId "bc8ab567-c645-4e51-9317-992203eb369a" `
+            -ResourceGroupName "rg-techhub-prod" `
+            -AppInsightsName "appi-techhub-prod" `
+            -AnnotationId "${{ github.run_id }}" `
+            -ReleaseName "${{ needs.build-and-push.outputs.image-tag }}" `
+            -Commit "${{ github.sha }}" `
+            -DeployedBy "${{ github.actor }}" `
+            -RunUrl "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
   # ──────────────────────────────────────────────
   # Production E2E tests — run after deployment

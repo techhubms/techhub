@@ -1,33 +1,14 @@
 ﻿@page "/not-found"
 @layout MainLayout
-@inject NavigationManager Navigation
 @inject IJSRuntime JS
 
 <PageTitle>Not Found - Tech Hub</PageTitle>
 
-<main class="page-without-sidebar">
-    <section>
-        <p><a href="/" class="back-link">← Back to Home</a></p>
-    </section>
-</main>
+<NotFoundContent />
 
 @code {
-    [CascadingParameter]
-    private HttpContext? HttpContext { get; set; }
-
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         await JS.InvokeVoidAsync("markScriptsReady");
-    }
-
-    protected override void OnInitialized()
-    {
-        // HttpContext is only available during prerendering (not in interactive mode).
-        // Setting the status code during prerender is sufficient — search engines and
-        // HTTP clients see the 404 status on the initial response.
-        if (HttpContext is { Response.StatusCode: 200 })
-        {
-            HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
-        }
     }
 }

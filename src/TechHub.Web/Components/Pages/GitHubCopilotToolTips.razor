@@ -52,18 +52,23 @@
         </article>
     </main>
 }
+else if (_notFound)
+{
+    <NotFoundContent />
+}
 
 @code {
     private ToolTipsPageData? pageData;
+    private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (pageData != null)
-        {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("markScriptsReady");
-        }
+        // Static content page; no JS libraries to initialise
+        await JS.InvokeVoidAsync("markScriptsReady");
     }
 
     protected override async Task OnInitializedAsync()
@@ -82,7 +87,12 @@
 
             if (pageData == null)
             {
-                Navigation.NavigateTo("/not-found");
+                _notFound = true;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)

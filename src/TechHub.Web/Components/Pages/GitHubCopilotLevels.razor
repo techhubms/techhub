@@ -84,10 +84,18 @@
         </article>
     </main>
 }
+else if (_notFound)
+{
+    <NotFoundContent />
+}
 
 @code {
     private LevelsPageData? pageData;
+    private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
 
     /// <summary>
     /// Generate HTML content for TOC extraction.
@@ -117,11 +125,18 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (pageData != null)
+        try
         {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("initCustomPages");
-            await JS.InvokeVoidAsync("initTocScrollSpy");
+            // Single-route page; scripts only need to init once
+            if (firstRender && pageData != null)
+            {
+                await JS.InvokeVoidAsync("markScriptsLoading");
+                await JS.InvokeVoidAsync("initCustomPages");
+                await JS.InvokeVoidAsync("initTocScrollSpy");
+            }
+        }
+        finally
+        {
             await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
@@ -142,7 +157,12 @@
 
             if (pageData == null)
             {
-                Navigation.NavigateTo("/not-found");
+                _notFound = true;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)

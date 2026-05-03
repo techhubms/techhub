@@ -9,7 +9,14 @@
 @inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 
-<PageTitle>@(item?.Title ?? (isLoading ? "" : "Not Found")) - Tech Hub</PageTitle>
+<PageTitle>@(item?.Title ?? "Not Found") - Tech Hub</PageTitle>
+
+@if (!isLoading && item == null)
+{
+    <NotFoundContent />
+}
+else
+{
 
 @if (item != null)
 {
@@ -51,15 +58,9 @@
     {
         <ContentItemDetail Item="@item" />
     }
-    else if (!isLoading)
-    {
-        <section>
-            <h1>Not Found</h1>
-            <p>Sorry, the content you are looking for does not exist.</p>
-            <p><a href="/" class="back-link">← Back to Home</a></p>
-        </section>
-    }
 </main>
+
+}
 
 @code {
     [Inject] public required ErrorService ErrorService { get; set; }
@@ -85,21 +86,24 @@
     private string? _previousCollectionName;
     private string? _previousSlug;
 
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (item != null)
+        try
         {
-            try
+            if (item != null)
             {
                 await JS.InvokeVoidAsync("markScriptsLoading");
                 await JS.InvokeVoidAsync("initHighlighting");
                 await JS.InvokeVoidAsync("initMermaid");
                 await JS.InvokeVoidAsync("initTocScrollSpy");
             }
-            finally
-            {
-                await JS.InvokeVoidAsync("markScriptsReady");
-            }
+        }
+        finally
+        {
+            await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
 
@@ -110,7 +114,12 @@
             || !RouteParameterValidator.IsValidNameSegment(CollectionName)
             || !RouteParameterValidator.IsValidSlug(Slug))
         {
-            Navigation.NavigateTo("/not-found");
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
+            isLoading = false;
             return;
         }
 
@@ -118,7 +127,12 @@
         section = SectionCache.GetSectionByName(SectionName);
         if (section == null)
         {
-            Navigation.NavigateTo("/not-found");
+            Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+            if (HttpContext is not null)
+            {
+                HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+            }
+            isLoading = false;
             return;
         }
 
@@ -149,14 +163,26 @@
                 || !RouteParameterValidator.IsValidNameSegment(CollectionName)
                 || !RouteParameterValidator.IsValidSlug(Slug))
             {
-                Navigation.NavigateTo("/not-found");
+                item = null;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
+                isLoading = false;
                 return;
             }
 
             section = SectionCache.GetSectionByName(SectionName);
             if (section == null)
             {
-                Navigation.NavigateTo("/not-found");
+                item = null;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
+                isLoading = false;
                 return;
             }
 
@@ -182,8 +208,12 @@
 
             if (item == null)
             {
-                // Content not found - navigate to not found page
-                Navigation.NavigateTo("/not-found");
+                // Content not found - the template renders not-found content inline.
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)

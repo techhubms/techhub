@@ -9,9 +9,20 @@ let suppressNextTriggerCheck = false; // Anti-cascade: skip trigger check after 
 
 const TRIGGER_MARGIN_PX = 300; // Load when trigger is within 300px of viewport bottom
 
-export function observeScrollTrigger(helper, triggerElementId) {
+export function observeScrollTrigger(helper, triggerElementId, suppressOnAttach = false) {
     // Clean up previous listener if any
     dispose();
+
+    // Set the suppress flag atomically with listener attachment when restoring from
+    // circuit cache (back-navigation). This prevents a race where markScriptsReady()
+    // fires a scroll-restore event between the old separate setSuppressNextTriggerCheck()
+    // call and this observeScrollTrigger() call — a window in which handleScroll would
+    // run without suppression and could trigger a cascade of batch loads.
+    // Passing suppressOnAttach = true eliminates that two-call window: the flag is set
+    // inside this single JS execution, atomically with listener setup.
+    if (suppressOnAttach) {
+        suppressNextTriggerCheck = true;
+    }
 
     const trigger = document.getElementById(triggerElementId);
     if (!trigger) {
@@ -47,9 +58,10 @@ export function observeScrollTrigger(helper, triggerElementId) {
 
         // After scroll restoration, skip the trigger check to prevent a cascade.
         // Layout differences (fonts, images, async CSS) can place the trigger just
-        // inside the margin. The flag is set by setSuppressNextTriggerCheck and cleared
-        // here so only the first check (the immediate call in observeScrollTrigger) is
-        // skipped. Subsequent user-initiated scroll events proceed normally.
+        // inside the margin. The flag is set via suppressOnAttach (or the legacy
+        // setSuppressNextTriggerCheck) and cleared here so only the first scroll
+        // event after back-navigation is suppressed. Subsequent scroll events proceed
+        // normally.
         if (suppressNextTriggerCheck) {
             suppressNextTriggerCheck = false;
             return;
@@ -87,10 +99,10 @@ export function observeScrollTrigger(helper, triggerElementId) {
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 
     // Check immediately in case trigger is already visible (e.g. short content).
-    // Skip when suppression is active: setSuppressNextTriggerCheck() was called for a
-    // back-navigation restore. The suppress flag must remain set to handle the first
-    // scroll event fired by markScriptsReady's window.scrollTo() — consuming it here
-    // would allow the restore scroll to trigger LoadNextBatch and cascade.
+    // Skip when suppression is active: suppressOnAttach was set for a back-navigation
+    // restore. The suppress flag must remain set to handle the first scroll event fired
+    // by markScriptsReady's window.scrollTo() — consuming it here would allow the
+    // restore scroll to trigger LoadNextBatch and cascade.
     if (!suppressNextTriggerCheck) {
         handleScroll();
     }
@@ -116,11 +128,11 @@ export function dispose() {
     // It's cleared inside handleScroll().
 }
 
-// Suppress the next trigger check in handleScroll (the immediate call inside
-// observeScrollTrigger) to prevent a cascade of batch loads on back-navigation.
-// Layout differences between the original and restored page can place the trigger
-// just inside the TRIGGER_MARGIN_PX threshold, causing runaway loading.
-// Called by ContentItemsGrid after scroll position restoration.
+// Suppress the next trigger check in handleScroll to prevent a cascade of batch
+// loads on back-navigation. Layout differences between the original and restored
+// page can place the trigger just inside the TRIGGER_MARGIN_PX threshold.
+// Prefer passing suppressOnAttach=true to observeScrollTrigger (atomic, no race).
+// This function is kept for any standalone callers that set the flag separately.
 export function setSuppressNextTriggerCheck() {
     suppressNextTriggerCheck = true;
 }

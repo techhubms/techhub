@@ -12,7 +12,7 @@
 @inject ILogger<GenAI> Logger
 @inject PersistentComponentState ApplicationState
 
-<PageTitle>@(pageData?.Title ?? PageType) - Tech Hub</PageTitle>
+<PageTitle>@GetPageTitle() - Tech Hub</PageTitle>
 
 @if (pageData != null)
 {
@@ -91,12 +91,28 @@
         </article>
     </main>
 }
+else if (_notFound)
+{
+    <NotFoundContent />
+}
 
 @code {
     private GenAIPageData? pageData;
+    private bool _notFound;
     private PersistingComponentStateSubscription? _persistSubscription;
     private string? _previousPageType;
     private string PageType => DeterminePageType();
+
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+
+    private string GetPageTitle() => pageData?.Title ?? PageType switch
+    {
+        "basics" => "GenAI Basics",
+        "applied" => "GenAI Applied",
+        "advanced" => "GenAI Advanced",
+        _ => "AI in Practice"
+    };
 
     /// <summary>
     /// Determine which page type based on current route
@@ -152,19 +168,19 @@
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (pageData != null)
+        try
         {
-            try
+            if (pageData != null)
             {
                 await JS.InvokeVoidAsync("markScriptsLoading");
                 await JS.InvokeVoidAsync("initHighlighting");
                 await JS.InvokeVoidAsync("initMermaid");
                 await JS.InvokeVoidAsync("initTocScrollSpy");
             }
-            finally
-            {
-                await JS.InvokeVoidAsync("markScriptsReady");
-            }
+        }
+        finally
+        {
+            await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
 
@@ -223,7 +239,12 @@
 
             if (pageData == null)
             {
-                Navigation.NavigateTo("/not-found");
+                _notFound = true;
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
+                if (HttpContext is not null)
+                {
+                    HttpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+                }
             }
         }
         catch (Exception ex)

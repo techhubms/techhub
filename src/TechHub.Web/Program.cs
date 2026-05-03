@@ -4,8 +4,10 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.Extensions.Http.Resilience;
 using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
+using Polly;
 using TechHub.Core.Logging;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
@@ -197,7 +199,6 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 {
     client.BaseAddress = new Uri(apiBaseUrl);
     // Generous timeout: some admin operations (URL processing) involve AI calls that take 30-60s.
-    // Retries/resilience belong inside the API around external dependencies, not here.
     client.Timeout = TimeSpan.FromMinutes(3);
 })
 .AddHttpMessageHandler<AdminTokenDelegatingHandler>()
@@ -218,6 +219,43 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
     }
 
     return handler;
+})
+.AddResilienceHandler("web-api-retry", (pipeline, context) =>
+{
+    var logger = context.ServiceProvider
+        .GetRequiredService<ILoggerFactory>()
+        .CreateLogger("TechHub.Web.Resilience");
+
+    // 3 fast retries for transient failures (dropped connections, brief API restarts).
+    // Exponential backoff: 50 → 100 → 200ms with jitter (~350ms worst case total).
+    // Retries are restricted to idempotent methods (GET, HEAD) to avoid replaying
+    // non-idempotent admin operations (POST, DELETE) that could cause duplicate side effects.
+    // OnRetry logs at Debug so intermediate attempts stay out of Warning/Error channels.
+    // The final failure (after all retries) is logged at Error by TechHubApiClient.catch — exactly once.
+    pipeline.AddRetry(new Microsoft.Extensions.Http.Resilience.HttpRetryStrategyOptions
+    {
+        MaxRetryAttempts = 3,
+        Delay = TimeSpan.FromMilliseconds(50),
+        BackoffType = DelayBackoffType.Exponential,
+        UseJitter = true,
+        ShouldHandle = args =>
+        {
+            // Only retry idempotent HTTP methods to prevent duplicate side-effects on
+            // admin POST/DELETE endpoints (processing triggers, cache invalidation, etc.).
+            var method = args.Outcome.Result?.RequestMessage?.Method;
+            var isIdempotent = method == HttpMethod.Get || method == HttpMethod.Head;
+            return new ValueTask<bool>(isIdempotent && HttpClientResiliencePredicates.IsTransient(args.Outcome));
+        },
+        OnRetry = args =>
+        {
+            logger.LogDebug(
+                args.Outcome.Exception,
+                "Web→API transient failure (attempt {Attempt}/3), retrying in {Delay}ms",
+                args.AttemptNumber + 1,
+                args.RetryDelay.TotalMilliseconds);
+            return ValueTask.CompletedTask;
+        },
+    });
 });
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());

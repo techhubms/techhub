@@ -1,5 +1,4 @@
 using System.Text.RegularExpressions;
-using TechHub.Core.Models;
 using TechHub.Core.Validation;
 using TechHub.Web.Services;
 
@@ -18,7 +17,7 @@ namespace TechHub.Web.Middleware;
 ///   - Single-segment paths that are not a known section, page, or static file →
 ///     API legacy lookup to resolve the canonical /{section}/{collection}/{slug} URL.
 ///     If the API returns a result, redirect there directly (one redirect to the final URL).
-///     If not, redirect to the normalized path when the URL changed, or pass through.
+///     If not (null result or transient error after retries), return 404.
 ///
 /// Case normalization is NOT performed here. The infrastructure layer handles
 /// case-insensitive DB lookups so URLs work regardless of capitalisation.
@@ -125,42 +124,39 @@ public partial class UrlNormalizationMiddleware
         var rawSection = context.Request.Query["section"].FirstOrDefault();
         var sectionHint = RouteParameterValidator.IsValidNameSegment(rawSection) ? rawSection : null;
 
-        LegacyRedirectResult? result = null;
         try
         {
             await using var scope = _scopeFactory.CreateAsyncScope();
             var apiClient = scope.ServiceProvider.GetRequiredService<ITechHubApiClient>();
-            result = await apiClient.GetLegacyRedirectAsync(segment, sectionHint, context.RequestAborted);
+            var result = await apiClient.GetLegacyRedirectAsync(segment, sectionHint, context.RequestAborted);
+
+            if (result != null)
+            {
+                _logger.LogInformation("Legacy slug redirect: /{Segment} -> {Url}", segment, result.Url);
+                Redirect(context, result.Url + context.Request.QueryString);
+                return;
+            }
+
+            // Slug confirmed not in the DB — return a hard 404 so crawlers and caches treat this
+            // as a permanent absence, not a transient failure.
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            return;
         }
         catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
         {
             // Rethrow when the client disconnected — avoid writing a redirect onto an aborted connection.
             throw;
         }
-        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException or OperationCanceledException)
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
         {
+            // Transient API failure (network error or timeout after all retries).
+            // Graceful degradation: still clean up .html / date prefix even when the API is unavailable.
+            // Do NOT return 404 here — a legitimate legacy URL would get a cacheable permanent 404
+            // just because the API was briefly down.
             _logger.LogWarning(ex, "Legacy slug lookup failed for {Slug}; falling back to normalized path", segment);
-
-            // Graceful degradation: still clean up .html / date prefix even when API is unavailable.
-            if (pathChanged)
-            {
-                Redirect(context, normalizedPath + context.Request.QueryString);
-                return;
-            }
-
-            await _next(context);
-            return;
         }
 
-        if (result != null)
-        {
-            _logger.LogInformation("Legacy slug redirect: /{Segment} -> {Url}", segment, result.Url);
-            Redirect(context, result.Url + context.Request.QueryString);
-            return;
-        }
-
-        // Slug not found in DB: redirect to cleaned URL if the path changed, otherwise pass through.
-        // Passing through lets Blazor routing render /not-found.
+        // API was transiently unavailable — clean up the URL if the path changed, then pass through.
         if (pathChanged)
         {
             Redirect(context, normalizedPath + context.Request.QueryString);

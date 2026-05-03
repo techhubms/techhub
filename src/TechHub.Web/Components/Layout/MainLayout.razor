@@ -15,7 +15,11 @@
         CustomBannerTitle="@_customBannerTitle"
         CustomBannerDescription="@_customBannerDescription" />
 
-@if (!_isInvalid)
+@if (_isInvalid)
+{
+    <NotFoundContent />
+}
+else
 {
     @Body
 }
@@ -111,7 +115,9 @@
                     if (!validCollection)
                     {
                         _isInvalid = true;
-                        Navigation.NavigateTo("/not-found");
+                        _customBannerTitle = "Not Found";
+                        _customBannerDescription = "Sorry, the content you are looking for does not exist";
+                        Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
                         return;
                     }
                 }
@@ -123,11 +129,13 @@
             }
 
             // First segment is not a known section. If it's not a fixed page either,
-            // it's an invalid route — redirect to /not-found.
+            // render not-found content inline at the original URL.
             if (!KnownNonSectionPages.Contains(firstSegment))
             {
                 _isInvalid = true;
-                Navigation.NavigateTo("/not-found");
+                _customBannerTitle = "Not Found";
+                _customBannerDescription = "Sorry, the content you are looking for does not exist";
+                Activity.Current?.SetStatus(ActivityStatusCode.Error, "Content not found");
                 return;
             }
         }

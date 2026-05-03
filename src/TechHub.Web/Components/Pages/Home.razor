@@ -139,10 +139,17 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        if (sections != null)
+        try
         {
-            await JS.InvokeVoidAsync("markScriptsLoading");
-            await JS.InvokeVoidAsync("initCustomPages");
+            // Home has expandable badges ([data-expand-target]) that only need to init once
+            if (firstRender && sections != null)
+            {
+                await JS.InvokeVoidAsync("markScriptsLoading");
+                await JS.InvokeVoidAsync("initCustomPages");
+            }
+        }
+        finally
+        {
             await JS.InvokeVoidAsync("markScriptsReady");
         }
     }
