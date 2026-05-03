@@ -28,6 +28,10 @@ describe('infinite-scroll.js', () => {
         delete window.__scrollListenerReady;
         delete window.__scrollListenerVersion;
         delete window.__e2eSignal;
+        // Reset Navigation API so tests that set window.navigation (e.g., traversal
+        // detection tests) don't leak state into subsequent tests and cause
+        // order-dependent failures.
+        delete window.navigation;
 
         // Reset location
         Object.defineProperty(window, 'location', {

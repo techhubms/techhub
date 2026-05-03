@@ -13,6 +13,9 @@ describe('nav-helpers.js', () => {
         delete window.__scrollRestoredAt;
         delete window.__savedScrollPositions;
         delete window.__restoreScrollPosition;
+        // Reset Navigation API so tests that set window.navigation don't leak state
+        // into subsequent tests and cause order-dependent failures.
+        delete window.navigation;
 
         // Stub Blazor with addEventListener so nav-helpers.js can attach enhancedload
         // listeners immediately without entering the 200ms setInterval retry loop.
@@ -20,6 +23,12 @@ describe('nav-helpers.js', () => {
         // (200ms polling, 10s max) that keeps the Vitest process alive and makes the
         // suite slow and flaky.
         globalThis.Blazor = { addEventListener: vi.fn() };
+
+        // Pre-stub markScriptsReady so tryPatchMarkScriptsReady() wraps it immediately
+        // during module import instead of creating a 50ms polling setInterval (+ 5s
+        // safety timeout). Prevents those timers — and the navSpinner timers started by
+        // history.pushState() in scroll tests — from keeping the Vitest event loop alive.
+        window.markScriptsReady = vi.fn();
 
         Object.defineProperty(window, 'scrollY', {
             value: 0,
@@ -265,6 +274,9 @@ describe('nav-helpers.js', () => {
             // pushState must capture the latest position immediately without waiting for rAF.
             Object.defineProperty(window, 'scrollY', { value: 1500, writable: true, configurable: true });
             window.history.pushState('/detail', '', '/detail');
+            // Call markScriptsReady to clear the navSpinner timers started by pushState
+            // (500ms show + 10s safety) so they don't keep the Vitest event loop alive.
+            window.markScriptsReady();
 
             // The synchronous save in the pushState interceptor captures 1500 for '/all'.
             expect(window.__savedScrollPositions['/all']).toBe(1500);
@@ -278,6 +290,13 @@ describe('nav-helpers.js', () => {
 
             // Fire pushState to navigate to /detail
             window.history.pushState('/detail', '', '/detail');
+            // Clear navSpinner timers (500ms show + 10s safety) started by pushState.
+            window.markScriptsReady();
+            // Explicitly update the location stub to reflect the URL change — makes the
+            // test deterministic regardless of how jsdom handles pushState on plain objects.
+            window.location.pathname = '/detail';
+            window.location.search = '';
+            expect(window.location.pathname).toBe('/detail');
 
             // Save must use the OLD URL key '/all' (captured before URL changes)
             expect(window.__savedScrollPositions['/all']).toBe(2000);

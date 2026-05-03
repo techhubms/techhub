@@ -88,12 +88,26 @@ public static class ServiceDefaultsExtensions
             {
                 tracing.AddAspNetCoreInstrumentation(options =>
                        {
-                           // Filter out health probe requests from telemetry.
-                           // Container Apps fires /alive (liveness) and /health (readiness)
-                           // every 10-30s × 2 replicas × 2 services, generating ~2.9 GB/month
-                           // in AppRequests with no diagnostic value.
+                           // Filter requests that have no diagnostic value and would inflate
+                           // App Insights data volume:
+                           //   - /health and /alive: Container Apps liveness/readiness probes,
+                           //     fired every 10-30s × 2 replicas × 2 services (~2.9 GB/month).
+                           //   - /_blazor/disconnect: browser's fire-and-forget goodbye message
+                           //     on page unload. 499 (client closed) and 400 (circuit already
+                           //     gone) are structurally expected. Real Blazor connectivity
+                           //     failures appear on /_blazor/negotiate or the SignalR WebSocket,
+                           //     not on the disconnect endpoint.
+                           //   - Scanner/attacker probe paths: rejected by InvalidRouteSegment-
+                           //     Middleware before Blazor runs; have no diagnostic value.
+                           //   - Bot crawlers: follow stale links and generate expected 404s.
+                           //     User-Agent containing "bot" (case-insensitive) is treated as
+                           //     benign crawler traffic. Filtering here (not in a processor)
+                           //     means no Activity is ever created — zero data cost.
                            options.Filter = httpContext =>
-                               !IsHealthProbeRequest(httpContext.Request.Path);
+                               !IsHealthProbeRequest(httpContext.Request.Path) &&
+                               !IsBlazorDisconnectRequest(httpContext.Request.Path) &&
+                               !IsProbeRequest(httpContext.Request.Path) &&
+                               !IsBotRequest(httpContext.Request.Headers.UserAgent.ToString());
 
                            // Fix client.address to reflect the real client IP after the
                            // ForwardedHeaders middleware has updated RemoteIpAddress from
@@ -110,10 +124,7 @@ public static class ServiceDefaultsExtensions
                                }
                            };
                        })
-                       .AddHttpClientInstrumentation()
-                       // Suppress bot and Blazor infrastructure noise so failure-rate alerts
-                       // reflect genuine application errors, not crawler 404s or circuit teardown.
-                       .AddProcessor(new TelemetryNoiseProcessor());
+                       .AddHttpClientInstrumentation();
             });
 
         builder.AddOpenTelemetryExporters();
@@ -125,6 +136,78 @@ public static class ServiceDefaultsExtensions
     {
         return path.Equals("/health", StringComparison.OrdinalIgnoreCase)
             || path.Equals("/alive", StringComparison.OrdinalIgnoreCase);
+    }
+
+    internal static bool IsBlazorDisconnectRequest(PathString path)
+    {
+        return path.StartsWithSegments("/_blazor/disconnect", StringComparison.OrdinalIgnoreCase);
+    }
+
+    internal static bool IsBotRequest(string userAgent)
+    {
+        return !string.IsNullOrEmpty(userAgent)
+            && userAgent.Contains("bot", StringComparison.OrdinalIgnoreCase);
+    }
+
+    // Mirror of InvalidRouteSegmentMiddleware._probeExtensions / _probePathSubstrings.
+    // Duplicated here because ServiceDefaults cannot reference TechHub.Web.
+    // Keep these two sets in sync with the middleware.
+    private static readonly HashSet<string> _probeExtensions = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ".php", ".asp", ".aspx", ".cfm", ".cgi", ".pl", ".py", ".rb", ".jsp",
+        ".env", ".htaccess", ".htpasswd",
+        ".bak", ".backup", ".old", ".orig", ".swp",
+        ".exe", ".dll", ".sh", ".bat", ".cmd",
+        ".sql",
+        ".pem", ".key", ".crt", ".p12", ".pfx",
+        ".zip", ".tar", ".gz", ".rar", ".7z",
+    };
+
+    private static readonly string[] _probePathSubstrings =
+    [
+        "wp-admin", "wp-content", "wp-includes", "wp-login",
+        "xmlrpc",
+        "phpmyadmin",
+        "cgi-bin",
+        "actuator",
+    ];
+
+    /// <summary>
+    /// Returns <c>true</c> if <paramref name="path"/> matches a known scanner or
+    /// attacker probe pattern. Used to suppress telemetry for these requests entirely
+    /// (no Activity span created) so they do not appear in Azure Monitor / App Insights.
+    /// </summary>
+    internal static bool IsProbeRequest(PathString path)
+    {
+        var value = path.Value;
+        if (string.IsNullOrEmpty(value))
+        {
+            return false;
+        }
+
+        foreach (var probe in _probePathSubstrings)
+        {
+            if (value.Contains(probe, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+        }
+
+        var lastDot = value.LastIndexOf('.');
+        if (lastDot < 0)
+        {
+            return false;
+        }
+
+        var ext = value[lastDot..];
+
+        if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
+        {
+            return !value.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
+                && !value.EndsWith("sitemap.xml", StringComparison.OrdinalIgnoreCase);
+        }
+
+        return _probeExtensions.Contains(ext);
     }
 
     private static IHostApplicationBuilder AddOpenTelemetryExporters(this IHostApplicationBuilder builder)

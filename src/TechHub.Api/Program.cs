@@ -36,12 +36,12 @@ using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
 }
 
 // Configure file logging
-// Skip during integration tests (AppSettings:SkipFileLogging = true)
+// Skipped in production (AppSettings:SkipFileLogging = true) — containers log to stdout/stderr.
 var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
 if (!skipFileLogging)
 {
-    // Build log path: use TECHHUB_TMP if set (Docker), otherwise .tmp (local dev)
-    var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? ".tmp";
+    // Use TECHHUB_TMP if set (devcontainer), otherwise the system temp directory
+    var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? Path.GetTempPath();
     var logPath = Path.Combine(tmpDir, "logs", $"api-{builder.Environment.EnvironmentName.ToLowerInvariant()}.log");
 
     // Parse log levels from configuration

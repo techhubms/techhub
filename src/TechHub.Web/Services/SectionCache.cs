@@ -10,24 +10,46 @@ namespace TechHub.Web.Services;
 public class SectionCache
 {
     private Dictionary<string, Section> _sectionsByName = new();
+    // sectionName → set of collection names (both O(1), built once at Initialize)
+    private Dictionary<string, HashSet<string>> _collectionsBySection = new();
 
     public IReadOnlyList<Section> Sections { get; private set; } = Array.Empty<Section>();
+
+    /// <summary>
+    /// True once the cache has been populated from the API. False only if the API was
+    /// completely unavailable at startup, in which case callers should not treat unknown
+    /// paths as invalid.
+    /// </summary>
+    public bool IsReady => Sections.Count > 0;
 
     public void Initialize(IReadOnlyList<Section> sections)
     {
         Sections = sections;
         _sectionsByName = sections.ToDictionary(s => s.Name, StringComparer.OrdinalIgnoreCase);
+        _collectionsBySection = sections.ToDictionary(
+            s => s.Name,
+            s => new HashSet<string>(s.Collections.Select(c => c.Name), StringComparer.OrdinalIgnoreCase),
+            StringComparer.OrdinalIgnoreCase);
     }
 
     /// <summary>
     /// Get a section by name from the cache. Case-insensitive lookup.
     /// </summary>
-    /// <param name="sectionName">The section name to look up</param>
-    /// <returns>The section if found, otherwise null</returns>
     public Section? GetSectionByName(string sectionName)
     {
         _sectionsByName.TryGetValue(sectionName, out var section);
         return section;
+    }
+
+    /// <summary>
+    /// Returns true if <paramref name="collectionName"/> is a known collection within
+    /// <paramref name="sectionName"/>. Both lookups are O(1). Returns false if either
+    /// name is unknown, including when the cache is not yet ready.
+    /// </summary>
+    public bool IsKnownCollection(string sectionName, string collectionName)
+    {
+        return _collectionsBySection.TryGetValue(sectionName, out var collections)
+            && collections.Contains(collectionName);
     }
 }
 
