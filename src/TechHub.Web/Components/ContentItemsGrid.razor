@@ -291,27 +291,27 @@
             return;
         }
 
-        // When restoring from circuit cache (back-button navigation), suppress the
-        // immediate trigger check in infinite-scroll.js to prevent a cascade of batch
-        // loads. The generic scroll restore in nav-helpers.js handles position restoration
-        // via markScriptsReady — we just need to prevent the cascade here.
-        if (needsScrollRestore)
-        {
-            needsScrollRestore = false;
-            scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "/js/infinite-scroll.js");
-            await scrollModule.InvokeVoidAsync("setSuppressNextTriggerCheck");
-        }
-
-        // Setup scroll listener on first render, or re-attach when filters change
+        // Setup scroll listener on first render, or re-attach when filters change.
+        // When restoring from circuit cache (back-button navigation), pass suppressRestore=true
+        // so observeScrollTrigger atomically sets the anti-cascade suppress flag AND attaches
+        // the listener in a single JS call. This eliminates the two-call race where
+        // SectionCollection.OnAfterRenderAsync could call markScriptsReady() between the old
+        // separate setSuppressNextTriggerCheck() and observeScrollTrigger() interop calls.
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
+            var suppressRestore = needsScrollRestore;
+            needsScrollRestore = false;
             needsScrollListenerSetup = false;
-            await SetupScrollListener();
+            await SetupScrollListener(suppressRestore);
+        }
+        else if (needsScrollRestore)
+        {
+            // hasMoreContent is false — no scroll trigger to attach, but clear the flag.
+            needsScrollRestore = false;
         }
     }
 
-    private async Task SetupScrollListener()
+    private async Task SetupScrollListener(bool suppressRestore = false)
     {
         try
         {
@@ -323,8 +323,10 @@
             dotNetRef ??= DotNetObjectReference.Create(this);
 
             // (Re-)attach scroll listener to current scroll-trigger element.
+            // Pass suppressRestore=true on back-navigation to atomically set the
+            // anti-cascade flag inside observeScrollTrigger (no separate JS call needed).
             // JS dispose() handles cleanup of previous listener.
-            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
+            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger", suppressRestore);
             Logger.LogDebug("Infinite scroll listener attached");
         }
         catch (Exception ex)

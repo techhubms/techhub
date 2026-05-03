@@ -344,4 +344,65 @@ describe('infinite-scroll.js', () => {
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
     });
+
+    describe('observeScrollTrigger suppressOnAttach parameter', () => {
+        it('should set suppress flag atomically when suppressOnAttach=true', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            // Trigger in viewport to test that suppression works
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            // Call observeScrollTrigger with suppressOnAttach=true (no separate
+            // setSuppressNextTriggerCheck call needed — eliminates the two-call race)
+            mod.observeScrollTrigger(helper, 'scroll-trigger', true);
+
+            // Immediate handleScroll is skipped because suppress flag was set atomically
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+
+        it('should suppress first scroll event after suppressOnAttach=true', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+            mod.observeScrollTrigger(helper, 'scroll-trigger', true);
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // First scroll (e.g. from markScriptsReady's scroll restore): flag consumed
+            window.dispatchEvent(new Event('scroll'));
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // Second scroll: flag cleared, trigger fires normally
+            window.dispatchEvent(new Event('scroll'));
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+
+        it('should NOT suppress immediate check when suppressOnAttach=false (default)', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            // Trigger in viewport
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            // Default: suppressOnAttach=false — immediate handleScroll runs and loads
+            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+
+        it('suppressOnAttach survives the internal dispose/re-attach cycle', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            // Calling dispose() alone (no previous listener) then re-attaching
+            // with suppressOnAttach=true should still suppress the immediate check
+            mod.dispose();
+            mod.observeScrollTrigger(helper, 'scroll-trigger', true);
+
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+    });
 });
