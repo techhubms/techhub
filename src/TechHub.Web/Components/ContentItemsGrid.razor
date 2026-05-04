@@ -149,7 +149,6 @@
     private IJSObjectReference? scrollModule;
     private DotNetObjectReference<ContentItemsGrid>? dotNetRef;
     private bool needsScrollListenerSetup;
-    private bool needsScrollRestore;
 
     // State persistence (prevents double-fetch during prerender -> interactive transition)
     private PersistingComponentStateSubscription _persistSubscription;
@@ -192,7 +191,6 @@
             totalCount = cached.TotalCount;
             isLoading = false;
             needsScrollListenerSetup = hasMoreContent;
-            needsScrollRestore = true;
             Logger.LogDebug("Restored {Count} items from circuit cache for {Key}", contentItems.Count, stateKey);
         }
         // Priority 2: PersistentComponentState (prerender → interactive transition)
@@ -292,26 +290,19 @@
         }
 
         // Setup scroll listener on first render, or re-attach when filters change.
-        // When restoring from circuit cache (back-button navigation), pass suppressOnAttach=true
-        // so observeScrollTrigger atomically sets the anti-cascade suppress flag AND attaches
-        // the listener in a single JS call. This eliminates the two-call race where
-        // SectionCollection.OnAfterRenderAsync could call markScriptsReady() between the old
-        // separate setSuppressNextTriggerCheck() and observeScrollTrigger() interop calls.
+        // nav-helpers.js manages window.__scrollRestoring: it is set to true on popstate
+        // (back/forward navigation) and cleared when restoreScrollPosition() completes.
+        // observeScrollTrigger checks this flag in every handleScroll call, so the listener
+        // can be attached immediately without any suppress parameter — it stays quiet until
+        // restoration is done, regardless of whether the trigger is in the viewport.
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
-            var suppressOnAttach = needsScrollRestore;
-            needsScrollRestore = false;
             needsScrollListenerSetup = false;
-            await SetupScrollListener(suppressOnAttach);
-        }
-        else if (needsScrollRestore)
-        {
-            // hasMoreContent is false — no scroll trigger to attach, but clear the flag.
-            needsScrollRestore = false;
+            await SetupScrollListener();
         }
     }
 
-    private async Task SetupScrollListener(bool suppressOnAttach = false)
+    private async Task SetupScrollListener()
     {
         try
         {
@@ -323,10 +314,10 @@
             dotNetRef ??= DotNetObjectReference.Create(this);
 
             // (Re-)attach scroll listener to current scroll-trigger element.
-            // Pass suppressOnAttach=true on back-navigation to atomically set the
-            // anti-cascade flag inside observeScrollTrigger (no separate JS call needed).
-            // JS dispose() handles cleanup of previous listener.
-            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger", suppressOnAttach);
+            // No suppress parameter needed: nav-helpers.js owns the paused state via
+            // window.__scrollRestoring, which is set on popstate and cleared by
+            // restoreScrollPosition() when restoration completes.
+            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
             Logger.LogDebug("Infinite scroll listener attached");
         }
         catch (Exception ex)

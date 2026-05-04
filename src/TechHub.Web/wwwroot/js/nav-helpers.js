@@ -32,10 +32,7 @@
  * @see {@link /workspaces/techhub/src/TechHub.Web/AGENTS.md} for architecture details
  */
 
-(function () {
-    'use strict';
-
-    // ========================================================================
+// ========================================================================
     // Keyboard Navigation Detection
     // Adds 'keyboard-nav' class to <html> when Tab key is pressed,
     // removes it on pointer/touch interaction.
@@ -205,11 +202,15 @@
     // Only resets on pathname changes (actual page navigation), not query/hash changes
     // (tag filters, scroll spy). The JS initializer handles re-running page scripts.
     let lastPathname = window.location.pathname;
+    let lastSearch = window.location.search;
     let lastPopstateAt = 0; // timestamp of last popstate (back/forward); cleared on pushState (forward)
 
     // ========================================================================
     // Scroll Position Management
-    // Saves scroll position per page (pathname + search) on every scroll (rAF throttled).
+    // Saves scroll position per page (pathname + search + hash) on every scroll (rAF throttled).
+    // The hash is included so each TOC anchor entry in browser history gets its own saved
+    // position — back-nav between headings on the same page restores to the exact scrollY
+    // for that heading rather than the last-written position for the whole page.
     // On back/forward navigation (traverse), restores position after markScriptsReady.
     // On forward navigation (push), scrolls to top.
     // ========================================================================
@@ -218,7 +219,7 @@
     let suppressScrollSave = false; // true during traverse (back/forward) until restore completes
 
     function getScrollKey() {
-        return window.location.pathname + window.location.search;
+        return window.location.pathname + window.location.search + window.location.hash;
     }
 
     function saveScrollPosition() {
@@ -245,6 +246,18 @@
     window.addEventListener('scroll', onScrollSave, { passive: true });
 
     /**
+     * Called at every restoreScrollPosition() exit path.
+     * Re-enables scroll listeners paused for back/forward navigation, then
+     * dispatches a synthetic scroll event so every listener (infinite-scroll,
+     * TOC spy, scroll-save) fires exactly once with the final restored position.
+     */
+    function finishScrollRestore() {
+        suppressScrollSave = false;
+        window.__scrollRestoring = false;
+        window.dispatchEvent(new Event('scroll'));
+    }
+
+    /**
      * Restore scroll position for the current page.
      * Called by markScriptsReady (via window.__restoreScrollPosition) when all
      * rendering is complete. Only restores on back/forward navigation (traverse).
@@ -263,7 +276,12 @@
         const key = getScrollKey();
         const y = window.__savedScrollPositions[key];
         if (y == null || y <= 0) {
-            suppressScrollSave = false; // nothing to restore — re-enable saves
+            // Even when there's no saved position to restore, ensure the page starts at top.
+            // This covers back-navigation from a hash-only pushState: the hash anchor scroll
+            // moved the page down, but the saved position for pathname+search is 0 (or absent)
+            // because it was saved before the anchor scroll happened.
+            window.scrollTo(0, 0);
+            finishScrollRestore(); // re-enable saves and un-pause listeners
             return false;
         }
 
@@ -275,7 +293,7 @@
             // Page is tall enough — scroll immediately.
             window.scrollTo(0, y);
             window.__scrollRestoredAt = Date.now();
-            suppressScrollSave = false;
+            finishScrollRestore();
             return true;
         }
 
@@ -297,13 +315,13 @@
                 cleanup();
                 window.scrollTo(0, y);
                 window.__scrollRestoredAt = Date.now();
-                suppressScrollSave = false;
+                finishScrollRestore();
             } else if (Date.now() >= deadline) {
                 // Deadline reached — scroll to best available position.
                 cleanup();
                 window.scrollTo(0, y);
                 window.__scrollRestoredAt = Date.now();
-                suppressScrollSave = false;
+                finishScrollRestore();
             }
             // Otherwise keep observing — more mutations will come.
         }
@@ -319,7 +337,7 @@
             cleanup();
             window.scrollTo(0, y);
             window.__scrollRestoredAt = Date.now();
-            suppressScrollSave = false;
+            finishScrollRestore();
         }, 1000);
 
         observer.observe(document.body, { childList: true, subtree: true });
@@ -334,6 +352,7 @@
         if (currentPathname === lastPathname) return;
 
         lastPathname = currentPathname;
+        lastSearch = window.location.search;
 
         // Don't reset scroll on back/forward navigation — browser handles scroll restoration.
         // lastPopstateAt is set on every popstate (back/forward) and cleared on every pushState
@@ -429,12 +448,29 @@
         // most-recent scrollY is captured with the correct (pre-navigation) URL key,
         // regardless of rAF timing. This is the critical fix for scroll restoration after
         // back-navigation in production where network latency delays rAF execution.
-        suppressScrollSave = false; // forward navigation — re-enable saves before capturing
+        suppressScrollSave = false;          // forward navigation — re-enable saves before capturing
+        window.__scrollRestoring = false; // forward navigation — clear any back-nav pause
         saveScrollPosition();
+        // Capture old path+query before pushState mutates location.
+        const oldPathname = location.pathname;
+        const oldSearch = location.search;
         originalPushState.apply(this, args);
         lastPopstateAt = 0;
-        showNavSpinner();
-        checkForPageNavigation();
+        // Don't show the spinner for hash-only navigation (e.g. TOC anchor links).
+        // These change only the fragment and never fetch new content from the server.
+        const newUrl = args[2] != null ? new URL(String(args[2]), location.href) : null;
+        const isHashOnly = newUrl !== null &&
+            newUrl.pathname === oldPathname &&
+            newUrl.search === oldSearch;
+        if (!isHashOnly) {
+            showNavSpinner();
+        }
+        // NOTE: checkForPageNavigation() is intentionally NOT called here.
+        // Calling it during pushState would invoke resetPagePosition() → scrollTo(0,0)
+        // while the old page content is still visible, causing a jarring premature scroll.
+        // checkForPageNavigation() is registered on Blazor's 'enhancedload' event, which
+        // fires after the DOM has been patched with the new page — the correct moment to
+        // scroll to top.
     };
 
     // Track popstate for back/forward detection.
@@ -442,7 +478,18 @@
     // duration of the back/forward navigation (until the next pushState clears it).
     window.addEventListener('popstate', () => {
         lastPopstateAt = Date.now();
-        suppressScrollSave = true; // suppress until scroll restoration completes
+        suppressScrollSave = true;         // suppress scroll saves until restore completes
+        window.__scrollRestoring = true; // pause all scroll listeners (infinite-scroll, TOC, scroll-save) until restore completes
+
+        // Same-page hash navigation: only the fragment changed, pathname+search are unchanged.
+        // Blazor does NOT re-render the component, so markScriptsReady will never fire.
+        // Call restoreScrollPosition() directly — it uses pathname+search+hash as the key,
+        // so each TOC anchor entry restores to its own saved scrollY.
+        if (window.location.pathname === lastPathname && window.location.search === lastSearch) {
+            restoreScrollPosition();
+            return;
+        }
+
         checkForPageNavigation();
     });
 
@@ -510,4 +557,4 @@
             history.replaceState(null, '', window.location.pathname + window.location.search);
         }
     };
-})();
+

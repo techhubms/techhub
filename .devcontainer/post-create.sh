@@ -111,6 +111,25 @@ npm install
 echo "Installing markdownlint-cli2 globally..."
 npm install -g markdownlint-cli2 || echo "Warning: Failed to install markdownlint-cli2 globally, using local version from package.json"
 
+# ==================== Oh My Posh ====================
+echo "Installing Oh My Posh..."
+if ! command -v oh-my-posh &> /dev/null; then
+    curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
+else
+    echo "Oh My Posh already installed"
+fi
+
+# Set up bash prompt with Oh My Posh
+if ! grep -q "oh-my-posh" "$HOME/.bashrc"; then
+    cat >> "$HOME/.bashrc" << 'BASHEOF'
+# ==================== Oh My Posh ====================
+export PATH="$HOME/.local/bin:$PATH"
+if command -v oh-my-posh &> /dev/null; then
+    eval "$(oh-my-posh init bash --config /workspaces/techhub/.devcontainer/oh-my-posh.json)"
+fi
+BASHEOF
+fi
+
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'
@@ -179,6 +198,11 @@ if (Test-Path $techHubRoot) {
     if (Test-Path $modulePath) {
         Import-Module $modulePath -Force -DisableNameChecking
     }
+}
+
+# ==================== Oh My Posh ====================
+if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
+    oh-my-posh init pwsh --config /workspaces/techhub/.devcontainer/oh-my-posh.json | Invoke-Expression
 }
 
 # ==================== Welcome Message ====================

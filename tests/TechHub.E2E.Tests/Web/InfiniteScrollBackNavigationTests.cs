@@ -137,13 +137,20 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Load one more batch
         await Page.ScrollToLoadMoreAsync(initialCount + 1);
 
-        // Scroll to a fixed position near the top of the page. Using a trigger-relative
-        // calculation (triggerTop - viewportHeight - N) is sensitive to layout shifts on CI
-        // (font loading, image dimensions) that can shift the trigger within the 300px
-        // trigger margin. At scrollY=200, the trigger is at least ~15,000px below the
-        // viewport — far outside the margin regardless of layout differences.
+        // Scroll to 3 cards from the end of the loaded content. This simulates a user
+        // who has browsed through loaded items and is near the bottom — the trigger is
+        // roughly 2-3 card heights (~600-900px) below the viewport, which is safely
+        // outside the 300px TRIGGER_MARGIN_PX but far more realistic than scrollY=200.
+        // Using card-relative positioning avoids layout-shift sensitivity: the trigger
+        // is anchored to card count, not absolute pixel measurements that shift on CI.
         await Page.EvaluateAsync(@"() => {
-            window.scrollTo(0, 200);
+            const cards = document.querySelectorAll('.card');
+            const targetCard = cards[Math.max(0, cards.length - 3)];
+            if (targetCard) {
+                // block:'end' puts targetCard at the viewport bottom; the last 2 cards
+                // and the scroll-trigger sit below the fold, outside the 300px margin.
+                targetCard.scrollIntoView({ block: 'end', behavior: 'instant' });
+            }
             window.dispatchEvent(new Event('scroll'));
         }");
 
@@ -177,9 +184,10 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
 
         // Wait for cache restoration AND scroll listener setup (both happen in
         // OnAfterRenderAsync). The scroll listener being ready confirms that
-        // OnAfterRenderAsync completed — setSuppressNextTriggerCheck prevented a cascade,
-        // and observeScrollTrigger's immediate handleScroll() ran without triggering
-        // runaway loading. The generic scroll restore via markScriptsReady already fired.
+        // OnAfterRenderAsync completed — window.__scrollRestoring (set on popstate, cleared
+        // by finishScrollRestore) blocked any cascade during the restore window, and
+        // observeScrollTrigger's immediate handleScroll() ran without triggering runaway
+        // loading. The generic scroll restore via markScriptsReady already fired.
         await Page.WaitForConditionAsync(
             $"(expected) => document.querySelectorAll('.card').length >= expected && window.__scrollListenerReady?.['scroll-trigger'] === true",
             afterScrollCount);

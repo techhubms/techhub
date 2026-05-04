@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using TechHub.Core.Security;
 
 namespace TechHub.Web.Middleware;
 
@@ -34,44 +35,6 @@ public partial class InvalidRouteSegmentMiddleware
     // Matches the same character set as RouteParameterValidator.IsValidNameSegment.
     [GeneratedRegex(@"^[a-zA-Z][a-zA-Z-]*$", RegexOptions.Compiled | RegexOptions.CultureInvariant)]
     private static partial Regex ValidSegmentPattern();
-
-    // File extensions that are never served by this site and always indicate a probe.
-    // Legitimate static assets (.js, .css, .png, etc.) are handled by UseStaticFiles
-    // before this middleware runs and never reach this point.
-    // .xml is handled separately to allow /feed.xml and /sitemap.xml endpoints through.
-    private static readonly HashSet<string> _probeExtensions = new(StringComparer.OrdinalIgnoreCase)
-    {
-        // Server-side scripts
-        ".php", ".asp", ".aspx", ".cfm", ".cgi", ".pl", ".py", ".rb", ".jsp",
-        // Config / credential files
-        ".env", ".htaccess", ".htpasswd",
-        // Backup / leftover files
-        ".bak", ".backup", ".old", ".orig", ".swp",
-        // Executables / binaries
-        ".exe", ".dll", ".sh", ".bat", ".cmd",
-        // Database dumps
-        ".sql",
-        // Certificates and keys
-        ".pem", ".key", ".crt", ".p12", ".pfx",
-        // Archives
-        ".zip", ".tar", ".gz", ".rar", ".7z",
-    };
-
-    // Path substrings whose presence anywhere in the URL path always indicates a probe.
-    // These are framework/CMS-specific paths that can never exist on this site.
-    private static readonly string[] _probePathSubstrings =
-    [
-        // WordPress attack surface (most common automated scanner targets)
-        "wp-admin", "wp-content", "wp-includes", "wp-login",
-        // WordPress XML-RPC exploit vector
-        "xmlrpc",
-        // PHP admin panels
-        "phpmyadmin",
-        // CGI directory traversal
-        "cgi-bin",
-        // Spring Boot actuator endpoints
-        "actuator",
-    ];
 
     public async Task InvokeAsync(HttpContext context)
     {
@@ -133,42 +96,10 @@ public partial class InvalidRouteSegmentMiddleware
     /// Returns <c>true</c> if <paramref name="path"/> matches a known scanner or attacker
     /// probe pattern. Called both by <see cref="InvokeAsync"/> (to return 404) and by the
     /// OpenTelemetry request filter in ServiceDefaults (to suppress telemetry entirely).
+    /// Probe definitions live in <see cref="ProbeDetector"/> (TechHub.Core).
     /// </summary>
     internal static bool IsProbeRequest(string path)
-    {
-        // Require a segment boundary so substrings only match complete path segments.
-        // e.g. "/actuator/health" is a probe but "/ai/actuator-systems" is not.
-        // EndsWith covers "/wp-admin" (final segment); Contains covers "/wp-admin/...".
-        if (_probePathSubstrings.Any(probe =>
-            path.EndsWith("/" + probe, StringComparison.OrdinalIgnoreCase) ||
-            path.Contains("/" + probe + "/", StringComparison.OrdinalIgnoreCase)))
-        {
-            return true;
-        }
-
-        // Trim trailing slashes and extract the extension from the final segment only,
-        // so paths like /.env/ or /random.xml/ are correctly identified as probes.
-        var normalized = path.TrimEnd('/');
-        var lastSlash = normalized.LastIndexOf('/');
-        var lastSegment = normalized[(lastSlash + 1)..];
-        var lastDot = lastSegment.LastIndexOf('.');
-        if (lastDot < 0)
-        {
-            return false;
-        }
-
-        var ext = lastSegment[lastDot..];
-
-        // .xml is used for RSS feeds (/all/feed.xml, /{section}/feed.xml) and the
-        // sitemap (/sitemap.xml). Allow those through; block all other .xml paths.
-        if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
-        {
-            return !normalized.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
-                && !normalized.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
-        }
-
-        return _probeExtensions.Contains(ext);
-    }
+        => ProbeDetector.IsProbeRequest(path);
 
     private static bool PathHasFileExtension(string path)
     {

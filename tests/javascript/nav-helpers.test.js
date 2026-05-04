@@ -13,6 +13,7 @@ describe('nav-helpers.js', () => {
         delete window.__scrollRestoredAt;
         delete window.__savedScrollPositions;
         delete window.__restoreScrollPosition;
+        delete window.__scrollRestoring;
         // Reset Navigation API so tests that set window.navigation don't leak state
         // into subsequent tests and cause order-dependent failures.
         delete window.navigation;
@@ -304,7 +305,7 @@ describe('nav-helpers.js', () => {
             expect(window.__savedScrollPositions['/detail']).toBeUndefined();
         });
 
-        it('should save position keyed by pathname + search', async () => {
+        it('should save position keyed by pathname + search + hash', async () => {
             await import(MODULE_PATH);
 
             Object.defineProperty(window, 'scrollY', { value: 300, writable: true, configurable: true });
@@ -313,12 +314,13 @@ describe('nav-helpers.js', () => {
             // Change location and scroll again
             window.location.pathname = '/github-copilot';
             window.location.search = '?tags=news';
+            window.location.hash = '#section';
 
             Object.defineProperty(window, 'scrollY', { value: 700, writable: true, configurable: true });
             window.dispatchEvent(new Event('scroll'));
 
             expect(window.__savedScrollPositions['/all']).toBe(300);
-            expect(window.__savedScrollPositions['/github-copilot?tags=news']).toBe(700);
+            expect(window.__savedScrollPositions['/github-copilot?tags=news#section']).toBe(700);
         });
 
         it('should expose __restoreScrollPosition globally', async () => {
@@ -452,6 +454,140 @@ describe('nav-helpers.js', () => {
 
             expect(window.scrollTo).toHaveBeenCalledWith(0, 2000);
             expect(window.__scrollRestoredAt).toBeGreaterThan(0);
+        });
+
+        it('popstate sets __scrollRestoring = true', async () => {
+            await import(MODULE_PATH); // captures lastPathname = '/all' (from beforeEach mock)
+
+            // Simulate back-nav from a different page: change window.location so that
+            // pathname differs from lastPathname, triggering the cross-page branch.
+            // (window.history.replaceState is mocked as vi.fn() and won't update location.)
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+
+            expect(window.__scrollRestoring).toBe(true);
+        });
+
+        it('pushState clears __scrollRestoring', async () => {
+            await import(MODULE_PATH); // captures lastPathname = '/all' (from beforeEach mock)
+
+            // Simulate cross-page back-nav to set __scrollRestoring = true.
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+            expect(window.__scrollRestoring).toBe(true);
+
+            window.history.pushState('/detail', '', '/detail');
+            window.markScriptsReady(); // clear navSpinner timers
+
+            expect(window.__scrollRestoring).toBe(false);
+        });
+
+        it('restoreScrollPosition immediate path clears __scrollRestoring and dispatches scroll', async () => {
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+            await import(MODULE_PATH);
+
+            window.__scrollRestoring = true;
+            window.__savedScrollPositions['/all'] = 400;
+
+            const scrollEvents = [];
+            window.addEventListener('scroll', () => scrollEvents.push(window.scrollY), { passive: true });
+
+            window.__restoreScrollPosition();
+
+            expect(window.__scrollRestoring).toBe(false);
+            // finishScrollRestore dispatches a synthetic scroll event
+            expect(scrollEvents.length).toBeGreaterThanOrEqual(1);
+        });
+
+        it('restoreScrollPosition deferred path clears __scrollRestoring after MutationObserver fires', async () => {
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+
+            // Page starts too short
+            Object.defineProperty(document.documentElement, 'scrollHeight', {
+                value: 200,
+                writable: true,
+                configurable: true,
+            });
+            Object.defineProperty(window, 'innerHeight', {
+                value: 800,
+                writable: true,
+                configurable: true,
+            });
+
+            await import(MODULE_PATH);
+
+            window.__scrollRestoring = true;
+            window.__savedScrollPositions['/all'] = 2000;
+            window.scrollTo.mockClear();
+
+            window.__restoreScrollPosition();
+            expect(window.__scrollRestoring).toBe(true); // still paused
+
+            // DOM grows tall enough
+            Object.defineProperty(document.documentElement, 'scrollHeight', {
+                value: 5000,
+                writable: true,
+                configurable: true,
+            });
+            document.body.appendChild(document.createElement('div'));
+            await new Promise(r => setTimeout(r, 60));
+
+            expect(window.__scrollRestoring).toBe(false);
+        });
+
+        it('no-position path clears __scrollRestoring', async () => {
+            window.navigation = {
+                currentEntry: { navigationType: 'traverse' },
+            };
+            await import(MODULE_PATH);
+
+            window.__scrollRestoring = true;
+            // No saved position for this page
+            const result = window.__restoreScrollPosition();
+
+            expect(result).toBe(false);
+            expect(window.__scrollRestoring).toBe(false);
+        });
+    });
+
+    describe('navigation spinner', () => {
+        it('hash-only pushState does not create the nav spinner (TOC links)', async () => {
+            await import(MODULE_PATH);
+
+            // Simulate clicking a TOC anchor link — same path, only the fragment changes.
+            window.history.pushState(null, '', '/all#section-one');
+
+            // showNavSpinner must NOT have been called: the spinner element is created
+            // lazily inside createNavSpinner() which only runs from showNavSpinner().
+            expect(document.getElementById('nav-spinner')).toBeNull();
+        });
+
+        it('path-changing pushState creates the nav spinner element', async () => {
+            await import(MODULE_PATH);
+
+            // Simulate a real page navigation — different path.
+            window.history.pushState(null, '', '/github-copilot');
+            window.markScriptsReady(); // clear the 500ms show + 10s safety timers
+
+            expect(document.getElementById('nav-spinner')).not.toBeNull();
+        });
+
+        it('hash-with-query-change pushState does not create the nav spinner', async () => {
+            // Current page already has a query string
+            window.location.pathname = '/all';
+            window.location.search = '?tags=news';
+            window.location.href = 'https://localhost/all?tags=news';
+
+            await import(MODULE_PATH);
+
+            // Same path+query, different fragment — still hash-only.
+            window.history.pushState(null, '', '/all?tags=news#section-two');
+
+            expect(document.getElementById('nav-spinner')).toBeNull();
         });
     });
 });

@@ -28,9 +28,8 @@ describe('infinite-scroll.js', () => {
         delete window.__scrollListenerReady;
         delete window.__scrollListenerVersion;
         delete window.__e2eSignal;
-        // Reset Navigation API so tests that set window.navigation (e.g., traversal
-        // detection tests) don't leak state into subsequent tests and cause
-        // order-dependent failures.
+        delete window.__infiniteScrollPaused;
+        // No navigation API leakage between tests
         delete window.navigation;
 
         // Reset location
@@ -274,213 +273,90 @@ describe('infinite-scroll.js', () => {
         });
     });
 
-    describe('setSuppressNextTriggerCheck', () => {
-        it('should NOT call LoadNextBatch on immediate check after setSuppressNextTriggerCheck', () => {
+    describe('window.__infiniteScrollPaused flag (set by nav-helpers.js)', () => {
+        it('should NOT call LoadNextBatch immediately when paused', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
-            // Set suppress flag (as ContentItemsGrid does on back-navigation)
-            mod.setSuppressNextTriggerCheck();
-
-            // Now attach scroll listener with trigger IN viewport (simulating layout
-            // differences where trigger ends up within the 300px margin after back-nav)
-            trigger.getBoundingClientRect = () => ({
-                top: 900, // within innerHeight (800) + TRIGGER_MARGIN_PX (300) = 1100
-                bottom: 910,
-                left: 0,
-                right: 100,
-                width: 100,
-                height: 10,
-            });
-
-            mod.observeScrollTrigger(helper, 'scroll-trigger');
-
-            // The immediate handleScroll() call should NOT trigger LoadNextBatch
-            // because suppressNextTriggerCheck was set
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-        });
-
-        it('should allow LoadNextBatch on subsequent scroll after suppression', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            mod.setSuppressNextTriggerCheck();
-
-            // Trigger in viewport — immediate handleScroll in observeScrollTrigger is
-            // skipped entirely when suppression is active (flag stays set)
-            trigger.getBoundingClientRect = () => ({ top: 900 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger');
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-
-            // First user scroll: flag is still set (immediate call was skipped), so this
-            // scroll consumes the flag and suppresses LoadNextBatch — this models the
-            // scroll-restore event from markScriptsReady's window.scrollTo()
-            window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-
-            // Second user scroll: flag is now consumed, trigger fires normally
-            window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
-        });
-
-        it('suppressNextTriggerCheck survives dispose/re-attach cycle', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            // Set the flag
-            mod.setSuppressNextTriggerCheck();
-
-            // Dispose (as happens in observeScrollTrigger's first line)
-            mod.dispose();
-
-            // Re-attach with trigger in viewport
-            trigger.getBoundingClientRect = () => ({
-                top: 900,
-                bottom: 910,
-                left: 0,
-                right: 100,
-                width: 100,
-                height: 10,
-            });
-            mod.observeScrollTrigger(helper, 'scroll-trigger');
-
-            // Should still be suppressed
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-        });
-    });
-
-    describe('observeScrollTrigger suppressOnAttach parameter', () => {
-        it('should set suppress flag atomically when suppressOnAttach=true', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            // Trigger in viewport to test that suppression works
-            trigger.getBoundingClientRect = () => ({ top: 900 });
-
-            // Call observeScrollTrigger with suppressOnAttach=true (no separate
-            // setSuppressNextTriggerCheck call needed — eliminates the two-call race)
-            mod.observeScrollTrigger(helper, 'scroll-trigger', true);
-
-            // Immediate handleScroll is skipped because suppress flag was set atomically
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-        });
-
-        it('should consume suppress flag on first scroll event and allow subsequent scrolls', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            trigger.getBoundingClientRect = () => ({ top: 900 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', true);
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-
-            // First scroll (e.g. from markScriptsReady's scroll restore): flag consumed
-            window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-
-            // Second scroll: flag cleared, trigger fires normally
-            window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
-        });
-
-        it('should NOT suppress immediate check when suppressOnAttach=false (default)', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
+            // Simulate nav-helpers.js setting the flag on popstate
+            window.__infiniteScrollPaused = true;
 
             // Trigger in viewport
-            trigger.getBoundingClientRect = () => ({ top: 900 });
+            trigger.getBoundingClientRect = () => ({ top: 900 }); // within 800+300=1100
 
-            // Default: suppressOnAttach=false — immediate handleScroll runs and loads
-            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
-            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
-        });
-
-        it('suppressOnAttach survives the internal dispose/re-attach cycle', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            trigger.getBoundingClientRect = () => ({ top: 900 });
-
-            // Calling dispose() alone (no previous listener) then re-attaching
-            // with suppressOnAttach=true should still suppress the immediate check
-            mod.dispose();
-            mod.observeScrollTrigger(helper, 'scroll-trigger', true);
-
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-        });
-    });
-
-    describe('Navigation API traverse detection', () => {
-        it('should suppress immediate check when navigationType is traverse (back-navigation)', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            // Simulate back-navigation via Navigation API (Chromium 102+)
-            window.navigation = {
-                currentEntry: { navigationType: 'traverse' },
-            };
-
-            // Trigger in viewport — would cascade without suppression
-            trigger.getBoundingClientRect = () => ({ top: 900 });
-
-            // suppressOnAttach=false but Navigation API detects traverse
-            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
-
-            // Immediate handleScroll must be skipped (traverse suppression active)
+            // Immediate handleScroll() is skipped because __infiniteScrollPaused
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
 
-        it('should consume traverse suppress flag on first scroll and allow subsequent', () => {
+        it('should NOT call LoadNextBatch on scroll events while paused', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
-            window.navigation = {
-                currentEntry: { navigationType: 'traverse' },
-            };
-
+            window.__infiniteScrollPaused = true;
             trigger.getBoundingClientRect = () => ({ top: 900 });
-            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
 
-            // First scroll (e.g. scroll-restore from markScriptsReady): flag consumed
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+
+            // Multiple scroll events while paused — none should trigger
+            window.dispatchEvent(new Event('scroll'));
+            window.dispatchEvent(new Event('scroll'));
+
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+
+        it('should call LoadNextBatch once flag is cleared', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            window.__infiniteScrollPaused = true;
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
             window.dispatchEvent(new Event('scroll'));
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
 
-            // Second scroll: flag cleared, trigger fires normally
+            // Simulate nav-helpers.js clearing the flag when restore completes
+            window.__infiniteScrollPaused = false;
             window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
-        });
-
-        it('should NOT suppress when Navigation API is absent (undefined)', () => {
-            const trigger = createTriggerElement();
-            const helper = createMockHelper();
-
-            // Ensure navigation API is not present (jsdom default)
-            delete window.navigation;
-
-            // Trigger in viewport
-            trigger.getBoundingClientRect = () => ({ top: 900 });
-
-            // suppressOnAttach=false, no navigation API → no suppression
-            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
 
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
         });
 
-        it('should NOT suppress when navigationType is push (forward navigation)', () => {
+        it('should work normally when flag is not set (forward navigation)', () => {
             const trigger = createTriggerElement();
             const helper = createMockHelper();
 
-            window.navigation = {
-                currentEntry: { navigationType: 'push' },
-            };
-
+            // No flag set (undefined) — treated as not paused
             trigger.getBoundingClientRect = () => ({ top: 900 });
 
-            mod.observeScrollTrigger(helper, 'scroll-trigger', false);
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
 
-            // Push navigation: no suppression — immediate check fires
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        });
+
+        it('flag stays paused across multiple scroll events until explicitly cleared', () => {
+            const trigger = createTriggerElement();
+            const helper = createMockHelper();
+
+            window.__infiniteScrollPaused = true;
+            trigger.getBoundingClientRect = () => ({ top: 900 });
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+
+            // __scrollRestoring persists until nav-helpers.js clears it —
+            // it covers the entire restore window, not just the first scroll event
+            window.dispatchEvent(new Event('scroll'));
+            window.dispatchEvent(new Event('scroll'));
+            window.dispatchEvent(new Event('scroll'));
+
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            window.__infiniteScrollPaused = false;
+            window.dispatchEvent(new Event('scroll'));
+
+            expect(helper.invokeMethodAsync).toHaveBeenCalledTimes(1);
         });
     });
 });

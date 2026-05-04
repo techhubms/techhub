@@ -14,11 +14,13 @@ using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
+using TechHub.Web.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
-builder.AddServiceDefaults();
+// Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks).
+// WebTelemetryFilters suppresses Blazor disconnect noise and bot-crawler 404s from traces.
+builder.AddServiceDefaults(WebTelemetryFilters.ShouldTrace);
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))

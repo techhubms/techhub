@@ -77,10 +77,11 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 ### Loading Strategies
 
-| Loading Type          | Use When                | How                                      |
-| --------------------- | ----------------------- | ---------------------------------------- |
-| **Static**            | Every page needs it     | `<script src="@Assets[...]" defer>`      |
-| **Dynamic ES Module** | Only some pages need it | `import('./js/file.js')` via ImportMap   |
+| Loading Type          | Use When                          | How                                               |
+| --------------------- | --------------------------------- | ------------------------------------------------- |
+| **Static (module)**   | Every page, needs ES module scope | `<script type="module" src="@Assets[...]">` |
+| **Static (plain)**    | Every page, no module features    | `<script src="@Assets[...]" defer>`           |
+| **Dynamic ES Module** | Only some pages need it           | `import('./js/file.js')` via ImportMap             |
 | **External CDN**      | Third-party library     | Dynamic `loadScript()` with SRI          |
 
 ### Fingerprinting (Cache Busting)
@@ -95,12 +96,15 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 | File                 | Purpose                                     | Loading             |
 | -------------------- | ------------------------------------------- | ------------------- |
-| `nav-helpers.js`     | Back to top, back to previous, scroll pos   | Static (every page) |
-| `page-scripts.js`    | CDN loading, init functions, scroll restore | Static ES module    |
-| `toc-scroll-spy.js`  | TOC scroll highlighting, history management | Dynamic (TOC pages) |
-| `custom-pages.js`    | Collapsible sections for SDLC/DX pages      | Dynamic             |
-| `infinite-scroll.js` | Scroll-event-based infinite pagination      | Dynamic             |
-| `mobile-nav.js`      | Mobile hamburger menu scroll lock           | Dynamic             |
+| `nav-helpers.js`      | Back to top, back to previous navigation         | Static (defer)      |
+| `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer)   |
+| `sidebar-toggle.js`   | Desktop sidebar collapse/expand with localStorage | Static (defer)     |
+| `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer)   |
+| `page-scripts.js`     | CDN loading, init functions, scroll restore      | Static ES module    |
+| `toc-scroll-spy.js`   | TOC scroll highlighting, history management      | Dynamic (TOC pages) |
+| `custom-pages.js`     | Collapsible sections for SDLC/DX pages           | Dynamic             |
+| `date-range-slider.js` | Date range slider client-side clamping          | Dynamic             |
+| `infinite-scroll.js`  | Scroll-event-based infinite pagination           | Dynamic             |
 
 Special: `TechHub.Web.lib.module.js` — Blazor lifecycle callbacks (auto-discovered by Blazor)
 
@@ -130,7 +134,7 @@ Versions and SRI hashes centralized in [Configuration/CdnLibraries.cs](Configura
 
 1. Add file to `wwwroot/js/`
 2. Update `Configuration/JsFiles.cs`
-3. Static: add `<script src="@Assets[\"js/file.js\"]" defer>` to App.razor | Dynamic: use `import()`
+3. Static module: add `<script type="module" src="@Assets[\"js/file.js\"]">` to App.razor | Static plain: add `<script src="@Assets[\"js/file.js\"]" defer>` | Dynamic: use `import()`
 4. Document in JavaScript Files Reference above
 
 ## Conditional JavaScript Loading
@@ -211,9 +215,9 @@ User-facing RSS feeds served by the Web frontend (proxied from internal API):
 
 | URL | Description |
 |---|---|
-| `/feed` or `/feed/all` | All content |
-| `/feed/{sectionName}` | Section-specific |
-| `/feed/collection/{collectionName}` | Collection-specific |
+| `/all/feed.xml` | All content across all sections |
+| `/all/roundups/feed.xml` | All roundups |
+| `/{sectionName}/feed.xml` | Section-specific content |
 
 ## Mobile Navigation
 

@@ -70,6 +70,15 @@ public class InvalidRouteSegmentMiddlewareTests
     // Keys / certs
     [InlineData("/private.key")]
     [InlineData("/cert.pem")]
+    // Source map files (never published to production; browser devtools / scanners only)
+    [InlineData("/js/bundle.js.map")]
+    [InlineData("/css/styles.css.map")]
+    // Generic application probes
+    [InlineData("/app")]
+    [InlineData("/app/dashboard")]
+    [InlineData("/login")]
+    [InlineData("/login/callback")]
+    [InlineData("/ip")]
     // .xml that is NOT a feed or sitemap
     [InlineData("/wp-content/plugins/foo.xml")]
     [InlineData("/random.xml")]
@@ -87,26 +96,14 @@ public class InvalidRouteSegmentMiddlewareTests
         nextCalled().Should().BeFalse("probe requests must be rejected without touching downstream middleware");
     }
 
+    /// <summary>
+    /// Smoke test: the middleware wrapper delegates to ProbeDetector.
+    /// Full probe-detection logic is covered by TechHub.Core.Tests.Security.ProbeDetectorTests.
+    /// </summary>
     [Theory]
-    [InlineData("/wp-admin")]
-    [InlineData("/setup.php")]
-    [InlineData("/.env")]
-    [InlineData("/.env/")]              // trailing slash must still be detected
-    [InlineData("/xmlrpc.php")]
-    [InlineData("/random.xml")]
-    [InlineData("/random.xml/")]        // trailing slash on .xml probe
-    [InlineData("/evil-sitemap.xml")]   // suffix match no longer bypasses probe detection
-    [InlineData("/actuator")]           // exact segment
-    [InlineData("/actuator/health")]    // sub-path of actuator segment
-    [InlineData("/all/feed.xml", false)]  // feed.xml is NOT a probe
-    [InlineData("/sitemap.xml", false)]   // sitemap.xml is NOT a probe
-    [InlineData("/github-copilot/feed.xml", false)]
-    [InlineData("/all/roundups/feed.xml", false)]
-    [InlineData("/ai/actuator-systems-deep-dive", false)]  // "actuator" as slug prefix, not a probe
-    [InlineData("/config.json", false)]   // .json is not a probe extension
-    [InlineData("/", false)]
-    [InlineData("/ai", false)]
-    public void IsProbeRequest_IdentifiesProbesCorrectly(string path, bool expected = true)
+    [InlineData("/wp-admin", true)]
+    [InlineData("/all/feed.xml", false)]
+    public void IsProbeRequest_DelegatesToProbeDetector(string path, bool expected)
     {
         InvalidRouteSegmentMiddleware.IsProbeRequest(path).Should().Be(expected);
     }
@@ -123,6 +120,8 @@ public class InvalidRouteSegmentMiddlewareTests
     [InlineData("/about")]
     [InlineData("/ai")]
     [InlineData("/")]
+    // Admin paths — must not be blocked by probe keyword detection
+    [InlineData("/admin/login")]
     // Blazor internals: _-prefixed paths must always pass through
     [InlineData("/_blazor")]
     [InlineData("/_blazor/negotiate")]

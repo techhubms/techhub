@@ -16,7 +16,8 @@ JavaScript is ONLY for:
 
 | Loading Type | Use When | Example | How |
 |--------------|----------|---------|-----|
-| **Static** | Every page needs it | `nav-helpers.js` | `<script src="@Assets[...]" defer>` |
+| **Static (module)** | Every page, needs ES module scope | `nav-helpers.js`, `page-scripts.js` | `<script type="module" src="@Assets[...]">` |
+| **Static (plain)** | Every page, no module features needed | `mobile-nav.js`, `sidebar-toggle.js` | `<script src="@Assets[...]" defer>` |
 | **Dynamic ES Module** | Only some pages need it | `toc-scroll-spy.js`, `custom-pages.js` | `import('./js/file.js')` via ImportMap |
 | **External CDN** | Third-party library | Highlight.js, Mermaid | Dynamic `loadScript()` with SRI |
 
@@ -29,8 +30,11 @@ All local JavaScript files MUST use fingerprinted URLs for proper cache invalida
 Use `@Assets["js/file.js"]`:
 
 ```html
-<!-- ✅ CORRECT - Fingerprinted URL (cache busting works) -->
-<script src="@Assets["js/nav-helpers.js"]" defer></script>
+<!-- ✅ CORRECT - Fingerprinted URL, ES module (nav-helpers.js) -->
+<script type="module" src="@Assets["js/nav-helpers.js"]"></script>
+
+<!-- ✅ CORRECT - Fingerprinted URL, deferred plain script -->
+<script src="@Assets["js/mobile-nav.js"]" defer></script>
 
 <!-- ❌ WRONG - Raw path (will NOT cache bust on updates) -->
 <script src="js/nav-helpers.js" defer></script>
@@ -61,15 +65,15 @@ Files in `wwwroot/js/`:
 
 | File | Purpose | Loading | Format |
 |------|---------|---------|--------|
-| `nav-helpers.js` | Back to top, back to previous buttons, keyboard nav detection, scroll position management | Static (every page) | IIFE |
-| `sidebar-toggle.js` | Desktop sidebar collapse/expand with cookie persistence | Static (every page) | Script |
-| `mobile-nav.js` | Mobile menu scroll lock and Escape key handler | Static (via Blazor JS interop) | Script |
-| `hero-banner.js` | Hero banner collapse/expand with cookie persistence | Static (via Blazor JS interop) | IIFE |
+| `nav-helpers.js` | Back to top, back to previous buttons, keyboard nav detection, scroll position management, `window.__scrollRestoring` ownership | Static (`type="module"`) | ES Module |
+| `sidebar-toggle.js` | Desktop sidebar collapse/expand with cookie persistence | Static (`defer`) | Script |
+| `mobile-nav.js` | Mobile menu scroll lock and Escape key handler | Static (`defer`) | Script |
+| `hero-banner.js` | Hero banner collapse/expand with cookie persistence | Static (`defer`) | IIFE |
 | `infinite-scroll.js` | Scroll-based infinite loading trigger | Dynamic (via Blazor JS interop) | ES Module |
 | `toc-scroll-spy.js` | TOC scroll highlighting, history management | Dynamic (pages with TOC) | ES Module |
 | `custom-pages.js` | Collapsible sections for SDLC/DX pages, feature filters | Dynamic (pages with `[data-collapsible]`) | ES Module |
 | `date-range-slider.js` | Client-side slider clamping (prevents handles crossing) | Dynamic (via Blazor JS interop) | ES Module |
-| `page-scripts.js` | Orchestrator for CDN loading (Highlight.js, Mermaid), page init, and scroll restore trigger | Static (every page) | ES Module |
+| `page-scripts.js` | Orchestrator for CDN loading (Highlight.js, Mermaid), page init, and scroll restore trigger | Static (`type="module"`) | ES Module |
 
 Special file in `wwwroot/`:
 
@@ -139,6 +143,24 @@ Detection uses the Navigation API (`currentEntry.navigationType === 'traverse'`)
 
 The restore is triggered by `markScriptsReady()` (in `page-scripts.js`) calling `window.__restoreScrollPosition()`. Every page **must** call `markScriptsReady` in its `OnAfterRenderAsync` — this is enforced by a convention test (`PageMarkScriptsReadyConventionTests`).
 
+### Cascade Prevention (`window.__scrollRestoring`)
+
+During back/forward navigation, `window.__scrollRestoring` coordinates all scroll-event listeners to prevent spurious triggers while the page is scrolling to the saved position:
+
+- **Set to `true`**: On `popstate` (immediately, before any rendering)
+- **Cleared to `false`**: In `finishScrollRestore()`, called from every `restoreScrollPosition()` exit path
+- **After clearing**: A synthetic `scroll` event is dispatched so all paused listeners fire once with the final restored position
+
+Listeners that check this flag:
+
+| Listener | What it prevents |
+|----------|------------------|
+| `infinite-scroll.js` `handleScroll` | Loading extra content batches while restore is in progress |
+| `toc-scroll-spy.js` `handleScroll` | Calling `replaceState` with a stale heading hash that would corrupt the restored URL |
+| `nav-helpers.js` `onScrollSave` | Overwriting the saved position with `scrollY=0` (the browser-reset value before restore) |
+
+The `pushState` interceptor also clears `__scrollRestoring` immediately for forward navigation, ensuring a previous interrupted back-nav cannot leave the flag stuck `true`.
+
 ## TOC Scroll-Spy
 
 `wwwroot/js/toc-scroll-spy.js` highlights table of contents links based on scroll position.
@@ -155,12 +177,15 @@ history.replaceState(null, '', newUrl);
 
 **Why This Matters**: When users scroll through content, only intentional navigation (clicking TOC links) should create history entries. The back button takes users to the previous page, not the previous scroll position.
 
+`toc-scroll-spy.js` also checks `window.__scrollRestoring` in `handleScroll` and returns early when set. This prevents it from calling `replaceState` during scroll restoration, which would append a stale heading hash to the restored URL and trigger Blazor's hash-scroll handler — resetting `scrollY` to 0 and cascading into infinite-scroll loads.
+
 ## Adding New JavaScript Files
 
 1. **Add file** to `wwwroot/js/`
 2. **Update** `Configuration/JsFiles.cs` for documentation
 3. **Load correctly**:
-   - Static (every page): Add `<script src="@Assets["js/file.js"]" defer>` to App.razor
+   - Static module (needs ES module scope): Add `<script type="module" src="@Assets["js/file.js"]">` to App.razor
+   - Static plain: Add `<script src="@Assets["js/file.js"]" defer>` to App.razor
    - Dynamic (conditional): Add `await import('./js/file.js')` in the module script block
 4. **Document** purpose in this file under "Local JavaScript Files"
 

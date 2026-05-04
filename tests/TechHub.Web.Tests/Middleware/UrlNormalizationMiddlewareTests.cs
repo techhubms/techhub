@@ -362,6 +362,23 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
+    public async Task OidcCallbackPath_PassesThrough_WithoutApiCall()
+    {
+        // /signin-oidc is the OIDC redirect URI handled by UseAuthentication.
+        // UrlNormalizationMiddleware runs before UseAuthentication, so it must not treat
+        // this path as a legacy content slug and must pass it through untouched.
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/signin-oidc", mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("OIDC callback path must pass through to UseAuthentication");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        mockApi.Verify(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
     public async Task KnownSectionName_PassesThrough_WithoutApiCall()
     {
         var mockApi = new Mock<ITechHubApiClient>();

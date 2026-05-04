@@ -41,6 +41,8 @@ public partial class UrlNormalizationMiddleware
         "health",
         "alive",
         "all",
+        // OIDC callback path — must pass through to UseAuthentication, never treated as content.
+        "signin-oidc",
     };
 
     // Matches YYYY-MM-DD- at the start of a segment. Capture group 1 is the slug remainder.

@@ -51,6 +51,7 @@ describe('toc-scroll-spy.js', () => {
     beforeEach(async () => {
         document.body.innerHTML = '';
         delete window.__e2eSignal;
+        delete window.__scrollRestoring;
 
         Object.defineProperty(window, 'innerHeight', {
             value: 800,
@@ -340,6 +341,40 @@ describe('toc-scroll-spy.js', () => {
             spy.handleScroll();
 
             expect(spy.initialized).toBe(false);
+        });
+
+        it('should skip RAF scheduling while __scrollRestoring is set', () => {
+            const { toc, content } = createTocAndContent();
+
+            const spy = new mod.TocScrollSpy(toc, content);
+            spy.init();
+
+            // Simulate nav-helpers.js setting the flag on popstate
+            window.__scrollRestoring = true;
+
+            spy.handleScroll();
+            window.dispatchEvent(new Event('scroll'));
+
+            // Guard returns early — no RAF was scheduled, ticking stays false
+            expect(spy.ticking).toBe(false);
+        });
+
+        it('should resume RAF scheduling once __scrollRestoring is cleared', () => {
+            const { toc, content } = createTocAndContent();
+
+            const spy = new mod.TocScrollSpy(toc, content);
+            spy.init();
+
+            window.__scrollRestoring = true;
+            spy.handleScroll();
+            expect(spy.ticking).toBe(false); // paused — no RAF
+
+            // nav-helpers.js clears the flag after restore completes
+            window.__scrollRestoring = false;
+            spy.handleScroll();
+
+            // Guard bypassed — RAF was scheduled
+            expect(spy.ticking).toBe(true);
         });
     });
 

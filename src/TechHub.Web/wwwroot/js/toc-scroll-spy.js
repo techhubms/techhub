@@ -77,34 +77,45 @@ export class TocScrollSpy {
         // Calculate and cache detection line position
         this.updateDetectionLine();
 
-        // Detect if browser is ACTUALLY scrolling (not just if there's a hash)
-        const initialScrollY = window.scrollY;
-
-        this.updateActiveHeading();
         this.attachEventListeners();
 
-        // Handle case where browser is already scrolling when we initialize
-        // Set up one-time handler that auto-cancels when regular scroll/resize handlers trigger
-        if ('onscrollend' in window) {
-            this.initialScrollEndHandler = () => {
-                if (window.location.pathname + window.location.search !== this.initialPagePath) {
-                    this.cleanupInitialScrollHandlers();
-                    return;
-                }
-                this.updateActiveHeading();
-                this.cleanupInitialScrollHandlers();
-            };
-            window.addEventListener('scrollend', this.initialScrollEndHandler, { once: true });
+        // If a scroll restore is in progress (back/forward navigation), defer all initial
+        // heading detection. Running updateActiveHeading() here would see scrollY=0 (the
+        // browser-reset value before restoration), call setActive(null), strip the hash
+        // from the URL via replaceState, and potentially overwrite correct state.
+        // finishScrollRestore() in nav-helpers.js dispatches a synthetic scroll event once
+        // the position is restored, which triggers handleScroll() → updateActiveHeading()
+        // at the correct scrollY. No special handling needed here.
+        if (window.__scrollRestoring) {
+            // Skip initial detection entirely — let the post-restore synthetic scroll do it.
         } else {
-            // Fallback for browsers without scrollend support
-            this.initialScrollTimeout = setTimeout(() => {
-                if (window.location.pathname + window.location.search !== this.initialPagePath) {
+            // Normal page load or forward navigation: detect immediately, then watch for
+            // scrollend in case the browser is still animating to a hash anchor.
+            this.updateActiveHeading();
+
+            // Handle case where browser is already scrolling when we initialize
+            // Set up one-time handler that auto-cancels when regular scroll/resize handlers trigger
+            if ('onscrollend' in window) {
+                this.initialScrollEndHandler = () => {
+                    if (window.location.pathname + window.location.search !== this.initialPagePath) {
+                        this.cleanupInitialScrollHandlers();
+                        return;
+                    }
+                    this.updateActiveHeading();
                     this.cleanupInitialScrollHandlers();
-                    return;
-                }
-                this.updateActiveHeading();
-                this.cleanupInitialScrollHandlers();
-            }, 200);
+                };
+                window.addEventListener('scrollend', this.initialScrollEndHandler, { once: true });
+            } else {
+                // Fallback for browsers without scrollend support
+                this.initialScrollTimeout = setTimeout(() => {
+                    if (window.location.pathname + window.location.search !== this.initialPagePath) {
+                        this.cleanupInitialScrollHandlers();
+                        return;
+                    }
+                    this.updateActiveHeading();
+                    this.cleanupInitialScrollHandlers();
+                }, 200);
+            }
         }
 
         this.initialized = true;
@@ -143,11 +154,20 @@ export class TocScrollSpy {
             this.destroy();
             return;
         }
+        // nav-helpers.js sets window.__scrollRestoring = true on popstate and clears it
+        // once scroll restoration completes. While set, skip all TOC updates to prevent
+        // replaceState calls that would append a stale heading hash to the restored URL.
+        if (window.__scrollRestoring) return;
         this.cleanupInitialScrollHandlers(); // Cancel initial scroll handlers
         if (!this.ticking) {
             window.requestAnimationFrame(() => {
-                this.updateActiveHeading();
                 this.ticking = false;
+                // Guard: destroy() may have been called while this RAF was pending
+                // (e.g. user clicked a link before this frame fired). Without this check,
+                // updateActiveHeading() would run on the old DOM after the URL changed and
+                // call setActive(null) → replaceState, stripping the hash from the new page's URL.
+                if (!this.initialized) return;
+                this.updateActiveHeading();
             });
             this.ticking = true;
         }
