@@ -215,14 +215,18 @@
     // ========================================================================
     window.__savedScrollPositions ??= {};
     let scrollSaveScheduled = false;
+    let suppressScrollSave = false; // true during traverse (back/forward) until restore completes
 
     function getScrollKey() {
         return window.location.pathname + window.location.search;
     }
 
     function saveScrollPosition() {
-        // Saves unconditionally. Post-restore scroll events save the correct restored
-        // position, which is intentional and harmless.
+        // During a traverse navigation (back/forward), the browser resets scrollY to 0
+        // before Blazor has finished rendering. If we save that 0, it overwrites the
+        // real saved position and restoreScrollPosition() later finds y=0 and bails out.
+        // Suppress saves between popstate and scroll restoration completing.
+        if (suppressScrollSave) return;
         window.__savedScrollPositions[getScrollKey()] = window.scrollY;
     }
 
@@ -258,7 +262,10 @@
 
         const key = getScrollKey();
         const y = window.__savedScrollPositions[key];
-        if (y == null || y <= 0) return false;
+        if (y == null || y <= 0) {
+            suppressScrollSave = false; // nothing to restore — re-enable saves
+            return false;
+        }
 
         // Check if the page is already tall enough to scroll to the target.
         void document.documentElement.offsetHeight;
@@ -268,6 +275,7 @@
             // Page is tall enough — scroll immediately.
             window.scrollTo(0, y);
             window.__scrollRestoredAt = Date.now();
+            suppressScrollSave = false;
             return true;
         }
 
@@ -289,11 +297,13 @@
                 cleanup();
                 window.scrollTo(0, y);
                 window.__scrollRestoredAt = Date.now();
+                suppressScrollSave = false;
             } else if (Date.now() >= deadline) {
                 // Deadline reached — scroll to best available position.
                 cleanup();
                 window.scrollTo(0, y);
                 window.__scrollRestoredAt = Date.now();
+                suppressScrollSave = false;
             }
             // Otherwise keep observing — more mutations will come.
         }
@@ -309,6 +319,7 @@
             cleanup();
             window.scrollTo(0, y);
             window.__scrollRestoredAt = Date.now();
+            suppressScrollSave = false;
         }, 1000);
 
         observer.observe(document.body, { childList: true, subtree: true });
@@ -418,6 +429,7 @@
         // most-recent scrollY is captured with the correct (pre-navigation) URL key,
         // regardless of rAF timing. This is the critical fix for scroll restoration after
         // back-navigation in production where network latency delays rAF execution.
+        suppressScrollSave = false; // forward navigation — re-enable saves before capturing
         saveScrollPosition();
         originalPushState.apply(this, args);
         lastPopstateAt = 0;
@@ -430,6 +442,7 @@
     // duration of the back/forward navigation (until the next pushState clears it).
     window.addEventListener('popstate', () => {
         lastPopstateAt = Date.now();
+        suppressScrollSave = true; // suppress until scroll restoration completes
         checkForPageNavigation();
     });
 
