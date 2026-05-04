@@ -290,11 +290,8 @@
         }
 
         // Setup scroll listener on first render, or re-attach when filters change.
-        // nav-helpers.js manages window.__scrollRestoring: it is set to true on popstate
-        // (back/forward navigation) and cleared when restoreScrollPosition() completes.
-        // observeScrollTrigger checks this flag in every handleScroll call, so the listener
-        // can be attached immediately without any suppress parameter — it stays quiet until
-        // restoration is done, regardless of whether the trigger is in the viewport.
+        // scroll-manager.js gates all scroll work when navigating=true, so the listener
+        // can be attached immediately — it stays quiet until navigation completes.
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
             needsScrollListenerSetup = false;
@@ -308,15 +305,14 @@
         {
             // Only load module once
             scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "/js/infinite-scroll.js");
+                "import", "/js/scroll-manager.js");
 
             // Only create dotNetRef once (avoid memory leak)
             dotNetRef ??= DotNetObjectReference.Create(this);
 
             // (Re-)attach scroll listener to current scroll-trigger element.
-            // No suppress parameter needed: nav-helpers.js owns the paused state via
-            // window.__scrollRestoring, which is set on popstate and cleared by
-            // restoreScrollPosition() when restoration completes.
+            // scroll-manager.js owns the navigating state and gates all scroll work
+            // until navigation completes (restoreScrollPosition finishes).
             await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
             Logger.LogDebug("Infinite scroll listener attached");
         }

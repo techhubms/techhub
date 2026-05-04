@@ -75,7 +75,7 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
         // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
         // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
-        // overwrites the saved scroll position in nav-helpers.js with ~0.
+        // overwrites the saved scroll position in scroll-manager.js with ~0.
         await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");
@@ -172,7 +172,7 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Navigate away via enhanced navigation. Use ClickVisibleCardLinkAsync which
         // uses JS .click() instead of Playwright's ClickAsync — Playwright always calls
         // scrollIntoViewIfNeeded before clicking, which fires a scroll event that
-        // overwrites the saved scroll position in nav-helpers.js with ~0.
+        // overwrites the saved scroll position in scroll-manager.js with ~0.
         await Page.ClickVisibleCardLinkAsync();
         await Page.WaitForConditionAsync(
             "() => !window.location.search.includes('types=videos')");

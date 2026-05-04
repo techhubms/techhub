@@ -251,7 +251,7 @@ public static class BlazorHelpers
     /// Uses <c>window.scrollTo</c> to scroll to the bottom of the page on each poll
     /// iteration. After scrolling, a synthetic <c>scroll</c> event is dispatched because
     /// headless Chrome does not fire scroll events from programmatic <c>scrollTo</c> calls.
-    /// The infinite-scroll.js handler listens for these events and uses
+    /// The scroll-manager.js handler listens for these events and uses
     /// <c>getBoundingClientRect</c> to check whether the trigger element is near the
     /// viewport, invoking <c>LoadNextBatch</c> when it is.
     /// </summary>
@@ -279,7 +279,7 @@ public static class BlazorHelpers
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // Headless Chrome does not fire scroll events from programmatic scrollTo,
-        // so the explicit dispatchEvent is required for the infinite-scroll.js handler
+        // so the explicit dispatchEvent is required for the scroll-manager.js handler
         // to detect the trigger element's position via getBoundingClientRect().
         // Uses E2ETimeout: loading the next batch requires an API round-trip.
         await page.WaitForFunctionAsync(
@@ -311,7 +311,7 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="endSelector">CSS selector for the end-of-content marker (default: ".end-of-content")</param>
-    /// <param name="triggerId">The id of the scroll-trigger element used by infinite-scroll.js</param>
+    /// <param name="triggerId">The id of the scroll-trigger element used by scroll-manager.js</param>
     public static async Task ScrollToEndOfContentAsync(
         this IPage page,
         string endSelector = ".end-of-content",
@@ -355,7 +355,7 @@ public static class BlazorHelpers
     /// <see cref="WaitForScrollListenerReattachAsync"/> to wait for a fresh attachment.
     ///
     /// The version counter is incremented each time <c>observeScrollTrigger()</c> runs
-    /// in infinite-scroll.js. It is never reset, so comparing before/after values
+    /// in scroll-manager.js. It is never reset, so comparing before/after values
     /// reliably detects whether a new listener was attached.
     /// </summary>
     /// <param name="page">The Playwright page</param>
@@ -1270,7 +1270,7 @@ public static class BlazorHelpers
     ///
     /// Playwright's <c>ClickAsync</c> calls <c>scrollIntoViewIfNeeded</c> before clicking,
     /// which fires a scroll event that can overwrite a saved scroll position in
-    /// <c>infinite-scroll.js</c>. Using JS <c>.click()</c> dispatches the click event
+    /// <c>scroll-manager.js</c>. Using JS <c>.click()</c> dispatches the click event
     /// directly — Blazor's router intercepts it for enhanced (SPA-style) navigation
     /// without any side-effect scrolling.
     ///

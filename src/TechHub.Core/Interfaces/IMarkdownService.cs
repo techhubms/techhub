@@ -18,8 +18,8 @@ public interface IMarkdownService
     /// <param name="markdown">Raw markdown content</param>
     /// <returns>Rendered HTML with properly formatted links</returns>
     /// <remarks>
-    /// Hash-only links (#section) are preserved as-is and handled client-side by JavaScript
-    /// in nav-helpers.js which converts them to full URL navigation.
+    /// Hash-only links (#section) are preserved as-is and handled client-side by
+    /// scroll-manager.js which navigates to the target element.
     /// </remarks>
     string RenderToHtml(string markdown);
 

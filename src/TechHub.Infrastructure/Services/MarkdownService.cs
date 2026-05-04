@@ -112,7 +112,7 @@ public class MarkdownService : IMarkdownService
                     otherAttributes += " target=\"_blank\" rel=\"noopener noreferrer\"";
                 }
             }
-            // Note: Hash-only links (#section) are fixed client-side by nav-helpers.js
+            // Note: Hash-only links (#section) are handled client-side by scroll-manager.js
             // to work around <base href="/"> resolving them relative to root
 
             return $"<a href=\"{url}\"{otherAttributes}>";

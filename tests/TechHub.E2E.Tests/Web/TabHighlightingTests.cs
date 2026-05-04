@@ -95,7 +95,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         foundButton.Should().BeTrue("should find a button via keyboard navigation");
 
-        // Wait for keyboard-nav class to be applied (set by keydown Tab handler in nav-helpers.js)
+        // Wait for keyboard-nav class to be applied (set by keydown Tab handler in scroll-manager.js)
         await Page.WaitForConditionAsync(
             "() => document.documentElement.classList.contains('keyboard-nav')");
 
@@ -205,7 +205,7 @@ public class TabHighlightingTests : PlaywrightTestBase
             return window.getComputedStyle(el).outlineStyle;
         }");
 
-        // Wait for keyboard-nav to be confirmed absent (pointerdown handler in nav-helpers.js removes it)
+        // Wait for keyboard-nav to be confirmed absent (pointerdown handler in scroll-manager.js removes it)
         await Page.WaitForConditionAsync(
             "() => !document.documentElement.classList.contains('keyboard-nav')");
 
@@ -255,7 +255,7 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Arrange - Navigate to a page with interactive buttons
         await Page.GotoRelativeAsync("/ai");
 
-        // Set keyboard-nav mode via Tab press (triggers keydown handler in nav-helpers.js)
+        // Set keyboard-nav mode via Tab press (triggers keydown handler in scroll-manager.js)
         await Page.Keyboard.PressAsync("Tab");
 
         var hasKeyboardNav = await Page.EvaluateAsync<bool>(
@@ -280,7 +280,7 @@ public class TabHighlightingTests : PlaywrightTestBase
         // at this y-coordinate. Avoid header area (y<150) which contains nav links.
         await Page.Mouse.ClickAsync(960, 500);
 
-        // Assert - The pointerdown handler in nav-helpers.js blurs focused non-input elements.
+        // Assert - The pointerdown handler in scroll-manager.js blurs focused non-input elements.
         // Focus should NOT remain on a button (the previously focused element).
         // Note: focus may land on body or on the clicked element if it's focusable,
         // but the important thing is the button was blurred.

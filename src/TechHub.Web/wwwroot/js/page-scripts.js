@@ -252,7 +252,7 @@ export async function initTocScrollSpy() {
     if (!tocElement) return;
 
     try {
-        const module = await import('./toc-scroll-spy.js');
+        const module = await import('./scroll-manager.js');
         module.initTocScrollSpy();
     } catch (error) {
         console.error('Failed to load TOC scroll spy:', error);

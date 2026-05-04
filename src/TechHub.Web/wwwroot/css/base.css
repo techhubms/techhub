@@ -208,7 +208,7 @@ a, button, input, select, textarea, [tabindex]:not([tabindex="-1"]) {
    Focus Outline Strategy
    
    Outlines are ONLY shown during keyboard navigation (Tab key).
-   nav-helpers.js adds 'keyboard-nav' class to <html> when Tab is pressed,
+   scroll-manager.js adds 'keyboard-nav' class to <html> when Tab is pressed,
    removes it on pointer/touch interaction (pointerdown).
    
    This prevents lingering focus rings on mobile devices after tapping

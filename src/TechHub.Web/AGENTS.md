@@ -94,17 +94,15 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 ### JavaScript Files Reference
 
-| File                 | Purpose                                     | Loading             |
-| -------------------- | ------------------------------------------- | ------------------- |
-| `nav-helpers.js`      | Back to top, back to previous navigation         | Static (defer)      |
-| `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer)   |
-| `sidebar-toggle.js`   | Desktop sidebar collapse/expand with localStorage | Static (defer)     |
-| `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer)   |
-| `page-scripts.js`     | CDN loading, init functions, scroll restore      | Static ES module    |
-| `toc-scroll-spy.js`   | TOC scroll highlighting, history management      | Dynamic (TOC pages) |
-| `custom-pages.js`     | Collapsible sections for SDLC/DX pages           | Dynamic             |
-| `date-range-slider.js` | Date range slider client-side clamping          | Dynamic             |
-| `infinite-scroll.js`  | Scroll-event-based infinite pagination           | Dynamic             |
+| File                  | Purpose                                           | Loading          |
+| --------------------- | ------------------------------------------------- | ---------------- |
+| `scroll-manager.js`   | Navigation, scroll position, TOC spy, infinite scroll, buttons | Static ES module |
+| `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer) |
+| `sidebar-toggle.js`   | Desktop sidebar collapse/expand with localStorage | Static (defer)   |
+| `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer) |
+| `page-scripts.js`     | CDN loading, init functions (mermaid, highlight.js) | Static ES module |
+| `custom-pages.js`     | Collapsible sections for SDLC/DX pages            | Dynamic          |
+| `date-range-slider.js` | Date range slider client-side clamping           | Dynamic          |
 
 Special: `TechHub.Web.lib.module.js` — Blazor lifecycle callbacks (auto-discovered by Blazor)
 
@@ -193,7 +191,7 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 
 ## TOC Scroll-Spy
 
-`toc-scroll-spy.js` highlights TOC links based on scroll position.
+`scroll-manager.js` highlights TOC links based on scroll position (using the `scrollend` event with debounce fallback).
 
 **CRITICAL**: Uses `history.replaceState()` (not `pushState()`) to update URL hash — prevents polluting browser history with scroll positions. Only TOC link clicks create history entries.
 
@@ -204,6 +202,7 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 - **Sentinel element**: `#scroll-trigger` (removed when no more items)
 - **Ready signal**: `window.__scrollListenerReady[triggerId]` (scoped per trigger to avoid interference)
 - Uses `scroll` events + `getBoundingClientRect()` — deliberately no `requestAnimationFrame` throttling (rAF callbacks not delivered in headless Chrome with `--disable-gpu`)
+- All logic in `scroll-manager.js` — Blazor imports this module via `JSRuntime.InvokeAsync("import", "/js/scroll-manager.js")`
 
 ## Date Formatting
 
