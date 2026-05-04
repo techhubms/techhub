@@ -91,13 +91,18 @@ public class InvalidRouteSegmentMiddlewareTests
     [InlineData("/wp-admin")]
     [InlineData("/setup.php")]
     [InlineData("/.env")]
+    [InlineData("/.env/")]              // trailing slash must still be detected
     [InlineData("/xmlrpc.php")]
     [InlineData("/random.xml")]
-    [InlineData("/evil-sitemap.xml")]     // suffix match no longer bypasses probe detection
+    [InlineData("/random.xml/")]        // trailing slash on .xml probe
+    [InlineData("/evil-sitemap.xml")]   // suffix match no longer bypasses probe detection
+    [InlineData("/actuator")]           // exact segment
+    [InlineData("/actuator/health")]    // sub-path of actuator segment
     [InlineData("/all/feed.xml", false)]  // feed.xml is NOT a probe
     [InlineData("/sitemap.xml", false)]   // sitemap.xml is NOT a probe
     [InlineData("/github-copilot/feed.xml", false)]
     [InlineData("/all/roundups/feed.xml", false)]
+    [InlineData("/ai/actuator-systems-deep-dive", false)]  // "actuator" as slug prefix, not a probe
     [InlineData("/config.json", false)]   // .json is not a probe extension
     [InlineData("/", false)]
     [InlineData("/ai", false)]

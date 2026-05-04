@@ -330,6 +330,14 @@ public partial class UrlNormalizationMiddleware
             return true;
         }
 
+        // /sitemap.xml is not an RSS feed — never redirect it.
+        // Guard explicitly so a section accidentally named "sitemap" can't cause
+        // /sitemap.xml to redirect to /sitemap/feed.xml.
+        if (segment.Equals("sitemap.xml", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
         // /{sectionName}.xml → /{sectionName}/feed.xml
         // Strip ".xml" (4 chars) to get the candidate section name.
         var nameWithoutXml = segment[..^4];

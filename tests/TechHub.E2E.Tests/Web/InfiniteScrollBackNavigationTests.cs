@@ -137,16 +137,14 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Load one more batch
         await Page.ScrollToLoadMoreAsync(initialCount + 1);
 
-        // Scroll up to save a non-bottom position. The global scroll listener in
-        // nav-helpers.js saves scrollY on every scroll event (throttled via rAF),
-        // so this position persists for back-button restoration.
+        // Scroll to a fixed position near the top of the page. Using a trigger-relative
+        // calculation (triggerTop - viewportHeight - N) is sensitive to layout shifts on CI
+        // (font loading, image dimensions) that can shift the trigger within the 300px
+        // trigger margin. At scrollY=200, the trigger is at least ~15,000px below the
+        // viewport — far outside the margin regardless of layout differences.
         await Page.EvaluateAsync(@"() => {
-            const trigger = document.getElementById('scroll-trigger');
-            if (trigger) {
-                const triggerTop = trigger.getBoundingClientRect().top + window.scrollY;
-                window.scrollTo(0, Math.max(0, triggerTop - window.innerHeight - 400));
-                window.dispatchEvent(new Event('scroll'));
-            }
+            window.scrollTo(0, 200);
+            window.dispatchEvent(new Event('scroll'));
         }");
 
         // Wait for scroll listener to be ready with no batch load in progress.

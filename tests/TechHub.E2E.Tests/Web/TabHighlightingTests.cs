@@ -195,14 +195,17 @@ public class TabHighlightingTests : PlaywrightTestBase
         var link = Page.Locator("main a[href]").First;
         await Assertions.Expect(link).ToBeVisibleAsync();
 
-        // Use dispatchEvent to simulate a pointer click focus (triggers pointerdown → removes keyboard-nav,
-        // then focuses the element). This matches real user behavior better than FocusAsync().
-        await link.EvaluateAsync(@"el => {
+        // Perform pointer interaction and read computed style atomically.
+        // A separate EvaluateAsync for style would risk the element losing :focus
+        // between CDP round-trips on CI, causing getComputedStyle to return "" instead
+        // of "none" because no CSS rule sets outline-style on non-focused elements.
+        var outlineStyle = await link.EvaluateAsync<string>(@"el => {
             el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
             el.focus();
+            return window.getComputedStyle(el).outlineStyle;
         }");
 
-        // Wait for keyboard-nav to be removed (pointerdown handler in nav-helpers.js)
+        // Wait for keyboard-nav to be confirmed absent (pointerdown handler in nav-helpers.js removes it)
         await Page.WaitForConditionAsync(
             "() => !document.documentElement.classList.contains('keyboard-nav')");
 
@@ -210,8 +213,6 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Check outline-style rather than outline-width: CSS outline: none sets style to "none"
         // which makes the outline invisible, but some browsers still report a non-zero width
         // for :focus-visible elements as part of accessibility heuristics.
-        var outlineStyle = await link.EvaluateAsync<string>(
-            "el => window.getComputedStyle(el).outlineStyle");
         outlineStyle.Should().Be("none",
             "focused element should have outline-style 'none' when keyboard-nav class is not active (pointer mode)");
     }

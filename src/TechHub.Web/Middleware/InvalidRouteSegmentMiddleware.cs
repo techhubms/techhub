@@ -136,31 +136,35 @@ public partial class InvalidRouteSegmentMiddleware
     /// </summary>
     internal static bool IsProbeRequest(string path)
     {
-        // Check for known probe path substrings (case-insensitive).
-        // These strings never appear in legitimate TechHub URLs.
-        foreach (var probe in _probePathSubstrings)
+        // Require a segment boundary so substrings only match complete path segments.
+        // e.g. "/actuator/health" is a probe but "/ai/actuator-systems" is not.
+        // EndsWith covers "/wp-admin" (final segment); Contains covers "/wp-admin/...".
+        if (_probePathSubstrings.Any(probe =>
+            path.EndsWith("/" + probe, StringComparison.OrdinalIgnoreCase) ||
+            path.Contains("/" + probe + "/", StringComparison.OrdinalIgnoreCase)))
         {
-            if (path.Contains(probe, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
+            return true;
         }
 
-        // Check for probe file extensions.
-        var lastDot = path.LastIndexOf('.');
+        // Trim trailing slashes and extract the extension from the final segment only,
+        // so paths like /.env/ or /random.xml/ are correctly identified as probes.
+        var normalized = path.TrimEnd('/');
+        var lastSlash = normalized.LastIndexOf('/');
+        var lastSegment = normalized[(lastSlash + 1)..];
+        var lastDot = lastSegment.LastIndexOf('.');
         if (lastDot < 0)
         {
             return false;
         }
 
-        var ext = path[lastDot..];
+        var ext = lastSegment[lastDot..];
 
         // .xml is used for RSS feeds (/all/feed.xml, /{section}/feed.xml) and the
         // sitemap (/sitemap.xml). Allow those through; block all other .xml paths.
         if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
         {
-            return !path.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
-                && !path.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
+            return !normalized.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
+                && !normalized.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
         }
 
         return _probeExtensions.Contains(ext);

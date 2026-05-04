@@ -185,26 +185,33 @@ public static class ServiceDefaultsExtensions
             return false;
         }
 
-        foreach (var probe in _probePathSubstrings)
+        // Require a segment boundary so substrings only match complete path segments.
+        // e.g. "/actuator/health" is a probe but "/ai/actuator-systems" is not.
+        // EndsWith covers "/wp-admin" (final segment); Contains covers "/wp-admin/...".
+        if (_probePathSubstrings.Any(probe =>
+            value.EndsWith("/" + probe, StringComparison.OrdinalIgnoreCase) ||
+            value.Contains("/" + probe + "/", StringComparison.OrdinalIgnoreCase)))
         {
-            if (value.Contains(probe, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
+            return true;
         }
 
-        var lastDot = value.LastIndexOf('.');
+        // Trim trailing slashes and extract the extension from the final segment only,
+        // so paths like /.env/ or /random.xml/ are correctly identified as probes.
+        var normalized = value.TrimEnd('/');
+        var lastSlash = normalized.LastIndexOf('/');
+        var lastSegment = normalized[(lastSlash + 1)..];
+        var lastDot = lastSegment.LastIndexOf('.');
         if (lastDot < 0)
         {
             return false;
         }
 
-        var ext = value[lastDot..];
+        var ext = lastSegment[lastDot..];
 
         if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
         {
-            return !value.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
-                && !value.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
+            return !normalized.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
+                && !normalized.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
         }
 
         return _probeExtensions.Contains(ext);

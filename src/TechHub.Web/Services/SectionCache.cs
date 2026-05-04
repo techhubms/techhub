@@ -24,12 +24,17 @@ public class SectionCache
 
     public void Initialize(IReadOnlyList<Section> sections)
     {
-        Sections = sections;
-        _sectionsByName = sections.ToDictionary(s => s.Name, StringComparer.OrdinalIgnoreCase);
-        _collectionsBySection = sections.ToDictionary(
+        // Build lookup dictionaries before publishing Sections so that any reader
+        // that observes IsReady=true also sees the fully populated dictionaries.
+        var byName = sections.ToDictionary(s => s.Name, StringComparer.OrdinalIgnoreCase);
+        var bySection = sections.ToDictionary(
             s => s.Name,
             s => new HashSet<string>(s.Collections.Select(c => c.Name), StringComparer.OrdinalIgnoreCase),
             StringComparer.OrdinalIgnoreCase);
+
+        _sectionsByName = byName;
+        _collectionsBySection = bySection;
+        Sections = sections; // set last — IsReady checks Sections.Count
     }
 
     /// <summary>

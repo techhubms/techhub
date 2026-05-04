@@ -93,17 +93,21 @@ public class ServiceDefaultsFilterTests
 
     [Theory]
     [InlineData("/.env")]
+    [InlineData("/.env/")]                              // trailing slash must still be detected
     [InlineData("/wp-admin")]
     [InlineData("/wp-login.php")]
     [InlineData("/xmlrpc.php")]
     [InlineData("/some/path/wp-content/uploads/file.jpg")]
     [InlineData("/phpmyadmin")]
     [InlineData("/random.xml")]
+    [InlineData("/random.xml/")]                        // trailing slash on .xml probe
     [InlineData("/evil-sitemap.xml")]
     [InlineData("/wordpress.xml")]
     [InlineData("/backup.sql")]
     [InlineData("/server.key")]
     [InlineData("/archive.zip")]
+    [InlineData("/actuator")]                           // exact actuator segment
+    [InlineData("/actuator/health")]                    // actuator sub-path
     public void IsProbeRequest_ReturnsTrue_ForProbePathsAndExtensions(string path)
     {
         ServiceDefaultsExtensions.IsProbeRequest(new PathString(path))
@@ -119,6 +123,7 @@ public class ServiceDefaultsFilterTests
     [InlineData("/ai")]
     [InlineData("/ai/videos")]
     [InlineData("/about")]
+    [InlineData("/ai/actuator-systems-deep-dive")]      // "actuator" as slug prefix, not a probe
     public void IsProbeRequest_ReturnsFalse_ForLegitimatePathsAndFeedExceptions(string path)
     {
         ServiceDefaultsExtensions.IsProbeRequest(new PathString(path))
