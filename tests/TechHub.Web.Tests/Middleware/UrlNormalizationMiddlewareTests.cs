@@ -611,6 +611,25 @@ public class UrlNormalizationMiddlewareTests
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 
+    [Theory]
+    [InlineData("/ai/all")]
+    [InlineData("/github-copilot/all")]
+    [InlineData("/security/all")]
+    public async Task MultiSegment_KnownSection_VirtualAllCollection_PassesThrough(string path)
+    {
+        // /{sectionName}/all is a valid Blazor route handled by SectionCollection.razor.
+        // It is a virtual "show all content" view — not stored as a real API collection —
+        // so IsKnownCollection returns false. The middleware must NOT 404 these paths.
+        var sectionName = path.TrimStart('/').Split('/')[0];
+        var cache = BuildSectionCacheWithCollections(sectionName, ["videos", "blogs"]);
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"{path} is a valid section 'all' view and must not be 404'd");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
     [Fact]
     public async Task MultiSegment_UnknownSection_WithHtmlExtension_Returns404_NotRedirect()
     {
@@ -668,6 +687,28 @@ public class UrlNormalizationMiddlewareTests
         await middleware.InvokeAsync(context);
 
         nextCalled().Should().BeTrue($"known non-section pages (admin, error, all, etc.) may have sub-paths");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/css/article.css")]
+    [InlineData("/css/sidebar.css")]
+    [InlineData("/js/nav-helpers.js")]
+    [InlineData("/js/infinite-scroll.js")]
+    [InlineData("/images/logo.png")]
+    [InlineData("/images/section-backgrounds/ai.jxl")]
+    [InlineData("/images/section-backgrounds/github-copilot.webp")]
+    [InlineData("/fakesection/something.css")]
+    public async Task MultiSegment_StaticFilePaths_PassThrough_RegardlessOfSection(string path)
+    {
+        // Static assets like /css/article.css must reach UseStaticFiles even when
+        // the first path segment is not a known section name.
+        var cache = BuildSectionCache("ai");
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"static asset path {path} must always pass through to UseStaticFiles");
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
     }
 

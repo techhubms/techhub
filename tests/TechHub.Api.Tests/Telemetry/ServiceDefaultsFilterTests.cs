@@ -90,4 +90,38 @@ public class ServiceDefaultsFilterTests
         ServiceDefaultsExtensions.IsBotRequest(userAgent)
             .Should().BeFalse("real user agents must not be filtered from telemetry");
     }
+
+    [Theory]
+    [InlineData("/.env")]
+    [InlineData("/wp-admin")]
+    [InlineData("/wp-login.php")]
+    [InlineData("/xmlrpc.php")]
+    [InlineData("/some/path/wp-content/uploads/file.jpg")]
+    [InlineData("/phpmyadmin")]
+    [InlineData("/random.xml")]
+    [InlineData("/evil-sitemap.xml")]
+    [InlineData("/wordpress.xml")]
+    [InlineData("/backup.sql")]
+    [InlineData("/server.key")]
+    [InlineData("/archive.zip")]
+    public void IsProbeRequest_ReturnsTrue_ForProbePathsAndExtensions(string path)
+    {
+        ServiceDefaultsExtensions.IsProbeRequest(new PathString(path))
+            .Should().BeTrue("scanner probe paths must be filtered from telemetry to avoid noise");
+    }
+
+    [Theory]
+    [InlineData("/feed.xml")]
+    [InlineData("/all/feed.xml")]
+    [InlineData("/ai/feed.xml")]
+    [InlineData("/sitemap.xml")]
+    [InlineData("/")]
+    [InlineData("/ai")]
+    [InlineData("/ai/videos")]
+    [InlineData("/about")]
+    public void IsProbeRequest_ReturnsFalse_ForLegitimatePathsAndFeedExceptions(string path)
+    {
+        ServiceDefaultsExtensions.IsProbeRequest(new PathString(path))
+            .Should().BeFalse("legitimate paths and RSS/sitemap endpoints must not be suppressed from telemetry");
+    }
 }

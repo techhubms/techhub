@@ -160,7 +160,7 @@ public partial class InvalidRouteSegmentMiddleware
         if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
         {
             return !path.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
-                && !path.EndsWith("sitemap.xml", StringComparison.OrdinalIgnoreCase);
+                && !path.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
         }
 
         return _probeExtensions.Contains(ext);
