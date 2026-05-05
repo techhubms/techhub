@@ -707,15 +707,19 @@ public class UrlNormalizationMiddlewareTests
     [Theory]
     [InlineData("/all")]
     [InlineData("/all/all")]
-    [InlineData("/all/roundups")]
-    [InlineData("/all/authors")]
+    [InlineData("/all/roundups")]       // real collection in ai section
+    [InlineData("/all/news")]           // real collection in ai section
+    [InlineData("/all/videos")]         // real collection in ai section
+    [InlineData("/all/authors")]        // dedicated virtual sub-page (Authors.razor)
+    [InlineData("/all/feed.xml")]       // file extension — passed to RSS endpoint
     [InlineData("/all/roundups/my-article")]
     [InlineData("/all/authors/john-doe")]
     public async Task VirtualSection_All_ValidPaths_PassThrough(string path)
     {
         // /all is a virtual section (not in the API cache) that aggregates content across
-        // all real sections. Valid sub-paths are limited to known collections and pages.
-        var cache = BuildSectionCache("ai");
+        // all real sections. Valid sub-paths include the "all" keyword, dedicated virtual pages
+        // (authors), file extensions (feeds), and any collection in any real section.
+        var cache = BuildSectionCacheWithCollections("ai", ["roundups", "news", "videos"]);
         var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
 
         await middleware.InvokeAsync(context);
@@ -727,12 +731,11 @@ public class UrlNormalizationMiddlewareTests
     [Theory]
     [InlineData("/all/garbage")]
     [InlineData("/all/nonexistent-collection")]
-    [InlineData("/all/videos")]
     public async Task VirtualSection_All_InvalidSubPath_Returns404(string path)
     {
-        // /all only permits its known sub-paths. Any other second segment must be rejected
-        // rather than silently passed through to Blazor (which would render a blank page).
-        var cache = BuildSectionCache("ai");
+        // /all only permits real section collections, dedicated virtual pages, "all", and
+        // file extensions. Names that don't match any real section's collection return 404.
+        var cache = BuildSectionCacheWithCollections("ai", ["roundups", "news", "videos"]);
         var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
 
         await middleware.InvokeAsync(context);

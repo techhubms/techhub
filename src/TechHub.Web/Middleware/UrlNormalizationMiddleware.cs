@@ -45,14 +45,18 @@ public partial class UrlNormalizationMiddleware
     };
 
     // Virtual sections that exist in the app's routing but are not stored in the API section cache.
-    // Each entry maps the virtual section name to its known collection names.
-    // The virtual "all" keyword (/{sectionName}/all) is handled separately in IsValidMultiSegmentPath.
+    // Each entry maps the virtual section name to dedicated sub-page names that have their own
+    // Blazor page and do NOT appear as collections in any real section.
+    // The virtual "all" keyword (/{sectionName}/all) and real collection names (news, videos, etc.)
+    // are handled dynamically in IsValidMultiSegmentPath via the section cache.
     private static readonly Dictionary<string, HashSet<string>> _knownVirtualSections =
         new(StringComparer.OrdinalIgnoreCase)
         {
-            // "/all" aggregates content across all real sections. Valid sub-paths are driven by
-            // dedicated Blazor pages (Authors.razor) and cross-section API endpoints (roundups).
-            ["all"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "roundups", "authors" },
+            // "/all" aggregates content across all real sections.
+            // Dedicated sub-pages: /all/authors (Authors.razor — not a real API collection).
+            // All standard collections (roundups, news, videos, etc.) are validated dynamically
+            // via IsKnownCollectionInAnySection so new collections are picked up automatically.
+            ["all"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "authors" },
         };
 
     // Matches YYYY-MM-DD- at the start of a segment. Capture group 1 is the slug remainder.
@@ -239,9 +243,10 @@ public partial class UrlNormalizationMiddleware
             return true;
         }
 
-        // Virtual sections (not in the API cache but with a known, finite set of sub-paths).
-        // Any second segment not in the allow-list — or the "all" virtual keyword — is rejected.
-        if (_knownVirtualSections.TryGetValue(first, out var virtualCollections))
+        // Virtual sections (not in the API cache — e.g. /all which aggregates across all sections).
+        // Valid second segments: "all" keyword, file extensions (feeds/sitemaps),
+        // dedicated virtual sub-pages (authors), or any collection known in any real section.
+        if (_knownVirtualSections.TryGetValue(first, out var virtualDedicatedPages))
         {
             if (segments.Length < 2)
             {
@@ -249,8 +254,19 @@ public partial class UrlNormalizationMiddleware
             }
 
             var second = segments[1];
-            return string.Equals(second, "all", StringComparison.OrdinalIgnoreCase)
-                || virtualCollections.Contains(second);
+
+            // "all" keyword, file extensions, and dedicated virtual pages are always valid.
+            if (string.Equals(second, "all", StringComparison.OrdinalIgnoreCase)
+                || Path.HasExtension(second)
+                || virtualDedicatedPages.Contains(second))
+            {
+                return true;
+            }
+
+            // Accept any collection that exists in at least one real section
+            // (roundups, news, videos, blogs, etc.) — new collections are picked up automatically.
+            // O(1) via the pre-built all-collections HashSet in SectionCache.
+            return _sectionCache.IsKnownCollectionInAnySection(second);
         }
 
         // If the last segment of the path has a file extension, pass through without validation.

@@ -12,6 +12,8 @@ public class SectionCache
     private Dictionary<string, Section> _sectionsByName = new();
     // sectionName → set of collection names (both O(1), built once at Initialize)
     private Dictionary<string, HashSet<string>> _collectionsBySection = new();
+    // all collection names across all sections (O(1) lookup for virtual-section validation)
+    private HashSet<string> _allCollectionNames = new(StringComparer.OrdinalIgnoreCase);
 
     public IReadOnlyList<Section> Sections { get; private set; } = Array.Empty<Section>();
 
@@ -32,8 +34,15 @@ public class SectionCache
             s => new HashSet<string>(s.Collections.Select(c => c.Name), StringComparer.OrdinalIgnoreCase),
             StringComparer.OrdinalIgnoreCase);
 
+        var allCollections = new HashSet<string>(
+            sections.SelectMany(s => s.Collections.Select(c => c.Name)),
+            StringComparer.OrdinalIgnoreCase);
+
+        // Publish all three before Sections so any reader that observes IsReady=true
+        // also sees the fully populated dictionaries.
         _sectionsByName = byName;
         _collectionsBySection = bySection;
+        _allCollectionNames = allCollections;
         Sections = sections; // set last — IsReady checks Sections.Count
     }
 
@@ -55,6 +64,17 @@ public class SectionCache
     {
         return _collectionsBySection.TryGetValue(sectionName, out var collections)
             && collections.Contains(collectionName);
+    }
+
+    /// <summary>
+    /// Returns true if <paramref name="collectionName"/> is a known collection in ANY
+    /// section. Used to validate sub-paths of virtual sections (e.g. /all/news, /all/videos).
+    /// O(1) via the pre-built all-collections set.
+    /// Returns false when the cache is not ready.
+    /// </summary>
+    public bool IsKnownCollectionInAnySection(string collectionName)
+    {
+        return _allCollectionNames.Contains(collectionName);
     }
 }
 
