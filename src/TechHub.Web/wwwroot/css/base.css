@@ -337,6 +337,15 @@ img {
   background-repeat: no-repeat;
 }
 
+/* Disable pointer-events on cards while the page is being scrolled.
+   This prevents stale :hover highlights from lingering mid-scroll and
+   skips expensive hover hit-testing on every scroll frame.
+   The is-scrolling class is added/removed by scroll-manager.js. */
+html.is-scrolling .card,
+html.is-scrolling .card * {
+  pointer-events: none !important;
+}
+
 /* Reduced Motion Support (Accessibility) */
 @media (prefers-reduced-motion: reduce) {
 

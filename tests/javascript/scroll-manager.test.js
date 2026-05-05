@@ -492,7 +492,7 @@ describe('scroll-manager.js', () => {
         it('cross-page pushState scrolls to top immediately', () => {
             window.scrollTo = vi.fn();
             window.history.pushState(null, '', '/github-copilot');
-            expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
+            expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'instant' });
         });
 
         it('hash-only pushState does not scroll to top', () => {

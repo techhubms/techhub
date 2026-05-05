@@ -271,7 +271,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         // Wait for focus to settle on the button — FocusAsync dispatches .focus() but
         // the browser may not update document.activeElement synchronously when other
-        // JS handlers (Blazor, nav-helpers) are active.
+        // JS handlers (Blazor, scroll-manager) are active.
         await Page.WaitForConditionAsync(
             "() => document.activeElement?.tagName === 'BUTTON'");
 

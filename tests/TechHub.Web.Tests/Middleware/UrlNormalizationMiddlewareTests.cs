@@ -693,9 +693,6 @@ public class UrlNormalizationMiddlewareTests
     [InlineData("/admin/users")]
     [InlineData("/admin/content/edit")]
     [InlineData("/error/details")]
-    [InlineData("/all/all")]
-    [InlineData("/all/roundups")]
-    [InlineData("/all/authors")]
     public async Task MultiSegment_KnownNonSectionPages_PassThrough(string path)
     {
         var cache = BuildSectionCache("ai");
@@ -703,8 +700,46 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue($"known non-section pages (admin, error, all, etc.) may have sub-paths");
+        nextCalled().Should().BeTrue($"known non-section pages (admin, error, etc.) may have sub-paths");
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/all")]
+    [InlineData("/all/all")]
+    [InlineData("/all/roundups")]
+    [InlineData("/all/authors")]
+    [InlineData("/all/roundups/my-article")]
+    [InlineData("/all/authors/john-doe")]
+    public async Task VirtualSection_All_ValidPaths_PassThrough(string path)
+    {
+        // /all is a virtual section (not in the API cache) that aggregates content across
+        // all real sections. Valid sub-paths are limited to known collections and pages.
+        var cache = BuildSectionCache("ai");
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"valid /all path '{path}' must pass through to Blazor routing");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/all/garbage")]
+    [InlineData("/all/nonexistent-collection")]
+    [InlineData("/all/videos")]
+    public async Task VirtualSection_All_InvalidSubPath_Returns404(string path)
+    {
+        // /all only permits its known sub-paths. Any other second segment must be rejected
+        // rather than silently passed through to Blazor (which would render a blank page).
+        var cache = BuildSectionCache("ai");
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound,
+            $"unknown /all sub-path '{path}' must return 404");
+        nextCalled().Should().BeFalse();
     }
 
     [Theory]

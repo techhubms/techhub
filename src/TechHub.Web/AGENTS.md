@@ -191,7 +191,7 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 
 ## TOC Scroll-Spy
 
-`scroll-manager.js` highlights TOC links based on scroll position (using the `scrollend` event with debounce fallback).
+`scroll-manager.js` highlights TOC links based on scroll position using **RAF-throttled `scroll` events** (one update per frame — real-time as user scrolls), with a final pass on `scrollend` to settle at the exact resting position. The debounce fallback (150ms) is used on browsers without native `scrollend`.
 
 **CRITICAL**: Uses `history.replaceState()` (not `pushState()`) to update URL hash — prevents polluting browser history with scroll positions. Only TOC link clicks create history entries.
 
@@ -201,8 +201,8 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 - **Prefetch trigger**: 300px margin
 - **Sentinel element**: `#scroll-trigger` (removed when no more items)
 - **Ready signal**: `window.__scrollListenerReady[triggerId]` (scoped per trigger to avoid interference)
-- Uses `scroll` events + `getBoundingClientRect()` — deliberately no `requestAnimationFrame` throttling (rAF callbacks not delivered in headless Chrome with `--disable-gpu`)
-- All logic in `scroll-manager.js` — Blazor imports this module via `JSRuntime.InvokeAsync("import", "/js/scroll-manager.js")`
+- Uses `IntersectionObserver` with a 300px `rootMargin` — fires once when the sentinel enters the extended viewport, then immediately disconnects to prevent cascade
+- All logic in `scroll-manager.js` — Blazor imports via `JSRuntime.InvokeAsync("import", "./js/scroll-manager.js")` (relative specifier so the ImportMap resolves to the fingerprinted URL)
 
 ## Date Formatting
 

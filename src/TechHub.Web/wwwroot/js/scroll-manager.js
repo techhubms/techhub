@@ -10,9 +10,10 @@
  *   - Keyboard navigation detection
  *
  * Architecture:
- *   - `scroll` event: update button visibility
- *   - `scrollend` event (debounce fallback): track settled position + update TOC highlight
- *   - pushState intercept: save settled position, trigger forward navigation
+ *   - `scroll` event: update button visibility + RAF-throttled TOC highlight + is-scrolling guard
+ *   - `scrollend` event (debounce fallback): track settled position + final TOC highlight pass
+ *   - `beforeenhancedload` (Blazor): scroll to top immediately before DOM patch (eliminates forward-nav jerk)
+ *   - pushState intercept: fallback scroll-to-top + navigating='forward' for non-Blazor callers
  *   - popstate handler: save leaving page position, trigger traverse navigation
  *   - Explicit navigation lifecycle: onNavigationStart → onNavigationEnd
  *   - No plugin registry, no synthetic events, no RAF-inside-event races
@@ -37,6 +38,9 @@ let lastSettledScrollY = window.scrollY; // updated on scrollend — the user's 
 /** Saved scroll positions keyed by pathname+search (no hash). */
 const savedPositions = {};
 window.__savedScrollPositions = savedPositions; // exposed for tests
+
+// RAF throttle flag for TOC updates during scroll (one update per frame).
+let tocRafPending = false;
 
 // ============================================================================
 // Keyboard Navigation Detection
@@ -349,14 +353,18 @@ history.pushState = function (...args) {
         // Update tracking immediately so popstate can reliably detect same-page vs cross-page.
         lastPathname = location.pathname;
         lastSearch = location.search;
-        // Cross-page navigation — scroll to top immediately so Blazor's DOM swap
-        // (which temporarily reduces scrollHeight) doesn't cause a visible jitter.
-        window.scrollTo(0, 0);
-        lastSettledScrollY = 0;
-        navigating = 'forward';
-        // Block WaitForBlazorReadyAsync immediately — don't wait for enhancedload.
-        window.__scriptsReady = false;
-        showNavSpinner();
+        // beforeenhancedload fires before this for Blazor links and already handles
+        // the early scroll + navigating setup. This branch is the fallback for
+        // non-Blazor pushState callers or for the rare case the event didn't fire.
+        if (navigating !== 'forward') {
+            document.documentElement.classList.remove('is-scrolling');
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            lastSettledScrollY = 0;
+            navigating = 'forward';
+            // Block WaitForBlazorReadyAsync immediately — don't wait for enhancedload.
+            window.__scriptsReady = false;
+            showNavSpinner();
+        }
     }
     // Hash-only: navigating stays false, scroll handlers keep running
 };
@@ -442,13 +450,34 @@ function setupBlazorListeners() {
     }
 
     function attach() {
+        // beforeenhancedload fires BEFORE Blazor patches the DOM and BEFORE pushState
+        // is called (Blazor Interactive Server calls pushState after the circuit update).
+        // Scrolling to top here gives the user an instant visual jump on link click,
+        // eliminating the jerk where the old content scrolled while DOM was being patched.
+        Blazor.addEventListener('beforeenhancedload', () => {
+            // traversal (back/forward) sets navigating='traverse' via popstate before
+            // this event fires, so the guard prevents us resetting scroll on back-nav.
+            if (navigating) return;
+            document.documentElement.classList.remove('is-scrolling');
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            lastSettledScrollY = 0;
+            navigating = 'forward';
+            window.__scriptsReady = false;
+            showNavSpinner();
+        });
+
         Blazor.addEventListener('enhancedload', () => {
             createButtonContainer();
             updateButtonVisibility();
             hideNavSpinner();
-            // Forward nav completion: focus body for accessibility + unlock scroll.
+            // Forward nav completion: scroll was already done in beforeenhancedload
+            // (or pushState fallback). Only move focus for accessibility.
             if (navigating === 'forward') {
-                resetPagePosition();
+                requestAnimationFrame(() => {
+                    document.body.tabIndex = -1;
+                    document.body.focus();
+                    document.body.removeAttribute('tabindex');
+                });
                 finishNavigation();
             }
         });
@@ -834,20 +863,34 @@ export function dispose() {
 
 /**
  * Called on every scroll event (high frequency).
- * Does: update button visibility, check infinite scroll.
- * Does NOT do: save position (only saved in pushState), TOC highlight (scrollend only).
+ * Does: update button visibility, RAF-throttled TOC highlight, pointer-events guard for cards.
+ * Does NOT do: save position (only saved in pushState).
  */
 function onScroll() {
     if (navigating) return;
+    // Disable pointer events on cards during scroll so :hover doesn't linger
+    // on the wrong card and so the browser skips expensive hover re-evaluation
+    // on every scroll frame. Re-enabled in onScrollEnd.
+    document.documentElement.classList.add('is-scrolling');
     updateButtonVisibility();
+    // RAF-throttled TOC update — one update per frame, matching the old
+    // toc-scroll-spy.js behaviour. scrollend-only was the regression.
+    if (tocState && !tocRafPending) {
+        tocRafPending = true;
+        requestAnimationFrame(() => {
+            tocRafPending = false;
+            if (!navigating) updateTocHighlight();
+        });
+    }
 }
 
 /**
  * Called when scrolling stops (scrollend or debounce fallback).
- * Does: update lastSettledScrollY, TOC highlight.
+ * Does: remove is-scrolling guard, update lastSettledScrollY, final TOC highlight pass.
  */
 function onScrollEnd() {
     if (navigating) return;
+    document.documentElement.classList.remove('is-scrolling');
     lastSettledScrollY = window.scrollY;
     updateTocHighlight();
 }

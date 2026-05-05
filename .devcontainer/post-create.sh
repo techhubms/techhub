@@ -113,11 +113,15 @@ npm install -g markdownlint-cli2 || echo "Warning: Failed to install markdownlin
 
 # ==================== Oh My Posh ====================
 OMP_VERSION="29.12.0"
+OMP_SHA256="946654886beb37750ec0572ed3de1792b86f06482b2fb4007403f7c94beb8d8c"
 echo "Installing Oh My Posh v${OMP_VERSION}..."
 if ! command -v oh-my-posh &> /dev/null; then
     mkdir -p ~/.local/bin
     curl -sSfL "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v${OMP_VERSION}/posh-linux-amd64" \
         -o ~/.local/bin/oh-my-posh
+    # Verify SHA256 checksum before marking executable (from checksums.txt in the release)
+    echo "${OMP_SHA256}  ${HOME}/.local/bin/oh-my-posh" | sha256sum --check --status \
+        || { echo "ERROR: Oh My Posh SHA256 checksum mismatch — aborting install"; rm -f ~/.local/bin/oh-my-posh; exit 1; }
     chmod +x ~/.local/bin/oh-my-posh
 else
     echo "Oh My Posh already installed"

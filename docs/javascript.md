@@ -130,7 +130,7 @@ External libraries are loaded from CDNs for performance. All versions and SRI ha
 - **Save**: In the `pushState` interceptor (forward nav) and `popstate` handler (back/forward nav). Uses `lastSettledScrollY` — the position captured by the last `scrollend` event — rather than `window.scrollY` at the moment of navigation. This avoids saving a corrupted position caused by `scrollIntoView` shifts that happen between the user's last scroll stop and the click/Enter that triggers navigation.
 - **Restore**: On back/forward navigation (traverse), restores the saved position after `markScriptsReady` signals that all rendering is complete
 - **Retry**: If the page isn't tall enough yet, a ResizeObserver + MutationObserver watch for layout changes with a 150ms debounce and 30s hard deadline
-- **Forward navigation**: Scrolls to top immediately in `pushState` so Blazor's DOM swap doesn't cause visible jitter
+- **Forward navigation**: Scrolls to top immediately in `beforeenhancedload` (before DOM patch) so the user sees an instant jump to the top on click, eliminating visual jerk. The `pushState` interceptor does the same as a fallback for non-Blazor callers.
 - **Same-page hash popstate**: Scrolls to the target element directly (no saved position lookup)
 
 The scroll key intentionally excludes the hash. TOC `replaceState()` changes the hash freely during scrolling — if the hash were included in the key, restored positions would mismatch.
@@ -147,14 +147,15 @@ A single module-level `navigating` flag (`false | 'forward' | 'traverse'`) gates
 - **`scrollend` handler**: Skips `lastSettledScrollY` update and TOC highlight when navigating
 - **`finishNavigation()`**: Resets `navigating = false` and calls `onScrollEnd()` once for the final position
 
-The `pushState` interceptor sets `navigating = 'forward'` and resets `lastSettledScrollY = 0` for cross-page navigation. The `enhancedload` event clears it for forward navigation. For back/forward, `restoreScrollPosition()` → `requestAnimationFrame(finishNavigation)` clears it — rAF is used instead of `setTimeout(0)` so IntersectionObserver callbacks (step 13.10 in the rendering pipeline) fire before `finishNavigation` (step 13.14), preventing the infinite-scroll cascade on back-navigation.
+The `beforeenhancedload` event (Blazor .NET 9+) sets `navigating = 'forward'` and calls `scrollTo({ top: 0, behavior: 'instant' })` before the DOM is patched. The `pushState` interceptor acts as a fallback and skips the setup if `beforeenhancedload` already ran. The `enhancedload` event handles accessibility focus and clears the flag.
 
 ### Event Handling Split
 
 | Event | Handlers | Why |
 |-------|----------|-----|
-| `scroll` (high frequency) | Button visibility | Cheap, needs responsiveness |
-| `scrollend` (or debounce fallback) | Update `lastSettledScrollY`, TOC highlight | `lastSettledScrollY` is the position used by `saveScrollPosition`; expensive `getBoundingClientRect` on all headings avoids flicker |
+| `scroll` (high frequency) | Button visibility, RAF-throttled TOC highlight, `is-scrolling` class on `<html>` | Cheap; TOC needs real-time responsiveness (one update per frame); `is-scrolling` disables card `:hover` during scroll |
+| `scrollend` (or debounce fallback) | Remove `is-scrolling`, update `lastSettledScrollY`, final TOC highlight pass | Settling position and cleanup after inertia scroll ends |
+| `beforeenhancedload` (Blazor) | Scroll to top, set `navigating='forward'`, show spinner | Fires before DOM patch — gives instant jump-to-top before Blazor replaces content |
 
 ### TOC Scroll-Spy
 
@@ -165,7 +166,7 @@ Highlights the active heading in the table of contents sidebar.
 - **Desktop**: All `<a href="#...">` clicks → `replaceState` + `scrollToHash`
 - **Mobile**: Top-level h2 links with sub-items → toggle expand/collapse; all other anchor clicks → `replaceState` + `scrollToHash`
 
-**Scroll spy**: Uses `history.replaceState()` to keep the URL hash in sync as the user scrolls — never `pushState`.
+**Scroll spy**: Uses `history.replaceState()` to keep the URL hash in sync as the user scrolls. Updates run on every `scroll` event, RAF-throttled to one update per frame (same pattern as the old `toc-scroll-spy.js`). A final pass runs on `scrollend` to settle on the exact resting position. Never uses `pushState`.
 
 ```javascript
 // ❌ WRONG - Creates history entry for every scroll update
@@ -179,12 +180,12 @@ Activated by calling `initTocScrollSpy()` (exported from scroll-manager.js, invo
 
 ### Infinite Scroll
 
-Blazor's `ContentItemsGrid` component imports scroll-manager.js via `JSRuntime.InvokeAsync("import", "/js/scroll-manager.js")` and calls:
+Blazor's `ContentItemsGrid` component imports scroll-manager.js via `JSRuntime.InvokeAsync("import", "./js/scroll-manager.js")` (relative specifier so the ImportMap resolves to the fingerprinted URL) and calls:
 
 - `observeScrollTrigger(dotNetRef, "scroll-trigger")` — registers the trigger element
 - `dispose()` — cleans up on component disposal
 
-The infinite scroll check runs in the `scroll` event handler — it fires while the user is still scrolling so content arrives before they reach the bottom.
+Infinite scroll uses `IntersectionObserver` with a 300px `rootMargin` — the callback fires once when the sentinel enters the extended viewport, then the observer disconnects immediately to prevent cascade loading. Blazor re-attaches the observer after each batch render by calling `observeScrollTrigger` again.
 
 ## Adding New JavaScript Files
 

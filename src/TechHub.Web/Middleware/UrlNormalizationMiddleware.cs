@@ -40,10 +40,20 @@ public partial class UrlNormalizationMiddleware
         "admin",
         "health",
         "alive",
-        "all",
         // OIDC callback path — must pass through to UseAuthentication, never treated as content.
         "signin-oidc",
     };
+
+    // Virtual sections that exist in the app's routing but are not stored in the API section cache.
+    // Each entry maps the virtual section name to its known collection names.
+    // The virtual "all" keyword (/{sectionName}/all) is handled separately in IsValidMultiSegmentPath.
+    private static readonly Dictionary<string, HashSet<string>> _knownVirtualSections =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            // "/all" aggregates content across all real sections. Valid sub-paths are driven by
+            // dedicated Blazor pages (Authors.razor) and cross-section API endpoints (roundups).
+            ["all"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "roundups", "authors" },
+        };
 
     // Matches YYYY-MM-DD- at the start of a segment. Capture group 1 is the slug remainder.
     [GeneratedRegex(@"^\d{4}-\d{2}-\d{2}-(.+)$", RegexOptions.Compiled)]
@@ -229,6 +239,20 @@ public partial class UrlNormalizationMiddleware
             return true;
         }
 
+        // Virtual sections (not in the API cache but with a known, finite set of sub-paths).
+        // Any second segment not in the allow-list — or the "all" virtual keyword — is rejected.
+        if (_knownVirtualSections.TryGetValue(first, out var virtualCollections))
+        {
+            if (segments.Length < 2)
+            {
+                return true;
+            }
+
+            var second = segments[1];
+            return string.Equals(second, "all", StringComparison.OrdinalIgnoreCase)
+                || virtualCollections.Contains(second);
+        }
+
         // If the last segment of the path has a file extension, pass through without validation.
         // This covers static assets at any depth (e.g. /css/article.css, /images/section-backgrounds/ai.jxl)
         // and registered endpoints with extensions (e.g. /all/feed.xml, /security/feed.xml, /sitemap.xml).
@@ -273,6 +297,11 @@ public partial class UrlNormalizationMiddleware
         }
 
         if (_knownNonSectionPages.Contains(segment))
+        {
+            return false;
+        }
+
+        if (_knownVirtualSections.ContainsKey(segment))
         {
             return false;
         }

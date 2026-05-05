@@ -18,8 +18,10 @@ public interface IMarkdownService
     /// <param name="markdown">Raw markdown content</param>
     /// <returns>Rendered HTML with properly formatted links</returns>
     /// <remarks>
-    /// Hash-only links (#section) are preserved as-is and handled client-side by
-    /// scroll-manager.js which navigates to the target element.
+    /// Hash-only links (#section) are preserved as-is in the rendered HTML.
+    /// The <c>SafeMarkup</c> Razor component rewrites them at render time
+    /// (href="#section" → href="/current/path#section") to work around
+    /// <c>&lt;base href="/"&gt;</c> resolving bare hash links relative to root.
     /// </remarks>
     string RenderToHtml(string markdown);
 
