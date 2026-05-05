@@ -62,17 +62,14 @@ export function afterWebStarted(blazor) {
         history.scrollRestoration = 'manual';
     }
 
-    // Reset script loading state on enhanced navigation.
-    // Blazor enhanced navigation patches the DOM without a full page reload, so
-    // __scriptsLoading from the previous page can remain stale (stuck at true)
-    // if the navigation interrupted a script load. This would cause
-    // WaitForBlazorReadyAsync in E2E tests to block indefinitely on the new page.
-    // Resetting here ensures each navigation starts with a clean slate.
+    // Reset script lifecycle on enhanced navigation.
+    // Set __scriptsReady = false so WaitForBlazorReadyAsync blocks until the target
+    // page's OnAfterRenderAsync calls markScriptsReady(). Every page component calls
+    // markScriptsReady, so this flag will always be flipped back — no deadlock risk.
     blazor.addEventListener('enhancedload', () => {
-        window.__scriptsLoading = false;
-        window.__scriptsReady = undefined;
+        window.__scriptsReady = false;
         if (typeof window.__e2eSignal === 'function') window.__e2eSignal('enhanced-nav');
-        console.debug('[TechHub] Enhanced navigation complete - script flags reset');
+        console.debug('[TechHub] Enhanced navigation complete - scriptsReady reset');
     });
 
     // Set up focus scroll compensation for sticky headers

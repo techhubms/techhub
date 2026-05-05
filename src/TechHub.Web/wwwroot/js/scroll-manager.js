@@ -10,8 +10,10 @@
  *   - Keyboard navigation detection
  *
  * Architecture:
- *   - `scroll` event: save position, update button visibility, check infinite scroll
- *   - `scrollend` event (debounce fallback): update TOC highlight + URL hash
+ *   - `scroll` event: update button visibility
+ *   - `scrollend` event (debounce fallback): track settled position + update TOC highlight
+ *   - pushState intercept: save settled position, trigger forward navigation
+ *   - popstate handler: save leaving page position, trigger traverse navigation
  *   - Explicit navigation lifecycle: onNavigationStart → onNavigationEnd
  *   - No plugin registry, no synthetic events, no RAF-inside-event races
  *
@@ -27,10 +29,10 @@
 // State
 // ============================================================================
 
-let navigating = false;           // true during navigation transitions
+let navigating = false;           // false | 'forward' | 'traverse'
 let lastPathname = location.pathname;
 let lastSearch = location.search;
-let lastPopstateAt = 0;           // >0 means back/forward nav in progress
+let lastSettledScrollY = window.scrollY; // updated on scrollend — the user's true resting position
 
 /** Saved scroll positions keyed by pathname+search (no hash). */
 const savedPositions = {};
@@ -172,18 +174,37 @@ function getScrollKey() {
 }
 
 function saveScrollPosition() {
-    savedPositions[getScrollKey()] = window.scrollY;
+    const key = getScrollKey();
+    const lock = window.__scrollSaveLock;
+    // Priority: lock (tests) > lastSettledScrollY (user's true resting position).
+    // lastSettledScrollY is immune to scrollIntoView shifts that happen between
+    // the user's last scroll stop and the click/Enter that triggers pushState.
+    const y = (lock && lock.key === key) ? lock.value : lastSettledScrollY;
+    savedPositions[key] = y;
 }
 
 /**
  * Restore scroll position after back/forward navigation.
  * Called by markScriptsReady when page rendering is complete.
+ *
+ * Uses requestAnimationFrame(finishNavigation) rather than setTimeout(fn, 0) to
+ * unlock scroll after scrollTo. The rendering pipeline processes IntersectionObserver
+ * callbacks at step 13.10 and rAF callbacks at step 13.14 — within the same frame,
+ * IO always fires BEFORE rAF. This guarantees that if scrollTo puts the infinite-scroll
+ * trigger within the rootMargin, the IO fires while navigating='traverse' (→ ignored),
+ * and only after that does rAF fire to set navigating=false. Without rAF, setTimeout(0)
+ * races against IO and sometimes wins, causing a cascade of batch loads on back-nav.
  */
 function restoreScrollPosition() {
-    const isTraversal = window.navigation?.currentEntry?.navigationType === 'traverse'
-        || lastPopstateAt > 0;
-    if (!isTraversal) {
-        // Forward nav: just unlock scroll handling
+    // Clear lock — it has served its purpose (saved the correct value in pushState).
+    window.__scrollSaveLock = null;
+
+    // Already restored or no navigation in progress — no-op.
+    if (!navigating) return false;
+
+    if (navigating !== 'traverse') {
+        // Forward nav: unlock immediately. No cascading-load risk because
+        // forward nav scrolls to top (trigger is at the bottom of the page).
         finishNavigation();
         return false;
     }
@@ -197,7 +218,11 @@ function restoreScrollPosition() {
         } else {
             window.scrollTo(0, 0);
         }
-        finishNavigation();
+        // Use rAF instead of setTimeout(0). In the rendering pipeline, IntersectionObserver
+        // callbacks fire at step 13.10 and rAF fires at step 13.14 — IO always fires BEFORE
+        // rAF in the same frame. This guarantees the IO callback sees navigating='traverse'
+        // before finishNavigation() resets it to false, preventing a cascade on back-nav.
+        requestAnimationFrame(finishNavigation);
         return false;
     }
 
@@ -205,42 +230,57 @@ function restoreScrollPosition() {
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     if (maxScroll >= y - 5) {
         window.scrollTo(0, y);
-        finishNavigation();
+        // Use rAF instead of setTimeout(0) — see comment above for rationale.
+        requestAnimationFrame(finishNavigation);
         return true;
     }
 
-    // Page isn't tall enough — wait for content to arrive
-    const deadline = Date.now() + 1000;
+    // Page isn't tall enough — wait for layout to stabilize before scrolling.
+    // Two observers run in parallel, both feeding a shared debounce timer:
+    //   - ResizeObserver: fires when page height changes (e.g., images loading)
+    //   - MutationObserver: fires when DOM elements are added/removed
+    // Once NEITHER observer has fired for 150ms, the page is "settled" and we scroll.
+    // A 30s hard deadline ensures we never hang indefinitely.
     let debounceTimer = null;
     let deadlineTimer = null;
 
-    const observer = new MutationObserver(() => {
-        if (debounceTimer != null) clearTimeout(debounceTimer);
-        debounceTimer = setTimeout(tryScroll, 50);
+    const resizeObserver = new ResizeObserver(() => {
+        resetDebounce();
     });
 
+    const mutationObserver = new MutationObserver(() => {
+        resetDebounce();
+    });
+
+    function resetDebounce() {
+        if (debounceTimer != null) clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(tryScroll, 150);
+    }
+
     function tryScroll() {
-        const currentMax = document.documentElement.scrollHeight - window.innerHeight;
-        if (currentMax >= y - 5 || Date.now() >= deadline) {
-            cleanup();
-            window.scrollTo(0, y);
-            finishNavigation();
-        }
+        cleanup();
+        window.scrollTo(0, y);
+        // Use rAF instead of setTimeout(0) — see comment above for rationale.
+        requestAnimationFrame(finishNavigation);
     }
 
     function cleanup() {
-        observer.disconnect();
+        resizeObserver.disconnect();
+        mutationObserver.disconnect();
         if (debounceTimer != null) clearTimeout(debounceTimer);
         if (deadlineTimer != null) clearTimeout(deadlineTimer);
     }
 
+    // Hard deadline: after 30 seconds, scroll to whatever position is available.
     deadlineTimer = setTimeout(() => {
         cleanup();
         window.scrollTo(0, y);
-        finishNavigation();
-    }, 1000);
+        // Use rAF instead of setTimeout(0) — see comment above for rationale.
+        requestAnimationFrame(finishNavigation);
+    }, 30_000);
 
-    observer.observe(document.body, { childList: true, subtree: true });
+    resizeObserver.observe(document.documentElement);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
     return true;
 }
 
@@ -270,15 +310,6 @@ function resetPagePosition() {
     });
 }
 
-function checkForPageNavigation() {
-    if (location.pathname === lastPathname) return;
-    lastPathname = location.pathname;
-    lastSearch = location.search;
-    if (lastPopstateAt > 0) return;
-    if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
-    resetPagePosition();
-}
-
 /**
  * Scroll to a hash target element with offset for sticky header.
  */
@@ -300,13 +331,14 @@ function scrollToHash(hash) {
 
 const originalPushState = history.pushState;
 history.pushState = function (...args) {
-    // Save position synchronously before URL changes
+    // Save position synchronously before URL changes.
+    // This is the ONLY place we save on forward navigation — not on every scroll event.
+    // If __scrollSaveLock is set, saveScrollPosition uses the locked value.
     saveScrollPosition();
 
     const oldPathname = location.pathname;
     const oldSearch = location.search;
     originalPushState.apply(this, args);
-    lastPopstateAt = 0;
 
     const newUrl = args[2] != null ? new URL(String(args[2]), location.href) : null;
     const isHashOnly = newUrl !== null &&
@@ -314,8 +346,16 @@ history.pushState = function (...args) {
         newUrl.search === oldSearch;
 
     if (!isHashOnly) {
-        // Cross-page navigation
-        navigating = true;
+        // Update tracking immediately so popstate can reliably detect same-page vs cross-page.
+        lastPathname = location.pathname;
+        lastSearch = location.search;
+        // Cross-page navigation — scroll to top immediately so Blazor's DOM swap
+        // (which temporarily reduces scrollHeight) doesn't cause a visible jitter.
+        window.scrollTo(0, 0);
+        lastSettledScrollY = 0;
+        navigating = 'forward';
+        // Block WaitForBlazorReadyAsync immediately — don't wait for enhancedload.
+        window.__scriptsReady = false;
         showNavSpinner();
     }
     // Hash-only: navigating stays false, scroll handlers keep running
@@ -326,13 +366,18 @@ history.pushState = function (...args) {
 // ============================================================================
 
 window.addEventListener('popstate', () => {
-    lastPopstateAt = Date.now();
-    navigating = true;
+    // Save the position of the page we're LEAVING.
+    // At this point, location has already changed to the destination, but
+    // lastPathname/lastSearch still identify the page we're navigating away from.
+    // Use lastSettledScrollY for the same reason as pushState: immune to late shifts.
+    const leavingKey = lastPathname + lastSearch;
+    savedPositions[leavingKey] = lastSettledScrollY;
+
+    navigating = 'traverse';
 
     // Same-page hash nav: pathname+search unchanged, only hash differs.
     // Blazor does NOT re-render, so markScriptsReady won't fire.
     if (location.pathname === lastPathname && location.search === lastSearch) {
-        // Scroll to the hash target (or restore position if no hash)
         if (location.hash) {
             scrollToHash(location.hash);
         } else {
@@ -348,7 +393,12 @@ window.addEventListener('popstate', () => {
         return;
     }
 
-    checkForPageNavigation();
+    // Cross-page back/forward navigation.
+    lastPathname = location.pathname;
+    lastSearch = location.search;
+
+    // Block WaitForBlazorReadyAsync immediately.
+    window.__scriptsReady = false;
 });
 
 // ============================================================================
@@ -395,12 +445,10 @@ function setupBlazorListeners() {
         Blazor.addEventListener('enhancedload', () => {
             createButtonContainer();
             updateButtonVisibility();
-        });
-        Blazor.addEventListener('enhancedload', checkForPageNavigation);
-        Blazor.addEventListener('enhancedload', hideNavSpinner);
-        // Safety net: unlock scroll for forward nav if markScriptsReady fires late
-        Blazor.addEventListener('enhancedload', () => {
-            if (navigating && lastPopstateAt === 0) {
+            hideNavSpinner();
+            // Forward nav completion: focus body for accessibility + unlock scroll.
+            if (navigating === 'forward') {
+                resetPagePosition();
                 finishNavigation();
             }
         });
@@ -436,31 +484,96 @@ export function initTocScrollSpy() {
             tocElement.removeEventListener('click', tocElement._mobileClickHandler);
             tocElement._mobileClickHandler = null;
         }
+        if (tocElement._desktopClickHandler) {
+            tocElement.removeEventListener('click', tocElement._desktopClickHandler);
+            tocElement._desktopClickHandler = null;
+        }
 
         if (isMobile) {
             tocElement.classList.add('toc-mobile-mode');
             const clickHandler = (e) => {
-                const tocLink = e.target.closest('.toc-depth-0 > .toc-link');
-                if (!tocLink) return;
-                const tocItem = tocLink.closest('.toc-depth-0');
-                if (!tocItem) return;
-                const sublist = tocItem.querySelector('.toc-sublist');
-                if (!sublist) return;
+                const link = e.target.closest('a[href]');
+                if (!link) return;
+                // Match bare hash links (#id) and same-page full-path hash links (/path#id).
+                // Bare hash links are always same-page; full-path links need URL comparison.
+                const hrefAttr = link.getAttribute('href');
+                if (!hrefAttr || !hrefAttr.includes('#')) return;
+                let hash;
+                if (hrefAttr.startsWith('#')) {
+                    hash = hrefAttr;
+                } else {
+                    try {
+                        const url = new URL(hrefAttr, location.href);
+                        if (url.origin !== location.origin) return;
+                        if (url.pathname !== location.pathname || url.search !== location.search) return;
+                        if (!url.hash) return;
+                        hash = url.hash;
+                    } catch {
+                        return;
+                    }
+                }
                 e.preventDefault();
-                tocItem.classList.toggle('expanded');
+                // Top-level link with a sublist: toggle expand/collapse, don't scroll.
+                const tocItem = link.closest('.toc-depth-0');
+                if (link.matches('.toc-depth-0 > .toc-link') && tocItem?.querySelector('.toc-sublist')) {
+                    tocItem.classList.toggle('expanded');
+                    return;
+                }
+                // All other TOC anchor clicks (h2 without children, h3 sub-items):
+                // use replaceState so they don't push history entries.
+                history.replaceState(null, '', location.pathname + location.search + hash);
+                scrollToHash(hash);
+                // Directly activate the clicked link by ID — more reliable than position
+                // detection (updateTocHighlight), which may select a nearby heading instead.
+                const clickedId = hash.replace('#', '');
+                requestAnimationFrame(() => setTocActive(clickedId));
             };
             tocElement.addEventListener('click', clickHandler);
             tocElement._mobileClickHandler = clickHandler;
-            // No scroll spy on mobile
-            destroyToc();
+            setupToc(tocElement, contentElement, false);
         } else {
             tocElement.classList.remove('toc-mobile-mode');
+            // TOC clicks are "scroll to section", not page navigations — use replaceState
+            // so they don't accumulate history entries and break the back button.
+            const desktopClickHandler = (e) => {
+                const link = e.target.closest('a[href]');
+                if (!link) return;
+                // Match bare hash links (#id) and same-page full-path hash links (/path#id).
+                // SidebarToc.razor generates full-path hrefs like "/github-copilot/handbook#about-book".
+                // Our handler fires before Blazor's document-level interceptor (event bubbling),
+                // so e.preventDefault() prevents Blazor from calling pushState.
+                const hrefAttr = link.getAttribute('href');
+                if (!hrefAttr || !hrefAttr.includes('#')) return;
+                let hash;
+                if (hrefAttr.startsWith('#')) {
+                    hash = hrefAttr;
+                } else {
+                    try {
+                        const url = new URL(hrefAttr, location.href);
+                        if (url.origin !== location.origin) return;
+                        if (url.pathname !== location.pathname || url.search !== location.search) return;
+                        if (!url.hash) return;
+                        hash = url.hash;
+                    } catch {
+                        return;
+                    }
+                }
+                e.preventDefault();
+                history.replaceState(null, '', location.pathname + location.search + hash);
+                scrollToHash(hash);
+                // Directly activate the clicked link by ID — more reliable than position
+                // detection (updateTocHighlight), which may select a nearby heading instead.
+                const clickedId = hash.replace('#', '');
+                requestAnimationFrame(() => setTocActive(clickedId));
+            };
+            tocElement.addEventListener('click', desktopClickHandler);
+            tocElement._desktopClickHandler = desktopClickHandler;
             setupToc(tocElement, contentElement);
         }
     });
 }
 
-function setupToc(tocElement, contentElement) {
+function setupToc(tocElement, contentElement, initialHighlight = true) {
     // Destroy previous if any
     destroyToc();
 
@@ -492,13 +605,19 @@ function setupToc(tocElement, contentElement) {
         detectionLine,
         currentActiveId: null,
         currentActiveH2Id: null,
+        // Snapshot the page at init time. replaceState is skipped if we've
+        // navigated away before scrollend fires (prevents hash leaking onto
+        // the next page when the user clicks Back mid-scroll).
+        pageKey: location.pathname + location.search,
     };
 
     // Recalculate on resize
     window.addEventListener('resize', onTocResize, { passive: true });
 
-    // Initial highlight (if not navigating)
-    if (!navigating) {
+    // Initial highlight (if not navigating and caller requested it).
+    // Mobile mode passes initialHighlight=false so the expand/collapse state
+    // is not pre-set before any user interaction.
+    if (!navigating && initialHighlight) {
         updateTocHighlight();
     }
 
@@ -520,7 +639,7 @@ function onTocResize() {
 
 function updateTocHighlight() {
     if (!tocState) return;
-    const { headings, headingElements, tocLinks, detectionLine, h2Items } = tocState;
+    const { headings, headingElements, tocLinks, detectionLine } = tocState;
     const tolerance = 5;
 
     // Bottom-of-page: activate last heading
@@ -564,7 +683,7 @@ function setTocActive(headingId) {
     if (!tocState) return;
     if (tocState.currentActiveId === headingId) return;
 
-    const { tocLinks, headingElements, h2Items } = tocState;
+    const { tocLinks, headingElements } = tocState;
 
     // Remove current
     if (tocState.currentActiveId !== null) {
@@ -576,7 +695,9 @@ function setTocActive(headingId) {
 
     if (headingId === null) {
         tocState.currentActiveId = null;
-        if (location.hash) {
+        // Only clear the hash if we're still on the page where the TOC was
+        // initialized — guard against a late scrollend firing after navigation.
+        if (location.hash && location.pathname + location.search === tocState.pageKey) {
             history.replaceState(null, '', location.pathname + location.search);
         }
         return;
@@ -588,8 +709,13 @@ function setTocActive(headingId) {
     newLink.classList.add('active');
     tocState.currentActiveId = headingId;
 
-    // Update URL hash via replaceState (doesn't create history entry)
-    history.replaceState(null, '', `${location.pathname}${location.search}#${headingId}`);
+    // Update URL hash — but only if we're still on the page where the TOC was
+    // initialized. If the user clicked a link and a late scrollend fires just
+    // before the DOM swap, we must not overwrite the new page's URL with a hash
+    // from the previous page (which would then prevent scroll-position restore).
+    if (location.pathname + location.search === tocState.pageKey) {
+        history.replaceState(null, '', `${location.pathname}${location.search}#${headingId}`);
+    }
 
     // Add active class to heading
     const newHeading = headingElements.get(headingId);
@@ -647,9 +773,15 @@ const TRIGGER_MARGIN_PX = 300;
 
 /**
  * Set up infinite scroll monitoring. Called by Blazor ContentItemsGrid component.
+ *
+ * Uses IntersectionObserver for edge-triggered detection: the callback fires
+ * exactly once when the trigger element ENTERS the viewport margin. After firing,
+ * the observer is disconnected. Blazor re-calls this after each batch render,
+ * creating a fresh observer — so cascade is architecturally impossible:
+ * the trigger must leave and re-enter the zone for another batch to load.
  */
 export function observeScrollTrigger(helper, triggerElementId) {
-    dispose();
+    dispose(); // disconnect any previous observer
 
     const trigger = document.getElementById(triggerElementId);
     if (!trigger) {
@@ -657,7 +789,20 @@ export function observeScrollTrigger(helper, triggerElementId) {
         return;
     }
 
-    infiniteScrollState = { helper, triggerElementId };
+    const observer = new IntersectionObserver(entries => {
+        const entry = entries[entries.length - 1];
+        if (!entry.isIntersecting) return;
+        if (navigating) return; // nav in progress — back/forward nav; observer stays active
+        // Trigger entered the viewport+margin — disconnect immediately so we
+        // cannot fire again while the batch loads. observeScrollTrigger will be
+        // called again by Blazor after the next render, creating a new observer.
+        observer.disconnect();
+        infiniteScrollState = null;
+        helper.invokeMethodAsync('LoadNextBatch');
+    }, { rootMargin: `0px 0px ${TRIGGER_MARGIN_PX}px 0px` });
+
+    observer.observe(trigger);
+    infiniteScrollState = { helper, triggerElementId, observer };
 
     // E2E test signals
     window.__scrollListenerReady ??= {};
@@ -668,9 +813,6 @@ export function observeScrollTrigger(helper, triggerElementId) {
 
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-listener:' + triggerElementId);
     console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
-
-    // Check immediately if trigger is already in view
-    if (!navigating) checkInfiniteScroll();
 }
 
 /**
@@ -678,23 +820,12 @@ export function observeScrollTrigger(helper, triggerElementId) {
  */
 export function dispose() {
     if (!infiniteScrollState) return;
-    const { triggerElementId } = infiniteScrollState;
+    const { triggerElementId, observer } = infiniteScrollState;
+    observer.disconnect();
     window.__scrollListenerReady ??= {};
     window.__scrollListenerReady[triggerElementId] = false;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-disposed:' + triggerElementId);
     infiniteScrollState = null;
-}
-
-function checkInfiniteScroll() {
-    if (!infiniteScrollState) return;
-    const { helper, triggerElementId } = infiniteScrollState;
-    const el = document.getElementById(triggerElementId);
-    if (!el) return;
-
-    if (el.getBoundingClientRect().top <= window.innerHeight + TRIGGER_MARGIN_PX) {
-        console.debug('[InfiniteScroll] Loading next batch');
-        helper.invokeMethodAsync('LoadNextBatch');
-    }
 }
 
 // ============================================================================
@@ -703,22 +834,21 @@ function checkInfiniteScroll() {
 
 /**
  * Called on every scroll event (high frequency).
- * Does: save position, update button, check infinite scroll.
- * Does NOT do: TOC highlight (that's on scrollend only).
+ * Does: update button visibility, check infinite scroll.
+ * Does NOT do: save position (only saved in pushState), TOC highlight (scrollend only).
  */
 function onScroll() {
     if (navigating) return;
-    saveScrollPosition();
     updateButtonVisibility();
-    checkInfiniteScroll();
 }
 
 /**
  * Called when scrolling stops (scrollend or debounce fallback).
- * Does: TOC highlight update.
+ * Does: update lastSettledScrollY, TOC highlight.
  */
 function onScrollEnd() {
     if (navigating) return;
+    lastSettledScrollY = window.scrollY;
     updateTocHighlight();
 }
 

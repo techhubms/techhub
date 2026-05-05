@@ -103,6 +103,47 @@ describe('scroll-manager.js', () => {
         window.requestAnimationFrame = (cb) => { cb(); return 1; };
         window.cancelAnimationFrame = vi.fn();
 
+        // IntersectionObserver mock: stores the last created instance so tests
+        // can fire intersection callbacks manually via mockObserver.trigger(isIntersecting).
+        window.__mockObservers = [];
+        window.IntersectionObserver = class MockIntersectionObserver {
+            constructor(callback, options) {
+                this.callback = callback;
+                this.options = options;
+                this.targets = [];
+                this.disconnected = false;
+                window.__mockObservers.push(this);
+            }
+            observe(el) { this.targets.push(el); }
+            unobserve(el) { this.targets = this.targets.filter(t => t !== el); }
+            disconnect() { this.disconnected = true; this.targets = []; }
+            /** Fire the IO callback with a synthetic entry. */
+            trigger(isIntersecting) {
+                if (this.disconnected) return;
+                const target = this.targets[0];
+                this.callback([{ isIntersecting, target }]);
+            }
+        };
+
+        // ResizeObserver mock: stores instances so tests can trigger resize callbacks.
+        window.__mockResizeObservers = [];
+        window.ResizeObserver = class MockResizeObserver {
+            constructor(callback) {
+                this.callback = callback;
+                this.targets = [];
+                this.disconnected = false;
+                window.__mockResizeObservers.push(this);
+            }
+            observe(el) { this.targets.push(el); }
+            unobserve(el) { this.targets = this.targets.filter(t => t !== el); }
+            disconnect() { this.disconnected = true; this.targets = []; }
+            /** Fire the RO callback to simulate a resize. */
+            trigger() {
+                if (this.disconnected) return;
+                this.callback([{ target: this.targets[0] }]);
+            }
+        };
+
         vi.resetModules();
         mod = await import(MODULE_PATH);
     });
@@ -110,6 +151,7 @@ describe('scroll-manager.js', () => {
     afterEach(() => {
         if (mod.dispose) mod.dispose();
         delete globalThis.Blazor;
+        delete window.__mockResizeObservers;
         vi.restoreAllMocks();
     });
 
@@ -233,14 +275,18 @@ describe('scroll-manager.js', () => {
     // =========================================================================
 
     describe('scroll position management', () => {
-        it('should save position on scroll events', () => {
+        it('should save settled position on scrollend for use by pushState', () => {
             Object.defineProperty(window, 'scrollY', { value: 500, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
+            window.dispatchEvent(new Event('scrollend'));
+            // scrollend updates lastSettledScrollY; pushState uses it to save
+            window.history.pushState(null, '', '/detail');
+            window.markScriptsReady();
             expect(window.__savedScrollPositions['/all']).toBe(500);
         });
 
         it('should save scroll position synchronously on pushState', () => {
             Object.defineProperty(window, 'scrollY', { value: 1500, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scrollend'));
             window.history.pushState(null, '', '/detail');
             window.markScriptsReady();
             expect(window.__savedScrollPositions['/all']).toBe(1500);
@@ -248,6 +294,7 @@ describe('scroll-manager.js', () => {
 
         it('should save correct page key when pushState fires (old URL, not new)', () => {
             Object.defineProperty(window, 'scrollY', { value: 2000, writable: true, configurable: true });
+            window.dispatchEvent(new Event('scrollend'));
             window.history.pushState(null, '', '/detail');
             window.markScriptsReady();
             window.location.pathname = '/detail';
@@ -256,15 +303,24 @@ describe('scroll-manager.js', () => {
         });
 
         it('should save position keyed by pathname + search (no hash)', () => {
+            // Settle at 300 on /all, then navigate away
             Object.defineProperty(window, 'scrollY', { value: 300, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
+            window.dispatchEvent(new Event('scrollend'));
+            window.history.pushState(null, '', '/github-copilot?tags=news#section');
+            window.markScriptsReady();
 
+            // Now on the new page: update location and settle at 700
             window.location.pathname = '/github-copilot';
             window.location.search = '?tags=news';
             window.location.hash = '#section';
 
+            // Simulate forward nav finishing (clears navigating flag so scrollend works)
+            window.__restoreScrollPosition();
+
             Object.defineProperty(window, 'scrollY', { value: 700, writable: true, configurable: true });
-            window.dispatchEvent(new Event('scroll'));
+            window.dispatchEvent(new Event('scrollend'));
+            window.history.pushState(null, '', '/another-page');
+            window.markScriptsReady();
 
             expect(window.__savedScrollPositions['/all']).toBe(300);
             expect(window.__savedScrollPositions['/github-copilot?tags=news']).toBe(700);
@@ -276,7 +332,9 @@ describe('scroll-manager.js', () => {
 
         it('should restore scroll position on traverse navigation', () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
-            window.__savedScrollPositions['/all'] = 450;
+            window.location = { ...window.location, pathname: '/other-page', href: 'https://localhost/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+            window.__savedScrollPositions['/other-page'] = 450;
             const result = window.__restoreScrollPosition();
             expect(result).toBe(true);
             expect(window.scrollTo).toHaveBeenCalledWith(0, 450);
@@ -296,40 +354,48 @@ describe('scroll-manager.js', () => {
             expect(result).toBe(false);
         });
 
-        it('should clear navigating flag after restoring position', () => {
+        it('should clear navigating flag after restoring position', async () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
-            expect(mod.isNavigating()).toBe(true);
+            expect(mod.isNavigating()).toBeTruthy();
 
             window.__savedScrollPositions['/other-page'] = 600;
             window.__restoreScrollPosition();
+            await new Promise(r => setTimeout(r, 0));
             expect(mod.isNavigating()).toBe(false);
         });
 
         it('should restore via popstate flag when Navigation API unavailable', () => {
             delete window.navigation;
+            window.location = { ...window.location, pathname: '/other-page', href: 'https://localhost/other-page' };
             window.dispatchEvent(new Event('popstate'));
-            window.__savedScrollPositions['/all'] = 800;
+            window.__savedScrollPositions['/other-page'] = 800;
             const result = window.__restoreScrollPosition();
             expect(result).toBe(true);
             expect(window.scrollTo).toHaveBeenCalledWith(0, 800);
         });
 
-        it('should defer scroll when page is too short and retry after DOM mutation', async () => {
+        it('should defer scroll when page is too short and retry after layout stabilizes', async () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             Object.defineProperty(document.documentElement, 'scrollHeight', { value: 200, writable: true, configurable: true });
 
-            window.__savedScrollPositions['/all'] = 2000;
+            window.location = { ...window.location, pathname: '/other-page', href: 'https://localhost/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+            window.__savedScrollPositions['/other-page'] = 2000;
             window.scrollTo.mockClear();
 
             const result = window.__restoreScrollPosition();
             expect(result).toBe(true);
             expect(window.scrollTo).not.toHaveBeenCalled();
 
+            // Simulate page height increasing via ResizeObserver (e.g., images loaded)
             Object.defineProperty(document.documentElement, 'scrollHeight', { value: 5000, writable: true, configurable: true });
-            document.body.appendChild(document.createElement('div'));
-            await new Promise(r => setTimeout(r, 60));
+            const ro = window.__mockResizeObservers.find(o => !o.disconnected);
+            ro.trigger();
+
+            // Wait for the 150ms debounce to settle
+            await new Promise(r => setTimeout(r, 200));
 
             expect(window.scrollTo).toHaveBeenCalledWith(0, 2000);
         });
@@ -340,17 +406,17 @@ describe('scroll-manager.js', () => {
     // =========================================================================
 
     describe('navigation state', () => {
-        it('popstate sets isNavigating to true', () => {
+        it('popstate sets isNavigating to traverse', () => {
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
-            expect(mod.isNavigating()).toBe(true);
+            expect(mod.isNavigating()).toBe('traverse');
         });
 
-        it('cross-page pushState sets isNavigating to true', () => {
+        it('cross-page pushState sets isNavigating to forward', () => {
             expect(mod.isNavigating()).toBe(false);
             window.history.pushState(null, '', '/github-copilot');
             window.markScriptsReady();
-            expect(mod.isNavigating()).toBe(true);
+            expect(mod.isNavigating()).toBe('forward');
         });
 
         it('hash-only pushState does NOT set isNavigating', () => {
@@ -359,18 +425,19 @@ describe('scroll-manager.js', () => {
             expect(mod.isNavigating()).toBe(false);
         });
 
-        it('restoreScrollPosition clears isNavigating', () => {
+        it('restoreScrollPosition clears isNavigating', async () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
-            expect(mod.isNavigating()).toBe(true);
+            expect(mod.isNavigating()).toBe('traverse');
 
             window.__savedScrollPositions['/other-page'] = 400;
             window.__restoreScrollPosition();
+            await new Promise(r => setTimeout(r, 0));
             expect(mod.isNavigating()).toBe(false);
         });
 
-        it('restoreScrollPosition deferred path clears isNavigating after MutationObserver fires', async () => {
+        it('restoreScrollPosition deferred path clears isNavigating after layout stabilizes', async () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             Object.defineProperty(document.documentElement, 'scrollHeight', { value: 200, writable: true, configurable: true });
 
@@ -380,23 +447,28 @@ describe('scroll-manager.js', () => {
             window.scrollTo.mockClear();
 
             window.__restoreScrollPosition();
-            expect(mod.isNavigating()).toBe(true);
+            expect(mod.isNavigating()).toBe('traverse');
 
+            // Simulate page height increasing (e.g., images loaded) via ResizeObserver
             Object.defineProperty(document.documentElement, 'scrollHeight', { value: 5000, writable: true, configurable: true });
-            document.body.appendChild(document.createElement('div'));
-            await new Promise(r => setTimeout(r, 60));
+            const ro = window.__mockResizeObservers.find(o => !o.disconnected);
+            ro.trigger();
+
+            // Wait for the 150ms debounce to settle + rAF
+            await new Promise(r => setTimeout(r, 200));
 
             expect(mod.isNavigating()).toBe(false);
         });
 
-        it('no-position path clears isNavigating', () => {
+        it('no-position path clears isNavigating', async () => {
             window.navigation = { currentEntry: { navigationType: 'traverse' } };
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
-            expect(mod.isNavigating()).toBe(true);
+            expect(mod.isNavigating()).toBe('traverse');
 
             const result = window.__restoreScrollPosition();
             expect(result).toBe(false);
+            await new Promise(r => setTimeout(r, 0));
             expect(mod.isNavigating()).toBe(false);
         });
     });
@@ -415,6 +487,18 @@ describe('scroll-manager.js', () => {
             window.history.pushState(null, '', '/github-copilot');
             window.markScriptsReady();
             expect(document.getElementById('nav-spinner')).not.toBeNull();
+        });
+
+        it('cross-page pushState scrolls to top immediately', () => {
+            window.scrollTo = vi.fn();
+            window.history.pushState(null, '', '/github-copilot');
+            expect(window.scrollTo).toHaveBeenCalledWith(0, 0);
+        });
+
+        it('hash-only pushState does not scroll to top', () => {
+            window.scrollTo = vi.fn();
+            window.history.pushState(null, '', '/all#section-one');
+            expect(window.scrollTo).not.toHaveBeenCalledWith(0, 0);
         });
     });
 
@@ -450,13 +534,16 @@ describe('scroll-manager.js', () => {
 
             const toc = document.querySelector('[data-toc-scroll-spy]');
             const h2Link = toc.querySelector('.toc-depth-0 > .toc-link');
-            h2Link.click();
-
             const h2Item = h2Link.closest('.toc-depth-0');
-            expect(h2Item.classList.contains('expanded')).toBe(true);
+
+            // Capture initial state (mobile mode skips initial highlight, starts collapsed)
+            const initialExpanded = h2Item.classList.contains('expanded');
 
             h2Link.click();
-            expect(h2Item.classList.contains('expanded')).toBe(false);
+            expect(h2Item.classList.contains('expanded')).toBe(!initialExpanded);
+
+            h2Link.click();
+            expect(h2Item.classList.contains('expanded')).toBe(initialExpanded);
         });
 
         it('should not crash when no TOC elements exist', () => {
@@ -490,6 +577,45 @@ describe('scroll-manager.js', () => {
             const introLink = toc.querySelector('a[href="#intro"]');
             expect(introLink.classList.contains('active')).toBe(true);
         });
+
+        it('should NOT update URL hash when page has changed since TOC init', () => {
+            const { content } = createTocAndContent();
+            content.querySelector('#intro').getBoundingClientRect = () => ({ top: 150 });
+            content.querySelector('#features').getBoundingClientRect = () => ({ top: 900 });
+            content.querySelector('#sub-intro').getBoundingClientRect = () => ({ top: 500 });
+            content.querySelector('#sub-features').getBoundingClientRect = () => ({ top: 1200 });
+
+            mod.initTocScrollSpy(); // pageKey = '/all'; may call replaceState for initial highlight
+
+            // Reset the mock to only observe calls that happen after navigation
+            window.history.replaceState.mockClear();
+
+            // Simulate navigating away before scrollend fires (user clicked Back mid-scroll)
+            window.location = { ...window.location, pathname: '/other', search: '', hash: '' };
+
+            window.dispatchEvent(new Event('scrollend'));
+
+            // replaceState must NOT have been called with a hash from the old page
+            const calls = window.history.replaceState.mock.calls;
+            const hashCalls = calls.filter(c => typeof c[2] === 'string' && c[2].includes('#'));
+            expect(hashCalls).toHaveLength(0);
+        });
+
+        it('should update URL hash when still on the same page', () => {
+            const { content } = createTocAndContent();
+            content.querySelector('#intro').getBoundingClientRect = () => ({ top: 150 });
+            content.querySelector('#features').getBoundingClientRect = () => ({ top: 900 });
+            content.querySelector('#sub-intro').getBoundingClientRect = () => ({ top: 500 });
+            content.querySelector('#sub-features').getBoundingClientRect = () => ({ top: 1200 });
+
+            mod.initTocScrollSpy(); // pageKey = '/all'
+
+            window.dispatchEvent(new Event('scrollend'));
+
+            const calls = window.history.replaceState.mock.calls;
+            const hashCalls = calls.filter(c => typeof c[2] === 'string' && c[2].includes('#'));
+            expect(hashCalls.length).toBeGreaterThan(0);
+        });
     });
 
     // =========================================================================
@@ -521,6 +647,7 @@ describe('scroll-manager.js', () => {
             const helper = createMockHelper();
             mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(window.__scrollListenerVersion['scroll-trigger']).toBe(1);
+            // Simulating re-attach: first dispose (called inside observeScrollTrigger), then re-attach
             mod.observeScrollTrigger(helper, 'scroll-trigger');
             expect(window.__scrollListenerVersion['scroll-trigger']).toBe(2);
         });
@@ -533,32 +660,61 @@ describe('scroll-manager.js', () => {
             expect(window.__e2eSignal).toHaveBeenCalledWith('scroll-listener:scroll-trigger');
         });
 
-        it('should call LoadNextBatch immediately if trigger is in viewport', () => {
-            const trigger = createTriggerElement();
+        it('should call LoadNextBatch when trigger enters intersection margin', () => {
+            createTriggerElement();
             const helper = createMockHelper();
-            trigger.getBoundingClientRect = () => ({ top: 500 }); // 500 <= 800+300
             mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true);
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
         });
 
-        it('should NOT call LoadNextBatch if trigger is far below viewport', () => {
-            const trigger = createTriggerElement();
+        it('should NOT call LoadNextBatch when trigger exits intersection margin', () => {
+            createTriggerElement();
             const helper = createMockHelper();
-            trigger.getBoundingClientRect = () => ({ top: 2000 }); // 2000 > 800+300
             mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(false); // exit event
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
 
-        it('should call LoadNextBatch when scrolling brings trigger into margin', () => {
-            const trigger = createTriggerElement();
+        it('should disconnect observer after LoadNextBatch is called (prevents cascade)', () => {
+            createTriggerElement();
             const helper = createMockHelper();
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
             mod.observeScrollTrigger(helper, 'scroll-trigger');
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true);
+            expect(observer.disconnected).toBe(true);
+        });
 
-            trigger.getBoundingClientRect = () => ({ top: 900 }); // 900 <= 800+300
-            window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+        it('should NOT call LoadNextBatch during navigation', () => {
+            createTriggerElement();
+            const helper = createMockHelper();
+
+            // Trigger back-nav (sets navigating = 'traverse')
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true); // fires but navigating is truthy
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+            expect(observer.disconnected).toBe(false); // stays active for when nav completes
+        });
+
+        it('should create a new observer on re-attach after batch load', () => {
+            createTriggerElement();
+            const helper = createMockHelper();
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const first = window.__mockObservers.at(-1);
+            first.trigger(true); // fires → disconnects
+
+            // Simulate Blazor re-attaching after batch render
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const second = window.__mockObservers.at(-1);
+
+            expect(second).not.toBe(first);
+            expect(first.disconnected).toBe(true);
         });
 
         it('should set __scrollListenerReady to false on dispose', () => {
@@ -584,34 +740,37 @@ describe('scroll-manager.js', () => {
             const helper = createMockHelper();
             mod.observeScrollTrigger(helper, 'scroll-trigger');
             mod.dispose();
-            mod.dispose(); // Should not throw
+            mod.dispose(); // should not throw
         });
 
-        it('should stop responding to scroll events after dispose', () => {
-            const trigger = createTriggerElement();
+        it('should be safe to dispose after IO already disconnected on batch load', () => {
+            createTriggerElement();
             const helper = createMockHelper();
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true); // disconnects observer, clears infiniteScrollState
+            mod.dispose(); // should be a no-op, not throw
+            expect(helper.invokeMethodAsync).toHaveBeenCalledTimes(1);
+        });
+
+        it('should not call LoadNextBatch after dispose', () => {
+            createTriggerElement();
+            const helper = createMockHelper();
             mod.observeScrollTrigger(helper, 'scroll-trigger');
             mod.dispose();
-
-            trigger.getBoundingClientRect = () => ({ top: 500 });
-            window.dispatchEvent(new Event('scroll'));
+            // After dispose, the observer is disconnected — trigger() has no effect
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true);
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
 
-        it('should not fire during navigation', () => {
-            const trigger = createTriggerElement();
+        it('should use rootMargin matching TRIGGER_MARGIN_PX for pre-loading', () => {
+            createTriggerElement();
             const helper = createMockHelper();
-            trigger.getBoundingClientRect = () => ({ top: 5000 });
             mod.observeScrollTrigger(helper, 'scroll-trigger');
-
-            // Trigger navigation state
-            window.location = { ...window.location, pathname: '/other-page' };
-            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
-
-            trigger.getBoundingClientRect = () => ({ top: 500 });
-            window.dispatchEvent(new Event('scroll'));
-            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+            const observer = window.__mockObservers.at(-1);
+            // rootMargin should extend 300px below the viewport
+            expect(observer.options.rootMargin).toBe('0px 0px 300px 0px');
         });
     });
 

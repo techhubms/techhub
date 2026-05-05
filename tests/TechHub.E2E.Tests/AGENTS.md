@@ -67,7 +67,7 @@ A monotonic lifecycle counter replaces independent `window.__*` flags. Every JS 
 
 **Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`), `scripts-loading`/`scripts-ready`/`mermaid-rendered` (from `page-scripts.js`), `scroll-listener:{triggerId}`/`scroll-disposed:{triggerId}`/`toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event).
 
-Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
+Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (30s), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
 
 **Key public helpers**:
 
@@ -82,7 +82,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s)
 | `ScrollToLoadMoreAsync(count)` | Scroll infinite scroll until item count |
 | `ScrollToEndOfContentAsync()` | Scroll until end-of-content marker |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
-| `WaitForConditionAsync(js)` | Wait for JS condition (60s default) |
+| `WaitForConditionAsync(js)` | Wait for JS condition (30s default) |
 | `WaitForBlazorReadyAsync()` | Wait for `__blazorServerReady` + scripts + Mermaid (first-load only) |
 
 ## Wait Pattern Best Practices

@@ -56,10 +56,9 @@ public static class BlazorHelpers
 
     /// <summary>
     /// Single timeout for all E2E operations. Counter-based polling at 100ms means
-    /// this is a pure safety net that should never fire. 60s accommodates even the
-    /// slowest CI runners without penalizing fast local runs.
+    /// this is a pure safety net that should never fire.
     /// </summary>
-    internal const int E2ETimeout = 60_000;
+    internal const int E2ETimeout = 30_000;
 
     /// <summary>
     /// Polling interval for WaitForFunctionAsync operations.
@@ -239,6 +238,55 @@ public static class BlazorHelpers
             }",
             new object[] { afterValue, label },
             new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+
+    // ============================================================================
+    // SCROLL POSITIONING — Reliable scroll-to-Y for tests
+    //
+    // Under slow networks, the page may not have reached its final height when
+    // WaitForBlazorReadyAsync returns (images still loading, lazy content not yet
+    // rendered). scrollTo(0, y) is capped by the browser to maxScroll = scrollHeight
+    // - innerHeight. This helper retries scrollTo on each poll iteration until
+    // scrollY actually reaches the target — naturally waiting for the page to grow.
+    //
+    // FUTURE: If Blazor adds native scroll positioning via NavigationManager, the
+    // JS implementation here can be swapped without changing any call sites.
+    // ============================================================================
+
+    /// <summary>
+    /// Scrolls to a specific Y position, retrying until the page is tall enough.
+    /// Dispatches a synthetic <c>scroll</c> event after each attempt so that
+    /// scroll-manager.js records the position (headless Chrome doesn't fire scroll
+    /// events from programmatic <c>scrollTo</c>).
+    ///
+    /// <para>Use this instead of raw <c>Page.EvaluateAsync("window.scrollTo(...)")</c>
+    /// in all test code that needs a specific scroll position.</para>
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="y">Target vertical scroll position in pixels</param>
+    public static async Task ScrollToPositionAsync(
+        this IPage page,
+        int y)
+    {
+        await page.WaitForFunctionAsync(
+            @"(targetY) => {
+                window.scrollTo(0, targetY);
+                window.dispatchEvent(new Event('scroll'));
+                return window.scrollY === targetY;
+            }",
+            y,
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+
+        // Lock the saved scroll position so that Playwright's scrollIntoViewIfNeeded
+        // (which fires before click events) cannot overwrite it via scroll events.
+        // scroll-manager.js reads this lock in saveScrollPosition() and clears it
+        // when restoreScrollPosition() starts.
+        await page.EvaluateAsync(
+            @"(targetY) => {
+                const key = location.pathname + location.search;
+                window.__scrollSaveLock = { key, value: targetY };
+            }",
+            y);
+    }
 
     // ============================================================================
     // INFINITE SCROLL - Reliable scroll-to-load pattern
@@ -583,12 +631,12 @@ public static class BlazorHelpers
                         return false;
                     }
 
-                    // Step 3: Page scripts must not be actively loading
-                    // __scriptsLoading is set true by markScriptsLoading() when page scripts start,
-                    // and set false by markScriptsReady() when they complete.
-                    // Only block if scripts are ACTIVELY loading. If both flags are undefined,
-                    // the page has no page scripts (e.g., SectionCollection.razor) — proceed immediately.
-                    if (window.__scriptsLoading === true) return false;
+                    // Step 3: Page scripts must be ready (or not applicable)
+                    // __scriptsReady is set false by navigation handlers when scripts start loading,
+                    // and set true by markScriptsReady() when they complete.
+                    // Only block if explicitly false (loading). If undefined (initial page load
+                    // or page with no scripts), proceed immediately.
+                    if (window.__scriptsReady === false) return false;
 
                     // Step 4: Mermaid diagrams rendered (if present)
                     // Only wait if page has <pre class='mermaid'> elements that haven't been converted to SVG yet

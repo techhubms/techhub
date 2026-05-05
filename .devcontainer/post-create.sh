@@ -112,9 +112,13 @@ echo "Installing markdownlint-cli2 globally..."
 npm install -g markdownlint-cli2 || echo "Warning: Failed to install markdownlint-cli2 globally, using local version from package.json"
 
 # ==================== Oh My Posh ====================
-echo "Installing Oh My Posh..."
+OMP_VERSION="29.12.0"
+echo "Installing Oh My Posh v${OMP_VERSION}..."
 if ! command -v oh-my-posh &> /dev/null; then
-    curl -s https://ohmyposh.dev/install.sh | bash -s -- -d ~/.local/bin
+    mkdir -p ~/.local/bin
+    curl -sSfL "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v${OMP_VERSION}/posh-linux-amd64" \
+        -o ~/.local/bin/oh-my-posh
+    chmod +x ~/.local/bin/oh-my-posh
 else
     echo "Oh My Posh already installed"
 fi

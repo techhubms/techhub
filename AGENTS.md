@@ -10,6 +10,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 
 ### ✅ Always Do
 
+- **Always give intermediate updates when analyzing and thinking**, especially if you have a theory and then come to a conclusion but need to investigate further. First share the conclusion.
 - **Always use `Run` function** for all build/test/run operations — see [docs/running-and-testing.md](docs/running-and-testing.md)
 - **Always check for errors after editing files** (`get_errors` tool)
 - **Always fix all linter issues**

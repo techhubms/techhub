@@ -127,40 +127,45 @@ External libraries are loaded from CDNs for performance. All versions and SRI ha
 
 ### Scroll Position Save/Restore
 
-- **Save**: On every `scroll` event, saves `window.scrollY` keyed by `pathname + search` (no hash)
+- **Save**: In the `pushState` interceptor (forward nav) and `popstate` handler (back/forward nav). Uses `lastSettledScrollY` — the position captured by the last `scrollend` event — rather than `window.scrollY` at the moment of navigation. This avoids saving a corrupted position caused by `scrollIntoView` shifts that happen between the user's last scroll stop and the click/Enter that triggers navigation.
 - **Restore**: On back/forward navigation (traverse), restores the saved position after `markScriptsReady` signals that all rendering is complete
-- **Retry**: If the page isn't tall enough yet, a MutationObserver watches for DOM changes with a 50ms debounce and 1s hard deadline
-- **Forward navigation**: Scrolls to top via `resetPagePosition()`
+- **Retry**: If the page isn't tall enough yet, a ResizeObserver + MutationObserver watch for layout changes with a 150ms debounce and 30s hard deadline
+- **Forward navigation**: Scrolls to top immediately in `pushState` so Blazor's DOM swap doesn't cause visible jitter
 - **Same-page hash popstate**: Scrolls to the target element directly (no saved position lookup)
 
 The scroll key intentionally excludes the hash. TOC `replaceState()` changes the hash freely during scrolling — if the hash were included in the key, restored positions would mismatch.
 
-Detection uses the Navigation API (`currentEntry.navigationType === 'traverse'`) with a `popstate` fallback for browsers without it. Browser-native scroll restoration is disabled (`history.scrollRestoration = 'manual'`) in `TechHub.Web.lib.module.js`.
+Detection uses the `popstate` event. `lastPathname`/`lastSearch` are updated immediately in `pushState` so that `popstate` can reliably distinguish same-page hash navigation from cross-page back/forward navigation.
 
 The restore is triggered by `markScriptsReady()` (called from every page's `OnAfterRenderAsync`) which invokes `window.__restoreScrollPosition()`. Every page **must** call `markScriptsReady` — this is enforced by a convention test.
 
 ### Navigation Gating
 
-A single module-level `navigating` boolean gates all scroll work:
+A single module-level `navigating` flag (`false | 'forward' | 'traverse'`) gates all scroll work:
 
-- **`scroll` handler**: Skips position save, button update, and infinite scroll check when `navigating = true`
-- **`scrollend` handler**: Skips TOC highlight when `navigating = true`
-- **`finishNavigation()`**: Sets `navigating = false` and calls `onScrollEnd()` once for the final position (explicit call, no synthetic events)
+- **`scroll` handler**: Skips button visibility update when navigating
+- **`scrollend` handler**: Skips `lastSettledScrollY` update and TOC highlight when navigating
+- **`finishNavigation()`**: Resets `navigating = false` and calls `onScrollEnd()` once for the final position
 
-The `pushState` interceptor sets `navigating = true` for cross-page navigation. The `enhancedload` safety net clears it for forward navigation. For back/forward, `restoreScrollPosition()` → `finishNavigation()` clears it.
+The `pushState` interceptor sets `navigating = 'forward'` and resets `lastSettledScrollY = 0` for cross-page navigation. The `enhancedload` event clears it for forward navigation. For back/forward, `restoreScrollPosition()` → `requestAnimationFrame(finishNavigation)` clears it — rAF is used instead of `setTimeout(0)` so IntersectionObserver callbacks (step 13.10 in the rendering pipeline) fire before `finishNavigation` (step 13.14), preventing the infinite-scroll cascade on back-navigation.
 
 ### Event Handling Split
 
 | Event | Handlers | Why |
 |-------|----------|-----|
-| `scroll` (high frequency) | Save position, button visibility, infinite scroll check | Cheap comparisons, needs responsiveness |
-| `scrollend` (or debounce fallback) | TOC highlight | Expensive `getBoundingClientRect` on all headings, avoids flicker |
+| `scroll` (high frequency) | Button visibility | Cheap, needs responsiveness |
+| `scrollend` (or debounce fallback) | Update `lastSettledScrollY`, TOC highlight | `lastSettledScrollY` is the position used by `saveScrollPosition`; expensive `getBoundingClientRect` on all headings avoids flicker |
 
 ### TOC Scroll-Spy
 
 Highlights the active heading in the table of contents sidebar.
 
-**Critical**: Uses `history.replaceState()` instead of `pushState()` to update URL hash. This prevents polluting browser history with scroll positions — only actual TOC link clicks create history entries.
+**Click handling**: TOC anchor clicks are intercepted at the element level and use `history.replaceState()` instead of the browser's native `pushState`. This prevents TOC section clicks from accumulating history entries — without this, clicking several TOC sections would fill history, causing the back button to cycle through sections instead of going back to the previous page.
+
+- **Desktop**: All `<a href="#...">` clicks → `replaceState` + `scrollToHash`
+- **Mobile**: Top-level h2 links with sub-items → toggle expand/collapse; all other anchor clicks → `replaceState` + `scrollToHash`
+
+**Scroll spy**: Uses `history.replaceState()` to keep the URL hash in sync as the user scrolls — never `pushState`.
 
 ```javascript
 // ❌ WRONG - Creates history entry for every scroll update

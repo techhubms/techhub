@@ -303,9 +303,10 @@
     {
         try
         {
-            // Only load module once
+            // Only load module once. Use the same absolute path that the <script> tag
+            // in App.razor resolves to (via @Assets fingerprinting + ImportMap).
             scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "/js/scroll-manager.js");
+                "import", "./js/scroll-manager.js");
 
             // Only create dotNetRef once (avoid memory leak)
             dotNetRef ??= DotNetObjectReference.Create(this);

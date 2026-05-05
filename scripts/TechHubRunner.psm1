@@ -1254,11 +1254,17 @@ function Run {
         # Run performance tests - validates database queries within thresholds
         # Also serves as warmup before the full Playwright suite runs
         # These tests require a populated database (skipped if no data available)
+        # When a TestName filter is provided, it's passed through so individual
+        # performance tests can still be targeted by name.
         $apiPerfTestArgs = $configArgs + @(
             "--output", "Detailed",
             "--show-live-output", "on",
             "--filter-class", "*PerformanceTests*"
         )
+        if ($TestName) {
+            $apiPerfTestArgs += "--filter-method"
+            $apiPerfTestArgs += "*$TestName*"
+        }
 
         $perfResult = Invoke-TestBinary $e2eBinaryPath $apiPerfTestArgs
 

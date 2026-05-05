@@ -365,15 +365,17 @@ window.initMermaid = initMermaid;
 window.initTocScrollSpy = initTocScrollSpy;
 window.initCustomPages = initCustomPages;
 
-// ─── E2E Test Flags ──────────────────────────────────────────────────────────
-// E2E tests poll for __scriptsReady to know when page scripts are done.
+// ─── Script Lifecycle Flag ────────────────────────────────────────────────────
+// Single flag: window.__scriptsReady
+//   false     = page scripts are loading (blocks WaitForBlazorReadyAsync)
+//   true      = page scripts complete (WaitForBlazorReadyAsync passes)
+//   undefined = initial page load / no scripts on page (passes through)
+//
 // Components call markScriptsLoading() before and markScriptsReady() after their
-// init calls, so E2E tests can wait for a stable state.
-// markScriptsReady also triggers scroll position restoration on back/forward navigation.
+// init calls. markScriptsReady also triggers scroll position restoration.
 
 window.markScriptsLoading = function() {
     window.__scriptsReady = false;
-    window.__scriptsLoading = true;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-loading');
 };
 
@@ -381,9 +383,8 @@ window.markScriptsReady = function() {
     // Guard: only process once per navigation. Multiple components may call this
     // (page component + layout fallback) — the first call does the work.
     if (window.__scriptsReady === true) {
-        // Even if scripts are already marked ready (e.g., enhancedload hasn't fired yet
-        // to reset the flag), still attempt scroll restore. restoreScrollPosition is safe
-        // to call multiple times — it only restores on traverse navigation.
+        // Still attempt scroll restore — restoreScrollPosition is safe
+        // to call multiple times (only restores on traverse navigation).
         if (typeof window.__restoreScrollPosition === 'function') {
             window.__restoreScrollPosition();
         }
@@ -391,7 +392,6 @@ window.markScriptsReady = function() {
     }
 
     window.__scriptsReady = true;
-    window.__scriptsLoading = false;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-ready');
 
     // Restore scroll position on back/forward navigation.
