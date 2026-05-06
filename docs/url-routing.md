@@ -28,9 +28,8 @@ Stages run in this order for every request:
 | 2 | URL normalization | Strips `.html`, date prefixes, resolves legacy slugs — at most one 301 |
 | 3 | HTTPS redirect | Upgrades HTTP to HTTPS |
 | 4 | Static files | Serves static assets, short-circuits |
-| 5 | Error page wrapper | Converts non-200 responses to `/not-found` display |
-| 6 | Invalid segment filter | Rejects structurally invalid paths |
-| 7 | Blazor routing | Renders the matching page |
+| 5 | Invalid segment filter | Rejects probe and structurally invalid paths |
+| 6 | Blazor routing | Renders the matching page |
 
 ## Stage 1 — Subdomain Redirects
 
@@ -96,13 +95,13 @@ Requests arriving over HTTP are **301-redirected** to the HTTPS equivalent. This
 
 CSS, JS, images, fonts, `robots.txt`, and other static assets are served directly from `wwwroot/`. These requests short-circuit here and never reach the Blazor pipeline.
 
-## Stage 5 — Error Page Wrapper
+## Stage 5 — Invalid Route Segment Filter
 
-`UseStatusCodePagesWithReExecute("/not-found")` wraps all stages below. Any non-200 response produced by stages 6 or 7 is re-executed through the `/not-found` Blazor page, which renders the user-facing 404 experience.
+Two categories of bad requests are rejected before the Blazor pipeline runs:
 
-## Stage 6 — Invalid Route Segment Filter
+1. **Scanner/attacker probes** — paths matching well-known exploit probe patterns (e.g. `/wp-admin`, `/xmlrpc.php`, `/.env`). Detected via `ProbeDetector.IsProbeRequest()` (same shared logic as the OpenTelemetry filter). These receive a bare **404** immediately — no Activity span is created for them at all.
 
-Rejects requests whose first path segment is structurally invalid — i.e. can never match a Blazor section, collection, or known page. Valid first segments match `[a-z][a-z-]*` (lowercase letters and hyphens, starting with a letter).
+2. **Structurally invalid first segments** — segments that can never match a Blazor route (e.g. segments with digits, dots, or percent-encoding). Valid first segments match `[a-zA-Z][a-zA-Z-]*` (letters and hyphens, starting with a letter, case-insensitive).
 
 **Always passed through:**
 
@@ -111,9 +110,9 @@ Rejects requests whose first path segment is structurally invalid — i.e. can n
 - Paths starting with `_` (Blazor internals: `/_blazor`, `/_framework`, `/_content`)
 - Paths starting with `MicrosoftIdentity` (OIDC callback routes)
 
-Everything else with an invalid first segment receives an immediate **404** (displayed via Stage 5).
+Everything else with an invalid first segment receives an immediate **404**.
 
-## Stage 7 — Blazor Routing
+## Stage 6 — Blazor Routing
 
 The Blazor router matches the path to a page component:
 
@@ -127,6 +126,8 @@ The Blazor router matches the path to a page component:
 | `/admin` | Admin pages |
 | `/github-copilot/vscode-updates` | `GitHubCopilotVSCodeUpdates.razor` |
 | No match | Fallback → `/not-found` |
+
+When no route matches, the Blazor Router renders the `NotFound.razor` page (configured via `NotFoundPage` on the `<Router>` component) and returns HTTP 404.
 
 Blazor pages additionally validate that the referenced section and collection exist (via `SectionCache`) in `OnInitializedAsync`. Invalid combinations redirect to `/not-found` before any content renders.
 

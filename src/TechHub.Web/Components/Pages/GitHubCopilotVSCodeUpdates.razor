@@ -4,8 +4,8 @@
 @using TechHub.Core.Validation
 @using TechHub.Web.Services
 @implements IDisposable
+@inherits PageComponentBase
 
-@inject IJSRuntime JS
 @inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -108,23 +108,10 @@ else
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        try
-        {
-            if (selectedVideoDetail != null)
-            {
-                await JS.InvokeVoidAsync("markScriptsLoading");
-                await JS.InvokeVoidAsync("initHighlighting");
-                await JS.InvokeVoidAsync("initMermaid");
-                await JS.InvokeVoidAsync("initTocScrollSpy");
-            }
-        }
-        finally
-        {
-            await JS.InvokeVoidAsync("markScriptsReady");
-        }
-    }
+    protected override IReadOnlyList<string> PageScripts => ["initHighlighting", "initMermaid", "initTocScrollSpy"];
+    protected override bool IsPageDataReady => selectedVideoDetail != null;
+    protected override bool IsNotFound => _notFound;
+    protected override bool ReinitializeScriptsOnRerender => true;
 
     protected override async Task OnInitializedAsync()
     {

@@ -2,8 +2,8 @@
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 @implements IDisposable
+@inherits PageComponentBase
 
-@inject IJSRuntime JS
 @inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -178,23 +178,9 @@ else if (_notFound)
         return sb.ToString();
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        try
-        {
-            // Single-route page; scripts only need to init once
-            if (firstRender && pageData != null)
-            {
-                await JS.InvokeVoidAsync("markScriptsLoading");
-                await JS.InvokeVoidAsync("initCustomPages");
-                await JS.InvokeVoidAsync("initTocScrollSpy");
-            }
-        }
-        finally
-        {
-            await JS.InvokeVoidAsync("markScriptsReady");
-        }
-    }
+    protected override IReadOnlyList<string> PageScripts => ["initCustomPages", "initTocScrollSpy"];
+    protected override bool IsPageDataReady => pageData != null;
+    protected override bool IsNotFound => _notFound;
 
     protected override async Task OnInitializedAsync()
     {

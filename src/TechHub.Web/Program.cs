@@ -335,8 +335,8 @@ app.UseHttpsRedirection();
 
 // ── Step 2: Serve static files before validators ──────────────────────────────
 // Static files (CSS, JS, images, favicon.ico) short-circuit here so they never
-// reach the route validators below. Must be before StatusCodePages so that a
-// missing static file falls through to validation normally.
+// reach the route validators below. Must be before UseInvalidRouteSegmentFilter
+// so that static asset requests are never rejected as invalid segments.
 app.UseStaticFilesCaching();
 var contentTypeProvider = new FileExtensionContentTypeProvider();
 contentTypeProvider.Mappings[".jxl"] = "image/jxl";

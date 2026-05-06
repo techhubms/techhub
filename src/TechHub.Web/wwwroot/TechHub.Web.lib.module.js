@@ -55,7 +55,7 @@ export function afterWebStarted(blazor) {
     // browser's async scroll restoration races with our synchronous scroll restore
     // (triggered by markScriptsReady), randomly clobbering the restored position with 0.
     // We take full ownership of scroll restoration:
-    //   - Forward navigation → scroll-manager.js resetPagePosition() scrolls to top
+    //   - Forward navigation → scroll-manager.js pushState intercept scrolls to top
     //   - Back/forward navigation → scroll-manager.js restoreScrollPosition() called via
     //     markScriptsReady after all rendering is complete
     if ('scrollRestoration' in history) {

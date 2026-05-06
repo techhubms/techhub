@@ -9,13 +9,26 @@ namespace TechHub.Web.Services;
 /// </summary>
 public class SectionCache
 {
-    private Dictionary<string, Section> _sectionsByName = new();
-    // sectionName → set of collection names (both O(1), built once at Initialize)
-    private Dictionary<string, HashSet<string>> _collectionsBySection = new();
-    // all collection names across all sections (O(1) lookup for virtual-section validation)
-    private HashSet<string> _allCollectionNames = new(StringComparer.OrdinalIgnoreCase);
+    /// <summary>
+    /// All cache data bundled into a single immutable record so it can be published
+    /// with a single volatile reference swap. Readers get a consistent snapshot
+    /// without any locking: they read <c>_data</c> once and use that snapshot throughout.
+    /// </summary>
+    private record CacheData(
+        Dictionary<string, Section> ByName,
+        Dictionary<string, HashSet<string>> BySection,
+        HashSet<string> AllCollections,
+        IReadOnlyList<Section> Sections);
 
-    public IReadOnlyList<Section> Sections { get; private set; } = Array.Empty<Section>();
+    private static readonly CacheData _empty = new(
+        new Dictionary<string, Section>(),
+        new Dictionary<string, HashSet<string>>(),
+        new HashSet<string>(),
+        Array.Empty<Section>());
+
+    private CacheData _data = _empty;
+
+    public IReadOnlyList<Section> Sections => Volatile.Read(ref _data).Sections;
 
     /// <summary>
     /// True once the cache has been populated from the API. False only if the API was
@@ -26,8 +39,6 @@ public class SectionCache
 
     public void Initialize(IReadOnlyList<Section> sections)
     {
-        // Build lookup dictionaries before publishing Sections so that any reader
-        // that observes IsReady=true also sees the fully populated dictionaries.
         var byName = sections.ToDictionary(s => s.Name, StringComparer.OrdinalIgnoreCase);
         var bySection = sections.ToDictionary(
             s => s.Name,
@@ -38,12 +49,9 @@ public class SectionCache
             sections.SelectMany(s => s.Collections.Select(c => c.Name)),
             StringComparer.OrdinalIgnoreCase);
 
-        // Publish all three before Sections so any reader that observes IsReady=true
-        // also sees the fully populated dictionaries.
-        _sectionsByName = byName;
-        _collectionsBySection = bySection;
-        _allCollectionNames = allCollections;
-        Sections = sections; // set last — IsReady checks Sections.Count
+        // Single volatile write: any reader that picks up the new reference sees a fully
+        // consistent snapshot — all three dictionaries and Sections are always in sync.
+        Volatile.Write(ref _data, new CacheData(byName, bySection, allCollections, sections));
     }
 
     /// <summary>
@@ -51,7 +59,7 @@ public class SectionCache
     /// </summary>
     public Section? GetSectionByName(string sectionName)
     {
-        _sectionsByName.TryGetValue(sectionName, out var section);
+        Volatile.Read(ref _data).ByName.TryGetValue(sectionName, out var section);
         return section;
     }
 
@@ -62,7 +70,8 @@ public class SectionCache
     /// </summary>
     public bool IsKnownCollection(string sectionName, string collectionName)
     {
-        return _collectionsBySection.TryGetValue(sectionName, out var collections)
+        var data = Volatile.Read(ref _data);
+        return data.BySection.TryGetValue(sectionName, out var collections)
             && collections.Contains(collectionName);
     }
 
@@ -74,7 +83,7 @@ public class SectionCache
     /// </summary>
     public bool IsKnownCollectionInAnySection(string collectionName)
     {
-        return _allCollectionNames.Contains(collectionName);
+        return Volatile.Read(ref _data).AllCollections.Contains(collectionName);
     }
 }
 

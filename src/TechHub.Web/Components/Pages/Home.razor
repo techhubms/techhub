@@ -1,8 +1,8 @@
 @page "/"
 @using TechHub.Core.Models
 @using TechHub.Web.Services
-@inject IJSRuntime JS
 @implements IDisposable
+@inherits PageComponentBase
 
 <PageTitle>Tech Hub - Microsoft Technology News & Resources</PageTitle>
 
@@ -137,22 +137,8 @@ new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon(
         return System.Globalization.CultureInfo.InvariantCulture.TextInfo.ToTitleCase(collectionName.ToLowerInvariant());
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        try
-        {
-            // Home has expandable badges ([data-expand-target]) that only need to init once
-            if (firstRender && sections != null)
-            {
-                await JS.InvokeVoidAsync("markScriptsLoading");
-                await JS.InvokeVoidAsync("initCustomPages");
-            }
-        }
-        finally
-        {
-            await JS.InvokeVoidAsync("markScriptsReady");
-        }
-    }
+    protected override IReadOnlyList<string> PageScripts => ["initCustomPages"];
+    protected override bool IsPageDataReady => sections != null;
 
 protected override async Task OnInitializedAsync()
 {

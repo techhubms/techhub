@@ -55,20 +55,23 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // the version counter. This ensures the listener is active before we scroll.
         await Page.WaitForConditionAsync(
             "(v) => (window.__scrollListenerVersion?.['scroll-trigger'] || 0) > v",
-            versionBefore);
+            versionBefore,
+            onTimeout: "() => JSON.stringify({version: window.__scrollListenerVersion?.['scroll-trigger'] || 0, ready: window.__scrollListenerReady?.['scroll-trigger']})");
 
         // Scroll to a realistic mid-page position. ScrollToLoadMoreAsync leaves us at
         // the absolute document bottom (an edge case). A real user would be browsing
         // items somewhere in the middle. This also ensures the scroll-trigger is well
         // outside the 300px viewport margin, preventing a cascade on back-navigation.
-        await Page.EvaluateAsync(@"() => {
-            const midY = Math.floor((document.documentElement.scrollHeight - window.innerHeight) / 2);
-            window.scrollTo(0, midY);
-            window.dispatchEvent(new Event('scroll'));
-        }");
+        // Use ScrollToPositionAsync (not raw scrollTo) so __scrollSaveLock is set:
+        // this guarantees saveScrollPosition() records exactly midY regardless of
+        // whether the scrollend event fires before ClickVisibleCardLinkAsync.
+        var midY = await Page.EvaluateAsync<int>(
+            "() => Math.floor((document.documentElement.scrollHeight - window.innerHeight) / 2)");
+        await Page.ScrollToPositionAsync(midY);
 
-        // Capture the realistic mid-page scroll position
-        var scrollYBeforeNav = await Page.EvaluateAsync<double>("() => window.scrollY");
+        // scrollYBeforeNav equals midY exactly: ScrollToPositionAsync retries until
+        // window.scrollY === targetY and sets __scrollSaveLock to the same integer.
+        var scrollYBeforeNav = (double)midY;
         scrollYBeforeNav.Should().BeGreaterThan(0,
             "should be scrolled down after loading more content");
 
@@ -88,31 +91,23 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // Wait for content to be restored from circuit cache
         await Page.WaitForConditionAsync(
             $"(expected) => document.querySelectorAll('.card').length >= expected",
-            afterScrollCount);
+            afterScrollCount,
+            onTimeout: $"() => `${{document.querySelectorAll('.card').length}} cards loaded, expected {afterScrollCount}`");
 
-        // Wait for scroll listener to be set up (confirms ContentItemsGrid.OnAfterRenderAsync
-        // completed, including the anti-cascade suppression and listener attachment).
+        // Wait for markScriptsReady to complete. markScriptsReady now defers __scriptsReady = true
+        // until __scrollListenerReady['scroll-trigger'] is true, so WaitForBlazorReadyAsync
+        // implicitly covers the scroll listener check — no separate check needed.
+        // This also ensures restoreScrollPosition() has been called before the scroll wait below.
+        await Page.WaitForBlazorReadyAsync();
+
+        // Assert — scroll position should be restored to exactly where the user was.
+        // Tolerance is 10px: the JS uses `maxScroll >= y - 5` before scrolling, so
+        // the maximum possible clamping error is 5px; 10px gives comfortable headroom.
+        // onTimeout captures diagnostics instead of a cryptic Playwright TimeoutException.
         await Page.WaitForConditionAsync(
-            "() => window.__scrollListenerReady?.['scroll-trigger'] === true");
-
-        // Wait for scroll position to be restored by markScriptsReady.
-        // SectionCollection.OnAfterRenderAsync (which calls markScriptsReady) runs after
-        // ContentItemsGrid.OnAfterRenderAsync (which sets __scrollListenerReady), and each
-        // JS interop call incurs a SignalR round-trip. On slow networks the restore fires
-        // slightly later, so we poll until scrollY reaches the expected position.
-        await Page.WaitForConditionAsync(
-            "(expectedY) => Math.abs(window.scrollY - expectedY) < 200",
-            scrollYBeforeNav);
-
-        // Assert - Scroll position should be restored near where the user was
-        var restoredPosition = await Page.EvaluateAsync<double>("() => window.scrollY");
-        var maxScrollY = await Page.EvaluateAsync<double>(
-            "() => document.documentElement.scrollHeight - window.innerHeight");
-
-        var distanceFromOriginal = Math.Abs(restoredPosition - scrollYBeforeNav);
-        distanceFromOriginal.Should().BeLessThan(200,
-            $"scroll position should be restored near {scrollYBeforeNav}px, " +
-            $"but was at {restoredPosition}px (max scroll: {maxScrollY}px)");
+            "(expected) => Math.abs(window.scrollY - expected) < 10",
+            (object)scrollYBeforeNav,
+            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight})");
     }
 
     [Fact]
@@ -155,8 +150,11 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         }");
 
         // Wait for scroll listener to be ready with no batch load in progress.
+        // Cannot use WaitForBlazorReadyAsync here: __scriptsReady may still be true from before
+        // the re-render cycle, causing it to pass before the fresh listener is attached.
         await Page.WaitForConditionAsync(
-            "() => window.__scrollListenerReady?.['scroll-trigger'] === true && !document.querySelector('.loading-more-indicator')");
+            "() => window.__scrollListenerReady?.['scroll-trigger'] === true && !document.querySelector('.loading-more-indicator')",
+            onTimeout: "() => JSON.stringify({ready: window.__scrollListenerReady?.['scroll-trigger'], loadingIndicator: !!document.querySelector('.loading-more-indicator')})");
 
         // If the cascade loaded all content the scroll trigger is gone — back-navigation
         // cannot cascade further, so this test scenario is no longer applicable.
@@ -182,20 +180,21 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         await Page.GoBackAsync();
         await Page.WaitForBlazorUrlContainsAsync("types=videos");
 
-        // Wait for cache restoration AND scroll listener setup (both happen in
-        // OnAfterRenderAsync). The scroll listener being ready confirms that
-        // OnAfterRenderAsync completed — window.__scrollRestoring (set on popstate, cleared
-        // by finishScrollRestore) blocked any cascade during the restore window, and
-        // observeScrollTrigger's immediate handleScroll() ran without triggering runaway
-        // loading. The generic scroll restore via markScriptsReady already fired.
+        // Wait for cache restoration. WaitForBlazorReadyAsync (below) implicitly ensures
+        // __scrollListenerReady is true via markScriptsReady's deferred polling.
         await Page.WaitForConditionAsync(
-            $"(expected) => document.querySelectorAll('.card').length >= expected && window.__scrollListenerReady?.['scroll-trigger'] === true",
-            afterScrollCount);
+            $"(expected) => document.querySelectorAll('.card').length >= expected",
+            afterScrollCount,
+            onTimeout: $"() => `${{document.querySelectorAll('.card').length}} cards loaded, expected {afterScrollCount}`");
 
-        // Confirm no batch load is in progress (if a cascade was triggered, the loading
-        // indicator would be visible while the batch is fetched from the API).
+        // Wait for markScriptsReady to complete — confirms __scrollListenerReady is true
+        // and the anti-cascade __scrollRestoring window has closed.
+        await Page.WaitForBlazorReadyAsync();
+
+        // Confirm no batch load is in progress (a cascade would show the loading indicator).
         await Page.WaitForConditionAsync(
-            "() => !document.querySelector('.loading-more-indicator')");
+            "() => !document.querySelector('.loading-more-indicator')",
+            onTimeout: "() => JSON.stringify({loadingIndicator: !!document.querySelector('.loading-more-indicator'), cards: document.querySelectorAll('.card').length})");
 
         var finalCount = await Page.Locator(".card").CountAsync();
 

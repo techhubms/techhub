@@ -55,10 +55,15 @@ function createMockHelper() {
 
 describe('scroll-manager.js', () => {
     let mod;
+    let originalPushState;
 
     beforeEach(async () => {
         document.body.innerHTML = '';
         document.documentElement.className = '';
+
+        // Capture the real pushState before the module overwrites it, so afterEach
+        // can restore it and prevent wrapper accumulation across tests.
+        originalPushState = window.history.pushState;
 
         delete window.TechHub;
         delete window.__savedScrollPositions;
@@ -150,6 +155,8 @@ describe('scroll-manager.js', () => {
 
     afterEach(() => {
         if (mod.dispose) mod.dispose();
+        // Restore the original pushState to prevent wrapper accumulation across tests.
+        window.history.pushState = originalPushState;
         delete globalThis.Blazor;
         delete window.__mockResizeObservers;
         vi.restoreAllMocks();

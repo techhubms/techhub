@@ -13,9 +13,18 @@
  *
  * @param {HTMLElement} container - The .slider-container element (passed via ElementReference)
  */
+export function reset() {
+    window.__dateRangeSliderReady = false;
+}
+
 export function initClamping(container) {
+    // Signal that initialization is in progress. Cleared on all exit paths so
+    // markScriptsReady knows whether to wait for this component.
+    window.__dateRangeSliderReady = false;
+
     if (!container) {
-        console.warn('[DateRangeSlider] Container element not available, skipping clamping init');
+        console.warn('[DateRangeSlider] #date-range-slider element not available, skipping clamping init');
+        window.__dateRangeSliderReady = true;
         return;
     }
 
@@ -25,6 +34,7 @@ export function initClamping(container) {
 
     if (!fromSlider || !toSlider || !fill) {
         console.warn('[DateRangeSlider] Could not find slider elements for clamping');
+        window.__dateRangeSliderReady = true;
         return;
     }
 
@@ -56,5 +66,5 @@ export function initClamping(container) {
         updateFill();
     }, { capture: true });
 
-    console.debug('[DateRangeSlider] Client-side clamping initialized');
+    window.__dateRangeSliderReady = true;
 }

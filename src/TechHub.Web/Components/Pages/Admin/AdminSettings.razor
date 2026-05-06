@@ -9,7 +9,7 @@
 @inject HeroBannerCache HeroBannerCache
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminSettings> Logger
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Settings — TechHub Admin</PageTitle>
 
@@ -116,11 +116,6 @@
     private string? _toggling;
     private bool _invalidating;
     private PersistingComponentStateSubscription _persistingSubscription;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override async Task OnInitializedAsync()
     {

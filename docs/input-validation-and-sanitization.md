@@ -40,8 +40,9 @@ All user-controlled input in Tech Hub:
 
 **What it does**:
 
-- Validates the first path segment against `^[a-z][a-z-]*$`
-- Passes through static files (paths with file extensions) and framework paths (`_blazor`, `_framework`)
+- Rejects scanner/attacker probe paths via `ProbeDetector.IsProbeRequest()` (e.g. `/wp-admin`, `/.env`, `/xmlrpc.php`)
+- Validates the first path segment against `^[a-zA-Z][a-zA-Z-]*$` (letters and hyphens, case-insensitive)
+- Passes through static files (paths with file extensions) and framework paths (`_blazor`, `_framework`, `MicrosoftIdentity`)
 - Returns 404 for invalid segments — no Blazor components render, no API calls fire
 
 **What it does NOT do**: Validate deeper segments, query strings, or request bodies.
@@ -169,6 +170,7 @@ HTTP Request
 
 ## Implementation Reference
 
+- Probe detection: `src/TechHub.Core/Security/ProbeDetector.cs` — shared by middleware and telemetry filters to detect scanner/attacker probe requests
 - Middleware: `src/TechHub.Web/Middleware/InvalidRouteSegmentMiddleware.cs`
 - Route validation: `src/TechHub.Core/Validation/RouteParameterValidator.cs`
 - API endpoint filter: `src/TechHub.Api/Endpoints/ContentEndpoints.cs` → `ValidateRouteParameters`

@@ -137,7 +137,15 @@ The scroll key intentionally excludes the hash. TOC `replaceState()` changes the
 
 Detection uses the `popstate` event. `lastPathname`/`lastSearch` are updated immediately in `pushState` so that `popstate` can reliably distinguish same-page hash navigation from cross-page back/forward navigation.
 
-The restore is triggered by `markScriptsReady()` (called from every page's `OnAfterRenderAsync`) which invokes `window.__restoreScrollPosition()`. Every page **must** call `markScriptsReady` — this is enforced by a convention test.
+The restore is triggered by `markScriptsReady()` (called from every page's `OnAfterRenderAsync`) which polls `allComponentsReady()` at 10ms intervals before setting `window.__scriptsReady = true` and invoking `window.__restoreScrollPosition()`. Every page **must** call `markScriptsReady` — this is enforced by a convention test.
+
+`allComponentsReady()` gates readiness on three component flags:
+
+- `window.__scrollListenerReady['scroll-trigger']` — set by `ContentItemsGrid` infinite scroll (only checked when `#scroll-trigger` element exists)
+- `window.__dateRangeSliderReady` — set by `date-range-slider.js` (only checked when `#date-range-slider` element exists)
+- `window.__mermaidReady` — set by `initMermaid()` in `page-scripts.js` (only checked when unprocessed `.mermaid` elements exist)
+
+This ensures scroll restoration fires only after the final layout — preventing scroll jumps caused by Mermaid SVG rendering or slider initialization adding height above the restored position.
 
 ### Navigation Gating
 

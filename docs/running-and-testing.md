@@ -35,6 +35,9 @@ There are many parameters you can give to tweak the behavior. You can combine al
 | `Run -TestProject Api` | Run tests with "Api" in the project name. |
 | `Run -TestProject javascript` | Run only the **JavaScript** (Vitest) tests. |
 | `Run -TestName Filter` | Run only individual test methods containing "Filter". |
+| `Run -TestProject E2E -TestName BackNav -RepeatTests 5` | Build once, start servers once, then run the matching E2E test 5 times in a row (useful for flaky test investigation). |
+| `Run -TestProject E2E -NetworkProfile slow3g` | Run all E2E tests with Slow 3G throttling (sets `E2E_NETWORK_THROTTLE`, clears it when done). |
+| `Run -TestProject E2E -TestName BackNav -NetworkProfile slow3g -RepeatTests 5` | Combine network profile + repeat for targeted flaky-test investigation. |
 | `Run -Docker` | Run ALL services (API + Web + PostgreSQL) via docker compose containers (production-like). |
 | `Run -BuildOnly` | Build only, then exit (no tests, no servers). |
 | `Run -Environment Production` | Run in Production mode (tests 'dotnet publish' artifacts). |

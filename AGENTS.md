@@ -37,6 +37,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Never hide errors or swallow exceptions** — see [src/AGENTS.md](src/AGENTS.md#error-handling-philosophy)
 - **Never use `Import-Module` to load `TechHubRunner.psm1`** — it auto-imports. Force reload only if you changed the psm1 file.
 - **Never use lowlevel `dotnet` or `Stop-Process` or `kill`** — the `Run` command handles all that. Use `Stop-Servers` if you really must kill processes.
+- **Never write Python scripts** — always use PowerShell (`.ps1`). This applies to one-off scripts, data processing, terminal commands, and any ad-hoc scripting.
 
 ---
 

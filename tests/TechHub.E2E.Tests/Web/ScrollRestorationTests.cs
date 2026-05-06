@@ -45,12 +45,11 @@ public class ScrollRestorationTests : PlaywrightTestBase
         await Page.WaitForBlazorUrlContainsAsync("vscode-updates");
         await Page.WaitForBlazorReadyAsync();
 
-        // Assert — scroll position should be restored to 500
+        // Assert — scroll position should be restored to 500.
+        // onTimeout captures diagnostics instead of a cryptic Playwright TimeoutException.
         await Page.WaitForConditionAsync(
-            "() => Math.abs(window.scrollY - 500) <= 5");
-
-        var finalScrollY = await Page.EvaluateAsync<double>("() => window.scrollY");
-        finalScrollY.Should().BeApproximately(500, 5,
-            "scroll-manager should restore the saved position after back navigation");
+            "(expected) => Math.abs(window.scrollY - expected) < 5",
+            (object)500.0,
+            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight})");
     }
 }

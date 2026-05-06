@@ -25,6 +25,7 @@
         "ms-azuretools.vscode-bicep",
         "ms-azuretools.vscode-azurecontainerapps",
         "ms-azuretools.vscode-azure-github-copilot",
+        "ms-azuretools.vscode-docker",
         // GitHub & Copilot
         "github.copilot",
         "github.copilot-chat",
@@ -32,11 +33,12 @@
         // Testing & Quality
         "ms-playwright.playwright",
         "DavidAnson.vscode-markdownlint",
+        "bierner.markdown-mermaid",
         "humao.rest-client",
         // PowerShell
         "ms-vscode.powershell",
         // Copilot Insights & Productivity
-        "RobBos.copilot-token-tracker",
+        "RobBos.ai-engineering-fluency",
         "emanuelebartolesi.vscode-copilot-insights"
       ]
     }

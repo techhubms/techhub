@@ -53,9 +53,16 @@ Centralized in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs):
 
 ### Network Throttling (CI Simulation)
 
-Set `E2E_NETWORK_THROTTLE` environment variable: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+Use the `-NetworkProfile` parameter on `Run` — it sets `E2E_NETWORK_THROTTLE` for the duration and clears it afterwards:
 
-Run with throttle:
+```powershell
+Run -TestProject E2E -NetworkProfile wan
+Run -TestProject E2E -NetworkProfile slow3g -TestName BackNavigation -RepeatTests 5
+```
+
+Profiles: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+
+Alternatively, set the environment variable directly (it won't be auto-cleared):
 
 ```powershell
 $env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E
@@ -82,8 +89,8 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (30s)
 | `ScrollToLoadMoreAsync(count)` | Scroll infinite scroll until item count |
 | `ScrollToEndOfContentAsync()` | Scroll until end-of-content marker |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
-| `WaitForConditionAsync(js)` | Wait for JS condition (30s default) |
-| `WaitForBlazorReadyAsync()` | Wait for `__blazorServerReady` + scripts + Mermaid (first-load only) |
+| `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (30s default); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |
+| `WaitForBlazorReadyAsync()` | Wait for Blazor ready + `__scriptsReady` (which already includes Mermaid via `allComponentsReady()`) |
 
 ## Wait Pattern Best Practices
 

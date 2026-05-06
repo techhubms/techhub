@@ -151,6 +151,9 @@ function showNavSpinner() {
         el.setAttribute('aria-live', 'polite');
         document.body.appendChild(el);
     }
+    // Clear any in-flight show-delay so a rapid second call doesn't leave a stale
+    // timeout that re-activates the spinner after hideNavSpinner() has already run.
+    if (navSpinnerShowTimeout) { clearTimeout(navSpinnerShowTimeout); navSpinnerShowTimeout = null; }
     navSpinnerShowTimeout = setTimeout(() => {
         navSpinnerShowTimeout = null;
         const el = document.getElementById(NAV_SPINNER_ID);
@@ -245,6 +248,11 @@ function restoreScrollPosition() {
     //   - MutationObserver: fires when DOM elements are added/removed
     // Once NEITHER observer has fired for 150ms, the page is "settled" and we scroll.
     // A 30s hard deadline ensures we never hang indefinitely.
+    //
+    // Capture the current scroll key so that if a new navigation starts before
+    // tryScroll fires, we bail out instead of scrolling the wrong page and
+    // incorrectly calling finishNavigation() for the new navigation.
+    const restoreKey = getScrollKey();
     let debounceTimer = null;
     let deadlineTimer = null;
 
@@ -263,6 +271,8 @@ function restoreScrollPosition() {
 
     function tryScroll() {
         cleanup();
+        // Bail if navigation has moved on — do not scroll the new page.
+        if (getScrollKey() !== restoreKey) return;
         window.scrollTo(0, y);
         // Use rAF instead of setTimeout(0) — see comment above for rationale.
         requestAnimationFrame(finishNavigation);
@@ -278,6 +288,7 @@ function restoreScrollPosition() {
     // Hard deadline: after 30 seconds, scroll to whatever position is available.
     deadlineTimer = setTimeout(() => {
         cleanup();
+        if (getScrollKey() !== restoreKey) return;
         window.scrollTo(0, y);
         // Use rAF instead of setTimeout(0) — see comment above for rationale.
         requestAnimationFrame(finishNavigation);
@@ -302,16 +313,6 @@ function finishNavigation() {
     navigating = false;
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();
-}
-
-function resetPagePosition() {
-    if (window.navigation?.currentEntry?.navigationType === 'traverse') return;
-    window.scrollTo(0, 0);
-    requestAnimationFrame(() => {
-        document.body.tabIndex = -1;
-        document.body.focus();
-        document.body.removeAttribute('tabindex');
-    });
 }
 
 /**
@@ -841,7 +842,6 @@ export function observeScrollTrigger(helper, triggerElementId) {
     window.__scrollListenerVersion[triggerElementId] = v + 1;
 
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-listener:' + triggerElementId);
-    console.debug('[InfiniteScroll] Scroll listener active for:', triggerElementId);
 }
 
 /**
@@ -868,9 +868,10 @@ export function dispose() {
  */
 function onScroll() {
     if (navigating) return;
-    // Disable pointer events on cards during scroll so :hover doesn't linger
-    // on the wrong card and so the browser skips expensive hover re-evaluation
-    // on every scroll frame. Re-enabled in onScrollEnd.
+    // Suppress card hover visuals during scroll (CSS resets them while
+    // is-scrolling is present). Pointer-events stay on so the browser tracks
+    // the cursor; when is-scrolling is removed in onScrollEnd the correct
+    // card highlights immediately without requiring a mouse move.
     document.documentElement.classList.add('is-scrolling');
     updateButtonVisibility();
     // RAF-throttled TOC update — one update per frame, matching the old

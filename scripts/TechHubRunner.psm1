@@ -265,9 +265,38 @@ function Run {
         Run -TestProject TechHub.E2E.Tests -TestName Navigation
         Build, run Playwright tests matching "Navigation" pattern against local servers.
 
+    .PARAMETER RepeatTests
+        Run the selected tests N times without rebuilding or restarting servers between runs (default: 1).
+        Useful for investigating flaky tests: build and start servers once, then repeat the test suite.
+        Each run reports pass/fail individually; a final summary shows total runs passed/failed.
+        Works with -TestProject and -TestName to target specific tests.
+
+    .PARAMETER NetworkProfile
+        Apply a network throttle profile to E2E tests without having to set environment variables manually.
+        Sets E2E_NETWORK_THROTTLE for the duration of the run, then restores the previous value.
+        Valid values: fast3g, slow3g, regular4g, ci, wan.
+          fast3g     = Fast 3G (562 Kbps down, 150ms latency)
+          slow3g     = Slow 3G (400 Kbps down, 400ms latency)
+          regular4g  = Regular 4G (4 Mbps down, 20ms latency)
+          ci         = CI runner conditions (CPU throttle only, no network throttle)
+          wan        = Remote deployment latency (150ms latency, unlimited bandwidth) — closest to PR preview E2E
+        Only applies to E2E tests. Has no effect on unit/integration tests.
+
     .EXAMPLE
         Run -Environment Production -WithoutTests
         Publish and run in Production mode (tests real deployment artifacts).
+
+    .EXAMPLE
+        Run -TestProject E2E -TestName BackNavigation -RepeatTests 5
+        Build once, start servers once, then run the BackNavigation E2E tests 5 times.
+
+    .EXAMPLE
+        Run -TestProject E2E -NetworkProfile slow3g
+        Run all E2E tests with Slow 3G network throttling.
+
+    .EXAMPLE
+        Run -TestProject E2E -TestName BackNavigation -NetworkProfile slow3g -RepeatTests 5
+        Run the BackNavigation E2E tests 5 times with Slow 3G throttling.
     #>
     
     [CmdletBinding()]
@@ -295,7 +324,14 @@ function Run {
         [string]$Environment = "Development",
 
         [Parameter(Mandatory = $false)]
-        [switch]$Docker
+        [switch]$Docker,
+
+        [Parameter(Mandatory = $false)]
+        [int]$RepeatTests = 1,
+
+        [Parameter(Mandatory = $false)]
+        [ValidateSet("fast3g", "slow3g", "regular4g", "ci", "wan", "")]
+        [string]$NetworkProfile = ""
     )
 
     # Disable progress bars for performance (prevents slowdown from file operations)
@@ -317,18 +353,23 @@ function Run {
         Write-Host "  -TestProject   Scope tests to specific project (e.g., TechHub.Web.Tests, E2E.Tests, powershell, javascript)" -ForegroundColor White
         Write-Host "                 E2E tests = Playwright browser tests against local servers" -ForegroundColor White
         Write-Host "  -TestName      Scope tests by name pattern (e.g., SectionCard)" -ForegroundColor White
-        Write-Host "  -Docker        Run ALL services via docker compose (production-like containers)`n" -ForegroundColor White
+        Write-Host "  -Docker        Run ALL services via docker compose (production-like containers)" -ForegroundColor White
+        Write-Host "  -RepeatTests   Run tests N times without rebuilding (default: 1)" -ForegroundColor White
+        Write-Host "  -NetworkProfile  Throttle E2E network: fast3g, slow3g, regular4g, ci, wan`n" -ForegroundColor White
         
         Write-Host "EXAMPLES:" -ForegroundColor Yellow
-        Write-Host "  Run                                  Build + all tests + servers (default)" -ForegroundColor Gray
-        Write-Host "  Run -Clean                           Clean build + all tests + servers" -ForegroundColor Gray
-        Write-Host "  Run -WithoutTests                    Build + servers (no tests, for debugging)" -ForegroundColor Gray
-        Write-Host "  Run -TestProject powershell          Run only PowerShell tests" -ForegroundColor Gray
-        Write-Host "  Run -TestProject javascript         Run only JavaScript tests" -ForegroundColor Gray
-        Write-Host "  Run -TestProject Web.Tests           Run only Web tests" -ForegroundColor Gray
-        Write-Host "  Run -TestName SectionCard            Run tests matching 'SectionCard'" -ForegroundColor Gray
-        Write-Host "  Run -TestProject E2E -TestName Nav   Run Playwright tests matching 'Nav'" -ForegroundColor Gray
-        Write-Host "  Run -Docker                          Build + tests + servers via Docker containers (production-like)`n" -ForegroundColor Gray
+        Write-Host "  Run                                              Build + all tests + servers (default)" -ForegroundColor Gray
+        Write-Host "  Run -Clean                                       Clean build + all tests + servers" -ForegroundColor Gray
+        Write-Host "  Run -WithoutTests                                Build + servers (no tests, for debugging)" -ForegroundColor Gray
+        Write-Host "  Run -TestProject powershell                      Run only PowerShell tests" -ForegroundColor Gray
+        Write-Host "  Run -TestProject javascript                      Run only JavaScript tests" -ForegroundColor Gray
+        Write-Host "  Run -TestProject Web.Tests                       Run only Web tests" -ForegroundColor Gray
+        Write-Host "  Run -TestName SectionCard                        Run tests matching 'SectionCard'" -ForegroundColor Gray
+        Write-Host "  Run -TestProject E2E -TestName Nav               Run Playwright tests matching 'Nav'" -ForegroundColor Gray
+        Write-Host "  Run -TestProject E2E -NetworkProfile slow3g      Run all E2E tests with Slow 3G throttling" -ForegroundColor Gray
+        Write-Host "  Run -TestProject E2E -TestName Nav -NetworkProfile slow3g -RepeatTests 5" -ForegroundColor Gray
+        Write-Host "                                                   Run 'Nav' 5x with Slow 3G" -ForegroundColor Gray
+        Write-Host "  Run -Docker                                      Build + tests + servers via Docker (production-like)`n" -ForegroundColor Gray
         
         Write-Host "COMMON WORKFLOWS:" -ForegroundColor Yellow
         Write-Host "  Development mode:          Run" -ForegroundColor Gray
@@ -352,6 +393,12 @@ function Run {
     # which kills the terminal with exit code -1
     $ErrorActionPreference = "Continue"
     Set-StrictMode -Version Latest
+
+    # Apply -NetworkProfile: set E2E_NETWORK_THROTTLE for the duration of the run.
+    # Cleared to null in the finally block so throttling doesn't leak into the terminal session.
+    if ($NetworkProfile) {
+        $env:E2E_NETWORK_THROTTLE = $NetworkProfile
+    }
 
     # Determine workspace root - navigate up from scripts directory
     $workspaceRoot = Split-Path $PSScriptRoot -Parent
@@ -1531,51 +1578,95 @@ function Run {
                 # Specific unit/integration test project
                 $runUnitIntegration = $true
             }
-            
-            # PHASE 1: PowerShell tests (fast, independent, no build needed)
-            # Run first because they're fast and don't require servers
-            if ($runPowerShell) {
-                $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
-                if ($pwshSuccess -ne $true) {
-                    return $false
-                }
-                Write-Host ""
-            }
 
-            # PHASE 1.5: JavaScript tests (fast, independent, no .NET build needed)
-            if ($runJavaScript) {
-                $jsSuccess = Invoke-JavaScriptTests
-                if ($jsSuccess -ne $true) {
-                    return $false
-                }
-                Write-Host ""
-            }
-            
-            # PHASE 2: Unit and integration tests (fast, no servers)
-            if ($runUnitIntegration) {
-                $unitSuccess = Invoke-UnitAndIntegrationTests -TestProject $TestProject -TestName $TestName
-                if ($unitSuccess -ne $true) {
-                    return $false
-                }
-            }
-            
-            # PHASE 3: Start servers if needed for E2E tests
-            # Skip when E2E_BASE_URL points to a remote (non-localhost) target
+            # PHASE 3: Server startup is deferred to just before E2E tests inside the loop.
+            # See the Invoke-ServerStartup call before PHASE 4 below.
             $e2eBaseUrl = $env:E2E_BASE_URL
             $usingRemoteTarget = $runE2E -and $e2eBaseUrl -and $e2eBaseUrl -notmatch 'localhost'
-            if ($runE2E -and -not $usingRemoteTarget) {
-                $serversStarted = Invoke-ServerStartup -Environment $Environment -Docker:$Docker -SrcRebuilt $buildResult.SrcRebuilt
-                if ($serversStarted -ne $true) {
-                    return $false
-                }
-            }
-            elseif ($usingRemoteTarget) {
+            if ($usingRemoteTarget) {
                 Write-Info "E2E_BASE_URL is set to remote target ($e2eBaseUrl) — skipping local server startup"
             }
-        
-            # PHASE 4: E2E tests (servers already running or remote target)
-            if ($runE2E) {
-                $e2eSuccess = Invoke-E2ETests -TestName $TestName -UseDocker:$Docker
+
+            # Repeat loop: run test phases N times (default 1 = normal single run)
+            $repeatCount = [Math]::Max(1, $RepeatTests)
+            $repeatResults = [System.Collections.Generic.List[bool]]::new()
+
+            for ($run = 1; $run -le $repeatCount; $run++) {
+                if ($repeatCount -gt 1) {
+                    Write-Host ""
+                    Write-Host "══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+                    Write-Host ("  Test run {0} of {1}" -f $run, $repeatCount) -ForegroundColor Cyan
+                    Write-Host "══════════════════════════════════════════════════════════════" -ForegroundColor Cyan
+                }
+
+                $runSuccess = $true
+
+                # PHASE 1: PowerShell tests (fast, independent, no build needed)
+                # Run first because they're fast and don't require servers
+                if ($runPowerShell) {
+                    $pwshSuccess = Invoke-PowerShellTests -TestName $TestName
+                    if ($pwshSuccess -ne $true) {
+                        if ($repeatCount -eq 1) { return $false }
+                        $runSuccess = $false
+                    }
+                    Write-Host ""
+                }
+
+                # PHASE 1.5: JavaScript tests (fast, independent, no .NET build needed)
+                if ($runJavaScript) {
+                    $jsSuccess = Invoke-JavaScriptTests
+                    if ($jsSuccess -ne $true) {
+                        if ($repeatCount -eq 1) { return $false }
+                        $runSuccess = $false
+                    }
+                    Write-Host ""
+                }
+                
+                # PHASE 2: Unit and integration tests (fast, no servers)
+                if ($runUnitIntegration) {
+                    $unitSuccess = Invoke-UnitAndIntegrationTests -TestProject $TestProject -TestName $TestName
+                    if ($unitSuccess -ne $true) {
+                        if ($repeatCount -eq 1) { return $false }
+                        $runSuccess = $false
+                    }
+                }
+            
+                # PHASE 3+4: Start servers (first run or if unhealthy) then run E2E tests
+                if ($runE2E) {
+                    if (-not $usingRemoteTarget) {
+                        # SrcRebuilt only matters on first run — subsequent runs reuse running servers
+                        $srcRebuiltArg = if ($run -eq 1) { $buildResult.SrcRebuilt } else { $false }
+                        $serversStarted = Invoke-ServerStartup -Environment $Environment -Docker:$Docker -SrcRebuilt $srcRebuiltArg
+                        if ($serversStarted -ne $true) {
+                            if ($repeatCount -eq 1) { return $false }
+                            $runSuccess = $false
+                        }
+                    }
+                    if ($runSuccess) {
+                        $e2eSuccess = Invoke-E2ETests -TestName $TestName -UseDocker:$Docker
+                        if (-not $e2eSuccess) { $runSuccess = $false }
+                    }
+                }
+
+                $repeatResults.Add($runSuccess)
+
+                # Clean up orphaned browser processes between runs (but not on the last run)
+                if ($run -lt $repeatCount) {
+                    Stop-OrphanedTestProcesses -Silent
+                }
+            }
+
+            # Repeat summary (only shown when N > 1)
+            if ($repeatCount -gt 1) {
+                $passCount = ($repeatResults | Where-Object { $_ }).Count
+                $failCount = $repeatCount - $passCount
+                $summaryColor = if ($failCount -eq 0) { "Green" } else { "Yellow" }
+                Write-Host ""
+                Write-Host "══════════════════════════════════════════════════════════════" -ForegroundColor $summaryColor
+                Write-Host ("  Repeat summary: {0}/{1} runs passed" -f $passCount, $repeatCount) -ForegroundColor $summaryColor
+                Write-Host "══════════════════════════════════════════════════════════════" -ForegroundColor $summaryColor
+                Write-Host ""
+                $e2eSuccess = $failCount -eq 0
             }
             
             # Show appropriate success message - servers run in background now
@@ -1662,6 +1753,12 @@ function Run {
         throw
     }
     finally {
+        # Always clear E2E_NETWORK_THROTTLE after the run so throttling doesn't leak
+        # into subsequent commands in the same terminal session.
+        if ($NetworkProfile) {
+            $env:E2E_NETWORK_THROTTLE = $null
+        }
+
         # Always return to workspace root
         Set-Location $workspaceRoot
         Write-Host "Back at workspace root: $workspaceRoot`nThis terminal is now free to use"

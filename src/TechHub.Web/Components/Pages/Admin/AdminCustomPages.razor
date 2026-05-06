@@ -6,7 +6,7 @@
 @implements IDisposable
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Custom Pages — TechHub Admin</PageTitle>
 
@@ -92,11 +92,6 @@
     private string _editorKey = string.Empty;
 
     private PersistingComponentStateSubscription _persistingSubscription;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override async Task OnInitializedAsync()
     {
