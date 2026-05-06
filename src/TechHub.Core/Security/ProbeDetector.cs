@@ -68,8 +68,12 @@ public static class ProbeDetector
             return false;
         }
 
+        // Normalize once: strip trailing slashes so "/admin/login/" and "/admin/login"
+        // are treated identically by all checks below.
+        var normalized = path.TrimEnd('/');
+
         // Known legitimate application paths that happen to match a probe keyword.
-        if (_allowedPaths.Contains(path))
+        if (_allowedPaths.Contains(normalized))
         {
             return false;
         }
@@ -78,15 +82,14 @@ public static class ProbeDetector
         // e.g. "/actuator/health" is a probe but "/ai/actuator-systems" is not.
         // EndsWith covers "/wp-admin" (final segment); Contains covers "/wp-admin/...".
         if (_probePathSubstrings.Any(probe =>
-            path.EndsWith("/" + probe, StringComparison.OrdinalIgnoreCase) ||
-            path.Contains("/" + probe + "/", StringComparison.OrdinalIgnoreCase)))
+            normalized.EndsWith("/" + probe, StringComparison.OrdinalIgnoreCase) ||
+            normalized.Contains("/" + probe + "/", StringComparison.OrdinalIgnoreCase)))
         {
             return true;
         }
 
-        // Trim trailing slashes and extract the extension from the final segment only,
+        // Extract the extension from the final segment only,
         // so paths like /.env/ or /random.xml/ are correctly identified as probes.
-        var normalized = path.TrimEnd('/');
         var lastSlash = normalized.LastIndexOf('/');
         var lastSegment = normalized[(lastSlash + 1)..];
         var lastDot = lastSegment.LastIndexOf('.');

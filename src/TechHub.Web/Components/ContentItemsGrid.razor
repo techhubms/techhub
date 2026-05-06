@@ -303,8 +303,8 @@
     {
         try
         {
-            // Only load module once. Use the same absolute path that the <script> tag
-            // in App.razor resolves to (via @Assets fingerprinting + ImportMap).
+            // Only load module once. Use the relative specifier so the ImportMap intercepts
+            // it and resolves to the same fingerprinted URL as the <script> tag in App.razor.
             scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
                 "import", "./js/scroll-manager.js");
 

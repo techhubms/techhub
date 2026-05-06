@@ -117,8 +117,9 @@ public class ProbeDetectorTests
     [InlineData("/config.json")]
     [InlineData("/TechHub.Web.fwv5rmn5un.styles.css")]
     [InlineData("/js/nav-helpers.fmmqw6nflr.js")]
-    // Known admin routes that happen to contain probe keywords
+    // Known admin routes that happen to contain probe keywords (with and without trailing slash)
     [InlineData("/admin/login")]
+    [InlineData("/admin/login/")]
     // Null / empty
     [InlineData(null)]
     [InlineData("")]

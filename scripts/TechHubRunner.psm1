@@ -395,7 +395,8 @@ function Run {
     Set-StrictMode -Version Latest
 
     # Apply -NetworkProfile: set E2E_NETWORK_THROTTLE for the duration of the run.
-    # Cleared to null in the finally block so throttling doesn't leak into the terminal session.
+    # Capture the previous value so the finally block can restore it exactly.
+    $previousNetworkProfile = $env:E2E_NETWORK_THROTTLE
     if ($NetworkProfile) {
         $env:E2E_NETWORK_THROTTLE = $NetworkProfile
     }
@@ -1753,10 +1754,10 @@ function Run {
         throw
     }
     finally {
-        # Always clear E2E_NETWORK_THROTTLE after the run so throttling doesn't leak
-        # into subsequent commands in the same terminal session.
+        # Always restore E2E_NETWORK_THROTTLE to its previous value so throttling doesn't
+        # leak into subsequent commands in the same terminal session.
         if ($NetworkProfile) {
-            $env:E2E_NETWORK_THROTTLE = $null
+            $env:E2E_NETWORK_THROTTLE = $previousNetworkProfile
         }
 
         # Always return to workspace root

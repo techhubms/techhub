@@ -30,9 +30,8 @@ namespace TechHub.Web.Components;
 ///      Use for pages like ContentItem/GenAI that reload content without a
 ///      component teardown (new item = new DOM = scripts must re-apply).
 ///
-/// The convention test (PageMarkScriptsReadyConventionTests) accepts either a direct
-/// InvokeVoidAsync("markScriptsReady") call in the .razor file OR @inherits PageComponentBase
-/// as proof that the contract is fulfilled.
+/// The convention test (PageMarkScriptsReadyConventionTests) enforces that every page
+/// contains @inherits PageComponentBase as proof that the lifecycle contract is fulfilled.
 /// </summary>
 public abstract class PageComponentBase : ComponentBase
 {

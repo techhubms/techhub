@@ -123,7 +123,7 @@ $env:POSTGRES_ADMIN_PASSWORD = "<production-password>"
 
 **Triggers**:
 
-- Scheduled daily at 23:00 Brussels time (21:00 UTC / CEST)
+- Scheduled daily at 21:00 UTC (22:00 CET / 23:00 CEST depending on DST)
 - Manual dispatch with optional `dry_run` flag
 
 Scans `rg-techhub-staging` for all active PR environments (Container Apps named
