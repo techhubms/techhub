@@ -2,8 +2,8 @@
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 @implements IDisposable
+@inherits PageComponentBase
 
-@inject IJSRuntime JS
 @inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -64,12 +64,6 @@ else if (_notFound)
 
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        // Static content page; no JS libraries to initialise
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override async Task OnInitializedAsync()
     {

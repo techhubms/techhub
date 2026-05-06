@@ -1,6 +1,6 @@
 @inject IConfiguration Configuration
 @inject NavigationManager Navigation
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Admin Sign-in — TechHub</PageTitle>
 
@@ -38,11 +38,6 @@
     private bool _showError;
     private bool _isAzureAdConfigured;
     private string _returnUrl = "/admin";
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override void OnInitialized()
     {

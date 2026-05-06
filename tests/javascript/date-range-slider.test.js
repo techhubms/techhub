@@ -40,7 +40,7 @@ describe('date-range-slider.js', () => {
         mod.initClamping(null);
 
         expect(warn).toHaveBeenCalledWith(
-            '[DateRangeSlider] Container element not available, skipping clamping init'
+            '[DateRangeSlider] #date-range-slider element not available, skipping clamping init'
         );
     });
 

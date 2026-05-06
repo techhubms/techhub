@@ -13,10 +13,7 @@ REST API backend using ASP.NET Core Minimal APIs. Exposes endpoints for sections
 ```text
 TechHub.Api/
 ├── Program.cs                    # Entry point, DI registration, middleware pipeline
-├── Endpoints/                    # Minimal API endpoint definitions
-│   ├── ContentEndpoints.cs       # Section & Content related endpoints
-│   ├── RssEndpoints.cs           # RSS feed generation
-│   └── CustomPagesEndpoints.cs   # Custom page data endpoints
+├── Endpoints/                    # Minimal API endpoint definitions (content, RSS, authors, admin, custom pages, sitemap)
 ├── appsettings.json             # Configuration (sections, collections, paths)
 └── appsettings.Development.json # Development-specific settings
 ```
@@ -45,7 +42,7 @@ See [docs/input-validation-and-sanitization.md](../../docs/input-validation-and-
 | ------------------------------------------ | --------------------------------- |
 | `GET /api/rss/all`                         | All content across all sections   |
 | `GET /api/rss/{sectionName}`               | Content for a specific section    |
-| `GET /api/rss/collection/{collectionName}` | Content for a specific collection |
+| `GET /api/rss/{sectionName}/{collectionName}` | Content for a specific collection |
 
 All return `application/xml; charset=utf-8`. These are internal — user-facing feeds via [Web frontend proxies](../TechHub.Web/AGENTS.md).
 

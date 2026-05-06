@@ -117,6 +117,45 @@ $env:POSTGRES_ADMIN_PASSWORD = "<production-password>"
 ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action teardown
 ```
 
+### Nightly PR Environment Teardown
+
+**File**: [.github/workflows/pr-env-nightly-teardown.yml](../.github/workflows/pr-env-nightly-teardown.yml)
+
+**Triggers**:
+
+- Scheduled daily at 21:00 UTC (22:00 CET / 23:00 CEST depending on DST)
+- Manual dispatch with optional `dry_run` flag
+
+Scans `rg-techhub-staging` for all active PR environments (Container Apps named
+`ca-techhub-api-pr-{N}` and PostgreSQL servers named `psql-techhub-pr-{N}`) and tears
+them all down. This eliminates the cost of idle PostgreSQL servers and catches **orphaned
+environments** that were not cleaned up when a PR was closed (e.g. due to a workflow failure).
+
+After teardown, the PR comment on each affected pull request is updated with a nightly
+teardown notice and links to the redeploy workflow.
+
+### Redeploy PR Environment
+
+**File**: [.github/workflows/pr-env-redeploy.yml](../.github/workflows/pr-env-redeploy.yml)
+
+**Triggers**:
+
+- Manual dispatch with required `pr_number` input
+
+Redeploys a PR environment without requiring a new commit. Looks up the most recently
+pushed image for the PR from ACR (`pr-{N}-{timestamp}` tags, ordered newest first) and
+runs `Deploy-PrPreview.ps1 -Action deploy` with that image. If no ACR image exists for
+the PR (e.g. images were pruned), the workflow fails with guidance to push a new commit.
+
+The Postgres server is re-provisioned via PITR if it was deleted by the nightly teardown (5–8 min).
+
+**Resuming after nightly teardown:**
+
+| You want to... | How |
+|---|---|
+| Continue testing the same code | Trigger **Redeploy PR Environment** with the PR number |
+| Push new changes and redeploy | Push a commit — CI builds new images and deploys automatically |
+
 ### Main Branch Deployment Jobs
 
 Run only after the quality gate passes, and never on PRs.

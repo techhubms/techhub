@@ -95,7 +95,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         foundButton.Should().BeTrue("should find a button via keyboard navigation");
 
-        // Wait for keyboard-nav class to be applied (set by keydown Tab handler in nav-helpers.js)
+        // Wait for keyboard-nav class to be applied (set by keydown Tab handler in scroll-manager.js)
         await Page.WaitForConditionAsync(
             "() => document.documentElement.classList.contains('keyboard-nav')");
 
@@ -195,14 +195,17 @@ public class TabHighlightingTests : PlaywrightTestBase
         var link = Page.Locator("main a[href]").First;
         await Assertions.Expect(link).ToBeVisibleAsync();
 
-        // Use dispatchEvent to simulate a pointer click focus (triggers pointerdown → removes keyboard-nav,
-        // then focuses the element). This matches real user behavior better than FocusAsync().
-        await link.EvaluateAsync(@"el => {
+        // Perform pointer interaction and read computed style atomically.
+        // A separate EvaluateAsync for style would risk the element losing :focus
+        // between CDP round-trips on CI, causing getComputedStyle to return "" instead
+        // of "none" because no CSS rule sets outline-style on non-focused elements.
+        var outlineStyle = await link.EvaluateAsync<string>(@"el => {
             el.dispatchEvent(new PointerEvent('pointerdown', { bubbles: true }));
             el.focus();
+            return window.getComputedStyle(el).outlineStyle;
         }");
 
-        // Wait for keyboard-nav to be removed (pointerdown handler in nav-helpers.js)
+        // Wait for keyboard-nav to be confirmed absent (pointerdown handler in scroll-manager.js removes it)
         await Page.WaitForConditionAsync(
             "() => !document.documentElement.classList.contains('keyboard-nav')");
 
@@ -210,8 +213,6 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Check outline-style rather than outline-width: CSS outline: none sets style to "none"
         // which makes the outline invisible, but some browsers still report a non-zero width
         // for :focus-visible elements as part of accessibility heuristics.
-        var outlineStyle = await link.EvaluateAsync<string>(
-            "el => window.getComputedStyle(el).outlineStyle");
         outlineStyle.Should().Be("none",
             "focused element should have outline-style 'none' when keyboard-nav class is not active (pointer mode)");
     }
@@ -254,7 +255,7 @@ public class TabHighlightingTests : PlaywrightTestBase
         // Arrange - Navigate to a page with interactive buttons
         await Page.GotoRelativeAsync("/ai");
 
-        // Set keyboard-nav mode via Tab press (triggers keydown handler in nav-helpers.js)
+        // Set keyboard-nav mode via Tab press (triggers keydown handler in scroll-manager.js)
         await Page.Keyboard.PressAsync("Tab");
 
         var hasKeyboardNav = await Page.EvaluateAsync<bool>(
@@ -270,7 +271,7 @@ public class TabHighlightingTests : PlaywrightTestBase
 
         // Wait for focus to settle on the button — FocusAsync dispatches .focus() but
         // the browser may not update document.activeElement synchronously when other
-        // JS handlers (Blazor, nav-helpers) are active.
+        // JS handlers (Blazor, scroll-manager) are active.
         await Page.WaitForConditionAsync(
             "() => document.activeElement?.tagName === 'BUTTON'");
 
@@ -279,7 +280,7 @@ public class TabHighlightingTests : PlaywrightTestBase
         // at this y-coordinate. Avoid header area (y<150) which contains nav links.
         await Page.Mouse.ClickAsync(960, 500);
 
-        // Assert - The pointerdown handler in nav-helpers.js blurs focused non-input elements.
+        // Assert - The pointerdown handler in scroll-manager.js blurs focused non-input elements.
         // Focus should NOT remain on a button (the previously focused element).
         // Note: focus may land on body or on the clicked element if it's focusable,
         // but the important thing is the button was blurred.

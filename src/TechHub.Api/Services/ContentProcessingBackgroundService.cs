@@ -140,6 +140,15 @@ public sealed class ContentProcessingBackgroundService : BackgroundService
 
     private async Task<bool> IsEnabledAsync(CancellationToken ct)
     {
+        // If disabled via environment variable (ContentProcessor__Enabled=false), skip the
+        // database round-trip. This is the mechanism used in PR preview environments to prevent
+        // scheduled runs on a PITR-restored database where the setting is enabled=true.
+        // Manual admin-triggered runs bypass this method entirely and always execute.
+        if (!_options.Enabled)
+        {
+            return false;
+        }
+
         await using var scope = _serviceProvider.CreateAsyncScope();
         var repo = scope.ServiceProvider.GetRequiredService<IBackgroundJobSettingRepository>();
         return await repo.IsEnabledAsync(ContentProcessorOptions.SectionName, ct);

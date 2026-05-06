@@ -12,19 +12,11 @@ Data access using PostgreSQL with tsvector full-text search, markdown processing
 
 ```text
 TechHub.Infrastructure/
-├── Data/                         # Database infrastructure
-│   ├── DbConnectionFactory.cs    # PostgreSQL connection factory
-│   ├── MigrationRunner.cs        # Database schema migrations
-│   ├── PostgresDialect.cs        # PostgreSQL-specific SQL syntax
-│   └── Migrations/postgres/      # SQL migration scripts
-├── Repositories/                 # Repository implementations
-│   ├── ContentRepositoryBase.cs  # Abstract base for content repos
-│   └── ContentRepository.cs      # Database repository (PostgreSQL)
-├── Services/                     # Infrastructure services
-│   ├── ContentSyncService.cs     # Markdown → DB sync (hash-based change detection)
-│   ├── FrontMatterParser.cs      # YAML frontmatter parsing
-│   ├── MarkdownService.cs        # Markdown to HTML conversion
-│   └── RssService.cs             # RSS feed generation
+├── Data/                    # Connection factory, SQL dialect, migrations runner, SQL migration scripts
+├── Repositories/            # Content repository implementations (PostgreSQL + Dapper)
+├── Services/                # Markdown, RSS, content sync, AI processing, roundup generation
+│   ├── ContentProcessing/   # Pipeline: feed ingestion, AI categorization, article enrichment
+│   └── RoundupGeneration/   # Weekly roundup AI generation pipeline
 └── TechHub.Infrastructure.csproj
 ```
 
@@ -59,7 +51,7 @@ See [Data/Migrations/postgres/](Data/Migrations/postgres/) for complete schema.
 
 | Lifetime | Services |
 |---|---|
-| Singleton | `ISqlDialect`, `IDbConnectionFactory`, `ISectionRepository` |
+| Singleton | `ISqlDialect`, `IDbConnectionFactory` |
 | Scoped | `IDbConnection` (per-request) |
 | Transient | All other services |
 

@@ -77,10 +77,11 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 ### Loading Strategies
 
-| Loading Type          | Use When                | How                                      |
-| --------------------- | ----------------------- | ---------------------------------------- |
-| **Static**            | Every page needs it     | `<script src="@Assets[...]" defer>`      |
-| **Dynamic ES Module** | Only some pages need it | `import('./js/file.js')` via ImportMap   |
+| Loading Type          | Use When                          | How                                               |
+| --------------------- | --------------------------------- | ------------------------------------------------- |
+| **Static (module)**   | Every page, needs ES module scope | `<script type="module" src="@Assets[...]">` |
+| **Static (plain)**    | Every page, no module features    | `<script src="@Assets[...]" defer>`           |
+| **Dynamic ES Module** | Only some pages need it           | `import('./js/file.js')` via ImportMap             |
 | **External CDN**      | Third-party library     | Dynamic `loadScript()` with SRI          |
 
 ### Fingerprinting (Cache Busting)
@@ -93,14 +94,15 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 ### JavaScript Files Reference
 
-| File                 | Purpose                                     | Loading             |
-| -------------------- | ------------------------------------------- | ------------------- |
-| `nav-helpers.js`     | Back to top, back to previous, scroll pos   | Static (every page) |
-| `page-scripts.js`    | CDN loading, init functions, scroll restore | Static ES module    |
-| `toc-scroll-spy.js`  | TOC scroll highlighting, history management | Dynamic (TOC pages) |
-| `custom-pages.js`    | Collapsible sections for SDLC/DX pages      | Dynamic             |
-| `infinite-scroll.js` | Scroll-event-based infinite pagination      | Dynamic             |
-| `mobile-nav.js`      | Mobile hamburger menu scroll lock           | Dynamic             |
+| File                  | Purpose                                           | Loading          |
+| --------------------- | ------------------------------------------------- | ---------------- |
+| `scroll-manager.js`   | Navigation, scroll position, TOC spy, infinite scroll, buttons | Static ES module |
+| `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer) |
+| `sidebar-toggle.js`   | Desktop sidebar collapse/expand with localStorage | Static (defer)   |
+| `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer) |
+| `page-scripts.js`     | CDN loading, init functions (mermaid, highlight.js) | Static ES module |
+| `custom-pages.js`     | Collapsible sections for SDLC/DX pages            | Dynamic          |
+| `date-range-slider.js` | Date range slider client-side clamping           | Dynamic          |
 
 Special: `TechHub.Web.lib.module.js` — Blazor lifecycle callbacks (auto-discovered by Blazor)
 
@@ -130,7 +132,7 @@ Versions and SRI hashes centralized in [Configuration/CdnLibraries.cs](Configura
 
 1. Add file to `wwwroot/js/`
 2. Update `Configuration/JsFiles.cs`
-3. Static: add `<script src="@Assets[\"js/file.js\"]" defer>` to App.razor | Dynamic: use `import()`
+3. Static module: add `<script type="module" src="@Assets[\"js/file.js\"]">` to App.razor | Static plain: add `<script src="@Assets[\"js/file.js\"]" defer>` | Dynamic: use `import()`
 4. Document in JavaScript Files Reference above
 
 ## Conditional JavaScript Loading
@@ -189,7 +191,7 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 
 ## TOC Scroll-Spy
 
-`toc-scroll-spy.js` highlights TOC links based on scroll position.
+`scroll-manager.js` highlights TOC links based on scroll position using **RAF-throttled `scroll` events** (one update per frame — real-time as user scrolls), with a final pass on `scrollend` to settle at the exact resting position. The debounce fallback (150ms) is used on browsers without native `scrollend`.
 
 **CRITICAL**: Uses `history.replaceState()` (not `pushState()`) to update URL hash — prevents polluting browser history with scroll positions. Only TOC link clicks create history entries.
 
@@ -199,7 +201,8 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 - **Prefetch trigger**: 300px margin
 - **Sentinel element**: `#scroll-trigger` (removed when no more items)
 - **Ready signal**: `window.__scrollListenerReady[triggerId]` (scoped per trigger to avoid interference)
-- Uses `scroll` events + `getBoundingClientRect()` — deliberately no `requestAnimationFrame` throttling (rAF callbacks not delivered in headless Chrome with `--disable-gpu`)
+- Uses `IntersectionObserver` with a 300px `rootMargin` — fires once when the sentinel enters the extended viewport, then immediately disconnects to prevent cascade
+- All logic in `scroll-manager.js` — Blazor imports via `JSRuntime.InvokeAsync("import", "./js/scroll-manager.js")` (relative specifier so the ImportMap resolves to the fingerprinted URL)
 
 ## Date Formatting
 
@@ -211,9 +214,9 @@ User-facing RSS feeds served by the Web frontend (proxied from internal API):
 
 | URL | Description |
 |---|---|
-| `/feed` or `/feed/all` | All content |
-| `/feed/{sectionName}` | Section-specific |
-| `/feed/collection/{collectionName}` | Collection-specific |
+| `/all/feed.xml` | All content across all sections |
+| `/all/roundups/feed.xml` | All roundups |
+| `/{sectionName}/feed.xml` | Section-specific content |
 
 ## Mobile Navigation
 

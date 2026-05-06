@@ -73,11 +73,18 @@ public class TagFilteringTests : PlaywrightTestBase
         // Act 2 - Click the same tag button again to deselect it
         // Re-acquire locator after Blazor re-render to avoid stale reference
         tagButton = Page.Locator(".tag-cloud-item.selected").First;
-        // On section pages (Filter mode), deselecting the last tag may not trigger a URL change;
-        // retry click until the selected class is removed.
-        await tagButton.ClickAndExpectAsync(async () =>
+        await tagButton.WaitForBlazorInteractivityAsync();
+        // On section pages (Filter mode), deselecting the last tag may not trigger a URL change.
+        // Use a guarded retry: check whether the tag is still selected before each click so that
+        // if the click took effect but the inner assertion timed out under slow3g, the retry
+        // detects the already-deselected state and exits rather than toggling back to selected.
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            if (await Page.Locator(".tag-cloud-item.selected").CountAsync() == 0) return;
+            await Page.Locator(".tag-cloud-item.selected").First.ClickAsync(new() { Timeout = 2000 });
             await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
-                .ToHaveCountAsync(0, new() { Timeout = 2000 }));
+                .ToHaveCountAsync(0, new() { Timeout = 5000 });
+        });
 
         // Wait for Blazor to process the toggle: the selected class should be removed
         await WaitForTagCloudReadyAsync();

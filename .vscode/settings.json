@@ -184,4 +184,5 @@
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "chat.mcp.autostart": "newAndOutdated",
     "remote.localPortHost": "allInterfaces",
+    "chat.tools.terminal.outputLocation": "terminal",
 }

@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
+using TechHub.Core.Security;
 
 namespace TechHub.ServiceDefaults;
 
@@ -25,11 +26,20 @@ public static class ServiceDefaultsExtensions
     /// - HTTP client resilience
     /// - Health checks
     /// </summary>
-    public static IHostApplicationBuilder AddServiceDefaults(this IHostApplicationBuilder builder)
+    /// <param name="builder">The host application builder.</param>
+    /// <param name="additionalTraceFilter">
+    /// Optional extra predicate applied to the OpenTelemetry trace filter.
+    /// Return <c>false</c> to suppress a trace. Use this to add service-specific
+    /// suppression rules (e.g. Blazor disconnect, bot crawlers) without coupling
+    /// ServiceDefaults to those concerns.
+    /// </param>
+    public static IHostApplicationBuilder AddServiceDefaults(
+        this IHostApplicationBuilder builder,
+        Func<HttpContext, bool>? additionalTraceFilter = null)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
-        builder.ConfigureOpenTelemetry();
+        builder.ConfigureOpenTelemetry(additionalTraceFilter);
 
         builder.AddDefaultHealthChecks();
 
@@ -52,7 +62,14 @@ public static class ServiceDefaultsExtensions
     /// <summary>
     /// Configures OpenTelemetry for logging, metrics, and tracing with OTLP export.
     /// </summary>
-    public static IHostApplicationBuilder ConfigureOpenTelemetry(this IHostApplicationBuilder builder)
+    /// <param name="builder">The host application builder.</param>
+    /// <param name="additionalTraceFilter">
+    /// Optional extra predicate applied on top of the built-in health-probe and
+    /// scanner-probe filters. Return <c>false</c> to suppress a trace.
+    /// </param>
+    public static IHostApplicationBuilder ConfigureOpenTelemetry(
+        this IHostApplicationBuilder builder,
+        Func<HttpContext, bool>? additionalTraceFilter = null)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
@@ -88,12 +105,19 @@ public static class ServiceDefaultsExtensions
             {
                 tracing.AddAspNetCoreInstrumentation(options =>
                        {
-                           // Filter out health probe requests from telemetry.
-                           // Container Apps fires /alive (liveness) and /health (readiness)
-                           // every 10-30s × 2 replicas × 2 services, generating ~2.9 GB/month
-                           // in AppRequests with no diagnostic value.
+                           // Filter requests that have no diagnostic value and would inflate
+                           // App Insights data volume:
+                           //   - /health and /alive: Container Apps liveness/readiness probes,
+                           //     fired every 10-30s × 2 replicas × 2 services (~2.9 GB/month).
+                           //   - Scanner/attacker probe paths (via ProbeDetector): have no
+                           //     diagnostic value and are rejected by middleware anyway.
+                           //   - additionalTraceFilter: caller-supplied predicate for
+                           //     service-specific suppression (e.g. Web passes Blazor disconnect
+                           //     and bot-crawler filters; Api passes nothing).
                            options.Filter = httpContext =>
-                               !IsHealthProbeRequest(httpContext.Request.Path);
+                               !IsHealthProbeRequest(httpContext.Request.Path) &&
+                               !ProbeDetector.IsProbeRequest(httpContext.Request.Path.Value) &&
+                               (additionalTraceFilter == null || additionalTraceFilter(httpContext));
 
                            // Fix client.address to reflect the real client IP after the
                            // ForwardedHeaders middleware has updated RemoteIpAddress from
@@ -110,10 +134,7 @@ public static class ServiceDefaultsExtensions
                                }
                            };
                        })
-                       .AddHttpClientInstrumentation()
-                       // Suppress bot and Blazor infrastructure noise so failure-rate alerts
-                       // reflect genuine application errors, not crawler 404s or circuit teardown.
-                       .AddProcessor(new TelemetryNoiseProcessor());
+                       .AddHttpClientInstrumentation();
             });
 
         builder.AddOpenTelemetryExporters();

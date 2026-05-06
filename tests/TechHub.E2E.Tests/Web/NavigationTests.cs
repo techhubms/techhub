@@ -347,6 +347,10 @@ public class NavigationTests : PlaywrightTestBase
         var tocElement = Page.Locator("[data-toc-scroll-spy]");
         await Assertions.Expect(tocElement).ToBeVisibleAsync();
 
+        // Wait for scroll-spy to be initialized before clicking — without this, the click
+        // fires before the handler is attached (race condition under full test suite load).
+        await Page.WaitForTocInitializedAsync();
+
         // Assert - TOC should be initialized and have links
         var tocLinks = tocElement.Locator("a[href*='#']");
         var tocLinkCount = await tocLinks.CountAsync();

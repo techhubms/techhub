@@ -1,20 +1,24 @@
 using System.Text.RegularExpressions;
+using TechHub.Core.Security;
 
 namespace TechHub.Web.Middleware;
 
 /// <summary>
-/// Middleware that short-circuits requests whose first path segment is structurally
-/// invalid (e.g. contains dots, percent-encoding, or characters that can never match
-/// a section, collection, or known page route). Such requests get a 404 immediately,
-/// before Blazor routing runs and before any child components start rendering.
+/// Middleware that short-circuits two categories of bad requests before Blazor routing runs:
 ///
-/// This prevents junk URLs like /github-copilot/features.html (after .html stripping
-/// falls through) or scanner probe paths like /wp-admin from reaching the Blazor
-/// pipeline and triggering spurious API calls (e.g. tag cloud requests with garbage
-/// collection names).
+/// 1. **Scanner/attacker probes** — paths that match well-known exploit probe patterns
+///    (e.g. /wp-admin, /xmlrpc.php, /.env, /setup.php). These return a bare 404 immediately
+///    without touching the Blazor pipeline, generating API calls, or recording telemetry.
+///    The OpenTelemetry filter in ServiceDefaults uses the same <see cref="IsProbeRequest"/>
+///    check so no Activity span is created for these requests at all.
 ///
-/// Valid first segments: lowercase letters and hyphens only, must start with a letter.
-/// This matches every real section name, plus "all", "not-found", "about", "error", etc.
+/// 2. **Structurally invalid first segments** — segments containing dots, percent-encoding,
+///    or characters that can never match a section, collection, or known page route. This
+///    prevents junk URLs like /github-copilot/features.html (after .html stripping falls
+///    through) from reaching Blazor and triggering spurious API calls.
+///
+/// Valid first segments: letters and hyphens only, starting with a letter. Matches every
+/// real section name plus "all", "not-found", "about", "error", etc.
 /// </summary>
 public partial class InvalidRouteSegmentMiddleware
 {
@@ -40,9 +44,18 @@ public partial class InvalidRouteSegmentMiddleware
 
         if (!string.IsNullOrEmpty(path) && path != "/")
         {
+            // Probe check must run before the file-extension early-exit:
+            // scanner requests like /.env and /setup.php have file extensions
+            // but must be rejected before reaching any downstream middleware.
+            if (IsProbeRequest(path))
+            {
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                return;
+            }
+
             // Static file requests (final segment contains a dot) are passed through
-            // unconditionally. Blazor routes never have file extensions; static assets
-            // always do (served by MapStaticAssets / UseStaticFiles downstream).
+            // after the probe filter. Blazor routes never have file extensions; static
+            // assets always do (served by MapStaticAssets / UseStaticFiles downstream).
             if (PathHasFileExtension(path))
             {
                 await _next(context);
@@ -68,8 +81,7 @@ public partial class InvalidRouteSegmentMiddleware
                 return;
             }
 
-            // If the segment contains anything other than lowercase letters and hyphens
-            // it can never match a Blazor route — return 404.
+            // If the segment contains anything other than letters and hyphens it can never match a Blazor route — return 404.
             if (!string.IsNullOrEmpty(firstSegment) && !ValidSegmentPattern().IsMatch(firstSegment))
             {
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
@@ -79,6 +91,15 @@ public partial class InvalidRouteSegmentMiddleware
 
         await _next(context);
     }
+
+    /// <summary>
+    /// Returns <c>true</c> if <paramref name="path"/> matches a known scanner or attacker
+    /// probe pattern. Called both by <see cref="InvokeAsync"/> (to return 404) and by the
+    /// OpenTelemetry request filter in ServiceDefaults (to suppress telemetry entirely).
+    /// Probe definitions live in <see cref="ProbeDetector"/> (TechHub.Core).
+    /// </summary>
+    internal static bool IsProbeRequest(string path)
+        => ProbeDetector.IsProbeRequest(path);
 
     private static bool PathHasFileExtension(string path)
     {

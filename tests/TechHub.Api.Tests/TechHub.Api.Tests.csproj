@@ -13,6 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
     <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
     <PackageReference Include="Moq" />
+    <PackageReference Include="Npgsql" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
     <PackageReference Include="xunit.v3.mtp-v2" />
   </ItemGroup>
 

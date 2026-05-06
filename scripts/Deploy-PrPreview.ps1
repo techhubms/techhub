@@ -680,7 +680,13 @@ $apiEnvVars = @(
     "Database__ConnectionString=secretref:db-connection-string",
     "AppSettings__BaseUrl=https://$webPrFqdn",
     "TECHHUB_TMP=/tmp/techhub",
-    "Cors__AllowedOrigins__0=https://$webPrFqdn"
+    "Cors__AllowedOrigins__0=https://$webPrFqdn",
+    # Disable scheduled background jobs in PR environments. The PITR-restored database inherits
+    # the production background_job_settings where both jobs are enabled=true. These env vars
+    # short-circuit IsEnabledAsync before it even queries the database, so scheduled runs never
+    # fire. Manual admin-triggered runs bypass IsEnabledAsync and are unaffected.
+    "ContentProcessor__Enabled=false",
+    "RoundupGenerator__Enabled=false"
 )
 
 $webEnvVars = @(

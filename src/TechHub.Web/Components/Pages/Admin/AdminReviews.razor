@@ -8,7 +8,7 @@
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminReviews> Logger
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Content Reviews — TechHub Admin</PageTitle>
 
@@ -317,11 +317,6 @@
     private string _editorCollectionName = string.Empty;
     private string _editorSlug = string.Empty;
     private IReadOnlyList<string>? _feedNames;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override async Task OnInitializedAsync()
     {

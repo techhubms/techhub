@@ -3,9 +3,9 @@ using FluentAssertions;
 namespace TechHub.Web.Tests.Conventions;
 
 /// <summary>
-/// Validates that every Razor page contains a call to markScriptsReady.
-/// Checks for the presence of InvokeVoidAsync("markScriptsReady") anywhere in the file.
-/// This is required for scroll position restoration on back/forward navigation.
+/// Validates that every Razor page inherits PageComponentBase.
+/// The base class enforces the markScriptsLoading/markScriptsReady lifecycle,
+/// which is required for scroll position restoration on back/forward navigation.
 /// See src/TechHub.Web/AGENTS.md for the rule.
 /// </summary>
 public class PageMarkScriptsReadyConventionTests
@@ -25,7 +25,7 @@ public class PageMarkScriptsReadyConventionTests
     };
 
     [Fact]
-    public void AllPages_ShouldCallMarkScriptsReady()
+    public void AllPages_ShouldInheritPageComponentBase()
     {
         // Arrange
         Directory.Exists(_pagesDirectory).Should().BeTrue(
@@ -45,15 +45,16 @@ public class PageMarkScriptsReadyConventionTests
             var content = File.ReadAllText(file);
             var relativePath = Path.GetRelativePath(_pagesDirectory, file);
 
-            if (!content.Contains("InvokeVoidAsync(\"markScriptsReady\")"))
+            if (!content.Contains("@inherits PageComponentBase"))
             {
                 violations.Add(relativePath);
             }
         }
 
         violations.Should().BeEmpty(
-            "every page must call JS.InvokeVoidAsync(\"markScriptsReady\") in OnAfterRenderAsync " +
-            "for scroll position restoration. Missing pages: {0}. See src/TechHub.Web/AGENTS.md for details.",
+            "every page must inherit PageComponentBase, which enforces the " +
+            "markScriptsLoading/markScriptsReady lifecycle for scroll position restoration. " +
+            "Missing pages: {0}. See src/TechHub.Web/AGENTS.md for details.",
             string.Join(", ", violations));
     }
 }
