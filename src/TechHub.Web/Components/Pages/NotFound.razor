@@ -1,14 +1,10 @@
 ﻿@page "/not-found"
 @layout MainLayout
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Not Found - Tech Hub</PageTitle>
 
 <NotFoundContent />
 
 @code {
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 }

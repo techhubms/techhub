@@ -208,7 +208,7 @@ a, button, input, select, textarea, [tabindex]:not([tabindex="-1"]) {
    Focus Outline Strategy
    
    Outlines are ONLY shown during keyboard navigation (Tab key).
-   nav-helpers.js adds 'keyboard-nav' class to <html> when Tab is pressed,
+   scroll-manager.js adds 'keyboard-nav' class to <html> when Tab is pressed,
    removes it on pointer/touch interaction (pointerdown).
    
    This prevents lingering focus rings on mobile devices after tapping
@@ -335,6 +335,29 @@ img {
   background-size: 100% 1px;
   background-position: bottom;
   background-repeat: no-repeat;
+}
+
+/* Suppress hover visual styles while scrolling so stale :hover highlights
+   don't linger mid-scroll. Pointer-events stay enabled so the browser tracks
+   the cursor position; when scrolling stops the correct card highlights
+   immediately without requiring a mouse move.
+   The is-scrolling class is added/removed by scroll-manager.js. */
+@media (hover: hover) {
+  html.is-scrolling .card:hover,
+  html.is-scrolling .card-static:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--color-border-default);
+  }
+
+  html.is-scrolling .card:hover .card-title,
+  html.is-scrolling .card-static:hover .card-title {
+    color: var(--color-text-primary);
+  }
+
+  html.is-scrolling .card:hover .card-description,
+  html.is-scrolling .card-static:hover .card-description {
+    color: var(--color-text-secondary);
+  }
 }
 
 /* Reduced Motion Support (Accessibility) */

@@ -3,7 +3,6 @@ using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Core.Models.Admin;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
-using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 

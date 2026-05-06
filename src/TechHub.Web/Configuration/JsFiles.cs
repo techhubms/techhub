@@ -14,12 +14,12 @@ namespace TechHub.Web.Configuration;
 /// </para>
 /// <list type="bullet">
 /// <item>
-/// <term>Static scripts (nav-helpers.js)</term>
-/// <description>Loaded via &lt;script src="@Assets[...]"&gt; with defer attribute.
+/// <term>Static scripts (scroll-manager.js)</term>
+/// <description>Loaded via &lt;script src="@Assets[...]"&gt; with type="module" attribute.
 /// These run after DOM is ready and don't need Blazor interactivity.</description>
 /// </item>
 /// <item>
-/// <term>Dynamic/conditional scripts (toc-scroll-spy.js, custom-pages.js)</term>
+/// <term>Dynamic/conditional scripts (custom-pages.js, date-range-slider.js)</term>
 /// <description>Loaded on-demand via dynamic import() when specific elements exist.
 /// ImportMap component enables fingerprinted paths for dynamic imports.</description>
 /// </item>
@@ -33,7 +33,7 @@ namespace TechHub.Web.Configuration;
 /// </para>
 /// <para>
 /// All local JS files use @Assets["..."] helper which generates fingerprinted URLs
-/// (e.g., "js/nav-helpers.abc123.js") for cache busting. The ImportMap component
+/// (e.g., "js/scroll-manager.abc123.js") for cache busting. The ImportMap component
 /// allows dynamic import() to also use fingerprinted paths.
 /// </para>
 /// <para>
@@ -50,7 +50,7 @@ public static class JsFiles
     /// </summary>
     public static readonly string[] AlwaysLoad =
     [
-        "js/nav-helpers.js",    // Back to top, back to previous navigation
+        "js/scroll-manager.js", // Navigation, scroll position, TOC scroll spy, infinite scroll
         "js/mobile-nav.js",     // Mobile navigation scroll lock and keyboard handling
         "js/sidebar-toggle.js", // Desktop sidebar collapse/expand with localStorage persistence
         "js/hero-banner.js"     // Hero banner collapse/expand with cookie persistence
@@ -62,8 +62,7 @@ public static class JsFiles
     /// </summary>
     public static readonly string[] DynamicLoad =
     [
-        "js/page-scripts.js",       // ES module - Page script initializers (mermaid, highlight.js, custom pages, TOC)
-        "js/toc-scroll-spy.js",     // ES module - Loaded when [data-toc-scroll-spy] exists
+        "js/page-scripts.js",       // ES module - Page script initializers (mermaid, highlight.js, custom pages)
         "js/custom-pages.js",       // ES module - Loaded when [data-collapsible] exists
         "js/date-range-slider.js"   // ES module - Loaded by DateRangeSlider component for client-side clamping
     ];

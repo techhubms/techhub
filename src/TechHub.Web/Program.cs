@@ -9,16 +9,19 @@ using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using Polly;
 using TechHub.Core.Logging;
+using TechHub.Core.Models;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
+using TechHub.Web.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks)
-builder.AddServiceDefaults();
+// Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks).
+// WebTelemetryFilters suppresses Blazor disconnect noise and bot-crawler 404s from traces.
+builder.AddServiceDefaults(WebTelemetryFilters.ShouldTrace);
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
@@ -28,12 +31,12 @@ using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
 }
 
 // Configure file logging
-// Skip during integration tests (AppSettings:SkipFileLogging = true)
+// Skipped in production (AppSettings:SkipFileLogging = true) — containers log to stdout/stderr.
 var skipFileLogging = builder.Configuration.GetValue<bool>("AppSettings:SkipFileLogging");
 if (!skipFileLogging)
 {
-    // Build log path: use TECHHUB_TMP if set (Docker), otherwise .tmp (local dev)
-    var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? ".tmp";
+    // Use TECHHUB_TMP if set (devcontainer), otherwise the system temp directory
+    var tmpDir = Environment.GetEnvironmentVariable("TECHHUB_TMP") ?? Path.GetTempPath();
     var logPath = Path.Combine(tmpDir, "logs", $"web-{builder.Environment.EnvironmentName.ToLowerInvariant()}.log");
 
     // Parse log levels from configuration
@@ -125,6 +128,14 @@ builder.Services.AddSingleton<SectionCache>();
 
 // Background service to periodically refresh the SectionCache from the API
 builder.Services.AddHostedService<SectionCacheRefreshService>();
+
+// Readiness health check: the web instance is not ready to serve traffic until the
+// SectionCache has been populated from the API. Container Apps uses /health as its
+// readiness probe, so a cold instance will not receive traffic until the cache is warm.
+// This is deliberately NOT tagged "live" — a refresh failure after startup should not
+// restart the container, only temporarily remove it from the load balancer.
+builder.Services.AddHealthChecks()
+    .AddCheck<SectionCacheHealthCheck>("section-cache");
 
 // Hero banner cache for immediate rendering without per-request API calls
 builder.Services.AddSingleton<HeroBannerCache>();
@@ -333,8 +344,8 @@ app.UseHttpsRedirection();
 
 // ── Step 2: Serve static files before validators ──────────────────────────────
 // Static files (CSS, JS, images, favicon.ico) short-circuit here so they never
-// reach the route validators below. Must be before StatusCodePages so that a
-// missing static file falls through to validation normally.
+// reach the route validators below. Must be before UseInvalidRouteSegmentFilter
+// so that static asset requests are never rejected as invalid segments.
 app.UseStaticFilesCaching();
 var contentTypeProvider = new FileExtensionContentTypeProvider();
 contentTypeProvider.Mappings[".jxl"] = "image/jxl";

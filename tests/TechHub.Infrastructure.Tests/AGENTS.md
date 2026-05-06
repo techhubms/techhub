@@ -24,7 +24,7 @@ Unit and integration tests for the Infrastructure layer. Validates repositories,
 - **Singleton services** (`MarkdownService`, `RssService`, etc.) MUST be tested with shared instances + parallel execution test. See [tests/AGENTS.md](../AGENTS.md#testing-singleton-services).
 - Content MUST be sorted by `DateEpoch` descending
 - Always test with `Europe/Brussels` timezone
-- Use `DatabaseFixture` with Testcontainers for repository tests
+- Use `DatabaseFixture` with Testcontainers for repository tests (lives in this project)
 
 ## Test Data
 

@@ -111,6 +111,33 @@ npm install
 echo "Installing markdownlint-cli2 globally..."
 npm install -g markdownlint-cli2 || echo "Warning: Failed to install markdownlint-cli2 globally, using local version from package.json"
 
+# ==================== Oh My Posh ====================
+OMP_VERSION="29.12.0"
+OMP_SHA256="946654886beb37750ec0572ed3de1792b86f06482b2fb4007403f7c94beb8d8c"
+echo "Installing Oh My Posh v${OMP_VERSION}..."
+if ! command -v oh-my-posh &> /dev/null; then
+    mkdir -p ~/.local/bin
+    curl -sSfL "https://github.com/JanDeDobbeleer/oh-my-posh/releases/download/v${OMP_VERSION}/posh-linux-amd64" \
+        -o ~/.local/bin/oh-my-posh
+    # Verify SHA256 checksum before marking executable (from checksums.txt in the release)
+    echo "${OMP_SHA256}  ${HOME}/.local/bin/oh-my-posh" | sha256sum --check --status \
+        || { echo "ERROR: Oh My Posh SHA256 checksum mismatch — aborting install"; rm -f ~/.local/bin/oh-my-posh; exit 1; }
+    chmod +x ~/.local/bin/oh-my-posh
+else
+    echo "Oh My Posh already installed"
+fi
+
+# Set up bash prompt with Oh My Posh
+if ! grep -q "oh-my-posh" "$HOME/.bashrc"; then
+    cat >> "$HOME/.bashrc" << 'BASHEOF'
+# ==================== Oh My Posh ====================
+export PATH="$HOME/.local/bin:$PATH"
+if command -v oh-my-posh &> /dev/null; then
+    eval "$(oh-my-posh init bash --config /workspaces/techhub/.devcontainer/oh-my-posh.json)"
+fi
+BASHEOF
+fi
+
 # ==================== PowerShell Modules ====================
 echo "Installing PowerShell modules..."
 pwsh -Command 'Install-Module HtmlToMarkdown -AcceptLicense -Force'
@@ -179,6 +206,11 @@ if (Test-Path $techHubRoot) {
     if (Test-Path $modulePath) {
         Import-Module $modulePath -Force -DisableNameChecking
     }
+}
+
+# ==================== Oh My Posh ====================
+if (Get-Command oh-my-posh -ErrorAction SilentlyContinue) {
+    oh-my-posh init pwsh --config /workspaces/techhub/.devcontainer/oh-my-posh.json | Invoke-Expression
 }
 
 # ==================== Welcome Message ====================

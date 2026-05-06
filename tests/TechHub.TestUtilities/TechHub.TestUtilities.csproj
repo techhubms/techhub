@@ -13,15 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
-    <PackageReference Include="Moq" />
-    <PackageReference Include="Npgsql" />
-    <PackageReference Include="Testcontainers.PostgreSql" />
-    <PackageReference Include="xunit.v3.extensibility.core" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\TechHub.Api\TechHub.Api.csproj" />
     <ProjectReference Include="..\..\src\TechHub.Core\TechHub.Core.csproj" />
     <ProjectReference Include="..\..\src\TechHub.Infrastructure\TechHub.Infrastructure.csproj" />
   </ItemGroup>

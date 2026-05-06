@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
 using TechHub.Core.Models;
+using TechHub.TestUtilities.Builders;
 using TechHub.Web.Middleware;
 using TechHub.Web.Services;
 
@@ -26,7 +27,7 @@ public class UrlNormalizationMiddlewareTests
 
     [Theory]
     [InlineData("/ai/videos/article.html", "/ai/videos/article")]
-    [InlineData("/github-copilot/features.html", "/github-copilot/features")]
+    [InlineData("/github-copilot/blogs/features.html", "/github-copilot/blogs/features")]
     [InlineData("/about.HTML", "/about")]
     public async Task MultiSegment_HtmlExtension_RedirectsToCleanPath(string input, string expected)
     {
@@ -43,7 +44,7 @@ public class UrlNormalizationMiddlewareTests
     public async Task SingleSegment_HtmlExtension_KnownSection_RedirectsToCleanPath()
     {
         // /ai.html → strip .html → /ai → known section → 301 /ai (no API call needed)
-        var cache = BuildSectionCache("ai");
+        var cache = A.SectionCache.WithSections("ai").Build();
         var mockApi = new Mock<ITechHubApiClient>();
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai.html", sectionCache: cache, mockApiClient: mockApi);
 
@@ -86,7 +87,7 @@ public class UrlNormalizationMiddlewareTests
     [Theory]
     [InlineData("/ai/videos/2026-01-12-my-article", "/ai/videos/my-article")]
     [InlineData("/dotnet/blogs/2023-04-24-how-it-works", "/dotnet/blogs/how-it-works")]
-    [InlineData("/section/collection/2000-01-01-slug", "/section/collection/slug")]
+    [InlineData("/security/news/2000-01-01-slug", "/security/news/slug")]
     public async Task MultiSegment_DatePrefix_RedirectsToCleanPath(string input, string expected)
     {
         var (middleware, context, nextCalled) = CreateMiddleware(path: input);
@@ -362,10 +363,27 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
+    public async Task OidcCallbackPath_PassesThrough_WithoutApiCall()
+    {
+        // /signin-oidc is the OIDC redirect URI handled by UseAuthentication.
+        // UrlNormalizationMiddleware runs before UseAuthentication, so it must not treat
+        // this path as a legacy content slug and must pass it through untouched.
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/signin-oidc", mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("OIDC callback path must pass through to UseAuthentication");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        mockApi.Verify(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never);
+    }
+
+    [Fact]
     public async Task KnownSectionName_PassesThrough_WithoutApiCall()
     {
         var mockApi = new Mock<ITechHubApiClient>();
-        var cache = BuildSectionCache("ai");
+        var cache = A.SectionCache.WithSections("ai").Build();
         var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai", sectionCache: cache, mockApiClient: mockApi);
 
         await middleware.InvokeAsync(context);
@@ -481,18 +499,343 @@ public class UrlNormalizationMiddlewareTests
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
     }
 
-    // ── Helpers ─────────────────────────────────────────────────────────────
+    // ── Legacy RSS feed redirects ────────────────────────────────────────────
 
-    private static SectionCache BuildSectionCache(params string[] sectionNames)
+    [Fact]
+    public async Task FeedXml_Root_RedirectsToAllFeed()
     {
-        var cache = new SectionCache();
-        var collection = new Collection("videos", "Videos", "/ai/videos", "Videos", "Videos");
-        var sections = sectionNames
-            .Select(name => new Section(name, name.ToUpperInvariant(), "desc", $"/{name}", name, [collection]))
-            .ToList();
-        cache.Initialize(sections);
-        return cache;
+        // /feed.xml is the old "everything" feed root URL. Redirect to the canonical /all/feed.xml.
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/feed.xml");
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be("/all/feed.xml");
+        nextCalled().Should().BeFalse();
     }
+
+    [Fact]
+    public async Task FeedXml_KnownSection_RedirectsToSectionFeed()
+    {
+        // /security.xml was the old per-section feed URL. Redirect to /security/feed.xml.
+        var cache = A.SectionCache.WithSections("security").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/security.xml", sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be("/security/feed.xml");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("ai")]
+    [InlineData("azure")]
+    [InlineData("github-copilot")]
+    public async Task FeedXml_KnownSection_CaseInsensitive_UsesCanonicalSectionName(string sectionName)
+    {
+        // /AI.XML should redirect to /ai/feed.xml using the canonical casing from the section cache.
+        var cache = A.SectionCache.WithSections(sectionName).Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: $"/{sectionName.ToUpperInvariant()}.xml",
+            sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be($"/{sectionName}/feed.xml");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task FeedXml_UnknownSection_PassesThrough_WithoutApiCall()
+    {
+        // /wordpress.xml is not a known section — falls through to InvalidRouteSegmentMiddleware
+        // which treats it as a probe and returns 404. No API call should be made.
+        var cache = A.SectionCache.WithSections("ai").Build();
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/wordpress.xml",
+            sectionCache: cache,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("unknown .xml paths must pass through — InvalidRouteSegmentMiddleware handles them");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        mockApi.Verify(
+            x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()),
+            Times.Never,
+            "static file extension short-circuits the legacy API lookup");
+    }
+
+    [Fact]
+    public async Task FeedXml_MultiSegment_NotRedirected()
+    {
+        // /all/feed.xml and /security/feed.xml are already canonical — must not be touched.
+        var cache = A.SectionCache.WithSections("security").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/security/feed.xml", sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("/security/feed.xml is already the canonical URL");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+    }
+
+    [Fact]
+    public async Task FeedXml_SectionXml_CacheNotReady_PassesThrough()
+    {
+        // When the section cache is not ready (API down at startup), /{sectionName}.xml
+        // cannot be validated against the cache. Pass through rather than blocking a
+        // legitimate feed URL — consistent with the broader policy of avoiding false-404s
+        // during cache warmup/unavailability.
+        var emptyCache = SectionCacheBuilder.Empty();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai.xml", sectionCache: emptyCache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("section feed URLs must not be blocked when the cache is not ready");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    // ── Multi-segment section/collection validation ─────────────────────────
+
+    [Theory]
+    [InlineData("/fakesection/videos/my-article")]
+    [InlineData("/fakesection/videos")]
+    [InlineData("/doesnotexist/anything")]
+    public async Task MultiSegment_UnknownSection_Returns404(string path)
+    {
+        // The section cache has "ai" only — anything else is unknown.
+        var cache = A.SectionCache.WithSections("ai").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound,
+            "requests to non-existent sections are rejected before reaching Blazor");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task MultiSegment_KnownSection_UnknownCollection_Returns404()
+    {
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos", "blogs").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai/notacollection", sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound,
+            "requests to a collection that doesn't exist in a known section are rejected early");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("/ai/videos")]
+    [InlineData("/ai/blogs")]
+    [InlineData("/ai/videos/my-slug")]
+    public async Task MultiSegment_KnownSection_KnownCollection_PassesThrough(string path)
+    {
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos", "blogs").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"{path} has a valid section and collection");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/ai/all")]
+    [InlineData("/github-copilot/all")]
+    [InlineData("/security/all")]
+    public async Task MultiSegment_KnownSection_VirtualAllCollection_PassesThrough(string path)
+    {
+        // /{sectionName}/all is a valid Blazor route handled by SectionCollection.razor.
+        // It is a virtual "show all content" view — not stored as a real API collection —
+        // so IsKnownCollection returns false. The middleware must NOT 404 these paths.
+        var sectionName = path.TrimStart('/').Split('/')[0];
+        var cache = A.SectionCache.WithSections(sectionName).WithCollections("videos", "blogs").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"{path} is a valid section 'all' view and must not be 404'd");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Fact]
+    public async Task MultiSegment_UnknownSection_WithHtmlExtension_Returns404_NotRedirect()
+    {
+        // After normalization /fakesection/article.html → /fakesection/article.
+        // The normalized path is invalid — return 404 directly, not a 301 to another 404.
+        var cache = A.SectionCache.WithSections("ai").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/fakesection/article.html", sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound,
+            "normalization must not issue a redirect to a URL that would itself 404");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task MultiSegment_KnownSection_UnknownCollection_WithHtmlExtension_Returns404()
+    {
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai/notacollection/article.html", sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("/_blazor/negotiate")]
+    [InlineData("/_framework/blazor.server.js")]
+    [InlineData("/_content/some/asset.js")]
+    public async Task MultiSegment_FrameworkPaths_PassThrough(string path)
+    {
+        var cache = A.SectionCache.WithSections("ai").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"framework paths must always pass through regardless of cache contents");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/admin/users")]
+    [InlineData("/admin/content/edit")]
+    [InlineData("/error/details")]
+    public async Task MultiSegment_KnownNonSectionPages_PassThrough(string path)
+    {
+        var cache = A.SectionCache.WithSections("ai").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"known non-section pages (admin, error, etc.) may have sub-paths");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/all")]
+    [InlineData("/all/all")]
+    [InlineData("/all/roundups")]       // real collection in ai section
+    [InlineData("/all/news")]           // real collection in ai section
+    [InlineData("/all/videos")]         // real collection in ai section
+    [InlineData("/all/authors")]        // dedicated virtual sub-page (Authors.razor)
+    [InlineData("/all/feed.xml")]       // file extension — passed to RSS endpoint
+    [InlineData("/all/roundups/my-article")]
+    [InlineData("/all/authors/john-doe")]
+    public async Task VirtualSection_All_ValidPaths_PassThrough(string path)
+    {
+        // /all is a virtual section (not in the API cache) that aggregates content across
+        // all real sections. Valid sub-paths include the "all" keyword, dedicated virtual pages
+        // (authors), file extensions (feeds), and any collection in any real section.
+        var cache = A.SectionCache.WithSections("ai").WithCollections("roundups", "news", "videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"valid /all path '{path}' must pass through to Blazor routing");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Theory]
+    [InlineData("/all/garbage")]
+    [InlineData("/all/nonexistent-collection")]
+    public async Task VirtualSection_All_InvalidSubPath_Returns404(string path)
+    {
+        // /all only permits real section collections, dedicated virtual pages, "all", and
+        // file extensions. Names that don't match any real section's collection return 404.
+        var cache = A.SectionCache.WithSections("ai").WithCollections("roundups", "news", "videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound,
+            $"unknown /all sub-path '{path}' must return 404");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Theory]
+    [InlineData("/css/article.css")]
+    [InlineData("/css/sidebar.css")]
+    [InlineData("/js/scroll-manager.js")]
+    [InlineData("/js/page-scripts.js")]
+    [InlineData("/images/logo.png")]
+    [InlineData("/images/section-backgrounds/ai.jxl")]
+    [InlineData("/images/section-backgrounds/github-copilot.webp")]
+    [InlineData("/fakesection/something.css")]
+    public async Task MultiSegment_StaticFilePaths_PassThrough_RegardlessOfSection(string path)
+    {
+        // Static assets like /css/article.css must reach UseStaticFiles even when
+        // the first path segment is not a known section name.
+        var cache = A.SectionCache.WithSections("ai").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: path, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue($"static asset path {path} must always pass through to UseStaticFiles");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Fact]
+    public async Task MultiSegment_CacheNotReady_PassesThrough_WithoutFalse404()
+    {
+        // Empty cache = API was down at startup. Must not 404 valid-looking paths.
+        var emptyCache = SectionCacheBuilder.Empty();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai/videos/my-article", sectionCache: emptyCache);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("an empty cache must not cause false 404s during API outages");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+    }
+
+    [Fact]
+    public async Task SingleSegment_CacheNotReady_PassesThrough_WithoutApiCall()
+    {
+        // Empty cache = API was down at startup.
+        // Real section routes like /ai must not trigger a legacy API lookup just because
+        // GetSectionByName returns null when the cache is empty — that would add unnecessary
+        // latency and warning noise for every section request during startup/API outages.
+        var emptyCache = SectionCacheBuilder.Empty();
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai", sectionCache: emptyCache, mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("a single-segment section route must pass through when the cache is not ready");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        mockApi.Verify(
+            x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()),
+            Times.Never,
+            "legacy lookup must be skipped when the section cache is not ready");
+    }
+
+    [Fact]
+    public async Task MultiSegment_KnownSection_ValidCollection_WithDatePrefix_RedirectsToCleanPath()
+    {
+        // Normalization strips the date, validation confirms the result is valid, then redirect.
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/videos/2026-01-12-my-article",
+            sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be("/ai/videos/my-article");
+        nextCalled().Should().BeFalse();
+    }
+
+    // ── Helpers ─────────────────────────────────────────────────────────────
 
     private static IServiceScopeFactory BuildScopeFactory(ITechHubApiClient apiClient)
     {
@@ -528,7 +871,10 @@ public class UrlNormalizationMiddlewareTests
                 .ReturnsAsync(apiResult);
         }
 
-        var cache = sectionCache ?? new SectionCache();
+        // Default to a production-like ready cache so the !IsReady guard does not
+        // short-circuit tests. Tests that specifically exercise the "cache not ready"
+        // path pass SectionCacheBuilder.Empty() explicitly.
+        var cache = sectionCache ?? A.SectionCache.Build();
         var scopeFactory = BuildScopeFactory(mock.Object);
         var middleware = new UrlNormalizationMiddleware(
             next,

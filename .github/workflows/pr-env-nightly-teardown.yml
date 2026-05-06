@@ -1,0 +1,124 @@
+name: Nightly PR Environment Teardown
+
+on:
+  schedule:
+    # 21:00 UTC = 23:00 Brussels (CEST/summer, UTC+2). In winter (CET/UTC+1) this is 22:00 Brussels.
+    - cron: '0 21 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'List environments without deleting them'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: write
+
+jobs:
+  teardown-all-pr-envs:
+    name: Teardown All PR Environments
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Azure Login
+        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Discover BEFORE teardown so we know which PRs to update comments on afterwards.
+      - name: Discover active PR environments
+        id: discover
+        shell: pwsh
+        run: |
+          $stagingRG = 'rg-techhub-staging'
+          $prNumbers = [System.Collections.Generic.SortedSet[int]]::new()
+
+          $caApps = az containerapp list `
+            --resource-group $stagingRG `
+            --query "[?starts_with(name, 'ca-techhub-api-pr-')].name" -o tsv 2>$null
+          if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($caApps)) {
+            foreach ($app in ($caApps -split "`n")) {
+              if ($app -match 'ca-techhub-api-pr-(\d+)') { [void]$prNumbers.Add([int]$Matches[1]) }
+            }
+          }
+
+          # Also scan PostgreSQL servers — catches orphaned DBs with no matching Container App
+          $pgServers = az postgres flexible-server list `
+            --resource-group $stagingRG `
+            --query "[?starts_with(name, 'psql-techhub-pr-')].name" -o tsv 2>$null
+          if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($pgServers)) {
+            foreach ($server in ($pgServers -split "`n")) {
+              if ($server -match 'psql-techhub-pr-(\d+)') { [void]$prNumbers.Add([int]$Matches[1]) }
+            }
+          }
+
+          $csv = $prNumbers -join ','
+          Write-Host $(if ($prNumbers.Count -eq 0) { "No active PR environments found." } else { "Found PR(s): $csv" })
+          "pr-numbers=$csv" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+          "count=$($prNumbers.Count)" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+
+      - name: Teardown all PR environments
+        id: teardown
+        shell: pwsh
+        run: |
+          $dryRunFlag = if ('${{ inputs.dry_run }}' -eq 'true') { @('-DryRun') } else { @() }
+          ./scripts/Teardown-PrEnvironments.ps1 @dryRunFlag
+
+      - name: Update PR comments with nightly teardown notice
+        if: steps.discover.outputs.count != '0' && inputs.dry_run != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REDEPLOY_WORKFLOW_URL: https://github.com/${{ github.repository }}/actions/workflows/pr-env-redeploy.yml
+        run: |
+          IFS=',' read -ra PR_NUMS <<< "${{ steps.discover.outputs.pr-numbers }}"
+          for PR_NUMBER in "${PR_NUMS[@]}"; do
+            [[ "$PR_NUMBER" =~ ^[0-9]+$ ]] || continue
+
+            COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${PR_NUMBER}/comments" \
+              --jq 'first(.[] | select(.body | startswith("<!-- PR-PREVIEW -->")) | .id) // empty' 2>/dev/null || true)
+
+            cat > /tmp/pr-nightly-teardown.md << EOF
+          <!-- PR-PREVIEW -->
+          ## ⏰ PR Preview Environment — Nightly Teardown
+
+          The preview environment was automatically torn down as part of the nightly cleanup (23:00 Brussels time).
+
+          **To resume testing:**
+
+          - Push a new commit to this branch to automatically re-deploy (full CI + new images), or
+          - Trigger the [Redeploy PR Environment](${REDEPLOY_WORKFLOW_URL}) workflow manually to redeploy using the last-built image (no new commit needed).
+          EOF
+
+            if [ -n "$COMMENT_ID" ]; then
+              gh api "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" \
+                --method PATCH \
+                -f body="$(cat /tmp/pr-nightly-teardown.md)"
+            else
+              gh pr comment "$PR_NUMBER" --body-file /tmp/pr-nightly-teardown.md 2>/dev/null || true
+            fi
+          done
+
+      - name: Summary
+        if: always()
+        run: |
+          COUNT="${{ steps.discover.outputs.count }}"
+          PR_NUMBERS="${{ steps.discover.outputs.pr-numbers }}"
+          DRY_RUN="${{ inputs.dry_run }}"
+
+          echo "## ⏰ Nightly PR Environment Teardown" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$COUNT" = "0" ]; then
+            echo "✅ No active PR environments found — nothing to do." >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$DRY_RUN" = "true" ]; then
+            echo "🔍 **Dry run** — found PR environment(s): \`${PR_NUMBERS}\`" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo "Re-run without dry run to actually teardown." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "🗑️ Tore down **${COUNT}** PR environment(s): \`${PR_NUMBERS}\`" >> "$GITHUB_STEP_SUMMARY"
+          fi

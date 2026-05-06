@@ -1,0 +1,120 @@
+name: Redeploy PR Environment
+
+on:
+  workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'PR number to redeploy (e.g. 42)'
+        required: true
+        type: string
+
+# Concurrency: cancel any in-progress redeploy for the same PR to avoid conflicts.
+# Uses the same group name as the CI preview deploy so they don't race each other.
+concurrency:
+  group: pr-preview-${{ inputs.pr_number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: write
+
+jobs:
+  redeploy-pr-env:
+    name: Redeploy PR #${{ inputs.pr_number }}
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Azure Login
+        uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Find latest ACR image tag for PR
+        id: find-tag
+        shell: pwsh
+        run: |
+          $prNumber = '${{ inputs.pr_number }}'
+          $registryName = 'crtechhubms'
+          $tagPrefix = "pr-${prNumber}-"
+
+          # List tags for techhub-api ordered by creation time descending
+          $tags = az acr repository show-tags `
+            --name $registryName `
+            --repository 'techhub-api' `
+            --orderby time_desc `
+            --query "[?starts_with(@, '${tagPrefix}')]" `
+            -o tsv 2>$null
+
+          if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($tags)) {
+            Write-Host "No images found for PR #${prNumber} in ACR ($registryName)." -ForegroundColor Red
+            Write-Host "" -ForegroundColor Red
+            Write-Host "Options:" -ForegroundColor Yellow
+            Write-Host "  1. Push a new commit to the PR branch — CI will build new images and deploy automatically." -ForegroundColor Yellow
+            Write-Host "  2. Verify the PR number is correct." -ForegroundColor Yellow
+            exit 1
+          }
+
+          # Take the most recent tag (first due to time_desc ordering)
+          $latestTag = ($tags -split "`n" |
+            Where-Object { $_ -match "^${tagPrefix}" } |
+            Select-Object -First 1).Trim()
+
+          if ([string]::IsNullOrWhiteSpace($latestTag)) {
+            Write-Host "No matching tags found for prefix '${tagPrefix}'." -ForegroundColor Red
+            exit 1
+          }
+
+          Write-Host "Latest image tag for PR #${prNumber}: $latestTag" -ForegroundColor Green
+          "tag=$latestTag" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
+
+      - name: Deploy PR preview environment
+        id: deploy
+        shell: pwsh
+        env:
+          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+        run: |
+          ./scripts/Deploy-PrPreview.ps1 `
+            -PrNumber ${{ inputs.pr_number }} `
+            -Action deploy `
+            -Tag "${{ steps.find-tag.outputs.tag }}"
+
+      - name: Post or update PR comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_NUMBER="${{ inputs.pr_number }}"
+          WEB_URL="https://ca-techhub-web-pr-${PR_NUMBER}.${{ steps.deploy.outputs.cae-default-domain }}"
+          TAG="${{ steps.find-tag.outputs.tag }}"
+
+          cat > /tmp/pr-preview-comment.md << EOF
+          <!-- PR-PREVIEW -->
+          ## 🚀 PR Preview Environment
+
+          A preview environment has been deployed for this pull request.
+
+          | | |
+          |---|---|
+          | **Web URL** | ${WEB_URL} |
+          | **Image tag** | \`${TAG}\` |
+
+          > [!NOTE]
+          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the staging Azure Container Apps Environment.
+          > It will be automatically removed when this PR is closed.
+          EOF
+
+          COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${PR_NUMBER}/comments" \
+            --jq 'first(.[] | select(.body | startswith("<!-- PR-PREVIEW -->")) | .id) // empty')
+
+          if [ -n "$COMMENT_ID" ]; then
+            gh api "repos/${{ github.repository }}/issues/comments/${COMMENT_ID}" \
+              --method PATCH \
+              -f body="$(cat /tmp/pr-preview-comment.md)"
+          else
+            gh pr comment "$PR_NUMBER" --body-file /tmp/pr-preview-comment.md
+          fi

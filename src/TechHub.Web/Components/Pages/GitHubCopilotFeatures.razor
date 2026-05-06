@@ -2,8 +2,8 @@
 @using TechHub.Core.Models
 @using TechHub.Web.Services
 @implements IDisposable
+@inherits PageComponentBase
 
-@inject IJSRuntime JS
 @inject ITechHubApiClient ApiClient
 @inject NavigationManager Navigation
 @inject ErrorService ErrorService
@@ -217,12 +217,6 @@ else if (_notFound)
             return text ?? string.Empty;
 
         return text[..maxLength] + "...";
-    }
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        // Filtering is fully server-side Blazor; no JS init needed
-        await JS.InvokeVoidAsync("markScriptsReady");
     }
 
     protected override async Task OnInitializedAsync()

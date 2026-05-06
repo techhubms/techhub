@@ -192,12 +192,13 @@ completed roundup directly to the `content_items` table (`collection_name = 'rou
    and `ai_metadata`, filtered by `created_at` within the target week
 2. **Relevance filtering** — Per section: always includes all `high`-relevance articles; fills up
    to `MinArticlesPerSection` with `medium` then `low` articles if the high count is below the minimum
-3. **Step 3** — AI creates news-style narrative stories per section
-4. **Step 4** — AI adds continuity by comparing with the previous week's roundup
-5. **Step 6** — AI condenses the content paragraph-by-paragraph
-6. **Step 7** — AI generates metadata: `title`, `description`, `tags`, `introduction`
-7. **Step 8** — Table of contents is built from `##`/`###` headers (pure C#)
-8. **DB write** — Upserts into `content_items` + `content_tags_expanded`
+3. **AI metadata backfill** — Any articles missing `ai_metadata` are categorized on-the-fly before proceeding
+4. **Step 1/5** — AI creates news-style narrative stories per section
+5. **Step 2/5** — AI adds continuity by comparing with the previous week's roundup
+6. **Step 3/5** — AI condenses the content paragraph-by-paragraph
+7. **Step 4/5** — AI generates metadata: `title`, `description`, `tags`, `introduction`
+8. **Step 5/5** — Table of contents is built from `##`/`###` headers (pure C#)
+9. **DB write** — Upserts into `content_items` + `content_tags_expanded`
 
 Writing style guidelines (`docs/writing-style-guidelines.md`) are injected into every AI step
 prompt to ensure consistent tone and style throughout the roundup.

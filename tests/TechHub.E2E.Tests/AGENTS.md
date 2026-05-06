@@ -53,9 +53,16 @@ Centralized in [PlaywrightCollectionFixture.cs](PlaywrightCollectionFixture.cs):
 
 ### Network Throttling (CI Simulation)
 
-Set `E2E_NETWORK_THROTTLE` environment variable: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+Use the `-NetworkProfile` parameter on `Run` — it sets `E2E_NETWORK_THROTTLE` for the duration and clears it afterwards:
 
-Run with throttle:
+```powershell
+Run -TestProject E2E -NetworkProfile wan
+Run -TestProject E2E -NetworkProfile slow3g -TestName BackNavigation -RepeatTests 5
+```
+
+Profiles: `ci` (2x CPU throttle), `regular4g`, `fast3g`, `slow3g`, `wan` (150ms latency, simulates GitHub runner → remote Azure Container App). Uses CDP via `PlaywrightTestBase.InitializeAsync()`. See [Helpers/NetworkThrottling.cs](Helpers/NetworkThrottling.cs).
+
+Alternatively, set the environment variable directly (it won't be auto-cleared):
 
 ```powershell
 $env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E
@@ -65,9 +72,9 @@ $env:E2E_NETWORK_THROTTLE = "wan"; Run -TestProject E2E
 
 A monotonic lifecycle counter replaces independent `window.__*` flags. Every JS lifecycle hook calls `__e2eSignal(label)` which increments the counter. Test helpers capture counter before actions and wait for it to change.
 
-**Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`), `scripts-loading`/`scripts-ready`/`mermaid-rendered` (from `page-scripts.js`), `scroll-listener:{triggerId}`/`scroll-disposed:{triggerId}` (from `infinite-scroll.js`), `toc-initialized`/`toc-active-updated` (from `toc-scroll-spy.js`), `scroll-end` (browser `scrollend` event).
+**Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`), `scripts-loading`/`scripts-ready`/`mermaid-rendered` (from `page-scripts.js`), `scroll-listener:{triggerId}`/`scroll-disposed:{triggerId}`/`toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event).
 
-Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
+Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scales by network profile: 10s local, 30s regular4g/wan/ci, 45s fast3g, 60s slow3g; 60s in CI without a profile), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
 
 **Key public helpers**:
 
@@ -82,8 +89,8 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (60s)
 | `ScrollToLoadMoreAsync(count)` | Scroll infinite scroll until item count |
 | `ScrollToEndOfContentAsync()` | Scroll until end-of-content marker |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
-| `WaitForConditionAsync(js)` | Wait for JS condition (60s default) |
-| `WaitForBlazorReadyAsync()` | Wait for `__blazorServerReady` + scripts + Mermaid (first-load only) |
+| `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (uses `E2ETimeout`; scales 10–60 s by network profile); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |
+| `WaitForBlazorReadyAsync()` | Wait for Blazor ready + `__scriptsReady` (which already includes Mermaid via `allComponentsReady()`) |
 
 ## Wait Pattern Best Practices
 

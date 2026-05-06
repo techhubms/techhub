@@ -7,7 +7,7 @@
             <span class="date-range-label">@FormatDate(CurrentFromDate) – @FormatDate(CurrentToDate)</span>
         </div>
 
-        <div class="slider-container" @ref="_sliderContainer">
+        <div id="date-range-slider" class="slider-container" @ref="_sliderContainer">
             <div class="slider-track">
                 <div class="slider-fill" style="left: @GetFillLeft()%; width: @GetFillWidth()%;"></div>
             </div>

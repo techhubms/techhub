@@ -254,17 +254,30 @@ public class SidebarTocTests : PlaywrightTestBase
         // Get initial scroll position (fully settled after mermaid rendering + scroll anchoring)
         var initialScrollY = await Page.EvaluateAsync<double>("window.scrollY");
 
-        // Act - Click the TOC link for the same section (should already be there)
+        // Act - Click the TOC link for the same section
         var tocLink = Page.Locator(".sidebar-toc a[href$='#types-of-prompts-and-messages']");
         await tocLink.ClickAndWaitForScrollAsync();
 
-        // Get final scroll position
-        var finalScrollY = await Page.EvaluateAsync<double>("window.scrollY");
+        // Assert - The heading should be visible in the viewport after the TOC link click.
+        // Under slow network, images and Mermaid diagrams can load after scrollend fires,
+        // shifting the heading's viewport position without triggering another scrollend.
+        // Wait for the page layout to fully settle (no DOM mutations / resize events for
+        // 150 ms) so we assert the position the user actually sees.
+        await Page.WaitForLayoutSettledAsync();
 
-        // Assert - Scroll position should be identical (hash navigation landed correctly)
-        var scrollDifference = Math.Abs(finalScrollY - initialScrollY);
-        scrollDifference.Should().Be(0,
-            $"Expected zero scroll change when clicking TOC link for current section. Initial: {initialScrollY}px, Final: {finalScrollY}px");
+        var headingTop = await Page.EvaluateAsync<double>(@"
+            () => {
+                const el = document.getElementById('types-of-prompts-and-messages');
+                return el ? el.getBoundingClientRect().top : -1;
+            }");
+
+        // Heading must be visible in the 1920×1080 viewport.  After scroll+layout settle,
+        // lazy-loaded images above the heading may have pushed it down, but it must still
+        // be on screen.  The upper bound is the viewport height minus a small margin.
+        headingTop.Should().BeGreaterThanOrEqualTo(-5,
+            $"Heading should not be above the viewport. ScrollY before click: {initialScrollY}px");
+        headingTop.Should().BeLessThanOrEqualTo(1020,
+            $"Heading should be visible in the viewport after TOC link click. Heading top: {headingTop}px, initial scroll: {initialScrollY}px");
     }
 
     #endregion
