@@ -15,7 +15,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Always check for errors after editing files** (`get_errors` tool)
 - **Always fix all linter issues**
 - **Always store temp files, scripts, output, etc in `.tmp/`**
-- **Always use PowerShell for terminal commands and scripts** (save save scripts as `.ps1`, then execute)
+- **Always use PowerShell for terminal commands and scripts** (save scripts as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise**
 - **Always go back to Step 2** when struggling or working on something you haven't read docs for
