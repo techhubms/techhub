@@ -306,6 +306,15 @@ public partial class UrlNormalizationMiddleware
     /// </summary>
     private bool IsLegacyLookupCandidate(string segment)
     {
+        // Guard: if the cache is empty (API was down at startup), skip the legacy lookup.
+        // GetSectionByName returns null for everything when the cache is empty, so real
+        // section routes like /ai would fall through and trigger an unnecessary API call
+        // with retries. Pass through instead — same policy as IsValidMultiSegmentPath.
+        if (!_sectionCache.IsReady)
+        {
+            return false;
+        }
+
         // Framework-internal paths (e.g. _blazor, _framework) are never content slugs.
         if (segment.StartsWith('_'))
         {

@@ -781,6 +781,27 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
+    public async Task SingleSegment_CacheNotReady_PassesThrough_WithoutApiCall()
+    {
+        // Empty cache = API was down at startup.
+        // Real section routes like /ai must not trigger a legacy API lookup just because
+        // GetSectionByName returns null when the cache is empty — that would add unnecessary
+        // latency and warning noise for every section request during startup/API outages.
+        var emptyCache = new SectionCache(); // never initialized
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/ai", sectionCache: emptyCache, mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("a single-segment section route must pass through when the cache is not ready");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        mockApi.Verify(
+            x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()),
+            Times.Never,
+            "legacy lookup must be skipped when the section cache is not ready");
+    }
+
+    [Fact]
     public async Task MultiSegment_KnownSection_ValidCollection_WithDatePrefix_RedirectsToCleanPath()
     {
         // Normalization strips the date, validation confirms the result is valid, then redirect.
