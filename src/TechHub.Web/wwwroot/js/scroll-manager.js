@@ -319,6 +319,16 @@ window.__restoreScrollPosition = restoreScrollPosition;
  */
 function finishNavigation() {
     navigating = false;
+    // If the infinite-scroll sentinel became intersecting during back/forward
+    // restoration (while navigating was truthy), the IO callback returned early
+    // and will never re-fire (IO only triggers on state changes). Flush the
+    // pending flag now so the user doesn't end up stuck near the bottom.
+    if (infiniteScrollState?.pendingIntersect) {
+        const { helper, observer } = infiniteScrollState;
+        observer.disconnect();
+        infiniteScrollState = null;
+        helper.invokeMethodAsync('LoadNextBatch');
+    }
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();
 }
@@ -830,7 +840,15 @@ export function observeScrollTrigger(helper, triggerElementId) {
     const observer = new IntersectionObserver(entries => {
         const entry = entries[entries.length - 1];
         if (!entry.isIntersecting) return;
-        if (navigating) return; // nav in progress — back/forward nav; observer stays active
+        if (navigating) {
+            // Nav in progress (back/forward restore) — the observer stays active but
+            // we record the pending intersection so finishNavigation() can flush it.
+            // Without this, the IO fires once while navigating=truthy, returns here,
+            // and never re-fires (IO only triggers on state *changes*), leaving
+            // infinite scroll stuck after back-nav near the bottom.
+            if (infiniteScrollState) infiniteScrollState.pendingIntersect = true;
+            return;
+        }
         // Trigger entered the viewport+margin — disconnect immediately so we
         // cannot fire again while the batch loads. observeScrollTrigger will be
         // called again by Blazor after the next render, creating a new observer.
@@ -840,7 +858,7 @@ export function observeScrollTrigger(helper, triggerElementId) {
     }, { rootMargin: `0px 0px ${TRIGGER_MARGIN_PX}px 0px` });
 
     observer.observe(trigger);
-    infiniteScrollState = { helper, triggerElementId, observer };
+    infiniteScrollState = { helper, triggerElementId, observer, pendingIntersect: false };
 
     // E2E test signals
     window.__scrollListenerReady ??= {};

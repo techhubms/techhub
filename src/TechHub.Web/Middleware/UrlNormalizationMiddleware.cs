@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using TechHub.Core.Models;
 using TechHub.Core.Validation;
 using TechHub.Web.Services;
 
@@ -136,6 +137,25 @@ public partial class UrlNormalizationMiddleware
         if (string.IsNullOrEmpty(segment))
         {
             Redirect(context, "/" + context.Request.QueryString);
+            return;
+        }
+
+        // When the section cache is not ready, skip all cache-dependent logic and legacy API
+        // lookups. Apply any static normalization (.html / date prefix) that was already
+        // computed, then pass through. The SectionCacheHealthCheck keeps this instance out
+        // of the load balancer until the cache is populated, so this branch is only hit during
+        // the brief window between startup and first API response (or a mid-deployment outage).
+        if (!_sectionCache.IsReady)
+        {
+            if (pathChanged)
+            {
+                Redirect(context, normalizedPath + context.Request.QueryString);
+            }
+            else
+            {
+                await _next(context);
+            }
+
             return;
         }
 
@@ -306,14 +326,9 @@ public partial class UrlNormalizationMiddleware
     /// </summary>
     private bool IsLegacyLookupCandidate(string segment)
     {
-        // Guard: if the cache is empty (API was down at startup), skip the legacy lookup.
-        // GetSectionByName returns null for everything when the cache is empty, so real
-        // section routes like /ai would fall through and trigger an unnecessary API call
-        // with retries. Pass through instead — same policy as IsValidMultiSegmentPath.
-        if (!_sectionCache.IsReady)
-        {
-            return false;
-        }
+        // Note: the !_sectionCache.IsReady guard lives in InvokeAsync (before this call)
+        // so that it can distinguish pathChanged vs. not-changed. Here we only check
+        // structural properties of the segment itself.
 
         // Framework-internal paths (e.g. _blazor, _framework) are never content slugs.
         if (segment.StartsWith('_'))
@@ -395,6 +410,14 @@ public partial class UrlNormalizationMiddleware
         }
 
         // /{sectionName}.xml → /{sectionName}/feed.xml
+        // If the section cache is not ready (API down at startup), pass through rather
+        // than blocking legitimate feed URLs — consistent with the broader policy of
+        // avoiding false-404s during cache warmup/unavailability.
+        if (!_sectionCache.IsReady)
+        {
+            return false;
+        }
+
         // Strip ".xml" (4 chars) to get the candidate section name.
         var nameWithoutXml = segment[..^4];
         var section = _sectionCache.GetSectionByName(nameWithoutXml);

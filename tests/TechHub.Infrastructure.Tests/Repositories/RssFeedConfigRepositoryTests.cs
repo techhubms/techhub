@@ -2,7 +2,6 @@ using FluentAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Repositories;
-using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 

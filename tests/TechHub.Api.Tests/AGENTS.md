@@ -6,9 +6,8 @@ Integration tests for the REST API using xUnit and WebApplicationFactory, backed
 
 ## Test Infrastructure
 
-- `TechHubApiFactory.cs` (via TechHub.TestUtilities) — Custom `WebApplicationFactory<Program>` with PostgreSQL Testcontainer
-- Test classes use `IClassFixture<TechHubApiFactory>` to share the factory
-- See [TechHub.TestUtilities/AGENTS.md](../TechHub.TestUtilities/AGENTS.md) for factory details
+- `TechHubApiFactory.cs` — Custom `WebApplicationFactory<Program>` with PostgreSQL Testcontainer (lives in this project)
+- Test classes use `IClassFixture<TechHubIntegrationTestApiFactory>` to share the factory
 
 ## What to Test
 

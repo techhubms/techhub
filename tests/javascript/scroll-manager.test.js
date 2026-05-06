@@ -709,6 +709,29 @@ describe('scroll-manager.js', () => {
             expect(observer.disconnected).toBe(false); // stays active for when nav completes
         });
 
+        it('should call LoadNextBatch after navigation completes if trigger was intersecting during traverse', () => {
+            createTriggerElement();
+            const helper = createMockHelper();
+
+            // Trigger back-nav (sets navigating = 'traverse')
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const observer = window.__mockObservers.at(-1);
+
+            // IO fires while navigating — should record pending, not call LoadNextBatch yet
+            observer.trigger(true);
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // finishNavigation via restoreScrollPosition (rAF is sync in tests)
+            window.__restoreScrollPosition();
+
+            // Now that navigating=false, the pending intersect should have been flushed
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+            expect(observer.disconnected).toBe(true);
+        });
+
         it('should create a new observer on re-attach after batch load', () => {
             createTriggerElement();
             const helper = createMockHelper();

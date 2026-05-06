@@ -7,10 +7,11 @@ using Microsoft.Extensions.Logging;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
+using TechHub.TestUtilities;
 using Testcontainers.PostgreSql;
 using Xunit;
 
-namespace TechHub.TestUtilities;
+namespace TechHub.Api.Tests;
 
 /// <summary>
 /// Abstract base WebApplicationFactory for all API tests.

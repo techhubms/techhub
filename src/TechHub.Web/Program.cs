@@ -9,6 +9,7 @@ using Microsoft.Identity.Web;
 using Microsoft.Identity.Web.UI;
 using Polly;
 using TechHub.Core.Logging;
+using TechHub.Core.Models;
 using TechHub.Core.Validation;
 using TechHub.ServiceDefaults;
 using TechHub.Web.Components;
@@ -127,6 +128,14 @@ builder.Services.AddSingleton<SectionCache>();
 
 // Background service to periodically refresh the SectionCache from the API
 builder.Services.AddHostedService<SectionCacheRefreshService>();
+
+// Readiness health check: the web instance is not ready to serve traffic until the
+// SectionCache has been populated from the API. Container Apps uses /health as its
+// readiness probe, so a cold instance will not receive traffic until the cache is warm.
+// This is deliberately NOT tagged "live" — a refresh failure after startup should not
+// restart the container, only temporarily remove it from the load balancer.
+builder.Services.AddHealthChecks()
+    .AddCheck<SectionCacheHealthCheck>("section-cache");
 
 // Hero banner cache for immediate rendering without per-request API calls
 builder.Services.AddSingleton<HeroBannerCache>();
