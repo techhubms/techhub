@@ -257,7 +257,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
                        ogTitle?.content?.length > 0 &&
                        jsonLd !== null;
             }",
-            expectedPath);
+            arg: expectedPath);
 
     /// <summary>
     /// Reads a meta tag's content attribute, retrying through Blazor HeadContent rehydration gaps.
@@ -298,7 +298,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
                     });
                     return match ? match.textContent : null;
                 }",
-                schemaType);
+                arg: schemaType);
             return await handle.JsonValueAsync<string?>();
         }
         catch (TimeoutException)

@@ -139,7 +139,9 @@ export async function initMermaid() {
             mermaid.initialize(config);
         }
 
-        // Render diagrams every time (for Blazor navigation)
+        // Render diagrams every time (for Blazor navigation).
+        // Signal not-ready before async work so markScriptsReady defers until done.
+        window.__mermaidReady = false;
         try {
             await mermaid.run({ nodes: mermaidElements });
             if (typeof window.__e2eSignal === 'function') window.__e2eSignal('mermaid-rendered');
@@ -174,9 +176,12 @@ export async function initMermaid() {
             }
         } catch (error) {
             console.error('Mermaid rendering failed:', error);
+        } finally {
+            window.__mermaidReady = true;
         }
     } catch (error) {
         console.error('Failed to load Mermaid:', error);
+        window.__mermaidReady = true;
     }
 }
 
@@ -252,7 +257,7 @@ export async function initTocScrollSpy() {
     if (!tocElement) return;
 
     try {
-        const module = await import('./toc-scroll-spy.js');
+        const module = await import('./scroll-manager.js');
         module.initTocScrollSpy();
     } catch (error) {
         console.error('Failed to load TOC scroll spy:', error);
@@ -365,15 +370,27 @@ window.initMermaid = initMermaid;
 window.initTocScrollSpy = initTocScrollSpy;
 window.initCustomPages = initCustomPages;
 
-// ─── E2E Test Flags ──────────────────────────────────────────────────────────
-// E2E tests poll for __scriptsReady to know when page scripts are done.
+// ─── Script Lifecycle Flag ────────────────────────────────────────────────────
+// Single flag: window.__scriptsReady
+//   false     = page scripts are loading (blocks WaitForBlazorReadyAsync)
+//   true      = page scripts complete (WaitForBlazorReadyAsync passes)
+//   undefined = initial page load / no scripts on page (passes through)
+//
 // Components call markScriptsLoading() before and markScriptsReady() after their
-// init calls, so E2E tests can wait for a stable state.
-// markScriptsReady also triggers scroll position restoration on back/forward navigation.
+// init calls. markScriptsReady also triggers scroll position restoration.
+//
+// markScriptsReady defers setting __scriptsReady = true until all component-level
+// JS init is confirmed done. Each component that does JS work owns a ready flag:
+//   __scrollListenerReady['scroll-trigger']  — ContentItemsGrid (scroll-manager.js)
+//   __dateRangeSliderReady                   — DateRangeSlider (date-range-slider.js)
+// Components set their flag false at start and true when done (including on all
+// early-exit paths). They reset it to false in their dispose so the next navigation
+// starts clean. markScriptsReady only checks a component's flag if its DOM element
+// is present on the current page (#scroll-trigger, #date-range-slider).
 
 window.markScriptsLoading = function() {
     window.__scriptsReady = false;
-    window.__scriptsLoading = true;
+    window.__markScriptsReadyStart = null; // reset deadline for new navigation cycle
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-loading');
 };
 
@@ -381,17 +398,66 @@ window.markScriptsReady = function() {
     // Guard: only process once per navigation. Multiple components may call this
     // (page component + layout fallback) — the first call does the work.
     if (window.__scriptsReady === true) {
-        // Even if scripts are already marked ready (e.g., enhancedload hasn't fired yet
-        // to reset the flag), still attempt scroll restore. restoreScrollPosition is safe
-        // to call multiple times — it only restores on traverse navigation.
+        // Still attempt scroll restore — restoreScrollPosition is safe
+        // to call multiple times (only restores on traverse navigation).
         if (typeof window.__restoreScrollPosition === 'function') {
             window.__restoreScrollPosition();
         }
         return;
     }
 
+    // Defer until all component JS that signals readiness is complete.
+    // Components set their own flag to false when they start initializing and
+    // true when done. We only check if the corresponding DOM element is present
+    // so pages without these components are not affected.
+    //
+    // Known component flags:
+    //   __scrollListenerReady['scroll-trigger'] — set by ContentItemsGrid via scroll-manager.js
+    //   __dateRangeSliderReady                  — set by DateRangeSlider via date-range-slider.js
+    //   __mermaidReady                          — set by initMermaid() in page-scripts.js
+    function allComponentsReady() {
+        if (document.getElementById('scroll-trigger') &&
+            !window.__scrollListenerReady?.['scroll-trigger']) {
+            return false;
+        }
+        if (document.getElementById('date-range-slider') &&
+            !window.__dateRangeSliderReady) {
+            return false;
+        }
+        // Scoped to .article-body: Mermaid diagrams only appear in article content.
+        // __mermaidReady is set false before mermaid.run() and true when done (all paths).
+        if (document.querySelector('.article-body pre.mermaid:not([data-processed="true"])') &&
+            !window.__mermaidReady) {
+            return false;
+        }
+        return true;
+    }
+
+    if (!allComponentsReady()) {
+        // Retry after a short tick. 10ms polling is fast enough to be
+        // imperceptible but cheap. The components finish within a single
+        // SignalR round-trip so this loop rarely iterates more than once.
+        //
+        // Bounded deadline: if a component flag is never set (e.g. JS init
+        // threw before setting __mermaidReady / __dateRangeSliderReady /
+        // __scrollListenerReady), we give up after 60 s and proceed anyway
+        // so WaitForBlazorReadyAsync does not hang indefinitely.
+        //
+        // 60 s matches the maximum E2ETimeout (slow3g / CI profile), so under
+        // normal slow-network conditions (e.g. mermaid loading on slow3g) the
+        // component finishes long before this fires. WaitForBlazorReadyAsync
+        // will produce a proper Playwright timeout first in broken cases;
+        // this is just the last-resort JS safety net.
+        window.__markScriptsReadyStart ??= Date.now();
+        if (Date.now() - window.__markScriptsReadyStart > 60_000) {
+            console.warn('[page-scripts] markScriptsReady: component flags not ready after 60 s — proceeding anyway to unblock navigation. Check for JS init errors.');
+        } else {
+            setTimeout(window.markScriptsReady, 10);
+            return;
+        }
+    }
+
     window.__scriptsReady = true;
-    window.__scriptsLoading = false;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-ready');
 
     // Restore scroll position on back/forward navigation.

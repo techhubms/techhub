@@ -51,7 +51,7 @@ This directory contains all automated tests implementing a **testing diamond str
 
 **CRITICAL**: If a service is registered as **Singleton** in production, tests MUST use a shared instance and include a parallel execution test to catch mutable state bugs.
 
-**Singleton Services** (see `src/TechHub.Api/Program.cs`): `MarkdownService`, `SectionRepository`, `ContentRepository`, `RssService`
+**Singleton Services** (singletons that tests construct directly — see `src/TechHub.Api/Program.cs`): `StartupStateService`, `ISqlDialect`/`PostgresDialect`, `IDbConnectionFactory`/`PostgresConnectionFactory`, `TimeProvider`. Background services (`ContentProcessingBackgroundService`, etc.) are also singletons but are not constructed directly in unit tests.
 
 **Pattern**: Create shared instance in test constructor, add `ParallelExecution_ProducesConsistentResults` test. See `MarkdownServiceTests.cs` for the pattern.
 

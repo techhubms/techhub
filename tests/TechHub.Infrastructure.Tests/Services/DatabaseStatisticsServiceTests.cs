@@ -2,7 +2,6 @@ using Dapper;
 using FluentAssertions;
 using Microsoft.Extensions.Logging.Abstractions;
 using TechHub.Infrastructure.Services;
-using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Services;
 

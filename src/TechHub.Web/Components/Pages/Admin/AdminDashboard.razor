@@ -7,7 +7,7 @@
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
 @inject ILogger<AdminDashboard> Logger
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Admin Dashboard — TechHub</PageTitle>
 
@@ -217,11 +217,6 @@
     private string? _expandedLogOutput;
     private PersistingComponentStateSubscription? _persistSubscription;
     private CancellationTokenSource? _pollCts;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override async Task OnInitializedAsync()
     {

@@ -47,19 +47,22 @@ public static class BlazorHelpers
     // ============================================================================
     // CONFIGURATION - Centralized timeout management
     //
-    // SINGLE TIMEOUT: All E2E operations use one generous timeout (60s).
-    // With counter-based polling (100ms intervals checking one window property),
-    // timeouts are pure safety nets — they should never fire in normal operation.
-    // 60s is generous enough for the slowest CI runner while adding zero overhead
-    // to fast runs (polling exits as soon as the counter increments).
+    // SINGLE TIMEOUT: All E2E operations use one timeout that scales with the active
+    // network profile. Counter-based polling (100ms intervals) means this is a pure
+    // safety net — it only fires on genuine hangs. The timeout is tuned per profile:
+    //   no profile (local fast) → 10s
+    //   regular4g / wan / ci   → 30s
+    //   fast3g                 → 45s
+    //   slow3g                 → 60s
+    // CI without a profile also gets 60s (GitHub Actions sets CI=true).
     // ============================================================================
 
     /// <summary>
-    /// Single timeout for all E2E operations. Counter-based polling at 100ms means
-    /// this is a pure safety net that should never fire. 60s accommodates even the
-    /// slowest CI runners without penalizing fast local runs.
+    /// Single timeout for all E2E operations. Scales with E2E_NETWORK_THROTTLE (set by
+    /// Run -NetworkProfile) and CI environment. Counter-based polling at 100ms means
+    /// this is a pure safety net that should never fire in normal operation.
     /// </summary>
-    internal const int E2ETimeout = 60_000;
+    internal static int E2ETimeout { get; } = ResolveTimeout();
 
     /// <summary>
     /// Polling interval for WaitForFunctionAsync operations.
@@ -76,6 +79,20 @@ public static class BlazorHelpers
 
     /// <summary>Base URL for the Web frontend. Override with E2E_BASE_URL env var for CI/staging.</summary>
     public static readonly string BaseUrl = (Environment.GetEnvironmentVariable("E2E_BASE_URL") ?? "https://localhost:5003").TrimEnd('/');
+
+    private static int ResolveTimeout()
+    {
+        var profile = Environment.GetEnvironmentVariable("E2E_NETWORK_THROTTLE") ?? "";
+        var isCI = string.Equals(Environment.GetEnvironmentVariable("CI"), "true", StringComparison.OrdinalIgnoreCase);
+        return profile switch
+        {
+            "slow3g" => 60_000,
+            "fast3g" => 45_000,
+            "regular4g" or "wan" or "ci" => 30_000,
+            _ => isCI ? 60_000   // GitHub Actions (CI=true) without a profile
+                      : 10_000,  // Local fast mode
+        };
+    }
 
     // ============================================================================
     // SAFE WaitForFunctionAsync WRAPPERS
@@ -112,10 +129,35 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The page to evaluate on</param>
     /// <param name="expression">JavaScript expression that returns a truthy/falsy value, e.g. "() => document.querySelector('.card') !== null"</param>
-    public static Task<IJSHandle> WaitForConditionAsync(
+    /// <param name="onTimeout">Optional JavaScript expression evaluated when the wait times out.
+    /// Its result is appended to the timeout message for diagnostics, e.g.
+    /// <c>"() => JSON.stringify({scrollY: window.scrollY})"</c>.</param>
+    public static async Task<IJSHandle> WaitForConditionAsync(
         this IPage page,
-        string expression) =>
-        page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+        string expression,
+        string? onTimeout = null)
+    {
+        try
+        {
+            return await page.WaitForFunctionAsync(expression, null, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+        }
+        catch (TimeoutException ex) when (onTimeout != null)
+        {
+            string diagInfo;
+            try
+            {
+                diagInfo = await page.EvaluateAsync<string>(onTimeout);
+            }
+#pragma warning disable CA1031 // Diagnostics fallback must not throw — any evaluation error is swallowed and reported as fallback text
+            catch (Exception diagEx)
+#pragma warning restore CA1031
+            {
+                diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
+            }
+
+            throw new TimeoutException($"{ex.Message}\nActual state: {diagInfo}", ex);
+        }
+    }
 
     /// <summary>
     /// Waits for a parameterized JavaScript condition to become truthy.
@@ -141,11 +183,38 @@ public static class BlazorHelpers
     /// <param name="page">The page to evaluate on</param>
     /// <param name="expression">JavaScript expression accepting one arg</param>
     /// <param name="arg">Value passed to the JavaScript function</param>
-    public static Task<IJSHandle> WaitForConditionAsync(
+    /// <param name="onTimeout">Optional JavaScript expression evaluated when the wait times out.
+    /// Its result is appended to the timeout message for diagnostics, e.g.
+    /// <c>"() => JSON.stringify({scrollY: window.scrollY})"</c>.</param>
+    public static async Task<IJSHandle> WaitForConditionAsync(
         this IPage page,
         string expression,
-        object arg) =>
-        page.WaitForFunctionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+        object arg,
+        string? onTimeout = null)
+    {
+        try
+        {
+            return await page.WaitForFunctionAsync(expression, arg, new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+        }
+        catch (TimeoutException ex) when (onTimeout != null)
+        {
+            string diagInfo;
+            try
+            {
+                diagInfo = await page.EvaluateAsync<string>(onTimeout);
+            }
+#pragma warning disable CA1031 // Diagnostics fallback must not throw — any evaluation error is swallowed and reported as fallback text
+            catch (Exception diagEx)
+#pragma warning restore CA1031
+            {
+                diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
+            }
+
+            var argJson = System.Text.Json.JsonSerializer.Serialize(arg);
+            throw new TimeoutException(
+                $"{ex.Message}\nExpected: {argJson}\nActual state: {diagInfo}", ex);
+        }
+    }
 
     // ============================================================================
     // RETRY-UNTIL-PASS — The Playwright-idiomatic fix for flaky Blazor interactions
@@ -172,8 +241,9 @@ public static class BlazorHelpers
     /// </summary>
     public static async Task RetryUntilPassAsync(
         Func<Task> action,
-        int totalTimeoutMs = E2ETimeout)
+        int totalTimeoutMs = -1)
     {
+        if (totalTimeoutMs < 0) totalTimeoutMs = E2ETimeout;
         // Progressive backoff matches Playwright's JS toPass default intervals.
         // This is retry backoff between genuine assertion attempts — not an
         // arbitrary "wait for something to happen" sleep.
@@ -188,7 +258,9 @@ public static class BlazorHelpers
                 await action();
                 return;
             }
+#pragma warning disable CA1031 // RetryUntilPassAsync must catch all exceptions to measure retry progress
             catch (Exception ex)
+#pragma warning restore CA1031
             {
                 last = ex;
             }
@@ -241,6 +313,55 @@ public static class BlazorHelpers
             new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
 
     // ============================================================================
+    // SCROLL POSITIONING — Reliable scroll-to-Y for tests
+    //
+    // Under slow networks, the page may not have reached its final height when
+    // WaitForBlazorReadyAsync returns (images still loading, lazy content not yet
+    // rendered). scrollTo(0, y) is capped by the browser to maxScroll = scrollHeight
+    // - innerHeight. This helper retries scrollTo on each poll iteration until
+    // scrollY actually reaches the target — naturally waiting for the page to grow.
+    //
+    // FUTURE: If Blazor adds native scroll positioning via NavigationManager, the
+    // JS implementation here can be swapped without changing any call sites.
+    // ============================================================================
+
+    /// <summary>
+    /// Scrolls to a specific Y position, retrying until the page is tall enough.
+    /// Dispatches a synthetic <c>scroll</c> event after each attempt so that
+    /// scroll-manager.js records the position (headless Chrome doesn't fire scroll
+    /// events from programmatic <c>scrollTo</c>).
+    ///
+    /// <para>Use this instead of raw <c>Page.EvaluateAsync("window.scrollTo(...)")</c>
+    /// in all test code that needs a specific scroll position.</para>
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="y">Target vertical scroll position in pixels</param>
+    public static async Task ScrollToPositionAsync(
+        this IPage page,
+        int y)
+    {
+        await page.WaitForFunctionAsync(
+            @"(targetY) => {
+                window.scrollTo(0, targetY);
+                window.dispatchEvent(new Event('scroll'));
+                return window.scrollY === targetY;
+            }",
+            y,
+            new PageWaitForFunctionOptions { Timeout = E2ETimeout, PollingInterval = E2EPollingInterval });
+
+        // Lock the saved scroll position so that Playwright's scrollIntoViewIfNeeded
+        // (which fires before click events) cannot overwrite it via scroll events.
+        // scroll-manager.js reads this lock in saveScrollPosition() and clears it
+        // when restoreScrollPosition() starts.
+        await page.EvaluateAsync(
+            @"(targetY) => {
+                const key = location.pathname + location.search;
+                window.__scrollSaveLock = { key, value: targetY };
+            }",
+            y);
+    }
+
+    // ============================================================================
     // INFINITE SCROLL - Reliable scroll-to-load pattern
     // ============================================================================
 
@@ -251,7 +372,7 @@ public static class BlazorHelpers
     /// Uses <c>window.scrollTo</c> to scroll to the bottom of the page on each poll
     /// iteration. After scrolling, a synthetic <c>scroll</c> event is dispatched because
     /// headless Chrome does not fire scroll events from programmatic <c>scrollTo</c> calls.
-    /// The infinite-scroll.js handler listens for these events and uses
+    /// The scroll-manager.js handler listens for these events and uses
     /// <c>getBoundingClientRect</c> to check whether the trigger element is near the
     /// viewport, invoking <c>LoadNextBatch</c> when it is.
     /// </summary>
@@ -279,7 +400,7 @@ public static class BlazorHelpers
 
         // On each poll: scroll to bottom and dispatch a synthetic scroll event.
         // Headless Chrome does not fire scroll events from programmatic scrollTo,
-        // so the explicit dispatchEvent is required for the infinite-scroll.js handler
+        // so the explicit dispatchEvent is required for the scroll-manager.js handler
         // to detect the trigger element's position via getBoundingClientRect().
         // Uses E2ETimeout: loading the next batch requires an API round-trip.
         await page.WaitForFunctionAsync(
@@ -311,7 +432,7 @@ public static class BlazorHelpers
     /// </summary>
     /// <param name="page">The page to scroll</param>
     /// <param name="endSelector">CSS selector for the end-of-content marker (default: ".end-of-content")</param>
-    /// <param name="triggerId">The id of the scroll-trigger element used by infinite-scroll.js</param>
+    /// <param name="triggerId">The id of the scroll-trigger element used by scroll-manager.js</param>
     public static async Task ScrollToEndOfContentAsync(
         this IPage page,
         string endSelector = ".end-of-content",
@@ -355,7 +476,7 @@ public static class BlazorHelpers
     /// <see cref="WaitForScrollListenerReattachAsync"/> to wait for a fresh attachment.
     ///
     /// The version counter is incremented each time <c>observeScrollTrigger()</c> runs
-    /// in infinite-scroll.js. It is never reset, so comparing before/after values
+    /// in scroll-manager.js. It is never reset, so comparing before/after values
     /// reliably detects whether a new listener was attached.
     /// </summary>
     /// <param name="page">The Playwright page</param>
@@ -561,14 +682,10 @@ public static class BlazorHelpers
             // 1. Blazor runtime exists
             // 2. Interactive runtime is ready (Server/WASM circuit established)
             // 3. Page scripts finished loading (mermaid, highlight.js, custom-pages, etc.)
-            // 4. Mermaid diagrams rendered (if present on page)
-            //
-            // Previously these were 3 separate WaitForConditionAsync calls, each requiring
-            // its own browser round-trip and polling cycle. Combining them into one eliminates
-            // ~100-200ms overhead per navigation across 200+ navigations in the E2E suite.
-            //
-            // Adding Mermaid check here (instead of separate call after) saves another ~50-150ms
-            // on pages with diagrams by eliminating another browser round trip.
+            // Previously these were 3 separate WaitForConditionAsync calls. Combining into one
+            // eliminates ~100-200ms overhead per navigation across 200+ navigations in the E2E suite.
+            // Mermaid readiness is covered by __scriptsReady: markScriptsReady() defers until
+            // __mermaidReady is true (set by initMermaid on all exit paths).
             await page.WaitForConditionAsync(@"
                 () => {
                     // Step 1: Blazor runtime must exist
@@ -583,20 +700,13 @@ public static class BlazorHelpers
                         return false;
                     }
 
-                    // Step 3: Page scripts must not be actively loading
-                    // __scriptsLoading is set true by markScriptsLoading() when page scripts start,
-                    // and set false by markScriptsReady() when they complete.
-                    // Only block if scripts are ACTIVELY loading. If both flags are undefined,
-                    // the page has no page scripts (e.g., SectionCollection.razor) — proceed immediately.
-                    if (window.__scriptsLoading === true) return false;
-
-                    // Step 4: Mermaid diagrams rendered (if present)
-                    // Only wait if page has <pre class='mermaid'> elements that haven't been converted to SVG yet
-                    const mermaidPres = document.querySelectorAll('pre.mermaid');
-                    if (mermaidPres.length > 0) {
-                        const renderedSvgs = document.querySelectorAll('svg[id^=""mermaid-""]');
-                        if (renderedSvgs.length < mermaidPres.length) return false;
-                    }
+                    // Step 3: Page scripts must be ready (or not applicable).
+                    // __scriptsReady is set false by navigation handlers when scripts start loading,
+                    // and set true by markScriptsReady() when ALL component flags are confirmed
+                    // (scroll listener, date-range slider, mermaid). Only block if explicitly
+                    // false (loading). If undefined (initial page load or page with no scripts),
+                    // proceed immediately.
+                    if (window.__scriptsReady === false) return false;
 
                     return true;
                 }
@@ -653,15 +763,16 @@ public static class BlazorHelpers
     public static async Task ClickAndExpectAsync(
         this ILocator locator,
         Func<Task> assertion,
-        int totalTimeoutMs = E2ETimeout)
+        int totalTimeoutMs = -1)
     {
+        if (totalTimeoutMs < 0) totalTimeoutMs = E2ETimeout;
         var page = locator.Page;
         var urlBefore = page.Url;
 
         await locator.WaitForBlazorInteractivityAsync();
         await RetryUntilPassAsync(async () =>
         {
-            await locator.ClickAsync(new() { Force = true, Timeout = 2000 });
+            await locator.ClickAsync(new() { Timeout = 2000 });
             await assertion();
         }, totalTimeoutMs);
 
@@ -852,14 +963,39 @@ public static class BlazorHelpers
     /// Waits for URL with standard timeout (glob pattern).
     /// Centralized timeout management.
     /// </summary>
-    public static Task WaitForURLWithTimeoutAsync(
+    /// <param name="page">The page to observe</param>
+    /// <param name="urlPattern">Glob pattern the URL must match</param>
+    /// <param name="options">Optional Playwright wait options</param>
+    /// <param name="onTimeout">Optional JavaScript expression evaluated when the wait times out.
+    /// Its result is appended to the timeout message for diagnostics.</param>
+    public static async Task WaitForURLWithTimeoutAsync(
         this IPage page,
         string urlPattern,
-        PageWaitForURLOptions? options = null)
+        PageWaitForURLOptions? options = null,
+        string? onTimeout = null)
     {
         var opts = options ?? new PageWaitForURLOptions();
         opts.Timeout ??= E2ETimeout;
-        return page.WaitForURLAsync(urlPattern, opts);
+        try
+        {
+            await page.WaitForURLAsync(urlPattern, opts);
+        }
+        catch (TimeoutException ex) when (onTimeout != null)
+        {
+            string diagInfo;
+            try
+            {
+                diagInfo = await page.EvaluateAsync<string>(onTimeout);
+            }
+#pragma warning disable CA1031 // Diagnostics fallback must not throw — any evaluation error is swallowed and reported as fallback text
+            catch (Exception diagEx)
+#pragma warning restore CA1031
+            {
+                diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
+            }
+
+            throw new TimeoutException($"{ex.Message}\nActual state: {diagInfo}", ex);
+        }
     }
 
     /// <summary>
@@ -1162,8 +1298,10 @@ public static class BlazorHelpers
         var page = locator.Page;
         var counterBefore = await page.GetE2ECounterAsync();
 
-        // Click the element (triggers anchor navigation / scrolling)
-        await locator.ClickAsync(new() { Force = true });
+        // Click the element (triggers anchor navigation / scrolling).
+        // Do NOT use Force = true — let Playwright wait for the element to be visible
+        // and actionable, which naturally handles slow rendering (e.g. slow3g).
+        await locator.ClickAsync();
 
         // Wait for scroll-end signal (from scrollend event listener in App.razor)
         await page.WaitForE2ESignalAsync(counterBefore, "scroll-end");
@@ -1173,6 +1311,48 @@ public static class BlazorHelpers
         // succeed immediately if the signal already appeared, or the scroll-end
         // gives the spy time to fire via rAF before the next assertion.
     }
+
+    /// <summary>
+    /// Waits for the page layout to stop changing — i.e., no DOM mutations or resize
+    /// events for <paramref name="debounceMs"/> milliseconds.
+    ///
+    /// Uses the same ResizeObserver + MutationObserver debounce pattern as the
+    /// <c>restoreScrollPosition</c> deferred path in scroll-manager.js: both observers
+    /// share a single debounce timer that resets on every change. Once the page has
+    /// been quiet for <paramref name="debounceMs"/> ms the returned task completes.
+    ///
+    /// Use this after an action that triggers async layout shifts (lazy-loading images,
+    /// Mermaid diagrams, Blazor re-renders) before asserting element positions.
+    /// </summary>
+    /// <param name="page">The Playwright page</param>
+    /// <param name="debounceMs">Silence window in ms before resolving (default 150)</param>
+    /// <param name="deadlineMs">Hard timeout in ms (default 5000)</param>
+    public static Task WaitForLayoutSettledAsync(
+        this IPage page,
+        int debounceMs = 150,
+        int deadlineMs = 5000) =>
+        page.EvaluateAsync(@"
+            ([debounce, deadline]) => new Promise((resolve) => {
+                let timer = null;
+                function reset() {
+                    if (timer !== null) clearTimeout(timer);
+                    timer = setTimeout(finish, debounce);
+                }
+                function finish() {
+                    ro.disconnect();
+                    mo.disconnect();
+                    clearTimeout(deadlineTimer);
+                    resolve();
+                }
+                const ro = new ResizeObserver(reset);
+                const mo = new MutationObserver(reset);
+                const deadlineTimer = setTimeout(finish, deadline);
+                ro.observe(document.documentElement);
+                mo.observe(document.body, { childList: true, subtree: true });
+                // Kick off the initial debounce — if nothing changes it resolves naturally.
+                reset();
+            })",
+            new[] { debounceMs, deadlineMs });
 
     /// <summary>
     /// Scrolls the page programmatically and waits for the TOC scroll-spy to update.
@@ -1270,7 +1450,7 @@ public static class BlazorHelpers
     ///
     /// Playwright's <c>ClickAsync</c> calls <c>scrollIntoViewIfNeeded</c> before clicking,
     /// which fires a scroll event that can overwrite a saved scroll position in
-    /// <c>infinite-scroll.js</c>. Using JS <c>.click()</c> dispatches the click event
+    /// <c>scroll-manager.js</c>. Using JS <c>.click()</c> dispatches the click event
     /// directly — Blazor's router intercepts it for enhanced (SPA-style) navigation
     /// without any side-effect scrolling.
     ///

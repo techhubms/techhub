@@ -70,8 +70,12 @@
 
 .nav-spinner {
     position: fixed;
-    inset: 0;
-    z-index: var(--z-index-modal);
+    /* Offset top by the sticky header height so the blur doesn't cover the nav */
+    top: var(--main-nav-height);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: calc(var(--z-index-sticky) - 1); /* below header (1000), above content */
     pointer-events: none;
     opacity: 0;
     /* Subtle dark tint + backdrop blur so the page is clearly "loading" */

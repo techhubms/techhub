@@ -9,4 +9,5 @@ public static class A
     public static ContentItemBuilder ContentItem => new();
     public static SectionBuilder Section => new();
     public static CollectionBuilder Collection => new();
+    public static SectionCacheBuilder SectionCache => new();
 }

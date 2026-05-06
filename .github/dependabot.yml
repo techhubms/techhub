@@ -35,3 +35,30 @@ updates:
       docker-all:
         patterns:
           - "*"
+
+  - package-ecosystem: docker
+    directory: /src/TechHub.Api
+    schedule:
+      interval: weekly
+    groups:
+      docker-all:
+        patterns:
+          - "*"
+
+  - package-ecosystem: docker
+    directory: /src/TechHub.Web
+    schedule:
+      interval: weekly
+    groups:
+      docker-all:
+        patterns:
+          - "*"
+
+  - package-ecosystem: devcontainers
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      devcontainers-all:
+        patterns:
+          - "*"

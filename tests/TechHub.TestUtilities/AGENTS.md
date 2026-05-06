@@ -21,23 +21,18 @@ var item = A.ContentItem.Build();                              // Defaults
 var news = A.ContentItem.WithCollectionName("news").Build();   // Override
 var section = A.Section.WithName("github-copilot").Build();
 var collection = A.Collection.WithName("videos").Build();
+var cache = A.SectionCache.Build();                           // Ready, all 7 sections
+var cache = A.SectionCache.WithSections("ai").Build();        // Custom sections
+var empty = A.SectionCache.Empty();                           // Not-ready cache
 ```
 
-**Defaults**: ContentItem → roundups collection, ai section. Section → ai with blogs/news. Collection → blogs.
+**Defaults**: ContentItem → roundups collection, ai section. Section → ai with blogs/news. Collection → blogs. SectionCache → all 7 real sections × 5 collections, ready state.
 
-## Factory Classes
+## Shared Utilities
 
-### TechHubIntegrationTestApiFactory
-
-- `IntegrationTest` environment with PostgreSQL Testcontainer (`postgres:17-alpine`)
-- Seeds database from `TestCollections/` folder
-- Usage: `IClassFixture<TechHubIntegrationTestApiFactory>`
-
-### DatabaseFixture
-
-- Repository-level integration tests with PostgreSQL Testcontainer
-- Runs migrations and seeds automatically
-- Usage: `IClassFixture<DatabaseFixture<MyTest>>`
+- `TestCollectionsSeeder` — seeds a database from the `TestCollections/` folder using production sync logic
+- `TestDataConstants` — expected counts for test data (used by Api.Tests + Infrastructure.Tests)
+- `ConfigurationHelper` — loads `appsettings.json` into `AppSettings` for tests that need real config
 
 ## Configuration
 

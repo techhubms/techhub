@@ -4,10 +4,11 @@ using Microsoft.Extensions.Logging.Abstractions;
 using Npgsql;
 using TechHub.Core.Logging;
 using TechHub.Infrastructure.Data;
+using TechHub.TestUtilities;
 using Testcontainers.PostgreSql;
 using Xunit;
 
-namespace TechHub.TestUtilities;
+namespace TechHub.Infrastructure.Tests;
 
 /// <summary>
 /// Base fixture for integration tests that need a database.

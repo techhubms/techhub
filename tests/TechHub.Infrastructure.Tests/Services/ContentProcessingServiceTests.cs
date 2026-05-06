@@ -11,7 +11,6 @@ using TechHub.Core.Models.ContentProcessing;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
 using TechHub.Infrastructure.Services.ContentProcessing;
-using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Services;
 

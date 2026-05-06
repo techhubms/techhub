@@ -73,9 +73,9 @@ Each project has its own AGENTS.md with detailed patterns.
 
 ## Dependency Injection Service Lifetimes
 
-- **Singleton**: `ISectionRepository`, `ISqlDialect`, `IDbConnectionFactory`, `IMemoryCache`
+- **Singleton**: `ISqlDialect`, `IDbConnectionFactory`, `IMemoryCache`
 - **Scoped**: `IDbConnection`, `ITechHubApiClient`
-- **Transient**: `IContentRepository`, `IMarkdownService`, `IRssService`, `ITagCloudService`, `MigrationRunner`
+- **Transient**: `IContentRepository`, `IMarkdownService`, `IRssService`, `IMigrationRunner`
 - Always use Options pattern for configuration (never `builder.Configuration["Key"]`)
 
 ## Port Configuration

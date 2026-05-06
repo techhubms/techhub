@@ -12,7 +12,6 @@ describe('page-scripts.js', () => {
         delete window.markScriptsLoading;
         delete window.markScriptsReady;
         delete window.__scriptsReady;
-        delete window.__scriptsLoading;
         delete window.__e2eSignal;
 
         // Provide CDN config that page-scripts.js expects
@@ -62,23 +61,21 @@ describe('page-scripts.js', () => {
             expect(typeof window.markScriptsReady).toBe('function');
         });
 
-        it('should set __scriptsReady=false and __scriptsLoading=true on loading', async () => {
+        it('should set __scriptsReady=false on loading', async () => {
             await import(MODULE_PATH);
 
             window.markScriptsLoading();
 
             expect(window.__scriptsReady).toBe(false);
-            expect(window.__scriptsLoading).toBe(true);
         });
 
-        it('should set __scriptsReady=true and __scriptsLoading=false on ready', async () => {
+        it('should set __scriptsReady=true on ready', async () => {
             await import(MODULE_PATH);
 
             window.markScriptsLoading();
             window.markScriptsReady();
 
             expect(window.__scriptsReady).toBe(true);
-            expect(window.__scriptsLoading).toBe(false);
         });
 
         it('should fire e2eSignal events', async () => {

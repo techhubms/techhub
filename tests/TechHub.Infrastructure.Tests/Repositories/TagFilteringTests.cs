@@ -7,7 +7,6 @@ using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 using TechHub.Infrastructure.Data;
 using TechHub.Infrastructure.Repositories;
-using TechHub.TestUtilities;
 
 namespace TechHub.Infrastructure.Tests.Repositories;
 

@@ -189,7 +189,7 @@ Focus outlines are **keyboard-only** — they appear only when the user navigate
 
 ### How It Works
 
-1. **JavaScript detection** (`nav-helpers.js`): A `keydown` listener on `document` adds the `keyboard-nav` CSS class to `<html>` when the Tab key is pressed. A `pointerdown` listener removes it when mouse/touch input is detected. The `pointerdown` handler also **blurs non-input elements** (buttons, links) to prevent lingering focus states on mobile.
+1. **JavaScript detection** (`scroll-manager.js`): A `keydown` listener on `document` adds the `keyboard-nav` CSS class to `<html>` when the Tab key is pressed. A `pointerdown` listener removes it when mouse/touch input is detected. The `pointerdown` handler also **blurs non-input elements** (buttons, links) to prevent lingering focus states on mobile.
 2. **CSS scoping** (`base.css`): All focus outline styles are scoped under `html.keyboard-nav :focus-visible`. Without the `keyboard-nav` class, `:focus` and `:focus-visible` outlines are suppressed globally via `outline: none !important`.
 3. **Sticky hover prevention**: Interactive elements (buttons, tag cloud items, toolbar buttons) use `@media (hover: none)` to reset hover styles on touch-only devices. This prevents the `:hover` state from "sticking" after a tap, which would make deactivated buttons still appear highlighted.
 4. **Design tokens**: `--focus-outline-width: 2px` and `--focus-outline-offset: 2px` in `design-tokens.css`.

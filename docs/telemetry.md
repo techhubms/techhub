@@ -105,7 +105,7 @@ This makes the span appear on the **Failures** blade in Application Insights, en
 
 > **Note**: Single-segment URLs handled entirely by `UrlNormalizationMiddleware` (returning HTTP 404 directly) are automatically tracked as failures by ASP.NET Core request tracing — no extra code needed. The `Activity.SetStatus` calls above cover the in-page cases where the Blazor component renders inline not-found content (the `NotFoundContent` component also sets `HttpContext.Response.StatusCode = 404` during SSR prerendering, so the HTTP response carries a real 404 for crawlers even in those cases).
 
-Bot-generated not-found spans are suppressed by `TelemetryNoiseProcessor` (see [src/TechHub.ServiceDefaults/TelemetryNoiseProcessor.cs](../src/TechHub.ServiceDefaults/TelemetryNoiseProcessor.cs)), so bot traffic does not inflate the failure rate.
+Scanner/probe requests and bot crawlers are **excluded entirely** from tracing by the `options.Filter` predicate in `ConfigureOpenTelemetry` (see `Extensions.cs`). Probe paths are filtered via `ProbeDetector.IsProbeRequest()` and bot user agents via `WebTelemetryFilters.IsBotRequest()` — no Activity span is ever started for these requests, so they cannot appear on the Failures blade at all.
 
 ## Google Analytics
 
@@ -144,6 +144,8 @@ When running via docker-compose (`Run -Docker`), the same setup applies - an Asp
 ## Implementation Reference
 
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) - OpenTelemetry configuration and exporter setup
+- [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) (`ConfigureOpenTelemetry`) - Inline `options.Filter` excludes health probes and scanner probes via `ProbeDetector.IsProbeRequest()` before any span is created
+- [WebTelemetryFilters.cs](../src/TechHub.Web/Telemetry/WebTelemetryFilters.cs) - Web-specific trace filters: suppresses `/_blazor/disconnect` 499s and bot requests
 - [App.razor](../src/TechHub.Web/Components/App.razor) - Browser SDK and GA4 script injection
 - [AppHost.cs](../src/TechHub.AppHost/AppHost.cs) - Aspire service orchestration
 - [docker-compose.yml](../docker-compose.yml) - Docker environment variables for OTLP and service names

@@ -149,8 +149,12 @@ public class MobileNavigationTests : PlaywrightTestBase
             await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync(
                 new() { Timeout = 2000 }));
 
-        // Act + Assert — retry overlay click until menu closes
+        // Wait for overlay to be in the DOM — it's @if (menuOpen) so it renders in the same
+        // Blazor cycle, but under load can take longer than the retry inner timeout
         var overlay = Page.Locator(".mobile-menu-overlay");
+        await Assertions.Expect(overlay).ToBeVisibleAsync();
+
+        // Act + Assert — retry overlay click until menu closes
         await BlazorHelpers.RetryUntilPassAsync(async () =>
         {
             await overlay.ClickAsync(new() { Position = new() { X = 10, Y = 200 }, Timeout = 2000 });

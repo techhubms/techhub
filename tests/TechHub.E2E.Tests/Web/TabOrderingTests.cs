@@ -275,7 +275,7 @@ public class TabOrderingTests : PlaywrightTestBase
         // Wait for the skip link to be present in the new page's DOM before proceeding.
         await Page.WaitForSelectorAsync("a.skip-link");
 
-        // nav-helpers.js's resetPagePosition() schedules a requestAnimationFrame that
+        // scroll-manager.js's resetPagePosition() schedules a requestAnimationFrame that
         // sets body.tabIndex=-1, focuses body, then removes tabIndex. If that rAF fires
         // after we press Tab it will steal focus back to body, causing a flaky failure.
         // Flush any pending rAFs with a double-rAF before we take control of focus,
@@ -283,7 +283,7 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.EvaluateAsync(@"() => new Promise(resolve =>
             requestAnimationFrame(() => requestAnimationFrame(resolve)))");
 
-        // Explicitly reset focus to body (mimicking what nav-helpers.js does via rAF)
+        // Explicitly reset focus to body (mimicking what scroll-manager.js does via rAF)
         // Keep tabindex until after we press Tab to ensure proper tab order.
         await Page.EvaluateAsync(@"() => {
             document.body.tabIndex = -1;
@@ -328,7 +328,7 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/");
         await Page.WaitForSelectorAsync(".section-card");
 
-        // Flush any pending rAFs from nav-helpers.js (e.g., resetPagePosition's rAF) and
+        // Flush any pending rAFs from scroll-manager.js (e.g., resetPagePosition's rAF) and
         // ensure Tab starts from a known focus state — same pattern used by
         // TabOrdering_AfterNavigation_ShouldStart_WithSkipLink. Without this, the rAF can
         // fire after WaitForConditionAsync passes (focus != body) but before EvaluateAsync
@@ -404,17 +404,17 @@ public class TabOrderingTests : PlaywrightTestBase
         await Page.Keyboard.PressAsync("Enter");
         await Page.WaitForBlazorReadyAsync();
 
-        // Flush any pending requestAnimationFrame callbacks from nav-helpers.js before
+        // Flush any pending requestAnimationFrame callbacks from scroll-manager.js before
         // setting up the body-focus state for our Tab test.
         //
-        // When Blazor enhanced navigation fires (pushState), nav-helpers.js intercepts it
+        // When Blazor enhanced navigation fires (pushState), scroll-manager.js intercepts it
         // and schedules a rAF that: sets body.tabIndex=-1, focuses body, then REMOVES tabIndex.
         // If WaitForBlazorReadyAsync returns before that rAF fires, the test would set
-        // body.tabIndex=-1, but then nav-helpers.js's rAF fires afterwards and removes it —
+        // body.tabIndex=-1, but then scroll-manager.js's rAF fires afterwards and removes it —
         // leaving body with no tabIndex when Tab is pressed, which causes headless Chrome to
         // keep focus on body instead of moving it to the skip link.
         //
-        // By scheduling our setup inside a rAF, we run AFTER nav-helpers.js's rAF in the queue
+        // By scheduling our setup inside a rAF, we run AFTER scroll-manager.js's rAF in the queue
         // (rAF callbacks fire in the order they were scheduled). This guarantees body.tabIndex=-1
         // is set and stays set when Tab is pressed.
         await Page.EvaluateAsync(@"() => new Promise(resolve => {

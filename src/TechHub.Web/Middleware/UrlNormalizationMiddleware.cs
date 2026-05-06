@@ -1,19 +1,23 @@
 using System.Text.RegularExpressions;
+using TechHub.Core.Models;
 using TechHub.Core.Validation;
 using TechHub.Web.Services;
 
 namespace TechHub.Web.Middleware;
 
 /// <summary>
-/// Unified URL normalization middleware that handles all URL cleanup and legacy redirects
-/// in a single pass, ensuring at most one 301 redirect per request.
+/// Unified URL normalization middleware that handles URL cleanup, legacy redirects,
+/// and early structural validation — all in a single pass with at most one 301 per request.
 ///
 /// Normalizations applied to every path segment (in order):
 ///   1. Strip .html extension
 ///   2. Strip YYYY-MM-DD- date prefix
 ///
 /// After normalization:
-///   - Multi-segment paths that changed → 301 to the cleaned path.
+///   - Multi-segment paths: validate segment[0] against known sections/pages and segment[1]
+///     against the section's collections. Unknown section → 404. Unknown collection → 404.
+///     Validation is skipped when the section cache is not ready (API down at startup).
+///     If the path changed (normalization applied) and is valid → 301 to the cleaned path.
 ///   - Single-segment paths that are not a known section, page, or static file →
 ///     API legacy lookup to resolve the canonical /{section}/{collection}/{slug} URL.
 ///     If the API returns a result, redirect there directly (one redirect to the final URL).
@@ -37,7 +41,24 @@ public partial class UrlNormalizationMiddleware
         "admin",
         "health",
         "alive",
+        // OIDC callback path — must pass through to UseAuthentication, never treated as content.
+        "signin-oidc",
     };
+
+    // Virtual sections that exist in the app's routing but are not stored in the API section cache.
+    // Each entry maps the virtual section name to dedicated sub-page names that have their own
+    // Blazor page and do NOT appear as collections in any real section.
+    // The virtual "all" keyword (/{sectionName}/all) and real collection names (news, videos, etc.)
+    // are handled dynamically in IsValidMultiSegmentPath via the section cache.
+    private static readonly Dictionary<string, HashSet<string>> _knownVirtualSections =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            // "/all" aggregates content across all real sections.
+            // Dedicated sub-pages: /all/authors (Authors.razor — not a real API collection).
+            // All standard collections (roundups, news, videos, etc.) are validated dynamically
+            // via IsKnownCollectionInAnySection so new collections are picked up automatically.
+            ["all"] = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "authors" },
+        };
 
     // Matches YYYY-MM-DD- at the start of a segment. Capture group 1 is the slug remainder.
     [GeneratedRegex(@"^\d{4}-\d{2}-\d{2}-(.+)$", RegexOptions.Compiled)]
@@ -72,15 +93,31 @@ public partial class UrlNormalizationMiddleware
             return;
         }
 
+        // Legacy RSS feed redirects: handled before segment normalization so that
+        // /{sectionName}.xml paths are caught here rather than rejected as probes
+        // by InvalidRouteSegmentMiddleware further down the pipeline.
+        if (TryRedirectLegacyFeed(context, path))
+        {
+            return;
+        }
+
         // Normalize each segment: strip .html extension, strip YYYY-MM-DD- date prefix.
         var rawSegments = path.TrimStart('/').Split('/');
         var normalizedSegments = rawSegments.Select(NormalizeSegment).ToArray();
         var normalizedPath = "/" + string.Join("/", normalizedSegments);
         var pathChanged = !string.Equals(normalizedPath, path, StringComparison.Ordinal);
 
-        // Multi-segment paths: redirect to cleaned path if anything changed, else pass through.
+        // Multi-segment paths: validate section/collection against the cache, then redirect
+        // or pass through. Validation runs on the NORMALIZED segments so that a redirect
+        // never points at a URL that would 404 on the next request.
         if (normalizedSegments.Length > 1)
         {
+            if (!IsValidMultiSegmentPath(normalizedSegments))
+            {
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                return;
+            }
+
             if (pathChanged)
             {
                 Redirect(context, normalizedPath + context.Request.QueryString);
@@ -100,6 +137,25 @@ public partial class UrlNormalizationMiddleware
         if (string.IsNullOrEmpty(segment))
         {
             Redirect(context, "/" + context.Request.QueryString);
+            return;
+        }
+
+        // When the section cache is not ready, skip all cache-dependent logic and legacy API
+        // lookups. Apply any static normalization (.html / date prefix) that was already
+        // computed, then pass through. The SectionCacheHealthCheck keeps this instance out
+        // of the load balancer until the cache is populated, so this branch is only hit during
+        // the brief window between startup and first API response (or a mid-deployment outage).
+        if (!_sectionCache.IsReady)
+        {
+            if (pathChanged)
+            {
+                Redirect(context, normalizedPath + context.Request.QueryString);
+            }
+            else
+            {
+                await _next(context);
+            }
+
             return;
         }
 
@@ -167,12 +223,113 @@ public partial class UrlNormalizationMiddleware
     }
 
     /// <summary>
+    /// Validates a multi-segment normalized path against the section/collection cache.
+    /// Returns <c>false</c> (404) when:
+    /// <list type="bullet">
+    ///   <item>segment[0] is not a known section, known page, or framework prefix and the last segment has no file extension</item>
+    ///   <item>segment[0] is a known section and segment[1] is not a known collection of that section</item>
+    /// </list>
+    /// Returns <c>true</c> (pass through) when the cache is not ready, or when the path
+    /// starts with a framework/auth prefix, or when the last segment has a file extension
+    /// (static assets like /css/article.css, /images/section-backgrounds/ai.jxl),
+    /// or when the section and collection are both valid.
+    /// Slug segments (segment[2+]) are not validated here — they are verified by the DB query.
+    /// </summary>
+    private bool IsValidMultiSegmentPath(string[] segments)
+    {
+        // Guard: if the cache is empty (API was down at startup), do not false-404.
+        if (!_sectionCache.IsReady)
+        {
+            return true;
+        }
+
+        var first = segments[0];
+
+        // Framework internals (/_blazor, /_framework, /_content) — always valid.
+        if (first.StartsWith('_'))
+        {
+            return true;
+        }
+
+        // Microsoft Identity auth paths (/MicrosoftIdentity/Account/SignIn etc.)
+        if (string.Equals(first, "MicrosoftIdentity", StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
+        // Known non-section pages (about, admin, error, etc.) may have sub-paths.
+        if (_knownNonSectionPages.Contains(first))
+        {
+            return true;
+        }
+
+        // Virtual sections (not in the API cache — e.g. /all which aggregates across all sections).
+        // Valid second segments: "all" keyword, file extensions (feeds/sitemaps),
+        // dedicated virtual sub-pages (authors), or any collection known in any real section.
+        if (_knownVirtualSections.TryGetValue(first, out var virtualDedicatedPages))
+        {
+            if (segments.Length < 2)
+            {
+                return true;
+            }
+
+            var second = segments[1];
+
+            // "all" keyword, file extensions, and dedicated virtual pages are always valid.
+            if (string.Equals(second, "all", StringComparison.OrdinalIgnoreCase)
+                || Path.HasExtension(second)
+                || virtualDedicatedPages.Contains(second))
+            {
+                return true;
+            }
+
+            // Accept any collection that exists in at least one real section
+            // (roundups, news, videos, blogs, etc.) — new collections are picked up automatically.
+            // O(1) via the pre-built all-collections HashSet in SectionCache.
+            return _sectionCache.IsKnownCollectionInAnySection(second);
+        }
+
+        // If the last segment of the path has a file extension, pass through without validation.
+        // This covers static assets at any depth (e.g. /css/article.css, /images/section-backgrounds/ai.jxl)
+        // and registered endpoints with extensions (e.g. /all/feed.xml, /security/feed.xml, /sitemap.xml).
+        // UseStaticFiles or an endpoint handler downstream will serve or reject the request.
+        if (Path.HasExtension(segments[^1]))
+        {
+            return true;
+        }
+
+        // Must be a known section — otherwise 404.
+        var section = _sectionCache.GetSectionByName(first);
+        if (section == null)
+        {
+            return false;
+        }
+
+        // If there is a second segment, it must either be the virtual "all" keyword
+        // (/{sectionName}/all shows all content in that section and is handled by
+        // SectionCollection.razor — it is not stored as a real API collection) or a
+        // known collection of that section.
+        if (segments.Length >= 2
+            && !string.Equals(segments[1], "all", StringComparison.OrdinalIgnoreCase)
+            && !_sectionCache.IsKnownCollection(section.Name, segments[1]))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    /// <summary>
     /// Returns true when the segment should be looked up against the legacy slug API.
     /// Skips known non-section pages, known section names, and static file extensions.
     /// (.html has already been stripped before this check is reached.)
     /// </summary>
     private bool IsLegacyLookupCandidate(string segment)
     {
+        // Note: the !_sectionCache.IsReady guard lives in InvokeAsync (before this call)
+        // so that it can distinguish pathChanged vs. not-changed. Here we only check
+        // structural properties of the segment itself.
+
         // Framework-internal paths (e.g. _blazor, _framework) are never content slugs.
         if (segment.StartsWith('_'))
         {
@@ -180,6 +337,11 @@ public partial class UrlNormalizationMiddleware
         }
 
         if (_knownNonSectionPages.Contains(segment))
+        {
+            return false;
+        }
+
+        if (_knownVirtualSections.ContainsKey(segment))
         {
             return false;
         }
@@ -204,6 +366,70 @@ public partial class UrlNormalizationMiddleware
         }
 
         return true;
+    }
+
+    /// <summary>
+    /// Redirects legacy RSS feed URL patterns to their canonical equivalents:
+    /// <list type="bullet">
+    ///   <item><c>/feed.xml</c> → <c>/all/feed.xml</c></item>
+    ///   <item><c>/{sectionName}.xml</c> → <c>/{sectionName}/feed.xml</c> (known section only)</item>
+    /// </list>
+    /// Unknown single-segment .xml paths (e.g. <c>/wordpress.xml</c>) return <c>false</c> and
+    /// fall through to <see cref="InvalidRouteSegmentMiddleware"/> which rejects them as probes.
+    /// </summary>
+    private bool TryRedirectLegacyFeed(HttpContext context, string path)
+    {
+        // Single-segment .xml paths are candidates for legacy feed redirection.
+        // Multi-segment paths like /all/feed.xml are already correct — leave them alone.
+        // /sitemap.xml is also excluded: it is not an RSS feed and needs no redirect.
+        if (!path.EndsWith(".xml", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
+        var segment = path.TrimStart('/');
+        if (segment.Contains('/', StringComparison.Ordinal))
+        {
+            return false;
+        }
+
+        // /feed.xml → /all/feed.xml (the canonical "everything" feed)
+        if (segment.Equals("feed.xml", StringComparison.OrdinalIgnoreCase))
+        {
+            _logger.LogDebug("Legacy feed redirect: /feed.xml -> /all/feed.xml");
+            Redirect(context, "/all/feed.xml" + context.Request.QueryString);
+            return true;
+        }
+
+        // /sitemap.xml is not an RSS feed — never redirect it.
+        // Guard explicitly so a section accidentally named "sitemap" can't cause
+        // /sitemap.xml to redirect to /sitemap/feed.xml.
+        if (segment.Equals("sitemap.xml", StringComparison.OrdinalIgnoreCase))
+        {
+            return false;
+        }
+
+        // /{sectionName}.xml → /{sectionName}/feed.xml
+        // If the section cache is not ready (API down at startup), pass through rather
+        // than blocking legitimate feed URLs — consistent with the broader policy of
+        // avoiding false-404s during cache warmup/unavailability.
+        if (!_sectionCache.IsReady)
+        {
+            return false;
+        }
+
+        // Strip ".xml" (4 chars) to get the candidate section name.
+        var nameWithoutXml = segment[..^4];
+        var section = _sectionCache.GetSectionByName(nameWithoutXml);
+        if (section != null)
+        {
+            var target = $"/{section.Name}/feed.xml";
+            _logger.LogDebug("Legacy feed redirect: /{OldPath} -> {Target}", segment, target);
+            Redirect(context, target + context.Request.QueryString);
+            return true;
+        }
+
+        return false;
     }
 
     private static string NormalizeSegment(string segment)

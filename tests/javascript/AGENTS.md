@@ -24,7 +24,7 @@ npm run test:watch # Watch mode
 ## Structure
 
 - All test files: `tests/javascript/*.test.js`
-- One test file per source file (e.g., `infinite-scroll.test.js` tests `infinite-scroll.js`)
+- One test file per source file (e.g., `scroll-manager.test.js` tests `scroll-manager.js`)
 - Config: `/vitest.config.js` (root)
 - Dependencies: `/package.json` devDependencies
 
@@ -41,9 +41,9 @@ beforeEach(async () => {
 });
 ```
 
-### IIFE scripts (non-module)
+### Self-executing modules
 
-Scripts like `nav-helpers.js` execute on import. Simply `await import(MODULE_PATH)` — they attach to `window` automatically.
+Scripts like `scroll-manager.js` execute on import (set up listeners, create DOM). Simply `await import(MODULE_PATH)` — they attach to `window` automatically.
 
 ### DOM setup
 
@@ -60,12 +60,10 @@ Create needed DOM elements in `beforeEach`, clean with `document.body.innerHTML 
 
 | Source File | Test File | Key Behaviors |
 |-------------|-----------|---------------|
-| `infinite-scroll.js` | `infinite-scroll.test.js` | Trigger detection, scroll save/restore, dispose, page change guard |
+| `scroll-manager.js` | `scroll-manager.test.js` | Buttons, keyboard nav, scroll save/restore, TOC highlight, infinite scroll, navigation gating |
 | `sidebar-toggle.js` | `sidebar-toggle.test.js` | Toggle class, cookie persistence |
 | `hero-banner.js` | `hero-banner.test.js` | Cookie persistence for collapsed/hash |
 | `mobile-nav.js` | `mobile-nav.test.js` | Scroll lock/unlock, escape handler |
-| `nav-helpers.js` | `nav-helpers.test.js` | Button creation, visibility, keyboard nav detection |
-| `toc-scroll-spy.js` | `toc-scroll-spy.test.js` | Active heading, collapse/expand, URL update, destroy |
 | `date-range-slider.js` | `date-range-slider.test.js` | Clamping, fill position |
 | `custom-pages.js` | `custom-pages.test.js` | Collapsible cards, filters, expandable badges |
 | `page-scripts.js` | `page-scripts.test.js` | Global exposure, script loading flags |

@@ -6,7 +6,7 @@
 @implements IDisposable
 @inject ITechHubApiClient Api
 @inject PersistentComponentState ApplicationState
-@inject IJSRuntime JS
+@inherits PageComponentBase
 
 <PageTitle>Statistics — TechHub Admin</PageTitle>
 
@@ -272,11 +272,6 @@
     private string? _error;
     private DatabaseStatistics? _stats;
     private PersistingComponentStateSubscription? _persistSubscription;
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        await JS.InvokeVoidAsync("markScriptsReady");
-    }
 
     protected override async Task OnInitializedAsync()
     {

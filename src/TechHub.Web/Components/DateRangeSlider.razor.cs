@@ -388,6 +388,9 @@ public partial class DateRangeSlider : ComponentBase, IAsyncDisposable
         {
             try
             {
+                // Reset the ready flag so markScriptsReady defers on the next
+                // navigation until the new instance finishes initClamping.
+                await _jsModule.InvokeVoidAsync("reset");
                 await _jsModule.DisposeAsync();
             }
             catch (JSDisconnectedException)
