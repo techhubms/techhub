@@ -143,8 +143,17 @@ public static class BlazorHelpers
         }
         catch (TimeoutException ex) when (onTimeout != null)
         {
-            var diag = await page.EvaluateAsync<string>($"() => String({onTimeout}())");
-            throw new TimeoutException($"{ex.Message}\nDiagnostics: {diag}", ex);
+            string diagInfo;
+            try
+            {
+                diagInfo = await page.EvaluateAsync<string>(onTimeout);
+            }
+            catch (Exception diagEx)
+            {
+                diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
+            }
+
+            throw new TimeoutException($"{ex.Message}\nActual state: {diagInfo}", ex);
         }
     }
 
@@ -187,8 +196,19 @@ public static class BlazorHelpers
         }
         catch (TimeoutException ex) when (onTimeout != null)
         {
-            var diag = await page.EvaluateAsync<string>($"() => String({onTimeout}())");
-            throw new TimeoutException($"{ex.Message}\nDiagnostics: {diag}", ex);
+            string diagInfo;
+            try
+            {
+                diagInfo = await page.EvaluateAsync<string>(onTimeout);
+            }
+            catch (Exception diagEx)
+            {
+                diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
+            }
+
+            var argJson = System.Text.Json.JsonSerializer.Serialize(arg);
+            throw new TimeoutException(
+                $"{ex.Message}\nExpected: {argJson}\nActual state: {diagInfo}", ex);
         }
     }
 
@@ -956,8 +976,17 @@ public static class BlazorHelpers
         }
         catch (TimeoutException ex) when (onTimeout != null)
         {
-            var diag = await page.EvaluateAsync<string>($"() => String({onTimeout}())");
-            throw new TimeoutException($"{ex.Message}\nDiagnostics: {diag}", ex);
+            string diagInfo;
+            try
+            {
+                diagInfo = await page.EvaluateAsync<string>(onTimeout);
+            }
+            catch (Exception diagEx)
+            {
+                diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
+            }
+
+            throw new TimeoutException($"{ex.Message}\nActual state: {diagInfo}", ex);
         }
     }
 
