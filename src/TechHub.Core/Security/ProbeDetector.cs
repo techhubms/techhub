@@ -47,6 +47,10 @@ public static class ProbeDetector
         "actuator",
         // Generic application probes
         "app", "login", "ip",
+        // Common static-asset / build-output directories that never exist on this site
+        "assets", "static", "media", "dist", "vendor",
+        // Common backend / config directories that never exist on this site
+        "backend", "config",
     ];
 
     // Paths that are legitimate application routes on this site but whose final segment
@@ -92,22 +96,45 @@ public static class ProbeDetector
         // so paths like /.env/ or /random.xml/ are correctly identified as probes.
         var lastSlash = normalized.LastIndexOf('/');
         var lastSegment = normalized[(lastSlash + 1)..];
-        var lastDot = lastSegment.LastIndexOf('.');
-        if (lastDot < 0)
+
+        // No dot means no extension — not a probe based on extension.
+        if (!lastSegment.Contains('.', StringComparison.Ordinal))
         {
             return false;
         }
 
-        var ext = lastSegment[lastDot..];
-
-        // .xml is used for RSS feeds (/all/feed.xml, /{section}/feed.xml) and the
-        // sitemap (/sitemap.xml). Allow those through; block all other .xml paths.
-        if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
+        // Check every extension component in the final segment so that compound names
+        // like ".env.live", ".env.prod", or ".env.bak" are blocked even when the last
+        // extension alone is not in the probe list.
+        var parts = lastSegment.Split('.');
+        for (var i = 1; i < parts.Length; i++)
         {
-            return !normalized.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
-                && !normalized.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase);
+            if (parts[i].Length == 0)
+            {
+                continue;
+            }
+
+            var ext = "." + parts[i];
+
+            // .xml is used for RSS feeds (/all/feed.xml, /{section}/feed.xml) and the
+            // sitemap (/sitemap.xml). Allow those through; block all other .xml paths.
+            if (ext.Equals(".xml", StringComparison.OrdinalIgnoreCase))
+            {
+                if (!normalized.EndsWith("/feed.xml", StringComparison.OrdinalIgnoreCase)
+                    && !normalized.Equals("/sitemap.xml", StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
+
+                continue;
+            }
+
+            if (_probeExtensions.Contains(ext))
+            {
+                return true;
+            }
         }
 
-        return _probeExtensions.Contains(ext);
+        return false;
     }
 }

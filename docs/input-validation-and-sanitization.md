@@ -40,7 +40,7 @@ All user-controlled input in Tech Hub:
 
 **What it does**:
 
-- Rejects scanner/attacker probe paths via `ProbeDetector.IsProbeRequest()` (e.g. `/wp-admin`, `/.env`, `/xmlrpc.php`)
+- Rejects scanner/attacker probe paths via `ProbeDetector.IsProbeRequest()` (e.g. `/wp-admin`, `/.env`, `/.env.live`, `/.env.prod`, `/xmlrpc.php`). All extension components in the filename are checked, not just the last one, so compound variants like `/.env.live` or `/dump.sql.gz` are also caught. Common scanner-bait directories (`/assets`, `/static`, `/media`, `/dist`, `/vendor`, `/backend`, `/config`) are also blocked.
 - Validates the first path segment against `^[a-zA-Z][a-zA-Z-]*$` (letters and hyphens, case-insensitive)
 - Passes through static files (paths with file extensions) and framework paths whose first segment starts with `_` (for example `/_blazor`, `/_framework`, `/_content`), as well as `MicrosoftIdentity`
 - Returns 404 for invalid segments — no Blazor components render, no API calls fire

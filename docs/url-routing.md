@@ -99,7 +99,7 @@ CSS, JS, images, fonts, `robots.txt`, and other static assets are served directl
 
 Two categories of bad requests are rejected before the Blazor pipeline runs:
 
-1. **Scanner/attacker probes** — paths matching well-known exploit probe patterns (e.g. `/wp-admin`, `/xmlrpc.php`, `/.env`). Detected via `ProbeDetector.IsProbeRequest()` (same shared logic as the OpenTelemetry filter). These receive a bare **404** immediately — no Activity span is created for them at all.
+1. **Scanner/attacker probes** — paths matching well-known exploit probe patterns (e.g. `/wp-admin`, `/xmlrpc.php`, `/.env`). Detected via `ProbeDetector.IsProbeRequest()` (same shared logic as the OpenTelemetry filter). These receive a bare **404** immediately — no Activity span is created for them at all. Extension matching checks **every component** of a compound filename, so `/.env.live`, `/.env.prod`, and similar variants are blocked even though their last extension (`.live`, `.prod`) is not itself in the probe list. Common scanner-bait directories (`/assets`, `/static`, `/media`, `/dist`, `/vendor`, `/backend`, `/config`) are also blocked. Requests to `/api/...` on the web frontend are suppressed from telemetry via `WebTelemetryFilters.IsApiProbeRequest()` (web-only; the API itself legitimately serves these routes).
 
 2. **Structurally invalid first segments** — segments that can never match a Blazor route (e.g. segments with digits, dots, or percent-encoding). Valid first segments match `[a-zA-Z][a-zA-Z-]*` (letters and hyphens, starting with a letter, case-insensitive).
 

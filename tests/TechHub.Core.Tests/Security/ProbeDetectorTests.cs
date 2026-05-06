@@ -37,6 +37,22 @@ public class ProbeDetectorTests
     [InlineData("/something/login")]
     [InlineData("/ip")]
     [InlineData("/ip/lookup")]
+    // Common static-asset / build-output directories
+    [InlineData("/assets")]
+    [InlineData("/assets/images/logo.png")]
+    [InlineData("/static")]
+    [InlineData("/static/js/app.js")]
+    [InlineData("/media")]
+    [InlineData("/media/uploads/photo.jpg")]
+    [InlineData("/dist")]
+    [InlineData("/dist/bundle.js")]
+    [InlineData("/vendor")]
+    [InlineData("/vendor/jquery/jquery.min.js")]
+    // Common backend / config directories
+    [InlineData("/backend")]
+    [InlineData("/backend/api/users")]
+    [InlineData("/config")]
+    [InlineData("/config/database.yml")]
     // Server-side script extensions
     [InlineData("/setup.php")]
     [InlineData("/config.asp")]
@@ -78,6 +94,14 @@ public class ProbeDetectorTests
     // Source maps — never published to production
     [InlineData("/js/bundle.js.map")]
     [InlineData("/css/styles.css.map")]
+    // Compound extensions — probe extension anywhere in the name must be caught
+    [InlineData("/.env.live")]
+    [InlineData("/.env.prod")]
+    [InlineData("/.env.old")]
+    [InlineData("/.env.bak")]
+    [InlineData("/secrets.env.backup")]
+    [InlineData("/config.php.bak")]
+    [InlineData("/dump.sql.gz")]
     // .xml that is NOT a feed or sitemap
     [InlineData("/random.xml")]
     [InlineData("/random.xml/")]     // trailing slash on .xml probe
@@ -113,6 +137,12 @@ public class ProbeDetectorTests
     [InlineData("/ai/actuator-systems-deep-dive")]
     [InlineData("/ai/login-free-coding-with-copilot")]
     [InlineData("/ai/app-development-trends")]
+    // New probe keywords must not match when they are a prefix/infix of a slug
+    [InlineData("/ai/videos/config-as-code-is-the-best")]
+    [InlineData("/ai/videos/static-analysis-tools")]
+    [InlineData("/ai/videos/backend-for-frontend-pattern")]
+    [InlineData("/ai/videos/media-streaming-with-dotnet")]
+    [InlineData("/github-copilot/features/dist-systems-explained")]
     // Non-probe extensions
     [InlineData("/config.json")]
     [InlineData("/TechHub.Web.fwv5rmn5un.styles.css")]

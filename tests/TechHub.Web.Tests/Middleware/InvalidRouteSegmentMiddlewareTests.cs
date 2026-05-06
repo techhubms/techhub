@@ -79,6 +79,17 @@ public class InvalidRouteSegmentMiddlewareTests
     [InlineData("/login")]
     [InlineData("/login/callback")]
     [InlineData("/ip")]
+    // Common static-asset / build-output directories
+    [InlineData("/assets")]
+    [InlineData("/assets/images/logo.png")]
+    [InlineData("/static")]
+    [InlineData("/media")]
+    [InlineData("/dist")]
+    [InlineData("/vendor")]
+    // Common backend / config directories
+    [InlineData("/backend")]
+    [InlineData("/config")]
+    [InlineData("/config/database.yml")]
     // .xml that is NOT a feed or sitemap
     [InlineData("/wp-content/plugins/foo.xml")]
     [InlineData("/random.xml")]

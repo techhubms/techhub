@@ -37,6 +37,32 @@ public class WebTelemetryFiltersTests
     }
 
     [Theory]
+    [InlineData("/api")]
+    [InlineData("/api/")]
+    [InlineData("/api/users")]
+    [InlineData("/api/v1/health")]
+    [InlineData("/API/sections")]
+    public void IsApiProbeRequest_ReturnsTrue_ForApiPaths(string path)
+    {
+        WebTelemetryFilters.IsApiProbeRequest(path)
+            .Should().BeTrue(
+                "the web frontend never serves /api routes — these are scanners probing " +
+                "for a REST API on the same host and have no diagnostic value");
+    }
+
+    [Theory]
+    [InlineData("/")]
+    [InlineData("/ai")]
+    [InlineData("/about")]
+    [InlineData("/ai/videos/config-as-code-is-the-best")]
+    [InlineData("/sitemap.xml")]
+    public void IsApiProbeRequest_ReturnsFalse_ForNonApiPaths(string path)
+    {
+        WebTelemetryFilters.IsApiProbeRequest(path)
+            .Should().BeFalse("legitimate web routes must not be suppressed from telemetry");
+    }
+
+    [Theory]
     [InlineData("AhrefsBot/7.0")]
     [InlineData("Mozilla/5.0 (compatible; Googlebot/2.1)")]
     [InlineData("bingbot/2.0")]
