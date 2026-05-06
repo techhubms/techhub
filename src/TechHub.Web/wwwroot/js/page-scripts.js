@@ -390,6 +390,7 @@ window.initCustomPages = initCustomPages;
 
 window.markScriptsLoading = function() {
     window.__scriptsReady = false;
+    window.__markScriptsReadyStart = null; // reset deadline for new navigation cycle
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scripts-loading');
 };
 
@@ -436,8 +437,18 @@ window.markScriptsReady = function() {
         // Retry after a short tick. 10ms polling is fast enough to be
         // imperceptible but cheap. The components finish within a single
         // SignalR round-trip so this loop rarely iterates more than once.
-        setTimeout(window.markScriptsReady, 10);
-        return;
+        //
+        // Bounded deadline: if a component flag is never set (e.g. JS init
+        // threw before setting __mermaidReady / __dateRangeSliderReady /
+        // __scrollListenerReady), we give up after 10 s and proceed anyway
+        // so WaitForBlazorReadyAsync does not hang indefinitely.
+        window.__markScriptsReadyStart ??= Date.now();
+        if (Date.now() - window.__markScriptsReadyStart > 10_000) {
+            console.warn('[page-scripts] markScriptsReady: component flags not ready after 10 s — proceeding anyway to unblock navigation. Check for JS init errors.');
+        } else {
+            setTimeout(window.markScriptsReady, 10);
+            return;
+        }
     }
 
     window.__scriptsReady = true;

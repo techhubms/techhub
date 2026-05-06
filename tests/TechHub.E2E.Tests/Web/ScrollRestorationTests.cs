@@ -50,6 +50,6 @@ public class ScrollRestorationTests : PlaywrightTestBase
         await Page.WaitForConditionAsync(
             "(expected) => Math.abs(window.scrollY - expected) < 5",
             (object)500.0,
-            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight})");
+            onTimeout: "() => JSON.stringify({scrollY: window.scrollY, maxScroll: document.documentElement.scrollHeight - window.innerHeight, savedPositions: window.__savedScrollPositions})");
     }
 }

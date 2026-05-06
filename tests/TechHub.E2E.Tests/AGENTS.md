@@ -74,7 +74,7 @@ A monotonic lifecycle counter replaces independent `window.__*` flags. Every JS 
 
 **Signal sources**: `blazor-web-ready`, `blazor-server-ready`, `enhanced-nav` (from `TechHub.Web.lib.module.js`), `scripts-loading`/`scripts-ready`/`mermaid-rendered` (from `page-scripts.js`), `scroll-listener:{triggerId}`/`scroll-disposed:{triggerId}`/`toc-initialized`/`toc-active-updated` (from `scroll-manager.js`), `scroll-end` (browser `scrollend` event).
 
-Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (30s), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
+Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scales by network profile: 10s local, 30s regular4g/wan/ci, 45s fast3g, 60s slow3g; 60s in CI without a profile), `E2EPollingInterval` (100ms) — centralized in `BlazorHelpers.cs`.
 
 **Key public helpers**:
 
@@ -89,7 +89,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (30s)
 | `ScrollToLoadMoreAsync(count)` | Scroll infinite scroll until item count |
 | `ScrollToEndOfContentAsync()` | Scroll until end-of-content marker |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
-| `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (30s default); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |
+| `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (uses `E2ETimeout`; scales 10–60 s by network profile); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |
 | `WaitForBlazorReadyAsync()` | Wait for Blazor ready + `__scriptsReady` (which already includes Mermaid via `allComponentsReady()`) |
 
 ## Wait Pattern Best Practices

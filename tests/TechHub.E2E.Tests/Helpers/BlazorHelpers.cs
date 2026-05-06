@@ -148,7 +148,9 @@ public static class BlazorHelpers
             {
                 diagInfo = await page.EvaluateAsync<string>(onTimeout);
             }
+#pragma warning disable CA1031 // Diagnostics fallback must not throw — any evaluation error is swallowed and reported as fallback text
             catch (Exception diagEx)
+#pragma warning restore CA1031
             {
                 diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
             }
@@ -201,7 +203,9 @@ public static class BlazorHelpers
             {
                 diagInfo = await page.EvaluateAsync<string>(onTimeout);
             }
+#pragma warning disable CA1031 // Diagnostics fallback must not throw — any evaluation error is swallowed and reported as fallback text
             catch (Exception diagEx)
+#pragma warning restore CA1031
             {
                 diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
             }
@@ -254,7 +258,9 @@ public static class BlazorHelpers
                 await action();
                 return;
             }
+#pragma warning disable CA1031 // RetryUntilPassAsync must catch all exceptions to measure retry progress
             catch (Exception ex)
+#pragma warning restore CA1031
             {
                 last = ex;
             }
@@ -981,7 +987,9 @@ public static class BlazorHelpers
             {
                 diagInfo = await page.EvaluateAsync<string>(onTimeout);
             }
+#pragma warning disable CA1031 // Diagnostics fallback must not throw — any evaluation error is swallowed and reported as fallback text
             catch (Exception diagEx)
+#pragma warning restore CA1031
             {
                 diagInfo = $"(diagnostics evaluation failed: {diagEx.Message})";
             }

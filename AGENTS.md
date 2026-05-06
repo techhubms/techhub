@@ -15,7 +15,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Always check for errors after editing files** (`get_errors` tool)
 - **Always fix all linter issues**
 - **Always store temp files, scripts, output, etc in `.tmp/`**
-- **Always use PowerShell for scripts** (save as `.ps1`, then execute)
+- **Always use PowerShell for terminal commands and scripts** (save save scripts as `.ps1`, then execute)
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise**
 - **Always go back to Step 2** when struggling or working on something you haven't read docs for
@@ -37,7 +37,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Never hide errors or swallow exceptions** — see [src/AGENTS.md](src/AGENTS.md#error-handling-philosophy)
 - **Never use `Import-Module` to load `TechHubRunner.psm1`** — it auto-imports. Force reload only if you changed the psm1 file.
 - **Never use lowlevel `dotnet` or `Stop-Process` or `kill`** — the `Run` command handles all that. Use `Stop-Servers` if you really must kill processes.
-- **Never write Python scripts** — always use PowerShell (`.ps1`). This applies to one-off scripts, data processing, terminal commands, and any ad-hoc scripting.
+- **Never use Python in the terminal or scripts** — always use PowerShell (`.ps1`). This applies to one-off scripts, data processing, terminal commands, and any ad-hoc scripting.
 
 ---
 

@@ -203,11 +203,19 @@ function saveScrollPosition() {
  * races against IO and sometimes wins, causing a cascade of batch loads on back-nav.
  */
 function restoreScrollPosition() {
-    // Clear lock — it has served its purpose (saved the correct value in pushState).
-    window.__scrollSaveLock = null;
+    if (!navigating) {
+        // No navigation in progress — do NOT clear the lock here.
+        // The lock may have been set by ScrollToPositionAsync (in tests) and is still
+        // needed for the upcoming pushState. Clearing it here would cause pushState to
+        // fall back to lastSettledScrollY, which may have been clobbered by
+        // Playwright's scrollIntoViewIfNeeded before the click.
+        return false;
+    }
 
-    // Already restored or no navigation in progress — no-op.
-    if (!navigating) return false;
+    // Clear lock — we are in an active navigation, so pushState has already fired
+    // (forward: we're on the destination page) or is irrelevant (traverse: we
+    // navigated away and are now restoring back). The lock has served its purpose.
+    window.__scrollSaveLock = null;
 
     if (navigating !== 'traverse') {
         // Forward nav: unlock immediately. No cascading-load risk because
