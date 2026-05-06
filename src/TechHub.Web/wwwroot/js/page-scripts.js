@@ -440,11 +440,17 @@ window.markScriptsReady = function() {
         //
         // Bounded deadline: if a component flag is never set (e.g. JS init
         // threw before setting __mermaidReady / __dateRangeSliderReady /
-        // __scrollListenerReady), we give up after 10 s and proceed anyway
+        // __scrollListenerReady), we give up after 60 s and proceed anyway
         // so WaitForBlazorReadyAsync does not hang indefinitely.
+        //
+        // 60 s matches the maximum E2ETimeout (slow3g / CI profile), so under
+        // normal slow-network conditions (e.g. mermaid loading on slow3g) the
+        // component finishes long before this fires. WaitForBlazorReadyAsync
+        // will produce a proper Playwright timeout first in broken cases;
+        // this is just the last-resort JS safety net.
         window.__markScriptsReadyStart ??= Date.now();
-        if (Date.now() - window.__markScriptsReadyStart > 10_000) {
-            console.warn('[page-scripts] markScriptsReady: component flags not ready after 10 s — proceeding anyway to unblock navigation. Check for JS init errors.');
+        if (Date.now() - window.__markScriptsReadyStart > 60_000) {
+            console.warn('[page-scripts] markScriptsReady: component flags not ready after 60 s — proceeding anyway to unblock navigation. Check for JS init errors.');
         } else {
             setTimeout(window.markScriptsReady, 10);
             return;
