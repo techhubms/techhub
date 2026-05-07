@@ -260,6 +260,11 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
             window.dispatchEvent(new Event('scroll'));
         }");
 
+        // Wait for scrollend to fire so lastSettledScrollY is updated to the new position.
+        // Without this, saveScrollPosition() in beforeenhancedload reads a stale value,
+        // restores to the wrong Y on back-nav, and the trigger is in viewport → cascade.
+        await Page.WaitForScrollEndAsync();
+
         // Wait for scroll listener to be ready and no load in progress
         await Page.WaitForConditionAsync(
             "() => window.__scrollListenerReady?.['scroll-trigger'] === true && !document.querySelector('.loading-more-indicator')",

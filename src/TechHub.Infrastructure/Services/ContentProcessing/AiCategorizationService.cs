@@ -404,7 +404,6 @@ public sealed class AiCategorizationService : IAiCategorizationService
         return sb.ToString();
     }
 
-
     private static string ExtractJsonFromResponse(string response)
     {
         var cleaned = Regex.Replace(response, @"```(?:json)?\s*", string.Empty, RegexOptions.IgnoreCase).Trim();

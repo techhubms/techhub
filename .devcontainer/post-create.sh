@@ -14,9 +14,11 @@ sudo rm -f /etc/apt/sources.list.d/yarn.list
 # We pull this from the official PGDG apt repo because Ubuntu 24.04 only ships v16, and pg_dump
 # requires its version to be >= the server version (Azure Postgres Flexible Server runs 17.x).
 # certbot for requesting Let's Encrypt wildcard TLS certificates
+# erofs-utils provides mkfs.erofs, required by containerd 2.x's erofs differ plugin. Without it,
+# the transfer.v1 plugin fails to register, causing dockerd to time out on containerd startup.
 echo "Installing system dependencies..."
 sudo apt-get update
-sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 certbot python3-pip curl gnupg
+sudo apt-get install -y libnss3-tools imagemagick libjxl-tools libimage-exiftool-perl webp file sqlite3 certbot python3-pip curl gnupg erofs-utils
 
 # Add the PostgreSQL Global Development Group (PGDG) apt repo and install the v17 client tools
 echo "Installing PostgreSQL 17 client from PGDG..."
