@@ -1,5 +1,12 @@
 namespace TechHub.Api.Endpoints;
 
+/// <summary>DTO for applying a manually-provided transcript to an existing video content item.</summary>
+public sealed class ApplyTranscriptRequest
+{
+    /// <summary>The full transcript text to use for AI re-processing.</summary>
+    public string? Transcript { get; init; }
+}
+
 /// <summary>DTO for creating/updating RSS feed configurations.</summary>
 public sealed class FeedConfigRequest
 {
@@ -7,7 +14,6 @@ public sealed class FeedConfigRequest
     public string? Url { get; init; }
     public string? OutputDir { get; init; }
     public bool Enabled { get; init; } = true;
-    public bool TranscriptMandatory { get; init; }
 }
 
 /// <summary>DTO for updating custom page raw JSON.</summary>

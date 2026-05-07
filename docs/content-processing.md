@@ -49,11 +49,9 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 (default: every 15 minutes) and performs:
 
 1. **Feed ingestion** — Downloads and parses RSS/Atom XML from all enabled feeds in the database
-2. **Content fetching** — Fetches the full article HTML for each item, or closed captions
-   (transcripts) for YouTube video items. Transcripts are fetched using **YoutubeExplode**
-   (with configured HTTP client, browser UA, and persistent cookies) with **yt-dlp** as a
-   fallback. Both fetchers can be independently enabled/disabled via `YouTubeExplodeEnabled`
-   and `YtDlpEnabled` in `ContentProcessor` settings. Failures are non-fatal.
+2. **Content fetching** — Fetches the full article HTML for non-YouTube items. **YouTube video items
+   are processed using available metadata only** (title, description, feed tags, YouTube API tags) —
+   automatic transcript fetching is intentionally disabled to avoid blocking in cloud environments
 3. **AI categorization** — Sends content to Azure OpenAI (`AiCategorizationService`) using the
    system prompt embedded in `TechHub.Infrastructure/Data/Resources/system-message.md`
 4. **Deduplication** — Checks `processed_urls` table to skip already-attempted URLs
@@ -62,6 +60,42 @@ content current. The pipeline is implemented entirely in C# and runs inside `Tec
 
 Items that the AI determines are off-topic or low quality are skipped and recorded in
 `processed_urls` with status `skipped`.
+
+### Manual Transcript Support
+
+For YouTube videos, transcripts can be provided manually in two ways:
+
+#### Via Admin UI (single video)
+
+- **When adding a new video**: In the "Add Content" modal, paste the transcript in the Transcript
+  field. The AI will generate a full summary based on the transcript.
+- **When editing an existing video**: Open the content item editor, expand the "Apply Transcript"
+  section, paste the transcript, and click "Apply Transcript". The AI regenerates excerpt, content,
+  tags, and sections immediately. Review the result, then click Save.
+
+The edit flow always updates the existing item in-place (preserving slug and collection) — it never
+deletes and re-adds items, so URLs remain stable.
+
+#### Via PowerShell batch script (multiple videos)
+
+Use `scripts/Fetch-VideoTranscripts.ps1` to fetch transcripts using yt-dlp and apply them to
+existing videos in batch:
+
+```powershell
+# Process a single video by slug
+./Fetch-VideoTranscripts.ps1 -Slug "github-copilot-overview"
+
+# Process multiple specific videos
+./Fetch-VideoTranscripts.ps1 -Slugs "slug-one,slug-two,slug-three"
+
+# Process all videos in a content processing job
+./Fetch-VideoTranscripts.ps1 -JobId 42
+
+# Dry run — preview without applying changes
+./Fetch-VideoTranscripts.ps1 -JobId 42 -DryRun
+```
+
+The script requires yt-dlp (`pip install yt-dlp`) and a running TechHub API.
 
 ### Feed Configuration
 
@@ -76,7 +110,6 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 **Optional Fields**:
 
 - **enabled**: Boolean to enable/disable feed (default: true)
-
 ### Adding New Feeds
 
 **Via Admin UI** (recommended):
@@ -136,10 +169,8 @@ See [admin-authentication.md](admin-authentication.md) for authentication setup.
 
 - **Feed unavailability**: Individual feed failures do not stop the pipeline; other feeds continue
 - **Content fetch failures**: Non-fatal; pipeline falls back to RSS metadata only
-- **Transcript failures**: Non-fatal; YoutubeExplode is tried first (with persistent cookies),
-  falling back to yt-dlp if YoutubeExplode fails. Either fetcher can be disabled via
-  `ContentProcessor:YouTubeExplodeEnabled` / `ContentProcessor:YtDlpEnabled`.
-  If all enabled fetchers fail, the YouTube item is processed without transcript data
+- **YouTube videos**: Processed using only available metadata (no automatic transcript fetch);
+  transcripts can be provided manually via the admin UI or batch script
 - **AI API failures**: Retried up to `MaxRetries` times (configurable in `AiCategorizationOptions`)
 - **Rate limiting**: Configurable delay between AI calls (`RateLimitDelaySeconds`)
 

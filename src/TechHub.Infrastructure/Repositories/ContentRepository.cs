@@ -1509,7 +1509,8 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         const string Sql = @"
 SELECT collection_name, slug, date_epoch, title, author, excerpt, content, primary_section_name,
        feed_name, tags_csv, ai_metadata::text AS ai_metadata,
-       is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security
+       is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security,
+       external_url
 FROM content_items
 WHERE collection_name = @CollectionName AND slug = @Slug
 LIMIT 1";
@@ -1576,7 +1577,8 @@ LIMIT 1";
             FeedName = (string?)row.feed_name,
             Tags = tags,
             Sections = sections,
-            AiMetadata = (string?)row.ai_metadata
+            AiMetadata = (string?)row.ai_metadata,
+            ExternalUrl = (string?)row.external_url
         };
     }
 

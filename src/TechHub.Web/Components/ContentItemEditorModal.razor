@@ -1,6 +1,9 @@
 @using Microsoft.AspNetCore.Components
 @using TechHub.Core.Models
 @using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@inject ITechHubApiClient Api
+@inject ILogger<ContentItemEditorModal> Logger
 
 @if (IsOpen && _editData is not null)
 {
@@ -93,6 +96,37 @@
                                       spellcheck="false" rows="6"></textarea>
                         </details>
                     </div>
+
+                    @if (_editData.CollectionName == "videos")
+                    {
+                        <div class="admin-form-group editor-full-width">
+                            <details class="editor-details">
+                                <summary class="admin-label">Apply Transcript <span class="editor-hint">(paste transcript to regenerate AI content; saves immediately on Apply)</span></summary>
+                                <div class="editor-transcript-section">
+                                    <textarea id="ci-transcript"
+                                              class="admin-input editor-textarea-mono editor-transcript-textarea"
+                                              @bind="_transcript"
+                                              spellcheck="false"
+                                              rows="10"
+                                              placeholder="Paste the full video transcript here. The AI will regenerate the excerpt, content, tags, and sections based on the transcript.&#10;&#10;Leave blank to skip transcript application."
+                                              disabled="@(_applying || _saving)"></textarea>
+                                    @if (_applyError != null)
+                                    {
+                                        <div class="admin-alert admin-alert-error" role="alert">@_applyError</div>
+                                    }
+                                    @if (_applySuccess)
+                                    {
+                                        <div class="admin-alert admin-alert-success" role="alert">Transcript applied — content fields updated. Review and click Save to persist.</div>
+                                    }
+                                    <button class="btn-secondary editor-apply-btn"
+                                            @onclick="ApplyTranscriptAsync"
+                                            disabled="@(_applying || _saving || string.IsNullOrWhiteSpace(_transcript))">
+                                        @(_applying ? "Applying…" : "▶ Apply Transcript")
+                                    </button>
+                                </div>
+                            </details>
+                        </div>
+                    }
                 </div>
 
                 <div class="editor-readonly-info">
@@ -101,7 +135,7 @@
             </div>
 
             <div class="editor-footer">
-                <button class="btn" @onclick="SaveAsync" disabled="@_saving">
+                <button class="btn" @onclick="SaveAsync" disabled="@(_saving || _applying)">
                     @(_saving ? "Saving…" : "Save")
                 </button>
                 <button class="btn-secondary" @onclick="HandleCloseAsync">Cancel</button>
@@ -135,6 +169,12 @@
     private bool _saving;
     private string? _error;
 
+    // Transcript application (videos only)
+    private string _transcript = string.Empty;
+    private bool _applying;
+    private string? _applyError;
+    private bool _applySuccess;
+
     protected override void OnParametersSet()
     {
         if (IsOpen && EditData is not null)
@@ -153,6 +193,9 @@
             _aiMetadata = EditData.AiMetadata ?? "{}";
             _selectedSections = new HashSet<string>(EditData.Sections, StringComparer.OrdinalIgnoreCase);
             _error = null;
+            _transcript = string.Empty;
+            _applyError = null;
+            _applySuccess = false;
         }
     }
 
@@ -171,6 +214,47 @@
             {
                 _primarySectionName = string.Empty;
             }
+        }
+    }
+
+    private async Task ApplyTranscriptAsync()
+    {
+        if (_editData is null || string.IsNullOrWhiteSpace(_transcript))
+        {
+            return;
+        }
+
+        _applyError = null;
+        _applySuccess = false;
+        _applying = true;
+
+        try
+        {
+            var updated = await Api.ApplyTranscriptAsync(_editData.CollectionName, _editData.Slug, _transcript.Trim());
+
+            // Update editor fields with AI-regenerated values
+            _title = updated.Title;
+            _author = updated.Author;
+            _excerpt = updated.Excerpt;
+            _content = updated.Content;
+            _primarySectionName = updated.PrimarySectionName;
+            _tagsCsv = string.Join(", ", updated.Tags);
+            _aiMetadata = updated.AiMetadata ?? "{}";
+            _selectedSections = new HashSet<string>(updated.Sections, StringComparer.OrdinalIgnoreCase);
+            _transcript = string.Empty;
+            _applySuccess = true;
+
+            // Update the backing data reference with the server response
+            _editData = updated;
+        }
+        catch (HttpRequestException ex)
+        {
+            Logger.LogError(ex, "Failed to apply transcript for {Collection}/{Slug}", _editData.CollectionName, _editData.Slug);
+            _applyError = $"Failed to apply transcript: {ex.Message}";
+        }
+        finally
+        {
+            _applying = false;
         }
     }
 

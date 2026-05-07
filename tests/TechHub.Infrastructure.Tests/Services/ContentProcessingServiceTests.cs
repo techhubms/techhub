@@ -886,97 +886,79 @@ public class ContentProcessingServiceTests
     }
 
     [Fact]
-    public async Task RunAsync_TranscriptMandatory_WithoutTranscript_FailsItem()
+    public async Task RunAsync_YouTubeItem_WithoutTranscript_SucceedsWithoutCallingArticleService()
     {
-        // Arrange
+        // Automatic transcript fetching is disabled. YouTube items should be processed
+        // using only available metadata (tags, description, etc.) — article service must NOT be called.
         var testId = Guid.NewGuid().ToString("N")[..8];
-        var feed = new FeedConfig { Id = 1, Name = "YT Mandatory", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true, TranscriptMandatory = true };
-        var ytUrl = $"https://youtube.com/watch?v=mandatory-fail-{testId}";
+        var feed = new FeedConfig { Id = 1, Name = "YT Feed", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true };
+        var ytUrl = $"https://youtube.com/watch?v=no-transcript-{testId}";
         var ytItem = new RawFeedItem
         {
-            Title = "Video",
+            Title = "Video No Transcript",
             ExternalUrl = ytUrl,
             PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "YT Mandatory",
+            FeedName = "YT Feed",
             CollectionName = "videos",
             FeedTags = []
         };
+        var processed = CreateProcessedItem(ytUrl, $"no-transcript-{testId}");
 
         _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
         _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
-
-        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
-
-        // CreateService sets up EnrichWithContentAsync to return item unchanged (no transcript)
-
-        // Act
-        await sut.RunAsync("scheduled", CancellationToken.None);
-
-        // Assert — AI should NOT be called (item fails before AI)
-        _aiService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Never);
-
-        // Assert — item should be recorded as failed
-        var result = await _processedUrlRepo.GetPagedAsync(0, 10, status: "failed", search: ytUrl, ct: CancellationToken.None);
-        result.Items.Should().ContainSingle();
-        result.Items[0].HasTranscript.Should().BeFalse();
-        result.Items[0].ErrorMessage.Should().Contain("Transcript mandatory");
-
-        // Assert — job should count it as an error
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
-        jobs[0].ErrorCount.Should().BeGreaterThanOrEqualTo(1);
-        jobs[0].TranscriptsFailed.Should().BeGreaterThanOrEqualTo(1);
-    }
-
-    [Fact]
-    public async Task RunAsync_TranscriptMandatory_WithTranscript_Succeeds()
-    {
-        // Arrange
-        var testId = Guid.NewGuid().ToString("N")[..8];
-        var feed = new FeedConfig { Id = 1, Name = "YT Mandatory", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true, TranscriptMandatory = true };
-        var ytUrl = $"https://youtube.com/watch?v=mandatory-ok-{testId}";
-        var ytItem = new RawFeedItem
-        {
-            Title = "Video",
-            ExternalUrl = ytUrl,
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "YT Mandatory",
-            CollectionName = "videos",
-            FeedTags = []
-        };
-        var processed = CreateProcessedItem(ytUrl, $"mandatory-ok-{testId}");
-
-        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
-
-        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
-
-        // Override default article service mock to simulate transcript fetch succeeding
-        _articleService
-            .Setup(s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync((RawFeedItem item, CancellationToken _) => new RawFeedItem
-            {
-                Title = item.Title,
-                ExternalUrl = item.ExternalUrl,
-                PublishedAt = item.PublishedAt,
-                FeedName = item.FeedName,
-                CollectionName = item.CollectionName,
-                FeedTags = item.FeedTags,
-                FullContent = "Transcript text here"
-            });
         _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
 
+        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
+
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
 
-        // Assert — AI should be called (transcript available)
-        _aiService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Once);
+        // Assert — article service must NOT be called for YouTube (auto-fetch is disabled)
+        _articleService.Verify(
+            s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()),
+            Times.Never);
 
-        // Assert — item should succeed
+        // Assert — AI should still be called and item should succeed
+        _aiService.Verify(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()), Times.Once);
         var result = await _processedUrlRepo.GetPagedAsync(0, 10, search: ytUrl, ct: CancellationToken.None);
         result.Items.Should().ContainSingle();
         result.Items[0].Status.Should().Be("succeeded");
-        result.Items[0].HasTranscript.Should().BeTrue();
+        result.Items[0].HasTranscript.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task ProcessSingleAsync_YouTubeWithManualTranscript_PassesTranscriptToAi()
+    {
+        // When a manual transcript is provided, it should be passed as FullContent to AI
+        // and not call the article service at all.
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var ytUrl = $"https://youtube.com/watch?v=manual-transcript-{testId}";
+        var manualTranscript = "This is the manually provided transcript content.";
+        var processed = CreateProcessedItem(ytUrl, $"manual-transcript-{testId}");
+
+        _aiService.Setup(s => s.CategorizeAsync(
+                It.Is<RawFeedItem>(r => r.FullContent == manualTranscript),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
+
+        // Act
+        var result = await sut.ProcessSingleAsync(ytUrl, "videos", "TestFeed", transcript: manualTranscript, ct: TestContext.Current.CancellationToken);
+
+        // Assert — article service must NOT be called (manual transcript provided)
+        _articleService.Verify(
+            s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()),
+            Times.Never);
+
+        // Assert — AI was called with the transcript
+        _aiService.Verify(
+            s => s.CategorizeAsync(It.Is<RawFeedItem>(r => r.FullContent == manualTranscript), It.IsAny<CancellationToken>()),
+            Times.Once);
+
+        result.Should().NotBeNull();
+        result!.Outcome.Should().Be(AdHocUrlProcessOutcome.Added);
     }
 
     // ── Subcollection Rules ────────────────────────────────────────────────

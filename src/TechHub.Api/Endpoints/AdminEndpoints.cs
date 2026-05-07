@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using TechHub.Api.Services;
+using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
 using TechHub.Core.Models.Admin;
@@ -123,6 +124,10 @@ public static partial class AdminEndpoints
         group.MapPut("/content-items/edit-data", UpdateContentItemEditDataAsync)
             .WithName("UpdateContentItemEditData")
             .WithSummary("Update all editable fields for a content item by primary key");
+
+        group.MapPost("/content-items/apply-transcript", ApplyTranscriptAsync)
+            .WithName("ApplyTranscript")
+            .WithSummary("Apply a manually provided transcript to an existing video content item, regenerating AI content");
 
         group.MapGet("/content-items", GetContentItemsPagedAsync)
             .WithName("GetContentItemsPaged")
@@ -305,7 +310,6 @@ public static partial class AdminEndpoints
             Url = url,
             OutputDir = outputDir,
             Enabled = request.Enabled,
-            TranscriptMandatory = request.TranscriptMandatory
         };
 
         var id = await feedRepo.CreateAsync(feed, ct);
@@ -316,7 +320,6 @@ public static partial class AdminEndpoints
             Url = url,
             OutputDir = outputDir,
             Enabled = request.Enabled,
-            TranscriptMandatory = request.TranscriptMandatory
         };
         return Results.Created($"/api/admin/feeds/{id}", created);
     }
@@ -355,7 +358,6 @@ public static partial class AdminEndpoints
             Url = url,
             OutputDir = outputDir,
             Enabled = request.Enabled,
-            TranscriptMandatory = request.TranscriptMandatory
         };
 
         var updated = await feedRepo.UpdateAsync(feed, ct);
@@ -643,6 +645,127 @@ public static partial class AdminEndpoints
 
         contentRepo.InvalidateCachedData();
         return Results.NoContent();
+    }
+
+    // ── Apply transcript handler ─────────────────────────────────────────────
+
+    private static async Task<IResult> ApplyTranscriptAsync(
+        ApplyTranscriptRequest request,
+        IContentRepository contentRepo,
+        IAiCategorizationService aiService,
+        IContentFixerService contentFixer,
+        CancellationToken ct,
+        string? collection = null,
+        string? slug = null)
+    {
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
+        {
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
+        }
+
+        if (string.IsNullOrWhiteSpace(request.Transcript))
+        {
+            return Results.BadRequest("Transcript is required.");
+        }
+
+        collection = collection.Trim().Sanitize();
+        slug = slug.Trim().Sanitize();
+
+        var existing = await contentRepo.GetEditDataAsync(collection, slug, ct);
+        if (existing is null)
+        {
+            return Results.NotFound();
+        }
+
+        if (string.IsNullOrWhiteSpace(existing.ExternalUrl))
+        {
+            return Results.BadRequest("Content item does not have an associated external URL.");
+        }
+
+        // Build a synthetic RawFeedItem using the existing item's metadata and the provided transcript
+        var raw = new RawFeedItem
+        {
+            Title = existing.Title,
+            ExternalUrl = existing.ExternalUrl,
+            PublishedAt = DateTimeOffset.FromUnixTimeSeconds(existing.DateEpoch),
+            FeedName = existing.FeedName ?? "TechHub",
+            CollectionName = collection,
+            FeedLevelAuthor = existing.Author,
+            FeedTags = existing.Tags.ToList(),
+            FullContent = request.Transcript.Trim()
+        };
+
+        CategorizationResult categorizationResult;
+        try
+        {
+            categorizationResult = await aiService.CategorizeAsync(raw, ct);
+        }
+        catch (Exception ex) when (ex is HttpRequestException or System.Text.Json.JsonException or InvalidOperationException or TimeoutException or OperationCanceledException)
+        {
+            return Results.Problem($"AI categorization failed: {ex.Message.Sanitize()}", statusCode: 502);
+        }
+
+        if (categorizationResult.IsFailure || categorizationResult.Item is null)
+        {
+            return Results.Problem(
+                categorizationResult.IsFailure
+                    ? $"AI categorization failed: {categorizationResult.Explanation}"
+                    : $"AI determined this content should be excluded: {categorizationResult.Explanation}",
+                statusCode: 422);
+        }
+
+        var processed = categorizationResult.Item;
+
+        // Repair markdown
+        if (!string.IsNullOrWhiteSpace(processed.Content))
+        {
+            processed = processed.WithContent(contentFixer.RepairMarkdown(processed.Content));
+        }
+
+        // Ensure section-derived tags are present
+        processed = processed.WithTags(TagNormalizer.EnsureSectionTags(processed.Tags, processed.Sections));
+        processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
+
+        // Build updated edit data, preserving the existing slug/collection/date
+        string? newAiMetadata = existing.AiMetadata;
+        if (processed.RoundupMetadata is not null)
+        {
+            newAiMetadata = System.Text.Json.JsonSerializer.Serialize(new
+            {
+                roundup_summary = processed.RoundupMetadata.Summary,
+                key_topics = processed.RoundupMetadata.KeyTopics,
+                roundup_relevance = processed.RoundupMetadata.Relevance,
+                topic_type = processed.RoundupMetadata.TopicType,
+                impact_level = processed.RoundupMetadata.ImpactLevel,
+                time_sensitivity = processed.RoundupMetadata.TimeSensitivity
+            });
+        }
+
+        var updatedEditData = new ContentItemEditData
+        {
+            CollectionName = collection,
+            Slug = slug,
+            DateEpoch = existing.DateEpoch,
+            Title = processed.Title,
+            Author = processed.Author ?? existing.Author,
+            Excerpt = processed.Excerpt,
+            Content = processed.Content,
+            PrimarySectionName = processed.PrimarySectionName,
+            FeedName = existing.FeedName,
+            Tags = processed.Tags,
+            Sections = processed.Sections,
+            AiMetadata = newAiMetadata,
+            ExternalUrl = existing.ExternalUrl
+        };
+
+        var updated = await contentRepo.UpdateEditDataAsync(collection, slug, updatedEditData, ct);
+        if (!updated)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.Ok(updatedEditData);
     }
 
     // ── Background job settings handlers ─────────────────────────────────────
@@ -967,6 +1090,9 @@ public static partial class AdminEndpoints
         var titleHint = !string.IsNullOrWhiteSpace(request.TitleHint)
             ? request.TitleHint.Trim().Sanitize()
             : null;
+        var transcript = !string.IsNullOrWhiteSpace(request.Transcript)
+            ? request.Transcript.Trim()
+            : null;
 
         var result = await processingService.ProcessSingleAsync(
             sanitizedUrl,
@@ -974,6 +1100,7 @@ public static partial class AdminEndpoints
             feedName,
             subcollection,
             titleHint,
+            transcript,
             ct);
 
         if (result is null)
