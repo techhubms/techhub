@@ -45,6 +45,15 @@ public partial class UrlNormalizationMiddleware
         "signin-oidc",
     };
 
+    // Sections that have been permanently renamed. When a path starts with an old section name,
+    // the middleware redirects to the equivalent path under the new name. Applied after segment
+    // normalization so that a rename + .html strip produces a single 301.
+    private static readonly Dictionary<string, string> _renamedSections =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            ["coding"] = "dotnet",
+        };
+
     // Virtual sections that exist in the app's routing but are not stored in the API section cache.
     // Each entry maps the virtual section name to dedicated sub-page names that have their own
     // Blazor page and do NOT appear as collections in any real section.
@@ -93,6 +102,14 @@ public partial class UrlNormalizationMiddleware
             return;
         }
 
+        // Strip trailing slash: /ai/ → /ai (301). Must run before feed-redirect check so
+        // that /{section}/ doesn't accidentally match feed patterns.
+        if (path.Length > 1 && path.EndsWith('/'))
+        {
+            Redirect(context, path.TrimEnd('/') + context.Request.QueryString);
+            return;
+        }
+
         // Legacy RSS feed redirects: handled before segment normalization so that
         // /{sectionName}.xml paths are caught here rather than rejected as probes
         // by InvalidRouteSegmentMiddleware further down the pipeline.
@@ -104,6 +121,14 @@ public partial class UrlNormalizationMiddleware
         // Normalize each segment: strip .html extension, strip YYYY-MM-DD- date prefix.
         var rawSegments = path.TrimStart('/').Split('/');
         var normalizedSegments = rawSegments.Select(NormalizeSegment).ToArray();
+
+        // Apply section rename redirects (e.g., /coding/* → /dotnet/*). Done after segment
+        // normalization so that /coding/2025-01-01-slug.html → /dotnet/slug in one redirect.
+        if (normalizedSegments.Length > 0 && _renamedSections.TryGetValue(normalizedSegments[0], out var newSectionName))
+        {
+            normalizedSegments[0] = newSectionName;
+        }
+
         var normalizedPath = "/" + string.Join("/", normalizedSegments);
         var pathChanged = !string.Equals(normalizedPath, path, StringComparison.Ordinal);
 
@@ -114,6 +139,26 @@ public partial class UrlNormalizationMiddleware
         {
             if (!IsValidMultiSegmentPath(normalizedSegments))
             {
+                // Two-segment paths with a valid section but an unrecognised second segment
+                // may be old Jekyll-style /{section}/{slug}.html URLs (without a collection
+                // in the path). Try a legacy lookup before hard-404ing.
+                if (normalizedSegments.Length == 2
+                    && _sectionCache.IsReady
+                    && _sectionCache.GetSectionByName(normalizedSegments[0]) != null
+                    && IsLegacyLookupCandidate(normalizedSegments[1]))
+                {
+                    var lookupHandled = await TryLegacyRedirectAsync(context, normalizedSegments[1], normalizedSegments[0]);
+                    if (!lookupHandled)
+                    {
+                        // Transient API failure: no valid Blazor fallback for /{section}/{unknownSlug}
+                        // so return 404. This is different from the single-segment case where
+                        // passing through to Blazor routing is a meaningful degradation.
+                        context.Response.StatusCode = StatusCodes.Status404NotFound;
+                    }
+
+                    return;
+                }
+
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 return;
             }
@@ -180,39 +225,16 @@ public partial class UrlNormalizationMiddleware
         var rawSection = context.Request.Query["section"].FirstOrDefault();
         var sectionHint = RouteParameterValidator.IsValidNameSegment(rawSection) ? rawSection : null;
 
-        try
+        var handled = await TryLegacyRedirectAsync(context, segment, sectionHint);
+        if (handled)
         {
-            await using var scope = _scopeFactory.CreateAsyncScope();
-            var apiClient = scope.ServiceProvider.GetRequiredService<ITechHubApiClient>();
-            var result = await apiClient.GetLegacyRedirectAsync(segment, sectionHint, context.RequestAborted);
-
-            if (result != null)
-            {
-                _logger.LogInformation("Legacy slug redirect: /{Segment} -> {Url}", segment, result.Url);
-                Redirect(context, result.Url + context.Request.QueryString);
-                return;
-            }
-
-            // Slug confirmed not in the DB — return a hard 404 so crawlers and caches treat this
-            // as a permanent absence, not a transient failure.
-            context.Response.StatusCode = StatusCodes.Status404NotFound;
             return;
         }
-        catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
-        {
-            // Rethrow when the client disconnected — avoid writing a redirect onto an aborted connection.
-            throw;
-        }
-        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
-        {
-            // Transient API failure (network error or timeout after all retries).
-            // Graceful degradation: still clean up .html / date prefix even when the API is unavailable.
-            // Do NOT return 404 here — a legitimate legacy URL would get a cacheable permanent 404
-            // just because the API was briefly down.
-            _logger.LogWarning(ex, "Legacy slug lookup failed for {Slug}; falling back to normalized path", segment);
-        }
 
-        // API was transiently unavailable — clean up the URL if the path changed, then pass through.
+        // Transient API failure — graceful degradation.
+        // Do NOT return 404: a legitimate legacy URL would get a cacheable permanent 404
+        // just because the API was briefly down. Clean up the URL if the path changed,
+        // then pass through to Blazor routing.
         if (pathChanged)
         {
             Redirect(context, normalizedPath + context.Request.QueryString);
@@ -220,6 +242,42 @@ public partial class UrlNormalizationMiddleware
         }
 
         await _next(context);
+    }
+
+    /// <summary>
+    /// Calls the legacy-redirect API for <paramref name="slug"/> with an optional section hint.
+    /// Returns <c>true</c> when the request has been fully handled (either redirected or 404'd).
+    /// Returns <c>false</c> on a transient API failure so the caller can apply graceful fallback.
+    /// </summary>
+    private async Task<bool> TryLegacyRedirectAsync(HttpContext context, string slug, string? sectionHint)
+    {
+        try
+        {
+            await using var scope = _scopeFactory.CreateAsyncScope();
+            var apiClient = scope.ServiceProvider.GetRequiredService<ITechHubApiClient>();
+            var result = await apiClient.GetLegacyRedirectAsync(slug, sectionHint, context.RequestAborted);
+
+            if (result != null)
+            {
+                _logger.LogInformation("Legacy redirect: {Slug} ({Section}) -> {Url}", slug, sectionHint, result.Url);
+                Redirect(context, result.Url + context.Request.QueryString);
+                return true;
+            }
+
+            // Slug confirmed not in the DB — hard 404 so crawlers treat this as permanently absent.
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            return true;
+        }
+        catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
+        {
+            // Rethrow: avoid writing a redirect onto an already-aborted connection.
+            throw;
+        }
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
+        {
+            _logger.LogWarning(ex, "Legacy lookup failed for {Slug} ({Section}); caller will apply fallback", slug, sectionHint);
+            return false;
+        }
     }
 
     /// <summary>

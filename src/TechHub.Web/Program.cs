@@ -352,10 +352,11 @@ contentTypeProvider.Mappings[".jxl"] = "image/jxl";
 app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProvider });
 
 // ── Step 3a: Rewrite HEAD → GET ───────────────────────────────────────────────
-// MapRazorComponents only registers GET endpoints. HEAD requests to valid Blazor
-// routes return 405 without this rewrite. We convert HEAD to GET so routing
-// succeeds; Kestrel suppresses the response body at the transport level since
-// the original TCP request was HEAD.
+// MapRazorComponents and MapGet only register GET endpoints. In WebApplication,
+// UseRouting() is auto-inserted at the start of the pipeline (before user middleware),
+// so it sees the original HEAD method and returns 405. To fix this, we place an
+// explicit app.UseRouting() AFTER the rewrite so routing happens after the method
+// is already GET. The body is suppressed via Stream.Null so HEAD responses are empty.
 app.Use(async (context, next) =>
 {
     if (HttpMethods.IsHead(context.Request.Method))
@@ -378,6 +379,12 @@ app.Use(async (context, next) =>
         await next();
     }
 });
+
+// Explicit UseRouting() placement: must come AFTER the HEAD→GET rewrite so that
+// endpoint selection (including HTTP-method matching) sees GET rather than HEAD.
+// Without this, WebApplication auto-inserts UseRouting at the pipeline start,
+// before the rewrite, causing all HEAD requests to return 405.
+app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();

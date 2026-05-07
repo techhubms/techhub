@@ -352,6 +352,47 @@ public class UrlRoutingTests : PlaywrightTestBase
 
     #endregion
 
+#endregion
+
+    #region URL Normalization Redirects
+
+    [Fact]
+    public async Task TrailingSlash_IsRedirectedToPathWithoutSlash()
+    {
+        // A URL with a trailing slash (e.g. /ai/) must 301-redirect to the canonical form (/ai).
+        // Blazor routes never have trailing slashes so the redirect must happen in middleware.
+        await Page.GotoRelativeAsync("/ai/");
+
+        await Page.AssertUrlEndsWithAsync("/ai");
+    }
+
+    [Fact]
+    public async Task RenamedSection_Coding_RedirectsToDotnet()
+    {
+        // The "coding" section was renamed to "dotnet".
+        // Any request for /coding/... should 301-redirect to /dotnet/...
+        await Page.GotoRelativeAsync("/coding/videos");
+
+        await Assertions.Expect(Page).ToHaveURLAsync(
+            new Regex(@".*/dotnet/videos.*"),
+            new() { Timeout = BlazorHelpers.E2ETimeout }
+        );
+    }
+
+    [Fact]
+    public async Task HeadRequest_ReturnsSuccessStatus_NotMethodNotAllowed()
+    {
+        // HEAD requests to valid pages must return 200, not 405 Method Not Allowed.
+        // The HEAD-to-GET rewrite middleware must run before routing.
+        var response = await Page.APIRequest.GetAsync(BlazorHelpers.BaseUrl + "/ai",
+            new() { Method = "HEAD", FailOnStatusCode = false });
+
+        response.Status.Should().Be(200,
+            "HEAD on a valid route should return 200, not 405 Method Not Allowed");
+    }
+
+    #endregion
+
     #region URL Sharing and Bookmarking
 
     [Fact]
