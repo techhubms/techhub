@@ -9,9 +9,14 @@ window.mobileNav = {
     /** Lock body scroll when mobile menu is open (preserves scroll position) */
     lockScroll: () => {
         const scrollY = window.scrollY;
-        document.body.style.position = 'fixed';
+        // Set top before position:fixed to prevent a Safari paint flash where the
+        // body briefly renders at position 0 before the scroll offset is applied.
         document.body.style.top = `-${scrollY}px`;
-        document.body.style.width = '100%';
+        document.body.style.position = 'fixed';
+        // Use explicit pixel width matching the current layout width so the fixed
+        // body does not expand by the scrollbar width on desktop (where html has a
+        // permanent scrollbar via overflow-y: scroll).
+        document.body.style.width = `${document.documentElement.clientWidth}px`;
     },
 
     /** Unlock body scroll when mobile menu is closed (restores scroll position) */

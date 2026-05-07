@@ -130,7 +130,7 @@ window.__isBlazorInteractiveReady = function () {
  * Sets up focus scroll compensation for sticky headers.
  * When tabbing backwards (Shift+Tab) and an element receives focus behind
  * a sticky header, this scrolls the element into view.
- * 
+ *
  * CSS scroll-margin-top handles most cases, but this provides a JavaScript
  * backup for edge cases and older browsers.
  */
@@ -140,8 +140,18 @@ function setupFocusScrollCompensation() {
     const STICKY_HEADER_HEIGHT = 142; // 76px + 50px + 16px padding
 
     document.addEventListener('focusin', (event) => {
+        // Only compensate during keyboard navigation (Tab key).
+        // The pointerdown handler removes 'keyboard-nav' before focusin fires,
+        // so this guard prevents unwanted upward scroll when tapping or clicking
+        // interactive elements (e.g. hamburger button, SubNav dropdown toggle).
+        if (!document.documentElement.classList.contains('keyboard-nav')) return;
+
         const element = event.target;
         if (!element) return;
+
+        // Skip elements that are part of the sticky header itself — they are
+        // already visible by definition and do not need scroll compensation.
+        if (element.closest('header')) return;
 
         // Get the element's position relative to the viewport
         const rect = element.getBoundingClientRect();
