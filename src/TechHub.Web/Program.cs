@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -271,6 +272,58 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 // Register interface for dependency injection (scoped to match HttpClient lifetime)
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
+// Rate limiting: protect the public Web surface against excessive requests and bot scraping
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.OnRejected = async (context, token) =>
+    {
+        if (context.Lease.TryGetMetadata(MetadataName.RetryAfter, out var retryAfter))
+        {
+            context.HttpContext.Response.Headers.RetryAfter =
+                ((int)retryAfter.TotalSeconds).ToString(System.Globalization.CultureInfo.InvariantCulture);
+        }
+
+        await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
+    };
+
+    // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation)
+    options.AddPolicy("web-general", context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 60,
+                Window = TimeSpan.FromMinutes(1),
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                QueueLimit = 5
+            }));
+
+    // RSS feed endpoints: stricter limit — bot-targeted content syndication
+    options.AddPolicy("web-rss", context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 20,
+                Window = TimeSpan.FromMinutes(1),
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                QueueLimit = 0
+            }));
+
+    // Blazor Server SignalR circuits: concurrency cap per IP
+    options.AddPolicy("web-signalr", context =>
+        RateLimitPartition.GetConcurrencyLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: _ => new ConcurrencyLimiterOptions
+            {
+                PermitLimit = 10,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                QueueLimit = 5
+            }));
+});
+
 var app = builder.Build();
 
 // Pre-load sections into cache at startup for flicker-free navigation
@@ -381,6 +434,7 @@ app.Use(async (context, next) =>
 
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseRateLimiter();
 app.UseAdminTokenValidation();
 app.UseAntiforgery();
 
@@ -400,7 +454,8 @@ app.MapStaticAssets();
 app.MapControllers();
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode();
+    .AddInteractiveServerRenderMode()
+    .RequireRateLimiting("web-general");
 
 // RSS feed proxy endpoints - serve feeds from same domain as website
 app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
@@ -410,7 +465,8 @@ app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken
 })
 .WithName("GetAllContentRssFeed")
 .WithSummary("RSS feed for all content")
-.ExcludeFromDescription();
+.ExcludeFromDescription()
+.RequireRateLimiting("web-rss");
 
 // Special handling for /all/roundups/feed.xml before general section route
 app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
@@ -420,7 +476,8 @@ app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, Cancella
 })
 .WithName("GetRoundupsRssFeed")
 .WithSummary("RSS feed for roundups collection")
-.ExcludeFromDescription();
+.ExcludeFromDescription()
+.RequireRateLimiting("web-rss");
 
 app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
 {
@@ -434,7 +491,8 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 })
 .WithName("GetSectionRssFeed")
 .WithSummary("RSS feed for a section")
-.ExcludeFromDescription();
+.ExcludeFromDescription()
+.RequireRateLimiting("web-rss");
 
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();

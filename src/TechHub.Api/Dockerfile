@@ -30,7 +30,7 @@ WORKDIR /app
 
 # Install curl for healthcheck and yt-dlp for YouTube transcript fetching
 # Pin yt-dlp to a specific version for reproducible builds
-RUN apt-get update && apt-get install -y curl python3 && rm -rf /var/lib/apt/lists/* \
+RUN apt-get update && apt-get install -y --no-install-recommends curl python3 && rm -rf /var/lib/apt/lists/* \
     && curl -L https://github.com/yt-dlp/yt-dlp/releases/download/2026.03.17/yt-dlp -o /usr/local/bin/yt-dlp \
     && chmod a+rx /usr/local/bin/yt-dlp
 

@@ -27,7 +27,8 @@ public static class SitemapEndpoints
                 "and internal content pages (videos, roundups, custom pages). " +
                 "Excludes news, blogs, and community items because those link to external sources.")
             .Produces(StatusCodes.Status200OK, contentType: "application/xml")
-            .ExcludeFromDescription();
+            .ExcludeFromDescription()
+            .RequireRateLimiting("api-public");
 
         return endpoints;
     }
