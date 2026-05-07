@@ -143,5 +143,52 @@
             ]
         }
     ],
-    "videoCollection": "ghc-features"
+    "videoCollection": "ghc-features",
+    "timelineFeatures": [
+        {
+            "id": "ghc-features-video",
+            "name": "GHC Features Video",
+            "releaseDate": "2024-01",
+            "description": "Video in ghc-features subcollection for testing videos collection aggregation.",
+            "plans": ["Free"],
+            "ghesSupport": true,
+            "videoSlug": "ghc1"
+        },
+        {
+            "id": "free-feature-without-ghes",
+            "name": "Free Feature Without GHES",
+            "releaseDate": "2024-02",
+            "description": "Free tier feature without GHES support for testing filtering.",
+            "plans": ["Free"],
+            "ghesSupport": false,
+            "videoSlug": "ghc-free-no-ghes"
+        },
+        {
+            "id": "pro-feature-with-ghes",
+            "name": "Pro Feature With GHES",
+            "releaseDate": "2024-03",
+            "description": "Pro tier feature with GHES support.",
+            "plans": ["Student", "Pro", "Business"],
+            "ghesSupport": true,
+            "videoSlug": "ghc-pro-ghes"
+        },
+        {
+            "id": "pro-feature-without-ghes",
+            "name": "Pro Feature Without GHES",
+            "releaseDate": "2024-04",
+            "description": "Pro tier feature without GHES support.",
+            "plans": ["Student", "Pro", "Business"],
+            "ghesSupport": false,
+            "videoSlug": "ghc-pro-no-ghes"
+        },
+        {
+            "id": "enterprise-feature-with-ghes",
+            "name": "Enterprise Feature With GHES",
+            "releaseDate": "2024-05",
+            "description": "Enterprise tier feature with GHES support.",
+            "plans": ["Pro+", "Enterprise"],
+            "ghesSupport": true,
+            "videoSlug": "ghc-enterprise-ghes"
+        }
+    ]
 }

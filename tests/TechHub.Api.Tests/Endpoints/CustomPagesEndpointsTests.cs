@@ -149,6 +149,20 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         data.FeatureSections[0].Plans.Should().Contain("Free");
         data.FeatureSections[1].Plans.Should().Contain("Student");
         data.VideoCollection.Should().Be("ghc-features");
+
+        // Timeline features
+        data.TimelineFeatures.Should().NotBeNullOrEmpty("Timeline features should be present");
+        data.TimelineFeatures![0].Id.Should().NotBeNullOrWhiteSpace();
+        data.TimelineFeatures[0].Name.Should().NotBeNullOrWhiteSpace();
+        data.TimelineFeatures[0].ReleaseDate.Should().MatchRegex(@"^\d{4}-\d{2}$", "Release date should be in YYYY-MM format");
+        data.TimelineFeatures[0].Description.Should().NotBeNullOrWhiteSpace();
+        data.TimelineFeatures[0].Plans.Should().NotBeEmpty("Each timeline feature should have at least one plan");
+
+        // Verify at least one feature has GHES support
+        data.TimelineFeatures.Should().Contain(f => f.GhesSupport, "At least one timeline feature should have GHES support");
+
+        // Verify at least one feature has a video slug
+        data.TimelineFeatures.Should().Contain(f => f.VideoSlug != null, "At least one timeline feature should link to a video");
     }
 
     [Fact]

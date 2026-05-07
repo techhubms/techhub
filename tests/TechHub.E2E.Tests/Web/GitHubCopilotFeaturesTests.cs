@@ -6,8 +6,8 @@ using TechHub.E2E.Tests.Helpers;
 namespace TechHub.E2E.Tests.Web;
 
 /// <summary>
-/// E2E tests for GitHub Copilot Features custom page.
-/// Verifies page-specific content and features.
+/// E2E tests for GitHub Copilot Features custom page — feature timeline view.
+/// Verifies page-specific content and the timeline UI.
 /// 
 /// Common component tests are in separate test files:
 /// - SidebarTocTests.cs: Table of contents behavior
@@ -107,145 +107,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_TierCards_ShouldBe_ClickableLinks()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Each tier card in the sidebar should be an anchor element linking to its feature section
-        var sidebar = Page.Locator("aside.sidebar");
-        var tierCards = sidebar.Locator("a.features-tier-card");
-        var tierCount = await tierCards.CountAsync();
-        tierCount.Should().Be(6, "Expected 6 clickable tier cards in the sidebar");
-
-        for (var i = 0; i < tierCount; i++)
-        {
-            var card = tierCards.Nth(i);
-            var href = await card.GetAttributeAsync("href");
-            href.Should().StartWith("/github-copilot/features#", "Tier card should link to its feature section");
-
-            // Should still have the "View Features" label
-            var label = card.Locator(".features-tier-link");
-            await Assertions.Expect(label).ToBeVisibleAsync();
-        }
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_ShouldDisplay_FeatureSections()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Should have feature sections (Free Features, Pro Features, Enterprise Features)
-        var featureSections = Page.Locator(".features-video-section");
-        var sectionCount = await featureSections.CountAsync();
-        sectionCount.Should().Be(3, "Expected 3 feature sections (Free, Pro & Business, Pro+ & Enterprise)");
-
-        // Each section should have a heading
-        var firstSection = featureSections.First;
-        await Assertions.Expect(firstSection.Locator("h2")).ToBeVisibleAsync();
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_FeatureSections_ShouldHave_PerSectionFilters()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Each feature section should have its own filter buttons
-        var featureSections = Page.Locator(".features-video-section");
-        var sectionCount = await featureSections.CountAsync();
-
-        for (var i = 0; i < sectionCount; i++)
-        {
-            var section = featureSections.Nth(i);
-            var filterBar = section.Locator(".features-section-filters");
-            await Assertions.Expect(filterBar).ToBeVisibleAsync();
-
-            // Each section should have GHES and Videos filter buttons
-            var ghesButton = filterBar.Locator("button:has-text('GHES')");
-            await Assertions.Expect(ghesButton).ToBeVisibleAsync();
-
-            var videosButton = filterBar.Locator("button:has-text('videos')");
-            await Assertions.Expect(videosButton).ToBeVisibleAsync();
-        }
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_ShouldNotHave_GlobalFilterBar()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Global filter bar with checkboxes should not exist
-        var globalFilters = Page.Locator("[data-feature-filters]");
-        var count = await globalFilters.CountAsync();
-        count.Should().Be(0, "Global filter bar should be removed in favor of per-section filters");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_FeatureCards_ShouldDisplay_GhesBadges()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Feature cards with GHES support should display GHES badge
-        var ghesBadges = Page.Locator(".feature-card .badge-success");
-        var ghesBadgeCount = await ghesBadges.CountAsync();
-        ghesBadgeCount.Should().BeGreaterThan(0, "At least one feature should have a GHES badge");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_FeatureCards_ShouldDisplay_VideoBadges()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Feature cards with videos should display video badge
-        var videoBadges = Page.Locator(".feature-card .badge-info");
-        var videoBadgeCount = await videoBadges.CountAsync();
-        videoBadgeCount.Should().BeGreaterThan(0, "At least one feature should have a video badge");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_FeatureCards_ShouldDisplay_YouTubeThumbnails()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Feature cards with video links should have YouTube thumbnails
-        var thumbnails = Page.Locator(".feature-card-thumbnail img");
-        var thumbnailCount = await thumbnails.CountAsync();
-        thumbnailCount.Should().BeGreaterThan(0, "At least one feature should have a YouTube thumbnail");
-
-        // Verify first thumbnail has YouTube URL
-        var firstThumbnailSrc = await thumbnails.First.GetAttributeAsync("src");
-        firstThumbnailSrc.Should().Contain("img.youtube.com", "Thumbnails should use YouTube image URLs");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_Intro_ShouldDisplay_LinksAndNote()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Should have intro section with links
-        var intro = Page.Locator(".custom-page-intro");
-        await intro.AssertElementVisibleAsync();
-
-        // Should have note about GHES
-        var note = intro.Locator(".custom-page-note");
-        await note.AssertElementVisibleAsync();
-        var noteText = await note.TextContentAsync();
-        noteText.Should().Contain("Note:", "Expected note section to be clearly marked");
-
-        // Should have links to pricing and plan details (inline in text)
-        var links = intro.Locator("p >> a[href]");
-        var linkCount = await links.CountAsync();
-        linkCount.Should().BeGreaterThanOrEqualTo(2, "Expected links to pricing and plan details");
-    }
-
-    [Fact]
     public async Task GitHubCopilotFeatures_TierCards_ShouldBe_InSidebar()
     {
         // Arrange
@@ -270,7 +131,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var sidebar = Page.Locator("aside.sidebar");
         await sidebar.AssertElementVisibleAsync();
 
-        // Sidebar should contain all 5 tier cards
         var sidebarTierCards = sidebar.Locator(".features-tier-card");
         var tierCount = await sidebarTierCards.CountAsync();
         tierCount.Should().Be(6, "Expected 6 subscription tiers in the sidebar");
@@ -300,6 +160,294 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
+    public async Task GitHubCopilotFeatures_ShouldDisplay_Timeline()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Timeline should exist and have entries
+        var timeline = Page.Locator(".features-timeline");
+        await timeline.AssertElementVisibleAsync();
+
+        // Should have at least one year group
+        var yearGroups = Page.Locator(".features-timeline-year-group");
+        var yearGroupCount = await yearGroups.CountAsync();
+        yearGroupCount.Should().BeGreaterThan(0, "Timeline should have at least one year group");
+
+        // Should have timeline entries
+        var entries = Page.Locator(".features-timeline-entry");
+        var entryCount = await entries.CountAsync();
+        entryCount.Should().BeGreaterThan(0, "Timeline should have at least one feature entry");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_Timeline_ShouldHave_YearLabels()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Year labels should be visible
+        var yearLabels = Page.Locator(".features-timeline-year-label");
+        var count = await yearLabels.CountAsync();
+        count.Should().BeGreaterThan(0, "Timeline should have year labels");
+
+        // Year label should contain a year number
+        var firstLabel = yearLabels.First;
+        var labelText = await firstLabel.TextContentAsync();
+        labelText.Should().MatchRegex(@"\d{4}", "Year label should contain a 4-digit year");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_TimelineEntry_ShouldHave_RequiredElements()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Each timeline entry should have the required structural elements
+        var firstEntry = Page.Locator(".features-timeline-entry").First;
+        await Assertions.Expect(firstEntry).ToBeVisibleAsync();
+
+        // Should have feature name
+        await Assertions.Expect(firstEntry.Locator(".features-timeline-name")).ToBeVisibleAsync();
+
+        // Should have description
+        await Assertions.Expect(firstEntry.Locator(".features-timeline-description")).ToBeVisibleAsync();
+
+        // Should have date
+        await Assertions.Expect(firstEntry.Locator(".features-timeline-date")).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_TimelineEntry_ShouldHave_PlanBadges()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Timeline entries should have plan badges
+        var planBadges = Page.Locator(".features-timeline-entry .badge-plan");
+        var badgeCount = await planBadges.CountAsync();
+        badgeCount.Should().BeGreaterThan(0, "At least one timeline entry should have plan badges");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_Timeline_ShouldHave_GhesBadges()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Some timeline entries should have GHES badges
+        var ghesBadges = Page.Locator(".features-timeline-entry .badge-success");
+        var ghesBadgeCount = await ghesBadges.CountAsync();
+        ghesBadgeCount.Should().BeGreaterThan(0, "At least one timeline entry should have a GHES badge");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_Timeline_ShouldHave_VideoBadges()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Some timeline entries should have video badges
+        var videoBadges = Page.Locator(".features-timeline-entry .badge-info");
+        var videoBadgeCount = await videoBadges.CountAsync();
+        videoBadgeCount.Should().BeGreaterThan(0, "At least one timeline entry should have a video badge");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_ShouldDisplay_GlobalFilterBar()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Global filter bar should exist
+        var filterBar = Page.Locator(".features-timeline-filters");
+        await filterBar.AssertElementVisibleAsync();
+
+        // Should have an "All" button
+        var allButton = filterBar.Locator("button:has-text('All')");
+        await Assertions.Expect(allButton).ToBeVisibleAsync();
+
+        // Should have a GHES filter button
+        var ghesButton = filterBar.Locator("button:has-text('GHES')");
+        await Assertions.Expect(ghesButton).ToBeVisibleAsync();
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_Intro_ShouldDisplay_LinksAndNote()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Should have intro section with links
+        var intro = Page.Locator(".custom-page-intro");
+        await intro.AssertElementVisibleAsync();
+
+        // Should have note about GHES
+        var note = intro.Locator(".custom-page-note");
+        await note.AssertElementVisibleAsync();
+        var noteText = await note.TextContentAsync();
+        noteText.Should().Contain("Note:", "Expected note section to be clearly marked");
+
+        // Should have links to pricing and plan details (inline in text)
+        var links = intro.Locator("p >> a[href]");
+        var linkCount = await links.CountAsync();
+        linkCount.Should().BeGreaterThanOrEqualTo(2, "Expected links to pricing and plan details");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_GhesFilter_ShouldFilter_Timeline()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Get initial entry count
+        var entriesBefore = Page.Locator(".features-timeline-entry");
+        var countBefore = await entriesBefore.CountAsync();
+        countBefore.Should().BeGreaterThan(0, "Should have timeline entries before filtering");
+
+        // Act - Click the GHES filter
+        var ghesButton = Page.Locator(".features-timeline-filters button[data-filter='ghes']");
+        await ghesButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(ghesButton).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
+
+        // Assert - GHES filter should be active and only GHES entries should be visible
+        var entriesAfter = Page.Locator(".features-timeline-entry");
+        var countAfter = await entriesAfter.CountAsync();
+        // After filtering by GHES, we should have fewer or equal entries
+        countAfter.Should().BeLessThanOrEqualTo(countBefore,
+            "Filtering by GHES should not increase the number of entries");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_TierFilter_ShouldFilter_Timeline()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Get total entry count first
+        var allEntries = Page.Locator(".features-timeline-entry");
+        var totalCount = await allEntries.CountAsync();
+        totalCount.Should().BeGreaterThan(0);
+
+        // Act - Click a tier filter (Free)
+        var freeButton = Page.Locator(".features-timeline-filters button:has-text('Free')");
+        await freeButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(freeButton).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
+
+        // Assert - After filtering by Free tier, entries should be <= total
+        var filteredEntries = Page.Locator(".features-timeline-entry");
+        var filteredCount = await filteredEntries.CountAsync();
+        filteredCount.Should().BeLessThanOrEqualTo(totalCount,
+            "Filtering by Free tier should not show more entries than without filter");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_ClearFilter_ShouldRestore_AllEntries()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        var allEntries = Page.Locator(".features-timeline-entry");
+        var totalCount = await allEntries.CountAsync();
+
+        // Apply a filter
+        var ghesButton = Page.Locator(".features-timeline-filters button[data-filter='ghes']");
+        await ghesButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(ghesButton).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
+
+        // Act - Click the "All" button to clear filters
+        var allButton = Page.Locator(".features-timeline-filters button:has-text('All')");
+        await allButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(allButton).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
+
+        // Assert - Entry count should be restored
+        var restoredEntries = Page.Locator(".features-timeline-entry");
+        var restoredCount = await restoredEntries.CountAsync();
+        restoredCount.Should().Be(totalCount, "Clearing filters should restore all timeline entries");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_TimelineEntry_ExpandCollapse_ShouldWork()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        var firstEntry = Page.Locator(".features-timeline-entry").First;
+        await Assertions.Expect(firstEntry).ToBeVisibleAsync();
+
+        // Initially not expanded
+        await Assertions.Expect(firstEntry).Not.ToHaveClassAsync(new Regex("expanded"));
+
+        // Act - Click to expand
+        var header = firstEntry.Locator(".features-timeline-header");
+        await header.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(firstEntry).ToHaveClassAsync(
+                new Regex("expanded"), new() { Timeout = 2000 }));
+
+        // Act - Click again to collapse
+        await header.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(firstEntry).Not.ToHaveClassAsync(
+                new Regex("expanded"), new() { Timeout = 2000 }));
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_ExpandedEntry_ShouldShow_VideoThumbnail()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Find the first entry that has a video badge (badge-info)
+        var entryWithVideo = Page.Locator(".features-timeline-entry:has(.badge-info)").First;
+        var entryCount = await entryWithVideo.CountAsync();
+
+        if (entryCount == 0)
+        {
+            // No video entries, skip
+            return;
+        }
+
+        await Assertions.Expect(entryWithVideo).ToBeVisibleAsync();
+
+        // Expand the entry
+        var header = entryWithVideo.Locator(".features-timeline-header");
+        await header.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(entryWithVideo).ToHaveClassAsync(
+                new Regex("expanded"), new() { Timeout = 2000 }));
+
+        // Assert - Expanded entry with video should show thumbnail
+        var thumbnail = entryWithVideo.Locator(".feature-card-thumbnail img");
+        await Assertions.Expect(thumbnail).ToBeVisibleAsync();
+
+        // Thumbnail should have YouTube URL
+        var src = await thumbnail.GetAttributeAsync("src");
+        src.Should().Contain("img.youtube.com", "Thumbnail should use YouTube image URL");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_TierCard_Click_ShouldFilter_Timeline()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        var sidebar = Page.Locator("aside.sidebar");
+        var freeTierCard = sidebar.Locator("#tier-free");
+        await Assertions.Expect(freeTierCard).ToBeVisibleAsync();
+
+        // Act - Click Free tier card in sidebar
+        await freeTierCard.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(freeTierCard).ToHaveClassAsync(
+                new Regex("active"), new() { Timeout = 2000 }));
+
+        // Assert - Free tier filter should also be active in the main filter bar
+        var freeFilterBtn = Page.Locator(".features-timeline-filters button:has-text('Free')");
+        await Assertions.Expect(freeFilterBtn).ToHaveClassAsync(new Regex("active"));
+    }
+
+    [Fact]
     public async Task GitHubCopilotFeatures_ShouldHave_NoConsoleErrors()
     {
         // Arrange
@@ -323,68 +471,5 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             .ToList();
 
         significantErrors.Should().BeEmpty("Page should load without JavaScript errors");
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_FilterButton_ShouldOnlyAffectOwnSection()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait for filter buttons to be initialized
-        var sections = Page.Locator(".features-video-section");
-        var sectionCount = await sections.CountAsync();
-        sectionCount.Should().BeGreaterThanOrEqualTo(2, "Need at least 2 sections to test per-section filtering");
-
-        // Act - Click the GHES filter button and wait for Blazor to add the active class
-        var firstSection = sections.First;
-        var firstGhesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
-        await firstGhesButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(firstGhesButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
-
-        // Assert - The second section's GHES button should NOT be active
-        var secondSection = sections.Nth(1);
-        var secondGhesButton = secondSection.Locator(".features-filter-btn[data-filter='ghes']");
-        await Assertions.Expect(secondGhesButton).Not.ToHaveClassAsync(new Regex("active"));
-    }
-
-    [Fact]
-    public async Task GitHubCopilotFeatures_FilterButton_ShouldNotScrollToHeading()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Wait for filter buttons to be initialized (indicates JS has run and DOM is stable)
-        var firstSection = Page.Locator(".features-video-section").First;
-        var ghesButton = firstSection.Locator(".features-filter-btn[data-filter='ghes']");
-        await Assertions.Expect(ghesButton).ToBeVisibleAsync();
-
-        // Wait for Blazor interactivity to settle before clicking the filter button
-        await Page.WaitForBlazorReadyAsync();
-
-        // Record the heading's viewport position before clicking.
-        // ToBeVisibleAsync (auto-retrying) ensures Blazor's post-WaitForBlazorReady
-        // re-render has settled before we call ScrollIntoViewIfNeededAsync, which
-        // does NOT retry and throws "Element is not attached to the DOM" if the
-        // element is briefly replaced by a re-render.
-        var heading = firstSection.Locator("h2[id]");
-        await Assertions.Expect(heading).ToBeVisibleAsync();
-        await heading.ScrollIntoViewIfNeededAsync();
-        var rectBefore = await heading.BoundingBoxAsync();
-
-        // Act - Click the GHES filter
-        await ghesButton.ClickAsync();
-
-        // Assert - The heading should still be in roughly the same viewport position
-        // scrollIntoView would snap it to the top of the viewport.
-        // Wait for visible in case Blazor briefly re-renders after the click.
-        await Assertions.Expect(heading).ToBeVisibleAsync();
-        var rectAfter = await heading.BoundingBoxAsync();
-        rectBefore.Should().NotBeNull();
-        rectAfter.Should().NotBeNull();
-
-        var yDiff = Math.Abs(rectAfter!.Y - rectBefore!.Y);
-        yDiff.Should().BeLessThan(100, "Heading position should not change significantly - no programmatic scroll should occur");
     }
 }
