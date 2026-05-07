@@ -663,6 +663,11 @@ public static partial class AdminEndpoints
             return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
         }
 
+        if (!string.Equals(collection.Trim(), "videos", StringComparison.OrdinalIgnoreCase))
+        {
+            return Results.BadRequest("Transcripts can only be applied to video items (collection must be 'videos').");
+        }
+
         if (string.IsNullOrWhiteSpace(request.Transcript))
         {
             return Results.BadRequest("Transcript is required.");
@@ -680,6 +685,14 @@ public static partial class AdminEndpoints
         if (string.IsNullOrWhiteSpace(existing.ExternalUrl))
         {
             return Results.BadRequest("Content item does not have an associated external URL.");
+        }
+
+        // Ensure the item is actually a YouTube video before proceeding
+        var isYouTubeUrl = existing.ExternalUrl.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
+            || existing.ExternalUrl.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
+        if (!isYouTubeUrl)
+        {
+            return Results.BadRequest("Transcripts can only be applied to YouTube video items.");
         }
 
         // Build a synthetic RawFeedItem using the existing item's metadata and the provided transcript

@@ -767,57 +767,10 @@ public class ContentProcessingServiceTests
 
     // ── Transcript Tracking ───────────────────────────────────────────────
 
-    [Fact]
-    public async Task RunAsync_YouTubeItem_WithTranscript_TracksSucceeded()
-    {
-        // Arrange
-        var testId = Guid.NewGuid().ToString("N")[..8];
-        var feed = new FeedConfig { Id = 1, Name = "YT", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true };
-        var ytUrl = $"https://youtube.com/watch?v=transcript-ok-{testId}";
-        var ytItem = new RawFeedItem
-        {
-            Title = "Video",
-            ExternalUrl = ytUrl,
-            PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "YT",
-            CollectionName = "videos",
-            FeedTags = []
-        };
-        var processed = CreateProcessedItem(ytUrl, $"transcript-ok-{testId}");
-
-        _feedRepo.Setup(r => r.GetEnabledAsync(It.IsAny<CancellationToken>())).ReturnsAsync([feed]);
-        _rssService.Setup(r => r.IngestAsync(feed, It.IsAny<CancellationToken>())).ReturnsAsync(FeedIngestionResult.Success([ytItem]));
-
-        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
-
-        // Override default article service mock to simulate transcript fetch succeeding
-        _articleService
-            .Setup(s => s.EnrichWithContentAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync((RawFeedItem item, CancellationToken _) => new RawFeedItem
-            {
-                Title = item.Title,
-                ExternalUrl = item.ExternalUrl,
-                PublishedAt = item.PublishedAt,
-                FeedName = item.FeedName,
-                CollectionName = item.CollectionName,
-                FeedTags = item.FeedTags,
-                FullContent = "Transcript text here"
-            });
-        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
-
-        // Act
-        await sut.RunAsync("scheduled", CancellationToken.None);
-
-        // Assert — has_transcript should be true in processed_urls
-        var result = await _processedUrlRepo.GetPagedAsync(0, 10, search: ytUrl, ct: CancellationToken.None);
-        result.Items.Should().ContainSingle();
-        result.Items[0].HasTranscript.Should().BeTrue();
-
-        // Assert — job should track transcript counts
-        var jobs = await _jobRepo.GetRecentAsync(1, CancellationToken.None);
-        jobs[0].TranscriptsSucceeded.Should().BeGreaterThanOrEqualTo(1);
-    }
+    // Note: RunAsync_YouTubeItem_WithTranscript_TracksSucceeded was removed because it tested
+    // automatic transcript fetching via the article service, which has been entirely removed.
+    // YouTube items in batch runs are now always processed with hasTranscript=false unless a
+    // manual transcript is provided via ProcessSingleAsync. See ProcessSingleAsync_YouTubeWithManualTranscript_PassesTranscriptToAi.
 
     [Fact]
     public async Task RunAsync_YouTubeItem_WithoutTranscript_TracksFailed()
@@ -891,14 +844,14 @@ public class ContentProcessingServiceTests
         // Automatic transcript fetching is disabled. YouTube items should be processed
         // using only available metadata (tags, description, etc.) — article service must NOT be called.
         var testId = Guid.NewGuid().ToString("N")[..8];
-        var feed = new FeedConfig { Id = 1, Name = "YT Feed", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true };
+        var feed = new FeedConfig { Id = 1, Name = "GitHub YouTube", Url = "https://youtube.com/feed", OutputDir = "_videos", Enabled = true };
         var ytUrl = $"https://youtube.com/watch?v=no-transcript-{testId}";
         var ytItem = new RawFeedItem
         {
             Title = "Video No Transcript",
             ExternalUrl = ytUrl,
             PublishedAt = DateTimeOffset.UtcNow,
-            FeedName = "YT Feed",
+            FeedName = "GitHub YouTube",
             CollectionName = "videos",
             FeedTags = []
         };
@@ -945,7 +898,7 @@ public class ContentProcessingServiceTests
         var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
 
         // Act
-        var result = await sut.ProcessSingleAsync(ytUrl, "videos", "TestFeed", transcript: manualTranscript, ct: TestContext.Current.CancellationToken);
+        var result = await sut.ProcessSingleAsync(ytUrl, "videos", "GitHub YouTube", transcript: manualTranscript, ct: TestContext.Current.CancellationToken);
 
         // Assert — article service must NOT be called (manual transcript provided)
         _articleService.Verify(

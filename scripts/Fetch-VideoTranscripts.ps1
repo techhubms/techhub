@@ -117,7 +117,7 @@ function Get-VideosByJobId {
     param([long]$JobId)
 
     Write-Step "Fetching videos for job $JobId from API…"
-    $url = "$ApiBaseUrl/api/admin/processed-urls?jobId=$JobId&collectionName=videos&status=success&pageSize=500"
+    $url = "$ApiBaseUrl/api/admin/processed-urls?jobId=$JobId&collectionName=videos&status=succeeded&pageSize=500"
     try {
         $response = Invoke-RestMethod -Uri $url -Headers (Get-ApiHeaders) -Method Get
         $slugs = $response.items | Where-Object { $null -ne $_.slug } | Select-Object -ExpandProperty slug
@@ -189,15 +189,30 @@ function Get-TranscriptViaYtDlp {
             return $null
         }
 
-        # Find the VTT file (yt-dlp uses the video ID in the filename)
+        # Find the VTT file. yt-dlp may produce multiple VTT files when both manual subtitles
+        # and auto-generated captions are available (e.g., "transcript.en.vtt" for manual,
+        # "transcript.en.auto.vtt" or "transcript.en-orig.vtt" for auto-generated).
+        # Prefer manual subtitles (no "auto" or "-orig" suffix) over auto-generated captions.
         $vttFiles = Get-ChildItem -Path $tempDir -Filter '*.vtt' -ErrorAction SilentlyContinue
         if (-not $vttFiles -or $vttFiles.Count -eq 0) {
             Write-Warn "No VTT subtitle file found for $VideoUrl"
             return $null
         }
 
-        # Use the first (and typically only) VTT file
-        $vttContent = Get-Content -Path $vttFiles[0].FullName -Raw -Encoding UTF8
+        # Select the best VTT file: prefer manual subtitles (no ".auto." or "-orig" in filename),
+        # then fall back to any auto-generated caption. Log the chosen file for transparency.
+        $manualVtt = $vttFiles | Where-Object { $_.Name -notmatch '\.auto\.' -and $_.Name -notmatch '-orig\.' } | Select-Object -First 1
+        $chosenVtt = if ($manualVtt) {
+            Write-Step "Using manual subtitle: $($manualVtt.Name)"
+            $manualVtt
+        }
+        else {
+            $autoVtt = $vttFiles | Select-Object -First 1
+            Write-Warn "No manual subtitles found; using auto-generated caption: $($autoVtt.Name)"
+            $autoVtt
+        }
+
+        $vttContent = Get-Content -Path $chosenVtt.FullName -Raw -Encoding UTF8
         return ConvertFrom-Vtt -VttContent $vttContent
     }
     finally {

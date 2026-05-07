@@ -110,6 +110,7 @@ RSS feeds are stored in the `rss_feed_configs` database table and managed direct
 **Optional Fields**:
 
 - **enabled**: Boolean to enable/disable feed (default: true)
+
 ### Adding New Feeds
 
 **Via Admin UI** (recommended):
