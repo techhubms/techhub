@@ -1048,8 +1048,8 @@ public static partial class AdminEndpoints
         }
 
         var youtubeUrl = request.YoutubeUrl.Trim();
-        var isYouTubeUrl = youtubeUrl.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
-            || youtubeUrl.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
+        var host = uri.Host.ToLowerInvariant();
+        var isYouTubeUrl = host is "youtube.com" or "www.youtube.com" or "m.youtube.com" or "youtu.be";
         if (!isYouTubeUrl)
         {
             return Results.BadRequest("The URL must be a YouTube video URL.");
@@ -1131,6 +1131,13 @@ public static partial class AdminEndpoints
 
         processed = processed.WithTags(TagNormalizer.EnsureSectionTags(processed.Tags, processed.Sections));
         processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
+
+        // Ensure the collection tag (e.g. "Videos") is present — consistent with ingestion
+        var collectionTag = char.ToUpperInvariant(raw.CollectionName[0]) + raw.CollectionName[1..];
+        if (!processed.Tags.Any(t => t.Equals(collectionTag, StringComparison.OrdinalIgnoreCase)))
+        {
+            processed = processed.WithTags([.. processed.Tags, collectionTag]);
+        }
 
         string? newAiMetadata = existing.AiMetadata;
         if (processed.RoundupMetadata is not null)

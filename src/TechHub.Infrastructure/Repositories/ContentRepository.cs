@@ -1911,23 +1911,39 @@ WHERE slug = @Slug
 
             if (rows > 0)
             {
-                // Sync denormalized section fields in content_tags_expanded
+                // Rebuild content_tags_expanded: delete existing rows, then re-insert from updated
+                // tag list so that tag_word/tag_display rows reflect the new categorized tags.
                 await Connection.ExecuteAsync(
                     new CommandDefinition(
-                        @"UPDATE content_tags_expanded
-                          SET date_epoch        = @DateEpoch,
-                              is_ai             = @IsAi,
-                              is_azure          = @IsAzure,
-                              is_dotnet         = @IsDotnet,
-                              is_devops         = @IsDevops,
-                              is_github_copilot = @IsGhc,
-                              is_ml             = @IsMl,
-                              is_security       = @IsSecurity,
-                              sections_bitmask  = @Bitmask
-                          WHERE collection_name = @CollectionName AND slug = @Slug",
-                        parameters,
+                        "DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug",
+                        new { CollectionName = "videos", Slug = slug },
                         transaction: transaction,
                         cancellationToken: ct));
+
+                if (editData.Tags.Count > 0)
+                {
+                    var tagRows = ContentItemWriteRepository.BuildTagWords(
+                        editData.Tags, "videos", slug, editData.DateEpoch,
+                        isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
+
+                    foreach (var row in tagRows)
+                    {
+                        await Connection.ExecuteAsync(
+                            new CommandDefinition(
+                                @"INSERT INTO content_tags_expanded
+                                    (collection_name, slug, tag_word, tag_display, is_full_tag,
+                                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                                     is_ml, is_security, sections_bitmask)
+                                  VALUES
+                                    (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
+                                     @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                                     @IsMl, @IsSecurity, @Bitmask)
+                                  ON CONFLICT DO NOTHING",
+                                row,
+                                transaction: transaction,
+                                cancellationToken: ct));
+                    }
+                }
 
                 // Swap the processed_urls record: delete the old placeholder URL entry for this
                 // slug and insert a new succeeded record for the real YouTube URL.
@@ -1951,7 +1967,8 @@ WHERE slug = @Slug
                                   feed_name      = COALESCE(EXCLUDED.feed_name, processed_urls.feed_name),
                                   has_transcript = COALESCE(EXCLUDED.has_transcript, processed_urls.has_transcript),
                                   slug           = EXCLUDED.slug,
-                                  updated_at     = NOW()",
+                                  updated_at     = NOW()
+                          WHERE processed_urls.slug = EXCLUDED.slug",
                         new { NewExternalUrl = newExternalUrl, FeedName = editData.FeedName, CollectionName = "videos", HasTranscript = hasTranscript, Slug = slug },
                         transaction: transaction,
                         cancellationToken: ct));

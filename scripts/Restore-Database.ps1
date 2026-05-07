@@ -444,6 +444,30 @@ if (-not $SkipRestore) {
             }
         }
         Write-Ok "Local app servers stopped"
+
+        Write-Step "Ensuring postgres container is running"
+        $postgresStatus = docker compose ps --status running postgres 2>&1
+        if ($postgresStatus -notmatch 'techhub-postgres') {
+            Write-Detail "Starting postgres container..."
+            docker compose up -d postgres 2>&1 | Out-Null
+            # Wait for postgres to be ready
+            $retries = 30
+            $ready = $false
+            while ($retries -gt 0 -and -not $ready) {
+                $health = docker inspect --format '{{.State.Health.Status}}' techhub-postgres 2>$null
+                if ($health -eq 'healthy') {
+                    $ready = $true
+                } else {
+                    Start-Sleep -Seconds 1
+                    $retries--
+                }
+            }
+            if (-not $ready) {
+                Write-Fail "Postgres container did not become healthy in time."
+                exit 1
+            }
+        }
+        Write-Ok "Postgres is running"
     }
 
 
