@@ -126,7 +126,7 @@ Requests arriving over HTTP are **301-redirected** to the HTTPS equivalent. This
 
 CSS, JS, images, fonts, `robots.txt`, and other static assets are served directly from `wwwroot/`. These requests short-circuit here and never reach the Blazor pipeline.
 
-## Stage 5 — Invalid Route Segment Filter
+## Stage 6 — Invalid Route Segment Filter
 
 Two categories of bad requests are rejected before the Blazor pipeline runs:
 
@@ -143,7 +143,7 @@ Two categories of bad requests are rejected before the Blazor pipeline runs:
 
 Everything else with an invalid first segment receives an immediate **404**.
 
-## Stage 6 — Blazor Routing
+## Stage 7 — Blazor Routing
 
 The Blazor router matches the path to a page component:
 

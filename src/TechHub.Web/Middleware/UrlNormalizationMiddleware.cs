@@ -12,6 +12,8 @@ namespace TechHub.Web.Middleware;
 /// Normalizations applied to every path segment (in order):
 ///   1. Strip .html extension
 ///   2. Strip YYYY-MM-DD- date prefix
+///   3. Strip trailing slash from the full path
+///   4. Rename legacy section names (for example /coding/* → /dotnet/*)
 ///
 /// After normalization:
 ///   - Multi-segment paths: validate segment[0] against known sections/pages and segment[1]
@@ -21,7 +23,8 @@ namespace TechHub.Web.Middleware;
 ///   - Single-segment paths that are not a known section, page, or static file →
 ///     API legacy lookup to resolve the canonical /{section}/{collection}/{slug} URL.
 ///     If the API returns a result, redirect there directly (one redirect to the final URL).
-///     If not (null result or transient error after retries), return 404.
+///     If not found, return 404. On transient API failures, redirect to the cleaned path first
+///     when normalization already changed it; otherwise return 503 with Cache-Control: no-store.
 ///
 /// Case normalization is NOT performed here. The infrastructure layer handles
 /// case-insensitive DB lookups so URLs work regardless of capitalisation.
@@ -155,11 +158,19 @@ public partial class UrlNormalizationMiddleware
                     var lookupHandled = await TryLegacyRedirectAsync(context, normalizedSegments[1], normalizedSegments[0]);
                     if (!lookupHandled)
                     {
-                        // Transient API failure: no valid Blazor fallback for /{section}/{unknownSlug}.
-                        // Return 503 (not 404) so that the response is not cached as permanent absence
-                        // by CDNs or browsers; Cache-Control: no-store prevents stale error caching.
-                        context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
-                        context.Response.Headers.CacheControl = "no-store";
+                        // Transient API failure — if normalization already produced a cleaner URL
+                        // (e.g. stripped .html/date/trailing slash or renamed the section), redirect
+                        // there first so the browser retries the canonical-looking form once the API
+                        // recovers. Otherwise there is no better fallback than 503 + no-store.
+                        if (pathChanged)
+                        {
+                            Redirect(context, normalizedPath + context.Request.QueryString);
+                        }
+                        else
+                        {
+                            context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
+                            context.Response.Headers.CacheControl = "no-store";
+                        }
                     }
 
                     return;

@@ -994,11 +994,9 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task TwoSegment_KnownSection_ApiFailure_Returns503()
+    public async Task TwoSegment_KnownSection_ApiFailure_WhenPathAlreadyNormalized_Returns503()
     {
-        // For the 2-segment case there is no sensible normalised URL to fall back to.
-        // A transient API failure returns 503 with Cache-Control: no-store so that the
-        // response is not cached as a permanent absence (unlike 404).
+        // For an already-clean 2-segment path there is no better fallback than 503 + no-store.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -1014,6 +1012,30 @@ public class UrlNormalizationMiddlewareTests
 
         context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
         context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_ApiFailure_WhenPathChanged_RedirectsToNormalizedPath()
+    {
+        // /ai/2026-01-15-some-article.html → /ai/some-article before the API call.
+        // If the legacy lookup then fails transiently, redirect to the cleaned path first.
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("Connection refused"));
+
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/2026-01-15-some-article.html",
+            queryString: "?ref=rss",
+            sectionCache: cache,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be("/ai/some-article?ref=rss");
         nextCalled().Should().BeFalse();
     }
 
