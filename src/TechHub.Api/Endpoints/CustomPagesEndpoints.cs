@@ -22,7 +22,8 @@ public static class CustomPagesEndpoints
     {
         var group = endpoints.MapGroup("/api/custom-pages")
             .WithTags("Custom Pages")
-            .WithDescription("Endpoints for custom standalone pages");
+            .WithDescription("Endpoints for custom standalone pages")
+            .RequireRateLimiting("api-public");
 
         group.MapGet("/dx-space", GetDXSpaceData)
             .WithName("GetDXSpaceData")

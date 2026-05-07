@@ -29,7 +29,8 @@ public static class AuthorEndpoints
     {
         var group = endpoints.MapGroup("/api/authors")
             .WithTags("Authors")
-            .WithDescription("Endpoints for browsing content by author");
+            .WithDescription("Endpoints for browsing content by author")
+            .RequireRateLimiting("api-public");
 
         group.MapGet("", GetAllAuthors)
             .WithName("GetAllAuthors")

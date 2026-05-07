@@ -1,7 +1,10 @@
 using System.Data;
+using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
+using Npgsql;
 using Polly;
 using TechHub.Api.Endpoints;
 using TechHub.Api.HealthChecks;
@@ -26,7 +29,8 @@ builder.Services.AddSingleton<StartupStateService>();
 
 // Add custom health check that waits for startup operations to complete
 builder.Services.AddHealthChecks()
-    .AddCheck<StartupHealthCheck>("startup", tags: new[] { "ready" });
+    .AddCheck<StartupHealthCheck>("startup", tags: new[] { "ready" })
+    .AddCheck<DatabaseHealthCheck>("database", tags: new[] { "ready" });
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
@@ -90,9 +94,16 @@ builder.Services.Configure<ContentOptions>(builder.Configuration.GetSection("App
 var connectionString = builder.Configuration["Database:ConnectionString"]
     ?? throw new InvalidOperationException("Database:ConnectionString is required. Configure it in appsettings.json.");
 
+// Register NpgsqlDataSource as singleton — it manages the connection pool internally.
+// All connections are acquired from this pool via OpenConnection/OpenConnectionAsync.
+// DI owns the lifetime and disposes the data source on application shutdown.
+builder.Services.AddSingleton(_ => NpgsqlDataSource.Create(connectionString));
+
 builder.Services.AddSingleton<ISqlDialect, PostgresDialect>();
-builder.Services.AddSingleton<IDbConnectionFactory>(_ => new PostgresConnectionFactory(connectionString));
-builder.Services.AddScoped<IDbConnection>(sp => sp.GetRequiredService<IDbConnectionFactory>().CreateConnection());
+builder.Services.AddSingleton<IDbConnectionFactory>(sp =>
+    new PostgresConnectionFactory(sp.GetRequiredService<NpgsqlDataSource>()));
+builder.Services.AddScoped<IDbConnection>(sp =>
+    sp.GetRequiredService<NpgsqlDataSource>().OpenConnection());
 builder.Services.AddTransient<IContentRepository, ContentRepository>();
 
 // TimeProvider for testable date/time
@@ -300,6 +311,56 @@ builder.Services.AddAuthorization(options =>
     });
 });
 
+// Rate limiting: defense-in-depth for the API (primary rate limiting is on the Web layer)
+// Disabled in IntegrationTest environment to avoid throttling test suites that run many
+// requests from a single IP within a short window.
+var isIntegrationTest = builder.Environment.IsEnvironment("IntegrationTest");
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.OnRejected = async (context, token) =>
+    {
+        if (context.Lease.TryGetMetadata(MetadataName.RetryAfter, out var retryAfter))
+        {
+            context.HttpContext.Response.Headers.RetryAfter =
+                ((int)retryAfter.TotalSeconds).ToString(System.Globalization.CultureInfo.InvariantCulture);
+        }
+
+        await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
+    };
+
+    // Public content endpoints: generous limit (defense against runaway loops or future architecture changes)
+    options.AddPolicy("api-public", context =>
+        isIntegrationTest
+            ? RateLimitPartition.GetNoLimiter("no-limit")
+            : RateLimitPartition.GetSlidingWindowLimiter(
+                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+                factory: _ => new SlidingWindowRateLimiterOptions
+                {
+                    PermitLimit = 200,
+                    Window = TimeSpan.FromMinutes(1),
+                    SegmentsPerWindow = 6,
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                    QueueLimit = 10
+                }));
+
+    // Admin endpoints: stricter limit — limits failed auth attempts even though auth-protected
+    options.AddPolicy("api-admin", context =>
+        isIntegrationTest
+            ? RateLimitPartition.GetNoLimiter("no-limit")
+            : RateLimitPartition.GetSlidingWindowLimiter(
+                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+                factory: _ => new SlidingWindowRateLimiterOptions
+                {
+                    PermitLimit = 30,
+                    Window = TimeSpan.FromMinutes(1),
+                    SegmentsPerWindow = 6,
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                    QueueLimit = 0
+                }));
+});
+
 var app = builder.Build();
 
 // Global exception handler (must be first)
@@ -319,6 +380,19 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors();
+
+// Trust X-Forwarded-For from the Azure Container Apps reverse proxy so rate limiting
+// partitions by real client IP rather than the proxy/NAT address.
+// KnownIPNetworks/KnownProxies are cleared because the proxy IPs are internal and dynamic.
+var forwardedHeadersOptions = new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+};
+forwardedHeadersOptions.KnownIPNetworks.Clear();
+forwardedHeadersOptions.KnownProxies.Clear();
+app.UseForwardedHeaders(forwardedHeadersOptions);
+
+app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
 

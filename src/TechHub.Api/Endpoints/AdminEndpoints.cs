@@ -23,7 +23,8 @@ public static partial class AdminEndpoints
     {
         var group = app.MapGroup("/api/admin")
             .WithTags("Admin")
-            .RequireAuthorization("AdminOnly");
+            .RequireAuthorization("AdminOnly")
+            .RequireRateLimiting("api-admin");
 
         // ── Processing jobs ──────────────────────────────────────────────────
 

@@ -19,14 +19,14 @@ namespace TechHub.Infrastructure.Repositories;
 /// Provides caching logic and markdown rendering for all content operations.
 /// Supports optional query logging when DatabaseOptions.EnableQueryLogging is enabled.
 /// </summary>
-public class ContentRepository : IContentRepository
+public sealed class ContentRepository : IContentRepository
 {
     private static readonly string[] _searchFacetFields = ["tags", "collections", "sections"];
     /// <summary>
     /// Column selection for list views - excludes content column for performance.
     /// Maps to ContentItem record which doesn't have a Content property.
     /// </summary>
-    protected const string ListViewColumns = @"
+    private const string ListViewColumns = @"
                 c.slug AS Slug,
                 c.title AS Title,
                 c.author AS Author,
@@ -53,7 +53,7 @@ public class ContentRepository : IContentRepository
     /// Column selection for detail views - includes content column for markdown rendering.
     /// Maps to ContentItemDetail record which extends ContentItem with the Content property.
     /// </summary>
-    protected const string DetailViewColumns = @"
+    private const string DetailViewColumns = @"
                 c.slug AS Slug,
                 c.title AS Title,
                 c.author AS Author,
@@ -77,10 +77,10 @@ public class ContentRepository : IContentRepository
                 c.is_ml AS IsMl,
                 c.is_security AS IsSecurity";
 
-    protected IDbConnection Connection { get; }
-    protected ISqlDialect Dialect { get; }
-    protected IMemoryCache Cache { get; }
-    protected IMarkdownService MarkdownService { get; }
+    private IDbConnection Connection { get; }
+    private ISqlDialect Dialect { get; }
+    private IMemoryCache Cache { get; }
+    private IMarkdownService MarkdownService { get; }
 
     private readonly AppSettings _settings;
     private readonly ILogger<ContentRepository>? _logger;
@@ -307,7 +307,7 @@ public class ContentRepository : IContentRepository
     /// Renders the raw markdown content to HTML if Content is present and RenderedHtml is not already set.
     /// After rendering, clears the raw Content to save memory since it's no longer needed.
     /// </summary>
-    protected ContentItemDetail RenderHtmlIfNeeded(ContentItemDetail item)
+    private ContentItemDetail RenderHtmlIfNeeded(ContentItemDetail item)
     {
         ArgumentNullException.ThrowIfNull(item);
 
@@ -427,7 +427,7 @@ public class ContentRepository : IContentRepository
     /// Returns a case-insensitive HashSet for efficient contains checks and SQL filtering.
     /// Includes: section tags, collection tags, and high-frequency terms (github, copilot, microsoft).
     /// </summary>
-    protected async Task<HashSet<string>> GetExcludeTagsSetAsync()
+    private async Task<HashSet<string>> GetExcludeTagsSetAsync()
     {
         return await Cache.GetOrCreateAsync("excludetags:set", async entry =>
         {
@@ -466,7 +466,7 @@ public class ContentRepository : IContentRepository
     /// Uses SQL to query the database. Includes content column for detail view rendering.
     /// Returns ContentItemDetail which includes the markdown content.
     /// </summary>
-    protected async Task<ContentItemDetail?> GetBySlugInternalAsync(
+    private async Task<ContentItemDetail?> GetBySlugInternalAsync(
         string collectionName,
         string slug,
         bool includeDraft,
@@ -495,7 +495,7 @@ public class ContentRepository : IContentRepository
     /// </summary>
     /// <param name="sections">Collection of section names to include in bitmask</param>
     /// <returns>Integer bitmask with bits set for each matching section</returns>
-    protected static int CalculateSectionBitmask(IEnumerable<string> sections)
+    private static int CalculateSectionBitmask(IEnumerable<string> sections)
     {
         ArgumentNullException.ThrowIfNull(sections);
 
@@ -513,7 +513,7 @@ public class ContentRepository : IContentRepository
     /// </summary>
     /// <param name="section">Section name</param>
     /// <returns>Integer bitmask value for the section (0 if unknown)</returns>
-    protected static int CalculateSectionBitmask(string section)
+    private static int CalculateSectionBitmask(string section)
     {
         ArgumentNullException.ThrowIfNull(section);
 
@@ -535,7 +535,7 @@ public class ContentRepository : IContentRepository
     /// Get facet counts for tags, collections, and sections within the filtered scope.
     /// Uses standard SQL.
     /// </summary>
-    protected async Task<FacetResults> GetFacetsInternalAsync(FacetRequest request, CancellationToken ct = default)
+    private async Task<FacetResults> GetFacetsInternalAsync(FacetRequest request, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(request);
 
@@ -633,7 +633,7 @@ public class ContentRepository : IContentRepository
     /// (which DO exclude structural tags).
     /// When TagsToCount is empty: returns top MaxTags popular tags (standard tag cloud).
     /// </summary>
-    protected async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
+    private async Task<IReadOnlyList<TagWithCount>> GetTagCountsInternalAsync(
         TagCountsRequest request,
         CancellationToken ct)
     {
@@ -902,7 +902,7 @@ public class ContentRepository : IContentRepository
     /// Build WHERE clauses for filtering content items.
     /// Reusable helper for facets, search, and other queries.
     /// </summary>
-    protected List<string> BuildFilterWhereClauses(FacetRequest request, DynamicParameters parameters)
+    private List<string> BuildFilterWhereClauses(FacetRequest request, DynamicParameters parameters)
     {
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(parameters);
@@ -969,7 +969,7 @@ public class ContentRepository : IContentRepository
     /// Uses GROUP BY + HAVING COUNT(*) = N for multi-tag AND logic.
     /// Returns (collection_name, slug) pairs.
     /// </summary>
-    protected string BuildTagsTableQuery(SearchRequest request, DynamicParameters parameters)
+    private string BuildTagsTableQuery(SearchRequest request, DynamicParameters parameters)
     {
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(parameters);
@@ -1064,7 +1064,7 @@ public class ContentRepository : IContentRepository
     /// Full-text search implementation using database-specific FTS via ISqlDialect.
     /// Full-text search implementation using PostgreSQL tsvector through dialect abstraction.
     /// </summary>
-    protected async Task<SearchResults<ContentItem>> SearchInternalAsync(SearchRequest request, CancellationToken ct = default)
+    private async Task<SearchResults<ContentItem>> SearchInternalAsync(SearchRequest request, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(request);
 

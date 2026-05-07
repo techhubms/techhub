@@ -25,6 +25,12 @@ public class DatabaseFixture<T> : IAsyncLifetime
     public IDbConnection Connection { get; private set; } = null!;
 
     /// <summary>
+    /// NpgsqlDataSource for the test database.
+    /// Backed by the connection pool — use this to create additional connections in tests.
+    /// </summary>
+    public NpgsqlDataSource DataSource { get; private set; } = null!;
+
+    /// <summary>
     /// The connection string for creating additional connections to the same database.
     /// Useful for WebApplicationFactory or multi-connection scenarios.
     /// </summary>
@@ -56,7 +62,10 @@ public class DatabaseFixture<T> : IAsyncLifetime
         await _container.StartAsync();
         logger.LogInformation("🐘 Started PostgreSQL container for {TestClass}", typeof(T).Name);
 
-        // Open a persistent connection for this fixture
+        // Create a NpgsqlDataSource for pool-managed connections
+        DataSource = NpgsqlDataSource.Create(_container.GetConnectionString());
+
+        // Open a persistent connection for this fixture (used for migrations and seeding)
         var npgsqlConnection = new NpgsqlConnection(_container.GetConnectionString());
         await npgsqlConnection.OpenAsync();
         Connection = npgsqlConnection;
@@ -92,6 +101,7 @@ public class DatabaseFixture<T> : IAsyncLifetime
     public async ValueTask DisposeAsync()
     {
         Connection?.Dispose();
+        DataSource?.Dispose();
         _loggerFactory?.Dispose();
         await _container.DisposeAsync();
     }

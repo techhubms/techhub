@@ -38,7 +38,7 @@ public class ContentProcessingServiceTests
         ArgumentNullException.ThrowIfNull(fixture);
 
         _fixture = fixture;
-        _jobRepo = new ContentProcessingJobRepository(fixture.Connection, new PostgresConnectionFactory(fixture.ConnectionString), NullLogger<ContentProcessingJobRepository>.Instance);
+        _jobRepo = new ContentProcessingJobRepository(fixture.Connection, new PostgresConnectionFactory(fixture.DataSource), NullLogger<ContentProcessingJobRepository>.Instance);
         _processedUrlRepo = new ProcessedUrlRepository(fixture.Connection, NullLogger<ProcessedUrlRepository>.Instance);
         _writeRepo = new ContentItemWriteRepository(fixture.Connection, NullLogger<ContentItemWriteRepository>.Instance);
     }
