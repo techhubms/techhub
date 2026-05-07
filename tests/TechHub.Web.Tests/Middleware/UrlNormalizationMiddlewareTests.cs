@@ -231,10 +231,10 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiException_GracefulDegradation_PassesThrough()
+    public async Task ApiException_Returns503()
     {
         // /Some-Slug → API throws HttpRequestException (transient failure) →
-        // no pathChanged → pass through to Blazor routing (not a permanent 404)
+        // no pathChanged → 503 with Cache-Control: no-store (not a cacheable 404)
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -244,8 +244,9 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("a transient API failure must not hard-404 a potentially valid legacy URL");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
+        context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
+        nextCalled().Should().BeFalse();
     }
 
     [Fact]
@@ -269,9 +270,9 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiTimeout_WhenNotRequestAbort_GracefulDegradation_PassesThrough()
+    public async Task ApiTimeout_WhenNotRequestAbort_Returns503()
     {
-        // Timeout is a transient failure: gracefully degrade instead of hard-404ing.
+        // Timeout is a transient failure: return 503 with no-store instead of a cacheable error.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -281,8 +282,9 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("a timeout must not hard-404 a potentially valid legacy URL");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
+        context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
+        nextCalled().Should().BeFalse();
     }
 
     [Fact]
@@ -992,10 +994,11 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task TwoSegment_KnownSection_ApiFailure_Returns404()
+    public async Task TwoSegment_KnownSection_ApiFailure_Returns503()
     {
-        // For the 2-segment case there is no sensible normalised URL to fall back to,
-        // so a transient API failure returns 404 (unlike single-segment which passes through).
+        // For the 2-segment case there is no sensible normalised URL to fall back to.
+        // A transient API failure returns 503 with Cache-Control: no-store so that the
+        // response is not cached as a permanent absence (unlike 404).
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -1009,7 +1012,8 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
+        context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
         nextCalled().Should().BeFalse();
     }
 

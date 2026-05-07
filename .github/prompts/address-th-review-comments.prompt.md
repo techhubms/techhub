@@ -1,5 +1,5 @@
 ---
-name: address-pr-reviews
+name: address-th-review-comments
 description: "Reviews all open review comment threads on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, then commits and pushes via the pushall workflow."
 model: Claude Sonnet 4.6
 ---

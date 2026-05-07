@@ -70,7 +70,7 @@ Any segment matching `YYYY-MM-DD-<slug>` has the date prefix removed.
 
 The pattern applies at any depth in the path.
 
-### 2b — Strip trailing slash
+### 2c — Strip trailing slash
 
 Any path ending in `/` (other than root `/`) is redirected to the path without the trailing slash.
 
@@ -79,7 +79,7 @@ Any path ending in `/` (other than root `/`) is redirected to the path without t
 /ai/videos/  →  /ai/videos
 ```
 
-### 2c — Section rename redirect
+### 2d — Section rename redirect
 
 Sections that have been permanently renamed are redirected to their new name. Applied after `.html` stripping and date-prefix stripping so that a combined normalization + rename produces a single 301.
 
@@ -92,7 +92,7 @@ Sections that have been permanently renamed are redirected to their new name. Ap
 /coding/2025-01-01-slug.html  →  /dotnet/slug (html + date stripped in same redirect)
 ```
 
-### 2d — Legacy slug lookup
+### 2e — Legacy slug lookup
 
 Applies to paths that remain unresolved after the normalizations above. Two path shapes trigger a lookup:
 
@@ -116,7 +116,7 @@ For both shapes, calls `GET /api/legacy-redirect?slug={slug}&section={hint}`. Th
 
 **Not found**: if the API returns no match, the middleware returns a **404** immediately.
 
-**Transient API failure** (single-segment only): the middleware degrades gracefully instead of returning a cacheable 404. When the path was cleaned (`pathChanged = true`), a **301 redirect** is still issued to the normalized URL. When the path was already clean, the request is passed through to Blazor routing. For two-segment paths, a transient failure returns **404** (there is no valid fallback URL for an unrecognised `/{section}/{slug}` shape).
+**Transient API failure**: the middleware returns **503** with `Cache-Control: no-store` so that the error is not cached as a permanent absence by CDNs or browsers. Exception: when the path was cleaned before the API call (`pathChanged = true`, e.g. `/article.html` → `/article`), a **301 redirect** to the normalized URL is issued first so the browser retries the canonical form once the API recovers.
 
 ## Stage 3 — HTTPS Redirect
 

@@ -105,8 +105,9 @@ public partial class UrlNormalizationMiddleware
         // Strip trailing slash before segment processing so that a combined
         // trailing-slash + rename/normalization produces a single 301 rather than two
         // (e.g. /coding/ → /dotnet in one redirect, not /coding/ → /coding → /dotnet).
-        // Trailing slashes never match RSS feed patterns (.xml suffix), so feed-redirect
-        // order is unaffected.
+        // This also means a trailing-slash variant of an RSS feed URL (e.g. /feed.xml/)
+        // will have the slash removed here before TryRedirectLegacyFeed is called,
+        // so it is still matched and redirected correctly.
         if (path.Length > 1 && path.EndsWith('/'))
         {
             path = path.TrimEnd('/');
@@ -154,10 +155,11 @@ public partial class UrlNormalizationMiddleware
                     var lookupHandled = await TryLegacyRedirectAsync(context, normalizedSegments[1], normalizedSegments[0]);
                     if (!lookupHandled)
                     {
-                        // Transient API failure: no valid Blazor fallback for /{section}/{unknownSlug}
-                        // so return 404. This is different from the single-segment case where
-                        // passing through to Blazor routing is a meaningful degradation.
-                        context.Response.StatusCode = StatusCodes.Status404NotFound;
+                        // Transient API failure: no valid Blazor fallback for /{section}/{unknownSlug}.
+                        // Return 503 (not 404) so that the response is not cached as permanent absence
+                        // by CDNs or browsers; Cache-Control: no-store prevents stale error caching.
+                        context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
+                        context.Response.Headers.CacheControl = "no-store";
                     }
 
                     return;
@@ -235,17 +237,18 @@ public partial class UrlNormalizationMiddleware
             return;
         }
 
-        // Transient API failure — graceful degradation.
-        // Do NOT return 404: a legitimate legacy URL would get a cacheable permanent 404
-        // just because the API was briefly down. Clean up the URL if the path changed,
-        // then pass through to Blazor routing.
+        // Transient API failure — return 503 so the error is not cached as a permanent absence.
+        // Cache-Control: no-store prevents CDNs and browsers from storing the error response.
+        // If the path changed (e.g. /article.html → /article), redirect to the clean URL first
+        // so the browser retries the canonical form once the API recovers.
         if (pathChanged)
         {
             Redirect(context, normalizedPath + context.Request.QueryString);
             return;
         }
 
-        await _next(context);
+        context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
+        context.Response.Headers.CacheControl = "no-store";
     }
 
     /// <summary>

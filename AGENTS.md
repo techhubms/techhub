@@ -19,7 +19,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 - **Always follow timezone standard**: `Europe/Brussels`
 - **Always be direct and concise**
 - **Always go back to Step 2** when struggling or working on something you haven't read docs for
-- **Always fix flaky tests** when you encounter them — don't leave them for later
+- **Always fix flaky tests** when you encounter them — don't leave them for later. After fixing, run both in fast networkprofile and in slow3g!
 
 ### ⚠️ Ask First
 
