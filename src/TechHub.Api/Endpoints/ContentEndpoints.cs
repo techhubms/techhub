@@ -37,7 +37,8 @@ public static class ContentEndpoints
         var group = endpoints.MapGroup("/api/sections")
             .WithTags("Sections")
             .WithDescription("Unified API for browsing sections, collections, content items, and tags")
-            .AddEndpointFilter(ValidateRouteParameters);
+            .AddEndpointFilter(ValidateRouteParameters)
+            .RequireRateLimiting("api-public");
 
         // ============================================================
         // Section-level endpoints

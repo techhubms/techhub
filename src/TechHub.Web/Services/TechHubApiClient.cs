@@ -1348,6 +1348,33 @@ public class TechHubApiClient : ITechHubApiClient
         }
     }
 
+    /// <inheritdoc/>
+    public virtual async Task<ContentItemEditData> ApplyTranscriptAsync(
+        string collectionName,
+        string slug,
+        string transcript,
+        CancellationToken cancellationToken = default)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(collectionName);
+        ArgumentException.ThrowIfNullOrWhiteSpace(slug);
+        ArgumentException.ThrowIfNullOrWhiteSpace(transcript);
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                $"/api/admin/content-items/apply-transcript?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
+                new { Transcript = transcript },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<ContentItemEditData>(cancellationToken);
+            return result ?? throw new InvalidOperationException("Empty response from apply-transcript endpoint.");
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to apply transcript for {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
+            throw;
+        }
+    }
+
     // ================================================================
     // Content items listing methods
     // ================================================================

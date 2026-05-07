@@ -25,7 +25,7 @@ public class ProcessedUrlRepositoryTests
 
         _jobRepository = new ContentProcessingJobRepository(
             fixture.Connection,
-            new PostgresConnectionFactory(fixture.ConnectionString),
+            new PostgresConnectionFactory(fixture.DataSource),
             NullLogger<ContentProcessingJobRepository>.Instance);
     }
 

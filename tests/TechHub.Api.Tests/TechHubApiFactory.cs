@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Npgsql;
 using TechHub.Api.Services;
 using TechHub.Core.Interfaces;
 using TechHub.Infrastructure.Data;
@@ -111,13 +112,16 @@ public class TechHubIntegrationTestApiFactory : TechHubApiFactoryBase, IAsyncLif
 
         builder.ConfigureTestServices(services =>
         {
-            // Replace connection factory and dialect with PostgreSQL implementations
+            // Replace NpgsqlDataSource, connection factory and dialect with test PostgreSQL implementations
+            RemoveAllServices<NpgsqlDataSource>(services);
             RemoveAllServices<IDbConnectionFactory>(services);
             RemoveAllServices<ISqlDialect>(services);
 
+            var testConnectionString = _container.GetConnectionString();
             services.AddSingleton<ISqlDialect, PostgresDialect>();
-            services.AddSingleton<IDbConnectionFactory>(
-                new PostgresConnectionFactory(_container.GetConnectionString()));
+            services.AddSingleton(_ => NpgsqlDataSource.Create(testConnectionString));
+            services.AddSingleton<IDbConnectionFactory>(sp =>
+                new PostgresConnectionFactory(sp.GetRequiredService<NpgsqlDataSource>()));
         });
     }
 

@@ -6,29 +6,23 @@ namespace TechHub.Infrastructure.Services.ContentProcessing;
 
 /// <summary>
 /// Fetches the full HTML content for an article URL and extracts the main body text.
-/// YouTube items are enriched with transcript text from closed captions.
+/// YouTube items are returned unchanged — transcript support is handled via manual input only.
 /// </summary>
 public sealed partial class ArticleContentService : IArticleContentService
 {
     private readonly IArticleFetchClient _fetchClient;
-    private readonly IYouTubeTranscriptService _transcriptService;
 
-    public ArticleContentService(
-        IArticleFetchClient fetchClient,
-        IYouTubeTranscriptService transcriptService)
+    public ArticleContentService(IArticleFetchClient fetchClient)
     {
         ArgumentNullException.ThrowIfNull(fetchClient);
-        ArgumentNullException.ThrowIfNull(transcriptService);
-
         _fetchClient = fetchClient;
-        _transcriptService = transcriptService;
     }
 
     /// <summary>
     /// Fetches the full article content for <paramref name="item"/> and returns a new instance
     /// with <see cref="RawFeedItem.FullContent"/> populated.
-    /// YouTube items are enriched with transcript text when available.
-    /// Returns the original item unchanged on failure.
+    /// YouTube items are returned unchanged — transcripts are provided manually and are not
+    /// fetched automatically. Returns the original item unchanged on failure.
     /// </summary>
     public async Task<RawFeedItem> EnrichWithContentAsync(RawFeedItem item, CancellationToken ct = default)
     {
@@ -36,7 +30,9 @@ public sealed partial class ArticleContentService : IArticleContentService
 
         if (item.IsYouTube)
         {
-            return await EnrichYouTubeWithTranscriptAsync(item, ct);
+            // Automatic transcript fetching is disabled. Transcripts are provided manually
+            // via the admin UI or the Fetch-VideoTranscripts.ps1 batch script.
+            return item;
         }
 
         if (string.IsNullOrWhiteSpace(item.ExternalUrl))
@@ -254,39 +250,5 @@ public sealed partial class ArticleContentService : IArticleContentService
         var match = System.Text.RegularExpressions.Regex.Match(
             html, pattern, System.Text.RegularExpressions.RegexOptions.IgnoreCase, TimeSpan.FromSeconds(2));
         return match.Success ? match.Groups[1].Value : null;
-    }
-
-    private async Task<RawFeedItem> EnrichYouTubeWithTranscriptAsync(RawFeedItem item, CancellationToken ct)
-    {
-        var result = await _transcriptService.GetTranscriptAsync(item.ExternalUrl, ct);
-        if (!result.IsSuccess)
-        {
-            return new RawFeedItem
-            {
-                Title = item.Title,
-                ExternalUrl = item.ExternalUrl,
-                PublishedAt = item.PublishedAt,
-                FeedItemData = item.FeedItemData,
-                FeedLevelAuthor = item.FeedLevelAuthor,
-                FeedTags = item.FeedTags,
-                FeedName = item.FeedName,
-                CollectionName = item.CollectionName,
-                FullContent = item.FullContent,
-                TranscriptFailureReason = result.FailureReason
-            };
-        }
-
-        return new RawFeedItem
-        {
-            Title = item.Title,
-            ExternalUrl = item.ExternalUrl,
-            PublishedAt = item.PublishedAt,
-            FeedItemData = item.FeedItemData,
-            FeedLevelAuthor = item.FeedLevelAuthor,
-            FeedTags = item.FeedTags,
-            FeedName = item.FeedName,
-            CollectionName = item.CollectionName,
-            FullContent = result.Text
-        };
     }
 }

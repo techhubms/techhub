@@ -232,3 +232,10 @@
     cursor: pointer;
     flex-shrink: 0;
 }
+
+.acm-transcript-textarea {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    resize: vertical;
+    min-height: 120px;
+}

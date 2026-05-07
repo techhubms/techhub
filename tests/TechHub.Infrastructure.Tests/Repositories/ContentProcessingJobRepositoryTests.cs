@@ -21,7 +21,7 @@ public class ContentProcessingJobRepositoryTests
 
         _repository = new ContentProcessingJobRepository(
             fixture.Connection,
-            new PostgresConnectionFactory(fixture.ConnectionString),
+            new PostgresConnectionFactory(fixture.DataSource),
             NullLogger<ContentProcessingJobRepository>.Instance);
     }
 

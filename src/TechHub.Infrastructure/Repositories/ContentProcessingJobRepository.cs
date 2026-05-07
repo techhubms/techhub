@@ -130,7 +130,7 @@ WHERE id = @JobId";
             // Use an independent connection so this can safely be called concurrently
             // with other database operations on the scoped connection (e.g. Progress<T>
             // callbacks that fire on thread-pool threads while the main pipeline is running).
-            using var conn = _connectionFactory.CreateConnection();
+            using var conn = await _connectionFactory.CreateConnectionAsync(ct);
             await conn.ExecuteAsync(new CommandDefinition(
                 Sql, new { JobId = jobId, Line = line }, cancellationToken: ct));
         }

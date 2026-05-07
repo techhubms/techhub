@@ -386,7 +386,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
             sb.AppendLine();
             if (item.IsYouTube)
             {
-                sb.AppendLine("TRANSCRIPT (auto-generated from video closed captions):");
+                sb.AppendLine("TRANSCRIPT:");
             }
             else
             {

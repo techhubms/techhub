@@ -23,4 +23,7 @@ public sealed record ContentItemEditData
 
     /// <summary>Raw JSON string from the ai_metadata column (may be null).</summary>
     public string? AiMetadata { get; init; }
+
+    /// <summary>Original external URL of the content item (e.g. YouTube video URL). Read-only.</summary>
+    public string? ExternalUrl { get; init; }
 }

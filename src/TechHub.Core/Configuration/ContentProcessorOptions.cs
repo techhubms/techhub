@@ -28,20 +28,6 @@ public class ContentProcessorOptions
     /// <summary>HTTP request timeout in seconds for fetching article content.</summary>
     public int RequestTimeoutSeconds { get; init; } = 30;
 
-    /// <summary>
-    /// Whether the YoutubeExplode-based transcript fetcher is enabled.
-    /// When both fetchers are enabled, YoutubeExplode serves as fallback after yt-dlp.
-    /// </summary>
-    public bool YouTubeExplodeEnabled { get; init; } = true;
-
-    /// <summary>
-    /// Whether the yt-dlp-based transcript fetcher is enabled.
-    /// When both fetchers are enabled, yt-dlp is tried first with YoutubeExplode as fallback.
-    /// When only yt-dlp is enabled, it is used as the primary (and only) fetcher.
-    /// Requires yt-dlp to be installed and available on PATH.
-    /// </summary>
-    public bool YtDlpEnabled { get; init; } = true;
-
     /// <summary>Maximum number of items to process per run (0 = unlimited).</summary>
     public int MaxItemsPerRun { get; init; }
 
@@ -71,20 +57,13 @@ public class ContentProcessorOptions
     public IReadOnlyList<SubcollectionRule> SubcollectionRules { get; init; } = [];
 
     /// <summary>
-    /// Browser User-Agent header sent with YouTube requests (YoutubeExplode).
+    /// Browser User-Agent header sent with article fetch and YouTube API requests.
     /// Keep this in sync with a current Chrome stable release to avoid bot detection.
     /// Chrome uses a "reduced" UA format since v101: major version only, frozen OS/platform tokens.
     /// See <see href="https://developer.chrome.com/docs/privacy-security/user-agent-client-hints"/>.
     /// Must be configured explicitly — the content processor will fail at startup if empty.
     /// </summary>
     public required string BrowserUserAgent { get; init; }
-
-    /// <summary>
-    /// Persistent cookies to send with YouTube requests (YoutubeExplode).
-    /// Semicolon-delimited "name=value" pairs, e.g. "PREF=tz=Europe.Amsterdam;VISITOR_PRIVACY_METADATA=CgJOT...".
-    /// Populated from Key Vault secret <c>techhub-{env}-youtube-cookies</c> at runtime.
-    /// </summary>
-    public string YouTubeCookies { get; init; } = string.Empty;
 
     /// <summary>Computed processing interval.</summary>
     public TimeSpan Interval => TimeSpan.FromMinutes(IntervalMinutes);
