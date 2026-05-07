@@ -161,6 +161,23 @@ public interface IContentRepository
     Task<bool> UpdateGhcFeaturePlansAsync(string slug, IReadOnlyList<string> plans, bool ghesSupport, bool draft, CancellationToken ct = default);
 
     /// <summary>
+    /// Publishes a draft ghc-features video in-place: replaces the placeholder external URL with
+    /// the real YouTube URL, updates all AI-generated content fields, sets draft=false, and
+    /// updates plans/ghes support — all in a single transaction.
+    /// Also swaps the processed_urls record from the old URL to the new URL.
+    /// Returns true if the item was found and updated, false if not found.
+    /// </summary>
+    Task<bool> PublishGhcFeatureDraftAsync(
+        string slug,
+        string oldExternalUrl,
+        string newExternalUrl,
+        ContentItemEditData editData,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        bool hasTranscript,
+        CancellationToken ct = default);
+
+    /// <summary>
     /// Invalidates all cached content data (search results, slugs, sitemaps, etc.).
     /// Call after mutations that change content_items (delete, update) to ensure
     /// subsequent queries return fresh data from the database.

@@ -158,7 +158,8 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         fullContent = _contentFixer.RepairMarkdown(fullContent);
 
         lp.Report("Writing roundup to database");
-        var normalizedTags = TagNormalizer.NormalizeTags(metadata.Tags);
+        var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, filtered.Keys);
+        var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
         await _roundupRepo.WriteRoundupAsync(slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 
         lp.Report($"Roundup for week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");

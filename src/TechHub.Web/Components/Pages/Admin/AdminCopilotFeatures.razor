@@ -167,12 +167,22 @@
                 {
                     <div class="features-publish-section">
                         <p class="features-publish-heading">Publish from YouTube</p>
-                        <p class="features-publish-hint">Enter the YouTube URL to process and replace this draft with the published video. Plans and GHES settings will be preserved.</p>
+                        <p class="features-publish-hint">Enter the YouTube URL and optionally paste a transcript. The AI will regenerate all content fields and update this item in-place — the slug and URL are preserved.</p>
                         <input type="url"
                                class="admin-input features-publish-input"
                                placeholder="https://youtu.be/..."
                                @bind="_publishUrl"
                                disabled="@_publishing" />
+                        <label class="admin-label features-publish-transcript-label" for="features-publish-transcript">
+                            Transcript <span class="admin-form-hint">(optional — paste to enable full content generation)</span>
+                        </label>
+                        <textarea id="features-publish-transcript"
+                                  class="admin-input features-publish-transcript-textarea"
+                                  rows="6"
+                                  placeholder="Paste the video transcript here. When provided, the AI generates a full summary. Leave blank to process with available metadata only."
+                                  @bind="_publishTranscript"
+                                  disabled="@_publishing"
+                                  spellcheck="false"></textarea>
                         @if (_publishError != null)
                         {
                             <div class="admin-alert admin-alert-error">@_publishError</div>
@@ -240,6 +250,7 @@
     private bool _saving;
     private bool _confirmingDelete;
     private string _publishUrl = "";
+    private string _publishTranscript = "";
     private string? _publishError;
     private bool _publishing;
 
@@ -301,6 +312,7 @@
         _editingDraft = item.Draft;
         _confirmingDelete = false;
         _publishUrl = "";
+        _publishTranscript = "";
         _publishError = null;
         _editorOpen = true;
         _message = null;
@@ -395,45 +407,22 @@
         try
         {
             var plans = _planGroups[_editingPlanGroup.Value].Plans.ToList();
-            var oldSlug = _editing.Slug;
+            var transcript = string.IsNullOrWhiteSpace(_publishTranscript) ? null : _publishTranscript.Trim();
 
-            var request = new AdHocUrlProcessRequest
-            {
-                Url = _publishUrl.Trim(),
-                CollectionName = "videos",
-                IsGhcFeature = true,
-                Plans = plans,
-                GhesSupport = _editingGhesSupport,
-            };
+            var result = await Api.PublishGhcDraftAsync(
+                _editing.Slug,
+                _publishUrl.Trim(),
+                transcript,
+                plans,
+                _editingGhesSupport);
 
-            var result = await Api.ProcessAdHocUrlAsync(request);
-
-            // null = 409 Conflict: URL already in processed_urls — record exists, just delete draft
             if (result is null)
             {
-                await Api.DeleteGhcFeatureAsync(oldSlug);
-                _message = $"URL was already processed. Draft '{oldSlug}' deleted — check the list for the existing record.";
-                _messageIsError = false;
-                CloseEditor();
-                await LoadFeaturesAsync();
+                _publishError = "This YouTube URL is already used by another content item. Delete this draft manually and use the existing item instead.";
                 return;
             }
 
-            if (result.Outcome == AdHocUrlProcessOutcome.Failed)
-            {
-                _publishError = result.Message ?? "Processing failed — check the URL and try again.";
-                return;
-            }
-
-            if (result.Outcome == AdHocUrlProcessOutcome.Skipped)
-            {
-                _publishError = $"The AI skipped this URL: {result.Message}";
-                return;
-            }
-
-            // Added — success
-            await Api.DeleteGhcFeatureAsync(oldSlug);
-            _message = $"Published as '{result.Slug}'. Draft '{oldSlug}' replaced.";
+            _message = $"'{result.Title}' published successfully.";
             _messageIsError = false;
             CloseEditor();
             await LoadFeaturesAsync();

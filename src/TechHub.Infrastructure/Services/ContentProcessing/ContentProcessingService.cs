@@ -157,7 +157,6 @@ public sealed class ContentProcessingService
                     if (await _writeRepo.ExistsByExternalUrlAsync(item.ExternalUrl, ct))
                     {
                         alreadyInDb++;
-                        itemsSkipped++;
                     }
                     else
                     {
@@ -172,8 +171,6 @@ public sealed class ContentProcessingService
                             {
                                 previouslyFailed++;
                             }
-
-                            itemsSkipped++;
                         }
                         else
                         {
@@ -399,7 +396,7 @@ public sealed class ContentProcessingService
             };
 
             // Shared per-item pipeline: tags → content → AI → write
-            var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, transcript?.Trim(), ct);
+            var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, transcript?.Trim(), verbose: true, ct);
 
             // Emit any supplemental informational messages (date capping, subcollection match)
             foreach (var line in itemResult.LogLines)
@@ -484,6 +481,7 @@ public sealed class ContentProcessingService
     /// When provided, used as the transcript for YouTube items instead of auto-fetching.
     /// When null and the item is a YouTube video, transcript fetching is skipped entirely.
     /// </param>
+    /// <param name="verbose">When true, emits extra informational log lines (e.g. "no transcript provided").</param>
     /// <param name="ct">Cancellation token.</param>
     private async Task<ItemPipelineResult> ProcessItemAsync(
         RawFeedItem raw,
@@ -491,6 +489,7 @@ public sealed class ContentProcessingService
         string? forcedSubcollection,
         Action<string> logAction,
         string? manualTranscript = null,
+        bool verbose = false,
         CancellationToken ct = default)
     {
         // 1. Fetch YouTube tags if applicable
@@ -559,7 +558,11 @@ public sealed class ContentProcessingService
             }
             else
             {
-                logAction("No transcript provided — processing with available metadata only (tags, description, feed data)");
+                if (verbose)
+                {
+                    logAction("No transcript provided — processing with available metadata only (tags, description, feed data)");
+                }
+
                 hasTranscript = false;
                 transcriptStatus = "no transcript";
             }

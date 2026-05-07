@@ -554,6 +554,21 @@ internal interface ITechHubApiClient
     Task UpdateGhcFeaturePlansAsync(string slug, IReadOnlyList<string> plans, bool ghesSupport, bool draft, CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Publish a draft ghc-features video in-place: replace the placeholder URL with the real
+    /// YouTube URL, run AI content generation (with optional transcript), clear the draft flag,
+    /// and update plans/GHES — all without deleting or re-creating the item.
+    /// POST /api/admin/ghc-features/{slug}/publish
+    /// Returns null when the YouTube URL is already claimed by another item (HTTP 409).
+    /// </summary>
+    Task<ContentItemEditData?> PublishGhcDraftAsync(
+        string slug,
+        string youtubeUrl,
+        string? transcript,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        CancellationToken cancellationToken = default);
+
+    /// <summary>
     /// Delete a ghc-features video from the database.
     /// DELETE /api/admin/ghc-features/{slug}
     /// Returns false when the item was not found (HTTP 404).

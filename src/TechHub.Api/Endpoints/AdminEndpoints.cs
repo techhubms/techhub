@@ -196,6 +196,10 @@ public static partial class AdminEndpoints
             .WithName("UpdateGhcFeaturePlans")
             .WithSummary("Update subscription plans, GHES support, and draft status for a ghc-features video");
 
+        group.MapPost("/ghc-features/{slug}/publish", PublishGhcDraftAsync)
+            .WithName("PublishGhcDraft")
+            .WithSummary("Publish a draft ghc-features video in-place: replace placeholder URL with real YouTube URL, regenerate AI content, and clear the draft flag");
+
         group.MapDelete("/ghc-features/{slug}", DeleteGhcFeatureAsync)
             .WithName("DeleteGhcFeature")
             .WithSummary("Delete a ghc-features video from the database");
@@ -1022,7 +1026,170 @@ public static partial class AdminEndpoints
         return Results.NoContent();
     }
 
-    // ── Ad-hoc URL processing handlers ──────────────────────────────────────
+    // ── Publish GHC draft in-place ───────────────────────────────────────────
+
+    private static async Task<IResult> PublishGhcDraftAsync(
+        string slug,
+        PublishGhcDraftRequest request,
+        IContentRepository contentRepo,
+        IProcessedUrlRepository processedUrlRepo,
+        IAiCategorizationService aiService,
+        IContentFixerService contentFixer,
+        CancellationToken ct)
+    {
+        slug = slug.Trim().Sanitize();
+
+        // Validate YouTube URL
+        if (string.IsNullOrWhiteSpace(request.YoutubeUrl)
+            || !Uri.TryCreate(request.YoutubeUrl.Trim(), UriKind.Absolute, out var uri)
+            || (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        {
+            return Results.BadRequest("A valid YouTube URL is required.");
+        }
+
+        var youtubeUrl = request.YoutubeUrl.Trim();
+        var host = uri.Host.ToLowerInvariant();
+        var isYouTubeUrl = host is "youtube.com" or "www.youtube.com" or "m.youtube.com" or "youtu.be";
+        if (!isYouTubeUrl)
+        {
+            return Results.BadRequest("The URL must be a YouTube video URL.");
+        }
+
+        if (request.Plans is null || request.Plans.Count == 0)
+        {
+            return Results.BadRequest("At least one plan is required.");
+        }
+
+        var invalidPlan = request.Plans.FirstOrDefault(p => !_validPlanNames.Contains(p));
+        if (invalidPlan is not null)
+        {
+            return Results.BadRequest($"Invalid plan name '{invalidPlan}'. Valid plans: {string.Join(", ", _validPlanNames)}.");
+        }
+
+        var transcript = !string.IsNullOrWhiteSpace(request.Transcript) ? request.Transcript.Trim() : null;
+
+        if (transcript is not null && transcript.Length > MaxTranscriptLength)
+        {
+            return Results.BadRequest($"Transcript is too long. Maximum allowed length is {MaxTranscriptLength:N0} characters (received {transcript.Length:N0}).");
+        }
+
+        // Load existing draft item
+        var existing = await contentRepo.GetEditDataAsync("videos", slug, ct);
+        if (existing is null)
+        {
+            return Results.NotFound();
+        }
+
+        // Detect conflict: another content item already owns this YouTube URL
+        if (!string.Equals(youtubeUrl, existing.ExternalUrl, StringComparison.OrdinalIgnoreCase)
+            && await processedUrlRepo.ExistsAsync(youtubeUrl, ct))
+        {
+            return Results.Conflict(new
+            {
+                message = "This YouTube URL has already been processed as a different content item. Delete this draft manually and use the existing item instead."
+            });
+        }
+
+        // Build synthetic feed item — same pattern as ApplyTranscriptAsync
+        var raw = new RawFeedItem
+        {
+            Title = existing.Title,
+            ExternalUrl = youtubeUrl,
+            PublishedAt = DateTimeOffset.FromUnixTimeSeconds(existing.DateEpoch),
+            FeedName = existing.FeedName ?? "TechHub",
+            CollectionName = "videos",
+            FeedLevelAuthor = existing.Author,
+            FeedTags = existing.Tags.ToList(),
+            FullContent = transcript
+        };
+
+        CategorizationResult categorizationResult;
+        try
+        {
+            categorizationResult = await aiService.CategorizeAsync(raw, ct);
+        }
+        catch (Exception ex) when (ex is HttpRequestException or System.Text.Json.JsonException or InvalidOperationException or TimeoutException)
+        {
+            return Results.Problem($"AI categorization failed: {ex.Message.Sanitize()}", statusCode: 502);
+        }
+
+        if (categorizationResult.IsFailure || categorizationResult.Item is null)
+        {
+            return Results.Problem(
+                categorizationResult.IsFailure
+                    ? $"AI categorization failed: {categorizationResult.Explanation}"
+                    : $"AI determined this content should be excluded: {categorizationResult.Explanation}",
+                statusCode: 422);
+        }
+
+        var processed = categorizationResult.Item;
+
+        if (!string.IsNullOrWhiteSpace(processed.Content))
+        {
+            processed = processed.WithContent(contentFixer.RepairMarkdown(processed.Content));
+        }
+
+        processed = processed.WithTags(TagNormalizer.EnsureSectionTags(processed.Tags, processed.Sections));
+        processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
+
+        // Ensure the collection tag (e.g. "Videos") is present — consistent with ingestion
+        var collectionTag = char.ToUpperInvariant(raw.CollectionName[0]) + raw.CollectionName[1..];
+        if (!processed.Tags.Any(t => t.Equals(collectionTag, StringComparison.OrdinalIgnoreCase)))
+        {
+            processed = processed.WithTags([.. processed.Tags, collectionTag]);
+        }
+
+        string? newAiMetadata = existing.AiMetadata;
+        if (processed.RoundupMetadata is not null)
+        {
+            newAiMetadata = System.Text.Json.JsonSerializer.Serialize(new
+            {
+                roundup_summary = processed.RoundupMetadata.Summary,
+                key_topics = processed.RoundupMetadata.KeyTopics,
+                roundup_relevance = processed.RoundupMetadata.Relevance,
+                topic_type = processed.RoundupMetadata.TopicType,
+                impact_level = processed.RoundupMetadata.ImpactLevel,
+                time_sensitivity = processed.RoundupMetadata.TimeSensitivity
+            });
+        }
+
+        var updatedEditData = new ContentItemEditData
+        {
+            CollectionName = "videos",
+            Slug = slug,
+            DateEpoch = existing.DateEpoch,
+            Title = processed.Title,
+            Author = processed.Author ?? existing.Author,
+            Excerpt = processed.Excerpt,
+            Content = processed.Content,
+            PrimarySectionName = processed.PrimarySectionName,
+            FeedName = existing.FeedName,
+            Tags = processed.Tags,
+            Sections = processed.Sections,
+            AiMetadata = newAiMetadata,
+            ExternalUrl = youtubeUrl
+        };
+
+        var updated = await contentRepo.PublishGhcFeatureDraftAsync(
+            slug,
+            existing.ExternalUrl ?? string.Empty,
+            youtubeUrl,
+            updatedEditData,
+            request.Plans,
+            request.GhesSupport,
+            hasTranscript: transcript is not null,
+            ct);
+
+        if (!updated)
+        {
+            return Results.NotFound();
+        }
+
+        contentRepo.InvalidateCachedData();
+        return Results.Ok(updatedEditData);
+    }
+
+    // ── Ad-hoc URL processing handlers ───────────────────────────────────────
 
     /// <summary>Maximum transcript length (characters) accepted by transcript endpoints.</summary>
     private const int MaxTranscriptLength = 50_000;

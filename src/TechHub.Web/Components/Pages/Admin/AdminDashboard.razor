@@ -100,7 +100,6 @@
                         <th class="admin-cell-number">Skipped</th>
                         <th class="admin-cell-number">Errors</th>
                         <th class="admin-cell-number">Fixed</th>
-                        <th class="admin-cell-number">Transcripts</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -155,23 +154,6 @@
                                     <span>—</span>
                                 }
                             </td>
-                            <td class="admin-cell-number">
-                                @if (job.JobType is ContentProcessingJobType.ContentProcessing or ContentProcessingJobType.AdHocProcessing)
-                                {
-                                    if (job.TranscriptsSucceeded > 0 || job.TranscriptsFailed > 0)
-                                    {
-                                        <span title="@job.TranscriptsSucceeded succeeded, @job.TranscriptsFailed failed">@job.TranscriptsSucceeded ✓ @job.TranscriptsFailed ✗</span>
-                                    }
-                                    else
-                                    {
-                                        <span>—</span>
-                                    }
-                                }
-                                else
-                                {
-                                    <span>—</span>
-                                }
-                            </td>
                             <td>
                                 @if (job.JobType != ContentProcessingJobType.ContentCleanup)
                                 {
@@ -191,7 +173,7 @@
                         @if (_expandedJobId == job.Id && _expandedLogOutput != null)
                         {
                             <tr class="admin-log-row">
-                                <td colspan="12">
+                                <td colspan="11">
                                     <pre class="admin-log">@_expandedLogOutput</pre>
                                 </td>
                             </tr>

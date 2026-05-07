@@ -1821,6 +1821,169 @@ WHERE slug = @Slug
         return rows > 0;
     }
 
+    /// <inheritdoc/>
+    public async Task<bool> PublishGhcFeatureDraftAsync(
+        string slug,
+        string oldExternalUrl,
+        string newExternalUrl,
+        TechHub.Core.Models.Admin.ContentItemEditData editData,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        bool hasTranscript,
+        CancellationToken ct = default)
+    {
+        ArgumentNullException.ThrowIfNull(editData);
+
+        var tagsCsv = editData.Tags.Count > 0
+            ? $",{string.Join(",", editData.Tags)},"
+            : string.Empty;
+
+        var isAi = editData.Sections.Contains("ai");
+        var isAzure = editData.Sections.Contains("azure");
+        var isDotnet = editData.Sections.Contains("dotnet");
+        var isDevops = editData.Sections.Contains("devops");
+        var isGhc = editData.Sections.Contains("github-copilot");
+        var isMl = editData.Sections.Contains("ml");
+        var isSecurity = editData.Sections.Contains("security");
+        var bitmask = CalculateSectionBitmask(editData.Sections);
+        var plansCsv = string.Join(",", plans);
+
+        // Single UPDATE that atomically sets all content fields + external_url + plans + draft=false
+        const string ContentSql = @"
+UPDATE content_items
+SET title                = @Title,
+    author               = @Author,
+    excerpt              = @Excerpt,
+    content              = @Content,
+    date_epoch           = @DateEpoch,
+    primary_section_name = @PrimarySectionName,
+    feed_name            = COALESCE(@FeedName, feed_name),
+    tags_csv             = @TagsCsv,
+    is_ai                = @IsAi,
+    is_azure             = @IsAzure,
+    is_dotnet            = @IsDotnet,
+    is_devops            = @IsDevops,
+    is_github_copilot    = @IsGhc,
+    is_ml                = @IsMl,
+    is_security          = @IsSecurity,
+    sections_bitmask     = @Bitmask,
+    ai_metadata          = @AiMetadata::jsonb,
+    external_url         = @NewExternalUrl,
+    plans                = @Plans,
+    ghes_support         = @GhesSupport,
+    draft                = false,
+    updated_at           = NOW()
+WHERE slug = @Slug
+  AND collection_name = 'videos'
+  AND subcollection_name = 'ghc-features'";
+
+        var parameters = new
+        {
+            Title = editData.Title,
+            Author = editData.Author,
+            Excerpt = editData.Excerpt,
+            Content = editData.Content,
+            DateEpoch = editData.DateEpoch,
+            PrimarySectionName = editData.PrimarySectionName,
+            FeedName = editData.FeedName,
+            TagsCsv = tagsCsv,
+            IsAi = isAi,
+            IsAzure = isAzure,
+            IsDotnet = isDotnet,
+            IsDevops = isDevops,
+            IsGhc = isGhc,
+            IsMl = isMl,
+            IsSecurity = isSecurity,
+            Bitmask = bitmask,
+            AiMetadata = editData.AiMetadata,
+            NewExternalUrl = newExternalUrl,
+            Plans = plansCsv,
+            GhesSupport = ghesSupport,
+            Slug = slug,
+            CollectionName = "videos"
+        };
+
+        using var transaction = Connection.BeginTransaction();
+        try
+        {
+            var rows = await Connection.ExecuteAsync(
+                new CommandDefinition(ContentSql, parameters, transaction: transaction, cancellationToken: ct));
+
+            if (rows > 0)
+            {
+                // Rebuild content_tags_expanded: delete existing rows, then re-insert from updated
+                // tag list so that tag_word/tag_display rows reflect the new categorized tags.
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        "DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug",
+                        new { CollectionName = "videos", Slug = slug },
+                        transaction: transaction,
+                        cancellationToken: ct));
+
+                if (editData.Tags.Count > 0)
+                {
+                    var tagRows = ContentItemWriteRepository.BuildTagWords(
+                        editData.Tags, "videos", slug, editData.DateEpoch,
+                        isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
+
+                    foreach (var row in tagRows)
+                    {
+                        await Connection.ExecuteAsync(
+                            new CommandDefinition(
+                                @"INSERT INTO content_tags_expanded
+                                    (collection_name, slug, tag_word, tag_display, is_full_tag,
+                                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
+                                     is_ml, is_security, sections_bitmask)
+                                  VALUES
+                                    (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
+                                     @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
+                                     @IsMl, @IsSecurity, @Bitmask)
+                                  ON CONFLICT DO NOTHING",
+                                row,
+                                transaction: transaction,
+                                cancellationToken: ct));
+                    }
+                }
+
+                // Swap the processed_urls record: delete the old placeholder URL entry for this
+                // slug and insert a new succeeded record for the real YouTube URL.
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        @"DELETE FROM processed_urls
+                          WHERE external_url    = @OldExternalUrl
+                            AND slug            = @Slug
+                            AND collection_name = @CollectionName",
+                        new { OldExternalUrl = oldExternalUrl, Slug = slug, CollectionName = "videos" },
+                        transaction: transaction,
+                        cancellationToken: ct));
+
+                await Connection.ExecuteAsync(
+                    new CommandDefinition(
+                        @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, has_transcript, slug)
+                          VALUES (@NewExternalUrl, 'succeeded', @FeedName, @CollectionName, @HasTranscript, @Slug)
+                          ON CONFLICT (external_url) DO UPDATE
+                              SET status         = 'succeeded',
+                                  error_message  = NULL,
+                                  feed_name      = COALESCE(EXCLUDED.feed_name, processed_urls.feed_name),
+                                  has_transcript = COALESCE(EXCLUDED.has_transcript, processed_urls.has_transcript),
+                                  slug           = EXCLUDED.slug,
+                                  updated_at     = NOW()
+                          WHERE processed_urls.slug = EXCLUDED.slug",
+                        new { NewExternalUrl = newExternalUrl, FeedName = editData.FeedName, CollectionName = "videos", HasTranscript = hasTranscript, Slug = slug },
+                        transaction: transaction,
+                        cancellationToken: ct));
+            }
+
+            transaction.Commit();
+            return rows > 0;
+        }
+        catch
+        {
+            transaction.Rollback();
+            throw;
+        }
+    }
+
     // ==================== Cache Invalidation ====================
 
     /// <inheritdoc/>

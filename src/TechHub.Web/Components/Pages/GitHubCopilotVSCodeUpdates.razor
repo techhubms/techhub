@@ -1,5 +1,6 @@
 @page "/github-copilot/vscode-updates"
 @page "/github-copilot/vscode-updates/{VideoSlug}"
+@using System.Linq
 @using TechHub.Core.Models
 @using TechHub.Core.Validation
 @using TechHub.Web.Services
@@ -180,7 +181,7 @@ else
         {
             var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName, take: 5, lastDays: 0);
             videoItems = (result?.Items ?? [])
-                .OrderByDescending(v => v.DateEpoch)
+                .OrderByDescending(v => ExtractVersionFromTitle(v.Title))
                 .ToList();
 
             // Note: Don't call LoadSelectedVideo here - OnParametersSetAsync handles it
@@ -211,6 +212,25 @@ else
         "github-copilot",
         "videos",
         selectedVideoSlug);
+    }
+
+    /// <summary>
+    /// Extracts the highest version number (X.Y or X.Y.Z) from a title such as
+    /// "What's new in 1.118" or "What's new in 1.109.3 and 1.110".
+    /// Returns Version(0,0) when no version is found so those items sort last.
+    /// </summary>
+    private static Version ExtractVersionFromTitle(string title)
+    {
+        var matches = System.Text.RegularExpressions.Regex.Matches(title, @"\d+\.\d+(?:\.\d+)?");
+        Version? max = null;
+        foreach (var m in matches.Cast<System.Text.RegularExpressions.Match>()
+            .Where(m => Version.TryParse(m.Value, out _)))
+        {
+            Version.TryParse(m.Value, out var v);
+            if (max is null || v > max)
+                max = v;
+        }
+        return max ?? new Version(0, 0);
     }
 
     private string FormatDate(long epochSeconds)
