@@ -29,7 +29,7 @@ public sealed class RssFeedConfigRepository : IRssFeedConfigRepository
     public async Task<IReadOnlyList<FeedConfig>> GetEnabledAsync(CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, name, url, output_dir AS OutputDir, enabled, transcript_mandatory AS TranscriptMandatory
+SELECT id, name, url, output_dir AS OutputDir, enabled
 FROM rss_feed_configs
 WHERE enabled = TRUE
 ORDER BY name";
@@ -43,7 +43,7 @@ ORDER BY name";
     public async Task<IReadOnlyList<FeedConfig>> GetAllAsync(CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, name, url, output_dir AS OutputDir, enabled, transcript_mandatory AS TranscriptMandatory
+SELECT id, name, url, output_dir AS OutputDir, enabled
 FROM rss_feed_configs
 ORDER BY enabled DESC, name";
 
@@ -56,7 +56,7 @@ ORDER BY enabled DESC, name";
     public async Task<FeedConfig?> GetByIdAsync(long id, CancellationToken ct = default)
     {
         const string Sql = @"
-SELECT id, name, url, output_dir AS OutputDir, enabled, transcript_mandatory AS TranscriptMandatory
+SELECT id, name, url, output_dir AS OutputDir, enabled
 FROM rss_feed_configs
 WHERE id = @Id";
 
@@ -70,12 +70,12 @@ WHERE id = @Id";
         ArgumentNullException.ThrowIfNull(feed);
 
         const string Sql = @"
-INSERT INTO rss_feed_configs (name, url, output_dir, enabled, transcript_mandatory)
-VALUES (@Name, @Url, @OutputDir, @Enabled, @TranscriptMandatory)
+INSERT INTO rss_feed_configs (name, url, output_dir, enabled)
+VALUES (@Name, @Url, @OutputDir, @Enabled)
 RETURNING id";
 
         var id = await _connection.ExecuteScalarAsync<long>(
-            new CommandDefinition(Sql, new { feed.Name, feed.Url, feed.OutputDir, feed.Enabled, feed.TranscriptMandatory }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { feed.Name, feed.Url, feed.OutputDir, feed.Enabled }, cancellationToken: ct));
 
         _logger.LogInformation("Created RSS feed config {FeedId}: {FeedName} ({Url})", id, feed.Name, feed.Url);
         return id;
@@ -92,12 +92,11 @@ UPDATE rss_feed_configs SET
     url        = @Url,
     output_dir = @OutputDir,
     enabled    = @Enabled,
-    transcript_mandatory = @TranscriptMandatory,
     updated_at = NOW()
 WHERE id = @Id";
 
         var rows = await _connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { feed.Id, feed.Name, feed.Url, feed.OutputDir, feed.Enabled, feed.TranscriptMandatory }, cancellationToken: ct));
+            new CommandDefinition(Sql, new { feed.Id, feed.Name, feed.Url, feed.OutputDir, feed.Enabled }, cancellationToken: ct));
 
         return rows > 0;
     }

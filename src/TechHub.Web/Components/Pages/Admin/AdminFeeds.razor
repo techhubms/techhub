@@ -57,12 +57,6 @@
                                 Enabled
                             </label>
                         </div>
-                        <div class="admin-form-group">
-                            <label class="admin-label">
-                                <input type="checkbox" @bind="_editingFeed!.TranscriptMandatory" />
-                                Transcript Mandatory
-                            </label>
-                        </div>
                     </div>
                 </div>
                 <div class="admin-modal-footer">
@@ -98,7 +92,6 @@
                         <th>URL</th>
                         <th>Output Dir</th>
                         <th>Enabled</th>
-                        <th>Transcript</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -113,11 +106,6 @@
                             <td>
                                 <span class="admin-status @(feed.Enabled ? "admin-status-completed" : "admin-status-failed")">
                                     @(feed.Enabled ? "✓ Yes" : "✗ No")
-                                </span>
-                            </td>
-                            <td>
-                                <span class="admin-status @(feed.TranscriptMandatory ? "admin-status-completed" : "")">
-                                    @(feed.TranscriptMandatory ? "✓ Required" : "—")
                                 </span>
                             </td>
                             <td>
@@ -210,7 +198,6 @@
             Url = feed.Url,
             OutputDir = feed.OutputDir,
             Enabled = feed.Enabled,
-            TranscriptMandatory = feed.TranscriptMandatory
         };
         _showForm = true;
         _message = null;

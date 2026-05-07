@@ -170,16 +170,14 @@ but no subclasses exist in the codebase.
 **Priority**: Low
 **Affected files**: `src/TechHub.Api/Dockerfile`, `src/TechHub.Web/Dockerfile`
 
-**Current state**: `apt-get install -y curl` (and `python3` in API) without
-`--no-install-recommends`.
+**Current state**: `apt-get install -y curl` without `--no-install-recommends`.
 
 **Target state**: Add `--no-install-recommends` to minimize layer size.
 
 **Implementation notes**:
 
-1. Change to `apt-get install -y --no-install-recommends curl python3`
+1. Change to `apt-get install -y --no-install-recommends curl`
 2. Expected savings: 50-100MB per image
-3. Verify `yt-dlp` still works without recommended Python packages
 
 ---
 

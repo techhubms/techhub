@@ -229,8 +229,8 @@ public sealed class ContentProcessingService
                         // Flush before pipeline so the dashboard is current during the longest operation
                         await FlushProgressAsync();
 
-                        // Shared per-item pipeline: tags → content → transcript → AI → write
-                        var itemResult = await ProcessItemAsync(raw, jobId, forcedSubcollection: null, msg => Log($"  {msg}"), feed.TranscriptMandatory, ct);
+                        // Shared per-item pipeline: tags → content → AI → write
+                        var itemResult = await ProcessItemAsync(raw, jobId, forcedSubcollection: null, msg => Log($"  {msg}"), ct: ct);
 
                         // Emit any supplemental informational messages (date capping, subcollection match)
                         foreach (var line in itemResult.LogLines)
@@ -333,6 +333,11 @@ public sealed class ContentProcessingService
     /// Optional hint passed to the AI about the expected title.
     /// The AI will use it as a starting point but extract the final title from fetched content.
     /// </param>
+    /// <param name="transcript">
+    /// Optional manually provided transcript for YouTube video items.
+    /// When set, it is used as the content for AI processing instead of auto-fetching.
+    /// When null, YouTube items are processed without transcript data.
+    /// </param>
     /// <param name="ct">Cancellation token.</param>
     /// <returns>
     /// <see langword="null"/> when the URL is already in the database (HTTP 409 Conflict).
@@ -344,6 +349,7 @@ public sealed class ContentProcessingService
         string feedName,
         string? subcollectionName = null,
         string? titleHint = null,
+        string? transcript = null,
         CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(url);
@@ -392,8 +398,8 @@ public sealed class ContentProcessingService
                 FeedItemData = feedItemData
             };
 
-            // Shared per-item pipeline: tags → content → transcript → AI → write
-            var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, ct: ct);
+            // Shared per-item pipeline: tags → content → AI → write
+            var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, transcript?.Trim(), ct);
 
             // Emit any supplemental informational messages (date capping, subcollection match)
             foreach (var line in itemResult.LogLines)
@@ -474,14 +480,17 @@ public sealed class ContentProcessingService
     /// <param name="jobId">The job ID for tracking (nullable for legacy callers).</param>
     /// <param name="forcedSubcollection">If set, forces this subcollection instead of using config rules.</param>
     /// <param name="logAction">Callback to append log lines to the caller's log.</param>
-    /// <param name="transcriptMandatory">When true, YouTube items without a transcript are failed immediately (skipping AI).</param>
+    /// <param name="manualTranscript">
+    /// When provided, used as the transcript for YouTube items instead of auto-fetching.
+    /// When null and the item is a YouTube video, transcript fetching is skipped entirely.
+    /// </param>
     /// <param name="ct">Cancellation token.</param>
     private async Task<ItemPipelineResult> ProcessItemAsync(
         RawFeedItem raw,
         long? jobId,
         string? forcedSubcollection,
         Action<string> logAction,
-        bool transcriptMandatory = false,
+        string? manualTranscript = null,
         CancellationToken ct = default)
     {
         // 1. Fetch YouTube tags if applicable
@@ -522,75 +531,50 @@ public sealed class ContentProcessingService
             }
         }
 
-        // 2. Enrich with content (YouTube transcript or article body)
-        string fetchLabel;
-        if (raw.IsYouTube)
-        {
-            var ye = _options.YouTubeExplodeEnabled;
-            var yd = _options.YtDlpEnabled;
-            var strategy = (ye, yd) switch
-            {
-                (false, false) => "disabled",
-                (false, true) => "yt-dlp (YoutubeExplode disabled)",
-                (true, false) => "YoutubeExplode only",
-                _ => "YoutubeExplode → yt-dlp fallback"
-            };
-            fetchLabel = string.Create(CultureInfo.InvariantCulture, $"Fetching transcript (via {strategy})…");
-        }
-        else
-        {
-            fetchLabel = "Fetching article content…";
-        }
-
-        logAction(fetchLabel);
-        var hadContentBefore = !string.IsNullOrWhiteSpace(raw.FullContent);
-        try
-        {
-            raw = await _articleService.EnrichWithContentAsync(raw, ct);
-        }
-        catch (Exception ex) when (ex is not OperationCanceledException)
-        {
-            _logger.LogWarning(ex, "Failed to enrich content for {Url}", raw.ExternalUrl);
-            logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message.Sanitize()}"));
-        }
-
-        // 3. Track transcript outcome for YouTube items
-        var hasContentAfter = !string.IsNullOrWhiteSpace(raw.FullContent);
-        var contentFetched = !hadContentBefore && hasContentAfter;
-        bool? hasTranscript = raw.IsYouTube ? contentFetched : null;
+        // 2. Enrich with content
+        // YouTube: use manually provided transcript (if any) — automatic transcript fetching is disabled.
+        // Non-YouTube: always fetch full article body.
+        bool? hasTranscript = null;
         string? transcriptStatus = null;
 
         if (raw.IsYouTube)
         {
-            transcriptStatus = contentFetched
-                ? "transcript fetched"
-                : $"transcript failed: {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}";
-
-            if (contentFetched)
+            if (!string.IsNullOrWhiteSpace(manualTranscript))
             {
-                logAction("Transcript fetched successfully");
+                logAction("Using manually provided transcript");
+                raw = new RawFeedItem
+                {
+                    Title = raw.Title,
+                    ExternalUrl = raw.ExternalUrl,
+                    PublishedAt = raw.PublishedAt,
+                    FeedItemData = raw.FeedItemData,
+                    FeedLevelAuthor = raw.FeedLevelAuthor,
+                    FeedTags = raw.FeedTags,
+                    FeedName = raw.FeedName,
+                    CollectionName = raw.CollectionName,
+                    FullContent = manualTranscript
+                };
+                hasTranscript = true;
+                transcriptStatus = "manual transcript";
             }
             else
             {
-                logAction(string.Create(CultureInfo.InvariantCulture,
-                    $"⚠ Transcript unavailable: {(raw.TranscriptFailureReason ?? "unknown").Sanitize()}"));
-
-                // Enforce TranscriptMandatory — fail the item early without calling AI
-                if (transcriptMandatory)
-                {
-                    const string Reason = "Transcript mandatory but not available";
-                    logAction(string.Create(CultureInfo.InvariantCulture, $"✗ {Reason}"));
-                    await _processedUrlRepo.RecordFailureAsync(raw.ExternalUrl, Reason, raw.FeedName, raw.CollectionName, reason: null, hasTranscript: false, jobId, ct: ct);
-                    return new ItemPipelineResult
-                    {
-                        Outcome = AdHocUrlProcessOutcome.Failed,
-                        Title = raw.Title,
-                        Message = Reason,
-                        YouTubeTagCount = ytTagCount,
-                        HasTranscript = false,
-                        TranscriptStatus = transcriptStatus
-                    };
-                }
+                logAction("No transcript provided — processing with available metadata only (tags, description, feed data)");
+                hasTranscript = false;
+                transcriptStatus = "no transcript";
+            }
+        }
+        else
+        {
+            logAction("Fetching article content…");
+            try
+            {
+                raw = await _articleService.EnrichWithContentAsync(raw, ct);
+            }
+            catch (Exception ex) when (ex is not OperationCanceledException)
+            {
+                _logger.LogWarning(ex, "Failed to enrich content for {Url}", raw.ExternalUrl);
+                logAction(string.Create(CultureInfo.InvariantCulture, $"⚠ Content enrichment failed: {ex.Message.Sanitize()}"));
             }
         }
 

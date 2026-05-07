@@ -16,9 +16,8 @@ namespace TechHub.Infrastructure.Tests.Services;
 ///
 /// Each fixture set in Services/Fixtures/Pipeline/ represents one feed's latest article:
 ///   {name}.rss             — Real RSS/Atom XML trimmed to 1 item (the stable test seed)
-///   {name}.html            — Raw article HTML as fetched by the real ArticleFetchClient
-///   {name}.transcript.txt  — Placeholder transcript text for YouTube feeds
-///   {name}.md              — Extracted markdown after HTML → markdown conversion
+///   {name}.html            — Raw article HTML as fetched by the real ArticleFetchClient (non-YouTube only)
+///   {name}.md              — Extracted markdown after HTML → markdown conversion (non-YouTube only)
 ///   {name}.json            — AI user prompt (the golden-master for the pipeline output)
 ///
 /// What the test verifies (three tiers):
@@ -26,10 +25,12 @@ namespace TechHub.Infrastructure.Tests.Services;
 ///     ArticleFetchClient fetches the article URL from the .rss feed.
 ///     In normal mode the stored .html is used as the mock response.
 ///     In generate mode the real HTTP client fetches live content and saves it as .html.
+///     Skipped for YouTube items (no HTML fetching).
 ///
-///   Tier 2 — HTML → markdown conversion:
+///   Tier 2 — HTML → markdown conversion (non-YouTube only):
 ///     ArticleContentService runs HtmlToMarkdownConverter on the raw HTML.
 ///     Result (enrichedItem.FullContent) is compared to the stored .md file.
+///     YouTube items are returned unchanged by ArticleContentService; their .md files are not checked.
 ///
 ///   Tier 3 — AI prompt construction:
 ///     AiCategorizationService.BuildUserPrompt produces the user prompt sent to the AI.
@@ -136,15 +137,11 @@ public class ContentProcessingPipelineTests
         //   AiCategorizationService.BuildUserPrompt → the AI user prompt string
 
         var fetchClient = new Mock<IArticleFetchClient>();
-        var ytService = new Mock<IYouTubeTranscriptService>();
 
         if (rawItem.IsYouTube)
         {
-            var transcript = TryLoadEmbeddedText($"{fixtureName}.transcript.txt")
-                ?? $"Placeholder transcript for {fixtureName}";
-            ytService
-                .Setup(s => s.GetTranscriptAsync(rawItem.ExternalUrl, It.IsAny<CancellationToken>()))
-                .ReturnsAsync(TranscriptResult.Success(transcript));
+            // YouTube items are not enriched — no transcript fetching in the pipeline.
+            // The raw item is used directly; transcripts are provided manually only.
         }
         else
         {
@@ -154,7 +151,7 @@ public class ContentProcessingPipelineTests
                 .ReturnsAsync(storedHtml);
         }
 
-        var articleService = new ArticleContentService(fetchClient.Object, ytService.Object);
+        var articleService = new ArticleContentService(fetchClient.Object);
         var enrichedItem = await articleService.EnrichWithContentAsync(rawItem, CancellationToken.None);
         var actualPrompt = AiCategorizationService.BuildUserPrompt(enrichedItem);
 
@@ -248,24 +245,11 @@ public class ContentProcessingPipelineTests
         string fixtureName, RawFeedItem rawItem, string _, FeedConfig feedConfig)
     {
         var fetchClient = new Mock<IArticleFetchClient>();
-        var ytService = new Mock<IYouTubeTranscriptService>();
 
         if (rawItem.IsYouTube)
         {
-            var transcript =
-                $"This is a placeholder transcript for '{feedConfig.Name}' used in pipeline fixture tests. " +
-                "The actual transcript would be fetched via YoutubeExplode at runtime.";
-
-            if (Directory.Exists(_fixtureRepoDir))
-            {
-                File.WriteAllText(
-                    Path.Combine(_fixtureRepoDir, $"{fixtureName}.transcript.txt"),
-                    transcript, Encoding.UTF8);
-            }
-
-            ytService
-                .Setup(s => s.GetTranscriptAsync(rawItem.ExternalUrl, It.IsAny<CancellationToken>()))
-                .ReturnsAsync(TranscriptResult.Success(transcript));
+            // YouTube items are not enriched — no transcript in the pipeline.
+            // The raw item is used directly for AI prompt generation.
         }
         else
         {
@@ -279,7 +263,7 @@ public class ContentProcessingPipelineTests
             }
         }
 
-        var articleService = new ArticleContentService(fetchClient.Object, ytService.Object);
+        var articleService = new ArticleContentService(fetchClient.Object);
         var enrichedItem = await articleService.EnrichWithContentAsync(rawItem, CancellationToken.None);
         var actualPrompt = AiCategorizationService.BuildUserPrompt(enrichedItem);
 

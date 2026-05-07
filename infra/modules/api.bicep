@@ -24,9 +24,6 @@ param dbConnectionSecretName string
 @description('Key Vault secret name holding the AI Foundry API key')
 param aiApiKeySecretName string
 
-@description('Key Vault secret name holding semicolon-delimited YouTube cookies (optional — empty secret is fine)')
-param youtubeCookiesSecretName string = ''
-
 @description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
 
@@ -99,10 +96,6 @@ var staticEnvVars = [
     name: 'AiCategorization__ApiKey'
     secretRef: 'ai-categorization-api-key'
   }
-  ...(!empty(youtubeCookiesSecretName) ? [{
-    name: 'ContentProcessor__YouTubeCookies'
-    secretRef: 'youtube-cookies'
-  }] : [])
 ]
 
 resource api 'Microsoft.App/containerApps@2025-07-01' = {
@@ -150,11 +143,6 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
           keyVaultUrl: '${keyVaultUri}secrets/${aiApiKeySecretName}'
           identity: acrPullIdentityId
         }
-        ...(!empty(youtubeCookiesSecretName) ? [{
-          name: 'youtube-cookies'
-          keyVaultUrl: '${keyVaultUri}secrets/${youtubeCookiesSecretName}'
-          identity: acrPullIdentityId
-        }] : [])
       ]
     }
     template: {

@@ -22,7 +22,6 @@
     <PackageReference Include="Polly" />
     <PackageReference Include="SmartReader" />
     <PackageReference Include="YamlDotNet" />
-    <PackageReference Include="YoutubeExplode" />
   </ItemGroup>
 
   <ItemGroup>

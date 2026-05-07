@@ -173,6 +173,22 @@
                             </label>
                         </div>
                     }
+
+                    @if (_isYouTube)
+                    {
+                        <div class="admin-form-group">
+                            <label class="admin-form-label" for="acm-transcript">
+                                Transcript <span class="admin-form-hint">(optional — paste to enable full content generation)</span>
+                            </label>
+                            <textarea id="acm-transcript"
+                                      class="admin-form-input acm-transcript-textarea"
+                                      rows="8"
+                                      placeholder="Paste the video transcript here (plain text). When provided, the AI will generate a full summary. Leave blank to process with available metadata only."
+                                      @bind="_transcript"
+                                      disabled="@_processing"
+                                      spellcheck="false"></textarea>
+                        </div>
+                    }
                 </div>
             </div>
 
@@ -227,6 +243,7 @@
     private AdHocUrlProcessResult? _result;
     private bool _isAlreadyExists;
     private string? _validationError;
+    private string _transcript = string.Empty;
 
     private string ResultAlertClass => _result?.Outcome switch
     {
@@ -249,6 +266,7 @@
         {
             _isGhcFeature = false;
             _isVscodeUpdate = false;
+            _transcript = string.Empty;
         }
 
         // Auto-fetch title when a valid URL is entered and title hint is empty
@@ -356,7 +374,8 @@
                 IsGhcFeature = _isGhcFeature,
                 IsVscodeUpdate = _isVscodeUpdate,
                 Plans = plans,
-                GhesSupport = _ghesSupport
+                GhesSupport = _ghesSupport,
+                Transcript = string.IsNullOrWhiteSpace(_transcript) ? null : _transcript.Trim()
             };
 
             var result = await Api.ProcessAdHocUrlAsync(request);
@@ -379,6 +398,7 @@
                     _ghesSupport = false;
                     _isYouTube = false;
                     _selectedPlanGroup = null;
+                    _transcript = string.Empty;
                     await OnItemAdded.InvokeAsync();
                     await CloseAsync();
                 }
@@ -450,6 +470,7 @@
         _ghesSupport = false;
         _isYouTube = false;
         _selectedPlanGroup = null;
+        _transcript = string.Empty;
         _result = null;
         _isAlreadyExists = false;
         _validationError = null;

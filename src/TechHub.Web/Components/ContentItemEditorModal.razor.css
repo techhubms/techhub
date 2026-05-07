@@ -133,3 +133,19 @@
     padding: var(--spacing-2) var(--spacing-3);
     border-top: 1px solid var(--color-border-default);
 }
+
+.editor-transcript-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    margin-top: var(--spacing-2);
+}
+
+.editor-transcript-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.editor-apply-btn {
+    align-self: flex-start;
+}
