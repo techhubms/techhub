@@ -30,7 +30,6 @@
         AiCategorization:Endpoint       — Azure OpenAI endpoint URL (production)
         AiCategorization:DeploymentName — Azure OpenAI deployment name (production)
         AiCategorization:ApiKey         — Azure OpenAI API key (from Key Vault)
-        ContentProcessor:YouTubeCookies — YouTube cookies (from Key Vault)
 
     TechHub.Web (techhub-web):
         AzureAd:TenantId               — Entra ID tenant (from current Azure CLI session)
@@ -181,10 +180,8 @@ Write-Host ""
 Write-Host "Fetching secrets from Key Vault '$KeyVaultName'..." -ForegroundColor Cyan
 
 $aiApiKey = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-ai-api-key --query "value" --output tsv
-$youtubeCookies = az keyvault secret show --vault-name $KeyVaultName --name techhub-prod-youtube-cookies --query "value" --output tsv
 
 Write-Host "  AI API Key:       $('*' * 8)...(fetched)" -ForegroundColor Gray
-Write-Host "  YouTube Cookies:  $('*' * 8)...(fetched)" -ForegroundColor Gray
 
 # --- Helper to set a secret ---
 function Set-Secret($project, $key, $value) {
@@ -215,7 +212,6 @@ Set-Secret $apiProject "AzureAd:ClientId" $clientId
 Set-Secret $apiProject "AiCategorization:Endpoint" $aiEndpoint
 Set-Secret $apiProject "AiCategorization:DeploymentName" $aiDeployment
 Set-Secret $apiProject "AiCategorization:ApiKey" $aiApiKey
-Set-Secret $apiProject "ContentProcessor:YouTubeCookies" $youtubeCookies
 
 # --- TechHub.Web secrets ---
 Write-Host ""
