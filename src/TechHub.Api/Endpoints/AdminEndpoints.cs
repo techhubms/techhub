@@ -673,6 +673,12 @@ public static partial class AdminEndpoints
             return Results.BadRequest("Transcript is required.");
         }
 
+        const int MaxTranscriptLength = 50_000;
+        if (request.Transcript.Length > MaxTranscriptLength)
+        {
+            return Results.BadRequest($"Transcript is too long. Maximum allowed length is {MaxTranscriptLength:N0} characters (received {request.Transcript.Length:N0}).");
+        }
+
         collection = collection.Trim().Sanitize();
         slug = slug.Trim().Sanitize();
 
@@ -1106,6 +1112,11 @@ public static partial class AdminEndpoints
         var transcript = !string.IsNullOrWhiteSpace(request.Transcript)
             ? request.Transcript.Trim()
             : null;
+
+        if (transcript is not null && transcript.Length > 50_000)
+        {
+            return Results.BadRequest($"Transcript is too long. Maximum allowed length is 50,000 characters (received {transcript.Length:N0}).");
+        }
 
         var result = await processingService.ProcessSingleAsync(
             sanitizedUrl,

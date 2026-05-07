@@ -121,6 +121,9 @@ function Get-VideosByJobId {
     try {
         $response = Invoke-RestMethod -Uri $url -Headers (Get-ApiHeaders) -Method Get
         $slugs = $response.items | Where-Object { $null -ne $_.slug } | Select-Object -ExpandProperty slug
+        if ($response.totalCount -gt $slugs.Count) {
+            Write-Warn "WARNING: Job $JobId has $($response.totalCount) succeeded video(s) but only $($slugs.Count) were retrieved (page limit). Run multiple times or narrow the job scope to avoid missing items."
+        }
         Write-Success "Found $($slugs.Count) video slug(s) in job $JobId"
         return $slugs
     }
@@ -174,7 +177,16 @@ function Get-TranscriptViaYtDlp {
         )
 
         $proc = Start-Process -FilePath 'yt-dlp' -ArgumentList $ytDlpArgs `
-            -NoNewWindow -Wait -PassThru -RedirectStandardError (Join-Path $tempDir 'stderr.txt')
+            -NoNewWindow -PassThru -RedirectStandardError (Join-Path $tempDir 'stderr.txt')
+
+        # Wait up to 5 minutes; kill and bail if yt-dlp hangs (network stall, consent wall, etc.)
+        $ytDlpTimeoutMs = 300_000
+        $null = $proc.WaitForExit($ytDlpTimeoutMs)
+        if (-not $proc.HasExited) {
+            try { $proc.Kill() } catch { }
+            Write-Warn "yt-dlp timed out after $($ytDlpTimeoutMs / 1000)s for $VideoUrl — skipping"
+            return $null
+        }
 
         if ($proc.ExitCode -ne 0) {
             $errText = ''

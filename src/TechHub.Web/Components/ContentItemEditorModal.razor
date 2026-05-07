@@ -97,7 +97,7 @@
                         </details>
                     </div>
 
-                    @if (_editData.CollectionName == "videos")
+                    @if (string.Equals(_editData.CollectionName, "videos", StringComparison.OrdinalIgnoreCase))
                     {
                         <div class="admin-form-group editor-full-width">
                             <details class="editor-details">
@@ -247,7 +247,7 @@
             // Update the backing data reference with the server response
             _editData = updated;
         }
-        catch (HttpRequestException ex)
+        catch (Exception ex) when (ex is not OperationCanceledException)
         {
             Logger.LogError(ex, "Failed to apply transcript for {Collection}/{Slug}", _editData.CollectionName, _editData.Slug);
             _applyError = $"Failed to apply transcript: {ex.Message}";
