@@ -40,6 +40,7 @@ public class SecurityHeadersMiddleware
             //   'unsafe-inline' in script-src for inline <script> blocks (Blazor boot/glue scripts)
             //   'unsafe-inline' in style-src for scoped CSS (compiled component styles)
             // External scripts: Google Analytics/Tag Manager and Application Insights.
+            // frame-src allows YouTube privacy-enhanced embeds used on article pages.
             headers["Content-Security-Policy-Report-Only"] =
                 "default-src 'self'; " +
                 "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://js.monitor.azure.com; " +
@@ -47,6 +48,7 @@ public class SecurityHeadersMiddleware
                 "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; " +
                 "connect-src 'self' wss: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.applicationinsights.azure.com https://dc.services.visualstudio.com; " +
                 "font-src 'self'; " +
+                "frame-src 'self' https://www.youtube-nocookie.com; " +
                 "frame-ancestors 'none'; " +
                 "base-uri 'self'; " +
                 "form-action 'self'";
