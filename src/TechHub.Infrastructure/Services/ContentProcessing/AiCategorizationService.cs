@@ -138,6 +138,9 @@ public sealed class AiCategorizationService : IAiCategorizationService
     {
         try
         {
+            // Sanitize the outer API response JSON first — Azure OpenAI can occasionally
+            // return improperly escaped characters (e.g. \. instead of \\.) in the content field.
+            responseJson = SanitizeJsonEscapes(responseJson);
             using var doc = JsonDocument.Parse(responseJson);
             var choice = doc.RootElement.GetProperty("choices")[0];
 
@@ -406,7 +409,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
     /// JSON only allows <c>\" \\ \/ \b \f \n \r \t \uXXXX</c>.
     /// Any other <c>\X</c> sequence is invalid — we drop the backslash and keep the character.
     /// </summary>
-    private static string SanitizeJsonEscapes(string json)
+    internal static string SanitizeJsonEscapes(string json)
         => Regex.Replace(json, @"\\([^""\\\//bfnrtu])", "$1");
 
     private static string ExtractJsonFromResponse(string response)

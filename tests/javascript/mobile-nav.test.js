@@ -17,6 +17,12 @@ describe('mobile-nav.js', () => {
             configurable: true,
         });
 
+        // Mock clientWidth so lockScroll produces a predictable pixel width
+        Object.defineProperty(document.documentElement, 'clientWidth', {
+            get: () => 375,
+            configurable: true,
+        });
+
         window.scrollTo = vi.fn();
         vi.resetModules();
     });
@@ -43,7 +49,8 @@ describe('mobile-nav.js', () => {
 
             expect(document.body.style.position).toBe('fixed');
             expect(document.body.style.top).toBe('-150px');
-            expect(document.body.style.width).toBe('100%');
+            // Width is set to clientWidth px to prevent body expanding by scrollbar width
+            expect(document.body.style.width).toBe('375px');
         });
 
         it('should handle zero scroll position', async () => {
@@ -55,6 +62,7 @@ describe('mobile-nav.js', () => {
             expect(document.body.style.position).toBe('fixed');
             // Browser (and jsdom) normalizes -0px to 0px
             expect(document.body.style.top).toBe('0px');
+            expect(document.body.style.width).toBe('375px');
         });
     });
 

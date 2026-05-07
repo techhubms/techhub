@@ -203,6 +203,7 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 - **Ready signal**: `window.__scrollListenerReady[triggerId]` (scoped per trigger to avoid interference)
 - Uses `IntersectionObserver` with a 300px `rootMargin` — fires once when the sentinel enters the extended viewport, then immediately disconnects to prevent cascade
 - All logic in `scroll-manager.js` — Blazor imports via `JSRuntime.InvokeAsync("import", "./js/scroll-manager.js")` (relative specifier so the ImportMap resolves to the fingerprinted URL)
+- **Architecture deep-dive**: See [docs/scroll-system-architecture.md](../../docs/scroll-system-architecture.md) for the full scroll system (navigation lifecycle, save/restore, TOC, infinite scroll, known bugs, test coverage)
 
 ## Date Formatting
 

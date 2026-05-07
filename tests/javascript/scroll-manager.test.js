@@ -747,6 +747,38 @@ describe('scroll-manager.js', () => {
             expect(first.disconnected).toBe(true);
         });
 
+        it('should NOT flush pendingIntersect when trigger is outside viewport+margin on back-nav', () => {
+            // Regression test for slow-network cascade-scroll bug:
+            // On slow networks, the IO may fire at scroll-Y=0 (before restoreScrollPosition
+            // has called scrollTo) because the initial layout places the trigger near the top
+            // of a not-yet-fully-rendered page. finishNavigation must check trigger visibility
+            // AFTER the scroll and only flush if the trigger is genuinely in the viewport.
+            const triggerEl = createTriggerElement();
+            const helper = createMockHelper();
+
+            // Mock trigger as far below the viewport+margin:
+            // innerHeight=800, TRIGGER_MARGIN_PX=300 → threshold = 1100; top=5000 >> 1100
+            triggerEl.getBoundingClientRect = () => ({
+                top: 5000, bottom: 5010, left: 0, right: 0, width: 0, height: 10,
+            });
+
+            // Trigger back-nav (sets navigating = 'traverse')
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const observer = window.__mockObservers.at(-1);
+
+            // IO fires while navigating='traverse' — records pendingIntersect
+            observer.trigger(true);
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+
+            // finishNavigation runs (rAF is sync in tests)
+            window.__restoreScrollPosition();
+
+            // Trigger is outside viewport+margin → pendingIntersect cleared, LoadNextBatch NOT called
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+        });
+
         it('should set __scrollListenerReady to false on dispose', () => {
             createTriggerElement();
             const helper = createMockHelper();

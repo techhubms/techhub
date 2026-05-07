@@ -100,6 +100,14 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         // This also ensures restoreScrollPosition() has been called before the scroll wait below.
         await Page.WaitForBlazorReadyAsync();
 
+        // Guard: wait for any loading indicator to disappear before asserting scroll position.
+        // The cascade-scroll bug (scroll-manager.js pendingIntersect flush) can temporarily
+        // load extra content on back-navigation; waiting here ensures that work is done and
+        // restoreScrollPosition() has had a chance to scroll to the saved midY value.
+        await Page.WaitForConditionAsync(
+            "() => !document.querySelector('.loading-more-indicator')",
+            onTimeout: "() => JSON.stringify({loadingIndicator: !!document.querySelector('.loading-more-indicator'), cards: document.querySelectorAll('.card').length, scrollY: window.scrollY})");
+
         // Assert — scroll position should be restored to exactly where the user was.
         // Tolerance is 10px: the JS uses `maxScroll >= y - 5` before scrolling, so
         // the maximum possible clamping error is 5px; 10px gives comfortable headroom.
@@ -204,5 +212,106 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
         finalCount.Should().BeLessThanOrEqualTo(maxAcceptableCount,
             $"back-navigation should NOT trigger a cascade of batch loads. " +
             $"Expected ~{afterScrollCount} items but got {finalCount}");
+    }
+
+    /// <summary>
+    /// Regression test for the "cascade scroll" bug:
+    /// When the user navigates back to a page with infinite scroll after having been
+    /// near the bottom (scroll trigger just outside the viewport + 300px margin),
+    /// the page should NOT automatically scroll to the very end while loading all
+    /// remaining content. The scroll position should stay near where the user was.
+    ///
+    /// Root cause: finishNavigation() flushed the pending IO intersection by calling
+    /// LoadNextBatch. The Blazor render triggered by that call immediately created a new
+    /// IntersectionObserver. Because navigating was already set to false by finishNavigation,
+    /// the new observer's first callback (trigger still in viewport) called LoadNextBatch
+    /// again — starting a cascade. Fixed by setting navigating='post-restore' for two
+    /// animation frames after flushing pendingIntersect.
+    /// </summary>
+    [Fact]
+    public async Task BackNavigation_CascadingLoad_ScrollDoesNotReachEnd()
+    {
+        // Arrange - Navigate to a browse page with enough content for infinite scroll
+        await Page.GotoRelativeAsync("/all?types=videos");
+        await Page.WaitForConditionAsync(
+            "() => document.querySelectorAll('.card').length > 0");
+
+        var initialCount = await Page.Locator(".card").CountAsync();
+        var hasScrollTrigger = await Page.EvaluateAsync<bool>(
+            "() => document.getElementById('scroll-trigger') !== null");
+
+        if (!hasScrollTrigger)
+        {
+            return; // Not enough content for this test
+        }
+
+        // Load one more batch so there is a scroll trigger with content below it
+        await Page.ScrollToLoadMoreAsync(initialCount + 1);
+
+        // Scroll to 3 cards from the end — trigger is just outside the viewport + 300px
+        // margin, the most likely position to trigger a cascade on back-navigation.
+        await Page.EvaluateAsync(@"() => {
+            const cards = document.querySelectorAll('.card');
+            const targetCard = cards[Math.max(0, cards.length - 3)];
+            if (targetCard) {
+                targetCard.scrollIntoView({ block: 'end', behavior: 'instant' });
+            }
+            window.dispatchEvent(new Event('scroll'));
+        }");
+
+        // Wait for scroll listener to be ready and no load in progress
+        await Page.WaitForConditionAsync(
+            "() => window.__scrollListenerReady?.['scroll-trigger'] === true && !document.querySelector('.loading-more-indicator')",
+            onTimeout: "() => JSON.stringify({ready: window.__scrollListenerReady?.['scroll-trigger'], loadingIndicator: !!document.querySelector('.loading-more-indicator')})");
+
+        // If scrolling to 3-from-end triggered another cascade that loaded all content,
+        // skip — no scroll trigger remains and the scenario is no longer testable.
+        var hasScrollTriggerAfterPosition = await Page.EvaluateAsync<bool>(
+            "() => document.getElementById('scroll-trigger') !== null");
+        if (!hasScrollTriggerAfterPosition)
+        {
+            return;
+        }
+
+        var scrollYBeforeNav = await Page.EvaluateAsync<double>("window.scrollY");
+        var afterScrollCount = await Page.Locator(".card").CountAsync();
+
+        // Navigate away via enhanced navigation
+        await Page.ClickVisibleCardLinkAsync();
+        await Page.WaitForConditionAsync(
+            "() => !window.location.search.includes('types=videos')");
+        await Page.WaitForBlazorReadyAsync();
+
+        // Act - Press browser back button
+        await Page.GoBackAsync();
+        await Page.WaitForBlazorUrlContainsAsync("types=videos");
+
+        // Wait for content to load (circuit cache or re-fetch)
+        await Page.WaitForConditionAsync(
+            $"(expected) => document.querySelectorAll('.card').length >= expected",
+            afterScrollCount,
+            onTimeout: $"() => `${{document.querySelectorAll('.card').length}} cards loaded, expected {afterScrollCount}`");
+
+        await Page.WaitForBlazorReadyAsync();
+
+        // Wait for any loading to finish — a cascade would keep the loading indicator visible
+        await Page.WaitForConditionAsync(
+            "() => !document.querySelector('.loading-more-indicator')",
+            onTimeout: "() => JSON.stringify({loadingIndicator: !!document.querySelector('.loading-more-indicator'), cards: document.querySelectorAll('.card').length, scrollY: window.scrollY})");
+
+        // Assert — scroll must NOT be at the absolute bottom of all loaded content.
+        // If the cascade bug fires, the page scrolls to the end (scrollY ≈ maxScroll).
+        // A 500px margin avoids flakiness from minor layout shifts while still catching
+        // the bug where hundreds of extra cards were loaded and scrolled into view.
+        var scrollY = await Page.EvaluateAsync<double>("window.scrollY");
+        var maxScroll = await Page.EvaluateAsync<double>(
+            "document.documentElement.scrollHeight - window.innerHeight");
+
+        if (maxScroll > 500)
+        {
+            scrollY.Should().BeLessThan(maxScroll - 500,
+                $"back-navigation cascade bug: page scrolled to the very end. " +
+                $"scrollY={scrollY}, maxScroll={maxScroll}, expected scrollY near {scrollYBeforeNav}");
+        }
     }
 }
