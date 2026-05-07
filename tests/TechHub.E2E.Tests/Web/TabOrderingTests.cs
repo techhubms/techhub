@@ -397,11 +397,10 @@ public class TabOrderingTests : PlaywrightTestBase
         // Step 3: Tab to first focusable element in primary content (should be first section card)
         await Page.Keyboard.PressAsync("Tab");
 
-        // Pattern 9: Use Page.EvaluateAsync instead of Locator(":focus") to avoid timeout when focus is on body
-        await Page.WaitForConditionAsync(
-            "() => document.activeElement && document.activeElement !== document.body");
-
-        // Verify we're on a section card link
+        // Tab focus changes are synchronous in the browser — read activeElement directly.
+        // WaitForConditionAsync("!== body") is NOT used here because the heading (#skiptohere)
+        // already has focus with tabindex="-1", so the condition fires immediately (before the
+        // browser processes Tab and moves focus to the section card), resulting in a stale read.
         var isSectionCard = await Page.EvaluateAsync<bool>(
             "() => { const el = document.activeElement; return el.classList.contains('section-card') && el.tagName.toLowerCase() === 'a'; }"
         );

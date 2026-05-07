@@ -231,10 +231,10 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiException_GracefulDegradation_PassesThrough()
+    public async Task ApiException_Returns503()
     {
         // /Some-Slug → API throws HttpRequestException (transient failure) →
-        // no pathChanged → pass through to Blazor routing (not a permanent 404)
+        // no pathChanged → 503 with Cache-Control: no-store (not a cacheable 404)
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -244,8 +244,9 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("a transient API failure must not hard-404 a potentially valid legacy URL");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
+        context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
+        nextCalled().Should().BeFalse();
     }
 
     [Fact]
@@ -269,9 +270,9 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiTimeout_WhenNotRequestAbort_GracefulDegradation_PassesThrough()
+    public async Task ApiTimeout_WhenNotRequestAbort_Returns503()
     {
-        // Timeout is a transient failure: gracefully degrade instead of hard-404ing.
+        // Timeout is a transient failure: return 503 with no-store instead of a cacheable error.
         var mockApi = new Mock<ITechHubApiClient>();
         mockApi
             .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
@@ -281,8 +282,9 @@ public class UrlNormalizationMiddlewareTests
 
         await middleware.InvokeAsync(context);
 
-        nextCalled().Should().BeTrue("a timeout must not hard-404 a potentially valid legacy URL");
-        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
+        context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
+        nextCalled().Should().BeFalse();
     }
 
     [Fact]
@@ -833,6 +835,228 @@ public class UrlNormalizationMiddlewareTests
         context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
         context.Response.Headers.Location.ToString().Should().Be("/ai/videos/my-article");
         nextCalled().Should().BeFalse();
+    }
+
+    // ── Trailing slash redirect ─────────────────────────────────────────────
+
+    [Theory]
+    [InlineData("/ai/", "/ai")]
+    [InlineData("/github-copilot/", "/github-copilot")]
+    [InlineData("/ai/videos/", "/ai/videos")]
+    [InlineData("/ai/videos/my-article/", "/ai/videos/my-article")]
+    public async Task TrailingSlash_Redirects301ToPathWithoutSlash(string input, string expected)
+    {
+        // /ai/ must redirect to /ai — Blazor routing only matches paths without trailing slashes.
+        var (middleware, context, nextCalled) = CreateMiddleware(path: input);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(expected);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task TrailingSlash_QueryStringPreserved()
+    {
+        var (middleware, context, _) = CreateMiddleware(path: "/ai/", queryString: "?ref=rss");
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.Headers.Location.ToString().Should().Be("/ai?ref=rss");
+    }
+
+    [Fact]
+    public async Task RootSlash_NotRedirected()
+    {
+        // The root "/" is a valid path — must never redirect.
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/");
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue();
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+    }
+
+    // ── Section rename redirect ─────────────────────────────────────────────
+
+    [Theory]
+    [InlineData("/coding/videos/my-slug", "/dotnet/videos/my-slug")]
+    [InlineData("/coding/blogs/article", "/dotnet/blogs/article")]
+    [InlineData("/coding/videos", "/dotnet/videos")]
+    [InlineData("/coding", "/dotnet")]
+    public async Task RenamedSection_Coding_RedirectsToDotnet(string input, string expected)
+    {
+        // "coding" was renamed to "dotnet". Any path under /coding/ must redirect to /dotnet/.
+        var cache = A.SectionCache.WithSections("dotnet").WithCollections("videos", "blogs").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: input, sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(expected);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task RenamedSection_WithHtmlAndDatePrefix_SingleRedirect()
+    {
+        // /coding/2025-01-01-my-article.html → strip html+date → /coding/my-article →
+        // rename coding→dotnet → one 301 to /dotnet/my-article (via 2-segment legacy lookup).
+        var canonical = "/dotnet/videos/my-article";
+        var cache = A.SectionCache.WithSections("dotnet").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/coding/2025-01-01-my-article.html",
+            sectionCache: cache,
+            apiResult: new LegacyRedirectResult(canonical));
+
+        await middleware.InvokeAsync(context);
+
+        // After rename + normalization → /dotnet/my-article (2-segment, dotnet is known section,
+        // my-article is not a known collection) → legacy lookup → canonical.
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(canonical);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task RenamedSection_QueryStringPreserved()
+    {
+        var cache = A.SectionCache.WithSections("dotnet").WithCollections("videos").Build();
+        var (middleware, context, _) = CreateMiddleware(
+            path: "/coding/videos/my-slug",
+            queryString: "?ref=rss",
+            sectionCache: cache);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.Headers.Location.ToString().Should().Be("/dotnet/videos/my-slug?ref=rss");
+    }
+
+    // ── Two-segment Jekyll-style legacy lookup (/section/slug.html) ─────────
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_SlugFound_RedirectsToCanonical()
+    {
+        // /ai/2026-01-15-build-powerful-ai-apps.html → /ai/build-powerful-ai-apps →
+        // ai is a known section, build-powerful-ai-apps is not a collection → legacy lookup →
+        // canonical URL returned.
+        var canonical = "/ai/videos/build-powerful-ai-apps";
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/2026-01-15-build-powerful-ai-apps.html",
+            sectionCache: cache,
+            apiResult: new LegacyRedirectResult(canonical));
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be(canonical);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_SlugNotFound_Returns404()
+    {
+        // /ai/unknown-slug → ai is known section, unknown-slug is not a collection → legacy lookup → null → 404.
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/unknown-slug",
+            sectionCache: cache,
+            apiResult: null);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status404NotFound);
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_SectionUsedAsHintInLegacyLookup()
+    {
+        // The section name (first segment) must be passed as the sectionHint to the API call.
+        string? capturedHint = null;
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .Callback<string, string?, CancellationToken>((_, hint, _) => capturedHint = hint)
+            .ReturnsAsync((LegacyRedirectResult?)null);
+
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, _) = CreateMiddleware(
+            path: "/ai/some-article",
+            sectionCache: cache,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        capturedHint.Should().Be("ai", "the section segment must be forwarded as the section hint");
+    }
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_ApiFailure_WhenPathAlreadyNormalized_Returns503()
+    {
+        // For an already-clean 2-segment path there is no better fallback than 503 + no-store.
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("Connection refused"));
+
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/some-article",
+            sectionCache: cache,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status503ServiceUnavailable);
+        context.Response.Headers.CacheControl.ToString().Should().Be("no-store");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_ApiFailure_WhenPathChanged_RedirectsToNormalizedPath()
+    {
+        // /ai/2026-01-15-some-article.html → /ai/some-article before the API call.
+        // If the legacy lookup then fails transiently, redirect to the cleaned path first.
+        var mockApi = new Mock<ITechHubApiClient>();
+        mockApi
+            .Setup(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()))
+            .ThrowsAsync(new HttpRequestException("Connection refused"));
+
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/2026-01-15-some-article.html",
+            queryString: "?ref=rss",
+            sectionCache: cache,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        context.Response.StatusCode.Should().Be(StatusCodes.Status301MovedPermanently);
+        context.Response.Headers.Location.ToString().Should().Be("/ai/some-article?ref=rss");
+        nextCalled().Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task TwoSegment_KnownSection_KnownCollection_NotLegacyLookup()
+    {
+        // /ai/videos is a valid section/collection path — must NOT trigger a legacy lookup.
+        var mockApi = new Mock<ITechHubApiClient>();
+        var cache = A.SectionCache.WithSections("ai").WithCollections("videos").Build();
+        var (middleware, context, nextCalled) = CreateMiddleware(
+            path: "/ai/videos",
+            sectionCache: cache,
+            mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("/ai/videos is a valid section/collection path, not a legacy slug");
+        mockApi.Verify(
+            x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()),
+            Times.Never,
+            "valid section/collection paths must not trigger a legacy API call");
     }
 
     // ── Helpers ─────────────────────────────────────────────────────────────

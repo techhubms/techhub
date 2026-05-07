@@ -25,11 +25,12 @@ Stages run in this order for every request:
 | # | Stage | What it does |
 |---|---|---|
 | 1 | Subdomain redirects | Normalizes hostnames |
-| 2 | URL normalization | Strips `.html`, date prefixes, resolves legacy slugs — at most one 301 |
+| 2 | URL normalization | Strips `.html`, date prefixes, trailing slashes, renamed sections, resolves legacy slugs — at most one 301 |
 | 3 | HTTPS redirect | Upgrades HTTP to HTTPS |
 | 4 | Static files | Serves static assets, short-circuits |
-| 5 | Invalid segment filter | Rejects probe and structurally invalid paths |
-| 6 | Blazor routing | Renders the matching page |
+| 5 | HEAD → GET rewrite | Converts HEAD requests to GET so routing matches correctly |
+| 6 | Invalid segment filter | Rejects probe and structurally invalid paths |
+| 7 | Blazor routing | Renders the matching page |
 
 ## Stage 1 — Subdomain Redirects
 
@@ -69,23 +70,53 @@ Any segment matching `YYYY-MM-DD-<slug>` has the date prefix removed.
 
 The pattern applies at any depth in the path.
 
-### 2c — Legacy slug lookup
+### 2c — Strip trailing slash
 
-Applies only to **single-segment paths** that remain unresolved after the normalizations above (i.e. the section and collection are still unknown). Skipped for:
+Any path ending in `/` (other than root `/`) is redirected to the path without the trailing slash.
 
-- Known non-section pages: `not-found`, `about`, `error`, `admin`
-- Known section names (from in-memory `SectionCache`)
-- Static file extensions (any extension — `.html` was already stripped above)
+```text
+/ai/  →  /ai
+/ai/videos/  →  /ai/videos
+```
 
-For all other single-segment paths, calls `GET /api/legacy-redirect?slug={slug}&section={hint}`. The API normalizes the slug (lowercase, strips `.html`, strips `YYYY-MM-DD-` prefix) and queries the database. If multiple items match, the one whose `primary_section_name` matches the hint is preferred; ties go to the most recently dated item. Items in external collections (`news`, `blogs`, `community`) resolve to their `external_url`.
+### 2d — Section rename redirect
 
-**One redirect covers everything**: `/2026-01-12-My-Article?section=ai` → strips date → normalizes to `my-article` → API lookup → **301 directly to `/ai/videos/my-article`** (no intermediate `/my-article` step).
+Sections that have been permanently renamed are redirected to their new name. Applied after `.html` stripping and date-prefix stripping so that a combined normalization + rename produces a single 301.
+
+| Old name | New name |
+|---|---|
+| `coding` | `dotnet` |
+
+```text
+/coding/videos/slug  →  /dotnet/videos/slug
+/coding/2025-01-01-slug.html  →  /dotnet/slug (html + date stripped in same redirect)
+```
+
+### 2e — Legacy slug lookup
+
+Applies to paths that remain unresolved after the normalizations above. Two path shapes trigger a lookup:
+
+**Single-segment paths** where the segment is not a known section, page, or static file:
+
+```text
+/2026-01-12-My-Article?section=ai  →  strips date → my-article → API lookup → 301 /ai/videos/my-article
+```
+
+**Two-segment paths** where segment[0] is a known section but segment[1] is not a known collection (Jekyll-style `/{section}/{slug}.html` URLs):
+
+```text
+/ai/2026-01-15-my-article.html  →  strips html+date → /ai/my-article → API lookup → 301 /ai/videos/my-article
+```
+
+For both shapes, calls `GET /api/legacy-redirect?slug={slug}&section={hint}`. The API normalizes the slug (lowercase, strips `.html`, strips `YYYY-MM-DD-` prefix) and queries the database. If multiple items match, the one whose `primary_section_name` matches the hint is preferred; ties go to the most recently dated item. Items in external collections (`news`, `blogs`, `community`) resolve to their `external_url`.
+
+**One redirect covers everything**: normalizations + API lookup happen in a single middleware invocation, issuing at most one 301.
 
 **Case is not normalized in the middleware.** The infrastructure layer lowercases parameters before DB queries, so `/My-Article` and `/my-article` both resolve to the same content without a redirect.
 
-**Not found**: if the API returns no match, the middleware returns a **404** immediately. There is no redirect to a cleaned path — the cleaned URL has already been applied upstream by normalizations, so no extra round-trip is needed.
+**Not found**: if the API returns no match, the middleware returns a **404** immediately.
 
-**Transient API failure**: if the API is temporarily unavailable (network error or timeout after all retries), the middleware degrades gracefully instead of returning a cacheable 404 that could mislabel a valid legacy URL as permanently absent. When the path was cleaned (`pathChanged = true`), the middleware still issues a **301 redirect** to the normalized URL. When the path was already clean, the request is passed through to Blazor routing. In both cases the failure is logged as a warning.
+**Transient API failure**: the middleware returns **503** with `Cache-Control: no-store` so that the error is not cached as a permanent absence by CDNs or browsers. Exception: when the path was cleaned before the API call (`pathChanged = true`, e.g. `/article.html` → `/article`), a **301 redirect** to the normalized URL is issued first so the browser retries the canonical form once the API recovers.
 
 ## Stage 3 — HTTPS Redirect
 
@@ -95,7 +126,7 @@ Requests arriving over HTTP are **301-redirected** to the HTTPS equivalent. This
 
 CSS, JS, images, fonts, `robots.txt`, and other static assets are served directly from `wwwroot/`. These requests short-circuit here and never reach the Blazor pipeline.
 
-## Stage 5 — Invalid Route Segment Filter
+## Stage 6 — Invalid Route Segment Filter
 
 Two categories of bad requests are rejected before the Blazor pipeline runs:
 
@@ -112,7 +143,7 @@ Two categories of bad requests are rejected before the Blazor pipeline runs:
 
 Everything else with an invalid first segment receives an immediate **404**.
 
-## Stage 6 — Blazor Routing
+## Stage 7 — Blazor Routing
 
 The Blazor router matches the path to a page component:
 

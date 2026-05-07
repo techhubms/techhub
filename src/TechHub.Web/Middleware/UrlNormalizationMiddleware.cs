@@ -9,9 +9,11 @@ namespace TechHub.Web.Middleware;
 /// Unified URL normalization middleware that handles URL cleanup, legacy redirects,
 /// and early structural validation — all in a single pass with at most one 301 per request.
 ///
-/// Normalizations applied to every path segment (in order):
-///   1. Strip .html extension
-///   2. Strip YYYY-MM-DD- date prefix
+/// Normalization steps applied in order:
+///   1. Strip .html extension from each path segment
+///   2. Strip YYYY-MM-DD- date prefixes from each path segment
+///   3. Strip a trailing slash from the full path
+///   4. Rename legacy section names in the first path segment (for example /coding/* → /dotnet/*)
 ///
 /// After normalization:
 ///   - Multi-segment paths: validate segment[0] against known sections/pages and segment[1]
@@ -21,7 +23,8 @@ namespace TechHub.Web.Middleware;
 ///   - Single-segment paths that are not a known section, page, or static file →
 ///     API legacy lookup to resolve the canonical /{section}/{collection}/{slug} URL.
 ///     If the API returns a result, redirect there directly (one redirect to the final URL).
-///     If not (null result or transient error after retries), return 404.
+///     If not found, return 404. On transient API failures, redirect to the cleaned path first
+///     when normalization already changed it; otherwise return 503 with Cache-Control: no-store.
 ///
 /// Case normalization is NOT performed here. The infrastructure layer handles
 /// case-insensitive DB lookups so URLs work regardless of capitalisation.
@@ -44,6 +47,15 @@ public partial class UrlNormalizationMiddleware
         // OIDC callback path — must pass through to UseAuthentication, never treated as content.
         "signin-oidc",
     };
+
+    // Sections that have been permanently renamed. When a path starts with an old section name,
+    // the middleware redirects to the equivalent path under the new name. Applied after segment
+    // normalization so that a rename + .html strip produces a single 301.
+    private static readonly Dictionary<string, string> _renamedSections =
+        new(StringComparer.OrdinalIgnoreCase)
+        {
+            ["coding"] = "dotnet",
+        };
 
     // Virtual sections that exist in the app's routing but are not stored in the API section cache.
     // Each entry maps the virtual section name to dedicated sub-page names that have their own
@@ -93,6 +105,17 @@ public partial class UrlNormalizationMiddleware
             return;
         }
 
+        // Strip trailing slash before segment processing so that a combined
+        // trailing-slash + rename/normalization produces a single 301 rather than two
+        // (e.g. /coding/ → /dotnet in one redirect, not /coding/ → /coding → /dotnet).
+        // This also means a trailing-slash variant of an RSS feed URL (e.g. /feed.xml/)
+        // will have the slash removed here before TryRedirectLegacyFeed is called,
+        // so it is still matched and redirected correctly.
+        if (path.Length > 1 && path.EndsWith('/'))
+        {
+            path = path.TrimEnd('/');
+        }
+
         // Legacy RSS feed redirects: handled before segment normalization so that
         // /{sectionName}.xml paths are caught here rather than rejected as probes
         // by InvalidRouteSegmentMiddleware further down the pipeline.
@@ -104,8 +127,18 @@ public partial class UrlNormalizationMiddleware
         // Normalize each segment: strip .html extension, strip YYYY-MM-DD- date prefix.
         var rawSegments = path.TrimStart('/').Split('/');
         var normalizedSegments = rawSegments.Select(NormalizeSegment).ToArray();
+
+        // Apply section rename redirects (e.g., /coding/* → /dotnet/*). Done after segment
+        // normalization so that /coding/2025-01-01-slug.html → /dotnet/slug in one redirect.
+        if (normalizedSegments.Length > 0 && _renamedSections.TryGetValue(normalizedSegments[0], out var newSectionName))
+        {
+            normalizedSegments[0] = newSectionName;
+        }
+
         var normalizedPath = "/" + string.Join("/", normalizedSegments);
-        var pathChanged = !string.Equals(normalizedPath, path, StringComparison.Ordinal);
+        // Compare against the original request path (not the trailing-slash-stripped `path`)
+        // so that a slash-only change is also detected as a path change.
+        var pathChanged = !string.Equals(normalizedPath, context.Request.Path.Value, StringComparison.Ordinal);
 
         // Multi-segment paths: validate section/collection against the cache, then redirect
         // or pass through. Validation runs on the NORMALIZED segments so that a redirect
@@ -114,6 +147,35 @@ public partial class UrlNormalizationMiddleware
         {
             if (!IsValidMultiSegmentPath(normalizedSegments))
             {
+                // Two-segment paths with a valid section but an unrecognised second segment
+                // may be old Jekyll-style /{section}/{slug}.html URLs (without a collection
+                // in the path). Try a legacy lookup before hard-404ing.
+                if (normalizedSegments.Length == 2
+                    && _sectionCache.IsReady
+                    && _sectionCache.GetSectionByName(normalizedSegments[0]) != null
+                    && IsLegacyLookupCandidate(normalizedSegments[1]))
+                {
+                    var lookupHandled = await TryLegacyRedirectAsync(context, normalizedSegments[1], normalizedSegments[0]);
+                    if (!lookupHandled)
+                    {
+                        // Transient API failure — if normalization already produced a cleaner URL
+                        // (e.g. stripped .html/date/trailing slash or renamed the section), redirect
+                        // there first so the browser retries the canonical-looking form once the API
+                        // recovers. Otherwise there is no better fallback than 503 + no-store.
+                        if (pathChanged)
+                        {
+                            Redirect(context, normalizedPath + context.Request.QueryString);
+                        }
+                        else
+                        {
+                            context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
+                            context.Response.Headers.CacheControl = "no-store";
+                        }
+                    }
+
+                    return;
+                }
+
                 context.Response.StatusCode = StatusCodes.Status404NotFound;
                 return;
             }
@@ -180,46 +242,60 @@ public partial class UrlNormalizationMiddleware
         var rawSection = context.Request.Query["section"].FirstOrDefault();
         var sectionHint = RouteParameterValidator.IsValidNameSegment(rawSection) ? rawSection : null;
 
-        try
+        var handled = await TryLegacyRedirectAsync(context, segment, sectionHint);
+        if (handled)
         {
-            await using var scope = _scopeFactory.CreateAsyncScope();
-            var apiClient = scope.ServiceProvider.GetRequiredService<ITechHubApiClient>();
-            var result = await apiClient.GetLegacyRedirectAsync(segment, sectionHint, context.RequestAborted);
-
-            if (result != null)
-            {
-                _logger.LogInformation("Legacy slug redirect: /{Segment} -> {Url}", segment, result.Url);
-                Redirect(context, result.Url + context.Request.QueryString);
-                return;
-            }
-
-            // Slug confirmed not in the DB — return a hard 404 so crawlers and caches treat this
-            // as a permanent absence, not a transient failure.
-            context.Response.StatusCode = StatusCodes.Status404NotFound;
             return;
         }
-        catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
-        {
-            // Rethrow when the client disconnected — avoid writing a redirect onto an aborted connection.
-            throw;
-        }
-        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
-        {
-            // Transient API failure (network error or timeout after all retries).
-            // Graceful degradation: still clean up .html / date prefix even when the API is unavailable.
-            // Do NOT return 404 here — a legitimate legacy URL would get a cacheable permanent 404
-            // just because the API was briefly down.
-            _logger.LogWarning(ex, "Legacy slug lookup failed for {Slug}; falling back to normalized path", segment);
-        }
 
-        // API was transiently unavailable — clean up the URL if the path changed, then pass through.
+        // Transient API failure — return 503 so the error is not cached as a permanent absence.
+        // Cache-Control: no-store prevents CDNs and browsers from storing the error response.
+        // If the path changed (e.g. /article.html → /article), redirect to the clean URL first
+        // so the browser retries the canonical form once the API recovers.
         if (pathChanged)
         {
             Redirect(context, normalizedPath + context.Request.QueryString);
             return;
         }
 
-        await _next(context);
+        context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
+        context.Response.Headers.CacheControl = "no-store";
+    }
+
+    /// <summary>
+    /// Calls the legacy-redirect API for <paramref name="slug"/> with an optional section hint.
+    /// Returns <c>true</c> when the request has been fully handled (either redirected or 404'd).
+    /// Returns <c>false</c> on a transient API failure so the caller can apply graceful fallback.
+    /// </summary>
+    private async Task<bool> TryLegacyRedirectAsync(HttpContext context, string slug, string? sectionHint)
+    {
+        try
+        {
+            await using var scope = _scopeFactory.CreateAsyncScope();
+            var apiClient = scope.ServiceProvider.GetRequiredService<ITechHubApiClient>();
+            var result = await apiClient.GetLegacyRedirectAsync(slug, sectionHint, context.RequestAborted);
+
+            if (result != null)
+            {
+                _logger.LogInformation("Legacy redirect: {Slug} ({Section}) -> {Url}", slug, sectionHint, result.Url);
+                Redirect(context, result.Url + context.Request.QueryString);
+                return true;
+            }
+
+            // Slug confirmed not in the DB — hard 404 so crawlers treat this as permanently absent.
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            return true;
+        }
+        catch (OperationCanceledException) when (context.RequestAborted.IsCancellationRequested)
+        {
+            // Rethrow: avoid writing a redirect onto an already-aborted connection.
+            throw;
+        }
+        catch (Exception ex) when (ex is HttpRequestException or TaskCanceledException)
+        {
+            _logger.LogWarning(ex, "Legacy lookup failed for {Slug} ({Section}); caller will apply fallback", slug, sectionHint);
+            return false;
+        }
     }
 
     /// <summary>

@@ -1,6 +1,20 @@
 cs_files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.cs')
 if [ -n "$cs_files" ]; then
-  dotnet format --verify-no-changes TechHub.slnx --severity error --include $cs_files
+  # Run dotnet format against the narrowest possible target:
+  #   - single project   → load only that .csproj  (~8s vs ~16s for full solution)
+  #   - multiple projects → fall back to TechHub.slnx so one invocation covers all
+  # --no-restore skips the implicit NuGet restore check (packages are always
+  # restored in a working dev environment, and restore failures would surface
+  # earlier through a build, not a format check).
+  proj_count=$(printf '%s\n' $cs_files | cut -d/ -f1-2 | sort -u | wc -l | tr -d ' ')
+  if [ "$proj_count" -eq 1 ]; then
+    proj_dir=$(printf '%s\n' $cs_files | cut -d/ -f1-2 | sort -u)
+    csproj=$(find "$proj_dir" -maxdepth 1 -name '*.csproj' 2>/dev/null | head -1)
+    target=${csproj:-TechHub.slnx}
+  else
+    target="TechHub.slnx"
+  fi
+  dotnet format --no-restore --verify-no-changes "$target" --severity error --include $cs_files
 fi
 
 md_files=$(git diff --cached --name-only --diff-filter=ACMR -- '*.md')
