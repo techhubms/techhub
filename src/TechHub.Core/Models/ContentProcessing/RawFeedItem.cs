@@ -48,12 +48,6 @@ public sealed class RawFeedItem
     /// <summary>Full text content of the article (fetched separately from the feed URL).</summary>
     public string? FullContent { get; init; }
 
-    /// <summary>
-    /// Reason why the YouTube transcript could not be fetched, if applicable.
-    /// <see langword="null"/> when not a YouTube item or when the transcript was fetched successfully.
-    /// </summary>
-    public string? TranscriptFailureReason { get; init; }
-
     /// <summary>Whether this item links to a YouTube video.</summary>
     public bool IsYouTube => ExternalUrl.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
         || ExternalUrl.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);

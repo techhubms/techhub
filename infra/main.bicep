@@ -352,7 +352,6 @@ var sharedKeyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaul
 var dbConnectionSecretName = 'techhub-${environmentName}-db-connection-string'
 var aiApiKeySecretName = 'techhub-${environmentName}-ai-api-key'
 var aadClientSecretSecretName = 'techhub-${environmentName}-aad-client-secret'
-var youtubeCookiesSecretName = 'techhub-${environmentName}-youtube-cookies'
 
 // Grant Key Vault Secrets User to the managed identity on the shared Key Vault.
 // Required for Container App KV-reference secrets (db connection string, AI key, AAD secret).
@@ -384,7 +383,6 @@ module apiApp './modules/api.bicep' = if (deployApplications) {
     keyVaultUri: sharedKeyVaultUri
     dbConnectionSecretName: dbConnectionSecretName
     aiApiKeySecretName: aiApiKeySecretName
-    youtubeCookiesSecretName: youtubeCookiesSecretName
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     environmentName: environmentName
     azureAdTenantId: azureAdTenantId

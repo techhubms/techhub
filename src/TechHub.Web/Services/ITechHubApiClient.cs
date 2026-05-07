@@ -432,6 +432,13 @@ internal interface ITechHubApiClient
     /// </summary>
     Task UpdateContentItemEditDataAsync(string collectionName, string slug, ContentItemEditData editData, CancellationToken cancellationToken = default);
 
+    /// <summary>
+    /// Apply a manually provided transcript to an existing video content item, regenerating AI content.
+    /// POST /api/admin/content-items/apply-transcript?collection={collection}&amp;slug={slug}
+    /// Returns the updated ContentItemEditData after AI regeneration.
+    /// </summary>
+    Task<ContentItemEditData> ApplyTranscriptAsync(string collectionName, string slug, string transcript, CancellationToken cancellationToken = default);
+
     // ================================================================
     // Admin – Content items listing endpoints
     // ================================================================

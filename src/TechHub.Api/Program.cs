@@ -129,17 +129,6 @@ builder.Services.AddScoped<IContentProcessingJobRepository, ContentProcessingJob
 // Repository for processed URL tracking (scoped — reuses the scoped IDbConnection)
 builder.Services.AddScoped<IProcessedUrlRepository, ProcessedUrlRepository>();
 
-// YouTube transcript fetcher (YoutubeExplode with cookies; yt-dlp as fallback — controlled by config)
-builder.Services.AddTransient<YtDlpTranscriptService>();
-builder.Services.AddHttpClient<IYouTubeTranscriptService, YouTubeTranscriptService>()
-    .ConfigureHttpClient((sp, client) =>
-    {
-        var options = sp.GetRequiredService<IOptions<ContentProcessorOptions>>().Value;
-        client.DefaultRequestHeaders.UserAgent.ParseAdd(options.BrowserUserAgent);
-        client.DefaultRequestHeaders.AcceptLanguage.ParseAdd("en-US,en;q=0.9");
-        client.Timeout = TimeSpan.FromSeconds(options.RequestTimeoutSeconds);
-    });
-
 // Typed HTTP clients for external API communication with Polly resilience
 builder.Services.AddHttpClient<IRssFeedClient, RssFeedClient>()
     .ConfigureHttpClient(client =>

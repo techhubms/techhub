@@ -53,4 +53,11 @@ public sealed record AdHocUrlProcessRequest
     /// Only relevant when <see cref="IsGhcFeature"/> is <c>true</c>.
     /// </summary>
     public bool GhesSupport { get; init; }
+
+    /// <summary>
+    /// Optional manually provided transcript for YouTube video items.
+    /// When set, the transcript is used as the content for AI processing.
+    /// When null, the item is processed using only available metadata (tags, description, etc.).
+    /// </summary>
+    public string? Transcript { get; init; }
 }

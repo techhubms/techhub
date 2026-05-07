@@ -1,1 +1,0 @@
-This is a placeholder transcript for 'microsoft-cloud-youtube' used in pipeline fixture tests. The actual transcript would be fetched via YoutubeExplode at runtime.
