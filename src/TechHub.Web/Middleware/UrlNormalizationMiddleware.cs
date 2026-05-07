@@ -9,11 +9,11 @@ namespace TechHub.Web.Middleware;
 /// Unified URL normalization middleware that handles URL cleanup, legacy redirects,
 /// and early structural validation — all in a single pass with at most one 301 per request.
 ///
-/// Normalizations applied to every path segment (in order):
-///   1. Strip .html extension
-///   2. Strip YYYY-MM-DD- date prefix
-///   3. Strip trailing slash from the full path
-///   4. Rename legacy section names (for example /coding/* → /dotnet/*)
+/// Normalization steps applied in order:
+///   1. Strip .html extension from each path segment
+///   2. Strip YYYY-MM-DD- date prefixes from each path segment
+///   3. Strip a trailing slash from the full path
+///   4. Rename legacy section names in the first path segment (for example /coding/* → /dotnet/*)
 ///
 /// After normalization:
 ///   - Multi-segment paths: validate segment[0] against known sections/pages and segment[1]
