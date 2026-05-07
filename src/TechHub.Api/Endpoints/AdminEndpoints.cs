@@ -700,7 +700,7 @@ public static partial class AdminEndpoints
         {
             categorizationResult = await aiService.CategorizeAsync(raw, ct);
         }
-        catch (Exception ex) when (ex is HttpRequestException or System.Text.Json.JsonException or InvalidOperationException or TimeoutException or OperationCanceledException)
+        catch (Exception ex) when (ex is HttpRequestException or System.Text.Json.JsonException or InvalidOperationException or TimeoutException)
         {
             return Results.Problem($"AI categorization failed: {ex.Message.Sanitize()}", statusCode: 502);
         }

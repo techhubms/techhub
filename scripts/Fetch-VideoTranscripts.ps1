@@ -274,7 +274,7 @@ function Invoke-ApplyTranscript {
     param([string]$Slug, [string]$Transcript)
 
     $url = "$ApiBaseUrl/api/admin/content-items/apply-transcript?collection=videos&slug=$([Uri]::EscapeDataString($Slug))"
-    $body = @{ transcript = $Transcript } | ConvertTo-Json -Depth 2
+    $body = @{ Transcript = $Transcript } | ConvertTo-Json -Depth 2
 
     try {
         $response = Invoke-RestMethod -Uri $url -Headers (Get-ApiHeaders) -Method Post -Body $body
@@ -375,7 +375,9 @@ foreach ($currentSlug in $slugList) {
 
     if ($DryRun) {
         Write-Warn "[DRY RUN] Would call apply-transcript API for slug '$currentSlug'"
-        Write-Warn "[DRY RUN] Transcript preview: $($transcript.Substring(0, [Math]::Min(200, $transcript.Length)))…"
+        $previewLength = [Math]::Min(200, $transcript.Length)
+        $preview = $transcript.Substring(0, $previewLength)
+        Write-Warn "[DRY RUN] Transcript preview: $preview…"
         $skipped++
         continue
     }

@@ -230,7 +230,7 @@
 
         try
         {
-            var updated = await Api.ApplyTranscriptAsync(_editData.CollectionName, _editData.Slug, _transcript.Trim());
+            var updated = await Api.ApplyTranscriptAsync(_editData.CollectionName, _editData.Slug, _transcript);
 
             // Update editor fields with AI-regenerated values
             _title = updated.Title;

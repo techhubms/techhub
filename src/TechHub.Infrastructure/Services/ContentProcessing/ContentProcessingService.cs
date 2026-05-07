@@ -398,11 +398,6 @@ public sealed class ContentProcessingService
                 FeedItemData = feedItemData
             };
 
-            if (!string.IsNullOrWhiteSpace(transcript))
-            {
-                Log("Using manually provided transcript");
-            }
-
             // Shared per-item pipeline: tags → content → AI → write
             var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, transcript?.Trim(), ct);
 
