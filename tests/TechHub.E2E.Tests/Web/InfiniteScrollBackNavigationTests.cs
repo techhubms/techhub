@@ -222,11 +222,12 @@ public class InfiniteScrollBackNavigationTests : PlaywrightTestBase
     /// remaining content. The scroll position should stay near where the user was.
     ///
     /// Root cause: finishNavigation() flushed the pending IO intersection by calling
-    /// LoadNextBatch. The Blazor render triggered by that call immediately created a new
-    /// IntersectionObserver. Because navigating was already set to false by finishNavigation,
-    /// the new observer's first callback (trigger still in viewport) called LoadNextBatch
-    /// again — starting a cascade. Fixed by setting navigating='post-restore' for two
-    /// animation frames after flushing pendingIntersect.
+    /// LoadNextBatch regardless of whether the scroll trigger was actually visible at
+    /// the restored position. The IO fires at scroll-Y=0 (before scrollTo runs), so
+    /// the trigger appeared near the top — but after scroll restore it may be well
+    /// below the viewport. Fixed: finishNavigation() checks getBoundingClientRect()
+    /// after scrollTo and only flushes if the trigger is genuinely in the extended
+    /// viewport (top &lt; innerHeight + TRIGGER_MARGIN_PX AND bottom &gt; 0).
     /// </summary>
     [Fact]
     public async Task BackNavigation_CascadingLoad_ScrollDoesNotReachEnd()

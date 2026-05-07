@@ -113,7 +113,7 @@ internal sealed class RoundupAiHelper
         {
             // Sanitize the outer API response JSON — Azure OpenAI can occasionally
             // return improperly escaped characters (e.g. \. instead of \\.) in the content field.
-            responseJson = ContentProcessing.AiCategorizationService.SanitizeJsonEscapes(responseJson);
+            responseJson = JsonEscapeSanitizer.SanitizeJsonEscapes(responseJson);
             using var doc = JsonDocument.Parse(responseJson);
             return doc.RootElement
                 .GetProperty("choices")[0]

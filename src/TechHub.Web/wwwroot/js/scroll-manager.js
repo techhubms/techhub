@@ -101,18 +101,16 @@ function createButtonContainer() {
 }
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
     if (location.hash) {
         history.replaceState(null, '', location.pathname + location.search);
     }
-    setTimeout(() => {
+    document.body.focus();
+    if (document.activeElement !== document.body) {
+        document.body.setAttribute('tabindex', '-1');
         document.body.focus();
-        if (document.activeElement !== document.body) {
-            document.body.setAttribute('tabindex', '-1');
-            document.body.focus();
-            document.body.removeAttribute('tabindex');
-        }
-    }, 500);
+        document.body.removeAttribute('tabindex');
+    }
 }
 
 function updateButtonVisibility() {
@@ -295,8 +293,14 @@ function finishNavigation() {
     if (infiniteScrollState?.pendingIntersect) {
         const { helper, observer, triggerElementId } = infiniteScrollState;
         const triggerEl = document.getElementById(triggerElementId);
-        const isInViewport = triggerEl != null &&
-            triggerEl.getBoundingClientRect().top < window.innerHeight + TRIGGER_MARGIN_PX;
+        const rect = triggerEl?.getBoundingClientRect() ?? null;
+        // Mirror IO rootMargin semantics: trigger intersects when it overlaps the extended
+        // viewport from below (top < innerHeight + margin) AND isn't fully scrolled above it
+        // (bottom > 0). Without the bottom check, a trigger above the viewport would also
+        // satisfy top < threshold and incorrectly flush a batch load.
+        const isInViewport = rect !== null &&
+            rect.top < window.innerHeight + TRIGGER_MARGIN_PX &&
+            rect.bottom > 0;
         if (isInViewport) {
             observer.disconnect();
             infiniteScrollState = null;
@@ -567,7 +571,7 @@ export function initTocScrollSpy() {
             const desktopClickHandler = (e) => {
                 const link = e.target.closest('a[href]');
                 if (!link) return;
-            // Match same-page hash links. preventDefault stops Blazor's interceptor from calling pushState.
+                // Match same-page hash links. preventDefault stops Blazor's interceptor from calling pushState.
                 const hrefAttr = link.getAttribute('href');
                 if (!hrefAttr || !hrefAttr.includes('#')) return;
                 let hash;

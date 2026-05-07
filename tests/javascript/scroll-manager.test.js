@@ -236,7 +236,7 @@ describe('scroll-manager.js', () => {
         it('should scroll to top when clicked', () => {
             const btn = document.querySelector('.nav-helper-btn-top');
             btn.click();
-            expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+            expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'instant' });
         });
 
         it('should clear hash from URL when scrolling to top', () => {
