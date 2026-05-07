@@ -311,17 +311,10 @@ builder.Services.AddRateLimiter(options =>
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
                 QueueLimit = 0
             }));
-
-    // Blazor Server SignalR circuits: concurrency cap per IP
-    options.AddPolicy("web-signalr", context =>
-        RateLimitPartition.GetConcurrencyLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-            factory: _ => new ConcurrencyLimiterOptions
-            {
-                PermitLimit = 10,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 5
-            }));
+    // Note: Blazor Server SignalR circuits (/_blazor) cannot be rate-limited via endpoint
+    // metadata because they go through the Blazor hub middleware, not endpoint routing.
+    // SignalR concurrency is instead managed by the SignalR MaximumParallelInvocationsPerClient
+    // and Azure Container Apps scaling rules at the infrastructure level.
 });
 
 var app = builder.Build();

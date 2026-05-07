@@ -1,6 +1,7 @@
 using System.Data;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Options;
 using Microsoft.Identity.Web;
 using Npgsql;
@@ -383,6 +384,18 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors();
+
+// Trust X-Forwarded-For from the Azure Container Apps reverse proxy so rate limiting
+// partitions by real client IP rather than the proxy/NAT address.
+// KnownIPNetworks/KnownProxies are cleared because the proxy IPs are internal and dynamic.
+var forwardedHeadersOptions = new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+};
+forwardedHeadersOptions.KnownIPNetworks.Clear();
+forwardedHeadersOptions.KnownProxies.Clear();
+app.UseForwardedHeaders(forwardedHeadersOptions);
+
 app.UseRateLimiter();
 app.UseAuthentication();
 app.UseAuthorization();
