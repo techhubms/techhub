@@ -363,6 +363,56 @@ public class RoundupGeneratorServiceTests
             It.IsAny<CancellationToken>()), Times.Once);
     }
 
+    [Fact]
+    public async Task GenerateAsync_WithArticlesAcrossSections_IncludesSectionDerivedTags()
+    {
+        // Arrange — AI returns tags that don't include the section-derived tags,
+        //           so this test verifies EnsureSectionTags injects them from filtered.Keys.
+        var uniqueWeekStart = new DateOnly(2025, 8, 4);
+        var uniqueWeekEnd = new DateOnly(2025, 8, 10);
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticles("ai", 4, "high"),
+            ["azure"] = BuildArticles("azure", 4, "high")
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        // AI returns a tag list that does NOT include "AI" or "Azure" — only a generic topic tag
+        var step7Json = """{"title": "Section Tag Test", "tags": ["Kubernetes"], "description": "A test.", "introduction": "Welcome."}""";
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string body, CancellationToken _) =>
+                body.Contains("Return only JSON", StringComparison.Ordinal)
+                    ? OkAiResponse(step7Json)
+                    : OkAiResponse("## AI\n\nAI news.\n\n- [Article 0](https://example.com/0)\n\n## Azure\n\nAzure news.\n\n- [Article 0](https://example.com/0)"));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert — section-derived tags must be present even when AI omits them
+        result.Result.Should().Be(RoundupGenerationResult.Generated);
+
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
+            It.IsAny<DateOnly>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.Is<IReadOnlyList<string>>(tags =>
+                tags.Contains("AI") &&
+                tags.Contains("Azure") &&
+                tags.Contains("Kubernetes")),
+            It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
     // ── Step 4: Ongoing Narrative with Previous Roundup ───────────────────────
 
     [Fact]

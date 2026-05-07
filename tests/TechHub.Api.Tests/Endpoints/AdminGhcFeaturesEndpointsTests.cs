@@ -195,5 +195,109 @@ public class AdminGhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTe
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
     }
+
+    // ── POST /api/admin/ghc-features/{slug}/publish ───────────────────────────
+
+    [Fact]
+    public async Task PublishGhcDraft_WithMissingUrl_ReturnsBadRequest()
+    {
+        // Arrange
+        var request = new { YoutubeUrl = "", Plans = new[] { "Free" }, GhesSupport = false };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/ghc-draft-feature/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task PublishGhcDraft_WithNonYouTubeUrl_ReturnsBadRequest()
+    {
+        // Arrange
+        var request = new { YoutubeUrl = "https://example.com/video", Plans = new[] { "Free" }, GhesSupport = false };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/ghc-draft-feature/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task PublishGhcDraft_WithEmptyPlans_ReturnsBadRequest()
+    {
+        // Arrange
+        var request = new { YoutubeUrl = "https://youtu.be/abc123", Plans = Array.Empty<string>(), GhesSupport = false };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/ghc-draft-feature/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task PublishGhcDraft_WithInvalidPlanName_ReturnsBadRequest()
+    {
+        // Arrange
+        var request = new { YoutubeUrl = "https://youtu.be/abc123", Plans = new[] { "InvalidPlan" }, GhesSupport = false };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/ghc-draft-feature/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task PublishGhcDraft_WithTranscriptTooLong_ReturnsBadRequest()
+    {
+        // Arrange — transcript exceeds 50,000 character limit
+        var request = new
+        {
+            YoutubeUrl = "https://youtu.be/abc123",
+            Transcript = new string('x', 50_001),
+            Plans = new[] { "Free" },
+            GhesSupport = false
+        };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/ghc-draft-feature/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
+    [Fact]
+    public async Task PublishGhcDraft_WithNonExistentSlug_ReturnsNotFound()
+    {
+        // Arrange
+        var request = new { YoutubeUrl = "https://youtu.be/abc123", Plans = new[] { "Free" }, GhesSupport = false };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/does-not-exist/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+    }
 }
 

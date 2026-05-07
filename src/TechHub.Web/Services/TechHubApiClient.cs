@@ -1748,6 +1748,38 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <inheritdoc/>
+    public virtual async Task<ContentItemEditData?> PublishGhcDraftAsync(
+        string slug,
+        string youtubeUrl,
+        string? transcript,
+        IReadOnlyList<string> plans,
+        bool ghesSupport,
+        CancellationToken cancellationToken = default)
+    {
+        slug = slug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}/publish",
+                new { YoutubeUrl = youtubeUrl, Transcript = transcript, Plans = plans, GhesSupport = ghesSupport },
+                cancellationToken);
+
+            if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+            {
+                return null;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return await response.Content.ReadFromJsonAsync<ContentItemEditData>(cancellationToken);
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to publish draft ghc-feature {Slug}", slug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
     public virtual async Task<bool> DeleteGhcFeatureAsync(
         string slug,
         CancellationToken cancellationToken = default)

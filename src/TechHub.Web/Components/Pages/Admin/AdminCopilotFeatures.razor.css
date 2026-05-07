@@ -210,3 +210,17 @@
     width: 100%;
     margin-bottom: var(--spacing-2);
 }
+
+.features-publish-transcript-label {
+    display: block;
+    margin-bottom: var(--spacing-1);
+}
+
+.features-publish-transcript-textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-2);
+}

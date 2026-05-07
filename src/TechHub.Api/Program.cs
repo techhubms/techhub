@@ -345,20 +345,48 @@ builder.Services.AddRateLimiter(options =>
                     QueueLimit = 10
                 }));
 
-    // Admin endpoints: stricter limit — limits failed auth attempts even though auth-protected
+    // Admin endpoints: per-user limit for authenticated requests (generous for legitimate admin
+    // work), strict IP-based limit for unauthenticated requests (brute-force protection).
+    // NOTE: UseRateLimiter() must run after UseAuthentication() so context.User is populated.
     options.AddPolicy("api-admin", context =>
-        isIntegrationTest
-            ? RateLimitPartition.GetNoLimiter("no-limit")
-            : RateLimitPartition.GetSlidingWindowLimiter(
-                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    {
+        if (isIntegrationTest)
+        {
+            return RateLimitPartition.GetNoLimiter("no-limit");
+        }
+
+        // Prefer the Azure AD object-ID claim so each admin user gets their own bucket.
+        // Fall back to IP when the request is unauthenticated (keeps the strict limit that
+        // deters auth brute-forcing).
+        var userId = context.User.FindFirst("oid")?.Value
+            ?? context.User.FindFirst("http://schemas.microsoft.com/identity/claims/objectidentifier")?.Value;
+
+        if (userId is not null)
+        {
+            return RateLimitPartition.GetSlidingWindowLimiter(
+                partitionKey: $"user:{userId}",
                 factory: _ => new SlidingWindowRateLimiterOptions
                 {
-                    PermitLimit = 30,
+                    PermitLimit = 200,
                     Window = TimeSpan.FromMinutes(1),
                     SegmentsPerWindow = 6,
                     QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                    QueueLimit = 0
-                }));
+                    QueueLimit = 10
+                });
+        }
+
+        // Unauthenticated — keep a strict IP limit to deter auth brute-forcing.
+        return RateLimitPartition.GetSlidingWindowLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: _ => new SlidingWindowRateLimiterOptions
+            {
+                PermitLimit = 30,
+                Window = TimeSpan.FromMinutes(1),
+                SegmentsPerWindow = 6,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                QueueLimit = 0
+            });
+    });
 });
 
 var app = builder.Build();
@@ -392,8 +420,10 @@ forwardedHeadersOptions.KnownIPNetworks.Clear();
 forwardedHeadersOptions.KnownProxies.Clear();
 app.UseForwardedHeaders(forwardedHeadersOptions);
 
-app.UseRateLimiter();
+// Authentication must run before rate limiting so the api-admin policy can read
+// the Azure AD OID claim and partition by user rather than by IP.
 app.UseAuthentication();
+app.UseRateLimiter();
 app.UseAuthorization();
 
 // Map API endpoints
