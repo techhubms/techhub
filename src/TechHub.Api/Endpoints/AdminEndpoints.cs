@@ -673,7 +673,6 @@ public static partial class AdminEndpoints
             return Results.BadRequest("Transcript is required.");
         }
 
-        const int MaxTranscriptLength = 50_000;
         if (request.Transcript.Length > MaxTranscriptLength)
         {
             return Results.BadRequest($"Transcript is too long. Maximum allowed length is {MaxTranscriptLength:N0} characters (received {request.Transcript.Length:N0}).");
@@ -1024,6 +1023,9 @@ public static partial class AdminEndpoints
 
     // ── Ad-hoc URL processing handlers ──────────────────────────────────────
 
+    /// <summary>Maximum transcript length (characters) accepted by transcript endpoints.</summary>
+    private const int MaxTranscriptLength = 50_000;
+
     private static readonly HashSet<string> _validCollectionNames =
         ["blogs", "news", "videos", "community"];
 
@@ -1113,9 +1115,9 @@ public static partial class AdminEndpoints
             ? request.Transcript.Trim()
             : null;
 
-        if (transcript is not null && transcript.Length > 50_000)
+        if (transcript is not null && transcript.Length > MaxTranscriptLength)
         {
-            return Results.BadRequest($"Transcript is too long. Maximum allowed length is 50,000 characters (received {transcript.Length:N0}).");
+            return Results.BadRequest($"Transcript is too long. Maximum allowed length is {MaxTranscriptLength:N0} characters (received {transcript.Length:N0}).");
         }
 
         var result = await processingService.ProcessSingleAsync(

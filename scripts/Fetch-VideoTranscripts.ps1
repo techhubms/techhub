@@ -183,6 +183,8 @@ function Get-TranscriptViaYtDlp {
         $ytDlpTimeoutMs = 300_000
         $null = $proc.WaitForExit($ytDlpTimeoutMs)
         if (-not $proc.HasExited) {
+            # Kill() can fail if the process has already exited between the HasExited check and the kill call;
+            # silently ignoring that race-condition error is intentional.
             try { $proc.Kill() } catch { }
             Write-Warn "yt-dlp timed out after $($ytDlpTimeoutMs / 1000)s for $VideoUrl — skipping"
             return $null
