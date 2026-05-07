@@ -71,7 +71,8 @@ For YouTube videos, transcripts can be provided manually in two ways:
   field. The AI will generate a full summary based on the transcript.
 - **When editing an existing video**: Open the content item editor, expand the "Apply Transcript"
   section, paste the transcript, and click "Apply Transcript". The AI regenerates excerpt, content,
-  tags, and sections immediately. Review the result, then click Save.
+  tags, and sections and saves those changes immediately. Review the result, and click Save only if
+  you make additional manual edits afterward.
 
 The edit flow always updates the existing item in-place (preserving slug and collection) — it never
 deletes and re-adds items, so URLs remain stable.
