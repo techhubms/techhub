@@ -1,5 +1,6 @@
 @page "/github-copilot/vscode-updates"
 @page "/github-copilot/vscode-updates/{VideoSlug}"
+@using System.Linq
 @using TechHub.Core.Models
 @using TechHub.Core.Validation
 @using TechHub.Web.Services
@@ -222,9 +223,11 @@ else
     {
         var matches = System.Text.RegularExpressions.Regex.Matches(title, @"\d+\.\d+(?:\.\d+)?");
         Version? max = null;
-        foreach (System.Text.RegularExpressions.Match m in matches)
+        foreach (var m in matches.Cast<System.Text.RegularExpressions.Match>()
+            .Where(m => Version.TryParse(m.Value, out _)))
         {
-            if (Version.TryParse(m.Value, out var v) && (max is null || v > max))
+            Version.TryParse(m.Value, out var v);
+            if (max is null || v > max)
                 max = v;
         }
         return max ?? new Version(0, 0);
