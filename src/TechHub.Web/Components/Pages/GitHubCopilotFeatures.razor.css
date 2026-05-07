@@ -365,7 +365,8 @@ html.keyboard-nav .features-timeline-header:focus-visible {
 }
 
 .features-timeline-detail.expanded {
-  max-height: 600px;
+  /* CSS animation requires a fixed max-height; 1000px exceeds any realistic single-feature content */
+  max-height: 1000px;
 }
 
 /* ─── Feature Video in Detail ────────────────────────────────────── */

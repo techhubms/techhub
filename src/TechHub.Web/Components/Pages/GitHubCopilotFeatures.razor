@@ -113,7 +113,7 @@
                                         <div class="features-timeline-entry @(isExpanded ? "expanded" : "")" id="feature-@feature.Id">
                                             <div class="features-timeline-node" aria-hidden="true">
                                                 <div class="features-timeline-dot"></div>
-                                                <time class="features-timeline-date" datetime="@feature.ReleaseDate">@FormatReleaseDate(feature.ReleaseDate)</time>
+                                                <time class="features-timeline-date" datetime="@(feature.ReleaseDate + "-01")">@FormatReleaseDate(feature.ReleaseDate)</time>
                                             </div>
                                             <div class="features-timeline-card card">
                                                 <button type="button"
@@ -128,7 +128,7 @@
                                                     <div class="features-timeline-badges">
                                                         @foreach (var plan in feature.Plans)
                                                         {
-                                                            <span class="badge-plan badge-plan-@plan.ToLowerInvariant().Replace("+", "plus")">@plan</span>
+                                                            <span class="badge-plan badge-plan-@GetPlanCssClass(plan)">@plan</span>
                                                         }
                                                         @if (feature.GhesSupport)
                                                         {
@@ -308,6 +308,12 @@ else if (_notFound)
 
         return releaseDate;
     }
+
+    /// <summary>
+    /// Converts a subscription plan name to a CSS-safe class suffix (e.g. "Pro+" → "proplus").
+    /// </summary>
+    private static string GetPlanCssClass(string plan) =>
+        plan.ToLowerInvariant().Replace("+", "plus", StringComparison.Ordinal);
 
     protected override async Task OnInitializedAsync()
     {

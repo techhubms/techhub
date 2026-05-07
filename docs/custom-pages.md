@@ -60,7 +60,7 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/features`
 **Data Model**: `FeaturesPageData`
-**Description**: A matrix or list of specific GitHub Copilot features and their status.
+**Description**: An interactive feature timeline showing the chronological evolution of GitHub Copilot features. Includes subscription tier definitions for the sidebar and a `timelineFeatures` array with per-feature release dates, plan availability, GHES support, and optional links to related video content.
 
 ### GenAI Basics
 
@@ -156,10 +156,8 @@ This subcollection is treated as a specialized collection for GitHub Copilot fea
 - Automatically identified as "Features" content based on subcollection
 - Populates the features page at `/github-copilot/features` (via `/api/custom-pages/features`)
 - Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
-- Supports per-section filtering by GHES support and video availability
-- Layout: "Free" tier displayed full-width, four paid tiers displayed side-by-side in a grid
+- Videos are matched to `TimelineFeature` entries via `videoSlug` field — when a match is found, the video thumbnail and link appear in the expanded feature detail
 - Published items with YouTube URLs display video thumbnails and link to the video page
-- Draft items display as "Coming Soon" cards without video thumbnails
 
 ### VS Code Updates
 
