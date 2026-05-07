@@ -1188,4 +1188,32 @@ public class AiCategorizationServiceTests
         result.Item.Should().BeNull();
         result.IsFailure.Should().BeTrue();
     }
+
+    // ── Invalid JSON Escape in Outer API Response ─────────────────────────────
+
+    [Fact]
+    public async Task CategorizeAsync_WhenOuterResponseContainsInvalidEscapes_SanitizesAndParses()
+    {
+        // Arrange — Simulate Azure OpenAI returning an improperly escaped response
+        // where \. appears in the outer JSON (invalid JSON escape).
+        // This reproduces the production error: "'.' is an invalid escapable character within a JSON string"
+        // Build a raw response that has \. in it (invalid JSON escape in the outer response)
+        // We manually construct this instead of using WrapInAiResponse to simulate the bug.
+        var rawResponse = "{\"choices\":[{\"message\":{\"content\":\"{\\\"included\\\": true, \\\"title\\\": \\\"Regex in .NET\\\", \\\"excerpt\\\": \\\"Using regex patterns like foo\\.bar\\\", \\\"collection\\\": \\\"blogs\\\", \\\"sections\\\": [\\\"dotnet\\\"], \\\"tags\\\": [\\\"regex\\\", \\\"dotnet\\\"], \\\"primary_section\\\": \\\"dotnet\\\", \\\"content\\\": \\\"Match URLs with patterns like https://example\\.com/path\\\", \\\"explanation\\\": \\\"relevant .NET content\\\"}\"},\"finish_reason\":\"stop\"}]}";
+
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, rawResponse));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — should successfully parse despite invalid escape in outer JSON
+        result.Item.Should().NotBeNull();
+        result.Item!.Title.Should().Be("Regex in .NET");
+        result.Item.Sections.Should().Contain("dotnet");
+        result.IsFailure.Should().BeFalse();
+    }
 }

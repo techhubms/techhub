@@ -142,19 +142,40 @@ public class DynamicTagCountsTests : PlaywrightTestBase
         await firstTag.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
                 new Regex(@"tags="), new() { Timeout = 2000 }));
+
+        // Wait for the tag cloud to reload with filter applied. After a tag click, the
+        // SidebarTagCloud component fetches updated counts from the API and shows
+        // .tag-cloud-skeleton while loading. On slow networks this cycle can take longer
+        // than WaitForTagCloudReadyAsync's .tag-cloud-item check (which can catch a brief
+        // pre-skeleton render). Wait here for: no skeleton AND .selected is present.
+        await Page.WaitForConditionAsync(
+            "() => document.querySelector('.tag-cloud-skeleton') === null && " +
+                   "document.querySelector('.tag-cloud-item.selected') !== null",
+            onTimeout: "() => JSON.stringify({skeletons: document.querySelectorAll('.tag-cloud-skeleton').length, selected: document.querySelectorAll('.tag-cloud-item.selected').length})");
         await WaitForTagCloudReadyAsync();
 
         // Get counts with one tag selected
         var countsWithFilter = await GetTagCountsAsync();
 
-        // Act - Deselect the tag
-        // On section pages (Filter mode), deselecting the last tag may not trigger a URL change
-        // (Blazor considers "no tags" the default state and may skip pushState).
-        // Retry [click + .selected count == 0] instead.
-        var selectedTag = Page.Locator(".tag-cloud-item.selected").First;
-        await selectedTag.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
-                .ToHaveCountAsync(0, new() { Timeout = 2000 }));
+        // Act - Deselect the tag.
+        // No retry loop here — retrying a toggle click risks double-clicking, which would
+        // re-select the tag and leave selected=0 permanently (making the wait below hang).
+        // Instead: wait once for a stable, actionable state, then click exactly once.
+        //
+        // The component sets .selected synchronously before the API call, so there is no
+        // Blazor hydration race on this click — we just need the skeleton to be gone.
+        //
+        // On section pages (Filter mode) deselecting the last tag may not change the URL
+        // (Blazor treats "no tags" as the default and may skip pushState), so we assert
+        // .selected count == 0 rather than a URL change.
+        await Page.WaitForConditionAsync(
+            "() => document.querySelector('.tag-cloud-skeleton') === null && " +
+                   "document.querySelector('.tag-cloud-item.selected') !== null",
+            onTimeout: "() => JSON.stringify({skeletons: document.querySelectorAll('.tag-cloud-skeleton').length, selected: document.querySelectorAll('.tag-cloud-item.selected').length})");
+        await Page.Locator(".tag-cloud-item.selected").First
+            .ClickAsync(new() { Timeout = BlazorHelpers.E2ETimeout });
+        await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
+            .ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.E2ETimeout });
         await WaitForTagCloudReadyAsync();
 
         // Assert - Counts should recalculate to show totals again
