@@ -323,6 +323,9 @@ builder.Services.AddAuthorization(options =>
 });
 
 // Rate limiting: defense-in-depth for the API (primary rate limiting is on the Web layer)
+// Disabled in IntegrationTest environment to avoid throttling test suites that run many
+// requests from a single IP within a short window.
+var isIntegrationTest = builder.Environment.IsEnvironment("IntegrationTest");
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -340,29 +343,33 @@ builder.Services.AddRateLimiter(options =>
 
     // Public content endpoints: generous limit (defense against runaway loops or future architecture changes)
     options.AddPolicy("api-public", context =>
-        RateLimitPartition.GetSlidingWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-            factory: _ => new SlidingWindowRateLimiterOptions
-            {
-                PermitLimit = 200,
-                Window = TimeSpan.FromMinutes(1),
-                SegmentsPerWindow = 6,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 10
-            }));
+        isIntegrationTest
+            ? RateLimitPartition.GetNoLimiter("no-limit")
+            : RateLimitPartition.GetSlidingWindowLimiter(
+                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+                factory: _ => new SlidingWindowRateLimiterOptions
+                {
+                    PermitLimit = 200,
+                    Window = TimeSpan.FromMinutes(1),
+                    SegmentsPerWindow = 6,
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                    QueueLimit = 10
+                }));
 
     // Admin endpoints: stricter limit — limits failed auth attempts even though auth-protected
     options.AddPolicy("api-admin", context =>
-        RateLimitPartition.GetSlidingWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-            factory: _ => new SlidingWindowRateLimiterOptions
-            {
-                PermitLimit = 30,
-                Window = TimeSpan.FromMinutes(1),
-                SegmentsPerWindow = 6,
-                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                QueueLimit = 0
-            }));
+        isIntegrationTest
+            ? RateLimitPartition.GetNoLimiter("no-limit")
+            : RateLimitPartition.GetSlidingWindowLimiter(
+                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+                factory: _ => new SlidingWindowRateLimiterOptions
+                {
+                    PermitLimit = 30,
+                    Window = TimeSpan.FromMinutes(1),
+                    SegmentsPerWindow = 6,
+                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                    QueueLimit = 0
+                }));
 });
 
 var app = builder.Build();
