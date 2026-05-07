@@ -102,12 +102,14 @@ public partial class UrlNormalizationMiddleware
             return;
         }
 
-        // Strip trailing slash: /ai/ → /ai (301). Must run before feed-redirect check so
-        // that /{section}/ doesn't accidentally match feed patterns.
+        // Strip trailing slash before segment processing so that a combined
+        // trailing-slash + rename/normalization produces a single 301 rather than two
+        // (e.g. /coding/ → /dotnet in one redirect, not /coding/ → /coding → /dotnet).
+        // Trailing slashes never match RSS feed patterns (.xml suffix), so feed-redirect
+        // order is unaffected.
         if (path.Length > 1 && path.EndsWith('/'))
         {
-            Redirect(context, path.TrimEnd('/') + context.Request.QueryString);
-            return;
+            path = path.TrimEnd('/');
         }
 
         // Legacy RSS feed redirects: handled before segment normalization so that
@@ -130,7 +132,9 @@ public partial class UrlNormalizationMiddleware
         }
 
         var normalizedPath = "/" + string.Join("/", normalizedSegments);
-        var pathChanged = !string.Equals(normalizedPath, path, StringComparison.Ordinal);
+        // Compare against the original request path (not the trailing-slash-stripped `path`)
+        // so that a slash-only change is also detected as a path change.
+        var pathChanged = !string.Equals(normalizedPath, context.Request.Path.Value, StringComparison.Ordinal);
 
         // Multi-segment paths: validate section/collection against the cache, then redirect
         // or pass through. Validation runs on the NORMALIZED segments so that a redirect

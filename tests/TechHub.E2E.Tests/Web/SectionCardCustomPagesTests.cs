@@ -115,9 +115,12 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var specificButtonCount = await specificButton.CountAsync();
             specificButtonCount.Should().Be(0, "the clicked expand button should be removed after clicking");
 
-            // Total button count should decrease by 1
-            var finalButtonCount = await expandButtons.CountAsync();
-            finalButtonCount.Should().Be(initialButtonCount - 1, "total expand button count should decrease by 1");
+            // Total button count should decrease by 1. Use Playwright's retry assertion
+            // rather than a raw CountAsync() to survive the Blazor re-render window
+            // where remaining buttons momentarily disappear before being re-attached.
+            await Assertions.Expect(expandButtons).ToHaveCountAsync(
+                initialButtonCount - 1,
+                new() { Timeout = BlazorHelpers.E2ETimeout });
 
             // Hidden custom pages should be visible
             var hiddenBadges = targetContainer.Locator(".badge-custom");

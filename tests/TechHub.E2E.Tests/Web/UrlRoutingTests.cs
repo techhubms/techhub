@@ -352,8 +352,6 @@ public class UrlRoutingTests : PlaywrightTestBase
 
     #endregion
 
-#endregion
-
     #region URL Normalization Redirects
 
     [Fact]
@@ -384,8 +382,8 @@ public class UrlRoutingTests : PlaywrightTestBase
     {
         // HEAD requests to valid pages must return 200, not 405 Method Not Allowed.
         // The HEAD-to-GET rewrite middleware must run before routing.
-        var response = await Page.APIRequest.GetAsync(BlazorHelpers.BaseUrl + "/ai",
-            new() { Method = "HEAD", FailOnStatusCode = false });
+        var response = await Page.APIRequest.FetchAsync(BlazorHelpers.BaseUrl + "/ai",
+            new() { Method = "HEAD", FailOnStatusCode = false, Timeout = BlazorHelpers.E2ETimeout });
 
         response.Status.Should().Be(200,
             "HEAD on a valid route should return 200, not 405 Method Not Allowed");
