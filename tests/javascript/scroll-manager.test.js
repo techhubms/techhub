@@ -236,7 +236,7 @@ describe('scroll-manager.js', () => {
         it('should scroll to top when clicked', () => {
             const btn = document.querySelector('.nav-helper-btn-top');
             btn.click();
-            expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+            expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'instant' });
         });
 
         it('should clear hash from URL when scrolling to top', () => {
@@ -694,22 +694,22 @@ describe('scroll-manager.js', () => {
             expect(observer.disconnected).toBe(true);
         });
 
-        it('should NOT call LoadNextBatch during navigation', () => {
+        it('should NOT call LoadNextBatch during navigation (defers observation)', () => {
             createTriggerElement();
             const helper = createMockHelper();
+            const observerCountBefore = window.__mockObservers.length;
 
             // Trigger back-nav (sets navigating = 'traverse')
             window.location = { ...window.location, pathname: '/other-page' };
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
 
             mod.observeScrollTrigger(helper, 'scroll-trigger');
-            const observer = window.__mockObservers.at(-1);
-            observer.trigger(true); // fires but navigating is truthy
+            // No new IO should be created during navigation (deferred)
+            expect(window.__mockObservers.length).toBe(observerCountBefore);
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
-            expect(observer.disconnected).toBe(false); // stays active for when nav completes
         });
 
-        it('should call LoadNextBatch after navigation completes if trigger was intersecting during traverse', () => {
+        it('should call LoadNextBatch after navigation completes if trigger is intersecting at restored position', () => {
             createTriggerElement();
             const helper = createMockHelper();
 
@@ -718,16 +718,16 @@ describe('scroll-manager.js', () => {
             window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
 
             mod.observeScrollTrigger(helper, 'scroll-trigger');
-            const observer = window.__mockObservers.at(-1);
-
-            // IO fires while navigating — should record pending, not call LoadNextBatch yet
-            observer.trigger(true);
             expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
 
             // finishNavigation via restoreScrollPosition (rAF is sync in tests)
+            // This creates the deferred IO observer
             window.__restoreScrollPosition();
 
-            // Now that navigating=false, the pending intersect should have been flushed
+            // IO is now created — simulate it firing (trigger is in viewport at restored position)
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true);
+
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
             expect(observer.disconnected).toBe(true);
         });
@@ -745,6 +745,36 @@ describe('scroll-manager.js', () => {
 
             expect(second).not.toBe(first);
             expect(first.disconnected).toBe(true);
+        });
+
+        it('should NOT call LoadNextBatch on re-attach after nav-flush (postNavBatchFlushed gate)', () => {
+            // Regression test for cascade-scroll bug:
+            // After finishNavigation loads 1 batch via the deferred IO, subsequent
+            // re-attaches from Blazor should be blocked until the user scrolls.
+            createTriggerElement();
+            const helper = createMockHelper();
+
+            // Trigger back-nav (sets navigating = 'traverse')
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+
+            // finishNavigation creates the deferred IO (with isPostNav=true)
+            window.__restoreScrollPosition();
+
+            // IO fires → LoadNextBatch + postNavBatchFlushed = true
+            const observer = window.__mockObservers.at(-1);
+            observer.trigger(true);
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+            helper.invokeMethodAsync.mockClear();
+
+            // Simulate Blazor re-attaching after batch render (new observeScrollTrigger call)
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const secondObserver = window.__mockObservers.at(-1);
+            secondObserver.trigger(true); // trigger fires but gate blocks it
+
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
         });
 
         it('should set __scrollListenerReady to false on dispose', () => {

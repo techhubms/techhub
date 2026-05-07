@@ -254,9 +254,18 @@ public class SidebarTocTests : PlaywrightTestBase
         // Get initial scroll position (fully settled after mermaid rendering + scroll anchoring)
         var initialScrollY = await Page.EvaluateAsync<double>("window.scrollY");
 
-        // Act - Click the TOC link for the same section
+        // Act - Click the TOC link for the same section.
+        // Use JS click (.click()) instead of Playwright's ClickAsync to avoid
+        // scrollIntoViewIfNeeded. Playwright's click action calls scrollIntoViewIfNeeded
+        // before verifying actionability, which scrolls the document to bring the TOC
+        // sidebar link into view. That scroll changes window.scrollY, which triggers the
+        // TOC scroll-spy to update the active heading, which can collapse the h3 items
+        // under the newly-active h2 — making the target link invisible just as Playwright
+        // checks actionability. The JS click bypasses this cycle entirely.
         var tocLink = Page.Locator(".sidebar-toc a[href$='#types-of-prompts-and-messages']");
-        await tocLink.ClickAndWaitForScrollAsync();
+        var counterBefore = await Page.GetE2ECounterAsync();
+        await tocLink.EvaluateAsync("el => el.click()");
+        await Page.WaitForE2ESignalAsync(counterBefore, "scroll-end");
 
         // Assert - The heading should be visible in the viewport after the TOC link click.
         // Under slow network, images and Mermaid diagrams can load after scrollend fires,

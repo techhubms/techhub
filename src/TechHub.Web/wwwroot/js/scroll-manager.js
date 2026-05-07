@@ -22,6 +22,7 @@
  * scrolls to the target element rather than restoring a saved Y position.
  *
  * @see {@link /workspaces/techhub/src/TechHub.Web/AGENTS.md} for integration patterns
+ * @see {@link /workspaces/techhub/docs/scroll-system-architecture.md} for full architecture (diagrams, bugs, tests)
  */
 
 'use strict';
@@ -41,6 +42,11 @@ window.__savedScrollPositions = savedPositions; // exposed for tests
 
 // RAF throttle flag for TOC updates during scroll (one update per frame).
 let tocRafPending = false;
+
+// Set after finishNavigation flushes a single batch. Blocks subsequent IO callbacks
+// until the user genuinely scrolls, preventing the cascade bug where rapid
+// re-observe cycles load all remaining content. Cleared in onScroll.
+let postNavBatchFlushed = false;
 
 // ============================================================================
 // Keyboard Navigation Detection
@@ -100,18 +106,16 @@ function createButtonContainer() {
 }
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
     if (location.hash) {
         history.replaceState(null, '', location.pathname + location.search);
     }
-    setTimeout(() => {
+    document.body.focus();
+    if (document.activeElement !== document.body) {
+        document.body.setAttribute('tabindex', '-1');
         document.body.focus();
-        if (document.activeElement !== document.body) {
-            document.body.setAttribute('tabindex', '-1');
-            document.body.focus();
-            document.body.removeAttribute('tabindex');
-        }
-    }, 500);
+        document.body.removeAttribute('tabindex');
+    }
 }
 
 function updateButtonVisibility() {
@@ -193,33 +197,19 @@ function saveScrollPosition() {
 /**
  * Restore scroll position after back/forward navigation.
  * Called by markScriptsReady when page rendering is complete.
- *
- * Uses requestAnimationFrame(finishNavigation) rather than setTimeout(fn, 0) to
- * unlock scroll after scrollTo. The rendering pipeline processes IntersectionObserver
- * callbacks at step 13.10 and rAF callbacks at step 13.14 — within the same frame,
- * IO always fires BEFORE rAF. This guarantees that if scrollTo puts the infinite-scroll
- * trigger within the rootMargin, the IO fires while navigating='traverse' (→ ignored),
- * and only after that does rAF fire to set navigating=false. Without rAF, setTimeout(0)
- * races against IO and sometimes wins, causing a cascade of batch loads on back-nav.
+ * Uses rAF(finishNavigation) so IO fires before navigating resets — see docs/scroll-system-architecture.md.
  */
 function restoreScrollPosition() {
     if (!navigating) {
-        // No navigation in progress — do NOT clear the lock here.
-        // The lock may have been set by ScrollToPositionAsync (in tests) and is still
-        // needed for the upcoming pushState. Clearing it here would cause pushState to
-        // fall back to lastSettledScrollY, which may have been clobbered by
-        // Playwright's scrollIntoViewIfNeeded before the click.
+        // No navigation in progress — don't clear lock (may be needed for upcoming pushState).
         return false;
     }
 
-    // Clear lock — we are in an active navigation, so pushState has already fired
-    // (forward: we're on the destination page) or is irrelevant (traverse: we
-    // navigated away and are now restoring back). The lock has served its purpose.
+    // Lock served its purpose — clear it.
     window.__scrollSaveLock = null;
 
     if (navigating !== 'traverse') {
-        // Forward nav: unlock immediately. No cascading-load risk because
-        // forward nav scrolls to top (trigger is at the bottom of the page).
+        // Forward nav: no cascade risk (trigger at bottom), unlock immediately.
         finishNavigation();
         return false;
     }
@@ -233,10 +223,7 @@ function restoreScrollPosition() {
         } else {
             window.scrollTo(0, 0);
         }
-        // Use rAF instead of setTimeout(0). In the rendering pipeline, IntersectionObserver
-        // callbacks fire at step 13.10 and rAF fires at step 13.14 — IO always fires BEFORE
-        // rAF in the same frame. This guarantees the IO callback sees navigating='traverse'
-        // before finishNavigation() resets it to false, preventing a cascade on back-nav.
+        // rAF ensures IO fires before finishNavigation (see docs/scroll-system-architecture.md).
         requestAnimationFrame(finishNavigation);
         return false;
     }
@@ -245,21 +232,11 @@ function restoreScrollPosition() {
     const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
     if (maxScroll >= y - 5) {
         window.scrollTo(0, y);
-        // Use rAF instead of setTimeout(0) — see comment above for rationale.
         requestAnimationFrame(finishNavigation);
         return true;
     }
 
-    // Page isn't tall enough — wait for layout to stabilize before scrolling.
-    // Two observers run in parallel, both feeding a shared debounce timer:
-    //   - ResizeObserver: fires when page height changes (e.g., images loading)
-    //   - MutationObserver: fires when DOM elements are added/removed
-    // Once NEITHER observer has fired for 150ms, the page is "settled" and we scroll.
-    // A 30s hard deadline ensures we never hang indefinitely.
-    //
-    // Capture the current scroll key so that if a new navigation starts before
-    // tryScroll fires, we bail out instead of scrolling the wrong page and
-    // incorrectly calling finishNavigation() for the new navigation.
+    // Page isn't tall enough — wait for layout to stabilize (150ms debounce, 30s deadline).
     const restoreKey = getScrollKey();
     let debounceTimer = null;
     let deadlineTimer = null;
@@ -279,10 +256,8 @@ function restoreScrollPosition() {
 
     function tryScroll() {
         cleanup();
-        // Bail if navigation has moved on — do not scroll the new page.
         if (getScrollKey() !== restoreKey) return;
         window.scrollTo(0, y);
-        // Use rAF instead of setTimeout(0) — see comment above for rationale.
         requestAnimationFrame(finishNavigation);
     }
 
@@ -293,12 +268,10 @@ function restoreScrollPosition() {
         if (deadlineTimer != null) clearTimeout(deadlineTimer);
     }
 
-    // Hard deadline: after 30 seconds, scroll to whatever position is available.
     deadlineTimer = setTimeout(() => {
         cleanup();
         if (getScrollKey() !== restoreKey) return;
         window.scrollTo(0, y);
-        // Use rAF instead of setTimeout(0) — see comment above for rationale.
         requestAnimationFrame(finishNavigation);
     }, 30_000);
 
@@ -315,19 +288,23 @@ window.__restoreScrollPosition = restoreScrollPosition;
 
 /**
  * Called when navigation completes (page rendered, scroll restored).
- * Unlocks scroll handling and triggers one round of scroll-end work.
+ * Unlocks scroll handling and starts deferred IO observation at the correct scroll position.
+ * @see docs/scroll-system-architecture.md
  */
 function finishNavigation() {
     navigating = false;
-    // If the infinite-scroll sentinel became intersecting during back/forward
-    // restoration (while navigating was truthy), the IO callback returned early
-    // and will never re-fire (IO only triggers on state changes). Flush the
-    // pending flag now so the user doesn't end up stuck near the bottom.
-    if (infiniteScrollState?.pendingIntersect) {
-        const { helper, observer } = infiniteScrollState;
-        observer.disconnect();
-        infiniteScrollState = null;
-        helper.invokeMethodAsync('LoadNextBatch');
+    // If observeScrollTrigger was called during navigation, it deferred actual observation.
+    // Now that scroll is restored, start the IO at the real viewport position.
+    // If the trigger is in range, IO fires in the next frame (1 allowed batch).
+    // startObserving sets postNavBatchFlushed after that first fire so re-attaches are blocked.
+    if (infiniteScrollState?.deferred) {
+        const { helper, triggerElementId } = infiniteScrollState;
+        const trigger = document.getElementById(triggerElementId);
+        if (trigger) {
+            startObserving(helper, triggerElementId, trigger, true);
+        } else {
+            infiniteScrollState = null;
+        }
     }
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();
@@ -355,9 +332,11 @@ function scrollToHash(hash) {
 const originalPushState = history.pushState;
 history.pushState = function (...args) {
     // Save position synchronously before URL changes.
-    // This is the ONLY place we save on forward navigation — not on every scroll event.
-    // If __scrollSaveLock is set, saveScrollPosition uses the locked value.
-    saveScrollPosition();
+    // Skip if beforeenhancedload already saved (Blazor enhanced nav sets navigating='forward').
+    // For non-Blazor pushState callers, navigating is still false so we save here.
+    if (navigating !== 'forward') {
+        saveScrollPosition();
+    }
 
     const oldPathname = location.pathname;
     const oldSearch = location.search;
@@ -477,6 +456,9 @@ function setupBlazorListeners() {
             // traversal (back/forward) sets navigating='traverse' via popstate before
             // this event fires, so the guard prevents us resetting scroll on back-nav.
             if (navigating) return;
+            // Save position BEFORE scrollTo(0) zeroes lastSettledScrollY.
+            // pushState fires later but skips re-save when navigating='forward'.
+            saveScrollPosition();
             document.documentElement.classList.remove('is-scrolling');
             window.scrollTo({ top: 0, behavior: 'instant' });
             lastSettledScrollY = 0;
@@ -586,10 +568,7 @@ export function initTocScrollSpy() {
             const desktopClickHandler = (e) => {
                 const link = e.target.closest('a[href]');
                 if (!link) return;
-                // Match bare hash links (#id) and same-page full-path hash links (/path#id).
-                // SidebarToc.razor generates full-path hrefs like "/github-copilot/handbook#about-book".
-                // Our handler fires before Blazor's document-level interceptor (event bubbling),
-                // so e.preventDefault() prevents Blazor from calling pushState.
+                // Match same-page hash links. preventDefault stops Blazor's interceptor from calling pushState.
                 const hrefAttr = link.getAttribute('href');
                 if (!hrefAttr || !hrefAttr.includes('#')) return;
                 let hash;
@@ -653,9 +632,7 @@ function setupToc(tocElement, contentElement, initialHighlight = true) {
         detectionLine,
         currentActiveId: null,
         currentActiveH2Id: null,
-        // Snapshot the page at init time. replaceState is skipped if we've
-        // navigated away before scrollend fires (prevents hash leaking onto
-        // the next page when the user clicks Back mid-scroll).
+        // Guards replaceState — see docs/scroll-system-architecture.md "pageKey guard".
         pageKey: location.pathname + location.search,
     };
 
@@ -743,8 +720,7 @@ function setTocActive(headingId) {
 
     if (headingId === null) {
         tocState.currentActiveId = null;
-        // Only clear the hash if we're still on the page where the TOC was
-        // initialized — guard against a late scrollend firing after navigation.
+        // pageKey guard: don't clear hash if we've navigated away.
         if (location.hash && location.pathname + location.search === tocState.pageKey) {
             history.replaceState(null, '', location.pathname + location.search);
         }
@@ -757,10 +733,7 @@ function setTocActive(headingId) {
     newLink.classList.add('active');
     tocState.currentActiveId = headingId;
 
-    // Update URL hash — but only if we're still on the page where the TOC was
-    // initialized. If the user clicked a link and a late scrollend fires just
-    // before the DOM swap, we must not overwrite the new page's URL with a hash
-    // from the previous page (which would then prevent scroll-position restore).
+    // pageKey guard: don't update hash if we've navigated away.
     if (location.pathname + location.search === tocState.pageKey) {
         history.replaceState(null, '', `${location.pathname}${location.search}#${headingId}`);
     }
@@ -821,12 +794,12 @@ const TRIGGER_MARGIN_PX = 300;
 
 /**
  * Set up infinite scroll monitoring. Called by Blazor ContentItemsGrid component.
+ * One-shot IO: fires once on trigger entering viewport+margin, then disconnects.
+ * Blazor re-attaches after each batch render.
  *
- * Uses IntersectionObserver for edge-triggered detection: the callback fires
- * exactly once when the trigger element ENTERS the viewport margin. After firing,
- * the observer is disconnected. Blazor re-calls this after each batch render,
- * creating a fresh observer — so cascade is architecturally impossible:
- * the trigger must leave and re-enter the zone for another batch to load.
+ * If called during navigation, defers actual observation until finishNavigation() runs
+ * at the correct scroll position — avoids spurious IO at Y=0.
+ * @see docs/scroll-system-architecture.md
  */
 export function observeScrollTrigger(helper, triggerElementId) {
     dispose(); // disconnect any previous observer
@@ -837,28 +810,12 @@ export function observeScrollTrigger(helper, triggerElementId) {
         return;
     }
 
-    const observer = new IntersectionObserver(entries => {
-        const entry = entries[entries.length - 1];
-        if (!entry.isIntersecting) return;
-        if (navigating) {
-            // Nav in progress (back/forward restore) — the observer stays active but
-            // we record the pending intersection so finishNavigation() can flush it.
-            // Without this, the IO fires once while navigating=truthy, returns here,
-            // and never re-fires (IO only triggers on state *changes*), leaving
-            // infinite scroll stuck after back-nav near the bottom.
-            if (infiniteScrollState) infiniteScrollState.pendingIntersect = true;
-            return;
-        }
-        // Trigger entered the viewport+margin — disconnect immediately so we
-        // cannot fire again while the batch loads. observeScrollTrigger will be
-        // called again by Blazor after the next render, creating a new observer.
-        observer.disconnect();
-        infiniteScrollState = null;
-        helper.invokeMethodAsync('LoadNextBatch');
-    }, { rootMargin: `0px 0px ${TRIGGER_MARGIN_PX}px 0px` });
-
-    observer.observe(trigger);
-    infiniteScrollState = { helper, triggerElementId, observer, pendingIntersect: false };
+    if (navigating) {
+        // Defer — finishNavigation() will start observing at the restored scroll position.
+        infiniteScrollState = { helper, triggerElementId, observer: null, deferred: true };
+    } else {
+        startObserving(helper, triggerElementId, trigger);
+    }
 
     // E2E test signals
     window.__scrollListenerReady ??= {};
@@ -871,12 +828,40 @@ export function observeScrollTrigger(helper, triggerElementId) {
 }
 
 /**
+ * Create and start the IntersectionObserver for the scroll trigger.
+ * Separated from observeScrollTrigger so finishNavigation can call it after scroll restore.
+ * @param {boolean} isPostNav - true when called from finishNavigation (enables one-batch gate)
+ */
+function startObserving(helper, triggerElementId, trigger, isPostNav = false) {
+    const observer = new IntersectionObserver(entries => {
+        const entry = entries[entries.length - 1];
+        if (!entry.isIntersecting) return;
+        if (postNavBatchFlushed) {
+            // After navigation loaded 1 batch, block further IO-triggered loads
+            // until a genuine user scroll. Prevents cascade (see docs/scroll-system-architecture.md).
+            return;
+        }
+        // Disconnect immediately — Blazor re-attaches after next render.
+        observer.disconnect();
+        infiniteScrollState = null;
+        if (isPostNav) {
+            // Allow this first batch but gate subsequent re-attaches.
+            postNavBatchFlushed = true;
+        }
+        helper.invokeMethodAsync('LoadNextBatch');
+    }, { rootMargin: `0px 0px ${TRIGGER_MARGIN_PX}px 0px` });
+
+    observer.observe(trigger);
+    infiniteScrollState = { helper, triggerElementId, observer, deferred: false };
+}
+
+/**
  * Dispose infinite scroll listener. Called by Blazor on component dispose.
  */
 export function dispose() {
     if (!infiniteScrollState) return;
     const { triggerElementId, observer } = infiniteScrollState;
-    observer.disconnect();
+    if (observer) observer.disconnect();
     window.__scrollListenerReady ??= {};
     window.__scrollListenerReady[triggerElementId] = false;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-disposed:' + triggerElementId);
@@ -894,6 +879,19 @@ export function dispose() {
  */
 function onScroll() {
     if (navigating) return;
+    // After a nav-flush, the first genuine scroll clears the one-batch gate
+    // and re-arms the IO so further scrolling loads normally.
+    if (postNavBatchFlushed && infiniteScrollState) {
+        postNavBatchFlushed = false;
+        const { observer, triggerElementId } = infiniteScrollState;
+        const trigger = document.getElementById(triggerElementId);
+        if (trigger) {
+            observer.unobserve(trigger);
+            observer.observe(trigger);
+        }
+    } else if (postNavBatchFlushed) {
+        postNavBatchFlushed = false;
+    }
     // Suppress card hover visuals during scroll (CSS resets them while
     // is-scrolling is present). Pointer-events stay on so the browser tracks
     // the cursor; when is-scrolling is removed in onScrollEnd the correct

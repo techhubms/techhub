@@ -116,84 +116,29 @@ External libraries are loaded from CDNs for performance. All versions and SRI ha
 
 ## Scroll Manager
 
-`wwwroot/js/scroll-manager.js` is the unified module that handles all scroll-related behavior:
+`wwwroot/js/scroll-manager.js` is the unified module handling scroll position
+save/restore, navigation lifecycle, TOC scroll-spy, infinite scroll, and
+back-to-top/back-to-prev buttons.
 
-### Navigation Buttons
+For the full architecture (sequence diagrams, known bugs, `navigating` flag,
+`allComponentsReady` gate, test coverage), see
+[scroll-system-architecture.md](scroll-system-architecture.md).
 
-- **Back to Top**: Smooth scroll to top of page (appears after scrolling 300px)
-- **Back to Previous**: Navigate to previous page in browser history
-- Automatic show/hide based on scroll position (300px threshold)
-- CSS fade-in/fade-out transitions
+### Quick API Reference
 
-### Scroll Position Save/Restore
+| Export | Called by | Purpose |
+|--------|-----------|---------|
+| `initTocScrollSpy()` | page-scripts.js | Activate TOC highlighting |
+| `observeScrollTrigger(helper, id)` | ContentItemsGrid.razor | Register infinite scroll trigger |
+| `dispose()` | ContentItemsGrid.razor | Clean up on component disposal |
+| `isNavigating()` | Tests | Check navigation state |
 
-- **Save**: In the `pushState` interceptor (forward nav) and `popstate` handler (back/forward nav). Uses `lastSettledScrollY` — the position captured by the last `scrollend` event — rather than `window.scrollY` at the moment of navigation. This avoids saving a corrupted position caused by `scrollIntoView` shifts that happen between the user's last scroll stop and the click/Enter that triggers navigation.
-- **Restore**: On back/forward navigation (traverse), restores the saved position after `markScriptsReady` signals that all rendering is complete
-- **Retry**: If the page isn't tall enough yet, a ResizeObserver + MutationObserver watch for layout changes with a 150ms debounce and 30s hard deadline
-- **Forward navigation**: Scrolls to top immediately in `beforeenhancedload` (before DOM patch) so the user sees an instant jump to the top on click, eliminating visual jerk. The `pushState` interceptor does the same as a fallback for non-Blazor callers.
-- **Same-page hash popstate**: Scrolls to the target element directly (no saved position lookup)
+### Key Rules
 
-The scroll key intentionally excludes the hash. TOC `replaceState()` changes the hash freely during scrolling — if the hash were included in the key, restored positions would mismatch.
-
-Detection uses the `popstate` event. `lastPathname`/`lastSearch` are updated immediately in `pushState` so that `popstate` can reliably distinguish same-page hash navigation from cross-page back/forward navigation.
-
-The restore is triggered by `markScriptsReady()` (called from every page's `OnAfterRenderAsync`) which polls `allComponentsReady()` at 10ms intervals before setting `window.__scriptsReady = true` and invoking `window.__restoreScrollPosition()`. Every page **must** call `markScriptsReady` — this is enforced by a convention test.
-
-`allComponentsReady()` gates readiness on three component flags:
-
-- `window.__scrollListenerReady['scroll-trigger']` — set by `ContentItemsGrid` infinite scroll (only checked when `#scroll-trigger` element exists)
-- `window.__dateRangeSliderReady` — set by `date-range-slider.js` (only checked when `#date-range-slider` element exists)
-- `window.__mermaidReady` — set by `initMermaid()` in `page-scripts.js` (only checked when unprocessed `.mermaid` elements exist)
-
-This ensures scroll restoration fires only after the final layout — preventing scroll jumps caused by Mermaid SVG rendering or slider initialization adding height above the restored position.
-
-### Navigation Gating
-
-A single module-level `navigating` flag (`false | 'forward' | 'traverse'`) gates all scroll work:
-
-- **`scroll` handler**: Skips button visibility update when navigating
-- **`scrollend` handler**: Skips `lastSettledScrollY` update and TOC highlight when navigating
-- **`finishNavigation()`**: Resets `navigating = false` and calls `onScrollEnd()` once for the final position
-
-The `beforeenhancedload` event (Blazor .NET 9+) sets `navigating = 'forward'` and calls `scrollTo({ top: 0, behavior: 'instant' })` before the DOM is patched. The `pushState` interceptor acts as a fallback and skips the setup if `beforeenhancedload` already ran. The `enhancedload` event handles accessibility focus and clears the flag.
-
-### Event Handling Split
-
-| Event | Handlers | Why |
-|-------|----------|-----|
-| `scroll` (high frequency) | Button visibility, RAF-throttled TOC highlight, `is-scrolling` class on `<html>` | Cheap; TOC needs real-time responsiveness (one update per frame); `is-scrolling` disables card `:hover` during scroll |
-| `scrollend` (or debounce fallback) | Remove `is-scrolling`, update `lastSettledScrollY`, final TOC highlight pass | Settling position and cleanup after inertia scroll ends |
-| `beforeenhancedload` (Blazor) | Scroll to top, set `navigating='forward'`, show spinner | Fires before DOM patch — gives instant jump-to-top before Blazor replaces content |
-
-### TOC Scroll-Spy
-
-Highlights the active heading in the table of contents sidebar.
-
-**Click handling**: TOC anchor clicks are intercepted at the element level and use `history.replaceState()` instead of the browser's native `pushState`. This prevents TOC section clicks from accumulating history entries — without this, clicking several TOC sections would fill history, causing the back button to cycle through sections instead of going back to the previous page.
-
-- **Desktop**: All `<a href="#...">` clicks → `replaceState` + `scrollToHash`
-- **Mobile**: Top-level h2 links with sub-items → toggle expand/collapse; all other anchor clicks → `replaceState` + `scrollToHash`
-
-**Scroll spy**: Uses `history.replaceState()` to keep the URL hash in sync as the user scrolls. Updates run on every `scroll` event, RAF-throttled to one update per frame (same pattern as the old `toc-scroll-spy.js`). A final pass runs on `scrollend` to settle on the exact resting position. Never uses `pushState`.
-
-```javascript
-// ❌ WRONG - Creates history entry for every scroll update
-history.pushState(null, '', newUrl);
-
-// ✅ CORRECT - Updates URL without creating history entry
-history.replaceState(null, '', newUrl);
-```
-
-Activated by calling `initTocScrollSpy()` (exported from scroll-manager.js, invoked by page-scripts.js when `[data-toc-scroll-spy]` elements exist).
-
-### Infinite Scroll
-
-Blazor's `ContentItemsGrid` component imports scroll-manager.js via `JSRuntime.InvokeAsync("import", "./js/scroll-manager.js")` (relative specifier so the ImportMap resolves to the fingerprinted URL) and calls:
-
-- `observeScrollTrigger(dotNetRef, "scroll-trigger")` — registers the trigger element
-- `dispose()` — cleans up on component disposal
-
-Infinite scroll uses `IntersectionObserver` with a 300px `rootMargin` — the callback fires once when the sentinel enters the extended viewport, then the observer disconnects immediately to prevent cascade loading. Blazor re-attaches the observer after each batch render by calling `observeScrollTrigger` again.
+- **Always `replaceState`** for TOC hash updates (never `pushState` — see arch doc)
+- **Scroll key excludes hash** — TOC `replaceState` changes hash freely during scroll
+- **`beforeenhancedload`** scrolls to top before DOM patch (eliminates forward-nav jerk)
+- **Blazor imports** via `import("./js/scroll-manager.js")` (ImportMap resolves fingerprint)
 
 ## Adding New JavaScript Files
 

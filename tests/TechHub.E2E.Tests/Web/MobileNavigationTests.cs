@@ -328,6 +328,14 @@ public class MobileNavigationTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/github-copilot?tags=vs%20code");
         await Page.WaitForBlazorReadyAsync();
 
+        // Wait for the filter indicator to be applied. MobileSidebarPanel.OnParametersSet calls
+        // UpdatePanelActiveFilter → StateHasChanged on the toolbar, which renders the
+        // has-active-filter class. Under WAN latency the Blazor render cycle may complete
+        // slightly after WaitForBlazorReadyAsync returns, so we poll with diagnostics.
+        await Page.WaitForConditionAsync(
+            "() => document.querySelector('.sidebar-toolbar-btn.has-active-filter') !== null",
+            onTimeout: "() => JSON.stringify(Array.from(document.querySelectorAll('.sidebar-toolbar-btn')).map(b => ({text: b.innerText.trim(), cls: b.className})))");
+
         // Assert - Tags button has indicator
         var tagsBtn = Page.Locator(".sidebar-toolbar-btn", new() { HasTextString = "Tags" });
         await Assertions.Expect(tagsBtn).ToHaveClassAsync(new Regex("has-active-filter"));
