@@ -178,10 +178,7 @@
         // Try to restore state from prerender
         var stateKey = GetStateKey();
 
-        // Priority 1: Circuit-scoped cache (survives enhanced navigations for back-button support).
-        // When the user scrolls through many batches, navigates to a detail page, and presses back,
-        // this cache restores ALL loaded items so the browser's scroll restoration doesn't trigger
-        // a cascade of batch loads that scrolls to "End of content".
+        // Priority 1: Circuit cache — restores all batches on back-nav (see docs/scroll-system-architecture.md).
         var cached = GridStateCache.Get(stateKey);
         if (cached != null)
         {
@@ -289,9 +286,7 @@
             return;
         }
 
-        // Setup scroll listener on first render, or re-attach when filters change.
-        // scroll-manager.js gates all scroll work when navigating=true, so the listener
-        // can be attached immediately — it stays quiet until navigation completes.
+        // (Re-)attach scroll listener. IO is gated by navigating flag (see docs/scroll-system-architecture.md).
         if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
         {
             needsScrollListenerSetup = false;
@@ -303,17 +298,12 @@
     {
         try
         {
-            // Only load module once. Use the relative specifier so the ImportMap intercepts
-            // it and resolves to the same fingerprinted URL as the <script> tag in App.razor.
+            // Relative specifier so ImportMap resolves to fingerprinted URL.
             scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
                 "import", "./js/scroll-manager.js");
 
-            // Only create dotNetRef once (avoid memory leak)
             dotNetRef ??= DotNetObjectReference.Create(this);
 
-            // (Re-)attach scroll listener to current scroll-trigger element.
-            // scroll-manager.js owns the navigating state and gates all scroll work
-            // until navigation completes (restoreScrollPosition finishes).
             await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
             Logger.LogDebug("Infinite scroll listener attached");
         }
@@ -325,13 +315,7 @@
 
     private async Task LoadInitialBatch()
     {
-        // CRITICAL: Immediately dispose the scroll listener so E2E tests don't see a stale
-        // __scrollListenerReady = true from the previous load cycle. Without this, a test
-        // that polls for readiness between the filter change and OnAfterRenderAsync would
-        // see the OLD true value, proceed to scroll, and fail because the new listener
-        // isn't attached yet. dispose() sets __scrollListenerReady[triggerId] = false,
-        // so ScrollToLoadMoreAsync's WaitForConditionAsync correctly waits for the fresh
-        // true that arrives when SetupScrollListener runs in the next OnAfterRenderAsync.
+        // Dispose immediately so __scrollListenerReady resets before re-attach.
         if (scrollModule != null)
         {
             try
