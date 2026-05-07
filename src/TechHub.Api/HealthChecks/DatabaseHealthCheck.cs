@@ -25,6 +25,8 @@ public class DatabaseHealthCheck : IHealthCheck
             using var connection = await _connectionFactory.CreateConnectionAsync(cancellationToken);
             using var command = connection.CreateCommand();
             command.CommandText = "SELECT 1";
+            // Cast to DbCommand is required because IDbCommand does not expose ExecuteScalarAsync.
+            // NpgsqlCommand (the underlying type) inherits from DbCommand, so this cast is always safe.
             await ((System.Data.Common.DbCommand)command).ExecuteScalarAsync(cancellationToken);
 
             return HealthCheckResult.Healthy("Database connection is healthy");

@@ -19,6 +19,11 @@ public class PostgresConnectionFactory : IDbConnectionFactory
         _dataSource = dataSource;
     }
 
+    /// <summary>
+    /// Creates and opens a new database connection synchronously by acquiring one from the pool.
+    /// Use only when async is not possible (e.g. DI factory delegates). In all async code paths,
+    /// prefer <see cref="CreateConnectionAsync"/> to avoid blocking the thread pool.
+    /// </summary>
     public IDbConnection CreateConnection()
     {
         return _dataSource.OpenConnection();
