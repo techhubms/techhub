@@ -451,27 +451,6 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_ShouldDisplay_VideoSections()
-    {
-        // Arrange
-        await Page.GotoRelativeAsync(PageUrl);
-
-        // Assert - Feature video sections (from featureSections config) should exist below the timeline
-        var videoSections = Page.Locator(".features-video-section");
-        var sectionCount = await videoSections.CountAsync();
-        sectionCount.Should().BeGreaterThan(0, "Should have at least one feature video section");
-
-        // First section should have a heading and a card grid
-        var firstSection = videoSections.First;
-        await Assertions.Expect(firstSection.Locator("h2")).ToBeVisibleAsync();
-
-        // Should have some feature cards
-        var cards = Page.Locator(".features-cards-grid .card");
-        var cardCount = await cards.CountAsync();
-        cardCount.Should().BeGreaterThan(0, "Should have feature cards in the video sections");
-    }
-
-    [Fact]
     public async Task GitHubCopilotFeatures_ShouldHave_NoConsoleErrors()
     {
         // Arrange

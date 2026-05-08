@@ -1,5 +1,5 @@
 /* ============================================================================
-   GitHub Copilot Features Page Styles — Feature Timeline + Video Grid
+   GitHub Copilot Features Page Styles — Feature Timeline
    
    Page-specific layout only - cards inherit from global cards.css
    ============================================================================ */
@@ -508,53 +508,6 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   }
 }
 
-/* ─── Feature Video Sections (restored) ─────────────────────────── */
-
-.features-video-section {
-  margin-bottom: var(--spacing-6);
-}
-
-.features-video-section h2 {
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-2);
-  color: var(--color-text-emphasis);
-}
-
-.features-section-filters {
-  display: flex;
-  gap: var(--spacing-2);
-  margin-bottom: var(--spacing-3);
-  flex-wrap: wrap;
-}
-
-/* Feature Cards Grid — 3 per row on wide screens */
-.features-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-3);
-}
-
-::deep .feature-card {
-  min-height: auto;
-}
-
-::deep .feature-card h3 {
-  margin-top: 0;
-}
-
-/* Non-clickable cards (no video) */
-::deep .feature-card-static {
-  cursor: default;
-}
-
-@media (hover: hover) {
-  ::deep .feature-card-static:hover {
-    border-color: var(--color-border-default);
-    box-shadow: none;
-    transform: none;
-  }
-}
-
 /* ─── Responsive ─────────────────────────────────────────────────── */
 
 @media (max-width: 1292px) {
@@ -564,12 +517,6 @@ html.keyboard-nav .features-timeline-header:focus-visible {
     overflow-y: visible;
     padding-right: 0;
     padding-bottom: 0;
-  }
-}
-
-@media (max-width: 1200px) {
-  .features-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -589,10 +536,6 @@ html.keyboard-nav .features-timeline-header:focus-visible {
 
   .features-timeline-video {
     max-width: 100%;
-  }
-
-  .features-cards-grid {
-    grid-template-columns: 1fr;
   }
 }
 
