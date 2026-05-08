@@ -101,7 +101,7 @@ public static class ContentEndpoints
         group.MapGet("/{sectionName}/collections/{collectionName}/{slug}", GetContentDetail)
             .WithName("GetContentDetail")
             .WithSummary("Get content item detail")
-            .WithDescription("Returns full content item including rendered HTML for content pages. Returns 204 No Content when the section, collection, or slug does not exist (get-if-exists semantics).")
+            .WithDescription("Returns full content item including rendered HTML for content pages. Returns 204 No Content when the section, collection, or slug does not exist, or when the matched item links externally and therefore has no internal detail representation.")
             .Produces<ContentItemDetail>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status204NoContent)
             .Produces(StatusCodes.Status400BadRequest);

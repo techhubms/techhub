@@ -154,7 +154,7 @@ Get a specific section by name.
 
 - `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`, `ml`)
 
-**Response**: `200 OK` or `204 No Content` (section not found)
+**Response**: `200 OK`, `204 No Content` (section not found), or `400 Bad Request` (invalid `sectionName` format)
 
 ```bash
 curl -k https://localhost:5001/api/sections/ai
@@ -195,7 +195,7 @@ Get all collections available in a section.
 
 - `sectionName` (path): Section identifier
 
-**Response**: `200 OK` or `204 No Content` (section not found)
+**Response**: `200 OK`, `204 No Content` (section not found), or `400 Bad Request` (invalid `sectionName` format)
 
 ```bash
 curl -k https://localhost:5001/api/sections/github-copilot/collections
@@ -210,7 +210,7 @@ Get details about a specific collection within a section.
 - `sectionName` (path): Section identifier
 - `collectionName` (path): Collection name (e.g., `news`, `blogs`, `videos`, `community`, `roundups`)
 
-**Response**: `200 OK` or `204 No Content` (section or collection not found)
+**Response**: `200 OK`, `204 No Content` (section or collection not found), or `400 Bad Request` (invalid `sectionName` or `collectionName` format)
 
 ```bash
 curl -k https://localhost:5001/api/sections/ai/collections/news
@@ -230,7 +230,7 @@ Get detailed content item by section, collection, and content slug.
 - `collectionName` (path): Collection name
 - `slug` (path): Content slug
 
-**Response**: `200 OK` or `204 No Content` (section, collection, or slug not found)
+**Response**: `200 OK`, `204 No Content` (section, collection, or slug not found, or the matched item links externally and has no internal detail representation), or `400 Bad Request` (invalid `sectionName`, `collectionName`, or `slug` format)
 
 **Response Body**: `ContentItemDetail` with full rendered HTML, metadata, and TOC
 

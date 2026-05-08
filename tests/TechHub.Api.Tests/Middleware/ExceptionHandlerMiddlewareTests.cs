@@ -20,7 +20,7 @@ public class ExceptionHandlerMiddlewareTests : IClassFixture<TechHubIntegrationT
     }
 
     [Fact]
-    public async Task NotFound_ReturnsGenericMessage_NotInternalDetails()
+    public async Task NotFound_DoesNotLeakInternalDetails()
     {
         // Arrange - request an RSS feed for a section that does not exist (RSS still returns 404)
         var response = await _client.GetAsync("/api/rss/nonexistent-section-that-does-not-exist", TestContext.Current.CancellationToken);
