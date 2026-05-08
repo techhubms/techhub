@@ -852,33 +852,37 @@ Write-Step "Enabling sticky sessions on Web Container App"
 # The startup probe update can leave the app in a short-lived provisioning operation.
 # Retry on ContainerAppOperationInProgress so we still enforce sticky sessions instead of
 # failing immediately on a transient Azure control-plane race.
-$stickySetDeadline = (Get-Date).AddSeconds(90)
-$stickySet = $false
+# 90s gives enough room for the prior startup-probe update to finish provisioning;
+# 5s retry cadence balances responsiveness with API throttling/noise.
+$stickySetTimeoutSeconds = 90
+$stickySetRetryDelaySeconds = 5
+$stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
+$stickySessionsEnabled = $false
 while ((Get-Date) -lt $stickySetDeadline) {
     $stickySetOutput = az containerapp ingress sticky-sessions set `
         --name $webAppName `
         --resource-group $stagingRG `
         --affinity sticky 2>&1
     if ($LASTEXITCODE -eq 0) {
-        $stickySet = $true
+        $stickySessionsEnabled = $true
         break
     }
 
-    $stickySetText = ($stickySetOutput | Out-String).Trim()
-    if ($stickySetText -match 'ContainerAppOperationInProgress') {
-        Write-Warn "Container App operation still in progress while enabling sticky sessions — retrying in 5s"
-        Start-Sleep -Seconds 5
+    $stickySetOutputText = ($stickySetOutput | Out-String).Trim()
+    if ($stickySetOutputText -match 'ContainerAppOperationInProgress') {
+        Write-Warn "Container App operation still in progress while enabling sticky sessions — retrying in $($stickySetRetryDelaySeconds)s"
+        Start-Sleep -Seconds $stickySetRetryDelaySeconds
         continue
     }
 
     Write-Fail "Failed to enable sticky sessions — Blazor SignalR will not work correctly (exit code $LASTEXITCODE)"
-    if (-not [string]::IsNullOrWhiteSpace($stickySetText)) {
-        Write-Detail $stickySetText
+    if (-not [string]::IsNullOrWhiteSpace($stickySetOutputText)) {
+        Write-Detail $stickySetOutputText
     }
     exit 1
 }
-if (-not $stickySet) {
-    Write-Fail "Failed to enable sticky sessions within 90s because the Container App stayed busy"
+if (-not $stickySessionsEnabled) {
+    Write-Fail "Failed to enable sticky sessions within $($stickySetTimeoutSeconds)s because the Container App stayed busy"
     exit 1
 }
 Write-Ok "Sticky sessions set — waiting for propagation..."
