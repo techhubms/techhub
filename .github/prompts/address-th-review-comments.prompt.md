@@ -1,6 +1,6 @@
 ---
 name: address-th-review-comments
-description: "Reviews all open review comment threads on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, then commits and pushes via the pushall workflow."
+description: "Reviews all open review comment threads on the current branch's pull request, analyses each one, applies code fixes where needed, replies to each thread explaining what was done or why it was ignored, resolves each thread after replying, then commits and pushes directly."
 model: Claude Sonnet 4.6
 ---
 
@@ -187,7 +187,9 @@ Otherwise, count the unresolved threads and report:
 
 ## Step 6 — Analyse and address each open thread
 
-Work through each unresolved thread one at a time, in order.
+**🚨 CRITICAL**: Steps 6d (reply) and 6e (resolve) are **MANDATORY** for **every single thread** — including threads where you made a code fix. You are not done with a thread until you have BOTH posted a reply AND resolved it on GitHub. Never skip 6d or 6e. Never batch them for later.
+
+Work through each unresolved thread one at a time, in order. **Complete all six sub-steps before moving to the next thread.**
 
 For **each thread**, do the following:
 
@@ -199,11 +201,7 @@ Read ALL comments in the thread carefully. Understand:
 - **What is being requested** (code change, explanation, style fix, etc.)
 - **The diff hunk** for context on what the original code looked like
 
-Read the relevant section of the file being discussed to understand the current code state:
-
-```pwsh
-# Read the file to understand current code
-```
+Read the relevant section of the file being discussed to understand the current code state.
 
 ### 6b — Decide: fix or explain
 
@@ -219,11 +217,9 @@ Make the minimal correct change to address the comment. Follow the conventions i
 
 Do **not** change anything beyond what the comment requests.
 
-### 6d — Reply to the thread
+### 6d — **MANDATORY**: Reply to the thread
 
-Get the `databaseId` of the **first** comment in this thread (this is the root comment to reply to).
-
-Post a reply:
+**🚨 Do this now, before moving to 6e. Do not defer.** Get the `databaseId` of the **first** comment in this thread (this is the root comment to reply to) and post a reply immediately.
 
 **If you fixed it:**
 
@@ -237,15 +233,36 @@ gh api repos/[REPO]/pulls/[PR_NUMBER]/comments/[COMMENT_DATABASE_ID]/replies -X 
 gh api repos/[REPO]/pulls/[PR_NUMBER]/comments/[COMMENT_DATABASE_ID]/replies -X POST -f body="No change needed: [one or two sentences explaining why this comment does not require a fix — be specific and respectful]"
 ```
 
-### 6e — Checkpoint for this thread
+Verify the command exits 0. If it fails, stop and report the error.
 
-State: "✅ Thread [N/TOTAL] addressed ([FIXED/NO_FIX]). [Brief one-line summary of action taken]."
+### 6e — **MANDATORY**: Resolve the thread
+
+**🚨 Do this now, immediately after 6d. Do not defer.** Use the thread `id` (the GraphQL node ID, not the `databaseId`) to mark the thread resolved on GitHub:
+
+```pwsh
+gh api graphql -f query='
+mutation {
+  resolveReviewThread(input: { threadId: "[THREAD_NODE_ID]" }) {
+    thread { isResolved }
+  }
+}'
+```
+
+Verify the response shows `"isResolved": true`. If not, stop and report the error.
+
+> **Note on dismiss vs resolve**: GitHub does not have a separate "dismiss" API for inline review threads — resolving IS the correct action. The reply you posted in 6d already makes the rationale visible. Resolving removes it from the open-discussions list so the PR stays clean.
+
+### 6f — Checkpoint for this thread
+
+Confirm both actions completed, then state:
+
+"✅ Thread [N/TOTAL] — replied and resolved. [FIXED/NO_FIX]: [Brief one-line summary of action taken]."
 
 ---
 
-Repeat steps 6a–6e for every unresolved thread before moving on.
+Repeat steps 6a–6f for every unresolved thread before moving on.
 
-**CHECKPOINT**: "✅ Step 6 completed. All [N] threads addressed. Moving to Step 7."
+**CHECKPOINT**: "✅ Step 6 completed. All [N] threads replied to and resolved on GitHub. Moving to Step 7."
 
 ---
 
@@ -275,14 +292,29 @@ Print a concise table of every thread and what was done:
 
 ---
 
-## Step 9 — Commit and push via the pushall workflow
+## Step 9 — Commit and push directly
 
-If any code changes were made in Step 6, load and follow the **pushall** skill:
+If **no code changes** were made (all threads received "no fix needed" replies), skip this step — no commit is necessary.
 
-> Read the file `.github/skills/pushall/SKILL.md` and follow the Push All Workflow from Step 1.
+Otherwise, stage and commit only the files changed in Step 6:
 
-The pushall workflow will handle staging, committing, rebasing, pushing, and updating the pull request.
+```pwsh
+git add -A
+```
 
-If **no code changes** were made (all threads received "no fix needed" replies), skip the pushall workflow — no commit is necessary.
+Write a short, direct commit message summarising the fixes (no ticket numbers, no PR references). Use imperative mood. Example: `"Address PR review comments: [brief summary]"`.
 
-**CHECKPOINT**: "✅ Step 9 completed. Workflow complete."
+```pwsh
+git commit -m "[COMMIT_MESSAGE]"
+```
+
+Pull with rebase to incorporate any upstream changes, then push:
+
+```pwsh
+git pull --rebase origin [BRANCHNAME]
+git push origin [BRANCHNAME]
+```
+
+If the push is rejected for any reason, stop and ask the user.
+
+**CHECKPOINT**: "✅ Step 9 completed. Changes committed and pushed. Workflow complete."

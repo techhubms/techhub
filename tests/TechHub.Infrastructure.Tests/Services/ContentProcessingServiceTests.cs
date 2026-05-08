@@ -914,6 +914,31 @@ public class ContentProcessingServiceTests
         result!.Outcome.Should().Be(AdHocUrlProcessOutcome.Added);
     }
 
+    [Fact]
+    public async Task ProcessSingleAsync_AlwaysSetsSkipSalesPitchCheckTrue()
+    {
+        // Manual ad-hoc processing skips the sales pitch exclusion rule because an operator
+        // has already decided the content belongs. The flag must reach the AI categorizer.
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var url = $"https://example.com/manual-skip-pitch-{testId}";
+        var processed = CreateProcessedItem(url, $"manual-skip-pitch-{testId}");
+
+        RawFeedItem? capturedItem = null;
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Callback<RawFeedItem, CancellationToken>((item, _) => capturedItem = item)
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
+
+        // Act
+        await sut.ProcessSingleAsync(url, "blogs", "TechHub", ct: TestContext.Current.CancellationToken);
+
+        // Assert — the item passed to the AI must have SkipSalesPitchCheck set
+        capturedItem.Should().NotBeNull();
+        capturedItem!.SkipSalesPitchCheck.Should().BeTrue(
+            "manual operations bypass the sales pitch exclusion rule");
+    }
+
     // ── Subcollection Rules ────────────────────────────────────────────────
 
     [Theory]
