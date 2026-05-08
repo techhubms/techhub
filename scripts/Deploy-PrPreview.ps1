@@ -196,7 +196,7 @@ function Set-WebStartupProbe {
     $patchBody | Set-Content $patchFile -Encoding utf8
 
     $apiUrl = "https://management.azure.com/subscriptions/$subId/resourceGroups/$ResourceGroup" +
-              "/providers/Microsoft.App/containerApps/$AppName?api-version=2024-03-01"
+              "/providers/Microsoft.App/containerApps/$($AppName)?api-version=2024-03-01"
     az rest --method PATCH --url $apiUrl --body "@$patchFile" --output none
 
     Remove-Item $patchFile -ErrorAction SilentlyContinue
