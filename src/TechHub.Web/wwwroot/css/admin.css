@@ -676,10 +676,16 @@ select.admin-input {
     }
 
     /* Tables: use natural content width so horizontal scrolling is effective;
-       the reason column keeps its max-width cap to avoid very wide columns */
+       cap long-text cells so unbroken values do not create excessive scroll width */
     .admin-jobs-table-wrapper .admin-table {
         width: max-content;
         min-width: 100%;
+    }
+
+    .admin-jobs-table-wrapper .admin-cell-url {
+        max-width: 20rem;
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
 }
