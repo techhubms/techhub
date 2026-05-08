@@ -62,7 +62,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching section: {SectionName}", sectionName);
-            var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}", cancellationToken);
+            using var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
