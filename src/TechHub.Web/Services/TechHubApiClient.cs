@@ -92,7 +92,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
-            var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}/collections", cancellationToken);
+            using var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}/collections", cancellationToken);
 
             if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
@@ -129,7 +129,7 @@ public class TechHubApiClient : ITechHubApiClient
         try
         {
             _logger.LogDebug("Fetching collection: {SectionName}/{CollectionName}", sectionName, collectionName);
-            var response = await _httpClient.GetAsync(
+            using var response = await _httpClient.GetAsync(
                 $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}",
                 cancellationToken);
 
@@ -348,7 +348,7 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Fetching content detail: {SectionName}/{CollectionName}/{Slug}",
                 sectionName, collectionName, slug);
 
-            var response = await _httpClient.GetAsync(
+            using var response = await _httpClient.GetAsync(
                 $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/{Uri.EscapeDataString(slug)}",
                 cancellationToken);
 

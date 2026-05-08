@@ -27,6 +27,12 @@ public class ExceptionHandlerMiddlewareTests : IClassFixture<TechHubIntegrationT
 
         // Assert - verify that 404 responses don't leak internal details
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+
+        var content = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+
+        content.Should().NotContain("System.");
+        content.Should().NotContain("at TechHub.");
+        content.Should().NotContain("StackTrace");
     }
 
     [Fact]

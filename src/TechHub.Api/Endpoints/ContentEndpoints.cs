@@ -55,14 +55,16 @@ public static class ContentEndpoints
             .WithSummary("Get section by name")
             .WithDescription("Returns a single section with its collections and metadata. Returns 204 No Content when the section does not exist (get-if-exists semantics).")
             .Produces<Section>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status204NoContent);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         group.MapGet("/{sectionName}/collections", GetSectionCollections)
             .WithName("GetSectionCollections")
             .WithSummary("Get all collections in a section")
             .WithDescription("Returns all collection references for this section. Returns 204 No Content when the section does not exist (get-if-exists semantics).")
             .Produces<IEnumerable<Collection>>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status204NoContent);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         // ============================================================
         // Collection-level endpoints
@@ -73,7 +75,8 @@ public static class ContentEndpoints
             .WithSummary("Get collection details")
             .WithDescription("Returns details of a specific collection within this section. Returns 204 No Content when the section or collection does not exist (get-if-exists semantics).")
             .Produces<Collection>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status204NoContent);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         group.MapGet("/{sectionName}/collections/{collectionName}/items", GetCollectionItems)
             .WithName("GetCollectionItems")
@@ -100,7 +103,8 @@ public static class ContentEndpoints
             .WithSummary("Get content item detail")
             .WithDescription("Returns full content item including rendered HTML for content pages. Returns 204 No Content when the section, collection, or slug does not exist (get-if-exists semantics).")
             .Produces<ContentItemDetail>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status204NoContent);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         // ============================================================
         // Legacy redirect endpoint (outside the section hierarchy group)

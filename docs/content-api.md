@@ -92,9 +92,9 @@ Content linking behavior is determined by **collection name**, not by the `exter
 
 | Collection | Links To | Detail Endpoint | `externalUrl` Usage |
 |------------|----------|-----------------|---------------------|
-| `news` | External URL | Returns `204` | Used for linking |
-| `blogs` | External URL | Returns `204` | Used for linking |
-| `community` | External URL | Returns `204` | Used for linking |
+| `news` | External URL | Returns `204 No Content` | Used for linking |
+| `blogs` | External URL | Returns `204 No Content` | Used for linking |
+| `community` | External URL | Returns `204 No Content` | Used for linking |
 | `videos` | Internal page | Returns content | Stored but not used for linking |
 | `roundups` | Internal page | Returns content | Internal path, not used |
 
