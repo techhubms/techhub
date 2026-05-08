@@ -51,4 +51,12 @@ public sealed class RawFeedItem
     /// <summary>Whether this item links to a YouTube video.</summary>
     public bool IsYouTube => ExternalUrl.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
         || ExternalUrl.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
+
+    /// <summary>
+    /// When <c>true</c>, instructs the AI to skip the "Sales Pitches" exclusion rule for this item
+    /// and categorize it normally regardless of promotional content.
+    /// Set for manual operations (ad-hoc adds, transcript application, GHC draft publishing)
+    /// where an operator has already decided the content belongs.
+    /// </summary>
+    public bool SkipSalesPitchCheck { get; init; }
 }

@@ -1,4 +1,5 @@
 using System.Data;
+using System.Net;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -314,7 +315,11 @@ builder.Services.AddAuthorization(options =>
 // Rate limiting: defense-in-depth for the API (primary rate limiting is on the Web layer)
 // Disabled in IntegrationTest environment to avoid throttling test suites that run many
 // requests from a single IP within a short window.
+// Loopback exemptions are scoped to Development/IntegrationTest so that a spoofed
+// X-Forwarded-For: 127.0.0.1 cannot bypass rate limiting in production
+// (UseForwardedHeaders runs before UseRateLimiter).
 var isIntegrationTest = builder.Environment.IsEnvironment("IntegrationTest");
+var isLoopbackExempt = builder.Environment.IsDevelopment() || isIntegrationTest;
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -330,29 +335,51 @@ builder.Services.AddRateLimiter(options =>
         await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
     };
 
-    // Public content endpoints: generous limit (defense against runaway loops or future architecture changes)
+    // Public content endpoints: generous limit (defense against runaway loops or future architecture changes).
+    // Loopback connections (localhost) are exempt — they are always local dev or CI integration test
+    // runners, not external clients. Loopback exemption is restricted to Development and
+    // IntegrationTest: UseForwardedHeaders rewrites RemoteIpAddress before UseRateLimiter
+    // runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass rate limiting.
     options.AddPolicy("api-public", context =>
-        isIntegrationTest
-            ? RateLimitPartition.GetNoLimiter("no-limit")
-            : RateLimitPartition.GetSlidingWindowLimiter(
-                partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
-                factory: _ => new SlidingWindowRateLimiterOptions
-                {
-                    PermitLimit = 200,
-                    Window = TimeSpan.FromMinutes(1),
-                    SegmentsPerWindow = 6,
-                    QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
-                    QueueLimit = 10
-                }));
+    {
+        if (isIntegrationTest)
+        {
+            return RateLimitPartition.GetNoLimiter("no-limit");
+        }
+
+        var ip = context.Connection.RemoteIpAddress;
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
+        {
+            return RateLimitPartition.GetNoLimiter("loopback");
+        }
+
+        return RateLimitPartition.GetSlidingWindowLimiter(
+            partitionKey: ip?.ToString() ?? "unknown",
+            factory: _ => new SlidingWindowRateLimiterOptions
+            {
+                PermitLimit = 200,
+                Window = TimeSpan.FromMinutes(1),
+                SegmentsPerWindow = 6,
+                QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
+                QueueLimit = 10
+            });
+    });
 
     // Admin endpoints: per-user limit for authenticated requests (generous for legitimate admin
     // work), strict IP-based limit for unauthenticated requests (brute-force protection).
+    // Loopback exemption is restricted to Development/IntegrationTest for the same reason as api-public.
     // NOTE: UseRateLimiter() must run after UseAuthentication() so context.User is populated.
     options.AddPolicy("api-admin", context =>
     {
         if (isIntegrationTest)
         {
             return RateLimitPartition.GetNoLimiter("no-limit");
+        }
+
+        var ip = context.Connection.RemoteIpAddress;
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
+        {
+            return RateLimitPartition.GetNoLimiter("loopback");
         }
 
         // Prefer the Azure AD object-ID claim so each admin user gets their own bucket.
@@ -377,7 +404,7 @@ builder.Services.AddRateLimiter(options =>
 
         // Unauthenticated — keep a strict IP limit to deter auth brute-forcing.
         return RateLimitPartition.GetSlidingWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            partitionKey: ip?.ToString() ?? "unknown",
             factory: _ => new SlidingWindowRateLimiterOptions
             {
                 PermitLimit = 30,

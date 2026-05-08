@@ -1216,4 +1216,80 @@ public class AiCategorizationServiceTests
         result.Item.Sections.Should().Contain("dotnet");
         result.IsFailure.Should().BeFalse();
     }
+
+    // ── SkipSalesPitchCheck Override ──────────────────────────────────────────
+
+    [Fact]
+    public void BuildUserPrompt_WithSkipSalesPitchCheckFalse_DoesNotIncludeOverride()
+    {
+        // Arrange — default item without the flag
+        var item = CreateRawItem();
+
+        // Act
+        var prompt = AiCategorizationService.BuildUserPrompt(item);
+
+        // Assert — no override line in the prompt
+        prompt.Should().NotContain("PROCESSING_OVERRIDE");
+        prompt.Should().NotContain("SkipSalesPitchCheck");
+    }
+
+    [Fact]
+    public void BuildUserPrompt_WithSkipSalesPitchCheckTrue_IncludesOverrideLine()
+    {
+        // Arrange — item with the flag set (manual operation)
+        var item = new RawFeedItem
+        {
+            Title = "My Awesome Tool Launch",
+            ExternalUrl = "https://example.com/tool",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "TechHub",
+            CollectionName = "blogs",
+            SkipSalesPitchCheck = true
+        };
+
+        // Act
+        var prompt = AiCategorizationService.BuildUserPrompt(item);
+
+        // Assert — override line is present with the correct instruction
+        prompt.Should().Contain("PROCESSING_OVERRIDE: SkipSalesPitchCheck=true");
+        prompt.Should().Contain("Sales Pitches");
+        // Regular content fields should still be present
+        prompt.Should().Contain("FEED: TechHub");
+        prompt.Should().Contain("COLLECTION: blogs");
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WithSkipSalesPitchCheck_SendsOverrideInPromptToAi()
+    {
+        // Arrange — capture what was sent to the AI client
+        var aiJson = """{ "included": false, "explanation": "Excluded" }""";
+        string? capturedBody = null;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .Callback<string, CancellationToken>((body, _) => capturedBody = body)
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+        var item = new RawFeedItem
+        {
+            Title = "Author's Own Tool",
+            ExternalUrl = "https://example.com/tool",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "TechHub",
+            CollectionName = "news",
+            SkipSalesPitchCheck = true
+        };
+
+        // Act
+        await sut.CategorizeAsync(item, CancellationToken.None);
+
+        // Assert — the user message sent to the AI must contain the override
+        capturedBody.Should().NotBeNull();
+        using var doc = JsonDocument.Parse(capturedBody!);
+        var userContent = doc.RootElement
+            .GetProperty("messages")[1]
+            .GetProperty("content")
+            .GetString();
+        userContent.Should().Contain("PROCESSING_OVERRIDE: SkipSalesPitchCheck=true");
+    }
 }
