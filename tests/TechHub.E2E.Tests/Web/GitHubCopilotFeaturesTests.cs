@@ -380,11 +380,15 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // scrollIntoView would snap it to the top of the viewport.
         // Wait for visible in case Blazor briefly re-renders after the click.
         await Assertions.Expect(heading).ToBeVisibleAsync();
-        var rectAfter = await heading.BoundingBoxAsync();
+        // Use JS getBoundingClientRect directly — BoundingBoxAsync() can return null during
+        // Blazor's DOM patch because the element is briefly detached and has zero-size
+        // layout, even though ToBeVisibleAsync just confirmed it was present.
+        var yAfter = await Page.EvaluateAsync<double?>(
+            "() => document.querySelector('.features-video-section h2[id]')?.getBoundingClientRect()?.y");
         rectBefore.Should().NotBeNull();
-        rectAfter.Should().NotBeNull();
+        yAfter.Should().NotBeNull("heading should be present with a layout box after filter click");
 
-        var yDiff = Math.Abs(rectAfter!.Y - rectBefore!.Y);
+        var yDiff = Math.Abs(yAfter!.Value - rectBefore!.Y);
         yDiff.Should().BeLessThan(100, "Heading position should not change significantly - no programmatic scroll should occur");
     }
 }

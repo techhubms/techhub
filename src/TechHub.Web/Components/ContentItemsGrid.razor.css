@@ -107,13 +107,45 @@
 }
 
 /* ============================================================================
-   Infinite Scroll States
+   Load More Button
    ============================================================================ */
 
-.loading-more-indicator {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--color-text-secondary);
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-6);
+  background: transparent;
+  color: var(--color-text-link);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--easing-ease-in-out),
+              border-color var(--duration-fast) var(--easing-ease-in-out);
+}
+
+.load-more-btn:hover:not(:disabled) {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-text-link);
+}
+
+.load-more-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.load-more-btn .loading-spinner {
+  width: 1rem;
+  height: 1rem;
+  border-width: 2px;
+  margin-bottom: 0;
 }
 
 .loading-spinner {
@@ -131,12 +163,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.loading-more-indicator p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
 }
 
 .end-of-content {

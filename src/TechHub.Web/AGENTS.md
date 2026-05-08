@@ -96,7 +96,7 @@ CSS files are defined once in `TechHub.Web.Configuration.CssFiles.All` and refer
 
 | File                  | Purpose                                           | Loading          |
 | --------------------- | ------------------------------------------------- | ---------------- |
-| `scroll-manager.js`   | Navigation, scroll position, TOC spy, infinite scroll, buttons | Static ES module |
+| `scroll-manager.js`   | Navigation, scroll position, TOC spy, buttons | Static ES module |
 | `mobile-nav.js`       | Mobile navigation scroll lock and keyboard handling | Static (defer) |
 | `sidebar-toggle.js`   | Desktop sidebar collapse/expand with localStorage | Static (defer)   |
 | `hero-banner.js`      | Hero banner collapse/expand with cookie persistence | Static (defer) |
@@ -195,15 +195,13 @@ See [Middleware/StaticFilesCacheMiddleware.cs](Middleware/StaticFilesCacheMiddle
 
 **CRITICAL**: Uses `history.replaceState()` (not `pushState()`) to update URL hash — prevents polluting browser history with scroll positions. Only TOC link clicks create history entries.
 
-## Infinite Scroll
+## Load More Button
 
-- **Items per batch**: 20 items
-- **Prefetch trigger**: 300px margin
-- **Sentinel element**: `#scroll-trigger` (removed when no more items)
-- **Ready signal**: `window.__scrollListenerReady[triggerId]` (scoped per trigger to avoid interference)
-- Uses `IntersectionObserver` with a 300px `rootMargin` — fires once when the sentinel enters the extended viewport, then immediately disconnects to prevent cascade
-- All logic in `scroll-manager.js` — Blazor imports via `JSRuntime.InvokeAsync("import", "./js/scroll-manager.js")` (relative specifier so the ImportMap resolves to the fingerprinted URL)
-- **Architecture deep-dive**: See [docs/scroll-system-architecture.md](../../docs/scroll-system-architecture.md) for the full scroll system (navigation lifecycle, save/restore, TOC, infinite scroll, known bugs, test coverage)
+- **Items per batch**: 40 items
+- **Load More button**: shown when `hasMoreContent: true` in the circuit cache; hidden when all content is loaded
+- **End of content**: shown when `hasMoreContent: false` and at least one item is loaded
+- Pure Blazor `@onclick` — no JavaScript or `JSRuntime` needed
+- **Architecture deep-dive**: See [docs/scroll-system-architecture.md](../../docs/scroll-system-architecture.md) for the full scroll system (navigation lifecycle, save/restore, TOC, known edge cases, test coverage)
 
 ## Date Formatting
 

@@ -381,12 +381,11 @@ window.initCustomPages = initCustomPages;
 //
 // markScriptsReady defers setting __scriptsReady = true until all component-level
 // JS init is confirmed done. Each component that does JS work owns a ready flag:
-//   __scrollListenerReady['scroll-trigger']  — ContentItemsGrid (scroll-manager.js)
 //   __dateRangeSliderReady                   — DateRangeSlider (date-range-slider.js)
 // Components set their flag false at start and true when done (including on all
 // early-exit paths). They reset it to false in their dispose so the next navigation
 // starts clean. markScriptsReady only checks a component's flag if its DOM element
-// is present on the current page (#scroll-trigger, #date-range-slider).
+// is present on the current page (#date-range-slider).
 
 window.markScriptsLoading = function() {
     window.__scriptsReady = false;
@@ -412,14 +411,9 @@ window.markScriptsReady = function() {
     // so pages without these components are not affected.
     //
     // Known component flags:
-    //   __scrollListenerReady['scroll-trigger'] — set by ContentItemsGrid via scroll-manager.js
     //   __dateRangeSliderReady                  — set by DateRangeSlider via date-range-slider.js
     //   __mermaidReady                          — set by initMermaid() in page-scripts.js
     function allComponentsReady() {
-        if (document.getElementById('scroll-trigger') &&
-            !window.__scrollListenerReady?.['scroll-trigger']) {
-            return false;
-        }
         if (document.getElementById('date-range-slider') &&
             !window.__dateRangeSliderReady) {
             return false;

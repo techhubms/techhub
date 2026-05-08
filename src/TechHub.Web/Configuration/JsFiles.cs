@@ -50,7 +50,7 @@ public static class JsFiles
     /// </summary>
     public static readonly string[] AlwaysLoad =
     [
-        "js/scroll-manager.js", // Navigation, scroll position, TOC scroll spy, infinite scroll
+        "js/scroll-manager.js", // Navigation, scroll position, TOC scroll spy
         "js/mobile-nav.js",     // Mobile navigation scroll lock and keyboard handling
         "js/sidebar-toggle.js", // Desktop sidebar collapse/expand with localStorage persistence
         "js/hero-banner.js"     // Hero banner collapse/expand with cookie persistence

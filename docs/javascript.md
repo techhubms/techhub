@@ -65,7 +65,7 @@ Files in `wwwroot/js/`:
 
 | File | Purpose | Loading | Format |
 |------|---------|---------|--------|
-| `scroll-manager.js` | Navigation buttons, keyboard nav detection, scroll position save/restore, TOC scroll spy, infinite scroll | Static (`type="module"`) | ES Module |
+| `scroll-manager.js` | Navigation buttons, keyboard nav detection, scroll position save/restore, TOC scroll spy | Static (`type="module"`) | ES Module |
 | `sidebar-toggle.js` | Desktop sidebar collapse/expand with cookie persistence | Static (`defer`) | Script |
 | `mobile-nav.js` | Mobile menu scroll lock and Escape key handler | Static (`defer`) | Script |
 | `hero-banner.js` | Hero banner collapse/expand with cookie persistence | Static (`defer`) | IIFE |
@@ -117,7 +117,7 @@ External libraries are loaded from CDNs for performance. All versions and SRI ha
 ## Scroll Manager
 
 `wwwroot/js/scroll-manager.js` is the unified module handling scroll position
-save/restore, navigation lifecycle, TOC scroll-spy, infinite scroll, and
+save/restore, navigation lifecycle, TOC scroll-spy, and
 back-to-top/back-to-prev buttons.
 
 For the full architecture (sequence diagrams, known bugs, `navigating` flag,
@@ -129,8 +129,7 @@ For the full architecture (sequence diagrams, known bugs, `navigating` flag,
 | Export | Called by | Purpose |
 |--------|-----------|---------|
 | `initTocScrollSpy()` | page-scripts.js | Activate TOC highlighting |
-| `observeScrollTrigger(helper, id)` | ContentItemsGrid.razor | Register infinite scroll trigger |
-| `dispose()` | ContentItemsGrid.razor | Clean up on component disposal |
+
 | `isNavigating()` | Tests | Check navigation state |
 
 ### Key Rules

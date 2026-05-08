@@ -394,74 +394,51 @@ Mobile navigation styles are in component-scoped CSS:
 - **JS scroll lock**: `wwwroot/js/mobile-nav.js` — `lockScroll()` / `unlockScroll()` for body positioning during menu open
 - **Reduced motion**: All animations respect `prefers-reduced-motion: reduce`
 
-## Infinite Scroll Pagination
+## Load More Pagination
 
-Long content lists use infinite scroll for progressive loading.
+Long content lists use a "Load more" button for progressive loading.
 
 ### Configuration
 
-- **Items per batch**: 20 items
-- **Trigger margin**: 300px above viewport bottom (loads next batch before user reaches the end)
+- **Items per batch**: 40 items
 - **URL parameter preservation**: Maintains filters/search when loading more
 
 ### Pattern
 
 ```razor
-<div id="content-container">
-    @foreach (var item in visibleItems)
-    {
-        <ContentItemCard Item="@item" Section="@section" />
-    }
-</div>
-
-@if (hasMore)
+@if (hasMoreContent)
 {
-    <div id="scroll-trigger" style="height: 1px;"></div>
+    <div class="load-more-container">
+        <button class="load-more-btn" @onclick="LoadNextBatch" disabled="@isLoadingMore">
+            @if (isLoadingMore) { <span>Loading…</span> }
+            else { <span>Load more</span> }
+        </button>
+    </div>
+}
+else if (contentItems.Any())
+{
+    <div class="end-of-content" role="status">
+        <p>End of content</p>
+    </div>
 }
 
 @code {
-    private List<ContentItem> visibleItems = new();
-    private bool hasMore = true;
-    private const int PageSize = 20;
+    private const int BatchSize = 40;
+    private bool hasMoreContent = true;
+    private bool isLoadingMore;
 
-    [JSInvokable]
-    public async Task LoadNextBatch()
+    private async Task LoadNextBatch()
     {
-        var nextBatch = await ApiClient.GetContentAsync(
-            section: sectionName,
-            page: currentPage++,
-            pageSize: PageSize);
-
-        if (nextBatch.Count < PageSize)
-            hasMore = false;
-
-        visibleItems.AddRange(nextBatch);
+        if (isLoadingMore || !hasMoreContent) return;
+        isLoadingMore = true;
         StateHasChanged();
+        try { await LoadBatch(currentBatch + 1); }
+        finally { isLoadingMore = false; StateHasChanged(); }
     }
 }
 ```
 
-### JavaScript
-
-Uses scroll events and `getBoundingClientRect()` to detect when the trigger element
-is near the viewport bottom (same pattern as the TOC scroll-spy). Sets
-`window.__scrollListenerReady[triggerId] = true` when the listener is attached so
-E2E tests can wait for it before scrolling. Readiness is scoped by trigger element ID
-so multiple concurrent listeners don't interfere.
-
-```javascript
-function handleScroll() {
-    const trigger = document.getElementById(triggerId);
-    if (!trigger) return;
-
-    const rect = trigger.getBoundingClientRect();
-    if (rect.top <= window.innerHeight + 300) {
-        dotnetHelper.invokeMethodAsync('LoadNextBatch');
-    }
-}
-
-window.addEventListener('scroll', handleScroll, { passive: true });
-```
+No JavaScript is needed — the button is a pure Blazor server-side interaction.
 
 ## Implementation Reference
 

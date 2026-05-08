@@ -86,8 +86,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 | `ClickAndWaitForScrollAsync()` | Click + wait for `scroll-end` signal |
 | `ScrollToAndWaitForTocUpdateAsync()` | Scroll + wait for `toc-active-updated` signal |
 | `WaitForTocInitializedAsync()` | Wait for `toc-initialized` signal |
-| `ScrollToLoadMoreAsync(count)` | Scroll infinite scroll until item count |
-| `ScrollToEndOfContentAsync()` | Scroll until end-of-content marker |
+| `ScrollToPositionAsync(y)` | Scroll page to Y position (retries until page is tall enough) |
 | `FillBlazorInputAsync(query)` | Fill input + wait for URL query param update |
 | `WaitForConditionAsync(js, onTimeout?)` | Wait for JS condition (uses `E2ETimeout`; scales 10–60 s by network profile); optional `onTimeout` JS expression evaluated on timeout and appended to error message for diagnostics |
 | `WaitForBlazorReadyAsync()` | Wait for Blazor ready + `__scriptsReady` (which already includes Mermaid via `allComponentsReady()`) |
@@ -107,8 +106,8 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 | Scroll finish | `WaitForConditionAsync` polling `window.scrollY` |
 | Expand/collapse | `Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded"))` |
 | No navigation | `WaitForBlazorReadyAsync()` then assert URL unchanged |
-| Infinite scroll batch | `Page.ScrollToLoadMoreAsync(expectedCount)` |
-| Infinite scroll end | `Page.ScrollToEndOfContentAsync()` |
+| Load more batch | `loadMoreBtn.ClickAndExpectAsync(async () => count.Should().BeGreaterThan(prev))` |
+| End of content | `Assertions.Expect(Page.Locator(".end-of-content")).ToBeVisibleAsync()` |
 | Focus after nav reset | `WaitForConditionAsync("() => document.activeElement && document.activeElement !== document.body")` |
 | Search input fill | `searchInput.FillBlazorInputAsync("query")` |
 
@@ -124,7 +123,7 @@ await header.ClickAndExpectAsync(async () =>
         new Regex("expanded"), new() { Timeout = 2000 }));
 ```
 
-**Infinite Scroll**: Uses `window.scrollTo()` + `window.dispatchEvent(new Event('scroll'))` (required — `scrollTo` alone doesn't fire scroll events in headless Chrome). Always wait for `__scrollListenerReady['scroll-trigger']` before scrolling. Use `ScrollToLoadMoreAsync` or `ScrollToEndOfContentAsync`.
+**Load More Button**: Click `.load-more-btn` using `ClickAndExpectAsync` and assert card count increases or end-of-content appears. No JS scroll events needed — it’s a pure Blazor button click.
 
 **Lazy-Loaded Images**: `loading="lazy"` doesn't work reliably in headless Chrome. Fix in source: hero/above-fold images must use eager loading (omit `loading` attribute). Always include `width`/`height`.
 
@@ -151,8 +150,6 @@ await Assertions.Expect(link).ToHaveClassAsync(new Regex("active"), new() { Time
 **Solution 2**: Event-based — `ClickAndWaitForScrollAsync()` waits for `scroll-end` signal via lifecycle counter.
 
 **Solution 3**: Programmatic scrolling — `window.scrollTo({ behavior: 'instant' })` fires scroll events in Chrome. Use `ScrollToAndWaitForTocUpdateAsync(targetY)` helper. `Mouse.WheelAsync` can hang under parallel Chrome load.
-
-**⚠️** `window.scrollTo` at the **same position** in a polling loop won't fire new events — use `dispatchEvent` (already handled by `ScrollToLoadMoreAsync`).
 
 ### Assertion Style
 

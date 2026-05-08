@@ -76,7 +76,7 @@ public class ContentItemsGridTests : BunitContext
         // ContentItemsGrid uses RendererInfo.IsInteractive in OnAfterRenderAsync
         SetRendererInfo(new RendererInfo("Server", true));
 
-        // JS interop is not under test — allow all calls (infinite-scroll module import, etc.)
+        // JS interop is not under test — allow all calls.
         JSInterop.Mode = JSRuntimeMode.Loose;
     }
 
@@ -177,7 +177,7 @@ public class ContentItemsGridTests : BunitContext
     }
 
     [Fact]
-    public async Task ContentItemsGrid_DisposeAsync_DoesNotThrow()
+    public void ContentItemsGrid_Dispose_DoesNotThrow()
     {
         // Arrange
         var cut = Render<ContentItemsGrid>(parameters => parameters
@@ -188,8 +188,8 @@ public class ContentItemsGridTests : BunitContext
         cut.WaitForAssertion(() => cut.Find("h1.page-h1").TextContent.Should().NotBeNullOrEmpty(), timeout: TimeSpan.FromSeconds(5));
 
         // Act & Assert - Disposal should not throw
-        var disposeAction = async () => await cut.Instance.DisposeAsync();
-        await disposeAction.Should().NotThrowAsync("disposal should always be safe to call");
+        var disposeAction = () => cut.Instance.Dispose();
+        disposeAction.Should().NotThrow("disposal should always be safe to call");
     }
 
     [Fact]
@@ -242,11 +242,35 @@ public class ContentItemsGridTests : BunitContext
             .Add(p => p.SectionName, "github-copilot")
             .Add(p => p.CollectionName, "news"));
 
-        // Assert - End of content shown, no scroll trigger
+        // Assert - End of content shown, no load more button
         cut.WaitForAssertion(() =>
         {
             cut.Find(".end-of-content").TextContent.Should().Contain("End of content");
-            cut.FindAll("#scroll-trigger").Should().BeEmpty("no scroll trigger when all content loaded");
+            cut.FindAll(".load-more-btn").Should().BeEmpty("no Load more button when all content loaded");
+        });
+    }
+
+    [Fact]
+    public void ContentItemsGrid_ShowsLoadMoreButton_WhenCacheHasMore()
+    {
+        // Arrange - Cache indicates more content is available
+        var cache = Services.GetRequiredService<ContentGridStateCache>();
+        var cachedItems = Enumerable.Range(1, 40).Select(i =>
+            new ContentItemBuilder().WithSlug($"item-{i}").WithTitle($"Item {i}")
+                .WithPrimarySectionName("github-copilot").WithCollectionName("news").Build()
+        ).ToList();
+        cache.Set("ContentItemsGrid_github-copilot_news", cachedItems, currentBatch: 1, hasMoreContent: true, totalCount: 100);
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "news"));
+
+        // Assert - Load more button is visible, no End of content
+        cut.WaitForAssertion(() =>
+        {
+            cut.Find(".load-more-btn").TextContent.Should().Contain("Load more");
+            cut.FindAll(".end-of-content").Should().BeEmpty("End of content must not show when more content is available");
         });
     }
 }
