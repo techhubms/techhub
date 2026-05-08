@@ -6,6 +6,7 @@ using Dapper;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TechHub.Core;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
@@ -1875,7 +1876,8 @@ SET title                = @Title,
     updated_at           = NOW()
 WHERE slug = @Slug
   AND collection_name = 'videos'
-  AND subcollection_name = 'ghc-features'";
+  AND subcollection_name = 'ghc-features'
+  AND draft = true";
 
         var parameters = new
         {
@@ -1957,7 +1959,7 @@ WHERE slug = @Slug
                         transaction: transaction,
                         cancellationToken: ct));
 
-                await Connection.ExecuteAsync(
+                var upsertRows = await Connection.ExecuteAsync(
                     new CommandDefinition(
                         @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, has_transcript, slug)
                           VALUES (@NewExternalUrl, 'succeeded', @FeedName, @CollectionName, @HasTranscript, @Slug)
@@ -1972,6 +1974,14 @@ WHERE slug = @Slug
                         new { NewExternalUrl = newExternalUrl, FeedName = editData.FeedName, CollectionName = "videos", HasTranscript = hasTranscript, Slug = slug },
                         transaction: transaction,
                         cancellationToken: ct));
+
+                // 0 rows means external_url already exists for a different slug — the
+                // WHERE condition on the DO UPDATE clause did not match. Rollback to prevent
+                // content_items.external_url pointing at a URL owned by another item.
+                if (upsertRows == 0)
+                {
+                    throw new ProcessedUrlConflictException();
+                }
             }
 
             transaction.Commit();

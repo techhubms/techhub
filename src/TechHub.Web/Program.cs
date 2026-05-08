@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
@@ -273,6 +274,9 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
 // Rate limiting: protect the public Web surface against excessive requests and bot scraping
+// Loopback exemptions are scoped to Development so that a spoofed X-Forwarded-For: 127.0.0.1
+// cannot bypass rate limiting in production (UseForwardedHeaders runs before UseRateLimiter).
+var isLoopbackExempt = builder.Environment.IsDevelopment();
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -288,29 +292,49 @@ builder.Services.AddRateLimiter(options =>
         await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
     };
 
-    // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation)
+    // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation).
+    // Loopback exemption is restricted to Development: UseForwardedHeaders rewrites RemoteIpAddress
+    // before UseRateLimiter runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass
+    // rate limiting in production.
     options.AddPolicy("web-general", context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    {
+        var ip = context.Connection.RemoteIpAddress;
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
+        {
+            return RateLimitPartition.GetNoLimiter("loopback");
+        }
+
+        return RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: ip?.ToString() ?? "unknown",
             factory: _ => new FixedWindowRateLimiterOptions
             {
                 PermitLimit = 60,
                 Window = TimeSpan.FromMinutes(1),
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
                 QueueLimit = 5
-            }));
+            });
+    });
 
-    // RSS feed endpoints: stricter limit — bot-targeted content syndication
+    // RSS feed endpoints: stricter limit — bot-targeted content syndication.
+    // Loopback exemption is restricted to Development for the same reason as web-general.
     options.AddPolicy("web-rss", context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    {
+        var ip = context.Connection.RemoteIpAddress;
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
+        {
+            return RateLimitPartition.GetNoLimiter("loopback");
+        }
+
+        return RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: ip?.ToString() ?? "unknown",
             factory: _ => new FixedWindowRateLimiterOptions
             {
                 PermitLimit = 20,
                 Window = TimeSpan.FromMinutes(1),
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
                 QueueLimit = 0
-            }));
+            });
+    });
     // Note: Blazor Server SignalR circuits (/_blazor) cannot be rate-limited via endpoint
     // metadata because they go through the Blazor hub middleware, not endpoint routing.
     // SignalR concurrency is instead managed by the SignalR MaximumParallelInvocationsPerClient

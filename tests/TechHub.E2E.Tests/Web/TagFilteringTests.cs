@@ -124,9 +124,22 @@ public class TagFilteringTests : PlaywrightTestBase
         // Verify selected tag has a different background-color than unselected tags,
         // confirming the visual distinction. The .selected class applies
         // var(--color-purple-dark) vs var(--color-bg-default) for unselected.
-        var unselectedTag = Page.Locator(".tag-cloud-item:not(.selected)").First;
-        var selectedBg = await selectedTagButton.EvaluateAsync<string>("el => getComputedStyle(el).backgroundColor");
-        var unselectedBg = await unselectedTag.EvaluateAsync<string>("el => getComputedStyle(el).backgroundColor");
+        //
+        // Use a single Page.EvaluateAsync (one CDP round-trip) rather than two
+        // locator.EvaluateAsync calls. Locator evaluation resolves the element in
+        // one CDP call and invokes the function in a second call; a Blazor re-render
+        // between those two calls can detach the element, making getComputedStyle
+        // return "" for a detached node. A single page-level evaluation is atomic.
+        var colors = await Page.EvaluateAsync<string[]>(@"() => {
+            const sel = document.querySelector('.tag-cloud-item.selected');
+            const unsel = document.querySelector('.tag-cloud-item:not(.selected)');
+            return [
+                sel  ? getComputedStyle(sel).backgroundColor  : '',
+                unsel ? getComputedStyle(unsel).backgroundColor : ''
+            ];
+        }");
+        var selectedBg = colors[0];
+        var unselectedBg = colors[1];
         selectedBg.Should().NotBeNullOrEmpty("selected tag should have a computed background-color");
         selectedBg.Should().NotBe(unselectedBg, "selected tag should be visually distinct from unselected tags");
     }

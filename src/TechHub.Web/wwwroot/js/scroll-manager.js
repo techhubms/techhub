@@ -43,10 +43,16 @@ window.__savedScrollPositions = savedPositions; // exposed for tests
 // RAF throttle flag for TOC updates during scroll (one update per frame).
 let tocRafPending = false;
 
-// Set after finishNavigation flushes a single batch. Blocks subsequent IO callbacks
-// until the user genuinely scrolls, preventing the cascade bug where rapid
-// re-observe cycles load all remaining content. Cleared in onScroll.
-let postNavBatchFlushed = false;
+// Set when a traverse (back/forward) navigation completes but observeScrollTrigger
+// hasn't been called yet (race: finishNavigation ran before Blazor called observeScrollTrigger).
+// Cleared once observeScrollTrigger consumes it and starts the observer with skipFirst=true.
+let postNavPending = false;
+
+// Helper and trigger element ID from the most recent observeScrollTrigger call.
+// Survive dispose() so finishNavigation can start the observer immediately in the
+// postNavPending race, before Blazor's OnAfterRenderAsync fires.
+let lastHelper = null;
+let lastTriggerElementId = null;
 
 // ============================================================================
 // Keyboard Navigation Detection
@@ -292,11 +298,13 @@ window.__restoreScrollPosition = restoreScrollPosition;
  * @see docs/scroll-system-architecture.md
  */
 function finishNavigation() {
+    const wasTraverse = navigating === 'traverse';
     navigating = false;
     // If observeScrollTrigger was called during navigation, it deferred actual observation.
     // Now that scroll is restored, start the IO at the real viewport position.
-    // If the trigger is in range, IO fires in the next frame (1 allowed batch).
-    // startObserving sets postNavBatchFlushed after that first fire so re-attaches are blocked.
+    // skipFirst=true: ignore the first intersection so the browser's position after
+    // scroll restore doesn't trigger an automatic batch load — the user must scroll
+    // deliberately. See docs/scroll-system-architecture.md#the-cascade-bug.
     if (infiniteScrollState?.deferred) {
         const { helper, triggerElementId } = infiniteScrollState;
         const trigger = document.getElementById(triggerElementId);
@@ -304,6 +312,25 @@ function finishNavigation() {
             startObserving(helper, triggerElementId, trigger, true);
         } else {
             infiniteScrollState = null;
+        }
+    } else if (wasTraverse) {
+        // observeScrollTrigger hasn't been called yet (race: markScriptsReady fired before
+        // Blazor's OnAfterRenderAsync). Flag it so the next observeScrollTrigger call
+        // uses skipFirst=true.
+        postNavPending = true;
+        // Also start the observer immediately with skipFirst=true using the saved
+        // helper/trigger from the previous navigation, so any user scrolling before
+        // OnAfterRenderAsync fires is caught. When observeScrollTrigger arrives,
+        // dispose() stops this early observer and restarts with skipFirst=true
+        // (postNavPending is still set at that point).
+        if (lastHelper && lastTriggerElementId) {
+            const earlyTrigger = document.getElementById(lastTriggerElementId);
+            if (earlyTrigger) {
+                if (infiniteScrollState?.observer) {
+                    infiniteScrollState.observer.disconnect();
+                }
+                startObserving(lastHelper, lastTriggerElementId, earlyTrigger, true);
+            }
         }
     }
     // Run scroll-end work once at the final position (TOC highlight, etc.)
@@ -465,6 +492,9 @@ function setupBlazorListeners() {
             navigating = 'forward';
             window.__scriptsReady = false;
             showNavSpinner();
+            // A stale postNavPending from a previous traverse nav must not bleed into
+            // a forward nav cycle where skipFirst protection is not needed.
+            postNavPending = false;
         });
 
         Blazor.addEventListener('enhancedload', () => {
@@ -804,6 +834,11 @@ const TRIGGER_MARGIN_PX = 300;
 export function observeScrollTrigger(helper, triggerElementId) {
     dispose(); // disconnect any previous observer
 
+    // Always persist these so finishNavigation can start an early observer in the
+    // race case where it runs before OnAfterRenderAsync.
+    lastHelper = helper;
+    lastTriggerElementId = triggerElementId;
+
     const trigger = document.getElementById(triggerElementId);
     if (!trigger) {
         console.warn('[InfiniteScroll] Trigger element not found:', triggerElementId);
@@ -813,6 +848,11 @@ export function observeScrollTrigger(helper, triggerElementId) {
     if (navigating) {
         // Defer — finishNavigation() will start observing at the restored scroll position.
         infiniteScrollState = { helper, triggerElementId, observer: null, deferred: true };
+    } else if (postNavPending) {
+        // finishNavigation already ran (traverse nav) but observeScrollTrigger wasn't called
+        // yet at that time. Apply skipFirst protection now.
+        postNavPending = false;
+        startObserving(helper, triggerElementId, trigger, true);
     } else {
         startObserving(helper, triggerElementId, trigger);
     }
@@ -830,24 +870,35 @@ export function observeScrollTrigger(helper, triggerElementId) {
 /**
  * Create and start the IntersectionObserver for the scroll trigger.
  * Separated from observeScrollTrigger so finishNavigation can call it after scroll restore.
- * @param {boolean} isPostNav - true when called from finishNavigation (enables one-batch gate)
+ * @param {boolean} skipFirst - true on post-traverse calls: ignore the first intersecting
+ *   entry so the restored scroll position never triggers an automatic batch load.
+ *   The observer stays connected; the user must scroll away and back to fire a real load.
+ *   See docs/scroll-system-architecture.md#the-cascade-bug.
  */
-function startObserving(helper, triggerElementId, trigger, isPostNav = false) {
+function startObserving(helper, triggerElementId, trigger, skipFirst = false) {
+    let firstSkipped = false;
+
     const observer = new IntersectionObserver(entries => {
         const entry = entries[entries.length - 1];
-        if (!entry.isIntersecting) return;
-        if (postNavBatchFlushed) {
-            // After navigation loaded 1 batch, block further IO-triggered loads
-            // until a genuine user scroll. Prevents cascade (see docs/scroll-system-architecture.md).
+
+        if (skipFirst && !firstSkipped) {
+            // Consume the skip on the very first observer callback regardless of whether
+            // the trigger is intersecting. If we only skipped intersecting entries, a
+            // trigger that starts off-screen would leave firstSkipped=false; the next
+            // genuine user scroll would then be incorrectly skipped, leaving infinite
+            // scroll stuck until the user scrolls away and back.
+            firstSkipped = true;
             return;
         }
+
+        if (!entry.isIntersecting) return;
+
+        // Clear postNavPending — the skip was used up by this early observer, so the
+        // next observeScrollTrigger call (after Blazor re-renders) must not double-skip.
+        postNavPending = false;
         // Disconnect immediately — Blazor re-attaches after next render.
         observer.disconnect();
         infiniteScrollState = null;
-        if (isPostNav) {
-            // Allow this first batch but gate subsequent re-attaches.
-            postNavBatchFlushed = true;
-        }
         helper.invokeMethodAsync('LoadNextBatch');
     }, { rootMargin: `0px 0px ${TRIGGER_MARGIN_PX}px 0px` });
 
@@ -879,19 +930,6 @@ export function dispose() {
  */
 function onScroll() {
     if (navigating) return;
-    // After a nav-flush, the first genuine scroll clears the one-batch gate
-    // and re-arms the IO so further scrolling loads normally.
-    if (postNavBatchFlushed && infiniteScrollState) {
-        postNavBatchFlushed = false;
-        const { observer, triggerElementId } = infiniteScrollState;
-        const trigger = document.getElementById(triggerElementId);
-        if (trigger) {
-            observer.unobserve(trigger);
-            observer.observe(trigger);
-        }
-    } else if (postNavBatchFlushed) {
-        postNavBatchFlushed = false;
-    }
     // Suppress card hover visuals during scroll (CSS resets them while
     // is-scrolling is present). Pointer-events stay on so the browser tracks
     // the cursor; when is-scrolling is removed in onScrollEnd the correct

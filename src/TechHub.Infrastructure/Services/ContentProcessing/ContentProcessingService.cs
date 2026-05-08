@@ -392,7 +392,8 @@ public sealed class ContentProcessingService
                 PublishedAt = _timeProvider.GetUtcNow(),
                 FeedName = feedName,
                 CollectionName = collectionName,
-                FeedItemData = feedItemData
+                FeedItemData = feedItemData,
+                SkipSalesPitchCheck = true
             };
 
             // Shared per-item pipeline: tags → content → AI → write
@@ -519,7 +520,8 @@ public sealed class ContentProcessingService
                         FeedTags = mergedTags,
                         FeedName = raw.FeedName,
                         CollectionName = raw.CollectionName,
-                        FullContent = raw.FullContent
+                        FullContent = raw.FullContent,
+                        SkipSalesPitchCheck = raw.SkipSalesPitchCheck
                     };
                 }
             }
@@ -551,7 +553,8 @@ public sealed class ContentProcessingService
                     FeedTags = raw.FeedTags,
                     FeedName = raw.FeedName,
                     CollectionName = raw.CollectionName,
-                    FullContent = manualTranscript
+                    FullContent = manualTranscript,
+                    SkipSalesPitchCheck = raw.SkipSalesPitchCheck
                 };
                 hasTranscript = true;
                 transcriptStatus = "manual transcript";
