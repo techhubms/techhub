@@ -316,13 +316,18 @@ This is strictly safer than the previous "allow 1 batch then gate" approach:
   because in the happy path all needed content is already cached.
 
 **`postNavPending` race guard**: In rare cases `finishNavigation` can run *before*
-`observeScrollTrigger` is called (e.g. the JS module import takes longer than
-`markScriptsReady`'s 10 ms polling interval):
+`observeScrollTrigger` is called (e.g. `markScriptsReady` fires before Blazor's
+`OnAfterRenderAsync`):
 
 - `finishNavigation` sees `infiniteScrollState?.deferred` is null → sets
   `postNavPending = true`.
-- When `observeScrollTrigger` is later called it detects `postNavPending`, consumes
-  the flag, and calls `startObserving(skipFirst=true)`.
+- It also immediately starts an early observer with `skipFirst=true` using
+  `lastHelper`/`lastTriggerElementId` (saved from the most recent
+  `observeScrollTrigger` call), so any user scroll during the race window is caught.
+- When `observeScrollTrigger` is later called, `dispose()` stops the early observer
+  and restarts with `skipFirst=true` (because `postNavPending` is still set).
+- If the early observer fires a real load before `observeScrollTrigger` arrives,
+  it clears `postNavPending` so the re-attach does not double-skip.
 
 `postNavPending` is also cleared in `beforeenhancedload` so a subsequent forward
 navigation cannot accidentally inherit the flag.
@@ -364,7 +369,7 @@ at the saved scroll position.
 |-----------|----------|------------|
 | Trigger visible at restored position | First IO skipped, observer stays live; user must scroll away and back to load | Unit: "should NOT call LoadNextBatch on first intersection after back-nav" |
 | Trigger NOT visible at restored position | First IO fires when user scrolls to trigger → skipped; second fire loads | Unit: "should call LoadNextBatch on second intersection after back-nav" |
-| `postNavPending` race guard | finishNavigation ran before observeScrollTrigger; skipFirst applied late | Unit: "should apply skipFirst to re-attach when postNavPending is set" |
+| `postNavPending` race guard | finishNavigation ran before observeScrollTrigger; early observer started immediately with `skipFirst=true`; `observeScrollTrigger` reconnects cleanly | Unit: "should apply skipFirst to re-attach when postNavPending is set" / "should start early observer…" |
 | Forward nav (trigger far away) | No issue — scrollTo(0) pushes trigger off-screen | IO guard: only `'traverse'` sets skipFirst |
 | Trigger scrolled past (negative top) | `top < innerHeight + 300` → true → loads | Correct: past trigger means content is needed |
 | Page not tall enough for restore | ResizeObserver + MutationObserver retry (150ms debounce, 30s deadline) | Unit: scroll retry tests |
@@ -384,6 +389,8 @@ at the saved scroll position.
 - `should NOT call LoadNextBatch on first intersection after back-nav (skipFirst gate)`
 - `should call LoadNextBatch on second intersection after back-nav (after first is skipped)`
 - `should apply skipFirst to re-attach when postNavPending is set (finishNavigation before observeScrollTrigger)`
+- `should start early observer immediately in postNavPending race if lastHelper is saved`
+- `should clear postNavPending when early observer fires real load, so re-attach does not double-skip`
 - `should create a new observer on re-attach after batch load`
 
 **Scroll position:**

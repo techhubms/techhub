@@ -274,6 +274,9 @@ builder.Services.AddHttpClient<TechHubApiClient>((sp, client) =>
 builder.Services.AddScoped<ITechHubApiClient>(sp => sp.GetRequiredService<TechHubApiClient>());
 
 // Rate limiting: protect the public Web surface against excessive requests and bot scraping
+// Loopback exemptions are scoped to Development so that a spoofed X-Forwarded-For: 127.0.0.1
+// cannot bypass rate limiting in production (UseForwardedHeaders runs before UseRateLimiter).
+var isLoopbackExempt = builder.Environment.IsDevelopment();
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -290,12 +293,13 @@ builder.Services.AddRateLimiter(options =>
     };
 
     // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation).
-    // Loopback connections (localhost) are exempt — they are always local dev or E2E test runners,
-    // not external clients. RemoteIpAddress is the socket-level TCP IP and cannot be spoofed.
+    // Loopback exemption is restricted to Development: UseForwardedHeaders rewrites RemoteIpAddress
+    // before UseRateLimiter runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass
+    // rate limiting in production.
     options.AddPolicy("web-general", context =>
     {
         var ip = context.Connection.RemoteIpAddress;
-        if (ip != null && IPAddress.IsLoopback(ip))
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
         {
             return RateLimitPartition.GetNoLimiter("loopback");
         }
@@ -312,11 +316,11 @@ builder.Services.AddRateLimiter(options =>
     });
 
     // RSS feed endpoints: stricter limit — bot-targeted content syndication.
-    // Loopback connections are exempt for the same reason as web-general.
+    // Loopback exemption is restricted to Development for the same reason as web-general.
     options.AddPolicy("web-rss", context =>
     {
         var ip = context.Connection.RemoteIpAddress;
-        if (ip != null && IPAddress.IsLoopback(ip))
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
         {
             return RateLimitPartition.GetNoLimiter("loopback");
         }

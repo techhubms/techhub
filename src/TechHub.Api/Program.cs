@@ -315,7 +315,11 @@ builder.Services.AddAuthorization(options =>
 // Rate limiting: defense-in-depth for the API (primary rate limiting is on the Web layer)
 // Disabled in IntegrationTest environment to avoid throttling test suites that run many
 // requests from a single IP within a short window.
+// Loopback exemptions are scoped to Development/IntegrationTest so that a spoofed
+// X-Forwarded-For: 127.0.0.1 cannot bypass rate limiting in production
+// (UseForwardedHeaders runs before UseRateLimiter).
 var isIntegrationTest = builder.Environment.IsEnvironment("IntegrationTest");
+var isLoopbackExempt = builder.Environment.IsDevelopment() || isIntegrationTest;
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
@@ -333,7 +337,9 @@ builder.Services.AddRateLimiter(options =>
 
     // Public content endpoints: generous limit (defense against runaway loops or future architecture changes).
     // Loopback connections (localhost) are exempt — they are always local dev or CI integration test
-    // runners, not external clients. RemoteIpAddress is the socket-level TCP IP and cannot be spoofed.
+    // runners, not external clients. Loopback exemption is restricted to Development and
+    // IntegrationTest: UseForwardedHeaders rewrites RemoteIpAddress before UseRateLimiter
+    // runs, so a spoofed X-Forwarded-For: 127.0.0.1 could otherwise bypass rate limiting.
     options.AddPolicy("api-public", context =>
     {
         if (isIntegrationTest)
@@ -342,7 +348,7 @@ builder.Services.AddRateLimiter(options =>
         }
 
         var ip = context.Connection.RemoteIpAddress;
-        if (ip != null && IPAddress.IsLoopback(ip))
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
         {
             return RateLimitPartition.GetNoLimiter("loopback");
         }
@@ -361,7 +367,7 @@ builder.Services.AddRateLimiter(options =>
 
     // Admin endpoints: per-user limit for authenticated requests (generous for legitimate admin
     // work), strict IP-based limit for unauthenticated requests (brute-force protection).
-    // Loopback connections are exempt for the same reason as api-public.
+    // Loopback exemption is restricted to Development/IntegrationTest for the same reason as api-public.
     // NOTE: UseRateLimiter() must run after UseAuthentication() so context.User is populated.
     options.AddPolicy("api-admin", context =>
     {
@@ -371,7 +377,7 @@ builder.Services.AddRateLimiter(options =>
         }
 
         var ip = context.Connection.RemoteIpAddress;
-        if (ip != null && IPAddress.IsLoopback(ip))
+        if (isLoopbackExempt && ip != null && IPAddress.IsLoopback(ip))
         {
             return RateLimitPartition.GetNoLimiter("loopback");
         }

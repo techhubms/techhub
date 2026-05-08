@@ -6,6 +6,7 @@ using Dapper;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using TechHub.Core;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
@@ -1979,8 +1980,7 @@ WHERE slug = @Slug
                 // content_items.external_url pointing at a URL owned by another item.
                 if (upsertRows == 0)
                 {
-                    transaction.Rollback();
-                    throw new InvalidOperationException("The YouTube URL is already owned by another content item in processed_urls.");
+                    throw new ProcessedUrlConflictException();
                 }
             }
 

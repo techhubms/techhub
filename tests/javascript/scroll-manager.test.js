@@ -804,6 +804,73 @@ describe('scroll-manager.js', () => {
             expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
         });
 
+        it('should start early observer immediately in postNavPending race if lastHelper is saved', () => {
+            // Regression: if finishNavigation runs before OnAfterRenderAsync, no observer
+            // was active, so user scrolls were silently missed. Fix: start the observer
+            // right away using the saved helper/trigger from the previous navigation.
+            createTriggerElement();
+            const helper = createMockHelper();
+
+            // Prior navigation — saves lastHelper / lastTriggerElementId
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+            const priorObserver = window.__mockObservers.at(-1);
+
+            // Back-nav race: finishNavigation before observeScrollTrigger
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+
+            // finishNavigation runs; no deferred state, but lastHelper is set
+            // → should create an early observer immediately
+            window.__restoreScrollPosition();
+
+            // A new observer should have been created (different from the prior one)
+            const earlyObserver = window.__mockObservers.at(-1);
+            expect(earlyObserver).not.toBe(priorObserver);
+
+            // Early observer has skipFirst=true — first fire is skipped
+            earlyObserver.trigger(true);
+            expect(helper.invokeMethodAsync).not.toHaveBeenCalled();
+            expect(earlyObserver.disconnected).toBe(false);
+
+            // Second fire: real load (user deliberately scrolled)
+            earlyObserver.trigger(false);
+            earlyObserver.trigger(true);
+            expect(helper.invokeMethodAsync).toHaveBeenCalledWith('LoadNextBatch');
+            expect(earlyObserver.disconnected).toBe(true);
+        });
+
+        it('should clear postNavPending when early observer fires real load, so re-attach does not double-skip', () => {
+            // If the early observer (started by finishNavigation) fires a real load before
+            // observeScrollTrigger is called, postNavPending must be cleared so the
+            // subsequent re-render's observeScrollTrigger does not apply skipFirst again.
+            createTriggerElement();
+            const helper = createMockHelper();
+
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+
+            // Back-nav race
+            window.location = { ...window.location, pathname: '/other-page' };
+            window.dispatchEvent(new PopStateEvent('popstate', { state: null }));
+            window.__restoreScrollPosition(); // starts early observer with skipFirst=true
+
+            const earlyObserver = window.__mockObservers.at(-1);
+
+            // Consume the skip, then trigger a real load via the early observer
+            earlyObserver.trigger(true);  // skip
+            earlyObserver.trigger(false);
+            earlyObserver.trigger(true);  // real load — clears postNavPending
+            expect(helper.invokeMethodAsync).toHaveBeenCalledTimes(1);
+
+            // Now Blazor re-renders and calls observeScrollTrigger
+            // postNavPending is false, so it should NOT use skipFirst
+            mod.observeScrollTrigger(helper, 'scroll-trigger');
+
+            const reAttachObserver = window.__mockObservers.at(-1);
+            // First fire should NOT be skipped (no skipFirst)
+            reAttachObserver.trigger(true);
+            expect(helper.invokeMethodAsync).toHaveBeenCalledTimes(2);
+        });
+
         it('should set __scrollListenerReady to false on dispose', () => {
             createTriggerElement();
             const helper = createMockHelper();

@@ -48,6 +48,12 @@ let tocRafPending = false;
 // Cleared once observeScrollTrigger consumes it and starts the observer with skipFirst=true.
 let postNavPending = false;
 
+// Helper and trigger element ID from the most recent observeScrollTrigger call.
+// Survive dispose() so finishNavigation can start the observer immediately in the
+// postNavPending race, before Blazor's OnAfterRenderAsync fires.
+let lastHelper = null;
+let lastTriggerElementId = null;
+
 // ============================================================================
 // Keyboard Navigation Detection
 // ============================================================================
@@ -312,6 +318,20 @@ function finishNavigation() {
         // Blazor's OnAfterRenderAsync). Flag it so the next observeScrollTrigger call
         // uses skipFirst=true.
         postNavPending = true;
+        // Also start the observer immediately with skipFirst=true using the saved
+        // helper/trigger from the previous navigation, so any user scrolling before
+        // OnAfterRenderAsync fires is caught. When observeScrollTrigger arrives,
+        // dispose() stops this early observer and restarts with skipFirst=true
+        // (postNavPending is still set at that point).
+        if (lastHelper && lastTriggerElementId) {
+            const earlyTrigger = document.getElementById(lastTriggerElementId);
+            if (earlyTrigger) {
+                if (infiniteScrollState?.observer) {
+                    infiniteScrollState.observer.disconnect();
+                }
+                startObserving(lastHelper, lastTriggerElementId, earlyTrigger, true);
+            }
+        }
     }
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();
@@ -814,6 +834,11 @@ const TRIGGER_MARGIN_PX = 300;
 export function observeScrollTrigger(helper, triggerElementId) {
     dispose(); // disconnect any previous observer
 
+    // Always persist these so finishNavigation can start an early observer in the
+    // race case where it runs before OnAfterRenderAsync.
+    lastHelper = helper;
+    lastTriggerElementId = triggerElementId;
+
     const trigger = document.getElementById(triggerElementId);
     if (!trigger) {
         console.warn('[InfiniteScroll] Trigger element not found:', triggerElementId);
@@ -855,17 +880,22 @@ function startObserving(helper, triggerElementId, trigger, skipFirst = false) {
 
     const observer = new IntersectionObserver(entries => {
         const entry = entries[entries.length - 1];
-        if (!entry.isIntersecting) return;
 
         if (skipFirst && !firstSkipped) {
-            // Ignore the first intersection after back-nav — it fires because the trigger
-            // happened to be in the viewport at the restored scroll position, not because
-            // the user deliberately scrolled to it. Keep the observer live so that the
-            // next genuine scroll-to-trigger fires a real load.
+            // Consume the skip on the very first observer callback regardless of whether
+            // the trigger is intersecting. If we only skipped intersecting entries, a
+            // trigger that starts off-screen would leave firstSkipped=false; the next
+            // genuine user scroll would then be incorrectly skipped, leaving infinite
+            // scroll stuck until the user scrolls away and back.
             firstSkipped = true;
             return;
         }
 
+        if (!entry.isIntersecting) return;
+
+        // Clear postNavPending — the skip was used up by this early observer, so the
+        // next observeScrollTrigger call (after Blazor re-renders) must not double-skip.
+        postNavPending = false;
         // Disconnect immediately — Blazor re-attaches after next render.
         observer.disconnect();
         infiniteScrollState = null;
