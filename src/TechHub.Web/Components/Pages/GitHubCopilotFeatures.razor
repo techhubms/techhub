@@ -144,20 +144,17 @@
                                                 <p class="features-timeline-description">@feature.Description</p>
 
                                                 <div id="feature-detail-@feature.Id" class="features-timeline-detail @(isExpanded ? "expanded" : "")">
-                                                    @if (isExpanded)
+                                                    @if (isExpanded && !string.IsNullOrEmpty(videoId))
                                                     {
-                                                        @if (!string.IsNullOrEmpty(videoId))
-                                                        {
-                                                            <div class="features-timeline-video">
-                                                                <a href="@videoItem!.GetHref(SectionName)" class="feature-card-thumbnail">
-                                                                    <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="@feature.Name video thumbnail" loading="lazy" />
-                                                                    <div class="feature-card-play-icon">
-                                                                        <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
-                                                                    </div>
-                                                                </a>
-                                                                <a href="@videoItem!.GetHref(SectionName)" class="features-timeline-video-link">Watch full video →</a>
-                                                            </div>
-                                                        }
+                                                        <div class="features-timeline-video">
+                                                            <a href="@videoItem!.GetHref(SectionName)" class="feature-card-thumbnail">
+                                                                <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="@feature.Name video thumbnail" loading="lazy" />
+                                                                <div class="feature-card-play-icon">
+                                                                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
+                                                                </div>
+                                                            </a>
+                                                            <a href="@videoItem!.GetHref(SectionName)" class="features-timeline-video-link">Watch full video →</a>
+                                                        </div>
                                                     }
                                                 </div>
                                             </div>
@@ -193,14 +190,7 @@ else if (_notFound)
 
     private void SetTierFilter(string tierId)
     {
-        if (activeTierId == tierId)
-        {
-            activeTierId = null;
-        }
-        else
-        {
-            activeTierId = tierId;
-        }
+        activeTierId = activeTierId == tierId ? null : tierId;
     }
 
     private void ToggleGhesFilter()
