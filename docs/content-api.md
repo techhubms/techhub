@@ -92,13 +92,13 @@ Content linking behavior is determined by **collection name**, not by the `exter
 
 | Collection | Links To | Detail Endpoint | `externalUrl` Usage |
 |------------|----------|-----------------|---------------------|
-| `news` | External URL | Returns `404` | Used for linking |
-| `blogs` | External URL | Returns `404` | Used for linking |
-| `community` | External URL | Returns `404` | Used for linking |
+| `news` | External URL | Returns `204` | Used for linking |
+| `blogs` | External URL | Returns `204` | Used for linking |
+| `community` | External URL | Returns `204` | Used for linking |
 | `videos` | Internal page | Returns content | Stored but not used for linking |
 | `roundups` | Internal page | Returns content | Internal path, not used |
 
-- **External Collections** (news, blogs, community): UI cards link directly to `externalUrl`. The detail endpoint returns `404 Not Found`.
+- **External Collections** (news, blogs, community): UI cards link directly to `externalUrl`. The detail endpoint returns `204 No Content`.
 - **Internal Collections** (videos, roundups): Content is displayed on the internal detail page at `/section/collection/slug`.
 
 **Note**: Tech Hub aggregates external content but presents videos and roundups internally. The `externalUrl` field stores the source URL for all content (used for RSS feeds and attribution), but the linking behavior is controlled by collection type.
@@ -154,7 +154,7 @@ Get a specific section by name.
 
 - `sectionName` (path): Section identifier (e.g., `ai`, `github-copilot`, `ml`)
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK` or `204 No Content` (section not found)
 
 ```bash
 curl -k https://localhost:5001/api/sections/ai
@@ -195,7 +195,7 @@ Get all collections available in a section.
 
 - `sectionName` (path): Section identifier
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK` or `204 No Content` (section not found)
 
 ```bash
 curl -k https://localhost:5001/api/sections/github-copilot/collections
@@ -210,7 +210,7 @@ Get details about a specific collection within a section.
 - `sectionName` (path): Section identifier
 - `collectionName` (path): Collection name (e.g., `news`, `blogs`, `videos`, `community`, `roundups`)
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK` or `204 No Content` (section or collection not found)
 
 ```bash
 curl -k https://localhost:5001/api/sections/ai/collections/news
@@ -230,7 +230,7 @@ Get detailed content item by section, collection, and content slug.
 - `collectionName` (path): Collection name
 - `slug` (path): Content slug
 
-**Response**: `200 OK` or `404 Not Found`
+**Response**: `200 OK` or `204 No Content` (section, collection, or slug not found)
 
 **Response Body**: `ContentItemDetail` with full rendered HTML, metadata, and TOC
 
@@ -238,7 +238,7 @@ Get detailed content item by section, collection, and content slug.
 curl -k "https://localhost:5001/api/sections/ai/collections/videos/2024-06-ai-overview"
 ```
 
-**Note**: Only `videos` and `roundups` collections return content. External collections (`news`, `blogs`, `community`) return `404 Not Found`.
+**Note**: Only `videos` and `roundups` collections return content. External collections (`news`, `blogs`, `community`) return `204 No Content`.
 
 ### Authors
 

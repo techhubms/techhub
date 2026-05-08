@@ -64,9 +64,9 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Fetching section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}", cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
-                _logger.LogWarning("Section not found: {SectionName}", sectionName);
+                _logger.LogDebug("Section not found: {SectionName}", sectionName);
                 return null;
             }
 
@@ -94,9 +94,9 @@ public class TechHubApiClient : ITechHubApiClient
             _logger.LogDebug("Fetching collections for section: {SectionName}", sectionName);
             var response = await _httpClient.GetAsync($"/api/sections/{Uri.EscapeDataString(sectionName)}/collections", cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
-                _logger.LogWarning("Section not found: {SectionName}", sectionName);
+                _logger.LogDebug("Section not found: {SectionName}", sectionName);
                 return null;
             }
 
@@ -133,9 +133,9 @@ public class TechHubApiClient : ITechHubApiClient
                 $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}",
                 cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
-                _logger.LogWarning("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
+                _logger.LogDebug("Collection not found: {SectionName}/{CollectionName}", sectionName, collectionName);
                 return null;
             }
 
@@ -352,9 +352,9 @@ public class TechHubApiClient : ITechHubApiClient
                 $"/api/sections/{Uri.EscapeDataString(sectionName)}/collections/{Uri.EscapeDataString(collectionName)}/{Uri.EscapeDataString(slug)}",
                 cancellationToken);
 
-            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            if (response.StatusCode == System.Net.HttpStatusCode.NoContent)
             {
-                _logger.LogWarning("Content not found: {SectionName}/{CollectionName}/{Slug}",
+                _logger.LogDebug("Content not found: {SectionName}/{CollectionName}/{Slug}",
                     sectionName, collectionName, slug);
                 return null;
             }
