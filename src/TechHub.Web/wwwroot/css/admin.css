@@ -675,6 +675,13 @@ select.admin-input {
         grid-template-columns: 1fr;
     }
 
+    /* Tables: use natural content width so horizontal scrolling is effective;
+       the reason column keeps its max-width cap to avoid very wide columns */
+    .admin-jobs-table-wrapper .admin-table {
+        width: max-content;
+        min-width: 100%;
+    }
+
 }
 
 .admin-stats-footer {
