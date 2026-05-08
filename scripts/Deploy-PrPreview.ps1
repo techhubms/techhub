@@ -848,12 +848,37 @@ Set-WebStartupProbe -AppName $webAppName -ResourceGroup $stagingRG
 # than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
 # az containerapp create does not support --sticky-sessions, so we always set it via ingress update.
 Write-Step "Enabling sticky sessions on Web Container App"
-az containerapp ingress sticky-sessions set `
-    --name $webAppName `
-    --resource-group $stagingRG `
-    --affinity sticky
-if ($LASTEXITCODE -ne 0) {
+#
+# The startup probe update can leave the app in a short-lived provisioning operation.
+# Retry on ContainerAppOperationInProgress so we still enforce sticky sessions instead of
+# failing immediately on a transient Azure control-plane race.
+$stickySetDeadline = (Get-Date).AddSeconds(90)
+$stickySet = $false
+while ((Get-Date) -lt $stickySetDeadline) {
+    $stickySetOutput = az containerapp ingress sticky-sessions set `
+        --name $webAppName `
+        --resource-group $stagingRG `
+        --affinity sticky 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        $stickySet = $true
+        break
+    }
+
+    $stickySetText = ($stickySetOutput | Out-String).Trim()
+    if ($stickySetText -match 'ContainerAppOperationInProgress') {
+        Write-Warn "Container App operation still in progress while enabling sticky sessions — retrying in 5s"
+        Start-Sleep -Seconds 5
+        continue
+    }
+
     Write-Fail "Failed to enable sticky sessions — Blazor SignalR will not work correctly (exit code $LASTEXITCODE)"
+    if (-not [string]::IsNullOrWhiteSpace($stickySetText)) {
+        Write-Detail $stickySetText
+    }
+    exit 1
+}
+if (-not $stickySet) {
+    Write-Fail "Failed to enable sticky sessions within 90s because the Container App stayed busy"
     exit 1
 }
 Write-Ok "Sticky sessions set — waiting for propagation..."
