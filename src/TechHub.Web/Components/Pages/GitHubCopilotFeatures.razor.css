@@ -1,5 +1,5 @@
 /* ============================================================================
-   GitHub Copilot Features Page Styles — Feature Timeline
+   GitHub Copilot Features Page Styles — Feature Timeline + Video Grid
    
    Page-specific layout only - cards inherit from global cards.css
    ============================================================================ */
@@ -192,10 +192,88 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   background: var(--color-purple-bg-subtle);
 }
 
+/* ─── GHES Toggle Switch ─────────────────────────────────────────── */
+
+.features-ghes-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-left: var(--spacing-1);
+  user-select: none;
+}
+
+.features-ghes-toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.features-ghes-toggle-track {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background: var(--color-bg-emphasis);
+  border: 1px solid var(--color-border-default);
+  border-radius: 10px;
+  transition: background var(--duration-normal) var(--easing-ease-out),
+              border-color var(--duration-normal) var(--easing-ease-out);
+  flex-shrink: 0;
+}
+
+.features-ghes-toggle-thumb {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-text-muted, var(--color-border-default));
+  transition: left var(--duration-normal) var(--easing-ease-out),
+              background var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-ghes-toggle-input:checked + .features-ghes-toggle-track {
+  background: var(--color-purple-bg-subtle);
+  border-color: var(--color-purple-bright);
+}
+
+.features-ghes-toggle-input:checked + .features-ghes-toggle-track .features-ghes-toggle-thumb {
+  left: 18px;
+  background: var(--color-purple-bright);
+}
+
+html.keyboard-nav .features-ghes-toggle-input:focus-visible + .features-ghes-toggle-track {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+}
+
+@media (hover: hover) {
+  .features-ghes-toggle:hover .features-ghes-toggle-track {
+    border-color: var(--color-purple-medium);
+  }
+}
+
+.features-ghes-toggle-label {
+  color: var(--color-text-secondary);
+  transition: color var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-ghes-toggle:has(.features-ghes-toggle-input:checked) .features-ghes-toggle-label {
+  color: var(--color-purple-bright);
+}
+
 /* ─── Timeline Layout ────────────────────────────────────────────── */
 
 .features-timeline {
   position: relative;
+  margin-bottom: var(--spacing-6);
 }
 
 .features-timeline-empty {
@@ -204,53 +282,44 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   padding: var(--spacing-4) 0;
 }
 
+/* Year group: heading above entries */
 .features-timeline-year-group {
-  position: relative;
-  padding-left: var(--spacing-10);
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
 }
 
-/* Vertical line running through each year group */
-.features-timeline-year-group::before {
-  content: "";
-  position: absolute;
-  left: calc(var(--spacing-10) - 1px - 8px);
-  top: calc(var(--spacing-5) + 4px);
-  bottom: 0;
-  width: 2px;
-  background: var(--color-border-default);
-}
-
+/* Year label as a block heading (no absolute positioning — avoids overlapping first bullet) */
 .features-timeline-year-label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: var(--spacing-9);
-  text-align: right;
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-purple-bright);
+  margin: 0 0 var(--spacing-3) 0;
   line-height: 1;
-  padding-top: var(--spacing-1);
 }
 
-/* ─── Timeline Entry ─────────────────────────────────────────────── */
+/* Entries indented under the year heading with a left border connector */
+.features-timeline-year-entries {
+  padding-left: var(--spacing-8);
+  border-left: 2px solid var(--color-border-default);
+}
 
-.features-timeline-entry {
+/* ─── Month Row ──────────────────────────────────────────────────── */
+
+/* Each month is a row: node (dot + date) on the left, cards grid on the right */
+.features-timeline-month-row {
   display: flex;
-  align-items: flex-start;
   gap: var(--spacing-3);
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
 }
 
+/* Node: dot marker + month abbreviation, pulled left to sit on the border line */
 .features-timeline-node {
+  flex-shrink: 0;
+  width: var(--spacing-8);
+  margin-left: calc(-1 * var(--spacing-8) - 2px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-shrink: 0;
-  width: 2.5rem;
-  margin-left: calc(-1 * var(--spacing-10));
-  padding-right: var(--spacing-2);
+  padding-top: 0.35rem;
 }
 
 .features-timeline-dot {
@@ -261,12 +330,6 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   border: 2px solid var(--color-bg-default);
   box-shadow: 0 0 0 2px var(--color-purple-medium);
   flex-shrink: 0;
-  margin-top: 0.35rem;
-}
-
-.features-timeline-entry.expanded .features-timeline-dot {
-  background: var(--color-purple-bright);
-  box-shadow: 0 0 0 2px var(--color-purple-bright);
 }
 
 .features-timeline-date {
@@ -277,12 +340,32 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   text-align: center;
 }
 
-/* ─── Timeline Card ──────────────────────────────────────────────── */
+/* ─── Month Cards Grid ───────────────────────────────────────────── */
+
+/* Multiple features in the same month appear side-by-side */
+.features-timeline-month-cards {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+/* ─── Timeline Entry / Card ──────────────────────────────────────── */
+
+.features-timeline-entry {
+  min-width: 0;
+}
+
+.features-timeline-entry.expanded .features-timeline-dot {
+  background: var(--color-purple-bright);
+  box-shadow: 0 0 0 2px var(--color-purple-bright);
+}
 
 .features-timeline-card {
-  flex: 1;
-  min-width: 0;
   padding: var(--spacing-3);
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .features-timeline-header {
@@ -312,7 +395,7 @@ html.keyboard-nav .features-timeline-header:focus-visible {
 }
 
 .features-timeline-name {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-weight-semibold);
   color: var(--color-text-emphasis);
   margin: 0;
@@ -336,13 +419,6 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   padding-left: var(--spacing-2);
 }
 
-.features-timeline-description {
-  margin: var(--spacing-2) 0 0 0;
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-}
-
 /* Plan badges */
 .badge-plan {
   display: inline-block;
@@ -361,12 +437,19 @@ html.keyboard-nav .features-timeline-header:focus-visible {
 .features-timeline-detail {
   overflow: hidden;
   max-height: 0;
-  transition: max-height var(--duration-normal) var(--easing-ease-out);
+  transition: max-height var(--duration-slow, 400ms) var(--easing-ease-out);
 }
 
 .features-timeline-detail.expanded {
-  /* CSS animation requires a fixed max-height; 1000px exceeds any realistic single-feature content */
-  max-height: 1000px;
+  /* Generous max-height for description text + optional video thumbnail */
+  max-height: 800px;
+}
+
+.features-timeline-description {
+  margin: var(--spacing-2) 0 0 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
 }
 
 /* ─── Feature Video in Detail ────────────────────────────────────── */
@@ -376,7 +459,7 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-2);
-  max-width: 480px;
+  max-width: 400px;
 }
 
 .feature-card-thumbnail {
@@ -425,6 +508,53 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   }
 }
 
+/* ─── Feature Video Sections (restored) ─────────────────────────── */
+
+.features-video-section {
+  margin-bottom: var(--spacing-6);
+}
+
+.features-video-section h2 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--spacing-2);
+  color: var(--color-text-emphasis);
+}
+
+.features-section-filters {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+/* Feature Cards Grid — 3 per row on wide screens */
+.features-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-3);
+}
+
+::deep .feature-card {
+  min-height: auto;
+}
+
+::deep .feature-card h3 {
+  margin-top: 0;
+}
+
+/* Non-clickable cards (no video) */
+::deep .feature-card-static {
+  cursor: default;
+}
+
+@media (hover: hover) {
+  ::deep .feature-card-static:hover {
+    border-color: var(--color-border-default);
+    box-shadow: none;
+    transform: none;
+  }
+}
+
 /* ─── Responsive ─────────────────────────────────────────────────── */
 
 @media (max-width: 1292px) {
@@ -437,26 +567,32 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   }
 }
 
+@media (max-width: 1200px) {
+  .features-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .features-timeline-year-group {
-    padding-left: var(--spacing-8);
-  }
-
-  .features-timeline-year-label {
-    font-size: var(--font-size-lg);
-    width: var(--spacing-7);
-  }
-
-  .features-timeline-year-group::before {
-    left: calc(var(--spacing-8) - 1px - 8px);
+  .features-timeline-year-entries {
+    padding-left: var(--spacing-6);
   }
 
   .features-timeline-node {
-    margin-left: calc(-1 * var(--spacing-8));
+    width: var(--spacing-6);
+    margin-left: calc(-1 * var(--spacing-6) - 2px);
+  }
+
+  .features-timeline-month-cards {
+    grid-template-columns: 1fr;
   }
 
   .features-timeline-video {
     max-width: 100%;
+  }
+
+  .features-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -472,7 +608,8 @@ html.keyboard-nav .features-timeline-header:focus-visible {
     max-height: none;
   }
 
-  .features-timeline-video {
+  .features-timeline-video,
+  .feature-card-thumbnail {
     display: none;
   }
 }

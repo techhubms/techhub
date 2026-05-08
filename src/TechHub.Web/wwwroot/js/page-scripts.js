@@ -370,6 +370,11 @@ window.initMermaid = initMermaid;
 window.initTocScrollSpy = initTocScrollSpy;
 window.initCustomPages = initCustomPages;
 
+// Scroll the given tier sidebar card into view inside its scrollable container.
+window.scrollTierCardIntoView = function(tierId) {
+    document.getElementById('tier-' + tierId)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+};
+
 // ─── Script Lifecycle Flag ────────────────────────────────────────────────────
 // Single flag: window.__scriptsReady
 //   false     = page scripts are loading (blocks WaitForBlazorReadyAsync)

@@ -207,14 +207,19 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var firstEntry = Page.Locator(".features-timeline-entry").First;
         await Assertions.Expect(firstEntry).ToBeVisibleAsync();
 
-        // Should have feature name
+        // Should have feature name (always visible in header)
         await Assertions.Expect(firstEntry.Locator(".features-timeline-name")).ToBeVisibleAsync();
-
-        // Should have description
-        await Assertions.Expect(firstEntry.Locator(".features-timeline-description")).ToBeVisibleAsync();
 
         // Should have date
         await Assertions.Expect(firstEntry.Locator(".features-timeline-date")).ToBeVisibleAsync();
+
+        // Description is inside the expandable section — expand the entry first
+        var header = firstEntry.Locator(".features-timeline-header");
+        await header.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(firstEntry).ToHaveClassAsync(
+                new Regex("expanded"), new() { Timeout = 2000 }));
+
+        await Assertions.Expect(firstEntry.Locator(".features-timeline-description")).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -267,9 +272,9 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var allButton = filterBar.Locator("button:has-text('All')");
         await Assertions.Expect(allButton).ToBeVisibleAsync();
 
-        // Should have a GHES filter button
-        var ghesButton = filterBar.Locator("button:has-text('GHES')");
-        await Assertions.Expect(ghesButton).ToBeVisibleAsync();
+        // Should have a GHES toggle switch (label element, not button)
+        var ghesToggle = filterBar.Locator(".features-ghes-toggle");
+        await Assertions.Expect(ghesToggle).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -305,11 +310,10 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var countBefore = await entriesBefore.CountAsync();
         countBefore.Should().BeGreaterThan(0, "Should have timeline entries before filtering");
 
-        // Act - Click the GHES filter
-        var ghesButton = Page.Locator(".features-timeline-filters button[data-filter='ghes']");
-        await ghesButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(ghesButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+        // Act - Click the GHES toggle switch
+        var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
+        await ghesToggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(ghesToggle.Locator(".features-ghes-toggle-input")).ToBeCheckedAsync(new() { Timeout = 2000 }));
 
         // Assert - GHES filter should be active and only GHES entries should be visible
         var entriesAfter = Page.Locator(".features-timeline-entry");
@@ -352,11 +356,10 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var allEntries = Page.Locator(".features-timeline-entry");
         var totalCount = await allEntries.CountAsync();
 
-        // Apply a filter
-        var ghesButton = Page.Locator(".features-timeline-filters button[data-filter='ghes']");
-        await ghesButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(ghesButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+        // Apply a filter using the GHES toggle switch
+        var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
+        await ghesToggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(ghesToggle.Locator(".features-ghes-toggle-input")).ToBeCheckedAsync(new() { Timeout = 2000 }));
 
         // Act - Click the "All" button to clear filters
         var allButton = Page.Locator(".features-timeline-filters button:has-text('All')");
@@ -445,6 +448,27 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Assert - Free tier filter should also be active in the main filter bar
         var freeFilterBtn = Page.Locator(".features-timeline-filters button:has-text('Free')");
         await Assertions.Expect(freeFilterBtn).ToHaveClassAsync(new Regex("active"));
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_ShouldDisplay_VideoSections()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Feature video sections (from featureSections config) should exist below the timeline
+        var videoSections = Page.Locator(".features-video-section");
+        var sectionCount = await videoSections.CountAsync();
+        sectionCount.Should().BeGreaterThan(0, "Should have at least one feature video section");
+
+        // First section should have a heading and a card grid
+        var firstSection = videoSections.First;
+        await Assertions.Expect(firstSection.Locator("h2")).ToBeVisibleAsync();
+
+        // Should have some feature cards
+        var cards = Page.Locator(".features-cards-grid .card");
+        var cardCount = await cards.CountAsync();
+        cardCount.Should().BeGreaterThan(0, "Should have feature cards in the video sections");
     }
 
     [Fact]

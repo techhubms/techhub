@@ -82,13 +82,16 @@
                                     @onclick:stopPropagation="true"
                                     @onclick:preventDefault="true">@tier.Name</button>
                         }
-                        <button type="button"
-                                class="features-filter-btn @(ghesFilterActive ? "active" : "")"
-                                data-filter="ghes"
-                                data-initialized="blazor"
-                                @onclick="ToggleGhesFilter"
-                                @onclick:stopPropagation="true"
-                                @onclick:preventDefault="true">GHES Support</button>
+                        <label class="features-ghes-toggle" data-filter="ghes">
+                            <input type="checkbox"
+                                   class="features-ghes-toggle-input"
+                                   @bind="ghesFilterActive"
+                                   data-initialized="blazor" />
+                            <span class="features-ghes-toggle-track" aria-hidden="true">
+                                <span class="features-ghes-toggle-thumb"></span>
+                            </span>
+                            <span class="features-ghes-toggle-label">GHES Support</span>
+                        </label>
                     </div>
 
                     @if (!GetFilteredTimeline().Any())
@@ -101,69 +104,160 @@
                             @foreach (var yearGroup in GetGroupedTimeline())
                             {
                                 <div class="features-timeline-year-group">
-                                    <div class="features-timeline-year-label" aria-label="Year @yearGroup.Key">
-                                        <span>@yearGroup.Key</span>
-                                    </div>
-                                    @foreach (var feature in yearGroup.OrderByDescending(f => f.ReleaseDate))
-                                    {
-                                        var videoItem = GetVideoItem(feature.VideoSlug);
-                                        var isExpanded = expandedFeatureId == feature.Id;
-                                        var videoId = videoItem != null && !videoItem.Draft ? GetYouTubeVideoId(videoItem.ExternalUrl) : null;
-
-                                        <div class="features-timeline-entry @(isExpanded ? "expanded" : "")" id="feature-@feature.Id">
-                                            <div class="features-timeline-node" aria-hidden="true">
-                                                <div class="features-timeline-dot"></div>
-                                                <time class="features-timeline-date" datetime="@(feature.ReleaseDate + "-01")">@FormatReleaseDate(feature.ReleaseDate)</time>
-                                            </div>
-                                            <div class="features-timeline-card card">
-                                                <button type="button"
-                                                        class="features-timeline-header"
-                                                        aria-expanded="@isExpanded.ToString().ToLowerInvariant()"
-                                                        aria-controls="feature-detail-@feature.Id"
-                                                        data-initialized="blazor"
-                                                        @onclick="() => ToggleFeature(feature.Id)"
-                                                        @onclick:stopPropagation="true"
-                                                        @onclick:preventDefault="true">
-                                                    <h3 class="features-timeline-name">@feature.Name</h3>
-                                                    <div class="features-timeline-badges">
-                                                        @foreach (var plan in feature.Plans)
-                                                        {
-                                                            <span class="badge-plan badge-plan-@GetPlanCssClass(plan)">@plan</span>
-                                                        }
-                                                        @if (feature.GhesSupport)
-                                                        {
-                                                            <span class="badge-success">✓ GHES</span>
-                                                        }
-                                                        @if (videoId != null)
-                                                        {
-                                                            <span class="badge-info">▶ Video</span>
-                                                        }
-                                                    </div>
-                                                    <span class="features-timeline-expand-icon" aria-hidden="true">@(isExpanded ? "▲" : "▼")</span>
-                                                </button>
-                                                <p class="features-timeline-description">@feature.Description</p>
-
-                                                <div id="feature-detail-@feature.Id" class="features-timeline-detail @(isExpanded ? "expanded" : "")">
-                                                    @if (isExpanded && !string.IsNullOrEmpty(videoId))
+                                    <h2 class="features-timeline-year-label" aria-label="Year @yearGroup.Key">@yearGroup.Key</h2>
+                                    <div class="features-timeline-year-entries">
+                                        @foreach (var monthGroup in yearGroup.GroupBy(f => f.ReleaseDate).OrderByDescending(g => g.Key))
+                                        {
+                                            <div class="features-timeline-month-row">
+                                                <div class="features-timeline-node" aria-hidden="true">
+                                                    <div class="features-timeline-dot"></div>
+                                                    <time class="features-timeline-date" datetime="@(monthGroup.Key + "-01")">@FormatReleaseDate(monthGroup.Key)</time>
+                                                </div>
+                                                <div class="features-timeline-month-cards">
+                                                    @foreach (var feature in monthGroup)
                                                     {
-                                                        <div class="features-timeline-video">
-                                                            <a href="@videoItem!.GetHref(SectionName)" class="feature-card-thumbnail">
-                                                                <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="@feature.Name video thumbnail" loading="lazy" />
-                                                                <div class="feature-card-play-icon">
-                                                                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
+                                                        var videoItem = GetVideoItem(feature.VideoSlug);
+                                                        var isExpanded = expandedFeatureId == feature.Id;
+                                                        var videoId = videoItem != null && !videoItem.Draft ? GetYouTubeVideoId(videoItem.ExternalUrl) : null;
+
+                                                        <div class="features-timeline-entry @(isExpanded ? "expanded" : "")" id="feature-@feature.Id">
+                                                            <div class="features-timeline-card card">
+                                                                <button type="button"
+                                                                        class="features-timeline-header"
+                                                                        aria-expanded="@isExpanded.ToString().ToLowerInvariant()"
+                                                                        aria-controls="feature-detail-@feature.Id"
+                                                                        data-initialized="blazor"
+                                                                        @onclick="() => ToggleFeature(feature.Id)"
+                                                                        @onclick:stopPropagation="true"
+                                                                        @onclick:preventDefault="true">
+                                                                    <h3 class="features-timeline-name">@feature.Name</h3>
+                                                                    <div class="features-timeline-badges">
+                                                                        @foreach (var plan in feature.Plans)
+                                                                        {
+                                                                            <span class="badge-plan badge-plan-@GetPlanCssClass(plan)">@plan</span>
+                                                                        }
+                                                                        @if (feature.GhesSupport)
+                                                                        {
+                                                                            <span class="badge-success">✓ GHES</span>
+                                                                        }
+                                                                        @if (videoId != null)
+                                                                        {
+                                                                            <span class="badge-info">▶ Video</span>
+                                                                        }
+                                                                    </div>
+                                                                    <span class="features-timeline-expand-icon" aria-hidden="true">@(isExpanded ? "▲" : "▼")</span>
+                                                                </button>
+
+                                                                <div id="feature-detail-@feature.Id" class="features-timeline-detail @(isExpanded ? "expanded" : "")">
+                                                                    <p class="features-timeline-description">@feature.Description</p>
+                                                                    @if (!string.IsNullOrEmpty(videoId))
+                                                                    {
+                                                                        <div class="features-timeline-video">
+                                                                            <a href="@videoItem!.GetHref(SectionName)" class="feature-card-thumbnail">
+                                                                                <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="@feature.Name video thumbnail" loading="lazy" />
+                                                                                <div class="feature-card-play-icon">
+                                                                                    <svg viewBox="0 0 24 24" fill="currentColor" width="40" height="40"><path d="M8 5v14l11-7z"/></svg>
+                                                                                </div>
+                                                                            </a>
+                                                                            <a href="@videoItem!.GetHref(SectionName)" class="features-timeline-video-link">Watch full video →</a>
+                                                                        </div>
+                                                                    }
                                                                 </div>
-                                                            </a>
-                                                            <a href="@videoItem!.GetHref(SectionName)" class="features-timeline-video-link">Watch full video →</a>
+                                                            </div>
                                                         </div>
                                                     }
                                                 </div>
                                             </div>
-                                        </div>
-                                    }
+                                        }
+                                    </div>
                                 </div>
                             }
                         </div>
                     }
+                }
+
+                @foreach (var featureSection in pageData.FeatureSections)
+                {
+                    var sectionVideos = videoItems
+                        .Where(v => featureSection.Plans.Any(p => v.Plans.Contains(p, StringComparer.OrdinalIgnoreCase)))
+                        .OrderBy(v => v.Title)
+                        .ToList();
+
+                    var activeFilters = GetActiveFilters(featureSection.Id);
+                    var filteredVideos = activeFilters.Count == 0
+                        ? sectionVideos
+                        : sectionVideos.Where(v =>
+                            (!activeFilters.Contains(FilterGhes) || v.GhesSupport) &&
+                            (!activeFilters.Contains(FilterVideos) || !string.IsNullOrEmpty(GetYouTubeVideoId(v.ExternalUrl))))
+                          .ToList();
+
+                    <div class="features-video-section">
+                        <h2 id="@featureSection.Id">@featureSection.Title</h2>
+                        <div class="features-section-filters">
+                            <button type="button"
+                                    class="features-filter-btn @(IsFilterActive(featureSection.Id, FilterGhes) ? "active" : "")"
+                                    data-filter="ghes"
+                                    data-initialized="blazor"
+                                    @onclick="() => ToggleFilter(featureSection.Id, FilterGhes)"
+                                    @onclick:stopPropagation="true"
+                                    @onclick:preventDefault="true">GHES Support</button>
+                            <button type="button"
+                                    class="features-filter-btn @(IsFilterActive(featureSection.Id, FilterVideos) ? "active" : "")"
+                                    data-filter="videos"
+                                    data-initialized="blazor"
+                                    @onclick="() => ToggleFilter(featureSection.Id, FilterVideos)"
+                                    @onclick:stopPropagation="true"
+                                    @onclick:preventDefault="true">With videos</button>
+                        </div>
+                        @if (sectionVideos.Any())
+                        {
+                            <div class="features-cards-grid">
+                                @foreach (var videoFeature in filteredVideos)
+                                {
+                                    var featureId = $"feature-{videoFeature.Slug}";
+                                    var videoId = videoFeature.Draft ? null : GetYouTubeVideoId(videoFeature.ExternalUrl);
+
+                                    @if (!string.IsNullOrEmpty(videoId))
+                                    {
+                                        <a href="@videoFeature.GetHref(SectionName)" class="card feature-card">
+                                            <div class="feature-card-thumbnail">
+                                                <img src="https://img.youtube.com/vi/@videoId/mqdefault.jpg" alt="" loading="lazy" />
+                                                <div class="feature-card-play-icon">
+                                                    <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+                                                </div>
+                                            </div>
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@videoFeature.Title</h3>
+                                            </div>
+                                            <p class="card-description" title="@videoFeature.Excerpt">@TruncateText(videoFeature.Excerpt, 135)</p>
+                                            <div class="card-badges">
+                                                @if (videoFeature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES</span>
+                                                }
+                                                <span class="badge-info">▶ Video</span>
+                                            </div>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <div class="card feature-card feature-card-static">
+                                            <div class="card-header">
+                                                <h3 id="@featureId" class="card-title">@videoFeature.Title</h3>
+                                            </div>
+                                            <p class="card-description" title="@videoFeature.Excerpt">@videoFeature.Excerpt</p>
+                                            <div class="card-badges">
+                                                @if (videoFeature.GhesSupport)
+                                                {
+                                                    <span class="badge-success">✓ GHES</span>
+                                                }
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            </div>
+                        }
+                    </div>
                 }
             </div>
         </article>
@@ -176,6 +270,8 @@ else if (_notFound)
 
 @code {
     private const string SectionName = "github-copilot";
+    private const string FilterGhes = "ghes";
+    private const string FilterVideos = "videos";
     private FeaturesPageData? pageData;
     private bool _notFound;
     private List<TechHub.Core.Models.ContentItem> videoItems = new();
@@ -185,17 +281,19 @@ else if (_notFound)
     private bool ghesFilterActive;
     private string? expandedFeatureId;
 
+    // Per-section active filters for the video card grid — keyed by featureSection.Id.
+    private readonly Dictionary<string, HashSet<string>> _sectionFilters = new();
+
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
 
-    private void SetTierFilter(string tierId)
+    private async Task SetTierFilter(string tierId)
     {
         activeTierId = activeTierId == tierId ? null : tierId;
-    }
-
-    private void ToggleGhesFilter()
-    {
-        ghesFilterActive = !ghesFilterActive;
+        if (activeTierId != null)
+        {
+            await JS.InvokeVoidAsync("scrollTierCardIntoView", activeTierId);
+        }
     }
 
     private void ClearFilters()
@@ -207,6 +305,25 @@ else if (_notFound)
     private void ToggleFeature(string featureId)
     {
         expandedFeatureId = expandedFeatureId == featureId ? null : featureId;
+    }
+
+    private bool IsFilterActive(string sectionId, string filter) =>
+        _sectionFilters.TryGetValue(sectionId, out var filters) && filters.Contains(filter);
+
+    private HashSet<string> GetActiveFilters(string sectionId) =>
+        _sectionFilters.TryGetValue(sectionId, out var filters) ? filters : [];
+
+    private void ToggleFilter(string sectionId, string filter)
+    {
+        if (!_sectionFilters.TryGetValue(sectionId, out var filters))
+        {
+            filters = new HashSet<string>();
+            _sectionFilters[sectionId] = filters;
+        }
+        if (!filters.Add(filter))
+        {
+            filters.Remove(filter);
+        }
     }
 
     private IEnumerable<TimelineFeature> GetFilteredTimeline()
@@ -281,6 +398,16 @@ else if (_notFound)
         }
 
         return null;
+    }
+
+    private static string TruncateText(string? text, int maxLength)
+    {
+        if (string.IsNullOrEmpty(text) || text.Length <= maxLength)
+        {
+            return text ?? string.Empty;
+        }
+
+        return text[..maxLength] + "...";
     }
 
     /// <summary>
