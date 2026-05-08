@@ -1,3 +1,4 @@
+using System.Net;
 using System.Text.Json;
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication;
@@ -288,29 +289,48 @@ builder.Services.AddRateLimiter(options =>
         await context.HttpContext.Response.WriteAsync("Rate limit exceeded. Please retry later.", token);
     };
 
-    // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation)
+    // General page requests: 60/min per IP (covers Blazor Server HTML and enhanced navigation).
+    // Loopback connections (localhost) are exempt — they are always local dev or E2E test runners,
+    // not external clients. RemoteIpAddress is the socket-level TCP IP and cannot be spoofed.
     options.AddPolicy("web-general", context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    {
+        var ip = context.Connection.RemoteIpAddress;
+        if (ip != null && IPAddress.IsLoopback(ip))
+        {
+            return RateLimitPartition.GetNoLimiter("loopback");
+        }
+
+        return RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: ip?.ToString() ?? "unknown",
             factory: _ => new FixedWindowRateLimiterOptions
             {
                 PermitLimit = 60,
                 Window = TimeSpan.FromMinutes(1),
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
                 QueueLimit = 5
-            }));
+            });
+    });
 
-    // RSS feed endpoints: stricter limit — bot-targeted content syndication
+    // RSS feed endpoints: stricter limit — bot-targeted content syndication.
+    // Loopback connections are exempt for the same reason as web-general.
     options.AddPolicy("web-rss", context =>
-        RateLimitPartition.GetFixedWindowLimiter(
-            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+    {
+        var ip = context.Connection.RemoteIpAddress;
+        if (ip != null && IPAddress.IsLoopback(ip))
+        {
+            return RateLimitPartition.GetNoLimiter("loopback");
+        }
+
+        return RateLimitPartition.GetFixedWindowLimiter(
+            partitionKey: ip?.ToString() ?? "unknown",
             factory: _ => new FixedWindowRateLimiterOptions
             {
                 PermitLimit = 20,
                 Window = TimeSpan.FromMinutes(1),
                 QueueProcessingOrder = QueueProcessingOrder.OldestFirst,
                 QueueLimit = 0
-            }));
+            });
+    });
     // Note: Blazor Server SignalR circuits (/_blazor) cannot be rate-limited via endpoint
     // metadata because they go through the Blazor hub middleware, not endpoint routing.
     // SignalR concurrency is instead managed by the SignalR MaximumParallelInvocationsPerClient

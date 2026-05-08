@@ -21,7 +21,6 @@ and the known bugs and edge cases with their test coverage.
 - [Infinite Scroll: Normal Flow](#infinite-scroll-normal-flow)
 - [TOC Scroll-Spy: How It Ties In](#toc-scroll-spy-how-it-ties-in)
 - [The Cascade Bug](#the-cascade-bug)
-- [The Stuck Bug](#the-stuck-bug)
 - [Why requestAnimationFrame (not setTimeout)](#why-requestanimationframe-not-settimeout)
 - [Why the Circuit Cache Matters](#why-the-circuit-cache-matters)
 - [Why Not Just Disconnect the IO During Navigation?](#why-not-just-disconnect-the-io-during-navigation)
@@ -295,22 +294,38 @@ Key integration points:
 **Problem**: On back-nav, the page initially renders at scroll-Y=0. The IO trigger
 sits near the top of the (short) page. If the IO callback calls `LoadNextBatch`
 immediately, it creates a chain: batch 4 loads → trigger still visible → fires
-again → batch 5 → ... → all content loads.
+again → batch 5 → … → all content loads.
 
-**Root cause**: IO fires *during* navigation before `scrollTo(savedY)` runs.
+**Root cause**: IO fires at the restored scroll position (or at Y=0 while the
+circuit cache is still being restored) before the user has deliberately scrolled
+to request more content.
 
-**Fix**: The `navigating` flag gates the IO callback. It records
-`pendingIntersect = true` but does NOT fire. `finishNavigation()` does a manual
-`getBoundingClientRect` check at the *restored* position.
+**Fix**: `skipFirst` — when `startObserving` is called after a traverse navigation
+(either from `finishNavigation` for the deferred case, or from `observeScrollTrigger`
+when `postNavPending=true`), a `skipFirst=true` flag is passed. The IO closure keeps
+a `firstSkipped` boolean: the very first intersecting entry is silently ignored and
+the observer stays connected. Only subsequent intersection entries (triggered by
+actual user scrolling away and back) load the next batch.
 
-## The Stuck Bug
+This is strictly safer than the previous "allow 1 batch then gate" approach:
 
-**Problem**: IO is edge-triggered (fires once per state transition). If the callback
-returns early during navigation, it will never fire again for the same trigger.
+- No `postNavBatchFlushed` flag that a stray scroll event could clear before Blazor
+  re-attaches, accidentally unblocking the cascade.
+- Trade-off: if the trigger is visible on return, the user must scroll away (trigger
+  exits zone) and back (re-enters zone) before more content loads. This is acceptable
+  because in the happy path all needed content is already cached.
 
-**Fix**: `finishNavigation` checks `pendingIntersect` and flushes `LoadNextBatch`
-if the trigger is still genuinely visible. If not visible, clears the flag — the
-IO is still observing, and genuine scrolling will cause a new transition.
+**`postNavPending` race guard**: In rare cases `finishNavigation` can run *before*
+`observeScrollTrigger` is called (e.g. the JS module import takes longer than
+`markScriptsReady`'s 10 ms polling interval):
+
+- `finishNavigation` sees `infiniteScrollState?.deferred` is null → sets
+  `postNavPending = true`.
+- When `observeScrollTrigger` is later called it detects `postNavPending`, consumes
+  the flag, and calls `startObserving(skipFirst=true)`.
+
+`postNavPending` is also cleared in `beforeenhancedload` so a subsequent forward
+navigation cannot accidentally inherit the flag.
 
 ## Why requestAnimationFrame (not setTimeout)
 
@@ -341,17 +356,16 @@ at the saved scroll position.
 2. **Can't skip observing during navigation.** After `finishNavigation`, no observer
    would exist and Blazor won't re-call `observeScrollTrigger`.
 3. **Re-observing a visible element fires immediately.** IO spec delivers the first
-   intersection entry synchronously. You'd need a "skip first callback" hack.
+   intersection entry synchronously. The `skipFirst` mechanism handles this correctly.
 
 ## Known Edge Cases
 
 | Edge Case | Behavior | Covered By |
 |-----------|----------|------------|
-| Trigger visible at restored position | Loads one batch (user was at bottom) | E2E: `RestoresScrollPosition` |
-| Trigger NOT visible at restored position | Clears flag, no load | Unit: "NOT flush pendingIntersect when outside viewport+margin" |
-| IO fires at scroll-Y=0 before scrollTo | pendingIntersect deferred until after scrollTo | E2E: `DoesNotTriggerCascade` |
-| rAF timing vs IO ordering | rAF always fires AFTER IO in same frame | Unit: "call LoadNextBatch after navigation completes if trigger was intersecting during traverse" |
-| Forward nav (trigger far away) | No issue — scrollTo(0) pushes trigger off-screen | IO guard: only `'traverse'` sets pendingIntersect |
+| Trigger visible at restored position | First IO skipped, observer stays live; user must scroll away and back to load | Unit: "should NOT call LoadNextBatch on first intersection after back-nav" |
+| Trigger NOT visible at restored position | First IO fires when user scrolls to trigger → skipped; second fire loads | Unit: "should call LoadNextBatch on second intersection after back-nav" |
+| `postNavPending` race guard | finishNavigation ran before observeScrollTrigger; skipFirst applied late | Unit: "should apply skipFirst to re-attach when postNavPending is set" |
+| Forward nav (trigger far away) | No issue — scrollTo(0) pushes trigger off-screen | IO guard: only `'traverse'` sets skipFirst |
 | Trigger scrolled past (negative top) | `top < innerHeight + 300` → true → loads | Correct: past trigger means content is needed |
 | Page not tall enough for restore | ResizeObserver + MutationObserver retry (150ms debounce, 30s deadline) | Unit: scroll retry tests |
 | `beforeenhancedload` save timing | Save fires before scrollTo(0) — correct position captured | [Fixed Bug](#fixed-bug-beforeenhancedload-timing) |
@@ -367,9 +381,10 @@ at the saved scroll position.
 - `should NOT call LoadNextBatch when trigger exits intersection margin`
 - `should disconnect observer after LoadNextBatch is called (prevents cascade)`
 - `should NOT call LoadNextBatch during navigation`
-- `should call LoadNextBatch after navigation completes if trigger was intersecting during traverse`
+- `should NOT call LoadNextBatch on first intersection after back-nav (skipFirst gate)`
+- `should call LoadNextBatch on second intersection after back-nav (after first is skipped)`
+- `should apply skipFirst to re-attach when postNavPending is set (finishNavigation before observeScrollTrigger)`
 - `should create a new observer on re-attach after batch load`
-- `should NOT flush pendingIntersect when trigger is outside viewport+margin on back-nav`
 
 **Scroll position:**
 
@@ -387,7 +402,8 @@ at the saved scroll position.
 ### E2E Tests (`tests/TechHub.E2E.Tests/Web/`)
 
 - `InfiniteScrollBackNavigationTests.BackNavigation_AfterInfiniteScroll_RestoresScrollPosition` — full infinite scroll + back-nav + position check
-- `InfiniteScrollBackNavigationTests.BackNavigation_AfterInfiniteScroll_DoesNotTriggerCascade` — at most 1 extra batch on back-nav
+- `InfiniteScrollBackNavigationTests.BackNavigation_AfterInfiniteScroll_DoesNotTriggerCascade` — no cascade on back-nav
+- `InfiniteScrollBackNavigationTests.BackNavigation_CascadingLoad_ScrollDoesNotReachEnd` — scroll position stays near saved Y, page doesn't reach end
 - `ScrollRestorationTests.BackNavigation_OnLongContentPage_RestoresScrollPosition` — isolates restore on a page WITHOUT infinite scroll
 
 ### E2E Test Helpers (`tests/TechHub.E2E.Tests/Helpers/BlazorHelpers.cs`)

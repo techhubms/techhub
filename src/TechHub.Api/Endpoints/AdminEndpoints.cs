@@ -1055,6 +1055,21 @@ public static partial class AdminEndpoints
             return Results.BadRequest("The URL must be a YouTube video URL.");
         }
 
+        // Validate that the URL points to a video (not a channel, playlist, etc.)
+        // Supported: watch?v=..., youtu.be/<id>, /shorts/<id>, /embed/<id>
+        var path = uri.AbsolutePath;
+        var isVideoUrl = host is "youtu.be"
+            ? path.Length > 1  // e.g. /dQw4w9WgXcQ
+            : path.StartsWith("/shorts/", StringComparison.OrdinalIgnoreCase)
+              || path.StartsWith("/embed/", StringComparison.OrdinalIgnoreCase)
+              || (path.Equals("/watch", StringComparison.OrdinalIgnoreCase)
+                  && (uri.Query.StartsWith("?v=", StringComparison.Ordinal)
+                      || uri.Query.Contains("&v=", StringComparison.Ordinal)));
+        if (!isVideoUrl)
+        {
+            return Results.BadRequest("The URL must be a YouTube video URL (e.g., https://youtu.be/... or https://www.youtube.com/watch?v=...).");
+        }
+
         if (request.Plans is null || request.Plans.Count == 0)
         {
             return Results.BadRequest("At least one plan is required.");
@@ -1170,15 +1185,26 @@ public static partial class AdminEndpoints
             ExternalUrl = youtubeUrl
         };
 
-        var updated = await contentRepo.PublishGhcFeatureDraftAsync(
-            slug,
-            existing.ExternalUrl ?? string.Empty,
-            youtubeUrl,
-            updatedEditData,
-            request.Plans,
-            request.GhesSupport,
-            hasTranscript: transcript is not null,
-            ct);
+        bool updated;
+        try
+        {
+            updated = await contentRepo.PublishGhcFeatureDraftAsync(
+                slug,
+                existing.ExternalUrl ?? string.Empty,
+                youtubeUrl,
+                updatedEditData,
+                request.Plans,
+                request.GhesSupport,
+                hasTranscript: transcript is not null,
+                ct);
+        }
+        catch (InvalidOperationException ex) when (ex.Message.Contains("already owned", StringComparison.Ordinal))
+        {
+            return Results.Conflict(new
+            {
+                message = "This YouTube URL is already used by another content item. Delete this draft manually and use the existing item instead."
+            });
+        }
 
         if (!updated)
         {
