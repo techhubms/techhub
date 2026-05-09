@@ -73,9 +73,6 @@ public class ContentItemsGridTests : BunitContext
         Services.AddScoped<ContentGridStateCache>();
         AddBunitPersistentComponentState();
 
-        // ContentItemsGrid uses RendererInfo.IsInteractive in OnAfterRenderAsync
-        SetRendererInfo(new RendererInfo("Server", true));
-
         // JS interop is not under test — allow all calls.
         JSInterop.Mode = JSRuntimeMode.Loose;
     }
