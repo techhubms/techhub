@@ -10,6 +10,11 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class LoadMoreButtonTests : PlaywrightTestBase
 {
+    private const string LoadMoreEnabledOrEndOfContentCondition =
+        "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null";
+    private const string HasEnabledLoadMoreCondition =
+        "() => document.querySelector('.load-more-btn:not([disabled])') !== null";
+
     public LoadMoreButtonTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
@@ -58,10 +63,10 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         // In preview environments content can fluctuate. If the collection currently fits in
         // one batch, skip explicitly instead of passing vacuously.
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null");
+            LoadMoreEnabledOrEndOfContentCondition);
 
         var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
+            HasEnabledLoadMoreCondition);
         Assert.SkipWhen(!hasLoadMore,
             "Collection currently has <= BatchSize items in this environment; no Load more interaction to test.");
 
@@ -89,10 +94,10 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         // In preview environments content can fluctuate. If the collection currently fits in
         // one batch, skip explicitly instead of passing vacuously.
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null");
+            LoadMoreEnabledOrEndOfContentCondition);
 
         var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
+            HasEnabledLoadMoreCondition);
         Assert.SkipWhen(!hasLoadMore,
             "Collection currently has <= BatchSize items in this environment; no Load more interaction to test.");
 
