@@ -63,14 +63,16 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
-        // Click Load more and wait for card count to increase
-        var loadMoreBtn = Page.Locator(".load-more-btn");
-        await loadMoreBtn.ClickAndExpectAsync(async () =>
-        {
-            var newCount = await Page.Locator(".card").CountAsync();
-            newCount.Should().BeGreaterThan(initialCount,
-                $"clicking Load more should append items (was {initialCount})");
-        });
+        // Click once and wait for the first post-click render. The button can disappear
+        // immediately after the last batch starts loading, so retry-click helpers can
+        // fail by waiting on a button that no longer exists.
+        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
+        await Page.WaitForConditionAsync(
+            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+
+        var newCount = await Page.Locator(".card").CountAsync();
+        newCount.Should().BeGreaterThan(initialCount,
+            $"clicking Load more should append items (was {initialCount})");
     }
 
     [Fact]
@@ -92,13 +94,13 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         // Capture the title of the very first card (it must still be there after load)
         var firstCardTitle = await Page.Locator(".card").First.TextContentAsync();
 
-        var loadMoreBtn = Page.Locator(".load-more-btn");
-        await loadMoreBtn.ClickAndExpectAsync(async () =>
-        {
-            var newCount = await Page.Locator(".card").CountAsync();
-            newCount.Should().BeGreaterThan(initialCount,
-                "items should be appended, not replaced");
-        });
+        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
+        await Page.WaitForConditionAsync(
+            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+
+        var newCount = await Page.Locator(".card").CountAsync();
+        newCount.Should().BeGreaterThan(initialCount,
+            "items should be appended, not replaced");
 
         // Verify first card is still present (was not replaced)
         var firstCardAfterLoad = await Page.Locator(".card").First.TextContentAsync();
@@ -213,15 +215,15 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
-        var loadMoreBtn = Page.Locator(".load-more-btn");
-        await loadMoreBtn.ClickAndExpectAsync(async () =>
-        {
-            var newCount = await Page.Locator(".card").CountAsync();
-            var endVisible = await Page.EvaluateAsync<bool>(
-                "() => document.querySelector('.end-of-content') !== null");
-            (newCount > initialCount || endVisible).Should().BeTrue(
-                "Load more with tag filter should load more filtered items or show end of content");
-        });
+        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
+        await Page.WaitForConditionAsync(
+            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+
+        var newCount = await Page.Locator(".card").CountAsync();
+        var endVisible = await Page.EvaluateAsync<bool>(
+            "() => document.querySelector('.end-of-content') !== null");
+        (newCount > initialCount || endVisible).Should().BeTrue(
+            "Load more with tag filter should load more filtered items or show end of content");
 
         // Tag filter is preserved in the URL after loading more
         Page.Url.Should().Contain("tags=ai", "tag filter should be preserved after Load more");
@@ -247,14 +249,14 @@ public class LoadMoreButtonTests : PlaywrightTestBase
             "This test validates back-navigation after loading additional content and requires a collection with multiple batches");
 
         // Load more items so the page grows
-        var loadMoreBtn = Page.Locator(".load-more-btn");
         var initialCount = await Page.Locator(".card").CountAsync();
-        await loadMoreBtn.ClickAndExpectAsync(async () =>
-        {
-            var newCount = await Page.Locator(".card").CountAsync();
-            newCount.Should().BeGreaterThan(initialCount,
-                "load more should append items before scrolling");
-        });
+        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
+        await Page.WaitForConditionAsync(
+            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+
+        var newCount = await Page.Locator(".card").CountAsync();
+        newCount.Should().BeGreaterThan(initialCount,
+            "load more should append items before scrolling");
 
         // Scroll to a mid-page position
         await Page.ScrollToPositionAsync(500);
