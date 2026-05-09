@@ -129,7 +129,6 @@ For the full architecture (sequence diagrams, known bugs, `navigating` flag,
 | Export | Called by | Purpose |
 |--------|-----------|---------|
 | `initTocScrollSpy()` | page-scripts.js | Activate TOC highlighting |
-
 | `isNavigating()` | Tests | Check navigation state |
 
 ### Key Rules
