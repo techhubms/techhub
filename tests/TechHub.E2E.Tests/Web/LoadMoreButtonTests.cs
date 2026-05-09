@@ -10,11 +10,6 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class LoadMoreButtonTests : PlaywrightTestBase
 {
-    private const string LoadMoreEnabledOrEndOfContentCondition =
-        "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null";
-    private const string HasEnabledLoadMoreCondition =
-        "() => document.querySelector('.load-more-btn:not([disabled])') !== null";
-
     public LoadMoreButtonTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
@@ -54,21 +49,17 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WhenClicked_AppendsMoreItems()
     {
-        // Prefer ai/blogs because it typically has more than one batch.
+        // Use ai/blogs (47 items) — deterministically exceeds BatchSize (40) so the
+        // Load more button is always present and the test can never silently pass on a
+        // collection that happens to fit in a single batch.
         await Page.GotoRelativeAsync("/ai/blogs");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
-        // In preview environments content can fluctuate. If the collection currently fits in
-        // one batch, skip explicitly instead of passing vacuously.
+        // Wait for the Load more button (guaranteed because ai/blogs > 40 items).
         await Page.WaitForConditionAsync(
-            LoadMoreEnabledOrEndOfContentCondition);
-
-        var hasLoadMore = await Page.EvaluateAsync<bool>(
-            HasEnabledLoadMoreCondition);
-        Assert.SkipWhen(!hasLoadMore,
-            "Collection currently has <= BatchSize items in this environment; no Load more interaction to test.");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
@@ -85,21 +76,16 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WhenClicked_ItemsAreAppendedNotReplaced()
     {
-        // Prefer ai/blogs because it typically has more than one batch.
+        // Use ai/blogs (47 items) — deterministically exceeds BatchSize (40) so the
+        // Load more button is always present.
         await Page.GotoRelativeAsync("/ai/blogs");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
-        // In preview environments content can fluctuate. If the collection currently fits in
-        // one batch, skip explicitly instead of passing vacuously.
+        // Wait for the Load more button (guaranteed because ai/blogs > 40 items).
         await Page.WaitForConditionAsync(
-            LoadMoreEnabledOrEndOfContentCondition);
-
-        var hasLoadMore = await Page.EvaluateAsync<bool>(
-            HasEnabledLoadMoreCondition);
-        Assert.SkipWhen(!hasLoadMore,
-            "Collection currently has <= BatchSize items in this environment; no Load more interaction to test.");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
@@ -220,7 +206,8 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         var hasLoadMore = await Page.EvaluateAsync<bool>(
             "() => document.querySelector('.load-more-btn') !== null");
 
-        if (!hasLoadMore) return;
+        hasLoadMore.Should().BeTrue(
+            "This test validates filter preservation across load-more pagination and requires a dataset that spans multiple batches");
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
@@ -252,10 +239,8 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         var hasLoadMore = await Page.EvaluateAsync<bool>(
             "() => document.querySelector('.load-more-btn') !== null");
 
-        if (!hasLoadMore)
-        {
-            return;
-        }
+        hasLoadMore.Should().BeTrue(
+            "This test validates back-navigation after loading additional content and requires a collection with multiple batches");
 
         // Load more items so the page grows
         var loadMoreBtn = Page.Locator(".load-more-btn");
