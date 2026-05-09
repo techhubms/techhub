@@ -63,12 +63,13 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
-        // Click once and wait for the first post-click render. The button can disappear
-        // immediately after the last batch starts loading, so retry-click helpers can
-        // fail by waiting on a button that no longer exists.
-        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
-        await Page.WaitForConditionAsync(
-            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+        var loadMoreBtn = Page.Locator(".load-more-btn:not([disabled])");
+        await loadMoreBtn.ClickAndExpectAsync(async () =>
+        {
+            await Page.WaitForConditionAsync(
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
+                new PageWaitForFunctionOptions { Timeout = 15000 });
+        });
 
         var newCount = await Page.Locator(".card").CountAsync();
         newCount.Should().BeGreaterThan(initialCount,
@@ -94,9 +95,13 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         // Capture the title of the very first card (it must still be there after load)
         var firstCardTitle = await Page.Locator(".card").First.TextContentAsync();
 
-        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
-        await Page.WaitForConditionAsync(
-            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+        var loadMoreBtn = Page.Locator(".load-more-btn:not([disabled])");
+        await loadMoreBtn.ClickAndExpectAsync(async () =>
+        {
+            await Page.WaitForConditionAsync(
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
+                new PageWaitForFunctionOptions { Timeout = 15000 });
+        });
 
         var newCount = await Page.Locator(".card").CountAsync();
         newCount.Should().BeGreaterThan(initialCount,
@@ -215,9 +220,13 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
-        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
-        await Page.WaitForConditionAsync(
-            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+        var loadMoreBtn = Page.Locator(".load-more-btn:not([disabled])");
+        await loadMoreBtn.ClickAndExpectAsync(async () =>
+        {
+            await Page.WaitForConditionAsync(
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
+                new PageWaitForFunctionOptions { Timeout = 15000 });
+        });
 
         var newCount = await Page.Locator(".card").CountAsync();
         var endVisible = await Page.EvaluateAsync<bool>(
@@ -250,9 +259,13 @@ public class LoadMoreButtonTests : PlaywrightTestBase
 
         // Load more items so the page grows
         var initialCount = await Page.Locator(".card").CountAsync();
-        await Page.Locator(".load-more-btn:not([disabled])").ClickAsync();
-        await Page.WaitForConditionAsync(
-            $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
+        var loadMoreBtn = Page.Locator(".load-more-btn:not([disabled])");
+        await loadMoreBtn.ClickAndExpectAsync(async () =>
+        {
+            await Page.WaitForConditionAsync(
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
+                new PageWaitForFunctionOptions { Timeout = 15000 });
+        });
 
         var newCount = await Page.Locator(".card").CountAsync();
         newCount.Should().BeGreaterThan(initialCount,
