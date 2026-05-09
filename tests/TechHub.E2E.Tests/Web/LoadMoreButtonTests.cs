@@ -35,10 +35,10 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         // Either a Load more button is present, or End of content is shown —
         // both are valid depending on how many items the collection has.
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn') !== null || document.querySelector('.end-of-content') !== null");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null");
 
         var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn') !== null");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
         var hasEndOfContent = await Page.EvaluateAsync<bool>(
             "() => document.querySelector('.end-of-content') !== null");
 
@@ -190,21 +190,23 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WithTagFilter_PreservesFilterAcrossLoads()
     {
-        const string Tag = "copilot chat";
+        // Use /ai/blogs because this collection is expected to exceed one batch (BatchSize=40),
+        // and tag=ai keeps the dataset broad enough to exercise a real Load more click path.
+        const string Tag = "ai";
 
-        await Page.GotoRelativeAsync($"/github-copilot/news?tags={Uri.EscapeDataString(Tag)}");
+        await Page.GotoRelativeAsync($"/ai/blogs?tags={Uri.EscapeDataString(Tag)}");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
         // Verify URL still contains the tag filter
-        Page.Url.Should().Contain("tags=copilot", "URL should preserve tag filter after navigation");
+        Page.Url.Should().Contain("tags=ai", "URL should preserve tag filter after navigation");
 
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn') !== null || document.querySelector('.end-of-content') !== null");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null");
 
         var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn') !== null");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
 
         hasLoadMore.Should().BeTrue(
             "This test validates filter preservation across load-more pagination and requires a dataset that spans multiple batches");
@@ -222,22 +224,24 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         });
 
         // Tag filter is preserved in the URL after loading more
-        Page.Url.Should().Contain("tags=copilot", "tag filter should be preserved after Load more");
+        Page.Url.Should().Contain("tags=ai", "tag filter should be preserved after Load more");
     }
 
     [Fact]
     public async Task BackNavigation_AfterLoadMore_RestoresScrollPosition()
     {
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Use /ai/blogs because this collection is expected to exceed one batch (BatchSize=40),
+        // so this test can reliably load an additional batch before navigating away.
+        await Page.GotoRelativeAsync("/ai/blogs");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn') !== null || document.querySelector('.end-of-content') !== null");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null");
 
         var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn') !== null");
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
 
         hasLoadMore.Should().BeTrue(
             "This test validates back-navigation after loading additional content and requires a collection with multiple batches");
@@ -256,18 +260,18 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await Page.ScrollToPositionAsync(500);
 
         // Navigate away via sub-nav to a different page (SPA-style enhanced navigation)
-        // Using the "all" collection link which has a predictable URL that is NOT /github-copilot/news
-        var allLink = Page.Locator(".sub-nav a[href*='/github-copilot/all']").First;
+        // Using the "all" collection link which has a predictable URL that is NOT /ai/blogs
+        var allLink = Page.Locator(".sub-nav a[href*='/ai/all']").First;
         await allLink.ClickAndExpectAsync(async () =>
         {
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new System.Text.RegularExpressions.Regex(@".*/github-copilot/all.*"),
+                new System.Text.RegularExpressions.Regex(@".*/ai/all.*"),
                 new() { Timeout = BlazorHelpers.E2ETimeout });
         });
 
         // Navigate back
         await Page.GoBackAsync();
-        await Page.WaitForBlazorUrlContainsAsync("github-copilot/news");
+        await Page.WaitForBlazorUrlContainsAsync("ai/blogs");
         await Page.WaitForBlazorReadyAsync();
 
         // Scroll position should be restored (allow ±100px tolerance).
