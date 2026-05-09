@@ -73,6 +73,9 @@ public class ContentItemsGridTests : BunitContext
         Services.AddScoped<ContentGridStateCache>();
         AddBunitPersistentComponentState();
 
+        // ContentItemsGrid uses RendererInfo.IsInteractive in OnAfterRenderAsync
+        SetRendererInfo(new RendererInfo("Server", true));
+
         // JS interop is not under test — allow all calls.
         JSInterop.Mode = JSRuntimeMode.Loose;
     }
@@ -268,6 +271,41 @@ public class ContentItemsGridTests : BunitContext
         {
             cut.Find(".load-more-btn").TextContent.Should().Contain("Load more");
             cut.FindAll(".end-of-content").Should().BeEmpty("End of content must not show when more content is available");
+        });
+    }
+
+    [Fact]
+    public void ContentItemsGrid_HidesLoadMoreButton_WhenApiReturnsExactlyBatchSizeItemsButAllLoaded()
+    {
+        // Arrange - API returns exactly 40 items (= BatchSize) but totalCount is also 40,
+        // meaning there is no next page. Regression test: previously hasMoreContent stayed
+        // true because only newItems.Count < BatchSize was checked.
+        var exactBatchItems = Enumerable.Range(1, 40).Select(i =>
+            new ContentItemBuilder().WithSlug($"item-{i}").WithTitle($"Item {i}")
+                .WithPrimarySectionName("github-copilot").WithCollectionName("community").Build()
+        ).ToList();
+
+        _mockApiClient
+            .Setup(x => x.GetCollectionItemsAsync(
+                "github-copilot", "community",
+                It.IsAny<int?>(), It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<string?>(), It.IsAny<int?>(),
+                It.IsAny<string?>(), It.IsAny<string?>(),
+                It.IsAny<bool>(), It.IsAny<string?>(),
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new CollectionItemsResponse(exactBatchItems, 40));
+
+        // Act
+        var cut = Render<ContentItemsGrid>(parameters => parameters
+            .Add(p => p.SectionName, "github-copilot")
+            .Add(p => p.CollectionName, "community"));
+
+        // Assert - no Load More button because all 40 items are already loaded
+        cut.WaitForAssertion(() =>
+        {
+            cut.FindAll(".load-more-btn").Should().BeEmpty("Load More must not appear when totalCount equals items already loaded");
+            cut.Find(".end-of-content").TextContent.Should().Contain("End of content");
         });
     }
 }

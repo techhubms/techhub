@@ -44,7 +44,7 @@
     }
     else if (FilteredContentItems.Any())
     {
-        <div class="content-grid" role="feed" aria-busy="@isLoadingMore">
+        <div class="content-grid" role="feed" aria-busy="@(isLoadingMore ? "true" : "false")">
             @foreach (var item in FilteredContentItems)
             {
                 <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@(IsAuthorMode ? null : SectionName)" ActiveFilterTags="@FilterTags" />
@@ -54,7 +54,7 @@
         @if (hasMoreContent)
         {
             <div class="load-more-container">
-                <button class="load-more-btn" @onclick="LoadNextBatch" disabled="@isLoadingMore" aria-busy="@isLoadingMore" aria-label="Load more content">
+                <button class="load-more-btn" @onclick="LoadNextBatch" disabled="@isLoadingMore" aria-busy="@(isLoadingMore ? "true" : "false")" aria-label="Load more content">
                     @if (isLoadingMore)
                     {
                         <div class="loading-spinner" aria-hidden="true"></div>
@@ -328,13 +328,13 @@ private async Task LoadInitialBatch()
         // Update total count from API response (always reflects current filters)
         totalCount = result?.TotalCount ?? 0;
 
-        if (newItems.Count < BatchSize)
+        contentItems.AddRange(newItems);
+        currentBatch = batch;
+
+        if (newItems.Count < BatchSize || (totalCount > 0 && contentItems.Count >= totalCount))
         {
             hasMoreContent = false;
         }
-
-        contentItems.AddRange(newItems);
-        currentBatch = batch;
 
         // Update circuit-scoped cache so back-navigation can restore all loaded items
         GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount);

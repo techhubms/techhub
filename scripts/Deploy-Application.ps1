@@ -395,96 +395,28 @@ if (-not $SkipDeploy) {
     }
     Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
 
-    # Wait until /version on the deployed FQDN reports the new tag.
-    # This replaces the blind sleep and ensures E2E tests and smoke tests only run
-    # once the new revision is actually serving traffic end-to-end.
-    Write-Step "Waiting for new version ($Tag) to become live at https://$webFqdn/version"
-    $versionMaxAttempts = 60  # 60 × 5s = 5 minutes max
-    $versionAttempt = 0
-    $versionLive = $false
-    while ($versionAttempt -lt $versionMaxAttempts) {
-        $versionAttempt++
-        try {
-            $versionResponse = Invoke-WebRequest -Uri "https://$webFqdn/version" -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
-            if ($versionResponse.StatusCode -eq 200) {
-                $versionJson = $versionResponse.Content | ConvertFrom-Json
-                if ($versionJson.tag -eq $Tag) {
-                    $versionLive = $true
-                    Write-Ok "New version confirmed live (tag: $($versionJson.tag)) after $($versionAttempt * 5)s"
-                    break
-                }
-                Write-Detail "Still on old version '$($versionJson.tag)' (attempt $versionAttempt/$versionMaxAttempts) — waiting 5s..."
-            }
-        }
-        catch {
-            Write-Detail "Version endpoint not yet responding (attempt $versionAttempt/$versionMaxAttempts) — waiting 5s..."
-        }
-        Start-Sleep -Seconds 5
-    }
-    if (-not $versionLive) {
-        Write-Fail "New version ($Tag) did not become live within $($versionMaxAttempts * 5)s"
-        exit 1
-    }
-
-    # ============================================================================
-    # SMOKE TESTS
-    # ============================================================================
-
-    if (-not $SkipSmokeTests) {
-        Write-Step "Running smoke tests"
-
-        $smokeTestsPassed = $true
-
-        if ($webFqdn) {
-            # Test Web health endpoint
-            $healthResponse = try {
-                Invoke-WebRequest -Uri "https://$webFqdn/health" -TimeoutSec 30 -UseBasicParsing
-            }
-            catch { $null }
-
-            if ($healthResponse -and $healthResponse.StatusCode -eq 200) {
-                Write-Ok "Web health check passed (https://$webFqdn/health)"
-            }
-            else {
-                Write-Fail "Web health check failed"
-                $smokeTestsPassed = $false
-            }
-
-            # Test Web homepage
-            $homepageResponse = try {
-                Invoke-WebRequest -Uri "https://$webFqdn" -TimeoutSec 30 -UseBasicParsing
-            }
-            catch { $null }
-
-            if ($homepageResponse -and $homepageResponse.StatusCode -eq 200) {
-                Write-Ok "Web homepage accessible (https://$webFqdn)"
-            }
-            else {
-                Write-Fail "Web homepage not accessible"
-                $smokeTestsPassed = $false
-            }
-        }
-        else {
-            Write-Warn "Could not retrieve web URL for smoke tests"
-            $smokeTestsPassed = $false
-        }
-
+    # Delegate version wait and smoke tests to the shared script.
+    # On PR/staging the version endpoint also confirms API readiness (Kestrel is blocked
+    # on section-cache load until the API responds, so /version == full chain healthy).
+    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+    $waitArgs = @('-WebFqdn', $webFqdn, '-Tag', $Tag)
+    if ($SkipSmokeTests) { $waitArgs += '-SkipSmokeTests' }
+    & (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') @waitArgs
+    if ($LASTEXITCODE -ne 0) {
         # Rollback on failure (production only)
-        if (-not $smokeTestsPassed) {
-            if ($Environment -eq 'production' -and $previousApiImage -and $previousWebImage) {
-                Write-Step "Rolling back to previous version"
-                az containerapp update `
-                    --name $apiAppName `
-                    --resource-group $resourceGroup `
-                    --image $previousApiImage | Out-Null
-                az containerapp update `
-                    --name $webAppName `
-                    --resource-group $resourceGroup `
-                    --image $previousWebImage | Out-Null
-                Write-Warn "Rollback complete. Previous images restored."
-            }
-            exit 1
+        if ($Environment -eq 'production' -and $previousApiImage -and $previousWebImage) {
+            Write-Step "Rolling back to previous version"
+            az containerapp update `
+                --name $apiAppName `
+                --resource-group $resourceGroup `
+                --image $previousApiImage | Out-Null
+            az containerapp update `
+                --name $webAppName `
+                --resource-group $resourceGroup `
+                --image $previousWebImage | Out-Null
+            Write-Warn "Rollback complete. Previous images restored."
         }
+        exit 1
     }
 }
 else {

@@ -524,8 +524,9 @@ app.MapDefaultEndpoints();
 // Deployment version probe — returns the image tag and parsed deploy timestamp.
 // Used by the deployment script to wait until the new version is live.
 // Intentionally exposes only non-sensitive deployment metadata (tag + timestamp).
-app.MapGet("/version", (IConfiguration config) =>
+app.MapGet("/version", (IConfiguration config, HttpResponse response) =>
 {
+    response.Headers.CacheControl = "no-store";
     var tag = config["DEPLOY_IMAGE_TAG"] ?? "unknown";
     DateTimeOffset? deployedAt = null;
     if (tag.Length == 14
