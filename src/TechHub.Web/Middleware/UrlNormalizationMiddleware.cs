@@ -44,6 +44,8 @@ public partial class UrlNormalizationMiddleware
         "admin",
         "health",
         "alive",
+        // Deployment version probe — returns { tag, deployedAt } for the deploy readiness script.
+        "version",
         // OIDC callback path — must pass through to UseAuthentication, never treated as content.
         "signin-oidc",
     };

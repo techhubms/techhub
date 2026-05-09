@@ -354,6 +354,7 @@ public class UrlNormalizationMiddlewareTests
     [InlineData("/about")]
     [InlineData("/error")]
     [InlineData("/admin")]
+    [InlineData("/version")]
     public async Task KnownNonSectionPage_PassesThrough(string path)
     {
         var (middleware, context, nextCalled) = CreateMiddleware(path: path);
