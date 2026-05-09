@@ -327,10 +327,104 @@ if (-not $SkipDeploy) {
     }
     Write-Ok "Web deployed"
 
-    # Wait for stabilization
-    $waitSeconds = if ($Environment -eq 'production') { 60 } else { 30 }
-    Write-Detail "Waiting $waitSeconds seconds for deployment to stabilize before running smoke tests..."
-    Start-Sleep -Seconds $waitSeconds
+    $webFqdn = az containerapp show `
+        --name $webAppName `
+        --resource-group $resourceGroup `
+        --query properties.configuration.ingress.fqdn `
+        -o tsv 2>$null
+
+    if ([string]::IsNullOrWhiteSpace($webFqdn)) {
+        Write-Fail "Could not retrieve Web Container App FQDN"
+        exit 1
+    }
+
+    # Verify sticky sessions are still enabled after the update.
+    # az containerapp update can transiently clear ingress settings during revision activation.
+    # Without sticky sessions, Blazor Server SignalR circuits break on multi-replica deployments.
+    Write-Step "Verifying sticky sessions on Web Container App"
+    $stickySetTimeoutSeconds = 90
+    $stickySetRetryDelaySeconds = 5
+    $stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
+    $stickySessionsEnabled = $false
+    while ((Get-Date) -lt $stickySetDeadline) {
+        $stickySetOutput = az containerapp ingress sticky-sessions set `
+            --name $webAppName `
+            --resource-group $resourceGroup `
+            --affinity sticky 2>&1
+        if ($LASTEXITCODE -eq 0) {
+            $stickySessionsEnabled = $true
+            break
+        }
+
+        $stickySetOutputText = ($stickySetOutput | Out-String).Trim()
+        if ($stickySetOutputText -match 'ContainerAppOperationInProgress') {
+            Write-Warn "Container App operation still in progress — retrying in $($stickySetRetryDelaySeconds)s"
+            Start-Sleep -Seconds $stickySetRetryDelaySeconds
+            continue
+        }
+
+        Write-Fail "Failed to set sticky sessions (exit code $LASTEXITCODE)"
+        if (-not [string]::IsNullOrWhiteSpace($stickySetOutputText)) {
+            Write-Detail $stickySetOutputText
+        }
+        exit 1
+    }
+    if (-not $stickySessionsEnabled) {
+        Write-Fail "Failed to set sticky sessions within $($stickySetTimeoutSeconds)s"
+        exit 1
+    }
+
+    # Poll until sticky sessions are confirmed active in the resource API.
+    $stickyConfirmDeadline = (Get-Date).AddSeconds(60)
+    $stickyConfirmed = $false
+    while ((Get-Date) -lt $stickyConfirmDeadline) {
+        $affinity = az containerapp show `
+            --name $webAppName `
+            --resource-group $resourceGroup `
+            --query "properties.configuration.ingress.stickySessions.affinity" `
+            -o tsv 2>$null
+        if ($affinity -eq 'sticky') {
+            $stickyConfirmed = $true
+            break
+        }
+        Start-Sleep -Seconds 5
+    }
+    if (-not $stickyConfirmed) {
+        Write-Fail "Sticky sessions did not propagate within 60s — Blazor SignalR will not work correctly"
+        exit 1
+    }
+    Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
+
+    # Wait until /version on the deployed FQDN reports the new tag.
+    # This replaces the blind sleep and ensures E2E tests and smoke tests only run
+    # once the new revision is actually serving traffic end-to-end.
+    Write-Step "Waiting for new version ($Tag) to become live at https://$webFqdn/version"
+    $versionMaxAttempts = 60  # 60 × 5s = 5 minutes max
+    $versionAttempt = 0
+    $versionLive = $false
+    while ($versionAttempt -lt $versionMaxAttempts) {
+        $versionAttempt++
+        try {
+            $versionResponse = Invoke-WebRequest -Uri "https://$webFqdn/version" -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
+            if ($versionResponse.StatusCode -eq 200) {
+                $versionJson = $versionResponse.Content | ConvertFrom-Json
+                if ($versionJson.tag -eq $Tag) {
+                    $versionLive = $true
+                    Write-Ok "New version confirmed live (tag: $($versionJson.tag)) after $($versionAttempt * 5)s"
+                    break
+                }
+                Write-Detail "Still on old version '$($versionJson.tag)' (attempt $versionAttempt/$versionMaxAttempts) — waiting 5s..."
+            }
+        }
+        catch {
+            Write-Detail "Version endpoint not yet responding (attempt $versionAttempt/$versionMaxAttempts) — waiting 5s..."
+        }
+        Start-Sleep -Seconds 5
+    }
+    if (-not $versionLive) {
+        Write-Fail "New version ($Tag) did not become live within $($versionMaxAttempts * 5)s"
+        exit 1
+    }
 
     # ============================================================================
     # SMOKE TESTS
@@ -338,12 +432,6 @@ if (-not $SkipDeploy) {
 
     if (-not $SkipSmokeTests) {
         Write-Step "Running smoke tests"
-
-        $webFqdn = az containerapp show `
-            --name $webAppName `
-            --resource-group $resourceGroup `
-            --query properties.configuration.ingress.fqdn `
-            -o tsv 2>$null
 
         $smokeTestsPassed = $true
 
@@ -416,11 +504,6 @@ Write-Host "  API image            : $($apiImage):$Tag" -ForegroundColor Gray
 Write-Host "  Web image            : $($webImage):$Tag" -ForegroundColor Gray
 
 if (-not $SkipDeploy) {
-    $webFqdn = az containerapp show `
-        --name $webAppName `
-        --resource-group $resourceGroup `
-        --query properties.configuration.ingress.fqdn `
-        -o tsv 2>$null
     if ($webFqdn) {
         Write-Host "  Web URL     : https://$webFqdn" -ForegroundColor Gray
     }
