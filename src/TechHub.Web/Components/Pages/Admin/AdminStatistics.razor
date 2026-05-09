@@ -71,44 +71,48 @@
         <div class="admin-stats-columns">
             <div>
                 <h2 class="admin-section-title">Items by Collection</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Collection</th>
-                            <th style="text-align: right">Count</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in _stats.ItemsByCollection)
-                        {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
                             <tr>
-                                <td>@item.CollectionName</td>
-                                <td class="admin-cell-number">@item.Count.ToString("N0")</td>
+                                <th>Collection</th>
+                                <th style="text-align: right">Count</th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in _stats.ItemsByCollection)
+                            {
+                                <tr>
+                                    <td>@item.CollectionName</td>
+                                    <td class="admin-cell-number">@item.Count.ToString("N0")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div>
                 <h2 class="admin-section-title">Items by Section</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Section</th>
-                            <th style="text-align: right">Count</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var item in _stats.ItemsBySection)
-                        {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
                             <tr>
-                                <td>@item.SectionName</td>
-                                <td class="admin-cell-number">@item.Count.ToString("N0")</td>
+                                <th>Section</th>
+                                <th style="text-align: right">Count</th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in _stats.ItemsBySection)
+                            {
+                                <tr>
+                                    <td>@item.SectionName</td>
+                                    <td class="admin-cell-number">@item.Count.ToString("N0")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -144,91 +148,97 @@
         <div class="admin-stats-columns">
             <div>
                 <h2 class="admin-section-title">Table Sizes</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Table</th>
-                            <th style="text-align: right">Rows</th>
-                            <th style="text-align: right">Total</th>
-                            <th style="text-align: right">Data</th>
-                            <th style="text-align: right">Indexes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach (var table in _stats.TableSizes)
-                        {
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
                             <tr>
-                                <td class="admin-cell-mono">@table.TableName</td>
-                                <td class="admin-cell-number">@table.RowCount.ToString("N0")</td>
-                                <td class="admin-cell-number">@table.TotalSize</td>
-                                <td class="admin-cell-number">@table.DataSize</td>
-                                <td class="admin-cell-number">@table.IndexSize</td>
+                                <th>Table</th>
+                                <th style="text-align: right">Rows</th>
+                                <th style="text-align: right">Total</th>
+                                <th style="text-align: right">Data</th>
+                                <th style="text-align: right">Indexes</th>
                             </tr>
-                        }
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            @foreach (var table in _stats.TableSizes)
+                            {
+                                <tr>
+                                    <td class="admin-cell-mono">@table.TableName</td>
+                                    <td class="admin-cell-number">@table.RowCount.ToString("N0")</td>
+                                    <td class="admin-cell-number">@table.TotalSize</td>
+                                    <td class="admin-cell-number">@table.DataSize</td>
+                                    <td class="admin-cell-number">@table.IndexSize</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <div>
                 <h2 class="admin-section-title">Processing Summary</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th style="text-align: right">Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Completed Jobs</td>
-                            <td class="admin-cell-number">@_stats.Processing.CompletedJobs.ToString("N0")</td>
-                        </tr>
-                        <tr>
-                            <td>Failed Jobs</td>
-                            <td class="admin-cell-number admin-cell-error">@_stats.Processing.FailedJobs.ToString("N0")</td>
-                        </tr>
-                        <tr>
-                            <td>Total Items Added</td>
-                            <td class="admin-cell-number">@_stats.Processing.TotalItemsAdded.ToString("N0")</td>
-                        </tr>
-                        <tr>
-                            <td>Processed URLs</td>
-                            <td class="admin-cell-number">@_stats.Processing.TotalProcessedUrls.ToString("N0")</td>
-                        </tr>
-                        <tr>
-                            <td>Last Run</td>
-                            <td class="admin-cell-number">@FormatTimestamp(_stats.Processing.LastRunAt)</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th style="text-align: right">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Completed Jobs</td>
+                                <td class="admin-cell-number">@_stats.Processing.CompletedJobs.ToString("N0")</td>
+                            </tr>
+                            <tr>
+                                <td>Failed Jobs</td>
+                                <td class="admin-cell-number admin-cell-error">@_stats.Processing.FailedJobs.ToString("N0")</td>
+                            </tr>
+                            <tr>
+                                <td>Total Items Added</td>
+                                <td class="admin-cell-number">@_stats.Processing.TotalItemsAdded.ToString("N0")</td>
+                            </tr>
+                            <tr>
+                                <td>Processed URLs</td>
+                                <td class="admin-cell-number">@_stats.Processing.TotalProcessedUrls.ToString("N0")</td>
+                            </tr>
+                            <tr>
+                                <td>Last Run</td>
+                                <td class="admin-cell-number">@FormatTimestamp(_stats.Processing.LastRunAt)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h2 class="admin-section-title">Database Info</h2>
-                <table class="admin-table">
-                    <thead>
-                        <tr>
-                            <th>Property</th>
-                            <th style="text-align: right">Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Database</td>
-                            <td class="admin-cell-mono admin-cell-number">@_stats.DatabaseSize.DatabaseName</td>
-                        </tr>
-                        <tr>
-                            <td>Total Size</td>
-                            <td class="admin-cell-number">@_stats.DatabaseSize.TotalSize</td>
-                        </tr>
-                        <tr>
-                            <td>Data Size</td>
-                            <td class="admin-cell-number">@_stats.DatabaseSize.DataSize</td>
-                        </tr>
-                        <tr>
-                            <td>Index Size</td>
-                            <td class="admin-cell-number">@_stats.DatabaseSize.IndexSize</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="admin-jobs-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th style="text-align: right">Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Database</td>
+                                <td class="admin-cell-mono admin-cell-number">@_stats.DatabaseSize.DatabaseName</td>
+                            </tr>
+                            <tr>
+                                <td>Total Size</td>
+                                <td class="admin-cell-number">@_stats.DatabaseSize.TotalSize</td>
+                            </tr>
+                            <tr>
+                                <td>Data Size</td>
+                                <td class="admin-cell-number">@_stats.DatabaseSize.DataSize</td>
+                            </tr>
+                            <tr>
+                                <td>Index Size</td>
+                                <td class="admin-cell-number">@_stats.DatabaseSize.IndexSize</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 

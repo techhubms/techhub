@@ -675,6 +675,19 @@ select.admin-input {
         grid-template-columns: 1fr;
     }
 
+    /* Tables: use natural content width so horizontal scrolling is effective;
+       cap long-text cells so unbroken values do not create excessive scroll width */
+    .admin-jobs-table-wrapper .admin-table {
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .admin-jobs-table-wrapper .admin-cell-url {
+        max-width: 20rem;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
 }
 
 .admin-stats-footer {
