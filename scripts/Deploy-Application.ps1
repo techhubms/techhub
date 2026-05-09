@@ -320,7 +320,8 @@ if (-not $SkipDeploy) {
         --name $webAppName `
         --resource-group $resourceGroup `
         --image "$($webImage):$Tag" `
-        --revision-suffix "web-$Tag"
+        --revision-suffix "web-$Tag" `
+        --set-env-vars "DEPLOY_IMAGE_TAG=$Tag"
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to deploy Web"
         exit 1

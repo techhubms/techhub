@@ -529,8 +529,12 @@ app.MapGet("/version", (IConfiguration config, HttpResponse response) =>
     response.Headers.CacheControl = "no-store";
     var tag = config["DEPLOY_IMAGE_TAG"] ?? "unknown";
     DateTimeOffset? deployedAt = null;
-    if (tag.Length == 14
-        && DateTimeOffset.TryParseExact(tag, "yyyyMMddHHmmss",
+    // Tags may be a bare timestamp ("yyyyMMddHHmmss", production)
+    // or prefixed ("pr-42-yyyyMMddHHmmss", PR preview). Extract the
+    // trailing 14 characters so both formats produce a parsed timestamp.
+    var suffix = tag.Length >= 14 ? tag[^14..] : string.Empty;
+    if (suffix.Length == 14
+        && DateTimeOffset.TryParseExact(suffix, "yyyyMMddHHmmss",
             System.Globalization.CultureInfo.InvariantCulture,
             System.Globalization.DateTimeStyles.AssumeUniversal,
             out var parsed))
