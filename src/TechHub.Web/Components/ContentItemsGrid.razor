@@ -54,7 +54,7 @@
         @if (hasMoreContent)
         {
             <div class="load-more-container">
-                <button class="load-more-btn" @onclick="LoadNextBatch" disabled="@isLoadingMore" aria-busy="@(isLoadingMore ? "true" : "false")" aria-label="Load more content">
+                <button class="load-more-btn" @onclick="LoadNextBatch" disabled="@isLoadingMore" aria-busy="@(isLoadingMore ? "true" : "false")">
                     @if (isLoadingMore)
                     {
                         <div class="loading-spinner" aria-hidden="true"></div>

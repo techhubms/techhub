@@ -25,7 +25,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task ContentGrid_WhenMoreContentExists_ShowsLoadMoreButton()
+    public async Task ContentGrid_InitialLoad_ShowsLoadMoreOrEndOfContent()
     {
         await Page.GotoRelativeAsync("/github-copilot/news");
 
@@ -49,23 +49,17 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WhenClicked_AppendsMoreItems()
     {
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Use ai/blogs (47 items) — deterministically exceeds BatchSize (40) so the
+        // Load more button is always present and the test can never silently pass on a
+        // collection that happens to fit in a single batch.
+        await Page.GotoRelativeAsync("/ai/blogs");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
-        // Wait for Load more button (skip test if already at end of content)
+        // Wait for the Load more button (guaranteed because ai/blogs > 40 items).
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn') !== null || document.querySelector('.end-of-content') !== null");
-
-        var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn') !== null");
-
-        if (!hasLoadMore)
-        {
-            // Collection fits in a single batch — nothing to test here
-            return;
-        }
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
@@ -82,21 +76,16 @@ public class LoadMoreButtonTests : PlaywrightTestBase
     [Fact]
     public async Task LoadMoreButton_WhenClicked_ItemsAreAppendedNotReplaced()
     {
-        await Page.GotoRelativeAsync("/github-copilot/news");
+        // Use ai/blogs (47 items) — deterministically exceeds BatchSize (40) so the
+        // Load more button is always present.
+        await Page.GotoRelativeAsync("/ai/blogs");
 
         await Page.WaitForConditionAsync(
             "() => document.querySelectorAll('.card').length > 0");
 
+        // Wait for the Load more button (guaranteed because ai/blogs > 40 items).
         await Page.WaitForConditionAsync(
-            "() => document.querySelector('.load-more-btn') !== null || document.querySelector('.end-of-content') !== null");
-
-        var hasLoadMore = await Page.EvaluateAsync<bool>(
-            "() => document.querySelector('.load-more-btn') !== null");
-
-        if (!hasLoadMore)
-        {
-            return;
-        }
+            "() => document.querySelector('.load-more-btn:not([disabled])') !== null");
 
         var initialCount = await Page.Locator(".card").CountAsync();
 
