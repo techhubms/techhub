@@ -151,62 +151,62 @@ function Set-WebStartupProbe {
     #>
     param([string]$AppName, [string]$ResourceGroup)
 
-    try {
-        $webApp = az containerapp show --name $AppName --resource-group $ResourceGroup -o json 2>$null |
-            ConvertFrom-Json -ErrorAction SilentlyContinue
-        if (-not $webApp) {
-            Write-Warn "Could not retrieve Web Container App spec — startup probe not configured"
-            return
-        }
+    $webApp = az containerapp show --name $AppName --resource-group $ResourceGroup -o json 2>$null |
+        ConvertFrom-Json -ErrorAction SilentlyContinue
+    if (-not $webApp) {
+        Write-Fail "Could not retrieve Web Container App spec — cannot configure startup probe"
+        exit 1
+    }
 
-        $subId = az account show --query id -o tsv 2>$null
-        $container = $webApp.properties.template.containers[0]
+    $subId = az account show --query id -o tsv 2>$null
+    $container = $webApp.properties.template.containers[0]
 
-        # Preserve all existing non-Startup probes, then add ours.
-        $existingProbes = @()
-        if ($null -ne $container.probes) {
-            $existingProbes = @($container.probes | Where-Object { $_.type -ne 'Startup' })
-        }
+    # Preserve all existing non-Startup probes, then add ours.
+    # Use PSObject.Properties to safely check for property existence under Set-StrictMode -Version Latest:
+    # ConvertFrom-Json produces PSCustomObjects; accessing a missing property throws in strict mode.
+    $existingProbes = @()
+    if ($container.PSObject.Properties['probes'] -ne $null) {
+        $existingProbes = @($container.probes | Where-Object { $_.type -ne 'Startup' })
+    }
 
-        $startupProbe = [PSCustomObject]@{
-            type                = 'Startup'
-            httpGet             = [PSCustomObject]@{ path = '/alive'; port = 8080 }
-            initialDelaySeconds = 5
-            periodSeconds       = 20
-            failureThreshold    = 10   # ACA max is 10; 5 + 10×20 = 205s ≈ 3.4-min tolerance
-        }
+    $startupProbe = [PSCustomObject]@{
+        type                = 'Startup'
+        httpGet             = [PSCustomObject]@{ path = '/alive'; port = 8080 }
+        initialDelaySeconds = 5
+        periodSeconds       = 20
+        failureThreshold    = 10   # ACA max is 10; 5 + 10×20 = 205s ≈ 3.4-min tolerance
+    }
 
-        $container.probes = @($existingProbes) + @($startupProbe)
+    # Add-Member -Force adds the property if absent or replaces it if present —
+    # required under Set-StrictMode -Version Latest because direct assignment to a
+    # non-existent PSCustomObject property throws a PropertyNotFoundException.
+    $container | Add-Member -NotePropertyName 'probes' -NotePropertyValue (@($existingProbes) + @($startupProbe)) -Force
 
-        # ARM PATCH semantics: arrays are replaced in full, so we include the complete
-        # modified container (fetched from the live app) to preserve image/env/resources.
-        $patchBody = [PSCustomObject]@{
-            properties = [PSCustomObject]@{
-                template = [PSCustomObject]@{
-                    containers = @($container)
-                }
+    # ARM PATCH semantics: arrays are replaced in full, so we include the complete
+    # modified container (fetched from the live app) to preserve image/env/resources.
+    $patchBody = [PSCustomObject]@{
+        properties = [PSCustomObject]@{
+            template = [PSCustomObject]@{
+                containers = @($container)
             }
-        } | ConvertTo-Json -Depth 20 -Compress
-
-        $patchFile = Join-Path ([System.IO.Path]::GetTempPath()) "web-probe-patch-$AppName.json"
-        $patchBody | Set-Content $patchFile -Encoding utf8
-
-        $apiUrl = "https://management.azure.com/subscriptions/$subId/resourceGroups/$ResourceGroup" +
-                  "/providers/Microsoft.App/containerApps/$AppName?api-version=2024-03-01"
-        az rest --method PATCH --url $apiUrl --body "@$patchFile" --output none
-
-        Remove-Item $patchFile -ErrorAction SilentlyContinue
-
-        if ($LASTEXITCODE -eq 0) {
-            Write-Ok "Startup probe configured (initialDelaySeconds=5, failureThreshold=10, periodSeconds=20 → ~3.4 min tolerance)"
         }
-        else {
-            Write-Warn "Startup probe REST PATCH failed — Web may be killed if API cold-start takes >30s"
-        }
+    } | ConvertTo-Json -Depth 20 -Compress
+
+    $patchFile = Join-Path ([System.IO.Path]::GetTempPath()) "web-probe-patch-$AppName.json"
+    $patchBody | Set-Content $patchFile -Encoding utf8
+
+    $apiUrl = "https://management.azure.com/subscriptions/$subId/resourceGroups/$ResourceGroup" +
+              "/providers/Microsoft.App/containerApps/$($AppName)?api-version=2024-03-01"
+    az rest --method PATCH --url $apiUrl --body "@$patchFile" --output none
+
+    Remove-Item $patchFile -ErrorAction SilentlyContinue
+
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Startup probe REST PATCH failed (exit code $LASTEXITCODE)"
+        exit 1
     }
-    catch {
-        Write-Warn "Startup probe configuration error: $_ — continuing"
-    }
+
+    Write-Ok "Startup probe configured (initialDelaySeconds=5, failureThreshold=10, periodSeconds=20 → ~3.4 min tolerance)"
 }
 
 function Write-ContainerAppDiagnostics {
@@ -847,17 +847,67 @@ Set-WebStartupProbe -AppName $webAppName -ResourceGroup $stagingRG
 # Without session affinity, WebSocket connections may route to a different container instance
 # than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
 # az containerapp create does not support --sticky-sessions, so we always set it via ingress update.
-Write-Detail "Enabling sticky sessions for $webAppName..."
-az containerapp ingress sticky-sessions set `
-    --name $webAppName `
-    --resource-group $stagingRG `
-    --affinity sticky
-if ($LASTEXITCODE -ne 0) {
-    Write-Warn "Could not enable sticky sessions — Blazor SignalR may be unreliable with multiple replicas"
+Write-Step "Enabling sticky sessions on Web Container App"
+#
+# The startup probe update can leave the app in a short-lived provisioning operation.
+# Retry on ContainerAppOperationInProgress so we still enforce sticky sessions instead of
+# failing immediately on a transient Azure control-plane race.
+# 90s gives enough room for the prior startup-probe update to finish provisioning;
+# 5s retry cadence balances responsiveness with API throttling/noise.
+$stickySetTimeoutSeconds = 90
+$stickySetRetryDelaySeconds = 5
+$stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
+$stickySessionsEnabled = $false
+while ((Get-Date) -lt $stickySetDeadline) {
+    $stickySetOutput = az containerapp ingress sticky-sessions set `
+        --name $webAppName `
+        --resource-group $stagingRG `
+        --affinity sticky 2>&1
+    if ($LASTEXITCODE -eq 0) {
+        $stickySessionsEnabled = $true
+        break
+    }
+
+    $stickySetOutputText = ($stickySetOutput | Out-String).Trim()
+    if ($stickySetOutputText -match 'ContainerAppOperationInProgress') {
+        Write-Warn "Container App operation still in progress while enabling sticky sessions — retrying in $($stickySetRetryDelaySeconds)s"
+        Start-Sleep -Seconds $stickySetRetryDelaySeconds
+        continue
+    }
+
+    Write-Fail "Failed to enable sticky sessions — Blazor SignalR will not work correctly (exit code $LASTEXITCODE)"
+    if (-not [string]::IsNullOrWhiteSpace($stickySetOutputText)) {
+        Write-Detail $stickySetOutputText
+    }
+    exit 1
 }
-else {
-    Write-Ok "Sticky sessions enabled (required for Blazor Server)"
+if (-not $stickySessionsEnabled) {
+    Write-Fail "Failed to enable sticky sessions within $($stickySetTimeoutSeconds)s because the Container App stayed busy"
+    exit 1
 }
+Write-Ok "Sticky sessions set — waiting for propagation..."
+
+# Poll until the ingress affinity is confirmed as 'sticky'. The az CLI call returns quickly
+# but the setting may not yet be reflected in the resource — give it up to 60 seconds.
+$stickyDeadline = (Get-Date).AddSeconds(60)
+$stickyConfirmed = $false
+while ((Get-Date) -lt $stickyDeadline) {
+    $affinity = az containerapp show `
+        --name $webAppName `
+        --resource-group $stagingRG `
+        --query "properties.configuration.ingress.stickySessions.affinity" `
+        -o tsv 2>$null
+    if ($affinity -eq 'sticky') {
+        $stickyConfirmed = $true
+        break
+    }
+    Start-Sleep -Seconds 5
+}
+if (-not $stickyConfirmed) {
+    Write-Fail "Sticky sessions did not propagate within 60s — Blazor SignalR will not work correctly"
+    exit 1
+}
+Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
 
 # Get the actual web FQDN
 $webFqdn = az containerapp show `

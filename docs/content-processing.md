@@ -131,6 +131,8 @@ The system analyzes content using `src/TechHub.Infrastructure/Data/Resources/sys
 - Sales pitches without educational value, non-English content, job postings
 - Non-development Microsoft business products (Microsoft 365 Copilot, Dynamics, Intune, etc.)
 
+> **Manual operations bypass the sales pitch rule.** Ad-hoc URL adds, transcript applications, and GHC draft publishing set `SkipSalesPitchCheck = true` on the `RawFeedItem`, which injects a `PROCESSING_OVERRIDE` line into the AI prompt instructing it to skip that exclusion. Batch RSS processing is unaffected.
+
 **Inclusion Categories**:
 
 - **AI**: Azure OpenAI, Copilot Studio, AI Foundry, Semantic Kernel, MCP

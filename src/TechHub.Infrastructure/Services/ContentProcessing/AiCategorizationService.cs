@@ -368,6 +368,13 @@ public sealed class AiCategorizationService : IAiCategorizationService
         var sb = new StringBuilder();
         sb.AppendLine(CultureInfo.InvariantCulture, $"Please categorize the following content:");
         sb.AppendLine();
+
+        if (item.SkipSalesPitchCheck)
+        {
+            sb.AppendLine("PROCESSING_OVERRIDE: SkipSalesPitchCheck=true — Do not apply the \"Sales Pitches\" generic exclusion rule for this item. If the content qualifies on any other grounds, categorize it normally.");
+            sb.AppendLine();
+        }
+
         sb.AppendLine(CultureInfo.InvariantCulture, $"FEED: {item.FeedName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"COLLECTION: {item.CollectionName}");
         sb.AppendLine(CultureInfo.InvariantCulture, $"URL: {item.ExternalUrl}");

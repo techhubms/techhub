@@ -297,9 +297,11 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
         {
             if (msg.Type == "error")
             {
-                // Filter out infrastructure errors (WebSocket, Aspire dashboard, etc.)
+                // Filter out infrastructure errors (WebSocket, SignalR transport, Aspire dashboard, etc.)
                 var text = msg.Text;
                 if (!text.Contains("WebSocket connection") &&
+                    !text.Contains("WebSocket failed to connect") &&
+                    !text.Contains("Failed to start the transport") &&
                     !text.Contains("ERR_CONNECTION_REFUSED") &&
                     !text.Contains("wss://"))
                 {
@@ -309,6 +311,16 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
         };
 
         await Page.GotoRelativeAsync("/");
+
+        // Assert — Blazor Server circuit must be established before we do anything.
+        // GotoRelativeAsync already waits for __blazorServerReady via WaitForBlazorReadyAsync;
+        // this explicit assertion makes the requirement visible and produces a clear failure
+        // message when the circuit never connects (e.g. WebSocket blocked by a proxy, or
+        // sticky sessions misconfigured so the negotiate/WebSocket requests hit different replicas).
+        var circuitActiveBeforeInteraction = await Page.EvaluateAsync<bool>(
+            "() => window.__blazorServerReady === true");
+        circuitActiveBeforeInteraction.Should().BeTrue(
+            "Blazor Server SignalR circuit must be established before interacting with the page");
 
         var expandButtons = Page.Locator(".badge-expandable[data-expand-target]");
         var buttonCount = await expandButtons.CountAsync();
@@ -321,6 +333,16 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             await expandButton.ClickAndExpectAsync(async () =>
                 await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
                     new() { Timeout = 2000 }));
+
+            // Assert — circuit must still be active after an interactive action.
+            // If sticky sessions are broken, a user interaction can route to a different
+            // replica which doesn't own the circuit, causing it to drop. A dropped circuit
+            // means all @onclick handlers stop working and the page becomes a dead shell.
+            var circuitActiveAfterInteraction = await Page.EvaluateAsync<bool>(
+                "() => window.__blazorServerReady === true");
+            circuitActiveAfterInteraction.Should().BeTrue(
+                "Blazor Server circuit should remain active after interacting with the page — " +
+                "if it dropped, sticky sessions may be misconfigured on the Container App");
 
             // Assert - No JavaScript errors
             consoleErrors.Should().BeEmpty("expanding custom pages should not cause JavaScript errors");

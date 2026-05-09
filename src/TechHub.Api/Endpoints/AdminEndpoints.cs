@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using TechHub.Api.Services;
+using TechHub.Core;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
@@ -715,7 +716,8 @@ public static partial class AdminEndpoints
             CollectionName = collection,
             FeedLevelAuthor = existing.Author,
             FeedTags = existing.Tags.ToList(),
-            FullContent = request.Transcript.Trim()
+            FullContent = request.Transcript.Trim(),
+            SkipSalesPitchCheck = true
         };
 
         CategorizationResult categorizationResult;
@@ -977,6 +979,35 @@ public static partial class AdminEndpoints
 
     // ── GHC feature plans handlers ───────────────────────────────────────────
 
+    /// <summary>
+    /// Extracts the value of a single query-string parameter by name.
+    /// Returns null if the key is absent or has no value.
+    /// </summary>
+    private static string? ExtractQueryParam(string query, string key)
+    {
+        // query is in the form "?k1=v1&k2=v2" (or empty)
+        var span = query.AsSpan().TrimStart('?');
+        foreach (var part in span.Split('&'))
+        {
+            var token = span[part];
+            var eq = token.IndexOf('=');
+
+            if (eq < 0)
+            {
+                continue;
+            }
+
+            var k = token[..eq];
+
+            if (k.Equals(key, StringComparison.OrdinalIgnoreCase))
+            {
+                return new string(token[(eq + 1)..]);
+            }
+        }
+
+        return null;
+    }
+
     private static readonly HashSet<string> _validPlanNames =
         new(["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"], StringComparer.OrdinalIgnoreCase);
 
@@ -1055,6 +1086,41 @@ public static partial class AdminEndpoints
             return Results.BadRequest("The URL must be a YouTube video URL.");
         }
 
+        // Validate that the URL points to a video (not a channel, playlist, etc.)
+        // Supported: watch?v=<id>, youtu.be/<id>, /shorts/<id>, /embed/<id>
+        var path = uri.AbsolutePath;
+        bool isVideoUrl;
+        if (host is "youtu.be")
+        {
+            // Must have exactly one non-empty path segment (e.g. /dQw4w9WgXcQ) with no
+            // extra segments. Playlists (/playlist), channels, and other paths are rejected.
+            var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
+            isVideoUrl = segments.Length == 1 && segments[0].Length > 0;
+        }
+        else if (path.StartsWith("/shorts/", StringComparison.OrdinalIgnoreCase))
+        {
+            // Require a non-empty ID segment after /shorts/ (e.g. /shorts/dQw4w9WgXcQ)
+            var id = path["/shorts/".Length..];
+            isVideoUrl = id.Length > 0 && !id.Contains('/', StringComparison.Ordinal);
+        }
+        else if (path.StartsWith("/embed/", StringComparison.OrdinalIgnoreCase))
+        {
+            // Require a non-empty ID segment after /embed/ (e.g. /embed/dQw4w9WgXcQ)
+            var id = path["/embed/".Length..];
+            isVideoUrl = id.Length > 0 && !id.Contains('/', StringComparison.Ordinal);
+        }
+        else
+        {
+            // /watch?v=<id> — ensure ?v= is present and has a non-empty value
+            isVideoUrl = path.Equals("/watch", StringComparison.OrdinalIgnoreCase)
+                && ExtractQueryParam(uri.Query, "v") is { Length: > 0 };
+        }
+
+        if (!isVideoUrl)
+        {
+            return Results.BadRequest("The URL must be a YouTube video URL (e.g., https://youtu.be/... or https://www.youtube.com/watch?v=...).");
+        }
+
         if (request.Plans is null || request.Plans.Count == 0)
         {
             return Results.BadRequest("At least one plan is required.");
@@ -1100,7 +1166,8 @@ public static partial class AdminEndpoints
             CollectionName = "videos",
             FeedLevelAuthor = existing.Author,
             FeedTags = existing.Tags.ToList(),
-            FullContent = transcript
+            FullContent = transcript,
+            SkipSalesPitchCheck = true
         };
 
         CategorizationResult categorizationResult;
@@ -1170,15 +1237,26 @@ public static partial class AdminEndpoints
             ExternalUrl = youtubeUrl
         };
 
-        var updated = await contentRepo.PublishGhcFeatureDraftAsync(
-            slug,
-            existing.ExternalUrl ?? string.Empty,
-            youtubeUrl,
-            updatedEditData,
-            request.Plans,
-            request.GhesSupport,
-            hasTranscript: transcript is not null,
-            ct);
+        bool updated;
+        try
+        {
+            updated = await contentRepo.PublishGhcFeatureDraftAsync(
+                slug,
+                existing.ExternalUrl ?? string.Empty,
+                youtubeUrl,
+                updatedEditData,
+                request.Plans,
+                request.GhesSupport,
+                hasTranscript: transcript is not null,
+                ct);
+        }
+        catch (ProcessedUrlConflictException)
+        {
+            return Results.Conflict(new
+            {
+                message = "This YouTube URL is already used by another content item. Delete this draft manually and use the existing item instead."
+            });
+        }
 
         if (!updated)
         {

@@ -239,6 +239,25 @@ public class AdminGhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTe
         response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
     }
 
+    [Theory]
+    [InlineData("https://www.youtube.com/channel/UCxxxxxx")]
+    [InlineData("https://www.youtube.com/playlist?list=PLxxxx")]
+    [InlineData("https://www.youtube.com/@handle")]
+    public async Task PublishGhcDraft_WithNonVideoYouTubeUrl_ReturnsBadRequest(string nonVideoUrl)
+    {
+        // Arrange
+        var request = new { YoutubeUrl = nonVideoUrl, Plans = new[] { "Free" }, GhesSupport = false };
+
+        // Act
+        var response = await _client.PostAsJsonAsync(
+            "/api/admin/ghc-features/ghc-draft-feature/publish",
+            request,
+            TestContext.Current.CancellationToken);
+
+        // Assert
+        response.StatusCode.Should().Be(HttpStatusCode.BadRequest);
+    }
+
     [Fact]
     public async Task PublishGhcDraft_WithEmptyPlans_ReturnsBadRequest()
     {
