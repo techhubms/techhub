@@ -694,7 +694,8 @@ $webEnvVars = @(
     "APPLICATIONINSIGHTS_CONNECTION_STRING=$appInsightsConnString",
     "OTEL_SERVICE_NAME=techhub-web",
     "ApiBaseUrl=https://$apiPrFqdn",
-    "TECHHUB_TMP=/tmp/techhub"
+    "TECHHUB_TMP=/tmp/techhub",
+    "DEPLOY_IMAGE_TAG=$Tag"
 )
 
 # ============================================================================
@@ -934,80 +935,18 @@ if ($env:GITHUB_OUTPUT) {
 }
 
 # ============================================================================
-# WARMUP — HTTP requests to verify health
+# VERSION WAIT + SMOKE TESTS
 # ============================================================================
 
-# Both apps are deployed with minReplicas=0 — they scale from zero on first HTTP traffic.
-# The Web has a startup probe configured (initialDelaySeconds=5, failureThreshold=10, periodSeconds=20 ≈ 3.4 min),
-# which suppresses the default TCP liveness probe during startup.
-#
-# Phase 1: Hitting /alive triggers the Web to scale from 0. The Web's Program.cs then
-# blocks Kestrel on an API call (section cache pre-load), which triggers the API to scale
-# from 0 via the Container Apps HTTP ingress trigger. Once the API responds, the Web
-# completes startup and /alive returns 200. The startup probe gives 3 minutes for this.
-#
-# Phase 2: Hit the homepage to validate the full Web → API → DB chain. The API is already
-# running at this point (triggered by the Web's startup in Phase 1).
-
-# Phase 1: Wait for the Web container to start responding (/alive).
-Write-Step "Warming up Web Container App at https://$webFqdn"
-$aliveUrl = "https://$webFqdn/alive"
-$maxAttempts = 60  # 60 × 5s = 5 minutes max
-$attempt = 0
-$webAlive = $false
-while ($attempt -lt $maxAttempts) {
-    $attempt++
-    try {
-        $response = Invoke-WebRequest -Uri $aliveUrl -Method GET -TimeoutSec 10 -UseBasicParsing -ErrorAction Stop
-        if ($response.StatusCode -lt 500) {
-            Write-Ok "Web is alive (HTTP $($response.StatusCode)) after $($attempt * 5)s"
-            $webAlive = $true
-            break
-        }
-    }
-    catch {
-        # Connection refused, timeout, or 5xx — keep waiting
-    }
-    Write-Detail "Not yet responding (attempt $attempt/$maxAttempts) — waiting 5s..."
-    Start-Sleep -Seconds 5
-}
-if (-not $webAlive) {
-    Write-Fail "Web did not respond to /alive within $($maxAttempts * 5)s — failing deploy"
+# The /version endpoint only responds once Kestrel finishes startup. Because Program.cs
+# blocks Kestrel until the section cache is loaded from the API, a successful /version
+# response also confirms the API is up and the full Web → API → DB chain works.
+# This replaces the two-phase /alive + homepage warmup loop with a single readiness gate.
+$scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+& (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') -WebFqdn $webFqdn -Tag $Tag
+if ($LASTEXITCODE -ne 0) {
     Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $stagingRG
     Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
-    exit 1
-}
-
-# Phase 2: Hit the homepage to trigger the API to scale up. The Web's SSR page load
-# makes server-side calls to the internal API, which triggers it to scale from zero.
-# This also validates the full Web → API → DB chain before E2E tests run.
-Write-Step "Warming up API via Web homepage (triggers Web → API → DB)"
-$homepageUrl = "https://$webFqdn/"
-$apiMaxAttempts = 36  # 36 × 5s = 3 minutes max
-$apiAttempt = 0
-$apiReady = $false
-while ($apiAttempt -lt $apiMaxAttempts) {
-    $apiAttempt++
-    try {
-        $response = Invoke-WebRequest -Uri $homepageUrl -Method GET -TimeoutSec 15 -UseBasicParsing -ErrorAction Stop
-        if ($response.StatusCode -eq 200) {
-            Write-Ok "Homepage loaded successfully (HTTP 200) after $($apiAttempt * 5)s — API is responding"
-            $apiReady = $true
-            break
-        }
-        Write-Detail "Homepage returned HTTP $($response.StatusCode) (attempt $apiAttempt/$apiMaxAttempts) — waiting 5s..."
-    }
-    catch {
-        Write-Detail "Homepage not ready (attempt $apiAttempt/$apiMaxAttempts) — waiting 5s..."
-    }
-    Start-Sleep -Seconds 5
-}
-if (-not $apiReady) {
-    # The Web is alive but the homepage fails — likely an API or DB connectivity issue.
-    # Dump diagnostics for both apps to aid triage.
-    Write-Fail "Homepage did not return HTTP 200 within $($apiMaxAttempts * 5)s — API may be unhealthy"
-    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
-    Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $stagingRG
     exit 1
 }
 

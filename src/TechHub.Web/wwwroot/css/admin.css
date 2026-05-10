@@ -359,6 +359,15 @@ select.admin-input {
     text-overflow: clip;
 }
 
+.admin-jobs-table-wrapper .admin-cell-url {
+    max-width: 20rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
 .admin-table tr:hover td {
     background: var(--color-bg-elevated);
 }

@@ -102,6 +102,10 @@ public class ProbeDetectorTests
     [InlineData("/secrets.env.backup")]
     [InlineData("/config.php.bak")]
     [InlineData("/dump.sql.gz")]
+    // robots.txt at any sub-path (real crawlers only use the root)
+    [InlineData("/all/robots.txt")]
+    [InlineData("/some/path/robots.txt")]
+    [InlineData("/all/ROBOTS.TXT")]
     // .xml that is NOT a feed or sitemap
     [InlineData("/random.xml")]
     [InlineData("/random.xml/")]     // trailing slash on .xml probe
@@ -125,6 +129,9 @@ public class ProbeDetectorTests
     [InlineData("/all/roundups/weekly-ai-and-tech-news-roundup-2026-03-16")]
     [InlineData("/not-found")]
     [InlineData("/about")]
+    // robots.txt at the site root — always allowed through
+    [InlineData("/robots.txt")]
+    [InlineData("/ROBOTS.TXT")]
     // RSS feeds — always allowed through
     [InlineData("/all/feed.xml")]
     [InlineData("/ai/feed.xml")]

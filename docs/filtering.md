@@ -533,7 +533,7 @@ Date parameters are passed through to the tag cloud API: `GET /api/sections/{sec
 
 ### Integration with Content Grid
 
-The parent page passes `FromDate`/`ToDate` as formatted strings to `ContentItemsGrid`, which includes them in API requests. Infinite scroll respects the date range — subsequent batches load only content within the selected range.
+The parent page passes `FromDate`/`ToDate` as formatted strings to `ContentItemsGrid`, which includes them in API requests. The Load More button respects the date range — subsequent batches load only content within the selected range.
 
 ### Content Filtering API with Dates
 

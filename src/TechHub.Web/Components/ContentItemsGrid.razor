@@ -2,15 +2,13 @@
 @using TechHub.Core.Configuration
 @using TechHub.Core.Logging
 @using TechHub.Web.Services
-@using Microsoft.JSInterop
 @using Microsoft.AspNetCore.Components.Web
 @inject ITechHubApiClient ApiClient
 @inject SectionCache SectionCache
 @inject ContentGridStateCache GridStateCache
 @inject ILogger<ContentItemsGrid> Logger
-@inject IJSRuntime JSRuntime
 @inject PersistentComponentState ApplicationState
-@implements IAsyncDisposable
+@implements IDisposable
 
 <section class="collection-content @(isLoading ? "loading" : "")" aria-label="@(Title ?? GetCollectionTitle()) content">
     <h1 id="skiptohere" class="page-h1">@(Title ?? GetPageTitle()) <span class="content-count">(@totalCount)</span></h1>
@@ -46,7 +44,7 @@
     }
     else if (FilteredContentItems.Any())
     {
-        <div class="content-grid" role="feed" aria-busy="@isLoadingMore">
+        <div class="content-grid" role="feed" aria-busy="@(isLoadingMore ? "true" : "false")">
             @foreach (var item in FilteredContentItems)
             {
                 <ContentItemCard Item="@item" ShowCollectionBadge="@ShowCollectionBadge" SectionName="@(IsAuthorMode ? null : SectionName)" ActiveFilterTags="@FilterTags" />
@@ -55,18 +53,21 @@
 
         @if (hasMoreContent)
         {
-            <div id="scroll-trigger" class="scroll-trigger" style="height: 1px; margin-bottom: 50px;"></div>
-        }
-
-        @if (isLoadingMore)
-        {
-            <div class="loading-more-indicator" role="status" aria-live="polite">
-                <div class="loading-spinner"></div>
-                <p>Loading more content...</p>
+            <div class="load-more-container">
+                <button class="load-more-btn" @onclick="LoadNextBatch" disabled="@isLoadingMore" aria-busy="@(isLoadingMore ? "true" : "false")">
+                    @if (isLoadingMore)
+                    {
+                        <div class="loading-spinner" aria-hidden="true"></div>
+                        <span>Loading…</span>
+                    }
+                    else
+                    {
+                        <span>Load more</span>
+                    }
+                </button>
             </div>
         }
-
-        @if (!hasMoreContent && contentItems.Any())
+        else if (contentItems.Any())
         {
             <div class="end-of-content" role="status">
                 <p>End of content</p>
@@ -88,7 +89,7 @@
 </section>
 
 @code {
-    private const int BatchSize = 20;
+    private const int BatchSize = 40;
 
     [Parameter, EditorRequired]
     public required string SectionName { get; set; }
@@ -145,10 +146,6 @@
     private string? previousAuthorName;
     private string? previousContentTypes;
 
-    // JS interop
-    private IJSObjectReference? scrollModule;
-    private DotNetObjectReference<ContentItemsGrid>? dotNetRef;
-    private bool needsScrollListenerSetup;
 
     // State persistence (prevents double-fetch during prerender -> interactive transition)
     private PersistingComponentStateSubscription _persistSubscription;
@@ -187,7 +184,6 @@
             hasMoreContent = cached.HasMoreContent;
             totalCount = cached.TotalCount;
             isLoading = false;
-            needsScrollListenerSetup = hasMoreContent;
             Logger.LogDebug("Restored {Count} items from circuit cache for {Key}", contentItems.Count, stateKey);
         }
         // Priority 2: PersistentComponentState (prerender → interactive transition)
@@ -199,7 +195,6 @@
             hasMoreContent = restored.HasMoreContent;
             totalCount = restored.TotalCount;
             isLoading = false;
-            needsScrollListenerSetup = hasMoreContent;
             Logger.LogDebug("Restored {Count} items from prerender state for {Key}", contentItems.Count, stateKey);
         }
         else
@@ -277,57 +272,8 @@
         }
     }
 
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        // JS interop is not available during prerendering — only set up scroll listener
-        // after the interactive circuit is established.
-        if (!RendererInfo.IsInteractive)
-        {
-            return;
-        }
-
-        // (Re-)attach scroll listener. IO is gated by navigating flag (see docs/scroll-system-architecture.md).
-        if ((firstRender || needsScrollListenerSetup) && hasMoreContent)
-        {
-            needsScrollListenerSetup = false;
-            await SetupScrollListener();
-        }
-    }
-
-    private async Task SetupScrollListener()
-    {
-        try
-        {
-            // Relative specifier so ImportMap resolves to fingerprinted URL.
-            scrollModule ??= await JSRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./js/scroll-manager.js");
-
-            dotNetRef ??= DotNetObjectReference.Create(this);
-
-            await scrollModule.InvokeVoidAsync("observeScrollTrigger", dotNetRef, "scroll-trigger");
-            Logger.LogDebug("Infinite scroll listener attached");
-        }
-        catch (Exception ex)
-        {
-            Logger.LogError(ex, "Failed to setup infinite scroll");
-        }
-    }
-
     private async Task LoadInitialBatch()
     {
-        // Dispose immediately so __scrollListenerReady resets before re-attach.
-        if (scrollModule != null)
-        {
-            try
-            {
-                await scrollModule.InvokeVoidAsync("dispose");
-            }
-            catch (JSDisconnectedException)
-            {
-                // Circuit disconnected — ignore, no listener to clean up
-            }
-        }
-
         contentItems.Clear();
         currentBatch = 1;
         hasMoreContent = true;
@@ -347,8 +293,6 @@
         finally
         {
             isLoading = false;
-            // Request scroll listener setup in next OnAfterRenderAsync (where JS interop is allowed)
-            needsScrollListenerSetup = hasMoreContent;
             StateHasChanged();
         }
     }
@@ -384,20 +328,19 @@
         // Update total count from API response (always reflects current filters)
         totalCount = result?.TotalCount ?? 0;
 
-        if (newItems.Count < BatchSize)
+        contentItems.AddRange(newItems);
+        currentBatch = batch;
+
+        if (newItems.Count < BatchSize || (totalCount > 0 && contentItems.Count >= totalCount))
         {
             hasMoreContent = false;
         }
-
-        contentItems.AddRange(newItems);
-        currentBatch = batch;
 
         // Update circuit-scoped cache so back-navigation can restore all loaded items
         GridStateCache.Set(GetStateKey(), contentItems, currentBatch, hasMoreContent, totalCount);
     }
 
-    [JSInvokable]
-    public async Task LoadNextBatch()
+    private async Task LoadNextBatch()
     {
         if (isLoadingMore || !hasMoreContent)
         {
@@ -418,9 +361,6 @@
         finally
         {
             isLoadingMore = false;
-            // Re-attach scroll listener after render if there's more content
-            // (Blazor may have replaced the scroll-trigger DOM element)
-            needsScrollListenerSetup = hasMoreContent;
             StateHasChanged();
         }
     }
@@ -469,24 +409,9 @@
         };
     }
 
-    public async ValueTask DisposeAsync()
+    public void Dispose()
     {
         _persistSubscription.Dispose();
-
-        if (scrollModule != null)
-        {
-            try
-            {
-                await scrollModule.InvokeVoidAsync("dispose");
-                await scrollModule.DisposeAsync();
-            }
-            catch
-            {
-                // Ignore disposal errors during navigation or circuit disconnection
-            }
-        }
-
-        dotNetRef?.Dispose();
         GC.SuppressFinalize(this);
     }
 }
