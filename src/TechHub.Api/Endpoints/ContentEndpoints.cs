@@ -53,16 +53,18 @@ public static class ContentEndpoints
         group.MapGet("/{sectionName}", GetSectionByName)
             .WithName("GetSectionByName")
             .WithSummary("Get section by name")
-            .WithDescription("Returns a single section with its collections and metadata")
+            .WithDescription("Returns a single section with its collections and metadata. Returns 204 No Content when the section does not exist (get-if-exists semantics).")
             .Produces<Section>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         group.MapGet("/{sectionName}/collections", GetSectionCollections)
             .WithName("GetSectionCollections")
             .WithSummary("Get all collections in a section")
-            .WithDescription("Returns all collection references for this section")
+            .WithDescription("Returns all collection references for this section. Returns 204 No Content when the section does not exist (get-if-exists semantics).")
             .Produces<IEnumerable<Collection>>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         // ============================================================
         // Collection-level endpoints
@@ -71,9 +73,10 @@ public static class ContentEndpoints
         group.MapGet("/{sectionName}/collections/{collectionName}", GetSectionCollection)
             .WithName("GetSectionCollection")
             .WithSummary("Get collection details")
-            .WithDescription("Returns details of a specific collection within this section")
+            .WithDescription("Returns details of a specific collection within this section. Returns 204 No Content when the section or collection does not exist (get-if-exists semantics).")
             .Produces<Collection>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         group.MapGet("/{sectionName}/collections/{collectionName}/items", GetCollectionItems)
             .WithName("GetCollectionItems")
@@ -98,9 +101,10 @@ public static class ContentEndpoints
         group.MapGet("/{sectionName}/collections/{collectionName}/{slug}", GetContentDetail)
             .WithName("GetContentDetail")
             .WithSummary("Get content item detail")
-            .WithDescription("Returns full content item including rendered HTML for content pages")
+            .WithDescription("Returns full content item including rendered HTML for content pages. Returns 204 No Content when the section, collection, or slug does not exist, or when the matched item links externally and therefore has no internal detail representation.")
             .Produces<ContentItemDetail>(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound);
+            .Produces(StatusCodes.Status204NoContent)
+            .Produces(StatusCodes.Status400BadRequest);
 
         // ============================================================
         // Legacy redirect endpoint (outside the section hierarchy group)
@@ -174,7 +178,7 @@ public static class ContentEndpoints
     /// <summary>
     /// GET /api/sections/{sectionName} - Get section by name
     /// </summary>
-    private static async Task<Results<Ok<Section>, NotFound>> GetSectionByName(
+    private static async Task<Results<Ok<Section>, NoContent>> GetSectionByName(
         string sectionName,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
@@ -184,7 +188,7 @@ public static class ContentEndpoints
 
         if (section == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         return TypedResults.Ok(section);
@@ -193,7 +197,7 @@ public static class ContentEndpoints
     /// <summary>
     /// GET /api/sections/{sectionName}/collections - Get all collections in a section
     /// </summary>
-    private static async Task<Results<Ok<IEnumerable<Collection>>, NotFound>> GetSectionCollections(
+    private static async Task<Results<Ok<IEnumerable<Collection>>, NoContent>> GetSectionCollections(
         string sectionName,
         IContentRepository contentRepository,
         CancellationToken cancellationToken)
@@ -203,7 +207,7 @@ public static class ContentEndpoints
 
         if (section == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         return TypedResults.Ok(section.Collections.AsEnumerable());
@@ -216,7 +220,7 @@ public static class ContentEndpoints
     /// <summary>
     /// GET /api/sections/{sectionName}/collections/{collectionName} - Get collection details
     /// </summary>
-    private static async Task<Results<Ok<Collection>, NotFound>> GetSectionCollection(
+    private static async Task<Results<Ok<Collection>, NoContent>> GetSectionCollection(
         string sectionName,
         string collectionName,
         IContentRepository contentRepository,
@@ -228,7 +232,7 @@ public static class ContentEndpoints
 
         if (section == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         var collection = section.Collections.FirstOrDefault(c =>
@@ -236,7 +240,7 @@ public static class ContentEndpoints
 
         if (collection == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         return TypedResults.Ok(collection);
@@ -653,7 +657,7 @@ public static class ContentEndpoints
     /// GET /api/sections/{sectionName}/collections/{collectionName}/{slug} - Get content item detail
     /// Returns ContentItemDetail with full rendered HTML for content pages.
     /// </summary>
-    private static async Task<Results<Ok<ContentItemDetail>, NotFound>> GetContentDetail(
+    private static async Task<Results<Ok<ContentItemDetail>, NoContent>> GetContentDetail(
         string sectionName,
         string collectionName,
         string slug,
@@ -667,7 +671,7 @@ public static class ContentEndpoints
         var section = await contentRepository.GetSectionByNameAsync(sectionName, cancellationToken);
         if (section == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         // Verify collection exists in this section
@@ -676,7 +680,7 @@ public static class ContentEndpoints
 
         if (!hasCollection)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         // Get the content item detail by collection and slug
@@ -684,13 +688,13 @@ public static class ContentEndpoints
 
         if (item == null)
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
-        // Check if this content item has an external URL - if so, return 404 when accessed via internal route
+        // External items don't have internal detail pages
         if (item.LinksExternally())
         {
-            return TypedResults.NotFound();
+            return TypedResults.NoContent();
         }
 
         return TypedResults.Ok(item);

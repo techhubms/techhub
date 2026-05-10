@@ -20,14 +20,19 @@ public class ExceptionHandlerMiddlewareTests : IClassFixture<TechHubIntegrationT
     }
 
     [Fact]
-    public async Task NotFound_ReturnsGenericMessage_NotInternalDetails()
+    public async Task NotFound_DoesNotLeakInternalDetails()
     {
-        // Arrange - request a section that does not exist
-        var response = await _client.GetAsync("/api/sections/nonexistent-section-that-does-not-exist", TestContext.Current.CancellationToken);
+        // Arrange - request an RSS feed for a section that does not exist (RSS still returns 404)
+        var response = await _client.GetAsync("/api/rss/nonexistent-section-that-does-not-exist", TestContext.Current.CancellationToken);
 
-        // Assert - if the endpoint returns 404 via TypedResults.NotFound, that's fine
-        // We just verify that generic 404 responses don't leak internal details
+        // Assert - verify that 404 responses don't leak internal details
         response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+
+        var content = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
+
+        content.Should().NotContain("System.");
+        content.Should().NotContain("at TechHub.");
+        content.Should().NotContain("StackTrace");
     }
 
     [Fact]
