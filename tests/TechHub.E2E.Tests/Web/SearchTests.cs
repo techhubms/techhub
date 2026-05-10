@@ -144,9 +144,11 @@ public class SearchTests : PlaywrightTestBase
     {
         await Page.WaitForBlazorReadyAsync();
 
+        var enabledTags = 0;
+
         await BlazorHelpers.RetryUntilPassAsync(async () =>
         {
-            var enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled)").CountAsync();
+            enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled)").CountAsync();
             if (enabledTags > 0)
             {
                 return;
@@ -160,11 +162,15 @@ public class SearchTests : PlaywrightTestBase
                 .Filter(new() { HasTextString = TagLoadingErrorMessage })
                 .CountAsync();
 
-            (noTagsAvailable > 0 || tagLoadingError > 0).Should().BeTrue(
-                "tag filters should either become selectable or reach a terminal no-tags/error state");
+            if (noTagsAvailable > 0 || tagLoadingError > 0)
+            {
+                return;
+            }
+
+            throw new InvalidOperationException(
+                "Tag filters are still loading; retry until they become selectable or reach a terminal state.");
         });
 
-        var enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled)").CountAsync();
         Assert.SkipWhen(enabledTags == 0,
             "No enabled tag filters are available for /ai/blogs in the current data snapshot.");
     }
