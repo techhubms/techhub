@@ -144,6 +144,13 @@ public class SearchTests : PlaywrightTestBase
     {
         await Page.WaitForBlazorReadyAsync();
 
+        var enabledTags = await WaitForSelectableTagFilterOrReachTerminalStateAsync();
+        Assert.SkipWhen(enabledTags == 0,
+            "No enabled tag filters are available for /ai/blogs in the current data snapshot.");
+    }
+
+    private async Task<int> WaitForSelectableTagFilterOrReachTerminalStateAsync()
+    {
         var enabledTags = 0;
 
         await BlazorHelpers.RetryUntilPassAsync(async () =>
@@ -171,8 +178,7 @@ public class SearchTests : PlaywrightTestBase
                 "Tag filters are still loading; retry until they become selectable or reach a terminal state.");
         });
 
-        Assert.SkipWhen(enabledTags == 0,
-            "No enabled tag filters are available for /ai/blogs in the current data snapshot.");
+        return enabledTags;
     }
 
     [Fact]
