@@ -8,6 +8,7 @@ Disallow: /api/
 Disallow: /swagger/
 Disallow: /health
 Disallow: /alive
+Disallow: /version
 Disallow: /not-found
 Disallow: /Error
 

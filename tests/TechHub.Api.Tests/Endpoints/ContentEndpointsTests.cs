@@ -1333,8 +1333,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     /// <summary>
-    /// INTEGRATION TEST: Verify infinite scrolling with tag filters works correctly with pagination
-    /// This test validates the fix for the bug where infinite scrolling + tag filtering was broken
+    /// INTEGRATION TEST: Verify pagination with tag filters works correctly
+    /// This test validates the fix for the bug where batch loading + tag filtering was broken
     /// </summary>
     [Fact]
     public async Task GetCollectionItems_WithTagFilter_PaginatesCorrectly()

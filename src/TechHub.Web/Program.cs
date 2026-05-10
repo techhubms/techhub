@@ -521,6 +521,33 @@ app.MapGet("/{sectionName}/feed.xml", async (string sectionName, TechHubApiClien
 // Map Aspire default health check endpoints (/health and /alive)
 app.MapDefaultEndpoints();
 
+// Deployment version probe — returns the image tag and parsed deploy timestamp.
+// Used by the deployment script to wait until the new version is live.
+// Intentionally exposes only non-sensitive deployment metadata (tag + timestamp).
+app.MapGet("/version", (IConfiguration config, HttpResponse response) =>
+{
+    response.Headers.CacheControl = "no-store";
+    var tag = config["DEPLOY_IMAGE_TAG"] ?? "unknown";
+    DateTimeOffset? deployedAt = null;
+    // Tags may be a bare timestamp ("yyyyMMddHHmmss", production)
+    // or prefixed ("pr-42-yyyyMMddHHmmss", PR preview). Extract the
+    // trailing 14 characters so both formats produce a parsed timestamp.
+    var suffix = tag.Length >= 14 ? tag[^14..] : string.Empty;
+    if (suffix.Length == 14
+        && DateTimeOffset.TryParseExact(suffix, "yyyyMMddHHmmss",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.AssumeUniversal,
+            out var parsed))
+    {
+        deployedAt = parsed;
+    }
+
+    return Results.Ok(new { tag, deployedAt });
+})
+.WithName("GetVersion")
+.ExcludeFromDescription()
+.AllowAnonymous();
+
 // Sitemap proxy — fetches from API and serves from the canonical web domain
 app.MapGet("/sitemap.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
 {
