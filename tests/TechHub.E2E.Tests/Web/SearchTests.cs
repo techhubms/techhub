@@ -11,6 +11,8 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class SearchTests : PlaywrightTestBase
 {
+    // Use a data-rich collection/query pair so this PR-preview E2E covers the combined
+    // search+tag flow against a route that consistently exposes filterable content.
     private const string TagSearchTestPath = "/ai/blogs";
     private const string TagSearchTestQuery = "azure";
     private const string TagFilterNavSelector = "nav[aria-label='Filter by tags']";
