@@ -109,8 +109,8 @@
                                         @foreach (var monthGroup in yearGroup.GroupBy(f => f.ReleaseDate).OrderByDescending(g => g.Key))
                                         {
                                             <div class="features-timeline-month-row">
-                                                <div class="features-timeline-node" aria-hidden="true">
-                                                    <div class="features-timeline-dot"></div>
+                                                <div class="features-timeline-node">
+                                                    <div class="features-timeline-dot" aria-hidden="true"></div>
                                                     <time class="features-timeline-date" datetime="@(monthGroup.Key + "-01")">@FormatReleaseDate(monthGroup.Key)</time>
                                                 </div>
                                                 <div class="features-timeline-month-cards">
@@ -130,7 +130,10 @@
                                                                         @onclick="() => ToggleFeature(feature.Id)"
                                                                         @onclick:stopPropagation="true"
                                                                         @onclick:preventDefault="true">
-                                                                    <h3 class="features-timeline-name">@feature.Name</h3>
+                                                                    <div class="features-timeline-title-row">
+                                                                        <h3 class="features-timeline-name">@feature.Name</h3>
+                                                                        <span class="features-timeline-expand-icon" aria-hidden="true">@(isExpanded ? "▲" : "▼")</span>
+                                                                    </div>
                                                                     <div class="features-timeline-badges">
                                                                         @foreach (var plan in feature.Plans)
                                                                         {
@@ -145,7 +148,6 @@
                                                                             <span class="badge-info">▶ Video</span>
                                                                         }
                                                                     </div>
-                                                                    <span class="features-timeline-expand-icon" aria-hidden="true">@(isExpanded ? "▲" : "▼")</span>
                                                                 </button>
 
                                                                 <div id="feature-detail-@feature.Id" class="features-timeline-detail @(isExpanded ? "expanded" : "")">

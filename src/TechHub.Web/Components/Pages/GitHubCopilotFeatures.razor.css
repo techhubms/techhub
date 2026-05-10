@@ -349,6 +349,7 @@ html.keyboard-nav .features-ghes-toggle-input:focus-visible + .features-ghes-tog
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: var(--spacing-3);
   min-width: 0;
+  align-items: start;
 }
 
 /* ─── Timeline Entry / Card ──────────────────────────────────────── */
@@ -363,8 +364,7 @@ html.keyboard-nav .features-ghes-toggle-input:focus-visible + .features-ghes-tog
 }
 
 .features-timeline-card {
-  padding: var(--spacing-3);
-  height: 100%;
+  padding: var(--spacing-2) var(--spacing-3);
   box-sizing: border-box;
 }
 
@@ -376,9 +376,8 @@ html.keyboard-nav .features-ghes-toggle-input:focus-visible + .features-ghes-tog
   cursor: pointer;
   text-align: left;
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: var(--spacing-2);
+  flex-direction: column;
+  gap: var(--spacing-1);
   color: inherit;
 }
 
@@ -392,6 +391,13 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   outline: var(--focus-outline-width) solid var(--color-purple-bright);
   outline-offset: var(--focus-outline-offset);
   border-radius: var(--radius-sm);
+}
+
+/* Title row: feature name + expand chevron on same line */
+.features-timeline-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-2);
 }
 
 .features-timeline-name {
@@ -415,8 +421,7 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   font-size: var(--font-size-xs);
   color: var(--color-text-secondary);
   flex-shrink: 0;
-  margin-left: auto;
-  padding-left: var(--spacing-2);
+  padding-top: 0.2rem;
 }
 
 /* Plan badges */
@@ -430,6 +435,15 @@ html.keyboard-nav .features-timeline-header:focus-visible {
   border: 1px solid var(--color-border-default);
   color: var(--color-text-secondary);
   white-space: nowrap;
+}
+
+/* Normalize GHES and Video badge sizes to match plan badges in the timeline */
+.features-timeline-badges .badge-success,
+.features-timeline-badges .badge-info {
+  padding: 0.1rem var(--spacing-1);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
 }
 
 /* ─── Expandable Feature Detail ──────────────────────────────────── */

@@ -146,6 +146,15 @@
     "videoCollection": "ghc-features",
     "timelineFeatures": [
         {
+            "id": "token-based-billing",
+            "name": "Copilot Token-Based Billing",
+            "releaseDate": "2025-05",
+            "description": "Token-based billing feature for testing timeline ordering.",
+            "plans": ["Free", "Pro"],
+            "ghesSupport": false,
+            "videoSlug": "ghc-token-billing"
+        },
+        {
             "id": "ghc-features-video",
             "name": "GHC Features Video",
             "releaseDate": "2024-01",
