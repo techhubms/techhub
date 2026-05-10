@@ -161,14 +161,14 @@ public class SearchTests : PlaywrightTestBase
                 return;
             }
 
-            var noTagsMessage = await Page.Locator($"{TagFilterNavSelector} .sidebar-text:not(.error)")
+            var noTagsMessageCount = await Page.Locator($"{TagFilterNavSelector} .sidebar-text:not(.error)")
                 .CountAsync();
 
-            var tagLoadingError = await Page.Locator($"{TagFilterNavSelector} .sidebar-text.error")
+            var tagLoadingErrorCount = await Page.Locator($"{TagFilterNavSelector} .sidebar-text.error")
                 .CountAsync();
 
-            var loadingSkeletons = await Page.Locator($"{TagFilterNavSelector} .tag-cloud-skeleton").CountAsync();
-            if (loadingSkeletons == 0 && (noTagsMessage > 0 || tagLoadingError > 0))
+            var loadingSkeletonCount = await Page.Locator($"{TagFilterNavSelector} .tag-cloud-skeleton").CountAsync();
+            if (loadingSkeletonCount == 0 && (noTagsMessageCount > 0 || tagLoadingErrorCount > 0))
             {
                 return;
             }
