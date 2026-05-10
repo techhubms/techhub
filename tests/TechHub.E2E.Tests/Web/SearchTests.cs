@@ -11,6 +11,7 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class SearchTests : PlaywrightTestBase
 {
+    private const string TagSearchTestPath = "/ai/blogs";
     private const string NoTagsAvailableMessage = "No tags available";
     private const string TagLoadingErrorMessage = "Error loading tags";
 
@@ -115,7 +116,7 @@ public class SearchTests : PlaywrightTestBase
     {
         // Arrange - use a data-rich collection page so both search and tag filters are
         // available under filter-mode navigation during E2E runs.
-        await Page.GotoRelativeAsync("/ai/blogs");
+        await Page.GotoRelativeAsync(TagSearchTestPath);
         await WaitForSelectableTagFilterOrSkipAsync();
 
         // Act 1 - Select a tag
@@ -146,7 +147,7 @@ public class SearchTests : PlaywrightTestBase
 
         var enabledTags = await WaitForSelectableTagFilterOrReachTerminalStateAsync();
         Assert.SkipWhen(enabledTags == 0,
-            "No enabled tag filters are available for /ai/blogs in the current data snapshot.");
+            $"No enabled tag filters are available for {TagSearchTestPath} in the current data snapshot.");
     }
 
     private async Task<int> WaitForSelectableTagFilterOrReachTerminalStateAsync()
