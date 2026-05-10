@@ -11,6 +11,9 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class SearchTests : PlaywrightTestBase
 {
+    private const string NoTagsAvailableMessage = "No tags available";
+    private const string TagLoadingErrorMessage = "Error loading tags";
+
     public SearchTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
@@ -141,18 +144,25 @@ public class SearchTests : PlaywrightTestBase
     {
         await Page.WaitForBlazorReadyAsync();
 
-        await Page.WaitForConditionAsync(
-            @"() => document.querySelector('.tag-cloud-item:not(.disabled)') !== null
-                || Array.from(document.querySelectorAll('.sidebar-text'))
-                    .some(el => /no tags available/i.test(el.textContent ?? ''))
-                || Array.from(document.querySelectorAll('.sidebar-text.error'))
-                    .some(el => /error loading tags/i.test(el.textContent ?? ''))",
-            onTimeout: @"() => JSON.stringify({
-                tags: document.querySelectorAll('.tag-cloud-item').length,
-                enabledTags: document.querySelectorAll('.tag-cloud-item:not(.disabled)').length,
-                skeletons: document.querySelectorAll('.tag-cloud-skeleton').length,
-                messages: Array.from(document.querySelectorAll('.sidebar-text')).map(el => el.textContent?.trim())
-            })");
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            var enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled)").CountAsync();
+            if (enabledTags > 0)
+            {
+                return;
+            }
+
+            var noTagsAvailable = await Page.Locator(".sidebar-text")
+                .Filter(new() { HasTextString = NoTagsAvailableMessage })
+                .CountAsync();
+
+            var tagLoadingError = await Page.Locator(".sidebar-text.error")
+                .Filter(new() { HasTextString = TagLoadingErrorMessage })
+                .CountAsync();
+
+            (noTagsAvailable > 0 || tagLoadingError > 0).Should().BeTrue(
+                "tag filters should either become selectable or reach a terminal no-tags/error state");
+        });
 
         var enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled)").CountAsync();
         Assert.SkipWhen(enabledTags == 0,
