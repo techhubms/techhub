@@ -354,6 +354,7 @@ public class UrlNormalizationMiddlewareTests
     [InlineData("/about")]
     [InlineData("/error")]
     [InlineData("/admin")]
+    [InlineData("/version")]
     public async Task KnownNonSectionPage_PassesThrough(string path)
     {
         var (middleware, context, nextCalled) = CreateMiddleware(path: path);
@@ -362,6 +363,23 @@ public class UrlNormalizationMiddlewareTests
 
         nextCalled().Should().BeTrue($"known non-section page {path} should pass through");
         context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+    }
+
+    [Fact]
+    public async Task VersionEndpoint_PassesThrough_WithoutApiCall()
+    {
+        // /version is a Minimal API endpoint (MapGet) that returns the deployed image tag.
+        // It must not be treated as a legacy content slug — before this was fixed, the middleware
+        // would call GetLegacyRedirectAsync("/version"), receive null, and return 404.
+        var mockApi = new Mock<ITechHubApiClient>();
+        var (middleware, context, nextCalled) = CreateMiddleware(path: "/version", mockApiClient: mockApi);
+
+        await middleware.InvokeAsync(context);
+
+        nextCalled().Should().BeTrue("/version must reach the endpoint handler, not be 404'd as an unknown slug");
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status404NotFound);
+        context.Response.StatusCode.Should().NotBe(StatusCodes.Status301MovedPermanently);
+        mockApi.Verify(x => x.GetLegacyRedirectAsync(It.IsAny<string>(), It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 
     [Fact]

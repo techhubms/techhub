@@ -1,11 +1,10 @@
 /**
- * Scroll Manager — Unified navigation, scroll position, TOC, and infinite scroll.
+ * Scroll Manager — Unified navigation, scroll position, TOC, and button visibility.
  *
  * Single module that handles:
  *   - Scroll position save/restore across navigations
  *   - Back-to-top / back-to-prev buttons
  *   - TOC scroll spy (highlight active heading in sidebar)
- *   - Infinite scroll (trigger next batch load)
  *   - Navigation spinner
  *   - Keyboard navigation detection
  *
@@ -42,17 +41,6 @@ window.__savedScrollPositions = savedPositions; // exposed for tests
 
 // RAF throttle flag for TOC updates during scroll (one update per frame).
 let tocRafPending = false;
-
-// Set when a traverse (back/forward) navigation completes but observeScrollTrigger
-// hasn't been called yet (race: finishNavigation ran before Blazor called observeScrollTrigger).
-// Cleared once observeScrollTrigger consumes it and starts the observer with skipFirst=true.
-let postNavPending = false;
-
-// Helper and trigger element ID from the most recent observeScrollTrigger call.
-// Survive dispose() so finishNavigation can start the observer immediately in the
-// postNavPending race, before Blazor's OnAfterRenderAsync fires.
-let lastHelper = null;
-let lastTriggerElementId = null;
 
 // ============================================================================
 // Keyboard Navigation Detection
@@ -294,45 +282,11 @@ window.__restoreScrollPosition = restoreScrollPosition;
 
 /**
  * Called when navigation completes (page rendered, scroll restored).
- * Unlocks scroll handling and starts deferred IO observation at the correct scroll position.
  * @see docs/scroll-system-architecture.md
  */
 function finishNavigation() {
-    const wasTraverse = navigating === 'traverse';
     navigating = false;
-    // If observeScrollTrigger was called during navigation, it deferred actual observation.
-    // Now that scroll is restored, start the IO at the real viewport position.
-    // skipFirst=true: ignore the first intersection so the browser's position after
-    // scroll restore doesn't trigger an automatic batch load — the user must scroll
-    // deliberately. See docs/scroll-system-architecture.md#the-cascade-bug.
-    if (infiniteScrollState?.deferred) {
-        const { helper, triggerElementId } = infiniteScrollState;
-        const trigger = document.getElementById(triggerElementId);
-        if (trigger) {
-            startObserving(helper, triggerElementId, trigger, true);
-        } else {
-            infiniteScrollState = null;
-        }
-    } else if (wasTraverse) {
-        // observeScrollTrigger hasn't been called yet (race: markScriptsReady fired before
-        // Blazor's OnAfterRenderAsync). Flag it so the next observeScrollTrigger call
-        // uses skipFirst=true.
-        postNavPending = true;
-        // Also start the observer immediately with skipFirst=true using the saved
-        // helper/trigger from the previous navigation, so any user scrolling before
-        // OnAfterRenderAsync fires is caught. When observeScrollTrigger arrives,
-        // dispose() stops this early observer and restarts with skipFirst=true
-        // (postNavPending is still set at that point).
-        if (lastHelper && lastTriggerElementId) {
-            const earlyTrigger = document.getElementById(lastTriggerElementId);
-            if (earlyTrigger) {
-                if (infiniteScrollState?.observer) {
-                    infiniteScrollState.observer.disconnect();
-                }
-                startObserving(lastHelper, lastTriggerElementId, earlyTrigger, true);
-            }
-        }
-    }
+
     // Run scroll-end work once at the final position (TOC highlight, etc.)
     onScrollEnd();
 }
@@ -492,9 +446,6 @@ function setupBlazorListeners() {
             navigating = 'forward';
             window.__scriptsReady = false;
             showNavSpinner();
-            // A stale postNavPending from a previous traverse nav must not bleed into
-            // a forward nav cycle where skipFirst protection is not needed.
-            postNavPending = false;
         });
 
         Blazor.addEventListener('enhancedload', () => {
@@ -815,111 +766,6 @@ function updateTocCollapseState(activeHeadingId) {
 }
 
 // ============================================================================
-// Infinite Scroll
-// ============================================================================
-
-let infiniteScrollState = null; // non-null when active
-
-const TRIGGER_MARGIN_PX = 300;
-
-/**
- * Set up infinite scroll monitoring. Called by Blazor ContentItemsGrid component.
- * One-shot IO: fires once on trigger entering viewport+margin, then disconnects.
- * Blazor re-attaches after each batch render.
- *
- * If called during navigation, defers actual observation until finishNavigation() runs
- * at the correct scroll position — avoids spurious IO at Y=0.
- * @see docs/scroll-system-architecture.md
- */
-export function observeScrollTrigger(helper, triggerElementId) {
-    dispose(); // disconnect any previous observer
-
-    // Always persist these so finishNavigation can start an early observer in the
-    // race case where it runs before OnAfterRenderAsync.
-    lastHelper = helper;
-    lastTriggerElementId = triggerElementId;
-
-    const trigger = document.getElementById(triggerElementId);
-    if (!trigger) {
-        console.warn('[InfiniteScroll] Trigger element not found:', triggerElementId);
-        return;
-    }
-
-    if (navigating) {
-        // Defer — finishNavigation() will start observing at the restored scroll position.
-        infiniteScrollState = { helper, triggerElementId, observer: null, deferred: true };
-    } else if (postNavPending) {
-        // finishNavigation already ran (traverse nav) but observeScrollTrigger wasn't called
-        // yet at that time. Apply skipFirst protection now.
-        postNavPending = false;
-        startObserving(helper, triggerElementId, trigger, true);
-    } else {
-        startObserving(helper, triggerElementId, trigger);
-    }
-
-    // E2E test signals
-    window.__scrollListenerReady ??= {};
-    window.__scrollListenerReady[triggerElementId] = true;
-    window.__scrollListenerVersion ??= {};
-    const v = window.__scrollListenerVersion[triggerElementId] || 0;
-    window.__scrollListenerVersion[triggerElementId] = v + 1;
-
-    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-listener:' + triggerElementId);
-}
-
-/**
- * Create and start the IntersectionObserver for the scroll trigger.
- * Separated from observeScrollTrigger so finishNavigation can call it after scroll restore.
- * @param {boolean} skipFirst - true on post-traverse calls: ignore the first intersecting
- *   entry so the restored scroll position never triggers an automatic batch load.
- *   The observer stays connected; the user must scroll away and back to fire a real load.
- *   See docs/scroll-system-architecture.md#the-cascade-bug.
- */
-function startObserving(helper, triggerElementId, trigger, skipFirst = false) {
-    let firstSkipped = false;
-
-    const observer = new IntersectionObserver(entries => {
-        const entry = entries[entries.length - 1];
-
-        if (skipFirst && !firstSkipped) {
-            // Consume the skip on the very first observer callback regardless of whether
-            // the trigger is intersecting. If we only skipped intersecting entries, a
-            // trigger that starts off-screen would leave firstSkipped=false; the next
-            // genuine user scroll would then be incorrectly skipped, leaving infinite
-            // scroll stuck until the user scrolls away and back.
-            firstSkipped = true;
-            return;
-        }
-
-        if (!entry.isIntersecting) return;
-
-        // Clear postNavPending — the skip was used up by this early observer, so the
-        // next observeScrollTrigger call (after Blazor re-renders) must not double-skip.
-        postNavPending = false;
-        // Disconnect immediately — Blazor re-attaches after next render.
-        observer.disconnect();
-        infiniteScrollState = null;
-        helper.invokeMethodAsync('LoadNextBatch');
-    }, { rootMargin: `0px 0px ${TRIGGER_MARGIN_PX}px 0px` });
-
-    observer.observe(trigger);
-    infiniteScrollState = { helper, triggerElementId, observer, deferred: false };
-}
-
-/**
- * Dispose infinite scroll listener. Called by Blazor on component dispose.
- */
-export function dispose() {
-    if (!infiniteScrollState) return;
-    const { triggerElementId, observer } = infiniteScrollState;
-    if (observer) observer.disconnect();
-    window.__scrollListenerReady ??= {};
-    window.__scrollListenerReady[triggerElementId] = false;
-    if (typeof window.__e2eSignal === 'function') window.__e2eSignal('scroll-disposed:' + triggerElementId);
-    infiniteScrollState = null;
-}
-
-// ============================================================================
 // Scroll Event Handlers
 // ============================================================================
 
@@ -930,6 +776,7 @@ export function dispose() {
  */
 function onScroll() {
     if (navigating) return;
+
     // Suppress card hover visuals during scroll (CSS resets them while
     // is-scrolling is present). Pointer-events stay on so the browser tracks
     // the cursor; when is-scrolling is removed in onScrollEnd the correct

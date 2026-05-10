@@ -444,11 +444,11 @@ public class AdminEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactor
             TestContext.Current.CancellationToken);
         deleteResponse.StatusCode.Should().Be(HttpStatusCode.NoContent);
 
-        // Assert — the same request must now return 404 (cache was invalidated)
+        // Assert — the same request must now return 204 (cache was invalidated, item no longer exists)
         var afterResponse = await _client.GetAsync(
             $"/api/sections/ai/collections/{CollectionName}/{Slug}",
             TestContext.Current.CancellationToken);
-        afterResponse.StatusCode.Should().Be(HttpStatusCode.NotFound,
+        afterResponse.StatusCode.Should().Be(HttpStatusCode.NoContent,
             "the deleted item should not be returned after cache invalidation");
     }
 

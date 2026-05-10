@@ -92,6 +92,14 @@ public static class ProbeDetector
             return true;
         }
 
+        // robots.txt is only meaningful at the site root; any sub-path variant is a probe.
+        // Real crawlers always request /robots.txt — never /all/robots.txt or similar.
+        if (!normalized.Equals("/robots.txt", StringComparison.OrdinalIgnoreCase)
+            && normalized.EndsWith("/robots.txt", StringComparison.OrdinalIgnoreCase))
+        {
+            return true;
+        }
+
         // Extract the extension from the final segment only,
         // so paths like /.env/ or /random.xml/ are correctly identified as probes.
         var lastSlash = normalized.LastIndexOf('/');

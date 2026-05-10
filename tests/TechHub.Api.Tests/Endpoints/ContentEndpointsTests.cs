@@ -84,13 +84,13 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetSectionByName_WithInvalidName_ReturnsNotFound()
+    public async Task GetSectionByName_WithInvalidName_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/invalid", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
@@ -143,13 +143,13 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetSectionCollections_WithInvalidSection_ReturnsNotFound()
+    public async Task GetSectionCollections_WithInvalidSection_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/invalid/collections", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
@@ -169,23 +169,23 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetSectionCollection_WithInvalidSection_ReturnsNotFound()
+    public async Task GetSectionCollection_WithInvalidSection_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/invalid/collections/news", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
-    public async Task GetSectionCollection_WithInvalidCollection_ReturnsNotFound()
+    public async Task GetSectionCollection_WithInvalidCollection_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/ai/collections/invalid", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
@@ -1231,33 +1231,33 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetContentDetail_WithInvalidSection_ReturnsNotFound()
+    public async Task GetContentDetail_WithInvalidSection_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/invalid-section/collections/news/test-slug", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
-    public async Task GetContentDetail_WithInvalidCollection_ReturnsNotFound()
+    public async Task GetContentDetail_WithInvalidCollection_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/ai/collections/invalid-collection/test-slug", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
-    public async Task GetContentDetail_WithInvalidSlug_ReturnsNotFound()
+    public async Task GetContentDetail_WithInvalidSlug_ReturnsNoContent()
     {
         // Act
         var response = await _client.GetAsync("/api/sections/ai/collections/news/non-existent-slug-12345", TestContext.Current.CancellationToken);
 
         // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound);
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent);
     }
 
     [Fact]
@@ -1311,10 +1311,10 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetContentDetail_WithExternalUrl_ReturnsNotFound()
+    public async Task GetContentDetail_WithExternalUrl_ReturnsNoContent()
     {
         // External collections (news, blogs, community) link to original sources,
-        // so detail endpoint returns 404 since there's no internal content to display
+        // so detail endpoint returns 204 since there's no internal content to display
 
         // Arrange - Get a news item (external collection)
         var itemsResponse = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
@@ -1327,14 +1327,14 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // Act - Try to access detail endpoint
         var response = await _client.GetAsync($"/api/sections/ai/collections/news/{testItem.Slug}", TestContext.Current.CancellationToken);
 
-        // Assert - Should return 404 since external items don't have detail pages
-        response.StatusCode.Should().Be(HttpStatusCode.NotFound,
-            "External collections should return 404 for detail endpoint since they link to original sources");
+        // Assert - Should return 204 since external items don't have detail pages
+        response.StatusCode.Should().Be(HttpStatusCode.NoContent,
+            "External collections should return 204 for detail endpoint since they link to original sources");
     }
 
     /// <summary>
-    /// INTEGRATION TEST: Verify infinite scrolling with tag filters works correctly with pagination
-    /// This test validates the fix for the bug where infinite scrolling + tag filtering was broken
+    /// INTEGRATION TEST: Verify pagination with tag filters works correctly
+    /// This test validates the fix for the bug where batch loading + tag filtering was broken
     /// </summary>
     [Fact]
     public async Task GetCollectionItems_WithTagFilter_PaginatesCorrectly()

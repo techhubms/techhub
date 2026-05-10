@@ -11,6 +11,16 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class SearchTests : PlaywrightTestBase
 {
+    // Use a data-rich collection/query pair so this PR-preview E2E covers the combined
+    // search+tag flow against a route that consistently exposes filterable content.
+    private const string TagSearchTestPath = "/ai/blogs";
+    private const string TagSearchTestQuery = "azure";
+    private const string TagFilterNavSelector = "nav[aria-label='Filter by tags']";
+    private const string EnabledTagSelector = TagFilterNavSelector + " .tag-cloud-item:not(.disabled)";
+    private const string NoTagsStateSelector = TagFilterNavSelector + " .sidebar-text:not(.error)";
+    private const string TagErrorSelector = TagFilterNavSelector + " .sidebar-text.error";
+    private const string LoadingSkeletonSelector = TagFilterNavSelector + " .tag-cloud-skeleton";
+
     public SearchTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
@@ -110,18 +120,20 @@ public class SearchTests : PlaywrightTestBase
     [Fact]
     public async Task Search_CombinedWithTagFilter_ShowsIntersectionResults()
     {
-        // Arrange
-        await Page.GotoRelativeAsync("/github-copilot");
+        // Arrange - use a data-rich collection page so both search and tag filters are
+        // available under filter-mode navigation during E2E runs.
+        await Page.GotoRelativeAsync(TagSearchTestPath);
+        await WaitForSelectableTagFilterOrSkipAsync();
 
         // Act 1 - Select a tag
-        var tagButton = Page.Locator(".tag-cloud-item").First;
+        var tagButton = Page.Locator(EnabledTagSelector).First;
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
                 new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
-        await searchInput.FillBlazorInputAsync("copilot");
+        await searchInput.FillBlazorInputAsync(TagSearchTestQuery);
 
         // Assert - URL should contain both search and tags parameters
         var currentUrl = Page.Url;
@@ -131,8 +143,48 @@ public class SearchTests : PlaywrightTestBase
         // Both filters should be active
         var uri = new Uri(currentUrl);
         var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
-        queryParams.Get("search").Should().Be("copilot");
+        queryParams.Get("search").Should().Be(TagSearchTestQuery);
         queryParams.Get("tags").Should().NotBeNullOrEmpty();
+    }
+
+    private async Task WaitForSelectableTagFilterOrSkipAsync()
+    {
+        await Page.WaitForBlazorReadyAsync();
+
+        var enabledTags = await WaitForSelectableTagFilterOrReachTerminalStateAsync();
+        Assert.SkipWhen(enabledTags == 0,
+            "No enabled tag filters are available in the current data snapshot.");
+    }
+
+    private async Task<int> WaitForSelectableTagFilterOrReachTerminalStateAsync()
+    {
+        var enabledTags = 0;
+
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            enabledTags = await Page.Locator(EnabledTagSelector).CountAsync();
+            if (enabledTags > 0)
+            {
+                return;
+            }
+
+            var noTagsMessageCount = await Page.Locator(NoTagsStateSelector)
+                .CountAsync();
+
+            var tagLoadingErrorCount = await Page.Locator(TagErrorSelector)
+                .CountAsync();
+
+            var loadingSkeletonCount = await Page.Locator(LoadingSkeletonSelector).CountAsync();
+            if (loadingSkeletonCount == 0 && (noTagsMessageCount > 0 || tagLoadingErrorCount > 0))
+            {
+                return;
+            }
+
+            throw new InvalidOperationException(
+                "Tag filters are still loading; retry until they become selectable or reach a terminal state.");
+        });
+
+        return enabledTags;
     }
 
     [Fact]

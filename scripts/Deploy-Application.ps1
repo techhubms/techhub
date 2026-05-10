@@ -320,83 +320,104 @@ if (-not $SkipDeploy) {
         --name $webAppName `
         --resource-group $resourceGroup `
         --image "$($webImage):$Tag" `
-        --revision-suffix "web-$Tag"
+        --revision-suffix "web-$Tag" `
+        --set-env-vars "DEPLOY_IMAGE_TAG=$Tag"
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to deploy Web"
         exit 1
     }
     Write-Ok "Web deployed"
 
-    # Wait for stabilization
-    $waitSeconds = if ($Environment -eq 'production') { 60 } else { 30 }
-    Write-Detail "Waiting $waitSeconds seconds for deployment to stabilize before running smoke tests..."
-    Start-Sleep -Seconds $waitSeconds
+    $webFqdn = az containerapp show `
+        --name $webAppName `
+        --resource-group $resourceGroup `
+        --query properties.configuration.ingress.fqdn `
+        -o tsv 2>$null
 
-    # ============================================================================
-    # SMOKE TESTS
-    # ============================================================================
+    if ([string]::IsNullOrWhiteSpace($webFqdn)) {
+        Write-Fail "Could not retrieve Web Container App FQDN"
+        exit 1
+    }
 
-    if (-not $SkipSmokeTests) {
-        Write-Step "Running smoke tests"
-
-        $webFqdn = az containerapp show `
+    # Verify sticky sessions are still enabled after the update.
+    # az containerapp update can transiently clear ingress settings during revision activation.
+    # Without sticky sessions, Blazor Server SignalR circuits break on multi-replica deployments.
+    Write-Step "Verifying sticky sessions on Web Container App"
+    $stickySetTimeoutSeconds = 90
+    $stickySetRetryDelaySeconds = 5
+    $stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
+    $stickySessionsEnabled = $false
+    while ((Get-Date) -lt $stickySetDeadline) {
+        $stickySetOutput = az containerapp ingress sticky-sessions set `
             --name $webAppName `
             --resource-group $resourceGroup `
-            --query properties.configuration.ingress.fqdn `
+            --affinity sticky 2>&1
+        if ($LASTEXITCODE -eq 0) {
+            $stickySessionsEnabled = $true
+            break
+        }
+
+        $stickySetOutputText = ($stickySetOutput | Out-String).Trim()
+        if ($stickySetOutputText -match 'ContainerAppOperationInProgress') {
+            Write-Warn "Container App operation still in progress — retrying in $($stickySetRetryDelaySeconds)s"
+            Start-Sleep -Seconds $stickySetRetryDelaySeconds
+            continue
+        }
+
+        Write-Fail "Failed to set sticky sessions (exit code $LASTEXITCODE)"
+        if (-not [string]::IsNullOrWhiteSpace($stickySetOutputText)) {
+            Write-Detail $stickySetOutputText
+        }
+        exit 1
+    }
+    if (-not $stickySessionsEnabled) {
+        Write-Fail "Failed to set sticky sessions within $($stickySetTimeoutSeconds)s"
+        exit 1
+    }
+
+    # Poll until sticky sessions are confirmed active in the resource API.
+    $stickyConfirmDeadline = (Get-Date).AddSeconds(60)
+    $stickyConfirmed = $false
+    while ((Get-Date) -lt $stickyConfirmDeadline) {
+        $affinity = az containerapp show `
+            --name $webAppName `
+            --resource-group $resourceGroup `
+            --query "properties.configuration.ingress.stickySessions.affinity" `
             -o tsv 2>$null
-
-        $smokeTestsPassed = $true
-
-        if ($webFqdn) {
-            # Test Web health endpoint
-            $healthResponse = try {
-                Invoke-WebRequest -Uri "https://$webFqdn/health" -TimeoutSec 30 -UseBasicParsing
-            }
-            catch { $null }
-
-            if ($healthResponse -and $healthResponse.StatusCode -eq 200) {
-                Write-Ok "Web health check passed (https://$webFqdn/health)"
-            }
-            else {
-                Write-Fail "Web health check failed"
-                $smokeTestsPassed = $false
-            }
-
-            # Test Web homepage
-            $homepageResponse = try {
-                Invoke-WebRequest -Uri "https://$webFqdn" -TimeoutSec 30 -UseBasicParsing
-            }
-            catch { $null }
-
-            if ($homepageResponse -and $homepageResponse.StatusCode -eq 200) {
-                Write-Ok "Web homepage accessible (https://$webFqdn)"
-            }
-            else {
-                Write-Fail "Web homepage not accessible"
-                $smokeTestsPassed = $false
-            }
+        if ($affinity -eq 'sticky') {
+            $stickyConfirmed = $true
+            break
         }
-        else {
-            Write-Warn "Could not retrieve web URL for smoke tests"
-            $smokeTestsPassed = $false
-        }
+        Start-Sleep -Seconds 5
+    }
+    if (-not $stickyConfirmed) {
+        Write-Fail "Sticky sessions did not propagate within 60s — Blazor SignalR will not work correctly"
+        exit 1
+    }
+    Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
 
+    # Delegate version wait and smoke tests to the shared script.
+    # On PR/staging the version endpoint also confirms API readiness (Kestrel is blocked
+    # on section-cache load until the API responds, so /version == full chain healthy).
+    $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
+    $waitArgs = @('-WebFqdn', $webFqdn, '-Tag', $Tag)
+    if ($SkipSmokeTests) { $waitArgs += '-SkipSmokeTests' }
+    & (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') @waitArgs
+    if ($LASTEXITCODE -ne 0) {
         # Rollback on failure (production only)
-        if (-not $smokeTestsPassed) {
-            if ($Environment -eq 'production' -and $previousApiImage -and $previousWebImage) {
-                Write-Step "Rolling back to previous version"
-                az containerapp update `
-                    --name $apiAppName `
-                    --resource-group $resourceGroup `
-                    --image $previousApiImage | Out-Null
-                az containerapp update `
-                    --name $webAppName `
-                    --resource-group $resourceGroup `
-                    --image $previousWebImage | Out-Null
-                Write-Warn "Rollback complete. Previous images restored."
-            }
-            exit 1
+        if ($Environment -eq 'production' -and $previousApiImage -and $previousWebImage) {
+            Write-Step "Rolling back to previous version"
+            az containerapp update `
+                --name $apiAppName `
+                --resource-group $resourceGroup `
+                --image $previousApiImage | Out-Null
+            az containerapp update `
+                --name $webAppName `
+                --resource-group $resourceGroup `
+                --image $previousWebImage | Out-Null
+            Write-Warn "Rollback complete. Previous images restored."
         }
+        exit 1
     }
 }
 else {
@@ -416,11 +437,6 @@ Write-Host "  API image            : $($apiImage):$Tag" -ForegroundColor Gray
 Write-Host "  Web image            : $($webImage):$Tag" -ForegroundColor Gray
 
 if (-not $SkipDeploy) {
-    $webFqdn = az containerapp show `
-        --name $webAppName `
-        --resource-group $resourceGroup `
-        --query properties.configuration.ingress.fqdn `
-        -o tsv 2>$null
     if ($webFqdn) {
         Write-Host "  Web URL     : https://$webFqdn" -ForegroundColor Gray
     }
