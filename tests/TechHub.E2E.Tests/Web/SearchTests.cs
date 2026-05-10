@@ -12,6 +12,7 @@ namespace TechHub.E2E.Tests.Web;
 public class SearchTests : PlaywrightTestBase
 {
     private const string TagSearchTestPath = "/ai/blogs";
+    private const string TagSearchTestQuery = "azure";
     private const string TagFilterNavSelector = "nav[aria-label='Filter by tags']";
     private const string EnabledTagSelector = TagFilterNavSelector + " .tag-cloud-item:not(.disabled)";
     private const string NoTagsStateSelector = TagFilterNavSelector + " .sidebar-text:not(.error)";
@@ -130,7 +131,7 @@ public class SearchTests : PlaywrightTestBase
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
-        await searchInput.FillBlazorInputAsync("azure");
+        await searchInput.FillBlazorInputAsync(TagSearchTestQuery);
 
         // Assert - URL should contain both search and tags parameters
         var currentUrl = Page.Url;
@@ -140,7 +141,7 @@ public class SearchTests : PlaywrightTestBase
         // Both filters should be active
         var uri = new Uri(currentUrl);
         var queryParams = System.Web.HttpUtility.ParseQueryString(uri.Query);
-        queryParams.Get("search").Should().Be("azure");
+        queryParams.Get("search").Should().Be(TagSearchTestQuery);
         queryParams.Get("tags").Should().NotBeNullOrEmpty();
     }
 
