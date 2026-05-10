@@ -12,8 +12,7 @@ namespace TechHub.E2E.Tests.Web;
 public class SearchTests : PlaywrightTestBase
 {
     private const string TagSearchTestPath = "/ai/blogs";
-    private const string NoTagsAvailableMessage = "No tags available";
-    private const string TagLoadingErrorMessage = "Error loading tags";
+    private const string TagFilterNavSelector = "nav[aria-label='Filter by tags']";
 
     public SearchTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
@@ -156,21 +155,20 @@ public class SearchTests : PlaywrightTestBase
 
         await BlazorHelpers.RetryUntilPassAsync(async () =>
         {
-            enabledTags = await Page.Locator(".tag-cloud-item:not(.disabled)").CountAsync();
+            enabledTags = await Page.Locator($"{TagFilterNavSelector} .tag-cloud-item:not(.disabled)").CountAsync();
             if (enabledTags > 0)
             {
                 return;
             }
 
-            var noTagsAvailable = await Page.Locator(".sidebar-text")
-                .Filter(new() { HasTextString = NoTagsAvailableMessage })
+            var noTagsMessage = await Page.Locator($"{TagFilterNavSelector} .sidebar-text:not(.error)")
                 .CountAsync();
 
-            var tagLoadingError = await Page.Locator(".sidebar-text.error")
-                .Filter(new() { HasTextString = TagLoadingErrorMessage })
+            var tagLoadingError = await Page.Locator($"{TagFilterNavSelector} .sidebar-text.error")
                 .CountAsync();
 
-            if (noTagsAvailable > 0 || tagLoadingError > 0)
+            var loadingSkeletons = await Page.Locator($"{TagFilterNavSelector} .tag-cloud-skeleton").CountAsync();
+            if (loadingSkeletons == 0 && (noTagsMessage > 0 || tagLoadingError > 0))
             {
                 return;
             }
