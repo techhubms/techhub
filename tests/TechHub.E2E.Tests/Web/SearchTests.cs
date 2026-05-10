@@ -13,6 +13,10 @@ public class SearchTests : PlaywrightTestBase
 {
     private const string TagSearchTestPath = "/ai/blogs";
     private const string TagFilterNavSelector = "nav[aria-label='Filter by tags']";
+    private const string EnabledTagSelector = TagFilterNavSelector + " .tag-cloud-item:not(.disabled)";
+    private const string NoTagsStateSelector = TagFilterNavSelector + " .sidebar-text:not(.error)";
+    private const string TagErrorSelector = TagFilterNavSelector + " .sidebar-text.error";
+    private const string LoadingSkeletonSelector = TagFilterNavSelector + " .tag-cloud-skeleton";
 
     public SearchTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
@@ -119,7 +123,7 @@ public class SearchTests : PlaywrightTestBase
         await WaitForSelectableTagFilterOrSkipAsync();
 
         // Act 1 - Select a tag
-        var tagButton = Page.Locator(".tag-cloud-item:not(.disabled)").First;
+        var tagButton = Page.Locator(EnabledTagSelector).First;
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
                 new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
@@ -146,7 +150,7 @@ public class SearchTests : PlaywrightTestBase
 
         var enabledTags = await WaitForSelectableTagFilterOrReachTerminalStateAsync();
         Assert.SkipWhen(enabledTags == 0,
-            $"No enabled tag filters are available for {TagSearchTestPath} in the current data snapshot.");
+            "No enabled tag filters are available in the current data snapshot.");
     }
 
     private async Task<int> WaitForSelectableTagFilterOrReachTerminalStateAsync()
@@ -155,19 +159,19 @@ public class SearchTests : PlaywrightTestBase
 
         await BlazorHelpers.RetryUntilPassAsync(async () =>
         {
-            enabledTags = await Page.Locator($"{TagFilterNavSelector} .tag-cloud-item:not(.disabled)").CountAsync();
+            enabledTags = await Page.Locator(EnabledTagSelector).CountAsync();
             if (enabledTags > 0)
             {
                 return;
             }
 
-            var noTagsMessageCount = await Page.Locator($"{TagFilterNavSelector} .sidebar-text:not(.error)")
+            var noTagsMessageCount = await Page.Locator(NoTagsStateSelector)
                 .CountAsync();
 
-            var tagLoadingErrorCount = await Page.Locator($"{TagFilterNavSelector} .sidebar-text.error")
+            var tagLoadingErrorCount = await Page.Locator(TagErrorSelector)
                 .CountAsync();
 
-            var loadingSkeletonCount = await Page.Locator($"{TagFilterNavSelector} .tag-cloud-skeleton").CountAsync();
+            var loadingSkeletonCount = await Page.Locator(LoadingSkeletonSelector).CountAsync();
             if (loadingSkeletonCount == 0 && (noTagsMessageCount > 0 || tagLoadingErrorCount > 0))
             {
                 return;
