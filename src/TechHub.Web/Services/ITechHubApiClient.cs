@@ -546,8 +546,8 @@ internal interface ITechHubApiClient
 
     /// <summary>
     /// Upsert a GHC feature (create or update metadata).
-    /// PUT /api/admin/ghc-features/{slug}
-    /// Returns true when found and updated, false when created.
+    /// PUT /api/ghc-features/{slug}
+    /// Returns true on success (HTTP 2xx). The API always returns 204 No Content.
     /// </summary>
     Task<bool> UpsertGhcFeatureAsync(GhcFeature feature, CancellationToken cancellationToken = default);
 

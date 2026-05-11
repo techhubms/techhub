@@ -71,6 +71,11 @@ public static class GhcFeaturesEndpoints
         CancellationToken ct)
     {
         ArgumentNullException.ThrowIfNull(feature);
+        if (!string.Equals(slug, feature.Slug, StringComparison.Ordinal))
+        {
+            return Results.BadRequest("The slug in the URL must match the slug in the request body.");
+        }
+
         await repo.UpsertFeatureAsync(feature, ct);
         return Results.NoContent();
     }

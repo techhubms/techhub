@@ -1,5 +1,6 @@
 using System.Data;
 using Dapper;
+using Npgsql;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
 
@@ -163,6 +164,12 @@ ON CONFLICT (slug) DO UPDATE SET
 
             tx.Commit();
             return rows > 0;
+        }
+        catch (PostgresException ex) when (ex.SqlState == "23503")
+        {
+            // Foreign key violation: either feature_slug or (collection_name, item_slug) does not exist.
+            tx.Rollback();
+            return false;
         }
         catch
         {

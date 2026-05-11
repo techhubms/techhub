@@ -325,9 +325,9 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Assert - GHES filter should be active and only GHES entries should be visible
         var entriesAfter = Page.Locator(".features-timeline-entry");
         var countAfter = await entriesAfter.CountAsync();
-        // After filtering by GHES, we should have fewer or equal entries
-        countAfter.Should().BeLessThanOrEqualTo(countBefore,
-            "Filtering by GHES should not increase the number of entries");
+        // After filtering by GHES, we should have strictly fewer entries (some features do not support GHES)
+        countAfter.Should().BeLessThan(countBefore,
+            "Filtering by GHES should show fewer entries than unfiltered");
     }
 
     [Fact]
@@ -341,17 +341,17 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var totalCount = await allEntries.CountAsync();
         totalCount.Should().BeGreaterThan(0);
 
-        // Act - Click a tier filter (Free)
-        var freeButton = Page.Locator(".features-timeline-filters button:has-text('Free')");
-        await freeButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(freeButton).ToHaveClassAsync(
+        // Act - Click the Enterprise tier filter (most restrictive, fewest features)
+        var enterpriseButton = Page.Locator(".features-timeline-filters button:has-text('Enterprise')");
+        await enterpriseButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(enterpriseButton).ToHaveClassAsync(
                 new Regex("active"), new() { Timeout = 2000 }));
 
-        // Assert - After filtering by Free tier, entries should be <= total
+        // Assert - Filtering by Enterprise tier must strictly reduce the count
         var filteredEntries = Page.Locator(".features-timeline-entry");
         var filteredCount = await filteredEntries.CountAsync();
-        filteredCount.Should().BeLessThanOrEqualTo(totalCount,
-            "Filtering by Free tier should not show more entries than without filter");
+        filteredCount.Should().BeLessThan(totalCount,
+            "Filtering by Enterprise tier should show fewer entries than unfiltered");
     }
 
     [Fact]

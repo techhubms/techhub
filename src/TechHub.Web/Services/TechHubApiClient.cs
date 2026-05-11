@@ -1691,7 +1691,7 @@ public class TechHubApiClient : ITechHubApiClient
                 feature,
                 cancellationToken);
             response.EnsureSuccessStatusCode();
-            return response.StatusCode == System.Net.HttpStatusCode.OK;
+            return response.IsSuccessStatusCode;
         }
         catch (HttpRequestException ex)
         {

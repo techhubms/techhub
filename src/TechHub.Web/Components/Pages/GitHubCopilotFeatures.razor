@@ -44,7 +44,7 @@
                                             <li>@feature</li>
                                         }
                                     </ul>
-                                    <span class="features-tier-link">View Features →</span>
+                                    <span class="features-tier-link">Filter timeline →</span>
                                 </button>
                             }
                         </div>
@@ -64,7 +64,8 @@
                     <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
                 </div>
 
-                @if (videoItems.Count > 0)                {
+                @if (videoItems.Count > 0)
+                {
                     <div class="features-timeline-filters" role="group" aria-label="Filter features by subscription tier">
                         <button type="button"
                                 class="features-filter-btn @(activeTierId == null && !ghesFilterActive ? "active" : "")"
@@ -110,7 +111,7 @@
                                             <div class="features-timeline-month-row">
                                                 <div class="features-timeline-node">
                                                     <div class="features-timeline-dot" aria-hidden="true"></div>
-                                                    <time class="features-timeline-date" datetime="@(monthGroup.Key + "-01")">@FormatReleaseDate(monthGroup.Key)</time>
+                                                    <time class="features-timeline-date" datetime="@(monthGroup.Key.Length == 7 ? monthGroup.Key + "-01" : "")">@FormatReleaseDate(monthGroup.Key)</time>
                                                 </div>
                                                 <div class="features-timeline-month-cards">
                                                     @foreach (var feature in monthGroup)
@@ -209,6 +210,10 @@
                             }
                         </div>
                     }
+                }
+                else
+                {
+                    <p class="features-timeline-empty">No features are available at this time.</p>
                 }
             </div>
         </article>

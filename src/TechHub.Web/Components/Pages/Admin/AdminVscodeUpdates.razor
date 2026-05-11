@@ -76,25 +76,24 @@
                 <tbody>
                     @foreach (var item in _items)
                     {
-                        var it = item;
                         <tr>
                             <td class="admin-cell-mono">
-                                @DateTimeOffset.FromUnixTimeSeconds(it.DateEpoch).ToString("yyyy-MM-dd")
+                                @DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).ToString("yyyy-MM-dd")
                             </td>
-                            <td class="admin-cell-article" title="@it.Title">
-                                @if (!string.IsNullOrEmpty(it.ExternalUrl))
+                            <td class="admin-cell-article" title="@item.Title">
+                                @if (!string.IsNullOrEmpty(item.ExternalUrl))
                                 {
-                                    <a href="@it.ExternalUrl" target="_blank" rel="noopener noreferrer">@it.Title</a>
+                                    <a href="@item.ExternalUrl" target="_blank" rel="noopener noreferrer">@item.Title</a>
                                 }
                                 else
                                 {
-                                    @it.Title
+                                    @item.Title
                                 }
                             </td>
-                            <td class="admin-cell-mono">@it.CollectionName/@it.Slug</td>
+                            <td class="admin-cell-mono">@item.CollectionName/@item.Slug</td>
                             <td>
                                 <button class="admin-link-btn admin-link-btn-danger"
-                                        @onclick="() => RemoveItemAsync(it)"
+                                        @onclick="() => RemoveItemAsync(item)"
                                         title="Remove from VS Code Updates list (does not delete the content item)">
                                     Remove
                                 </button>
@@ -148,12 +147,11 @@
                 <tbody>
                     @foreach (var result in _addSearchResults)
                     {
-                        var r = result;
                         <tr>
-                            <td class="admin-cell-article" title="@r.Title">@r.Title</td>
-                            <td class="admin-cell-mono">@r.CollectionName/@r.Slug</td>
+                            <td class="admin-cell-article" title="@result.Title">@result.Title</td>
+                            <td class="admin-cell-mono">@result.CollectionName/@result.Slug</td>
                             <td>
-                                <button class="admin-link-btn" @onclick="() => AddItemAsync(r)" disabled="@_adding">
+                                <button class="admin-link-btn" @onclick="() => AddItemAsync(result)" disabled="@_adding">
                                     @(_adding ? "Adding…" : "+ Add")
                                 </button>
                             </td>

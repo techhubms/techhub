@@ -21,3 +21,15 @@
     margin-top: var(--spacing-3);
     font-size: var(--font-size-sm);
 }
+
+.features-links-search-row {
+    display: flex;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-2);
+}
+
+.features-links-search-input {
+    flex: 1;
+    min-width: 160px;
+}

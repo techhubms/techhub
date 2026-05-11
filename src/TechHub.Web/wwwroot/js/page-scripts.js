@@ -373,6 +373,17 @@ window.initCustomPages = initCustomPages;
 // ─── Features Timeline Helpers ────────────────────────────────────────────────
 
 /**
+ * Prevent the browser from scrolling the page when Space is pressed on a
+ * features-timeline-card element (role="button" div).
+ * Fires in the capture phase so it takes effect before Blazor's event dispatch.
+ */
+document.addEventListener('keydown', function(e) {
+    if (e.key === ' ' && e.target instanceof Element && e.target.classList.contains('features-timeline-card')) {
+        e.preventDefault();
+    }
+}, true);
+
+/**
  * After a tier filter is selected, scroll the sidebar tier list back to the top
  * so the active card is visible without jumping the main content.
  * Also blurs the focused button so Blazor's post-render focus management
