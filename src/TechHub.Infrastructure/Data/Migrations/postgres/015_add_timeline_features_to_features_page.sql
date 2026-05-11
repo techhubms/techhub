@@ -158,7 +158,7 @@ VALUES (
     {
       "id": "token-based-billing",
       "name": "Copilot Token-Based Billing",
-      "releaseDate": "2025-05",
+      "releaseDate": "2026-06",
       "description": "GitHub Copilot moves from a fixed-count 'premium request' model to a flexible token-based billing system — giving individuals and organizations more predictable costs and fine-grained control over model usage.",
       "plans": ["Free", "Pro", "Business", "Pro+", "Enterprise", "Student"],
       "ghesSupport": false,

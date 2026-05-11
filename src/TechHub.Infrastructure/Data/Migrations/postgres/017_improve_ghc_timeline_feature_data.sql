@@ -245,7 +245,7 @@ SET
   {
     "id": "token-based-billing",
     "name": "Copilot Token-Based Billing",
-    "releaseDate": "2025-05",
+    "releaseDate": "2026-06",
     "description": "Effective June 1, 2026 — replaces fixed ''premium request'' quotas with a flexible token-based billing model where cost scales with actual model usage. Heavier models like Claude Opus consume more tokens per interaction while lighter models cost less, giving individuals and organizations fine-grained control over their AI spend without artificial request caps.",
     "plans": ["Free", "Pro", "Business", "Pro+", "Enterprise", "Student"],
     "ghesSupport": false,

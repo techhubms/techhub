@@ -148,7 +148,7 @@
         {
             "id": "token-based-billing",
             "name": "Copilot Token-Based Billing",
-            "releaseDate": "2025-05",
+            "releaseDate": "2026-06",
             "description": "Token-based billing feature for testing timeline ordering.",
             "plans": ["Free", "Pro"],
             "ghesSupport": false,

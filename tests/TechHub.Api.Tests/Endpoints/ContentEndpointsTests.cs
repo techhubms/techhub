@@ -1274,7 +1274,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetContentDetail_WithExternalUrl_ReturnsNotFound()
+    public async Task GetContentDetail_WithExternalUrl_ReturnsNoContent()
     {
         // External collections (news, blogs, community) link to original sources,
         // so detail endpoint returns 204 since there's no internal content to display
