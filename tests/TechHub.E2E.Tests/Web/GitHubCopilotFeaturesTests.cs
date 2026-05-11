@@ -385,23 +385,29 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
+        await Page.WaitForBlazorReadyAsync();
 
-        var firstEntry = Page.Locator(".features-timeline-entry").First;
-        await Assertions.Expect(firstEntry).ToBeVisibleAsync();
+        // The first entry auto-expands on page load; use the second entry to test the toggle.
+        var entries = Page.Locator(".features-timeline-entry");
+        await Assertions.Expect(entries.First).ToBeVisibleAsync();
 
-        // Initially not expanded
-        await Assertions.Expect(firstEntry).Not.ToHaveClassAsync(new Regex("expanded"));
+        var testEntry = entries.Nth(1);
+        var testCard = testEntry.Locator(".features-timeline-card");
+        await Assertions.Expect(testEntry).ToBeVisibleAsync();
+
+        // Second entry starts collapsed (only the first entry auto-expands)
+        await Assertions.Expect(testCard).ToHaveAttributeAsync("aria-expanded", "false");
 
         // Act - Click to expand
-        var header = firstEntry.Locator(".features-timeline-header");
+        var header = testEntry.Locator(".features-timeline-header");
         await header.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(firstEntry).ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+            await Assertions.Expect(testCard).ToHaveAttributeAsync(
+                "aria-expanded", "true", new() { Timeout = 2000 }));
 
         // Act - Click again to collapse
         await header.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(firstEntry).Not.ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+            await Assertions.Expect(testCard).ToHaveAttributeAsync(
+                "aria-expanded", "false", new() { Timeout = 2000 }));
     }
 
     [Fact]
@@ -410,21 +416,30 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Find the first entry that has a video badge (badge-info)
-        var entryWithVideo = Page.Locator(".features-timeline-entry:has(.badge-info)").First;
+        // Find the first entry that has a YouTube thumbnail rendered in the DOM.
+        // Entries may have ContentLinks (badge-info) but no YouTube URL — only entries where
+        // GetYouTubeVideoId returns a non-null value will have the img element in the DOM.
+        var entryWithVideo = Page.Locator(".features-timeline-entry:has(.feature-card-thumbnail img)").First;
         var entryCount = await entryWithVideo.CountAsync();
 
-        // On PR preview environments video slugs may not be linked — skip gracefully.
+        // On PR preview environments feature video slugs may not have YouTube external URLs — skip gracefully.
         Assert.SkipWhen(entryCount == 0,
-            "No timeline entries with video badges found — video slugs not linked on this environment");
+            "No timeline entries with YouTube thumbnails found — video links may not have YouTube URLs on this environment");
 
         await Assertions.Expect(entryWithVideo).ToBeVisibleAsync();
+        await Page.WaitForBlazorReadyAsync();
 
-        // Expand the entry
-        var header = entryWithVideo.Locator(".features-timeline-header");
-        await header.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(entryWithVideo).ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+        // Ensure the entry is expanded — the first video item auto-expands on load,
+        // so only click the header if this particular entry is not yet expanded.
+        var entryCard = entryWithVideo.Locator(".features-timeline-card");
+        var ariaExpanded = await entryCard.GetAttributeAsync("aria-expanded");
+        if (ariaExpanded != "true")
+        {
+            var header = entryWithVideo.Locator(".features-timeline-header");
+            await header.ClickAndExpectAsync(async () =>
+                await Assertions.Expect(entryCard).ToHaveAttributeAsync(
+                    "aria-expanded", "true", new() { Timeout = 2000 }));
+        }
 
         // Assert - Expanded entry with video should show thumbnail
         var thumbnail = entryWithVideo.Locator(".feature-card-thumbnail img");

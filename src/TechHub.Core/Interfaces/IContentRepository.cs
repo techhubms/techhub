@@ -18,7 +18,6 @@ public interface IContentRepository
     Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
-        bool includeDraft = false,
         CancellationToken ct = default);
 
     // ==================== Search Methods ====================
@@ -104,7 +103,7 @@ public interface IContentRepository
     /// <summary>
     /// Get all known authors with their published content item counts.
     /// Returns authors sorted alphabetically by name.
-    /// Only includes authors with at least one published (non-draft) content item.
+    /// Only includes authors with at least one published content item.
     /// </summary>
     Task<IReadOnlyList<AuthorSummary>> GetAuthorsAsync(CancellationToken ct = default);
 
@@ -143,7 +142,6 @@ public interface IContentRepository
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
-        string? subcollectionName = null,
         CancellationToken ct = default);
 
     /// <summary>
@@ -152,30 +150,6 @@ public interface IContentRepository
     /// Returns true if a row was deleted, false if not found.
     /// </summary>
     Task<bool> DeleteContentItemAsync(string collectionName, string slug, CancellationToken ct = default);
-
-    /// <summary>
-    /// Updates the subscription plans, GHES support flag, and draft status for a ghc-features content item.
-    /// Identified by slug alone (all ghc-features items share the "videos" collection).
-    /// Returns true if found and updated, false if not found.
-    /// </summary>
-    Task<bool> UpdateGhcFeaturePlansAsync(string slug, IReadOnlyList<string> plans, bool ghesSupport, bool draft, CancellationToken ct = default);
-
-    /// <summary>
-    /// Publishes a draft ghc-features video in-place: replaces the placeholder external URL with
-    /// the real YouTube URL, updates all AI-generated content fields, sets draft=false, and
-    /// updates plans/ghes support — all in a single transaction.
-    /// Also swaps the processed_urls record from the old URL to the new URL.
-    /// Returns true if the item was found and updated, false if not found.
-    /// </summary>
-    Task<bool> PublishGhcFeatureDraftAsync(
-        string slug,
-        string oldExternalUrl,
-        string newExternalUrl,
-        ContentItemEditData editData,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
-        bool hasTranscript,
-        CancellationToken ct = default);
 
     /// <summary>
     /// Invalidates all cached content data (search results, slugs, sitemaps, etc.).

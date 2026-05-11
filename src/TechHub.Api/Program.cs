@@ -106,8 +106,7 @@ builder.Services.AddSingleton<IDbConnectionFactory>(sp =>
 builder.Services.AddScoped<IDbConnection>(sp =>
     sp.GetRequiredService<NpgsqlDataSource>().OpenConnection());
 builder.Services.AddTransient<IContentRepository, ContentRepository>();
-
-// TimeProvider for testable date/time
+builder.Services.AddTransient<IGhcFeatureRepository, GhcFeatureRepository>();
 builder.Services.AddSingleton(TimeProvider.System);
 
 // Register singleton services - none currently
@@ -459,6 +458,7 @@ app.MapCustomPagesEndpoints();
 app.MapRssEndpoints();
 app.MapSitemapEndpoints();
 app.MapAuthorEndpoints();
+app.MapGhcFeaturesEndpoints();
 app.MapAdminEndpoints();
 
 // Map Aspire default health check endpoints (/health and /alive)

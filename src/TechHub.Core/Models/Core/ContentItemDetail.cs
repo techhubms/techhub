@@ -52,12 +52,8 @@ public record ContentItemDetail : ContentItem
         IReadOnlyList<string>? sections,
         string excerpt,
         string externalUrl,
-        bool draft,
-        string? subcollectionName,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
         string? renderedHtml)
-        : base(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName, tags, sections, excerpt, externalUrl, draft, subcollectionName, plans, ghesSupport)
+        : base(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName, tags, sections, excerpt, externalUrl)
     {
         RenderedHtml = renderedHtml;
     }
@@ -76,11 +72,7 @@ public record ContentItemDetail : ContentItem
         string primarySectionName,
         string excerpt,
         string externalUrl,
-        bool draft,
         string? content,
-        string? subcollectionName,
-        string? plans,
-        bool ghesSupport,
         string? tagsCsv = null,
         bool isAi = false,
         bool isAzure = false,
@@ -90,7 +82,7 @@ public record ContentItemDetail : ContentItem
         bool isMl = false,
         bool isSecurity = false)
         : base(slug, title, author, dateEpoch, collectionName, feedName, primarySectionName,
-               excerpt, externalUrl, draft, subcollectionName, plans, ghesSupport,
+               excerpt, externalUrl,
                tagsCsv, isAi, isAzure, isDotNet, isDevOps, isGitHubCopilot, isMl, isSecurity)
     {
         Content = content;

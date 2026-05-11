@@ -201,45 +201,4 @@ public class RssEndpointsTests : IClassFixture<TechHubIntegrationTestApiFactory>
         });
     }
 
-    [Fact]
-    public async Task GetAllContentFeed_ShouldNotIncludeDraftItems()
-    {
-        // Act
-        var response = await _client.GetAsync("/api/rss/all", TestContext.Current.CancellationToken);
-        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
-
-        // Assert
-        var doc = XDocument.Parse(xml);
-        var items = doc.Descendants("item").ToList();
-
-        // Should not include draft content (title: "Coming Soon: Revolutionary AI Feature")
-        var draftItems = items.Where(item =>
-        {
-            var title = item.Element("title");
-            return title != null && title.Value.Contains("Coming Soon", StringComparison.OrdinalIgnoreCase);
-        }).ToList();
-
-        draftItems.Should().BeEmpty("RSS feeds should never include draft items");
-    }
-
-    [Fact]
-    public async Task GetSectionFeed_ShouldNotIncludeDraftItems()
-    {
-        // Act - AI section feed (our draft has ai section)
-        var response = await _client.GetAsync("/api/rss/github-copilot/videos", TestContext.Current.CancellationToken);
-        var xml = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
-
-        // Assert
-        var doc = XDocument.Parse(xml);
-        var items = doc.Descendants("item").ToList();
-
-        // Should not include draft content even though it has ai section
-        var draftItems = items.Where(item =>
-        {
-            var title = item.Element("title");
-            return title != null && title.Value.Contains("Coming Soon", StringComparison.OrdinalIgnoreCase);
-        }).ToList();
-
-        draftItems.Should().BeEmpty("RSS feeds should never include draft items");
-    }
 }

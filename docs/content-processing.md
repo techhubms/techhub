@@ -131,7 +131,7 @@ The system analyzes content using `src/TechHub.Infrastructure/Data/Resources/sys
 - Sales pitches without educational value, non-English content, job postings
 - Non-development Microsoft business products (Microsoft 365 Copilot, Dynamics, Intune, etc.)
 
-> **Manual operations bypass the sales pitch rule.** Ad-hoc URL adds, transcript applications, and GHC draft publishing set `SkipSalesPitchCheck = true` on the `RawFeedItem`, which injects a `PROCESSING_OVERRIDE` line into the AI prompt instructing it to skip that exclusion. Batch RSS processing is unaffected.
+> **Manual operations bypass the sales pitch rule.** Ad-hoc URL adds and transcript applications set `SkipSalesPitchCheck = true` on the `RawFeedItem`, which injects a `PROCESSING_OVERRIDE` line into the AI prompt instructing it to skip that exclusion. Batch RSS processing is unaffected.
 
 **Inclusion Categories**:
 
@@ -178,9 +178,9 @@ See [admin-authentication.md](admin-authentication.md) for authentication setup.
 - **AI API failures**: Retried up to `MaxRetries` times (configurable in `AiCategorizationOptions`)
 - **Rate limiting**: Configurable delay between AI calls (`RateLimitDelaySeconds`)
 
-### Subcollection Rules
+### Dedicated Lookup Table Rules
 
-Content items can be automatically assigned to subcollections based on the feed name and
+Content items can be automatically written to dedicated lookup tables based on the feed name and
 video/article title. This is configured in `appsettings.json` under `ContentProcessor.SubcollectionRules`.
 
 Each rule has three fields:
@@ -189,7 +189,7 @@ Each rule has three fields:
 |---|---|
 | `FeedName` | Feed name to match (exact, case-insensitive) |
 | `TitlePattern` | Title pattern with `*` wildcard support (case-insensitive) |
-| `Subcollection` | Subcollection name to assign when the rule matches |
+| `Subcollection` | Target lookup table identifier (`"vscode-updates"` writes to `vscode_update_items`) |
 
 **Example configuration**:
 
@@ -207,13 +207,14 @@ Each rule has three fields:
 }
 ```
 
-This rule automatically assigns the `vscode-updates` subcollection to any video from the
-"Fokko at Work YouTube" feed whose title starts with "Visual Studio Code and GitHub Copilot".
+This rule automatically identifies any video from the
+"Fokko at Work YouTube" feed whose title starts with "Visual Studio Code and GitHub Copilot"
+as a VS Code update and inserts a row into `vscode_update_items`.
 These videos then appear on the VS Code Updates page at `/github-copilot/vscode-updates`.
 
 Rules are applied after AI categorization succeeds, so only items that pass the AI filter
-are assigned subcollections. Manually added items with subcollections already set in the
-database are not affected (the pipeline skips items that already exist).
+are written to lookup tables. Manually added items that are already in the lookup table
+are not affected.
 
 ## Weekly Roundups
 

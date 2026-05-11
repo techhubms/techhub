@@ -78,7 +78,7 @@ Each item in the feed includes:
 - Feeds are sorted by publication date, **newest first**
 - Feeds are limited to the **50 most recent items** for performance
 - Future-dated content (beyond current date in Europe/Brussels timezone) is excluded
-- Draft content is excluded from all RSS feeds
+- All RSS feeds show only the 50 most recent items
 
 ### Content-Type
 

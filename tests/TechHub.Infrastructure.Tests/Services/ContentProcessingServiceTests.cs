@@ -1104,11 +1104,11 @@ public class ContentProcessingServiceTests
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
 
-        // Assert — verify the item was written to DB with subcollection_name set
-        var dbItem = await _fixture.Connection.QuerySingleOrDefaultAsync<dynamic>(
-            "SELECT subcollection_name FROM content_items WHERE external_url = @Url",
-            new { Url = url });
-        ((string)dbItem!.subcollection_name).Should().Be("vscode-updates");
+        // Assert — verify the item was written to vscode_update_items (new subcollection tracking table)
+        var inVscodeUpdates = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT EXISTS(SELECT 1 FROM vscode_update_items WHERE collection_name = @Collection AND slug = @Slug)",
+            new { Collection = processed.CollectionName, Slug = processed.Slug });
+        inVscodeUpdates.Should().BeTrue("item matched vscode-updates subcollection rule should be registered in vscode_update_items");
     }
 
     [Fact]
@@ -1165,11 +1165,11 @@ public class ContentProcessingServiceTests
         // Act
         await sut.RunAsync("scheduled", CancellationToken.None);
 
-        // Assert — verify the item was written without a subcollection
-        var dbItem = await _fixture.Connection.QuerySingleOrDefaultAsync<dynamic>(
-            "SELECT subcollection_name FROM content_items WHERE external_url = @Url",
-            new { Url = url });
-        ((string?)dbItem!.subcollection_name).Should().BeNull();
+        // Assert — verify the item was NOT registered in vscode_update_items (no subcollection rule matched)
+        var inVscodeUpdates = await _fixture.Connection.QueryFirstAsync<bool>(
+            "SELECT EXISTS(SELECT 1 FROM vscode_update_items WHERE collection_name = @Collection AND slug = @Slug)",
+            new { Collection = processed.CollectionName, Slug = processed.Slug });
+        inVscodeUpdates.Should().BeFalse("item not matching any subcollection rule should not be in vscode_update_items");
     }
 
     // ── Future Date Cap ───────────────────────────────────────────────────

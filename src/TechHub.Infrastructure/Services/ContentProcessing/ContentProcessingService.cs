@@ -229,7 +229,7 @@ public sealed class ContentProcessingService
                         // Shared per-item pipeline: tags → content → AI → write
                         var itemResult = await ProcessItemAsync(raw, jobId, forcedSubcollection: null, msg => Log($"  {msg}"), ct: ct);
 
-                        // Emit any supplemental informational messages (date capping, subcollection match)
+                        // Emit any supplemental informational messages (date capping, lookup table match)
                         foreach (var line in itemResult.LogLines)
                         {
                             Log(line);
@@ -325,7 +325,7 @@ public sealed class ContentProcessingService
     /// <param name="url">Absolute HTTP/HTTPS URL to process.</param>
     /// <param name="collectionName">Target collection (e.g. "blogs", "news", "videos").</param>
     /// <param name="feedName">Attribution name stored in processed_urls and content_items.</param>
-    /// <param name="subcollectionName">Optional subcollection to force (e.g. "ghc-features").</param>
+    /// <param name="subcollectionName">Optional lookup table target to force (e.g. "vscode-updates" writes to vscode_update_items).</param>
     /// <param name="titleHint">
     /// Optional hint passed to the AI about the expected title.
     /// The AI will use it as a starting point but extract the final title from fetched content.
@@ -377,7 +377,7 @@ public sealed class ContentProcessingService
             Log(string.Create(CultureInfo.InvariantCulture, $"Ad-hoc processing: {url.Sanitize()} → {collectionName.Sanitize()} (feed: {feedName.Sanitize()})"));
             if (!string.IsNullOrWhiteSpace(subcollectionName))
             {
-                Log(string.Create(CultureInfo.InvariantCulture, $"  Subcollection: {subcollectionName.Sanitize()}"));
+                Log(string.Create(CultureInfo.InvariantCulture, $"  Lookup table target: {subcollectionName.Sanitize()}"));
             }
 
             // Use the title hint for logging and subcollection rules; AI extracts the real title
@@ -399,7 +399,7 @@ public sealed class ContentProcessingService
             // Shared per-item pipeline: tags → content → AI → write
             var itemResult = await ProcessItemAsync(raw, jobId, subcollectionName, Log, transcript?.Trim(), verbose: true, ct);
 
-            // Emit any supplemental informational messages (date capping, subcollection match)
+            // Emit any supplemental informational messages (date capping, lookup table match)
             foreach (var line in itemResult.LogLines)
             {
                 Log(line);
@@ -476,7 +476,7 @@ public sealed class ContentProcessingService
     /// </summary>
     /// <param name="raw">The raw feed item to process.</param>
     /// <param name="jobId">The job ID for tracking (nullable for legacy callers).</param>
-    /// <param name="forcedSubcollection">If set, forces this subcollection instead of using config rules.</param>
+    /// <param name="forcedSubcollection">If set, forces this lookup table target instead of using config rules.</param>
     /// <param name="logAction">Callback to append log lines to the caller's log.</param>
     /// <param name="manualTranscript">
     /// When provided, used as the transcript for YouTube items instead of auto-fetching.
@@ -665,7 +665,7 @@ public sealed class ContentProcessingService
             processed = processed.WithDateEpoch(nowEpoch);
         }
 
-        // Apply subcollection: forced takes priority, then config rules
+        // Apply lookup table target: forced takes priority, then config rules
         if (!string.IsNullOrWhiteSpace(forcedSubcollection))
         {
             processed = processed.WithSubcollectionName(forcedSubcollection);
@@ -677,7 +677,7 @@ public sealed class ContentProcessingService
             {
                 processed = processed.WithSubcollectionName(matchedSubcollection);
                 logLines.Add(string.Create(CultureInfo.InvariantCulture,
-                    $"  → Subcollection rule matched: {matchedSubcollection}"));
+                    $"  → Lookup table rule matched: {matchedSubcollection}"));
             }
         }
 

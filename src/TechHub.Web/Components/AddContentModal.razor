@@ -109,71 +109,6 @@
                         <span class="admin-form-hint">Points the AI in the right direction — the final title will be extracted from the page content.</span>
                     </div>
 
-                    @if (_collection == "videos")
-                    {
-                        <div class="admin-form-group">
-                            <label class="admin-form-checkbox-label">
-                                <input type="checkbox"
-                                       @bind="_isGhcFeature"
-                                       disabled="@(!_isYouTube || _processing)"
-                                       @bind:after="OnGhcFeatureChanged" />
-                                Assign as GitHub Copilot Feature
-                                @if (!_isYouTube)
-                                {
-                                    <span class="admin-form-hint"> (requires a YouTube URL)</span>
-                                }
-                            </label>
-                        </div>
-
-                        <div class="admin-form-group">
-                            <label class="admin-form-checkbox-label">
-                                <input type="checkbox"
-                                       @bind="_isVscodeUpdate"
-                                       disabled="@(!_isYouTube || _processing)"
-                                       @bind:after="OnVscodeUpdateChanged" />
-                                Assign as VS Code Update
-                                @if (!_isYouTube)
-                                {
-                                    <span class="admin-form-hint"> (requires a YouTube URL)</span>
-                                }
-                            </label>
-                        </div>
-                    }
-
-                    @if (_collection == "videos" && _isGhcFeature && _isYouTube)
-                    {
-                        <div class="admin-form-group">
-                            <label class="admin-form-label">Subscription Tier</label>
-                            <div class="admin-radio-stack">
-                                @foreach (var group in _planGroups)
-                                {
-                                    <label class="features-plan-radio-label">
-                                        <input type="radio"
-                                               name="acm-plan-group"
-                                               value="@group.Key"
-                                               checked="@(_selectedPlanGroup == group.Key)"
-                                               @onchange="() => _selectedPlanGroup = group.Key"
-                                               disabled="@_processing" />
-                                        <span class="features-plan-radio-name">@group.Label</span>
-                                        <span class="features-plan-radio-badges">
-                                            @foreach (var plan in group.Plans)
-                                            {
-                                                <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
-                                            }
-                                        </span>
-                                    </label>
-                                }
-                            </div>
-                        </div>
-
-                        <div class="admin-form-group">
-                            <label class="admin-form-checkbox-label">
-                                <input type="checkbox" @bind="_ghesSupport" disabled="@_processing" />
-                                Available in GitHub Enterprise Server (GHES)
-                            </label>
-                        </div>
-                    }
-
                     @if (_isYouTube)
                     {
                         <div class="admin-form-group">
@@ -215,14 +150,6 @@
     [Parameter] public EventCallback OnItemAdded { get; set; }
 
     private static readonly IReadOnlyList<string> _collections = ["blogs", "news", "videos", "community"];
-    private sealed record PlanGroup(int Key, string Label, string[] Plans);
-
-    private static readonly PlanGroup[] _planGroups =
-    [
-        new(0, "Free", ["Free"]),
-        new(1, "Student / Pro / Business", ["Student", "Pro", "Business"]),
-        new(2, "Pro+ / Enterprise", ["Pro+", "Enterprise"]),
-    ];
 
     private const string DefaultFeedName = "TechHub";
 
@@ -231,10 +158,6 @@
     private string _collection = "videos";
     private string _feedName = DefaultFeedName;
     private string _titleHint = string.Empty;
-    private bool _isGhcFeature;
-    private bool _isVscodeUpdate;
-    private bool _ghesSupport;
-    private int? _selectedPlanGroup;
 
     private bool _isYouTube;
     private bool _processing;
@@ -264,31 +187,11 @@
 
         if (!_isYouTube)
         {
-            _isGhcFeature = false;
-            _isVscodeUpdate = false;
             _transcript = string.Empty;
         }
 
         // Auto-fetch title when a valid URL is entered and title hint is empty
         _ = TryFetchTitleAsync();
-    }
-
-    private void OnGhcFeatureChanged()
-    {
-        if (_isGhcFeature)
-        {
-            _isVscodeUpdate = false;
-        }
-    }
-
-    private void OnVscodeUpdateChanged()
-    {
-        if (_isVscodeUpdate)
-        {
-            _isGhcFeature = false;
-            _selectedPlanGroup = null;
-            _ghesSupport = false;
-        }
     }
 
     private async Task TryFetchTitleAsync()
@@ -352,29 +255,15 @@
             return;
         }
 
-        if (_isGhcFeature && _selectedPlanGroup is null)
-        {
-            _validationError = "Select a subscription tier before processing.";
-            return;
-        }
-
         _processing = true;
         try
         {
-            var plans = _isGhcFeature
-                ? (IReadOnlyList<string>)_planGroups[_selectedPlanGroup!.Value].Plans.ToList()
-                : [];
-
             var request = new AdHocUrlProcessRequest
             {
                 Url = _url.Trim(),
                 CollectionName = _collection,
                 FeedName = string.IsNullOrWhiteSpace(_feedName) ? DefaultFeedName : _feedName.Trim(),
                 TitleHint = string.IsNullOrWhiteSpace(_titleHint) ? null : _titleHint.Trim(),
-                IsGhcFeature = _isGhcFeature,
-                IsVscodeUpdate = _isVscodeUpdate,
-                Plans = plans,
-                GhesSupport = _ghesSupport,
                 Transcript = string.IsNullOrWhiteSpace(_transcript) ? null : _transcript.Trim()
             };
 
@@ -393,11 +282,7 @@
                     _url = string.Empty;
                     _feedName = DefaultFeedName;
                     _titleHint = string.Empty;
-                    _isGhcFeature = false;
-                    _isVscodeUpdate = false;
-                    _ghesSupport = false;
                     _isYouTube = false;
-                    _selectedPlanGroup = null;
                     _transcript = string.Empty;
                     await OnItemAdded.InvokeAsync();
                     await CloseAsync();
@@ -465,11 +350,7 @@
         _collection = "videos";
         _feedName = DefaultFeedName;
         _titleHint = string.Empty;
-        _isGhcFeature = false;
-        _isVscodeUpdate = false;
-        _ghesSupport = false;
         _isYouTube = false;
-        _selectedPlanGroup = null;
         _transcript = string.Empty;
         _result = null;
         _isAlreadyExists = false;

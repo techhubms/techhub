@@ -17,6 +17,17 @@ internal static class WebTelemetryFilters
         => path.StartsWithSegments("/_blazor/disconnect", StringComparison.OrdinalIgnoreCase);
 
     /// <summary>
+    /// Returns <c>true</c> for Blazor circuit reconnection attempts (<c>/_blazor?id=...</c>).
+    /// These occur when a client tries to resume a server-side Blazor circuit that no longer
+    /// exists (e.g. after a container restart). The requests always return 404 and have no
+    /// diagnostic value; filtering them prevents normal replica-restart churn from inflating
+    /// the <c>requests/failed</c> metric.
+    /// </summary>
+    internal static bool IsBlazorCircuitReconnectRequest(PathString path, IQueryCollection query)
+        => path.Equals("/_blazor", StringComparison.OrdinalIgnoreCase)
+           && query.ContainsKey("id");
+
+    /// <summary>
     /// Returns <c>true</c> if the User-Agent indicates a bot crawler.
     /// Bots following stale links generate expected 404s with no diagnostic value.
     /// </summary>
@@ -39,6 +50,7 @@ internal static class WebTelemetryFilters
     /// </summary>
     internal static bool ShouldTrace(HttpContext httpContext)
         => !IsBlazorDisconnectRequest(httpContext.Request.Path)
+           && !IsBlazorCircuitReconnectRequest(httpContext.Request.Path, httpContext.Request.Query)
            && !IsApiProbeRequest(httpContext.Request.Path)
            && !IsBotRequest(httpContext.Request.Headers.UserAgent.ToString());
 }

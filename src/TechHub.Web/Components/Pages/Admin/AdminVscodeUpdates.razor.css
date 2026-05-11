@@ -1,0 +1,23 @@
+.vscode-add-section {
+    margin-top: var(--spacing-6);
+    padding-top: var(--spacing-5);
+    border-top: 1px solid var(--color-border-default);
+}
+
+.vscode-add-heading {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-1);
+}
+
+.vscode-add-hint {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--spacing-3);
+}
+
+.vscode-add-results-table {
+    margin-top: var(--spacing-3);
+    font-size: var(--font-size-sm);
+}

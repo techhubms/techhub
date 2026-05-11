@@ -4,7 +4,6 @@ date: 2025-05-01
 primary_section: github-copilot
 section_names: [github-copilot, videos]
 tags: ["Test Tag"]
-draft: false
 external_url: https://youtu.be/tokentest123
 author: Test Author
 feed_name: Test Feed

@@ -16,7 +16,7 @@
     <div class="admin-page-header">
         <div>
             <h1 class="admin-page-title">Copilot Features</h1>
-            <p class="admin-page-subtitle">Manage subscription tier assignments for GitHub Copilot feature videos</p>
+            <p class="admin-page-subtitle">Manage GitHub Copilot features — description, release date, plans, GHES support, and linked content</p>
         </div>
         <div class="admin-actions">
             <button class="btn-secondary" @onclick="LoadFeaturesAsync">⟳ Refresh</button>
@@ -40,7 +40,7 @@
     }
     else if (_items == null || _items.Count == 0)
     {
-        <div class="admin-empty">No ghc-features videos found in the database.</div>
+        <div class="admin-empty">No GitHub Copilot features found.</div>
     }
     else
     {
@@ -52,9 +52,10 @@
                     <tr>
                         <th>Title</th>
                         <th>Slug</th>
+                        <th>Release</th>
                         <th>Plans</th>
                         <th>GHES</th>
-                        <th>Draft</th>
+                        <th>Content Links</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -63,18 +64,19 @@
                     {
                         <tr>
                             <td class="admin-cell-article" title="@item.Title">
-                                @if (item.Draft)
+                                <span class="features-title-text">@item.Title</span>
+                            </td>
+                            <td class="admin-cell-mono" title="@item.Slug">@item.Slug</td>
+                            <td class="admin-cell-mono">
+                                @if (item.ReleaseDate is long ts)
                                 {
-                                    <span class="features-title-text">@item.Title</span>
+                                    @DateTimeOffset.FromUnixTimeSeconds(ts).ToString("yyyy-MM-dd")
                                 }
                                 else
                                 {
-                                    <a href="/@item.PrimarySectionName/@item.CollectionName/@item.Slug" class="features-title-link">
-                                        @item.Title
-                                    </a>
+                                    <span style="color:var(--color-text-secondary)">—</span>
                                 }
                             </td>
-                            <td class="admin-cell-mono" title="@item.Slug">@item.Slug</td>
                             <td>
                                 <div class="features-plans-badges">
                                     @foreach (var plan in item.Plans)
@@ -93,16 +95,7 @@
                                     <span class="admin-cell-mono">—</span>
                                 }
                             </td>
-                            <td>
-                                @if (item.Draft)
-                                {
-                                    <span class="badge-warning">Draft</span>
-                                }
-                                else
-                                {
-                                    <span class="admin-cell-mono">—</span>
-                                }
-                            </td>
+                            <td>@item.ContentLinks.Count link@(item.ContentLinks.Count == 1 ? "" : "s")</td>
                             <td>
                                 <button class="admin-link-btn" @onclick="() => OpenEditor(item)">Edit</button>
                             </td>
@@ -114,46 +107,52 @@
     }
 </div>
 
-@* ── Plans editor modal ── *@
+@* ── Editor modal ── *@
 @if (_editorOpen && _editing != null)
 {
     var editing = _editing;
     <div class="admin-modal-backdrop" @onclick="CloseEditor">
-        <div class="admin-modal" @onclick:stopPropagation>
+        <div class="admin-modal admin-modal-wide" @onclick:stopPropagation>
             <div class="admin-modal-header">
-                <h2 class="admin-modal-title">@(_editingDraft ? "Edit Draft" : "Edit Feature")</h2>
+                <h2 class="admin-modal-title">Edit Feature — @editing.Slug</h2>
                 <button class="admin-modal-close" @onclick="CloseEditor" aria-label="Close">✕</button>
             </div>
 
             <div class="admin-modal-body">
-                <div class="features-editor-title">
-                    @editing.Title
-                    @if (!_editingDraft && !string.IsNullOrWhiteSpace(editing.ExternalUrl))
-                    {
-                        <span class="features-editor-title-link">(<a href="@editing.ExternalUrl" target="_blank" rel="noopener">@editing.ExternalUrl</a>)</span>
-                    }
+
+                @* ── Metadata ── *@
+                <div class="features-editor-field">
+                    <label class="admin-label" for="edit-description">Description</label>
+                    <textarea id="edit-description" class="admin-input features-description-textarea"
+                              @bind="_editingDescription" rows="4"
+                              placeholder="Short description of the feature…"></textarea>
                 </div>
 
+                <div class="features-editor-field">
+                    <label class="admin-label" for="edit-release-date">Release Date</label>
+                    <div class="features-date-row">
+                        <input id="edit-release-date" type="date" class="admin-input features-date-input"
+                               value="@_editingReleaseDate"
+                               @onchange="e => _editingReleaseDate = e.Value?.ToString()" />
+                        <span class="features-field-hint">Leave blank if not yet released.</span>
+                    </div>
+                </div>
+
+                @* ── Plans ── *@
                 <fieldset class="features-plans-fieldset">
-                    <legend class="features-plans-legend">Subscription Tier</legend>
-                    @foreach (var group in _planGroups)
-                    {
-                        var isChecked = _editingPlanGroup == group.Key;
-                        <label class="features-plan-radio-label">
-                            <input type="radio"
-                                   name="plan-group"
-                                   value="@group.Key"
-                                   checked="@isChecked"
-                                   @onchange="() => _editingPlanGroup = group.Key" />
-                            <span class="features-plan-radio-name">@group.Label</span>
-                            <span class="features-plan-radio-badges">
-                                @foreach (var plan in group.Plans)
-                                {
-                                    <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
-                                }
-                            </span>
-                        </label>
-                    }
+                    <legend class="features-plans-legend">Subscription Plans</legend>
+                    <div class="features-plans-checkboxes">
+                        @foreach (var plan in _allPlans)
+                        {
+                            var planChecked = _editingPlans.Contains(plan);
+                            <label class="features-plan-checkbox-label">
+                                <input type="checkbox"
+                                       checked="@planChecked"
+                                       @onchange="() => TogglePlan(plan)" />
+                                <span class="features-plan-badge features-plan-badge-@plan.ToLowerInvariant().Replace("+", "plus").Replace(" ", "-")">@plan</span>
+                            </label>
+                        }
+                    </div>
                 </fieldset>
 
                 <div class="features-editor-options">
@@ -163,62 +162,145 @@
                     </label>
                 </div>
 
-                @if (_editingDraft)
-                {
-                    <div class="features-publish-section">
-                        <p class="features-publish-heading">Publish from YouTube</p>
-                        <p class="features-publish-hint">Enter the YouTube URL and optionally paste a transcript. The AI will regenerate all content fields and update this item in-place — the slug is preserved while the external URL is replaced with the real YouTube URL.</p>
-                        <input type="url"
-                               class="admin-input features-publish-input"
-                               placeholder="https://youtu.be/..."
-                               @bind="_publishUrl"
-                               disabled="@_publishing" />
-                        <label class="admin-label features-publish-transcript-label" for="features-publish-transcript">
-                            Transcript <span class="admin-form-hint">(optional — paste to enable full content generation)</span>
-                        </label>
-                        <textarea id="features-publish-transcript"
-                                  class="admin-input features-publish-transcript-textarea"
-                                  rows="6"
-                                  placeholder="Paste the video transcript here. When provided, the AI generates a full summary. Leave blank to process with available metadata only."
-                                  @bind="_publishTranscript"
-                                  disabled="@_publishing"
-                                  spellcheck="false"></textarea>
-                        @if (_publishError != null)
+                @* ── Content links ── *@
+                <div class="features-links-section">
+                    <h3 class="features-links-heading">Content Links</h3>
+
+                    @if (_linkMessage != null)
+                    {
+                        <div class="admin-alert @(_linkMessageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">@_linkMessage</div>
+                    }
+
+                    @if (_editingLinks.Count == 0)
+                    {
+                        <p class="features-links-empty">No content links yet.</p>
+                    }
+                    else
+                    {
+                        <table class="admin-table features-links-table">
+                            <thead>
+                                <tr>
+                                    <th>Thumb</th>
+                                    <th>Title</th>
+                                    <th>Slug</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var link in _editingLinks.OrderBy(l => l.SortOrder).ThenBy(l => l.ItemSlug))
+                                {
+                                    var l = link;
+                                    <tr>
+                                        <td class="admin-cell-mono features-link-thumb-cell">
+                                            @if (l.IsThumbnail)
+                                            {
+                                                <span class="badge-success" title="This is the thumbnail">★</span>
+                                            }
+                                            else
+                                            {
+                                                <button class="admin-link-btn" title="Set as thumbnail"
+                                                        @onclick="() => SetThumbnailAsync(l)" disabled="@_saving">☆</button>
+                                            }
+                                        </td>
+                                        <td class="admin-cell-article" title="@l.ItemTitle">
+                                            @if (!string.IsNullOrEmpty(l.ItemExternalUrl))
+                                            {
+                                                <a href="@l.ItemExternalUrl" target="_blank" rel="noopener noreferrer">@(l.ItemTitle ?? l.ItemSlug)</a>
+                                            }
+                                            else
+                                            {
+                                                @(l.ItemTitle ?? l.ItemSlug)
+                                            }
+                                        </td>
+                                        <td class="admin-cell-mono">@l.CollectionName/@l.ItemSlug</td>
+                                        <td>
+                                            <button class="admin-link-btn admin-link-btn-danger"
+                                                    @onclick="() => RemoveLinkAsync(l)" disabled="@_saving">Remove</button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+
+                    @* ── Add link search ── *@
+                    <div class="features-links-add">
+                        <h4 class="features-links-add-heading">Add Content Link</h4>
+                        <div class="features-links-search-row">
+                            <input type="text" class="admin-input features-links-search-input"
+                                   @bind="_linkSearchQuery"
+                                   placeholder="Search by title or slug…" />
+                            <select class="admin-input features-links-collection-select"
+                                    @bind="_linkSearchCollection">
+                                <option value="">All collections</option>
+                                <option value="videos">videos</option>
+                                <option value="blogs">blogs</option>
+                                <option value="news">news</option>
+                            </select>
+                            <button class="btn-secondary" @onclick="SearchContentItemsAsync"
+                                    disabled="@_linkSearchLoading">
+                                @(_linkSearchLoading ? "Searching…" : "Search")
+                            </button>
+                        </div>
+
+                        @if (_linkSearchError != null)
                         {
-                            <div class="admin-alert admin-alert-error">@_publishError</div>
+                            <div class="admin-alert admin-alert-error" role="alert">@_linkSearchError</div>
+                        }
+
+                        @if (_linkSearchResults.Count > 0)
+                        {
+                            <table class="admin-table features-links-results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Slug</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var result in _linkSearchResults)
+                                    {
+                                        var r = result;
+                                        var alreadyLinked = _editingLinks.Any(l => l.CollectionName == r.CollectionName && l.ItemSlug == r.Slug);
+                                        <tr class="@(alreadyLinked ? "features-link-already-added" : "")">
+                                            <td class="admin-cell-article" title="@r.Title">@r.Title</td>
+                                            <td class="admin-cell-mono">@r.CollectionName/@r.Slug</td>
+                                            <td>
+                                                @if (!alreadyLinked)
+                                                {
+                                                    <button class="admin-link-btn" @onclick="() => AddLinkAsync(r, false)" disabled="@_saving">+ Link</button>
+                                                    <button class="admin-link-btn" @onclick="() => AddLinkAsync(r, true)" disabled="@_saving">★ Thumbnail</button>
+                                                }
+                                                else
+                                                {
+                                                    <span class="admin-cell-mono" style="color:var(--color-text-secondary)">linked</span>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
                         }
                     </div>
-                }
-
+                </div>
             </div>
 
             <div class="admin-modal-footer">
                 @if (_confirmingDelete)
                 {
-                    <span class="features-delete-confirm-text">Delete <strong>@_editing?.Title</strong>? This cannot be undone.</span>
-                    <button class="btn-danger" @onclick="ExecuteDeleteAsync" disabled="@(_saving || _publishing)">Confirm Delete</button>
-                    <button class="btn-secondary" @onclick="() => _confirmingDelete = false" disabled="@(_saving || _publishing)">Cancel</button>
+                    <span class="features-delete-confirm-text">Delete <strong>@_editing?.Slug</strong>? This cannot be undone.</span>
+                    <button class="btn-danger" @onclick="ExecuteDeleteAsync" disabled="@_saving">Confirm Delete</button>
+                    <button class="btn-secondary" @onclick="() => _confirmingDelete = false" disabled="@_saving">Cancel</button>
                 }
                 else
                 {
-                    <button class="btn-danger" @onclick="() => _confirmingDelete = true" disabled="@(_saving || _publishing)">Delete</button>
+                    <button class="btn-danger" @onclick="() => _confirmingDelete = true" disabled="@_saving">Delete</button>
                     <div class="admin-modal-footer-right">
-                        <button class="btn-secondary" @onclick="CloseEditor" disabled="@(_saving || _publishing)">Cancel</button>
-                        @if (_editingDraft)
-                        {
-                            <button class="btn-secondary" @onclick="SavePlansAsync" disabled="@(_saving || _publishing || _editingPlanGroup is null)">
-                                @(_saving ? "Saving…" : "Save")
-                            </button>
-                            <button class="btn" @onclick="PublishDraftAsync" disabled="@(_saving || _publishing || string.IsNullOrWhiteSpace(_publishUrl) || _editingPlanGroup is null)">
-                                @(_publishing ? "Publishing…" : "Publish")
-                            </button>
-                        }
-                        else
-                        {
-                            <button class="btn" @onclick="SavePlansAsync" disabled="@(_saving || _publishing || _editingPlanGroup is null)">
-                                @(_saving ? "Saving…" : "Save")
-                            </button>
-                        }
+                        <button class="btn-secondary" @onclick="CloseEditor" disabled="@_saving">Cancel</button>
+                        <button class="btn" @onclick="SaveFeatureAsync" disabled="@_saving">
+                            @(_saving ? "Saving…" : "Save")
+                        </button>
                     </div>
                 }
             </div>
@@ -227,32 +309,34 @@
 }
 
 @code {
-    private sealed record PlanGroup(int Key, string Label, string[] Plans);
-
-    private static readonly PlanGroup[] _planGroups =
-    [
-        new(0, "Free", ["Free"]),
-        new(1, "Student / Pro / Business", ["Student", "Pro", "Business"]),
-        new(2, "Pro+ / Enterprise", ["Pro+", "Enterprise"]),
-    ];
+    private static readonly string[] _allPlans = ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
 
     private bool _loading = true;
     private string? _error;
     private string? _message;
     private bool _messageIsError;
-    private List<ContentItem> _items = [];
+    private List<GhcFeature> _items = [];
 
     private bool _editorOpen;
-    private ContentItem? _editing;
-    private int? _editingPlanGroup;
+    private GhcFeature? _editing;
+    private string _editingDescription = string.Empty;
+    private string? _editingReleaseDate;
+    private HashSet<string> _editingPlans = [];
     private bool _editingGhesSupport;
-    private bool _editingDraft;
+    private List<GhcFeatureContentLink> _editingLinks = [];
     private bool _saving;
     private bool _confirmingDelete;
-    private string _publishUrl = "";
-    private string _publishTranscript = "";
-    private string? _publishError;
-    private bool _publishing;
+
+    // Content link sub-messages
+    private string? _linkMessage;
+    private bool _linkMessageIsError;
+
+    // Content link search
+    private string _linkSearchQuery = string.Empty;
+    private string _linkSearchCollection = string.Empty;
+    private bool _linkSearchLoading;
+    private string? _linkSearchError;
+    private List<ContentItemListItem> _linkSearchResults = [];
 
     private PersistingComponentStateSubscription _persistSubscription;
 
@@ -260,7 +344,7 @@
     {
         _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
 
-        if (ApplicationState.TryTakeFromJson<List<ContentItem>>("admin-copilot-features", out var persisted) && persisted != null)
+        if (ApplicationState.TryTakeFromJson<List<GhcFeature>>("admin-copilot-features", out var persisted) && persisted != null)
         {
             _items = persisted;
             _loading = false;
@@ -284,12 +368,8 @@
         try
         {
             var result = await Api.GetGhcFeaturesAsync();
-            _items = (result ?? Enumerable.Empty<ContentItem>())
-                .OrderBy(i => _planGroups
-                    .Where(g => i.Plans.Any(p => g.Plans.Contains(p)))
-                    .Select(g => g.Key)
-                    .DefaultIfEmpty(int.MaxValue)
-                    .Min())
+            _items = (result ?? Enumerable.Empty<GhcFeature>())
+                .OrderByDescending(i => i.ReleaseDate ?? 0)
                 .ThenBy(i => i.Title)
                 .ToList();
         }
@@ -304,16 +384,22 @@
         }
     }
 
-    private void OpenEditor(ContentItem item)
+    private void OpenEditor(GhcFeature item)
     {
         _editing = item;
-        _editingPlanGroup = _planGroups.FirstOrDefault(g => item.Plans.Any(p => g.Plans.Contains(p)))?.Key;
+        _editingDescription = item.Description;
+        _editingReleaseDate = item.ReleaseDate is long ts
+            ? DateTimeOffset.FromUnixTimeSeconds(ts).ToOffset(TimeSpan.FromHours(1)).ToString("yyyy-MM-dd")
+            : null;
+        _editingPlans = [.. item.Plans];
         _editingGhesSupport = item.GhesSupport;
-        _editingDraft = item.Draft;
+        _editingLinks = [.. item.ContentLinks];
+        _linkSearchQuery = string.Empty;
+        _linkSearchCollection = string.Empty;
+        _linkSearchResults = [];
+        _linkSearchError = null;
+        _linkMessage = null;
         _confirmingDelete = false;
-        _publishUrl = "";
-        _publishTranscript = "";
-        _publishError = null;
         _editorOpen = true;
         _message = null;
     }
@@ -323,13 +409,40 @@
         _editorOpen = false;
         _editing = null;
         _confirmingDelete = false;
-        _publishUrl = "";
-        _publishError = null;
     }
 
-    private async Task SavePlansAsync()
+    private void TogglePlan(string plan)
     {
-        if (_editing is null || _editingPlanGroup is null)
+        if (_editingPlans.Contains(plan))
+        {
+            _editingPlans.Remove(plan);
+        }
+        else
+        {
+            _editingPlans.Add(plan);
+        }
+    }
+
+    private long? ParseReleaseDate()
+    {
+        if (string.IsNullOrWhiteSpace(_editingReleaseDate))
+        {
+            return null;
+        }
+
+        if (DateTime.TryParseExact(_editingReleaseDate, "yyyy-MM-dd",
+            System.Globalization.CultureInfo.InvariantCulture,
+            System.Globalization.DateTimeStyles.None, out var dt))
+        {
+            return new DateTimeOffset(dt, TimeSpan.FromHours(1)).ToUnixTimeSeconds();
+        }
+
+        return null;
+    }
+
+    private async Task SaveFeatureAsync()
+    {
+        if (_editing is null)
         {
             return;
         }
@@ -339,21 +452,27 @@
 
         try
         {
-            var plans = _planGroups[_editingPlanGroup.Value].Plans.ToList();
-            await Api.UpdateGhcFeaturePlansAsync(_editing.Slug, plans, _editingGhesSupport, _editingDraft);
+            var updated = _editing with
+            {
+                Description = _editingDescription.Trim(),
+                ReleaseDate = ParseReleaseDate(),
+                Plans = [.. _editingPlans],
+                GhesSupport = _editingGhesSupport
+            };
 
-            _message = $"'{_editing.Title}' updated successfully.";
+            await Api.UpsertGhcFeatureAsync(updated);
+
+            _message = $"'{_editing.Slug}' updated successfully.";
             _messageIsError = false;
             CloseEditor();
 
-            // Reload to reflect the saved changes in the table
             await LoadFeaturesAsync();
         }
         catch (HttpRequestException ex)
         {
             _message = $"Failed to save: {ex.Message}";
             _messageIsError = true;
-            Logger.LogError(ex, "Failed to update plans for {Slug}", _editing?.Slug);
+            Logger.LogError(ex, "Failed to update feature {Slug}", _editing?.Slug);
         }
         finally
         {
@@ -374,11 +493,10 @@
         {
             var deleted = await Api.DeleteGhcFeatureAsync(_editing.Slug);
             _message = deleted
-                ? $"'{_editing.Title}' deleted successfully."
-                : $"'{_editing.Title}' was not found.";
+                ? $"'{_editing.Slug}' deleted successfully."
+                : $"'{_editing.Slug}' was not found.";
             _messageIsError = !deleted;
             CloseEditor();
-
             await LoadFeaturesAsync();
         }
         catch (HttpRequestException ex)
@@ -394,47 +512,142 @@
         }
     }
 
-    private async Task PublishDraftAsync()
+    // ── Content link management ───────────────────────────────────────────────
+
+    private async Task SearchContentItemsAsync()
     {
-        if (_editing is null || _editingPlanGroup is null || string.IsNullOrWhiteSpace(_publishUrl))
+        if (string.IsNullOrWhiteSpace(_linkSearchQuery))
         {
             return;
         }
 
-        _publishing = true;
-        _publishError = null;
+        _linkSearchLoading = true;
+        _linkSearchError = null;
+        _linkSearchResults = [];
 
         try
         {
-            var plans = _planGroups[_editingPlanGroup.Value].Plans.ToList();
-            var transcript = string.IsNullOrWhiteSpace(_publishTranscript) ? null : _publishTranscript.Trim();
-
-            var result = await Api.PublishGhcDraftAsync(
-                _editing.Slug,
-                _publishUrl.Trim(),
-                transcript,
-                plans,
-                _editingGhesSupport);
-
-            if (result is null)
-            {
-                _publishError = "This YouTube URL is already used by another content item. Delete this draft manually and use the existing item instead.";
-                return;
-            }
-
-            _message = $"'{result.Title}' published successfully.";
-            _messageIsError = false;
-            CloseEditor();
-            await LoadFeaturesAsync();
+            var result = await Api.GetContentItemsAsync(
+                page: 1,
+                pageSize: 20,
+                search: _linkSearchQuery.Trim(),
+                collectionName: string.IsNullOrEmpty(_linkSearchCollection) ? null : _linkSearchCollection);
+            _linkSearchResults = [.. (result.Items ?? [])];
         }
         catch (HttpRequestException ex)
         {
-            _publishError = $"Failed to publish: {ex.Message}";
-            Logger.LogError(ex, "Failed to publish draft {Slug} from URL {Url}", _editing?.Slug, _publishUrl);
+            _linkSearchError = $"Search failed: {ex.Message}";
+            Logger.LogError(ex, "Failed to search content items for link addition");
         }
         finally
         {
-            _publishing = false;
+            _linkSearchLoading = false;
+        }
+    }
+
+    private async Task AddLinkAsync(ContentItemListItem item, bool asThumbnail)
+    {
+        if (_editing is null)
+        {
+            return;
+        }
+
+        _saving = true;
+        _linkMessage = null;
+
+        try
+        {
+            var nextSortOrder = _editingLinks.Count > 0 ? _editingLinks.Max(l => l.SortOrder) + 1 : 0;
+
+            await Api.AddGhcFeatureContentLinkAsync(
+                _editing.Slug,
+                item.CollectionName,
+                item.Slug,
+                asThumbnail,
+                nextSortOrder);
+
+            await RefreshEditingFeatureAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            _linkMessage = $"Failed to add link: {ex.Message}";
+            _linkMessageIsError = true;
+            Logger.LogError(ex, "Failed to add content link to feature {Slug}", _editing?.Slug);
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task RemoveLinkAsync(GhcFeatureContentLink link)
+    {
+        if (_editing is null)
+        {
+            return;
+        }
+
+        _saving = true;
+        _linkMessage = null;
+
+        try
+        {
+            await Api.RemoveGhcFeatureContentLinkAsync(_editing.Slug, link.CollectionName, link.ItemSlug);
+            await RefreshEditingFeatureAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            _linkMessage = $"Failed to remove link: {ex.Message}";
+            _linkMessageIsError = true;
+            Logger.LogError(ex, "Failed to remove content link from feature {Slug}", _editing?.Slug);
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task SetThumbnailAsync(GhcFeatureContentLink link)
+    {
+        if (_editing is null)
+        {
+            return;
+        }
+
+        _saving = true;
+        _linkMessage = null;
+
+        try
+        {
+            await Api.SetGhcFeatureThumbnailAsync(_editing.Slug, link.CollectionName, link.ItemSlug);
+            await RefreshEditingFeatureAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            _linkMessage = $"Failed to set thumbnail: {ex.Message}";
+            _linkMessageIsError = true;
+            Logger.LogError(ex, "Failed to set thumbnail for feature {Slug}", _editing?.Slug);
+        }
+        finally
+        {
+            _saving = false;
+        }
+    }
+
+    private async Task RefreshEditingFeatureAsync()
+    {
+        var result = await Api.GetGhcFeaturesAsync();
+        var refreshed = result?.FirstOrDefault(f => f.Slug == _editing!.Slug);
+        if (refreshed is not null)
+        {
+            _editing = refreshed;
+            _editingLinks = [.. refreshed.ContentLinks];
+
+            var idx = _items.FindIndex(i => i.Slug == refreshed.Slug);
+            if (idx >= 0)
+            {
+                _items[idx] = refreshed;
+            }
         }
     }
 

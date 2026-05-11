@@ -6,11 +6,10 @@ namespace TechHub.TestUtilities;
 /// Update these when test data changes.
 /// </summary>
 /// <remarks>
-/// Last updated: 2026-05-10 after adding ghc-token-billing video to ghc-features subcollection.
+/// Last updated: 2026-05-10 after adding ghc-token-billing video to ghc-features fixture directory.
 /// 
 /// Test data composition:
 /// - 43 published items total (was 42, added 1 ghc-features video for timeline video slug testing)
-/// - 4 draft items (not counted in published totals)
 /// - Collections: blogs (22), news (7), videos (10), community (2), roundups (2)
 /// - Tag distributions: AI (12 items), DevOps (1 item), GitHub Copilot (4 tag symmetry test items)
 /// - Date ranges: 2024 items (22), 2026 items (20)
@@ -19,13 +18,12 @@ public static class TestDataConstants
 {
     // Total counts
     public const int TotalPublishedItems = 43;
-    public const int TotalDraftItems = 4;
-    public const int TotalItems = TotalPublishedItems + TotalDraftItems;
+    public const int TotalItems = TotalPublishedItems;
 
     // Collection counts (published only)
     public const int BlogsCount = 22;
     public const int NewsCount = 7;
-    public const int VideosCount = 10;  // Includes root videos + subcollections (2 root + 6 ghc-features + 2 vscode-updates)
+    public const int VideosCount = 10;  // Includes all video items (2 root + 6 ghc-features + 2 vscode-updates)
     public const int CommunityCount = 2;
     public const int RoundupsCount = 2;
 

@@ -14,7 +14,6 @@ public class ContentItemBuilder
     private string _author = "Test Author";
     private long _dateEpoch = 1735689600; // 2025-01-01 00:00:00 UTC
     private string _collectionName = "news";
-    private string? _subcollectionName = null;
     private string _primarySectionName = "github-copilot";
     private string _feedName = "Test Feed";
     private IReadOnlyList<string> _tags = new[] { "AI", "GitHub Copilot", "Test Tag" };
@@ -22,9 +21,6 @@ public class ContentItemBuilder
     private string _externalUrl = "https://dummy";
     private string _content = "# Test Content\n\nTest markdown content.";
     private string? _renderedHtml = null;
-    private IReadOnlyList<string>? _plans = Array.Empty<string>();
-    private bool _ghesSupport = false;
-    private bool _draft = false;
 
     public ContentItemBuilder WithSlug(string slug)
     {
@@ -68,12 +64,6 @@ public class ContentItemBuilder
         return this;
     }
 
-    public ContentItemBuilder WithSubcollectionName(string? subcollectionName)
-    {
-        _subcollectionName = subcollectionName;
-        return this;
-    }
-
     public ContentItemBuilder WithFeedName(string feedName)
     {
         _feedName = feedName;
@@ -111,34 +101,11 @@ public class ContentItemBuilder
         return this;
     }
 
-    public ContentItemBuilder WithPlans(params string[] plans)
-    {
-        _plans = plans;
-        return this;
-    }
-
-    public ContentItemBuilder WithGhesSupport(bool ghesSupport)
-    {
-        _ghesSupport = ghesSupport;
-        return this;
-    }
-
-    public ContentItemBuilder WithDraft(bool draft)
-    {
-        _draft = draft;
-        return this;
-    }
-
     /// <summary>
     /// Build a ContentItem for list-view tests (no content property).
     /// </summary>
     public ContentItem Build()
     {
-        // Convert plans list to CSV string for constructor
-        var plansString = _plans != null && _plans.Count > 0
-            ? string.Join(",", _plans)
-            : null;
-
         var contentItem = new ContentItem(
             slug: _slug,
             title: _title,
@@ -148,11 +115,7 @@ public class ContentItemBuilder
             feedName: _feedName,
             primarySectionName: _primarySectionName,
             excerpt: _excerpt,
-            externalUrl: _externalUrl,
-            draft: _draft,
-            subcollectionName: _subcollectionName,
-            plans: plansString,
-            ghesSupport: _ghesSupport
+            externalUrl: _externalUrl
         );
 
         contentItem.SetTags(_tags);
@@ -165,11 +128,6 @@ public class ContentItemBuilder
     /// </summary>
     public ContentItemDetail BuildDetail()
     {
-        // Convert plans list to CSV string for constructor
-        var plansString = _plans != null && _plans.Count > 0
-            ? string.Join(",", _plans)
-            : null;
-
         var contentItem = new ContentItemDetail(
             slug: _slug,
             title: _title,
@@ -180,11 +138,7 @@ public class ContentItemBuilder
             primarySectionName: _primarySectionName,
             excerpt: _excerpt,
             externalUrl: _externalUrl,
-            draft: _draft,
-            content: _content,
-            subcollectionName: _subcollectionName,
-            plans: plansString,
-            ghesSupport: _ghesSupport
+            content: _content
         );
 
         contentItem.SetTags(_tags);

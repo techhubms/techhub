@@ -122,8 +122,7 @@ public static class RssEndpoints
             return Results.NotFound();
         }
 
-        // Get content for this section using SearchAsync
-        // RSS feeds should exclude draft content and show only 50 most recent items
+        // Get content for this section using SearchAsync - show only 50 most recent items
         var searchResult = await contentRepository.SearchAsync(new SearchRequest(
             take: 50,
             sections: new[] { section.Name },

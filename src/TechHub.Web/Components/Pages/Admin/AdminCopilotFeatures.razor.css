@@ -161,10 +161,6 @@
     font-weight: var(--font-weight-medium);
 }
 
-.features-draft-label {
-    margin-top: var(--spacing-2);
-}
-
 .features-ghes-label input[type="checkbox"] {
     accent-color: var(--color-purple-medium);
     width: 16px;
@@ -186,7 +182,7 @@
     margin-right: auto;
 }
 
-/* Publish from YouTube section (shown when editing a draft) */
+/* Publish from YouTube section */
 .features-publish-section {
     margin-top: var(--spacing-4);
     padding-top: var(--spacing-3);
@@ -224,3 +220,106 @@
     font-size: var(--font-size-xs);
     margin-bottom: var(--spacing-2);
 }
+
+/* ── Wide modal for full feature editing ── */
+.admin-modal-wide {
+    max-width: min(860px, 95vw);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+/* Editor field layout */
+.features-editor-field {
+    margin-bottom: var(--spacing-4);
+}
+
+.features-description-textarea {
+    width: 100%;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.features-date-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    flex-wrap: wrap;
+}
+
+.features-date-input {
+    width: auto;
+}
+
+.features-field-hint {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+/* Content links section */
+.features-links-section {
+    margin-top: var(--spacing-4);
+    padding-top: var(--spacing-4);
+    border-top: 1px solid var(--color-border-default);
+}
+
+.features-links-heading {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-3);
+}
+
+.features-links-empty {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--spacing-3);
+}
+
+.features-links-table {
+    margin-bottom: var(--spacing-4);
+    font-size: var(--font-size-sm);
+}
+
+.features-link-thumb-cell {
+    text-align: center;
+    width: 3rem;
+}
+
+.features-link-already-added {
+    opacity: 0.6;
+}
+
+/* Add link search */
+.features-links-add {
+    margin-top: var(--spacing-3);
+    padding-top: var(--spacing-3);
+    border-top: 1px dashed var(--color-border-default);
+}
+
+.features-links-add-heading {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--spacing-2);
+}
+
+.features-links-search-row {
+    display: flex;
+    gap: var(--spacing-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-2);
+}
+
+.features-links-search-input {
+    flex: 1;
+    min-width: 160px;
+}
+
+.features-links-collection-select {
+    width: auto;
+}
+
+.features-links-results-table {
+    font-size: var(--font-size-sm);
+}
+

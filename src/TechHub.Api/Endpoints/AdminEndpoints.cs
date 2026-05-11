@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
 using Microsoft.AspNetCore.Mvc;
 using TechHub.Api.Services;
-using TechHub.Core;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Logging;
@@ -191,19 +190,25 @@ public static partial class AdminEndpoints
             .WithName("PreviewMarkdown")
             .WithSummary("Render raw markdown to HTML for preview");
 
-        // ── GHC feature plans ────────────────────────────────────────────────
-
-        group.MapPut("/ghc-features/{slug}/plans", UpdateGhcFeaturePlansAsync)
-            .WithName("UpdateGhcFeaturePlans")
-            .WithSummary("Update subscription plans, GHES support, and draft status for a ghc-features video");
-
-        group.MapPost("/ghc-features/{slug}/publish", PublishGhcDraftAsync)
-            .WithName("PublishGhcDraft")
-            .WithSummary("Publish a draft ghc-features video in-place: replace placeholder URL with real YouTube URL, regenerate AI content, and clear the draft flag");
+        // ── GHC feature plans (legacy routes removed — now managed via /api/ghc-features) ──
 
         group.MapDelete("/ghc-features/{slug}", DeleteGhcFeatureAsync)
-            .WithName("DeleteGhcFeature")
+            .WithName("AdminDeleteGhcFeature")
             .WithSummary("Delete a ghc-features video from the database");
+
+        // ── VS Code updates ──────────────────────────────────────────────────
+
+        group.MapGet("/vscode-updates", GetVscodeUpdatesAsync)
+            .WithName("GetVscodeUpdates")
+            .WithSummary("Get a paginated list of VS Code Update items");
+
+        group.MapPost("/vscode-updates", AddVscodeUpdateAsync)
+            .WithName("AddVscodeUpdate")
+            .WithSummary("Register an existing content item as a VS Code Update");
+
+        group.MapDelete("/vscode-updates", RemoveVscodeUpdateAsync)
+            .WithName("RemoveVscodeUpdate")
+            .WithSummary("Remove a content item from the VS Code Updates list (does not delete the content item)");
 
         // ── Ad-hoc URL processing ────────────────────────────────────────────
 
@@ -400,8 +405,7 @@ public static partial class AdminEndpoints
         string? search = null,
         string? feedName = null,
         string? collectionName = null,
-        long? jobId = null,
-        string? subcollectionName = null)
+        long? jobId = null)
     {
         page = Math.Max(1, page);
         pageSize = Math.Clamp(pageSize, 1, 500);
@@ -409,7 +413,6 @@ public static partial class AdminEndpoints
         search = search?.Trim().Sanitize();
         feedName = feedName?.Trim().Sanitize();
         collectionName = collectionName?.Trim().Sanitize();
-        subcollectionName = subcollectionName?.Trim().Sanitize();
 
         // Validate status filter
         if (!string.IsNullOrEmpty(status) && status is not "succeeded" and not "skipped" and not "failed")
@@ -418,7 +421,7 @@ public static partial class AdminEndpoints
         }
 
         var offset = (page - 1) * pageSize;
-        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, jobId, subcollectionName, ct);
+        var result = await repo.GetPagedAsync(offset, pageSize, status, search, feedName, collectionName, jobId, ct);
         return Results.Ok(result);
     }
 
@@ -938,18 +941,16 @@ public static partial class AdminEndpoints
         int pageSize = 100,
         string? search = null,
         string? collectionName = null,
-        string? feedName = null,
-        string? subcollectionName = null)
+        string? feedName = null)
     {
         page = Math.Max(1, page);
         pageSize = Math.Clamp(pageSize, 1, 500);
         search = search?.Trim().Sanitize();
         collectionName = collectionName?.Trim().Sanitize();
         feedName = feedName?.Trim().Sanitize();
-        subcollectionName = subcollectionName?.Trim().Sanitize();
 
         var offset = (page - 1) * pageSize;
-        var result = await contentRepo.GetContentItemsPagedAsync(offset, pageSize, search, collectionName, feedName, subcollectionName, ct);
+        var result = await contentRepo.GetContentItemsPagedAsync(offset, pageSize, search, collectionName, feedName, ct);
         return Results.Ok(result);
     }
 
@@ -977,69 +978,6 @@ public static partial class AdminEndpoints
         return Results.NoContent();
     }
 
-    // ── GHC feature plans handlers ───────────────────────────────────────────
-
-    /// <summary>
-    /// Extracts the value of a single query-string parameter by name.
-    /// Returns null if the key is absent or has no value.
-    /// </summary>
-    private static string? ExtractQueryParam(string query, string key)
-    {
-        // query is in the form "?k1=v1&k2=v2" (or empty)
-        var span = query.AsSpan().TrimStart('?');
-        foreach (var part in span.Split('&'))
-        {
-            var token = span[part];
-            var eq = token.IndexOf('=');
-
-            if (eq < 0)
-            {
-                continue;
-            }
-
-            var k = token[..eq];
-
-            if (k.Equals(key, StringComparison.OrdinalIgnoreCase))
-            {
-                return new string(token[(eq + 1)..]);
-            }
-        }
-
-        return null;
-    }
-
-    private static readonly HashSet<string> _validPlanNames =
-        new(["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"], StringComparer.OrdinalIgnoreCase);
-
-    private static async Task<IResult> UpdateGhcFeaturePlansAsync(
-        string slug,
-        GhcFeaturePlansUpdateRequest request,
-        IContentRepository contentRepo,
-        CancellationToken ct)
-    {
-        slug = slug.Trim().Sanitize();
-
-        if (request.Plans is null || request.Plans.Count == 0)
-        {
-            return Results.BadRequest("At least one plan is required.");
-        }
-
-        var invalidPlan = request.Plans.FirstOrDefault(p => !_validPlanNames.Contains(p));
-        if (invalidPlan is not null)
-        {
-            return Results.BadRequest($"Invalid plan name '{invalidPlan}'. Valid plans: {string.Join(", ", _validPlanNames)}.");
-        }
-
-        var updated = await contentRepo.UpdateGhcFeaturePlansAsync(slug, request.Plans, request.GhesSupport, request.Draft, ct);
-        if (!updated)
-        {
-            return Results.NotFound();
-        }
-
-        contentRepo.InvalidateCachedData();
-        return Results.NoContent();
-    }
-
     private static async Task<IResult> DeleteGhcFeatureAsync(
         string slug,
         IContentRepository contentRepo,
@@ -1057,215 +995,60 @@ public static partial class AdminEndpoints
         return Results.NoContent();
     }
 
-    // ── Publish GHC draft in-place ───────────────────────────────────────────
+    // ── VS Code updates handlers ─────────────────────────────────────────────
 
-    private static async Task<IResult> PublishGhcDraftAsync(
-        string slug,
-        PublishGhcDraftRequest request,
-        IContentRepository contentRepo,
-        IProcessedUrlRepository processedUrlRepo,
-        IAiCategorizationService aiService,
-        IContentFixerService contentFixer,
+    private static async Task<IResult> GetVscodeUpdatesAsync(
+        IGhcFeatureRepository ghcRepo,
+        CancellationToken ct,
+        int page = 1,
+        int pageSize = 100,
+        string? search = null)
+    {
+        page = Math.Max(1, page);
+        pageSize = Math.Clamp(pageSize, 1, 500);
+        search = search?.Trim().Sanitize();
+
+        var offset = (page - 1) * pageSize;
+        var (items, totalCount) = await ghcRepo.GetVscodeUpdateItemsAsync(offset, pageSize, search, ct);
+        return Results.Ok(new { Items = items, TotalCount = totalCount });
+    }
+
+    private static async Task<IResult> AddVscodeUpdateAsync(
+        VscodeUpdateRequest request,
+        IGhcFeatureRepository ghcRepo,
         CancellationToken ct)
     {
-        slug = slug.Trim().Sanitize();
-
-        // Validate YouTube URL
-        if (string.IsNullOrWhiteSpace(request.YoutubeUrl)
-            || !Uri.TryCreate(request.YoutubeUrl.Trim(), UriKind.Absolute, out var uri)
-            || (uri.Scheme != Uri.UriSchemeHttp && uri.Scheme != Uri.UriSchemeHttps))
+        if (string.IsNullOrWhiteSpace(request.CollectionName) || string.IsNullOrWhiteSpace(request.Slug))
         {
-            return Results.BadRequest("A valid YouTube URL is required.");
+            return Results.BadRequest("CollectionName and Slug are required.");
         }
 
-        var youtubeUrl = request.YoutubeUrl.Trim();
-        var host = uri.Host.ToLowerInvariant();
-        var isYouTubeUrl = host is "youtube.com" or "www.youtube.com" or "m.youtube.com" or "youtu.be";
-        if (!isYouTubeUrl)
-        {
-            return Results.BadRequest("The URL must be a YouTube video URL.");
-        }
-
-        // Validate that the URL points to a video (not a channel, playlist, etc.)
-        // Supported: watch?v=<id>, youtu.be/<id>, /shorts/<id>, /embed/<id>
-        var path = uri.AbsolutePath;
-        bool isVideoUrl;
-        if (host is "youtu.be")
-        {
-            // Must have exactly one non-empty path segment (e.g. /dQw4w9WgXcQ) with no
-            // extra segments. Playlists (/playlist), channels, and other paths are rejected.
-            var segments = path.Split('/', StringSplitOptions.RemoveEmptyEntries);
-            isVideoUrl = segments.Length == 1 && segments[0].Length > 0;
-        }
-        else if (path.StartsWith("/shorts/", StringComparison.OrdinalIgnoreCase))
-        {
-            // Require a non-empty ID segment after /shorts/ (e.g. /shorts/dQw4w9WgXcQ)
-            var id = path["/shorts/".Length..];
-            isVideoUrl = id.Length > 0 && !id.Contains('/', StringComparison.Ordinal);
-        }
-        else if (path.StartsWith("/embed/", StringComparison.OrdinalIgnoreCase))
-        {
-            // Require a non-empty ID segment after /embed/ (e.g. /embed/dQw4w9WgXcQ)
-            var id = path["/embed/".Length..];
-            isVideoUrl = id.Length > 0 && !id.Contains('/', StringComparison.Ordinal);
-        }
-        else
-        {
-            // /watch?v=<id> — ensure ?v= is present and has a non-empty value
-            isVideoUrl = path.Equals("/watch", StringComparison.OrdinalIgnoreCase)
-                && ExtractQueryParam(uri.Query, "v") is { Length: > 0 };
-        }
-
-        if (!isVideoUrl)
-        {
-            return Results.BadRequest("The URL must be a YouTube video URL (e.g., https://youtu.be/... or https://www.youtube.com/watch?v=...).");
-        }
-
-        if (request.Plans is null || request.Plans.Count == 0)
-        {
-            return Results.BadRequest("At least one plan is required.");
-        }
-
-        var invalidPlan = request.Plans.FirstOrDefault(p => !_validPlanNames.Contains(p));
-        if (invalidPlan is not null)
-        {
-            return Results.BadRequest($"Invalid plan name '{invalidPlan}'. Valid plans: {string.Join(", ", _validPlanNames)}.");
-        }
-
-        var transcript = !string.IsNullOrWhiteSpace(request.Transcript) ? request.Transcript.Trim() : null;
-
-        if (transcript is not null && transcript.Length > MaxTranscriptLength)
-        {
-            return Results.BadRequest($"Transcript is too long. Maximum allowed length is {MaxTranscriptLength:N0} characters (received {transcript.Length:N0}).");
-        }
-
-        // Load existing draft item
-        var existing = await contentRepo.GetEditDataAsync("videos", slug, ct);
-        if (existing is null)
-        {
-            return Results.NotFound();
-        }
-
-        // Detect conflict: another content item already owns this YouTube URL
-        if (!string.Equals(youtubeUrl, existing.ExternalUrl, StringComparison.OrdinalIgnoreCase)
-            && await processedUrlRepo.ExistsAsync(youtubeUrl, ct))
-        {
-            return Results.Conflict(new
-            {
-                message = "This YouTube URL has already been processed as a different content item. Delete this draft manually and use the existing item instead."
-            });
-        }
-
-        // Build synthetic feed item — same pattern as ApplyTranscriptAsync
-        var raw = new RawFeedItem
-        {
-            Title = existing.Title,
-            ExternalUrl = youtubeUrl,
-            PublishedAt = DateTimeOffset.FromUnixTimeSeconds(existing.DateEpoch),
-            FeedName = existing.FeedName ?? "TechHub",
-            CollectionName = "videos",
-            FeedLevelAuthor = existing.Author,
-            FeedTags = existing.Tags.ToList(),
-            FullContent = transcript,
-            SkipSalesPitchCheck = true
-        };
-
-        CategorizationResult categorizationResult;
-        try
-        {
-            categorizationResult = await aiService.CategorizeAsync(raw, ct);
-        }
-        catch (Exception ex) when (ex is HttpRequestException or System.Text.Json.JsonException or InvalidOperationException or TimeoutException)
-        {
-            return Results.Problem($"AI categorization failed: {ex.Message.Sanitize()}", statusCode: 502);
-        }
-
-        if (categorizationResult.IsFailure || categorizationResult.Item is null)
-        {
-            return Results.Problem(
-                categorizationResult.IsFailure
-                    ? $"AI categorization failed: {categorizationResult.Explanation}"
-                    : $"AI determined this content should be excluded: {categorizationResult.Explanation}",
-                statusCode: 422);
-        }
-
-        var processed = categorizationResult.Item;
-
-        if (!string.IsNullOrWhiteSpace(processed.Content))
-        {
-            processed = processed.WithContent(contentFixer.RepairMarkdown(processed.Content));
-        }
-
-        processed = processed.WithTags(TagNormalizer.EnsureSectionTags(processed.Tags, processed.Sections));
-        processed = processed.WithTags(TagNormalizer.NormalizeTags(processed.Tags));
-
-        // Ensure the collection tag (e.g. "Videos") is present — consistent with ingestion
-        var collectionTag = char.ToUpperInvariant(raw.CollectionName[0]) + raw.CollectionName[1..];
-        if (!processed.Tags.Any(t => t.Equals(collectionTag, StringComparison.OrdinalIgnoreCase)))
-        {
-            processed = processed.WithTags([.. processed.Tags, collectionTag]);
-        }
-
-        string? newAiMetadata = existing.AiMetadata;
-        if (processed.RoundupMetadata is not null)
-        {
-            newAiMetadata = System.Text.Json.JsonSerializer.Serialize(new
-            {
-                roundup_summary = processed.RoundupMetadata.Summary,
-                key_topics = processed.RoundupMetadata.KeyTopics,
-                roundup_relevance = processed.RoundupMetadata.Relevance,
-                topic_type = processed.RoundupMetadata.TopicType,
-                impact_level = processed.RoundupMetadata.ImpactLevel,
-                time_sensitivity = processed.RoundupMetadata.TimeSensitivity
-            });
-        }
-
-        var updatedEditData = new ContentItemEditData
-        {
-            CollectionName = "videos",
-            Slug = slug,
-            DateEpoch = existing.DateEpoch,
-            Title = processed.Title,
-            Author = processed.Author ?? existing.Author,
-            Excerpt = processed.Excerpt,
-            Content = processed.Content,
-            PrimarySectionName = processed.PrimarySectionName,
-            FeedName = existing.FeedName,
-            Tags = processed.Tags,
-            Sections = processed.Sections,
-            AiMetadata = newAiMetadata,
-            ExternalUrl = youtubeUrl
-        };
-
-        bool updated;
-        try
-        {
-            updated = await contentRepo.PublishGhcFeatureDraftAsync(
-                slug,
-                existing.ExternalUrl ?? string.Empty,
-                youtubeUrl,
-                updatedEditData,
-                request.Plans,
-                request.GhesSupport,
-                hasTranscript: transcript is not null,
-                ct);
-        }
-        catch (ProcessedUrlConflictException)
-        {
-            return Results.Conflict(new
-            {
-                message = "This YouTube URL is already used by another content item. Delete this draft manually and use the existing item instead."
-            });
-        }
-
-        if (!updated)
-        {
-            return Results.NotFound();
-        }
-
-        contentRepo.InvalidateCachedData();
-        return Results.Ok(updatedEditData);
+        await ghcRepo.AddVscodeUpdateItemAsync(request.CollectionName.Trim().Sanitize(), request.Slug.Trim().Sanitize(), ct);
+        return Results.NoContent();
     }
+
+    private static async Task<IResult> RemoveVscodeUpdateAsync(
+        IGhcFeatureRepository ghcRepo,
+        CancellationToken ct,
+        string? collection = null,
+        string? slug = null)
+    {
+        if (string.IsNullOrWhiteSpace(collection) || string.IsNullOrWhiteSpace(slug))
+        {
+            return Results.BadRequest("The 'collection' and 'slug' query parameters are required.");
+        }
+
+        var removed = await ghcRepo.RemoveVscodeUpdateItemAsync(collection.Trim().Sanitize(), slug.Trim().Sanitize(), ct);
+        return removed ? Results.NoContent() : Results.NotFound();
+    }
+
+#pragma warning disable CA1812 // Instantiated by ASP.NET Core JSON binding
+    private sealed class VscodeUpdateRequest
+    {
+        public required string CollectionName { get; init; }
+        public required string Slug { get; init; }
+    }
+#pragma warning restore CA1812
 
     // ── Ad-hoc URL processing handlers ───────────────────────────────────────
 
@@ -1297,59 +1080,6 @@ public static partial class AdminEndpoints
                 $"Invalid collection '{request.CollectionName}'. Valid collections: {string.Join(", ", _validCollectionNames)}.");
         }
 
-        // Validate ghc-features/vscode-updates are mutually exclusive
-        if (request.IsGhcFeature && request.IsVscodeUpdate)
-        {
-            return Results.BadRequest("IsGhcFeature and IsVscodeUpdate are mutually exclusive.");
-        }
-
-        // Validate ghc-features constraints
-        string? subcollection = null;
-        if (request.IsGhcFeature)
-        {
-            if (collection != "videos")
-            {
-                return Results.BadRequest("GitHub Copilot Feature items must use the 'videos' collection.");
-            }
-
-            var isYouTube = request.Url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
-                || request.Url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
-            if (!isYouTube)
-            {
-                return Results.BadRequest("GitHub Copilot Feature videos must be YouTube URLs.");
-            }
-
-            if (request.Plans is null || request.Plans.Count == 0)
-            {
-                return Results.BadRequest("At least one plan is required for GitHub Copilot Feature videos.");
-            }
-
-            var invalidPlan = request.Plans.FirstOrDefault(p => !_validPlanNames.Contains(p));
-            if (invalidPlan is not null)
-            {
-                return Results.BadRequest(
-                    $"Invalid plan name '{invalidPlan}'. Valid plans: {string.Join(", ", _validPlanNames)}.");
-            }
-
-            subcollection = "ghc-features";
-        }
-        else if (request.IsVscodeUpdate)
-        {
-            if (collection != "videos")
-            {
-                return Results.BadRequest("VS Code Update items must use the 'videos' collection.");
-            }
-
-            var isYouTube = request.Url.Contains("youtube.com", StringComparison.OrdinalIgnoreCase)
-                || request.Url.Contains("youtu.be", StringComparison.OrdinalIgnoreCase);
-            if (!isYouTube)
-            {
-                return Results.BadRequest("VS Code Update videos must be YouTube URLs.");
-            }
-
-            subcollection = "vscode-updates";
-        }
-
         var sanitizedUrl = request.Url.Trim().Sanitize();
         var feedName = !string.IsNullOrWhiteSpace(request.FeedName)
             ? request.FeedName.Trim().Sanitize()
@@ -1370,7 +1100,7 @@ public static partial class AdminEndpoints
             sanitizedUrl,
             collection,
             feedName,
-            subcollection,
+            subcollectionName: null,
             titleHint,
             transcript,
             ct);
@@ -1378,14 +1108,6 @@ public static partial class AdminEndpoints
         if (result is null)
         {
             return Results.Conflict(new { message = "This URL has already been processed." });
-        }
-
-        // If ghc-features, update plans/ghesSupport on the newly-created item
-        if (subcollection == "ghc-features"
-            && result.Outcome == AdHocUrlProcessOutcome.Added
-            && result.Slug is not null)
-        {
-            await contentRepo.UpdateGhcFeaturePlansAsync(result.Slug, request.Plans, request.GhesSupport, draft: false, ct);
         }
 
         contentRepo.InvalidateCachedData();

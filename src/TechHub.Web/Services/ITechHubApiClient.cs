@@ -58,11 +58,9 @@ internal interface ITechHubApiClient
         int? skip = null,
         string? query = null,
         string? tags = null,
-        string? subcollection = null,
         int? lastDays = null,
         string? fromDate = null,
         string? toDate = null,
-        bool includeDraft = false,
         string? types = null,
         CancellationToken cancellationToken = default);
 
@@ -114,9 +112,10 @@ internal interface ITechHubApiClient
     Task<ContentItem?> GetLatestRoundupAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get GitHub Copilot feature videos (subcollection=ghc-features), including drafts.
+    /// Get GitHub Copilot features with their linked content.
+    /// GET /api/ghc-features
     /// </summary>
-    Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(CancellationToken cancellationToken = default);
+    Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(CancellationToken cancellationToken = default);
 
     // ================================================================
     // Tag cloud endpoint (unified scope)
@@ -363,7 +362,6 @@ internal interface ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
-        string? subcollectionName = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -453,7 +451,6 @@ internal interface ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
-        string? subcollectionName = null,
         CancellationToken cancellationToken = default);
 
     /// <summary>
@@ -548,25 +545,11 @@ internal interface ITechHubApiClient
     Task<string> PreviewMarkdownAsync(string markdown, CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Update the subscription plans, GHES support flag, and draft status for a ghc-features video.
-    /// PUT /api/admin/ghc-features/{slug}/plans
+    /// Upsert a GHC feature (create or update metadata).
+    /// PUT /api/admin/ghc-features/{slug}
+    /// Returns true when found and updated, false when created.
     /// </summary>
-    Task UpdateGhcFeaturePlansAsync(string slug, IReadOnlyList<string> plans, bool ghesSupport, bool draft, CancellationToken cancellationToken = default);
-
-    /// <summary>
-    /// Publish a draft ghc-features video in-place: replace the placeholder URL with the real
-    /// YouTube URL, run AI content generation (with optional transcript), clear the draft flag,
-    /// and update plans/GHES — all without deleting or re-creating the item.
-    /// POST /api/admin/ghc-features/{slug}/publish
-    /// Returns null when the YouTube URL is already claimed by another item (HTTP 409).
-    /// </summary>
-    Task<ContentItemEditData?> PublishGhcDraftAsync(
-        string slug,
-        string youtubeUrl,
-        string? transcript,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
-        CancellationToken cancellationToken = default);
+    Task<bool> UpsertGhcFeatureAsync(GhcFeature feature, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Delete a ghc-features video from the database.
@@ -574,6 +557,48 @@ internal interface ITechHubApiClient
     /// Returns false when the item was not found (HTTP 404).
     /// </summary>
     Task<bool> DeleteGhcFeatureAsync(string slug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Add a content link to a GHC feature.
+    /// POST /api/ghc-features/{slug}/content-links
+    /// </summary>
+    Task AddGhcFeatureContentLinkAsync(string featureSlug, string collectionName, string itemSlug, bool isThumbnail, int sortOrder, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove a content link from a GHC feature.
+    /// DELETE /api/ghc-features/{slug}/content-links?collection={collection}&amp;itemSlug={itemSlug}
+    /// </summary>
+    Task RemoveGhcFeatureContentLinkAsync(string featureSlug, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Set the thumbnail for a GHC feature.
+    /// PUT /api/ghc-features/{slug}/thumbnail?collection={collection}&amp;itemSlug={itemSlug}
+    /// </summary>
+    Task SetGhcFeatureThumbnailAsync(string featureSlug, string collectionName, string itemSlug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get VS Code Update items for the public VS Code Updates page.
+    /// GET /api/vscode-updates
+    /// </summary>
+    Task<IReadOnlyList<VscodeUpdateListItem>> GetPublicVscodeUpdatesAsync(CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Get a paginated list of VS Code Update items.
+    /// GET /api/admin/vscode-updates
+    /// </summary>
+    Task<PagedResult<VscodeUpdateListItem>> GetVscodeUpdateItemsAsync(int page = 1, int pageSize = 100, string? search = null, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Register an existing content item as a VS Code Update.
+    /// POST /api/admin/vscode-updates
+    /// </summary>
+    Task AddVscodeUpdateItemAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
+
+    /// <summary>
+    /// Remove a content item from the VS Code Updates list.
+    /// DELETE /api/admin/vscode-updates?collection={collection}&amp;slug={slug}
+    /// </summary>
+    Task<bool> RemoveVscodeUpdateItemAsync(string collectionName, string slug, CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Process a single URL ad-hoc, outside the RSS pipeline.

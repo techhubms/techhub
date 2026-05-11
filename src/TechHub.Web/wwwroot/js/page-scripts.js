@@ -370,9 +370,32 @@ window.initMermaid = initMermaid;
 window.initTocScrollSpy = initTocScrollSpy;
 window.initCustomPages = initCustomPages;
 
-// Scroll the given tier sidebar card into view inside its scrollable container.
+// ─── Features Timeline Helpers ────────────────────────────────────────────────
+
+/**
+ * After a tier filter is selected, scroll the sidebar tier list back to the top
+ * so the active card is visible without jumping the main content.
+ * Also blurs the focused button so Blazor's post-render focus management
+ * does not scroll the main content to keep the button in view.
+ */
 window.scrollTierCardIntoView = function(tierId) {
-    document.getElementById('tier-' + tierId)?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // Blur whichever element triggered this so Blazor doesn't scroll to it after re-render
+    if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+    }
+    const scroll = document.querySelector('.features-tiers-scroll');
+    if (!scroll) return;
+    if (!tierId) {
+        // No active tier — scroll back to top
+        scroll.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+    }
+    // Scroll so the active card sits at the top of the sidebar container
+    const card = document.getElementById('tier-' + tierId);
+    if (card) {
+        const offsetTop = card.offsetTop - scroll.offsetTop;
+        scroll.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
 };
 
 // ─── Script Lifecycle Flag ────────────────────────────────────────────────────

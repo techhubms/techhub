@@ -118,12 +118,12 @@ public sealed class ContentItemWriteRepository : IContentItemWriteRepository
 
         const string Upsert = @"
 INSERT INTO content_items
-    (slug, collection_name, subcollection_name, title, content, excerpt, date_epoch,
+    (slug, collection_name, title, content, excerpt, date_epoch,
      primary_section_name, external_url, author, feed_name,
      tags_csv, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
      is_ml, is_security, sections_bitmask, content_hash, ai_metadata)
 VALUES
-    (@Slug, @Collection, @Subcollection, @Title, @Content, @Excerpt, @DateEpoch,
+    (@Slug, @Collection, @Title, @Content, @Excerpt, @DateEpoch,
      @PrimarySection, @ExternalUrl, @Author, @FeedName,
      @TagsCsv, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
      @IsMl, @IsSecurity, @Bitmask, @ContentHash, @AiMetadata::jsonb)
@@ -131,7 +131,6 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
     title                = EXCLUDED.title,
     content              = EXCLUDED.content,
     excerpt              = EXCLUDED.excerpt,
-    subcollection_name   = EXCLUDED.subcollection_name,
     tags_csv             = EXCLUDED.tags_csv,
     is_ai                = EXCLUDED.is_ai,
     is_azure             = EXCLUDED.is_azure,
@@ -151,7 +150,6 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
             {
                 Slug = item.Slug,
                 Collection = item.CollectionName,
-                Subcollection = item.SubcollectionName,
                 item.Title,
                 Content = item.Content ?? string.Empty,
                 item.Excerpt,
@@ -199,6 +197,15 @@ ON CONFLICT (collection_name, slug) DO UPDATE SET
                     row,
                     cancellationToken: ct));
             }
+        }
+
+        // Populate subcollection lookup table for vscode-updates items
+        if (string.Equals(item.SubcollectionName, "vscode-updates", StringComparison.OrdinalIgnoreCase))
+        {
+            await _connection.ExecuteAsync(new CommandDefinition(
+                "INSERT INTO vscode_update_items (collection_name, slug) VALUES (@Collection, @Slug) ON CONFLICT DO NOTHING",
+                new { Collection = item.CollectionName, Slug = item.Slug },
+                cancellationToken: ct));
         }
 
         _logger.LogDebug("Upserted content item {Collection}/{Slug}", item.CollectionName, item.Slug);
