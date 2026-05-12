@@ -83,7 +83,7 @@ public static class ContentEndpoints
             .WithSummary("Get items in a collection")
             .WithDescription("Returns content items from a collection with optional filtering. " +
                 "Supports: take (default configured in appsettings), skip, q (search), tags, lastDays, from, to.")
-            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
+            .Produces<CollectionItemsResponse>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound)
             .Produces(StatusCodes.Status400BadRequest);
 

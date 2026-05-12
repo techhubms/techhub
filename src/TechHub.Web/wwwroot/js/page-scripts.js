@@ -254,13 +254,21 @@ function closeMermaidModal() {
  */
 export async function initTocScrollSpy() {
     const tocElement = document.querySelector('[data-toc-scroll-spy]');
-    if (!tocElement) return;
+    if (!tocElement) {
+        // No TOC element on this page — signal complete so WaitForTocInitializedAsync
+        // does not hang for 60 s when the page genuinely has no TOC.
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-initialized');
+        return;
+    }
 
     try {
         const module = await import('./scroll-manager.js');
         module.initTocScrollSpy();
     } catch (error) {
         console.error('Failed to load TOC scroll spy:', error);
+        // Signal complete even on import failure so tests can fail fast
+        // with a descriptive assertion rather than a 60 s timeout.
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-initialized');
     }
 }
 
@@ -401,10 +409,16 @@ window.scrollTierCardIntoView = function(tierId) {
         scroll.scrollTo({ top: 0, behavior: 'smooth' });
         return;
     }
-    // Scroll so the active card sits at the top of the sidebar container
+    // Scroll so the active card sits at the top of the sidebar container.
+    // Use getBoundingClientRect() to get the card's position relative to the
+    // scroll container viewport, then add the current scrollTop to convert to
+    // scroll-offset coordinates. card.offsetTop is relative to the nearest
+    // positioned ancestor which may not be the scroll container itself.
     const card = document.getElementById('tier-' + tierId);
     if (card) {
-        const offsetTop = card.offsetTop - scroll.offsetTop;
+        const cardRect = card.getBoundingClientRect();
+        const scrollRect = scroll.getBoundingClientRect();
+        const offsetTop = scroll.scrollTop + (cardRect.top - scrollRect.top);
         scroll.scrollTo({ top: offsetTop, behavior: 'smooth' });
     }
 };

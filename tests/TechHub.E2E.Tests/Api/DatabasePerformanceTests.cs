@@ -586,10 +586,10 @@ public class DatabasePerformanceTests : IDisposable
         AssertPerformance(elapsedMs, "Search with 30-day date range");
     }
 
-    // ==================== Search: GHC Features ====================
+    // ==================== Search: GitHub Copilot Videos ====================
 
     [Fact]
-    public async Task Search_GhcFeatures_PerformsWithinThreshold()
+    public async Task Search_GitHubCopilotVideos_PerformsWithinThreshold()
     {
         SkipIfNoDatabase();
 
@@ -601,7 +601,7 @@ public class DatabasePerformanceTests : IDisposable
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
 
-        AssertPerformance(elapsedMs, "Search for GHC features videos");
+        AssertPerformance(elapsedMs, "Search for GitHub Copilot videos");
     }
 
     // ==================== Search: Pagination ====================

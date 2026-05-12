@@ -318,7 +318,10 @@ LIMIT @PageSize OFFSET @Offset";
     {
         // Flatten feature + link rows, then group by feature slug.
         // Using a typed DTO avoids dynamic DapperRow case-sensitivity issues.
+        // slugOrder tracks first-seen insertion order so we can return features
+        // in SQL ORDER BY sequence — Dictionary<>.Values does not guarantee order.
         var featureDict = new Dictionary<string, (GhcFeature Feature, List<GhcFeatureContentLink> Links)>(StringComparer.OrdinalIgnoreCase);
+        var slugOrder = new List<string>();
         var rows = await _connection.QueryAsync<FeatureRow>(
             new CommandDefinition(sql, parameters, cancellationToken: ct));
 
@@ -342,6 +345,7 @@ LIMIT @PageSize OFFSET @Offset";
 
                 entry = (feature, []);
                 featureDict[row.Slug] = entry;
+                slugOrder.Add(row.Slug);
             }
 
             if (row.LinkItemSlug is not null)
@@ -359,8 +363,12 @@ LIMIT @PageSize OFFSET @Offset";
             }
         }
 
-        return featureDict.Values
-            .Select(e => e.Feature with { ContentLinks = e.Links })
+        return slugOrder
+            .Select(slug =>
+            {
+                var e = featureDict[slug];
+                return e.Feature with { ContentLinks = e.Links };
+            })
             .ToList();
     }
 }

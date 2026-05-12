@@ -10,7 +10,8 @@ public static class GhcFeaturesEndpoints
     public static void MapGhcFeaturesEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/api/ghc-features")
-            .WithTags("GhcFeatures");
+            .WithTags("GhcFeatures")
+            .RequireRateLimiting("api-public");
 
         group.MapGet("/", GetAllFeaturesAsync)
             .WithName("GetGhcFeatures")
@@ -45,7 +46,8 @@ public static class GhcFeaturesEndpoints
         app.MapGet("/api/vscode-updates", GetVscodeUpdatesPublicAsync)
             .WithTags("VscodeUpdates")
             .WithName("GetVscodeUpdatesPublic")
-            .WithSummary("Get VS Code update items for the VS Code Updates page");
+            .WithSummary("Get VS Code update items for the VS Code Updates page")
+            .RequireRateLimiting("api-public");
     }
 
     private static async Task<IResult> GetAllFeaturesAsync(
