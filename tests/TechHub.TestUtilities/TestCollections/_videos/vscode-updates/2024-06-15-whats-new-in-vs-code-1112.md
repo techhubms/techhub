@@ -8,7 +8,6 @@ tags:
 - VS Code
 - GitHub Copilot
 - AI
-draft: false
 feed_name: "Visual Studio Code YouTube"
 external_url: https://example.com/videos/vscode-updates/whats-new-1112
 author: Fokko

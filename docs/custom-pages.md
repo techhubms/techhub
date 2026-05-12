@@ -60,7 +60,7 @@ Retrieves the structured data required to render the corresponding custom page.
 
 **Endpoint**: `GET /api/custom-pages/features`
 **Data Model**: `FeaturesPageData`
-**Description**: A matrix or list of specific GitHub Copilot features and their status.
+**Description**: An interactive feature timeline showing the chronological evolution of GitHub Copilot features. Includes subscription tier definitions for the sidebar and a `timelineFeatures` array with per-feature release dates, plan availability, GHES support, and optional links to related video content.
 
 ### GenAI Basics
 
@@ -130,55 +130,51 @@ The three GenAI endpoints use a special handler that processes markdown content 
 
 All three GenAI pages (`genai-basics`, `genai-advanced`, `genai-applied`) share a single Razor component (`GenAI.razor`) with three `@page` routes.
 
-The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content through the standard content collection API pulling from the `vscode-updates` subcollection.
+The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content via the dedicated public endpoint `GET /api/vscode-updates` (implemented by `GetPublicVscodeUpdatesAsync`), which returns items tracked in the `vscode_update_items` lookup table.
 
 See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs) for endpoint implementation.
 
 ## Content Sources for Custom Pages
 
-Some custom pages are populated by specialized content collections based on their `subcollection` field in the database.
+Some custom pages are populated by specialized video content tracked in dedicated database tables.
 
 ### GitHub Copilot Features Content
 
-**Location**: Managed in the database under `videos` collection with subcollection `ghc-features`
+**Location**: Videos stored under `collection_name = 'videos'` and tracked in the `ghc_features` and `ghc_feature_content` tables.
 
-This subcollection is treated as a specialized collection for GitHub Copilot feature demonstrations.
+GHC features are managed via the admin UI and the `ghc_features`/`ghc_feature_content` database tables. They can also be synced from the content repository's `_videos/ghc-features/` directory via `ContentSyncService`. The `ghc_feature_content` table links features to their related video content items.
 
 **Requirements**:
 
-- Must be categorized in the database with subcollection `ghc-features`
-- **Metadata**:
-  - Requires `plans` array in AI metadata indicating supported tiers (Required: `["Free", "Pro", "Business", "Pro+", "Enterprise"]`)
-  - Requires `ghes_support` boolean in AI metadata
+- Managed via the admin UI or by `ContentSyncService` syncing markdown files from the content repository's `_videos/ghc-features/` directory
+- **Metadata** (frontmatter, when synced via `ContentSyncService`):
+  - Requires `plans` array indicating supported tiers (e.g. `["Free", "Pro", "Business", "Pro+", "Enterprise"]`)
+  - Requires `ghes_support` boolean
 
 **Features**:
 
-- Automatically identified as "Features" content based on subcollection
-- Populates the features page at `/github-copilot/features` (via `/api/custom-pages/features`)
-- Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
-- Supports per-section filtering by GHES support and video availability
-- Layout: "Free" tier displayed full-width, four paid tiers displayed side-by-side in a grid
+- Tracked in `ghc_features` and `ghc_feature_content` database tables
+- Populates the features timeline page at `/github-copilot/features` (via `/api/ghc-features`)
+- Videos are matched to feature entries via the `feature_slug` FK in `ghc_feature_content` — when a match is found, the video thumbnail and link appear in the expanded feature detail
 - Published items with YouTube URLs display video thumbnails and link to the video page
-- Draft items display as "Coming Soon" cards without video thumbnails
 
 ### VS Code Updates
 
-**Location**: Managed in the database under `videos` collection with subcollection `vscode-updates`
+**Location**: Videos stored under `collection_name = 'videos'` and tracked in the `vscode_update_items` lookup table.
 
-This subcollection is treated as a specialized collection for VS Code update videos.
+Items are automatically identified based on feed name and title pattern rules configured in `appsettings.json` under `ContentProcessor.SubcollectionRules`. When a rule matches, the item is written to `vscode_update_items` in addition to `content_items`.
 
 **Requirements**:
 
-- Must be categorized in the database with subcollection `vscode-updates`
-- **Metadata**:
-  - `youtube_id` should be available for embedding
+- Feed name and title must match a configured rule (e.g. feed `"Fokko at Work YouTube"`, title starting with `"Visual Studio Code and GitHub Copilot"`)
+- `youtube_id` should be available for embedding
 
 **Features**:
 
-- Automatically identified as "Updates" content based on subcollection
+- Tracked in the `vscode_update_items` lookup table
 - Populates the updates page at `/github-copilot/vscode-updates`
 - Latest video is featured prominently
-- Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
+- Fetched via `GET /api/vscode-updates`, which returns all items without a date filter
 
 ## Custom Page Ordering
 

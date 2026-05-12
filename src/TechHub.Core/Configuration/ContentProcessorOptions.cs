@@ -51,8 +51,10 @@ public class ContentProcessorOptions
     public int PurgeJobKeepCount { get; init; } = 500;
 
     /// <summary>
-    /// Rules for automatically assigning subcollections to content items
+    /// Rules for routing content items into dedicated lookup tables
     /// based on the feed name and video/article title pattern.
+    /// Matching items are written to the appropriate table (e.g. vscode_update_items)
+    /// in addition to content_items — no column is added to content_items.
     /// </summary>
     public IReadOnlyList<SubcollectionRule> SubcollectionRules { get; init; } = [];
 
@@ -70,7 +72,7 @@ public class ContentProcessorOptions
 }
 
 /// <summary>
-/// A rule that assigns a subcollection to content items matching a feed name and title pattern.
+/// A rule that routes a content item into a dedicated lookup table based on feed name and title pattern.
 /// </summary>
 public class SubcollectionRule
 {
@@ -83,6 +85,9 @@ public class SubcollectionRule
     /// </summary>
     public string TitlePattern { get; init; } = string.Empty;
 
-    /// <summary>Subcollection name to assign when the rule matches (e.g. "vscode-updates").</summary>
+    /// <summary>
+    /// Lookup table identifier for matching items.
+    /// <c>"vscode-updates"</c> writes a row to <c>vscode_update_items</c>.
+    /// </summary>
     public string Subcollection { get; init; } = string.Empty;
 }

@@ -586,10 +586,10 @@ public class DatabasePerformanceTests : IDisposable
         AssertPerformance(elapsedMs, "Search with 30-day date range");
     }
 
-    // ==================== Search: Subcollection Filtering ====================
+    // ==================== Search: GitHub Copilot Videos ====================
 
     [Fact]
-    public async Task Search_WithSubcollection_PerformsWithinThreshold()
+    public async Task Search_GitHubCopilotVideos_PerformsWithinThreshold()
     {
         SkipIfNoDatabase();
 
@@ -597,12 +597,11 @@ public class DatabasePerformanceTests : IDisposable
             take: 20,
             sections: new[] { "github-copilot" },
             collections: new[] { "videos" },
-            tags: Array.Empty<string>(),
-            subcollection: "ghc-features");
+            tags: Array.Empty<string>());
 
         var (elapsedMs, _) = await MeasureSearchAsync(request);
 
-        AssertPerformance(elapsedMs, "Search with subcollection filter");
+        AssertPerformance(elapsedMs, "Search for GitHub Copilot videos");
     }
 
     // ==================== Search: Pagination ====================

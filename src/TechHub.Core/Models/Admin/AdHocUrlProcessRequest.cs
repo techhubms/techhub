@@ -29,32 +29,6 @@ public sealed record AdHocUrlProcessRequest
     public string? TitleHint { get; init; }
 
     /// <summary>
-    /// When <c>true</c>, assigns this video to the <c>ghc-features</c> subcollection.
-    /// Requires <see cref="CollectionName"/> to be "videos" and a YouTube URL.
-    /// </summary>
-    public bool IsGhcFeature { get; init; }
-
-    /// <summary>
-    /// When <c>true</c>, assigns this video to the <c>vscode-updates</c> subcollection.
-    /// Requires <see cref="CollectionName"/> to be "videos" and a YouTube URL.
-    /// Mutually exclusive with <see cref="IsGhcFeature"/>.
-    /// </summary>
-    public bool IsVscodeUpdate { get; init; }
-
-    /// <summary>
-    /// Subscription tier names for a ghc-features video.
-    /// Required when <see cref="IsGhcFeature"/> is <c>true</c>.
-    /// Valid values: Free, Student, Pro, Business, Pro+, Enterprise.
-    /// </summary>
-    public IReadOnlyList<string> Plans { get; init; } = [];
-
-    /// <summary>
-    /// Whether this ghc-feature is available in GitHub Enterprise Server.
-    /// Only relevant when <see cref="IsGhcFeature"/> is <c>true</c>.
-    /// </summary>
-    public bool GhesSupport { get; init; }
-
-    /// <summary>
     /// Optional manually provided transcript for YouTube video items.
     /// When set, the transcript is used as the content for AI processing.
     /// When null, the item is processed using only available metadata (tags, description, etc.).

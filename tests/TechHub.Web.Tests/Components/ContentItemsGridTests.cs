@@ -31,11 +31,9 @@ public class ContentItemsGridTests : BunitContext
                 It.IsAny<int?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
-                It.IsAny<string?>(),
                 It.IsAny<int?>(),
                 It.IsAny<string?>(),
                 It.IsAny<string?>(),
-                It.IsAny<bool>(),
                 It.IsAny<string?>(),
                 It.IsAny<CancellationToken>()))
             .ReturnsAsync(new TechHub.Core.Models.CollectionItemsResponse([], 0));
@@ -219,10 +217,9 @@ public class ContentItemsGridTests : BunitContext
             It.IsAny<string>(), It.IsAny<string>(),
             It.IsAny<int?>(), It.IsAny<int?>(),
             It.IsAny<string?>(), It.IsAny<string?>(),
-            It.IsAny<string?>(), It.IsAny<int?>(),
+            It.IsAny<int?>(),
             It.IsAny<string?>(), It.IsAny<string?>(),
-            It.IsAny<bool>(), It.IsAny<string?>(),
-            It.IsAny<CancellationToken>()), Times.Never,
+            It.IsAny<string?>(), It.IsAny<CancellationToken>()), Times.Never,
             "grid should use circuit cache instead of calling API");
     }
 
@@ -290,10 +287,9 @@ public class ContentItemsGridTests : BunitContext
                 "github-copilot", "community",
                 It.IsAny<int?>(), It.IsAny<int?>(),
                 It.IsAny<string?>(), It.IsAny<string?>(),
-                It.IsAny<string?>(), It.IsAny<int?>(),
+                It.IsAny<int?>(),
                 It.IsAny<string?>(), It.IsAny<string?>(),
-                It.IsAny<bool>(), It.IsAny<string?>(),
-                It.IsAny<CancellationToken>()))
+                It.IsAny<string?>(), It.IsAny<CancellationToken>()))
             .ReturnsAsync(new CollectionItemsResponse(exactBatchItems, 40));
 
         // Act

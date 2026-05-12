@@ -9,11 +9,9 @@ public class SearchRequest
     public IReadOnlyList<string> Tags { get; }
     public IReadOnlyList<string> Sections { get; }
     public IReadOnlyList<string> Collections { get; }
-    public string? Subcollection { get; }
     public string? Author { get; }
     public DateTimeOffset? DateFrom { get; }
     public DateTimeOffset? DateTo { get; }
-    public bool IncludeDraft { get; }
     public bool UseSemanticSearch { get; }
     public int Take { get; }
     public int Skip { get; }
@@ -28,11 +26,9 @@ public class SearchRequest
         IReadOnlyList<string> tags,
         int skip = 0,
         string? query = null,
-        string? subcollection = null,
         string? author = null,
         DateTimeOffset? dateFrom = null,
         DateTimeOffset? dateTo = null,
-        bool includeDraft = false,
         bool useSemanticSearch = false,
         string orderBy = "date_desc",
         string? continuationToken = null,
@@ -89,11 +85,9 @@ public class SearchRequest
         Tags = tags;
         Sections = sections;
         Collections = collections;
-        Subcollection = subcollection;
         Author = author;
         DateFrom = dateFrom;
         DateTo = dateTo;
-        IncludeDraft = includeDraft;
         UseSemanticSearch = useSemanticSearch;
         OrderBy = orderBy;
         ContinuationToken = continuationToken;
@@ -134,11 +128,6 @@ public class SearchRequest
             sb.AppendJoin(',', sortedCollections);
         }
 
-        if (!string.IsNullOrWhiteSpace(Subcollection))
-        {
-            sb.Append("|sc:").Append(Subcollection);
-        }
-
         if (!string.IsNullOrWhiteSpace(Author))
         {
             sb.Append("|a:").Append(Author);
@@ -152,11 +141,6 @@ public class SearchRequest
         if (DateTo.HasValue)
         {
             sb.Append("|dt:").Append(DateTo.Value.ToUnixTimeSeconds());
-        }
-
-        if (IncludeDraft)
-        {
-            sb.Append("|draft:1");
         }
 
         sb.Append("|take:").Append(Take);

@@ -1,5 +1,5 @@
 /* ============================================================================
-   GitHub Copilot Features Page Styles
+   GitHub Copilot Features Page Styles — Feature Timeline
    
    Page-specific layout only - cards inherit from global cards.css
    ============================================================================ */
@@ -41,23 +41,14 @@
   font-weight: var(--font-weight-bold);
 }
 
-.custom-page-links {
-  display: flex;
-  gap: var(--spacing-2);
-  margin-top: var(--spacing-3);
-  flex-wrap: wrap;
-}
-
 /* Subscription Tiers - Sidebar */
 .features-tiers-sidebar {
   display: flex;
   flex-direction: column;
-  /* Stretch to full sidebar height so sticky child has room to work */
   flex: 1;
   min-height: 100%;
 }
 
-/* Scrollable area for tier cards only (sticky + scrollbar starts below heading) */
 .features-tiers-scroll {
   display: flex;
   flex-direction: column;
@@ -68,7 +59,6 @@
   overflow-y: auto;
   padding-right: var(--spacing-1);
   min-height: 0;
-  /* Thin scrollbar */
   scrollbar-width: thin;
 }
 
@@ -92,11 +82,13 @@
   padding: var(--spacing-2);
   display: flex;
   flex-direction: column;
-  transition: border-color var(--duration-normal) var(--easing-ease-out), 
+  transition: border-color var(--duration-normal) var(--easing-ease-out),
               box-shadow var(--duration-normal) var(--easing-ease-out);
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  text-align: left;
+  width: 100%;
 }
 
 @media (hover: hover) {
@@ -104,6 +96,11 @@
     border-color: var(--color-purple-medium);
     box-shadow: var(--shadow-md);
   }
+}
+
+.features-tier-card.active {
+  border-color: var(--color-purple-bright);
+  background: var(--color-purple-bg-subtle);
 }
 
 .features-tier-card h3 {
@@ -119,7 +116,6 @@
   line-height: var(--line-height-normal);
 }
 
-/* View Features link */
 .features-tier-link {
   display: inline-block;
   margin-top: auto;
@@ -128,12 +124,6 @@
   font-weight: var(--font-weight-semibold);
   color: var(--color-purple-bright);
   text-decoration: none;
-}
-
-@media (hover: hover) {
-  .features-tier-link:hover {
-    text-decoration: none;
-  }
 }
 
 .features-tier-features {
@@ -161,30 +151,14 @@
   font-size: var(--font-size-sm);
 }
 
-/* Feature Sections */
-.features-video-section {
-  margin-bottom: var(--spacing-6);
-}
+/* ─── Global Filter Bar ──────────────────────────────────────────── */
 
-.features-video-section h2 {
-  font-size: var(--font-size-3xl);
-  margin-bottom: var(--spacing-2);
-  color: var(--color-text-emphasis);
-}
-
-.features-section-plans {
-  font-size: var(--font-size-base);
-  color: var(--color-text-secondary);
-  font-style: italic;
-  margin-bottom: var(--spacing-2);
-}
-
-/* Per-section Filter Buttons */
-.features-section-filters {
+.features-timeline-filters {
   display: flex;
   gap: var(--spacing-2);
-  margin-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-5);
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .features-filter-btn {
@@ -218,20 +192,338 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   background: var(--color-purple-bg-subtle);
 }
 
-/* Feature Cards Grid - 3 per row */
-.features-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-3);
+/* ─── GHES Toggle Switch ─────────────────────────────────────────── */
+
+.features-ghes-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  margin-left: var(--spacing-1);
+  user-select: none;
 }
 
-/* Feature Card Thumbnails */
+.features-ghes-toggle-input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.features-ghes-toggle-track {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+  background: var(--color-bg-emphasis);
+  border: 1px solid var(--color-border-default);
+  border-radius: 10px;
+  transition: background var(--duration-normal) var(--easing-ease-out),
+              border-color var(--duration-normal) var(--easing-ease-out);
+  flex-shrink: 0;
+}
+
+.features-ghes-toggle-thumb {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-text-muted, var(--color-border-default));
+  transition: left var(--duration-normal) var(--easing-ease-out),
+              background var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-ghes-toggle-input:checked + .features-ghes-toggle-track {
+  background: var(--color-purple-bg-subtle);
+  border-color: var(--color-purple-bright);
+}
+
+.features-ghes-toggle-input:checked + .features-ghes-toggle-track .features-ghes-toggle-thumb {
+  left: 18px;
+  background: var(--color-purple-bright);
+}
+
+html.keyboard-nav .features-ghes-toggle-input:focus-visible + .features-ghes-toggle-track {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+}
+
+@media (hover: hover) {
+  .features-ghes-toggle:hover .features-ghes-toggle-track {
+    border-color: var(--color-purple-medium);
+  }
+}
+
+.features-ghes-toggle-label {
+  color: var(--color-text-secondary);
+  transition: color var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-ghes-toggle:has(.features-ghes-toggle-input:checked) .features-ghes-toggle-label {
+  color: var(--color-purple-bright);
+}
+
+/* ─── Timeline Layout ────────────────────────────────────────────── */
+
+.features-timeline {
+  position: relative;
+  margin-bottom: var(--spacing-6);
+}
+
+.features-timeline-empty {
+  color: var(--color-text-secondary);
+  font-style: italic;
+  padding: var(--spacing-4) 0;
+}
+
+/* Year group: heading above entries */
+.features-timeline-year-group {
+  margin-bottom: var(--spacing-6);
+}
+
+/* Year label as a block heading (no absolute positioning — avoids overlapping first bullet) */
+.features-timeline-year-label {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-purple-bright);
+  margin: 0 0 var(--spacing-3) 0;
+  line-height: 1;
+}
+
+/* Entries indented under the year heading */
+.features-timeline-year-entries {
+  padding-left: var(--spacing-8);
+}
+
+/* ─── Month Row ──────────────────────────────────────────────────── */
+
+/* Each month is a row: node (dot + date) on the left, cards grid on the right */
+.features-timeline-month-row {
+  display: flex;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* Node: dot marker + month abbreviation, pulled left to sit on the border line */
+.features-timeline-node {
+  flex-shrink: 0;
+  width: var(--spacing-8);
+  margin-left: calc(-1 * var(--spacing-8) - 2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.35rem;
+}
+
+.features-timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-purple-medium);
+  border: 2px solid var(--color-bg-default);
+  box-shadow: 0 0 0 2px var(--color-purple-medium);
+  flex-shrink: 0;
+}
+
+.features-timeline-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  margin-top: var(--spacing-1);
+  text-align: center;
+}
+
+/* ─── Month Cards Grid ───────────────────────────────────────────── */
+
+/* Features in the same month stack vertically — each card is full width */
+.features-timeline-month-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  min-width: 0;
+}
+
+/* ─── Timeline Entry / Card ──────────────────────────────────────── */
+
+.features-timeline-entry {
+  min-width: 0;
+}
+
+.features-timeline-entry.expanded .features-timeline-dot {
+  background: var(--color-purple-bright);
+  box-shadow: 0 0 0 2px var(--color-purple-bright);
+}
+
+.features-timeline-card {
+  padding: var(--spacing-2) var(--spacing-3);
+  box-sizing: border-box;
+  min-height: 0;
+  cursor: pointer;
+}
+
+/* Suppress article-body h3 padding-bottom inside timeline cards */
+.features-timeline-card h3 {
+  padding-bottom: 0;
+}
+
+.features-timeline-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  pointer-events: none;
+}
+
+/* Left side: title + badges, can wrap to second row if needed */
+.features-timeline-header-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-1) var(--spacing-3);
+}
+
+@media (hover: hover) {
+  .features-timeline-card:hover .features-timeline-name {
+    color: var(--color-purple-bright);
+  }
+}
+
+html.keyboard-nav .features-timeline-card:focus-visible {
+  outline: var(--focus-outline-width) solid var(--color-purple-bright);
+  outline-offset: var(--focus-outline-offset);
+  border-radius: var(--radius-sm);
+}
+
+.features-timeline-name {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-emphasis);
+  margin: 0;
+  /* Grow to fill row, but shrink before badges wrap */
+  flex: 1 1 160px;
+  min-width: 0;
+  transition: color var(--duration-normal) var(--easing-ease-out);
+}
+
+.features-timeline-badges {
+  display: flex;
+  gap: var(--spacing-1);
+  flex-wrap: wrap;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Chevron aligned with badge row */
+.features-timeline-expand-icon {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+  transition: transform 150ms ease-in-out;
+  display: inline-block;
+}
+
+.features-timeline-entry.expanded .features-timeline-expand-icon {
+  transform: rotate(180deg);
+}
+
+/* Plan badges */
+.badge-plan {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem var(--spacing-1);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-emphasis);
+  border: 1px solid var(--color-border-default);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Normalize Video badge size to match plan badges in the collapsed header */
+.features-timeline-badges .badge-info {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem var(--spacing-1);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+/* ─── Expandable Feature Detail ──────────────────────────────────── */
+
+/* Plan and GHES badges shown in the expanded detail section */
+.features-timeline-detail-badges {
+  display: flex;
+  gap: var(--spacing-1);
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.features-timeline-detail-badges .badge-success {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem var(--spacing-1);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+/* ─── Expandable Feature Detail ──────────────────────────────────── */
+
+.features-timeline-detail {
+  overflow: hidden;
+  max-height: 0;
+  /* ease-out on collapse: fast start so it responds immediately after the round-trip */
+  transition: max-height 200ms ease-out;
+}
+
+.features-timeline-detail.expanded {
+  max-height: 900px;
+  /* ease-in on expand: slow start is fine, content appearing feels immediate anyway */
+  transition: max-height 300ms ease-in;
+}
+
+.features-timeline-description {
+  margin: var(--spacing-2) 0 0 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Feature Video in Detail ────────────────────────────────────── */
+
+.features-timeline-video {
+  margin-top: var(--spacing-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  max-width: 560px;
+}
+
 .feature-card-thumbnail {
   position: relative;
   overflow: clip;
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-md);
-  margin-bottom: var(--spacing-3);
+  display: block;
 }
 
 .feature-card-thumbnail img {
@@ -255,33 +547,124 @@ html.keyboard-nav .features-filter-btn:focus-visible {
 }
 
 @media (hover: hover) {
-  .feature-card:hover .feature-card-play-icon {
+  .feature-card-thumbnail:hover .feature-card-play-icon {
     opacity: 1;
   }
 }
 
-::deep .feature-card {
-  min-height: auto;
-}
-
-::deep .feature-card h3 {
-  margin-top: 0;
-}
-
-/* Non-clickable cards (no video) */
-::deep .feature-card-static {
-  cursor: default;
+.features-timeline-video-link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-purple-bright);
 }
 
 @media (hover: hover) {
-  ::deep .feature-card-static:hover {
-    border-color: var(--color-border-default);
-    box-shadow: none;
-    transform: none;
+  .features-timeline-video-link:hover {
+    text-decoration: underline;
   }
 }
 
-/* Responsive - disable sticky sidebar when layout becomes single-column */
+/* ─── Related Videos Section ─────────────────────────────────────── */
+
+.features-timeline-related {
+  margin-top: var(--spacing-3);
+}
+
+.features-timeline-related-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted, var(--color-text-secondary));
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.features-timeline-related-grid {
+  display: flex;
+  gap: var(--spacing-2);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-1);
+  scrollbar-width: thin;
+  /* Snap to card boundaries on touch */
+  scroll-snap-type: x mandatory;
+}
+
+.features-timeline-related-grid::-webkit-scrollbar {
+  height: 4px;
+}
+
+.features-timeline-related-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.features-timeline-related-grid::-webkit-scrollbar-thumb {
+  background: var(--color-border-default);
+  border-radius: var(--radius-sm);
+}
+
+.features-timeline-related-card {
+  flex: 0 0 180px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  scroll-snap-align: start;
+  transition: color var(--duration-normal) var(--easing-ease-out);
+}
+
+@media (hover: hover) {
+  .features-timeline-related-card:hover {
+    color: var(--color-purple-bright);
+  }
+}
+
+.features-timeline-related-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-sm);
+  overflow: clip;
+  background: var(--color-bg-emphasis);
+}
+
+.features-timeline-related-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.features-timeline-related-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--easing-ease-out);
+}
+
+@media (hover: hover) {
+  .features-timeline-related-card:hover .features-timeline-related-play {
+    opacity: 1;
+  }
+}
+
+.features-timeline-related-card-title {
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-normal);
+  /* Clamp to 2 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+
 @media (max-width: 1292px) {
   .features-tiers-scroll {
     position: static;
@@ -292,39 +675,34 @@ html.keyboard-nav .features-filter-btn:focus-visible {
   }
 }
 
-@media (max-width: 1200px) {
-  .features-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 768px) {
-  .features-cards-grid {
-    grid-template-columns: 1fr;
+  .features-timeline-year-entries {
+    padding-left: var(--spacing-6);
   }
 
-  .custom-page-links {
-    flex-direction: column;
+  .features-timeline-node {
+    width: var(--spacing-6);
+    margin-left: calc(-1 * var(--spacing-6) - 2px);
   }
 
-  .custom-page-links a {
-    text-align: center;
+  .features-timeline-video {
+    max-width: 100%;
   }
 }
 
-/* Print */
+/* ─── Print ──────────────────────────────────────────────────────── */
+
 @media print {
   .features-tier-card {
     border-color: var(--color-print-border);
     page-break-inside: avoid;
   }
 
-  .custom-page-links a {
-    background: transparent;
-    color: var(--color-print-text);
-    border: 1px solid var(--color-print-border);
+  .features-timeline-detail {
+    max-height: none;
   }
 
+  .features-timeline-video,
   .feature-card-thumbnail {
     display: none;
   }

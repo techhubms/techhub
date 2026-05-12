@@ -78,14 +78,6 @@
             </select>
         </div>
         <div class="admin-filter-group">
-            <label class="admin-label" for="subcollectionFilter">Subcollection</label>
-            <select id="subcollectionFilter" class="admin-input" @bind="_subcollectionFilter" @bind:after="ApplyFiltersAsync">
-                <option value="">All subcollections</option>
-                <option value="ghc-features">ghc-features</option>
-                <option value="vscode-updates">vscode-updates</option>
-            </select>
-        </div>
-        <div class="admin-filter-group">
             <label class="admin-label" for="jobIdFilter">Job ID</label>
             <input id="jobIdFilter" class="admin-input" @bind="_jobIdFilterText" @bind:after="ApplyJobIdFilterAsync"
                    placeholder="e.g. 26" />
@@ -204,7 +196,6 @@
     private string _searchFilter = string.Empty;
     private string _feedNameFilter = string.Empty;
     private string _collectionFilter = string.Empty;
-    private string _subcollectionFilter = string.Empty;
     private long? _jobIdFilter;
     private string _jobIdFilterText = string.Empty;
 
@@ -282,8 +273,7 @@
                 string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter,
                 string.IsNullOrEmpty(_feedNameFilter) ? null : _feedNameFilter,
                 string.IsNullOrEmpty(_collectionFilter) ? null : _collectionFilter,
-                _jobIdFilter,
-                string.IsNullOrEmpty(_subcollectionFilter) ? null : _subcollectionFilter);
+                _jobIdFilter);
 
             UpdatePagination();
             await LoadFailedCountAsync();

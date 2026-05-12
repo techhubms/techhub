@@ -29,15 +29,18 @@ public class ContentSyncService : IContentSyncService
         string CompositeId,
         string CollectionName,
         string Slug,
-        string? SubcollectionName,
         Dictionary<string, object?> FrontMatter,
         string Content,
         string Excerpt,
         long DateEpoch,
         List<string> Sections,
         List<string> Tags,
-        List<string> Plans,
-        string ContentHash);
+        string ContentHash,
+        // Identifies the dedicated lookup table target inferred from the file path.
+        // "ghc-features" → writes to ghc_features + ghc_feature_content.
+        // "vscode-updates" → writes to vscode_update_items.
+        // Not stored in content_items; used only to drive lookup table insertions.
+        string? SubcollectionName = null);
 
     /// <summary>
     /// Strongly-typed record for tag words to avoid reflection overhead during bulk insert.
@@ -596,11 +599,9 @@ public class ContentSyncService : IContentSyncService
                 var (excerpt, content) = ExtractExcerptAndContent(fileContent);
 
                 // Extract metadata from frontmatter and file path
-                var subcollectionName = GetSubcollectionNameFromPath(file);
                 var dateEpoch = GetDateEpochFromFrontMatter(frontMatter, file.Name);
                 var sections = GetSectionsFromFrontMatter(frontMatter);
                 var tags = GetTagsFromFrontMatter(frontMatter);
-                var plans = GetPlansFromFrontMatter(frontMatter);
 
                 // Validate primary_section is present in frontmatter
                 var primarySection = frontMatter.GetValueOrDefault("primary_section", null)?.ToString();
@@ -611,19 +612,20 @@ public class ContentSyncService : IContentSyncService
                         "Run ContentFixer to add missing frontmatter fields.");
                 }
 
+                var subcollectionName = GetSubcollectionFromPath(file);
+
                 results.Add(new ParsedContent(
                     compositeId,
                     collectionName,
                     slug,
-                    subcollectionName,
                     frontMatter,
                     content,
                     excerpt,
                     dateEpoch,
                     sections,
                     tags,
-                    plans,
-                    contentHash));
+                    contentHash,
+                    subcollectionName));
             }
             catch (Exception ex)
             {
@@ -685,13 +687,13 @@ public class ContentSyncService : IContentSyncService
 
             await _connection.ExecuteAsync(@"
                 INSERT INTO content_items (
-                    slug, title, content, excerpt, date_epoch, collection_name, subcollection_name,
-                    primary_section_name, external_url, author, feed_name, ghes_support, draft, plans, tags_csv, content_hash,
+                    slug, title, content, excerpt, date_epoch, collection_name,
+                    primary_section_name, external_url, author, feed_name, tags_csv, content_hash,
                     is_ai, is_azure, is_dotnet, is_devops, is_github_copilot, is_ml, is_security, sections_bitmask,
                     created_at, updated_at
                 ) VALUES (
-                    @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName, @SubcollectionName,
-                    @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @GhesSupport, @Draft, @Plans, @TagsCsv, @ContentHash,
+                    @Slug, @Title, @Content, @Excerpt, @DateEpoch, @CollectionName,
+                    @PrimarySectionName, @ExternalUrl, @Author, @FeedName, @TagsCsv, @ContentHash,
                     @IsAi, @IsAzure, @IsDotNet, @IsDevOps, @IsGitHubCopilot, @IsMl, @IsSecurity, @SectionsBitmask,
                     CURRENT_TIMESTAMP, CURRENT_TIMESTAMP
                 )
@@ -700,14 +702,10 @@ public class ContentSyncService : IContentSyncService
                     content = @Content,
                     excerpt = @Excerpt,
                     date_epoch = @DateEpoch,
-                    subcollection_name = @SubcollectionName,
                     primary_section_name = @PrimarySectionName,
                     external_url = @ExternalUrl,
                     author = @Author,
                     feed_name = @FeedName,
-                    ghes_support = @GhesSupport,
-                    draft = @Draft,
-                    plans = @Plans,
                     tags_csv = @TagsCsv,
                     content_hash = @ContentHash,
                     is_ai = @IsAi,
@@ -727,14 +725,10 @@ public class ContentSyncService : IContentSyncService
                     Excerpt = parsed.Excerpt,
                     DateEpoch = parsed.DateEpoch,
                     CollectionName = parsed.CollectionName,
-                    SubcollectionName = parsed.SubcollectionName,
                     PrimarySectionName = primarySection,
                     ExternalUrl = parsed.FrontMatter.GetValueOrDefault("external_url", "")?.ToString() ?? "",
                     Author = parsed.FrontMatter.GetValueOrDefault("author", null)?.ToString(),
                     FeedName = parsed.FrontMatter.GetValueOrDefault("feed_name", null)?.ToString(),
-                    GhesSupport = _dialect.ConvertBooleanParameter(ConvertBoolToBool(parsed.FrontMatter, "ghes_support")),
-                    Draft = _dialect.ConvertBooleanParameter(ConvertBoolToBool(parsed.FrontMatter, "draft")),
-                    Plans = parsed.Plans.Count > 0 ? string.Join(",", parsed.Plans) : null,
                     TagsCsv = tagsCsv,
                     ContentHash = parsed.ContentHash,
                     IsAi = _dialect.ConvertBooleanParameter(sectionBools.IsAi),
@@ -749,6 +743,80 @@ public class ContentSyncService : IContentSyncService
                 transaction);
             insertContentMs = insertContentStopwatch.ElapsedMilliseconds;
 
+            // Populate subcollection lookup table for vscode-updates items
+            if (string.Equals(parsed.SubcollectionName, "vscode-updates", StringComparison.OrdinalIgnoreCase))
+            {
+                await _connection.ExecuteAsync(
+                    "INSERT INTO vscode_update_items (collection_name, slug) VALUES (@CollectionName, @Slug) ON CONFLICT DO NOTHING",
+                    new { CollectionName = parsed.CollectionName, Slug = parsed.Slug },
+                    transaction);
+            }
+
+            // Populate ghc_features and ghc_feature_content tables for ghc-features items.
+            // Each markdown file in _videos/ghc-features/ represents both a content item and a
+            // GHC feature entity. The feature links back to its own content item as the thumbnail.
+            if (string.Equals(parsed.SubcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase))
+            {
+                var title = parsed.FrontMatter.GetValueOrDefault("title", "")?.ToString() ?? "";
+                var plans = GetPlansFromFrontMatter(parsed.FrontMatter);
+                var ghesSupport = GetBooleanFromFrontMatter(parsed.FrontMatter, "ghes_support");
+
+                if (string.IsNullOrWhiteSpace(title))
+                {
+                    throw new InvalidOperationException(
+                        $"Missing required 'title' in frontmatter for ghc-features file: {parsed.Slug}.");
+                }
+
+                if (string.IsNullOrWhiteSpace(plans))
+                {
+                    throw new InvalidOperationException(
+                        $"Missing or empty required 'plans' in frontmatter for ghc-features file: {parsed.Slug}. " +
+                        "Specify at least one plan (e.g. 'plans: [Free, Pro]').");
+                }
+
+                if (!parsed.FrontMatter.ContainsKey("ghes_support"))
+                {
+                    throw new InvalidOperationException(
+                        $"Missing required 'ghes_support' in frontmatter for ghc-features file: {parsed.Slug}. " +
+                        "Specify 'ghes_support: true' or 'ghes_support: false'.");
+                }
+
+                await _connection.ExecuteAsync("""
+                    INSERT INTO ghc_features (slug, title, description, release_date, plans, ghes_support)
+                    VALUES (@Slug, @Title, @Description, @ReleaseDate, @Plans, @GhesSupport)
+                    ON CONFLICT (slug) DO UPDATE SET
+                        title = @Title,
+                        description = @Description,
+                        release_date = @ReleaseDate,
+                        plans = @Plans,
+                        ghes_support = @GhesSupport,
+                        updated_at = NOW()
+                    """,
+                    new
+                    {
+                        Slug = parsed.Slug,
+                        Title = title,
+                        Description = parsed.Excerpt,
+                        ReleaseDate = parsed.DateEpoch,
+                        Plans = plans,
+                        GhesSupport = ghesSupport
+                    },
+                    transaction);
+
+                await _connection.ExecuteAsync("""
+                    INSERT INTO ghc_feature_content (feature_slug, collection_name, item_slug, is_thumbnail, sort_order)
+                    VALUES (@FeatureSlug, @CollectionName, @ItemSlug, TRUE, 0)
+                    ON CONFLICT DO NOTHING
+                    """,
+                    new
+                    {
+                        FeatureSlug = parsed.Slug,
+                        CollectionName = parsed.CollectionName,
+                        ItemSlug = parsed.Slug
+                    },
+                    transaction);
+            }
+
             // Delete existing content_tags_expanded entries (only for updates, not new inserts)
             var deleteStopwatch = Stopwatch.StartNew();
             if (!isNewItem)
@@ -762,32 +830,57 @@ public class ContentSyncService : IContentSyncService
             deleteMs = deleteStopwatch.ElapsedMilliseconds;
 
             // Collect all tag words for bulk insert (eliminates N+1 query problem)
-            // NOTE: Skip tags for draft items - they shouldn't be included in tag clouds
             var tagWords = new List<TagWord>();
-            var isDraft = ConvertBoolToBool(parsed.FrontMatter, "draft");
 
-            if (!isDraft)
+            foreach (var tag in parsed.Tags)
             {
-                foreach (var tag in parsed.Tags)
+                var tagTrimmed = tag.Trim();
+
+                // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
+                var bitmask = (sectionInts.IsAi * 1) +
+                              (sectionInts.IsAzure * 2) +
+                              (sectionInts.IsDotNet * 4) +
+                              (sectionInts.IsDevOps * 8) +
+                              (sectionInts.IsGitHubCopilot * 16) +
+                              (sectionInts.IsMl * 32) +
+                              (sectionInts.IsSecurity * 64);
+
+                // Add the full tag (lowercase in tag_word for querying, original case in tag_display for display)
+                tagWords.Add(new TagWord(
+                    parsed.CollectionName,
+                    parsed.Slug,
+                    tagTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
+                    tagTrimmed,                    // Original case preserved for display
+                    1, // is_full_tag = true
+                    parsed.DateEpoch,
+                    sectionInts.IsAi,
+                    sectionInts.IsAzure,
+                    sectionInts.IsDotNet,
+                    sectionInts.IsDevOps,
+                    sectionInts.IsGitHubCopilot,
+                    sectionInts.IsMl,
+                    sectionInts.IsSecurity,
+                    bitmask
+                ));
+
+                // Also expand tags into words for subset matching
+                var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var word in words)
                 {
-                    var tagTrimmed = tag.Trim();
+                    var wordTrimmed = word.Trim();
 
-                    // Calculate sections bitmask (Bit 0=AI, Bit 1=Azure, Bit 2=.NET, Bit 3=DevOps, Bit 4=GitHubCopilot, Bit 5=ML, Bit 6=Security)
-                    var bitmask = (sectionInts.IsAi * 1) +
-                                  (sectionInts.IsAzure * 2) +
-                                  (sectionInts.IsDotNet * 4) +
-                                  (sectionInts.IsDevOps * 8) +
-                                  (sectionInts.IsGitHubCopilot * 16) +
-                                  (sectionInts.IsMl * 32) +
-                                  (sectionInts.IsSecurity * 64);
+                    // Skip if it's the same as the full tag (already added above)
+                    if (string.Equals(wordTrimmed, tagTrimmed, StringComparison.OrdinalIgnoreCase))
+                    {
+                        continue;
+                    }
 
-                    // Add the full tag (lowercase in tag_word for querying, original case in tag_display for display)
                     tagWords.Add(new TagWord(
                         parsed.CollectionName,
                         parsed.Slug,
-                        tagTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
-                        tagTrimmed,                    // Original case preserved for display
-                        1, // is_full_tag = true
+                        wordTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
+                        wordTrimmed,                   // Original casing from full tag (e.g., "GitHub" from "GitHub Copilot")
+                        0, // is_full_tag = false (word expansion)
                         parsed.DateEpoch,
                         sectionInts.IsAi,
                         sectionInts.IsAzure,
@@ -798,36 +891,6 @@ public class ContentSyncService : IContentSyncService
                         sectionInts.IsSecurity,
                         bitmask
                     ));
-
-                    // Also expand tags into words for subset matching
-                    var words = tag.Split(_tagSplitSeparators, StringSplitOptions.RemoveEmptyEntries);
-                    foreach (var word in words)
-                    {
-                        var wordTrimmed = word.Trim();
-
-                        // Skip if it's the same as the full tag (already added above)
-                        if (string.Equals(wordTrimmed, tagTrimmed, StringComparison.OrdinalIgnoreCase))
-                        {
-                            continue;
-                        }
-
-                        tagWords.Add(new TagWord(
-                            parsed.CollectionName,
-                            parsed.Slug,
-                            wordTrimmed.ToLowerInvariant(), // Lowercase for efficient querying
-                            wordTrimmed,                   // Original casing from full tag (e.g., "GitHub" from "GitHub Copilot")
-                            0, // is_full_tag = false (word expansion)
-                            parsed.DateEpoch,
-                            sectionInts.IsAi,
-                            sectionInts.IsAzure,
-                            sectionInts.IsDotNet,
-                            sectionInts.IsDevOps,
-                            sectionInts.IsGitHubCopilot,
-                            sectionInts.IsMl,
-                            sectionInts.IsSecurity,
-                            bitmask
-                        ));
-                    }
                 }
             }
 
@@ -878,25 +941,22 @@ public class ContentSyncService : IContentSyncService
         return collectionDir[1..]; // Remove leading underscore
     }
 
-    private static string? GetSubcollectionNameFromPath(FileInfo file)
+    private static string? GetSubcollectionFromPath(FileInfo file)
     {
+        // Extract subcollection from path: collections/_videos/vscode-updates/file.md → vscode-updates
+        // or collections/_blogs/file.md → null (no subcollection)
         var pathParts = file.DirectoryName?.Split(Path.DirectorySeparatorChar) ?? [];
-        var collectionDir = pathParts.FirstOrDefault(p => p.StartsWith('_'));
 
-        if (collectionDir != null)
+        // Find the index of the collection directory (starts with _)
+        var collectionIndex = Array.FindIndex(pathParts, p => p.StartsWith('_'));
+        if (collectionIndex < 0)
         {
-            var collectionIndex = Array.IndexOf(pathParts, collectionDir);
-            if (collectionIndex < pathParts.Length - 1)
-            {
-                var subfolder = pathParts[collectionIndex + 1];
-                if (!string.IsNullOrEmpty(subfolder) && subfolder != file.Name)
-                {
-                    return subfolder;
-                }
-            }
+            return null;
         }
 
-        return null;
+        // If there is a directory after the collection directory, that is the subcollection
+        var subcollectionIndex = collectionIndex + 1;
+        return subcollectionIndex < pathParts.Length ? pathParts[subcollectionIndex] : null;
     }
 
     private static long GetDateEpochFromFrontMatter(Dictionary<string, object?> frontMatter, string fileName)
@@ -940,14 +1000,32 @@ public class ContentSyncService : IContentSyncService
         return new List<string>();
     }
 
-    private static List<string> GetPlansFromFrontMatter(Dictionary<string, object?> frontMatter)
+    private static string GetPlansFromFrontMatter(Dictionary<string, object?> frontMatter)
     {
         if (frontMatter.TryGetValue("plans", out var value) && value is IEnumerable<object> list)
         {
-            return list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)).ToList();
+            return string.Join(",", list.Select(v => v.ToString() ?? "").Where(s => !string.IsNullOrEmpty(s)));
         }
 
-        return new List<string>();
+        return string.Empty;
+    }
+
+    private static bool GetBooleanFromFrontMatter(Dictionary<string, object?> frontMatter, string key)
+    {
+        if (frontMatter.TryGetValue(key, out var value) && value != null)
+        {
+            if (value is bool b)
+            {
+                return b;
+            }
+
+            if (bool.TryParse(value.ToString(), out var parsed))
+            {
+                return parsed;
+            }
+        }
+
+        return false;
     }
 
     private static (string excerpt, string content) ExtractExcerptAndContent(string fileContent)
@@ -1011,20 +1089,6 @@ public class ContentSyncService : IContentSyncService
             ON CONFLICT(key) DO UPDATE SET value = @Value, updated_at = CURRENT_TIMESTAMP",
             new { Key = "total_items", Value = totalItems.ToString(System.Globalization.CultureInfo.InvariantCulture) },
             transaction: transaction);
-    }
-
-    private static bool ConvertBoolToBool(Dictionary<string, object?> frontMatter, string key)
-    {
-        var value = frontMatter.GetValueOrDefault(key, false);
-
-        // Handle various types YamlDotNet might return
-        return value switch
-        {
-            bool b => b,
-            string s => s.Equals("true", StringComparison.OrdinalIgnoreCase),
-            int i => i != 0,
-            _ => false
-        };
     }
 
     private static Task DisableIndexesAndTriggersAsync()

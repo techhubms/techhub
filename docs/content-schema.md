@@ -1,273 +1,169 @@
 # Content Entity Schema
 
-This document defines the complete schema for ContentItems stored in the Tech Hub database.
+This document defines the schema for `ContentItem` records stored in the PostgreSQL `content_items` table.
 
-## Entity Structure
+## Source of Truth
 
-All content items fundamentally contain:
+The PostgreSQL database is the **single source of truth** for all content. There are no content files checked into the repository. Content enters the database through two paths:
 
-1. **Metadata**: Core structured metadata mapping (Title, Author, Date, Tags, Sections).
-2. **Excerpt**: A brief summary or introduction snippet suitable for feed and card previews.
-3. **Markdown Content**: Main detailed body content in markdown format.
+1. **RSS pipeline** — `ContentProcessingBackgroundService` fetches RSS feeds every 15 minutes, runs AI categorization via Azure OpenAI, and upserts into `content_items`. See [content-processing.md](content-processing.md).
+2. **Admin UI / ad-hoc processing** — Admins can submit individual URLs (including YouTube videos and GitHub Copilot Feature items) through the admin panel for immediate AI processing and insertion.
 
-## Required Properties
+> **Note**: `ContentSyncService` exists only for **integration tests**. It reads markdown fixture files under `tests/TechHub.TestUtilities/TestCollections/` and seeds the test database. It is never used in production or staging.
 
-All primary content records **must** provide values mapped for these conceptual fields:
+## Database Table: `content_items`
 
-```yaml
-title: "Content Title"                  # Plain text title
-author: "Author Name"                   # Author or publisher
-date: '2025-01-15T10:00:00Z'            # Standard DateTime
-permalink: "/section/collection/slug"   # Canonical routing path
-tags: ["Tag1", "Tag2", "Tag3"]          # Topic keywords 
-section_names: ["ai", "github-copilot"] # Normalized section relations
-```
+See the full DDL in [src/TechHub.Infrastructure/Data/Migrations/postgres/001_initial_schema.sql](../src/TechHub.Infrastructure/Data/Migrations/postgres/001_initial_schema.sql).
 
-## Property Definitions
+### Core Columns
 
-| Property | Type | Required | Description |
-|-------|------|----------|-------------|
-| `title` | string | Yes | Content title in plain text (no HTML/markdown) |
-| `author` | string | Yes | Author or presenter name |
-| `date` | datetime | Yes | Evaluated date and time used for timeline sorting |
-| `permalink` | string | Yes | URL path: `/section/collection/slug` |
-| `tags` | array | Yes | Topic keywords (display format, can include spaces) |
-| `section_names` | array | Yes | Normalized section identifiers (lowercase, hyphenated) |
+| Column | Type | Required | Description |
+|--------|------|----------|-------------|
+| `slug` | TEXT | Yes | URL-safe identifier. Primary key with `collection_name`. |
+| `collection_name` | TEXT | Yes | `news`, `blogs`, `videos`, `community`, `roundups` |
+| `title` | TEXT | Yes | Plain text title (no HTML/markdown) |
+| `author` | TEXT | Yes | Author or presenter name |
+| `date_epoch` | BIGINT | Yes | Unix timestamp (seconds). For RSS items this is the feed publication date. |
+| `primary_section_name` | TEXT | Yes | Primary section: `ai`, `azure`, `github-copilot`, `dotnet`, `devops`, `security`, `ml` |
+| `external_url` | TEXT | Yes | Source URL. For YouTube videos this is the YouTube URL. |
+| `feed_name` | TEXT | Yes | Display name of the originating RSS feed (or `"TechHub"` for admin-added items). |
+| `excerpt` | TEXT | Yes | Plain-text summary, max ~200 words. Used in cards, meta descriptions, RSS. |
+| `content` | TEXT | Yes | Full body content in markdown format. |
+| `tags_csv` | TEXT | Yes | Comma-delimited normalized tags, e.g. `,AI,GitHub Copilot,`. |
+| `content_hash` | TEXT | Yes | MD5 of content for change detection. |
 
-### Title
+### Section Flags (denormalized for fast filtering)
 
-Content title in plain text. No HTML or markdown formatting.
+| Column | Type | Description |
+|--------|------|-------------|
+| `is_ai` | BOOLEAN | Content belongs to the `ai` section |
+| `is_azure` | BOOLEAN | Content belongs to the `azure` section |
+| `is_dotnet` | BOOLEAN | Content belongs to the `dotnet` section |
+| `is_devops` | BOOLEAN | Content belongs to the `devops` section |
+| `is_github_copilot` | BOOLEAN | Content belongs to the `github-copilot` section |
+| `is_ml` | BOOLEAN | Content belongs to the `ml` section |
+| `is_security` | BOOLEAN | Content belongs to the `security` section |
+| `sections_bitmask` | INTEGER | Bitwise combination of section flags for fast multi-section queries |
 
-### Author
+## Domain Model Mapping
 
-Author name or presenter name. For YouTube videos, use the actual presenter/demonstrator.
+How `content_items` columns map to C# properties in `TechHub.Core.Models.ContentItem`:
 
-### Date
+| DB Column | C# Property | Type | Notes |
+|-----------|-------------|------|-------|
+| `slug` | `Slug` | `string` | |
+| `title` | `Title` | `string` | |
+| `author` | `Author` | `string` | |
+| `date_epoch` | `DateEpoch` | `long` | Unix timestamp (seconds) |
+| `collection_name` | `CollectionName` | `string` | |
+| `primary_section_name` | `PrimarySectionName` | `string` | |
+| `external_url` | `ExternalUrl` | `string` | |
+| `feed_name` | `FeedName` | `string` | |
+| `excerpt` | `Excerpt` | `string` | |
+| `tags_csv` | `Tags` | `IReadOnlyList<string>` | Parsed from CSV |
+| Section booleans | `Sections` | `IReadOnlyList<string>` | Reconstructed from booleans |
 
-Publication or creation date:
+## Section Names
 
-- Normalized into UTC database columns `date_epoch` and structured DateTime internally
-- Preserves the logical publish timing
+Valid `primary_section_name` values (also used in `section_names` multi-value context):
 
-### Permalink
+- `ai` — Artificial Intelligence
+- `azure` — Microsoft Azure
+- `github-copilot` — GitHub Copilot
+- `dotnet` — .NET
+- `devops` — DevOps
+- `security` — Security
+- `ml` — Machine Learning
 
-URL routing syntax `/section/collection/slug`:
+If content is tagged `github-copilot` it should also include `ai` (unless it's purely about Copilot administration/configuration).
 
-- **section**: Primary section (determined automatically by the system)
-- **collection**: Collection name without underscore (e.g., `news`, `videos`, `blogs`)
-- **slug**: URL-friendly version of title
+## Collection Names
 
-Example: `/github-copilot/news/GPT-5-Comes-to-GitHub-Copilot`
+| `collection_name` | Description |
+|-------------------|-------------|
+| `news` | News articles (links externally) |
+| `blogs` | Blog posts (links externally) |
+| `community` | Community posts (links externally) |
+| `videos` | YouTube videos (internal pages at `/section/videos/slug`) |
+| `roundups` | TechHub-authored roundups (internal at `/all/roundups/slug`) |
 
-### Tags
+External-linking collections (`news`, `blogs`, `community`) use `external_url` for navigation. Internal collections (`videos`, `roundups`) show content on TechHub pages.
 
-Array of topic keywords in display format (can include spaces and special characters):
+## GitHub Copilot Features
 
-```yaml
-tags: ["AI", "GitHub Copilot", "Visual Studio"]
-```
+GitHub Copilot feature videos have `collection_name = 'videos'` and appear on the `/github-copilot/features` timeline page. Feature metadata is stored in dedicated tables:
 
-### Section Names
+### `ghc_features` table
 
-Array of normalized section identifiers (lowercase, hyphenated):
+Stores metadata for each GHC feature release:
 
-- Valid values: `["ai", "azure", "github-copilot", "dotnet", "devops", "security", "ml"]`
-- Content can belong to multiple sections
-- If content includes `"github-copilot"`, it should also include `"ai"` (unless purely about Copilot setup/admin)
+| Column | Type | Description |
+|---|---|---|
+| `slug` | `text` PK | Unique identifier matching the `content_items.slug` |
+| `title` | `text` | Feature release title |
+| `excerpt` | `text` | Short description |
+| `release_date` | `bigint` | Unix epoch timestamp of the release (nullable) |
+| `plans` | `text` | Comma-separated plan names: `Free`, `Pro`, `Business`, `Enterprise` |
+| `ghes_support` | `boolean` | Whether GHES is supported |
+| `created_at` / `updated_at` | `timestamptz` | Audit timestamps |
 
-## Content Source Fields
+### `ghc_feature_content` table
 
-**Required for all content except roundups** (news, blogs, community, videos):
+Links a GHC feature to one or more content items (videos, blogs):
 
-```yaml
-external_url: "https://example.com/article"  # Original source URL
-feed_name: "Feed Display Name"                # RSS feed name
-```
+| Column | Type | Description |
+|---|---|---|
+| `feature_slug` | `text` FK → `ghc_features.slug` | The feature this link belongs to |
+| `collection_name` | `text` | Collection of the linked content item |
+| `item_slug` | `text` | Slug of the linked content item |
+| `is_thumbnail` | `boolean` | Whether this item is the feature's thumbnail |
+| `sort_order` | `int` | Display order |
 
-**Not required for roundups** (since they are original Tech Hub content).
+### `vscode_update_items` table
 
-## Collection-Specific Fields
+Tracks which `videos` items are VS Code monthly update videos:
 
-### GitHub Copilot Features (`_videos/ghc-features/`)
+| Column | Type | Description |
+|---|---|---|
+| `collection_name` | `text` | Always `videos` |
+| `slug` | `text` | The content item slug |
 
-```yaml
-plans: ["Free", "Pro", "Business"]  # Required - supported subscription tiers
-ghes_support: true                  # Required - GitHub Enterprise Server support
-```
+This table is populated automatically by:
 
-## Metadata to Domain Model Mapping
+- `ContentItemWriteRepository` when the item matches a `vscode-updates` rule in `ContentProcessor.SubcollectionRules`
+- `ContentSyncService` when seeding items from `_videos/vscode-updates/` fixture directories
+- `IGhcFeatureRepository.AddVscodeUpdateItemAsync` for manual admin operations
 
-This table shows how properties map to C# domain properties inside `TechHub.Core`:
+### API
 
-| Entity Property | Domain Property | Type | Notes |
-|-------------------|-----------------|------|-------|
-| `title` | `Title` | `string` | Required |
-| `author` | `Author` | `string?` | Optional |
-| `date` | `DateEpoch` | `long` | Converted to Unix timestamp in Europe/Brussels timezone |
-| `section_names` | `Sections` | `IReadOnlyList<string>` | Multi-section support |
-| `tags` | `Tags` | `IReadOnlyList<string>` | Normalized to lowercase, hyphen-separated |
-| `external_url` | `ExternalUrl` | `string?` | Original source URL |
-| Filename | `Slug` | `string` | `2025-01-15-article.md` → `2025-01-15-article` |
-| Before `<!--excerpt_end-->` | `Excerpt` | `string` | Plain text, max 200 words |
-| Full markdown | `RenderedHtml` | `string` | Processed with Markdig |
+The `GET /api/ghc-features` endpoint returns all GHC features with their content links. See [content-api.md](content-api.md#ghc-features-api) for details.
 
-## Example Files
+## Test Fixture Format
 
-### News Article
-
-```yaml
----
-layout: "post"
-title: "GPT-5 Comes to GitHub Copilot in Visual Studio"
-author: "Rhea Patel"
-external_url: "https://devblogs.microsoft.com/visualstudio/gpt-5-now-available/"
-feed_name: "Microsoft VisualStudio Blog"
-date: 2025-08-12 17:10:52 +01:00
-permalink: "/github-copilot/news/GPT-5-Comes-to-GitHub-Copilot-in-Visual-Studio"
-tags: ["AI", "GitHub Copilot", "GPT-5", "Visual Studio"]
-section_names: ["ai", "github-copilot"]
----
-
-Rhea Patel announces the availability of GPT-5 in GitHub Copilot
-for Visual Studio users, bringing enhanced code suggestions...
-
-<!--excerpt_end-->
-
-## Full Article Content
-
-...
-```
-
-### Standard Video
-
-```yaml
----
-layout: "post"
-title: "AI-Powered Email Sorting with n8n and OpenAI"
-author: "Alireza Chegini"
-external_url: "https://www.youtube.com/watch?v=21HSDwtkHNk"
-date: 2025-06-04 19:00:03 +01:00
-permalink: "/ai/videos/AI-Powered-Email-Sorting"
-tags: ["AI", "Automation", "n8n", "OpenAI"]
-section_names: ["ai"]
----
-
-Alireza Chegini demonstrates how to build an automated email
-sorting pipeline using n8n workflows and OpenAI...
-
-<!--excerpt_end-->
-
-## Video Content
-
-...
-```
-
-### GitHub Copilot Feature
+For integration tests only, `ContentSyncService` can parse markdown files from `tests/TechHub.TestUtilities/TestCollections/`. These fixture files use YAML frontmatter with the same field names as the database columns:
 
 ```yaml
 ---
-layout: "post"
-title: "Multi-File Editing with GitHub Copilot"
-author: "GitHub Team"
-date: 2025-01-15 10:00:00 +01:00
-permalink: "/github-copilot/videos/Multi-File-Editing"
-tags: ["GitHub Copilot", "Features", "Multi-File Editing"]
-section_names: ["ai", "github-copilot"]
-plans: ["Business", "Enterprise"]
-ghes_support: false
----
-
-The GitHub Team demonstrates how to use multi-file editing
-capabilities in GitHub Copilot...
-
-<!--excerpt_end-->
-
-## Feature Details
-
-...
-```
-
-## Excerpt Section
-
-### Definition
-
-An introduction that summarizes the main points and mentions the author.
-
-### Purpose
-
-Serves as a logical introduction to the main content and provides users with a quick overview of what to expect.
-
-### Requirements
-
-- Acts as a logical preamble before detailed content
-- **Maximum 200 words**
-- Separated via the `<!--excerpt_end-->` marker (or strictly stored in `excerpt` DB field depending on source pipeline)
-- Should be informative and engaging
-- **Must mention the author's name**
-
-### Example
-
-```markdown
----
-title: Example Post
-author: John Smith
+title: Video in Videos Root
 date: 2025-01-15
+primary_section: github-copilot
+section_names:
+  - github-copilot
+tags:
+  - Video
+  - GitHub Copilot
+external_url: https://example.com/videos/root-video
+author: Test Author
+feed_name: Test Feed
 ---
-
-John Smith introduces the latest updates to GitHub Copilot, including new features that improve code completion accuracy and provide better suggestions for complex algorithms. This article covers the key improvements and how they benefit developers.
-
-<!--excerpt_end-->
-
-## Detailed Content Begins Here
-
-...
+Excerpt text here.
 ```
 
-### Processing
-
-- Content before `<!--excerpt_end-->` is extracted as the `Excerpt` property
-- Excerpt is converted to plain text (no HTML/markdown)
-- Used for content cards, meta descriptions, and RSS feed descriptions
-
-> **See also**: [docs/terminology.md](terminology.md) for content organization concepts.
-
-## Example: Roundup
-
-```yaml
----
-layout: "post"
-title: "AI Agent Frameworks and Security: Weekly Tech Highlights"
-author: "Tech Hub Team"
-date: 2025-12-29 09:00:00 +01:00
-permalink: "/all/roundups/Weekly-Tech-Highlights"
-tags: ["AI", "Azure", "GitHub Copilot", "DevOps", "Security"]
-section_names: ["ai", "github-copilot"]
----
-
-The Tech Hub Team presents this week's highlights covering AI agent
-frameworks and security developments...
-
-<!--excerpt_end-->
-
-## Weekly Highlights
-
-...
-```
-
-## Deprecated Fields (Do Not Use)
-
-These fields are no longer supported:
-
-| Field | Replacement |
-|-------|-------------|
-| `categories` | Use `section_names` instead |
-| `tags_normalized` | Normalization happens automatically |
-| `excerpt_separator` | Use `<!--excerpt_end-->` marker in content |
-| `description` | Excerpt serves this purpose |
-| `page` | Collection mapped appropriately in storage |
-| `video_id` | Use `youtube_id` instead (or embed in content) |
+This format is **not used in production**. Production content comes exclusively from the RSS pipeline and admin UI.
 
 ## Implementation Reference
 
 - **Content model**: [src/TechHub.Core/Models/Core/ContentItem.cs](../src/TechHub.Core/Models/Core/ContentItem.cs)
-- **Content management**: [src/TechHub.Infrastructure/AGENTS.md](../src/TechHub.Infrastructure/AGENTS.md)
+- **DB schema**: [src/TechHub.Infrastructure/Data/Migrations/postgres/](../src/TechHub.Infrastructure/Data/Migrations/postgres/)
+- **Content processing**: [content-processing.md](content-processing.md)
+- **Test seeder**: [tests/TechHub.TestUtilities/TestCollectionsSeeder.cs](../tests/TechHub.TestUtilities/TestCollectionsSeeder.cs)

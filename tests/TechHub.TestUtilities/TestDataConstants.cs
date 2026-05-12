@@ -6,26 +6,24 @@ namespace TechHub.TestUtilities;
 /// Update these when test data changes.
 /// </summary>
 /// <remarks>
-/// Last updated: 2026-04-30 after adding second roundup for legacy redirect test coverage.
+/// Last updated: 2026-05-10 after adding ghc-token-billing video to ghc-features fixture directory.
 /// 
 /// Test data composition:
-/// - 42 published items total (was 41, added 1 roundup for legacy redirect testing)
-/// - 4 draft items (not counted in published totals)
-/// - Collections: blogs (22), news (7), videos (9), community (2), roundups (2)
+/// - 43 published items total (was 42, added 1 ghc-features video for timeline video slug testing)
+/// - Collections: blogs (22), news (7), videos (10), community (2), roundups (2)
 /// - Tag distributions: AI (12 items), DevOps (1 item), GitHub Copilot (4 tag symmetry test items)
-/// - Date ranges: 2024 items (22), 2026 items (20)
+/// - Date ranges: 2023 items (1), 2024 items (22), 2025 items (9), 2026 items (11)
 /// </remarks>
 public static class TestDataConstants
 {
     // Total counts
-    public const int TotalPublishedItems = 42;
-    public const int TotalDraftItems = 4;
-    public const int TotalItems = TotalPublishedItems + TotalDraftItems;
+    public const int TotalPublishedItems = 43;
+    public const int TotalItems = TotalPublishedItems;
 
     // Collection counts (published only)
     public const int BlogsCount = 22;
     public const int NewsCount = 7;
-    public const int VideosCount = 9;  // Includes root videos + subcollections (2 root + 5 ghc-features + 2 vscode-updates)
+    public const int VideosCount = 10;  // Includes all video items (2 root + 6 ghc-features + 2 vscode-updates)
     public const int CommunityCount = 2;
     public const int RoundupsCount = 2;
 
@@ -36,8 +34,10 @@ public static class TestDataConstants
     public const int DevOpsTagCount = 1;
 
     // Date range counts (published items only)
+    public const int Items2023Count = 1;
     public const int Items2024Count = 22;
-    public const int Items2026Count = 20;
+    public const int Items2025Count = 9;
+    public const int Items2026Count = 11;
 
     // Facet-specific counts (context-dependent based on filtering)
     /// <summary>AI tag appears in facets with this count when no filters applied</summary>

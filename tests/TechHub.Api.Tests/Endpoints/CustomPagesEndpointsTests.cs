@@ -149,6 +149,20 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
         data.FeatureSections[0].Plans.Should().Contain("Free");
         data.FeatureSections[1].Plans.Should().Contain("Student");
         data.VideoCollection.Should().Be("ghc-features");
+
+        // Timeline features
+        data.TimelineFeatures.Should().NotBeNullOrEmpty("Timeline features should be present");
+        data.TimelineFeatures![0].Id.Should().NotBeNullOrWhiteSpace();
+        data.TimelineFeatures[0].Name.Should().NotBeNullOrWhiteSpace();
+        data.TimelineFeatures[0].ReleaseDate.Should().MatchRegex(@"^\d{4}-\d{2}$", "Release date should be in YYYY-MM format");
+        data.TimelineFeatures[0].Description.Should().NotBeNullOrWhiteSpace();
+        data.TimelineFeatures[0].Plans.Should().NotBeEmpty("Each timeline feature should have at least one plan");
+
+        // Verify at least one feature has GHES support
+        data.TimelineFeatures.Should().Contain(f => f.GhesSupport, "At least one timeline feature should have GHES support");
+
+        // Verify at least one feature has a video slug
+        data.TimelineFeatures.Should().Contain(f => f.VideoSlug != null, "At least one timeline feature should link to a video");
     }
 
     [Fact]
@@ -182,38 +196,19 @@ public class CustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     }
 
     [Fact]
-    public async Task GetGhcFeaturesVideos_ReturnsVideosWithPlansAndGhesSupport()
+    public async Task GetGhcFeaturesVideos_ReturnsVideos()
     {
-        // Act
+        // Act — use the dedicated GHC features endpoint instead of subcollection filter
         var response = await _client.GetAsync(
-            "/api/sections/github-copilot/collections/videos/items?subcollection=ghc-features&includeDraft=true&lastDays=0",
+            "/api/ghc-features",
             TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
 
-        var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken);
+        var result = await response.Content.ReadFromJsonAsync<IReadOnlyList<TechHub.Core.Models.GhcFeature>>(TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Items.Should().NotBeEmpty("ghc-features collection should have video items");
-
-        // Verify videos have plans that match feature section plan names
-        var validPlanNames = new[] { "Free", "Student", "Pro", "Business", "Pro+", "Enterprise" };
-        var nonDraftItems = result.Items.Where(i => !i.Draft).ToList();
-        nonDraftItems.Should().NotBeEmpty("Should have non-draft videos");
-
-        foreach (var item in nonDraftItems)
-        {
-            item.Plans.Should().NotBeEmpty($"Video '{item.Title}' should have plans assigned");
-            item.Plans.Should().AllSatisfy(plan =>
-                plan.Should().BeOneOf(validPlanNames, $"Video '{item.Title}' plan '{plan}' should be a valid plan name"));
-        }
-
-        // Verify at least some videos have GHES support
-        nonDraftItems.Should().Contain(item => item.GhesSupport, "At least some videos should have GHES support");
-
-        // Verify at least some videos have external URLs (YouTube)
-        nonDraftItems.Should().Contain(item => !string.IsNullOrEmpty(item.ExternalUrl),
-            "At least some videos should have external URLs for YouTube thumbnails");
+        result.Should().NotBeEmpty("ghc-features endpoint should return feature items");
     }
 
     [Fact]

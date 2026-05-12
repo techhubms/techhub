@@ -6,7 +6,6 @@ using Dapper;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using TechHub.Core;
 using TechHub.Core.Configuration;
 using TechHub.Core.Interfaces;
 using TechHub.Core.Models;
@@ -37,10 +36,6 @@ public sealed class ContentRepository : IContentRepository
                 c.primary_section_name AS PrimarySectionName,
                 c.excerpt AS Excerpt,
                 c.external_url AS ExternalUrl,
-                c.draft AS Draft,
-                c.subcollection_name AS SubcollectionName,
-                c.plans AS Plans,
-                c.ghes_support AS GhesSupport,
                 c.tags_csv AS TagsCsv,
                 c.is_ai AS IsAi,
                 c.is_azure AS IsAzure,
@@ -64,11 +59,7 @@ public sealed class ContentRepository : IContentRepository
                 c.primary_section_name AS PrimarySectionName,
                 c.excerpt AS Excerpt,
                 c.external_url AS ExternalUrl,
-                c.draft AS Draft,
                 c.content AS Content,
-                c.subcollection_name AS SubcollectionName,
-                c.plans AS Plans,
-                c.ghes_support AS GhesSupport,
                 c.tags_csv AS TagsCsv,
                 c.is_ai AS IsAi,
                 c.is_azure AS IsAzure,
@@ -257,8 +248,7 @@ public sealed class ContentRepository : IContentRepository
                 c.collection_name    AS CollectionName,
                 c.date_epoch         AS DateEpoch
             FROM content_items c
-            WHERE c.draft = {Dialect.GetBooleanLiteral(false)}
-              AND c.collection_name NOT IN ('news', 'blogs', 'community')
+            WHERE c.collection_name NOT IN ('news', 'blogs', 'community')
             ORDER BY c.date_epoch DESC";
 
         var results = await Connection.QueryAsync<SitemapItem>(new CommandDefinition(sql, cancellationToken: ct));
@@ -288,8 +278,7 @@ public sealed class ContentRepository : IContentRepository
                 c.author   AS Name,
                 COUNT(*)   AS ItemCount
             FROM content_items c
-            WHERE c.draft = {Dialect.GetBooleanLiteral(false)}
-              AND c.author IS NOT NULL
+            WHERE c.author IS NOT NULL
               AND c.author <> ''
             GROUP BY c.author
             ORDER BY LOWER(c.author), c.author";
@@ -345,7 +334,6 @@ public sealed class ContentRepository : IContentRepository
     public async Task<ContentItemDetail?> GetBySlugAsync(
         string collectionName,
         string slug,
-        bool includeDraft = false,
         CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(collectionName);
@@ -355,11 +343,11 @@ public sealed class ContentRepository : IContentRepository
         collectionName = collectionName.ToLowerInvariant();
         slug = slug.ToLowerInvariant();
 
-        var cacheKey = $"slug:{collectionName}:{slug}:{includeDraft}";
+        var cacheKey = $"slug:{collectionName}:{slug}";
         return await Cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SetAbsoluteExpiration(_slugCacheTtl);
-            var item = await GetBySlugInternalAsync(collectionName, slug, includeDraft, ct);
+            var item = await GetBySlugInternalAsync(collectionName, slug, ct);
             return item != null ? RenderHtmlIfNeeded(item) : null;
         });
     }
@@ -470,18 +458,13 @@ public sealed class ContentRepository : IContentRepository
     private async Task<ContentItemDetail?> GetBySlugInternalAsync(
         string collectionName,
         string slug,
-        bool includeDraft,
         CancellationToken ct)
     {
-        // Build WHERE clause conditionally to allow index usage
-        var draftFilter = includeDraft ? "" : $"AND c.draft = {Dialect.GetBooleanLiteral(false)}";
-
         var sql = $@"
             SELECT {DetailViewColumns}
             FROM content_items c
             WHERE c.collection_name = @collectionName
-              AND c.slug = @slug
-              {draftFilter}";
+              AND c.slug = @slug";
 
         var item = await Connection.QuerySingleOrDefaultAsync<ContentItemDetail>(
             new CommandDefinition(sql, new { collectionName, slug }, cancellationToken: ct));
@@ -596,20 +579,23 @@ public sealed class ContentRepository : IContentRepository
         if (request.FacetFields.Contains("sections"))
         {
             // Use UNION ALL to count each section from bitmask column
+            // whereClause is either "WHERE ..." or "". When non-empty, append AND for bitmask filter.
+            // When empty, start with WHERE for bitmask filter.
+            var bitmaskPrefix = string.IsNullOrEmpty(whereClause) ? "WHERE" : $"{whereClause} AND";
             var sectionsSql = $@"
-                SELECT 'ai' AS Value, COUNT(*) AS Count FROM content_items c {whereClause} AND (c.sections_bitmask & 1) > 0
+                SELECT 'ai' AS Value, COUNT(*) AS Count FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 1) > 0
                 UNION ALL
-                SELECT 'azure', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 2) > 0
+                SELECT 'azure', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 2) > 0
                 UNION ALL
-                SELECT 'dotnet', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 4) > 0
+                SELECT 'dotnet', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 4) > 0
                 UNION ALL
-                SELECT 'devops', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 8) > 0
+                SELECT 'devops', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 8) > 0
                 UNION ALL
-                SELECT 'github-copilot', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 16) > 0
+                SELECT 'github-copilot', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 16) > 0
                 UNION ALL
-                SELECT 'ml', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 32) > 0
+                SELECT 'ml', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 32) > 0
                 UNION ALL
-                SELECT 'security', COUNT(*) FROM content_items c {whereClause} AND (c.sections_bitmask & 64) > 0
+                SELECT 'security', COUNT(*) FROM content_items c {bitmaskPrefix} (c.sections_bitmask & 64) > 0
                 ORDER BY Count DESC, Value";
 
             var sections = await Connection.QueryWithLoggingAsync<FacetValue>(
@@ -908,7 +894,7 @@ public sealed class ContentRepository : IContentRepository
         ArgumentNullException.ThrowIfNull(request);
         ArgumentNullException.ThrowIfNull(parameters);
 
-        var whereClauses = new List<string> { $"c.draft = {Dialect.GetBooleanLiteral(false)}" };
+        var whereClauses = new List<string>();
 
         if (request.Tags != null && request.Tags.Count > 0)
         {
@@ -1117,15 +1103,7 @@ public sealed class ContentRepository : IContentRepository
             sql.Append(CultureInfo.InvariantCulture, $@"
             WHERE (c.collection_name, c.slug) IN (
                 {tagsQuery}
-            )
-            AND c.draft = {(request.IncludeDraft ? $"{Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)}" : Dialect.GetBooleanLiteral(false))}");
-
-            if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
-                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                sql.Append(" AND c.subcollection_name = @subcollection");
-                parameters.Add("subcollection", request.Subcollection.ToLowerInvariant());
-            }
+            )");
 
             if (hasAuthor)
             {
@@ -1171,11 +1149,6 @@ public sealed class ContentRepository : IContentRepository
             // Build WHERE clause
             var whereClauses = new List<string>();
 
-            if (!request.IncludeDraft)
-            {
-                whereClauses.Add($"c.draft = {Dialect.GetBooleanLiteral(false)}");
-            }
-
             if (hasQuery)
             {
                 whereClauses.Add(Dialect.GetFullTextWhereClause("query"));
@@ -1207,13 +1180,6 @@ public sealed class ContentRepository : IContentRepository
                 }
             }
 
-            if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
-                !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
-            {
-                whereClauses.Add("c.subcollection_name = @subcollection");
-                parameters.Add("subcollection", request.Subcollection.ToLowerInvariant());
-            }
-
             if (hasAuthor)
             {
                 whereClauses.Add("c.author = @author");
@@ -1232,7 +1198,10 @@ public sealed class ContentRepository : IContentRepository
                 parameters.Add("toDate", ((DateTimeOffset)request.DateTo.Value).ToUnixTimeSeconds());
             }
 
-            sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
+            if (whereClauses.Count > 0)
+            {
+                sql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
+            }
 
             // When a search query is provided, order by relevance (ts_rank) first, then date
             // This ensures title matches rank higher than content-only matches
@@ -1325,9 +1294,7 @@ public sealed class ContentRepository : IContentRepository
             sql.Append(@"
                     ) AS tag_results
                 )
-                AND c.draft = ").Append(request.IncludeDraft
-                    ? $"{Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)}"
-                    : Dialect.GetBooleanLiteral(false).ToString());
+                AND 1=1 ");
 
             if (hasQuery)
             {
@@ -1335,7 +1302,7 @@ public sealed class ContentRepository : IContentRepository
                 AND ").Append(Dialect.GetFullTextWhereClause("query"));
             }
 
-            // Apply section/collection/date/subcollection filters
+            // Apply section/collection/date filters
             AppendContentItemFilters(sql, request, hasSections);
 
             return sql.ToString();
@@ -1353,12 +1320,7 @@ public sealed class ContentRepository : IContentRepository
             }
         }
 
-        var whereClauses = new List<string>
-        {
-            request.IncludeDraft
-                ? $"(c.draft = {Dialect.GetBooleanLiteral(false)} OR c.draft = {Dialect.GetBooleanLiteral(true)})"
-                : $"c.draft = {Dialect.GetBooleanLiteral(false)}"
-        };
+        var whereClauses = new List<string>();
 
         if (hasQuery)
         {
@@ -1388,12 +1350,6 @@ public sealed class ContentRepository : IContentRepository
             }
         }
 
-        if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
-            !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            whereClauses.Add("c.subcollection_name = @subcollection");
-        }
-
         if (!string.IsNullOrWhiteSpace(request.Author))
         {
             whereClauses.Add("c.author = @author");
@@ -1409,7 +1365,10 @@ public sealed class ContentRepository : IContentRepository
             whereClauses.Add("c.date_epoch <= @toDate");
         }
 
-        countSql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
+        if (whereClauses.Count > 0)
+        {
+            countSql.Append(" WHERE ").Append(string.Join(" AND ", whereClauses));
+        }
 
         return countSql.ToString();
     }
@@ -1442,12 +1401,6 @@ public sealed class ContentRepository : IContentRepository
                 // Note: Uses same parameter names as BuildTagsTableQuery
                 sql.Append(" AND c.collection_name = ANY(@collections)");
             }
-        }
-
-        if (!string.IsNullOrWhiteSpace(request.Subcollection) &&
-            !request.Subcollection.Equals("all", StringComparison.OrdinalIgnoreCase))
-        {
-            sql.Append(" AND c.subcollection_name = @subcollection");
         }
 
         if (!string.IsNullOrWhiteSpace(request.Author))
@@ -1710,7 +1663,6 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
-        string? subcollectionName = null,
         CancellationToken ct = default)
     {
         var whereClauses = new List<string>();
@@ -1732,12 +1684,6 @@ WHERE collection_name = @CollectionName AND slug = @Slug";
         {
             whereClauses.Add("ci.feed_name = @FeedName");
             parameters.Add("FeedName", feedName);
-        }
-
-        if (!string.IsNullOrWhiteSpace(subcollectionName))
-        {
-            whereClauses.Add("ci.subcollection_name = @SubcollectionName");
-            parameters.Add("SubcollectionName", subcollectionName.ToLowerInvariant());
         }
 
         var whereStr = whereClauses.Count > 0
@@ -1797,203 +1743,6 @@ LIMIT @Limit OFFSET @Offset";
         return rows > 0;
     }
 
-    /// <inheritdoc/>
-    public async Task<bool> UpdateGhcFeaturePlansAsync(
-        string slug,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
-        bool draft,
-        CancellationToken ct = default)
-    {
-        var plansCsv = string.Join(",", plans);
-
-        const string Sql = @"
-UPDATE content_items
-SET plans        = @Plans,
-    ghes_support = @GhesSupport,
-    draft        = @Draft,
-    updated_at   = NOW()
-WHERE slug = @Slug
-  AND collection_name = 'videos'
-  AND subcollection_name = 'ghc-features'";
-
-        var rows = await Connection.ExecuteAsync(
-            new CommandDefinition(Sql, new { Plans = plansCsv, GhesSupport = ghesSupport, Draft = draft, Slug = slug }, cancellationToken: ct));
-        return rows > 0;
-    }
-
-    /// <inheritdoc/>
-    public async Task<bool> PublishGhcFeatureDraftAsync(
-        string slug,
-        string oldExternalUrl,
-        string newExternalUrl,
-        TechHub.Core.Models.Admin.ContentItemEditData editData,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
-        bool hasTranscript,
-        CancellationToken ct = default)
-    {
-        ArgumentNullException.ThrowIfNull(editData);
-
-        var tagsCsv = editData.Tags.Count > 0
-            ? $",{string.Join(",", editData.Tags)},"
-            : string.Empty;
-
-        var isAi = editData.Sections.Contains("ai");
-        var isAzure = editData.Sections.Contains("azure");
-        var isDotnet = editData.Sections.Contains("dotnet");
-        var isDevops = editData.Sections.Contains("devops");
-        var isGhc = editData.Sections.Contains("github-copilot");
-        var isMl = editData.Sections.Contains("ml");
-        var isSecurity = editData.Sections.Contains("security");
-        var bitmask = CalculateSectionBitmask(editData.Sections);
-        var plansCsv = string.Join(",", plans);
-
-        // Single UPDATE that atomically sets all content fields + external_url + plans + draft=false
-        const string ContentSql = @"
-UPDATE content_items
-SET title                = @Title,
-    author               = @Author,
-    excerpt              = @Excerpt,
-    content              = @Content,
-    date_epoch           = @DateEpoch,
-    primary_section_name = @PrimarySectionName,
-    feed_name            = COALESCE(@FeedName, feed_name),
-    tags_csv             = @TagsCsv,
-    is_ai                = @IsAi,
-    is_azure             = @IsAzure,
-    is_dotnet            = @IsDotnet,
-    is_devops            = @IsDevops,
-    is_github_copilot    = @IsGhc,
-    is_ml                = @IsMl,
-    is_security          = @IsSecurity,
-    sections_bitmask     = @Bitmask,
-    ai_metadata          = @AiMetadata::jsonb,
-    external_url         = @NewExternalUrl,
-    plans                = @Plans,
-    ghes_support         = @GhesSupport,
-    draft                = false,
-    updated_at           = NOW()
-WHERE slug = @Slug
-  AND collection_name = 'videos'
-  AND subcollection_name = 'ghc-features'
-  AND draft = true";
-
-        var parameters = new
-        {
-            Title = editData.Title,
-            Author = editData.Author,
-            Excerpt = editData.Excerpt,
-            Content = editData.Content,
-            DateEpoch = editData.DateEpoch,
-            PrimarySectionName = editData.PrimarySectionName,
-            FeedName = editData.FeedName,
-            TagsCsv = tagsCsv,
-            IsAi = isAi,
-            IsAzure = isAzure,
-            IsDotnet = isDotnet,
-            IsDevops = isDevops,
-            IsGhc = isGhc,
-            IsMl = isMl,
-            IsSecurity = isSecurity,
-            Bitmask = bitmask,
-            AiMetadata = editData.AiMetadata,
-            NewExternalUrl = newExternalUrl,
-            Plans = plansCsv,
-            GhesSupport = ghesSupport,
-            Slug = slug,
-            CollectionName = "videos"
-        };
-
-        using var transaction = Connection.BeginTransaction();
-        try
-        {
-            var rows = await Connection.ExecuteAsync(
-                new CommandDefinition(ContentSql, parameters, transaction: transaction, cancellationToken: ct));
-
-            if (rows > 0)
-            {
-                // Rebuild content_tags_expanded: delete existing rows, then re-insert from updated
-                // tag list so that tag_word/tag_display rows reflect the new categorized tags.
-                await Connection.ExecuteAsync(
-                    new CommandDefinition(
-                        "DELETE FROM content_tags_expanded WHERE collection_name = @CollectionName AND slug = @Slug",
-                        new { CollectionName = "videos", Slug = slug },
-                        transaction: transaction,
-                        cancellationToken: ct));
-
-                if (editData.Tags.Count > 0)
-                {
-                    var tagRows = ContentItemWriteRepository.BuildTagWords(
-                        editData.Tags, "videos", slug, editData.DateEpoch,
-                        isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
-
-                    foreach (var row in tagRows)
-                    {
-                        await Connection.ExecuteAsync(
-                            new CommandDefinition(
-                                @"INSERT INTO content_tags_expanded
-                                    (collection_name, slug, tag_word, tag_display, is_full_tag,
-                                     date_epoch, is_ai, is_azure, is_dotnet, is_devops, is_github_copilot,
-                                     is_ml, is_security, sections_bitmask)
-                                  VALUES
-                                    (@CollectionName, @Slug, @TagWord, @TagDisplay, @IsFullTag,
-                                     @DateEpoch, @IsAi, @IsAzure, @IsDotnet, @IsDevops, @IsGhc,
-                                     @IsMl, @IsSecurity, @Bitmask)
-                                  ON CONFLICT DO NOTHING",
-                                row,
-                                transaction: transaction,
-                                cancellationToken: ct));
-                    }
-                }
-
-                // Swap the processed_urls record: delete the old placeholder URL entry for this
-                // slug and insert a new succeeded record for the real YouTube URL.
-                await Connection.ExecuteAsync(
-                    new CommandDefinition(
-                        @"DELETE FROM processed_urls
-                          WHERE external_url    = @OldExternalUrl
-                            AND slug            = @Slug
-                            AND collection_name = @CollectionName",
-                        new { OldExternalUrl = oldExternalUrl, Slug = slug, CollectionName = "videos" },
-                        transaction: transaction,
-                        cancellationToken: ct));
-
-                var upsertRows = await Connection.ExecuteAsync(
-                    new CommandDefinition(
-                        @"INSERT INTO processed_urls (external_url, status, feed_name, collection_name, has_transcript, slug)
-                          VALUES (@NewExternalUrl, 'succeeded', @FeedName, @CollectionName, @HasTranscript, @Slug)
-                          ON CONFLICT (external_url) DO UPDATE
-                              SET status         = 'succeeded',
-                                  error_message  = NULL,
-                                  feed_name      = COALESCE(EXCLUDED.feed_name, processed_urls.feed_name),
-                                  has_transcript = COALESCE(EXCLUDED.has_transcript, processed_urls.has_transcript),
-                                  slug           = EXCLUDED.slug,
-                                  updated_at     = NOW()
-                          WHERE processed_urls.slug = EXCLUDED.slug",
-                        new { NewExternalUrl = newExternalUrl, FeedName = editData.FeedName, CollectionName = "videos", HasTranscript = hasTranscript, Slug = slug },
-                        transaction: transaction,
-                        cancellationToken: ct));
-
-                // 0 rows means external_url already exists for a different slug — the
-                // WHERE condition on the DO UPDATE clause did not match. Rollback to prevent
-                // content_items.external_url pointing at a URL owned by another item.
-                if (upsertRows == 0)
-                {
-                    throw new ProcessedUrlConflictException();
-                }
-            }
-
-            transaction.Commit();
-            return rows > 0;
-        }
-        catch
-        {
-            transaction.Rollback();
-            throw;
-        }
-    }
-
     // ==================== Cache Invalidation ====================
 
     /// <inheritdoc/>
@@ -2043,7 +1792,6 @@ WHERE slug = @Slug
                 external_url         AS ExternalUrl
             FROM content_items
             WHERE (slug = @NormalizedSlug OR slug = @StrippedSlug)
-              AND draft = {Dialect.GetBooleanLiteral(false)}
             ORDER BY
                 CASE WHEN @HasSectionHint AND LOWER(primary_section_name) = @SectionHint THEN 0 ELSE 1 END,
                 date_epoch DESC

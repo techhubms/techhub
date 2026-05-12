@@ -152,7 +152,7 @@ public class TechHubApiClient : ITechHubApiClient
 
     /// <summary>
     /// Get items in a collection with optional filtering
-    /// GET /api/sections/{sectionName}/collections/{collectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;subcollection=&amp;lastDays=&amp;from=&amp;to=&amp;includeDraft=
+    /// GET /api/sections/{sectionName}/collections/{collectionName}/items?take=&amp;skip=&amp;q=&amp;tags=&amp;lastDays=&amp;from=&amp;to=
     /// </summary>
     public virtual async Task<CollectionItemsResponse?> GetCollectionItemsAsync(
         string sectionName,
@@ -161,11 +161,9 @@ public class TechHubApiClient : ITechHubApiClient
         int? skip = null,
         string? query = null,
         string? tags = null,
-        string? subcollection = null,
         int? lastDays = null,
         string? fromDate = null,
         string? toDate = null,
-        bool includeDraft = false,
         string? types = null,
         CancellationToken cancellationToken = default)
     {
@@ -194,11 +192,6 @@ public class TechHubApiClient : ITechHubApiClient
                 queryParams.Add($"tags={Uri.EscapeDataString(tags)}");
             }
 
-            if (!string.IsNullOrEmpty(subcollection))
-            {
-                queryParams.Add($"subcollection={Uri.EscapeDataString(subcollection)}");
-            }
-
             if (lastDays.HasValue)
             {
                 queryParams.Add($"lastDays={lastDays.Value}");
@@ -212,11 +205,6 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrEmpty(toDate))
             {
                 queryParams.Add($"to={Uri.EscapeDataString(toDate)}");
-            }
-
-            if (includeDraft)
-            {
-                queryParams.Add("includeDraft=true");
             }
 
             if (!string.IsNullOrEmpty(types))
@@ -412,44 +400,22 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get GitHub Copilot feature videos (subcollection=ghc-features), including drafts.
-    /// This is the ONLY endpoint that returns draft content.
+    /// Get GitHub Copilot features with their linked content.
     /// </summary>
-    public virtual async Task<IEnumerable<ContentItem>?> GetGhcFeaturesAsync(
+    public virtual async Task<IEnumerable<GhcFeature>?> GetGhcFeaturesAsync(
         CancellationToken cancellationToken = default)
     {
-        const int PageSize = 50;
-        var allItems = new List<ContentItem>();
-        var skip = 0;
-
-        while (true)
+        try
         {
-            var result = await GetCollectionItemsAsync(
-                "github-copilot",
-                "videos",
-                subcollection: "ghc-features",
-                includeDraft: true,
-                lastDays: 0,
-                take: PageSize,
-                skip: skip,
-                cancellationToken: cancellationToken);
-
-            if (result?.Items == null || result.Items.Count == 0)
-            {
-                break;
-            }
-
-            allItems.AddRange(result.Items);
-
-            if (allItems.Count >= result.TotalCount)
-            {
-                break;
-            }
-
-            skip += result.Items.Count;
+            return await _httpClient.GetFromJsonAsync<IEnumerable<GhcFeature>>(
+                "/api/ghc-features",
+                cancellationToken);
         }
-
-        return allItems;
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch ghc-features");
+            throw;
+        }
     }
 
     /// <summary>
@@ -1067,7 +1033,6 @@ public class TechHubApiClient : ITechHubApiClient
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
-        string? subcollectionName = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1096,11 +1061,6 @@ public class TechHubApiClient : ITechHubApiClient
             if (jobId.HasValue)
             {
                 query += $"&jobId={jobId.Value}";
-            }
-
-            if (!string.IsNullOrEmpty(subcollectionName))
-            {
-                query += $"&subcollectionName={Uri.EscapeDataString(subcollectionName)}";
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ProcessedUrlListItem>>(
@@ -1389,7 +1349,6 @@ public class TechHubApiClient : ITechHubApiClient
         string? search = null,
         string? collectionName = null,
         string? feedName = null,
-        string? subcollectionName = null,
         CancellationToken cancellationToken = default)
     {
         try
@@ -1408,11 +1367,6 @@ public class TechHubApiClient : ITechHubApiClient
             if (!string.IsNullOrEmpty(feedName))
             {
                 query += $"&feedName={Uri.EscapeDataString(feedName)}";
-            }
-
-            if (!string.IsNullOrEmpty(subcollectionName))
-            {
-                query += $"&subcollectionName={Uri.EscapeDataString(subcollectionName)}";
             }
 
             var result = await _httpClient.GetFromJsonAsync<PagedResult<ContentItemListItem>>(
@@ -1724,57 +1678,24 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <inheritdoc/>
-    public virtual async Task UpdateGhcFeaturePlansAsync(
-        string slug,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
-        bool draft,
+    public virtual async Task<bool> UpsertGhcFeatureAsync(
+        GhcFeature feature,
         CancellationToken cancellationToken = default)
     {
-        slug = slug.Sanitize();
+        ArgumentNullException.ThrowIfNull(feature);
+        var slug = feature.Slug.Sanitize();
         try
         {
             using var response = await _httpClient.PutAsJsonAsync(
-                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}/plans",
-                new { Plans = plans, GhesSupport = ghesSupport, Draft = draft },
+                $"/api/ghc-features/{Uri.EscapeDataString(slug)}",
+                feature,
                 cancellationToken);
             response.EnsureSuccessStatusCode();
+            return response.IsSuccessStatusCode;
         }
         catch (HttpRequestException ex)
         {
-            _logger.LogError(ex, "Failed to update plans for ghc-feature slug {Slug}", slug);
-            throw;
-        }
-    }
-
-    /// <inheritdoc/>
-    public virtual async Task<ContentItemEditData?> PublishGhcDraftAsync(
-        string slug,
-        string youtubeUrl,
-        string? transcript,
-        IReadOnlyList<string> plans,
-        bool ghesSupport,
-        CancellationToken cancellationToken = default)
-    {
-        slug = slug.Sanitize();
-        try
-        {
-            using var response = await _httpClient.PostAsJsonAsync(
-                $"/api/admin/ghc-features/{Uri.EscapeDataString(slug)}/publish",
-                new { YoutubeUrl = youtubeUrl, Transcript = transcript, Plans = plans, GhesSupport = ghesSupport },
-                cancellationToken);
-
-            if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
-            {
-                return null;
-            }
-
-            response.EnsureSuccessStatusCode();
-            return await response.Content.ReadFromJsonAsync<ContentItemEditData>(cancellationToken);
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to publish draft ghc-feature {Slug}", slug);
+            _logger.LogError(ex, "Failed to upsert ghc-feature {Slug}", slug);
             throw;
         }
     }
@@ -1801,6 +1722,165 @@ public class TechHubApiClient : ITechHubApiClient
         catch (HttpRequestException ex)
         {
             _logger.LogError(ex, "Failed to delete ghc-feature slug {Slug}", slug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task AddGhcFeatureContentLinkAsync(
+        string featureSlug,
+        string collectionName,
+        string itemSlug,
+        bool isThumbnail,
+        int sortOrder,
+        CancellationToken cancellationToken = default)
+    {
+        featureSlug = featureSlug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/content-links",
+                new { CollectionName = collectionName, ItemSlug = itemSlug, IsThumbnail = isThumbnail, SortOrder = sortOrder },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to add content link to ghc-feature {Slug}", featureSlug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task RemoveGhcFeatureContentLinkAsync(
+        string featureSlug,
+        string collectionName,
+        string itemSlug,
+        CancellationToken cancellationToken = default)
+    {
+        featureSlug = featureSlug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/content-links?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to remove content link from ghc-feature {Slug}", featureSlug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task SetGhcFeatureThumbnailAsync(
+        string featureSlug,
+        string collectionName,
+        string itemSlug,
+        CancellationToken cancellationToken = default)
+    {
+        featureSlug = featureSlug.Sanitize();
+        try
+        {
+            using var response = await _httpClient.PutAsync(
+                $"/api/ghc-features/{Uri.EscapeDataString(featureSlug)}/thumbnail?collection={Uri.EscapeDataString(collectionName)}&itemSlug={Uri.EscapeDataString(itemSlug)}",
+                null,
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to set thumbnail for ghc-feature {Slug}", featureSlug);
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<IReadOnlyList<VscodeUpdateListItem>> GetPublicVscodeUpdatesAsync(
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var result = await _httpClient.GetFromJsonAsync<IReadOnlyList<VscodeUpdateListItem>>(
+                "/api/vscode-updates", cancellationToken);
+            return result ?? [];
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch public VS Code updates");
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<PagedResult<VscodeUpdateListItem>> GetVscodeUpdateItemsAsync(
+        int page = 1,
+        int pageSize = 100,
+        string? search = null,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            var query = $"/api/admin/vscode-updates?page={page}&pageSize={pageSize}";
+            if (!string.IsNullOrEmpty(search))
+            {
+                query += $"&search={Uri.EscapeDataString(search)}";
+            }
+
+            var result = await _httpClient.GetFromJsonAsync<PagedResult<VscodeUpdateListItem>>(query, cancellationToken);
+            return result ?? new PagedResult<VscodeUpdateListItem> { Items = [], TotalCount = 0 };
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to fetch VS Code update items");
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task AddVscodeUpdateItemAsync(
+        string collectionName,
+        string slug,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.PostAsJsonAsync(
+                "/api/admin/vscode-updates",
+                new { CollectionName = collectionName, Slug = slug },
+                cancellationToken);
+            response.EnsureSuccessStatusCode();
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to add VS Code update item {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
+            throw;
+        }
+    }
+
+    /// <inheritdoc/>
+    public virtual async Task<bool> RemoveVscodeUpdateItemAsync(
+        string collectionName,
+        string slug,
+        CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            using var response = await _httpClient.DeleteAsync(
+                $"/api/admin/vscode-updates?collection={Uri.EscapeDataString(collectionName)}&slug={Uri.EscapeDataString(slug)}",
+                cancellationToken);
+            if (response.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return false;
+            }
+
+            response.EnsureSuccessStatusCode();
+            return true;
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "Failed to remove VS Code update item {Collection}/{Slug}", collectionName.Sanitize(), slug.Sanitize());
             throw;
         }
     }

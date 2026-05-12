@@ -30,6 +30,7 @@ Read the [critical rules](#critical-rules) first, then follow the [8-step workfl
 
 ### 🚫 Never Do
 
+- **Never apply migrations manually to the database** and always have the application run them on startup only
 - **Never use `| head`, `| tail`, `Select-Object -Last`** (blocks output)
 - **Never paste scripts into terminal** (save as file first)
 - **Never commit secrets or API keys**

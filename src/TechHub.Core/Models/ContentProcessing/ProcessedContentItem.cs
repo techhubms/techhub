@@ -23,7 +23,12 @@ public sealed class ProcessedContentItem
     /// <summary>Target collection name (e.g. "blogs", "news", "videos", "community").</summary>
     public required string CollectionName { get; init; }
 
-    /// <summary>Optional subcollection name for further categorization.</summary>
+    /// <summary>
+    /// Identifies the dedicated lookup table target for this item.
+    /// "vscode-updates" → writes to vscode_update_items.
+    /// "ghc-features" → handled via ContentSyncService fixture path, not the feed pipeline.
+    /// Not stored as a column in content_items; used only to drive lookup table insertions.
+    /// </summary>
     public string? SubcollectionName { get; init; }
 
     /// <summary>Canonical external URL of the original article. Used to detect duplicates.</summary>

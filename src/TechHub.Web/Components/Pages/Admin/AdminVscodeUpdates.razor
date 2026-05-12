@@ -1,0 +1,375 @@
+@page "/admin/vscode-updates"
+@layout AdminLayout
+@rendermode InteractiveServer
+@using TechHub.Core.Models
+@using TechHub.Core.Models.Admin
+@using TechHub.Web.Services
+@implements IDisposable
+@inject ITechHubApiClient Api
+@inject ILogger<AdminVscodeUpdates> Logger
+@inject PersistentComponentState ApplicationState
+@inherits PageComponentBase
+
+<PageTitle>VS Code Updates — TechHub Admin</PageTitle>
+
+<div class="admin-page">
+    <div class="admin-page-header">
+        <div>
+            <h1 class="admin-page-title">VS Code Updates</h1>
+            <p class="admin-page-subtitle">
+                Manage the VS Code Updates list — items shown at <code>/github-copilot/vscode-updates</code>.
+                Items are added automatically when videos from Fokko's feed match the VS Code Updates subcollection rule.
+                Use this page to add or remove items manually.
+            </p>
+        </div>
+        <div class="admin-actions">
+            <button class="btn-secondary" @onclick="RefreshAsync">⟳ Refresh</button>
+        </div>
+    </div>
+
+    @if (_message != null)
+    {
+        <div class="admin-alert @(_messageIsError ? "admin-alert-error" : "admin-alert-success")" role="alert">
+            @_message
+        </div>
+    }
+
+    @* ── Search filter ── *@
+    <div class="admin-filters">
+        <div class="admin-filter-group">
+            <label class="admin-label" for="vsFilter">Search</label>
+            <input id="vsFilter" class="admin-input" @bind="_searchFilter" @bind:after="ApplyFilterAsync"
+                   placeholder="Search by title or slug…" />
+        </div>
+    </div>
+
+    @* ── VS Code update items list ── *@
+    @if (_loading)
+    {
+        <div class="admin-loading">Loading VS Code update items…</div>
+    }
+    else if (_error != null)
+    {
+        <div class="admin-alert admin-alert-error" role="alert">@_error</div>
+    }
+    else if (_items.Count == 0)
+    {
+        <div class="admin-empty">No VS Code update items found.</div>
+    }
+    else
+    {
+        <div class="admin-result-summary">
+            Showing @((_currentPage - 1) * PageSize + 1)–@(Math.Min(_currentPage * PageSize, _totalCount))
+            of @_totalCount.ToString("N0") entries
+        </div>
+
+        <div class="admin-jobs-table-wrapper">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in _items)
+                    {
+                        <tr>
+                            <td class="admin-cell-mono">
+                                @DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).ToString("yyyy-MM-dd")
+                            </td>
+                            <td class="admin-cell-article" title="@item.Title">
+                                @if (!string.IsNullOrEmpty(item.ExternalUrl))
+                                {
+                                    <a href="@item.ExternalUrl" target="_blank" rel="noopener noreferrer">@item.Title</a>
+                                }
+                                else
+                                {
+                                    @item.Title
+                                }
+                            </td>
+                            <td class="admin-cell-mono">@item.CollectionName/@item.Slug</td>
+                            <td>
+                                <button class="admin-link-btn admin-link-btn-danger"
+                                        @onclick="() => RemoveItemAsync(item)"
+                                        title="Remove from VS Code Updates list (does not delete the content item)">
+                                    Remove
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (_totalPages > 1)
+        {
+            <div class="admin-pagination">
+                <button class="btn-secondary" disabled="@(_currentPage <= 1)" @onclick="PreviousPageAsync">← Previous</button>
+                <span class="admin-pagination-info">Page @_currentPage of @_totalPages</span>
+                <button class="btn-secondary" disabled="@(_currentPage >= _totalPages)" @onclick="NextPageAsync">Next →</button>
+            </div>
+        }
+    }
+
+    @* ── Add item manually ── *@
+    <div class="vscode-add-section">
+        <h2 class="vscode-add-heading">Add Item Manually</h2>
+        <p class="vscode-add-hint">Search for an existing content item and register it as a VS Code Update.</p>
+
+        <div class="features-links-search-row">
+            <input type="text" class="admin-input features-links-search-input"
+                   @bind="_addSearchQuery"
+                   placeholder="Search videos by title or slug…" />
+            <button class="btn-secondary" @onclick="SearchForAddAsync"
+                    disabled="@_addSearchLoading">
+                @(_addSearchLoading ? "Searching…" : "Search")
+            </button>
+        </div>
+
+        @if (_addSearchError != null)
+        {
+            <div class="admin-alert admin-alert-error" role="alert">@_addSearchError</div>
+        }
+
+        @if (_addSearchResults.Count > 0)
+        {
+            <table class="admin-table vscode-add-results-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Slug</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var result in _addSearchResults)
+                    {
+                        <tr>
+                            <td class="admin-cell-article" title="@result.Title">@result.Title</td>
+                            <td class="admin-cell-mono">@result.CollectionName/@result.Slug</td>
+                            <td>
+                                <button class="admin-link-btn" @onclick="() => AddItemAsync(result)" disabled="@_adding">
+                                    @(_adding ? "Adding…" : "+ Add")
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@code {
+    private const int PageSize = 100;
+
+    private bool _loading = true;
+    private string? _error;
+    private string? _message;
+    private bool _messageIsError;
+
+    private List<VscodeUpdateListItem> _items = [];
+    private int _totalCount;
+    private int _currentPage = 1;
+    private int _totalPages = 1;
+
+    private string _searchFilter = string.Empty;
+    private CancellationTokenSource? _debounce;
+
+    private string _addSearchQuery = string.Empty;
+    private bool _addSearchLoading;
+    private string? _addSearchError;
+    private List<ContentItemListItem> _addSearchResults = [];
+    private bool _adding;
+
+    private PersistingComponentStateSubscription? _persistSubscription;
+
+    protected override async Task OnInitializedAsync()
+    {
+        _persistSubscription = ApplicationState.RegisterOnPersisting(PersistState);
+
+        if (ApplicationState.TryTakeFromJson<(List<VscodeUpdateListItem>, int)>("admin-vscode-updates", out var persisted))
+        {
+            (_items, _totalCount) = persisted;
+            UpdatePagination();
+            _loading = false;
+            return;
+        }
+
+        await LoadDataAsync();
+    }
+
+    private Task PersistState()
+    {
+        ApplicationState.PersistAsJson("admin-vscode-updates", (_items, _totalCount));
+        return Task.CompletedTask;
+    }
+
+    public void Dispose()
+    {
+        _persistSubscription?.Dispose();
+        _debounce?.Cancel();
+        _debounce?.Dispose();
+    }
+
+    private async Task LoadDataAsync()
+    {
+        _loading = true;
+        _error = null;
+
+        try
+        {
+            var result = await Api.GetVscodeUpdateItemsAsync(
+                page: _currentPage,
+                pageSize: PageSize,
+                search: string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter);
+            _items = [.. result.Items];
+            _totalCount = result.TotalCount;
+            UpdatePagination();
+        }
+        catch (HttpRequestException ex)
+        {
+            _error = $"Failed to load VS Code update items: {ex.Message}";
+            Logger.LogError(ex, "Failed to load vscode update items");
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private void UpdatePagination()
+    {
+        _totalPages = Math.Max(1, (int)Math.Ceiling((double)_totalCount / PageSize));
+    }
+
+    private async Task ApplyFilterAsync()
+    {
+        _debounce?.Cancel();
+        _debounce = new CancellationTokenSource();
+        var token = _debounce.Token;
+
+        try
+        {
+            await Task.Delay(300, token);
+        }
+        catch (OperationCanceledException)
+        {
+            return;
+        }
+
+        _currentPage = 1;
+        await LoadDataAsync();
+    }
+
+    private async Task RefreshAsync()
+    {
+        _message = null;
+        await LoadDataAsync();
+    }
+
+    private async Task PreviousPageAsync()
+    {
+        if (_currentPage > 1)
+        {
+            _currentPage--;
+            await LoadDataAsync();
+        }
+    }
+
+    private async Task NextPageAsync()
+    {
+        if (_currentPage < _totalPages)
+        {
+            _currentPage++;
+            await LoadDataAsync();
+        }
+    }
+
+    private async Task RemoveItemAsync(VscodeUpdateListItem item)
+    {
+        _message = null;
+
+        try
+        {
+            var removed = await Api.RemoveVscodeUpdateItemAsync(item.CollectionName, item.Slug);
+            if (removed)
+            {
+                _message = $"Removed '{item.Title}' from VS Code Updates. The content item itself is unchanged.";
+                _messageIsError = false;
+                await LoadDataAsync();
+            }
+            else
+            {
+                _message = "Item not found in VS Code Updates list (may have already been removed).";
+                _messageIsError = true;
+            }
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to remove item: {ex.Message}";
+            _messageIsError = true;
+            Logger.LogError(ex, "Failed to remove vscode update item {Slug}", item.Slug);
+        }
+    }
+
+    private async Task SearchForAddAsync()
+    {
+        if (string.IsNullOrWhiteSpace(_addSearchQuery))
+        {
+            return;
+        }
+
+        _addSearchLoading = true;
+        _addSearchError = null;
+        _addSearchResults = [];
+
+        try
+        {
+            var result = await Api.GetContentItemsAsync(
+                page: 1,
+                pageSize: 20,
+                search: _addSearchQuery.Trim(),
+                collectionName: "videos");
+            _addSearchResults = [.. result.Items];
+        }
+        catch (HttpRequestException ex)
+        {
+            _addSearchError = $"Search failed: {ex.Message}";
+            Logger.LogError(ex, "Failed to search content items for vscode updates");
+        }
+        finally
+        {
+            _addSearchLoading = false;
+        }
+    }
+
+    private async Task AddItemAsync(ContentItemListItem item)
+    {
+        _adding = true;
+        _message = null;
+
+        try
+        {
+            await Api.AddVscodeUpdateItemAsync(item.CollectionName, item.Slug);
+            _message = $"Added '{item.Title}' to VS Code Updates.";
+            _messageIsError = false;
+            _addSearchResults = [];
+            _addSearchQuery = string.Empty;
+            await LoadDataAsync();
+        }
+        catch (HttpRequestException ex)
+        {
+            _message = $"Failed to add item: {ex.Message}";
+            _messageIsError = true;
+            Logger.LogError(ex, "Failed to add vscode update item {Slug}", item.Slug);
+        }
+        finally
+        {
+            _adding = false;
+        }
+    }
+}

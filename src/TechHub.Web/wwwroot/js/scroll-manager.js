@@ -586,7 +586,13 @@ function setupToc(tocElement, contentElement, initialHighlight = true) {
     destroyToc();
 
     const headings = Array.from(contentElement.querySelectorAll('h2[id], h3[id]'));
-    if (headings.length === 0) return;
+    if (headings.length === 0) {
+        // No headings found — signal complete so WaitForTocInitializedAsync does not
+        // hang for 60 s. Tests that require actual TOC links will fail at their own
+        // assertion with a descriptive message rather than a cryptic timeout.
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-initialized');
+        return;
+    }
 
     const tocLinks = new Map();
     const headingElements = new Map();

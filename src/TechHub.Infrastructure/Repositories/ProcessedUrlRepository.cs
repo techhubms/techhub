@@ -170,20 +170,14 @@ ON CONFLICT (external_url) DO UPDATE SET
         string? feedName = null,
         string? collectionName = null,
         long? jobId = null,
-        string? subcollectionName = null,
         CancellationToken ct = default)
     {
-        var needsJoin = !string.IsNullOrEmpty(subcollectionName);
-        var where = BuildWhereClause(status, search, feedName, collectionName, jobId, subcollectionName);
-        var parameters = BuildParameters(status, search, feedName, collectionName, jobId, subcollectionName);
-        var joinClause = needsJoin
-            ? "LEFT JOIN content_items ci ON ci.collection_name = p.collection_name AND ci.slug = p.slug"
-            : string.Empty;
+        var where = BuildWhereClause(status, search, feedName, collectionName, jobId);
+        var parameters = BuildParameters(status, search, feedName, collectionName, jobId);
 
         var countSql = $@"
 SELECT COUNT(*)
 FROM processed_urls p
-{joinClause}
 {where}";
 
         var totalCount = await _connection.ExecuteScalarAsync<int>(
@@ -202,7 +196,6 @@ SELECT p.external_url AS ExternalUrl,
        p.processed_at AS ProcessedAt,
        p.updated_at AS UpdatedAt
 FROM processed_urls p
-{joinClause}
 {where}
 ORDER BY p.processed_at DESC
 LIMIT @Limit OFFSET @Offset";
@@ -403,7 +396,7 @@ WHERE status = 'failed'
         }
     }
 
-    private static string BuildWhereClause(string? status, string? search, string? feedName, string? collectionName, long? jobId = null, string? subcollectionName = null)
+    private static string BuildWhereClause(string? status, string? search, string? feedName, string? collectionName, long? jobId = null)
     {
         var conditions = new List<string>();
 
@@ -432,17 +425,14 @@ WHERE status = 'failed'
             conditions.Add("p.job_id = @JobId");
         }
 
-        if (!string.IsNullOrEmpty(subcollectionName))
-        {
-            conditions.Add("ci.subcollection_name ILIKE @SubcollectionName");
-        }
+        // No subcollection_name column on content_items — filtering handled by dedicated lookup tables
 
         return conditions.Count > 0
             ? "WHERE " + string.Join(" AND ", conditions)
             : string.Empty;
     }
 
-    private static DynamicParameters BuildParameters(string? status, string? search, string? feedName, string? collectionName, long? jobId = null, string? subcollectionName = null)
+    private static DynamicParameters BuildParameters(string? status, string? search, string? feedName, string? collectionName, long? jobId = null)
     {
         var parameters = new DynamicParameters();
 
@@ -469,11 +459,6 @@ WHERE status = 'failed'
         if (jobId.HasValue)
         {
             parameters.Add("JobId", jobId.Value);
-        }
-
-        if (!string.IsNullOrEmpty(subcollectionName))
-        {
-            parameters.Add("SubcollectionName", subcollectionName);
         }
 
         return parameters;

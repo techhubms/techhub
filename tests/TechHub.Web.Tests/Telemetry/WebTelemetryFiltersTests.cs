@@ -1,4 +1,6 @@
 using FluentAssertions;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Primitives;
 using TechHub.Web.Telemetry;
 
 namespace TechHub.Web.Tests.Telemetry;
@@ -60,6 +62,39 @@ public class WebTelemetryFiltersTests
     {
         WebTelemetryFilters.IsApiProbeRequest(path)
             .Should().BeFalse("legitimate web routes must not be suppressed from telemetry");
+    }
+
+    [Theory]
+    [InlineData("/_blazor", "id", "abc123circuitid")]
+    [InlineData("/_blazor", "id", "")]
+    [InlineData("/_BLAZOR", "id", "xyz")]
+    public void IsBlazorCircuitReconnectRequest_ReturnsTrue_ForCircuitReconnects(string path, string key, string value)
+    {
+        var query = new QueryCollection(new Dictionary<string, StringValues> { [key] = value });
+
+        WebTelemetryFilters.IsBlazorCircuitReconnectRequest(path, query)
+            .Should().BeTrue(
+                "/_blazor?id=... is a client trying to resume an expired Blazor circuit after " +
+                "a container restart; these always 404 and have no diagnostic value");
+    }
+
+    [Theory]
+    [InlineData("/_blazor/disconnect", "id", "abc")]
+    [InlineData("/_blazor/negotiate", "id", "abc")]
+    [InlineData("/_blazor", "", "")]
+    [InlineData("/_blazor", "other", "val")]
+    [InlineData("/ai", "id", "abc")]
+    public void IsBlazorCircuitReconnectRequest_ReturnsFalse_ForOtherRequests(string path, string key, string value)
+    {
+        var pairs = string.IsNullOrEmpty(key)
+            ? new Dictionary<string, StringValues>()
+            : new Dictionary<string, StringValues> { [key] = value };
+        var query = new QueryCollection(pairs);
+
+        WebTelemetryFilters.IsBlazorCircuitReconnectRequest(path, query)
+            .Should().BeFalse(
+                "only the exact /_blazor path with an 'id' query param is suppressed; " +
+                "sub-paths and other paths must remain visible");
     }
 
     [Theory]

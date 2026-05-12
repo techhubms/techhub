@@ -82,8 +82,8 @@ public static class ContentEndpoints
             .WithName("GetCollectionItems")
             .WithSummary("Get items in a collection")
             .WithDescription("Returns content items from a collection with optional filtering. " +
-                "Supports: take (default configured in appsettings), skip, q (search), tags, subcollection, lastDays, from, to, includeDraft.")
-            .Produces<IEnumerable<ContentItem>>(StatusCodes.Status200OK)
+                "Supports: take (default configured in appsettings), skip, q (search), tags, lastDays, from, to.")
+            .Produces<CollectionItemsResponse>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status404NotFound)
             .Produces(StatusCodes.Status400BadRequest);
 
@@ -260,11 +260,9 @@ public static class ContentEndpoints
         [FromQuery] int skip = 0,
         [FromQuery] string? q = null,
         [FromQuery] string? tags = null,
-        [FromQuery] string? subcollection = null,
         [FromQuery] int? lastDays = null,
         [FromQuery] string? from = null,
         [FromQuery] string? to = null,
-        [FromQuery] bool includeDraft = false,
         [FromQuery] string? types = null,
         CancellationToken cancellationToken = default)
     {
@@ -390,10 +388,8 @@ public static class ContentEndpoints
             sections: new[] { section.Name },
             collections: collectionsArray,
             tags: parsedTags ?? Array.Empty<string>(),
-            subcollection: subcollection,
             dateFrom: dateFrom,
-            dateTo: dateTo,
-            includeDraft: includeDraft
+            dateTo: dateTo
         );
 
         var content = await contentRepository.SearchAsync(request, cancellationToken);
@@ -684,7 +680,7 @@ public static class ContentEndpoints
         }
 
         // Get the content item detail by collection and slug
-        var item = await contentRepository.GetBySlugAsync(collectionName, slug, includeDraft: false, cancellationToken);
+        var item = await contentRepository.GetBySlugAsync(collectionName, slug, cancellationToken);
 
         if (item == null)
         {

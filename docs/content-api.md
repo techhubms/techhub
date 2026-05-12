@@ -57,16 +57,12 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
   "author": "Jane Doe",
   "dateEpoch": 1705276800,
   "collectionName": "news",
-  "subcollectionName": null,
   "feedName": "Microsoft AI Blog",
   "primarySectionName": "ai",
   "sections": ["ai", "github-copilot"],
   "tags": ["copilot", "ai", "productivity"],
   "excerpt": "First paragraph excerpt...",
-  "externalUrl": "https://techcommunity.microsoft.com/example-post",
-  "draft": false,
-  "plans": [],
-  "ghesSupport": false
+  "externalUrl": "https://techcommunity.microsoft.com/example-post"
 }
 ```
 
@@ -76,15 +72,11 @@ Represents individual content (articles, videos, blogs, etc.) in API responses.
 - `title`, `author`, `excerpt`: Content metadata
 - `dateEpoch`: Publication date as Unix timestamp
 - `collectionName`: Collection this item belongs to (`news`, `blogs`, `videos`, `community`, `roundups`)
-- `subcollectionName`: Optional subcollection (e.g., `ghc-features`, `vscode-updates`)
 - `feedName`: Original RSS feed source name
 - `primarySectionName`: Highest-priority section name used for URL routing
 - `sections`: Array of lowercase section identifiers this content belongs to
 - `tags`: Content tags for filtering
 - `externalUrl`: Source URL - external link for aggregated content, internal path for generated content (present in all collections)
-- `draft`: Whether content is a draft (used for Features page "Coming Soon" items)
-- `plans`: GitHub Copilot subscription plans (only for ghc-features subcollection)
-- `ghesSupport`: Whether feature supports GitHub Enterprise Server (only for ghc-features)
 
 ### Linking Strategy (Internal vs. External)
 
@@ -179,7 +171,6 @@ Get items in a specific collection within a section. Use `all` as collectionName
 - `lastDays` (optional): Filter to content from last N days. **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
 - `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
 - `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`
-- `includeDraft` (optional): Include draft content (default: false)
 
 **Response**: `200 OK` or `404 Not Found`
 
@@ -285,7 +276,7 @@ curl -k "https://localhost:5001/api/authors/Alice%20Example/items"
 **Notes**:
 
 - Author name matching is case-insensitive (URL parameter) but the stored name casing is used for the database query.
-- Only published (non-draft) items are returned.
+- Only published items are returned.
 
 ### Tag Cloud
 
@@ -313,6 +304,56 @@ Get tag cloud with quantile-based sizing for visual representation.
 ```bash
 curl -k "https://localhost:5001/api/sections/all/collections/all/tags?maxTags=30"
 ```
+
+## GHC Features API {#ghc-features-api}
+
+Endpoints for GitHub Copilot feature metadata stored in the `ghc_features` table.
+See [content-schema.md](content-schema.md#github-copilot-features) for the schema.
+
+### GET /api/ghc-features
+
+Returns all GHC features with their content links. Public endpoint (no authentication required).
+
+**Response**: `200 OK`
+
+```json
+[
+  {
+    "slug": "copilot-free-plan",
+    "title": "GitHub Copilot Free Plan",
+    "description": "Free tier for individual developers.",
+    "releaseDate": 1700000000,
+    "plans": ["Free", "Pro"],
+    "ghesSupport": false,
+    "contentLinks": [
+      {
+        "featureSlug": "copilot-free-plan",
+        "collectionName": "videos",
+        "itemSlug": "intro-to-copilot-free",
+        "isThumbnail": true,
+        "sortOrder": 1,
+        "itemTitle": "Introduction to GitHub Copilot Free",
+        "itemExternalUrl": "https://youtube.com/watch?v=..."
+      }
+    ],
+    "thumbnailLink": { ... }
+  }
+]
+```
+
+### PUT /api/ghc-features/{slug}
+
+Create or update a GHC feature. **Requires AdminOnly authorization.**
+
+**Body**: `GhcFeature` JSON (same schema as GET response item).
+
+**Response**: `204 No Content`
+
+### DELETE /api/ghc-features/{slug}
+
+Delete a GHC feature and its content links. **Requires AdminOnly authorization.**
+
+**Response**: `204 No Content` or `404 Not Found`
 
 ### Error Responses
 

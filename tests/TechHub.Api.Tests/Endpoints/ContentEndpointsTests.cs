@@ -220,8 +220,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         items!.Should().NotBeEmpty(); // GitHub Copilot videos collection has items
         items.Should().AllSatisfy(item =>
         {
-            // Videos collection includes subcollections (ghc-features, vscode-updates)
-            var validCollections = new[] { "videos", "ghc-features", "vscode-updates" };
+            // Videos collection stores all video items including ghc-features and vscode-updates
+            var validCollections = new[] { "videos" };
             item.CollectionName.Should().BeOneOf(validCollections);
         });
     }
@@ -290,38 +290,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         // Assert
         section!.Name.Should().Be(expectedSection);
-    }
-
-    [Fact]
-    public async Task GetSectionItems_ShouldNotIncludeDraftItems()
-    {
-        // Act - Use collections/all endpoint to get all items in a section
-        var response = await _client.GetAsync("/api/sections/ai/collections/all/items", TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
-        items.Should().NotBeNull();
-
-        // Should not include draft items
-        items!.Should().NotContain(item => item.Draft, "section items endpoint should filter out drafts");
-    }
-
-    [Fact]
-    public async Task GetSectionCollectionItems_ShouldNotIncludeDraftItems()
-    {
-        // Act - News collection in AI section (our draft is ai + news)
-        var response = await _client.GetAsync("/api/sections/ai/collections/news/items", TestContext.Current.CancellationToken);
-
-        // Assert
-        response.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var items = (await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
-        items.Should().NotBeNull();
-
-        // Should not include draft news items
-        items!.Should().NotContain(item => item.Draft, "section collection items endpoint should filter out drafts");
     }
 
     /// <summary>
@@ -1288,12 +1256,8 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     }
 
     [Fact]
-    public async Task GetContentDetail_ShouldNotReturnDraftContent()
+    public async Task GetContentDetail_ReturnsDetailForInternalContent()
     {
-        // This test verifies that draft content is not accessible via the detail endpoint
-        // We can't easily test this without knowing specific draft slugs,
-        // but we can verify that any returned content is not marked as draft
-
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
         var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
@@ -1307,7 +1271,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var detail = await response.Content.ReadFromJsonAsync<ContentItemDetail>(TestContext.Current.CancellationToken);
         detail.Should().NotBeNull();
-        detail!.Draft.Should().BeFalse("Detail endpoint should not return draft content");
     }
 
     [Fact]
@@ -1570,42 +1533,6 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         // from/to with 2 years should return more (or equal) items than lastDays=7
         itemsWithFromTo!.Count.Should().BeGreaterThanOrEqualTo(itemsWithLastDays!.Count,
             "from/to with 2 years range should include at least as many items as lastDays=7");
-    }
-
-    [Fact]
-    public async Task GetCollectionItems_SubcollectionWithLastDaysZero_ReturnsAllItems()
-    {
-        // Arrange - The vscode-updates subcollection has a test video dated 2024-01-01
-        // Without lastDays=0, the 90-day default filter would exclude older items
-
-        // Act - Query with lastDays=0 to disable date filtering
-        var responseAll = await _client.GetAsync(
-            "/api/sections/github-copilot/collections/videos/items?subcollection=vscode-updates&lastDays=0",
-            TestContext.Current.CancellationToken);
-
-        // Also query with default date filter (no lastDays param)
-        var responseDefault = await _client.GetAsync(
-            "/api/sections/github-copilot/collections/videos/items?subcollection=vscode-updates",
-            TestContext.Current.CancellationToken);
-
-        // Assert
-        responseAll.StatusCode.Should().Be(HttpStatusCode.OK);
-        responseDefault.StatusCode.Should().Be(HttpStatusCode.OK);
-
-        var itemsAll = (await responseAll.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
-        var itemsDefault = (await responseDefault.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
-
-        itemsAll.Should().NotBeNull();
-
-        // lastDays=0 should return at least as many items as default filter
-        itemsAll!.Count.Should().BeGreaterThanOrEqualTo(itemsDefault!.Count,
-            "lastDays=0 should disable date filtering and return all subcollection items");
-
-        // All items should be from the vscode-updates subcollection
-        itemsAll.Should().AllSatisfy(item =>
-        {
-            item.SubcollectionName.Should().Be("vscode-updates");
-        });
     }
 
     [Fact]

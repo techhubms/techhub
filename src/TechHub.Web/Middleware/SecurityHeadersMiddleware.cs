@@ -45,7 +45,7 @@ public class SecurityHeadersMiddleware
                 "default-src 'self'; " +
                 "script-src 'self' 'unsafe-inline' https://*.googletagmanager.com https://*.google-analytics.com https://js.monitor.azure.com; " +
                 "style-src 'self' 'unsafe-inline'; " +
-                "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; " +
+                "img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com https://img.youtube.com; " +
                 "connect-src 'self' wss: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.applicationinsights.azure.com https://dc.services.visualstudio.com; " +
                 "font-src 'self'; " +
                 "frame-src 'self' https://www.youtube-nocookie.com; " +

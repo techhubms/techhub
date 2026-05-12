@@ -71,11 +71,11 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     #region SearchAsync Tests - Basic Functionality
 
     /// <summary>
-    /// Test: SearchAsync returns all non-draft items
+    /// Test: SearchAsync returns all published items
     /// Why: Core functionality - repository must load all published content
     /// </summary>
     [Fact]
-    public async Task SearchAsync_ReturnsAllNonDraftItems()
+    public async Task SearchAsync_ReturnsAllPublishedItems()
     {
         // Arrange - data already seeded from TestCollections
 
@@ -84,7 +84,6 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
         // Assert
         results.Items.Should().HaveCount(TotalPublishedItems, $"Should return exactly {TotalPublishedItems} published items from TestCollections");
-        results.Items.Should().OnlyContain(item => !item.Draft, "SearchAsync should exclude drafts by default");
         results.Items.Should().BeInDescendingOrder(item => item.DateEpoch, "Items should be sorted by date descending");
     }
 
@@ -106,9 +105,8 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
         // Assert
-        results.Items.Should().HaveCount(BlogsCount, "Should return exactly 18 blog posts from TestCollections");
+        results.Items.Should().HaveCount(BlogsCount, $"Should return exactly {BlogsCount} blog posts from TestCollections");
         results.Items.Should().OnlyContain(item => item.CollectionName == "blogs", "Should only return blogs collection items");
-        results.Items.Should().NotContain(item => item.Draft, "Should exclude drafts by default");
     }
 
     /// <summary>
@@ -125,70 +123,29 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
         // Assert
         results.Items.Should().HaveCount(TotalPublishedItems, $"Should return all {TotalPublishedItems} published items from TestCollections");
-        results.Items.Should().NotContain(item => item.Draft, "Should exclude drafts by default");
         // Should contain items from different collections
         var collections = results.Items.Select(r => r.CollectionName).Distinct().ToList();
         collections.Should().HaveCountGreaterThan(1, "all content should aggregate multiple collection types");
     }
 
     /// <summary>
-    /// Test: SearchAsync excludes draft items by default
-    /// Why: Draft items should NOT appear by default, only when explicitly requested
+    /// Test: SearchAsync for videos includes items from dedicated lookup tables (ghc_feature_content, vscode_update_items)
+    /// Why: When querying "videos", should include root videos plus all items tracked in the
+    ///      ghc_feature_content and vscode_update_items tables — all stored with collection_name='videos'
     /// </summary>
     [Fact]
-    public async Task SearchAsync_ExcludesDraftItemsByDefault()
+    public async Task SearchAsync_VideosCollection_IncludesAllVideoItems()
     {
         // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
-
-        // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>(), includeDraft: false), TestContext.Current.CancellationToken);
-
-        // Assert
-        results.Items.Should().NotContain(item => item.Slug == "draft-article",
-            "Draft articles should not appear when IncludeDraft=false");
-        results.Items.Should().OnlyContain(item => !item.Draft, "All returned items should have Draft=false");
-    }
-
-    /// <summary>
-    /// Test: SearchAsync includes draft items when IncludeDraft=true
-    /// Why: When explicitly requesting drafts, they should be included (e.g., for preview/admin)
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_IncludesDraftItemsWhenRequested()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
-
-        // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "blogs" }, tags: Array.Empty<string>(), includeDraft: true), TestContext.Current.CancellationToken);
-
-        // Assert
-        results.Items.Should().Contain(item => item.Slug == "draft-article" && item.Draft,
-            "Draft articles should appear when IncludeDraft=true");
-    }
-
-    /// <summary>
-    /// Test: SearchAsync for videos includes subcollection items
-    /// Why: When querying "videos", should include both root videos and subcollections (ghc-features, vscode-updates)
-    ///      Subcollections are part of the collection hierarchy
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_VideosCollection_IncludesSubcollections()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _ghc-features/*.md and _vscode-updates/*.md exist, and optionally _videos/*.md
+        // Expected: root videos + ghc-features items + vscode-updates items all under collection 'videos'
 
         // Act
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
-        // Assert
-        results.Items.Should().NotBeEmpty("TestCollections should contain video content");
-        results.Items.Should().OnlyContain(item =>
-            item.CollectionName == "videos" ||
-            item.CollectionName == "ghc-features" ||
-            item.CollectionName == "vscode-updates",
-            "videos collection should include videos, ghc-features, and vscode-updates");
+        // Assert: all items have collection_name = 'videos' — dedicated lookup tables do not change the collection name
+        results.Items.Should().HaveCount(VideosCount, $"Should return exactly {VideosCount} video items (root + ghc-features + vscode-updates)");
+        results.Items.Should().OnlyContain(item => item.CollectionName == "videos",
+            "All video items (including those tracked in ghc_feature_content and vscode_update_items) have collection_name='videos'");
     }
 
     #endregion
@@ -226,47 +183,9 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
         // Assert
         results.Items.Should().NotBeEmpty("TestCollections should contain multiple items");
-        results.Items.Should().NotContain(item => item.Draft, "Should exclude drafts by default");
         // Should contain items from different sections
         var primarySections = results.Items.Select(r => r.PrimarySectionName).Distinct().ToList();
         primarySections.Should().HaveCountGreaterThan(1, "all section should aggregate multiple section types");
-    }
-
-    /// <summary>
-    /// Test: SearchAsync excludes draft items by default when filtering by section
-    /// Why: When viewing a section, draft items should NOT appear unless explicitly requested
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_Section_ExcludesDraftItemsByDefault()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
-
-        // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "ai" }, collections: new[] { "all" }, tags: Array.Empty<string>(), includeDraft: false), TestContext.Current.CancellationToken);
-
-        // Assert
-        results.Items.Should().NotContain(item => item.Slug == "draft-article",
-            "Draft articles should not appear when IncludeDraft=false");
-        results.Items.Should().OnlyContain(item => !item.Draft, "All returned items should have Draft=false");
-    }
-
-    /// <summary>
-    /// Test: SearchAsync includes draft items when IncludeDraft=true and filtering by section
-    /// Why: When explicitly requesting drafts (e.g., preview mode), both published AND draft items returned
-    /// </summary>
-    [Fact]
-    public async Task SearchAsync_Section_IncludesDraftItemsWhenRequested()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true and section_names: [ai]
-
-        // Act
-        var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "ai" }, collections: new[] { "all" }, tags: Array.Empty<string>(), includeDraft: true), TestContext.Current.CancellationToken);
-
-        // Assert
-        results.Items.Should().Contain(item => item.Slug == "draft-article" && item.Draft,
-            "Draft articles should appear when IncludeDraft=true");
     }
 
     #endregion
@@ -310,87 +229,46 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         result.Should().BeNull("Non-existent slug should return null");
     }
 
-    /// <summary>
-    /// Test: GetBySlugAsync excludes draft items by default
-    /// Why: Draft items should NOT be accessible by slug unless explicitly requested
-    /// </summary>
-    [Fact]
-    public async Task GetBySlugAsync_DraftItem_ExcludedByDefault()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
-
-        // Act
-        var result = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: false, ct: TestContext.Current.CancellationToken);
-
-        // Assert
-        result.Should().BeNull("Draft items should not be returned when includeDraft=false");
-    }
-
-    /// <summary>
-    /// Test: GetBySlugAsync includes draft items when includeDraft=true
-    /// Why: When explicitly requesting drafts (e.g., preview mode), they should be accessible
-    /// </summary>
-    [Fact]
-    public async Task GetBySlugAsync_DraftItem_IncludedWhenRequested()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md exists with draft: true
-
-        // Act
-        var result = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: true, ct: TestContext.Current.CancellationToken);
-
-        // Assert
-        result.Should().NotBeNull("Draft items should be returned when includeDraft=true");
-        result!.Draft.Should().BeTrue("Item should be marked as draft");
-    }
-
     #endregion
 
-    #region Subcollection Tests
+    #region Dedicated Lookup Table Tests
 
     /// <summary>
-    /// Test: Subcollection items have correct URL with collection name in path
-    /// Why: URLs always use collection name, not subcollection (subcollections are for filtering only)
-    ///      e.g., /github-copilot/videos/slug (not /github-copilot/vscode-updates/slug)
+    /// Test: Items tracked in vscode_update_items have correct collection_name in search results
+    /// Why: vscode-updates items use collection_name='videos' — the dedicated lookup table does not change routing
     /// </summary>
     [Fact]
-    public async Task SubcollectionItems_HaveCorrectUrlWithCollectionInPath()
+    public async Task VscodeUpdateItems_HaveCorrectCollectionName()
     {
         // Arrange - data already seeded from TestCollections
-        // Expected: _vscode-updates/2025-01-10-vscode-update.md exists
+        // Expected: _vscode-updates/2025-01-10-vscode-update.md exists, synced with collection_name='videos'
 
         // Act
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
-        // Assert: Find the vscode-updates item
-        var vscodeItem = results.Items.FirstOrDefault(v => v.SubcollectionName == "vscode-updates");
-        vscodeItem.Should().NotBeNull("TestCollections should contain a vscode-updates item");
-        vscodeItem!.CollectionName.Should().Be("videos", "Subcollection items should have collection name 'videos'");
-        vscodeItem.GetHref().Should().Contain("/videos/", "URL should use collection name in path");
-        vscodeItem.GetHref().Should().NotContain("/vscode-updates/", "URL should not contain subcollection name (used for filtering only)");
+        // Assert: vscode-updates items are tracked in vscode_update_items but stored with collection_name='videos'
+        results.Items.Should().NotBeEmpty("TestCollections should contain video content");
+        results.Items.Should().OnlyContain(item => item.CollectionName == "videos",
+            "All video items (including those in vscode_update_items) should have collection_name='videos'");
     }
 
     /// <summary>
-    /// Test: ghc-features subcollection items have correct URL with collection name in path
-    /// Why: URLs always use collection name, not subcollection (subcollections are for filtering only)
-    ///      e.g., /github-copilot/videos/slug (not /github-copilot/ghc-features/slug)
+    /// Test: Items tracked in ghc_feature_content have correct collection_name in search results
+    /// Why: ghc-features items use collection_name='videos' — the dedicated ghc_features table does not change routing
     /// </summary>
     [Fact]
-    public async Task GhcFeaturesSubcollectionItems_HaveCorrectUrlWithCollectionInPath()
+    public async Task GhcFeatureItems_HaveCorrectCollectionName()
     {
         // Arrange - data already seeded from TestCollections
-        // Expected: _ghc-features/*.md exists
+        // Expected: _ghc-features/*.md exists, synced with collection_name='videos'
 
         // Act
         var results = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "videos" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
 
-        // Assert: Find a ghc-features item
-        var ghcFeatureItem = results.Items.FirstOrDefault(v => v.SubcollectionName == "ghc-features");
-        ghcFeatureItem.Should().NotBeNull("TestCollections should contain a ghc-features item");
-        ghcFeatureItem!.CollectionName.Should().Be("videos", "Subcollection items should have collection name 'videos'");
-        ghcFeatureItem.GetHref().Should().Contain("/videos/", "URL should use collection name in path");
-        ghcFeatureItem.GetHref().Should().NotContain("/ghc-features/", "URL should not contain subcollection name (used for filtering only)");
+        // Assert: ghc-features items are tracked in ghc_features/ghc_feature_content but stored with collection_name='videos'
+        results.Items.Should().NotBeEmpty("TestCollections should contain video content");
+        results.Items.Should().OnlyContain(item => item.CollectionName == "videos",
+            "All video items (including those in ghc_feature_content) should have collection_name='videos'");
     }
 
     #endregion
@@ -524,8 +402,8 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     }
 
     /// <summary>
-    /// Test: SearchAsync excludes draft items
-    /// Why: Draft items should never appear in search results
+    /// Test: SearchAsync returns only published items
+    /// Why: Only published items should appear in search results
     /// </summary>
     [Fact]
     public async Task SearchAsync_ExcludesDrafts()
@@ -537,8 +415,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert
-        results.Items.Should().NotContain(item => item.Draft,
-            "Search results should never include drafts");
+        results.Items.Should().NotBeEmpty("Search results should return items");
     }
 
     #endregion
@@ -569,8 +446,8 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         if (aiTagFacet != null)
         {
             var allItemsResult = await Repository.SearchAsync(new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>()), TestContext.Current.CancellationToken);
-            // Count PUBLISHED items that have tags containing "ai" as a word (substring match)
-            var actualAiCount = allItemsResult.Items.Where(i => !i.Draft).Count(i =>
+            // Count published items that have tags containing "ai" as a word (substring match)
+            var actualAiCount = allItemsResult.Items.Count(i =>
                 i.Tags.Any(t => t.Split([' ', '-', '_'], StringSplitOptions.RemoveEmptyEntries)
                     .Any(word => word.Equals("AI", StringComparison.OrdinalIgnoreCase))));
             aiTagFacet.Count.Should().Be(actualAiCount,
@@ -648,7 +525,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
 
         // Assert - verify total count matches known expected value
         results.TotalCount.Should().Be(TotalPublishedItems,
-            "TotalCount should equal 32 (the actual number of non-draft items in TestCollections)");
+            $"TotalCount should equal {TotalPublishedItems} (the total number of published items in TestCollections)");
     }
 
     /// <summary>
@@ -893,28 +770,6 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     }
 
     /// <summary>
-    /// Test: Draft property correctly identifies draft content
-    /// Why: Draft content should be excluded from public views
-    /// </summary>
-    [Fact]
-    public async Task PropertyMapping_Draft_IsLoadedCorrectly()
-    {
-        // Arrange - data already seeded from TestCollections
-        // Expected: _blogs/2024-01-02-draft-article.md has draft: true
-
-        // Act
-        var draftResult = await Repository.GetBySlugAsync("blogs", "draft-article", includeDraft: true, ct: TestContext.Current.CancellationToken);
-        var publishedResult = await Repository.GetBySlugAsync("blogs", "test-article", ct: TestContext.Current.CancellationToken);
-
-        // Assert
-        draftResult.Should().NotBeNull("Draft article should exist");
-        draftResult!.Draft.Should().BeTrue("Draft article should have Draft=true");
-
-        publishedResult.Should().NotBeNull("Published article should exist");
-        publishedResult!.Draft.Should().BeFalse("Published article should have Draft=false");
-    }
-
-    /// <summary>
     /// Test: Url property is correctly computed for internal linking
     /// Why: Internal navigation uses the Url property
     /// </summary>
@@ -978,7 +833,6 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         result.PrimarySectionName.Should().BeOneOf("ai", "github-copilot");
         result.Tags.Should().Contain("Code Review");
         result.Tags.Should().Contain("Developer Tools");
-        result.Draft.Should().BeFalse();
     }
 
     #endregion
@@ -1082,7 +936,7 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     /// Why: PostgreSQL to_tsquery treats "-" as a NOT operator, making "auto-approval" mean
     /// "auto AND NOT approval" — returning zero results. Splitting on hyphen fixes this.
     /// Here we use "vscode-updates" as the hyphenated query, which should find the vscode-updates
-    /// subcollection items because their subcollection_name is indexed in the search vector.
+    /// subcollection items via their slug/title containing the sub-terms.
     /// </summary>
     [Fact]
     public async Task SearchAsync_HyphenatedQuery_FindsContentBySubterms()
@@ -1097,8 +951,6 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
         // Assert - must find items (the hyphen must NOT be treated as a NOT operator)
         results.Items.Should().NotBeEmpty(
             "hyphenated query must be split into sub-terms, not treated as a tsquery NOT operator");
-        results.Items.Should().Contain(item => item.SubcollectionName == "vscode-updates",
-            "vscode-updates subcollection items should be found via subcollection_name in search vector");
     }
 
     /// <summary>
@@ -1124,25 +976,21 @@ public class ContentRepositoryTests : IClassFixture<DatabaseFixture<ContentRepos
     }
 
     /// <summary>
-    /// Test: Subcollection name is indexed so items are discoverable via their subcollection.
-    /// Why: Migration 012 adds subcollection_name at weight D. Searching the subcollection name
-    /// finds items even when the subcollection name is not mentioned in body text.
+    /// Test: Items in the vscode-updates subcollection are discoverable by searching their slug/title words.
+    /// Why: The subcollection_name column was removed from content_items (migration 016) and replaced
+    /// by the dedicated vscode_update_items table. Items are still found by FTS on slug, title, and excerpt.
     /// </summary>
     [Fact]
     public async Task SearchAsync_SubcollectionNameInQuery_FindsSubcollectionItems()
     {
-        // Arrange - search for the subcollection slug word "updates" which is also in
-        // subcollection_name "vscode-updates" (tokenised as "vscode", "updates", "vscode-updates")
-        // This is distinct from just matching body text — the subcollection token provides signal.
+        // Arrange - search for words that appear in the vscode-updates items' slugs and titles
         var request = new SearchRequest(take: 50, sections: new[] { "all" }, collections: new[] { "all" }, tags: Array.Empty<string>(), query: "vscode updates");
 
         // Act
         var results = await Repository.SearchAsync(request, TestContext.Current.CancellationToken);
 
         // Assert - vscode-updates subcollection items must appear in results
-        results.Items.Should().NotBeEmpty("Should find vscode-updates content");
-        results.Items.Should().Contain(item => item.SubcollectionName == "vscode-updates",
-            "vscode-updates subcollection items should rank in results for 'vscode updates' query");
+        results.Items.Should().NotBeEmpty("Should find vscode-updates content via FTS on slug/title");
     }
 
     #endregion

@@ -94,12 +94,10 @@ else
 }
 
 @code {
-    private const string VideoCollectionName = "vscode-updates";
-
     [Parameter]
     public string? VideoSlug { get; set; }
 
-    private List<TechHub.Core.Models.ContentItem> videoItems = new();
+    private List<TechHub.Core.Models.VscodeUpdateListItem> videoItems = new();
     private TechHub.Core.Models.ContentItemDetail? selectedVideoDetail;
     private string selectedVideoSlug = "";
     private PersistingComponentStateSubscription? _persistSubscription;
@@ -179,8 +177,8 @@ else
 
         try
         {
-            var result = await ApiClient.GetCollectionItemsAsync("github-copilot", "videos", subcollection: VideoCollectionName, take: 5, lastDays: 0);
-            videoItems = (result?.Items ?? [])
+            var result = await ApiClient.GetPublicVscodeUpdatesAsync();
+            videoItems = result
                 .OrderByDescending(v => ExtractVersionFromTitle(v.Title))
                 .ToList();
 
@@ -274,7 +272,7 @@ else
 
     private sealed class PersistedVSCodeUpdatesData
     {
-        public List<TechHub.Core.Models.ContentItem>? VideoItems { get; set; }
+        public List<TechHub.Core.Models.VscodeUpdateListItem>? VideoItems { get; set; }
         public TechHub.Core.Models.ContentItemDetail? SelectedVideoDetail { get; set; }
         public string? SelectedVideoSlug { get; set; }
     }

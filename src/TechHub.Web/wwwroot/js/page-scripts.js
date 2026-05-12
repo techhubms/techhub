@@ -254,13 +254,21 @@ function closeMermaidModal() {
  */
 export async function initTocScrollSpy() {
     const tocElement = document.querySelector('[data-toc-scroll-spy]');
-    if (!tocElement) return;
+    if (!tocElement) {
+        // No TOC element on this page — signal complete so WaitForTocInitializedAsync
+        // does not hang for 60 s when the page genuinely has no TOC.
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-initialized');
+        return;
+    }
 
     try {
         const module = await import('./scroll-manager.js');
         module.initTocScrollSpy();
     } catch (error) {
         console.error('Failed to load TOC scroll spy:', error);
+        // Signal complete even on import failure so tests can fail fast
+        // with a descriptive assertion rather than a 60 s timeout.
+        if (typeof window.__e2eSignal === 'function') window.__e2eSignal('toc-initialized');
     }
 }
 
@@ -369,6 +377,51 @@ window.initHighlighting = initHighlighting;
 window.initMermaid = initMermaid;
 window.initTocScrollSpy = initTocScrollSpy;
 window.initCustomPages = initCustomPages;
+
+// ─── Features Timeline Helpers ────────────────────────────────────────────────
+
+/**
+ * Prevent the browser from scrolling the page when Space is pressed on a
+ * features-timeline-card element (role="button" div).
+ * Fires in the capture phase so it takes effect before Blazor's event dispatch.
+ */
+document.addEventListener('keydown', function(e) {
+    if (e.key === ' ' && e.target instanceof Element && e.target.classList.contains('features-timeline-card')) {
+        e.preventDefault();
+    }
+}, true);
+
+/**
+ * After a tier filter is selected, scroll the sidebar tier list back to the top
+ * so the active card is visible without jumping the main content.
+ * Also blurs the focused button so Blazor's post-render focus management
+ * does not scroll the main content to keep the button in view.
+ */
+window.scrollTierCardIntoView = function(tierId) {
+    // Blur whichever element triggered this so Blazor doesn't scroll to it after re-render
+    if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+    }
+    const scroll = document.querySelector('.features-tiers-scroll');
+    if (!scroll) return;
+    if (!tierId) {
+        // No active tier — scroll back to top
+        scroll.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+    }
+    // Scroll so the active card sits at the top of the sidebar container.
+    // Use getBoundingClientRect() to get the card's position relative to the
+    // scroll container viewport, then add the current scrollTop to convert to
+    // scroll-offset coordinates. card.offsetTop is relative to the nearest
+    // positioned ancestor which may not be the scroll container itself.
+    const card = document.getElementById('tier-' + tierId);
+    if (card) {
+        const cardRect = card.getBoundingClientRect();
+        const scrollRect = scroll.getBoundingClientRect();
+        const offsetTop = scroll.scrollTop + (cardRect.top - scrollRect.top);
+        scroll.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    }
+};
 
 // ─── Script Lifecycle Flag ────────────────────────────────────────────────────
 // Single flag: window.__scriptsReady
