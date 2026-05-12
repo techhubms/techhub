@@ -60,6 +60,9 @@ public static class GhcFeaturesEndpoints
         IGhcFeatureRepository repo,
         CancellationToken ct)
     {
+        // Hard-coded upper bound of 100 items. This endpoint has no pagination parameters
+        // and is designed for the VS Code Updates page which shows a curated set of items.
+        // If this ever needs to scale beyond 100, add a limit/offset query parameter.
         var (items, _) = await repo.GetVscodeUpdateItemsAsync(offset: 0, pageSize: 100, search: null, ct);
         return Results.Ok(items);
     }

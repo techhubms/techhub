@@ -17,8 +17,8 @@ UPDATE content_items
 SET    content = (
     SELECT string_agg(line, E'\n' ORDER BY rn)
     FROM (
-        SELECT row_number() OVER () AS rn,
-               unnest(string_to_array(content, E'\n')) AS line
+        SELECT t.line, t.rn
+        FROM unnest(string_to_array(content, E'\n')) WITH ORDINALITY AS t(line, rn)
     ) AS lines
     WHERE line NOT LIKE '%multirid%'
 )

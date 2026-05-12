@@ -43,7 +43,8 @@ LEFT JOIN ghc_feature_content l ON l.feature_slug = f.slug
 LEFT JOIN content_items ci
     ON ci.collection_name = l.collection_name
    AND ci.slug = l.item_slug
-ORDER BY f.release_date DESC NULLS LAST, f.created_at DESC, f.slug";
+ORDER BY f.release_date DESC NULLS LAST, f.created_at DESC, f.slug,
+         l.sort_order, l.item_slug";
 
         return await QueryFeaturesAsync(Sql, null, ct);
     }

@@ -130,7 +130,7 @@ The three GenAI endpoints use a special handler that processes markdown content 
 
 All three GenAI pages (`genai-basics`, `genai-advanced`, `genai-applied`) share a single Razor component (`GenAI.razor`) with three `@page` routes.
 
-The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content through the standard content collection API, filtering to items tracked in the `vscode_update_items` lookup table.
+The VS Code Updates page (`GitHubCopilotVSCodeUpdates.razor`) is configured as `Custom: true` but does **not** use a custom pages API endpoint. It fetches content via the dedicated public endpoint `GET /api/vscode-updates` (implemented by `GetPublicVscodeUpdatesAsync`), which returns items tracked in the `vscode_update_items` lookup table.
 
 See [src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs](../src/TechHub.Api/Endpoints/CustomPagesEndpoints.cs) for endpoint implementation.
 
@@ -142,12 +142,12 @@ Some custom pages are populated by specialized video content tracked in dedicate
 
 **Location**: Videos stored under `collection_name = 'videos'` and tracked in the `ghc_features` and `ghc_feature_content` tables.
 
-Each GHC feature markdown file in `_videos/ghc-features/` is synced as both a regular `content_item` and a `ghc_features` entry. The `ghc_feature_content` table links features to their related video content items.
+GHC features are managed via the admin UI and the `ghc_features`/`ghc_feature_content` database tables. They can also be synced from the content repository's `_videos/ghc-features/` directory via `ContentSyncService`. The `ghc_feature_content` table links features to their related video content items.
 
 **Requirements**:
 
-- Managed via markdown files in `_videos/ghc-features/` (synced by `ContentSyncService`)
-- **Metadata** (frontmatter):
+- Managed via the admin UI or by `ContentSyncService` syncing markdown files from the content repository's `_videos/ghc-features/` directory
+- **Metadata** (frontmatter, when synced via `ContentSyncService`):
   - Requires `plans` array indicating supported tiers (e.g. `["Free", "Pro", "Business", "Pro+", "Enterprise"]`)
   - Requires `ghes_support` boolean
 
@@ -174,7 +174,7 @@ Items are automatically identified based on feed name and title pattern rules co
 - Tracked in the `vscode_update_items` lookup table
 - Populates the updates page at `/github-copilot/vscode-updates`
 - Latest video is featured prominently
-- Fetches content with `lastDays=0` to bypass the default 90-day date filter, since this is a curated collection that should show all items regardless of publication date
+- Fetched via `GET /api/vscode-updates`, which returns all items without a date filter
 
 ## Custom Page Ordering
 

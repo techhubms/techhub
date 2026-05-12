@@ -321,7 +321,7 @@ Returns all GHC features with their content links. Public endpoint (no authentic
   {
     "slug": "copilot-free-plan",
     "title": "GitHub Copilot Free Plan",
-    "excerpt": "Free tier for individual developers.",
+    "description": "Free tier for individual developers.",
     "releaseDate": 1700000000,
     "plans": ["Free", "Pro"],
     "ghesSupport": false,

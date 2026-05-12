@@ -12,7 +12,7 @@ namespace TechHub.TestUtilities;
 /// - 43 published items total (was 42, added 1 ghc-features video for timeline video slug testing)
 /// - Collections: blogs (22), news (7), videos (10), community (2), roundups (2)
 /// - Tag distributions: AI (12 items), DevOps (1 item), GitHub Copilot (4 tag symmetry test items)
-/// - Date ranges: 2024 items (22), 2026 items (20)
+/// - Date ranges: 2023 items (1), 2024 items (22), 2025 items (9), 2026 items (11)
 /// </remarks>
 public static class TestDataConstants
 {

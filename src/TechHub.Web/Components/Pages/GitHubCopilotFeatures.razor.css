@@ -450,9 +450,29 @@ html.keyboard-nav .features-timeline-card:focus-visible {
   line-height: 1;
 }
 
-/* Normalize GHES and Video badge sizes to match plan badges in the timeline */
-.features-timeline-badges .badge-success,
+/* Normalize Video badge size to match plan badges in the collapsed header */
 .features-timeline-badges .badge-info {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem var(--spacing-1);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+/* ─── Expandable Feature Detail ──────────────────────────────────── */
+
+/* Plan and GHES badges shown in the expanded detail section */
+.features-timeline-detail-badges {
+  display: flex;
+  gap: var(--spacing-1);
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: var(--spacing-2);
+}
+
+.features-timeline-detail-badges .badge-success {
   display: inline-flex;
   align-items: center;
   padding: 0.25rem var(--spacing-1);

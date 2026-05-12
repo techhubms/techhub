@@ -42,8 +42,7 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
 
         // Assert
         features.Should().NotBeNull("endpoint should return a JSON array");
-        // Note: seeded ghc-features items may or may not have ghc_features rows (seeded as content_items only)
-        // The list may be empty or non-empty depending on test data setup
+        features.Should().NotBeEmpty("endpoint should return seeded GHC feature entries from TestCollections");
     }
 
     [Fact]
@@ -106,18 +105,15 @@ public class GhcFeaturesEndpointsTests : IClassFixture<TechHubIntegrationTestApi
     [Fact]
     public async Task DeleteGhcFeature_NonExistentSlug_ReturnsNotFound()
     {
-        // Arrange — use the admin client provided by the factory
-        var adminClient = _client; // factory sets up admin auth if configured
-
-        // This test is specific to slug-not-found behavior;
-        // the factory's default client has admin auth in test environment
-        var response = await adminClient.DeleteAsync(
+        // Arrange — AzureAd:ClientId is not set in test configuration,
+        // so the AdminOnly policy allows all requests (local dev bypass).
+        // The slug does not exist, so the endpoint should return 404.
+        var response = await _client.DeleteAsync(
             "/api/ghc-features/slug-that-does-not-exist-xyz", TestContext.Current.CancellationToken);
 
-        // Assert — 404 for non-existent slug (if admin) or 401/403 (if not admin)
-        response.StatusCode.Should().BeOneOf(
+        // Assert — AdminOnly allows all in test env (no Azure AD configured), so we get 404
+        response.StatusCode.Should().Be(
             HttpStatusCode.NotFound,
-            HttpStatusCode.Unauthorized,
-            HttpStatusCode.Forbidden);
+            "non-existent slug should return 404 when authorization is bypassed in test environment");
     }
 }

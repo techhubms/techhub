@@ -311,11 +311,15 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
+        await Page.WaitForBlazorReadyAsync();
 
-        // Get initial entry count
-        var entriesBefore = Page.Locator(".features-timeline-entry");
-        var countBefore = await entriesBefore.CountAsync();
+        // Get initial entry count and count of GHES-supported entries before filtering
+        var countBefore = await Page.Locator(".features-timeline-entry").CountAsync();
         countBefore.Should().BeGreaterThan(0, "Should have timeline entries before filtering");
+
+        // Count how many entries already show the GHES badge — these are the entries
+        // that should remain visible after the GHES filter is applied.
+        var ghesCountBefore = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
 
         // Act - Click the GHES toggle switch and wait for the checkbox to be checked
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
@@ -323,14 +327,14 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             await Assertions.Expect(ghesToggle.Locator(".features-ghes-toggle-input")).ToBeCheckedAsync(new() { Timeout = 2000 }));
 
         // Wait for Blazor to re-render with filtered results.
-        // The checkbox state changes immediately (browser-side), but the server needs a
-        // SignalR round-trip before the component re-renders and removes non-GHES entries.
-        int countAfter = countBefore;
+        // After filtering, the count must equal the pre-filter GHES entry count.
+        // This assertion is based on actual data rather than assuming all features
+        // lack GHES support, making it robust regardless of the data set.
         await BlazorHelpers.RetryUntilPassAsync(async () =>
         {
-            countAfter = await Page.Locator(".features-timeline-entry").CountAsync();
-            countAfter.Should().BeLessThan(countBefore,
-                "Filtering by GHES should show fewer entries than unfiltered");
+            var countAfter = await Page.Locator(".features-timeline-entry").CountAsync();
+            countAfter.Should().Be(ghesCountBefore,
+                $"After GHES filter, should show exactly {ghesCountBefore} entries (those with GHES support), not {countBefore}");
         });
     }
 
@@ -345,17 +349,17 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var totalCount = await allEntries.CountAsync();
         totalCount.Should().BeGreaterThan(0);
 
-        // Act - Click the Enterprise tier filter (most restrictive, fewest features)
-        var enterpriseButton = Page.Locator(".features-timeline-filters button:has-text('Enterprise')");
-        await enterpriseButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(enterpriseButton).ToHaveClassAsync(
+        // Act - Click the Free tier filter (most restrictive: only Free-tagged features are shown)
+        var freeButton = Page.Locator(".features-timeline-filters button:has-text('Free')");
+        await freeButton.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(freeButton).ToHaveClassAsync(
                 new Regex("active"), new() { Timeout = 2000 }));
 
-        // Assert - Filtering by Enterprise tier must strictly reduce the count
+        // Assert - Filtering by Free tier must strictly reduce the count
         var filteredEntries = Page.Locator(".features-timeline-entry");
         var filteredCount = await filteredEntries.CountAsync();
         filteredCount.Should().BeLessThan(totalCount,
-            "Filtering by Enterprise tier should show fewer entries than unfiltered");
+            "Filtering by Free tier should show fewer entries than unfiltered (only Free-tagged features)");
     }
 
     [Fact]

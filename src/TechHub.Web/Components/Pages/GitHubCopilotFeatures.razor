@@ -134,14 +134,6 @@
                                                                     <div class="features-timeline-header-content">
                                                                         <h3 class="features-timeline-name">@feature.Title</h3>
                                                                         <div class="features-timeline-badges">
-                                                                            @foreach (var plan in feature.Plans)
-                                                                            {
-                                                                                <span class="badge-plan badge-plan-@GetPlanCssClass(plan)">@plan</span>
-                                                                            }
-                                                                            @if (feature.GhesSupport)
-                                                                            {
-                                                                                <span class="badge-success">✓ GHES</span>
-                                                                            }
                                                                             @if (feature.ContentLinks.Any(l => GetYouTubeVideoId(l.ItemExternalUrl) != null))
                                                                             {
                                                                                 <span class="badge-info">▶ Video</span>
@@ -152,6 +144,16 @@
                                                                 </div>
 
                                                                 <div id="feature-detail-@feature.Slug" class="features-timeline-detail @(isExpanded ? "expanded" : "")">
+                                                                    <div class="features-timeline-detail-badges">
+                                                                        @foreach (var plan in feature.Plans)
+                                                                        {
+                                                                            <span class="badge-plan badge-plan-@GetPlanCssClass(plan)">@plan</span>
+                                                                        }
+                                                                        @if (feature.GhesSupport)
+                                                                        {
+                                                                            <span class="badge-success">✓ GHES</span>
+                                                                        }
+                                                                    </div>
                                                                     <p class="features-timeline-description">@feature.Description</p>
                                                                     @if (!string.IsNullOrEmpty(videoId) && videoHref != null)
                                                                     {
