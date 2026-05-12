@@ -45,11 +45,11 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         result.Should().BeTrue("upsert of a new feature should return true");
 
         var row = await _fixture.Connection.QueryFirstOrDefaultAsync<dynamic>(
-            "SELECT slug, title, excerpt, release_date, plans, ghes_support FROM ghc_features WHERE slug = @Slug",
+            "SELECT slug, title, description, release_date, plans, ghes_support FROM ghc_features WHERE slug = @Slug",
             new { Slug = slug });
         ((object?)row).Should().NotBeNull("the inserted row must exist in ghc_features");
         ((string)row!.title).Should().Be("Test Feature Insert");
-        ((string)row.excerpt).Should().Be("Short excerpt");
+        ((string)row.description).Should().Be("Short excerpt");
         ((long?)row.release_date).Should().Be(1_700_000_000L);
         ((string)row.plans).Should().Be("Free,Pro");
         ((bool)row.ghes_support).Should().BeTrue();
@@ -87,10 +87,10 @@ public class GhcFeatureRepositoryTests : IClassFixture<DatabaseFixture<GhcFeatur
         // Assert
         result.Should().BeTrue();
         var row = await _fixture.Connection.QueryFirstAsync<dynamic>(
-            "SELECT title, excerpt, release_date, plans, ghes_support FROM ghc_features WHERE slug = @Slug",
+            "SELECT title, description, release_date, plans, ghes_support FROM ghc_features WHERE slug = @Slug",
             new { Slug = slug });
         ((string)row.title).Should().Be("Updated Title");
-        ((string)row.excerpt).Should().Be("Updated excerpt");
+        ((string)row.description).Should().Be("Updated excerpt");
         ((long?)row.release_date).Should().Be(1_800_000_000L);
         ((string)row.plans).Should().Be("Free,Enterprise");
         ((bool)row.ghes_support).Should().BeTrue();

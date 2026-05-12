@@ -28,7 +28,7 @@ public sealed class GhcFeatureRepository : IGhcFeatureRepository
 SELECT
     f.slug         AS Slug,
     f.title        AS Title,
-    f.excerpt      AS Description,
+    f.description  AS Description,
     f.release_date AS ReleaseDate,
     f.plans        AS PlansCsv,
     f.ghes_support AS GhesSupport,
@@ -55,7 +55,7 @@ ORDER BY f.release_date DESC NULLS LAST, f.created_at DESC, f.slug";
 SELECT
     f.slug         AS Slug,
     f.title        AS Title,
-    f.excerpt      AS Description,
+    f.description  AS Description,
     f.release_date AS ReleaseDate,
     f.plans        AS PlansCsv,
     f.ghes_support AS GhesSupport,
@@ -83,11 +83,11 @@ ORDER BY l.sort_order, l.item_slug";
         ArgumentNullException.ThrowIfNull(feature);
         var plansCsv = string.Join(",", feature.Plans);
         const string Sql = @"
-INSERT INTO ghc_features (slug, title, excerpt, release_date, plans, ghes_support, updated_at)
+INSERT INTO ghc_features (slug, title, description, release_date, plans, ghes_support, updated_at)
 VALUES (@Slug, @Title, @Description, @ReleaseDate, @PlansCsv, @GhesSupport, NOW())
 ON CONFLICT (slug) DO UPDATE SET
     title        = EXCLUDED.title,
-    excerpt      = EXCLUDED.excerpt,
+    description  = EXCLUDED.description,
     release_date = EXCLUDED.release_date,
     plans        = EXCLUDED.plans,
     ghes_support = EXCLUDED.ghes_support,

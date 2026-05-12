@@ -1542,7 +1542,15 @@ function Run {
             $buildResult = @{ Success = $true; SrcRebuilt = $true }
         }
         else {
-            # Development: Build only
+            # Development: Clean before build when -BuildOnly is specified
+            if ($BuildOnly) {
+                Write-Step "Cleaning solution"
+                dotnet clean $solutionPath --configuration $configuration --verbosity $verbosityLevel 2>&1 | Out-Host
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Error "Clean failed"
+                    return $false
+                }
+            }
             $buildResult = Invoke-Build
             if ($buildResult.Success -eq $false) {
                 return $false

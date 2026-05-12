@@ -762,11 +762,11 @@ public class ContentSyncService : IContentSyncService
                 var ghesSupport = GetBooleanFromFrontMatter(parsed.FrontMatter, "ghes_support");
 
                 await _connection.ExecuteAsync("""
-                    INSERT INTO ghc_features (slug, title, excerpt, release_date, plans, ghes_support)
-                    VALUES (@Slug, @Title, @Excerpt, @ReleaseDate, @Plans, @GhesSupport)
+                    INSERT INTO ghc_features (slug, title, description, release_date, plans, ghes_support)
+                    VALUES (@Slug, @Title, @Description, @ReleaseDate, @Plans, @GhesSupport)
                     ON CONFLICT (slug) DO UPDATE SET
                         title = @Title,
-                        excerpt = @Excerpt,
+                        description = @Description,
                         release_date = @ReleaseDate,
                         plans = @Plans,
                         ghes_support = @GhesSupport,
@@ -776,7 +776,7 @@ public class ContentSyncService : IContentSyncService
                     {
                         Slug = parsed.Slug,
                         Title = title,
-                        Excerpt = parsed.Excerpt,
+                        Description = parsed.Excerpt,
                         ReleaseDate = parsed.DateEpoch,
                         Plans = plans,
                         GhesSupport = ghesSupport
