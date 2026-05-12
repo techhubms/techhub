@@ -321,10 +321,18 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // that should remain visible after the GHES filter is applied.
         var ghesCountBefore = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
 
-        // Act - Click the GHES toggle switch and wait for the checkbox to be checked
+        // Act - Click the GHES toggle label (the visible element). The label has a Blazor @onclick
+        // handler that sets ghesFilterActive = true server-side — more reliable in CI than relying
+        // on @bind onchange propagation after a browser-native label click.
+        // WaitForBlazorInteractivityAsync is called on the label (visible), not the CSS-hidden input.
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
-        await ghesToggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(ghesToggle.Locator(".features-ghes-toggle-input")).ToBeCheckedAsync(new() { Timeout = 2000 }));
+        await ghesToggle.WaitForBlazorInteractivityAsync();
+        await ghesToggle.ClickAsync();
+
+        // Wait for Blazor to re-render with checked=true (set by @onclick handler + re-render).
+        // ToBeCheckedAsync works on hidden elements by checking the DOM checked property.
+        var ghesInput = ghesToggle.Locator(".features-ghes-toggle-input");
+        await Assertions.Expect(ghesInput).ToBeCheckedAsync();
 
         // Wait for Blazor to re-render with filtered results.
         // After filtering, the count must equal the pre-filter GHES entry count.

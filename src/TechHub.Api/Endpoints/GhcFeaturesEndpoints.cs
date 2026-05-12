@@ -79,6 +79,16 @@ public static class GhcFeaturesEndpoints
             return Results.BadRequest("The slug in the URL must match the slug in the request body.");
         }
 
+        if (string.IsNullOrWhiteSpace(feature.Title))
+        {
+            return Results.BadRequest("Title is required.");
+        }
+
+        if (feature.Plans == null)
+        {
+            return Results.BadRequest("Plans must not be null. Provide an empty array [] if no plans apply.");
+        }
+
         await repo.UpsertFeatureAsync(feature, ct);
         return Results.NoContent();
     }

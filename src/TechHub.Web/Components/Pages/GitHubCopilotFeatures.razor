@@ -82,10 +82,15 @@
                                     @onclick:stopPropagation="true"
                                     @onclick:preventDefault="true">@tier.Name</button>
                         }
-                        <label class="features-ghes-toggle" data-filter="ghes">
+                        <label class="features-ghes-toggle" data-filter="ghes"
+                               data-initialized="blazor"
+                               @onclick="ToggleGhesFilter"
+                               @onclick:stopPropagation="true"
+                               @onclick:preventDefault="true">
                             <input type="checkbox"
                                    class="features-ghes-toggle-input"
-                                   @bind="ghesFilterActive"
+                                   checked="@ghesFilterActive"
+                                   readonly
                                    data-initialized="blazor" />
                             <span class="features-ghes-toggle-track" aria-hidden="true">
                                 <span class="features-ghes-toggle-thumb"></span>
@@ -251,6 +256,11 @@ else if (_notFound)
         activeTierId = null;
         ghesFilterActive = false;
         await JS.InvokeVoidAsync("scrollTierCardIntoView", (object?)null);
+    }
+
+    private void ToggleGhesFilter()
+    {
+        ghesFilterActive = !ghesFilterActive;
     }
 
     private void ToggleFeature(string featureSlug)

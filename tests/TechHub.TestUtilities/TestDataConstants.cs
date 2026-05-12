@@ -34,8 +34,10 @@ public static class TestDataConstants
     public const int DevOpsTagCount = 1;
 
     // Date range counts (published items only)
+    public const int Items2023Count = 1;
     public const int Items2024Count = 22;
-    public const int Items2026Count = 20;
+    public const int Items2025Count = 9;
+    public const int Items2026Count = 11;
 
     // Facet-specific counts (context-dependent based on filtering)
     /// <summary>AI tag appears in facets with this count when no filters applied</summary>

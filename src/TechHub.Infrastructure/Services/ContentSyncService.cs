@@ -758,7 +758,7 @@ public class ContentSyncService : IContentSyncService
             if (string.Equals(parsed.SubcollectionName, "ghc-features", StringComparison.OrdinalIgnoreCase))
             {
                 var title = parsed.FrontMatter.GetValueOrDefault("title", "")?.ToString() ?? "";
-                var plans = ExpandPlansForTierHierarchy(GetPlansFromFrontMatter(parsed.FrontMatter));
+                var plans = GetPlansFromFrontMatter(parsed.FrontMatter);
                 var ghesSupport = GetBooleanFromFrontMatter(parsed.FrontMatter, "ghes_support");
 
                 if (string.IsNullOrWhiteSpace(title))
@@ -1008,53 +1008,6 @@ public class ContentSyncService : IContentSyncService
         }
 
         return string.Empty;
-    }
-
-    /// <summary>
-    /// Tier order for GitHub Copilot subscription plans, from lowest to highest.
-    /// Each higher tier includes all features from lower tiers (e.g. Business includes Pro includes Free).
-    /// </summary>
-    private static readonly string[] _ghcTierOrder = ["Free", "Student", "Pro", "Business", "Pro+", "Enterprise"];
-
-    /// <summary>
-    /// Expands a comma-separated plans string so that all tiers eligible to access the feature
-    /// are explicitly listed. The expansion rule: find the minimum tier index among the provided
-    /// plans, then include every tier at that index or higher.
-    ///
-    /// Examples:
-    ///   "Free"                  → "Free,Student,Pro,Business,Pro+,Enterprise"
-    ///   "Student,Pro,Business"  → "Student,Pro,Business,Pro+,Enterprise"
-    ///   "Pro+,Enterprise"       → "Pro+,Enterprise"   (already at top)
-    /// </summary>
-    private static string ExpandPlansForTierHierarchy(string plans)
-    {
-        if (string.IsNullOrWhiteSpace(plans))
-        {
-            return plans;
-        }
-
-        var planList = plans.Split(',')
-            .Select(p => p.Trim())
-            .Where(p => !string.IsNullOrEmpty(p))
-            .ToList();
-
-        var minIndex = _ghcTierOrder.Length;
-        foreach (var plan in planList)
-        {
-            var idx = Array.IndexOf(_ghcTierOrder, plan);
-            if (idx >= 0 && idx < minIndex)
-            {
-                minIndex = idx;
-            }
-        }
-
-        // No known tiers found — return as-is to avoid silently discarding data
-        if (minIndex >= _ghcTierOrder.Length)
-        {
-            return plans;
-        }
-
-        return string.Join(",", _ghcTierOrder.Skip(minIndex));
     }
 
     private static bool GetBooleanFromFrontMatter(Dictionary<string, object?> frontMatter, string key)

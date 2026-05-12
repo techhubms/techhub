@@ -82,7 +82,10 @@ ORDER BY l.sort_order, l.item_slug";
     public async Task<bool> UpsertFeatureAsync(GhcFeature feature, CancellationToken ct = default)
     {
         ArgumentNullException.ThrowIfNull(feature);
-        var plansCsv = string.Join(",", feature.Plans);
+        var plansCsv = string.Join(",",
+            (feature.Plans ?? Enumerable.Empty<string>())
+            .Select(p => p.Trim())
+            .Where(p => !string.IsNullOrEmpty(p)));
         const string Sql = @"
 INSERT INTO ghc_features (slug, title, description, release_date, plans, ghes_support, updated_at)
 VALUES (@Slug, @Title, @Description, @ReleaseDate, @PlansCsv, @GhesSupport, NOW())

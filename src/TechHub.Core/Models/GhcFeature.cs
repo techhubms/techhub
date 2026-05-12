@@ -13,7 +13,8 @@ public record GhcFeature
     public string Description { get; init; } = string.Empty;
 
     /// <summary>
-    /// Optional release date as a Unix timestamp (seconds, Europe/Brussels).
+    /// Optional release date as a Unix epoch seconds timestamp (UTC).
+    /// Display-timezone conversion (e.g. to Europe/Brussels) is a separate UI concern.
     /// Null when the feature has been announced but not yet shipped.
     /// </summary>
     public long? ReleaseDate { get; init; }
