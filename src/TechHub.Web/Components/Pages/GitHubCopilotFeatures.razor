@@ -142,7 +142,7 @@
                                                                             {
                                                                                 <span class="badge-success">✓ GHES</span>
                                                                             }
-                                                                            @if (feature.ContentLinks.Count > 0)
+                                                                            @if (feature.ContentLinks.Any(l => GetYouTubeVideoId(l.ItemExternalUrl) != null))
                                                                             {
                                                                                 <span class="badge-info">▶ Video</span>
                                                                             }
