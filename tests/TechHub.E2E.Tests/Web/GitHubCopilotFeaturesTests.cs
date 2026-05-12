@@ -321,29 +321,18 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // that should remain visible after the GHES filter is applied.
         var ghesCountBefore = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
 
-        // Act - Click the GHES toggle label (the visible element). The label has a Blazor @onclick
-        // handler that sets ghesFilterActive = true server-side — more reliable in CI than relying
-        // on @bind onchange propagation after a browser-native label click.
-        // WaitForBlazorInteractivityAsync is called on the label (visible), not the CSS-hidden input.
+        // Act - Click the GHES toggle and wait for entries to be filtered.
+        // ClickAndExpectAsync retries [click + assertion] to handle:
+        //   1. Blazor Server hydration race: under slow3g, the initial render diff (55 entries)
+        //      can take 1-3 s to apply after __blazorServerReady fires, creating a window where
+        //      clicks are silently lost before @onclick handlers are fully attached.
+        //   2. Slow SignalR: the assertion waits for the server-side re-render to arrive.
+        // ToHaveCountAsync is Blazor-only — native browser behavior cannot remove timeline
+        // entries from the DOM — making it immune to the label→checkbox native toggle.
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
-        await ghesToggle.WaitForBlazorInteractivityAsync();
-        await ghesToggle.ClickAsync();
-
-        // Wait for Blazor to re-render with checked=true (set by @onclick handler + re-render).
-        // ToBeCheckedAsync works on hidden elements by checking the DOM checked property.
-        var ghesInput = ghesToggle.Locator(".features-ghes-toggle-input");
-        await Assertions.Expect(ghesInput).ToBeCheckedAsync();
-
-        // Wait for Blazor to re-render with filtered results.
-        // After filtering, the count must equal the pre-filter GHES entry count.
-        // This assertion is based on actual data rather than assuming all features
-        // lack GHES support, making it robust regardless of the data set.
-        await BlazorHelpers.RetryUntilPassAsync(async () =>
-        {
-            var countAfter = await Page.Locator(".features-timeline-entry").CountAsync();
-            countAfter.Should().Be(ghesCountBefore,
-                $"After GHES filter, should show exactly {ghesCountBefore} entries (those with GHES support), not {countBefore}");
-        });
+        await ghesToggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".features-timeline-entry"))
+                .ToHaveCountAsync(ghesCountBefore, new() { Timeout = 2_000 }));
     }
 
     [Fact]
@@ -379,10 +368,13 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var allEntries = Page.Locator(".features-timeline-entry");
         var totalCount = await allEntries.CountAsync();
 
-        // Apply a filter using the GHES toggle switch
+        // Apply a filter using the GHES toggle switch.
+        // Wait for entry count to drop — a Blazor-only DOM change, immune to native browser toggle.
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
+        var ghesCount = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
         await ghesToggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(ghesToggle.Locator(".features-ghes-toggle-input")).ToBeCheckedAsync(new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator(".features-timeline-entry"))
+                .ToHaveCountAsync(ghesCount, new() { Timeout = 2_000 }));
 
         // Act - Click the "All" button to clear filters
         var allButton = Page.Locator(".features-timeline-filters button:has-text('All')");
