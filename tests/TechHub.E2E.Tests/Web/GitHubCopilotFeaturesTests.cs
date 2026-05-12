@@ -317,17 +317,21 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var countBefore = await entriesBefore.CountAsync();
         countBefore.Should().BeGreaterThan(0, "Should have timeline entries before filtering");
 
-        // Act - Click the GHES toggle switch
+        // Act - Click the GHES toggle switch and wait for the checkbox to be checked
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(ghesToggle.Locator(".features-ghes-toggle-input")).ToBeCheckedAsync(new() { Timeout = 2000 }));
 
-        // Assert - GHES filter should be active and only GHES entries should be visible
-        var entriesAfter = Page.Locator(".features-timeline-entry");
-        var countAfter = await entriesAfter.CountAsync();
-        // After filtering by GHES, we should have strictly fewer entries (some features do not support GHES)
-        countAfter.Should().BeLessThan(countBefore,
-            "Filtering by GHES should show fewer entries than unfiltered");
+        // Wait for Blazor to re-render with filtered results.
+        // The checkbox state changes immediately (browser-side), but the server needs a
+        // SignalR round-trip before the component re-renders and removes non-GHES entries.
+        int countAfter = countBefore;
+        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        {
+            countAfter = await Page.Locator(".features-timeline-entry").CountAsync();
+            countAfter.Should().BeLessThan(countBefore,
+                "Filtering by GHES should show fewer entries than unfiltered");
+        });
     }
 
     [Fact]
