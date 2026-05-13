@@ -78,7 +78,7 @@ UPDATE content_items
 SET content = replace(
     content,
     E'{% youtube jpNXTur13fg %}\n\n## Full summary based on transcript',
-    E'{% youtube jpNXTur13fg %}\n\n**Learn more about the new billing model:**\n\n- [Rob Bos: From premium request units to AI credits and tokens](/github-copilot/videos/github-copilot-token-based-billing)\n- [Jesse Houwing: The why for Usage Based Billing for GitHub Copilot](https://jessehouwing.net/usage-based-billing-for-github-copilot/)\n- [GitHub Docs: Usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)\n- [GitHub Docs: Usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises)\n\n## Full summary based on transcript'
+    E'{% youtube jpNXTur13fg %}\n\n**Learn more about the new billing model:**\n\n- [Jesse Houwing: The why for Usage Based Billing for GitHub Copilot](https://jessehouwing.net/usage-based-billing-for-github-copilot/)\n- [GitHub Docs: Usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)\n- [GitHub Docs: Usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises)\n\n## Full summary based on transcript'
 )
 WHERE slug            = 'github-copilot-token-based-billing'
   AND collection_name = 'videos';
