@@ -44,20 +44,20 @@ SET
                 "text": "Starting June 1, 2026, GitHub Copilot is switching from request-based to usage-based (token-based) billing.",
                 "links": [
                     {
-                        "label": "Usage-based billing for individuals",
-                        "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals"
+                        "label": "Rob Bos: From premium request units to AI credits and tokens",
+                        "url": "/github-copilot/videos/github-copilot-token-based-billing"
                     },
                     {
-                        "label": "Usage-based billing for organizations and enterprises",
-                        "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises"
-                    },
-                    {
-                        "label": "Jesse Houwing: Usage-based billing for GitHub Copilot",
+                        "label": "Jesse Houwing: The why for Usage Based Billing for GitHub Copilot",
                         "url": "https://jessehouwing.net/usage-based-billing-for-github-copilot/"
                     },
                     {
-                        "label": "Watch: GitHub Copilot Token-Based Billing",
-                        "url": "https://tech.hub.ms/github-copilot/videos/github-copilot-token-based-billing"
+                        "label": "GitHub Docs: Usage-based billing for individuals",
+                        "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals"
+                    },
+                    {
+                        "label": "GitHub Docs: Usage-based billing for organizations and enterprises",
+                        "url": "https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises"
                     }
                 ]
             }
@@ -78,7 +78,7 @@ UPDATE content_items
 SET content = replace(
     content,
     E'{% youtube jpNXTur13fg %}\n\n## Full summary based on transcript',
-    E'{% youtube jpNXTur13fg %}\n\n**Learn more about the new billing model:**\n\n- [Usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)\n- [Usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises)\n- [Usage-based billing for GitHub Copilot (Jesse Houwing)](https://jessehouwing.net/usage-based-billing-for-github-copilot/)\n\n## Full summary based on transcript'
+    E'{% youtube jpNXTur13fg %}\n\n**Learn more about the new billing model:**\n\n- [Rob Bos: From premium request units to AI credits and tokens](/github-copilot/videos/github-copilot-token-based-billing)\n- [Jesse Houwing: The why for Usage Based Billing for GitHub Copilot](https://jessehouwing.net/usage-based-billing-for-github-copilot/)\n- [GitHub Docs: Usage-based billing for individuals](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals)\n- [GitHub Docs: Usage-based billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises)\n\n## Full summary based on transcript'
 )
 WHERE slug            = 'github-copilot-token-based-billing'
   AND collection_name = 'videos';
