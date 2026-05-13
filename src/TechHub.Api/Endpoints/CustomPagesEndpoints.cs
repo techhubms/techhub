@@ -195,7 +195,7 @@ public static class CustomPagesEndpoints
 
     private static Task<Results<Ok<FeaturesPageData>, NotFound>> GetFeaturesData(
         ICustomPageDataRepository repo, CancellationToken ct)
-        => GetPageData<FeaturesPageData>("features", repo, ct);
+        => GetPageData<FeaturesPageData>("githubcopilot-features", repo, ct);
 
     private static Task<Results<Ok<GenAIPageData>, NotFound>> GetGenAIBasicsData(
         ICustomPageDataRepository repo, IMarkdownService markdownService, CancellationToken ct)

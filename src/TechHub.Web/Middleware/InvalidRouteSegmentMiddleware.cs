@@ -6,16 +6,16 @@ namespace TechHub.Web.Middleware;
 /// <summary>
 /// Middleware that short-circuits two categories of bad requests before Blazor routing runs:
 ///
-/// 1. **Scanner/attacker probes** — paths that match well-known exploit probe patterns
-///    (e.g. /wp-admin, /xmlrpc.php, /.env, /setup.php). These return a bare 404 immediately
-///    without touching the Blazor pipeline, generating API calls, or recording telemetry.
-///    The OpenTelemetry filter in ServiceDefaults uses the same <see cref="IsProbeRequest"/>
-///    check so no Activity span is created for these requests at all.
+/// 1. **File-extension requests** — any URL with a file extension is checked against a
+///    whitelist of known static asset patterns (js/, css/, images/, /_framework/, etc.).
+///    Requests that don't match are rejected with 404 immediately, before Blazor sees them.
+///    This covers both scanner probes (.php, .env, .bak) and mis-routed legitimate assets
+///    such as /devops/js/mobile-nav.abc.js (which is not under a served path).
 ///
-/// 2. **Structurally invalid first segments** — segments containing dots, percent-encoding,
-///    or characters that can never match a section, collection, or known page route. This
-///    prevents junk URLs like /github-copilot/features.html (after .html stripping falls
-///    through) from reaching Blazor and triggering spurious API calls.
+/// 2. **Structurally invalid first segments** — extension-less paths whose first segment
+///    contains dots, percent-encoding, or characters that can never match a section,
+///    collection, or known page route. Also rejects well-known scanner path substrings
+///    (wp-admin, actuator, etc.) before Blazor routing runs.
 ///
 /// Valid first segments: letters and hyphens only, starting with a letter. Matches every
 /// real section name plus "all", "not-found", "about", "error", etc.
@@ -44,21 +44,26 @@ public partial class InvalidRouteSegmentMiddleware
 
         if (!string.IsNullOrEmpty(path) && path != "/")
         {
-            // Probe check must run before the file-extension early-exit:
-            // scanner requests like /.env and /setup.php have file extensions
-            // but must be rejected before reaching any downstream middleware.
-            if (IsProbeRequest(path))
+            // File-extension requests are never Blazor routes.
+            // Allow only known static asset patterns (js/, css/, images/, /_framework/, etc.);
+            // everything else with a file extension is not served by this site → 404.
+            if (PathHasFileExtension(path))
             {
-                context.Response.StatusCode = StatusCodes.Status404NotFound;
+                if (!ProbeDetector.IsKnownStaticAssetPath(path))
+                {
+                    context.Response.StatusCode = StatusCodes.Status404NotFound;
+                    return;
+                }
+
+                await _next(context);
                 return;
             }
 
-            // Static file requests (final segment contains a dot) are passed through
-            // after the probe filter. Blazor routes never have file extensions; static
-            // assets always do (served by MapStaticAssets / UseStaticFiles downstream).
-            if (PathHasFileExtension(path))
+            // Extension-less paths: check for scanner/attacker probe patterns
+            // (WordPress, actuator, etc.) before letting Blazor routing see them.
+            if (IsProbeRequest(path))
             {
-                await _next(context);
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
                 return;
             }
 

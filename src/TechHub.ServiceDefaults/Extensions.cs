@@ -111,12 +111,16 @@ public static class ServiceDefaultsExtensions
                            //     fired every 10-30s × 2 replicas × 2 services (~2.9 GB/month).
                            //   - Scanner/attacker probe paths (via ProbeDetector): have no
                            //     diagnostic value and are rejected by middleware anyway.
+                           //   - File-extension requests for unknown paths: not served by this
+                           //     site (e.g. /devops/js/name.js). Suppressed via the whitelist
+                           //     so no span is ever created, not just filtered after the fact.
                            //   - additionalTraceFilter: caller-supplied predicate for
                            //     service-specific suppression (e.g. Web passes Blazor disconnect
                            //     and bot-crawler filters; Api passes nothing).
                            options.Filter = httpContext =>
                                !IsHealthProbeRequest(httpContext.Request.Path) &&
                                !ProbeDetector.IsProbeRequest(httpContext.Request.Path.Value) &&
+                               ProbeDetector.IsKnownStaticAssetOrExtensionless(httpContext.Request.Path.Value) &&
                                (additionalTraceFilter == null || additionalTraceFilter(httpContext));
 
                            // Fix client.address to reflect the real client IP after the

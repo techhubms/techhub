@@ -285,7 +285,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
     }
 
     [Fact]
-    public async Task GitHubCopilotFeatures_Intro_ShouldDisplay_LinksAndNote()
+    public async Task GitHubCopilotFeatures_Intro_ShouldDisplay_Links()
     {
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
@@ -294,16 +294,36 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var intro = Page.Locator(".custom-page-intro");
         await intro.AssertElementVisibleAsync();
 
-        // Should have note about GHES
-        var note = intro.Locator(".custom-page-note");
-        await note.AssertElementVisibleAsync();
-        var noteText = await note.TextContentAsync();
-        noteText.Should().Contain("Note:", "Expected note section to be clearly marked");
-
         // Should have links to pricing and plan details (inline in text)
         var links = intro.Locator("p >> a[href]");
         var linkCount = await links.CountAsync();
         linkCount.Should().BeGreaterThanOrEqualTo(2, "Expected links to pricing and plan details");
+
+        // Note about GHES should NOT be visible initially (only shown when GHES filter is active)
+        var note = Page.Locator(".custom-page-note");
+        await Assertions.Expect(note).ToHaveCountAsync(0);
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_GhesFilter_ShouldShow_Note()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+        await Page.WaitForBlazorReadyAsync();
+
+        // Note should not be visible before toggling GHES filter
+        var note = Page.Locator(".custom-page-note");
+        await Assertions.Expect(note).ToHaveCountAsync(0);
+
+        // Act - Enable the GHES filter
+        var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
+        await ghesToggle.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(Page.Locator(".custom-page-note")).ToBeVisibleAsync());
+
+        // Assert - Note should now be visible below the filter bar
+        await Assertions.Expect(note).ToBeVisibleAsync();
+        var noteText = await note.TextContentAsync();
+        noteText.Should().Contain("Note:", "Expected note section to be clearly marked");
     }
 
     [Fact]
@@ -476,6 +496,53 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Assert - Free tier filter should also be active in the main filter bar
         var freeFilterBtn = Page.Locator(".features-timeline-filters button:has-text('Free')");
         await Assertions.Expect(freeFilterBtn).ToHaveClassAsync(new Regex("active"));
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_ShouldDisplay_BillingNotice()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Assert - Billing notice should be visible below the intro
+        var billingNotice = Page.Locator(".custom-page-billing-notice");
+        await billingNotice.AssertElementVisibleAsync();
+
+        // Should contain descriptive text about billing change
+        var noticeText = await billingNotice.TextContentAsync();
+        noticeText.Should().Contain("billing", "Billing notice should mention billing");
+
+        // Should have at least 4 links (individuals, orgs/enterprises, jessehouwing, video)
+        var links = billingNotice.Locator("a[href]");
+        var linkCount = await links.CountAsync();
+        linkCount.Should().BeGreaterThanOrEqualTo(4, "Billing notice should contain at least 4 reference links");
+    }
+
+    [Fact]
+    public async Task GitHubCopilotFeatures_PlanBadges_ShouldHave_TierColors()
+    {
+        // Arrange
+        await Page.GotoRelativeAsync(PageUrl);
+
+        // Expand the first entry to reveal plan badges in the detail section
+        var firstEntry = Page.Locator(".features-timeline-entry").First;
+        var header = firstEntry.Locator(".features-timeline-header");
+        await header.ClickAndExpectAsync(async () =>
+            await Assertions.Expect(firstEntry).ToHaveClassAsync(
+                new Regex("expanded"), new() { Timeout = 2000 }));
+
+        // Assert - Plan badges should have tier-specific color classes (badge-plan-*)
+        var planBadges = firstEntry.Locator(".badge-plan");
+        var badgeCount = await planBadges.CountAsync();
+
+        Assert.SkipWhen(badgeCount == 0, "No plan badges found in expanded entry — skipping color check");
+
+        // At least one badge should have a tier-specific CSS class
+        var firstBadge = planBadges.First;
+        var firstBadgeClass = await firstBadge.GetAttributeAsync("class");
+        firstBadgeClass.Should().MatchRegex(
+            @"badge-plan-(free|student|pro|business|proplus|enterprise)",
+            "Plan badges should have a tier-specific color class");
     }
 
     [Fact]
