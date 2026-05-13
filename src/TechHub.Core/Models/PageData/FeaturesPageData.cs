@@ -31,7 +31,7 @@ public record FeaturesLinks
 public record BillingNotice
 {
     public required string Text { get; init; }
-    public required List<BillingNoticeLink> Links { get; init; }
+    public required IReadOnlyList<BillingNoticeLink> Links { get; init; }
 }
 
 public record BillingNoticeLink

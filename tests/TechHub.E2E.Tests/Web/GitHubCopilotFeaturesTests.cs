@@ -531,18 +531,21 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             await Assertions.Expect(firstEntry).ToHaveClassAsync(
                 new Regex("expanded"), new() { Timeout = 2000 }));
 
-        // Assert - Plan badges should have tier-specific color classes (badge-plan-*)
+        // Assert - Plan badges should be present and have tier-specific color classes (badge-plan-*)
         var planBadges = firstEntry.Locator(".badge-plan");
         var badgeCount = await planBadges.CountAsync();
 
-        Assert.SkipWhen(badgeCount == 0, "No plan badges found in expanded entry — skipping color check");
+        badgeCount.Should().BeGreaterThan(0, "Timeline entries should always render plan badges");
 
-        // At least one badge should have a tier-specific CSS class
-        var firstBadge = planBadges.First;
-        var firstBadgeClass = await firstBadge.GetAttributeAsync("class");
-        firstBadgeClass.Should().MatchRegex(
-            @"badge-plan-(free|student|pro|business|proplus|enterprise)",
-            "Plan badges should have a tier-specific color class");
+        // Every badge must have a tier-specific CSS class
+        var tierColorPattern = new Regex(@"badge-plan-(free|student|pro|business|proplus|enterprise)");
+        for (var i = 0; i < badgeCount; i++)
+        {
+            var badge = planBadges.Nth(i);
+            var badgeClass = await badge.GetAttributeAsync("class");
+            badgeClass.Should().MatchRegex(tierColorPattern,
+                $"Plan badge {i} should have a tier-specific color class");
+        }
     }
 
     [Fact]
