@@ -316,9 +316,12 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         await Assertions.Expect(note).ToHaveCountAsync(0);
 
         // Act - Enable the GHES filter
+        // Inner assertion uses a short timeout so ClickAndExpectAsync can retry quickly if
+        // the click is silently lost during Blazor hydration on slow WAN environments.
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
         await ghesToggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".custom-page-note")).ToBeVisibleAsync());
+            await Assertions.Expect(Page.Locator(".custom-page-note"))
+                .ToBeVisibleAsync(new() { Timeout = 2000 }));
 
         // Assert - Note should now be visible below the filter bar
         await Assertions.Expect(note).ToBeVisibleAsync();
