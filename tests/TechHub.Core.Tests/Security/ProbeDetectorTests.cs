@@ -11,15 +11,13 @@ namespace TechHub.Core.Tests.Security;
 public class ProbeDetectorTests
 {
     [Theory]
-    // WordPress attack surface
+    // WordPress attack surface — caught by path-segment probe
     [InlineData("/wp-admin")]
     [InlineData("/wp-admin/admin.php")]
     [InlineData("/wp-admin/setup-config.php")]
     [InlineData("/wp-content/themes/twenty/style.css")]
     [InlineData("/wp-includes/functions.php")]
-    [InlineData("/wp-login.php")]
-    // WordPress XML-RPC
-    [InlineData("/xmlrpc.php")]
+    // Note: /wp-login.php and /xmlrpc.php are caught by the extension whitelist, not path-segment — see IsKnownStaticAssetPath tests
     // PHP admin panels
     [InlineData("/phpmyadmin")]
     [InlineData("/phpmyadmin/index.php")]
@@ -53,64 +51,11 @@ public class ProbeDetectorTests
     [InlineData("/backend/api/users")]
     [InlineData("/config")]
     [InlineData("/config/database.yml")]
-    // Server-side script extensions
-    [InlineData("/setup.php")]
-    [InlineData("/config.asp")]
-    [InlineData("/install.aspx")]
-    [InlineData("/some/path.cfm")]
-    [InlineData("/run.cgi")]
-    [InlineData("/script.pl")]
-    [InlineData("/code.py")]
-    [InlineData("/app.rb")]
-    [InlineData("/page.jsp")]
-    // Config / credential files
-    [InlineData("/.env")]
-    [InlineData("/.env/")]           // trailing slash
-    [InlineData("/.htaccess")]
-    [InlineData("/server/.htpasswd")]
-    // Backup / leftover files
-    [InlineData("/backup.sql")]
-    [InlineData("/database.bak")]
-    [InlineData("/old.backup")]
-    [InlineData("/file.orig")]
-    [InlineData("/swap.swp")]
-    // Executables / binaries
-    [InlineData("/malware.exe")]
-    [InlineData("/lib.dll")]
-    [InlineData("/run.sh")]
-    [InlineData("/script.bat")]
-    [InlineData("/cmd.cmd")]
-    // Certificates and keys
-    [InlineData("/private.key")]
-    [InlineData("/cert.pem")]
-    [InlineData("/client.crt")]
-    [InlineData("/keystore.p12")]
-    [InlineData("/bundle.pfx")]
-    // Archives
-    [InlineData("/site.zip")]
-    [InlineData("/export.tar.gz")]
-    [InlineData("/dump.rar")]
-    [InlineData("/archive.7z")]
-    // Source maps — never published to production
-    [InlineData("/js/bundle.js.map")]
-    [InlineData("/css/styles.css.map")]
-    // Compound extensions — probe extension anywhere in the name must be caught
-    [InlineData("/.env.live")]
-    [InlineData("/.env.prod")]
-    [InlineData("/.env.old")]
-    [InlineData("/.env.bak")]
-    [InlineData("/secrets.env.backup")]
-    [InlineData("/config.php.bak")]
-    [InlineData("/dump.sql.gz")]
     // robots.txt at any sub-path (real crawlers only use the root)
     [InlineData("/all/robots.txt")]
     [InlineData("/some/path/robots.txt")]
     [InlineData("/all/ROBOTS.TXT")]
-    // .xml that is NOT a feed or sitemap
-    [InlineData("/random.xml")]
-    [InlineData("/random.xml/")]     // trailing slash on .xml probe
-    [InlineData("/evil-sitemap.xml")]
-    [InlineData("/some/evil.xml")]
+    // .xml probe under a known probe path segment (caught by path-segment check)
     [InlineData("/wp-content/plugins/foo.xml")]
     public void IsProbeRequest_ReturnsTrue_ForProbePatterns(string path)
     {
@@ -163,5 +108,140 @@ public class ProbeDetectorTests
     public void IsProbeRequest_ReturnsFalse_ForLegitimatePathsAndExceptions(string? path)
     {
         ProbeDetector.IsProbeRequest(path).Should().BeFalse();
+    }
+
+    [Theory]
+    // Server-side script extensions — not served by this site, unknown path
+    [InlineData("/setup.php")]
+    [InlineData("/config.asp")]
+    [InlineData("/install.aspx")]
+    [InlineData("/some/path.cfm")]
+    [InlineData("/run.cgi")]
+    [InlineData("/script.pl")]
+    [InlineData("/code.py")]
+    [InlineData("/app.rb")]
+    [InlineData("/page.jsp")]
+    [InlineData("/wp-login.php")]
+    [InlineData("/xmlrpc.php")]
+    // Config / credential files
+    [InlineData("/.env")]
+    [InlineData("/.htaccess")]
+    [InlineData("/server/.htpasswd")]
+    // Backup / leftover files
+    [InlineData("/backup.sql")]
+    [InlineData("/database.bak")]
+    [InlineData("/old.backup")]
+    [InlineData("/file.orig")]
+    [InlineData("/swap.swp")]
+    // Executables / binaries
+    [InlineData("/malware.exe")]
+    [InlineData("/lib.dll")]
+    [InlineData("/run.sh")]
+    [InlineData("/script.bat")]
+    [InlineData("/cmd.cmd")]
+    // Certificates and keys
+    [InlineData("/private.key")]
+    [InlineData("/cert.pem")]
+    [InlineData("/client.crt")]
+    [InlineData("/keystore.p12")]
+    [InlineData("/bundle.pfx")]
+    // Archives
+    [InlineData("/site.zip")]
+    [InlineData("/export.tar.gz")]
+    [InlineData("/dump.rar")]
+    [InlineData("/archive.7z")]
+    // Wrong extension under a known directory (prefix matches but extension does not)
+    [InlineData("/js/bundle.js.map")]
+    [InlineData("/css/styles.css.map")]
+    [InlineData("/images/photo.tmb")]
+    // Compound probe extensions
+    [InlineData("/.env.live")]
+    [InlineData("/.env.prod")]
+    [InlineData("/.env.old")]
+    [InlineData("/.env.bak")]
+    [InlineData("/secrets.env.backup")]
+    [InlineData("/config.php.bak")]
+    [InlineData("/dump.sql.gz")]
+    // .xml at unknown paths (not a feed or sitemap)
+    [InlineData("/random.xml")]
+    [InlineData("/evil-sitemap.xml")]
+    [InlineData("/some/evil.xml")]
+    // File under an unserved path — the original motivating case
+    [InlineData("/devops/js/mobile-nav.4uezpgfs2f.js")]
+    // Credential files at the root
+    [InlineData("/credentials.json")]
+    [InlineData("/secrets.json")]
+    public void IsKnownStaticAssetPath_ReturnsFalse_ForUnknownExtensionPaths(string path)
+    {
+        ProbeDetector.IsKnownStaticAssetPath(path).Should().BeFalse();
+    }
+
+    [Theory]
+    // wwwroot/js — plain and fingerprinted
+    [InlineData("/js/mobile-nav.js")]
+    [InlineData("/js/mobile-nav.4uezpgfs2f.js")]
+    [InlineData("/js/scroll-manager.js")]
+    // wwwroot/css — plain and fingerprinted
+    [InlineData("/css/base.css")]
+    [InlineData("/css/base.abc123.css")]
+    // Blazor framework
+    [InlineData("/_framework/blazor.web.js")]
+    [InlineData("/_framework/dotnet.native.wasm")]
+    // Root-level app bundle assets
+    [InlineData("/TechHub.Web.styles.css")]
+    [InlineData("/TechHub.Web.fwv5rmn5un.styles.css")]
+    [InlineData("/TechHub.Web.lib.module.js")]
+    // Blazor collocated component JS files
+    [InlineData("/Components/Layout/ReconnectModal.p0sww062j0.razor.js")]
+    [InlineData("/Components/Pages/SectionCollection.abc123.razor.js")]
+    // RCL static assets
+    [InlineData("/_content/SomeLib/script.js")]
+    [InlineData("/_content/SomeLib/styles.css")]
+    // wwwroot/images
+    [InlineData("/images/ghc-handbook.jpg")]
+    [InlineData("/images/section-backgrounds/ai.webp")]
+    [InlineData("/images/svg/logo.svg")]
+    // Root-level well-known files
+    [InlineData("/favicon.ico")]
+    [InlineData("/robots.txt")]
+    [InlineData("/sitemap.xml")]
+    // RSS feeds
+    [InlineData("/all/feed.xml")]
+    [InlineData("/ai/feed.xml")]
+    [InlineData("/github-copilot/feed.xml")]
+    public void IsKnownStaticAssetPath_ReturnsTrue_ForKnownAssets(string path)
+    {
+        ProbeDetector.IsKnownStaticAssetPath(path).Should().BeTrue();
+    }
+
+    [Theory]
+    // Extension-less paths are always allowed through (Blazor routes)
+    [InlineData("/")]
+    [InlineData("/github-copilot")]
+    [InlineData("/github-copilot/features")]
+    [InlineData("/all")]
+    // Known static asset paths are allowed through
+    [InlineData("/js/mobile-nav.4uezpgfs2f.js")]
+    [InlineData("/css/base.css")]
+    [InlineData("/favicon.ico")]
+    [InlineData("/all/feed.xml")]
+    // Null / empty treated as extension-less
+    [InlineData(null)]
+    [InlineData("")]
+    public void IsKnownStaticAssetOrExtensionless_ReturnsTrue_ForExtensionlessAndKnownAssets(string? path)
+    {
+        ProbeDetector.IsKnownStaticAssetOrExtensionless(path).Should().BeTrue();
+    }
+
+    [Theory]
+    // Any file extension at an unknown path → false
+    [InlineData("/devops/js/mobile-nav.4uezpgfs2f.js")]
+    [InlineData("/cert.pem")]
+    [InlineData("/secrets.json")]
+    [InlineData("/random.xml")]
+    [InlineData("/js/bundle.js.map")]
+    public void IsKnownStaticAssetOrExtensionless_ReturnsFalse_ForUnknownExtensionPaths(string path)
+    {
+        ProbeDetector.IsKnownStaticAssetOrExtensionless(path).Should().BeFalse();
     }
 }

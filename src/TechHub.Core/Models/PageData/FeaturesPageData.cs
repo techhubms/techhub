@@ -10,9 +10,10 @@ public record FeaturesPageData
     public required string Intro { get; init; }
     public required string Note { get; init; }
     public required FeaturesLinks Links { get; init; }
+    public BillingNotice? BillingNotice { get; init; }
     public required List<SubscriptionTier> SubscriptionTiers { get; init; }
-    public required List<FeatureSection> FeatureSections { get; init; }
-    public required string VideoCollection { get; init; }
+    public IReadOnlyList<FeatureSection>? FeatureSections { get; init; }
+    public string? VideoCollection { get; init; }
 
     /// <summary>
     /// Chronological list of GitHub Copilot features for the timeline view.
@@ -25,6 +26,18 @@ public record FeaturesLinks
 {
     public required string Pricing { get; init; }
     public required string PlanDetails { get; init; }
+}
+
+public record BillingNotice
+{
+    public required string Text { get; init; }
+    public required IReadOnlyList<BillingNoticeLink> Links { get; init; }
+}
+
+public record BillingNoticeLink
+{
+    public required string Label { get; init; }
+    public required string Url { get; init; }
 }
 
 public record SubscriptionTier

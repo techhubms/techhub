@@ -61,8 +61,20 @@
             <div class="custom-page-container">
                 <div class="custom-page-intro">
                     <p>@pageData.Intro For the most current pricing, visit <a href="@pageData.Links.Pricing" target="_blank" rel="noopener">GitHub's official pricing page</a>. For the most recent plan details, view the <a href="@pageData.Links.PlanDetails" target="_blank" rel="noopener">official documentation</a>.</p>
-                    <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
                 </div>
+
+                @if (pageData.BillingNotice != null)
+                {
+                    <div class="custom-page-billing-notice">
+                        <p>@pageData.BillingNotice.Text</p>
+                        <ul>
+                            @foreach (var link in pageData.BillingNotice.Links)
+                            {
+                                <li><a href="@link.Url" target="_blank" rel="noopener">@link.Label</a></li>
+                            }
+                        </ul>
+                    </div>
+                }
 
                 @if (videoItems.Count > 0)
                 {
@@ -99,6 +111,11 @@
                         </label>
                     </div>
 
+                    @if (ghesFilterActive)
+                    {
+                        <p class="custom-page-note"><strong>Note:</strong> @pageData.Note</p>
+                    }
+
                     @if (!GetFilteredTimeline().Any())
                     {
                         <p class="features-timeline-empty">No features match the selected filters.</p>
@@ -109,14 +126,17 @@
                             @foreach (var yearGroup in GetGroupedTimeline())
                             {
                                 <div class="features-timeline-year-group">
-                                    <h2 class="features-timeline-year-label" aria-label="Year @yearGroup.Key">@yearGroup.Key</h2>
+                                    <h2 class="features-timeline-year-label" aria-label="@(yearGroup.Key == "TBA" ? "Date to be announced" : $"Year {yearGroup.Key}")">@(yearGroup.Key == "TBA" ? "Date TBA" : yearGroup.Key)</h2>
                                     <div class="features-timeline-year-entries">
                                         @foreach (var monthGroup in yearGroup.GroupBy(f => GetReleaseYearMonth(f)).OrderByDescending(g => g.Key))
                                         {
                                             <div class="features-timeline-month-row">
                                                 <div class="features-timeline-node">
                                                     <div class="features-timeline-dot" aria-hidden="true"></div>
-                                                    <time class="features-timeline-date" datetime="@(monthGroup.Key.Length == 7 ? monthGroup.Key + "-01" : "")">@FormatReleaseDate(monthGroup.Key)</time>
+                                                    @if (monthGroup.Key != "TBA")
+                                                    {
+                                                        <time class="features-timeline-date" datetime="@(monthGroup.Key.Length == 7 ? monthGroup.Key + "-01" : "")">@FormatReleaseDate(monthGroup.Key)</time>
+                                                    }
                                                 </div>
                                                 <div class="features-timeline-month-cards">
                                                     @foreach (var feature in monthGroup)
@@ -174,7 +194,7 @@
                                                                     }
                                                                     @{
                                                                         var relatedLinks = feature.ContentLinks
-                                                                            .Where(l => !l.IsThumbnail)
+                                                                            .Where(l => l != thumbnailLink)
                                                                             .OrderBy(l => l.SortOrder)
                                                                             .ToList();
                                                                     }
@@ -263,16 +283,17 @@ else if (_notFound)
         ghesFilterActive = !ghesFilterActive;
     }
 
-    private void ToggleFeature(string featureSlug)
+    private async Task ToggleFeature(string featureSlug)
     {
+        await JS.InvokeVoidAsync("preventScrollOnExpand");
         expandedFeatureId = expandedFeatureId == featureSlug ? null : featureSlug;
     }
 
-    private void HandleFeatureKeyDown(KeyboardEventArgs e, string featureSlug)
+    private async Task HandleFeatureKeyDown(KeyboardEventArgs e, string featureSlug)
     {
         if (e.Key == "Enter" || e.Key == " ")
         {
-            ToggleFeature(featureSlug);
+            await ToggleFeature(featureSlug);
         }
     }
 
@@ -313,7 +334,8 @@ else if (_notFound)
     private List<IGrouping<string, GhcFeature>> GetGroupedTimeline()
     {
         return GetFilteredTimeline()
-            .OrderByDescending(f => f.ReleaseDate ?? 0)
+            .OrderBy(f => f.ReleaseDate.HasValue ? 1 : 0)
+            .ThenByDescending(f => f.ReleaseDate ?? 0)
             .GroupBy(f => f.ReleaseDate.HasValue
                 ? DateTimeOffset.FromUnixTimeSeconds(f.ReleaseDate.Value).UtcDateTime.Year.ToString()
                 : "TBA")
