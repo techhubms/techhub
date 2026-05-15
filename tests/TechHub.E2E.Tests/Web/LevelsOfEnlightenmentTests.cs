@@ -34,12 +34,11 @@ public class LevelsOfEnlightenmentTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Act - Find all level sections
+        // Act - Find all level sections and wait for them to render
         var levelSections = Page.Locator(".levels-level");
-        var levelCount = await levelSections.CountAsync();
 
-        // Assert - Should have exactly 9 levels
-        levelCount.Should().Be(9, "Expected exactly 9 levels of enlightenment");
+        // Assert - Should have exactly 9 levels (auto-retries until count matches)
+        await Assertions.Expect(levelSections).ToHaveCountAsync(9);
 
         // Verify each level has a heading with title
         for (int i = 1; i <= 9; i++)
@@ -55,12 +54,11 @@ public class LevelsOfEnlightenmentTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync(PageUrl);
 
-        // Act - Find all video iframes
+        // Act - Find all video iframes and wait for them to render
         var videoIframes = Page.Locator(".levels-video iframe");
-        var videoCount = await videoIframes.CountAsync();
 
         // Assert - Should have 9 video embeds (one per level)
-        videoCount.Should().Be(9, "Expected 9 video embeds (one per level)");
+        await Assertions.Expect(videoIframes).ToHaveCountAsync(9);
 
         // Verify first video iframe has YouTube source
         var firstVideo = videoIframes.First;
