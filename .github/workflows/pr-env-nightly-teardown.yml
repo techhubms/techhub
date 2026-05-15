@@ -3,7 +3,7 @@ name: Nightly PR Environment Teardown
 on:
   schedule:
     # 21:00 UTC = 23:00 Brussels (CEST/summer, UTC+2). In winter (CET/UTC+1) this is 22:00 Brussels.
-    - cron: '0 21 ** *'
+    - cron: '0 21 * * *'
   workflow_dispatch:
     inputs:
       dry_run:
