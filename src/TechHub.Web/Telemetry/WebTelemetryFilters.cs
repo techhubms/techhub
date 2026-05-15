@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace TechHub.Web.Telemetry;
 
 /// <summary>
@@ -53,4 +55,28 @@ internal static class WebTelemetryFilters
            && !IsBlazorCircuitReconnectRequest(httpContext.Request.Path, httpContext.Request.Query)
            && !IsApiProbeRequest(httpContext.Request.Path)
            && !IsBotRequest(httpContext.Request.Headers.UserAgent.ToString());
+
+    /// <summary>
+    /// Response enricher that suppresses structural-noise 4xx activities from the trace export
+    /// pipeline by clearing <see cref="ActivityTraceFlags.Recorded"/>.
+    /// Called from <c>EnrichWithHttpResponse</c> — after the response is written but before
+    /// the Activity is stopped — so the flag is cleared before the Azure Monitor
+    /// <c>BatchExportProcessor.OnEnd</c> checks it and decides whether to queue for export.
+    /// <para>
+    /// Only 404 (page not found) and 405 (method not allowed) are suppressed — both are
+    /// generated exclusively by bots, scanners, and stale links, not by real application errors.
+    /// Other 4xx codes are retained: 429 (rate limit) indicates a scraping or DDoS attack
+    /// worth alerting on; 401/403 can reveal real authorization bugs.
+    /// HTTP 5xx responses (genuine server errors) are always left untouched.
+    /// </para>
+    /// </summary>
+    internal static void SuppressIfClientError(Activity activity, HttpResponse response)
+    {
+        if (response.StatusCode is 404 or 405)
+        {
+            // Clearing the Recorded flag prevents the Azure Monitor BatchExportProcessor
+            // from adding this activity to its export queue when its OnEnd fires.
+            activity.ActivityTraceFlags &= ~ActivityTraceFlags.Recorded;
+        }
+    }
 }

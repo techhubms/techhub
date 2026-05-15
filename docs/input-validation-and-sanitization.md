@@ -4,6 +4,7 @@ This document defines the input validation and sanitization strategy for Tech Hu
 
 **Related Documentation**:
 
+- [Request Pipeline, Filtering, and Static Files](url-routing.md) - Full HTTP pipeline: middleware order, probe detection, static file serving, telemetry filtering
 - [Content API](content-api.md) - REST API endpoints and route structure
 - [Content Filtering](filtering.md) - Search, tag, and date filtering behavior
 
@@ -36,14 +37,9 @@ All user-controlled input in Tech Hub:
 
 **Boundary**: Incoming HTTP request, before Blazor routing.
 
-**Purpose**: Short-circuit obviously invalid URL paths (scanner probes, `.php` requests, encoded garbage) before they reach the Blazor pipeline.
+**Purpose**: Short-circuit obviously invalid URL paths (scanner probes, unknown file-extension requests, structurally invalid first segments) before they reach the Blazor pipeline.
 
-**What it does**:
-
-- Rejects scanner/attacker probe paths via `ProbeDetector.IsProbeRequest()` (e.g. `/wp-admin`, `/.env`, `/.env.live`, `/.env.prod`, `/xmlrpc.php`). All extension components in the filename are checked, not just the last one, so compound variants like `/.env.live` or `/dump.sql.gz` are also caught. Common scanner-bait directories (`/assets`, `/static`, `/media`, `/dist`, `/vendor`, `/backend`, `/config`) are also blocked.
-- Validates the first path segment against `^[a-zA-Z][a-zA-Z-]*$` (letters and hyphens, case-insensitive)
-- Passes through static files (paths with file extensions) and framework paths whose first segment starts with `_` (for example `/_blazor`, `/_framework`, `/_content`), as well as `MicrosoftIdentity`
-- Returns 404 for invalid segments — no Blazor components render, no API calls fire
+See [Request Pipeline, Filtering, and Static Files - Phase 7](url-routing.md#phase-7---request-filtering) for the full implementation details including the file-extension allowlist, probe patterns, and segment validation rules.
 
 **What it does NOT do**: Validate deeper segments, query strings, or request bodies.
 

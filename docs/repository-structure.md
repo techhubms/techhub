@@ -162,24 +162,6 @@ Azure infrastructure as code (Bicep templates) for Azure Container Apps deployme
 
 Deployment is managed via PowerShell scripts (`scripts/Deploy-Infrastructure.ps1` and `scripts/Deploy-Application.ps1`) which are called by GitHub Actions workflows. Scripts can also be run locally for testing.
 
-See [specs/008-azure-infrastructure/spec.md](../specs/008-azure-infrastructure/spec.md) for architecture details.
-
-### Feature Specifications (`specs/`)
-
-Detailed specifications for major features that still need to be built (following SpecKit structure):
-
-- `001a-tag-counting/` - Dynamic tag counts feature
-- `001b-date-range-slider/` - Date range filtering
-- `001c-tag-dropdown-filter/` - Excel-style tag dropdown
-- `004-custom-pages/` - Custom markdown pages
-- `005-mobile-navigation/` - Mobile navigation
-- `006-seo/` - SEO optimization
-- `007-google-analytics/` - Analytics integration
-- `008-azure-infrastructure/` - Azure deployment
-- `009-ci-cd-pipeline/` - CI/CD automation
-
-Each spec folder contains `spec.md`, `plan.md`, and `tasks.md` files.
-
 ## Development Environment & Working Directories
 
 ### `.devcontainer/`
@@ -212,6 +194,5 @@ Temporary working directory for AI assistants and development tasks (gitignored)
   - See [ci-cd-pipeline.md](ci-cd-pipeline.md) for complete CI/CD documentation
 - **`.vscode/`** - VS Code workspace settings and launch configurations
 - **`.git/`** - Git repository metadata
-- **`.specify/`** - SpecKit configuration and templates
 - **`.playwright-mcp/`** - Playwright MCP (Model Context Protocol) configuration
 - **`.dockerignore`** - Files to exclude from Docker builds

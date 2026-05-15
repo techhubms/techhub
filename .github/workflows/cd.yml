@@ -5,13 +5,19 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# Concurrency strategy:
-# - NO workflow-level concurrency group. Each push starts its own CI run immediately.
-#   This avoids the GitHub Actions limitation where runs pending environment approval
-#   block the entire concurrency group, preventing newer runs from starting.
+# Concurrency strategy
+
+# - NO workflow-level concurrency group. Each push starts its own CI run immediately
+
+# This avoids the GitHub Actions limitation where runs pending environment approval
+
+# block the entire concurrency group, preventing newer runs from starting
+
 # - Deployment jobs use per-environment concurrency (see deploy-staging, deploy-production)
-#   to prevent conflicting deploys to the same environment.
-# - CI jobs are stateless and safe to run in parallel across commits.
+
+# to prevent conflicting deploys to the same environment
+
+# - CI jobs are stateless and safe to run in parallel across commits
 
 permissions:
   contents: read
@@ -20,7 +26,9 @@ permissions:
   security-events: write
 
 # ════════════════════════════════════════════════════════════════════════════════
+
 # CI JOBS — Run on every trigger
+
 # ════════════════════════════════════════════════════════════════════════════════
 
 jobs:
@@ -346,9 +354,11 @@ jobs:
           path: coverage-report/
           retention-days: 7
 
-  # ══════════════════════════════════════════════════════════════════════════════
-  # Quality Gate — All CI checks must pass before deployment
-  # ══════════════════════════════════════════════════════════════════════════════
+# ══════════════════════════════════════════════════════════════════════════════
+
+# Quality Gate — All CI checks must pass before deployment
+
+# ══════════════════════════════════════════════════════════════════════════════
 
   quality-gate:
     name: Quality Gate
@@ -471,16 +481,24 @@ jobs:
             exit 1
           fi
 
-  # ════════════════════════════════════════════════════════════════════════════════
-  # DEPLOYMENT JOBS — Only run on push/manual.
-  # All deployment jobs require quality-gate to pass first.
-  # Every deployment runs the full Bicep template — ARM is idempotent and only
-  # redeploys resources whose desired state actually changed.
-  # ════════════════════════════════════════════════════════════════════════════════
+# ════════════════════════════════════════════════════════════════════════════════
 
-  # ──────────────────────────────────────────────
-  # Shared infrastructure (ACR) — always runs
-  # ──────────────────────────────────────────────
+# DEPLOYMENT JOBS — Only run on push/manual
+
+# All deployment jobs require quality-gate to pass first
+
+# Every deployment runs the full Bicep template — ARM is idempotent and only
+
+# redeploys resources whose desired state actually changed
+
+# ════════════════════════════════════════════════════════════════════════════════
+
+# ──────────────────────────────────────────────
+
+# Shared infrastructure (ACR) — always runs
+
+# ──────────────────────────────────────────────
+
   deploy-shared-infra:
     name: Deploy Shared Infrastructure
     runs-on: ubuntu-latest
@@ -495,7 +513,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy shared infrastructure
         shell: pwsh
@@ -506,10 +526,14 @@ jobs:
             -Environment shared `
             -Mode deploy
 
-  # ──────────────────────────────────────────────
-  # Build & push Docker images
-  # Runs after shared infra (ACR must exist)
-  # ──────────────────────────────────────────────
+# ──────────────────────────────────────────────
+
+# Build & push Docker images
+
+# Runs after shared infra (ACR must exist)
+
+# ──────────────────────────────────────────────
+
   build-and-push:
     name: Build & Push Docker Images
     runs-on: ubuntu-latest
@@ -530,7 +554,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Build and push images
         shell: pwsh
@@ -540,13 +566,20 @@ jobs:
             -Tag "${{ steps.tag.outputs.image-tag }}" `
             -SkipDeploy
 
-  # ──────────────────────────────────────────────
-  # Staging infrastructure deployment (placeholder)
-  # Deploys the shared foundation: VNet, monitoring, CAE, OpenAI, networking.
-  # Container Apps and PostgreSQL are NOT deployed — they are ephemeral and created
-  # per-PR by Deploy-PrPreview.ps1. No image tag or DB password required.
-  # Runs in parallel with build-and-push (both depend only on deploy-shared-infra).
-  # ──────────────────────────────────────────────
+# ──────────────────────────────────────────────
+
+# Staging infrastructure deployment (placeholder)
+
+# Deploys the shared foundation: VNet, monitoring, CAE, OpenAI, networking
+
+# Container Apps and PostgreSQL are NOT deployed — they are ephemeral and created
+
+# per-PR by Deploy-PrPreview.ps1. No image tag or DB password required
+
+# Runs in parallel with build-and-push (both depend only on deploy-shared-infra)
+
+# ──────────────────────────────────────────────
+
   deploy-staging-infra:
     name: Deploy Staging Infrastructure
     runs-on: ubuntu-latest
@@ -563,7 +596,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy staging infrastructure
         shell: pwsh
@@ -583,11 +618,16 @@ jobs:
           echo "Staging infrastructure (VNet, monitoring, Container Apps Environment, OpenAI) is ready for ephemeral PR environments." >> $GITHUB_STEP_SUMMARY
           echo "No permanent Container Apps or PostgreSQL are deployed — PR environments provision those on demand." >> $GITHUB_STEP_SUMMARY
 
-  # ──────────────────────────────────────────────
-  # Deploy to Production (infra + app in one shot)
-  # Uses GitHub environment protection for approval
-  # Followed by E2E tests (without performance tests) to validate the deployment.
-  # ──────────────────────────────────────────────
+# ──────────────────────────────────────────────
+
+# Deploy to Production (infra + app in one shot)
+
+# Uses GitHub environment protection for approval
+
+# Followed by E2E tests (without performance tests) to validate the deployment
+
+# ──────────────────────────────────────────────
+
   deploy-production:
     name: Deploy to Production
     runs-on: ubuntu-latest
@@ -605,7 +645,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy production infrastructure and application
         id: deploy
@@ -646,13 +688,20 @@ jobs:
             -DeployedBy "${{ github.actor }}" `
             -RunUrl "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
-  # ──────────────────────────────────────────────
-  # Production E2E tests — run after deployment
-  # Uses the same E2E test suite as PR preview environments,
-  # but skips performance tests (Category=Performance) and
-  # dev-environment-only tests (Category=DevEnvironment) such as
-  # GoogleAnalyticsTests which assert GA is absent (true in dev, false in prod).
-  # ──────────────────────────────────────────────
+# ──────────────────────────────────────────────
+
+# Production E2E tests — run after deployment
+
+# Uses the same E2E test suite as PR preview environments
+
+# but skips performance tests (Category=Performance) and
+
+# dev-environment-only tests (Category=DevEnvironment) such as
+
+# GoogleAnalyticsTests which assert GA is absent (true in dev, false in prod)
+
+# ──────────────────────────────────────────────
+
   production-e2e:
     name: E2E Tests (Production)
     runs-on: ubuntu-latest
