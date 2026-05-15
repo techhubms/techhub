@@ -107,6 +107,38 @@ This makes the span appear on the **Failures** blade in Application Insights, en
 
 Scanner/probe requests and bot crawlers are **excluded entirely** from tracing by the `options.Filter` predicate in `ConfigureOpenTelemetry` (see `Extensions.cs`). Probe paths are filtered via `ProbeDetector.IsProbeRequest()` and bot user agents via `WebTelemetryFilters.IsBotRequest()` — no Activity span is ever started for these requests, so they cannot appear on the Failures blade at all.
 
+## Suppressing Structural-Noise 4xx
+
+Even after probe and bot suppression, some requests that reach the full Blazor pipeline produce 404 or 405 responses that are structural noise — not real errors:
+
+| Status | Source | Why it's noise |
+|--------|--------|----------------|
+| 404 | Unknown paths (`/bla`) re-executed through `UseStatusCodePagesWithReExecute` | Bots and stale links following dead URLs; the server handled it correctly |
+| 405 | `HttpMethodFilterMiddleware` blocking OPTIONS/PUT/PATCH/etc | Scanner probes testing for REST APIs on the web host |
+
+Azure Monitor counts any span with an HTTP status of 400–499 as a `requests/failed` data point, which would inflate the alert metric and trigger server-down alerts for traffic that is completely expected.
+
+The Web service registers `WebTelemetryFilters.SuppressIfClientError` as the `additionalResponseEnricher` callback in `AddServiceDefaults`. This callback runs inside `EnrichWithHttpResponse` — **after the response is written but before `Activity.Stop()` fires** — which is the only window where the status code is known and the export flag can still be cleared:
+
+```csharp
+// Clears ActivityTraceFlags.Recorded for 404 and 405 only.
+// The Azure Monitor BatchExportProcessor checks this flag in OnEnd();
+// if it is not set, the activity is never added to the export queue.
+if (response.StatusCode is 404 or 405)
+{
+    activity.ActivityTraceFlags &= ~ActivityTraceFlags.Recorded;
+}
+```
+
+Only 404 and 405 are suppressed. Codes with real diagnostic value are retained:
+
+| Code | Retained | Reason |
+|------|----------|--------|
+| 429 | ✅ | Rate-limit surges indicate scraping or DDoS attack traffic |
+| 401 / 403 | ✅ | Auth failures can reveal misconfigurations or bugs |
+| 400 | ✅ | Bad request inputs warrant investigation |
+| 5xx | ✅ | Server errors always trigger alerts |
+
 ## Google Analytics
 
 GA4 is active in Production only (controlled by `GoogleAnalytics:MeasurementId` in `appsettings.Production.json`).
@@ -145,7 +177,7 @@ When running via docker-compose (`Run -Docker`), the same setup applies - an Asp
 
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) - OpenTelemetry configuration and exporter setup
 - [Extensions.cs](../src/TechHub.ServiceDefaults/Extensions.cs) (`ConfigureOpenTelemetry`) - Inline `options.Filter` excludes health probes and scanner probes via `ProbeDetector.IsProbeRequest()` before any span is created
-- [WebTelemetryFilters.cs](../src/TechHub.Web/Telemetry/WebTelemetryFilters.cs) - Web-specific trace filters: suppresses `/_blazor/disconnect` 499s and bot requests
+- [WebTelemetryFilters.cs](../src/TechHub.Web/Telemetry/WebTelemetryFilters.cs) - Web-specific trace filters: suppresses `/_blazor/disconnect` 499s, bot requests, and clears `ActivityTraceFlags.Recorded` for 404/405 responses via `SuppressIfClientError`
 - [App.razor](../src/TechHub.Web/Components/App.razor) - Browser SDK and GA4 script injection
 - [AppHost.cs](../src/TechHub.AppHost/AppHost.cs) - Aspire service orchestration
 - [docker-compose.yml](../docker-compose.yml) - Docker environment variables for OTLP and service names

@@ -41,6 +41,28 @@
   font-weight: var(--font-weight-bold);
 }
 
+.custom-page-billing-notice {
+  background: var(--color-blue-bg);
+  border-left: 4px solid var(--color-blue);
+  padding: var(--spacing-2) var(--spacing-3);
+  margin: var(--spacing-3) 0 var(--spacing-5);
+  border-radius: var(--radius-sm);
+}
+
+.custom-page-billing-notice p {
+  margin-bottom: var(--spacing-2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.custom-page-billing-notice ul {
+  margin: 0;
+  padding-left: var(--spacing-4);
+}
+
+.custom-page-billing-notice li {
+  margin-bottom: var(--spacing-1);
+}
+
 /* Subscription Tiers - Sidebar */
 .features-tiers-sidebar {
   display: flex;
@@ -450,6 +472,42 @@ html.keyboard-nav .features-timeline-card:focus-visible {
   line-height: 1;
 }
 
+.badge-plan-free {
+  background: var(--color-blue-light-bg);
+  color: var(--color-purple-bright);
+  border-color: var(--color-purple-border-subtle);
+}
+
+.badge-plan-student {
+  background: var(--color-green-dark-bg);
+  color: var(--color-green-light);
+  border-color: var(--color-green-light-border);
+}
+
+.badge-plan-pro {
+  background: var(--color-purple-bg-subtle);
+  color: var(--color-purple-bright);
+  border-color: var(--color-purple-border);
+}
+
+.badge-plan-business {
+  background: var(--color-amber-bg);
+  color: var(--color-amber);
+  border-color: var(--color-amber-border);
+}
+
+.badge-plan-proplus {
+  background: var(--color-purple-bg-dark);
+  color: var(--color-purple-bright);
+  border-color: var(--color-purple-border);
+}
+
+.badge-plan-enterprise {
+  background: var(--color-red-bg);
+  color: var(--color-red);
+  border-color: var(--color-red-light-border);
+}
+
 /* Normalize Video badge size to match plan badges in the collapsed header */
 .features-timeline-badges .badge-info {
   display: inline-flex;
@@ -469,6 +527,7 @@ html.keyboard-nav .features-timeline-card:focus-visible {
   gap: var(--spacing-1);
   flex-wrap: wrap;
   align-items: center;
+  margin-top: var(--spacing-1);
   margin-bottom: var(--spacing-2);
 }
 

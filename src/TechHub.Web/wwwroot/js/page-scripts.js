@@ -423,6 +423,16 @@ window.scrollTierCardIntoView = function(tierId) {
     }
 };
 
+/**
+ * Capture the current scroll position and restore it after the next frame.
+ * Called before a Blazor state change that would otherwise cause the browser
+ * to scroll the newly-focused element into view (e.g. expanding a feature card).
+ */
+window.preventScrollOnExpand = function() {
+    const y = window.scrollY;
+    requestAnimationFrame(() => window.scrollTo({ top: y, behavior: 'instant' }));
+};
+
 // ─── Script Lifecycle Flag ────────────────────────────────────────────────────
 // Single flag: window.__scriptsReady
 //   false     = page scripts are loading (blocks WaitForBlazorReadyAsync)

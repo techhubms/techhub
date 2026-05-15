@@ -20,11 +20,14 @@ namespace TechHub.Web.Middleware;
 ///     against the section's collections. Unknown section → 404. Unknown collection → 404.
 ///     Validation is skipped when the section cache is not ready (API down at startup).
 ///     If the path changed (normalization applied) and is valid → 301 to the cleaned path.
-///   - Single-segment paths that are not a known section, page, or static file →
-///     API legacy lookup to resolve the canonical /{section}/{collection}/{slug} URL.
-///     If the API returns a result, redirect there directly (one redirect to the final URL).
-///     If not found, return 404. On transient API failures, redirect to the cleaned path first
-///     when normalization already changed it; otherwise return 503 with Cache-Control: no-store.
+///   - Single-segment paths that are not a known section, page, or static file:
+///     A legacy API lookup is performed ONLY when the original URL contained .html (the format
+///     used on the old website). Bare slugs without .html are not legacy URLs — they return
+///     404 immediately without an API call. If the API lookup resolves the slug, redirect
+///     directly to the canonical URL. If not found, return 404. On transient API failures,
+///     redirect to the cleaned path when normalization changed it; otherwise return 503.
+///   - The optional ?section= query parameter is remapped through the section rename dictionary
+///     before being forwarded to the API (e.g. ?section=coding → section hint "dotnet").
 ///
 /// Case normalization is NOT performed here. The infrastructure layer handles
 /// case-insensitive DB lookups so URLs work regardless of capitalisation.
@@ -128,6 +131,13 @@ public partial class UrlNormalizationMiddleware
 
         // Normalize each segment: strip .html extension, strip YYYY-MM-DD- date prefix.
         var rawSegments = path.TrimStart('/').Split('/');
+
+        // Track whether ANY raw segment contained .html before normalization.
+        // Legacy API lookups are gated on this: the old website always used date-slug.html
+        // as its URL format. Bare slugs (no .html) are not legacy URLs and are hard-404'd
+        // immediately instead of triggering an API call.
+        var hadHtmlExtension = Array.Exists(rawSegments, s => s.EndsWith(".html", StringComparison.OrdinalIgnoreCase));
+
         var normalizedSegments = rawSegments.Select(NormalizeSegment).ToArray();
 
         // Apply section rename redirects (e.g., /coding/* → /dotnet/*). Done after segment
@@ -155,7 +165,8 @@ public partial class UrlNormalizationMiddleware
                 if (normalizedSegments.Length == 2
                     && _sectionCache.IsReady
                     && _sectionCache.GetSectionByName(normalizedSegments[0]) != null
-                    && IsLegacyLookupCandidate(normalizedSegments[1]))
+                    && IsLegacyLookupCandidate(normalizedSegments[1])
+                    && hadHtmlExtension)
                 {
                     var lookupHandled = await TryLegacyRedirectAsync(context, normalizedSegments[1], normalizedSegments[0]);
                     if (!lookupHandled)
@@ -238,11 +249,28 @@ public partial class UrlNormalizationMiddleware
             return;
         }
 
+        // Legacy lookups are only triggered for URLs that originally contained .html —
+        // the format used on the old website (e.g. /2024-01-15-my-article.html).
+        // Bare slugs without .html are not legacy URLs; return 404 immediately without
+        // an API call so that scanner noise and misspelled paths produce no external traffic.
+        if (!hadHtmlExtension)
+        {
+            context.Response.StatusCode = StatusCodes.Status404NotFound;
+            return;
+        }
+
         // Legacy lookup: call the API with the already-normalized slug.
-        // This avoids an intermediate redirect (e.g. /2026-01-12-article → /article → /ai/videos/article)
+        // This avoids an intermediate redirect (e.g. /2026-01-12-article.html → /article → /ai/videos/article)
         // by going directly to the canonical URL in one step.
         var rawSection = context.Request.Query["section"].FirstOrDefault();
         var sectionHint = RouteParameterValidator.IsValidNameSegment(rawSection) ? rawSection : null;
+
+        // Remap legacy section names so the API lookup is scoped to the current name.
+        // E.g. ?section=coding in an old bookmark maps to ?section=dotnet for the API call.
+        if (sectionHint != null && _renamedSections.TryGetValue(sectionHint, out var remappedHint))
+        {
+            sectionHint = remappedHint;
+        }
 
         var handled = await TryLegacyRedirectAsync(context, segment, sectionHint);
         if (handled)

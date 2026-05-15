@@ -4,6 +4,11 @@
     display: flex;
     flex-wrap: nowrap;
     gap: var(--spacing-1);
+    justify-content: flex-end;
+}
+
+.features-plans-col {
+    text-align: right;
 }
 
 .features-plan-badge {

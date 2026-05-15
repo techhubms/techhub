@@ -335,6 +335,10 @@ public sealed class ContentProcessingService
     /// When set, it is used as the content for AI processing instead of auto-fetching.
     /// When null, YouTube items are processed without transcript data.
     /// </param>
+    /// <param name="authorOverride">
+    /// Optional author override. When set, this value is used as the author of the content item
+    /// instead of the author extracted by the AI from the page content.
+    /// </param>
     /// <param name="ct">Cancellation token.</param>
     /// <returns>
     /// <see langword="null"/> when the URL is already in the database (HTTP 409 Conflict).
@@ -347,6 +351,7 @@ public sealed class ContentProcessingService
         string? subcollectionName = null,
         string? titleHint = null,
         string? transcript = null,
+        string? authorOverride = null,
         CancellationToken ct = default)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(url);
@@ -393,7 +398,8 @@ public sealed class ContentProcessingService
                 FeedName = feedName,
                 CollectionName = collectionName,
                 FeedItemData = feedItemData,
-                SkipSalesPitchCheck = true
+                SkipSalesPitchCheck = true,
+                AuthorOverride = !string.IsNullOrWhiteSpace(authorOverride) ? authorOverride : null
             };
 
             // Shared per-item pipeline: tags → content → AI → write

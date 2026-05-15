@@ -23,7 +23,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add Aspire service defaults (OpenTelemetry, service discovery, resilience, health checks).
 // WebTelemetryFilters suppresses Blazor disconnect noise and bot-crawler 404s from traces.
-builder.AddServiceDefaults(WebTelemetryFilters.ShouldTrace);
+// SuppressIfClientError clears ActivityTraceFlags.Recorded for 4xx responses so they are
+// not exported to App Insights and do not inflate the requests/failed metric.
+builder.AddServiceDefaults(
+    additionalTraceFilter: WebTelemetryFilters.ShouldTrace,
+    additionalResponseEnricher: WebTelemetryFilters.SuppressIfClientError);
 
 // Log environment during startup for verification
 using (var loggerFactory = LoggerFactory.Create(b => b.AddConsole()))
@@ -396,32 +400,49 @@ app.UseForwardedHeaders(forwardedHeadersOptions);
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+}
+
+// Intercepts empty 4xx responses and re-executes through /not-found so browsers receive
+// a full HTML page instead of an empty body (which Chrome reports as
+// ERR_HTTP_RESPONSE_CODE_FAILURE). The original 4xx status code is preserved.
+// Excluded for /_blazor: a 404 from a gone circuit is expected and must not be
+// re-executed as an application error (would corrupt the OTel span name).
+app.UseWhen(
+    ctx => !ctx.Request.Path.StartsWithSegments("/_blazor", StringComparison.OrdinalIgnoreCase),
+    branch => branch.UseStatusCodePagesWithReExecute("/not-found", createScopeForStatusCodePages: true));
+
+// ── Security and protocol ─────────────────────────────────────────────────────
+// All TLS/header-level security in one group, before any URL processing runs.
+// Order within the group: HSTS and SecurityHeaders add response headers;
+// HttpMethodFilter rejects disallowed methods; HttpsRedirection upgrades plain HTTP.
+if (!app.Environment.IsDevelopment())
+{
+    // Tells browsers to always use HTTPS for this domain for the next year.
     app.UseHsts();
 }
 
-// Security headers (XSS, clickjacking, MIME sniffing protection)
 app.UseSecurityHeaders();
-
-// ── Step 1: Fix URLs (301 redirects) ─────────────────────────────────────────
-// Redirect subdomain shortcuts (e.g., ghc.xebia.ms -> /github-copilot, www.tech.hub.ms -> tech.hub.ms)
-app.UseSubdomainRedirects();
-// Unified URL normalization: strips .html, strips YYYY-MM-DD- date prefixes, resolves legacy
-// single-segment slugs via the API — all in one pass, at most one 301 redirect per request.
-app.UseUrlNormalization();
-// Redirect HTTP → HTTPS
+app.UseHttpMethodFilter();
 app.UseHttpsRedirection();
 
-// ── Step 2: Serve static files before validators ──────────────────────────────
-// Static files (CSS, JS, images, favicon.ico) short-circuit here so they never
-// reach the route validators below. Must be before UseInvalidRouteSegmentFilter
-// so that static asset requests are never rejected as invalid segments.
+// ── URL correction (301 redirects) ───────────────────────────────────────────
+app.UseSubdomainRedirects();
+app.UseUrlNormalization();
+
+// ── Static files ─────────────────────────────────────────────────────────────
+// Short-circuits for CSS/JS/images before the request filter sees them.
 app.UseStaticFilesCaching();
 var contentTypeProvider = new FileExtensionContentTypeProvider();
 contentTypeProvider.Mappings[".jxl"] = "image/jxl";
 app.UseStaticFiles(new StaticFileOptions { ContentTypeProvider = contentTypeProvider });
 
-// ── Step 3a: Rewrite HEAD → GET ───────────────────────────────────────────────
+// ── Request filter ────────────────────────────────────────────────────────────
+// Rejects scanner probes, unknown file extensions, and structurally invalid first segments.
+// Placed here — after static files but before auth and routing — so invalid paths never
+// reach the auth stack or endpoint selection.
+app.UseInvalidRouteSegmentFilter();
+
+// ── HEAD → GET rewrite (must be immediately before UseRouting) ────────────────
 // MapRazorComponents and MapGet only register GET endpoints. In WebApplication,
 // UseRouting() is auto-inserted at the start of the pipeline (before user middleware),
 // so it sees the original HEAD method and returns 405. To fix this, we place an
@@ -462,13 +483,7 @@ app.UseRateLimiter();
 app.UseAdminTokenValidation();
 app.UseAntiforgery();
 
-// ── Step 4: Validate URL structure ───────────────────────────────────────────
-// Reject segments that contain dots, digits at start, or other characters that
-// can never match a Blazor route (e.g. /config.json, /2024-probe, /ADMIN).
-// Paths starting with _ (Blazor internals: /_blazor, /_framework) are allowed.
-app.UseInvalidRouteSegmentFilter();
-
-// ── Step 5: Validate section/collection existence ────────────────────────────
+// ── Section/collection validation ────────────────────────────────────────────
 // Done in MainLayout.razor (runs before @Body renders, covers both HTTP requests
 // and Blazor soft-navigation). No middleware needed here.
 

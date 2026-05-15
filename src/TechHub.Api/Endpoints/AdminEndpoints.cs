@@ -1090,6 +1090,9 @@ public static partial class AdminEndpoints
         var transcript = !string.IsNullOrWhiteSpace(request.Transcript)
             ? request.Transcript.Trim()
             : null;
+        var authorOverride = !string.IsNullOrWhiteSpace(request.AuthorOverride)
+            ? request.AuthorOverride.Trim().Sanitize()
+            : null;
 
         if (transcript is not null && transcript.Length > MaxTranscriptLength)
         {
@@ -1103,6 +1106,7 @@ public static partial class AdminEndpoints
             subcollectionName: null,
             titleHint,
             transcript,
+            authorOverride,
             ct);
 
         if (result is null)

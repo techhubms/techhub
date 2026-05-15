@@ -157,7 +157,7 @@ This structure:
 - Includes keywords relevant to content
 - Enables breadcrumb navigation
 
-For the full request processing pipeline — subdomain redirects, legacy URL resolution, `.html` stripping, invalid segment filtering, and Blazor routing — see [url-routing.md](url-routing.md).
+For the full request processing pipeline — subdomain redirects, URL normalization, static files, probe filtering, and Blazor routing — see [url-routing.md](url-routing.md).
 
 ## SEO Coverage
 

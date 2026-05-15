@@ -550,7 +550,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Build and push images
         shell: pwsh
@@ -567,7 +569,7 @@ jobs:
     if: github.event.action != 'closed'
     environment:
       name: staging
-      url: https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ steps.deploy.outputs.cae-default-domain }}
+      url: "https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ steps.deploy.outputs.cae-default-domain }}"
     concurrency:
       group: pr-preview-${{ github.event.pull_request.number }}
       cancel-in-progress: true
@@ -585,7 +587,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Deploy PR preview Container Apps
         id: deploy
@@ -710,7 +714,9 @@ jobs:
       - name: Azure Login
         uses: azure/login@532459ea530d8321f2fb9bb10d1e0bcf23869a43 # v3.0.0
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ vars.AZURE_CLIENT_ID }}
+          tenant-id: ${{ vars.AZURE_TENANT_ID }}
+          subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
       - name: Delete PR preview Container Apps
         shell: pwsh
