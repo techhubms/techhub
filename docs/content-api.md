@@ -102,22 +102,20 @@ The `ContentItem` domain model provides helper methods for navigation and URL ge
 | Method | Purpose | Returns |
 |--------|---------|---------|
 | `LinksExternally()` | Checks if item links to external source | `bool` |
-| `GetHref()` | Gets the navigation URL (external or internal) | `string` |
+| `GetHref(sectionOverride?)` | Gets the navigation URL (external or internal) | `string` |
 | `GetTarget()` | Gets link target attribute | `"_blank"` or `null` |
 | `GetRel()` | Gets link rel attribute | `"noopener noreferrer"` or `null` |
-| `GetAriaLabel()` | Gets accessibility label | `"Opens in new tab"` or `null` |
-| `GetDataEnhanceNav()` | Gets Blazor enhance attribute | `"false"` or `null` |
-| `GetUrlInSection(section)` | Gets URL for specific section context | `string` |
-| `GetPrimarySectionUrl()` | Gets URL using primary section | `string` |
+| `GetAriaLabel()` | Gets accessibility label for screen readers | `string` |
+
+`GetAriaLabel()` always returns a value: `"{Title} - opens in new tab"` for external items, or just `"{Title}"` for internal ones.
 
 **Usage in Blazor**:
 
 ```razor
-<a href="@item.GetHref()"
+<a href="@item.GetHref(SectionName)"
    target="@item.GetTarget()"
    rel="@item.GetRel()"
-   aria-label="@item.GetAriaLabel()"
-   data-enhance-nav="@item.GetDataEnhanceNav()">
+   aria-label="@item.GetAriaLabel()">
     @item.Title
 </a>
 ```
@@ -167,7 +165,7 @@ Get items in a specific collection within a section. Use `all` as collectionName
 - `skip` (optional): Number of items to skip for pagination
 - `q` (optional): Search query (searches title, description, tags)
 - `tags` (optional): Comma-separated tags (AND logic - items must have all tags)
-- `subcollection` (optional): Filter by subcollection
+- `types` (optional): Comma-separated collection types to include (e.g., `news,blogs`). Only applies when `collectionName` is `all`.
 - `lastDays` (optional): Filter to content from last N days. **Default behavior**: When no `lastDays`, `from`, or `to` parameters are provided, a default 90-day filter is automatically applied (configured via `DefaultDateRangeDays`). Pass `lastDays=0` to explicitly disable date filtering and return all content regardless of date.
 - `from` (optional): Start date for custom range (ISO 8601 format, e.g., `2024-01-15`). Takes precedence over `lastDays`
 - `to` (optional): End date for custom range (ISO 8601 format, e.g., `2024-06-15`). Takes precedence over `lastDays`

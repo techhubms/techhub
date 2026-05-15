@@ -53,8 +53,15 @@ public class BlazorPathStatusCodePageExclusionTests : IAsyncLifetime
             return Task.CompletedTask;
         });
 
-        // The /not-found handler — simulates our 404 page returning a recognisable body
-        _app.MapGet("/not-found", () => Results.Ok("not-found-page"));
+        // The /not-found handler — simulates NotFound.razor which explicitly sets StatusCode = 404
+        // and writes HTML. UseStatusCodePagesWithReExecute does NOT auto-restore the original
+        // status code; the handler itself is responsible, just like NotFound.razor in production.
+        _app.MapGet("/not-found", async (HttpContext ctx) =>
+        {
+            ctx.Response.StatusCode = StatusCodes.Status404NotFound;
+            ctx.Response.ContentType = "text/html";
+            await ctx.Response.WriteAsync("not-found-page");
+        });
 
         // Simulate any other unknown path returning 404 with no body/content-type.
         // UseStatusCodePagesWithReExecute only intercepts responses with no Content-Type set,
@@ -114,10 +121,16 @@ public class BlazorPathStatusCodePageExclusionTests : IAsyncLifetime
         var response = await _client.GetAsync("/some-unknown-path",
             TestContext.Current.CancellationToken);
 
-        // Assert — re-executed through /not-found, which returns 200 in our stub
-        response.StatusCode.Should().Be(HttpStatusCode.OK,
-            "non-/_blazor 404s must be re-executed through /not-found to show the user a helpful error page");
+        // Assert — re-executed through /not-found, which sets 404 (just like NotFound.razor in production).
+        // UseStatusCodePagesWithReExecute does NOT auto-restore the status code; the handler sets it.
+        // If this were UseStatusCodePagesWithRedirects instead, the client would follow a 302 and
+        // the final status would still be 404 BUT the URL would change. Here we verify:
+        //   1. Status is 404  — the handler correctly preserves the error status
+        //   2. Body contains "not-found-page" — re-execution reached /not-found, not a bare empty 404
+        response.StatusCode.Should().Be(HttpStatusCode.NotFound,
+            "UseStatusCodePagesWithReExecute must preserve 404 status — the user sees a 404 with HTML body, not a redirect");
         var body = await response.Content.ReadAsStringAsync(TestContext.Current.CancellationToken);
-        body.Should().Contain("not-found-page");
+        body.Should().Contain("not-found-page",
+            "the response body must come from the /not-found handler, proving re-execution happened");
     }
 }

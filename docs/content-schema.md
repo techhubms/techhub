@@ -25,7 +25,7 @@ See the full DDL in [src/TechHub.Infrastructure/Data/Migrations/postgres/001_ini
 | `author` | TEXT | Yes | Author or presenter name |
 | `date_epoch` | BIGINT | Yes | Unix timestamp (seconds). For RSS items this is the feed publication date. |
 | `primary_section_name` | TEXT | Yes | Primary section: `ai`, `azure`, `github-copilot`, `dotnet`, `devops`, `security`, `ml` |
-| `external_url` | TEXT | Yes | Source URL. For YouTube videos this is the YouTube URL. |
+| `external_url` | TEXT | Yes (except `roundups`) | Source URL. For YouTube videos this is the YouTube URL. Roundups have no external source URL. |
 | `feed_name` | TEXT | Yes | Display name of the originating RSS feed (or `"TechHub"` for admin-added items). |
 | `excerpt` | TEXT | Yes | Plain-text summary, max ~200 words. Used in cards, meta descriptions, RSS. |
 | `content` | TEXT | Yes | Full body content in markdown format. |

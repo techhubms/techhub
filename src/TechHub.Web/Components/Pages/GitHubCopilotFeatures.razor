@@ -180,7 +180,7 @@
                                                                         }
                                                                     </div>
                                                                     <p class="features-timeline-description">@feature.Description</p>
-                                                                    @if (!string.IsNullOrEmpty(videoId) && videoHref != null)
+                                                                    @if (_loadedSlugs.Contains(feature.Slug) && !string.IsNullOrEmpty(videoId) && videoHref != null)
                                                                     {
                                                                         <div class="features-timeline-video">
                                                                             <a href="@videoHref" class="feature-card-thumbnail" @onclick:stopPropagation="true">
@@ -198,7 +198,7 @@
                                                                             .OrderBy(l => l.SortOrder)
                                                                             .ToList();
                                                                     }
-                                                                    @if (relatedLinks.Count > 0)
+                                                                    @if (_loadedSlugs.Contains(feature.Slug) && relatedLinks.Count > 0)
                                                                     {
                                                                         <div class="features-timeline-related" @onclick:stopPropagation="true">
                                                                             <p class="features-timeline-related-label">Related videos</p>
@@ -261,6 +261,11 @@ else if (_notFound)
     private string? activeTierId;
     private bool ghesFilterActive;
     private string? expandedFeatureId;
+    // Tracks which feature slugs have been expanded at least once.
+    // Images are only rendered after a card is opened, preventing all YouTube
+    // thumbnails from loading on page load. Slugs are never removed so images
+    // stay in the DOM during the collapse animation.
+    private readonly HashSet<string> _loadedSlugs = [];
 
     [CascadingParameter]
     public HttpContext? HttpContext { get; set; }
@@ -287,6 +292,9 @@ else if (_notFound)
     {
         await JS.InvokeVoidAsync("preventScrollOnExpand");
         expandedFeatureId = expandedFeatureId == featureSlug ? null : featureSlug;
+        // Mark as loaded so thumbnails render — they stay rendered after collapse too,
+        // which keeps them in the DOM during the collapse animation.
+        _loadedSlugs.Add(featureSlug);
     }
 
     private async Task HandleFeatureKeyDown(KeyboardEventArgs e, string featureSlug)
@@ -401,6 +409,7 @@ else if (_notFound)
             pageData = restored.PageData;
             videoItems = restored.VideoItems ?? new();
             expandedFeatureId = videoItems.FirstOrDefault()?.Slug;
+            if (expandedFeatureId != null) _loadedSlugs.Add(expandedFeatureId);
             return;
         }
 
@@ -424,6 +433,7 @@ else if (_notFound)
                 .OrderByDescending(f => f.ReleaseDate ?? 0)
                 .ToList();
             expandedFeatureId = videoItems.FirstOrDefault()?.Slug;
+            if (expandedFeatureId != null) _loadedSlugs.Add(expandedFeatureId);
         }
         catch (Exception ex)
         {

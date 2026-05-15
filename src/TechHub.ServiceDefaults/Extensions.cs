@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -33,13 +34,19 @@ public static class ServiceDefaultsExtensions
     /// suppression rules (e.g. Blazor disconnect, bot crawlers) without coupling
     /// ServiceDefaults to those concerns.
     /// </param>
+    /// <param name="additionalResponseEnricher">
+    /// Optional callback invoked by <c>EnrichWithHttpResponse</c> after the response is written.
+    /// Use this to enrich or suppress activities based on response properties
+    /// (e.g. clear <c>ActivityTraceFlags.Recorded</c> for 4xx responses).
+    /// </param>
     public static IHostApplicationBuilder AddServiceDefaults(
         this IHostApplicationBuilder builder,
-        Func<HttpContext, bool>? additionalTraceFilter = null)
+        Func<HttpContext, bool>? additionalTraceFilter = null,
+        Action<Activity, HttpResponse>? additionalResponseEnricher = null)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
-        builder.ConfigureOpenTelemetry(additionalTraceFilter);
+        builder.ConfigureOpenTelemetry(additionalTraceFilter, additionalResponseEnricher);
 
         builder.AddDefaultHealthChecks();
 
@@ -67,9 +74,14 @@ public static class ServiceDefaultsExtensions
     /// Optional extra predicate applied on top of the built-in health-probe and
     /// scanner-probe filters. Return <c>false</c> to suppress a trace.
     /// </param>
+    /// <param name="additionalResponseEnricher">
+    /// Optional callback invoked by <c>EnrichWithHttpResponse</c> after the response is written.
+    /// Use this to enrich or suppress activities based on response properties.
+    /// </param>
     public static IHostApplicationBuilder ConfigureOpenTelemetry(
         this IHostApplicationBuilder builder,
-        Func<HttpContext, bool>? additionalTraceFilter = null)
+        Func<HttpContext, bool>? additionalTraceFilter = null,
+        Action<Activity, HttpResponse>? additionalResponseEnricher = null)
     {
         ArgumentNullException.ThrowIfNull(builder);
 
@@ -136,6 +148,8 @@ public static class ServiceDefaultsExtensions
                                {
                                    activity.SetTag("client.address", ip.MapToIPv4().ToString());
                                }
+
+                               additionalResponseEnricher?.Invoke(activity, httpResponse);
                            };
                        })
                        .AddHttpClientInstrumentation();

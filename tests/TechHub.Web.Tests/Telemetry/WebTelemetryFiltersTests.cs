@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Primitives;
@@ -122,5 +123,62 @@ public class WebTelemetryFiltersTests
     {
         WebTelemetryFilters.IsBotRequest(userAgent)
             .Should().BeFalse("real user agents must not be filtered from telemetry");
+    }
+
+    // ── SuppressIfClientError ────────────────────────────────────────────────
+
+    [Theory]
+    [InlineData(404)]
+    [InlineData(405)]
+    public void SuppressIfClientError_ClearsRecordedFlag_ForStructuralNoise(int statusCode)
+    {
+        // 404 = bots/scanners following dead links; 405 = scanner probing disallowed methods.
+        // Both are generated exclusively by external noise, never by real application errors.
+        using var activity = new Activity("Microsoft.AspNetCore.Hosting.HttpRequestIn");
+        activity.Start();
+        activity.ActivityTraceFlags = ActivityTraceFlags.Recorded;
+
+        var context = new DefaultHttpContext();
+        context.Response.StatusCode = statusCode;
+
+        WebTelemetryFilters.SuppressIfClientError(activity, context.Response);
+
+        activity.ActivityTraceFlags.Should().NotHaveFlag(ActivityTraceFlags.Recorded,
+            $"HTTP {statusCode} is structural noise that must not inflate requests/failed in App Insights");
+    }
+
+    [Theory]
+    [InlineData(200)]
+    [InlineData(201)]
+    [InlineData(204)]
+    [InlineData(301)]
+    [InlineData(302)]
+    [InlineData(400)]
+    [InlineData(401)]
+    [InlineData(403)]
+    [InlineData(429)]
+    [InlineData(499)]
+    [InlineData(500)]
+    [InlineData(502)]
+    [InlineData(503)]
+    public void SuppressIfClientError_RetainsRecordedFlag_ForActionableResponses(int statusCode)
+    {
+        // 401/403 can reveal auth bugs; 429 signals a scraping/DDoS attack;
+        // 5xx are genuine server errors. All must remain visible in App Insights.
+        using var activity = new Activity("Microsoft.AspNetCore.Hosting.HttpRequestIn");
+        activity.Start();
+        activity.ActivityTraceFlags = ActivityTraceFlags.Recorded;
+
+        var context = new DefaultHttpContext();
+        context.Response.StatusCode = statusCode;
+
+        WebTelemetryFilters.SuppressIfClientError(activity, context.Response);
+
+        activity.ActivityTraceFlags.Should().HaveFlag(ActivityTraceFlags.Recorded,
+            $"HTTP {statusCode} must remain in the trace pipeline — " +
+            (statusCode >= 500 ? "server errors must trigger alerts" :
+             statusCode == 429 ? "rate-limit surges indicate attack traffic" :
+             statusCode is 401 or 403 ? "auth failures may reveal bugs" :
+             "success/redirect responses must be visible"));
     }
 }

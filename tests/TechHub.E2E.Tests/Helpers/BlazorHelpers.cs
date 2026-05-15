@@ -614,6 +614,16 @@ public static class BlazorHelpers
         await locator.WaitForBlazorInteractivityAsync();
         await RetryUntilPassAsync(async () =>
         {
+            // Abort this attempt if the Blazor reconnect modal is currently open.
+            // Under slow network profiles (slow3g), the SignalR circuit can drop briefly,
+            // causing the reconnect modal's ::backdrop to cover the page and block clicks.
+            // Throw here to let RetryUntilPassAsync wait and retry after the modal closes.
+            var isReconnecting = await locator.Page.EvaluateAsync<bool>(
+                "() => !!document.getElementById('components-reconnect-modal')?.open");
+            if (isReconnecting)
+            {
+                throw new InvalidOperationException("Blazor reconnect modal is open — deferring click until circuit is restored.");
+            }
             await locator.ClickAsync(new() { Timeout = 2000 });
             await assertion();
         }, totalTimeoutMs);
