@@ -134,7 +134,7 @@ public class WebTelemetryFiltersTests
     {
         // 404 = bots/scanners following dead links; 405 = scanner probing disallowed methods.
         // Both are generated exclusively by external noise, never by real application errors.
-        var activity = new Activity("Microsoft.AspNetCore.Hosting.HttpRequestIn");
+        using var activity = new Activity("Microsoft.AspNetCore.Hosting.HttpRequestIn");
         activity.Start();
         activity.ActivityTraceFlags = ActivityTraceFlags.Recorded;
 
@@ -145,7 +145,6 @@ public class WebTelemetryFiltersTests
 
         activity.ActivityTraceFlags.Should().NotHaveFlag(ActivityTraceFlags.Recorded,
             $"HTTP {statusCode} is structural noise that must not inflate requests/failed in App Insights");
-        activity.Stop();
     }
 
     [Theory]
@@ -166,7 +165,7 @@ public class WebTelemetryFiltersTests
     {
         // 401/403 can reveal auth bugs; 429 signals a scraping/DDoS attack;
         // 5xx are genuine server errors. All must remain visible in App Insights.
-        var activity = new Activity("Microsoft.AspNetCore.Hosting.HttpRequestIn");
+        using var activity = new Activity("Microsoft.AspNetCore.Hosting.HttpRequestIn");
         activity.Start();
         activity.ActivityTraceFlags = ActivityTraceFlags.Recorded;
 
@@ -181,6 +180,5 @@ public class WebTelemetryFiltersTests
              statusCode == 429 ? "rate-limit surges indicate attack traffic" :
              statusCode is 401 or 403 ? "auth failures may reveal bugs" :
              "success/redirect responses must be visible"));
-        activity.Stop();
     }
 }

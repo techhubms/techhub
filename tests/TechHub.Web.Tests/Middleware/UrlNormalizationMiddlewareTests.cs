@@ -279,7 +279,7 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiException_WithHtmlPath_Returns503()
+    public async Task ApiException_WithHtmlPath_RedirectsToCleanedPath()
     {
         // /some-slug.html → strip .html → hadHtmlExtension=true → API throws → 503 (no pathChanged after strip)
         // Wait — /some-slug.html strips to /some-slug so pathChanged=true → redirect to clean URL on failure.
@@ -307,7 +307,7 @@ public class UrlNormalizationMiddlewareTests
     }
 
     [Fact]
-    public async Task ApiTimeout_WithHtmlPath_Returns503_Or_Redirect()
+    public async Task ApiTimeout_WithHtmlPath_RedirectsToCleanedPath()
     {
         // Timeout is a transient failure: same graceful-degradation as HttpRequestException.
         var mockApi = new Mock<ITechHubApiClient>();

@@ -84,20 +84,14 @@ public class HttpMethodFilterMiddleware
 
     internal static bool IsPostAllowed(PathString path)
     {
-        foreach (var prefix in _postAllowedPrefixes)
+        if (_postAllowedPrefixes.Any(prefix => path.StartsWithSegments(prefix, StringComparison.OrdinalIgnoreCase)))
         {
-            if (path.StartsWithSegments(prefix, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
+            return true;
         }
 
-        foreach (var exact in _postAllowedExact)
+        if (_postAllowedExact.Any(exact => path.Equals(exact, StringComparison.OrdinalIgnoreCase)))
         {
-            if (path.Equals(exact, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
+            return true;
         }
 
         return false;

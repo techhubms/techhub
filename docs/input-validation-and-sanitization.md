@@ -39,7 +39,7 @@ All user-controlled input in Tech Hub:
 
 **Purpose**: Short-circuit obviously invalid URL paths (scanner probes, unknown file-extension requests, structurally invalid first segments) before they reach the Blazor pipeline.
 
-See [Request Pipeline, Filtering, and Static Files - Phase 7](url-routing.md#phase-7---request-filtering) for the full implementation details including the file-extension allowlist, probe patterns, and segment validation rules.
+See [Request Pipeline, Filtering, and Static Files - Phase 5](url-routing.md#phase-5---request-filter) for the full implementation details including the file-extension allowlist, probe patterns, and segment validation rules.
 
 **What it does NOT do**: Validate deeper segments, query strings, or request bodies.
 

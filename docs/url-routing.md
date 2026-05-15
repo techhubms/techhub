@@ -321,26 +321,6 @@ The callback only runs for `200 OK` responses with a file extension in the path:
 
 The `Vary` header is removed for immutable assets to prevent CDN and proxy variability from limiting cache effectiveness.
 
-## Phase 6 - Head to GET Rewrite
-
-`MapRazorComponents` and `MapGet` only register GET endpoints. ASP.NET Core's routing would return 405 for HEAD requests because the HTTP method does not match. The fix: an inline middleware rewrites `HEAD` to `GET`, then calls `_next`. The response body is suppressed by replacing `context.Response.Body` with `Stream.Null`. An explicit `UseRouting()` call is placed after this rewrite so endpoint selection sees `GET` rather than `HEAD`.
-
-Without the explicit `UseRouting()`, WebApplication auto-inserts it before all user middleware, causing it to see the original HEAD method and return 405.
-
-## Phase 7 - Auth and Rate Limiting
-
-These run in order after `UseRouting` (so endpoint metadata is available for authorization policies):
-
-**`UseAuthentication`** validates the cookie or bearer token.
-
-**`UseAuthorization`** enforces `[Authorize]` attributes and policies.
-
-**`UseRateLimiter`** applies rate limiting. The `web-general` policy applies to all Blazor routes via `MapRazorComponents(...).RequireRateLimiting("web-general")`. RSS endpoints use `web-rss`. Rate limiting is disabled in `IntegrationTest` to avoid throttling test suites.
-
-**`AdminTokenValidationMiddleware`** targets `/admin/*` paths (excluding `/admin/login` and `/admin/logout`) for authenticated users. It attempts to acquire a token from the MSAL cache via `ITokenAcquisition`. If the cache is empty (server restart since login), it issues an OIDC challenge to re-authenticate before Blazor starts rendering - preventing circuit crashes.
-
-**`UseAntiforgery`** validates antiforgery tokens for state-changing operations.
-
 ## Phase 5 - Request Filter
 
 `InvalidRouteSegmentMiddleware` runs immediately after static files, before auth, routing, or endpoint selection. It short-circuits two categories of bad requests.
@@ -405,6 +385,26 @@ For extension-less paths that pass probe detection, the middleware extracts the 
 All remaining segments are validated against `^[a-zA-Z][a-zA-Z-]*$`: letters and hyphens only, must start with a letter. This matches every real section name, every known page (`about`, `not-found`, `admin`), and the virtual `all` section.
 
 Anything that fails - a segment starting with a digit, containing a dot, percent-encoded, or with underscores - receives an immediate **404**.
+
+## Phase 6 - Head to GET Rewrite
+
+`MapRazorComponents` and `MapGet` only register GET endpoints. ASP.NET Core's routing would return 405 for HEAD requests because the HTTP method does not match. The fix: an inline middleware rewrites `HEAD` to `GET`, then calls `_next`. The response body is suppressed by replacing `context.Response.Body` with `Stream.Null`. An explicit `UseRouting()` call is placed after this rewrite so endpoint selection sees `GET` rather than `HEAD`.
+
+Without the explicit `UseRouting()`, WebApplication auto-inserts it before all user middleware, causing it to see the original HEAD method and return 405.
+
+## Phase 7 - Auth and Rate Limiting
+
+These run in order after `UseRouting` (so endpoint metadata is available for authorization policies):
+
+**`UseAuthentication`** validates the cookie or bearer token.
+
+**`UseAuthorization`** enforces `[Authorize]` attributes and policies.
+
+**`UseRateLimiter`** applies rate limiting. The `web-general` policy applies to all Blazor routes via `MapRazorComponents(...).RequireRateLimiting("web-general")`. RSS endpoints use `web-rss`. Rate limiting is disabled in `IntegrationTest` to avoid throttling test suites.
+
+**`AdminTokenValidationMiddleware`** targets `/admin/*` paths (excluding `/admin/login` and `/admin/logout`) for authenticated users. It attempts to acquire a token from the MSAL cache via `ITokenAcquisition`. If the cache is empty (server restart since login), it issues an OIDC challenge to re-authenticate before Blazor starts rendering - preventing circuit crashes.
+
+**`UseAntiforgery`** validates antiforgery tokens for state-changing operations.
 
 ## Phase 8 - Endpoint Routing
 

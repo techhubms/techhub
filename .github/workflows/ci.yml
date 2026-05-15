@@ -5,19 +5,13 @@ on:
     branches: [main]
     types: [opened, synchronize, reopened, closed]
 
-# Concurrency strategy
-
-# - NO workflow-level concurrency group. Each push starts its own CI run immediately
-
-# This avoids the GitHub Actions limitation where runs pending environment approval
-
-# block the entire concurrency group, preventing newer runs from starting
-
+# Concurrency strategy:
+# - NO workflow-level concurrency group. Each push starts its own CI run immediately.
+#   This avoids the GitHub Actions limitation where runs pending environment approval
+#   block the entire concurrency group, preventing newer runs from starting.
 # - PR preview jobs use per-PR concurrency (see pr-preview-build-and-push, pr-preview-deploy)
-
-# to cancel stale preview deploys when a new commit is pushed to the same PR
-
-# - CI jobs are stateless and safe to run in parallel across commits
+#   to cancel stale preview deploys when a new commit is pushed to the same PR.
+# - CI jobs are stateless and safe to run in parallel across commits.
 
 permissions:
   contents: read
@@ -26,9 +20,7 @@ permissions:
   security-events: write
 
 # ════════════════════════════════════════════════════════════════════════════════
-
 # CI JOBS — Run on every trigger except closed PRs
-
 # ════════════════════════════════════════════════════════════════════════════════
 
 jobs:
@@ -398,11 +390,9 @@ jobs:
           path: coverage-report/
           retention-days: 7
 
-# ══════════════════════════════════════════════════════════════════════════════
-
-# Quality Gate — All CI checks must pass before deployment
-
-# ══════════════════════════════════════════════════════════════════════════════
+  # ══════════════════════════════════════════════════════════════════════════════
+  # Quality Gate — All CI checks must pass before deployment
+  # ══════════════════════════════════════════════════════════════════════════════
 
   quality-gate:
     name: Quality Gate
@@ -534,11 +524,9 @@ jobs:
             exit 1
           fi
 
-# ════════════════════════════════════════════════════════════════════════════════
-
-# PR PREVIEW JOBS — Only run on pull requests (not closed), after quality gate
-
-# ════════════════════════════════════════════════════════════════════════════════
+  # ════════════════════════════════════════════════════════════════════════════════
+  # PR PREVIEW JOBS — Only run on pull requests (not closed), after quality gate
+  # ════════════════════════════════════════════════════════════════════════════════
 
   pr-preview-build-and-push:
     name: Build & Push Docker Images (PR Preview)
@@ -710,11 +698,9 @@ jobs:
           path: tests/TechHub.E2E.Tests/bin/Release/net10.0/playwright-traces/
           retention-days: 7
 
-# ════════════════════════════════════════════════════════════════════════════════
-
-# PR PREVIEW TEARDOWN — Runs when PR is closed (no quality gate needed)
-
-# ════════════════════════════════════════════════════════════════════════════════
+  # ════════════════════════════════════════════════════════════════════════════════
+  # PR PREVIEW TEARDOWN — Runs when PR is closed (no quality gate needed)
+  # ════════════════════════════════════════════════════════════════════════════════
 
   pr-preview-teardown:
     name: Teardown PR Preview
