@@ -4,10 +4,16 @@
     "intro": "Test intro for tool tips page.",
     "tools": [
         {
-            "name": "Test Tool",
-            "description": "A test tool description",
-            "url": "https://example.com/test-tool",
-            "category": "Testing"
+            "name": "Visual Studio Code",
+            "description": "The most popular editor for GitHub Copilot. Get AI-powered code completion, chat, edit mode, and agent mode directly in your development workflow.",
+            "url": "https://code.visualstudio.com/",
+            "category": "IDE"
+        },
+        {
+            "name": "GitHub Copilot App",
+            "description": "A desktop application purpose-built for agent-driven development. Run multiple agent sessions in parallel, each on its own branch, and manage the full development lifecycle — without switching between your terminal, IDE, and browser.",
+            "url": "https://docs.github.com/en/copilot/how-tos/github-copilot-app/getting-started",
+            "category": "IDE"
         }
     ]
 }

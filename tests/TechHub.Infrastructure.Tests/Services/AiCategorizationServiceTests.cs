@@ -1159,6 +1159,48 @@ public class AiCategorizationServiceTests
     }
 
     [Fact]
+    public async Task CategorizeAsync_WithAuthorOverride_UsesOverrideRegardlessOfAiAuthor()
+    {
+        // Arrange — AI returns its own author, but an operator-supplied override is set
+        var aiJson = """
+            {
+                "included": true,
+                "title": "Build Something Great",
+                "excerpt": "A walkthrough by John",
+                "collection": "videos",
+                "sections": ["dotnet"],
+                "tags": ["dotnet"],
+                "primary_section": "dotnet",
+                "author": "John AI-Extracted",
+                "content": "Content here",
+                "explanation": "Included"
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+        var item = new RawFeedItem
+        {
+            Title = "Build Something Great",
+            ExternalUrl = "https://example.com/build",
+            PublishedAt = DateTimeOffset.UtcNow,
+            FeedName = "TechHub",
+            CollectionName = "videos",
+            FeedLevelAuthor = "Feed Level Author",
+            AuthorOverride = "Scott Hanselman"
+        };
+
+        // Act
+        var result = await sut.CategorizeAsync(item, CancellationToken.None);
+
+        // Assert — AuthorOverride takes precedence over both AI-extracted author and FeedLevelAuthor
+        result.Item.Should().NotBeNull();
+        result.Item!.Author.Should().Be("Scott Hanselman");
+    }
+
+    [Fact]
     public async Task CategorizeAsync_WithExcerptOnly_NoContent_RejectsItem()
     {
         // Arrange — excerpt is present but content is empty
@@ -1215,6 +1257,42 @@ public class AiCategorizationServiceTests
         result.Item!.Title.Should().Be("Regex in .NET");
         result.Item.Sections.Should().Contain("dotnet");
         result.IsFailure.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task CategorizeAsync_WhenInnerContentContainsValidDoubleBackslashS_ParsesSuccessfully()
+    {
+        // Arrange — AI correctly escapes a regex pattern (\s) as \\s in its JSON output.
+        // The previous sanitizer regex incorrectly matched the second \+s in \\s and stripped
+        // the backslash, turning valid \\s into invalid \s → JsonException:
+        //   "'s' is an invalid escapable character within a JSON string"
+        var aiJson = """
+            {
+                "included": true,
+                "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+                "excerpt": "How attackers exploit \\s+ patterns in AI pipelines",
+                "collection": "blogs",
+                "sections": ["security"],
+                "tags": ["security", "ai"],
+                "primary_section": "security",
+                "content": "Regex like \\s+ and \\w+ are used in shell injection attacks",
+                "explanation": "relevant security content"
+            }
+            """;
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new AiCompletionResult(false, WrapInAiResponse(aiJson)));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.CategorizeAsync(CreateRawItem(), CancellationToken.None);
+
+        // Assert — should parse successfully, not fail with "'s' is an invalid escapable character"
+        result.IsFailure.Should().BeFalse();
+        result.Item.Should().NotBeNull();
+        result.Item!.Title.Should().Be("When prompts become shells: RCE vulnerabilities in AI agent frameworks");
+        result.Item.Sections.Should().Contain("security");
     }
 
     // ── SkipSalesPitchCheck Override ──────────────────────────────────────────

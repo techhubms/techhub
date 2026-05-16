@@ -88,26 +88,7 @@ protected override async Task OnParametersSetAsync()
 
 **Why initialize tracking fields?** Without initialization, tracking fields default to `null`. If a parameter arrives as `""` (empty string), the comparison `"" != null` evaluates to `true`, causing a false change detection and a spurious data reload.
 
-### Components Using This Pattern
-
-| Component | Tracking Fields | Triggers Reload On |
-|-----------|----------------|-------------------|
-| `ContentItemsGrid.razor` | `previousCollectionName`, `previousFilterTags`, `previousSearchQuery`, `previousFromDate`, `previousToDate` | Collection, filter, search, or date change |
-| `ContentItem.razor` | `_previousSectionName`, `_previousCollectionName`, `_previousSlug` | Route parameter change |
-| `GenAI.razor` | `_previousPageType` | Route change between genai-basics/applied/advanced |
-| `SidebarTagCloud.razor` | `_previousFromDate`, `_previousToDate` | Date range filter change |
-| `DateRangeSlider.razor` | `_previousFromDate`, `_previousToDate` | External date parameter change |
-
-### Pages That Only Use `OnInitializedAsync`
-
-Pages without changing parameters put all data loading in `OnInitializedAsync` and do not need `OnParametersSetAsync` at all:
-
-- `Home.razor`
-- `GitHubCopilotLevels.razor`
-- `GitHubCopilotFeatures.razor`
-- `GitHubCopilotHandbook.razor`
-- `AISDLC.razor`
-- `DXSpace.razor`
+Components that react to route parameter changes use this pattern — for example `ContentItem.razor` (section/collection/slug) and `ContentItemsGrid.razor` (collection, filters, dates, search). Components without route-driven parameter changes (e.g. `Home.razor`, `GitHubCopilotFeatures.razor`) only use `OnInitializedAsync` and skip `OnParametersSetAsync` entirely.
 
 ## PersistentComponentState (Critical Pattern)
 

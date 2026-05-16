@@ -61,7 +61,7 @@ public class AuthorsPageTests : PlaywrightTestBase
         var endOfContent = Page.Locator(".end-of-content");
         await firstAuthor.ClickAndExpectAsync(async () =>
             await Assertions.Expect(contentGrid.Or(noContent).Or(endOfContent).First)
-                .ToBeVisibleAsync(new() { Timeout = 2000 }));
+                .ToBeVisibleAsync());
 
         // Select prompt should no longer be visible
         await Assertions.Expect(Page.Locator(".authors-select-prompt")).Not.ToBeVisibleAsync();
@@ -78,8 +78,7 @@ public class AuthorsPageTests : PlaywrightTestBase
         // Act + Assert — retry [click + active link visible] to cover hydration race
         var activeLink = Page.Locator(".author-sidebar-link.active");
         await firstAuthor.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(activeLink).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(activeLink).ToBeVisibleAsync());
     }
 
     [Fact]

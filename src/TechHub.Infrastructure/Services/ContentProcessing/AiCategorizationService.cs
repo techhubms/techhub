@@ -340,7 +340,7 @@ public sealed class AiCategorizationService : IAiCategorizationService
                     DateEpoch = source.PublishedAt.ToUnixTimeSeconds(),
                     CollectionName = source.CollectionName,
                     ExternalUrl = source.ExternalUrl,
-                    Author = author ?? source.FeedLevelAuthor,
+                    Author = source.AuthorOverride ?? author ?? source.FeedLevelAuthor,
                     FeedName = source.FeedName,
                     Tags = tags,
                     Sections = sections,

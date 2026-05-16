@@ -258,13 +258,50 @@ dotnet test tests/TechHub.E2E.Tests/TechHub.E2E.Tests.csproj `
 - Non-root user for security
 - Includes curl for health checks
 
-## GitHub Secrets Required
+## Azure Authentication
+
+The pipeline authenticates to Azure using [OIDC (Workload Identity Federation)](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-azure). GitHub Actions obtains a short-lived token from Azure at job start - no long-lived credentials are stored in GitHub at all.
+
+### Service Principal
+
+- **Name**: `sp-techhubms`
+- **Application (client) ID**: stored as the `AZURE_CLIENT_ID` repository variable
+
+### Federated Credentials
+
+Four federated credentials on `sp-techhubms` cover every job in the pipeline:
+
+| Credential name | OIDC subject | Jobs covered |
+|---|---|---|
+| `techhub-environment-staging` | `repo:...:environment:staging` | `deploy-staging-infra`, `pr-preview-deploy`, `redeploy-pr-env` |
+| `techhub-environment-production` | `repo:...:environment:production` | `deploy-production` |
+| `techhub-ref-main` | `repo:...:ref:refs/heads/main` | `deploy-shared-infra`, `build-and-push`, `teardown-all-pr-envs` |
+| `techhub-pull-request` | `repo:...:pull_request` | `pr-preview-build-and-push`, `pr-preview-teardown` (includes Dependabot PRs) |
+
+The `pull_request` credential is what allows Dependabot PRs to get full preview environments - GitHub blocks repository secrets from Dependabot, but OIDC variables are accessible.
+
+### Setup
+
+Run `scripts/Setup-OidcAuthentication.ps1` to configure the federated credentials and set the GitHub variables in one step. Requires Azure CLI and GitHub CLI authenticated with appropriate permissions.
+
+## GitHub Configuration
+
+### Repository Variables
+
+Configure these in GitHub repository settings → Secrets and variables → Actions → Variables:
+
+| Variable | Value |
+|---|---|
+| `AZURE_CLIENT_ID` | Application (client) ID of `sp-techhubms` |
+| `AZURE_TENANT_ID` | Azure Active Directory tenant ID |
+| `AZURE_SUBSCRIPTION_ID` | Azure subscription ID |
+
+`Setup-OidcAuthentication.ps1` sets these automatically from the current Azure CLI session.
 
 ### Repository Secrets
 
 Configure these in GitHub repository settings → Secrets and variables → Actions → Repository secrets:
 
-- `AZURE_CREDENTIALS` - Azure service principal credentials (JSON)
 - `ADMIN_IP_ADDRESSES` - Comma-separated IP addresses allowed through PostgreSQL and Key Vault firewalls
 
 ### Environment Secrets
@@ -273,10 +310,10 @@ Configure these per-environment in GitHub repository settings → Environments �
 
 | Secret | Staging | Production | Notes |
 |--------|---------|------------|-------|
-| `POSTGRES_ADMIN_PASSWORD` | ✗ Not needed | ✓ Required | Production DB password — set manually, stored in 1Password |
-| `AZURE_AD_CLIENT_SECRET` | ✗ Not needed | ✓ Required | Entra ID client secret — set via `Manage-EntraId.ps1 -Environment prod` |
+| `POSTGRES_ADMIN_PASSWORD` | - | Required | Production DB password - set manually, stored in 1Password |
+| `AZURE_AD_CLIENT_SECRET` | - | Required | Entra ID client secret - set via `Manage-EntraId.ps1 -Environment prod` |
 
-> **Tenant ID, Client ID, and AI key are no longer GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
+> **Tenant ID, Client ID, and AI key are not GitHub secrets.** `Deploy-Infrastructure.ps1` resolves the tenant ID from the active Azure CLI session, the client ID by looking up the app registration by name (`TechHub Staging` / `TechHub Production`), and the AI key directly from the Azure Cognitive Services account. Only values that cannot be read from Azure need to live as GitHub secrets.
 
 ## GitHub Environments
 
@@ -492,6 +529,6 @@ Production deployment automatically rolls back if:
 
 ## Related Documentation
 
-- [Azure Infrastructure](../specs/008-azure-infrastructure/spec.md) - Infrastructure details
+- [Network Architecture](network-architecture.md) - Infrastructure details
 - [Testing Strategy](testing-strategy.md) - Testing approach
 - [Repository Structure](repository-structure.md) - Project organization
