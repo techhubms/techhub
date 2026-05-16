@@ -998,3 +998,8 @@ Write-Host "  PostgreSQL  : $prPostgresServer" -ForegroundColor Gray
 Write-Host "  Web URL     : https://$webFqdn" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host ""
+
+# Best-effort cleanup steps above may leave a non-zero native-command exit code in
+# $LASTEXITCODE even though deploy/readiness/smoke checks succeeded. Exit explicitly
+# to prevent false-negative GitHub Actions failures on successful deploys.
+exit 0
