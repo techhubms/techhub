@@ -185,8 +185,7 @@ public record ContentItem
         ExternalUrl = externalUrl ?? string.Empty;
     }
 
-    public bool LinksExternally() =>
-        CollectionName is "news" or "blogs" or "community";
+    public bool LinksExternally() => CollectionLinksExternally(CollectionName);
 
     /// <summary>
     /// Gets the contextual href for this content item.
@@ -194,18 +193,41 @@ public record ContentItem
     /// </summary>
     public string GetHref(string? sectionOverride = null)
     {
-        if (LinksExternally())
-        {
-            return ExternalUrl;
-        }
-
-        if (CollectionName == "roundups")
-        {
-            return $"/all/roundups/{Slug}".ToLowerInvariant();
-        }
-
         var section = sectionOverride ?? PrimarySectionName;
-        return $"/{section}/{CollectionName}/{Slug}".ToLowerInvariant();
+        return BuildHref(CollectionName, Slug, ExternalUrl, section);
+    }
+
+    public static bool CollectionLinksExternally(string collectionName)
+    {
+        ArgumentNullException.ThrowIfNull(collectionName);
+        return collectionName.ToLowerInvariant() is "news" or "blogs" or "community";
+    }
+
+    public static string BuildHref(string collectionName, string slug, string externalUrl, string? primarySectionName = null)
+    {
+        ArgumentNullException.ThrowIfNull(collectionName);
+        ArgumentNullException.ThrowIfNull(slug);
+        ArgumentNullException.ThrowIfNull(externalUrl);
+
+        var normalizedCollection = collectionName.ToLowerInvariant();
+        var normalizedSlug = slug.ToLowerInvariant();
+
+        if (CollectionLinksExternally(normalizedCollection))
+        {
+            return externalUrl;
+        }
+
+        if (normalizedCollection == "roundups")
+        {
+            return $"/all/roundups/{normalizedSlug}";
+        }
+
+        if (!string.IsNullOrWhiteSpace(primarySectionName))
+        {
+            return $"/{primarySectionName.ToLowerInvariant()}/{normalizedCollection}/{normalizedSlug}";
+        }
+
+        return externalUrl;
     }
 
     public string? GetTarget() => LinksExternally() ? "_blank" : null;

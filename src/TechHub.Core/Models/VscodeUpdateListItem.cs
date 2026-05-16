@@ -14,10 +14,10 @@ public sealed class VscodeUpdateListItem
     public DateTimeOffset CreatedAt { get; init; }
 
     public bool LinksExternally() =>
-        AdminContentLinkResolver.LinksExternally(CollectionName);
+        ContentItem.CollectionLinksExternally(CollectionName);
 
     public string GetHref()
     {
-        return AdminContentLinkResolver.GetHref(CollectionName, Slug, ExternalUrl, PrimarySectionName);
+        return ContentItem.BuildHref(CollectionName, Slug, ExternalUrl, PrimarySectionName);
     }
 }

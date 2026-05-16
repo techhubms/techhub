@@ -24,11 +24,11 @@ public record GhcFeatureContentLink
     public string? ItemPrimarySectionName { get; init; }
 
     public bool LinksExternally() =>
-        AdminContentLinkResolver.LinksExternally(CollectionName);
+        ContentItem.CollectionLinksExternally(CollectionName);
 
     public string GetHref()
     {
-        return AdminContentLinkResolver.GetHref(
+        return ContentItem.BuildHref(
             CollectionName,
             ItemSlug,
             ItemExternalUrl ?? string.Empty,
