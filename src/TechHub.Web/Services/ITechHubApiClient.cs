@@ -186,7 +186,7 @@ internal interface ITechHubApiClient
 
     /// <summary>
     /// Get GitHub Copilot Features page data.
-    /// GET /api/custom-pages/github-copilot-features
+    /// GET /api/custom-pages/features
     /// </summary>
     Task<FeaturesPageData?> GetFeaturesDataAsync(CancellationToken cancellationToken = default);
 

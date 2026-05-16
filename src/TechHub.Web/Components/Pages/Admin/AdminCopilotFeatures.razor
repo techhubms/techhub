@@ -53,7 +53,7 @@
                         <th>Title</th>
                         <th>Slug</th>
                         <th>Release</th>
-                        <th>Plans</th>
+                        <th class="features-plans-col">Plans</th>
                         <th>GHES</th>
                         <th>Content Links</th>
                         <th>Actions</th>
@@ -177,6 +177,7 @@
                     }
                     else
                     {
+                        <div class="admin-jobs-table-wrapper">
                         <table class="admin-table features-links-table">
                             <thead>
                                 <tr>
@@ -221,6 +222,7 @@
                                 }
                             </tbody>
                         </table>
+                        </div>
                     }
 
                     @* ── Add link search ── *@
@@ -250,6 +252,7 @@
 
                         @if (_linkSearchResults.Count > 0)
                         {
+                            <div class="admin-jobs-table-wrapper">
                             <table class="admin-table features-links-results-table">
                                 <thead>
                                     <tr>
@@ -281,6 +284,7 @@
                                     }
                                 </tbody>
                             </table>
+                            </div>
                         }
                     </div>
                 </div>

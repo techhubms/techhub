@@ -53,7 +53,7 @@ public class AdminCustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTe
     {
         // Act
         var response = await _client.GetAsync(
-            "/api/admin/custom-pages/features",
+            "/api/admin/custom-pages/githubcopilot-features",
             TestContext.Current.CancellationToken);
 
         // Assert
@@ -61,7 +61,7 @@ public class AdminCustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTe
         var entry = await response.Content.ReadFromJsonAsync<CustomPageEntry>(
             TestContext.Current.CancellationToken);
         entry.Should().NotBeNull();
-        entry!.Key.Should().Be("features");
+        entry!.Key.Should().Be("githubcopilot-features");
         entry.JsonData.Should().NotBeNullOrWhiteSpace();
     }
 
@@ -88,7 +88,7 @@ public class AdminCustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTe
 
         // Act
         var response = await _client.PutAsJsonAsync(
-            "/api/admin/custom-pages/features",
+            "/api/admin/custom-pages/githubcopilot-features",
             request,
             TestContext.Current.CancellationToken);
 
@@ -97,7 +97,7 @@ public class AdminCustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTe
         var updated = await response.Content.ReadFromJsonAsync<CustomPageEntry>(
             TestContext.Current.CancellationToken);
         updated.Should().NotBeNull();
-        updated!.Key.Should().Be("features");
+        updated!.Key.Should().Be("githubcopilot-features");
         updated.JsonData.Should().Be(newJson);
     }
 
@@ -109,7 +109,7 @@ public class AdminCustomPagesEndpointsTests : IClassFixture<TechHubIntegrationTe
 
         // Act
         var response = await _client.PutAsJsonAsync(
-            "/api/admin/custom-pages/features",
+            "/api/admin/custom-pages/githubcopilot-features",
             request,
             TestContext.Current.CancellationToken);
 

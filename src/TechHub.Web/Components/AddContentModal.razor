@@ -109,6 +109,17 @@
                         <span class="admin-form-hint">Points the AI in the right direction — the final title will be extracted from the page content.</span>
                     </div>
 
+                    <div class="admin-form-group">
+                        <label class="admin-form-label" for="acm-author-override-input">Author Override <span class="admin-form-hint">(optional)</span></label>
+                        <input id="acm-author-override-input"
+                               class="admin-form-input"
+                               type="text"
+                               placeholder="e.g. Scott Hanselman"
+                               @bind="_authorOverride"
+                               disabled="@_processing" />
+                        <span class="admin-form-hint">When set, overrides the author detected by AI. Leave blank to let the AI extract the author from the page.</span>
+                    </div>
+
                     @if (_isYouTube)
                     {
                         <div class="admin-form-group">
@@ -158,6 +169,7 @@
     private string _collection = "videos";
     private string _feedName = DefaultFeedName;
     private string _titleHint = string.Empty;
+    private string _authorOverride = string.Empty;
 
     private bool _isYouTube;
     private bool _processing;
@@ -264,7 +276,8 @@
                 CollectionName = _collection,
                 FeedName = string.IsNullOrWhiteSpace(_feedName) ? DefaultFeedName : _feedName.Trim(),
                 TitleHint = string.IsNullOrWhiteSpace(_titleHint) ? null : _titleHint.Trim(),
-                Transcript = string.IsNullOrWhiteSpace(_transcript) ? null : _transcript.Trim()
+                Transcript = string.IsNullOrWhiteSpace(_transcript) ? null : _transcript.Trim(),
+                AuthorOverride = string.IsNullOrWhiteSpace(_authorOverride) ? null : _authorOverride.Trim()
             };
 
             var result = await Api.ProcessAdHocUrlAsync(request);
@@ -282,6 +295,7 @@
                     _url = string.Empty;
                     _feedName = DefaultFeedName;
                     _titleHint = string.Empty;
+                    _authorOverride = string.Empty;
                     _isYouTube = false;
                     _transcript = string.Empty;
                     await OnItemAdded.InvokeAsync();

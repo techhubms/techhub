@@ -939,6 +939,31 @@ public class ContentProcessingServiceTests
             "manual operations bypass the sales pitch exclusion rule");
     }
 
+    [Fact]
+    public async Task ProcessSingleAsync_WithAuthorOverride_SetsAuthorOverrideOnRawItem()
+    {
+        // When authorOverride is provided, the RawFeedItem passed to AI must have AuthorOverride set
+        // so AiCategorizationService can use it to override the AI-extracted author.
+        var testId = Guid.NewGuid().ToString("N")[..8];
+        var url = $"https://example.com/author-override-{testId}";
+        var processed = CreateProcessedItem(url, $"author-override-{testId}");
+
+        RawFeedItem? capturedItem = null;
+        _aiService.Setup(s => s.CategorizeAsync(It.IsAny<RawFeedItem>(), It.IsAny<CancellationToken>()))
+            .Callback<RawFeedItem, CancellationToken>((item, _) => capturedItem = item)
+            .ReturnsAsync(new CategorizationResult { Item = processed, Explanation = "Included" });
+
+        var sut = CreateService(new ContentProcessorOptions { BrowserUserAgent = "TestAgent/1.0", MaxYouTubeTagCount = 0 });
+
+        // Act
+        await sut.ProcessSingleAsync(url, "blogs", "TechHub", authorOverride: "Scott Hanselman", ct: TestContext.Current.CancellationToken);
+
+        // Assert — the item passed to the AI must have AuthorOverride set
+        capturedItem.Should().NotBeNull();
+        capturedItem!.AuthorOverride.Should().Be("Scott Hanselman",
+            "the author override must be forwarded to the AI categorization pipeline");
+    }
+
     // ── Subcollection Rules ────────────────────────────────────────────────
 
     [Theory]

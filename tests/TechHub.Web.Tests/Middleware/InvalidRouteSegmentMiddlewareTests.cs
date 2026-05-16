@@ -8,11 +8,10 @@ namespace TechHub.Web.Tests.Middleware;
 /// Tests for InvalidRouteSegmentMiddleware.
 ///
 /// The middleware enforces two layers of rejection:
-///   1. Scanner/attacker probes (wp-admin, xmlrpc.php, .env, etc.) → 404, next not called.
-///   2. Structurally invalid first segments (digits, percent-encoding, underscores, etc.) → 404.
-///
-/// Paths whose final segment contains a dot pass through after the probe filter, so
-/// legitimate static files and RSS/sitemap .xml endpoints are served downstream.
+///   1. File-extension requests: only known static asset paths (js/, css/, images/, etc.) pass through;
+///      everything else with a file extension is immediately rejected with 404.
+///   2. Extension-less paths: scanner/attacker probe segments (wp-admin, actuator, etc.) and
+///      structurally invalid first segments (digits, percent-encoding, etc.) → 404.
 /// </summary>
 public class InvalidRouteSegmentMiddlewareTests
 {
@@ -90,6 +89,9 @@ public class InvalidRouteSegmentMiddlewareTests
     [InlineData("/backend")]
     [InlineData("/config")]
     [InlineData("/config/database.yml")]
+    // Unknown file extensions at the root — not in the static asset whitelist
+    [InlineData("/config.json")]
+    [InlineData("/secrets.json")]
     // .xml that is NOT a feed or sitemap
     [InlineData("/wp-content/plugins/foo.xml")]
     [InlineData("/random.xml")]
@@ -140,8 +142,7 @@ public class InvalidRouteSegmentMiddlewareTests
     [InlineData("/_content/some-lib/styles.css")]
     // Unknown section — structurally valid, caught downstream
     [InlineData("/fake-section")]
-    // Static file requests: final segment has a dot — pass through after probe filter
-    [InlineData("/config.json")]
+    // Known static asset paths pass through after whitelist check
     [InlineData("/TechHub.Web.fwv5rmn5un.styles.css")]
     [InlineData("/css/cards.kh78ex0xwt.css")]
     [InlineData("/js/nav-helpers.fmmqw6nflr.js")]

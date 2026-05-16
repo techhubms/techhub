@@ -34,4 +34,10 @@ public sealed record AdHocUrlProcessRequest
     /// When null, the item is processed using only available metadata (tags, description, etc.).
     /// </summary>
     public string? Transcript { get; init; }
+
+    /// <summary>
+    /// Optional author override. When set, this value is used as the author of the content item
+    /// instead of the author extracted by the AI from the page content.
+    /// </summary>
+    public string? AuthorOverride { get; init; }
 }

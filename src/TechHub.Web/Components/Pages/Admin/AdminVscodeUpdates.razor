@@ -1,6 +1,7 @@
 @page "/admin/vscode-updates"
 @layout AdminLayout
 @rendermode InteractiveServer
+@using System.Linq
 @using TechHub.Core.Models
 @using TechHub.Core.Models.Admin
 @using TechHub.Web.Services
@@ -20,6 +21,7 @@
                 Manage the VS Code Updates list — items shown at <code>/github-copilot/vscode-updates</code>.
                 Items are added automatically when videos from Fokko's feed match the VS Code Updates subcollection rule.
                 Use this page to add or remove items manually.
+                Items are sorted by VS Code version number extracted from the title (highest first), matching the order on the public page.
             </p>
         </div>
         <div class="admin-actions">
@@ -226,7 +228,7 @@
                 page: _currentPage,
                 pageSize: PageSize,
                 search: string.IsNullOrEmpty(_searchFilter) ? null : _searchFilter);
-            _items = [.. result.Items];
+            _items = [.. result.Items.OrderByDescending(v => ExtractVersionFromTitle(v.Title))];
             _totalCount = result.TotalCount;
             UpdatePagination();
         }
@@ -244,6 +246,25 @@
     private void UpdatePagination()
     {
         _totalPages = Math.Max(1, (int)Math.Ceiling((double)_totalCount / PageSize));
+    }
+
+    /// <summary>
+    /// Extracts the highest version number (X.Y or X.Y.Z) from a title such as
+    /// "What's new in 1.118" or "What's new in 1.109.3 and 1.110".
+    /// Returns Version(0,0) when no version is found so those items sort last.
+    /// </summary>
+    private static Version ExtractVersionFromTitle(string title)
+    {
+        var matches = System.Text.RegularExpressions.Regex.Matches(title, @"\d+\.\d+(?:\.\d+)?");
+        Version? max = null;
+        foreach (var m in matches.Cast<System.Text.RegularExpressions.Match>()
+            .Where(m => Version.TryParse(m.Value, out _)))
+        {
+            Version.TryParse(m.Value, out var v);
+            if (max is null || v > max)
+                max = v;
+        }
+        return max ?? new Version(0, 0);
     }
 
     private async Task ApplyFilterAsync()

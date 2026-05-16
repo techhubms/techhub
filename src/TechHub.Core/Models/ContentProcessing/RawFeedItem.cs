@@ -59,4 +59,11 @@ public sealed class RawFeedItem
     /// where an operator has already decided the content belongs.
     /// </summary>
     public bool SkipSalesPitchCheck { get; init; }
+
+    /// <summary>
+    /// Optional author override. When set, this value is used as the author of the content item
+    /// instead of the author extracted by the AI. Takes priority over both the AI-extracted author
+    /// and <see cref="FeedLevelAuthor"/>.
+    /// </summary>
+    public string? AuthorOverride { get; init; }
 }
