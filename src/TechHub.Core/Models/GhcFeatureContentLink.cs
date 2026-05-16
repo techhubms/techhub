@@ -21,4 +21,28 @@ public record GhcFeatureContentLink
     // Denormalized from content_items for rendering — populated only in joined queries.
     public string? ItemTitle { get; init; }
     public string? ItemExternalUrl { get; init; }
+    public string? ItemPrimarySectionName { get; init; }
+
+    public bool LinksExternally() =>
+        CollectionName is "news" or "blogs" or "community";
+
+    public string GetHref()
+    {
+        if (LinksExternally())
+        {
+            return ItemExternalUrl ?? string.Empty;
+        }
+
+        if (CollectionName == "roundups")
+        {
+            return $"/all/roundups/{ItemSlug}".ToLowerInvariant();
+        }
+
+        if (!string.IsNullOrWhiteSpace(ItemPrimarySectionName))
+        {
+            return $"/{ItemPrimarySectionName}/{CollectionName}/{ItemSlug}".ToLowerInvariant();
+        }
+
+        return ItemExternalUrl ?? string.Empty;
+    }
 }

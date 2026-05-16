@@ -9,6 +9,30 @@ public sealed class VscodeUpdateListItem
     public required string Slug { get; init; }
     public required string Title { get; init; }
     public required string ExternalUrl { get; init; }
+    public string? PrimarySectionName { get; init; }
     public long DateEpoch { get; init; }
     public DateTimeOffset CreatedAt { get; init; }
+
+    public bool LinksExternally() =>
+        CollectionName is "news" or "blogs" or "community";
+
+    public string GetHref()
+    {
+        if (LinksExternally())
+        {
+            return ExternalUrl;
+        }
+
+        if (CollectionName == "roundups")
+        {
+            return $"/all/roundups/{Slug}".ToLowerInvariant();
+        }
+
+        if (!string.IsNullOrWhiteSpace(PrimarySectionName))
+        {
+            return $"/{PrimarySectionName}/{CollectionName}/{Slug}".ToLowerInvariant();
+        }
+
+        return ExternalUrl;
+    }
 }

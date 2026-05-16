@@ -38,4 +38,22 @@ public sealed class ContentItemListItem
 
     /// <summary>Whether a matching processed_urls record exists.</summary>
     public bool HasProcessedUrl { get; init; }
+
+    public bool LinksExternally() =>
+        CollectionName is "news" or "blogs" or "community";
+
+    public string GetHref()
+    {
+        if (LinksExternally())
+        {
+            return ExternalUrl;
+        }
+
+        if (CollectionName == "roundups")
+        {
+            return $"/all/roundups/{Slug}".ToLowerInvariant();
+        }
+
+        return $"/{PrimarySectionName}/{CollectionName}/{Slug}".ToLowerInvariant();
+    }
 }

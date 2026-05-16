@@ -83,9 +83,9 @@
                                 @DateTimeOffset.FromUnixTimeSeconds(item.DateEpoch).ToString("yyyy-MM-dd")
                             </td>
                             <td class="admin-cell-article" title="@item.Title">
-                                @if (!string.IsNullOrEmpty(item.ExternalUrl))
+                                @if (!string.IsNullOrWhiteSpace(item.GetHref()))
                                 {
-                                    <a href="@item.ExternalUrl" target="_blank" rel="noopener noreferrer">@item.Title</a>
+                                    <a href="@item.GetHref()" target="_blank" rel="noopener noreferrer">@item.Title</a>
                                 }
                                 else
                                 {
