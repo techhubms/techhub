@@ -24,25 +24,14 @@ public record GhcFeatureContentLink
     public string? ItemPrimarySectionName { get; init; }
 
     public bool LinksExternally() =>
-        CollectionName is "news" or "blogs" or "community";
+        AdminContentLinkResolver.LinksExternally(CollectionName);
 
     public string GetHref()
     {
-        if (LinksExternally())
-        {
-            return ItemExternalUrl ?? string.Empty;
-        }
-
-        if (CollectionName == "roundups")
-        {
-            return $"/all/roundups/{ItemSlug}".ToLowerInvariant();
-        }
-
-        if (!string.IsNullOrWhiteSpace(ItemPrimarySectionName))
-        {
-            return $"/{ItemPrimarySectionName}/{CollectionName}/{ItemSlug}".ToLowerInvariant();
-        }
-
-        return ItemExternalUrl ?? string.Empty;
+        return AdminContentLinkResolver.GetHref(
+            CollectionName,
+            ItemSlug,
+            ItemExternalUrl ?? string.Empty,
+            ItemPrimarySectionName);
     }
 }

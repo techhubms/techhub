@@ -14,25 +14,10 @@ public sealed class VscodeUpdateListItem
     public DateTimeOffset CreatedAt { get; init; }
 
     public bool LinksExternally() =>
-        CollectionName is "news" or "blogs" or "community";
+        AdminContentLinkResolver.LinksExternally(CollectionName);
 
     public string GetHref()
     {
-        if (LinksExternally())
-        {
-            return ExternalUrl;
-        }
-
-        if (CollectionName == "roundups")
-        {
-            return $"/all/roundups/{Slug}".ToLowerInvariant();
-        }
-
-        if (!string.IsNullOrWhiteSpace(PrimarySectionName))
-        {
-            return $"/{PrimarySectionName}/{CollectionName}/{Slug}".ToLowerInvariant();
-        }
-
-        return ExternalUrl;
+        return AdminContentLinkResolver.GetHref(CollectionName, Slug, ExternalUrl, PrimarySectionName);
     }
 }
