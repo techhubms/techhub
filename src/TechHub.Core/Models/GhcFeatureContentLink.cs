@@ -21,4 +21,17 @@ public record GhcFeatureContentLink
     // Denormalized from content_items for rendering — populated only in joined queries.
     public string? ItemTitle { get; init; }
     public string? ItemExternalUrl { get; init; }
+    public string? ItemPrimarySectionName { get; init; }
+
+    public bool LinksExternally() =>
+        ContentItem.CollectionLinksExternally(CollectionName);
+
+    public string GetHref()
+    {
+        return ContentItem.BuildHref(
+            CollectionName,
+            ItemSlug,
+            ItemExternalUrl ?? string.Empty,
+            ItemPrimarySectionName);
+    }
 }

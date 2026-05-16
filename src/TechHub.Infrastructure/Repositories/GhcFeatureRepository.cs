@@ -37,7 +37,8 @@ SELECT
     l.is_thumbnail    AS LinkIsThumbnail,
     l.sort_order      AS LinkSortOrder,
     ci.title          AS LinkItemTitle,
-    ci.external_url   AS LinkItemExternalUrl
+    ci.external_url   AS LinkItemExternalUrl,
+    ci.primary_section_name AS LinkItemPrimarySectionName
 FROM ghc_features f
 LEFT JOIN ghc_feature_content l ON l.feature_slug = f.slug
 LEFT JOIN content_items ci
@@ -65,7 +66,8 @@ SELECT
     l.is_thumbnail    AS LinkIsThumbnail,
     l.sort_order      AS LinkSortOrder,
     ci.title          AS LinkItemTitle,
-    ci.external_url   AS LinkItemExternalUrl
+    ci.external_url   AS LinkItemExternalUrl,
+    ci.primary_section_name AS LinkItemPrimarySectionName
 FROM ghc_features f
 LEFT JOIN ghc_feature_content l ON l.feature_slug = f.slug
 LEFT JOIN content_items ci
@@ -269,6 +271,7 @@ SELECT
     v.slug            AS Slug,
     ci.title          AS Title,
     ci.external_url   AS ExternalUrl,
+    ci.primary_section_name AS PrimarySectionName,
     ci.date_epoch     AS DateEpoch,
     ci.created_at     AS CreatedAt
 FROM vscode_update_items v
@@ -308,7 +311,8 @@ LIMIT @PageSize OFFSET @Offset";
         bool? LinkIsThumbnail,
         int? LinkSortOrder,
         string? LinkItemTitle,
-        string? LinkItemExternalUrl
+        string? LinkItemExternalUrl,
+        string? LinkItemPrimarySectionName
     );
 
     private async Task<IReadOnlyList<GhcFeature>> QueryFeaturesAsync(
@@ -358,7 +362,8 @@ LIMIT @PageSize OFFSET @Offset";
                     IsThumbnail = row.LinkIsThumbnail ?? false,
                     SortOrder = row.LinkSortOrder ?? 0,
                     ItemTitle = row.LinkItemTitle,
-                    ItemExternalUrl = row.LinkItemExternalUrl
+                    ItemExternalUrl = row.LinkItemExternalUrl,
+                    ItemPrimarySectionName = row.LinkItemPrimarySectionName
                 });
             }
         }

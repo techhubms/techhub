@@ -9,6 +9,15 @@ public sealed class VscodeUpdateListItem
     public required string Slug { get; init; }
     public required string Title { get; init; }
     public required string ExternalUrl { get; init; }
+    public string? PrimarySectionName { get; init; }
     public long DateEpoch { get; init; }
     public DateTimeOffset CreatedAt { get; init; }
+
+    public bool LinksExternally() =>
+        ContentItem.CollectionLinksExternally(CollectionName);
+
+    public string GetHref()
+    {
+        return ContentItem.BuildHref(CollectionName, Slug, ExternalUrl, PrimarySectionName);
+    }
 }

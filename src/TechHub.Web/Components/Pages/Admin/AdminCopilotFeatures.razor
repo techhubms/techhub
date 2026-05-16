@@ -204,9 +204,9 @@
                                             }
                                         </td>
                                         <td class="admin-cell-article" title="@l.ItemTitle">
-                                            @if (!string.IsNullOrEmpty(l.ItemExternalUrl))
+                                            @if (!string.IsNullOrWhiteSpace(l.GetHref()))
                                             {
-                                                <a href="@l.ItemExternalUrl" target="_blank" rel="noopener noreferrer">@(l.ItemTitle ?? l.ItemSlug)</a>
+                                                <a href="@l.GetHref()" target="_blank" rel="noopener noreferrer">@(l.ItemTitle ?? l.ItemSlug)</a>
                                             }
                                             else
                                             {

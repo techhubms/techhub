@@ -38,4 +38,12 @@ public sealed class ContentItemListItem
 
     /// <summary>Whether a matching processed_urls record exists.</summary>
     public bool HasProcessedUrl { get; init; }
+
+    public bool LinksExternally() =>
+        ContentItem.CollectionLinksExternally(CollectionName);
+
+    public string GetHref()
+    {
+        return ContentItem.BuildHref(CollectionName, Slug, ExternalUrl, PrimarySectionName);
+    }
 }
