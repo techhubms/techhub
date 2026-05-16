@@ -218,7 +218,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var header = firstEntry.Locator(".features-timeline-header");
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(firstEntry).ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+                new Regex("expanded"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         await Assertions.Expect(firstEntry.Locator(".features-timeline-description")).ToBeVisibleAsync();
     }
@@ -321,7 +321,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".custom-page-note"))
-                .ToBeVisibleAsync(new() { Timeout = 2000 }));
+                .ToBeVisibleAsync(new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Note should now be visible below the filter bar
         await Assertions.Expect(note).ToBeVisibleAsync();
@@ -355,7 +355,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".features-timeline-entry"))
-                .ToHaveCountAsync(ghesCountBefore, new() { Timeout = 2_000 }));
+                .ToHaveCountAsync(ghesCountBefore, new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
     }
 
     [Fact]
@@ -373,7 +373,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var freeButton = Page.Locator(".features-timeline-filters button:has-text('Free')");
         await freeButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(freeButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Filtering by Free tier must strictly reduce the count
         var filteredEntries = Page.Locator(".features-timeline-entry");
@@ -397,13 +397,13 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesCount = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".features-timeline-entry"))
-                .ToHaveCountAsync(ghesCount, new() { Timeout = 2_000 }));
+                .ToHaveCountAsync(ghesCount, new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Act - Click the "All" button to clear filters
         var allButton = Page.Locator(".features-timeline-filters button:has-text('All')");
         await allButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(allButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Entry count should be restored
         var restoredEntries = Page.Locator(".features-timeline-entry");
@@ -433,12 +433,12 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var header = testEntry.Locator(".features-timeline-header");
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(testCard).ToHaveAttributeAsync(
-                "aria-expanded", "true", new() { Timeout = 2000 }));
+                "aria-expanded", "true", new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Act - Click again to collapse
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(testCard).ToHaveAttributeAsync(
-                "aria-expanded", "false", new() { Timeout = 2000 }));
+                "aria-expanded", "false", new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
     }
 
     [Fact]
@@ -469,7 +469,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             var header = entryWithVideo.Locator(".features-timeline-header");
             await header.ClickAndExpectAsync(async () =>
                 await Assertions.Expect(entryCard).ToHaveAttributeAsync(
-                    "aria-expanded", "true", new() { Timeout = 2000 }));
+                    "aria-expanded", "true", new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
         }
 
         // Assert - Expanded entry with video should show thumbnail
@@ -494,7 +494,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Act - Click Free tier card in sidebar
         await freeTierCard.ClickAndExpectAsync(async () =>
             await Assertions.Expect(freeTierCard).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Free tier filter should also be active in the main filter bar
         var freeFilterBtn = Page.Locator(".features-timeline-filters button:has-text('Free')");
@@ -532,7 +532,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var header = firstEntry.Locator(".features-timeline-header");
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(firstEntry).ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+                new Regex("expanded"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Plan badges should be present and have tier-specific color classes (badge-plan-*)
         var planBadges = firstEntry.Locator(".badge-plan");

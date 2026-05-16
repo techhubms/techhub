@@ -164,7 +164,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
                 {
                     try
                     {
-                        await Page.Locator(".load-more-btn").ClickAsync(new() { Timeout = 2000 });
+                        await Page.Locator(".load-more-btn").ClickAsync(new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
                     }
                     catch (PlaywrightException)
                     {

@@ -105,8 +105,8 @@ public class SearchTests : PlaywrightTestBase
         await clearButton.ClickAndExpectAsync(async () =>
         {
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 });
-            await Assertions.Expect(searchInput).ToHaveValueAsync("", new() { Timeout = 2000 });
+                new Regex("search="), new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
+            await Assertions.Expect(searchInput).ToHaveValueAsync("", new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
         });
 
         // Assert - Search should be cleared
@@ -129,7 +129,7 @@ public class SearchTests : PlaywrightTestBase
         var tagButton = Page.Locator(EnabledTagSelector).First;
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
+                new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
@@ -201,7 +201,7 @@ public class SearchTests : PlaywrightTestBase
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
         await clearButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 }));
+                new Regex("search="), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Tags should remain, search should be removed
         var currentUrl = Page.Url;
@@ -227,7 +227,7 @@ public class SearchTests : PlaywrightTestBase
             await searchInput.FocusAsync();
             await searchInput.PressAsync("Escape");
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 });
+                new Regex("search="), new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
         });
 
         // Assert - Search should be cleared

@@ -22,21 +22,21 @@ namespace TechHub.E2E.Tests.Helpers;
 ///
 /// 1. Click tag and wait for URL change:
 ///    await tagButton.ClickAndExpectAsync(async () =>
-///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
+///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 ///
 /// 2. Click section card on homepage:
 ///    await sectionCard.ClickAndExpectAsync(async () =>
 ///        await Assertions.Expect(page).Not.ToHaveURLAsync(
-///            new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
+///            new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 ///
 /// 3. Click content card to detail page:
 ///    await roundupLink.ClickAndExpectAsync(async () =>
-///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
+///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*/roundups/.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 ///
 /// 4. Click a button that toggles a CSS class (no navigation):
 ///    await filterButton.ClickAndExpectAsync(async () =>
 ///        await Assertions.Expect(filterButton).Not.ToHaveClassAsync(
-///            new Regex("active"), new() { Timeout = 2000 }));
+///            new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 ///
 /// 5. Use Expect assertions instead of TextContentAsync + Should.Contain:
 ///    // DON'T: var text = await element.TextContentAsync(); text.Should().Contain("foo");
@@ -65,6 +65,15 @@ public static class BlazorHelpers
     internal static int E2ETimeout { get; } = ResolveTimeout();
 
     /// <summary>
+    /// Per-attempt assertion timeout used inside <see cref="ClickAndExpectAsync"/> retry loops.
+    /// Short enough to allow multiple retries within <see cref="E2ETimeout"/>, but scales with
+    /// network speed so slow profiles don't produce spurious timeouts before a valid navigation
+    /// or state change completes. Values allow ~5 retries within the outer E2ETimeout budget:
+    ///   local  → 2 s, regular4g/wan/ci → 5 s, fast3g → 8 s, slow3g / CI → 10 s.
+    /// </summary>
+    internal static int E2ERetryWindowMs { get; } = ResolveRetryWindowMs();
+
+    /// <summary>
     /// Polling interval for WaitForFunctionAsync operations.
     /// 100ms = good balance between responsiveness and CPU.
     /// Checking one window property costs ~0.
@@ -91,6 +100,19 @@ public static class BlazorHelpers
             "regular4g" or "wan" or "ci" => 30_000,
             _ => isCI ? 60_000   // GitHub Actions (CI=true) without a profile
                       : 10_000,  // Local fast mode
+        };
+    }
+
+    private static int ResolveRetryWindowMs()
+    {
+        var profile = Environment.GetEnvironmentVariable("E2E_NETWORK_THROTTLE") ?? "";
+        var isCI = string.Equals(Environment.GetEnvironmentVariable("CI"), "true", StringComparison.OrdinalIgnoreCase);
+        return profile switch
+        {
+            "slow3g" => 10_000,
+            "fast3g" => 8_000,
+            "regular4g" or "wan" or "ci" => 5_000,
+            _ => isCI ? 10_000 : 2_000,
         };
     }
 
@@ -592,14 +614,14 @@ public static class BlazorHelpers
     /// <code>
     /// await toggle.ClickAndExpectAsync(async () =>
     ///     await Assertions.Expect(html).ToHaveClassAsync(
-    ///         new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+    ///         new Regex("sidebar-collapsed"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
     /// </code>
     ///
     /// Example — navigation (URL changes):
     /// <code>
     /// await blogsButton.ClickAndExpectAsync(async () =>
     ///     await Assertions.Expect(Page).ToHaveURLAsync(
-    ///         new Regex(@".*/ai/blogs.*"), new() { Timeout = 2000 }));
+    ///         new Regex(@".*/ai/blogs.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
     /// </code>
     /// </summary>
     public static async Task ClickAndExpectAsync(
@@ -624,7 +646,7 @@ public static class BlazorHelpers
             {
                 throw new InvalidOperationException("Blazor reconnect modal is open — deferring click until circuit is restored.");
             }
-            await locator.ClickAsync(new() { Timeout = 2000 });
+            await locator.ClickAsync(new() { Timeout = E2ERetryWindowMs });
             await assertion();
         }, totalTimeoutMs);
 

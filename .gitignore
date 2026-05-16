@@ -47,6 +47,7 @@ build/
 # Visual Studio / VS Code
 .vs/
 *.code-workspace
+*.csproj.lscache
 
 # User-specific files
 *.rsuser

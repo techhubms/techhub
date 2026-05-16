@@ -135,7 +135,7 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         // because re-clicking a toggle undoes the action, causing oscillation on slow CI.
         await ContentTypeButton(Blogs).ClickAndExpectAsync(async () =>
             await Assertions.Expect(ContentTypeButton(Blogs))
-                .Not.ToHaveClassAsync(new Regex("active"), new() { Timeout = 2000 }));
+                .Not.ToHaveClassAsync(new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - URL should contain the types parameter (arrives in same SignalR batch as class change)
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*types=.*"));
@@ -159,7 +159,7 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         // Assert button CLASS change inside ClickAndExpectAsync (safe for toggle retries).
         await ContentTypeButton(Videos).ClickAndExpectAsync(async () =>
             await Assertions.Expect(ContentTypeButton(Videos))
-                .Not.ToHaveClassAsync(new Regex("active"), new() { Timeout = 2000 }));
+                .Not.ToHaveClassAsync(new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Verify: URL should reflect the filter change
         await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*types=.*"));
@@ -198,7 +198,7 @@ public class ContentTypeFilterTests : PlaywrightTestBase
         // Act - Clicking Videos re-activates all 4 types, which should clear the URL param
         await ContentTypeButton(Videos).ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex(@".*types=.*"), new() { Timeout = 2000 }));
+                new Regex(@".*types=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - URL should no longer contain types parameter
         Page.Url.Should().NotContain("types=",

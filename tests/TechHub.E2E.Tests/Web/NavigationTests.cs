@@ -62,7 +62,7 @@ public class NavigationTests : PlaywrightTestBase
         // Blazor uses enhanced navigation (SPA-style); retry click until URL confirms navigation.
         await ghCopilotCard.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/github-copilot.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/github-copilot.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Should not have hash fragment
         Page.Url.Should().NotContain("#");
@@ -78,7 +78,7 @@ public class NavigationTests : PlaywrightTestBase
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/news.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/news.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - URL should be /ai/news
         Page.Url.Should().NotContain("#"); // No hash fragments
@@ -142,7 +142,7 @@ public class NavigationTests : PlaywrightTestBase
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/videos.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/videos.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - Should navigate and load videos
 
@@ -277,7 +277,7 @@ public class NavigationTests : PlaywrightTestBase
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/news.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/news.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Wait for enhanced navigation DOM swap to complete. ClickAndExpectAsync checks
         // __blazorServerReady which stays true across enhanced navigations, so the old
@@ -339,7 +339,7 @@ public class NavigationTests : PlaywrightTestBase
         var handbookLink = Page.Locator(".sub-nav a[href*='/github-copilot/handbook']").First;
         await handbookLink.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/github-copilot/handbook.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/github-copilot/handbook.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Wait for navigation to complete
 
@@ -360,7 +360,7 @@ public class NavigationTests : PlaywrightTestBase
         var aboutBookLink = tocLinks.Filter(new() { HasText = "About the Book" }).First;
         await aboutBookLink.ClickAndExpectAsync(async () =>
             await Assertions.Expect(aboutBookLink).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - The clicked TOC link should become active (highlighted)
         var activeClass = await aboutBookLink.GetAttributeAsync("class");

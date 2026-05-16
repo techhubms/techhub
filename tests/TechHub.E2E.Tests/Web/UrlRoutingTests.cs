@@ -60,7 +60,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/blogs.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/blogs.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - URL should update to /ai/blogs
 
@@ -79,7 +79,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         var browseButton = Page.Locator(".sub-nav a", new() { HasTextString = "Browse" });
         await browseButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/all.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/all.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - URL should update to /ai/all
     }
@@ -97,7 +97,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/videos.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/videos.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Wait for Blazor to sync state (update .active class)
         await Page.AssertElementContainsTextBySelectorAsync(".sub-nav a.active", "Videos");
@@ -125,7 +125,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/ai/videos.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/ai/videos.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Go back to news
         await Page.GoBackAsync();
@@ -290,19 +290,19 @@ public class UrlRoutingTests : PlaywrightTestBase
         // click until the URL confirms navigation (ClickAndExpectAsync pattern).
         var newsButton = Page.Locator(".sub-nav a", new() { HasTextString = "News" });
         await newsButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/news.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/news.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         var blogsButton = Page.Locator(".sub-nav a", new() { HasTextString = "Blogs" });
         await blogsButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/blogs.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/blogs.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         var videosButton = Page.Locator(".sub-nav a", new() { HasTextString = "Videos" });
         await videosButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/videos.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/videos.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         var communityButton = Page.Locator(".sub-nav a", new() { HasTextString = "Community" });
         await communityButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/community.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/community.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
     }
 
     [Fact]
@@ -324,7 +324,7 @@ public class UrlRoutingTests : PlaywrightTestBase
         {
             // Act - Click retry button
             await retryButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator(".section-card")).ToBeVisibleAsync(new() { Timeout = 2000 }));
+                await Assertions.Expect(Page.Locator(".section-card")).ToBeVisibleAsync(new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
         }
 
         // If no error state, just verify the button would work (test passes either way)

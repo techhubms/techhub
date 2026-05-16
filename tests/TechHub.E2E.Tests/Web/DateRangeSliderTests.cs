@@ -92,7 +92,7 @@ public class DateRangeSliderTests : PlaywrightTestBase
         var thirtyDayButton = Page.Locator(".date-preset-button:has-text('30d')");
         await thirtyDayButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(thirtyDayButton).ToHaveClassAsync(
-                new System.Text.RegularExpressions.Regex("active"), new() { Timeout = 2000 }));
+                new System.Text.RegularExpressions.Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
 
         // Assert - 90d should not be active
         var ninetyDayButton = Page.Locator(".date-preset-button:has-text('90d')");
@@ -116,7 +116,7 @@ public class DateRangeSliderTests : PlaywrightTestBase
         {
             await Assertions.Expect(Page).ToHaveURLAsync(
                 new System.Text.RegularExpressions.Regex(@"[?&]from=.*[?&]to="),
-                new() { Timeout = 2000 });
+                new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
         });
 
         var currentUrl = Page.Url;
@@ -202,7 +202,7 @@ public class DateRangeSliderTests : PlaywrightTestBase
         {
             await Assertions.Expect(Page).ToHaveURLAsync(
                 new System.Text.RegularExpressions.Regex(@"[?&]tags="),
-                new() { Timeout = 2000 });
+                new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
         });
 
         // Assert - URL should still contain from/to along with tags
