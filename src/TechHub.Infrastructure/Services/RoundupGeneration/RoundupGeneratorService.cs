@@ -97,12 +97,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         {
             ct.ThrowIfCancellationRequested();
 
-            var sectionArticles = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
-            {
-                [sectionName] = articlesBySection[sectionName]
-            };
-
-            var sectionResult = await GenerateSectionRoundupAsync(sectionName, sectionArticles, weekStart, weekEnd, jobId, lp, ct);
+            var sectionResult = await GenerateSectionRoundupAsync(sectionName, articlesBySection[sectionName], weekStart, weekEnd, jobId, lp, ct);
             switch (sectionResult.Result)
             {
                 case RoundupGenerationResult.Generated:
@@ -145,7 +140,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
 
     private async Task<RoundupGenerationOutcome> GenerateSectionRoundupAsync(
         string sectionName,
-        IReadOnlyDictionary<string, IReadOnlyList<RoundupArticle>> sectionArticlesBySection,
+        IReadOnlyList<RoundupArticle> sectionArticles,
         DateOnly weekStart,
         DateOnly weekEnd,
         long? jobId,
@@ -161,15 +156,18 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
             return RoundupGenerationOutcome.AlreadyExists;
         }
 
-        var filtered = _relevanceFilter.Filter(sectionArticlesBySection, lp);
-        if (filtered.Count == 0)
+        var filteredSectionArticles = _relevanceFilter.FilterSection(sectionName, sectionArticles, lp);
+        if (filteredSectionArticles.Count == 0)
         {
             _logger.LogWarning("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
             return RoundupGenerationOutcome.NoArticlesAfterFiltering;
         }
 
-        var filteredTotal = filtered.Values.Sum(a => a.Count);
-        lp.Report($"After relevance filtering for section '{sectionName}': {filteredTotal} articles");
+        lp.Report($"After relevance filtering for section '{sectionName}': {filteredSectionArticles.Count} articles");
+        var filtered = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
+        {
+            [sectionName] = filteredSectionArticles
+        };
 
         var weekDescription = string.Create(CultureInfo.InvariantCulture,
             $"the week of {weekStart.ToString("MMMM d", CultureInfo.InvariantCulture)} to {weekEnd.ToString("MMMM d, yyyy", CultureInfo.InvariantCulture)}");

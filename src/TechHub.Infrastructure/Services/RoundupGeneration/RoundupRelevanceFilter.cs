@@ -37,59 +37,70 @@ internal sealed class RoundupRelevanceFilter
 
         foreach (var (sectionSlug, articles) in articlesBySection)
         {
-            var displayName = GetDisplayName(sectionSlug);
-
-            var high = articles
-                .Where(a => a.Relevance.Equals("high", StringComparison.OrdinalIgnoreCase))
-                .ToList();
-
-            var medium = articles
-                .Where(a => a.Relevance.Equals("medium", StringComparison.OrdinalIgnoreCase))
-                .ToList();
-
-            var low = articles
-                .Where(a => a.Relevance.Equals("low", StringComparison.OrdinalIgnoreCase))
-                .ToList();
-
-            // Always include all high-relevance articles
-            var selected = new List<RoundupArticle>(high);
-
-            // Fill up to minimum with medium (ranked by importance), then low
-            var remaining = _options.MinArticlesPerSection - selected.Count;
-
-            if (remaining > 0 && medium.Count > 0)
+            var filtered = FilterSection(sectionSlug, articles, lp);
+            if (filtered.Count == 0)
             {
-                var rankedMedium = RankByImportance(medium);
-                selected.AddRange(rankedMedium.Take(remaining));
-                remaining = _options.MinArticlesPerSection - selected.Count;
-            }
-
-            if (remaining > 0 && low.Count > 0)
-            {
-                var rankedLow = RankByImportance(low);
-                selected.AddRange(rankedLow.Take(remaining));
-            }
-
-            if (selected.Count == 0)
-            {
-                lp.Report($"Relevance filter — {displayName}: no articles after filtering, skipping section");
                 continue;
             }
 
-            var selectedMediumCount = selected.Count(a => a.Relevance.Equals("medium", StringComparison.OrdinalIgnoreCase));
-            var selectedLowCount = selected.Count(a => a.Relevance.Equals("low", StringComparison.OrdinalIgnoreCase));
-            var skippedMediumCount = medium.Count - selectedMediumCount;
-            var skippedLowCount = low.Count - selectedLowCount;
-
-            lp.Report(
-                $"Relevance filter — {displayName}: " +
-                $"{high.Count} high, {medium.Count} medium, {low.Count} low available " +
-                $"=> {selected.Count} selected ({skippedMediumCount} medium + {skippedLowCount} low skipped)");
-
-            result[sectionSlug] = selected;
+            result[sectionSlug] = filtered;
         }
 
         return result;
+    }
+
+    public IReadOnlyList<RoundupArticle> FilterSection(
+        string sectionSlug,
+        IReadOnlyList<RoundupArticle> articles,
+        LoggingProgress lp)
+    {
+        var displayName = GetDisplayName(sectionSlug);
+
+        var high = articles
+            .Where(a => a.Relevance.Equals("high", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        var medium = articles
+            .Where(a => a.Relevance.Equals("medium", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        var low = articles
+            .Where(a => a.Relevance.Equals("low", StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        var selected = new List<RoundupArticle>(high);
+        var remaining = _options.MinArticlesPerSection - selected.Count;
+
+        if (remaining > 0 && medium.Count > 0)
+        {
+            var rankedMedium = RankByImportance(medium);
+            selected.AddRange(rankedMedium.Take(remaining));
+            remaining = _options.MinArticlesPerSection - selected.Count;
+        }
+
+        if (remaining > 0 && low.Count > 0)
+        {
+            var rankedLow = RankByImportance(low);
+            selected.AddRange(rankedLow.Take(remaining));
+        }
+
+        if (selected.Count == 0)
+        {
+            lp.Report($"Relevance filter — {displayName}: no articles after filtering, skipping section");
+            return [];
+        }
+
+        var selectedMediumCount = selected.Count(a => a.Relevance.Equals("medium", StringComparison.OrdinalIgnoreCase));
+        var selectedLowCount = selected.Count(a => a.Relevance.Equals("low", StringComparison.OrdinalIgnoreCase));
+        var skippedMediumCount = medium.Count - selectedMediumCount;
+        var skippedLowCount = low.Count - selectedLowCount;
+
+        lp.Report(
+            $"Relevance filter — {displayName}: " +
+            $"{high.Count} high, {medium.Count} medium, {low.Count} low available " +
+            $"=> {selected.Count} selected ({skippedMediumCount} medium + {skippedLowCount} low skipped)");
+
+        return selected;
     }
 
     private string GetDisplayName(string sectionSlug)

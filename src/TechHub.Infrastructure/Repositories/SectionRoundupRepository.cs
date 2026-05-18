@@ -23,6 +23,16 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     private const int GhcBit = 1 << 4;
     private const int MlBit = 1 << 5;
     private const int SecurityBit = 1 << 6;
+    private static readonly Dictionary<string, int> _sectionBits = new(StringComparer.OrdinalIgnoreCase)
+    {
+        ["ai"] = AiBit,
+        ["azure"] = AzureBit,
+        ["dotnet"] = DotnetBit,
+        ["devops"] = DevopsBit,
+        ["github-copilot"] = GhcBit,
+        ["ml"] = MlBit,
+        ["security"] = SecurityBit
+    };
 
     private readonly IDbConnection _connection;
     private readonly ILogger<SectionRoundupRepository> _logger;
@@ -401,49 +411,14 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
     private static SectionFlags BuildSectionFlags(string sectionName)
     {
         var normalized = sectionName.ToLowerInvariant();
-        var isAi = normalized == "ai";
-        var isAzure = normalized == "azure";
-        var isDotnet = normalized == "dotnet";
-        var isDevops = normalized == "devops";
-        var isGhc = normalized == "github-copilot";
-        var isMl = normalized == "ml";
-        var isSecurity = normalized == "security";
-
-        var bitmask = 0;
-        if (isAi)
-        {
-            bitmask |= AiBit;
-        }
-
-        if (isAzure)
-        {
-            bitmask |= AzureBit;
-        }
-
-        if (isDotnet)
-        {
-            bitmask |= DotnetBit;
-        }
-
-        if (isDevops)
-        {
-            bitmask |= DevopsBit;
-        }
-
-        if (isGhc)
-        {
-            bitmask |= GhcBit;
-        }
-
-        if (isMl)
-        {
-            bitmask |= MlBit;
-        }
-
-        if (isSecurity)
-        {
-            bitmask |= SecurityBit;
-        }
+        var bitmask = _sectionBits.TryGetValue(normalized, out var sectionBit) ? sectionBit : 0;
+        var isAi = (bitmask & AiBit) != 0;
+        var isAzure = (bitmask & AzureBit) != 0;
+        var isDotnet = (bitmask & DotnetBit) != 0;
+        var isDevops = (bitmask & DevopsBit) != 0;
+        var isGhc = (bitmask & GhcBit) != 0;
+        var isMl = (bitmask & MlBit) != 0;
+        var isSecurity = (bitmask & SecurityBit) != 0;
 
         return new SectionFlags(isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);
     }
