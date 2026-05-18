@@ -38,7 +38,7 @@ public class ScrollRestorationTests : PlaywrightTestBase
         var allLink = Page.Locator(".sub-nav a[href*='/github-copilot/all']").First;
         await allLink.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/github-copilot/all.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/github-copilot/all.*")));
 
         // Go back — triggers popstate → navigating='traverse' → restoreScrollPosition
         await Page.GoBackAsync();

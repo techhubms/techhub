@@ -120,7 +120,7 @@ public class ContentDetailTests : PlaywrightTestBase
 
         await roundupLinks.First.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/roundups/.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/roundups/.*")));
 
         // Assert - Should navigate to roundup detail page
         Page.Url.Should().Contain("/roundups/", "clicking roundup link should navigate to roundup detail page");

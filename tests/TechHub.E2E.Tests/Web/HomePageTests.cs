@@ -144,7 +144,7 @@ public class HomePageTests : PlaywrightTestBase
                 // Internal links should navigate within the current page
                 await firstLink.ClickAndExpectAsync(async () =>
                     await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                        new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
+                        new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$")));
             }
         }
     }
@@ -164,7 +164,7 @@ public class HomePageTests : PlaywrightTestBase
         {
             await tagLinks.First.ClickAndExpectAsync(async () =>
                 await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                    new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = 2000 }));
+                    new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$")));
 
             // Assert - Should navigate to filtered view or section with tag parameter
             var currentUrl = Page.Url;

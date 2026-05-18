@@ -104,9 +104,8 @@ public class SearchTests : PlaywrightTestBase
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
         await clearButton.ClickAndExpectAsync(async () =>
         {
-            await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 });
-            await Assertions.Expect(searchInput).ToHaveValueAsync("", new() { Timeout = 2000 });
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("search="));
+            await Assertions.Expect(searchInput).ToHaveValueAsync("");
         });
 
         // Assert - Search should be cleared
@@ -128,8 +127,7 @@ public class SearchTests : PlaywrightTestBase
         // Act 1 - Select a tag
         var tagButton = Page.Locator(EnabledTagSelector).First;
         await tagButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*tags=.*"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 
         // Act 2 - Add search query
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
@@ -158,31 +156,41 @@ public class SearchTests : PlaywrightTestBase
 
     private async Task<int> WaitForSelectableTagFilterOrReachTerminalStateAsync()
     {
-        var enabledTags = 0;
+        // Retry until tag filters load or reach a terminal state (no-tags / error).
+        // Progressive backoff mirrors Playwright JS expect(fn).toPass() intervals.
+        var intervals = new[] { 100, 250, 500, 1000, 1000 };
+        var deadline = DateTime.UtcNow.AddMilliseconds(BlazorHelpers.E2ETimeout);
+        var attempt = 0;
+        int enabledTags;
 
-        await BlazorHelpers.RetryUntilPassAsync(async () =>
+        while (true)
         {
             enabledTags = await Page.Locator(EnabledTagSelector).CountAsync();
             if (enabledTags > 0)
             {
-                return;
+                break;
             }
-
-            var noTagsMessageCount = await Page.Locator(NoTagsStateSelector)
-                .CountAsync();
-
-            var tagLoadingErrorCount = await Page.Locator(TagErrorSelector)
-                .CountAsync();
 
             var loadingSkeletonCount = await Page.Locator(LoadingSkeletonSelector).CountAsync();
-            if (loadingSkeletonCount == 0 && (noTagsMessageCount > 0 || tagLoadingErrorCount > 0))
+            if (loadingSkeletonCount == 0)
             {
-                return;
+                var noTagsMessageCount = await Page.Locator(NoTagsStateSelector).CountAsync();
+                var tagLoadingErrorCount = await Page.Locator(TagErrorSelector).CountAsync();
+                if (noTagsMessageCount > 0 || tagLoadingErrorCount > 0)
+                {
+                    break;
+                }
             }
 
-            throw new InvalidOperationException(
-                "Tag filters are still loading; retry until they become selectable or reach a terminal state.");
-        });
+            var delayMs = intervals[Math.Min(attempt, intervals.Length - 1)];
+            if (DateTime.UtcNow.AddMilliseconds(delayMs) >= deadline)
+            {
+                break;
+            }
+
+            await Task.Delay(delayMs);
+            attempt++;
+        }
 
         return enabledTags;
     }
@@ -200,8 +208,7 @@ public class SearchTests : PlaywrightTestBase
         // Act + Assert — retry [click + URL no longer has search=, tags= remain]
         var clearButton = Page.Locator("button[aria-label*='Clear']").Or(Page.Locator(".search-clear-button"));
         await clearButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("search=")));
 
         // Assert - Tags should remain, search should be removed
         var currentUrl = Page.Url;
@@ -218,17 +225,13 @@ public class SearchTests : PlaywrightTestBase
         var searchInput = Page.Locator("input[type='search'], input[placeholder*='Search']");
         await Assertions.Expect(searchInput).ToHaveValueAsync("test");
 
-        // Act - Focus search box and press Escape, retry until URL clears.
-        // On slow networks Blazor's @onkeydown may not be attached when the first
-        // Escape fires; RetryUntilPassAsync re-focuses and re-presses until the
-        // URL update confirms the server processed the key event.
-        await BlazorHelpers.RetryUntilPassAsync(async () =>
-        {
-            await searchInput.FocusAsync();
-            await searchInput.PressAsync("Escape");
-            await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex("search="), new() { Timeout = 2000 });
-        });
+        // Act - Focus search box and press Escape.
+        // WaitForBlazorReadyAsync (called by GotoRelativeAsync) ensures the @onkeydown handler
+        // is attached before we interact, so a single focus+press is sufficient.
+        await Page.WaitForBlazorReadyAsync();
+        await searchInput.FocusAsync();
+        await searchInput.PressAsync("Escape");
+        await Assertions.Expect(Page).Not.ToHaveURLAsync(new Regex("search="));
 
         // Assert - Search should be cleared
         var inputValue = await searchInput.InputValueAsync();

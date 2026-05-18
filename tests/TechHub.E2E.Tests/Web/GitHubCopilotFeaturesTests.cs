@@ -214,13 +214,17 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // not inside the individual entry card — look at the timeline level
         await Assertions.Expect(Page.Locator(".features-timeline-date").First).ToBeVisibleAsync();
 
-        // Description is inside the expandable section — expand the entry first
-        var header = firstEntry.Locator(".features-timeline-header");
-        await header.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(firstEntry).ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+        // Description is inside the expandable section — expand an entry to reveal it.
+        // The first entry auto-expands on page load (expandedFeatureId = firstFeature.Slug),
+        // so use the second entry (Nth(1)) which starts collapsed. Nth() is a stable locator
+        // that keeps targeting the same DOM element even after class changes — unlike
+        // :not(.expanded) which would drift to a different element once the class is added.
+        var entryToExpand = Page.Locator(".features-timeline-entry").Nth(1);
+        await entryToExpand.Locator(".features-timeline-header").ClickAndExpectAsync(async () =>
+            await Assertions.Expect(entryToExpand).ToHaveClassAsync(
+                new Regex("expanded")));
 
-        await Assertions.Expect(firstEntry.Locator(".features-timeline-description")).ToBeVisibleAsync();
+        await Assertions.Expect(entryToExpand.Locator(".features-timeline-description")).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -321,7 +325,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".custom-page-note"))
-                .ToBeVisibleAsync(new() { Timeout = 2000 }));
+                .ToBeVisibleAsync());
 
         // Assert - Note should now be visible below the filter bar
         await Assertions.Expect(note).ToBeVisibleAsync();
@@ -355,7 +359,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesToggle = Page.Locator(".features-timeline-filters .features-ghes-toggle");
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".features-timeline-entry"))
-                .ToHaveCountAsync(ghesCountBefore, new() { Timeout = 2_000 }));
+                .ToHaveCountAsync(ghesCountBefore));
     }
 
     [Fact]
@@ -373,7 +377,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var freeButton = Page.Locator(".features-timeline-filters button:has-text('Free')");
         await freeButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(freeButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active")));
 
         // Assert - Filtering by Free tier must strictly reduce the count
         var filteredEntries = Page.Locator(".features-timeline-entry");
@@ -397,13 +401,13 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var ghesCount = await Page.Locator(".features-timeline-entry:has(.badge-success)").CountAsync();
         await ghesToggle.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".features-timeline-entry"))
-                .ToHaveCountAsync(ghesCount, new() { Timeout = 2_000 }));
+                .ToHaveCountAsync(ghesCount));
 
         // Act - Click the "All" button to clear filters
         var allButton = Page.Locator(".features-timeline-filters button:has-text('All')");
         await allButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(allButton).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active")));
 
         // Assert - Entry count should be restored
         var restoredEntries = Page.Locator(".features-timeline-entry");
@@ -433,12 +437,12 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var header = testEntry.Locator(".features-timeline-header");
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(testCard).ToHaveAttributeAsync(
-                "aria-expanded", "true", new() { Timeout = 2000 }));
+                "aria-expanded", "true"));
 
         // Act - Click again to collapse
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(testCard).ToHaveAttributeAsync(
-                "aria-expanded", "false", new() { Timeout = 2000 }));
+                "aria-expanded", "false"));
     }
 
     [Fact]
@@ -469,7 +473,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
             var header = entryWithVideo.Locator(".features-timeline-header");
             await header.ClickAndExpectAsync(async () =>
                 await Assertions.Expect(entryCard).ToHaveAttributeAsync(
-                    "aria-expanded", "true", new() { Timeout = 2000 }));
+                    "aria-expanded", "true"));
         }
 
         // Assert - Expanded entry with video should show thumbnail
@@ -494,7 +498,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         // Act - Click Free tier card in sidebar
         await freeTierCard.ClickAndExpectAsync(async () =>
             await Assertions.Expect(freeTierCard).ToHaveClassAsync(
-                new Regex("active"), new() { Timeout = 2000 }));
+                new Regex("active")));
 
         // Assert - Free tier filter should also be active in the main filter bar
         var freeFilterBtn = Page.Locator(".features-timeline-filters button:has-text('Free')");
@@ -532,7 +536,7 @@ public class GitHubCopilotFeaturesTests : PlaywrightTestBase
         var header = firstEntry.Locator(".features-timeline-header");
         await header.ClickAndExpectAsync(async () =>
             await Assertions.Expect(firstEntry).ToHaveClassAsync(
-                new Regex("expanded"), new() { Timeout = 2000 }));
+                new Regex("expanded")));
 
         // Assert - Plan badges should be present and have tier-specific color classes (badge-plan-*)
         var planBadges = firstEntry.Locator(".badge-plan");

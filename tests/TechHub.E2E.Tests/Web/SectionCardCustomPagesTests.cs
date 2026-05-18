@@ -107,7 +107,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             // be attached yet.
             await expandButton.ClickAndExpectAsync(async () =>
             {
-                await Assertions.Expect(targetContainer).ToBeVisibleAsync(new() { Timeout = 2000 });
+                await Assertions.Expect(targetContainer).ToBeVisibleAsync();
             });
 
             // Button with this specific target ID should be removed after clicking
@@ -119,8 +119,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             // rather than a raw CountAsync() to survive the Blazor re-render window
             // where remaining buttons momentarily disappear before being re-attached.
             await Assertions.Expect(expandButtons).ToHaveCountAsync(
-                initialButtonCount - 1,
-                new() { Timeout = BlazorHelpers.E2ETimeout });
+                initialButtonCount - 1);
 
             // Hidden custom pages should be visible
             var hiddenBadges = targetContainer.Locator(".badge-custom");
@@ -153,8 +152,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
 
             // Expand to see all custom pages
             await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
-                    new() { Timeout = 2000 }));
+                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync());
 
             // Get all custom page badges (visible + hidden) in display order
             var allCustomBadges = new List<string>
@@ -206,8 +204,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var initialUrl = Page.Url;
             var targetId2 = await expandButton.GetAttributeAsync("data-expand-target");
             await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId2}")).ToBeVisibleAsync(
-                    new() { Timeout = 2000 }));
+                await Assertions.Expect(Page.Locator($"#{targetId2}")).ToBeVisibleAsync());
 
             // Assert - Should still be on homepage
             Page.Url.Should().Be(initialUrl, "clicking expand button should not navigate away from homepage");
@@ -263,8 +260,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
 
             // Expand to reveal hidden custom pages
             await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
-                    new() { Timeout = 2000 }));
+                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync());
 
             var targetContainer = Page.Locator($"#{targetId}");
             var hiddenBadges = targetContainer.Locator(".badge-custom");
@@ -331,8 +327,7 @@ public class SectionCardCustomPagesTests : PlaywrightTestBase
             var expandButton = expandButtons.First;
             var targetId = await expandButton.GetAttributeAsync("data-expand-target");
             await expandButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync(
-                    new() { Timeout = 2000 }));
+                await Assertions.Expect(Page.Locator($"#{targetId}")).ToBeVisibleAsync());
 
             // Assert — circuit must still be active after an interactive action.
             // If sticky sessions are broken, a user interaction can route to a different

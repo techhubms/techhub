@@ -339,7 +339,7 @@ public class SeoMetaTagsTests : PlaywrightTestBase
         // WaitForSeoMetaTagsAsync below handles all necessary waiting.
         await Page.GotoAsync(
             $"{BlazorHelpers.BaseUrl}{firstCardHref}",
-            new() { WaitUntil = WaitUntilState.DOMContentLoaded, Timeout = BlazorHelpers.E2ETimeout });
+            new() { WaitUntil = WaitUntilState.DOMContentLoaded });
 
         // Wait for the DETAIL page's SeoMetaTags to render by checking page-path.
         // The page-path meta is the first element in the HeadContent block — when it

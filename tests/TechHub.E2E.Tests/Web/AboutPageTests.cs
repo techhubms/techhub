@@ -82,7 +82,7 @@ public class AboutPageTests : PlaywrightTestBase
         await Page.GetByRole(AriaRole.Link, new() { Name = "About", Exact = true })
             .ClickAndExpectAsync(async () =>
                 await Assertions.Expect(Page).ToHaveURLAsync(
-                    new Regex(@".*/about.*"), new() { Timeout = 2000 }));
+                    new Regex(@".*/about.*")));
 
         // Assert
         await Page.AssertElementVisibleByRoleAsync(AriaRole.Heading, "Reinier van Maanen");

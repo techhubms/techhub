@@ -42,10 +42,9 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Act + Assert — retry [click + class check] to cover Blazor Server
         // hydration race where @onclick may not be attached yet.
         var toggle = Page.Locator(".sidebar-toggle");
-        var html = Page.Locator("html");
         await toggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(html).ToHaveClassAsync(
-                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator("html"))
+                .ToHaveClassAsync(new Regex("sidebar-collapsed")));
     }
 
     [Fact]
@@ -54,17 +53,16 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange
         await Page.GotoRelativeAsync("/");
         var toggle = Page.Locator(".sidebar-toggle");
-        var html = Page.Locator("html");
 
         // First click: collapse (retry to handle hydration race)
         await toggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(html).ToHaveClassAsync(
-                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator("html"))
+                .ToHaveClassAsync(new Regex("sidebar-collapsed")));
 
         // Second click: expand (retry again)
         await toggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(html).Not.ToHaveClassAsync(
-                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator("html"))
+                .Not.ToHaveClassAsync(new Regex("sidebar-collapsed")));
     }
 
     [Fact]
@@ -90,10 +88,8 @@ public class SidebarToggleTests : PlaywrightTestBase
         var toggle = Page.Locator(".sidebar-toggle");
         await toggle.ClickAndExpectAsync(async () =>
         {
-            await Assertions.Expect(toggle).ToHaveAttributeAsync(
-                "aria-expanded", "false", new() { Timeout = 2000 });
-            await Assertions.Expect(toggle).ToHaveAttributeAsync(
-                "aria-label", "Expand sidebar", new() { Timeout = 2000 });
+            await Assertions.Expect(toggle).ToHaveAttributeAsync("aria-expanded", "false");
+            await Assertions.Expect(toggle).ToHaveAttributeAsync("aria-label", "Expand sidebar");
         });
     }
 
@@ -103,17 +99,16 @@ public class SidebarToggleTests : PlaywrightTestBase
         // Arrange - Collapse sidebar on homepage (retry click+assert for hydration race)
         await Page.GotoRelativeAsync("/");
         var toggle = Page.Locator(".sidebar-toggle");
-        var html = Page.Locator("html");
         await toggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(html).ToHaveClassAsync(
-                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator("html"))
+                .ToHaveClassAsync(new Regex("sidebar-collapsed")));
 
         // Act - Navigate to a section page (full page load to test cookie persistence)
         await Page.GotoRelativeAsync("/github-copilot");
 
         // Assert - Sidebar should still be collapsed (server reads cookie during SSR)
-        html = Page.Locator("html");
-        await Assertions.Expect(html).ToHaveClassAsync(new Regex("sidebar-collapsed"));
+        await Assertions.Expect(Page.Locator("html"))
+            .ToHaveClassAsync(new Regex("sidebar-collapsed"));
     }
 
     [Fact]
@@ -124,10 +119,9 @@ public class SidebarToggleTests : PlaywrightTestBase
 
         // Act + Assert — retry click+class check to ensure collapse actually fired
         var toggle = Page.Locator(".sidebar-toggle");
-        var html = Page.Locator("html");
         await toggle.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(html).ToHaveClassAsync(
-                new Regex("sidebar-collapsed"), new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator("html"))
+                .ToHaveClassAsync(new Regex("sidebar-collapsed")));
 
         // Assert - Sidebar sections should be hidden (CSS: html.sidebar-collapsed .sidebar > *:not(.sidebar-toggle))
         var sidebarSections = Page.Locator("html.sidebar-collapsed .sidebar .sidebar-section");
@@ -152,17 +146,20 @@ public class SidebarToggleTests : PlaywrightTestBase
             return style.gridTemplateColumns.split(' ').length;
         }");
 
-        // Act + Assert — retry click until grid columns increase
+        // Act + Assert — click and wait for the CSS grid to update.
+        // WaitForConditionAsync polls with E2ETimeout, which correctly handles the
+        // CSS grid update delay under slow-network conditions. FluentAssertions would
+        // throw immediately without retrying, causing flaky failures on slow3g.
         var toggle = Page.Locator(".sidebar-toggle");
         await toggle.ClickAndExpectAsync(async () =>
         {
-            var cols = await Page.EvaluateAsync<int>(@"() => {
-                const grid = document.querySelector('.sections-grid .grid');
-                if (!grid) return 0;
-                return window.getComputedStyle(grid).gridTemplateColumns.split(' ').length;
-            }");
-            cols.Should().BeGreaterThan(columnsBefore,
-                "sidebar collapse should increase the grid column count");
+            await Page.WaitForConditionAsync(
+                @"(minCols) => {
+                    const grid = document.querySelector('.sections-grid .grid');
+                    if (!grid) return false;
+                    return window.getComputedStyle(grid).gridTemplateColumns.split(' ').length > minCols;
+                }",
+                (object)columnsBefore);
         });
 
         // Get columns after collapse

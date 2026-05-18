@@ -59,8 +59,7 @@ public class MobileNavigationTests : PlaywrightTestBase
         var hamburger = Page.Locator(".hamburger-btn");
         var mobileMenu = Page.Locator(".mobile-menu.open");
         await hamburger.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(mobileMenu).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(mobileMenu).ToBeVisibleAsync());
     }
 
     [Fact]
@@ -73,8 +72,7 @@ public class MobileNavigationTests : PlaywrightTestBase
         var hamburger = Page.Locator(".hamburger-btn");
         var overlay = Page.Locator(".mobile-menu-overlay");
         await hamburger.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(overlay).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(overlay).ToBeVisibleAsync());
     }
 
     [Fact]
@@ -116,8 +114,7 @@ public class MobileNavigationTests : PlaywrightTestBase
 
         // Open the menu with retry — Blazor @onclick may not be attached yet on slow networks
         await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync());
 
         // Act - Click on a section header to expand.
         // The mobile menu can be taller than the viewport; scroll the target
@@ -126,8 +123,7 @@ public class MobileNavigationTests : PlaywrightTestBase
         var sectionHeader = Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" });
         await sectionHeader.ScrollIntoViewIfNeededAsync();
         await sectionHeader.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a").First).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a").First).ToBeVisibleAsync());
 
         // Assert - Sub-items are now visible (confirmed above, read count)
         var subItems = Page.Locator(".mobile-menu-sub-items a");
@@ -146,20 +142,16 @@ public class MobileNavigationTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/");
         var mobileMenuOpen = Page.Locator(".mobile-menu.open");
         await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
-            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync());
 
-        // Wait for overlay to be in the DOM — it's @if (menuOpen) so it renders in the same
-        // Blazor cycle, but under load can take longer than the retry inner timeout
+        // Wait for overlay to be in the DOM and visible before clicking
         var overlay = Page.Locator(".mobile-menu-overlay");
         await Assertions.Expect(overlay).ToBeVisibleAsync();
 
-        // Act + Assert — retry overlay click until menu closes
-        await BlazorHelpers.RetryUntilPassAsync(async () =>
-        {
-            await overlay.ClickAsync(new() { Position = new() { X = 10, Y = 200 }, Timeout = 2000 });
-            await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0, new() { Timeout = 2000 });
-        });
+        // Act + Assert — single click; Playwright actionability check ensures the overlay
+        // can receive pointer events before the click fires.
+        await overlay.ClickAsync(new() { Position = new() { X = 10, Y = 200 } });
+        await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0);
     }
 
     [Fact]
@@ -170,21 +162,19 @@ public class MobileNavigationTests : PlaywrightTestBase
 
         // Open the menu with retry — Blazor @onclick may not be attached yet on slow networks
         await Page.Locator(".hamburger-btn").ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToBeVisibleAsync());
 
         // Expand GitHub Copilot section with retry (section header is inside fixed-overlay)
         var sectionHeader = Page.Locator(".mobile-menu-section-header", new() { HasTextString = "GitHub Copilot" });
         await sectionHeader.ScrollIntoViewIfNeededAsync();
         await sectionHeader.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a").First).ToBeVisibleAsync(
-                new() { Timeout = 2000 }));
+            await Assertions.Expect(Page.Locator(".mobile-menu-sub-items a").First).ToBeVisibleAsync());
 
         // Act - Click "Browse" sub-item
         var allLink = Page.Locator(".mobile-menu-sub-items a", new() { HasTextString = "Browse" });
         await allLink.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*/github-copilot.*"), new() { Timeout = 2000 }));
+                new Regex(@".*/github-copilot.*")));
 
         // Assert - Should navigate and close menu
         await Assertions.Expect(Page.Locator(".mobile-menu.open")).ToHaveCountAsync(0);
@@ -198,11 +188,11 @@ public class MobileNavigationTests : PlaywrightTestBase
         var hamburger = Page.Locator(".hamburger-btn");
         var mobileMenuOpen = Page.Locator(".mobile-menu.open");
         await hamburger.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync(new() { Timeout = 2000 }));
+            await Assertions.Expect(mobileMenuOpen).ToBeVisibleAsync());
 
         // Act + Assert — toggle closed with retry
         await hamburger.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0, new() { Timeout = 2000 }));
+            await Assertions.Expect(mobileMenuOpen).ToHaveCountAsync(0));
     }
 
     // ============================================================================

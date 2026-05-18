@@ -81,8 +81,7 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 | Method | Purpose |
 |---|---|
 | `GotoRelativeAsync()` | Navigate + wait for page ready |
-| `ClickAndExpectAsync(assert)` | **The only click helper.** Retries [click + assert] until it passes. Use for every Blazor/JS click — whether the result is a URL change, CSS class toggle, element appearing, or anything else. If the URL changes after the assertion, automatically waits for Blazor to be ready on the new page. |
-| `RetryUntilPassAsync(block)` | .NET equivalent of Playwright JS `expect(fn).toPass()` — retry an arbitrary `[action + assertion]` block until it passes or times out. |
+| `ClickAndExpectAsync(assert)` | **The only click helper.** Waits for Blazor interactivity, clicks **once**, then asserts. Do NOT pass explicit `Timeout` in the assertion lambda — rely on the global `E2ETimeout` set via `Assertions.SetDefaultExpectTimeout`. If the URL changes after the assertion, automatically waits for Blazor to be ready on the new page. |
 | `ClickAndWaitForScrollAsync()` | Click + wait for `scroll-end` signal |
 | `ScrollToAndWaitForTocUpdateAsync()` | Scroll + wait for `toc-active-updated` signal |
 | `WaitForTocInitializedAsync()` | Wait for `toc-initialized` signal |
@@ -115,12 +114,11 @@ Signal history: Ring buffer of 20 entries. Timeout constants: `E2ETimeout` (scal
 
 **Console Error Tests**: `GotoRelativeAsync` already waits for Blazor ready + scripts loaded. No extra wait needed. Do NOT use `NetworkIdle` (Blazor's SignalR WebSocket prevents it from settling).
 
-**Expand/Collapse**: Use `ClickAndExpectAsync` so the click itself is retried if the first one is lost during hydration:
+**Expand/Collapse**: Use `ClickAndExpectAsync` — it waits for Blazor interactivity before clicking and uses the full `E2ETimeout` for the assertion:
 
 ```csharp
 await header.ClickAndExpectAsync(async () =>
-    await Assertions.Expect(content).ToHaveClassAsync(
-        new Regex("expanded"), new() { Timeout = 2000 }));
+    await Assertions.Expect(content).ToHaveClassAsync(new Regex("expanded")));
 ```
 
 **Load More Button**: Click `.load-more-btn` using `ClickAndExpectAsync` and assert card count increases or end-of-content appears. No JS scroll events needed — it’s a pure Blazor button click.

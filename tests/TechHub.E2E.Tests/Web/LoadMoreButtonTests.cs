@@ -10,6 +10,11 @@ namespace TechHub.E2E.Tests.Web;
 /// </summary>
 public class LoadMoreButtonTests : PlaywrightTestBase
 {
+    // Short per-attempt timeout inside the batch retry loop.
+    // The outer loop budget is E2ETimeout; each attempt waits at most this long
+    // before re-clicking if Blazor hasn't responded yet.
+    private const int PerBatchLoadTimeoutMs = 5_000;
+
     public LoadMoreButtonTests(PlaywrightCollectionFixture fixture) : base(fixture) { }
 
     [Fact]
@@ -67,8 +72,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await loadMoreBtn.ClickAndExpectAsync(async () =>
         {
             await Page.WaitForConditionAsync(
-                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
-                new PageWaitForFunctionOptions { Timeout = 15000 });
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
         });
 
         var newCount = await Page.Locator(".card").CountAsync();
@@ -99,8 +103,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await loadMoreBtn.ClickAndExpectAsync(async () =>
         {
             await Page.WaitForConditionAsync(
-                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
-                new PageWaitForFunctionOptions { Timeout = 15000 });
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
         });
 
         var newCount = await Page.Locator(".card").CountAsync();
@@ -133,8 +136,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
             // the Blazor circuit processes the previous batch — we must NOT click it
             // while disabled or the click is silently dropped.
             await Page.WaitForConditionAsync(
-                "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null",
-                new PageWaitForFunctionOptions { Timeout = BlazorHelpers.E2ETimeout });
+                "() => document.querySelector('.load-more-btn:not([disabled])') !== null || document.querySelector('.end-of-content') !== null");
 
             // If end-of-content appeared while the button was disabled (last batch
             // finished loading), we're done — no click needed.
@@ -164,7 +166,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
                 {
                     try
                     {
-                        await Page.Locator(".load-more-btn").ClickAsync(new() { Timeout = 2000 });
+                        await Page.Locator(".load-more-btn").ClickAsync();
                     }
                     catch (PlaywrightException)
                     {
@@ -177,7 +179,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
                 {
                     await Page.WaitForConditionAsync(
                         $"() => document.querySelectorAll('.card').length > {countBefore} || document.querySelector('.end-of-content') !== null",
-                        new PageWaitForFunctionOptions { Timeout = 5000 });
+                        new PageWaitForFunctionOptions { Timeout = PerBatchLoadTimeoutMs });
                     batchCompleted = true;
                 }
                 catch (TimeoutException)
@@ -190,8 +192,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         }
 
         var endOfContent = Page.Locator(".end-of-content");
-        await Assertions.Expect(endOfContent).ToBeVisibleAsync(
-            new() { Timeout = BlazorHelpers.E2ETimeout });
+        await Assertions.Expect(endOfContent).ToBeVisibleAsync();
     }
 
     [Fact]
@@ -224,8 +225,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await loadMoreBtn.ClickAndExpectAsync(async () =>
         {
             await Page.WaitForConditionAsync(
-                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
-                new PageWaitForFunctionOptions { Timeout = 15000 });
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
         });
 
         var newCount = await Page.Locator(".card").CountAsync();
@@ -263,8 +263,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await loadMoreBtn.ClickAndExpectAsync(async () =>
         {
             await Page.WaitForConditionAsync(
-                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null",
-                new PageWaitForFunctionOptions { Timeout = 15000 });
+                $"() => document.querySelectorAll('.card').length > {initialCount} || document.querySelector('.end-of-content') !== null");
         });
 
         var newCount = await Page.Locator(".card").CountAsync();
@@ -280,8 +279,7 @@ public class LoadMoreButtonTests : PlaywrightTestBase
         await allLink.ClickAndExpectAsync(async () =>
         {
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new System.Text.RegularExpressions.Regex(@".*/ai/all.*"),
-                new() { Timeout = BlazorHelpers.E2ETimeout });
+                new System.Text.RegularExpressions.Regex(@".*/ai/all.*"));
         });
 
         // Navigate back
