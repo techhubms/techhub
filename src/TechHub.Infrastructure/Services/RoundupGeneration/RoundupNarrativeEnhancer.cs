@@ -39,12 +39,13 @@ internal sealed class RoundupNarrativeEnhancer
     /// </summary>
     public async Task<string> EnhanceAsync(
         string step3Content,
+        string sectionName,
         DateOnly weekStart,
         string writingGuidelines,
         LoggingProgress lp,
         CancellationToken ct)
     {
-        var previousRoundupContent = await _roundupRepo.GetPreviousRoundupContentAsync(weekStart, ct);
+        var previousRoundupContent = await _roundupRepo.GetPreviousRoundupContentAsync(sectionName, weekStart, ct);
 
         if (string.IsNullOrWhiteSpace(previousRoundupContent))
         {

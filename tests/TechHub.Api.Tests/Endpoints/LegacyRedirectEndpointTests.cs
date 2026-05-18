@@ -104,7 +104,7 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
     {
         // Arrange — fetch a real roundup slug from the DB, skipping the special-cased one.
         var itemsResponse = await _client.GetAsync(
-            "/api/sections/all/collections/roundups/items",
+            "/api/sections/ai/collections/roundups/items",
             TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(
             TestContext.Current.CancellationToken))?.Items?.ToList();
@@ -126,8 +126,8 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
         var result = await response.Content.ReadFromJsonAsync<LegacyRedirectResult>(
             TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Url.Should().StartWith("/all/roundups/",
-            "roundups always resolve to /all/roundups/{slug} regardless of section hint");
+        result!.Url.Should().MatchRegex(@"^/[a-z\-]+/roundups/",
+            "section roundups should resolve to /{section}/roundups/{slug}");
         result.Url.Should().EndWith(testItem.Slug, "canonical URL should end with the slug");
     }
 
@@ -147,7 +147,7 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
         var result = await response.Content.ReadFromJsonAsync<LegacyRedirectResult>(
             TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Url.Should().StartWith("/all/roundups/",
-            "roundups always live at /all/roundups/{slug}");
+        result!.Url.Should().MatchRegex(@"^/[a-z\-]+/roundups/",
+            "roundups should resolve to /{section}/roundups/{slug}");
     }
 }

@@ -22,7 +22,7 @@ public class RoundupGeneratorServiceTests
 
     private static readonly DateOnly _weekStart = new(2025, 4, 7);    // Monday
     private static readonly DateOnly _weekEnd = new(2025, 4, 13);     // Sunday
-    private static readonly string _expectedSlug = "weekly-ai-and-tech-news-roundup-2025-04-14";
+    private static readonly string _expectedSlug = "weekly-ai-and-tech-news-roundup-ai-2025-04-14";
 
     private static readonly AppSettings _testAppSettings = new()
     {
@@ -140,7 +140,14 @@ public class RoundupGeneratorServiceTests
     {
         // Arrange — mock that the roundup already exists
         _roundupRepo
-            .Setup(r => r.RoundupExistsAsync(_expectedSlug, It.IsAny<CancellationToken>()))
+            .Setup(r => r.GetArticlesForWeekAsync(_weekStart, _weekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(new Dictionary<string, IReadOnlyList<RoundupArticle>>
+            {
+                ["ai"] = BuildArticles("ai", 4, "high")
+            });
+
+        _roundupRepo
+            .Setup(r => r.RoundupExistsAsync("ai", _expectedSlug, It.IsAny<CancellationToken>()))
             .ReturnsAsync(true);
 
         var sut = CreateSut();
@@ -186,7 +193,7 @@ public class RoundupGeneratorServiceTests
         // Arrange — use a unique week
         var uniqueWeekStart = new DateOnly(2025, 5, 5);
         var uniqueWeekEnd = new DateOnly(2025, 5, 11);
-        var uniqueSlug = "weekly-ai-and-tech-news-roundup-2025-05-12";
+        var uniqueSlug = "weekly-ai-and-tech-news-roundup-github-copilot-2025-05-12";
 
         var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
         {
@@ -215,12 +222,72 @@ public class RoundupGeneratorServiceTests
         result.Slug.Should().Be(uniqueSlug);
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
             It.Is<string>(s => s == uniqueSlug),
             It.IsAny<DateOnly>(),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
             It.Is<string>(s => !string.IsNullOrWhiteSpace(s)),
+            It.IsAny<IReadOnlyList<string>>(),
+            It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task GenerateAsync_WithArticlesAcrossMultipleSections_GeneratesRoundupPerSectionSequentially()
+    {
+        // Arrange
+        var uniqueWeekStart = new DateOnly(2025, 5, 19);
+        var uniqueWeekEnd = new DateOnly(2025, 5, 25);
+
+        var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
+        {
+            ["ai"] = BuildArticles("ai", 4, "high"),
+            ["azure"] = BuildArticles("azure", 4, "high")
+        };
+
+        _roundupRepo
+            .Setup(r => r.GetArticlesForWeekAsync(uniqueWeekStart, uniqueWeekEnd, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(articles);
+
+        _aiClient
+            .Setup(c => c.SendCompletionAsync(It.IsAny<string>(), It.IsAny<CancellationToken>()))
+            .ReturnsAsync((string body, CancellationToken _) =>
+                body.Contains("Return only JSON", StringComparison.Ordinal)
+                    ? OkAiResponse("""{"title":"Section Roundup","tags":["AI"],"description":"Section summary.","introduction":"Intro"}""")
+                    : OkAiResponse("## AI\n\nSection news.\n\n- [Article](https://example.com/0)"));
+
+        var sut = CreateSut();
+
+        // Act
+        var result = await sut.GenerateAsync(uniqueWeekStart, uniqueWeekEnd, ct: TestContext.Current.CancellationToken);
+
+        // Assert
+        result.Result.Should().Be(RoundupGenerationResult.Generated);
+        result.Slugs.Should().Contain("weekly-ai-and-tech-news-roundup-ai-2025-05-26");
+        result.Slugs.Should().Contain("weekly-ai-and-tech-news-roundup-azure-2025-05-26");
+
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            "ai",
+            "weekly-ai-and-tech-news-roundup-ai-2025-05-26",
+            It.IsAny<DateOnly>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<IReadOnlyList<string>>(),
+            It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            "azure",
+            "weekly-ai-and-tech-news-roundup-azure-2025-05-26",
+            It.IsAny<DateOnly>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(),
             It.IsAny<long?>(),
             It.IsAny<CancellationToken>()), Times.Once);
@@ -350,6 +417,7 @@ public class RoundupGeneratorServiceTests
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
             It.IsAny<string>(),
+            It.IsAny<string>(),
             It.IsAny<DateOnly>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
@@ -399,6 +467,7 @@ public class RoundupGeneratorServiceTests
         result.Result.Should().Be(RoundupGenerationResult.Generated);
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            "ai",
             It.IsAny<string>(),
             It.IsAny<DateOnly>(),
             It.IsAny<string>(),
@@ -407,6 +476,19 @@ public class RoundupGeneratorServiceTests
             It.IsAny<string>(),
             It.Is<IReadOnlyList<string>>(tags =>
                 tags.Contains("AI") &&
+                tags.Contains("Kubernetes")),
+            It.IsAny<long?>(),
+            It.IsAny<CancellationToken>()), Times.Once);
+
+        _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            "azure",
+            It.IsAny<string>(),
+            It.IsAny<DateOnly>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.IsAny<string>(),
+            It.Is<IReadOnlyList<string>>(tags =>
                 tags.Contains("Azure") &&
                 tags.Contains("Kubernetes")),
             It.IsAny<long?>(),
@@ -423,7 +505,7 @@ public class RoundupGeneratorServiceTests
         var currentWeekEnd = new DateOnly(2026, 6, 14);
 
         _roundupRepo
-            .Setup(r => r.GetPreviousRoundupContentAsync(currentWeekStart, It.IsAny<CancellationToken>()))
+            .Setup(r => r.GetPreviousRoundupContentAsync("ai", currentWeekStart, It.IsAny<CancellationToken>()))
             .ReturnsAsync("## AI\n\nLast week, Azure AI Foundry released new features.\n\n- [Last Week Article](https://example.com/prev)");
 
         var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
@@ -511,6 +593,7 @@ public class RoundupGeneratorServiceTests
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
             It.IsAny<string>(),
+            It.IsAny<string>(),
             It.IsAny<DateOnly>(),
             It.Is<string>(title => title.Contains("Weekly AI and Tech News Roundup")),
             It.IsAny<string>(),
@@ -553,6 +636,7 @@ public class RoundupGeneratorServiceTests
         result.Result.Should().Be(RoundupGenerationResult.ContentGenerationFailed);
         result.Slug.Should().BeNull();
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
             It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(),
             It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(),
@@ -589,6 +673,7 @@ public class RoundupGeneratorServiceTests
         result.Result.Should().Be(RoundupGenerationResult.ContentGenerationFailed);
         result.Slug.Should().BeNull();
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
             It.IsAny<string>(), It.IsAny<DateOnly>(), It.IsAny<string>(),
             It.IsAny<string>(), It.IsAny<string>(), It.IsAny<string>(),
             It.IsAny<IReadOnlyList<string>>(), It.IsAny<long?>(),
@@ -627,6 +712,7 @@ public class RoundupGeneratorServiceTests
         result.Result.Should().Be(RoundupGenerationResult.Generated);
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
+            It.IsAny<string>(),
             It.IsAny<string>(),
             It.IsAny<DateOnly>(),
             It.IsAny<string>(),

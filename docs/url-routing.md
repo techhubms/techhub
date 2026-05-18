@@ -43,7 +43,7 @@ Examples:
 
 - `/ai/videos/my-article`
 - `/github-copilot/roundups/june-2026-digest`
-- `/all/roundups/{slug}` — roundups always use the `all` section
+- `/{section}/roundups/{slug}` — roundups use their owning section path
 
 Special pages sit outside this structure: `/`, `/about`, `/admin`, `/not-found`.
 

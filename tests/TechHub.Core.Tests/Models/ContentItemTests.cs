@@ -142,6 +142,19 @@ public class ContentItemTests
     }
 
     [Fact]
+    public void GetHref_ForRoundups_UsesPrimarySectionRoundupsPath()
+    {
+        // Arrange
+        var contentItem = CreateContentItemWithCollection("roundups");
+
+        // Act
+        var result = contentItem.GetHref();
+
+        // Assert
+        result.Should().Be("/github-copilot/roundups/test-slug");
+    }
+
+    [Fact]
     public void GetTarget_ReturnsBlank_ForExternalCollections()
     {
         // Arrange

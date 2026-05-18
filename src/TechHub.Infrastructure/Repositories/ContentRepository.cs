@@ -1832,12 +1832,6 @@ LIMIT @Limit OFFSET @Offset";
         {
             redirectUrl = row.ExternalUrl!;
         }
-        else if (row.CollectionName == "roundups")
-        {
-            // Roundups are only accessible via /all/roundups/ — they don't exist under
-            // individual section paths (mirrors ContentItem.GetHref() logic).
-            redirectUrl = $"/all/roundups/{row.Slug}";
-        }
         else
         {
             redirectUrl = $"/{row.PrimarySectionName}/{row.CollectionName}/{row.Slug}";

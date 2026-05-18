@@ -73,16 +73,6 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
     /// <inheritdoc />
     public async Task<RoundupGenerationOutcome> GenerateAsync(DateOnly weekStart, DateOnly weekEnd, IProgress<string>? progress = null, long? jobId = null, CancellationToken ct = default)
     {
-        var publishDate = weekEnd.AddDays(1); // Monday after the week ends
-        var slug = RoundupContentBuilder.BuildSlug(publishDate);
-
-        // Deduplication: skip if roundup already exists for this week.
-        if (await _roundupRepo.RoundupExistsAsync(slug, ct))
-        {
-            _logger.LogInformation("Roundup for week {WeekStart} already exists (slug={Slug}), skipping", weekStart, slug);
-            return RoundupGenerationOutcome.AlreadyExists;
-        }
-
         var lp = new LoggingProgress(_logger, progress);
 
         var articlesBySection = await _roundupRepo.GetArticlesForWeekAsync(weekStart, weekEnd, ct);
@@ -98,71 +88,136 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         // On-the-fly AI metadata backfill: categorize any items missing ai_metadata
         articlesBySection = await BackfillMissingAiMetadataAsync(articlesBySection, lp, ct);
 
-        var filtered = _relevanceFilter.Filter(articlesBySection, lp);
+        var generatedSlugs = new List<string>();
+        var skippedExistsCount = 0;
+        var failedGenerationCount = 0;
+        var skippedAfterFilteringCount = 0;
 
+        foreach (var sectionName in articlesBySection.Keys.OrderBy(k => k, StringComparer.OrdinalIgnoreCase))
+        {
+            ct.ThrowIfCancellationRequested();
+
+            var sectionArticles = new Dictionary<string, IReadOnlyList<RoundupArticle>>(StringComparer.OrdinalIgnoreCase)
+            {
+                [sectionName] = articlesBySection[sectionName]
+            };
+
+            var sectionResult = await GenerateSectionRoundupAsync(sectionName, sectionArticles, weekStart, weekEnd, jobId, lp, ct);
+            switch (sectionResult.Result)
+            {
+                case RoundupGenerationResult.Generated:
+                    generatedSlugs.AddRange(sectionResult.Slugs);
+                    break;
+                case RoundupGenerationResult.AlreadyExists:
+                    skippedExistsCount++;
+                    break;
+                case RoundupGenerationResult.ContentGenerationFailed:
+                    failedGenerationCount++;
+                    break;
+                case RoundupGenerationResult.NoArticlesAfterFiltering:
+                    skippedAfterFilteringCount++;
+                    break;
+            }
+        }
+
+        if (generatedSlugs.Count > 0)
+        {
+            return RoundupGenerationOutcome.Generated(generatedSlugs);
+        }
+
+        if (failedGenerationCount > 0)
+        {
+            return RoundupGenerationOutcome.ContentGenerationFailed;
+        }
+
+        if (skippedExistsCount > 0 && skippedExistsCount == articlesBySection.Count)
+        {
+            return RoundupGenerationOutcome.AlreadyExists;
+        }
+
+        if (skippedAfterFilteringCount > 0 && skippedAfterFilteringCount == articlesBySection.Count)
+        {
+            return RoundupGenerationOutcome.NoArticlesAfterFiltering;
+        }
+
+        return RoundupGenerationOutcome.NoArticlesAfterFiltering;
+    }
+
+    private async Task<RoundupGenerationOutcome> GenerateSectionRoundupAsync(
+        string sectionName,
+        IReadOnlyDictionary<string, IReadOnlyList<RoundupArticle>> sectionArticlesBySection,
+        DateOnly weekStart,
+        DateOnly weekEnd,
+        long? jobId,
+        LoggingProgress lp,
+        CancellationToken ct)
+    {
+        var publishDate = weekEnd.AddDays(1); // Monday after the week ends
+        var slug = RoundupContentBuilder.BuildSlug(publishDate, sectionName);
+
+        if (await _roundupRepo.RoundupExistsAsync(sectionName, slug, ct))
+        {
+            _logger.LogInformation("Roundup for section {SectionName} in week {WeekStart} already exists (slug={Slug}), skipping", sectionName, weekStart, slug);
+            return RoundupGenerationOutcome.AlreadyExists;
+        }
+
+        var filtered = _relevanceFilter.Filter(sectionArticlesBySection, lp);
         if (filtered.Count == 0)
         {
-            _logger.LogWarning("No articles remain after relevance filtering for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
-            lp.Report("No articles remain after relevance filtering, skipping");
+            _logger.LogWarning("No articles remain after relevance filtering for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
             return RoundupGenerationOutcome.NoArticlesAfterFiltering;
         }
 
         var filteredTotal = filtered.Values.Sum(a => a.Count);
-        lp.Report($"After relevance filtering: {filteredTotal} articles across {filtered.Count} sections");
+        lp.Report($"After relevance filtering for section '{sectionName}': {filteredTotal} articles");
 
         var weekDescription = string.Create(CultureInfo.InvariantCulture,
             $"the week of {weekStart.ToString("MMMM d", CultureInfo.InvariantCulture)} to {weekEnd.ToString("MMMM d, yyyy", CultureInfo.InvariantCulture)}");
 
         var writingGuidelines = _writingGuidelines.Value;
 
-        lp.Report("Step 1/5: Creating news-like stories per section");
+        lp.Report($"Step 1/5 ({sectionName}): Creating news-like stories");
         var sectionStories = await _newsWriter.WriteAsync(filtered, weekDescription, writingGuidelines, lp, ct);
-
         if (string.IsNullOrWhiteSpace(sectionStories))
         {
-            _logger.LogError("Step 1 produced no content — all AI calls failed for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
-            lp.Report("Content generation failed: Step 1 produced no content");
+            _logger.LogError("Step 1 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
             return RoundupGenerationOutcome.ContentGenerationFailed;
         }
 
-        lp.Report("Step 2/5: Adding ongoing narrative");
-        var narrativeContent = await _narrativeEnhancer.EnhanceAsync(sectionStories, weekStart, writingGuidelines, lp, ct);
-
+        lp.Report($"Step 2/5 ({sectionName}): Adding ongoing narrative");
+        var narrativeContent = await _narrativeEnhancer.EnhanceAsync(sectionStories, sectionName, weekStart, writingGuidelines, lp, ct);
         if (string.IsNullOrWhiteSpace(narrativeContent))
         {
-            _logger.LogError("Step 2 produced no content — narrative enhancement failed for week {WeekStart}–{WeekEnd}", weekStart, weekEnd);
-            lp.Report("Content generation failed: Step 2 produced no content");
+            _logger.LogError("Step 2 produced no content for section {SectionName} in week {WeekStart}–{WeekEnd}", sectionName, weekStart, weekEnd);
             return RoundupGenerationOutcome.ContentGenerationFailed;
         }
 
         string condensedContent;
         if (_options.CondensingEnabled)
         {
-            lp.Report("Step 3/5: Condensing content");
+            lp.Report($"Step 3/5 ({sectionName}): Condensing content");
             condensedContent = await _condenser.CondenseAsync(narrativeContent, writingGuidelines, ct);
         }
         else
         {
-            lp.Report("Step 3/5: Condensing skipped (disabled)");
+            lp.Report($"Step 3/5 ({sectionName}): Condensing skipped (disabled)");
             condensedContent = narrativeContent;
         }
 
-        lp.Report("Step 4/5: Generating metadata");
+        lp.Report($"Step 4/5 ({sectionName}): Generating metadata");
         var metadata = await _metadataGenerator.GenerateAsync(condensedContent, weekDescription, writingGuidelines, ct);
 
-        lp.Report("Step 5/5: Building final content");
+        lp.Report($"Step 5/5 ({sectionName}): Building final content");
         var tableOfContents = RoundupContentBuilder.BuildTableOfContents(condensedContent);
         var fullContent = RoundupContentBuilder.BuildFullContent(condensedContent, metadata.Introduction, tableOfContents);
-
-        // Repair markdown formatting before writing
         fullContent = _contentFixer.RepairMarkdown(fullContent);
 
-        lp.Report("Writing roundup to database");
+        lp.Report($"Writing roundup to database for section '{sectionName}'");
         var tagsWithSections = TagNormalizer.EnsureSectionTags(metadata.Tags, filtered.Keys);
         var normalizedTags = TagNormalizer.NormalizeTags(tagsWithSections);
-        await _roundupRepo.WriteRoundupAsync(slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
+        await _roundupRepo.WriteRoundupAsync(sectionName, slug, publishDate, metadata.Title, metadata.Description, fullContent, metadata.Introduction, normalizedTags, jobId: jobId, ct: ct);
 
-        lp.Report($"Roundup for week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");
+        lp.Report($"Roundup for section '{sectionName}' in week {weekStart}\u2013{weekEnd} written successfully (slug={slug})");
         return RoundupGenerationOutcome.Generated(slug);
     }
 

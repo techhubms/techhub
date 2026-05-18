@@ -56,11 +56,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         aiSection.Description.Should().Be("Your gateway to the AI revolution. From breakthrough announcements to practical tutorials, explore how artificial intelligence is reshaping the way we work and create.");
         aiSection.Url.Should().Be("/ai");
         aiSection.Name.Should().Be("ai");
-        aiSection.Collections.Should().HaveCount(8);
+        aiSection.Collections.Should().HaveCount(9);
         aiSection.Collections.Should().Contain(c => c.Name == "news");
         aiSection.Collections.Should().Contain(c => c.Name == "blogs");
         aiSection.Collections.Should().Contain(c => c.Name == "videos");
         aiSection.Collections.Should().Contain(c => c.Name == "community");
+        aiSection.Collections.Should().Contain(c => c.Name == "roundups");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-basics");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-advanced");
         aiSection.Collections.Should().Contain(c => c.Name == "genai-applied");
@@ -80,7 +81,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         section.Should().NotBeNull();
         section!.Name.Should().Be("ai");
         section.Title.Should().Be("Artificial Intelligence");
-        section.Collections.Should().HaveCount(8);
+        section.Collections.Should().HaveCount(9);
     }
 
     [Fact]
@@ -128,11 +129,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
 
         var collections = await response.Content.ReadFromJsonAsync<List<Collection>>(TestContext.Current.CancellationToken);
         collections.Should().NotBeNull();
-        collections!.Should().HaveCount(11);
+        collections!.Should().HaveCount(12);
         collections.Should().Contain(c => c.Name == "news");
         collections.Should().Contain(c => c.Name == "blogs");
         collections.Should().Contain(c => c.Name == "videos");
         collections.Should().Contain(c => c.Name == "community");
+        collections.Should().Contain(c => c.Name == "roundups");
         collections.Should().Contain(c => c.Name == "features");
         collections.Should().Contain(c => c.Name == "vscode-updates");
         collections.Should().Contain(c => c.Name == "levels-of-enlightenment");
