@@ -91,11 +91,21 @@ export function afterWebStarted(blazor) {
  * @param {Object} blazor - The Blazor instance
  */
 export function afterServerStarted(blazor) {
-    // Mark that Blazor Server circuit is fully established
-    // This is the signal that @onclick handlers are attached and ready
+    // Gate WaitForBlazorReadyAsync on the full page render cycle completing.
+    //
+    // afterServerStarted fires when the SignalR circuit connects and the initial
+    // render diff arrives at the browser — but under slow networks the JS interop
+    // calls queued by PageComponentBase.OnAfterRenderAsync (markScriptsReady) travel
+    // in a SEPARATE round trip that arrives ~400 ms later.  @onclick handlers are
+    // attached by the render diff, but marking __scriptsReady = false here forces
+    // WaitForBlazorReadyAsync to block until markScriptsReady() fires, which is
+    // the earliest safe moment to guarantee the full render cycle is complete.
+    window.__scriptsReady = false;
+
+    // Mark that Blazor Server circuit is fully established.
     window.__blazorServerReady = true;
     if (typeof window.__e2eSignal === 'function') window.__e2eSignal('blazor-server-ready');
-    console.debug('[TechHub] Blazor Server circuit ready - event handlers attached');
+    console.debug('[TechHub] Blazor Server circuit ready - waiting for markScriptsReady');
 
     // Page scripts (mermaid, highlight.js, custom pages, etc.) are loaded by
     // individual page components in their OnAfterRenderAsync. Each component

@@ -29,7 +29,7 @@ public class TagFilteringTests : PlaywrightTestBase
 
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                new Regex(@".*tags=.*")));
 
         // Assert - URL should contain the tag parameter
         var currentUrl = Page.Url;
@@ -61,7 +61,7 @@ public class TagFilteringTests : PlaywrightTestBase
         // Click and wait for URL to include the tag
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                new Regex(@".*tags=.*")));
 
         // Wait for URL to contain the tag and for the tag cloud to re-render
         await WaitForTagCloudReadyAsync();
@@ -74,17 +74,10 @@ public class TagFilteringTests : PlaywrightTestBase
         // Re-acquire locator after Blazor re-render to avoid stale reference
         tagButton = Page.Locator(".tag-cloud-item.selected").First;
         await tagButton.WaitForBlazorInteractivityAsync();
-        // On section pages (Filter mode), deselecting the last tag may not trigger a URL change.
-        // Use a guarded retry: check whether the tag is still selected before each click so that
-        // if the click took effect but the inner assertion timed out under slow3g, the retry
-        // detects the already-deselected state and exits rather than toggling back to selected.
-        await BlazorHelpers.RetryUntilPassAsync(async () =>
-        {
-            if (await Page.Locator(".tag-cloud-item.selected").CountAsync() == 0) return;
-            await Page.Locator(".tag-cloud-item.selected").First.ClickAsync(new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
-            await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
-                .ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
-        });
+        // Single click — WaitForBlazorInteractivityAsync guarantees @onclick is attached;
+        // full E2ETimeout assertion detects the deselected state without retrying the click.
+        await Page.Locator(".tag-cloud-item.selected").First.ClickAsync();
+        await Assertions.Expect(Page.Locator(".tag-cloud-item.selected")).ToHaveCountAsync(0);
 
         // Wait for Blazor to process the toggle: the selected class should be removed
         await WaitForTagCloudReadyAsync();
@@ -200,7 +193,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var tagButton = Page.Locator(".tag-cloud-item").First;
         var tagText = await tagButton.TextContentAsync();
         await tagButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 
         // Assert 1 - URL should contain tag
         var urlAfterClick = Page.Url;
@@ -214,7 +207,7 @@ public class TagFilteringTests : PlaywrightTestBase
         tagButton = Page.Locator(".tag-cloud-item").First;
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
-                .ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                .ToHaveCountAsync(0));
 
         // Assert 2 - Tag should be removed
         var urlAfterToggle = Page.Url;
@@ -241,7 +234,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var tagButton = Page.Locator(".tag-cloud-item").First;
         var tagText = await tagButton.TextContentAsync();
         await tagButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 
         // Assert 1 - URL should contain tag
         var urlAfterClick = Page.Url;
@@ -255,7 +248,7 @@ public class TagFilteringTests : PlaywrightTestBase
         tagButton = Page.Locator(".tag-cloud-item").First;
         await tagButton.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page.Locator(".tag-cloud-item.selected"))
-                .ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                .ToHaveCountAsync(0));
 
         // Assert 2 - Tag should be removed
         var urlAfterToggle = Page.Url;
@@ -288,7 +281,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var firstTagButton = Page.Locator(".tag-cloud-item").First;
         var firstTagText = (await firstTagButton.TextContentAsync())?.Trim().ToLowerInvariant() ?? "";
         await firstTagButton.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 
         // Wait for URL to update with tag parameter (confirms navigation happened)
 
@@ -314,7 +307,7 @@ public class TagFilteringTests : PlaywrightTestBase
         if (secondTagText != firstTagText)
         {
             await secondTagButton.ClickAndExpectAsync(async () =>
-                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 
             // Wait for cards to stabilize after Blazor re-render
             await Page.WaitForConditionAsync(
@@ -449,7 +442,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var firstTagName = ExtractTagNameFromText(firstTagText);
 
         await firstTag.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
         await WaitForTagCloudReadyAsync();
 
         // Now pick two unselected tags with count > 0 from the filtered cloud
@@ -486,7 +479,7 @@ public class TagFilteringTests : PlaywrightTestBase
         // the URL update that happens after LoadTagsAsync() completes — ensuring counts are fresh.
         var tagAUrlPattern = Regex.Escape(Uri.EscapeDataString(tagAName.ToLowerInvariant()));
         await tagALocator.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagAUrlPattern}.*", RegexOptions.IgnoreCase), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagAUrlPattern}.*", RegexOptions.IgnoreCase)));
         await WaitForTagCloudReadyAsync();
 
         var tagBLocator = Page.Locator(".tag-cloud-item")
@@ -505,7 +498,7 @@ public class TagFilteringTests : PlaywrightTestBase
         // the URL update that happens after LoadTagsAsync() completes — ensuring counts are fresh.
         var tagBUrlPattern = Regex.Escape(Uri.EscapeDataString(tagBName.ToLowerInvariant()));
         await tagBLocator.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagBUrlPattern}.*", RegexOptions.IgnoreCase), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex($".*{tagBUrlPattern}.*", RegexOptions.IgnoreCase)));
         await WaitForTagCloudReadyAsync();
 
         tagALocator = Page.Locator(".tag-cloud-item")
@@ -571,7 +564,7 @@ public class TagFilteringTests : PlaywrightTestBase
         // Act - Select first tag to filter
         var firstTag = tagButtons.First;
         await firstTag.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
         await WaitForTagCloudReadyAsync();
 
         // Assert - Tags still present should have a usable (non-collapsed) width.
@@ -664,7 +657,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var tagText = (await tagBadge.TextContentAsync())!.Trim().ToLowerInvariant();
 
         await tagBadge.ClickAndExpectAsync(async () =>
-            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+            await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 
         // Assert - URL should contain the tag parameter
         var currentUrl = new Uri(Page.Url);
@@ -691,7 +684,7 @@ public class TagFilteringTests : PlaywrightTestBase
 
         await collectionBadge.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).ToHaveURLAsync(
-                new Regex($".*{Regex.Escape(href!)}.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                new Regex($".*{Regex.Escape(href!)}.*")));
 
         // Assert - Should navigate to the collection page
         Page.Url.Should().Contain(href!, "should navigate to the collection page");
@@ -752,7 +745,7 @@ public class TagFilteringTests : PlaywrightTestBase
         var expandBtn = targetCard.Locator("button.badge-expandable");
         await expandBtn.ClickAndExpectAsync(async () =>
             await Assertions.Expect(targetCard.Locator("button.badge-expandable"))
-                .ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                .ToHaveCountAsync(0));
 
         // Assert - More tags should now be visible
         var expandedTagCount = await targetCard.Locator("button.badge-tag-clickable").CountAsync();
@@ -817,7 +810,7 @@ public class TagFilteringTests : PlaywrightTestBase
         await activeBadge.ClickAndExpectAsync(async () =>
         {
             await Assertions.Expect(Page.Locator("button.badge-tag-active"))
-                .ToHaveCountAsync(0, new() { Timeout = BlazorHelpers.E2ERetryWindowMs });
+                .ToHaveCountAsync(0);
         });
 
         // Assert - URL should no longer contain the tag

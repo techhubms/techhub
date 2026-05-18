@@ -22,21 +22,21 @@ namespace TechHub.E2E.Tests.Helpers;
 ///
 /// 1. Click tag and wait for URL change:
 ///    await tagButton.ClickAndExpectAsync(async () =>
-///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*tags=.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*tags=.*")));
 ///
 /// 2. Click section card on homepage:
 ///    await sectionCard.ClickAndExpectAsync(async () =>
 ///        await Assertions.Expect(page).Not.ToHaveURLAsync(
-///            new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+///            new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$")));
 ///
 /// 3. Click content card to detail page:
 ///    await roundupLink.ClickAndExpectAsync(async () =>
-///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*/roundups/.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+///        await Assertions.Expect(page).ToHaveURLAsync(new Regex(@".*/roundups/.*")));
 ///
 /// 4. Click a button that toggles a CSS class (no navigation):
 ///    await filterButton.ClickAndExpectAsync(async () =>
 ///        await Assertions.Expect(filterButton).Not.ToHaveClassAsync(
-///            new Regex("active"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+///            new Regex("active")));
 ///
 /// 5. Use Expect assertions instead of TextContentAsync + Should.Contain:
 ///    // DON'T: var text = await element.TextContentAsync(); text.Should().Contain("foo");
@@ -65,20 +65,11 @@ public static class BlazorHelpers
     internal static int E2ETimeout { get; } = ResolveTimeout();
 
     /// <summary>
-    /// Per-attempt assertion timeout used inside <see cref="ClickAndExpectAsync"/> retry loops.
-    /// Short enough to allow multiple retries within <see cref="E2ETimeout"/>, but scales with
-    /// network speed so slow profiles don't produce spurious timeouts before a valid navigation
-    /// or state change completes. Values allow ~5 retries within the outer E2ETimeout budget:
-    ///   local  → 2 s, regular4g/wan/ci → 5 s, fast3g → 8 s, slow3g / CI → 10 s.
-    /// </summary>
-    internal static int E2ERetryWindowMs { get; } = ResolveRetryWindowMs();
-
-    /// <summary>
     /// Polling interval for WaitForFunctionAsync operations.
     /// 100ms = good balance between responsiveness and CPU.
     /// Checking one window property costs ~0.
     /// </summary>
-    internal const int E2EPollingInterval = 100;
+    private const int E2EPollingInterval = 100;
 
     /// <summary>
     /// Timeout for browser launch operations.
@@ -100,19 +91,6 @@ public static class BlazorHelpers
             "regular4g" or "wan" or "ci" => 30_000,
             _ => isCI ? 60_000   // GitHub Actions (CI=true) without a profile
                       : 10_000,  // Local fast mode
-        };
-    }
-
-    private static int ResolveRetryWindowMs()
-    {
-        var profile = Environment.GetEnvironmentVariable("E2E_NETWORK_THROTTLE") ?? "";
-        var isCI = string.Equals(Environment.GetEnvironmentVariable("CI"), "true", StringComparison.OrdinalIgnoreCase);
-        return profile switch
-        {
-            "slow3g" => 10_000,
-            "fast3g" => 8_000,
-            "regular4g" or "wan" or "ci" => 5_000,
-            _ => isCI ? 10_000 : 2_000,
         };
     }
 
@@ -236,70 +214,6 @@ public static class BlazorHelpers
             throw new TimeoutException(
                 $"{ex.Message}\nExpected: {argJson}\nActual state: {diagInfo}", ex);
         }
-    }
-
-    // ============================================================================
-    // RETRY-UNTIL-PASS — The Playwright-idiomatic fix for flaky Blazor interactions
-    //
-    // Playwright's JavaScript API has `expect(fn).toPass()` which retries a whole
-    // code block (action + assertions) until it passes or times out. The .NET API
-    // does not expose this, so we implement the same pattern here. This is the
-    // canonical solution for Blazor Server tests where a click may be silently
-    // lost if the @onclick handler hasn't attached yet after SignalR hydration.
-    //
-    // See: https://playwright.dev/docs/test-assertions#expecttopass
-    // ============================================================================
-
-    /// <summary>
-    /// Retries an async code block until it completes without throwing, or until
-    /// <paramref name="totalTimeoutMs"/> is exceeded. .NET equivalent of Playwright's
-    /// JS <c>expect(fn).toPass()</c>.
-    ///
-    /// Use for [action + assertion] blocks where the action may need to be repeated
-    /// (e.g., a click that was lost because the event handler hadn't attached yet).
-    /// Inner assertions should use short timeouts (1-3s) so a failed attempt fails
-    /// fast and retries quickly; the outer <paramref name="totalTimeoutMs"/> is the
-    /// overall budget.
-    /// </summary>
-    public static async Task RetryUntilPassAsync(
-        Func<Task> action,
-        int totalTimeoutMs = -1)
-    {
-        if (totalTimeoutMs < 0) totalTimeoutMs = E2ETimeout;
-        // Progressive backoff matches Playwright's JS toPass default intervals.
-        // This is retry backoff between genuine assertion attempts — not an
-        // arbitrary "wait for something to happen" sleep.
-        var intervals = new[] { 100, 250, 500, 1000, 1000 };
-        var deadline = DateTime.UtcNow.AddMilliseconds(totalTimeoutMs);
-        var attempt = 0;
-        Exception? last;
-        while (true)
-        {
-            try
-            {
-                await action();
-                return;
-            }
-#pragma warning disable CA1031 // RetryUntilPassAsync must catch all exceptions to measure retry progress
-            catch (Exception ex)
-#pragma warning restore CA1031
-            {
-                last = ex;
-            }
-
-            var delayMs = intervals[Math.Min(attempt, intervals.Length - 1)];
-            if (DateTime.UtcNow.AddMilliseconds(delayMs) >= deadline)
-            {
-                break;
-            }
-
-            await Task.Delay(delayMs);
-            attempt++;
-        }
-
-        throw new TimeoutException(
-            $"RetryUntilPassAsync: action did not pass within {totalTimeoutMs}ms. Last error:\n{last?.Message}",
-            last);
     }
 
     // ============================================================================
@@ -587,41 +501,40 @@ public static class BlazorHelpers
     // ============================================================================
 
     /// <summary>
-    /// Clicks an element and retries the [click + assertion] block until the assertion
-    /// passes or the total timeout expires. The .NET equivalent of Playwright's JS
-    /// <c>expect(fn).toPass()</c> pattern.
+    /// Waits for Blazor interactivity, then clicks the element once and asserts the expected
+    /// outcome. Assertion lambdas should NOT specify an explicit timeout — they rely on the
+    /// global <c>Assertions.SetDefaultExpectTimeout(E2ETimeout)</c> set in the fixture.
     ///
     /// <b>This is the single canonical click helper.</b> Use it for every Blazor click —
     /// whether the result is a URL change, a CSS class toggle, an element appearing, or
     /// anything else. Supply the assertion that describes what success looks like.
     ///
-    /// <b>Why retry the whole block?</b> Under Blazor Server hydration, a click may be
-    /// silently lost if the @onclick handler hasn't attached yet when the click fires.
-    /// Retrying only the assertion will never succeed because the DOM won't change
-    /// without a click. Retrying [click + assert] eventually lands a click on a fully-
-    /// hydrated component. The same pattern fixes JS-driven interactions (custom-pages.js)
-    /// where <c>data-initialized</c> may not yet be set when the first click fires.
+    /// <b>Why single click, not retry-click?</b> Retrying [click + assert] is dangerous for
+    /// toggles (tags, filters, sidebar): if the assertion times out, a second retry click
+    /// UNDOES the first, causing the test to oscillate. Instead:
+    /// 1. <see cref="WaitForBlazorInteractivityAsync"/> ensures the Blazor circuit is
+    ///    established and event handlers are attached before we click.
+    /// 2. Playwright's built-in actionability check on <c>ClickAsync</c> waits for the
+    ///    element to be visible, stable, enabled, and able to receive pointer events.
+    /// 3. The reconnect modal wait prevents clicks that would be swallowed by the
+    ///    SignalR-reconnecting ::backdrop (not detected by standard actionability checks).
+    /// 4. The assertion uses the full <see cref="E2ETimeout"/> (via SetDefaultExpectTimeout)
+    ///    — no more short per-attempt windows that trigger spurious retries.
     ///
     /// <b>After the assertion passes</b>, if the URL changed, <see cref="WaitForBlazorReadyAsync"/>
     /// is called automatically so callers don't need to wait for Blazor hydration on the
     /// new page themselves.
     ///
-    /// Use short assertion timeouts (1-3s) inside the lambda so failed attempts are
-    /// detected quickly. The outer <paramref name="totalTimeoutMs"/> is the overall budget
-    /// across all retries.
-    ///
     /// Example — state change (no URL change):
     /// <code>
     /// await toggle.ClickAndExpectAsync(async () =>
-    ///     await Assertions.Expect(html).ToHaveClassAsync(
-    ///         new Regex("sidebar-collapsed"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+    ///     await Assertions.Expect(html).ToHaveClassAsync(new Regex("sidebar-collapsed")));
     /// </code>
     ///
     /// Example — navigation (URL changes):
     /// <code>
     /// await blogsButton.ClickAndExpectAsync(async () =>
-    ///     await Assertions.Expect(Page).ToHaveURLAsync(
-    ///         new Regex(@".*/ai/blogs.*"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+    ///     await Assertions.Expect(Page).ToHaveURLAsync(new Regex(@".*/ai/blogs.*")));
     /// </code>
     /// </summary>
     public static async Task ClickAndExpectAsync(
@@ -629,26 +542,28 @@ public static class BlazorHelpers
         Func<Task> assertion,
         int totalTimeoutMs = -1)
     {
-        if (totalTimeoutMs < 0) totalTimeoutMs = E2ETimeout;
+        var timeout = totalTimeoutMs > 0 ? totalTimeoutMs : E2ETimeout;
         var page = locator.Page;
         var urlBefore = page.Url;
 
+        // Wait for element visibility + Blazor circuit established + scripts ready.
         await locator.WaitForBlazorInteractivityAsync();
-        await RetryUntilPassAsync(async () =>
-        {
-            // Abort this attempt if the Blazor reconnect modal is currently open.
-            // Under slow network profiles (slow3g), the SignalR circuit can drop briefly,
-            // causing the reconnect modal's ::backdrop to cover the page and block clicks.
-            // Throw here to let RetryUntilPassAsync wait and retry after the modal closes.
-            var isReconnecting = await locator.Page.EvaluateAsync<bool>(
-                "() => !!document.getElementById('components-reconnect-modal')?.open");
-            if (isReconnecting)
-            {
-                throw new InvalidOperationException("Blazor reconnect modal is open — deferring click until circuit is restored.");
-            }
-            await locator.ClickAsync(new() { Timeout = E2ERetryWindowMs });
-            await assertion();
-        }, totalTimeoutMs);
+
+        // Wait for Blazor reconnect modal to close before clicking.
+        // The modal's ::backdrop blocks pointer events but is NOT detected by Playwright's
+        // standard actionability check (it's a CSS pseudo-element, not a DOM node).
+        await page.WaitForConditionAsync(
+            "() => !document.getElementById('components-reconnect-modal')?.open",
+            new PageWaitForFunctionOptions { Timeout = timeout, PollingInterval = E2EPollingInterval });
+
+        // Single click — Playwright auto-waits for actionability (visible, stable, enabled,
+        // receives pointer events). WaitForBlazorInteractivityAsync above guarantees the
+        // @onclick handler is attached, so the click will not be silently lost.
+        await locator.ClickAsync(new() { Timeout = timeout });
+
+        // Assert the expected outcome using the full E2ETimeout (set globally via
+        // Assertions.SetDefaultExpectTimeout in PlaywrightCollectionFixture).
+        await assertion();
 
         // If a navigation happened, wait for Blazor to be ready on the new page
         // (SignalR circuit re-established, page scripts loaded).

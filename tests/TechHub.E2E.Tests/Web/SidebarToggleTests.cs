@@ -146,17 +146,20 @@ public class SidebarToggleTests : PlaywrightTestBase
             return style.gridTemplateColumns.split(' ').length;
         }");
 
-        // Act + Assert — retry click until grid columns increase
+        // Act + Assert — click and wait for the CSS grid to update.
+        // WaitForConditionAsync polls with E2ETimeout, which correctly handles the
+        // CSS grid update delay under slow-network conditions. FluentAssertions would
+        // throw immediately without retrying, causing flaky failures on slow3g.
         var toggle = Page.Locator(".sidebar-toggle");
         await toggle.ClickAndExpectAsync(async () =>
         {
-            var cols = await Page.EvaluateAsync<int>(@"() => {
-                const grid = document.querySelector('.sections-grid .grid');
-                if (!grid) return 0;
-                return window.getComputedStyle(grid).gridTemplateColumns.split(' ').length;
-            }");
-            cols.Should().BeGreaterThan(columnsBefore,
-                "sidebar collapse should increase the grid column count");
+            await Page.WaitForConditionAsync(
+                @"(minCols) => {
+                    const grid = document.querySelector('.sections-grid .grid');
+                    if (!grid) return false;
+                    return window.getComputedStyle(grid).gridTemplateColumns.split(' ').length > minCols;
+                }",
+                (object)columnsBefore);
         });
 
         // Get columns after collapse

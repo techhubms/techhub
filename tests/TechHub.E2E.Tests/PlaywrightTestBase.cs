@@ -12,6 +12,10 @@ namespace TechHub.E2E.Tests;
 /// </summary>
 public abstract class PlaywrightTestBase : IAsyncLifetime
 {
+    // Short timeout for best-effort NetworkIdle wait during teardown.
+    // Intentionally small — this is cleanup, not a test assertion.
+    private const int BlazorDisconnectTimeoutMs = 3_000;
+
     private readonly PlaywrightCollectionFixture _fixture;
     private IBrowserContext? _context;
     private IPage? _page;
@@ -92,7 +96,7 @@ public abstract class PlaywrightTestBase : IAsyncLifetime
                         "() => { try { window.Blazor?.disconnect?.(); } catch (_) {} }");
 
                     await _page.WaitForLoadStateAsync(
-                        LoadState.NetworkIdle, new() { Timeout = 3000 }).WaitAsync(cts.Token);
+                        LoadState.NetworkIdle, new() { Timeout = BlazorDisconnectTimeoutMs }).WaitAsync(cts.Token);
                 }
             }
         }

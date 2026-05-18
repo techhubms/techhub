@@ -270,7 +270,7 @@ public class TabOrderingTests : PlaywrightTestBase
         var firstSectionCard = Page.Locator("a.section-card").First;
         await firstSectionCard.ClickAndExpectAsync(async () =>
             await Assertions.Expect(Page).Not.ToHaveURLAsync(
-                new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$"), new() { Timeout = BlazorHelpers.E2ERetryWindowMs }));
+                new Regex($"^{Regex.Escape(BlazorHelpers.BaseUrl)}/?$")));
 
         // Wait for the skip link to be present in the new page's DOM before proceeding.
         await Page.WaitForSelectorAsync("a.skip-link");
