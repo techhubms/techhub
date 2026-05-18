@@ -126,7 +126,7 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
         var result = await response.Content.ReadFromJsonAsync<LegacyRedirectResult>(
             TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Url.Should().MatchRegex(@"^/[a-z\-]+/roundups/",
+        result!.Url.Should().MatchRegex(@"^/[a-z]+(?:-[a-z]+)*/roundups/",
             "section roundups should resolve to /{section}/roundups/{slug}");
         result.Url.Should().EndWith(testItem.Slug, "canonical URL should end with the slug");
     }
@@ -147,7 +147,7 @@ public class LegacyRedirectEndpointTests : IClassFixture<TechHubIntegrationTestA
         var result = await response.Content.ReadFromJsonAsync<LegacyRedirectResult>(
             TestContext.Current.CancellationToken);
         result.Should().NotBeNull();
-        result!.Url.Should().MatchRegex(@"^/[a-z\-]+/roundups/",
+        result!.Url.Should().MatchRegex(@"^/[a-z]+(?:-[a-z]+)*/roundups/",
             "roundups should resolve to /{section}/roundups/{slug}");
     }
 }

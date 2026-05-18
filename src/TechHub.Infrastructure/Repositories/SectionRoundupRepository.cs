@@ -16,6 +16,14 @@ namespace TechHub.Infrastructure.Repositories;
 /// </summary>
 public sealed class SectionRoundupRepository : ISectionRoundupRepository
 {
+    private const int AiBit = 1 << 0;
+    private const int AzureBit = 1 << 1;
+    private const int DotnetBit = 1 << 2;
+    private const int DevopsBit = 1 << 3;
+    private const int GhcBit = 1 << 4;
+    private const int MlBit = 1 << 5;
+    private const int SecurityBit = 1 << 6;
+
     private readonly IDbConnection _connection;
     private readonly ILogger<SectionRoundupRepository> _logger;
 
@@ -404,37 +412,37 @@ public sealed class SectionRoundupRepository : ISectionRoundupRepository
         var bitmask = 0;
         if (isAi)
         {
-            bitmask |= 1;
+            bitmask |= AiBit;
         }
 
         if (isAzure)
         {
-            bitmask |= 2;
+            bitmask |= AzureBit;
         }
 
         if (isDotnet)
         {
-            bitmask |= 4;
+            bitmask |= DotnetBit;
         }
 
         if (isDevops)
         {
-            bitmask |= 8;
+            bitmask |= DevopsBit;
         }
 
         if (isGhc)
         {
-            bitmask |= 16;
+            bitmask |= GhcBit;
         }
 
         if (isMl)
         {
-            bitmask |= 32;
+            bitmask |= MlBit;
         }
 
         if (isSecurity)
         {
-            bitmask |= 64;
+            bitmask |= SecurityBit;
         }
 
         return new SectionFlags(isAi, isAzure, isDotnet, isDevops, isGhc, isMl, isSecurity, bitmask);

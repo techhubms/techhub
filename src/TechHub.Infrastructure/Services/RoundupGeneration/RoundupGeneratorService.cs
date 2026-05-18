@@ -93,7 +93,7 @@ internal sealed class RoundupGeneratorService : IRoundupGeneratorService
         var failedGenerationCount = 0;
         var skippedAfterFilteringCount = 0;
 
-        foreach (var sectionName in articlesBySection.Keys.OrderBy(k => k, StringComparer.OrdinalIgnoreCase))
+        foreach (var sectionName in articlesBySection.Keys)
         {
             ct.ThrowIfCancellationRequested();
 
