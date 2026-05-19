@@ -33,9 +33,6 @@
 
     Requires the caller to have the 'Key Vault Secrets Officer' role on the vault.
 
-.PARAMETER Environment
-    Target environment name: 'staging' or 'prod'.
-
 .PARAMETER KeyVaultName
     Production Key Vault name. Defaults to 'kv-techhub-prod'.
 
