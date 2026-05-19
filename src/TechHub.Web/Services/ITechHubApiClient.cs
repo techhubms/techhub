@@ -107,9 +107,10 @@ internal interface ITechHubApiClient
         CancellationToken cancellationToken = default);
 
     /// <summary>
-    /// Get the latest roundup item (for homepage sidebar).
+    /// Get the latest roundup per section (for homepage sidebar).
+    /// Returns one roundup per section (in section order).
     /// </summary>
-    Task<ContentItem?> GetLatestRoundupAsync(CancellationToken cancellationToken = default);
+    Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Get GitHub Copilot features with their linked content.

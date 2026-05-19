@@ -17,19 +17,30 @@
     <aside class="sidebar">
         <SidebarToggle />
         <MobileSidebarToolbar>
-        @* Latest Roundup - always visible, including on mobile *@
-        @if (latestRoundup != null)
+        @* Latest Roundups (one per section) - always visible, including on mobile *@
+        @if (latestRoundups != null && latestRoundups.Any())
         {
-            <div class="sidebar-section latest-roundup">
-                <h2 class="sidebar-h2">Latest Roundup</h2>
-                <a href="@latestRoundup.GetHref()"
-                   class="sidebar-featured-link"
-                   target="@latestRoundup.GetTarget()"
-                   rel="@latestRoundup.GetRel()"
-                   aria-label="@latestRoundup.GetAriaLabel()">
-                    <span class="sidebar-featured-title">@latestRoundup.Title</span>
-                    <span class="sidebar-featured-date">@FormatDateShort(latestRoundup.DateEpoch)</span>
-                </a>
+            <div class="sidebar-section latest-roundups">
+                <h2 class="sidebar-h2">Latest Roundups</h2>
+                <ul class="sidebar-list">
+                    @foreach (var roundup in latestRoundups)
+                    {
+                        <li>
+                            <a href="@roundup.GetHref()"
+                               class="sidebar-content-button"
+                               target="@roundup.GetTarget()"
+                               rel="@roundup.GetRel()"
+                               aria-label="@roundup.GetAriaLabel()">
+                                <span class="sidebar-content-button-title">@roundup.Title</span>
+                                <span class="sidebar-content-button-meta">
+                                    <span class="sidebar-item-section">@GetItemSectionTitle(roundup.PrimarySectionName)</span>
+                                    <span class="sidebar-content-button-meta-separator">•</span>
+                                    <span class="sidebar-item-date">@FormatDateShort(roundup.DateEpoch)</span>
+                                </span>
+                            </a>
+                        </li>
+                    }
+                </ul>
             </div>
         }
 
@@ -106,7 +117,7 @@
     ];
 
     private IEnumerable<TechHub.Core.Models.Section>? sections;
-    private TechHub.Core.Models.ContentItem? latestRoundup;
+    private IEnumerable<TechHub.Core.Models.ContentItem>? latestRoundups;
     private IEnumerable<TechHub.Core.Models.ContentItem>? latestItems;
 
     private static RenderFragment GetNewsletterIcon() => @<svg width="16" height="16" viewBox="0 0 24 24"
@@ -147,23 +158,24 @@ protected override async Task OnInitializedAsync()
     if (ApplicationState.TryTakeFromJson<PersistedHomeData>("home-data", out var restored) && restored != null)
     {
         sections = restored.Sections;
-        latestRoundup = restored.LatestRoundup;
+        latestRoundups = restored.LatestRoundups;
         latestItems = restored.LatestItems;
         return;
     }
 
 try
 {
-// Fetch all content in parallel - using database-optimized endpoints
+// Fetch all content in parallel - sections first, then roundups per section + latest items
 var sectionsTask = ApiClient.GetAllSectionsAsync();
-var roundupTask = ApiClient.GetLatestRoundupAsync(); // Uses SearchAsync with Take=1
-var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5); // Uses SearchAsync with Take=5
+var latestItemsTask = ApiClient.GetLatestItemsAsync(count: 5);
 
-await Task.WhenAll(sectionsTask, roundupTask, latestItemsTask);
+await Task.WhenAll(sectionsTask, latestItemsTask);
 
 sections = await sectionsTask;
-latestRoundup = await roundupTask;
 latestItems = await latestItemsTask;
+
+// Fetch latest roundup per section (requires sections to determine which have roundups)
+latestRoundups = await ApiClient.GetLatestRoundupPerSectionAsync();
 }
 catch (Exception ex)
 {
@@ -176,7 +188,7 @@ ErrorService.HandleError(ex, Navigation, Logger);
         ApplicationState.PersistAsJson("home-data", new PersistedHomeData
         {
             Sections = sections?.ToList(),
-            LatestRoundup = latestRoundup,
+            LatestRoundups = latestRoundups?.ToList(),
             LatestItems = latestItems?.ToList()
         });
         return Task.CompletedTask;
@@ -185,7 +197,7 @@ ErrorService.HandleError(ex, Navigation, Logger);
     private sealed class PersistedHomeData
     {
         public List<TechHub.Core.Models.Section>? Sections { get; set; }
-        public TechHub.Core.Models.ContentItem? LatestRoundup { get; set; }
+        public List<TechHub.Core.Models.ContentItem>? LatestRoundups { get; set; }
         public List<TechHub.Core.Models.ContentItem>? LatestItems { get; set; }
     }
 

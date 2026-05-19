@@ -11,12 +11,11 @@ namespace TechHub.Web.Tests.Services;
 public class TechHubApiClientTests
 {
     [Fact]
-    public async Task GetLatestRoundupAsync_WhenAllRoundupsReturnsNoContent_FallsBackToSectionRoundups()
+    public async Task GetLatestRoundupPerSectionAsync_ReturnsOneRoundupPerSection_InSectionOrder()
     {
         // Arrange
         var responses = new Dictionary<string, HttpResponseMessage>(StringComparer.OrdinalIgnoreCase)
         {
-            ["/api/sections/all/collections/roundups/items?take=1"] = new HttpResponseMessage(HttpStatusCode.NoContent),
             ["/api/sections"] = CreateJsonResponse(
                 new[]
                 {
@@ -51,12 +50,51 @@ public class TechHubApiClientTests
         var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
 
         // Act
-        var latest = await sut.GetLatestRoundupAsync(TestContext.Current.CancellationToken);
+        var roundups = (await sut.GetLatestRoundupPerSectionAsync(TestContext.Current.CancellationToken)).ToList();
 
-        // Assert
-        latest.Should().NotBeNull();
-        latest!.Slug.Should().Be("weekly-azure-roundup-2025-06-02");
-        latest.PrimarySectionName.Should().Be("azure");
+        // Assert — one per section, in section order (ai before azure)
+        roundups.Should().HaveCount(2);
+        roundups[0].PrimarySectionName.Should().Be("ai");
+        roundups[1].PrimarySectionName.Should().Be("azure");
+    }
+
+    [Fact]
+    public async Task GetLatestRoundupPerSectionAsync_SkipsSectionsWithoutRoundupsCollection()
+    {
+        // Arrange — "dotnet" section has no roundups collection
+        var responses = new Dictionary<string, HttpResponseMessage>(StringComparer.OrdinalIgnoreCase)
+        {
+            ["/api/sections"] = CreateJsonResponse(
+                new[]
+                {
+                    new Section("dotnet", ".NET", ".NET", "/dotnet", ".NET",
+                    [
+                        new Collection("news", "News", "/dotnet/news", "News", "News")
+                    ]),
+                    new Section("github-copilot", "GitHub Copilot", "GitHub Copilot", "/github-copilot", "GitHub Copilot",
+                    [
+                        new Collection("roundups", "Roundups", "/github-copilot/roundups", "Roundups", "Roundups")
+                    ])
+                }),
+            ["/api/sections/github-copilot/collections/roundups/items?take=1"] = CreateJsonResponse(
+                new CollectionItemsResponse(
+                    [CreateRoundup("weekly-github-copilot-roundup-2025-06-09", "github-copilot", 1749427200)],
+                    1))
+        };
+
+        using var httpClient = new HttpClient(new StubHandler(responses))
+        {
+            BaseAddress = new Uri("https://localhost:5003")
+        };
+
+        var sut = new TechHubApiClient(httpClient, NullLogger<TechHubApiClient>.Instance);
+
+        // Act
+        var roundups = (await sut.GetLatestRoundupPerSectionAsync(TestContext.Current.CancellationToken)).ToList();
+
+        // Assert — only github-copilot has a roundup, dotnet is skipped
+        roundups.Should().HaveCount(1);
+        roundups[0].PrimarySectionName.Should().Be("github-copilot");
     }
 
     private static ContentItem CreateRoundup(string slug, string sectionName, long dateEpoch) =>

@@ -19,8 +19,9 @@ public class ContentDetailTests : PlaywrightTestBase
 
     private static readonly string _baseUrl = BlazorHelpers.BaseUrl;
 
-    // Test with a known roundup URL - more reliable than clicking through
-    private const string TestRoundupUrl = "/all/roundups";
+    // Test with a known roundup URL - more reliable than clicking through.
+    // Roundups are now per-section; use the github-copilot section which always has roundups.
+    private const string TestRoundupUrl = "/github-copilot/roundups";
 
     /// <summary>
     /// Helper to navigate to a roundup detail Page.
@@ -115,7 +116,7 @@ public class ContentDetailTests : PlaywrightTestBase
         await Page.GotoRelativeAsync("/");
 
         // Act - Wait for the roundup link to appear (content renders async after Blazor is ready)
-        var roundupLinks = Page.Locator(".latest-roundup a.sidebar-featured-link");
+        var roundupLinks = Page.Locator(".latest-roundups a.sidebar-content-button");
         await roundupLinks.First.AssertElementVisibleAsync();
 
         await roundupLinks.First.ClickAndExpectAsync(async () =>

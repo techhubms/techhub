@@ -1,4 +1,3 @@
-using System.Net;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
@@ -378,65 +377,43 @@ public class TechHubApiClient : ITechHubApiClient
     }
 
     /// <summary>
-    /// Get the latest roundup (for homepage sidebar)
+    /// Get the latest roundup per section (for homepage sidebar).
+    /// Returns one roundup per section (in section order), for all sections that have a roundups collection.
     /// </summary>
-    public virtual async Task<ContentItem?> GetLatestRoundupAsync(
+    public virtual async Task<IEnumerable<ContentItem>> GetLatestRoundupPerSectionAsync(
         CancellationToken cancellationToken = default)
     {
-        try
+        var allSections = await GetAllSectionsAsync(cancellationToken);
+        if (allSections is null)
         {
-            using var response = await _httpClient.GetAsync(
-                "/api/sections/all/collections/roundups/items?take=1",
-                cancellationToken);
+            return [];
+        }
 
-            if (response.StatusCode == HttpStatusCode.NoContent)
+        var roundups = new List<ContentItem>();
+        foreach (var section in allSections.Where(s =>
+            !s.Name.Equals("all", StringComparison.OrdinalIgnoreCase) &&
+            s.Collections.Any(c => c.Name.Equals("roundups", StringComparison.OrdinalIgnoreCase))))
+        {
+            try
             {
-                _logger.LogDebug("Latest roundup endpoint returned no content for all/roundups; falling back to section scan");
+                var result = await GetCollectionItemsAsync(
+                    section.Name,
+                    "roundups",
+                    take: 1,
+                    cancellationToken: cancellationToken);
 
-                var allSections = await GetAllSectionsAsync(cancellationToken);
-                if (allSections is null)
+                if (result is not null && result.Items.Count > 0)
                 {
-                    return null;
+                    roundups.Add(result.Items[0]);
                 }
-
-                var candidates = new List<ContentItem>();
-                foreach (var section in allSections.Where(s => !s.Name.Equals("all", StringComparison.OrdinalIgnoreCase)))
-                {
-                    try
-                    {
-                        var sectionResult = await GetCollectionItemsAsync(
-                            section.Name,
-                            "roundups",
-                            take: 1,
-                            cancellationToken: cancellationToken);
-
-                        if (sectionResult is not null && sectionResult.Items.Count > 0)
-                        {
-                            candidates.Add(sectionResult.Items[0]);
-                        }
-                    }
-                    catch (HttpRequestException ex)
-                    {
-                        _logger.LogDebug(ex, "Failed to fetch section roundup candidate for {SectionName}", section.Name);
-                    }
-                }
-
-                return candidates
-                    .OrderByDescending(item => item.DateEpoch)
-                    .FirstOrDefault();
             }
+            catch (HttpRequestException ex)
+            {
+                _logger.LogDebug(ex, "Failed to fetch latest roundup for section {SectionName}", section.Name);
+            }
+        }
 
-            response.EnsureSuccessStatusCode();
-            var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(cancellationToken: cancellationToken);
-            return result is not null && result.Items.Count > 0
-                ? result.Items[0]
-                : null;
-        }
-        catch (HttpRequestException ex)
-        {
-            _logger.LogError(ex, "Failed to fetch latest roundup");
-            throw;
-        }
+        return roundups;
     }
 
     /// <summary>
