@@ -83,6 +83,10 @@ $prPostgresServer = "psql-techhub-pr-$PrNumber"
 $prPostgresDb = 'techhub'
 $prManagedIdentityName = "id-techhub-pr-$PrNumber"
 
+# Seconds to wait after creating the per-PR managed identity for its service principal
+# to propagate through Entra ID before registering it as a PostgreSQL Entra admin.
+$entraIdPropagationDelaySecs = 15
+
 # PR-specific Container App names
 $apiAppName = "ca-techhub-api-pr-$PrNumber"
 $webAppName = "ca-techhub-web-pr-$PrNumber"
@@ -444,7 +448,7 @@ Write-Step "Provisioning per-PR managed identity: $prManagedIdentityName"
 $prIdentityJson = az identity create `
     --name $prManagedIdentityName `
     --resource-group $prodRG `
-    --output json 2>$null | ConvertFrom-Json
+    --output json | ConvertFrom-Json
 if ($LASTEXITCODE -ne 0 -or $null -eq $prIdentityJson) {
     Write-Fail "Failed to create managed identity '$prManagedIdentityName'"
     exit 1
@@ -471,7 +475,7 @@ Write-Ok "Entra auth enabled on $prPostgresServer (password auth disabled)"
 # This grants the identity the azure_pg_admin role needed to connect and run migrations.
 # Azure requires a short propagation delay before the identity principal is resolvable.
 Write-Detail "Waiting for managed identity to propagate in Entra ID..."
-Start-Sleep -Seconds 15
+Start-Sleep -Seconds $entraIdPropagationDelaySecs
 Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer..."
 az postgres flexible-server ad-admin create `
     --server-name $prPostgresServer `
@@ -658,7 +662,11 @@ if ($apiExists) {
     az containerapp identity assign `
         --name $apiAppName `
         --resource-group $prodRG `
-        --user-assigned $prIdentityId 2>$null | Out-Null
+        --user-assigned $prIdentityId | Out-Null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to assign PR managed identity to $apiAppName"
+        exit 1
+    }
 }
 else {
     Write-Detail "Creating new $apiAppName..."

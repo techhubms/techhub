@@ -14,6 +14,16 @@ public static class NpgsqlDataSourceFactory
     private static readonly string[] PostgresTokenScope =
         ["https://ossrdbms-aad.database.windows.net/.default"];
 
+    // DefaultAzureCredential is thread-safe and reusable; share a single instance
+    // across all token refreshes for the data source.
+    private static readonly DefaultAzureCredential SharedCredential = new();
+
+    // Interval at which a fresh token is proactively fetched (tokens expire after 1 hour).
+    private static readonly TimeSpan TokenRefreshSuccessInterval = TimeSpan.FromHours(1);
+
+    // Retry interval when token acquisition fails.
+    private static readonly TimeSpan TokenRefreshFailureInterval = TimeSpan.FromMinutes(5);
+
     /// <summary>
     /// Creates an <see cref="NpgsqlDataSource"/> for the given connection string.
     /// When <paramref name="useEntraAuth"/> is <see langword="true"/> the data source
@@ -33,17 +43,15 @@ public static class NpgsqlDataSourceFactory
 
         // DefaultAzureCredential picks up the user-assigned managed identity automatically
         // when only one is assigned to the Container App.
-        var credential = new DefaultAzureCredential();
-
         dataSourceBuilder.UsePeriodicPasswordProvider(
             async (_, ct) =>
             {
-                var token = await credential.GetTokenAsync(
+                var token = await SharedCredential.GetTokenAsync(
                     new TokenRequestContext(PostgresTokenScope), ct);
                 return token.Token;
             },
-            TimeSpan.FromHours(1),
-            TimeSpan.FromMinutes(5));
+            TokenRefreshSuccessInterval,
+            TokenRefreshFailureInterval);
 
         return dataSourceBuilder.Build();
     }
