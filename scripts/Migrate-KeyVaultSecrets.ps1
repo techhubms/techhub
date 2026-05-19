@@ -8,12 +8,9 @@
     (kv-techhub-shared) to the single production resource group architecture (kv-techhub-prod).
 
     Secrets migrated:
-        techhub-staging-db-connection-string  → techhub-prod-db-connection-string
-        techhub-staging-ai-api-key            → techhub-prod-ai-api-key
-        techhub-staging-aad-client-secret     → techhub-prod-aad-client-secret
-        techhub-prod-db-connection-string     → techhub-prod-db-connection-string (already correct name)
-        techhub-prod-ai-api-key               → techhub-prod-ai-api-key (already correct name)
-        techhub-prod-aad-client-secret        → techhub-prod-aad-client-secret (already correct name)
+        techhub-prod-db-connection-string     → techhub-prod-db-connection-string (same name)
+        techhub-prod-ai-api-key               → techhub-prod-ai-api-key (same name)
+        techhub-prod-aad-client-secret        → techhub-prod-aad-client-secret (same name)
 
     Additionally copies the wildcard certificate secrets:
         wildcard-hub-ms    → wildcard-hub-ms

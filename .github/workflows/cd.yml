@@ -413,7 +413,7 @@ jobs:
 
           # Lint
           if [ "$LINT_STATUS" = "success" ]; then
-            echo "| �� Linting & Formatting | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
+            echo "| 📝 Linting & Formatting | ✅ Passed |" >> $GITHUB_STEP_SUMMARY
           else
             echo "| 📝 Linting & Formatting | ❌ Failed |" >> $GITHUB_STEP_SUMMARY
           fi
