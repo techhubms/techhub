@@ -17,11 +17,8 @@ param webFqdns string[] = []
 @description('Key Vault URI (e.g. https://kv-techhub-prod.vault.azure.net/) — used to resolve KV secret references')
 param keyVaultUri string
 
-@description('Key Vault secret name holding the full PostgreSQL connection string')
-param dbConnectionSecretName string
-
-@description('Key Vault secret name holding the AI Foundry API key')
-param aiApiKeySecretName string
+@description('Full PostgreSQL connection string (passwordless — app uses managed identity token)')
+param dbConnectionString string
 
 @description('Azure AD tenant ID (not a secret — public Entra identifier)')
 param azureAdTenantId string = ''
@@ -65,7 +62,11 @@ var staticEnvVars = [
   }
   {
     name: 'Database__ConnectionString'
-    secretRef: 'db-connection-string'
+    value: dbConnectionString
+  }
+  {
+    name: 'Database__UseEntraAuth'
+    value: 'true'
   }
   {
     name: 'AppSettings__BaseUrl'
@@ -90,10 +91,6 @@ var staticEnvVars = [
   {
     name: 'AiCategorization__DeploymentName'
     value: aiCategorizationDeploymentName
-  }
-  {
-    name: 'AiCategorization__ApiKey'
-    secretRef: 'ai-categorization-api-key'
   }
 ]
 
@@ -136,18 +133,6 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
         {
           name: 'ghcr-token'
           keyVaultUrl: '${keyVaultUri}secrets/techhub-github-registry-token'
-          identity: identityId
-        }
-        // Container App references Key Vault secrets at revision start via the managed identity.
-        // Rotate secrets by updating Key Vault + restarting the revision — no redeploy required.
-        {
-          name: 'db-connection-string'
-          keyVaultUrl: '${keyVaultUri}secrets/${dbConnectionSecretName}'
-          identity: identityId
-        }
-        {
-          name: 'ai-categorization-api-key'
-          keyVaultUrl: '${keyVaultUri}secrets/${aiApiKeySecretName}'
           identity: identityId
         }
       ]

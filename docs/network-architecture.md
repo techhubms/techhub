@@ -2,7 +2,7 @@
 
 Tech Hub uses a **single VNet** in the production resource group. All application services
 (Container Apps, PostgreSQL, Key Vault, AI Foundry) communicate over the public internet where
-needed, secured by API keys, managed identity, IP firewall rules, and a Key Vault VNet service
+needed, secured by managed identity, RBAC, IP firewall rules, and a Key Vault VNet service
 endpoint.
 
 ## Topology
@@ -20,7 +20,7 @@ Prod VNet — vnet-techhub-prod (10.2.0.0/16) [rg-techhub-prod]
          ├── PostgreSQL firewall rule (10.2.0.0–10.2.1.255)
          │       → Container Apps reach psql-techhub-prod over public internet
          │
-         └── AI Foundry — open public access, API key authentication
+         └── AI Foundry — open public access, Entra token auth (Cognitive Services OpenAI User RBAC)
 ```
 
 ## Address Spaces
@@ -43,14 +43,14 @@ Admin access to Azure resources is controlled via per-resource IP firewall rules
 | PostgreSQL | Per-IP/range firewall rules | Admin IPs + Container Apps subnet (10.2.0.0–10.2.1.255); default deny |
 | Log Analytics | Public ingestion + query enabled | RBAC-protected |
 | App Insights | Public ingestion + query enabled | RBAC-protected; browser JS SDK over public internet |
-| AI Foundry | Public access open | API key authentication; no IP restriction needed |
+| AI Foundry | Public access open | Entra token (Cognitive Services OpenAI User RBAC); no IP restriction needed |
 
 ## Key Vault
 
 The production Key Vault (`kv-techhub-prod`) stores:
 
 - Wildcard TLS certificates for `*.hub.ms` and `*.xebia.ms`
-- Application secrets (PostgreSQL connection string, AI API key, AAD client secret)
+- AAD client secret (`techhub-prod-aad-client-secret`) for the admin dashboard
 - GitHub registry token (`techhub-github-registry-token`) for Container Apps pulling from ghcr.io
 
 Security:
@@ -60,6 +60,9 @@ Security:
   Apps to reach Key Vault over the Microsoft backbone without a private endpoint
 - **Authorization**: RBAC (Key Vault Administrator role for admins; Key Vault Secrets User for
   the managed identity used by Container Apps)
+
+> **Note:** PostgreSQL connection strings and AI Foundry API keys are no longer stored in Key
+> Vault. The application uses managed identity token auth for both services (see below).
 
 ## Container Registry (ghcr.io)
 
@@ -84,13 +87,18 @@ See [wildcard-certificates.md](wildcard-certificates.md) for details.
 Production has a permanent PostgreSQL Flexible Server. PR environments get ephemeral servers
 created via PITR from the production backup — both in `rg-techhub-prod`.
 
-- **Production**: `psql-techhub-prod` — permanent, public access with firewall rules; password auth
+- **Production**: `psql-techhub-prod` — permanent, public access with firewall rules; both password auth (for admin/emergency use) and Entra ID auth enabled
 - **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore; Entra-only auth
 - **Public access**: Enabled with firewall rules for admin IPs and Container Apps subnet
 - **Firewall**: Admin IP rules + Container Apps subnet range (10.2.0.0–10.2.1.255)
 - **Container Apps** reach PostgreSQL over the public internet (source IP is in the CA subnet range)
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
+> **Authentication**: The `id-techhub-prod` user-assigned managed identity is registered as the
+> Entra administrator on `psql-techhub-prod`. The Container App sets `Database:UseEntraAuth=true`
+> and acquires Azure AD tokens at runtime via `DefaultAzureCredential` —
+> no password in the connection string or Key Vault.
+>
 > **PR isolation**: Each PR gets a dedicated user-assigned managed identity
 > (`id-techhub-pr-{N}`) that is registered as the sole Entra admin on its own PITR server.
 > Password authentication is disabled on PR servers. A PR container cannot authenticate against
@@ -103,7 +111,15 @@ The production AI Foundry account (`oai-techhub-prod`) is publicly accessible.
 
 - **Public access**: Enabled with `defaultAction: Allow` — Container Apps and GitHub Actions
   runners both reach the endpoint over the public internet
-- **Authentication**: API key stored in Key Vault
+- **Authentication**: RBAC — `Cognitive Services OpenAI User` role (`5e0bd9bd-7b93-4f28-af87-19fc36ad61bd`)
+  assigned to `id-techhub-prod` (for production) and to developer object IDs in `keyVaultAdminObjectIds`
+  (for local development). No API key is used; the application acquires an Entra token with
+  `DefaultAzureCredential` and the `https://cognitiveservices.azure.com/.default` scope.
+
+**Local development**: After `az login`, `DefaultAzureCredential` uses your user token
+automatically. Ensure your Azure AD object ID is listed in `keyVaultAdminObjectIds` in
+`infra/parameters/prod.bicepparam` and redeploy infrastructure to get the RBAC assignment.
+Find your object ID with: `az ad signed-in-user show --query id -o tsv`
 
 ## Deploy Order
 

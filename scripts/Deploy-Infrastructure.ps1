@@ -178,29 +178,11 @@ if (-not $env:AZURE_AD_CLIENT_SECRET) {
 }
 
 # Sync application secrets into Key Vault before deployment.
-# Container Apps reference these secrets via keyVaultUrl; they must exist before
+# Container Apps reference secrets via keyVaultUrl; they must exist before
 # the new revision starts.
+# Note: Database connection string and AI API key are no longer stored as KV secrets —
+# the app uses managed identity token auth (Entra) for both PostgreSQL and AI Foundry.
 if ($Mode -eq 'deploy') {
-    # AI_API_KEY — read from the Azure AI Foundry account directly; no GitHub secret needed.
-    if (-not $env:AI_API_KEY) {
-        $aiName = "oai-techhub-prod"
-        $aiRg   = $resourceGroup
-        $aiKey  = az cognitiveservices account keys list `
-            --name $aiName `
-            --resource-group $aiRg `
-            --query key1 -o tsv 2>$null
-        if ($LASTEXITCODE -eq 0 -and $aiKey) {
-            $env:AI_API_KEY = $aiKey.Trim()
-            Write-Ok "AI_API_KEY resolved from Azure Cognitive Services '$aiName'"
-        }
-        else {
-            Write-Warn "Could not read AI Foundry key from '$aiName' — AI categorization may be unavailable"
-        }
-    }
-    else {
-        Write-Ok "AI_API_KEY already set"
-    }
-
     Write-Step "Syncing application secrets to Key Vault"
     $syncScript = Join-Path $PSScriptRoot 'Sync-KeyVaultSecrets.ps1'
     & $syncScript

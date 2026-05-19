@@ -235,9 +235,11 @@ var allCustomDomains = [for entry in items(wildcardCertNames): '*.${entry.key}']
 
 // Key Vault URI used for Container App KV-reference secrets.
 var keyVaultUri = 'https://${keyVaultName}${environment().suffixes.keyvaultDns}/'
-var dbConnectionSecretName = 'techhub-prod-db-connection-string'
-var aiApiKeySecretName = 'techhub-prod-ai-api-key'
 var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
+
+// Passwordless PostgreSQL connection string — the app authenticates with a managed identity token
+// (Database:UseEntraAuth=true) so no password is required. The FQDN is resolved from the server output.
+var dbConnectionString = 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=id-techhub-prod;SSL Mode=Require'
 
 // Grant Key Vault Secrets User to the managed identity on the prod Key Vault.
 // Required for Container App KV-reference secrets (db connection string, AI key, AAD secret, ghcr.io token).
@@ -267,9 +269,40 @@ module postgres './modules/postgres.bicep' = {
     adminIpAddresses: adminIpList
     containerAppsSubnetStartIp: containerAppsSubnetStartIp
     containerAppsSubnetEndIp: containerAppsSubnetEndIp
+    // Register the prod managed identity as the Entra admin so the Container App can
+    // authenticate with a managed identity token instead of a password.
+    entraAdminObjectId: identity.outputs.identityPrincipalId
+    entraAdminName: 'id-techhub-prod'
     tags: prodTags
   }
 }
+
+// Grant Cognitive Services OpenAI User to the prod managed identity on the AI Foundry account.
+// This allows the Container App to call the AI Foundry API using a managed identity token
+// instead of an API key.
+module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
+  scope: resourceGroup
+  name: 'openAiUserRole-prod-identity'
+  params: {
+    openAiName: openAiName
+    principalId: identity.outputs.identityPrincipalId
+    principalType: 'ServicePrincipal'
+  }
+  dependsOn: [openai]
+}
+
+// Grant Cognitive Services OpenAI User to each developer in keyVaultAdminObjectIds so they
+// can call the AI Foundry API from their local machine after 'az login'.
+module openAiUserRoleDevs './modules/openAiUserRole.bicep' = [for (objectId, i) in keyVaultAdminObjectIds: {
+  scope: resourceGroup
+  name: 'openAiUserRole-dev-${i}'
+  params: {
+    openAiName: openAiName
+    principalId: objectId
+    principalType: 'User'
+  }
+  dependsOn: [openai]
+}]
 
 // API Container App
 module apiApp './modules/api.bicep' = {
@@ -284,8 +317,7 @@ module apiApp './modules/api.bicep' = {
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
     keyVaultUri: keyVaultUri
-    dbConnectionSecretName: dbConnectionSecretName
-    aiApiKeySecretName: aiApiKeySecretName
+    dbConnectionString: dbConnectionString
     webFqdns: !empty(primaryHosts) ? primaryHosts : ['${webAppName}.${containerAppsEnv.outputs.defaultDomain}']
     azureAdTenantId: azureAdTenantId
     azureAdClientId: azureAdClientId

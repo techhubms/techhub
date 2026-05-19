@@ -10,19 +10,19 @@
     Key Vault using Azure CLI, so the Bicep deploy can reference them.
 
     Secrets written:
-        techhub-prod-db-connection-string   — full PostgreSQL connection string
-        techhub-prod-ai-api-key             — AI Foundry API key
         techhub-prod-aad-client-secret      — Entra client secret
+
+    Secrets no longer written (replaced by managed identity / RBAC):
+        techhub-prod-db-connection-string   — removed; app uses Entra token auth (Database:UseEntraAuth=true)
+        techhub-prod-ai-api-key             — removed; app uses Cognitive Services OpenAI User RBAC role
 
     This script is called AUTOMATICALLY by Deploy-Infrastructure.ps1 in deploy
     mode, so you normally do not need to run it manually. The CI/CD workflow
-    provides POSTGRES_ADMIN_PASSWORD and AZURE_AD_CLIENT_SECRET as GitHub
-    secrets; AI_API_KEY is read directly from Azure Cognitive Services by
-    Deploy-Infrastructure.ps1 before calling this script.
+    provides AZURE_AD_CLIENT_SECRET as a GitHub secret.
 
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
-        2. Set env vars: POSTGRES_ADMIN_PASSWORD, AI_API_KEY, AZURE_AD_CLIENT_SECRET
+        2. Set env vars: AZURE_AD_CLIENT_SECRET
         3. ./scripts/Sync-KeyVaultSecrets.ps1
 
     Fail-fast behaviour: if a secret value is empty AND the secret does not yet
@@ -35,29 +35,11 @@
 
 .PARAMETER KeyVaultName
     Production Key Vault name. Defaults to 'kv-techhub-prod'.
-
-.PARAMETER PostgresHost
-    PostgreSQL server FQDN. Defaults to the convention 'psql-techhub-prod.postgres.database.azure.com'.
-
-.PARAMETER PostgresUser
-    PostgreSQL admin login. Defaults to 'techhubadmin'.
-
-.PARAMETER PostgresDatabase
-    Database name. Defaults to 'techhub'.
 #>
 
 param(
     [Parameter(Mandatory = $false)]
-    [string]$KeyVaultName = 'kv-techhub-prod',
-
-    [Parameter(Mandatory = $false)]
-    [string]$PostgresHost,
-
-    [Parameter(Mandatory = $false)]
-    [string]$PostgresUser = 'techhubadmin',
-
-    [Parameter(Mandatory = $false)]
-    [string]$PostgresDatabase = 'techhub'
+    [string]$KeyVaultName = 'kv-techhub-prod'
 )
 
 $ErrorActionPreference = "Stop"
@@ -113,15 +95,7 @@ function Set-KvSecret {
 }
 
 # --- Collect values from env ---
-$postgresPassword = $env:POSTGRES_ADMIN_PASSWORD
-$aiApiKey = $env:AI_API_KEY
 $aadClientSecret = $env:AZURE_AD_CLIENT_SECRET
-
-if ([string]::IsNullOrWhiteSpace($postgresPassword)) {
-    throw "POSTGRES_ADMIN_PASSWORD env var is required."
-}
-
-$dbConnectionString = "Host=$($PostgresHost);Database=$($PostgresDatabase);Username=$($PostgresUser);Password=$($postgresPassword);SSL Mode=Require"
 
 # --- Temporarily add this machine's IP to the Key Vault firewall ---
 # Key Vault is IP-restricted. GitHub Actions runners have dynamic IPs that are not in the
@@ -211,8 +185,6 @@ try {
         Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
     }
 
-    Set-KvSecret -Name "techhub-prod-db-connection-string" -Value $dbConnectionString -Description 'PostgreSQL connection string'
-    Set-KvSecret -Name "techhub-prod-ai-api-key" -Value $aiApiKey -Description 'AI Foundry API key'
     Set-KvSecret -Name "techhub-prod-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'
 
     Write-Host ""
