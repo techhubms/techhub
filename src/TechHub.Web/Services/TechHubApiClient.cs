@@ -1,3 +1,4 @@
+using System.Net;
 using TechHub.Core.Logging;
 using TechHub.Core.Models;
 using TechHub.Core.Models.Admin;
@@ -384,13 +385,52 @@ public class TechHubApiClient : ITechHubApiClient
     {
         try
         {
-            var result = await GetCollectionItemsAsync(
-                "all",
-                "roundups",
-                take: 1,
-                cancellationToken: cancellationToken);
+            using var response = await _httpClient.GetAsync(
+                "/api/sections/all/collections/roundups/items?take=1",
+                cancellationToken);
 
-            return result?.Items.Count > 0 ? result.Items[0] : null;
+            if (response.StatusCode == HttpStatusCode.NoContent)
+            {
+                _logger.LogDebug("Latest roundup endpoint returned no content for all/roundups; falling back to section scan");
+
+                var allSections = await GetAllSectionsAsync(cancellationToken);
+                if (allSections is null)
+                {
+                    return null;
+                }
+
+                var candidates = new List<ContentItem>();
+                foreach (var section in allSections.Where(s => !s.Name.Equals("all", StringComparison.OrdinalIgnoreCase)))
+                {
+                    try
+                    {
+                        var sectionResult = await GetCollectionItemsAsync(
+                            section.Name,
+                            "roundups",
+                            take: 1,
+                            cancellationToken: cancellationToken);
+
+                        if (sectionResult is not null && sectionResult.Items.Count > 0)
+                        {
+                            candidates.Add(sectionResult.Items[0]);
+                        }
+                    }
+                    catch (HttpRequestException ex)
+                    {
+                        _logger.LogDebug(ex, "Failed to fetch section roundup candidate for {SectionName}", section.Name);
+                    }
+                }
+
+                return candidates
+                    .OrderByDescending(item => item.DateEpoch)
+                    .FirstOrDefault();
+            }
+
+            response.EnsureSuccessStatusCode();
+            var result = await response.Content.ReadFromJsonAsync<CollectionItemsResponse>(cancellationToken: cancellationToken);
+            return result is not null && result.Items.Count > 0
+                ? result.Items[0]
+                : null;
         }
         catch (HttpRequestException ex)
         {
