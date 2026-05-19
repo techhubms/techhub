@@ -79,7 +79,7 @@ jobs:
         id: deploy
         shell: pwsh
         env:
-          POSTGRES_ADMIN_PASSWORD: ${{ secrets.POSTGRES_ADMIN_PASSWORD }}
+          ADMIN_IP_ADDRESSES: ${{ secrets.ADMIN_IP_ADDRESSES }}
         run: |
           ./scripts/Deploy-PrPreview.ps1 `
             -PrNumber ${{ inputs.pr_number }} `

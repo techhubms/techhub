@@ -84,16 +84,18 @@ See [wildcard-certificates.md](wildcard-certificates.md) for details.
 Production has a permanent PostgreSQL Flexible Server. PR environments get ephemeral servers
 created via PITR from the production backup — both in `rg-techhub-prod`.
 
-- **Production**: `psql-techhub-prod` — permanent, public access with firewall rules
-- **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore
+- **Production**: `psql-techhub-prod` — permanent, public access with firewall rules; password auth
+- **PR environments**: `psql-techhub-pr-{N}` — ephemeral, created via Point-in-Time Restore; Entra-only auth
 - **Public access**: Enabled with firewall rules for admin IPs and Container Apps subnet
 - **Firewall**: Admin IP rules + Container Apps subnet range (10.2.0.0–10.2.1.255)
 - **Container Apps** reach PostgreSQL over the public internet (source IP is in the CA subnet range)
 - **Admin** reaches PostgreSQL via IP-allowlisted public access
 
-> **Note**: The PostgreSQL firewall grants network access to all Container Apps in the
-> environment (including PR previews). This is intentional — PR previews use their own
-> PITR-cloned database and never have credentials for `psql-techhub-prod`.
+> **PR isolation**: Each PR gets a dedicated user-assigned managed identity
+> (`id-techhub-pr-{N}`) that is registered as the sole Entra admin on its own PITR server.
+> Password authentication is disabled on PR servers. A PR container cannot authenticate against
+> `psql-techhub-prod` because that server's Entra admin is `id-techhub-prod` — a completely
+> separate identity. No shared credentials exist.
 
 ## AI Foundry (OpenAI)
 

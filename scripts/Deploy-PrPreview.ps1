@@ -81,7 +81,7 @@ $containerAppsSubnetEndIp = '10.2.1.255'
 # PR-specific resource names
 $prPostgresServer = "psql-techhub-pr-$PrNumber"
 $prPostgresDb = 'techhub'
-$prPostgresUser = 'techhubadmin'
+$prManagedIdentityName = "id-techhub-pr-$PrNumber"
 
 # PR-specific Container App names
 $apiAppName = "ca-techhub-api-pr-$PrNumber"
@@ -287,12 +287,6 @@ if ($Action -eq 'deploy') {
         exit 1
     }
 
-    if (-not $env:POSTGRES_ADMIN_PASSWORD) {
-        Write-Fail "Environment variable POSTGRES_ADMIN_PASSWORD is not set. The PITR-restored server retains the production admin password."
-        exit 1
-    }
-    Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
-
     if (-not $env:ADMIN_IP_ADDRESSES) {
         Write-Fail "Environment variable ADMIN_IP_ADDRESSES is not set. Required for PR PostgreSQL firewall rules."
         exit 1
@@ -366,6 +360,28 @@ if ($Action -eq 'teardown') {
         Write-Warn "$prPostgresServer not found — already removed or never deployed"
     }
 
+    # Delete the per-PR managed identity
+    $prIdentityExists = az identity show `
+        --name $prManagedIdentityName `
+        --resource-group $prodRG `
+        --query id -o tsv 2>$null
+    if (-not [string]::IsNullOrWhiteSpace($prIdentityExists)) {
+        Write-Detail "Deleting per-PR managed identity $prManagedIdentityName..."
+        az identity delete `
+            --name $prManagedIdentityName `
+            --resource-group $prodRG
+        if ($LASTEXITCODE -ne 0) {
+            Write-Warn "Failed to delete managed identity $prManagedIdentityName — continuing"
+        }
+        else {
+            Write-Ok "Deleted managed identity $prManagedIdentityName"
+            $deletedAny = $true
+        }
+    }
+    else {
+        Write-Warn "$prManagedIdentityName not found — already removed or never created"
+    }
+
     if ($deletedAny) {
         Write-Ok "PR preview environment for PR #$PrNumber removed successfully"
     }
@@ -386,17 +402,6 @@ $pgExists = Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $pro
 
 if ($pgExists) {
     Write-Ok "PR PostgreSQL server already exists — reusing $prPostgresServer"
-    # Always reset the password when reusing an existing server.
-    Write-Detail "Resetting admin password on $prPostgresServer to match current secret..."
-    az postgres flexible-server update `
-        --resource-group $prodRG `
-        --name $prPostgresServer `
-        --admin-password $env:POSTGRES_ADMIN_PASSWORD
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to reset admin password on $prPostgresServer"
-        exit 1
-    }
-    Write-Ok "Admin password reset on $prPostgresServer"
 }
 else {
     # Get the production server resource ID for PITR source
@@ -428,20 +433,57 @@ else {
         exit 1
     }
     Write-Ok "PR PostgreSQL server created: $prPostgresServer"
-
-    # The PITR-restored server inherits the production admin password.
-    # Reset it to match POSTGRES_ADMIN_PASSWORD.
-    Write-Detail "Resetting admin password on $prPostgresServer..."
-    az postgres flexible-server update `
-        --resource-group $prodRG `
-        --name $prPostgresServer `
-        --admin-password $env:POSTGRES_ADMIN_PASSWORD
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to reset admin password on $prPostgresServer"
-        exit 1
-    }
-    Write-Ok "Admin password reset on $prPostgresServer"
 }
+
+# ============================================================================
+# CREATE PER-PR MANAGED IDENTITY AND CONFIGURE ENTRA AUTH ON PITR SERVER
+# ============================================================================
+
+Write-Step "Provisioning per-PR managed identity: $prManagedIdentityName"
+
+$prIdentityJson = az identity create `
+    --name $prManagedIdentityName `
+    --resource-group $prodRG `
+    --output json 2>$null | ConvertFrom-Json
+if ($LASTEXITCODE -ne 0 -or $null -eq $prIdentityJson) {
+    Write-Fail "Failed to create managed identity '$prManagedIdentityName'"
+    exit 1
+}
+$prIdentityId = $prIdentityJson.id
+$prIdentityPrincipalId = $prIdentityJson.principalId
+Write-Ok "Managed identity ready: $prManagedIdentityName (principal: $prIdentityPrincipalId)"
+
+# Enable Entra-only authentication on the PR PostgreSQL server so no shared password is needed.
+# The PITR-restored server inherits production's password auth; switch it to Entra auth.
+Write-Detail "Enabling Entra ID authentication on $prPostgresServer..."
+az postgres flexible-server update `
+    --resource-group $prodRG `
+    --name $prPostgresServer `
+    --active-directory-auth Enabled `
+    --password-auth Disabled
+if ($LASTEXITCODE -ne 0) {
+    Write-Fail "Failed to enable Entra auth on $prPostgresServer"
+    exit 1
+}
+Write-Ok "Entra auth enabled on $prPostgresServer (password auth disabled)"
+
+# Register the PR managed identity as an Entra administrator on the PITR server.
+# This grants the identity the azure_pg_admin role needed to connect and run migrations.
+# Azure requires a short propagation delay before the identity principal is resolvable.
+Write-Detail "Waiting for managed identity to propagate in Entra ID..."
+Start-Sleep -Seconds 15
+Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer..."
+az postgres flexible-server ad-admin create `
+    --server-name $prPostgresServer `
+    --resource-group $prodRG `
+    --display-name $prManagedIdentityName `
+    --object-id $prIdentityPrincipalId `
+    --type ServicePrincipal
+if ($LASTEXITCODE -ne 0) {
+    Write-Fail "Failed to set Entra admin on $prPostgresServer"
+    exit 1
+}
+Write-Ok "PR managed identity registered as Entra admin on $prPostgresServer"
 
 # Add firewall rules for the PR PostgreSQL server.
 # Admin IPs: allow explicit admin access.
@@ -501,18 +543,6 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envId)) {
 }
 Write-Ok "Container Apps Environment: $envId"
 
-# Get managed identity ID
-$identityId = az identity show `
-    --name $prodIdentityName `
-    --resource-group $prodRG `
-    --query id -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($identityId)) {
-    Write-Fail "Could not find managed identity '$prodIdentityName' in '$prodRG'"
-    exit 1
-}
-Write-Ok "Managed Identity: $identityId"
-
 # Get Application Insights connection string
 $appInsightsConnString = az monitor app-insights component show `
     --app $prodAppInsightsName `
@@ -541,9 +571,11 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($ghcrToken)) {
 }
 Write-Ok "GitHub registry token retrieved from Key Vault"
 
-# Compute the PR postgres FQDN and build the connection string.
+# Build a passwordless PostgreSQL connection string.
+# The username is the managed identity display name as registered in the Entra admin.
+# The app fetches an Azure AD token at runtime via ManagedIdentityCredential.
 $prPostgresFqdn = "$prPostgresServer.postgres.database.azure.com"
-$dbConnectionString = "Host=$prPostgresFqdn;Database=$prPostgresDb;Username=$prPostgresUser;Password=$($env:POSTGRES_ADMIN_PASSWORD);SSL Mode=Require"
+$dbConnectionString = "Host=$prPostgresFqdn;Database=$prPostgresDb;Username=$prManagedIdentityName;SSL Mode=Require"
 Write-Ok "PostgreSQL: $prPostgresFqdn"
 
 # Get the Container Apps Environment default domain (to compute expected FQDNs)
@@ -572,6 +604,7 @@ $apiEnvVars = @(
     "OTEL_SERVICE_NAME=techhub-api",
     "Database__Provider=PostgreSQL",
     "Database__ConnectionString=secretref:db-connection-string",
+    "Database__UseEntraAuth=true",
     "AppSettings__BaseUrl=https://$webPrFqdn",
     "TECHHUB_TMP=/tmp/techhub",
     "Cors__AllowedOrigins__0=https://$webPrFqdn",
@@ -620,6 +653,12 @@ if ($apiExists) {
         Write-Fail "Failed to update API Container App"
         exit 1
     }
+
+    # Ensure the PR identity is assigned (idempotent — safe to re-run)
+    az containerapp identity assign `
+        --name $apiAppName `
+        --resource-group $prodRG `
+        --user-assigned $prIdentityId 2>$null | Out-Null
 }
 else {
     Write-Detail "Creating new $apiAppName..."
@@ -635,6 +674,7 @@ else {
         --registry-server $registryServer `
         --registry-username $GithubRegistryUsername `
         --registry-password $ghcrToken `
+        --user-assigned $prIdentityId `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
