@@ -125,13 +125,17 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2024-03-01' = {
   tags: prodTags
 }
 
+// Managed identity name — shared between the identity resource, PostgreSQL Entra admin registration,
+// and the passwordless connection string so they always stay in sync.
+var prodIdentityName = 'id-techhub-prod'
+
 // User-Assigned Managed Identity (used by Container Apps to access Key Vault)
 module identity './modules/identity.bicep' = {
   scope: resourceGroup
   name: 'identity-deployment'
   params: {
     location: location
-    identityName: 'id-techhub-prod'
+    identityName: prodIdentityName
     tags: prodTags
   }
 }
@@ -239,7 +243,7 @@ var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
 
 // Passwordless PostgreSQL connection string — the app authenticates with a managed identity token
 // (Database:UseEntraAuth=true) so no password is required. The FQDN is resolved from the server output.
-var dbConnectionString = 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=id-techhub-prod;SSL Mode=Require'
+var dbConnectionString = 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${prodIdentityName};SSL Mode=Require'
 
 // Grant Key Vault Secrets User to the managed identity on the prod Key Vault.
 // Required for Container App KV-reference secrets (db connection string, AI key, AAD secret, ghcr.io token).
@@ -272,7 +276,7 @@ module postgres './modules/postgres.bicep' = {
     // Register the prod managed identity as the Entra admin so the Container App can
     // authenticate with a managed identity token instead of a password.
     entraAdminObjectId: identity.outputs.identityPrincipalId
-    entraAdminName: 'id-techhub-prod'
+    entraAdminName: prodIdentityName
     tags: prodTags
   }
 }
@@ -295,7 +299,7 @@ module openAiUserRoleProd './modules/openAiUserRole.bicep' = {
 // can call the AI Foundry API from their local machine after 'az login'.
 module openAiUserRoleDevs './modules/openAiUserRole.bicep' = [for (objectId, i) in keyVaultAdminObjectIds: {
   scope: resourceGroup
-  name: 'openAiUserRole-dev-${i}'
+  name: 'openAiUserRole-developer-${i}'
   params: {
     openAiName: openAiName
     principalId: objectId
