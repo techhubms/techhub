@@ -1178,7 +1178,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_WithValidSlug_ReturnsContentWithRenderedHtml()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var itemsResponse = await _client.GetAsync("/api/sections/github-copilot/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         items.Should().NotBeNull();
         items!.Should().NotBeEmpty();
@@ -1187,7 +1187,7 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
         var slug = testItem.Slug;
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{slug}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/github-copilot/collections/roundups/{slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -1234,12 +1234,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_IncludesMetadata()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var itemsResponse = await _client.GetAsync("/api/sections/github-copilot/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/github-copilot/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);
@@ -1261,12 +1261,12 @@ public class ContentEndpointsTests : IClassFixture<TechHubIntegrationTestApiFact
     public async Task GetContentDetail_ReturnsDetailForInternalContent()
     {
         // Arrange - Use roundups collection which links internally (not externally like news/blogs/community)
-        var itemsResponse = await _client.GetAsync("/api/sections/all/collections/roundups/items", TestContext.Current.CancellationToken);
+        var itemsResponse = await _client.GetAsync("/api/sections/github-copilot/collections/roundups/items", TestContext.Current.CancellationToken);
         var items = (await itemsResponse.Content.ReadFromJsonAsync<CollectionItemsResponse>(TestContext.Current.CancellationToken))?.Items?.ToList();
         var testItem = items!.First();
 
         // Act
-        var response = await _client.GetAsync($"/api/sections/all/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
+        var response = await _client.GetAsync($"/api/sections/github-copilot/collections/roundups/{testItem.Slug}", TestContext.Current.CancellationToken);
 
         // Assert
         response.StatusCode.Should().Be(HttpStatusCode.OK);

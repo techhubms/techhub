@@ -8,11 +8,10 @@
      Single feed (section pages):
        <SidebarRssLinks Links="@(new[] { new RssLink("RSS Feed", "/ai/feed.xml") })" />
      
-     Multiple feeds (homepage):
-       <SidebarRssLinks Links="@(new[] {
-           new RssLink("RSS Feed - All Content", "/all/feed.xml"),
-           new RssLink("RSS Feed - Roundups", "/all/roundups/feed.xml")
-       })" />
+      Homepage feed links:
+        <SidebarRssLinks Links="@(new[] {
+            new RssLink("RSS Feed - All Content", "/all/feed.xml")
+        })" />
    ============================================================================ *@
 
 <div class="sidebar-section">

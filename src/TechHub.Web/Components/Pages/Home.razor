@@ -99,10 +99,10 @@
 
     private PersistingComponentStateSubscription? _persistSubscription;
 
-    private static readonly SidebarRssLinks.RssLink[] rssLinks = [
-    new("RSS Feed - All Content", "/all/feed.xml"),
-new("RSS Feed - Roundups", "/all/roundups/feed.xml"),
-new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
+    private static readonly SidebarRssLinks.RssLink[] rssLinks =
+    [
+        new("RSS Feed - All Content", "/all/feed.xml"),
+        new("Newsletter", "https://mailchi.mp/1c8d4b5ea99c/tech-hub", GetNewsletterIcon())
     ];
 
     private IEnumerable<TechHub.Core.Models.Section>? sections;

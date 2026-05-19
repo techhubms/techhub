@@ -44,7 +44,7 @@ internal static class RoundupContentBuilder
     /// Generates the roundup slug from the publish date.
     /// </summary>
     public static string BuildSlug(DateOnly publishDate, string sectionName) =>
-        publishDate.ToString($"'weekly-ai-and-tech-news-roundup-{sectionName.ToLowerInvariant()}-'yyyy-MM-dd", CultureInfo.InvariantCulture);
+        publishDate.ToString($"'weekly-{sectionName.ToLowerInvariant()}-roundup-'yyyy-MM-dd", CultureInfo.InvariantCulture);
 
     private static string BuildAnchor(string title)
     {

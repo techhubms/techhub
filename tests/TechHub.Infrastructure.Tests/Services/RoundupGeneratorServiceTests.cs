@@ -22,7 +22,7 @@ public class RoundupGeneratorServiceTests
 
     private static readonly DateOnly _weekStart = new(2025, 4, 7);    // Monday
     private static readonly DateOnly _weekEnd = new(2025, 4, 13);     // Sunday
-    private static readonly string _expectedSlug = "weekly-ai-and-tech-news-roundup-ai-2025-04-14";
+    private static readonly string _expectedSlug = "weekly-ai-roundup-2025-04-14";
 
     private static readonly AppSettings _testAppSettings = new()
     {
@@ -193,7 +193,7 @@ public class RoundupGeneratorServiceTests
         // Arrange — use a unique week
         var uniqueWeekStart = new DateOnly(2025, 5, 5);
         var uniqueWeekEnd = new DateOnly(2025, 5, 11);
-        var uniqueSlug = "weekly-ai-and-tech-news-roundup-github-copilot-2025-05-12";
+        var uniqueSlug = "weekly-github-copilot-roundup-2025-05-12";
 
         var articles = new Dictionary<string, IReadOnlyList<RoundupArticle>>
         {
@@ -265,12 +265,12 @@ public class RoundupGeneratorServiceTests
 
         // Assert
         result.Result.Should().Be(RoundupGenerationResult.Generated);
-        result.Slugs.Should().Contain("weekly-ai-and-tech-news-roundup-ai-2025-05-26");
-        result.Slugs.Should().Contain("weekly-ai-and-tech-news-roundup-azure-2025-05-26");
+        result.Slugs.Should().Contain("weekly-ai-roundup-2025-05-26");
+        result.Slugs.Should().Contain("weekly-azure-roundup-2025-05-26");
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
             "ai",
-            "weekly-ai-and-tech-news-roundup-ai-2025-05-26",
+            "weekly-ai-roundup-2025-05-26",
             It.IsAny<DateOnly>(),
             It.IsAny<string>(),
             It.IsAny<string>(),
@@ -282,7 +282,7 @@ public class RoundupGeneratorServiceTests
 
         _roundupRepo.Verify(r => r.WriteRoundupAsync(
             "azure",
-            "weekly-ai-and-tech-news-roundup-azure-2025-05-26",
+            "weekly-azure-roundup-2025-05-26",
             It.IsAny<DateOnly>(),
             It.IsAny<string>(),
             It.IsAny<string>(),

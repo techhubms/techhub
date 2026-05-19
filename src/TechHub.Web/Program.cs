@@ -507,14 +507,18 @@ app.MapGet("/all/feed.xml", async (TechHubApiClient apiClient, CancellationToken
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 
-// Special handling for /all/roundups/feed.xml before general section route
-app.MapGet("/all/roundups/feed.xml", async (TechHubApiClient apiClient, CancellationToken ct) =>
+app.MapGet("/{sectionName}/roundups/feed.xml", async (string sectionName, TechHubApiClient apiClient, CancellationToken ct) =>
 {
-    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", "all", ct);
+    if (!RouteParameterValidator.IsValidNameSegment(sectionName))
+    {
+        return Results.BadRequest("Invalid section name format.");
+    }
+
+    var xml = await apiClient.GetCollectionRssFeedAsync("roundups", sectionName, ct);
     return Results.Content(xml, "application/rss+xml; charset=utf-8");
 })
 .WithName("GetRoundupsRssFeed")
-.WithSummary("RSS feed for roundups collection")
+.WithSummary("RSS feed for section roundups collection")
 .ExcludeFromDescription()
 .RequireRateLimiting("web-rss");
 
