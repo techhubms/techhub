@@ -38,29 +38,10 @@ Describe "Sync-KeyVaultSecrets" {
             $paramBlock = $ast.ParamBlock
         }
 
-        It "Should have a mandatory Environment parameter" {
-            $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "Environment" }
-            $param | Should -Not -BeNullOrEmpty
-            $mandatory = $param.Attributes | Where-Object {
-                $_.TypeName.Name -eq "Parameter" -and
-                ($_.NamedArguments | Where-Object { $_.ArgumentName -eq "Mandatory" -and $_.Argument.Extent.Text -eq '$true' })
-            }
-            $mandatory | Should -Not -BeNullOrEmpty
-        }
-
-        It "Should validate Environment to staging and prod" {
-            $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "Environment" }
-            $validateSet = $param.Attributes | Where-Object { $_.TypeName.Name -eq "ValidateSet" }
-            $validateSet | Should -Not -BeNullOrEmpty
-            $values = $validateSet.PositionalArguments | ForEach-Object { $_.Value }
-            $values | Should -Contain "staging"
-            $values | Should -Contain "prod"
-        }
-
-        It "Should have a KeyVaultName parameter defaulting to kv-techhub-shared" {
+        It "Should have a KeyVaultName parameter defaulting to kv-techhub-prod" {
             $param = $paramBlock.Parameters | Where-Object { $_.Name.VariablePath.UserPath -eq "KeyVaultName" }
             $param | Should -Not -BeNullOrEmpty
-            $param.DefaultValue.Value | Should -Be "kv-techhub-shared"
+            $param.DefaultValue.Value | Should -Be "kv-techhub-prod"
         }
 
         It "Should have an optional PostgresHost parameter" {

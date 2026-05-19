@@ -42,6 +42,12 @@ param geoRedundantBackup bool = false
 @description('Admin IP addresses for firewall rules (optional — leave empty to keep public access disabled)')
 param adminIpAddresses string[] = []
 
+@description('First IP of the Container Apps subnet (for firewall rule allowing Container Apps to reach PostgreSQL). Leave empty to skip.')
+param containerAppsSubnetStartIp string = ''
+
+@description('Last IP of the Container Apps subnet (for firewall rule allowing Container Apps to reach PostgreSQL). Leave empty to skip.')
+param containerAppsSubnetEndIp string = ''
+
 @description('Tags applied to the PostgreSQL server')
 param tags object = {}
 
@@ -84,7 +90,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2024-08-01' =
       startMinute: 0
     }
     network: {
-      publicNetworkAccess: !empty(adminIpAddresses) ? 'Enabled' : 'Disabled'
+      publicNetworkAccess: (!empty(adminIpAddresses) || !empty(containerAppsSubnetStartIp)) ? 'Enabled' : 'Disabled'
     }
   }
 }
@@ -98,6 +104,17 @@ resource adminFirewallRules 'Microsoft.DBforPostgreSQL/flexibleServers/firewallR
     endIpAddress: ip
   }
 }]
+
+// Firewall rule: allow Container Apps subnet IP range so Container Apps can reach PostgreSQL
+// without a private endpoint. Uses explicit start/end IPs because Bicep cannot parse CIDR.
+resource containerAppsSubnetFirewallRule 'Microsoft.DBforPostgreSQL/flexibleServers/firewallRules@2024-08-01' = if (!empty(containerAppsSubnetStartIp) && !empty(containerAppsSubnetEndIp)) {
+  parent: postgresServer
+  name: 'allow-container-apps-subnet'
+  properties: {
+    startIpAddress: containerAppsSubnetStartIp
+    endIpAddress: containerAppsSubnetEndIp
+  }
+}
 
 // Database
 resource database 'Microsoft.DBforPostgreSQL/flexibleServers/databases@2024-08-01' = {

@@ -4,11 +4,8 @@ param location string
 @description('Container Apps Environment name')
 param containerAppsEnvironmentName string
 
-@description('Key Vault name (in shared resource group)')
+@description('Key Vault name (in the same resource group)')
 param keyVaultName string
-
-@description('Shared resource group name')
-param sharedResourceGroupName string
 
 @description('Wildcard certificate names in Key Vault, keyed by base domain (e.g. { "hub.ms": "wildcard-hub-ms" })')
 param wildcardCertNames object
@@ -19,11 +16,10 @@ param identityId string
 @description('Principal ID of the managed identity (for RBAC assignment)')
 param identityPrincipalId string
 
-// Grant Key Vault Secrets User to the managed identity on the shared Key Vault
+// Grant Key Vault Secrets User to the managed identity on the Key Vault
 // (needed to read certificate secrets from Key Vault)
 module kvSecretsRole 'kvSecretsUserRole.bicep' = {
   name: 'kvSecretsRole-deployment'
-  scope: resourceGroup(sharedResourceGroupName)
   params: {
     keyVaultName: keyVaultName
     principalId: identityPrincipalId

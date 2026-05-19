@@ -1,18 +1,18 @@
 #!/usr/bin/env pwsh
 <#
 .SYNOPSIS
-    Syncs application secrets from env vars into the shared Tech Hub Key Vault.
+    Syncs application secrets from env vars into the production Tech Hub Key Vault.
 
 .DESCRIPTION
     Tech Hub Container Apps reference secrets via `keyVaultUrl` instead of inline
     ARM values (see infra/modules/api.bicep and infra/modules/web.bicep). This
-    script pushes the current values from environment variables into the shared
+    script pushes the current values from environment variables into the production
     Key Vault using Azure CLI, so the Bicep deploy can reference them.
 
-    Secrets written (per environment):
-        techhub-<env>-db-connection-string   — full PostgreSQL connection string
-        techhub-<env>-ai-api-key             — AI Foundry API key
-        techhub-<env>-aad-client-secret      — Entra client secret
+    Secrets written:
+        techhub-prod-db-connection-string   — full PostgreSQL connection string
+        techhub-prod-ai-api-key             — AI Foundry API key
+        techhub-prod-aad-client-secret      — Entra client secret
 
     This script is called AUTOMATICALLY by Deploy-Infrastructure.ps1 in deploy
     mode, so you normally do not need to run it manually. The CI/CD workflow
@@ -23,7 +23,7 @@
     Manual workflow (from an admin machine allowed through the KV firewall):
         1. az login
         2. Set env vars: POSTGRES_ADMIN_PASSWORD, AI_API_KEY, AZURE_AD_CLIENT_SECRET
-        3. ./scripts/Sync-KeyVaultSecrets.ps1 -Environment prod
+        3. ./scripts/Sync-KeyVaultSecrets.ps1
 
     Fail-fast behaviour: if a secret value is empty AND the secret does not yet
     exist in Key Vault, the script throws so the caller can fix the missing value
@@ -37,10 +37,10 @@
     Target environment name: 'staging' or 'prod'.
 
 .PARAMETER KeyVaultName
-    Shared Key Vault name. Defaults to 'kv-techhub-shared'.
+    Production Key Vault name. Defaults to 'kv-techhub-prod'.
 
 .PARAMETER PostgresHost
-    PostgreSQL server FQDN. Defaults to the convention 'psql-techhub-<env>.postgres.database.azure.com'.
+    PostgreSQL server FQDN. Defaults to the convention 'psql-techhub-prod.postgres.database.azure.com'.
 
 .PARAMETER PostgresUser
     PostgreSQL admin login. Defaults to 'techhubadmin'.
@@ -50,12 +50,8 @@
 #>
 
 param(
-    [Parameter(Mandatory = $true)]
-    [ValidateSet('staging', 'prod')]
-    [string]$Environment,
-
     [Parameter(Mandatory = $false)]
-    [string]$KeyVaultName = 'kv-techhub-shared',
+    [string]$KeyVaultName = 'kv-techhub-prod',
 
     [Parameter(Mandatory = $false)]
     [string]$PostgresHost,
@@ -71,7 +67,7 @@ $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
 if (-not $PostgresHost) {
-    $PostgresHost = "psql-techhub-$($Environment).postgres.database.azure.com"
+    $PostgresHost = "psql-techhub-prod.postgres.database.azure.com"
 }
 
 function Set-KvSecret {
@@ -218,12 +214,12 @@ try {
         Write-Host "   IP $currentIp is already permitted by Key Vault '$($KeyVaultName)' firewall." -ForegroundColor Gray
     }
 
-    Set-KvSecret -Name "techhub-$($Environment)-db-connection-string" -Value $dbConnectionString -Description 'PostgreSQL connection string'
-    Set-KvSecret -Name "techhub-$($Environment)-ai-api-key" -Value $aiApiKey -Description 'AI Foundry API key'
-    Set-KvSecret -Name "techhub-$($Environment)-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'
+    Set-KvSecret -Name "techhub-prod-db-connection-string" -Value $dbConnectionString -Description 'PostgreSQL connection string'
+    Set-KvSecret -Name "techhub-prod-ai-api-key" -Value $aiApiKey -Description 'AI Foundry API key'
+    Set-KvSecret -Name "techhub-prod-aad-client-secret" -Value $aadClientSecret -Description 'Entra client secret'
 
     Write-Host ""
-    Write-Host "All secrets synchronised into '$($KeyVaultName)' for environment '$($Environment)'." -ForegroundColor Green
+    Write-Host "All secrets synchronised into '$($KeyVaultName)'." -ForegroundColor Green
     Write-Host "Container Apps pick up new values on next revision. Restart a revision to apply immediately." -ForegroundColor Yellow
 }
 catch {

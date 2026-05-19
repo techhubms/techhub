@@ -4,20 +4,20 @@
     Deploys or tears down a fully ephemeral PR preview environment.
 
 .DESCRIPTION
-    Creates/updates or deletes a fully isolated PR preview environment in the staging Azure
+    Creates/updates or deletes a fully isolated PR preview environment in the production Azure
     Container Apps Environment. Each PR gets its own:
     - PostgreSQL Flexible Server (created via PITR from production)
     - Container Apps (ca-techhub-api-pr-{number} and ca-techhub-web-pr-{number})
 
-    The PR apps share the staging Container Apps Environment, VNet, and monitoring —
+    The PR apps share the production Container Apps Environment, VNet, and monitoring —
     but get their own isolated database.
 
     On deploy, a PR-specific Postgres instance is provisioned using Azure Point-in-Time
     Restore (PITR) from the production server. This creates an independent copy with
-    realistic production data — no dump files, no firewall rules, no DB credentials needed.
+    realistic production data. PostgreSQL is accessible over the public internet with
+    firewall rules for admin IPs and the Container Apps subnet.
 
-    On teardown, the PR-specific Postgres instance and its private endpoint are deleted
-    along with the Container Apps.
+    On teardown, the PR-specific Postgres instance is deleted along with the Container Apps.
 
 .PARAMETER PrNumber
     Pull request number. Used to derive unique resource names.
@@ -28,8 +28,8 @@
 .PARAMETER Tag
     Docker image tag to deploy. Required for 'deploy' action.
 
-.PARAMETER RegistryName
-    Azure Container Registry name (without .azurecr.io). Defaults to 'crtechhubms'.
+.PARAMETER GithubRegistryUsername
+    GitHub organization username for ghcr.io. Defaults to 'techhubms'.
 
 .EXAMPLE
     ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-20250101120000"
@@ -52,7 +52,7 @@ param(
     [string]$Tag,
 
     [Parameter(Mandatory = $false)]
-    [string]$RegistryName = 'crtechhubms'
+    [string]$GithubRegistryUsername = 'techhubms'
 )
 
 $ErrorActionPreference = "Stop"
@@ -62,29 +62,32 @@ Set-StrictMode -Version Latest
 # CONFIGURATION
 # ============================================================================
 
-# Staging infrastructure (shared with PR preview environments)
-$stagingRG = 'rg-techhub-staging'
-$stagingEnvName = 'cae-techhub-staging'
-$stagingIdentityName = 'id-techhub-staging'
-$stagingAppInsightsName = 'appi-techhub-staging'
+# Production resource group (PR previews run here alongside production)
+$prodRG = 'rg-techhub-prod'
+$prodEnvName = 'cae-techhub-prod'
+$prodIdentityName = 'id-techhub-prod'
+$prodAppInsightsName = 'appi-techhub-prod'
+$prodKeyVaultName = 'kv-techhub-prod'
 
 # Production server (source for PITR database clone)
-$prodRG = 'rg-techhub-prod'
 $prodPostgresServer = 'psql-techhub-prod'
+
+# Container Apps subnet range (used for PostgreSQL firewall rule)
+$containerAppsSubnetStartIp = '10.2.0.0'
+$containerAppsSubnetEndIp = '10.2.1.255'
 
 # PR-specific resource names
 $prPostgresServer = "psql-techhub-pr-$PrNumber"
 $prPostgresDb = 'techhub'
 $prPostgresUser = 'techhubadmin'
-$prPrivateEndpointName = "pe-psql-techhub-pr-$PrNumber"
 
 # PR-specific Container App names
 $apiAppName = "ca-techhub-api-pr-$PrNumber"
 $webAppName = "ca-techhub-web-pr-$PrNumber"
 
-$registryServer = "$RegistryName.azurecr.io"
-$apiImage = "$registryServer/techhub-api:$Tag"
-$webImage = "$registryServer/techhub-web:$Tag"
+$registryServer = "ghcr.io"
+$apiImage = "$registryServer/$GithubRegistryUsername/techhub-api:$Tag"
+$webImage = "$registryServer/$GithubRegistryUsername/techhub-web:$Tag"
 
 # ============================================================================
 # HELPERS
@@ -162,8 +165,6 @@ function Set-WebStartupProbe {
     $container = $webApp.properties.template.containers[0]
 
     # Preserve all existing non-Startup probes, then add ours.
-    # Use PSObject.Properties to safely check for property existence under Set-StrictMode -Version Latest:
-    # ConvertFrom-Json produces PSCustomObjects; accessing a missing property throws in strict mode.
     $existingProbes = @()
     if ($container.PSObject.Properties['probes'] -ne $null) {
         $existingProbes = @($container.probes | Where-Object { $_.type -ne 'Startup' })
@@ -177,13 +178,8 @@ function Set-WebStartupProbe {
         failureThreshold    = 10   # ACA max is 10; 5 + 10×20 = 205s ≈ 3.4-min tolerance
     }
 
-    # Add-Member -Force adds the property if absent or replaces it if present —
-    # required under Set-StrictMode -Version Latest because direct assignment to a
-    # non-existent PSCustomObject property throws a PropertyNotFoundException.
     $container | Add-Member -NotePropertyName 'probes' -NotePropertyValue (@($existingProbes) + @($startupProbe)) -Force
 
-    # ARM PATCH semantics: arrays are replaced in full, so we include the complete
-    # modified container (fetched from the live app) to preserve image/env/resources.
     $patchBody = [PSCustomObject]@{
         properties = [PSCustomObject]@{
             template = [PSCustomObject]@{
@@ -230,9 +226,6 @@ function Write-ContainerAppDiagnostics {
             Write-Host "  Replicas        : $($latestRevision.properties.replicas)" -ForegroundColor Gray
             Write-Host "  HealthState     : $($latestRevision.properties.healthState)" -ForegroundColor Gray
             Write-Host "  RunningState    : $($latestRevision.properties.runningState)" -ForegroundColor Gray
-            # runningStateDetails is only present on some revisions (e.g., when ActivationFailed).
-            # With Set-StrictMode -Version Latest, accessing a missing property throws —
-            # use PSObject.Properties to safely check.
             if ($latestRevision.properties.PSObject.Properties['runningStateDetails']) {
                 Write-Host "  Details         : $($latestRevision.properties.runningStateDetails)" -ForegroundColor Gray
             }
@@ -268,7 +261,7 @@ if ($Tag) {
 Write-Host "  API App     : $apiAppName" -ForegroundColor Gray
 Write-Host "  Web App     : $webAppName" -ForegroundColor Gray
 Write-Host "  PostgreSQL  : $prPostgresServer" -ForegroundColor Gray
-Write-Host "  Resource RG : $stagingRG" -ForegroundColor Gray
+Write-Host "  Resource RG : $prodRG" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 
 # ============================================================================
@@ -297,6 +290,12 @@ if ($Action -eq 'deploy') {
         exit 1
     }
     Write-Ok "POSTGRES_ADMIN_PASSWORD is set"
+
+    if (-not $env:ADMIN_IP_ADDRESSES) {
+        Write-Fail "Environment variable ADMIN_IP_ADDRESSES is not set. Required for PR PostgreSQL firewall rules."
+        exit 1
+    }
+    Write-Ok "ADMIN_IP_ADDRESSES is set"
 }
 
 # ============================================================================
@@ -309,11 +308,11 @@ if ($Action -eq 'teardown') {
     $deletedAny = $false
 
     # Delete Web Container App first (it calls the API)
-    if (Get-ContainerAppExists -Name $webAppName -ResourceGroup $stagingRG) {
+    if (Get-ContainerAppExists -Name $webAppName -ResourceGroup $prodRG) {
         Write-Detail "Deleting $webAppName..."
         az containerapp delete `
             --name $webAppName `
-            --resource-group $stagingRG `
+            --resource-group $prodRG `
             --yes
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to delete $webAppName"
@@ -327,11 +326,11 @@ if ($Action -eq 'teardown') {
     }
 
     # Delete API Container App
-    if (Get-ContainerAppExists -Name $apiAppName -ResourceGroup $stagingRG) {
+    if (Get-ContainerAppExists -Name $apiAppName -ResourceGroup $prodRG) {
         Write-Detail "Deleting $apiAppName..."
         az containerapp delete `
             --name $apiAppName `
-            --resource-group $stagingRG `
+            --resource-group $prodRG `
             --yes
         if ($LASTEXITCODE -ne 0) {
             Write-Fail "Failed to delete $apiAppName"
@@ -344,52 +343,14 @@ if ($Action -eq 'teardown') {
         Write-Warn "$apiAppName not found — already removed or never deployed"
     }
 
-    # Delete PR-specific PostgreSQL private endpoint
-    Write-Step "Deleting PR PostgreSQL private endpoint: $prPrivateEndpointName"
-    $peExists = az network private-endpoint show `
-        --name $prPrivateEndpointName `
-        --resource-group $stagingRG `
-        --query name -o tsv 2>$null
-    if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($peExists)) {
-        az network private-endpoint delete `
-            --name $prPrivateEndpointName `
-            --resource-group $stagingRG
-        if ($LASTEXITCODE -ne 0) {
-            Write-Warn "Failed to delete private endpoint $prPrivateEndpointName — continuing"
-        }
-        else {
-            Write-Ok "Deleted private endpoint $prPrivateEndpointName"
-            $deletedAny = $true
-        }
-    }
-    else {
-        Write-Warn "$prPrivateEndpointName not found — already removed or never deployed"
-    }
-
     # Delete PR-specific PostgreSQL server
     Write-Step "Deleting PR PostgreSQL server: $prPostgresServer"
 
-    # Clean up DNS A record from the shared private DNS zone (safety net).
-    # The dns-zone-group on the PE should auto-remove the record when the PE is deleted,
-    # but we clean up explicitly in case the PE was created without a zone group.
-    Write-Detail "Removing DNS A record for $prPostgresServer (safety net)..."
-    az network private-dns record-set a delete `
-        --resource-group 'rg-techhub-shared' `
-        --zone-name 'privatelink.postgres.database.azure.com' `
-        --name $prPostgresServer `
-        --yes 2>$null
-    if ($LASTEXITCODE -eq 0) {
-        Write-Ok "Deleted DNS A record for $prPostgresServer"
-    }
-    else {
-        Write-Warn "DNS A record for $prPostgresServer not found or could not be deleted — continuing"
-    }
-
-    if (Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $stagingRG) {
+    if (Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $prodRG) {
         Write-Detail "Deleting $prPostgresServer (this may take a few minutes)..."
         az postgres flexible-server delete `
             --name $prPostgresServer `
-            --resource-group $stagingRG `
+            --resource-group $prodRG `
             --yes
         if ($LASTEXITCODE -ne 0) {
             Write-Warn "Failed to delete $prPostgresServer — continuing"
@@ -401,48 +362,6 @@ if ($Action -eq 'teardown') {
     }
     else {
         Write-Warn "$prPostgresServer not found — already removed or never deployed"
-    }
-
-    # Clean up Docker images tagged for this PR from ACR
-    Write-Step "Cleaning up Docker images for PR #$PrNumber from ACR"
-
-    $prTagFilter = "pr-$PrNumber-"
-    $deleteJobs = @()
-
-    foreach ($repo in @('techhub-api', 'techhub-web')) {
-        Write-Detail "Checking $repo for tags matching '$prTagFilter*'..."
-
-        $tags = az acr repository show-tags `
-            --name $RegistryName `
-            --repository $repo `
-            --query "[?starts_with(@, '$prTagFilter')]" `
-            -o tsv 2>$null
-
-        if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($tags)) {
-            Write-Warn "No matching tags found for $repo — skipping"
-            continue
-        }
-
-        foreach ($tag in $tags -split "`n") {
-            $tag = $tag.Trim()
-            if ([string]::IsNullOrWhiteSpace($tag)) { continue }
-            Write-Detail "Deleting ${repo}:$tag..."
-            $deleteJobs += Start-Job -ScriptBlock {
-                param($rn, $r, $t)
-                az acr repository delete --name $rn --image "${r}:${t}" --yes 2>$null
-                $LASTEXITCODE
-            } -ArgumentList $RegistryName, $repo, $tag
-        }
-    }
-
-    if ($deleteJobs.Count -gt 0) {
-        $results = $deleteJobs | Wait-Job | Receive-Job
-        $deleteJobs | Remove-Job
-        # @(...) forces array context so .Count is always valid under Set-StrictMode -Version Latest.
-        # Without it, Where-Object returning zero results yields $null, and $null.Count throws.
-        $succeeded = @($results | Where-Object { $_ -eq 0 }).Count
-        $failed    = @($results | Where-Object { $_ -ne 0 }).Count
-        Write-Ok "Deleted $succeeded ACR image(s)$(if ($failed -gt 0) { "; $failed failed (non-fatal)" })"
     }
 
     if ($deletedAny) {
@@ -461,17 +380,14 @@ if ($Action -eq 'teardown') {
 
 Write-Step "Provisioning PR PostgreSQL server: $prPostgresServer"
 
-$pgExists = Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $stagingRG
+$pgExists = Get-PostgresServerExists -Name $prPostgresServer -ResourceGroup $prodRG
 
 if ($pgExists) {
     Write-Ok "PR PostgreSQL server already exists — reusing $prPostgresServer"
     # Always reset the password when reusing an existing server.
-    # The PITR-restored server starts with the production password; if the prior run's
-    # password reset failed or was skipped, the server may have an unexpected password.
-    # Resetting unconditionally ensures the password always matches POSTGRES_ADMIN_PASSWORD.
-    Write-Detail "Resetting admin password on $prPostgresServer to match current staging secret..."
+    Write-Detail "Resetting admin password on $prPostgresServer to match current secret..."
     az postgres flexible-server update `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --name $prPostgresServer `
         --admin-password $env:POSTGRES_ADMIN_PASSWORD
     if ($LASTEXITCODE -ne 0) {
@@ -493,8 +409,7 @@ else {
     }
     Write-Ok "Production server ID: $prodServerId"
 
-    # Use a restore time of 03:00 UTC today for a stable backup point (avoids mid-migration state).
-    # If it's before 04:00 UTC, use yesterday's 03:00 UTC to ensure the backup window has completed.
+    # Use a restore time of 03:00 UTC today for a stable backup point.
     $nowUtc = [DateTime]::UtcNow
     $restoreDate = if ($nowUtc.Hour -lt 4) { $nowUtc.AddDays(-1).Date.AddHours(3) } else { $nowUtc.Date.AddHours(3) }
     $restoreTime = $restoreDate.ToString('yyyy-MM-ddTHH:mm:ssZ')
@@ -502,7 +417,7 @@ else {
 
     Write-Detail "Creating $prPostgresServer via PITR from production (this takes 5-8 minutes)..."
     az postgres flexible-server restore `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --name $prPostgresServer `
         --source-server $prodServerId `
         --restore-time $restoreTime
@@ -513,11 +428,10 @@ else {
     Write-Ok "PR PostgreSQL server created: $prPostgresServer"
 
     # The PITR-restored server inherits the production admin password.
-    # Reset it to match the POSTGRES_ADMIN_PASSWORD env var (the staging environment secret)
-    # so the connection string built later uses the correct credentials.
-    Write-Detail "Resetting admin password on $prPostgresServer to match staging secret..."
+    # Reset it to match POSTGRES_ADMIN_PASSWORD.
+    Write-Detail "Resetting admin password on $prPostgresServer..."
     az postgres flexible-server update `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --name $prPostgresServer `
         --admin-password $env:POSTGRES_ADMIN_PASSWORD
     if ($LASTEXITCODE -ne 0) {
@@ -527,113 +441,80 @@ else {
     Write-Ok "Admin password reset on $prPostgresServer"
 }
 
-# Create private endpoint for the PR Postgres server (if not already present)
-Write-Step "Ensuring private endpoint for PR PostgreSQL: $prPrivateEndpointName"
+# Add firewall rules for the PR PostgreSQL server.
+# Admin IPs: allow explicit admin access.
+# Container Apps subnet: allow all Container Apps in the prod environment to reach the PR database.
+Write-Step "Configuring PostgreSQL firewall rules for $prPostgresServer"
 
-$peExists = az network private-endpoint show `
-    --name $prPrivateEndpointName `
-    --resource-group $stagingRG `
-    --query name -o tsv 2>$null
+# Parse admin IPs from env var
+$adminIps = @($env:ADMIN_IP_ADDRESSES -split ',' | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
 
-if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($peExists)) {
-    Write-Ok "Private endpoint already exists: $prPrivateEndpointName"
-}
-else {
-    # Get the PR Postgres server resource ID
-    $prServerId = az postgres flexible-server show `
+$ruleIndex = 0
+foreach ($ip in $adminIps) {
+    Write-Detail "Adding admin IP firewall rule for $ip..."
+    az postgres flexible-server firewall-rule create `
+        --resource-group $prodRG `
         --name $prPostgresServer `
-        --resource-group $stagingRG `
-        --query id -o tsv 2>$null
-
-    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($prServerId)) {
-        Write-Fail "Could not retrieve PR PostgreSQL server ID"
-        exit 1
+        --rule-name "allow-admin-ip-$ruleIndex" `
+        --start-ip-address $ip `
+        --end-ip-address $ip 2>$null | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Ok "Added admin IP firewall rule: $ip"
     }
-
-    Write-Detail "Creating private endpoint $prPrivateEndpointName..."
-    az network private-endpoint create `
-        --name $prPrivateEndpointName `
-        --resource-group $stagingRG `
-        --vnet-name 'vnet-techhub-staging' `
-        --subnet 'snet-private-endpoints' `
-        --private-connection-resource-id $prServerId `
-        --group-ids postgresqlServer `
-        --connection-name "$($prPrivateEndpointName)-conn"
-    if ($LASTEXITCODE -ne 0) {
-        Write-Fail "Failed to create private endpoint for PR PostgreSQL"
-        exit 1
+    else {
+        Write-Warn "Failed to add admin IP rule for $ip — continuing"
     }
-
-    Write-Ok "Private endpoint created: $prPrivateEndpointName"
+    $ruleIndex++
 }
 
-# Register the private endpoint in the shared PostgreSQL private DNS zone via a DNS zone group.
-# This is equivalent to the Bicep 'privateDnsZoneGroups' resource used by prod/staging PEs —
-# Azure automatically manages the A record (create on attach, update on IP change, delete on
-# PE teardown). No manual record-set management needed.
-Write-Step "Ensuring DNS zone group for PR PostgreSQL private endpoint"
-
-$privateDnsZoneName = 'privatelink.postgres.database.azure.com'
-$sharedRG = 'rg-techhub-shared'
-
-$dnsZoneId = az network private-dns zone show `
-    --resource-group $sharedRG `
-    --name $privateDnsZoneName `
-    --query id -o tsv 2>$null
-
-if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($dnsZoneId)) {
-    Write-Fail "Could not retrieve private DNS zone ID for '$privateDnsZoneName' in '$sharedRG'"
-    exit 1
-}
-
-# Create or update the DNS zone group on the PE (idempotent).
-az network private-endpoint dns-zone-group create `
-    --resource-group $stagingRG `
-    --endpoint-name $prPrivateEndpointName `
-    --name 'default' `
-    --private-dns-zone $dnsZoneId `
-    --zone-name 'privatelink-postgres-database-azure-com'
+# Container Apps subnet rule
+Write-Detail "Adding Container Apps subnet firewall rule ($containerAppsSubnetStartIp - $containerAppsSubnetEndIp)..."
+az postgres flexible-server firewall-rule create `
+    --resource-group $prodRG `
+    --name $prPostgresServer `
+    --rule-name "allow-container-apps-subnet" `
+    --start-ip-address $containerAppsSubnetStartIp `
+    --end-ip-address $containerAppsSubnetEndIp
 if ($LASTEXITCODE -ne 0) {
-    Write-Fail "Failed to create DNS zone group on '$prPrivateEndpointName'"
+    Write-Fail "Failed to add Container Apps subnet firewall rule"
     exit 1
 }
-
-Write-Ok "DNS zone group configured — A record auto-managed for $prPostgresServer"
+Write-Ok "Container Apps subnet firewall rule added"
 
 # ============================================================================
-# DEPLOY — Query staging infrastructure
+# DEPLOY — Query production infrastructure
 # ============================================================================
 
-Write-Step "Querying staging infrastructure"
+Write-Step "Querying production infrastructure"
 
 # Get Container Apps Environment ID
 $envId = az containerapp env show `
-    --name $stagingEnvName `
-    --resource-group $stagingRG `
+    --name $prodEnvName `
+    --resource-group $prodRG `
     --query id -o tsv 2>$null
 
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envId)) {
-    Write-Fail "Could not find staging Container Apps Environment '$stagingEnvName' in '$stagingRG'"
+    Write-Fail "Could not find production Container Apps Environment '$prodEnvName' in '$prodRG'"
     exit 1
 }
 Write-Ok "Container Apps Environment: $envId"
 
-# Get managed identity ID (used for ACR pull)
+# Get managed identity ID
 $identityId = az identity show `
-    --name $stagingIdentityName `
-    --resource-group $stagingRG `
+    --name $prodIdentityName `
+    --resource-group $prodRG `
     --query id -o tsv 2>$null
 
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($identityId)) {
-    Write-Fail "Could not find managed identity '$stagingIdentityName' in '$stagingRG'"
+    Write-Fail "Could not find managed identity '$prodIdentityName' in '$prodRG'"
     exit 1
 }
 Write-Ok "Managed Identity: $identityId"
 
 # Get Application Insights connection string
 $appInsightsConnString = az monitor app-insights component show `
-    --app $stagingAppInsightsName `
-    --resource-group $stagingRG `
+    --app $prodAppInsightsName `
+    --resource-group $prodRG `
     --query connectionString -o tsv 2>$null
 
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($appInsightsConnString)) {
@@ -644,17 +525,29 @@ else {
     Write-Ok "Application Insights: retrieved connection string"
 }
 
+# Read GitHub registry token from Key Vault (needed for Container Apps to pull from ghcr.io)
+Write-Detail "Reading GitHub registry token from Key Vault..."
+$ghcrToken = az keyvault secret show `
+    --vault-name $prodKeyVaultName `
+    --name 'techhub-github-registry-token' `
+    --query value -o tsv 2>$null
+
+if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($ghcrToken)) {
+    Write-Fail "Could not read 'techhub-github-registry-token' from Key Vault '$prodKeyVaultName'"
+    Write-Detail "Store the GitHub PAT (read:packages scope) in Key Vault before deploying PR previews."
+    exit 1
+}
+Write-Ok "GitHub registry token retrieved from Key Vault"
+
 # Compute the PR postgres FQDN and build the connection string.
-# After PITR restore, the admin password is reset to match POSTGRES_ADMIN_PASSWORD.
-# The connection string uses the private endpoint FQDN for VNet-internal access.
 $prPostgresFqdn = "$prPostgresServer.postgres.database.azure.com"
 $dbConnectionString = "Host=$prPostgresFqdn;Database=$prPostgresDb;Username=$prPostgresUser;Password=$($env:POSTGRES_ADMIN_PASSWORD);SSL Mode=Require"
 Write-Ok "PostgreSQL: $prPostgresFqdn"
 
 # Get the Container Apps Environment default domain (to compute expected FQDNs)
 $envDefaultDomain = az containerapp env show `
-    --name $stagingEnvName `
-    --resource-group $stagingRG `
+    --name $prodEnvName `
+    --resource-group $prodRG `
     --query properties.defaultDomain -o tsv 2>$null
 
 if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envDefaultDomain)) {
@@ -664,7 +557,6 @@ if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($envDefaultDomain)) {
 Write-Ok "Environment default domain: $envDefaultDomain"
 
 # Pre-compute expected FQDNs (used for CORS and ApiBaseUrl)
-# Internal apps use the "internal." prefix in their FQDN within the environment
 $apiPrFqdn = "$apiAppName.internal.$envDefaultDomain"
 $webPrFqdn = "$webAppName.$envDefaultDomain"
 
@@ -681,10 +573,7 @@ $apiEnvVars = @(
     "AppSettings__BaseUrl=https://$webPrFqdn",
     "TECHHUB_TMP=/tmp/techhub",
     "Cors__AllowedOrigins__0=https://$webPrFqdn",
-    # Disable scheduled background jobs in PR environments. The PITR-restored database inherits
-    # the production background_job_settings where both jobs are enabled=true. These env vars
-    # short-circuit IsEnabledAsync before it even queries the database, so scheduled runs never
-    # fire. Manual admin-triggered runs bypass IsEnabledAsync and are unaffected.
+    # Disable scheduled background jobs in PR environments.
     "ContentProcessor__Enabled=false",
     "RoundupGenerator__Enabled=false"
 )
@@ -704,17 +593,14 @@ $webEnvVars = @(
 
 Write-Step "Deploying API Container App: $apiAppName"
 
-$apiExists = Get-ContainerAppExists -Name $apiAppName -ResourceGroup $stagingRG
+$apiExists = Get-ContainerAppExists -Name $apiAppName -ResourceGroup $prodRG
 
 if ($apiExists) {
     Write-Detail "Updating existing $apiAppName (image + env vars + secrets)..."
 
-    # Always refresh the DB connection string secret to ensure it matches the current
-    # POSTGRES_ADMIN_PASSWORD. The create path sets the secret initially, but subsequent
-    # deploys must update it in case the password rotated or the PITR server was recreated.
     az containerapp secret set `
         --name $apiAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --secrets "db-connection-string=$dbConnectionString" 2>$null | Out-Null
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update API Container App secrets"
@@ -723,7 +609,7 @@ if ($apiExists) {
 
     az containerapp update `
         --name $apiAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --image $apiImage `
         --min-replicas 0 `
         --max-replicas 1 `
@@ -738,14 +624,15 @@ else {
 
     az containerapp create `
         --name $apiAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --environment $envId `
         --image $apiImage `
         --ingress internal `
         --target-port 8080 `
         --transport http `
         --registry-server $registryServer `
-        --registry-identity $identityId `
+        --registry-username $GithubRegistryUsername `
+        --registry-password $ghcrToken `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
@@ -760,12 +647,11 @@ else {
 
 Write-Ok "API Container App deployed: $apiAppName"
 
-# Set the Container Apps-level ingress CORS policy (separate from the ASP.NET CORS middleware
-# configured via env vars). Both layers are needed to allow cross-origin requests.
+# Set the Container Apps-level ingress CORS policy
 Write-Detail "Updating API ingress CORS policy..."
 az containerapp ingress cors update `
     --name $apiAppName `
-    --resource-group $stagingRG `
+    --resource-group $prodRG `
     --allowed-origins "https://$webPrFqdn" "https://*.azurecontainerapps.io" `
     --allowed-methods GET POST PUT DELETE OPTIONS `
     --allowed-headers "*" `
@@ -780,7 +666,7 @@ else {
 # Retrieve the actual API FQDN (may differ from computed)
 $actualApiPrFqdn = az containerapp show `
     --name $apiAppName `
-    --resource-group $stagingRG `
+    --resource-group $prodRG `
     --query properties.configuration.ingress.fqdn -o tsv 2>$null
 if (-not [string]::IsNullOrWhiteSpace($actualApiPrFqdn)) {
     $apiPrFqdn = $actualApiPrFqdn
@@ -794,14 +680,14 @@ if (-not [string]::IsNullOrWhiteSpace($actualApiPrFqdn)) {
 
 Write-Step "Deploying Web Container App: $webAppName"
 
-$webExists = Get-ContainerAppExists -Name $webAppName -ResourceGroup $stagingRG
+$webExists = Get-ContainerAppExists -Name $webAppName -ResourceGroup $prodRG
 
 if ($webExists) {
     Write-Detail "Updating existing $webAppName (image + env vars)..."
 
     az containerapp update `
         --name $webAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --image $webImage `
         --min-replicas 0 `
         --max-replicas 1 `
@@ -816,14 +702,15 @@ else {
 
     az containerapp create `
         --name $webAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --environment $envId `
         --image $webImage `
         --ingress external `
         --target-port 8080 `
         --transport auto `
         --registry-server $registryServer `
-        --registry-identity $identityId `
+        --registry-username $GithubRegistryUsername `
+        --registry-password $ghcrToken `
         --cpu 0.5 `
         --memory 1Gi `
         --min-replicas 0 `
@@ -842,19 +729,10 @@ Write-Ok "Web Container App deployed: $webAppName"
 # pre-load). Without a startup probe, Container Apps' default TCP liveness probe kills the
 # container after ~30s. The startup probe gives ~3.4 min tolerance to pass /alive.
 Write-Step "Configuring startup probe on Web Container App"
-Set-WebStartupProbe -AppName $webAppName -ResourceGroup $stagingRG
+Set-WebStartupProbe -AppName $webAppName -ResourceGroup $prodRG
 
 # Enable sticky sessions for Blazor Server — required for SignalR circuit to work correctly.
-# Without session affinity, WebSocket connections may route to a different container instance
-# than the one that rendered the SSR HTML, breaking the Blazor Server interactive circuit.
-# az containerapp create does not support --sticky-sessions, so we always set it via ingress update.
 Write-Step "Enabling sticky sessions on Web Container App"
-#
-# The startup probe update can leave the app in a short-lived provisioning operation.
-# Retry on ContainerAppOperationInProgress so we still enforce sticky sessions instead of
-# failing immediately on a transient Azure control-plane race.
-# 90s gives enough room for the prior startup-probe update to finish provisioning;
-# 5s retry cadence balances responsiveness with API throttling/noise.
 $stickySetTimeoutSeconds = 90
 $stickySetRetryDelaySeconds = 5
 $stickySetDeadline = (Get-Date).AddSeconds($stickySetTimeoutSeconds)
@@ -862,7 +740,7 @@ $stickySessionsEnabled = $false
 while ((Get-Date) -lt $stickySetDeadline) {
     $stickySetOutput = az containerapp ingress sticky-sessions set `
         --name $webAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --affinity sticky 2>&1
     if ($LASTEXITCODE -eq 0) {
         $stickySessionsEnabled = $true
@@ -888,14 +766,13 @@ if (-not $stickySessionsEnabled) {
 }
 Write-Ok "Sticky sessions set — waiting for propagation..."
 
-# Poll until the ingress affinity is confirmed as 'sticky'. The az CLI call returns quickly
-# but the setting may not yet be reflected in the resource — give it up to 60 seconds.
+# Poll until the ingress affinity is confirmed as 'sticky'.
 $stickyDeadline = (Get-Date).AddSeconds(60)
 $stickyConfirmed = $false
 while ((Get-Date) -lt $stickyDeadline) {
     $affinity = az containerapp show `
         --name $webAppName `
-        --resource-group $stagingRG `
+        --resource-group $prodRG `
         --query "properties.configuration.ingress.stickySessions.affinity" `
         -o tsv 2>$null
     if ($affinity -eq 'sticky') {
@@ -913,7 +790,7 @@ Write-Ok "Sticky sessions confirmed active (affinity=sticky)"
 # Get the actual web FQDN
 $webFqdn = az containerapp show `
     --name $webAppName `
-    --resource-group $stagingRG `
+    --resource-group $prodRG `
     --query properties.configuration.ingress.fqdn -o tsv 2>$null
 
 if ([string]::IsNullOrWhiteSpace($webFqdn)) {
@@ -924,11 +801,6 @@ if ([string]::IsNullOrWhiteSpace($webFqdn)) {
 Write-Ok "Web FQDN: $webFqdn"
 
 # Write output for GitHub Actions
-# NOTE: web-url is intentionally NOT written here. The PR number portion of the URL
-# may coincide with a substring of a registered secret (e.g. POSTGRES_ADMIN_PASSWORD),
-# causing GitHub Actions to mask it in $GITHUB_OUTPUT and corrupt the value. Instead,
-# we output the CAE default domain (which contains no secret-sensitive content) and let
-# the consuming job reconstruct the full URL from github.event.pull_request.number.
 if ($env:GITHUB_OUTPUT) {
     "cae-default-domain=$envDefaultDomain" | Out-File -Append -FilePath $env:GITHUB_OUTPUT
     Write-Ok "Written cae-default-domain to GITHUB_OUTPUT"
@@ -938,49 +810,12 @@ if ($env:GITHUB_OUTPUT) {
 # VERSION WAIT + SMOKE TESTS
 # ============================================================================
 
-# The /version endpoint only responds once Kestrel finishes startup. Because Program.cs
-# blocks Kestrel until the section cache is loaded from the API, a successful /version
-# response also confirms the API is up and the full Web → API → DB chain works.
-# This replaces the two-phase /alive + homepage warmup loop with a single readiness gate.
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 & (Join-Path $scriptDir 'Wait-ForLiveVersion.ps1') -WebFqdn $webFqdn -Tag $Tag
 if ($LASTEXITCODE -ne 0) {
-    Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $stagingRG
-    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $stagingRG
+    Write-ContainerAppDiagnostics -AppName $webAppName -ResourceGroup $prodRG
+    Write-ContainerAppDiagnostics -AppName $apiAppName -ResourceGroup $prodRG
     exit 1
-}
-
-# New revision is healthy — clean up old ACR images for this PR (keep only the tag just deployed).
-# Done AFTER warmup so the old revision's image is still pullable if the new one fails to start.
-Write-Step "Cleaning up old ACR images for PR #$PrNumber (keeping: $Tag)"
-$prTagFilter = "pr-$PrNumber-"
-foreach ($repo in @('techhub-api', 'techhub-web')) {
-    $oldTags = az acr repository show-tags `
-        --name $RegistryName `
-        --repository $repo `
-        --query "[?starts_with(@, '$prTagFilter') && @ != '$Tag']" `
-        -o tsv 2>$null
-
-    if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($oldTags)) {
-        Write-Detail "No old tags to clean up for $repo"
-        continue
-    }
-
-    foreach ($oldTag in $oldTags -split "`n") {
-        $oldTag = $oldTag.Trim()
-        if ([string]::IsNullOrWhiteSpace($oldTag)) { continue }
-        Write-Detail "Deleting old ${repo}:$oldTag..."
-        az acr repository delete `
-            --name $RegistryName `
-            --image "${repo}:$oldTag" `
-            --yes 2>$null | Out-Null
-        if ($LASTEXITCODE -eq 0) {
-            Write-Ok "Deleted old ${repo}:$oldTag"
-        }
-        else {
-            Write-Warn "Could not delete ${repo}:$oldTag — skipping"
-        }
-    }
 }
 
 # ============================================================================
@@ -999,7 +834,5 @@ Write-Host "  Web URL     : https://$webFqdn" -ForegroundColor Gray
 Write-Host "===============================================================" -ForegroundColor DarkCyan
 Write-Host ""
 
-# Best-effort cleanup steps above may leave a non-zero native-command exit code in
-# $LASTEXITCODE even though deploy/readiness/smoke checks succeeded. Exit explicitly
-# to prevent false-negative GitHub Actions failures on successful deploys.
+# Exit explicitly to prevent false-negative GitHub Actions failures on successful deploys.
 exit 0

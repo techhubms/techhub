@@ -22,9 +22,6 @@ param modelCapacity int = 100
 @description('Tags applied to the AI Foundry account')
 param tags object = {}
 
-@description('Admin IP addresses allowed to reach the AI Foundry endpoint over the public internet. Container Apps always access it via the private endpoint and are unaffected by this list.')
-param adminIpAddresses string[] = []
-
 // Azure AI Foundry Account (AIServices)
 resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   name: openAiName
@@ -36,13 +33,12 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   kind: 'AIServices'
   properties: {
     customSubDomainName: openAiName
-    // Public access left enabled so admin IPs (ipRules below) can reach the endpoint.
-    // Container Apps always access AI Foundry through the private endpoint in the spoke VNet.
-    // All other public traffic is denied by the defaultAction: Deny network ACL.
+    // Public access fully open — API key authentication is the security mechanism.
+    // Without a private endpoint, Container Apps reach the endpoint over the public internet.
     publicNetworkAccess: 'Enabled'
     networkAcls: {
-      defaultAction: 'Deny'
-      ipRules: [for ip in adminIpAddresses: { value: ip }]
+      defaultAction: 'Allow'
+      ipRules: []
     }
   }
 }
