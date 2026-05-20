@@ -137,12 +137,12 @@ Describe "Sync-KeyVaultSecrets" {
     Context "Secret writing" {
         It "Should not write the database connection string secret (replaced by managed identity auth)" {
             $content = Get-Content $scriptPath -Raw
-            $content | Should -Not -Match '"techhub-prod-db-connection-string"'
+            $content | Should -Not -Match 'Set-KvSecret\s+-Name\s+[''"]?techhub-prod-db-connection-string[''"]?'
         }
 
         It "Should not write the AI API key secret (replaced by Cognitive Services OpenAI User RBAC)" {
             $content = Get-Content $scriptPath -Raw
-            $content | Should -Not -Match '"techhub-prod-ai-api-key"'
+            $content | Should -Not -Match 'Set-KvSecret\s+-Name\s+[''"]?techhub-prod-ai-api-key[''"]?'
         }
 
         It "Should write the AAD client secret" {

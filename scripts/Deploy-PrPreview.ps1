@@ -134,13 +134,13 @@ function Write-Detail {
 
 function Get-ContainerAppExists {
     param([string]$Name, [string]$ResourceGroup)
-    $result = az containerapp show --name $Name --resource-group $ResourceGroup --query name -o tsv 2>$null
+    $result = az containerapp list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
 function Get-PostgresServerExists {
     param([string]$Name, [string]$ResourceGroup)
-    $result = az postgres flexible-server show --name $Name --resource-group $ResourceGroup --query name -o tsv 2>$null
+    $result = az postgres flexible-server list --resource-group $ResourceGroup --query "[?name=='$Name'].name | [0]" -o tsv 2>$null
     return ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($result))
 }
 
@@ -372,10 +372,10 @@ if ($Action -eq 'teardown') {
     }
 
     # Delete the per-PR managed identity
-    $prIdentityExists = az identity show `
-        --name $prManagedIdentityName `
+    $prIdentityExists = az identity list `
         --resource-group $prodRG `
-        --query id -o tsv 2>$null
+        --query "[?name=='$prManagedIdentityName'].id | [0]" `
+        --output tsv 2>$null
     if (-not [string]::IsNullOrWhiteSpace($prIdentityExists)) {
         Write-Detail "Deleting per-PR managed identity $prManagedIdentityName..."
         az identity delete `
@@ -453,10 +453,14 @@ else {
 Write-Step "Provisioning per-PR managed identity: $prManagedIdentityName"
 
 # Check whether the identity already exists — redeploys for the same PR should be idempotent.
-$prIdentityJson = az identity show `
-    --name $prManagedIdentityName `
+$prIdentityJsonText = az identity list `
     --resource-group $prodRG `
-    --output json 2>$null | ConvertFrom-Json
+    --query "[?name=='$prManagedIdentityName'] | [0]" `
+    --output json 2>$null
+$prIdentityJson = $null
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($prIdentityJsonText) -and $prIdentityJsonText -ne 'null') {
+    $prIdentityJson = $prIdentityJsonText | ConvertFrom-Json
+}
 
 if ($LASTEXITCODE -eq 0 -and $null -ne $prIdentityJson -and $prIdentityJson.id) {
     Write-Ok "Managed identity already exists: $prManagedIdentityName (reusing)"
@@ -499,10 +503,14 @@ Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer...
 
 # Check if the admin is already registered — redeploys for the same PR should be idempotent.
 # List all admins and look for one with our principal ID to avoid a double-create failure.
-$existingAdmins = az postgres flexible-server ad-admin list `
+$existingAdminsJson = az postgres flexible-server ad-admin list `
     --server-name $prPostgresServer `
     --resource-group $prodRG `
-    --output json 2>$null | ConvertFrom-Json
+    --output json 2>$null
+$existingAdmins = @()
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingAdminsJson) -and $existingAdminsJson -ne 'null') {
+    $existingAdmins = @($existingAdminsJson | ConvertFrom-Json)
+}
 
 $adminAlreadyRegistered = $LASTEXITCODE -eq 0 -and
     $existingAdmins -and
@@ -569,19 +577,50 @@ foreach ($ip in $adminIps) {
     $ruleIndex++
 }
 
-# Container Apps subnet rule
-Write-Detail "Adding Container Apps subnet firewall rule ($containerAppsSubnetStartIp - $containerAppsSubnetEndIp)..."
-az postgres flexible-server firewall-rule create `
+# Container Apps subnet rule (idempotent)
+$containerAppsSubnetRuleName = 'allow-container-apps-subnet'
+$existingContainerAppsSubnetRuleJson = az postgres flexible-server firewall-rule list `
     --resource-group $prodRG `
     --name $prPostgresServer `
-    --rule-name "allow-container-apps-subnet" `
-    --start-ip-address $containerAppsSubnetStartIp `
-    --end-ip-address $containerAppsSubnetEndIp
-if ($LASTEXITCODE -ne 0) {
-    Write-Fail "Failed to add Container Apps subnet firewall rule"
-    exit 1
+    --query "[?name=='$containerAppsSubnetRuleName'] | [0]" `
+    --output json 2>$null
+$existingContainerAppsSubnetRule = $null
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingContainerAppsSubnetRuleJson) -and $existingContainerAppsSubnetRuleJson -ne 'null') {
+    $existingContainerAppsSubnetRule = $existingContainerAppsSubnetRuleJson | ConvertFrom-Json
 }
-Write-Ok "Container Apps subnet firewall rule added"
+
+if ($existingContainerAppsSubnetRule -and
+    $existingContainerAppsSubnetRule.startIpAddress -eq $containerAppsSubnetStartIp -and
+    $existingContainerAppsSubnetRule.endIpAddress -eq $containerAppsSubnetEndIp) {
+    Write-Ok "Container Apps subnet firewall rule already configured"
+}
+else {
+    if ($existingContainerAppsSubnetRule) {
+        Write-Detail "Replacing stale Container Apps subnet firewall rule..."
+        az postgres flexible-server firewall-rule delete `
+            --resource-group $prodRG `
+            --name $prPostgresServer `
+            --rule-name $containerAppsSubnetRuleName `
+            --yes 2>$null | Out-Null
+        if ($LASTEXITCODE -ne 0) {
+            Write-Fail "Failed to remove existing Container Apps subnet firewall rule"
+            exit 1
+        }
+    }
+
+    Write-Detail "Adding Container Apps subnet firewall rule ($containerAppsSubnetStartIp - $containerAppsSubnetEndIp)..."
+    az postgres flexible-server firewall-rule create `
+        --resource-group $prodRG `
+        --name $prPostgresServer `
+        --rule-name $containerAppsSubnetRuleName `
+        --start-ip-address $containerAppsSubnetStartIp `
+        --end-ip-address $containerAppsSubnetEndIp
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to add Container Apps subnet firewall rule"
+        exit 1
+    }
+    Write-Ok "Container Apps subnet firewall rule added"
+}
 
 # ============================================================================
 # DEPLOY — Query production infrastructure
@@ -710,6 +749,33 @@ if ($apiExists) {
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to update API Container App"
         exit 1
+    }
+
+    # Ensure this app only has the PR identity to avoid ambiguous DefaultAzureCredential selection.
+    $apiIdentityStateJson = az containerapp identity show `
+        --name $apiAppName `
+        --resource-group $prodRG `
+        --output json 2>$null
+    if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($apiIdentityStateJson)) {
+        $apiIdentityState = $apiIdentityStateJson | ConvertFrom-Json
+        $assignedIdentityIds = @()
+        if ($apiIdentityState.PSObject.Properties.Name -contains 'userAssignedIdentities' -and $apiIdentityState.userAssignedIdentities) {
+            $assignedIdentityIds = @($apiIdentityState.userAssignedIdentities.PSObject.Properties.Name)
+        }
+
+        foreach ($assignedIdentityId in $assignedIdentityIds) {
+            if ($assignedIdentityId -ne $prIdentityId) {
+                Write-Detail "Removing stale managed identity from ${apiAppName}: $assignedIdentityId"
+                az containerapp identity remove `
+                    --name $apiAppName `
+                    --resource-group $prodRG `
+                    --user-assigned $assignedIdentityId | Out-Null
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Fail "Failed to remove stale managed identity from $apiAppName"
+                    exit 1
+                }
+            }
+        }
     }
 
     # Ensure the PR identity is assigned (idempotent — safe to re-run)

@@ -17,6 +17,7 @@ concurrency:
 permissions:
   contents: read
   id-token: write
+  packages: read
   pull-requests: write
 
 jobs:
@@ -24,7 +25,7 @@ jobs:
     name: Redeploy PR #${{ inputs.pr_number }}
     runs-on: ubuntu-latest
     environment:
-      name: staging
+      name: pr-preview
 
     steps:
       - name: Checkout code
@@ -37,38 +38,26 @@ jobs:
           tenant-id: ${{ vars.AZURE_TENANT_ID }}
           subscription-id: ${{ vars.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Find latest ACR image tag for PR
+      - name: Find latest GHCR image tag for PR
         id: find-tag
         shell: pwsh
         run: |
           $prNumber = '${{ inputs.pr_number }}'
-          $registryName = 'crtechhubms'
           $tagPrefix = "pr-${prNumber}-"
 
-          # List tags for techhub-api ordered by creation time descending
-          $tags = az acr repository show-tags `
-            --name $registryName `
-            --repository 'techhub-api' `
-            --orderby time_desc `
-            --query "[?starts_with(@, '${tagPrefix}')]" `
-            -o tsv 2>$null
+          # Query GHCR package versions and select the latest PR tag by lexical order
+          # (tag format is pr-{number}-yyyyMMddHHmmss).
+          $latestTag = gh api `
+            "/orgs/${{ github.repository_owner }}/packages/container/techhub-api/versions?per_page=100" `
+            --jq "[.[].metadata.container.tags[]? | select(startswith(\"${tagPrefix}\"))] | sort | reverse | .[0]" 2>$null
+          $latestTag = $latestTag.Trim().Trim('"')
 
-          if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($tags)) {
-            Write-Host "No images found for PR #${prNumber} in ACR ($registryName)." -ForegroundColor Red
+          if ($LASTEXITCODE -ne 0 -or [string]::IsNullOrWhiteSpace($latestTag) -or $latestTag -eq "null") {
+            Write-Host "No GHCR images found for PR #${prNumber}." -ForegroundColor Red
             Write-Host "" -ForegroundColor Red
             Write-Host "Options:" -ForegroundColor Yellow
             Write-Host "  1. Push a new commit to the PR branch — CI will build new images and deploy automatically." -ForegroundColor Yellow
             Write-Host "  2. Verify the PR number is correct." -ForegroundColor Yellow
-            exit 1
-          }
-
-          # Take the most recent tag (first due to time_desc ordering)
-          $latestTag = ($tags -split "`n" |
-            Where-Object { $_ -match "^${tagPrefix}" } |
-            Select-Object -First 1).Trim()
-
-          if ([string]::IsNullOrWhiteSpace($latestTag)) {
-            Write-Host "No matching tags found for prefix '${tagPrefix}'." -ForegroundColor Red
             exit 1
           }
 
@@ -106,7 +95,7 @@ jobs:
           | **Image tag** | \`${TAG}\` |
 
           > [!NOTE]
-          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the staging Azure Container Apps Environment.
+          > The environment uses an isolated PostgreSQL database (cloned from production via PITR) and runs in the production Azure Container Apps Environment.
           > It will be automatically removed when this PR is closed.
           EOF
 

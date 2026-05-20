@@ -36,6 +36,7 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
     // Public access fully open — access is secured by the Cognitive Services OpenAI User RBAC role
     // assigned to id-techhub-prod (Container App managed identity) and to developer accounts.
     // Container Apps acquire an Entra token (cognitiveservices.azure.com scope) at runtime.
+    disableLocalAuth: true
     publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Allow'
@@ -94,6 +95,4 @@ resource modelDeployment 'Microsoft.CognitiveServices/accounts/deployments@2025-
 output openAiName string = openAiAccount.name
 output openAiEndpoint string = openAiAccount.properties.endpoint
 output openAiId string = openAiAccount.id
-@secure()
-output openAiApiKey string = openAiAccount.listKeys().key1
 output deploymentName string = modelDeployment.name
