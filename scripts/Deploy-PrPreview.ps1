@@ -503,7 +503,7 @@ Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer...
 
 # Check if the admin is already registered — redeploys for the same PR should be idempotent.
 # List all admins and look for one with our principal ID to avoid a double-create failure.
-$existingAdminsJson = az postgres flexible-server ad-admin list `
+$existingAdminsJson = az postgres flexible-server microsoft-entra-admin list `
     --server-name $prPostgresServer `
     --resource-group $prodRG `
     --output json 2>$null
@@ -520,7 +520,7 @@ if ($adminAlreadyRegistered) {
     Write-Ok "Entra admin already registered on $prPostgresServer (reusing)"
 }
 else {
-    az postgres flexible-server ad-admin create `
+    az postgres flexible-server microsoft-entra-admin create `
         --server-name $prPostgresServer `
         --resource-group $prodRG `
         --display-name $prManagedIdentityName `
