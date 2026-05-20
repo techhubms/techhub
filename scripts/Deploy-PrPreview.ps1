@@ -31,6 +31,10 @@
 .PARAMETER GithubRegistryUsername
     GitHub organization username for ghcr.io. Defaults to 'techhubms'.
 
+.PARAMETER GithubRegistryAuthUsername
+    GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account
+    that owns the 'techhub-github-registry-token' PAT stored in Key Vault. Defaults to GithubRegistryUsername.
+
 .EXAMPLE
     ./scripts/Deploy-PrPreview.ps1 -PrNumber 42 -Action deploy -Tag "pr-42-20250101120000"
     Deploy PR #42 preview environment.
@@ -52,7 +56,10 @@ param(
     [string]$Tag,
 
     [Parameter(Mandatory = $false)]
-    [string]$GithubRegistryUsername = 'techhubms'
+    [string]$GithubRegistryUsername = 'techhubms',
+
+    [Parameter(Mandatory = $false)]
+    [string]$GithubRegistryAuthUsername = $GithubRegistryUsername
 )
 
 $ErrorActionPreference = "Stop"
@@ -526,6 +533,24 @@ Write-Step "Configuring PostgreSQL firewall rules for $prPostgresServer"
 # Parse admin IPs from env var
 $adminIps = @($env:ADMIN_IP_ADDRESSES -split ',' | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })
 
+# Reconcile admin IP firewall rules: remove any stale allow-admin-ip-* rules from a previous
+# deploy so that IPs removed from ADMIN_IP_ADDRESSES do not remain permitted indefinitely.
+$existingAdminRuleNames = az postgres flexible-server firewall-rule list `
+    --resource-group $prodRG `
+    --name $prPostgresServer `
+    --query "[?starts_with(name, 'allow-admin-ip-')].name" `
+    --output tsv 2>$null
+if ($LASTEXITCODE -eq 0 -and -not [string]::IsNullOrWhiteSpace($existingAdminRuleNames)) {
+    foreach ($existingRuleName in ($existingAdminRuleNames -split "`n" | ForEach-Object { $_.Trim() } | Where-Object { -not [string]::IsNullOrWhiteSpace($_) })) {
+        az postgres flexible-server firewall-rule delete `
+            --resource-group $prodRG `
+            --name $prPostgresServer `
+            --rule-name $existingRuleName `
+            --yes 2>$null | Out-Null
+        Write-Detail "Removed stale admin IP firewall rule: $existingRuleName"
+    }
+}
+
 $ruleIndex = 0
 foreach ($ip in $adminIps) {
     Write-Detail "Adding admin IP firewall rule for $ip..."
@@ -709,7 +734,7 @@ else {
         --target-port 8080 `
         --transport http `
         --registry-server $registryServer `
-        --registry-username $GithubRegistryUsername `
+        --registry-username $GithubRegistryAuthUsername `
         --registry-password $ghcrToken `
         --user-assigned $prIdentityId `
         --cpu 0.5 `
@@ -788,7 +813,7 @@ else {
         --target-port 8080 `
         --transport auto `
         --registry-server $registryServer `
-        --registry-username $GithubRegistryUsername `
+        --registry-username $GithubRegistryAuthUsername `
         --registry-password $ghcrToken `
         --cpu 0.5 `
         --memory 1Gi `

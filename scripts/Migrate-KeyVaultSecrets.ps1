@@ -8,13 +8,15 @@
     (kv-techhub-shared) to the single production resource group architecture (kv-techhub-prod).
 
     Secrets migrated:
-        techhub-prod-db-connection-string     → techhub-prod-db-connection-string (same name)
-        techhub-prod-ai-api-key               → techhub-prod-ai-api-key (same name)
         techhub-prod-aad-client-secret        → techhub-prod-aad-client-secret (same name)
 
     Additionally copies the wildcard certificate secrets:
         wildcard-hub-ms    → wildcard-hub-ms
         wildcard-xebia-ms  → wildcard-xebia-ms
+
+    Secrets no longer migrated (replaced by managed identity / RBAC):
+        techhub-prod-db-connection-string   — removed; app uses Entra token auth
+        techhub-prod-ai-api-key             — removed; app uses Cognitive Services OpenAI User RBAC role
 
     Run this script ONCE after creating kv-techhub-prod and BEFORE deploying Container Apps
     that reference the production Key Vault. See the deployment order in the cost-reduction
@@ -176,8 +178,6 @@ Write-Ok "Target Key Vault accessible: $TargetKeyVaultName"
 Write-Step "Migrating application secrets"
 
 # Production secrets (already have correct names in old shared KV)
-Copy-KvSecret -SourceName 'techhub-prod-db-connection-string' -TargetName 'techhub-prod-db-connection-string'
-Copy-KvSecret -SourceName 'techhub-prod-ai-api-key' -TargetName 'techhub-prod-ai-api-key'
 Copy-KvSecret -SourceName 'techhub-prod-aad-client-secret' -TargetName 'techhub-prod-aad-client-secret'
 
 # ============================================================================
@@ -201,7 +201,7 @@ Write-Host "  Target : $TargetKeyVaultName" -ForegroundColor Gray
 Write-Host ""
 Write-Host "  Next steps:" -ForegroundColor Gray
 Write-Host "  1. Store the GitHub PAT in the target Key Vault:" -ForegroundColor Gray
-Write-Host "     az keyvault secret set --vault-name $TargetKeyVaultName \\" -ForegroundColor Gray
+Write-Host "     az keyvault secret set --vault-name $($TargetKeyVaultName) ``" -ForegroundColor Gray
 Write-Host "       --name techhub-github-registry-token --value <PAT>" -ForegroundColor Gray
 Write-Host "  2. Deploy production infrastructure: ./scripts/Deploy-Infrastructure.ps1 -Mode deploy" -ForegroundColor Gray
 Write-Host "  3. Verify production health: https://tech.hub.ms/" -ForegroundColor Gray

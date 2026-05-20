@@ -75,7 +75,7 @@ param postgresAdminPassword string = ''
 param openAiName string = 'oai-techhub-prod'
 
 @description('Azure AI Foundry model capacity (TPM in thousands)')
-param openAiModelCapacity int = 200
+param openAiModelCapacity int = 100
 
 @description('Comma-separated admin IP addresses for PostgreSQL and Key Vault firewall rules (e.g. "1.2.3.4,5.6.7.8")')
 @minLength(7)

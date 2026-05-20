@@ -16,6 +16,10 @@
 .PARAMETER GithubRegistryUsername
     GitHub organization username for ghcr.io. Defaults to 'techhubms'.
 
+.PARAMETER GithubRegistryAuthUsername
+    GitHub username of the PAT owner used to authenticate with ghcr.io. Required when GHCR_PAT
+    is used locally and GITHUB_ACTOR is not set. In CI, GITHUB_ACTOR is used automatically.
+
 .PARAMETER SkipBuild
     Skip building Docker images (use existing images in the registry).
 
@@ -51,6 +55,9 @@ param(
 
     [Parameter(Mandatory = $false)]
     [string]$GithubRegistryUsername = 'techhubms',
+
+    [Parameter(Mandatory = $false)]
+    [string]$GithubRegistryAuthUsername = '',
 
     [switch]$SkipBuild,
     [switch]$SkipPush,
@@ -150,9 +157,20 @@ if (-not $SkipPush) {
 
     Write-Step "Authenticating with GitHub Container Registry"
     # When GITHUB_TOKEN is used (CI), Docker username must match the workflow actor (token owner).
-    # When GHCR_PAT is used (local), the PAT owner is always the person who created the token,
-    # so use GITHUB_ACTOR if set, otherwise fall back to GithubRegistryUsername.
-    $loginUsername = if ($env:GITHUB_ACTOR) { $env:GITHUB_ACTOR } else { $GithubRegistryUsername }
+    # When GHCR_PAT is used (local), the PAT owner must be supplied via GithubRegistryAuthUsername
+    # (or GITHUB_ACTOR if set). The org/namespace (GithubRegistryUsername) is NOT the token owner
+    # and will cause a 401 if used for auth.
+    $loginUsername = if ($env:GITHUB_ACTOR) {
+        $env:GITHUB_ACTOR
+    }
+    elseif (-not [string]::IsNullOrWhiteSpace($GithubRegistryAuthUsername)) {
+        $GithubRegistryAuthUsername
+    }
+    else {
+        Write-Fail "Cannot determine ghcr.io login username: GITHUB_ACTOR is not set and -GithubRegistryAuthUsername was not provided."
+        Write-Detail "Locally: set GHCR_PAT and pass -GithubRegistryAuthUsername <your-github-username>."
+        exit 1
+    }
     $ghcrToken | docker login ghcr.io --username $loginUsername --password-stdin
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to authenticate with ghcr.io"
