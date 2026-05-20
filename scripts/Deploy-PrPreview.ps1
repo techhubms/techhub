@@ -491,13 +491,17 @@ Start-Sleep -Seconds $entraIdPropagationDelaySecs
 Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer..."
 
 # Check if the admin is already registered — redeploys for the same PR should be idempotent.
-$existingAdmin = az postgres flexible-server ad-admin show `
+# List all admins and look for one with our principal ID to avoid a double-create failure.
+$existingAdmins = az postgres flexible-server ad-admin list `
     --server-name $prPostgresServer `
     --resource-group $prodRG `
-    --object-id $prIdentityPrincipalId `
-    --output json 2>$null
+    --output json 2>$null | ConvertFrom-Json
 
-if ($LASTEXITCODE -eq 0 -and $existingAdmin) {
+$adminAlreadyRegistered = $LASTEXITCODE -eq 0 -and
+    $existingAdmins -and
+    (@($existingAdmins | Where-Object { $_.objectId -eq $prIdentityPrincipalId }).Count -gt 0)
+
+if ($adminAlreadyRegistered) {
     Write-Ok "Entra admin already registered on $prPostgresServer (reusing)"
 }
 else {

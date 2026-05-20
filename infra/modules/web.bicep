@@ -5,7 +5,7 @@ param containerAppsEnvironmentId string
 @description('GitHub Container Registry organization/namespace for image names (e.g. techhubms → ghcr.io/techhubms/...)')
 param githubRegistryUsername string
 
-@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created the PAT stored in Key Vault. Defaults to githubRegistryUsername if not specified.')
+@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created the PAT stored in Key Vault.')
 param githubRegistryAuthUsername string = githubRegistryUsername
 
 @description('User-assigned managed identity resource ID (used to access Key Vault secrets)')
