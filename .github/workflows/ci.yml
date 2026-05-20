@@ -566,7 +566,7 @@ jobs:
     needs: pr-preview-build-and-push
     if: github.event.action != 'closed'
     environment:
-      name: production
+      name: pr-preview
       url: "https://ca-techhub-web-pr-${{ github.event.pull_request.number }}.${{ steps.deploy.outputs.cae-default-domain }}"
     concurrency:
       group: pr-preview-${{ github.event.pull_request.number }}

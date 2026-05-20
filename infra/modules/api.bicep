@@ -2,8 +2,11 @@ param location string
 param containerAppName string
 param containerAppsEnvironmentId string
 
-@description('GitHub Container Registry username (used to pull images from ghcr.io)')
+@description('GitHub Container Registry organization/namespace for image names (e.g. techhubms → ghcr.io/techhubms/...)')
 param githubRegistryUsername string
+
+@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created the PAT stored in Key Vault. Defaults to githubRegistryUsername if not specified.')
+param githubRegistryAuthUsername string = githubRegistryUsername
 
 @description('User-assigned managed identity resource ID (used to access Key Vault secrets)')
 param identityId string
@@ -123,8 +126,10 @@ resource api 'Microsoft.App/containerApps@2025-07-01' = {
       registries: [
         {
           // Pull images from GitHub Container Registry using a PAT stored in Key Vault.
+          // username must match the PAT owner (githubRegistryAuthUsername), which may differ
+          // from the image namespace (githubRegistryUsername / the org).
           server: 'ghcr.io'
-          username: githubRegistryUsername
+          username: githubRegistryAuthUsername
           passwordSecretRef: 'ghcr-token'
         }
       ]

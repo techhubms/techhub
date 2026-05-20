@@ -45,10 +45,6 @@ param(
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
 
-if (-not $PostgresHost) {
-    $PostgresHost = "psql-techhub-prod.postgres.database.azure.com"
-}
-
 function Set-KvSecret {
     param(
         [Parameter(Mandatory = $true)][string]$Name,

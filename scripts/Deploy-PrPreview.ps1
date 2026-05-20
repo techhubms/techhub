@@ -445,13 +445,25 @@ else {
 
 Write-Step "Provisioning per-PR managed identity: $prManagedIdentityName"
 
-$prIdentityJson = az identity create `
+# Check whether the identity already exists — redeploys for the same PR should be idempotent.
+$prIdentityJson = az identity show `
     --name $prManagedIdentityName `
     --resource-group $prodRG `
-    --output json | ConvertFrom-Json
-if ($LASTEXITCODE -ne 0 -or $null -eq $prIdentityJson) {
-    Write-Fail "Failed to create managed identity '$prManagedIdentityName'"
-    exit 1
+    --output json 2>$null | ConvertFrom-Json
+
+if ($LASTEXITCODE -eq 0 -and $null -ne $prIdentityJson -and $prIdentityJson.id) {
+    Write-Ok "Managed identity already exists: $prManagedIdentityName (reusing)"
+}
+else {
+    $prIdentityJson = az identity create `
+        --name $prManagedIdentityName `
+        --resource-group $prodRG `
+        --output json | ConvertFrom-Json
+    if ($LASTEXITCODE -ne 0 -or $null -eq $prIdentityJson) {
+        Write-Fail "Failed to create managed identity '$prManagedIdentityName'"
+        exit 1
+    }
+    Write-Ok "Managed identity created: $prManagedIdentityName"
 }
 $prIdentityId = $prIdentityJson.id
 $prIdentityPrincipalId = $prIdentityJson.principalId
@@ -477,17 +489,30 @@ Write-Ok "Entra auth enabled on $prPostgresServer (password auth disabled)"
 Write-Detail "Waiting for managed identity to propagate in Entra ID..."
 Start-Sleep -Seconds $entraIdPropagationDelaySecs
 Write-Detail "Setting PR managed identity as Entra admin on $prPostgresServer..."
-az postgres flexible-server ad-admin create `
+
+# Check if the admin is already registered — redeploys for the same PR should be idempotent.
+$existingAdmin = az postgres flexible-server ad-admin show `
     --server-name $prPostgresServer `
     --resource-group $prodRG `
-    --display-name $prManagedIdentityName `
     --object-id $prIdentityPrincipalId `
-    --type ServicePrincipal
-if ($LASTEXITCODE -ne 0) {
-    Write-Fail "Failed to set Entra admin on $prPostgresServer"
-    exit 1
+    --output json 2>$null
+
+if ($LASTEXITCODE -eq 0 -and $existingAdmin) {
+    Write-Ok "Entra admin already registered on $prPostgresServer (reusing)"
 }
-Write-Ok "PR managed identity registered as Entra admin on $prPostgresServer"
+else {
+    az postgres flexible-server ad-admin create `
+        --server-name $prPostgresServer `
+        --resource-group $prodRG `
+        --display-name $prManagedIdentityName `
+        --object-id $prIdentityPrincipalId `
+        --type ServicePrincipal
+    if ($LASTEXITCODE -ne 0) {
+        Write-Fail "Failed to set Entra admin on $prPostgresServer"
+        exit 1
+    }
+    Write-Ok "PR managed identity registered as Entra admin on $prPostgresServer"
+}
 
 # Add firewall rules for the PR PostgreSQL server.
 # Admin IPs: allow explicit admin access.

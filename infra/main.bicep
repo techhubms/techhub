@@ -102,8 +102,11 @@ param acmeDnsZoneName string = 'acme.hub.ms'
 @description('Domains that need ACME-delegated wildcard certificate renewal')
 param acmeDelegatedDomains string[] = ['hub.ms', 'xebia.ms']
 
-@description('GitHub organization username for ghcr.io registry (used to pull images from ghcr.io)')
+@description('GitHub organization username for ghcr.io registry (used as the image namespace: ghcr.io/{githubRegistryUsername}/...)')
 param githubRegistryUsername string = 'techhubms'
+
+@description('GitHub username of the PAT owner used to authenticate with ghcr.io. Must match the account that created techhub-github-registry-token in Key Vault. Defaults to githubRegistryUsername.')
+param githubRegistryAuthUsername string = githubRegistryUsername
 
 @description('Common tags applied to all resources managed by this template')
 param commonTags object = {
@@ -246,7 +249,7 @@ var aadClientSecretSecretName = 'techhub-prod-aad-client-secret'
 var dbConnectionString = 'Host=${postgres.outputs.serverFqdn};Database=${postgres.outputs.databaseName};Username=${prodIdentityName};SSL Mode=Require'
 
 // Grant Key Vault Secrets User to the managed identity on the prod Key Vault.
-// Required for Container App KV-reference secrets (db connection string, AI key, AAD secret, ghcr.io token).
+// Required for Container App KV-reference secrets (AAD client secret, ghcr.io token).
 module kvSecretsUserRole './modules/kvSecretsUserRole.bicep' = {
   scope: resourceGroup
   name: 'kvSecretsUserRole-prod'
@@ -317,6 +320,7 @@ module apiApp './modules/api.bicep' = {
     containerAppName: apiAppName
     containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
     githubRegistryUsername: githubRegistryUsername
+    githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: identity.outputs.identityId
     imageTag: apiImageTag
     appInsightsConnectionString: monitoring.outputs.appInsightsConnectionString
@@ -341,6 +345,7 @@ module webApp './modules/web.bicep' = {
     containerAppName: webAppName
     containerAppsEnvironmentId: containerAppsEnv.outputs.environmentId
     githubRegistryUsername: githubRegistryUsername
+    githubRegistryAuthUsername: githubRegistryAuthUsername
     identityId: identity.outputs.identityId
     imageTag: webImageTag
     apiBaseUrl: apiApp.outputs.fqdn

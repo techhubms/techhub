@@ -18,8 +18,10 @@ public static class NpgsqlDataSourceFactory
     // across all token refreshes for the data source.
     private static readonly DefaultAzureCredential SharedCredential = new();
 
-    // Interval at which a fresh token is proactively fetched (tokens expire after 1 hour).
-    private static readonly TimeSpan TokenRefreshSuccessInterval = TimeSpan.FromHours(1);
+    // Interval at which a fresh token is proactively fetched.
+    // AAD tokens expire after 1 hour; use 50 minutes so token is always fresh when
+    // new pooled connections are opened between refresh cycles.
+    private static readonly TimeSpan TokenRefreshSuccessInterval = TimeSpan.FromMinutes(50);
 
     // Retry interval when token acquisition fails.
     private static readonly TimeSpan TokenRefreshFailureInterval = TimeSpan.FromMinutes(5);

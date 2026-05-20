@@ -33,8 +33,9 @@ resource openAiAccount 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   kind: 'AIServices'
   properties: {
     customSubDomainName: openAiName
-    // Public access fully open — API key authentication is the security mechanism.
-    // Without a private endpoint, Container Apps reach the endpoint over the public internet.
+    // Public access fully open — access is secured by the Cognitive Services OpenAI User RBAC role
+    // assigned to id-techhub-prod (Container App managed identity) and to developer accounts.
+    // Container Apps acquire an Entra token (cognitiveservices.azure.com scope) at runtime.
     publicNetworkAccess: 'Enabled'
     networkAcls: {
       defaultAction: 'Allow'

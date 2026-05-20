@@ -149,7 +149,11 @@ if (-not $SkipPush) {
     }
 
     Write-Step "Authenticating with GitHub Container Registry"
-    $ghcrToken | docker login ghcr.io --username $GithubRegistryUsername --password-stdin
+    # When GITHUB_TOKEN is used (CI), Docker username must match the workflow actor (token owner).
+    # When GHCR_PAT is used (local), the PAT owner is always the person who created the token,
+    # so use GITHUB_ACTOR if set, otherwise fall back to GithubRegistryUsername.
+    $loginUsername = if ($env:GITHUB_ACTOR) { $env:GITHUB_ACTOR } else { $GithubRegistryUsername }
+    $ghcrToken | docker login ghcr.io --username $loginUsername --password-stdin
     if ($LASTEXITCODE -ne 0) {
         Write-Fail "Failed to authenticate with ghcr.io"
         exit 1
