@@ -11,20 +11,20 @@ namespace TechHub.Infrastructure.Data;
 public static class NpgsqlDataSourceFactory
 {
     // Azure AD token scope required for PostgreSQL Flexible Server Entra auth.
-    private static readonly string[] PostgresTokenScope =
+    private static readonly string[] _postgresTokenScope =
         ["https://ossrdbms-aad.database.windows.net/.default"];
 
     // DefaultAzureCredential is thread-safe and reusable; share a single instance
     // across all token refreshes for the data source.
-    private static readonly DefaultAzureCredential SharedCredential = new();
+    private static readonly DefaultAzureCredential _sharedCredential = new();
 
     // Interval at which a fresh token is proactively fetched.
     // AAD tokens expire after 1 hour; use 50 minutes so token is always fresh when
     // new pooled connections are opened between refresh cycles.
-    private static readonly TimeSpan TokenRefreshSuccessInterval = TimeSpan.FromMinutes(50);
+    private static readonly TimeSpan _tokenRefreshSuccessInterval = TimeSpan.FromMinutes(50);
 
     // Retry interval when token acquisition fails.
-    private static readonly TimeSpan TokenRefreshFailureInterval = TimeSpan.FromMinutes(5);
+    private static readonly TimeSpan _tokenRefreshFailureInterval = TimeSpan.FromMinutes(5);
 
     /// <summary>
     /// Creates an <see cref="NpgsqlDataSource"/> for the given connection string.
@@ -48,12 +48,12 @@ public static class NpgsqlDataSourceFactory
         dataSourceBuilder.UsePeriodicPasswordProvider(
             async (_, ct) =>
             {
-                var token = await SharedCredential.GetTokenAsync(
-                    new TokenRequestContext(PostgresTokenScope), ct);
+                var token = await _sharedCredential.GetTokenAsync(
+                    new TokenRequestContext(_postgresTokenScope), ct);
                 return token.Token;
             },
-            TokenRefreshSuccessInterval,
-            TokenRefreshFailureInterval);
+            _tokenRefreshSuccessInterval,
+            _tokenRefreshFailureInterval);
 
         return dataSourceBuilder.Build();
     }

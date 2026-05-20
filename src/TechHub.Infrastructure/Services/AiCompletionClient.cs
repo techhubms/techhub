@@ -23,13 +23,13 @@ namespace TechHub.Infrastructure.Services;
 public sealed class AiCompletionClient : IAiCompletionClient
 {
     // Azure Cognitive Services token scope for Azure AI Foundry (OpenAI) inference.
-    private static readonly string[] CognitiveServicesScope =
+    private static readonly string[] _cognitiveServicesScope =
         ["https://cognitiveservices.azure.com/.default"];
 
     // DefaultAzureCredential is thread-safe and reusable; share a single instance.
     // In production: picks up the Container App's user-assigned managed identity.
     // Locally: uses 'az login' credentials after the developer is granted the RBAC role.
-    private static readonly DefaultAzureCredential SharedCredential = new();
+    private static readonly DefaultAzureCredential _sharedCredential = new();
 
     private readonly HttpClient _httpClient;
     private readonly AiCategorizationOptions _options;
@@ -60,8 +60,8 @@ public sealed class AiCompletionClient : IAiCompletionClient
         // Acquire a managed identity / user token for the Cognitive Services scope.
         // DefaultAzureCredential caches the token internally and refreshes it before expiry,
         // so this call is cheap on subsequent requests.
-        var tokenRequestContext = new TokenRequestContext(CognitiveServicesScope);
-        var accessToken = await SharedCredential.GetTokenAsync(tokenRequestContext, ct);
+        var tokenRequestContext = new TokenRequestContext(_cognitiveServicesScope);
+        var accessToken = await _sharedCredential.GetTokenAsync(tokenRequestContext, ct);
         request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken.Token);
 
         request.Content = new StringContent(jsonBody, Encoding.UTF8, new MediaTypeHeaderValue("application/json"));
