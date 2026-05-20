@@ -25,7 +25,7 @@ jobs:
     name: Redeploy PR #${{ inputs.pr_number }}
     runs-on: ubuntu-latest
     environment:
-      name: pr-preview
+      name: staging
 
     steps:
       - name: Checkout code
