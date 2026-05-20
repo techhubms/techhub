@@ -486,7 +486,7 @@ Write-Detail "Enabling Entra ID authentication on $prPostgresServer..."
 az postgres flexible-server update `
     --resource-group $prodRG `
     --name $prPostgresServer `
-    --active-directory-auth Enabled `
+    --microsoft-entra-auth Enabled `
     --password-auth Disabled
 if ($LASTEXITCODE -ne 0) {
     Write-Fail "Failed to enable Entra auth on $prPostgresServer"
