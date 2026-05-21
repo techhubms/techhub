@@ -2776,7 +2776,7 @@ INSERT INTO content_items (
 Security threats continue to rise with remote work, as detailed by Microsoft’s research into North Korean IT worker tactics. Threat actors now exploit job platforms and social engineering to subvert global organizations, leveraging convincing candidate profiles and subtle behavioral red flags.
 Practical mitigation: IT managers should strengthen hiring processes beyond routine checks, deploy monitoring for behavioral/network anomalies, and increase workforce awareness around insider risks and social threats—as distributed and hybrid teams are now a prime target for sophisticated, state-sponsored infiltration.
 - [Jasper Sleet - North Korean remote IT workers’ evolving tactics to infiltrate organizations](https://www.microsoft.com/en-us/security/blog/2025/06/30/jasper-sleet-north-korean-remote-it-workers-evolving-tactics-to-infiltrate-organizations/)',
-    NULL,
+    '',
     1751871600, 'security', '/security/roundups/weekly-security-roundup-2025-07-07', 'TechHub',
     'TechHub', 'EFE74CCF013EDFD0D246B7BD2C5C32DDE0CC62038DD84E682F1BA074D9E93733', ',Cybersecurity,Threat Intelligence,Insider Risk,Remote Work Security,Social Engineering,Workforce Security,Identity Verification,Hiring Security,North Korea,State Sponsored Threats,Behavioral Analytics,Network Anomaly Detection,Security Awareness Training,Microsoft Security,Security,Roundups,',
     false, false, false, false, false,
